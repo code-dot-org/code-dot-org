@@ -13,14 +13,6 @@ Dashboard::Application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  if CDO.memcached_hosts.present?
-    config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
-      value_max_bytes: 1024 * 1024 * 64
-    }
-  else
-    config.cache_store = :memory_store, { size: 64.megabytes }
-  end
-
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -29,7 +21,7 @@ Dashboard::Application.configure do
 
   # Serve static resources - these will be cached by Varnish (or a CDN)
   config.serve_static_files = true
-  config.static_cache_control = "public, max-age=86400"
+  config.static_cache_control = "public, max-age=86400, s-maxage=43200"
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
@@ -93,4 +85,7 @@ Dashboard::Application.configure do
   # Serve a production version of React
   config.react.variant = :production
   config.lograge.enabled = true
+
+  # don't act like a levelbuilder by default
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 end

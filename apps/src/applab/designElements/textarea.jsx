@@ -6,7 +6,7 @@ var ColorPickerPropertyRow = require('./ColorPickerPropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
-
+var utils = require('../../utils');
 var elementUtils = require('./elementUtils');
 
 var TextAreaProperties = React.createClass({
@@ -19,17 +19,24 @@ var TextAreaProperties = React.createClass({
   render: function () {
     var element = this.props.element;
 
+    var escapedText = '';
+    if (element.parentElement.className === 'textArea') {
+      escapedText = utils.unescapeText(element.parentElement.innerHTML);
+    } else {
+      escapedText = utils.unescapeText(element.innerHTML);
+    }
+
     return (
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
           desc={'text'}
           isMultiLine={true}
-          initialValue={$(element).text()}
+          initialValue={escapedText}
           handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
@@ -66,6 +73,10 @@ var TextAreaProperties = React.createClass({
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')} />
         <BooleanPropertyRow
+          desc={'read only'}
+          initialValue={!element.isContentEditable}
+          handleChange={this.props.handleChange.bind(this, 'readonly')} />
+        <BooleanPropertyRow
           desc={'hidden'}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')} />
@@ -89,7 +100,7 @@ var TextAreaEvents = React.createClass({
   },
 
   getChangeEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "change", function(event) {\n' +
       '  console.log("' + id + ' entered text: " + getText("' + id + '"));\n' +
@@ -110,7 +121,7 @@ var TextAreaEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -136,12 +147,23 @@ module.exports = {
     element.style.color = '#000000';
     element.style.backgroundColor = '#ffffff';
 
+    $(element).addClass('textArea');
+
     this.onDeserialize(element);
 
     return element;
   },
 
   onDeserialize: function (element) {
+    $(element).addClass('textArea');
+
+    $(element).on('mousedown', function (e) {
+      if (!Applab.isRunning()) {
+        // Disable clicking into text area unless running
+        e.preventDefault();
+      }
+    });
+
     // swallow keydown unless we're running
     $(element).on('keydown', function (e) {
       if (!Applab.isRunning()) {

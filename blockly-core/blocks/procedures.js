@@ -53,7 +53,7 @@ Blockly.Blocks.procedures_defnoreturn = {
     this.setTooltip(Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP);
     // Only want to have the backdrop in the mainBlockSpace. We don't want it in
     // the toolbox or in the feedback dialog (which is readonly).
-    this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
+    this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !this.blockSpace.isReadOnly());
     this.parameterNames_ = [];
   },
   updateParams_: function() {
@@ -280,7 +280,7 @@ Blockly.Blocks.procedures_defreturn = {
     this.setTooltip(Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP);
     // Only want to have the backdrop in the mainBlockSpace. We don't want it in
     // the toolbox or in the feedback dialog (which is readonly).
-    this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
+    this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !this.blockSpace.isReadOnly());
     this.parameterNames_ = [];
   },
   updateParams_: Blockly.Blocks.procedures_defnoreturn.updateParams_,

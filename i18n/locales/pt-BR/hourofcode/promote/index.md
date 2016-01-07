@@ -15,7 +15,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 Qualquer pessoa, em qualquer lugar, pode sediar uma Hora do Código. [Cadastre-se](%= resolve_url('/') %) para receber atualizações e se qualificar para os prêmios.   
 
 
-[<button><%= hoc_s(:signup_your_event) %></button>](<%= resolve_url('/') %>)
+[<button><%= hoc_s(:signup_your_event) %></button>](%= resolve_url('/') %)
 
 ## 2. Divulgue
 

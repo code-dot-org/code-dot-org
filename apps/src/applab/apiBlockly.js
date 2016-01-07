@@ -74,6 +74,15 @@ exports.setPosition = function (blockId, elementId, left, top, width, height) {
                            'height': height });
 };
 
+exports.setSize = function (blockId, elementId, width, height) {
+  return Applab.executeCmd(blockId,
+                          'setSize',
+                          {'elementId': elementId,
+                           'width': width,
+                           'height': height });
+};
+
+
 exports.getXPosition = function (blockId, elementId) {
   return Applab.executeCmd(blockId,
                           'getXPosition',
@@ -252,6 +261,19 @@ exports.setText = function (blockId, elementId, text) {
                           'setText',
                           {'elementId': elementId,
                            'text': text });
+};
+
+exports.getNumber = function (blockId, elementId) {
+  return Applab.executeCmd(blockId,
+                          'getNumber',
+                          {'elementId': elementId });
+};
+
+exports.setNumber = function (blockId, elementId, number) {
+  return Applab.executeCmd(blockId,
+                          'setNumber',
+                          {'elementId': elementId,
+                           'number': number });
 };
 
 exports.getImageURL = function (blockId, elementId) {
@@ -537,13 +559,23 @@ exports.removeItem = function (blockId, array, index) {
                            'index': index });
 };
 
+exports.drawChart = function (chartId, chartType, chartData, options, callback) {
+  return Applab.executeCmd(null,
+                          'drawChart',
+                          {'chartId': chartId,
+                           'chartType': chartType,
+                           'chartData': chartData,
+                           'options': options,
+                           'callback': callback });
+};
+
 exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {
   return Applab.executeCmd(null,
                           'drawChartFromRecords',
                           {'chartId': chartId,
-                            'chartType': chartType,
-                            'tableName': tableName,
-                            'columns': columns,
-                            'options': options,
-                            'callback': callback });
+                           'chartType': chartType,
+                           'tableName': tableName,
+                           'columns': columns,
+                           'options': options,
+                           'callback': callback });
 };

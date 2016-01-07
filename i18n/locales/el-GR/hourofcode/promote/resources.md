@@ -7,9 +7,9 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Προωθήστε την Ώρα του Κώδικα
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Φιλοξενείτε μία Ώρα του Κώδικα; [Δείτε τον οδηγό πως-να](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -19,33 +19,37 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Τοποθέτησε αυτά τα διαφημιστικά στην ιστοσελίδα σου
-
-[![εικόνα](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Δημοσιεύσε τα στα κοινωνικά μέσα
 
 [![εικόνα](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![εικόνα](/images/fit-250/mark.jpg)](/images/mark.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/susan.png)](/images/susan.png)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/chris.jpg)](/images/chris.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/marissa.jpg)](/images/marissa.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/ashton.jpg)](/images/ashton.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![εικόνα](/images/fit-250/barack.jpg)](/images/barack.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+<%= view :social_posters %>
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Χρησιμοποιήστε το λογότυπο της Ώρας του Κώδικα για να τη διαδώσετε
 
 [![εικόνα](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Κατεβάστε εκδόσεις υψηλής ανάλυσης](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Οποιαδήποτε αναφορά στην "Ώρα του Κώδικα" θα δεν πρέπει να χρησιμοποιείται έτσι ώστε να φαίνεται ότι πρόκειται για δικό σας λογότυπο αλλά ότι αφορά στην "Ώρα του Κώδικα" ως ένα λαϊκό κίνημα. Ένα καλό παράδειγμα: "Λάβε μέρος στην Ώρα του Κώδικα στο ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Συμπεριλάβετε γλώσσα στην σελίδα (ή στο υποσέλιδο), συμπεριλαμβάνοντας συνδέσμους προς τις ιστοσελίδες CSEdWeek και Code.org, οι οποίοι θα λένε τα ακόλουθα:
+    
+    *“Η 'Ώρα του Κώδικα' είναι μια διεθνής πρωτοβουλία από την Εκπαιδευτική Εβδομάδα Πληροφορικής [csedweek.org] και την Code.org [code.org] για να εισαγάγει εκατομμύρια μαθητές σε μια ώρα της επιστήμης της πληροφορικής και του προγραμματισμού υπολογιστών.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Εκτυπώστε αυτά τα αυτοκόλητα και δώστε τα στους μαθητές σας
 
-(Stickers are 1" diameter, 63 per sheet)  
+(Τα αυτοκόλητα έχουν 2.5 εκ. διάμετρο, 63 ανά φύλλο)  
 [![εικόνα](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
@@ -104,7 +108,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 Αυτή είναι η ευκαιρία να αλλάξουμε το μέλλον της εκπαίδευσης στην/στον [ΟΝΟΜΑ ΠΟΛΗΣ/ΚΟΙΝΟΤΗΤΑΣ].
 
-Για λεπτομέρειες δείτε στο http://hourofcode.com/ < % = @country %>, και βοηθήστε να εξαπλώσουμε το μήνυμα.
+Για λεπτομέρειες δείτε στο http://hourofcode.com/<%= @country %>, και βοηθήστε να εξαπλώσουμε το μήνυμα.
 
 Με εκτίμηση,
 

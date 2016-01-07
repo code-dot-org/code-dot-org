@@ -1,20 +1,16 @@
 name 'U2L14 Assessment4'
-title 'Assessment: Question 5'
-description 'Given the original plaintext: “SECRET MESSAGE SHHHH”
-Match the encryption method to the output:'
-
-question 'TEMVVU WIITAQIQTHRLY'
-answer 'Vigenere Cipher'
-
-question 'AMKZMB UMAAIOM APPPP'
-answer 'Caesar Shift Cipher(of 18)'
-
-question 'GBRXBN MBGGEFB GTTTT'
-answer 'Random Substitution Cipher'
-teacher_markdown <<MARKDOWN
-Answers:
-
-- TEMVVU WIITAQIQTHRLY: Vigenere Cipher
-- AMKZMB UMAAIOM APPPP: Caesar Shift Cipher(of 18)
-- GBRXBN MBGGEFB GTTTT: Random Substitution Cipher
-MARKDOWN
+encrypted 'BtAonTeyiN/HYF7HkVlbsIO0Q3HE6joRgme7ok186lbB+vVqp3oVlrZUav2k
+pwRD6w3c957KWRvUb0GnjCWCZ7qTvQ2AdAGXluoPl4SEGSRMCR77rS03wb2D
+yjuRddbDvp2dwV0dq+7YebyycwnOmnvhf+GPSB7ykuDPR2z483lFa2ecfIQw
+L3g7S3sAq4zB7NGO1L5bOfybzT/VyMf7AjlCvs8GZphy/w1q0r63yXnOC5CK
+CQx4tuX8JkkJjT/jhX22XUn4BuRfV0f4ZMiVBm27ZOyBzZJIqMGmEgHVxrHl
+2N9jlnD/8XFEt7zeSgUfKWp0q9pwqNqQtBNV5N1C9pCkM+jIxagRTwuyvGQQ
+uzT09D4HeCtGE6ZdByo8S+i9LQbEM0ieNPsgJeedeIaKawmuWY/6Z6uuxSvH
+CogdPnRZpofchV/IBOuNF1AZ+5RNhVNeP6yANBN4tJ7JQN2WzgmBTkN9iXf0
+46ov0dT4er0uO/7KAeLjz0/TJ2gPTBaqHEToAgZIlY3kTkePbRp1hPo9X84y
+3ZdJ/mnF7Z61L3v/5xsVuLNH0VHWqBQRrkQWeEcE0gg+SFhAv42d4KJL84IR
+ENELF5ldvx3PP3ySjuf3i+ABhexBBv6VtjmIsrzbv3ikJ4ToEh7ySbKDNlmf
+J595dBMrVdiA0YKZS8/krE58B+sRntGiCbeH4rDznUBRTSKGp/K219deGSiA
+Oc2yWryFKWpY5P9kjwKDLyT9fb2Zn6FTX2gPW6CABPF9TVTi+2t0zDRmkv71
+RTL2i/qSoQ==
+'

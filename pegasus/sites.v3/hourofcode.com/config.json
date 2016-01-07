@@ -23,6 +23,9 @@
     "asd": {
       "name": "Arlington Public Schools"
     },
+    "asos": {
+      "name": "ASOS"
+    },
     "auhsd": {
       "name": "Anaheim Union High School District"
     },
@@ -316,6 +319,9 @@
     },
     "sjusd": {
       "name": "San Juan Unified School District"
+    },
+    "sky": {
+      "name": "Sky"
     },
     "spokaneschools": {
       "name": "Spokane Public Schools"

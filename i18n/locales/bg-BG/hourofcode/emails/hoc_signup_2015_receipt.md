@@ -1,37 +1,46 @@
 * * *
 
-от: "'Хади Партови(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)'тема: Благодаря Ви, че организирате Часът на кодирането
+от: "'Хади Партови(Code.org)" [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&#116;&#x6f;&#118;&#x69;&#x40;&#99;&#x6f;&#100;&#x65;&#x2e;&#111;&#x72;&#103;)'тема: Благодаря Ви, че организирате Hour of Code
 
 * * *
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Благодаря за регистрирането ви като домакин на Часът на кодрането събитие!
+# Благодаря за регистрирането Ви като домакин на Hour of Code събитие!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Вие направихте възможно ученици в цяла Латинска Америка да учат един час кодиране, който може да *промени останалата част от живота им*, по време на Окт. 5-11. < % else %> Вие направихте възможно ученици по целия свят да учат чрез един час на кодиране, който може да *промени останалата част от живота им*, през декември. 7-13. <% end %>
+Вие правите възможно за учениците по целия свят да учат с Hour of Code, който може да промени останалата част от живота им, по време на Dec. 7-13.
 
-Ние ще се свържем с вас за награди, нови уроци и други вълнуващи актуализации през есента. И така, какво можете да направите сега?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
+
+#### Ние ще се свържем с вас за нови уроци и други вълнуващи актуализации. Какво можете да направите сега?
+
+## 1. Find a local volunteer to help you with your event.
+
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## Разпространете новината
 
-Кажете на приятелите си за #HourOfCode.
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-## 2. Попитайте във вашето училище, дали се предлага участие в Часът на кодирането
+## 3. Recruit your whole school for the Hour of Code
 
-[Изпратете този имейл](http://<%= hostname %>resources#email) на вашия кмет.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-## Предложете на вашия работодател да се включи в инициативата
+## 3. Посъветвайте се с Вашия работодател за възможно включване
 
-<a href = "http://<%= hostname %> /resources #email">Изпратете този имейл</a> на Вашия ръководител или изпълнителен директор.
+[Изпратете този имейл](https://<%= hostname %>/promote/resources#sample-emails) на вашия ръководител или изпълнителен директор.
 
-## 4. Промотиране на часът на кода във вашата общност
+## 5. Promote the Hour of Code in your community
 
-Наемете локална група — скаути клуб, църква, университет, ветерани от група или синдикат. Или станете домакин часът на кода "block party" за вашия квартал. .</p> 
+Използвайте локална група или приятели. [Изпратете този имейл](https://<%= hostname %>/resources#sample-emails).
 
-## 5 Предложете на Общинската Администрация да подкрепи програмата "Един Час Програмиране"
+Благодаря Ви за водещата роля в даването на шанс на учениците да научат фундаменталните основи на компютърните науки, умения, необходими за всеки ученик.
 
-<a href = "http:// < %= hostname%> /resources #politicians" > Изпратете този имейл</a> на Вашия кмет, общински съвет или училищното настоятелство и ги поканете да посетят Вашето училище.
+Хади Партови  
+основател на Code.org
 
 * * *
 
-Code.org е организация с нестопанска цел. Нашият адрес е 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Не харесвате тези имейли? [ отпишете се](%= unsubscribe_link %).
+<small> Вие получавате този имейл, защото сте се регистрирали за Hour of Code, подкрепен от над 200 партньори и организиран от Code.org. Code.org е 501c 3 организация с нестопанска цел. Нашият адрес, е 1301 5th Ave, Апартамент 1225, Сиатъл, WA, 98101. Не желаете тези имейли? <a href="%= unsubscribe_link %"> Отписване</a>. </small>
+
+![](<%= tracking_pixel %>)

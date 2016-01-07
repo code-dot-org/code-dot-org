@@ -59,32 +59,8 @@ var DebugArea = module.exports = function (debugAreaRoot, codeTextboxRoot) {
  * header div.
  */
 DebugArea.prototype.bindHandlersForDebugCommandsHeader = function () {
-  var header = this.rootDiv_.find('#debug-commands-header');
-  // Element may not exist (if in share mode)
-  if (header.length === 0) {
-    return;
-  }
-  header.mouseover(DebugArea.prototype.onCommandsHeaderOver.bind(this));
-  header.mouseout(DebugArea.prototype.onCommandsHeaderOut.bind(this));
-  dom.addClickTouchEvent(header[0], DebugArea.prototype.slideToggle.bind(this));
-};
-
-/**
- * We do this manually instead of via a simple css :hover because this element
- * can be animated out from under the cursor when sliding open and closed,
- * and the :hover effect isn't removed unless the mouse is moved.
- */
-DebugArea.prototype.onCommandsHeaderOver = function () {
-  this.rootDiv_.find('#debug-commands-header').addClass('js-hover-hack');
-};
-
-/**
- * We do this manually instead of via a simple css :hover because this element
- * can be animated out from under the cursor when sliding open and closed,
- * and the :hover effect isn't removed unless the mouse is moved.
- */
-DebugArea.prototype.onCommandsHeaderOut = function () {
-  this.rootDiv_.find('#debug-commands-header').removeClass('js-hover-hack');
+  var toggleDebugIcon = this.rootDiv_.find('#show-hide-debug-icon');
+  dom.addClickTouchEvent(toggleDebugIcon[0], DebugArea.prototype.slideToggle.bind(this));
 };
 
 /** @returns {boolean} */
@@ -152,13 +128,11 @@ DebugArea.prototype.slideOpen = function () {
 
   // Manually remove hover effect at start and end of animation to get *close*
   // to the correct effect.
-  this.onCommandsHeaderOut();
   this.rootDiv_.animate({
     height: this.lastOpenHeight_
   },{
     complete: function () {
       this.setIconPointingDown(true);
-      this.onCommandsHeaderOut();
     }.bind(this)
   });
 
@@ -186,14 +160,12 @@ DebugArea.prototype.slideShut = function () {
   var closedHeight = this.getHeightWhenClosed();
   // Manually remove hover effect at start and end of animation to get *close*
   // to the correct effect.
-  this.onCommandsHeaderOut();
   this.rootDiv_.animate({
     height: closedHeight
   },{
     complete: function () {
       this.setContentsVisible(false);
       this.setIconPointingDown(false);
-      this.onCommandsHeaderOut();
     }.bind(this)
   });
 
@@ -224,7 +196,7 @@ DebugArea.prototype.setContentsVisible = function (isVisible) {
 DebugArea.prototype.setIconPointingDown = function (isPointingDown) {
   var commandsHeader = this.rootDiv_.find('#debug-commands-header');
 
-  var icon = commandsHeader.find('#show-hide-debug-icon');
+  var icon = this.rootDiv_.find('#show-hide-debug-icon');
   icon.toggleClass('fa-chevron-circle-up', !isPointingDown);
   icon.toggleClass('fa-chevron-circle-down', isPointingDown);
 

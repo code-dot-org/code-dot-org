@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## moveBackward(pixels)
+## moveBackward(*pixels*)
 
 [/name]
-
 
 [category]
 
@@ -20,9 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle back a given number of pixels in its current direction.
+Moves the turtle backward a given number of pixels from the current direction.
 
 [/short_description]
+
+Sometimes it is more natural to tell the turtle to moveBackward() in a straight line instead of telling the turtle to moveForward() a negative number of pixels.
 
 [/description]
 
@@ -31,20 +32,9 @@ ____________________________________________________
 
 [example]
 
-
 ```
-moveBackward(); //Moves back 25 pixels (default)
-```
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-
-```
-moveBackward(200); //Moves the turtle south 200 pixels
+// Move backward 25 pixels (default)
+moveBackward();
 ```
 
 [/example]
@@ -53,14 +43,14 @@ ____________________________________________________
 
 [example]
 
+**Example: Letter L** Draw the letter L with moveBackward() and turnLeft() only.
 
 ```
-// Draw a dot in front of and behind the turtle
-moveForward(50);	// Move ahead
-dot(10);			// Draw a big dot
-moveBackward(100);	// Move back to 50 pixel behind the starting point
-dot(10);			// Draw another big dot
-moveForward(50);	// Move back to the start
+// Draw the letter L with moveBackward() and turnLeft() only.
+moveBackward();
+moveBackward();
+turnLeft();
+moveBackward();
 ```
 
 [/example]
@@ -69,22 +59,63 @@ ____________________________________________________
 
 [example]
 
+**Example: Long Line** Move backward 200 pixels.
 
 ```
-// Parallel park the turtle
-createCanvas("id", 320, 480);	// Create a canvas for drawing
-setFillColor("yellow");			// Draw the yellow car
+// Move backward 200 pixels.
+moveBackward(200);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Barbell** Draw a barbell using moveForward(), moveBackward() and dot().
+
+```
+// Draw a barbell using moveForward(), moveBackward() and dot().
+moveForward(50);
+dot(10);
+moveBackward(100);
+dot(10);
+moveForward(50);
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Parallel Park the Turtle** Use canvas drawing and moveBackward() to parallel park.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
+// Use canvas drawing and moveBackward() to parallel park.
+speed(10);
+createCanvas("id", 320, 480);
+setFillColor("yellow");
 rect(180, 100, 60, 100);
-setFillColor("red");			// Draw the red car
+setFillColor("red");
 rect(180, 300, 60, 100);
-show();							// Show the turtle that needs to park
-moveForward(75);				// Pull up even to the front car
-moveBackward(50);				// Start backing up
-turnLeft(45);					// and turn into the spot
-moveBackward(75);				// Back in
-turnRight(45);					// Straighten out
-moveForward();  				// Pull into the center of the spot
-```
+show();
+moveForward(75);
+moveBackward(50);
+turnLeft(45);
+moveBackward(75);
+turnRight(45);
+moveForward();
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/78a29825b8039d040862cd77bec86ea2-image-1445625258937.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -106,14 +137,14 @@ moveBackward(pixels);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| pixels | number | No | The number of pixels to move the turtle back in its current direction. If not provided, the turtle will move back 25 pixels  |
+| pixels | number | No | The number of pixels to move the turtle backward from its current direction. If not provided, the turtle will move forward 25 pixels  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Moves turtle only.
 
 [/returns]
 
@@ -121,6 +152,11 @@ No return value. Outputs to the display only.
 
 ### Tips
 - Use [penUp()](/applab/docs/penUp) before calling moveBackward() to have the turtle not draw as it moves.
+- The screen default size is 320 pixels wide and 450 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
+- There are three ways to move the turtle in a straight line:
+	- Specify the number of pixels to move the turtle in the direction it is facing using [moveForward(pixels)](/applab/docs/moveForward) or moveBackward(pixels).
+	- Specify a number of pixels in the x and y direction to move the turtle using [move(x,y)](/applab/docs/move), regardless of direction that the turtle is facing.
+	- Specify an x and y pixel location on the screen to move the turtle to using [moveTo(x,y)](/applab/docs/moveTo), regardless of direction that the turtle is facing.
 
 [/tips]
 

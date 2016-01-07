@@ -19,8 +19,8 @@
 'use strict';
 
 var AppStorage = require('./appStorage');
-var Promise = require('es6-promise').Promise;
 var GoogleChart = require('./GoogleChart');
+require("babelify/polyfill"); // required for Promises in IE / Phantom
 
 /**
  * API for requesting/generating charts in Applab.

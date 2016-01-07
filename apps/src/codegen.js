@@ -1,4 +1,4 @@
-/* global Interpreter */
+/* global Interpreter, CanvasPixelArray */
 
 var dropletUtils = require('./dropletUtils');
 
@@ -9,7 +9,7 @@ exports.evalWith = function(code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, null, scope, options);
+      exports.initJSInterpreter(interpreter, null, null, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -143,10 +143,18 @@ function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
   return retVal;
 }
 
+function isCanvasImageData(nativeVar) {
+  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
+  if (typeof(Uint8ClampedArray) !== "undefined") {
+    return nativeVar instanceof Uint8ClampedArray;
+  }
+  return nativeVar instanceof CanvasPixelArray;
+}
+
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
   if (typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
@@ -162,12 +170,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
       retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
-                                                                nativeVar[i],
-                                                                null,
-                                                                maxDepth - 1);
+        nativeVar[i], null, maxDepth - 1);
     }
     retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Uint8ClampedArray) {
+  } else if (isCanvasImageData(nativeVar)) {
     // Special case for canvas image data - could expand to support TypedArray
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
@@ -234,10 +240,8 @@ exports.makeNativeMemberFunction = function (opts) {
     return function() {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   } else {
     return function() {
@@ -247,10 +251,8 @@ exports.makeNativeMemberFunction = function (opts) {
         nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   }
 };
@@ -274,10 +276,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
   }
 }
 
-function populateGlobalFunctions(interpreter, blocks, scope) {
+function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
-    if (block.parent) {
+    if (block.parent &&
+        (!blockFilter || typeof blockFilter[block.func] !== 'undefined')) {
       var funcScope = scope;
       var funcName = block.func;
       var funcComponents = funcName.split('.');
@@ -308,21 +311,28 @@ function populateGlobalFunctions(interpreter, blocks, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
+  var wrapper;
 
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: String[functions[i]],
-        nativeParentObj: String,
+    wrapper = exports.makeNativeMemberFunction({
+      interpreter: interpreter,
+      nativeFunc: String[functions[i]],
+      nativeParentObj: String,
     });
-    interpreter.setProperty(interpreter.STRING,
-                            functions[i],
-                            interpreter.createNativeFunction(wrapper),
-                            false,
-                            true);
+    interpreter.setProperty(interpreter.STRING, functions[i],
+      interpreter.createNativeFunction(wrapper), false, true);
   }
+
+  // Add String.prototype.includes
+  wrapper = function(searchStr) {
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
+  };
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
+    interpreter.createNativeFunction(wrapper), false, true);
 }
 
 /**
@@ -331,11 +341,13 @@ function populateJSFunctions(interpreter) {
  * interpreter (required): JS interpreter instance.
  * blocks (optional): blocks in dropletConfig.blocks format. If a block has
  *  a parent property, we will populate that function into the specified scope.
+ * blockFilter (optional): an object with block-name keys that should be used
+ *  to filter which blocks are populated.
  * scope (required): interpreter's global scope.
  * options (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
+exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, options) {
   for (var optsObj in options) {
     // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
@@ -347,9 +359,17 @@ exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
     interpreter.setProperty(scope, optsObj.toString(), obj);
     populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
-  populateGlobalFunctions(interpreter, dropletUtils.dropletGlobalConfigBlocks, scope);
+  populateGlobalFunctions(
+      interpreter,
+      dropletUtils.dropletGlobalConfigBlocks,
+      blockFilter,
+      scope);
   if (blocks) {
-    populateGlobalFunctions(interpreter, blocks, scope);
+    populateGlobalFunctions(
+        interpreter,
+        blocks,
+        blockFilter,
+        scope);
   }
   populateJSFunctions(interpreter);
 };
@@ -447,6 +467,9 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
 };
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
+  if (!session) {
+    return false;
+  }
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
@@ -490,6 +513,9 @@ function highlightAceLines (aceEditor, className, startRow, endRow) {
  * to highlight where an error has occurred.
  */
 exports.selectEditorRowColError = function (editor, row, col) {
+  if (!editor) {
+    return;
+  }
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();

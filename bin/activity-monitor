@@ -223,7 +223,7 @@ def main()
       end
       log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
       HipChat.notify('ActivityMonitor', log_string, color: 'red', notify: 1)
-      HipChat.log log_string, color: 'red'
+      HipChat.developers log_string, color: 'red', notify: 1
     end
   end
 end

@@ -17,7 +17,7 @@
 
 .call-out {
   clear: both;
-  padding: 30px 60px 0px 60px;
+  padding: 20px 60px 0px 60px;
 }
 
 .clear-both {
@@ -25,10 +25,10 @@
 }
 
 .logo {
-  width: 80px;
+  width: 60px;
   float: left;
   padding-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .chart-text-group {
@@ -36,13 +36,15 @@
 }
 
 .sources {
-  padding-top: 30px;
-  font-size: 10px;
+  padding-top: 15px;
+  font-size: 9.5px;
+  line-height: 14px;
 }
 
 .improve-edu {
   float: left;
   width: 55%;
+  margin-bottom: 30px;
 }
 
 .improve-edu-h2 {
@@ -51,5 +53,5 @@
 
 .quote-center {
   text-align: center;
-  margin: 0px 70px;
+  margin: 0px 50px;
 }

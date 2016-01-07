@@ -33,25 +33,14 @@
       <div class="arrow-text"><%= data.tryAgain %></div>
     </div>
   <% } else { -%>
-    <% if (data.hintRequestExperiment === "left") { -%>
+    <% if (data.shouldPromptForHint) { -%>
       <button id="hint-request-button" class="launch">
         <%= msg.hintRequest() %>
       </button>
-      <button id="again-button" class="launch">
-        <%= data.tryAgain %>
-      </button>
-    <% } else if (data.hintRequestExperiment == "right") { -%>
-      <button id="again-button" class="launch">
-        <%= data.tryAgain %>
-      </button>
-      <button id="hint-request-button" class="launch">
-        <%= msg.hintRequest() %>
-      </button>
-    <% } else { -%>
-      <button id="again-button" class="launch">
-        <%= data.tryAgain %>
-      </button>
-    <% } -%>
+    <% } %>
+    <button id="again-button" class="launch">
+      <%= data.tryAgain %>
+    </button>
   <% } -%>
 <% } -%>
 
@@ -67,3 +56,4 @@
     </button>
   <% } -%>
 <% } -%>
+<div class="after-feedback-buttons"/>

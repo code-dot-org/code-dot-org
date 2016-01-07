@@ -8,29 +8,33 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Prijzen - voorwaarden
 
-## Dropbox-ruimte of Skype-credit:
+## Amazon.com, iTunes en Windows Store krediet:
 
-De 10GB Dropbox-ruimte of $10 Skype-credit zijn alleen beschikbaar voor staf van basis- en middelbare scholen, onderwijzers van naschoolse clubs en onderwijsinstellingen. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Beperkt tot één prijs per organisator. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+De Amazon.com, iTunes en Windows Store krediet zijn beperkt tot K-12 faculteit, opvoeders voor afterschool clubs en organisaties van onderwijs. Het krediet van $10 moet worden toegevoegd aan een bestaande account, en het krediet verloopt na 1 jaar. Beperkt tot één prijs per organisator.
 
-Iedere organisator moet zich voor het Uur Code registreren om de Dropbox-ruimte of het Skype-credit te krijgen. Wanneer je hele school meedoet met het Uur Code, moet iedere onderwijzer individueel registeren als organisator om aanspraak te maken.
+Elke organisator moet registreren voor het CodeUur om de Amazon.com, iTunes of Windows Store krediet te ontvangen. Wanneer je hele school meedoet met het Uur Code, moet iedere onderwijzer individueel registeren als organisator om aanspraak te maken.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Code.org zal contact opnemen met organisatoren na het CodeUur (7-13 Dec.) voor de instructies van het inruilen van Amazon.com, iTunes en Windows Store kredieten.
 
 <% if @country == 'us' %>
 
-## Video-chat met een gastspreker:
-
-Prijs beperkt tot K-12 klaslokalen in de VS en Canada alleen. To qualify, sign up your classroom by November 2, 2015. Code.org zal winnende scholen willekeurig selecteren, een timeslot kiezen voor de webchat, en samenwerken met de betreffende leraar om de technische details op te zetten. Niet uw hele school hoeft zich aan te melden om in aanmerking te komen voor deze prijs. Zowel de publieke als de particuliere scholen komen in aanmerking om te winnen.
-
 ## Laptops voor de hele klas (of $10.000 voor andere technologie):
 
-Alleen voor scholen in het basis- en middelbaar onderwijs. To qualify, your entire school must register for the Hour of Code by November 16, 2015. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org will select and notify winners via email by December 1, 2015.
+Alleen voor scholen in het basis- en middelbaar onderwijs. Om in aanmerking te komen moet uw hele school registreren voor het CodeUur in 16 November 2015. Een school in iedere Amerikaanse staat krijgt computers voor een heel klaslokaal. Code.org selecteert winnaars en bericht ze via de mail voor 1 december 2015.
 
 Voor de duidelijkheid: dit is niet een trekking of een wedstrijd gebaseerd op puur toeval.
 
 1) er is geen financiële inzet of risico bij inschrijving van toepassing, iedere school of klas kan deelnemen, zonder enige betaling te Code.org of een andere organisatie
 
 2) winnaars zullen alleen worden geselecteerd onder scholen waar de hele klas (of school) deelneemt aan een uur van Code, waarbij een test plaats vindt van de studenten en docenten over hun collectieve vaardigheden.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video-chat met een gastspreker:
+
+Prijs beperkt tot K-12 klaslokalen in de VS en Canada alleen. Code.org zal winnende scholen willekeurig selecteren, een timeslot kiezen voor de webchat, en samenwerken met de betreffende leraar om de technische details op te zetten. Niet uw hele school hoeft zich aan te melden om in aanmerking te komen voor deze prijs. Both public and private schools are eligible to win.
 
 <% end %>
 

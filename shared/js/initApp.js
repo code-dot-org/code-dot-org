@@ -22,6 +22,8 @@ window.apps = {
 
     timing.startTiming('Puzzle', script_path, '');
 
+    var lastSavedProgram;
+
     // Sets up default options and initializes blockly
     var baseOptions = {
       containerId: 'codeApp',
@@ -33,7 +35,7 @@ window.apps = {
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName) {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }
@@ -48,7 +50,14 @@ window.apps = {
           // (The levelSource is already stored in the channels API.)
           delete report.program;
           delete report.image;
+        } else {
+          // Only locally cache non-channel-backed levels. Use a client-generated
+          // timestamp initially (it will be updated with a timestamp from the server
+          // if we get a response.
+          lastSavedProgram = decodeURIComponent(report.program);
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, +new Date(), lastSavedProgram);
         }
+        report.scriptName = appOptions.scriptName;
         report.fallbackResponse = appOptions.report.fallback_response;
         report.callback = appOptions.report.callback;
         // Track puzzle attempt event
@@ -59,6 +68,12 @@ window.apps = {
         }
         trackEvent('Activity', 'Lines of Code', script_path, report.lines);
         sendReport(report);
+      },
+      onComplete: function (response) {
+        if (!appOptions.channel) {
+          // Update the cache timestamp with the (more accurate) value from the server.
+          dashboard.clientState.writeSourceForLevel(appOptions.scriptName, appOptions.serverLevelId, response.timestamp, lastSavedProgram);
+        }
       },
       onResetPressed: function() {
         cancelReport();
@@ -81,19 +96,24 @@ window.apps = {
           return;
         }
 
+        var afterVideoCallback = showInstructions;
+        if (appOptions.level.afterVideoBeforeInstructionsFn) {
+          afterVideoCallback = function () {
+            appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
+          };
+        }
+
         var hasVideo = !!appOptions.autoplayVideo;
         var hasInstructions = !!(appOptions.level.instructions ||
         appOptions.level.aniGifURL);
 
         if (hasVideo) {
-          showVideoDialog(appOptions.autoplayVideo);
           if (hasInstructions) {
-            $('.video-modal').on('hidden.bs.modal', function() {
-              showInstructions();
-            });
+            appOptions.autoplayVideo.onClose = afterVideoCallback;
           }
+          showVideoDialog(appOptions.autoplayVideo);
         } else if (hasInstructions) {
-          showInstructions();
+          afterVideoCallback();
         }
       }
     };
@@ -147,7 +167,7 @@ window.apps = {
       var source;
       if (window.Blockly) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.readOnly ? currentLevelSource :
+        source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
           Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
       } else {
         source = window.Applab && Applab.getCode();

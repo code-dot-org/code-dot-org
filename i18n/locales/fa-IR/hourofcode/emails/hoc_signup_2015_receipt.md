@@ -8,30 +8,38 @@
 
 # با تشکر برای ورود به میزباني ساعت کدنويسي!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+با شرکت در ساعت کد نویسی 7ام تا 13ام دسامبر ،این امکان را برای دانش آموزان سراسر جهان فراهم می کنید که بتوانند کد نویسی را یاد بگیرند و این زمینه ای برای تغییر زندگی آنها در آینده خواهد شد.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-## 1. گسترش واژه
+#### ما با آموزشهای جدید و یا اخبار جالب دیگری با شما در تماس خواهیم بود. هم اکنون تصمیم شما چیست؟
 
-درباره #HourOfCode به دوستان خود بگویید.
+## 1. Find a local volunteer to help you with your event.
 
-## 2. از کل مدرسه خود بخواهید که یک ساعت برنامه نویسی را پیشنهاد دهد
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+## 2. Spread the word
 
-## 3. از کارفرمای خود بخواهید که مشارکت کند
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+## 3. Recruit your whole school for the Hour of Code
 
-## 4. Promote the Hour of Code in your community
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
+## 4. Ask your employer to get involved
 
-## از یک مقام منتخب محلی بخواهید از ساعت کدنویسی حمایت کند
+این پست الکترونیکی را برای سرپرست و یا مسئول اصلی سازمان ارسال کنید.
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+## 5. Promote the Hour of Code in your community
+
+یک گروه محلی و یا حتی برخی دوستان را استخدام کنید.
+
+از همکاری شما برای پیشبرد این هدف که هر دانش آموزی بتواند شانس یادگیری مهارتهای پایه علوم کامپیوتر را پیدا کند تشکر میکنیم.
+
+هادی پرتوی ، موسس 
 
 * * *
 
-Code.org یک سازمانی غیر انتفاعی 501c3 است. آدرس ما شماره 1301 خیابان پنجم، سوئیت 1225، سیاتل، واشنگتن، 98101 است. این ایمیل‌ها را دوست ندارید؟ [لغو اشتراک](%= unsubscribe_link %).
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

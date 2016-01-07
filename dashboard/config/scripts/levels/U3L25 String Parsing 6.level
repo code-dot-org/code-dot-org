@@ -35,7 +35,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -81,7 +80,13 @@
     "beginner_mode": "false",
     "instructions": "Write a function that takes a name (first last) and reorders it (last, first).",
     "start_blocks": "var sample1 = \"Ada Lovelace\"; // Output: \"Lovelace, Ada\"\r\nvar sample2 = \"Alan Turing\"; // Output: \"Turing, Alan\"\r\nvar sample3 = \"Edsger Dijkstra\"; // Output: \"Dijkstra, Edsger\"\r\nvar sample4 = \"Grace Hopper\"; // Output: \"Hopper, Grace\"\r\n\r\nfunction reorder(input) {\r\n  console.log(\"reordering \" + input);\r\n  // Your code here\r\n  \r\n}\r\n\r\nconsole.log(\"---- running sample 1 ----\");\r\nreorder(sample1);\r\nconsole.log(\"\\n---- running sample 2 ----\");\r\nreorder(sample2);\r\nconsole.log(\"\\n---- running sample 3 ----\");\r\nreorder(sample3);\r\nconsole.log(\"\\n---- running sample 4 ----\");\r\nreorder(sample4);\r\n",
-    "markdown_instructions": "## Challenge 4\r\n\r\nSometimes we want to reorder information in strings. Write a function that takes a name (first last) and reorders it (last, first).\r\n\r\n\tExample: “Ada Lovelace” -> “Lovelace, Ada”\r\n\r\nYour function should work for all the given sample inputs.\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nUse substrings, length, index of, and your prior knowledge of concatenation.<br/>\r\n<details>\r\n<summary>**Big Hint**</summary>\r\n1. Grab the first name, store it in a variable<br/>\r\n2. Grab the last name, store it in a variable<br/>\r\n3. Concatenate the last name, a comma, and the first name (use the \"+\" operator)\r\n</details>\r\n</details>\r\n<br/>\r\n\r\n\r\n<br/>"
+    "markdown_instructions": "## Challenge 4\r\n\r\nSometimes we want to reorder information in strings. Write a function that takes a name (first last) and reorders it (last, first).\r\n\r\n\tExample: “Ada Lovelace” -> “Lovelace, Ada”\r\n\r\nYour function should work for all the given sample inputs.\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nUse substrings, length, index of, and your prior knowledge of concatenation.<br/>\r\n<details>\r\n<summary>**Big Hint**</summary>\r\n1. Grab the first name, store it in a variable<br/>\r\n2. Grab the last name, store it in a variable<br/>\r\n3. Concatenate the last name, a comma, and the first name (use the \"+\" operator)\r\n</details>\r\n</details>\r\n<br/>\r\n\r\n\r\n<br/>",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

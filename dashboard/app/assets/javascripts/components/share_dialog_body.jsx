@@ -6,8 +6,18 @@ window.dashboard = window.dashboard || {};
 
 /**
  * The body of our share project dialog.
+ * Note: The only consumer of this calls renderToStaticMarkup, so any events
+ * will be lost.
  */
 window.dashboard.ShareDialogBody = (function (React) {
+  var preventDefault = function(event) {
+    event.preventDefault();
+  };
+
+  var select = function (event) {
+    event.target.select();
+  };
+
   return React.createClass({
     propTypes: {
       icon: React.PropTypes.string,
@@ -18,7 +28,10 @@ window.dashboard.ShareDialogBody = (function (React) {
       closeText: React.PropTypes.string.isRequired,
       isAbusive: React.PropTypes.bool.isRequired,
       abuseTos: React.PropTypes.string.isRequired,
-      abuseContact: React.PropTypes.string.isRequired
+      abuseContact: React.PropTypes.string.isRequired,
+
+      onClickPopup: React.PropTypes.func.isRequired,
+      onClickClose: React.PropTypes.func.isRequired
     },
 
     render: function () {
@@ -70,40 +83,35 @@ window.dashboard.ShareDialogBody = (function (React) {
             <p className="dialog-title">{this.props.title}</p>
             {abuseContents}
             <p>{this.props.shareCopyLink}</p>
-            {/*TODO: de-dup with apps code once JS common-core work is done.*/}
             <div>
               <input
                 type="text"
                 id="sharing-input"
+                onClick={select}
                 readOnly="true"
                 value={this.props.shareUrl}
                 style={{cursor: 'copy', width: 465}}/>
             </div>
+            {/* Awkward that this is called continue-button, when text is
+                close, but id is (unfortunately) used for styling */}
             <button
                 id="continue-button"
-                style={{float: 'right'}}>
+                style={{float: 'right'}}
+                onClick={this.props.onClickClose}>
               {this.props.closeText}
             </button>
             <div className="social-buttons">
-              <a href={facebookShareUrl} target="_blank" className="popup-window" style={horzPadding}>
+              <a href={facebookShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
                 <i className="fa fa-facebook"></i>
               </a>
-              <a href={twitterShareUrl} target="_blank" className="popup-window" style={horzPadding}>
+              <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)} style={horzPadding}>
                 <i className="fa fa-twitter"></i>
               </a>
-              <a id="sharing-phone" href="" style={horzPadding}>
-                <i className="fa fa-mobile-phone" style={{fontSize: 28}}></i>
+              <a id="sharing-phone" href="" style={horzPadding} onClick={preventDefault}>
+                <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
               </a>
             </div>
-            <div id="send-to-phone" className="sharing" style={{display: 'none'}}>
-              <label htmlFor="phone">Enter a US phone number:</label>
-              <input type="text" id="phone" name="phone"></input>
-              <button id="phone-submit">Send</button>
-              <div id="phone-charges">
-                A text message will be sent via <a href="http://twilio.com">Twilio</a>.
-                Charges may apply to the recipient.
-              </div>
-            </div>
+            <window.dashboard.SendToPhone/>
           </div>
         </div>
       );

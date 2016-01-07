@@ -1,5 +1,10 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 $:.unshift File.expand_path('../shared/middleware', __FILE__)
+
+# Set up gems listed in the Gemfile.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
+require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
+
 require 'csv'
 require 'yaml'
 require 'cdo/erb'
@@ -40,6 +45,8 @@ def load_configuration()
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_shared_js'             => [:development, :adhoc, :staging].include?(rack_env),
+    'build_code_studio'           => [:development, :adhoc, :staging].include?(rack_env),
+    'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
     'dashboard_secret_key_base'   => 'not a secret',
@@ -53,15 +60,18 @@ def load_configuration()
     'db_writer'                   => 'mysql://root@localhost/',
     'reporting_db_reader'         => 'mysql://root@localhost/',
     'reporting_db_writer'         => 'mysql://root@localhost/',
+    'gatekeeper_table_name'       => "gatekeeper_#{rack_env}",
     'hip_chat_log_room'           => rack_env.to_s,
     'hip_chat_logging'            => false,
     'home_dir'                    => File.expand_path('~'),
     'languages'                   => load_languages(File.join(root_dir, 'pegasus', 'data', 'cdo-languages.csv')),
     'localize_apps'               => false,
     'name'                        => hostname,
+    'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
     'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'partners'                    => %w(al ar br eu italia ro sg uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
     'pegasus_db_name'             => rack_env == :production ? 'pegasus' : "pegasus_#{rack_env}",
@@ -73,15 +83,14 @@ def load_configuration()
     'poste_secret'                => 'not a real secret',
     'proxy'                       => false, # If true, generated URLs will not include explicit port numbers in development
     'rack_env'                    => rack_env,
-    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder],
+    'rack_envs'                   => [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration],
     'read_only'                   => false,
     'ruby_installer'              => rack_env == :development ? 'rbenv' : 'system',
     'root_dir'                    => root_dir,
     'use_dynamo_tables'           => [:staging, :adhoc, :test, :production].include?(rack_env),
-    #'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
+    'use_dynamo_properties'       => [:staging, :adhoc, :test, :production].include?(rack_env),
     'dynamo_tables_table'         => "#{rack_env}_tables",
     'dynamo_tables_index'         => "channel_id-table_name-index",
-    'use_dynamo_properties'       => false,
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
     'assets_s3_bucket'            => 'cdo-v3-assets',
@@ -147,6 +156,18 @@ class CDOImpl < OpenStruct
     return "localhost#{sep}#{domain}" if rack_env?(:development)
     return "translate#{sep}#{domain}" if self.name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
+  end
+
+  def dashboard_hostname
+    canonical_hostname('studio.code.org')
+  end
+
+  def pegasus_hostname
+    canonical_hostname('code.org')
+  end
+
+  def hourofcode_hostname
+    canonical_hostname('hourofcode.com')
   end
 
   def site_url(domain, path = '', scheme = '')
@@ -229,6 +250,23 @@ class CDOImpl < OpenStruct
     backtrace.join("\n")
   end
 
+  class DelegateWithDefault < SimpleDelegator
+    def initialize(target, default_value)
+      @default_value = default_value
+      super(target)
+    end
+
+    def method_missing(*args)
+      return @default_value if !__getobj__.respond_to? args.first
+      value = super
+      return @default_value if value.nil?
+      value
+    end
+  end
+
+  def with_default(default_value)
+    DelegateWithDefault.new(self, default_value)
+  end
 end
 
 CDO ||= CDOImpl.new
@@ -264,6 +302,10 @@ def blockly_core_dir(*dirs)
   deploy_dir('blockly-core', *dirs)
 end
 
+def cookbooks_dir(*dirs)
+  deploy_dir('cookbooks', *dirs)
+end
+
 def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
 end
@@ -282,4 +324,8 @@ end
 
 def shared_js_dir(*dirs)
   deploy_dir('shared/js', *dirs)
+end
+
+def code_studio_dir(*dirs)
+  deploy_dir('code-studio', *dirs)
 end

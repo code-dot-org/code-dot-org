@@ -1,11 +1,27 @@
-- categories = [{tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}, {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}, {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}, {tag:"Apps", name: I18n.t(:carousel_heading_devices)}, {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}, {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}, {tag: "Univ", name: I18n.t(:carousel_heading_university)}, {tag: "Web", name: I18n.t(:carousel_heading_webpages)}, {tag: "Robot", name: I18n.t(:carousel_heading_robots)}, {tag: "IDE", name: I18n.t(:carousel_heading_ide)}]
+- learn_categories = []
+- learn_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_javascript)}
+- learn_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beginners)}
+- learn_categories << {tag:"Unplugged", name: I18n.t(:carousel_heading_unplugged)}
+- learn_categories << {tag:"Apps", name: I18n.t(:carousel_heading_devices)}
+- learn_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_languages)}
+- learn_categories << {tag:"Teacherled", name: I18n.t(:teach_led_lesson_plans)}
+
+- beyond_categories = []
+- beyond_categories << {tag:"Beginner", name: I18n.t(:carousel_heading_beyond_beginners)}
+- beyond_categories << {tag:"JavaScript", name: I18n.t(:carousel_heading_beyond_javascript)}
+- beyond_categories << {tag:"Apps", name: I18n.t(:carousel_heading_beyond_devices)}
+- beyond_categories << {tag:"OtherLang", name: I18n.t(:carousel_heading_beyond_languages)}
+- beyond_categories << {tag:"MakeApps", name: I18n.t(:carousel_heading_apps_games)}
+- beyond_categories << {tag:"Univ", name: I18n.t(:carousel_heading_university)}
+- beyond_categories << {tag:"Web", name: I18n.t(:carousel_heading_webpages)}
+- beyond_categories << {tag:"Robot", name: I18n.t(:carousel_heading_robots)}
+- beyond_categories << {tag:"IDE", name: I18n.t(:carousel_heading_ide)}
 
 %div{style: "clear:both"}
 
 -tutorials = Tutorials.new(variation=='learn' ? :tutorials : :beyond_tutorials)
 
-#carousel-frozen{:style=>'display:none'}
-  = view :learn_carousel_frozen, :tag=>'frozen', :tutorials=>tutorials, :id=>'collection-frozen'
+- @variation = variation
 
 #carousel-ie8{:style=>'display:none'}
   = view :learn_carousel, :heading=>I18n.t(:older_systems), :subheading=>I18n.t(:older_systems_subheading), :tag=>'IE8', :tutorials=>tutorials, :id=>'collection-ie8', :check_language=>true
@@ -19,22 +35,28 @@
   %br
   %a{:id=>"englishtutorials", :href=>"#", :onclick=>"toggle_visibility();return false;"}
     %button{:style=>"font-size:20px;"}
-      = I18n.t(:carousel_heading_domestic) 
+      = I18n.t(:carousel_heading_domestic)
+  %br
+  %br    
 
-#all-tutorials{:style=>'visibility:hidden; overflow:hidden'}
+- categories = variation == 'learn' ? learn_categories : beyond_categories
+#all-tutorials{:style=>'visibility:hidden; overflow:hidden;'}
   - categories.each do |category|
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-%br
-%br
+  - if variation == 'learn'
+    = view :learn_teacher_banner
 
--if variation == 'learn'
-  %h1 
-    %a{:href=>"http://hourofcode.com/resources/how-to"}
-      = I18n.t(:how_to_teach_hoc)
+- if request.locale == "en-US"
+  .footer-banner
+    = I18n.t(:learn_footer_all_tutorials)
+  %br
+  %br
 
--if variation == 'beyond'
+- if variation == 'beyond'
+  %br
+  %br
   %a{:href=>"/educate"}
     = I18n.t(:more_resources_educators)
   %br
@@ -74,32 +96,26 @@
   // International
   var pegasusLocale = "#{request.locale}";
 
-  // Special Frozen entry, English only right now, and not shown for mobile or IE8
-  if (!window.mobilecheck() && !is_ie8)
-  {
-    $('#carousel-frozen').show();
-  }
-
-  if (pegasusLocale.substring(0,2) == "en") 
+  if (pegasusLocale.substring(0,2) == "en")
   {
     $('#all-tutorials').show();
     $('#all-tutorials').css('visibility', 'visible');
   }
-  else 
+  else
   {
     $('#carousel-international').show();
     $('#all-tutorials').css('height', '0');
   }
 
-  function toggle_visibility() 
+  function toggle_visibility()
   {
     var e = document.getElementById('all-tutorials');
-    if ( e.style.visibility == 'visible' ) 
+    if ( e.style.visibility == 'visible' )
     {
       $('#all-tutorials').css('height', '0');
       $('#all-tutorials').css('visibility', 'hidden');
     }
-    else 
+    else
     {
       $('#all-tutorials').css('height', '100%');
       $('#all-tutorials').css('visibility', 'visible');
@@ -156,10 +172,6 @@
   function showScratBlink(blink) {
     $(".scrat-standing").css('opacity', blink ? 0 : 1);
     $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
-
-    if (blink) {
-      ga('send', 'event', 'scrat', 'blink', {'page': "#{request.path}"});
-    }
   }
 
   function setupScratBlinking() {

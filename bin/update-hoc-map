@@ -39,8 +39,8 @@ CSV.open(file.path, 'w') do |csv|
   all_forms.each do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data])
-    row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p']]
-    next if row.any?(&:nil?)
+    next if data['organization_name_s'].nil? || processed_data['location_city_s'].nil? || processed_data['location_p'].nil?
+    row = [form[:id], data['organization_name_s'], processed_data['location_city_s'], processed_data['location_p'], form[:review], data['special_event_details_s']]
     exported += 1
     csv << row
   end

@@ -9,7 +9,7 @@ require src_dir 'database'
 # HocSignup2014- US ONLY
 # CSEdWeekEvent2013- US ONLY
 
-SOLR = Solr::Server.new(host: 'ec2-54-83-22-254.compute-1.amazonaws.com')
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 def export_contacts_to_csv(contacts, path)
   columns = nil

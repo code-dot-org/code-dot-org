@@ -12,12 +12,12 @@
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
-    "disable_variable_editing": "true",
+    "disable_variable_editing": "false",
     "start_direction": "1",
     "step_mode": "1",
     "nectar_goal": "13",
     "flower_type": "redWithNectar",
-    "ideal": "46",
+    "ideal": "47",
     "instructions": "Wouldn't it be nice if we could collect all of these nectars with the a single function? Try adding a new parameter to your function called \"nectar units\" to control the amount of nectar to collect. You'll probably want to rename the function too!",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -31,7 +31,6 @@
     "disable_examples": "false",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "true"
   }
 }]]></config>

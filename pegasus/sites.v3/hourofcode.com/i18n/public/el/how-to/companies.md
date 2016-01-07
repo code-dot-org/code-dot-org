@@ -6,16 +6,17 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
-**There are many ways companies can participate in the Hour of Code and help expand participation in computer science. Consider:**
+**Υπάρχουν πολλοί τρόποι για εταιρείες να συμμετέχουν στην Ώρα του Κώδικα και να συμβάλουν στη διεύρυνση της συμμετοχής στην επιστήμη των υπολογιστών. Σκεφτείτε να:**
 
+  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
   * Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
   * Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
   * Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
   * Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+  * For more instructions on connecting your employees with classrooms, use our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
 
 ## How to host an Hour of Code event
 
@@ -127,4 +128,3 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 Στην ώρα του κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι για να μάθετε περισσότερα σχετικά με το πώς λειτουργεί η τεχνολογία και πώς να δημιουργήσετε εφαρμογές λογισμικού. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

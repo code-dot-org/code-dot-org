@@ -239,7 +239,7 @@ function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
     var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
     var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
 
-    var areEqual = expected.result.equals(actual.result);
+    var areEqual = jsnums.equals(expected.result, actual.result);
 
     if (evaluateInPlayspace) {
       var tokenList = constructTokenList(expectedEquation, null);
@@ -1189,6 +1189,7 @@ function onReportComplete(response) {
   runButton.disabled = false;
   appState.response = response;
   appState.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 }
 

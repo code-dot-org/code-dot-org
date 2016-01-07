@@ -1,6 +1,8 @@
+/* global ace */
 var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
 var tooltipUtils = require('./tooltipUtils.js');
 var dom = require('../dom');
+var dropletUtils = require('../dropletUtils');
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks
@@ -16,6 +18,7 @@ var dom = require('../dom');
  */
 var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
   this.showParamDropdowns = dropletTooltipManager.dropletConfig.showParamDropdowns;
   this.tooltipConfig = {
     interactive: true,
@@ -29,7 +32,8 @@ var DropletAutocompleteParameterTooltipManager = function (dropletTooltipManager
     offsetY: 2,
     restoration: 'none',
     updateAnimation: false,
-    positionTracker: true
+    positionTracker: true,
+    tooltipsEnabled: true
   };
 };
 
@@ -65,8 +69,9 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
     return;
   }
 
-  if (this.startingAutoComplete) {
-    // Guard against re-entrancy that occurs inside the showParamDropdownIfNeeded_() below
+  if (this.blockDropdownsAndTooltips || this.startingAutoComplete) {
+    // Guard against re-entrancy that occurs inside the showParamDropdownIfNeeded_() and the click
+    // handlers below
     return;
   }
 
@@ -86,11 +91,31 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ = functio
 DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ = function (editor, paramInfo) {
   // Check the dropletConfig to see if we can find dropdown info for this parameter
   var dropdownList;
-  this.dropletTooltipManager.dropletConfig.blocks.forEach(function (block) {
-    if (block.func === paramInfo.funcName && block.dropdown) {
-      dropdownList = block.dropdown[paramInfo.currentParameterIndex];
-    }
-  });
+  dropletUtils.getAllAvailableDropletBlocks(
+    this.dropletTooltipManager.dropletConfig,
+    this.dropletTooltipManager.codeFunctions,
+    this.autocompletePaletteApisOnly).forEach(function (block) {
+      if (block.func !== paramInfo.funcName || !block.dropdown) {
+        // Not the right block or no dropdown specified
+        return;
+      }
+      if (block.noAutocomplete) {
+        // Block doesn't want autocomplete, so ignore
+        return;
+      }
+      if (this.dropletTooltipManager.autocompletePaletteApisOnly &&
+          this.dropletTooltipManager.codeFunctions &&
+          typeof this.dropletTooltipManager.codeFunctions[block.func] === 'undefined') {
+        // In autocompletePaletteApisOnly mode and block is not in the palette:
+        return;
+      }
+      if (typeof block.dropdown[paramInfo.currentParameterIndex] === 'function') {
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex]();
+      } else {
+        dropdownList = block.dropdown[paramInfo.currentParameterIndex];
+      }
+    },
+    this);
 
   if (dropdownList && !editor.completer.activated) {
     // The cursor is positioned where a parameter with a dropdown should appear
@@ -99,16 +124,26 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
 
     // First, install our hooks to modify the normal ace AutoComplete (these are
     // safe to leave in place, and we can call this multiple times):
-    DropletAutocompleteParameterTooltipManager.installAceCompleterHooks_(editor);
+    this.installAceCompleterHooks_(editor);
 
     // Create a new ace completer based on the dropdown info and mark it as the
     // "overrideCompleter" which will stay in place for the next popup from
     // autocomplete only:
     var dropdownCompletions = [];
     dropdownList.forEach(function (listValue) {
+      var valString, valClick;
+      if (typeof listValue === 'string') {
+        valString = listValue;
+      } else {
+        // Support the { text: x, display: x } form, but ignore the display field
+        valString = listValue.text;
+        // Tack on the special click handler if present
+        valClick = listValue.click;
+      }
       dropdownCompletions.push({
         name: 'dropdown',
-        value: listValue
+        value: valString,
+        click: valClick
       });
     });
     editor.completer.overrideCompleter = {
@@ -125,12 +160,13 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
-  if (!this.dropletTooltipManager.hasDocFor(functionName)) {
+  if (!this.tooltipConfig.tooltipsEnabled || !this.dropletTooltipManager.hasDocFor(functionName)) {
     return;
   }
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
 
-  if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
+  var hasTooltipParams = tooltipInfo.parameterInfos.length > 0;
+  if ((hasTooltipParams && currentParameterIndex >= tooltipInfo.parameterInfos.length)) {
     return;
   }
 
@@ -139,11 +175,17 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   cursorTooltip.tooltipster('content', this.getTooltipHTML(tooltipInfo, currentParameterIndex));
   cursorTooltip.tooltipster('show');
 
-  var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
-  dom.addClickTouchEvent(seeExamplesLink, function (event) {
-    this.dropletTooltipManager.showDocFor(functionName);
-    event.stopPropagation();
-  }.bind(this));
+  if (this.showExamplesLink) {
+    var seeExamplesLink = $(cursorTooltip.tooltipster('elementTooltip')).find('.tooltip-example-link > a')[0];
+    dom.addClickTouchEvent(seeExamplesLink, function (event) {
+      this.dropletTooltipManager.showDocFor(functionName);
+      event.stopPropagation();
+    }.bind(this));
+  }
+
+  if (!hasTooltipParams) {
+    return;
+  }
 
   var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
   if (chooseAsset) {
@@ -176,7 +218,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL(),
+    showExamplesLink : this.showExamplesLink,
     currentParameterIndex: currentParameterIndex
   });
 };
@@ -185,7 +227,7 @@ DropletAutocompleteParameterTooltipManager.prototype.getTooltipHTML = function (
  * @param editor - ace editor instance
  * @private
  */
-DropletAutocompleteParameterTooltipManager.installAceCompleterHooks_ = function (editor) {
+DropletAutocompleteParameterTooltipManager.prototype.installAceCompleterHooks_ = function (editor) {
   if (editor.completer.showPopup !== DropletAutocompleteParameterTooltipManager.showPopup) {
     DropletAutocompleteParameterTooltipManager.originalShowPopup = editor.completer.showPopup;
     editor.completer.showPopup = DropletAutocompleteParameterTooltipManager.showPopup;
@@ -194,14 +236,31 @@ DropletAutocompleteParameterTooltipManager.installAceCompleterHooks_ = function 
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions = editor.completer.gatherCompletions;
     editor.completer.gatherCompletions = DropletAutocompleteParameterTooltipManager.gatherCompletions;
   }
+  if (!editor.completer.insertMatchOverride) {
+    editor.completer.insertMatchOverride =
+      DropletAutocompleteParameterTooltipManager.insertMatch.bind(editor.completer, this);
+  }
+  if (editor.completer.insertMatch !== editor.completer.insertMatchOverride) {
+    DropletAutocompleteParameterTooltipManager.originalInsertMatch = editor.completer.insertMatch;
+    editor.completer.insertMatch = editor.completer.insertMatchOverride;
+  }
 };
 
+/**
+ * @param this completer instance
+ * @param editor ace editor
+ * @param callback we pass this through
+ */
 DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor, callback) {
   // Override normal ace AutoComplete behavior by using only overrideCompleter
   // instead of the normal set of completers when overrideCompleter is set
   if (this.overrideCompleter) {
     var allCompleters = editor.completers;
     editor.completers = [ this.overrideCompleter ];
+
+    // Ensure that autoInsert is off so we don't insert immediately when there is only one option:
+    editor.completer.autoInsert = false;
+
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions.call(this, editor, callback);
     editor.completers = allCompleters;
   } else {
@@ -209,11 +268,68 @@ DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor,
   }
 };
 
+/**
+ * @param this completer instance
+ * @param editor ace editor
+ */
 DropletAutocompleteParameterTooltipManager.showPopup = function (editor) {
   // Override normal ace AutoComplete behavior by guaranteeing that overrideCompleter is reset
   // after each call to showPopup()
   DropletAutocompleteParameterTooltipManager.originalShowPopup.call(this, editor);
   this.overrideCompleter = null;
+};
+
+/**
+ * @param this completer instance
+ * @param self DropletAutocompleteParameterTooltipManager instance
+ * @param data info passed to ace's insertMatch
+ */
+DropletAutocompleteParameterTooltipManager.insertMatch = function (self, data) {
+  // Modify normal ace AutoComplete behavior by calling our special 'click' handler when supplied
+  // and passing it the default implementation of insertMatch() to be called within
+  if (!data) {
+    data = this.popup.getData(this.popup.getRow());
+  }
+  if (!data) {
+    return false;
+  }
+
+  if (data.click) {
+    // Execute detach() method here to ensure that the popup goes
+    // away before we call the click() method
+    this.detach();
+
+    // And hide our cursor tooltip as well:
+    self.getCursorTooltip_().tooltipster('hide');
+
+    // Note: stop dropdowns and tooltips until the callback is complete...
+    self.blockDropdownsAndTooltips = true;
+
+    var lang = ace.require("./lib/lang");
+
+    // Use delayedCall so the popup and tooltip disappear in the case where the
+    // Enter key was pressed before we choose this autocomplete item
+    var clickFunc = lang.delayedCall(function () {
+      // We create a callback function which the click function will call, passing a
+      // string which will be inserted.
+      data.click(function (data) {
+        this.editor.execCommand("insertstring", data);
+        self.blockDropdownsAndTooltips = false;
+      }.bind(this));
+    }.bind(this));
+
+    clickFunc.schedule();
+  } else {
+    DropletAutocompleteParameterTooltipManager.originalInsertMatch.call(this, data);
+  }
+};
+
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled
+ */
+DropletAutocompleteParameterTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipConfig.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletAutocompleteParameterTooltipManager;

@@ -1,24 +1,24 @@
 require 'open3'
+require_relative 'hooks_utils.rb'
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
 
-def get_modified_files
-  Dir.chdir REPO_DIR
-  `git diff --cached --name-only --diff-filter AM`.split("\n").map(&:chomp).map { |x| File.expand_path("../../../#{x}", __FILE__)}
-end
-
 def filter_grunt_jshint(modified_files)
-  modified_files.select { |f| f.end_with?(".js") || f.end_with?(".jsx") }
+  modified_files.select { |f| (f.end_with?(".js") || f.end_with?(".jsx")) &&
+    !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\/blockly\//))}
 end
 
+RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile']
 def filter_rubocop(modified_files)
-  modified_rb_files = modified_files.select { |f| f.end_with?(".rb") }
+  modified_rb_rake_files = modified_files.select do |f|
+    RUBY_EXTENSIONS.any? {|ext| f.end_with? ext }
+  end
   modified_ruby_scripts = modified_files.select do |f|
     first_line = File.open(f).first
-    first_line.ascii_only? && first_line.match(/#!.*ruby/)
+    first_line && first_line.ascii_only? && first_line.match(/#!.*ruby/)
   end
-  modified_ruby_scripts + modified_rb_files
+  modified_ruby_scripts + modified_rb_rake_files
 end
 
 def filter_haml(modified_files)
@@ -49,7 +49,7 @@ def lint_failure(output)
 end
 
 def do_linting()
-  modified_files = get_modified_files()
+  modified_files = HooksUtils.get_modified_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_jshint) => filter_grunt_jshint(modified_files),

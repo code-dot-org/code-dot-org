@@ -8,30 +8,39 @@
 
 # Hour of Code होस्ट गर्नुकोलागी sign up गर्नु भएकोमा धन्यवाद!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> तपाइँले एउटा Hour of Code सिक्न ल्याटिन अमेरिका भरिका छात्रहरूको लागि सम्भव बनाउँदै हुनुहुन्छ जसले अक्टुबर भरि, *तिनिहरूको बाकीँ जीवनलाई परिवर्तन गर्छ<0>। 5-11. <% else %> तपाइँले एउटा Hour of Code सिक्न विश्व भरिका छात्रहरूको लागि सम्भव बनाउँदै हुनुहुन्छ जसले डिसेम्बर भरि, तिनिहरूको बाकीँ जीवनलाई परिवर्तन गर्छ*। 7-13. <% end %></p> 
+You're making it possible for students all around the world to learn one Hour of Code that can change the rest of their lives, during Dec. 7-13.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-## १. जानकारी फैलाउनुहोअस्
+#### We'll be in touch about new tutorials and other exciting updates. What can you do now?
 
-#HourOfCode बारेमा साथिहरुलाई भन्नुहोश.
+## 1. Find a local volunteer to help you with your event.
 
-## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-[यो मेल पठाउनुहोस् ](https://<%= hostname %>/resources#email) तपाइको प्रधानाध्यापक लाई .
+## 2. Spread the word
 
-## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[मेल पठाउनुहोस् ](https://<%= hostname %>/resources#email) तपाईको व्यवस्थापकलाई वा CEO लाई .
+## 3. Recruit your whole school for the Hour of Code
 
-## 4. आफ्नो समुदायमा Hour of Code लाई बढावा दिनुहोस्
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-एक स्थानीय समूह — केटा/केटी, स्काउट क्लब, चर्च, विश्वविद्यालय, अनुभविहरूको समूह वा श्रमिकको यूनियनको भर्ना गर्नुहोस्। वा तपाइँको छिमेकीको लागि Hour of Code "ब्लक पार्टी" लाई होस्ट गर्नुहोस्। [Send this email](https://<%= hostname %>/resources#email).
+## 4. आफ्नो मालिकलाई आवद्ध हुन सोध्नुहोस्
 
-## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your manager, or the CEO.
 
-[यो मेल पठाउनुहोस् ](https://<%= hostname %>/resources#politicians) गाविस सचिब , वडा प्रतिनिधि , नगर प्रमुख, विद्यालय , बिद्यालय ब्यबस्थापन समिति , बिद्यालयमा उपस्थिति को लागि .
+## 5. Promote the Hour of Code in your community
+
+Recruit a local group or even some friends. [Send this email](https://<%= hostname %>/resources#sample-emails).
+
+Thank you for leading the movement to give every student the chance to learn foundational computer science skills.
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-Code.org 501c3 नाफा-मुखि होइन। हाम्रो ठेगाना 1301 5th Ave, Suite 1225, Seattle, WA, 98101 हो। यो इमेलहरूलाई रूचाउनु हुँदैन? [सदस्यता नबन्न](%= unsubscribe_link %) .
+<small> You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? <a href="%= unsubscribe_link %">Unsubscribe</a>. </small>
+
+![](<%= tracking_pixel %>)

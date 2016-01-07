@@ -57,7 +57,7 @@ class BucketHelper
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_channel_id, filename
-      @s3.copy_object(bucket: @bucket, key: dest, copy_source: src, metadata_directive: 'REPLACE')
+      @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
       {filename: filename, category: category, size: fileinfo.size}
     end
@@ -67,7 +67,7 @@ class BucketHelper
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, channel_id, filename
 
-    @s3.copy_object(bucket: @bucket, copy_source: "#{@bucket}/#{key}", key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
+    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: { abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
   def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)

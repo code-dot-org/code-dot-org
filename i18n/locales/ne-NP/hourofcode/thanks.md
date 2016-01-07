@@ -22,20 +22,28 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## २. तपाईको स्कूललाई Hour of Code को प्रस्ताब राखन भन्नुहोश
+## 2. Find a local volunteer to help you with your event.
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](%= resolve_url('/prizes/hardware-signup') %) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## ३. तपाईको कम्पनीलाई संलग्न हुन भन्नुहोश
+## 3. Ask your whole school to offer an Hour of Code
+
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+
+## 4. आफ्नो मालिकलाई आवद्ध हुन सोध्नुहोस्
 
 [Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 
-## 4. Promote Hour of Code in your community
+## 5. Promote Hour of Code in your community
 
 [Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 
-## ५. Hour of Code समर्थनगर्नुकोलागी स्थानीय निर्वाचित आधिकारिकको सहयोग मग्नुहोश
+## 6. Hour of Code लाई समर्थन गर्न स्थानीय चुनियका अधिकारीलाई सोध्नुहोस्
 
 [Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

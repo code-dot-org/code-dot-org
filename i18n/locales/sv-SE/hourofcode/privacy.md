@@ -4,7 +4,7 @@ title: Privacy Policy
 
 * * *
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Integritetspolicy
 
@@ -228,7 +228,7 @@ Code.org uses certain physical, managerial, and technical safeguards designed to
 
 If we learn of a data security incident that compromises or appears to compromise your Personal Information, then we will attempt to notify you electronically so that you can take appropriate protective steps.
 
-### International visitors
+### Internationella besökare
 
 Our Website is operated and managed on servers located within the United States. If you choose to use our Website from the European Union or other regions of the world with laws governing data collection and use that differ from U.S. law, then you acknowledge and agree that you are transferring your Personal Information outside of those regions to the United States and that, by providing your Personal Information on the Website, you consent to that transfer.
 
@@ -245,4 +245,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Please contact Code.org with any questions or comments about this Privacy Notice, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![bild](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![bild](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

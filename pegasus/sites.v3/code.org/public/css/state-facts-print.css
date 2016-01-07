@@ -5,8 +5,8 @@
 
 body {
   font-family: 'Gotham 4r', sans-serif;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 16px;
   font-weight: normal;
   color: dimgray;
 }
@@ -16,8 +16,8 @@ h1 {
   font-size: 32px;
   font-family: 'Gotham 7r', sans-serif;
   font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   line-height: 1.2em;
 }
 
@@ -25,8 +25,8 @@ h2 {
   color: #00adbc;
   font-size: 22px;
   font-family: 'Gotham 5r', sans-serif;
-  margin-top: 45px;
-  margin-bottom: 25px;
+  margin-top: 35px;
+  margin-bottom: 15px;
   line-height: 1.2em;
 }
 
@@ -35,7 +35,7 @@ h3 {
   font-size: 18px;
   font-family: 'Gotham 4r', sans-serif;
   margin-top: 25px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.2em;
 }
 
@@ -50,7 +50,7 @@ a {
 }
 
 .policy-item {
-  padding: 10px 10px 12px 10px;
+  padding: 8px 10px 10px 10px;
 }
 
 .no-margin-bottom {

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -30,13 +29,32 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
 
 ## Use this handout to recruit corporations
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Încercaţi Tutorialele:
 
@@ -44,7 +62,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 **Toate tutorialele Hour of Code:**
 
-  * Require minimal prep-time for organizers
+  * Necesita timp de pregatire minim pentru organizatori
   * Sunt auto-ghidate - permit elevilor să lucreze individual, în ritmul şi nivelul de pregatire propriu
 
 [![](https://uk.code.org/images/tutorials.png)](https://uk.code.org/learn)
@@ -55,11 +73,11 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
   * **Testeaza tutorialele pe computerele sau dispozitivele disponibile.** Asiguraţi-vă că acestea funcţionează corect (cu sunet şi video).
   * **Previzualizați pagina de felicitări** pentru a vedea ce văd elevii atunci când termină. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Ofera casti elevilor** sau spune-le sa isi aduca fiecare de acasa, in cazul in care tutorialul functioneaza mai bine cu sunet.
 
 ## 3) Fa-ți planul in funcție de tehnologia disponibilă
 
-  * **Nu ai suficiente dispozitive?** Folosește [programarea in echipă](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Nu ai suficiente dispozitive?** Folosește [programarea in echipă](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Cand participantii lucreaza in echipa, se ajuta unul pe altul şi se bazeaza mai putin pe profesor.
   * **Conexiune lentă la internet?** Proiectează videclipurile pentru toată clasa, astfel elevii nu vor mai descarca videoclipurile individual. Sau încercaţi tutorialele locale.
 
 ## 4) Inspira elevii - Arată-le un video
@@ -74,8 +92,7 @@ Aratati-le elevilor un video inspirational pentru a excela in cadrul Hour of Cod
 
 <% else %>
 
-# Additional resources coming soon!
+# Resursele aditionale vor fi disponibile in curand!
 
 <% end %>
 
-<%= view :signup_button %>

@@ -1,25 +1,58 @@
 .mapheader {
-  position: relative;
+  text-align: center;
+}
+
+.mapheader a {
+  color: rgb(193, 43, 39);
 }
 
 .signup-button {
-  margin: 10px 0 0 20px;
-}
-
-@media screen and (max-width: 640px) {
-  .signup-button {
-    margin: 0 0 10px 0;
-  }
-
-  #hocmap {
-    margin-left: 20px;
-  }
-}
-
-.float-left {
-  float: left;
+  margin-left: 10px;
 }
 
 .full-width {
   width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+  #inmaplegend {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  #belowmaplegend {
+    display: none;
+  }
+}
+
+.legend {
+  background: #FFF;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  width: 160px;
+}
+
+.legend-title {
+  font-size: 18px;
+  color: rgb(193, 43, 39);
+  margin-bottom: 5px;
+}
+
+.color {
+  border: 1px solid;
+  height: 14px;
+  width: 12px;
+  margin-right: 3px;
+  float: left;
+}
+
+.blue {
+  background: #5781fc;
+}
+
+.red {
+  background: #ff4b4b;
 }

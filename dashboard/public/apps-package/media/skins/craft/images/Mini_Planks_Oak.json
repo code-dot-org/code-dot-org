@@ -1,0 +1,60 @@
+{"frames": {
+
+"Mini_Planks_Oak0.png":
+{
+	"frame": {"x":54,"y":0,"w":18,"h":21},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":3,"w":18,"h":21},
+	"sourceSize": {"w":24,"h":24}
+},
+"Mini_Planks_Oak1.png":
+{
+	"frame": {"x":36,"y":0,"w":18,"h":22},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":2,"w":18,"h":22},
+	"sourceSize": {"w":24,"h":24}
+},
+"Mini_Planks_Oak2.png":
+{
+	"frame": {"x":18,"y":0,"w":18,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":18,"h":23},
+	"sourceSize": {"w":24,"h":24}
+},
+"Mini_Planks_Oak3.png":
+{
+	"frame": {"x":0,"y":0,"w":18,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":18,"h":24},
+	"sourceSize": {"w":24,"h":24}
+},
+"Mini_Planks_Oak4.png":
+{
+	"frame": {"x":18,"y":0,"w":18,"h":23},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":18,"h":23},
+	"sourceSize": {"w":24,"h":24}
+},
+"Mini_Planks_Oak5.png":
+{
+	"frame": {"x":36,"y":0,"w":18,"h":22},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":2,"w":18,"h":22},
+	"sourceSize": {"w":24,"h":24}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Mini_Planks_Oak.png",
+	"format": "RGBA8888",
+	"size": {"w":72,"h":24},
+	"scale": "0.25",
+	"smartupdate": "$TexturePacker:SmartUpdate:5bcedbd5534e191d906b68a072502354:720c01d623e4adda5d323ee49f7449bf:ab397cd9ca05575db395a88daf75668b$"
+}
+}

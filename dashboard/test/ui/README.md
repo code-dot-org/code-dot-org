@@ -13,11 +13,8 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 3. `cd` to the directory of this README.
 4. `bundle install`
 5. `rbenv rehash`
-6. `./runner.rb -l -m -d localhost.studio.code.org:3000 -p localhost.code.org:3000`
-  - `-l` makes it use the chromedriver
-  - `-m` maximizes the window on startup
-  - `-d` sets the test domain for dashboard
-  - `-p` sets the test domain for pegasus
+6. `./runner.rb -l`
+  - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
   - a window will pop up in the background in which you can watch the tests happen
 7. In a separate window, run `tail -f *.log` to watch the results of your tests
   - `-f` streams the log in your shell, so it will be updated as new lines are written

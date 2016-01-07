@@ -4,13 +4,13 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
-<h1>How to teach one Hour of Code in After-school</h1>
+# How to teach one Hour of Code in after-school
 
-## 1) Sign up
-- Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-- Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
+## 1) Promote your Hour of Code
+Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -50,7 +50,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
 - List things that use code in everyday life.
-- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
@@ -93,6 +93,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 ## 7) Celebrate
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
@@ -118,13 +119,17 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 ## Other Hour of Code resources for educators:
 - Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-- Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
+- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+- [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
 - Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
 <% if @country == 'us' %>
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 <% end %>
 
 ## What comes after the Hour of Code?
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your children to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+- The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey: 
 
-<%= view :signup_button %>
+- Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+

@@ -14,18 +14,6 @@ var channels = require('./clientApi').create('/v3/channels');
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
 
-function packSourceFile() {
-  return JSON.stringify({
-    source: current.levelSource,
-    html: current.levelHtml
-  });
-}
-
-function unpackSourceFile(data) {
-  current.levelSource = data.source;
-  current.html = data.html;
-}
-
 var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
@@ -50,12 +38,13 @@ var PathPart = {
 };
 
 /**
+ * Current state of our Channel API object
  * @typedef {Object} ProjectInstance
  * @property {string} id
  * @property {string} name
  * @property {string} levelHtml
  * @property {string} levelSource
- * hidden // unclear when this ever gets set
+ * @property {boolean} hidden Doesn't show up in project list
  * @property {boolean} isOwner Populated by our update/create callback.
  * @property {string} updatedAt String representation of a Date. Populated by
  *   out update/create callback
@@ -65,6 +54,33 @@ var current;
 var currentSourceVersionId;
 var currentAbuseScore = 0;
 var isEditing = false;
+
+/**
+ * Current state of our sources API data
+ */
+var currentSources = {
+  source: null,
+  html: null
+};
+
+/**
+ * Get string representation of our sources API object for upload
+ */
+function packSources() {
+  return JSON.stringify(currentSources);
+}
+
+/**
+ * Populate our current sources API object based off of given data
+ * @param {string} data.source
+ * @param {string} data.html
+ */
+function unpackSources(data) {
+  currentSources = {
+    source: data.source,
+    html: data.html
+  };
+}
 
 var projects = module.exports = {
   /**
@@ -222,9 +238,21 @@ var projects = module.exports = {
     }
   },
 
-  showProjectLevelHeader: function() {
+  showShareRemixHeader: function() {
     if (this.shouldUpdateHeaders()) {
-      dashboard.header.showProjectLevelHeader();
+      dashboard.header.showShareRemixHeader();
+    }
+  },
+  setName: function(newName) {
+    current = current || {};
+    if (newName) {
+      current.name = newName;
+      this.setTitle(newName);
+    }
+  },
+  setTitle: function(newName) {
+    if (newName && appOptions.gameDisplayName) {
+      document.title = newName + ' - ' + appOptions.gameDisplayName;
     }
   },
 
@@ -247,19 +275,17 @@ var projects = module.exports = {
     }
 
     if (this.isProjectLevel() || current) {
-      if (current && current.levelHtml) {
-        sourceHandler.setInitialLevelHtml(current.levelHtml);
+      if (currentSources.html) {
+        sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
       if (isEditing) {
         if (current) {
-          if (current.levelSource) {
-            sourceHandler.setInitialLevelSource(current.levelSource);
+          if (currentSources.source) {
+            sourceHandler.setInitialLevelSource(currentSources.source);
           }
         } else {
-          current = {
-            name: 'My Project'
-          };
+          this.setName('My Project');
         }
 
         $(window).on(events.appModeChanged, function(event, callback) {
@@ -269,14 +295,18 @@ var projects = module.exports = {
         // Autosave every AUTOSAVE_INTERVAL milliseconds
         $(window).on(events.appInitialized, function () {
           // Get the initial app code as a baseline
-          current.levelSource = this.sourceHandler.getLevelSource(current.levelSource);
+          currentSources.source = this.sourceHandler.getLevelSource(currentSources.source);
         }.bind(this));
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
         window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
 
-        if (!current.hidden) {
+        if (current.hidden) {
+          if (!this.isFrozen()) {
+            this.showShareRemixHeader();
+          }
+        } else {
           if (current.isOwner || !parsePath().channelId) {
             this.showProjectHeader();
           } else {
@@ -285,13 +315,11 @@ var projects = module.exports = {
           }
         }
       } else if (current) {
-        this.sourceHandler.setInitialLevelSource(current.levelSource);
+        this.sourceHandler.setInitialLevelSource(currentSources.source);
         this.showMinimalProjectHeader();
       }
-    } else if (appOptions.isLegacyShare && this.appToProjectUrl()) {
-      current = {
-        name: 'Untitled Project'
-      };
+    } else if (appOptions.isLegacyShare && this.getStandaloneApp()) {
+      this.setName('Untitled Project');
       this.showMinimalProjectHeader();
     }
     if (appOptions.noPadding) {
@@ -303,7 +331,11 @@ var projects = module.exports = {
   projectChanged: function() {
     hasProjectChanged = true;
   },
-  getCurrentApp: function () {
+  /**
+   * @returns {string} The name of the standalone app capable of running
+   * this project as a standalone project, or null if none exists.
+   */
+  getStandaloneApp: function () {
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
@@ -316,19 +348,32 @@ var projects = module.exports = {
       case 'studio':
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
+        } else if (appOptions.skinId === 'hoc2015' || appOptions.skinId === 'infinity') {
+          return null;
         }
         return 'playlab';
+      default:
+        return null;
     }
   },
+  /**
+   * @returns {string} The path to the app capable of running
+   * this project as a standalone app.
+   * @throws {Error} If no standalone app exists.
+   */
   appToProjectUrl: function () {
-    return '/projects/' + projects.getCurrentApp();
+    var app = projects.getStandaloneApp();
+    if (!app) {
+      throw new Error('This type of project cannot be run as a standalone app.');
+    }
+    return '/projects/' + app;
   },
   /**
    * Explicitly clear the HTML, circumventing safety measures which prevent it from
    * being accidentally deleted.
    */
   clearHtml: function() {
-    current.levelHtml = '';
+    currentSources.html = '';
   },
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
@@ -339,7 +384,6 @@ var projects = module.exports = {
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    */
   save: function(sourceAndHtml, callback, forceNewVersion) {
-
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -348,8 +392,10 @@ var projects = module.exports = {
     if (typeof arguments[0] === 'function' || !sourceAndHtml) {
       // If no source is provided, shift the arguments and ask for the source
       // ourselves.
-      callback = arguments[0];
-      forceNewVersion = arguments[1];
+      var args = Array.prototype.slice.apply(arguments);
+      callback = args[0];
+      forceNewVersion = args[1];
+
       sourceAndHtml = {
         source: this.sourceHandler.getLevelSource(),
         html: this.sourceHandler.getLevelHtml()
@@ -364,31 +410,25 @@ var projects = module.exports = {
     var channelId = current.id;
     // TODO(dave): Remove this check and remove clearHtml() once all projects
     // have versioning: https://www.pivotaltracker.com/story/show/103347498
-    if (current.levelHtml && !sourceAndHtml.html) {
+    if (currentSources.html && !sourceAndHtml.html) {
       throw new Error('Attempting to blow away existing levelHtml');
     }
 
-    current.levelSource = sourceAndHtml.source;
-    current.levelHtml = sourceAndHtml.html;
-    current.level = this.appToProjectUrl();
+    unpackSources(sourceAndHtml);
+    if (this.getStandaloneApp()) {
+      current.level = this.appToProjectUrl();
+    }
 
-    if (channelId && current.isOwner) {
-      var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
-      sources.put(channelId, packSourceFile(), filename, function (err, response) {
-        currentSourceVersionId = response.versionId;
-        current.migratedToS3 = true;
-        channels.update(channelId, current, function (err, data) {
-          this.updateCurrentData_(err, data, false);
-          executeCallback(callback, data);
-        }.bind(this));
-      }.bind(this));
-    } else {
-      // TODO: remove once the server is providing the channel ID (/c/ remix uses `copy`)
-      channels.create(current, function (err, data) {
-        this.updateCurrentData_(err, data, true);
+    var filename = SOURCE_FILE + (currentSourceVersionId ? "?version=" + currentSourceVersionId : '');
+    sources.put(channelId, packSources(), filename, function (err, response) {
+      currentSourceVersionId = response.versionId;
+      current.migratedToS3 = true;
+
+      channels.update(channelId, current, function (err, data) {
+        this.updateCurrentData_(err, data, false);
         executeCallback(callback, data);
       }.bind(this));
-    }
+    }.bind(this));
   },
   updateCurrentData_: function (err, data, isNewChannel) {
     if (err) {
@@ -416,8 +456,8 @@ var projects = module.exports = {
    * Autosave the code if things have changed
    */
   autosave_: function () {
-    // Bail if a baseline levelSource doesn't exist (app not yet initialized)
-    if (current.levelSource === undefined) {
+    // Bail if baseline code doesn't exist (app not yet initialized)
+    if (currentSources.source === null) {
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
@@ -426,10 +466,14 @@ var projects = module.exports = {
       return;
     }
 
+    if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
+      return;
+    }
+
     var source = this.sourceHandler.getLevelSource();
     var html = this.sourceHandler.getLevelHtml();
 
-    if (current.levelSource === source && current.levelHtml === html) {
+    if (currentSources.source === source && currentSources.html === html) {
       hasProjectChanged = false;
       return;
     }
@@ -442,7 +486,7 @@ var projects = module.exports = {
    * Renames and saves the project.
    */
   rename: function(newName, callback) {
-    current.name = newName;
+    this.setName(newName);
     this.save(callback);
   },
   /**
@@ -465,8 +509,11 @@ var projects = module.exports = {
     var wrappedCallback = this.copyAssets.bind(this, srcChannel, callback);
     delete current.id;
     delete current.hidden;
-    current.name = newName;
-    this.save(wrappedCallback);
+    this.setName(newName);
+    channels.create(current, function (err, data) {
+      this.updateCurrentData_(err, data, true);
+      this.save(wrappedCallback);
+    }.bind(this));
   },
   copyAssets: function (srcChannel, callback) {
     if (!srcChannel) {
@@ -485,9 +532,9 @@ var projects = module.exports = {
   serverSideRemix: function() {
     if (current && !current.name) {
       if (projects.appToProjectUrl() === '/projects/algebra_game') {
-        current.name = 'Big Game Template';
+        this.setName('Big Game Template');
       } else if (projects.appToProjectUrl() === '/projects/applab') {
-        current.name = 'My Project';
+        this.setName('My Project');
       }
     }
     function redirectToRemix() {
@@ -500,24 +547,26 @@ var projects = module.exports = {
       redirectToRemix();
     }
   },
+  createNew: function() {
+    projects.save(function () {
+      location.href = projects.appToProjectUrl() + '/new';
+    });
+  },
   delete: function(callback) {
     var channelId = current.id;
-    if (channelId) {
-      channels.delete(channelId, function(err, data) {
-        executeCallback(callback, data);
-      });
-    } else {
-      executeCallback(callback, false);
-    }
+    channels.delete(channelId, function(err, data) {
+      executeCallback(callback, data);
+    });
   },
   /**
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
   load: function () {
-    var deferred;
+    var deferred = new $.Deferred();
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        return;
+        deferred.resolve();
+        return deferred;
       }
       var pathInfo = parsePath();
 
@@ -529,7 +578,6 @@ var projects = module.exports = {
         }
 
         // Load the project ID, if one exists
-        deferred = new $.Deferred();
         channels.fetch(pathInfo.channelId, function (err, data) {
           if (err) {
             // Project not found, redirect to the new project experience.
@@ -546,29 +594,36 @@ var projects = module.exports = {
             });
           }
         });
-        return deferred;
       } else {
         isEditing = true;
+        deferred.resolve();
       }
     } else if (appOptions.isChannelBacked) {
       isEditing = true;
-      deferred = new $.Deferred();
       channels.fetch(appOptions.channel, function(err, data) {
         if (err) {
           deferred.reject();
         } else {
           fetchSource(data, function () {
-            projects.showProjectLevelHeader();
+            projects.showShareRemixHeader();
             fetchAbuseScore(function () {
               deferred.resolve();
             });
           });
         }
       });
-      return deferred;
+    } else {
+      deferred.resolve();
     }
+    return deferred;
   },
 
+  /**
+   * Generates the url to perform the specified action for this project.
+   * @param {string} action Action to perform.
+   * @returns {string} Url to the specified action.
+   * @throws {Error} If this type of project does not have a standalone app.
+   */
   getPathName: function (action) {
     var pathName = this.appToProjectUrl() + '/' + this.getCurrentId();
     if (action) {
@@ -578,14 +633,31 @@ var projects = module.exports = {
   }
 };
 
-function fetchSource(data, callback) {
-  current = data;
-  if (data.migratedToS3) {
+/**
+ * Given data from our channels api, updates current and gets sources from
+ * sources api
+ * @param {object} channelData Data we fetched from channels api
+ * @param {function} callback
+ */
+function fetchSource(channelData, callback) {
+  // Explicitly remove levelSource/levelHtml from channels
+  delete channelData.levelSource;
+  delete channelData.levelHtml;
+  // Also clear out html, which we never should have been setting.
+  delete channelData.html;
+
+  // Update current
+  current = channelData;
+
+  projects.setTitle(current.name);
+  if (channelData.migratedToS3) {
     sources.fetch(current.id + '/' + SOURCE_FILE, function (err, data) {
-      unpackSourceFile(data);
+      unpackSources(data);
       callback();
     });
   } else {
+    // It's possible that we created a channel, but failed to save anything to
+    // S3. In this case, it's expected that html/levelSource are null.
     callback();
   }
 }

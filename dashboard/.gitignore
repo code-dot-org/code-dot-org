@@ -3,15 +3,23 @@
 /config/application.yml
 /config/locales/*en-PLOC.yml
 /config/real_secret_words.csv
+
+# build dependency accounting stuff
 /config/scripts/.dropbox
 /config/scripts/.hints_imported
 /config/scripts/.matches_seeded
 /config/scripts/.multis_seeded
 /config/scripts/.dsls_seeded
 /config/scripts/.seeded
+
+# unit test and ui test artifacts
 /coverage
 /public/assets
 /test/ui/success.log
 /test/ui/error.log
 /test/ui/errorbrowsers.log
 /test/ui/log/*
+
+# symlinks we use to provide links to test output
+/public/coverage
+/public/ui_test

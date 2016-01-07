@@ -23,7 +23,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -67,9 +66,6 @@
     "markdown_instructions": "<a href=\"https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38\" target=\"_blank\">Innovation Project</a>",
     "examples_required": "false",
     "instructions": "test",
-    "encrypted_examples": [
-
-    ],
     "never_autoplay_video": "false",
     "submittable": "false",
     "hide_view_data_button": "true"

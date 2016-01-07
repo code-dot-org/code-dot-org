@@ -1,18 +1,22 @@
 name 'U2L06- MC: what is an MST?'
-title 'Minimum Spanning Trees'
-description ''
-question 'What does a minimum spanning tree tell you about a graph?'
-wrong 'The shortest path from a particular point in the graph to another point in the graph'
-wrong 'The shortest path between any two points for all points in the graph'
-right 'The fewest number and smallest total distance of connections necessary to connect all points in a graph'
-wrong 'Whether or not the graph represents a network'
-wrong 'The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice'
-
-markdown <<MARKDOWN
-
-MARKDOWN
-teacher_markdown <<MARKDOWN
-Answer:
-
-- C: The fewest number and smallest total distance of connections necessary to connect all points in a graph
-MARKDOWN
+encrypted '64DQ9sljvSD+jiyayQ5rZQdnpTlPrK2CISfIjnw7puTLO+wFaHZlBS4m26AU
+rEh4dqVD7KxGSCs494CmNuHOzWZ58qi1OAEHgVJpTY2pnPLMiSHkmlDzXr04
+rZMUltVAiAyJrt2pTe3vQr3uaob7kM+rEkeQU/kdEjPzvo+t6WNhvl+TWdTG
+ZSqhSE0LTSDOukulsCE+9GrGU5ArbQk3k9CVx5/l0Esq2FvfqS3XStWO22Ci
+EJAM1CecscmwY88TQ82QWD45T3fl+lCTTcIIbBwlDdYh8s5YcHV4XaU/ZTZ7
+LyHgO3IhBnAnfX7aZFHEd4aZAjrNWc1Lk4UVlnYf88W3nA/2x436NdEm2GCo
+mkA1BbpCGtXd2cYmuibRZ2W9oKbla9qTB1mAnJByxTzoJLWstYsfnYoRwxsf
+xf3N/c+rhxcsCUtCPoHNhYk5QtWzjXV1WBmvO/XEuz/QvWjqFkWtl/TEypEh
+zrPjYKwDLhkg7Lm1T3NzRlEIpgRPBS3cK+z6E5+KutgoxtHK2x03XB7V0JaA
+nx43or2uxQNAj9z+I9fjgvdv7Oh6YIBN9Mo2z1EmhNcpTmNuNsE+16wr3xzY
+LhBIyC2OdHJj1v+pby1a+ZE2CZThB2oD1dXaSyQawT3gNjZPs2fF5keQtszP
+b9j3zftYCyfay3OHhpj5yFYOJsOKGH0m/3oSvSxMBMbBZasKWq6tOvoN/Clx
+jj86TH3kR/D6bFb27/eljq8s4g/xx8shDiB2qktrygPpeEt1IHYrmUrQpFNv
+yDfXefiveWOFY3a2Pb/YuNfCQANxJAVeyP9pGlwIrS6vY9MW66fe8L2JkpF4
+UqvU/kX1bqQ7q4+YIqMSgSfKP6WwG6fdvcbf9OJniZ5Lc/0GlwRdQj+2RT9p
+2c1t8YIZ7JSnanT9p1xpSAACK31pCEGEn5g6aXxt6jQxC0c7USPqPEL06haa
+cQDajHUuAwk+I2SMXuSS7TRg0FtZKUAuwIWfgI4P5qOs+jFAaZnUYfisfjr+
+JmRMqsUfeY1+jPb+p8gV7F5umGOPNCM36IqE+EDMwVx2SYqPYb3qgmWzZHfI
+VILf/YQbWZNLE8bZQxu0J20wIk3z7PKm8+ZWsQaRk1wGNDn21Os4ELsz91ub
+bLg7gP+pMXjy3idnhNjZe26KKvdqPo3fCg==
+'

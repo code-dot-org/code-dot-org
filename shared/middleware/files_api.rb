@@ -26,7 +26,7 @@ class FilesApi < Sinatra::Base
     case endpoint
     when 'assets'
       # Only allow specific image and sound types to be uploaded by users.
-      %w(.jpg .jpeg .gif .png .mp3).include? extension
+      %w(.jpg .jpeg .gif .png .mp3).include? extension.downcase
     when 'sources'
       # Only allow JavaScript and Blockly XML source files.
       %w(.js .xml .txt .json).include? extension
@@ -49,6 +49,48 @@ class FilesApi < Sinatra::Base
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
 
     teaches_student?(owner_user_id)
+  end
+
+  def file_too_large(quota_type)
+    # Don't record a custom event since these events may be very common.
+    record_metric('FileTooLarge', quota_type)
+    too_large
+  end
+
+  def quota_crossed_half_used?(app_size, body_length)
+    app_size < FilesApi::max_app_size / 2 && app_size + body_length >= FilesApi::max_app_size / 2
+  end
+
+  def quota_crossed_half_used(quota_type, encrypted_channel_id)
+    quota_event_type = 'QuotaCrossedHalfUsed'
+    record_metric(quota_event_type, quota_type)
+    record_event(quota_event_type, quota_type, encrypted_channel_id)
+  end
+
+  def quota_exceeded(quota_type, encrypted_channel_id)
+    quota_event_type = 'QuotaExceeded'
+    record_metric(quota_event_type, quota_type)
+    record_event(quota_event_type, quota_type, encrypted_channel_id)
+    forbidden
+  end
+
+  def record_metric(quota_event_type, quota_type, value = 1)
+    return if !CDO.newrelic_logging
+
+    NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
+  end
+
+  def record_event(quota_event_type, quota_type, encrypted_channel_id)
+    return if !CDO.newrelic_logging
+
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    event_details = {
+        quota_type: quota_type,
+        encrypted_channel_id: encrypted_channel_id,
+        owner_user_id: owner_user_id
+    }
+    NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
   end
 
   helpers do
@@ -99,23 +141,10 @@ class FilesApi < Sinatra::Base
     result[:body]
   end
 
-  #
-  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
-  #
-  # Create or replace a file. Optionally overwrite a specific version.
-  #
-  put %r{/v3/(assets|sources)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
-    dont_cache
-
-    # read the entire request before considering rejecting it, otherwise varnish
-    # may return a 503 instead of whatever status code we specify. Unfortunately
-    # this prevents us from rejecting large files based on the Content-Length
-    # header.
-    body = request.body.read
-
+  def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
 
-    too_large unless body.length < FilesApi::max_file_size
+    file_too_large(endpoint) unless body.length < FilesApi::max_file_size
 
     # verify that file type is in our whitelist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
@@ -128,12 +157,51 @@ class FilesApi < Sinatra::Base
     buckets = get_bucket_impl(endpoint).new
     app_size = buckets.app_size(encrypted_channel_id)
 
-    forbidden unless app_size + body.length < FilesApi::max_app_size
+    quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < FilesApi::max_app_size
+    quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     response = buckets.create_or_replace(encrypted_channel_id, filename, body, request.GET['version'])
 
-    content_type :json
     category = mime_type.split('/').first
     {filename: filename, category: category, size: body.length, versionId: response.version_id}.to_json
+  end
+
+  #
+  # PUT /v3/(assets|sources)/<channel-id>/<filename>?version=<version-id>
+  #
+  # Create or replace a file. Optionally overwrite a specific version.
+  #
+  put %r{/v3/sources/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
+    dont_cache
+    content_type :json
+
+    # read the entire request before considering rejecting it, otherwise varnish
+    # may return a 503 instead of whatever status code we specify. Unfortunately
+    # this prevents us from rejecting large files based on the Content-Length
+    # header.
+    body = request.body.read
+
+    put_file('sources', encrypted_channel_id, filename, body)
+  end
+
+  # POST /v3/assets/<channel-id>/
+  #
+  # Upload a new file. We use this method so that IE9 can still upload by
+  # posting to an iframe.
+  #
+  post %r{/v3/assets/([^/]+)/$} do |encrypted_channel_id|
+    dont_cache
+    # though this is JSON data, we're making the POST request via iframe
+    # form submission. IE9 will try to download the response if we have
+    # content_type json
+    content_type 'text/plain'
+
+    bad_request unless request.POST['files'] && request.POST['files'][0]
+
+    file = request.POST['files'][0]
+
+    bad_request unless file[:filename] && file[:tempfile]
+
+    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
   end
 
   #

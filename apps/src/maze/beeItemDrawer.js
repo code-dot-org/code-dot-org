@@ -5,8 +5,8 @@ require('../utils');
 
 var cellId = require('./mazeUtils').cellId;
 
+var SVG_NS = require('../constants').SVG_NS;
 var SQUARE_SIZE = 50;
-var SVG_NS = "http://www.w3.org/2000/svg";
 
 /**
  * Inherits DirtDrawer to draw flowers/honeycomb for bee.

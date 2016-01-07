@@ -2,11 +2,10 @@
   devise:
     confirmations:
       confirmed: Vaša e-mailová adresa bola úspešne potvrdená.
-      send_instructions: You will receive an email with instructions about how to
-        confirm your account in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive an email with instructions about how to confirm your account
-        in a few minutes.
+      send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako si aktivovať
+        účet.
+      send_paranoid_instructions: Ak je Váš email v databáze, o niekoľko minúť obdržíte
+        email s pokynmi, ako si aktivovať účet.
     failure:
       already_authenticated: Už ste prihlásení.
       inactive: Vaše konto ešte nebolo aktivované.
@@ -14,82 +13,81 @@
       invalid_token: Neplatný overovací token.
       locked: Vaše konto je zablokované.
       not_found_in_database: Neplatný e-mail alebo heslo.
-      timeout: Your session expired, please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      timeout: Platnosť prihlásenia vypršala. Prosím, prihláste sa znova.
+      unauthenticated: Je potrebné, aby ste sa prihlásili alebo zaregistrovali.
+      unconfirmed: Skôr než budete pokračovať, musíte potvrdiť svoj účet.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: Inštrukcie o potvrdení konta na Code.org
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: Inštrukcie o obnovení hesla na Code.org
       unlock_instructions:
-        subject: Odomknúť inštrukcie
+        subject: Pokyny k odomknuntiu
     omniauth_callbacks:
-      failure: Could not authenticate you from %{kind} because "%{reason}".
-      success: Successfully authenticated from %{kind} account.
+      failure: Nemohli sme overiť %{kind} z dôvodu "%{reason}".
+      success: Úspešné overenie z účtu %{kind}.
     passwords:
-      no_token: You can't access this page without coming from a password reset email.
-        If you do come from a password reset email, please make sure you used the
-        full URL provided.
-      send_instructions: You will receive an email with instructions about how to
-        reset your password in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive a password recovery link at your email address in a few minutes.
-      updated: Your password was changed successfully. You are now signed in.
-      updated_not_active: Your password was changed successfully.
+      no_token: Na stránku, ktorá obnovuje heslo, je možné vstúpiť len cez odkaz,
+        ktorý sme poslali emailom. Prosím presvedčte sa, či je URL adresa v plnom
+        tvare a správna.
+      send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako si obnoviť
+        heslo.
+      send_paranoid_instructions: Ak je Váš email v databáze, o niekoľko minúť obdržíte
+        email s pokynmi, ako si obnoviť heslo.
+      updated: Vaše heslo bolo úspešne zmenené. Ste prihlásený.
+      updated_not_active: Vaše heslo bolo úspešne zmenené.
     registrations:
-      destroyed: Bye! Your account was successfully cancelled. We hope to see you
-        again soon.
-      signed_up: Welcome! You have signed up successfully.
-      signed_up_but_inactive: You have signed up successfully. However, we could not
-        sign you in because your account is not yet activated.
-      signed_up_but_locked: You have signed up successfully. However, we could not
-        sign you in because your account is locked.
-      signed_up_but_unconfirmed: A message with a confirmation link has been sent
-        to your email address. Please open the link to activate your account.
-      update_needs_confirmation: You updated your account successfully, but we need
-        to verify your new email address. Please check your email and click on the
-        confirm link to finalize confirming your new email address.
-      updated: You updated your account successfully.
+      destroyed: Dovidenia! Váš účet sa úspešne zmazal. Dúfame, že sa ešte niekedy
+        uvidíme.
+      signed_up: Vitajte! Úspešne ste sa zaregistrovali.
+      signed_up_but_inactive: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie
+        nie je možné, pretože Váš účet ešte nie je aktivovaný.
+      signed_up_but_locked: Úspešne ste sa zaregistrovali. Bohužiaľ, prihlásenie nie
+        je možné, pretože Váš účet je uzamknutý.
+      signed_up_but_unconfirmed: Správa s potvrdzujúcim odkazom bola odoslaná na Vašu
+        emailovú adresu. Pre aktivovanie účtu otvorte daný odkaz.
+      update_needs_confirmation: Úspešne ste aktualizovali konto. Prosím, skontrolujte
+        svoj email a kliknite na potvrdzujúci email, aby sme overili Vašu novú emailovú
+        adresu.
+      updated: Úspešne ste aktualizovali Vaše konto.
     sessions:
       signed_in: ''
       signed_out: Úspešne odhlásení.
     unlocks:
-      send_instructions: You will receive an email with instructions about how to
-        unlock your account in a few minutes.
-      send_paranoid_instructions: If your account exists, you will receive an email
-        with instructions about how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      send_instructions: O niekoľko minúť obdržíte email s pokynmi, ako odomknúť účet.
+      send_paranoid_instructions: Ak Vaše konto existuje, o niekoľko minúť obdržíte
+        email s pokynmi, ako odomknúť účet.
+      unlocked: Váš účet bol úspešne odomknutý. Prosím, prihláste sa, aby ste mohli
+        pokračovať.
   errors:
     messages:
-      already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please
-        request a new one
+      already_confirmed: bol úspešne potvrdený, prosím, skúste sa prihlásiť
+      confirmation_period_expired: musí byť potvrdený do %{period}, prosím, požiadajte
+        o nový
       expired: vypršala, požiadaj novú
       not_found: nenájdené
-      not_locked: was not locked
+      not_locked: nebol uzamknutý
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        one: '1 chyba zabránila %{resource} uložiť:'
+        other: '%{count} chýb zabránilo %{resource} uložiť:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: 'Pozvanie bolo odoslané na email: %{email}.'
+      invitation_token_invalid: Zadaný kód pozvánky je neplatný!
+      updated: Vaše heslo bolo úspešne nastavené. Ste prihlásený.
+      no_invitations_remaining: Nezostávajú žiadne pozvánky
+      invitation_removed: Vaše pozvanie bolo odstránené.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Odoslať pozvánku
+        submit_button: Odoslať pozvanie
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Nastavte si heslo
+        submit_button: Nastaviť heslo
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Inštrukcie k pozvánku
+        hello: Ahoj %{email}
+        someone_invited_you: Niekto Vás pozval na %{url}, môžete to prijať cez nižšie
+          uvedený odkaz.
+        accept: Prijať pozvánku
+        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento email.<br />Váš
+          účet sa nevytvorí, pokým neprejdete na odkaz vyššie a nenastavíte si heslo.

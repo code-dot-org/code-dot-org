@@ -15,7 +15,9 @@
               %li= link_to 'toolbox', level_edit_blocks_path(@level, :toolbox_blocks)
               %li= link_to 'start', level_edit_blocks_path(@level, :start_blocks)
               %li= link_to 'required', level_edit_blocks_path(@level, :required_blocks)
-              %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
+              %li= link_to 'recommended', level_edit_blocks_path(@level, :recommended_blocks)
+              - if @level.is_a? Artist
+                %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
         %li= link_to 'delete', @level, method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
         %li
           = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"

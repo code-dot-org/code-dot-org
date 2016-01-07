@@ -31,7 +31,7 @@
   "ifTooltip":"als er een pad is in de aangegeven richting, doe een paar acties.",
   "ifelseTooltip":"als er een pad in de opgegeven richting is, doe je het eerste actie blok. anders, doe je de tweede actie blok.",
   "ifFlowerTooltip":"Als er een bloem\/honingraat in de opgegeven richting staat, voer dan enkele acties uit.",
-  "ifOnlyFlowerTooltip":"If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip":"Wanneer er een bloem is in de aangegeven richting, voer dan een een paar acties uit.",
   "ifelseFlowerTooltip":"Als er een bloem\/bijenkorf is in de gekozen richting staat, voer je het eerste actie blok uit. Is dat niet het geval, voer dan het tweede blok met acties uit.",
   "insufficientHoney":"Je gebruikt wel de juiste blokken, maar je moet ook de juiste hoeveelheid honing maken.",
   "insufficientNectar":"Je gebruikt wel de juiste blokken, maar je moet ook de juiste hoeveelheid nectar verzamelen.",

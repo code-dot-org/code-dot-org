@@ -1,0 +1,75 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-30T01:22:29.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "dropdown": null,
+      "getText": null,
+      "textLabel": null,
+      "setText": null,
+      "declareAssign_x_promptNum": null,
+      "ifBlock": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "declareAssign_x": null,
+      "declareAssign_str_hello_world": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Add a dropdown for their guess instead of promptNum (Click to see full instructions)",
+    "markdown_instructions": "# Dropdown\r\n\r\nOn the last level we used `promptNum` to get the user's guess. However, we had no way to limit them to the numbers we wanted. They could have typed 11 even though we told them not to. A better way to get input with a limited set of options is the dropdown. The <img src=\"https://images.code.org/3b21b4288a2a155d1e9a3c2cf3a5b09b-image-1446229368079.28.23 PM.png\" style=\"width: 75px\"> is in your Design Mode Toolbox. You can control the list of options users can choose and then use `getText` to get the chosen number.\r\n\r\nWe are going to need an event handler in order to do this. The event handler will detect when the user has changed the value of the dropdown. \r\n\r\n# Do This:\r\n\r\n* **Add a dropdown** for their guess instead of `promptNum`. Make sure to give it a good ID.\r\n\r\n<img src=\"https://images.code.org/fea164f6e53d1ce0c50981565e066d4c-image-1446229598357.gif\" style=\"width: 350px\">\r\n\r\n* Under properties **find the Options** and change it to the **numbers 1 to 10**\r\n\r\n<img src=\"https://images.code.org/0cfecbcdcfb95fc30876155ec6a3a021-image-1446229593687.gif\" style=\"width: 250px\">\r\n\r\n* Add an event handler to detect the `change` event on your dropdown.<br><br>\r\n<img src=\"https://images.code.org/48cffda5b7ff3a446116a39b4dbcbe8c-image-1446232308751.gif\" style=\"width: 150px; float: right\">\r\n* Move your `if` statement inside the event handler so it will check each time the dropdown is changed.<br><br>\r\n* When the dropdown is changed **use `getText` to find out the user's guess**. Save the guess using a variable. **Don't forget about scope!**<br><br>\r\n* Test your app -- it should work like the demo.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px; display: block;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 181px; height: 19px; position: absolute; left: 65px; top: 165px;\" id=\"userMessage\">Guess my secret number!</label>\r\n  </div>\r\n</div>",
+    "start_blocks": "\r\nvar secretNumber = 6;\r\nif (userGuess == secretNumber) {\r\n\r\n}",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "iwKuIx7gyV6yA3GNNxnapE64KOXVW5RzdMLRi8a3pQsu3ni4jC4KCStAUBlZ\n2A6z\n"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

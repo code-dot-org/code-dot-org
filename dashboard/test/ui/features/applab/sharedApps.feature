@@ -1,16 +1,13 @@
-@no_ie
-@no_mobile
 @dashboard_db_access
+@as_student
 Feature: App Lab Scenarios
 
   Background:
-    Given I sign in as a student
-    And I start a new Applab project
+    Given I start a new Applab project
 
   Scenario: App Lab Share
-    # Create an app with a "hello world" button (omitting closing paren for auto-correct).
     Given I switch to text mode
-    And I press keys "button('hello', 'world" for element ".ace_text-input"
+    And I append text to droplet "button('hello', 'world');"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible
     And element "#divApplab > .screen > button#hello" contains text "world"
@@ -18,6 +15,8 @@ Feature: App Lab Scenarios
 
     When I navigate to the shared version of my project
     And I wait until element "#divApplab > .screen > button#hello" is visible
+    Then evaluate JavaScript expression "typeof window.ace === 'undefined'"
+    Then evaluate JavaScript expression "typeof window.droplet === 'undefined'"
 
     Then element "#divApplab > .screen > button#hello" contains text "world"
     And element "#codeModeButton" is hidden
@@ -26,8 +25,8 @@ Feature: App Lab Scenarios
 
   Scenario: Can click a button in shared app
     Given I switch to text mode
-    And I press keys "button('testButton1', 'Click me');" for element ".ace_text-input"
-    And I press keys "onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });" for element ".ace_text-input"
+    And I append text to droplet "button('testButton1', 'Click me');\n"
+    And I append text to droplet "onEvent('testButton1', 'click', function() { setText('testButton1', 'Clicked'); });"
     When I navigate to the shared version of my project
     And I wait until element "#divApplab > .screen > button#testButton1" is visible
     Then element "#testButton1" contains text "Click me"
@@ -36,7 +35,7 @@ Feature: App Lab Scenarios
 
   Scenario: Can change a dropdown value in shared app
     Given I switch to text mode
-    And I press keys "dropdown('testDropdown', 'Option A', 'Option B', 'Option C');" for element ".ace_text-input"
+    And I append text to droplet "dropdown('testDropdown', 'Option A', 'Option B', 'Option C');"
     When I navigate to the shared version of my project
     And I wait until element ".screen > #testDropdown" is visible
     Then element "#testDropdown" has value "Option A"
@@ -45,8 +44,8 @@ Feature: App Lab Scenarios
 
   Scenario: Can change a radio button value in shared app
     Given I switch to text mode
-    And I press keys "radioButton('radio1', false, 'testGroup');" for element ".ace_text-input"
-    And I press keys "radioButton('radio2', false, 'testGroup');" for element ".ace_text-input"
+    And I append text to droplet "radioButton('radio1', false, 'testGroup');\n"
+    And I append text to droplet "radioButton('radio2', false, 'testGroup');\n"
 
     When I navigate to the shared version of my project
     And I wait until element ".screen > #radio2" is visible
@@ -63,8 +62,8 @@ Feature: App Lab Scenarios
 
   Scenario: Can change a checkbox value in shared app
     Given I switch to text mode
-    And I press keys "checkbox('checkbox1', false, 'testGroup');" for element ".ace_text-input"
-    And I press keys "checkbox('checkbox2', false, 'testGroup');" for element ".ace_text-input"
+    And I append text to droplet "checkbox('checkbox1', false, 'testGroup');\n"
+    And I append text to droplet "checkbox('checkbox2', false, 'testGroup');\n"
 
     When I navigate to the shared version of my project
     And I wait until element ".screen > #checkbox2" is visible
@@ -90,11 +89,15 @@ Feature: App Lab Scenarios
   # Known limitation of Selenium's Safari driver: Cannot use sendKeys to simulate
   # typing into a contenteditable div (which is what our Applab textareas are)
   # See https://code.google.com/p/selenium/issues/detail?id=4467
+  # Also doesnt seem to be working for ie
   @no_safari
+  @no_ie
+  @no_ios
   Scenario: Can type in textarea on share page
     Given I switch to design mode
     And I drag a TEXT_AREA into the app
     When I navigate to the shared version of my project
     And I wait until element ".screen > #text_area1" is visible
+    And I press the first ".screen > #text_area1" element
     And I press keys "XYZZY" for element ".screen > #text_area1"
     Then element ".screen > #text_area1" contains text "XYZZY"

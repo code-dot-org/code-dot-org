@@ -29,9 +29,11 @@ module.exports = function(testCollection, testData, dataItem, done) {
 
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
+  level.levelHtml = testData.levelHtml;
 
   // Validate successful solution.
   var validateResult = function (report) {
+    assert(testData.expected, 'Have expectations');
     assert(Object.keys(testData.expected).length > 0, 'No expected keys specified');
     Object.keys(testData.expected).forEach(function (key) {
       if (report[key] !== testData.expected[key]) {
@@ -100,6 +102,7 @@ function ಠ_ಠ() {
   require('@cdo/apps/calc/main');
   require('@cdo/apps/bounce/main');
   require('@cdo/apps/applab/main');
+  require('@cdo/apps/craft/main');
 }
 
 function runLevel (app, skinId, level, onAttempt, testData) {
@@ -116,7 +119,9 @@ function runLevel (app, skinId, level, onAttempt, testData) {
   main({
     skinId: skinId,
     level: level,
-    baseUrl: '/', // Doesn't matter
+    baseUrl: 'http://localhost:8001/apps/build/package/',
+    channel: 'applab-channel-id',
+    assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
     isAdmin: true,

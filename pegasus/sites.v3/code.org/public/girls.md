@@ -36,7 +36,6 @@ Computer science is about making a difference in the world, creating new things,
 - [Outreach guide for Latinas](http://www.ncwit.org/latinas-information-technology)
 - [Outreach guide for computer science](http://www.ncwit.org/resources/outreach-box-discovering-it)
 - [Fact sheet for participation by women](http://www.ncwit.org/infographic/3435)
-- [Vidcode: Online learning platform targeted to teenage girls](http://www.vidcode.io/)
 
 <a id="notes"></a>
 *Our recommendations summarize learnings from interviews with and written materials from CS educators, psychology researchers, as well as material from [NCWIT](http://www.ncwit.org/), [DotDiva](http://www.dotdiva.org/), Google, and other organizations dedicated to growing participation of women in technology. 

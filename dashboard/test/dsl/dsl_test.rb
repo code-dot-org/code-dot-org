@@ -21,7 +21,7 @@ level 'Level 5'
         {:stage=>"Stage2", :levels=>[{:name=>"Level 4", :stage=>"Stage2"},
                                      {:name=>"Level 5", :stage=>"Stage2"}]}],
                 :hidden=>true, :trophies=>false, :wrapup_video=>nil,
-                :login_required=>false, :pd=>false}
+                :login_required=>false, admin_required: false, :pd=>false}
 
     i18n_expected = {'en'=>{'data'=>{'script'=>{'name'=>{'test'=>{
         'Stage1'=>'Stage1',
@@ -29,6 +29,28 @@ level 'Level 5'
     }}}}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
+  end
+
+  test 'test Script DSL admin_required as boolean' do
+    input_dsl = "
+admin_required true
+"
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+
+    expected = {id: nil, stages: [], hidden: true, trophies: false, wrapup_video: nil, login_required: false, admin_required: true, pd: false}
+
+    assert_equal expected, output
+  end
+
+  test 'test Script DSL admin_required as string' do
+    input_dsl = "
+admin_required 'true'
+"
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+
+    expected = {id: nil, stages: [], hidden: true, trophies: false, wrapup_video: nil, login_required: false, admin_required: true, pd: false}
+
+    assert_equal expected, output
   end
 
   test 'test Multi DSL' do

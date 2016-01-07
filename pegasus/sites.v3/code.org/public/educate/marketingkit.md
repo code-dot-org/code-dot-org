@@ -16,7 +16,11 @@ Here is how you can promote your school's new computer science program:
 
 [**YouTube**](http://www.youtube.com/watch?v=nKIu9yen5nc) | [**Download**](https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1)
 
-## 3) Customize, print and send home [one of these fliers](https://www.dropbox.com/s/b3m7f6u1jt283fb/Code.org_SchoolsBrochure.pdf?dl=0)
+## 3) Print and send home one of these fliers:
+[CS in Algebra](/files/CSinAlgebra_one_pager.pdf)<br/>
+[CS in Science](/files/CSinScience_one_pager.pdf)<br/>
+[Exploring Computer Science](/files/ECS_one_pager.pdf)<br/>
+[Computer Science Principles](/files/CSP_one_pager.pdf)
 
 ## 4) Include a [blurb about new classes](/educate/blurbs) in an email to students or parents, or include in a newsletter.
  
@@ -50,7 +54,7 @@ Here is how you can promote your school's new computer science program:
 ### More resources to share with teachers
 - [Top 4 Ways to Recruit Girls to Try Computer Science](/girls)
 - [Ways to Recruit High School Women](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting) from [NCWIT](http://ncwit.org).
-- One-pager: [What can you do with CS?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
+- One-pager: [What can you do with CS?](/files/What_is_CS_and_Careers.pdf)
 
 <br /><br />
 

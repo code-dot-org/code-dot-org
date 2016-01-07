@@ -1,7 +1,43 @@
 ---
-title: Edit Your Class
+title: Update Email Preferences
+nav: blank
+rightbar: blank
 ---
+%script{type: "text/javascript", src: "/js/volunteer-unsubscribe.js"}
+
+- dont_cache
 - secret = File.basename(request.path_info)
-- pass unless form = Form2.from_row(DB[:forms].where(kind:'VolunteerEngineerSubmission', secret:secret).first)
-- locals = {form:form, mode:nil}.merge(form.data)
-= view :volunteer_engineer_form, locals
+- pass unless form = Form2.from_row(DB[:forms].where(kind:'VolunteerEngineerSubmission2015', secret:secret).first)
+- unsubscribed = form.data['unsubscribed_s']
+
+#unsubscribe-volunteer-thanks{:style=>"display: none;"} You have successfully updated your email preferences.
+
+%form#unsubscribe-volunteer-form{role: "form", onsubmit: "event.preventDefault(); unsubscribeVolunteerList();"}
+  %h1 Update email preferences
+
+  #error-message{style: 'display: none'}
+  %p
+    - if unsubscribed == 'until2016'
+      You've <strong>unsubscribed</strong> from teacher requests <strong>this year</strong>.
+    - elsif unsubscribed == 'forever'
+      You've <strong>unsubscribed</strong> from teacher requests <strong>forever</strong>.
+    - else
+      You are currently <strong>subscribed</strong> to teacher requests.
+    To update your preference, select below and click confirm.
+
+  .form-group
+    .radio-row
+      %label.radio-inline
+        %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "until2016"}/
+        Stop sending me teacher requests for the rest of the year
+      %label.radio-inline
+        %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "forever"}/
+        Stop sending me teacher requests forever
+      %label.radio-inline
+        %input#unsubscribe-volunteer-annual{name: "unsubscribed_s", type: "radio", required: true, value: "resubscribe"}/
+        Send me teacher requests again
+
+  #volunteer-secret{style: 'display: none'}= secret
+  %button.btn.btn-submit Confirm
+
+= view :volunteer_engineer_form, {form: form}

@@ -2,14 +2,18 @@
   Dear #{@recipient.ops_first_name},
 %p
   Thanks for attending your #{@workshop.phase_long_name} in-person workshop.
-  = render partial: 'exit_survey_url', locals: {workshop: @workshop, link_text: "short survey"}
-- if @workshop.phase == 2
+  - if @workshop.exit_survey_url
+    %p
+      We appreciate any feedback you have. Please take a moment to complete this
+      = link_to "short survey", @workshop.exit_survey_url
+      about your Code.org workshop experience.
+- if @workshop.phase_short_name == 'Phase 2'
   %p
     %strong
       Phase 2: Blended Summer Study:
   %p
     You’ll receive access to the online portion of Phase 2 on Monday. You must complete this before September 7th. For online PD troubleshooting, visit the FAQ.
-- elsif @workshop.phase == 8
+- elsif @workshop.phase_short_name == 'Phase 4'
   %h2
     How to stay involved in the Code.org community:
   %p

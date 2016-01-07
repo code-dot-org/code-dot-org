@@ -1,0 +1,66 @@
+-# TODO(asher): Eliminate the need for the !important and move to a shareable
+-# location.
+:css
+  .radio {
+    margin: 0 10px !important
+  }
+
+%center
+  %h1 Search for Teachers
+
+%br/
+
+%form{method: 'get'}
+  %table.filters
+    %tr
+      %td
+        Email Domain (e.g., "cps.edu" or "lausd.net" [no at symbol])
+      %td
+        %input{name: "emailFilter", id: "emailFilter", value: params[:emailFilter]}
+    %tr
+      %td
+        Address Filter (e.g., "Seattle" or "20500")
+      %td
+        %input{name: "addressFilter", id: "addressFilter", value: params[:addressFilter]}
+    %tr
+      %td
+        Filter on whether teachers have attended PD
+      %td
+        %input.radio{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
+        %input.radio{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
+        %input.radio{type: "radio", name: "pd", id: "pd-nopd", value: "nopd"} No PD
+
+  %br/
+
+  %center
+    %input{type: "submit", name: "submit"}
+
+%br/
+
+%h2 Teachers
+- if @teachers.size > 0
+  - if @teachers.size == @teacher_limit
+    -# This is actually not true if the there were exactly @response_limit
+    -# records.
+    WARNING: The results are sampled, there are additional records not being
+    displayed.
+    %br
+
+  -# Note that newlines were replaced in the controller, the commas are replaced in the .csv.erb.
+  #{link_to 'Download CSV', {:format => :csv}} (commas and newlines have been replaced by spaces)
+
+  %br
+
+  %table.teachers
+    - if @headers
+      %tr
+        - @headers.each do |field|
+          %th
+            %span= field
+    - @teachers.each do |teacher|
+      %tr
+        - teacher.each do |field|
+          %td
+            %span= field
+- else
+  No teachers met the specified search criteria.

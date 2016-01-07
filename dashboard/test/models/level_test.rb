@@ -1,12 +1,7 @@
-gem 'mocha'
-require 'test/unit'
-require 'mocha/api'
-require 'mocha/test_unit'
 require 'test_helper'
-include ActionDispatch::TestProcess
 
 class LevelTest < ActiveSupport::TestCase
-  include Mocha::API
+  include ActionDispatch::TestProcess
 
   setup do
     @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
@@ -213,15 +208,14 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 'maze', level.maze
   end
 
-# requires rails 4.2 or suitable workaround
-#  test 'level save without changes does not update timestamp' do
-#    level = Level.create!(name: 'test_level_save', type: 'Maze')
-#    time = level.updated_at.to_i
-#    Timecop.travel(5) do
-#      level.save!
-#    end
-#    assert_equal time, level.updated_at.to_i
-#  end
+  test 'level save without changes does not update timestamp' do
+    level = Level.create!(name: 'test_level_save', type: 'Maze')
+    time = level.updated_at.to_i
+    Timecop.travel(5) do
+      level.save!
+    end
+    assert_equal time, level.updated_at.to_i
+  end
 
   test 'update_ideal_level_source does nothing for maze levels' do
     level = Maze.first
@@ -237,9 +231,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.solution_blocks, level.ideal_level_source.data
   end
 
-  test 'updating ContractMatch level updates it' do
-    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
-
+  def update_contract_match
     name = 'contract match test'
     dsl_text = <<EOS
 name 'Eval Contracts 1 B'
@@ -258,6 +250,59 @@ EOS
     # star -> bar
     assert_equal 'bar|image|color:string|radius:Number|style:string', cm.properties['answers'].first
     assert_equal 'Write a contract for the bar function', cm.properties['content1']
+  end
+
+  test 'updating ContractMatch level updates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+
+    update_contract_match
+  end
+
+  test 'updating ContractMatch level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    update_contract_match
+  end
+
+  def update_maze
+    maze = Maze.last
+    maze.start_blocks = '<xml/>'
+    maze.save!
+
+    maze.reload
+    assert_equal '<xml/>', maze.start_blocks
+  end
+
+  test 'updating maze level updates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    update_maze
+  end
+
+  test 'updating maze level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    update_maze
+  end
+
+  def create_maze
+    maze = create(:maze)
+    assert maze
+  end
+
+  test 'creating maze level creates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    create_maze
+  end
+
+  test 'creating maze level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    create_maze
   end
 
   test 'delete removed level properties on import' do
@@ -340,5 +385,19 @@ EOS
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
     assert_equal nil, level.examples
+  end
+
+  test 'cached_find' do
+    level1 = Script.twenty_hour_script.script_levels[0].level
+    cache_level1 = Level.cache_find(level1.id)
+    assert_equal(level1, cache_level1)
+
+    level2 = Script.course1_script.script_levels.last.level
+    cache_level2 = Level.cache_find(level2.id)
+    assert_equal(level2, cache_level2)
+
+    # Make sure that we can also locate a newly created level.
+    level3 = create(:level)
+    assert_equal(level3, Level.cache_find(level3.id))
   end
 end

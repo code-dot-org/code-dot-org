@@ -2,6 +2,7 @@ var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
 var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
 var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+var dropletUtils = require('../dropletUtils');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -11,17 +12,29 @@ var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteP
  * Store for finding tooltips for blocks
  * @constructor
  */
-function DropletTooltipManager(appMsg, dropletConfig) {
+function DropletTooltipManager(appMsg, dropletConfig, codeFunctions, autocompletePaletteApisOnly) {
   /**
    * App-specific strings (to override common msg)
    * @type {Object.<String, Function>}
    */
   this.appMsg = appMsg || {};
+  this.tooltipsEnabled = true;
 
   /**
    * Droplet config for this app
    */
   this.dropletConfig = dropletConfig || {};
+
+  /**
+   * Code functions
+   * @type {Object.<String>} optional object with keys to modify the blocks
+   */
+  this.codeFunctions = codeFunctions;
+
+  /**
+   * Flag to limit the number of APIs that see autocomplete behavior
+   */
+  this.autocompletePaletteApisOnly = autocompletePaletteApisOnly;
 
   /**
    * Map of block types to tooltip objects
@@ -66,14 +79,24 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * @param {DropletBlock[]} dropletBlocks list of Droplet block definitions for
- *    which to register documentation
+ * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
  */
-DropletTooltipManager.prototype.registerBlocksFromList = function (dropletBlocks) {
-  dropletBlocks.forEach(function (dropletBlockDefinition) {
-    this.blockTypeToTooltip[dropletBlockDefinition.func] =
-      new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
-  }, this);
+DropletTooltipManager.prototype.registerBlocks = function () {
+  dropletUtils.getAllAvailableDropletBlocks(
+    this.dropletConfig,
+    this.codeFunctions,
+    this.autocompletePaletteApisOnly).forEach(
+    function (dropletBlockDefinition) {
+      if (this.autocompletePaletteApisOnly &&
+          this.codeFunctions &&
+          typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
+        // autocompletePaletteApisOnly mode enabled and block is not in palette:
+        return;
+      }
+      this.blockTypeToTooltip[dropletBlockDefinition.func] =
+        new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
+    },
+    this);
 };
 
 DropletTooltipManager.prototype.hasDocFor = function (functionName) {
@@ -81,6 +104,9 @@ DropletTooltipManager.prototype.hasDocFor = function (functionName) {
 };
 
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
+  if (!this.tooltipsEnabled) {
+    return;
+  }
   $('.tooltipstered').tooltipster('hide');
   var dialog = new window.Dialog({
     body: $('<iframe>')
@@ -103,6 +129,16 @@ DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
   }
 
   return this.blockTypeToTooltip[functionName];
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled.
+ */
+DropletTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
+  this.dropletAutocompletePopupTooltipManager_.setTooltipsEnabled(enabled);
+  this.dropletAutocompleteParameterTooltipManager_.setTooltipsEnabled(enabled);
+  this.dropletBlockTooltipManager_.setTooltipsEnabled(enabled);
 };
 
 module.exports = DropletTooltipManager;

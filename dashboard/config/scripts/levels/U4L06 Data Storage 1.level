@@ -38,7 +38,6 @@
       "setStrokeWidth": null,
       "setStrokeColor": null,
       "setFillColor": null,
-      "drawImage": null,
       "getImageData": null,
       "putImageData": null,
       "clearCanvas": null,
@@ -99,7 +98,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -124,12 +122,10 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "drawImageURL": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "## Create Record\r\n\r\n#### Fill in your name instead of \"Enter Your Name\", run the app and click the button. Run it multiple times with different names! Watch the console and use the ‘View Data” button to see how the table is updated. *As you play around make sure you can explain the purpose of each of the circled parts of the diagram.*\r\n\r\n![](https://images.code.org/2768f0e65aa2167da70d24aa3975588a-image-1441998331790.52.01 PM.png)",
     "start_blocks": "onEvent('submitButton', 'click', function() {\r\n  var myData = {};\r\n\tmyData.name = \"Enter Your Name\";\r\n\tcreateRecord(\"myTable\", myData, function(record){\r\n  \t\tconsole.log(\"new record inserted\");\r\n  });\r\n});\r\n",

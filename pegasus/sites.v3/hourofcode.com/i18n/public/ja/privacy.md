@@ -4,7 +4,7 @@ title: Privacy Policy
 
 ---
 
-### この法的文書は英語で書かれた[こちらの文書](https://code.org/privacy)の翻訳版です。
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # プライバシーポリシー
 
@@ -175,7 +175,7 @@ Code.orgの従業員、代理人、契約者は合法的で正当な理由があ
 
 特に、寄贈者やスポンサーに、あなたの提供した個人情報を提供することはありません(以下に述べるよう匿名化した"パブリックレポート"は除きます)。
 
-### 学校や地域の教育委員会へ生徒の進捗状況レポートを共有する可能性があります。
+### 生徒の学習度合に関するデータはあなたの学校や学区と共有します
 
 学校や学区とのパートナーシップのからみでCode.orgのウェブサイトを使う場合、その学校や学校に、生徒の進捗状況レポートへのアクセスを許可することがあります。そのレポートは先生(方)と共有しているものです。
 
@@ -244,4 +244,4 @@ If you choose to visit Code.org, your visit and any dispute over privacy is subj
 個人情報保護方針、個人情報の扱い、サードパーティへの開示の内容、あなたの同意内容に関するお問い合わせ、コメントは、 <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101のCode.orgまでご連絡ください。   
   
   
-[![画像](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![画像](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

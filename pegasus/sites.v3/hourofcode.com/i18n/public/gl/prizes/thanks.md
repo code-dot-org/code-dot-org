@@ -1,49 +1,33 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+
+title: <%= hoc_s(:title_prizes_thanks) %>
 layout: wide
-social:
-'og:title': '<%= hoc_s(:meta_tag_og_title) %>'
-'og:description': '<%= hoc_s(:meta_tag_og_description) %>'
-'og:image': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'og:image:width': 1705
-'og:image:height': 949
-'og:url': 'http://<%=request.host%>'
-'og:video': 'https://youtube.googleapis.com/v/rH7AjDMz_dc'
-'twitter:card': player
-'twitter:site': '@codeorg'
-'twitter:url': 'http://<%=request.host%>'
-'twitter:title': '<%= hoc_s(:meta_tag_twitter_title) %>'
-'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'
-'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-'twitter:player:width': 1920
-'twitter:player:height': 1080
+nav: prizes_nav
+
 ---
 
-<%= view :signup_button %>
 
-# Thanks for signing up for a chance to win the $10,000 Hardware Prize
+# Grazas por rexistarse para ter unha oportunidade de gañar o premio de $10.000 en Hardware
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
+Toda a súa escola está ahora rexistrada para gañar un conxunto de ordenadores portátiles (ou $10,000 para outro equipamento). Revisaremos a súa solicitude e anunciaremos os gañadores en decembro.
 
-## 1. Spread the word
+## 1. Corre a voz
 
-Tell your friends about the #HourOfCode.
+Cóntalle ós teus amigos sobre a #HourOfCode.
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Pídelle a todo o teu colexio que ofreza unha Hora do Código
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
+[Envíe este correo electrónico](<%= resolve_url('/promote/resources#email') %>) ó seu director.
 
-## 3. Ask your employer to get involved
+## 3. Preguntalle a tua empresa para que se implique
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
+[Envíe este correo electrónico](<%= resolve_url('/promote/resources#email') %>) ó seu xerente ou CEO.
 
-## 4. Promote the Hour of Code in your community
+## 4. Promociona a Hora do Código na túa comunidade
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](<%= resolve_url('/promote/resources#email') %>).
+Recluta un grupo local - nenos e nenas de distintas asociacións, igrexa, universidade, grupos de veteranos ou no sindicato. Ou organiza unha festa da Hora do Código no teu vecindario. [Envíe este correo electrónico](<%= resolve_url('/promote/resources#email') %>).
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Pídelle a un cargo electo da tua zona que apoie a Hora do Código
 
-[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Envía este correo electrónico](<%= resolve_url('/promote/resources#politicians') %>) ó seu alcalde, ó Concello ou xunta escolar, e invíteos a visitar a súa escola.
 
-<%= view :signup_button %>

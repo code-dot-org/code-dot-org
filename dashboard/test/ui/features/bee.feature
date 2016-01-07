@@ -3,7 +3,6 @@ Feature: Complete a bee level
 Scenario: Complete Bee Conditions 4-5 Level 3
   Given I am on "http://learn.code.org/s/course3/stage/7/puzzle/3?noautoplay=true"
   When I rotate to landscape
-  And I wait to see "#x-close"
   And I close the dialog
   # repeat to when run
   And I drag block "6" to block "8"

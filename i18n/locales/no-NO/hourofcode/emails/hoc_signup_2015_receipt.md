@@ -8,30 +8,39 @@ fra: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&
 
 # Takk for at du meldte deg på som vert for Kodetimen!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+I perioden mellom 7. og 13. desember gjør du det mulig for studenter verden rundt å lære én Kodetime som kan endre resten av livet deres.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-## 1. Spre budskapet
+#### Vi vil holde deg oppdatert med nytt opplæringsmateriale og andre spennende nyheter. Hva kan du gjøre nå?
 
-Fortell vennene dine om #Kodetimen.
+## 1. Find a local volunteer to help you with your event.
 
-## 2. Spør hele skolen din om å tilby en Kodetime
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+## 2. Spread the word
 
-## 3. Spør arbeidsgiveren din om å bidra
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+## 3. Recruit your whole school for the Hour of Code
 
-## 4. Reklamer for Hour of Code i nærmiljøet ditt
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-Rekrutter en lokal klubb eller gruppe - Speidere, Universitet og Høgskoler, Fagforeninger osv. Eller arranger en Hour of Code i nabolaget ditt. [Send this email](https://<%= hostname %>/resources#email).
+## 4. Be arbeidsgiveren din engasjere seg
 
-## 5. Spør en lokalpolitiker om å støtte Kodetimen
+[Send denne mailen](https://<%= hostname %>/promote/resources#sample-emails) til arbeidsgiveren din, eventuelt til sjefen.
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+## 5. Promote the Hour of Code in your community
+
+Rekruttér en lokal gruppe, eller en vennegjeng. [Send denne mailen](https://<%= hostname %>/resources#sample-emails).
+
+Takk for at du leder bevegelsen som ønsker å gi alle studenter en sjanse til å lære grunnleggende informatikk-kunnskaper.
+
+Hadi Partovi   
+grunnlegger, Code.org
 
 * * *
 
-Code.org er en frivillig organisasjon. Vår adresse er 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Hvis du ikke ønsker disse epostene? [Stopp abonnementet på nyhetsbrevet](%= unsubscribe_link %).
+<small> Du mottar denne e-posten fordi du registrerte deg hos Kodetimen, støttet av mer enn 200 partnere og organisert av Code.org. Code.org er en 501c 3 non-profit. Vår adresse er 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Ønsker du ikke å motta disse mailene? <a href="%= unsubscribe_link %">Avmeld</a>. </small>
+
+![](<%= tracking_pixel %>)

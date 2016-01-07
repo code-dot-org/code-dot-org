@@ -19,15 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle forward a given number of pixels in its current direction.
+Moves the turtle forward a given number of pixels in the current direction.
 
 [/short_description]
 
-There are three ways to move the turtle in a straight line:
-
-- specify the number of pixels to move the turtle in the direction it is facing (moveForward(pixels) or moveBackward(pixels)).
-- specify a number of pixels in the x and y direction to move the turtle, irregardless of direction that the turtle is facing (move(x,y)).
-- specify an x and y pixel location on the screen to move the turtle to, irregardless of direction that the turtle is facing (moveTo(x,y)).
+moveForward() is the easiest way to move the turtle in a straight line in the direction it is facing. When used with turnLeft() and turnRight() you can navigate the turtle anywhere or draw any straight line pictures. 
 
 [/description]
 
@@ -37,7 +33,7 @@ ____________________________________________________
 [example]
 
 ```
-// Moves forward 25 pixels (default)
+// Move forward 25 pixels (default)
 moveForward(); 
 ```
 
@@ -47,19 +43,58 @@ ____________________________________________________
 
 [example]
 
-**Example: Draw a Popsicle** Specify how many pixels the turtle should move in the direction it is facing with a positive number parameter, or use a negative number parameter to move backwards. [Watch it run!](https://images.code.org/ae9e0d573ff39549f4f9e0dd35e3e38d-image-1444261315399.gif)
+**Example: Letter L** Draw the letter L with moveForward() and turnLeft() only.
 
 ```
-// Specify how many pixels the turtle should move in the direction it is facing with a positive number parameter
-// or use a negative number parameter to move backwards.
-speed(20);
+// Draw the letter L with moveForward() and turnLeft() only.
+turnLeft();
+turnLeft();
+moveForward();
+moveForward();
+turnLeft();
+moveForward();
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Long Line** Move forward 200 pixels.
+
+```
+// Move forward 200 pixels
+moveForward(200); 
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Lemon Popsicle** Draw a lemon popsicle by changing the pen color and width, and by specifing how many pixels the turtle should move in the direction forwards and backwards.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
+// Draw a lemon popsicle by changing the pen color and width
+// and by specifing how many pixels the turtle should move in the direction forwards and backwards.
 penColor("yellow");
 penWidth(40);
 moveForward(100);
 penWidth(5);
 penColor("brown");
 moveForward(-200);
-```
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/0d47dda8effd331957863ddbee33820a-image-1445603074466.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -93,7 +128,12 @@ No return value. Moves turtle only.
 [tips]
 
 ### Tips
-- Use [penUp()](/applab/docs/penUp) before calling moveForward() to stop the turtle from drawing a line behind it as it moves
+- Use [penUp()](/applab/docs/penUp) before calling moveForward() to stop the turtle from drawing a line behind it as it moves.
+- The screen default size is 320 pixels wide and 450 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
+- There are three ways to move the turtle in a straight line:
+	- Specify the number of pixels to move the turtle in the direction it is facing using moveForward(pixels) or [moveBackward(pixels)](/applab/docs/moveBackward).
+	- Specify a number of pixels in the x and y direction to move the turtle using [move(x,y)](/applab/docs/move), regardless of direction that the turtle is facing.
+	- Specify an x and y pixel location on the screen to move the turtle to using [moveTo(x,y)](/applab/docs/moveTo), regardless of direction that the turtle is facing.
 
 [/tips]
 

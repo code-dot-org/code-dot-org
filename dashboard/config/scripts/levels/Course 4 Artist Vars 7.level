@@ -12,7 +12,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "ideal": "10",
+    "ideal": "11",
     "slider_speed": ".5",
     "disable_param_editing": "true",
     "free_play": "false",
@@ -30,7 +30,8 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -38,18 +39,37 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_ext" inline="true" deletable="false">
-              <statement name="DO">
-                <block type="draw_move_by_constant" deletable="false">
-                  <title name="DIR">moveForward</title>
-                  <title name="VALUE">150</title>
-                  <next>
-                    <block type="draw_turn" inline="true" deletable="false">
-                      <title name="DIR">turnLeft</title>
+            <block type="variables_set" inline="false">
+              <title name="VAR">sides</title>
+              <next>
+                <block type="controls_repeat_ext" inline="true">
+                  <statement name="DO">
+                    <block type="draw_move" inline="true">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">150</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" inline="true">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>
@@ -57,17 +77,31 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
+        <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
           <value name="VALUE">
             <block type="math_number">
-              <title name="NUM">???</title>
+              <title name="NUM">100</title>
             </block>
           </value>
         </block>
-        <block type="variables_get">
-          <title name="VAR">sides</title>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">120</title>
+            </block>
+          </value>
         </block>
+        <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+            <block type="math_number">
+              <title name="NUM">120</title>
+            </block>
+          </value>
+        </block>
+        <block type="controls_repeat_ext" inline="true"/>
         <block type="math_arithmetic" inline="true">
           <title name="OP">DIVIDE</title>
           <value name="A">
@@ -75,6 +109,15 @@
               <title name="NUM">360</title>
             </block>
           </value>
+        </block>
+        <block type="math_number">
+          <title name="NUM">0</title>
+        </block>
+        <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
+        </block>
+        <block type="variables_get">
+          <title name="VAR">sides</title>
         </block>
       </xml>
     </toolbox_blocks>

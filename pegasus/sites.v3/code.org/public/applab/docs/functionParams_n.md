@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## Define a function with parameters: function someFunction(param0, param1, ..., paramN)
+## Define a function with parameters
 
 [/name]
-
 
 [category]
 
@@ -20,14 +19,15 @@ Category: Functions
 
 [short_description]
 
-Declares a named block of code that accepts one or more parameters, performs some computation on those parameters, and optionally returns a value.
-
-See documentation for [functions with no parameters](http://code.org/applab/docs/functionParams_none) for notes on:
-
- * The difference between *defining* a function and _calling_ it
- * Where you should define functions in your code.
+Gives a name to a set of parameter driven actions you want the computer to perform, and optionally return a value.
 
 [/short_description]
+
+Some functions take parameter values as input to be able to abstract multiple different actions.
+
+When you **define** a function you give a name to a set of actions you want the computer to perform. When you **call** a function you are telling the computer to run (or execute) that set of actions. 
+
+A function definition can be provided *anywhere* in your code - in some ways the function definition lives independently of the code around it. It actually doesn't matter where you put a function definition. And you can call it from anywhere, either before or after the function definition.  We will follow the convention of always putting function definitions at the bottom of our program, and the code for calling functions at the top of our program.
 
 [/description]
 
@@ -35,61 +35,53 @@ See documentation for [functions with no parameters](http://code.org/applab/docs
 ____________________________________________________
 [example]
 
-**Turtle Example**
-
-In this example we show how you can make a function with a parameter that is used to control how far the turtle moves.
-
-
 ```
-square(25);
-turnRight();
-square(50);
-turnRight()
+// Draw a square of any size.
 square(75);
 
 function square(sideLength){
-	for(var i=0; i<4; i++){
-		moveForward(sideLength);
-		turnLeft();
-	}
+	moveForward(sideLength);
+	turnLeft();
+	moveForward(sideLength);
+	turnLeft();
+	moveForward(sideLength);
+	turnLeft();
+	moveForward(sideLength);
+	turnLeft();
 }
 ```
 
 [/example]
-
+____________________________________________________
 [example]
 
-**Turtle Example 2**
-
-In this example we show how you can make a function with *two parameters* one for setting how much the turtle moves and the other for setting how many-sided shape you want to draw.  NOTICE: we have to do some
-
+**Example: Rectangle** Draw a rectangle with a function with *two parameters*, the length and width of the rectangle.
 
 ```
+// Draw a rectangle with a function with *two parameters*, the length and width of the rectangle.
 rectangle(75, 45);
-turnRight();
-rectangle(100, 50);
-turnRight();
-rectangle(25, 25);
 
 function rectangle(width, height){
-	for(var i=0; i<2; i++){
-		moveForward(width);
-		turnLeft();
-		moveForward(height);
-		turnLeft();
-	}
+	moveForward(width);
+	turnLeft();
+	moveForward(height);
+	turnLeft();
+	moveForward(width);
+	turnLeft();
+	moveForward(height);
+	turnLeft();
 }
 ```
 
 [/example]
-
+____________________________________________________
 [example]
 
-The following block of code declares and invokes a function named `computeCircleArea`. The function computes the area of a circle with the specified radius.
-
+**Example: Area of Circle** Calculate and return the area of a circle of a specified radius.
 
 ```
-var area = computeCircleArea(10); // compute the area of a circle with the radius 10
+// Calculate and return the area of a circle of a specified radius.
+var area = computeCircleArea(10);
 console.log(area);
 
 function computeCircleArea(radius) {
@@ -98,28 +90,6 @@ function computeCircleArea(radius) {
 ```
 
 [/example]
-
-____________________________________________________
-
-[example]
-
-The following block of code declares and invokes a function named `computeTriangleArea`. The function computes the area of a triangle with the specified base length and height.
-
-
-```
-// compute the area of a triangle with base 10 and height 5.
-var area = computeTriangleArea(10, 5);
-console.log(area);
-
-
-function computeTriangleArea(base, height) {
-    return height * base / 2;
-}
-```
-
-
-[/example]
-
 ____________________________________________________
 
 [syntax]
@@ -127,22 +97,32 @@ ____________________________________________________
 ### Syntax
 
 ```
-function functionName(param0, param1, ..., paramN) {
-    // function body
+function myFunction(param1, param2, ..., paramN) {
+    // function body, including optional "return" command.
 }
 ```
 
 [/syntax]
 
+[parameters]
+
+### Parameters
+function myFunction(param1, param2, ..., paramN) can use any number of parameters.
+
+[/parameters]
+
 [returns]
 
 ### Returns
-A function returns the value that follows the first executed return keyword within the function.
+Optional: A function can return a value by using the [return](/applab/docs/return) command.
 
 [/returns]
 
 ### Tips
-- The purpose of a function is to help you organize your code and to avoid writing the same code twice.
+- The purpose of a function is to help you organize your code and to avoid writing the same code twice. You can you define a function once, and then call the function a number of times.
+- The order of the parameters when calling a function must match the order of parameters in the function definition.
+- A common error is defining a function but forgetting to call the function. A function does not automatically get executed.
+- A function that does not explicitly return a value returns the JavaScript value undefined.
 
 [bug]
 

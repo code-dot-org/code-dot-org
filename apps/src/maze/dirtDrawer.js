@@ -7,7 +7,7 @@ var DIRT_COUNT = DIRT_MAX * 2 + 2;
 // Duplicated from maze.js so that I don't need a dependency
 var SQUARE_SIZE = 50;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
 
 var DirtDrawer = module.exports = function (dirtMap, dirtAsset) {
   this.dirtMap_ = dirtMap;

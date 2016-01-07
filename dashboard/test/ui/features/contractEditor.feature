@@ -1,10 +1,7 @@
 @dashboard_db_access
+@as_student
 @eyes
 Feature: Opening the contract editor
-
-Background:
-  Given I am on "http://learn.code.org/"
-  And I am a student
 
 Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
@@ -81,7 +78,6 @@ Scenario: Changing Parameter names
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://learn.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
   And I close the dialog
   And I press "modalEditorClose"
 

@@ -3,7 +3,7 @@ da:
     unplugged:
       Unplug1:
         title: Introduktion til programmering
-        desc: 'Denne lektion vil indføre begrebet datalogi og forklare hvad en programmør gør.  Det vil også give de eleverne en mulighed for at påtage sig rollen som en programmør.  Ved udgangen af aktiviteten, vil hver elev har en tag-med-hjem oplevelse om, hvad han eller hun har lært.  Du kan være fristet til at springe undervisningen med forklaringen af computerord  over, men hvis du præsentere dem for eleverne, på en sjov og legende måde, vil det være langt mere produktivt, end at vente på mere avancerede muligheder.'
+        desc: 'Denne lektion vil indføre begrebet datalogi og forklare hvad en programmør gør.  Det vil også give de eleverne en mulighed for at påtage sig rollen som programmør.  Når aktiviteten er slut, vil hver elev få en påmindelse om, hvad han eller hun har lært.  Hvis du underviser små børn kan du blive fristet til at springe forklaringen af computerord  over, men hvis du præsenterer dem for eleverne på en sjov og legende måde nu, vil det være langt mere produktivt end at vente på mere bedre muligheder senere.'
         pdfs:
           - unplug1
         video: Unplug1
@@ -174,25 +174,25 @@ da:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videospil og koordinere fly
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Opdag, hvordan dine elskede computerspil faktisk er styret af algebra! Udforsk hvordan koordinatsystemet og algebra kan hjælpe os til at forstå hvordan computerspil virker, og begynd så at planlægge det computerspil, du vil bygge.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        title: Kontrakter, domæne og rækkevidde
+        desc: Kontrakter, der giver os en måde at forstå og diskutere funktioner. I denne lektion vil vi se på hvordan kontrakter kan hjælpe os med at finde op og ned på et nyt programmeringssprog eller funktion.
         video: alg_5_contracts
       DesignRecipe:
         title: Design opskrift
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'I det sidste trin skrev eleverne nogle meget simple funktioner - men mere sofistikerede funktioner kræver en mere gennemtænkt tilgang. Design Recipe er en struktureret tilgang til at skrive funktioner, som inkluderer afprøvning for at sikre at funktionen fungerer som forventet.'
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans and Logic
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        title: Booleanske værdier og logik
+        desc: Boolesk er den fjerde og sidste datatype, som du vil lære om i dette kursus. Her vil du lære hvad boolesk er, og hvordan de kan hjælpe os skrive funktioner der tænker logisk
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Konditioner og stykvise funktioner
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: De parametre, vi sender til funktioner resultere i varieret resultater baseret på et meget styrret mønster. Hvad hvis vi vil have parametre med nogle værdier til at give nogen resultater ved hjælp af et mønster, men andre værdier til at bruge et andet mønster. Det er her hvor betingelser kommer ind...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Opdage sammenstød og den pythagoræiske læresætning
+        desc: At afgøre hvornår objekter på skærmen røre er et vigtigt aspekt af de fleste spil. I denne lektion vil vi se på hvordan den pythagoræiske læresætning og afstandsformlen kan bruges til at måle afstanden mellem to punkter på skærmen, og derefter beslutte, om disse to punkter (eller spilobjekter) rører.
         video: alg_16_biggame_collision_detection

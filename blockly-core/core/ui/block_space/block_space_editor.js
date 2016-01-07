@@ -37,8 +37,13 @@ goog.require('goog.style');
  * drags a block towards the toolbox to delete it.  However, when creating a
  * blockspace for something like the function editor, we don't want to create
  * an additional one, relying on the main blockspace editor's one instead.
+ * @param {boolean} opt_readOnly whether or not to initialize this
+ * workspace in readOnly mode. All Blockly elements that are (or can be)
+ * aware of this BlockSpaceEditor will consider Blockly to be in
+ * readOnly mode if this BlockSpaceEditor.readOnly OR Blockly.readOnly
+ * are true
  */
-Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect) {
+Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, opt_hideTrashRect, opt_readOnly) {
   if (opt_getMetrics) {
     this.getBlockSpaceMetrics_ = opt_getMetrics;
   }
@@ -48,6 +53,8 @@ Blockly.BlockSpaceEditor = function(container, opt_getMetrics, opt_setMetrics, o
   if (opt_hideTrashRect) {
     this.hideTrashRect_ = opt_hideTrashRect;
   }
+
+  this.readOnly_ = !!opt_readOnly;
   /**
    * @type {Blockly.BlockSpace}
    */
@@ -239,7 +246,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   // it here so that blocks can be dragged over the top of it.  The HTML div
   // appears over the blocks, meaning that blocks dragged to it would appear
   // underneath it, if it had a background color, which wouldn't look as good.
-  if (!this.hideTrashRect_ && !Blockly.readOnly && Blockly.hasCategories) {
+  if (!this.hideTrashRect_ && !this.isReadOnly() && Blockly.hasCategories) {
     this.svgBackground_ = Blockly.createSvgElement('rect',
       {'id': 'toolboxRect', 'class': 'blocklyToolboxBackground'},
       this.svg_);
@@ -247,7 +254,7 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
 
   svg.appendChild(this.blockSpace.createDom());
 
-  if (!Blockly.readOnly) {
+  if (!this.isReadOnly()) {
     // Determine if there needs to be a category tree, or a simple list of
     // blocks.  This cannot be changed later, since the UI is very different.
     this.addToolboxOrFlyout_();
@@ -261,10 +268,12 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
    * When disabled, we wont allow you to drag blocks into blockSpace
    */
   this.setEnableToolbox = function (enabled) {
-    if (this.flyout_) {
-      this.flyout_.setEnabled(enabled);
-    } else if (this.toolbox) {
-      this.toolbox.enabled = enabled;
+    if (!this.isReadOnly()) {
+      if (this.flyout_) {
+        this.flyout_.setEnabled(enabled);
+      } else if (this.toolbox) {
+        this.toolbox.enabled = enabled;
+      }
     }
   };
 
@@ -464,7 +473,7 @@ Blockly.BlockSpaceEditor.prototype.init_ = function() {
     Blockly.documentEventsBound_ = true;
   }
 
-  if (Blockly.languageTree) {
+  if (Blockly.languageTree && !this.isReadOnly()) {
     if (Blockly.hasCategories) {
       this.toolbox.init(this.blockSpace, this);
     } else {
@@ -701,7 +710,7 @@ Blockly.BlockSpaceEditor.copy_ = function(block) {
  * @private
  */
 Blockly.BlockSpaceEditor.showContextMenu_ = function(e) {
-  if (Blockly.readOnly) {
+  if (this.isReadOnly()) {
     return;
   }
   var options = [];
@@ -901,6 +910,13 @@ Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetricsNoScroll_ = function() {
 Blockly.BlockSpaceEditor.prototype.addChangeListener = function(func) {
   return Blockly.bindEvent_(this.blockSpace.getCanvas(),
     'blocklyBlockSpaceChange', this, func);
+};
+
+/**
+ * @returns {boolean}
+ */
+Blockly.BlockSpaceEditor.prototype.isReadOnly = function() {
+  return (Blockly.readOnly || this.readOnly_);
 };
 
 /**

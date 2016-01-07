@@ -1,35 +1,28 @@
 name 'U2L14 Assessment'
-title 'Assessment: Question 1'
-
-question 'character frequency'
-answer 'the distribution of letters in a language'
-question 'heuristic'  
-answer 'technique used to find an approximate solution' 
-question 'encrypt'
-answer 'use an algorithm to encode a message'
-question 'decrypt'
-answer 'use an algorithm to decode a message'
-question 'cipher'
-answer 'another term for encrypted message'
-question 'random substitution cipher'
-answer 'encryption in which arbitrary symbols replace letters'
-question 'Caesar cipher'
-answer 'encryption based upon the alphabetical order of letters'
-
-
-markdown <<MARKDOWN
-
-MARKDOWN
-teacher_markdown <<MARKDOWN
-Answers:
-
-- character frequency: the distribution of letters in a language
-- heuristic: technique used to find an approximate solution
-- encrypt: use an algorithm to encode a message
-- decrypt: use an algorithm to decode a message
-- cipher: another term for encrypted message
-- random substitution cipher: encryption in which arbitrary symbols replace letters
-- Caesar cipher: encryption based upon the alphabetical order of letters
-
-
-MARKDOWN
+encrypted 'AYs8Rg78DVPv151oECxCtqF/lKGDhOw/o6C5j+xru9ITknh3Wy6IpodBmvER
+WE+thaeJFKXl/64yRDy4tRgm0fu74tYNLn2xIO9l+vTzJk2hB7LHA5QJCkYc
+Rg1RGSQM2fP1iL6gy2yNJ+t8HNyNdPCmAHKt9TyYYTghm61iIRonlYyqZnvY
++APzRL/HEmY7GpiFvmOUdVVgwlhm3qD6NsDK/8VCnx3PKCTrqEh4E7laeGlH
+GeyKU/wZz2hCW/x3KEujEXxwWcCtZ3PcFP/fI4n14hUDTI3tQKtBTQHoPQZC
+BOjfHTSb+M9eWB1L+IURgxaMRI68xLsxBqQnL6TcVwa3raPS+sVSmNhAb9OO
+AGq+e1d4BU/tK+Vq/VIyeewC4P7NFIps/8nFg2ECmodc9uR7pTm2P+v/dcOp
+xx4YoInpQ8qxQtxtfiK5upPM3DNef9AQgDrAWBiOKG667+wYUUHxAsnviluP
+dUXuPM+FZLcx/zHza9Jv4YZoSYmo43mcRLCThFTcR6VLQIjGMN+IGb2cNBvc
+u5u779JDNuJDkamUTNUNrrUWTfCnDe7r4iWl53h0CXEM5CTjwfGrG3ZdRLWi
+8o/sy5EN35KnGGJXiXh9RE3Ddk+O2G3jcTAHurBHn8GEcFCPvseMhCIRaX2l
+ZPh4xgmr42urz38ari7EbOOx0gUNu2yEnxllsLPfYUGgCJSJ/nJOA4gNNaHm
+eso1erW5g4MJ9JCINycoDgiIFY3+mJutRKxH8hwZwovjSjXODUp5ywcArNNT
+8t2KHoxVtCgMM4MGooxB6A2GEsqY5jaQYjSoVShx+1F+Kr89XDneU/pd+Jl6
+/vlrAZUPY0sumEKhOPsRbXZp1iXuEZ7sRERZNxVUjRPbXIJUNCWJIiiD1jjT
+2IVnbn03kmRQKUjo30zVK26jgxVAFeq8W4pFbox8lTA7I+DFJ5KKxcq72MP7
+iLrTA14t++m1yYTJ3bQP4hzO5WSlgQVjr1DHiDxLfB3EFcnh2DAGEwBqZbyc
+c6P/1l+pLKUJSujKCtWlB0PR77ZvlYWtDwSEZq4tntBAVu6qu/SGW7ds70Wd
+my1PUTGh75vrC6iKAhcpyem8fQtCVKJ5lrIGJXsbaTFJ87IFugQy1Swo/z2M
+tZuoVgMACGRsyVVWhe6VPHnbIQBE5sqvRY4Tg/L0KeYwfg55Fh86hxawtrA5
++rYOHOBkIgeLT0Lx0c4d7FORn9t3V9Rd5Kc0BJUxdy4TfKCoNRJPqS+z/nJR
+1mZTptJPIg3RE5m+MfLM7MKg/U+/lcMUC1+b57EbXNvBJFPGJBsoakiii1O7
+zAR/Mddumn0Ps7iI6cuCoLeM1w3CJPErVj1WEDvILVEE4OVQpbPec/md5Rcg
+sVjzU7eFKtjfgQKyRDkzJowFZKbhlsdxRgYV+3EF3kIuI/0sQiZtpxI4VgV/
+RTW/gonuspf6cLrK8Gq8KCY1+S2DVffg7ROdWTZK5YZE8qwIvJsndomCWar3
+aMJ+kP+NzOOfySuIZB3C59JmT84OfsljaKUpEZFo/XroWgXDiavm3wWrZw==
+'

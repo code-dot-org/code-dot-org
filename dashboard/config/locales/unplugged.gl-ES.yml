@@ -2,303 +2,317 @@
   data:
     unplugged:
       Unplug1:
-        title: Introducción a la informática
-        desc: Esta clase dará una introducción al concepto de “Ciencias de la Computación”
-          y explicará qué hace un “informático”. Los estudiantes  tendrán la oportunidad
-          de asumir el rol de un informático. Al finalizar la actividad, cada estudiante
-          tendrá un recordatorio sobre qué aprendió durante la clase. Tal vez Ud.
-          crea que es conveniente evitar enseñar a los niños más pequeños el complejo
-          vocabulario asociado a las clases que siguen, pero presentarlo de manera
-          lúdica y divertida ahora es mucho más productivo que esperar otras oportunidades.
+        title: Introdución á informática
+        desc: Esta lección vai introducir o concepto de Informática e explicar o que
+          fai un informático. Tamén vai dar aos alumnos a oportunidade de asumir o
+          papel dun informático. Ao final da actividade, cada alumno vai levar para
+          casa unha lembranza do que aprendeu. Pode pensar en non ensinar aos nenos
+          máis cativos as palabras do vocabulário relacionado ás leccións a seguir,
+          pero presentalas de forma divertida e descontraída agora é moito máis produtivo
+          que esperar oportunidades futuras.
         pdfs:
         - unplug1-es-ES
         video: Unplug1
       Unplug2:
-        title: Pensamiento computacional
-        desc: Sólo con papel y fibrones, los estudiantes aprenderán los 4 pasos del
-          pensamiento computacional.  Después de una breve introducción, los alumnos
-          deben dividirse en grupos donde darán instrucciones para otros alumnos que
-          les permitan dibujar un monstruo específico (del catálogo de monstruos preseleccionados).
-          La tarea debe ser dividida, para que luego los equipos encuentren patrones
-          en todos los monstruos del catálogo, y abstraigan detalles similares entre
-          los monstruos. Deben usar esa información para crear un algoritmo (instrucciones)
-          para que otro equipo dibuje un monstruo específico. Los equipos deben luego
-          intercambiar algoritmos con otro grupo y dibujar un monstruo siguiendo el
-          algoritmo que les toque. ¿El dibujo lo que el equipo original quiso hacer?
+        title: Pensamento computacional
+        desc: Con nada máis que papel e lapis os alumnos van aprender os catro pasos
+          do pensamento computacional. Tras unha breve introdución, deben se dividir
+          en grupos e crear instrucións para que os outros alumnos debuxen un monstro
+          específico (a partir dun catálogo de monstros previamente seleccionados).
+          A tarefa debe ser dividida, e entón os grupos van analizar todos os monstros
+          no catálogo, procurando por padróns, detalles abstractos e distintos, e
+          entón usar esa información para crear un algoritmo (instrucións) para que
+          outro grupo debuxe un monstro en concreto. Os grupos, entón, van trocar
+          os algoritmos entre si e debuxar o monstro con base no algoritmo. O debuxo
+          vai ser parecido ao que quería o grupo orixinal?
         pdfs:
         - unplug2-es-ES
         video: Unplug2
       Unplug3:
-        title: Programación en papel cuadriculado
-        desc: Programándose unos a otros para hacer dibujos, los estudiantes empezarán
-          a entender de qué trata la programación. La clase empezará haciendo que
-          los estudiantes intercambien instrucciones para colorear cuadrados en una
-          hoja cuadriculada, con el fin de reproducir una imagen. Si hay tiempo, la
-          clase puede terminar con dibujos que los estudiantes crean.
+        title: Programación en Papel Cadriculado
+        desc: A través da programación para debuxar as figuras, os alumnos van comezar
+          a entender o que é realmente programar. A clase vai comezar con alumnos
+          dando instrucións uns aos outros para colorar os cadrados nun papel cadriculado
+          na tentativa de reproducir unha figura existente. Se houbese tempo, a clase
+          pode ser concluída con imaxes que crearon os propios alumnos.
         pdfs:
         - unplug3-es-ES
         video: Unplug3
       Unplug4:
         title: Algoritmos
-        desc: Esta clase cubre el tema algoritmos. Usando figuras de tangram y papel
-          cuadriculado, el primer ejercicio muestra qué tan importante es hacer a
-          cada instrucción lo más clara e inequívoca posible. Al final, la clase puede
-          explorar en cuántas formas se puede doblar un papel en un rectángulo, notando
-          cómo algunos métodos requieren menos pliegues que otros.
+        desc: Esta lección aborda os algoritmos. Usando formas de tangram (un crebacabezas
+          chinés) e papel cadriculado, o primeiro exercicio mostra a importancia de
+          escribir cada instrución da forma máis clara e menos ambígua posíbel. Despois,
+          a clase vai explotar de cantas formas pode dobrar un papel para facer un
+          rectángulo, mostrando como algúns métodos poden esixir máis ou menos dobras
+          que outros.
         pdfs:
         - unplug4-es-ES
         video: Unplug4
       Unplug5:
-        title: funciones
-        desc: En esta clase, los estudiantes harán un collar con cuerdas, piedritas
-          y una medalla especial. Seguirán una serie de tareas repetitivas, y luego
-          se les pedirá que identifiquen ciertos conjuntos de “habilidades” que se
-          duplican varias veces. Una vez que esas habilidades fueron definidas, serán
-          llamadas desde un programa principal y el bello proceso de creación será
-          volcado en una sola pieza de papel. El programa final será escrito por toda
-          la clase, independientemente del tipo de cuerdas, piedritas o medallas.
-          Para efectivamente permitir esto, los estudiantes deberán “abstraer” los
-          detalles específicos entre los materiales y crear términos vagos para los
-          suministros de cada uno. El uso de huecos genéricos es una maravillosa introducción
-          a las variables.
+        title: Funcións
+        desc: Nesta lección, os alumnos van facer un colar con cordas, doas, e un
+          amuleto. Os alumnos van seguir unha serie de pasos repetitivos, e entón
+          deben identificar certos conxuntos de "habilidades" que son duplicadas varias
+          veces. Unha vez que esas habilidades estean definidas, vanse chamar a partir
+          dun programa principal, e todo o belo proceso de creación será anotado nunha
+          única folla de papel. O programa final será dirixido a toda a sala, sexa
+          cal sexa o tipo de cordas, doas, e amuletos usados. Para  funcionar, os
+          alumnos van precisar "abstraer" os detalles dos materiais específicos e
+          crear condicións imprecisas. O uso de espazos reservados xenéricos é unha
+          excelente forma de facer unha introdución ás variábeis.
         pdfs:
         - unplug5-es-ES
         video: Unplug5
       Unplug6:
-        title: Condicionales
-        desc: La clase trata de un juego.  Después de introducir la idea de condicionales,
-          sentencias “si”, y bucles, la clase puede practicar en conjunto el uso de
-          un programa ya escrito, con un mazo de tarjetas y suerte.
+        title: Condicións
+        desc: Esta clase é un xogo. Despois de introducir a idea de estruturas condicionais,
+          instrucións "se" e lazos, os alumnos poden practicar xuntos, usando un programa,
+          ou unha baralla de cartas.
         pdfs:
         - unplug6-es-ES
         video: Unplug6
       Unplug7:
-        title: Escritura de la canción
-        desc: Leer letras de canciones puede ser una aventura intuitiva para los estudiantes.
-          Vamos a tomar una actividad que hace uso de conocimientos previos para dar
-          una buena clase sobre definición y llamada de funciones. Una vez que los
-          estudiantes se familiaricen con el proceso de definición/llamado, podemos
-          añadir complicaciones como pasaje de parámetros en los llamados a funciones.
+        title: Escribindo unha Canción
+        desc: Ler letras de música é unha cousa bastante intuitiva para a maioría
+          dos alumnos. Imos tomar unha actividade que xa é de coñecemento común e
+          transformala nunha maneira sólida de ensinar a definición e a chamada de
+          funcións. Unha vez que os alumnos estean familiarizados co proceso de definición
+          e a chamada, imos agregar capacidades extras relacionados coa pasaxe de
+          parámetros nas chamadas de funcións.
         pdfs:
         - unplug7-es-ES
         video: Unplug7
       Unplug8:
         title: Abstracción
-        desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que
-          trata de juegos de palabras, para que la clase aprenda sobre la efectividad
-          que posee la abstracción.
+        desc: Esta actividade combina a rutina diaria dos seus alumnos e un xogo de
+          raciocinio no estilo Mad-Lib para axudar a clase a aprender sobre a eficacia
+          da abstracción.
         pdfs:
         - unplug8-es-ES
         video: Unplug8
       Unplug9:
-        title: Programación de relé
-        desc: Esta lección tomará una idea de una actividad anterior (4. Programación
-          en hoja cuadriculada) y el uso de esas habilidades para hacer hincapié en
-          la importancia de completar los programas que funcionan con una determinada
-          secuencia y la importancia de comprobar frecuentemente la existencia de
-          errores (bugs) en los programas.
+        title: Programación baixo presión
+        desc: Esta lección vai usar unha idea dunha actividade anterior (4. Programación
+          en Papel Cadriculado) e usar as habilidades nela presentes para enfatizar
+          a importancia de completar programas que operan en secuencia e tamén de
+          frecuentemente verificar os programas para achar "bugs".
         pdfs:
         - unplug9-es-ES
         video: Unplug9
       Unplug10:
-        title: Internet
-        desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden
-          sobre direcciones web, IPs y DNS.
+        title: A Internet
+        desc: Nesta lección os alumnos van finxir que navegan pola Internet, mentres
+          aprenden sobre ligazóns web, IPs e DNS.
         pdfs:
         - unplug10-es-ES
         video: Unplug10
       Unplug11:
-        title: Cierre
-        desc: Este cierre final en nuestra primera serie de 20 horas ayudará a la
-          clase a volver a vivir sus momentos favoritos, mientras se les dan los próximos
-          pasos para que puedan continuar, si están interesados, el viaje a través
-          de las Ciencias de la computación.
+        title: Resumo
+        desc: O resumo final na primeira serie de 20 horas de actividade vai axudar
+          os alumnos a reviveren os seus momentos preferidos, ao mesmo tempo que lles
+          vai axudar nos próximos pasos que eles mesmos poden dar se estivesen interesados
+          en continuar a súa viaxe pola informática.
         pdfs:
         - unplug11-es-ES
         video: Unplug11
       UnplugHappyMaps:
         title: Mapas Felices
-        desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones)
-          para mover un personaje a través de un laberinto utilizando un solo comando.
+        desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
+          mover un personaxe a través dun labirinto usando un único comando.
         video: C1_mapas_felices_desconectado
       MoveIt:
-        title: Muévelo, muévelo
-        desc: Los estudiantes crean algoritmos sencillos (conjuntos de instrucciones)
-          para mover un personaje a través de un laberinto utilizando un solo comando.
+        title: Móveo, móveo
+        desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
+          mover un personaxe a través dun labirinto usando un único comando.
         video: C1_muévelomuévelo_desconectado
       PlantASeed:
-        title: 'Algoritmos de la Vida Real: Planta una Semilla'
-        desc: Esta lección resalta formas en las que usamos algoritmos en nuestra
-          vida cotidiana, usando el acto de plantar una semilla como ejemplo. También
-          se centra en el panorama general de la informática y cómo los algoritmos
-          juegan un papel esencial.
+        title: 'Algoritmos da Vida Real: Planta unha Semente'
+        desc: Esta lección presenta como usamos os algoritmos na nosa vida diaria,
+          usando o acto de plantar unha semente como exemplo. Tamén se concentra no
+          cadro xeral da informática e como os algoritmos desempeñan un papel fundamental.
         video: C1_plantando_semillas
       BuildingAFoundation:
-        title: Construyendo una Base
-        desc: Los estudiantes construyen una estructura utilizando solamente lo suministrado.
-          Las estructuras deben completar una tarea (alcanzar una cierta altura o
-          soportar un cierto peso), y los estudiantes discuten la idea de ser persistente
-          cuando las cosas se complican.
+        title: Construíndo unha base
+        desc: Os alumnos constrúen unha estrutura usando só os materiais fornecidos.
+          Esas estruturas deben completar unha tarefa (chegar a unha correcta altura
+          ou soportar un determinado peso) e os alumnos discuten a idea de ser persistente
+          cando as cousas se complican.
         video: C1_construyendo_cimientos
       GettingLoopy:
-        title: Bucleandose
-        desc: Esta lección introduce el concepto de programación de los bucles (instruciones
-          repetidas) atravéz de una actividad de baile. Los estudiantes aprenderan
-          simple coreografía, despues se les dirá que la repitan.
+        title: Bucleándose
+        desc: Esta clase introduce o concepto de programación de bucles (loops, ou
+          instrucións repetidas) por medio dunha actividade de danza. Os alumnos van
+          aprender unha coreografia simple e daquela se lles dirá que a repitan.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Programación de Relevos
-        desc: Los estudiantes corren una carrera de relevos, donde aceleran por el
-          camino para escribir un algoritmo basado en una imagen "Grafica en Papel
-          de Programación". Ellos sólo pueden escribir una instrucción a la vez y
-          si hay algun error en algun lugar, deben borrar todo hasta ese punto.
+        title: Programación por relevos
+        desc: Os alumnos participan dunha carreira de relevos na cal deben atravesar
+          o patio para escribir un algoritmo baseado nunha imaxe en "papel cadriculado
+          de programación". Eles só poden escribir unha instrución por vez, e, se
+          houbese un erro nalgún lugar teñen que eliminar todo e refacer os pasos
+          a partir daquel punto.
         video: C2_programación_relevos
       Conditionals:
-        title: Condicionales
-        desc: Para aprender acerca de las instrucciones condicionales, los estudiantes
-          juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo
-          un punto" y "si tomo una carta negra, tu obtienes un punto."
+        title: Condicionais
+        desc: Para aprender sobre estruturas condicionais, o alumno xoga un xogo de
+          cartas e crea regras como "se eu tomo unha carta vermella, eu gaño un punto",
+          e "se eu tomo unha carta negra, vostede gaña un punto"
         video: C2_condiciones_con_tarjetas
       BigEvent:
-        title: El Gran Evento
-        desc: Los estudiantes son introducidos al concepto de "eventos" en programación,
-          que son acciones que una computadora monitorea constantemente. El profesor
-          presionará botones en un control remoto de papel y los estudiantes reaccionarán
-          dependiendo de qué botón se presiona.
+        title: O Gran Evento
+        desc: Os alumnos son introducidos ao concepto de "eventos" en programación,
+          que son accións que un computador monitora constantemente. O profesor vai
+          apertar os botóns de forma remota, e os alumnos van reaccionar de acordo
+          co botón presionado.
         video: C1_granevento_desconectado
       GoingPlacesSafely:
-        title: Ir a Sitios Seguro
-        desc: Internet es una herramienta poderosa, pero a veces peligrosa. Los maestros
-          muestran cómo mantenerse a salvo mientras se navega en Internet.
+        title: Ir a Sitios en modo Seguro
+        desc: A internet é poderosa, pero ás veces perigosa. Os profesores mostran
+          como navegar en seguranza pola Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Programación en papel cuadriculado
-        desc: Los estudiantes escriben un algoritmo (un conjunto de instrucciones)
-          usando un conjunto de  comandos predefinidos para dirigir a sus compañeros
-          en la reproducción de un dibujo.
+        title: Programación en Papel Cadriculado
+        desc: Os alumnos escriben un algoritmo (un conxunto de instrucións) usando
+          un conxunto predefinido de comandos para orientar os seus compañeiros de
+          clase na reprodución dun debuxo.
         video: C2_papel_cuadriculado
       PaperPlanes:
-        title: 'Algoritmos de la vida real : Aviones de papel'
-        desc: Esta lección hace ver modos en los que usamos algoritmos en nuestra
-          vida diaria, específicamente haciendo aviones de papel. Esta lección también
-          se enfoca en las ciencias de la computación en general y cómo los algoritmos
-          juegan un papel escencial.
+        title: 'Algoritmos da vida real: avión de papel'
+        desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente
+          ao facer avións de papel. Esta lección tamén presenta a informática de forma
+          xeral, e como os algoritmos teñen un papel esencial.
         video: C2_aviones_de_papel
       BinaryBracelets:
-        title: Pulseras Binarias
-        desc: Los estudiantes crean pulseras como representaciones binarias de la
-          primera letra de su nombre. Aprenden que los datos pueden ser representada
-          y guardados de más de una forma.
+        title: Pulseiras Binarias
+        desc: Os alumnos crean pulseiras como representacións binárias da primeira
+          letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados
+          e almacenados de máis dunha forma.
         video: C2_pulseras_binarias
       DigitalFootprint:
-        title: Tu huella Digital
-        desc: Los profesores le presentan a los alumnos la idea de que poner información
-          sobre ellos en línea crea una huella digital o un "rastro" que tiene consecuencias.
+        title: A túa pegada dixital
+        desc: Os profesores informan aos alumnos de que colocar informacións persoais
+          online crea unha pegada dixital ou un "rastro" que ten consecuencias.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Pensamiento computacional
-        desc: Los alumnos usan los pasos del pensamiento computacional (descomponer,
-          combinar patrones, abstraer, algoritmo) para averiguar cómo jugar un juego
-          que viene sin instrucciones.
+        title: Pensamento computacional
+        desc: Os alumnos usan as etapas do pensamento computacional (descomposición,
+          relación entre padróns, abstracción, algoritmos) para descubrir como xogar
+          un xogo que non ten instrucións.
         video: C3_pensamiento_computacional
       FunctionalSuncatchers:
-        title: Tragaluces Funcionales
-        desc: Los estudiantes crean un algoritmo con variables y funciones (pedazos
-          de código que quieres usar una y otra vez) para crear un tragaluz con un
-          hilo y pequeños cristales.
+        title: Tragaluces Funcionais
+        desc: Os alumnos crean un algoritmo con variábeis e funcións (fragmentos de
+          código para usar varias veces) para crear colares usando fíos e doas.
         video: C3_tragaluces_funcionales
       SongwritingParameters:
-        title: Composicion musical con Parámetros
-        desc: Los estudiantes usan el concepto del coro en una canción para aprender
-          sobre el paso de parámetros (que personaliza una función sin tener que reescrbir
-          la función entera).
+        title: Composición de música con parámetros
+        desc: Os alumnos usan o concepto de retrouso nunha música para aprender sobre
+          o paso de parámetros (os cales personalizan unha función sen a necesidade
+          de reescribila).
         video: C3_composición_musical_con_parámetros
       DiceRace:
-        title: 'Algoritmos de la vida real: Carrera de Dados'
-        desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida
-          diaria. Como parte de eso, los estudiantes identificarán y escribirán el
-          algoritmo de un juego de carrera de dados.
+        title: 'Algoritmos da vía real: xogo de dados'
+        desc: Esta lección mostra como usamos os algoritmos na nosa vida. Como parte
+          disto, os alumnos van identificar e escribir un algoritmo para un xogo de
+          dados.
         video: C3_carrera_dados
       Internet:
         title: Internet
-        desc: Los alumnos envían mensajes representando varios métodos de transmision
+        desc: Os alumnos envían mensaxes que representan varios métodos de transmisión
           de Internet usando pedazos de papel.
         video: C3_internet
       Crowdsourcing:
-        title: Colaboración Abierta
-        desc: Los estudiantes usan crowdsourcing, una técnica habitual para resolver
-          problemas en informática, para completar una tarea juntos como un aula,
-          más eficientemente que si un alumno lo intentara solo.
+        title: Colaboración Aberta
+        desc: Os alumnos usan o crowdsourcing, unha técnica común de resolución de
+          problemas en informática, para concluír unha tarefa xuntos, na aula, de
+          maneira máis eficiente que se un alumno tentase resolver el soíño.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Ciudadanía Digital
-        desc: Los estudiantes exploran la diferencia entre información privada e información
-          personal, distinguiendo qué es seguro y qué es inseguro compartir en línea.
+        title: Cidadanía dixital
+        desc: Os alumnos exploran a diferenza entre informacións privadas e persoais,
+          distinguindo o que é seguro e o que non é seguro para compartir online.
       TangramAlgorithms:
-        title: Algoritmos de tangram
-        desc: Esta clase nos enseña algo importante acerca de los algoritmos. Si mantienes
-          un algoritmo simple hay muchas maneras de usarlo. Si quieres asegurarte
-          de que todos terminen con el mismo resultado, entonces el algoritmo necesita
-          más detalle.
+        title: Algoritmos Tangram
+        desc: 'Esta clase móstranos algo importante sobre os algoritmos: se o manten
+          simple, poderá facer moitas cousas con el; se quixese garantir que todos
+          teñan o mesmo resultado no final, o seu algoritmo precisará de máis detalles.'
         video: C4_algoritmos_sin_conexión
       EnvelopeVariables:
-        title: Variables de sobre
-        desc: Las variables permiten mucha libertad en Ciencias de la computación.  Esta
-          clase ayuda a explicar qué son las variables y cómo podemos usarlas de muchas
-          maneras diferentes. Usa esta actividad antes de (o junto con) la clase de
-          abstracción para comprender a fondo la idea.
+        title: Variábeis de sobre
+        desc: As variábeis proporcionan moita liberdade na informática. Esta clase
+          axuda a explicar o que son as variábeis e como podemos usalas de diversas
+          maneiras. Faga esta actividade antes ou xunto coa clase sobre abstracción,
+          para que a idea realmente teña sentido.
         video: C4_variables_sin_conexión
       MadGlibs:
-        title: Loco Glibs
-        desc: La abstracción es una de las habilidades más importantes que deben entender
-          un informático. Esta actividad hará que los alumnos analicen historias buscando
-          diferencias para que puedan abstraerlas. Esas historias abstractas se convierten
-          en plantillas para diversión y crear otras locas historias.
+        title: As Glibs tolas
+        desc: A abstracción é unha das habilidades máis importantes que un informático
+          debe coñecer. Esa actividade fará que os seus alumnos analicen as diferenzas
+          entre historias para que poidan, entón, abstraelas. Esas historias abstraídas
+          tórnanse modelos para novas historias tolas e divertidas.
         video: C4_bibliotecas_locas_sin_conexión
       ForLoopFun:
-        title: Diversión con bucles Para
-        desc: Sabemos que los bucles nos permiten hacer las cosas una y otra vez,
-          pero ahora vamos a aprender cómo utilizar bucles con estructuras adicionales.
+        title: Diversión con bucles "para" (for)
+        desc: Sabemos que os bucles nos permiten facer algo repetidas veces, pero
+          agora imos aprender como usalos con estruturas adicionais.
         video: C4_bucles_for_sin_conexión
       SongwritingWithParameters:
-        title: Composición Musical con Parámetros
-        desc: 'Una de las estructuras más magníficas en el mundo de las ciencias de
-          la computación es la función.  Las Funciones (a veces llamadas procedimientos)
-          son mini programas que puedes utilizar una y otra vez dentro de tu programa
-          más grande. Esta clase  ayudará a los alumnos a entender intuitivamente
-          por qué la combinación de partes de código en funciones es una práctica
-          tan útil.  '
+        title: Escribindo unha canción con parámetros
+        desc: 'Unha das estruturas máis incríbeis no mundo da informática é a función.
+          As funcións (chamadas ás veces de procedementos) son miniprogramas que poden
+          ser usados repetidas veces dentro do programa maior. Esta clase axudará
+          os alumnos a entender, de maneira intuitiva, por que combinar bloques de
+          códigos en funcións é unha práctica útil.  '
         video: C4_parámetros_sin_conexión
       BinaryImages:
-        title: Imágenes binarias
-        desc: Aunque muchas personas piensan que el binario es  estrictamente ceros
-          y unos, nuestros cursos anteriores enseñaron a los alumnos que la información
-          puede ser representada en una variedad de opciones binarias.  Esta clase
-          lleva ese concepto un paso más allá que ilustra cómo una computadora también
-          puede almacenar información aún más compleja (por ejemplo, imágenes y colores)
-          en binario.
+        title: Imaxes binárias
+        desc: Aínda que moitas persoas vexan o binário estritamente como ceros e uns,
+          nosos cursos anteriores ensinaron aos alumnos que as informacións poden
+          ser representadas por unha grande variedade de opcións binárias. Esta clase
+          leva ese concepto un paso adiante, unha vez que demostra como un computador
+          tamén pode almacenar informacións aínda máis complexas (como imaxes e cores)
+          en binário.
         video: C4_binario_sin_conexión
       VideoGamesCoordinatePlanes:
-        title: Videojuegos y planos de coordenadas
-        desc: Descripción de la clase sobre videojuegos y planos de coordenadas
+        title: Vídeo xogos e planos cartesianos
+        desc: Descubre como os vídeo xogos cos que gostas xogar son, na verdade, conducidos
+          pola álxebra! Explora como as expresións alxebraicas e o plano cartesiano
+          poden nos axudar a entender como funcionan os vídeo xogos e entón comeza
+          a planear o xogo que vas crear.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contratos
-        desc: Descripción de la clase sin conexión sobre contratos
+        title: Contratos, dominio e imaxe
+        desc: Os contratos dannos unha forma de entender e discutir as funcións. Nesta
+          lección, imos ver como os contratos poden nos axudar a entender unha nova
+          linguaxe de programación ou función.
         video: alg_5_contracts
       DesignRecipe:
-        title: La receta de diseño
-        desc: Descripción de la clase sobre receta de diseño
+        title: A receita de deseño
+        desc: Na última etapa os alumnos escribiron algunhas funcións bastante simples
+          - pero as funcións máis sofisticadas esixen unha abordaxe máis profunda.
+          A fórmula de deseño é unha abordaxe estruturada para escribir funcións que
+          inclúe casos de proba para garantir que a función traballe como tal e como
+          se espera.
         video: alg_8_design_recipe
       Booleans:
-        title: Valores booleanos
-        desc: Descripción de la clase sobre booleanos
+        title: Booleanos e lóxica
+        desc: Os Booleanos son o cuarto e último tipo de dato que vai aprender neste
+          curso. Nesta actividade, vostede vai aprender o que son booleanos e como
+          poden nos axudar a escribir funcións que pensan de forma lóxica
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Funciones por partes y condicionales
-        desc: Descripción de la clase sobre funciones por partes y condicionales
+        title: Condicións e funcións definidas por partes
+        desc: Os parámetros que pasamos para as funcións fan as saídas variaren con
+          base nun padrón bastante ríxido. Supoña que queremos parámetros con algúns
+          valores para crear saídas usando un padrón, pero outros valores para usar
+          un padrón distinto. É aí que as condicionais son necesarias...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Detección de colisiones
-        desc: Descripción de la clase sobre detección de colisiones
+        title: Detección de colisións e o teorema de Pitágoras
+        desc: Determinar cando se tocan os obxectos na pantalla é un aspecto importante
+          na maioría dos xogos. Nesta lección, imos ver como o teorema de Pitágoras
+          e a fórmula da distancia poden ser usados para medir a distancia entre dous
+          puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo)
+          están se tocando.
         video: alg_16_biggame_collision_detection

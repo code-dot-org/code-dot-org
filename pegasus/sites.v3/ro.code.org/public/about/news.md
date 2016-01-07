@@ -15,6 +15,68 @@ social:
 
 # Noutăți
 
+## <b>Președintele României, domnul Klaus Iohannis, susține campania Hour of Code 2015, cel mai mare eveniment de educaţie din lume.</b>
+În acest sens, Președintele Klaus Iohannis a participat vineri, 4 decembrie a.c., la Palatul Cotroceni, alături de un grup de 23 de copii, cu vârste cuprinse între 5 și 14 ani, la o oră de programare.
+
+Prin organizarea acestui eveniment și susținerea campaniei Hour of Code 2015, Președintele României dorește să readucă în atenția opiniei publice importanța competenţelor digitale şi a investiției în dezvoltarea abilităţilor de programare ale copiilor, dar şi ale adulţilor, în procesul de învăţare pe tot parcursul vieţii.
+
+Tutorialele urmate de copiii prezenţi astăzi, la Palatul Cotroceni, sunt disponibile pe site-ul oficial: ro.code.org. Acestea demonstrează că programarea reprezintă o îmbinare între logică şi matematică, între muncă şi perseverenţă, fiind accesibilă chiar şi la vârste mici. Performanţa României în domeniul IT a dovedit fără echivoc nevoia de a stimula talentul nativ în acest domeniu în ţara noastră.
+
+Hour of Code România este un eveniment organizat de Asociația ADFABER, care, în 2014, a reușit să implice peste 400.000 de români în activități de programare.
+
+<b>Video Hour of Code la Cotroceni</b>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JldNuPL7K2A" frameborder="0" allowfullscreen></iframe>
+
+
+## Smiley invata sa programeze alaturi de tinerii romani, pe 7 decembrie, ziua de start Hour of Code Romania
+
+<b>Smiley alaturi de echipa HaHaHa Production sustine editia 2015 a celui mai mare eveniment de educatie din istorie, al carui mesaj este ca oricine, indiferent de varsta sau specializare, poate invata programare.</b>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sRDDlXT-DCo" frameborder="0" allowfullscreen></iframe>
+
+Bucuresti, 20 noiembrie, 2015 - Smiley, muzician, producator si om de televiziune, s-a alaturat echipei Hour of Code Romania in calitate de ambasador al celui mai mare eveniment de educatie din istorie, aflat in Romania la cea de-a doua editie. 
+
+Dedicat elevilor si studentilor din toata lumea, Hour of Code este o miscare globala ce a implicat pana acum peste 170 de tari si aproape 131 de milioane de oameni in efortul de a demonstra ca programarea, astazi un limbaj international, poate fi invatata simplu si distractiv de catre oricine, la orice varsta. 
+
+“Participantii invata in joaca - iata de ce Hour of Code este un proiect remarcabil, dar si motivul pentru care il sustin si la a doua editie. Cred ca tinerii interesati de programare sunt foarte norocosi fiindca au acum sansa nu doar de a-si largi orizontul, ci si de a o face prin joc.” - declara Smiley.
+
+<b>Cum functioneaza?</b>
+
+Participantii trebuie sa aiba la dispozitie o ora si un device (computer, tableta sau telefon) si sa acceseze tutorialele online de pe <a href="http://ro.code.org”>ro.code.org</a>. 
+
+Usor de parcurs si entertaining, oricine poate parcurge aceste tutoriale, acasa sau in cadrul unui eveniment organizat, alaturi de un grup de cursanti.
+
+In 2014, 400.000 de romani au incercat o Ora de Programare in cadrul a 649 de evenimente Hour of Code ce au avut loc in doar 7 zile in toata tara.
+
+Inscrie evenimentul tau Hour of Code la adresa <a href="http://www.code.org">HourofCode.com/ro/ro</a>
+
+## Hour of Code 2015 se apropie. Inscrie evenimentul tau pe harta lumii
+
+<b>Anul trecut s-au înscris și au participat la eveniment peste 400,000 de români.</b>
+
+București, 23 octombrie 2015 – Asociația <a href="http://www.adfaber.org">ADFABER</a> promovează anul acesta, a doua ediție a Hour of Code (Ora de programare), cel mai mare eveniment de educație din întreaga lume, care se va desfășura simultan în mai multe regiuni ale globului. Amploarea evenimentului a clasat anul trecut România pe locul 10 în întreaga lume, după ce peste 400.000 de elevi s-au înscris și au participat la eveniment într-o săptămână.
+
+Ediția de anul acesta a evenimentului Hour of Code se va desfășura în perioada 7 și 13 decembrie 2015 și propune elevilor și profesorilor să descopere cât de simplu pot învăța bazele programării cu ajutorul tutorialelor disponibile online pe ro.code.org. Animante și interactive, acestea aduc în prim plan personaje îndrăgite de copii, precum prințesa Elsa, dar și antreprenori cu business-uri online, adresându-se astfel deopotrivă copiilor și adulților. Tutorialele sunt disponibile în peste 40 de limbi și pot fi accesate atât alături de un profesor, cât și ca studiu individual.
+
+Toți cei care vor să organizeze un eveniment Hour of Code o pot face la adresa <a href="http://www.code.org">HourofCode.com/ro/ro</a>, iar pentru participare la evenimentul global începând cu 7 decembrie au la dispoziție link-ul <a href="http://www.code.org">ro.code.org</a>. 
+
+<i>“Rezultatul înregistrat de ediția de anul trecut a Orei de Programare ne arată interesul ridicat al elevilor pentru tehnologie și pentru domeniul IT, iar prin acest tip de proiect educațional le punem la dispoziție și resursele de care au nevoie pentru a se dezvolta în acest domeniu. Tehnologia face parte din viețile noastre, iar a oferi șansa copiilor să învețe programare este o oportunitate nu doar pentru ei, ci pentru noi toți”, declară Alin Chiriac, Founder & CEO ADFABER, asociația desemnată să se ocupe de organizarea, promovarea și susținerea Hour of Code în Europa de Est.</i>
+
+Partenerii internaționali de anul acesta vor oferi premii pentru toți organizatorii de evenimente Hour of Code, în semn de recunoștință pentru implicarea în promovarea tehnologiei și educației IT în rândul tinerilor. 
+<b>În plus, organizatorii evenimentelor Hour of Code în România vor beneficia de solutii de securitate online, din partea Bitdefender România.</b> 
+
+ADFABER va pune și în acest an la dispoziția organizatorilor materiale traduse în limba româna, mesaje video motivaționale și suport pentru toți organizatorii de evenimente Hour of Code din România.
+
+La nivel global, evenimentul Hour of Code este susținut de companii IT de top, precum Amazon, Apple, Dropbox, Facebook, Google, LinkedIn sau Micosoft. Evenimentul Hour of Code a adunat până acum peste 100 de milioane de elevi participanți din întreaga lume. 
+<b>În România, sponsorii care au solidarizat cu ideea proiectului sunt până în acest moment Bitdefender, Gameloft, IBM,Intel, UPC. Ei s-au alăturat organizațiilor, instituțiilor, personalităților publice și vedetelor care susțin că toți copiii ar trebui să aibă șansa să învețe să programeze.</b>
+
+<b>Despre code.org</b>
+<p><a href="http://www.code.org">Code.org</a>, inițiator Hour of Code, este o asociație nonprofit dedicată promovării tehnologiei computerelor în școli, ca și în rândul femeilor, un segment slab reprezentat în acest domeniu de expertiză.</p>
+
+<b>Despre ADFABER</b>
+<p><a href="http://www.adfaber.org">ADFABER.org</a> este o organizație nonprofit ce promovează tehnologia în domenii în care aceasta poate avea cu adevărat un impact pozitiv. Educația este unul dintre cele mai importante dintre aceste domenii, alături de sănătate și mediu.</p>
+
 ## Klaus Iohannis susține Hour of Code în România
 
 9 decembrie 2014 – Hour of Code (Ora de Programare), unul dintre cele mai mari evenimente de educație din lume, a început ieri și este susținut chiar și de președintele ales, Klaus Iohannis. Acesta a acordat o declarație pentru Hour of Code România. Timp de o săptămână, sute de elevi vor parcurge tutoriale interactive și distractive, cu ajutorul cărora vor învăța să scrie linii de cod chiar în sălile de clasă, sub îndrumarea profesorilor lor.

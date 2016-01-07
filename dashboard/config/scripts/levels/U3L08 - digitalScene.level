@@ -39,7 +39,6 @@
       "hide": null,
       "speed": null,
       "forLoop_i_0_4": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "functionParams_none": null,
       "functionParams_n": null,
@@ -49,7 +48,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Create the functions you were assigned as part of your digital scene. (Click to see full instructions)",
-    "markdown_instructions": "# Design Your Digital Scene\r\n\r\nThis is the final project that you will submit.\r\n\r\n# Do This\r\n\r\n**Copy** all of the individual functions you and your group members have written at the bottom of this program.\r\n\r\n**Design your scene** using these functions, placing your calls at the top of the file.",
+    "markdown_instructions": "# Design Your Digital Scene\r\n\r\nThis is the final project that you will submit.\r\n\r\n# Do This:\r\n\r\n**Copy** all of the individual functions you and your group members have written at the bottom of this program.\r\n\r\n**Design your scene** using these functions, placing your calls at the top of the file.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -75,9 +74,11 @@
     "beginner_mode": "true",
     "submittable": "true",
     "hide_view_data_button": "true",
-    "encrypted_examples": [
-
-    ]
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "encrypted_examples": "x8ypj9jmTids40mBZqclHyl3w1LUYculWcXV93WRDf6gJ/LHMaGdjTc5FpuB\nMBmx+CEtHRFFLA75RwqbPiD45g==\n",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

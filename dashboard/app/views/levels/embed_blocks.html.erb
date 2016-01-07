@@ -1,7 +1,7 @@
 <%- # Embedded Blockly block html template. Derived from /blockly/src/templates/readonly.html.ejs, converted to erb %>
 <%-
   options = local_assigns
-  options[:pretty] = Rails.configuration.pretty_apps ? '' : '.min'
+  app = options.delete :app
 %>
 <!DOCTYPE html>
 <html dir="<%= locale_dir %>">
@@ -9,15 +9,15 @@
   <meta charset="utf-8">
   <title>Blockly</title>
   <%= javascript_include_tag 'application' %>
+  <%= render partial: 'levels/apps_dependencies', locals: { app: app, use_blockly: true } %>
 </head>
 <body class="readonly embed-block">
   <div id="codeWorkspace"></div>
-  <script type="text/javascript" src="/shared/js/shared.js"></script>
   <script>
     var appOptions = <%= raw options.to_json %>;
-    apps.load(function () {
-      window[appOptions.app + 'Main'](appOptions);
-    });
+    window.onload = function () {
+      <%= app %>Main(appOptions);
+    };
   </script>
 </body>
 </html>

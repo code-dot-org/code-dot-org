@@ -1,30 +1,15 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+
+title: <%= hoc_s(:title_prizes_thanks) %>
 layout: wide
-social:
-'og:title': '<%= hoc_s(:meta_tag_og_title) %>'
-'og:description': '<%= hoc_s(:meta_tag_og_description) %>'
-'og:image': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'og:image:width': 1705
-'og:image:height': 949
-'og:url': 'http://<%=request.host%>'
-'og:video': 'https://youtube.googleapis.com/v/rH7AjDMz_dc'
-'twitter:card': player
-'twitter:site': '@codeorg'
-'twitter:url': 'http://<%=request.host%>'
-'twitter:title': '<%= hoc_s(:meta_tag_twitter_title) %>'
-'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'
-'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-'twitter:player:width': 1920
-'twitter:player:height': 1080
+nav: prizes_nav
+
 ---
 
-<%= view :signup_button %>
 
-# Thanks for signing up for a chance to win the $10,000 Hardware Prize
+# Faleminderit që u regjistruat për mundësinë e fitimit të 10.000$ Çmime Hardware
 
-Your whole school is now entered to win a class-set of laptops (or $10,000 for other technology). We'll be reviewing your application and announcing the winners in December.
+E gjithë shkolla juaj është futur tani për të fituar një set laptopësh për klasën (ose 10.000 $ për teknologji të tjera). Ne do të shikojmë aplikimin tuaj dhe do të shpallim fituesin në dhjetor.
 
 ## 1. Përhap fjalën
 
@@ -32,18 +17,17 @@ Thuaji shokëve të tu për #HourOfCode.
 
 ## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
+[Dërgo këtë email](<%= resolve_url('/promote/resources#email') %>) te drejtoria.
 
-## 3. Pyesni punëdhënsin tuaj, që të arrish të përfshihesh
+## 3. Pyesni punëdhënsin tuaj për tu përfshirë
 
-[Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
+[Dërgo këtë email](<%= resolve_url('/promote/resources#email') %>)te manaxheri juaj ose te CEO.
 
 ## 4. Promovoni Orën e Kodimit në komunitetin tuaj
 
-Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](<%= resolve_url('/promote/resources#email') %>).
+Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Dërgo këtë email](<%= resolve_url('/promote/resources#email') %>).
 
 ## 5. Pyet një zyrtar të zgjedhur për të përkrahur Orën e Kodimit
 
-[Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
+[Dërgoje këtë email](<%= resolve_url('/promote/resources#politicians') %>) tek kryetari yt i bashkisë, këshilli i qytetit ose bordi shkollës.
 
-<%= view :signup_button %>

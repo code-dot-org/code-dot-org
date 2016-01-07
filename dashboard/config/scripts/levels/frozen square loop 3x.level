@@ -74,7 +74,7 @@
     <toolbox_blocks>
       <xml/>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="3-10">3</title>
@@ -94,7 +94,7 @@
           </statement>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

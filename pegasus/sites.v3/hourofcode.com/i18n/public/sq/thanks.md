@@ -1,54 +1,63 @@
 ---
 title: <%= hoc_s(:title_signup_thanks) %>
 layout: wide
+nav: how_to_nav
+
 social:
-'og:title': '<%= hoc_s(:meta_tag_og_title) %>'
-'og:description': '<%= hoc_s(:meta_tag_og_description) %>'
-'og:image': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'og:image:width': 1705
-'og:image:height': 949
-'og:url': 'http://<%=request.host%>'
-'og:video': 'https://youtube.googleapis.com/v/rH7AjDMz_dc'
-'twitter:card': player
-'twitter:site': '@codeorg'
-'twitter:url': 'http://<%=request.host%>'
-'twitter:title': '<%= hoc_s(:meta_tag_twitter_title) %>'
-'twitter:description': '<%= hoc_s(:meta_tag_twitter_description) %>'
-'twitter:image:src': 'http://<%=request.host%>/images/code-video-thumbnail.jpg'
-'twitter:player': 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0'
-'twitter:player:width': 1920
-'twitter:player:height': 1080
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": "http://<%=request.host%>"
+
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 ---
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+<%
+  facebook = {:u=>"http://#{request.host}/us"}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
-twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#OraEKodimit' %>
+  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
+  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
+%>
 
 # Faleminderit që u regjistruat si organizator në Orën e Kodimit!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about prizes, new tutorials and other exciting updates. What can you do now?
+Ju po i mundësoni studentëve në mbarë botën të mësojnë Orën e Kodimit e cila *mund të ndryshojë jetën e tyre*, gjatë <%= campaign_date('full') %>. Ne do të jemi në kontakt rreth shpërblimeve, tutorialeve te rinj dhe përditësimeve. Cfarë mund të bëni tani?
 
 ## 1. Përhap fjalën
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Ju sapo u bashkuat lëvizjes Ora e Kodimit. Tregojuni miqve tuaj për **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
+## 2. Find a local volunteer to help you with your event.
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. [Sign up here](<%= resolve_url('/prizes/hardware-signup') %>) to be eligible and [**see last year's winners**](http://codeorg.tumblr.com/post/104109522378/prize-winners). <% end %>
+[Search our volunteer map](<%= resolve_url('https://code.org/volunteer/local') %>) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Pyesni punëdhënsin tuaj, që të arrish të përfshihesh
+## 2. Kërkoj gjithë shkollës që të ofrojë një Orë Kodimi
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Dergo këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) në drejtori dhe sfidoni të gjithat klasat ne shkollën tuaj për tu regjistruar.
 
-## 4. Promote Hour of Code in your community
+## 3. Pyesni punëdhënësin tuaj që të përfshihet
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Dërgo këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) te menaxheri juaj ose te drejtori ekzekutiv i kompanisë.
 
-## 5. Pyet një zyrtar të zgjedhur për të përkrahur Orën e Kodimit
+## 4. Promovo Orën e Kodimit brenda komunitetit tënd
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Rekruto një grup lokal](<%= resolve_url('/promote/resources#sample-emails') %>) — universiteti, klubi i futbollit, teatri. Nuk nevojitet shkolla për të mësuar aftësi të reja. Përdorni këto [postera, banera, stikers, video dhe më shumë](<%= resolve_url('/promote/resources') %>) për eventin tënd.
+
+## 6. Pyet një deputet lokal për të suportuar Orën e Kodimit
+
+[Dërgo këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) te përfaqësuesit lokal, këshilli i qytetit ose bordi i shkollës dhe ftoji që të vizitojnë shkollën tuaj për Orën e Kodimit. Ajo mund të ndihmojë të ndërtosh mbështetje për shkencën kompjuterike në zonën tuaj përtej një ore.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
 <%= view 'popup_window.js' %>

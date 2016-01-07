@@ -6,8 +6,8 @@ nav: prizes_nav
 
 ---
 
-# Enter to win $10,000 worth of technology for your school
+# Futuni për të fituar pajisje teknologjike me vlerë $10,000 për shkollën tuaj
 
-If you plan for every student at your school to learn an Hour of Code, you can qualify to win $10,000 worth of technology to keep learning beyond one hour! One public, K-12 school will win in every US state. Complete the form below to be eligible.
+Nëse planifikoni që çdo student i shkollës suaj të mësoj një Orë Kodim, atëherë ju mund të kualifikoheni për të fituar $10,000 pajisje teknologjike që do t'ju ndihmojnë për të shpjeguar më shumë se një Orë Kodimi! Një gjimnaz publik për çdo shtet të SHBA do të fitoj çmimin. Kompletoni formën e mëposhtme që të pranoheni.
 
 <%= view :hardware_prizes_form %>

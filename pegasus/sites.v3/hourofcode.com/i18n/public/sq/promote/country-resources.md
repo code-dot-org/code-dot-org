@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -23,6 +22,12 @@ p>[**¿Por qué todos tienen que aprender a programar? Participá de la Hora del
 
 p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6Wpb-WyQ)
 
+<% elsif @country == 'al' %>
+
+## Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AtVzbUZqZcI" frameborder="0" allowfullscreen></iframe><p><a href="https://www.youtube.com/embed/AtVzbUZqZcI"><strong>Ora E Kodimit (5 min)</strong></a>
+
 <% elsif @country == 'ca' %>
 
 ## Videot <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
@@ -30,13 +35,32 @@ p>[**La Hora del Código en Chile (2 min)**](https://www.youtube.com/watch?v=vq6
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
+<% elsif @country == 'id' %>
+
+Di luar dari fakata bahwa Pekan Edukasi Ilmu Komputer jatuh pada 7 hingga 13 Desember 2015, kami mengetahui bahwa banyak siswa-siswi Indonesia yang menjalankan prosesi ujian. Untuk alasan ini kami memutuskan untuk menjalankan masa kampanye Hour of Code di Indonesia pada 12 hingga 20 Desember 2015. Kita tetap akan merasakan kemeriahan yang sama dan dengan tujuan yang sama namun dengan kebersamaan yang lebih besar karena akan ada lebih banyak siswa-siswi yang dapat mengikutinya.
+
+Mari bersama kita dukung gerakan Hour of Code di Indonesia!
+
+<% elsif @country == 'jp' %>
+
+## Hour of Code(アワーオブコード) 2015紹介ビデオ <iframe width="560" height="315" src="https://www.youtube.com/embed/_C9odNcq3uQ" frameborder="0" allowfullscreen></iframe>
+<
+
+p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+
+[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+
+<% elsif @country == 'pk' %>
+
+اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
+
 <% elsif @country == 'uk' %>
 
 # How-to Guide for Organizations
 
 ## Use this handout to recruit corporations
 
-[<img width="500" height="300" src="<%= localized_image('/images/corporations.png') %>" />](<%= localized_file('/files/corporations.pdf') %>)
+[<%= localized_image('/images/fit-500x300/corporations.png') %>](<%= localized_file('/files/corporations.pdf') %>)
 
 ## 1) Provoji tutorialet:
 
@@ -53,13 +77,13 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
-  * **Provoni tutorialet në pajisjet ose kompjuterat e studentëve/nxënësve .** Sigurohuni që të funksionojnë siç duhet (me zë dhe video).
-  * **Shikoni faqen e përgëzimeve** për të parë atë që shikojnë dhe studentët kur përfundojnë. 
-  * **Provide headphones for your group**, or ask students to bring their own, if the tutorial you choose works best with sound.
+  * **Provoni tutorialet në pajisjet ose kompjuterat e studentëve.** Sigurohuni që të funksionojnë siç duhet (me zë dhe video).
+  * **Shikoni faqen e përgëzimeve** për të parë se çfarë studentët do të shikojnë kur të mbarojnë. 
+  * Në rast se tutoriali juaj funksionon më mirë me zë **Vini në dizpozicion kufje për klasën tuaj**, ose kërkoni nga studentët t'i kenë me vete kufjet e tyre.
 
 ## 3) Planifikoni paraprakisht bazuar në teknologjinë tuaj në dispozicion
 
-  * **Nuk kemi pajisje te mjaftueshme?** Përdoreni [programim në dyshe](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). When participants partner up, they help each other and rely less on the teacher.
+  * **Nuk kemi pajisje te mjaftueshme?** Përdoreni [programim në dyshe](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). Kur pjesëmarrësit bashkepunojnë, ata ndihmojnë njëri-tjetrin dhe mbështeten më pak tek mësuesi.
   * **Keni lidhje të dobët të internetit?** Planifikoni t'i shfaqni videot para klasës, ashtu që të mos i shkarkojë secili student videot e veta ose provoni tutorialet e shkëputura/offline.
 
 ## 4) Inspironi studentët - tregouani një video
@@ -78,4 +102,3 @@ Shfaqju studentëve një video inspiruese për të nisur Orën e Kodimit. Shembu
 
 <% end %>
 
-<%= view :signup_button %>

@@ -1,6 +1,7 @@
 // Base styles that apply to all apps
+$root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 
-#divApplab, .draggingParent {
+#divApplab, #designModeViz, .draggingParent {
   overflow: hidden;
   outline: none;
   position: relative;
@@ -23,6 +24,7 @@
 
   img {
     opacity: 1.0;
+    max-width: none;
   }
 
   label {
@@ -33,8 +35,10 @@
     overflow: hidden;
   }
 
-  div[contenteditable=true] {
+  div.textArea {
     overflow: auto;
+    word-wrap: break-word; /* needed by Firefox */
+    -moz-user-select: text;
   }
 
   button {
@@ -43,10 +47,15 @@
     font-size: 14px;
   }
 
-  input, div[contenteditable=true], button, select, img, label {
+  input, div.textArea, button, select, img, label {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
     line-height: 1.2em;
     margin: 5px;
+
+    p {
+      line-height: inherit
+    }
   }
 
   .chart {
@@ -55,7 +64,7 @@
     overflow: hidden;
 
     .loading {
-      background: image-url("spinner-big.gif") no-repeat center center;
+      background: url("#{$root}spinner-big.gif") no-repeat center center;
     }
   }
 
@@ -64,7 +73,7 @@
   }
 }
 
-#divApplab.divApplabDesignMode, .draggingParent {
+#designModeViz, .draggingParent {
 
   canvas {
     background-color: #eee;

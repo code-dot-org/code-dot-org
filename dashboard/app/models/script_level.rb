@@ -22,6 +22,9 @@
 # Joins a Script to a Level
 # A Script has one or more Levels, and a Level can belong to one or more Scripts
 class ScriptLevel < ActiveRecord::Base
+  include LevelsHelper
+  include Rails.application.routes.url_helpers
+
   belongs_to :level
   belongs_to :script, inverse_of: :script_levels
   belongs_to :stage, inverse_of: :script_levels
@@ -101,6 +104,7 @@ class ScriptLevel < ActiveRecord::Base
         position: position,
         kind: kind,
         title: level_display_text,
+        url: build_script_level_path(self)
     }
 
     # Add a previous pointer if it's not the obvious (level-1)
@@ -130,8 +134,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def self.cache_find(id)
-    @@script_level_map ||= ScriptLevel.includes([{level: [:game, :concepts]}, :script]).index_by(&:id)
-    @@script_level_map[id]
+    Script.cache_find_script_level(id)
   end
 
   def to_param

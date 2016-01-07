@@ -1,0 +1,291 @@
+callout_2:
+  id: 2
+  element_id: '[block-id=''1'']'
+  localization_key: drag_blocks
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 110
+  qtip_config: '{"position": {"my": "top left", "at": "bottom right", "adjust": {"x":
+    22, "y":60}}, "style": { "classes": "no-tip" }}'
+  'on': 
+  callout_text: 
+callout_4:
+  id: 4
+  element_id: '#runButton'
+  localization_key: run
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 110
+  qtip_config: 
+  'on': 
+  callout_text: 
+callout_6:
+  id: 6
+  element_id: '[data-key=''loop_times'']'
+  localization_key: watch_again
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 115
+  qtip_config: '{"position": {"my": "bottom left", "at": "top right"}}'
+  'on': 
+  callout_text: 
+callout_8:
+  id: 8
+  element_id: .blocklyUndeletable
+  localization_key: gray_block_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 118
+  qtip_config: '{"position": {"my": "top middle", "at": "bottom middle"}}'
+  'on': 
+  callout_text: 
+callout_10:
+  id: 10
+  element_id: '#show-code-header'
+  localization_key: show_code_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 123
+  qtip_config: '{"position": {"my": "center right", "at": "center left"}}'
+  'on': 
+  callout_text: 
+callout_12:
+  id: 12
+  element_id: '#prompt'
+  localization_key: instructions_repeat_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 124
+  qtip_config: '{"position": {"my": "bottom left", "at": "top center"}}'
+  'on': 
+  callout_text: 
+callout_14:
+  id: 14
+  element_id: '[block-id=''1'']'
+  localization_key: jigsaw_click
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 164
+  qtip_config: '{"position": {"my": "top left", "at": "center right"}}'
+  'on': 
+  callout_text: 
+callout_15:
+  id: 15
+  element_id: '[block-id=''1'']'
+  localization_key: drag_blocks
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3021
+  qtip_config: '{"position": {"my": "top left", "at": "bottom right", "adjust": {"x":
+    22, "y":60}}, "style": { "classes": "no-tip" }}'
+  'on': 
+  callout_text: 
+callout_16:
+  id: 16
+  element_id: '#runButton'
+  localization_key: run
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3021
+  qtip_config: 
+  'on': 
+  callout_text: 
+callout_17:
+  id: 17
+  element_id: '[data-key=''loop_times'']'
+  localization_key: watch_again
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3026
+  qtip_config: '{"position": {"my": "bottom left", "at": "top right"}}'
+  'on': 
+  callout_text: 
+callout_18:
+  id: 18
+  element_id: .blocklyUndeletable
+  localization_key: gray_block_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3029
+  qtip_config: '{"position": {"my": "top middle", "at": "bottom middle"}}'
+  'on': 
+  callout_text: 
+callout_19:
+  id: 19
+  element_id: '#show-code-header'
+  localization_key: show_code_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3034
+  qtip_config: '{"position": {"my": "center right", "at": "center left"}}'
+  'on': 
+  callout_text: 
+callout_20:
+  id: 20
+  element_id: '#prompt'
+  localization_key: instructions_repeat_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3035
+  qtip_config: '{"position": {"my": "bottom left", "at": "top center"}}'
+  'on': 
+  callout_text: 
+callout_21:
+  id: 21
+  element_id: '[block-id=''2'']'
+  localization_key: playlab_drag_say
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3072
+  qtip_config: '{"position": {"my": "top left", "at": "bottom left", "adjust": {"x":
+    22, "y":4}} }'
+  'on': 
+  callout_text: 
+callout_22:
+  id: 22
+  element_id: '[block-id=''1'']'
+  localization_key: playlab_use_twice
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3073
+  qtip_config: '{"position": {"my": "top left", "at": "bottom left", "adjust": {"x":
+    62, "y":0}} }'
+  'on': 
+  callout_text: 
+callout_23:
+  id: 23
+  element_id: '[block-id=''2'']'
+  localization_key: playlab_move_girl
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3074
+  qtip_config: '{"position": {"my": "top left", "at": "bottom left", "adjust": {"x":
+    22, "y":4}} }'
+  'on': 
+  callout_text: 
+callout_24:
+  id: 24
+  element_id: '[block-id=''7'']'
+  localization_key: playlab_play_sound
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3075
+  qtip_config: '{"position": {"my": "top left", "at": "bottom left", "adjust": {"x":
+    22, "y":4}} }'
+  'on': 
+  callout_text: 
+callout_25:
+  id: 25
+  element_id: '#rightButton'
+  localization_key: playlab_arrow_keys
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3077
+  qtip_config: '{"position": {"my": "top left", "at": "bottom middle", "adjust": {"x":
+    0, "y":4}} }'
+  'on': 
+  callout_text: 
+callout_26:
+  id: 26
+  element_id: '[block-id=''5'']'
+  localization_key: playlab_add_move
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3078
+  qtip_config: '{"position": {"my": "top left", "at": "top left", "adjust": {"x":
+    60, "y":40}} }'
+  'on': 
+  callout_text: 
+callout_27:
+  id: 27
+  element_id: '[block-id=''3'']'
+  localization_key: playlab_add_score
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3079
+  qtip_config: '{"position": {"my": "top left", "at": "bottom left", "adjust": {"x":
+    22, "y":4}} }'
+  'on': 
+  callout_text: 
+callout_28:
+  id: 28
+  element_id: '[block-id=''7'']'
+  localization_key: playlab_add_blocks
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 3080
+  qtip_config: '{"position": {"my": "top left", "at": "bottom left", "adjust": {"x":
+    22, "y":4}} }'
+  'on': 
+  callout_text: 
+callout_1:
+  id: 1
+  element_id: '[block-id=''1'']'
+  localization_key: drag_blocks
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 2
+  qtip_config: '{"position": {"my": "top left", "at": "bottom right", "adjust": {"x":
+    22, "y":60}}, "style": { "classes": "no-tip" }}'
+  'on': 
+  callout_text: 
+callout_3:
+  id: 3
+  element_id: '#runButton'
+  localization_key: run
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 2
+  qtip_config: 
+  'on': 
+  callout_text: 
+callout_5:
+  id: 5
+  element_id: '[data-key=''loop_times'']'
+  localization_key: watch_again
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 7
+  qtip_config: '{"position": {"my": "bottom left", "at": "top right"}}'
+  'on': 
+  callout_text: 
+callout_7:
+  id: 7
+  element_id: .blocklyUndeletable
+  localization_key: gray_block_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 10
+  qtip_config: '{"position": {"my": "top middle", "at": "bottom middle"}}'
+  'on': 
+  callout_text: 
+callout_9:
+  id: 9
+  element_id: '#show-code-header'
+  localization_key: show_code_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 15
+  qtip_config: '{"position": {"my": "center right", "at": "center left"}}'
+  'on': 
+  callout_text: 
+callout_11:
+  id: 11
+  element_id: '#prompt'
+  localization_key: instructions_repeat_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 16
+  qtip_config: '{"position": {"my": "bottom left", "at": "top center"}}'
+  'on': 
+  callout_text: 
+callout_13:
+  id: 13
+  element_id: .blocklyTreeRoot
+  localization_key: category_explanation
+  created_at: 2015-10-16 22:40:21.000000000 Z
+  updated_at: 2015-10-16 22:40:21.000000000 Z
+  script_level_id: 59
+  qtip_config: '{"position": {"my": "center left", "at": "center right"}}'
+  'on': 
+  callout_text: 

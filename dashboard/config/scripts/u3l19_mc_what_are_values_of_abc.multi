@@ -1,22 +1,16 @@
 name 'U3L19 - MC what are values of abc'
-title 'So, what\'s the answer?'
-description ''
-question 'Choose the best answer'
-wrong 'a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:8'
-wrong 'a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:13'
-wrong 'a:3 &nbsp; &nbsp;b:5 &nbsp; &nbsp;c:7'
-wrong 'a:8 &nbsp; &nbsp;b:8 &nbsp; &nbsp;c:16’
-right 'a:8 &nbsp; &nbsp;b:13 &nbsp; &nbsp;c:21'
+title 'Variable Check In'
+description 'foo foo'
+question 'What are the values of the variables a, b and c after all of the code below has executed? '
+wrong 'a=10, b=3, c=7'
+wrong 'a=13, b=13, c=13'
+wrong 'a=3, b=3, c=3'
+wrong 'a=13, b=16, c=13’
+right 'a=13, b =16, c=29'
 wrong 'Code does not execute due to error'
 
 markdown <<MARKDOWN
-**What are the values of the variables a, b and c after all of the code below has executed?**
-<pre>
-var a = 3;
-var b = 5;
-var c = 7;
-a = a+b;
-b = a+b;
-c = a+b;
-</pre>
+Foo
+
+![](https://images.code.org/64e787be9582c4f885e61f65b3ed8930-image-1444967554676.50.56 PM.png)
 MARKDOWN

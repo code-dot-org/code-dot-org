@@ -32,6 +32,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
   gem 'konacha'  # Mocha + Chai JS testing in Rails
@@ -46,11 +47,12 @@ group :development, :test do
   # for unit testing
   gem 'factory_girl_rails'
   gem 'fakeweb'
-  gem 'simplecov', require: false
+  gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
   gem 'timecop'
+  gem 'fake_sqs'
 
   # for ui testing
   gem 'cucumber'
@@ -60,7 +62,6 @@ group :development, :test do
   gem 'colorize'
   gem 'spring'
   gem 'spring-commands-testunit'
-  gem "test-unit", "~> 3.0"
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'eyes_selenium', '~> 2.5.0'
@@ -163,14 +164,16 @@ gem 'haml_lint', require: false, group: [:development, :staging]
 gem 'lograge'
 
 # Enforce SSL
-gem 'rack-ssl-enforcer', group: [:development, :staging, :test, :levelbuilder]
+gem 'rack-ssl-enforcer'
 
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
 
-gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'net-ssh'
 gem 'net-scp'
 gem 'httparty'
 gem 'jquery-cookie-rails'
+gem 'oj'
+gem 'daemons'

@@ -4,7 +4,7 @@ title: Privacy Policy
 
 ---
 
-### The binding legal language is in EN, and can be found [here](https://code.org/privacy). Below is a translation.
+### The binding legal language is in English, and can be found [here](https://code.org/privacy). Below is a translation.
 
 # Chính sách bảo mật của Code.org
 
@@ -159,7 +159,7 @@ Chúng tôi không cho thuê hoặc bán thông tin cá nhân chúng tôi thu th
 
 Đặc biệt, chúng tôi không chia sẻ bất kỳ thông tin cá nhân bạn cung cấp cho các nhà tài trợ hoặc tài trợ của chúng tôi (khác hơn so với các "báo cáo cộng đồng" của các báo cáo ẩn danh như mô tả dưới đây).
 
-### We may share student achievement data with your school or school district
+### Chúng tôi có thể chia sẻ dữ liệu thành tích của học sinh với trường học hay trường học địa phương.
 
 If your use of the Code.org Website is in the context of a partnership with your school or school district, we may allow the school or school district to access the same student progress report that is also shared with your teacher(s).
 
@@ -228,4 +228,4 @@ We do not disclose any personal information to third parties for marketing purpo
 Please contact Code.org with any questions or comments about this Privacy Notice, your Personal Information, our third-party disclosure practices, or your consent choices by writing us at <http://code.org/contact> or at 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![hình ảnh](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![hình ảnh](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

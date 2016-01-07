@@ -9,7 +9,14 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
     var oop = acerequire("ace/lib/oop");
     var JavaScriptMode = acerequire("ace/mode/javascript").Mode;
     var JavaScriptHighlightRules = acerequire("ace/mode/javascript_highlight_rules").JavaScriptHighlightRules;
-    var WorkerClient = acerequire("../worker/worker_client").WorkerClient;
+    var WorkerModule = acerequire("ace/worker/worker_client");
+    var WorkerClient = WorkerModule.WorkerClient;
+    if (!window.Worker) {
+      // If we don't support web workers, do everything on the UI thread
+      WorkerClient = WorkerModule.UIWorkerClient;
+      window.Worker = WorkerClient;
+    }
+
     var MatchingBraceOutdent = acerequire("./matching_brace_outdent").MatchingBraceOutdent;
     var CstyleBehaviour = acerequire("./behaviour/cstyle").CstyleBehaviour;
     var CStyleFoldMode = acerequire("./folding/cstyle").FoldMode;
@@ -23,43 +30,11 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
     oop.inherits(Mode, JavaScriptMode);
 
     (function() {
-
-      // A set of keywords we don't want to autocomplete
-      var excludedKeywords = [
-        'ArrayBuffer',
-        'Collator',
-        'EvalError',
-        'Float32Array',
-        'Float64Array',
-        'Intl',
-        'Int16Array',
-        'Int32Array',
-        'Int8Array',
-        'Iterator',
-        'NumberFormat',
-        'Object',
-        'QName',
-        'RangeError',
-        'ReferenceError',
-        'StopIteration',
-        'SyntaxError',
-        'TypeError',
-        'Uint16Array',
-        'Uint32Array',
-        'Uint8Array',
-        'Uint8ClampedArra',
-        'URIError'
-      ];
-
       // Manually create our highlight rules so that we can modify it
       this.$highlightRules = new JavaScriptHighlightRules();
 
-      excludedKeywords.forEach(function (keywordToRemove) {
-        var keywordIndex = this.$highlightRules.$keywordList.indexOf(keywordToRemove);
-        if (keywordIndex > 0) {
-          this.$highlightRules.$keywordList.splice(keywordIndex);
-        }
-      }, this);
+      // We never want to show any of the builtin keywords in autocomplete
+      this.$highlightRules.$keywordList = [];
 
       this.createWorker = function(session) {
         var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");

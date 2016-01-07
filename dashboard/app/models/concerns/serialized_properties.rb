@@ -54,7 +54,7 @@ module SerializedProperties
       define_method(cleartext_property_name) do |*args|
         begin
           Encryption::decrypt_object(read_attribute('properties')[property_name])
-        rescue OpenSSL::Cipher::CipherError
+        rescue OpenSSL::Cipher::CipherError, Encryption::KeyMissingError
           return nil
         end
       end

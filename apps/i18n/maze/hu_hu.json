@@ -31,7 +31,7 @@
   "ifTooltip": "Ha van út az adott irányban, akkor csinálj valamit.",
   "ifelseTooltip": "Ha van út az adott irányban, akkor csináld az első blokk műveleteit, minden más esetben a második blokk műveleteit hajts végre.",
   "ifFlowerTooltip": "Ha van virág illetve méhsejt a megadott irányban, akkor csinálj valamit.",
-  "ifOnlyFlowerTooltip": "If there is a flower in the specified direction, then do some actions.",
+  "ifOnlyFlowerTooltip": "Ha van virág a megadott irányban, akkor csinálj valamit.",
   "ifelseFlowerTooltip": "Ha van virág illetve lép a megadott irányban, akkor az első blokk műveleteit végezd el. Más esetben a második blokk műveleteit.",
   "insufficientHoney": "A megfelelő blokkokat használtad, de a mézből is megfelelő mennyiséget kell készítened.",
   "insufficientNectar": "A megfelelő blokkokat használtad, de a nektárból is megfelelő mennyiséget kell gyűjtened.",

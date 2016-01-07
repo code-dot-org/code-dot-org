@@ -9,7 +9,7 @@ class ChannelsTest < Minitest::Test
   include Rack::Test::Methods
 
   def build_rack_mock_session
-    Rack::MockSession.new(ChannelsApi, 'studio.code.org')
+    @session = Rack::MockSession.new(ChannelsApi, 'studio.code.org')
   end
 
   def test_create_channel
@@ -99,7 +99,7 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_create_channel_from_src
-    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post '/v3/channels', {abc: 123, hidden: true, frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
     post "/v3/channels?src=#{channel_id}", '', 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -109,6 +109,8 @@ class ChannelsTest < Minitest::Test
     response = JSON.parse(last_response.body)
     assert last_request.url.end_with? "/#{response['id']}"
     assert_equal 123, response['abc']
+    assert_equal false, response['hidden']
+    assert_equal false, response['frozen']
   end
 
   def test_abuse
@@ -147,5 +149,26 @@ class ChannelsTest < Minitest::Test
     get "/v3/channels/#{channel_id}/abuse"
     assert last_response.ok?
     assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+  end
+
+  def test_most_recent
+    post '/v3/channels', {level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    abc_channel_id = last_response.location.split('/').last
+
+    sleep 1
+
+    post '/v3/channels', {level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    xyz_channel_id = last_response.location.split('/').last
+
+    sleep 1
+
+    # These hidden and frozen projects should be skipped when considering most_recent
+    post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    post '/v3/channels', {frozen: true, level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+
+    user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
+
+    assert_equal abc_channel_id, StorageApps.new(user_storage_id).most_recent('abc')
+    assert_equal xyz_channel_id, StorageApps.new(user_storage_id).most_recent('xyz')
   end
 end

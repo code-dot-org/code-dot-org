@@ -17,7 +17,7 @@
     "step_mode": "1",
     "nectar_goal": "12",
     "flower_type": "redWithNectar",
-    "ideal": "32",
+    "ideal": "33",
     "instructions": "Try using your new function to collect nectar from all of the flowers. Remember to use the left and right variables.",
     "use_modal_function_editor": "true",
     "use_contract_editor": "false",
@@ -31,14 +31,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[]",
-    "maze_data": null
+    "callout_json": "[]"
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" uservisible="false" y="-5">
+        <block type="when_run" deletable="false" movable="false" uservisible="false" y="0">
           <next>
             <block type="variables_set" inline="false" uservisible="false">
               <title name="VAR">left</title>
@@ -201,15 +200,33 @@
             <mutation name="get 3 nectar"/>
           </block>
         </category>
-        <category name="Variables">
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_set" inline="false">
+            <title name="VAR">left</title>
+          </block>
           <block type="variables_get">
             <title name="VAR">left</title>
+          </block>
+          <block type="variables_set" inline="false">
+            <title name="VAR">right</title>
           </block>
           <block type="variables_get">
             <title name="VAR">right</title>
           </block>
         </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">1</title>
+          </block>
+        </category>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">2</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Karel>

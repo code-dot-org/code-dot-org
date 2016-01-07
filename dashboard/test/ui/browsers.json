@@ -32,6 +32,12 @@
     "platform": "Windows 7"
   },
   {
+    "name": "IE11Win10",
+    "browserName": "Internet Explorer",
+    "version": "11.0",
+    "platform": "Windows 10"
+  },
+  {
     "name": "Firefox38Yosemite",
     "browserName": "firefox",
     "version": "38.0",
@@ -50,7 +56,8 @@
     "deviceName": "iPhone Simulator",
     "platform": "OS X 10.10",
     "mobile": true,
-    "deviceOrientation": "landscape"
+    "deviceOrientation": "landscape",
+    "rotatable": true
   },
   {
     "name": "iPad",
@@ -59,6 +66,7 @@
     "deviceName": "iPad Simulator",
     "platform": "OS X 10.10",
     "mobile": true,
-    "deviceOrientation": "landscape"
+    "deviceOrientation": "landscape",
+    "rotatable": true
   }
 ]

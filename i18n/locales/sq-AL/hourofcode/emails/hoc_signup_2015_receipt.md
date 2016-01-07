@@ -8,30 +8,39 @@ nga: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;&
 
 # Faleminderit që u regjistruat si organizator në Orën e Kodimit!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Po i mundësoni studentëve të Amerikës Latine të mësojnë një Orë Kodim e cila mund t'ju ndryshojë *jetën *, gjatë Tetorit. 5-11. <% else %> Po i mundësoni studentëve të gjithë studentëve në mbarë botën të mësoni Orën e Kodimit e cila * mund të ndryshojë gjithë jetën e tyre*, gjatë Dhjetorit. 7-13. <% end %>
+Ju jeni duke e bërë të mundur për të gjithë studentët rreth gjithë botës të mësojnë një Orë Kodim, gjatë 7-13 Dhjetor, që mund të u ndryshojë gjithë jetën e tyre.
 
-Ne do të jemi në kontakt rreth shpërblimeve, tutorialeve te rinj dhe përditësimet në vjeshtë. Pra, çfarë mund të bësh tani?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
+
+#### Ne do të jemi në kontakt rreth udhëzimeve të reja dhe përditësimeve të tjera emocionuese. Çfarë mund të bëni ju tani?
+
+## 1. Find a local volunteer to help you with your event.
+
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 1. Përhap fjalën
 
-Thuaji shokëve të tu për #HourOfCode.
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
+## 3. Recruit your whole school for the Hour of Code
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-## 3. Pyesni punëdhënsin tuaj, që të arrish të përfshihesh
+## 3. Pyesni punëdhënësin tuaj që të përfshihet
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+[Dërgo këtë email](https://<%= hostname %>/promovojë/burimet#shembull-emaile) te menaxheri, apo shefi juaj ekzekutiv.
 
-## 4. Promovoni Orën e Kodimit në komunitetin tuaj
+## 5. Promote the Hour of Code in your community
 
-Rekruto një grup lokal — universiteti, klubi i futbollit, teatri. Ose organizo një "festë ne lagje" me Orën e Kodimit. [Send this email](https://<%= hostname %>/resources#email).
+Anëtarëso një grup lokal apo edhe disa shokë. [Dërgo këtë email](https://<%= hostname %>/burimet#shembull-emaile).
 
-## 5. Pyet një zyrtar të zgjedhur për të përkrahur Orën e Kodimit
+Ju falenderojë për udhëheqjen e lëvizjes për ti dhënë çdo studenti mundësinë të mësojë aftësitë themelore në shkenca kompjuterike.
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+Hadi Partovi  
+Themelues, Code.org
 
 * * *
 
-Code.org është një 501c3 jofitimprurëse. Adresa jonë është 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nuk i pëlqeni këto emaile? [Unsubscribe](%= unsubscribe_link %).
+<small> Ju po pranoni këtë email sepse ju jeni regjistruar për Orën e Kodimit, e përkrahur nga më shume se 200 partnerë dhe organizatorë nga Code.org. Core.org është një 501c3 jo-përfituese. Adresa jonë është 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Nuk i dëshironi këto emaile? <a href="%= unsubscribe_link %">Anulo abonimin</a>. </small>
+
+![](<%= tracking_pixel %>)

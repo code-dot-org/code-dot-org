@@ -1,7 +1,5 @@
 /* global $ */
 
-var React = require('react');
-
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
 var ImagePickerPropertyRow = require('./ImagePickerPropertyRow.jsx');
@@ -25,7 +23,7 @@ var ChartProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -69,12 +67,24 @@ var ChartEvents = React.createClass({
     onInsertEvent: React.PropTypes.func.isRequired
   },
 
+  getDrawChartCode: function() {
+    var id = elementUtils.getId(this.props.element);
+    var code =
+      'drawChart("' + id + '", "bar", ' +
+      '[\n\t{ label: "Row 1", value: 1 },\n\t{ label: "Row 2", value: 2 }\n]);\n';
+    return code;
+  },
+
   getDrawChartFromRecordsCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'drawChartFromRecords("' + id + '", "bar", "tableName", ' +
       '["columnOne", "columnTwo"]);\n';
     return code;
+  },
+
+  insertDrawChart: function() {
+    this.props.onInsertEvent(this.getDrawChartCode());
   },
 
   insertDrawChartFromRecords: function() {
@@ -83,6 +93,9 @@ var ChartEvents = React.createClass({
 
   render: function () {
     var element = this.props.element;
+    var drawChartName = 'drawChart';
+    var drawChartDesc =
+        "Draws the chart using data you provide.";
     var drawChartFromRecordsName = 'drawChartFromRecords';
     var drawChartFromRecordsDesc =
         "Draws the chart using App Lab's table data storage.";
@@ -91,10 +104,14 @@ var ChartEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
+        <EventRow
+          name={drawChartName}
+          desc={drawChartDesc}
+          handleInsert={this.insertDrawChart}/>
         <EventRow
           name={drawChartFromRecordsName}
           desc={drawChartFromRecordsDesc}

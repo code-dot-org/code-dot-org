@@ -36,7 +36,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="maze_forever"/>
         <block type="maze_moveForward"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
@@ -46,5 +45,10 @@
         </block>
       </xml>
     </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="maze_forever"/>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Maze>

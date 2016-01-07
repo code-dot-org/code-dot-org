@@ -3,7 +3,8 @@
   :javascript
     window.dashboard.isChrome34 = true;
 
-%div{style: 'display: none;'}= render partial: 'levels/reference_area'
+- unless @is_legacy_share
+  %div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
 #codeApp
   .loading
@@ -11,9 +12,12 @@
     = t(:slow_loading)
     %br
     %a{href: 'javascript: location.reload();'}= t(:try_reloading)
-  - if @level.game == Game.netsim
-    %script{src: 'https://js.pusher.com/2.2/pusher.min.js'}
-  %script{src: minifiable_shared_path('shared.js')}
+
+- content_for :body_scripts do
+  = render_app_dependencies
+
+  -# Small inline script to kick off app initialization once all dependencies
+  -# have been loaded.
   :javascript
     //<![CDATA[
     var script_path = "#{@script_level && build_script_level_path(@script_level)}";

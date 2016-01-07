@@ -1,15 +1,32 @@
 # -*- coding: utf-8 -*-
-require 'mocha/api'
 require 'test_helper'
 
 class ActivitiesControllerTest < ActionController::TestCase
   include Devise::TestHelpers
   include LevelsHelper
   include UsersHelper
-  include Mocha::API
+
+  # A fake queue implementation that captures each message sent and sends it to the handler
+  # only when requested by the test.
+  class FakeQueue
+    def initialize(handler)
+      @handler = handler
+      @messages = []
+    end
+
+    def enqueue(message_body)
+      @messages << message_body
+    end
+
+    def handle_pending_messages
+      @handler.handle(@messages.map {|body| SQS::Message.new(body)})
+      @messages.clear
+    end
+  end
 
   setup do
     client_state.reset
+    Gatekeeper.clear
 
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
@@ -32,7 +49,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image = File.read('test/fixtures/artist_image_1.png', binmode: true)
     @another_good_image = File.read('test/fixtures/artist_image_2.png', binmode: true)
+    @jpg_image = File.read('test/fixtures/playlab_image.jpg', binmode: true)
     @milestone_params = {user_id: @user, script_level_id: @script_level.id, lines: 20, attempt: '1', result: 'true', testResult: '100', time: '1000', app: 'test', program: '<hey>'}
+
+    # Stub out the SQS client to invoke the handler on queued messages only when requested.
+    @fake_queue = FakeQueue.new(AsyncProgressHandler.new)
+    AsyncProgressHandler.stubs(:progress_queue).returns(@fake_queue)
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
@@ -69,7 +91,17 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone" do
-    # do all the logging
+    _test_logged_in_milestone(async_activity_writes: false)
+  end
+
+  test "logged in milestone with async activity writes" do
+    _test_logged_in_milestone(async_activity_writes: true)
+  end
+
+  def _test_logged_in_milestone(async_activity_writes:)
+    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
+
+      # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
@@ -79,10 +111,10 @@ class ActivitiesControllerTest < ActionController::TestCase
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params
+          @fake_queue.handle_pending_messages if async_activity_writes
         end
       end
     end
-
     assert_response :success
 
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
@@ -97,8 +129,28 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert user_script.assigned_at.nil?
     assert user_script.completed_at.nil?
 
-    # created activity and userleve with the correct script
+    # created activity and userlevel with the correct script
     assert_equal @script_level.script, UserLevel.last.script
+  end
+
+  test "successful milestone does not require script_level_id" do
+    params = @milestone_params
+    params[:script_level_id] = nil
+    params[:level_id] = @script_level.level.id
+    params[:result] = 'true'
+
+    post :milestone, params
+    assert_response :success
+  end
+
+  test "unsuccessful milestone does not require script_level_id" do
+    params = @milestone_params
+    params[:script_level_id] = nil
+    params[:level_id] = @script_level.level.id
+    params[:result] = 'false'
+
+    post :milestone, params
+    assert_response :success
   end
 
   test "logged in milestone with existing userlevel with script" do
@@ -153,6 +205,27 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # created activity and userleve with the correct script
     assert_equal @script_level.script, UserLevel.last.script
+  end
+
+  test "logged in milestone with panda does not crash" do
+    # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
+
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    assert_creates(Activity, UserLevel, UserScript) do
+      assert_does_not_create(GalleryActivity, LevelSource) do
+        assert_difference('@user.reload.total_lines', 20) do # update total lines
+          post :milestone, @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+        end
+      end
+    end
+
+    assert_response :success
+    assert_equal_expected_keys build_expected_response, JSON.parse(@response.body)
   end
 
   # Expect the controller to invoke "milestone_logger.info()" with a
@@ -265,6 +338,19 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone should save to gallery when passing an impressive level" do
+    _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
+        async_activity_writes: false)
+  end
+
+  test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
+    _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
+      async_activity_writes: true)
+  end
+
+  def  _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
+      async_activity_writes:)
+    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
+
     # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
@@ -276,6 +362,33 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
       assert_difference('@user.reload.total_lines', 20) do # update total lines
         post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@good_image))
+        @fake_queue.handle_pending_messages if async_activity_writes
+      end
+    end
+
+    assert_response :success
+
+    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+
+    # csoreated gallery activity and activity for user
+    assert_equal @user, Activity.last.user
+    assert_equal @user, GalleryActivity.last.user
+    assert_equal Activity.last, GalleryActivity.last.activity
+  end
+
+  test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
+    # do all the logging
+    @controller.expects :log_milestone
+    @controller.expects :slog
+
+    @controller.expects(:trophy_check).with(@user)
+
+    expect_s3_upload
+
+    assert_creates(LevelSource, Activity, UserLevel, GalleryActivity, LevelSourceImage) do
+      assert_difference('@user.reload.total_lines', 20) do # update total lines
+        post :milestone, @milestone_params.merge(save_to_gallery: 'true', image: Base64.encode64(@jpg_image), image_type: 'jpg')
       end
     end
 
@@ -399,7 +512,17 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image" do
-    # do all the logging
+    _test_logged_in_milestone_with_image(async_activity_writes: false)
+  end
+
+  test "logged in milestone with image and async writes" do
+    _test_logged_in_milestone_with_image(async_activity_writes: true)
+  end
+
+  def _test_logged_in_milestone_with_image(async_activity_writes:)
+    Gatekeeper.set('async_activity_writes', value: async_activity_writes)
+
+      # do all the logging
     @controller.expects :log_milestone
     @controller.expects :slog
 
@@ -407,13 +530,33 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_s3_upload
 
-    assert_creates(LevelSource, Activity, UserLevel, LevelSourceImage) do
+    original_activity_count = Activity.count
+    original_user_level_count = UserLevel.count
+
+    expected_created_classes = async_activity_writes ? [LevelSource, LevelSourceImage] :
+        [LevelSource, UserLevel, LevelSourceImage]
+
+    assert_creates(*expected_created_classes) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 20) do # update total lines
           post :milestone, @milestone_params.merge(image: Base64.encode64(@good_image))
         end
       end
     end
+    if async_activity_writes
+      # Activity count etc. shouldn't have changed yet.
+      assert_equal original_activity_count, Activity.count
+      assert_nil UserLevel.where(user_id: @user, level_id: @script_level.level_id,
+                                 script_id: @script_level.script_id).first
+      assert_equal original_user_level_count, UserLevel.count
+
+      @fake_queue.handle_pending_messages
+    end
+    assert_equal original_activity_count + 1, Activity.count
+    assert_equal original_user_level_count + 1, UserLevel.count
+    assert_not_nil UserLevel.where(user_id: @user, level_id: @script_level.level_id,
+                                   script_id: @script_level.script_id).first
+    assert_not_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
 
     assert_response :success
 
@@ -562,7 +705,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
+
     user_level_finder = mock('user_level_finder')
+    user_level_finder.stubs(:first).returns(nil)
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
     user_level_finder.stubs(:first_or_create!).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
@@ -589,6 +734,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # simulate always throwing an exception on first_or_create (not
     # supposed to happen, but we shouldn't get stuck in a loop anyway)
     user_level_finder = mock('user_level_finder')
+    user_level_finder.stubs(:first).returns(nil)
     user_level_finder.stubs(:first_or_create!).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'")))
 
@@ -627,7 +773,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.set_level_progress(@script_level_prev, 50)
     client_state.add_lines(10)
 
     # do all the logging
@@ -665,7 +811,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
 
     # record activity in session
-    assert_equal 0, client_state.level_progress(@script_level.level_id)
+    assert_equal 0, client_state.level_progress(@script_level)
 
     # lines in session does not change
     assert_equal 10, client_state.lines
@@ -678,7 +824,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.set_level_progress(@script_level_prev, 50)
     client_state.add_lines(10)
 
     # do all the logging
@@ -707,7 +853,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     sign_out @user
 
     # set up existing session
-    client_state.set_level_progress(@script_level_prev.level_id, 50)
+    client_state.set_level_progress(@script_level_prev, 50)
     client_state.add_lines(10)
 
     # do all the logging
@@ -727,9 +873,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal nil, assigns(:level_source_image)
   end
 
-
   test 'sharing program with swear word returns error' do
-    return unless CDO.webpurify_key
+    unless CDO.webpurify_key
+      # stub webpurify
+      WebPurify.stubs(:find_potential_profanity).returns true
+    end
+
     assert_does_not_create(LevelSource, GalleryActivity) do
       post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
     end
@@ -745,7 +894,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in German rejects word' do
-    return unless CDO.webpurify_key
+    unless CDO.webpurify_key
+      # stub webpurify
+      WebPurify.stubs(:find_potential_profanity).returns true
+    end
+
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
         post :milestone, @milestone_params.merge(program: studio_program_with_text('scheiße'))
@@ -761,7 +914,24 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @controller.stubs(:find_share_failure).raises(OpenURI::HTTPError.new('something broke', 'fake io'))
     @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
-      params[:tag] == 'share_checking_error' && params[:error] == 'something broke' && params[:level_source_id] != nil
+      params[:tag] == 'share_checking_error' && params[:error] == 'OpenURI::HTTPError: something broke' && params[:level_source_id] != nil
+    end
+    @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
+
+    assert_creates(LevelSource) do
+      post :milestone, @milestone_params.merge(program: studio_program_with_text('shit'))
+    end
+
+    assert_response :success
+  end
+
+
+  test 'sharing program with IO::EAGAINWaitReadable error slogs' do
+    WebPurify.stubs(:find_potential_profanity).raises(IO::EAGAINWaitReadable)
+    # allow sharing when there's an error, slog so it's possible to look up and review later
+
+    @controller.expects(:slog).with(:tag, :error, :level_source_id) do |params|
+      params[:tag] == 'share_checking_error' && params[:error] == 'IO::EAGAINWaitReadable: Resource temporarily unavailable' && params[:level_source_id] != nil
     end
     @controller.expects(:slog).with(:tag) {|params| params[:tag] == 'activity_finish' }
 
@@ -773,7 +943,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
-    return unless CDO.webpurify_key
+    unless CDO.webpurify_key
+      # stub webpurify
+      WebPurify.stubs(:find_potential_profanity).returns true
+    end
+
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
         post :milestone, @milestone_params.merge(program: studio_program_with_text('putamadre'))
@@ -799,6 +973,30 @@ class ActivitiesControllerTest < ActionController::TestCase
         }
     }
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
+  end
+
+  test 'sharing when gatekeeper has disabled sharing does not work' do
+    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
+
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
+
+    assert_nil response['share_failure']
+    assert_nil response['level_source']
+  end
+
+  test 'sharing when gatekeeper has disabled sharing for some other script still works' do
+    Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
+
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body);
+
+    assert_nil response['share_failure']
+    assert response['level_source'].match(/^http:\/\/test.host\/c\//)
   end
 
   test 'milestone changes to next stage in default script' do
@@ -854,5 +1052,4 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(script_level_id: script_level_with_trophies.id)
     assert_response :success
   end
-
 end

@@ -8,29 +8,33 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Premios - términos y condiciones
 
-## Espacio de Dropbox o crédito de Skype:
+## Amazon.com, iTunes y crédito de la tienda de Windows:
 
-Los 10 GB de espacio en Dropbox o los $10 USD de crédito en Skype son para profesores de K-12, educadores para clubes después de la escuela, y organizaciones educativas. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Limitado a un regalo por organizador. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+Amazon.com, iTunes y crédito de la tienda de Windows se limitan a K-12 profesores, educadores de clubes después de la escuela y las organizaciones de educación. El crédito de $10 debe agregarse a una cuenta existente, y el crédito se vence después de 1 año. Limitado a un regalo por organizador.
 
-Cada organizador debe registrarse en la Hora de Programación, para poder recibir el espacio de Dropbox o el crédito de Skype. Si toda tu escuela participa en la Hora de Programación, cada educador debe registrarse individualmente como organizador para calificar.
+Cada organizador debe estar registrado para la Hora de Código para poder recibir Amazon.com, iTunes o crédito de la tienda de Windows. Si toda tu escuela participa en la Hora de Código, cada educador debe registrarse individualmente como organizador para calificar.
 
-Code.org se comunicará con los organizadores después de la Hora de Programación (Diciembre 8-14) parar dar instrucciones de como redimir el espacio de Dropbox o el crédito de Skype.
+Code.org se pondrá en contacto con los organizadores después de la Hora de Código (Dic. 7-13) para proporcionar instrucciones y redimir el crédito de la tienda de Windows, iTunes o Amazon.com.
 
 <% if @country == 'us' %>
 
-## Video chat con un orador invitado:
-
-Este premio está limitado a las aulas K-12 en los Estados Unidos y Canadá únicamente. Para participar inscribe a tu clase antes del 14 de Noviembre de 2014. Code.org seleccionará los grupos ganadores, asignará el horario para la conversación y trabajará con el profesor competente establecer los detalles de la tecnología a usar. No es necesario que toda tu escuela se inscriba para concursar por este premio. Escuelas públicas como privadas son elegibles para ganar.
-
 ## Paquete de laptops (ó $10,000 para otras tecnologías):
 
-El premio es para escuelas públicas K-12 en Estados Unidos únicamente. Para competir toda la escuela deberá registarse para la Hora de Código antes del 16 de noviembre de 2015. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras para toda una generación. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1ro de diciembre de 2014.
+El premio es para escuelas públicas K-12 en Estados Unidos únicamente. Para competir toda la escuela deberá registrarse para la Hora de Código antes del 16 de noviembre de 2015. Una escuela en cada estado de Estados Unidos podrá ganar un conjunto de computadoras. Code.org seleccionará y notificará a los ganadores vía correo electrónico antes del 1 de Diciembre del 2015.
 
 Debemos aclarar, esto no es una lotería o un concurso de azar.
 
 1) No hay ningún interés o riesgo financiero en la aplicación, cualquier escuela puede participar, sin tener que realizar ningún pago a Code.org o ninguna otra organización
 
 2) Los ganadores se seleccionarán únicamente entre las escuelas donde toda una clase (o escuela) participe en una Hora de Código, lo cual implica un reto a las habilidades colectivas de estudiantes y profesores.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat con un orador invitado:
+
+Este premio está limitado a las aulas K-12 en los Estados Unidos y Canadá únicamente. Code.org seleccionará los grupos ganadores, asignará el horario para la conversación y trabajará con el profesor competente establecer los detalles de la tecnología a usar. No es necesario que toda tu escuela se inscriba para concursar por este premio. Both public and private schools are eligible to win.
 
 <% end %>
 

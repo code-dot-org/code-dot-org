@@ -29,6 +29,8 @@
     code:
       label: 'Lehrer hinzufügen:'
       placeholder: Code für diese Sektion (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -140,7 +142,7 @@
 
       %{link}
 
-      Die Anleitungen machen Spass, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
+      Die Anleitungen machen Spaß, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
 
       %{name}
   follower:
@@ -269,6 +271,7 @@
         playlab: Eine App erstellen
         artist: Zeichne etwas
         calculate: Calculate Something
+        applab: Eine App erstellen
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Dashboard
@@ -292,71 +295,18 @@
       prize_us_only: (nur für Schüler der USA)
       prizes_link: Mehr Informationen
   teacher:
+    answer: Antwort
+    for_teachers_only: Nur für Lehrer
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
     remove: (entferne Lehrer)
     confirm:
       remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
-    tools: Werkzeuge für Lehrer
-    followers:
-      section: 'Abschnitt:'
-      stages: 'Teil(e) zum anzeigen:'
-      show_past: 'Zeige die Schüleraktivität (%{bullet_html}) in der Vergangenheit:'
-      levels_key: Ebenen-Schlüssel
-      perfect: Abgeschlossen, perfekt
-      completed: Abgeschlossen, aber du hast zu viele Blöcke verwendet
-      tried: Versucht, aber nicht abgeschlossen
-      not_tried: Bisher wurde es nicht versucht.
-      activity: Zeigt Aktivitäten in den letzten %{hours} %{plural}
-      no_section: Kein Abschnitt zugewiesen
-      trophies: Trophäen
     students:
-      name: Name
-      username: Benutzername
-      password: Passwort
-      manage: Schüler verwalten
       dashboard: Gehen Sie zum Lehrer-Dashboard!
-      add: Schüler hinzufügen
-      remove: Schüler entfernen
-      confirm_remove: Sind Sie sicher, dass Sie diesen Schüler entfernen möchten?
-      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie
-        die Schüler aus, die einem neuen Abschnitt zugewiesen werden sollen.
-      help_register: Anstatt viel Zeit damit zu verbringen die Schülerdaten zu importieren,
-        können Sie ihre Klasse registrieren indem sich jeder Schüler selbst anmeldet.
-        Ihre Schüler müssen dazu einen Username und ein Passwort angeben, jedoch keine
-        Email-Adresse. Falls ein Schüler sein Passwort vergessen sollte, so können
-        Sie dieses für ihn zurücksetzen.
-      register: Fordern Sie ihre Schüler auf, sich selbst anzumelden
-      vist: Fordern Sie Ihre Schüler auf, die Seite zu besuchen
-      section_code: 'und geben Sie ihren Abschnitt-Code ein:'
-      first_please: Zuerst, bitte %{add_section}
-      for: Für
-      enter: 'Eingabe:'
-    sections:
-      add: Abschnitt hinzufügen
-      manage: Sektionen verwalten
-      section: Abschnitt
-      students: Schüler
-      section_code: Abschnitt-Code
-      add_section_code: Schüler Abschnitt-Code hinzufügen
-      secret: Geheimer Typ
-      grade: Note
-      course: Kurs
-      rename: umbenennen
-      edit: Bearbeiten
-      delete: löschen
-      confirm_delete: Diesen Abschnitt wirklich löschen?
-      email: Als e-Mail senden
-    rollup: Fortschrittsanzeige
-    activity: Letzte Aktivitäten der Klasse
-    user_not_found: Der Lehrer oder Schüler konnte nicht gefunden werden
-    cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt
-      werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
-    cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt
-      werden, da du keine E-Mail-Adresse registriert hast'
-    student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name}
-      entfernt'
+    user_not_found: Lehrerin oder Lehrer konnte nicht gefunden werden.
+    student_teacher_disassociated: Du hast %{teacher_name} als Lehrerin/Lehrer entfernt.
     panel:
       answer_viewer: Antwortenansicht
       student: Schüler
@@ -365,8 +315,8 @@
       section: Abschnitt
       example: Lösungsbeispiel
       example_with_number: Lösungsbeispiel %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      submitted_on: Am %{date} abgegeben
+      unsubmit: Zurücknehmen
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'
@@ -443,6 +393,7 @@
     title: Lernen Sie von Code Studio
     description: Jeder kann Informatik lernen. Erstelle Spiele, Apps und Kunst durch
       Code.
+    try_hour_of_code: Probiere die "Hour of Code" aus!
   gender:
     male: Männlich
     female: Weiblich
@@ -459,12 +410,22 @@
       beigetragen, dieses Tutorial zu erstellen.
     help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben
       geholfen diese Materialien zu erstellen.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Alle Rechte vorbehalten.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Alle Rechte vorbehalten.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm.
+      Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle
+      Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
+      Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die
+      fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm.
+      Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle
+      Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
+      Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
+      %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
+      Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
     powered_by_aws: Betrieben von Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
       Hour of Code&reg; sind eingetragene Marken der Code.org.'
@@ -478,7 +439,11 @@
     tos: Bedingungen
     privacy: Datenschutzerklärung
     secure: Sichere Version
-    report_abuse: Report Abuse
+    report_abuse: Missbrauch melden
+    built_on_code_studio: Erstellt auf Code Studio
+    make_my_own_app: Meine eigene App entwickeln
+    how_it_works: So funktioniert es
+    try_hour_of_code: Probiere die "Hour of Code" aus!
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -518,6 +483,7 @@
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
+  not_started: Der Schüler hat diese Stufe nicht versucht.
   share_code:
     title: Klicke auf "Ausführen", um das Programm in Aktion zu sehen
     bounce_og_title: Schau dir mein Sprung-Spiel an
@@ -546,7 +512,7 @@
       unused: Unbenutzte Levels
   upsell:
     hoc:
-      title: Programmierstunde
+      title: Klassisches Labyrinth
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben
         es schon probiert.
     flappy:
@@ -569,10 +535,15 @@
         von unseren Nutzern erstellt wurden
     frozen:
       title: Die Eiskönigin
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Spiele Lab
-      body: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney
-        Infinity Charakteren z u erstellen.
+      body: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney
+        Infinity Charakteren zu erstellen.
+    minecraft:
+      title: Minecraft
+      body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -731,31 +702,35 @@
     click_to_remix: Klicke auf "Remix" um Deine eigene Version zu erstellen!
     edit_project: Projekt bearbeiten
     abuse:
-      tos: This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms
-        of Service</a> and cannot be shared with others.
-      contact_us: If you believe this to be an error, please <a href='https://code.org/contact'>contact
-        us.</a>
+      tos: Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'>
+        "Terms of Service" </a> von Code.org gemeldet und kann nicht mit anderen geteilt
+        werden.
+      contact_us: Wenn Sie glauben, dies ist ein Fehler, dann <a href='https://code.org/contact'>
+        kontaktieren Sie uns bitte.</a>
       go_to_code_studio: Gehe zu Code Studie
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Wenn Sie anstößige Inhalte, Bedrohungen, Cyber-Mobbing, Belästigung
+          oder eine Instanz von Verstößen gegen das Urheberrecht für Inhalte, die
+          Sie besitzen, gefunden haben, während Sie Apps die auf Code-Studio aufgebaut
+          wurden benutzten, füllen Sie bitte das untenstehende Formular aus. Wir werden
+          Ihren Bericht sehr ernst nehmen, untersuchen und entsprechende Maßnahmen
+          ergreifen.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Bitte geben eine e-Mail-Adresse an
+          age: Bitte geben ein Alter an
+          abuse_type: Bitte beantworten Sie wie dieser Inhalt die allgemeinen Geschäftsbedingungen
+            verletzt
+          abuse_detail: Bitte gebe Details über den Inhalt, den du melden möchtest
+        abusive_url: URL des gemeldeten Inhalts
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Wie verletzt dieser Inhalt die %{link_start}allgemeinen Geschäftsbedingungen%{link_end}?
+          harassment: Bedrohungen, Cybermobbing, Belästigung
+          offensive: Anstößige Inhalte
+          infringement: Copyright-Verletzungen
           other: Andere
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Bitte geben Sie so viele Details wie möglich über den Inhalt, den
+          Sie melden möchten.
+        acknowledge: Durch die Übermittlung dieser Daten, akzeptieren Sie, dass diese
+          gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end}
+          und die %{link_start_tos}allgemeinen Geschäftsbedingungen%{link_end} behandelt
+          werden

@@ -1,5 +1,6 @@
 ---
 title: Educator Overview
+nav: educate_nav
 ---
 
 <br/>
@@ -8,15 +9,6 @@ title: Educator Overview
 
 [tight-heading]
 
-# The Hour of Code
-
-[/tight-heading]
-
-The first step to introduce children to computer science is to participate in the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages.
-
-[<button>Learn more about Hour of Code</button>](http://hourofcode.com) &nbsp;&nbsp; [<button>How-to guide for educators</button>](http://hourofcode.com/resources/how-to)
-
-[tight-heading]
 
 <br/>
 
@@ -87,6 +79,13 @@ Click below for links to other resources for educators interested in teaching co
 
 [<button>Get Tools</button>](/educate/3rdparty)
 
+
+## The Hour of Code
+
+The first step to introducing children to computer science is the Hour of Code, the largest learning campaign in history. In one hour, students (and teachers) can learn that computer science is fun, easy, and accessible at all ages. 
+
+[<button>Start an Hour of Code</button>](https://code.org/learn)
+
 [/mainbar]
 
 [/col-60]
@@ -140,13 +139,13 @@ Our online learning platform for students of all ages.
 <br/>
 An open library of our educational videos for use in any classroom.
 
+[/col-40]
+
 [/sidebar]
 
-[/col-40]
 
 
 <div style="clear:both"/>
-
 
 <br/>
 

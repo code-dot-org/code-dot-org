@@ -6,73 +6,73 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in After-school
+# How to teach one Hour of Code in after-school
 
-## 1) Sign up
+## 1) Tilmeld
 
-  * Sign up to host an [Hour of Code](%= resolve_url('/') %) during <%= campaign_date('short') %>.
-  * Promote your [Hour of Code](%= resolve_url('/promote') %) and encourage others to host.
+  * Tilmeld dig som vært for en [Hour of Code](%= resolve_url('/') %) i <%= campaign_date('short') %>.
+  * Promovér din [Hour of Code](%= resolve_url('/promote') %) og opmunter andre til at blive værter.
 
-## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) Se denne øvelses video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) vælge en øvelse:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. *New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.* [Try current tutorials.](%= resolve_url("https://code.org/learn") %)
+Vi vil have en lang række [sjove, timelange vejledninger ](%= resolve_url('https://code.org/learn') %) liggende, for deltagere i alle aldre, lavet af forskellige samarbejdspartnere. *Nye øvelser til at sparke Hour of Code i gang kommer før <%= campaign_date('full') %>.* [Prøv nuværende øvelser.](%= resolve_url("https://code.org/learn") %)
 
 **Alle Hour of Code øvelser:**
 
-  * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Kræver minimal forberedelsestid for arrangører
+  * Er selvforklarende og giver eleverne mulighed for at arbejde i deres eget tempo og færdighedsniveau
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Planlæg hvad du har brug for af udstyr - computere er valgfri
 
-The best Hour of Code experience will be with Internet-connected computers. You **don’t** need a computer for every child, and can even do the Hour of Code without a computer at all.
+Den bedste Hour of Code oplevelse får man, med computere der har adgang til internettet. Men du **behøver** ikke en computer til hvert barn og kan endda afholde Hour of Code uden en eneste computer.
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When kids partner up, they help each other and rely less on the organizer. De vil også opleve, at kodning også kan være social og kollaborative.
-  * **Have low bandwidth?** Plan to project videos onto a big screen, so everyone isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * Afprøv øvelserne på de computere eller enheder der skal anvendes, og sørg for at øvelserne fungerer korrekt med lyd og video, på de installerede browsere.
+  * Sørg for hovedtelefoner, eller bed deltagerne om at medbringe deres egne, hvis den øvelse du vælger fungerer bedst med lyd.
+  * **Har du ikke nok enheder?** Brug [par programmering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når børn arbejder sammen, hjælper de hinanden og er mindre afhængig af arrangøren. De vil også opleve at programmering er en social aktivitet, hvor samarbejde er vigtigt.
+  * **Har du lav båndbredde?** Så planlæg at vise videoer på en storskærm, så ikke alle skal downloade videoen på en gang. Prøv offline guides, eller download videoen inden i starter, så den kan hentes fra det lokale netværk.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Inspire participants to start your Hour of Code
+## 5) Inspirér deltagere til at starte din Hour of Code
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan programmering påvirker alle dele af vores liv.
 
-**Show an inspirational video:**
+**Vis en inspirerende video:**
 
-  * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjerne Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
-  * [Præsident Obama opfordring til alle elever om til at lære at kode](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
+  * [Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) indlednings videoen, eller <% if @country == 'uk' %> [Hour of Code 2015 videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Præsident Obama opfordrer alle elever til at lære at programmere](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+  * Find flere inspirerende videoer [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are both brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Det er helt okay, hvis du slet ikke kender til programmering. Her er nogle ideer til, hvordan du kan introducere din Hour of Code:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-  * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Forklare hvordan teknologi påvirker vores liv, med eksempler som både drenge og piger kan være interesseret i. (snak om apps og teknologi, der bruges til at redde liv, hjælpe folk, forbinde mennesker osv).
+  * Fortæl om ting fra hverdagen, der indeholder programmer/kode.
+  * Tips til, hvordan pigers interesse for programmering vækkes, kan findes [her](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Brug for mere vejledning?** Download denne [skabelon til lektionsplan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+**Vil du have flere undervisningsidéer?** Tjek [bedste øvelser](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra erfarne lærere ud.
 
-## 6) Code!
+## 6) Kod!
 
-**Direct participants to the activity**
+**Led deltagere til aktiviteten**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Skriv øvelseslinket på et whiteboard. Find linket listet på [information omkring din valgte øvelse](%= resolve_url('https://code.org/learn') %) under antallet af deltagere.
 
-**When someone comes across difficulties it's okay to respond:**
+**Hvis nogen løber ind i problemer, er det helt ok at svare:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Det ved jeg ikke. Lad os se om vi kan finde ud af det sammen."
+  * "Det er ikke altid teknologien opføre sig helt som vi ønsker."
+  * "At lærer at programmere er som at lære et nyt sprog. Kun øvelse gør mester."
 
-**What to do if someone finishes early?**
+**Hvad gør jeg hvis nogen bliver hurtigt færdige?**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
-  * Or, ask those who finish early to help others who are having trouble.
+  * Opmuntre til at prøve en ny Hour of Code aktivitet.[<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Eller, beder dem hjælpe dem der måtte have svært ved det.
 
 [col-33]
 
@@ -90,11 +90,12 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Fejr jeres succes
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [Udskriv beviser](%= resolve_url('https://code.org/certificates') %) til dine elever.
+  * [Udskriv "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your students.
+  * Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 
 [col-33]
 
@@ -118,16 +119,20 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Flere Hour of Code materialer til undervisere:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Attend our [Educator's Guide to the Hour of Code webinar](http://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845).
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Brug denne [skabelon](/files/AfterschoolEducatorLessonPlanOutline.docx) til at planlægge din Hour of Code.
+  * Tjek [tips og tricks](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra andre Hour of Code arrangører. 
+  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
+  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
+  * Besøg [Hour of Code forummet](http://forum.code.org/c/plc/hour-of-code) for at få rådgivning, indsigt og støtte fra andre arrangører. <% if @country == 'us' %>
+  * Tjek vores [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Hvad er næste skridt efter Hour of Code?
 
-Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave softwareapplikationer. To continue this journey, [encourage your children to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave dine egne programmer. To continue this journey: - The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+
+  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
+  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 <%= view :signup_button %>

@@ -4,20 +4,28 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
-**There are many ways companies can participate in the Hour of Code and help expand participation in computer science. Consider:**
 
-- Asking your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-- Hosting an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
-- Inviting a local classroom of students or other non profits you partner with to do an Hour of Code at your company’s office.
-- Encouraging **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
+## Inspire students and volunteer for the Hour of Code
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.** 
+
+- [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
+- For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+
+## Additional ways companies can support the Hour of Code:
+
+- Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
+- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
+- Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+
 
 ## How to host an Hour of Code event
 
-## 1) Sign up
-- Register your [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %> event.
+## 1) Promote your Hour of Code
 - Promote your [Hour of Code](<%= resolve_url('/promote') %>) event and encourage others to host.
 - Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 
@@ -59,7 +67,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 	- If you are a tech company, demo fun, innovative products your company is working on.
 	- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science <a href="<%= resolve_url('https://code.org/girls') %>">here</a>.
+- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
 ## 6) Code!
 **Direct participants to the activity**
@@ -97,6 +105,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
 - [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
+- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
@@ -122,5 +131,3 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 ## What comes after the Hour of Code?
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-
-<%= view :signup_button %>

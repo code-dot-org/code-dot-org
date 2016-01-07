@@ -6,32 +6,41 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Merci de vous être inscrit pour organiser une Heure de Code!
+# Merci de vous être inscrit(e) pour organiser Une Heure de Code !
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Vous donnez la possibilité à des étudiants d'apprendre Une Heure de Code à travers toute la France, projet qui pourrait *changer leurs vies*, en décembre du 5 au 11. Vous permettez à des étudiants tout autour du monde d'avoir une Heure de Code qui peut *changer le reste de leur vie*, entre le 7 et 13 décembre. du 7 au 13. <% end %>
+Vous permettez à des étudiants du monde entier d'apprendre Une Heure de Code du 7 au 13 décembre. Activité qui pourrait changer le reste de leur vie.
 
-Nous prendrons contact avec vous concernant des prix, de nouveaux tutoriels et des mises à jour exceptionnelles en automne. En attendant, que pouvez-vous faire ?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-## 1. Parlez-en autour de vous
+#### Nous partagerons les nouveaux tutoriels et mises à jour significatives avec vous. Mais, que pouvez-vous faire maintenant ?
 
-Parlez de #HourOfCode à vos amis.
+## 1. Find a local volunteer to help you with your event.
 
-## 2. Proposez à votre école de participer à Une Heure de Code
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-[Envoyer ce mail](http://<%= hostname %>/resources#email) à votre principal.
+## 1. Partagez l'information autour de vous
 
-## 3. Invitez votre employeur à s'impliquer
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Envoyer ce mail](http://<%= hostname %>/resources#email) à votre responsable.
+## 3. Recruit your whole school for the Hour of Code
 
-## 4. Faites la promotion d'une Heure de Code dans votre communauté
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-Constituez un groupe - dans votre église ou votre université, à la maison de retraite d'à côté ou votre association de quartier. Ou hébergez une petite fête de quartier Une Heure de Code pour vos voisins. [Envoyer ce mail](https://<%= hostname %>/resources#email).
+## 4. Demandez à votre employeur de s'impliquer
 
-## 5. Demandez à un élu local de soutenir l'initiative Une Heure de Code
+[ Envoyez cet e-mail](https://<%= hostname %>/promouvoir/ressources #sample-courriels) à votre manager ou directeur général.
 
-[Envoyer ce mail](http://<%= hostname %>/resources#politicians) à votre maire, au conseil municipal et invitez-les à visiter votre école.
+## 5. Promote the Hour of Code in your community
+
+Recruter une association locale ou des amis. [ Envoyez cet email](https://<%= hostname %>/ ressources #sample-courriels).
+
+Je vous remercie de conduire le mouvement et donner à chaque élève la possibilité d'apprendre des compétences fondamentales en sciences informatiques.
+
+Hadi Partovi   
+fondateur de Code.org
 
 * * *
 
-Code.org est un organisme à but non lucratif (501c3 aux États-Unis). Notre adresse est le 1301, 5e avenue, suite 1225, Seattle, WA, 98101. Vous n'aimez pas ces courriels ? [Se désabonner](%= unsubscribe_link %).
+<small> Vous recevez cet e-mail parce que vous avez adhéré à Une Heure de Code, projet soutenu par plus de 200 partenaires et organisé par Code.org. Code.org est une association 501c3 à but non lucratif. Notre adresse est 1301 5th Ave, Suite 1225, Seattle, WA, 98101, USA. Vous ne voulez pas recevoir nos e-mails ? <a href="%= unsubscribe_link %">Se désabonner</a>. </small>
+
+![](<%= tracking_pixel %>)

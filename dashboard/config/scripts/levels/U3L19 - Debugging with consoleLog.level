@@ -7,16 +7,59 @@
   "properties": {
     "skin": "applab",
     "code_functions": {
-      "write": null,
-      "addOperator": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null,
       "declareAssign_x": null,
       "assign_x": null,
-      "console.log": null
+      "addOperator": null
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "This example shows how you might insert console.log statements in your code to verify for yourself how the values in the variables change during the running of the code.  This is an important debugging technique to use when each line in your program doesn't have a visual effect on the app that you can see to verify things are working right.  Run the code to see the output in the console.",
-    "start_blocks": "var a = 3;\r\nvar b = 7;\r\nconsole.log(\"1. current value of a is: \" + a + \" b is: \"+b);\r\n\r\na = b;\r\nconsole.log(\"2. after a=b now a is: \" + a + \" b is: \"+b);\r\n\r\nb = a;\r\nconsole.log(\"3. after b=a now a is: \" + a + \" b is: \"+b);\r\n\r\nwrite(\"The value of a is: \" + a);\r\nwrite(\"The value of b is: \" + b);\r\n \r\n ",
+    "start_blocks": "var a = 3;\r\nvar b = 7;\r\nconsole.log(\"The starting value of a is:\");\r\nconsole.log(a);\r\nconsole.log(\"The starting value of b is:\");\r\nconsole.log(b)\r\na = b;\r\nb = a;\r\nconsole.log(\"The final value of a is:\");\r\nconsole.log(a);\r\nconsole.log(\"The final value of b is:\");\r\nconsole.log(b)\r\n \r\n ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "0.1",
@@ -33,7 +76,19 @@
     "disable_examples": "false",
     "free_play": "true",
     "show_turtle_before_run": "false",
-    "autocomplete_palette_apis_only": "false"
+    "autocomplete_palette_apis_only": "false",
+    "markdown_instructions": "# Debugging Variables: Part 4\r\n\r\n`console.log()` is not just useful at the end of programs. It is really helpful when we want to check the value of variables part way through the running of a program. Since we can't see the value of the variable change on the screen we need to find another way to get that information.\r\n\r\n# Do This\r\n\r\n* **Starter Code:** We started you off with the same problem from the last level with `console.log()` statements at the beginning and end of the program to check the starting and ending values\r\n\r\n* **Add `console.log()` statements** to find out the value of a and b after the first reassignment statement `a = b;`",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "instructions": "Add console.log() statements to find out the value of a and b after the first reassignment statement a = b; (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

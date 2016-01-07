@@ -8,29 +8,33 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Δώρα - όροι και προϋποθέσεις
 
-## Χώρος στο Dropbox ή μονάδες Skype:
+## Amazon.com, το iTunes και Windows Store credit:
 
-Τα 10GB χώρου στο Dropbox ή τα 10$ μονάδων στο Skype προσφέρονται σε σχολεία πρωτοβάθμιας εκπαίδευσης (K-12), τμήματα που λειτούργησαν εκτός του σχολικού ωραρίου, και εκπαιδευτικούς οργανισμούς. The 10 GB of free space must be added to an existing Dropbox account, and the extra space expires 1 year after a user applies the credit to their Dropbox. Υπάρχει περιορισμός ενός δώρου ανα διοργανωτή. Note: if you have redeemed a 10 GB Dropbox code in the past, you can only apply your new code to a *different* account or choose Skype credit as your gift.
+Η πίστωση που προσφέρετε από τα Amazon.com, iTunes & Windows Store περιορίζονται στο προσωπικό δημόσιων σχολείων Κ-12, εκπαιδευτικούς σε εξωσχολικά κλαμπ και εκπαιδευτικούς οργανισμούς. Η πίστωση των $10 πρέπει να προστεθεί σε έναν υπάρχοντα λογαριασμό και λήγει μετά από 1 χρόνο. Υπάρχει περιορισμός ενός δώρου ανά διοργανωτή.
 
-Κάθε διοργανωτής πρέπει πρώτα να εγγραφεί στην Ώρα του Κώδικα για να μπορέσει να λάβει το δώρο του από το Dropbox ή το Skype. Εάν όλο το σχολείο συμμετάσχει στην Ώρα του Κώδικα, τότε κάθε εκπαιδευτικός που συμμετείχε πρέπει να εγγραφεί για να αποκτήσει δικαίωμα στα δώρα.
+Κάθε διοργανωτής πρέπει να εγγραφεί για την ώρα του κώδικα για να λάβει την πίστωση από το Amazon.com, το iTunes ή το Windows Store credit. Εάν όλο το σχολείο συμμετάσχει στην Ώρα του Κώδικα, τότε κάθε εκπαιδευτικός που συμμετείχε πρέπει να εγγραφεί για να αποκτήσει δικαίωμα στα δώρα.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Dropbox space or Skype credit.
+Το Code.org θα επικοινωνήσει με τους διοργανωτές μετά την ώρα του κώδικα ( 7-13 Δεκεμβρίου) για να παρέχουν οδηγίες για εξόφληση πιστωτικών Amazon.com, το iTunes και Windows Store.
 
 <% if @country == 'us' %>
 
-## Βίνετο συνομιλία με διακεκριμένο ομιλητή:
-
-Prize limited to K-12 classrooms in the U.S. and Canada only. To qualify, sign up your classroom by November 2, 2015. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligbile to win.
-
 ## Φορητοί υπολογιστές (ή 10.000$ για άλλο τεχνολογικό εξοπλισμό):
 
-Το βραβείο αυτό αφορά μόνο τα δημόσια σχολεία κατηγορίας K-12 των Η.Π.Α. . To qualify, your entire school must register for the Hour of Code by November 16, 2015. Ένα σχολείο σε κάθε πολιτεία των Η.Π.Α. θα λάβει ένα σετ υπολογιστών. Code.org will select and notify winners via email by December 1, 2015.
+Το βραβείο αυτό αφορά μόνο τα δημόσια σχολεία κατηγορίας K-12 των Η.Π.Α. . Όλο το σχολείο σας πρέπει να έχει εγγραφεί στην Ώρα του Κώδικα μέχρι τις 16 Νοεμβρίου 2015. Ένα σχολείο σε κάθε πολιτεία των Η.Π.Α. θα λάβει ένα σετ υπολογιστών. Το Code.org θα επιλέξει και θα ενημερώσει τους νικητές μέσω email μέχρι τη 1 Δεκεμβρίου 2015.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Για να to διευκρινίσουμε, αυτό δεν είναι ένα λαχεία ή ένα διαγωνισμό, που αφορά την τύχη.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) Δεν υπάρχει οικονομικός κίνδυνος όταν κάνετε αίτηση - κάθε σχολείο ή τάξη μπορεί να συμμετέχει, χωρίς οποιαδήποτε πληρωμή στο Code.org ή οποιοδήποτε άλλο οργανισμό
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) Οι νικητές θα επιλέγονται μόνο μεταξύ των σχολείων όπου ολόκληρη τάξη (ή σχολείο) συμμετέχει σε μια ώρα του κώδικα, πράγμα που περιλαμβάνει μια δοκιμασία για τους μαθητές και εκπαιδευτικούς συλλογικά.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Βίνετο συνομιλία με διακεκριμένο ομιλητή:
+
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
 
 <% end %>
 

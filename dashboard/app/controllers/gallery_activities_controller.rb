@@ -5,6 +5,8 @@ class GalleryActivitiesController < ApplicationController
 
   before_action :set_gallery_activity, only: [:destroy]
 
+  protect_from_forgery except: [:create]
+
   INDEX_PER_PAGE = 30
   MAX_PAGE = 100
 
@@ -40,13 +42,11 @@ class GalleryActivitiesController < ApplicationController
       @gallery_activity.autosaved = false
       authorize! :save_to_gallery, @gallery_activity.activity
 
-      respond_to do |format|
-        if @gallery_activity.save
-          format.json { render action: 'show', status: :created, location: @gallery_activity }
-        else
-          # right now this never happens because we end up raising an exception in one of the authorization checks
-          format.json { render json: @gallery_activity.errors, status: :unprocessable_entity }
-        end
+      if @gallery_activity.save
+        render action: 'show', status: :created, location: @gallery_activity
+      else
+        # right now this never happens because we end up raising an exception in one of the authorization checks
+        render json: @gallery_activity.errors, status: :unprocessable_entity
       end
     end
   end
@@ -55,9 +55,7 @@ class GalleryActivitiesController < ApplicationController
   # DELETE /gallery_activities/1.json
   def destroy
     @gallery_activity.destroy
-    respond_to do |format|
-      format.json { head :no_content }
-    end
+    head :no_content
   end
 
   private

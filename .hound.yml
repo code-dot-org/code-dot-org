@@ -1,7 +1,10 @@
+# Mark GitHub Status API as failed if Hound finds any violations.
+fail_on_violations: true
+
 ruby:
   config_file: .rubocop.yml
 
-java_script:
+javascript:
   enabled: false
 
 scss:

@@ -4,10 +4,12 @@ require 'test_helper'
 # and would fail if they did.
 
 class DslTest < ActiveSupport::TestCase
+  setup do
+    CDO.stubs(:properties_encryption_key).returns('this is a key for testing that is long enough that nothing is complaining')
+  end
+
   test 'remove property' do
     # mock file so we don't actually write a file, 2x for each "create_from_level_builder"
-    File.expects(:write).times(4)
-
     input_dsl = "
   name 'my_multi'
   title 'g(y) = y + 2'
@@ -34,9 +36,6 @@ class DslTest < ActiveSupport::TestCase
   end
 
   test 'name should not be modifiable' do
-    # mock file so we don't actually write a file, 2x for "create_from_level_builder"
-    File.expects(:write).times(2)
-
     level = External.create_from_level_builder({}, {dsl_text: "name 'test external'\ntitle 'test'"})
     assert_raises RuntimeError do
       level = level.update(dsl_text: "name 'new test name'\ntitle 'abc'")
@@ -47,9 +46,6 @@ class DslTest < ActiveSupport::TestCase
   end
 
   test 'should set serialized_attributes' do
-    # mock file so we don't actually write a file, 2x for "create_from_level_builder", 2x for level.update
-    File.expects(:write).times(4)
-
     level = External.create_from_level_builder({}, {dsl_text: "name 'test external 2'"})
     level = level.update(dsl_text: "name 'test external 2'\ntitle 'abc'", video_key: 'zzz')
     assert_equal 'zzz', level.video_key
@@ -59,6 +55,7 @@ class DslTest < ActiveSupport::TestCase
 
   test 'should encrypt when saving in levelbuilder and decrypt when parsing from file' do
     # don't actually write a file, but check that we are writing the encrypted version
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).twice.with do |pathname, contents|
       if pathname.basename.to_s == 'test_external_3.external'
         # make sure we're encrypting the .external file

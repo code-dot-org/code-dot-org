@@ -21,7 +21,7 @@ consoleApi.log = function() {
     output = firstArg;
   } else {
     for (var i = 0; i < nativeArgs.length; i++) {
-      output += nativeArgs[i].toString();
+      output += JSON.stringify(nativeArgs[i]);
       if (i < nativeArgs.length - 1) {
         output += '\n';
       }

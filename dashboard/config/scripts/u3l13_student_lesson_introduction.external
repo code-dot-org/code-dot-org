@@ -1,5 +1,6 @@
 name 'U3L13 Student Lesson Introduction'
 title 'Buttons on the Screen'
+css 'unplugged'
 markdown <<MARKDOWN
 ## Unit 3: Lesson 10 - Buttons on the Screen
 
@@ -9,7 +10,7 @@ In the previous lesson you were introduced to event-driven programming with an u
 
 # Vocabulary
 
-**Event:** a user action or other occurance that can be detected by a program. Events can be used to trigger execution of specified blocks of code
+**Event:** a user action or other occurrence that can be detected by a program. Events can be used to trigger execution of specified blocks of code
 
 **Event Handler:** indicates which commands should run when a specified event occurs
 

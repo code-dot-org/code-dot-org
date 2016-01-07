@@ -43,16 +43,16 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**September 26th Location**
+**February 6th Location**
 
-NOVA Southeastern University<br/>
-3301 College Ave<br/>
-Carl Desantis Building <br/>
-Room 1047<br/>
-Fort Lauderdale, FL 33314
-
-Free parking is available near the building with your [parking pass](/files/broward-9-26-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nova-main-campus-map.pdf)
-
+[NOVA Southeastern University <br/>
+Carl Desantis Building<br/>
+Room TBD<br/>
+3301 College Ave.<br/>
+Fort Lauderdale, FL 33315](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
+ <br/>
+ <br/>
+ Please print this [parking pass](http://bit.ly/1jxj46f) for Saturday's workshop. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -95,13 +95,13 @@ Semester 2: Saturday, February 6, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**February 6th Location**
 
-NOVA Southeastern University<br/>
-3301 College Ave<br/>
+[NOVA Southeastern University<br/>
 Carl Desantis Building<br/>
-Room 1049<br/>
-Fort Lauderdale, FL 33314
+Room 1049<br/> 
+3301 College Ave<br/>
+Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
 Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
@@ -145,13 +145,13 @@ Semester 2: Saturday, February 6, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**February 6th Location**
 
-NOVA Southeastern University<br/>
-3301 College Ave<br/>
-Carl Desantis Building
+[NOVA Southeastern University<br/>
+Carl Desantis Building<br/>
 Room 1047<br/>
-Fort Lauderdale, FL 33314
+3301 College Ave<br/>
+Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
 Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
@@ -204,15 +204,15 @@ Quarter 4: Saturday, April 23, 2016
 Breakfast and lunch will be served.
 
 
-**September 19th Location**
+**February 6th Location**
 
-NOVA Southeastern University<br/>
-3301 College Ave<br/>
+[NOVA Southeastern University<br/>
 Carl Desantis Building<br/>
-Room 1048<br/>
-Fort Lauderdale, FL 33314
+Room TBD<br/>
+3301 College Ave<br/>
+Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
-Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](http://bit.ly/1jxj46f). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -226,8 +226,13 @@ Snacks
 <br/>
 Water
 
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+
+More info coming soon!
 
 [**Back to the top**](#top)
+
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

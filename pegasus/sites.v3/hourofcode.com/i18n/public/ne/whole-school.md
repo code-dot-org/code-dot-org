@@ -5,10 +5,8 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
-# Get your whole school to participate
+# यदि पुरै विद्यालय सहभागि हुने भए 
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Hour of Code को बेलामा स्कूललाई सहभागीगराउने बारे जानकारी यहाँ जानेछन्.
 
-<%= view :signup_button %>

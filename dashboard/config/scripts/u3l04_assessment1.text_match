@@ -1,15 +1,18 @@
 name 'U3L04 Assessment1'
-title 'Free Response: Top-Down Design'
-
-markdown <<MARKDOWN
-Consider the figure below.  Use top-down thinking to design a solution to the problem.  In the space provided write a list of **just the names** of the functions that you would write in a program that draws this figure.  (Assume that the long line segments are 6 turtle moves long).
-
-![](https://images.code.org/43895f8ceccb12f72e7f5ba03152a6e6-image-1441914144956.png)
-
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-`longLine`
-`upAndLeft`
-`upAndRight`
-MARKDOWN
+encrypted 'jia/IKrUCIpKGThv3tEQ2Ci6GNoY2Dbl83nk4q/6rcdbqcDMeW/P1XnZLods
+xOeVUJfqmPQ7xiPryWvxXqAidnA/9WELn9zzjkuhHxEhRa8OhtEgipQc0jh9
+S1GaNeWKA0oES14BZZ07RWFo/HlLw8EUJAGjdaCPH8W/vuDssaRqc9C7TEoi
+Dq5sSQqtcMT8XXTiQf9gGdrarR5Wp4I1t1HNyyU7A86iNJJk9W1URrheLcsR
+HChaFrcJSaqopY2VEo+mBnkYI1u+4C7WazozLZmGixHDZxpih9lu/1v8+AtJ
+a2OEyjKcZgdyWxHEe9k8N85XNoKSr1RXQgY/yEshfcHz/F3oZoUYL1+mgSAv
+oUBaNELFSIhlS+ELmfKFJqecusmZxa+s28t9/dFvafYfrAujRucAA5jlVBFh
+WtsUgJy45WUces5a/qSDGYZqtUG7i7/7kLVECsnx62kfnpeRMvpjcVO+kxAM
+zlpOlApUFMfbKi44wCVUV/gfy+9BEW/0WR1sG5bBTaa/oGIrALzOneGJt0i+
+pTPc2Ch6e3Iv+GMhP9BYOcPFrKpFzhwBWRNjtPQkanTJb+YoAYN8SbFfKzth
+DVQuDvc3AwGRkrWzEQNzO7f2qBveCUN4dm8O3hqzM1iQ3AV9rWkIK/w/n+O+
+teu0pmM0EVgEfLZPpGvEGDnQKRCEvVhcaYto6oKglbLhpKxDeT0f3shJx4/D
+Xb+DiMBz5x//okAXBycIOC6L7C7pxmU/Nv3PXbq1yOM4Nm2CGu3Rf7Ah8O0x
+KlLJxH7cnv+7+Tat6CdBG3JexmJ4EYi8iS6nQzHmePuAqaE8MhGP7c2l8A8S
+7i5eXKpfKIEkRtCoH+0/S7/Fudp6A/UCUCQkDAr6f3Ni91PhCCuGLhUhaf4i
+R2HXOedq4St/nzIphcSD8eupJIi6A7ijN2xjX3nAmAfzpjfCp3FJ2Q6PWsYQ
+'

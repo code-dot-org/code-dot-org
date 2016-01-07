@@ -5,7 +5,8 @@ class PegasusSites
   def initialize(app=nil, params={})
     @app = app
 
-    @pegasus_app = Documents.new
+    config_ru = File.absolute_path(File.dirname(__FILE__) + '/../../pegasus/config.ru')
+    @pegasus_app = Rack::Builder.parse_file(config_ru).first
     @pegasus_hosts = [
       'code.org',
       'csedweek.org',

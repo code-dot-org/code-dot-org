@@ -121,6 +121,15 @@ class Artist < Blockly
           <block type="colour_random"></block>
         </value>
       </block>
+      <block id="draw-color" type="draw_colour">
+        <value name="COLOUR">
+          <block type="colour_rgb">
+            <value name="RED"><block type="math_number"><title name="NUM">255</title></block></value>
+            <value name="GREEN"><block type="math_number"><title name="NUM">255</title></block></value>
+            <value name="BLUE"><block type="math_number"><title name="NUM">255</title></block></value>
+          </block>
+        </value>
+      </block>
       <block id="alpha" type="alpha">
         <value name="VALUE">
           <block type="math_number_dropdown">

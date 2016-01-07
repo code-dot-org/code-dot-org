@@ -7,6 +7,7 @@ nav: pd2_nav
 # Durham Professional Development
 
 
+
 <a id="ecs"></a>
 
 ## Exploring Computer Science
@@ -42,13 +43,14 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**January 30th Location**
 
-American Underground @ American Tobacco Campus<br/>Basement Level Classroom<br/>
-318 Blackwell Street<br/>
-Durham, NC 27701
+[Durham Public Schools <br/>
+Room M8<br/>
+2107 Hillandale Rd<br/>
+Durham, NC 27705](https://www.google.com/maps/place/2107+Hillandale+Rd,+Durham,+NC+27705/@36.035837,-78.9389917,17z/data=!3m1!4b1!4m2!3m1!1s0x89ace166f32f541d:0x7baa842d1be06049)
 
-Click [here](/images/au-parking.png) for parking instructions
+
 
 **What to bring to Phase 3 quarterly sessions:**
 

@@ -5,20 +5,6 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
-def create_database(uri)
-  db = URI.parse(uri)
-
-  command = [
-    'mysql',
-    "--user=#{db.user}",
-    "--host=#{db.host}",
-  ]
-  command << "--execute=\"CREATE DATABASE IF NOT EXISTS #{db.path[1..-1]}\""
-  command << "--password=#{db.password}" unless db.password.nil?
-
-  system command.join(' ')
-end
-
 namespace :lint do
   task :ruby do
     RakeUtils.bundle_exec 'rubocop'
@@ -30,13 +16,19 @@ namespace :lint do
 
   task :javascript do
     Dir.chdir(apps_dir) do
+      HipChat.log 'Linting <b>apps</b> JavaScript...'
       # lint all js/jsx files in dashboardd/app/assets/javascript
       RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
       # also do our standard apps lint
       RakeUtils.system 'grunt jshint'
     end
     Dir.chdir(shared_js_dir) do
+      HipChat.log 'Linting <b>shared</b> JavaScript...'
       RakeUtils.system 'npm run lint'
+    end
+    Dir.chdir(code_studio_dir) do
+      HipChat.log 'Linting <b>code-studio</b> JavaScript...'
+      RakeUtils.system 'npm run lint-js'
     end
   end
 
@@ -94,8 +86,10 @@ namespace :build do
       HipChat.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
-      HipChat.log 'Updating <b>apps</b> i18n strings...'
-      RakeUtils.system './sync-apps.sh'
+      if rack_env?(:staging)
+        HipChat.log 'Updating <b>apps</b> i18n strings...'
+        RakeUtils.system './sync-apps.sh'
+      end
 
       HipChat.log 'Building <b>apps</b>...'
       env_vars = ''
@@ -111,7 +105,23 @@ namespace :build do
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>shared js</b>...'
-      RakeUtils.system 'npm run gulp'
+      RakeUtils.system 'npm run build'
+    end
+  end
+
+  task :code_studio do
+    # Temporarily code_studio's build uses code in shared_js, so npm install both
+    Dir.chdir(shared_js_dir) do
+      HipChat.log 'Installing <b>shared js</b> dependencies...'
+      RakeUtils.npm_install
+    end
+
+    Dir.chdir(code_studio_dir) do
+      HipChat.log 'Installing <b>code-studio</b> dependencies...'
+      RakeUtils.npm_install
+
+      HipChat.log 'Building <b>code-studio</b>...'
+      RakeUtils.system 'npm run build'
     end
   end
 
@@ -204,6 +214,7 @@ namespace :build do
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
@@ -224,6 +235,29 @@ task :build => ['build:all']
 ##
 ##################################################################################################
 
+# Whether this is a development or adhoc environment where we should install npm and create
+# a local database.
+def local_environment?
+  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+end
+
+def install_npm
+  # Temporary workaround to play nice with nvm-managed npm installation.
+  # See discussion of a better approach at https://github.com/code-dot-org/code-dot-org/pull/4946
+  return if RakeUtils.system_('which npm') == 0
+
+  if OS.linux?
+    RakeUtils.system 'sudo apt-get install -y nodejs npm'
+    RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
+    RakeUtils.system 'sudo npm install -g npm@2.9.1'
+    RakeUtils.npm_install_g 'grunt-cli'
+  elsif OS.mac?
+    RakeUtils.system 'brew install node'
+    RakeUtils.system 'npm', 'update', '-g', 'npm'
+    RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+  end
+end
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -239,9 +273,9 @@ namespace :install do
 
   task :hooks do
     files = [
-      'pre-commit',
-      'post-checkout',
-      'post-merge',
+        'pre-commit',
+        'post-checkout',
+        'post-merge',
     ]
     git_path = ".git/hooks"
 
@@ -253,54 +287,46 @@ namespace :install do
 
 
   task :apps do
-    if rack_env?(:development) && !CDO.chef_managed
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
-      end
+    if local_environment?
+      install_npm
     end
   end
 
   task :shared do
-    if rack_env?(:development) && !CDO.chef_managed
+    if local_environment?
       Dir.chdir(shared_js_dir) do
         shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
         RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
       end
+      install_npm
+    end
+  end
 
-      if OS.linux?
-        RakeUtils.npm_update_g 'npm'
-        RakeUtils.npm_install_g 'grunt-cli'
-      elsif OS.mac?
-        RakeUtils.system 'brew install node'
-        RakeUtils.system 'npm', 'update', '-g', 'npm'
-        RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+  task :code_studio do
+    if local_environment?
+      Dir.chdir(code_studio_dir) do
+        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
+        RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
       end
+      install_npm
     end
   end
 
   task :dashboard do
-    if (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+    if local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        RakeUtils.rake 'db:setup_or_migrate'
-        RakeUtils.rake 'seed:all'
+        RakeUtils.rake 'dashboard:setup_db'
       end
     end
   end
 
   task :pegasus do
-    if (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+    if local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
-        create_database CDO.pegasus_db_writer
-        RakeUtils.rake 'db:migrate'
-        RakeUtils.rake 'seed:migrate'
+        RakeUtils.rake 'pegasus:setup_db'
       end
     end
   end
@@ -310,12 +336,40 @@ namespace :install do
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :shared if CDO.build_shared_js
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 
 end
 task :install => ['install:all']
+
+# Commands to update built static asset packages
+namespace :update_package do
+
+  task :code_studio do
+    if RakeUtils.git_staged_changes?
+      puts 'You have changes staged for commit; please unstage all changes before running an `update_package` command.'
+    else
+      # Lint, Clean, Build, Test
+      Dir.chdir(code_studio_dir) do
+        RakeUtils.system "npm run lint && npm run clean && npm run build"
+      end
+
+      # Remove old built package
+      package_dir = dashboard_dir('public', 'code-studio-package')
+      RakeUtils.system "rm -rf #{package_dir}"
+
+      # Copy in new built package
+      RakeUtils.system "cp -r #{code_studio_dir('build')} #{package_dir}"
+
+      # Commit directory
+      RakeUtils.git_add '-A', package_dir
+      RakeUtils.system 'git commit --no-verify -m "Updated code-studio-package."'
+    end
+  end
+
+end
 
 task :default do
   puts 'List of valid commands:'

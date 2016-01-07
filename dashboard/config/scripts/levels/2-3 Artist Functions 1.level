@@ -103,22 +103,8 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#0000cd</title>
-            </block>
-          </value>
+        <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="Draw lenses"/>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">Draw lenses</title>
-          <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">4</title>
               <statement name="DO">
@@ -136,34 +122,28 @@
               <next>
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                  <title name="VALUE">175</title>
                   <next>
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">75</title>
-                      <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">4</title>
-                          <statement name="DO">
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">100</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnRight</title>
-                                  <title name="VALUE">90</title>
-                                </block>
-                              </next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">100</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">90</title>
                             </block>
-                          </statement>
+                          </next>
                         </block>
-                      </next>
+                      </statement>
                     </block>
                   </next>
                 </block>
               </next>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

@@ -5,10 +5,8 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Ajak semua yang ada di sekolah Anda untuk ikut serta
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Informasi tentang mengikutsertakan sekolah dalam Hour of Code ada disini.
 
-<%= view :signup_button %>

@@ -6,32 +6,41 @@ from: "Hadi Partovi (Code.org) [&#104;&#x61;&#x64;&#105;&#x5f;&#112;&#x61;&#x72;
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# Děkujeme za přihlášení k hostování akce Hodina kódu!
+# Děkujeme, že jste nabízíte hostování akce Hodina kódu!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+Umožněte studentům po celém světě učit se jednu hodinu kód, který může změnit zbytek jejich života, během prosince 7. - 13.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Každý* organizátoři Hodiny kódu kolem celého světa obdrží dárkový poukaz do Amazonu, Itunes, nebo Windows obchodu jako dík, dokuď máme zásoby. .</p> 
 
-## 1. Povídejte o tom
+#### Budeme v kontaktu s novými výukovými kurzy a dalšími vzrušujícími aktualizacemi. Co můžete dělat nyní?
 
-Povězte svým přátelům o #HourOfCode.
+## 1. Najděte lokální dobrovolníky k pomoci s vaší událostí.
 
-## 2. Požádejte celou vaší školu, aby nabídla akci Hodina kódu
+[Prohledejte naší dobrovolnickou mapu](https://code.org/volunteer/local) pro dobrovolníky, kteří mohou navštívit naší učebnu nebo video chat na dálku, aby mohli inspirovat své studenty, množstvím možností s počítačovými vědami.
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+## 2. Šiř slovo
 
-## 4. Přesvědčete svého zaměstnavatele, aby se zapojil
+Potřebujeme vaší pomoc k rozšíření ke organizátorům po celém světě. Řekněte svým kamarádům o #HourOfCode. [ použijte tyto nápomocné zdroje](https://<%= hostname %>/promote/resources) k rozšíření vaší události.
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+## 3. Naverbujte vaší celou školu pro Hodinu kódu
 
-## 4. Promote the Hour of Code in your community
+[pošlete tento email](https://<%= hostname %>/promote/resources#sample-emails) vašemu řediteli nebo [ sdílejte tyto letáky](https://<%= hostname %>/promote/resources).
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
+## 4. Požádejte svého zaměstnavatele, aby se zapojil
 
-## 5. Požádejte místní politiky pro podporu akce Hodina kódu
+[Pošli tento email](https://<%= hostname %>/promote/resources#sample-emails) tvému vedoucímu nebo výkonnému řediteli.
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+## 5, Rozšiřte Hodinu kódu ve vaší komunitě
+
+Získej místní skupinu nebo dokonce některé přátele. [ Pošlete email](https://<%= hostname %>/ resource#sample e-mails).
+
+Děkujeme vám za vedení hnutí, aby každý student měl možnost se naučit základní dovednosti informatiky.
+
+Hadi Partovi  
+zakladatel, Code.org
 
 * * *
 
-Code.org je nezisková organizace. Sídlíme na adrese 1301 5th Ave, Suite 1225, Seattle, WA, 98101, USA. Nelíbí se vám tyto zprávy? [Odhlašte se](%= unsubscribe_link %).
+<small> Tento e-mail jste obdržel, protože jste se zaregistroval na Hodinu kódu podporovanou více než 200 partnery a pořádané Code.org. Code.org je 501c 3 nezisková. Naše adresa je 1301 5th Avenue, Suite 1225, Seattle, WA, 98101. Nechcete tyto e-maily? <a href="%= unsubscribe_link %">Odhlásit odběr</a>. </small>
+
+![](<%= tracking_pixel %>)

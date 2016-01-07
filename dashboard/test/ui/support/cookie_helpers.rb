@@ -1,7 +1,7 @@
 module CookieHelpers
   def debug_cookies(cookies)
-    puts "DEBUG: Cookies are: #{CGI::escapeHTML cookies.inspect}"
-    puts "DEBUG: Session cookie is: #{CGI::escapeHTML decrypt_cookie(cookies).inspect}"
+    puts "DEBUG: cookies = #{CGI::escapeHTML cookies.inspect}"
+    puts "DEBUG: session_cookie = #{CGI::escapeHTML decrypt_cookie(cookies).inspect}"
   end
 
 

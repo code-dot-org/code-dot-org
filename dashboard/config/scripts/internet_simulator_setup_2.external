@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 # Internet Simulator: Setup Instructions
 
 1. **Create a section in Code Studio.** For the students in your class to be able to communicate with each other, they all need to be associated with the same section in Code Studio. Signed in as a teacher account, you will need to create a section that all of your students join. To create a section:
- * Navigate to the [sections](/teacher-dashboard#/sections) area of the teacher dashboard
+ * Navigate to the [sections](https://code.org/teacher-dashboard#/sections) area of the teacher dashboard
  * Click the 'New Section' button. We recommend choosing Login Type 'Email' and 'cspunit1' for the course. 
  <br>
 <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />

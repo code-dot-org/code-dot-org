@@ -18,6 +18,8 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.use('/dev', express.static(__dirname));
+
 app.use('/node_modules', express.static(__dirname + '/../../node_modules'));
 
 var renderApp = function(app, req, res) {
@@ -36,8 +38,7 @@ var renderApp = function(app, req, res) {
       levelId: req.query.level,
       skinId: req.query.skin,
       debugInterpreter: req.query.debugInterpreter,
-      baseUrl: baseUrl(req),
-      cacheBust: false // or 'test-string'
+      baseUrl: baseUrl(req)
     }
   });
 };
@@ -60,6 +61,14 @@ app.get('/bounce', function(req, res) {
 
 app.get('/flappy', function(req, res) {
   renderApp('flappy', req, res);
+});
+
+app.get('/craft', function(req, res) {
+  renderApp('craft', req, res);
+});
+
+app.get('/gamelab', function(req, res) {
+  renderApp('gamelab', req, res);
 });
 
 app.get('/studio', function(req, res) {

@@ -12,6 +12,7 @@ en-US:
   front_intro_default: crwdns48582:0crwdne48582:0
   front_watch_video: crwdns43538:0crwdne43538:0
   front_watch_regular_video: crwdns43539:0crwdne43539:0
+  front_volunteers: crwdns51933:0crwdne51933:0
   header_menu_resources: crwdns43540:0crwdne43540:0
   header_menu_faq: crwdns43541:0crwdne43541:0
   header_menu_prizes: crwdns43542:0crwdne43542:0
@@ -19,6 +20,7 @@ en-US:
   header_menu_promote: crwdns49003:0crwdne49003:0
   company_4-H: crwdns43543:0crwdne43543:0
   company_asa: crwdns43544:0crwdne43544:0
+  company_asos: crwdns50589:0crwdne50589:0
   company_bgca: crwdns43545:0crwdne43545:0
   company_bsusa: crwdns43546:0crwdne43546:0
   company_cgcs: crwdns43547:0crwdne43547:0
@@ -124,6 +126,8 @@ en-US:
   company_sfusd: crwdns43644:0crwdne43644:0
   company_ShenandoahCountyPublicSchools: crwdns43645:0crwdne43645:0
   company_shorelineschools: crwdns43646:0crwdne43646:0
+  company_sjusd: crwdns51934:0crwdne51934:0
+  company_sky: crwdns50590:0crwdne50590:0
   company_spokaneschools: crwdns43647:0crwdne43647:0
   company_StaffordCountyPublicSchools: crwdns43648:0crwdne43648:0
   company_strongnet: crwdns43649:0crwdne43649:0
@@ -145,15 +149,6 @@ en-US:
   prizes_brilliant: crwdns43664:0crwdne43664:0
   prizes_actua: crwdns43665:0crwdne43665:0
   prizes_details: crwdns43666:0crwdne43666:0
-  prizes_nav_dc: crwdns43667:0crwdne43667:0
-  prizes_nav_technology: crwdns43668:0crwdne43668:0
-  prizes_nav_video_chat: crwdns43669:0crwdne43669:0
-  prizes_nav_skype_dropbox: crwdns43670:0crwdne43670:0
-  prizes_nav_brilliant: crwdns43671:0crwdne43671:0
-  prizes_nav_actua: crwdns43672:0crwdne43672:0
-  prizes_nav_kids_code: crwdns43673:0crwdne43673:0
-  prizes_nav_terms: crwdns43674:0crwdne43674:0
-  prizes_nav_faq: crwdns43675:0crwdne43675:0
   nav_back_to_resources: crwdns47859:0crwdne47859:0
   how_to_nav_educators: crwdns47860:0crwdne47860:0
   how_to_nav_after_school: crwdns47861:0crwdne47861:0
@@ -164,9 +159,22 @@ en-US:
   how_to_nav_organizations: crwdns48794:0crwdne48794:0
   how_to_nav_companies: crwdns50148:0crwdne50148:0
   how_to_nav_afterschool_educators: crwdns49008:0crwdne49008:0
+  how_to_nav_volunteers: crwdns50591:0crwdne50591:0
   prizes_nav_title: crwdns49009:0crwdne49009:0
   prizes_nav_home: crwdns49010:0crwdne49010:0
   prizes_nav_hardware: crwdns49011:0crwdne49011:0
+  prizes_nav_terms: crwdns43674:0crwdne43674:0
+  prizes_nav_faq: crwdns43675:0crwdne43675:0
+  prizes_nav_dc: crwdns43667:0crwdne43667:0
+  prizes_nav_technology: crwdns43668:0crwdne43668:0
+  prizes_nav_video_chat: crwdns43669:0crwdne43669:0
+  prizes_nav_skype_dropbox: crwdns43670:0crwdne43670:0
+  prizes_nav_brilliant: crwdns43671:0crwdne43671:0
+  prizes_nav_actua: crwdns43672:0crwdne43672:0
+  prizes_nav_kids_code: crwdns43673:0crwdne43673:0
+  prizes_header: crwdns50537:0crwdne50537:0
+  prizes_10k: crwdns50425:0crwdne50425:0
+  prizes_gift_cards: crwdns50538:0crwdne50538:0
   whats_next_header: crwdns43676:0crwdne43676:0
   whats_next_description: crwdns43677:0crwdne43677:0
   whats_next_how_to: crwdns50243:0crwdne50243:0
@@ -188,18 +196,22 @@ en-US:
   front_join_us_button: crwdns43690:0crwdne43690:0
   front_what_is_hoc: crwdns43691:0crwdne43691:0
   front_join_us_header: crwdns43692:0crwdne43692:0
+  front_join_us_volunteer_header: crwdns51935:0crwdne51935:0
   front_join_us_teacher: crwdns43693:0crwdne43693:0
   front_join_us_inspire: crwdns43694:0crwdne43694:0
   front_join_us_inspire_link: crwdns43695:0crwdne43695:0
   front_join_us_teacher_link: crwdns48587:0crwdne48587:0
+  front_join_us_teacher_volunteer: crwdns51936:0crwdne51936:0
   front_join_us_parent: crwdns43696:0crwdne43696:0
   front_join_us_ask_link: crwdns43697:0crwdne43697:0
   front_join_us_ask: crwdns43698:0crwdne43698:0
   front_join_us_parent_link: crwdns48588:0crwdne48588:0
   front_join_us_computer_science: crwdns43699:0crwdne43699:0
+  front_join_us_cs_volunteer: crwdns51937:0crwdne51937:0
   front_join_us_spread: crwdns43700:0crwdne43700:0
   front_join_us_spread_word: crwdns48589:0crwdne48589:0
   front_join_us_spread_word_work: crwdns49013:0crwdne49013:0
+  front_join_us_sign_up_volunteer: crwdns51938:0crwdne51938:0
   front_join_us_organize: crwdns43701:0crwdne43701:0
   front_join_us_how_to_run: crwdns43702:0crwdne43702:0
   front_join_us_help_promote: crwdns43703:0crwdne43703:0
@@ -227,6 +239,7 @@ en-US:
   signup_whole_school_flag_label: crwdns43721:0crwdne43721:0
   signup_your_event: crwdns43722:0crwdne43722:0
   signup_match_volunteer: crwdns43723:0crwdne43723:0
+  signup_multiple_event_warning: crwdns51939:0crwdne51939:0
   signup_name_placeholder: crwdns43724:0crwdne43724:0
   signup_email_placeholder: crwdns43725:0crwdne43725:0
   signup_organization_name_placeholder: crwdns43726:0crwdne43726:0
@@ -246,6 +259,9 @@ en-US:
   map_search_placeholder: crwdns43739:0crwdne43739:0
   map_search_search: crwdns43740:0crwdne43740:0
   map_search_reset: crwdns43741:0crwdne43741:0
+  map_legend_title: crwdns50975:0crwdne50975:0
+  map_legend_hoc_events: crwdns50976:0crwdne50976:0
+  map_legend_cs_tech_jam: crwdns50977:0crwdne50977:0
   meta_tag_og_title: crwdns43742:0crwdne43742:0
   meta_tag_og_description: crwdns43743:0crwdne43743:0
   meta_tag_twitter_title: crwdns43744:0crwdne43744:0
@@ -287,14 +303,14 @@ en-US:
   hoc_faq_behind_hoc_a: 'crwdns43776:0%{codeorg_url}crwdne43776:0'
   hoc_faq_host_q: crwdns43777:0crwdne43777:0
   hoc_faq_host_a: 'crwdns50247:0%{codeorg_url}crwdne50247:0'
+  hoc_faq_devices_q: crwdns54819:0crwdne54819:0
+  hoc_faq_devices_a: 'crwdns54820:0%{codeorg_url}crwdnd54820:0%{codeorg_url}crwdne54820:0'
   hoc_faq_need_computers_q: crwdns43779:0crwdne43779:0
   hoc_faq_need_computers_a: crwdns43780:0crwdne43780:0
   hoc_faq_international_q: crwdns43781:0crwdne43781:0
   hoc_faq_international_a: crwdns50248:0crwdne50248:0
   hoc_faq_tutorial_q: crwdns43783:0crwdne43783:0
   hoc_faq_tutorial_a: crwdns43784:0crwdne43784:0
-  hoc_faq_more_questions_q: crwdns43785:0crwdne43785:0
-  hoc_faq_more_questions_a: crwdns43786:0crwdne43786:0
   hoc_faq_account_q: crwdns43789:0crwdne43789:0
   hoc_faq_account_a: 'crwdns43790:0%{codeorg_url}crwdne43790:0'
   hoc_faq_frozen_q: crwdns43791:0crwdne43791:0
@@ -304,7 +320,17 @@ en-US:
   hoc_faq_scratch_q: crwdns43787:0crwdne43787:0
   hoc_faq_scratch_a: 'crwdns43788:0%{codeorg_url}crwdnd43788:0%{partner_url}crwdne43788:0'
   hoc_faq_count_hoc_q: crwdns43795:0crwdne43795:0
+  hoc_faq_map_q: crwdns54821:0crwdne54821:0
+  hoc_faq_map_a: crwdns54822:0crwdne54822:0
   hoc_faq_count_hoc_a: 'crwdns43796:0%{codeorg_url}crwdne43796:0'
+  hoc_faq_one_hour_q: crwdns54823:0crwdne54823:0
+  hoc_faq_one_hour_a: crwdns54824:0crwdne54824:0
+  hoc_faq_more_questions_q: crwdns43785:0crwdne43785:0
+  hoc_faq_more_questions_a: crwdns43786:0crwdne43786:0
+  hoc_faq_keep_learning_q: crwdns54825:0crwdne54825:0
+  hoc_faq_keep_learning_a: crwdns54826:0crwdne54826:0
+  hoc_faq_certificates_q: crwdns54827:0crwdne54827:0
+  hoc_faq_certificates_a: 'crwdns54828:0%{codeorg_url}crwdne54828:0'
   stats_hoc_2013_image_alt: crwdns43797:0crwdne43797:0
   stats_growth: crwdns43798:0crwdne43798:0
   stats_i18n: crwdns43799:0crwdne43799:0
@@ -360,6 +386,7 @@ en-US:
   title_how_to_organizations: crwdns45394:0crwdne45394:0
   title_how_to_companies: crwdns50149:0crwdne50149:0
   title_how_to_officials: crwdns45395:0crwdne45395:0
+  title_how_to_volunteers: crwdns50592:0crwdne50592:0
   title_how_to: crwdns45396:0crwdne45396:0
   title_press_release: crwdns45397:0crwdne45397:0
   title_op_ed: crwdns45398:0crwdne45398:0

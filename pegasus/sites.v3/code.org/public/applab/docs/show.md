@@ -8,7 +8,6 @@ embedded_layout: simple_embedded
 ## show()
 [/name]
 
-
 [category]
 
 Category: Turtle
@@ -19,11 +18,11 @@ Category: Turtle
 
 [short_description]
 
-Shows the turtle by making it visible at its current location.
+Makes the turtle visible at its current location.
 
 [/short_description]
 
-**Note**: [hide()](/applab/docs/hide) is often used with show.
+Sometimes seeing the turtle icon is helpful when it is drawing something, other times you might want to hide the turtle so it does not obscure the picture.
 
 [/description]
 
@@ -32,12 +31,10 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-
 ```
-show();              // shows the turtle by making it visible at its current location
-moveForward(100);    // moves the turtle forward 100 pixels
+// Show the turtle and move it up from the turtle starting postion at the center of the screen.
+show();
+moveForward();
 ```
 
 [/example]
@@ -46,23 +43,28 @@ ____________________________________________________
 
 [example]
 
-**Example 2**
+**Example: Peek-a-Boo** Use buttons to hide and show the turtle.
 
-This example creates two buttons that allow you to switch between showing and hiding the turtle.
-
-
-```
-button("hide-turtle", "hide");                      // creates a hide button
-button("show-turtle", "show");                      // creates a show button
-onEvent("hide-turtle", "click", function(event) {   // when the hide button is clicked the turtle will
-                                                    //    no longer be visible
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
+// Use buttons to hide and show the turtle.
+button("hide-turtle", "hide");
+button("show-turtle", "show");
+onEvent("hide-turtle", "click", function() {
   hide();
 });
-onEvent("show-turtle", "click", function(event) {   // when the show button is clicked the turtle will
-                                                    //    be visible
+onEvent("show-turtle", "click", function() {
   show();
 });
-```
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/99cedd17901bdcc94aa9cbfbc340ba34-image-1445615881120.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -81,21 +83,22 @@ show();
 [parameters]
 
 ### Parameters
-`show()` does not take any parameters.
+show() does not take any parameters.
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Alters the display only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- [hide()](/applab/docs/hide) is often used with show.
+- [hide()](/applab/docs/hide) is often used with show().
+- The turtle's ability to draw is not effected by the show() or hide() commands, which only control if the turtle icon is displayed or not.
 
 [/tips]
 

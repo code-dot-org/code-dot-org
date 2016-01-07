@@ -8,30 +8,39 @@
 
 # 感谢注册并组织编程一小时活动！
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> You're making it possible for students across Latin America to learn one Hour of Code that can *change the rest of their lives*, during Oct. 5-11. <% else %> You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13. <% end %>
+12月7日到13日，加入编程一小时，由此我们可能将改变全世界学生的命运。
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
 
-## 1. 帮助宣传这个活动
+#### 我们会接触到新的教程和其他令人兴奋的更新。你此刻可以做些什么呢？
 
-告诉你的朋友关于 #编程一小时
+## 1. Find a local volunteer to help you with your event.
 
-## 2. 邀请你的学校加入编程一小时
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-[Send this email](https://<%= hostname %>/resources#email) to your principal.
+## 2. Spread the word
 
-## 请求你的雇主参与其中
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-[Send this email](https://<%= hostname %>/resources#email) to your manager, or the CEO.
+## 3. Recruit your whole school for the Hour of Code
 
-## 4. Promote the Hour of Code in your community
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood. [Send this email](https://<%= hostname %>/resources#email).
+## 3.邀请你的上级参加
 
-## 5.邀请当地官员支持编程一小时活动
+[ 发送此电子邮件](https://<%= hostname %>/促进/资源 #sample-电子邮件) 给您的经理或CEO。
 
-[Send this email](https://<%= hostname %>/resources#politicians) to your mayor, city council, or school board and invite them to visit your school.
+## 5. Promote the Hour of Code in your community
+
+招募一个小组或是一些朋友。[ 发送此电子邮件](https://<%= hostname %>/ 资源 #sample-电子邮件).
+
+谢谢你的领导这个运动并让每个学生有机会学习基本的计算机技能。
+
+Hadi Partovi  
+Founder, Code.org
 
 * * *
 
-编程网是一个501c3非盈利组织，我们的地址是1301 5th Ave, Suite 1225, Seattle, WA, 98101. 您不喜欢这些邮件？[取消订阅](%= unsubscribe_link %).
+<small> 收到这封邮件是因为你报名了“编程一小时”，并由超过 200 个合作伙伴组织的 Code.org支持。 Code.org 是一个 501 c 3 非盈利组织。 地址：华盛顿，西雅图，1301街区，第5大道1225套房。邮编98101 不想再收取此类邮件？ <a href="%= unsubscribe_link %">取消订阅</a>. </small>
+
+![](<%= tracking_pixel %>)

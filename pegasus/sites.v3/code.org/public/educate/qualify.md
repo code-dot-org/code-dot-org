@@ -29,7 +29,6 @@ You’ll need to apply *and be accepted* to our district partnership program. **
 
 1. Each teacher accepted into our professional development must teach the course -- this means taking steps on your side (such as securing course codes in high school) in advance of the partnership.
 
-1. We will match up to 50% of the teacher stipends for high school and middle school professional development when scheduled. Budget your contribution in advance and identify the source of funding. Here is an [XLS calculator](/files/stipendcalculator.xlsx) to determine costs. (Note: Code.org doesn’t cover taxes and benefits on stipends and we don’t provide stipends for K-5 workshops.)
 
 [<button>Back to partnership page</button>](/educate/districts)
 

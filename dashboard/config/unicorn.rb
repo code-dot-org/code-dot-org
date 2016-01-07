@@ -11,3 +11,10 @@ stderr_path dashboard_dir('log','unicorn_stderr.log')
 stdout_path dashboard_dir('log','unicorn_stdout.log')
 working_directory deploy_dir('dashboard')
 #logger $log
+
+after_fork do |server, worker|
+  require 'dynamic_config/gatekeeper'
+  require 'dynamic_config/dcdo'
+  Gatekeeper.after_fork
+  DCDO.after_fork
+end

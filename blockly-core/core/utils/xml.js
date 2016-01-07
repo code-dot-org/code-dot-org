@@ -239,54 +239,73 @@ Blockly.Xml.domToBlockSpace = function(blockSpace, xml) {
   var metrics = blockSpace.getMetrics();
   var width = metrics ? metrics.viewWidth : 0;
 
-  var paddingTop = Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP;
-  var paddingLeft = Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT;
-
+  // Block positioning rules are simple:
+  //  if the block has been given an absolute X coordinate, use it
+  //  (taking into account that RTL languages position from the left)
+  //  if the block has been given an absolute Y coordinate, use it
+  //  otherwise, the block "flows" with the other blocks from top to
+  //  bottom. Any block positioned absolutely with Y does not influence
+  //  the flow of the other blocks.
   var cursor = {
-    x: Blockly.RTL ? width - paddingLeft : paddingLeft,
-    y: paddingTop
+    x: Blockly.RTL ?
+        width - Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT :
+        Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT,
+    y: Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP
   };
 
-  var positionBlock = function(block) {
-    block.moveBy(cursor.x, cursor.y);
-    cursor.y += block.getHeightWidth().height + Blockly.BlockSvg.SEP_SPACE_Y;
+  var positionBlock = function (block) {
+    var padding = block.blockly_block.getSvgPadding() ||
+        {top: 0, right: 0, bottom: 0, left: 0};
+
+    var heightWidth = block.blockly_block.getHeightWidth();
+
+    if (isNaN(block.x)) {
+      block.x = cursor.x;
+      block.x += Blockly.RTL ? -padding.right : padding.left;
+    } else {
+      block.x = Blockly.RTL ? width - block.x : block.x;
+    }
+
+    if (isNaN(block.y)) {
+      block.y = cursor.y + padding.top;
+      cursor.y += heightWidth.height +
+          Blockly.BlockSvg.SEP_SPACE_Y +
+          padding.bottom +
+          padding.top;
+    }
+
+    block.blockly_block.moveTo(block.x, block.y);
   };
 
-  var block, xmlChild, blockX, blockY;
-
-  // Two passes. First pass positions the visible blocks and caches the
-  // hidden, second pass positions the hidden
-  var hiddenBlocks = [];
-
-  for (var i = 0; i < xml.childNodes.length; i++) {
-    xmlChild = xml.childNodes[i];
+  // To position the blocks, we first render them all to the Block Space
+  //  and parse any X or Y coordinates set in the XML. Then, we store
+  //  the rendered blocks and the coordinates in an array so that we can
+  //  position them in two passes.
+  //  In the first pass, we position the visible blocks. In the second
+  //  pass, we position the invisible blocks. We do this so that
+  //  invisible blocks don't cause the visible blocks to flow
+  //  differently, which could leave gaps between the visible blocks.
+  var blocks = [];
+  for (var i = 0, xmlChild; (xmlChild = xml.childNodes[i]); i++) {
     if (xmlChild.nodeName.toLowerCase() === 'block') {
-      block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
-
-      blockX = parseInt(xmlChild.getAttribute('x'), 10);
-      blockY = parseInt(xmlChild.getAttribute('y'), 10);
-
-      // If the XML specifies an X or Y (or both) value, position the
-      // block absolutely using those. Otherwise, position the block
-      // relative to the other relative blocks.
-      if (!isNaN(blockX) || !isNaN(blockY)) {
-        blockX = isNaN(blockX) ? paddingLeft : blockX;
-        blockY = isNaN(blockY) ? paddingTop : blockY;
-
-        blockX = Blockly.RTL ? width - blockX : blockX;
-
-        block.moveBy(blockX, blockY);
-      } else {
-        if (block.isVisible()) {
-          positionBlock(block);
-        } else {
-          hiddenBlocks.push(block);
-        }
-      }
+      var blockly_block = Blockly.Xml.domToBlock(blockSpace, xmlChild);
+      var x = parseInt(xmlChild.getAttribute('x'), 10);
+      var y = parseInt(xmlChild.getAttribute('y'), 10);
+      blocks.push({
+        blockly_block: blockly_block,
+        x: x,
+        y: y
+      });
     }
   }
 
-  hiddenBlocks.forEach(positionBlock.bind(this));
+  blocks.filter(function (block) {
+    return block.blockly_block.isVisible();
+  }).forEach(positionBlock);
+
+  blocks.filter(function (block) {
+    return !block.blockly_block.isVisible();
+  }).forEach(positionBlock);
 
   blockSpace.events.dispatchEvent(Blockly.BlockSpace.EVENTS.EVENT_BLOCKS_IMPORTED);
 };

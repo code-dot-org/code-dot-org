@@ -54,9 +54,9 @@ module.exports = React.createClass({
     return (
       <div id="design-headers">
         <div id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
+          {manageAssetsIcon}
           <span>{applabMsg.designToolboxHeader()}</span>
           <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
-          {manageAssetsIcon}
         </div>
         <div className="workspace-header" onClick={this.onToggleToolbox}
             style={styles.showToolboxHeader}>

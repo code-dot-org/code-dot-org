@@ -2,49 +2,8 @@
 
 var renderAbusive = require('./renderAbusive');
 
-// Attempts to lookup the name in the digest hash, or returns the name if not found.
-function tryDigest(name) {
-  return (window.digestManifest || {})[name] || name;
-}
-
-/**
- * Returns a function which returns a $.Deferred instance. When executed, the
- * function loads the given app script.
- * @param name The name of the module to load.
- * @param cacheBust{Boolean?} If true, append a random query string to bypass the
- *   cache.
- * @returns {Function}
- */
-function loadSource(name, cacheBust) {
-  return function () {
-    var deferred = new $.Deferred();
-    var param = cacheBust ? '?' + Math.random() : '';
-    document.body.appendChild($('<script>', {
-      src: appOptions.baseUrl + tryDigest('js/' + name + '.js') + param
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
-
-/**
- * Returns a function which returns a $.Deferred instance. When executed, the
- * function loads the given app script.
- * @param sourceUrl The URL of the CDN script resource to load.
- * @returns {Function}
- */
-function loadExternalSource(sourceUrl, cacheBust) {
-  return function () {
-    var deferred = new $.Deferred();
-    document.body.appendChild($('<script>', {
-      src: sourceUrl
-    }).on('load', function () {
-      deferred.resolve();
-    })[0]);
-    return deferred;
-  };
-}
+// Max milliseconds to wait for last attempt data from the server
+var LAST_ATTEMPT_TIMEOUT = 5000;
 
 // Loads the given app stylesheet.
 function loadStyle(name) {
@@ -56,39 +15,99 @@ function loadStyle(name) {
 }
 
 module.exports = function (callback) {
-  loadStyle('common');
-  loadStyle(appOptions.app);
-  var promise = loadSource('manifest', true)();
-  if (appOptions.droplet) {
-    loadStyle('droplet/droplet.min');
-    loadStyle('tooltipster/tooltipster.min');
-    promise = promise.then(loadSource('jsinterpreter/acorn_interpreter'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource('ace/ace'))
-        .then(loadSource('ace/mode-javascript'))
-        .then(loadSource('ace/ext-language_tools'))
-        .then(loadSource('droplet/droplet-full'))
-        .then(loadSource('tooltipster/jquery.tooltipster'))
-        .then(loadExternalSource('https://www.google.com/jsapi'));
-  } else {
-    promise = promise.then(loadSource('blockly'))
-        .then(loadSource('marked/marked'))
-        .then(loadSource(appOptions.locale + '/blockly_locale'));
-  }
+  var lastAttemptLoaded = false;
 
-  if (window.dashboard && dashboard.project) {
-    promise = promise.then(dashboard.project.load)
-        .then(function () {
-          if (dashboard.project.hideBecauseAbusive()) {
-            renderAbusive();
-            return $.Deferred().reject();
+  var loadLastAttemptFromSessionStorage = function () {
+    if (!lastAttemptLoaded) {
+      lastAttemptLoaded = true;
+
+      // Load the locally-cached last attempt (if one exists)
+      setLastAttemptUnlessJigsaw(dashboard.clientState.sourceForLevel(
+          appOptions.scriptName, appOptions.serverLevelId));
+
+      callback();
+    }
+  };
+
+  var isViewingSolution = (dashboard.clientState.queryParams('solution') === 'true');
+  var isViewingStudentAnswer = !!dashboard.clientState.queryParams('user_id');
+
+  if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
+
+    if (appOptions.publicCaching) {
+      // Disable social share by default on publicly-cached pages, because we don't know
+      // if the user is underage until we get data back from /api/user_progress/ and we
+      // should err on the side of not showing social links
+      appOptions.disableSocialShare = true;
+    }
+
+    $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
+      appOptions.disableSocialShare = data.disableSocialShare;
+
+      // Merge progress from server (loaded via AJAX)
+      var serverProgress = data.progress || {};
+      var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
+      Object.keys(serverProgress).forEach(function (levelId) {
+        if (serverProgress[levelId] !== clientProgress[levelId]) {
+          var status = dashboard.progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
+
+          // Clear the existing class and replace
+          $('#header-level-' + levelId).attr('class', 'level_link ' + status);
+
+          // Write down new progress in sessionStorage
+          dashboard.clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
+        }
+      });
+
+      if (!lastAttemptLoaded) {
+        if (data.lastAttempt) {
+          lastAttemptLoaded = true;
+
+          var timestamp = data.lastAttempt.timestamp;
+          var source = data.lastAttempt.source;
+
+          var cachedProgram = dashboard.clientState.sourceForLevel(
+              appOptions.scriptName, appOptions.serverLevelId, timestamp);
+          if (cachedProgram !== undefined) {
+            // Client version is newer
+            setLastAttemptUnlessJigsaw(cachedProgram);
+          } else if (source && source.length) {
+            // Sever version is newer
+            setLastAttemptUnlessJigsaw(source);
+
+            // Write down the lastAttempt from server in sessionStorage
+            dashboard.clientState.writeSourceForLevel(appOptions.scriptName,
+                appOptions.serverLevelId, timestamp, source);
           }
-        });
-  }
+          callback();
+        } else {
+          loadLastAttemptFromSessionStorage();
+        }
+      }
 
-  promise.then(loadSource('common' + appOptions.pretty))
-      .then(loadSource(appOptions.locale + '/common_locale'))
-      .then(loadSource(appOptions.locale + '/' + appOptions.app + '_locale'))
-      .then(loadSource(appOptions.app + appOptions.pretty))
-      .then(callback);
+      if (data.disablePostMilestone) {
+        $("#progresswarning").show();
+      }
+    }).fail(loadLastAttemptFromSessionStorage);
+
+    // Use this instead of a timeout on the AJAX request because we still want
+    // the header progress data even if the last attempt data takes too long.
+    // The progress dots can fade in at any time without impacting the user.
+    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+  } else if (window.dashboard && dashboard.project) {
+    dashboard.project.load().then(function () {
+      if (dashboard.project.hideBecauseAbusive()) {
+        renderAbusive();
+        return $.Deferred().reject();
+      }
+    }).then(callback);
+  } else {
+    loadLastAttemptFromSessionStorage();
+  }
 };
+
+function setLastAttemptUnlessJigsaw(source) {
+  if (appOptions.levelGameName !== 'Jigsaw') {
+    appOptions.level.lastAttempt = source;
+  }
+}

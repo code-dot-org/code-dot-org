@@ -10,15 +10,4 @@ module ReportsHelper
     'gold_' + [[((completion - Trophy::SILVER_THRESHOLD) * 10 /
                  (Trophy::GOLD_THRESHOLD - Trophy::SILVER_THRESHOLD)).floor * 10, 100].min, 0].max.to_s + '.png'
   end
-
-  def level_passed(params)
-    result = 0
-    if params[:user]
-      result = params[:user_level].best_result if params[:user_level] && params[:user_level].best_result
-    else
-      result = client_state.level_progress(params[:level_id].to_i)
-    end
-
-    result >= Activity::MINIMUM_PASS_RESULT
-  end
 end

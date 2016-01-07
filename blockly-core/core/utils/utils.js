@@ -145,16 +145,15 @@ Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
 /**
  * The TOUCH_MAP lookup dictionary specifies additional touch events to fire,
  * in conjunction with mouse events.
+ *
+ * Note that this order is important; if pointer events are available,
+ * we always want to prefer them. In some cases such as Windows 8.1
+ * phones, both pointer and touch events are available.
+ *
  * @type {Object}
  */
 Blockly.bindEvent_.TOUCH_MAP = {};
-if ('ontouchstart' in document.documentElement) {
-  Blockly.bindEvent_.TOUCH_MAP = {
-    mousedown: 'touchstart',
-    mousemove: 'touchmove',
-    mouseup: 'touchend'
-  };
-} else if (window.navigator.pointerEnabled) {  // IE 11+ support
+if (window.navigator.pointerEnabled) {  // IE 11+ support
   Blockly.bindEvent_.TOUCH_MAP = {
     mousedown: 'pointerdown',
     mousemove: 'pointermove',
@@ -165,6 +164,12 @@ if ('ontouchstart' in document.documentElement) {
     mousedown: 'MSPointerDown',
     mousemove: 'MSPointerMove',
     mouseup: 'MSPointerUp'
+  };
+} else if ('ontouchstart' in document.documentElement) {
+  Blockly.bindEvent_.TOUCH_MAP = {
+    mousedown: 'touchstart',
+    mousemove: 'touchmove',
+    mouseup: 'touchend'
   };
 }
 
