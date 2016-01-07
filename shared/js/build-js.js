@@ -19,11 +19,11 @@ var BUILD_PATH = './build/package/js/';
 // Run build
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
-  build_commands.browserifyExt({
+  build_commands.browserify({
     srcPath:  './',
     buildPath: BUILD_PATH,
     filenames: [
-      ['initApp.js', 'shared.js']
+      'shared.js'
     ],
     commonFile: 'shared-common.js',
     shouldMinify: commander.min,
