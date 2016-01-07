@@ -103,7 +103,7 @@ window.showVideoDialog = function(options, forceShowVideo) {
       // If it is the video page, restore the src
       videoElement.attr('src', options.src);
     } else {
-      videoElement.attr('src', '');
+      video.removeAttr('src');
       stopTrackingVideoJSProgress();
     }
     // Remember which tab is selected.
@@ -202,8 +202,13 @@ function stopTrackingVideoJSProgress() {
   }
 
   var fallbackPlayer = videojs($('.video-js')[0]);
-  fallbackPlayer.stopTrackingProgress();
-  fallbackPlayer.stopTrackingCurrentTime();
+  if (fallbackPlayer.stopTrackingProgress) {
+    fallbackPlayer.stopTrackingProgress();
+  }
+
+  if (fallbackPlayer.stopTrackingCurrentTime) {
+    fallbackPlayer.stopTrackingCurrentTime();
+  }
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
