@@ -49,7 +49,8 @@ var JSInterpreter = module.exports = function (options) {
         interpreter,
         options.blocks,
         options.blockFilter,
-        scope);
+        scope,
+        options.globalFunctions);
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain

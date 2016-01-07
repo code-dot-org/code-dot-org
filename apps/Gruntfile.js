@@ -158,6 +158,12 @@ config.copy = {
       },
       {
         expand: true,
+        cwd: 'lib/p5play',
+        src: ['*.js'],
+        dest: 'build/package/js/p5play/'
+      },
+      {
+        expand: true,
         cwd: 'lib/droplet',
         src: ['droplet-full' + dotMinIfNotDev + '.js'],
         dest: 'build/package/js/droplet/',
