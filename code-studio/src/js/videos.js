@@ -256,7 +256,6 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#video').replaceWith(playerCode);
 
   videojs.options.flash.swf = '/code-studio/assets/video-js/video-js.swf';
-  videojs.options['vtt.js'] = '/code-studio/assets/vtt.js/vtt.js';
   videojs.options.techOrder = ["flash", "html5"];
 
   var videoPlayer = videojs(fallbackPlayerID, {}, function() {
