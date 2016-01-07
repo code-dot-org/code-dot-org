@@ -891,4 +891,16 @@ SQL
     AsyncProgressHandler.progress_queue
   end
 
+  # can this user edit their own account?
+  def can_edit_account?
+    return true if teacher? || encrypted_password || oauth?
+
+    # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
+    sections_as_student = followeds.collect(&:section)
+    return true if sections_as_student.empty?
+
+    # if you log in only through picture passwords you can't edit your account
+    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
+  end
+
 end
