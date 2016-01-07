@@ -4,308 +4,305 @@
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 
-(function() {
+window.createVideoWithFallback = function(parentElement, options, width, height) {
+  upgradeInsecureOptions(options);
+  var video = createVideo(options);
+  video.width(width).height(height);
+  if(parentElement) {
+    parentElement.append(video);
+  }
+  setupVideoFallback(options, width, height);
+  return video;
+};
 
-  window.createVideoWithFallback = function(parentElement, options, width, height) {
-    upgradeInsecureOptions(options);
-    var video = createVideo(options);
-    video.width(width).height(height);
-    if(parentElement) {
-      parentElement.append(video);
+function onVideoEnded() {
+  $('.video-modal').trigger("ended");
+}
+
+function onYouTubeIframeAPIReady() {
+  // requires there be an iframe#video present on the page
+  var player = new YT.Player('video');
+  player.addEventListener('onStateChange', function (state) {
+    if (state.data === YT.PlayerState.ENDED) {
+      onVideoEnded();
     }
-    setupVideoFallback(options, width, height);
-    return video;
-  };
+  });
+}
 
-  function onVideoEnded() {
-    $('.video-modal').trigger("ended");
+function createVideo(options) {
+  return $('<iframe id="video"/>').addClass('video-player').attr({
+    src: options.src,
+    scrolling: 'no'
+  });
+}
+
+// Options include:
+//   src - the url to the video
+//   key - an uid.
+//   name - a string.
+//   redirect - the redirect page after the video is dismissed.
+//   onClose - actions to take after closing the video dialog, or immediately
+//             if the video isn't shown.
+window.showVideoDialog = function(options, forceShowVideo) {
+  if (forceShowVideo === undefined) {
+    forceShowVideo = false;
   }
 
-  function onYouTubeIframeAPIReady() {
-    // requires there be an iframe#video present on the page
-    var player = new YT.Player('video');
-    player.addEventListener('onStateChange', function (state) {
-      if (state.data === YT.PlayerState.ENDED) {
-        onVideoEnded();
-      }
-    });
+  if (options.onClose === undefined) {
+    options.onClose = function () {};
   }
 
-  function createVideo(options) {
-    return $('<iframe id="video"/>').addClass('video-player').attr({
-      src: options.src,
-      scrolling: 'no'
-    });
+  if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
+    // Anything we were going to do when the video closed, we ought to do
+    // right now.
+    options.onClose();
+    if (options.redirect) {
+      window.location.href = options.redirect;
+    }
+    return;
   }
 
-  // Options include:
-  //   src - the url to the video
-  //   key - an uid.
-  //   name - a string.
-  //   redirect - the redirect page after the video is dismissed.
-  //   onClose - actions to take after closing the video dialog, or immediately
-  //             if the video isn't shown.
-  window.showVideoDialog = function(options, forceShowVideo) {
-    if (forceShowVideo === undefined) {
-      forceShowVideo = false;
-    }
+  upgradeInsecureOptions(options);
+  var widthRatio = 0.8;
+  var heightRatio = 0.8;
+  var aspectRatio = 16 / 9;
 
-    if (options.onClose === undefined) {
-      options.onClose = function () {};
-    }
+  var body = $('<div/>');
+  var content = $('#notes-content').contents().clone();
+  content.find('.video-name').text(options.name);
+  body.append(content);
 
-    if (dashboard.clientState.hasSeenVideo(options.key) && forceShowVideo === false) {
-      // Anything we were going to do when the video closed, we ought to do
-      // right now.
-      options.onClose();
-      if (options.redirect) {
-        window.location.href = options.redirect;
-      }
-      return;
-    }
+  var video = createVideo(options);
+  body.append(video);
 
-    upgradeInsecureOptions(options);
-    var widthRatio = 0.8;
-    var heightRatio = 0.8;
-    var aspectRatio = 16 / 9;
+  var notesDiv = $('<div id="notes-outer"><div id="notes"/></div>');
+  body.append(notesDiv);
+  getShowNotes(options.key, notesDiv.children('#notes'));
 
-    var body = $('<div/>');
-    var content = $('#notes-content').contents().clone();
-    content.find('.video-name').text(options.name);
-    body.append(content);
+  var dialog = new Dialog({ body: body, redirect : options.redirect });
+  var $div = $(dialog.div);
+  $div.addClass('video-modal');
 
-    var video = createVideo(options);
-    body.append(video);
-
-    var notesDiv = $('<div id="notes-outer"><div id="notes"/></div>');
-    body.append(notesDiv);
-    getShowNotes(options.key, notesDiv.children('#notes'));
-
-    var dialog = new Dialog({ body: body, redirect : options.redirect });
-    var $div = $(dialog.div);
-    $div.addClass('video-modal');
-
-    $('.video-modal').on("remove", function () {
-      // Manually removing src to fix a continual playback bug in IE9
-      // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
-      video.removeAttr('src');
-      options.onClose();
-      dashboard.clientState.recordVideoSeen(options.key);
-      // Raise an event that the dialog has been hidden, in case anything needs to
-      // play/respond to it.
-      var event = document.createEvent('Event');
-      event.initEvent('videoHidden', true, true);
-      document.dispatchEvent(event);
-    });
-
-    var tabHandler = function(event, ui) {
-      var tab = ui.tab || ui.newTab;  // Depends on event.
-      var videoElement = $('#video');
-      if (tab.find('a').attr('href') === "#video") {
-        // If it is the video page, restore the src
-        videoElement.attr('src', options.src);
-      } else {
-        videoElement.attr('src', '');
-        stopTrackingVideoJSProgress();
-      }
-      // Remember which tab is selected.
-      var selected = tab.parents('.ui-tabs').tabs('option', 'active');
-      try {
-        window.sessionStorage.setItem('lastTab', selected);
-      } catch (exc) {
-        console.log('Caught exception in sessionStorage.setItem: ', exc);
-      }
-    };
-
-    var lastTab = window.sessionStorage.getItem('lastTab');
-    body.tabs({
-      event : 'click touchend',
-      activate: tabHandler,
-      create: tabHandler,
-      active: (lastTab !== null) ? lastTab : 0  // Set starting tab.
-    });
-
-    var download = $('<a/>').append($('<img src="/shared/images/download_button.png"/>'))
-        .addClass('download-video')
-        .attr('href', options.download);
-    var nav = $div.find('.ui-tabs-nav');
-    nav.append(download);
-
-    // Resize modal to fit constraining dimension.
-    var height = $(window).height() * widthRatio,
-        width = $(window).width() * heightRatio;
-
-    if (height * aspectRatio < width) {
-      $div.height(height);
-      $div.width(height * aspectRatio);
-    } else {
-      $div.height(width / aspectRatio);
-      $div.width(width);
-    }
-
-    // Standard css hack to center a div within the viewport.
-    $div.css({
-      top: '50%',
-      left: '50%',
-      marginTop: ($div.height() / -2) + 'px',
-      marginLeft: ($div.width() / -2) + 'px'
-    });
-
-    var divHeight = $div.innerHeight() - nav.outerHeight();
-    $(video).height(divHeight);
-
-    notesDiv.height(divHeight);
-
-    if (window.YT && window.YT.loaded) {
-      onYouTubeIframeAPIReady();
-    } else {
-      // Use the official YouTube IFrame Player API to load the YouTube video.
-      // Ref: https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      // calls window.onYouTubeIframeAPIReady
-    }
-
-    dialog.show();
-
-    var videoModal = $('.video-modal');
-
-    videoModal.on("ended", function () {
-      dialog.hide();
-    });
-
-    // Raise an event that the dialog has been shown, in case anything needs to
-    // pause/respond to it.
+  $('.video-modal').on("remove", function () {
+    // Manually removing src to fix a continual playback bug in IE9
+    // https://github.com/code-dot-org/code-dot-org/pull/5277#issue-116253168
+    video.removeAttr('src');
+    options.onClose();
+    dashboard.clientState.recordVideoSeen(options.key);
+    // Raise an event that the dialog has been hidden, in case anything needs to
+    // play/respond to it.
     var event = document.createEvent('Event');
-    event.initEvent('videoShown', true, true);
+    event.initEvent('videoHidden', true, true);
     document.dispatchEvent(event);
+  });
 
-    // Don't add fallback player if a video modal has closed
-    var shouldStillAdd = true;
-    videoModal.one('hidden.bs.modal', function(){
-      shouldStillAdd = false;
-    });
-
-    setupVideoFallback(options, $div.width(), divHeight, function(){
-      return shouldStillAdd;
-    });
+  var tabHandler = function(event, ui) {
+    var tab = ui.tab || ui.newTab;  // Depends on event.
+    var videoElement = $('#video');
+    if (tab.find('a').attr('href') === "#video") {
+      // If it is the video page, restore the src
+      videoElement.attr('src', options.src);
+    } else {
+      videoElement.attr('src', '');
+      stopTrackingVideoJSProgress();
+    }
+    // Remember which tab is selected.
+    var selected = tab.parents('.ui-tabs').tabs('option', 'active');
+    try {
+      window.sessionStorage.setItem('lastTab', selected);
+    } catch (exc) {
+      console.log('Caught exception in sessionStorage.setItem: ', exc);
+    }
   };
 
-  /**
-   * When hidden quickly after being shown, the videojs flash player progress tracker
-   * starts looping out read property 'length' of undefined errors. Since we don't currently
-   * use this progress tracking, disable it
-   */
-  function stopTrackingVideoJSProgress() {
-    if (!$('.video-js').length) {
-      return;
-    }
+  var lastTab = window.sessionStorage.getItem('lastTab');
+  body.tabs({
+    event : 'click touchend',
+    activate: tabHandler,
+    create: tabHandler,
+    active: (lastTab !== null) ? lastTab : 0  // Set starting tab.
+  });
 
-    var fallbackPlayer = videojs($('.video-js')[0]);
-    fallbackPlayer.stopTrackingProgress();
-    fallbackPlayer.stopTrackingCurrentTime();
+  var download = $('<a/>').append($('<img src="/shared/images/download_button.png"/>'))
+      .addClass('download-video')
+      .attr('href', options.download);
+  var nav = $div.find('.ui-tabs-nav');
+  nav.append(download);
+
+  // Resize modal to fit constraining dimension.
+  var height = $(window).height() * widthRatio,
+      width = $(window).width() * heightRatio;
+
+  if (height * aspectRatio < width) {
+    $div.height(height);
+    $div.width(height * aspectRatio);
+  } else {
+    $div.height(width / aspectRatio);
+    $div.width(width);
   }
 
-  // Precondition: $('#video') must exist on the DOM before this function is called.
-  function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
-    shouldStillAddCallback = shouldStillAddCallback || function() { return true; };
+  // Standard css hack to center a div within the viewport.
+  $div.css({
+    top: '50%',
+    left: '50%',
+    marginTop: ($div.height() / -2) + 'px',
+    marginLeft: ($div.width() / -2) + 'px'
+  });
 
-    if (!videoInfo.enable_fallback) {
+  var divHeight = $div.innerHeight() - nav.outerHeight();
+  $(video).height(divHeight);
+
+  notesDiv.height(divHeight);
+
+  if (window.YT && window.YT.loaded) {
+    onYouTubeIframeAPIReady();
+  } else {
+    // Use the official YouTube IFrame Player API to load the YouTube video.
+    // Ref: https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // calls window.onYouTubeIframeAPIReady
+  }
+
+  dialog.show();
+
+  var videoModal = $('.video-modal');
+
+  videoModal.on("ended", function () {
+    dialog.hide();
+  });
+
+  // Raise an event that the dialog has been shown, in case anything needs to
+  // pause/respond to it.
+  var event = document.createEvent('Event');
+  event.initEvent('videoShown', true, true);
+  document.dispatchEvent(event);
+
+  // Don't add fallback player if a video modal has closed
+  var shouldStillAdd = true;
+  videoModal.one('hidden.bs.modal', function(){
+    shouldStillAdd = false;
+  });
+
+  setupVideoFallback(options, $div.width(), divHeight, function(){
+    return shouldStillAdd;
+  });
+};
+
+/**
+ * When hidden quickly after being shown, the videojs flash player progress tracker
+ * starts looping out read property 'length' of undefined errors. Since we don't currently
+ * use this progress tracking, disable it
+ */
+function stopTrackingVideoJSProgress() {
+  if (!$('.video-js').length) {
+    return;
+  }
+
+  var fallbackPlayer = videojs($('.video-js')[0]);
+  fallbackPlayer.stopTrackingProgress();
+  fallbackPlayer.stopTrackingCurrentTime();
+}
+
+// Precondition: $('#video') must exist on the DOM before this function is called.
+function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {
+  shouldStillAddCallback = shouldStillAddCallback || function() { return true; };
+
+  if (!videoInfo.enable_fallback) {
+    return;
+  }
+
+  if (videoInfo.force_fallback) {
+    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+    return;
+  }
+
+  window.onYouTubeBlocked(function() {
+    if (!shouldStillAddCallback()) {
       return;
     }
+    addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+  });
+}
 
-    if (videoInfo.force_fallback) {
-      addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
-      return;
-    }
+// This is on window because it gets accessed externally for our video test page.
+window.onYouTubeBlocked = function(callback) {
+  testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
+};
 
-    window.onYouTubeBlocked(function() {
-      if (!shouldStillAddCallback()) {
-        return;
+function youTubeAvailabilityEndpointURL() {
+  if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
+    return 'https://unreachable-test-subdomain.example.com/favicon.ico';
+  }
+  return "https://www.youtube.com/favicon.ico";
+}
+
+// Precondition: $('#video') must exist on the DOM before this function is called.
+function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
+  var fallbackPlayerID = 'fallbackPlayer' + Date.now();
+  var playerCode =
+      '<div><video id="'+ fallbackPlayerID +'" ' +
+      'width="' + playerWidth + '" height="' + playerHeight + '" ' +
+      (videoInfo.autoplay ? 'autoplay ' : '') +
+      'class="video-js vjs-default-skin vjs-big-play-centered" ' +
+      'controls preload="auto" ' +
+      'poster="' + videoInfo.thumbnail + '">' +
+      '<source src="' + videoInfo.download + '" type="video/mp4"/>' +
+      '</video></div>';
+
+  // Swap current #video with new code
+  $('#video').replaceWith(playerCode);
+
+  videojs.options.flash.swf = '/code-studio/assets/video-js/video-js.swf';
+  videojs.options['vtt.js'] = '/code-studio/assets/vtt.js/vtt.js';
+  videojs.options.techOrder = ["flash", "html5"];
+
+  var videoPlayer = videojs(fallbackPlayerID, {}, function() {
+    var $fallbackPlayer = $('#' + fallbackPlayerID);
+    var showingErrorMessage = $fallbackPlayer.find('p').length > 0;
+    if (showingErrorMessage) {
+      $fallbackPlayer.addClass('fallback-video-player-failed');
+      if (hasNotesTab()) {
+        openNotesTab();
       }
-      addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight);
+    }
+    // Properly dispose of video.js player instance when hidden
+    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function(){
+      videoPlayer.dispose();
     });
-  }
+  });
 
-  // This is on window because it gets accessed externally for our video test page.
-  window.onYouTubeBlocked = function(callback) {
-    testImageAccess(youTubeAvailabilityEndpointURL() + '?' + Math.random(), function(){}, callback);
+  videoPlayer.on('ended', onVideoEnded);
+}
+
+function hasNotesTab() {
+  return $('.dash_modal_body a[href="#notes-outer"]').length > 0;
+}
+
+function openNotesTab() {
+  var notesTabIndex = $('.dash_modal_body a[href="#notes-outer"]').parent().index();
+  $('.ui-tabs').tabs('option', 'active', notesTabIndex);
+}
+
+function getShowNotes(key, container) {
+  var callback = function(data) {
+    container.html(data);
   };
 
-  function youTubeAvailabilityEndpointURL() {
-    if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
-      return 'https://unreachable-test-subdomain.example.com/favicon.ico';
-    }
-    return "https://www.youtube.com/favicon.ico";
+  $.ajax({
+    url: '/notes/' + key,
+    success: callback
+  });
+}
+
+// Convert http:// video urls to protocol-relative // urls to prevent mixed-content loads on https pages.
+function upgradeInsecureOptions(options) {
+  if(options.src) {
+    options.src = options.src.replace(/^http:\/\//, '//');
   }
-
-  // Precondition: $('#video') must exist on the DOM before this function is called.
-  function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
-    var fallbackPlayerID = 'fallbackPlayer' + Date.now();
-    var playerCode =
-        '<div><video id="'+ fallbackPlayerID +'" ' +
-        'width="' + playerWidth + '" height="' + playerHeight + '" ' +
-        (videoInfo.autoplay ? 'autoplay ' : '') +
-        'class="video-js vjs-default-skin vjs-big-play-centered" ' +
-        'controls preload="auto" ' +
-        'poster="' + videoInfo.thumbnail + '">' +
-        '<source src="' + videoInfo.download + '" type="video/mp4"/>' +
-        '</video></div>';
-
-    // Swap current #video with new code
-    $('#video').replaceWith(playerCode);
-
-    videojs.options.flash.swf = '/code-studio/assets/video-js/video-js.swf';
-    videojs.options['vtt.js'] = '/code-studio/assets/vtt.js/vtt.js';
-    videojs.options.techOrder = ["flash", "html5"];
-
-    var videoPlayer = videojs(fallbackPlayerID, {}, function() {
-      var $fallbackPlayer = $('#' + fallbackPlayerID);
-      var showingErrorMessage = $fallbackPlayer.find('p').length > 0;
-      if (showingErrorMessage) {
-        $fallbackPlayer.addClass('fallback-video-player-failed');
-        if (hasNotesTab()) {
-          openNotesTab();
-        }
-      }
-      // Properly dispose of video.js player instance when hidden
-      $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function(){
-        videoPlayer.dispose();
-      });
-    });
-
-    videoPlayer.on('ended', onVideoEnded);
+  if (options.download) {
+    options.download = options.download.replace(/^http:\/\//, '//');
   }
-
-  function hasNotesTab() {
-    return $('.dash_modal_body a[href="#notes-outer"]').length > 0;
-  }
-
-  function openNotesTab() {
-    var notesTabIndex = $('.dash_modal_body a[href="#notes-outer"]').parent().index();
-    $('.ui-tabs').tabs('option', 'active', notesTabIndex);
-  }
-
-  function getShowNotes(key, container) {
-    var callback = function(data) {
-      container.html(data);
-    };
-
-    $.ajax({
-      url: '/notes/' + key,
-      success: callback
-    });
-  }
-
-  // Convert http:// video urls to protocol-relative // urls to prevent mixed-content loads on https pages.
-  function upgradeInsecureOptions(options) {
-    if(options.src) {
-      options.src = options.src.replace(/^http:\/\//, '//');
-    }
-    if (options.download) {
-      options.download = options.download.replace(/^http:\/\//, '//');
-    }
-  }
-})();
+}
