@@ -1,20 +1,6 @@
 window.dashboard = window.dashboard || {};
 
 window.dashboard.utils = (function () {
-
-  // (brent) only used by dashboard/app/views/levels/_reference_area.html.haml
-  // TODO - should probably just move this + that embedded JS into own JS file
-  var addClickTouchEvent = function(element, handler) {
-    var wrapper = function(e) {
-      handler(e);
-      e.preventDefault();
-    };
-    element.on({
-      'touchstart': wrapper,
-      'click': wrapper
-    });
-  };
-
   /**
    * Wrap a function so that it will only be executed a certain amount of time
    * after it's originally called, to avoid multiple calls in quick succession.
@@ -43,7 +29,6 @@ window.dashboard.utils = (function () {
   };
 
   return {
-    addClickTouchEvent: addClickTouchEvent,
     debounce: debounce
   };
 })();

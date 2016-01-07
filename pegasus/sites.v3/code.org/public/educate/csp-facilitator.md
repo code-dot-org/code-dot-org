@@ -4,47 +4,34 @@ nav: educate_nav
 ---
 # Become a Computer Science Principles Facilitator
 
-Code.org is looking to partner with individuals interested in developing facilitation capacity in computer science education to deliver high-quality professional development to teachers to teach computer science in a format that's fun and accessible.
+Code.org is looking to partner with experienced high school or college-level computer science educators to deliver multiple in-person workshops to local high school teachers teaching our year-long [Computer Science Principles](https://code.org/educate/csp) course. Facilitators apply and are accepted to a two-year train-the-trainer program.
 
-The ideal CS Principles facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus.  
-<br />
+The ideal CSP Facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the [Computer Science Principles](https://code.org/educate/csp) course, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.**
+<br/>
+<br/>
 
-[<button>Apply now</button>]()
-<br />
-<br />
-
-**Are you a district administrator or representative?**  
-Code.org partners with school districts across the country to suppport and expand computer science learning in schools. Partnerships include [high quality computer science curriculum](/educate/curriculum), [professional development](/educate/professional-development), online and in person supports, marketing materials, matching funds for teacher stipends, and more.
-
-[<button>District Partnership</button>](/educate/districts)
-
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+<br/>
+<br/>
 
 ## What is the CSP Facilitator Program?
-The CS Principles Facilitator Development Program is designed for US-based trainers who wish to deliver Code.org CS Principles Professional Learning workshops to 9-12 grade educators in their local region. Facilitators apply and are accepted to a two-year train-the-trainer program.
+Code.org has developed a year-long introductory Advance Placement (AP®) Computer Science Principles course for high school students. The curriculum is written to support students and teachers new to the discipline with inquiry-based activities, videos, assessment support, and computing tools that have built-in tutorials and student pacing guides. 
+
+CSP Facilitators accepted to the program will work with Code.org’s local Professional Learning Partner organization (a higher education institution, a nonprofit or a school district) to plan and lead at least 4, 1-day, in-person workshops for local teachers in their regions during the 2016-17 school year. 
+
+For each workshop you host, CSP Facilitators will receive compensation for facilitating. We will also provide the venue, materials and food (at no cost) needed to host the workshop.
 
 
-## How do you become a CSP Facilitator?
-- Attend the 2.5 day Facilitator Summit May 20-22, 2016 (location TBD).
-- Participate in a 5-day training workshop for teachers. New CSP facilitators will observe, support and reflect on sessions led by master facilitators. There are three options for dates and locations (you only need to attend one).
-- Partner with a local Professional Learning organization to plan and lead **at least** 4, 1-day, in-person workshops for local teachers in Code.org's CSP program.
-- Participate in about ~20 hours of on-going training and support throughout the school year. 
+## How to become a CPS Facilitator?
+Become a CSP Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (location TBD) and attend a 5 day training workshop with teachers enrolled in Code.org’s CSP Professional Learning Program to to observe, support and reflect on sessions led by master CSP Facilitators. At the Summit and teacher training, Code.org will prepare facilitators to deliver 4 in-person workshops to local high school teachers enrolled in Code.org’s CSP Professional Learning Program throughout the 2016-2017 school year. 
 
+Before applying please carefully review the the [criteria, requirements and commitments](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub) for the CSP Facilitator program.
+<br/>
+<br/>
 
-## Code.org's commitment
-- Host the Facilitator Summit May 20-22, 2016 (location TBD).
-- Cover round-trip airfare, 2 nights hotel, 5 meals and up to $150 for incidentals during the Facilitator Summit.
-- Provide facilitators with a pd.code.org email address and access to Facilitator Dashboard to manage workshops.
-- Provide promotional materials to assist in recruitment.
-- Promote local workshops on our website and via other means such as district partnerships, email lists and social media channels (as appropriate).
-- Authorize facilitator use of the “In Partnership with Code.org” logo.
-- Compensation for delivering teacher professional development (varies by facilitator program type).
-- Provide workshop supplies as well as take-home materials for teachers such as printed curriculum guide containing course lesson plans, certificate of completion and classroom supplies.
-- Evaluate your success based on a mix of factors, which could include count of teachers, workshop evaluation reports, teacher surveys and actual participation/performance by students in classrooms hosted by these teachers.
-
-## Are you interested? 
-Apply to become a CSP Facilitator and host workshops for Code.org CSP teachers in your region. 
-
-[<button>Appy now</button>]()&nbsp;&nbsp;[<button>Learn more</button>]()
+[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+<br/>
+<br/>
 
 We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
 
