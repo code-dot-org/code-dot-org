@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 
@@ -156,7 +157,7 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
-    @public_caching = @script ? Gatekeeper.allows('public_caching_for_script', where: {script_name: @script.name}) : false
+    @public_caching = @script ? ScriptConfig.allow_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
 
     if PuzzleRating.enabled?

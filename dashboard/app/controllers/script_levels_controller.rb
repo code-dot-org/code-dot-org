@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
@@ -26,7 +27,7 @@ class ScriptLevelsController < ApplicationController
   def self.is_cachable_request?(request)
     script_id = request.params[:script_id]
     script = Script.get_from_cache(script_id) if script_id
-    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+    script && ScriptConfig.allow_public_caching_for_script(script.name)
   end
 
   def reset
@@ -95,7 +96,7 @@ class ScriptLevelsController < ApplicationController
   # described here:
   # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
-    if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+    if script && ScriptConfig.allow_public_caching_for_script(script.name)
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
