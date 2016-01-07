@@ -19,7 +19,7 @@
   = f.label :y
   = f.number_field :y, :value => @level.y
 .field
-  = f.label :permitted_errors, 'Permitted errors (default 150)'
+  = f.label :permitted_errors, 'Permitted errors (default 0)'
   = f.number_field :permitted_errors, :value => @level.permitted_errors
 .field
   = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
