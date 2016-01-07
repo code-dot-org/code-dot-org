@@ -16,7 +16,7 @@ nav: plc_plp_nav
 	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY)
 - Organize and host quality, local PD for Code.org’s District Partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators
 	- In Year 1 (2016-17) this is for the (AP) Computer Science Principles course. 
-	- In Year 2 (2017-18) this is for <a href="/educate/csp" target=_blank>CS Principles</a> AND <a href="/educate/csd" target=_blank>CS Discoveries</a>.	
+	- In Year 2 (2017-18) this is for <a href="/educate/plc/csp" target=_blank>CS Principles</a> AND <a href="/educate/csd" target=_blank>CS Discoveries</a>.	
 	- In initial years, this is for four 1-day professional learning workshops during the school year per course, to provide teachers who have attended our summer conferences with continuing professional learning during the school year. Timing of workshops could be adjusted to local needs.
 	- In future years we hope your commitment can eventually include taking full responsibility of all of Code.org’s professional learning programs in the region
 - Contract with and compensate local Code.org-accredited facilitators to lead the professional learning workshops
