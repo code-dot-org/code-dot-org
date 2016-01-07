@@ -9,6 +9,10 @@ var commander = require('commander');
 /** @const {string} */
 var BUILD_PATH = './build/js/';
 
+/** @const {string} */
+var SRC_PATH = './src/js/';
+
+
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
 commander
@@ -17,10 +21,11 @@ commander
     .parse(process.argv);
 
 // Run build (exits on failure)
+// TODO - think about how watchify will work for multiple commands
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
   build_commands.browserify({
-    srcPath: './src/js/',
+    srcPath: SRC_PATH,
     buildPath: BUILD_PATH,
     filenames: [
       'levelbuilder.js',
@@ -29,6 +34,16 @@ build_commands.execute([
       'leveltype_widget.js'
     ],
     commonFile: 'code-studio-common',
+    shouldMinify: commander.min,
+    shouldWatch: commander.watch
+  }),
+  build_commands.browserify({
+    srcPath: SRC_PATH + 'initApp/',
+    buildPath: BUILD_PATH,
+    filenames: [
+      'initApp.js'
+    ],
+    commonFile: 'initApp-common.js',
     shouldMinify: commander.min,
     shouldWatch: commander.watch
   })
