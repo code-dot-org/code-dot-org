@@ -16,7 +16,7 @@ gem 'seamless_database_pool'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'redis', '~> 3.1.0'
-gem 'google_drive', '~> 1.0.0'
+gem 'google_drive', '~> 1.0.0', require: false
 gem 'dalli' # memcached
 gem 'parallel'
 
@@ -34,13 +34,15 @@ end
 group :development, :test do
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
-  gem 'konacha'  # Mocha + Chai JS testing in Rails
+  gem 'konacha', require: false  # Mocha + Chai JS testing in Rails
+  # TODO(bjordan): can remove ^ ?
   gem 'poltergeist'  # Headless JS tests.p
 
-  gem 'haml-rails' # haml (instead of erb) generators
+  # gem 'haml-rails', require: false # haml (instead of erb) generators
+  # TODO(bjordan): removed in bundle_require branch, check w/ Will / can remove?
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'ruby-prof'
+  gem 'ruby-prof', require: false
   gem 'quiet_assets'
   gem 'active_record_query_trace'
   # for unit testing
@@ -76,7 +78,7 @@ gem 'unicorn', '~> 4.8.2'
 gem 'chronic', '~> 0.10.2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'#, require: false
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -114,7 +116,7 @@ gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error
 
 gem 'redcarpet', '~> 3.2.3'
 
-gem 'geocoder'
+gem 'geocoder', require: false
 
 gem 'rmagick'
 gem 'mini_magick'
