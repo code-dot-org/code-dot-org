@@ -1,6 +1,6 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
-DEFAULT_WAIT_TIMEOUT = 10.seconds
+DEFAULT_WAIT_TIMEOUT = 2.minutes
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
