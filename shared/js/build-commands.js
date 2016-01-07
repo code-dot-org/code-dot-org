@@ -17,13 +17,9 @@ var path = require('path');
  * @param {string} config.buildPath - Path to root of output directory, absolute or
  *        relative to execution path for this script (which is the code-studio
  *        folder for this build system), with trailing slash.
- * @param {(string[])[]} config.filenames - List of entry points (relative to
-          srcPath)
- * @param {string} config.commonFile - Filename for where to output common code
- *        (relative to buildPath)
- * @param {boolean} config.shouldFactor if true, we will factor out common code
- *        into config.commonFile. With non-common code ending up in <filenames>.js
- *        If false, everything ends up in config.commonFile.
+ * @param {(string[])[]} config.filenames - List of tuples. Each tuple contains the
+          src filename (relative to srcPath) and the resulting output filename
+          (relative to buildPath)
  * @param {boolean} config.shouldMinify if true, will build minified
  *        output files (with .min.js extensions) instead of unminified output.
  * @param {boolean} config.shouldWatch if true, will watch file system for
@@ -35,7 +31,6 @@ exports.browserify = function (config) {
   var buildPath = config.buildPath;
   var filenames = config.filenames;
   var commonFile = config.commonFile;
-  var shouldFactor = config.shouldFactor;
   var shouldMinify = config.shouldMinify;
   var shouldWatch = config.shouldWatch;
 
@@ -48,18 +43,15 @@ exports.browserify = function (config) {
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
 
-  var factorStep = '';
-  if (shouldFactor) {
-    factorStep = "-p [ factor-bundle -o '" + (shouldMinify ? 'uglifyjs ' : '') +
-      '>' + buildPath + "`basename $FILE .js`" + extension + "']";
-  }
+  var fileOutput = (shouldMinify ? 'uglifyjs ' : '') + '>' +
+    buildPath + "`basename $FILE .js`" + extension;
 
   var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
     command + ' ' + fileInput,
-    factorStep,
+    "-p [ factor-bundle -o '" + fileOutput + "']",
     commonOutput
   ].join(" \\\n    ");
 };
