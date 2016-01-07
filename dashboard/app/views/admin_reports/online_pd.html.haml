@@ -5,5 +5,5 @@
 
 %br
 
-- @online_pd_data.each do |script, data|
-  = render 'pd_progress_by_script', data
+- @online_pd_data.each do |script_id, pd_data|
+  = render 'pd_progress_by_script', pd_data

@@ -165,7 +165,7 @@ class AdminReportsController < ApplicationController
 
     @scripts = []
     SeamlessDatabasePool.use_persistent_read_connection do
-      @scripts = Script.where('properties LIKE ?', %q[%"pd":true%]).pluck(:id)
+      @scripts = Script.where('properties LIKE ?', '%"pd":true%').pluck(:id)
     end
 
     require 'cdo/properties'
