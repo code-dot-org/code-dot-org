@@ -16,13 +16,12 @@ build_commands.execute([
   //build_commands.copyDirectory('./assets', BUILD_PATH),
 
   // We have to do some weird stuff to get our fallback video player working.
-  // video.js expects some of its own files, and its dependency vtt.js, to be
-  // served by the application, so we include them in our build and access them
-  // via static (non-fingerprinted) root-relative paths.
+  // video.js expects some of its own files to be served by the application, so
+  // we include them in our build and access them via static (non-fingerprinted)
+  // root-relative paths.
   // We may have to do something similar with ace editor later, but generally
   // we'd prefer to avoid this way of doing things.
-  build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH + 'video-js'),
-  build_commands.copyDirectory('./node_modules/video.js/node_modules/vtt.js/dist', BUILD_PATH + 'vtt.js'),
+  build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH + 'video-js')
 ]);
 build_commands.fancyLog("code-studio assets copied");
 
