@@ -19,7 +19,7 @@ commander
 // Run build (exits on failure)
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
-  build_commands.browserifyExt({
+  build_commands.browserify({
     srcPath: './src/js/',
     buildPath: BUILD_PATH,
     filenames: [

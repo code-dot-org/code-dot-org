@@ -26,7 +26,7 @@ var path = require('path');
  *        changes, and rebuild when it detects them
  * @returns {string}
  */
-exports.browserifyExt = function (config) {
+exports.browserify = function (config) {
   var srcPath = config.srcPath;
   var buildPath = config.buildPath;
   var filenames = config.filenames;
