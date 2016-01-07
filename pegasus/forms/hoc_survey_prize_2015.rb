@@ -9,9 +9,10 @@ class HocSurveyPrize2015
     result
   end
 
-  def self.process(data)
+  def self.process_(row)
+    data = JSON.load(row[:data])
     {}.tap do |results|
-      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s'], 'Hoc2015');
+      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s'], 'Hoc2015', ip_address: row[:created_ip]);
     end
   end
 
