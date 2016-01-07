@@ -34,13 +34,3 @@
         %div{id: "gobutton-#{id}", style: "position: relative;"}
           %a{href: launch_path, target: "_blank"}
             %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)
-
-= view 'mobilecheck.js'
-
-:javascript
-
-  // If mobile Star Wars block goes to blockly version
-  if ("#{id}" == "starwars" && window.mobilecheck()) {
-    $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
-    $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
-  }

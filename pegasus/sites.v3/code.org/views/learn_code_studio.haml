@@ -59,8 +59,6 @@
 
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 
-= view 'mobilecheck.js'
-
 :javascript
   $(document).ready()
   {
@@ -123,8 +121,9 @@
     }
   });
 
-  // If mobile Star Wars block goes to blockly version
+  // If mobile Star Wars block & banner go to blockly version
   if (window.mobilecheck()) {
     $('#banner-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
   }
-
