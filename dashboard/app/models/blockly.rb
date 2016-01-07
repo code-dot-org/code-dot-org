@@ -122,7 +122,14 @@ class Blockly < Level
   def self.count_xml_blocks(xml_string)
     unless xml_string.blank?
       xml = Nokogiri::XML(xml_string, &:noblanks)
-      return xml.children.first.children.length
+      # The structure of the XML will be
+      # <document>
+      #   <xml>
+      #     ... blocks ...
+      # So the blocks will be the children of the first child of the document
+      if xml.children && xml.children.first && xml.children.first.children
+        return xml.children.first.children.length
+      end
     end
     0
   end
