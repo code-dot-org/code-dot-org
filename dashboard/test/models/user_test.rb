@@ -1000,7 +1000,7 @@ class UserTest < ActiveSupport::TestCase
     assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
     assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
 
-    student_without_password = create(:student, encrypted_password: nil)
+    student_without_password = create(:student, encrypted_password: '')
 
     # join picture section
     create(:follower, student_user: student_without_password, section: picture_section)
