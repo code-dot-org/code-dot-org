@@ -2,6 +2,8 @@ require 'selenium/webdriver'
 require 'cgi'
 require 'httparty'
 require '../../../deployment.rb'
+require 'active_support'
+require 'active_support/core_ext/object/blank'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
