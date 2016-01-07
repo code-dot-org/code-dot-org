@@ -34,6 +34,7 @@ build_commands.execute([
       'leveltype_widget.js'
     ],
     commonFile: 'code-studio-common',
+    shouldFactor: true,
     shouldMinify: commander.min,
     shouldWatch: commander.watch
   }),
@@ -43,7 +44,8 @@ build_commands.execute([
     filenames: [
       'initApp.js'
     ],
-    commonFile: 'initApp-common.js',
+    commonFile: 'initApp',
+    shouldFactor: false,
     shouldMinify: commander.min,
     shouldWatch: commander.watch
   })
