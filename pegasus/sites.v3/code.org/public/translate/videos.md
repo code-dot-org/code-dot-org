@@ -22,7 +22,7 @@ Watch the [demo video](/files/amara.swf) in full screen.
 ## Minecraft Hour of Code
 * [Introduction](https://amara.org/en/videos/hM6XN1YgrcnZ/info/minecraft-hour-of-code-intro/)
 * [Repeat loops](https://amara.org/en/videos/9db4OJsugkRs/info/minecraft-hour-of-code-repeat-loops/)
-* [If statements](https://amara.org/en/videos/6VTTd8ZDTW5j/info/minecraft-hour-of-code-if-statements/)
+* [If statements](https://amara.org/en/videos/CQ2Pl9U4YGzH/info/minecraft-hour-of-code-if-statements/)
 * [Congrats](https://amara.org/en/videos/qTYN8blMcwOQ/info/minecraft-hour-of-code-build-your-own/)
 * [Congrats with share](https://amara.org/en/videos/YOo9ipbbkmzG/info/minecraft-hour-of-code-build-your-own-share/)
 
