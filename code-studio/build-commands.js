@@ -64,6 +64,14 @@ exports.browserify = function (config) {
   ].join(" \\\n    ");
 };
 
+/**
+ * Generate command to:
+ * Copy one one directory (entire contents) into another, only updating
+ * if source file is newer or destination file is missing.
+ * @param {!string} srcDir
+ * @param {!string} destDir
+ * @returns {string}
+ */
 exports.copyDirectory = function (srcDir, destDir) {
   return 'cp -ru ' + srcDir + ' ' + destDir;
 };
