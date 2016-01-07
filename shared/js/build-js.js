@@ -3,7 +3,7 @@
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
-var build_commands = require('../../code-studio/build-commands.js');
+var build_commands = require('./build-commands.js');
 
 var commander = require('commander');
 
@@ -19,11 +19,11 @@ var BUILD_PATH = './build/package/js/';
 // Run build
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
-  build_commands.browserifyExt({
+  build_commands.browserify({
     srcPath:  './',
     buildPath: BUILD_PATH,
     filenames: [
-      ['initApp.js', 'shared.js']
+      'shared.js'
     ],
     commonFile: 'shared-common.js',
     shouldMinify: commander.min,
