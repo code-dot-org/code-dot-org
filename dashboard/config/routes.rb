@@ -208,6 +208,9 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
+  # Scale flags control panel.
+  get '/admin/scale', :to => 'scale#show', as: 'scale_show'
+
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
   get '/stats/students', to: redirect_to_teacher_dashboard
   get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
