@@ -29,7 +29,6 @@ build_commands.execute([
     buildPath: BUILD_PATH,
     filenames: [
       'code-studio.js',
-      'embedVideo.js',
       'levelbuilder.js',
       'levelbuilder_dsl.js',
       'levelbuilder_studio.js',
@@ -47,6 +46,17 @@ build_commands.execute([
       'initApp.js'
     ],
     commonFile: 'initApp',
+    shouldFactor: false,
+    shouldMinify: commander.min,
+    shouldWatch: commander.watch
+  }),
+  build_commands.browserify({
+    srcPath: SRC_PATH,
+    buildPath: BUILD_PATH,
+    filenames: [
+      'embedVideo.js'
+    ],
+    commonFile: 'embedVideo',
     shouldFactor: false,
     shouldMinify: commander.min,
     shouldWatch: commander.watch
