@@ -405,6 +405,10 @@ Then /^there's an image "([^"]*)"$/ do |path|
   exists.should eq true
 end
 
+Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
+  puts @browser.execute_script("return $('##{element_to_print}').html()")
+end
+
 Then /^I wait to see an image "([^"]*)"$/ do |path|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
