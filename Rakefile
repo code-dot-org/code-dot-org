@@ -110,6 +110,12 @@ namespace :build do
   end
 
   task :code_studio do
+    # Temporarily code_studio's build uses code in shared_js, so npm install both
+    Dir.chdir(shared_js_dir) do
+      HipChat.log 'Installing <b>shared js</b> dependencies...'
+      RakeUtils.npm_install
+    end
+
     Dir.chdir(code_studio_dir) do
       HipChat.log 'Installing <b>code-studio</b> dependencies...'
       RakeUtils.npm_install
