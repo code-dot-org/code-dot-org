@@ -32,6 +32,7 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
+var Instructions = require('./templates/instructions.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -892,7 +893,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     }
   }
 
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+  var instructionsContent = React.createElement(Instructions, {
     puzzleTitle: puzzleTitle,
     instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
@@ -902,6 +903,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
     aniGifURL: level.aniGifURL
   });
+  React.render(instructionsContent, instructionsDiv);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({

@@ -120,6 +120,19 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   end
 
   #
+  # Define the SHARED BUILD task
+  #
+  SHARED_NODE_MODULES = Dir.glob(shared_js_dir('node_modules', '**/*'))
+  SHARED_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| shared_js_dir(i)} + Dir.glob(shared_js_dir('build', '**/*'))
+  SHARED_SOURCE_FILES = Dir.glob(shared_js_dir('**/*')) - SHARED_NODE_MODULES - SHARED_BUILD_PRODUCTS
+  SHARED_TASK = build_task('shared', SHARED_SOURCE_FILES) do
+    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-shared')
+    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:shared'
+    RakeUtils.system 'rm', '-rf', dashboard_dir('public/shared-package')
+    RakeUtils.system 'cp', '-R', shared_js_dir('build/package'), dashboard_dir('public/shared-package')
+  end
+
+  #
   # Define the CODE STUDIO BUILD task
   #
   CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
@@ -168,7 +181,39 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   end
 
   #
-  # Define the CODE_STUDIO COMMIT task. If CODE_STUDIO_COMMIT_TASK produces new output, that output needs to be
+  # Define the SHARED COMMIT task. If SHARED_TASK produces new output, that output needs to be
+  #   committed because it's input for the DASHBOARD task.
+  #
+  SHARED_COMMIT_TASK = build_task('shared-commit', [deploy_dir('rebuild'), SHARED_TASK]) do
+    shared_changed = false
+    Dir.chdir(dashboard_dir('public/shared-package')) do
+      shared_changed = !`git status --porcelain .`.strip.empty?
+    end
+
+    if shared_changed
+      if RakeUtils.git_updates_available?
+        # NOTE: If we have local changes as a result of building SHARED_TASK, but there are new
+        # commits pending in the repository, it is better to pull the repository first and commit
+        # these changes after we're caught up with the repository because, if we committed the changes
+        # before pulling we would need to manually handle a "merge commit" even though it's impossible
+        # for there to be file conflicts (because nobody changes the files SHARED_TASK builds manually).
+        HipChat.log '<b>Shared</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
+      else
+        HipChat.log 'Committing updated <b>shared</b> package...', color: 'purple'
+        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/shared-package')
+        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-shared'))}"
+        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
+        RakeUtils.git_push
+        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
+      end
+    else
+      HipChat.log '<b>shared</b> package unmodified, nothing to commit.'
+      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
+    end
+  end
+
+  #
+  # Define the SHARED COMMIT task. If SHARED_TASK produces new output, that output needs to be
   #   committed because it's input for the DASHBOARD task.
   #
   CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit', [deploy_dir('rebuild'), CODE_STUDIO_TASK]) do
@@ -179,11 +224,11 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
 
     if code_studio_changed
       if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building CODE_STUDIO_TASK, but there are new
+        # NOTE: If we have local changes as a result of building SHARED_TASK, but there are new
         # commits pending in the repository, it is better to pull the repository first and commit
         # these changes after we're caught up with the repository because, if we committed the changes
         # before pulling we would need to manually handle a "merge commit" even though it's impossible
-        # for there to be file conflicts (because nobody changes the files CODE_STUDIO_TASK builds manually).
+        # for there to be file conflicts (because nobody changes the files SHARED_TASK builds manually).
         HipChat.log '<b>code-studio</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
       else
         HipChat.log 'Committing updated <b>code-studio</b> package...', color: 'purple'
@@ -201,6 +246,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
 
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
+  SHARED_COMMIT_TASK = build_task('shared-commit') {}
   CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit') {}
 end
 
@@ -327,7 +373,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_COMMIT_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, CODE_STUDIO_COMMIT_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do

@@ -19771,9 +19771,11 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   };
   svg.appendChild(Blockly.Tooltip.createDom());
   this.svgResize();
-  Blockly.WidgetDiv.DIV = goog.dom.createDom("div", "blocklyWidgetDiv");
-  Blockly.WidgetDiv.DIV.style.direction = Blockly.RTL ? "rtl" : "ltr";
-  document.body.appendChild(Blockly.WidgetDiv.DIV)
+  if(!Blockly.WidgetDiv.DIV) {
+    Blockly.WidgetDiv.DIV = goog.dom.createDom("div", "blocklyWidgetDiv");
+    Blockly.WidgetDiv.DIV.style.direction = Blockly.RTL ? "rtl" : "ltr";
+    document.body.appendChild(Blockly.WidgetDiv.DIV)
+  }
 };
 Blockly.BlockSpaceEditor.prototype.addToSvgDefs = function(definitionToAdd) {
   this.defs_.appendChild(definitionToAdd)
