@@ -23,5 +23,5 @@ build_commands.execute([
   // we'd prefer to avoid this way of doing things.
   build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH + 'video-js')
 ]);
-build_commands.fancyLog("code-studio assets copied");
+build_commands.logBoxedMessage("code-studio assets copied");
 
