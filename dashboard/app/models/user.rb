@@ -893,7 +893,7 @@ SQL
 
   # can this user edit their own account?
   def can_edit_account?
-    return true if teacher? || encrypted_password || oauth?
+    return true if teacher? || encrypted_password.present? || oauth?
 
     # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
     sections_as_student = followeds.collect(&:section)
