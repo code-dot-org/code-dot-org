@@ -141,7 +141,7 @@ class HttpCache
   end
 
   # Return true if the levels for the given script name can be publicly cached by proxies.
-  def self.allow_public_caching_for_script(script_name)
+  def self.allows_public_caching_for_script(script_name)
     CACHED_SCRIPTS_MAP.include?(script_name)
   end
 end
