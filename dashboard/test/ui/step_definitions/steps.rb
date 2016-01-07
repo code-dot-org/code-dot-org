@@ -1,6 +1,6 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
-DEFAULT_WAIT_TIMEOUT = 2.minutes
+DEFAULT_WAIT_TIMEOUT = 10.seconds
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
@@ -403,6 +403,10 @@ end
 Then /^there's an image "([^"]*)"$/ do |path|
   exists = @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")
   exists.should eq true
+end
+
+Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
+  puts @browser.execute_script("return $('##{element_to_print}').html()")
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
