@@ -4,7 +4,9 @@
  */
 
 var dom = require('./dom');
+var msg = require('./locale');
 var HintSelect = require('./templates/hintSelect.jsx');
+var HintsDisplay = require('./templates/hintsDisplay.jsx');
 var authoredHintUtils = require('./authoredHintUtils');
 var lightbulbSVG = require('./templates/lightbulb.svg.ejs')();
 var lightbulbDimSVG = require('./templates/lightbulb_dim.svg.ejs')();
@@ -161,6 +163,18 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function () {
     this.lightbulb.innerHTML = lightbulbSVG;
     this.lightbulb.querySelector('#hintCount').textContent = hintText;
   }
+};
+
+AuthoredHints.prototype.getHintsDisplay = function () {
+  var hintsDisplay = React.createElement(HintsDisplay, {
+    hintReviewTitle: msg.hintReviewTitle(),
+    getSeenHints: this.getSeenHints.bind(this),
+    getUnseenHints: this.getUnseenHints.bind(this),
+    recordUserViewedHint: this.recordUserViewedHint_.bind(this),
+    lightbulbSVG: lightbulbSVG
+  });
+
+  return hintsDisplay;
 };
 
 /**
