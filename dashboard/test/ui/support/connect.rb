@@ -4,6 +4,7 @@ require 'httparty'
 require '../../../deployment.rb'
 require 'active_support'
 require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/numeric/time'
 
 $browser_configs = JSON.load(open("browsers.json"))
 
