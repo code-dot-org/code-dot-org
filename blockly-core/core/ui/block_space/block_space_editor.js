@@ -281,9 +281,11 @@ Blockly.BlockSpaceEditor.prototype.createDom_ = function(container) {
   this.svgResize();
 
   // Create an HTML container for popup overlays (e.g. editor widgets).
-  Blockly.WidgetDiv.DIV = goog.dom.createDom('div', 'blocklyWidgetDiv');
-  Blockly.WidgetDiv.DIV.style.direction = Blockly.RTL ? 'rtl' : 'ltr';
-  document.body.appendChild(Blockly.WidgetDiv.DIV);
+  if (!Blockly.WidgetDiv.DIV) {
+    Blockly.WidgetDiv.DIV = goog.dom.createDom('div', 'blocklyWidgetDiv');
+    Blockly.WidgetDiv.DIV.style.direction = Blockly.RTL ? 'rtl' : 'ltr';
+    document.body.appendChild(Blockly.WidgetDiv.DIV);
+  }
 };
 
 /**
