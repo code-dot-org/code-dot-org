@@ -14,7 +14,6 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
-    - sudo apt-get install moreutils
     - bundle install
     - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
     - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
@@ -28,10 +27,10 @@ dependencies:
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
-    # Run rake install, timestamping each output line
-    - bundle exec rake install | ts '[%Y-%m-%d %H:%M:%S]'
+    # Run rake install
+    - bundle exec rake install
     # Try running rake build twice (in case of intermittent test failures within rake build)
-    - for i in 1 2; do bundle exec rake build | ts '[%Y-%m-%d %H:%M:%S]' && break; done
+    - for i in 1 2; do bundle exec rake build && break; done
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
