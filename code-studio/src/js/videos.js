@@ -1,4 +1,5 @@
-//= require url_test/url_test.js
+var videojs = require('video.js');
+var testImageAccess = require('./url_test');
 
 (function() {
 
@@ -250,7 +251,8 @@
     // Swap current #video with new code
     $('#video').replaceWith(playerCode);
 
-    videojs.options.flash.swf = "<%= asset_path("video-js.swf") %>";
+    videojs.options.flash.swf = '/code-studio/assets/video-js/video-js.swf';
+    videojs.options['vtt.js'] = '/code-studio/assets/vtt.js/vtt.js';
     videojs.options.techOrder = ["flash", "html5"];
 
     var videoPlayer = videojs(fallbackPlayerID, {}, function() {

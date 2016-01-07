@@ -94,6 +94,7 @@ module Dashboard
     config.assets.precompile += %w(
       js/*.js
       css/*.css
+      assets/**/*
       angularProjects.js
       levels/*
       jquery.handsontable.full.css
