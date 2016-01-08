@@ -124,8 +124,9 @@ exports.execute = function (commands) {
  * @param {!string} message
  */
 exports.logBoxedMessage = function (message) {
-  var bar = '+' + _.repeat('-', message.length + 2) + '+';
-  console.log(chalk.bold.green(bar + "\n| " + chalk.white(message) + " |\n" + bar + "\n"));
+  var style = chalk.bold.green.bgBlack;
+  var bar = style('+' + _.repeat('-', message.length + 2) + '+');
+  console.log(bar + "\n" + style("| " + chalk.white(message) + " |") + "\n" + bar + "\n");
 };
 
 /**
