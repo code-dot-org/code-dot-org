@@ -28,6 +28,8 @@
     code:
       label: 'Voeg een leraar toe:'
       placeholder: Sectiecode (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: voeg leraar toe
   add_hint_form:
     placeholder: Voer hier uw hint
@@ -302,66 +304,10 @@
     remove: (verwijder leraar)
     confirm:
       remove: Weet je zeker dat je deze leraar wilt verwijderen?
-    tools: Hulpmiddelen voor Leraren
-    followers:
-      section: 'Onderdeel:'
-      stages: 'Niveaus tonen:'
-      show_past: 'Toon de activiteit van de leerling (%{bullet_html}) in het verleden:'
-      levels_key: Level-sleutel
-      perfect: Voltooid, perfect
-      completed: Voltooid, maar met te veel blokken
-      tried: Geprobeerd, maar niet voltooid
-      not_tried: Nog niet geprobeerd
-      activity: Geeft de activiteit van de leerling in het laatste %{hours} %{plural}
-        weer
-      no_section: Geen onderdeel toegewezen
-      trophies: prijzen
     students:
-      name: Naam
-      username: gebruikersnaam
-      password: wachtwoord
-      manage: Beheer leerling
       dashboard: Leerkrachten Dashboard
-      add: Voeg leerlingen toe
-      remove: leerling verwijderen
-      confirm_remove: Weet je zeker dat je deze leerling wilt verwijderen?
-      help_reassign: Je kunt je klas in meerdere groepen verdelen door leerlingen
-        aan een nieuwe groep toe te wijzen.
-      help_register: In plaats van alle leerlinggegevens zelf een voor een te importeren
-        kun je je groep ook snel samenstellen door de leerlingen te vragen zich aan
-        te melden. Je leerlingen moeten gebruikersnamen en wachtwoorden kiezen, maar
-        ze zullen NIET gevraagd worden om een mailadres. Wanneer een leerling een
-        wachtwoord vergeet kun je het voor hem/haar resetten.
-      register: Vraag je leerlingen zich te registreren
-      vist: Vraag je leerlingen te gaan naar
-      section_code: 'en hun groepscode in te vullen:'
-      first_please: Als eerste, %{add_section}
-      for: voor
-      enter: 'vul in:'
-    sections:
-      add: Groep toevoegen
-      manage: beheer onderdelen
-      section: Groep
-      students: Leerlingen
-      section_code: Groepscode
-      add_section_code: Leerling-groepscode toevoegen
-      secret: Soort geheim
-      grade: Cijfer
-      course: Cursus
-      rename: hernoemen
-      edit: edit
-      delete: delete
-      confirm_delete: Weet je zeker dat je deze groep wilt verwijderen?
-      email: Verstuur mail
-    rollup: Overzicht vooruitgang
-    activity: Recente klasactiviteiten
-    user_not_found: De leraar of leerling kan niet worden gevonden
-    cant_remove_student_no_email: '%{student_name} kan niet worden verwijderd als
-      je leerling omdat %{student_name} geen emailadres heeft opgegeven'
-    cant_remove_teacher_no_email: '%{teacher_name} kan niet worden verwijderd als
-      je leraar omdat je geen emailadres hebt opgegeven'
-    student_teacher_disassociated: '%{teacher_name} is verwijderd als een leraar voor
-      %{student_name}'
+    user_not_found: De leerkracht is niet gevonden.
+    student_teacher_disassociated: Je hebt %{teacher_name} verwijderd als jouw leerkracht.
     panel:
       answer_viewer: Antwoord Viewer
       student: Leerling
@@ -447,6 +393,7 @@
   share:
     title: Leer meer op Code Studio
     description: Iedereen kan informatica leren. Maak games, apps en kunst met code.
+    try_hour_of_code: Probeer een Hour of Code!
   gender:
     male: Man
     female: Vrouw
@@ -463,13 +410,22 @@
       bij het samenstellen van deze opdracht.
     help_from_html_old: Ontwikkelaars van Google, Microsoft, Facebook en Twitter hebben
       bijgedragen aan het samenstellen van deze opdrachten.
-    art_from_html: Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Alle
-      rechten voorbehouden.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Alle rechten voorbehouden.<br/>Plants vs. Zombies;&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Alle rechten voorbehouden. <br />Plants vs. Zombies &#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden
+    art_from_html: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle rechten
+      voorbehouden. < br / >Star Wars &#8482; &copy; %{current_year} Disney en Lucasfilm.
+      Alle rechten voorbehouden. < br / >Frozen&#8482; &copy; %{current_year} Disney.
+      Alle rechten voorbehouden. < br / >Ice Age &#8482; &copy; %{current_year} 20th
+      Century Fox. Alle rechten voorbehouden. < br / >Angry Birds &#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle rechten voorbehouden. < br / >Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. < br
+      / >The Amazing World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle rechten
+      voorbehouden. Star Wars &#8482; &copy; %{current_year} Disney en Lucasfilm.
+      Alle rechten voorbehouden. Frozen&#8482; &copy; %{current_year} Disney. Alle
+      rechten voorbehouden. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
+      Alle rechten voorbehouden. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Alle rechten voorbehouden. Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. The Amazing
+      World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
     powered_by_aws: Aangedreven door Amazon webservices
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
       Hour of Code&reg; zijn handelsmerken van Code.org.'
@@ -484,9 +440,10 @@
     privacy: Privacybeleid
     secure: Beveiligde versie
     report_abuse: Misbruik Melden
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Gemaakt met Code Studio
+    make_my_own_app: Maak mijn eigen app
+    how_it_works: Hoe het werkt
+    try_hour_of_code: Probeer een Hour of Code!
   reference_area:
     title: Hulp nodig?
     subtitle: Bekijk deze video's en hints
@@ -555,7 +512,7 @@
       unused: Ongebruikte niveaus
   upsell:
     hoc:
-      title: Een Uur Code
+      title: Klassiek doolhof
       body: Probeer de beginselen van de informatica. Miljoenen gingen je voor!
     flappy:
       title: Flappy Code

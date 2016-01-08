@@ -838,9 +838,9 @@
         gumball_intro: Hora del Código de Gumball - introducción
         gumball_events: Hora del Código de Gumball - Eventos
         gumball_repeat: Hora del Código de Gumball - instrucciones Repetir
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_intro: Hora de código Era del Hielo - Introducción
+        iceage_events: Hora de Código Era del Hielo - Eventos
+        iceage_repeat: Hora de Código Era del Hielo - Repetir comando
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

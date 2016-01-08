@@ -573,27 +573,29 @@
           arra a helyre, ahol megrajzolhatja a szürke vonalakat.
       2:
         image: notes/C1_artist_intro_2.png
-        text: These are jump blocks. When you use these, your artist moves but doesn't
-          draw, so use these to jump to the next grey line.
+        text: Ezek az ugrás blokk tagjai. Mikor ezeket használod, a művészed nem rajzol,
+          hanem a következő szürke vonalra ugrik.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: Aren't bees super cool? In this next set of puzzles, your goal is to
-          help the bee get to the flowers and get nectar from the flowers and fly
-          over to the honeycomb to make honey. You'll need to use the "get nectar"
-          and the "make honey" blocks for this exercise.
+        text: Ugye milyen jó pofák ezek a méhek? A következő lépés a feladványban,
+          hogy segíts a méhnek eljutni a virágokhoz, hogy összegyűjtse a nektárt és
+          elrepüljön a méhsejtre, hogy mézet készítsen. Használnod kell a "get nectar"
+          azaz nektár begyűjtés, és a "make honey" azaz készíts mézet blokkokat ebben
+          a gyakorlatban.
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We
-          know how much nectar is in the red flowers, by the little number in the
-          corner. So be sure to get all the nectar from the flower before you move
-          forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or
-          more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Minden virágon különböző számú nektár van: 1, 2, 3 vagy több. Tudjuk,
+          hogy mennyi nektár van piros virágban, amit a sarkában lévő kis szám mutat.
+          Bizonyosodj meg róla, hogy minden nektárt összeszedtél, mielőtt tovább mész.
+          Továbbá minden méhsejt 1, 2, 3 vagy többet tartalmazhat. Győződj meg róla,
+          hogy csak annyi nektárt tegyél a sejtbe, amennyit elbír.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: If you're able to get all the nectar and make all the honey, you succeed
-          and go to the next level. Otherwise, you need to try this puzzle again.
-          Play around a while and see what it feels like to "bee" a programmer!
+        text: Ha összegyűjtöttél minden nektárt, és elkészítetted az összes mézet,
+          akkor vagy készen, és léphetsz a következő szintre. Ellenkező esetben meg
+          kell ismételni a feladatot. Játszd végig és meg fogod érezni, milyen egy
+          igazi programozó méh!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
@@ -2577,20 +2579,20 @@
           ezt az automatikus-kiegészítés funkciót.
       5:
         image: notes/starwars_typing_5.JPG
-        text: When you're typing code, the computer needs you to be very precise.
-          You need to spell and capitalize the command name exactly correctly, including
-          the parentheses and the semi-colon. Even with a small typing mistake, BB-8
-          cannot understand the code and won't be able to move.
+        text: Amikor a kódot gépeled, akkor a számítógép elvárja, hogy nagyon precíz
+          legyél. Pontosan kell gépelned az utasításneveket, figyelve a kis és nagybetűkre,
+          a zárójelekre és a pontosvesszőkre. A legkisebb gépelési hiba is azt jelentheti,
+          hogy BB-8 nem tudja megérteni a kódot és nem fog tudni mozogni.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you
-          so that you can try changing your text to fix it.
+        text: Amikor egy sorban hibázol, akkor a szerkesztő kiemeli azt, így meg tudod
+          próbálni kijavítani a szöveget.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Ha elakadsz, akkor az újrakezdés gomb megnyomásával bármikor elkezdheted
+          az elejéről a feladatot, de visszaválthatsz blokk módba is a jobb felső
+          sarokba kattintva. Akkor próbáljuk meg a gépelést! Ne keseredj el, ha hibázol.
+          Mindenki próbálkozik egy darabig, mire összejön.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -2629,11 +2631,11 @@
           csinálni, hogy R2-D2 lefelé mozogjon.
       7:
         image: notes/starwars_events_7.JPG
-        text: To do this, we'll use a command called whenUp(). When you drag the command
-          out of the toolbox, you'll see that it starts and ends with a curly bracket
-          instead of a semi-colon. This gives us space to put other commands in the
-          middle. Every command that we place inside these brackets will run when
-          the player presses the up arrow.
+        text: Ehhez a "ha van felfelé nyíl" whenUp() parancsot fogjuk használni. Amikor
+          a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy
+          kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé
+          teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit
+          ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat.
       8:
         image: notes/starwars_events_8.JPG
         text: Azt akarjuk, hogy R2-D2 felfelé menjen, így tegyünk be egy menj fel
@@ -3066,8 +3068,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

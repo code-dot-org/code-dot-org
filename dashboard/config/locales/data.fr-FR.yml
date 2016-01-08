@@ -99,11 +99,11 @@
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
-        Webapp: Labo des applis
+        Webapp: Applications Web
         ArtistEC: L'Artiste
         TextMatch: Correspondance de texte
         StudioEC: Labo
-        Applab: Labo des applis
+        Applab: Applications Web
         NetSim: Simulateur d'Internet
         Custom: Artiste
         CustomStudio: Labo
@@ -360,10 +360,10 @@
           soit beau et plat.
         maze_karel_debug_while: Comment devrais-tu modifier ce programme pour m'aider
           à combler le trou ?
-        maze_karel_debug_if: À l'aide ! Corrigez ce programme afin que je puisse aplanir
-          complètement mon champ.
-        maze_karel_debug_if_else: Déboguez ce programme afin que je remplisse tous
-          les trous et rase toutes les mottes.
+        maze_karel_debug_if: A l'aide! Réparez ce programme afin que mon terrain soit
+          complètement plat.
+        maze_karel_debug_if_else: Débugger ce programme afin que je remplisse les
+          trous et supprime tous les tas.
         maze_karel_debug_function_1: Quelle modification pouvez-vous effectuer dans
           ce programme pour m'aider à retirer toutes les mottes ?
         maze_karel_debug_function_2: Peux-tu déboguer ce programme pour moi afin que
@@ -601,25 +601,27 @@
         studio_iceage_click_hello: Pouvez-vous aider Sid à faire un dernier appel
           à ses amis quand on clique sur lui? N'oubliez pas de cliquer sur lui, après
           avoir cliqué sur sur exécuter.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_move_events: Scrat est toujours à la recherche de glands! Aide-le
+          à faire un tour en attachant le bloc Déplacer à chacun des évènements et
+          en inversant le sens de déplacement des flèches. Quand tu auras terminé,
+          clique sur Exécuter et essaie de récolter tous les glands.
+        studio_iceage_sound_and_points: Nous avons affiché la majeure partie du code
+          qui permet de déplacer Grand-mère à gauche et à droite ainsi que le code
+          pour déplacer Sid sur l'écran. Peux-tu terminer le code et ajouter des blocs
+          à l'évènement "quand le personnage touche" pour à la fois émettre un son
+          et marquer un point quand Sid et Grand-Mère entrent en contact? Appuie sur
+          Exécuter pour lancer le jeu.
+        studio_iceage_warn_ice_age: Tout le monde doit se déplacer plus vite car un
+          nouvel âge de glace arrive! Change le fond d'écran en un paysage glacé et
+          règle la vitesse de Sid sur rapide, ensuite appuie sur Executer et envoie
+          le avertir Diego.
+        studio_iceage_throw_hearts: Sid veut faire savoir à sa grand-mère qu'il l'aime.
+          Utilise la commande "Envoyer" afin que Sid (personnage 1) envoie des coeurs
+          à sa grand-mère (personnage 2)! Donne à la grand-mère une expression joyeuse
+          quand elle reçoit les coeurs.
+        studio_iceage_free_play: Il est temps pour toi de créer ton propre jeux ou
+          ton histoire! Quand tu auras fini, appuie sur Terminer pour que tes amis
+          puissent essayer ton jeux sur leur téléphone, tablette ou ordinateur!
         studio_gumball_hello1: Anaïs souhaite se faire de nouveaux amis. Pouvez-vous
           l'aider à dire "bonjour" en bougeant le bloc "say" jusqu'à la fenêtre d'utilisation
           et taper le mot "bonjour" à l'intérieur?
@@ -861,9 +863,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Évènements
         gumball_repeat: Gumball Hour of Code - Instructions Répéter
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_intro: Hour of Code avec l'Âge de Glace - Introduction
+        iceage_events: Hour of Code avec l'Âge de Glace - Evènements
+        iceage_repeat: Hour of Code avec l'Âge de Glace - Commandes de répétition
     callout:
       text:
         drag_blocks: Attrape un bloc « avancer plus » et attache-le sous l'autre bloc

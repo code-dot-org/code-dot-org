@@ -358,7 +358,7 @@ ja:
         text: 「正方形を作成」という関数として定義することができます。
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: これで　しかくが　たくさんつくれる　あたらしい　ブロックは　なんかいも　つかえます。
       7:
         image: notes/frozen3_7.jpg
         text: たくさんの簡単な図形で、複雑な模様を作ることができます。次のパズルでは、今あなたが円を作るために書いたコードが、様々な大きさの円を作る新たな関数として利用できます。あなたはそれで、エルサの綺麗で緻密な雪の模様を作ることができますか？
@@ -1440,116 +1440,118 @@ ja:
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: こんにちは、私の名前はチャリ―タ・カーターです。ウォルトディズニーイメージニアリングのシニアクリエイティブプロデューサーです。私はゲストのみなさんが体験するアトラクションを実際に生産するチームで指揮を取っています。いつも心の中にはゲストのみなさんがより良い体験をできるようどう改善していくべきかを見つけています。
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: やったね、おめでとうございます！BB-8をプログラムできました。次はもっと難しいことを用意しています。やってみましょう。もうプログラミングの基礎について勉強したので、R2-D2-とC3POを使って自分のゲームを作るところに戻りましょう。
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: ゲームを作るのに、ゲームプログラマーが毎日つかうものを覚えましょう。イベントと呼ばれるものです。イベントはあなたのプログラムに何かしたり、何かあったときに、聞いたり待ったりすることを伝えて、それを実際に実行します。
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチする事を聞くことです。
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: 'それではここで、R2-D2を上に移動して、反ぎゃく者にメッセージを伝えて、他の反ぎゃく者を下に移動させます。プレーヤー（ゲームをやる人）がup(上）  /down(下)矢印を使うか、up(上）  /down(下)ボタンを使ったとき、私たちはイベントを使って彼をうごかします。'
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: わたしたちは whenUp() のイベント ブロックを使い、goUp() ブロックをくっつけます。プレイヤーが、上矢印キーをおしたら、whenUp() ブロックにくっついているコードが実行されます。そして、R2-d2 を下に移動して同じことを行います。
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: これをやるには、 whenUp() と呼ばれるコマンドを使います。ツールボックスからコマンドを引っ張って持ってくると、それがはじまり、セミコロン（；）のかわりに、中かっこ（｛｝）とおわりが表示されます。これはわたしたちに、途中で他のコマンドを配置するスペースをくれます。かっこの中におく全部のコマンドは、プレイヤーが上矢印を押すと、実行するようになっています。
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: R2-D2 を上に動いてほしいので、コマンドの中にgoUp();ブロックをいれてみましょう。そして、R2-D2を下に動かしたいので、同じことをします。
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: そして今、事前にドロイドを操作するのに、全部のコードを書かなくても、R2-D2がスクリーンの周りを動くイベントボタンを押させることができます。一歩一歩あなたのゲームに動きがついてきましたね。
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: 私の名前はアリスです。Code.orgで製品とエンジニアリングチームを受け持っています。そして、今あなたがプレイしているこのチュートリアルを作りました。
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 今最後のレベルに達しました、おめでとう！Star Warsのゲームを自分で作るのに必要なことを全部勉強しました。もうこれ以上の指導はありません、問題を解くパズルもありません。どう動かすかを決めて自分のゲームを作れます。もうひとつ、新しい音と、新しいコマンドをアンロックしたので、もっと出来ることがあります。
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[生徒が話している]基本的にブタをつかまえてポイントを取るゲームを作ったんだね。ツイストはブタをつかまえるたびにストーム ・ トルーパーが現れるんだね。本当はスクリーンいっぱいにブタが埋まっていて、10,000回ブタにタッチすると、君の勝ちだよ。'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[生徒が話している]全部殺すとポイントがもらえて、負けがないゲームを作ったよ。僕のプログラムでは、キーを逆にしたんだ、そうすると上にクリックすると、君のキャラクターが下に動く、右に行くと、君のキャラクタが左に動く。すごく難しいんだよ！自分でゲームを作ると自分に不利なことも有利にできるんだ。あれできたかな？やったぁ！'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: 自分のゲームが作れたら、共有を選択して友達とみせあえるリンクを得たり、自分の携帯で遊べることもできるよ。楽しんでね！
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: "Hi I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: こんにちは、私はキャスリーン ・ ケネディで、す。私は「スター ・ ウォーズ　フォースの覚醒」のプロデューサーです。今日は私たちのメインキャラクタ―である BB-8と一緒に作業をやっていきます。BB-8は球型のドロイドです。彼の動き、彼のやることすべてはコンピューターのソフトウェアによって作られています。コンピュータ 科学は、広告から、医療、映画などあらゆる業界に影響を与えています。　事実、何百ものコンピューター エンジニアの力によって、「フォースの覚醒」のような映画も作られているのです。
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: "Hi, I'm Rachel Rose. I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artist develop rigs, which are the parts of the character that move that allow the character to look very believable in a galaxy far, far away."
+        text: こんにちは私はレイチェル・ローズ、私は ILM でシニア研究開発エンジニアとして、アニメーションと生き物の開発チームをリードしています。「フォースの覚醒」で、私はアーティストが、はるか遠くの銀河でもリグというキャラクターが本物そっくりに動いているような動きができる開発をする支援をしています。
       3:
         image: notes/starwars_blocks_intro_3.JPG
         text: 次の１時間は、自分でスターウォーズのゲームを作りながら、プログラミングの基本的な考え方を学びます。ふつう、プログラミングはテキストで書かれますが、ここではブロックを移動したりはなしたりして、プログラミングを書いていきます。それでは初めに、レイと一緒に、BB-8の部品を回収しながら歩くプログラミングを作る作業を行います。
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: 画面は、3 つの部分に分割されます。左はスター ・ ウォーズのゲーム スペース コードが実行されます。各レベルの指示は、ゲーム空間下に書いてあります。
       5:
         image: notes/starwars_blocks_intro_5.JPG
         text: 真ん中はツールボックスになっていてそれぞれのブロックはBB-8が理解できる命令を下します。
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: 右側にある白いスペースはワークスペースと呼ばれ、ここが私たちのプログラムを作るところです。
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: moveLeft(); ブロックをワークスペースの方にドラッグをすると、何が起こるでしょう？BB-8 は、グリッドの上をブロック一つ分左に動きます。
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: もしBB-8で moveLeft();ブロックの後、何かをしたかったら？別のブロックを自分のプログラムにいれることができます。それでは私はMoveUp(); を選んで、私の moveLeft(); ブロックの下にハイライトが出てくるまで移動させます。2つのブロックがくっついたらマウスを離します。実行をもう一度押すと、BB-8がワークスペースの上と下にくっついた命令に従います。
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: |
+          ブロックがいらなかったら、くっついているところから離して、ツールボックスの中に移動します。
+          
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: 実行をした後は、休憩ボタンを押せばBB-8 を初めに戻せます。それでは一緒にやってみましょう!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: こんにちは、私の名前はチャリ―タ・カーターです。ウォルトディズニーイメージニアリングのシニアクリエイティブプロデューサーです。私はゲストのみなさんが体験するアトラクションを実際に生産するチームで指揮を取っています。いつも心の中にはゲストのみなさんがより良い体験をできるようどう改善していくべきかを見つけています。
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: やったね、おめでとうございます！BB-8をプログラムできました。次はもっと難しいことを用意しています。やってみましょう。もうプログラミングの基礎について勉強したので、R2-D2-とC3POを使って自分のゲームを作るところに戻りましょう。
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: ゲームを作るのに、ゲームプログラマーが毎日つかうものを覚えましょう。イベントと呼ばれるものです。イベントはあなたのプログラムに何かしたり、何かあったときに、聞いたり待ったりすることを伝えて、それを実際に実行します。
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチする事を聞くことです。
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: 'それではここで、R2-D2を上に移動して、反ぎゃく者にメッセージを伝えて、他の反ぎゃく者を下に移動させます。プレーヤー（ゲームをやる人）がup(上）  /down(下)矢印を使うか、up(上）  /down(下)ボタンを使ったとき、私たちはイベントを使って彼をうごかします。'
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: whenUp() イベント ブロックを使って、goUp()に ブロックをくっつけます。プレイヤーは、上矢印キーを押したときに、whenUp() ブロックについているコードが実行されます。R2-D2 を下に移動して同じことを行います。今度は、事前にコードを全部を書く代わりに、R2-D2に自分をスクリーンの周りを回転させるイベントボタンを押させることができます。
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: だんだん、あなたのゲームに動きがついてきました。
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: 私の名前はアリスです。Code.orgで製品とエンジニアリングチームを受け持っています。そして、今あなたがプレイしているこのチュートリアルを作りました。
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 今最後のレベルに達しました、おめでとう！Star Warsのゲームを自分で作るのに必要なことを全部勉強しました。もうこれ以上の指導はありません、問題を解くパズルもありません。どう動かすかを決めて自分のゲームを作れます。もうひとつ、新しい音と、新しいコマンドをアンロックしたので、もっと出来ることがあります。
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[生徒が話している]基本的にブタをつかまえてポイントを取るゲームを作ったんだね。ツイストはブタをつかまえるたびにストーム ・ トルーパーが現れるんだね。本当はスクリーンいっぱいにブタが埋まっていて、10,000回ブタにタッチすると、君の勝ちだよ。'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[生徒が話している]全部殺すとポイントがもらえて、負けがないゲームを作ったよ。僕のプログラムでは、キーを逆にしたんだ、そうすると上にクリックすると、君のキャラクターが下に動く、右に行くと、君のキャラクタが左に動く。すごく難しいんだよ！自分でゲームを作ると自分に不利なことも有利にできるんだ。あれできたかな？やったぁ！'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: 自分のゲームが作れたら、共有を選択して友達とみせあえるリンクを得たり、自分の携帯で遊べることもできるよ。楽しんでね！
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -1719,7 +1721,7 @@ ja:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: 右のワークスペースでプログラムを組みます。
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

@@ -734,16 +734,16 @@
           radslag op de balk te doen, maar blijf er af vallen.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: I ging door elk deel stap voor stap and realiseerde waar ik een fout
+          gemaakt had. Ik zette mijn handen fout op de balk. Dus probeerde ik opnieuw
+          met een andere positie en uiteindelijk lukte het. Ik was super blij dat
+          ik terug handstand op een bal kon doen.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Om te leren debuggen beginnen we al met een paar blokken op het veld.
+          Je kan misschien wel zien dat de blokken je niet naar het doel zullen krijgen.
+          We zullen de oplossing moeten debuggen en het repareren. Wat is er mis gegaan?
+          Je zal zien dat je één blok meer naar het westen had moeten gaan.
       4:
         image: notes/C1_maze_debugging_4.png
         text: Let's fix this by adding another west block and hitting run to see if
@@ -751,8 +751,8 @@
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: Voor deze puzzel moet de vogel naar het varken. Kijk naar de puzzel
+          en zoeken voor de weg die de vogel moet nemen.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: You need to drag the blocks over from the toolbox to the workspace.
@@ -990,9 +990,9 @@
           90 degree turn.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
+          wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken.
+          Geniet van het tekenen met uw artiest!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -1014,10 +1014,10 @@
           on a bracelet we can wear and show all our friends!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options.
-          Sometimes people think of this as only 1s and 0s. But you can represent
-          binary with combinations of on or off, up and down, in and out or really
-          any set of opposites.
+        text: Binair is een manier om informatie weer te geven met behulp van slechts
+          twee opties. Soms denken mensen dat dit alleen enen en nullen kunnen zijn.
+          Maar je kunt binair ook weergeven met combinaties als aan en uit, op en
+          neer en werkelijk elk paar tegengestelden.
       3:
         image: notes/C2_binary_bracelets_3.png
         text: Hi, I'm Orion and I program robots here at Play-im. All computer and
@@ -1362,9 +1362,9 @@
           90 degree turn.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
+          wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken.
+          Geniet van het tekenen met uw artiest!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -3075,8 +3075,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

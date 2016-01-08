@@ -797,9 +797,9 @@
         gumball_intro: Gumballi KoodiTund - Sissejuhatus
         gumball_events: Gumballi KoodiTund - Sündmused
         gumball_repeat: Gumballi KoodiTund - "Korda" laused
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_intro: Jääaeg KoodiTund - Sissejuhatus
+        iceage_events: Jääaeg KoodiTund - Üritused
+        iceage_repeat: Jääaeg Kooditund - Korduvad laused
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla

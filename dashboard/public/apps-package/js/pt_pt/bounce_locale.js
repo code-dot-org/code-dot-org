@@ -214,7 +214,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "putdownTower":function(d){return "coloca a torre em baixo"},
 "reinfFeedbackMsg":function(d){return "Podes clicar no botão \"Voltar a tentar\" para voltares a jogar o teu jogo."},
 "removeSquare":function(d){return "remove o quadrado"},
-"repeatUntil":function(d){return "repita até"},
+"repeatUntil":function(d){return "repetir até"},
 "repeatUntilBlocked":function(d){return "enquanto houver caminho em frente"},
 "repeatUntilFinish":function(d){return "repete até terminar"},
 "scoreText":function(d){return "Pontuação: "+bounce_locale.v(d,"playerScore")+" - "+bounce_locale.v(d,"opponentScore")},

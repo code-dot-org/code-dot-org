@@ -23,6 +23,12 @@ Executes a block of statements if the specified condition is true; otherwise, th
 
 [/short_description]
 
+Apps usually need to make decisions and execute some code *if* something is true and some other code otherwise. Most programming languages have an *if/else statement*: to check to see if some expression is true, and if it is do something, otherwise do something else. 
+
+An *if/else statement* requires you to define an expression that evaluates to true or false. Just as in arithmetic there are some operators you can use to write expressions that evaluate to a number, programming languages also have a comparison operators (< <= == > >= !=) and boolean operators (&& || !) that let you write expressions that evaluate to true or false.
+
+The *if/else statement* defines two blocks of code to execute between open and closing curly braces {}. If the condition is true then the block of code inside the first curly braces is executed from top to bottom, exactly once. If the condition is false then then the block of code inside the second curly braces is executed from top to bottom, exactly once.
+
 [/description]
 
 ### Examples
@@ -30,29 +36,64 @@ ____________________________________________________
 
 [example]
 
-The following block of code calculates a random number between 0 and 100.
-The code declares a variable `evenOrOdd` which is implicitly initialized to the JavaScript value `undefined`.
-The code declares a variable `remainder` which is assigned the result of calculating `num` modulo `2`.
-A number divided by 2 which results in no remainder is even.
-The condition within the if statement compares `remainder` with 0. When that condition is true the variable `evenOrOdd` is assigned the string value `even`; otherwise, the block within the else clause is executed and the variable `evenOrOdd` is assigned the string value `odd`.
-Finally, a message with that determination is constructed using the concatenation operator (`+`) and is printed to the console.
-
-
 ```
-var num = randomNumber(0, 100);
-var evenOrOdd;
-var remainder = num % 2;
-if (remainder === 0) {
-  evenOrOdd = 'even';
-} else {
-  evenOrOdd = 'odd';
+// Prompts the user for the number of hours they worked and tells them if they worked overtime or not.
+var hoursWorked = promptNum("How many hours did you work this week?");
+if (hoursWorked > 40) {
+  write("You worked " + (hoursWorked-40) + " hours overtime.");
 }
-
-var message = num + ' is ' + evenOrOdd = '.';
-console.log(message);
+else {
+  write("You did not work any overtime.");
+}  
 ```
 
 [/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Even or Odd** Determines if a random number is even or odd.
+
+```
+// Determines if a random number is even or odd.
+var num = randomNumber(0, 100);
+var evenOrOdd = "unknown";
+var remainder = num % 2;
+if (remainder == 0) {
+  evenOrOdd = "even";
+} else {
+  evenOrOdd = "odd";
+}
+console.log(num + " is " + evenOrOdd + ".");
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Letter Grade** Prompt the user for an exam score and assign a letter grade.
+
+```
+// Prompt the user for an exam score and assign a letter grade.
+var examGrade = promptNum("Enter an exam score from 0 to 100:");
+if (examGrade>=90) {
+  write("Grade = A");
+} else if (examGrade>=80) {
+  write("Grade = B");  
+} else if (examGrade>=70) {
+  write("Grade = C");  
+} else if (examGrade>=60) {
+  write("Grade = D");  
+} else {
+  write("Grade = F");  
+}
+```
+
+[/example]
+
 ____________________________________________________
 
 [syntax]
@@ -69,11 +110,30 @@ if (condition) {
 
 [/syntax]
 
+[parameters]
+
+### Parameters
+
+| Name  | Type | Required? | Description |
+|-----------------|------|-----------|-------------|
+| condition | boolean expression | Yes | An expression that evaluates to true or false. Comparison operators include < <= == > >= !=. Boolean operators include && || ! |
+| statement1 | App Lab statement(s) | Yes | Any valid App Lab statements. |
+| statement1 | App Lab statement(s) | Yes | Any valid App Lab statements. |
+
+[/parameters]
+
+[returns]
+
+### Returns
+No return value.
+
+[/returns]
+
 [tips]
 
 ### Tips
-- Watch out for an accidental assignment statement in the if condition. A single equals (`=`) is an assignment operator.
-Double (`==`) or triple (`===`) equals are comparison and identity operators respectively.
+- Unlike an event handler, an if/else statement does not constantly monitor your program checking the condition to see if it's true or false. An if statement is an instruction just like any other that gets executed line by line in order from top to bottom.
+- = is the assignment operator. == is the boolean check for equivalency operator.
 
 [/tips]
 

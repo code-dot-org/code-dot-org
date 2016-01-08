@@ -28,7 +28,6 @@ namespace :blockly do
     else
       FileUtils.rm_rf(dest)
     end
-    FileUtils.rm_rf('.cache_bust')
   end
 
   task latest: :environment do
@@ -47,7 +46,6 @@ namespace :blockly do
     tar_cmd = "tar -xz -C #{dirname}"
     `#{curl_cmd} | #{tar_cmd}`
     FileUtils.mv("#{dirname}/package", dest)
-    File.open('.cache_bust', 'w') { |f| f.write(args[:version]) }
   end
 
   task :dev, [:src] => :environment do |t, args|

@@ -115,7 +115,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Keep Experimenting!\r\n\r\nYour simulation can be updated or changed however you like. What new questions do you have? Do you want to look for longer streaks of heads? Do you want to roll a die instead of flip a coin? Make any changes and improvements to your simulation that you like.\r\n",
+    "markdown_instructions": "# Keep Experimenting!\r\n\r\nYour simulation can be updated or changed however you like. What new questions do you have? Do you want to look for longer streaks of heads? Do you want to roll a die instead of flipping a coin? Make any changes and improvements to your simulation that you like.\r\n",
     "instructions": "Keep adding to your simulation. What do you want to explore next? (Click to see full instructions)",
     "slider_speed": "1",
     "project_template_level_name": "U3 - Simulation - Template"

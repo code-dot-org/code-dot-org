@@ -16,7 +16,8 @@ var APPS = [
   'applab',
   'eval',
   'netsim',
-  'craft'
+  'craft',
+  'gamelab'
 ];
 
 if (process.env.MOOC_APP) {

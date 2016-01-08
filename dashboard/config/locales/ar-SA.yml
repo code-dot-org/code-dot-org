@@ -28,6 +28,8 @@
     code:
       label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
@@ -285,64 +287,10 @@
     remove: (إزالة معلم)
     confirm:
       remove: هل أنت متأكد من أنك تريد إزالة هذا المعلم؟
-    tools: أدوات المعلم
-    followers:
-      section: 'القسم:'
-      stages: 'مرحلة (مراحل) للعرض:'
-      show_past: 'إظهار نشاط الطالب (%{bullet_html}) في الماضي:'
-      levels_key: مفتاح المستويات
-      perfect: تم! عمل رائع !
-      completed: تم ! ولكن استخدمت عدد كبير من المربعات البرمجية
-      tried: محاولة جيدة، ولكن لم يكتمل
-      not_tried: لم تحاول بعد
-      activity: يشير إلى نشاط الطالب في %{hours} %{plural} الأخيرة
-      no_section: لم يتم تعيين قسم
-      trophies: الجوائز
     students:
-      name: الاسم
-      username: اسم المستخدم
-      password: كلمة المرور
-      manage: إدارة الطلاب
       dashboard: انتقل إلى لوحة المعلم
-      add: إضف الطلاب
-      remove: إزالة طالب
-      confirm_remove: هل أنت متأكد من أنك تريد إزالة هذا الطالب؟
-      help_reassign: لتقسيم طلاب فصلك إلى أقسام متعددة، حدد الطلاب لوضعهم في القسم
-        الجديد.
-      help_register: بدلا من جعلك تقضي الكثير من الوقت في إدخال بيانات كل طالب على
-        حدة، يمكنك ترتيب طلاب فصلك بسرعة بطلبك منهم التسجيل في الموقع. سوف يحتاج كل
-        طالب إلى اختيار اسم المستخدم وكلمة المرور الخاصة به ولكن لن يطلب منهم تقديم
-        بريد إلكتروني أثناء التسجيل. وإذا ما نسي الطالب كلمة السر الخاصة به سوف تكون
-        قادر على إعادة تعيينها له.
-      register: أطلب من طلابك أن يقوموا بتسجيل أنفسهم
-      vist: أطلب من طلابك زيارة
-      section_code: 'وإدخال رمز أقسامهم:'
-      first_please: أولاً، من فضلك %{add_section}
-      for: من أجل
-      enter: 'قم بإدخال:'
-    sections:
-      add: إضافة قسم
-      manage: إدارة الأقسام
-      section: القسم
-      students: الطلاب
-      section_code: قسم البرمجة
-      add_section_code: إضافة رمز قسم الطلاب
-      secret: النوع السري
-      grade: الصف الدراسي
-      course: الدورة
-      rename: إعادة تسمية
-      edit: تعديل
-      delete: حذف
-      confirm_delete: هل أنت متأكد من أنك تريد حذف هذا القسم؟
-      email: إرسال بالبريد الإلكتروني
-    rollup: لوحة معلومات التقدم
-    activity: آخر نشاطات الصف
-    user_not_found: تعذر العثور على المعلم أو الطالب
-    cant_remove_student_no_email: لا يمكن إزالة %{student_name} كالطالب الخاص بك لأن
-      %{student_name} لم يقم بتسجيل عنوان بريد إلكتروني
-    cant_remove_teacher_no_email: لا يمكن إزالة %{teacher_name} كالمعلم الخاص بك لأك
-      لم تقم بتسجيل عنوان بريد إلكتروني
-    student_teacher_disassociated: تم إزالة %{teacher_name} كمدرس لـ %{student_name}
+    user_not_found: لا يمكن العثور على المعلمة.
+    student_teacher_disassociated: لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك.
     panel:
       answer_viewer: عارض الأجوبة
       student: طالب
@@ -426,6 +374,7 @@
     title: تعلّم على كود استوديو
     description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع
       التعليمات البرمجية.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: ذكر
     female: أنثى
@@ -466,6 +415,7 @@
     built_on_code_studio: بني في "Code Studio"
     make_my_own_app: بناء التطبيق الخاص بي
     how_it_works: كيفية العمل
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
@@ -529,7 +479,7 @@
       unused: المستويات غير المستخدمة
   upsell:
     hoc:
-      title: ساعة من البرمجة
+      title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
     flappy:
       title: رمز لعبة flappy

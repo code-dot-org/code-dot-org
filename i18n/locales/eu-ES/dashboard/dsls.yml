@@ -64,8 +64,8 @@ eu:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: Artista Begiztak Bat Eginez
-        Match the loop to the shape: Bat egin begizta formari
+        Artist Loops Matching One: 'Artista: Begiztak identifikatzen'
+        Match the loop to the shape: Erlazionatu begizta irudiarekin
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -75,8 +75,8 @@ eu:
         /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
-        Artist Matching: Artista bat egitea
-        Match the shape with the blocks that complete it.: Lotu irudia osatzen duten blokeekin.
+        Artist Matching: 'Artista: Erlazioak egiten'
+        Match the shape with the blocks that complete it.: Erlazionatu irudia berau osatzeko behar diren blokeekin.
       2-3 bounce match 1:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
@@ -98,7 +98,7 @@ eu:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
-        Flappy Matching One: Flappy parekatzea bat
+        Flappy Matching One: 'Flappy: erlazioak bilatzen'
         Match the events with the actions: Lotu gertaerak ekintzekin
         Matching: Parekatuz
       2-3 maze match 1:
@@ -109,17 +109,17 @@ eu:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
         Match the puzzles to the blocks: Arrastatu blokeen sekuentzia bakoitza dagokion labirintoaren ondoan jartzeko
-        Maze Match One: Labirituaren Lehenengo Partida
+        Maze Match One: Labirintoa eta blokeak erlazionatzen
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Gehitu 1 Jokalariaren tiraketa puntuaketa totalera</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Konparatu jokalarien puntuaketa ikusteko zein irabazi duen</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>1 Jokalaria dado botatzen du</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>1 Jokalariari 0 puntu esleitu</h4>'
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Berrantolatu Dadoen Lasterketa jolaseko urratsak algoritmoan agertu beharko luketen ordenaren arabera.
+        <h4>1)</h4>: '<h4>1.</h4>'
+        <h4>2)</h4>: '<h4>2.</h4>'
+        <h4>3)</h4>: '<h4>3.</h4>'
+        <h4>4)</h4>: '<h4>4.</h4>'
+        <h4>Add Player 1 roll to total score</h4>: '<h4>Gehitu 1. jokalariaren balioa puntuazio totalari</h4>'
+        <h4>Compare player scores to see who wins</h4>: '<h4>Konparatu jokalarien puntuazioa ikusteko zeinek irabazi duen</h4>'
+        <h4>Player 1 rolls die</h4>: '<h4>1. jokalariak dado botatzen du</h4>'
+        <h4>Set Player 1 score to 0</h4>: '<h4>1. Jokalariari 0 puntu esleitu</h4>'
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 'Berrantolatu "Dadoen Lasterketa" jolaseko urratsak algoritmoan agertu beharko luketen ordenaren arabera.'
         Matching: Parekatuz
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
@@ -130,7 +130,7 @@ eu:
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Gurpilak/aldea: 2<br/>Leihoak/aldea: 1</h3>'
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Gurpilak/aldea: 2<br/>Leihoak/aldea: 6</h3>'
         "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Gurpilak/aldea: 3<br/>Leihoak/aldea: 2</h3>'
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Ibilgailu hauek deskonposatuak izan dira zati txikiagoetan. Lotu ibilgailu bakoitza bere listarekin.
+        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Irudietako ibilgailuek alde bakoitzean duten gurpil eta leiho kopurua kontuan hartuz, lotu ibilgailu bakoitza dagokion listarekin.
         Matching: Parekatuz
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
@@ -142,7 +142,7 @@ eu:
         <h4>STACK</h4>: '<h4>STACK</h4>'
         <h4>STAMP</h4>: '<h4>STAMP</h4>'
         <h4>STAR</h4>: '<h4>STAR</h4>'
-        Match each program to the word it makes, using the provided group of skills.: Lotu programa bakoitza sortzen duen hitzarekin eman diren gaitasunak erabiliz.
+        Match each program to the word it makes, using the provided group of skills.: Lotu hitz bakoitza berau sortzen duen programarekin, emandako gaitasunak (skill) kontuan hartuz.
         Matching: Parekatuz
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
@@ -163,7 +163,7 @@ eu:
         <br/><br/>above: '<br/><br/>gainean'
         <br/><br/>below: '<br/><br/>azpian'
         <br/><br/>next to: '<br/><br/>ondoan'
-        Is the square next to, above, or below the ball?: Non dago pelota karratuaren ondoan, gainean edo azpian?
+        Is the square next to, above, or below the ball?: Non dago karratua? pilotaren ondoan, gainean edo azpian?
         Matching: Parekatuz
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -423,18 +423,18 @@ eu:
         Which set of blocks is the correct answer?: Zein bloke multzo da erantzun zuzena?
       4-5 Algorithms Multi 1:
         Baking cookies: Gailetak egiten
-        Banana: Banana
+        Banana: Banana bat egiten
         Brushing your teeth: Zure hortzak garbitzen
         Multiple Choice: Aukera anitza
         Shopping from a grocery list: Barazki zerrenda batetik erosten
-        Which one of these items is hardest to describe an algorithm for?: Item hauetako zeinentzako da zailagoa algoritmo bat deskribatzea?
+        Which one of these items is hardest to describe an algorithm for?: Ekintza hauetako zeinentzako da zailagoa algoritmo bat deskribatzea?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene hiri _____ bat da.
+        Eugene is a _____ city.: Donostia hiri _____ bat da.
         0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         1: ': Hemen hiru esaldi daude. Azpiko txantiloietako zeinek abstraitzen du modu egokian hiru esaldiek txantiloiaren eredu berarekin bat egiteko?'
         Multiple Choice: Aukera anitza
-        Seattle _____ a _____ _____.: Seattle _____ _____ bat _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle hiri haundi bat da. <br/>Eugene hiri ertain bat da<br/>Hillview hiri txiki bat da.'
+        Seattle _____ a _____ _____.: Bilbo _____ _____ bat _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Bilbo hiri haundi bat da. <br/>Donostia hiri ertain bat da<br/>Tolosa hiri txiki bat da.'
         _____ is _____ a _____.: _____ _____ _____ bat da.
         _____ is a _____ city.: _____ hiri _____ bat da.
       4-5 Crowdsourcing Multi 1:
@@ -565,7 +565,7 @@ eu:
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
         /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500
-        Maze Conditionals Multiple Choice: 'Labirinntoaren baldintzazkoak - aukera anitzak'
+        Maze Conditionals Multiple Choice: 'Labirintoaren baldintzazkoak - aukera anitzak'
         Which blocks solve the puzzle?: Zein blokek ebazten dute puzle hau?
       4-5 maze multi 1:
         /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
@@ -731,14 +731,14 @@ eu:
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Multiple Choice: Aukera anitza
-        Which blocks spell "JUMP"?: 'Ze blokek letratzen du "SALTO"?'
+        Which blocks spell "JUMP"?: 'Zer bloke-segidak irakurtzen du "JUMP" hitza letraz letra?'
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Multiple Choice: Aukera anitza
         SET: SET
         SOUTH: HEGOALDEA
         SQUARE: SQUARE
-        Which word is spelled?: Ze hitz letratzen da?
+        Which word is spelled?: Ze hitz irakurtzen da letraz letra?
       K-1 multi 4:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg

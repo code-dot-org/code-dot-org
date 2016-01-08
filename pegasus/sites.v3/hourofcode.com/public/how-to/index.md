@@ -6,6 +6,8 @@ nav: how_to_nav
 
 <h1>How to teach one Hour of Code</h1>
 
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
 ## 1) Promote your Hour of Code
 Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 

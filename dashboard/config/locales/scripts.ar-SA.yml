@@ -157,7 +157,7 @@
           description_short: ارسم صور رائعة و صمم مع الرسام !
         hourofcode:
           Maze: المتاهة
-          title: ساعة من البرمجة
+          title: المتاهة الكلاسيكية
           description: جرب تعلم مبادئ الحاسب الآلي من خلال شخصيات لعبة الطيور الغاضبة
             (Angry Birds) ، ولعبة المزروعات ضذ الزومبي (Plants vs. Zombies) ، وشخصية
             القنفذ سكارت من فيلم عصر الجليد (Ice Age) !
@@ -191,7 +191,7 @@
           'Artist: Functions': 'الرسام : المهام'
           'Unplugged: Tangrams': 'غير موصول: تانغرام Tangrams'
           Artist: الرسام
-          Bee: Bee
+          Bee: نحلة
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
@@ -225,7 +225,7 @@
           'Artist: Functions': 'الرسام : المهام'
           'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
         usability:
-          Intro: Intro
+          Intro: مقدمة
           Variables and For Loops: Variables and For Loops
           Functions and Functions with Parameters: Functions and Functions with Parameters
           title: Usability Testing
@@ -749,6 +749,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -983,7 +984,7 @@
           Jigsaw: بانوراما
           Maze: المتاهة
           Artist: الرسام
-          Bee: Bee
+          Bee: نحلة
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: فلابي
@@ -1035,12 +1036,12 @@
           App Lab: مختبر التطبيق
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: محاكاة الإنترنت
@@ -1069,7 +1070,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1123,11 +1124,11 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
+          title: ساعة من البرمجة 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
           Hour of Code: ساعة من البرمجة
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: ساعة من البرمجة 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1148,14 +1149,14 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           The Design Recipe: وصفه التصميم
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Wrap-Up: الجلسة الختامية
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1172,7 +1173,7 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1190,7 +1191,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1204,7 +1205,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1228,7 +1229,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1346,7 +1347,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1374,11 +1375,12 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1413,7 +1415,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1448,7 +1450,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1457,7 +1459,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1501,11 +1503,26 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1527,7 +1544,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1623,14 +1640,14 @@
             مجرة بعيدة، بعيدة جدا.
           description: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة،
             بعيدة جدا.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: ساعة من البرمجة 2015
         starwarsblocks:
           title: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
           description_short: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
             مجرة بعيدة، بعيدة جدا.
           description: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة،
             بعيدة جدا.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: ساعة من البرمجة 2015
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
@@ -1641,7 +1658,7 @@
           description_short: اكتشف عالم Minecraft من خلال التعليمات البرمجية
           description: استخدم كتل التعليمات البرمجية لاصطحاب Steve أو Alex في مغامرة
             من خلال عالم Minecraft
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: ساعة من البرمجة 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1653,6 +1670,6 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 'مرحبا ! '
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: الجلسة الختامية
