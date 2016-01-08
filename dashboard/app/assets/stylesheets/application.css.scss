@@ -1922,6 +1922,17 @@ $modal-no-icon-gap: 22px;
     color: $charcoal;
     margin: 0 0 8px;
   }
+
+  .instructions-container {
+    .authored-hints {
+      p, pre {
+        font-size: 18px;
+        line-height: normal;
+        color: $charcoal;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .dialog-title {
@@ -1934,6 +1945,16 @@ $modal-no-icon-gap: 22px;
   border: 1px solid $orange;
   color: white;
   min-width: 100px;
+}
+
+#hint-button {
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  color: black;
+
+  svg {
+    margin: -12px -6px;
+  }
 }
 
 #again-button {

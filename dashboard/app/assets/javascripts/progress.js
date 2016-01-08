@@ -67,5 +67,39 @@ window.dashboard.progress = (function () {
     }
   };
 
+  progress.renderStageProgress = function (stageData, progressData, clientProgress, currentLevelId) {
+    var serverProgress = progressData.levels || {};
+    var currentLevelIndex = null;
+
+    var combinedProgress = stageData.levels.map(function(level, index) {
+      if (level.id === currentLevelId) {
+        currentLevelIndex = index;
+      }
+
+      var status;
+      if (dashboard.clientState.queryParams('user_id')) {
+        // Show server progress only (the student's progress)
+        status = dashboard.progress.activityCssClass((serverProgress[level.id] || {}).result);
+      } else {
+        // Merge server progress with local progress
+        status = dashboard.progress.mergedActivityCssClass((serverProgress[level.id] || {}).result, clientProgress[level.id]);
+      }
+      var href = level.url + location.search;
+
+      return {
+        title: level.title,
+        status: status,
+        kind: level.kind,
+        link: href,
+        id: level.id
+      };
+    });
+
+    $('.progress_container').replaceWith(React.renderToStaticMarkup(React.createElement(dashboard.StageProgress, {
+      levels: combinedProgress,
+      currentLevelIndex: currentLevelIndex
+    })));
+  };
+
   return progress;
 })();
