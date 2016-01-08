@@ -275,6 +275,23 @@ Then /^mark the current level as completed on the client/ do
   @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
 end
 
+Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  steps %{
+    And I wait to see ".progress_container"
+    And I wait for 10 seconds
+    And element ".progress_container a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+  }
+end
+
+Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
+  steps %{
+    Then I am on "http://studio.code.org/s/#{course}"
+    And I wait to see ".user-stats-block"
+    And I wait for 10 seconds
+    And element ".user-stats-block .games:nth(#{stage.to_i - 1}) a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+  }
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
