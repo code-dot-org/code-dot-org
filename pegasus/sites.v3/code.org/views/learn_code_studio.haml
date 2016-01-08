@@ -18,10 +18,10 @@
   end
 
 #banner-slideshow
-  %a{href: "/api/hour/begin/mc"}
-    %img.banner{id: "banner-mc", src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
-  %a{href: launch_path}
-    %img.banner{id: "banner-starwars", src: "/images/starwars_banner.jpg", style: "display: none;"}
+  %a#banner-mc-link{href: "/api/hour/begin/mc"}
+    %img.banner#banner-mc{src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
+  %a#banner-starwars-link{href: launch_path}
+    %img.banner#banner-starwars{src: "/images/starwars_banner.jpg", style: "display: none;"}
 
 #learnCodeStudio.container.col-md-12
   #codeStudioCarousel.carousel.slide.multi-item-carousel
@@ -123,7 +123,7 @@
 
   // If mobile Star Wars block & banner go to blockly version
   if (window.mobilecheck()) {
-    $('#banner-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#banner-starwars-link').attr("href", "/api/hour/begin/starwarsblocks");
     $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
     $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
   }
