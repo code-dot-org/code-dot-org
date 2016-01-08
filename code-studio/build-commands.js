@@ -41,7 +41,7 @@ exports.browserify = function (config) {
 
   var fileInput = filenames.map(function (file) {
     return srcPath + file;
-  }).join(' ');
+  }).join(" \\\n    ");
 
   var extension = (shouldMinify ? '.min.js' : '.js');
 
@@ -58,10 +58,13 @@ exports.browserify = function (config) {
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
-    command + ' ' + fileInput,
+    command,
+    fileInput,
     factorStep,
     commonOutput
-  ].join(" \\\n    ");
+  ].filter(function (part) {
+    return part.length > 0;
+  }).join(" \\\n    ");
 };
 
 /**
