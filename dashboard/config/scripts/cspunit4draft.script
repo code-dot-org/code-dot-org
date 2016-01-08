@@ -5,7 +5,16 @@ data from live data APIs.'
 description_short 'Data'
 login_required 'true'
 
+stage 'Finding Trends with Visualizations'
+level 'U4L02v2 - Finding Trends'
+
 #1
+stage 'Good and Bad Data Visualizations'
+level 'U4L04v2 - Student Introduction'
+level 'GoodBadVisualizations_v1'
+level 'GoodBadVisualizations_v2'
+
+#1old
 stage 'Why Make Apps?'
 level 'U4L01 Student Lesson Introduction'
 
