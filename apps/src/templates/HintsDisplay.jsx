@@ -2,35 +2,38 @@ module.exports = React.createClass({
 
   propTypes: {
     hintReviewTitle: React.PropTypes.string.isRequired,
-    getSeenHints: React.PropTypes.func.isRequired,
-    getUnseenHints: React.PropTypes.func.isRequired,
-    recordUserViewedHint: React.PropTypes.func.isRequired,
+    seenHints: React.PropTypes.array.isRequired,
+    unseenHints: React.PropTypes.array.isRequired,
+    onUserViewedHint: React.PropTypes.func.isRequired,
     lightbulbSVG: React.PropTypes.node.isRequired,
   },
 
   getInitialState: function () {
     return {
-      seenHints: this.props.getSeenHints(),
-      unseenHints: this.props.getUnseenHints(),
-      showViewHintButton: true
+      showNextUnseenHint: false
     };
   },
 
   viewHint: function () {
-    this.props.recordUserViewedHint(this.state.unseenHints[0]);
-    var newState = this.getInitialState();
-    newState.showViewHintButton = false;
-    this.setState(newState);
+    this.props.onUserViewedHint();
+    this.setState({
+      showNextUnseenHint: true
+    });
   },
 
   render: function () {
 
+    var hintsToShow = this.props.seenHints;
+    if (this.state.showNextUnseenHint) {
+      hintsToShow = hintsToShow.concat(this.props.unseenHints[0]);
+    }
+
     var seenHints;
-    if (this.state.seenHints && this.state.seenHints.length) {
+    if (hintsToShow && hintsToShow.length) {
       seenHints = [
           <h1>{ this.props.hintReviewTitle }</h1>,
           <ul>
-            {this.state.seenHints.map(function (hint) {
+            {hintsToShow.map(function (hint) {
               return <li dangerouslySetInnerHTML={{ __html : hint.content }} style={{ marginBottom: '12px' }}/>;
             })}
           </ul>
@@ -38,7 +41,7 @@ module.exports = React.createClass({
     }
 
     var viewHintButton;
-    if (this.state.showViewHintButton && this.state.unseenHints && this.state.unseenHints.length) {
+    if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
         <button id="hint-button" onClick={ this.viewHint }>
           <span dangerouslySetInnerHTML={{ __html: this.props.lightbulbSVG }} />

@@ -166,12 +166,16 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function () {
 };
 
 AuthoredHints.prototype.getHintsDisplay = function () {
+
   var hintsDisplay = React.createElement(HintsDisplay, {
     hintReviewTitle: msg.hintReviewTitle(),
-    getSeenHints: this.getSeenHints.bind(this),
-    getUnseenHints: this.getUnseenHints.bind(this),
-    recordUserViewedHint: this.recordUserViewedHint_.bind(this),
-    lightbulbSVG: lightbulbSVG
+    seenHints: this.getSeenHints(),
+    unseenHints: this.getUnseenHints(),
+    lightbulbSVG: lightbulbSVG,
+    onUserViewedHint: function () {
+      var nextHint = this.getUnseenHints()[0];
+      this.recordUserViewedHint_(nextHint);
+    }.bind(this)
   });
 
   return hintsDisplay;
