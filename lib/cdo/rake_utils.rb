@@ -93,6 +93,11 @@ module RakeUtils
     `git status --porcelain 2>/dev/null | egrep \"^(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
+  # Gets the commit hash for the given directory
+  def self.git_latest_commit_hash(dir)
+    `git log -n 1 --format="%H" -- #{dir}`
+  end
+
   def self.ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
