@@ -10,6 +10,8 @@
 /* global Sounds */
 
 require('./videos');
+window.React = require('react');
+require('./components/*.jsx', {mode: 'expand'});
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748

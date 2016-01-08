@@ -49,6 +49,10 @@ exports.browserify = function (config) {
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
 
+  var reactifyStep = '-t reactify';
+
+  var globifyStep = '-t require-globify';
+
   var factorStep = '';
   if (shouldFactor) {
     factorStep = "-p [ factor-bundle -o '" + (shouldMinify ? 'uglifyjs ' : '') +
@@ -60,6 +64,8 @@ exports.browserify = function (config) {
 
   return [
     command,
+    reactifyStep,
+    globifyStep,
     fileInput,
     factorStep,
     commonOutput
