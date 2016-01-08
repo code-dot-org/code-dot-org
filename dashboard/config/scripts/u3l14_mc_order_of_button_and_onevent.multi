@@ -1,5 +1,5 @@
 name 'U3L14 - MC order of button and onEvent'
-title 'Buttons and Event Handlers'
+title 'Multiple Choice: Buttons and Event Handlers'
 description ''
 question 'Does the order in which the code for a button and the code for its event handler appear within the program matter?'
 wrong 'Yes, the button, with its ID, must appear in the code AFTER the event handler.'

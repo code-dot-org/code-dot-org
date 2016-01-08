@@ -38,8 +38,7 @@ var renderApp = function(app, req, res) {
       levelId: req.query.level,
       skinId: req.query.skin,
       debugInterpreter: req.query.debugInterpreter,
-      baseUrl: baseUrl(req),
-      cacheBust: false // or 'test-string'
+      baseUrl: baseUrl(req)
     }
   });
 };
@@ -66,6 +65,10 @@ app.get('/flappy', function(req, res) {
 
 app.get('/craft', function(req, res) {
   renderApp('craft', req, res);
+});
+
+app.get('/gamelab', function(req, res) {
+  renderApp('gamelab', req, res);
 });
 
 app.get('/studio', function(req, res) {

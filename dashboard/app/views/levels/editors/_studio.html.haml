@@ -1,3 +1,5 @@
+- content_for(:head) do
+  = javascript_include_tag 'js/levelbuilder_studio'
 .field
   = f.label :first_sprite_index, 'First sprite index'
   %p Integer representing which sprite to use for the first character. Default is 0.
@@ -47,15 +49,3 @@
 .field
   = f.label :sprites_hidden_to_start, 'Sprites hidden to start'
   = boolean_check_box f, :sprites_hidden_to_start
-
-:javascript
-  CodeMirror.fromTextArea($('#level_success_condition').get(0), {
-    mode: 'javascript',
-    viewportMargin: Infinity,
-    matchBrackets: true
-  });
-  CodeMirror.fromTextArea($('#level_failure_condition').get(0), {
-    mode: 'javascript',
-    viewportMargin: Infinity,
-    matchBrackets: true
-  });

@@ -38,7 +38,7 @@ Quarter 4: Saturday, April 2, 2016
 Breakfast and lunch will be served.
 
 
-**November 21st Location**
+**Location**
 
 [Innevation Center<br/>
 Collaboration Station - 3rd Floor<br/>
@@ -59,66 +59,44 @@ Snacks
 Water
 
 
-### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.))
+
+**Save the Dates**
+
+Monday, June 6th - Wednesday, June 8th
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 
 
 [**Back to the top**](#top)
-
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. 
-
-
-### Counselors##
-
-**Save the date**
-
-Tuesday, November 17, 2015 <br/>
-10:00am - 12:00pm
-
-**Location**
-
-[Instructional Design and Professional Learning Division<br/>
-Room 118<br/>
-3950 S. Pecos-Mcleod<br/>
-Las Vegas, NV  89121](https://www.google.com/maps/place/3950+Pecos-McLeod+Interconnect,+Las+Vegas,+NV+89121/@36.1177178,-115.1026406,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c529f2ba7afb:0xf580f57bb4d403b2)
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Tuesday, November 17, 2015 <br/>
-7:00am - 9:00am
-
-**Location**
-
-[Instructional Design and Professional Learning Division<br/>
-Room 118<br/>
-3950 S. Pecos-Mcleod<br/>
-Las Vegas, NV  89121](https://www.google.com/maps/place/3950+Pecos-McLeod+Interconnect,+Las+Vegas,+NV+89121/@36.1177178,-115.1026406,17z/data=!3m1!4b1!4m2!3m1!1s0x80c8c529f2ba7afb:0xf580f57bb4d403b2)
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
-
-
-
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.
 

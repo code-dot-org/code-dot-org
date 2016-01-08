@@ -7,6 +7,8 @@ nav: how_to_nav
 
 # How to teach one Hour of Code in after-school
 
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
 ## 1) Promote your Hour of Code
 Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 

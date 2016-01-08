@@ -1,5 +1,6 @@
 ---
 title: CS in Science Educator Application
+nav: plc_nav_science
 ---
 
 # Computer Science in Science Application 

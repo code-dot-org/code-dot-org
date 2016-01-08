@@ -703,6 +703,9 @@ class UserTest < ActiveSupport::TestCase
       section = create :section, script: Script.find_by_name('course1')
       create :follower, student_user: student, section: section, created_at: assigned_date
 
+      # pretend we created this script before we had the callback to create user_scripts
+      UserScript.last.destroy
+
       assert_creates(UserScript) do
         student.backfill_user_scripts
       end
@@ -985,5 +988,53 @@ class UserTest < ActiveSupport::TestCase
     assert admin.authorized_teacher?
   end
 
+  test "can_edit_account?" do
+    # a student who only logs in with picture accounts cannot edit their account
+
+    assert create(:student).can_edit_account?
+    assert create(:student, age: 4).can_edit_account?
+    assert create(:teacher).can_edit_account?
+
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+    assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+    assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+
+    student_without_password = create(:student, encrypted_password: '')
+
+    # join picture section
+    create(:follower, student_user: student_without_password, section: picture_section)
+    student_without_password.reload
+    assert !student_without_password.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_without_password, section: word_section)
+    student_without_password.reload
+    assert student_without_password.can_edit_account? # only in a picture section
+
+    student_with_password = create(:student, encrypted_password: 'xxxxxx')
+
+    # join picture section
+    create(:follower, student_user: student_with_password, section: picture_section)
+    student_with_password.reload
+    assert student_with_password.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_with_password, section: word_section)
+    student_with_password.reload
+    assert student_with_password.can_edit_account? # only in a picture section
+
+    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
+
+    # join picture section
+    create(:follower, student_user: student_with_oauth, section: picture_section)
+    student_with_oauth.reload
+    assert student_with_oauth.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_with_oauth, section: word_section)
+    student_with_oauth.reload
+    assert student_with_oauth.can_edit_account? # only in a picture section
+  end
 
 end

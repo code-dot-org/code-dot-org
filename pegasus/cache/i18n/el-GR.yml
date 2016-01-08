@@ -30,6 +30,9 @@
   twentyhours_text: Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για
     τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο
     μάθημα.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14
     Δεκεμβρίου 2014<br/>
   hoc2014_students: Μαθητές
@@ -329,8 +332,8 @@
   starwars_javascript_start_button: Δοκιμάστε τώρα
   starwars_blocks_title: μπλοκ
   starwars_blocks_description: Χρησιμοποιήστε μπλοκ με «σύρε και άφησε».
-  starwars_blocks_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης,
-    έξυπνα τηλέφωνα, tablet | Ηλικίες 6-10
+  starwars_blocks_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης, έξυπνα
+    κινητά, tablets | Ηλικίες 6-10
   starwars_blocks_start_button: Δοκιμάστε τώρα
   starwars_watch_videos: Πριν ξεκινήσετε, δείτε ένα βίντεο παρακίνησης
   starwars_speak_languages: Μιλάτε άλλη γλώσσα;
@@ -343,8 +346,8 @@
     Άλεξ σε μια περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft.
   mc_gradelevel: Ηλικίες 6+
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
-  mc_specs: Πολλές γλώσσες (προσεχώς) | Σύγχρονα προγράμματα περιήγησης και tablets
-    | Ηλικιών 6 +
+  mc_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets | Ηλικίες
+    6+
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
   volunteer_engineer_submission_title: Εμπνεύστε μαθητές και προσφέρετε εθελοντική
     εργασία για την Ώρα του Κώδικα.
@@ -375,6 +378,7 @@
     περισσότερα</a> για τη διοργάνωση της δικής σας εκδήλωσης της Ώρας του Κώδικα
     και βρείτε εθελοντές από τον <a href="%{volunteer_local}">χάρτη εθελοντών</a>
     μας.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Οι πληροφορίες μοιράζονται με τους
     καθηγητές στο χάρτη εθελοντή
   volunteer_engineer_submission_field_name: Όνομα
@@ -715,12 +719,20 @@
   dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
   dashboard_announcements: Ανακοινώσεις
   dashboard_announce_view_all: Προβολή όλων
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Μάθετε περισσότερα
   dashboard_announce_hoc: <b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash;
     κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's
     Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά
     την περίοδο 7-13 Δεκεμβρίου.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε!
+    Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας:
+    Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς
+    να προγραμματίσεις τα παιχίδια Ιce Age και Gumball.'
   code_hoc_coming: Η ώρα του κώδικα έφτασε  - 8-14 Δεκεμβρίου!
   code_sign_up: Εγγραφείτε για να συμμετάσχετε κατά τη διάρκεια της εκπαιδευτικής
     εβδομάδας για την Επιστήμη της Πληροφορικής
@@ -836,12 +848,12 @@
   playlab_name: Εργαστήριο Παιχνιδιού
   infinity_name: αιώνιο εργαστήρι παιχνιδιού
   artist_name: Καλλιτέχνης
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: 'Διαγωνισμός προγραμματισμου: Το νησί μυστήριο'
+  allcancode_name: Τρέξε Μάρκο!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: ' Κουτί Νησί '
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: Τα 10 λεπτά του κώδικα
   teacherled_name: Σχέδια Μαθήματος για την Ώρα Κώδικα από το Teacher Led
   codeorg_gradelevel: Ηλικίες 4-104
   codeintl_gradelevel: Ηλικίες 4-104
@@ -887,12 +899,12 @@
   infinity_gradelevel: Ηλικίες 4-104
   artist_gradelevel: Ηλικίες 4-104
   monstercoding_gradelevel: Ηλικίες 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Ηλικίες 5-10
+  csfirst_gradelevel: Ηλικίες 9-14
   boxisland_gradelevel: Δημοτικό
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Ηλικίες 12-14
+  texasinstruments_gradelevel: Ηλικίες 13-16
+  teacherled_gradelevel: Ηλικίες 5+
   codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   thinkersmithspanish_platformtext: Χωρίς σύνδεση
@@ -938,8 +950,8 @@
   frozen_platformtext: Σύγχρονα προγράμματα περιήγησης + ταμπλέτες
   starwars_platformtext: Σύγχρονα προγράμματα περιήγησης + ταμπλέτες
   playlab_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Σύγχρονα προγράμματα περιήγησης, iOS, Android
+  allcancode_platformtext: Σύγχρονα προγράμματα περιήγησης, iOS, Android
   csfirst_platformtext: Σύγρονα Προγράμματα περιήγησης
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Σύγρονα Προγράμματα περιήγησης
@@ -1014,19 +1026,20 @@
   infinity_shortdescription: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
     ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
   artist_shortdescription: Σχεδιάστε καταπληκτικές εικόνες και σχέδια με τον Καλλιτέχνη!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
+  monsterocding_shortdescription: Μια πολύχρωμη αυτο-καθοδηγούμενη περιπέτεια προγραμματισμού
+    για παιδιά.
+  allcancode_shortdescription: Ενα καθηλωτική παιχνίδι - Οδήγησε τον Marco με μια
+    οπτική γλώσσα προγραμματισμού.
+  csfirst_shortdescription: Ζωντανεψε μια ιστορία για δύο χαρακτήρες στον ωκεανό.
+    Πρόσθεσε το δικό σου στυλ!
+  boxisland_shortdescription: Ταξίδευψε με τον κωδικό σου στο κουτί νησί με την γενναία
+    Hiro.
+  codesters_shortdescription: Δημιούρησε το δικό σου παιχνίδι, κινούμενες εικόνες
+    και έργα τέχνης χρησιμοποιώντας την Python.
   texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
     calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  teacherled_shortdescription: Εμπνεύστου για να σχεδιάσεις την δική σου εκδήλωση
+    για τη 'Ωρα του Κώδικα με τα πιο κάτω σχέδια μαθήματος.
   codeorg_longdescription: Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα

@@ -27,7 +27,6 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@cdo/shared": "file:../shared/js",
     "Base64": "0.3.0",
     "babelify": "^6.3.0",
     "browserify": "10.2.4",
