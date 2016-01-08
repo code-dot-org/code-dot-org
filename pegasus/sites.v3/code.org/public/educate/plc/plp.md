@@ -1,5 +1,5 @@
 ---
-title: CS Principles Professional Learning Program
+title: Code.org Professional Learning Partner Program
 nav: plc_plp_nav
 ---
 # Professional Learning Partner Program #
@@ -26,7 +26,7 @@ Below is a list of program commitments:
 - Funding for your work in the initial year(s)
 - Marketing your organization as the official Code.org Professional Learning Partner for your region 
 
-<a href="/educate/plc/plp#partners" target=_blank>Click here</a> to see a more detailed term sheet with program details.
+<a href="/educate/plc/plp-terms" target=_blank>Click here</a> to see a more detailed term sheet with program details.
 
  
 ## <a name="partners"></a>Where does Code.org need partners?
