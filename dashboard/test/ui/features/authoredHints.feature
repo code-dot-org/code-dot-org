@@ -20,7 +20,7 @@ Scenario: View Authored Hints
   And I wait to see a dialog titled "Puzzle 2 of 2"
 
   # No hints in the instructions dialog yet
-  Then element ".authored-hints" does not exist
+  Then element ".authored-hints ul" does not exist
   And element ".qtip" is not visible
 
   # View the first hint
@@ -36,9 +36,9 @@ Scenario: View Authored Hints
   When I view the instructions and old hints
   And I wait to see a dialog titled "Puzzle 2 of 2"
 
-  Then element ".authored-hints" is visible
-  And element ".authored-hints" contains text "This is the first hint."
-  And element ".authored-hints" contains text "It has some basic markup"
+  Then I see jquery selector .authored-hints ul
+  And element ".authored-hints ul" contains text "This is the first hint."
+  And element ".authored-hints ul" contains text "It has some basic markup"
 
   # View the second hint verify that it contains an image
   When I close the dialog

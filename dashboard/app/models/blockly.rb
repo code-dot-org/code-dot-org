@@ -119,6 +119,19 @@ class Blockly < Level
     self.class.pretty_print(xml_string)
   end
 
+  def self.count_xml_blocks(xml_string)
+    unless xml_string.blank?
+      xml = Nokogiri::XML(xml_string, &:noblanks)
+      # The structure of the XML will be
+      # <document>
+      #   <xml>
+      #     ... blocks ...
+      # So the blocks will be the children of the first child of the document
+      return xml.try(:children).try(:first).try(:children).try(:length) || 0
+    end
+    0
+  end
+
   def self.convert_toolbox_to_category(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
