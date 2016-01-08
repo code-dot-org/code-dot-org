@@ -1,9 +1,19 @@
+/**
+ * @overview React Component for displaying Authored Hints in the
+ * Instructions dialog. Any hints the user has already requested to see
+ * are listed, along with a button to see the next hint.
+ * Pressing the button adds the next hint (or the first hint if none
+ * have previously been viewed) to the list of hints and removes the
+ * button.
+ * Closing the instructions and re-opening them will reset this
+ * Component, allowing the button to be pressed once more.
+ */
 module.exports = React.createClass({
 
   propTypes: {
     hintReviewTitle: React.PropTypes.string.isRequired,
-    seenHints: React.PropTypes.array.isRequired,
-    unseenHints: React.PropTypes.array.isRequired,
+    seenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+    unseenHints: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
     onUserViewedHint: React.PropTypes.func.isRequired,
     lightbulbSVG: React.PropTypes.node.isRequired,
   },
@@ -22,7 +32,6 @@ module.exports = React.createClass({
   },
 
   render: function () {
-
     var hintsToShow = this.props.seenHints;
     if (this.state.showNextUnseenHint) {
       hintsToShow = hintsToShow.concat(this.props.unseenHints[0]);
