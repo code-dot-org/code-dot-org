@@ -1,108 +1,115 @@
 name 'GoodBadVisualizations_v1'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-## Data Visualization Evaluation - Group A
+## Good and Bad Data Visualization 
+## Collection A
 
-# One
+NOTE: if you need to see a visualization more clearly click on the **Source** link below any image to take you to the original.
+
+# Visualization One (1)
 
 ![](http://thumbnails-visually.netdna-ssl.com/big-data_50291c3b16257_w1500.jpg)
 
-Source: http://thumbnails-visually.netdna-ssl.com/big-data_50291c3b16257_w1500.jpg
+[Source](http://thumbnails-visually.netdna-ssl.com/big-data_50291c3b16257_w1500.jpg)
 
 * * *
-# Two
+# Visualization Two (2)
 
 ![](http://36.media.tumblr.com/db23f3d43c6636d574ac10fec280cd85/tumblr_mt85inmKz31sgh0voo1_1280.png)
 
-Source: http://viz.wtf/image/62079504741
+[Source](http://viz.wtf/image/62079504741)
 * * *
 
-# Three
+# Visualization Three (3)
 
 ![](https://images.code.org/905317222add0b3df038d9b007e2ce5d-image-1452178393436.gif)
 
-See it live: http://emojitracker.com/
+See it live for more.
+[Source](http://emojitracker.com/)
 
 * * *
-# Four
+# Visualization Four (4)
 
 ![](http://40.media.tumblr.com/ef059c26861298ec50ce687220bdbe2f/tumblr_ms9qpsbZDI1sgh0voo1_540.png)
 
-Source: http://viz.wtf/image/59889023145
+[Source](http://viz.wtf/image/59889023145)
 
 * * *
-# Five
+# Visualization Five (5)
 
 ![](http://b.fastcompany.net/multisite_files/fastcompany/inline/2014/04/3029318-inline-i-changingface2.jpg)
 
-Source: http://www.fastcodesign.com/3029318/design-crime/the-worst-infographic-of-2014-so-far
+[Source](http://www.fastcodesign.com/3029318/design-crime/the-worst-infographic-of-2014-so-far)
 
 * * *
-# Six
+# Visualization Six (6)
 
 ![https://klientboost.com/wp-content/uploads/2013/05/3.gif](https://klientboost.com/wp-content/uploads/2013/05/3.gif)
 
-Source: https://klientboost.com/wp-content/uploads/2013/05/3.gif
+[Source](https://klientboost.com/wp-content/uploads/2013/05/3.gif)
 
 * * *
-# Seven
+# Visualization Seven (7)
 
 <iframe src="https://player.vimeo.com/video/82038912" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/82038912">Midday Traffic Time Collapsed and Reorganized by Color: San Diego Study #3</a> from <a href="https://vimeo.com/cysfilm">Cy Kuckenbaker</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 * * *
-# Eight
+# Visualization Eight (8)
 
 ![](https://images.code.org/ca0217a4c037e1b092328c4da7c12390-image-1452178552384.png)
 
-Source: http://www.easel.ly/create/?id=https://s3.amazonaws.com/easel.ly/all_easels/71875/inforgram&key=pri
+[Source](http://www.easel.ly/create/?id=https://s3.amazonaws.com/easel.ly/all_easels/71875/inforgram&key=pri)
 
 * * *
-# Nine
+# Visualization Nine (9)
 
 ![](https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/7/31/1375299821023/Phones.png?w=1920&q=85&auto=format&sharp=10&s=c079489e0696414c08f8e3390fc6cc0a)
 
-Source: http://www.theguardian.com/news/datablog/gallery/2013/aug/01/16-useless-infographics#img-6
+[Source](http://www.theguardian.com/news/datablog/gallery/2013/aug/01/16-useless-infographics#img-6)
 
 * * *
-# Ten
+# Visualization Ten (10)
 
 ![](http://flowingdata.com/wp-content/uploads/2014/02/Chicago.png)
 
 More info about this here:
-http://flowingdata.com/2014/02/05/where-people-run/
+[Source](http://flowingdata.com/2014/02/05/where-people-run/)
 
 * * *
-# Eleven
+# Visualization Eleven (11)
 
 ![](http://41.media.tumblr.com/019f6cdce30f6f5bfe831330d4645109/tumblr_mskmy2SCeY1sgh0voo1_1280.png)
 
-Source: http://viz.wtf/image/60570803985
+[Source](http://viz.wtf/image/60570803985)
 
 * * *
-# Twelve
+# Visualization Twelve (12)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4gIhRkCcD4U" frameborder="0" allowfullscreen></iframe>
 
 * * *
-# Thirteen
+# Visualization Thirteen (13)
+
 ![](http://40.media.tumblr.com/7ea44ecc53e0e10094f3079e047c4450/tumblr_ms5rtriyEJ1sgh0voo1_1280.png)
 
-Source: http://viz.wtf/image/59428834118
+[Source](http://viz.wtf/image/59428834118)
 
 
 * * *
-# Fourteen
+# Visualization Fourteen (14)
 ![](http://40.media.tumblr.com/a2483dd577e03ba943208ee72bc1a0d9/tumblr_ms5rapjJq91sgh0voo1_1280.png)
 
-Source: http://viz.wtf/image/59427832631
+[Source](http://viz.wtf/image/59427832631)
 
 
 * * *
-# Fifteen
+# Visualization Fifteen (15)
 ![](http://40.media.tumblr.com/1e404b8cf06821c3ba6d8e899faac707/tumblr_ms5qggfGUV1sgh0voo1_1280.png)
 
-http://viz.wtf/image/59426240748
+[Source](http://viz.wtf/image/59426240748)
 
 MARKDOWN
