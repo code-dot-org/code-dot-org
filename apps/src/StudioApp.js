@@ -32,7 +32,7 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/instructions.jsx');
+var Instructions = require('./templates/Instructions.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
