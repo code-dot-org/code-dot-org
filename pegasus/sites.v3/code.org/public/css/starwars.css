@@ -76,18 +76,6 @@
   width: 100%
 }
 
-@media screen and (min-width: 970px) {
-  .img-container {
-    min-height: 334px;
-  }
-}
-
-@media screen and (min-width: 513px) and (max-width: 970px) {
-  .img-container {
-    min-height: 202px;
-  }
-}
-
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .starwars-tutorial {
     width: 50%;
@@ -123,11 +111,6 @@
     position: static;
     color: #00adbc;
     text-align: center;
-  }
-
-  .starwars-js-tutorial {
-    /* Hide the js tutorial when width too small */
-    display: none;
   }
 
   .starwars-blocks-tutorial {
