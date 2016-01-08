@@ -127,9 +127,7 @@ class Blockly < Level
       #   <xml>
       #     ... blocks ...
       # So the blocks will be the children of the first child of the document
-      if xml.children && xml.children.first && xml.children.first.children
-        return xml.children.first.children.length
-      end
+      return xml.try(:children).try(:first).try(:children).try(:length) || 0
     end
     0
   end
