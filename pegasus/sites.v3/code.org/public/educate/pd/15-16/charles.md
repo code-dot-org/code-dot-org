@@ -128,8 +128,6 @@ Milestone Complete!
 
 Milestone Complete!
 
-
-
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
 Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.

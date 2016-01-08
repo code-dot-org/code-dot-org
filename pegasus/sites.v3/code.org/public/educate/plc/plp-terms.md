@@ -1,5 +1,5 @@
 ---
-title: CS Principles Professional Learning Program
+title: Code.org Professional Learning Partner Program
 nav: plc_plp_nav
 ---
 # Professional Learning Partner Term Sheet #
@@ -16,7 +16,7 @@ nav: plc_plp_nav
 	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY)
 - Organize and host quality, local PD for Code.org’s District Partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators
 	- In Year 1 (2016-17) this is for the (AP) Computer Science Principles course. 
-	- In Year 2 (2017-18) this is for <a href="/educate/csp" target=_blank>CS Principles</a> AND <a href="/educate/csd" target=_blank>CS Discoveries</a>.	
+	- In Year 2 (2017-18) this is for <a href="/educate/plc/csp" target=_blank>CS Principles</a> AND <a href="/educate/csd" target=_blank>CS Discoveries</a>.	
 	- In initial years, this is for four 1-day professional learning workshops during the school year per course, to provide teachers who have attended our summer conferences with continuing professional learning during the school year. Timing of workshops could be adjusted to local needs.
 	- In future years we hope your commitment can eventually include taking full responsibility of all of Code.org’s professional learning programs in the region
 - Contract with and compensate local Code.org-accredited facilitators to lead the professional learning workshops
@@ -32,7 +32,7 @@ organize informal local meetups for educators, ideally together with a local uni
 - Host the Facilitation Summit in TBD.
 - Pay for round-trip airfare, hotel, ground transportation to and from the airport, and meals during the Facilitation Summit and the summer professional development workshop in Year 1 of the partnership.
 - Host the 5-day summer professional development workshop for CS Principles starting in Year 1 of the partnership, and for the CS Discoveries starting in Year 2.
-- For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (see example budget here). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
+- For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=0" target=_blank>see example budget here</a>). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
   - For a cohort of 10 or fewer teachers, the funding would amount to $4,000 for overall costs + $160 per teacher in the cohort.
   - For a cohort of more than 10 teachers, the funding would amount to $6,000 for overall costs + $160 per teacher in the cohort.
   - For urban districts, there would be a 25% multiplier added to the costs.

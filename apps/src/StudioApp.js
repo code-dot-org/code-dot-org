@@ -32,6 +32,7 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
+var Instructions = require('./templates/Instructions.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -345,7 +346,7 @@ StudioApp.prototype.init = function(config) {
   if (config.showInstructionsWrapper) {
     config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructions_(config.level, shouldAutoClose);
+      this.showInstructions_(config.level, shouldAutoClose, false);
     }, this));
   }
 
@@ -417,7 +418,7 @@ StudioApp.prototype.init = function(config) {
     var bubble = document.getElementById('bubble');
 
     this.authoredHintsController_.display(promptIcon, bubble, function () {
-      this.showInstructions_(config.level, false);
+      this.showInstructions_(config.level, false, true);
     }.bind(this));
   }
 
@@ -868,7 +869,7 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
-StudioApp.prototype.showInstructions_ = function(level, autoClose) {
+StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
   var headerElement;
@@ -892,16 +893,21 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     }
   }
 
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  var instructionsContent = React.createElement(Instructions, {
     puzzleTitle: puzzleTitle,
     instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
-    hintReviewTitle: msg.hintReviewTitle(),
-    authoredHints: this.authoredHintsController_.getSeenHints(),
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
-    aniGifURL: level.aniGifURL
+    aniGifURL: level.aniGifURL,
+    authoredHints: authoredHints
   });
+  React.render(instructionsContent, instructionsDiv);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -1472,7 +1478,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructions_.bind(this, config.level);
+  this.showInstructions = this.showInstructions_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
