@@ -18,7 +18,7 @@ body {
 
 #pageheader {
   width: 100%; 
-  background-color: #000;
+  background-color: rgba(0, 178, 192, 0.5);
   margin: 40px 0 0 0;
   height: 4em;
 }
