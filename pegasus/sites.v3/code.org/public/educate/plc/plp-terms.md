@@ -1,5 +1,5 @@
 ---
-title: CS Principles Professional Learning Program
+title: Code.org Professional Learning Partner Program
 nav: plc_plp_nav
 ---
 # Professional Learning Partner Term Sheet #
@@ -32,7 +32,7 @@ organize informal local meetups for educators, ideally together with a local uni
 - Host the Facilitation Summit in TBD.
 - Pay for round-trip airfare, hotel, ground transportation to and from the airport, and meals during the Facilitation Summit and the summer professional development workshop in Year 1 of the partnership.
 - Host the 5-day summer professional development workshop for CS Principles starting in Year 1 of the partnership, and for the CS Discoveries starting in Year 2.
-- For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (see example budget here). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
+- For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=0" target=_blank>see example budget here</a>). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
   - For a cohort of 10 or fewer teachers, the funding would amount to $4,000 for overall costs + $160 per teacher in the cohort.
   - For a cohort of more than 10 teachers, the funding would amount to $6,000 for overall costs + $160 per teacher in the cohort.
   - For urban districts, there would be a 25% multiplier added to the costs.
