@@ -178,6 +178,9 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
+  # Hoc feature flags control panel.
+  get '/admin/hoc', :to => 'hoc_features#show', as: 'hoc'
+
   # one-off internal reports
   get '/admin/temp/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
@@ -208,8 +211,6 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
-  # Scale flags control panel.
-  get '/admin/scale', :to => 'scale#show', as: 'scale_show'
 
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
   get '/stats/students', to: redirect_to_teacher_dashboard

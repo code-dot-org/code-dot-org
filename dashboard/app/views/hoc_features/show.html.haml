@@ -1,0 +1,59 @@
+:css
+  #hoc_features input {margin-top: 15px}
+  #hoc_features td {vertical-align: top}
+  #hoc_features h3 {margin: 0px; padding: 0px}
+  #hoc_features p {
+    font-size: 120%;
+  }
+  #hoc_features tr.normal:hover {
+    background-color: #f5fff5
+  }
+  #hoc_features tr.high:hover {
+    background-color: #fffff5
+  }
+  #hoc_features tr.emergency:hover {
+    background-color: #fff5f5
+  }
+
+
+%h1 HOC tutorial features
+
+= form_tag(method: :post) do
+  %table{id: 'hoc_features', cellpadding: '8'}
+    %tr.normal
+      %td
+        = radio_button_tag 'features', 'level', 'Normal', {id: 'normal'}
+      %td
+        %label{for: 'normal'}
+          %h3 Normal
+          %p All features enabled.
+    %tr.high
+      %td
+        = radio_button_tag 'features', 'level', 'High-scale', {id: 'high-scale'}
+      %td
+        %label{for: 'high-scale'}
+          %h3 High-scale
+          %p Progress saved only on sharable levels.
+          %p Puzzle rating and hints disabled.
+          %p Sampled hoc_activity logging (10%).
+          %p Longer page caching.
+    %tr.emergency
+      %td
+        = radio_button_tag 'features', 'level', 'Emergency', {id: 'emergency'}
+      %td
+        %label{for: 'emergency'}
+          %h3 Emergency
+          %p Same as High-scale, plus sharing disabled.
+    %tr
+      %td
+        = radio_button_tag 'features', 'level', 'Custom', {id: 'custom', disabled: true}
+      %td
+        %label{for: 'custom'}
+          %h3 Custom features
+          %p
+            = link_to 'Show details', '#'
+          %p
+    %tr
+      %td
+      %td
+        = submit_tag
