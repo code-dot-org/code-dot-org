@@ -150,13 +150,15 @@ exports.sassCommand = function (srcPath, buildPath, files, includePaths, shouldM
   var extension = (shouldMinify ? '.min.css' : '.css');
   var includePathArgs = includePaths.map(function (path) {
     return '--include-path ' + path;
-  }).join(' ');
+  }).join(" \\\n    ");
 
   return files.map(function (file) {
-    return command + ' ' +
-        includePathArgs + ' ' +
-        srcPath + file  + ' ' +
-        buildPath + path.basename(file, '.scss') + extension;
+    return [
+        command,
+        includePathArgs,
+        srcPath + file,
+        buildPath + path.basename(file, '.scss') + extension
+    ].join(" \\\n    ");
   }).join(" && \\\n");
 };
 
