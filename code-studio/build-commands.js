@@ -97,24 +97,24 @@ exports.ensureDirectoryExists = function (dir) {
  * @param {string[]} commands - array of shell commands to be executed in sequence.
  */
 exports.execute = function (commands) {
-  // Run build
-  var buildCommands = commands.join(" && \\\n");
-  console.log(buildCommands);
+  commands.forEach(function (command) {
+    console.log(command);
 
-  try {
-    // For documentation on synchronous execution of shell commands from node scripts, see:
-    // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-    var result = child_process.execSync(buildCommands, {
-      env: _.extend({}, process.env, {
-        PATH: './node_modules/.bin:' + process.env.PATH
-      }),
-      stdio: 'inherit'
-    });
-  } catch (e) {
-    console.log("\nError: " + e.message);
-    warnIfWrongNodeVersion();
-    process.exit(e.status || 1);
-  }
+    try {
+      // For documentation on synchronous execution of shell commands from node scripts, see:
+      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
+      var result = child_process.execSync(command, {
+        env: _.extend({}, process.env, {
+          PATH: './node_modules/.bin:' + process.env.PATH
+        }),
+        stdio: 'inherit'
+      });
+    } catch (e) {
+      console.log("\nError: " + e.message);
+      warnIfWrongNodeVersion();
+      process.exit(e.status || 1);
+    }
+  });
 };
 
 
@@ -136,8 +136,8 @@ exports.logBoxedMessage = function (message) {
  * @param {string} buildPath - Path to root of output directory, absolute or
  *        relative to execution path for this script (which is the code-studio
  *        folder for this build system), with trailing slash.
- * @param {string[]} files - List of files to build, given as paths rooted at
- *        the srcPath given.  Each will map to an output file.
+ * @param {string} file - SCSS file to build, given as a path rooted at
+ *        the srcPath given.  Maps to an output file with a corresponding name.
  * @param {string[]} includePaths - List of paths to search for files included
  *        via scss import directives, rooted at the working directory, with NO
  *        trailing slash.
@@ -145,21 +145,19 @@ exports.logBoxedMessage = function (message) {
  *        output files (with .min.css extensions) instead of unminified output.
  * @returns {string}
  */
-exports.sassCommand = function (srcPath, buildPath, files, includePaths, shouldMinify) {
+exports.sassCommand = function (srcPath, buildPath, file, includePaths, shouldMinify) {
   var command = 'node-sass' + (shouldMinify ? ' --output-style compressed' : '');
   var extension = (shouldMinify ? '.min.css' : '.css');
   var includePathArgs = includePaths.map(function (path) {
     return '--include-path ' + path;
   }).join(" \\\n    ");
 
-  return files.map(function (file) {
-    return [
-        command,
-        includePathArgs,
-        srcPath + file,
-        buildPath + path.basename(file, '.scss') + extension
-    ].join(" \\\n    ");
-  }).join(" && \\\n");
+  return [
+    command,
+    includePathArgs,
+    srcPath + file,
+    buildPath + path.basename(file, '.scss') + extension
+  ].join(" \\\n    ");
 };
 
 /**
