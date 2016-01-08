@@ -46,9 +46,10 @@ end
 def valid?(data)
   total = parse_int_or_nil data['students_number_total_s']
   girls = parse_int_or_nil data['students_number_girls_s']
-  ethnic = parse_int_or_nil data['students_number_ethnic_s']
+  ethnic = parse_int_or_nil data['students_number_ethnicity_s']
 
   return false if total.nil? || girls.nil? || ethnic.nil?
+  return false if total < 0 || girls < 0 || ethnic < 0
   return false if total > MAX_STUDENTS || girls > MAX_STUDENTS || ethnic > MAX_STUDENTS
   return false if girls > total || ethnic > total
 
