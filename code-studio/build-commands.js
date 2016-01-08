@@ -2,6 +2,7 @@
 'use strict';
 
 var _ = require('lodash');
+var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 
@@ -124,7 +125,7 @@ exports.execute = function (commands) {
  */
 exports.logBoxedMessage = function (message) {
   var bar = '+' + _.repeat('-', message.length + 2) + '+';
-  console.log(bar + "\n| " + message + " |\n" + bar + "\n");
+  console.log(chalk.bold.green(bar + "\n| " + chalk.white(message) + " |\n" + bar + "\n"));
 };
 
 /**
