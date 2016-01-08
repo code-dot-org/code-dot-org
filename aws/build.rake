@@ -15,6 +15,7 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
+require 'cdo/build_package'
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -431,3 +432,79 @@ multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack
 $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]
+
+# Attempts to get package from s3 (if necessary). Returns true if we now have
+# the up to date package.
+def get_package(package_name, source_location, package_location)
+  commit_hash = RakeUtils.git_latest_commit_hash source_location
+  puts commit_hash
+
+  # download from s3 into package_location
+  sync = `aws s3 sync s3://#{PACKAGE_DIR}/#{package_name}/#{commit_hash} #{package_location}/ --delete`
+  puts sync
+  puts '---'
+  puts sync.length
+
+  # if local copy of package matches hash, we're done
+
+  # try to get package from s3, in which case we move it into expected location
+
+  # otherwise we failed, and depending on our environment we need to build or fail
+end
+
+# TODO - think about dev scenario (which i dont think ever goes through build.rake)
+# TODO - handle s3 failures somewhere
+
+def commit_hash(source_location)
+  RakeUtils.git_latest_commit_hash source_location
+end
+
+def remote_bucket(package_name, commit_hash)
+  "s3://#{PACKAGE_DIR}/#{package_name}/#{commit_hash}"
+end
+
+def log_cmd(cmd)
+  puts cmd
+  result = `#{cmd}`
+  puts result
+  result
+end
+
+# Uploads a package to S3, or if said package already exists, validates that it
+# is identical
+def upload_package(package_name, commit_hash, package_location)
+  # ls to see if we already have a package
+  result = log_cmd("aws s3 ls #{remote_bucket(package_name, commit_hash)}")
+  package_exists = result.length > 0
+
+  # If the package already exists, that means a different environment already
+  # uploaded it. In that case, we sync with --dryrun so that we can validate
+  # our output is identical
+  puts 'Validating package...' if package_exists
+  result = log_cmd("aws --delete #{'--dryrun' if package_exists} s3 sync #{package_location} #{remote_bucket(package_name, commit_hash)}")
+
+  raise "Shouldnt have any differences" if package_exists && result.length > 0
+end
+
+def create_or_upload_package(package_name, source_location, package_location)
+  return if get_package(package_name, source_location, package_location)
+
+  raise "Can't create package #{package_name} on production" if rack_env?(:production)
+
+  # do our build
+
+  # upload_package package_name
+end
+
+task 'brent' do
+  commit_hash = commit_hash(code_studio_dir)
+  upload_package('code-studio', commit_hash, dashboard_dir('public', 'code-studio-package'))
+  # create_or_upload_package('code-studio', code_studio_dir, dashboard_dir('public', 'code-studio-package'))
+  # commit_hash = RakeUtils.git_latest_commit_hash code_studio_dir
+
+
+  # has_package = BuildPackage.has_package?('code-studio', commit_hash)
+
+  # if we have the package on s3
+
+end
