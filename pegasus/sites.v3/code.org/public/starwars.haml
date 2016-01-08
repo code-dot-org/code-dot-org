@@ -61,7 +61,7 @@ social:
 :javascript
 
   $(document).ready(function() {
-    if (!window.mobilecheck()) {
+    if (!window.mobilecheck() && "#{request.locale}" == "en-US") {
       $('.starwars-js-tutorial').show();
     }
   });
