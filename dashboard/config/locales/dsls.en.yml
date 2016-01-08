@@ -464,6 +464,9 @@ en:
       GoodBadVisualizations_v1:
         description here: description here
         title: title
+      GoodBadVisualizations_v2:
+        description here: description here
+        title: title
       Hour of Code test content: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
@@ -1014,10 +1017,16 @@ en:
       U4L02 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L02v2 - Finding Trends:
+        description here: description here
+        title: title
       U4L03 Student Lesson Introduction:
         description here: description here
         title: title
       U4L04 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L04v2 - Student Introduction:
         description here: description here
         title: title
       U4L05 Student Lesson Introduction:
