@@ -145,7 +145,7 @@ exports.logBoxedMessage = function (message) {
  *        output files (with .min.css extensions) instead of unminified output.
  * @returns {string}
  */
-exports.sassCommand = function (srcPath, buildPath, file, includePaths, shouldMinify) {
+exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
   var command = 'node-sass' + (shouldMinify ? ' --output-style compressed' : '');
   var extension = (shouldMinify ? '.min.css' : '.css');
   var includePathArgs = includePaths.map(function (path) {
