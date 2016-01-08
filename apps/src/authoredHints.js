@@ -5,8 +5,8 @@
 
 var dom = require('./dom');
 var msg = require('./locale');
-var HintSelect = require('./templates/hintSelect.jsx');
-var HintsDisplay = require('./templates/hintsDisplay.jsx');
+var HintSelect = require('./templates/HintSelect.jsx');
+var HintsDisplay = require('./templates/HintsDisplay.jsx');
 var authoredHintUtils = require('./authoredHintUtils');
 var lightbulbSVG = require('./templates/lightbulb.svg.ejs')();
 var lightbulbDimSVG = require('./templates/lightbulb_dim.svg.ejs')();
