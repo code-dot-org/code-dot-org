@@ -1,5 +1,5 @@
 ---
-title: Professional Learning Partner Application
+title: Code.org Professional Learning Parter Program
 nav: plc_plp_nav
 ---
 
