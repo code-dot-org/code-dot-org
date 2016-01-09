@@ -13,7 +13,7 @@ build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
 
   // TODO: At some point, have an assets directory that we can add to.
-  //build_commands.copyDirectory('./assets', BUILD_PATH),
+  //build_commands.copyDirectory('./assets/', BUILD_PATH),
 
   // We have to do some weird stuff to get our fallback video player working.
   // video.js expects some of its own files to be served by the application, so
@@ -21,7 +21,7 @@ build_commands.execute([
   // root-relative paths.
   // We may have to do something similar with ace editor later, but generally
   // we'd prefer to avoid this way of doing things.
-  build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH + 'video-js')
+  build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH)
 ]);
 build_commands.logBoxedMessage("code-studio assets copied");
 

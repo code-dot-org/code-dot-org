@@ -104,7 +104,10 @@ window.showVideoDialog = function(options, forceShowVideo) {
       videoElement.attr('src', options.src);
     } else {
       video.removeAttr('src');
-      stopTrackingVideoJSProgress();
+      var videoJSElement = document.querySelector('.video-js');
+      if (videoJSElement) {
+        videojs(videoJSElement).pause();
+      }
     }
     // Remember which tab is selected.
     var selected = tab.parents('.ui-tabs').tabs('option', 'active');
@@ -190,26 +193,6 @@ window.showVideoDialog = function(options, forceShowVideo) {
     return shouldStillAdd;
   });
 };
-
-/**
- * When hidden quickly after being shown, the videojs flash player progress tracker
- * starts looping out read property 'length' of undefined errors. Since we don't currently
- * use this progress tracking, disable it
- */
-function stopTrackingVideoJSProgress() {
-  if (!$('.video-js').length) {
-    return;
-  }
-
-  var fallbackPlayer = videojs($('.video-js')[0]);
-  if (fallbackPlayer.stopTrackingProgress) {
-    fallbackPlayer.stopTrackingProgress();
-  }
-
-  if (fallbackPlayer.stopTrackingCurrentTime) {
-    fallbackPlayer.stopTrackingCurrentTime();
-  }
-}
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function setupVideoFallback(videoInfo, playerWidth, playerHeight, shouldStillAddCallback) {

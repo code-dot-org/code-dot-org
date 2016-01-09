@@ -70,14 +70,17 @@ exports.browserify = function (config) {
 
 /**
  * Generate command to:
- * Copy one one directory (entire contents) into another, only updating
+ * Copy one one directory (and entire contents) into another, only updating
  * if source file is newer or destination file is missing.
- * @param {!string} srcDir
+ * @param {!string} srcDir - Note: If you use trailing slash, the directory's
+ *                  contents will be copied into destDir.  If you omit the
+ *                  the trailing slash, the directory itself will be copied
+ *                  to destDir.  See `man rsync` for more info.
  * @param {!string} destDir
  * @returns {string}
  */
 exports.copyDirectory = function (srcDir, destDir) {
-  return 'cp -ru ' + srcDir + ' ' + destDir;
+  return 'rsync -av ' + srcDir + ' ' + destDir;
 };
 
 /**
