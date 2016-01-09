@@ -23,16 +23,6 @@ var INCLUDE_PATHS = [
   '../shared/css'
 ];
 
-/**
- * Files to build, given as paths rooted at code-studio/src/js/
- * Each will result in an output file.
- * @type {string[]}
- */
-var FILES = [
-  'levelbuilder.scss',
-  'leveltype_widget.scss'
-];
-
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
 commander
@@ -42,7 +32,7 @@ commander
 // Run build (exits on failure)
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
-  build_commands.sassCommand(SRC_PATH, BUILD_PATH, FILES, INCLUDE_PATHS, commander.min)
+  build_commands.sass(SRC_PATH, BUILD_PATH, 'levelbuilder.scss', INCLUDE_PATHS, commander.min),
+  build_commands.sass(SRC_PATH, BUILD_PATH, 'leveltype_widget.scss', INCLUDE_PATHS, commander.min)
 ]);
-
-console.log("code-studio css built\n");
+build_commands.logBoxedMessage("code-studio css built");

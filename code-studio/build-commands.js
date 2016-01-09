@@ -41,7 +41,7 @@ exports.browserify = function (config) {
 
   var fileInput = filenames.map(function (file) {
     return srcPath + file;
-  }).join(' ');
+  }).join(" \\\n    ");
 
   var extension = (shouldMinify ? '.min.js' : '.js');
 
@@ -58,10 +58,28 @@ exports.browserify = function (config) {
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
-    command + ' ' + fileInput,
+    command,
+    fileInput,
     factorStep,
     commonOutput
-  ].join(" \\\n    ");
+  ].filter(function (part) {
+    return part.length > 0;
+  }).join(" \\\n    ");
+};
+
+/**
+ * Generate command to:
+ * Copy one one directory (and entire contents) into another, only updating
+ * if source file is newer or destination file is missing.
+ * @param {!string} srcDir - Note: If you use trailing slash, the directory's
+ *                  contents will be copied into destDir.  If you omit the
+ *                  the trailing slash, the directory itself will be copied
+ *                  to destDir.  See `man rsync` for more info.
+ * @param {!string} destDir
+ * @returns {string}
+ */
+exports.copyDirectory = function (srcDir, destDir) {
+  return 'rsync -av ' + srcDir + ' ' + destDir;
 };
 
 /**
@@ -82,24 +100,34 @@ exports.ensureDirectoryExists = function (dir) {
  * @param {string[]} commands - array of shell commands to be executed in sequence.
  */
 exports.execute = function (commands) {
-  // Run build
-  var buildCommands = commands.join(" && \\\n");
-  console.log(buildCommands);
+  commands.forEach(function (command) {
+    console.log(command);
 
-  try {
-    // For documentation on synchronous execution of shell commands from node scripts, see:
-    // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-    var result = child_process.execSync(buildCommands, {
-      env: _.extend({}, process.env, {
-        PATH: './node_modules/.bin:' + process.env.PATH
-      }),
-      stdio: 'inherit'
-    });
-  } catch (e) {
-    console.log("\nError: " + e.message);
-    warnIfWrongNodeVersion();
-    process.exit(e.status || 1);
-  }
+    try {
+      // For documentation on synchronous execution of shell commands from node scripts, see:
+      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
+      var result = child_process.execSync(command, {
+        env: _.extend({}, process.env, {
+          PATH: './node_modules/.bin:' + process.env.PATH
+        }),
+        stdio: 'inherit'
+      });
+    } catch (e) {
+      console.log("\nError: " + e.message);
+      warnIfWrongNodeVersion();
+      process.exit(e.status || 1);
+    }
+  });
+};
+
+
+/**
+ * Log a message in a box, so it stands out from the rest of the logging info.
+ * @param {!string} message
+ */
+exports.logBoxedMessage = function (message) {
+  var bar = '+' + _.repeat('-', message.length + 2) + '+';
+  console.log(bar + "\n| " + message + " |\n" + bar + "\n");
 };
 
 /**
@@ -111,8 +139,8 @@ exports.execute = function (commands) {
  * @param {string} buildPath - Path to root of output directory, absolute or
  *        relative to execution path for this script (which is the code-studio
  *        folder for this build system), with trailing slash.
- * @param {string[]} files - List of files to build, given as paths rooted at
- *        the srcPath given.  Each will map to an output file.
+ * @param {string} file - SCSS file to build, given as a path rooted at
+ *        the srcPath given.  Maps to an output file with a corresponding name.
  * @param {string[]} includePaths - List of paths to search for files included
  *        via scss import directives, rooted at the working directory, with NO
  *        trailing slash.
@@ -120,19 +148,19 @@ exports.execute = function (commands) {
  *        output files (with .min.css extensions) instead of unminified output.
  * @returns {string}
  */
-exports.sassCommand = function (srcPath, buildPath, files, includePaths, shouldMinify) {
+exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
   var command = 'node-sass' + (shouldMinify ? ' --output-style compressed' : '');
   var extension = (shouldMinify ? '.min.css' : '.css');
   var includePathArgs = includePaths.map(function (path) {
     return '--include-path ' + path;
-  }).join(' ');
+  }).join(" \\\n    ");
 
-  return files.map(function (file) {
-    return command + ' ' +
-        includePathArgs + ' ' +
-        srcPath + file  + ' ' +
-        buildPath + path.basename(file, '.scss') + extension;
-  }).join(" && \\\n");
+  return [
+    command,
+    includePathArgs,
+    srcPath + file,
+    buildPath + path.basename(file, '.scss') + extension
+  ].join(" \\\n    ");
 };
 
 /**
