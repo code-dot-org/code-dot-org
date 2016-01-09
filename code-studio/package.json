@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "browserify": "^12.0.1",
+    "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
