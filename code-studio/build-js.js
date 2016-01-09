@@ -34,7 +34,7 @@ build_commands.execute([
       'levelbuilder_dsl.js',
       'levelbuilder_studio.js',
       'levels/contract_match.jsx',
-      'leveltype_widget.js'
+      'levels/widget.js'
     ],
     commonFile: 'code-studio-common',
     shouldFactor: true,
