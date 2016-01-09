@@ -79,8 +79,6 @@ class FeatureModeManager
     end
   end
 
-  private
-
   def self.dcdo_matches_mode?(dcdo, mode)
     expected_settings = MODE_SETTINGS_MAP[mode][:dcdo_settings]
     expected_settings.all? do |key, expected_value|
