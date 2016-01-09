@@ -24,6 +24,7 @@ commander
 // TODO - think about how watchify will work for multiple commands
 build_commands.execute([
   build_commands.ensureDirectoryExists(BUILD_PATH),
+  build_commands.ensureDirectoryExists(BUILD_PATH + 'levels/'),
   build_commands.browserify({
     srcPath: SRC_PATH,
     buildPath: BUILD_PATH,
@@ -32,6 +33,7 @@ build_commands.execute([
       'levelbuilder.js',
       'levelbuilder_dsl.js',
       'levelbuilder_studio.js',
+      'levels/contract_match.jsx',
       'leveltype_widget.js'
     ],
     commonFile: 'code-studio-common',

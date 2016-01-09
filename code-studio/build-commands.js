@@ -56,7 +56,7 @@ exports.browserify = function (config) {
   var factorStep = '';
   if (shouldFactor) {
     factorStep = "-p [ factor-bundle -o '" + (shouldMinify ? 'uglifyjs ' : '') +
-      '>' + buildPath + "`basename $FILE .js`" + extension + "']";
+      '>' + buildPath + "`dirname $(realpath --relative-to " + srcPath + " $FILE)`/`basename -s .js -s .jsx $FILE`" + extension + "']";
   }
 
   var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
