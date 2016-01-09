@@ -3,12 +3,12 @@
   #hoc_features td {vertical-align: top}
   #hoc_features h3 {margin: 0px; padding: 0px}
   #hoc_features p {
-    font-size: 120%;
+    font-size: 110%;
   }
   #hoc_features tr.normal:hover {
     background-color: #f5fff5
   }
-  #hoc_features tr.high:hover {
+  #hoc_features tr.scale:hover {
     background-color: #fffff5
   }
   #hoc_features tr.emergency:hover {
@@ -20,39 +20,24 @@
 
 = form_tag(method: :post) do
   %table{id: 'hoc_features', cellpadding: '8'}
-    %tr.normal
-      %td
-        = radio_button_tag 'features', 'level', 'Normal', {id: 'normal'}
-      %td
-        %label{for: 'normal'}
-          %h3 Normal
-          %p All features enabled.
-    %tr.high
-      %td
-        = radio_button_tag 'features', 'level', 'High-scale', {id: 'high-scale'}
-      %td
-        %label{for: 'high-scale'}
-          %h3 High-scale
-          %p Progress saved only on sharable levels.
-          %p Puzzle rating and hints disabled.
-          %p Sampled hoc_activity logging (10%).
-          %p Longer page caching.
-    %tr.emergency
-      %td
-        = radio_button_tag 'features', 'level', 'Emergency', {id: 'emergency'}
-      %td
-        %label{for: 'emergency'}
-          %h3 Emergency
-          %p Same as High-scale, plus sharing disabled.
-    %tr
-      %td
-        = radio_button_tag 'features', 'level', 'Custom', {id: 'custom', disabled: true}
-      %td
-        %label{for: 'custom'}
-          %h3 Custom features
-          %p
-            = link_to 'Show details', '#'
-          %p
+    - ['normal', 'scale', 'emergency'].each do |level|
+      %tr{class: level}
+        %td
+          = radio_button 'features', 'level', level, {id: level}
+        %td
+          %label{for: level}
+            %h3{class: @features.level == level ? 'selected' : ''}
+              = level.capitalize
+            - case level
+              - when 'normal'
+                %p All features enabled.
+              - when 'scale'
+                %p Progress saved only on sharable levels.
+                %p Puzzle rating and hints disabled.
+                %p Sampled hoc_activity logging (10%).
+                %p Longer page caching.
+              - when 'emergency'
+                %p Same as High-scale, plus sharing disabled.
     %tr
       %td
       %td
