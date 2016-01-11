@@ -1,7 +1,7 @@
 # A class that defines "feature modes" for Gatekeeper and DCDO configuration. There are currently
-# three modes defined. The normal mode is intended for use throughout most of the year, the 'scale'
-# mode is intended for use during the hour of code (when we peak at 10x normal traffic), and the
-# 'emergency' mode is for use during severe database overload.
+# three modes defined. The "normal" mode is intended for use throughout most of the year, the
+# "scale" mode is intended for use during the hour of code (when we peak at 10x normal traffic),
+# and the "emergency" mode is for use during severe database overload.
 #
 # Below are the groupings of features that are enabled at each scale level:
 #
