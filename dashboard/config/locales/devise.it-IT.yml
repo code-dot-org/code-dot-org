@@ -77,7 +77,7 @@
         one: '1 errore impedisce di salvare questo % {resource}:'
         other: '%{count} errori impediscono di salvare questo % {resource}:'
     invitations:
-      send_instructions: Una email di invito è stata inviata a %{email}.
+      send_instructions: Un invito per posta elettronica è stata inviato a %{email}.
       invitation_token_invalid: Il token di invito fornito non è valido!
       updated: La tua password è stata impostata correttamente. Avete ora accesso
         alle risorse.
@@ -96,6 +96,6 @@
         someone_invited_you: 'Qualcuno ti ha invitato su %{url}: puoi accettare l''invito
           attraverso il link sotto indicato.'
         accept: Accetta l'invito
-        ignore: Se non volete accettare l'invito, siete pregati di ignorare questa
-          email.< br />Il tuo account non verrà creato fino a quando non accederete
-          al link inviato e impostato la vostra password.
+        ignore: Se non vuoi accettare l'invito, sei pregato di ignorare questo messaggio.<br
+          />Il tuo account non verrà creato fino a quando non clicchi sul link qua
+          sopra e imposti la tua password.

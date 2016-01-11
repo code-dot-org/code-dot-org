@@ -29,6 +29,8 @@
     code:
       label: 'Dodaj učitelja:'
       placeholder: Šifra Odjeljenja (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
@@ -287,63 +289,9 @@
     remove: (ukloni učitelja)
     confirm:
       remove: Jesi li siguran/na da želiš ukloniti ovog učitelja?
-    tools: Alati za učitelja
-    followers:
-      section: 'Odjeljenje:'
-      stages: 'Faze za prikaz:'
-      show_past: 'Pokaži dosadašnje aktivnosti učenika (%{bullet_html}):'
-      levels_key: Ključ nivoa
-      perfect: Završeno, savršeno
-      completed: Završeno, ali uz upotrebu previše blokova
-      tried: Pokušano, ali nezavršeno
-      not_tried: Još nije pokušano
-      activity: Označava učeničke aktivnosti u zadnjih %{hours} %{plural}
-      no_section: Nema dodijeljenog odjeljenja
-      trophies: Trofeji
     students:
-      name: Ime
-      username: Korisničko ime
-      password: Šifra
-      manage: Upravljanje učenicima
       dashboard: Idi na upravljačku ploču učitelja
-      add: Dodavanje učenika
-      remove: ukloni učenika
-      confirm_remove: Jesi li sigurnan/na da želiš ukloniti ovog učenika?
-      help_reassign: Da biste podijelili razred u više odjeljenja, odaberite učenike
-        za dodjelu u novo odjeljenje.
-      help_register: Umjesto da potrošite puno vremena pojedinačno uvozeći podatke
-        o učenicima, možete brzo napraviti svoj razred tako da ih zamolite da se sami
-        prijave. Vaši učenici će trebati odabrati korisnička imena i lozinke, ali
-        od njih NEĆE biti zatraženo da daju adresu e-pošte. Ako učenik zaboravi svoju
-        lozinku, bit ćete u mogućnosti da je resetirate.
-      register: Zamolite učenike da se sami registriraju
-      vist: Zamolite učenike da posjete
-      section_code: 'i unesite svoju šifru za odjeljenje:'
-      first_please: Molimo, prvo %{add_section}
-      for: Za
-      enter: 'unesi:'
-    sections:
-      add: Dodaj odjeljenje
-      manage: Upravljaj odjeljenjima
-      section: Odjeljenje
-      students: Učenici
-      section_code: Šifra odjeljenja
-      add_section_code: Dodaj učeničke šifre odjeljenja
-      secret: Tajni način
-      grade: Razred
-      course: Kurs
-      rename: preimenuj
-      edit: uredi
-      delete: izbriši
-      confirm_delete: Jeste li sigurni da želite izbrisati ovo odjeljenje?
-      email: Pošalji u e-pošti
-    rollup: Upravljačka ploča napretka
-    activity: Nedavna aktivnost razreda
     user_not_found: Učitelj ili učenik nije pronađen
-    cant_remove_student_no_email: '%{student_name} se ne može ukloniti kao vaš učenik
-      jer %{student_name} nema registrovanu e-mail adresu'
-    cant_remove_teacher_no_email: '%{teacher_name} ne može biti uklonjen kao vaš učitelj
-      jer niste registrirali e-mail adresu'
     student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
     panel:
       answer_viewer: Preglednik Odgovora
@@ -430,6 +378,7 @@
     title: Naučite o Code Studiu
     description: Svako može naučiti računarske znanosti, te pisati kod za igre, aplikacije
       i umjetnost.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Muško
     female: Žensko
@@ -469,6 +418,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Trebaš li pomoć?
     subtitle: Pogledaj ove videozapise i savjete

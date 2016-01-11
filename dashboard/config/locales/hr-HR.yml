@@ -29,6 +29,8 @@
     code:
       label: 'Dodajte učitelja:'
       placeholder: Šifra odjeljenja (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
@@ -288,64 +290,10 @@
     remove: (ukloni učitelja)
     confirm:
       remove: Jeste li sigurni da želite ukloniti ovog učitelja?
-    tools: Alati za učitelja
-    followers:
-      section: 'Odjeljenje:'
-      stages: 'Faze za prikaz:'
-      show_past: 'Pokaži dosadašnje aktivnosti učenika (%{bullet_html}):'
-      levels_key: Ključ nivoa
-      perfect: Završeno, savršeno
-      completed: Završeno, ali uz uporabu previše blokova
-      tried: Pokušano, ali nezavršeno
-      not_tried: Još nije pokušano
-      activity: Označava učeničke aktivnosti u zadnjih %{hours} %{plural}
-      no_section: Nema dodijeljenog odjeljenja
-      trophies: Trofeji
     students:
-      name: Ime
-      username: Korisničko ime
-      password: Lozinka
-      manage: Upravljanje učenicima
       dashboard: Idi na upravljačku ploču učitelja
-      add: Dodavanje učenika
-      remove: uklanjanje učenika
-      confirm_remove: Jeste li sigurni da želite ukloniti ovog učenika?
-      help_reassign: Da biste podijelili razred u više odjeljenja, odaberite učenike
-        da im dodijelite novo odjeljenje.
-      help_register: Umjesto da potrošite puno vremena pojedinačno uvozeći podatke
-        o učenicima, možete brzo napraviti svoj razred tako da ih zamolite da se sami
-        prijave. Vaši učenici će trebati odabrati korisnička imena i lozinke, ali
-        od njih NEĆE biti zatraženo da daju adresu e-pošte. Ako učenik zaboravi svoju
-        lozinku, bit ćete u mogućnosti da je resetirate.
-      register: Zamolite učenike da se sami registriraju
-      vist: Zamolite učenike da posjete
-      section_code: 'i unesite svoju šifru za odjeljenje:'
-      first_please: Molim, prvo %{add_section}
-      for: Za
-      enter: 'unesite:'
-    sections:
-      add: Dodavanje odjeljenja
-      manage: Upravljanje odjeljenjima
-      section: Odjeljenje
-      students: Učenici
-      section_code: Šifra odjeljenja
-      add_section_code: Dodavanje učeničke šifre odjeljenja
-      secret: Tajni način
-      grade: Razred
-      course: Tečaj
-      rename: preimenuj
-      edit: uredi
-      delete: izbriši
-      confirm_delete: Jeste li sigurni da želite izbrisati ovo odjeljenje?
-      email: Poslati e-poštom
-    rollup: Upravljačka ploča napretka
-    activity: Nedavna aktivnost razreda
-    user_not_found: Učitelj ili učenik nije pronađen
-    cant_remove_student_no_email: '%{student_name} se ne može ukloniti kao vaš učenik
-      jer %{student_name} nema registriranu adresu e-pošte'
-    cant_remove_teacher_no_email: '%{teacher_name} ne može biti uklonjen kao vaš učitelj
-      jer niste registrirali adresu e-pošte'
-    student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
+    user_not_found: Učitelj nije pronađen.
+    student_teacher_disassociated: Uklonili ste %{teacher_name} kao svog učitelja.
     panel:
       answer_viewer: Pregled odgovora
       student: Učenik
@@ -432,6 +380,7 @@
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije
       i kodirati.
+    try_hour_of_code: Pokušajte sat vremena programiranja!
   gender:
     male: Muško
     female: Žensko
@@ -448,12 +397,22 @@
       napraviti ovaj tutorijal.
     help_from_html_old: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su
       pomogli napraviti ove materijale za učenje.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Sva prava pridržana.
-    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
-      Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year}
-      Electronic Arts Inc. (sva prava pridržana).
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Sva prava pridržana.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Sva prava pridržana.
+      < br / > Snježno kraljevstvo &#8482; © %{current_year} Disney. Sva prava pridržana.
+      < br / > Ledeno doba &#8482; © %{current_year} 20th Century Fox. Sva prava pridržana.
+      < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio zabava D. o. o. Sva
+      prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
+      Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
+      znak i © 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Sva prava pridržana.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Sva prava pridržana.
+      < br / > Snježno kraljevstvo &#8482; © %{current_year} Disney. Sva prava pridržana.
+      < br / > Ledeno doba &#8482; © %{current_year} 20th Century Fox. Sva prava pridržana.
+      < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio zabava D. o. o. Sva
+      prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
+      Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
+      znak i © 2015 Cartoon Network.
     powered_by_aws: Potpomognuto s Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour
       of Code&reg; su zaštitni znaci tvrtke Code.org.'
@@ -471,6 +430,7 @@
     built_on_code_studio: 'Izradio: Code Studio'
     make_my_own_app: Izradi moju aplikaciju
     how_it_works: Kako radi
+    try_hour_of_code: Pokušajte sat vremena programiranja!
   reference_area:
     title: Trebate pomoć?
     subtitle: Pogledajte ove videozapise i savjete
@@ -537,7 +497,7 @@
       unused: Neiskorišteni nivoi
   upsell:
     hoc:
-      title: Hour of Code
+      title: Klasični labirint
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd

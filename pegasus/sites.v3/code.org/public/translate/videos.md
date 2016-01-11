@@ -22,7 +22,7 @@ Watch the [demo video](/files/amara.swf) in full screen.
 ## Minecraft Hour of Code
 * [Introduction](https://amara.org/en/videos/hM6XN1YgrcnZ/info/minecraft-hour-of-code-intro/)
 * [Repeat loops](https://amara.org/en/videos/9db4OJsugkRs/info/minecraft-hour-of-code-repeat-loops/)
-* [If statements](https://amara.org/en/videos/6VTTd8ZDTW5j/info/minecraft-hour-of-code-if-statements/)
+* [If statements](https://amara.org/en/videos/CQ2Pl9U4YGzH/info/minecraft-hour-of-code-if-statements/)
 * [Congrats](https://amara.org/en/videos/qTYN8blMcwOQ/info/minecraft-hour-of-code-build-your-own/)
 * [Congrats with share](https://amara.org/en/videos/YOo9ipbbkmzG/info/minecraft-hour-of-code-build-your-own-share/)
 
@@ -52,11 +52,12 @@ Watch the [demo video](/files/amara.swf) in full screen.
 
 ## Computer Science Principles 
 * [Images, Pixels and RGB](https://amara.org/en/videos/AbDLi3dtmbyE/info/instagrams-kevin-systrom-explains-pixels-and-how-filters-work/)
-* [The Internet: Wires, Cables, & Wifi](https://amara.org/en/videos/VtezxPhFAsoQ/info/the-internet-wires-cables-wifi/)
+* [The Internet: Wires, Cables, & Wifi](https://amara.org/en/videos/YWhDLbCzu1K7/info/the-internet-wires-cables-wifi/)
 * [The Internet: IP Addresses and DNS](https://amara.org/en/videos/nY9IOAcrhpNX/info/the-internet-ip-addresses-and-dns/)
 * [The Internet: Packets, Routing and Reliability](https://amara.org/en/videos/hBYvPxk4Qcn0/info/the-internet-packets-routing-and-reliability/)
 * [The Internet: Encryption & Public Keys](https://amara.org/en/videos/aCTRoFJokQ2N/info/the-internet-encryption-public-keys/)
 * [The Internet: Cybersecurity & Crime](https://amara.org/en/videos/w0BLT5Syrkh5/info/the-internet-cybersecurity-crime/)
+* [The Internet: HTTP and HTML](https://amara.org/en/videos/uLymTycb5058/info/the-internet-http-and-html/)
 
 ## Disney Infinity Play Lab
 * [Introduction](http://amara.org/en/videos/SIhQst12ka1L/info/disney-infinity-play-lab-intro/)

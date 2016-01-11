@@ -8,7 +8,7 @@ When /^I save pixelation data and reload$/ do
     And I press "save_image"
     And I wait for 5 seconds
     And I reload the page
-    And I wait to see ".modal-body"
+    And I wait to see "#x-close"
     And element ".modal-body .dialog-title" is visible
     And I close the dialog
     And I wait until pixelation data loads
@@ -21,7 +21,7 @@ When /^I finish pixelation level and reload$/ do
     And I press "finished"
     And I get redirected away from "#{pathname}"
     And I am on "http://studio.code.org#{pathname}?noautoplay=true"
-    And I wait to see ".modal-body"
+    And I wait to see "#x-close"
     And element ".modal-body .dialog-title" is visible
     And I close the dialog
     And I wait until pixelation data loads

@@ -58,7 +58,8 @@
     "debugger_disabled": "true",
     "start_blocks": "var secretNumber = 6;\r\nvar userGuess = promptNum(\"Enter a number from 1 to 10\");\r\n\r\nif(secretNumber == userGuess){\r\n\r\n}",
     "lock_zero_param_functions": "false",
-    "encrypted_examples": "AmISUrR6/3JsoHTSsJWN+bPH/74Nb/880lYaPj3zK2g2RbSiuDsQOH6kWENM\nyuAa\n"
+    "encrypted_examples": "AmISUrR6/3JsoHTSsJWN+bPH/74Nb/880lYaPj3zK2g2RbSiuDsQOH6kWENM\nyuAa\n",
+    "video_key": "csp_applab_conditionals_2"
   }
 }]]></config>
   <blocks/>

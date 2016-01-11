@@ -174,7 +174,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "Grattis! Du har klarat den här uppgiften."},
 "no":function(d){return "Nej"},
 "numBlocksNeeded":function(d){return "Den här uppgiften kan lösas med %1 block."},
-"playSoundRandom":function(d){return "Spela ljud slumpmässig"},
+"playSoundRandom":function(d){return "spela slumpmässigt ljud"},
 "playSoundBounce":function(d){return "spela studsa ljud"},
 "playSoundCrunch":function(d){return "spela krossa ljud"},
 "playSoundDie":function(d){return "spela ledsen ljud"},

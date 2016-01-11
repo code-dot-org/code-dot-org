@@ -129,7 +129,7 @@
       9:
         image: notes/flappy09.jpg
         text: Når du ser en nedtrekksboks som denne, så betyr det at du kan endre
-          instillingene - for eksempe lyden som spilles av når flappy treffer bakken.
+          instillingene - for eksempel lyden som spilles av når flappy treffer bakken.
       10:
         image: notes/flappy10.jpg
         text: I siste puslespillet vil du kunne lage et spill og dele den med dine
@@ -529,8 +529,8 @@
           utføres. Hva gjør ditt romvesen si?
       4:
         image: notes/playlab_events_4.png
-        text: Det finnes også "når pilen"-blokker. Hvis du kobler "flytt"-blokker
-          til disse, kan du begynne å flytte aktører opp, ned, til venstre eller høyre.
+        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
+          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
           Trinnvis blir spillet ditt mer interaktiv.
     playlab_repeat_forever:
       1:
@@ -1180,7 +1180,7 @@
         image: notes/C2_maze_intro_4.png
         text: Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken,
           til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil
-          feste seg sammen. Når jeg trykker på "kjør" igjen, vil fuglen gjøre kommandoene
+          feste seg sammen. Når jeg trykker på "Kjør" igjen, vil fuglen gjøre kommandoene
           som er stablet i arbeidsområdet fra toppen og nedover.
       5:
         image: notes/C2_maze_intro_5.png
@@ -1224,7 +1224,7 @@
           du faktisk kan spille.
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: Her er "når pilen"-blokk og "Flytt aktør"-blokk. Du kan sette disse
+        text: Her er en "når pil"-blokk og en "flytt figur"-blokk. Du kan sette disse
           blokkene sammen for å flytte figurene rundt med piltastene.
     C2_relay_programming:
       1:
@@ -1332,7 +1332,7 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: Når du setter en løkke inni en annen løkke, kaller vi det en nøstet
+        text: Når du setter en løkke inni en annen løkke, kaller vi det en løkke i
           løkke. For eksempel, her er koden for å tegne en trekant med sider som er
           100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre
           - en for hver side av trekanten.
@@ -1403,9 +1403,9 @@
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Nå skal vi bruke nøstede løkker med bien. Vi har fått litt kode å starte
+        text: Nå skal vi bruke løkker i løkker med bien. Vi har fått litt kode å starte
           med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter
-          snu seg mot høyre. La oss ta hele kodestykket og nøste det inni en annen
+          snu seg mot høyre. La oss ta hele kodestykket og legge det inni en annen
           gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
     C3_bounce:
       1:
@@ -1418,9 +1418,9 @@
           på tastaturet.
       3:
         image: notes/C3_bounce_3.png
-        text: Dette gjør vi ved å koble "når venstre pil"-blokken til "flytt til venstre"-blokken,
-          og "når høyre pil"-blokken til "flytt til høyre"-blokken. Prøv det, så er
-          du i gang med å programmere ditt eget sprettespill så fort som bare det!
+        text: Dette gjør vi ved å koble "når pil venstre"-blokken til "flytt venstre"-blokken,
+          og "når pil høyre"-blokken til "flytt høyre"-blokken. Prøv det, så er du
+          i gang med å programmere ditt eget sprettespill så fort som bare det!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1654,7 +1654,7 @@
           du faktisk kan spille.
       2:
         image: notes/playlab_2.png
-        text: Her er "når pilen"-blokk og "Flytt aktør"-blokk. Du kan sette disse
+        text: Her er en "når pil"-blokk og en "flytt figur"-blokk. Du kan sette disse
           blokkene sammen for å flytte figurene rundt med piltastene.
     C3_songwriting_with_parameters:
       1:
@@ -3044,8 +3044,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
+          opp programmet.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

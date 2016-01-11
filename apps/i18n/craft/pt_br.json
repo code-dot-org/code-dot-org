@@ -22,7 +22,7 @@
   "blockTypeEmpty": "vazio",
   "blockTypeFarmlandWet": "terra arada",
   "blockTypeGlass": "vidro",
-  "blockTypeGrass": "vidro",
+  "blockTypeGrass": "grama",
   "blockTypeGravel": "cascalho",
   "blockTypeLava": "lava",
   "blockTypeLogAcacia": "madeira de acácia",
@@ -60,7 +60,7 @@
   "houseSelectLetsBuild": "Vamos construir uma casa.",
   "houseSelectMedium": "Médio",
   "keepPlayingButton": "Continuar jogando",
-  "level10FailureMessage": "Cobra a lava para atravessar, então minere dois dos blocos de ferro do outro lado.",
+  "level10FailureMessage": "Cubra a lava para poder atravessar e, em seguida, minere dois blocos de ferro do outro lado.",
   "level11FailureMessage": "Lembre-se de colocar pedregulhos à sua frente se houver lava no caminho. Isso permitirá que você minere esta fila de recursos em segurança.",
   "level12FailureMessage": "Lembre-se de minerar 3 blocos de redstone. Isso combina o que você aprendeu ao construir a sua casa e sobre usar comandos \"se\" para evitar cair na lava.",
   "level13FailureMessage": "Coloque \"trilho\" ao longo do caminho de terra que vai da sua porta até a borda do mapa.",
@@ -84,5 +84,5 @@
   "reinfFeedbackMsg": "Você pode pressionar \"Continuar jogando\" para voltar a jogar o seu jogo.",
   "replayButton": "Jogar novamente",
   "selectChooseButton": "Selecione",
-  "tooManyBlocksFail": "Quebra-cabeças {puzzleNumber} concluído. Parabéns! Também é possível concluí-lo com {numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail": "Desafio {puzzleNumber} concluído. Parabéns! Também é possível concluí-lo com {numBlocks, plural, one {1 bloco} other {# blocos}}."
 }

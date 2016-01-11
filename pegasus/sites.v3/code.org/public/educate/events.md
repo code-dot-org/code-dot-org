@@ -8,19 +8,21 @@ title: Live Events for Teachers
 <br><br>
 <img src="/images/sotm31.jpg" width=“80%”/>
 
-Code.org hosts regular, free virtual events for our community. Here are a few highlights from [our current schedule](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
+Code.org hosts regular, free virtual events for our community. 
 
 ## Upcoming Events
+
+Stay tuned for our Spring 2016 event schedule, coming soon! Follow [@TeachCode](http://twitter.com/teachcode) and [teacherblog.code.org](http://teacherblog.code.org) for updates.
+
+
+## Past Events
 
 ### Ask Your Final Hour of Code Questions w/ Hadi Partovi
 #### Wednesday, December 2, 2015 from 7:00 PM to 8:00 PM (CDT) 
 To prepare for this year’s Hour of Code, we’re organizing a special chat with Hadi Partovi, co-founder of Code.org, and Alice Steinglass, head of product and engineering who designed this year’s Minecraft and Star Wars tutorials.   This will be mostly an open-ended Q&A, whether to answer questions about how to host an Hour of Code, or just asking Hadi or Alice your own favorite computer science questions, we encourage every Hour of Code organizer to join and hear a bit about the vision for the campaign.
 <br>
-[<button>Register Now</button>](http://www.eventbrite.com/e/sneak-peak-2015-hour-of-code-tutorials-tickets-17987437911)
+[<button>View Recording</button>](https://plus.google.com/u/1/hangouts/onair/watch?hid=hoaevent/c7s7qpt4ronikmfvm1393iigk40&ytl=0gLsb0xrb_4&wpsrc=yta)
 
-<a href="http://www.eventbrite.com/o/codeorg-teacher-community-8317327577" target="_blank"><img src="https://www.eventbrite.com/custombutton?eid=17789364468" alt="Eventbrite - Code.org Teacher Community" /></a>
-
-## Past Events
 
 ### Q&A with Code.org Founder Hadi Partovi
 #### Wednesday, September 23, 2015 from 7:00 PM to 8:00 PM (CDT) 

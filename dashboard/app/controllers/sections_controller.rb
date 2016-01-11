@@ -1,7 +1,4 @@
 class SectionsController < ApplicationController
-
-##### NEW SECTION STUFF
-
   def show
     load_section
 

@@ -393,33 +393,30 @@ da:
         text: 'Hver blomst har forskellig slags nektar: 1, 2, 3 eller flere. Vi ved, hvor meget nektar, der er i de røde blomster ved at se på det lille tal i hjørnet. Så vær sikker på at du har fået al nektaren fra blomsten, før du går videre. Desuden så kan hver bikage kun indeholde en vis mængde honning: 1, 2, 3 eller flere. Så vær sikker på at lave så meget honning, som din bikage kan indeholde.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: Hvis du er i stand til at få fat i alt nektaren og lave al honningen, så vinder du og går videre til det næste niveau. Ellers må du prøve igen. Leg lidt med det, og se hvordan det føles at være programmør!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: "A loop is a repetition of activity. So going into a hive to inspect, I look at a frame and then I put it back, so I repeat that same activity multiple times. It's looping around, doing the same activity multiple times."
+        text: En løkke er en gentagelse af en aktivitet. Så når jeg går ind i et bistad og inspicerer, ser jeg på et billede og derefter sætter jeg det tilbage, så jeg gentager den samme aktivitet flere gange. Det kører i en løkke, og laver den samme aktivitet flere gange.
       2:
         image: notes/C1_bee_loops_2.png
-        text: |-
-          In this level, we want the bee to collect three nectars from the flower. Instead of using three "get nectar" blocks, you're going to use the repeat block to get nectar three times. Hit "Run" and see if you got it right. Nice!
+        text: 'I denne bane vil vi have bien til at indsamle tre nektar fra blomsten. I stedet for at benytte tre "hent nektar"-blokke, vil du bruge "gentag"-blokken for at hente nektar tre gange. Vælg "Kør" og se, om du gjorde det rigtigt.'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: "This lesson is called the big event. It's all about how we can control our programs and actually change the way a program runs on the fly using events, like the push of a button or the click of a mouse."
+        text: Denne lektion kaldes den store begivenhed. Det handler om hvordan vi kan styre vores programmer og ligefrem lave om på den måde et program kører på imens det er i gang ved hjælp af begivenheder, som et tryk på en knap eller med et museklik.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: "For this lesson, you'll be controlled with a paper remote control. It's just like a real-live video game."
+        text: Til denne lektion bliver du styret af en papirfjernbetjening. Det er ligesom et computerspil i den virkelige verden.
       3:
         image: notes/C1_bigevent_unplugged_3.png
-        text: "An event is an action  that causes something to happen. It's like when you click the button on a mouse and a webpage loads. That's an event. When you touch your screen on a tablet to scroll, that's an event also. Events are a great way of letting the user direct your program whenever they need or want to."
+        text: En begivenhed er en handling, der får noget til at ske. Det er ligesom, når du klikker på knappen på en mus og en webside kommer frem. Det er en begivenhed. Når du rører ved skærmen på en tablet for at rulle op eller ned, er det også en begivenhed. Begivenheder er en fantastisk måde at lade brugeren styre dit program når de har brug for det eller ønsker det.
       4:
         image: notes/C1_bigevent_unplugged_4.png
-        text: 'Things happen that we all respond to. We feel hungry and we go to the fridge. We hear the mailman come and he puts our mail in the mailbox  and then we go get our mail. Those are just like the events of pushing a button or moving a joystick. They are something that happens that triggers us to do something.'
+        text: Ting sker, som vi alle reagerer på. Vi føler os sultne og vi går til køleskabet. Vi hører postmanden kommer, han putter vores breve i postkassen, og derefter går vi ud og henter posten. Disse eksempler er ligesom begivenhederne at trykke på en knap eller flytte et joystick. Det er noget der sker, som får os til at gøre noget.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: |-
-          In video games, there's an event called "Update" and it happens 30 or 60 times a second. For videogame programmers that's almost more important as an event than the buttons or the joystick.
+        text: 'I computerspil er der en begivenhed som hedder "Opdater", og det sker 30 eller 60 gange i sekundet. For computerspilprogrammører, er det en begivenhed, som næsten er vigtigere som end knapperne eller joysticket.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: |-
@@ -455,7 +452,7 @@ da:
         text: Here are the steps you need to learn. Clap your hands. Put your hands behind your head. Put your hands on your waist. Lift your left hand up. Lift your right hand up. Pretty simple, right? You will discover that you can shorten the directions by putting some dance steps in loops.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: "We actually do use loops in our dancing. The dancers are wearing computers, all in the same network. I might loop the lights through to the same dancers over and over again. In the loop I might have an iteration where I'll say you want to go loop through these six dancers over and over again and then within the loop you want to increase the speed of the light. And that's all created through loops. Loops are important in computer science because they make our work shorter and easier."
+        text: Vi bruger faktisk løkker i vores dans. Danserne er iført computere, alle i samme netværk. Jeg kan f.eks. køre lysene i en løkke mellem de samme dansere igen og igen. I løkken kunne jeg have en iteration hvor jeg beder dig om at køre i en en løkke imellem disse seks dansere igen og igen, og derefter inden for løkken skal du øge lysenes hastighed. Og det laves altsammen ved hjælp af løkker. Løkker er vigtige i datalogi, fordi de gør vores arbejde kortere og lettere.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -468,14 +465,14 @@ da:
         text: To get it there you circle the direction that it has to go.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: Opret din algoritme ved at lime pile ved siden af det kort, som du forsøger at løse. Den anden er den samme, men nedad.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
         text: "It's like programming with paper. And that's it!"
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: "Debugging is finding and fixing problems. There are lots of ways to debug problems. One of the easiest is to move step by step until where you find where something goes wrong. Here I'm trying to do a back handspring on the beam but I keep falling off."
+        text: Debugging at finde og rette problemer. Der er masser af måder at fejlfinde problemer. En af de nemmeste er at gå det igennem trin for trin indtil du finder der hvor noget går galt. Jeg forsøger her at lave et kraftspring på bommen, men jeg falder hele tiden ned.
       2:
         image: notes/C1_maze_debugging_2.png
         text: "I walked through each part step by step and realized where my mistake was. I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position and I got it. I was really glad I debugged my back handspring."
@@ -520,14 +517,13 @@ da:
           My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: Jeg elsker min mors computer, fordi jeg kan gå på internettet. Internettet er lidt ligesom din by. Du kan besøge seje steder, du kan tale med familie og venner, og du kan lære en masse nye ting.
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: 'Nogle gange taler jeg med folk jeg kender på internettet, f.eks. min bedstemor, der bor i en anden stat. Hej bedstemor! Hun laver småkager til mig, som hun vil sende til mig til min fødselsdag. "Lækkert, jeg ville ønske man kunne sende dufte over internettet!" Jeg kan tale med forskellige mennesker på internettet, f.eks. min fætter. Men jeg taler kun med folk jeg kender.'
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
@@ -536,7 +532,7 @@ da:
         text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: Wow, var det sjovt! Spisetid. Jeg vil logge af nu. Jeg glæder mig til at logge på igen for at se hvor jeg kan komme på besøge næste gang.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
@@ -559,7 +555,7 @@ da:
         text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: I dag skal vi så vores egne frø, ved hjælp af en algoritme. Opret din egen algoritme ved at klippe billederne fra hinanden. Vælg de billeder, der viser trinene i at så frø, og arranger disse billeder i den korrekte rækkefølge.
       4:
         image: notes/C1_planting_seed_4.png
         text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
@@ -572,21 +568,20 @@ da:
         text: Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: |-
-          The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The "when run" block starts everything. The "move" block will move your character and the "say" block will make your character say whatever you type.
+        text: 'Katten har altid været bange for hunden, og hvad nu hvis katten finder ud af at hunden prøver at være sød? "Kør"-blokken starter det hele. "Flyt"-blokken vil flytte din figur og "sig"-blokken vil få din figur til at sige, hvad du skriver.'
       3:
         image: notes/C1_playlab_storytelling_3.png
         text: 'This is the "when actors collide" block which you can link up to the other blocks.'
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: 'I was making the dog come over and say "Hi" but then the cat got scared so it ran away. "Ahh" If there was more time, it would have been a happy ending. The end!'
+        text: 'Jeg fik hunden til at komme og sige "Hej", men så blev katten bange og løb væk. "Ahh" Hvis der var mere tid, havde jeg lavet en lykkelig slutning. Slut!'
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
         text: This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words.
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: Prøv om du kan stave ordet de giver dig i boksen under banen. Men vær forsigtig! hvis du flytter i den forkerte retning, tilføjer du uønskede bogstaver.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
@@ -742,24 +737,23 @@ da:
         text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
       4:
         image: notes/C2_maze_intro_4.png
-        text: |-
-          I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "Run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
+        text: 'Jeg har tænkt mig at vælge "Drej til højre" blokken, og jeg vil trække det under min "Flyt" blok, indtil den gule pil kommer frem. Derefter jeg vil slippe den, og de to blokke vil klikke sammen. Når jeg trykker på "Kør" igen, vil fuglen udføre de kommandoer, der er stablet fra top til bund på vores arbejdsplads.'
       5:
         image: notes/C2_maze_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: Hvis du nogensinde ønsker at slette en blok, kan du bare fjerne den fra stakken og trække den til papirkurven. efter du har kørt programmet, kan du altid trykke på nulstillingsknappen for at få fuglen tilbage til start. Lad os nu få fanget de svin!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
         text: This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: I dag vil vi lave, oprette og teste en algoritme til en papirflyver. Men først må vi bryde dette store projekt ned i små trin, som er lette at følge. For at lave en papirflyver er vi nødt til at beslutte, hvilke trin vi skal udføre og i hvilken rækkefølge.
       3:
         image: notes/C2_paper_airplanes_3.png
         text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
+        text: Når vi ønsker at lave chokolade, er der mange store trin i denne proces. Og hvert af disse store trin har sit eget sæt af mindre trin. Og der er forskellige opskrifter eller algoritmer, afhængigt af hvordan vi ønsker chokoladen skal smage. Hvert trin er vigtigt, selv de små. Så hvis man undlader et trin, kan resten af dem ikke fuldføres. At lave algoritmer, som andre kan forstå, er virkelig vigtigt. Det er derfor hvert trin må skrives ned, så uanset hvem der følger dem, er resultatet er det samme.
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -773,7 +767,7 @@ da:
         text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
       2:
         image: notes/C2_relay_programming_2.png
-        text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
+        text: Stafetprogrammering er et væddeløb hvor hold konkurrerer om at komme i mål i et program på ternet papir. Du skal tjekke din holdkammerats arbejde, eller debugge, rette det hvis der er en fejl, tilføje din pil, og løbe tilbage og overgive stafetten til din holdkammerat.
       3:
         image: notes/C2_relay_programming_3.png
         text: Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it.
@@ -1092,7 +1086,7 @@ da:
           I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
       5:
         image: notes/C4_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: Hvis du nogensinde ønsker at slette en blok, kan du bare fjerne den fra stakken og trække den til papirkurven. efter du har kørt programmet, kan du altid trykke på nulstillingsknappen for at få fuglen tilbage til start. Lad os nu få fanget de svin!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
@@ -1409,7 +1403,7 @@ da:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1484,7 +1478,7 @@ da:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1685,7 +1679,7 @@ da:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

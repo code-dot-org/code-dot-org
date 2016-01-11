@@ -46,7 +46,7 @@ GRAPH
   brightbox-ruby (1.2.1)
     apt (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.1.9)
+  cdo-apps (0.1.11)
     cdo-postfix (>= 0.0.0)
     cdo-repository (>= 0.0.0)
     cdo-secrets (>= 0.0.0)

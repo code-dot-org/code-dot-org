@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 
@@ -156,11 +157,15 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
-    @public_caching = @script ? Gatekeeper.allows('public_caching_for_script', where: {script_name: @script.name}) : false
+    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
 
     if PuzzleRating.enabled?
       view_options(puzzle_ratings_url: puzzle_ratings_path)
+    end
+
+    if AuthoredHintViewRequest.enabled?
+      view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
     end
 
     if @level.is_a? Blockly

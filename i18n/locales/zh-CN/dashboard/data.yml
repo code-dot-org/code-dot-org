@@ -79,23 +79,23 @@ zh:
         Unplug1: 计算机科学导论
         Maze: 迷宫
         Multi: 多选项目
-        Unplug2: 计算式思维
+        Unplug2: 计算式思维技巧
         Unplug3: 图纸上编程
-        Artist: 艺术家
+        Artist: 小艺术家
         Unplug4: 算法
-        Artist2: 艺术家 2
+        Artist2: 小艺术家 2
         Unplug5: 函数
         Farmer: 农夫
         Unplug6: 条件语句
-        Artist3: 艺术家 3
+        Artist3: 小艺术家 3
         Unplug7: 歌曲创作
         Farmer2: 农民 2
         Unplug8: 抽象化
-        Artist4: 艺术家 4
+        Artist4: 小艺术家 4
         Unplug9: 编程接力
         Farmer3: ' 农夫3'
         Unplug10: 互联网
-        Artist5: 艺术家 5
+        Artist5: 小艺术家 5
         Unplug11: 总结
         MazeEC: 迷宫
         Bounce: 弹跳
@@ -104,12 +104,12 @@ zh:
         MazeStep: 单步迷宫模式
         Wordsearch: 字谜
         Webapp: 应用实验室
-        ArtistEC: 艺术家
+        ArtistEC: 小艺术家
         TextMatch: 文本匹配
         StudioEC: 游戏实验室
         Applab: 应用实验室
         NetSim: 互联网模拟器
-        Custom: 艺术家
+        Custom: 小艺术家
         CustomStudio: 游戏实验室
     trophy:
       name:
@@ -123,8 +123,8 @@ zh:
         if_else: ”如果-否则“模块
         loop_times: 重复次数块
         loop_until: 重复直到块
-        loop_while: 当块
-        loop_for: “计数器”块
+        loop_while: “当”模块
+        loop_for: “计数器”模块
         function: 函数
         parameters: 有参数的函数
     level:
@@ -134,7 +134,7 @@ zh:
         maze_2_2_5: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
         maze_2_3: 带我去找那个绿色的小恶魔！（小心 TNT 炸药）
         maze_2_4: 保持冷静，帮我找到那只坏猪。不然我要被它气死了！
-        maze_2_5: 有一种方法可以只用两个模块就抓到这只笨猪。你能想出怎么做么？
+        maze_2_5: 有一种方法可以只用两个模块就抓到这只笨猪。可以想出是怎么做么？
         maze_2_6: 只用3个模块，帮我抓住那只绿色的人侵者！
         maze_2_7: 用尽量少的模块帮我驱逐这只坏猪。试试看使用“重复多次”块。
         maze_2_8: '当一个块是灰色的，这表示你不能删除它。解决这个难题，使用"重复"块，重复 3 次。试着把这3个区块放在灰色的"重复"块中： 移动、 移动、 转向。'
@@ -147,15 +147,15 @@ zh:
         maze_2_15: '我想要向日葵 ！使用"如果"模块，让我用最少的模块到达那里。'
         maze_2_16: 好啦，让我们再来练习一次 —— 这和之前的差不多，但是小心别被食人花吃了！
         maze_2_17: '“如果 - 否则”块检查当前是否满足一个条件，并根据结果执行相应模块。试试用这个新的模块让我得到那个向日葵。'
-        maze_2_18: '让我们来再练习一次使用“如果 - 否则”块，你能试一次就成功么？'
-        maze_2_19: 你能不能加三个块来帮我走出这个复杂的迷宫？如果你做对了，那我就可以通过任何长度的弯曲路径了。
-        turtle_1_1: 你好，我是一个艺术家。您可以用代码让我画任何东西。使用几个模块让我画出图中的灰色线条。
+        maze_2_18: '让我们来再练习一次使用“如果 - 否则”块，可以试一次就成功么？'
+        maze_2_19: 能不能加三个块来帮我走出这个复杂的迷宫？如果你做对了，那我就可以通过任何长度的弯曲路径了。
+        turtle_1_1: 你好，我是一个小艺术家。您可以用代码让我画任何东西。使用几个模块让我画出图中的灰色线条。
         turtle_1_2: '现在，让我们来画个正方形。注意： 你可以用新的"设置颜色"块选择你最喜欢的颜色。'
         turtle_1_3: 只用三个模块画一个正方形。
         turtle_1_4: 让我们来画一个三条边都是不同颜色的三角形。你可以用“随机颜色”块来选择不同的颜色。提示：你得在“转向”块上写上需要转多少度。
         turtle_1_5: 现在，让我们来画一个信封。先画一个三角形，再画一个正方形。
-        turtle_1_6: 你能想出来怎么能画个三角形和正方形吗？提示： 第一，先画三角形，然后转个弯，来画正方形。
-        turtle_1_7: 好的，让我们来试试更难一点的 —— 看看你能不能画一个绿色的眼镜。正方形的每边长为100个像素。两个正方形之间相距50像素。别忘了把它画成绿色！
+        turtle_1_6: 能想出来怎么能画个三角形和正方形吗？提示： 第一，先画三角形，然后转个弯，来画正方形。
+        turtle_1_7: 好的，让我们来试试更难一点的 —— 看看能不能画一个绿色的眼镜。正方形的每边长为100个像素。两个正方形之间相距50像素。别忘了把它画成绿色！
         turtle_1_8: '好的，试试看运行这段代码会发生什么（按下"运行"）。然后，重复它来完成我们要画的图。每次的颜色都会不同。'
         turtle_1_9: 如果要画一个圆，你知道应该在画问号的地方填上什么数字么？
         turtle_1_10: '你成功了 ！现在，画你想要画的吧。一些有趣的想法： 棒图、 雪花、 或螺旋线。记得试试看新的"设置宽度"块。玩得愉快！'
@@ -165,15 +165,15 @@ zh:
         turtle_4_4: 这个是之前关卡的代码，但每画一个三角形只旋转36度。我们需要重复这段代码多少次呢?（提示： 画一个圆需要转360度)
         turtle_4_5: 这个是之前关卡的代码，但是重复了36度。我们每次需要转多少度呢?（提示： 画一个圆需要转360度)
         turtle_4_6: 你可以只用3个块来画一个边长为20像素的正方形吗？
-        turtle_4_7: 这是你在上一个关卡写的画正方形的代码。你能重复它来画一个由10个相邻的正方形组成的梯子么？提示：只需要再加两个模块。
-        turtle_4_8: 这是你在上一个关卡写的代码。你能只加2个块来完成这幅画么？
+        turtle_4_7: 这是你在上一个关卡写的画正方形的代码。可以重复它来画一个由10个相邻的正方形组成的梯子么？提示：只需要再加两个模块。
+        turtle_4_8: 这是你在上一个关卡写的代码。可以只加2个块来完成这幅画么？
         turtle_4_9: 这是你在上一个关卡写的代码。要完成这幅画，你需要转多少度呢？（你可能需要猜几次）
         turtle_4_10: 这是你在上一个关卡写的代码。你需要重复多少次来完成这幅画呢？
         turtle_4_11: 试试看改变“转向”块和“重复”块上的数字来画不同的花样。或者，试试看改变其余的代码来画你想要画的东西。
         maze_karel_1_1: '你好，我是一个农夫。我需要你帮我把一块地翻平来为种植做准备。把我移动到那堆土上面，并使用"删除"块来移除它。'
         maze_karel_1_2: 下一步，把我移动到那个洞，并且用“填充”块来把它填平。这个洞需要两铲子土。
         maze_karel_1_3: 把我移到那堆土那里，告诉我需要多少铲子才能把这堆土移除。尽量使用少的块来解开这个谜题。
-        maze_karel_1_4: 你能帮我移除这所有四堆土么？提示：试试用”重复“块。
+        maze_karel_1_4: 可以帮我移除这所有四堆土么？提示：试试用”重复“块。
         maze_karel_1_5: '帮我用五铲子的土来填充这些洞。提示： 你可以把"重复"块放在"当"块里面试试。'
         maze_karel_1_6: 删除所有的土堆，尽可能使用尽量少的块。在”当“块的下拉菜单中有新的选项，它能告诉我现在是否站在一个土堆或一个洞上。
         maze_karel_1_7: 哇，我发现一个很深的洞 ！我不知道它需要多少铲子的土。您能不能编一个程序，往洞里填土直到地面被填平？
@@ -187,7 +187,7 @@ zh:
         turtle_2_4: 现在，让我们画更复杂的图案吧。更改代码来画36个正方形，100像素大小，每个相差10度。提示： 你可以使用滑块来让我走得更快。
         turtle_2_5: '试试画大小为50，60，70，80，和90的正方形。你可以使用五次"画一个正方形"的函数。'
         turtle_2_6: 好的，在这个程序中将要使用计数器，来画一个和上次一样的正方形。你要画的正方形大小和计数器当前数字的大小相同。试试看怎么用“计数器”块。提示： 它是在『变量』分类中。
-        turtle_2_7: '这个程序可以画一个螺旋，但我们已经禁用了这些块，所以它们不能运行。你能不能试试看用 (在循环目录下的）"计数"块 和(在变量类别）"计数器"块 画一个相同的螺旋。'
+        turtle_2_7: '这个程序可以画一个螺旋，但我们已经禁用了这些块，所以它们不能运行。能不能试试看用 (在循环目录下的）"计数"块 和(在变量类别）"计数器"块 画一个相同的螺旋。'
         turtle_2_7_5: '(在函数目录中）有一个新的函数："画一个雪人"。画两个雪人，一个高为250像素，一个高为100像素。'
         turtle_2_8: '这个题目有点儿难。试试使用"画一个雪人"的函数和（在动作目录中）新的"向前跳"块。画3个颜色不同的雪人，每两个之间相隔 100 个像素。'
         turtle_2_9: '用一个"计数"循环块来画雪人一家人。他们的高度分别是110， 100， 90， 80，和 70，每两个之间相隔60像素。'
@@ -231,9 +231,9 @@ zh:
         maze_3_2: 写一个程序，让我能够到达那只猪。
         maze_3_3: 我怎样才能抓住那只猪？小心别让我撞上TNT炸弹！
         maze_3_4: 写个程序，让我绕过那些TNT炸药，抓住那只猪。
-        bounce_1: 在“左箭头时”模块下面添加模块，然后按“运行”。使用左箭头来移动挡板来到达终点目标。
-        bounce_2: '在"当左箭头"块和“当右键头”块下面添加块，然后按"运行程序"。移动球拍到达两边的目标。'
-        bounce_3: '现在，尝试类似的做法用"当上箭头"块，来移动球拍到顶部目标。'
+        bounce_1: 在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。
+        bounce_2: '在"当按左方向键时"块和“当按右方向键时”块下面添加块，然后按"运行程序"。移动球拍到达两边的目标。'
+        bounce_3: '现在，尝试类似的做法用"当按上方向键时"块，来移动球拍到顶部目标。'
         bounce_4: 这次你需要添加四个块。移动到所有四个球拍完成目标，以完成这个关卡。
         bounce_5: '我们要将球发向球拍。将一个模块附加到"当球击中桨"模块以确保球能到达目标。'
         bounce_6: '现在完成的目标是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。'
@@ -289,7 +289,7 @@ zh:
         studio_c2_4: 你可以写一个程序来将这只狗移动到那只猫处, 当狗到达时, 让猫对他说“你好”?
         studio_c2_5: 你可以写一个程序来使章鱼被点击时说“你好”吗？
         studio_c2_6: 你可以写一个程序，用上/下/左/右按键使这个企鹅到达所有目标吗？
-        studio_c2_7: '"永远重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
+        studio_c2_7: '"一直重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
         studio_c2_8: '如果他碰到恐龙时，你可以让企鹅说: "哎哟!" 并播放“打”的声音，然后将企鹅按照箭头移动使这种情况发生吗？'
         studio_c2_9: 你可以添加一个模块, 当企鹅碰到章鱼时得一分点，然​​后将企鹅按照箭头移动，直到你获得分数?
         studio_c2_10: 你可以添加模块, 以更改背景和企鹅的速度，然​​后将企鹅按照箭头移动，直到你获得分数?
@@ -302,7 +302,7 @@ zh:
         studio_c3_story_6: 创建你自己的故事。当你完成后，单击完成，让朋友在他们手机上试试你的故事.
         studio_c3_game_1: 你可以写一个程序来使章鱼被点击时说“你好”吗？
         studio_c3_game_2: 你可以写一个程序，用上/下/左/右按键使这个企鹅到达所有目标吗？
-        studio_c3_game_3: '"永远重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
+        studio_c3_game_3: '"一直重复"块允许您连续运行代码。您可以附加块来使这只恐龙反复向上向下移动吗？'
         studio_c3_game_4: '如果他碰到恐龙时，你可以让企鹅说: "哎哟!" 并播放“打”的声音，然后将企鹅按照箭头移动使这种情况发生吗？'
         studio_c3_game_5: 你可以添加一个模块, 当企鹅碰到章鱼时得一分点，然​​后将企鹅按照箭头移动，直到你获得分数?
         studio_c3_game_6: 你可以添加模块, 以更改背景和企鹅的速度，然​​后将企鹅按照箭头移动，直到你获得分数?
@@ -313,33 +313,34 @@ zh:
         studio_playlab_4: 你能帮网球男孩 (演员 1) 到达网球女孩 （演员 2）那里，并且当他到达时播放一个声音吗？
         studio_playlab_5: '你能当空间机器人被点击时, 帮他说"问候地球人"吗? 点击运行后, 别忘了点击它.'
         studio_playlab_6: 你可以帮助女巫使用上/下/左/右方向键来走动到达所有的魔法火球吗?
-        studio_playlab_7: '"永远重复"块允许您连续运行代码。您可以附加块来帮助巫師反复向右和左移动吗？'
+        studio_playlab_7: '"一直重复"块允许您连续运行代码。您可以附加块来帮助巫師反复向右和左移动吗？'
         studio_playlab_8: 当独角兽跑近巫师时，添加一个模块来得分和一个模块播放声音，然后你能用箭头移动它们直到得分吗？
         studio_playlab_9: 为这次外星人入侵事件设置背景画面，并通过加快空间机器人的速度来使到达外星人。通过方向键来移动太空机器人，并警告其它人。
         studio_playlab_10: 创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。
-        studio_iceage_hello1: '喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“语言”模块拖放到工作区，然后在里面输入"你好"。'
-        studio_iceage_hello2: '喜得(角色1) 发现了曼尼(角色2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"演员 说"块两次。'
+        studio_iceage_hello1: '喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“说”模块拖放到工作区，然后在里面输入"你好"。'
+        studio_iceage_hello2: '喜得(演员1) 发现了曼尼(演员2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"演员 说"块两次。'
         studio_iceage_move_to_flag: '斯奎特正在找他的橡子！使用"移动"模块帮他移动到最后200像素位置。'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_move_to_actor: |
+          迪亚哥 (演员 1) 正寻找曼尼 (演员 2)。请帮助迪亚哥使用"移动演员"块 ，向曼尼移动200 个像素。
+          接着，在"当演员碰到"事件块的下面，拼接”播放声音"块，以便当他们发现对方的时候，播放声音。
+        studio_iceage_repeat: '"一直重复"块可以连续不停地运行代码。你可以拼上这个块，帮助格瑞尼重复地左右移动来锻炼吗?'
+        studio_iceage_click_hello: 当点击时，你能帮喜得给朋友打最后一个电话吗？别忘了点击运行后，还要点击他。
+        studio_iceage_move_events: 斯奎特正在找橡子！给每个方向事件下面加上各个方向的移动模块，这样他就能到处跑了。完成后，点击运行，然后试着帮他收集橡子。
+        studio_iceage_sound_and_points: 通过我们写好的大部分代码，格瑞尼已经能左右移动了，喜得也能在屏幕上移动了。你能接着加上一些模块到“当演员碰到”事件中，从而在喜得和格瑞尼相撞的时候播放音乐并得分吗？点击运行来玩这个游戏。
+        studio_iceage_warn_ice_age: 每个人都要移动得快一点，因为冰河世纪就要来了！将背景改为结冰的，并将喜得的速度设置为快速。然后点击运行，将他移动到迪亚哥那里取暖。
+        studio_iceage_throw_hearts: 喜得想让他的奶奶--格瑞尼，知道他很爱她。用“演员扔”模块来让喜得（演员1）扔爱心给格瑞尼（演员2）！设置当奶奶拿到爱心时很快乐。
+        studio_iceage_free_play: 是时候创建你自己的游戏或故事啦！当你完成后时，单击“完成”来让你的朋友在他们的手机、 平板电脑或电脑试试你的游戏吧！
+        studio_gumball_hello1: 陶安安想交新朋友。你能帮她拖动“说”模块到工作区，然后在里面写上“你好”吗？这样她就能说“你好”了。
+        studio_gumball_hello2: 达尔文（演员1）和他的兄弟陶阿甘（演员2）正在朝学校走去。用“演员说”模块两次，来帮助他们相互问候。
+        studio_gumball_move_to_flag: 蕉蕉将要赢得运动会比赛了！用“移动”模块帮助他跑最后200像素。
+        studio_gumball_move_to_actor: 陶阿甘（演员1）和达尔文（演员2）参加运动会迟到了！用“移动演员”模块帮助陶阿甘往下移动200像素到达尔文那里。然后，在“当演员碰到”模块下加一个播放音乐，这样他俩碰到的时候就能播放音乐了。
+        studio_gumball_repeat: “一直重复”模块让你可以一直运行代码。你能用这个模块来帮助陶阿甘左右移动，从而为比赛进行热身吗？
+        studio_gumball_click_hello: 你能帮助安东说：“各就各位，预备，跑！”，从而让比赛开始吗？别忘了，当测试你的程序时，先点运行，然后点击安东。
+        studio_gumball_move_events: 达尔文在一场收集旗帜的比赛中！通过给每个事件加上移动模块来帮助他四处移动。当完成后，点击运行然后试着收集到所有的旗帜。
+        studio_gumball_sound_and_points: 通过我们写好的大部分代码，格瑞尼已经能左右移动了，喜得也能在屏幕上移动了。你能接着加上一些模块到“当演员碰到”事件中，从而在喜得和格瑞尼相撞的时候播放音乐并得分吗？点击运行来玩这个游戏。
+        studio_gumball_warn_food_fight: 达尔文刚从食物大战中逃掉！将背景变为“角色”，并且将达尔文的速度设置为快速。然后点击运行，让他移动到珮珮那里警告她。
+        studio_gumball_join_food_fight: 参加食物大战！用“演员向右扔”的命令让蕉蕉（演员1）往安东（演员2）扔食物！当安东被击中时，设置他的情绪为生气。
+        studio_gumball_free_play: 是时候创建你自己的游戏或故事啦！当你完成后时，单击“完成”来让你的朋友在他们的手机、 平板电脑或电脑试试你的游戏吧！
         studio_full_sandbox: 创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。
         studio_k1_1: '你可以让这个狗说"你好世界"吗？'
         studio_k1_2: 你可以让狗说些什么，然后让猫说些什么吗？
@@ -351,7 +352,7 @@ zh:
         maze_wordsearch_k_2: 移动我拼写单词SOUTH
         maze_wordsearch_k_3: 移动我拼写单词WEST
         maze_wordsearch_k_4: 移动我拼写单词NORTH
-        maze_wordsearch_k_6: 把我向东移动，然后向南移动来拼写单词JUMP
+        maze_wordsearch_k_6: 把我向东移动，然后向南移动来拼写单词 JUMP
         maze_wordsearch_k_9: 把我向这边 然后向另一边移动来拼写单词CODE
         maze_wordsearch_k_13: 把我向这边 然后向另一边移动来拼写单词DEBUG
         maze_wordsearch_k_15: 把我向这边 然后向另一边移动来拼写单词ABOVE
@@ -364,7 +365,7 @@ zh:
     video:
       name:
         maze_intro: 迷宫简介
-        artist_intro: 艺术家简介
+        artist_intro: 小艺术家简介
         farmer_intro: 农夫简介
         flappy_intro: Flappy简介
         loop_times: 重复次数块
@@ -378,14 +379,14 @@ zh:
         parameters: 有参数的函数
         hoc_wrapup: 编程一小时总结
         Unplug1: 什么是计算机科学?
-        Unplug2: 计算性思维
+        Unplug2: 计算式思维技巧
         Unplug3: 方格纸编程
         Unplug4: 算法
         Unplug5: 函数
         Unplug6: 条件语句
         Unplug7: 写歌
         Unplug8: 抽象化
-        Unplug9: Relay programming
+        Unplug9: 编程接力
         Unplug10: 互联网
         Unplug11: 总结
         C1_happy_maps_unplugged: 快乐地图
@@ -396,7 +397,7 @@ zh:
         C1_maze_intro_sequencing: 迷宫测序介绍
         C1_maze_debugging: 迷宫： 调试中
         C1_bee_level_intro: 蜜蜂级别-简介
-        C1_artist_intro: 艺术家简介
+        C1_artist_intro: 小艺术家简介
         C1_spelling_bee_intro: 拼字游戏简介
         C1_zuck_repeat_loop: 迷宫循环
         C1_bee_loops: 蜜蜂循环
@@ -406,68 +407,68 @@ zh:
         C1_building_foundation: 打基础
         C1_going_places_safely: 去安全的地方
         C2_maze_intro: 迷宫简介
-        C2_artist_intro: 艺术家简介
+        C2_artist_intro: 小艺术家简介
         C2_zuck_repeat_loop: 迷宫循环
-        C2_artist_loops: 艺术家循环
-        C2_artist_debugging: Artist Debugging
+        C2_artist_loops: 小艺术家循环
+        C2_artist_debugging: 小艺术家： 调试
         C2_bee_loops: 蜜蜂循环
         C2_bee_debugging: 蜜蜂调试
-        C2_bee_conditionals: Bee Conditionals
+        C2_bee_conditionals: 蜜蜂：条件
         C2_playlab_createstory: '游戏实验室: 创建一个故事'
         C2_graph_paper: 方格纸编程
         C2_conditionals_with_cards: 条件语句
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: 二进制的手镯
         C2_relay_programming: 编程接力
         C2_paper_airplanes: 纸飞机
         C2_digital_footprint: 你的数字足迹
         C2_digital_footprint_v2: 你的数字足迹
         C3_maze_level_4: 迷宫循环
-        C3_artist_intro: 艺术家简介
-        C3_artist_functions: 艺术家函数
+        C3_artist_intro: 小艺术家简介
+        C3_artist_functions: 小艺术家函数
         C3_bee_functions: 蜜蜂函数
-        C3_bee_conditionals: Bee Conditionals
-        C3_maze_conditionals: Maze Conditionals
+        C3_bee_conditionals: 蜜蜂：条件
+        C3_maze_conditionals: 迷宫：条件
         C3_artist_nested_loops: 循环嵌套
         C3_farmer_while: 当循环
         C3_bee_nested_loops: 循环嵌套
         C3_bee_debugging: 蜜蜂调试
         C3_bounce: 跳
         C3_playlab_create_game: 游戏实验室 — 创建一个游戏
-        C3_computational_thinking: 计算性思维
+        C3_computational_thinking: 计算式思维技巧
         C3_dice_race: 骰子比赛
         C3_internet: 互联网
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_crowdsourcing: 众包
+        C3_functional_suncatchers: 函数化的吊饰
         C3_songwriting_with_parameters: 通过输入参数来作曲。
         C4_intro: 介绍
         C4_loops_zombie: 循环
-        C4_bee_conditional: Bee Conditionals
-        C4_variables_artist: 变量 —— 艺术家
+        C4_bee_conditional: 蜜蜂：条件
+        C4_variables_artist: 变量 —— 小艺术家
         C4_variables_playlab: 变量 — — 游戏实验室
-        C4_for_loops: For 循环
-        C4_for_loops_bee: For 循环
-        C4_for_loops_no_bee: For 循环
-        C4_math_artist: 会使用数学来编程的艺术家。
+        C4_for_loops: 计数循环
+        C4_for_loops_bee: 计数循环
+        C4_for_loops_no_bee: 计数循环
+        C4_math_artist: 会使用数学来编程的小艺术家。
         C4_function_edit: 编辑函数
         C4_function_create: 创建函数
         C4_function_parameters: 有参数的函数
         C4_conditionals: 条件语句
         C4_unplugged_algorithms: 七巧板算法
-        C4_unplugged_madlibs: 疯狂字谜
+        C4_unplugged_madlibs: 疯狂填词
         C4_unplugged_variables: 信封中的变量
-        C4_unplugged_forloops: For 循环
-        C4_unplugged_parameters: Songwriting with Parameters
+        C4_unplugged_forloops: 计数循环
+        C4_unplugged_parameters: 通过输入参数来作曲。
         C4_unplugged_binary: 二进制
         frozen_intro: 编程一小时介绍
         frozen_loops: 循环介绍
         frozen_functions: 函数介绍
         playlab_intro: 游戏实验室的介绍
         playlab_events: 游戏实验室 事件
-        playlab_repeat_forever: 游戏实验室 不断重复
+        playlab_repeat_forever: 游戏实验室 一直重复
         tutorial_puzzle_challenge: 拼图挑战教程
         infinity_playlab_intro: '游戏实验室 -- 简介'
         infinity_playlab_events: '游戏实验室 - 事件'
-        infinity_playlab_repeat_forever: '游戏实验室 - 不断重复'
+        infinity_playlab_repeat_forever: '游戏实验室 - 一直重复'
         csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
         csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
         csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
@@ -521,12 +522,12 @@ zh:
         mc_if_statements: '我的世界 - 如果语句'
         mc_congrats_share: '我的世界 - 贺词'
         mc_congrats_no_share: '我的世界 - 贺词'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        gumball_intro: '陶阿甘编程一小时 - 介绍'
+        gumball_events: '陶阿甘编程一小时 - 事件'
+        gumball_repeat: '陶阿甘编程一小时 - 重复语句'
+        iceage_intro: '冰河世纪编程一小时 - 介绍'
+        iceage_events: '冰河世纪编程一小时 - 事件'
+        iceage_repeat: '冰河世纪编程一小时 - 重复语句'
     callout:
       text:
         drag_blocks: '拖动一个"移动"的块，并将它吸到别的模块下面'
@@ -540,62 +541,61 @@ zh:
         studio_say_text: 你希望你的演员说些什么话呢，在引号中键入吧。
         jigsaw_click: 单击此块 ！
         move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
-        turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
-        replace_questions: 'Use the drop-down to replace "???" with a number'
-        replace_questions_degree: 'Use the drop-down to replace "???" with the correct degree to turn'
-        repeat_blocks: 'Use the "Repeat" block and wrap it around the blocks in the workspace'
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the workspace
+        turn_elsa: 用“转”模块来让艾莎转方向。下拉菜单里的数字决定了艾莎转多少度。
+        replace_questions: '使用下拉菜单来将"???"替换为数字'
+        replace_questions_degree: '使用下拉菜单来将"???"替换为转向的度数'
+        repeat_blocks: 用重复模块来将工作区的其它模块包起来。
+        repeat_blocks_1: (1) 使用这个模块将工作区的灰色模块包围起来。
         repeat_blocks_2: '(2) 移动"重复"块到这里, 然后将灰色方块放到它里面.'
-        snowflake_dropdown: Use this drop-down to create different snowflakes!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
+        snowflake_dropdown: 用下拉菜单来创建不一样的雪花！
+        degrees_per_side: 用360除以边的数量，从而算出每次转的角度。
+        set_sides: 用这个模块来设置“边数”为正确的数值来通过这一关。
+        set_length: 用这个模块来设置“长度”为正确的数值。
+        which_equation: 哪个等式会让多边形的每条边更短，并且有更多的边？
         get_nectar: '使用新的"得到花蜜"块。'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
+        actions_category: 工具箱里有新的样子了！现在里面有“行动”模块了。
         draw_square_hint: '提示: 用你刚才在上一关中制作的方形循环。'
         edit_function: 单击此处来编辑您的函数。
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
+        create_function: 点击这里来打开函数的选项，然后点击“创建函数”的按钮。
+        house_hint: 如果这幅画看起来不像一个房子也没关系。我们会在下一关里面修好它。
+        edit_draw_square: 用这个按钮来编辑函数，添加一个循环。
+        edit_get_nectar: 用这个按钮来编辑函数，并改变蜜蜂的方向让它到达花蜜。
+        logic_category: 打开逻辑选项来找到”如果/否则“模块。
+        length_parameter: 你能修改这个函数，从而让它用到长度参数吗？
+        frozen_diamond_repeat: 用重复模块来创建这个形状。
+        frozen_circle_function_in_circle_turn: 创建了每个圆圈后，别忘了转向。
+        frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
+        frozen_snowflake_branch: 用“创建一个雪花分支”模块
+        frozen_create_square: 添加更多模块来创造一个正方形
+        playlab_drag_say: 将“说”模块拖到这里，然后输入“你好”
+        playlab_use_twice: 只用这个模块两次，并且记得修改演员编号
+        playlab_move_girl: 用向右移动模块来移动网球女孩
         playlab_play_sound: '添加"播放声音"的块'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
+        playlab_arrow_keys: 点击运行后，记得用这些按钮来移动女巫。
+        playlab_add_move: 将“移动”模块添加到“重复”模块中。
         playlab_add_score: 添加分数块到这里
         playlab_add_blocks: 添加您的模块到这里
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        set_variable: 将数字模块拖拽到这里来设置变量
+        place_variable: 将变量拖拽到这个模块中
+        bee_for_loop: 将你想让蜜蜂采集的最大花蜜数量拖拽到这里。
+        place_counter_variable: 将计数器拖拽到这个模块中。
+        function_editor_draw_square: 这是你的函数定义。这些模块会在每次使用“画一个正方形”模块时运行。
         change_here: 在这里进行更改
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
+        write_draw_square_function: 从工具箱中拖拽模块到这里来画一个正方形。
         write_draw_triangle_function: 将模块从工具箱中拖动到这里画一个三角形
         edit_add_parameter: 点击编辑，在你的函数中添加参数
         add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
         fill_in_actor: 在??? 处填写数字，使其对应到每个演员 (1、 2 和 3)
         repeat: 在循环中放入模块来重复执行命令
         if_bee_nectar: '使用"如果"模块来决定蜜蜂是否应该得到花蜜'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
+        if_else_bee: 使用“如果/否则”模块来让蜜蜂从花中采到花蜜，并且如果不是花的话就酿造蜂蜜。
         repeat_full_circle: 输入僵尸至少需要移动多少次才能完成一个完整的循环
-        place_length_variable: Drag the length variable here to replace the question marks
+        place_length_variable: 将长度变量拖拽到这里来替代问号。
         arrows_move_actor: 使用箭头移动演员
         right_arrow_fireball: 使用右箭头来射击火球
         name_function: 在这里填写函数的名称
         Infinity_move_right_runbutton: 在这里添加移动模块
-        Infinity_move_directions_callout: 当按下上箭头键时，哪个模块将会让大白向上移动？
+        Infinity_move_directions_callout: 当按上方向键时，哪个模块将会让大白向上移动？
         Infinity_move_directions_callout_arrow: 使用这些箭头键引导
         Infinity_move_collide_callout: 发生此事件时播放声音。
         Infinity_repeat_callout: 放置移动模块到这里面

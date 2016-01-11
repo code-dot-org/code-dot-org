@@ -193,7 +193,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawUpperWave":function(d){return "draw upper wave"},
 "drawLowerWave":function(d){return "draw lower wave"},
 "drawStamp":function(d){return "draw stamp"},
-"heightParameter":function(d){return "height"},
+"heightParameter":function(d){return "ऊँचाई"},
 "hideTurtle":function(d){return "hide artist"},
 "jump":function(d){return "jump"},
 "jumpBackward":function(d){return "jump backward by"},

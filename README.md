@@ -26,7 +26,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `rbenv rehash`
 1. Set up nvm
   1. These steps are now necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
-  1. Install node version manager `brew install nvm` 
+  1. Install node version manager `brew install nvm`
     1. follow the instructions in the output of the previous command to finish installing nvm. It should be something like this: `echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.bashrc`
   1. Install the right version of node `nvm install v0.12.4`
   1. Make that your default version `nvm alias default v0.12.4`
@@ -36,7 +36,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window  
   1. `ruby --version  # --> ruby 2.2.3`
-  1. `nvm ls          # --> v0.12.4` 
+  1. `nvm ls          # --> v0.12.4`
   1. `node --version  # --> v0.12.4`
   1. `npm --version   # --> 2.10.1`
 
@@ -45,7 +45,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs`
   * **Hit enter and select default options for any configuration popups**
-1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
+1. Upgrade npm to 2.0. If `npm -v` says less than 2.0 then
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
   * `sudo apt-get update`
   * `sudo apt-get install nodejs`
@@ -129,9 +129,9 @@ Our code is segmented into four parts:
 3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
-## Building Javascript (apps, blockly-core, and shared) (optional)
+## Building Javascript (apps, blockly-core, and code-studio) (optional)
 
-The studio.code.org default dashboard install includes a static build of blockly and of the shared js, but if you want to make modifications to these you'll want to enable building them in the build:
+The studio.code.org default dashboard install includes a static build of blockly and of code-studio js, but if you want to make modifications to these you'll want to enable building them in the build:
 
 ### Enabling Apps Builds
 
@@ -144,12 +144,11 @@ You'll need to do this once:
   1. Add `build_apps: true`
   1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
   1. Add `use_my_apps: true`
-1. To build shared js, edit `locals.yml` to add:
-  1. Add `build_shared_js: true`
-  1. Add `use_my_shared_js: true`
+1. To build code_studio js, edit `locals.yml` to add:
+  1. Add `use_my_code_studio: true`
 1. `rake install`
 
-This configures your system to build apps/blockly-core/shared whenever you run `rake build` and to use the versions that you build yourself.
+This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
 
 ### Building
 
@@ -158,7 +157,7 @@ This configures your system to build apps/blockly-core/shared whenever you run `
 
 This will build everything you have set to build in `locals.yml`.
 
-You can use `rake build:apps`, `rake build:blockly_core` and `rake build:shared` to build a specific project.
+You can use `rake build:apps`, `rake build:blockly_core` and `rake build:code_studio` to build a specific project.
 
 You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 
@@ -215,4 +214,3 @@ Contributors should follow the GitHub [fork-and-pull model](https://help.github.
   * [https://staging.code.org/](https://staging.code.org/)
   * [https://staging-studio.code.org/](https://staging-studio.studio.code.org/)
   * [https://staging.csedweek.org/](https://staging.csedweek.org/)
-

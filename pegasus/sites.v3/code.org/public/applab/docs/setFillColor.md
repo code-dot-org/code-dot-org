@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Canvas
@@ -20,17 +19,20 @@ Category: Canvas
 
 [short_description]
 
-Set the fill color for the active canvas.
+Sets the fill color for the active canvas.
 
 [/short_description]
 
-The fill color controls the interior color of shapes drawn with [rect](/applab/docs/rect) and [circle](/applab/docs/circle). The outline color of circles and rectangles is set using [`setStrokeColor()`](/applab/docs/setStrokeColor). To draw only the outline of a rectangle or circle (unfilled), set the fill color to `"transparent"`.
+The fill color controls, for the active canvas, the interior color of shapes drawn with [rect](/applab/docs/rect) and [circle](/applab/docs/circle). The outline color of circles and rectangles is set using [setStrokeColor](/applab/docs/setStrokeColor).
 
-Setting the fill color affects all subsequent [`rect()`](/applab/docs/rect) and [`circle()`](/applab/docs/circle) calls. Any shapes that have already been drawn are not affected.
+The *color* parameter must be a string enclosed in quotes, and can take one of four forms.  It can be:
 
-Colors can be specified by name (eg, "red", "green", "blue"), or by hex code (eg, "#FF000", "#00FF00", "#0000FF"), or by rgb value (eg, "rgb(255,0,0)", "rgb(0,255,0)", "rgb(0,0,255)").
-
-**Note**: A canvas element must be created before the fill color can be changed. Create a canvas element in Design mode first, or call [`createCanvas()`](/applab/docs/createCanvas) before calling `setFillColor()`.
+ * the name of the color
+ * the hex value of the color (preceded by a #)
+ * the rgb value of the color
+ * the rgba value of the color (last value specifies the alpha channel for transparency) 
+ 
+The default fill color is transparent.
 
 [/description]
 
@@ -39,12 +41,11 @@ ____________________________________________________
 
 [example]
 
-This example draws an empty circle in the middle of the screen.
-
-
 ```
-createCanvas(); //Create a canvas on which to draw
-circle(160, 240, 100); // Draw an empty circle centered at x:160 y:240
+// Draw a black bordered circle filled with yellow.
+createCanvas("canvas1");
+setFillColor("yellow");
+circle(160, 240, 100);
 ```
 
 [/example]
@@ -53,18 +54,18 @@ ____________________________________________________
 
 [example]
 
-This example draws a worried emoticon face using filled shapes.
-
+**Example: Worried!** Draw a worried emoticon face using filled shapes.
 
 ```
-createCanvas();         //Create a canvas on which to draw
+// Draw a worried emoticon face using filled shapes.
+createCanvas("canvas1");
 setFillColor("yellow");
-circle(160, 240, 100);  //Draw a big, yellow circle for a head
+circle(160, 240, 100);
 setFillColor("black");
-circle(125, 215, 20);   //Draw two solid black circles for eyes
+circle(125, 215, 20);
 circle(195, 215, 20);
 setFillColor("white");
-rect(100, 260, 120, 20);//Draw a white rectangle for a mouth
+rect(100, 260, 120, 20);
 
 ```
 
@@ -72,19 +73,30 @@ rect(100, 260, 120, 20);//Draw a white rectangle for a mouth
 
 ____________________________________________________
 
+
 [example]
 
-This example draws three filled yellow rectangles, using three different ways of specifying the color yellow.
-
+**Example: 4 Ways** Demonstrate all 4 ways to specify the *color* parameter.
 
 ```
-createCanvas();
-setFillColor("yellow");
-rect(80, 50, 160, 40);
-setFillColor("#FFFF00");
-rect(80, 100, 160, 40);
-setFillColor("rgb(255,255,0)");
-rect(80, 150, 160, 40);
+// Demonstrate all four ways to specify the color parameter.
+createCanvas("canvas1");
+// Sets the color using the name of a color in a string.
+setFillColor("chartreuse");
+circle(50, 50, 40);
+
+// Sets the color using the hex value of a color in a string.
+setFillColor("#7fff00");
+circle(100, 50, 40);
+
+// Sets the color using the rgb value of a color in a string.
+setFillColor("rgb(127, 255, 0)");
+circle(50, 100, 40);
+
+// Sets the color using a rgba value of a color in a string.
+// The last value is the amount of transparency, a percentage between 0.0 and 1.0 
+setFillColor("rgba(127, 255, 0, 0.5)");
+circle(100, 100, 40);
 ```
 
 [/example]
@@ -106,8 +118,8 @@ setFillColor(color)
 ### Parameters
 
 | Name  | Type | Required? | Description |
-|-------|------|-----------|-------------|
-| color | string | Yes | The color name or hex value representing the color.  |
+|-----------------|------|-----------|-------------|
+| color | String | Yes | The color of the pen used to fill circles and rectangles. |
 
 [/parameters]
 
@@ -121,10 +133,10 @@ No return value. Outputs to the display only.
 [tips]
 
 ### Tips
-- `setFillColor` only affects the active canvas. If there is more than one canvas, each one can have a different fill color.
-- When a new canvas is created, its fill color will be transparent.
-- For an interactive tool that provides color hex values, see https://developer.mozilla.org/en-US/docs/Web/CSS/Tools/ColorPicker_Tool.
-- For a list of color names and corresponding hex codes, see https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords.
+- A canvas element must be created before the stroke color can be changed. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling setStrokeColor.
+- setFillColor only affects the active canvas. If there is more than one canvas, each one can have a different fill color.
+- The color "transparent" will not fill in anything.
+- Recall Unit 1 lessons about hex and rgb color values and see [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords) for a complete list of all available colors.
 
 [/tips]
 

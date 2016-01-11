@@ -10,7 +10,6 @@
  *
  * Gem assets
  *= require jquery-ui
- *= require video-js
  *
  * Vendor assets
  *= require add2home
@@ -30,6 +29,8 @@
  *= require details-polyfill
  */
 
+// TODO: Move into code-studio.scss when it exists.
+@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
@@ -243,7 +244,7 @@ a.header_status_bar:hover {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 110px;
+$footer_height: 165px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -253,7 +254,9 @@ html, body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
-  position: relative;
+  .legacy-share-view & {
+    position: relative;
+  }
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
@@ -368,17 +371,6 @@ $small-footer-standard-width: 400px;
   }
 }
 
-#copyright-flyout {
-  display: none; /* Invisible until summoned. */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 625px;
-  max-width: 50%;
-  min-width: 300px;
-  padding: 1em;
-}
-
 #more-menu {
   display: none;
   position: absolute;
@@ -479,6 +471,12 @@ $default-modal-width: 640px;
     right: 0;
     margin: 0 auto;
   }
+
+  .markdown {
+    .modal-image {
+      margin-top: -100px;
+    }
+  }
 }
 
 .auto-resize-scrollable {
@@ -494,9 +492,6 @@ $default-modal-width: 640px;
     margin-bottom: 25px;
 
     z-index: 1050;
-  }
-  .modal-image {
-    margin-top: -100px;
   }
 }
 
@@ -1646,6 +1641,7 @@ a.download-video {
 .multi #markdown.teacher {
   margin-left: 50px;
   margin-right: 50px;
+  max-width: 100%;
 }
 
 .text-match #markdown.teacher {
@@ -1927,6 +1923,17 @@ $modal-no-icon-gap: 22px;
     color: $charcoal;
     margin: 0 0 8px;
   }
+
+  .instructions-container {
+    .authored-hints {
+      p, pre {
+        font-size: 18px;
+        line-height: normal;
+        color: $charcoal;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .dialog-title {
@@ -1939,6 +1946,16 @@ $modal-no-icon-gap: 22px;
   border: 1px solid $orange;
   color: white;
   min-width: 100px;
+}
+
+#hint-button {
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  color: black;
+
+  svg {
+    margin: -12px -6px;
+  }
 }
 
 #again-button {
@@ -2011,11 +2028,6 @@ $modal-no-icon-gap: 22px;
   &.no-modal-icon {
     margin-left: $modal-no-icon-gap;
   }
-}
-
-#feedbackBlocksContainer.hiddenIframe {
-  visibility: hidden;
-  height: 0px;
 }
 
 #feedbackBlocks {

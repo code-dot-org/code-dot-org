@@ -19,8 +19,10 @@ DNS and IP address work in the real world because of the hierarchy and duplicity
 
 # Resources
 
-* Video: <a href="https://www.youtube.com/watch?v=2ZUxoi7YNgs" target="_blank">  How DNS Works</a>
 * Activity:  <a href="https://docs.google.com/document/d/19W0-2tTK4t1f-jKW2MCMoWVHPird-uiQ0PpcqNWx7g8/edit?usp=sharing" target="_blank">DNS in the Real World Jigsaw</a>
+* Video: <a href="https://www.youtube.com/watch?v=2ZUxoi7YNgs" target="_blank">  How DNS Works</a>
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/2ZUxoi7YNgs?rel=0" frameborder="0" allowfullscreen></iframe>
 
 # Articles
 * <a href="http://www.information-age.com/technology/security/123459033/growing-threat-ddos-attacks-dns" target="_blank">  Growing Threat of DDoS on DNS</a>
