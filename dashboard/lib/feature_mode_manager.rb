@@ -5,8 +5,8 @@
 #
 # normal: All features enabled for all of the given scripts.
 # scale: Puzzle ratings and hints disabled on all tutorials.
-#       Milestone posts disabled but sharing enabled for high scale (HOC) tutorials.
-#       Hoc activity logging sampled at 10%.
+#       Milestone posts disabled for high scale (HOC) tutorials, except on shared levels.
+#       Sampled HOC activity logging at 10%.
 # emergency: scale features, plus sharing disabled. Sampled hoc activity logging at 10%.
 class FeatureModeManager
 
