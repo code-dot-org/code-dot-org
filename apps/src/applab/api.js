@@ -275,15 +275,15 @@ exports.setText = function (elementId, text) {
                            'text': text });
 };
 
-exports.getValue = function (elementId) {
+exports.getNumber = function (elementId) {
   return Applab.executeCmd(null,
-                          'getValue',
+                          'getNumber',
                           {'elementId': elementId });
 };
 
-exports.setValue = function (elementId, text) {
+exports.setNumber = function (elementId, text) {
   return Applab.executeCmd(null,
-                          'setValue',
+                          'setNumber',
                           {'elementId': elementId,
                            'text': text });
 };
