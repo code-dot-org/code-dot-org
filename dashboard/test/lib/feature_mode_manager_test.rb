@@ -28,7 +28,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
   end
 
-  def test_get_mode_returns_nil_if_gatekeeper_property_does_not_match
+  def test_get_mode_returns_nil_if_hoc_gatekeeper_property_does_not_match
     scripts = ['fake1', 'fake2']
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     @gatekeeper.set('postMilestone', where: {script_name: 'fake1'}, value: false)
@@ -37,43 +37,62 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
   end
 
+  def test_get_mode_returns_nil_if_general_gatekeeper_property_does_not_match
+    scripts = ['fake1', 'fake2']
+    FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
+    @gatekeeper.set('puzzle_rating', value: false)
+    assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+    @gatekeeper.set('puzzle_rating', value: true)
+    assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+  end
+
   def test_normal_mode
     scripts = ScriptConfig.cached_scripts
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
+    assert @gatekeeper.allows('puzzle_rating')
+    assert @gatekeeper.allows('hint_view_request')
     scripts.each do |script|
       assert @gatekeeper.allows('postMilestone', where: {script_name: script})
       assert @gatekeeper.allows('shareEnabled', where: {script_name: script})
-      assert @gatekeeper.allows('puzzle_rating', where: {script_name: script})
-      assert @gatekeeper.allows('hint_view_request', where: {script_name: script})
     end
-
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
+    assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
+    assert_equal 360, @dcdo.get('public_max_age', nil)
   end
 
   def test_scale_mode
     scripts = ScriptConfig.cached_scripts
     FeatureModeManager.set_mode('scale', @gatekeeper, @dcdo, scripts)
+    refute @gatekeeper.allows('puzzle_rating')
+    refute @gatekeeper.allows('hint_view_request')
     scripts.each do |script|
       refute @gatekeeper.allows('postMilestone', where: {script_name: script})
       assert @gatekeeper.allows('shareEnabled', where: {script_name: script})
-      refute @gatekeeper.allows('puzzle_rating', where: {script_name: script})
-      refute @gatekeeper.allows('hint_view_request', where: {script_name: script})
     end
-
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
+    assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
+    assert_equal 28800, @dcdo.get('public_max_age', nil)
   end
 
   def test_emergency_mode
     scripts = ScriptConfig.cached_scripts
     FeatureModeManager.set_mode('emergency', @gatekeeper, @dcdo, scripts)
+    refute @gatekeeper.allows('puzzle_rating')
+    refute @gatekeeper.allows('hint_view_request')
     scripts.each do |script|
       refute @gatekeeper.allows('postMilestone', where: {script_name: script})
       refute @gatekeeper.allows('shareEnabled', where: {script_name: script})
-      refute @gatekeeper.allows('puzzle_rating', where: {script_name: script})
-      refute @gatekeeper.allows('hint_view_request', where: {script_name: script})
     end
 
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
+    assert_equal 86400, @dcdo.get('public_proxy_max_age', nil)
+    assert_equal 172800, @dcdo.get('public_max_age', nil)
+  end
+
+  def test_raises_on_invalid_mode
+    assert_raises RuntimeError do
+      FeatureModeManager.set_mode('invalid', @gatekeeper, @dcdo, ['fake'])
+    end
   end
 
 end
