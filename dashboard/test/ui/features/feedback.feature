@@ -78,7 +78,7 @@ Scenario: Solve without recommended blocks
   And I wait to see "#resetButton"
   And I press "resetButton"
   And I drag block "6" to block "8"
-  And I drag block "10" to block "13" plus offset 35, 30
+  And I drag block "10" to block "14" plus offset 35, 30
   And I drag block "9" to offset "-2000, 0"
   And I press "runButton"
   And I wait to see ".congrats"

@@ -3,19 +3,16 @@
   %h2.mapheader
     %a{:href=> "https://hourofcode.com/events"}
       = I18n.t(:csedweek_map_header).gsub('#', format_integer_with_commas(fetch_hoc_metrics['total_hoc_count']))
-    %a{:href=> "https://hourofcode.com/#join"}
-      %button.signup-button
-        = I18n.t(:csedweek_map_signup)
 
   .row
     .col-sm-12
       #gmap.full-width
-  #belowmaplegend.legend{style: "display: none;"}
+  #belowmaplegend.legend
     .legend-title= I18n.t(:csedweek_map_legend_title)
-    .color.blue
-    = I18n.t(:csedweek_map_legend_event)
     .color.red
-    = I18n.t(:csedweek_map_legend_cs_tech_jam)
+    %div= I18n.t(:csedweek_map_legend_event)
+    .color.blue
+    %div= I18n.t(:csedweek_map_legend_cs_tech_jam)
 
 :javascript
   var gmap;
@@ -69,16 +66,11 @@
 
     var legend = document.createElement('div');
     legend.id = 'inmaplegend';
-    legend.className = 'legend'
-
-    var content = [];
-    content.push('<div class="legend-title">#{I18n.t(:csedweek_map_legend_title)}</div>');
-    content.push('<div class="color red"></div>#{I18n.t(:csedweek_map_legend_event)}');
-    content.push('<br><div class="color blue"></div>#{I18n.t(:csedweek_map_legend_cs_tech_jam)}');
-    legend.innerHTML = content.join('');
+    legend.className = 'legend';
     legend.index = 1;
+    $("#belowmaplegend div").clone().appendTo(legend);
 
-    // gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+    gmap.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
     layer.setMap(gmap);
 

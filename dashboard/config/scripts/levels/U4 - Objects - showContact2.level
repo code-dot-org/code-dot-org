@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Show Contact 2\r\n\r\n# Do This",
+    "markdown_instructions": "# Show Full Contact Information\r\n\r\nNow we'll want to show the full contact information. You'll need to reference each property of the contact using the same notation you used in the last exercise.\r\n\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise ** is provided.\r\n\r\n* **Add code to your `showCurrentContact` function** so that the `phone` and `birthday` information is also displayed. Give each piece of information a descriptive header, as shown below.\r\n* **Reminder: ** you can concatenate strings with the `+` operator. `\\n` will place text on a new line.\r\n\r\n![](https://images.code.org/3aec850ad2c5ce21b1288dbec6fff711-image-1449246407070.26.34 AM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -160,16 +160,14 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
-    "text_mode_at_start": "false",
+    "text_mode_at_start": "true",
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Add the phone number and birthday text to your text area. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

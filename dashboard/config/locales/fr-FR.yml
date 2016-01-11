@@ -29,6 +29,8 @@
     code:
       label: 'Ajouter un enseignant :'
       placeholder: Code de la section (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Ajouter un enseignant
   add_hint_form:
     placeholder: Entrer votre indice de mot de passe ici
@@ -306,63 +308,9 @@
     remove: (supprimer l'enseignant)
     confirm:
       remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
-    tools: Outils de gestion pour l'enseignant
-    followers:
-      section: 'Section :'
-      stages: 'Étape(s) à afficher :'
-      show_past: 'Afficher l''historique de l''activité de l''élève (%{bullet_html})  :'
-      levels_key: Clé de niveaux
-      perfect: Terminé, parfait
-      completed: Terminé, mais trop de blocs utilisés
-      tried: Essayé, mais pas terminé
-      not_tried: Pas encore essayé
-      activity: Indique l'activité d'élèves dans les dernières %{hours} %{plural}
-      no_section: Pas de section attribuée
-      trophies: trophées
     students:
-      name: Nom
-      username: nom d'utilisateur
-      password: mot de passe
-      manage: Gérer les élèves
       dashboard: Aller au tableau de bord de l'enseignant
-      add: Ajouter des élèves
-      remove: Supprimer un élève
-      confirm_remove: Êtes-vous sûr de vouloir supprimer cet élève ?
-      help_reassign: Pour diviser votre classe en plusieurs sections, sélectionner
-        les élèves pour les assigner à une nouvelle section.
-      help_register: Au lieu de passer du temps à importer les données de chaque élève,
-        vous pouvez configurer votre classe rapidement en leur demandant de s'inscrire.
-        Vos élèves devront choisir des noms d'utilisateur et mots de passe, mais ils
-        NE SERONT PAS OBLIGÉS de fournir une adresse e-mail. Si un élève oublie son
-        mot de passe, vous serez en mesure de le réinitialiser pour lui.
-      register: Demandez à vos élèves de s'inscrire eux-mêmes
-      vist: Demander aux élèves de se rendre à
-      section_code: 'et entrez leur code de section :'
-      first_please: D'abord, merci de %{add_section}
-      for: Pour
-      enter: 'Entrer :'
-    sections:
-      add: Ajouter une section
-      manage: Gérer les sections
-      section: Section
-      students: Élèves
-      section_code: Section de code
-      add_section_code: Ajouter les sections de code des élèves
-      secret: Type de secret
-      grade: Niveau
-      course: Cours
-      rename: renommer
-      edit: modifier
-      delete: supprimer
-      confirm_delete: Êtes-vous sûr de vouloir supprimer cette section ?
-      email: Envoyer par email
-    rollup: Tableau de bord de progression
-    activity: Activité récente de la classe
     user_not_found: Le professeur ou l'élève n'a pas été trouvé
-    cant_remove_student_no_email: '%{student_name} ne peut être retiré de votre liste
-      d''élèves car %{student_name} n''a pas enregistré d''adresse de messagerie'
-    cant_remove_teacher_no_email: '%{teacher_name} ne peut être retiré de votre liste
-      d''enseignants car vous n''avez pas enregistré d''adresse email'
     student_teacher_disassociated: '%{teacher_name} n''est plus considéré comme l''enseignant
       de %{student_name}'
     panel:
@@ -454,6 +402,7 @@
     title: Apprendre avec Code Studio
     description: N'importe qui peut apprendre l'informatique. Faire des jeux, des
       apps et de l'art avec du code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Masculin
     female: Femme
@@ -496,9 +445,10 @@
     privacy: Politique de confidentialité
     secure: Version sécurisée
     report_abuse: Signaler un abus
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Construit avec Code Studio
+    make_my_own_app: Construire ma propre application
+    how_it_works: Comment ça marche
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Besoin d'aide ?
     subtitle: Voir ces vidéos et conseils
@@ -565,7 +515,7 @@
       unused: Niveaux Inutilisés
   upsell:
     hoc:
-      title: Heure de Code
+      title: Labyrinthe classique
       body: Lancez-vous dans la découverte des bases de l'informatique. Des millions
         de personnes ont tenté l'aventure.
     flappy:
@@ -640,9 +590,9 @@
     correct_body: C'est la bonne réponse.
   contract_match:
     wrong_title: Réponse incorrecte
-    badname: Votre contrat a le mauvais nom.
-    badname_case: Les noms de fonctions sont sensibles à la casse.  Essaie de changer
-      le nom de ton contrat.
+    badname: Votre contrat a un nom incorrect.
+    badname_case: Les noms de fonctions sont sensibles à la casse. Essayez de modifier
+      le nom de votre contrat.
     badrange: Votre contrat a la mauvaise plage.
     baddomainsize: Votre contrat n'a pas le bon nombre d'éléments dans son domaine.
     baddomainname: Un ou plusieurs éléments de ton domaine ont le mauvais nom.

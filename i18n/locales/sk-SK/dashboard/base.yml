@@ -28,6 +28,8 @@ sk:
     code:
       label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadajte Váš tip sem
@@ -195,7 +197,7 @@ sk:
       teacher:
         earned: '15 a viac študentov zhromaždilo všetkých %{num_trophies} trofejí. Vyhrali ste cenu učiteľ! (Iba USA učitelia)'
         not_earned_title: 'Učiť v triedu, zarob až 1.000 dolárov ako <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredity (iba pre učiteľov z USA)'
-        not_earned: 'To reward first-time computer science teachers, you can earn up to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits for guiding a classroom through the K-8 intro course. To qualify, you need to successfully host a classroom of at least 15 students through the entire K-8 intro course, with all 15 students (or more) completing all tutorials and earning all %{num_trophies} trophies. If 7 or more of the students who earn all of the trophies are girls, your reward is $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise, your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be used by teachers in U.S. public schools.'
+        not_earned: 'Ako odmenu pre nových učiteľov počítačovej vedy, môžete získať až 1.000 dolárov v <a href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditoch za prevedenie triedy cez úvodný kurz K-8. Aby ste sa kvalifikovali, musíte úspešne previesť triedu s aspoň 15 študentmi cez celý úvodný kurz K-8 všetkých 15 študentov (alebo viac) dokončením všetkých tutoriálov a získaním všetkých %{num_trophies} trofejí. Ak 7 alebo viac študentov, ktorí získajú všetky trofeje sú dievčatá, Vaša odmena je 1000 dolárov v <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditoch. V opačnom prípade je Vaša odmena 750 dolárov v <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditoch.  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kredity môžu učitelia použiť len vo verejných školách v Usa.'
         bonus:
           not_earned_title: 'Stále môžete zarobiť ďalších $250 v <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditov (iba USA učitelia)'
           earned: '7 alebo viac študentov, ktorí nazbierali všetkých %{num_trophies} odmien sú dievčatá. Vyhrala si bonus! (iba U.S. učitelia)'
@@ -253,57 +255,10 @@ sk:
     remove: (odstránenie učiteľ)
     confirm:
       remove: Naozaj chcete odstrániť tohto učiteľa?
-    tools: Nástroje učiteľa
-    followers:
-      section: 'Sekcia:'
-      stages: 'Stupeň(stupne) na zobrazenie:'
-      show_past: 'Zobraziť aktivity študenta (%{bullet_html}) v minulosti:'
-      levels_key: Kľúč úrovne
-      perfect: Dokončené, perfektne
-      completed: Dokončené, ale s pomocou príliš veľa blokov
-      tried: Snažil si sa, ale nie je to dokončené
-      not_tried: Ešte nevyskúšané
-      activity: 'Ukazuje študentské aktivity v posledných %{hours} %{plural}'
-      no_section: Žiadne pridelené časti
-      trophies: Trofeje
     students:
-      name: Meno
-      username: Používateľské meno
-      password: Heslo
-      manage: Správa Študentov
       dashboard: Prejsť na Učiteľovu Nástenku
-      add: Pridaj študentov
-      remove: odstrániť študenta
-      confirm_remove: Naozaj chcete odstrániť tohto študenta?
-      help_reassign: Ak chceš triedu rozdeliť do niekoľkých sekcií, vyberte študentov na priradenie do novej sekcie.
-      help_register: Miesto toho, aby ste strávili veľa času importovaním študentských dát jednotlivo, môžete si svoju triedu založiť rýchlo, požiadaním študentov ich o prihlásenie. Vaši študenti si musia zvoliť prihlasovacie meno a heslo, ale nie je potrebné poskytnúť e-mailovú adresu. Ak študent zabudne svoje heslo, budete mať oprávnenie resetovať mu ho.
-      register: Požiadajte Vašich študentov o registráciu
-      vist: Požiadaj tvojich študentov o návštevu
-      section_code: 'a vložte ich kód sekcie:'
-      first_please: 'Po prvé, prosím, %{add_section}'
-      for: Pre
-      enter: 'zadajte:'
-    sections:
-      add: Pridať sekciu
-      manage: Spravovať sekcie
-      section: Sekcia
-      students: Študenti
-      section_code: Kód sekcie
-      add_section_code: Vložiť študentov kód sekcie
-      secret: Tajný tip
-      grade: Stupeň
-      course: Kurz
-      rename: premenovať
-      edit: upraviť
-      delete: odstrániť
-      confirm_delete: Naozaj chceš odstrániť túto sekciu?
-      email: Odoslať e-mailom
-    rollup: Nástenka pokroku
-    activity: Posledná aktivita triedy
-    user_not_found: Učiteľa alebo študenta nie je možné nájsť
-    cant_remove_student_no_email: '%{student_name} nemôže byť odobraný ako Váš študent pretože %{student_name} nemá registrovanú e-mailovú adresu'
-    cant_remove_teacher_no_email: '%{teacher_name} nemôže byť odobraný ako Váš učiteľ, pretože nemáte registrovanú e-mailovú adresu'
-    student_teacher_disassociated: '%{teacher_name} bol odobraný ako učiteľ pre %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Prehliadač odpovede
       student: Študent
@@ -377,6 +332,7 @@ sk:
   share:
     title: Informácie o Code štúdiu
     description: Ktokoľvek sa môže naučiť informatiku. Programujte hry a aplikácie s Code štúdiom.
+    try_hour_of_code: Vyskusaj lekciu kódovania!
   gender:
     male: Muž
     female: Žena
@@ -388,8 +344,8 @@ sk:
     thank_you: 'Ďakujeme našim <a href="https://code.org/about/donors"> darcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, nášmu <a href="https://code.org/about/team"> tímu</a>, nášmu video obsadeniu a nášmu <a href="https://code.org/about/advisors"> poradcovi vo vzdelávaní </a> za ich podporu pri vytváraní Code štúdia.'
     help_from_html: Inžinieri z Google, Microsoft, Facebook a Twitter pomoholi vytvoriť tento tutoriál.
     help_from_html_old: Kolegovia z Google, Microsoft-u, Facebook-u a Twitter-u pomoholi vytvoriť tento tutoriál.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009-2014 Rovio zábava S.r.o. Všetky práva vyhradené. <br/> Rastliny vs zombie&trade; & &copy; 2014 Electronic Arts Inc Všetky práva vyhradené.'
-    art_from_html_old: 'Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené. < br / > Plants vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc Všetky práva vyhradené'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Poháňaný službami Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code ® sú ochranné známky Code.org.'
     copyright: Autorské práva
@@ -403,9 +359,10 @@ sk:
     privacy: Zásady ochrany súkromia
     secure: Bezpečná verzia
     report_abuse: Nahlásenie zneužitia
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    built_on_code_studio: Vyvinuté v Code Studio
+    make_my_own_app: Urob svoju vlastnú aplikáciu
+    how_it_works: Ako to funguje
+    try_hour_of_code: Vyskusaj lekciu kódovania!
   reference_area:
     title: Potrebujete pomôcť?
     subtitle: Pozrite si tieto videá a tipy
@@ -426,7 +383,7 @@ sk:
       hide_this_warning: Skryť toto upozornenie
     upgrade:
       header: Prosím aktualizujte svoj prehliadač.
-      message: "Code.org uses modern web technology. This makes the site faster to use. Unfortunately your browser doesn't support all the features required to run this part of the site.<br/><br/>Install a browser on our supported browsers list to continue. You can <a href='#'>try viewing the page</a>, but expect functionality to be broken."
+      message: "Code.org používa moderné webové technológie. Vďaka tomu je používanie rýchlejšie. Bohužiaľ váš prehliadač nepodporuje všetky funkcie potrebné na spustenie tejto časti stránky. <br/> <br/> Pre pokračovanie, nainštalujte prehliadač na našom zozname podporovaných prehliadačov. Môžete si <a href='#'> vyskúšať prezrieť túto stránku</a>, ale očakávajte obmedzenie funkčnosti."
       button: Prejsť na zoznam podporovaných prehliadačov
   slow_loading: Trvá to dlhšie než zvyčajne...
   try_reloading: Skúste načítať stránku znovu
@@ -462,15 +419,15 @@ sk:
       unused: Nepoužité úrovne
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klasické bludisko
       body: Skúste základy informatiky. Milióny jej dali šancu.
     flappy:
-      title: Flappy Code
+      title: Flappy kód
       body: Chcete napísať svoju vlastnú hru za menej než 10 minút? Skúste náš Flappy Code tutoriál!
     20-hour:
       title: Zrýchlený kurz
       body: Tento 20-hodinový kurz predstavuje základ informatiky a programovania. Kurz je určený pre deti od 1. po 8. triedu (stupeň K-8), ale určite pobaví študentov všetkých vekových kategórií.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: Naučte sa základy počítačovej vedy v zrýchlenej verzií kurzov 2-4.
     hoc2014:
       try_new_tutorial: Skúste náš nový kurz Hodina Kódu, v betaverzii
       try_frozen: Postavy s Annou a Elsou z Frozen
@@ -486,7 +443,7 @@ sk:
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Preskúmajte Minecraft svet prostredníctvom kódu.
   gallery:
     students_drew_these_with_code: Študenti toto nakreslil s pomocou kódu!
     students_made_these_with_code: Študenti vytvorili toto s pomocou kódu!
@@ -497,8 +454,8 @@ sk:
     caption_by_name_age: 'podľa %{name}, vek %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Galéria
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Príbehy a hry
+    header_artist: Kód art
   landing:
     prerelease: "Tento kurz je v <span class='betatext'> beta verzii</span>.  To znamená, že to nie je Finálna verzia kurzu a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
     prerelease_hoc2014: "Tento tutoriál je v <span class='betatext'> beta verzii</span> a je predmetom revízie na základe pripomienok a vylepšení, ktoré sú vykonané."
@@ -533,7 +490,7 @@ sk:
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: Toto vynuluje puzzle na štartovaciu pozíciu a vymaže všetky údaje, ktoré boli pridané alebo zmenené.
     startover_ok: Začať odznova
     startover_cancel: Zrušiť
   time:
@@ -559,7 +516,7 @@ sk:
           title: Prekladač
           description: ""
         flappy:
-          title: Flappy Code
+          title: Flappy kód
           description: Chcete napísať svoju vlastnú hru za menej než 10 minút? Skúste náš Flappy Code tutoriál!
         jigsaw:
           title: Skladačka
@@ -573,7 +530,7 @@ sk:
   age_interstitial:
     age: Váš vek
     header: Konto aktualizácia údajov
-    message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
+    message: 'Sme v procese aktualizácie našich skúseností, ktoré vám poskytnú ešte silnejšiu ochranu súkromia. K tomu potrebujeme aby existujúci používatelia zadali ich vek. <br/> Ako vždy, code.org nikdy neprenajme, nepredá alebo nezdieľa tieto informácie s tretími stranami.'
     sign_out: 'Ak si neželáte poskytnúť váš vek môže sa <a href="%{url}"> odhlásiť</a>.'
   zendesk_too_young_message: 'Prepáč, mladší užívatelia sa nemôžu prihlásiť na našu stránku podpory. Môžeš si prezerať <a href="http://support.code.org">support.code.org</a> bez prihlásenia, prípadne požiadať tvojich rodičov alebo učiteľov, aby nás za teba kontaktovali.'
   progress:
@@ -620,11 +577,11 @@ sk:
     click_to_remix: "Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!"
     edit_project: Upraviť projekt
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      tos: "Tento projekt bol nahlásený za porušenie <a href='http://code.org/tos'> Používateľských podmienok</a> Code.org a nie je ho možné zdieľať s ostatnými."
       contact_us: "Ak si myslíte, že to je chyba, prosím <a href='https://code.org/contact'> kontaktujte nás.</a>"
       go_to_code_studio: Prejsť na kód Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Ak ste sa stretli s urážlivým obsahom, hrozbou, šikanovaním, obťažovaním alebo porušením autorských práv na obsah ktorý vlastníte počas používania aplikácií vyvinutých v Code Studio, prosím vyplňte formulár nižšie. Berieme vaše správy veľmi vážne, primerane ich prešetríme a prijmeme vhodné opatrenia.
         validation:
           email: Uveďte e-mailovú adresu
           age: Uveďte prosím vek
@@ -632,10 +589,10 @@ sk:
           abuse_detail: Uveďte prosím podrobnosti týkajúce sa obsahu, ktorý nahlasujete
         abusive_url: URL adresa obsahu bude nahlásená
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          question: 'Ako tento obsah porušuje %{link_start}Podmienky používania%{link_end}?'
           harassment: Hrozby, internetové týranie, obťažovanie
           offensive: Nevhodný obsah
           infringement: Porušenie autorských práv
           other: Ostatné
         detail: Uveďte čo najviac podrobností ohľadom obsahu ktorý nahlasujete.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        acknowledge: 'Odoslaním týchto informácií, beriete na vedomie, sa bude zaobchádzať v súlade s podmienkami %{link_start_privacy}Ochrana súkromia%{link_end} a %{link_start_tos}Podmienky používania%{link_end}'

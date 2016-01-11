@@ -223,7 +223,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "repeatCarefullyError":function(d){return "Да бисте решили ово, пажљиво размислите о комбинацији два померања и једног скретања, које ћете ставити у \"понављај\" блок. У реду је да имате додатни окрет на крају."},
 "repeatUntil":function(d){return "понављај до испуњења"},
 "repeatUntilBlocked":function(d){return "док је путања напред"},
-"repeatUntilFinish":function(d){return "понављај до завршетка"},
+"repeatUntilFinish":function(d){return "понављај док се не заврши"},
 "step":function(d){return "Корак"},
 "totalHoney":function(d){return "укупан мед"},
 "totalNectar":function(d){return "укупан нектар"},

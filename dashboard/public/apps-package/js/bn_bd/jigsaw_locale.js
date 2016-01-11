@@ -157,7 +157,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "চালিয়ে যান"},
 "nextLevel":function(d){return "অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।"},
 "no":function(d){return "না"},
-"numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
+"numBlocksNeeded":function(d){return "এই ধাঁধাটি %1 ব্লক দিয়ে সমাধান করা যেতে পারে।"},
 "reinfFeedbackMsg":function(d){return "আপনি  পুনঃরাই আপনার খেলা প্লে করতে গিয়ে \"Try again\" বোতাম টিপতে পারেন."},
 "share":function(d){return "শেয়ার"},
 "shareGame":function(d){return "আপনার খেলা শেয়ার করুন:"},

@@ -174,7 +174,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "Gratulerer! Du har fullført denne utfordringen."},
 "no":function(d){return "Nei"},
 "numBlocksNeeded":function(d){return "Denne utfordringen kan bli løst med %1 blokker."},
-"playSoundRandom":function(d){return "Spill tilfeldig lyd"},
+"playSoundRandom":function(d){return "spill tilfeldig lyd"},
 "playSoundBounce":function(d){return "Spill sprett-lyd"},
 "playSoundCrunch":function(d){return "Spill knase-lyd"},
 "playSoundDie":function(d){return "Spill trist lyd"},

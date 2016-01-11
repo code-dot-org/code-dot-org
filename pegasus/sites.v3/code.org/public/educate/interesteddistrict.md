@@ -1,5 +1,5 @@
 ---
-title: Begin Partnership Application
+title: Learn More About Code.org District Partnerships
 nav: educate_nav
 social:
   "og:description": "Partner with Code.org to bring K-12 computer science to your district."
@@ -12,4 +12,4 @@ social:
   "og:video:type": ""
 ---
 
-<script type="text/javascript" src="https://secure.jotformpro.com/jsform/51276687185972"></script>
+<script type="text/javascript" src="https://form.jotform.com/jsform/53477234235153"></script>

@@ -126,7 +126,7 @@ nn:
           "Bee: Functions2": 'Bier: Funksjonar2'
           "Bee: Conditionals2": 'Bier: Vilkår2'
           "Maze: Conditionals2": 'Labyrint: Vilkår2'
-          "Artist: Nested Loops2": 'Kunstnar: Løkker inni løkker2'
+          "Artist: Nested Loops2": 'Kunstnar: Løkker inni løkker 2'
           "Farmer: While Loops2": 'Bonde: Medan-løkker2'
           "Bee: Nested Loops2": 'Bier: Løkker inni løkker2'
           "Bee: Debugging2": 'Bier: Feilsøking2'
@@ -146,7 +146,7 @@ nn:
           description_short: Teikn stilige bilde og design med Kunstnaren!
         hourofcode:
           Maze: Labyrint
-          title: Classic Maze
+          title: Klassisk labyrint
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds, planter mot zombiar og Scrat frå Istid!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
         frozen:
@@ -168,24 +168,24 @@ nn:
           "Artist: For Loops": Kunstnar For-løkker
           "Play Lab: For Loops": 'Spel-lab: For-løkker'
           "Artist: Functions": 'Kunstnar: Funksjonar'
-          "Unplugged: Tangrams": 'Struamlaust: Tangram-puslespel'
+          "Unplugged: Tangrams": 'Trådlaust: Tangram-puslespel'
           Artist: Kunstnar
           Bee: Bier
           "Unplugged: Envelope Variables": 'Trådlaust: Konvolutt-variable'
-          "Unplugged: Madlibs": 'Straumlaust: Adjektiv-historier'
-          "Unplugged: For Loop Fun": 'Straumlaust: Moro med for-løkker'
-          "Unplugged: Songwriting with Parameters": 'Straumlaust: Låtskriving med parameter'
+          "Unplugged: Madlibs": 'Trådlaust: Adjektiv-historier'
+          "Unplugged: For Loop Fun": 'Trådlaust: Moro med for-løkker'
+          "Unplugged: Songwriting with Parameters": 'Trådlaust: Låtskriving med parameter'
           "Artist: Functions with Parameters": 'Kunstnar: Funksjonar med parameter'
-          "Unplugged: Binary": 'Straumlaust: Binær'
+          "Unplugged: Binary": 'Trådlaust: Binær'
           Bee Binary: 'Bier: binær'
           Farmer Binary: Bonde binær
           Maze and Bee: Labyrint og bier
           Artist Binary: Kunstnar binær
           description_audience: Frå 10+ år (etter Kurs 3)
-          Super Challenge - Variables: 'Super-utfordring - Variablar'
+          Super Challenge - Variables: 'Superutfordring - Variablar'
           Super Challenge - For Loops: 'Superutfordring - For-løkker'
           Super Challenge - Functions and Parameters: 'Superutfordring - Funksjoner og parametere'
-          Extreme Challenge - Comprehensive: 'Ekstrem utfordring - Omfattande'
+          Extreme Challenge - Comprehensive: 'Superutfordring - Omfattande'
         Course4pre:
           title: Kurs 4 forkunnskapar
           description_short: Ei kort oppsummering av konsept for elevar som ikkje har tatt kurs 2 og 3.
@@ -204,7 +204,7 @@ nn:
           Intro: Introduksjon
           Variables and For Loops: Variablar og for-løkker
           Functions and Functions with Parameters: Funksjonar og funksjonar med parameter
-          title: Brukbarheits testing
+          title: Brukbarheitstesting
           description_short: ""
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
           Variables: Variablar
@@ -225,7 +225,7 @@ nn:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Straumlaust: Videospel og kooridinat-plan'
+          "Unplugged: Video Games and Coordinate Planes": 'Trådlaust: Videospel og kooridinat-plan'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": Strenger og bilder
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
@@ -233,7 +233,7 @@ nn:
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Straumlaust: Design oppskrifta'
+          "Unplugged: The Design Recipe": 'Trådlaust: Design oppskrifta'
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 'The Big Game - Animation'
@@ -241,7 +241,7 @@ nn:
           "Eval: Boolean Operators": Boolean Operators
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 'The Big Game - Booleans'
-          "Unplugged: Conditionals and Piecewise Functions": 'Straumlaust: Vilkår og stykkevise funksjonar'
+          "Unplugged: Conditionals and Piecewise Functions": 'Trådlaust: Vilkår og stykkevise funksjonar'
           "Eval: Conditionals": Betingelser
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
@@ -471,26 +471,26 @@ nn:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Straumlaust: Videospel og kooridinat-plan'
+          "Unplugged: Video Games and Coordinate Planes": 'Trådlaust: Videospel og kooridinat-plan'
           "Calc: Evaluation Blocks": 'Rekning: Evaluering av blokker'
           "Eval: Strings and Images": 'Eval: Tekst og bilder'
-          "Unplugged: Contracts": 'Straumlaust: Kontrakter'
+          "Unplugged: Contracts": 'Trådlaust: Kontrakter'
           "Eval: Writing Contracts": 'Eval: Skrive kontrakter'
           "Calc: Defining Variables": 'Rekning: Definere Variablar'
           "Play Lab: Defining Variables (Big Game)": 'Spel-lab: Definere variablar (Stort spel)'
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Straumlaust: Design oppskrifta'
+          "Unplugged: The Design Recipe": 'Trådlaust: Design oppskrifta'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Spel-lab: Animasjon (Stort spel)'
-          "Unplugged: Booleans": 'Straumlaust: Boolske variable'
+          "Unplugged: Booleans": 'Trådlaust: Boolske variable'
           "Eval: Boolean Operators": 'Eval: Boolske operatorar'
           "Play Lab: Booleans": 'Spel-lab: Boolske verdiar'
           "Play Lab: Boolean (Big Game)": 'Spel-lab: Boolsk (Stort spel)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Straumlaust: Vilkår og stykkevise funksjonar'
+          "Unplugged: Conditionals and Piecewise Functions": 'Trådlaust: Vilkår og stykkevise funksjonar'
           "Eval: Conditionals": 'Eval: Vilkår'
-          "Unplugged: Collision Detection and the Distance Formula": 'Straumlaust: Deteksjon av kollisjonar og distanseformelen'
-          "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Detekssjon av kollisjong (Stort spel)'
+          "Unplugged: Collision Detection and the Distance Formula": 'Trådlaust: Deteksjon av kollisjonar og distanseformelen'
+          "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Deteksjon av kollisjon (Stort spel)'
           Evaluation Blocks: Evalueringsblokker
           Strings and Images: Strenger og bilder
           Contracts: Kontrakter
@@ -523,7 +523,7 @@ nn:
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
-          "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Detekssjon av kollisjong (Stort spel)'
+          "Play Lab: Collision Detection (Big Game)": 'Spel-lab: Deteksjon av kollisjon (Stort spel)'
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
         text-compression:
@@ -672,7 +672,7 @@ nn:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: Mendan-løkker
+          While Loops: Medan-løkker
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -680,6 +680,7 @@ nn:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -896,7 +897,7 @@ nn:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Gratis spel
+          Free Play: Gjer kva du vil
         allthethings:
           Jigsaw: Puslespill
           Maze: Labyrint
@@ -1234,6 +1235,7 @@ nn:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,21 @@ nn:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1437,7 +1454,7 @@ nn:
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: Mendan-løkker
+          While Loops: Medan-løkker
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1458,8 +1475,8 @@ nn:
           Challenge Overview: Challenge Overview
         gumball:
           title: Gumball Spel-lab
-          description_short: Lag ei historie eller eit spell ve å bruke Gumball spel-lab!
-          description: Lag ei historie eller eit spell ve å bruke Gumball spel-lab!
+          description_short: Lag ei historie eller eit spel med Gumball spel-lab!
+          description: Lag ei historie eller eit spel med Gumball spel-lab!
           Gumball Play Lab: Gumball Spel-lab
         starwars:
           title: 'Star Wars: Skap ein galakse med kode'

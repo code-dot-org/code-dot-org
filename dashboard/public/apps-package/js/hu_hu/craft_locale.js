@@ -211,7 +211,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "generatedCodeDescription":function(d){return "A puzzle-darabok elhelyezésével igazából utasításokat adtál ki, melyek a JavaScript nevű programozási nyelven íródtak. Ez az utasítás-sorozat (programkód) mondja meg a számítógépnek, hogy mit és hogyan jelenítsen meg a képernyőn. Bármi, amit a Minecraftban látsz és csinálsz ilyen programkódban íródott."},
 "houseSelectChooseFloorPlan":function(d){return "Válaszd ki a ház alaprajzát."},
 "houseSelectEasy":function(d){return "Könnyű"},
-"houseSelectHard":function(d){return "Kemény"},
+"houseSelectHard":function(d){return "Nehéz"},
 "houseSelectLetsBuild":function(d){return "Építsünk házat."},
 "houseSelectMedium":function(d){return "Közepes"},
 "keepPlayingButton":function(d){return "Folytasd"},

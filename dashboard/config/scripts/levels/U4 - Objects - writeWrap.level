@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Write Wrap\r\n\r\n# Do This",
+    "markdown_instructions": "# Wrapping Indexes\r\n\r\nCurrently you can press the left and right arrow key to change the index of the contact you'd like to show. When `showCurrentContact` is called that contact is then shown on the screen. Unfortunately right now it is possible to set `currentIndex` to a value that is out of bounds. As a result your program will generate an error and stop running.\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* **Use the wrap function** provided in the starter code within `showCurrentContact` to reset `currentIndex` to a value that is \"in bounds\" before showing the contact.\r\n* **Run your program** and confirm that you can now scroll through every contact and that the contacts list \"wraps around\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,9 +167,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Use the wrap function to prevent currentIndex from leaving the bounds of your array. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

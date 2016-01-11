@@ -202,13 +202,14 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user_hero for student who completed all scripts" do
-    sign_in @student_4
+    student = create :student
+    sign_in student
     advertised_scripts = [Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
       Script.flappy_script, Script.playlab_script, Script.artist_script, Script.course1_script,
       Script.course2_script, Script.course3_script, Script.course4_script, Script.twenty_hour_script,
       Script.starwars_script, Script.starwars_blocks_script, Script.minecraft_script]
     advertised_scripts.each do |script|
-      UserScript.create!(user_id: @student_4.id, script_id: script.id, completed_at: Time.now)
+      UserScript.create!(user_id: student.id, script_id: script.id, completed_at: Time.now)
     end
     get :user_hero
 

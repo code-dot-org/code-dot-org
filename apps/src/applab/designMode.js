@@ -152,6 +152,7 @@ designMode.updateProperty = function(element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
+      value = value.trim();
       elementUtils.setId(element, value);
       if (elementLibrary.getElementType(element) ===
           elementLibrary.ElementType.SCREEN) {

@@ -28,6 +28,8 @@ he:
     code:
       label: 'הוסף מורה:'
       placeholder: אזור קוד (אבגדהו)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: הוסף מורה
   add_hint_form:
     placeholder: הכניסו בבקשה את הרמז שלכם כאן
@@ -261,70 +263,23 @@ he:
     remove: (מחק מורה)
     confirm:
       remove: האם אתה בטוח שברצונך להסיר את המורה הזה?
-    tools: כלים למורה
-    followers:
-      section: 'סעיף:'
-      stages: 'שלב(ים) להצגה:'
-      show_past: 'הצג פעילות התלמיד (%{bullet_html}) בעבר:'
-      levels_key: מפתח רמות
-      perfect: הושלם, מושלם
-      completed: הושלם, אך היה שימוש בבלוקים רבים מדי
-      tried: ניסה אך לא השלים
-      not_tried: טרם ניסה
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: אין סעיף שהוקצה
-      trophies: גביעי ניצחון
     students:
-      name: שם
-      username: שם משתמש
-      password: סיסמה
-      manage: נהל תלמידים
       dashboard: לגשת לתצגת המורה
-      add: הוסף תלמיד
-      remove: הסר סטודנט
-      confirm_remove: האם הנך בטוח שהנך רוצה להסיר את התלמיד?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: בקש מהתלמידים שלך לרשום את עצמם
-      vist: בקש מהתלמידים שלך לבוא לבקר
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
-      for: בשביל
-      enter: 'הזן:'
-    sections:
-      add: הוספת סעיף
-      manage: נהל אגפים
-      section: סעיף
-      students: סטודנטים
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: סוג סודי
-      grade: כיתה
-      course: קורס
-      rename: שינוי שם
-      edit: עריכה
-      delete: מחק
-      confirm_delete: האם אתה בטוח שברצונך למחוק קטע זה?
-      email: שלח בדואר אלקטרוני
-    rollup: לוח התקדמות
-    activity: פעילות אחרונה בכיתה
-    user_not_found: לא ניתן היה למצוא את המורה או התלמיד
-    cant_remove_student_no_email: '%{student_name} לא יכול להיות מוסר מרשימת התלמידים שלך בגלל ש %{student_name} לא נרשם עם כתובת מייל'
-    cant_remove_teacher_no_email: '%{teacher_name} לא יכול להימחק מרשימת המורים שלך מכיוון שלא נרשמת עם כתובת מייל'
-    student_teacher_disassociated: '% {teacher_name} הוסר כמורה של % {student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'הסרת את %{teacher_name} כמורה שלך.'
     panel:
       answer_viewer: הצגת תשובה
       student: תלמיד
-      viewing_solution: Viewing Solution
+      viewing_solution: הצג פתרון
       try_it_yourself: נסה זאת בעצמך
       section: סעיף
-      example: Example Solution
+      example: דוגמא לפתרון
       example_with_number: 'Example Solution %{solution_number}'
       submitted_on: הוגש ב-
       unsubmit: בטל הגשה
   user:
     email_confirm_needed: 'כתובת הדוא"ל עוד לא אושרה:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
+    email_confirm_needed_required: 'כתובת האימייל שלך %{email} לא אושרה:'
     email_confirm_wrong_email: (כתובת דוא״ל שגויה?)
     email_resend_confirm: 'שלח מחדש הוראות אישור דוא"ל'
     new_password_hint: (השאר ריק אם אין ברצונך לשנות)
@@ -342,11 +297,11 @@ he:
     classroom_activity: פעילות לא מחוברת
   home:
     title: ההתקדמות שלי
-    description: Code Studio is home to online courses created by Code.org
+    description: 'ב"code studio"  נמצאים קורסים אינטרנטיים שמיוצרים על ידי code.org'
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    lesson_plans: מערכי שיעור
     signin_message: 'כבר רשום?  %{link}'
     student_reg_link: הירשמות תלמיד
     teacher_reg_link: הירשמות מורה
@@ -373,18 +328,19 @@ he:
     20hour_overview: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
     test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    use_as_teacher: השתמש באתר הזה כמורה
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>כיף</h1><h2>לכולם</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: גלריה
-    no_primary_course: Try a Code Studio course
+    no_primary_course: נסה קורס קוד סטודיו
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: הדפס תעודה
   share:
     title: Learn on Code Studio
     description: כל אחד יכול ללמוד מדעי המחשב. ליצור משחקים, אפליקציות ואמנות בעזרת קוד.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: גבר
     female: אישה
@@ -396,8 +352,8 @@ he:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: זכויות יוצרים
@@ -414,6 +370,7 @@ he:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: איך זה עובד
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: צריך עזרה?
     subtitle: לראות את קטעי וידאו ורמזים
@@ -440,7 +397,7 @@ he:
   try_reloading: נסה טעינה מחדש של הדף
   next_stage: סיימת! המשך לשלב הבא
   download_pdf: שיעור פתוח
-  lesson_plan: Lesson Plan
+  lesson_plan: מערך שיעור
   view_lesson_plan: View Lesson Plan
   pdf_download: הורדת PDF
   download_coming_soon: Downloadable activity coming soon.
@@ -451,9 +408,9 @@ he:
     bounce_og_title: תראה את המשחק קפיצה שלי
     flappy_og_title: תראה את משחק ההתנופפות שלי
     studio_og_title: Check out my Play Lab App
-    check_out_what_i_made: Check out what I made
+    check_out_what_i_made: בדוק מה הכנתי
     og_description: כתבתי קוד בעצמי באמצעות code.org
-    phone_number_not_allowed: It looks like there is a phone number in it. Try changing the text.
+    phone_number_not_allowed: נראה שיש שם מספר טלפון. נסה להחליף את הטקסט.
     address_not_allowed: It looks like there is an address in it. Try changing the text.
     email_not_allowed: It looks like there is an email in it. Try changing the text.
     profanity_not_allowed: It looks like there is profanity in it. Try changing the text.
@@ -470,13 +427,13 @@ he:
       unused: שלבים שלא נוצלו
   upsell:
     hoc:
-      title: Classic Maze
+      title: מבוך קלאסי
       body: נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.
     flappy:
       title: קוד מתנופף
       body: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
     20-hour:
-      title: Accelerated Course
+      title: קורס מואץ
       body: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
       body_short: Learn basic computer science in an accelerated version of courses 2-4.
     hoc2014:
@@ -503,16 +460,16 @@ he:
     want_to_make_your_own: רוצה להכין אחד משלך?
     more: 'עוד &rarr;'
     caption_by_name_age: 'by %{name}, age %{age}'
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: '%{time_ago} לפני'
     header: גלריה
-    header_playlab: Play Lab
+    header_playlab: סיפורים ומשחקים
     header_artist: אמן
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
-    report_bug: Report Bug
-    support: Get Help
+    feedback: תן משוב
+    report_bug: דווח על באג
+    support: קבל עזרה
     support_url: //support.code.org
   multi:
     wrong_title: תשובה לא נכונה
@@ -535,9 +492,9 @@ he:
     baddomainname: One or more of your domain items has the wrong name.
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
   text_match:
-    placeholder: Enter your answer here
-    open_response_title: Thanks
-    open_response_body: Thanks for your response!
+    placeholder: הכנס את התשובה שלך כאן
+    open_response_title: תודה
+    open_response_body: תודה על תגובתך!
   dialog:
     ok: אישור
     startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?
@@ -555,7 +512,7 @@ he:
           title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
           description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
         Hour of Code:
-          title: Hour of Code 2013
+          title: שעה של קוד 2013
           description: ""
         edit-code:
           title: עריכת קוד
@@ -585,34 +542,34 @@ he:
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
-    not_started: not started
+    not_started: לא החל
     in_progress: in progress
     completed_too_many_blocks: completed, too many blocks
-    completed_perfect: completed, perfect
+    completed_perfect: הושלם, מושלם
     furthest_level_attempted: furthest level attempted
     assessment: assessment
   studio:
     courses_working_on: "Courses you're working on"
-    completed_courses: Completed courses
-    all_courses: All courses
+    completed_courses: קורסים שהושלמו
+    all_courses: כל המסלולים
   project:
-    projects: Projects
-    create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
-    rename: Rename
+    projects: פרויקט
+    create: צור פרויקט
+    create_a_project: 'צור פרויקט חדש:'
+    new: צור חדש
+    rename: שנה שם
     save: שמור
     delete: מחק
-    exit: Return to Course
-    my_projects: My Projects
+    exit: חזור לקורס
+    my_projects: הפרויקטים שלי
     share: שתף
-    share_title: Share your project
-    share_copy_link: 'Copy the link:'
-    close: Close
+    share_title: שתף את הפרויקט שלך
+    share_copy_link: 'העתק קישור:'
+    close: סגור
     more: יותר
     name: שם
     updated: Updated
-    project_type: Project Type
+    project_type: סוג פרויקט
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
     really_delete: למחוק?
@@ -623,10 +580,10 @@ he:
     cancel: בטל
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    view_all: הצג את הפרויקטים שלי
     remix: רמיקס
     click_to_remix: 'Click "Remix" to spin-off your own version!'
-    edit_project: Edit Project
+    edit_project: ערוך פרויקט
     abuse:
       tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
       contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
@@ -642,8 +599,8 @@ he:
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
           harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          offensive: תוכן פוגעני
+          infringement: הפרת זכויות יוצרים
           other: אחר
-        detail: Please provide as much detail as possible regarding the content you are reporting.
+        detail: אנא ספק כמה שיותר מידע אודות התוכן עליו אתה מדווח.
         acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

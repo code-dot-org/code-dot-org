@@ -378,27 +378,27 @@ fi:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: Nämä ovat piirtämispalikkasi. Käytä oikeaa palikkaa liikkuttaaksesi taiteilijaa sinne, minne hänen täytyy mennä täyttääkseen harmaat viivat.
+        text: Nämä ovat piirtämispalikkasi. Käytä oikeaa palikkaa liikuttaaksesi taiteilijaa sinne, minne hänen täytyy mennä täyttääkseen harmaat viivat.
       2:
         image: notes/C1_artist_intro_2.png
         text: Nämä ovat hyppypalikoita. Kun käytät näitä, taiteilija liikkuu, mutta ei piirrä, joten käytä näitä hypätäksesi seuraavalle harmaalle viivalle.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: 'Eivätkö mehiläiset olekin tosi siistejä? Tässä seuraavassa tehtäväryhmässä sinun tehtäväsi on auttaa mehiläistä pääsemään kukkiin, saamaan mettä kukista ja lentämään hunajakennon yli tehdäkseen hunajaa. Sinun täytyy käyttää "get nectar" ja "make honey" -palikoita tätä tehtävää varten.'
+        text: 'Eivätkö mehiläiset olekin tosi siistejä? Tässä seuraavassa tehtäväryhmässä sinun tehtäväsi on auttaa mehiläistä pääsemään kukkiin, saamaan mettä kukista ja lentämään hunajakennon yli tehdäkseen hunajaa. Sinun täytyy käyttää "kerää"- ja "tee" -palikoita tätä tehtävää varten.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Jokaisessa kukassa on eri määrä mettä: 1, 2, 3, tai enemmän. Tiedämme, miten paljon mettä on punaisissa kukissa, nurkassa olevasta pienestä numerosta. Varmista siis, että saat kaikki medet kukasta ennen kuin liikut eteen päin. Myös jokaiseen hunajakennoon mahtuu vain tietty määrä hunajaa: 1, 2, 3 tai enemmän. Joten muista tehdä niin paljon hunajaa kuin hunajakennoon mahtuu.'
+        text: 'Jokaisessa kukassa on eri määrä mettä: 1, 2, 3, tai enemmän. Tiedämme, miten paljon mettä on punaisissa kukissa, nurkassa olevasta pienestä numerosta. Varmista siis, että saat kaikki medet kukasta ennen kuin liikut eteenpäin. Myös jokaiseen hunajakennoon mahtuu vain tietty määrä hunajaa: 1, 2, 3 tai enemmän. Joten, muista tehdä niin paljon hunajaa, kuin hunajakennoon mahtuu.'
       3:
         image: notes/C1_bee_level_intro_3.png
         text: Jos pystyt saamaan kaikki medet ja tekemään kaiken hunajan, onnistut ja siirryt seuraavalle tasolle. Muussa tapauksessa sinun täytyy yrittää tätä tehtävää uudelleen. Leiki vähän aikaa ja koe, miltä tuntuu olla ohjelmoija!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: Silmukka on toiminnan toistamista. Joten menessäni mehiläispesälle tarkistamaan, katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä useita kertoja.
+        text: Silmukka on toiminnan toistamista. Mennessäni mehiläispesälle tarkistamaan, katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä useita kertoja.
       2:
         image: notes/C1_bee_loops_2.png
-        text: 'Tällä tasolla, haluamme mehiläisen keräävän kolme mettä kukasta. Sen sijaan, että käyttäisit kolmea "get nectar" -palikkaa, käytät "repeat" -palikkaa saadaksesi mettä kolme kertaa. Klikkaa "Run" ja katso, menikö sinulla oikein. Kivaa!'
+        text: 'Tällä tasolla, haluamme mehiläisen keräävän kolme mettä kukasta. Sen sijaan, että käyttäisit kolmea "kerää" -palikkaa, käytät "toista" -palikkaa saadaksesi mettä kolme kertaa. Klikkaa "Suorita" ja katso, menikö sinulla oikein. Kivaa!'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -603,16 +603,16 @@ fi:
         text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia muotoja. Minne tahansa taiteilijasi liikkuukin, hän jättää kulkiessaan peräänsä viivan.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Liikkuaksesi kankaalla sinun tulee käyttää liiku eteenpäin palikkaa. Tämä liiku eteenpäin palikka käskee liikkumaan eteenpäin 100 pikselin verran. Kun painamme suorita, mitä tapahtuu? Taiteilija liikkuu eteenpäin juuri sadan pikselin verran. Nämä pikselit ovat käytännössä laitteesi näytöllä olevia todella pieniä neliöitä.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Toinen tehtävässä tarjolla olevista palikoista käskee kääntymään oikealla 90 astetta. Kun raahaamme sen mukaan, taiteilijamme kääntyy halutun verran. Voit kokeilla ja valita kuinka paljon pitäisi kääntyä. Tämä on 90 asteen käännös.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Ja tämä vuorostaan on 120 asteen käännös. Muista että voit milloin vain vaihtaa näitä lukuja, painamalla pikseleitä tai asteita osoittavaa lukua tai sen vieressä olevaa pikku kolmiota. Nauti piirtämisestä taiteilijasi kanssa!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -805,16 +805,16 @@ fi:
         text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia muotoja. Minne tahansa taiteilijasi liikkuukin, hän jättää kulkiessaan peräänsä viivan.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Liikkuaksesi kankaalla sinun tulee käyttää liiku eteenpäin palikkaa. Tämä liiku eteenpäin palikka käskee liikkumaan eteenpäin 100 pikselin verran. Kun painamme suorita, mitä tapahtuu? Taiteilija liikkuu eteenpäin juuri sadan pikselin verran. Nämä pikselit ovat käytännössä laitteesi näytöllä olevia todella pieniä neliöitä.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Toinen tehtävässä tarjolla olevista palikoista käskee kääntymään oikealla 90 astetta. Kun raahaamme sen mukaan, taiteilijamme kääntyy halutun verran. Voit kokeilla ja valita kuinka paljon pitäisi kääntyä. Tämä on 90 asteen käännös.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Ja tämä vuorostaan on 120 asteen käännös. Muista että voit milloin vain vaihtaa näitä lukuja, painamalla pikseleitä tai asteita osoittavaa lukua tai sen vieressä olevaa pikku kolmiota. Nauti piirtämisestä taiteilijasi kanssa!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -884,7 +884,7 @@ fi:
         text: Silloin etsimme yhtäläisyyksiä asioiden välillä. Kun löydämme asioita, jotka ovat samanlaisia, voimme selvittää, mitkä asiat ovat erilaisia. Näiden erojen poistamista kutsutaan abstrahoinniksi. (abstraktio)
       5:
         image: notes/C3_computational_thinking_5.png
-        text: Kun olen löytäneet askelet joilla ratkaista ongelma, voimme asettaa ne tiettyyn järjestykseen, tuottaen algoritmin. Nyt kuka tahansa voi käyttää ohjeitani tämän ongelman ratkaisemiseen. Aiomme käyttää näitä neljää vaihetta selvittääksemme kuinka pelata peliä jonka sääntöjä emme tunne. Pelin lopussa sinun tulisi pystyä pelaämaan jotain, joka näyttää tältä!
+        text: Kun olemme löytäneet askelet joilla ratkaista ongelma, voimme asettaa ne tiettyyn järjestykseen, tuottaen algoritmin. Nyt kuka tahansa voi käyttää ohjeitani tämän ongelman ratkaisemiseen. Aiomme käyttää näitä neljää vaihetta selvittääksemme kuinka pelata peliä jonka sääntöjä emme tunne. Pelin lopussa sinun tulisi pystyä pelaämaan jotain, joka näyttää tältä!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
@@ -1381,26 +1381,26 @@ fi:
         text: 'Palikoidemme sisällä olemme käyttäneet JavaScript-komentoja. JavaScript on tällä hetkellä maailman eniten käytetty ohjelmointikieli. Koodipalikat ovat mahtava tapa opetella ohjelmoimaan ja itse asiassa jopa huippuyliopistot kuten {harvardLink} ja {berkeleyLink} opettavat alkeita tällä tavoin. Kuitenkin kun alkeet ovat hallussa, insinöörit kirjoittavat koodinsa tekstimuodossa - se on lopulta aina nopeampaa.'
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Voimme kirjoittaa satoja komentoja etsimättä niitä työkalupakista tai raahaamalla niitä minnekään. Koska olet yhä oppimassa uutta, kirjoittaminen voi olla aluksi hitaampaa, mutta haluaisimme silti että kokeilet.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: 'Klikkaamalla "näytä teksti" -nappia työtilan oikeassa yläkulmassa, voit siirtyä missä tahansa tehtävässä palikkatilasta, tilaan, jossa kirjoitat koodisi tekstinä.'
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: Seuraavalla oppitunnilla aloitamme työt kirjoitustilassa. Täällä voit edelleen vetää lohkoja työkalupakista tai kirjoittaa komentojen nimiä käyttäen näppäimistöä. Kun alat kirjoittaa, näet mahdollisten komentojen nimet kirjoittamasi kohdan alapuolella. Sen sijaan että kirjoittaisit koko komennon nimen, voit valita jonkin niistä toimiaksesi nopeammin. Omassa työssäni käytän automaattista täydennystoimintoa aina kun kirjoitan koodia.
       5:
         image: notes/starwars_typing_5.JPG
         text: Kun kirjoitat koodia, sinun täytyy olla tarkka jotta tietokone osaa tulkita mitä tarkoitat. Jokaisen komennon nimi täytyy kirjoittaa täsmälleen oikein, kiinnittäen huomiota myös isoihin ja pieniin kirjaimiin. Sulkujen ja puolipisteiden tulee olla oikeilla paikoillaan. Pienikin kirjoitusvirhe, ja BB-8 lakkaa liikkumasta koska se ei enää ymmärrä koodiasi.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Jos teet virheen jollakin rivillä, virheesi korostetaan, jotta voit muuttaa tekstiäsi ja korjata ongelman.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Jos jäät jumiin, voit aina aloittaa alusta käyttäen Alusta -painiketta. Voit myös palata palikkanäkymään milloin tahansa, napsauttamalla nappia oikeassa yläkulmassa. No niin, kokeillaanpa vaihteeksi kirjoittaa koodia. Älä hermostu jos teet virheitä. Jokainen tarvitsee muutaman harjoituskerran saadakseen kaiken kohdalleen.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja, joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia. Teknologia onkin keskeistä tämän tavoitteen kannalta.
       2:
         image: notes/starwars_events_2.JPG
         text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin, jonka pääosassa seikkailevat R2-D2 ja C3PO.
@@ -1409,19 +1409,19 @@ fi:
         text: 'Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu suoritetaan sinun määräämäsi komennot.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset, nuoli-näppäinten painamiset ja näytön napauttamiset.
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan. Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp() -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: Tätä varten käytämme komentoa nimeltä whenUp(). Kun vedät ulos komennon työkalupakista, huomaat että puolipisteen sijaan se alkaa ja loppuu kaarisulkeisiin. Tämä antaa meille tilaa laittaa muita komentoja kaarisulkeiden väliin. Jokainen käsky jonka asetamme näiden sulkeiden sisään suoritetaan kun pelaaja painaa ylänuolta.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Haluamme R2-D2:n liikkuvan ylöspäin, joten laitamme komennon sisään goUp(); -palikan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
       9:
         image: notes/starwars_events_9.JPG
         text: Nyt, sen sijaan että kirjoittaisimme kaikki ohjeet droidillemme ennalta, voimme saada R2-D2:n reagoimaan näppäinten painalluksiin. Tällöin voimme liikuttaa droidia ympäri ruutua. Peli muuttuu näin askel askeleelta enemmän ja enemmän vuorovaikutteiseksi.
@@ -1479,7 +1479,7 @@ fi:
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja, joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia. Teknologia onkin keskeistä tämän tavoitteen kannalta.
       2:
         image: notes/starwars_blocks_events_2.JPG
         text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin, jonka pääosassa seikkailevat R2-D2 ja C3PO.
@@ -1488,13 +1488,13 @@ fi:
         text: 'Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu suoritetaan sinun määräämäsi komennot.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset, nuoli-näppäinten painamiset ja näytön napauttamiset.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan. Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp() -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin. Nyt R2-D2 reagoi näppäinten painalluksiin ja liikkuu niiden mukaan ruudulla, sen sijaan, että se vain seuraisi ennalta koodattuja ohjeita.
       7:
         image: notes/starwars_blocks_events_7.JPG
         text: Pelisi tulee askel askeleelta yhä vuorovaikutteisemmaksi.
@@ -1634,7 +1634,7 @@ fi:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/gumball_intro_6.JPG
-        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+        text: Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
       7:
         image: notes/gumball_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
@@ -1681,13 +1681,13 @@ fi:
         text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
       4:
         image: notes/iceage_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
       5:
         image: notes/iceage_intro_5.JPG
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

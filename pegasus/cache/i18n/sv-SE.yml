@@ -1,9 +1,9 @@
 "sv-SE":
   hour_of_code: Timmen med Kod
   hello: Hej världen
-  select_language: Vänligen välj ditt språk
+  select_language: Välj ditt språk
   en: Datavetenskap
-  computer_science_edweek: Utbildningsvecka för Dataveteskap
+  computer_science_edweek: Utbildningsvecka för dataveteskap
   csedweek_dates: 8-14 december 2014
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold"> Kodtimmen</a> kommer. Kalla till dig alla lärare och arrangörer,
@@ -24,8 +24,11 @@
   zipcode: Postnummer eller land
   submit: Skicka in
   twentyhours_heading: Prova vår Introduktionskurs i Datavetenskap
-  twentyhours_text: Avslutat din första Timme med Kod? Lär dig mer om grunderna i
-    Datavetenskap och programmering i den här uppföljningskursen.
+  twentyhours_text: Avslutat din första Kodtimme? Lär dig mer om grunderna i datavetenskap
+    och programmering i den här uppföljningskursen.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Gå med i <a href="http://hourofcode.com"> kodtimmen</a> <br/> 8-14
     December 2014 <br/>
   hoc2014_students: Elever
@@ -37,11 +40,11 @@
   hoc2014_whatishoc: Vad är kodtimmen?
   csedweek_map_header: '# CSEdWeek / Hour-of-Code-arrangemang runt om i världen'
   csedweek_map_signup: Registrera ditt evenemang
-  csedweek_map_search_placeholder: Sök Hour-of-Code-arrangemang
+  csedweek_map_search_placeholder: Sök efter Kodtimmen evenemang
   csedweek_map_search_search: Sök
   csedweek_map_search_reset: Återställ
   csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Timme av kod event
+  csedweek_map_legend_event: Kodtimmen evenemang
   csedweek_map_legend_cs_tech_jam: CS Tech Jam
   cded_sign_up: Registrera dig
   cded_try_it: Prova
@@ -95,7 +98,7 @@
   personalize_certificate: Anpassa ditt certifikat
   share_achievement: Dela din prestation
   beyond_hour_message: Fortsätt med våra <a href='http://studio.code.org'> andra kurser</a>,
-    eller se fler alternativ för att <a href='/learn/beyond'> lära sig mer än en timme</a>.
+    eller se fler alternativ för att <a href='/learn/beyond'> Lära dig efter Timmen</a>.
   leaderboards_for_hoc: Topplistor för Timmen med Kod.
   support_url: http://support.Code.org/
   country: Land
@@ -110,7 +113,7 @@
   thanks_for_voting: Tack för din röst!
   share_on_facebook: Dela på Facebook
   share_on_twitter: Dela på Twitter
-  beyond_an_hour: Efter kodtimmen
+  beyond_an_hour: Efter Kodtimmen
   get_started: Start
   i_agree: Jag håller med
   participant_select: '- Välj -'
@@ -139,7 +142,7 @@
   twitter_teach_cs: Varför undervisar  inte fler skolor i datavetenskap? Vi kan ordna
     detta. http://youtu.be/nKIu9yen5nc. Besök http://code.org/ för mer information.
   learn_hoc: Lär dig med en Timme av Kod
-  beyond_hoc: Efter Timmen med Kod
+  beyond_hoc: Efter en Timme
   what_gender: Vilket kön har du?
   girl: Flicka
   boy: Pojke
@@ -245,7 +248,7 @@
   homepage_slot_text_title_hoc: Timmen med Kod
   homepage_slot_text_blurb_hoc: Alla kan lära sig. Börja idag
   homepage_slot_text_link_hoc: Prova Kodtimmen
-  homepage_slot_text_link_host: Var värd för  en Timme av Kod
+  homepage_slot_text_link_host: Anordna en Kodtimme
   homepage_slot_text_link_hocserved: '# serverad'
   homepage_solot_text_link_volunteer: Ställ upp som frivillig för Hour of Code
   homepage_slot_text_title_students: Elever
@@ -307,34 +310,33 @@
   class_submission_languages_other: Andra språk
   inspirational_videos_more: Fler <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     inspirerande videor</a> av förebilder och kändisar
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Välj tema för spel-labbet
+  playlab_classic_title: Klassisk
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Ice Age - Kommer snart
   playlab_iceage_title_live: Ice Age
   starwars_subtitle: Bygg en galax med kod
   starwars_javascript_title: Javascript
   starwars_javascript_description: Använd dra-och-släpp block och JavaScript.
   starwars_javascript_specs: Endast på engelska | Moderna webbläsare | Åldrar 11+
   starwars_javascript_start_button: Prova nu
-  starwars_blocks_title: bitar
+  starwars_blocks_title: Block
   starwars_blocks_description: Använd dra-och-släpp block.
-  starwars_blocks_specs: Många språk (kommer snart) | Moderna webbläsare, smartphones,
-    surfplattor | Åldrarna 6-10
+  starwars_blocks_specs: Många språk | Moderna webbläsare, smartphones, pekplattor
+    | Åldrarna 6-106
   starwars_blocks_start_button: Prova nu
   starwars_watch_videos: Innan du börjar, titta på en av dessa inspirerande videofilmer
   starwars_speak_languages: Tala ett annat språk?
   starwars_help_translate: Hjälp oss att översätta
   starwars_platform_text: Moderna webbläsare, smartphones, surfplattor
-  mc_name: Minecraft Hour of Code
+  mc_name: Minecraft-kodtimmen
   mc_longdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr
     genom denna Minecraft-värld.
   mc_shortdescription: Använd block av kod för att ta Steve eller Alex på ett äventyr
     genom denna Minecraft-värld.
   mc_gradelevel: Ålder 6+
   mc_platformtext: Moderna webbläsare, smartphones, surfplattor
-  mc_specs: Många språk (kommer snart) | Moderna webbläsare och surfplattor | Ålder
-    6 +
+  mc_specs: Många språk | Moderna webbläsare och pekplattor | Åldrarna 6-106
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspirera elever och frivilliga för Hour of
     Code.
@@ -362,6 +364,7 @@
     <a href="%{learn_more}"> Lär dig mer</a> om hur du organiserar din egen timme
     av kod och hur du hitta lokala volontärer på vår <a href="%{volunteer_local}">
     volontärkarta</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information som delas med lärare på
     en karta som visar var frivilliga finns
   volunteer_engineer_submission_field_name: Namn
@@ -470,9 +473,9 @@
   dashboard_landing_available_courses: Här är de kurser som finns tillgängliga just
     nu för dig och dina elever.
   dashboard_landing_more_tutorials: Vill se ännu fler tutorials?
-  dashboard_landing_more_tutorials_desc: Det finns fler tutorials <a href="/learn/beyond">erbjuds
-    av våra partner.</a> Lär dig att programmera med robotar, gör webbsidor, gör din
-    egen app eller utforska andra språk som C++, Ruby eller Python!
+  dashboard_landing_more_tutorials_desc: Det finns fler övningar <a href="/learn/beyond">som
+    erbjuds av våra partners.</a> Lär dig att programmera med robotar, göra webbsidor,
+    göra din egen app eller utforska andra språk som C++, Ruby eller Python!
   dashboard_hoc_courses: Timmen av koden för alla åldrar
   dashboard_hoc_courses_desc: Prova någon av dessa kortare 1 timme tutorials med dina
     elever!
@@ -671,13 +674,20 @@
   dashboard_faq_k5: K-5 vanliga frågor
   dashboard_announcements: Anslagstavla
   dashboard_announce_view_all: Visa alla
-  dashboard_announce_hoc: <b>23 November 2015</b> - vill du som frivillig och som
-    brinner för datavetenskaplig utbildning hjälpa till under Hour of Code? Över 7
-    000 frivilliga finns som vill inspirera dina elever genom att besöka ditt klassrummet
-    eller videochatta på distans. Kolla in frivillig- kartan för att kontakta volontärer
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Lär dig mer
+  dashboard_announce_hoc: <b>23 November 2015</b> - Skulle du vilja få hjälp av en
+    frivillig som brinner för datavetenskaplig utbildning under ditt Kodtimmen evenemang?
+    Över 7 000 frivilliga vill inspirera dina elever genom att besöka ditt klassrum
+    eller videochatta på distans. Kolla in frivillig-kartan för att kontakta frivilliga
     i ditt område.
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+  dashboard_announce_playlab: '<b>4 december, 2015</b> - Kodtimmen är här! Prova 50
+    övningar för alla åldrar och alla mobila enheter. Nytt den här veckan: Koda dina
+    egna historier och spel i nya spel-labb, Ice Age och Gumball.'
   code_hoc_coming: Kodtimmen är här – 8-14 december!
   code_sign_up: Registrera dig för att kunna delta i CS utbildnings- vecka
   learn_more: Prova nu
@@ -714,10 +724,10 @@
   carousel_heading_beginners: Övningar för nybörjare
   carousel_heading_beyond_beginners: Övningar för nybörjare
   carousel_heading_javascript: Övningar som lär JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Övningar som lär dig JavaScript
   carousel_heading_unplugged: Inga datorer eller internet? Prova "ouppkopplad" datavetenskap
   carousel_heading_devices: Appar med övningar för mobiler och sufplattor
-  carousel_heading_beyond_devices: Appar med övningar för mobiler och sufplattor
+  carousel_heading_beyond_devices: Appar med övningar för mobiler och surfplattor
   carousel_heading_languages: Övningar i andra programmeringsspråk
   carousel_heading_beyond_languages: Övningar i andra programmeringsspråk
   carousel_heading_apps_games: Gör dina egna appar eller spel
@@ -727,13 +737,12 @@
   carousel_heading_ide: Plattformar som är populära bland lärare
   educator_notes: Pedagog anteckningar
   teach_led_lesson_plans: Lärarledda lektionsplaneringar
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: Se den <a href="https://code.org/educate/allhourofcode">fullständiga
+    listan av övningar för Kodtimmen</a>. <a href="https://hourofcode.com/tutorial-guidelines">Klicka
+    här</a> för att se kriterier och riktlinjer för inlämnade övningar för Kodtimmen.
   how_to_teach_hoc: Hur man undervisar med en Timme av Kod
   more_resources_educators: Mer resurser för lärare och utbildare
-  beyond_submission: Vill du skicka en handledning för beyond an Hour? Se kriterier
+  beyond_submission: Vill du bidra med en övning till Efter en Timme? Se kriterier
     och anmälningsblankett.
   participants: deltagare
   teachers_notes: Lärarens anteckningar
@@ -747,8 +756,8 @@
   mobile_devices: Övningar för mobila enheter
   frozen_name: Koda med Anna och Elsa
   starwars_name: 'Star Wars: Bygg en galax med kod'
-  codeorg_name: Skriv din första datorprogram
-  codeintl_name: Skriv din första datorprogram
+  codeorg_name: Klassisk labyrint
+  codeintl_name: Klassisk labyrint
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: En introduktion till Javascript
   khanes_name: En introduktion till Javascript
@@ -784,16 +793,16 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sten, sax, påse
-  hourofcode_name: Skriv din första datorprogram
+  hourofcode_name: Klassisk labyrint
   playlab_name: Spel-labb
   infinity_name: Infinity Play Lab
   artist_name: Konstnären
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
-  csfirst_name: CS First
-  boxisland_name: Box Island
+  monstercoding_name: Kodningsutmaning för Mystikön
+  allcancode_name: Kör makro!
+  csfirst_name: CS först
+  boxisland_name: Lådön
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minuter med kod
   teacherled_name: Lärarledda lektionsplaneringar
   codeorg_gradelevel: Åldrarna 4-104
   codeintl_gradelevel: Åldrarna 4-104
@@ -839,12 +848,12 @@
   infinity_gradelevel: Åldrarna 4-104
   artist_gradelevel: Åldrarna 4-104
   monstercoding_gradelevel: Åldrarna 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Ålder 5-10
+  csfirst_gradelevel: Ålder 9-14
   boxisland_gradelevel: Grundskolan
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Ålder 12-14
+  texasinstruments_gradelevel: Ålder 13-16
+  teacherled_gradelevel: Ålder 5+
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
   thinkersmithspanish_platformtext: Ouppkopplad
@@ -886,12 +895,12 @@
   frozen_platformtext: Moderna webbläsare + surfplattor
   starwars_platformtext: Moderna webbläsare + surfplattor
   playlab_platformtext: Moderna webbläsare, smartphones, surfplattor
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Moderna webbläsare, iOS, Android
+  allcancode_platformtext: Moderna webbläsare, iOS
   csfirst_platformtext: Moderna webbläsare
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderna webbläsare
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI-miniräknare
   teacherled_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeorg_shortdescription: Lär dig att koda med Mark Zuckerberg och Angry Birds!
   codeintl_shortdescription: Lär dig att koda med Mark Zuckerberg och Angry Birds!
@@ -949,19 +958,19 @@
   infinity_shortdescription: Använd Play Lab för att skapa en berättelse eller ett
     spel med Disney Infinity karaktärer i huvudrollen .
   artist_shortdescription: Rita häftiga bilder och mönster med konstnären!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  monsterocding_shortdescription: Ett färgstarkt självinstruerande programmeringsäventyr
+    för barn.
+  allcancode_shortdescription: Ett engagerande spel för att vägleda Marco med ett
+    visuell programmeringsspråk.
+  csfirst_shortdescription: Animera en historia om två figurer på haver. Använd din
+    egna stil!
+  boxisland_shortdescription: Gör en kodresa på kodön med den modiga Hiro.
+  codesters_shortdescription: Skapa ditt egna spel, animation och konstverk med hjälp
+    av Pyhton.
+  texasinstruments_shortdescription: Lär dig enkel kodning med miniräknaren TI-84&#8482;
+    Plus.
+  teacherled_shortdescription: Få inspiration till att skapa ditt eget Kodtimmen evenemang
+    med hjälp av dessa lektionsplaner.
   codeorg_longdescription: Lär dig grundläggande begrepp av datavetenskap med dra
     och släpp-programmering. Detta är en spel-liknande, självförklarande handledningar
     video föreläsningar med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs.
@@ -1107,40 +1116,38 @@
   playlab_longdescription: Skapa en berättelse eller gör ett spel med Play Lab! Gör
     så att djur, zombies, pirater, ninjor, och många fler figurer rör på sig, låter,
     får poäng, och till och med kastar eldklot!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
+  monstercoding_longdescription: Kodutmaningen Mystikön av Monster Coding erbjuder
+    ett roligt självinstruerande äventyr som lär ut flera viktiga programmeringsbegrepp
+    till barnen. Varje blockbaserat steg bygger på tidigare steg och introducerar
+    barnen till funktioner, booleska värden, iterationer, villkor och matriser med
+    hjälp av färgglad animerad grafik och ljudinstruktioner.
+  allcancode_longdescription: Eleverna spelar ett äventyrsspel baserat på en originalhistoria.
+    De guida Marco - huvudpersonen - genom varje nivå genom att ge honom instruktioner
+    i form av ett visuellt programmeringsspråk som används av Kodtimmen. De blir introducerade
+    till sekventiella kommandon, iterationer och villkor utan att ens märka det.
   csfirst_longdescription: Create a story about two characters at sea. Animate the
     water, and customize the scenery to add your own flare. Use code to tell the story
     you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  boxisland_longdescription: Ta en tur på Lådön och hjälp Hiro samla alla klockor
+    utspridda i vildmarken! I den här övningen kommer du lära dig grunderna i algoritmer,
+    sekvenser, loopar och villkorssatser!
+  codesters_longdescription: 'Skapa ett eget spel, animation eller konstverk genom
+    att använda Python.  När du är klar, dela det med vänner! Programmera i Python,
+    en riktig programmeringsspråk använt varje dag på företag - vårt dra-och-släpp-verktyg
+    gör det lätt att lära!  Försök skapa ett basketspel, koreografera en dans eller
+    utforma ett animerat kort! '
+  texasinstruments_longdescription: 'Stegen i "10 minuterna med koden" kan användas
+    i klassrummet som ett sätt att väcka elevernas intresse för kodning med den TI-teknik
+    de har i sina ryggsäckar varje dag.  Lär ut grunderna i kodning med TI-84 &#8482;
+    Plus och kom igång med programmering på bara 10 minuter – ingen erfarenhet krävs!  '
+  teacherled_longdescription: Nu när tiotusentals pedagoger har provat Kodtimmen är
+    många klassrum redo för mer kreativa och egenanpassade övningar som lär ut grunderna
+    i datavetenskap. För att hjälpa lärare att hitta inspiration har vi samlat ihop
+    och delat med oss av lärarledda lektioner och aktivitetsplaner designade för olika
+    ämnesområden för veteraner av Kodtimmen.
   codeorg_beyond_name: Introduktion datavetenskap (årskurs 0-8)
   khan_beyond_name: Lär dig  datorprogrammering
-  tynker_beyond_name: Lär dig datorprogrammering hemma
+  tynker_beyond_name: Lär dig programmering hemma
   scratch_beyond_name: Bli kreativ med kodning
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy

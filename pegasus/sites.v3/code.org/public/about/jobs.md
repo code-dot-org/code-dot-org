@@ -9,16 +9,13 @@ nav: about_nav
 
 - **Curriculum**
  	- [CS Curriculum Writer](#curric)
-	- [Integrated Curriculum Coordinator](#int)
-- **Product**
+- **Engineering**
 	- [Engineering Manager / Chief Architect](#eng)
+	- [Software Engineer](#engineer)
 - **Operations & Professional Development**
 	- [Operations Program Coordinator](#ops)
 	- [VP of Professional Learning & Community](#vp)
 
-**No current positions, but always accepting great resumes:**
-
-- [Software Engineer](#engineer)
 
 **[Working at Code.org](#info)**
 
@@ -69,8 +66,6 @@ Code.org is recruiting for an experienced Head of Engineering / Chief Architect.
 - Manage the Code.org engineering team (team of 12+ software engineers)
 - Hiring, career development, and mentorship of new engineers
 
-
-
 **Skills and Qualifications:**
 
 The ideal candidate has the following qualifications:
@@ -87,38 +82,26 @@ The ideal candidate has the following qualifications:
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="int"href="#int">Integrated Curriculum Coordinator (Seattle, WA or Chicago, IL preferred, but flexible)</a>
+## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is looking for an experienced secondary educator to work with and support the goals of Code.org’s Education team through the maintenance and support of our content area (math and science) integrated curricula. We are looking for someone to help maintain and support teachers using these curricula as a full-time, short-term assignment (9 month contract). While each Education team member takes ownership of large parts of projects, we share work and tasks across projects to make sure all of our projects are aligned under the same philosophical model and contribute to a cohesive K-12 CS pathway.
-
-Responsibilities of the position include: 
-
-- Designing, testing, revising, executing, managing, and evaluating a highly-scalable professional development model for the middle school programs.
-- Working closely with the Education team to iterate upon existing curricular materials (lesson plans, formative/summative assessments, and videos).
-- Working closely with the Operations team to develop facilitator capacity and refine PD.
-Collaborating with the Product team to develop curriculum-specific technology tools and using the tools to create tutorials and projects.
-- Collaborating with external partners to improve existing curriculum and professional development materials
-- Ability to travel occasionally for work
-Collaborating with remote Education team members 
-
+Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
 
 **Skills and Qualifications:**
 
-The ideal candidate has 2-3 years of experience teaching secondary math or science (Algebra knowledge required); has strong leadership, project management, writing and communications skills; is a tech-savvy self-starter who is able to multi-task and excel under pressure. Professional Development experience is a plus.
-
-The candidate should also have: 
-
-- Basic knowledge knowledge of computer science (required) 
-- Prior curriculum writing experience / activity design (required)
-- A Bachelor’s degree or higher in Education or Computer Science 
-- Recent computer science or STEM teaching experience in middle or high school field 
-Experience using the Understanding by Design curriculum framework  
-- Proficiency in working with Microsoft Office and Google Docs (required) 
-
-
+- A Bachelor's degree or greater in Computer Science
+- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
+- Experience with startup culture preferred 
+- Expertise/Experience in some of these technologies preferred
+	- Rails
+	- Ruby
+	- JavaScript
+	- Sinatra
+	- SQL/Databases/Mysql
+	- React
+	- Testing: Ruby, Selenium
+	- Angular
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -190,20 +173,6 @@ Additional desired strengths include:
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="engineer" href="#engineer">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
-
-**Skills and Qualifications:**
-
-- A Bachelor's degree or greater in Computer Science
-- **Minimum** of 3-5 years of experience as a software engineer working on Web sites or services
-- Deep expertise in either JavaScript or Ruby preferred 
-- Experience with startup culture preferred 
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="info" href="#info">Working at Code.org</a>

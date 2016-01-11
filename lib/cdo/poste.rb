@@ -121,7 +121,7 @@ module Poste2
 
   def self.create_recipient(address, params={})
     address = address.to_s.strip.downcase
-    raise ArgumentError, 'Invalid email address' unless email_address?(address)
+    raise ArgumentError, "Invalid email address (#{address})" unless email_address?(address)
 
     name = params[:name].strip if params[:name]
     ip_address = params[:ip_address]

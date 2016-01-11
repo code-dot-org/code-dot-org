@@ -14,20 +14,22 @@ zh:
         username: 用户名
         password: 密码
         password_confirmation: 密码确认：
-        current_password: 当前密码：
-        locale: 语言：
+        current_password: 当前密码
+        locale: 语言
         age: 年龄
         gender: 性别
         edit_header: 编辑用户信息
         error:
           future: 不能选择将来的时间
-  hello: 世界你好
+  hello: 你好，世界！
   welcome_back: '欢迎回来，%{name}'
   submit: 提交
   add_teacher_form:
     code:
       label: '添加一个老师:'
       placeholder: 单元代码(ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的密码提示
@@ -35,7 +37,7 @@ zh:
   appname: Code.org
   stage: 阶段
   stage_number: '阶段 %{number}'
-  puzzle: 谜题
+  puzzle: 题目
   trophies: 奖杯
   courses: 课程
   of: 的
@@ -61,9 +63,9 @@ zh:
     twitter: 推特
     facebook: Facebook
     windowslive: 微软账户
-    forgot_password: 忘记了您的密码吗？
+    forgot_password: 忘记密码？
     need_confirmation: 没有收到确认的说明吗？
-    need_unlock: 没收到解锁指令吗？
+    need_unlock: 未收到解锁指令吗？
   signup_form:
     student_count: '%{count} 位学生已经注册。'
     teacher_count: '%{count} 位教师已经注册。'
@@ -250,57 +252,10 @@ zh:
     remove: （删除老师）
     confirm:
       remove: 你确实要删除这个老师吗?
-    tools: 教师工具
-    followers:
-      section: 单元：
-      stages: 显示阶段：
-      show_past: '显示学生过去的活动 (%{bullet_html}) ：'
-      levels_key: 关卡精髓
-      perfect: 完美完成
-      completed: 已完成，但使用太多区块
-      tried: 试过，但未完成
-      not_tried: 没有尝试过
-      activity: '显示学生在过去 %{hours} %{plural} 的活动'
-      no_section: 没有分配的单元
-      trophies: 奖杯
     students:
-      name: 姓名
-      username: 用户名
-      password: 密码
-      manage: 管理学生
       dashboard: 去教师管理面板
-      add: 添加学生
-      remove: 移除学生
-      confirm_remove: 是否确实要移除这个学生?
-      help_reassign: 要将您的教室分为多个单元，请选择将学生分配给新的单元.
-      help_register: 不用浪费你的时间来导入学生数据，你可以让学生们自己来注册。你的学生需要选择用户名和密码，但他们不需要提供电子邮件地址。如果学生忘记了自己的密码，你就可以为他们重置密码。
-      register: 要求学生自行注册
-      vist: 要求你的学生去参观
-      section_code: 并输入他们的单元代码：
-      first_please: '首先，请 %{add_section}'
-      for: 为
-      enter: 输入：
-    sections:
-      add: 添加单元
-      manage: 管理单元
-      section: 单元
-      students: 学生
-      section_code: 单元代码
-      add_section_code: 添加学生单元代码
-      secret: 密码类型
-      grade: 年级
-      course: 课程：
-      rename: 重命名
-      edit: 编辑
-      delete: 删除
-      confirm_delete: 你确定你想要删除这一节？
-      email: 在电子邮件中发送
-    rollup: 进度板
-    activity: 最近的课程活动
-    user_not_found: 无法找到这个老师或学生
-    cant_remove_student_no_email: '因为 %{student_name} 未注册电子邮件地址， %{student_name} 不能从你的学生中移除。'
-    cant_remove_teacher_no_email: '因为您还没有注册的电子邮件地址，不能移除你的老师%{teacher_name}。'
-    student_teacher_disassociated: '%{student_name} 的老师%{teacher_name} 已经被移除。'
+    user_not_found: 不能找到老师
+    student_teacher_disassociated: '你已经移除了老师：%{teacher_name}。'
     panel:
       answer_viewer: 答案查看器
       student: 学生
@@ -374,6 +329,7 @@ zh:
   share:
     title: 在代码工作室学习
     description: 任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。
+    try_hour_of_code: 试试《编程一小时》！
   gender:
     male: 男性
     female: 女性
@@ -385,8 +341,8 @@ zh:
     thank_you: '我们感谢 <a href="https://code.org/about/donors"> 捐助者</a>、 <a href="https://code.org/about/partners"> 合作伙伴</a>、 <a href="https://code.org/about/team"> 扩展团队</a>、视频演员、<a href="https://code.org/about/advisors"> 教育顾问</a>在创建代码工作室中给予的支持。'
     help_from_html: 特别感谢来自谷歌、 微软、 Facebook 和 Twitter 的工程师帮助创建了本教程。
     help_from_html_old: 来自谷歌、 微软、 Facebook 和 Twitter 的工程师们帮助创建了本教程。
-    art_from_html: '我的世界 &#8482; &amp; &copy; %{current_year} 微软版权所有。<br />星球大战 &#8482; &amp; &copy; %{current_year} 迪斯尼和卢卡斯影业版权所有。<br /> 冰雪奇缘 &#8482; &amp; &copy; %{current_year} 迪斯尼版权所有。<br /> 冰河世纪 &#8482; &amp; &copy; %{current_year} 20世纪福克斯版权所有。<br />愤怒的小鸟 &#8482; &amp; &copy; 2009年-%{current_year} Rovio 娱乐有限公司版权所有。 <br />植物与僵尸&#8482; &amp; &copy; %{current_year} 电子艺术公司保留所有的权利。'
-    art_from_html_old: '愤怒的小鸟&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment Ltd. 版权所有。<br /> 植物大战僵尸&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. 版权所有'
+    art_from_html: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; 2015 卡通网络.'
+    art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
     powered_by_aws: 由亚马逊网络服务
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg; 是Code.org的注册商标。'
     copyright: 版权
@@ -403,12 +359,13 @@ zh:
     built_on_code_studio: 在代码工作室中建立
     make_my_own_app: 制作我自己的应用程序
     how_it_works: 它是如何工作的
+    try_hour_of_code: 试试《编程一小时》！
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
     teacher: 请参阅解决方案
     auth_error: 您无权查看该解决方案。
-    submit: 更新艺术家的位置
+    submit: 更新小艺术家的位置
     direction: 开始方向 （以度为单位）
   video:
     tab: 视频。
@@ -459,7 +416,7 @@ zh:
       unused: 未使用的关卡
   upsell:
     hoc:
-      title: Classic Maze
+      title: 经典迷宫
       body: 请尝试计算机科学的基本知识。数百万人尝试了它。
     flappy:
       title: 飞扬的代码
@@ -480,7 +437,7 @@ zh:
       title: 星球大战
     infinity:
       title: 无限发挥游戏实验室
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
     minecraft:
       title: 我的世界
       body: 用代码来探索《我的世界》。
@@ -562,7 +519,7 @@ zh:
           title: 拼图
           description: ""
         step:
-          title: 踏步
+          title: 下一步
           description: ""
         sample_level_builder:
           title: 示例关卡生成器

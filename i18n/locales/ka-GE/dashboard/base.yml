@@ -28,6 +28,8 @@ ka:
     code:
       label: 'მასწავლებლის დამატება:'
       placeholder: სექციის კოდი (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: მასწავლებლის დამატება
   add_hint_form:
     placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
@@ -253,57 +255,10 @@ ka:
     remove: (მასწავლებლის წაშლა)
     confirm:
       remove: დარწმუნებული ხართ, რომ ამ მასწავლებლის წაშლა გინდათ?
-    tools: მასწავლებლის ინსტრუმენტები
-    followers:
-      section: 'სექცია:'
-      stages: 'გამოვაჩინოთ ეტაპე(ბ)ი:'
-      show_past: 'მოსწავლის (%{bullet_html}) ძველი აქტივობის ჩვენება:'
-      levels_key: დონეების მნიშვნელი
-      perfect: დასრულებულია, იდეალურად
-      completed: დასრულებულია, მაგრამ ზედმეტად ბევრი ბლოკის გამოყენებით
-      tried: დაწყებულია, მაგრამ არა დასრულებული
-      not_tried: ჯერ არც კი გიცდიათ
-      activity: 'გაჩვენებთ მოსწავლის აქტივობას ბოლო %{hours} %{plural}'
-      no_section: არ არის მიკუთვნებული სექცია
-      trophies: ჯილდოები
     students:
-      name: სახელი
-      username: მომხმარებლის სახელი
-      password: პაროლი
-      manage: მოსწავლეების მართვა
       dashboard: მასწავლებლის მართვის პანელზე გადასვლა
-      add: მოსწავლეების დამატება
-      remove: მოსწავლის წაშლა
-      confirm_remove: დარწმუნებული ხართ, რომ ამ მოსწავლის წაშლა გინდათ?
-      help_reassign: კლასის სხვადასხვა სექციებად დასაყოფად აირჩიეთ სტუდენტების ჯგუფი და გადაიყვანეთ ისინი ახალ სექციაში.
-      help_register: არ დახარჯოთ დრო თქვენი მოსწავლეების მონაცემების შეყვანაზე, უბრალოდ, სთხოვეთ მათ, რომ დარეგისტრირდნენ. მათ დასჭირდებათ მომხმარებლის სახელისა და პაროლის შერჩევა, მაგრამ ელ.ფოსტის შეყვანა აუცილებელი არ არის. თუ რომელიმეს დაავიწყდება თავისი პაროლი, თქვენ შეძლებთ მის აღდგენას.
-      register: სთხოვეთ მოსწავლეებს დამოუკიდებლად დარეგისტრირება
-      vist: შესთავაზეთ თქვენს მოსწავლეებს ეწვიონ
-      section_code: 'და შეიყვანონ თავიანთი სექციის კოდი:'
-      first_please: 'პირველ რიგში, %{add_section}'
-      for: '"მიზნისთვის"'
-      enter: 'შეიყვანეთ:'
-    sections:
-      add: დაამატეთ სექცია
-      manage: სექციების მართვა
-      section: სექცია
-      students: მოსწვლეები
-      section_code: სექციის კოდი
-      add_section_code: სტუდენტებისთვის სექციის კოდის დამატება
-      secret: საიდუმლოს ტიპი
-      grade: შეფასება
-      course: კურსი
-      rename: სახელის შეცვლა
-      edit: რედაქტირება
-      delete: წაშლა
-      confirm_delete: დარწმუნებული ხართ, რომ ამ სექციის წაშლა გინდათ?
-      email: ელ.ფოსტით გაგზავნა
-    rollup: პროგრესის მართვის პანელი
-    activity: კლასის უკანასკნელი აქტივობა
-    user_not_found: მასწავლებელი ან მოსწავლე არ მოიძებნა
-    cant_remove_student_no_email: '%{student_name} ვერ წაიშლება თქვენი მოსწავლეების სიიდან, იმიტომ რომ %{student_name}-მა არ დაარეგისტრირა ელ.ფოსტა'
-    cant_remove_teacher_no_email: '%{teacher_name} ვერ წაიშლება თქვენი მასწავლებლებიდან, იმიტომ რომ თქვენ არ დაგირეგისტრირებიათ ელ.ფოსტა'
-    student_teacher_disassociated: '%{teacher_name} აღარ არის %{student_name}ს მასწავლებელი'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: პასუხების ნახვა
       student: მოსწავლე
@@ -377,6 +332,7 @@ ka:
   share:
     title: ისწავლეთ კოდის სტუდიაში
     description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: მამრობითი
     female: მდედრობითი
@@ -388,8 +344,8 @@ ka:
     thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">მრჩევლებს განათლების დარგში</a> კოდის სტუდიის შექმნაში დახმარებისთვის.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &amp; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio entertainment Ltd. ყველა უფლება რეზერვირებულია.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts inc. ყველა უფლება დაცულია'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: საავტორო უფლება
@@ -406,6 +362,7 @@ ka:
     built_on_code_studio: დაწერეთ კოდი კოდის სტუდიაში
     make_my_own_app: ჩემი საკუთარი აპლიკაციის შექმნა
     how_it_works: როგორ მუშაობს ეს სივრცე
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
@@ -437,7 +394,7 @@ ka:
   pdf_download: გადმოიწერეთ PDF
   download_coming_soon: მალე ჩამოტვირთვაც შესაძლებელი გახდება.
   video_coming_soon: ვიდეო მალე დაემატება!
-  not_started: მოსწავლეთ არ უცდია ამ დონის გავლა.
+  not_started: მოსწავლეს არ უცდია ამ დონის გავლა.
   share_code:
     title: 'დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა'
     bounce_og_title: ნახეთ ჩემი Bounce თამაში
@@ -462,7 +419,7 @@ ka:
       unused: გამოუყენებელი დონეები
   upsell:
     hoc:
-      title: Classic Maze
+      title: კლასიკური ლაბირინთი
       body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
     flappy:
       title: Flappy კოდი
@@ -629,8 +586,8 @@ ka:
           email: შეგვატყობინეთ თქვენი ელ. ფოსტა
           age: თუ შეიძლება, მიუთითეთ ასაკი
           abuse_type: აგვიღწერეთ, როგორ არღვევს ეს კონტენტი სერვისის პირობებს
-          abuse_detail: თუ შეიძლება შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით
-        abusive_url: გასაჩივრებული კონტენტი URL
+          abuse_detail: თუ შეიძლება, შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით
+        abusive_url: გასაჩივრებული კონტენტის URL
         abuse_type:
           question: 'როგორ არღვევს ეს კონტენტი %{link_start}სერვისის პირობებს%{link_end}?'
           harassment: მუქარები, კიბერ-ბულინგი, შეწუხება

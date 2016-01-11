@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Canvas
@@ -20,15 +19,13 @@ Category: Canvas
 
 [short_description]
 
-Change the active canvas to the canvas with the specified id (other canvas commands only affect the active canvas).
+Changes the active canvas to the canvas with the specified id (other canvas commands only affect the active canvas).
 
 [/short_description]
 
-The first canvas to be created is automatically activated. All canvas drawing commands (such as [`line()`](/applab/docs/line) and [`rect()`](/applab/docs/rect)) draw on the active canvas. Likewise, all canvas state commands (such as [`setFillColor()`](/applab/docs/setFillColor) and [`setStrokeColor()`](/applab/docs/setStrokeColor)) change the state of the active canvas only.
+Drawing apps can use multiple, overlaid canvases, each with their own changeable pen color and pen width. Only one canvas can be drawn on at a time, the active canvas. The first canvas to be created is automatically activated. All canvas drawing commands (such as [line()](/applab/docs/line) and [rect](/applab/docs/rect)) draw on the active canvas. Likewise, all canvas state commands (such as [setFillColor](/applab/docs/setFillColor) and [setStrokeColor](/applab/docs/setStrokeColor)) change the state of the active canvas only.
 
-Only one canvas can be active at a time. A canvas must have been created with an id to be activated by `setActiveCanvas()`.
-
-Calling `setActiveCanvas()` has no visible effect of its own. It only changes the canvas that will be affected by subsequent canvas commands.
+Drawing on a canvas differs from a turtle drawing in that the actual pixels are accessible to the programmer in a three dimensional array.
 
 [/description]
 
@@ -37,20 +34,16 @@ ____________________________________________________
 
 [example]
 
-In this example, two canvas elements are created with ids "canvas1" and "canvas2". Since "canvas1" is created first, it is active by default. Canvas commands affect the canvas called canvas1 until the active canvas is changed.
-
-**Note**: Changing the stroke width and color did not affect canvas2.
-
-
 ```
-createCanvas("canvas1");    //Create a canvas on which to draw
-createCanvas("canvas2");    //Create a second canvas
+// Two overlapping canvases. Changing the stroke width and color did not affect canvas2.
+createCanvas("canvas1");
+createCanvas("canvas2");
 setStrokeWidth(10);
 setStrokeColor("blue");
 setFillColor("yellow");
-circle(160, 240, 50);       //Draw a yellow-filled circle on canvas1
+circle(160, 240, 50);
 setActiveCanvas("canvas2");
-rect(90, 170, 140, 140);    //Draw an unfilled, black square on canvas2
+rect(90, 170, 140, 140);
 ```
 
 [/example]
@@ -58,22 +51,21 @@ rect(90, 170, 140, 140);    //Draw an unfilled, black square on canvas2
 ____________________________________________________
 [example]
 
-Here, a smiley face is drawn using two canvases. The first is a full-screen canvas on which the head and eyes are drawn. The second canvas is smaller and placed where the mouth should go. Since drawing only occurs within the bounds of a canvas, the circle drawn on the second canvas is cut off, or clipped, so that only the portion inside the canvas is visible.
-
+**Example: Smiley Face** Draw a smiley face. The second canvas is smaller and placed where the mouth should go. Since drawing only occurs within the bounds of a canvas, the circle drawn on the second canvas is cut off, or clipped, so that only the portion inside the canvas is visible.
 
 ```
-createCanvas();         //Create a canvas on which to draw. It is active by default.
+// Draw a smiley face. The second canvas is smaller and placed where the mouth should go. Since drawing only occurs within the bounds of a canvas, the circle drawn on the second canvas is cut off, or clipped, so that only the portion inside the canvas is visible.
+createCanvas("face");
 setFillColor("yellow");
-circle(160, 240, 100);  //Draw a big, yellow circle for a head
+circle(160, 240, 100);
 setFillColor("black");
-circle(125, 215, 20);   //Draw two solid black circles for eyes
+circle(125, 215, 20);
 circle(195, 215, 20);
-setFillColor("white");
-createCanvas("mouth", 120, 50); //Create a second canvas on which to draw
-setActiveCanvas("mouth");       //Activate the second canvas
-setPosition("mouth", 100, 260); //Move the second canvas to x:100 y:260
+createCanvas("mouth", 120, 50);
+setActiveCanvas("mouth");
+setPosition("mouth", 100, 260);
 setStrokeWidth(15);
-circle(60, -15, 50);    //Draw a circle with its center outside the canvas bounds
+circle(60, -15, 50);
 ```
 
 [/example]
@@ -81,30 +73,23 @@ circle(60, -15, 50);    //Draw a circle with its center outside the canvas bound
 ____________________________________________________
 [example]
 
-In this example, the id values given to the canvas elements correspond to the order in which the elements are created. Drawing on the canvases is done from front to back, to demonstrate that the order of drawing is not important. Instead, the order in which the elements are created is what matters to the layering.
-
-Each canvas can have its drawing covered by any canvas created after it.
-
-Here, the blue lines are on the front canvas, so they cover both red and green. The red lines are on the middle canvas, so they are covered by the front (blue), but not by the back canvas (red).
-
+**Example: Front to Back** Draw on three canvases, the later created canvases overlay the earlier ones. The order of the drawing is irrelevant.
 
 ```
+// Draw on three canvases, the later created canvases overlay the earlier ones. The order of the drawing is irrelevant.
 createCanvas("back");
 createCanvas("middle");
 createCanvas("front");
-// Draw blue lines on "front" canvas
 setActiveCanvas("front");
 setStrokeWidth(30);
 setStrokeColor("blue");
 line(60, 30, 60, 230);
 line(30, 60, 230, 60);
-// Draw red lines on "middle" canvas
 setActiveCanvas("middle");
 setStrokeWidth(30);
 setStrokeColor("red");
 line(130, 30, 130, 230);
 line(30, 130, 230, 130);
-// Draw green lines on "back" canvas
 setActiveCanvas("back");
 setStrokeWidth(30);
 setStrokeColor("green");
@@ -132,24 +117,24 @@ setActiveCanvas(id);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | Yes | The id of the canvas element to activate.  |
+| id | string | Yes | The unique identifier for the canvas to activate. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value.
+No return value. No visible effect of its own. It only changes the canvas that will be affected by subsequent canvas commands.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- When creating more than one canvas, the canvas elements are layered one on top of the other. The second canvas created will be "in front" or "on top" of the first canvas. This means that any drawing on the second canvas will cover the first canvas when the two canvas elements overlap.
+- Only one canvas can be active at a time. A canvas must be first created with an id using [createCanvas](/applab/docs/createCanvas).
+- Change the position (or display size) of the canvas using [setPosition](/applab/docs/setPosition). Changing the display size of the canvas does not change the bounds of the canvas (the range of x and y values that are valid for drawing). Instead, the drawing within the canvas will be stretched (or squished) to fit the size specified by [setPosition](/applab/docs/setPosition).
 - Drawing outside of the dimensions of the canvas will not be visible. The dimensions span from 0 to the width of the canvas horizontally (x), and from 0 to the height of the canvas vertically (y).
-- Change the position of the canvas using [`setPosition`](/applab/docs/setPosition).
-- The [`setPosition`](/applab/docs/setPosition) block can change the display size of the canvas, but it does not change the bounds of the canvas (the range of x and y values that are valid for drawing). Instead, the drawing within the canvas will be stretched (or squished) to fit the size specified by [`setPosition`](/applab/docs/setPosition).
+- When creating more than one canvas, the canvas elements are layered one on top of the other. The second canvas created will be "in front" or "on top" of the first canvas. This means that any drawing on the second canvas will cover the first canvas when the two canvas elements overlap.
 
 [/tips]
 

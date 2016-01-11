@@ -28,6 +28,8 @@ ro:
     code:
       label: 'Adaugă un profesor:'
       placeholder: Secțiune Cod (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
@@ -253,57 +255,10 @@ ro:
     remove: (elimină profesor)
     confirm:
       remove: Ești sigur(ă) că vrei să elimini acest profesor?
-    tools: Instrumente pentru profesor
-    followers:
-      section: 'Secţiunea:'
-      stages: 'Etapa(Etapele) de afişat:'
-      show_past: 'Arată activitatea anterioară a elevului (%{bullet_html}):'
-      levels_key: Cheia nivelurilor
-      perfect: Finalizat, perfect
-      completed: Finalizat, dar ai folosit prea multe blocuri
-      tried: Încercat, dar neterminat
-      not_tried: Nu a fost încă încercat
-      activity: 'Indică activitatea elevului din ultimele %{hours} %{plural}'
-      no_section: Nici o secţiune atribuită
-      trophies: trofee
     students:
-      name: Nume
-      username: nume de utilizator
-      password: parolă
-      manage: Gestionează elevi
       dashboard: Du-te la Tabloul de Instrumente al Profesorilor
-      add: Adaugă elevi
-      remove: elimină elev
-      confirm_remove: Ești sigur că vrei să elimini acest elev?
-      help_reassign: Pentru a-ţi împărţi clasa în mai multe secţiuni, alege elevii pe care îi atribui unei secţiuni noi.
-      help_register: În loc să petreci mult timp importând datele fiecărui student, îţi poţi configura clasa foarte repede rugându-i pe aceștia să se înregistreze ei. Elevii tăi vor fi nevoiţi să îşi aleagă numele de utilizator şi parole, dar NU vor fi nevoiți să introducă o adresă de e-mail. Dacă un elev își uită parola, vei putea să o resetezi tu pentru el/ea.
-      register: Roagă-i pe elevii tăi să se înregistreze singuri
-      vist: Cere elevilor să viziteze
-      section_code: 'şi să îşi introducă codul lor de secţiune:'
-      first_please: 'În primul rând, te rugăm să %{add_section}'
-      for: Pentru
-      enter: 'introdu:'
-    sections:
-      add: Adaugă secţiune
-      manage: Gestionează secţiuni
-      section: Secţiune
-      students: Elevi
-      section_code: Cod de Secţiune
-      add_section_code: Adaugă Cod de Secţiune al Elevilor
-      secret: Tip secret
-      grade: Notă
-      course: Curs
-      rename: redenumește
-      edit: editează
-      delete: şterge
-      confirm_delete: Eşti sigur că vrei să ştergi această secţiune?
-      email: Trimite e-mail
-    rollup: Grilă de progress
-    activity: Activitatea recentă a clasei
-    user_not_found: Profesorul sau studentul nu poate fi găsit
-    cant_remove_student_no_email: '%{student_name} nu se poate elimina ca student, deoarece %{student_name} nu a înregistrat o adresă de e-mail'
-    cant_remove_teacher_no_email: '%{teacher_name} nu poate fi eliminat ca profesor al tău pentru că nu ai înregistrat o adresă de e-mail'
-    student_teacher_disassociated: '%{teacher_name} a fost eliminat(ă) ca profesor pentru %{student_name}'
+    user_not_found: Profesorul nu a putut fi găsit.
+    student_teacher_disassociated: 'Ai eliminat pe %{teacher_name} ca profesor.'
     panel:
       answer_viewer: Indicator răspuns
       student: elev
@@ -377,6 +332,7 @@ ro:
   share:
     title: Învață in Atelierul de programare
     description: Oricine poate învăţa programare. Face jocuri, aplicaţii şi artă cu programare.
+    try_hour_of_code: Încearcă Ora de Programare!
   gender:
     male: De sex masculin
     female: De sex feminin
@@ -388,8 +344,8 @@ ro:
     thank_you: 'Mulțumim la <a href="https://code.org/about/donors">donatorii</a>,<a href="https://code.org/about/partners">partenerii</a>,<a href="https://code.org/about/team">echipa extinsă</a>,producătorilor de imagine, și<a href="https://code.org/about/advisors">consilierii educaționali</a>Pentru sprijinul lor în creearea Atelierului de programare.'
     help_from_html: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestui tutorial.
     help_from_html_old: Inginerii de la Google, Microsoft, Facebook şi Twitter au ajutat la crearea acestor materiale.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Toate Drepturile Rezervate.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Toate Drepturile Rezervate.'
-    art_from_html_old: 'Păsări nervoase &#8482; &amp; © 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. < br / > plante vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc Toate drepturile rezervate'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Susținut de Amazon Web Services
     trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour of Code&reg; sunt mărci comerciale ale Code.org.'
     copyright: Drept de autor
@@ -406,6 +362,7 @@ ro:
     built_on_code_studio: Construit pe Code Studio
     make_my_own_app: Realizeaza propria mea aplicatie
     how_it_works: Cum funcționează
+    try_hour_of_code: Încearcă Ora de Programare!
   reference_area:
     title: Ai nevoie de ajutor?
     subtitle: Vezi aceste clipuri video şi sugestii
@@ -462,7 +419,7 @@ ro:
       unused: Niveluri neutilizate
   upsell:
     hoc:
-      title: Classic Maze
+      title: Labirint Clasic
       body: Încearcă bazele programarii. Milioane de oameni au încercat.
     flappy:
       title: Codul Flappy

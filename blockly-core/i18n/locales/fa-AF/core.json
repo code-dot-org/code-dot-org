@@ -184,7 +184,7 @@
   "LOGIC_NEGATE_HELPURL": "http://code.google.com/p/blockly/wiki/Not",
   "LOGIC_NEGATE_TITLE": "برعکس 1%",
   "LOGIC_NEGATE_TOOLTIP": "اگر ورودی برار False  بود، مقدار بولین true را برمیگرداند. اگر ورودی برابر true بود مقدار بولین  False را برمیگرداند.",
-  "LOGIC_NULL": "تهی",
+  "LOGIC_NULL": "خالی",
   "LOGIC_NULL_HELPURL": "http://en.wikipedia.org/wiki/Nullable_type",
   "LOGIC_NULL_TOOLTIP": "تهی بازمی‌گرداند.",
   "LOGIC_OPERATION_AND": "و",

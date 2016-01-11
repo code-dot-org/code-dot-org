@@ -188,7 +188,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawASnowman":function(d){return "draw a snowman"},
 "drawASquare":function(d){return "draw a square"},
 "drawAStar":function(d){return "draw a star"},
-"drawATree":function(d){return "draw a tree"},
+"drawATree":function(d){return "Нацртај дрво"},
 "drawATriangle":function(d){return "draw a triangle"},
 "drawUpperWave":function(d){return "draw upper wave"},
 "drawLowerWave":function(d){return "draw lower wave"},

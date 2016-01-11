@@ -173,7 +173,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "incrementPlayerScoreTooltip":function(d){return "বর্তমান খেলোয়াড়ের হিসাবে একটি যোগ করুন।"},
 "nextLevel":function(d){return "অভিনন্দন! আপনি এই ধাঁধা সম্পন্ন করেছেন।"},
 "no":function(d){return "না"},
-"numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
+"numBlocksNeeded":function(d){return "এই ধাঁধাটি %1 ব্লক দিয়ে সমাধান করা যেতে পারে।"},
 "playSoundRandom":function(d){return "ইচ্ছামত শব্দ বাজান"},
 "playSoundBounce":function(d){return "বাউন্স শব্দ বাজান"},
 "playSoundCrunch":function(d){return "কড়মড়ে শব্দ বাজান"},

@@ -15,8 +15,8 @@ zh:
           "Jigsaw: Learn to drag and drop": 拼图： 学习拖放
           "Maze: Sequence": 迷宫： 序列
           "Maze: Debugging": 迷宫： 调试中
-          "Artist 1: Intro": 艺术家 1： 简介
-          Artists 2: 艺术家 2
+          "Artist 1: Intro": 小艺术家 1： 简介
+          Artists 2: 小艺术家 2
           Spelling Bee: 拼字比赛
           Spelling Bee not blockly: 非模块化拼字比赛
           "Bee 1: Intro": 蜜蜂 1： 简介
@@ -26,7 +26,7 @@ zh:
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: 非模块化Flappy鸟
           title: '课程 1:'
-          Artist 2: 艺术家 2
+          Artist 2: 小艺术家 2
           Happy Maps: 快乐地图
           Move it, Move it: 移动它，移动它
           "Real-life Algorithms: Plant a Seed": 真实算法： 播种一颗种子
@@ -36,196 +36,196 @@ zh:
           Going Places Safely: 去安全的地方
           description: 课程 1 旨在能让初学者创建计算机程序，在这个过程中帮助他们学习如何与他人进行协作、 提高解决问题的能力，并通过不断努力完成艰巨的任务。这门课程结束时，学生能创建他们自己编写的游戏或故事，并分享给别人。推荐等级 K-1。
           "Bee: Sequence": 蜜蜂： 序列
-          "Artist: Sequence": 艺术家： 序列
-          "Artist: Shapes": 艺术家： 形状
+          "Artist: Sequence": 小艺术家： 序列
+          "Artist: Shapes": 小艺术家： 形状
           "Maze: Loops": 迷宫： 循环
           "Bee: Loops": 蜜蜂： 循环
           "Studio: Create a Story": '游戏实验室: 创建一个故事'
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": '小艺术家: 循环'
           description_audience: '4 - 6岁'
           description_short: 课程1是为较小的读者设计的。
         course2:
           The Maze: 迷宫
           Suzi: 苏茜
-          The Artist: 艺术家
-          Artist Debugging: Artist Debugging
+          The Artist: 小艺术家
+          Artist Debugging: 小艺术家： 调试
           Bounce: 跳
           "Studio: Create a Story": '游戏实验室: 创建一个故事'
-          Artist Loops: 艺术家循环
-          Bee Conditionals: Bee Conditionals
+          Artist Loops: 小艺术家循环
+          Bee Conditionals: 蜜蜂：条件
           Flappy: Flappy Bird
           title: 课程2
           Bee Loops: 蜜蜂循环
-          Artist Functions: 艺术家函数
-          The Artist Debugging: The Artist Debugging
+          Artist Functions: 小艺术家函数
+          The Artist Debugging: 小艺术家： 调试
           Bee Debugging: 蜜蜂调试
           Bee Functions: 蜜蜂函数
           Maze Loops: 迷宫循环
           Graph Paper Programming: 方格纸编程
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
+          "Real-life Algorithms: Paper Planes": '生活中的算法: 纸飞机'
           Getting Loopy: 越来越糊涂
-          Relay programming: Relay programming
+          Relay programming: 编程接力
           Conditionals: 条件语句
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: 二进制的手镯
           The Big Event: 大事件
           Your Digital Footprint: 你的数字足迹
-          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: 课程2适合可以阅读但是没有编程经验的学生。在这一课中，学生会通过程序来解决问题，开发交互游戏，或分享他们的故事。推荐2到5年级的学生学习。
           "Maze: Sequence": 迷宫： 序列
-          "Artist: Sequence": 艺术家： 序列
+          "Artist: Sequence": 小艺术家： 序列
           "Maze: Loops": 迷宫： 循环
-          "Artist: Loops": 'Artist: Loops'
+          "Artist: Loops": '小艺术家: 循环'
           "Bee: Loops": 蜜蜂： 循环
-          "Bee: Debugging": 'Bee: Debugging'
-          "Artist: Debugging": 艺术家： 调试
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Sequence2": 'Artist: Sequence2'
-          "Maze: Sequence2": 'Maze: Sequence2'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
+          "Bee: Debugging": 小蜜蜂课程：调试
+          "Artist: Debugging": 小艺术家课程： 调试
+          "Bee: Conditionals": 小蜜蜂课程：条件
+          "Artist: Sequence2": 小艺术家课程： 序列2
+          "Maze: Sequence2": 小迷宫课程： 序列2
+          "Artist: Nested Loops": 小艺术家：嵌套循环
           description_audience: 6-18岁
-          description_short: Start with Course 2 for students who can read.
+          description_short: 如果你的学生可以阅读，可以从课程2开始。
         course3:
           The Maze: 迷宫
           "Studio: Create a Story": '游戏实验室: 创建一个故事'
-          The Artist: 艺术家
-          title: 课程 3：
-          Artist Functions: 艺术家函数
-          Artist For Loops: Artist For Loops
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
+          The Artist: 小艺术家
+          title: 课程 3
+          Artist Functions: 小艺术家函数
+          Artist For Loops: 小艺术家：计数循环
+          Artist Nested Loops: 小艺术家课程：套在一起的循环
+          Bee Conditionals: 蜜蜂：条件
+          Bee Nested Loops: 蜜蜂：嵌套循环
+          Bee Debuggin: 蜜蜂：调试
           Bee Debugging: 蜜蜂调试
           Bee Functions: 蜜蜂函数
-          Artist Functions with Params: Artist Functions with Params
+          Artist Functions with Params: 小艺术家：函数参数
           Bounce: 跳
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: 计算性思维
-          Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
+          Maze Conditionals: 迷宫：条件
+          Artist Functions with Parameters: 小艺术家：函数参数
+          Computational Thinking: 计算式思维技巧
+          Functional Suncatchers: 函数化的吊饰
+          Songwriting Parameters: 歌曲创作参数
           Dice Race: 骰子比赛
           Internet: 互联网
-          Crowdsourcing: Crowdsourcing
+          Crowdsourcing: 众包
           Digital Citizenship: 数字公民
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          "Studio: Create a Game": 'Play Lab: Create a Game'
+          Farmer - While Loops: '农场 - 当循环'
+          description: 课程3是为学了课程2的学生准备的。学生将深入理解前面介绍过的编程话题，从而能够用灵活的方案来解决更复杂的问题。到课程结束时，学生们会创建出互动故事和游戏，并且可与任何人分享。建议4到5年级学生学习。
+          "Studio: Create a Game": 游戏实验室： 创建一个游戏
           Maze: 迷宫
-          Artist: 艺术家
-          "Artist: Functions": 'Artist: Functions'
+          Artist: 小艺术家
+          "Artist: Functions": 小艺术家：函数
           "Bee: Functions": 蜜蜂： 函数
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Maze: Conditionals": 'Maze: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
-          Artist2: Artist2
-          "Artist: Functions2": 'Artist: Functions2'
-          "Bee: Functions2": 'Bee: Functions2'
-          "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
-          "Bee: Nested Loops2": 'Bee: Nested Loops2'
-          "Bee: Debugging2": 'Bee: Debugging2'
-          "Artist: Patterns": 'Artist: Patterns'
+          "Bee: Conditionals": 小蜜蜂课程：条件
+          "Maze: Conditionals": 迷宫：条件
+          "Artist: Nested Loops": 小艺术家：嵌套循环
+          "Farmer: While Loops": '农场 - 当循环'
+          "Bee: Nested Loops": 蜜蜂：嵌套循环
+          "Bee: Debugging": 小蜜蜂课程：调试
+          Maze2: 迷宫2
+          Artist2: 小艺术家2
+          "Artist: Functions2": 小艺术家：函数2
+          "Bee: Functions2": 蜜蜂： 函数2
+          "Bee: Conditionals2": 蜜蜂：条件2
+          "Maze: Conditionals2": 迷宫：条件2
+          "Artist: Nested Loops2": 小艺术家：嵌套循环2
+          "Farmer: While Loops2": '农场 - 当循环2'
+          "Bee: Nested Loops2": 蜜蜂：嵌套循环2
+          "Bee: Debugging2": '蜜蜂: 调试2'
+          "Artist: Patterns": 小艺术家：模式
           Songwriting: 写歌
           description_audience: 8-18 岁
-          description_short: Course 3 is a follow-up to Course 2.
+          description_short: 课程3是课程2的延续。
         playlab:
           title: 游戏实验室
           description: 通过游戏实验室创建故事或制作游戏！
           Play Lab: 游戏实验室
           description_short: 通过游戏实验室创建故事或制作游戏！
         artist:
-          title: 艺术家
-          description: Draw cool pictures and designs with the Artist!
-          Artist: 艺术家
-          description_short: Draw cool pictures and designs with the Artist!
+          title: 小艺术家
+          description: 和小艺术家一起设计出很酷的图形！
+          Artist: 小艺术家
+          description_short: 和小艺术家一起设计出很酷的图形！
         hourofcode:
           Maze: 迷宫
-          title: Classic Maze
+          title: 经典迷宫
           description: 和来自愤怒小鸟，植物大战僵尸，冰河世界中的角色一起来学习计算机科学的基础知识！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
         frozen:
-          title: Code with Anna and Elsa
-          description: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-          Artist: 艺术家
+          title: 和安娜、爱莎一起编程
+          description: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
+          Artist: 小艺术家
           description_short: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
-          "Artist: Variables": 'Artist: Variables'
-          "Bee: For Loops": 'Bee: For Loops'
+          description_short: 学生在上了课程2和3以后才能上课程4。
+          description: 课程3是为学了课程2的学生准备的。学生将深入理解前面介绍过的编程话题，从而能够用灵活的方案来解决更复杂的问题。到课程结束时，学生们会创建出互动故事和游戏，并且可与任何人分享。建议4到5年级学生学习。
+          "Artist: Variables": 小艺术家：变量
+          "Bee: For Loops": 蜜蜂：计数循环
           title: 第4课
-          "Algorithms: Tangrams": 'Algorithms: Tangrams'
+          "Algorithms: Tangrams": 算法：七巧板
           Variables: 变量
-          "Play Lab: Variables": 'Play Lab: Variables'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
-          "Artist: For Loops": 'Artist: For Loops'
-          "Play Lab: For Loops": 'Play Lab: For Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Unplugged: Tangrams": 'Unplugged: Tangrams'
-          Artist: 艺术家
-          Bee: Bee
-          "Unplugged: Envelope Variables": 'Unplugged: Envelope Variables'
-          "Unplugged: Madlibs": 'Unplugged: Madlibs'
-          "Unplugged: For Loop Fun": 'Unplugged: For Loop Fun'
-          "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
-          "Unplugged: Binary": 'Unplugged: Binary'
-          Bee Binary: Bee Binary
-          Farmer Binary: Farmer Binary
-          Maze and Bee: Maze and Bee
-          Artist Binary: Artist Binary
+          "Play Lab: Variables": 游戏实验室：变量
+          "Play Lab: Functions with Parameters": 游戏实验室：有参数的函数
+          "Bee: Functions with Parameters": 蜜蜂：有参数的函数
+          "Artist: For Loops": 小艺术家：计数循环
+          "Play Lab: For Loops": 游戏实验室：计数循环
+          "Artist: Functions": 小艺术家：函数
+          "Unplugged: Tangrams": 离线：七巧板
+          Artist: 小艺术家
+          Bee: 蜜蜂
+          "Unplugged: Envelope Variables": 离线：封装变量
+          "Unplugged: Madlibs": 离线：疯狂填词
+          "Unplugged: For Loop Fun": 离线：计数循环的乐趣
+          "Unplugged: Songwriting with Parameters": 离线：用参数写歌
+          "Artist: Functions with Parameters": 小艺术家：有参数的函数
+          "Unplugged: Binary": 离线：二进制
+          Bee Binary: 蜜蜂：二进制
+          Farmer Binary: 农夫：二进制
+          Maze and Bee: 迷宫和蜜蜂
+          Artist Binary: 小艺术家：二进制
           description_audience: 10-18 岁
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - Variables: 超级挑战：变量
+          Super Challenge - For Loops: 超级挑战：计数循环
+          Super Challenge - Functions and Parameters: 超级挑战：函数和参数
+          Extreme Challenge - Comprehensive: 极限挑战：综合的
         Course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: 课程4：前提条件
+          description_short: 如果学生没有学习第2，3课，可以看看这个简短的概念介绍。
+          description: 如果学生没有学习第2，3课，可以看看这个简短的概念介绍。
+          Course 4 Prerequisite: 课程4：前提条件
           "Maze: Sequence": 迷宫： 序列
-          "Artist: Sequence": 艺术家： 序列
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Sequence": 小艺术家： 序列
+          "Artist: Loops": '小艺术家: 循环'
+          "Bee: Conditionals": 小蜜蜂课程：条件
+          "Artist: Nested Loops": 小艺术家：嵌套循环
+          "Farmer: While Loops": '农场 - 当循环'
+          "Bee: Nested Loops": 蜜蜂：嵌套循环
+          "Artist: Functions": 小艺术家：函数
+          "Bee: Debugging": 小蜜蜂课程：调试
         usability:
           Intro: 简介
-          Variables and For Loops: Variables and For Loops
-          Functions and Functions with Parameters: Functions and Functions with Parameters
-          title: Usability Testing
+          Variables and For Loops: 变量和计数循环
+          Functions and Functions with Parameters: 函数和有参数的函数
+          title: 可用性测试
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
           Variables: 变量
-          For Loops: For 循环
+          For Loops: 计数循环
           Binary: 二进制
         potus:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: 特殊的
+          description_short: 特殊的
+          description: 特殊的
+          Special: 特殊的
         special:
-          title: special
-          description_short: special
-          description: special
-          Special: Special
+          title: 特殊的
+          description_short: 特殊的
+          description: 特殊的
+          Special: 特殊的
           Binary: 二进制
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
+          "Unplugged: Video Games and Coordinate Planes": 离线：视频游戏和坐标面
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
           "Eval: Strings and Images": 字符串和图像
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
@@ -233,7 +233,7 @@ zh:
           "Calc: Defining Variables": Defining Variables and Substitution
           "Play Lab: Defining Variables (Big Game)": 'The Big Game - Variables'
           "Eval: Defining Functions": Composite Functions
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 离线：食谱设计
           "Play Lab: Defining Functions": Rocket Height
           "Eval: Functions": Solving Word Problems with the Design Recipe
           "Play Lab: Animation (Big Game)": 大游戏-动画
@@ -241,14 +241,14 @@ zh:
           "Eval: Boolean Operators": 布尔运算符
           "Play Lab: Booleans": Sam the Bat
           "Play Lab: Boolean (Big Game)": 大游戏-布尔值
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
+          "Unplugged: Conditionals and Piecewise Functions": 离线：条件和分段函数
           "Eval: Conditionals": 条件语句
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: 迪斯尼无限游戏实验室
+          description_short: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
+          description: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
           Play Lab: 游戏实验室
           Infinity: 无限
         algebrademo:
@@ -256,9 +256,9 @@ zh:
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           Making Pictures: Making Pictures
-          Defining Variables: Defining Variables
+          Defining Variables: 定义变量
           Defining Simple Functions: Defining Simple Functions
           The Design Recipe: 设计食谱
         K5PD:
@@ -289,7 +289,7 @@ zh:
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
           Internet Simulator: 互联网模拟器
-          Unit 1: Unit 1
+          Unit 1: 单元1
           Unit 2: 第二单元
           Sending Bits: 发送比特
           Routing and DNS: 路由和 DNS
@@ -322,29 +322,29 @@ zh:
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: Accelerated Intro to CS Course
+          title: 加速的计算机科学课程介绍
           description_audience: 10-18 岁
           description: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
+          description_short: 在这20小时的课程中，课程2-4会介绍核心的计算机编程概念。
           Introduction to Computer Science: 计算机科学导论
           The Maze: 迷宫
-          Computational Thinking: 计算式思维
+          Computational Thinking: 计算式思维技巧
           Graph Paper Programming: 图纸上编程
-          The Artist: 艺术家
+          The Artist: 小艺术家
           Algorithms: 算法
-          The Artist 2: 艺术家 2
+          The Artist 2: 小艺术家 2
           Functions: 函数
           The Farmer: 农夫
           Conditionals: 条件语句
-          The Artist 3: 艺术家 3
+          The Artist 3: 小艺术家 3
           Song Writing: 歌曲创作
           The Farmer 2: 农民 2
           Abstraction: 抽象化
-          The Artist 4: 艺术家 4
+          The Artist 4: 小艺术家 4
           Relay Programming: 编程接力
           The Farmer 3: ' 农夫3'
           The Internet: 互联网
-          The Artist 5: 艺术家 5
+          The Artist 5: 小艺术家 5
           Wrap-up: 总结
         edit-code:
           title: 编辑代码
@@ -352,9 +352,9 @@ zh:
           description_short: 编辑代码
           The Maze: 迷宫
           Applab: Applab
-          The Artist: 艺术家
+          The Artist: 小艺术家
           Play Lab: 游戏实验室
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: 游戏实验室2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: 事件
@@ -371,17 +371,17 @@ zh:
           Flappy Code: 飞扬的代码
         jigsaw:
           title: 拼图
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: 试试拼图教程
+          description_short: 试试拼图教程
           Jigsaw: 拼图
         step:
-          title: 踏步
-          description: Step tutorial
-          description_short: Step tutorial
-          Step: 踏步
+          title: 下一步
+          description: 步骤教程
+          description_short: 步骤教程
+          Step: 下一步
         Hour of Code:
           title: 《编程一小时 2013》
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: 与愤怒的小鸟和植物大战僵尸中的角色一起来体验计算机科学的基础！
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           Hour of Code 2013: 《编程一小时 2013》
         Code Studio Puzzle Challenge:
@@ -415,19 +415,19 @@ zh:
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: 关卡
         course4pre:
-          title: Course 4 Prerequisite
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          title: 课程4：前提条件
+          description_short: 如果学生没有学习第2，3课，可以看看这个简短的概念介绍。
+          description: 如果学生没有学习第2，3课，可以看看这个简短的概念介绍。
+          Course 4 Prerequisite: 课程4：前提条件
           "Maze: Sequence": 迷宫： 序列
-          "Artist: Sequence": 艺术家： 序列
-          "Artist: Loops": 'Artist: Loops'
-          "Bee: Conditionals": 'Bee: Conditionals'
-          "Artist: Nested Loops": 'Artist: Nested Loops'
-          "Farmer: While Loops": 'Farmer: While Loops'
-          "Bee: Nested Loops": 'Bee: Nested Loops'
-          "Artist: Functions": 'Artist: Functions'
-          "Bee: Debugging": 'Bee: Debugging'
+          "Artist: Sequence": 小艺术家： 序列
+          "Artist: Loops": '小艺术家: 循环'
+          "Bee: Conditionals": 小蜜蜂课程：条件
+          "Artist: Nested Loops": 小艺术家：嵌套循环
+          "Farmer: While Loops": '农场 - 当循环'
+          "Bee: Nested Loops": 蜜蜂：嵌套循环
+          "Artist: Functions": 小艺术家：函数
+          "Bee: Debugging": 小蜜蜂课程：调试
         cspunit1:
           title: 'CSP Unit 1 - Digital Information'
           description_short: Explore how digital information is represented and transferred
@@ -471,27 +471,27 @@ zh:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
-          "Calc: Evaluation Blocks": 'Calc: Evaluation Blocks'
-          "Eval: Strings and Images": 'Eval: Strings and Images'
-          "Unplugged: Contracts": 'Unplugged: Contracts'
-          "Eval: Writing Contracts": 'Eval: Writing Contracts'
+          "Unplugged: Video Games and Coordinate Planes": 离线：视频游戏和坐标面
+          "Calc: Evaluation Blocks": 计算器：赋值模块
+          "Eval: Strings and Images": 赋值：字符串和图像
+          "Unplugged: Contracts": 离线：契约
+          "Eval: Writing Contracts": 赋值：契约
           "Calc: Defining Variables": 计算： 定义变量
-          "Play Lab: Defining Variables (Big Game)": 'Play Lab: Defining Variables (Big Game)'
+          "Play Lab: Defining Variables (Big Game)": 游戏实验室：定义变量（大游戏）
           "Eval: Defining Functions": 'Eval: Defining Functions'
-          "Unplugged: The Design Recipe": 'Unplugged: The Design Recipe'
+          "Unplugged: The Design Recipe": 离线：食谱设计
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
-          "Play Lab: Animation (Big Game)": 'Play Lab: Animation (Big Game)'
-          "Unplugged: Booleans": 'Unplugged: Booleans'
-          "Eval: Boolean Operators": 'Eval: Boolean Operators'
+          "Play Lab: Animation (Big Game)": 游戏实验室：动画（大游戏）
+          "Unplugged: Booleans": 离线：布尔值
+          "Eval: Boolean Operators": 赋值：布尔操作符
           "Play Lab: Booleans": 游戏实验室： 布尔值
-          "Play Lab: Boolean (Big Game)": 'Play Lab: Boolean (Big Game)'
-          "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
-          "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
-          Evaluation Blocks: Evaluation Blocks
+          "Play Lab: Boolean (Big Game)": 游戏实验室：布尔值（大游戏）
+          "Unplugged: Conditionals and Piecewise Functions": 离线：条件和分段函数
+          "Eval: Conditionals": 评价：条件
+          "Unplugged: Collision Detection and the Distance Formula": 离线：碰撞检测和距离公式
+          "Play Lab: Collision Detection (Big Game)": 游戏实验室：碰撞检测（大型游戏）
+          Evaluation Blocks: 赋值模块
           Strings and Images: 字符串和图像
           Contracts: 合同
           Your Game - Defining Variables: 'Your Game - Defining Variables'
@@ -501,7 +501,7 @@ zh:
           Booleans: 布尔值
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: 条件和分段函数
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -514,7 +514,7 @@ zh:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           Strings and Images: 字符串和图像
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
@@ -523,7 +523,7 @@ zh:
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
-          "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
+          "Play Lab: Collision Detection (Big Game)": 游戏实验室：碰撞检测（大型游戏）
           Your Game - Player Movement: 'Your Game - Player Movement'
           Your Game - Collision Detection: 'Your Game - Collision Detection'
         text-compression:
@@ -680,6 +680,7 @@ zh:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -688,7 +689,7 @@ zh:
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           The Big Game: The Big Game
           Strings and Images: 字符串和图像
           The Design Recipe: 设计食谱
@@ -738,7 +739,7 @@ zh:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -750,7 +751,7 @@ zh:
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -802,8 +803,8 @@ zh:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 第二阶段在线：混合的暑期学习
+          description_short: 第二阶段在线：混合的暑期学习
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -879,11 +880,11 @@ zh:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Evaluation Blocks
+          description: 第二阶段在线：混合的暑期学习
+          description_short: 第二阶段在线：混合的暑期学习
+          Evaluation Blocks: 赋值模块
           Strings and Images: 字符串和图像
-          Defining Variables: Defining Variables
+          Defining Variables: 定义变量
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: 设计食谱
@@ -900,8 +901,8 @@ zh:
         allthethings:
           Jigsaw: 拼图
           Maze: 迷宫
-          Artist: 艺术家
-          Bee: Bee
+          Artist: 小艺术家
+          Bee: 蜜蜂
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy Bird
@@ -927,19 +928,19 @@ zh:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 第二阶段在线：混合的暑期学习
+          description_short: 第二阶段在线：混合的暑期学习
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           Strings and Images: 字符串和图像
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: 定义变量
+          Defining Functions: 定义函数
           Rocket-Height: Rocket-Height
           Booleans: 布尔值
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 评价：条件
           Next Steps: 下一步
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
         cspfacilitator:
@@ -952,12 +953,12 @@ zh:
           App Lab: 应用实验室
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: 互联网模拟器
@@ -981,9 +982,9 @@ zh:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description: 第二阶段在线：混合的暑期学习
+          description_short: 第二阶段在线：混合的暑期学习
+          Welcome!: 欢迎！
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1027,37 +1028,37 @@ zh:
           Equity PD: Equity PD
         hoc2015:
           title: 《编程一小时 2015》
-          description_short: Use Play Lab to create a story or game.
-          description: Use Play Lab to create a story or game.
+          description_short: 用游戏实验室创造故事或游戏。
+          description: 用游戏实验室创造故事或游戏。
           Hour of Code: 编程一小时
           Hour of Code 2015: 《编程一小时 2015》
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: 第二阶段在线：混合的暑期学习
+          description_short: 第二阶段在线：混合的暑期学习
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Evaluation Blocks
+          Evaluation Blocks: 赋值模块
           Strings and Images: 字符串和图像
           Writing Contracts: Writing Contracts
-          Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Variables: 定义变量
+          Defining Functions: 定义函数
           Rocket-Height: Rocket-Height
           Booleans: 布尔值
-          "Eval: Conditionals": 'Eval: Conditionals'
+          "Eval: Conditionals": 评价：条件
           Next Steps: 下一步
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           The Design Recipe: 设计食谱
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
+          Welcome!: 欢迎！
           Wrap-Up: 总结
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1072,9 +1073,9 @@ zh:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
+          Welcome!: 欢迎！
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1090,10 +1091,10 @@ zh:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: 下一步
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1102,9 +1103,9 @@ zh:
           Wrap-Up: 总结
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
+          Welcome!: 欢迎！
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1121,9 +1122,9 @@ zh:
           Wrap-up: 总结
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          description_short: 第二阶段在线：混合的暑期学习
+          description: 第二阶段在线：混合的暑期学习
+          Welcome!: 欢迎！
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1171,7 +1172,7 @@ zh:
           Building a Foundation: 打基础
           Getting Loopy: 越来越糊涂
           The Big Event: 大事件
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: 二进制的手镯
           Songwriting: 写歌
         afterschool1:
           title: Afterschool 1
@@ -1212,7 +1213,7 @@ zh:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1234,11 +1235,12 @@ zh:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1268,7 +1270,7 @@ zh:
           title: 'Exploring Computer Science: Unit 4'
           description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1301,7 +1303,7 @@ zh:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1310,7 +1312,7 @@ zh:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1352,11 +1354,26 @@ zh:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1378,7 +1395,7 @@ zh:
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1403,10 +1420,10 @@ zh:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: 冰河世界游戏实验室
+          description_short: 用冰河世纪游戏实验室创造故事或游戏！
+          description: 用冰河世纪游戏实验室创造故事或游戏！
+          Ice Age Play Lab: 冰河世界游戏实验室
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1457,10 +1474,10 @@ zh:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: 陶阿甘游戏实验室
+          description_short: 用陶阿甘游戏实验室创造故事或游戏！
+          description: 用陶阿甘游戏实验室创造故事或游戏！
+          Gumball Play Lab: 陶阿甘游戏实验室
         starwars:
           title: '星球大战: 用代码来创造银河系。'
           description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
@@ -1492,6 +1509,6 @@ zh:
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 欢迎！
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: 总结

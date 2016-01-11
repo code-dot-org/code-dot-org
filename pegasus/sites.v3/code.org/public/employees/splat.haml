@@ -24,7 +24,7 @@ max_age: 60
 -@company = company = JSON.parse(form[:data])
 -if company['gplus_b']
   -gplus = {:url=>"#{share_link}"}
--hoc_count = DB[:hoc_activity].where(company:company['name_s']).count(:id)
+-hoc_count = company['final_hoc_count_i'] || DB[:hoc_activity].where(company:company['name_s']).count(:id)
 -num_employees = company['num_employees_i'] ? Integer(company['num_employees_i']) : nil
 -if (num_employees && num_employees != 0)
   -hoc_percent = [(hoc_count.to_f / num_employees * 100).floor, 100].min
@@ -54,7 +54,7 @@ max_age: 60
   #start.col-36
     #companystats.col-mobile-44
       .count{:style=>"font-size: 32px; line-height: 32px; font-family: 'Gotham 5r', sans-serif;"}
-        Hundreds of
+        #{format_integer_with_commas(hoc_count)}
         #{company['display_name_s']} participants have tried the Hour of Code.
         %h4.desktop-feature{style: 'font-size: 22px;'}
           -if hoc_percent

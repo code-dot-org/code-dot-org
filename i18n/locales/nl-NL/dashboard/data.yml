@@ -315,29 +315,30 @@ nl:
         studio_playlab_8: kan je een blok toevoegen om een punt te scoren en een geluid af te spelen wanneer de eenhoorn de tovenaar raakt en deze vervolgens besturen met de pijltjestoetsen totdat je scoort?
         studio_playlab_9: Stel de achtergrond in voor deze alien invasie en help Spacebot om sneller bij de alien invasie te raken door zijn snelheid te veranderen. Beweeg hem met de pijltjes-toetsen om bij de Spacebot te raken en iedereen te waarschuwen
         studio_playlab_10: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
+        studio_iceage_hello1: 'Sid wil iedereen verzamelen voor een nieuw avontuur. Kan je hem helpen "hallo" te zeggen door het "zeg" blok in het werkgebied te slepen en het woord "hallo" erin te typen?'
+        studio_iceage_hello2: 'Sid (speler 1) heeft Manny (speler 2) gevonden en wil hem op zijn avontuur uitnodigen. Help hun elkaar te groeten door het "speler zeg" blok twee keer te gebruiken.'
+        studio_iceage_move_to_flag: 'Scrat zoekt naar zijn eikel! Help hem de laatste 200 pixels te gaan door het "beweeg" blok te gebruiken.'
+        studio_iceage_move_to_actor: 'Diego (speler 1) zoekt naar Manny (speler 2). Help Diego 200 pixels naar beneden richting Manny te bewegen met het "beweeg speler" blok. Daarna, verbind een blok met het "wanneer speler raakt" gebeurtenis om een geluid te spelen wanneer ze elkaar vinden.'
+        studio_iceage_repeat: 'Het "blijven herhalen" blok kan je code continue uitvoeren. Kan jij blokken aan het verbinden om Granny te helpen wat meer beweging te krijgen door hem herhaaldelijk links en rechts te laten bewegen?'
+        studio_iceage_click_hello: 'Kan jij Sid helpen een laatste oproep voor vrienden te doen wanneer er wordt geklikt? Vergeet niet om op hem te klikken nadat je op "Uitvoeren" hebt geklikt.'
+        studio_iceage_move_events: 'Scrat is nog steeds opzoek naar eikels! Help hem rond te bewegen door het "beweeg" blok te koppelen aan elke gebeurtenis en de richtingen te veranderen zodat het werkt voor elke pijltjestoets. Wanneer je klaar bent, klik op Uitvoeren en probeer alle eikels te verzamelen.'
+        studio_iceage_sound_and_points: 'We hebben de meeste code dat Granny links en rechts laat bewegen voor je klaar gezet, net zoals de code om Sid het scherm rond te laten bewegen. Kan jij de code afmaken en blokken toevoegen aan het "wanneer speler raakt" gebeurtenis zodat er een geluid afspeelt en je een punt scoort wanneer Sid en Granny elkaar aanraken? Druk op Uitvoeren om het spel te spelen.'
+        studio_iceage_warn_ice_age: "Iedereen moet sneller bewegen, omdat er een ijstijd komt! Verander de achtergrond naar een ijzige achtergrond en verander Sid's snelheid naar snel, klik dan op Uitvoeren en beweeg hem naar Diego om hem te waarschuwen."
         studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+          Sid wil zijn oma, Granny, laten weten dat hij van haar houdt. Gebruik het "speler geef" commando om Sid (speler 1) hartjes te geven aan Granny (speler 2)! Verander Granny's stemming in blij wanneer ze wordt geraakt met de hartjes.
+        studio_iceage_free_play: Het is tijd om je eigen spel of verhaal te maken! Wanneer je klaar bent, klik op Klaar om je vrienden jouw spel te laten proberen op hun telefoons, tablets of computers!
+        studio_gumball_hello1: 'Anais wil nieuwe vrienden maken. Kan jij haar "hallo" helpen te zeggen door het "zeg" blok te verplaatsen naar het werkgebied en het woord "hallo" erin te typen?'
+        studio_gumball_hello2: 'Darwin (speler 1) en zijn broer Gumball (speler 2) gaan naar school. Help hun elkaar te groeten door het "speler zeg" blok twee keer te gebruiken.'
+        studio_gumball_move_to_flag: 'Banana Joe wint bijna een velddag race! Help hem naar de laatste 200 pixels te gan met het "beweeg" blok.'
+        studio_gumball_move_to_actor: 'Gumball (speler 1) en Darwin (speler 2) zijn laat voor de velddag! Help Gumball 200 pixels naar beneden richting Darwin te bewegen door het "beweeg speler" blok. Daarna, verbind een blok aan de "wanneer speler raakt" gebeurtenis om een geluid te spelen wanneer ze elkaar vinden.'
+        studio_gumball_repeat: 'Het "oneindig herhalen" blok geeft je de mogelijkheid om programmeercode steeds opnieuw uit te voeren. Kun je er blokken aan vastmaken om Gumball te helpen om zich op te warmen voor zijn wedstrijd door zich herhaaldelijk naar links en rechts te bewegen?'
+        studio_gumball_click_hello: 'Kun je Anton helpen om de start van een wedstrijd aan te kondigen door hem "Klaar voor de start? Ga!" te laten zeggen? Om je programma te kunnen testen, vergeet niet om op Anton te klikken nadat je op Uitvoeren hebt geklikt!'
+        studio_gumball_move_events: 'Darwin doet mee aan de vlaggenverzamelwedstrijd! Help hem om rond te rennen door het "beweeg" blok vast te maken aan alle gebeurtenissen. Klik als je klaar bent op Uitvoeren om te proberen alle vlaggen te verzamelen.'
+        studio_gumball_sound_and_points: 'Het grootste deel van de code die ervoor zorgt dat Anton (speler 2) naar links en rechts beweegt, hebben wij alvast klaargezet, evenals de code om Banana Joe (speler 1) over het scherm te bewegen. Kun jij de code afmaken en blokken toevoegen aan de gebeurtenis "wanneer speler raakt", zodat zowel een geluid wordt afgespeeld en je een punt verdient wanneer Banana Joe en Anton elkaar raken? Druk op Uitvoeren om het spel te spelen.'
+        studio_gumball_warn_food_fight: 'Darwin is zojuist ontsnapt aan een voedselgevecht! Verander de achtergrond naar "figuren" en stel Darwins snelheid in op snel, druk vervolgens op Uitvoeren en verplaats hem naar Penny om haar te waarschuwen.'
+        studio_gumball_join_food_fight: |-
+          Doe mee aan het voedselgevecht! Gebruik de opdracht "speler gooi object naar rechts" om Banana Joe (speler 1) voedsel te laten gooien naar Anton (speler 2)! Stel Anton's stemming in op boos wanneer hij wordt geraakt.
+        studio_gumball_free_play: Maak je eigen spel of verhaal. Klik op Klaar wanneer je klaar bent om jouw vrienden jouw spel te laten uitproberen op hun telefoons, tablets of computers!
         studio_full_sandbox: Maak je eigen spel. Wanneer je klaar bent klik op Finish om je vrienden toe te laten je spel te proberen op hun telefoons.
         studio_k1_1: 'Kan je deze hond "hallo wereld" laten zeggen?'
         studio_k1_2: Kan je de hond iets laten zeggen en dan de kat iets laten zeggen?
@@ -519,12 +520,12 @@ nl:
         mc_if_statements: 'Minecraft - Als-instructies'
         mc_congrats_share: 'Minecraft - Gefeliciteerd'
         mc_congrats_no_share: 'Minecraft - Gefeliciteerd'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        gumball_intro: 'Gumball Uur Code - Inleiding'
+        gumball_events: 'Gumball Uur Code - Gebeurtenissen'
+        gumball_repeat: 'Gumball Uur Code - Herhaalinstructies'
+        iceage_intro: 'Ice Age Uur Code - Inleiding'
+        iceage_events: 'Ice Age Uur Code - Gebeurtenissen'
+        iceage_repeat: 'Ice Age Uur Code - Herhaalinstructies'
     callout:
       text:
         drag_blocks: 'Sleep een "vooruit" blok en plak het onder het andere blok'
