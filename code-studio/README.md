@@ -2,6 +2,11 @@
 
 This package contains static assets used by our "Code Studio" rails app (also known as "dashboard").
 
+## Dev dependencies
+You should have the following tools installed globally.
+  * [GNU coreutils](http://www.gnu.org/software/coreutils/coreutils.html)
+  * [rsync](https://rsync.samba.org/)
+
 ## Building code-studio static assets
 
 1. From the `code-studio` directory, run `npm install` which does the following:
