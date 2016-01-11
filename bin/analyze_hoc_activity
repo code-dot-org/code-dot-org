@@ -101,15 +101,21 @@ def main()
     # Since s3 (which the binary relies on) may fail, we retry a few times
     # hoping for success.
     3.times do
-      # Note that by executing via backticks, the global variable $? is set.
+      # Note that by executing via backticks, the global variable $? is set to a Process::Status object.
       lines_of_code_from_milestone = `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.to_i
-      # If we received a real number (larger than from 2016-01-04) and a proper
-      # status, do not continue retrying.
-      if lines_of_code_from_milestone >= DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
-        lines_of_code = lines_of_code_from_milestone
-        break
-      elsif lines_of_code_from_milestone < DEFAULT_LINES_OF_CODE
-        HipChat.log "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}", color: 'red'
+      if $?.exited?
+        if lines_of_code_from_milestone >= DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
+          # If we received a real number (larger than from 2016-01-04) and a proper
+          # status, do not continue retrying.
+          lines_of_code = lines_of_code_from_milestone
+          break
+        elsif lines_of_code_from_milestone < DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
+          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}"
+        else
+          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 had non-zero exitstatus: #{$?}"
+        end
+      else
+        $stderr.puts "count-lines-of-code-from-milestone-logs_v2 did not exit normally"
       end
     end
   end
