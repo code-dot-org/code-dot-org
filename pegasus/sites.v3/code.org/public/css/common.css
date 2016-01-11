@@ -619,3 +619,15 @@
     background-color: #ffa400;
   }
 }
+
+@media screen and (min-width: 970px) {
+  .starwars-container .img-container {
+    min-height: 334px;
+  }
+}
+
+@media screen and (min-width: 513px) and (max-width: 970px) {
+  .starwars-container .img-container {
+    min-height: 202px;
+  }
+}

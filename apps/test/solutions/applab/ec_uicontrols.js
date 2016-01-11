@@ -17,6 +17,7 @@ module.exports = {
     // up with any errors
     {
       description: "UI controls",
+      timeout: 20000,
       editCode: true,
       xml:
           'button("id1", "text");\n' +
@@ -139,7 +140,7 @@ module.exports = {
         testUtils.runOnAppTick(Applab, 2, function () {
           var debugOutput = document.getElementById('debug-output');
           assert.equal(debugOutput.textContent, "WARNING: Line: 1: button() id parameter refers to an id (button1) which already exists.");
-          Applab.onPuzzleComplete(); 
+          Applab.onPuzzleComplete();
         });
       },
       expected: {
