@@ -72,8 +72,8 @@ class FeatureModeManager
 
   MODES = MODE_SETTINGS_MAP.keys
 
-  # Updates the settings for the specified scripts to the given mode.
-  def self.set_mode(mode, gatekeeper, dcdo, script_names)
+  # Updates the feature mode to the given mode.
+  def self.set_mode(mode, gatekeeper, dcdo, hoc_script_names)
     settings = MODE_SETTINGS_MAP[mode]
     raise "Invalid mode '#{mode}'" if settings.nil?
 
@@ -86,7 +86,7 @@ class FeatureModeManager
     end
 
     settings[:gatekeeper_hoc_tutorial_settings].each do |feature, value|
-      script_names.each do |script_name|
+      hoc_script_names.each do |script_name|
         gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
       end
     end
@@ -95,12 +95,12 @@ class FeatureModeManager
   end
 
   # Returns the matching mode if the dcdo and gatekeeper settings match
-  # a predefined mode for all of the specified script names, or nil otherwise.
-  def self.get_mode(gatekeeper, dcdo, script_names)
+  # a predefined mode for all of the specified HOC script names, or nil otherwise.
+  def self.get_mode(gatekeeper, dcdo, hoc_script_names)
     MODES.detect do |mode|
       dcdo_matches_mode?(dcdo, mode) &&
         gatekeeper_general_settings_match_mode?(gatekeeper, mode) &&
-        gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, script_names)
+        gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names)
     end
   end
 
@@ -118,10 +118,10 @@ class FeatureModeManager
     end
   end
 
-  def self.gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, script_names)
+  def self.gatekeeper_hoc_tutorials_match_mode?(gatekeeper, mode, hoc_script_names)
     expected_settings = MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings]
     expected_settings.all? do |feature, expected_value|
-      script_names.all? do |script|
+      hoc_script_names.all? do |script|
         expected_value == gatekeeper.allows(feature, where: {script_name: script})
       end
     end
