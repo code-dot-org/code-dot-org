@@ -65,64 +65,7 @@ More info coming soon!
 [**Back to the top**](#top)
 
 
-<a id="counselor-admin"></a>
 
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
-
-### Counselors##
-
-**Save the date**
-
-Thursday, December 17, 2015 <br/>
-11:00am - 3:00pm
-
-Lunch will be served.
-
-
-**Location**
-
-[Applications and Research Laboratory (ARL)<br/>
-Room TBD<br/>
-10920 Clarksville Pike<br/>
-Ellicott City, MD 21042<br/><br/>](https://www.google.com/maps/place/Applications+and+Research+Laboratory/@39.2349191,-76.8947807,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df61228ae963:0x7557056ab12cc472)
-
-Free parking is available in the school parking lot.
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Thursday, December 17, 2015 <br/>
-8:00am - 10:00am
-
-Breakfast will be served.
-
-**Location**
-
-[Applications and Research Laboratory (ARL)<br/>
-Room TBD<br/>
-10920 Clarksville Pike<br/>
-Ellicott City, MD 21042<br/><br/>](https://www.google.com/maps/place/Applications+and+Research+Laboratory/@39.2349191,-76.8947807,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df61228ae963:0x7557056ab12cc472)
-
-Free parking is available in the school parking lot.
-
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
 
 
 

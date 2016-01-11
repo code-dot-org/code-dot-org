@@ -1,0 +1,62 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-12-08T20:13:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "readRecords": {
+        "params": [
+          "\"myTable\"",
+          "{}",
+          "function(records){\n\n}"
+        ],
+        "paletteParams": [
+          "table",
+          "terms",
+          "callback"
+        ]
+      },
+      "getTime": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Console.log the records returned by a call to readRecords. (Click to see full instructions)\r\n",
+    "markdown_instructions": "# Data Commands are Slow\r\n\r\nTypically we think of programs running one command after the other in the order they are written. This makes it easy to keep track of what is happening in your program. Since commands running locally on your computer happen **essentially instantaneously**, you never get \"stuck\" waiting for one command to finish before running the next one.\r\n\r\n**Data commands take a long time to run**. Once your computer sends a request to your database it needs to wait for the response to be sent across the Internet. We're going to see **how much slower the data commands are**.\r\n\r\nThe `getTime()` block returns the current time on your computer. It is stored as a number which counts **how many milliseconds have passed since January 1st, 1970**. By repeatedly calling this command you can determine how long different commands take to run.\r\n\r\n# Do This\r\n\r\n**Starter code has been provided** that displays the current time at multiple points in your program\r\n\r\n* Run the program. Notice that the same information from the table is printed in the console.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "data_tables": "\"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\"\r\n    \"population\": 9,000,000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\"\r\n    \"population\": 4,000,000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\"\r\n    \"population\": 3,000,000\r\n  }\r\n  {\r\n     \"name\": \"Houston\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n]",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_blocks": "console.log(\"Time 1: \" + getTime());\r\nconsole.log(\"Time 2: \" + getTime());\r\nreadRecords(\"mytable\", {}, function(records){\r\n  console.log(\"Time 3: \" + getTime());\r\n});"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

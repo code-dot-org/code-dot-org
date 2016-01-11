@@ -24,7 +24,7 @@
   "COLOUR_RGB_RED": "سور",
   "COLOUR_RGB_TITLE": "ڕەنگ لەگەڵ",
   "COLOUR_RGB_TOOLTIP": "ڕەنگێك دروست بكە بە بڕێکى تایبەت لە سوور، سەوز و شین .هەموو بەهاکان دەبێت لەنێوان ٠ و ١٠٠ بێت.",
-  "CONFIRM_DELETE_FUNCTION_MESSAGE": "Warning! Are you sure you want to delete %1?",
+  "CONFIRM_DELETE_FUNCTION_MESSAGE": "ئاگاداری! دڵنیای لە سرینەەی؟",
   "CONTRACT_EDITOR_HEADER": "Design Recipe",
   "CONTROLS_FLOW_STATEMENTS_HELPURL": "https://code.google.com/p/blockly/wiki/Loops#Loop_Termination_Blocks",
   "CONTROLS_FLOW_STATEMENTS_OPERATOR_BREAK": "پچڕان لە دەرەوەى گرێ /لوپ",

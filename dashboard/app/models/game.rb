@@ -45,6 +45,7 @@ class Game < ActiveRecord::Base
   MAZE = 'maze'
   CALC = 'calc'
   EVAL = 'eval'
+  TEXT_COMPRESSION = 'text_compression';
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
@@ -127,7 +128,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB
+    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION
   end
 
   # True if the app takes responsibility for showing footer info

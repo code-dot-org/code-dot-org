@@ -14,12 +14,15 @@
 #
 require File.expand_path('../../pegasus/src/env', __FILE__)
 require src_dir 'database'
+require 'cdo/hip_chat'
 require 'cdo/properties'
 
 # Provides helper methods (add_count_to_hash, analyze_day_fast, and add_hashes) as well as the
 # *_DB_READONLY constants.
 require_relative '../lib/analyze_hoc_activity_helper'
 
+# This default number of lines of code is from 2016-01-04.
+DEFAULT_LINES_OF_CODE = 11151730618
 
 def main()
   return unless only_one_running?(__FILE__)
@@ -32,6 +35,7 @@ def main()
   total_cities = to_date['cities']
   total_states = to_date['states']
   total_countries = to_date['countries']
+  total_codedotorg = 0
 
   today = DateTime.now.to_date
   day = Date.strptime('2014/12/06', '%Y/%m/%d')
@@ -54,6 +58,7 @@ def main()
     total_cities = add_hashes(total_cities, day_data['cities'])
     total_states = add_hashes(total_states, day_data['states']||{})
     total_countries = add_hashes(total_countries, day_data['countries'])
+    total_codedotorg += day_data['codedotorg_tutorial_count'] if day_data['codedotorg_tutorial_count']
 
     day += 1
   end
@@ -84,11 +89,36 @@ def main()
     states: total_states,
     countries: total_countries,
     total_hoc_count: total_hoc_count,
+    total_codedotorg_count: total_codedotorg,
     hoc_country_totals: hoc_country_totals,
     hoc_company_totals: hoc_company_totals,
   }
 
-  lines_of_code = rack_env?(:production) ? `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.to_i : 0
+  # In the production environment, begin with a known previous value in case we
+  # are unable to obtain a more recent number.
+  lines_of_code = rack_env?(:production) ? DEFAULT_LINES_OF_CODE : 0
+  if rack_env?(:production)
+    # Since s3 (which the binary relies on) may fail, we retry a few times
+    # hoping for success.
+    3.times do
+      # Note that by executing via backticks, the global variable $? is set to a Process::Status object.
+      lines_of_code_from_milestone = `#{deploy_dir('bin','count-lines-of-code-from-milestone-logs_v2')}`.to_i
+      if $?.exited?
+        if lines_of_code_from_milestone >= DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
+          # If we received a real number (larger than from 2016-01-04) and a proper
+          # status, do not continue retrying.
+          lines_of_code = lines_of_code_from_milestone
+          break
+        elsif lines_of_code_from_milestone < DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
+          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}"
+        else
+          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 had non-zero exitstatus: #{$?}"
+        end
+      else
+        $stderr.puts "count-lines-of-code-from-milestone-logs_v2 did not exit normally"
+      end
+    end
+  end
 
   time = DateTime.now
   Properties.set :metrics, {
@@ -100,7 +130,7 @@ def main()
     csedweek_students:        4875091,
     csedweek_countries:       356,
     petition_signatures:      PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').count,
-    lines_of_code:            lines_of_code, #JSON.parse(Net::HTTP.get(URI('http://archive.learn.code.org/line_data.json')))['all'],
+    lines_of_code:            lines_of_code,
   }
 
   total_females = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'f').exclude(last_sign_in_at: nil).count
