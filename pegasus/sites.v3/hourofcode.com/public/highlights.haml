@@ -11,7 +11,7 @@ layout: wide
 
 .highlights-content
   - tag = 'highlight'
-  -DB[:cdo_news_items].where(tag_s:tag).limit(100).each do |item|
+  - DB[:cdo_news_items].where(tag_s:tag).limit(100).each do |item|
     = view :highlight_item, item: item
 
 
@@ -25,7 +25,6 @@ layout: wide
 
   if (window.mobilecheck())
   {
-    console.log("mobile");
     $('#highlight-styles').remove();
   }
   else
