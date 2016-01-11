@@ -13,8 +13,7 @@
   .span{style: 'float:right;'}
     - page = params[:page] || 1
     - page = page.to_i
-    - if page < 10
-      = link_to t('gallery.more').html_safe, page: page.to_i + 1
+    = link_to t('gallery.more').html_safe, page: page + 1
 
 - else
   .row
