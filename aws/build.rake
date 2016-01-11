@@ -17,6 +17,8 @@ require 'shellwords'
 require 'cdo/aws/cloudfront'
 require 'cdo/build_package'
 
+require 'aws-sdk' # TODO - should we be using the S3.rb in CDO?
+
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
 # ".<name>-built" dependes on the files listed in dependencies. If any of those are newer, build_task
@@ -431,26 +433,10 @@ multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack
 
 $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
+
+BUCKET_NAME = 'cdo-build-package'
+
 task 'test-websites' => [$websites_test]
-
-# Attempts to get package from s3 (if necessary). Returns true if we now have
-# the up to date package.
-def get_package(package_name, source_location, package_location)
-  commit_hash = RakeUtils.git_latest_commit_hash source_location
-  puts commit_hash
-
-  # download from s3 into package_location
-  sync = `aws s3 sync s3://#{PACKAGE_DIR}/#{package_name}/#{commit_hash} #{package_location}/ --delete`
-  puts sync
-  puts '---'
-  puts sync.length
-
-  # if local copy of package matches hash, we're done
-
-  # try to get package from s3, in which case we move it into expected location
-
-  # otherwise we failed, and depending on our environment we need to build or fail
-end
 
 # TODO - think about dev scenario (which i dont think ever goes through build.rake)
 # TODO - handle s3 failures somewhere
@@ -459,8 +445,12 @@ def commit_hash(source_location)
   RakeUtils.git_latest_commit_hash source_location
 end
 
-def remote_bucket(package_name, commit_hash)
-  "s3://#{PACKAGE_DIR}/#{package_name}/#{commit_hash}"
+def _remote_bucket(package_name, commit_hash)
+  "s3://#{BUCKET_NAME}/#{package_name}/#{commit_hash}"
+end
+
+def s3_key(package_name, commit_hash)
+  "#{package_name}/#{commit_hash}.tar.gz"
 end
 
 def log_cmd(cmd)
@@ -470,9 +460,10 @@ def log_cmd(cmd)
   result
 end
 
+
 # Uploads a package to S3, or if said package already exists, validates that it
 # is identical
-def upload_package(package_name, commit_hash, package_location)
+def _upload_package(package_name, commit_hash, package_location)
   # ls to see if we already have a package
   result = log_cmd("aws s3 ls #{remote_bucket(package_name, commit_hash)}")
   package_exists = result.length > 0
@@ -486,7 +477,7 @@ def upload_package(package_name, commit_hash, package_location)
   raise "Shouldnt have any differences" if package_exists && result.length > 0
 end
 
-def create_or_upload_package(package_name, source_location, package_location)
+def _create_or_upload_package(package_name, source_location, package_location)
   return if get_package(package_name, source_location, package_location)
 
   raise "Can't create package #{package_name} on production" if rack_env?(:production)
@@ -498,13 +489,85 @@ end
 
 task 'brent' do
   commit_hash = commit_hash(code_studio_dir)
-  upload_package('code-studio', commit_hash, dashboard_dir('public', 'code-studio-package'))
-  # create_or_upload_package('code-studio', code_studio_dir, dashboard_dir('public', 'code-studio-package'))
-  # commit_hash = RakeUtils.git_latest_commit_hash code_studio_dir
 
+  package_path = create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
+  puts package_path
+  upload_package('code-studio', package_path)
 
-  # has_package = BuildPackage.has_package?('code-studio', commit_hash)
-
-  # if we have the package on s3
+  download_package('code-studio', commit_hash, dashboard_dir('public', 'code-studio-package'))
 
 end
+
+def create_package(assets_location, commit_hash)
+  # TODO - should this be done to some temp location instead?
+  package_path = "#{assets_location}/#{commit_hash}.tar.gz"
+  Dir.chdir(assets_location) do
+    # create our commit_hash file
+    `echo #{commit_hash} > commit_hash`
+    # remove any existing zips
+    `rm *.tar.gz`
+    # zip everything up
+    `tar -zcf #{package_path} *`
+  end
+  package_path
+end
+
+def upload_package(package_name, package_path)
+  client = Aws::S3::Client.new
+  key = s3_key(package_name, File.basename(package_path, '.tar.gz'))
+
+  # TODO
+  # try to get a package
+  # if we get one compare to our own and fail if different
+  # ^ this step is essentially an assert
+
+  # result = client.get_object(bucket: BUCKET_NAME, key: key).body.rea
+
+  puts "Uploading: #{key}"
+  File.open(package_path) do |file|
+    client.put_object(bucket: BUCKET_NAME, key: key, body: file)
+  end
+end
+
+def download_package(package_name, commit_hash, package_location)
+  client = Aws::S3::Client.new
+  key = s3_key(package_name, commit_hash)
+  output_file = "#{package_location}/#{commit_hash}.new.tar.gz"
+
+  puts "Downloading: #{key}"
+  puts "Writing to #{output_file}"
+  File.open(output_file, 'w') do |file|
+    client.get_object(bucket: BUCKET_NAME, key: key) do |chunk|
+      file.write(chunk)
+    end
+  end
+
+  puts FileUtils.identical?(output_file, "#{package_location}/#{commit_hash}.tar.gz")
+
+  # download from s3 into package_location
+  # result = log_cmd("aws --delete s3 sync #{remote_bucket(package_name, commit_hash)} #{package_location}")
+  # return if result.length == 0
+
+  # if local copy of package matches hash, we're done
+
+  # try to get package from s3, in which case we move it into expected location
+
+  # otherwise we failed, and depending on our environment we need to build or fail
+end
+
+# package is the zip consisting of source + file stating signature
+
+# needs_package_update (returns bool)
+# look for signature file. does it match commit_hash? if so, we're done
+
+# get_package (returns zip file or nil)
+# try to download BUCKET_NAME/package_name/commit_hash.zip from S3
+# if it fails, we'll have to build ourselves (or fail depending on environment)
+# if it succeeds, caller should unzip into target
+
+# upload_package (..., package)
+# call get_package
+# if it gives us a package, compare it to our own. if they're different, fail
+# if we didnt get one, upload ours
+
+# create_package (source, name, commit_hash)

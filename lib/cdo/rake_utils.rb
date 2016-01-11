@@ -95,7 +95,7 @@ module RakeUtils
 
   # Gets the commit hash for the given directory
   def self.git_latest_commit_hash(dir)
-    `git log -n 1 --format="%H" -- #{dir}`
+    `git log -n 1 --format="%H" -- #{dir}`.strip
   end
 
   def self.ln_s(source, target)
