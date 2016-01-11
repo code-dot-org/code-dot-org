@@ -5,7 +5,7 @@ require 'json'
 
 puts "Updating hoc_survey_prize claimed_ip fields from 'expression' to the ips from their associated prize selection forms..."
 count = 0
-DB[:forms].where(kind: 'HocSurveyPrize2015').exclude(processed_at: nil).each do |form|
+DB[:forms].where(kind: 'HocSurveyPrize2015').exclude(processed_at: nil).exclude(processed_at: 0).each do |form|
   data = JSON.load form[:data]
   processed_data = JSON.load form[:processed_data]
 
