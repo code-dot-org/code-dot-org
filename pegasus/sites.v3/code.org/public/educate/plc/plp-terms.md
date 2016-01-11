@@ -10,7 +10,7 @@ nav: plc_plp_nav
 
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
 - Attend our Facilitation Summit, May 20-22, 2016. Location TBD
-- Attend our 5-day Summer Professional Learning Experience with teachers from your state
+- Attend our 5-day Code.org Summer Institute with teachers from your state
 	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, KY, IN, MD, NC, OH, TX)
 	- July 18-22 in Salt Lake City, UT - states attending (WA, CA, ID, AZ, NV, UT)
 	- August 8-12 in Chicago, IL - states attending (IL, MA, MI, NJ, NY)
@@ -31,7 +31,7 @@ organize informal local meetups for educators, ideally together with a local uni
 ## Code.org Commitment
 - Host the Facilitation Summit in TBD.
 - Pay for round-trip airfare, hotel, ground transportation to and from the airport, and meals during the Facilitation Summit and the summer professional development workshop in Year 1 of the partnership.
-- Host the 5-day summer professional development workshop for CS Principles starting in Year 1 of the partnership, and for the CS Discoveries starting in Year 2.
+- Host the 5-day Code.org Summer Institute for CS Principles starting in Year 1 of the partnership, and for the CS Discoveries starting in Year 2.
 - For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=0" target=_blank>see example budget here</a>). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
   - For a cohort of 10 or fewer teachers, the funding would amount to $4,000 for overall costs + $160 per teacher in the cohort.
   - For a cohort of more than 10 teachers, the funding would amount to $6,000 for overall costs + $160 per teacher in the cohort.
@@ -54,8 +54,8 @@ This is not a binding document. This is a new program, so Code.org may change so
 
 **Next Steps:** If your organization agrees to these terms, please <a href="/educate/plc/plp-application" target=_blank>complete an application</a> to become a Code.org Professional Learning Partner.
 
-**Code.org 2016 Summer Workshop Dates:**
-It is strongly advised that each Professional Learning Partner Program Manager attend the workshop nearest their region, in order to connect with local teachers.
+**2016 Code.org Summer Institute Dates:**
+It is strongly advised that each Professional Learning Partner Program Manager attend the Code.org Summer Institute nearest their region, in order to connect with local teachers.
 
 - June 20-24 in Atlanta, GA - states attending (AL, FL, GA, KY, IN, MD, NC, OH, TX)
 - July 18-22 in Salt Lake City, UT - states attending (WA, CA, ID, AZ, NV, UT)

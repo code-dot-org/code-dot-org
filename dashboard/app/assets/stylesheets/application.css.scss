@@ -10,7 +10,6 @@
  *
  * Gem assets
  *= require jquery-ui
- *= require video-js
  *
  * Vendor assets
  *= require add2home
@@ -30,6 +29,8 @@
  *= require details-polyfill
  */
 
+// TODO: Move into code-studio.scss when it exists.
+@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
