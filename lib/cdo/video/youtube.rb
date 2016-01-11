@@ -46,11 +46,9 @@ class Youtube
           -s 640x360
         ).join(' ')} #{output_file}"
       else
-        # Run viddl-rb to download transcoded video from YouTube.
+        # Run youtube-dl to download transcoded video from YouTube.
         url = "https://www.youtube.com/watch?v=#{id}"
-        cmd = "viddl-rb #{url} -s #{dir} -q 640:360:mp4"
-        # Workaround for https://github.com/rb2k/viddl-rb/issues/114
-        cmd = 'sudo ' + cmd if CDO.bundler_use_sudo
+        cmd = YoutubeDL::Runner.new(url, format: 18, output: "#{dir}/%(id)s.%(ext)s").command
       end
 
       IO.popen(cmd) { |output| output.each { |line| CDO.log.info('[Youtube] ' + line.chomp) } }

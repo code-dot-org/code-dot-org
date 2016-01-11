@@ -5,6 +5,8 @@ nav: how_to_nav
 ---
 # How-to Guide for Volunteers
 
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
 ## 1. Sign up to volunteer
 Visit a local classroom to inspire students to keep learning computer science. [Volunteer for an hour](https://code.org/volunteer/engineer).
 

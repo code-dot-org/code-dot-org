@@ -7,12 +7,25 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Assessment -- Use loops to get me to the pig!",
+    "instructions": "Use `repeat` loops to get me to the pig!",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "true",
     "skip_instructions_popup": "true",
-    "ideal": "5"
+    "ideal": "5",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -29,9 +42,16 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <recommended_blocks>
+      <xml>
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>

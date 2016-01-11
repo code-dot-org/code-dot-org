@@ -154,6 +154,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/export-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :csv
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
     return TableType.new(channel_id, storage_id(endpoint), table_name).to_csv
   end

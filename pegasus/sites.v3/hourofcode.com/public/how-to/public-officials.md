@@ -27,6 +27,8 @@ nav: how_to_nav
 
 <p style="clear:both">&nbsp;</p>
 
+Computer Science Education Week is over but you can still do an Hour of Code all year round.
+
 ## Get every school participating, every student learning!
 
 1. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts. Let them know **every** participating educator will receive a [thank you gift](<%= resolve_url('/prizes') %>) while supplies last and in **each state**, one participating school will win **$10,000 in technology**!

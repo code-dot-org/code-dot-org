@@ -61,7 +61,6 @@ EOF
   # Set script-specific Gatekeeper flags.
   puts "Setting flags to #{mode}"
   HIGH_SCALE_SCRIPT_NAMES.each do |script_name|
-    Gatekeeper.set('public_caching_for_script', value: true, where: {script_name: script_name})
     case mode
     when 'red'
       Gatekeeper.set('shareEnabled', value: false, where: {script_name: script_name})

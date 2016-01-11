@@ -18,7 +18,7 @@ It is very common to want to store lists of information in our programs. This co
 # Lesson
 
 * Learn how to design arrays to hold a variety of information.
-* Accessing information in an array by its index.
+* Access information in an array by its index.
 * Develop a simple application that uses an array.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

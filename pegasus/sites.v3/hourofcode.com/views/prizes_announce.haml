@@ -2,11 +2,9 @@
   %h2.prizes-header=hoc_s(:prizes_header)
   %ul
     -if @country == 'us'
-      %li=hoc_s(:prizes_10k)
+      %li=hoc_s(:prizes_10k_past)
     %li=hoc_s(:prizes_gift_cards)
     %li
       %a{href: resolve_url('/prizes')}
-        More exciting prizes
-  %img.giftcard{src: "../images/amazon_giftcards.jpg"}
-  %img.giftcard{src: "../images/apple_giftcards.png"}
-  %img.microsoft{src: "../images/microsoft_giftcards.jpg"}
+        =hoc_s(:prizes_more)
+    = view :prizes_giftcards
