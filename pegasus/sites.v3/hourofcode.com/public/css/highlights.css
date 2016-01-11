@@ -55,3 +55,19 @@
   border-bottom-right-radius: 5px;
   color: white;
 }
+
+@media only screen and (max-width: 500px) {
+  .highlight-caption {
+    display: inline;
+    width: 260px;
+    background-color: transparent;
+  }
+
+  .caption-headline {
+    display: none;
+  }
+
+  .highlight-description {
+    display: none;
+  }
+}
