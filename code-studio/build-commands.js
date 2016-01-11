@@ -51,8 +51,6 @@ exports.browserify = function (config) {
 
   var reactifyStep = '-t reactify';
 
-  var globifyStep = '-t require-globify';
-
   var factorStep = '';
   if (shouldFactor) {
     // We use command substitution to build an output filename based on
@@ -84,7 +82,6 @@ exports.browserify = function (config) {
   return [
     command,
     reactifyStep,
-    globifyStep,
     fileInput,
     factorStep,
     commonOutput
