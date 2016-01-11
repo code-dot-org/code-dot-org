@@ -4,13 +4,14 @@
 # There are currently three modes defined, intended to be easy to understand and reason about.
 #
 # normal:
-#     All features enabled.
+#     Enable all features.
 # scale:
-#     Progress saved only on sharable levels for HOC tutorials.
-#     Puzzle rating and hints disabled on all tutorials.
-#     Sampled HOC activity logging at 10%.
+#     Save progress only on sharable levels for HOC tutorials.
+#     Disable puzzle rating and hints for all tutorials.
+#     Log hoc activity with 10% sampling.
+#     Extend cache lifetimes for HOC pages
 # emergency:
-#     Scale features, plus sharing disabled for all HOC tutorials.
+#     Same as Scale, plus disable sharing for HOC tutorials.
 
 require 'cdo/hip_chat'
 
