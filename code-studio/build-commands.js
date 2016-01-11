@@ -55,10 +55,29 @@ exports.browserify = function (config) {
 
   var factorStep = '';
   if (shouldFactor) {
-    factorStep = "-p [ factor-bundle -o '" + (shouldMinify ? 'uglifyjs ' : '') +
-      '>' + buildPath + "`dirname $(realpath --relative-to " + srcPath + " $FILE)`/`basename -s .js -s .jsx $FILE`" + extension + "']";
-  }
+    // We use command substitution to build an output filename based on
+    // the input filename, which factor-bundle automatically binds to $FILE.
+    var factoredOutputFilename = buildPath + '`';
 
+    // The output file ends up at the same path relative to the build directory
+    // as the input file is relative to the src directory:
+    // @see `man realpath`
+    factoredOutputFilename += 'realpath --relative-to ' + srcPath + ' $FILE';
+
+    // And we swap out the input file extension (.js or .jsx) for an output
+    // file extension (.js or .min.js) depending on our configuration.
+    // @see `man sed`
+    factoredOutputFilename += ' | sed -r "s/\.jsx?$/' + extension + '/i"';
+
+    // Finally, we close the command substitution
+    factoredOutputFilename += '`';
+
+    // Use bracket syntax to invoke the factor-bundle plugin with one argument:
+    // A command that accepts each factored output file as it's processed.
+    factorStep = "-p [ factor-bundle -o '" +
+        (shouldMinify ? 'uglifyjs ' : '') +
+        '> ' + factoredOutputFilename + "' ]";
+  }
   var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
