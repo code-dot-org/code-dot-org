@@ -138,9 +138,6 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    # never load solutions for Jigsaw
-    return if @level.game.name == 'Jigsaw'
-
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
       authorize! :manage, :teacher
