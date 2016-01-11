@@ -110,12 +110,12 @@ def main()
           lines_of_code = lines_of_code_from_milestone
           break
         elsif lines_of_code_from_milestone < DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
-          HipChat.log "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}", color: 'red'
+          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}"
         else
-          HipChat.log "count-lines-of-code-from-milestone-logs_v2 had non-zero exitstatus: #{$?.to_s}", color: 'red'
+          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 had non-zero exitstatus: #{$?.to_s}"
         end
       else
-        HipChat.log "count-lines-of-code-from-milestone-logs_v2 did not exit normally", color: 'red'
+        $stderr.puts "count-lines-of-code-from-milestone-logs_v2 did not exit normally"
       end
     end
   end
