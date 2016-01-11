@@ -35,3 +35,4 @@ Before applying please carefully review the the [criteria, requirements and comm
 
 We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
 
+If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).

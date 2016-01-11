@@ -487,7 +487,6 @@ GEM
       rack
       raindrops (~> 0.7)
     user_agent_parser (2.1.5)
-    videojs_rails (4.5.2)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.2.1)
@@ -609,7 +608,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn (~> 4.8.2)
   user_agent_parser
-  videojs_rails
   web-console (~> 2.0)
   youtube-dl.rb
 

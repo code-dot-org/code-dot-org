@@ -13,7 +13,9 @@ def sequel_connect(writer, reader)
 
   db.extension :server_block
 
-  #db.loggers << $log if rack_env?(:development)
+  # Uncomment this for Pegasus logging.  Only appears to work when started
+  # using bin/pegasus-server.
+  #db.loggers << $log if rack_env?(:development) && $log
 
   db
 end

@@ -8,6 +8,27 @@
 }
 /* ..end homepage 2.0 */
 
+/* special styles.. */
+
+.h0 {
+  color: #555;
+  font-size: 44px;
+  font-family: 'Gotham 4r', sans-serif;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+.breakoutquote {
+  background-color: rgb(88, 103, 113);
+  color: white;
+  padding: 35px;
+  font-size: 18px;
+}
+
+
+/* .. end special styles */
+
 h1 {
   color: #7665a0;
   font-size: 32px;
