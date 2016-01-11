@@ -911,16 +911,16 @@ applabCommands.setText = function (opts) {
   return false;
 };
 
-applabCommands.getValue = function (opts) {
-  apiValidateDomIdExistence(opts, 'getValue', 'id', opts.elementId, true);
-  apiValidateElementIdTagAndType('getValue', opts.elementId, 'INPUT', 'range', 'slider');
+applabCommands.getNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'getNumber', 'id', opts.elementId, true);
+  apiValidateElementIdTagAndType('getNumber', opts.elementId, 'INPUT', 'range', 'slider');
   return parseInt(applabCommands.getText(opts), 10);
 };
 
-applabCommands.setValue = function (opts) {
-  apiValidateDomIdExistence(opts, 'setValue', 'id', opts.elementId, true);
-  apiValidateElementIdTagAndType('setValue', opts.elementId, 'INPUT', 'range', 'slider');
-  apiValidateType(opts, 'setValue', 'value', opts.text, 'number');
+applabCommands.setNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'setNumber', 'id', opts.elementId, true);
+  apiValidateElementIdTagAndType('setNumber', opts.elementId, 'INPUT', 'range', 'slider');
+  apiValidateType(opts, 'setNumber', 'value', opts.text, 'number');
   return applabCommands.setText(opts);
 };
 
