@@ -3,11 +3,17 @@
 #
 # There are currently three modes defined, intended to be easy to understand and reason about.
 #
-# normal: All features enabled for all of the given scripts.
-# scale: Puzzle ratings and hints disabled on all tutorials.
-#       Milestone posts disabled for high scale (HOC) tutorials, except on shared levels.
-#       Sampled HOC activity logging at 10%.
-# emergency: scale features, plus sharing disabled. Sampled hoc activity logging at 10%.
+# normal:
+#     All features enabled.
+# scale:
+#     Progress saved only on sharable levels for HOC tutorials.
+#     Puzzle rating and hints disabled on all tutorials.
+#     Sampled HOC activity logging at 10%.
+# emergency:
+#     Scale features, plus sharing disabled for all HOC tutorials.
+
+require 'cdo/hip_chat'
+
 class FeatureModeManager
 
   # A map from mode symbol to gatekeeper and dcdo settings. The gatekeeper settings are
@@ -81,6 +87,8 @@ class FeatureModeManager
         gatekeeper.set(feature,  where: {script_name: script_name}, value: value)
       end
     end
+
+    HipChat.log "Set scale feature mode for environment #{Rails.env} to #{mode}"
   end
 
   # Returns the matching mode if the dcdo and gatekeeper settings match
