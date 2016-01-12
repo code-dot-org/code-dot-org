@@ -30,7 +30,7 @@ If accepted into the Code.org CSP Educator Development program, you will:
 ## <a name="components"></a>How does it work?
 The program has two components: 
 
-- **In-Person Summit** - An intensive, hands-on, in-person workshop providing foundational experiences with CS and the Code.org suite of tools. The week-long workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
+- **Code.org Summer Institute** - An intensive, hands-on, in-person workshop providing foundational experiences with CS and the Code.org suite of tools. The week-long workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
 - **Continuing Professional Development** - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
   - The in-person meetings are run by local facilitators and are focused on continuing to build pedagogical strategies while also exploring the essential elements of this course, such as: using the AP performance tasks in your course, teaching new content and units, and keeping the classroom environment equitable and engaging for all students.
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
@@ -40,7 +40,7 @@ The program has two components:
 
 ## <a name="commitments"></a>What are the program commitments?
 
-In-Person Summit: (June-August)
+Code.org Summer Institute: (June-August)
 
   - 5 days (30 hours) in person. Choose from three dates:
 	  - June 20-24 in Atlanta, GA

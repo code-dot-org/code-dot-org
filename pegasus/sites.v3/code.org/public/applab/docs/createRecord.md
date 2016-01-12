@@ -96,14 +96,14 @@ createRecord(table, record, function(record){
 |-----------------|------|-----------|-------------|
 | table | string | Yes | The name of the table the record should be added to. A new table gets created if it doesn't exist.  |
 | record | object | Yes | The data to be stored in the record. Either a javascript object variable or a javascript object defined using curly brace and colon notation (see examples above). |
-| callback | function | No | The callback function that is asynchronously called when the call to createRecord() is finished. The created record object is passed back as a parameter to the callback function. The unique ID of the new record can be accessed via record.id |
+| callback | function | No | The callback function that is asynchronously called when the call to createRecord() is finished. The created record object is returned as a parameter to the callback function. The unique ID of the new record can be accessed via record.id |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-When *createRecord()* is finished executing, the callback function is automatically called and is passed the created record object as a parameter.
+When *createRecord()* is finished executing, the callback function is automatically called and is returned as a parameter the created record object as a parameter.
 
 [/returns]
 
