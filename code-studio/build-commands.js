@@ -46,10 +46,20 @@ exports.browserify = function (config) {
 
   var extension = (shouldMinify ? '.min.js' : '.js');
 
+  // The React library checks the NODE_ENV variable in several places to decide
+  // whether to enable special debugging features.  By setting this environment
+  // variable, envify will do an inline replacement anywhere `process.env.NODE_ENV`
+  // is used (envify is implicitly part of the browserify step, since we depend
+  // on 'react') and then uglify will perform dead code removal that strips all
+  // of those debug paths from our minified output.
+  var customEnvironment = (shouldMinify ? 'NODE_ENV=production' : '');
+
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
   
   var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
+
+  var uglifyCommand = 'uglifyjs -cm';
 
   var factorStep = '';
   if (shouldFactor) {
@@ -73,13 +83,14 @@ exports.browserify = function (config) {
     // Use bracket syntax to invoke the factor-bundle plugin with one argument:
     // A command that accepts each factored output file as it's processed.
     factorStep = "-p [ factor-bundle -o '" +
-        (shouldMinify ? 'uglifyjs ' : '') +
-        '> ' + factoredOutputFilename + "' ]";
+        (shouldMinify ? uglifyCommand : '') +
+        ' > ' + factoredOutputFilename + "' ]";
   }
-  var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
+  var commonOutput = (shouldMinify ? '| ' + uglifyCommand + ' ' : '') +
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
+    customEnvironment,
     command,
     babelifyStep,
     fileInput,
