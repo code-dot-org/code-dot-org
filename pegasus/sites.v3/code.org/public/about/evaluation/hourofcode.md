@@ -1,11 +1,11 @@
 ---
-title: Code.org 2015 Annual Report
+title: The impact of the Hour of Code
 nav: about_nav
 social:
-  "og:description": "2015 was a pretty incredible year for computer science, with your help."
-  "og:image": "/images/2015AR/diversity.jpg"
-  "og:image:width": 600
-  "og:image:height": 331
+  "og:description": "We want to celebrate the collaboration of the Hour of Code partners by sharing some ways we measure the impact of this grassroots campaign."
+  "og:image": "/images/2015AR/volunteers.png"
+  "og:image:width": 1025
+  "og:image:height": 601
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
@@ -13,13 +13,167 @@ social:
 
 ---
 
-[h0]
-
-The state of K-12 computer science
-
-[/h0]
+# What’s the impact of the Hour of Code?
 
 **January, 2016**
+
+At Code.org, we’re a big believer in metrics. As you can see on our [About page](/about) or our [2015 Annual Report](/about/2015), we transparently publish many of the metrics we use to track progress across all our programs, and there are hundreds of other smaller ways we make sure our work is moving the needle. 
+
+Headline metrics like “200 million served” or “11 billion lines of code” sound impressive, but [they’re not great metrics](/loc), and not the true measure of impact.
+
+Given the hundreds of global partners and 198,000 educators who support the Hour of Code campaign for CS Education Week, we want to celebrate your collective impact by sharing some ways we measure the impact of this grassroots campaign.
+
+## The goal: breaking stereotypes and opening doors
+
+The Hour of Code is at its core not about learning a brand new skill in just one hour. One hour isn’t enough to learn how to code. The Hour of Code is about breaking stereotypes and opening doors.  You may learn programming concepts like loops, conditionals, or basic debugging. But a much more important goal is for students and their teachers to learn that computer science is accessible to all and more fun than you think, starting at any age, in any classroom.
+
+**The “Hour of Code” is not even limited to one hour of coding.** Thousands of the events during Computer Science Education Week go beyond one hour, and involve celebrations or activities other than coding, all under the umbrella brand of “Hour of Code.”  
+
+At its core, the most valuable outcomes from this grassroots campaign are to change perceptions of computer science, to increase trial, and to encourage students, educators, and schools to pursue follow-on learning. 
+
+## The most important measures of impact
+
+When educators who are new to computer science are asked whether the Hour of Code has increased their interest level in teaching computer science, **85%** say yes.  With almost 200,000 participating educators, this is fantastic news for our field.
+
+When they are asked whether they plan to continue teaching computer science beyond one hour, **49%** answer “yes”, and an additional **18%** say that they already began teaching computer science after a previous Hour of Code campaign!
+
+When asked if any of their students did more than just one hour of coding, **87%** answer “yes.”
+
+When we consider the diversity of these students, and that this campaign has global participation, stretching for urban schools in Los Angeles, Chicago, Brooklyn, to refugee camps in Syria and Palestine, it is impressive to read these results.
+
+The full survey details are below.
+
+## Survey of 198,000 participating educators
+
+Over 40,000 of the educators and organizers participating in the 2015 Hour of Code completed a survey (administered by Code.org) to share their experiences. It’s important to qualify that there are two important skews in these results: 
+
+1. the survey was in English, skewing answers to English-speaking countries 
+1.  the survey went to educators only, and cannot measure the experiences of students or adults who tried the Hour of Code outside of a classroom or organized event.
+
+To get a sense of the international participation in the 2015 Hour of Code, [see these stats](http://blog.code.org/post/135648100403/you-mightve-heard-about-the-hour-of-code-in-the). 
+
+**Q: Overall, how would you rate your Hour of Code experience?** 
+
+**A: 97.5% = Good + Great.**
+
+<img src="/images/2015AR/survey1.png" />
+<br/><br/>
+
+**Q: What were the demographics of the participating students?**
+
+**A: 49% female. And among U.S. participants 38.5% students of color**
+
+<img src="/images/2015AR/survey2.png" />
+
+Note: these are calculated based on the participating educators’ reports of total student participation by demographic. Students of color are only reported among U.S. participants and include African American, Hispanic/Latino/Latina, Pacific Islander, or Native American/Alaskan Native students.
+
+<br/><br/>
+**Q: Where was your Hour of Code event?**
+
+**A: mostly public schools, followed by private schools**
+
+<img src="/images/2015AR/survey3.png" />
+
+<br/><br/>
+**Q: Does your school already teach/offer a Computer Science class that includes programming or coding?**
+
+**A: 60% No**
+
+<img src="/images/2015AR/survey4.png" />
+
+<br/><br/>
+**Q: How has your experience with the Hour of Code affected your interest in teaching computer science?**
+
+**A: 83% "more interested"**
+
+<img src="/images/2015AR/survey5.png" />
+
+
+
+Important note: Among schools that don't have a CS program already, the response rate is slightly higher: **85%** of these teachers are "More interested"
+
+<br/><br/>
+**Q: If given the opportunity, would you continue teaching coding or computer science beyond just one hour?**
+
+**A: Wow!**
+
+| |
+|---|
+| 26%: Yes, I already taught computer science before Hour of Code |
+| 18%: Yes, I started teach coding after a previous Hour of Code campaign |
+| 49%: Yes, I hope to teach coding or computer science beyond one hour |
+| 6%: No |
+
+<br/><br/>
+
+**Q: Did any of your students do coding for longer than one hour?**
+
+**A: 87% = Yes!**
+
+<img src="/images/2015AR/survey6.png" />
+
+
+
+<br/><br/>
+**Q: Should we keep the Hour of Code as the centerpiece activity of Computer Science Education Week, and keep “Hour of Code” as the unifying brand for all the other activities that educators organize throughout the week?**
+
+98.4%: Yes - stay the course, as long as there are new tutorials and community activities under the Hour of Code umbrella each year. 
+
+1.6%: No - I’d prefer something completely different as the centerpiece activity for CS Education Week.
+
+<br/><br/>
+**Q: Did a volunteer participate in the Hour of Code through the map we provided?**
+
+**A: At least 8,000 volunteers engaged!**
+
+|  |   |   |
+|---|---|---|
+| No, I didn’t know how to contact a volunteer | 31,842 | 71% |
+| No, I tried contacting a volunteer but I never heard back | 3,731 | 8% |
+| Yes, someone did a video conference with my classroom | 898 | 2% |
+| Yes, someone visited my classroom in person | 7,168 | 16% |
+
+We had at least 8,000 volunteers participate, mostly in person. (this is from survey responses from 25% of organizers)
+<br/><br/>
+**(from a separate survey to 10,000 participating volunteers)**
+
+**Q: How satisfied were you with your volunteer experience?**
+
+**A: 92% were satisfied**
+
+<img src="/images/2015AR/survey7.png" />
+
+
+
+## Beyond surveys - the changing landscape of CS education
+
+In our 2015 annual report, we recently reported on the [changing landscape of CS education](/about/2015). The data clearly shows that Americans widely support our vision that every student in every school should have the opportunity to learn computer science:
+
+* **90%** of parents want their child’s school to teach computer science
+* **75%** of Americans believe computer science is cool in a way it wasn’t 10 years ago
+* **67%** of parents and **56%** of teachers believe students should be *required* to learn computer science. This demand is highest among parents or teachers of low-income students.
+* **50%** of Americans rank CS as one of the two most important subjects of study after reading and writing (70% also chose math), ahead of other sciences, history, arts, or foreign languages.
+
+<center><font size="1">Sources: surveys [by Gallup (sponsored by Google)](https://www.google.com/edu/resources/computerscience/research/) and [by Horizon media](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html), 2015.</font></center>
+ 
+While it’s impossible to measure how much of the above is due to the Hour of Code campaign, we’re certain that with participation rates numbering in the tens of millions of students, with one out of every 3 schools in the U.S. participating, this campaign has played a role in creating these perceptions.
+
+Also, in the 2 years since the first Hour of Code campaign, the largest cities in the U.S. have embraced computer science, and so have many states, and even entire countries have announced national curriculum plans. One cannot measure exactly how much the Hour of Code campaign has impacted these things, but the anecdotes show that the impact is real.  We have heard from countless state and district level administrators - in NAME STATES AND CITIES - that participation in the Hour of Code and the grassroots support in their community helped recruit support for top-down efforts to embrace computer science at the state and district level.  As one clear example, the 2013 Hour of Code campaign played a pivotal role in Arkansas’ education: [after Asa Hutchinson saw his granddaughter using the Hour of Code tutorials](http://www.arkansasonline.com/news/2015/feb/24/hutchinson-signs-measure-expanding-computer-scienc/), he made computer science education part of his gubernatorial campaign platform, and followed it up with [legislation to require computer science to be taught in every high school](http://www.wired.com/2015/03/arkansas-computer-science/). 
+
+We can’t measure what the K-12 CS landscape would look like without a grassroots campaign mobilizing hundreds of partners, hundreds of thousands of educators, and tens of millions of students. But what’s clear is that the education landscape has shifted significantly, globally, and we are thankful for *everybody* who has played a supporting role.
+
+
+
+
+
+
+==========================
+==========================
+==========================
+==========================
+
+
+
 
 It’s been two and a half years since Code.org hired our first salaried employee. We’ve been humbled to watch the landscape change in K-12 computer science (CS) over that time. This teacher-powered movement has reached hundreds of thousands of classrooms and millions of students. We’ve never been more confident in our ability to realize our vision - that **every student in every school should have the opportunity to learn computer science.**
 
