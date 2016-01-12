@@ -28,8 +28,8 @@ Given the hundreds of global partners and 198,000 organizers who support the Hou
 
 <%= view :three_circles, circles: [
 {img: '/images/2015AR/fit-150/circles1.jpg', text: '"Our students asked to have an hour every week." &mdash; Corinthia Azaniah Carter, Brooklyn, NY'},
-{img: '/images/2015AR/fit-150/circles2.jpg', text: '"I feel that I\'m a part of spreading something big. This is going to make the future." &mdash; Nicholas Gallimore'},
-{img: '/images/2015AR/fit-150/circles3.jpg', text: '"The best 3 days of my 30 year teaching career." &mdash; Sandra Taylor'}] %>
+{img: '/images/2015AR/fit-150/circles3.jpg', text: '"I feel that I\'m a part of spreading something big. This is going to make the future." &mdash; Nicholas Gallimore'},
+{img: '/images/2015AR/fit-150/circles2.jpg', text: '"The best 3 days of my 30 year teaching career." &mdash; Sandra Taylor'}] %>
 
 
 ## The goal: breaking stereotypes and opening doors
