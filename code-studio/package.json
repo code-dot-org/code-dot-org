@@ -26,13 +26,13 @@
     "test": "echo \"Unimplemented.\""
   },
   "devDependencies": {
+    "babelify": "^6.3.0",
     "browserify": "^12.0.1",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
     "node-sass": "^3.4.2",
-    "reactify": "^1.1.1",
     "sass-lint": "^1.4.0",
     "uglify-js": "^2.6.1"
   },
