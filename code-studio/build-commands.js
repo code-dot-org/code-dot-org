@@ -48,8 +48,8 @@ exports.browserify = function (config) {
 
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
-
-  var reactifyStep = '-t reactify';
+  
+  var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
 
   var factorStep = '';
   if (shouldFactor) {
@@ -81,7 +81,7 @@ exports.browserify = function (config) {
 
   return [
     command,
-    reactifyStep,
+    babelifyStep,
     fileInput,
     factorStep,
     commonOutput
