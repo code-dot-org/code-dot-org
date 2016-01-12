@@ -135,9 +135,6 @@
       "return": null
     },
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Here are regular instructions for a level. There is nothing fancy going on here.",
     "is_k1": "false",
