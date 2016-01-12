@@ -44,6 +44,11 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
     @gatekeeper.set('puzzle_rating', value: true)
     assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+
+    @gatekeeper.set('postMilestone', value: false)
+    assert_equal nil, FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
+    @gatekeeper.set('postMilestone', value: true)
+    assert_equal 'normal', FeatureModeManager.get_mode(@gatekeeper, @dcdo, scripts)
   end
 
   def test_normal_mode
@@ -55,6 +60,8 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
       assert @gatekeeper.allows('postMilestone', where: {script_name: script})
       assert @gatekeeper.allows('shareEnabled', where: {script_name: script})
     end
+    assert @gatekeeper.allows('postMilestone')
+    assert @gatekeeper.allows('shareEnabled')
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 360, @dcdo.get('public_max_age', nil)
@@ -69,6 +76,8 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
       refute @gatekeeper.allows('postMilestone', where: {script_name: script})
       assert @gatekeeper.allows('shareEnabled', where: {script_name: script})
     end
+    assert @gatekeeper.allows('postMilestone')
+    assert @gatekeeper.allows('shareEnabled')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 14400, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 28800, @dcdo.get('public_max_age', nil)
@@ -83,7 +92,8 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
       refute @gatekeeper.allows('postMilestone', where: {script_name: script})
       refute @gatekeeper.allows('shareEnabled', where: {script_name: script})
     end
-
+    refute @gatekeeper.allows('postMilestone')
+    refute @gatekeeper.allows('shareEnabled')
     assert_equal 10, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 86400, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 172800, @dcdo.get('public_max_age', nil)
