@@ -179,9 +179,6 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
-  # Hoc feature flags control panel.
-  get '/admin/hoc', :to => 'hoc_features#show', as: 'hoc'
-
   # one-off internal reports
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
@@ -204,6 +201,8 @@ Dashboard::Application.routes.draw do
 
   # internal engineering dashboards
   get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
@@ -211,7 +210,6 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
-
 
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
   get '/stats/students', to: redirect_to_teacher_dashboard
