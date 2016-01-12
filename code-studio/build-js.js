@@ -28,6 +28,7 @@ build_commands.execute([
     srcPath: SRC_PATH,
     buildPath: BUILD_PATH,
     filenames: [
+      'code-studio.js',
       'levelbuilder.js',
       'levelbuilder_dsl.js',
       'levelbuilder_studio.js',
@@ -38,6 +39,11 @@ build_commands.execute([
     shouldMinify: commander.min,
     shouldWatch: commander.watch
   }),
+
+  // For now, build initApp (formerly the 'shared' package) as its own
+  // build step, skipping factor-bundle.  Eventually since this and
+  // code-studio-common can be included on the same page, we may want to try
+  // factoring out common modules to optimize download size.
   build_commands.browserify({
     srcPath: SRC_PATH + 'initApp/',
     buildPath: BUILD_PATH,
@@ -48,7 +54,22 @@ build_commands.execute([
     shouldFactor: false,
     shouldMinify: commander.min,
     shouldWatch: commander.watch
+  }),
+
+  // Build embedVideo.js in its own step (skipping factor-bundle) so that
+  // we don't have to include the large code-studio-common file in the
+  // embedded video page, keeping it fairly lightweight.
+  // (I wonder how much more we could slim it down by removing jQuery!)
+  build_commands.browserify({
+    srcPath: SRC_PATH,
+    buildPath: BUILD_PATH,
+    filenames: [
+      'embedVideo.js'
+    ],
+    commonFile: 'embedVideo',
+    shouldFactor: false,
+    shouldMinify: commander.min,
+    shouldWatch: commander.watch
   })
 ]);
-
-console.log("code-studio js built\n");
+build_commands.logBoxedMessage("code-studio js built");

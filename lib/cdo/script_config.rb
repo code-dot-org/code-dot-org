@@ -11,4 +11,9 @@ class ScriptConfig
   def self.allows_public_caching_for_script(script_name)
     HttpCache.allows_public_caching_for_script(script_name)
   end
+
+  # Returns the names of the scripts whose levels can be publicly cached.
+  def self.cached_scripts
+    HttpCache.cached_scripts
+  end
 end

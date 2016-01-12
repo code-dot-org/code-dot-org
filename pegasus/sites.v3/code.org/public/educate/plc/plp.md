@@ -16,7 +16,7 @@ The ideal Professional Learning Partner is a regional education unit, a non-prof
 Below is a list of program commitments:
 
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
-- Attend our Facilitation Summit, May 20-22, 2016, and our 5-day Summer Professional Learning Experience with teachers from your state (dates vary). 
+- Attend our Facilitation Summit, May 20-22, 2016, and our 5-day Code.org Summer Institute with teachers from your state (dates vary). 
 - Organize and host quality, local PD workshops for Code.org’s district partners implementing Code.org’s high school and middle school programs, with Code.org-accredited facilitators
 - Build, grow and sustain a local community of computer science educators (or join an existing community)
 - Develop independent funding sources for the long-term sustainability of the work (with Code.org's cooperation)

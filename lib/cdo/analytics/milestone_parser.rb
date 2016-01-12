@@ -41,6 +41,7 @@ class MilestoneParser
     @cache = cache
     @s3_client = s3_client
     @s3_resource = Aws::S3::Resource.new(client: s3_client)
+    self.log_debug = true
   end
 
   # Parses all milestone logs in s3://cdo-logs/hosts/**/dashboard/milestone.log*
