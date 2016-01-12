@@ -192,9 +192,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
-    message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
+    message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
-    next
+    raise Parallel::Kill
   end
 
   if $options.browser and browser['browser'] and $options.browser.casecmp(browser['browser']) != 0

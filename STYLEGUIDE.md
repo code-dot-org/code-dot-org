@@ -25,8 +25,10 @@ Default: https://github.com/bbatsov/ruby-style-guide
 
 Fallback: https://github.com/styleguide/ruby
 
+* Use [YARD](http://www.rubydoc.info/gems/yard/file/docs/GettingStarted.md) (jsdoc style @tag annotations) when documenting parameter types and return values.   http://www.rubydoc.info/gems/yard/file/docs/GettingStarted.md
+
 * <a name="ruby-hashes"></a>
-  Perfer Ruby 1.9 hash syntax.
+  Prefer Ruby 1.9 hash syntax.
   <sup>[[link](#ruby-hashes)]</sup>
   ```ruby
   # bad

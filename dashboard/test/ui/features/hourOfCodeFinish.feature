@@ -8,7 +8,8 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   And I rotate to landscape
   Then I wait to see a dialog titled "Puzzle 14 of 14"
   And I close the dialog
-  Then I wait until element "#runButton" is visible
+  And I wait to see "#runButton"
+  And element "#runButton" is visible
   Then I wait until the Minecraft game is loaded
   And I press "runButton"
   Then I wait until element "#rightButton" is visible
