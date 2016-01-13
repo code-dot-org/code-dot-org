@@ -148,5 +148,4 @@ class HttpCache
   def self.allows_public_caching_for_script(script_name)
     CACHED_SCRIPTS_MAP.include?(script_name)
   end
-
 end
