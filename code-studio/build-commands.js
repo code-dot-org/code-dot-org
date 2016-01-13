@@ -46,57 +46,20 @@ exports.browserify = function (config) {
 
   var extension = (shouldMinify ? '.min.js' : '.js');
 
-  // The React library checks the NODE_ENV variable in several places to decide
-  // whether to enable special debugging features.  By setting this environment
-  // variable, envify will do an inline replacement anywhere `process.env.NODE_ENV`
-  // is used (envify is implicitly part of the browserify step, since we depend
-  // on 'react') and then uglify will perform dead code removal that strips all
-  // of those debug paths from our minified output.
-  var customEnvironment = (shouldMinify ? 'NODE_ENV=production' : '');
-
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
-  
-  var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
-
-  // Uglify shrinks our output down as small as possible.
-  // --compress performs lots of optimizations including removal of dead code.
-  // warnings=false disables compressor warnings (which don't indicate actual problems, for us)
-  // --mangle replaces variable names with short representations
-  var uglifyCommand = 'uglifyjs --compress warnings=false --mangle';
 
   var factorStep = '';
   if (shouldFactor) {
-    // We use command substitution to build an output filename based on
-    // the input filename, which factor-bundle automatically binds to $FILE.
-    var factoredOutputFilename = buildPath + '`';
-
-    // The output file ends up at the same path relative to the build directory
-    // as the input file is relative to the src directory:
-    // @see `man realpath`
-    factoredOutputFilename += 'realpath --relative-to ' + srcPath + ' $FILE';
-
-    // And we swap out the input file extension (.js or .jsx) for an output
-    // file extension (.js or .min.js) depending on our configuration.
-    // @see `man sed`
-    factoredOutputFilename += ' | sed -r "s/\.jsx?$/' + extension + '/i"';
-
-    // Finally, we close the command substitution
-    factoredOutputFilename += '`';
-
-    // Use bracket syntax to invoke the factor-bundle plugin with one argument:
-    // A command that accepts each factored output file as it's processed.
-    factorStep = "-p [ factor-bundle -o '" +
-        (shouldMinify ? uglifyCommand : '') +
-        ' > ' + factoredOutputFilename + "' ]";
+    factorStep = "-p [ factor-bundle -o '" + (shouldMinify ? 'uglifyjs ' : '') +
+      '>' + buildPath + "`basename $FILE .js`" + extension + "']";
   }
-  var commonOutput = (shouldMinify ? '| ' + uglifyCommand + ' ' : '') +
+
+  var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
-    customEnvironment,
     command,
-    babelifyStep,
     fileInput,
     factorStep,
     commonOutput
