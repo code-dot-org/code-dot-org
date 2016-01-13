@@ -19,6 +19,7 @@ class FeatureModeController < ApplicationController
     if @pending_mode && @current_mode != @pending_mode
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
+      @hide_feature_grid = true
     # Otherwise show the mode determined from the gatekeeper settings (if any)
     elsif @current_mode
       @mode =  @current_mode
