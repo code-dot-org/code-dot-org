@@ -1788,7 +1788,8 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
- * Add the starting block(s).
+ * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
+ * level will advance as soon as it's loaded.
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
@@ -1796,7 +1797,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
-  if (loadLastAttempt) {
+  if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
   if (config.forceInsertTopBlock) {
