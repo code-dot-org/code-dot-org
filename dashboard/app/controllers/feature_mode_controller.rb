@@ -8,7 +8,7 @@ class FeatureModeController < ApplicationController
   # Max time in seconds for settings updates to take effect.
   MAX_UPDATE_TIME = 30
 
-  PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait 30 seconds for changes to take effect."
+  PLEASE_WAIT_MESSAGE = 'Updating feature mode. Please wait 30 seconds for changes to take effect.'
 
   # Shows the current or pending feature mode. The mode is pending if it was updated so recently
   # that it is not necessarily reflected in the gatekeeper and dcdo settings.
@@ -43,8 +43,8 @@ class FeatureModeController < ApplicationController
   # Returns the pending feature mode, or nil if unset or expired.
   def pending_mode
     if pending_mode_expired?
-       session[:pending_mode_time] = nil
-       session[:pending_mode] = nil
+      session[:pending_mode_time] = nil
+      session[:pending_mode] = nil
     end
     session[:pending_mode]
   end
