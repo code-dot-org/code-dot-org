@@ -26,7 +26,6 @@
     "test": "echo \"Unimplemented.\""
   },
   "devDependencies": {
-    "babelify": "^6.3.0",
     "browserify": "^12.0.1",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
@@ -43,7 +42,6 @@
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",
-    "react": "^0.13.1",
     "video.js": "4.5.2"
   }
 }
