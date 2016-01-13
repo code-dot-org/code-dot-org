@@ -30,6 +30,7 @@ class FeatureModeController < ApplicationController
 
   # Updates the feature mode based on params[:mode].
   def update
+    authorize! :read, :reports
     mode = params[:mode]
     FeatureModeManager.set_mode(mode, Gatekeeper, DCDO, ScriptConfig.cached_scripts)
     set_pending_mode(mode)
