@@ -10,21 +10,6 @@ class ReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
-  def user_stats
-    @user = User.find(params[:user_id])
-    authorize! :read, @user
-
-    #@recent_activity = Activity.where(['user_id = ?', user.id]).order('id desc').includes({level: :game}).limit(2)
-    @recent_levels = UserLevel.find_by_sql(<<SQL)
-select ul.*, sl.position, l.game_id, sl.chapter, sl.script_id, sl.id as script_level_id
-from user_levels ul
-inner join script_levels sl on sl.level_id = ul.level_id
-inner join levels l on l.id = ul.level_id
-where sl.script_id = 1 and ul.user_id = #{@user.id}
-order by ul.updated_at desc limit 2
-SQL
-  end
-
   def header_stats
     if params[:section_id].present?
       @section = Section.find(params[:section_id])
