@@ -211,7 +211,6 @@ Dashboard::Application.routes.draw do
 
   get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
   get '/stats/students', to: redirect_to_teacher_dashboard
-  get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
   get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
