@@ -38,8 +38,9 @@ class FeatureModeController < ApplicationController
     redirect_to(action: 'show')
   end
 
-  # Returns the most recent mode applied during the past MAX_UPDATE_TIME seconds, which
-  # may not yet be reflected in the gatekeeper configuration.
+  private
+
+  # Returns the pending feature mode, or nil if unset or expired.
   def pending_mode
     if pending_mode_expired?
        session[:pending_mode_time] = nil
@@ -53,9 +54,12 @@ class FeatureModeController < ApplicationController
     session[:pending_mode] = mode
   end
 
+  # Returns true if the pending mode in the session should be considered
+  # no longer valid because it has pending for longing than MAX_UPDATE_TIME.
+  # (Someone else might update the feature mode after we start a pending request
+  # so there is no guarantee the mode will eventually equal the pending mode.)
   def pending_mode_expired?
-    false
-    #@expired = !session[:pending_mode_time] ||
-    #     (Time.now.to_i > session[:pending_mode_time] + MAX_UPDATE_TIME)
+    @expired = session[:pending_mode_time].nil? ||
+         (Time.now.to_i > session[:pending_mode_time] + MAX_UPDATE_TIME)
   end
 end
