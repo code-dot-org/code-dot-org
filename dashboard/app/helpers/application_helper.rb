@@ -117,9 +117,9 @@ module ApplicationHelper
   # A view helper that returns a unicode checkmark ✓ or ✗ depending on the value of flag.
   def boolean_checkmark(flag)
     if flag
-      '<span class="enabled_feature">&#x2713;</span>'.html_safe
+      '<span class="true_flag">&#x2713;</span>'.html_safe
     else
-     '<span class="disabled_feature">&#x2717;</span>'.html_safe
+     '<span class="false_flag">&#x2717;</span>'.html_safe
     end
   end
 
