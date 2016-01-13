@@ -15,7 +15,7 @@
   }
 
 
-%h1 HOC tutorial features
+%h1 Tutorial feature mode
 
 %div#hoc_features
 
@@ -34,12 +34,12 @@
                 - when 'normal'
                   %p Enable all features on all tutorials.
                 - when 'scale'
-                  %p Save progress only on sharable or low-scale levels.
+                  %p Save progress only on low-scale or sharable tutorial levels.
                   %p Disable puzzle rating and hints for all tutorials.
                   %p Sampled hoc_activity logging (10%).
                   %p Extend cache lifetimes for HOC pages.
                 - when 'emergency'
-                  %p Same as scale, plus all progress tracking sharing disabled.
+                  %p Same as scale, plus all progress tracking and sharing disabled.
                 - else
                   raise "Unexpected mode #{mode}; view needs to be updated."
       %tr
