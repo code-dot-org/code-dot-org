@@ -149,7 +149,4 @@ class HttpCache
     CACHED_SCRIPTS_MAP.include?(script_name)
   end
 
-  def self.publicly_cached_scripts
-    CACHED_SCRIPTS_MAP.keys
-  end
 end
