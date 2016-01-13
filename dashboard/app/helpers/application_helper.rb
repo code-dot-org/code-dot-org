@@ -119,7 +119,7 @@ module ApplicationHelper
     if flag
       '<span class="true_flag">&#x2713;</span>'.html_safe
     else
-     '<span class="false_flag">&#x2717;</span>'.html_safe
+      '<span class="false_flag">&#x2717;</span>'.html_safe
     end
   end
 
