@@ -110,9 +110,7 @@ GEM
     codemirror-rails (5.5)
       railties (>= 3.0, < 5)
     coderay (1.1.0)
-    coffee-script-source (1.9.1.1)
     colorize (0.7.7)
-    connection_pool (2.2.0)
     cucumber (2.0.2)
       builder (>= 2.1.2)
       cucumber-core (~> 1.2.0)
@@ -368,13 +366,6 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.1)
       json (~> 1.4)
-    react-rails (1.0.0)
-      coffee-script-source (~> 1.8)
-      connection_pool
-      execjs
-      rails (>= 3.1)
-      react-source (~> 0.13)
-    react-source (0.13.1)
     redcarpet (3.2.3)
     redis (3.1.0)
     ref (1.0.5)
@@ -579,7 +570,6 @@ DEPENDENCIES
   rack-mini-profiler
   rack-ssl-enforcer
   rails (~> 4.2.4)
-  react-rails (~> 1.0)
   redcarpet (~> 3.2.3)
   redis (~> 3.1.0)
   rerun (~> 0.10.0)
