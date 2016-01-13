@@ -8,12 +8,12 @@
 # normal:
 #     Enable all features.
 # scale:
-#     Save progress only on sharable levels for HOC tutorials.
+#     Save progress only on sharable or non-hoc levels.
 #     Disable puzzle rating and hints for all tutorials.
 #     Log hoc activity with 10% sampling.
-#     Extend cache lifetimes for HOC pages
+#     Extend cache lifetimes for HOC pages.
 # emergency:
-#     Same as Scale, plus disable sharing for HOC tutorials.
+#     Same as Scale, plus all progress tracking and sharing disabled.
 
 require 'cdo/hip_chat'
 
@@ -25,8 +25,10 @@ class FeatureModeManager
   MODE_SETTINGS_MAP = {
     normal: {
         gatekeeper_general_settings: {
-            puzzle_rating: true,
-            hint_view_request: true
+          puzzle_rating: true,
+          hint_view_request: true,
+          postMilestone: true,
+          shareEnabled: true
         },
         gatekeeper_hoc_tutorial_settings: {
           postMilestone: true,
@@ -40,8 +42,10 @@ class FeatureModeManager
     },
     scale: {
       gatekeeper_general_settings: {
-          puzzle_rating: false,
-          hint_view_request: false
+        puzzle_rating: false,
+        hint_view_request: false,
+        postMilestone: true,
+        shareEnabled: true
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
@@ -55,8 +59,10 @@ class FeatureModeManager
     },
     emergency: {
       gatekeeper_general_settings: {
-          puzzle_rating: false,
-          hint_view_request: false
+        puzzle_rating: false,
+        hint_view_request: false,
+        postMilestone: false,
+        shareEnabled: false
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
@@ -70,6 +76,7 @@ class FeatureModeManager
     }
   }.with_indifferent_access
 
+  # An array of supported feature mode names.
   MODES = MODE_SETTINGS_MAP.keys
 
   # Updates the feature mode to the given mode.
