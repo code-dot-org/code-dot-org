@@ -22,8 +22,8 @@ module.exports = function (callback) {
       lastAttemptLoaded = true;
 
       // Load the locally-cached last attempt (if one exists)
-      setLastAttemptUnlessJigsaw(dashboard.clientState.sourceForLevel(
-          appOptions.scriptName, appOptions.serverLevelId));
+      appOptions.level.lastAttempt = dashboard.clientState.sourceForLevel(
+          appOptions.scriptName, appOptions.serverLevelId);
 
       callback();
     }
@@ -70,10 +70,10 @@ module.exports = function (callback) {
               appOptions.scriptName, appOptions.serverLevelId, timestamp);
           if (cachedProgram !== undefined) {
             // Client version is newer
-            setLastAttemptUnlessJigsaw(cachedProgram);
+            appOptions.level.lastAttempt = cachedProgram;
           } else if (source && source.length) {
             // Sever version is newer
-            setLastAttemptUnlessJigsaw(source);
+            appOptions.level.lastAttempt = source;
 
             // Write down the lastAttempt from server in sessionStorage
             dashboard.clientState.writeSourceForLevel(appOptions.scriptName,
@@ -105,9 +105,3 @@ module.exports = function (callback) {
     loadLastAttemptFromSessionStorage();
   }
 };
-
-function setLastAttemptUnlessJigsaw(source) {
-  if (appOptions.levelGameName !== 'Jigsaw') {
-    appOptions.level.lastAttempt = source;
-  }
-}
