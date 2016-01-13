@@ -114,7 +114,8 @@ When *createRecord()* is finished executing, the callback function is automatica
 - The javascript object properties must match the App Lab table column names. Both are case sensitive.
 - Duplicate records are allowed in a table but will have different id values assigned automatically.
 - *createRecord()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
-- The callback function can be inline, or separately defined in your app and called from createRecord().
+- The callback function can be inline, or separately defined in your app and called from *createRecord()*.
+- Do not put functions inside a loop that contain asynchronous code, like *createRecord()*. The loop will not wait for the callback function to complete.
 - Use with [readRecords()](/applab/docs/readRecords), [deleteRecord()](/applab/docs/deleteRecord), and [updateRecord()](/applab/docs/updateRecord) records to view, delete, and update records in a table.
 
 [/tips]
