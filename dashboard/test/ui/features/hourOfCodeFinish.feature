@@ -3,8 +3,6 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
 Background:
   Given I am on "http://studio.code.org/s/mc/reset"
 
-# no IE9 or 10 due to intermittent test failures
-@no_ie9 @no_ie10
 Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
   Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/14?noautoplay=true&customSlowMotion=0.1"
   And I rotate to landscape
@@ -17,7 +15,8 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   Then I wait until element "#rightButton" is visible
   And I press "rightButton"
   Then I wait to see a congrats dialog with title containing "Keep Playing"
-  And I press "continue-button"
+  And I press "#continue-button" using jQuery
+  And I wait to see element with ID "hoc-certificate-small"
   And I get redirected to "/congrats" via "dashboard"
   And my query params match "\?i\=.*\&s\=bWM\="
   Then I print the HTML contents of element "hoc-certificate-small"
