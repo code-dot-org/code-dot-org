@@ -59,7 +59,11 @@ exports.browserify = function (config) {
   
   var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
 
-  var uglifyCommand = 'uglifyjs -cm';
+  // Uglify shrinks our output down as small as possible.
+  // --compress performs lots of optimizations including removal of dead code.
+  // warnings=false disables compressor warnings (which don't indicate actual problems, for us)
+  // --mangle replaces variable names with short representations
+  var uglifyCommand = 'uglifyjs --compress warnings=false --mangle';
 
   var factorStep = '';
   if (shouldFactor) {
