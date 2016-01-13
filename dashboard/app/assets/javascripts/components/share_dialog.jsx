@@ -3,6 +3,9 @@
 
 window.dashboard = window.dashboard || {};
 
+/**
+ * Share Dialog used by projects
+ */
 window.dashboard.ShareDialog = (function (React) {
   var Dialog = window.dashboard.Dialog;
   var ShareDialogBody = window.dashboard.ShareDialogBody;
@@ -19,7 +22,9 @@ window.dashboard.ShareDialog = (function (React) {
       isAbusive: React.PropTypes.bool.isRequired,
       abuseTos: React.PropTypes.string.isRequired,
       abuseContact: React.PropTypes.string.isRequired,
-      onClickPopup: React.PropTypes.func.isRequired
+      channelId: React.PropTypes.string.isRequired,
+      appType: React.PropTypes.string.isRequired,
+      onClickPopup: React.PropTypes.func.isRequired,
     },
 
     getInitialState: function () {
@@ -49,6 +54,8 @@ window.dashboard.ShareDialog = (function (React) {
             isAbusive={this.props.isAbusive}
             abuseTos={this.props.abuseTos}
             abuseContact={this.props.abuseContact}
+            channelId={this.props.channelId}
+            appType={this.props.appType}
             onClickPopup={this.props.onClickPopup}
             onClickClose={this.close}
             />
