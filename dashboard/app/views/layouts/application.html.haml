@@ -22,6 +22,8 @@
     = render partial: 'layouts/analytics'
     = render partial: 'layouts/javascript_strings'
   %body
+    - unless Rails.env.production?
+      = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
@@ -57,4 +59,4 @@
       = render partial: 'shared/maybe_set_hoc_secret'
 
 
-    = yield :body_scripts
+      = yield :body_scripts
