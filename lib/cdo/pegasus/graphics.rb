@@ -27,7 +27,6 @@ def load_manipulated_image(path, mode, width, height, scale = nil)
     when :fit
       image.resize_to_fit(width, height)
     when :resize
-      height ||= width
       image.resize(width, height)
     else
       nil
