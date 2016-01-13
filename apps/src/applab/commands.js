@@ -1553,11 +1553,11 @@ applabCommands.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleUpdateRecord = function(opts, record) {
+applabCommands.handleUpdateRecord = function(opts, record, success) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onComplete, [record]);
+    Applab.JSInterpreter.queueEvent(opts.onComplete, [record, success]);
   }
 };
 
@@ -1575,11 +1575,11 @@ applabCommands.deleteRecord = function (opts) {
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleDeleteRecord = function(opts) {
+applabCommands.handleDeleteRecord = function(opts, success) {
   // Ensure that this event was requested by the same instance of the interpreter
   // that is currently active before proceeding...
   if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onComplete);
+    Applab.JSInterpreter.queueEvent(opts.onComplete, [success]);
   }
 };
 
