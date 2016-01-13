@@ -1,0 +1,54 @@
+:css
+  #hoc_features input[type=radio] {margin-top: 15px}
+  #hoc_features td {vertical-align: top}
+  #hoc_features h3 {margin: 0px; padding: 0px; font-family: Arial; font-weight: normal}
+  #hoc_features h3.selected {margin: 0px; padding: 0px; font-weight: bold}
+
+  #hoc_features tr.normal:hover {
+    background-color: #f5fff5
+  }
+  #hoc_features tr.scale:hover {
+    background-color: #fffff5
+  }
+  #hoc_features tr.emergency:hover {
+    background-color: #fff5f5
+  }
+
+
+%h1 Tutorial feature mode
+
+%div#hoc_features
+
+  = form_tag(action: 'update') do
+    %table{cellpadding: '4'}
+      - FeatureModeManager::MODES.each do |mode|
+        %tr{class: mode}
+          %td
+            = radio_button_tag 'mode', mode, mode == @mode, {id: mode,
+                onclick: "$('#submit').prop('disabled', false)"}
+          %td
+            %label{for: mode}
+              %h3{class: @mode == mode ? 'selected' : ''}
+                = mode.capitalize
+              - case mode
+                - when 'normal'
+                  %p Enable all features on all tutorials.
+                - when 'scale'
+                  %p Save progress only on low-scale or sharable tutorial levels.
+                  %p Disable puzzle rating and hints for all tutorials.
+                  %p Sampled hoc_activity logging (10%).
+                  %p Extend cache lifetimes for HOC pages.
+                - when 'emergency'
+                  %p Same as scale, plus all progress tracking and sharing disabled.
+                - else
+                  raise "Unexpected mode #{mode}; view needs to be updated."
+      %tr
+        %td
+        %td
+          = submit_tag('Update', :id => 'submit', :disabled => 'true')
+      %tr
+        %td
+        %td
+          %p
+          = link_to "Edit gatekeeper settings", gatekeeper_show_path
+          (advanced)
