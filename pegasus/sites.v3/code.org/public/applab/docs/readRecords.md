@@ -193,7 +193,8 @@ When *readRecords()* is finished executing, the callback function is automatical
 ### Tips
 - The javascript object properties in *term* must match the App Lab table column names. Both are case sensitive.
 - *readRecords()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
-- The callback function can be inline, or separately defined in your app and called from createRecord().
+- The callback function can be inline, or separately defined in your app and called from *readRecords()*.
+- Do not put functions inside a loop that contain asynchronous code, like *readRecords()*. The loop will not wait for the callback function to complete.
 - Use with [createRecord()](/applab/docs/createRecord), [deleteRecord()](/applab/docs/deleteRecord), and [updateRecord()](/applab/docs/updateRecord) records to create, delete, and update records in a table.
 
 [/tips]
