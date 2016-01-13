@@ -10,8 +10,7 @@ class FeatureModeController < ApplicationController
 
   PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for changes to take effect."
 
-  # Shows the current or pending feature mode. The mode is pending if it was updated so recently
-  # that it is not necessarily reflected in the gatekeeper and dcdo settings.
+  # Shows the current or pending feature mode.
   def show
     authorize! :read, :reports
     @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO, ScriptConfig.cached_scripts)
