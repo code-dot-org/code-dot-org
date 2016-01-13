@@ -201,6 +201,8 @@ Dashboard::Application.routes.draw do
 
   # internal engineering dashboards
   get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
