@@ -15,7 +15,6 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
-require 'cdo/build_package'
 
 require 'aws-sdk' # TODO - should we be using the S3.rb in CDO?
 
@@ -439,84 +438,90 @@ BUCKET_NAME = 'cdo-build-package'
 task 'test-websites' => [$websites_test]
 
 # TODO - think about dev scenario (which i dont think ever goes through build.rake)
-# TODO - handle s3 failures somewhere
+# TODO - handle s3 failures somewhere (right now I think these will just raise exceptions)
 
+# Overall Design:
+# We have a set of built assets (code, css, images, etc) that change based off
+# of an input directory in our repository (i.e. code-dot-org/apps).
+# Rather than storing this built assets in our repo, we want to store them on
+# S3 and only rebuild them if necessary.
+# THe key for each package will be the most recent commit hash that touched the
+# input directory. We will store this commit hash in a file alongside the
+# decompressed built assets so that we can know if we're up to date.
+# glossary:
+task 'brent-upload' do
+  commit_hash = commit_hash(code_studio_dir)
+
+  temp_package_path = create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
+
+  upload_package('code-studio', temp_package_path, commit_hash)
+end
+
+task 'brent-download' do
+  commit_hash = commit_hash(code_studio_dir)
+
+  unpack_from_s3('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
+
+  # download_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
+end
+
+# Determine the commit_hash given a directory containing source code
 def commit_hash(source_location)
   RakeUtils.git_latest_commit_hash source_location
 end
 
-def _remote_bucket(package_name, commit_hash)
-  "s3://#{BUCKET_NAME}/#{package_name}/#{commit_hash}"
-end
 
 def s3_key(package_name, commit_hash)
   "#{package_name}/#{commit_hash}.tar.gz"
 end
 
-def log_cmd(cmd)
-  puts cmd
-  result = `#{cmd}`
-  puts result
-  result
+
+# Given a location where we expect to see an decompressed package, determines
+# the hash of that package (or nil if there is not one)
+def built_commit_hash(output_location)
+  filename = "#{output_location}/commit_hash"
+  return nil unless File.exist?(filename)
+  IO.read(filename)
 end
 
-
-# Uploads a package to S3, or if said package already exists, validates that it
-# is identical
-def _upload_package(package_name, commit_hash, package_location)
-  # ls to see if we already have a package
-  result = log_cmd("aws s3 ls #{remote_bucket(package_name, commit_hash)}")
-  package_exists = result.length > 0
-
-  # If the package already exists, that means a different environment already
-  # uploaded it. In that case, we sync with --dryrun so that we can validate
-  # our output is identical
-  puts 'Validating package...' if package_exists
-  result = log_cmd("aws --delete #{'--dryrun' if package_exists} s3 sync #{package_location} #{remote_bucket(package_name, commit_hash)}")
-
-  raise "Shouldnt have any differences" if package_exists && result.length > 0
-end
-
-def _create_or_upload_package(package_name, source_location, package_location)
-  return if get_package(package_name, source_location, package_location)
-
-  raise "Can't create package #{package_name} on production" if rack_env?(:production)
-
-  # do our build
-
-  # upload_package package_name
-end
-
-task 'brent' do
-  commit_hash = commit_hash(code_studio_dir)
-
-  package_path = create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
-  puts package_path
-  upload_package('code-studio', package_path)
-
-  download_package('code-studio', commit_hash, dashboard_dir('public', 'code-studio-package'))
-
-end
-
+# Creates a zipped package of the provided assets folder
+# @return tempfile object of package
 def create_package(assets_location, commit_hash)
-  # TODO - should this be done to some temp location instead?
-  package_path = "#{assets_location}/#{commit_hash}.tar.gz"
+  package = Tempfile.new(commit_hash)
+  puts "Creating #{package.path}"
   Dir.chdir(assets_location) do
-    # create our commit_hash file
-    `echo #{commit_hash} > commit_hash`
-    # remove any existing zips
-    `rm *.tar.gz`
-    # zip everything up
-    `tar -zcf #{package_path} *`
+    # add a commit_hash file whose contents represent the key for this package
+    IO.write('commit_hash', commit_hash)
+    `tar -zcf #{package.path} *`
   end
-  package_path
+  package
 end
 
-def upload_package(package_name, package_path)
-  client = Aws::S3::Client.new
-  key = s3_key(package_name, File.basename(package_path, '.tar.gz'))
+# Downloads a package from S3, and decompresses into target
+def unpack_from_s3(package_name, target_location, commit_hash)
+  output_path = download_package(package_name, commit_hash)
+  decompress_package(output_path, target_location)
+end
 
-  # TODO
+# Unzips package into target location
+def decompress_package(package_path, target_location)
+  puts "Decompressing #{package_path} to #{target_location}"
+  Dir.chdir(target_location) do
+    # Clear out existing package
+    FileUtils.rm_rf Dir.glob("#{target_location}/*")
+    `tar -zxf #{package_path}`
+  end
+end
+
+# Uploads package to S3
+# @param package_name Name of the package, used in the S3 key
+# @param package_path Path to local zipped up package.
+# @param commit_hash Hash used to generate name of package on S3
+def upload_package(package_name, package_path, commit_hash)
+  client = Aws::S3::Client.new
+  key = s3_key(package_name, commit_hash)
+
+  # TODO (this yet unbuilt logic belongs elsewhere)
   # try to get a package
   # if we get one compare to our own and fail if different
   # ^ this step is essentially an assert
@@ -529,30 +534,23 @@ def upload_package(package_name, package_path)
   end
 end
 
-def download_package(package_name, commit_hash, package_location)
+# Downloads package from S3
+# @param packge_name Name of the package, used in the s3 key
+# @param commit_hash
+# @return path to the downloaded package
+def download_package(package_name, commit_hash)
   client = Aws::S3::Client.new
   key = s3_key(package_name, commit_hash)
-  output_file = "#{package_location}/#{commit_hash}.new.tar.gz"
+  output_path = Tempfile.new(commit_hash).path
 
   puts "Downloading: #{key}"
-  puts "Writing to #{output_file}"
-  File.open(output_file, 'w') do |file|
+  puts "Writing to #{output_path}"
+  File.open(output_path, 'w') do |file|
     client.get_object(bucket: BUCKET_NAME, key: key) do |chunk|
       file.write(chunk)
     end
   end
-
-  puts FileUtils.identical?(output_file, "#{package_location}/#{commit_hash}.tar.gz")
-
-  # download from s3 into package_location
-  # result = log_cmd("aws --delete s3 sync #{remote_bucket(package_name, commit_hash)} #{package_location}")
-  # return if result.length == 0
-
-  # if local copy of package matches hash, we're done
-
-  # try to get package from s3, in which case we move it into expected location
-
-  # otherwise we failed, and depending on our environment we need to build or fail
+  output_path
 end
 
 # package is the zip consisting of source + file stating signature
