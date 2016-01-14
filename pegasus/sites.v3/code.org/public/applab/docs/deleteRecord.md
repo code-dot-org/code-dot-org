@@ -49,7 +49,7 @@ var mostRecentID=1;
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     mostRecentID=record.id;
@@ -74,22 +74,22 @@ onEvent("deleteButton", "click", function() {
 
 ____________________________________________________
 
-**Example: Delete New Drivers** Delete a subset of records for 16 year olds only.
 [example]
 
+**Example: Delete New Driver** Delete a 16 year old's record.
+
 ```
-// Delete a subset of records for 16 year olds only.
-// Read a subset of records for 16 year olds only.
+// Delete a 16 year old's record.
 textInput("nameInput", "What is your name?");
 textInput("ageInput", "What is your age?");
 textInput("foodInput", "What is your favorite food?");
 button("submitButton", "Submit");
-button("displayButton", "Display New Drivers Only");
+button("displayButton", "Delete a New Driver");
 
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     console.log("Record created with id:" + record.id);
@@ -100,24 +100,21 @@ onEvent("submitButton", "click", function() {
 onEvent("displayButton", "click", function() {
     var driverAge=16;  
     readRecords("fav_foods", {age:driverAge}, function(records) {
-        if (records.length>0) {
-            for (var i =0; i < records.length; i++) {
-              deleteRecord("mytable", {id:records[i].id}, function(success) {
-                if (success) {
-                  console.log("Record deleted with id:" + records[i].id);
-                }
-                else {
-                  console.log("No record to delete with id:" + records[i].id);
-                }      
-              });
-            }
-        }
-        else {
-              console.log("No records to delete");
-        }      
+      if (records.length>0) {
+        deleteRecord("fav_foods", {id:records[0].id}, function(success) {
+          if (success) {
+            console.log("Record deleted with id:" + records[0].id);
+          }
+          else {
+            console.log("No record to delete with id:" + records[0].id);
+          }
+        });
+      }
+      else {
+        console.log("No records to delete");
+      }      
     });
 });
-
 ```
 
 [/example]
@@ -126,31 +123,45 @@ ____________________________________________________
 
 [example]
 
-**Example: Search and Destroy** Search for matching records and delete them.
+**Example: Search and Destroy** Search for a matching food record and delete it.
 
 ```
-// Search for matching records and delete them.
-textLabel("foodLabel", "What's your favorite food?", "foodInput");
-textInput("foodInput", "");
-button("submit", "Submit");
-onEvent("submit", "click", function() {
-  var response = getText("foodInput");
-  createRecord("food_survey", {food:response}, function() {
-    write("Record created! View data to see the record");
+// Search for a matching food record and delete it.
+textInput("nameInput", "What is your name?");
+textInput("ageInput", "What is your age?");
+textInput("foodInput", "What is your favorite food?");
+button("submitButton", "Submit");
+
+onEvent("submitButton", "click", function() {
+  var favFoodData={};
+  favFoodData.name = getText("nameInput");
+  favFoodData.age = getNumber("ageInput");
+  favFoodData.food = getText("foodInput");
+  createRecord("fav_foods", favFoodData, function(record) {
+    console.log("Record created with id:" + record.id);
+    console.log("Name:" + record.name + " Age:" + record.age + " Food:" + record.food);
   });
 });
 
-textLabel("deleteLabel", "What food do you want to delete?", "deleteInput");
+textLabel("deleteLabel", "What food do you want to delete?");
 textInput("deleteInput", "");
 button("delete", "Delete");
 onEvent("delete", "click", function() {
   var deleteQuery = getText("deleteInput");
-  readRecords("food_survey", {food:deleteQuery}, function(records) {
-    for (var i =0; i < records.length; i++) {
-      deleteRecord("food_survey", {id:records[i].id}, function() {
-        write("Record deleted! Refresh the data to see that the record doesn't exist");
+  readRecords("fav_foods", {food:deleteQuery}, function(records) {
+    if (records.length>0) {
+      deleteRecord("fav_foods", {id:records[0].id}, function(success) {
+        if (success) {
+          console.log("Record deleted with id:" + records[0].id);
+        }
+        else {
+          console.log("No record to delete with id:" + records[0].id);
+        }
       });
     }
+    else {
+      console.log("No records to delete");
+    }      
   });
 });
 
@@ -165,7 +176,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-deleteRecord(table, record, function(){
+deleteRecord(table, record, function(success){
     //callback function code goes here
   });
 ```
@@ -178,7 +189,7 @@ deleteRecord(table, record, function(){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| table | string | Yes | The name of the table from which the records should be searched and read. |
+| table | string | Yes | The name of the table to delete a record from. |
 | record | object | Yes | To identify the record to be deleted, the record needs to be provided in the record object format. Only the id field is mandatory to uniquely identify the record. Examples: {id:recordId}, {id:1}, {id:records[0].id}
 | callback | function | Yes | A function that is asynchronously called when the call to deleteRecord() is finished. A boolean variable *success* is returned as a parameter to the callback function.|
 
@@ -194,7 +205,9 @@ When *deleteRecord()* is finished executing, the callback function is automatica
 [tips]
 
 ### Tips
-- This function has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
+- *deleteRecord()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately
+- The callback function can be inline, or separately defined in your app and called from *deleteRecord()*.
+- Do not put functions inside a loop that contain asynchronous code, like *deleteRecord()*. The loop will not wait for the callback function to complete.
 - Use with [createRecord()](/applab/docs/createRecord), [readRecords()](/applab/docs/readRecords), and [updateRecord()](/applab/docs/updateRecord) records to create, read, and update records in a table.
 
 [/tips]
