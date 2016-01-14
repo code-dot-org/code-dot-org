@@ -209,9 +209,10 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
-  get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
+  get '/stats/usage/:user_id', to: redirect_to_teacher_dashboard
   get '/stats/students', to: redirect_to_teacher_dashboard
   get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
+  get '/stats/:user_id', to: redirect_to_teacher_dashboard
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 

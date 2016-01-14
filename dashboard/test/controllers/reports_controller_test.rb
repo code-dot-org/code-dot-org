@@ -102,43 +102,6 @@ class ReportsControllerTest < ActionController::TestCase
     end
   end
 
-  test "should get usage" do
-    get :usage, :user_id => @not_admin.id
-    assert_response :success
-  end
-
-  test "should not get usage if not signed in" do
-    sign_out @admin
-    get :usage, :user_id => @not_admin.id
-
-    assert_redirected_to_sign_in
-  end
-
-  test "should get usage for yourself if not admin" do
-    sign_in @not_admin
-
-    get :usage, :user_id => @not_admin.id
-
-    assert_response :success
-  end
-
-
-  test "should get usage for students if teacher" do
-    sign_in @teacher
-
-    get :usage, :user_id => @student.id
-
-    assert_response :success
-  end
-
-  test "should not get usage for other users if not admin or teacher" do
-    sign_in create(:user)
-
-    get :usage, :user_id => @not_admin.id
-
-    assert_response :forbidden
-  end
-
   test "should get header_stats" do
     sign_out @admin
 
@@ -195,24 +158,6 @@ class ReportsControllerTest < ActionController::TestCase
   test "should not get prizes if not signed in" do
     sign_out @admin
     get :prizes
-
-    assert_redirected_to_sign_in
-  end
-
-  test "should get level_stats" do
-    get :level_stats, {:level_id => create(:level).id}
-    assert_response :success
-  end
-
-  test "should not get level_stats if not admin" do
-    sign_in @not_admin
-    get :level_stats, {:level_id => create(:level).id}
-    assert_response :forbidden
-  end
-
-  test "should not get level_stats if not signed in" do
-    sign_out @admin
-    get :level_stats, {:level_id => create(:level).id}
 
     assert_redirected_to_sign_in
   end
