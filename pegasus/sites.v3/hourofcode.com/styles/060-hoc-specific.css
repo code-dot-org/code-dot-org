@@ -41,9 +41,11 @@
   float: left;
   padding-top: 0.25em;
   margin-right: 1.5em;
+  text-indent: 0;
+  list-style-type: none;
 }
 #hoc-nav ul li:before {
-  content: initial;   /* Needed to remove the bullet disc. This was set from other CSS. */
+  content: none;      /* Needed to remove the bullet disc. This was set from other CSS. */
 }
 #hoc-nav ul li:last-child {
   margin-right: 0;    /* No margin needed for the last item */
@@ -113,6 +115,15 @@
 label.has-error {
   color: #b94a48;
 }
+
+/** Keeps content within the viewport size (especially on smaller screesn) */
+iframe {
+  max-width: 100%;
+}
+.wide-index-content img {
+  max-width: 100%;
+}
+
 @media screen and (min-width: 992px) {
   #signupform h2 {
     margin-top: 0;
@@ -137,6 +148,7 @@ label.has-error {
     position: absolute;
     top: 4em;
     left: -1em;
+    background-color: #000;   /* Needed as a fallback colour for IE8 */
     background-color: rgba(0, 178, 192, .9);
     z-index: 99;
   }
@@ -150,6 +162,7 @@ label.has-error {
     transform: translate(0%, -100%);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
+    border-bottom: 7px solid #000;   /* Needed as a fallback colour for IE8 */
     border-bottom: 7px solid rgba(0, 178, 192, .9);
   }
   #hoc-nav ul li {
