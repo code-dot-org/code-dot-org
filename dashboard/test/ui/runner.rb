@@ -94,6 +94,7 @@ opt_parser = OptionParser.new do |opts|
 end
 
 opt_parser.parse!(ARGV)
+passed_features = ARGV + ($options.feature || [])
 
 $browsers = JSON.load(open("browsers.json"))
 
@@ -175,8 +176,9 @@ elsif Rails.env.test?
   $options.dashboard_db_access = true if $options.dashboard_domain =~ /test/
 end
 
-features = $options.feature || Dir.glob('features/**/*.feature')
-browser_features = $browsers.product features
+all_features = Dir.glob('features/**/*.feature')
+features_to_run = passed_features.empty? ? all_features : passed_features
+browser_features = $browsers.product features_to_run
 
 test_type = $options.run_eyes_tests ? 'eyes tests' : 'UI tests'
 HipChat.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} in #{$options.parallel_limit} threads</b>..."
