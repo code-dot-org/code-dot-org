@@ -144,6 +144,35 @@ class GatekeeperBase
     end
     gatekeeper
   end
+
+  # Returns a set of all of the distinct feature names.
+  def feature_names
+    Set.new.tap do |result|
+      @datastore_cache.all.each do |feature, rules|
+        result << feature
+      end
+    end
+  end
+
+  # Returns a set of all of the script names used in rule conditions.
+  def script_names
+    property_values('script_name')
+  end
+
+  # Returns a set of all of the distinct values used in where conditions for
+  # the property named `condition_property`.
+  def property_values(condition_property)
+    Set.new.tap do |result|
+      @datastore_cache.all.each do |feature, rules|
+        rules.each do |conditions, value|
+          JSON.load(conditions).each do |property, value|
+            result << value if property == condition_property
+          end
+        end
+      end
+    end
+  end
+
   # Converts the current config state to a yaml string
   # @returns [String]
   def to_yaml

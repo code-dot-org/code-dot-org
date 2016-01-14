@@ -746,6 +746,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  test "Milestone with milestone posts disabled returns 503 status" do
+    Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
+    post :milestone, @milestone_params
+    assert_response 503
+  end
+
   test "anonymous milestone starting with empty session saves progress in section" do
     sign_out @user
 

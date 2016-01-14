@@ -19,7 +19,7 @@ Category: Math
 
 [short_description]
 
-Takes the absolute value of x.
+Returns the absolute value of x.
 
 [/short_description]
 
