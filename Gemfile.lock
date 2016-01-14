@@ -177,6 +177,12 @@ GEM
       oauth2 (>= 0.5.0)
     haml (4.0.6)
       tilt
+    haml-rails (0.9.0)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 4.0.6, < 5.0)
+      html2haml (>= 1.0.1)
+      railties (>= 4.0.1)
     haml_lint (0.15.0)
       haml (~> 4.0)
       rubocop (>= 0.25.0)
@@ -191,6 +197,11 @@ GEM
     hitimes (1.2.2)
     honeybadger (1.16.7)
       json
+    html2haml (2.0.0)
+      erubis (~> 2.7.0)
+      haml (~> 4.0.0)
+      nokogiri (~> 1.6.0)
+      ruby_parser (~> 3.5)
     httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -390,6 +401,8 @@ GEM
       ruby-progressbar (~> 1.4)
     ruby-prof (0.14.2)
     ruby-progressbar (1.7.5)
+    ruby_parser (3.7.0)
+      sexp_processor (~> 4.1)
     rubyzip (1.1.7)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -408,6 +421,7 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
     sequel (4.10.0)
+    sexp_processor (4.6.0)
     shotgun (0.9)
       rack (>= 1.0)
     signature (0.1.8)
@@ -521,6 +535,7 @@ DEPENDENCIES
   google-api-client
   google_drive (~> 1.0.0)
   haml
+  haml-rails
   haml_lint
   heroku_rails_deflate
   highline (~> 1.6.21)
