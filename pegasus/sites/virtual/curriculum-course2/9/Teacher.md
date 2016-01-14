@@ -172,7 +172,7 @@ You can choose to do these as a class, or have the students discuss with an elbo
 
 ## Assessment (10 min)
 
-### 7) [Relay Programming Assessment](Assessment9-RelayProgramming.pdf): Debugging <br/><br/>
+###  <a name="Assessment"></a>7) [Relay Programming Assessment](Assessment9-RelayProgramming.pdf): Debugging <br/><br/>
 
 
 ## Extended Learning 

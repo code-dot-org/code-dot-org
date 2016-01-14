@@ -55,15 +55,22 @@
       </xml>
     </toolbox_blocks>
     <required_blocks>
+      <xml/>
+    </required_blocks>
+    <recommended_blocks>
       <xml>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
         <block type="maze_moveForward"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Maze>

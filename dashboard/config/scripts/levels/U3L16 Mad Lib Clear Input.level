@@ -135,7 +135,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Clear the user's previous text when the Play Again button is clicked (Click to see full instructions) ",
-    "markdown_instructions": "# Play It Again and Again!\r\n\r\nWhen the user clicks the \"Play again\" button, the first screen should reset and not show the user's previous text.\r\n\r\n# Do This:\r\n- When the \"Play again\" button is clicked, __clear the text from each text input__ on Screen 1.\r\n- __Free play:__ Add images, or more How-to steps for your Mad Lib, and invite others to play!\r\n\r\n<img src=\"https://images.code.org/fa2a0542e544b64c2d7543f86942e6f9-image-1448405873409.gif\" style=\"width:200px\">\r\n\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nTry setting the text to the empty string: `\"\"`.\r\n</details>",
+    "markdown_instructions": "# Play It Again and Again!\r\n\r\nWhen the user clicks the \"Play again\" button, the first screen should reset and not show the user's previous text.\r\n\r\n# Do This:\r\n- When the \"Play again\" button is clicked, __clear the text from each text input__ on Screen 1.\r\n- __Free play:__ Add images, or more How-to steps for your Mad Libs, and invite others to play!\r\n\r\n<img src=\"https://images.code.org/a49fe3eba4d2d2fb03e45d15aad53dbf-image-1450143105779.16.14 Mad Libs play again button.gif\" style=\"width:200px\">\r\n\r\n\r\n<details>\r\n<summary>**Hint**</summary>\r\nTry setting the text to the empty string: `\"\"`.\r\n</details>\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -6,24 +6,16 @@ Each month, Code.org is pleased to host a free, online webinar for K-5 teachers 
 
 ## When do the monthly meetings occur?
 
-CS Fundamentals Monthly Meetings take place on the third Tuesday of every month at 7:00 pm Central Time (GMT-5:00). Below is a list of all the monthly meetings scheduled for the 2015-16 school year.
+Below is a list of all the monthly meetings scheduled for the 2015-16 school year.
 
-|Monthly Meeting | Date & Time | Registration Link|
+|Monthly Meeting | Date & Time | Recording Link|
 |------------ | ------------- | ------------|
 |[September](https://www.eventbrite.com/e/k-5-monthly-meeting-september-tickets-17857398961) | September 15, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>View Recording</button>](https://youtu.be/ui7jFl_hZjU)|
 |[October](https://www.eventbrite.com/e/k-5-monthly-meeting-october-tickets-17857408991) | October 20, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>View Recording</button>](https://youtu.be/t4jWPr9RzM0)|
-|[November](https://www.eventbrite.com/e/k-5-monthly-meeting-november-tickets-17857410997) | November 17, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-november-tickets-17857410997)|
-|[December](https://www.eventbrite.com/e/k-5-monthly-meeting-december-tickets-17857414006) | December 15, 2015 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-december-tickets-17857414006)|
-|[January](https://www.eventbrite.com/e/k-5-monthly-meeting-january-tickets-17857416012) | January 19, 2016 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-january-tickets-17857416012)|
-|[February](https://www.eventbrite.com/e/k-5-monthly-meeting-february-tickets-17857420024) | February 16, 2016 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-february-tickets-17857420024)|
-|[March](https://www.eventbrite.com/e/k-5-monthly-meeting-march-tickets-17857427045) | March 15, 2016 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-march-tickets-17857427045)|
-|[April](https://www.eventbrite.com/e/k-5-monthly-meeting-april-tickets-17857522330) | April 19, 2016 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-april-tickets-17857522330)|
-|[May](https://www.eventbrite.com/e/k-5-monthly-meeting-may-tickets-17857528348) | May 17, 2016 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/ecs-monthly-meeting-may-tickets-17857080007)|
-|[June](https://www.eventbrite.com/e/k-5-monthly-meeting-june-tickets-17857534366) | June 21, 2016 @ [7:00 pm Central Time](http://www.timeanddate.com/worldclock/converter.html)  | [<button>Register</button>](https://www.eventbrite.com/e/k-5-monthly-meeting-june-tickets-17857534366)|
 
 <br />
 
-[<button>View Full Schedule of Live Events</button>](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577)
+[<button>View Full Schedule of Live Events</button>](/educate/events)
 
 ## What can I expect during a monthly meeting?
 

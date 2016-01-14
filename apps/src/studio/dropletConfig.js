@@ -73,6 +73,7 @@ module.exports.blocks = [
   {func: 'setSpritePosition', parent: api, category: '', params: ["0", "7"], noAutocomplete: true },
   {func: 'setSpriteSpeed', parent: api, category: '', params: ["0", "8"], noAutocomplete: true },
   {func: 'setSpriteEmotion', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },
+  {func: 'setSpriteSize', parent: api, category: '', params: ["0", "1.0"], noAutocomplete: true },
   {func: 'throwProjectile', parent: api, category: '', params: ["0", "1", '"blue_fireball"'], noAutocomplete: true },
   {func: 'vanish', parent: api, category: '', params: ["0"], noAutocomplete: true },
   {func: 'move', parent: api, category: '', params: ["0", "1"], noAutocomplete: true },

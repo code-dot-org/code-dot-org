@@ -718,7 +718,7 @@ Blockly.Blocks.procedures_defnoreturn = {shouldHideIfInMainBlockSpace:function()
   this.appendStatementInput("STACK").appendTitle(Blockly.Msg.PROCEDURES_DEFNORETURN_DO);
   a && this.setMutator(new Blockly.Mutator(["procedures_mutatorarg"]));
   this.setTooltip(Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP);
-  this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
+  this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !this.blockSpace.isReadOnly());
   this.parameterNames_ = []
 }, updateParams_:function() {
   for(var a = !1, b = {}, c = 0;c < this.parameterNames_.length;c++) {
@@ -824,7 +824,7 @@ Blockly.Blocks.procedures_defreturn = {shouldHideIfInMainBlockSpace:function() {
   this.appendValueInput("RETURN").setAlign(Blockly.ALIGN_RIGHT).appendTitle(Blockly.Msg.PROCEDURES_DEFRETURN_RETURN);
   this.setMutator(new Blockly.Mutator(["procedures_mutatorarg"]));
   this.setTooltip(Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP);
-  this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !Blockly.readOnly);
+  this.setFramed(this.blockSpace === Blockly.mainBlockSpace && !this.blockSpace.isReadOnly());
   this.parameterNames_ = []
 }, updateParams_:Blockly.Blocks.procedures_defnoreturn.updateParams_, updateCallerParams_:Blockly.Blocks.procedures_defnoreturn.updateCallerParams_, updateParamsFromArrays:Blockly.Blocks.procedures_defnoreturn.updateParamsFromArrays, mutationToDom:Blockly.Blocks.procedures_defnoreturn.mutationToDom, domToMutation:Blockly.Blocks.procedures_defnoreturn.domToMutation, decompose:Blockly.Blocks.procedures_defnoreturn.decompose, compose:Blockly.Blocks.procedures_defnoreturn.compose, dispose:Blockly.Blocks.procedures_defnoreturn.dispose, 
 getProcedureInfo:function() {

@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Show Contact 3\r\n\r\n# Do This",
+    "markdown_instructions": "# Show Contact Image\r\n\r\nThe last piece of information to display for each contact is their image, which should be saved in the `imageURL` property of each contact.\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n* The main image on the \"showContactsScreen\" has the ID \"contactImage\"\r\n* **Add code** to the `showCurrentContact` function that sets the URL of \"contactImage\" to the `imageURL` property of the contact being displayed. You can use the `setImageURL` command.\r\n\r\n![](https://images.code.org/a606d057df3e5c34fc2908d598c3a9ff-image-1449526996613.23.06 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,9 +167,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": [
-
-    ]
+    "instructions": "Display the image information for each contact. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

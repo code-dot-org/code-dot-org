@@ -40,7 +40,7 @@
         .courseblock-span4.heading
           %h3= t('upsell.20-hour.title')
           .smalltext= t('upsell.20-hour.body_short')
-        - if current_user
+        - if current_user && showState
           .audiencebar.smalltext.audience= audience
         - else
           .bottombar.smalltext.audience= audience
