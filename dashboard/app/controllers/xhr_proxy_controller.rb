@@ -14,13 +14,13 @@ require 'set'
 class XhrProxyController < ApplicationController
   include ProxyHelper
 
-  ALLOWED_CONTENT_TYPES = Set.new(['application/javascript', 'text/html'])
+  ALLOWED_CONTENT_TYPES = Set.new(['application/json'])
 
   # How long the content is allowed to be cached
   EXPIRY_TIME = 1.minute
 
   # Return the proxied api at the given URL.
   def get
-    render_proxied_url(params[:u], ALLOWED_CONTENT_TYPES, EXPIRY_TIME)
+    render_proxied_url(params[:u], ALLOWED_CONTENT_TYPES, EXPIRY_TIME, false)
   end
 end
