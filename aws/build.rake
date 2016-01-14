@@ -465,6 +465,13 @@ task 'brent-download' do
   # download_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
 end
 
+task 'brent-ensure' do
+  commit_hash = commit_hash(code_studio_dir)
+
+  ensure_updated_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
+end
+
+
 # Determine the commit_hash given a directory containing source code
 def commit_hash(source_location)
   RakeUtils.git_latest_commit_hash source_location
@@ -475,6 +482,14 @@ def s3_key(package_name, commit_hash)
   "#{package_name}/#{commit_hash}.tar.gz"
 end
 
+def ensure_updated_package(package_name, target_location, commit_hash)
+  if commit_hash == built_commit_hash(target_location)
+    puts "Package is current: #{commit_hash}"
+    return
+  end
+
+  unpack_from_s3(package_name, target_location, commit_hash)
+end
 
 # Given a location where we expect to see an decompressed package, determines
 # the hash of that package (or nil if there is not one)
