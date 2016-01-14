@@ -520,9 +520,9 @@ cs:
         gumball_intro: 'Gumballova Hodina kódu - úvod'
         gumball_events: 'Gumballova Hodina kódu - události'
         gumball_repeat: 'Gumballova Hodina kódu - Opakovací příkazy'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Dobá ledová hodinového kódu - Instrukce'
+        iceage_events: 'Doba ledová Hodinového kódu - události'
+        iceage_repeat: 'Doba ledová hodinového kódu - Opakovaní příkazů'
     callout:
       text:
         drag_blocks: 'Přetáhni blok "posunout vpřed" pod ten druhý blok'

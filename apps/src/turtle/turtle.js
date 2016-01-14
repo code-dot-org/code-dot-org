@@ -1290,6 +1290,7 @@ Artist.prototype.onReportComplete = function(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
+  this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
 };
 
@@ -1326,12 +1327,9 @@ Artist.prototype.checkAnswer = function() {
 
   var level = this.level;
 
-  // Allow some number of pixels to be off, but be stricter
-  // for certain levels.
-  var permittedErrors = level.permittedErrors;
-  if (permittedErrors === undefined) {
-    permittedErrors = 150;
-  }
+  // Optionally allow some number of pixels to be off, default to
+  // pixel-perfect strictness
+  var permittedErrors = level.permittedErrors || 0;
 
   // Test whether the current level is a free play level, or the level has
   // been completed

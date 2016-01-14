@@ -27,7 +27,7 @@
           Flappy non blockly: Flappy non blockly
           title: קורס 1
           Artist 2: אמן 2
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -130,7 +130,7 @@
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Bee: Debugging': 'Bee: Debugging'
-          Maze2: Maze2
+          Maze2: מבוך2
           Artist2: אמן 2
           'Artist: Functions2': 'Artist: Functions2'
           'Bee: Functions2': 'Bee: Functions2'
@@ -145,9 +145,9 @@
           description_audience: גילאי 8-18
           description_short: קורס 3 הינו המשך לקורס 2.
         playlab:
-          title: Play Lab
+          title: מעבדת משחקים
           description: ליצור סיפור או משחק עם Play Lab!
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           description_short: ליצור סיפור או משחק עם Play Lab!
         artist:
           title: אמן
@@ -156,7 +156,7 @@
           description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
         hourofcode:
           Maze: מבוך
-          title: שעה של קוד
+          title: מבוך קלאסי
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
             זומבים וסקראט מעידן הקרח!
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
@@ -275,7 +275,7 @@
           title: Play Lab
           description_short: Create a story or make a game with Play Lab!
           description: Create a story or make a game with Play Lab!
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           Infinity: אינסוף
         algebrademo:
           title: Algebra Demo
@@ -386,7 +386,7 @@
           The Maze: המבוך
           Applab: Applab
           The Artist: האמן
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
@@ -414,10 +414,10 @@
           description_short: Step tutorial
           Step: צעד
         Hour of Code:
-          title: Hour of Code 2013
+          title: שעה של קוד 2013
           description: ''
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: שעה של קוד 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -741,6 +741,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1280,7 +1281,7 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Graph Paper Programming: תכנות לנייר משבצות
@@ -1365,6 +1366,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1492,6 +1494,21 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

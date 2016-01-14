@@ -159,6 +159,6 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "no":function(d){return "No"},
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
 "reinfFeedbackMsg":function(d){return "Можете да го притиснете \"Обиди се повторно\" копчето за да се врати во игра на својата игра."},
-"share":function(d){return "Share"},
+"share":function(d){return "Сподели"},
 "shareGame":function(d){return "Споделија твојата игра:"},
 "yes":function(d){return "Yes"}};

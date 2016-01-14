@@ -205,7 +205,7 @@ de:
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, Ich bin Makinde! Lernen wir was über den "solange" Baustein. '
+        text: 'Hi, Ich bin Makinde! Ich zeige euch etwas über den "solange"-Baustein '
       2:
         image: notes/stage9_6.jpg
         text: 'Der "solange"-Baustein wird alles, was du hereintust, ausführen, SOLANGE die Anweisung darüber WAHR ist.'
@@ -516,10 +516,10 @@ de:
         text: 'Ich heiße Jeremiah. Hi! Ich bin 7 Jahre alt. Ich liebe es mit dem Computer meiner Mama zu spielen, aber erst, wenn sie es mir erlaubt. "Mama, kann ich an den Computer?" - "Na, klar, Schatz!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 'Ich liebe den Computer meiner Mutter, weil ich damit ins Internet gehen kann. Das Internet ist ein bisschen wie Dein Stadtteil: Du kannst coole Orte besuchen, mit Familie und Freunden plaudern und jede Menge neue Sachen lernen.'
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: 'Gestern habe ich den Zoo in der Nähe meines Hauses besucht. Ich habe ein Baby-Zebra gesehen. Ich habe ein Foto gemacht und dann die Farben der Streifen geändert, einen Hut hinzugefügt. Das Foto kam in meine Sammlung verrückter Tiere. Prima! Später habe ich dann einen weit entfernten Ort besucht: Kenia. Das ist ein Land in Afrika. Mit jeder Menge Zebras.'
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
@@ -1683,7 +1683,7 @@ de:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

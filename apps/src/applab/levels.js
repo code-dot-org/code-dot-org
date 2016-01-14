@@ -102,6 +102,7 @@ levels.custom = {
     "updateRecord": null,
     "deleteRecord": null,
     "getUserId": null,
+    "drawChart": null,
     "drawChartFromRecords": null,
 
     // Turtle

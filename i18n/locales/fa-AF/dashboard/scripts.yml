@@ -146,7 +146,7 @@ fa-AF:
           description_short: با نقاش چند عکس و طرح باحال بکش!
         hourofcode:
           Maze: هزارتو
-          title: Classic Maze
+          title: هزارتوی کلاسیک
           description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
         frozen:
@@ -182,10 +182,10 @@ fa-AF:
           Maze and Bee: هزارتو و زنبور عسل
           Artist Binary: دودویی هنرمند
           description_audience: سنین 10 به بالا (پس از دوره 3)
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - Variables: 'چالش های فوق العاده - متغیر'
+          Super Challenge - For Loops: 'چالش های فوق العاده - به صورت حلقه'
+          Super Challenge - Functions and Parameters: 'چالش فوق العاده - توابع و پارامترها'
+          Extreme Challenge - Comprehensive: 'چالش شدید - جامع'
         Course4pre:
           title: پیش نیاز دوره 4
           description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2 و 3 را نگذرانده اند.
@@ -246,9 +246,9 @@ fa-AF:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: آزمایشگاه بازی بی نهایت دیزنی
+          description_short: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
+          description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
           Play Lab: آزمایشگاه بازی
           Infinity: بی نهایت
         algebrademo:
@@ -354,7 +354,7 @@ fa-AF:
           Applab: Applab
           The Artist: هنرمند
           Play Lab: آزمایشگاه بازی
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: بازی آزمایشی 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
           title: رویدادها
@@ -367,7 +367,7 @@ fa-AF:
         flappy:
           title: کدنویسی Flappy
           description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: نوشتن بازی Flappy خود را در کمتر از 10 دقیقه!
           Flappy Code: کدنویسی Flappy
         jigsaw:
           title: جورچین
@@ -381,7 +381,7 @@ fa-AF:
           Step: مرحله
         Hour of Code:
           title: ساعت کد نویسی سال 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
           Hour of Code 2013: ساعت کد نویسی سال 2013
         Code Studio Puzzle Challenge:
@@ -680,6 +680,7 @@ fa-AF:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1234,6 +1235,7 @@ fa-AF:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,21 @@ fa-AF:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1403,10 +1420,10 @@ fa-AF:
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
         iceage:
-          title: Ice Age Play Lab
+          title: آزمایشگاه بازی عصر یخبندان
           description_short: Create a story or make a game with Ice Age Play Lab!
           description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          Ice Age Play Lab: آزمایشگاه بازی عصر یخبندان
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1457,10 +1474,10 @@ fa-AF:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
+          title: آزمایشگاه بازی Gumball
           description_short: Create a story or make a game with Gumball Play Lab!
           description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          Gumball Play Lab: آزمایشگاه بازی Gumball
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -1472,13 +1489,13 @@ fa-AF:
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           Hour of Code 2015: ساعت کدنویسی 2015
         minecraft:
-          title: Minecraft
+          title: ماینکرفت
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
+          description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           Hour of Code 2015: ساعت کدنویسی 2015
         CSPPD3-Unit3-pt2:

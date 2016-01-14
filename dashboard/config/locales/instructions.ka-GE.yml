@@ -1268,17 +1268,15 @@
       Course 4 Artist Binary Free Play_instruction: 'თავისუფალი თამაში: დახატეთ რაც
         გსურთ, ორობითის გამოყენებით!'
       Course 4 Artist Binary pre1_instruction: "ბინარულობა არის ინფორმაციის მხოლოდ
-        ორი ვარიანტის წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს
+        ორი ვარიანტით წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს
         \"გამორთულია\" (წარმოდგენილია რიცხვით 0) და \"ჩართულია\" (წარმოდგენილია რიცხვით
         1).\r\n\r\nმოცემული გაქვთ პიქსელების ბადე და გარკვეული პიქსელების ჩართვით
-        შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს პირველ რიგში ბინარულად
-        დაახატინოთ \"01010101\"?"
+        შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს ბინარულად დაახატინოთ \"01010101\"?"
       Course 4 Artist Binary ryan_instruction: "ბინარულობა არის ინფორმაციის მხოლოდ
-        ორი ვარიანტის წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს
+        ორი ვარიანტით წარდგენის მეთოდი. ამ მაგალითში ჩვენ გამოვიყენებთ ვარიანტებს
         \"გამორთულია\" (წარმოდგენილია რიცხვით 0) და \"ჩართულია\" (წარმოდგენილია რიცხვით
         1).\r\n\r\nმოცემული გაქვთ პიქსელების ბადე და გარკვეული პიქსელების ჩართვით
-        შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს პირველ რიგში ბინარულად
-        დაახატინოთ \"01010101\"?"
+        შეგიძლიათ რაღაც დიზაინის შექმნა. შეგიძლიათ მხატვარს ბინარულად დაახატინოთ \"01010101\"?"
       Course 4 Artist For  Functions 10_instruction: ცოტა გავართულოთ, შეგიძლიათ დახატოთ
         ვარსკვლავის ფორმა "დახატე კვადრატი" ფუნქციით? წარმატებები!
       Course 4 Artist For  Functions 11_instruction: ცოტა გავართულოთ, შეგიძლიათ დახატოთ
@@ -1357,17 +1355,17 @@
       Course 4 Artist Functions 12_instruction: გაუშვით ციკლში კვადრატის ფუნქცია და
         დახატეთ ხაზი
       Course 4 Artist Functions 13.1_instruction: "ახლა მოდით შევქმნათ ფუნქცია სახელად
-        \"ახტი ზედა მარჯვენა კუთხეში\", რომელიც მხატვარს გადაიყვანს თქვენს მიერ ახლახან
-        დახატული ოქტაგონის ზედა მარჯვენა კუთხეში, რომ დავასრულოთ შაბლონი.\r\n\r \nმინიშნება:
-        იმისთვის, რათა ზედა მარჯვენა კუთხეში მოხვდეთ, სცადეთ ისე ახტომა, რომ მხოლოდ
-        ოქტაგონის 3/8-ს მისწვდეთ."
+        \"ზედა მარჯვენა კუთხეში ახტომა\", რომელიც მხატვარს გადაიყვანს თქვენს მიერ
+        ახლახან დახატული ოქტაგონის ზედა მარჯვენა კუთხეში და ჩვენ შევძლებთ, დავასრულოთ
+        ეს ფიგურა.\r\n\r \nმინიშნება: იმისთვის, რომ ზედა მარჯვენა კუთხეში მოხვდეთ,
+        სცადეთ ისე ახტომა, რომ მხოლოდ ოქტაგონის 3/8-ს მისწვდეთ."
       Course 4 Artist Functions 13_instruction: ნახეთ, ახალი ფუნქცია გვაქვს - "დახატე
         კვადრატების ხაზი". შეგიძლიათ ნახოთ ფუნქციის ბლოკი და გამოიკვლიოთ, თუ როგორ
         ავაგეთ ის. დაკლიკეთ "გაშვებას", როცა მზად იქნებით შემდეგი თავსატეხისთვის.
-      Course 4 Artist Functions 14.1_instruction: |
-        Now, let's make a function called
-        "jump to upper right" that moves the artist to the top-right of the octagon
-        that you just drew so we can finish this pattern.
+      Course 4 Artist Functions 14.1_instruction: ახლა შევქმნათ ფუნქცია, რომელსაც
+        ჰქვია "ზედა მარჯვენაში კუთხეში ახტომა" რომელიც მხატვარს თქვენ მიერ დახატული
+        ოქტაგონის ზედა მარჯვენა კუთხეში გადაიყვანს და ჩვენ შევძლებთ დავასრულოთ ეს
+        ფიგურა.
       Course 4 Artist Functions 14_instruction: მშვენივრად მიდიხართ! გამოვიყენოთ ახალი
         "დახატე კვადრატების ხაზი" ფუნქცია კვადრატული ფორმის დასახატად. გახსვოდეთ,
         თითოეული კვადრატის სიგრძეა 40 პიქსელი.
@@ -1469,7 +1467,7 @@
         გვექნება "წინ გადაადგილება". ამ ფიგურისთვის ცვლადს "სიგრძე" მიანიჭეთ 75.
       Course 4 Artist Vars 13_instruction: "როცა ფიგურას ბევრი გვერდი აქვს, ყოველი\nგვერდი
         უფრო მოკლე უნდა იყოს, თუ გვინდა, რომ მთელი ფიგურა დაეტიოს ეკრანზე.\n\r\nშევქმნათ
-        ამ მშვენიერი ფიგურის ალგორითმი, მაგრამ ამჯერად \"სიგრის\" ცვლადის ხელით ჩასწორების
+        ამ მშვენიერი ფიგურის ალგორითმი, მაგრამ ამჯერად \"სიგრძის\" ცვლადის ხელით ჩასწორების
         მაგივრად გამოვიყენოთ მათემატიკური ბლოკი ცვალიდით \"გვერდები\" - ასე ფიგურა
         ნამდვილად ჩაეტევა სწორად. ყოველი მრავალკუთხედის პერიმეტრია 300 პიქსელი.\r\nგინდათ
         მინიშნებები? დააჭირეთ აქ."
@@ -1573,10 +1571,11 @@
         გამოიყენოთ რომელიმე პარამეტრი, რომ იგივე ფუნქციამ ორივე მხარეს მყოფ ყვავილებზე
         იმუშაოს? ფუნქციას დავამატე პარამეტრი სახელად "მიმართულება". თუ "მიმართულება"
         პარამეტრი უდრის 0-ს, შევბრუნდები მარცხნივ, თუ უდრის 1-ს - მარჯვნივ.
-      Course 4 Bee Params 3_instruction: ახლა ორივე მხარეს ყვავილებია! ფუნქციას დავამატე
-        პარამეტრი სახელად "მიმართულება". გამოიყენეთ "მარცხენა" და "მარჯვენა" ცვლადები,
-        რათა აკონტროლოთ მიმართულება. შეავსეთ დანარჩენი ფუნქციის განმარტება და დააჭირეთ
-        "შენახვა და დახურვას"
+      Course 4 Bee Params 3_instruction: 'ახლა ორივე მხარეს ყვავილებია! ჩვენ დავამატეთ
+        ცვლადები სახელად "მარცხნივ" და "მარჯვნივ" და პარამეტრი სახელად "მიმართულება"
+        ბლოკს "მოვკრიბოთ 3 ნექტარი". შეცვალეთ "მოვკრიბოთ 3 ნექტარი" ისე, რომ ფუტკარი
+        სწორი მიმართულებით მოტრიალდეს, როცა ფუნქციას მიეწოდება "მარცხნივ" ან "მარჯვნივ"
+        ცვლადი.  '
       Course 4 Bee Params 4 (copy 1)_instruction: სცადეთ გამოიყენოთ თქვენი ახალი ფუნქცია,
         რათა შეაგროვოთ ყველა ყვავილი. დაიმახსოვრეთ, 0 = მარცხნივ და 1 = მარჯვნივ.
       Course 4 Bee Params 4 - Two WhenRun_instruction: სცადეთ თქვენი ახალი ფუნქციის
@@ -1600,13 +1599,13 @@
         ამ ნექტარის შესაგროვებლად.
       Course 4 Bee Params 7_instruction: სცადეთ თქვენი ახალი ფუნქციის ამ ნექტარის
         შესაგროვებლად გამოყენება.
-      Course 4 Bee Params 8 Clone 2_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ
+      Course 4 Bee Params 8 Clone 2_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძლიათ
         განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
-      Course 4 Bee Params 8 clone 3_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ
+      Course 4 Bee Params 8 clone 3_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძლიათ
         განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
-      Course 4 Bee Params 8 Clone_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ
+      Course 4 Bee Params 8 Clone_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძლიათ
         განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
-      Course 4 Bee Params 8 new_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძიათ
+      Course 4 Bee Params 8 new_instruction: ოოოჰ, ახლა თაფლიც! ნეტა როგორ შეგიძლიათ
         განაახლოთ თქვენი ფუნქცია, რომ მან ან ნექტარი მოკრიბოს ან თაფლი გააკეთოს.
       Course 4 Bee Params 8_instruction: 'გამოწვევა: თაფლსაც უნდა მივხედოთ! გადაწერეთ
         თქვენი ფუნქცია ისე, რომ ის თაფლის და ნექტარის ერთეულების რაოდენობას შეიცავდეს.
@@ -1674,13 +1673,14 @@
         მან შეძლოს \"სიმაღლის\" პარამეტრის გამოყენება."
       Course 4 Play Lab Params 3_instruction: 'დავამატოთ კიდევ ერთი პარამეტრი ახტომის
         ფუნქციას, რათა შეგვეძლოს მისი ორი მსახიობისთვის გამოყენება. თითოეული მსახიობი
-        რიცხვითაა წარმოდგენილი, დაწყბული ერთიდან. ჩაასწორეთ "ახტომა" ფუნქცია ისე,
+        რიცხვითაა წარმოდგენილი, დაწყბული ერთიდან. ჩაასწორეთ "ახტომის" ფუნქცია ისე,
         რომ განმარტებაში შედიოდეს პარამეტრი "მსახიობი". '
       Course 4 Play Lab Params 4_instruction: ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ
         ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.
-      Course 4 Play Lab Params 5_instruction: შეავსეთ "მსახიობის" პარამეტრის შემავალი
-        მონაცემი, რომ შევძლოთ "პატრული" ფუნქციის გამოძახება თითოეული მსახიობისთვის.
-        გახსოვდეთ, რომ მსახიობები შეესაბამებიან რიცხვებს 1, 2 და 3.
+      Course 4 Play Lab Params 5_instruction: დაარედაქტირეთ "პატრული" ფუნქცია ისე,
+        რომ მას დაემატოს "პერსონაჟის" პარამეტრი- ასე ჩვენ შევძლებთ მის გამოძახებას
+        თითოეული მსახიობისთვის. გახსოვდეთ, რომ მსახიობები შეესაბამებიან რიცხვებს 1,
+        2 და 3.
       Course 4 Play Lab Params 6_instruction: '"პატრულირების" ფუნქციას დაუმატეთ პარამეტრი
         "სიჩქარე". სცადეთ გამოიყენოთ ბლოკი "სიჩქარის განსაზღვრა" ამ ახალ "სიჩქარის"
         პარამეტრთან და მოაპოვებინეთ პინგვინს ორივე დროშა, სანამ ელფები რომელიმეს დაეუფლებიან.'
@@ -1689,8 +1689,8 @@
         საკონტროლებლად და დროშების შესაგროვებლად."
       Course 4 Play Lab Params 8_instruction: გამოიყენეთ "შეხებისას" ბლოკი, რომ დააბრუნოთ
         ძაღლი მარცხენა ზედა კუთხეში მხოლოდ იმ შემთხვევაში, თუ ის სხვა მსახიობს შეეხება.
-      Course 4 Play Lab Params 9_instruction: "ესაა, თამაში წინა დონიდან,\nმაგრამ
-        კოდის უმეტესობა დამალულია. მოცემულია ახალი ფუნქცია \"ქულის_დაგროვება\".\r\n\r\nდაარედაქტირეთ\nფუნქცია
+      Course 4 Play Lab Params 9_instruction: "ესაა თამაში წინა დონიდან,\nმაგრამ კოდის
+        უმეტესობა დამალულია. მოცემულია ახალი ფუნქცია \"ქულის_დაგროვება\".\r\n\r\nდაარედაქტირეთ\nფუნქცია
         ისე, რომ ცვლადს \"მოთამაშის_ანგარიში\" დაემატოს პარამეტრი\n\"ქულები\".\r\n\r\nცვლადი
         \"მოთამაშის_ანგარიში\" უნდა გაიზარდოს ყოველჯერ, როცა\nძაღლი მონიშნავს კატას
         გულით და იკლებდეს, როცა კატა მონიშნავს ძაღლს გულით.\r\n\r\nმინიშნება:\nროცა
@@ -1713,18 +1713,18 @@
         გამოიყენეთ "მიანიჭე ქულა" ბლოკი და ჩაწერეთ საწყის ქულად 10. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: 'უკვე გვაქვს ქულების ცვლადი,
         მაგრამ როგორ გავხადოთ ის გამოსადეგი? შეიძლება ქულების ცვლადის გაზრდა ყოველჯერ,
-        როცა მტერს ცეცხლოვან ბურთს მოახვედრებთ. გამოიყენეთ "როდესაც მსახიობი 2 შეეხება
+        როცა მტერს ცეცხლოვან ბურთს მოახვედრებთ. გამოიყენეთ "როდესაც პერსონაჟი 2 შეეხება
         რამეს" მოვლენა, რათა განაახლოთ თქვენი ქულა, როცა თქვენი ცეცხლოვანი ბურთი მოხვდება
         კატას. შეგიძლიათ ქულა გაზარდო ასე: score = score + 1. აიყვანეთ თქვენი ქულა
         10-მდე (თითო ჯერზე ერთით!), რათა გადალახო ეს დონე.'
       Course 4 Play Lab Vars 6_instruction: "გამოიყენეთ ისრები და ისროლეთ გულები.\r\n\r\nროგორ
         დავაგროვოთ ქულები ჩვენს თამაშში? დაამატეთ 1 თქვენს \"ქულების\" ცვლადს ყოველ
-        ჯერზე, როცა ძაღლი კატას გულს მოახვედრებს. გამოიყენეთ \"როდესაც მსახიობი 2
+        ჯერზე, როცა ძაღლი კატას გულს მოახვედრებს. გამოიყენეთ \"როდესაც პერსონაჟი 2
         შეეხება რამეს\" მოვლენა, რათა განაახლოთ თქვენი ქულა. თქვენი ცვლადი შეგიძლიათ
         ასე ზარდოთ: \"ქულები= ქულები + 1.\" აიყვანეთ თქვენი ქულა 10-მდე (თითო ჯერზე
         ერთით!), რათა გადალახოთ ეს დონე."
       Course 4 Play Lab Vars 7_instruction: მოდი ეს თამაში ზედმეტად მარტივი ნუ იქნება
-        - ყოველ ჯერზე, როცა ძაღლს (მსახიობი 1) მოხვდება ცეცხლოვანი ბურთი, ქულა უნდა
+        - ყოველ ჯერზე, როცა ძაღლს (პერსონაჟი 1) მოხვდება ცეცხლოვანი ბურთი, ქულა უნდა
         დაკარგოთ. დაიწყეთ 10 ქულით, რომ ძალიან რთული არ იყოს. ჩამოაგდეთ თქვენი ქულა
         10-დან 0-მდე, რათა გადალახო დონე.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: კარგი, უკანასკნელი რამ ამ თამაშისთვის
@@ -1823,15 +1823,14 @@
       Course 4 SCFL 6_instruction: ხვდებით, როგორ გაიმეოროთ ეს ნახატი ერთი ციკლით?
       Course 4 SCFL 7_instruction: მხატვარი სწორ ტალღაზეა! ხვდებით, როგორ უნდა გაიმეოროთ
         ეს ნახატი?
-      Course 4 SCFP 1_instruction: |
-        Create a function with parameters that allows
-        the artist to jump backward and forward by x pixels, and also up and down
-        by y pixels (using positive and negative numbers).
+      Course 4 SCFP 1_instruction: შექმენით ფუნქცია, რომელიც გამოიყენებს პარამეტრებს
+        და მისცემს მხატვარს შესაძლებლობას გადახტეს წინ და უკან x პიქსელით და ასევე
+        y პიქსელით - ზემოთ და ქვემოთ (გამოიყენეთ დადებითი და უარყოფითი რიცხვები).
       Course 4 SCV 1_instruction: ინსტრუქციების ხელახლა სანახავად დააჭირეთ აქ.
       Course 4 SCV 2_instruction: ინსტრუქციების ხელახლა სანახავად დააჭირეთ აქ.
       Course 4 SCV 3_instruction: "ახლა მონიშვნის თამაშის დროა! მონიშნეთ კატა და მიიღეთ
         2 ქულა.\nმონიშნეთ პინგვინი და მიიღეთ 3 ქულა. მოსაგებად კი 10 ქულა გჭირდებათ!\r\nფრთხილად
-        იყავით, თუ\nკატა და პინფვინი ერთმანეთს მონიშნავენ, თქვენ ქულა გაკლდებათ.\r\n\r\nდაამატეთ
+        იყავით, თუ\nკატა და პინგვინი ერთმანეთს მონიშნავენ, თქვენ ქულა გაკლდებათ.\r\n\r\nდაამატეთ
         ბლოკები, რომლებიც საჭიროა ამ თამაშის ახსნის მიხედვით სათამაშოდ. როგორ მიაღწევთ
         იმას, რომ ძაღლმა ისრების გამოყენებით იმოძრავოს? როგორ დაამატებთ ქულებს იმ
         შემთხვევაში, როცა ძაღლი კატას ან პინგვის დაიჭერს? როგორ გამოკლებთ ქულებს,
@@ -1839,10 +1838,9 @@
       Course 4 SCV 4_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობით.
       Course 4 SCV 5_instruction: ამოხსენით ეს თავსატეხი ბლოკების მინიმალური რაოდენობით.
       Course 4 SCV 6_instruction: ინსტრუქციების ხელახლა სანახავად დააჭირეთ აქ.
-      Course 4 SCVP 1_instruction: |
-        Create a function with parameters that allows
-        the artist to jump backward and forward by x pixels, and also up and down
-        by y pixels (using positive and negative numbers).
+      Course 4 SCVP 1_instruction: შექმენით ფუნქცია, რომელიც გამოიყენებს პარამეტრებს
+        და მისცემს მხატვარს შესაძლებლობას გადახტეს წინ და უკან x პიქსელით და ასევე
+        y პიქსელით - ზემოთ და ქვემოთ (გამოიყენეთ დადებითი და უარყოფითი რიცხვები).
       Course 4 Variables Assessment_instruction: შეგიძლიათ შექმნათ ეს სურათი "გვერდები"
         ცვლადის გამოყენებით? თითოეული ხაზის სიგრძე უნდა იყოს 50 პიქსელი.
       Course1BeePuzzle12_instruction: Get three nectars and then make two honey
@@ -2165,20 +2163,21 @@
       frozen square snowflake_instruction: შეგიძლიათ გამეორების ბლოკით 10 კვადრატის
         შექმნით და შემობრუნების ბლოკით 36 გრადუსით მობრუნებით ყოველი კვადრატის შემდეგ
         ფიფქი შექმნათ?
-      Infinity_catch_instruction: შეგიძლიათ ელზა ("მსახიობი 2") ანას ისრებიანი ღილაკების
+      Infinity_catch_instruction: შეგიძლიათ ელზა ("პერსონაჟი 2") ანას ისრებიანი ღილაკების
         გამოყენებით დააწიო?
       Infinity_finale_instruction: შექმენით, რაც მოგესურვებათ და გააზიარეთ!
-      Infinity_move_collide_instruction: ჰირო არის "მსახიობი 1". გადააადგილეთ ის ბეიმაქსის
-        მარჯვნივ და ჩართეთ მუსიკა, როცა ისინი შეეხებიან ერთმანეთს.
-      Infinity_move_directions_instruction: ბეიმაქსი არის "მსახიობი 2". დაამატეთ მოძრაობის
-        ბლოკები და შემდეგ ისრებით ამოძრავეთ ბეიმაქსი. შეახეთ ის დანარჩენ ორ პერსონაჟს.
+      Infinity_move_collide_instruction: ჰირო არის "პერსონაჟი 1". გადააადგილეთ ის
+        ბეიმაქსის მარჯვნივ და ჩართეთ მუსიკა, როცა ისინი შეეხებიან ერთმანეთს.
+      Infinity_move_directions_instruction: ბეიმაქსი არის "პერსონაჟი 2". დაამატეთ
+        მოძრაობის ბლოკები და შემდეგ ისრებით ამოძრავეთ ბეიმაქსი. შეახეთ ის დანარჩენ
+        ორ პერსონაჟს.
       Infinity_move_right_instruction: ჰირო არის "მსახიობი ". გამოიყენეთ მოძრაობის
         ბლოკი, რომ წაიყვანოთ ჰირო მარჯვნივ და შეახოთ ბეიმაქსს.
       Infinity_repeat_instruction: გამოიყენეთ "იმეორე მუდმივად" ბლოკი, რომ ანა ზემოთ
         და ქვემოთ 400 პიქსელით გადააადგილო.
       Infinity_say_instruction: ათქმევინეთ ანას "გამარჯობა" "თქმა" ბლოკის გამოყენებით.
-      Infinity_shoot_instruction: ბეიმაქსი არის "მსახიობი 2". ჩვენი მიზანია, რომ ბეიმაქსმა
-        ჰიროს რაკეტა ესროლოს.
+      Infinity_shoot_instruction: ბეიმაქსი არის "პერსონაჟი 2". ჩვენი მიზანია, რომ
+        ბეიმაქსმა ჰიროს რაკეტა ესროლოს.
       Infinity_shoot_directions_instruction: ჰირო არის "მსახიობი 3".  ჩვენი მიზანია,
         რომ ჰირომ ოთხოვე პერსონაჟს ყუმბარა ესროლოს. ყოველი სროლის შემდეგ გააკეთეთ
         ერთწამიანი პაუზა.
@@ -2276,7 +2275,8 @@
         თაფლი და გადაადგილდეთ!
       K-1 Bee Loops 7_instruction: გამოიყენეთ ციკლები, რომ აიღოთ ნექტარი და გააკეთოთ
         თაფლი!
-      K-1 Bee Loops 8_instruction: გამოიყენეთ ციკლები და აიღეთ ნექტარი და თაფლი!
+      K-1 Bee Loops 8_instruction: გამოიყენეთ ციკლები, რომ აიღოთ ნექტარი და გააკეთოთ
+        თაფლი!
       K-1 Bee Loops 9_instruction: გამოიყენეთ ციკლები იმისთვის, რომ აიღოთ ნექტარი,
         თაფლი და გადაადგილდეთ!
       K-1 Bee Loops Assessment 1_instruction: აიღეთ ნექტარი, გააკეთეთ თაფლი, სამოძრაოდ
@@ -2319,14 +2319,14 @@
         მიმართულებით მივდივარ.
       K-1 maze debug 5_instruction: გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
         და დამატებით და მიმიყვანეთ ღორთან!
-      K-1 maze debug 6_instruction: გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
-        და დამატებით და მიმიყვანეთ ღორთან!
-      K-1 maze debug 7_instruction: გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
-        და დამატებით და მიმიყვანეთ ღორთან!
+      K-1 maze debug 6_instruction: 'გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ და
+        დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!'
+      K-1 maze debug 7_instruction: 'გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ და
+        დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!'
       K-1 maze debug 8_instruction: გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
         და დამატებით და მიმიყვანეთ ღორთან!
-      K-1 maze debug 9_instruction: გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
-        და დამატებით და მიმიყვანეთ ღორთან!
+      K-1 maze debug 9_instruction: 'გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ და
+        დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!'
       K-1 Maze debug Assessment 1_instruction: შეფასება -- გაწმინდეთ ეს დონე ბაგებისგან
         ბლოკების გადაადგილებითა და დამატებით და მიმიყვანეთ ღორთან!
       K-1 Maze Loops 1_instruction: მიმიყვანეთ ღორთან!
@@ -2535,14 +2535,16 @@
         ფუნქციები წინა თავსატეხიდან.
       NEW Course 4 Artist Functions 10_instruction: დააჭირეთ ჩასწორებას, რომ ფუნქციის
         განსაზღვრების ბლოკები შეავსოთ და დახატოთ 40 პიქსელიანი კვადრატი.
-      NEW Course 4 Artist Functions 11_instruction: გვაქვს ახალი ფუნქცია სახელად "დახატე
-        კვადრტების რიგი". გადახედეთ ფუნქციის ბლოკს და ნახეთ, როგორაა ის აგებული. დააჭირეთ
-        გაშვებას, როცა მზად იქნებით შემდეგი თავსატეხისთვის.
+      NEW Course 4 Artist Functions 11_instruction: "ახლა კი გვინდა შევქმნათ ახალი
+        ფუქნცია, სახელად \"კვადრატების რიგის დახატვა\", რომელიც ერთ ხაზში 6 კვადრატს
+        დახატავს. შეგიძლიათ შექმნათ ის ფუნქცია \"20 კვადრატის დახატვის\" ფუნქციის
+        გამოყენებით? მინიშნება: მიაქციეთ ყურადღება, რომ ფანქარი გაცილებით უფრო თხელზე
+        შევცვალეთ. დააჭირეთ \"20 კვადრატის დახატვის\" ფუნაციას და ნახეთ, როგორ!\r\n"
       NEW Course 4 Artist Functions 12_instruction: გამოიყენეთ ”დახაზე კვადრატების
         რიგი” ფუნქცია წინა თავსატეხიდან და გადახატეთ ეს ნიმუში
-      NEW Course 4 Artist Functions 13_instruction: 'შეგიძლიათ დახატოთ ვარსკვლავის
-        ფიგურა "დახატეთ კვადრატების რიგით" ფუნქციის გამოყენებით? მინიშნება: თითოეულ
-        იტერაციაზე მოგიწევT გარკვეული რაოდენობის პიქსელით წინ გადაადგილება და 144
+      NEW Course 4 Artist Functions 13_instruction: 'შეგიძლიათ, დახატოთ ვარსკვლავის
+        ფიგურა "დახატეთ კვადრატების რიგის" ფუნქციის გამოყენებით? მინიშნება: თითოეულ
+        იტერაციაზე მოგიწევთ გარკვეული რაოდენობის პიქსელით წინ გადაადგილება და 144
         გრადუსით მობრუნება.'
       NEW Course 4 Artist Functions 14_instruction: 'თავისუფალი თამაშის დროა! '
       NEW Course 4 Artist Functions 2_instruction: 'შეგიძლიათ დახატოთ 3 კვადრატი,
@@ -2576,21 +2578,20 @@
         ”დახატე კვადრატი” ფუნქცია.
       NEW Course 4 Artist Params 1_instruction: განვსაზღვროთ ეს ფუნქცია ისე, რომ დახატოს
         კვადრატი გვერდით 50 პიქსელი. დასაწყებად დააჭირეთ ჩასწორებას.
-      NEW Course 4 Artist Params 10_instruction: 'შექმენით ”დახატე ექვსკუთხედი” ფუნქციის
-        ბლოკი სიგრძის პარამეტრით. მინიშნება: ამ ექვსკუთხედის ზომა 100 პიქსელი უნდა
-        იყოს. '
+      NEW Course 4 Artist Params 10_instruction: 'შექმენით ”ექვსკუთხედის დახატვის”
+        ფუნქციის ბლოკი სიგრძის პარამეტრით. მინიშნება: ამ ექვსკუთხედის ზომა 100 პიქსელი
+        უნდა იყოს. '
       NEW Course 4 Artist Params 11_instruction: შეგიძლიათ გაარკვიოთ, თუ როგორ იხატება
         ეს ფიგურა? ჩაასწორეთ ფუნქცია და გამოიყენეთ პარამეტრი ”გვერდები”.
       NEW Course 4 Artist Params 12_instruction: შეგიძლიათ დაასრულოთ ეს ნახატი? ყოველი
         ფიგურის გვერდის სიგრძეა 100 პიქსელი.
       NEW Course 4 Artist Params 12a_instruction: ეს სურათი წინას ჰგავს. შეგიძლიათ
         "მიზნისთვის" ციკლისა და თქვენი ფუნქციის ერთად გამოყენებით გააკეთოთ ეს დიზაინი?
-      NEW Course 4 Artist Params 13_instruction: 'მოდით, ჩავასწოროთ ფუნქცია "დახატე
-        ფიგურა". მას უკვე აქვს სიგრძის პარამეტრი. ახლა ჩავასწოროთ ფუნქცია ისე, რომ
-        მას გააჩნდეს პარამეტრი "გვერდები". გაიხსენეთ, რომ მობრუნების კუთხე არის 360
-        გაყოფილი ფიგურის გვერდების რაოდენობაზე. მინიშნება: ყოველი ფიგურის მთლიანი
+      NEW Course 4 Artist Params 13_instruction: "მოდით, ჩავასწოროთ ფუნქცია \"მრავალკუთხედის
+        დახატვა\". მას უკვე აქვს პარამეტრი \"გვერდები\". ახლა ჩავასწოროთ ფუნქცია ისე,
+        რომ მას გააჩნდეს პარამეტრი \"სიგრძე\".\r\nმინიშნება: ყოველი ფიგურის მთლიანი
         ზომა არის 200 პიქსელი. გახსოვთ განტოლება, რომლითაც სხვადასხვა რაოდენობის გვერდების
-        მქონდე ფიგურები ერთი ზომის ხდება?'
+        მქონდე ფიგურები ერთი ზომის ხდება?"
       NEW Course 4 Artist Params 14_instruction: შეასწორეთ "სპირალური კიდის დახატვა"
         და გამოიყენეთ მისი პარამეტრები ამ ფიგურების შესაქმნელად.
       NEW Course 4 Artist Params 15_instruction: |
@@ -2603,7 +2604,7 @@
       NEW Course 4 Artist Params 4_instruction: ამ ფუნქციის ბლოკებს რამე განსხვავებულს
         ხომ არ ამჩნევთ? დააჭირეთ გაშვებას და ნახეთ რა მოხდება.
       NEW Course 4 Artist Params 5_instruction: 'შეავსეთ ??? სიგრძის პარამეტრის შემავალი
-        მონაცემის ბლოკში. მინიშნება; ხუთკუთხედის ზომაა 500 პიქსელი. '
+        მონაცემის ბლოკში. მინიშნება; ხუთკუთხედის გვერდის ზომაა 100 პიქსელი. '
       NEW Course 4 Artist Params 6_instruction: '"???"-ის სწორი რიცხვებით ჩანაცვლებით
         შეავსეთ სიგრძის პარამეტრი, რათა დახატოთ ფიგურები. კვადრატი და სამკუთხედი ზომით
         100 პიქსელი, ექვსკუთხედი კი 75 პიქსელი.'
@@ -2733,7 +2734,7 @@
       Overworld Chop Trees_instruction: სახლი მზის ჩასვლამდე უნდა ავაშენოთ. სახლებს
         ბევრი ხე სჭირდებათ. სამივე ხეა მოსაჭრელი.
       Overworld Free Play 20x20_instruction: გილოცავთ! თქვენ დაასრულეთ ყველა ჩვენი
-        თავსატეხი. ახლა მოიპოვეთ ნედლეული, ააშენეთ და შექმენით რამე უნიაკული მთელი
+        თავსატეხი. ახლა მოიპოვეთ ნედლეული, ააშენეთ და შექმენით რამე უნიაკალური მთელი
         შეძენილი ცოდნის გამოყენებით.
       Overworld Free Play_instruction: ეს ლანდშაფტი თქვენია - შეგიძლიათ ააშენოთ, რაც
         კი მოგესურვებათ.
@@ -2742,11 +2743,11 @@
       Overworld House Frame - C_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი
         კარგად გამოიყურება. ავაშენოთ კარკასი ჭუჭყის ბლოკებზე.
       Overworld House Frame B_instruction: ერთი კედელი დასრულებულია, ავაშენოთ მთელი
-        სახლი იატაკის გეგმის მიხედვით! ბევრი რამის გამეორება მოგიწევთ აქ.
+        სახლი იატაკის გეგმის მიხედვით! აქ ბევრი რამის გამეორება მოგიწევთ.
       Overworld House Frame B2_instruction: ერთი კედელი დასრულებულია, ავაშენოთ მთელი
-        სახლი იატაკის გეგმის მიხედვით! ბევრი რამის გამეორება მოგიწევთ აქ.
+        სახლი იატაკის გეგმის მიხედვით! აქ ბევრი რამის გამეორება მოგიწევთ.
       Overworld House Frame C_instruction: ერთი კედელი დასრულებულია, ავაშენოთ მთელი
-        სახლი იატაკის გეგმის მიხედვით! ბევრი რამის გამეორება მოგიწევთ აქ.
+        სახლი იატაკის გეგმის მიხედვით! აქ ბევრი რამის გამეორება მოგიწევთ.
       Overworld House Frame Chosen_instruction: ააშენეთ სახლი ბოლომდე ნებისმიერი მასალით.
         "გამეორების" ბრძანება აქ ძალიან გამოგადგებათ.
       Overworld House Frame_instruction: ავაშენოთ ჩვენი საკუთარი სახლი! ეს ადგილი
@@ -2757,10 +2758,9 @@
       Overworld Move to Sheep_instruction: ცხვრამდე მისასვლელად დაამატეთ მეორე ""წინ
         გადაადგილების" ბრძანება.
       Overworld Place Wall_instruction: ყოველი სახლი იწყება კედლით. ააგეთ სახლის პირველი
-        ნაწილი "დააყენე ან დადე" და "წინ გადაადგილება" ბრძანებების გამეორების ციკლში
-        ჩასმით.
-      Overworld Plant Crops_instruction: წინასწარ დაგეგმვა კარგია. დარგე მოსავალი
-        წყლის ორივე მხარეს - ბოლოს რომ არ მოგშივდეს.
+        ნაწილი "განლაგება" და "წინ გადაადგილება" ბრძანებების გამეორების ციკლში ჩასმით.
+      Overworld Plant Crops_instruction: წინასწარ დაგეგმვა კარგია. დარგეთ მოსავალი
+        წყლის ორივე მხარეს - ბოლოს რომ არ მოგშივდეთ.
       Overworld Powered Minecart_instruction: მშვენიერი ნამუშევარია! უმრავი რესურსი
         მოიძიეთ და კარგი სახლიც ააშენეთ. ახლა დროა რუკის კიდიდან თქვენ სახლამდე ლიანდაგი
         დააგოთ.
@@ -2952,6 +2952,10 @@
       Ryan - 4-5 Bee Conditionals 2_instruction: ფუტკარს ახლა მხოლოდ ნექტარი სურს.
         ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ
         არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
+      Ryan - Bee Conditionals_instruction: |
+        ფუტკარს ახლა მხოლოდ ნექტარი სურს.
+        ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ არ მალავს.
+        თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება.
       Ryan Test Locked Blocks_instruction: ამ ფუნქციას ეწოდება "პატრული". ჩაასწორეთ
         ის ისე, რომ გადაიყვანოთ კატა 400 პიქსელით ზემოთ და შემდეგ 400 პიქსელით ქვემოთ.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
@@ -3145,7 +3149,7 @@
         Create an array of odd numbers 1-11
         by using appendItem. (Click to see full instructions)
       U3 - Arrays - assignment_instruction: |
-        Use indices to change the values in
+        Use indexes to change the values in
         this array from 1 to 0. (Click to see full instructions)
       U3 - Arrays - assignment2_instruction: |
         Calculate the sum of three values stored
@@ -3155,7 +3159,8 @@
         the randomly generated array by 1. (Click to see full instructions)
       U3 - Arrays - createFirstArray_instruction: |
         Create an array of the even numbers
-        from 0-10 and display its contents with console.log. (Click to see full instructions)
+        from 0 to 10 and display its contents with console.log. (Click to see full
+        instructions)
       U3 - Arrays - Demo App_instruction: |
         Use the "My Favorite Things" app. How
         might this app be making use of an array? (Click to see full instructions)
@@ -3246,15 +3251,15 @@
         Change your program so that
         dots are drawn at the location of the mouse click. (Click to see full instructions)
       U3 - Canvas - freePlay_instruction: |
-        Write code that redraws your image using
-        a sketch effect. (Click to see full instructions)
+        Extend the functionality of one of the
+        effects, or create an entirely new one of your own. (Click to see full instructions)
       U3 - Canvas - introCanvas_instruction: |
         Add a canvas to your app and set it
         to be the active canvas. Then add a large dot to your canvas. (Click to see
         full instructions)
       U3 - Canvas - movementFunction fix Orig_instruction: |
-        Write a function that
-        takes the movement of the mouse as input and generates a line width as output.
+        Modify the "Original"
+        button event handler so that it takes the movement of the mouse into account.
         (Click to see full instructions)
       U3 - Canvas - movementFunction_instruction: |
         Write a function that takes the
@@ -3262,7 +3267,7 @@
         to see full instructions)
       U3 - Canvas - One Dot sprayPaint_instruction: |
         Write code that redraws your
-        image using a dot whose x and y locations use offsetX and offsetY with small
+        image using a dot whose x and y locations use offsetX and offsetY with a small
         random value added. (Click to see full instructions)
       U3 - Canvas - redrawOriginal_instruction: |
         Write a function that processes
@@ -3282,7 +3287,7 @@
         a sketch effect. (Click to see full instructions)
       U3 - Canvas - sprayPaint_instruction: |
         Update the spray paint code so that
-        redraws your image using multiple random dots instead of one using a nested
+        it redraws your image using multiple random dots instead of using a nested
         for loop. (Click to see full instructions)
       U3 - Canvas - transparentDots_instruction: |
         Change the colors of your dots
@@ -3394,7 +3399,7 @@
         Update the image scroller to
         respond to buttons and key presses. (Click to see full instructions)
       U3 - Keys - Functions_instruction: |
-        Write a doUpArrow and doDownArrow function
+        Write doUpArrow and doDownArrow functions
         and call the functions instead of duplicating the code. (Click to see full
         instructions)
       U3 - Keys - Key Up and Down_instruction: |
@@ -3437,7 +3442,7 @@
         (Click to see full instructions)
       U3 - Loops - 14_instruction: |
         Change the loop condition to prevent the infinite
-        loop and stop counting at once the count is past 30. (Click to see full instructions)
+        loop and stop counting once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
         is 12. (Click to see full instructions)
@@ -3451,7 +3456,7 @@
         Change the if statement to a while loop so the
         program will run until it rolls a 6. (Click to see full instructions)
       U3 - Loops - 4_instruction: |2
-         Use the Debug Commands to to make a list of all
+         Use the Debug Commands to make a list of all
         the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - 5_instruction: |
         Add code inside the while loop which will update
@@ -3507,24 +3512,22 @@
         Design a function that displays
         the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Complete the 'findMinVal'
-        function to find and display the smallest value in an array  (Click to see
-        full instructions)
+        Complete the findMinVal function
+        to find and display the smallest value in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
         Call findMin
         within the console.log statement to calculate the minimum of two values.  (Click
         to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
         Add a second parameter
-        to the 'search' function for the value to search for.  (Click to see full
-        instructions)
+        to the search function for the value to search for.  (Click to see full instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
         Visit every element in
-        the array and display 'true' if the value is a 5, and 'false' otherwise.
+        the array and display "true" if the value is a 5, and "false" otherwise.
         (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
@@ -3536,7 +3539,7 @@
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
         Move the code that
-        searches the list for a 5 into a function called 'search'. (Click to see
+        searches the list for a 5 into a function called "search". (Click to see
         full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
@@ -3546,7 +3549,7 @@
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
         Process the array
-        and display a single 'true' if the array contains a 5 or a single 'false'
+        and display a single "true" if the array contains a 5 or a single "false"
         if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
@@ -3581,13 +3584,32 @@
       U3 - Practice Create Performance Task_instruction: |
         Design and implement your
         practice Create Performance Task. (Click to see full instructions)
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto
+        readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table.(Click to see full instructions)\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords
+        call individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin
+        the records return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords
+        return from the readRecords call. (Click to see full instructions)\r\n"
       U3 - Return Values - constrainTurtle_instruction: |
         Use constrain in this simple
         app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Return Values - debuggingConstrain_instruction: |
         Correct the error in
-        constrain so that it correctly reports the maximum value.  (Click to see full
-        instructions)
+        constrain so that it returns the appropriate value.  (Click to see full instructions)
       U3 - Return Values - debuggingMaxVal_instruction: |
         Correct the error in maxVal
         so that it correctly reports the maximum value.  (Click to see full instructions)
@@ -3617,6 +3639,18 @@
         Write the function maxVal and
         then use it within the console.log statement to calculate the maximum of two
         values.  (Click to see full instructions)
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin
+        2008 and print it out. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing
+        the readRecords search terms. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
       U3 - Simulation - 1_instruction: |
         Use a while loop to "flip a coin 10 times"
         and write the values to the screen. (Click to see full instructions)
@@ -3625,7 +3659,7 @@
         runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
-        flips! How long did it take? (Click to see full instructions)
+        heads! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
         Keep track of how many heads (1's) your
         program generates and print the results to the screen. (Click to see full
@@ -4204,14 +4238,14 @@
         Play Again button is clicked (Click to see full instructions) \n"
       U3L16 Mad Lib Demo_instruction: Mad Libs Demo - Try it out!
       U3L16 Mad Lib getText_instruction: "Before setting the text area with your\nMad
-        Lib outline, get the user's text and incorporate their responses. (Click\nto
+        Libs outline, get the user's text and incorporate their responses. (Click\nto
         see full instructions) \n"
       U3L16 Mad Lib setText_instruction: "When the Next button is clicked, set the\ntext
-        area to have the main outline of your How-to Mad Lib (without the user's\ninput).
+        area to have the main outline of your How-to Mad Libs (without the user's\ninput).
         (Click to see full instructions) \n"
       U3L16 Mad Lib Student Setup_instruction: |
-        Back to Mad Lib: To get started,
-        set up the two screens for your Mad Lib app (Click to show full instructions)
+        Back to Mad Libs: To get started,
+        set up the two screens for your Mad Libs app (Click to show full instructions)
       U3L16 Mad Lib toUpper_instruction: "Apply the toUpperCase and toLowerCase string\nfunctions
         to the user's text. (Click to see full instructions) \n"
       U3L17 - getAndSetKeyValue_instruction: |
@@ -4496,37 +4530,117 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - add createRecord to contacts App_instruction: |
+        Add code to your contacts
+        app so that newly added contacts are saved in a table. (Click to see full
+        instructions)
+      U4 - Add Row By Hand_instruction: |
+        Add a new record to your table in the Data
+        Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - drawChartsFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - Import Data 1_instruction: |
+        Download the CSV file we’ve provided,
+        and then use the data viewer to import the data from the file into the “mydata”
+        table. (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Remixing Apps with Data_instruction: |
+        Run this app and see what
+        it prints to the console. Then remix the app and run the remixed version to
+        see what happened to the data. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)
+      U4 - CreateRecord - 2.5_instruction: |
+        Change the table name in createRecord
+        then check the Data Viewer to see the new table. (Click to see  full instructions)
       U4 - CreateRecord - 2_instruction: |
-        Change the table name in create record
-        then check the Data Viewer to see the new table.
+        Change the name from "Alice" to something
+        else in the createRecord command.  Run the program and use the Data Viewer
+        to see the changes to your table. (Click to see full instructions)
       U4 - CreateRecord - 3_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Use createRecord to add the song object
+        as a record to a table. (Click to see full instructions)
       U4 - CreateRecord - 4_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Run the program. Verify the song object
+        was added to the database. Note the callback function now displays the copy
+        of the record sent back back by the database. (Click to see full instructions)
       U4 - CreateRecord - 5_instruction: |
-        Add the provided javascript object as a
-        record to a table. (Click to see full instructions)
+        Add a property to the JavaScript object,
+        then run the program.  View the data table and see how changing the object
+        affects the data table. (Click to see full instructions)
+      U4 - debug column names are case sensitive_instruction: |
+        Change song.title
+        to song.Title (capital T).  And run the program.  Check the data table  (Click
+        to see full instructions)
+      U4 - deleteRecords 0_instruction: |
+        Use the deleteRecord command with default
+        values. Verify the record was deleted. (Click for full instructions).
+      U4 - deleteRecords 1_instruction: |
+        Find the id of "Little Bunny Foo Foo"
+        in the data table "mySongs".  Use the deleteRecord command to delete it.  See
+        what happens when you try to delete an ID a second time. (Click for full Instructions).
+      U4 - deleteRecords 2 delete object_instruction: |
+        Use the song object to delete
+        multiple objects in the database by changing only the "id" property. (Click
+        for full Instructions).
+      U4 - deleteRecords 2_instruction: |
+        Using the data viewer, find the id of a
+        a record you want to delete. Use the deleteRecord command to delete it. (Click
+        for full instructions).
+      U4 - Edit Data Table by Hand_instruction: |
+        View the data table and click edit
+        next to each row.  Add the artists names for each song by hand. (Click to
+        see full instructions)
+      U4 - Exploring Data Tools - Template_instruction: |
+        Use createRecord to add
+        the song object as a record to a table. (Click to see full instructions)
+      U4 - fix contacts by hand in data table_instruction: |
+        Use the data viewer to
+        add rows to the data table.  Add the original hard-coded contacts from your
+        app to the database. (Click to see full instructions)
+      U4 - last stage test adding contcts_instruction: |
+        Confirm that new contacts
+        you add are saved to the database.  Verify that after restarting your app,
+        the contacts you added no longer show in the app, but still exist in the database.
+        (Click to see full instructions)
+      U4 - Objects - accessingPropertiesInArray_instruction: |
+        Access the properties
+        of the objects stored in an array. (Click to see full instructions)
       U4 - Objects - arraysOfObjects_instruction: |
         Create an array called "students"
         and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createContactObject_instruction: |
+        Construct a new object from
+        the user inputs, and append it to your array. (Click to see full instructions)
+      U4 - Objects - createContactsData_instruction: |
+        Add values to the three contact
+        objects provided in the starter code. (Click to see full instructions)
       U4 - Objects - createDotNotation_instruction: |
-        Update your code to add properties
-        to your object one at a time using dot notation. (Click to see full instructions)
+        Create a student Object yourself.
+        Add properties to your object one at a time using dot notation. (Click to
+        see full instructions)
       U4 - Objects - createObject_instruction: |
         Create an object with at least 3
         properties and display it in the Debug Console. (Click to see full instructions)
       U4 - Objects - dotNotation_instruction: |
         Use dot notation to display individual
         properties of the object. (Click to see full instructions)
+      U4 - Objects - eventHandlersToSwitchScreen_instruction: |
+        Attach event handlers
+        to the "Add Contact" and "Go Back" buttons that allow the user to switch
+        screens. (Click to see full instructions)
       U4 - Objects - eventParameter_instruction: |
         Trigger both the keyboard and mouse
         event and examine the event objects displayed in the console. Why might an
         object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - exemplarContactsApp_instruction: |
+        Use the Contacts app and then
+        add a contact of your own. (Click to see full instructions)
       U4 - Objects - loopingArray_instruction: |
         Loop over your array of students
         and print the name of every students. (Click to see full instructions)
@@ -4541,6 +4655,70 @@
         Loop over your array of student
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
+      U4 - Objects - pullValues_instruction: |
+        Create an event handler for the "Add
+        Contact" button that displays the contents of the 4 text input fields in
+        the console. (Click to see full instructions)
+      U4 - Objects - readStarterCode_instruction: |
+        Familiarize yourself with the
+        starter code and UI elements provided. (Click to see full instructions)
+      U4 - Objects - resetIndexAndShow_instruction: |
+        Add code to your event handler
+        fro the "Add Contact" button so that when a new contact is added the inputs
+        are cleared, the screen is switched, and the correct contact is shown. (Click
+        to see full instructions)
+      U4 - Objects - showContact1_instruction: |
+        Add code to the showCurrentContact
+        function to show the name of the contact stored at the currentIndex of your
+        array. (Click to see full instructions)
+      U4 - Objects - showContact2_instruction: |
+        Add the phone number and birthday
+        text to your text area. (Click to see full instructions)
+      U4 - Objects - showContact3_instruction: |
+        Display the image information for
+        each contact. (Click to see full instructions)
+      U4 - Objects - showSampleImage_instruction: |
+        Attach an event handler to the
+        image URL text input so that the user can confirm their image will work as
+        expected. (Click to see full instructions)
+      U4 - Objects - writeWrap_instruction: |
+        Use the wrap function to prevent currentIndex
+        from leaving the bounds of your array. (Click to see full instructions)
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords
+        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction.
+        (Click to see full instructions)\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby
+        a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table. (Click to see full instructions)\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues
+        in the response from the database. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie
+        in your database. (Click to see full instructions)\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
+        records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - ReadRecords - Contacts App 1_instruction: |
+        Write a function called "updateLocalData"
+        that copies the data in your database into your "contacts" global variable.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 2_instruction: |
+        Create a function called "refreshLocalData"
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 3_instruction: |
+        Add a call to "refreshLocalData"
+        to the callback function of the createRecord you use to add a new contact
+        to your database. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 4_instruction: |
+        Create a "Delete" button.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
+        Create an
+        event handler for the "Delete" button you created. (Click to see full instructions)
       U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
@@ -4548,9 +4726,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: მოდელი
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4590,13 +4766,13 @@
         წინ გადასაადგილებლად ის უნდა გადახუროთ. "თუ" ბრძანება აქ ძალიან გამოგადგებათ.
         დაუმატეთ ბრძანება "გადაადგილება წინ" საჭირო ადგილებში და მოიპოვეთ ეს ბლოკები.
       Underground If Statements_instruction: ახლა კი გავართულოთ. მოიპოვეთ 3 წითელი
-        ქვა ისე, რომ ლავაში არ ჩავარდეთ. გამოიყენეთ "თუ" ბრძანება, იმისთვის რომ დადოთ
+        ქვა ისე, რომ ლავაში არ ჩავარდეთ. გამოიყენეთ "თუ" ბრძანება, იმისთვის, რომ დადოთ
         რიყის ქვა ყველგან, სადაც ლავას აღმოაჩენთ.
       Underground Iron_instruction: მდნარ ლავაში მოხვედრა არ არის კარგი იდეა. დააწყვეთ
         რიყის ქვა ხიდის შესაქმნელად, შემდეგ კი მოიპოვეთ მინიმუმ ორი რკინის ბლოკი.
       Underground Mine in a Circle_instruction: "მოიფიქრეთ, როგორ მოიპოვოთ 5 ალმასი
         და 7 წითელი ქვა! სცადეთ გამოყენების ბრძანებაში კიდევ ერთი გამეორების ბრძანების
-        გამოყენება, რომ კვადრატულად იმოძრავოთ.\r\n"
+        გამოყენება, რომ კვადრატულად იმოძრაოთ.\r\n"
       Underground Mining Coal_instruction: ყველაზე ძვირფასი რესურსები მიწის ქვეშაა,
         მაგრამ იქ ბნელა. დასვით 2 ჩირაღდანი და მოიპოვეთ ყველაზე მცირე 2 ქვანახშირი.
       Underground Test Level_instruction: შეაგროვეთ ყველა მინერალი!

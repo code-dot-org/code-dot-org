@@ -279,9 +279,9 @@ nn:
         studio_c2_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
         studio_c2_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
         studio_c2_4: 'Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?'
-        studio_c2_5: 'Kan du skrive eut program som får blekkspruteb til å sei "Hei" når den blir klikka på?'
+        studio_c2_5: 'Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?'
         studio_c2_6: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c2_7: '"Gjenta alltid"-blokken let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
+        studio_c2_7: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
         studio_c2_8: 'Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?'
         studio_c2_9: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
         studio_c2_10: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
@@ -292,30 +292,30 @@ nn:
         studio_c3_story_4: 'Kan du skrive eit program som gjer at hunden flyttar seg til katten og at katten seier "Hei" når hunden kjem?'
         studio_c3_story_5: Kan du legge til ei blokk for å gjere blekkspruten glad?
         studio_c3_story_6: Lag din eiga historie. Når du er ferdig, klikker du Fullfør for å la vener prøve di historie på sine telefonar.
-        studio_c3_game_1: 'Kan du skrive eut program som får blekkspruteb til å sei "Hei" når den blir klikka på?'
+        studio_c3_game_1: 'Kan du skrive eut program som får blekkspruten til å sei "Hei" når den blir klikka på?'
         studio_c3_game_2: Kan du skrive eit program for å få denne pingvinen til røre seg omkring med opp / ned / venstre / høyre-tastane for å treffe alle måla?
-        studio_c3_game_3: '"Gjenta alltid"-blokken let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
+        studio_c3_game_3: '"Gjenta alltid"-blokka let deg køyre kode kontinuerleg. Kan du legge til blokker for å flytte denne dinosauren opp og ned heile tida?'
         studio_c3_game_4: 'Kan du få pingvinen til å seie "Au!" og spille ein "treff"-lyd viss han treff dinosauren og deretter flytte han med pilene for å få det til å skje?'
         studio_c3_game_5: Kan du legge til ei blokk for å skåre eit poeng når pingvinen kjem borti blekkspruten, og deretter flytte han med pilene til du skårer?
         studio_c3_game_6: Kan du legge til blokker for å forandre bakgrunnen og farta til pingvinen og deretter bevege han med pil-tastane til du skårer?
-        studio_c3_game_7: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
+        studio_c3_game_7: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
         studio_playlab_1: 'Pingvinen vil si "hallo" - Kan du hjelpe han?'
-        studio_playlab_2: 'Holegut (spelar 1) og Holejente (spelar 2) vil si "hallo" til kvarandre. Kan du hjelpe dei ved å bruke "si"-blokka to gonger?'
+        studio_playlab_2: 'Holegut (spelar 1) og Holejente (spelar 2) vil sei "hallo" til kvarandre. Kan du hjelpe dei ved å bruke "sei"-blokka to gonger?'
         studio_playlab_3: Kan du hjelpe Tennisjenta til flagget?
         studio_playlab_4: Kan du hjelpe Tennisgut (spelar 1) å komme til Tennisjente (spelar 2) og spele ein lyd når han kjem dit?
         studio_playlab_5: 'Kan du hjelpe Romrobot med å sei "vær helsa, jordbuarar" når han klikkast på? Ikkje gløym å klikke på han etter du har klikka Kjør'
         studio_playlab_6: Kan du hjelpe Heksa med å flytte rundt ved hjelp av opp/ned/høgre/venstre-piltastane for å komme til dei magiske eldkulene?
-        studio_playlab_7: '"Gjenta for alltid"-blokka gjer at du kan kjøyre kode kontinuerlig. Kan du legge til blokker slik at Trollmannen flyttar til høgre og venstre mange ganger?'
+        studio_playlab_7: '"Gjenta for alltid"-blokka gjer at du kan køyre kode kontinuerlig. Kan du legge til blokker slik at Trollmannen flyttar til høgre og venstre mange gonger?'
         studio_playlab_8: Kan du legge til ei blokk for å score eit poeng og ei blokk for å spele ein lyd når einhjørningen kjem borti trollmannen, og så flytte han rundt med pilene til du scorer?
         studio_playlab_9: Sett bakgrunn for denne rominvasjonen og hjelp Romroboten å komme til romvesenet raskare ved å endre hastigheita hans. Flytt han med piltastane for å komme til Romroboten slik at han kan advare alle andre
-        studio_playlab_10: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
-        studio_iceage_hello1: 'Sid vil samle alle for eit nytt eventyr. Kan du hjelpe han med å seie "hallo" ved å dra "si"-blokka inn i arbeidsområdet og skrive "hallo" inni den?'
+        studio_playlab_10: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
+        studio_iceage_hello1: 'Sid vil samle alle for eit nytt eventyr. Kan du hjelpe han med å seie "hallo" ved å dra "sei"-blokka inn i arbeidsområdet og skrive "hallo" inni den?'
         studio_iceage_hello2: 'Sid (spelar 1) fann Manny (spelar 2) og vil invitere han på eit eventyr. Hjelpe dei å helse på kvarandre ved å bruke "skodespelar sei"-blokka to gonger.'
-        studio_iceage_move_to_flag: 'Scrat er på jakt etter eikenøtten! Hjelp ham å gå dei siste 200 pikslane ved å bruke "Flytt"-blokken.'
-        studio_iceage_move_to_actor: 'Diego (figur 1) leitar etter Manny (figur 2). Hjelp Diego i å komme ned til Manny ved å bruke 200 pikslar i "Flytt figur" blokken. Så, koble ein blokk til hendinga "når figur er borti" for å spele ein lyd når dei finn kvarandre.'
+        studio_iceage_move_to_flag: 'Scrat er på jakt etter eikenøtta! Hjelp ham å gå dei siste 200 pikslane ved å bruke "Flytt"-blokken.'
+        studio_iceage_move_to_actor: 'Diego (spelar 1) leitar etter Manny (spelar 2). Hjelp Diego i å komme ned til Manny ved å bruke 200 pikslar i "Flytt figur" blokken. Så, koble ein blokk til hendinga "når figur er borti" for å spele ein lyd når dei finn kvarandre.'
         studio_iceage_repeat: 'Med "Gjenta for alltid" blokken kan du køyre kode kontinuerleg. Kan du koble blokkar til den for å hjelpe Bestemor i å få litt mosjon ved å flytte frå venstre til høgre fleire gonger?'
         studio_iceage_click_hello: Kan du hjelpe Sid til å gjere eit siste rop etter vennene når du klikker? Ikkje gløym å klikke på han etter at du har trykt Køyr.
-        studio_iceage_move_events: 'Scrat leitar framleis etter eikenøtter. Hjelp han å løpe rundt ved å koble "flytt" blokken til kvar einaste av hendingane og endre retninga til virke med piltastane. Når du er ferdig, klikk Køyr og prøv å samle alle eikenøttene.'
+        studio_iceage_move_events: 'Scrat leitar framleis etter eikenøtter. Hjelp han å løpe rundt ved å koble "flytt" blokka til kvar einaste av hendingane og endre retninga til virke med piltastane. Når du er ferdig, klikk Køyr og prøv å samle alle eikenøttene.'
         studio_iceage_sound_and_points: 'Vi har lagt ved mesteparten av koden som får Granny til å bevege seg mot venstre og høgre, og koden som får Sid til flytte seg rundt om kring på skjermen. Kan du gjere ferdig koden og legge til blokker i "når spelar streifer"-hendinga slik at du både spelar ein lyd og scorer eit poeng når Sid og Granny kolliderer? Trykk Kjør for å spele spelet.'
         studio_iceage_warn_ice_age: 'Alle treng å bevege seg raskare fordi ei istid kjem! Endre bakgrunnen til "isfjell" og sett Sid sin fart til rask, klikk Køyr og flytt han til Diego for å åtvare han.'
         studio_iceage_throw_hearts: 'Sid vil at bestemora hans, Granny, skal vite at han er glad i ho. Bruk "spelar kastar"-kommandoen slik at Sid (spelar 1) kastar hjarte på Granny (spelar 2)! Endre Grannys humør til "glad" når ho blir truffe av hjarta.'
@@ -331,7 +331,7 @@ nn:
         studio_gumball_warn_food_fight: 'Darwin rømde nettopp frå matkrigen! Endre bakgrunnen til "karakterar" og sett Darwin sin fart til rask. Trykk Køyr og flytt han til Penny for å åtvare ho.'
         studio_gumball_join_food_fight: 'Delta i matkrigen! Bruk kommandoen "spelar kaste element høgre" for at Banana Joe (spelar 1) skal kaste mat på Anton (spelar 2)! Sett humøret til Anton til "sint" når han blir treft.'
         studio_gumball_free_play: Lag ditt eige spel eller historie. Når du er ferdig, klikk Fullfør for å la vennene dine prøve spelet på telefonen, nettbrettet eller datamaskinen!
-        studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
+        studio_full_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
         studio_k1_1: Kan du få denne hunden til å seie «hallo verda»?
         studio_k1_2: Kan du få hunden til å sei noko og så få katten til å seie noko etterpå?
         studio_k1_3: Kan du skrive eit program for å få denne hunden til å flytte seg til katten?
@@ -351,7 +351,7 @@ nn:
         applab_ec_simple: "Lag app'en din ved å bruke brikkene i verktykassa."
         turtle_ec_1_2: 'Teikn eit kvadrat. MERK: bruk din favorittfarge ved å velje den i den nye «pennFarge» blokka.'
         turtle_ec_1_10: 'Du klarte det! No kan du teikne akkurat det du vil. Noen morosame idear: Ein strekmann, eit snøflak eller ein spiral. Prøv også den nye «pennStørrelse»-blokka. Ha det gøy!'
-        studio_ec_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullør for å la venane dine prøve ditt spel på sine mobilar.
+        studio_ec_sandbox: Lag ditt eige spel. Når du er ferdig, trykk Fullfør for å la venane dine prøve ditt spel på sine mobilar.
     video:
       name:
         maze_intro: Labyrint introduksjon
@@ -383,7 +383,7 @@ nn:
         C1_moveitmoveit_unplugged: Flytt den, flytt den
         C1_bigevent_unplugged: Den store hendinga
         C1_getting_loopy: Me blir sløyfete
-        C1_pair_programming: Par programmering
+        C1_pair_programming: Parprogrammering
         C1_maze_intro_sequencing: Labyrint sekvensering introduksjon
         C1_maze_debugging: Labyrint feilsøking
         C1_bee_level_intro: 'Bie nivå - introduksjon'
@@ -418,9 +418,9 @@ nn:
         C3_bee_functions: Bier Funksjonar
         C3_bee_conditionals: Bier Vilkår
         C3_maze_conditionals: Labyrint Vilkår
-        C3_artist_nested_loops: Nøsta løkker
-        C3_farmer_while: Mendan-løkker
-        C3_bee_nested_loops: Nøsta løkker
+        C3_artist_nested_loops: Løkker i løkke
+        C3_farmer_while: Medan-løkker
+        C3_bee_nested_loops: Løkker i løkke
         C3_bee_debugging: Bier Feilsøking
         C3_bounce: Sprett
         C3_playlab_create_game: 'Spel lab - lag eit spel'
@@ -444,7 +444,7 @@ nn:
         C4_function_parameters: Funksjonar med parameter
         C4_conditionals: Betingelser
         C4_unplugged_algorithms: Algoritmer med Tangrammer
-        C4_unplugged_madlibs: Sprø Bibliotek
+        C4_unplugged_madlibs: Sprøtt Bibliotek
         C4_unplugged_variables: Variablar i Konvoluttar
         C4_unplugged_forloops: For-løkker
         C4_unplugged_parameters: Låtskriving med parametere
@@ -455,7 +455,7 @@ nn:
         playlab_intro: Introduksjon til Spelelaboratoriet
         playlab_events: Spelelaboratoriehendingar
         playlab_repeat_forever: Spelelaboratoriet gjenta for alltid
-        tutorial_puzzle_challenge: Opplæring Puzzle utfordring
+        tutorial_puzzle_challenge: Opplæring Oppgåve-utfordring
         infinity_playlab_intro: Spele-Lab – Introduksjon
         infinity_playlab_events: 'Spele-Lab - Hendingar'
         infinity_playlab_repeat_forever: 'Spele-Lab - Gjenta for alltid'
@@ -513,17 +513,17 @@ nn:
         mc_congrats_share: 'Minecraft - Gratulera'
         mc_congrats_no_share: 'Minecraft - Gratulera'
         gumball_intro: 'Gumball Kodetimen - Introduksjon'
-        gumball_events: 'Gumball Hour of Code - hendingar'
+        gumball_events: 'Gumball Kodetimen - hendingar'
         gumball_repeat: 'Gumball Kodetimen - Repeter argument'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Kodetimen Istid - Introduksjon'
+        iceage_events: 'Kodetimen Istid - Hendingar'
+        iceage_repeat: 'Kodetimen Istid - Gjenta-kommandoer'
     callout:
       text:
         drag_blocks: 'Dra ei "flytt"-blokk og fest den under den andre blokka'
         run: 'Trykk "Køyr" for å prøve programmet'
         watch_again: Klikk her for å sjå filmen igjen
-        gray_block_explanation: Blokker som er grå kan ikkje slettast. Kan du løsye oppgåva likevel?
+        gray_block_explanation: Blokker som er grå kan ikkje slettast. Kan du løyse oppgåva likevel?
         show_code_explanation: Klikk her for å sjå koden for programmet du lagar
         instructions_repeat_explanation: Instruksjonane for kvar oppgåve blir vist her
         category_explanation: Du har alle dei same blokkene, men dei har no blitt ordna i kategoriar
@@ -584,11 +584,11 @@ nn:
         arrows_move_actor: Bruk pilene til å flytte spelaren
         right_arrow_fireball: Bruk pil-høyre til å skyte eldkuler
         name_function: Skriv namnet på funksjonen din her
-        Infinity_move_right_runbutton: Legg til Flytt blokk her
+        Infinity_move_right_runbutton: Legg til Flytt-blokk her
         Infinity_move_directions_callout: Kva blokk vil få Baymax til å flytte opp når du trykker på pil opp?
         Infinity_move_directions_callout_arrow: Bruk desse pilene til å styre
         Infinity_move_collide_callout: Spel av ein lyd når denne hendinga skjer.
-        Infinity_repeat_callout: Plassér Flytt blokker innanfor her
+        Infinity_repeat_callout: Plassér Flytt-blokker innanfor her
         craft_run_button_callout: 'Trykk "Køyr" for å prøve programmet'
         craft_drag_block_callout: 'Dra ein "moveForward();"-blokk og klikk den fast under den andre blokka'
         craft_callout_preplaced: Vi har satt saman nokre blokker her for å hjelpe deg i gong

@@ -81,8 +81,8 @@
         header: Send invitation
         submit_button: Send an invitation
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: ඔබේ මුරපදය සකසන්න
+        submit_button: මගේ මුරපදය සකසන්න
     mailer:
       invitation_instructions:
         subject: Invitation instructions

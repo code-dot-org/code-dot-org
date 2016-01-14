@@ -697,7 +697,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: Loops
+        C4_loops_zombie: لوپس
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -715,9 +715,9 @@
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
+        frozen_intro: آور-آف-کوڈ کا تعارف
+        frozen_loops: انٹروڈکشن ٹو لوپس
+        frozen_functions: انٹروڈکشن ٹو فنکشنز
         playlab_intro: Introduction to Play Lab
         playlab_events: Play Lab Events
         playlab_repeat_forever: Play Lab Repeat Forever
@@ -731,9 +731,9 @@
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: Introduction to Functions
+        csp_applab_functions: انٹروڈکشن ٹو فنکشنز
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: Loops
+        csp_applab_loops: لوپس
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
@@ -835,13 +835,14 @@
           the Bee will turn to get the nectar.
         logic_category: Open the "Logic" flyout to find the "if/else" block.
         length_parameter: Can you update this function so it uses the "length" parameter?
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: Don't forget to turn after creating
-          each circle.
-        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
-          and change the size.
-        frozen_snowflake_branch: Use the "create a snowflake branch" block
-        frozen_create_square: Attach more blocks here to create a square
+        frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
+        frozen_circle_function_in_circle_turn: ہر سرکل کری-ایٹ کرنے کے بعد ٹرن کرنا
+          نہ بھولیں۔
+        frozen_circle_function_with_parameter_circle: '"کری-ایٹ اے سرکل" بلاک استعمال
+          کریں اور سائز تبدیل کریں۔'
+        frozen_snowflake_branch: '"کری-ایٹ اے سنوفلیک برانچ" بلاک استعمال کریں'
+        frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ
+          کریں
         playlab_drag_say: Drag the "say" block here and type "hello"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl

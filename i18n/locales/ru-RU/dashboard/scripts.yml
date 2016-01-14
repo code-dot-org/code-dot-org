@@ -29,7 +29,7 @@ ru:
           Artist 2: Художник 2
           Happy Maps: Весёлые карты
           Move it, Move it: Двигай это, двигай это
-          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посади зерно'
+          "Real-life Algorithms: Plant a Seed": 'Алгоритмы из повседневной жизни: Посади семена'
           Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
           The Big Event: Большое Событие
@@ -43,7 +43,7 @@ ru:
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
           "Artist: Loops": 'Художник: Циклы'
           description_audience: Возраст 4+ (для начинающих и ещё не умеющих читать)
-          description_short: Курс 1 создан для тех, кто начинает читать.
+          description_short: Начните с Курса 1, который создан для тех, кто начинает читать.
         course2:
           The Maze: Лабиринт
           Suzi: Сюзи
@@ -62,7 +62,7 @@ ru:
           Bee Functions: 'Пчела: Процедуры'
           Maze Loops: 'Лабиринт: Циклы'
           Graph Paper Programming: Программирование на бумаге в клеточку
-          "Real-life Algorithms: Paper Planes": 'Реальные алгоритмы: Бумажные самолетики'
+          "Real-life Algorithms: Paper Planes": 'Алгоритмы из повседневной жизни: Бумажные самолетики'
           Getting Loopy: Зацикливание
           Relay programming: Эстафетное программирование
           Conditionals: Условные команды
@@ -82,7 +82,7 @@ ru:
           "Maze: Sequence2": 'Лабиринт: Последовательность2'
           "Artist: Nested Loops": 'Художник: Вложенные циклы'
           description_audience: Возраст 6+ (необходимо уметь читать)
-          description_short: Курс 2 создан для учеников, умеющих читать.
+          description_short: Начните с Курса 2, который создан для учеников, умеющих читать.
         course3:
           The Maze: Лабиринт
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
@@ -107,7 +107,7 @@ ru:
           Internet: интернет
           Crowdsourcing: Краудсорсинг
           Digital Citizenship: Цифровое гражданство
-          Farmer - While Loops: 'Фермер - Цикл "Пока"'
+          Farmer - While Loops: 'Фермер: Цикл "Пока"'
           description: Курс 3 разработан для учеников, освоивших Курс 2. Ученики будут глубже вникать в темы, с которыми познакомились в предыдущем курсе, осваивая решение более сложных задач. К концу курса ученики создают интерактивные истории и игры, которыми они могут поделиться с другими. Рекомендовано для 4-5 классов.
           "Studio: Create a Game": 'Лаборатория игр: Создай игру'
           Maze: Лабиринт
@@ -146,7 +146,7 @@ ru:
           description_short: Рисуйте картины и узоры вместе с Художником!
         hourofcode:
           Maze: Лабиринт
-          title: Classic Maze
+          title: Классический лабиринт
           description: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
           description_short: Постигай азы программирования с персонажами Angry Birds, Plants vs. Zombies, и Скратом из Ледникового периода!
         frozen:
@@ -680,6 +680,7 @@ ru:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1166,7 +1167,7 @@ ru:
           description_audience: Ages 6-13
           Happy Maps: Весёлые карты
           Move it, Move it: Двигай это, двигай это
-          "Real-life Algorithms: Plant a Seed": 'Реальные алгоритмы: Посади зерно'
+          "Real-life Algorithms: Plant a Seed": 'Алгоритмы из повседневной жизни: Посади семена'
           Graph Paper Programming: Программирование на бумаге в клеточку
           Building a Foundation: Создание основы
           Getting Loopy: Зацикливание
@@ -1234,6 +1235,7 @@ ru:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,21 @@ ru:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development

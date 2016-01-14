@@ -169,9 +169,8 @@
           and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: 就如同我們可以把 "如果" 的積木放進 "重複" 的組合積木裡頭一樣, 我們也可以把 "如果 否則“ 的組合積木放進 "重複" 的組合積木裡面.
+          如此一來殭屍將會不停的前進, 同時也會根據 ”如果 否則" 積木的執行下不斷的判斷尋找是否有地方可以轉彎.
       4:
         image: notes/hoc5_4.jpg
         text: Now, get those zombies where they belong!
@@ -181,11 +180,8 @@
         text: 一個 if else 的敘述是指兩件事情間的決定。讓我們跟夥伴松鼠Scrat一起來看看如何利用 if else的敘述句吧
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: 這個積木看起來就像是 "如果" 積木, 但是這個積木的下方多出來了一個 "否則" 的部分. 如果我把 "向前移動" 的積木放在了寫著 "就做"
+          的框框裡, 同時把一個 "向左轉" 的積木放在寫著 "否則" 的框框裡頭, 這時候小松鼠如果發現前面有路徑可以走他就會往前移動前進, 否則她會因為沒有前進的路而向左轉身.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: It's making a decision and doing one of the two actions based on that
@@ -2903,8 +2899,7 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: 右邊的白色空間稱為工作空間，我們在這裡建立程式。
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

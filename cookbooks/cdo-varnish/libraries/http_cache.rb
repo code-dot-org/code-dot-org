@@ -10,10 +10,24 @@ class HttpCache
   LANGUAGE_HEADER = %w(Accept-Language)
   LANGUAGE_COOKIES = %w(language_ pm)
 
+  # A map from script name to script level URL pattern.
+  CACHED_SCRIPTS_MAP = {
+    'starwars' => '/s/starwars/stage/1/puzzle/*',
+    'starwarsblock' => '/s/starwarsblocks/stage/1/puzzle/*',
+    'mc' => '/s/mc/stage/1/puzzle/*',
+    'frozen' => '/s/frozen/stage/1/puzzle/*',
+    'gumball' => '/s/gumball/stage/1/puzzle/*',
+    'hourofcode' => '/hoc/*'
+  }
+
+  def self.cached_scripts
+    CACHED_SCRIPTS_MAP.keys
+  end
+
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
-# Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
-# This hash provides extra application-specific configuration for whitelisting specific request headers and
-# cookies based on the request path.
+  # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
+  # This hash provides extra application-specific configuration for whitelisting specific request headers and
+  # cookies based on the request path.
   def self.config(env)
     env_suffix = env.to_s == 'production' ? '' : "_#{env}"
     session_key = "_learn_session#{env_suffix}"
@@ -37,7 +51,8 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
+            # Allow the company cookie to be read and set to track company users for tutorials.
+            cookies: whitelisted_cookies + ['company']
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
@@ -98,14 +113,7 @@ class HttpCache
             cookies: whitelisted_cookies
           },
           {
-            path: %w{
-               /s/starwars/stage/1/puzzle/*
-               /s/starwarsblocks/stage/1/puzzle/*
-               /s/mc/stage/1/puzzle/*
-               /s/frozen/stage/1/puzzle/*
-               /s/gumball/stage/1/puzzle/*
-               /hoc/*
-            },
+            path: CACHED_SCRIPTS_MAP.values,
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES
           },
@@ -134,5 +142,10 @@ class HttpCache
         }
       }
     }
+  end
+
+  # Return true if the levels for the given script name can be publicly cached by proxies.
+  def self.allows_public_caching_for_script(script_name)
+    CACHED_SCRIPTS_MAP.include?(script_name)
   end
 end

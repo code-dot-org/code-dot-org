@@ -436,7 +436,7 @@ es:
         C3_functional_suncatchers: Tragaluces Funcionales
         C3_songwriting_with_parameters: Composición Musical con Parámetros
         C4_intro: Introducción
-        C4_loops_zombie: Iteraciones
+        C4_loops_zombie: Bucles
         C4_bee_conditional: Condiciones de la Abeja
         C4_variables_artist: 'Variables - Artista'
         C4_variables_playlab: 'Variables - Laboratorio de juego'
@@ -472,7 +472,7 @@ es:
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
-        csp_applab_loops: Iteraciones
+        csp_applab_loops: Bucles
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Un poco más de píxeles
         csp_pixelation_color_1: 'Reproductor Color pixelación - parte 1'
@@ -520,9 +520,9 @@ es:
         gumball_intro: 'Hora del Código de Gumball - introducción'
         gumball_events: 'Hora del Código de Gumball - Eventos'
         gumball_repeat: 'Hora del Código de Gumball - instrucciones Repetir'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        iceage_intro: 'Hora de código Era del Hielo - Introducción'
+        iceage_events: 'Hora de Código Era del Hielo - Eventos'
+        iceage_repeat: 'Hora de Código Era del Hielo - Repetir comando'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'

@@ -58,3 +58,7 @@
   fill: white;
   stroke: black;
   stroke-width: 2; }
+
+/* fix transform-origin for IE / RTL in flappy levels */
+html[dir="RTL"] div#visualization.responsive > svg {
+  -ms-transform-origin: 0 0; }

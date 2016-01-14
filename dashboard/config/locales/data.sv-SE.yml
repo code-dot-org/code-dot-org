@@ -515,7 +515,7 @@
         studio_playlab_1: Pingvinen vill säga "Hej" - kan du hjälpa honom?
         studio_playlab_2: Grottpojken (skådespelare 1) och grottflickan (skådespelare
           2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket
-          "säga" två gånger?
+          "säg" två gånger?
         studio_playlab_3: Kan du hjälpa Tennisflickan att komma till flaggan?
         studio_playlab_4: Kan du hjälpa Tennispojken (skådespelare 1) att komma till
           Tennisflickan (skådespelare 2) och spela upp ett ljud när han kommer dit?
@@ -536,42 +536,43 @@
           Rymdroboten och varna alla andra
         studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför
           för att låta vänner prova ditt spel på sina telefoner.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_hello1: Sid vill samla alla för ett nytt äventyr. Kan du hjälpa
+          honom att säga "hej" genom att dra ett "säg"-block ut i arbetsytan och skriva
+          ordet "hej" inuti?
+        studio_iceage_hello2: Sid (figur 1) hittade Manny (figur 2) och vill bjuda
+          in honom till äventyret. Hjälp dem att hälsa på varandra genom att använda
+          blocket "figur säg" två gånger.
+        studio_iceage_move_to_flag: Scrat letar efter sitt ekollon! Hjälp honom att
+          gå de sista 200 pixlarna genom att använda blocket "flytta".
+        studio_iceage_move_to_actor: Diego (skådespelare 1) söker efter Manny (skådespelare
+          2). Hjälp Diego flytta 200 pixlar ner till Manny genom att använda blocket
+          "flytta skådespelare". Anslut ett block till händelsen "när skådespelare
+          berör" för att spela ett ljud när de hittar varandra.
+        studio_iceage_repeat: Med "Upprepa forever" blocket kan du köra kod kontinuerligt.
+          Kan du bifoga ett block till det att för hjälpa farmor få lite motion genom
+          att flytta vänster och höger upprepade gånger?
+        studio_iceage_click_hello: Kan du hjälpa Sid ringa ett sista samtal till vänner
+          när du klickar på? Glöm inte att klicka på honom när du trycker Run.
+        studio_iceage_move_events: Scrat söker fortfarande efter ekollon! Hjälp honom
+          att rusa runt genom att fästa "move" blocket till var och en av händelserna
+          och genom att ändra riktning så att den fungerar för varje pil. När du är
+          klar, klicka på kör och försöka samla ihop alla ekollon.
+        studio_iceage_sound_and_points: Vi har gett dig den mesta av koden som gör
+          att Anton (skådespelare 2) flyttar sig till vänster och till höger samt
+          koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen. Kan du
+          avsluta koden och lägga block till händelsen "när skådespelare berör" så
+          att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton
+          kolliderar? Tryck på "Kör" för att spela spelet.
+        studio_iceage_warn_ice_age: Alla behöver gå snabbare eftersom en istid är
+          på väg! Ändra bakgrunden till en isig bakgrund och ange Sids hastighet till
+          snabbt. Tryck sedan på Kör och flytta honom till Diego för att varna honom.
+        studio_iceage_throw_hearts: "Sid vill låta sin mormor, farmor, veta att han
+          älskar henne. Med kommandot \"skådespelare kasta\" kastar Sid (skådespelare
+          1) hjärtan på farmor (skådespelare 2)! \nStäll in mormors, farmors humör
+          så att hon blir glad när hon blir träffad av hjärtan.\n"
+        studio_iceage_free_play: Skapa ditt eget spel eller din egen berättelse. När
+          du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel
+          på sina telefoner, surfplattor eller datorer!
         studio_gumball_hello1: Anais vill få lite nya vänner. Kan du hjälpa henne
           att säga "hej" genom att dra blocket "säg" till arbetsytan och skriva ordet
           "hej" i det?
@@ -743,7 +744,7 @@
         C4_unplugged_forloops: '''För'' loopar'
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
-        frozen_intro: Introduktion Hour of Code
+        frozen_intro: Kodtimmen introduktion
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
         playlab_intro: Introduktion till Play Lab
@@ -807,11 +808,11 @@
         mc_congrats_share: Minecraft - Grattis
         mc_congrats_no_share: Minecraft - Grattis
         gumball_intro: Gumball En timme av kod - introduktion
-        gumball_events: Gumball En timme av kod - händelser
+        gumball_events: Gumball Kodtimmen - händelser
         gumball_repeat: Gumball En timme av kod - Upprepa-satser
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_intro: Ice Age timme av kod - introduktion
+        iceage_events: Ice Age Kodtimmen - händelser
+        iceage_repeat: Ice Age timme av kod - upprepa påståeenden
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
@@ -827,7 +828,7 @@
           börjar" blocket för att ange figur/actor i  denna berättelse
         studio_say_text: Skriv vad du vill att din figur ska säga inom dessa citat
         jigsaw_click: Klicka på detta block!
-        move_elsa_forward: Dra ett "gå framåt" block och fäst det under "när startat"
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start"
           blocket för att få Elsa att gå framåt
         turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i
           rullistan bestämmer hur mycket hon svänger
@@ -870,7 +871,7 @@
           ändra storleken.
         frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
         frozen_create_square: Lägg till fler block här för att skapa en kvadrat
-        playlab_drag_say: Dra blocket "säga" här och skriv "Hej"
+        playlab_drag_say: Dra blocket "säg" här och skriv "Hej"
         playlab_use_twice: Använda detta block två gånger och kom ihåg att ändra figur
           numret
         playlab_move_girl: Använda "flytta höger" blocket för att flytta tennis-flickan

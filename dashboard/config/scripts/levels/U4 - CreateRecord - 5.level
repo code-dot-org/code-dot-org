@@ -15,8 +15,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add the provided javascript object as a record to a table. (Click to see full instructions)",
-    "markdown_instructions": "# Multiple Records\r\n\r\nCant call createRecord more than once in a program to add differnt records\r\n\r\n** NOTE: ** This is not a pull through level so the data from the last level has not been transferred to this level. \r\n\r\n# Do This\r\nStarter code has been provided that makes a javascript object of Mickey Mouse and calls createRecord for Mickey Mouse\r\n\r\n* Look at the data viewer to check that the there is no data to start with. \r\n* Create a javascript object for another cartoon character. The cartoon character should have a name and gender just like Mickey Mouse.\r\n* Add another `createRecord` to add your new cartoon character.  \r\n* Run the program. \r\n* Go look at the table to check that it worked.",
+    "instructions": "Add a property to the JavaScript object, then run the program.  View the data table and see how changing the object affects the data table. (Click to see full instructions)",
+    "markdown_instructions": "# What happens when you change the object?\r\n\r\nLet's experiment by adding a property to the object and storing it again.\r\n\r\n# Do This\r\n\r\n* **Add a property** to the song object: `song.artist = \"Beyonce\"`. It should now have 3 properties: title, seconds, and artist.\r\n* **Run the program** so that your updated object is added to the database. You shouldn't need to change anything about the call to `createRecord` \r\n* In the Data Viewer **confirm the new record was added to the table**. You'll learn more about the changes you see in the next exercise.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -45,7 +45,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "start_blocks": "var mickeyMouse = {};\r\nmickeyMouse.name = \"Mickey Mouse\";\r\nmickeyMouse.gender = \"Male\";"
+    "project_template_level_name": "U4 - Exploring Data Tools - Template",
+    "slider_speed": "1.0"
   }
 }]]></config>
   <blocks/>

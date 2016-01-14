@@ -710,7 +710,22 @@ input[type="radio"] {
   width: 50px;
   padding-right: 10px;
   padding-bottom: 10px;
-  height: auto; }
+  height: auto;
+  /* authored hints */ }
+  #prompt-icon-cell.authored_hints {
+    width: 80px; }
+    #prompt-icon-cell.authored_hints #prompt-icon {
+      padding-top: 20px; }
+    #prompt-icon-cell.authored_hints #lightbulb {
+      position: absolute;
+      left: 40px; }
+      #prompt-icon-cell.authored_hints #lightbulb #hintCount {
+        font-weight: bold;
+        font-size: 400px;
+        fill: white;
+        stroke: black;
+        stroke-width: 30px;
+        font-family: Verdana, Geneva, sans-serif; }
 
 #prompt-cell {
   vertical-align: top; }
@@ -986,8 +1001,8 @@ input[type="radio"] {
         text-decoration: underline; }
   .generated-code-container .generatedCode {
     font-size: 14px;
-    overflow: auto;
-    max-height: 150px; }
+    overflow: scroll;
+    max-height: 400px; }
 
 .light-yellow-background {
   background-color: #fff7df; }
@@ -2176,6 +2191,11 @@ a.video_link {
     html[dir=rtl] .dash_modal #show-code, html[dir=rtl] .dash_modal #feedbackButtons, html[dir=rtl] .dash_modal #puzzleRatingButtons, html[dir=rtl] .dash_modal #sharing {
       margin-right: -100px;
       margin-left: 0; }
+  @media screen and (max-height: 630px) {
+    .dash_modal .win-feedback #sharing .feedback-image {
+      margin-left: 80px;
+      width: 90px;
+      height: 90px; } }
   .dash_modal #sharing {
     color: #e7e8ea; }
     .dash_modal #sharing button {

@@ -286,7 +286,7 @@ nn:
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Vel ei algoritme for det gitt bildet vedlagt.
+        Choose an algorithm for the image provided.: Vel ei algoritme for det vedlagte bildet.
         Multiple Choice: Fleirval
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start med ein firkant<br/>Sett eit parallellogram over firkanten<br/>Sett ein trekant til høgre for parallellogrammet'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start med eit kvadrat<br/>Set  ein trekant over kvadratet<br/>Set ein trekant under kvadratet'
@@ -350,7 +350,7 @@ nn:
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
         Multiple Choice: Fleirval
-        Which image-program combo does not contain mistakes?: Kva for billed-program kombinasjon inneheld ikkje feil?
+        Which image-program combo does not contain mistakes?: Kva for billed-program-kombinasjon inneheld ikkje feil?
       2-3 artist debug multi 1:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
@@ -412,7 +412,7 @@ nn:
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
         /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500
         Bee Loops Multiple Choice One: Bier Løkker Fleirval Ein
-        Which blocks collect all of the nectar?: Kva for blokker samler alle nektaren?
+        Which blocks collect all of the nectar?: Kva for blokker samler all nektaren?
       2-3 maze multi 1:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
@@ -427,7 +427,7 @@ nn:
         Brushing your teeth: Pusse tenna
         Multiple Choice: Fleirval
         Shopping from a grocery list: Handle med ei handleliste
-        Which one of these items is hardest to describe an algorithm for?: Kva for av desse elementa er det vansklegast å beskrive ei algoritme til?
+        Which one of these items is hardest to describe an algorithm for?: Kva for eit av desse elementa er det vansklegast å beskrive ei algoritme til?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene er ein _____ by.
         0: '? Her er tre setningar. Kva for ein av malane under abstraherer rett, slik at alle tre passar i det samme mønsteret som malen?'
@@ -441,7 +441,7 @@ nn:
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
         /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
         Multiple Choice: Fleirval
-        Which of these pictures best represents crowdsourcing?: Kva for eit av desse bilda illusterer crowdsourcing best?
+        Which of these pictures best represents crowdsourcing?: Kva for eit av desse bilda illustrerer crowdsourcing best?
       4-5 Crowdsourcing Multi 2:
         Brushing your hair: Børste håret
         Cleaning your room: Rydde rommet ditt

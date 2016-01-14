@@ -731,7 +731,7 @@ nn:
         text: 'Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet. Hva hvis jeg vil at fuglen skal gjøre noe annet etterpå? Da legger jeg til en blokk til i programmet vårt.'
       4:
         image: notes/C2_maze_intro_4.png
-        text: 'Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil feste seg sammen. Når jeg trykker på "kjør" igjen, vil fuglen gjøre kommandoene som er stablet i arbeidsområdet fra toppen og nedover.'
+        text: 'Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken, til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil feste seg sammen. Når jeg trykker på "Kjør" igjen, vil fuglen gjøre kommandoene som er stablet i arbeidsområdet fra toppen og nedover.'
       5:
         image: notes/C2_maze_intro_5.png
         text: 'Hvis du vil slette en blokk, kan du dra den vekk fra stablen og dra den til søppelkassen. Etter at du trykker "kjør", kan du alltid velge "nullstill" for å få fuglen tilbake til start. La oss fange grisene!'
@@ -810,7 +810,7 @@ nn:
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: 'Når du setter en løkke inni en annen løkke, kaller vi det en nøstet løkke. For eksempel, her er koden for å tegne en trekant med sider som er 100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre - en for hver side av trekanten.'
+        text: 'Når du setter en løkke inni en annen løkke, kaller vi det en løkke i løkke. For eksempel, her er koden for å tegne en trekant med sider som er 100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre - en for hver side av trekanten.'
       2:
         image: notes/C3_artist_nested_loops_2.png
         text: Men vi vil tegne seks trekanter. For å gjøre det, må vi ta løkken og plassere den inni en annen gjenta-ganger-blokk. Ganske kult!
@@ -850,7 +850,7 @@ nn:
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Nå skal vi bruke nøstede løkker med bien. Vi har fått litt kode å starte med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter snu seg mot høyre. La oss ta hele kodestykket og nøste det inni en annen gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
+        text: Nå skal vi bruke løkker i løkker med bien. Vi har fått litt kode å starte med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter snu seg mot høyre. La oss ta hele kodestykket og legge det inni en annen gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
@@ -860,7 +860,7 @@ nn:
         text: For å komme i gang må vi koble styringen av rekkerten til piltastene på tastaturet.
       3:
         image: notes/C3_bounce_3.png
-        text: 'Dette gjør vi ved å koble "når venstre pil"-blokken til "flytt til venstre"-blokken, og "når høyre pil"-blokken til "flytt til høyre"-blokken. Prøv det, så er du i gang med å programmere ditt eget sprettespill så fort som bare det!'
+        text: 'Dette gjør vi ved å koble "når pil venstre"-blokken til "flytt venstre"-blokken, og "når pil høyre"-blokken til "flytt høyre"-blokken. Prøv det, så er du i gang med å programmere ditt eget sprettespill så fort som bare det!'
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1395,7 +1395,7 @@ nn:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1470,7 +1470,7 @@ nn:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1671,7 +1671,7 @@ nn:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger opp programmet.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

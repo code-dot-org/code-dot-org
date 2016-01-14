@@ -124,6 +124,17 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {},
           "title": "setText"
         },
+        "getNumber": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "getNumber",
+          "value": true
+        },
+        "setNumber": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "setNumber"
+        },
         "checkbox": {
           "color": "#FFF176",
           "dropdown": {
@@ -351,6 +362,11 @@ describe('generateDropletModeOptions', function () {
           "value": true,
           "color": "#D3E965",
           "title": "getUserId"
+        },
+        "drawChart": {
+          "color": "#D3E965",
+          "dropdown": {},
+          "title": "drawChart"
         },
         "drawChartFromRecords": {
           "color": "#D3E965",

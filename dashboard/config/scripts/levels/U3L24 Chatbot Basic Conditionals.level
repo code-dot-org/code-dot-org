@@ -149,7 +149,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "true",
     "instructions": "Check out the project description for instructions. (Click to see full instructions.)",
-    "markdown_instructions": "# Digital Assistant Project\r\n\r\n**Your Digital Assistant Project is back!**\r\n\r\n# Do This:\r\n\r\n* **Use the flowchart you have developed to implement the logic that will be used for your digital assistant to \"intelligently\" respond to user input.**\r\n* Once you're done, **submit your project!**\r\n",
+    "markdown_instructions": "# Digital Assistant Project\r\n\r\n**Your Digital Assistant Project is back!** Now that you've learned how to use conditional logic to control your program flow, it's time to add functionality to the digital assistant you previously designed.\r\n\r\n# Do This:\r\n\r\n* You should have already created a flowchart to design the logic for your digital assistant. \r\n* **Use your flowchart to program your digital assistant so that it \"intelligently\" responds to user input.**\r\n\t* Feel free to make changes to your existing project in Design Mode, if needed.\r\n* **Test your program thoroughly** to make sure your digital assistant responds to user input appropriately.\r\n* Once you're done, **submit your project!**\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",

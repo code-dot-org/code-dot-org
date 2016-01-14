@@ -20,6 +20,8 @@ hu-HU:
   submit: Elküldés
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
   twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról és a programozási koncepciókról a következő tanfolyamon.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014. December 8-14.<br/>'
   hoc2014_students: Tanuló
   hoc2014_try: Próbáld ki
@@ -225,7 +227,7 @@ hu-HU:
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: '# fő már kipróbálta'
   homepage_solot_text_link_volunteer: Önkéntes az kódolás órájához
-  homepage_slot_text_title_students: Diákok
+  homepage_slot_text_title_students: Tanuló
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
   homepage_slot_text_link_local: Keress egy helyi osztályt
@@ -294,7 +296,7 @@ hu-HU:
   starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_specs: 'Több nyelv | Modern böngészők, okostelefonok, táblagépek | Korosztál: 6-10 évesek'
   starwars_blocks_start_button: Próbálja ki most
   starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
   starwars_speak_languages: Beszél egy másik nyelven is?
@@ -305,16 +307,17 @@ hu-HU:
   mc_shortdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
   mc_gradelevel: 4-től 104 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
   minecraft_subtitle: Minecraft Kódolás Órája
   volunteer_engineer_submission_title: Ösztönözz tanulókat és önkénteseket a Kódolás Órájára.
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} tanárnak van szüksége számítástechnikai oktatással lelkesedő önkéntesekre, akik segítenének nekik idén decemberben a Kódolás Órája lebonyolításában.<br>%{num_volunteers} önkéntes már csatlakozott. Csatlakozz hozzájuk.'
   volunteer_engineer_submission_intro_background: A Kódolás Órája egy globális mozgalom, amely abban segít, hogy kipróbáld egy órán keresztül a programozást, amely már diákok millióihoz jutott el már a világ több, mint 180 országban. Kérlek vegyél részt rajta a Számítástechnikai Oktatási Hét keretein belül december 7-13. között.
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Not looking to volunteer? <a href="%{learn_more}">Learn more</a> about organizing your own Hour of Code event and finding a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Az információ meg lett osztva az önkéntes tanárok térképén
   volunteer_engineer_submission_field_name: Név
   volunteer_engineer_submission_field_name_placeholder: Teljes név
@@ -549,6 +552,8 @@ hu-HU:
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Közlemények
   dashboard_announce_view_all: Összes megtekintése
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_button_text: Tudj meg többet
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
   code_hoc_coming: 'Megkezdődött a Kódolás Órája - December 8-14.'
@@ -607,8 +612,8 @@ hu-HU:
   mobile_devices: Oktatóanyagok mobile eszközökre
   frozen_name: Kódolás Annával és Elsával
   starwars_name: 'Star Wars: A galaxis építése kódolássa'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Hagyományos Útvesztö
+  codeintl_name: Hagyományos Útvesztö
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Bevezetés a JavaScriptbe
   khanes_name: Bevezetés a JavaScriptbe
@@ -644,7 +649,7 @@ hu-HU:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kő, papír, olló
-  hourofcode_name: Classic Maze
+  hourofcode_name: Hagyományos Útvesztö
   playlab_name: Játéklabor
   infinity_name: Infinity játéklabor
   artist_name: Művész
@@ -846,7 +851,7 @@ hu-HU:
   playlab_longdescription: Hozz létre egy történetet, vagy készíts egy játékot a Play Lab-bal! Hozd mozgásba az állatokat, a kalózokat, a zombikat, nindzsákat, és a többi karaktert, adj hozzá hangot, pontozd az eredményt, és még dobálj tűzgolyókat is!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flare. Use code to tell the story you want to tell!
+  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

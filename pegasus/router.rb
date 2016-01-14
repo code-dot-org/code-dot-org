@@ -67,7 +67,9 @@ class Documents < Sinatra::Base
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
   def self.set_max_age(type, default)
-    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", rack_env?(:staging) ? 60 : default) }
+    default = 60 if rack_env? :staging
+    default = 0 if rack_env? :development
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", default) }
   end
 
   ONE_HOUR = 3600
@@ -406,13 +408,26 @@ class Documents < Sinatra::Base
       full_document
     end
 
+    def log_drupal_link(dir, uri, path)
+      if dir == 'drupal.code.org'
+        Honeybadger.notify(
+          error_class: "Link to v3.sites/drupal.code.org",
+          error_message: "#{uri} fell through to the base config directory",
+          environment_name: "drupal_#{rack_env}",
+          context: {path: path}
+        )
+      end
+    end
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
-        return path if File.file?(path)
+        if File.file?(path)
+          log_drupal_link(dir, uri, path)
+          return path
+        end
       end
       nil
     end
@@ -421,7 +436,10 @@ class Documents < Sinatra::Base
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
-          return path if File.file?(path)
+          if File.file?(path)
+            log_drupal_link(dir, "#{uri}#{extname}", path)
+            return path
+          end
         end
       end
       nil

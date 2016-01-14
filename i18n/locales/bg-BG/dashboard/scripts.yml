@@ -146,7 +146,7 @@ bg:
           description_short: Начертайте готини картинки и дизайни с художника!
         hourofcode:
           Maze: Лабиринт
-          title: Classic Maze
+          title: Класически лабиринт
           description: Опитайте основите на програмирането с героите отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
           description_short: Опитайте основите на програмирането с много забавни герои!
         frozen:
@@ -680,6 +680,7 @@ bg:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -1234,6 +1235,7 @@ bg:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,21 @@ bg:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1457,10 +1474,10 @@ bg:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: 'Гъмбъл- игрална лаборатория'
-          description_short: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          description: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          Gumball Play Lab: 'Гъмбъл- игрална лаборатория'
+          title: 'Гъмбол- игрална лаборатория'
+          description_short: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          Gumball Play Lab: 'Гъмбол- игрална лаборатория'
         starwars:
           title: 'Междузвездни войни: Изграждане на галактика с код'
           description_short: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
