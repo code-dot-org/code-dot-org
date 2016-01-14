@@ -17,14 +17,15 @@ window.dashboard.StageProgress = (function (React) {
   return React.createClass({
     propTypes: {
       levels: dashboard.STAGE_PROGRESS_TYPE,
-      currentLevelIndex: React.PropTypes.number
+      currentLevelIndex: React.PropTypes.number,
+      outerClass: React.PropTypes.string
     },
 
     render: function () {
       var lastIndex = this.props.levels.length - 1;
       var progressDots = this.props.levels.map(function (level, index) {
 
-        var innerClass = 'level_link ' + level.status;
+        var innerClass = 'level_link ' + (level.status || 'not_tried');
         if (level.kind == 'unplugged') {
           innerClass += ' unplugged_level';
         }
@@ -37,14 +38,19 @@ window.dashboard.StageProgress = (function (React) {
 
         return ([
           <div className={outerClass}>
-            <a id={'header-level-' + level.id} href={level.link} className={innerClass}>{level.title}</a>
+            <a id={'header-level-' + level.id}
+              href={level.link || level.url}
+              className={innerClass}
+              style={level.url ? isNaN(level.title) ? {'font-size': '13px', padding: '4px 10px', margin: '1px'} : {padding: '5px 4px 3px 4px', margin: '1px'} : {}}>
+              {level.title}
+            </a>
           </div>,
           ' '
         ]);
       }.bind(this));
 
       return (
-        <div className="progress_container">
+        <div className={this.props.outerClass || 'progress_container'}>
           {progressDots}
         </div>
       );

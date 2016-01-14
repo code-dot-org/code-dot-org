@@ -17,11 +17,18 @@ window.dashboard.CourseProgress = (function (React) {
 
     render: function () {
       var rows = this.props.stages.map(function (stage) {
-        return <window.dashboard.StageProgress levels={stage.levels} />;
+        return (
+          <div className='game-group'>
+            <div className='stage'>
+              {stage.title}
+            </div>
+            <window.dashboard.StageProgress levels={stage.levels} outerClass='games' />
+          </div>
+        );
       });
 
       return (
-        <div className="user-stats-block">
+        <div className='user-stats-block'>
           {rows}
         </div>
       );
