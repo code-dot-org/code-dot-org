@@ -101,5 +101,11 @@ window.dashboard.progress = (function () {
     })));
   };
 
+  progress.renderCourseProgress = function (stages) {
+    $('.user-stats-block').replaceWith(React.renderToStaticMarkup(React.createElement(dashboard.CourseProgress, {
+      stages: stages
+    })));
+  };
+
   return progress;
 })();

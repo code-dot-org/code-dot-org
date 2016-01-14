@@ -1,6 +1,14 @@
-/* global React */
+/* global React, dashboard */
 
 window.dashboard = window.dashboard || {};
+
+window.dashboard.STAGE_PROGRESS_TYPE = React.PropTypes.arrayOf(React.PropTypes.shape({
+  title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
+  status: React.PropTypes.string,
+  kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle']),
+  link: React.PropTypes.string,
+  id: React.PropTypes.number
+}));
 
 /**
  * Stage progress component used in level header and course overview.
@@ -8,13 +16,7 @@ window.dashboard = window.dashboard || {};
 window.dashboard.StageProgress = (function (React) {
   return React.createClass({
     propTypes: {
-      levels: React.PropTypes.arrayOf(React.PropTypes.shape({
-        title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
-        status: React.PropTypes.string,
-        kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle']),
-        link: React.PropTypes.string,
-        id: React.PropTypes.number
-      })),
+      levels: dashboard.STAGE_PROGRESS_TYPE,
       currentLevelIndex: React.PropTypes.number
     },
 
