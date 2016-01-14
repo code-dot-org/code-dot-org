@@ -375,7 +375,7 @@ GEM
       rails (>= 3.1)
       react-source (~> 0.13)
     react-source (0.13.1)
-    redcarpet (3.2.3)
+    redcarpet (3.3.4)
     redis (3.1.0)
     ref (1.0.5)
     rerun (0.10.0)
@@ -580,7 +580,7 @@ DEPENDENCIES
   rack-ssl-enforcer
   rails (~> 4.2.4)
   react-rails (~> 1.0)
-  redcarpet (~> 3.2.3)
+  redcarpet (~> 3.3.4)
   redis (~> 3.1.0)
   rerun (~> 0.10.0)
   responders (~> 2.0)

@@ -113,7 +113,7 @@ gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.2.3'
+gem 'redcarpet', '~> 3.3.4'
 
 gem 'geocoder'
 
