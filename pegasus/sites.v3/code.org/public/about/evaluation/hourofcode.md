@@ -173,6 +173,8 @@ While it’s impossible to measure how much of the above is due to the Hour of C
 
 Also, in the 2 years since the first Hour of Code campaign, the largest cities in the U.S. have embraced computer science, and so have many states, and even entire countries have announced national curriculum plans. One cannot measure exactly how much the Hour of Code campaign has impacted these things, but the anecdotes show that the impact is real.  We have heard from countless educators - in cities like Chicago, states like Utah, or countries like Italy - that grassroots participation in the Hour of Code helped build support for top-down efforts to embrace computer science curriculum.  As one clear example, the 2013 Hour of Code campaign played a pivotal role in Arkansas’ education: [after Asa Hutchinson saw his granddaughter using the Hour of Code tutorials](http://www.arkansasonline.com/news/2015/feb/24/hutchinson-signs-measure-expanding-computer-scienc/), he made computer science education part of his gubernatorial campaign platform, and followed it up with [legislation to require computer science to be taught in every high school](http://www.wired.com/2015/03/arkansas-computer-science/). 
 
+<img width="100%" src="/images/2015AR/africa.png" />
+
 We can’t know what the K-12 CS landscape would look like without a grassroots campaign mobilizing hundreds of partners, hundreds of thousands of educators, and tens of millions of students. But what’s clear is that the education landscape has shifted significantly, globally, and we are thankful for *everybody* who has played a supporting role.
 
 

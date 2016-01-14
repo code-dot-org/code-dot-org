@@ -72,7 +72,7 @@ theme: none
 %button.btn.btn-white{'ng-click' => 'segment.addition = true', 'ng-show' => 'workshop.id', style:'margin-bottom:10px;'}
   Add Segment
 %div.jumbotron{'ng-show' => 'workshopSegments <= 0 && !segment.addition'}
-  There are currently no facilitators assigned to this workshop.
+  This workshop current has no segments.
 %table{'ng-hide' => 'workshopSegments <= 0 && !segment.addition', style:'width:100%;'}
   %tr
     %th
