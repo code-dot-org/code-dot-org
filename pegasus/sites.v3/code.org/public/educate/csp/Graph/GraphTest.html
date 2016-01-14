@@ -1,0 +1,98 @@
+<html>
+    <head>
+        
+        <script type="text/javascript" src="graph.js"></script>
+        <script type="text/javascript">
+           var G;
+           function makeGraph(){
+		
+        		G =new Graph();
+        		G.randomLocations = false;
+        	  
+        	   //(numNodes, maxDegree, minWeight, maxWeight, isUndirected, hasTour)
+          	    var numNodes = document.getElementById('numNodesSlider').value;
+                
+        		G.generateGraph(numNodes, 3, 1, 10, true, true);
+        		G.autoEdgeSelection = true;
+        		    
+        // 		var A = G.addNode("A");
+        // 		var B = G.addNode("B");
+        // 	    var C =	G.addNode("C");
+        // 		var D = G.addNode("D");
+
+                
+        // 		G.addEdge(A, B, 5);
+        //     	G.addEdge(A, C, 15);
+        //     	G.addEdge(B, C, 5);
+        //     	G.addEdge(C, D, 20);
+        //     	G.addEdge(D, A, 10);
+            	
+        	    console.debug(G);
+        	    G.draw(document.getElementById("myCanvas"));
+                G.setAllLocations();
+                
+                document.getElementById("edgeListText").value = G.getAdjListStr();
+
+           }
+               
+              
+           
+           function processMouse(e){
+                 
+                    G.handleMouseEvent(e);
+                   // console.debug("draw");
+                    G.draw(document.getElementById("myCanvas"));
+                
+             }    
+             
+             function processEdgeListText(){
+                 G = new Graph();
+                 G.randomLocations = false;
+                 var lines = document.getElementById("edgeListText").value.split("\n");
+                 //console.debug(lines);
+                 var nodesList = []; //assoc. array of nodes added key = name
+                 
+                 for(var i=0; i<lines.length; i++){
+                     if(lines[i].length > 0){
+                         var tokens = lines[i].split(",");  // name1, name2, weight
+                         console.debug(tokens)
+                         
+                         //if tokens[0] not in graph -- add it
+                         var node1 = G.getNodeByName(tokens[0].trim());
+                         if(node1==null){
+                             node1 = G.addNode(tokens[0].trim());
+                         }
+                         
+                         // if tokens[1] not in graph -- add it
+                         if(tokens.length >=2){
+                             var node2 = G.getNodeByName(tokens[1].trim());
+                             if(node2==null) node2 = G.addNode(tokens[1].trim());
+                             
+                             var w = 0;
+                             if(tokens.length>=3) w = parseInt(tokens[2].trim());
+                         
+                             G.addEdge(node1, node2, w);
+                         }
+                     }
+                     //add edge between
+                 }
+                 G.setAllLocations();
+                 G.draw(document.getElementById("myCanvas"));
+
+                 
+             }
+            
+               
+           
+           
+    </script>
+    </head>
+    <body onLoad="makeGraph()">
+    <h1>Minimum Spanning Tree</h1>
+    <input type=range min=4 max=26 id="numNodesSlider" value=10 oninput="makeGraph()">
+    <button onClick="makeGraph()">Remake</button>
+    
+     <canvas id="myCanvas" width="600px" height="400px" style="border:1px solid #000000;" onmousemove="processMouse(event)" ondblclick="processMouse(event)" onclick="processMouse(event)" onmouseup="processMouse(event)" onmousedown="processMouse(event)"></canvas>
+     <textarea id="edgeListText" onkeyup="processEdgeListText()" rows=20></textarea>
+    </body>
+</html>

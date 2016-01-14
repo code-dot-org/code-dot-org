@@ -12,14 +12,14 @@
     Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Es profesor de informática? Mira outros recursos de CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Proba unha</h1><h2>Hora do Código</h2><h3># xa o intentaron</h3>
+  n_have_learned_an_hoc: "<h1>Proba unha</h1><h2>Hora do Código</h2><h3># xa o intentaron</h3>"
   anybody_can_learn: Calquera pode aprender.
   learn_now: Aprende agora
   petition_message: Todos os alumnos, en todas as escolas, deberían ter a oportunidade
     de aprender a programar
   petition_sign_message: 'Se estás dacordo, asina co teu nome.  Únete a # outros.'
   petition_sign_message_support: 'Se nos apoias, asina co teu nome. Únete a # outros.'
-  petition_join_others: 'Únete a # outros'
+  petition_join_others: "Únete a # outros"
   name: Nome
   email: E-mail
   zipcode: Código postal ou país
@@ -39,8 +39,8 @@
   hoc2014_everyone: Calquera
   hoc2014_support: Apóiao &#x25BE;
   hoc2014_whatishoc: O que é a Hora do Código?
-  csedweek_map_header: '# Semana da Educación en informática / Hora do Código ao redor
-    do mundo'
+  csedweek_map_header: "# Semana da Educación en informática / Hora do Código ao redor
+    do mundo"
   csedweek_map_signup: Rexistra o teu evento
   csedweek_map_search_placeholder: Procura eventos sobre a Hora do Código
   csedweek_map_search_search: Procurar
@@ -70,7 +70,7 @@
     sentencias "se-senón" (if-else) e os algoritmos básicos.
   all_ages: Tódalas idades
   beginner: Principiante
-  n_participants: '# participantes'
+  n_participants: "# participantes"
   go: Ir
   thank_you_: Grazas!
   congratulations: Noraboa!
@@ -152,12 +152,12 @@
   boy: Masculino
   help_recruit_coders: Axúdanos a conseguir máis programadores para o teu equipo!
   help_recruit: Axúdanos a conseguir máis programadores!
-  lines_of_code: <b>#LIÑAS DE CÓDIGO</b> ESCRITAS ATÉ A DATA.
-  lines_of_code_alt: <b>#</b> LIÑAS DE CÓDIGO ESCRITAS POR ESTUDANTES
+  lines_of_code: "<b>#LIÑAS DE CÓDIGO</b> ESCRITAS ATÉ A DATA."
+  lines_of_code_alt: "<b>#</b> LIÑAS DE CÓDIGO ESCRITAS POR ESTUDANTES"
   who_has_done_hoc: 'Quen fixo #HourOfCode? @codeorg'
   hoc_leaderboards: Taboleiro de clasificacións da hora do código
-  students_and_lines: '%{students} estudantes teñen participado da Hora do Código
-    e escribiron %{lines} liñas de programación.'
+  students_and_lines: "%{students} estudantes teñen participado da Hora do Código
+    e escribiron %{lines} liñas de programación."
   start_hoc: Comeza a Hora do Código agora
   contact_form_topic_press: Prensa/medios (entrevista ou conversa)
   stats_nina: '"Todos os días produciron os mesmos resultados&mdash; 100% de compromiso."
@@ -234,7 +234,7 @@
     Adam, profesor
   homepage_hero_text_stat_loc: 2,5 millóns de rapazas inscribíronse para aprender
     no Code Studio
-  homepage_hero_text_stat_students: '#student_count contas de alumno no Code Studio'
+  homepage_hero_text_stat_students: "#student_count contas de alumno no Code Studio"
   homepage_hero_text_stat_served: 'A hora do código: #served xa probaron'
   homepage_slot_text_hoc: A Hora do Código
   homepage_slot_text_frozen: Frozen con Anna e Elsa
@@ -244,7 +244,7 @@
   homepage_slot_text_shop: Tenda
   homepage_slot_text_flappy: Código do Flappy bird
   homepage_action_text_hoc: Unha Hora do Código para cada alumno.
-  homepage_action_text_num_served: '# estudantes que participaron'
+  homepage_action_text_num_served: "# estudantes que participaron"
   homepage_action_text_join_us: Participa
   homepage_action_text_sign_up: Crear conta
   homepage_action_text_try_it: Próbao
@@ -268,7 +268,7 @@
   homepage_slot_text_blurb_hoc: Calquera persoa pode aprender. Comeza hoxe mesmo
   homepage_slot_text_link_hoc: Proba a Hora do Código
   homepage_slot_text_link_host: Organiza un evento da Hora do Código
-  homepage_slot_text_link_hocserved: '# estudantes que participaron'
+  homepage_slot_text_link_hocserved: "# estudantes que participaron"
   homepage_solot_text_link_volunteer: Voluntario da Hora do Código
   homepage_slot_text_title_students: Alumnas/os
   homepage_slot_text_blurb_students: Explora todos os nosos titoriais
@@ -365,10 +365,10 @@
   volunteer_engineer_submission_subtitle_generic: 'Un total de 100.000 profesores
     van acoller unha Hora do Código nas súas aulas este ano, de 7 a 13 decembro de
     2015. Queren a túa axuda! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} profesores queren
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} profesores queren
     voluntarios apaixoados pola informática para axudar coas súas Horas do Código
     este mes de decembro.<br>%{num_volunteers} voluntarios xa se inscribiron. Xúntate
-    a eles.'
+    a eles."
   volunteer_engineer_submission_intro_background: A Hora do Código é un movemento
     global que ofrece unha introdución dunha hora á informática e que atinxe decenas
     de millóns de estudantes en máis de 180 países. Participa ti tamén durante a Semana
@@ -719,14 +719,14 @@
     do 19 de decembro - ao 3 de xaneiro. As respostas a calquera pregunta enviada
     será respondida a partir do 4 de xaneiro.\n"
   dashboard_announce_button_text: Aprende máis
-  dashboard_announce_hoc: <b>23 de novembro 2015</b> -Gostarías de ter un informártico
+  dashboard_announce_hoc: "<b>23 de novembro 2015</b> -Gostarías de ter un informártico
     para te axudar durante a hora do Código? Máis de 7.000 voluntarios procuran motivar
     os teus estudantes visitando a túa clase ou mediante vídeo-conferencia. Bota un
-    ollo ao mapa de voluntarios para contactar voluntarios na túa zona.
-  dashboard_announce_playlab: '<b>4 de decembro de 2015</b> - A Hora do Código chegou!
+    ollo ao mapa de voluntarios para contactar voluntarios na túa zona."
+  dashboard_announce_playlab: "<b>4 de decembro de 2015</b> - A Hora do Código chegou!
     Proba 50 titoriais para todas as idades e dispositivos. Novidades desta semana:
     programa as túas propias historias e xogos en novos laboratorios, coa Era do Xeo
-    e Gumball.'
+    e Gumball."
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de decembro!'
   code_sign_up: Inscríbete para participar durante a Semana da Educación en informática
   learn_more: Proba agora
@@ -1559,3 +1559,6 @@
   infinity_shortcode: inf
   playlab_shortcode: xogar
   artist_shortcode: art
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Learn more
