@@ -174,12 +174,10 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit', [deploy_dir('rebuild'), CODE_STUDIO_TASK]) do
     code_studio_changed = false
     Dir.chdir(dashboard_dir('public/code-studio-package')) do
-      code_studio_git_status = `git status --porcelain .`
-      code_studio_changed = !code_studio_git_status.strip.empty?
+      code_studio_changed = !`git status --porcelain .`.strip.empty?
     end
 
     if code_studio_changed
-      HipChat.log "<b>code-studio</b> package changes:\n#{code_studio_git_status}"
       if RakeUtils.git_updates_available?
         # NOTE: If we have local changes as a result of building CODE_STUDIO_TASK, but there are new
         # commits pending in the repository, it is better to pull the repository first and commit
@@ -190,7 +188,6 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       else
         HipChat.log 'Committing updated <b>code-studio</b> package...', color: 'purple'
         RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/code-studio-package')
-        HipChat.log "<b>code-studio</b> staged changes:\n#{`git status --porcelain .`}"
         message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-code-studio'))}"
         RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
         RakeUtils.git_push
