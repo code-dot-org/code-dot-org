@@ -33,6 +33,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -1601,17 +1602,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
         document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-        var wireframeSendToPhoneClick = function () {
-          $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
-            .off('click', wireframeSendToPhoneClick);
-          dashboard.initSendToPhone('#wireframeSendToPhone');
-          $('#send-to-phone').show();
-        };
-
-        var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
-        wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
-        wireframeSendToPhone.click(wireframeSendToPhoneClick);
-        $('body').append(wireframeSendToPhone);
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        React.render(React.createElement(WireframeSendToPhone, {
+          channelId: dashboard.project.getCurrentId(),
+          appType: dashboard.project.getStandaloneApp()
+        }), div);
       }
     } else if (!options.embed && !dom.isMobile()) {
       var runButton = document.getElementById('runButton');
