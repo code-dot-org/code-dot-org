@@ -32,11 +32,11 @@ class ActivitiesController < ApplicationController
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
-    # disabled. (A cached view might posts to this action might even if milestone posts
-    # are disabled on the server.)
+    # disabled. (A cached view might post to this action even if milestone posts
+    # are disabled in the gatekeeper.)
     enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     if !enabled
-      render :nothing => true, :status => 503
+      head 503
       return
     end
 
