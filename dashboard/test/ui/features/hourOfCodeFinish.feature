@@ -15,7 +15,8 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   Then I wait until element "#rightButton" is visible
   And I press "rightButton"
   Then I wait to see a congrats dialog with title containing "Keep Playing"
-  And I press "continue-button"
+  And I press "#continue-button" using jQuery
+  And I wait to see element with ID "hoc-certificate-small"
   And I get redirected to "/congrats" via "dashboard"
   And my query params match "\?i\=.*\&s\=bWM\="
   Then I print the HTML contents of element "hoc-certificate-small"

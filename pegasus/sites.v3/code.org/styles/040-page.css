@@ -26,6 +26,9 @@
   font-size: 18px;
 }
 
+.clearboth {
+  clear: both;
+}
 
 /* .. end special styles */
 
