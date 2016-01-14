@@ -29,17 +29,6 @@ class ReportsController < ApplicationController
     authorize! :read, current_user
   end
 
-  def usage
-    @user = User.find(params[:user_id])
-    authorize! :read, @user
-
-    @recent_activities = get_base_usage_activity.where(['user_id = ?', @user.id])
-  end
-
-  def students
-    redirect_to teacher_dashboard_url
-  end
-
   def level_stats
     authorize! :read, :reports
 
@@ -136,9 +125,6 @@ class ReportsController < ApplicationController
   end
 
   private
-  def get_base_usage_activity
-    Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
-  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_script
