@@ -1,5 +1,5 @@
 :css
-  #hoc_features input[type=radio] {margin-top: 15px}
+  #hoc_features input[type=radio] { display: block; margin: 10px; }
   #hoc_features td {vertical-align: top}
   #hoc_features h3 {margin: 0px; padding: 0px; font-family: Arial; font-weight: normal}
   #hoc_features h3.selected {margin: 0px; padding: 0px; font-weight: bold}
@@ -13,7 +13,31 @@
   #hoc_features tr.emergency:hover {
     background-color: #fff5f5
   }
-
+  #hoc_features .heading {
+    text-align: left;
+  }
+  .true_flag {
+    font-size: 150%;
+    color: green
+  }
+  .false_flag {
+    font-size: 150%;
+    color: red
+  }
+  #feature_grid {
+    margin-top: 20px;
+  }
+  #feature_grid table, #feature_grid tr, #feature_grid td {
+    border-collapse: collapse;
+    border: solid 1px silver;
+    text-align: center;
+  }
+  #feature_grid td {
+    min-width: 6em;
+  }
+  #feature_grid tr:nth-child(odd) {
+    background-color: #eee;
+  }
 
 %h1 Tutorial feature mode
 
@@ -46,9 +70,26 @@
         %td
         %td
           = submit_tag('Update', :id => 'submit', :disabled => 'true')
-      %tr
-        %td
-        %td
-          %p
-          = link_to "Edit gatekeeper settings", gatekeeper_show_path
-          (advanced)
+
+      - unless @hide_feature_grid
+        %tr
+          %td
+          %td
+            %div#feature_grid
+              %table{border: 1, cellpadding: 5}
+                %tr
+                  %td
+                  %td
+                    DEFAULT
+                  - for script_name in Gatekeeper.script_names
+                    %td
+                      = script_name
+                - for feature in Gatekeeper.feature_names
+                  %tr
+                    %td.heading
+                      = feature
+                    %td
+                      = boolean_checkmark Gatekeeper.allows(feature)
+                    - for script in Gatekeeper.script_names
+                      %td
+                        = boolean_checkmark Gatekeeper.allows(feature, where: {script_name: script})
