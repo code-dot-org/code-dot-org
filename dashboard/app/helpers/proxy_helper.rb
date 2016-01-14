@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 
 module ProxyHelper
-  def render_proxied_url(location, allowed_content_types, expiry_time, redirect_limit = 5)
+  def render_proxied_url(location, allowed_content_types, expiry_time, infer_content_type = false, redirect_limit = 5)
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
       return
@@ -14,23 +14,23 @@ module ProxyHelper
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
+    uri = (url.request_uri.empty?) ? '/' : url.request_uri
 
     # Limit how long we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
     # Get the media.
-    media = http.request_get(path)
+    media = http.request_get(uri)
 
     # generate content-type from file name if we weren't given one
-    if media.content_type.nil?
-      media.content_type = Rack::Mime.mime_type(File.extname(path))
+    if media.content_type.nil? && infer_content_type
+      media.content_type = Rack::Mime.mime_type(File.extname(url.path))
     end
 
     if media.kind_of? Net::HTTPRedirection
       # Follow up to five redirects.
-      render_proxied_url(media['location'], allowed_content_types, expiry_time, redirect_limit - 1)
+      render_proxied_url(media['location'], allowed_content_types, expiry_time, infer_content_type, redirect_limit - 1)
 
     elsif !media.kind_of? Net::HTTPSuccess
       # Pass through failure codes.
@@ -48,7 +48,7 @@ module ProxyHelper
   rescue URI::InvalidURIError
     render_error_response 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
-    render_error_response 400, "Network error #{e.message}"
+    render_error_response 400, "Network error #{e.class} #{e.message}"
   end
 
   private
