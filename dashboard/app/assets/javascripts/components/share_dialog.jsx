@@ -1,5 +1,5 @@
-require('./share_dialog_body.jsx');
-require('./dialog.jsx');
+//= require ./share_dialog_body
+//= require ./dialog
 
 window.dashboard = window.dashboard || {};
 
