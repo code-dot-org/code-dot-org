@@ -49,7 +49,7 @@ var mostRecentID=1;
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     mostRecentID=record.id;
@@ -59,7 +59,7 @@ onEvent("submitButton", "click", function() {
 });
 
 onEvent("deleteButton", "click", function() {
-  deleteRecord("mytable", {id:mostRecentID}, function(success) {
+  deleteRecord("fav_foods", {id:mostRecentID}, function(success) {
     if (success) {
       console.log("Record deleted with id:" + mostRecentID);
     }
@@ -76,52 +76,94 @@ ____________________________________________________
 
 [example]
 
-**Search for matching records and delete them** In this more detailed example, we set up two text input boxes each with submit buttons.
-The first lets you add your favorite foods to the table `food_survey`. Add multiple items, including some duplicates, and use the
-data browser to view your data. Then, using the second text input, you can search for foods to delete. `readRecords` is used to
-search for records matching the search query, and finally `deleteRecord` is called on each record that is returned in the records
-results array.
-
+**Example: Delete New Driver** Delete a 16 year old's record.
 
 ```
-/*
-When the submit button is clicked, get the food from the text input and store it as a record
-*/
-textLabel("foodLabel", "What's your favorite food?", "foodInput");
-textInput("foodInput", "");
-button("submit", "Submit");
-onEvent("submit", "click", function() {
-  var response = getText("foodInput");
-  createRecord("food_survey", {food:response}, function() {
-    write("Record created! View data to see the record");
+// Delete a 16 year old's record.
+textInput("nameInput", "What is your name?");
+textInput("ageInput", "What is your age?");
+textInput("foodInput", "What is your favorite food?");
+button("submitButton", "Submit");
+button("displayButton", "Delete a New Driver");
+
+onEvent("submitButton", "click", function() {
+  var favFoodData={};
+  favFoodData.name = getText("nameInput");
+  favFoodData.age = getNumber("ageInput");
+  favFoodData.food = getText("foodInput");
+  createRecord("fav_foods", favFoodData, function(record) {
+    console.log("Record created with id:" + record.id);
+    console.log("Name:" + record.name + " Age:" + record.age + " Food:" + record.food);
   });
 });
 
-/*
-When the delete button is clicked, call the deleteItems helper function (defined below)
-*/
-textLabel("deleteLabel", "What food do you want to delete?", "deleteInput");
+onEvent("displayButton", "click", function() {
+    var driverAge=16;  
+    readRecords("fav_foods", {age:driverAge}, function(records) {
+      if (records.length>0) {
+        deleteRecord("fav_foods", {id:records[0].id}, function(success) {
+          if (success) {
+            console.log("Record deleted with id:" + records[0].id);
+          }
+          else {
+            console.log("No record to delete with id:" + records[0].id);
+          }
+        });
+      }
+      else {
+        console.log("No records to delete");
+      }      
+    });
+});
+```
+
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Search and Destroy** Search for a matching food record and delete it.
+
+```
+// Search for a matching food record and delete it.
+textInput("nameInput", "What is your name?");
+textInput("ageInput", "What is your age?");
+textInput("foodInput", "What is your favorite food?");
+button("submitButton", "Submit");
+
+onEvent("submitButton", "click", function() {
+  var favFoodData={};
+  favFoodData.name = getText("nameInput");
+  favFoodData.age = getNumber("ageInput");
+  favFoodData.food = getText("foodInput");
+  createRecord("fav_foods", favFoodData, function(record) {
+    console.log("Record created with id:" + record.id);
+    console.log("Name:" + record.name + " Age:" + record.age + " Food:" + record.food);
+  });
+});
+
+textLabel("deleteLabel", "What food do you want to delete?");
 textInput("deleteInput", "");
 button("delete", "Delete");
 onEvent("delete", "click", function() {
-  deleteItems();
-});
-
-/*
-Define a function that gets the text from the deleteInput text input, and uses that as the
-`searchTerm` in readRecords to find all matching records. For each record in the array that
-is returned, get the id and delete it
-*/
-function deleteItems() {
   var deleteQuery = getText("deleteInput");
-  readRecords("food_survey", {food:deleteQuery}, function(records) {
-    for (var i =0; i < records.length; i++) {
-      deleteRecord("food_survey", {id:records[i].id}, function() {
-        write("Record deleted! Refresh the data to see that the record doesn't exist");
+  readRecords("fav_foods", {food:deleteQuery}, function(records) {
+    if (records.length>0) {
+      deleteRecord("fav_foods", {id:records[0].id}, function(success) {
+        if (success) {
+          console.log("Record deleted with id:" + records[0].id);
+        }
+        else {
+          console.log("No record to delete with id:" + records[0].id);
+        }
       });
     }
+    else {
+      console.log("No records to delete");
+    }      
   });
-}
+});
 
 ```
 
@@ -134,7 +176,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-deleteRecord(table, recordId, function(){
+deleteRecord(table, record, function(success){
     //callback function code goes here
   });
 ```
@@ -147,25 +189,26 @@ deleteRecord(table, recordId, function(){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| table | string | Yes | The name of the table from which the records should be searched and read. |
+| table | string | Yes | The name of the table to delete a record from. |
 | record | object | Yes | To identify the record to be deleted, the record needs to be provided in the record object format. Only the id field is mandatory to uniquely identify the record. Examples: {id:recordId}, {id:1}, {id:records[0].id}
-| callback | function | Yes | A function that is asynchronously called when the call to deleteRecord() is finished.|
+| callback | function | Yes | A function that is asynchronously called when the call to deleteRecord() is finished. A boolean variable *success* is returned as a parameter to the callback function.|
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. When `deleteRecord()` is finished executing, `callbackFunction` is automatically called.
+When *deleteRecord()* is finished executing, the callback function is automatically called and passed a boolean *success* parameter.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- This function has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
+- *deleteRecord()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately
+- The callback function can be inline, or separately defined in your app and called from *deleteRecord()*.
+- Do not put functions inside a loop that contain asynchronous code, like *deleteRecord()*. The loop will not wait for the callback function to complete.
 - Use with [createRecord()](/applab/docs/createRecord), [readRecords()](/applab/docs/readRecords), and [updateRecord()](/applab/docs/updateRecord) records to create, read, and update records in a table.
-- [Learn more](/applab/docs/tabledatastorage) about App Lab table data storage
 
 [/tips]
 
