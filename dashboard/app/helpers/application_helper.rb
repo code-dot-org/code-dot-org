@@ -114,6 +114,15 @@ module ApplicationHelper
     end
   end
 
+  # A view helper that returns a unicode checkmark ✓ or ✗ depending on the value of flag.
+  def boolean_checkmark(flag)
+    if flag
+      '<span class="true_flag">&#x2713;</span>'.html_safe
+    else
+      '<span class="false_flag">&#x2717;</span>'.html_safe
+    end
+  end
+
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
 

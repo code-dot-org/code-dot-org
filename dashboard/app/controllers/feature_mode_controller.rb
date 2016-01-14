@@ -8,7 +8,8 @@ class FeatureModeController < ApplicationController
   # Max time in seconds for settings updates to take effect.
   MAX_UPDATE_TIME = 30
 
-  PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for changes to take effect."
+  PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " +
+      'changes to take effect, then send a CloudFront cache invalidation.'
 
   # Shows the current or pending feature mode.
   def show
@@ -19,6 +20,7 @@ class FeatureModeController < ApplicationController
     if @pending_mode && @current_mode != @pending_mode
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
+      @hide_feature_grid = true
     # Otherwise show the mode determined from the gatekeeper settings (if any)
     elsif @current_mode
       @mode =  @current_mode

@@ -31,6 +31,15 @@ class ActivitiesController < ApplicationController
       @level = Level.find(params[:level_id].to_i)
     end
 
+    # Immediately return with a "Service Unavailable" status if milestone posts are
+    # disabled. (A cached view might post to this action even if milestone posts
+    # are disabled in the gatekeeper.)
+    enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
+    if !enabled
+      head 503
+      return
+    end
+
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
       begin
