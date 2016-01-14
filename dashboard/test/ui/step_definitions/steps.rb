@@ -1,7 +1,3 @@
-def require_rails_env
-  require File.expand_path('../../../../config/environment.rb', __FILE__)
-end
-
 DEFAULT_WAIT_TIMEOUT = 2 * 60
 
 def replace_hostname(url)
