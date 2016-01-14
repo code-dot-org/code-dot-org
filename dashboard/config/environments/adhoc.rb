@@ -52,7 +52,5 @@ Dashboard::Application.configure do
   # Whether or not to display pretty shared js assets
   config.pretty_sharedjs = false
 
-  # Serve a production version of React
-  config.react.variant = :production
   config.lograge.enabled = true
 end
