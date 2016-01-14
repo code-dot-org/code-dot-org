@@ -29,65 +29,6 @@ class ReportsController < ApplicationController
     authorize! :read, current_user
   end
 
-  def level_stats
-    authorize! :read, :reports
-
-    @level = Level.find(params[:level_id])
-
-    best_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    passing_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    finished_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    unsuccessful_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-    all_but_best_code_map = Hash.new{|h,k| h[k] = {:level_source_id => k, :count => 0, :popular => false} }
-
-    Activity.all.where(['level_id = ?', @level.id]).order('id desc').limit(10000).each do |activity|
-      # Do not process activity records with nil level_source_id
-      if activity.level_source_id.nil?
-        next
-      end
-      if activity.best?
-        best_code_map[activity.level_source_id][:count] += 1
-      elsif activity.passing?
-        passing_code_map[activity.level_source_id][:count] += 1
-      elsif activity.finished?
-        finished_code_map[activity.level_source_id][:count] += 1
-      else
-        unsuccessful_code_map[activity.level_source_id][:count] += 1
-      end
-
-      unless activity.best?
-        all_but_best_code_map[activity.level_source_id][:count] += 1
-      end
-    end
-
-    # Setting up the popular incorrect code
-    unless all_but_best_code_map.empty?
-      sorted_all_but_best_code = all_but_best_code_map.values.sort_by {|v| -v[:count] }
-      pop_level_source_ids = Array.new([sorted_all_but_best_code.length - 1, 9].min)
-      (0..[sorted_all_but_best_code.length - 1, 9].min).each do |idx|
-        pop_level_source_id = sorted_all_but_best_code[idx][:level_source_id]
-        pop_level_source_ids[idx] = pop_level_source_id
-        if passing_code_map.has_key?(pop_level_source_id)
-          passing_code_map[pop_level_source_id][:popular] = true
-          passing_code_map[pop_level_source_id][:pop_level_source_idx] = idx
-        elsif finished_code_map.has_key?(pop_level_source_id)
-          finished_code_map[pop_level_source_id][:popular] = true
-          finished_code_map[pop_level_source_id][:pop_level_source_idx] = idx
-        elsif unsuccessful_code_map.has_key?(pop_level_source_id)
-          unsuccessful_code_map[pop_level_source_id][:popular] = true
-          unsuccessful_code_map[pop_level_source_id][:pop_level_source_idx] = idx
-        end
-      end
-    end
-
-    @best_code = best_code_map.values.sort_by {|v| -v[:count] }
-    @passing_code = passing_code_map.values.sort_by {|v| -v[:count] }
-    @finished_code = finished_code_map.values.sort_by {|v| -v[:count] }
-    @unsuccessful_code = unsuccessful_code_map.values.sort_by {|v| -v[:count] }
-    @pop_level_source_ids = pop_level_source_ids
-
-  end
-
   def assume_identity_form
     authorize! :manage, :all
   end
