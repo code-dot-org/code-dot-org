@@ -1,4 +1,4 @@
-require('./abuse_error.jsx');
+//= require ./abuse_error
 
 /* global React */
 
