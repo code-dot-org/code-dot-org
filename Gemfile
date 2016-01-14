@@ -113,7 +113,7 @@ gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.2.3'
+gem 'redcarpet', '~> 3.3.4'
 
 gem 'geocoder'
 
@@ -132,7 +132,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by a build script.
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', '~> 0.12.2', platforms: :ruby
 
 gem 'jwt' # single signon for zendesk
 

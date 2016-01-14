@@ -207,7 +207,10 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
  * currently being used.
  */
 function warnIfWrongNodeVersion() {
-  if (!/0\.12/.test(process.version)) {
-    console.log('You are using node ' + process.version + '. This build script expects v0.12.x.');
+  var nodev = process.version;
+  var semver = require('semver');
+  var engines_node = process.env.npm_package_engines_node;
+  if (engines_node && !semver.satisfies(nodev, engines_node, true)) {
+      console.log('You are using node ' + process.version + '. This build script expects ' + engines_node + '.');
   }
 }
