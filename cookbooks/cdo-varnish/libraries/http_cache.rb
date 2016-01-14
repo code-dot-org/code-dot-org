@@ -13,7 +13,7 @@ class HttpCache
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = {
     'starwars' => '/s/starwars/stage/1/puzzle/*',
-    'starwarsblock' => '/s/starwarsblocks/stage/1/puzzle/*',
+    'starwarsblocks' => '/s/starwarsblocks/stage/1/puzzle/*',
     'mc' => '/s/mc/stage/1/puzzle/*',
     'frozen' => '/s/frozen/stage/1/puzzle/*',
     'gumball' => '/s/gumball/stage/1/puzzle/*',

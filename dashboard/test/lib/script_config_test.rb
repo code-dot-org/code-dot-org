@@ -5,7 +5,7 @@ class ScriptConfigTest < ActiveSupport::TestCase
   test 'allows public caching for high scale levels' do
     assert ScriptConfig.allows_public_caching_for_script('mc')
     assert ScriptConfig.allows_public_caching_for_script('starwars')
-    assert ScriptConfig.allows_public_caching_for_script('starwarsblock')
+    assert ScriptConfig.allows_public_caching_for_script('starwarsblocks')
     assert ScriptConfig.allows_public_caching_for_script('frozen')
     assert ScriptConfig.allows_public_caching_for_script('hourofcode')
   end
