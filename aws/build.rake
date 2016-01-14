@@ -176,10 +176,10 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
     Dir.chdir(dashboard_dir('public/code-studio-package')) do
       code_studio_git_status = `git status --porcelain .`
       code_studio_changed = !code_studio_git_status.strip.empty?
+      HipChat.log "<b>code-studio</b> package changes:\n#{code_studio_git_status}" if code_studio_changed
     end
 
     if code_studio_changed
-      HipChat.log "<b>code-studio</b> package changes:\n#{code_studio_git_status}"
       if RakeUtils.git_updates_available?
         # NOTE: If we have local changes as a result of building CODE_STUDIO_TASK, but there are new
         # commits pending in the repository, it is better to pull the repository first and commit
