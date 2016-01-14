@@ -48,7 +48,7 @@ button("displayButton", "Display");
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     console.log("Record created with id:" + record.id);
@@ -90,7 +90,7 @@ button("displayButton", "Display New Drivers Only");
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     console.log("Record created with id:" + record.id);
@@ -132,7 +132,7 @@ button("displayButton", "Display Last In Line");
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     console.log("Record created with id:" + record.id);

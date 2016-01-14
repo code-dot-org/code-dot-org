@@ -1,0 +1,236 @@
+<html>
+    <head>
+        
+        <script type="text/javascript" src="graph.js"></script>
+        <script type="text/javascript">
+           var G;
+           var secretNodes = [];
+           localSeed = -1;
+           var foundSecretNodes = false;
+           
+           function newRandomMap(){
+               localSeed = parseInt(Math.random()*9999);
+               makeVertexCoverGraph();
+           }
+           
+           function makeVertexCoverGraph(){
+                if(localSeed==-1) localSeed = parseInt(Math.random()*99999);
+		        seed = localSeed;
+		        foundSecretNodes = false;
+        		G =new Graph();
+        		G.isUndirected=true;
+        		G.hasTour=false;
+        		G.showWeights = false;
+        		G.autoEdgeSelection = true;
+        		G.edgeSelectionOn = false;
+        		G.edgeColor = "rgba(0,0,0,0.1)"
+        		
+
+        		   
+        		var shuffled = [];
+        		var numNodes = document.getElementById("numNodes").value;
+        	    for(var i=0; i<numNodes; i++){
+        	        
+        	        //add the node to the graph
+        	        //G.addNode((i+1).toString(16));
+        	        G.addNode(String.fromCharCode(i+65)); //.toString(16));
+        	        // give its index a random spot in shuffled[]
+        		    var rand = Math.floor(Math.random()*numNodes);
+        		    while(shuffled[rand]!=null ) rand = Math.floor(Math.random()*numNodes);
+        		    
+        		    shuffled[rand] = i;
+        		}
+        		
+        		var minSecretNodes = Math.floor(numNodes/4);
+        		var maxSecretNodes = Math.ceil(numNodes/3);
+        		
+                var numSecretNodes = parseInt(Math.random()*minSecretNodes)+(maxSecretNodes-minSecretNodes);
+                secretNodes = [];
+                
+                for(var i=0; i<numSecretNodes; i++){
+                    secretNodes.push(G.nodes[shuffled.pop()]);
+                    //secretNodes[i].setColor("#0000AA");
+                }
+                
+                var connectorNodes = [];
+                for(var i=0; i<shuffled.length; i++){
+                    connectorNodes.push(G.nodes[shuffled[i]]);
+                }
+                
+                var numNodesPerSecret = Math.floor(connectorNodes.length/secretNodes.length);
+                
+                //make a connection between 1 secret node and 1 of the remaining nodes
+                for(var i=0; i<secretNodes.length; i++){ //for every secret node
+                console.log(i+" -> ");
+                   for(var k=i; k<connectorNodes.length; k+=secretNodes.length){ // connect it to every nth connector node, where n=numsecretnodes
+                       G.addEdge(secretNodes[i], connectorNodes[k]);
+                       console.log("\t -"+k)
+                   }
+                }
+                
+                for(var i=1; i<connectorNodes.length; i++){  //add at least n's worht of connector obsucrity. connectorNodes, already in rand order, so no need to shuffle
+                    G.addEdge(connectorNodes[i-1], connectorNodes[i]);
+                }
+  
+        	    console.debug(G);
+        	    G.draw(document.getElementById("myCanvas"));
+        
+           }
+           
+           
+               
+         
+           
+           function processMouse(e){
+                 
+                    G.handleMouseEvent(e);
+                   // console.debug("draw");
+                   var coverageCount = 0;
+                   var numNodesCovered = 0;
+                   var secretCount = 0;
+                   for(var i=0; i<G.nodes.length; i++){
+                       if(G.nodes[i].numSelectedEdges()>=1) numNodesCovered++;
+                      
+                       if(G.nodes[i].isSelected && secretNodes.indexOf(G.nodes[i]) >= 0){
+                           secretCount++
+                          
+                       }
+                   }
+                   console.debug("secret node count: "+secretCount);
+                   var before = foundSecretNodes;
+                   
+                   foundSecretNodes = secretCount==secretNodes.length;
+                   if(before==false && foundSecretNodes ==true) alert("Congrats! You found the secret nodes!");
+                   G.statusText = "Num Nodes connected: "+numNodesCovered+" of "+G.nodes.length+". Found Secret Nodes? "+foundSecretNodes;
+                   G.draw(document.getElementById("myCanvas"));
+                   secretNodesSelectedCount = secretCount;
+             }    
+             var secretNodesSelectedCount = 0;
+             
+             function processEdgeListText(){
+                 //G = new Graph();
+                 var lines = document.getElementById("edgeListText").value.split("\n");
+                 //console.debug(lines);
+                 var nodesList = []; //assoc. array of nodes added key = name
+                 
+                 for(var i=0; i<lines.length; i++){
+                     if(lines[i].length > 0){
+                         var tokens = lines[i].split(" ");  // name1, name2, weight
+                         console.debug(tokens);
+                         
+                         //remove blank entries
+                         var index = tokens.indexOf("");
+                         while(index>-1){
+                             tokens.splice(index,1);
+                             index = tokens.indexOf("");
+                         }
+                         
+                         //if tokens[0] not in graph -- add it
+                         if(tokens[0]!=""){
+                             var node1 = G.getNodeByName(tokens[0].trim());
+                             if(node1==null){
+                                 node1 = G.addNode(tokens[0].trim());
+                                 isNew = true;
+                             }
+                             nodesList.push(tokens[0].trim());
+                         }
+                         
+                         // if tokens[1] not in graph -- add it
+                         if(tokens.length >=2 && tokens[1]!=""){
+                             var node2 = G.getNodeByName(tokens[1].trim());
+                             if(node2==null) node2 = G.addNode(tokens[1].trim());
+                             nodesList.push(tokens[1].trim());
+                             
+                             var w = 0;
+                             if(tokens.length>=3) w = parseInt(tokens[2].trim());
+                         
+                             //add edge between
+                             var edgeNum = node1.adjList.indexOf(node2); //if this edge actually exists already, node1 and node2 should be the actual objects in the adjLists
+                             
+                             if(edgeNum==-1){ //if edge does not exist, add it
+                                 G.addEdge(node1, node2, w);
+                             }
+                             else{ //possible change of weight on existing edge
+                                 node1.weight[edgeNum]=w;
+                             }
+                         }
+                     }
+                 }
+                 
+                 //after processing everything, might be the case that some nodes no longer in use
+                 // if we find nodes in the graph, NOT in nodeslist, we need to remove them from the graph
+                 for(var i=0; i<G.nodes.length; i++){
+                 
+                     var n = G.nodes[i].name;
+                     if(nodesList.indexOf(n)<0){ //name not in nodeslist
+                         G.removeNode(n);
+                     }
+                    
+                 }
+                 
+                // G.setAllLocations();
+                 G.draw(document.getElementById("myCanvas"));
+
+                 
+             }
+             
+             function clearGraph(){
+                 G = new Graph();
+                 G.draw(document.getElementById("myCanvas"));
+             }
+             
+             function showAnswer(){
+                var text = "Secret Nodes are: "
+                 for(n in secretNodes){
+                     text+=secretNodes[n].name+", ";
+                 }
+                 alert(text);
+             }
+             
+             function howManyNodesHint(){
+                 alert("There are "+secretNodes.length+" secret nodes");
+             }
+             function howManyCorrectlySelectedHint(){
+                 alert("You currently have "+secretNodesSelectedCount+" of "+secretNodes.length+" correct");
+                 
+                 
+             }
+            
+               
+           
+           
+    </script>
+    </head>
+    <body onLoad="makeVertexCoverGraph()">
+     <h1>Ice Cream Trucks</h1>
+     <b>GOAL: find the minimum set of interections (nodes) so that every other node in the map is "covered" by it.</b>
+     <br>
+     <b>Directions:</b>
+    
+     <li>Double click on a node to select it - the lines connecting it to other nodes will be highlighted</li>
+     <li>Click and drag nodes to re-arrange the map to make it more readable for you</li>
+     <li>You will be alerted when you have selected the correct solution</li><br>
+      <button onClick="newRandomMap()">Remake</button>
+      <input type=number min=10 max=26 id="numNodes" value=10 oninput="makeVertexCoverGraph()">
+    <button onClick="clearGraph()">clear</button>
+    <button onClick="howManyNodesHint()">Hint: how many</button>
+    <button onClick="howManyCorrectlySelectedHint()">Hint: how many correct?</button>
+
+    <button onClick="showAnswer()">show Answer</button>
+    <br>
+     <canvas id="myCanvas" width="600px" height="400px" style="border:1px solid #000000; float:left" onmousemove="processMouse(event)" ondblclick="processMouse(event)" onclick="processMouse(event)" onmouseup="processMouse(event)" onmousedown="processMouse(event)"></canvas>
+     <!-- <textarea id="edgeListText" onkeyup="processEdgeListText()" rows=20></textarea> -->
+    <div style="float: left; border: solid black 1px; width: 320px; margin-left: 10px">
+        Example Solution:<br>
+        This map requires only 3 trucks and the nodes "G", "H" and "B" are where you would place them.
+        <img style="width: 300px; box-shadow: 1px 1px 10px gray; margin: 5px"  src="iceCreamSolutionExample.png">
+        <br> </br> 
+    </div>
+    <footer style="clear:both">
+	<a  rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0; float:left" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+All<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Code.org CSP Widgets</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Baker Franke</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+</footer>
+    </body>
+</html>
