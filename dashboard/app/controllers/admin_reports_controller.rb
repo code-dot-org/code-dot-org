@@ -254,7 +254,7 @@ class AdminReportsController < ApplicationController
     authorize! :read, :reports
 
     @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
-    render 'reports/usage', formats: [:html]
+    render 'usage', formats: [:html]
   end
 
   def hoc_signups
