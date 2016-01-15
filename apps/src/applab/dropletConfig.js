@@ -105,7 +105,7 @@ module.exports.blocks = [
   {func: 'setAlpha', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','a'], params: ["imgData", "0", "0", "255"], dontMarshal: true },
   {func: 'setRGB', parent: dontMarshalApi, category: 'Canvas', paletteParams: ['imgData','x','y','r','g','b'], params: ["imgData", "0", "0", "255", "255", "255"], dontMarshal: true },
 
-  {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"http://api.openweathermap.org/data/2.5/weather?q=London,uk"', "function(status, type, content) {\n  \n}"] },
+  {func: 'startWebRequest', parent: api, category: 'Data', paletteParams: ['url','callback'], params: ['"https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"', "function(status, type, content) {\n  \n}"] },
   {func: 'setKeyValue', parent: api, category: 'Data', paletteParams: ['key','value','callback'], params: ['"key"', '"value"', "function () {\n  \n}"] },
   {func: 'getKeyValue', parent: api, category: 'Data', paletteParams: ['key','callback'], params: ['"key"', "function (value) {\n  \n}"] },
   {func: 'createRecord', parent: api, category: 'Data', paletteParams: ['table','record','callback'], params: ['"mytable"', "{name:'Alice'}", "function(record) {\n  \n}"] },
