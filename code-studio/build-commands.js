@@ -140,15 +140,7 @@ exports.bundle = function (config) {
   };
 
   return new Promise(function (resolve) {
-    // Define a one-time resolution helper
-    var isResolved = false;
-    resolvePromise = function (result) {
-      if (!isResolved) {
-        resolve(result);
-        isResolved = true;
-      }
-    };
-
+    resolvePromise = _.once(resolve);
     runBundle();
   });
 };
