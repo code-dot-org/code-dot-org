@@ -22,9 +22,8 @@
     "build-css": "./build-css.js",
     "build-css:min": "./build-css.js --min",
     "build-js": "./build-js.js",
-    "build-js:min": "./build-js.js --min",
     "copy-assets": "./copy-assets.js",
-    "start": "echo \"Unimplemented.\"",
+    "start": "./build-js.js --watch",
     "stop": "echo \"Unimplemented.\"",
     "test": "echo \"Unimplemented.\""
   },
@@ -35,6 +34,7 @@
     "commander": "^2.9.0",
     "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
+    "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
     "promise": "^7.1.1",
     "sass-lint": "^1.4.0",
