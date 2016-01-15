@@ -1005,6 +1005,50 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
+      if (Maze.bee && Maze.bee.staticGrids.length > 1) {
+        var successes = [];
+        var failures = [];
+
+        Maze.bee.staticGrids.forEach(function(grid, i) {
+          Maze.bee.useGridWithId(i);
+          codegen.evalWith(code, {
+            StudioApp: studioApp,
+            Maze: api,
+            executionInfo: Maze.executionInfo
+          });
+
+          Maze.onExecutionFinish();
+          if (Maze.executionInfo.terminationValue() === true) {
+            successes.push(i);
+          } else {
+            failures.push(i);
+          }
+
+          // TODO figure out exactly which of these are necessary and
+          // make this "reset" process cleaner. Alternatively, modify
+          // codegen.evalWith to give it a "clean run" option
+          Maze.executionInfo = new ExecutionInfo({ticks: 100});
+          Maze.result = ResultType.UNSET;
+          Maze.testResults = TestResults.NO_TESTS_RUN;
+          Maze.waitingForReport = false;
+          Maze.animating_ = false;
+          Maze.response = null;
+          Maze.gridItemDrawer.clouded_ = Maze.initialDirtMap.map(function (row) {
+            return [];
+          });
+          studioApp.reset(false);
+          resetDirtImages(true);
+        });
+
+        var i;
+        if (failures.length) {
+          i = failures[Math.floor(Math.random()*failures.length)];
+        } else {
+          i = successes[Math.floor(Math.random()*successes.length)];
+        }
+        Maze.bee.useGridWithId(i);
+      }
+
       codegen.evalWith(code, {
         StudioApp: studioApp,
         Maze: api,
@@ -1095,6 +1139,7 @@ Maze.execute = function(stepMode) {
   // Maze. now contains a transcript of all the user's actions.
   // Reset the maze and animate the transcript.
   studioApp.reset(false);
+  Maze.bee.resetCurrentValues();
   resetDirtImages(true);
 
   // if we have extra top blocks, don't even bother animating

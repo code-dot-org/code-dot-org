@@ -51,21 +51,21 @@ BeeItemDrawer.prototype.updateItemImage = function (row, col, running) {
     href: null,
     unclippedWidth: SQUARE_SIZE
   };
-  // Negative values represent honey, positive values represent nectar.
-  if (this.initialDirt_[row][col] < 0) {
+
+  if (this.bee_.isHive(row, col, false)) {
     baseImage.href = this.skin_.honey;
-  } else if (this.initialDirt_[row][col] > 0) {
+  } else if (this.bee_.isFlower(row, col, false)) {
     baseImage.href = this.flowerImageHref_(row, col);
   }
 
   var isCloudable = this.bee_.isCloudable(row, col);
   var isClouded = !running && isCloudable;
-  var wasClouded = isCloudable && (this.clouded_[row][col] === true);
+  var wasClouded = isCloudable && (this.clouded_[row][col] === true);// && (this.bee_.checkedCloud(row, col) === true);
 
   var counterText;
   var ABS_VALUE_UNLIMITED = 99;  // Repesents unlimited nectar/honey.
   var ABS_VALUE_ZERO = 98;  // Represents zero nectar/honey.
-  var absVal = Math.abs(this.dirtMap_[row][col]);
+  var absVal = Math.abs(this.bee_.getValue(row, col));
   if (isClouded) {
     counterText = "";
   } else if (!running && baseImage.href === this.skin_.purpleFlower) {
@@ -83,14 +83,17 @@ BeeItemDrawer.prototype.updateItemImage = function (row, col, running) {
   if (baseImage.href) {
     this.updateImageWithIndex_('beeItem', row, col, baseImage, 0);
     this.updateCounter_('counter', row, col, counterText);
+  } else {
+    this.updateImageWithIndex_('beeItem', row, col, baseImage, -1);
+    this.updateCounter_('counter', row, col, "");
+  }
 
-    if (isClouded) {
-      this.showCloud_(row, col);
-      this.clouded_[row][col] = true;
-    } else if (wasClouded) {
-      this.hideCloud_(row, col);
-      this.clouded_[row][col] = false;
-    }
+  if (isClouded) {
+    this.showCloud_(row, col);
+    this.clouded_[row][col] = true;
+  } else if (wasClouded) {
+    this.hideCloud_(row, col);
+    this.clouded_[row][col] = false;
   }
 };
 
