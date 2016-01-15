@@ -6,8 +6,8 @@ var browserify = require('browserify');
 var chalk = require('chalk');
 var child_process = require('child_process');
 var fs = require('fs');
+var mkdirp = require('mkdirp');
 var path = require('path');
-//var Promise = require('promise');
 var watchify = require('watchify');
 
 /**
@@ -49,6 +49,18 @@ exports.bundle = function (config) {
       .resolve(buildPath, path.relative(srcPath, inPath))
       .replace(/\.jsx?$/i, '') + '.js';
   };
+
+  var targets = [outPath(srcPath + commonFile)];
+  if (shouldFactor) {
+    targets = targets.concat(filenames.map(function (file) {
+      return outPath(srcPath + file);
+    }));
+  }
+
+  // Ensure output directory exists for every build target
+  targets.forEach(function (target) {
+    mkdirp.sync(path.dirname(target));
+  });
 
   // Create browserify instance
   var bundler = browserify({
@@ -92,35 +104,24 @@ exports.bundle = function (config) {
 
     // Define output step
     var runBundle = function () {
-
       var bundlingAttemptError;
-
-      // TODO: Right here, ensure output directories exist for each input file.
 
       // We attach events to our filesystem output stream, because it's the
       // best indicator of when the bundle is actually done building.
       var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
           .on('error', function (err) {
-            console.log('ERROR: TODO: Handle this!');
             resolveOnce(err);
           })
           .on('finish', function () {
             if (bundlingAttemptError) {
               resolveOnce(bundlingAttemptError);
-              return;
+            } else {
+              console.log(timeStamp() + ' Built ' +
+                  targets.map(function (target) {
+                    return path.join(buildPath, path.relative(buildPath, target));
+                  }).join('\n                 '));
+              resolveOnce();
             }
-
-            var targets = [outPath(srcPath + commonFile)];
-            if (shouldFactor) {
-              targets = targets.concat(filenames.map(function (file) {
-                return outPath(srcPath + file);
-              }));
-            }
-            console.log(timeStamp() + ' Built ' +
-                targets.map(function (target) {
-                  return path.join(buildPath, path.relative(buildPath, target));
-                }).join('\n                 '));
-            resolveOnce();
           });
 
       // Bundle the files and pass them to the output stream
@@ -134,6 +135,7 @@ exports.bundle = function (config) {
             console.log(err.codeFrame);
             bundlingAttemptError = err;
             // Necessary to close the stream if an error occurs
+            // After calling this, the output stream 'finish' event will occur.
             this.emit('end');
           })
           .pipe(outStream);

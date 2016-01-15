@@ -30,11 +30,6 @@ var defaultOptions = {
   shouldWatch: commander.watch
 };
 
-build_commands.execute([
-  build_commands.ensureDirectoryExists(BUILD_PATH),
-  build_commands.ensureDirectoryExists(BUILD_PATH + 'levels/')
-]);
-
 Promise.all([
   // Code in code-studio.js and any common code factored out of this bundle
   // gets included into every page in dashboard.
