@@ -179,7 +179,7 @@ exports.ensureDirectoryExists = function (dir) {
  * Execute a sequence of shell commands as a build script, with useful output
  * wherever possible.
  * Will call process.exit() if the command fails for any reason.
- * @param {Array.<string|function>} commands - array of shell commands to be executed in sequence.
+ * @param {string[]} commands - array of shell commands to be executed in sequence.
  */
 exports.execute = function (commands) {
   commands.forEach(function (command) {
