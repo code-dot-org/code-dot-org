@@ -224,7 +224,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  ENV['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 8.x' : 'Windows 6x'
+  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
