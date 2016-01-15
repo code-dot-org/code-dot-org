@@ -1,7 +1,8 @@
 !!! 5
 %html{dir: locale_dir}
   %head
-    - title = @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
+    - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
+    - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
@@ -22,6 +23,8 @@
     = render partial: 'layouts/analytics'
     = render partial: 'layouts/javascript_strings'
   %body
+    - unless Rails.env.production?
+      = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 

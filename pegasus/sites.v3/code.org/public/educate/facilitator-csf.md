@@ -21,7 +21,7 @@ The ideal CS Fundamentals Facilitator is an enthusiastic supporter of computer s
 
 ## What is the CS Fundamentals Facilitator Program?
 
-Code.org has developed an online [Computer Science curriculum for Elementary School](/k5) students comprised of Courses 1, 2, 3 and 4, which are free and publicly available at through [studio.code.org](http://studio.code.org). Our goal is to spread this curricula to tens of thousands of classrooms across the US through the development and implementation of a train-the-trainer model for teacher professional development.  
+Code.org has developed an online [Computer Science curriculum for Elementary School](/k5) students comprised of Courses 1, 2, 3 and 4, which are free and publicly available through [studio.code.org](http://studio.code.org). Our goal is to spread this curricula to tens of thousands of classrooms across the US through the development and implementation of a train-the-trainer model for teacher professional development.  
 
 We implemented this model in September 2014 with 80 facilitators nationwide. So far, approximately 20,000 teachers have participated and have rated our workshops a 4.8 on a 5 point scale. The majority say, “It’s the best professional development I’ve ever attended.” 
 
