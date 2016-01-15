@@ -13,19 +13,19 @@ var path = require('path');
  * Bundle JavaScript files using Browserify, break out common code using
  * factor-bundle.
  * @param {object} config
- * @param {string} config.srcPath - Path to root of JavaScript source files, absolute
- *        or relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} config.buildPath - Path to root of output directory, absolute or
- *        relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
+ * @param {string} config.srcPath - Path to root of JavaScript source files,
+ *        absolute or relative to execution path for this script (which is the
+ *        code-studio folder for this build system), with trailing slash.
+ * @param {string} config.buildPath - Path to root of output directory, absolute
+ *        or relative to execution path for this script (which is the
+ *        code-studio folder for this build system), with trailing slash.
  * @param {(string[])[]} config.filenames - List of entry points (relative to
- srcPath)
+ *        srcPath)
  * @param {string} config.commonFile - Filename for where to output common code
  *        (relative to buildPath)
  * @param {boolean} config.shouldFactor if true, we will factor out common code
- *        into config.commonFile. With non-common code ending up in <filenames>.js
- *        If false, everything ends up in config.commonFile.
+ *        into config.commonFile. With non-common code ending up in
+ *        <filenames>.js. If false, everything ends up in config.commonFile.
  * @returns {function}
  */
 exports.bundle = function (config) {
