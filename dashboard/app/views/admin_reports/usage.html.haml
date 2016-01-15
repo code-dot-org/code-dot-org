@@ -51,8 +51,7 @@
 %table.recent_activity
   - @recent_activities.each do |activity|
     %tr
-      %td
-        = link_to activity.user.name, user_stats_path(activity.user)
+      %td= activity.user.name
       %td
         - if activity.passing?
           %span.perfect completed
@@ -74,4 +73,4 @@
         ago
       %td
         - if activity.level_source
-          = link_to 'see solution', '#'
+          = link_to 'see solution', level_source_path(activity)
