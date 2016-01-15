@@ -36,6 +36,7 @@
     "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
     "node-sass": "^3.4.2",
+    "promise": "^7.1.1",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
     "uglify-js": "^2.6.1",

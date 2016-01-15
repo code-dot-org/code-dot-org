@@ -7,6 +7,7 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var fs = require('fs');
 var path = require('path');
+//var Promise = require('promise');
 var watchify = require('watchify');
 
 /**
@@ -29,7 +30,11 @@ var watchify = require('watchify');
  *        <filenames>.js. If false, everything ends up in config.commonFile.
  * @param {boolean} config.shouldWatch if true, will watch file system for
  *        changes, and rebuild when it detects them
- * @returns {function}
+ * @returns {Promise} that resolves after the build completes or fails - even
+ *          if the build fails, the promise should resolve, but get an Error
+ *          object as its result.  If watch is enabled, the promise resolves
+ *          after the initial build success or failure, but the watch will keep
+ *          running.
  */
 exports.bundle = function (config) {
   var srcPath = config.srcPath;
@@ -45,51 +50,104 @@ exports.bundle = function (config) {
       .replace(/\.jsx?$/i, '') + '.js';
   };
 
-  // TODO: release/dist settings
-  // TODO: watch
+  // Create browserify instance
+  var bundler = browserify({
+    // Enables source map
+    debug: true,
 
-  return function () {
-    var bundler = browserify({
-      // Enables source map
-      debug: true,
+    // Required for watchify
+    cache: {},
+    packageCache: {}
+  });
 
-      // Required for watchify
-      cache: {},
-      packageCache: {}
+  // Define inputs
+  bundler.add(filenames.map(function (file) {
+    return path.resolve(srcPath, file);
+  }));
+
+  // babelify tranforms jsx files for us
+  bundler.transform('babelify', {
+    compact: false
+  });
+
+  // factor-bundle splits the bundle back up into parts, but leaves common
+  // modules in the main browserify stream.
+  if (shouldFactor) {
+    bundler.plugin('factor-bundle', {
+      outputs: filenames.map(function (file) {
+        return outPath(srcPath + file);
+      })
     });
+  }
 
-    // Define inputs
-    bundler.add(filenames.map(function (file) {
-      return path.resolve(srcPath, file);
-    }));
+  return new Promise(function (resolve) {
+    var isResolved = false;
+    var resolveOnce = function (result) {
+      if (isResolved) { return; }
+      resolve(result);
+      isResolved = true;
+    };
+
+    // TODO: release/dist settings
 
     // Define output step
     var runBundle = function () {
-      bundler.bundle().pipe(fs.createWriteStream(outPath(srcPath + commonFile)));
+
+      var bundlingAttemptError;
+
+      // TODO: Right here, ensure output directories exist for each input file.
+
+      // We attach events to our filesystem output stream, because it's the
+      // best indicator of when the bundle is actually done building.
+      var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
+          .on('error', function (err) {
+            console.log('ERROR: TODO: Handle this!');
+            resolveOnce(err);
+          })
+          .on('finish', function () {
+            if (bundlingAttemptError) {
+              resolveOnce(bundlingAttemptError);
+              return;
+            }
+
+            var targets = [outPath(srcPath + commonFile)];
+            if (shouldFactor) {
+              targets = targets.concat(filenames.map(function (file) {
+                return outPath(srcPath + file);
+              }));
+            }
+            console.log(timeStamp() + ' Built ' +
+                targets.map(function (target) {
+                  return path.join(buildPath, path.relative(buildPath, target));
+                }).join('\n                 '));
+            resolveOnce();
+          });
+
+      // Bundle the files and pass them to the output stream
+      var bundledStream = bundler.bundle()
+          .on('error', function (err) {
+            console.log([
+              chalk.bold.red(timeStamp()),
+              chalk.bold.red(err.name),
+              chalk.bold(err.message)
+            ].join(' '));
+            console.log(err.codeFrame);
+            bundlingAttemptError = err;
+            // Necessary to close the stream if an error occurs
+            this.emit('end');
+          })
+          .pipe(outStream);
     };
 
     // Optionally enable watch
     if (shouldWatch) {
-      bundler.plugin(watchify).on('update', runBundle);
-    }
-
-    // babelify tranforms jsx files for us
-    bundler.transform('babelify', {
-      compact: false
-    });
-
-    // factor-bundle splits the bundle back up into parts, but leaves common
-    // modules in the main browserify stream.
-    if (shouldFactor) {
-      bundler.plugin('factor-bundle', {
-        outputs: filenames.map(function (file) {
-          return outPath(srcPath + file);
-        })
+      bundler.plugin(watchify).on('update', function () {
+        console.log(timeStamp() + ' Changes detected...');
+        runBundle();
       });
     }
-
     runBundle();
-  };
+  });
 };
 
 /**
@@ -226,35 +284,40 @@ exports.ensureDirectoryExists = function (dir) {
 exports.execute = function (commands) {
   commands.forEach(function (command) {
     try {
-      if ('function' === typeof command) {
-        command();
-      } else {
-        console.log(command);
+      console.log(command);
 
-        // For documentation on synchronous execution of shell commands from node scripts, see:
-        // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-        var result = child_process.execSync(command, {
-          env: _.extend({}, process.env, {
-            PATH: './node_modules/.bin:' + process.env.PATH
-          }),
-          stdio: 'inherit'
-        });
-      }
+      // For documentation on synchronous execution of shell commands from node scripts, see:
+      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
+      var result = child_process.execSync(command, {
+        env: _.extend({}, process.env, {
+          PATH: './node_modules/.bin:' + process.env.PATH
+        }),
+        stdio: 'inherit'
+      });
     } catch (e) {
-      console.log("\nError: " + e.message);
-      warnIfWrongNodeVersion();
-      process.exit(e.status || 1);
+      exports.exitWithError(e);
     }
   });
 };
 
+/**
+ * End the node process with the given error message and code.
+ * Ensures an exit code of at least one, in case the error doesn't have a code.
+ * @param {Error} err
+ */
+exports.exitWithError = function (err) {
+  console.log("\nError: " + err.message);
+  warnIfWrongNodeVersion();
+  process.exit(err.status || 1);
+};
 
 /**
  * Log a message in a box, so it stands out from the rest of the logging info.
  * @param {!string} message
+ * @param {Chalk} [style] - a chalk style function.  Defaults to green on black.
  */
-exports.logBoxedMessage = function (message) {
-  var style = chalk.bold.green.bgBlack;
+exports.logBoxedMessage = function (message, style) {
+  style = style || chalk.bold.green.bgBlack;
   var bar = style('+' + _.repeat('-', message.length + 2) + '+');
   console.log(bar + "\n" + style("| " + chalk.white(message) + " |") + "\n" + bar + "\n");
 };
@@ -291,6 +354,14 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
     buildPath + path.basename(file, '.scss') + extension
   ].join(" \\\n    ");
 };
+
+/**
+ * @returns {string} a time string formatted [HH:MM:SS] in 24-hour time.
+ */
+function timeStamp() {
+  return '[' + new Date().toLocaleTimeString('en-US', { hour12: false }) + ']';
+}
+
 
 /**
  * Checks current node version, prints a warning if the expected version is not
