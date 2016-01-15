@@ -81,6 +81,11 @@ module.exports = React.createClass({
             desc={'Chart'}
             elementType={'CHART'}
             handleDragStart={this.props.handleDragStart} />
+        <DesignToolboxElement
+            imageUrl={IMAGE_BASE_URL + 'slider.png'}
+            desc={'Slider'}
+            elementType={'SLIDER'}
+            handleDragStart={this.props.handleDragStart} />
       </div>
     );
   }

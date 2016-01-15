@@ -78,7 +78,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def level_display_text
     if level.unplugged?
-      I18n.t('user_stats.classroom_activity')
+      I18n.t('unplugged_activity')
     elsif stage.unplugged?
       position - 1
     else

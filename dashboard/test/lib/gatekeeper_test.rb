@@ -56,4 +56,17 @@ class GatekeeperTest < ActiveSupport::TestCase
     assert_equal Gatekeeper.allows(feature, where: { user_id: 4 }), false
 
   end
+
+  test 'get script and feature names' do
+    Gatekeeper.set('postMilestone', where: {script_name: 'frozen'}, value: false)
+    Gatekeeper.set('postMilestone', where: {script_name: 'mc'}, value: true)
+    Gatekeeper.set('postMilestone', value: true)
+    Gatekeeper.set('hint_view_request', value: false)
+    Gatekeeper.set('shareEnabled', where: {script_name: 'gumball', color: 'red'}, value: true)
+    Gatekeeper.set('shareEnabled', where: {script_name: 'mc'}, value: true)
+
+    assert_equal Set.new(['hint_view_request', 'postMilestone', 'shareEnabled']), Gatekeeper.feature_names
+    assert_equal Set.new(['frozen', 'gumball', 'mc']), Gatekeeper.script_names
+  end
+
 end
