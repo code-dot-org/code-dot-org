@@ -1226,10 +1226,10 @@ a.download-video {
     height: 20px;
     overflow: hidden;
     padding: 10px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
   .teacher-announce .announce-heading .heading-view-all {
-    float: right; 
+    float: right;
   }
   .teacher-announce .announce-content {
     background-color: #ebe8f1;
@@ -1239,7 +1239,7 @@ a.download-video {
     padding: 10px;
   }
   .teacher-announce .announce-content .content-img-container {
-    float: left; 
+    float: left;
   }
   .teacher-announce .announce-content .content-img {
     border-radius: 4px;
@@ -2200,4 +2200,16 @@ div#tryHoc {
   img#hocLogo {
     width:40px;
   }
+}
+
+#environment_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: $light_purple;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
