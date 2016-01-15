@@ -62,9 +62,10 @@ test:
         - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
             background: true
         - "until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html":
+        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html 'features/eyes.feature' 'features/applab/sharedApps.feature' 'features/contractEditor.feature' 'features/hourOfCode_signedIn.feature' 'features/hourOfCode.feature' 'features/contractEditorSections.feature' 'features/maze2.feature' 'features/feedback.feature' 'features/signingIn.feature' 'features/maze.feature' 'features/disableToolboxArtist.feature' 'features/multi.feature' 'features/functionEditor.feature' 'features/bounce.feature' 'features/flappy.feature' 'features/applab/templateBacked.feature' 'features/jigsaw.feature' 'features/disallowedsharing.feature' 'features/sharepage.feature' 'features/copypaste.feature' 'features/blocklayout.feature' 'features/clearpuzzle.feature' 'features/legacyShareRemix.feature' 'features/bigGameRemix.feature' 'features/simpledrag.feature' 'features/flappydrag.feature' 'features/groupdrag.feature' 'features/markdownRendering.feature' 'features/teacher-dashboard.feature' 'features/jigsaw2.feature'":
             pwd:
                 dashboard/test/ui
-            parallel: true
-            files:
-              - features/**/*.feature
+#            parallel: true
+#            files:
+#              - features/**/*.feature
+#
