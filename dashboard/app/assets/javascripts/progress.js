@@ -46,8 +46,15 @@ window.dashboard.progress = (function () {
     });
 
     $.ajax('/api/user_progress/' + scriptName).done(function (data) {
+      data = data || {};
+
+      // Show lesson plan links if teacher
+      if (data.isTeacher) {
+        $('.stage-lesson-plan-link').show();
+      }
+
       // Merge progress from server (loaded via AJAX)
-      var serverProgress = (data || {}).levels || {};
+      var serverProgress = data.levels || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId].result !== clientProgress[levelId]) {
           var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
