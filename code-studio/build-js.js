@@ -38,7 +38,7 @@ build_commands.execute([
   // Code in code-studio.js and any common code factored out of this bundle
   // gets included into every page in dashboard.
   // @see application.html.haml
-  build_commands.browserify(_.extend({}, defaultOptions, {
+  build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
       'code-studio.js',
       'levelbuilder.js',
@@ -56,7 +56,7 @@ build_commands.execute([
   // code-studio-common can be included on the same page, we may want to try
   // factoring out common modules to optimize download size.
   // @see _apps_dependencies.html.haml
-  build_commands.browserify(_.extend({}, defaultOptions, {
+  build_commands.bundle(_.extend({}, defaultOptions, {
     srcPath: './src/js/initApp/',
     filenames: [
       'initApp.js'
@@ -69,7 +69,7 @@ build_commands.execute([
   // embedded video page, keeping it fairly lightweight.
   // (I wonder how much more we could slim it down by removing jQuery!)
   // @see embed.html.haml
-  build_commands.browserify(_.extend({}, defaultOptions, {
+  build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
       'embedVideo.js'
     ],
