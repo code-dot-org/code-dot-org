@@ -366,9 +366,15 @@ config.uglify = {
   config.uglify[app] = {files: appUglifiedFiles };
 });
 
+config.uglify.interpreter = { files: {} };
+config.uglify.interpreter.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
+      outputDir + 'jsinterpreter/interpreter.js';
+config.uglify.interpreter.files[outputDir + 'jsinterpreter/acorn.min.js'] =
+      outputDir + 'jsinterpreter/acorn.js';
+
 // Run uglify task across all apps in parallel
 config.concurrent = {
-  uglify: APPS.concat('common').map( function (x) {
+  uglify: APPS.concat('common', 'interpreter').map( function (x) {
     return 'uglify:' + x;
   })
 };

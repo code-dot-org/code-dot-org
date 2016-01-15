@@ -153,6 +153,36 @@ function isCanvasImageData(nativeVar) {
 }
 
 
+/**
+ * Create a new "custom marshal" interpreter object that corresponds to a native
+ * object.
+ * @param {Interpreter} interpreter Interpreter instance
+ * @param {Object} nativeObj Object to wrap
+ * @param {Object} nativeParentObj Parent of object to wrap
+ * @return {!Object} New interpreter object.
+ */
+var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentObj) {
+  if (nativeObj === undefined && interpreter.UNDEFINED) {
+    return interpreter.UNDEFINED;  // Reuse the same object.
+  }
+  var type = typeof nativeObj;
+  var obj = {
+    data: nativeObj,
+    isPrimitive: false,
+    isCustomMarshal: true,
+    type: typeof nativeObj,
+    parent: nativeParentObj, // TODO (cpirich): replace with interpreter object?
+    toBoolean: function() {return Boolean(this.data);},
+    toNumber: function() {return Number(this.data);},
+    toString: function() {return String(this.data);},
+    valueOf: function() {return this.data;}
+  };
+  return obj;
+};
+
+exports.customMarshalObjectList = [];
+exports.customMarshalModifiedObjectList = [];
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
@@ -163,6 +193,18 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
+  }
+  for (i = 0; i < exports.customMarshalObjectList.length; i++) {
+    if (nativeVar instanceof exports.customMarshalObjectList[i]) {
+      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
+    }
+  }
+  for (i = 0; i < exports.customMarshalModifiedObjectList.length; i++) {
+    var modObj = exports.customMarshalModifiedObjectList[i];
+    if (nativeVar instanceof modObj.instance &&
+        nativeVar[modObj.methodName] !== undefined) {
+      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
+    }
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
@@ -205,8 +247,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.createNativeFunctionFromInterpreterFunction = null;
+
 exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
-  if (interpreterVar.isPrimitive) {
+  if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
     return interpreterVar.data;
   } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
@@ -216,17 +260,25 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
                                                           interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT) ||
+      interpreterVar.type === 'object') {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
       nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
                                                               interpreterVar.properties[prop]);
     }
     return nativeObject;
+  } else if (interpreter.isa(interpreterVar, interpreter.FUNCTION)) {
+    if (exports.createNativeFunctionFromInterpreterFunction) {
+      return exports.createNativeFunctionFromInterpreterFunction(interpreterVar);
+    } else {
+      // Just return the interpreter object if we can't convert it. This is needed
+      // for passing interpreter callback functions into native.
+
+      return interpreterVar;
+    }
   } else {
-    // Just return the interpreter object if we can't convert it. This is needed
-    // for passing interpreter callback functions into native.
-    return interpreterVar;
+    throw "Can't marshal type " + typeof interpreterVar;
   }
 };
 
