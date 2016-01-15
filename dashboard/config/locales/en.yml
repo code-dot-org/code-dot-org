@@ -61,6 +61,7 @@ en:
   puzzle: "Puzzle"
   trophies: "Trophies"
   courses: 'Courses'
+  unplugged_activity: 'Unplugged Activity'
   of: "of"
   more: "MORE"
   less: "LESS"
@@ -305,10 +306,6 @@ en:
   user_level:
     completed: 'Completed'
     tried: 'Tried'
-  user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
-    classroom_activity: 'Unplugged Activity'
   home:
     title: "Code Studio"
     description: 'Code Studio is home to online courses created by Code.org'
