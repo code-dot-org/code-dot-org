@@ -37,6 +37,7 @@ var watchify = require('watchify');
  *          running.
  */
 exports.bundle = function (config) {
+  var resolvePromise;
   var srcPath = config.srcPath;
   var buildPath = config.buildPath;
   var filenames = config.filenames;
@@ -59,9 +60,15 @@ exports.bundle = function (config) {
   }
 
   // Ensure output directory exists for every build target
-  targets.forEach(function (target) {
-    mkdirp.sync(path.dirname(target));
-  });
+  targets.forEach(ensureTargetDirectoryExists);
+
+  // Define a helper function that logs when our targets are built.
+  var logTargetsBuilt = function () {
+    console.log(timeStamp() + ' Built ' +
+        targets.map(function (target) {
+          return path.join(buildPath, path.relative(buildPath, target));
+        }).join('\n                 '));
+  };
 
   // Create browserify instance
   var bundler = browserify({
@@ -93,58 +100,55 @@ exports.bundle = function (config) {
     });
   }
 
+  // Optionally enable watch/rebuild loop
+  if (shouldWatch) {
+    bundler.plugin(watchify).on('update', function () {
+      console.log(timeStamp() + ' Changes detected...');
+      runBundle();
+    });
+  }
+
+  // TODO: release/dist settings
+
+  var runBundle = function () {
+    var bundlingAttemptError;
+
+    // We attach events to our filesystem output stream, because it's the
+    // best indicator of when the bundle is actually done building.
+    var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
+        .on('error', function (err) {
+          logBoldRedError(err);
+          resolvePromise(err);
+        })
+        .on('finish', function () {
+          if (bundlingAttemptError) {
+            resolvePromise(bundlingAttemptError);
+          } else {
+            logTargetsBuilt();
+            resolvePromise();
+          }
+        });
+
+    // Bundle the files and pass them to the output stream
+    bundler.bundle().on('error', function (err) {
+      logBoldRedError(err);
+      bundlingAttemptError = err;
+      // Necessary to close the stream if an error occurs
+      // After calling this, the output stream 'finish' event will occur.
+      this.emit('end');
+    }).pipe(outStream);
+  };
+
   return new Promise(function (resolve) {
+    // Define a one-time resolution helper
     var isResolved = false;
-    var resolveOnce = function (result) {
-      if (isResolved) { return; }
-      resolve(result);
-      isResolved = true;
+    resolvePromise = function (result) {
+      if (!isResolved) {
+        resolve(result);
+        isResolved = true;
+      }
     };
 
-    // TODO: release/dist settings
-
-    // Define output step
-    var runBundle = function () {
-      var bundlingAttemptError;
-
-      // We attach events to our filesystem output stream, because it's the
-      // best indicator of when the bundle is actually done building.
-      var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
-          .on('error', function (err) {
-            logBoldRedError(err);
-            resolveOnce(err);
-          })
-          .on('finish', function () {
-            if (bundlingAttemptError) {
-              resolveOnce(bundlingAttemptError);
-            } else {
-              console.log(timeStamp() + ' Built ' +
-                  targets.map(function (target) {
-                    return path.join(buildPath, path.relative(buildPath, target));
-                  }).join('\n                 '));
-              resolveOnce();
-            }
-          });
-
-      // Bundle the files and pass them to the output stream
-      var bundledStream = bundler.bundle()
-          .on('error', function (err) {
-            logBoldRedError(err);
-            bundlingAttemptError = err;
-            // Necessary to close the stream if an error occurs
-            // After calling this, the output stream 'finish' event will occur.
-            this.emit('end');
-          })
-          .pipe(outStream);
-    };
-
-    // Optionally enable watch
-    if (shouldWatch) {
-      bundler.plugin(watchify).on('update', function () {
-        console.log(timeStamp() + ' Changes detected...');
-        runBundle();
-      });
-    }
     runBundle();
   });
 };
@@ -254,6 +258,15 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
     buildPath + path.basename(file, '.scss') + extension
   ].join(" \\\n    ");
 };
+
+/**
+ * Given a filename, synchronously ensures the directory that would contain
+ * that file exists (to any depth).
+ * @param {string} target - path to a file.
+ */
+function ensureTargetDirectoryExists(target) {
+  mkdirp.sync(path.dirname(target));
+}
 
 /**
  * Helper for formatting error messages for the terminal.
