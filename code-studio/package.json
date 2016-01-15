@@ -38,7 +38,8 @@
     "node-sass": "^3.4.2",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
-    "uglify-js": "^2.6.1"
+    "uglify-js": "^2.6.1",
+    "watchify": "^3.7.0"
   },
   "dependencies": {
     "@cdo/code-studio-vendor": "file:./vendor",

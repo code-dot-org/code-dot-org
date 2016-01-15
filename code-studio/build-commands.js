@@ -7,6 +7,7 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var fs = require('fs');
 var path = require('path');
+var watchify = require('watchify');
 
 /**
  * Generate command to:
@@ -26,6 +27,8 @@ var path = require('path');
  * @param {boolean} config.shouldFactor if true, we will factor out common code
  *        into config.commonFile. With non-common code ending up in
  *        <filenames>.js. If false, everything ends up in config.commonFile.
+ * @param {boolean} config.shouldWatch if true, will watch file system for
+ *        changes, and rebuild when it detects them
  * @returns {function}
  */
 exports.bundle = function (config) {
@@ -34,6 +37,7 @@ exports.bundle = function (config) {
   var filenames = config.filenames;
   var commonFile = config.commonFile;
   var shouldFactor = config.shouldFactor;
+  var shouldWatch = config.shouldWatch;
 
   var outPath = function (inPath) {
     return path
@@ -47,7 +51,11 @@ exports.bundle = function (config) {
   return function () {
     var bundler = browserify({
       // Enables source map
-      debug: true
+      debug: true,
+
+      // Required for watchify
+      cache: {},
+      packageCache: {}
     });
 
     // Define inputs
@@ -59,6 +67,11 @@ exports.bundle = function (config) {
     var runBundle = function () {
       bundler.bundle().pipe(fs.createWriteStream(outPath(srcPath + commonFile)));
     };
+
+    // Optionally enable watch
+    if (shouldWatch) {
+      bundler.plugin(watchify).on('update', runBundle);
+    }
 
     // babelify tranforms jsx files for us
     bundler.transform('babelify', {
