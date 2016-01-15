@@ -25,6 +25,7 @@ var GameLab = function () {
   this.JSInterpreter = null;
   this.drawFunc = null;
   this.setupFunc = null;
+  this.mousePressedFunc = null;
   this.eventHandlers = [];
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -168,6 +169,10 @@ GameLab.prototype.reset = function (ignore) {
   */
 
   if (this.p5) {
+    this.p5.remove();
+    this.p5 = null;
+    this.p5decrementPreload = null;
+
     // Clear registered methods on the prototype:
     for (var member in window.p5.prototype._registeredMethods) {
       delete window.p5.prototype._registeredMethods[member];
@@ -175,20 +180,40 @@ GameLab.prototype.reset = function (ignore) {
     window.p5.prototype._registeredMethods = { pre: [], post: [], remove: [] };
     delete window.p5.prototype._registeredPreloadMethods['gamelabPreload'];
 
-    this.p5.remove();
-    this.p5 = null;
-    this.p5decrementPreload = null;
+    window.p5.prototype.allSprites = new window.Group();
+    window.p5.prototype.spriteUpdate = true;
+
+    window.p5.prototype.camera = new window.Camera(0, 0, 1);
+    window.p5.prototype.camera.init = false;
+
+    //keyboard input
+    window.p5.prototype.registerMethod('pre', window.p5.prototype.readPresses);
+
+    //automatic sprite update
+    window.p5.prototype.registerMethod('pre', window.p5.prototype.updateSprites);
+
+    //quadtree update
+    window.p5.prototype.registerMethod('post', window.updateTree);
+
+    //camera push and pop
+    window.p5.prototype.registerMethod('pre', window.cameraPush);
+    window.p5.prototype.registerMethod('post', window.cameraPop);
+
   }
 
-  p5.prototype.gamelabPreload = _.bind(function () {
+  window.p5.prototype.gamelabPreload = _.bind(function () {
     this.p5decrementPreload = p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
   // Discard the interpreter.
-  this.JSInterpreter = null;
+  if (this.JSInterpreter) {
+    this.JSInterpreter.deinitialize();
+    this.JSInterpreter = null;
+  }
   this.executionError = null;
   this.drawFunc = null;
   this.setupFunc = null;
+  this.mousePressedFunc = null;
 };
 
 /**
@@ -230,7 +255,7 @@ GameLab.prototype.callHandler = function (name, allowQueueExtension, extraArgs) 
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        this.JSInterpreter.queueEvent(handler.func, extraArgs);
+        handle.func.apply(null, extraArgs);
       }
     }
   }, this));
@@ -324,6 +349,14 @@ GameLab.prototype.execute = function() {
           $('#bubble').text(timeElapsed.toFixed(2) + ' ms');
         }
       }, this);
+      window.mousePressed = _.bind(function () {
+        if (this.JSInterpreter) {
+          if (this.mousePressedFunc) {
+            this.JSInterpreter.queueEvent(this.mousePressedFunc);
+          }
+          this.JSInterpreter.executeInterpreter();
+        }
+      }, this);
     }, this), divGameLab);
 
   if (this.level.editCode) {
@@ -333,7 +366,6 @@ GameLab.prototype.execute = function() {
       blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
       enableEvents: true,
       studioApp: this.studioApp_,
-      globalFunctions: { p5: this.p5 },
       onExecutionError: _.bind(this.handleExecutionError, this),
     });
     if (!this.JSInterpreter.initialized()) {
@@ -341,6 +373,31 @@ GameLab.prototype.execute = function() {
     }
     this.drawFunc = this.JSInterpreter.findGlobalFunction('draw');
     this.setupFunc = this.JSInterpreter.findGlobalFunction('setup');
+    this.mousePressedFunc = this.JSInterpreter.findGlobalFunction('mousePressed');
+
+    codegen.customMarshalObjectList = [ window.p5, window.Sprite, window.Camera, window.p5.Vector, window.p5.Color, window.p5.Image ];
+    codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
+
+    var intP5 = codegen.marshalNativeToInterpreter(
+        this.JSInterpreter.interpreter,
+        this.p5,
+        window);
+
+    this.JSInterpreter.interpreter.setProperty(
+        this.JSInterpreter.globalScope,
+        'p5',
+        intP5);
+
+    var intGroup = codegen.marshalNativeToInterpreter(
+        this.JSInterpreter.interpreter,
+        window.Group,
+        window);
+
+    this.JSInterpreter.interpreter.setProperty(
+        this.JSInterpreter.globalScope,
+        'Group',
+        intGroup);
+
     /*
     if (this.checkForEditCodePreExecutionFailure()) {
       return this.onPuzzleComplete();
@@ -442,17 +499,8 @@ GameLab.prototype.onTick = function () {
 */
 
   if (this.JSInterpreter) {
-/*
-    var startTime = window.performance.now();
-    if (this.tickCount > 1 && this.drawFunc) {
-      this.JSInterpreter.queueEvent(this.drawFunc);
-    }
-*/
     this.JSInterpreter.executeInterpreter(this.tickCount === 1);
-/*
-    var timeElapsed = window.performance.now() - startTime;
-    $('#visualization').text(timeElapsed.toFixed(2) + ' ms');
-*/
+
     if (this.JSInterpreter.startedHandlingEvents && this.p5decrementPreload) {
       this.p5decrementPreload();
     }
