@@ -2,9 +2,82 @@
 'use strict';
 
 var _ = require('lodash');
+var browserify = require('browserify');
 var chalk = require('chalk');
 var child_process = require('child_process');
+var fs = require('fs');
 var path = require('path');
+
+/**
+ * Generate command to:
+ * Bundle JavaScript files using Browserify, break out common code using
+ * factor-bundle.
+ * @param {object} config
+ * @param {string} config.srcPath - Path to root of JavaScript source files,
+ *        absolute or relative to execution path for this script (which is the
+ *        code-studio folder for this build system), with trailing slash.
+ * @param {string} config.buildPath - Path to root of output directory, absolute
+ *        or relative to execution path for this script (which is the
+ *        code-studio folder for this build system), with trailing slash.
+ * @param {(string[])[]} config.filenames - List of entry points (relative to
+ *        srcPath)
+ * @param {string} config.commonFile - Filename for where to output common code
+ *        (relative to buildPath)
+ * @param {boolean} config.shouldFactor if true, we will factor out common code
+ *        into config.commonFile. With non-common code ending up in
+ *        <filenames>.js. If false, everything ends up in config.commonFile.
+ * @returns {function}
+ */
+exports.bundle = function (config) {
+  var srcPath = config.srcPath;
+  var buildPath = config.buildPath;
+  var filenames = config.filenames;
+  var commonFile = config.commonFile;
+  var shouldFactor = config.shouldFactor;
+
+  var outPath = function (inPath) {
+    return path
+      .resolve(buildPath, path.relative(srcPath, inPath))
+      .replace(/\.jsx?$/i, '') + '.js';
+  };
+
+  // TODO: release/dist settings
+  // TODO: watch
+
+  return function () {
+    var bundler = browserify({
+      // Enables source map
+      debug: true
+    });
+
+    // Define inputs
+    bundler.add(filenames.map(function (file) {
+      return path.resolve(srcPath, file);
+    }));
+
+    // Define output step
+    var runBundle = function () {
+      bundler.bundle().pipe(fs.createWriteStream(outPath(srcPath + commonFile)));
+    };
+
+    // babelify tranforms jsx files for us
+    bundler.transform('babelify', {
+      compact: false
+    });
+
+    // factor-bundle splits the bundle back up into parts, but leaves common
+    // modules in the main browserify stream.
+    if (shouldFactor) {
+      bundler.plugin('factor-bundle', {
+        outputs: filenames.map(function (file) {
+          return outPath(srcPath + file);
+        })
+      });
+    }
+
+    runBundle();
+  };
+};
 
 /**
  * Generate command to:
@@ -46,20 +119,57 @@ exports.browserify = function (config) {
 
   var extension = (shouldMinify ? '.min.js' : '.js');
 
+  // The React library checks the NODE_ENV variable in several places to decide
+  // whether to enable special debugging features.  By setting this environment
+  // variable, envify will do an inline replacement anywhere `process.env.NODE_ENV`
+  // is used (envify is implicitly part of the browserify step, since we depend
+  // on 'react') and then uglify will perform dead code removal that strips all
+  // of those debug paths from our minified output.
+  var customEnvironment = (shouldMinify ? 'NODE_ENV=production' : '');
+
   var command = (shouldWatch ? 'watchify -v' : 'browserify') +
     (shouldMinify ? '' : ' --debug');
+  
+  var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
+
+  // Uglify shrinks our output down as small as possible.
+  // --compress performs lots of optimizations including removal of dead code.
+  // warnings=false disables compressor warnings (which don't indicate actual problems, for us)
+  // --mangle replaces variable names with short representations
+  var uglifyCommand = 'uglifyjs --compress warnings=false --mangle';
 
   var factorStep = '';
   if (shouldFactor) {
-    factorStep = "-p [ factor-bundle -o '" + (shouldMinify ? 'uglifyjs ' : '') +
-      '>' + buildPath + "`basename $FILE .js`" + extension + "']";
-  }
+    // We use command substitution to build an output filename based on
+    // the input filename, which factor-bundle automatically binds to $FILE.
+    var factoredOutputFilename = buildPath + '`';
 
-  var commonOutput = (shouldMinify ? '| uglifyjs ': '') +
+    // The output file ends up at the same path relative to the build directory
+    // as the input file is relative to the src directory:
+    // @see `man realpath`
+    factoredOutputFilename += 'basename $FILE';
+
+    // And we swap out the input file extension (.js or .jsx) for an output
+    // file extension (.js or .min.js) depending on our configuration.
+    // @see `man sed`
+    factoredOutputFilename += ' | sed -r "s/\.jsx?$/' + extension + '/i"';
+
+    // Finally, we close the command substitution
+    factoredOutputFilename += '`';
+
+    // Use bracket syntax to invoke the factor-bundle plugin with one argument:
+    // A command that accepts each factored output file as it's processed.
+    factorStep = "-p [ factor-bundle -o '" +
+        (shouldMinify ? uglifyCommand : '') +
+        ' > ' + factoredOutputFilename + "' ]";
+  }
+  var commonOutput = (shouldMinify ? '| ' + uglifyCommand + ' ' : '') +
     '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
   return [
+    customEnvironment,
     command,
+    babelifyStep,
     fileInput,
     factorStep,
     commonOutput
@@ -98,21 +208,25 @@ exports.ensureDirectoryExists = function (dir) {
  * Execute a sequence of shell commands as a build script, with useful output
  * wherever possible.
  * Will call process.exit() if the command fails for any reason.
- * @param {string[]} commands - array of shell commands to be executed in sequence.
+ * @param {Array.<string|function>} commands - array of shell commands to be executed in sequence.
  */
 exports.execute = function (commands) {
   commands.forEach(function (command) {
-    console.log(command);
-
     try {
-      // For documentation on synchronous execution of shell commands from node scripts, see:
-      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-      var result = child_process.execSync(command, {
-        env: _.extend({}, process.env, {
-          PATH: './node_modules/.bin:' + process.env.PATH
-        }),
-        stdio: 'inherit'
-      });
+      if ('function' === typeof command) {
+        command();
+      } else {
+        console.log(command);
+
+        // For documentation on synchronous execution of shell commands from node scripts, see:
+        // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
+        var result = child_process.execSync(command, {
+          env: _.extend({}, process.env, {
+            PATH: './node_modules/.bin:' + process.env.PATH
+          }),
+          stdio: 'inherit'
+        });
+      }
     } catch (e) {
       console.log("\nError: " + e.message);
       warnIfWrongNodeVersion();
@@ -170,7 +284,10 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
  * currently being used.
  */
 function warnIfWrongNodeVersion() {
-  if (!/0\.12/.test(process.version)) {
-    console.log('You are using node ' + process.version + '. This build script expects v0.12.x.');
+  var nodev = process.version;
+  var semver = require('semver');
+  var engines_node = process.env.npm_package_engines_node;
+  if (engines_node && !semver.satisfies(nodev, engines_node, true)) {
+      console.log('You are using node ' + process.version + '. This build script expects ' + engines_node + '.');
   }
 }

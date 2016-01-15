@@ -4,8 +4,11 @@
   "description": "Pipeline for static assets used by our Code Studio rails app (i.e. dashboard)",
   "author": "Code.org",
   "license": "Apache-2.0",
+  "config": {
+    "engine-strict": true
+  },
   "engines": {
-    "node": ">=0.12.0 <0.13",
+    "node": ">=0.12.0",
     "npm": "^2.9.1"
   },
   "scripts": {
@@ -26,6 +29,7 @@
     "test": "echo \"Unimplemented.\""
   },
   "devDependencies": {
+    "babelify": "^6.3.0",
     "browserify": "^12.0.1",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
@@ -33,6 +37,7 @@
     "jshint": "^2.8.0",
     "node-sass": "^3.4.2",
     "sass-lint": "^1.4.0",
+    "semver": "^5.1.0",
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
@@ -42,6 +47,7 @@
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",
+    "react": "^0.13.1",
     "video.js": "4.5.2"
   }
 }
