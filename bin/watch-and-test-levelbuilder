@@ -30,7 +30,7 @@ all_interesting_files.each do |filename|
 end
 
 unless level_file_modified
-  puts 'No real changes, cleaning up'
+  puts 'No new changes, cleaning up'
   File.delete LEVELBUILDER_CI_LOCK_FILENAME
   exit 0;
 end
@@ -39,7 +39,7 @@ puts "Modifications to levelbuilder files detected - running testing"
 
 Dir.chdir(REPO_DIR + '/dashboard')
 
-test_result = `bundle exec ruby -Itest test/controllers/activities_controller_test.rb`
+test_result = system 'rake test'
 
 Dir.chdir REPO_DIR
 
