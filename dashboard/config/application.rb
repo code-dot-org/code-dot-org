@@ -100,8 +100,6 @@ module Dashboard
       jquery.handsontable.full.css
       jquery.handsontable.full.js
     )
-    config.react.variant = :development
-    config.react.addons = true
     config.autoload_paths << Rails.root.join('lib')
 
     # use https://(*-)studio.code.org urls in mails
