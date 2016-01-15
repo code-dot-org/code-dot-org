@@ -101,10 +101,11 @@ window.dashboard.progress = (function () {
     })));
   };
 
-  progress.renderCourseProgress = function (stages) {
+  progress.renderCourseProgress = function (scriptData) {
     $('.user-stats-block').replaceWith(React.renderToStaticMarkup(React.createElement(dashboard.CourseProgress, {
-      stages: stages
+      stages: scriptData.stages
     })));
+    progress.populateProgress(scriptData.name);
   };
 
   return progress;

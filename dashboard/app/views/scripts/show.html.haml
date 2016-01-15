@@ -37,7 +37,7 @@
     .span12#rightside
       .user-stats-block
         :javascript
-          dashboard.progress.renderCourseProgress(#{@script.summarize[:stages].to_json});
+          dashboard.progress.renderCourseProgress(#{@script.summarize.to_json});
 
   %div{style: 'clear: both;'}
   %br/
