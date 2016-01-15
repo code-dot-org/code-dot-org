@@ -125,7 +125,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     assert_equal 'A name', assigns(:user).name
     assert_equal 'F', assigns(:user).gender
-    assert_equal Date.today - 13.years, assigns(:user).birthday
+    assert_equal Time.zone.now.to_date - 13.years, assigns(:user).birthday
     assert_equal nil, assigns(:user).provider
     assert_equal User::TYPE_STUDENT, assigns(:user).user_type
   end

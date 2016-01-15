@@ -9,7 +9,7 @@ nav: plc_plp_nav
 ## Your Commitment (Professional Learning Partner)
 
 - Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
-- Attend our Facilitation Summit, May 20-22, 2016. Location TBD
+- Attend our Facilitation Summit, May 20-22, 2016 in Nashville, TN
 - Attend our 5-day Code.org Summer Institute with teachers from your state
 	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, KY, IN, MD, NC, OH, TX)
 	- July 18-22 in Salt Lake City, UT - states attending (WA, CA, ID, AZ, NV, UT)

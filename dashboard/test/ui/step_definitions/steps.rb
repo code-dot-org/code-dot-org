@@ -672,6 +672,11 @@ Then /^my query params match "(.*)"$/ do |matcher|
   wait.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
+Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  wait.until { @browser.find_element(:id => element_id_to_seek) }
+end
+
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
   wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
