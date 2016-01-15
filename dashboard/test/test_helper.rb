@@ -2,6 +2,7 @@ if ENV['COVERAGE'] # set this environment variable when running tests if you wan
   require 'simplecov'
   SimpleCov.start :rails
 elsif ENV['CIRCLE_ARTIFACTS'] # always run with test coverage on circle
+  require 'simplecov'
   dir = File.join(ENV['CIRCLE_ARTIFACTS'], "coverage")
   SimpleCov.coverage_dir(dir)
   SimpleCov.start :rails
