@@ -42,7 +42,7 @@ window.dashboard.progress = (function () {
     // Render the progress the client knows about (from sessionStorage)
     var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
     Object.keys(clientProgress).forEach(function (levelId) {
-      $('#level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
+      $('.level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
     });
 
     $.ajax('/api/user_progress/' + scriptName).done(function (data) {
@@ -53,7 +53,7 @@ window.dashboard.progress = (function () {
           var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
 
           // Clear the existing class and replace
-          $('#level-' + levelId).attr('class', 'level_link ' + status);
+          $('.level-' + levelId).attr('class', 'level_link ' + status);
 
           // Write down new progress in sessionStorage
           dashboard.clientState.trackProgress(null, null, serverProgress[levelId].result, scriptName, levelId);
@@ -63,7 +63,7 @@ window.dashboard.progress = (function () {
 
     // Highlight the current level
     if (window.appOptions && appOptions.serverLevelId) {
-      $('#level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
+      $('.level-' + appOptions.serverLevelId).parent().addClass('puzzle_outer_current');
     }
   };
 
