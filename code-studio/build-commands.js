@@ -37,7 +37,7 @@ var watchify = require('watchify');
  *          running.
  */
 exports.bundle = function (config) {
-  var resolvePromise;
+  var runBundle, resolvePromise;
   var srcPath = config.srcPath;
   var buildPath = config.buildPath;
   var filenames = config.filenames;
@@ -110,7 +110,7 @@ exports.bundle = function (config) {
 
   // TODO: release/dist settings
 
-  var runBundle = function () {
+  runBundle = function () {
     var bundlingAttemptError;
 
     // We attach events to our filesystem output stream, because it's the
