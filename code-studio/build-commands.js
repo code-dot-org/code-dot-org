@@ -50,6 +50,7 @@ exports.bundle = function (config) {
       .replace(/\.jsx?$/i, '') + '.js';
   };
 
+  // Create list of full paths to build output files
   var targets = [outPath(srcPath + commonFile)];
   if (shouldFactor) {
     targets = targets.concat(filenames.map(function (file) {
@@ -110,6 +111,7 @@ exports.bundle = function (config) {
       // best indicator of when the bundle is actually done building.
       var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
           .on('error', function (err) {
+            logBoldRedError(err);
             resolveOnce(err);
           })
           .on('finish', function () {
@@ -127,12 +129,7 @@ exports.bundle = function (config) {
       // Bundle the files and pass them to the output stream
       var bundledStream = bundler.bundle()
           .on('error', function (err) {
-            console.log([
-              chalk.bold.red(timeStamp()),
-              chalk.bold.red(err.name),
-              chalk.bold(err.message)
-            ].join(' '));
-            console.log(err.codeFrame);
+            logBoldRedError(err);
             bundlingAttemptError = err;
             // Necessary to close the stream if an error occurs
             // After calling this, the output stream 'finish' event will occur.
@@ -150,105 +147,6 @@ exports.bundle = function (config) {
     }
     runBundle();
   });
-};
-
-/**
- * Generate command to:
- * Bundle JavaScript files using Browserify, break out common code using
- * factor-bundle, and (optionally) minify output using uglify and (optionally)
- * run watch in watch mode using watchify
- * @param {object} config
- * @param {string} config.srcPath - Path to root of JavaScript source files, absolute
- *        or relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} config.buildPath - Path to root of output directory, absolute or
- *        relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {(string[])[]} config.filenames - List of entry points (relative to
-          srcPath)
- * @param {string} config.commonFile - Filename for where to output common code
- *        (relative to buildPath)
- * @param {boolean} config.shouldFactor if true, we will factor out common code
- *        into config.commonFile. With non-common code ending up in <filenames>.js
- *        If false, everything ends up in config.commonFile.
- * @param {boolean} config.shouldMinify if true, will build minified
- *        output files (with .min.js extensions) instead of unminified output.
- * @param {boolean} config.shouldWatch if true, will watch file system for
- *        changes, and rebuild when it detects them
- * @returns {string}
- */
-exports.browserify = function (config) {
-  var srcPath = config.srcPath;
-  var buildPath = config.buildPath;
-  var filenames = config.filenames;
-  var commonFile = config.commonFile;
-  var shouldFactor = config.shouldFactor;
-  var shouldMinify = config.shouldMinify;
-  var shouldWatch = config.shouldWatch;
-
-  var fileInput = filenames.map(function (file) {
-    return srcPath + file;
-  }).join(" \\\n    ");
-
-  var extension = (shouldMinify ? '.min.js' : '.js');
-
-  // The React library checks the NODE_ENV variable in several places to decide
-  // whether to enable special debugging features.  By setting this environment
-  // variable, envify will do an inline replacement anywhere `process.env.NODE_ENV`
-  // is used (envify is implicitly part of the browserify step, since we depend
-  // on 'react') and then uglify will perform dead code removal that strips all
-  // of those debug paths from our minified output.
-  var customEnvironment = (shouldMinify ? 'NODE_ENV=production' : '');
-
-  var command = (shouldWatch ? 'watchify -v' : 'browserify') +
-    (shouldMinify ? '' : ' --debug');
-  
-  var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
-
-  // Uglify shrinks our output down as small as possible.
-  // --compress performs lots of optimizations including removal of dead code.
-  // warnings=false disables compressor warnings (which don't indicate actual problems, for us)
-  // --mangle replaces variable names with short representations
-  var uglifyCommand = 'uglifyjs --compress warnings=false --mangle';
-
-  var factorStep = '';
-  if (shouldFactor) {
-    // We use command substitution to build an output filename based on
-    // the input filename, which factor-bundle automatically binds to $FILE.
-    var factoredOutputFilename = buildPath + '`';
-
-    // The output file ends up at the same path relative to the build directory
-    // as the input file is relative to the src directory:
-    // @see `man realpath`
-    factoredOutputFilename += 'basename $FILE';
-
-    // And we swap out the input file extension (.js or .jsx) for an output
-    // file extension (.js or .min.js) depending on our configuration.
-    // @see `man sed`
-    factoredOutputFilename += ' | sed -r "s/\.jsx?$/' + extension + '/i"';
-
-    // Finally, we close the command substitution
-    factoredOutputFilename += '`';
-
-    // Use bracket syntax to invoke the factor-bundle plugin with one argument:
-    // A command that accepts each factored output file as it's processed.
-    factorStep = "-p [ factor-bundle -o '" +
-        (shouldMinify ? uglifyCommand : '') +
-        ' > ' + factoredOutputFilename + "' ]";
-  }
-  var commonOutput = (shouldMinify ? '| ' + uglifyCommand + ' ' : '') +
-    '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
-
-  return [
-    customEnvironment,
-    command,
-    babelifyStep,
-    fileInput,
-    factorStep,
-    commonOutput
-  ].filter(function (part) {
-    return part.length > 0;
-  }).join(" \\\n    ");
 };
 
 /**
@@ -356,6 +254,21 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
     buildPath + path.basename(file, '.scss') + extension
   ].join(" \\\n    ");
 };
+
+/**
+ * Helper for formatting error messages for the terminal.
+ * @param {Error} err
+ */
+function logBoldRedError(err) {
+  console.log([
+    chalk.bold.red(timeStamp()),
+    chalk.bold.red(err.name),
+    chalk.bold(err.message)
+  ].join(' '));
+  if (err.codeFrame) {
+    console.log(err.codeFrame);
+  }
+}
 
 /**
  * @returns {string} a time string formatted [HH:MM:SS] in 24-hour time.
