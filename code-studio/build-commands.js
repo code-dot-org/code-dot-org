@@ -6,7 +6,9 @@ var browserify = require('browserify');
 var chalk = require('chalk');
 var child_process = require('child_process');
 var fs = require('fs');
+var mkdirp = require('mkdirp');
 var path = require('path');
+var watchify = require('watchify');
 
 /**
  * Generate command to:
@@ -26,14 +28,22 @@ var path = require('path');
  * @param {boolean} config.shouldFactor if true, we will factor out common code
  *        into config.commonFile. With non-common code ending up in
  *        <filenames>.js. If false, everything ends up in config.commonFile.
- * @returns {function}
+ * @param {boolean} config.shouldWatch if true, will watch file system for
+ *        changes, and rebuild when it detects them
+ * @returns {Promise} that resolves after the build completes or fails - even
+ *          if the build fails, the promise should resolve, but get an Error
+ *          object as its result.  If watch is enabled, the promise resolves
+ *          after the initial build success or failure, but the watch will keep
+ *          running.
  */
 exports.bundle = function (config) {
+  var runBundle, resolvePromise;
   var srcPath = config.srcPath;
   var buildPath = config.buildPath;
   var filenames = config.filenames;
   var commonFile = config.commonFile;
   var shouldFactor = config.shouldFactor;
+  var shouldWatch = config.shouldWatch;
 
   var outPath = function (inPath) {
     return path
@@ -41,141 +51,98 @@ exports.bundle = function (config) {
       .replace(/\.jsx?$/i, '') + '.js';
   };
 
-  // TODO: release/dist settings
-  // TODO: watch
-
-  return function () {
-    var bundler = browserify({
-      // Enables source map
-      debug: true
-    });
-
-    // Define inputs
-    bundler.add(filenames.map(function (file) {
-      return path.resolve(srcPath, file);
-    }));
-
-    // Define output step
-    var runBundle = function () {
-      bundler.bundle().pipe(fs.createWriteStream(outPath(srcPath + commonFile)));
-    };
-
-    // babelify tranforms jsx files for us
-    bundler.transform('babelify', {
-      compact: false
-    });
-
-    // factor-bundle splits the bundle back up into parts, but leaves common
-    // modules in the main browserify stream.
-    if (shouldFactor) {
-      bundler.plugin('factor-bundle', {
-        outputs: filenames.map(function (file) {
-          return outPath(srcPath + file);
-        })
-      });
-    }
-
-    runBundle();
-  };
-};
-
-/**
- * Generate command to:
- * Bundle JavaScript files using Browserify, break out common code using
- * factor-bundle, and (optionally) minify output using uglify and (optionally)
- * run watch in watch mode using watchify
- * @param {object} config
- * @param {string} config.srcPath - Path to root of JavaScript source files, absolute
- *        or relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} config.buildPath - Path to root of output directory, absolute or
- *        relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {(string[])[]} config.filenames - List of entry points (relative to
-          srcPath)
- * @param {string} config.commonFile - Filename for where to output common code
- *        (relative to buildPath)
- * @param {boolean} config.shouldFactor if true, we will factor out common code
- *        into config.commonFile. With non-common code ending up in <filenames>.js
- *        If false, everything ends up in config.commonFile.
- * @param {boolean} config.shouldMinify if true, will build minified
- *        output files (with .min.js extensions) instead of unminified output.
- * @param {boolean} config.shouldWatch if true, will watch file system for
- *        changes, and rebuild when it detects them
- * @returns {string}
- */
-exports.browserify = function (config) {
-  var srcPath = config.srcPath;
-  var buildPath = config.buildPath;
-  var filenames = config.filenames;
-  var commonFile = config.commonFile;
-  var shouldFactor = config.shouldFactor;
-  var shouldMinify = config.shouldMinify;
-  var shouldWatch = config.shouldWatch;
-
-  var fileInput = filenames.map(function (file) {
-    return srcPath + file;
-  }).join(" \\\n    ");
-
-  var extension = (shouldMinify ? '.min.js' : '.js');
-
-  // The React library checks the NODE_ENV variable in several places to decide
-  // whether to enable special debugging features.  By setting this environment
-  // variable, envify will do an inline replacement anywhere `process.env.NODE_ENV`
-  // is used (envify is implicitly part of the browserify step, since we depend
-  // on 'react') and then uglify will perform dead code removal that strips all
-  // of those debug paths from our minified output.
-  var customEnvironment = (shouldMinify ? 'NODE_ENV=production' : '');
-
-  var command = (shouldWatch ? 'watchify -v' : 'browserify') +
-    (shouldMinify ? '' : ' --debug');
-  
-  var babelifyStep = '-t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]';
-
-  // Uglify shrinks our output down as small as possible.
-  // --compress performs lots of optimizations including removal of dead code.
-  // warnings=false disables compressor warnings (which don't indicate actual problems, for us)
-  // --mangle replaces variable names with short representations
-  var uglifyCommand = 'uglifyjs --compress warnings=false --mangle';
-
-  var factorStep = '';
+  // Create list of full paths to build output files
+  var targets = [outPath(srcPath + commonFile)];
   if (shouldFactor) {
-    // We use command substitution to build an output filename based on
-    // the input filename, which factor-bundle automatically binds to $FILE.
-    var factoredOutputFilename = buildPath + '`';
-
-    // The output file ends up at the same path relative to the build directory
-    // as the input file is relative to the src directory:
-    // @see `man realpath`
-    factoredOutputFilename += 'basename $FILE';
-
-    // And we swap out the input file extension (.js or .jsx) for an output
-    // file extension (.js or .min.js) depending on our configuration.
-    // @see `man sed`
-    factoredOutputFilename += ' | sed -r "s/\.jsx?$/' + extension + '/i"';
-
-    // Finally, we close the command substitution
-    factoredOutputFilename += '`';
-
-    // Use bracket syntax to invoke the factor-bundle plugin with one argument:
-    // A command that accepts each factored output file as it's processed.
-    factorStep = "-p [ factor-bundle -o '" +
-        (shouldMinify ? uglifyCommand : '') +
-        ' > ' + factoredOutputFilename + "' ]";
+    targets = targets.concat(filenames.map(function (file) {
+      return outPath(srcPath + file);
+    }));
   }
-  var commonOutput = (shouldMinify ? '| ' + uglifyCommand + ' ' : '') +
-    '-o ' + buildPath + path.basename(commonFile, '.js') + extension;
 
-  return [
-    customEnvironment,
-    command,
-    babelifyStep,
-    fileInput,
-    factorStep,
-    commonOutput
-  ].filter(function (part) {
-    return part.length > 0;
-  }).join(" \\\n    ");
+  // Ensure output directory exists for every build target
+  targets.forEach(ensureTargetDirectoryExists);
+
+  // Define a helper function that logs when our targets are built.
+  var logTargetsBuilt = function () {
+    console.log(timeStamp() + ' Built ' +
+        targets.map(function (target) {
+          return path.join(buildPath, path.relative(buildPath, target));
+        }).join('\n                 '));
+  };
+
+  // Create browserify instance
+  var bundler = browserify({
+    // Enables source map
+    debug: true,
+
+    // Required for watchify
+    cache: {},
+    packageCache: {}
+  });
+
+  // Define inputs
+  bundler.add(filenames.map(function (file) {
+    return path.resolve(srcPath, file);
+  }));
+
+  // babelify tranforms jsx files for us
+  bundler.transform('babelify', {
+    compact: false
+  });
+
+  // factor-bundle splits the bundle back up into parts, but leaves common
+  // modules in the main browserify stream.
+  if (shouldFactor) {
+    bundler.plugin('factor-bundle', {
+      outputs: filenames.map(function (file) {
+        return outPath(srcPath + file);
+      })
+    });
+  }
+
+  // Optionally enable watch/rebuild loop
+  if (shouldWatch) {
+    bundler.plugin(watchify).on('update', function () {
+      console.log(timeStamp() + ' Changes detected...');
+      runBundle();
+    });
+  }
+
+  // TODO: release/dist settings
+
+  runBundle = function () {
+    var bundlingAttemptError;
+
+    // We attach events to our filesystem output stream, because it's the
+    // best indicator of when the bundle is actually done building.
+    var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
+        .on('error', function (err) {
+          logBoldRedError(err);
+          resolvePromise(err);
+        })
+        .on('finish', function () {
+          if (bundlingAttemptError) {
+            resolvePromise(bundlingAttemptError);
+          } else {
+            logTargetsBuilt();
+            resolvePromise();
+          }
+        });
+
+    // Bundle the files and pass them to the output stream
+    bundler.bundle().on('error', function (err) {
+      logBoldRedError(err);
+      bundlingAttemptError = err;
+      // Necessary to close the stream if an error occurs
+      // After calling this, the output stream 'finish' event will occur.
+      this.emit('end');
+    }).pipe(outStream);
+  };
+
+  return new Promise(function (resolve) {
+    resolvePromise = _.once(resolve);
+    runBundle();
+  });
 };
 
 /**
@@ -208,40 +175,45 @@ exports.ensureDirectoryExists = function (dir) {
  * Execute a sequence of shell commands as a build script, with useful output
  * wherever possible.
  * Will call process.exit() if the command fails for any reason.
- * @param {Array.<string|function>} commands - array of shell commands to be executed in sequence.
+ * @param {string[]} commands - array of shell commands to be executed in sequence.
  */
 exports.execute = function (commands) {
   commands.forEach(function (command) {
     try {
-      if ('function' === typeof command) {
-        command();
-      } else {
-        console.log(command);
+      console.log(command);
 
-        // For documentation on synchronous execution of shell commands from node scripts, see:
-        // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-        var result = child_process.execSync(command, {
-          env: _.extend({}, process.env, {
-            PATH: './node_modules/.bin:' + process.env.PATH
-          }),
-          stdio: 'inherit'
-        });
-      }
+      // For documentation on synchronous execution of shell commands from node scripts, see:
+      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
+      var result = child_process.execSync(command, {
+        env: _.extend({}, process.env, {
+          PATH: './node_modules/.bin:' + process.env.PATH
+        }),
+        stdio: 'inherit'
+      });
     } catch (e) {
-      console.log("\nError: " + e.message);
-      warnIfWrongNodeVersion();
-      process.exit(e.status || 1);
+      exports.exitWithError(e);
     }
   });
 };
 
+/**
+ * End the node process with the given error message and code.
+ * Ensures an exit code of at least one, in case the error doesn't have a code.
+ * @param {Error} err
+ */
+exports.exitWithError = function (err) {
+  console.log("\nError: " + err.message);
+  warnIfWrongNodeVersion();
+  process.exit(err.status || 1);
+};
 
 /**
  * Log a message in a box, so it stands out from the rest of the logging info.
  * @param {!string} message
+ * @param {Chalk} [style] - a chalk style function.  Defaults to green on black.
  */
-exports.logBoxedMessage = function (message) {
-  var style = chalk.bold.green.bgBlack;
+exports.logBoxedMessage = function (message, style) {
+  style = style || chalk.bold.green.bgBlack;
   var bar = style('+' + _.repeat('-', message.length + 2) + '+');
   console.log(bar + "\n" + style("| " + chalk.white(message) + " |") + "\n" + bar + "\n");
 };
@@ -278,6 +250,38 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
     buildPath + path.basename(file, '.scss') + extension
   ].join(" \\\n    ");
 };
+
+/**
+ * Given a filename, synchronously ensures the directory that would contain
+ * that file exists (to any depth).
+ * @param {string} target - path to a file.
+ */
+function ensureTargetDirectoryExists(target) {
+  mkdirp.sync(path.dirname(target));
+}
+
+/**
+ * Helper for formatting error messages for the terminal.
+ * @param {Error} err
+ */
+function logBoldRedError(err) {
+  console.log([
+    chalk.bold.red(timeStamp()),
+    chalk.bold.red(err.name),
+    chalk.bold(err.message)
+  ].join(' '));
+  if (err.codeFrame) {
+    console.log(err.codeFrame);
+  }
+}
+
+/**
+ * @returns {string} a time string formatted [HH:MM:SS] in 24-hour time.
+ */
+function timeStamp() {
+  return '[' + new Date().toLocaleTimeString('en-US', { hour12: false }) + ']';
+}
+
 
 /**
  * Checks current node version, prints a warning if the expected version is not
