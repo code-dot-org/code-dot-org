@@ -207,6 +207,8 @@ ja-JP:
   homepage_banner_text_link: もっと詳しく知る
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: もっと詳しく知る
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: もっと詳しく知る
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
@@ -215,6 +217,7 @@ ja-JP:
   homepage_solot_text_link_volunteer: Hour of Code のボランティア
   homepage_slot_text_title_students: 生徒
   homepage_slot_text_blurb_students: チュートリアルをすべて見る
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Code Studioを試す
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_othercourses: その他のオンラインコース
@@ -538,7 +541,7 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: もっと詳しく知る
   dashboard_announce_hoc: '<B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

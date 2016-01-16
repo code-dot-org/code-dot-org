@@ -9,7 +9,7 @@ hr:
       2-3 Artist 3.4_instruction: |
         Blok Skoči pomiče umjetnika bez crtanja. 
         Nacrtaj isprekidanu liniju koristeći i blokove za skakanje i blokove za crtanje.
-      2-3 Artist 3_instruction: Ovaj šešir je visok 100 piksela. Nacrtaj 70 piksela manji šešir.
+      2-3 Artist 3_instruction: Ovaj šešir je visok 100 piksela. Nacrtaj šešir manji za 70 piksela.
       2-3 Artist 3new_instruction: Crveni šešir je visok 100 piksela. Dovrši crtež crnog šešira koji je 70 piksela niži. Širina crnog šešira je 50 piksela.
       2-3 Artist 4_instruction: Pomozi mi dovršiti kuću za ovu mačku.
       2-3 Artist 5_instruction: 'Zamijeni ovaj kod s blokom "Ponovi", tako da nacrtaš istu kuću koristeći samo 3 bloka.'
@@ -36,38 +36,14 @@ hr:
       2-3 Artist Functions 10_instruction: Evo dvije funkcije, jedna za crtanje velikog zupčanika i jedna za crtanje malog zupčanika. Koristite ih za crtanje unutar stroja!
       2-3 Artist Functions 11.5_instruction: 'Ovdje je ta ista "Nacrtati šesterokut" funkcija. Što ako samo okrenete za 60 stupnjeva kod svakog ponavljanja?'
       2-3 Artist Functions 11_instruction: 'Promijenili smo naziv funkcije "nacrtaj kvadrat" u funkciju "nacrtaj šesterokut", ali još uvijek crta samo kvadrate! Možete li izmijeniti "nacrtaj šesterokut" funkciju da crta šesterokute sa stranicom od 50 pixela i zatim je nacrtati pomoću funkcije?'
-      2-3 Artist Functions 12_instruction: |
-        Functions are really great for drawing
-        complex things multiple times. Can you use the "draw a flower" function
-        to fill the rest of the planter box?(Hint: The plants are all separated by
-        100 pixels length)  
-      2-3 Artist Functions 13_instruction: |
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
-      2-3 Artist Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
-      2-3 Artist Functions 3_instruction: |
-        Edit the function to draw a square with
-        a side length of 115 and draw the bigger glasses. The squares are now 45 pixels
-        apart.
-      2-3 Artist Functions 4_instruction: |
-        Use the "repeat" block to draw these
-        3 squares.
-      2-3 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        two houses using two different parameters. (Hint: the first house is 100 pixels).
-      2-3 Artist Functions 9_instruction: |
-        Here is a snowflake function. Experiment
-        with it to create a winter scene! This is a free play level, so there is no
-        puzzle to solve. Have fun!
-      2-3 Artist Loops 1_instruction: |
-        Can you make a hexagon with sides that are
-        100 pixels long to finish the cell? Remember, that means that you will only
-        need to turn 60 degrees!
+      2-3 Artist Functions 12_instruction: 'Funkcije su odlične za crtanje složenih stvari više puta. Možeš li koristeći naredbu "nacrtaj cvijet" ispuniti ostatak cvjetnjaka? (Pomoć: biljke su udaljene 100 piksela)  '
+      2-3 Artist Functions 13_instruction: Ponuđene su ti četiri funkcije. Upotrijebi ih po želji unutar jedne ili više petlji kako bi nacrtao sliku, koju poslije možeš podijeliti s prijateljima. Pritisnite Pokreni i pogledaj primjer.
+      2-3 Artist Functions 2_instruction: 'Funkcije nam omogućuju definiranje novih blokova! Premjestili smo blokove za crtanje kvadrata u funkciju pod nazivom "Crtanje kvadrata". Možeš li nacrtati naočale koristeći funkciju "Crtanje kvadrata"? Kvadrati su udaljeni 75 piksela.'
+      2-3 Artist Functions 3_instruction: Uredi funkciju tako da duljine stranica kvadrata iznose 115 piksela i nacrtaj veće naočale. Kvadrati su sada udaljeni 45 piksela.
+      2-3 Artist Functions 4_instruction: 'Koristi blok "Ponovi" za crtanje ova 3 kvadrata.'
+      2-3 Artist Functions 7_instruction: 'Nacrtaj dvije kuće različitih veličina. Za crtanje upotrijebi funkciju "Nacrtaj kuću". (Pomoć: Prva kuća je veličine 100 piksela).'
+      2-3 Artist Functions 9_instruction: 'Ovdje je funkcija "Pahuljica". Igraj se s njom i stvori zimski prizor! Ovo je slobodan nivo, tako da ne možeš pogriješiti. Uživaj!'
+      2-3 Artist Loops 1_instruction: Možeš li nacrtati šesterokut duljine stranica 100 piksela kako bi dovršio ćeliju? Zapamti, to znači da se trebaš zakrenuti za 60 stupnjeva!
       2-3 Artist Loops 10_instruction: |
         What happens to the design when we make our
         final step forward half as long?
@@ -2084,6 +2060,7 @@ hr:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2318,6 +2295,11 @@ hr:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: |
         Now let's create 20 overlapping
@@ -3013,13 +2995,8 @@ hr:
       Overworld Avoid Monsters_instruction: |
         Running into a Creeper is a bad idea.
         Carefully move past the Creepers and reach the safety of your home.
-      Overworld Chop Tree_instruction: |
-        Wood is a very important resource. Many things
-        are made from it. Walk to the tree and use the “destroy block” command to
-        chop it down.
-      Overworld Chop Trees_instruction: |
-        We need to build a house before the sun
-        goes down. Houses require a lot of wood. Cut down all 3 trees.
+      Overworld Chop Tree_instruction: 'Drvo je vrlo važan resurs. Mnoge stvari napravljeni su od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe "uništiti blok".'
+      Overworld Chop Trees_instruction: Moramo sagraditi kuću prije zalaska sunca. Kuće zahtijevaju puno drva stoga srušite sva 3 stabla.
       Overworld Free Play 20x20_instruction: |
         Congratulations! You've completed
         all our puzzles! Now mine, build, and create something unique by using everything
@@ -3045,9 +3022,7 @@ hr:
         One wall is finished, let’s build the
         rest of the house by following your floor plan! You’ll have to repeat yourself
         quite a lot here.
-      Overworld House Frame Chosen_instruction: |
-        Build the rest of your house from
-        any material you'd like. The "repeat" command will come in handy.
+      Overworld House Frame Chosen_instruction: Izgradite ostatak svoje kuće od bilo kojeg materijala. Petlja za ponavljanje dobro će vam doći.
       Overworld House Frame_instruction: |
         Let's make our own house! This spot looks
         good. Build a frame on the dirt blocks.
@@ -3057,10 +3032,7 @@ hr:
         path from your house. The first step is clearing the path. Follow the path
         and clear the trees.
       Overworld Move to Sheep_instruction: "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce."
-      Overworld Place Wall_instruction: |
-        Every house starts with a wall. Build the
-        first part of your house by putting the "place" and "move forward" commands
-        inside the repeat loop.
+      Overworld Place Wall_instruction: 'Izgradnja svake kuće počinje od zidova. Izgradi prvi dio svoje kuće stavljanjem "postaviti dasku breze" i "idi naprijed" naredbe unutar petlje za ponavljanje.'
       Overworld Plant Crops_instruction: |
         It’s good to plan ahead. Plant crops on
         both sides of the water so you don’t get hungry later on.
@@ -3068,9 +3040,7 @@ hr:
         Great job! You’ve gathered lots of
         resources and built a modest home. Now lay rail from the edge of the map to
         the door of your house.
-      Overworld Shear Sheep_instruction: |
-        Sheep-shearing time! Use the “shear” command
-        to gather wool from both sheep.
+      Overworld Shear Sheep_instruction: 'Vrijeme je za šišanje ovaca! Upotrijebi naredbu "ošišaj" kako biste prikupili vunu s obje ovce.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3144,11 +3114,7 @@ hr:
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: |
-        Functions let you define new blocks! We've
-        moved the blocks to draw a square into a function called "draw a square".
-        Can you use the "draw a square" function to create the glasses? The squares
-        are 75 pixels apart.
+      PDK5 Functions 2_instruction: 'Funkcije nam omogućuju definiranje novih blokova! Premjestili smo blokove za crtanje kvadrata u funkciju pod nazivom "Crtanje kvadrata". Možeš li nacrtati naočale koristeći funkciju "Crtanje kvadrata"? Kvadrati su udaljeni 75 piksela.'
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -3255,6 +3221,9 @@ hr:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
@@ -4083,8 +4052,8 @@ hr:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -4806,20 +4775,46 @@ hr:
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

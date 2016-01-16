@@ -215,6 +215,8 @@ ca-ES:
   homepage_banner_text_link: Aprèn més
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Aprèn més
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: "Proveu l'Hora de programació"
@@ -223,6 +225,7 @@ ca-ES:
   homepage_solot_text_link_volunteer: "Voluntari per a l'Hora del Codi"
   homepage_slot_text_title_students: Alumnes
   homepage_slot_text_blurb_students: Explora tots els nostres tutorials
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prova el Code Studio
   homepage_slot_text_link_local: Troba una classe a prop teu
   homepage_slot_text_link_othercourses: Altres cursos online
@@ -550,7 +553,7 @@ ca-ES:
   dashboard_faq_k5: Preguntes freqüents sobre K-5
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Aprèn més
   dashboard_announce_hoc: '<b>November 23, 2015</b> - Would you like a volunteer passionate about computer science education to help during your Hour of Code event? Over 7,000 volunteers are looking to inspire your students by visiting your classroom or video chatting remotely. Check out the volunteer map to contact volunteers in your area.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'
