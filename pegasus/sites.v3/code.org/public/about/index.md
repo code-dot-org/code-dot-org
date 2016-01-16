@@ -57,7 +57,7 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Prep new CS teachers | We've prepared 20,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
 | Set up policies to support CS | Policy changed in [17 states](/action) including CA, NY, FL, IL, OH.|
-| Go global | Our courses are available in 46+ languages, used in all 180+ countries. |
+| Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
 
 <br/>
 <br/>
