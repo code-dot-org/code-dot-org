@@ -37,7 +37,7 @@ var watchify = require('watchify');
  *          running.
  */
 exports.bundle = function (config) {
-  var runBundle, resolvePromise;
+  var makeBundle;
   var srcPath = config.srcPath;
   var buildPath = config.buildPath;
   var filenames = config.filenames;
@@ -104,13 +104,14 @@ exports.bundle = function (config) {
   if (shouldWatch) {
     bundler.plugin(watchify).on('update', function () {
       console.log(timeStamp() + ' Changes detected...');
-      runBundle();
+      makeBundle();
     });
   }
 
   // TODO: release/dist settings
 
-  runBundle = function () {
+  makeBundle = function (onComplete) {
+    onComplete = onComplete || function () {};
     var bundlingAttemptError;
 
     // We attach events to our filesystem output stream, because it's the
@@ -118,15 +119,13 @@ exports.bundle = function (config) {
     var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
         .on('error', function (err) {
           logBoldRedError(err);
-          resolvePromise(err);
+          onComplete(err);
         })
         .on('finish', function () {
-          if (bundlingAttemptError) {
-            resolvePromise(bundlingAttemptError);
-          } else {
+          if (!bundlingAttemptError) {
             logTargetsBuilt();
-            resolvePromise();
           }
+          onComplete(bundlingAttemptError);
         });
 
     // Bundle the files and pass them to the output stream
@@ -140,8 +139,7 @@ exports.bundle = function (config) {
   };
 
   return new Promise(function (resolve) {
-    resolvePromise = _.once(resolve);
-    runBundle();
+    makeBundle(resolve);
   });
 };
 
