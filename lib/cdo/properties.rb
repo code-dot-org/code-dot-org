@@ -98,7 +98,8 @@ def fetch_hoc_metrics()
       "India"=>1162559,
       "Mexico"=>967736,
       },
-    'total_hoc_count'=>71132,
+    # The value as of 2016-01-15.
+    'total_hoc_count'=>106844676,
     'hoc_country_totals'=>{},
     'hoc_company_totals'=>{},
   }
