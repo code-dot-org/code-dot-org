@@ -5,7 +5,6 @@
 
 var _ = require('lodash');
 var build_commands = require('./build-commands');
-var chalk = require('chalk');
 var commander = require('commander');
 
 /** @const {string} */
@@ -30,7 +29,12 @@ var defaultOptions = {
   shouldWatch: commander.watch
 };
 
-Promise.all([
+// Run build (exits on failure)
+// TODO - think about how watchify will work for multiple commands
+build_commands.execute([
+  build_commands.ensureDirectoryExists(BUILD_PATH),
+  build_commands.ensureDirectoryExists(BUILD_PATH + 'levels/'),
+
   // Code in code-studio.js and any common code factored out of this bundle
   // gets included into every page in dashboard.
   // @see application.html.haml
@@ -71,20 +75,5 @@ Promise.all([
     ],
     commonFile: 'embedVideo'
   }))
-]).then(function (results) {
-  var allStepsSucceeded = !results.some(function (result) {
-    return result instanceof Error;
-  });
-
-  if (allStepsSucceeded) {
-    build_commands.logBoxedMessage("code-studio js built");
-  } else {
-    build_commands.logBoxedMessage('code-studio js build failed', chalk.bold.red.bgBlack);
-  }
-
-  if (commander.watch) {
-    console.log("Watching for changes...");
-  } else {
-    process.exit(allStepsSucceeded ? 0 : 1);
-  }
-});
+]);
+build_commands.logBoxedMessage("code-studio js built");
