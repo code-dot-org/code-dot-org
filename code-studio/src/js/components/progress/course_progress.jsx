@@ -2,6 +2,8 @@
 
 window.dashboard = window.dashboard || {};
 
+var STAGE_PROGRESS_TYPE = require('./stage_progress_type');
+
 /**
  * Stage progress component used in level header and course overview.
  */
@@ -11,7 +13,7 @@ window.dashboard.CourseProgress = (function (React) {
       stages: React.PropTypes.arrayOf(React.PropTypes.shape({
         name: React.PropTypes.string,
         lesson_plan_html_url: React.PropTypes.string,
-        levels: dashboard.STAGE_PROGRESS_TYPE
+        levels: STAGE_PROGRESS_TYPE
       }))
     },
 
