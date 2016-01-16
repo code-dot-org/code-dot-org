@@ -59,7 +59,7 @@ def fetch_hoc_metrics()
   # Include stale default values as of 2015-11-04 so we never show 0. These
   # would be used, for example, if the DB is unavailable.
   metrics = Properties.get(:hoc_metrics) || {
-    'started'=>136340020,
+    'started'=>151610563,
     'finished'=>23600234,
     'tutorials'=>{
       'codeorg'=>30269786,
