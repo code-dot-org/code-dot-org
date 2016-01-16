@@ -651,24 +651,24 @@ de:
           Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: 'Ich wette du kannst Spiele erstellen, die noch mehr Spaß machen, indem du "Bedingungen" benutzt. Versuch es! Bedingungen sorgen dafür, dass der Computer schlau wirkt. Ein Computerprogramm, dass Bedingungen beinhaltet, kann auf den Benutzer reagieren und seine Handlungen entsprechend anpassen.'
       5:
         image: notes/C2_conditionals_with_cards_5.png
         text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Hier haben wir bereits ein paar Blöcke in unserem Arbeitsplatz. Aber hier ist noch etwas falsch.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: Lass uns den Code debuggen, indem wir die Geschwindigkeit reduzieren. Dadurch können wir sehen wie jeder Block einzeln ausgeführt wird.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Oh, da ist das Problem! Der Schnurrbart der Katze ist 75 Pixel groß und nicht 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Hast du jemals vom Begriff debugging gehört? Das ist eine Art und Weise, herraus zu finden, was nicht funktioniert. Wenn du Code debugst, dann kannst du Fehler finden und diese beheben.
       2:
         image: notes/C2_bee_debugging_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -837,7 +837,7 @@ de:
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Hast du jemals vom Begriff debugging gehört? Das ist eine Art und Weise, herraus zu finden, was nicht funktioniert. Wenn du Code debugst, dann kannst du Fehler finden und diese beheben.
       2:
         image: notes/C3_debugging_bee_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."

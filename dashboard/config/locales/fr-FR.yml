@@ -29,8 +29,8 @@
     code:
       label: 'Ajouter un enseignant :'
       placeholder: Code de la section (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Entre le code donné par ton professeur. Il s'agit d'un code de
+        6 lettres du type "ABCDEF".
     submit: Ajouter un enseignant
   add_hint_form:
     placeholder: Entrer votre indice de mot de passe ici
@@ -41,6 +41,7 @@
   puzzle: Puzzle
   trophies: trophées
   courses: cours
+  unplugged_activity: Activité manuelle
   of: de
   more: PLUS
   less: MOINS
@@ -310,9 +311,8 @@
       remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
     students:
       dashboard: Aller au tableau de bord de l'enseignant
-    user_not_found: Le professeur ou l'élève n'a pas été trouvé
-    student_teacher_disassociated: '%{teacher_name} n''est plus considéré comme l''enseignant
-      de %{student_name}'
+    user_not_found: Le professeur est indisponible.
+    student_teacher_disassociated: '%{teacher_name} est ton nouveau professeur.'
     panel:
       answer_viewer: Visualisation des réponses
       student: Elève
@@ -402,7 +402,7 @@
     title: Apprendre avec Code Studio
     description: N'importe qui peut apprendre l'informatique. Faire des jeux, des
       apps et de l'art avec du code.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Essaie une Heure de Code !
   gender:
     male: Masculin
     female: Femme
@@ -420,17 +420,22 @@
       ces matériaux.
     help_from_html_old: Les ingénieurs de Google, Microsoft, Facebook et Twitter ont
       contribué à créer cette plateforme d'apprentissage.
-    art_from_html: Minecraft &#8482; &amp; © %{current_year} Microsoft. Tous droits
-      réservés. < br / &gt; Star Wars &#8482; &amp; © %{current_year} Disney et Lucasfilm.
-      Tous droits réservés. < br / &gt; surgelés &#8482; &amp; © %{current_year} Disney.
-      Tous droits réservés. < br / &gt; Age de glace &#8482; &amp; © %{current_year}
-      20th Century Fox. Tous droits réservés. < br / &gt; Angry Birds &#8482; &amp;
-      © 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. < br /
-      &gt; Plants vs Zombies &#8482; &amp; © %{current_year} Electronic Arts Inc.
-      Tous droits réservés
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Tous droits réservés. < br/>Plants vs. Zombies &#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Tous droits réservés
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
+      réservés. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Tous
+      droits réservés. Frozen&#8482; &copy; %{current_year} Disney. Tous droits réservés.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous
+      droits réservés. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. tous droits réservés. Le monde incroyable de Gumball est une marque
+      déposée &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
+      réservés. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Tous
+      droits réservés. Frozen&#8482; &copy; %{current_year} Disney. Tous droits réservés.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous
+      droits réservés. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. tous droits réservés. Le monde incroyable de Gumball est une marque
+      déposée &copy; 2015 Cartoon Network.
     powered_by_aws: Fourni par Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi
       que Heures de Code&reg; sont des marques commerciales de Code.org.'
@@ -448,7 +453,7 @@
     built_on_code_studio: Construit avec Code Studio
     make_my_own_app: Construire ma propre application
     how_it_works: Comment ça marche
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Essaie une Heure de Code !
   reference_area:
     title: Besoin d'aide ?
     subtitle: Voir ces vidéos et conseils

@@ -29,8 +29,8 @@
     code:
       label: 'Мұғалімді қосу:'
       placeholder: Бөлім Коды (ABCDEF)
-      instructions: Оқытушымен бөлісіп код жазыңыз өтініш. 6 әріптен тұратын код яғни
-        "ABCDEF".
+      instructions: Сізбен бөліскен сіздін мұғаліміңіз деген код жазыңыз. 6 әріптен
+        тұратын код сияқты яғни "ABCDEF".
     submit: Мұғалімді қосу
   add_hint_form:
     placeholder: Өтінеміз, мұнда көмек сөзін қосыңыз
@@ -41,6 +41,7 @@
   puzzle: Басқатырғыш
   trophies: Кубоктар
   courses: Курстар
+  unplugged_activity: Іс-әрекеттерді өшіру
   of: дан
   more: КӨБІРЕК
   less: АЗЫРАҚ
@@ -293,7 +294,7 @@
     students:
       dashboard: Оқытушылар Терезесіне өту
     user_not_found: Оқытушы табылмады.
-    student_teacher_disassociated: Сіз %{teacher_name} оқытушылар тізімінен алып тастадыңыз.
+    student_teacher_disassociated: Сіз %{teacher_name} оқытушылар тізімінен жойылдыңыз.
     panel:
       answer_viewer: Жауаптарды көру
       student: Оқушы

@@ -1019,59 +1019,60 @@
           представляют двоичную информацию.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: Hi, I'm Orion and I program robots here at Play-im. All computer and
-          robot brains at their most fundamental level are little electronic gates.
-          When the gate is open, electricity can flow through and when it's closed,
-          electricity can't.
+        text: Привет, меня зовут Орион и я программную роботов здесь, на Play-im.
+          Все мозги компьютеров и роботов в основном маленькие электронные калитки.
+          Когда калитка открыта, электричество может пройти, а когда закрыта - не
+          может.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: An example of binary on the robot is the robot's eyes. The robot's eyes
-          are LEDs and those are lights that are either on or off. It's a binary system,
-          one or the other. We can use the lights to represent binary numbers. If
-          we have a set of robots, we can say that the first robot is the 1s place
-          and the second robot is the 2s place, the third robot is the 4s place and
-          so on. That's how you represent a binary number. The robots will do it with
-          their binary eyes and count it out for you.
+        text: Примером двоичной системы у данного робота являются его глаза. Это светодиоды
+          которые или светят или нет. Это и есть двоичная система "или один или другой".
+          Мы можем использовать лампочки, чтоб отобразить двоичные номера. Если у
+          нас несколько роботов мы можем сказать что первый на первом месте, второй
+          - на втором, четвертый на четвертом и так далее. Вот как отображается двоичный
+          номер. Роботы будут делать это своими двоичными глазами и считать для тебя.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
-        text: This lesson is called conditionals with cards. Every day you make decisions
-          based on what you see and hear.
+        text: Этот урок называется "условия с карточками". Каждый день ты принимаешь
+          решения, основываясь на том, что видишь и слышишь.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: I want to walk to the park but first I have to decide whether I should
-          bring an umbrella or not. So I look out the window. If it's cloudy, I'm
-          going to take my umbrella. Else, I'll take some sunglasses. I think I'd
-          better take the umbrella. What I see and hear determines what I take to
-          the park.
+        text: Я хочу пойти погулять в парк, на сначала мне надо решить, брать ли с
+          собой зонтик или нет. Для это я смотрю в окно. Если за окном облачно, то
+          мне следует взять зонтик, а если нет, то я возьму солнцезащитные очки. Я
+          думаю, что будет лучше взять зонтик. То, что я вижу и слышу, определяет,
+          что я возьму с собой в парк.
       3:
         image: notes/C2_conditionals_with_cards_3.png
-        text: Conditionals are used in games too. Today we're going to practice using
-          conditionals with a card game. In this game, the card that I draw determines
-          what my friends are going to do. If I draw a seven, everyone claps. Else,
-          everyone says "awww." Let's try it! "Awww" "cheers"
+        text: "Условные выражения также используются и в играх. Сегодня мы попробуем
+          использовать условные выражения в карточной игре. В этой игре, нарисованная
+          карточка будет определять действия моих друзей. Если я нарисую семь, то
+          все должны хлопать. Иначе все скажут \"ох\". Давай попробуем! \n\"Ох\" или
+          \"приветствие\"\n"
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals.
-          Give it a try! Conditionals are what make computers seem smart. A computer
-          program that includes conditionals can react to the user and change its
-          course of action.
+        text: Бьюсь об заклад, что Ты можешь создавать еще более забавные игры с помощью
+          условных выражений. Попробуй! Условные выражения - вот что делает компьютер
+          умным. Компьютерная программа, содержащая условные выражения, может реагировать
+          на действия пользователя и менять свой ход действий.
       5:
         image: notes/C2_conditionals_with_cards_5.png
-        text: Think about your favorite video game. Do you earn more points for some
-          actions than you do for others? This occurs because the computer is using
-          conditionals. It's the way a computer makes a decision. How about, if you
-          hit the target, you earn ten points. Else, you lose three. When you know
-          how conditionals work, you can create all kinds of exciting games.
+        text: Вспомните Вашу любимую компьютерную игру. Вы зарабатываете больше очков
+          за одни действия чем за друге? Это происходит, потому что компьютер использует
+          условные выражения. Так компьютер может принимать решения. Например, если
+          Вы достигли цели, то заработаете 10 очков, иначе, если проиграете, то потеряете
+          3 очка. Когда Вы знаете, как работают условные выражения, Вы можете создавать
+          самые разнообразные захватывающие игры.
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
+        text: Здесь уже есть некоторые блоки кода на рабочем пространстве, но что-то
+          в них неправильно.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
+        text: Давайте отладим этот код, замедлив скорость, и будем наблюдать за его
+          исполнением шаг за шагом.
       3:
         image: notes/C2_artist_debugging_3.png
         text: Ой, у нас проблема! Длина усов кошки 75 пикселей, а не 25.
@@ -1088,9 +1089,9 @@
           ли это решение правильным и где нам может потребоваться его исправить.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Кажется у нас проблема! Нам нужен еще один "двигаться вперед" блок.
+          Кнопка "шаг" поможет исправить ошибку, обнаружив в каком месте она находится,
+          и мы сможем исправить нашу проблему.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
@@ -1153,9 +1154,9 @@
           to recreate simple black and white images, using only hand drawn arrows.
       2:
         image: notes/C2_graph_paper_2.png
-        text: An algorithm is a list of instructions for completing a task. We'll
-          follow this set of instructions to make the bowl. Algorithms are really
-          helpful when you need someone else to understand how to do something.
+        text: Алгоритм — список инструкции для завершения задачи. Мы будем следовать
+          этому набору инструкций, чтобы сделать чашу. Алгоритмы действительно полезны,
+          когда нужно, чтобы кто-то еще понял, как что-то сделать.
       3:
         image: notes/C2_graph_paper_3.png
         text: Если вы пишете алгоритм для компьютера, вам необходимо разбить его на
@@ -1163,10 +1164,10 @@
           затем к следующему за ним и дело будет сделано.
       4:
         image: notes/C2_graph_paper_4.png
-        text: I use algorithms in my work. If I write down all of the steps I can
-          recreate that same piece again, or I can teach someone else to do it. Put
-          the glass in the kiln, fuse it together, follow the rest of the instructions
-          to make the bowl. Algorithms give you a road map for getting something done.
+        text: Я использую алгоритмы в моей работе. Если я запишу все шаги, то смогу
+          воссоздать тот же кусок снова, или я могу научить кого-то другого сделать
+          это. Положите стекла в печь, соедините их вместе, следуйте инструкциям,
+          чтобы сделать чашу. Алгоритмы дают вам карту для выполнения чего-либо.
     C2_artist_loops:
       1:
         image: notes/C2_artist_loops_1.png
@@ -1408,9 +1409,9 @@
           ли это решение правильным и где нам может потребоваться его исправить.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Кажется у нас проблема! Нам нужен еще один "двигаться вперед" блок.
+          Кнопка "шаг" поможет исправить ошибку, обнаружив в каком месте она находится,
+          и мы сможем исправить нашу проблему.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
@@ -1563,10 +1564,9 @@
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While loops are pretty similar to what you do in everyday life. Imagine
-          you are washing your car, you'll keep scrubbing until it's clean. While
-          it's not clean, continue to scrub. You're evaluating these things all the
-          time.
+        text: Циклы очень схожи с тем, что Вы делаете в повседневной жизни. Представьте,
+          что Вы моете машину, и Вам надо тереть её до тех пор, пока она не станет
+          чистой. Пока она грязная, Вы продолжаете тереть.
       2:
         image: notes/C3_farmer_while_2.png
         text: We've got a new look to help your farmer out. It's called a while-block.
@@ -1599,9 +1599,9 @@
     C3_internet:
       1:
         image: notes/C3_internet_1.png
-        text: This lesson is all about the internet. The internet is a very busy place
-          and similar to this busy road. Messages like cars are zooming along to get
-          to their destinations. Messages move through the internet very quickly.
+        text: Этот урок полностью посвящен Интернету. Интернет – это очень оживленное
+          место, похожее на загруженную дорогу. Сообщения, как машины бегущие к своим
+          пунктам назначения. Сообщения передаются через Интернет очень быстро.
       2:
         image: notes/C3_internet_2.png
         text: Acting out how the internet works will help you understand what's happening
@@ -1612,33 +1612,34 @@
           behind the scenes.
       3:
         image: notes/C3_internet_3.png
-        text: Sending messages on the internet is a little bit like sending messages
-          in the mail but with a few differences. I'm here at Google.com. The IP address
-          for this website is this number. You can think of an IP address as your
-          return address in the mail. Let's imagine that I want to send a message
-          in the mail to someone in the office down the there. Do you see URL and
-          the IP address on that door? I've written this message and hit send.
+        text: Отправка сообщений в Интернете это нечто похожее на отправку сообщения
+          по обычной почте, но с некоторыми отличиями. Я здесь на Google.com. IP-адрес
+          для данного веб-сайта — это число. Вы можете представить IP-адрес, как ваш
+          обратный адрес почты. Представим себе, что я хочу отправить сообщение по
+          почте кому-то в офисе. Вы видите URL-адрес и IP-адрес на двери? Я всего
+          лишь написал это сообщение и нажал Отправить.
       4:
         image: notes/C3_internet_4.png
-        text: Unlike the Postal Service, the first thing that happens is that the
-          internet breaks the message into smaller parts so it can be sent more easily.
-          These small parts are called packets. Each packet of the message is delivered
-          to the destination one at a time. These packets are all put together in
-          the right order so that the receiver can read the message correctly. Of
-          course, there are many more things to learn about how the internet works
-          but this is a great start. You're on your way to becoming a savvy internet
-          user! Be sure to tell your family and friends what you've learned!
+        text: В отличие от почтовой службы первое, что происходит, это то что Интернет
+          разбивает сообщения на более мелкие части, поэтому оно может быть отправлено
+          более легко. Эти небольшие части называются пакетами. Каждый пакет сообщения
+          доставляется к месту назначения, один за один раз. Эти пакеты соединяются
+          вместе в правильном порядке, так что получатель сможет его прочитать без
+          ошибок. Конечно есть много вещей, чтобы узнать о том, как работает Интернет,
+          но это хорошее начало. Вы на пути, чтобы стать подкованным пользователем
+          Интернета! Не забудьте рассказать вашей семье и друзьям, что вы узнали!
       5:
         image: notes/C3_internet_5.png
-        text: My name is Amanda Camp and I'm a software engineer at Google. I work
-          on a team that works on a backend server that stores profiles and contacts.
-          In my job, we think a lot about how contacts can be sent to other devices,
-          such as your phone. Most people have a lot of contacts, you might have say,
-          1000 contacts and we don't want to send all of those contacts at once to
-          your phone because it's too large of a message. Similar to the way the internet
-          breaks large messages down into packets, we use a concept called paging
-          where we might only send your phone 100 contacts at a time and let your
-          phone respond to us and ask for the next 100.
+        text: Меня зовут Аманда Кэмп, и я разработчик программного обеспечения в Google.
+          Я работаю в команде, которая работает на центральном сервере, который сохраняет
+          профили и контакты. В моей работе мы много думаем о том, как контакты могут
+          быть отправлены на другие устройства, например на телефон. Большинство людей
+          имеют много контактов, скажем 1000, и мы не хотим отправлять все эти контакты
+          сразу на ваш телефон, потому что это слишком большое сообщение. Подобно
+          тому, как Интернет разбивает большие сообщения на пакеты, мы используем
+          концепцию под названием подкачка, где мы могли бы отправить только 100 контактов
+          телефона за один раз, получить ответ от телефона и запрос на следующие 100
+          контактов.
       6:
         image: notes/C3_internet_6.png
         text: The most exciting thing about software is the fact that it can impact

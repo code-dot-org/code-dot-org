@@ -217,6 +217,8 @@ da-DK:
   homepage_banner_text_link: Lær mere
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Lær mere
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Lær mere
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
@@ -225,6 +227,7 @@ da-DK:
   homepage_solot_text_link_volunteer: Meld dig som frivillig til Hour Of Code
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prøv Code Studio
   homepage_slot_text_link_local: Find et lokalt arrangement
   homepage_slot_text_link_othercourses: Andre online kurser

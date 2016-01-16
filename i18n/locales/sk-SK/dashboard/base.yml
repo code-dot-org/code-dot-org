@@ -28,8 +28,7 @@ sk:
     code:
       label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Zadajte prosím kód, ktorý ste obdržali od Vášho učiteľa. Je to 6 písmenový reťazec, niečo ako "ABCDEF".'
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadajte Váš tip sem
@@ -40,6 +39,7 @@ sk:
   puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
+  unplugged_activity: Nesúvisaca aktivita
   of: z
   more: VIAC
   less: MENEJ
@@ -257,8 +257,8 @@ sk:
       remove: Naozaj chcete odstrániť tohto učiteľa?
     students:
       dashboard: Prejsť na Učiteľovu Nástenku
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Učiteľa sa nepodarilo nájsť.
+    student_teacher_disassociated: 'Odstránili ste %{teacher_name} ako svojho učiteľa.'
     panel:
       answer_viewer: Prehliadač odpovede
       student: Študent
@@ -344,8 +344,8 @@ sk:
     thank_you: 'Ďakujeme našim <a href="https://code.org/about/donors"> darcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, nášmu <a href="https://code.org/about/team"> tímu</a>, nášmu video obsadeniu a nášmu <a href="https://code.org/about/advisors"> poradcovi vo vzdelávaní </a> za ich podporu pri vytváraní Code štúdia.'
     help_from_html: Inžinieri z Google, Microsoft, Facebook a Twitter pomoholi vytvoriť tento tutoriál.
     help_from_html_old: Kolegovia z Google, Microsoft-u, Facebook-u a Twitter-u pomoholi vytvoriť tento tutoriál.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené. < br / > Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva vyhradené. < br / > Frozen &#8482; © %{current_year} Disney. Všetky práva vyhradené. < br / > Doba ľadová &#8482; © %{current_year} 20th Century Fox. Všetky práva vyhradené. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva vyhradené. < br / > The Amazing World of Gumball je ochranná známka a © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené. Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva vyhradené. Frozen&#8482; © %{current_year} Disney. Všetky práva vyhradené. Ice Age &#8482; © %{current_year} 20th Century Fox. Všetky práva vyhradené. Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené. Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva vyhradené. The Amazing World of Gumball je ochranná známka © 2015 Cartoon Network.'
     powered_by_aws: Poháňaný službami Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code ® sú ochranné známky Code.org.'
     copyright: Autorské práva

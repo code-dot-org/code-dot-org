@@ -218,71 +218,36 @@ hu:
       4-5 Artist For Loops 14_instruction: 'Valaki elkezdte a kódot, de rájött, hogy gyorsabb úton is meg lehet oldani! A,, for" blokk segítségével cseréld ki a blokkot, és készítsd el a háromszög alakú spirált! (segítség: az utolsó vonal hossza 300 képpont)'
       4-5 Artist For Loops 15_instruction: 'Valaki elkezdte a kódot, de rájött, hogy gyorsabb úton is meg lehet oldani! A,, for" blokk segítségével cseréld ki a blokkot, és készítsd el a hatszögletű spirált! (segítség: az utolsó vonal hossza 200 képpont)'
       4-5 Artist For Loops 3_instruction: 'Hogyan tudunk elszámolni 1-től 50-ig?szerkeszd  a ,,for" blokkot!'
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
+      4-5 Artist For Loops 4_instruction: 'Töltsd ki az "-ig" blokkot, hogy 1-től tízig számoljon.'
       4-5 Artist For Loops 6_instruction: 'Rajzolj 50, 60, 70, 80 és 90 képpont oldalú négyzeteket. Ötször lesz szükséged a "négyzet rajzolása" függvényre.'
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 7_instruction: 'Rajzold meg ugyanazt a négyzetet, de használd a "számolj eddig" blokkot, hogy megváltoztasd a méretet. Tedd a "számláló" blokkot a "rajzolj egy négyzetet" funkcióhoz. Tipp: a Változók kategória alatt találod.'
+      4-5 Artist For Loops 8_instruction: 'Be tudod fejezni a programot azzal, hogy leteszed a blokkokat a "ismétel" blokkba ami 10-től 200-ig számol? Megtalálod a Ciklusok kategória alatt.'
       4-5 Artist For Loops 9_instruction: 'Ezek a körök 5, 10, 15, 20, 25, 30 és 35 méretűek. Rajzold meg a köröket a "for" blokk használatával.'
       4-5 Artist Free Draw 1_instruction: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved van.
       4-5 Artist Functions 1_instruction: Használj ciklust a háromszög megrajzolásához.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
+      4-5 Artist Functions 10a_instruction: 'Rakd be ezt a blokkot a "Rajzolj egy hópelyhet" funkcióba és cseréld le a húszat a "méret" paraméterre. Ez a funkció elő lett hívva hogy egy 100 pixeles hópelyhet rajzoljon.'
       4-5 Artist Functions 10b_instruction: 'Használd a "hópehely rajzolása" függvényt különböző méretű hópehlyhek készítésére. Tipp: az első hópehely 25 hosszú és minden hópehely kétszer nagyobb az előzőnél.'
       4-5 Artist Functions 11_instruction: 'Ez a "rajzolj hatszöget" függvény a "rajzolj háromszöget" függvényt használja. Fejezd be a hatszög függvényt. (Tipp: A hatszögnek 6 oldala van, mindegyik 100 pixel hosszú)'
       4-5 Artist Functions 12_instruction: 'Fejezd be a "Rajzolj hullámokat" függvényt. Minden hullám egy felső hullámból és egy alsó hullámból áll. Tipp: Rajzolj 5 kék hullámot.'
       4-5 Artist Functions 13 Free play_instruction: Van itt néhány függvény bolygók, csillagok, rakéták és robotok rajzolásához. Használd őket bárhogy, ahogy szeretnéd képek készítésére, amiket megoszthatsz a barátaiddal.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
+      4-5 Artist Functions 14 Free play_instruction: 'Tessék, felkínáltunk neked több funkciót. Rakd be őket kedved szerint egy vagy több ciklusba, hogy képeket készíts, melyeket megoszthatsz barátaiddal. Kattints a "Futtatás"-ra, hogy láss egy példát.'
+      4-5 Artist Functions 15 Assessment_instruction: 'Értékelés: Használd a "Rajzolj egy négyzetet" funkciót hogy létrehozd a négyzeteket. A négyzetek 50, 100 és 150 pixel (képpont) méretűek.'
       4-5 Artist Functions 2a_instruction: 'Most tedd ezeket a blokkokat egy új, "kis háromszög rajzolása" függvénybe és hívd meg.'
       4-5 Artist Functions 2b_instruction: 'Most hozz létre egy "rajzolj kis háromszöget" nevű függvényt a megadott blokkok segítségével.'
       4-5 Artist Functions 3_instruction: 'Most hozd létre a "rajzolj közepes háromszöget" és a "rajzolj nagy háromszöget" függvényeket. A "rajzolj kis háromszöget" függvény már készen van. A háromszögek oldalainak hossza: 50 (kicsi), 100 (közepes) és 150 (nagy). '
       4-5 Artist Functions 4_instruction: 'Ennek az új, "rajzolj háromszöget" függvénynek van egy paramétere és képes megcsinálni mindazt, amit a három korábbi függvény. Rajzold meg ugyan azokat a háromszögeket az új függvény használatával.'
       4-5 Artist Functions 5_instruction: 'Meg tudod változtatni a "rajzolj egy háromszöget" függvényt egy "rajzol egy négyzetet" függvényre a rajz megváltoztatásához?'
       4-5 Artist Functions 6_instruction: 'Használd a "rajzolj egy négyzetet" és a "rajzolj egy háromszöget" függvényeket egy ház megrajzolásához. (Tipp: a négyzet oldalai 200 pixel hosszúak)'
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
+      4-5 Artist Functions 6b_instruction: 'Használd a "Rajzolj egy négyzetet" és a "Rajzolj egy háromszöget" funkciót egy pár blokkal együtt, hogy egy házat készíts azzal, hogy beteszed őket a "Rajzolj egy házat" funkcióba, és előhívod a funkciót.'
       4-5 Artist Functions 7_instruction: 'Rajzolj 100 pixeles és 50 pixeles házat a "rajzolj egy házat" függvény segítségével! A két házat 50 pixel válassza el.'
       4-5 Artist Functions 8_instruction: 'A "virág rajzolása" függvényben van egy paraméter, amivel a szár hosszát lehet állítani. Állítsd be 200-ra és figyeld mi történik.'
       4-5 Artist Functions 9_instruction: Rajzold meg ezt a három virágot! Az első 100 magas a következő pedig mindig 50 pixellel magasabb, mint az előző. A virágok között 100 pixel van.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
+      4-5 Artist Patterns 1_instruction: Tudsz négyzetet rajzolni egy ciklus segítségével? Minden oldala legyen 20 pixeles.
       4-5 Artist Patterns 10_instruction: 'Ez a kód két sor hatszöget rajzol – ismételd meg az egészet négyszer, hogy egy teljes méhsejtet rajzolj. Tipp: Vissza kell ugranod 120 pixelt a legkülső ciklusban, hogy a művész ne menjen ki a képernyőből.'
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
+      4-5 Artist Patterns 11_instruction: 'Hányszor kell futtatnod a ciklus, hogy félkört rajzolj? Tipp: ha egy kör 360 fokos, és minden ciklus 3 fokot fordul, hányszor kell futtatnod a ciklust, hogy egy teljes kört kapj?'
+      4-5 Artist Patterns 12_instruction: Hogyha lemásolod a ciklust és balra fordulsz jobb helyett, mi történik? Tudod úgy ismételni, hogy ezt a hullámot rajzolja le?
+      4-5 Artist Patterns 13_instruction: 'Most ismételjük a ciklust négyszer, hogy elkészüljön ez a képkeret. Figyelj a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha egy 3 fokos fordulatot 60-szor ismételve egy félkört kapunk, melyik blokkal kapunk a sarkokhoz egy negyed kört?'
+      4-5 Artist Patterns 2_instruction: Ha egy ciklust egy másik ciklusba helyezünk, azt beágyazott ciklusnak hívják. Mit kell a külső ciklushoz adni, hogy mind a 15 négyzet egy sorba kerüljön?
       4-5 Artist Patterns 3_instruction: |
         Now let's go one level deeper! We've
         nested that whole block of code into another loop, but you need to get the
@@ -935,7 +900,7 @@ hu:
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Finish this drawing.
+      Course 4 Artist Binary 7_instruction: Fejezd be a rajzot.
       Course 4 Artist Binary Free Play 2_instruction: |
         Free Play: Here's a blank
         canvas for you to draw on.  Have fun!
@@ -1497,15 +1462,11 @@ hu:
       Course 4 SCFL 2_instruction: |
         Solve this puzzle using the fewest number of
         blocks possible.
-      Course 4 SCFL 3_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 4_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 5_instruction: Can you figure out how to re-create this drawing?
-      Course 4 SCFL 6_instruction: |
-        Can you figure out how to re-create this drawing
-        with a single loop?
-      Course 4 SCFL 7_instruction: |
-        The artist wants to catch some waves! Can you
-        figure out how to re-create this drawing?
+      Course 4 SCFL 3_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot?
+      Course 4 SCFL 4_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot?
+      Course 4 SCFL 5_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot?
+      Course 4 SCFL 6_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot egy ciklussal?
+      Course 4 SCFL 7_instruction: A művész szeretne hullámokat alkotni! Ki tudod találni hogyan lehet elkészíteni a rajzot?
       Course 4 SCFP 1_instruction: |
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
@@ -1546,6 +1507,7 @@ hu:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1780,6 +1742,11 @@ hu:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Most rajzoljunk 20 egymást átfedő kört! 18 fokot kell fordulni minden kör rajzolása után.
       frozen circle function with parameter_instruction: 'Van itt egy olyan "készíts kört" blokk, ami különböző méretű köröket tud készíteni. Fel tudod használni arra, hogy készíts egy kicsi, 5 képpont méretű, és egy nagyobb, 10 képpont méretű kört?'
@@ -2193,8 +2160,8 @@ hu:
         Can you figure out how to draw
         this shape? Edit the function to use the "sides" parameter.
       NEW Course 4 Artist Params 12_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
+        Be tudod fejezni a rajzot?
+        Minden alakzat oldala 100 pixel hosszú.
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
         Can you use a "for loop" with your function to make this design?
@@ -2333,7 +2300,7 @@ hu:
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Nem jó ötlet nekimenni a húsevő növényeknek. Óvatosan haladj el a húsevő növények között, hogy épségben hazaérj.
+      Overworld Avoid Monsters_instruction: Nem jó ötlet nekimenni a Creepereknek. Óvatosan haladj el a Creeperek között, hogy épségben hazaérj.
       Overworld Chop Tree_instruction: A fa nagyon értékes erőforrás. Nagyon sok mindent készítünk belőle. Menj oda a fához és használd a elpusztítani parancsot, hogy kivágd a fát.
       Overworld Chop Trees_instruction: Házat kell építenünk, mielőtt lemegy a nap. Ehhez sok fára van szükségünk. Vágd ki mind a három fát.
       Overworld Free Play 20x20_instruction: Gratulálunk, minden feladványt megoldottál! Most bányássz, építs, alkoss valami egyedit! Használd mindazt, amit eddig tanultál.
@@ -2531,6 +2498,9 @@ hu:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
@@ -3359,8 +3329,8 @@ hu:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -4082,20 +4052,46 @@ hu:
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

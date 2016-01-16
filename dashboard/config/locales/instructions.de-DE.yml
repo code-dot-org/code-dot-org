@@ -1803,13 +1803,14 @@
       Course 4 Play Lab Params 8_instruction: Verwende den "wenn Figur berührt"-Baustein
         um den Hund nach links-oben zurückzuschicken; aber nur wenn der Hund eine
         andere Figur berührt.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Hier ist das Spiel noch einmal aus
+        einer früheren Phase, allerdings ist das größte Teil des Codes verborgen.
+        Es enthält die Funktion \"score_points\"\r\n\r\nÄndere die Funktion so, dass
+        ein \"points\"-Parameter zur \"player_score\"-Variablen hinzugezählt wird.\r\n\r\nDie
+        \"player-score\"-Variable soll immer dann erhöht werden, wenn der Hund die
+        Katze mit seinen Herzen trifft, wird der Hund von der Katze mit Herzen getroffen,
+        soll die Punktezahl verringert werden.\r\n\r\nKlicke zum Spielen auf \"Ausführen\".
+        Wenn der Hund 6 Punkte erreicht hat geht es zur nächsten Aufgabe weiter. "
       Course 4 Play Lab Vars 1_instruction: Diesmal brauchst Du keinen Code zu schreiben!
         Einfach "Ausführen" klicken und spielen! Du bist der Hund und versuchst, mehr
         Fahnen zu sammeln als die Katze. Benutze die Cursortaste "nach unten", um
@@ -1845,12 +1846,12 @@
         der Katze (Figur 2) mit gelben Herzen getroffen wird, soll dir ein Punkt abgezogen
         werden. Beginne mit 10 Punkten, damit es nicht zu schwierig wird. Das Spiel
         wird beendet, wenn deine Punktzahl auf 0 gesunken ist.
-      Course 4 Play Lab Vars 8 (copy 1)_instruction: |
-        Alright, one last thing for
-        this game - let's set it up so the player can win (or lose). Use a forever
-        loop to check the value of score - if score is ever greater that 20, make
-        the enemy vanish. If the score is every less than 0, make the player vanish.
-        Click "Finish" when the game works like you'd like it to.
+      Course 4 Play Lab Vars 8 (copy 1)_instruction: Okay, nun noch eine letzte Änderung
+        im Spiel - Der Spieler soll gewinnen (oder verlieren) können. Frage in einer
+        "ewig wiederholen"-Schleife den Punktestand ab. Bei einem Punktestand Größer
+        20 soll der Gegner verschwinden. Sinkt der Punktestand unter 0, dann soll
+        der Spieler verschwinden. Klicke auf "Abschließen", wenn das Spiel so funktioniert,
+        wie du möchtest.
       Course 4 Play Lab Vars 8_instruction: Richten sie das spiel so ein das der Hund
         gewinnen ( und verlieren) kann. Benutze immer Schleifen um den Punktestand
         zu überprüfen - ist der Punktestand über 20 machen sie das der Feind (die
@@ -1864,21 +1865,19 @@
         immer eine schleife um den Punktestand zu überprüfen- wenn der Punktestand
         über 20 ist, soll der Feind verschwinden. Ist der Punktestand weniger als
         0 soll der Spieler verschwinden.'
-      Course 4 Play Labs For Loops 1_instruction: |
-        Let's make the dog speak every
-        number from 1 to 100. Use a for loop and the counter block to speak the counter
-        variable each time the loop is run.
+      Course 4 Play Labs For Loops 1_instruction: Lass den Hund von 1 bis 100 zählen.
+        Verwende dazu eine "Zähle mit"-Schleife und sage bei jedem Schleifendurchlauf
+        was in der Zählvariablen steht.
       Course 4 Play Labs For Loops 2_instruction: Jetzt versuchen wir die ungeraden
         Zahlen von 1 bis 100 durchzuzählen.
-      Course 4 Play Labs For Loops 3_instruction: |
-        If we count by larger numbers,
-        we count even higher in the same amount of time. Try making the dog count
-        from 10 up to 1000, 10 at a time.
-      Course 4 Play Labs For Loops 4_instruction: |
-        Changing the increment can be
-        helpful, but we're still counting linearly (each number is the same distance
-        from the last) What if I wanted to count exponentially? Without changing the
-        settings in this for loop, can you count 1, 4, 9 , 16, 25... (counter squared)?
+      Course 4 Play Labs For Loops 3_instruction: Wenn wir größere Schritte verwenden,
+        können wir in der selben Zeit noch höher Zählen. Probiere aus, den Hund in
+        10er-Schritten von 10 bis 1000 zählen zu lassen.
+      Course 4 Play Labs For Loops 4_instruction: 'Es ist schon einmal hilfreich,
+        die Schrittweite zu ändern, aber wir zählen immer noch linear (jeder Schritt
+        hat den gleichen Abstand). Wie sieht es aus, wenn wir exponentiell zählen
+        wollen? Kann man ohne die Einstellungen in der "for"-Schleife zu ändern: 1,
+        4, 9, 16, 25... (also quadratisch) zählen?'
       Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom
         Stage 7 together with your \"counter\" variable to make some magic happen.
         \  \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".
@@ -1902,42 +1901,40 @@
         our \"for loop\" by \"increment\", but this time, we will add The Wizard\ninto
         the mix.  Can you change the code so that \"increment\" goes up by two\neach
         time The Wizard is clicked?\r\n\r\nWatch out!  The Wizard moves quickly!"
-      Course 4 Play Labs For Loops 7_instruction: |
-        Could you use a for loop to help
-        me speak the sequence 1, 4, 7, 10, 13, 16, 19, 22, 25?
-      Course 4 Play Labs For Loops 7a_instruction: "Now we're getting somewhere!  What\nif
-        we start counting how many times we can click The Wizard before Dog gets\nto
-        30?  \r\n\r\nFinish adding blocks to The Wizard so that every time he's\nclicked
-        the variable \"clicked\" increases by one. You can ignore \"increment\"\nfor
-        now.\r\n\r\nDog will start counting when you click \"Run\"."
-      Course 4 Play Labs For Loops 8_instruction: "Now, help the actors move as they\ncount.
-        \ \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat\nwill
-        move and count by multiplying by 2 (counter * 2)  each time. Penguin\nwill
-        move and count to the power of 2 (counter ^ 2) each time.  Who will reach\ntheir
-        flag first?"
-      Course 4 Play Labs For Loops 8a_instruction: "To finish our game, we need to\nbring
-        back the \"increment\" variable!    Let's tie it to the level of the\ngame.\r\n\r\n1)
-        Keep track of the number of times The Wizard is clicked.\r\n2)\nIf The Wizard
-        is clicked at least 10 times before Dog counts to 30, raise\n\"increment\"
-        by 1 and start again.\r\n3) If The Wizard does not get clicked\nat least 10
-        times, the game is over."
-      Course 4 SCF 1_instruction: |
-        Use the suggested functions to draw four rows
-        of hexagons. Notice how our even numbered rows are shifted to the right?
-      Course 4 SCF 1a_instruction: |
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
-      Course 4 SCF 1b_instruction: |
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
-      Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 Play Labs For Loops 7_instruction: 'Kannst du mich mit einer "for"-Schleife
+        die Folge: 1, 4, 7, 10, 13, 16, 19, 22, 25 sprechen lassen?'
+      Course 4 Play Labs For Loops 7a_instruction: "Nun kommen wir schon weiter. Wir
+        könnten jetzt zählen, wie oft man den Zauberer anklicken kann, bevor der Hund
+        bis 30 gezählt hat.\r\n\r\nFüge Bausteine hinzu, damit die Variable \"clicked\"
+        jedesmal um 1 erhöht wird, wenn der Zauberer angeklickt wird. \"increment\"
+        wird im Moment nicht benötigt.\r\n\r\nDer Hund beginnt mit dem Zählem, wenn
+        du auf \"Ausführen\" klickst."
+      Course 4 Play Labs For Loops 8_instruction: "Bringe die Figuren jetzt zum Zählen,
+        während sie sich bewegen.\r\n\r\nDer Hund soll bei jeder Bewegung 2 hinzuzählen
+        (counter + 2). Die Katze bei jeder Bewegung den Zähler mit 2 multiplizieren
+        (counter * 2). Der Pinguin soll die Zählvariable mit 2 potenzieren (counter
+        \ ^ 2). Wer ist als erster bei der Fahne?"
+      Course 4 Play Labs For Loops 8a_instruction: "Um das Spiel fertigzustellen benötigen
+        wir wieder die \"increment\"- Variable. Verbinde sie mit der Spielstufe.\r\n\r\n1)
+        Beobachte wie oft der Zauberer angeklickt wird.\r\n2) Sobald der Zauberer
+        10 mal geklickt wurde, bevor der Hund bis 30 gezählt hat erhöhe \"increment\"
+        um 1 und fang von vorne an.\r\n3) Schaffts du es nicht den Zauberer 10 mal
+        anzuklicken, ist das Spiel zu ende."
+      Course 4 SCF 1_instruction: Zeichne mit dem vorgegebenen Funktionen vier Zeilen
+        mit Sechsecken. Beachte, dass die geradzahligen Zeilen nach rechts verschoben
+        sind.
+      Course 4 SCF 1a_instruction: Wie kann der der ganze Nektar mit möglichst wenigen
+        Bausteinen eingesammelt werden?
+      Course 4 SCF 1b_instruction: Wie kann der der ganze Nektar mit möglichst wenigen
+        Bausteinen eingesammelt werden?
+      Course 4 SCF 2_instruction: 'Nutze das was du im letzten Level gelernt hast
+        um ein Bild wie dieses zu zeichnen. Anmerkung: Dein Code wird viel einfacher,
+        wenn du Parameter einbindest. '
       Course 4 SCF 3 Fail 1_instruction: Findes du heraus wie...
       Course 4 SCF 3 Fail 2_instruction: Findes du heraus wie...
-      Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters.
-        \n"
+      Course 4 SCF 3_instruction: 'Nutze das was du im letzten Level gelernt hast
+        um ein Bild wie dieses zu zeichnen. Anmerkung: Dein Code wird viel einfacher,
+        wenn du Parameter einbindest. '
       Course 4 SCFL 1_instruction: Löse diese Aufgabe mit so wenig Bausteinen wie
         möglich.
       Course 4 SCFL 1a_instruction: Bringe Skrat mit möglichst wenigen Bausteinen
@@ -1949,9 +1946,8 @@
       Course 4 SCFL 3_instruction: Kriegst du heraus, wie man das Bild nachzeichnet?
       Course 4 SCFL 4_instruction: Kriegst du heraus, wie man das Bild nachzeichnet?
       Course 4 SCFL 5_instruction: Kriegst du heraus, wie man das Bild nachzeichnet?
-      Course 4 SCFL 6_instruction: |
-        Can you figure out how to re-create this drawing
-        with a single loop?
+      Course 4 SCFL 6_instruction: Kannst du herraus finden, wie du diese Zeichnung
+        erstellst, indem du eine einzige Schleife benutzt?
       Course 4 SCFL 7_instruction: |
         The artist wants to catch some waves! Can you
         figure out how to re-create this drawing?
@@ -1961,13 +1957,13 @@
         by y pixels (using positive and negative numbers).
       Course 4 SCV 1_instruction: Klicke hier, um die Anleitung noch einmal anzuschauen.
       Course 4 SCV 2_instruction: Klicke hier, um die Anleitung noch einmal anzuschauen.
-      Course 4 SCV 3_instruction: "Now for a game of tag!  Tag Cat to get 2 points.\nTag
-        Penguin to get 3 points.  Get 10 points to win!\r\nBut be careful, when\nCat
-        and Penguin tag each other, they take points away.\r\n\r\nAdd the blocks\nnecessary
-        to make this game work the way it's been explained.  How will you\nget Dog
-        to move in all directions using the arrow keys?  How will you add\npoints
-        when Dog tags Cat or Penguin?  How will you subtract points when Cat\nand
-        Penguin touch?"
+      Course 4 SCV 3_instruction: "Jetzt spielen wir Fangen. Berühre die Katze um
+        2 Punkte zu erhalten, den Pinguin um 3 Punkte zu bekommen. Erreichst du 10
+        Punkte, hast du gewonnen\r\nVorsicht: wenn sich Katze und Pinguin begegnen
+        werden Punkte abgezogen.\r\n\r\nMit den richtigen Bausteinen kannst du das
+        Spiel zum Laufen bringen. Wie bewegst du den Hund mit den Pfeiltasten? Wie
+        werden die Punkte erhöht, wenn der Hund auf die Katze oder den Pinguin trifft?
+        Wie werden sie abgezogen, wenn Katze und Pinguin sich berühren?"
       Course 4 SCV 4_instruction: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       Course 4 SCV 5_instruction: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       Course 4 SCV 6_instruction: Klicke hier, um die Anleitung noch einmal anzuschauen.
@@ -2002,6 +1998,7 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2248,6 +2245,11 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Jetzt erstellen wir 20 überschneidende
         Kreise, und drehen uns bei jedem Kreis um 18 Grad.
@@ -2348,9 +2350,8 @@
         zeichnen?
       K-1 Artist Loops 5_instruction: Was muss 4-mal wiederholt werden um diese Treppe
         zu zeichnen?
-      K-1 Artist Loops 6_instruction: |
-        This one needs two loops: one to go up the
-        stairs and one to go down.
+      K-1 Artist Loops 6_instruction: Hier werden 2 Schleifen benötigt. Eine um die
+        Treppe hoch zu gehen und eine um die Treppe runter zu gehen.
       K-1 Artist Loops 7_instruction: Kannst Du dieses Muster mit zwei "wiederholen"-Blöcken
         vollenden?
       K-1 Artist Loops 8_instruction: Diese Treppe hat längere Stufen.
@@ -2369,9 +2370,8 @@
         Linien!
       K-1 Artist1 6_instruction: Um dieses Bild fertig zu malen, musst Du den "springen"-Baustein
         verwenden!
-      K-1 Artist1 7_instruction: |
-        Use the jump block to move without drawing. Jump
-        up and draw a line.
+      K-1 Artist1 7_instruction: Benutze den Sprungblock um dich zu bewegen ohne zu
+        malen. Springe hoch und male eine Linie.
       K-1 Artist1 8_instruction: Zeichne die gestrichelte Linie, indem Du die springen-
         und zeichnen-Bausteine verwendest
       K-1 Artist1 9_instruction: Zeichne und springe um die gestrichelte Linie zu
@@ -2439,10 +2439,8 @@
       K-1 Bee Loops Assessment 2_instruction: Verwende Schleifen und hole Nektar um
         Honig herzustellen.
       K-1 Bee Puzzle 12_instruction: Get three nectars and then make two honey
-      K-1 Building a Foundation Assessment_instruction: |
-        Build a three level pyramid,
-        there are no other directions, so just play with the pieces until you get
-        it!
+      K-1 Building a Foundation Assessment_instruction: Baue eine dreistufige Pyramide.
+        Es gibt keine anderen Richtungsanweisungen. Probiere es aus!
       k-1 maze 1_instruction: Kannst Du mich nach Westen bewegen, damit ich zum Schwein
         komme?
       K-1 Maze 10_instruction: Gehe um das TNT herum, um mich zum Schwein zu bringen!
@@ -2465,11 +2463,10 @@
       K-1 Maze Assessment 13_instruction: Bewertungsstufe
       K-1 Maze Assessment 2_instruction: 'Prüfung: Bring mich zum Schwein!'
       K-1 maze debug 1_instruction: Bring mich zum Schwein, indem du den Code änderst
-      K-1 maze debug 10_instruction: |
-        Debug this level by rearranging and changing
-        blocks to get me to the pig!
-      K-1 maze debug 11_instruction: "This is a test!\r\nDebug this level by rearranging\nand
-        changing blocks to get me to the pig"
+      K-1 maze debug 10_instruction: Bereinige diesen Level von Fehlern, indem du
+        die Bausteine so anordnest, dass ich das Schwein erreiche.
+      K-1 maze debug 11_instruction: "Testaufgabe\r\nOrdne die Bausteine so an, dass
+        du mich zum Schwein bringen kannst."
       K-1 maze debug 2_instruction: |
         Figure out what is missing and then add blocks
         to get me to the pig!
@@ -2478,21 +2475,17 @@
       K-1 maze debug 4_instruction: |
         Run through these blocks and fix them! I think
         I might be going in the wrong direction.
-      K-1 maze debug 5_instruction: |
-        Debug this level by rearranging and changing
-        blocks to get me to the pig!
-      K-1 maze debug 6_instruction: |
-        Debug this level by rearranging and changing
-        blocks to get me to the pig!
-      K-1 maze debug 7_instruction: |
-        Debug this level by rearranging and changing
-        blocks to get me to the pig!
+      K-1 maze debug 5_instruction: Bereinige diesen Level von Fehlern, indem du die
+        Bausteine so anordnest, dass ich das Schwein erreiche.
+      K-1 maze debug 6_instruction: Bereinige diesen Level von Fehlern, indem du die
+        Bausteine so anordnest, dass ich das Schwein erreiche.
+      K-1 maze debug 7_instruction: Bereinige diesen Level von Fehlern, indem du die
+        Bausteine so anordnest, dass ich das Schwein erreiche.
       K-1 maze debug 8_instruction: |
         Debug this level by rearranging and adding blocks
         to get me to the pig!
-      K-1 maze debug 9_instruction: |
-        Debug this level by rearranging and changing
-        blocks to get me to the pig!
+      K-1 maze debug 9_instruction: Bereinige diesen Level von Fehlern, indem du die
+        Bausteine so anordnest, dass ich das Schwein erreiche.
       K-1 Maze debug Assessment 1_instruction: |
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
@@ -2700,22 +2693,20 @@
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: |
-        Draw something awesome! Your code is saved
-        as a project that you can return to at any time.
-      NEW Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is
-        100 pixels in length, using a repeat loop?
+      New Artist Project_instruction: Zeichne etwas großartiges! Dein Code wird als
+        Projekt gespeichert, zu dem du jederzeit zurück kehren kannst.
+      NEW Course 4 Artist Functions 1_instruction: Kannst du ein Rechteck zeichnen,
+        mit einer Kantenlänge von 100 Pixeln, indem du Schleifen benutzt?
       NEW Course 4 Artist Functions 10.1_instruction: Benutze die Funktionen aus der
         vorherigen Aufgabe, um dieses Muster zu zeichnen.
       NEW Course 4 Artist Functions 10_instruction: |
         Click "edit" to fill out the
         blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: "Now we want to create a new\nfunction
-        called \"draw a line of squares\" that draws six squares all in a\nrow.  Can
-        you build this function using the \"draw a square 20\" function\nthat we've
-        already created? Note: See that we've changed the pen to be much\nthinner.
-        Click \"edit\" on the  the \"draw a square 20\" function to see how!\r\n"
+      NEW Course 4 Artist Functions 11_instruction: "Wir werden eine neue Funktion
+        erstellen, \"draw a line of squares\", um sechs Quadrate in eine Zeile zu
+        zeichnen. Kann man die Funktion \"draw a square 20\" dazu verwenden? Beachte,
+        dass der Stift jetzt eine viel schmalerer Linie zeichnet. Wenn du bei der
+        Funktion auf \"bearbeiten\" klickst kannst du dir anschauen, wie das funktioniert.\r\n"
       NEW Course 4 Artist Functions 12_instruction: |
         Use the "draw a line of squares"
         function from the last puzzle to draw this pattern."
@@ -2773,11 +2764,11 @@
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
         Can you use a "for loop" with your function to make this design?
-      NEW Course 4 Artist Params 13_instruction: "Let's edit this \"draw a polygon\"\nfunction.
-        It already has a \"sides\" parameter. Now, let's add a \"length\"\nparameter.
-        \r\nHint: The perimeter of each shape is 200 pixels long. Do you\nremember
-        the equation to make shapes the same size when they have a different\nnumber
-        of sides?"
+      NEW Course 4 Artist Params 13_instruction: "Wir ändern die \"draw a polygon\"-Funktion.
+        Sie besitzt bereits einen \"sides\"-Parameter, jetzt fügen wir noch einen
+        \"length\"-Parameter hinzu.\r\nHinweis: Jede der geometrischen Figuren hat
+        einen Umfang von 200 Pixeln. Kannst du dich noch an die Gleichung erinnern
+        mit der jede Figur die gleich groß wird, auch bei unterschiedlicher Seitenanzahl?"
       NEW Course 4 Artist Params 14_instruction: |
         Edit "draw a spiral edge" to
         use "length" and "sides" parameters, then recreate these shapes.
@@ -2870,12 +2861,12 @@
         is called the "increment". Each time the loop is run, the counter variable
         changes by the value of the increment. Try collecting these flowers using
         an increment of 2.
-      NEW Course 4 Bee For Loops 7_instruction: "Now, let's combine the \"counter\"\nvariable
-        with a math block! How can you use the \"counter\" variable to navigate\nthis
-        garden with the fewest number of blocks possible? What do you need to\ndo
-        to collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"\nvariable!\r\n\r\nRemember:
-        If your loop is counting up, the increment is added\nto your \"counter\" variable
-        each time through."
+      NEW Course 4 Bee For Loops 7_instruction: "Nun kombinieren wir die Zählvariable
+        mit einem Mathematik-Baustein. Wie kann man sich mit möglichst wenigen Bausteinen
+        mithilfe der Zählvariable durch den Garten bewegen? Wie kannst du 3, 6, 9,
+        12, 14 Portionen Nektar einsammeln? Die Lösung steckt in der Zähvariablen.\r\n\r\nBeachte:
+        Beim durchlaufen der Schleife wird die Zählvariable jedesmal um die Schrittweite
+        erhöht."
       NEW Course 4 Bee For Loops 8_instruction: "You've got this! What should your\nincrement
         be to collect 3, 6, 9, 12, 15 nectar?\r\nHint: What do you need\nto add to
         each number to get the number after it?"
@@ -3163,6 +3154,9 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: Alles was die Biene will ist Nektar,
         und zwar sofort. Nicht alle Objekte sind Blumen, also sieh unter jeder Wolke
         nach, ob dort eine Blume versteckt ist. Falls ja, dann kannst Du den Nektar
@@ -4029,8 +4023,8 @@
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -4762,20 +4756,46 @@
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

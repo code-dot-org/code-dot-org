@@ -28,8 +28,7 @@
     code:
       label: 增加一位老師：
       placeholder: 單元代碼 (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: 請輸入由您的老師給你的代碼。它是像"ABCDEF"由6個字母所組成的代碼。
     submit: 新增教師
   add_hint_form:
     placeholder: 請在此處輸入您的提示
@@ -40,6 +39,7 @@
   puzzle: 關卡
   trophies: 獎盃
   courses: 課程
+  unplugged_activity: 不用電腦的活動
   of: 的
   more: 更多
   less: 更少
@@ -326,7 +326,7 @@
     add_hint_help: 請協助我們添加小提示到Code.org 的教程
     20hour_overview: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
     test_videos_help: 在您的學校測試我們新的影片
-    try_beta_courses: 新功能！K 5 學生們請嘗試我們的 Beta 測試版課程。
+    try_beta_courses: 新課程！請嘗試我們設計給五年級學生的 Beta 測試版課程。
     use_as_teacher: 使用這網站當一名教師
     heading_hoc2014: <h2>一小時的程式設計課程</h2><h1>對所有年齡</h1>
     heading_elementary: <h2>20 小時課程</h2><h1>初學者(所有年齡)</h1>
@@ -353,11 +353,20 @@
       <a href="Https://code.org/about/advisors"> 教育顧問</a> 的支援，建立Code工作室
     help_from_html: 從Google, Microsoft, Facebook, and Twitter的工程師在幫忙創建本教程。
     help_from_html_old: 來自google 微軟 Fb及推特的工程師的協助創造了這些元素
-    art_from_html: 憤怒鳥&trade; & &copy; 2009年-2014 Rovio 娛樂有限公司版權所有。<br/>植物與僵屍&trade;
-      & &copy; 2014 EA美商藝電公司版權所有。
-    art_from_html_old: 憤怒鳥&#8482; &amp; &copy; 2009年-%{current_year} Rovio Entertainment
-      Ltd. 版權所有。<br /> 植物大戰僵屍&#8482; &amp; &copy; %{current_year} Electronic Arts
-      Inc. 版權所有
+    art_from_html: 當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。<br
+      />星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。<br />冰雪奇緣
+      Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。<br />冰原歷險記 Ice Age &#8482;
+      &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。<br />憤怒鳥 Angry Birds &#8482;
+      &copy; 2009年 %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。<br />植物大戰僵屍 Plants vs.
+      Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。<br />阿甘妙世界 The Amazing
+      World of Gumball 商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。
+    art_from_html_old: 當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。星際大戰
+      Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。冰雪奇緣 Frozen
+      &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。冰原歷險記 Ice Age &#8482; &copy;
+      %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。憤怒鳥 Angry Birds &#8482; &copy; 2009年
+      %{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰僵屍 Plants vs. Zombies &#8482;
+      &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball
+      商標是 &copy; 2015年卡通頻道著作權所有，並保留一切權利。
     powered_by_aws: 由亞馬遜網路服務系統提供服務
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of
       Code&reg; 都是 Code.org.的注冊商標。'
@@ -555,7 +564,7 @@
     completed_too_many_blocks: 完成，但使用過多積木
     completed_perfect: 完美完成
     furthest_level_attempted: 嘗試到的最遠關卡
-    assessment: 評估
+    assessment: 習題
   studio:
     courses_working_on: 您正在進行的課程
     completed_courses: 已完成的課程
@@ -597,7 +606,7 @@
       contact_us: 如果你認為這是一個錯誤，請與我們 <a href='HTTPs://code.org/contact'> 聯繫</a>。
       go_to_code_studio: 前往程式碼工作室
       report_abuse_form:
-        intro: 當你在使用程式碼工作示所以製作出來的app時，如果遇到了冒犯性的內容、 威脅、 網路霸淩、 騷擾或侵犯版權的內容，請填寫下面的表格。我們將非常認真地看待你的回報，進行相對應的調查並採取適當的行動。
+        intro: 若你發覺程式碼工作室製作出來的程式應用有冒犯性的內容、 威脅、 網路霸淩、 騷擾或侵犯版權的內容，請填寫下面的表格。我們將非常認真地看待你報告的內容，並進行相對應的調查及採取適當的行動。
         validation:
           email: 請提供一個電子郵件地址
           age: 請指定適用年齡
