@@ -105,7 +105,7 @@ angular: teacherDashboard
          // TODO: This isn't very restful
          allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
-         moveStudents: {method:'POST', url:'/sections/:new_section_code/transfers'},
+         moveStudents: {method:'POST', url: '/sections/transfers'},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'}
@@ -393,7 +393,7 @@ angular: teacherDashboard
 
   }]);
 
-  app.controller('MovingStudentsController', ['$scope', '$routeParams', '$q', '$window', 'sectionsService', function($scope, $routeParams, $q, $window, sectionsService) {
+  app.controller('MovingStudentsController', ['$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function($scope, $routeParams, $q, $window, $http, sectionsService) {
       var self = this;
 
       // 'Other Section' selected
@@ -414,11 +414,12 @@ angular: teacherDashboard
         // stay_enrolled_in_current_section (kinda optional)
         var params = {};
         params['new_section_code'] = $scope.getNewSectionCode();
-        // params['current_section_code'] = $scope.getCurrentSectionCode();
-        // params['student_ids'] = $scope.getSelectedStudentIds();
-        // params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
+        params['current_section_code'] = $scope.getCurrentSectionCode();
+        params['student_ids'] = $scope.getSelectedStudentIds();
+        params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
         // TODO: Get this working
-        sectionsService.moveStudents(params, {}).$promise.then(
+        $http.post($scope.transferUrl, params, {}).then(
+        // sectionsService.moveStudents(params, {}).$promise.then(
           function success(response) {
             $('#move-students').modal('hide');
           },

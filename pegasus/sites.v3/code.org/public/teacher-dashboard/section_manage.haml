@@ -4,7 +4,7 @@ layout: none
 theme: none
 ---
 -# TODO: Move this into a separate partial
-%div{class: "modal fade", id: "move-students", "ng-controller" => "MovingStudentsController as msCtrl"}
+%div{class: "modal fade", id: "move-students", "ng-controller" => "MovingStudentsController as msCtrl", "ng-init" => "transferUrl = '#{CDO.studio_url("/sections/transfer")}'"}
   %div{class: "modal-dialog", width: "500px"}
     %div{class: "modal-content"}
       %div{class: "modal-header"}

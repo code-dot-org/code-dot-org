@@ -52,9 +52,10 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when one of the student_ids is invalid" do
+    new_section = create(:section, user: create(:teacher), login_type: 'word')
     student_ids = [@word_user_1.id, -100].join(',')
-    post :create, new_section_code: @word_section.code, student_ids: student_ids, current_section_code: @word_section.code, stay_enrolled_in_current_section: true
-    assert_response 404
+    post :create, new_section_code: new_section.code, student_ids: student_ids, current_section_code: @word_section.code, stay_enrolled_in_current_section: true
+    assert_response 404, json_response["error"]
   end
 
   test "transferring without logging in fails" do

@@ -32,7 +32,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  post 'sections/:new_section_code/transfers', to: 'transfers#create'
+  post 'sections/transfers', to: 'transfers#create'
 
   get '/sh/:id', to: redirect('/c/%{id}')
   get '/sh/:id/:action', to: redirect('/c/%{id}/%{action}')
