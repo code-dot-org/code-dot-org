@@ -59,13 +59,17 @@ get '/api/hour/certificate/:filename' do |filename|
   width = width.to_i
   width = 0 unless(width > 0 && width < 1754)
 
-  image = create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
-  image.resize_to_fit!(width) unless width == 0
-  image.format = extname[1..-1]
+  begin
+    image = create_course_certificate_image(row[:name].to_s.strip, row[:tutorial])
+    image.resize_to_fit!(width) unless width == 0
+    image.format = extname[1..-1]
 
-  dont_cache
-  content_type image.format.to_sym
-  image.to_blob
+    dont_cache
+    content_type image.format.to_sym
+    image.to_blob
+  ensure
+    image && image.destroy!
+  end
 end
 
 get '/v2/hoc/certificate/:filename' do |filename|
@@ -78,12 +82,16 @@ get '/v2/hoc/certificate/:filename' do |filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
-  image.format = format
+  begin
+    image = create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'])
+    image.format = format
 
-  content_type format.to_sym
-  expires 0, :private, :must_revalidate
-  image.to_blob
+    content_type format.to_sym
+    expires 0, :private, :must_revalidate
+    image.to_blob
+  ensure
+    image && image.destroy!
+  end
 end
 
 get '/api/hour/certificate64/:course/:filename' do |course, filename|
@@ -96,12 +104,16 @@ get '/api/hour/certificate64/:course/:filename' do |course, filename|
   pass unless extnames.include?(extname)
 
   format = extname[1..-1]
-  image = create_course_certificate_image(label, course)
-  image.format = format
+  begin
+    image = create_course_certificate_image(label, course)
+    image.format = format
 
-  content_type format.to_sym
-  expires 0, :private, :must_revalidate
-  image.to_blob
+    content_type format.to_sym
+    expires 0, :private, :must_revalidate
+    image.to_blob
+  ensure
+    image && image.destroy!
+  end
 end
 
 get '/api/hour/finish' do
