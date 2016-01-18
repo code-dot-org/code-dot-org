@@ -140,8 +140,10 @@ After do |s|
 end
 
 After do |scenario|
-  # Tell Cucumber to quit after this scenario is done - if it failed.
-  Cucumber.wants_to_quit = true if scenario.failed?
+  if ENV['FAIL_FAST'] == 'true'
+    # Tell Cucumber to quit after this scenario is done - if it failed.
+    Cucumber.wants_to_quit = true if scenario.failed?
+  end
 end
 
 at_exit do
