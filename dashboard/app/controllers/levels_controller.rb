@@ -229,6 +229,7 @@ class LevelsController < ApplicationController
       :user,
       :dsl_text,
       :encrypted,
+      :published,
       {poems: []},
       {concept_ids: []},
       {soft_buttons: []},
