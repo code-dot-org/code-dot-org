@@ -95,7 +95,7 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
+if rack_env?(:staging) || rack_env?(:development)
   #
   # Define the BLOCKLY[-CORE] BUILD task
   #
@@ -118,19 +118,6 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
     RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
     RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
-  end
-
-  #
-  # Define the CODE STUDIO BUILD task
-  #
-  CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
-  CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
-  CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
-  CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
-    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
-    RakeUtils.system 'rm', '-rf', dashboard_dir('public/code-studio-package')
-    RakeUtils.system 'cp', '-R', code_studio_dir('build'), dashboard_dir('public/code-studio-package')
   end
 
   #
@@ -170,6 +157,28 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
 end
+
+#
+# Define the CODE STUDIO BUILD task.
+#
+CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
+CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
+CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
+CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
+  commit_hash = S3Packaging.commit_hash(code_studio_dir)
+  next if S3Packaging.attempt_update_package('code-studio', dashboard_dir('public/code-studio-package'), commit_hash)
+
+  raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
+
+  puts 'Building code-studio...'
+  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+
+  package = S3Packaging.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
+  S3Packaging.decompress_package(package, dashboard_dir('public/code-studio-package'))
+end
+
+
 
 file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
@@ -294,8 +303,10 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
+
+task 'build-code-studio' => [CODE_STUDIO_TASK] {}
 
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
@@ -394,9 +405,6 @@ multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack
 
 $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
-
-BUCKET_NAME = 'cdo-build-package'
-
 task 'test-websites' => [$websites_test]
 
 # TODO - think about dev scenario (which i dont think ever goes through build.rake)
@@ -414,9 +422,9 @@ task 'test-websites' => [$websites_test]
 task 'brent-upload' do
   commit_hash = S3Packaging.commit_hash(code_studio_dir)
 
-  temp_package_path = S3Packaging.create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
+  temp_package = S3Packaging.create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
 
-  S3Packaging.upload_package('code-studio', temp_package_path, commit_hash)
+  S3Packaging.upload_package('code-studio', temp_package, commit_hash)
 end
 
 task 'brent-download' do
