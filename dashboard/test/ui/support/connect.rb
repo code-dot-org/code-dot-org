@@ -130,10 +130,12 @@ After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
 
-  if slow_browser?
-    @browser.execute_script 'sessionStorage.clear()'
-  else
-    @browser.quit unless @browser.nil?
+  unless @browser.nil?
+    if slow_browser?
+      @browser.execute_script 'sessionStorage.clear()'
+    else
+      @browser.quit
+    end
   end
 end
 
