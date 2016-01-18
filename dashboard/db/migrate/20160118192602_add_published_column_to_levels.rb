@@ -1,6 +1,6 @@
 class AddPublishedColumnToLevels < ActiveRecord::Migration
   def up
-    add_column :levels, :published, :boolean
+    add_column :levels, :published, :boolean, default: 0
 
     execute <<-SQL
       update levels set published = 1 where published is NULL
