@@ -16,6 +16,7 @@
   background-position: 50%;
   width: 260px;
   height: 260px;
+  background-color: #f0f0f0;
 }
 
 .highlight-caption {
@@ -27,7 +28,6 @@
   top: 0px;
   left: 0px;
   margin: 20px;
-  padding: 15px;
   height: 260px;
   display: none;
 }
@@ -39,7 +39,12 @@
 
 .caption-headline {
   color: white;
+  padding: 10px 15px 0px 15px;
   text-transform: uppercase;
+}
+
+.highlight-description {
+  padding: 0px 15px;
 }
 
 .learn-button {
@@ -56,7 +61,7 @@
   color: white;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 960px) {
   .highlight-caption {
     display: inline;
     width: 260px;

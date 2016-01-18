@@ -1,18 +1,16 @@
 ---
-title: Highlights
+title: <%= hoc_s(:highlights_title) %>
 layout: wide
 ---
 
 %link{href: "/css/highlights.css", rel: "stylesheet", id: "highlight-styles"}
 
-%h1 Hour of Code Highlights
-%h3 Some of our favorite moments of the Hour of Code campaign.
+%h1= hoc_s(:highlights_header)
+%h3= hoc_s(:highlights_description)
 
 .highlights-content
-  - tag = 'highlight'
-  - DB[:cdo_news_items].where(tag_s:tag).limit(100).each do |item|
+  - DB[:cdo_highlights].limit(100).reverse_each do |item|
     = view :highlight_item, item: item
-
 
 :javascript
   $(function() {

@@ -454,6 +454,10 @@
   event: event
   events: events
 
+  highlights_title: Highlights
+  highlights_header: Hour of Code Highlights
+  highlights_description: Some of our favorite moments from the 2015 Hour of Code campaign.
+
   footer_copyright_message: 'Copyright 2015 Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
 
