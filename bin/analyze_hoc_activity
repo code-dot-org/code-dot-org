@@ -35,7 +35,10 @@ def main()
   total_cities = to_date['cities']
   total_states = to_date['states']
   total_countries = to_date['countries']
-  total_codedotorg = 0
+  # The code.org HOC count for tutorials on or before 11 January 2016, noting
+  # that our counting (via the JSON files) began on 12 January 2016.
+  # Computation: https://docs.google.com/spreadsheets/d/1xglCme-BRvtQhVg7G7OV7OZOmrIkpM06g2v7g8Zh8z8
+  total_codedotorg = 104896901
 
   today = DateTime.now.to_date
   day = Date.strptime('2014/12/06', '%Y/%m/%d')
