@@ -27,9 +27,8 @@ de:
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
-      placeholder: Code für diese Sektion (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      placeholder: Code für diesen Abschnitt (ABCDEF)
+      instructions: 'Bitte gib den Schlüssel ein, den dein Lehrer dir mitgeteilt hat. Der schlüssel ist 6-Stellig, wie z. B.: "ABCDEF".'
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -40,6 +39,7 @@ de:
   puzzle: Aufgabe
   trophies: Trophäen
   courses: Kurse
+  unplugged_activity: Aktivität ohne Computer
   of: von
   more: MEHR
   less: WENIGER
@@ -92,7 +92,7 @@ de:
     valid_password: Gültiges Passwort!
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
-    student_terms: "Ich aktzeptiere die <a href='http://code.org/tos'>AGB</a> von Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass die die Erlaubnis meiner Eltern/Erziehungsbrechtigten habe, Code.org zu benutzen.<br/>Für unter 13 jährige Nutzer: E-Mail Adressen werden nicht so gespeichert, dass wir Kontakt herstellen könnten."
+    student_terms: "Ich aktzeptiere die <a href='http://code.org/tos'>Agb</a> von Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis meiner Eltern/Erziehungsberechtigten habe, Code.org zu benutzen.<br/>Für unter 13 jährige Nutzer: E-Mail Adressen werden nicht so gespeichert, dass wir Kontakt herstellen könnten."
     teacher_terms: "Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a> von Code.org einverstanden."
     additional_information: Wir benötigen noch einige Informationen, um mit der Anmeldung fortzufahren.
   signin_form:

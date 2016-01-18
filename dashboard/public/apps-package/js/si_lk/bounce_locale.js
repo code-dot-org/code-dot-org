@@ -245,7 +245,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setPaddleSpeedVeryFast":function(d){return "පැඩලයේ ඉහලම වේගය සකසන්න"},
 "setPaddleSpeedTooltip":function(d){return "පැඩලයේ වේගය සැකසීම"},
 "shareBounceTwitter":function(d){return "මා විසින් නිර්මාණය කරන ලද Bounce ක්‍රීඩාව ඔබත් උත්සහ කර බලන්න. @codeorg හි සහය සහිතව මා විසින්ම මෙහි කේතයන් ලියා ඇත"},
-"shareGame":function(d){return "ඔබෙගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
+"shareGame":function(d){return "ඔබගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
 "turnLeft":function(d){return "වමට හැරෙන්න"},
 "turnRight":function(d){return "දකුණට හැරෙන්න"},
 "turnTooltip":function(d){return "මාව වමට හෝ දකුණට අංශක 90 කින් හරවන්න."},

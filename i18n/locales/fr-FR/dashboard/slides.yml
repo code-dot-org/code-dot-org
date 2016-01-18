@@ -389,7 +389,7 @@ fr:
         text: "À présent, nous allons apprendre une chose que tous les programmeurs de jeu utilisent. On appelle ça des événements. Un événement dit à ton programme d'écouter lorsque quelque chose se produit. Quand cette chose arrive, il effectue une action."
       2:
         image: notes/playlab_events_2.png
-        text: "Quelques exemples d'évènements sont l'écoute des clics de souris, une touche fléchée, ou un effleurement de l'écran."
+        text: "Quelques exemples d'évènements sont l'écoute des clics de souris, une touche fléchée, ou une pression sur l'écran."
       3:
         image: notes/playlab_events_3.png
         text: |-
@@ -1285,7 +1285,7 @@ fr:
         text: "Mon nom est John Vechey, je suis l'un des co-fondateurs de PopCap Games. Nous faisons des jeux comme Bejeweled, les Plants vs Zombies et Peggle. Beaucoup de jeux ne sont pas parfait comment votre code, ce n'est pas comment parfait votre art , il s'agit de ce que ça fait et combien c'est amusement. Vous ne pouvez obtenir de sens en l'essayant, en le fabriquant, en apprenant et en adaptant mais vos compétences seront la seul chose qui va faire des jeux."
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: "Do you have a favorite video game? Well, we're going to take one step towards creating games just like that using Play Lab. Good games have a story and every story has actors. Actors do things like speak, move, and interact with each other. Maybe even score points based on the rules of the game. Today we'll be learning how to do all these things, one by one, with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll build a game from scratch that can be shared and played on a phone."
+        text: "As-tu un jeu vidéo favori ? Eh bien, nous allons mettre un pied devant l'autre tout comme si on utilisait l'aire de jeux. Les bons jeux ont une histoire et chaque histoire a ses acteurs. Ils font des choses comme parler, bouger et interagir les uns avec les autres. Peut-être même que les points de score peuvent être basés sur les règles du jeu. Aujourd'hui nous allons apprendre comment faire toutes ces choses, une par une, avec des personnages de Disney, comme Anna, Elsa, Hiro, Baymax et Raiponce. Nous allons créer un jeu à partir de rien qui pourra être partagé et joué sur un téléphone."
       5:
         image: notes/infinity_playlab_intro_5.png
         text: "Ton écran est divisé en trois parties principales. Sur la gauche se trouve l'espace de jeu, où le programme s'exécutera. Les consignes pour chaque niveau sont écrites sous l'espace de jeu. Cette zone centrale est la boîte à outils et chacun de ces blocs est une portion de code. L'espace blanc à droite est appelé l'espace de travail et c'est là où nous allons construire notre programme."
@@ -1361,14 +1361,14 @@ fr:
         text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
       2:
         image: notes/unplug4_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: "Dans la seconde moitié de l'activité, nous demandons aux élèves de combien de façons différentes, ils peuvent plier un morceau de papier pour créer seize rectangles identiques. Puis vous allez discuter comment plusieurs solutions peuvent conduire au même résultat final et pourquoi certaines solutions sont meilleures dans certaines situations."
     unplug5:
       1:
         image: notes/unplug5_1.png
         text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
       2:
         image: notes/unplug5_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: "Dans la seconde moitié de l'activité, nous demandons aux élèves de combien de façons différentes, ils peuvent plier un morceau de papier pour créer seize rectangles identiques. Puis vous allez discuter comment plusieurs solutions peuvent conduire au même résultat final et pourquoi certaines solutions sont meilleures dans certaines situations."
     unplug6:
       1:
         image: notes/unplug6_1.png
@@ -1622,17 +1622,17 @@ fr:
       9:
         image: notes/mc_intro_9.JPG
         text: |-
-          Si j'y glisse le bloc "avancer" et que je clique sur Run (Exécuter), Alex avance d'une case sur la grille.
+          Si j'y glisse le bloc "avancer plus" et que je clique sur Démarrer, Alex avance d'une case sur la grille.
       10:
         image: notes/mc_intro_10.JPG
         text: |-
-          Pour lui faire faire quelque chose après avoir avancé d'une case, il suffit d'ajouter un autre bloc, par exemple "tourner à droite", et de le glisser sous mon bloc "avancer" jusqu'à ce que cette ligne orange apparaisse. Je n'ai plus qu'à le lâcher pour que les deux blocs se connectent. Quand je clique à nouveau sur Run, Alex exécute les commandes répertoriées dans l'espace de travail, de haut en bas.
+          Pour lui faire faire quelque chose après avoir avancé d'une case, il suffit d'ajouter un autre bloc, par exemple "tourner à droite", et de le glisser sous mon bloc "avancer plus" jusqu'à ce que cette ligne orange apparaisse. Je n'ai plus qu'à le lâcher pour que les deux blocs se connectent. Quand je clique à nouveau sur Démarrer, Alex exécute les commandes répertoriées dans l'espace de travail, de haut en bas.
       11:
         image: notes/mc_intro_11.JPG
         text: Si vous avez besoin de supprimer un bloc, glissez-le de la pile vers la boîte à outils.
       12:
         image: notes/mc_intro_12.JPG
-        text: "Pour annuler une modification et revenir au début du niveau, utilisez Start Over (Recommencer) en haut à droite de l'espace de travail. Encore une chose : vous voyez le petit triangle sur les blocs servant à tourner ? Ces triangles indiquent que vous pouvez choisir une autre possibilité. Sur ce, bon code !"
+        text: "Pour annuler une modification et revenir au début du niveau, utilisez Recommencer en haut à droite de l'espace de travail. Encore une chose : vous voyez le petit triangle sur les blocs servant à tourner ? Ces triangles indiquent que vous pouvez choisir une autre possibilité. Sur ce, bon code !"
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
@@ -1643,7 +1643,7 @@ fr:
       3:
         image: notes/mc_repeat_3.JPG
         text: |-
-          Le dernier niveau nécessitait pas mal de blocs "avancer". Ce serait plus simple d'indiquer à l'ordinateur d'avancer 4 ou 5 fois. Heureusement, les ordinateurs sont très forts pour répéter les commandes grâce aux boucles de répétition.
+          Le dernier niveau nécessitait pas mal de blocs "avancer plus". Ce serait plus simple d'indiquer à l'ordinateur d'avancer 4 ou 5 fois. Heureusement, les ordinateurs sont très forts pour répéter les commandes grâce aux boucles de répétition.
       4:
         image: notes/mc_repeat_4.JPG
         text: "Dans Minecraft, ces boucles servent notamment à placer tous les matériaux lors de la création d'un monde (il y en a des milliers). Elles ont aussi d'autres usages plus mineurs, par exemple pour animer les pieds d'Alex quand elle marche. Bref, c'est un puissant outil de programmation."

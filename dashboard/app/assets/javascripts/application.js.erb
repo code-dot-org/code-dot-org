@@ -35,3 +35,21 @@
 //= require utils
 //= require_directory .
 //= require_self
+
+// In IE console is only defined when developer tools is open. Define it as a
+// noop when undefined (otherwise exceptions get thrown)
+if (!window.console) {
+  window.console = {};
+}
+if (!window.console.log) {
+  window.console.log = function () { };
+}
+if (!window.console.warn) {
+  window.console.warn = function () { };
+}
+if (!window.console.error) {
+  window.console.error = function () { };
+}
+if (!window.console.info) {
+  window.console.info = function () { };
+}

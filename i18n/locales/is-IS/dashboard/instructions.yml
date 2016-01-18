@@ -776,6 +776,7 @@ is:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -845,6 +846,11 @@ is:
         square by 100 pixels on the y-axis.
       Eval Strings Images 8_instruction: 'Hér er önnur tegund af stjörnukubb, sem nefnist "radial-star". Með honum geturðu teiknað stjörnur með mismunandi fjölda arma! Notaðu hann til að búa til 7-arma appelsínugula stjörnu með 75 díla innri geisla og 175 díla ytri geisla.'
       Eval Strings Images Free Play_instruction: 'Frjáls æfing: Prófaðu kubbana sem þú færð hér og skapaðu eitthvað áhugavert. Ekki gleyma að deila bestu sköpunarverkunum.'
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: 'Hér er "búa til hring" kubbur sem getur búið til mismunandi stóra hringi. Getur þú notað hann til að búa til lítinn hring í stærð 5 og annan stærri í stærð 10?'
@@ -885,14 +891,14 @@ is:
       K-1 artist 1 level 10_instruction: Teiknaðu brotalínuna með því að nota bæði hoppa og færa kubba
       K-1 artist 1 level 9_instruction: Teiknaðu þetta með þremur strikum
       K-1 Artist Loops 1_instruction: Teiknaðu þetta strik með því að fara í Austur 4 sinnum.
-      K-1 Artist Loops 2_instruction: Getur þú teiknað sama strik með lykkju?
+      K-1 Artist Loops 2_instruction: Teiknaðu nú sama strik með lykkju.
       K-1 Artist Loops 3_instruction: Getur þú sett þessa kubba í lykkju til að teikna 6 strik?
       K-1 Artist Loops 4_instruction: Gæti lykkja hjálpað okkur að klára að teikna kastalann?
       K-1 Artist Loops 5_instruction: Hvað gætir þú endurtekið 4 sinnum til að teikna þessar tröppur?
       K-1 Artist Loops 6_instruction: 'Þessi þarf tvær lykkjur: eina til að fara upp tröppurnar og aðra til að fara niður.'
-      K-1 Artist Loops 7_instruction: Getur þú klárað þetta mynstur með tveimur lykkjum?
+      K-1 Artist Loops 7_instruction: Lykkjur geta hjálpað þér að klára þetta mynstur.
       K-1 Artist Loops 8_instruction: Þessi stigi er með lengri tröppur.
-      K-1 Artist Loops 9_instruction: 'Mat: Notaðu lykkju til að teikna stigann'
+      K-1 Artist Loops 9_instruction: Hver er auðveldasta aðferðin til að teikna þennan stiga?
       K-1 Artist Loops Free Play_instruction: Frjáls æfing. Teiknaðu eitthvað skemmtilegt!
       K-1 Artist1 1_instruction: Teiknaðu fótinn á manninn með einu striki
       K-1 Artist1 10_instruction: Teiknaðu og stökktu til að búa til brotalínuna að fjársjóðnum
@@ -1328,6 +1334,9 @@ is:
       Play Lab Rocket 4_instruction: 'Raunverulegar eldflaugar fara hægt af stað og auka hraðann með tímanum - bætum einfaldri hröðun við okkar flaug! Getur þú skrifað fall, sem lýsir eldflaug, sem er komin 10 metra eftir 1 sekúndu, 40 eftir 2, 90 eftir 3, 160 eftir 4 og svo framvegis?'
       Play Lab Rocket 5_instruction: Miklu betra, en skrifum eitt fall enn með einfaldri hröðun. Í þetta sinn á flaugin að vera komin 15 metra eftir 1 sekúndu, 45 eftir 2, 95 eftir 3 og 165 metra eftir 4 sekúndur.
       Play Lab Rocket Free Play_instruction: 'Frjáls æfing: Gerðu tilraunir með fallið "rocket-height" (hæð-flaugar) til að láta eldflaugina fljúga á mismunandi vegu. Smelltu svo á "Ljúka".'
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan Test Locked Blocks_instruction: 'Hér er fallið "rása". Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.'
@@ -2723,20 +2732,46 @@ is:
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

@@ -1,7 +1,7 @@
 az:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Aşağıdaki sehfleri düzeldin:'
       too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
@@ -40,6 +40,7 @@ az:
   puzzle: Tapmaca
   trophies: kuboklar
   courses: marşrutlar
+  unplugged_activity: Sərbəst fəaliyyət
   of: /
   more: DAHA ÇOX
   less: DAHA AZ

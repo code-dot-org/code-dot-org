@@ -28,8 +28,7 @@ lt:
     code:
       label: 'Pridėkite mokytoja:'
       placeholder: Grupės kodas (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Prašome įrašyti kodą, kuriuo su jumis pasidalino jūsų mokytojas. Tai yra 6 raidžių kodas, pavyzdžiui "ABCDEF".'
     submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia
@@ -40,6 +39,7 @@ lt:
   puzzle: Galvosūkis
   trophies: Laimėjimai
   courses: Kursai
+  unplugged_activity: Veikla be kompiuterių
   of: iš
   more: DAUGIAU
   less: MAŽIAU
@@ -259,8 +259,8 @@ lt:
       remove: Ar tikrai nori pašalinti šį mokytoją?
     students:
       dashboard: Eiti į mokytojo puslapį
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Mokytojas gali būti nerastas.
+    student_teacher_disassociated: 'Jūs pašalinote %{teacher_name} kaip savo mokytoją.'
     panel:
       answer_viewer: Atsakymų apžvalga
       student: Mokinys
@@ -334,7 +334,7 @@ lt:
   share:
     title: Mokytis su Code Studio
     description: Kiekvienas gali išmokti informatikos. Programuodami daryti žaidimus, programėles ir grafikos elementus.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Išbandykite „Programavimo valandą”!
   gender:
     male: Vyras
     female: Moteris
@@ -346,8 +346,8 @@ lt:
     thank_you: 'Mes dėkojame mūsų <a href="https://code.org/about/donors">rėmėjams</a>, <a href="https://code.org/about/partners">partneriams</a>,mūsų <a href="https://code.org/about/team"> plačiai komandai</a>, mūsų video grupei ir mūsų <a href="https://code.org/about/advisors">mokymų patarėjams</a> už jų pagalbą kuriant Code Studio.'
     help_from_html: Mes ypatingai norime padėkoti inžinieriams iš Google, Microsoft, Facebook, Twitter ir daugeliui kitų, kurie padėjo sukurti šias pamokėles.
     help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft, Facebook ir Twitter.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Visos teisės saugomos.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Visos teisės saugomos.<br />Frozen&#8482; &copy; %{current_year} Disney. Visos teisės saugomos.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Visos teisės saugomos.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Visos teisės saugomos.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Visos teisės saugomos.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Visos teisės saugomos. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Visos teisės saugomos. Frozen&#8482; &copy; %{current_year} Disney. Visos teisės saugomos. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Visos teisės saugomos. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Visos teisės saugomos. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Visos teisės saugomos. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: 'Rėmėjas: Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir Hour of Code&reg; yra Code.org priklausantys prekės ženklai.'
     copyright: Autorinės teisės
@@ -361,10 +361,10 @@ lt:
     privacy: Privatumo politika
     secure: Saugaus ryšio versija
     report_abuse: Praneškite apie piktnaudžiavimą
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
-    try_hour_of_code: Try an Hour of Code!
+    built_on_code_studio: Sukurta naudojant „Code Studio”
+    make_my_own_app: Kurti savo programėlę
+    how_it_works: Kaip tai veikia?
+    try_hour_of_code: Išbandykite „Programavimo valandą”!
   reference_area:
     title: Reikia pagalbos?
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus
@@ -421,7 +421,7 @@ lt:
       unused: Nepanaudoti lygiai
   upsell:
     hoc:
-      title: Classic Maze
+      title: Klasikinis labirintas
       body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
     flappy:
       title: Flappy kodas
