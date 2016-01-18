@@ -29,8 +29,20 @@
     = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
     = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
+  .field
+    = f.hidden_field :published
   .actions
-    = f.submit
+    = f.submit 'Save your progress', {:id => 'saveProgress'}
+    = f.submit 'Save and publish your completed work', {:id => 'publishedLevel'}
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: @level.new_record? ? '#new_level' : '.edit_level'}}
+  $(document).ready(function () {
+    $('#saveProgress').click(function() {
+      $('#level_published').val(false);
+    });
+
+    $('#publishLevel').click(function() {
+      $('#level_published').val(true);
+    });
+  });
