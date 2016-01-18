@@ -12,7 +12,7 @@ Please note that we will only accept applicants from regions where we are lookin
 *First Round Application Deadline: February 5, 2016*
 <br>*Final Application Deadline: March 4, 2016*</br>
 
-Any questions can be emailed to partner@code.org.
+Any questions can be emailed to partner@code.org. To view a static version of the application, <a href="https://docs.google.com/document/d/1f4Dzf7Aq7UGk_OkbH_CsGmcZkDlGVNgtW9hHcunfWd8/edit?usp=sharing" target=_blank>click here</a>.
 
 ## Application ##
 

@@ -2,6 +2,8 @@ require 'rmagick'
 
 MAX_DIMENSION = 2880
 
+# This method returns a newly-allocated Magick::Image object.
+# NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def load_manipulated_image(path, mode, width, height, scale = nil)
   image = Magick::Image.read(path).first
 
@@ -23,11 +25,11 @@ def load_manipulated_image(path, mode, width, height, scale = nil)
 
   case mode
     when :fill
-      image.resize_to_fill(width, height)
+      image.resize_to_fill!(width, height)
     when :fit
-      image.resize_to_fit(width, height)
+      image.resize_to_fit!(width, height)
     when :resize
-      image.resize(width, height)
+      image.resize!(width, height)
     else
       nil
   end
@@ -94,7 +96,11 @@ def process_image(path, ext_names, language=nil, site=nil)
     scale = 0.5 if retina_in && !retina_out
   end
 
-  image = load_manipulated_image(path, mode, width, height, scale)
-  image.format = image_format
-  output.merge(content: image.to_blob)
+  begin
+    image = load_manipulated_image(path, mode, width, height, scale)
+    image.format = image_format
+    output.merge(content: image.to_blob)
+  ensure
+    image && image.destroy!
+  end
 end
