@@ -39,10 +39,8 @@ VCR.configure do |c|
   end
 end
 
-CDO.use_dynamo_tables = false
-
 # Truncate database tables to ensure repeatable tests.
-TEST_TABLES=%w(storage_apps user_storage_ids app_tables app_properties)
+TEST_TABLES=%w(storage_apps user_storage_ids)
 TEST_TABLES.each do |table|
   PEGASUS_DB[table.to_sym].truncate
 end
@@ -57,7 +55,7 @@ module SetupTest
     # VCR (record/replay HTTP interactions)
     # Transaction rollback (leave behind no database side-effects)
     # Stub AWS::S3#random
-    VCR.use_cassette(@NAME.gsub('test_','')) do
+    VCR.use_cassette("#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_','')}") do
       PEGASUS_DB.transaction(rollback: :always) do
         AWS::S3.stub(:random,Proc.new{random.bytes(16).unpack('H*')[0]}, &block)
       end
