@@ -86,7 +86,7 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [studio.code.org](https://studio.code.org). With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
 
 **Skills and Qualifications:**
 
