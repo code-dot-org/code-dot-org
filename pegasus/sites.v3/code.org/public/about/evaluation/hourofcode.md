@@ -49,7 +49,7 @@ After the Hour of Code, we asked participating organizers how it went and got so
 
 When we consider the diversity of these students, and the global participation in this campaign, stretching from urban schools in Los Angeles, Chicago, Brooklyn, to refugee camps in Syria and Palestine, it is inspiring to read this feedback.
 
-More survey details are below.
+More in-depth survey results are detailed below.
 
 
 <br/>
@@ -64,6 +64,33 @@ More survey details are below.
 
 [/breakoutquote]
 
+
+
+## Harder to measure - the changing landscape of CS education
+
+In our 2015 annual report, we recently reported on the [changing landscape of CS education](/about/2015). The data clearly shows that Americans widely support our vision that every student in every school should have the opportunity to learn computer science:
+
+* **90%** of parents want their child’s school to teach computer science
+* **75%** of Americans believe computer science is cool in a way it wasn’t 10 years ago
+* **67%** of parents and **56%** of teachers believe students should be *required* to learn computer science. This demand is highest among parents or teachers of low-income students.
+* **50%** of Americans rank CS as one of the two most important subjects of study after reading and writing (70% also chose math), ahead of other sciences, history, arts, or foreign languages.
+<center><font size="1">Sources: surveys [by Gallup (sponsored by Google)](https://www.google.com/edu/resources/computerscience/research/) and [by Horizon media](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html), 2015.</font></center>
+
+While it’s impossible to measure how much of the above is due to the Hour of Code campaign, with one out of every 3 U.S. schools participating and tens of millions of students engaged, this campaign has certainly played a role.
+
+Also, in the 2 years since the first Hour of Code campaign, the largest cities in the U.S. have embraced computer science, and so have many states, and even entire countries have announced national curriculum plans. One cannot measure exactly how much the Hour of Code campaign has impacted these things, but the anecdotes show that the impact is real.  We have heard from countless educators - in cities like Chicago, states like Utah, or countries like Italy - that grassroots participation in the Hour of Code helped build support for top-down efforts to embrace computer science curriculum.  
+
+As one clear example, the 2013 Hour of Code campaign played a pivotal role in Arkansas’ education: [after Asa Hutchinson saw his granddaughter using the Hour of Code tutorials](http://www.arkansasonline.com/news/2015/feb/24/hutchinson-signs-measure-expanding-computer-scienc/), he made computer science education part of his gubernatorial campaign platform, and followed it up with [legislation to require computer science to be taught in every high school](http://www.wired.com/2015/03/arkansas-computer-science/). 
+
+Here's an international example, which we discovered almost by accident:
+
+<br/>
+<img width="100%" src="/images/2015AR/africa.png" />
+<br/>
+
+We can’t know what the K-12 CS landscape would look like without a grassroots campaign mobilizing hundreds of partners, hundreds of thousands of educators, and tens of millions of students. But what’s clear is that the education landscape has shifted significantly, globally, and we are thankful for *everybody* who has played a supporting role.
+
+<hr/>
 
 ## Survey of 198,000 participating educators
 
@@ -156,26 +183,6 @@ This is a particularly relevant question at schools that don’t already have a 
 * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry.”
 * “I especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
 * “I LOVED seeing how excited the kids were . One amazing thing was that the teachers noticed that some of the students who didn't do as well academically were excelling at thinking like a developer and helping others around them - giving them a place to feel confident."
-
-
-
-## Beyond surveys - the changing landscape of CS education
-
-In our 2015 annual report, we recently reported on the [changing landscape of CS education](/about/2015). The data clearly shows that Americans widely support our vision that every student in every school should have the opportunity to learn computer science:
-
-* **90%** of parents want their child’s school to teach computer science
-* **75%** of Americans believe computer science is cool in a way it wasn’t 10 years ago
-* **67%** of parents and **56%** of teachers believe students should be *required* to learn computer science. This demand is highest among parents or teachers of low-income students.
-* **50%** of Americans rank CS as one of the two most important subjects of study after reading and writing (70% also chose math), ahead of other sciences, history, arts, or foreign languages.
-<center><font size="1">Sources: surveys [by Gallup (sponsored by Google)](https://www.google.com/edu/resources/computerscience/research/) and [by Horizon media](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html), 2015.</font></center>
-
-While it’s impossible to measure how much of the above is due to the Hour of Code campaign, with one out of every 3 U.S. schools participating and tens of millions of students engaged, this campaign has certainly played a role.
-
-Also, in the 2 years since the first Hour of Code campaign, the largest cities in the U.S. have embraced computer science, and so have many states, and even entire countries have announced national curriculum plans. One cannot measure exactly how much the Hour of Code campaign has impacted these things, but the anecdotes show that the impact is real.  We have heard from countless educators - in cities like Chicago, states like Utah, or countries like Italy - that grassroots participation in the Hour of Code helped build support for top-down efforts to embrace computer science curriculum.  As one clear example, the 2013 Hour of Code campaign played a pivotal role in Arkansas’ education: [after Asa Hutchinson saw his granddaughter using the Hour of Code tutorials](http://www.arkansasonline.com/news/2015/feb/24/hutchinson-signs-measure-expanding-computer-scienc/), he made computer science education part of his gubernatorial campaign platform, and followed it up with [legislation to require computer science to be taught in every high school](http://www.wired.com/2015/03/arkansas-computer-science/). 
-
-<img width="100%" src="/images/2015AR/africa.png" />
-
-We can’t know what the K-12 CS landscape would look like without a grassroots campaign mobilizing hundreds of partners, hundreds of thousands of educators, and tens of millions of students. But what’s clear is that the education landscape has shifted significantly, globally, and we are thankful for *everybody* who has played a supporting role.
 
 
 
