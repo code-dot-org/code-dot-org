@@ -58,6 +58,8 @@ Columbus, OH 43215](https://www.google.com/maps/place/Columbus+State+Child+Devel
 
 Review the [campus map](http://www.cscc.edu/about/columbus/) (the Conference Center is listed as WD on the corner of Cleveland Ave and Grove Street) and [building map](http://www.cscc.edu/community/conference-center/floor-plans-pricing.shtml). 
 
+Please print these [Parking Directions](https://code.org/files/ohio-lot27-s.pdf) and [Parking Pass](https://code.org/files/1-23-ohio-parking.pdf) to bring with you on the day of the event.
+
 **What to bring to Phase 3 quarterly sessions:**
 
 Laptop and Charger
