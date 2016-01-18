@@ -28,8 +28,8 @@
     code:
       label: 'Додати учителя:'
       placeholder: Код групи (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Будь ласка, введіть код, виданий вам вашим викладачем. Це 6 літерний
+        код, як "ABCDEF".
     submit: Додати викладача
   add_hint_form:
     placeholder: Будь ласка, введіть сюди підказку
@@ -40,6 +40,7 @@
   puzzle: Завдання
   trophies: трофеї
   courses: курси
+  unplugged_activity: Безмашинна вправа
   of: з
   more: БІЛЬШЕ
   less: МЕНШЕ
@@ -385,7 +386,7 @@
     title: Навчання у Студії коду
     description: Кожен може вивчати інформатику. Створюй ігри, програмки та твори
       з кодом.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Спробуйт годину коду!
   gender:
     male: Чоловік
     female: Жінка
@@ -402,16 +403,22 @@
       Twitter, та багатьох інших, які допомогли створити ці матеріали.
     help_from_html_old: Інженери Google, Microsoft, Facebook та Twitter допомогли
       створити цей підручник.
-    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Всі права
-      захищені.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm.
-      Всі права захищені.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
-      Всі права захищені.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century
-      Fox. Всі права захищені.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Всі права захищені
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Всі права застережено.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Всі права застережено
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Всі права захищені.<br
+      />Зоряні Війни&#8482; &copy; %{current_year} Disney и Lucasfilm. Всі права захищені.<br
+      />Крижане серце&#8482; &copy; %{current_year} Disney. Всі права захищені.<br
+      />Льодовиковий період&#8482; &copy; %{current_year} 20th Century Fox. Всі права
+      захищені.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Всі права захищені.<br />Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Всі права захищені.<br />Дивовижний світ Гамбола є торгівельною
+      маркою і&copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Всі права
+      захищені. Зоряні Війни&#8482; &copy; %{current_year} Disney and Lucasfilm. Всі
+      права захищені. Крижане серце&#8482; &copy; %{current_year} Disney. Всі права
+      захищені. Льодовиковий період&#8482; &copy; %{current_year} 20th Century Fox.
+      Всі права захищені. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Всі права захищені. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. Всі права захищені. Дивовижний світ Гамбола є торгівельною маркою
+      і&copy; 2015 Cartoon Network.
     powered_by_aws: На потужностях Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE та Hour
       of Code&reg; з торговими марками Code.org.'
@@ -429,7 +436,7 @@
     built_on_code_studio: Створено у Студії коду
     make_my_own_app: Створити власну програму
     how_it_works: Як це працює
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Спробуйт годину коду!
   reference_area:
     title: Потрібна допомога?
     subtitle: Переглянути ці відео та підказки

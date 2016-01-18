@@ -191,6 +191,8 @@ ko-KR:
   homepage_banner_text_link: 더 알아보기
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: 더 알아보기
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: 더 알아보기
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
   homepage_slot_text_link_hoc: Hour of Code 해보기
@@ -199,6 +201,7 @@ ko-KR:
   homepage_solot_text_link_volunteer: Hour of Code 자원봉사자
   homepage_slot_text_title_students: 학생들
   homepage_slot_text_blurb_students: 우리의 모든 튜토리얼을 탐구해 보세요.
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: 코드 스튜디오를 사용해 보세요.
   homepage_slot_text_link_local: 현지 수업 찾기
   homepage_slot_text_link_othercourses: 다른 온라인 코스

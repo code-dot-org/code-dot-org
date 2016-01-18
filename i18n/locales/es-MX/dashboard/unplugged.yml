@@ -45,7 +45,7 @@ es-MX:
         video: Unplug7
       Unplug8:
         title: Liberación abstracta
-        desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que trata de juegos de palabras, para que la clase aprenda sobre la efectividad que posee la abstracción.
+        desc: Vamos a combinar la rutina diaria de los estudiantes y un juego que trata de juegios de palabras, para que la clase apprenda de la efectividad que posee la abstraccion.
         pdfs:
           - unplug8-es-ES
         video: Unplug8
@@ -57,7 +57,7 @@ es-MX:
         video: Unplug9
       Unplug10:
         title: Internet
-        desc: En esta clase, los alumnos seguirán el flujo de Internet, mientras aprenden sobre direcciones web, IPs y DNS.
+        desc: En esta lección, los estudiantes se pretenden fluir a través de Internet, al mismo tiempo conocer las direcciones web, IPs y DNS.
         pdfs:
           - unplug10-es-ES
         video: Unplug10
@@ -133,7 +133,7 @@ es-MX:
         video: C3_composición_musical_con_parámetros
       DiceRace:
         title: 'Algoritmos de la vida real: Carrera de Dados'
-        desc: Esta clase muestra modos en los que usamos algoritmos en nuestra vida diaria. Como parte de eso, los estudiantes identificarán y escribirán el algoritmo de un juego de carrera de dados.
+        desc: Esta lección se llama formas que en nuestra vida cotidiana utilizamos algoritmos. Como parte de eso, los estudiantes identificar y escribir el algoritmo para un juego de carrera de dados.
         video: C3_carrera_dados
       Internet:
         title: Internet

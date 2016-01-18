@@ -145,11 +145,11 @@ class GatekeeperBase
     gatekeeper
   end
 
-  # Returns a set of all of the distinct feature names.
+  # Returns a set of all of the distinct feature names, for features that contain at least one rule.
   def feature_names
     Set.new.tap do |result|
       @datastore_cache.all.each do |feature, rules|
-        result << feature
+        result << feature unless rules.blank?
       end
     end
   end
