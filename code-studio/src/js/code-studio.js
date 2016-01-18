@@ -28,15 +28,6 @@ require('./components/stage_progress.jsx');
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
-// In IE console is only defined when developer tools is open. Define it as a
-// noop when undefined (otherwise exceptions get thrown)
-if (!window.console) {
-  window.console = {};
-}
-if (!window.console.log) {
-  window.console.log = function () { };
-}
-
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
 var windowOnError = window.onerror;
