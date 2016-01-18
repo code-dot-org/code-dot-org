@@ -230,6 +230,8 @@ uk-UA:
   homepage_banner_text_link: Дізнайтеся більше
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Дізнайтеся більше
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Дізнайтеся більше
   homepage_slot_text_title_hoc: Година коду
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
   homepage_slot_text_link_hoc: Спробуйте годину коду
@@ -238,6 +240,7 @@ uk-UA:
   homepage_solot_text_link_volunteer: Волонтер для Години коду
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
   homepage_slot_text_link_local: Знайти місцевий клас
   homepage_slot_text_link_othercourses: Інші онлайн курси
@@ -564,7 +567,7 @@ uk-UA:
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
   dashboard_announce_view_all: Переглянути всі
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Дізнайтеся більше
   dashboard_announce_hoc: "<b>23 листопада 2015</b> - Хочете допомогти інформатичній освіті протягом Години коду? Більше 7000 волонтерів вже збираються надихати учнів, відвідавши клас чи взявши участь у відео-чаті. Перегляньте карту, щоб зв'язатися з місцевими волонтерами."
   dashboard_announce_playlab: '<b>4 грудня 2015</b> - Година коду вже тут! Спробуйте наші 50 підручників для будь-якого віку та пристрою. Новинка цього тижня: закодуйте власні історії та ігри у новій Ігровій лабораторії, Льодовиковому періоді та Гамболі.'

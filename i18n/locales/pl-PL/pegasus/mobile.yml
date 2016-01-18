@@ -219,6 +219,8 @@ pl-PL:
   homepage_banner_text_link: Ucz się więcej
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Naucz się więcej
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Ucz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
@@ -227,6 +229,7 @@ pl-PL:
   homepage_solot_text_link_volunteer: Zostań wolontariuszem w Godzinie Kodowania
   homepage_slot_text_title_students: Uczniowie
   homepage_slot_text_blurb_students: Poznaj wszystkie nasze samouczki
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Wypróbuj Studio Kodowania
   homepage_slot_text_link_local: Znajdź klasę w okolicy
   homepage_slot_text_link_othercourses: Pozostałe kursy online

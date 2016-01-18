@@ -1,4 +1,4 @@
-"fa-AF":
+"fa":
   data:
     match:
       2-3 Big Event Match 1:
@@ -481,10 +481,10 @@
           الگوریتم برای کدام یک از این موارد سختتر است؟
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: یوجین یک شهر_____ است.
-        0: ؟ اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج
-          کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟
-        1: ': اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را
-          استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟'
+        0: '? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?'
+        1: ': Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?'
         Multiple Choice: انتخاب چندگانه
         Seattle _____ a _____ _____.: سیاتل یک _____ _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: سیاتل
@@ -616,10 +616,12 @@
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: ؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید
-          که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟
-        1: ؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید
-          که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?'
+        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know
+          how many. Which blocks correctly check and collect all of the nectar from
+          a purple flower?'
         Bee Conditionals Multiple Choice: چندگزینه ای شرطی های زنبور عسل
         Choose the best blocks.: بهترین بلوک ها را انتخاب کنید
       4-5 bee debug multi 1:

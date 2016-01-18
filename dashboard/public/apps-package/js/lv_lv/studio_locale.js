@@ -156,7 +156,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).studio_locale = {
 "actor":function(d){return "aktieris"},
 "addCharacter":function(d){return "add a"},
-"addCharacterTooltip":function(d){return "Add a character to the scene."},
+"addCharacterTooltip":function(d){return "Pievienot tēlu scēnai."},
 "addPoints10":function(d){return "add 10 points"},
 "addPoints50":function(d){return "add 50 points"},
 "addPoints100":function(d){return "add 100 points"},
@@ -213,7 +213,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "continue":function(d){return "Turpināt"},
 "decrementPlayerScore":function(d){return "Noņemt punktu"},
 "defaultSayText":function(d){return "Raksti šeit"},
-"dropletBlock_addCharacter_description":function(d){return "Add a character to the scene."},
+"dropletBlock_addCharacter_description":function(d){return "Pievienot tēlu scēnai."},
 "dropletBlock_addCharacter_param0":function(d){return "type"},
 "dropletBlock_addCharacter_param0_description":function(d){return "The type of the character to be added ('random', 'man', 'pilot', 'pig', 'bird', 'mouse', 'roo', or 'spider')."},
 "dropletBlock_addPoints_description":function(d){return "Pievienot vai noņemt punktu rezultātam."},

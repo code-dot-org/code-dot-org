@@ -1368,7 +1368,8 @@ nl:
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1512,3 +1513,5 @@ nl:
           Welcome!: Welkom!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Terugblik
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

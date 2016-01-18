@@ -215,7 +215,7 @@
           description_audience: Edades de 10 a 18 años
           Super Challenge - Variables: Super desafio - Variables
           Super Challenge - For Loops: Super reto - para los bucles
-          Super Challenge - Functions and Parameters: Super reto - funciones y parámetros
+          Super Challenge - Functions and Parameters: Super reto- Funciones y Parametros
           Extreme Challenge - Comprehensive: Desafío extremo - integral
         Course4pre:
           title: Prerequisito del Curso 4
@@ -1541,7 +1541,8 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1597,10 +1598,10 @@
             might not be around long, so enjoy them while you can!
         iceage:
           title: Edad de hielo juego de laboratorio
-          description_short: ¡Crea una historia o crea un juego con el laboratorio
-            de juego Edad de Hielo!
-          description: ¡Crea una historia o crea un juego con el laboratorio de juego
-            Edad de Hielo!
+          description_short: Crear una historia o hacer un juego con el laboratorio
+            de juego edad de hielo!
+          description: Crear una historia o hacer un juego con el laboratorio de juego
+            edad de hielo!
           Ice Age Play Lab: Edad de hielo juego de laboratorio
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1656,12 +1657,12 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratorio de juego de Gumball
-          description_short: ¡Crear una historia o haz un juego con el laboratorio
-            de juego de Gumball!
-          description: ¡Crear una historia o haz un juego con el laboratorio de juego
-            de Gumball!
-          Gumball Play Lab: Laboratorio de juego de Gumball
+          title: Laboratorio de Gumball juego
+          description_short: Crear una historia o haz un juego con el laboratorio
+            de Gumball juego!
+          description: Crear una historia o haz un juego con el laboratorio de Gumball
+            juego!
+          Gumball Play Lab: Laboratorio de Gumball juego
         starwars:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
           description_short: Aprende a programar robots y crea tu propio juego de
@@ -1701,3 +1702,6 @@
           Welcome!: ¡ Bienvenido!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Cierre
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
+            Refresh your connection to Complex Adaptive Systems

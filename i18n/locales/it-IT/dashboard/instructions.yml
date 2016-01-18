@@ -1169,13 +1169,13 @@ it:
       Course 4 Binary 6_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà questa immagine?
       Course 4 Binary 7_instruction: Quale stringa binaria, ripetuta 10 volte, disegnerà questa immagine?
       Course 4 Binary 8_instruction: "Puoi completare la maggior parte di questa immagine impostando un ciclo con un numero binario a 5 bit - poi avrai bisogno di un altro numero a 4 bit per ottenere l'angolo in basso a destra."
-      Course 4 EC 1a_instruction: Nessuna regola. Nessun indizio. Solo la sfida!
-      Course 4 EC 1b_instruction: Nessuna regola. Nessun indizio. Solo la sfida!
-      Course 4 EC 2a_instruction: '* * Sfida estrema.* * Nessuna regola. Nessun indizio. Solo la sfida!'
-      Course 4 EC 2b_instruction: '* * Sfida estrema.* * Nessuna regola. Nessun indizio. Solo la sfida!'
-      Course 4 EC 2c_instruction: '* * Sfida estrema.* * Nessuna regola. Nessun indizio. Solo la sfida!'
+      Course 4 EC 1a_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 1b_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2a_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2b_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
+      Course 4 EC 2c_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 EC 3_instruction: "Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come questa. NB: Il codice diventa più semplice se si incorporano i parametri. "
-      Course 4 EC 3a_instruction: Sfida estrema. Nessuna regola. Nessun indizio. Solo la sfida!
+      Course 4 EC 3a_instruction: Nessuna istruzione. Nessun suggerimento. Solo la sfida!
       Course 4 Maze 1_instruction: "Fai arrivare l'uccellino arrabbiato (Angry Bird) fino al maialino!"
       Course 4 Maze 2_instruction: Evita la dinamite (TNT)!
       Course 4 Maze 3_instruction: "Scrivi il codice per far arrivare l'uccellino arrabbiato (Angry Bird) fino al maialino!"
@@ -1259,17 +1259,17 @@ it:
         4. Prima di disegnare la terza fila di esagoni, devi girare a destra di 60 gradi e saltare avanti di 40 pixel. Poi devi girare indietro l'artista e saltare indietro di 440 pixel (120 pixel in più della seconda).<br><br>
         <a href="https://studio.code.org/c/159884109">Clicca qui</a> e poi su "Come funziona" per vedere la soluzione.
       Course 4 SCF 1a_instruction: |
-        Riesci a capire come produrre tutto questo miele con il minor numero possibile di blocchi?<br><br>
-        Ecco alcuni suggerimenti:<br><br>
-        1. Osserva che le dosi di miele da produrre sono sempre le stesse: puoi usare una funzione.
-        2. Osserva questa regolarità del percorso dell'ape per avvicinarsi ai favi: 2 passi verso sinistra e 2 verso l'alto, poi 3 verso sinistra e 3 verso l'alto.<br><br>
-        3. Puoi usare un "ciclo con contatore" per far fare all'ape il percorso opportuno.<br><br>
-      Course 4 SCF 1b_instruction: |
         Riesci a capire come raccogliere tutto questo nettare con il minor numero possibile di blocchi?<br><br>
         Ecco alcuni suggerimenti:<br><br>
-        1. Riprendi la funzione definita nella <a href="https://studio.code.org/s/course4/stage/16/puzzle/6">lezione 16</a> per raccogliere un quantità specificata di nettare in una direzione specificata.<br><br>
+        1. Riprendi la funzione definita nella <a href="https://studio. code. org/s/course4/stage/16/puzzle/6">lezione 16</a> per raccogliere un quantità specificata di nettare in una direzione specificata.<br><br>
         2. Osserva che il percorso base dell'ape è uno zig-zag che scende in basso a destra.<br><br>
         3. Rifletti su come usare un "ciclo con contatore" per chiamare la funzione con il valore corretto del parametro.
+      Course 4 SCF 1b_instruction: |
+        Riesci a capire come produrre tutto questo miele con il minor numero possibile di blocchi?<br><br>
+        Ecco alcuni suggerimenti:<br><br>
+        1. Osserva che le dosi di miele da produrre sono sempre le stesse: puoi usare una funzione.<br><br>
+        2. Osserva questa regolarità del percorso dell'ape per avvicinarsi ai favi: 2 passi verso sinistra e 2 verso l'alto, poi 3 verso sinistra e 3 verso l'alto.<br><br>
+        3. Puoi usare un "ciclo con contatore" per far fare all'ape il percorso opportuno.
       Course 4 SCF 2_instruction: |
         Usa quello che hai imparato nell'esercizio precedente per disegnare un'immagine come quella mostrata in questo esercizio.<br><br>Nota: Il codice diventa più semplice se usi le funzioni con parametri.<br><br>
         Ecco alcuni suggerimenti:<br><br>
@@ -1298,12 +1298,12 @@ it:
       Course 4 SCFL 6_instruction: Riesci a ricreare questo disegno usando solo un ciclo?
       Course 4 SCFL 7_instruction: "L'artista vuole disegnare qualche onda! Riesci ad aiutarlo ricreando questo disegno?"
       Course 4 SCFP 1_instruction: "Crea una funzione con parametri che permetta all'artista di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con numeri positivi e negativi)."
-      Course 4 SCV 1_instruction: Clicca qui per visualizzare nuovamente le istruzioni.
-      Course 4 SCV 2_instruction: Clicca qui per visualizzare nuovamente le istruzioni.
+      Course 4 SCV 1_instruction: Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
+      Course 4 SCV 2_instruction: Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
       Course 4 SCV 3_instruction: 'Ecco un gioco di scontri!  Muovendo il cane, tocca il gatto per ottenere 2 punti e il pinguino per ottenere 3 punti.  Arriva a 10 punti per vincere!<br><br>Ma fai attenzione, quando il gatto e il pinguino si toccano, perdi 1 punto.<br><br>Aggiungi i blocchi necessari per far funzionare il gioco nel modo in cui è stato spiegato.  Come puoi muovere il cane in tutte le direzioni utilizzando i tasti freccia?  Come puoi aggiungere punti quando il cane tocca il gatto o il pinguino?  Come puoi togliere un punto quando il gatto ed il pinguino si toccano?'
       Course 4 SCV 4_instruction: Risolvi questo esercizio usando il minor numero possibile di blocchi.
       Course 4 SCV 5_instruction: Risolvi questo esercizio usando il minor numero possibile di blocchi.
-      Course 4 SCV 6_instruction: Clicca qui per visualizzare nuovamente le istruzioni.
+      Course 4 SCV 6_instruction: Ora hai imparato tutto quello che devi sapere per realizzare un disegno come questo! Questo esercizio è fatto apposta per essere difficile da risolvere! Riesci a lavorarci su fino a capire come si fa?
       Course 4 SCVP 1_instruction: "Crea una funzione con parametri che permetta all'artista di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel (con numeri positivi e negativi)."
       Course 4 Variables Assessment_instruction: È possibile creare questa immagine utilizzando una variabile per i lati? Ogni latio dovrebbe essere lungo 50 pixel.
       Course1BeePuzzle12_instruction: Prendi tre dosi di nettare e poi fai due dosi di miele
@@ -1325,6 +1325,7 @@ it:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1556,6 +1557,11 @@ it:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: "Ora disegniamo 20 cerchi sovrapposti, girando di 18 gradi tra un cerchio e l'altro. Di quanto devi saltare in avanti?"
       frozen circle function with parameter_instruction: 'In questo esercizio il blocco "disegna un cerchio" può creare cerchi di diverse dimensioni. Usalo per disegnare un cerchio piccolo di dimensione 5 e un cerchio più grande di dimensione 10.'
@@ -1607,7 +1613,7 @@ it:
         Per completare questo disegno hai bisogno di due blocchi "ripeti", o "cicli": uno per salire le scale e l'altro per scenderle.
       K-1 Artist Loops 7_instruction: Puoi completare questa figura usando due cicli?
       K-1 Artist Loops 8_instruction: La scala di questo esercizio ha i gradini più larghi.
-      K-1 Artist Loops 9_instruction: Usa un ciclo per disegnare gli scalini.
+      K-1 Artist Loops 9_instruction: Qual è il modo migliore per disegnare questi scalini?
       K-1 Artist Loops Free Play_instruction: 'Tempo di giocare: disegna qualcosa di divertente!'
       K-1 Artist1 1_instruction: Disegna il piede della persona con una linea.
       K-1 Artist1 10_instruction: Disegna e Salta per costruire la linea tratteggiata fino al tesoro.
@@ -1883,7 +1889,7 @@ it:
       NetSim_Variant3_instruction: |
         NetSim: Variant 3: Connects groups of 2-6 students
         with a router, and explores issues in routing and DNS
-      New Artist Project_instruction: Disegnare qualcosa di geniale! Il vostro codice viene salvato come un progetto su cui è possibile tornare in qualsiasi momento.
+      New Artist Project_instruction: Disegnate qualunque cosa vi piaccia! Il vostro codice viene salvato come progetto su cui è possibile tornare a lavorare in qualunque momento.
       NEW Course 4 Artist Functions 1_instruction: Riesci a disegnare un quadrato con i lati di 100 pixel, usando un ciclo?
       NEW Course 4 Artist Functions 10.1_instruction: |
         Utilizzate le funzioni i puzzle precedente 
@@ -2216,6 +2222,9 @@ it:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Adesso l'ape vuole solo del nettare. Ricordati che non tutti gli oggetti nascosti sono fiori, quindi controlla sotto ogni nuvoletta in modo da raccogliere il nettare solo quando ci sono fiori."
       Ryan - Bee Conditionals_instruction: |
         L'ape ora desidera solo il nettare.
@@ -3008,8 +3017,8 @@ it:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -3731,20 +3740,46 @@ it:
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

@@ -228,6 +228,8 @@ it-IT:
   homepage_banner_text_link: Ulteriori informazioni
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Ulteriori informazioni
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: "L'Ora del Codice"
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: "Prova l'Ora del Codice"
@@ -236,6 +238,7 @@ it-IT:
   homepage_solot_text_link_volunteer: "Volontario per l'Ora del Codice"
   homepage_slot_text_title_students: Studenti
   homepage_slot_text_blurb_students: Guarda tutti i nostri corsi
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prova Code Studio
   homepage_slot_text_link_local: Trova una classe nella tua zona
   homepage_slot_text_link_othercourses: Altri corsi online

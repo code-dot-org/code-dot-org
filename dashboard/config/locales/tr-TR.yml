@@ -15,7 +15,7 @@
         username: kullanıcı adı
         password: şifre
         password_confirmation: Şifre doğrulama
-        current_password: Şu anki parola
+        current_password: Geçerli Şifre
         locale: Dil
         age: Yaş
         gender: Cinsiyet
@@ -29,8 +29,8 @@
     code:
       label: 'Öğretmen ekleyin:'
       placeholder: Bölüm Kodu (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Lütfen öğretmeninizin sizinle paylaştığı kodu girin. Bu kod, "ABCDEF"
+        örneğindeki gibi 6 harf içerir.
     submit: Öğretmeni ekle
   add_hint_form:
     placeholder: Lütfen ipucunu buraya girin
@@ -41,6 +41,7 @@
   puzzle: Bulmaca
   trophies: kupalar
   courses: kurslar
+  unplugged_activity: Bağlantısız Etkinlik
   of: /
   more: DAHA FAZLA
   less: DAHA AZ
@@ -287,7 +288,7 @@
     for_teachers_only: Sadece Öğretmenler İçin
     title:
       one: 'Öğretmenin :'
-      other: 'Öğretmeniniz:'
+      other: 'Öğretmenleriniz:'
     remove: (öğretmeni kaldır)
     confirm:
       remove: Bu öğretmeni kaldırmak istediğinizden emin misiniz?
@@ -397,9 +398,14 @@
       yardımıyla oluşturuldu.
     help_from_html_old: Google, Microsoft, Facebook ve Twitter'daki mühendisler bu
       eğitim içeriğini oluşturmaya yardımcı oldu.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Tüm hakları saklıdır.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Tüm hakları saklıdır.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Bütün hakları
+      saklıdır.<br />Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm.
+      Bütün hakları saklıdır..<br />Frozen&#8482; &copy; %{current_year} Disney. Bütün
+      hakları saklıdır.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Bütün hakları saklıdır.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Bütün hakları saklıdır.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Bütün hakları saklıdır.<br />The
+      Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
     art_from_html_old: |
       Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm Hakları Saklıdır
       Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Tüm Hakları Saklıdır

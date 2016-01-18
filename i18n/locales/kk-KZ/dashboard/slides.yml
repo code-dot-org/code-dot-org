@@ -786,10 +786,10 @@ kk:
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: Программалаудын ең ағзам жері ол сіз компьютерді, жағдайды калай орындауға, деген сияқты үйретсеңіз, сіз сол функцияны қайта шақыра аласыз.Сіз оған есім бересіз, және тағаййындай аласыз. Бұл шынымен тілдін кеңейтілгені сияқты.
+        text: 'Бұл бағдарламалаудың ең кереметі,  компьютердегі бағдарламалауға бір рет жазған функцияны, қайта шақыра беруге болады.  Сіз функцияға есім қойып, болашақта сол есім бойынша шақыра аласыз.'
       2:
         image: notes/C3_artist_functions_2.png
-        text: 'Программады біз құрдық,білдік, квадратты төрт рет орналастырып айналдырып салуға болатындығын.Біз бұл функцияны алып есім бере аламыз, және кез келген  біз қалаған уақытта,квадрат салу деген команданы жазып аталған функцияны шақырып  аламыз.Бұл біз үшін жасалынған.Біз программалау тіл концепциясын қостық.'
+        text: 'Құрылған бағдарламада, біз шаршыны қозғалыс және төрт бұрылыс арқылы салуды үйрендік. Енді шаршыны салғымыз келгенде, біз функцияға "шаршыны сал" деген ат беріп, осы функцияны шақыра аламыз. Бұл біз үшін жасалған. Функция шақырылғанда, сол кодты шақырады. Біз өзіміздің бағдарламалау тілімізге осы концепцияны енгіздік.'
     C3_artist_intro:
       1:
         image: notes/C3_artist_intro_1.png
@@ -812,7 +812,7 @@ kk:
         text: 'Сіз циклдін ішіне цикл қойған кезде біз оны күрделі цикл дейміз. Мысалы: Бұл жерде біз үшбұрыш бүйірлері 100 пиксел деген коды берілген, блоктар жиымын бір қайталымын 3 рет орындау, біріншісін ұшбұрыштын бүйірлері үшін.'
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: 'Бірақ біз алты ұшбұрыш аңғарғымыз келеді.Ол үшін  біз циклді қолданып және оны басқасына еңгізіп блоктаймыз.Өте жақсы!!!'
+        text: 'Бірақ біз алты ұшбұрышқа айналдырғымыз келеді. Ол үшін  біз циклді қолданып және оны басқа айналымға еңгізіп блок қоямыз. Өте жақсы!!!'
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
@@ -836,10 +836,10 @@ kk:
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: Информатиадағы маңызды мәселердің бірі болып қалай жаңа камандаларды анықтауға, өзіңіздің жеке сөзіңізді бағдарламалау тіліне қалай қосуға болатындығында. Көптеген бағдарламалау тілдерінде тек қана жүзге жуық сөздер мен командалар саны бар. Осы құрылыс блоктары өзіңіздің жеке сөздеріңіз бен командаларыңызды анықтау жолдары өнері мен дағдысын кқрсетеді.
+        text: Информатикадағы маңызды мәселелердің бірі болып, қалай жаңа камандаларды анықтау, өзіңіздің жеке сөзіңізді бағдарламалау тіліне қалай қосуға болатындығында. Көптеген бағдарламалау тілдерінде тек қана жүзге жуық сөздер мен командалар саны бар. Осы құрылыс блоктары өзіңіздің жеке сөздеріңізбен командаларыңызды анықтау жолдары, өнері мен дағдысын көрсетеді.
       2:
         image: notes/C3_bee_functions_2.png
-        text: Біз мұны әрдайым спортта пайдаланамыз. Мысалы баскетболда сіз бастапқыда допты қалай ертіп жүру қажеттігін, қалай жоспарлау, қалай секірту қажеттігін үйренесіз. Сіз осы расында да негізгі қадамдарды үйреніп болғаннан соң сіз осы блоктарды біріктіріру арқылы допты алу, алдау және беру жолдары секілді жаңа қадамдарды үйренесіз. Сіз ол жерден қиынырақ ойындарды жасауға келуіңіз мүмкін. Сіз не ойнау қажеттігін шешіп, оған бергеннен бастап командалардың барлық мүшелері оны қалай жасау қажеттігін біліп отырады.
+        text: 'Біз мұны әрдайым спортта пайдаланамыз. Мысалы баскетболда, сіз бастапқыда допты қалай өзіңізбен алып жүру қажеттігін, қалай жоспарлау, қалай секірту қажеттігін үйренесіз. Сіз  расында да негізгі қадамдарды үйреніп болғаннан соң, осы блоктарды біріктіру арқылы допты алу, алдау және беру жолдары секілді жаңа қадамдарды үйренесіз. Сіз бұдан басқа қиынырақ ойындарды жасауыңыз мүмкін. Сіз не ойнау қажеттігін шешіп, оған  командалардың бергеннен бастап барлық мүшелері оны қалай жасау қажеттігін біліп отырады.'
       3:
         image: notes/C3_bee_functions_3.png
         text: Дәл осы жолмен сіз компьютерге осы командалар тізбегін қолдана отырып осы іс-әрекеттер тізбегі қалай орындау қажеттігін көрсеткеннен соң сіз осы іс әрекеттер кейінірек қайталауға оңай болуы үшін өзіңіздің жеке атыңызды бере аласыз, бұл функция деп аталады. Енді біз бал арасына көмектесу үшін функцияларды қолданбақпыз.
@@ -849,79 +849,79 @@ kk:
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: 'Енді біз ара мен еңгізілген циклді қолданғалы жатырмыз. Біз бастапқы кодтарды еңгізгенбіз, ол араны алға қозғалту үшін және нектарды үш рет алу үшін және оңға бұру үшін қажет. Егер кодтын барлық бөлігі және ара ұяшығы  бір қайталағыш блоктын ішінде деп алып, оны үш рет қайтала.Дайын!'
+        text: 'Енді біз ара ойыны  еңгізілген циклді қолданғалы жатырмыз. Біз бастапқы кодтарды еңгізгенбіз, ол араны алға қозғалту үшін және нектарды үш рет алу үшін және оңға бұру үшін қажет. Кодтын барлық бөлігі және ара ұяшығы  басқа қайталағыш блоктын ішінде деп ұйғарсақ, онда үш рет қайтала деген команданы орнатамыз. Дайын!'
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: Сіз өзіңіздің жеке ойын құрғай жатырсыз, және сіз өз достарыңызбен бөлісе аласыз! Қалай қызық!
+        text: Сіз өзіңіздің жеке ойыныңызды құрғалы жатырсыз және достарыңызбен бөлісе аласыз! Қалай қызық!
       2:
         image: notes/C3_bounce_2.png
-        text: 'Ең алдымен, біздің пернетақтадағы бағытша батырмаларын  басқару элементтеріне байланыстыруымыз қажет.'
+        text: 'Ең алдымен, біздің пернетақтадағы бағытша батырмаларын  басқару ескегімен байланыстыруымыз қажет.'
       3:
         image: notes/C3_bounce_3.png
-        text: Біз бұны былай жасай аламыз, солға қарай бағытталған батырманы солға қарай жылжумен блогымен байланыстыру, және оң жақты оң блогына байланыстыру арқылы.Оны жүргізіңіз және сіз өзіңіздің программалау ойыныңызды аз уақытта жасай аласыз.
+        text: 'Біз бұл команданы солға қарай бағытталған батырманы солға қарай жылжу блогымен байланыстыру, және оң жаққа бағытталған батырманы оңға қарай жылжу блогына байланыстыру арқылы жасай аламыз. Оны жүргізіңіз, сіз өз  ойыныңыздың бағдарламасын аз уақытта жасай аласыз.'
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: Бұл есетегіштік ойлау сабағы. Кейде жаңа ойынды үйрену қиын болуы мүмкін, солай емес пе? Бастапқыда ол шатыстырарлық болып көрінуі мүмкін, ал кей кездері сізді үйрететін нұсқаулықтар болмағандықтан сізге өздігіңізден үйрену қажеттіліг туады.
+        text: Бұл есептегіштік ойлау сабағы. Кейде жаңа ойынды үйрену қиын болуы мүмкін, солай емес пе? Бастапқыда ол шатыстырарлық болып көрінуі мүмкін, ал кей кездері сізді үйрететін нұсқаулықтар болмағандықтан сізге өздігіңізден үйрену қажеттілігі туады.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: Сіз кейбір ойлау әдістерін қолдана отырып заттарды өзіңіздің қалауыңыз бойынша қарасытра білу жақсы жаңалық болып табылады. Бұл әдістер есептің шешімін табу үшін қайталанбас болып келеді. Бұл сабақта сіз шамамен төртке жуық әдістерді үйреніп, ойын шартын үйрену үшін өз достарыңызбен тәжірибеде қолданасыз.
+        text: 'Сіз кейбір ойлау әдістерін қолдана отырып заттарды өзіңіздің қалауыңыз бойынша қарастыра білуіңіз жақсы болып табылады. Бұл әдістер есептің шешімін табу үшін қайталанбас болып келеді. Бұл сабақта сіз шамамен төртке жуық әдістерді үйренесіз, ойын шартын  өз достарыңызбен тәжірибеде қолданып білетін боласыз.'
       3:
         image: notes/C3_computational_thinking_3.png
         text: Күрделі есепті шағын есептерге бөлгенде, сіз күрделі есепке анализ жасайсыз. Күрделі есепті шағын есептерге бөлген соң, біз қима жасау атты келесі тақырыпқа көше аламыз.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: 'Екі заттың ұқсастығын салыстырғанда, егер бір ұқсас нәрсе тауып алсым, мен қайндай айырмашылық бар екенін көре аламын. Айырмашылықтарды жою - абстракция деймиз.'
+        text: 'Екі заттың ұқсастығын іздегенде және ұқсастықты тапқан жағдайда, мен қандай айырмашылық бар екенін көре аламын. Айырмашылықтарды жою - абстракция деймиз.'
       5:
         image: notes/C3_computational_thinking_5.png
-        text: Есепті шешіп алған соң, мен есептін шешу алгоритмын құра аламын. Алгоритм дегеніміз есепті шешу үшін амалдарды дұрыс ретімен орындау. Осы 4 қадамды қолданып, ережесі жоқ ойынды ойнау үйренеміз. Ойынның сонына қартай осындай ойынды ойнай алатын боласын!
+        text: Есепті шешіп алған соң, мен есептін шешу алгоритмын құра аламын. Алгоритм дегеніміз есепті шешу үшін амалдарды дұрыс ретімен орындау. Осы 4 қадамды қолданып, ережесі жоқ ойынды ойнап үйренеміз. Ойынның сонына қарай осындай ойынды ойнай алатын боласын!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
-        text: Бұл сабақ краудсорсинг деп аталады. Осы сабақта біз колода картасы арқылы сізге топпен жұмыс істеудін, жалғыз жұмыс істеуден тиімді екенін көрсетеміз. Сондықтан барлық достарынды жина. Краудсорсинг деген үлкен топ арқылы бір тапсырманы тез аяқтау.
+        text: Бұл сабақ краудсорсинг деп аталады. Осы сабақта біз колода картасы арқылы сізге топпен жұмыс істеудін, жалғыз жұмыс істеуден тиімді екенін көрсетеміз. Сондықтан барлық достарынды жина. Краудсорсинг деген үлкен топ арқылы бір тапсырманы тез аяқтауды үйренеміз.
       2:
         image: notes/C3_crowdsourcing_2.png
-        text: Информатикада краудсорсинг жиі қолданылады. Мыңдаған информатиктер бірге қосылып милиондаған информациялар жинайды. Мысалға Мерсенн жай сандарын іздеу немесе бөтен коммуникацияларды ұстау.
+        text: Информатикада краудсорсинг жиі қолданылады. Мыңдаған информатиктер бірге қосылып милиондаған ақпараттар жинайды. Мысалға Мерсенн жай сандарын іздеу немесе бөтен коммуникацияларды ұстау.
       3:
         image: notes/C3_crowdsourcing_3.png
-        text: Сіз кино қарап жатқанда, киноның әрбір секунды 24 жеке сурет. Біз оны кадр деп атаймыз. Сондықтан әрбір сурет құрастырылып орындарына тұру керек. Мен және менің командам бағдарламаушылармыз. Біз барлығымыз сіз экранда көретін кадрларды жасайтын бағдарламаларды құрастырамыз. Бұл құрал, суретшілермен бағдарламашылар кадрларды жасауға қолданатын құрал.
+        text: Сіз кино қарап жатқанда, киноның әрбір секунды 24 жекеленген суреттер. Біз оны кадр деп атаймыз. Сондықтан әрбір сурет дұрыс құрастырылып орындарына тұру керек. Мен және менің командам бағдарламалаушылармыз. Біз барлығымыз сіз экранда көретін кадрларды жасайтын бағдарламаларды құрастырамыз. Бұл құрал, суретшілер мен бағдарламашылар кадрларды жасауға қолданатын құрал.
       4:
         image: notes/C3_crowdsourcing_4.png
-        text: Мысалы, Немоны Іздеу мультфильмінде Краш, Прыск және олардың барлық достары Шығыс Австралиялық ағыспен жүзгенде, сіз су ағындарының суретін, тасбақанын артынағы түрлі түстер, балықтардың денелерін. Бұның барлығы математика және компьютерлік бағдарламалар арқылы жазылып, суретшілердің өңделуінен өтіп, сурет әдемі және қызықты болады.
+        text: Мысалы, Немоны Іздеу мультфильімінде Краш, Прыск және олардың барлық достары Шығыс Австралиялық ағыспен жүзгенде, сіз су ағындарының суретін, тасбақанын артындағы түрлі түстер, балықтардың денелері, бұның барлығы математика және компьютерлік бағдарламалар арқылы жазылып, суретшілердің өңделуінен өтіп, сурет әдемі және қызықты болады.
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: Осы сабақ Dice Race деп аталады. Түгелге жуығымыз компьютер ойындарын ойнағанды жақсы көреміз. Компьютер бағдарламалары ойын қадамдарын қалай бағдарламаға қалай айналдыратынын ойланып көрмедіндер ма? Ойының бағдарламасын жасаудағы және кез-келген есепті шығарудағы бірінші қадам ойлану және план құру.
+        text: Осы сабақ Dice Race деп аталады. Түгелге жуығымыз компьютер ойындарын ойнағанды жақсы көреміз. Компьютер бағдарламалары ойын қадамдарын қалай бағдарламаға айналдыратынын ойланып көрмедіндер ме? Ойынның бағдарламасын жасаудағы және кез-келген есепті шығарудағы бірінші қадам ойлану және план құру.
       2:
         image: notes/C3_dice_race_2.png
-        text: Есеп шығарудың ойлану қадамында алгоритм құралады, бұл тапсырманы орындау планын құрастырады. Осы сабақта сіз Dice Race ойынының алгоритммын құрасыз. Кейін осы алгоритмды достарыңыз өте алама екенін тексеруге сұрайсыз. Бағдарламалаушы алгоритмы дұрыс болғанына көзі жеткенде, ол өз алгоритмын бағдарламалау тіліне айналдырып, бағдарламасын жазады.
+        text: Есеп шығарудың ойлану қадамында алгоритм құралады, бұл тапсырманы орындау планы құрастырылады. Осы сабақта сіз Dice Race ойынының алгоритімін құрасыз. Кейін осы алгоритмды достарыңыз өте алама соны тексересіз. Бағдарламалаушы алгоритімі дұрыс болғанына көзі жеткенде, ол өз алгоритімін бағдарламалау тіліне айналдырып, бағдарламасын жазады.
       3:
         image: notes/C3_dice_race_3.png
-        text: Біз күнделікті жасайтын барлық нәрсе алгоритмды қажет етеді, тапсырманы орындау үшін қажет амалдар. Мысалға мектепке дайындық, достармен қызызты жерге баруды ойластыру немесе бір затты жөндеу барлығы алгоритмды қажет етеді. Кез келген тапсырманы орындау үшін оны шағын тапсырмаларға бөліп, шешіп, оны керек ретпен орындау қажет.
+        text: Біз күнделікті жасайтын барлық нәрсе алгоритімді қажет етеді, тапсырманы орындау үшін қажет амалдар. Мысалға мектепке дайындық, достармен қызықты жерге баруды ойластыру немесе бір затты жөндеу барлығы алгоритімді қажет етеді. Кез келген тапсырманы орындау үшін оны шағын тапсырмаларға бөліп, шешіп, керек ретпен орындау қажет.
       4:
         image: notes/C3_dice_race_4.png
-        text: Сэндвич жасау туралы ойланыңызшы. Оны жасағанда кез-келген ингридиентты кез-келген ретпен салуға болады. Бірақ сіз банканы ашпай жержаңғақ майын нанға жаға алмайсыз. Компьютерге адам ойланбай жасайтын кез-келген қарапайым затты жасау үшін алгоритм қажет.
+        text: Сэндвич жасау туралы ойланыңызшы. Оны жасағанда кез-келген ингридиентті кез-келген ретпен салуға болады. Бірақ сіз банканы ашпай жержаңғақ майын нанға жаға алмайсыз. Компьютерге адам ойланбай жасайтын кез-келген қарапайым затты жасау үшін алгоритм қажет.
       5:
         image: notes/C3_dice_race_5.png
-        text: Дұрыс алгоритм компьютерге берілмей тұрып не болатынын болжап тұрады. Тапсырманы шағын бөліктерге бөлу, алгоритм құрастыру кей кезде күрделі. Бірақ кез кез келген қабілет сияқты оны дамытуға болады.
+        text: Дұрыс алгоритм компьютерге берілмей тұрып не болатынын болжап тұрады. Тапсырманы шағын бөліктерге бөлу, алгоритм құрастыру кей кезде күрделі болады. Бірақ кез-келген қабілет сияқты оны дамытуға болады.
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: Шартты циклдар жұмысы, біз күнделікті өмірде істеп жүрген заттарымызға ұқсайды. Мысалға машина тазалауды қарастырайық, сіз оны таза болғанға шейін жуасыз. Бұл заттарды әр қашан есептеп отырасыз.
+        text: Шартты циклдар жұмысы, біз күнделікті өмірде істеп жүрген заттарымызға ұқсайды. Мысалға машина тазалауды қарастырайық, сіз оны таза болғанға дейін жуасыз. Бұл заттарды әр қашан есептеп отырасыз.
       2:
         image: notes/C3_farmer_while_2.png
         text: Біз фермерге көмектесудін жаңа амалын таптық. Шартты блок деп аталады. Бұл өте оңай. Жоғарыдағы сөйлем дұрыс болғанша, бір нәрсе істе. Мысалы, шөп үймесі бар болғанша шөпті тасы. Енді фермерге көмектес.
     C3_functional_suncatchers:
       1:
         image: notes/C3_functional_suncatchers_1.png
-        text: Осы сабақ күннін көзін жинау функциясы деп аталады. Осы күннін көзін жинау тұмарларын жасау функцияларын құрастырамыз. Бұл тұмарларды жасаудын бірнеше жолы бар. Кейбір амалдар бірнеше рет орындалу қажет.
+        text: Осы сабақ күннін көзін жинау функциясы деп аталады. Осы күннің көзін жинау тұмарларын жасау функцияларын құрастырамыз. Бұл тұмарларды жасаудын бірнеше жолы бар. Кейбір амалдар бірнеше рет орындалу қажет.
       2:
         image: notes/C3_functional_suncatchers_2.png
-        text: Тұмарды жасау үдерісінің жеңілдету бірінші қадамы біз нені қайта-қайта қайталау керек екенін анықтау керек. Бұл барлық қадамдарды біз функцияға топтай аламыз.
+        text: Тұмарды жасау үдерісінің жеңілдету бірінші қадамы біз нені қайта қайталау керек екенін анықтауымыз керек. Бұл барлық қадамдарды біз функцияға топтай аламыз.
       3:
         image: notes/C3_functional_suncatchers_3.png
-        text: 'Келесі нақты қадамдарға қарағанда бұл әдемі suncatcher құру емес.Кей кезде біз  өзімізді ерекше сезініп өзіміз қолданатын шарлардын түсін өзгерткіміз келеді.егер біз барлық шарларды әртүрлі түсте қолдансақ, онда біз әрбір suncatcher-ді дара қыла аламыз.'
+        text: 'Келесі нақты қадамдарға қарағанда бұл әдемі көрініс құру емес. Кей кезде біз  өзімізді ерекше сезініп, өзіміз қолданатын шарлардын түсін өзгерткіміз келеді. Егер біз барлық шарларды әртүрлі түсте қолдансақ, онда біз әрбір шарды дара қыла аламыз.'
       4:
         image: notes/C3_functional_suncatchers_4.png
         text: Егер сіз бисерлі ойлана алсаңыз , анықтама толықтырғыш және ол өзгеруі мүмкін, онда сіздің suncatcher шынымен сыйлы бола алады. Функция мен айнымалыларды қолданып әдемі suncatcher құруыңызға сәттілік.
@@ -994,70 +994,70 @@ kk:
         text: Егер/әйтпесе жаңа блогын қарсы ал! Бұл шартты амал, алдындағы тапсырмалардағы егер блогы сияқты. Бірақ мында енді әйтпесе амалы қосылған. Мысалы, ара екі шешімнің бірін қабылдасын. Егер ара гүлдін қасында болса онда ол бірінші шешімді істесін. Егер ара гүлдін қасында болмаса, онда ара әйтпеседегі екінші шешімді қабылдасын.
       2:
         image: notes/C4_conditionals_2.png
-        text: "If statements are how computers are able to make decisions. Humans set up conditions for the computer that say if the computer is presented with a certain situation do this. Else, which just means otherwise, do that. The top of our if/else block says if at flower. But the top of our block could say other things, like if nectar equals 2 or if there's a path ahead, our block will behave in the same way. That if the statement at the top is true it will do the first set of actions. But if the statement at the top is false, it will do the second set of actions."
+        text: Егер амалдары компьютерлердің шешімді қалай қабылдайтынын анықтайды. Адамдар компьютерлерге белгілі шартар енгізеді, егер осылай болса, мына істе. Әйтпесе басқаша болса, мынаны істе. Жоғарыдағы егер/әйтпесе блогынын мысалы егер гүлдын қасындағыны қарастырады. Бірақ оны басқашада айтуға болады. Мысалы егер шәрін 2 тең болса, бірінші іс әрекетті орында. Егер ол жалған болса, екінші әс әрекетті орында.
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: Қайталау блогын кодқа қолданған кезде комьютер циклды қашан тоқтататынын қайдан біледі? Қайталау блогы өзінде шартты цикл атты күрделі код бөліктерін қамтиды. Ол басынан аяғына дейін белгілі өсімшемен санап, циклды бақылап отырады.
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+        text: Мысалы, үш есептеуіш қайтала блогы,1 ден 3-ке дейін бір-бірдеп санайды. Әр санау, кодты циклдан өткізеді. Есептеуіш айнымалысы арқылы шартты цикл цикл санын бықылап отырады, бұнда бір цикл өткенде есептеуіш айнымалысы бір өсімшеге өседі. Есептеуіш соңғы мәннен үлкен болғанда, цикл жұмысын тоқтатады.
       3:
         image: notes/C4_for_loops_3.png
-        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+        text: Шартты циклдын қайталау блогынан артықшылығы циклда есептеуіш айнымалысын көріп, оны циклда қолдануға болады. Мысалы, менде гүлдер тізбегі тұрсын, біріншісінде бір шәрін, еіншісінде екі шәрін, үшіншісінді үш шәрін. Мен шартты циклмен араларға есептеуіш мәніндегі шәрін санын жина деп айталамын, бірнші гүлде біреу, екіншісінде екеу, үшіншісінде үшеу.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+        text: Және шартты циклда, өсімшені өзгертуге болады. Оны 2s, 4s немесе басқада сандармен санауға болады.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: Қайталау блогын кодқа қолданған кезде комьютер циклды қашан тоқтататынын қайдан біледі? Қайталау блогы өзінде шартты цикл атты күрделі код бөліктерін қамтиды. Ол басынан аяғына дейін белгілі өсімшемен санап, циклды бақылап отырады.
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running.
+        text: Мысалы, үш есептеуіш қайтала блогы,1 ден 3-ке дейін бір-бірдеп санайды. Әр санау, кодты циклдан өткізеді. Есептеуіш айнымалысы арқылы шартты цикл цикл санын бықылап отырады, бұнда бір цикл өткенде есептеуіш айнымалысы бір өсімшеге өседі. Есептеуіш соңғы мәннен үлкен болғанда, цикл жұмысын тоқтатады.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: "The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop. For example, if I have a series of flowers and the first one has one nectar, the second one has two nectars and the third one has three, I can use the for loop to tell the bee to collect 'counter' nectars each time, which would one at the first flower, two at the second and three at the third."
+        text: Шартты циклдын қайталау блогынан артықшылығы циклда есептеуіш айнымалысын көріп, оны циклда қолдануға болады. Мысалы, менде гүлдер тізбегі тұрсын, біріншісінде бір шәрін, еіншісінде екі шәрін, үшіншісінді үш шәрін. Мен шартты циклмен араларға есептеуіш мәніндегі шәрін санын жина деп айталамын, бірнші гүлде біреу, екіншісінде екеу, үшіншісінде үшеу.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other than one each time. You can potentially count by 2s, 4s or even an amount that changes every time through.
+        text: Және шартты циклда, өсімшені өзгертуге болады. Оны 2s, 4s немесе басқада сандармен санауға болады.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: "When you use a repeat block to loop your code, how does the computer know when it's repeated enough times? The repeat block is actually hiding a more sophisticated piece of code called a for loop which counts from a starting value up to an ending value by a specific increment."
+        text: Қайталау блогын кодқа қолданған кезде комьютер циклды қашан тоқтататынын қайдан біледі? Қайталау блогы өзінде шартты цикл атты күрделі код бөліктерін қамтиды. Ол басынан аяғына дейін белгілі өсімшемен санап, циклды бақылап отырады.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time it counts, it runs the code inside the loop. The for loop knows how many times it has run by using a counter variable which is set to the starting value at the beginning of the loop and has the increment added to it each time the loop is run. As soon as the counter variable is greater than the ending value, the loop stops running. The benefit of using a real for loop instead of the repeat block is that you can actually see the counter variable and use it in your loop.
+        text: Мысалы, үш есептеуіш қайтала блогы 1 ден 3-ке дейін бір-бірдеп санайды. Әр санау, кодты циклдан өткізеді. Есептеуіш айнымалысы арқылы шартты цикл цикл санын бықылап отырады, бұнда бір цикл өткенде есептеуіш айнымалысы бір өсімшеге өседі. Есептеуіш соңғы мәннен үлкен болғанда, цикл жұмысын тоқтатады. Шартты циклдын қайталау блогынан артықшылығы циклда есептеуіш айнымалысын көріп, оны циклда қолдануға болады.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
-        text: "Now that you've edited function blocks, it's time to create a new function block from scratch. It's really simple. You'll see the toolbox has a category called functions. If you click on this, you'll see an orange button called create a function. Clicking on this brings up the function editor that you've already used to edit existing function blocks."
+        text: Енді функция блоктарымен жұмыс істеуді үйренген соң, жаңа функция блогын құрастыруын үйренейік. Бұл өте оңай. Саймандар қорабында функциялар категориясы бар. Оны басқанда, сіз функция құрастыру атты сарғылт батырманы көресіз. Оны басқанда сізге таныс функция редакторы шығады.
       2:
         image: notes/C4_function_create_2.png
-        text: "Just like before, you started by naming your function, writing down a description for what the function is supposed to do. For instance, it's supposed to draw a square or draw a triangle and then drag blocks from the toolbox into the white work space below. Remember to drag these blocks inside the green wrapping block for the function."
+        text: Алдындағыдай, функцияларға ат қойып, олар не үшін керек екенін жазу қажет. Мысалы, бұл шаршы немесе үшбұрыш салу тиіс, кейін оларды ақ жұмыс орнына апарыңыз. Бұл функция блоктарды жасыл блоктын ішіне салуды ұмытпаңыз.
       3:
         image: notes/C4_function_create_3.png
-        text: "Once you're done, click on save and exit. This will take you back to the main puzzle work space. The new function you created will show up as a green block in the function category in your toolbox. Drag and drop this into the main work space and use it like any other block to solve the puzzle."
+        text: Жасап болған соң, сақтау мен щығуға бас. Бұл сені басты тапсырманы орындайтын жұмыс орнына алып келеді. Сіз жасаған жаңа функция саймандар қорабындағы функция категориясында жасыл блокпен белгіленіп тұрады. Осыны қолданып тапсырманы орында.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: Программалаудын ең ағзам жері ол сіз компьютерді, жағдайды калай орындауға, деген сияқты үйретсеңіз, сіз сол функцияны қайта шақыра аласыз.Сіз оған есім бересіз, және тағаййындай аласыз. Бұл шынымен тілдін кеңейтілгені сияқты.
+        text: 'Бұл бағдарламалаудың ең кереметі,  компьютердегі бағдарламалауға бір рет жазған функцияны, қайта шақыра беруге болады.  Сіз функцияға есім қойып, болашақта сол есім бойынша шақыра аласыз.'
       2:
         image: notes/C4_function_edit_2.png
-        text: Біз құрған бағдарлмада шаршыны төрт рет орналастырып айналдырып салуға болатындығын үйреніп білдік. Біз бұл функцияны алып оған есім бере аламыз, және кез келген, біз қалаған уақытта шаршы салу деген команданы жазып аталған функцияны шақырып аламыз. Бұл біз үшін жасалынған. Біз бағдарламалу тілі концепциясын қостық.
+        text: Біз құрған бағдарламада шаршыны төрт рет орналастырып айналдырып салуға болатындығын үйреніп білдік. Біз бұл функцияны алып оған есім бере аламыз, және кез келген, біз қалаған уақытта шаршы салу деген команданы жазып аталған функцияны шақырып аламыз. Бұл біз үшін жасалынған. Біз бағдарламалау тілі концепциясын қостық.
       3:
         image: notes/C4_function_edit_3.png
-        text: "In this puzzle, we have already created a draw a square function for you. You'll see it in the toolbox as a green block. What you'll need to do is write the same code you wrote before to draw a square and put it in this function. To do that, click on the edit option in the green draw a square block. This will open up the function editor. The function editor has three parts. A place where you name your function. This will appear on the green block before that function. Then write out a short description of what your function is supposed to do."
+        text: Осы тапсырмада, біз сізге шаршыны сыз функциясын жасап қойдық. Оны саймандар қорабында жасыл блок ретінде көресіз. Енді шаршыны сызғанда жазған кодынды, осы функция ішіне енгізу керек. Оны істеу үшін, жасыл шаршы блоктын ішнде енгізу батырмасын бас. Бұл функция редакторын ашады. Функция редакторы 3 бөлікке бөлінген. Функцияға ат қоятын бөлік. Бұл жасыл блокта функция алдында шығады. Кейін функция не істейтіне қысқаша түсініктеме жаз.
       4:
         image: notes/C4_function_edit_4.png
-        text: "In this case, it's supposed to draw a square. The white space below this is the work space and works just like the work space you've already been using. Drag and drop blocks from the toolbox into this work space. Remember to put the blocks that create a square inside the green wrapping block for the function. Once you're done, click on save and exit. This will take you back to the main puzzle work space. Now you can use the draw the square function block just like any other block to solve the puzzle."
+        text: Бұл тапсырмада, шаршы салуымыз қажет. Ақ кеңестік бұл жұмыс жасау орны. Блоктарды саймандар қорабынан осында тастап отыр. Функция жасау үшін жасыл блоктын ішіне барлығын жинауға ұмытпа. Оны істеп болғасын, сақтау және шығуға бас. Бұл сізді жұмыс орнына қайта алып келеді. Енді шаршыны салу функциясын қолдана аласыз.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: "Here's a function that draws a square with 50 pixel sides. That's great but what if I wanted to draw a square with sides 50 pixels and another square with sides of 100 pixels? We shouldn't have to make two separate functions that do almost the same thing. Instead, we can use one function with a parameter."
+        text: Мына функция қабырғасы 50 пиксель болатын шаршы салады. Бұл керемет бірақ егер маған 50 пиксельды және 100 пиксельды шаршылар керек болса мен не істеймін? Сол үшін бізге бірдей жұмысты атқаратын екі түрлі функция керек емес. Оның орнына бір функция параметр жасау керек.
       2:
         image: notes/C4_function_parameters_2.png
-        text: "Parameters allow us to pass values into a function that get used as variables inside the function. Let's try adding a parameter called like to this function so we can use it to create squares of different sizes. In the function editor, you can edit the name and description like before but now you can also add a parameter. Write the name of your parameter in the space and click Add Parameter. This will create a red block with the name of the parameter you just created. Now we can replace the move forward by 100 block with the parameter Length so it will move forward by Length."
+        text: 'Параметрлер - функцияның айнымалысы, енгізілген мәндерді функцияға жеткізетін. Шаршылардың әр түрлі қабырғаларын сызатын фукнцияға параметр енгізіп көрейік. Функция редакторында сіз функцияның атын және түсініктемесін жаза аласыз, сонымен қатар параметр енгізуге болады. Жолға параметрдын атын жазып, параметрды қос батырмасын бас. Ол параметрдын атымен қызыл блогын құрастырады. Енді ұзындық параметріне 100 деген мәнді енгізе аламыз.'
       3:
         image: notes/C4_function_parameters_3.png
         text: Сақтау және жабу батырмасын басыңыз, және панель инструментов ішіндегі функция котегориясындағы квадратты блок құру ына жаңадан апарыңыз. Сіз аңғарасыз бұл жай ғана ұзындық қасындағы кеңістік, себебі ұзындық анықтамасы болу қажеттігін функция білгісі келеді. Сандық блокты математика категориясынан ауыстырып сол кеңістікке орналастырыңыз. Біліңіз, әртүрлі ұзындықпен функцияны қайта-қайта қалай қолдануға болады, және квадраттар әртүрлі өлшемде? Өзіңіз үшін істеп көріңіз!
@@ -1179,161 +1179,159 @@ kk:
         text: 'Енді біз барлық ойын программистары күнде не қолданатындығын білуіміз қажет.Олар оқиға деп аталады. Оқиға бір нәрсе болғанын есту үшін өз бағдарламасын айтады.Кейін  ол орындалғанда ол әрекет жасайды. Оқиғаның кейбір мысалдары ол тышқанды есту және бағытты батырмалар немесе экрандағы басылымдар.'
       2:
         image: notes/infinity_playlab_events_2.png
-        text: |-
-          Here, we're going to make Baymax move up to touch Hiro and move down to touch Rapunzel when the player uses the up/down arrow keys or the up/down buttons. We'll use the when up arrow block and attach the move actor up block to it, so when the player presses the up arrow key, everything attached to the "when up arrow" block is run. We'll do the same thing to make Baymax move down. Step by step your game is getting more interactive.
+        text: Енді Баймакспен жоғарыға көтеріліп Хирога барамыз және төмен түсіп Рапунцельге барамыз, ойыншы жоғары және төмен нұсқарларын басқанда Баймакс өзінің қозғалысын жасайды. Жоғары нұсқарын басқан кезде кейіпкер жоғары көтеріліп, жоғарыға көтерілуге қатысты барлық блоктар іске қосылады. Дәл солай төмен түсуге. Әр қадам сайын ойын интерактивті бола бастайды.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: "So what grade are you in? Second. Tenth grade. First grade. I was in eighth grade when I learned to program. I got my first computer when I was in sixth grade. What gets me excited is being able to fix people's problems. You can express yourself, you can build things from an idea."
+        text: Нешінші сыныптасын? Екінші? Оныншы? Әлде бірінші? Мен бағдарламауды үйренгенде сегізінші сыныпта болғам. Бірінші компьютерім алтыншы сыныпта болған. Маған адамдардын проблемаларын шешу ұнайды. Сен өзінің идеяларынды іске асыра аласын.
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: "Computer science is the basis for a lot of the things that college students and professionals will do for the next twenty or thirty years. I like programming because I like helping people. I get the opportunity to build something that's gonna make people's lives easier. I think it's the closest thing we have to a superpower. Getting started is the most important part. I'm a beginner myself and I want you to learn with me."
+        text: Информатика келесі 20-30 жылда студенттермен мамандарын жасап жүрген өмірдегі көп затпен қиылысады. Мен бағдарламалауды жақсы көретін себебім, мен адамдарға көмектескенді жақсы көрем. Мен адамдардын өмірін жеңілдететін зат құрастыруыма мүмкіндік бар. Мен де бастаушымын және сіз менімен бір оқығанды қалаймын.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: "I'm John Vechey, I'm one of the co-founders of PopCap Games. We make games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games isn't how perfect your code is, it's not how perfect your art is, it's about how does it feel and how much fun it is. You can only get that sense by trying it, by doing it, by learning and adapting and iterating your own skills of making games."
+        text: 'Мен Джон Веши. ПопКап ойындарының қалаушыларының бірімін. Біздін ойындар: Plants vs. Zombies, Bejeweled және Peggle. Ойындар жасаудың маңыздылығы сенін код жасауында емесе, сурет салу өнерінде емес, ол ойынның қызықтылығында. Бұны сен ойындарды жасай беріп, өзінің қабілетінді өсіріп, дамыта берсен түсінесің.'
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: "Do you have a favorite video game? Well, we're going to take one step towards creating games just like that using Play Lab. Good games have a story and every story has actors. Actors do things like speak, move, and interact with each other. Maybe even score points based on the rules of the game. Today we'll be learning how to do all these things, one by one, with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll build a game from scratch that can be shared and played on a phone."
+        text: Сенің ең сүйікті видео ойынын бар ма? Play Lab сияқты біз ойын құрастырамыз. Жақсы ойында өзінің хикаясы бар және әр хикаяның өзінің кейіпкерлері бар. Кейіпкерлер қозғалып, сөйлеп, бір-бірімен әрекеттеседі. Және ұпай жинауға болады. Бүгін бұнын барлығын біз біртіндеп үйренеміз. Бізге Анна, Эльза, Хиро, Баймакс және Рапунцель Дисней кейіпкерлері көмектеседі. Біз телефонмен ойнап бөлісуге болатын жаңадан ойын жасаймыз.
       5:
         image: notes/infinity_playlab_intro_5.png
-        text: "Your screen is split into three main parts. On the left is the gamespace, where your program will run. The instructions for each level are written below. This middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace, and this is where we'll build our program."
+        text: Сіздің экраныңыз үш бөлікке бөлінген. Сол жақ ойын бөлігі, ойынның орындалуын тексересіз. Ортада саймандар қорабы және әрбір блок бір кодтын бөлігі. Оң жақтағы ақ кеңестік жұмыс орны бұнда сіз өзіңіздің бағдарламаңызды жазасыз.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow outline, and then they'll snap together. In this first puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get to Baymax by dragging the "move right" block out and linking it to the "when run" block. Once you have your blocks in place, hit the "Run" button to see what you've programmed.
+        text: 'Біріншіден өзіңіздің блогыңызды сарғылт "егер орындалса" блогымен байланыстыру керек. Сары түзуге дейін бірнеше блоктарды бір-бірімен байланыстыруға болады және кейін олар бір-бірімен түйіседі. Бұл тапсырмада Хиро Кейіпкер 1, ал Баймакс Кейіпкер 2. Біз Хироны "оңға қозғал" блогымен қозғалтып Баймаксты ұстау керекпіз және оны "егер орындалса" блогымен байланыстыр. Бітіріп болған соң кодынды тексер.'
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: "Get started and by the end you'll be able to create your own game with these amazing actors that can interact, score points, throw microbots, cherries, saucepans, sparkles, and ice.. and vanish each other. It's all up to you!"
+        text: Бастайық, курстын соңында сен өзінің кеіпкерлерімен өзіңнің ойынынды құрастыра аласын. Бұл барлығы саған байланысты!
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
+        text: Бір затты мәңгі қайталай беруді елестете аласын ба? Бақытына орай комьютерлер бір затты мәңгі қайталай бере алады. Мәңгі қайтала блогымен. Ол ойын қосылап тұрғанда жұмыс істей береді.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."
+        text: Егер кейіпкер бір затты тоқтаусыз жасау керек болса, біз оны мәңгі қайтала блогының ішіне қоямыз. Келесі пазлда, Аннаға үзіліссіз жоғары және төмен жүруге көмектесеміз. Осы біліміңді қолданып, өз ойныңды құруға көмектесеміз.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: "What do you want to be when you grow up Olivia? An astronaut. Do you happen to know what a computer programmer is? Yeah um no. Ummm wait what? I'm not really sure how to explain it computer programming is pretty simple. It's a set of instructions like a recipe, you have to follow them step-by-step to get the end result you want."
+        text: Оливия өскенде кім болғын келеді? Ғарышкер. Бағдарламаушы не істейтінін білесін бе? Ия... Жоқ. Жоқ??? Саған қалай айтарын білмеймін... бірақ бағдарламаушының жұмысы жеңіл. Ол нұсқауларды орындап, бір нәтижелерді жетеді.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: "I can change the number of pixels, the length of the line, using this dropdown. How long was it again? You can see the instructions again by looking under the run button. Here I used the move forward block and I'm going to select 100 pixels. I can delete a block by dragging it into the toolbox or the trash can. Let's put it back."
+        text: Мен пиксельдер санын, ұзындығын менюден өзгерте аламын. Қанша пиксель қажет? Нұсқайларды орындау батырмасының астынан көоуге болады. Мен 100 пиксель таңдайын деп жатырмын.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: "Run the code by pressing run. Well that didn't work! I'll press reset and figure out what's wrong. You can try a puzzle as many times as you'd like and skip puzzles and come back to them. Just make sure to try your best and don't give up. Let's add another move forward. That still didn't work. I can place a block between other blocks."
+        text: Жүргізуді басып кодтты орындаңыз. Алайда бір нәрсе дұрыс емес. Мен қайта бастауды басып, не болғанын анықтамақпын. Біз бас қатырғыштарды өзіңіздің қалауыңыз бойынша бірнеше рет сынап көре, өткізе, немесе оларға қайта орала аласыз. Тағы бір алдыға қажам блогын қосайық, бұл әлде де жұмыс жасамай тұр, мен блокты басқа блоктардың ортасына қоя аламын.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
-        text: "Let's take a turn block and place it in between the move forwards. Turn left 45 degrees. Let's run it again. Reset, run, awesome! Here's another puzzle. Sometimes you are given starter code to complete. Here I need to add the appropriate lengths and degrees."
+        text: Бұрылу блогын алып алдыға қозғалу блотарының ортасына орналастырайық. Солға қарай 45 градусқа бұрыңыз. Басынан жүргізіп көрейік. Бастапқы қалпына келтіру, Жүргізу, керемет! Мұнда басқа бас қатырғыш бар, кейде сізге аяқтау қажет бастапқы код беріледі. Мұнда мен сәйкес ұзындықтар мен дәрежелерді қосуым қажет.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: "You may sometimes accidentally trash the starter code. What do you do then? You can press clear puzzle and start all over again. I'm going to drag this number block into the different pixel areas. Select 100 for pixels, 45 for degrees and 100 for pixels again. Awesome! Here is the Code Studio bee. I need to move the bee to each flower and get nectar."
+        text: Кейде сіз байқаусызда бастапқы кодты бүлдіріп алуыңыз мүмкін. Сол кезде не істейсіз? Сіз бас қатырғышты тазалаулы басып, барлығын басынан бастай аласыз. Мен бына сандық блокты пикселдердің әр-алуан аймақтарына көшіріп шықпақпын. 100 пиксел таңдаңыз, 45 пиксео бұрылуға және тағы да 100 пиксел. Керемет, міне араның код студиясы. Маған бал араны әр бір гүлге көшәрәп шырынды алу қажет.
       6:
         image: notes/tutorial_puzzle_challenge_6.png
-        text: "The first flower is three blocks away so I need three move forwards. 1, 2, 3. Then a get nectar, then another get nectar. Well that didn't work! I'll place another move forward between the get nectars and run it again. Yay, it works! You just learned how to use the Code Studio artist and bee puzzles. Good luck on the Code Studio puzzle challenge."
+        text: Алғашқы гүл 3 блоктан кейін орналасқан, демек маған үш алдыға қозғалу блоктары қажет. 1, 2, 3. Кейіннен шырынды алыңыз, басқа шырынды алыңыз. Алайда бір нәрсе жұмыс жасамайды. Мен шырын жинау блоктарының арасына тағы да бір алдыға қозғалу блогын қосып, басынан жүргізіп көремін. Алақай, бұл жұмыс жасайды! Сіз қазір ғана суретші шеберханасы және ара бас қатырғыштары кодттарының қалай жұмыс жасайтындығын көрдіңіз. Код Студиосы бас қатырғыштарын шешуде сәттілік тілейміз.
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: "What do you want to be when you grow up Olivia? Umm, an astronaut! Do you happen to know what a computer programmer is? Yeahh, umm, no. Umm, what what? I'm not really sure how to explain it. Computer programming is pretty simple. It's a set of instructions, like a recipe. You have to follow them step by step to get the end result you want."
+        text: Сенің өскен кезде кім болғың келеді, Оливия? Ммммм, астронавт. Сен кездейсоқ бағдарламалаушының кім екендігін білмейсің бе? Мен қалай түсіндірген дұрыс екендігін білмеймін, алайда компьютерлік бағдарламалау қарапайым болып келеді. Бұл рецепттер сияқты нұсқаулықтар жиыны. Сіз өзіңіңз қалаған ақырғы мәнді алу үшін олар бойынша әр бәр қадам сайын жүріп отыруыңыз қажет.
       2:
         image: notes/unplug1_2.png
-        text: "Computer science is a way to impact the world. It can be music videos, it can be games, detect whether or not someone is related to someone else. Find you know, people's friends. You can do all sorts of other crazy things that actually save lives. You do have to have a drive I think. It is to me like a paintbrush. I think great programming is not all that dissimilar from great art."
+        text: Информатика бұл әлемге әсер ету әдістерінің бірі. Ол музыка, бейне, тіпті ойын болуы, кімнің кіммен байланысы бар немесе жоқ екендігін анықтауы мүмкін. Сіз білетін адамдарды, достарыңызды таба алады. Сіз шын мәнісінде өмірді сақтай алатын таңғажайып дүниелердің барлық түрлерін жасай аласыз. Сізде менімше диск болуы қажет. Ол менде қаламның болуы іспеттес. Менің ойымша үлкен бағдарламалау үлкен өнерден ешқандай айырмашылығы жоқ.
       3:
         image: notes/unplug1_3.png
-        text: When I finally learned a little bit of programming, that blank wall resolved into a bunch of doors and you open them and of course then you find behind them is another hallway filled with a bunch of doors. Programming is fun and easy. You can do anything your mind wants to do. Finally you start to open enough doors the light comes in. To me a finished program is like a structure filled with light. All the corners are illuminated. The number of people that you can touch and interact with is something the world has never seen before.
+        text: Мен бағдарламалу жайлы сәлде болсын үйренген кезде, тұтас бос қабырға есіктерге толып кеткендей көрінді. Сіз оның бірін ашасыз, және де алдыңыздан дәл осындай есіктерге толы дәліз шығады. Бағдарламалау оңай әрі қызықтырарлық. Сіз ойыңызға елген дүниені жасай аласыз. Сіз есіктерді аша бастаған езде жеткілікті білім жарығы кіре бастайды. Мен үшін аяқталған бағдарлама жарыққа толы құрылым секілді. Барлық бұрыштары жарықтандырылған. Сен бұрын соңды білмеген ұстап көріп, қарым қатынас жасай алатын адамдар саны өте көп.
       4:
         image: notes/unplug1_4.png
-        text: "Our first lesson in this series is all about what computer science is, what a computer scientist does and how you can be more responsible in your use of technology. It's a very important lesson but it is a little text-heavy. At the end, you get to make your very own customized encoding using your initials. It's a fun activity and it's very empowering because binary is one of those things that feels very technical but once you understand it, it's like you speak a secret language."
+        text: Бұл сериядағы біздің алғашқы сабағымыз компьютер ғылымдары дегеніміз не, информатик ғалым не жасайды және сен технологияларды қолдану кезінде қалай жауапершілікке ие бола алатының жайлы айтып өтеді. Бұл өте маңызды сабақ, алайда шағын күрделі мәтіннен тұрады. Ақыр соңында сіз өзіңіздің инициялдарыңызды қолдануға негізделген жеке бапталған кодтау жүйесіне ие боласыз. Бұл қызық жұмыс, және де мүмкіншіліктер мен құқықтардың кеңейтілген түрі, себебі екілік жүйе ол өзін техниалық түрде сезінеді, алайда сіз оны үйренген кезде құпия тілде сөйлегендей боласыз.
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to take a big difficult problem and break it down into several simpler problems. The goal of this lesson is to write a set of instructions that someone can follow to draw one of the monsters included in the lesson plan.
+        text: Есептік ойлау сабағы сізге бір күрделі есепті алып, оны қалай қарапайым шағын есептерге бөліп қарастыруға болатындығын үйрету мақсатында жасалған. Бұл сабақтың мақсаты, әлде кім сабақ жоспарына кіргізілген құбыжықты шақыртуы үшін қолданатын нұсқаулар жиынын жазып шығу.
       2:
         image: notes/unplug2_2.png
-        text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
+        text: 'Оқушылар нұсқаулықтарды жазып шығу үшін топтарға бөлінеді де, кейіннен құбыжықты салу үшін олармен өзара ауысады. Топтар нұсқаулықтарды есептік ойлаудың төрт қадамын қолданып жазады: бөлшектеу, сурет орны, мағлұматтар абстракциясы және алгоритмдер.'
       3:
         image: notes/unplug2_3.png
-        text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
+        text: Бірінші топ тапсырманы бөлшектейді, бұл дегеніміз ойын жоспарын құру. Ол кезде олар тізімдегі барлық құбыжықтар арасындағы заңдылықтарды іздейді. Олар құбыжықтар арасындағы айырмашылықтан өткен кезде асбтрактілі немесе мағлұматтарды жоятындай болады. Мысал ретінде бір құбыжықтың көздері сарғылт болса екіншісі қою қызыл болуы мүмін. Бірақ олардың екеуінің де өзі бар, яғни сіз құбыжық көзін салатын жол жаза аласыз.
       4:
         image: notes/unplug2_4.png
-        text: "So students will be able to write a set of instructions, called an algorithm, that list the monsters' parts with blanks for what the styles should be. This is the set of instructions they'll pass to other students to recreate their very own monster."
+        text: Сондықтан студенттер өздерінің алгоритм атты нұсқауларын жасай алатын болады. Құбыжықтын қандай болуы керегін жазып шықсын. Бұл нұсқаулар басқа студенттерге жіберіліп, өздерінің құбыжықтарын жасасын.
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: Сурет бағдарламауында біз адамдарға суреттерін қалай қайтадан жасауға болатынын түсіндіріп көмектесеміз. Бір адам суретін қалдырып кетті, енді нұсқарлар арқылы оны қалай жөндеуге болатынын ойластырып көр.
       2:
         image: notes/unplug3_2.png
-        text: 'In this activity, the only symbols you can use are these: move one square forward, one square backward, move one square up, move one square down, change to next color, and fill in your square with color. Once we have that coded up, we can hand it off to another person who can read the code and try and recreate the picture.'
+        text: Осы тапсырмада саған бір шаршыға жоғары, бір шаршыға төмен, бір шаршыға алға, бір шаршыға артқа, түсті ауыстыруға және шаршыны бояуға рұқсат. Осы барлық әрекеттерінді жазып алып, оны досына бер. Суретті қалпына келтірсін.
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: Сурет бағдарламауында біз адамдарға суреттерін қалай қайтадан жасауға болатынын түсіндіріп көмектесеміз. Бір адам суретін қалдырып кетті, енді нұсқарлар арқылы оны қалай жөндеуге болатынын ойластырып көр.
       2:
         image: notes/unplug4_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: Екінші тапсырмада, бір қағаздан бірдей 16 тіктөртбұрышты жасаудын тәсілдерін ойластырасыздар. Бір тапсырманы орындау үшін бірнеше тәсілдің бар екенін туралы дискуссия жүргізіндер, бір тәсілдін екінші тәсілден несі жақсы екенін қарастырындар.
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: In graph paper programming, we help explain how coding works by trying to help people recreate drawings using only arrows and scribbles. One person is given a small drawing on graph paper and they need to go through using only specific arrows and try to describe how to recreate that drawing.
+        text: Сурет бағдарламауында біз адамдарға суреттерін қалай қайтадан жасауға болатынын түсіндіріп көмектесеміз. Бір адам суретін қалдырып кетті, енді нұсқарлар арқылы оны қалай жөндеуге болатынын ойластырып көр.
       2:
         image: notes/unplug5_2.png
-        text: "In the second half of the activity, we ask students how many different ways they can fold a piece of paper to create sixteen identical rectangles. Then you'll discuss how multiple solutions can lead to the same end result and why some solutions are better in certain situations."
+        text: Екінші тапсырмада, бір қағаздан бірдей 16 тіктөртбұрышты жасаудын тәсілдерін ойластырасыздар. Бір тапсырманы орындау үшін бірнеше тәсілдің бар екенін туралы дискуссия жүргізіндер, бір тәсілдін екінші тәсілден несі жақсы екенін қарастырындар.
     unplug6:
       1:
         image: notes/unplug6_1.png
-        text: "This activity is called coding with cards and it's great for any age. Like you learned with the if statements in earlier lessons,  during Blockly, if statements have a piece about them you have to evaluate to find out if it's true or false. That's the conditional and it can be used in lots of different ways."
+        text: Бұл әрекет картармен кодтау деп аталады. Блоклидағы егер амалдарымен үйренгендерін бойынша, егер амалында сен өрнек немесе сөйлем дұрыс не жалған екенін анықтау керексін. Бұл шарт және бұл басқа жолдармен орындалуы мүмкін.
       2:
         image: notes/unplug6_2.png
-        text: We take advantage of that by creating programs on paper that you run using a random draw of playing cards. You might have an if statement that says something like if the card you draw is greater than 8, you get a point. Otherwise, your opponent gets a point. You can make it as simple or as complicated as you feel comfortable.
+        text: Енді картармен бағдарламаны жасауды бастайық. Ойынды егер амалымен байланыстыр. Мысалы, егер кездейсоқ алынған карт сегізден үлкен болса, онда сен 1 ұпай аласын. Әйтпесе сенің қарсыласын 1 ұпай алады. Өзіне қалай ыңғайлы, солай жаса.
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: "You know how when you look up the lyrics for a song and they define the chorus at the very beginning and then for the rest of the song, they just refer you back to the chorus? That's how you call a function."
+        text: Әннің сөздерің қарағанда хор айтылатын бөліктерін қалай табатынын білесінбе? Сені хор айтуға жай ғана шақырады. Бұны функция дейміз.
       2:
         image: notes/unplug7_2.png
-        text: "In this lesson, we define the chorus at the beginning of our song and then we sing through our song and go back and we notice that the class doesn't sing the word chorus, they automatically go up to the top where we define the chorus and sing through that. We use that as a great introduction to how to understand what a program is doing when it defines and calls a function."
+        text: Бұл сабақта, біз әннің басындағы хорды анықтадық және сыныптын хорды айтпатынын көреміз. Олар хор айтылғанда жоғары шығып кете берді. Бұны біз функцияларды түсіндіруге кіріспе ретінде қабылдаймыз.
       3:
         image: notes/unplug7_3.png
-        text: "We use familiar songs including Old Macdonald to talk about how a chorus is called over and over and how sometimes a chorus can change. When you have a song like Old Macdonald, where certain words change, that's a great place to introduce the idea of parameters. Passing certain words through so that you can send extra information to your function. Once we're sure everybody gets it, you can take your own familiar songs and break them up yourself. See if you can figure it out together."
+        text: Біз Кәрі Макдональд атты әйгілі әнді пайдаланып, хордын қалай қайта-қайта шақыорылатынын және онын өзгеретіні туралы сөйлесеміз. Кәрі Макдональд сияқты көп сөздері өзгермейтін өлеңдерде параметрдін идеясы туралы айту оңай. Бірнеше сөздерден кейін функцияға бірнеше қосымша информация енгізуге болады. Барлығы түснген соң, өзіңіздің сүйікті әніңізді пайдаланып, осыны қайталаңыз.
     unplug8:
       1:
         image: notes/unplug8_1.png
-        text: Our lesson on abstraction uses the familiar concept of madlibs, where you basically insert a blank in a story that can be filled with lots of different words. We take that idea, challenge kids to come up with their own words for their own stories, and really explain the concept of abstraction.
+        text: Абстракция сабағы қиял кітапхана концепциясын қолданады. Хикая жазылып жатқанда кей орындары бос қалдырады, оны студеттер толтыруға тиіс. Бұл студеттердің ойлау қабілетімен фантазиясын дамытады.
       2:
         image: notes/unplug8_2.png
-        text: "It's all about functions and how you can have a function, like in Old Macdonald, where you have a structure for your chorus but you have something little that changes and you abstract out that little thing that changes and you can fill it in with your own word every time through. But sometimes you have three words that change and so you fill those in with three parameters, that's still pretty helpful."
+        text: Барлығы функцияға байланысты. Кәрі Макдоналдь әнінде сияқты, кішкентай өзгерістер болса, оны алып тастауға болады, бір сөздерді қосуға болады. Бірақ кей кезде үш сөз қосу керек болғанда, оны 3 параметрмен қосасыз. Бұл өте көмектеседі.
       3:
         image: notes/unplug8_3.png
-        text: "You can have one function that handles lots of different problems. Lots of times people will write separate functions for all those problems, not realizing there's only one little difference. If they could just find a way to handle that one little difference, they could just reuse one function over and over again, instead of having 14 different functions."
+        text: Көптеген есептерді шығаратын бір функция істей аласыз. Көп жағдайда адамдар бір функция жазу орнына көп жеке функциялар құрастырады. Оның себебі олар бір шағын айырмашылықты көрмейді. Сол айырмашылықты тапса, олар әр түрлі 14 функция жазбушы еді.
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science.
+        text: Эстафетамен бағдарламалау информатиканын ең қызықты сабақтарынын бірі. Кей-кезде шаршап тұрғанда, бұл сабақ күш жинауға жақсы көмектеседі. Бұл информатикаға қызық қосатын күшті жол.
       2:
         image: notes/unplug9_2.png
-        text: You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step.
+        text: Сіз барлығын шынайы стильде жасайтындай қылып сызық бойымен тұратындай бөлесіз. Әр топтаңы алғашқы адамы бөлменің басқа, сіздің суретіңіз, графити, тіпті бос парақша бар жағынжа жұмыс атқарады. Олар бұл образды жасауға қажет алғашқы қадамды жазып шығады да өз сызығына қарай топтың келесі адамына образды жазу кезегін беру үшін жүгіреді.
       3:
         image: notes/unplug9_3.png
-        text: "This is a great way to get across the idea of debugging, needing to proofread your own work, and needing to check the work of the people done before you. You'll quickly understand how important it is that you be careful in your coding when a whole team is depending on you."
+        text: Бұл өз жұмысындағы қатені тексеру және жөндеу үшін қажет өте керемет жол. Сен бұны тез ұғынып аласын! Абайла, себебі барлық команда сенің кодына сенеді.
     unplug10:
       1:
         image: notes/unplug10_1.png
-        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+        text: Бұл әрекет сізді интернет қалай жұмыс істейтінін оңай жолмен көрсетеді. Біз барлық студент электрондық хаттардың жұмысын түсінетіндей етіп барлық терминдерді түсіндіріп береміз.
       2:
         image: notes/unplug10_2.png
-        text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
+        text: Студенттер 3 жіберу жолдарын ойнап мәліметтерді жіберетін болады. Wireless internet, DSL немесе опто-волоконды. Вай-файды ойнайтын студент мәліметті басында тасуы тиіс, себебі вай-файдың информацияны жоғалтып алу мүмкүндігі үлкен.
       3:
         image: notes/unplug10_3.png
-        text: "The students pretending to be DSL or cable will carry the message on the back of their hand, where they're slightly less likely to drop information. And the students representing fiber optic will get to carry them with both hands. This activity is a great way to understand something that many of us use every day."
+        text: DSL немесе кабель ойнайтын студент, мәліметті қолдын сыртымен ұстасын, себебі оның информация жоғалтуы төменірек. Ал опто-волоконды болатын студент мәліметті екі қолымен ұстасын. Бұл ойын күнделікті қолданып жүрген заттарды жақсы түсіндіреді.
     unplug11:
       1:
         image: notes/unplug11_1.png
-        text: "So now it's time to step back and take a birds eye view of everything you've done in these past nineteen lessons. This is a great time to call out to students that what they've just done is a huge achievement. They've learned more over these lessons than most adults know about computer science."
+        text: Енді 19 сабағымыздың қорытынды нәтижесін шығаратын уақыт келді. Бұл сабақтарды өту, үлкен жетістік. Өйткені сіздер информатика туралы білетін білімдерің көптеген ересек адамдардан көп.
       2:
         image: notes/unplug11_2.png
-        text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
+        text: Барлық топпен студенттердің ең ұнаған сабақтары туралы дискуссия жүргізіңіз. Олар барлық сабақтарын еске түсіргенде, олардың жасампаздығы ашылады. Оларды топтарға жинап, жаңа сабақ ұйымдастырыңыз. Сабақта әр топтың маңызды концепциясы болсын, әр топқа жеке функция, алгоритм және тағы басқа материалдар беріңіз. Әр топ өзінің ажыратылмас, жеке жұмысын көрсетсін.
       3:
         image: notes/unplug11_3.png
-        text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
+        text: Біз Code.org сайтыда өткен сабақтарыңыз қызықты болды деп сенеміз. Егер сіздің арманыңыз жаңа бағдарлама жасау болса, онда осы білімдеріңді адамдарды емдеуге, жаңа есептерді шешуге қолданыңыз. Бұл курс алға қойған мақсатыңыздың бірінші қадамы болды.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -1645,10 +1643,10 @@ kk:
         text: Сіз өзіңізге бір затты мәңгілік қайталау қажеттігін елестете аласыз ба? Сізге бұл күн ешқашан түспейді деп үміттенеміз, себебі компьютерлер қайталау жұмыстарын жақсы атқарады.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: 'Бұл "мәңгілік қайталу" блогы. Бұл блоктың ішіндегі барлық заттар ойында мәңгі болады. Егерде біз кейіпкер бір іс-әрекетті ойфншфнфң қатысуынсыз жасағанын қалайтын болсақ, біз осы блоктарды "мәңгілік қайталау" блогының ішіне орналастырамыз.'
+        text: 'Бұл "мәңгілік қайталау" блогы. Бұл блоктың ішіндегі барлық заттар ойында мәңгі болады. Егерде біз кейіпкер бір іс-әрекетті ойыншының қатысуынсыз жасағанын қалайтын болсақ, біз осы блоктарды "мәңгілік қайталау" блогының ішіне орналастырамыз.'
       3:
         image: notes/gumball_repeat_3.JPG
-        text: Келесі басқатырғыштағы біздің тапсырма кейіпкерге жұмысты үздіксіз жасауға көмектесу. Қайталау командаларымен жұмыс жасап үйрену бірнеше жылдар өте сіз өзіңіздің жеке ойыныңызды жасайтын кезде көптеген уақытыңызды үнемдейді.
+        text: Келесі басқатырғыштағы біздің тапсырма, кейіпкерге жұмысты үздіксіз жасауға көмектесу. Қайталау командаларымен жұмыс жасап үйрену, бірнеше жылдар өте сіз өзіңіздің жеке ойыныңызды жасайтын кезде көптеген уақытыңызды үнемдейсіз.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
@@ -1696,7 +1694,7 @@ kk:
         text: Сіз өзіңізге бір затты мәңгілік қайталау қажеттігін елестете аласыз ба? Сізге бұл күн ешқашан түспейді деп үміттенеміз, себебі компьютерлер қайталау жұмыстарын жақсы атқарады.
       2:
         image: notes/iceage_repeat_2.JPG
-        text: 'Бұл "мәңгілік қайталу" блогы. Бұл блоктың ішіндегі барлық заттар ойында мәңгі болады. Егерде біз кейіпкер бір іс-әрекетті ойфншфнфң қатысуынсыз жасағанын қалайтын болсақ, біз осы блоктарды "мәңгілік қайталау" блогының ішіне орналастырамыз.'
+        text: 'Бұл "мәңгілік қайталау" блогы. Бұл блоктың ішіндегі барлық заттар ойында мәңгі болады. Егерде біз кейіпкер бір іс-әрекетті ойыншының қатысуынсыз жасағанын қалайтын болсақ, біз осы блоктарды "мәңгілік қайталау" блогының ішіне орналастырамыз.'
       3:
         image: notes/iceage_repeat_3.JPG
-        text: Келесі басқатырғыштағы біздің тапсырма кейіпкерге жұмысты үздіксіз жасауға көмектесу. Қайталау командаларымен жұмыс жасап үйрену бірнеше жылдар өте сіз өзіңіздің жеке ойыныңызды жасайтын кезде көптеген уақытыңызды үнемдейді.
+        text: Келесі басқатырғыштағы біздің тапсырма, кейіпкерге жұмысты үздіксіз жасауға көмектесу. Қайталау командаларымен жұмыс жасап үйрену, бірнеше жылдар өте сіз өзіңіздің жеке ойыныңызды жасайтын кезде көптеген уақытыңызды үнемдейсіз.
