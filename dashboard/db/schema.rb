@@ -272,7 +272,7 @@ ActiveRecord::Schema.define(version: 20160118192602) do
 
   create_table "levels", force: :cascade do |t|
     t.integer  "game_id",                  limit: 4
-    t.string   "name",                     limit: 255,   null: false
+    t.string   "name",                     limit: 255,                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num",                limit: 255
@@ -282,7 +282,7 @@ ActiveRecord::Schema.define(version: 20160118192602) do
     t.text     "properties",               limit: 65535
     t.string   "type",                     limit: 255
     t.string   "md5",                      limit: 255
-    t.boolean  "published",                              null: false
+    t.boolean  "published",                              default: false, null: false
   end
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
