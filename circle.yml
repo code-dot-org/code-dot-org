@@ -11,7 +11,7 @@ dependencies:
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
-    - "printf \"use_dynamo_tables: false\nbundler_use_sudo: false\n\" > locals.yml"
+    - bundle install
     - rake install:pegasus
     - npm install:
         pwd:
