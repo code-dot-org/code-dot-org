@@ -84,7 +84,10 @@ Promise.all([
 
   if (commander.watch) {
     console.log("Watching for changes...");
-  } else {
-    process.exit(allStepsSucceeded ? 0 : 1);
+  } else if (!allStepsSucceeded) {
+    // Don't actually call process.exit() on success, or you might truncate one
+    // of the files produced by factor-bundle!  Let the process exit gracefully
+    // on its own.
+    process.exit(1);
   }
 });
