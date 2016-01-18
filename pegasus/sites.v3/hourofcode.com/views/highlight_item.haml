@@ -1,10 +1,13 @@
+- url = item[:url_s] || nil
+- image_path = "/images/highlights/fill-260x260/#{item[:image_url_s]}"
 .highlight-item
-  %a.learnmore-link{href: "#{item[:url_s]}"}
-    .highlight-img{style: "background-image:url(#{item[:image_url_s]})"}
+  %a.learnmore-link{href: url}
+    .highlight-img{style: "background-image:url(#{image_path})"}
     .highlight-caption
-      - if item[:short_heading_s]
+      - unless item[:short_heading_s].nil?
         %h4.caption-headline= item[:short_heading_s]
-      .highlight-description= item[:heading_s]
+      - unless item[:heading_s].nil?
+        .highlight-description= item[:heading_s]
       %br
-      - if item[:link_text_s]
+      - unless item[:link_text_s].nil?
         .learn-button= item[:link_text_s]
