@@ -121,20 +121,24 @@ end
 
 all_passed = true
 
-# Do something after each scenario.
-# The +scenario+ argument is optional, but
-# if you use it, you can inspect status with
-# the #failed?, #passed? and #exception methods.
-
 After do |scenario|
+  # log to saucelabs
   all_passed = all_passed && scenario.passed?
   log_result all_passed
+end
 
+After do |s|
+  # clear session state
   if slow_browser?
     @browser.execute_script 'sessionStorage.clear()'
   else
     @browser.quit unless @browser.nil?
   end
+end
+
+After do |scenario|
+  # Tell Cucumber to quit after this scenario is done - if it failed.
+  Cucumber.wants_to_quit = true if scenario.failed?
 end
 
 at_exit do
