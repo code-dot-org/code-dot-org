@@ -15,8 +15,7 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
-
-require 'aws-sdk' # TODO - should we be using the S3.rb in CDO?
+require 'cdo/aws/s3_packaging' # TODO - ultimately may not belong here
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -125,7 +124,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   # Define the CODE STUDIO BUILD task
   #
   CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
-  CODE_STUDIO_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| code_studio_dir(i)} + Dir.glob(code_studio_dir('build', '**/*'))
+  CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
   CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
   CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
@@ -168,45 +167,8 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
     end
   end
-
-  #
-  # Define the CODE_STUDIO COMMIT task. If CODE_STUDIO_COMMIT_TASK produces new output, that output needs to be
-  #   committed because it's input for the DASHBOARD task.
-  #
-  CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit', [deploy_dir('rebuild'), CODE_STUDIO_TASK]) do
-    code_studio_changed = false
-    Dir.chdir(dashboard_dir('public/code-studio-package')) do
-      code_studio_git_status = `git status --porcelain .`
-      code_studio_changed = !code_studio_git_status.strip.empty?
-      HipChat.log "<b>code-studio</b> package changes:\n#{code_studio_git_status}" if code_studio_changed
-    end
-
-    if code_studio_changed
-      if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building CODE_STUDIO_TASK, but there are new
-        # commits pending in the repository, it is better to pull the repository first and commit
-        # these changes after we're caught up with the repository because, if we committed the changes
-        # before pulling we would need to manually handle a "merge commit" even though it's impossible
-        # for there to be file conflicts (because nobody changes the files CODE_STUDIO_TASK builds manually).
-        HipChat.log '<b>code-studio</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
-      else
-        HipChat.log 'Committing updated <b>code-studio</b> package...', color: 'purple'
-        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/code-studio-package')
-        HipChat.log "<b>code-studio</b> staged changes:\n#{`git status --porcelain .`}"
-        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-code-studio'))}"
-        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-        RakeUtils.git_push
-        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-code-studio')
-      end
-    else
-      HipChat.log '<b>code-studio</b> package unmodified, nothing to commit.'
-      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-code-studio')
-    end
-  end
-
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
-  CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit') {}
 end
 
 file deploy_dir('rebuild') do
@@ -332,7 +294,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_COMMIT_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -450,137 +412,33 @@ task 'test-websites' => [$websites_test]
 # decompressed built assets so that we can know if we're up to date.
 # glossary:
 task 'brent-upload' do
-  commit_hash = commit_hash(code_studio_dir)
+  commit_hash = S3Packaging.commit_hash(code_studio_dir)
 
-  temp_package_path = create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
+  temp_package_path = S3Packaging.create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
 
-  upload_package('code-studio', temp_package_path, commit_hash)
+  S3Packaging.upload_package('code-studio', temp_package_path, commit_hash)
 end
 
 task 'brent-download' do
-  commit_hash = commit_hash(code_studio_dir)
+  commit_hash = S3Packaging.commit_hash(code_studio_dir)
 
-  unpack_from_s3('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
-
-  # download_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
+  S3Packaging.unpack_from_s3('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
 end
 
 task 'brent-ensure' do
-  commit_hash = commit_hash(code_studio_dir)
+  commit_hash = S3Packaging.commit_hash(code_studio_dir)
 
-  ensure_updated_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
+  S3Packaging.ensure_updated_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
 end
 
-
-# Determine the commit_hash given a directory containing source code
-def commit_hash(source_location)
-  RakeUtils.git_latest_commit_hash source_location
-end
-
-
-def s3_key(package_name, commit_hash)
-  "#{package_name}/#{commit_hash}.tar.gz"
-end
-
-def ensure_updated_package(package_name, target_location, commit_hash)
-  if commit_hash == built_commit_hash(target_location)
-    puts "Package is current: #{commit_hash}"
-    return
-  end
-
-  unpack_from_s3(package_name, target_location, commit_hash)
-end
-
-# Given a location where we expect to see an decompressed package, determines
-# the hash of that package (or nil if there is not one)
-def built_commit_hash(output_location)
-  filename = "#{output_location}/commit_hash"
-  return nil unless File.exist?(filename)
-  IO.read(filename)
-end
-
-# Creates a zipped package of the provided assets folder
-# @return tempfile object of package
-def create_package(assets_location, commit_hash)
-  package = Tempfile.new(commit_hash)
-  puts "Creating #{package.path}"
-  Dir.chdir(assets_location) do
-    # add a commit_hash file whose contents represent the key for this package
-    IO.write('commit_hash', commit_hash)
-    `tar -zcf #{package.path} *`
-  end
-  package
-end
-
-# Downloads a package from S3, and decompresses into target
-def unpack_from_s3(package_name, target_location, commit_hash)
-  output_path = download_package(package_name, commit_hash)
-  decompress_package(output_path, target_location)
-end
-
-# Unzips package into target location
-def decompress_package(package_path, target_location)
-  puts "Decompressing #{package_path} to #{target_location}"
-  Dir.chdir(target_location) do
-    # Clear out existing package
-    FileUtils.rm_rf Dir.glob("#{target_location}/*")
-    `tar -zxf #{package_path}`
-  end
-end
-
-# Uploads package to S3
-# @param package_name Name of the package, used in the S3 key
-# @param package_path Path to local zipped up package.
-# @param commit_hash Hash used to generate name of package on S3
-def upload_package(package_name, package_path, commit_hash)
-  client = Aws::S3::Client.new
-  key = s3_key(package_name, commit_hash)
-
-  # TODO (this yet unbuilt logic belongs elsewhere)
-  # try to get a package
-  # if we get one compare to our own and fail if different
-  # ^ this step is essentially an assert
-
-  # result = client.get_object(bucket: BUCKET_NAME, key: key).body.rea
-
-  puts "Uploading: #{key}"
-  File.open(package_path) do |file|
-    client.put_object(bucket: BUCKET_NAME, key: key, body: file)
-  end
-end
-
-# Downloads package from S3
-# @param packge_name Name of the package, used in the s3 key
-# @param commit_hash
-# @return path to the downloaded package
-def download_package(package_name, commit_hash)
-  client = Aws::S3::Client.new
-  key = s3_key(package_name, commit_hash)
-  output_path = Tempfile.new(commit_hash).path
-
-  puts "Downloading: #{key}"
-  puts "Writing to #{output_path}"
-  File.open(output_path, 'w') do |file|
-    client.get_object(bucket: BUCKET_NAME, key: key) do |chunk|
-      file.write(chunk)
-    end
-  end
-  output_path
-end
-
-# package is the zip consisting of source + file stating signature
-
-# needs_package_update (returns bool)
-# look for signature file. does it match commit_hash? if so, we're done
-
-# get_package (returns zip file or nil)
-# try to download BUCKET_NAME/package_name/commit_hash.zip from S3
-# if it fails, we'll have to build ourselves (or fail depending on environment)
-# if it succeeds, caller should unzip into target
-
-# upload_package (..., package)
-# call get_package
-# if it gives us a package, compare it to our own. if they're different, fail
-# if we didnt get one, upload ours
-
-# create_package (source, name, commit_hash)
+# task 'brent-build-studio' do
+#   commit_hash = commit_hash(code_studio_dir)
+#
+#   begin
+#     ensure_updated_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
+#   rescue Exception => e
+#     # TODO - only build on certain exceptions
+#
+#     #do our build?
+#   end
+# end
