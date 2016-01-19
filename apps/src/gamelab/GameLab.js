@@ -62,10 +62,11 @@ GameLab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  p5.prototype.setupGlobalMode = function () {
+  window.p5.prototype.setupGlobalMode = function () {
     /*
      * Copied code from p5 for no-sketch Global mode
      */
+    var p5 = window.p5;
 
     this._isGlobal = true;
     // Loop through methods on the prototype and attach them to the window
@@ -178,7 +179,7 @@ GameLab.prototype.reset = function (ignore) {
       delete window.p5.prototype._registeredMethods[member];
     }
     window.p5.prototype._registeredMethods = { pre: [], post: [], remove: [] };
-    delete window.p5.prototype._registeredPreloadMethods['gamelabPreload'];
+    delete window.p5.prototype._registeredPreloadMethods.gamelabPreload;
 
     window.p5.prototype.allSprites = new window.Group();
     window.p5.prototype.spriteUpdate = true;
@@ -202,7 +203,7 @@ GameLab.prototype.reset = function (ignore) {
   }
 
   window.p5.prototype.gamelabPreload = _.bind(function () {
-    this.p5decrementPreload = p5._getDecrementPreload(arguments, this.p5);
+    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
   // Discard the interpreter.
@@ -255,7 +256,7 @@ GameLab.prototype.callHandler = function (name, allowQueueExtension, extraArgs) 
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        handle.func.apply(null, extraArgs);
+        handler.func.apply(null, extraArgs);
       }
     }
   }, this));
@@ -319,7 +320,7 @@ GameLab.prototype.execute = function() {
   new window.p5(_.bind(function (p5obj) {
       this.p5 = p5obj;
 
-      p5obj.registerPreloadMethod('gamelabPreload', p5.prototype);
+      p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
       p5obj.setupGlobalMode();
 
@@ -357,7 +358,7 @@ GameLab.prototype.execute = function() {
           this.JSInterpreter.executeInterpreter();
         }
       }, this);
-    }, this), divGameLab);
+    }, this), 'divGameLab');
 
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
