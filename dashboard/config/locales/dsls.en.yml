@@ -213,6 +213,9 @@ en:
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
+      CSP_U4_rawMovieData:
+        description here: description here
+        title: title
       CSPfac intro:
         Overview of PD "course": Overview of PD "course"
       ECS Phase 3 Overview: {}
@@ -1023,6 +1026,9 @@ en:
       U4L03 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L03v2 - Student Introduction:
+        description here: description here
+        title: title
       U4L04 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1034,6 +1040,9 @@ en:
         title: title
       U4L06 JSON Object Method: {}
       U4L06 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L06v2 Student Lesson Introduction:
         description here: description here
         title: title
       U4L07 Student Lesson Introduction:
