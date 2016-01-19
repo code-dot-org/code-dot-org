@@ -6,6 +6,6 @@ class HooksUtils
 
   def self.get_unstaged_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    `git ls-files --exclude-standard --others`.split('\n').map(&:chomp).map { |x| File.expand_path("../../../#{x}", __FILE__)}
+    `git ls-files --exclude-standard --others`.split("\n").map(&:chomp).map { |x| File.expand_path("../../../#{x}", __FILE__)}
   end
 end
