@@ -3,9 +3,10 @@
 }
 
 .highlight-item {
-  width: 300px;
+  width: 260px;
   overflow: hidden;
-  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   float: left;
   position: relative;
 }
@@ -24,11 +25,11 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  line-height: 24px;
+  line-height: 20px;
   top: 0px;
   left: 0px;
-  margin: 20px;
   height: 260px;
+  width: 260px;
   display: none;
 }
 
@@ -44,7 +45,7 @@
 }
 
 .highlight-description {
-  padding: 0px 15px;
+  padding: 5px 15px;
 }
 
 .learn-button {
