@@ -147,23 +147,24 @@ iframe {
   #hoc-nav ul {
     position: absolute;
     top: 4em;
-    left: -1em;
-    background-color: #000;   /* Needed as a fallback colour for IE8 */
+    left: -2em;
+    background-color: rgb(0, 178, 192);   /* Needed as the opaque fallback colour for IE8 */
     background-color: rgba(0, 178, 192, .9);
     z-index: 99;
   }
   #hoc-nav ul:after {   /* This is the arrow in the responsive menu */
-    width: 0;
+    bottom: 100%;
+    left: 2em;
+    border: solid transparent;
+    content: " ";
     height: 0;
+    width: 0;
     position: absolute;
-    top: 0;
-    left: 1em;
-    content: '';
-    transform: translate(0%, -100%);
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 7px solid #000;   /* Needed as a fallback colour for IE8 */
-    border-bottom: 7px solid rgba(0, 178, 192, .9);
+    pointer-events: none;
+    border-color: rgba(0, 178, 192, 0);
+    border-bottom-color: rgb(0, 178, 192);  /* Needed as the opaque fallback colour for IE8 */
+    border-bottom-color: rgba(0, 178, 192, .9);
+    border-width: 8px;
   }
   #hoc-nav ul li {
     display: block;
