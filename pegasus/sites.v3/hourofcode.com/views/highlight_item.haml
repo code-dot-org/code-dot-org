@@ -4,8 +4,7 @@
   %a.learnmore-link{href: url}
     .highlight-img{style: "background-image:url(#{image_path})"}
     .highlight-caption
-      - unless item[:short_heading_s].blank?
-        %h4.caption-headline= item[:short_heading_s]
+      %h4.caption-headline= item[:short_heading_s]
       - unless item[:heading_s].blank?
         .highlight-description= item[:heading_s]
       %br
