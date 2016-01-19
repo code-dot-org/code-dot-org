@@ -20,13 +20,13 @@
     "build": "npm run copy-assets && npm run build-js && npm run build-css",
     "build:dist": "npm run lint && npm test && npm run clean && npm run copy-assets && npm run build-css && npm run build-js && npm run uglify-js",
     "build:min": "npm run copy-assets && npm run build-js:min && npm run build-css:min",
-    "build-css": "./build-css.js",
-    "build-css:min": "./build-css.js --min",
-    "build-js": "./build-js.js",
-    "copy-assets": "./copy-assets.js",
-    "start": "./build-js.js --watch",
+    "build-css": "scripts/build-css.js",
+    "build-css:min": "scripts/build-css.js --min",
+    "build-js": "scripts/build-js.js",
+    "copy-assets": "scripts/copy-assets.js",
+    "start": "scripts/build-js.js --watch",
     "test": "echo \"Tests Unimplemented.\"",
-    "uglify-js": "./uglify-js.js"
+    "uglify-js": "scripts/uglify-js.js"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
