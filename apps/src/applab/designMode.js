@@ -473,7 +473,8 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  var levelDom = $.parseHTML(Applab.levelHtml);
+  var sanitized = utils.sanitizeHtml(Applab.levelHtml);
+  var levelDom = $.parseHTML(sanitized);
   var children = $(levelDom).children();
 
   children.each(function () {
