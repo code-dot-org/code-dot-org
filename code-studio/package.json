@@ -18,14 +18,15 @@
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
     "build": "npm run copy-assets && npm run build-js && npm run build-css",
+    "build:dist": "npm run lint && npm test && npm run clean && npm run copy-assets && npm run build-css && npm run build-js && npm run uglify-js",
     "build:min": "npm run copy-assets && npm run build-js:min && npm run build-css:min",
     "build-css": "./build-css.js",
     "build-css:min": "./build-css.js --min",
     "build-js": "./build-js.js",
     "copy-assets": "./copy-assets.js",
     "start": "./build-js.js --watch",
-    "stop": "echo \"Unimplemented.\"",
-    "test": "echo \"Unimplemented.\""
+    "test": "echo \"Tests Unimplemented.\"",
+    "uglify-js": "./uglify-js.js"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
@@ -37,6 +38,7 @@
     "jshint": "^2.8.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
+    "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
     "uglify-js": "^2.6.1",
