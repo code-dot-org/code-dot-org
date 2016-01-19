@@ -5,6 +5,7 @@ var _ = require('lodash');
 var browserify = require('browserify');
 var chalk = require('chalk');
 var child_process = require('child_process');
+var envify = require('envify/custom'); // Specify custom enviornment variable map
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var path = require('path');
@@ -30,6 +31,9 @@ var watchify = require('watchify');
  *        <filenames>.js. If false, everything ends up in config.commonFile.
  * @param {boolean} config.shouldWatch if true, will watch file system for
  *        changes, and rebuild when it detects them
+ * @param {boolean} [config.shouldMinify] - If true, this bundle step will be
+ *        treated as part of a build for distribution, with certain environment
+ *        variables inlined, and dead code and whitespace removed.
  * @returns {Promise} that resolves after the build completes or fails - even
  *          if the build fails, the promise should resolve, but get an Error
  *          object as its result.  If watch is enabled, the promise resolves
@@ -44,6 +48,7 @@ exports.bundle = function (config) {
   var commonFile = config.commonFile;
   var shouldFactor = config.shouldFactor;
   var shouldWatch = config.shouldWatch;
+  var shouldMinify = config.shouldMinify;
 
   var outPath = function (inPath) {
     return path
@@ -86,9 +91,16 @@ exports.bundle = function (config) {
   }));
 
   // babelify tranforms jsx files for us
-  bundler.transform('babelify', {
-    compact: false
-  });
+  bundler.transform('babelify', { compact: false });
+
+  if (shouldMinify) {
+    // We inline 'production' as the NODE_ENV in distribution builds because this
+    // puts React into production mode, and allows uglifyify to remove related
+    // dead code paths.
+    bundler
+        .transform(envify({ NODE_ENV: 'production' }))
+        .transform('uglifyify');
+  }
 
   // factor-bundle splits the bundle back up into parts, but leaves common
   // modules in the main browserify stream.
@@ -102,10 +114,12 @@ exports.bundle = function (config) {
 
   // Optionally enable watch/rebuild loop
   if (shouldWatch) {
-    bundler.plugin(watchify).on('update', function () {
-      console.log(timeStamp() + ' Changes detected...');
-      makeBundle();
-    });
+    bundler
+        .plugin(watchify)
+        .on('update', function () {
+          console.log(timeStamp() + ' Changes detected...');
+          makeBundle();
+        });
   }
 
   // TODO: release/dist settings
