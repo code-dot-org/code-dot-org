@@ -1,21 +1,10 @@
+require_relative '../../shared/test/test_helper'
 require_relative '../../lib/cdo/pegasus'
-require 'minitest/autorun'
-require 'minitest/around/unit'
 require_relative '../src/env'
 require_relative '../../lib/cdo/geocoder'
 
-require 'webmock'
-require 'vcr'
-
 class GeocoderTest < Minitest::Test
-  VCR.configure do |c|
-    c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
-    c.hook_into :webmock
-  end
-
-  def around(&block)
-    VCR.use_cassette(@NAME.gsub('test_',''), {}, &block)
-  end
+  include SetupTest
 
   def test_finding_potential_addresses
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))

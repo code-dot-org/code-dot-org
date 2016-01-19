@@ -6,13 +6,7 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -21,9 +15,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:38 GMT
+      - Tue, 19 Jan 2016 00:12:01 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:38 GMT
+      - Wed, 20 Jan 2016 00:12:01 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -725,20 +719,14 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:38 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
     uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Post%20Road%20Westport%20CT&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -747,9 +735,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:39 GMT
+      - Tue, 19 Jan 2016 00:12:01 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:39 GMT
+      - Wed, 20 Jan 2016 00:12:01 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -845,20 +833,14 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:39 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
     uri: http://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -867,9 +849,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:39 GMT
+      - Tue, 19 Jan 2016 00:12:01 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:39 GMT
+      - Wed, 20 Jan 2016 00:12:01 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -965,20 +947,14 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:39 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
     uri: http://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT%20and%20other%20stuff&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -987,9 +963,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:39 GMT
+      - Tue, 19 Jan 2016 00:12:01 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:39 GMT
+      - Wed, 20 Jan 2016 00:12:01 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -1086,20 +1062,14 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:39 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
     uri: http://maps.googleapis.com/maps/api/geocode/json?address=1st%202%20and%203rd%20person%20in%20California&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -1108,9 +1078,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:39 GMT
+      - Tue, 19 Jan 2016 00:12:01 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:39 GMT
+      - Wed, 20 Jan 2016 00:12:01 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -1177,20 +1147,14 @@ http_interactions:
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:39 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
     uri: http://maps.googleapis.com/maps/api/geocode/json?address=3%20Rover%20Road%20in%20Christmasville%20MA%2012346&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -1199,9 +1163,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:39 GMT
+      - Tue, 19 Jan 2016 00:12:01 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:39 GMT
+      - Wed, 20 Jan 2016 00:12:01 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -1222,20 +1186,14 @@ http_interactions:
            "status" : "ZERO_RESULTS"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:39 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
 - request:
     method: get
     uri: http://maps.googleapis.com/maps/api/geocode/json?address=1500000001230b&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -1244,9 +1202,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 18 Jan 2016 22:49:39 GMT
+      - Tue, 19 Jan 2016 00:12:02 GMT
       Expires:
-      - Tue, 19 Jan 2016 22:49:39 GMT
+      - Wed, 20 Jan 2016 00:12:02 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -1267,5 +1225,5 @@ http_interactions:
            "status" : "ZERO_RESULTS"
         }
     http_version: 
-  recorded_at: Mon, 18 Jan 2016 22:49:39 GMT
+  recorded_at: Tue, 19 Jan 2016 00:12:02 GMT
 recorded_with: VCR 3.0.0
