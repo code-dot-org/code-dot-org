@@ -132,4 +132,3 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 З повагою, [NAME], [TITLE]
 
-<%= view :signup_button %>

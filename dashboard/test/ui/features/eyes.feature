@@ -199,5 +199,10 @@ Scenario Outline: Simple page view without instructions dialog
   And I close my eyes
   And I sign out
 Examples:
-  | url                                                               | test_name                 |
-  | http://learn.code.org/projects/applab/new                         | new applab project        |
+  | url                                                               | test_name                  |
+  | http://learn.code.org/projects/applab/new                         | new applab project         |
+  | http://hourofcode.com/us                                          | hourofcode.com us          |
+  | http://hourofcode.com/br                                          | hourofcode.com br          |
+  | http://code.org/                                                  | code.org homepage          |
+  | http://studio.code.org/                                           | logged out studio homepage |
+

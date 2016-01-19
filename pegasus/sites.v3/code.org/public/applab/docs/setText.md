@@ -58,10 +58,10 @@ onEvent("clickCounter", "click", function(event) {
 ____________________________________________________
 [example]
 
-**Example Random Thoughts** Demonstrate clearing a textInput box.
+**Example Random Thoughts** Demonstrate reading and then clearing a textInput box.
 
 ```
-// Demonstrate clearing a textInput box.
+// Demonstrate reading and then clearing a textInput box.
 textInput("yourThought","");
 onEvent("yourThought", "change", function(event) {
   write(getText("yourThought"));

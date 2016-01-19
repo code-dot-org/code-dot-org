@@ -7,6 +7,7 @@
 
 var skinsBase = require('../skins');
 var msg = require('./locale');
+var commonMsg = require('../locale');
 var constants = require('./constants');
 var studioApp = require('../StudioApp').singleton;
 
@@ -15,14 +16,25 @@ var HIDDEN_VALUE = constants.HIDDEN_VALUE;
 var CLICK_VALUE = constants.CLICK_VALUE;
 var VISIBLE_VALUE = constants.VISIBLE_VALUE;
 
+// Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
+// Use to avoid "story" reference in share text for a given skin.
+var plainTwitterOptions = {
+  text: commonMsg.defaultTwitterText() + " @codeorg",
+  hashtag: 'HourOfCode'
+};
 
 function loadGumball(skin, assetUrl) {
+  skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'dots';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
   skin.spriteHeight = 110;
   skin.spriteWidth = 110;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 60;
+  skin.spriteCollisionRectHeight = 60;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -120,14 +132,17 @@ function loadGumball(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: skin.walkValues[i],
-        emotionCycles: 0,
-        extraEmotions: 3
+        extraEmotions: 3,
+        walkingEmotions: 3
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8,
+        walkingEmotions: 3,
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -219,12 +234,17 @@ function loadGumball(skin, assetUrl) {
 }
 
 function loadIceAge(skin, assetUrl) {
-  skin.defaultBackground = 'icy';
+  skin.twitterOptions = plainTwitterOptions;
+  skin.defaultBackground = 'icy1';
   skin.projectileFrames = 10;
   skin.itemFrames = 10;
 
   skin.spriteHeight = 130;
   skin.spriteWidth = 130;
+
+  // Dimensions of a rectangle in sprite center in which item collisions occur.
+  skin.spriteCollisionRectWidth  = 60;
+  skin.spriteCollisionRectHeight = 60;
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
@@ -264,23 +284,23 @@ function loadIceAge(skin, assetUrl) {
   skin.fadeExplosion = false;
   skin.timePerExplosionFrame = 40;
 
-  skin.grassy = {
-    background: skin.assetUrl('background.jpg'),
+  skin.icy1 = {
+    background: skin.assetUrl('background_icy1.jpg'),
   };
-  skin.tile = {
-    background: skin.assetUrl('background_tile.jpg'),
+  skin.icy2 = {
+    background: skin.assetUrl('background_icy2.jpg'),
   };
-  skin.leafy = {
-    background: skin.assetUrl('background_leafy.jpg'),
+  skin.icy3 = {
+    background: skin.assetUrl('background_icy3.jpg'),
   };
-  skin.icy = {
-    background: skin.assetUrl('background_icy.jpg'),
+  skin.icy4 = {
+    background: skin.assetUrl('background_icy4.jpg'),
   };
-  skin.flower = {
-    background: skin.assetUrl('background_flower.jpg'),
+  skin.icy5 = {
+    background: skin.assetUrl('background_icy5.jpg'),
   };
-  skin.iceberg = {
-    background: skin.assetUrl('background_ice.jpg'),
+  skin.ground = {
+    background: skin.assetUrl('background_ground.jpg'),
   };
 
   skin.avatarList = ["manny", "sid", "scrat", "diego", "granny"];
@@ -297,36 +317,39 @@ function loadIceAge(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 12,
-        emotionCycles: 0,
-        extraEmotions: 3
+        extraEmotions: 3,
+        walkingEmotions: 3
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8,
+        walkingEmotions: 3,
+      },
+      animationFrameDuration: 3
     };
   });
 
 
   skin.backgroundChoices = [
     [msg.setBackgroundRandom(), RANDOM_VALUE],
-    [msg.setBackgroundGrassy(), '"grassy"'],
-    [msg.setBackgroundTile(), '"tile"'],
-    [msg.setBackgroundLeafy(), '"leafy"'],
-    [msg.setBackgroundIcy(), '"icy"'],
-    [msg.setBackgroundFlower(), '"flower"'],
-    [msg.setBackgroundIceberg(), '"iceberg"']];
+    [msg.setBackgroundIcy1(), '"icy1"'],
+    [msg.setBackgroundIcy2(), '"icy2"'],
+    [msg.setBackgroundIcy3(), '"icy3"'],
+    [msg.setBackgroundIcy4(), '"icy4"'],
+    [msg.setBackgroundIcy5(), '"icy5"'],
+    [msg.setBackgroundGround(), '"ground"']];
 
   // NOTE: background names must have double quotes inside single quotes
   // NOTE: last item must be RANDOM_VALUE
   skin.backgroundChoicesK1 = [
-    [skin.grassy.background, '"grassy"'],
-    [skin.tile.background, '"tile"'],
-    [skin.leafy.background, '"leafy"'],
-    [skin.icy.background, '"icy"'],
-    [skin.flower.background, '"flower"'],
-    [skin.iceberg.background, '"iceberg"'],
+    [skin.icy1.background, '"icy1"'],
+    [skin.icy2.background, '"icy2"'],
+    [skin.icy3.background, '"icy3"'],
+    [skin.icy4.background, '"icy4"'],
+    [skin.icy5.background, '"icy5"'],
+    [skin.ground.background, '"ground"'],
     [skin.randomPurpleIcon, RANDOM_VALUE]];
 
   skin.spriteChoices = [
@@ -433,12 +456,14 @@ function loadInfinity(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 19,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 12
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -547,6 +572,7 @@ function loadInfinity(skin, assetUrl) {
 }
 
 function loadHoc2015(skin, assetUrl) {
+  skin.twitterOptions = plainTwitterOptions;
   skin.preloadAssets = true;
 
   skin.hideIconInClearPuzzle = true;
@@ -788,12 +814,14 @@ function loadHoc2015(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: name == 'r2-d2' ? 14 : 16,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: name == 'r2-d2' ? 14 : 8
       },
-      timePerFrame: 100
+      animations: {
+        turns: 8
+      },
+      animationFrameDuration: 3
     };
   });
 
@@ -1177,7 +1205,7 @@ function loadHoc2015x(skin, assetUrl) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationRate: 5, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
+    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: constants.SpriteSpeed.VERY_SLOW, isHazard: true }
   };
 
   // Spritesheet for animated goal.
@@ -1249,12 +1277,15 @@ function loadHoc2015x(skin, assetUrl) {
       dropdownThumbnail: skin.assetUrl('avatar_' + name + '_thumb.png'),
       frameCounts: {
         normal: 21,
-        animation: 0,
         turns: 8,
         emotions: 0,
         walk: 19
       },
-      timePerFrame: 100
+      drawScale: 2,
+      animations: {
+        turns: 8
+      },
+      animationFrameDuration: 3
     };
   });
   skin['bb-8'].movementAudio = [
@@ -1426,11 +1457,12 @@ function loadStudio(skin, assetUrl) {
       sprite: skin.assetUrl(name + '_spritesheet_200px.png'),
       dropdownThumbnail: skin.assetUrl(name + '_thumb.png'),
       frameCounts: {
-        normal: 1,
-        animation: 1,
+        normal: 2,
+        holdIdleFrame0Count: 8,
         turns: 7,
         emotions: 3
-      }
+      },
+      animationFrameDuration: 6
     };
   });
 

@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### 以下示范专栏是关于支持计算机科学教育周，其目的是让其为州，议员，商界领袖等所用。
 
@@ -47,4 +46,3 @@ Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. 整个**[州]**的学校，学生们将参加全国编程一小时，探秘计算机科学并希望能激发他们不断的更多的学习。 我也会加入他们，并同样邀请你也加入进来。 每个人都应该学习如何编程。 Visit https://hourofcode.com/<%= @country %> to learn more and get started. 支持我们的努力，把计算机科学带到更多的学校**[州]**。.
 
-<%= view :signup_button %>

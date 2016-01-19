@@ -1,0 +1,50 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-12-16T20:46:42.000Z",
+  "level_num": "custom",
+  "user_id": 208,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "readRecords": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "data_tables": "{\r\n  \"ages\":\r\n  [\r\n    {\r\n      \"name\": \"Irving\",\r\n      \"age\": 16,\r\n      \"id\": 1\r\n    },\r\n    {\r\n      \"name\": \"Alannah\",\r\n      \"age\": 17,\r\n      \"id\": 2\r\n    },\r\n    {\r\n      \"name\": \"Annette\",\r\n      \"age\": 16,\r\n      \"id\": 3\r\n    },\r\n    {\r\n      \"name\": \"Alex\",\r\n      \"age\": 16,\r\n      \"id\": 4\r\n    },\r\n    {\r\n      \"name\": \"Hayley\",\r\n      \"age\": 16,\r\n      \"id\": 5\r\n    },\r\n    {\r\n      \"name\": \"Kira\",\r\n      \"age\": 17,\r\n      \"id\": 6\r\n    },\r\n    {\r\n      \"name\": \"Hector\",\r\n      \"age\": 18,\r\n      \"id\": 7\r\n    },\r\n    {\r\n      \"name\": \"Greg\",\r\n      \"age\": 18,\r\n      \"id\": 8\r\n    },\r\n    {\r\n      \"name\": \"Atiah\",\r\n      \"age\": 18,\r\n      \"id\": 9\r\n    },\r\n    {\r\n      \"name\": \"Raymond\",\r\n      \"age\": 17,\r\n      \"id\": 10\r\n    },\r\n    {\r\n      \"name\": \"Jaquan\",\r\n      \"age\": 17,\r\n      \"id\": 11\r\n    },\r\n    {\r\n      \"name\": \"Mia\",\r\n      \"age\": 16,\r\n      \"id\": 12\r\n    },\r\n    {\r\n      \"name\": \"Faatimah\",\r\n      \"age\": 18,\r\n      \"id\": 13\r\n    },\r\n    {\r\n      \"name\": \"Moises\",\r\n      \"age\": 17,\r\n      \"id\": 14\r\n    },\r\n    {\r\n      \"name\": \"Yusra\",\r\n      \"age\": 15,\r\n      \"id\": 15\r\n    },\r\n    {\r\n      \"name\": \"Calvin\",\r\n      \"age\": 16,\r\n      \"id\": 16\r\n    },\r\n    {\r\n      \"name\": \"Ashley\",\r\n      \"age\": 17,\r\n      \"id\": 17\r\n    },\r\n    {\r\n      \"name\": \"Luna\",\r\n      \"age\": 17,\r\n      \"id\": 18\r\n    }\r\n  ]\r\n}",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "start_blocks": "readRecords(\"ages\", {}, function(records) {\r\n  for (var i = 0; i < records.length; i++) {\r\n    var r = records[i];\r\n    console.log(r.id + \": \" + r.name + \", \" + r.age);\r\n  }\r\n  console.log(\"Total Records: \" + records.length);\r\n});",
+    "instructions": "Run this app and see what it prints to the console. Then remix the app and run the remixed version to see what happened to the data. (Click to see full instructions)",
+    "markdown_instructions": "# Remixing Apps That Use Data\r\n\r\nLet’s say you want to **remix** a classmate’s app to add some cool new features. You can do this by clicking the “Remix” button at the top of your screen.\r\n\r\n<img src=\"https://images.code.org/71f299efc9b95ab85471f6a66450af26-image-1450299352596.55.40.png\">\r\n\r\n**Clicking the “Remix” button creates your own copy of the app**, so that you can make changes and add things without affecting the original app. Remixing an app copies over all the **code** and **design elements** of the original app, but what happens to the **data**?\r\n\r\n# Do This:\r\n* **Run this app** and see what it prints to the console. Open the data viewer and **see what records are stored**.\r\n* **Remix the app** by clicking the “Remix” button at the top of your screen.\r\n\t* **Note:** This will take you out of this stage and bring you to a more free-form version of App Lab.\r\n* Go **run the remixed version** of the app. See what it prints to the console, look around in the data viewer, and then **come back here**. We’ll talk about what happened in the next level.\r\n\r\n"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

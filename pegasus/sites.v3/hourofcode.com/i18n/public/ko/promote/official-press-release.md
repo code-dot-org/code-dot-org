@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # 지역 행정직정치인(선출직)을 위한 샘플 보도 자료
 
@@ -49,4 +48,3 @@ nav: promote_nav
   
 
 
-<%= view :signup_button %>

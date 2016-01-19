@@ -32,6 +32,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
   gem 'konacha'  # Mocha + Chai JS testing in Rails
@@ -112,7 +113,7 @@ gem 'honeybadger', '~> 1.11' # error monitoring
 
 gem 'newrelic_rpm', '~> 3.10.0.279', group: [:staging, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.2.3'
+gem 'redcarpet', '~> 3.3.4'
 
 gem 'geocoder'
 
@@ -127,13 +128,11 @@ gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
 gem 'naturally' # for sorting string naturally
 
-gem 'videojs_rails'
-
 gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by a build script.
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+gem 'therubyracer', '~> 0.12.2', platforms: :ruby
 
 gem 'jwt' # single signon for zendesk
 
@@ -151,7 +150,6 @@ gem 'heroku_rails_deflate', group: [:staging, :production, :test, :levelbuilder]
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
-gem 'react-rails', '~> 1.0'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'
@@ -168,7 +166,7 @@ gem 'rack-ssl-enforcer'
 # PubSub for NetSim
 gem 'pusher', '~> 0.14.5'
 
-gem 'viddl-rb', group: [:development, :staging, :levelbuilder]
+gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'net-ssh'
 gem 'net-scp'

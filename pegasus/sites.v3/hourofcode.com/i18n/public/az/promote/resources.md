@@ -132,4 +132,3 @@ Zəhmət olmazsa, mənimlə əlaqə saxlayın: [TELEFON NÖMRƏSİ VƏ YA E-POÇ
 
 Ən xoş arzularla, [NAME], [TITLE]
 
-<%= view :signup_button %>

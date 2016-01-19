@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Comment organiser Une Heure de Code dans votre communauté ?
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Connectez-vous localement.**Consultez[<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) pour en savoir plus sur l'éducation de l'informatique dans votre état. Signez la pétition ici et vous recevrez des actualités de Code.org au sujet de leurs efforts de promotion au niveau local, régional et national.
 
-<%= view :signup_button %>

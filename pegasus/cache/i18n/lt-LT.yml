@@ -28,6 +28,9 @@
   twentyhours_heading: Išbandykite įvadą į programavimo kursą
   twentyhours_text: Baigėte savo „Programavimo valandą“?  Išmokite daugiau apie informatiką
     ir programavimą kituose kursuose.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study
+    computer science.
   hoc2014_heading: Prisijunkite prie <a href="http://hourofcode.com">Programavimo
     valandos</a><br/>2014 gruodžio 8–14 dienomis<br/>
   hoc2014_students: Mokiniai
@@ -38,13 +41,13 @@
   hoc2014_support: Paremkite &#x25BE;
   hoc2014_whatishoc: Kas yra „Programavimo valanda“?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_signup: Užregistruokite savo renginį
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Ieškoti
   csedweek_map_search_reset: Iš naujo
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: Legenda
+  csedweek_map_legend_event: Programavimo valandos renginys
+  csedweek_map_legend_cs_tech_jam: Specialus renginys
   cded_sign_up: Užsiregistruoti
   cded_try_it: Išmėginkite
   twentyhours_trynow: Išmėginkite dabar
@@ -71,20 +74,20 @@
   thank_you_: Ačiū!
   congratulations: Sveikiname!
   congratulations_on_completing_hoc: Sveikiname užbaigus „Programavimo valandą“
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
+  congratulations_volunteer: Sveikiname! Dabar jūs išbandėte „Programavimo valandą”,
+    <a href="https://code.org/volunteer">savanoriškai užsiregistruokite klasėje</a>
+    ir padėkite mokiniams išmokti programuoti naudojant „Programavimo valandą”!
   course_name_accelerated: Pagreitintas kursas
   course_name_course1: Kursas 1
   course_name_course2: Kursas 2
   course_name_course3: Kursas 3
   course_name_course4: Kursas 4
-  congratulations_on_completing_course: Congratulations on completing %{course}
+  congratulations_on_completing_course: Sveikiname pabaigus %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Prašome pasirinkti teisingą amžių
   enter_valid_email: Prašome įvesti galiojantį el. pašto adresą
   get_a_certificate_message: Išsiųsime Jums sertifikatą ir informaciją apie  <a href='/learn/beyond'>„Programavimo
     valandą“</a>
@@ -219,9 +222,9 @@
   homepage_slot_text_course4: Kursas 4
   homepage_slot_text_shop: Parduotuvė
   homepage_slot_text_flappy: Flappy kodas
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: '"Programavimo valanda" kiekvienam moksleiviui.'
   homepage_action_text_num_served: '# išbandė'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Prisijunkite
   homepage_action_text_sign_up: Užsiregistruoti
   homepage_action_text_try_it: Išmėginkite
   homepage_action_text_volunteers: Technical volunteers wanted
@@ -240,6 +243,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Sužinok daugiau
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Sužinok daugiau
   homepage_slot_text_title_hoc: „Programavimo valanda“
   homepage_slot_text_blurb_hoc: Išmokti gali kiekvienas. Pradėk šiandien
   homepage_slot_text_link_hoc: Išmėgink „Programavimo valandą“
@@ -248,6 +254,7 @@
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Mokiniai
   homepage_slot_text_blurb_students: Peržiūrėkite visas mūsų pamokėles
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Išmėginkite Kodavimo studiją
   homepage_slot_text_link_local: Suraskite kursus savo gyvenvietėje
   homepage_slot_text_link_othercourses: Kiti internetiniai kursai
@@ -308,9 +315,10 @@
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Klasikinis
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title_live: Ledynmetis
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
@@ -331,16 +339,17 @@
     šiame Minecraft pasaulyje.
   mc_shortdescription: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
     šiame Minecraft pasaulyje.
-  mc_gradelevel: Ages 4-104
+  mc_gradelevel: Amžius 4-104
   mc_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
+  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft programavimo valanda
-  volunteer_engineer_submission_title: Volunteer for the Hour of Code
+  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
+    of Code.
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
+    volunteers passionate about computer science education to help with their Hour
+    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
   volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
     to try an hour introduction to computer science, reaching tens of millions of
     students in 180+ countries. Please get involved during Computer Science Education
@@ -350,14 +359,14 @@
     computer science education</span> who can help in the classroom, or for somebody
     who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
     students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat). If you''re not looking to volunteer, <a href="%{url}">learn
-    more</a> about organizing your own Hour of Code event.'
+    could be done through a video chat).'
   volunteer_engineer_submission_intro_signup: Please enter the following information
     if you are a computer science student or software professional. Fields marked
     with a <span class="form-required-field">*</span> are required.
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and find a local volunteer
+    more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Vardas
@@ -399,7 +408,7 @@
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Pateikti
   volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other engineers, <a href="%{url}">learn
+    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
     more here.</a>
   volunteer_engineer_submission_commitment_uncertain: Neaiškus
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 valanda per savaitę
@@ -662,9 +671,17 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
+  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
+    Code Studio tutorials and courses. Note: Code.org offices will be closed December
+    19 - January 3. Please expect delayed answers to any questions you submit until
+    January 4.'
+  dashboard_announce_button_text: Sužinok daugiau
   dashboard_announce_hoc: <b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
     Windows Store as a thank-you gift. Join classrooms worldwide during December 7-13.
+  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
   code_hoc_coming: „Programavimo valanda“ jau čia – gruodžio 8-14!
   code_sign_up: Užsiregistruokite ir dalyvaukite CS švietimo savaitėje
   learn_more: Sužinokite daugiau
@@ -716,6 +733,10 @@
   carousel_heading_ide: Populiaru tarp mokytojų
   educator_notes: Pedagogų pastabos
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
+    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
+    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
+    here.</a>
   how_to_teach_hoc: Kaip mokyti „Programavimo valandą“
   more_resources_educators: Daugiau išteklių mokytojams ir švietimo atstovams
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
@@ -732,8 +753,8 @@
   mobile_devices: Pamokos mobiliesiems telefonams
   frozen_name: Programuokite kartu su Ana ir Elze
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Sukurk savo pirmą kompiuterinę programą
-  codeintl_name: Sukurk savo pirmą kompiuterinę programą
+  codeorg_name: Klasikinis labirintas
+  codeintl_name: Klasikinis labirintas
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Įvadas į JavaScript
   khanes_name: Įvadas į JavaScript
@@ -769,10 +790,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: „Akmuo, popierius, žirklės“
-  hourofcode_name: Sukurk savo pirmą kompiuterinę programą
+  hourofcode_name: Klasikinis labirintas
   playlab_name: Laboratorija
   infinity_name: Žaidimų laboratorija Infinity
   artist_name: Menininkas
+  monstercoding_name: Mystery Island Coding Quest
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minutes of Code
+  teacherled_name: Teacher Led Lesson Plans
   codeorg_gradelevel: Amžius 4-104
   codeintl_gradelevel: Amžius 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -812,10 +840,17 @@
   projguts_gradelevel: Amžius 10-13
   hourofcode_gradelevel: Amžius 4-104
   frozen_gradelevel: Amžius 8+
-  starwars_gradelevel: Ages 6+
+  starwars_gradelevel: Amžius 4-104
   playlab_gradelevel: Amžius 4-104
   infinity_gradelevel: Amžius 4-104
-  artist_gradelevel: Amžius 4-104
+  artist_gradelevel: Amžius 8+
+  monstercoding_gradelevel: Amžius 5-13
+  allcancode_gradelevel: Ages 5-10
+  csfirst_gradelevel: Ages 9-14
+  boxisland_gradelevel: Pradinės klasės
+  codesters_gradelevel: Ages 12-14
+  texasinstruments_gradelevel: Ages 13-16
+  teacherled_gradelevel: Ages 5+
   codeorg_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeintl_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   thinkersmithspanish_platformtext: Veikla be kompiuterių
@@ -857,6 +892,13 @@
   frozen_platformtext: Modernios naršyklės bei planšetės
   starwars_platformtext: Modernios naršyklės bei planšetės
   playlab_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
+  monstercoding_platformtext: Modern web browsers, iOS, Android
+  allcancode_platformtext: Modern web browsers, iOS
+  csfirst_platformtext: Modern web browsers
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Modern web browsers
+  texasinstruments_platformtext: TI Calculators
+  teacherled_platformtext: Šiuolaikinės naršyklės, išmanieji telefonai, planšetės
   codeorg_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   codeintl_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -911,12 +953,25 @@
   hourofcode_shortdescription: Išmokite koduoti su Marku Zuckerbergu ir Angry Birds!
   frozen_shortdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_shortdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+    žaidimą tolimoje galaktikoje.
   playlab_shortdescription: Sukurk istoriją arba žaidimą!
   infinity_shortdescription: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
     bus Disnėjaus Infinity personažai.
   artist_shortdescription: Nupiešk šaunius piešinius ir ornamentus su menininku!
+  monsterocding_shortdescription: A colorful self-guided programming adventure for
+    children.
+  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
+    language.
+  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
+    your own style!
+  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  codesters_shortdescription: Create your own games, animations, and artwork using
+    Python.
+  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
+    calculator.
+  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
+    these lesson plans.
   codeorg_longdescription: Išmokite informatikos pagrindus tiesiog žaisdami. Išmokti
     padės Bilas Geitsas, Markas Cukerbergas ir žaidimų personažai iš Angry Birds ir
     Plants vs. Zombies! Išmokite kartojimo ciklus, sąlygos sakinius ir paprastus algoritmus.
@@ -1049,11 +1104,42 @@
   frozen_longdescription: Naudokime komandas, kad Ana ir Elzė kartu išbandytų ledo
     grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus. Savo kūriniais
     galėsite pasidalinti su draugais!
-  starwars_longdescription: Learn to program droids, and create your own Star Wars
-    game in a galaxy far, far away.
+  starwars_longdescription: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
+    žaidimą tolimoje galaktikoje.
   playlab_longdescription: Create a story or make a game with Play Lab! Make animals,
     pirates, zombies, ninjas, and many more characters move, make sounds, score points,
     and even throw fireballs!
+  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
+    offers a fun filled self guided adventure that teaches several key programming
+    concepts to children. Each block based activity builds on the previous, introducing
+    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
+    colorful animated graphics, audio instructions.
+  allcancode_longdescription: Students play an adventure game based on an original
+    story. They guide Marco - the main character - through each level by giving him
+    step-by-step instructions in the form of the visual programming language used
+    by the Hour of Code. They get introduced to sequencing commands, iteration and
+    conditions without even noticing it.
+  csfirst_longdescription: Create a story about two characters at sea. Animate the
+    water, and customize the scenery to add your own flare. Use code to tell the story
+    you want to tell!
+  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
+    clocks scattered in the wilderness! In this tutorial you will learn the basics
+    of algorithms, sequences, loops and conditionals!
+  codesters_longdescription: 'Create your own games, animations, and artwork using
+    Python.  Once you’re done, share them with friends! Program in Python, a real
+    programming language used every day at companies - our drag and drop toolkit makes
+    it easy to learn!  Try building a basketball game, choreographing a dance, or
+    designing an animated card! '
+  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
+    in class as a way to spark students'' interest in coding with the TI technology
+    they carry in their backpacks everyday.  Learn the basics of coding using the
+    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
+    needed!  '
+  teacherled_longdescription: Now that tens of thousands of educators have tried the
+    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
+    activities that teach the basics of computer science. To help teachers find inspiration,
+    we collected and curated one-hour teacher-led lesson and activity plans designed
+    for different subject areas for Hour of Code veterans.
   codeorg_beyond_name: Intro Computer Science (grades K-8)
   khan_beyond_name: Learn computer programming
   tynker_beyond_name: Learn programming at home

@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire community.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **დაამყარეთ კავშირი ადგილობრივად.** ეწვიეთ [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>)-ს რათა გაიგოთ მეტი თქვენს შტატში კომპიუტერული მეცნიერების განათლების შესახებ. მოაწერეთ ხელი პეტიციას და მიიღეთ Code.org-ისგან ინფრომაცია ადგილობრივი, შტატისა და ფედერალური ოლქის მასშტაბის ღონისძიებები შესახებ.
 
-<%= view :signup_button %>

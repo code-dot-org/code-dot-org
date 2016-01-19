@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 
@@ -26,7 +27,7 @@ class ScriptLevelsController < ApplicationController
   def self.is_cachable_request?(request)
     script_id = request.params[:script_id]
     script = Script.get_from_cache(script_id) if script_id
-    script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+    script && ScriptConfig.allows_public_caching_for_script(script.name)
   end
 
   def reset
@@ -45,7 +46,8 @@ class ScriptLevelsController < ApplicationController
       client_state.reset
       reset_session
 
-      render html: "<html><head><script>sessionStorage.clear(); window.location = '#{redirect_path}'</script></head><body>OK</body></html>".html_safe
+      @redirect_path = redirect_path
+      render 'levels/reset_and_redirect', formats: [:html], layout: false
     end
   end
 
@@ -69,6 +71,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     load_user
+    return if performed?
     load_section
 
     return if redirect_applab_under_13(@script_level.level)
@@ -93,7 +96,7 @@ class ScriptLevelsController < ApplicationController
   # described here:
   # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
-    if script && Gatekeeper.allows('public_caching_for_script', where: {script_name: script.name})
+    if script && ScriptConfig.allows_public_caching_for_script(script.name)
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
@@ -135,9 +138,6 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    # never load solutions for Jigsaw
-    return if @level.game.name == 'Jigsaw'
-
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
       authorize! :manage, :teacher
@@ -166,6 +166,11 @@ class ScriptLevelsController < ApplicationController
 
   def load_user
     return if params[:user_id].blank?
+
+    if current_user.nil?
+      render text: 'Teacher view is not available for this puzzle', layout: true
+      return
+    end
 
     user = User.find(params[:user_id])
 

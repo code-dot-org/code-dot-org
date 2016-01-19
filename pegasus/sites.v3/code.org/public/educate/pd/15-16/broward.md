@@ -43,13 +43,16 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**December 5th Location**
+**February 6th Location**
 
 [NOVA Southeastern University <br/>
-Building & Room TBD<br/>
+Carl Desantis Building<br/>
+Room TBD<br/>
 3301 College Ave.<br/>
 Fort Lauderdale, FL 33315](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
-
+ <br/>
+ <br/>
+ Please print this [parking pass](http://bit.ly/1jxj46f) for Saturday's workshop. 
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -201,15 +204,15 @@ Quarter 4: Saturday, April 23, 2016
 Breakfast and lunch will be served.
 
 
-**December 5th Location**
+**February 6th Location**
 
 [NOVA Southeastern University<br/>
 Carl Desantis Building<br/>
-Room 1048<br/>
+Room TBD<br/>
 3301 College Ave<br/>
 Fort Lauderdale, FL 33314](https://www.google.com/maps/place/Nova+Southeastern+University/@26.0802004,-80.2520141,14z/data=!4m2!3m1!1s0x0:0xa8e3f75c01d290b6)
 
-Free parking is available near the building with your [parking pass](/files/broward-9-19-parking-pass-nsu.pdf). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
+Free parking is available near the building with your [parking pass](http://bit.ly/1jxj46f). You can also find a campus map [here.](/files/nsu-main-campus-map.pdf)
 
 
 **What to bring to Phase 3 quarterly sessions:**
@@ -223,62 +226,12 @@ Snacks
 <br/>
 Water
 
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
+
+More info coming soon!
 
 [**Back to the top**](#top)
 
-<a id="counselor-admin"></a>
-
-
-## Counselors & Administrators
-
-Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
-
-### Counselors##
-
-**Save the date**
-
-Friday, November 20, 2015 <br/>
-12:00pm - 3:00pm
-
-
-**Location**
-
-[Piper High School<br/>
-Main Building Auditorium<br/>
-8000 NW 44th Street<br/>
-Sunrise, Florida  33351](https://www.google.com/maps/place/Piper+High+School/@26.1787405,-80.2575832,15z/data=!4m2!3m1!1s0x0:0x63fe14d377551b60?sa=X&ved=0CGsQ_BIwCmoVChMI1sGLx4qYyQIVQRRjCh2VrgqW)
-
-Free parking is available in the school parking lot.
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-### Administrators##
-
-**Save the date**
-
-Friday, November 20, 2015 <br/>
-8:30am - 10:30am
-
-**Location**
-
-[Piper High School<br/>
-Main Building Auditorium<br/>
-8000 NW 44th Street<br/>
-Sunrise, Florida  33351](https://www.google.com/maps/place/Piper+High+School/@26.1787405,-80.2575832,15z/data=!4m2!3m1!1s0x0:0x63fe14d377551b60?sa=X&ved=0CGsQ_BIwCmoVChMI1sGLx4qYyQIVQRRjCh2VrgqW)
-
-Free parking is available in the school parking lot.
-
-**What to bring**
-
-Snacks
-<br/>
-Water
-
-[**Back to the top**](#top)
 
 
 ----------

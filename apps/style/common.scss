@@ -289,6 +289,7 @@ button.arrow:disabled {
   font-size: 14px;
   overflow: hidden;
   min-height: calc(50% - #{($workspace-headers-height / 2) + 1}) !important;
+  direction: ltr;
 }
 
 #codeTextbox.pin_bottom {
@@ -439,6 +440,9 @@ html[dir='rtl'] #codeWorkspace {
   }
   html[dir='rtl'] #codeWorkspace {
     right: $width;
+  }
+  html[dir='rtl'] body.readonly #codeWorkspace {
+    right: 0px;
   }
   div#visualizationResizeBar {
     left: $width;
@@ -830,6 +834,29 @@ input[type="radio"] {
   padding-right: 10px;
   padding-bottom: 10px;
   height: auto;
+
+  /* authored hints */
+  &.authored_hints {
+    width: 80px;
+
+    #prompt-icon {
+      padding-top: 20px;
+    }
+
+    #lightbulb {
+      position: absolute;
+      left: 40px;
+
+      #hintCount {
+        font-weight: bold;
+        font-size: 400px;
+        fill: white;
+        stroke: black;
+        stroke-width: 30px;
+        font-family: Verdana, Geneva, sans-serif;
+      }
+    }
+  }
 }
 
 #prompt-cell {
@@ -1312,6 +1339,7 @@ $workspace-header-button-margin: ($workspace-headers-height -
     margin: 10px 0;
     &.sharing-content {
       margin-left: $image_width + 15px;
+      margin-right: 25px;
       &.no-image {
         margin-left: 0;
       }
@@ -1321,6 +1349,17 @@ $workspace-header-button-margin: ($workspace-headers-height -
   label {
     margin-top: 15px;
     font-size: 20px;
+  }
+
+  .social-buttons {
+    a,
+    a:hover,
+    a:link,
+    a:visited {
+      background-color: transparent;
+      text-decoration: none;
+      color: white;
+    }
   }
 
   button {
@@ -1339,12 +1378,6 @@ $workspace-header-button-margin: ($workspace-headers-height -
       box-shadow: none;
     }
 
-    a, a:hover, a:link, a:visited {
-      background-color: transparent;
-      color: white;
-      text-decoration: none;
-    }
-
     #send-to-phone {
       clear: both;
     }
@@ -1355,10 +1388,10 @@ $workspace-header-button-margin: ($workspace-headers-height -
   }
 
   #sharing-input {
-    cursor: copy;
     margin: 0;
-    width: 200px;
+    width: 100%;
     padding: 10px;
+    cursor: text;
   }
 
   #copy-button {
@@ -1510,4 +1543,26 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-hover-div {
   max-width: 100% !important;
+}
+
+.legacy-share-view {
+  #belowVisualization, .hide-source #belowVisualization {
+    display: none;
+  }
+
+  #visualizationColumn {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .small-footer-base {
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+
+  #more-menu, #copyright-flyout {
+    left: auto;
+    right: 0;
+  }
 }

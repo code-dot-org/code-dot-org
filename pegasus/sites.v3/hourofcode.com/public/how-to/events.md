@@ -4,11 +4,10 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
 # How to organize an Hour of Code event
 
-Host an Hour of Code event during Computer Science Education Week (<%= campaign_date('short') %>) to celebrate computer science and inspire more students to try it. Anyone, anywhere can organize an Hour of Code event. 
+Computer Science Education Week is over but you can still do an Hour of Code all year round. Anyone, anywhere can organize an Hour of Code event. 
 
 ## 1) Prepare for your event
 - Determine a venue, date and time
@@ -54,4 +53,3 @@ Host an Hour of Code event during Computer Science Education Week (<%= campaign_
 |10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers. | 
 |11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.  | 
 
-<%= view :signup_button %>

@@ -21,6 +21,7 @@ $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
 $options.dashboard_domain = 'test-studio.code.org'
+$options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
@@ -55,6 +56,7 @@ opt_parser = OptionParser.new do |opts|
     $options.local = 'true'
     $options.pegasus_domain = 'localhost.code.org:3000'
     $options.dashboard_domain = 'localhost.studio.code.org:3000'
+    $options.hourofcode_domain = 'localhost.hourofcode.com:3000'
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
     print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
@@ -65,6 +67,9 @@ opt_parser = OptionParser.new do |opts|
     print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
           "Try '-d localhost.studio.code.org:3000' instead (this is the default when using '-l').\n" if d == 'localhost:3000'
     $options.dashboard_domain = d
+  end
+  opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
+    $options.hourofcode = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
     $options.realmobile = 'true'
@@ -187,9 +192,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
-    message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
+    message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
-    next
+    raise Parallel::Kill
   end
 
   if $options.browser and browser['browser'] and $options.browser.casecmp(browser['browser']) != 0
@@ -211,10 +216,15 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
+
+  # Force Applitools eyes to use a consistent host OS identifier for now
+  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
+  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
@@ -223,7 +233,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments = ''
 #  arguments += "#{$options.feature}" if $options.feature
   arguments += feature
-  arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
+  arguments += " -t #{$options.run_eyes_tests && !browser['mobile'] ? '' : '~'}@eyes"
+  arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
@@ -232,7 +243,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
-  arguments += " -t ~@no_ios" if browser['browserName'] == 'iphone'
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access

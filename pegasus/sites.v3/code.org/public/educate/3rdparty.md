@@ -56,6 +56,12 @@ nav: educate_nav
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
 
+## Funding for computer science programs
+
+U.S. Federal law recently recognized [computer science as part of the "well rounded education subjects"](http://blog.code.org/post/134932134563/sweeping-us-education-law-adds-computer-science), and explicitly [names computer science as an important STEM field](http://blog.code.org/post/130358071518/computer-science-is-finally-included-in-stem).
+
+Your school or district may be able to use Title I or Title II funds, and other department grant programs to apply towards offering CS courses. [More info](http://innovation.ed.gov/2015/12/07/a-new-chapter-for-computer-science-education/).
+
 
 ## More resources &mdash; for classrooms, afterschool clubs or learning online 
 

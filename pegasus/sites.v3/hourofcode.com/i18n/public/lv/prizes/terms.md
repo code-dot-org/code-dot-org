@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Balvas - noteikumi un nosacījumi
 
@@ -40,4 +39,3 @@ Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will sele
 
 <% end %>
 
-<%= view :signup_button %>

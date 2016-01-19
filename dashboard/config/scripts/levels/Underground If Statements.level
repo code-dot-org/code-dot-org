@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "craft",
-    "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"lava\",\"lava\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
+    "ground_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"lava\",\"lava\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"lava\",\"lava\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "action_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"oreRedstone\",\"oreDiamond\",\"stone\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"oreRedstone\",\"\",\"\",\"oreRedstone\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreDiamond\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
     "player_start_position": "[3, 5]",
@@ -33,7 +33,8 @@
     "embed": "false",
     "free_play": "false",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "ideal": "9"
   }
 }]]></config>
   <blocks>

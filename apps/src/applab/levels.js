@@ -50,6 +50,8 @@ levels.custom = {
     "dropdown": null,
     "getText": null,
     "setText": null,
+    "getNumber": null,
+    "setNumber": null,
     "checkbox": null,
     "radioButton": null,
     "getChecked": null,
@@ -100,6 +102,7 @@ levels.custom = {
     "updateRecord": null,
     "deleteRecord": null,
     "getUserId": null,
+    "drawChart": null,
     "drawChartFromRecords": null,
 
     // Turtle

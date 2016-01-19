@@ -51,20 +51,24 @@
   },
   {
     "name": "iPhone",
-    "browserName": "iphone",
-    "version": "8.2",
+    "platformName": "iOS",
+    "platformVersion": "9.2",
+    "browserName": "safari",
     "deviceName": "iPhone Simulator",
-    "platform": "OS X 10.10",
+    "appiumVersion": "1.4.16",
     "mobile": true,
-    "deviceOrientation": "landscape"
+    "deviceOrientation": "landscape",
+    "rotatable": true
   },
   {
     "name": "iPad",
-    "browserName": "iphone",
-    "version": "7.1", /* ipad simulator 8.2 browser crashes on some tests (where iphone 8.2, ipad 7.1, and real ipad 8.3 both work) */
+    "platformName": "iOS",
+    "platformVersion": "9.2",
+    "browserName": "safari",
     "deviceName": "iPad Simulator",
-    "platform": "OS X 10.10",
+    "appiumVersion": "1.4.16",
     "mobile": true,
-    "deviceOrientation": "landscape"
+    "deviceOrientation": "landscape",
+    "rotatable": true
   }
 ]

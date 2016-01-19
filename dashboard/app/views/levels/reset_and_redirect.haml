@@ -1,0 +1,13 @@
+%html
+  %head
+    %meta{'http-equiv' => 'refresh', :content => "3;url=#{@redirect_path}"}
+    :javascript
+      try {
+        sessionStorage.clear();
+      } finally {
+        window.location = '#{@redirect_path}';
+      }
+  %body
+    Redirecting...
+    %a{:href => @redirect_path} click here
+    to continue if not forwarded.

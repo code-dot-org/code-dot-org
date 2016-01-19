@@ -229,6 +229,7 @@ class User < ActiveRecord::Base
 
   validates :name, presence: true
   validates :name, length: {within: 1..70}, allow_blank: true
+  validates :name, no_utf8mb4: true
 
   validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -239,7 +240,7 @@ class User < ActiveRecord::Base
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -289,11 +290,10 @@ class User < ActiveRecord::Base
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
 
-  validate :email_and_hashed_email_must_be_unique
-
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
-  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
+  validates :email, no_utf8mb4: true
+  validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
 
   def presence_of_email_or_hashed_email
     if email.blank? && hashed_email.blank?
@@ -302,6 +302,9 @@ class User < ActiveRecord::Base
   end
 
   def email_and_hashed_email_must_be_unique
+    # skip the db lookup if we are already invalid
+    return unless errors.blank?
+
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
         other_user != self
@@ -398,9 +401,11 @@ class User < ActiveRecord::Base
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     if login = conditions.delete(:login)
+      return nil if login.utf8mb4?
       where(['username = :value OR email = :value OR hashed_email = :hashed_value',
              { value: login.downcase, hashed_value: hash_email(login.downcase) }]).first
     elsif hashed_email = conditions.delete(:hashed_email)
+      return nil if hashed_email.utf8mb4?
       where(hashed_email: hashed_email).first
     else
       nil
@@ -413,10 +418,9 @@ class User < ActiveRecord::Base
       index_by(&:level_id)
   end
 
-  def user_progress_by_stage(script_name, stage_index)
-    script = Script.get_from_cache(script_name)
-    levels = script.stages[stage_index].script_levels.map(&:level_id)
-    user_levels.where(script: script, level: levels).pluck(:level_id, :best_result).to_h
+  def user_progress_by_stage(stage)
+    levels = stage.script_levels.map(&:level_id)
+    user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
   def user_level_for(script_level)
@@ -555,7 +559,8 @@ SQL
   end
 
   def generate_username
-    return if name.blank?
+    # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
+    return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
     self.username = UserHelpers.generate_username(User.with_deleted, name)
   end
 
@@ -884,6 +889,18 @@ SQL
 
   def User.progress_queue
     AsyncProgressHandler.progress_queue
+  end
+
+  # can this user edit their own account?
+  def can_edit_account?
+    return true if teacher? || encrypted_password.present? || oauth?
+
+    # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
+    sections_as_student = followeds.collect(&:section)
+    return true if sections_as_student.empty?
+
+    # if you log in only through picture passwords you can't edit your account
+    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
 end

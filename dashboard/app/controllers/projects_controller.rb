@@ -29,6 +29,8 @@ class ProjectsController < ApplicationController
     }
   }.with_indifferent_access
 
+  @@project_level_cache = {}
+
   def index
   end
 
@@ -107,7 +109,13 @@ class ProjectsController < ApplicationController
   end
 
   def set_level
-    @level = Level.find_by_key STANDALONE_PROJECTS[params[:key]][:name]
+    @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
+  end
+
+  private
+
+  def get_from_cache(key)
+    @@project_level_cache[key] ||= Level.find_by_key(key)
   end
 end

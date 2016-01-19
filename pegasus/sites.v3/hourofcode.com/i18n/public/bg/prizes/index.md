@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # 2015 Hour of Code награди
 
@@ -209,4 +208,4 @@ Both US and non-US Hour of Code 2015 organizers are eligible to receive the all 
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 
-<% end %> <%= view :signup_button %>
+<% end %> 

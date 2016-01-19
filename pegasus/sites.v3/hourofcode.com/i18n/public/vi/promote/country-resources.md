@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Cho sinh viên một video cảm hứng để kick off Hour of Cord . Ví dụ:
 
 <% end %>
 
-<%= view :signup_button %>

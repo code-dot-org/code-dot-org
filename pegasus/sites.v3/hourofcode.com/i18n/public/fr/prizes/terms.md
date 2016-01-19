@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Prix - conditions générales
 
@@ -40,4 +39,3 @@ L'attribution des prix s'avère limitée aux classes d'élémentaires et seconda
 
 <% end %>
 
-<%= view :signup_button %>

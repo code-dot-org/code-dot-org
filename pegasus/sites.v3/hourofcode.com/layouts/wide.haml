@@ -6,10 +6,10 @@
 
   - if header['nav']
     .row
-      .col-sm-3.nav-col.col-sm-push-9
-        = view(header['nav'])
-      .col-sm-9.col-sm-pull-3
+      .col-sm-9
         = body
+      .col-sm-3.nav-col
+        = view(header['nav'])
   - else
     = body
 
@@ -17,4 +17,7 @@
 %br/
 %br/
 
-= view :footer
+.visible-md-block.visible-lg-block.hidden-xs.hidden-sm
+  = view :footer
+.visible-xs-block.visible-sm-block.hidden-md.hidden-lg
+  = view :mobile_footer_responsive

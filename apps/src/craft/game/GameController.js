@@ -77,6 +77,8 @@ class GameController {
     this.assumedSlowMotion = 1.5;
     this.initialSlowMotion = gameControllerConfig.customSlowMotion || this.assumedSlowMotion;
 
+    this.playerDelayFactor = 1.0;
+
     this.game.state.add('earlyLoad', {
       preload: () => {
         // don't let state change stomp essential asset downloads in progress
@@ -150,7 +152,7 @@ class GameController {
 
       if (this.queue.isFinished()) {
           this.handleEndState();
-      } 
+      }
   }
 
   addCheatKeys() {
@@ -221,7 +223,7 @@ class GameController {
   handleEndState() {
       // TODO: go into success/failure animation? (or are we called by CodeOrg for that?)
 
-      // report back to the code.org side the pass/fail result 
+      // report back to the code.org side the pass/fail result
       //     then clear the callback so we dont keep calling it
       if (this.OnCompleteCallback) {
           if (this.queue.isSucceeded()) {
@@ -281,19 +283,19 @@ class GameController {
             this.levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
               commandQueueItem.failed();
             } );
-        } 
+        }
         else if(this.levelModel.isPlayerStandingInLava()) {
           this.levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
             commandQueueItem.failed();
           } );
         }
         else {
-          this.delayBy(200, () => {
+          this.delayPlayerMoveBy(30, 200, () => {
             commandQueueItem.succeeded();
           });
         }
       });
-    } 
+    }
     else {
       if(this.levelModel.isForwardBlockOfType("creeper"))
       {
@@ -303,7 +305,7 @@ class GameController {
       }
       else {
         this.levelView.playBumpAnimation(player.position, player.facing, false);
-        this.delayBy(800, () => {
+        this.delayPlayerMoveBy(400, 800, () => {
           commandQueueItem.succeeded();
         });
       }
@@ -320,7 +322,7 @@ class GameController {
     }
     this.levelView.updatePlayerDirection(this.levelModel.player.position, this.levelModel.player.facing);
 
-    this.delayBy(800, () => {
+    this.delayPlayerMoveBy(200, 800, () => {
       commandQueueItem.succeeded();
     });
 
@@ -429,7 +431,7 @@ class GameController {
       this.levelView.playPunchDestroyAirAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), () => {
         this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]);
         this.levelView.playIdleAnimation(player.position, player.facing, player.isOnBlock);
-        this.delayBy(600, () => {
+        this.delayPlayerMoveBy(200, 600, () => {
           commandQueueItem.succeeded();
         });
       });
@@ -484,7 +486,7 @@ class GameController {
           this.delayBy(200, () => {
             this.levelView.playIdleAnimation(this.levelModel.player.position, this.levelModel.player.facing, false);
           });
-          this.delayBy(400, () => {
+          this.delayPlayerMoveBy(200, 400, () => {
             commandQueueItem.succeeded();
           });
         });
@@ -500,11 +502,26 @@ class GameController {
     }
   }
 
+  setPlayerActionDelayByQueueLength() {
+    var START_SPEED_UP = 10;
+    var END_SPEED_UP = 20;
+
+    var queueLength = this.queue.getLength();
+    var speedUpRangeMax = END_SPEED_UP - START_SPEED_UP;
+    var speedUpAmount = Math.min(Math.max(queueLength - START_SPEED_UP, 0), speedUpRangeMax);
+
+    this.playerDelayFactor = 1 - (speedUpAmount / speedUpRangeMax);
+  }
+
   delayBy(ms, completionHandler) {
     var timer = this.game.time.create(true);
     timer.add(this.originalMsToScaled(ms), completionHandler, this);
     timer.start();
     this.resettableTimers.push(timer);
+  }
+
+  delayPlayerMoveBy(minMs, maxMs, completionHandler) {
+    this.delayBy(Math.max(minMs, maxMs * this.playerDelayFactor), completionHandler);
   }
 
   originalMsToScaled(ms) {
@@ -545,7 +562,7 @@ class GameController {
       this.delayBy(200, () => {
         this.levelView.playIdleAnimation(this.levelModel.player.position, this.levelModel.player.facing, false);
       });
-      this.delayBy(400, () => {
+      this.delayPlayerMoveBy(200, 400, () => {
         commandQueueItem.succeeded();
       });
     });

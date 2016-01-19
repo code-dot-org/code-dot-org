@@ -19,6 +19,7 @@ var blocks = require('./blocks');
 var page = require('../templates/page.html.ejs');
 var dom = require('../dom');
 var Collidable = require('./collidable');
+var Sprite = require('./Sprite');
 var Projectile = require('./projectile');
 var Item = require('./Item');
 var BigGameLogic = require('./bigGameLogic');
@@ -187,7 +188,8 @@ function loadLevel() {
   Studio.slowExecutionFactor = level.slowExecutionFactor || 1;
   Studio.gridAlignedExtraPauseSteps = level.gridAlignedExtraPauseSteps || 0;
   Studio.ticksBeforeFaceSouth = Studio.slowExecutionFactor +
-                                  utils.valueOr(level.ticksBeforeFaceSouth, IDLE_TICKS_BEFORE_FACE_SOUTH);
+      utils.valueOr(level.ticksBeforeFaceSouth,
+          constants.IDLE_TICKS_BEFORE_FACE_SOUTH);
   Studio.minWorkspaceHeight = level.minWorkspaceHeight;
   Studio.softButtons_ = level.softButtons || {};
   // protagonistSpriteIndex was originally mispelled. accept either spelling.
@@ -307,38 +309,6 @@ var drawMap = function () {
 
   if (Studio.spriteStart_) {
     for (i = 0; i < Studio.spriteCount; i++) {
-      // Sprite clipPath element
-      // (not setting x, y, height, or width until displaySprite)
-      var spriteClip = document.createElementNS(SVG_NS, 'clipPath');
-      spriteClip.setAttribute('id', 'spriteClipPath' + i);
-      var spriteClipRect = document.createElementNS(SVG_NS, 'rect');
-      spriteClipRect.setAttribute('id', 'spriteClipRect' + i);
-      spriteClip.appendChild(spriteClipRect);
-      spriteLayer.appendChild(spriteClip);
-
-      // Add sprite (not setting href, height, or width until displaySprite).
-      var spriteIcon = document.createElementNS(SVG_NS, 'image');
-      spriteIcon.setAttribute('id', 'sprite' + i);
-      spriteIcon.setAttribute('clip-path', 'url(#spriteClipPath' + i + ')');
-      spriteLayer.appendChild(spriteIcon);
-
-      // Add support for walking spritesheet.
-      var spriteWalkIcon = document.createElementNS(SVG_NS, 'image');
-      spriteWalkIcon.setAttribute('id', 'spriteWalk' + i);
-      spriteWalkIcon.setAttribute('clip-path', 'url(#spriteWalkClipPath' + i + ')');
-      spriteLayer.appendChild(spriteWalkIcon);
-
-      var spriteWalkClip = document.createElementNS(SVG_NS, 'clipPath');
-      spriteWalkClip.setAttribute('id', 'spriteWalkClipPath' + i);
-      var spriteWalkClipRect = document.createElementNS(SVG_NS, 'rect');
-      spriteWalkClipRect.setAttribute('id', 'spriteWalkClipRect' + i);
-      spriteWalkClip.appendChild(spriteWalkClipRect);
-      spriteLayer.appendChild(spriteWalkClip);
-
-      dom.addMouseDownTouchEvent(spriteIcon,
-        delegate(this, Studio.onSpriteClicked, i));
-    }
-    for (i = 0; i < Studio.spriteCount; i++) {
       var spriteSpeechBubble = document.createElementNS(SVG_NS, 'g');
       spriteSpeechBubble.setAttribute('id', 'speechBubble' + i);
       spriteSpeechBubble.setAttribute('visibility', 'hidden');
@@ -423,6 +393,10 @@ var drawMap = function () {
   gameTextGroup.setAttribute('id', 'gameTextGroup');
   svg.appendChild(gameTextGroup);
 
+  var overlayGroup = document.createElementNS(SVG_NS, 'g');
+  overlayGroup.setAttribute('id', 'overlayGroup');
+  svg.appendChild(overlayGroup);
+
   var score = document.createElementNS(SVG_NS, 'text');
   score.setAttribute('id', 'score');
   score.setAttribute('class', 'studio-score');
@@ -441,14 +415,48 @@ var drawMap = function () {
   victoryText.setAttribute('visibility', 'hidden');
   gameTextGroup.appendChild(victoryText);
 
-  var resetText = document.createElementNS(SVG_NS, 'text');
-  resetText.setAttribute('id', 'resetText');
-  resetText.setAttribute('class', 'studio-reset-text');
-  resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
-  resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
-  resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
-  resetText.setAttribute('visibility', 'visible');
-  gameTextGroup.appendChild(resetText);
+  if (dom.isMobile() || dom.isWindowsTouch()) {
+    var resetOverlayRect = document.createElementNS(SVG_NS, 'rect');
+    resetOverlayRect.setAttribute('width', Studio.MAZE_WIDTH);
+    resetOverlayRect.setAttribute('height', Studio.MAZE_HEIGHT);
+    resetOverlayRect.setAttribute('fill', 'black');
+    resetOverlayRect.setAttribute('opacity', 0.3);
+    overlayGroup.appendChild(resetOverlayRect);
+    var resetTextA = document.createElementNS(SVG_NS, 'text');
+    resetTextA.setAttribute('id', 'resetTextA');
+    resetTextA.setAttribute('class', 'studio-reset-text');
+    resetTextA.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    resetTextA.setAttribute('y', RESET_TEXT_Y_POSITION - 30);
+    resetTextA.appendChild(document.createTextNode(studioMsg.tapToPlay()));
+    resetTextA.setAttribute('visibility', 'visible');
+    overlayGroup.appendChild(resetTextA);
+    var resetTextB = document.createElementNS(SVG_NS, 'text');
+    resetTextB.setAttribute('id', 'resetTextB');
+    resetTextB.setAttribute('class', 'studio-reset-text');
+    resetTextB.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    resetTextB.setAttribute('y', RESET_TEXT_Y_POSITION);
+    resetTextB.appendChild(document.createTextNode(studioMsg.swipeToMove()));
+    resetTextB.setAttribute('visibility', 'visible');
+    overlayGroup.appendChild(resetTextB);
+    var touchDragIcon = document.createElementNS(SVG_NS, 'image');
+    touchDragIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+        studioApp.assetUrl('media/common_images/touch-drag.png'));
+    var touchIconSize = 300;
+    touchDragIcon.setAttribute('width', touchIconSize);
+    touchDragIcon.setAttribute('height', touchIconSize);
+    touchDragIcon.setAttribute('x', (Studio.MAZE_WIDTH - touchIconSize) / 2);
+    touchDragIcon.setAttribute('y', (Studio.MAZE_HEIGHT - touchIconSize) / 2 - 25);
+    overlayGroup.appendChild(touchDragIcon);
+  } else {
+    var resetText = document.createElementNS(SVG_NS, 'text');
+    resetText.setAttribute('id', 'resetText');
+    resetText.setAttribute('class', 'studio-reset-text');
+    resetText.setAttribute('x', Studio.MAZE_WIDTH / 2);
+    resetText.setAttribute('y', RESET_TEXT_Y_POSITION);
+    resetText.appendChild(document.createTextNode(studioMsg.tapOrClickToReset()));
+    resetText.setAttribute('visibility', 'visible');
+    overlayGroup.appendChild(resetText);
+  }
 
   if (level.floatingScore) {
     var floatingScore = document.createElementNS(SVG_NS, 'text');
@@ -810,19 +818,19 @@ function performItemOrProjectileMoves (list) {
 }
 
 /**
- * Triggers display update on a list of Projectiles or Items - for updating
- * position and/or animation frames.
- * @param {Item[]|Projectile[]} list
+ * Triggers display update on a list of Sprites, Projectiles, or Items - for
+ * updating position and/or animation frames.
+ * @param {Collidable[]} list
  */
-function displayItemsOrProjectiles (list) {
+function displayCollidables (list) {
   for (var i = list.length - 1; i >= 0; i--) {
     list[i].display();
   }
 }
 
 /**
- * Sort the draw order of sprites, items, and tiles so that items higher on
- * the screen are drawn before the ones in front, for a simple form of
+ * Sort the draw order of sprites, explosions, items, and tiles so that items
+ * higher on the screen are drawn before the ones in front, for a simple form of
  * z-sorting.
  */
 function sortDrawOrder() {
@@ -832,65 +840,85 @@ function sortDrawOrder() {
 
   var spriteLayer = document.getElementById('spriteLayer');
 
-  var itemsArray = [];
+  var drawArray = [];
+  var drawItem;
 
   // Add items.
   for (var i = 0; i < Studio.items.length; i++) {
-    var item = {};
-    item.element = Studio.items[i].getElement();
-    item.y = Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y;
-    itemsArray.push(item);
+    drawItem = {
+      element: Studio.items[i].getElement(),
+      y: Studio.items[i].y + Studio.items[i].height/2 + Studio.items[i].renderOffset.y
+    };
+    drawArray.push(drawItem);
 
     Studio.drawDebugRect("itemLocation", Studio.items[i].x, Studio.items[i].y, 4, 4);
-    Studio.drawDebugRect("itemBottom", Studio.items[i].x, item.y, 4, 4);
+    Studio.drawDebugRect("itemBottom", Studio.items[i].x, drawItem.y, 4, 4);
   }
 
-  // Add sprites, both walking and non-walking.
+  // Add sprite elements (both legacy and normal) and explosions.
   for (i = 0; i < Studio.sprite.length; i++) {
-    var sprite = {};
-    sprite.element = document.getElementById('sprite' + i);
-    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
-    itemsArray.push(sprite);
+    var sprite = Studio.sprite[i];
+    var y = sprite.displayY + sprite.height;
 
-    sprite = {};
-    sprite.element = document.getElementById('spriteWalk' + i);
-    sprite.y = Studio.sprite[i].displayY + Studio.sprite[i].height;
-    itemsArray.push(sprite);
+    drawItem = {
+      element: document.getElementById('explosion' + i),
+      y: y
+    };
+    if (drawItem.element) {
+      drawArray.push(drawItem);
+    }
+
+    drawItem = {
+      element: sprite.getElement(),
+      y: y
+    };
+    if (drawItem.element) {
+      drawArray.push(drawItem);
+    }
+
+    drawItem = {
+      element: sprite.getLegacyElement(),
+      y: y
+    };
+    if (drawItem.element) {
+      drawArray.push(drawItem);
+    }
 
     Studio.drawDebugRect("spriteBottom", Studio.sprite[i].x, sprite.y, 4, 4);
   }
 
   // Add wall tiles.
   for (i = 0; i < Studio.tiles.length; i++) {
-    var tile = {};
-    tile.element = document.getElementById('tile_' + i);
-    tile.y = Studio.tiles[i].bottomY;
-    itemsArray.push(tile);
+    drawArray.push({
+      element: document.getElementById('tile_' + i),
+      y: Studio.tiles[i].bottomY
+    });
   }
 
   // Add goals.
   for (i = 0; i < Studio.spriteGoals_.length; i++) {
-    var goal = {};
-    goal.element = document.getElementById('spriteFinish' + i);
     var goalHeight = skin.goalCollisionRectHeight || Studio.MARKER_HEIGHT;
-    goal.y = Studio.spriteGoals_[i].y + goalHeight;
-    itemsArray.push(goal);
+
+    drawArray.push({
+      element: document.getElementById('spriteFinish' + i),
+      y: Studio.spriteGoals_[i].y + goalHeight
+    });
   }
 
   // Now sort everything by y.
-  itemsArray = _.sortBy(itemsArray, 'y');
+  drawArray = _.sortBy(drawArray, 'y');
 
   // Carefully place the elements back in the DOM starting at the end of the
   // spriteLayer and, one by one, insert them before the previous one
   // (this prevents flashing in Safari vs. an in-order appendChild() loop)
   var prevNode;
-  for (i = itemsArray.length - 1; i >= 0; i--) {
+  for (i = drawArray.length - 1; i >= 0; i--) {
     if (prevNode) {
-      spriteLayer.insertBefore(itemsArray[i].element, prevNode);
+      spriteLayer.insertBefore(drawArray[i].element, prevNode);
     } else {
-      spriteLayer.appendChild(itemsArray[i].element);
+      spriteLayer.appendChild(drawArray[i].element);
     }
-    prevNode = itemsArray[i].element;
+    prevNode = drawArray[i].element;
   }
 }
 
@@ -1023,32 +1051,15 @@ Studio.onTick = function() {
       performQueuedMoves(i);
     }
 
-    var isWalking = true;
-
     // After 5 ticks of no movement, turn sprite forward.
     var ticksBeforeFaceSouth = utils.valueOr(level.ticksBeforeFaceSouth, Studio.ticksBeforeFaceSouth);
     if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
-      Studio.sprite[i].dir = Direction.SOUTH;
+      Studio.sprite[i].setDirection(Direction.NONE);
       Studio.movementAudioOff();
-      isWalking = false;
-    }
-
-    // Also if the character has never moved, they are also not walking.
-    // Separate to the above case because we don't want to force them to
-    // face south in this case.  They are still allowed to face a different
-    // direction even if they've never walked.
-    if (Studio.sprite[i].lastMove === Infinity) {
-      isWalking = false;
     }
 
     // Display sprite:
-    Studio.displaySprite(i, isWalking);
-
-    // Animate goals
-    Studio.animateGoals();
-
-    // Animate clouds
-    Studio.animateClouds();
+    Studio.displaySprite(i);
 
     var sprite = Studio.sprite[i];
     if (sprite.hasActions()) {
@@ -1058,12 +1069,19 @@ Studio.onTick = function() {
     Studio.drawDebugRect("spriteCenter", Studio.sprite[i].x, Studio.sprite[i].y, 5, 5);
   }
 
+  // Animate goals
+  Studio.animateGoals();
+
+  // Animate clouds
+  Studio.animateClouds();
+
   if (!animationOnlyFrame) {
     performItemOrProjectileMoves(Studio.projectiles);
     performItemOrProjectileMoves(Studio.items);
   }
-  displayItemsOrProjectiles(Studio.projectiles);
-  displayItemsOrProjectiles(Studio.items);
+  displayCollidables(Studio.sprite);
+  displayCollidables(Studio.projectiles);
+  displayCollidables(Studio.items);
 
   Studio.updateFloatingScore();
 
@@ -1111,8 +1129,13 @@ Studio.onTick = function() {
  * @param {boolean} Whether this is for the Y axis.  If false, then X axis.
  */
 function spriteCollisionDistance  (i1, i2, yAxis) {
-  var dim1 = yAxis ? Studio.sprite[i1].height : Studio.sprite[i1].width;
-  var dim2 = yAxis ? Studio.sprite[i2].height : Studio.sprite[i2].width;
+  var sprite1Width  = skin.spriteCollisionRectWidth  || Studio.sprite[i1].width;
+  var sprite1Height = skin.spriteCollisionRectHeight || Studio.sprite[i1].height;
+  var sprite2Width  = skin.spriteCollisionRectWidth  || Studio.sprite[i2].width;
+  var sprite2Height = skin.spriteCollisionRectHeight || Studio.sprite[i2].height;
+
+  var dim1 = yAxis ? sprite1Height : sprite1Width;
+  var dim2 = yAxis ? sprite2Height : sprite2Width;
   return constants.SPRITE_COLLIDE_DISTANCE_SCALING * (dim1 + dim2) / 2;
 }
 
@@ -1412,7 +1435,7 @@ function updateItems () {
 
     item.update();
 
-    if (item.hasCompletedFade && item.hasCompletedFade()) {
+    if (item.hasCompletedFade()) {
       item.removeElement();
       Studio.items.splice(i, 1);
     }
@@ -1471,7 +1494,7 @@ Studio.willSpriteTouchWall = function (sprite, xPos, yPos) {
 /**
  * Test to see if an actor sprite will be beyond its given playspace boundaries
  * if it is moved to a given X/Y position.
- * @param {Collidable} sprite
+ * @param {Sprite} sprite
  * @param {number} xPos
  * @param {number} yPos
  */
@@ -1694,6 +1717,10 @@ Studio.initReadonly = function(config) {
   // we can ensure that the blocks are appropriately modified for this level
   skin = config.skin;
   level = config.level;
+
+  // Initialize paramLists with skin and level data:
+  paramLists.initWithSkinAndLevel(skin, level);
+
   loadLevel();
 
   config.appMsg = studioMsg;
@@ -1769,7 +1796,7 @@ Studio.init = function(config) {
     assetUrl: studioApp.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlsRow = require('./extraControlRows.html.ejs')({
+  var extraControlRows = require('./extraControlRows.html.ejs')({
     assetUrl: studioApp.assetUrl,
     finishButton: !finishButtonFirstLine && showFinishButton
   });
@@ -1780,7 +1807,7 @@ Studio.init = function(config) {
       localeDirection: studioApp.localeDirection(),
       visualization: require('./visualization.html.ejs')(),
       controls: firstControlsRow,
-      extraControlRows: extraControlsRow,
+      extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -1902,7 +1929,7 @@ Studio.init = function(config) {
     return code;
   };
 
-  config.twitter = twitterOptions;
+  config.twitter = skin.twitterOptions || twitterOptions;
 
   // for this app, show make your own button if on share page
   config.makeYourOwn = config.share;
@@ -1981,8 +2008,10 @@ Studio.getMovementSoundFileNames = function (fromSkin) {
 };
 
 var preloadImage = function(url) {
-  var img = new Image();
-  img.src = url;
+  if (url) {
+    var img = new Image();
+    img.src = url;
+  }
 };
 
 var preloadBackgroundImages = function() {
@@ -2004,6 +2033,7 @@ var preloadProjectileAndItemImages = function() {
 var preloadActorImages = function() {
   for (var i = 0; i < skin.avatarList.length; i++) {
     preloadImage(skin[skin.avatarList[i]].sprite);
+    preloadImage(skin[skin.avatarList[i]].walk);
   }
 };
 
@@ -2016,15 +2046,6 @@ function resetItemOrProjectileList (list) {
   }
   // Set length because list = [] will not modify array passed in by reference
   list.length = 0;
-}
-
-/**
- * Freeze a list of Items or Projectiles by telling them to stop animating.
- */
-function freezeItemOrProjectileList (list) {
-  for (var i = 0; i < list.length; i++) {
-    list[i].stopAnimations();
-  }
 }
 
 /**
@@ -2053,9 +2074,6 @@ Studio.clearEventHandlersKillTickLoop = function() {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
     }
   }
-  // Freeze the projectiles and items (stop the animation timers)
-  freezeItemOrProjectileList(Studio.projectiles);
-  freezeItemOrProjectileList(Studio.items);
 };
 
 
@@ -2118,12 +2136,28 @@ Studio.reset = function(first) {
     .setAttribute('visibility', 'hidden');
   document.getElementById('victoryText')
     .setAttribute('visibility', 'hidden');
-  var resetText = document.getElementById('resetText');
-  if (level.tapSvgToRunAndReset) {
-    resetText.textContent = studioMsg.tapOrClickToPlay();
-    resetText.setAttribute('visibility', 'visible');
+  if (dom.isMobile() || dom.isWindowsTouch()) {
+    var resetTextA = document.getElementById('resetTextA');
+    var resetTextB = document.getElementById('resetTextB');
+    if (level.tapSvgToRunAndReset) {
+      resetTextA.textContent = studioMsg.tapToPlay();
+      resetTextB.textContent = studioMsg.swipeToMove();
+      resetTextA.setAttribute('visibility', 'visible');
+      resetTextB.setAttribute('visibility', 'visible');
+      $('#overlayGroup *').attr('visibility', 'visible');
+    } else {
+      resetTextA.setAttribute('visibility', 'hidden');
+      resetTextB.setAttribute('visibility', 'hidden');
+      $('#overlayGroup *').attr('visibility', 'hidden');
+    }
   } else {
-    resetText.setAttribute('visibility', 'hidden');
+    var resetText = document.getElementById('resetText');
+    if (level.tapSvgToRunAndReset) {
+      resetText.textContent = studioMsg.tapOrClickToPlay();
+      resetText.setAttribute('visibility', 'visible');
+    } else {
+      resetText.setAttribute('visibility', 'hidden');
+    }
   }
   if (level.floatingScore) {
     document.getElementById('floatingScore')
@@ -2152,7 +2186,7 @@ Studio.reset = function(first) {
     removedItemCount: 0,
     touchedHazardCount: 0,
     setActivityRecord: null,
-    hasSetDroid: false,
+    hasSetSprite: false,
     hasSetDroidSpeed: false,
     hasSetBackground: false,
     hasSetMap: false,
@@ -2186,18 +2220,31 @@ Studio.reset = function(first) {
     Studio.JSInterpreter = null;
   }
 
+  var renderOffset = {
+    x: 0,
+    y: 0
+  };
+  if (level.gridAlignedMovement) {
+    renderOffset.x = skin.gridSpriteRenderOffsetX || 0;
+    renderOffset.y = skin.gridSpriteRenderOffsetY || 0;
+  }
   // Move sprites into position.
   for (i = 0; i < Studio.spriteCount; i++) {
-    Studio.sprite[i] = new Collidable({
+    if (Studio.sprite[i]) {
+      Studio.sprite[i].removeElement();
+    }
+    Studio.sprite[i] = new Sprite({
       x: Studio.spriteStart_[i].x,
       y: Studio.spriteStart_[i].y,
       displayX: Studio.spriteStart_[i].x,
       displayY: Studio.spriteStart_[i].y,
+      loop: true,
       speed: constants.DEFAULT_SPRITE_SPEED,
       size: constants.DEFAULT_SPRITE_SIZE,
       dir: Direction.NONE,
       displayDir: Direction.SOUTH,
       emotion: level.defaultEmotion || Emotions.NORMAL,
+      renderOffset: renderOffset,
       // tickCount of last time sprite moved,
       lastMove: Infinity,
       // overridden as soon as we call setSprite
@@ -2414,7 +2461,7 @@ var displayFeedback = function() {
       showingSharing: !level.disableSharing && level.freePlay && !Studio.preExecutionFailure &&
           !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
-      twitter: twitterOptions,
+      twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
       saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       message: Studio.message,
@@ -2431,6 +2478,7 @@ var displayFeedback = function() {
 Studio.onReportComplete = function(response) {
   Studio.response = response;
   Studio.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 };
 
@@ -2859,8 +2907,7 @@ Studio.execute = function() {
     Studio.eventHandlers = handlers;
   }
 
-  var resetText = document.getElementById('resetText');
-  resetText.setAttribute('visibility', 'hidden');
+  $('#resetText, #resetTextA, #resetTextB, #overlayGroup *').attr('visibility', 'hidden');
 
   Studio.perExecutionTimeouts = [];
   Studio.tickIntervalId = window.setInterval(Studio.onTick, Studio.scale.stepSpeed);
@@ -2947,83 +2994,6 @@ Studio.onPuzzleComplete = function() {
     });
   }
 };
-
-
-var ANIM_RATE = 6;
-var ANIM_OFFSET = 7; // Each sprite animates at a slightly different time
-var ANIM_AFTER_NUM_NORMAL_FRAMES = 8;
-// Number of extra ticks between the last time the sprite moved and when we
-// reset them to face south.
-var IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
-
-
-/**
- * Given direction/emotion/tickCount, calculate which frame number we should
- * display for sprite.
- * @param {boolean} opts.walkDirection - Return walking direction (0-7)
- * @param {boolean} opts.walkFrame - Return walking animation frame
- */
-function spriteFrameNumber (index, opts) {
-  var sprite = Studio.sprite[index];
-  var frameNum = 0;
-
-  var currentTime = new Date();
-  var elapsed = currentTime - Studio.startTime;
-
-  if (opts && opts.walkDirection) {
-    var direction = constants.frameDirTableWalking[sprite.displayDir];
-
-    // If there are extra emotions sprites, and the actor is facing forward,
-    // use the emotion sprites (last columns of the walking sprite sheet).
-    if (direction === 0 && sprite.frameCounts.extraEmotions > 0 && sprite.emotion !== 0) {
-      return sprite.frameCounts.turns + sprite.emotion - 1;
-    }
-    return direction;
-  }
-  else if (opts && opts.walkFrame && sprite.timePerFrame) {
-    return Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.walk;
-  }
-
-  if ((sprite.frameCounts.turns === 8) && sprite.displayDir !== Direction.SOUTH) {
-    // turn frames start after normal and animation frames
-    return sprite.frameCounts.normal + sprite.frameCounts.animation + 1 +
-      constants.frameDirTable[sprite.displayDir];
-  }
-  if ((sprite.frameCounts.turns === 7) && sprite.displayDir !== Direction.SOUTH) {
-    // turn frames start after normal and animation frames
-    return sprite.frameCounts.normal + sprite.frameCounts.animation +
-      constants.frameDirTable[sprite.displayDir];
-  }
-  if (sprite.frameCounts.animation === 1 && Studio.tickCount) {
-    // we only support two-frame animation for base playlab, the 2nd frame is
-    // only up for 1/8th of the time (since it is a blink of the eyes)
-    if (1 === Math.round((Studio.tickCount + index * ANIM_OFFSET) / ANIM_RATE) %
-        ANIM_AFTER_NUM_NORMAL_FRAMES) {
-      // animation frame is the first frame after all the normal frames
-      frameNum = sprite.frameCounts.normal;
-    }
-  }
-
-  if (sprite.frameCounts.normal > 1 && sprite.timePerFrame) {
-    // Use elapsed time instead of tickCount
-    frameNum = Math.floor(elapsed / sprite.timePerFrame) % sprite.frameCounts.normal;
-  }
-
-  if (!frameNum && sprite.emotion !== Emotions.NORMAL &&
-    sprite.frameCounts.emotions > 0) {
-    // emotion frames precede normal, animation, turn frames
-    frameNum = sprite.frameCounts.normal + sprite.frameCounts.animation +
-      sprite.frameCounts.turns + (sprite.emotion - 1);
-  }
-
-  return frameNum;
-}
-
-function spriteTotalFrames (index) {
-  var sprite = Studio.sprite[index];
-  return sprite.frameCounts.normal + sprite.frameCounts.animation +
-    sprite.frameCounts.turns + sprite.frameCounts.emotions;
-}
 
 /* Return the frame count for items or projectiles
 */
@@ -3318,59 +3288,12 @@ var updateSpeechBubblePath = function (element) {
                                               onRight));
 };
 
-Studio.displaySprite = function(i, isWalking) {
+Studio.displaySprite = function (i) {
   var sprite = Studio.sprite[i];
 
   // avoid lots of unnecessary changes to hidden sprites
   if (sprite.value === 'hidden') {
     return;
-  }
-
-  var spriteRegularIcon = document.getElementById('sprite' + i);
-  var spriteWalkIcon = document.getElementById('spriteWalk' + i);
-
-  var spriteIcon, spriteClipRect, unusedSpriteClipRect;
-  var xOffset, yOffset;
-
-  if (sprite.value !== undefined && skin[sprite.value] && skin[sprite.value].walk && isWalking) {
-
-    // One exception: don't show the walk sprite if we're already playing an explosion animation for
-    // that sprite.  (Ideally, we would show the sprite in place while explosion plays over the top,
-    // but this is not a common case for now and this keeps the change small.)
-    var explosion = document.getElementById('explosion' + i);
-    if (explosion && explosion.getAttribute('visibility') !== 'hidden') {
-      spriteWalkIcon.setAttribute('visibility', 'hidden');
-      return;
-    }
-
-    // Show walk sprite, and hide regular sprite.
-    spriteRegularIcon.setAttribute('visibility', 'hidden');
-    spriteWalkIcon.setAttribute('visibility', 'visible');
-
-    xOffset = sprite.drawWidth * spriteFrameNumber(i, {walkDirection: true});
-    yOffset = sprite.drawHeight * spriteFrameNumber(i, {walkFrame: true});
-
-    spriteIcon = spriteWalkIcon;
-    spriteClipRect = document.getElementById('spriteWalkClipRect' + i);
-    unusedSpriteClipRect = document.getElementById('spriteClipRect' + i);
-  } else {
-    // Show regular sprite, and hide walk sprite.
-    spriteRegularIcon.setAttribute('visibility', 'visible');
-    spriteWalkIcon.setAttribute('visibility', 'hidden');
-
-    xOffset = sprite.drawWidth * spriteFrameNumber(i);
-
-    // For new versions of sprites (iceage/gumball), there are additional rows of
-    // idle animations for each emotion.
-    if (sprite.frameCounts.extraEmotions > 0) {
-      yOffset = sprite.drawHeight * sprite.emotion;
-    } else {
-      yOffset = 0;
-    }
-
-    spriteIcon = spriteRegularIcon;
-    spriteClipRect = document.getElementById('spriteClipRect' + i);
-    unusedSpriteClipRect = document.getElementById('spriteWalkClipRect' + i);
   }
 
   var extraOffsetX = 0;
@@ -3380,34 +3303,37 @@ Studio.displaySprite = function(i, isWalking) {
     extraOffsetX = skin.gridSpriteRenderOffsetX || 0;
     extraOffsetY = skin.gridSpriteRenderOffsetY || 0;
   }
-
   if (sprite.hasActions()) {
     sprite.updateActions();
   } else {
-    var xCoordPrev = spriteClipRect.getAttribute('x') - extraOffsetX;
-    var yCoordPrev = spriteClipRect.getAttribute('y') - extraOffsetY;
+    // TODO (cpirich): move this into Sprite object
 
-    var dirPrev = sprite.dir;
-    if (dirPrev === Direction.NONE) {
-      // direction not yet set, start at SOUTH (forward facing)
-      sprite.dir = Direction.SOUTH;
-    }
-    else if ((sprite.x != xCoordPrev) || (sprite.y != yCoordPrev)) {
-      sprite.dir = Direction.NONE;
-      if (sprite.x < xCoordPrev) {
-        sprite.dir |= Direction.WEST;
-      } else if (sprite.x > xCoordPrev) {
-        sprite.dir |= Direction.EAST;
-      }
-      if (sprite.y < yCoordPrev) {
-        sprite.dir |= Direction.NORTH;
-      } else if (sprite.y > yCoordPrev) {
-        sprite.dir |= Direction.SOUTH;
-      }
-    }
+    var newDir = Direction.NONE;
+    var lastDrawPos = sprite.lastDrawPosition;
 
     sprite.displayX = sprite.x;
     sprite.displayY = sprite.y;
+
+    var curDrawPos = sprite.getCurrentDrawPosition();
+
+    if ((curDrawPos.x !== lastDrawPos.x) || (curDrawPos.y !== lastDrawPos.y)) {
+      if (curDrawPos.x < lastDrawPos.x) {
+        newDir |= Direction.WEST;
+      } else if (curDrawPos.x > lastDrawPos.x) {
+        newDir |= Direction.EAST;
+      }
+      if (curDrawPos.y < lastDrawPos.y) {
+        newDir |= Direction.NORTH;
+      } else if (curDrawPos.y > lastDrawPos.y) {
+        newDir |= Direction.SOUTH;
+      }
+    }
+
+    if (newDir !== Direction.NONE || sprite.lastMove === Infinity) {
+      // Don't change to Direction.NONE here once we've captured a lastMove
+      // value, allow the ticksBeforeFaceSouth code to handle that later...
+      sprite.setDirection(newDir);
+    }
   }
 
   // Turn sprite toward target direction after evaluating actions.
@@ -3419,17 +3345,9 @@ Studio.displaySprite = function(i, isWalking) {
     }
   }
 
-  spriteIcon.setAttribute('x', sprite.displayX - xOffset + extraOffsetX);
-  spriteIcon.setAttribute('y', sprite.displayY - yOffset + extraOffsetY);
-
-  spriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-  spriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
-
-  // Update the other clip rect too, so that calculations involving
-  // inter-frame differences (just above, to calculate sprite.dir)
-  // are correct when we transition between spritesheets.
-  unusedSpriteClipRect.setAttribute('x', sprite.displayX + extraOffsetX);
-  unusedSpriteClipRect.setAttribute('y', sprite.displayY + extraOffsetY);
+  // TODO (cpirich): (may be redundant with displayCollidables(Studio.sprite)
+  // in onTick loop)
+  sprite.display();
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
@@ -3476,9 +3394,18 @@ Studio.displayVictoryText = function() {
   var victoryText = document.getElementById('victoryText');
   victoryText.textContent = Studio.victoryText;
   victoryText.setAttribute('visibility', 'visible');
-  var resetText = document.getElementById('resetText');
-  resetText.textContent = studioMsg.tapOrClickToReset();
-  resetText.setAttribute('visibility', 'visible');
+  if (dom.isMobile() || dom.isWindowsTouch()) {
+    var resetTextA = document.getElementById('resetTextA');
+    var resetTextB = document.getElementById('resetTextB');
+    resetTextB.textContent = studioMsg.tapToReset();
+    resetTextA.setAttribute('visibility', 'hidden');
+    resetTextB.setAttribute('visibility', 'visible');
+    $('#overlayGroup image, #overlayGroup rect').attr('visibility', 'hidden');
+  } else {
+    var resetText = document.getElementById('resetText');
+    resetText.textContent = studioMsg.tapOrClickToReset();
+    resetText.setAttribute('visibility', 'visible');
+  }
 };
 
 Studio.animateGoals = function() {
@@ -3982,12 +3909,13 @@ Studio.getItemOptionsForItemClass = function (itemClass) {
     height: classProperties.height,
     dir: Direction.NONE,
     speed: Studio.itemSpeed[itemClass],
+    normalSpeed: classProperties.speed,
     activity: utils.valueOr(Studio.itemActivity[itemClass], "roam"),
     isHazard: classProperties.isHazard,
     spritesCounterclockwise: classProperties.spritesCounterclockwise,
     renderOffset: utils.valueOr(classProperties.renderOffset, { x: 0, y: 0 }),
     renderScale: utils.valueOr(classProperties.scale, 1),
-    animationRate: classProperties.animationRate
+    animationFrameDuration: classProperties.animationFrameDuration
   };
 };
 
@@ -4146,11 +4074,21 @@ Studio.setItemSpeed = function (opts) {
     throw new RangeError("Incorrect parameter: " + opts.className);
   }
 
+  // convert speed string parameter to appropriate numerical speed for this class:
+  var newSpeed = utils.valueOr(skin.specialItemProperties[itemClass].speed,
+      constants.DEFAULT_ITEM_SPEED);
+
+  if (opts.speed.toLowerCase() === 'fast') {
+    newSpeed = Math.floor(newSpeed * 2);
+  } else if (opts.speed.toLowerCase() === 'slow') {
+    newSpeed = Math.floor(newSpeed / 2);
+  }
+
   // retain this speed value for items of this class created in the future:
-  Studio.itemSpeed[itemClass] = opts.speed;
+  Studio.itemSpeed[itemClass] = newSpeed;
   Studio.items.forEach(function (item) {
     if (item.className === itemClass) {
-      item.speed = opts.speed;
+      item.setSpeed(newSpeed);
     }
   });
 };
@@ -4160,69 +4098,86 @@ Studio.showDebugInfo = function (opts) {
 };
 
 Studio.vanishActor = function (opts) {
-  var svg = document.getElementById('svgStudio');
+  var spriteLayer = document.getElementById('spriteLayer');
 
-  var sprite = document.getElementById('sprite' + opts.spriteIndex);
-  var spriteShowing = sprite && sprite.getAttribute('visibility') !== 'hidden';
-  var spriteWalk = document.getElementById('spriteWalk' + opts.spriteIndex);
-  var spriteWalkShowing = spriteWalk && spriteWalk.getAttribute('visibility') !== 'hidden';
+  var spriteIndex = opts.spriteIndex;
+  if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
+    throw new RangeError("Incorrect parameter: " + spriteIndex);
+  }
+  var sprite = Studio.sprite[spriteIndex];
+  var spriteShowing = sprite.visible || sprite.isFading();
 
-  if (!spriteShowing && !spriteWalkShowing) {
+  if (!spriteShowing) {
     return;
   }
 
-  var explosion = document.getElementById('explosion' + opts.spriteIndex);
+  var explosion = document.getElementById('explosion' + spriteIndex);
+  var explosionClipRect;
   if (!explosion) {
+    var explosionClipPath = document.createElementNS(SVG_NS, 'clipPath');
+    explosionClipPath.setAttribute('id', 'explosionClipPath' + spriteIndex);
+    explosionClipRect = document.createElementNS(SVG_NS, 'rect');
+    explosionClipRect.setAttribute('id', 'explosionClipRect' + spriteIndex);
+    // TODO (cpirich): sprite size may change later, so this needs to be fixed
+    explosionClipRect.setAttribute('width', sprite.height);
+    explosionClipRect.setAttribute('height', sprite.width);
+    explosionClipPath.appendChild(explosionClipRect);
+    spriteLayer.appendChild(explosionClipPath);
+
     explosion = document.createElementNS(SVG_NS, 'image');
-    explosion.setAttribute('id', 'explosion' + opts.spriteIndex);
+    explosion.setAttribute('id', 'explosion' + spriteIndex);
     explosion.setAttribute('visibility', 'hidden');
-    svg.appendChild(explosion, sprite);
+    explosion.setAttribute('clip-path', 'url(#explosionClipPath' + spriteIndex + ')');
+    spriteLayer.insertBefore(explosion,
+        sprite.getElement() || sprite.getLegacyElement());
   }
 
-  var spriteClipRect = document.getElementById('spriteClipRect' + opts.spriteIndex);
+  // TODO (cpirich): use displayWidth / displayHeight to make vanish explosions
+  // compatible with sprites that are scaled
+  var frameWidth = sprite.width;
+  var numFrames = skin.explosionFrames;
 
-  var frameWidth = Studio.sprite[opts.spriteIndex].width;
+  var centerPos = sprite.getCurrentDrawPosition();
+  var topLeftPos = {
+    x: centerPos.x - sprite.width / 2,
+    y: centerPos.y - sprite.height / 2
+  };
 
-  explosion.setAttribute('height', Studio.sprite[opts.spriteIndex].height);
-  explosion.setAttribute('x', spriteClipRect.getAttribute('x'));
+  explosion.setAttribute('height', sprite.height);
+  explosion.setAttribute('width', numFrames * frameWidth);
+  explosion.setAttribute('x', topLeftPos.x);
+  explosion.setAttribute('y', topLeftPos.y);
 
   explosion.setAttribute('visibility', 'visible');
 
-  var baseX = parseInt(spriteClipRect.getAttribute('x'), 10);
-  var numFrames = skin.explosionFrames;
-  explosion.setAttribute('clip-path', 'url(#spriteClipPath' + opts.spriteIndex + ')');
-  explosion.setAttribute('width', numFrames * frameWidth);
+  explosionClipRect = document.getElementById('explosionClipRect' + spriteIndex);
+  explosionClipRect.setAttribute('x', topLeftPos.x);
+  explosionClipRect.setAttribute('y', topLeftPos.y);
 
-  if (!skin.fadeExplosion) {
+  if (skin.fadeExplosion) {
+    sprite.startFade(skin.explosionFrames * skin.timePerExplosionFrame);
+  } else {
     Studio.setSprite({
-      spriteIndex: opts.spriteIndex,
+      spriteIndex: spriteIndex,
       value: 'hidden'
     });
   }
 
   _.range(0, numFrames).forEach(function (i) {
     Studio.perExecutionTimeouts.push(setTimeout(function () {
-      explosion.setAttribute('x', baseX - i * frameWidth);
-      if (i === 0) {
-        // Sometimes the spriteClipRect still moves a bit before our explosion
-        // starts, so wait until first frame to set y.
-        explosion.setAttribute('y', spriteClipRect.getAttribute('y'));
-      }
-
-      if (skin.fadeExplosion) {
-        sprite.setAttribute('opacity', (numFrames - i) / numFrames);
-      }
+      explosion.setAttribute('x', topLeftPos.x - i * frameWidth);
     }, i * skin.timePerExplosionFrame));
   });
   Studio.perExecutionTimeouts.push(setTimeout(function () {
     explosion.setAttribute('visibility', 'hidden');
-    if (skin.fadeAnimation) {
+    if (skin.fadeExplosion) {
       // hide the sprite
       Studio.setSprite({
-        spriteIndex: opts.spriteIndex,
+        spriteIndex: spriteIndex,
         value: 'hidden'
       });
-      sprite.removeAttribute('opacity');
+      // restore the normal opacity
+      sprite.setOpacity(1);
     }
   }, skin.timePerExplosionFrame * (numFrames + 1)));
 
@@ -4230,7 +4185,7 @@ Studio.vanishActor = function (opts) {
   // treated as being different, otherwise chrome will animate all existing
   // explosions anytime we try to animate one of them
   explosion.setAttributeNS('http://www.w3.org/1999/xlink',
-    'xlink:href', skin.explosion + "?spriteIndex=" + opts.spriteIndex);
+    'xlink:href', skin.explosion + "?spriteIndex=" + spriteIndex);
 };
 
 Studio.setSpriteEmotion = function (opts) {
@@ -4240,7 +4195,7 @@ Studio.setSpriteEmotion = function (opts) {
 Studio.setSpriteSpeed = function (opts) {
   var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
       constants.SpriteSpeed.VERY_FAST);
-  Studio.sprite[opts.spriteIndex].speed = speed;
+  Studio.sprite[opts.spriteIndex].setSpeed(speed);
 };
 
 var DROID_SPEEDS = {
@@ -4500,7 +4455,7 @@ Studio.fixSpriteLocation = function () {
               skin.wallCollisionRectOffsetX;
             sprite.y = Studio.HALF_SQUARE + Studio.SQUARE_SIZE * row - sprite.height / 2 -
               skin.wallCollisionRectOffsetY;
-            sprite.dir = Direction.NONE;
+            sprite.setDirection(Direction.NONE);
 
             return;
           }
@@ -4516,8 +4471,6 @@ Studio.fixSpriteLocation = function () {
  * @param opts.spriteIndex {number} Index of the sprite
  */
 Studio.setSprite = function (opts) {
-  var spriteIndex = opts.spriteIndex;
-  var sprite = Studio.sprite[spriteIndex];
 
   if (typeof opts.value !== 'string') {
     throw new TypeError("Incorrect parameter: " + opts.value);
@@ -4529,53 +4482,40 @@ Studio.setSprite = function (opts) {
     spriteValue = skin.avatarList[Math.floor(Math.random() * skin.avatarList.length)];
   }
 
-  var spriteIcon = document.getElementById('sprite' + spriteIndex);
-  if (!spriteIcon) {
-    return;
-    // TODO (cpirich): We should probably throw here, but since our JS tutorials
-    // don't allow the student to set the spriteIndex, we will fail silently
-    // in case existing blockly tutorials expect this error to fail quietly
-
-    // throw new RangeError("Incorrect parameter: " + spriteIndex);
-  }
-
   var skinSprite = skin[spriteValue];
   if (!skinSprite && spriteValue !== 'hidden' && spriteValue !== 'visible') {
     throw new RangeError("Incorrect parameter: " + opts.value);
   }
 
+  var spriteIndex = opts.spriteIndex;
+  if (spriteIndex < 0 || spriteIndex >= Studio.spriteCount) {
+    throw new RangeError("Incorrect parameter: " + spriteIndex);
+  }
+  var sprite = Studio.sprite[spriteIndex];
+
   sprite.visible = (spriteValue !== 'hidden' && !opts.forceHidden);
-  spriteIcon.setAttribute('visibility', sprite.visible ? 'visible' : 'hidden');
+
   sprite.value = opts.forceHidden ? 'hidden' : spriteValue;
   if (spriteValue === 'hidden' || spriteValue === 'visible') {
     return;
   }
 
-  // If this skin has walking spritesheet, then load that too.
-  var spriteWalk = null;
-  if (spriteValue !== undefined && skinSprite.walk) {
-    spriteWalk = document.getElementById('spriteWalk' + spriteIndex);
-    if (!spriteWalk) {
-      return;
-    }
-
-    // Hide the walking sprite at this stage.
-    spriteWalk.setAttribute('visibility', 'hidden');
-  }
-
   sprite.frameCounts = skinSprite.frameCounts;
-  sprite.timePerFrame = skinSprite.timePerFrame;
+  sprite.setNormalFrameDuration(skinSprite.animationFrameDuration);
+  sprite.drawScale = utils.valueOr(skinSprite.drawScale, 1);
   // Reset height and width:
   if (level.gridAlignedMovement) {
     // This mode only works properly with square sprites
     sprite.height = sprite.width = Studio.SQUARE_SIZE;
-    sprite.size = 1; //sprite.width / skin.spriteWidth;
+    sprite.size = sprite.width / skin.spriteWidth;
 
-    sprite.drawHeight = sprite.size * skin.spriteHeight;
-    sprite.drawWidth = sprite.size * skin.spriteWidth;
+    sprite.drawHeight = sprite.drawScale * sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.drawScale * sprite.size * skin.spriteWidth;
   } else {
-    sprite.drawHeight = sprite.height = sprite.size * skin.spriteHeight;
-    sprite.drawWidth = sprite.width = sprite.size * skin.spriteWidth;
+    sprite.drawHeight = sprite.height =
+        sprite.drawScale * sprite.size * skin.spriteHeight;
+    sprite.drawWidth = sprite.width =
+        sprite.drawScale * sprite.size * skin.spriteWidth;
   }
   if (skin.projectileSpriteHeight) {
     sprite.projectileSpriteHeight = sprite.size * skin.projectileSpriteHeight;
@@ -4584,26 +4524,20 @@ Studio.setSprite = function (opts) {
     sprite.projectileSpriteWidth = sprite.size * skin.projectileSpriteWidth;
   }
 
-  var spriteClipRect = document.getElementById('spriteClipRect' + spriteIndex);
-  spriteClipRect.setAttribute('width', sprite.drawWidth);
-  spriteClipRect.setAttribute('height', sprite.drawHeight);
+  sprite.setImage(skinSprite.walk, sprite.frameCounts);
+  sprite.setLegacyImage(skinSprite.sprite, sprite.frameCounts);
 
-  spriteIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.sprite);
-  spriteIcon.setAttribute('width', sprite.drawWidth * spriteTotalFrames(spriteIndex));
-  var extraHeight = (sprite.frameCounts.extraEmotions || 0) * sprite.drawHeight;
-  spriteIcon.setAttribute('height', sprite.drawHeight + extraHeight);
+  sprite.createElement(document.getElementById('spriteLayer'));
 
-  if (spriteWalk) {
-    // And set up the cliprect so we can show the right item from the spritesheet.
-    var spriteWalkClipRect = document.getElementById('spriteWalkClipRect' + spriteIndex);
-    spriteWalkClipRect.setAttribute('width', sprite.drawWidth);
-    spriteWalkClipRect.setAttribute('height', sprite.drawHeight);
-
-    spriteWalk.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skinSprite.walk);
-
-    var extraWidth = (sprite.frameCounts.extraEmotions || 0) * sprite.drawWidth;
-    spriteWalk.setAttribute('width', extraWidth + sprite.drawWidth * sprite.frameCounts.turns); // 800
-    spriteWalk.setAttribute('height', sprite.drawHeight * sprite.frameCounts.walk); // 1200
+  var element = sprite.getLegacyElement();
+  if (element) {
+    dom.addMouseDownTouchEvent(sprite.getLegacyElement(),
+        delegate(this, Studio.onSpriteClicked, spriteIndex));
+  }
+  element = sprite.getElement();
+  if (element) {
+    dom.addMouseDownTouchEvent(sprite.getElement(),
+        delegate(this, Studio.onSpriteClicked, spriteIndex));
   }
 
   // Set up movement audio for the selected sprite (clips should be preloaded)
@@ -5158,7 +5092,7 @@ Studio.setSpritePosition = function (opts) {
   sprite.displayX = sprite.x = opts.x;
   sprite.displayY = sprite.y = opts.y;
   // Reset to "no direction" so no turn animation will take place
-  sprite.dir = Direction.NONE;
+  sprite.setDirection(Direction.NONE);
 };
 
 Studio.setSpriteXY = function (opts) {
@@ -5175,7 +5109,7 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayX = sprite.x = x;
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
-  sprite.dir = Direction.NONE;
+  sprite.setDirection(Direction.NONE);
 };
 
 Studio.getPlayspaceBoundaries = function(sprite)
@@ -5549,6 +5483,10 @@ Studio.conditionSatisfied = function(required) {
     }
 
     if (valueName === 'setMap' && tracked.hasSetMap !== value) {
+      return false;
+    }
+
+    if (valueName === 'setSprite' && tracked.hasSetSprite !== value) {
       return false;
     }
 

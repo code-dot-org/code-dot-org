@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Terima kasih telah mendaftar untuk kesempatan memenangkan hadiah hardware $10.000
 
@@ -32,4 +31,3 @@ Ajak kelompok masayarakat — Pramuka, kelompok pengajian/gereja, unit mahasiswa
 
 [Kirim email ini](<%= resolve_url('/promote/resources#politicians') %>) ke Walikota, Dewan kota, atau dewan sekolah dan undang mereka untuk mengunjungi sekolah Anda.
 
-<%= view :signup_button %>

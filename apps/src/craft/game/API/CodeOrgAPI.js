@@ -31,6 +31,9 @@ export function get(controller) {
     startAttempt: function(onAttemptComplete) {
         controller.OnCompleteCallback = onAttemptComplete;
         controller.queue.addCommand(new CheckSolutionCommand(controller));
+
+        controller.setPlayerActionDelayByQueueLength();
+
         controller.queue.begin();
     },
 

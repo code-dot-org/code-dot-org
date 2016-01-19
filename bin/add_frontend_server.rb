@@ -79,7 +79,7 @@ def aws_instance_type(environment)
   when 'production'
     'c3.8xlarge'
   else
-    raise "Unknown environment #{environment}"
+    raise "Unknown environment #{environment} - currently adhoc and production are supported"
   end
 end
 
@@ -296,13 +296,14 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
   Net::SCP.download!('gateway.code.org', @username, "/tmp/old_knife_config#{file_suffix}",
                      "/tmp/knife_config#{file_suffix}")
 
-  configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
-  configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
-  configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
-
-  File.open('/tmp/new_knife_config.json', 'w') do |f|
-    f.write(JSON.dump(configuration_json))
-  end
+  OUTPUT_MUTEX.synchronize {
+    configuration_json = JSON.parse(File.read("/tmp/knife_config#{file_suffix}"))
+    configuration_json['override_attributes']['cdo-secrets']['app_servers'] ||= {}
+    configuration_json['override_attributes']['cdo-secrets']['app_servers'][instance_provisioning_info.name] = private_dns_name
+    File.open('/tmp/new_knife_config.json', 'w') do |f|
+      f.write(JSON.dump(configuration_json))
+    end
+  }
 
   Net::SCP.upload!('gateway.code.org', @username, '/tmp/new_knife_config.json', "/tmp/new_knife_config#{file_suffix}.json")
   print "New configuration file uploaded, now loading it.\n"
@@ -383,6 +384,12 @@ end.parse!
 environment = @options['environment']
 raise OptionParser::MissingArgument, 'Environment is required' if environment.nil?
 
+raise OptionParser::MissingArgument, 'Name is required when creating one new instance' if @options['count'].nil? &&
+  @options['name'].nil?
+
+raise OptionParser::MissingArgument, 'Prefix is required when creating multiple instances' if !@options['count'].nil? &&
+  @options['prefix'].nil?
+
 role = @options['role'] || ROLE_MAP[environment]
 raise "Unsupported environment #{environment}" unless role
 
@@ -430,6 +437,7 @@ instances_to_create.each do |instance_to_create|
       instance_to_create.result = "Failed: #{e}"
     end
   end
+  sleep(1);
 end
 
 instance_creation_threads.each {|thread| thread.join}
