@@ -29,8 +29,8 @@
     code:
       label: 'Adicionar professor:'
       placeholder: Código da seção (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Por favor insira o código compartilhado com você por seu professor.
+        É um código de 6 letras como "ABCDEF".
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -41,6 +41,7 @@
   puzzle: Quebra-cabeça
   trophies: troféus
   courses: percursos
+  unplugged_activity: Atividade off-line
   of: de
   more: MAIS
   less: MENOS

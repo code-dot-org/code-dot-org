@@ -28,8 +28,7 @@ ar:
     code:
       label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'الرجاء ادخال الكود الذي اعطاه اليك معلمك , انه مكون من 6 حروف مثل "ABCDEF".'
     submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
@@ -40,6 +39,7 @@ ar:
   puzzle: لغز
   trophies: الجوائز
   courses: الدروس
+  unplugged_activity: نشاط غير موصول
   of: من
   more: أكثر
   less: أقل
@@ -258,7 +258,7 @@ ar:
       remove: هل أنت متأكد من أنك تريد إزالة هذا المعلم؟
     students:
       dashboard: انتقل إلى لوحة المعلم
-    user_not_found: لا يمكن العثور على المعلمة.
+    user_not_found: لا يمكن العثور على المعلم.
     student_teacher_disassociated: 'لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك.'
     panel:
       answer_viewer: عارض الأجوبة
@@ -333,7 +333,7 @@ ar:
   share:
     title: تعلّم على كود استوديو
     description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: جرب ساعة من البرمجة!
   gender:
     male: ذكر
     female: أنثى
@@ -363,7 +363,7 @@ ar:
     built_on_code_studio: 'بني في "Code Studio"'
     make_my_own_app: بناء التطبيق الخاص بي
     how_it_works: كيفية العمل
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: جرب ساعة من البرمجة!
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
@@ -582,7 +582,7 @@ ar:
       contact_us: "إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'> مراسلتنا.</a>"
       go_to_code_studio: الذهاب الي Code Studio
       report_abuse_form:
-        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات الموجودة على Code Studio, الرجء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
+        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات الموجودة على Code Studio, الرجاء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
         validation:
           email: الرجاء تقديم بريد إلكتروني
           age: الرجاء تحديد سن

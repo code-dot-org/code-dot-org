@@ -101,7 +101,7 @@ namespace :build do
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run build'
+      RakeUtils.system 'npm run clean && npm run build'
     end
   end
 

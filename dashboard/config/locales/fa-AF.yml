@@ -1,4 +1,4 @@
-"fa-AF":
+"fa":
   errors:
     messages:
       not_saved: 'لطفا خطاهای زیر را درست کنید:'
@@ -40,6 +40,7 @@
   puzzle: پازل
   trophies: جایزها
   courses: مراحل
+  unplugged_activity: Unplugged Activity
   of: از
   more: بیشتر
   less: کمتر

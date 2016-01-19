@@ -29,8 +29,8 @@
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód
+        - például "ABCDEF".
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
@@ -41,6 +41,7 @@
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
+  unplugged_activity: Offline tevékenység
   of: /
   more: TÖBB
   less: KEVESEBB
@@ -399,12 +400,22 @@
       létrehozni ezt a gyakorlatot.
     help_from_html_old: A Google, Microsoft, Facebook, és a Twitter mérnökei segítettek
       létrehozni ezeket a tartalmakat.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Minden jog fenntartva.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. Minden jog fenntartva.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden
+      jog fenntartva.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. Minden jog fenntartva.<br /> a Gumball csodálatos világa a Cartoon
+      Network beejgyzett védjegye.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog
+      fenntartva.<br />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm.
+      Minden jog fenntartva.<br />Frozen&#8482; &copy; %{current_year} Disney. Minden
+      jog fenntartva.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Minden jog fenntartva.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
+      csodálatos világa a Cartoon Network bejegyzett védjegye.
     powered_by_aws: Az Amazon Web Services működteti
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Hour of Code&reg; a Code.org védjegyei.'

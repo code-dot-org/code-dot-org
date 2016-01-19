@@ -191,6 +191,8 @@ bg-BG:
   homepage_banner_text_link: Научете повече
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Научете повече
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Научете повече
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
   homepage_slot_text_link_hoc: Опитайте Hour of Code
@@ -199,6 +201,7 @@ bg-BG:
   homepage_solot_text_link_volunteer: Доброволец за Часа на кода
   homepage_slot_text_title_students: Ученици
   homepage_slot_text_blurb_students: Разгледайте всички наши уроци
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Опитайте Студиото по кодиране
   homepage_slot_text_link_local: 'Намерете  клас в близост до Вас'
   homepage_slot_text_link_othercourses: Други онлайн курсове

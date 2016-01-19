@@ -99,11 +99,11 @@ fr:
         Jigsaw: Pièces de Puzzle
         MazeStep: Mode pas à pas du labyrinthe
         Wordsearch: Mots mêlés
-        Webapp: Applications Web
+        Webapp: Labo des applis
         ArtistEC: "L'Artiste"
         TextMatch: Correspondance de texte
         StudioEC: Labo
-        Applab: Applications Web
+        Applab: Labo des applis
         NetSim: "Simulateur d'Internet"
         Custom: Artiste
         CustomStudio: Labo
@@ -125,20 +125,20 @@ fr:
         parameters: Fonctions avec paramètres
     level:
       instructions:
-        maze_2_2: "Peux-tu m'aider à attraper le vilain cochon ? Assemble deux blocs « avancer plus » et clique sur « Démarrer » pour m'aider à y arriver. "
+        maze_2_2: "Peux-tu m'aider à attraper le vilain cochon ? Assemble deux blocs «Avancer» et clique sur «Démarrer» pour m'aider. "
         maze_2_1: "Ce cochon me hérisse les plumes. Aide-moi à l'atteindre !"
         maze_2_2_5: Trace le chemin et amène-moi à ce stupide cochon. Évite les TNT ou les plumes vont voler !
         maze_2_3: "Guide-moi jusqu'à cette maudite créature verte ! (Fais attention aux explosifs…)"
         maze_2_4: Reste calme et aide-moi à trouver cet affreux cochon. Sinon, je pourrais me fâcher !
         maze_2_5: "Il y a un moyen d'attraper ce stupide cochon en 2 blocs seulement. Peux-tu le trouver ?"
-        maze_2_6: "Essaie de me faire aller jusqu'à l'intrus vert à l'aide de seulement trois blocs."
+        maze_2_6: "Essaie de me faire aller jusqu'à l'intrus vert avec juste trois blocs."
         maze_2_7: "Aide-moi à en finir avec ce vilain cochon en utilisant le moins de blocs possible. Essaie d'utiliser plusieurs blocs « répéter »."
         maze_2_8: "Si un bloc est gris, tu ne peux pas le supprimer. Résous cette énigme en utilisant le bloc « répéter 3 fois ». Essaie d'y mettre ces trois blocs : avancer, avancer, tourner."
-        maze_2_9: "OK, essaie le nouveau bloc « répéter jusqu'à » : il se répétera jusqu'à ce que j'atteigne l'ennuyeux cochon."
+        maze_2_9: "Ok, essaie le nouveau bloc « répéter jusqu'à » : il se répétera jusqu'à ce que j'atteigne ce cochon agaçant."
         maze_2_10: "OK, une dernière fois pour s'entraîner. Peux-tu résoudre ce puzzle à l'aide de seulement 4 blocs ?"
         maze_2_11: "Chère personne. Moi zombie. Moi faim. Doit… attraper… tournesol… Peux-tu m'y amener avec seulement 5 blocs ?"
         maze_2_12: "OK, c'est la même chose, en légèrement différent. Peux-tu le faire en seulement 5 blocs ?"
-        maze_2_13: "Utilise le nouveau bloc « si » et laisse moi décider du moment pour tourner. Conseil : tu n'as besoin que d'un bloc de plus, mais apprends comment nous avons fait afin que tu puisses faire tout seul la prochaine fois."
+        maze_2_13: "Utilise le nouveau bloc « si » et laisse moi décider du moment où je tourne. Conseil : tu n'as besoin que d'un bloc de plus, mais apprend comment il faut faire pour que tu puisses faire tout seul la prochaine fois."
         maze_2_14: "OK, c'est la même chose que le puzzle précédent, mais tu dois te rappeler de comment tu as utilisé le bloc « si » et le bloc « répéter » ensemble."
         maze_2_15: "Moi vouloir tournesol ! Utilise un bloc « si » pour m'y envoyer avec le plus petit nombre de blocs."
         maze_2_16: "OK, nous allons le refaire encore une fois pour nous entraîner. Ce n'est pas très différent, mais attention aux plantes carnivores !"
@@ -147,12 +147,12 @@ fr:
         maze_2_19: "Peux-tu ajouter exactement 3 blocs pour m'aider à résoudre un labyrinthe encore plus complexe ? Si tu le fais bien, je suis prêt à suivre toute voie sinueuse, peu importe sa longueur."
         turtle_1_1: "Salut, je suis un artiste. Tu peux écrire du code pour me faire dessiner presque n'importe quoi. Utilise quelques blocs pour me faire dessiner sur les lignes grises de l'image."
         turtle_1_2: 'Maintenant, trace un carré. Note : utilise ta couleur préférée en la choisissant dans le nouveau bloc « choisir la couleur ».'
-        turtle_1_3: "Faire un carré à l'aide de seulement 3 blocs."
+        turtle_1_3: Faire un carré avec juste 3 blocs.
         turtle_1_4: "Trace un triangle dont les côtés sont tous de couleurs différentes, en utilisant l'option « couleur au hasard » qui choisit une couleur différente à chaque fois. Astuce : tu devras déterminer jusqu’où tourner en cliquant sur le numéro du bloc « tourner »."
         turtle_1_5: "Maintenant, pour t'entraîner, trace un triangle puis un carré pour dessiner une enveloppe."
         turtle_1_6: "Vois-tu comment dessiner ce triangle et ce carré ? Astuce : Fais d'abord le triangle, puis essaye de trouver de combien de degrés il faudra tourner avant de dessiner le carré."
         turtle_1_7: "OK, compliquons un peu les choses. Essaye de dessiner ces lunettes vertes. Les carrés font 100 pixels de côté, et ils sont reliés par une barre de 50 pixels. N'oublie pas de dessiner en vert !"
-        turtle_1_8: "OK, essayez de comprendre ce qui se passe si vous exécutez ce code (ou cliquez sur « Démarrer » pour l'essayer). Ensuite, répétez-le suffisamment de fois pour finir le dessin. Les couleurs seront différentes à chaque fois."
+        turtle_1_8: "Ok, essaie de comprendre ce qui se passe si tu exécutes ce code (ou clique sur « Démarrer » pour l'essayer). Ensuite, répète le jusqu'à terminer le dessin. Les couleurs seront différentes à chaque fois."
         turtle_1_9: "Vois-tu par quel nombre tu dois remplacer les points d'interrogation pour dessiner un cercle ?"
         turtle_1_10: "Tu l'as fait ! Maintenant, dessine tout ce que tu veux. Par exemple : un bonhomme en bâtons, un flocon de neige ou une spirale. Tu peux aussi essayer le nouveau bloc « régler la largeur ». Amuse-toi bien !"
         turtle_4_1: 'Peux-tu dessiner un triangle (avec des cotés de 100 pixels) avec seulement 3 blocs ? Astuce : utilise un bloc « répéter ».'
@@ -173,7 +173,7 @@ fr:
         maze_karel_1_5: 'Aidez-moi à remplir tous ces trous avec 5 pelletées de terre. Astuce : tu peux insérer un bloc « répéter » dans le bloc « tant que ».'
         maze_karel_1_6: Retire toutes les tas de saleté, en utilisant aussi peu de blocs que possible. Les nouvelles options dans le menu déroulant du bloc « tant que » me permettent de savoir si je suis sur un tas ou un trou.
         maze_karel_1_7: "Ouah, j'ai trouvé un trou très profond ! Je ne sais pas de combien de pelletées de terre je dois le remplir. Peux-tu écrire un programme qui le remplit jusqu'à ce que le terrain soit régulier ?"
-        maze_karel_1_8: "aide moi à remplir le trou à l'extrémité du champ, à l'aide du moins de blocs possible."
+        maze_karel_1_8: "Aide moi à remplir le trou à l'extrémité du champ avec le moins de blocs possible."
         maze_karel_1_9: "Guide-moi pour enlever toutes ces tas de saleté. Essaye d'utiliser aussi peu de blocs que possible. Astuce : essaye d'utiliser un bloc « tant que »."
         maze_karel_1_10: |-
           Je travaille tard, il fait noir dehors, et je ne peux pas dire quelle taille les tas sont. Maintenant je n'ai pas toutes les options que j'avais l'habitude d'avoir sur le bloc "jusqu'à". Déplace moi le long du champ et s'il y a un tas, retire-le.
@@ -213,13 +213,13 @@ fr:
         turtle_3_9: Sauras-tu remettre en place la fonction « dessiner une maison » sans aucune indication ? Essaye, puis dessine une nouvelle rangée de maisons.
         turtle_3_10: Vous avez beaucoup appris ! Vous pouvez à présent profiter de vos nouvelles connaissances pour dessiner tout ce dont vous avez envie. Essayez de dessiner une étoile, ou une spirale, ou encore un flocon de neige.
         maze_karel_debug_seq_1: "Bienvenue au débogage ! Mon code ne fonctionne pas bien. Peux-tu repérer le problème et le corriger afin que je puisse aplanir mon champ et qu'il soit prêt pour la plantation ?"
-        maze_karel_debug_seq_2: "Qu'est-ce qui ne va pas dans ce programme ? Quelle correction pouvez-vous effectuer afin que je puisse enlever cette motte de terre ?"
-        maze_karel_debug_repeat: Déboguez ce programme pour moi afin que mon terrain soit beau et plat.
+        maze_karel_debug_seq_2: "Qu'est-ce qui ne va pas dans ce programme ? Quelle correction dois-tu faire pour que je puisse enlever cette motte de terre ?"
+        maze_karel_debug_repeat: Débogue ce programme pour que mon terrain soit beau et plat.
         maze_karel_debug_while: "Comment devrais-tu modifier ce programme pour m'aider à combler le trou ?"
-        maze_karel_debug_if: "A l'aide! Réparez ce programme afin que mon terrain soit complètement plat."
-        maze_karel_debug_if_else: Débugger ce programme afin que je remplisse les trous et supprime tous les tas.
-        maze_karel_debug_function_1: "Quelle modification pouvez-vous effectuer dans ce programme pour m'aider à retirer toutes les mottes ?"
-        maze_karel_debug_function_2: Peux-tu déboguer ce programme pour moi afin que je puisse aplanir mon champ ?
+        maze_karel_debug_if: "A l'aide! Répare ce programme afin que mon terrain soit complètement plat."
+        maze_karel_debug_if_else: Débogue ce programme pour que je puisse remplir les trous et supprimer tous les tas.
+        maze_karel_debug_function_1: "Que dois-tu changer dans ce programme pour m'aider à retirer toutes les mottes ?"
+        maze_karel_debug_function_2: Peux-tu me déboguer ce programme pour que je puisse aplanir mon champ ?
         maze_karel_debug_function_3: Modifiez ce programme pour que je rase toutes les mottes présentes sur mon terrain.
         turtle_5_1: "Essayez d'exécuter ce programme, et apportez-y des modifications pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement différent à la place.)"
         turtle_5_2: "Essayez d'exécuter ce programme, et apportez-y des modifications pour voir quels changements sont produits. Comprenez-vous comment cela fonctionne ? (Vous pouvez également tout supprimer et mettre quelque chose de totalement différent à la place.)"
@@ -611,7 +611,7 @@ fr:
         Infinity_move_directions_callout_arrow: Utilisez ces flèches pour vous diriger
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
         Infinity_repeat_callout: "Place un bloc de déplacement à l'intérieur d'ici"
-        craft_run_button_callout: 'Cliquez sur "Run" (Exécuter) pour tester votre programme.'
+        craft_run_button_callout: Clique sur Démarrer pour tester ton programme.
         craft_drag_block_callout: |-
           Glissez un bloc "avancer" et ancrez-le sous l'autre bloc.
         craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.

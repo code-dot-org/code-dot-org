@@ -141,7 +141,7 @@
         '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Колёса/стороны: 3<br/>Окна/стороны:
           2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Каждый
-          из этих автомобилей разобран на части. Поставь в соответсвие автомобиль
+          из этих автомобилей разобран на мелкие части. Поставь в соответсвие автомобиль
           и список его деталей.
         Matching: Сопоставление
       4-5 Suncatchers Match 1:
@@ -274,8 +274,8 @@
         /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
-        Match the Map to the algorithm that gets the Flurb to the flowers.: Какой
-          алгоритм приведёт Флурба к цветам?
+        Match the Map to the algorithm that gets the Flurb to the flowers.: Выберите
+          алгоритм, который приведёт Флурба к цветам.
         Matching: Сопоставление
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
@@ -312,11 +312,11 @@
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Начните
           с квадрата <br/> Поместите параллелограмм над квадратом<br/> Поместите треугольник
           справа от параллелограмма
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Начать
-          с квадрата <br/>Поместить треугольник над квадратом<br/>Поместить треугольник
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Начните
+          с квадрата<br/>Поместите треугольник над квадратом<br/>поместите треугольник
           под квадратом
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Начни
-          с квадрата <br/> Помести треугольник ниже квадрата<br/> Помести параллелограмм
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Начните
+          с квадрата <br/> Поместите треугольник ниже квадрата<br/> Поместите параллелограмм
           справа от треугольника
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
@@ -328,10 +328,10 @@
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Выбор варианта
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Начать
-          с треугольника<br/>Поместить квадрат под треугольник<br/>Поместить еще один
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Начните
+          с треугольника<br/>Поместите квадрат под треугольник<br/>Поместите еще один
           треугольник под квадратом
-        Which image does <em>not</em> follow this algorithm?: Какое ображение <em>не</em>
+        Which image does <em>not</em> follow this algorithm?: Какое изображение <em>не</em>
           соответствует этому алгоритму?
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -339,15 +339,15 @@
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Выбор варианта
-        Which program makes this image?: Какая программа производит это изображение?
+        Which program makes this image?: Какая программа создаёт это изображение?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
         /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
         /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
         /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
-        According to the rules of the game, which set of cards is scored correctly?: Согласно
-          правилам игры какой набор карт правильно рассчитан?
+        According to the rules of the game, which set of cards is scored correctly?: Какой
+          набор карт, согласно правилам игры, правильно рассчитан?
         Multiple Choice: Выбор варианта
       2-3 Getting Loopy Multi 1:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
@@ -396,8 +396,8 @@
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700
-        Artist Debugging Multiple Choice One: Исполнитель откладывает один вариянт
-          из нескольких
+        Artist Debugging Multiple Choice One: Исполнитель выбирает один вариант из
+          нескольких
         Why won't this circle go all the way around?: Почему этот круг не до конца
           круглый?
       2-3 artist functions multi 1:
@@ -417,8 +417,9 @@
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
-        Artist Loops Multiple Choice: 'артист выбирает ответ из вариантов '
-        Which shape is made by this loop?: Какая форма производится этом цикле?
+        Artist Loops Multiple Choice: Артист выбирает ответ из вариантов
+        Which shape is made by this loop?: Какая форма производится с помощью этого
+          цикла?
       2-3 artist loops multi 2:
         /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500
@@ -473,7 +474,7 @@
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
           500
         Maze Multiple Choice One: 'Лабиринт: Выбор варианта - 1'
-        Which set of blocks is the correct answer?: Какой набор блоков является правильным?
+        Which set of blocks is the correct answer?: Какой набор блоков является верным?
       4-5 Algorithms Multi 1:
         Baking cookies: Выпечка печенья
         Banana: Банан
@@ -483,7 +484,7 @@
         Which one of these items is hardest to describe an algorithm for?: Какой из
           этих элементов труднее для описания алгоритма?
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Тында — это город _____ величины.
+        Eugene is a _____ city.: Тында - это _____ город.
         0: '? Ниже приведены три предложения. Какой из шаблонов подходит ко всем трем
           предложениям?'
         1: ': Ниже приведены три предложения. Какой из шаблонов ниже подходит ко всем
@@ -514,7 +515,7 @@
         Which piece of information listed below is okay to share on the internet?: Какой
           информацией из перечисленных ниже можно поделиться в Интернете?
         Your address: Ваш адрес
-        Your birthday: Ваш день рождения
+        Your birthday: Ваша дата рождения
         Your favorite food: Ваше любимое блюдо
         Your parent's credit card number: Номер кредитной карты ваших родителей
       4-5 Internet Multi 1:

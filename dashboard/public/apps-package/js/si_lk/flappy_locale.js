@@ -154,7 +154,7 @@ v:function(d,k){flappy_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:(k=flappy_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).flappy_locale = {
-"continue":function(d){return "ඉදිරියට යන්න"},
+"continue":function(d){return "කරගෙන යන්න"},
 "doCode":function(d){return "do"},
 "elseCode":function(d){return "else"},
 "endGame":function(d){return "ක්‍රීඩාව අවසන් කරන්න"},
@@ -253,7 +253,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpeed":function(d){return "වේගය එක් කරන්න"},
 "setSpeedTooltip":function(d){return "ලෙවලය සඳහා වේගයක් එක් කරන්න"},
 "shareFlappyTwitter":function(d){return "මා විසින් නිර්මාණය කරන ලද Flappy game ක්‍රීඩාව ඔබත් උත්සහ කර බලන්න. @codeorg හි සහය සහිතව මා විසින්ම මෙහි කේතයන් ලියා ඇත"},
-"shareGame":function(d){return "ඔබෙගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
+"shareGame":function(d){return "ඔබගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
 "soundRandom":function(d){return "අහඹු"},
 "soundBounce":function(d){return "bounce"},
 "soundCrunch":function(d){return "crunch"},
