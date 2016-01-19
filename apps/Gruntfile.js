@@ -497,6 +497,7 @@ module.exports = function(grunt) {
     'pseudoloc',
     'newer:messages',
     'newer:copy:src',
+    'newer:copy:lib',
     'locales',
     'newer:strip_code',
     'ejs'
@@ -504,7 +505,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
-    'newer:copy:lib',
     'newer:concat',
     'newer:sass'
   ]);
