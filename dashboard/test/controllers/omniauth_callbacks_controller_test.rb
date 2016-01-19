@@ -69,6 +69,59 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal nil, user.gender
   end
 
+
+  test "authorizing with unknown clever district admin account creates teacher" do
+    auth = stub('auth',
+                uid: '1111',
+                provider: 'clever',
+                info: stub('info', nickname: '',
+                           name: {'first' => 'Hat', 'last' => 'Cat'},
+                           email: 'first_last@clever_district_admin.xx',
+                           user_type: 'district_admin',
+                           dob: nil,
+                           gender: nil))
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(User) do
+      get :clever
+    end
+
+    user = User.last
+    assert_equal 'clever', user.provider
+    assert_equal 'Hat Cat', user.name
+    assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
+    assert_equal nil, user.gender
+  end
+
+  test "authorizing with unknown clever school admin account creates teacher" do
+    auth = stub('auth',
+                uid: '1111',
+                provider: 'clever',
+                info: stub('info', nickname: '',
+                           name: {'first' => 'Hat', 'last' => 'Cat'},
+                           email: 'first_last@clever_school_admin.xx',
+                           user_type: 'school_admin',
+                           dob: nil,
+                           gender: nil))
+
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(User) do
+      get :clever
+    end
+
+    user = User.last
+    assert_equal 'clever', user.provider
+    assert_equal 'Hat Cat', user.name
+    assert_equal User::TYPE_TEACHER, user.user_type
+    assert_equal "21+", user.age # we know you're an adult if you are a teacher on clever
+    assert_equal nil, user.gender
+  end
+
   test "authorizing with unknown clever teacher account needs additional information" do
     auth = stub('auth',
                 uid: '1111',
