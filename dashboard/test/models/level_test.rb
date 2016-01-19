@@ -270,6 +270,7 @@ EOS
   def update_maze
     maze = Maze.last
     maze.start_blocks = '<xml/>'
+    maze.published = true
     maze.save!
 
     maze.reload
@@ -290,7 +291,7 @@ EOS
   end
 
   def create_maze
-    maze = create(:maze)
+    maze = create(:maze, :published => true)
     assert maze
   end
 

@@ -5,12 +5,14 @@ require 'test_helper'
 # not used when they should on reads. These tests test that they are
 # rejected before attempting to read or write them from the db.
 class CharsetTest < ActionDispatch::IntegrationTest
+  def setup
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
+
   def no_database
     Rails.logger.info '--------------'
     Rails.logger.info 'DISCONNECTING DATABASE'
     Rails.logger.info '--------------'
-
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
 
     ActiveRecord::Base.connection.disconnect!
   end
