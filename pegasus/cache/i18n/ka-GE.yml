@@ -243,6 +243,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: გაიგეთ მეტი
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: გაიგეთ მეტი
   homepage_slot_text_title_hoc: კოდის ერთი საათი
   homepage_slot_text_blurb_hoc: სწავლა შეუძლია ყველას. დაიწყეთ დღეს
   homepage_slot_text_link_hoc: სცადეთ კოდის ერთი საათი
@@ -251,6 +254,7 @@
   homepage_solot_text_link_volunteer: გახდით კოდის ერთი საათის მოხალისე
   homepage_slot_text_title_students: მოსწავლეები
   homepage_slot_text_blurb_students: ყველა ჩვენი ტუტორიალის ნახვა
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: ნახეთ კოდის სტუდია
   homepage_slot_text_link_local: ადგილობრივი კლასის ნახვა
   homepage_slot_text_link_othercourses: სხვა ონლაინ კურსები

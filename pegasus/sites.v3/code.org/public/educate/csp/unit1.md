@@ -7,7 +7,7 @@ nav: educate_nav
 
 ## Unit 1
 
-**Quick Links**
+### Quick Links
 
 [General CSP Forum](http://forum.code.org/c/csp) | [Unit 1 Discussion Forum](http://forum.code.org/c/csp-unit1) |  [CSP Unit 1 in Code Studio](https://studio.code.org/s/cspunit1)  | [Writing Team](team) 
 
@@ -16,7 +16,7 @@ nav: educate_nav
 <table>
 	<tr>
 		<td width=66% style="padding: 3px; border-color: white">
-		<strong>Important notes about lessons and digital tools</strong>
+		<h3>Important notes about lessons and digital tools</h3>
 		<ul>
 				<li>To use the tools in this course and be able to see your students' progress, first <a href="/teacher-dashboard#/sections">create a new section</a> in the teacher dashboard. The recommended Login Type is 'Email' and the Course is 'cspunit1'. <i>Note:</i> Students must be part of the same section to use the Internet Simulator together.</li> 
 				

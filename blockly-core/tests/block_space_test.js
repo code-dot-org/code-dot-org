@@ -183,3 +183,13 @@ function test_readOnlyBlockSpaceCanRender() {
     assertEquals(numberBlock.isEditable(), false);
   });
 }
+
+function test_blockSpacesUseSameWidgetDiv() {
+  Blockly.Test.initializeBlockSpaceEditor();
+  var first = Blockly.WidgetDiv;
+  assertNotNull(first);
+  Blockly.Test.initializeBlockSpaceEditor();
+  var second = Blockly.WidgetDiv;
+  assertNotNull(second);
+  assertEquals(first, second);
+}

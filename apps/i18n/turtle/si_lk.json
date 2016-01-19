@@ -1,6 +1,6 @@
 {
   "blocksUsed": "Blocks used: %1",
-  "branches": "branches",
+  "branches": "ශාඛා",
   "catColour": "පාට",
   "catControl": "ලූපයන්",
   "catMath": "ගණිත",
@@ -25,8 +25,8 @@
   "drawAFlower": "මලක් අඳින්න",
   "drawAHexagon": "ෂඩස්‍රයක් අඳින්න",
   "drawAHouse": "ගෙයක් අඳින්න",
-  "drawAPlanet": "draw a planet",
-  "drawARhombus": "draw a rhombus",
+  "drawAPlanet": "ග්‍රහලොවක් අඳින්න",
+  "drawARhombus": "රොම්බසයක් අඳින්න",
   "drawARobot": "රොබෝවෙක් අදින්න",
   "drawARocket": "රොකටයක් අදින්න",
   "drawASnowflake": "draw a snowflake",

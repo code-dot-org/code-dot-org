@@ -317,7 +317,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playlab_lastLevel_continueText":function(d){return "Done"},
 "hoc2015_lastLevel_continueText":function(d){return "Done"},
 "hoc2015_reinfFeedbackMsg":function(d){return "You can press the \""+studio_locale.v(d,"backButton")+"\" button to go back to playing your game."},
-"hoc2015_shareGame":function(d){return "ඔබෙගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
+"hoc2015_shareGame":function(d){return "ඔබගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
 "hoc2015_move_right_instructions":function(d){return "\"We need that scrap metal [scrapmetal1]. BB-8, can you get it?\""},
 "hoc2015_move_right_down_instructions":function(d){return "\"We need more scrap metal [scrapmetal2]. Can you get all the metal in this area?\""},
 "hoc2015_move_diagonal_instructions":function(d){return "\"Watch out for the Bandit [hazard]!\""},

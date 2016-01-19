@@ -10,7 +10,6 @@
  *
  * Gem assets
  *= require jquery-ui
- *= require video-js
  *
  * Vendor assets
  *= require add2home
@@ -30,6 +29,8 @@
  *= require details-polyfill
  */
 
+// TODO: Move into code-studio.scss when it exists.
+@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
@@ -1225,10 +1226,10 @@ a.download-video {
     height: 20px;
     overflow: hidden;
     padding: 10px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
   .teacher-announce .announce-heading .heading-view-all {
-    float: right; 
+    float: right;
   }
   .teacher-announce .announce-content {
     background-color: #ebe8f1;
@@ -1238,7 +1239,7 @@ a.download-video {
     padding: 10px;
   }
   .teacher-announce .announce-content .content-img-container {
-    float: left; 
+    float: left;
   }
   .teacher-announce .announce-content .content-img {
     border-radius: 4px;
@@ -1922,6 +1923,17 @@ $modal-no-icon-gap: 22px;
     color: $charcoal;
     margin: 0 0 8px;
   }
+
+  .instructions-container {
+    .authored-hints {
+      p, pre {
+        font-size: 18px;
+        line-height: normal;
+        color: $charcoal;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .dialog-title {
@@ -1934,6 +1946,16 @@ $modal-no-icon-gap: 22px;
   border: 1px solid $orange;
   color: white;
   min-width: 100px;
+}
+
+#hint-button {
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  color: black;
+
+  svg {
+    margin: -12px -6px;
+  }
 }
 
 #again-button {
@@ -2178,4 +2200,16 @@ div#tryHoc {
   img#hocLogo {
     width:40px;
   }
+}
+
+#environment_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: $light_purple;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }

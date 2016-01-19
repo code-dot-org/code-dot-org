@@ -22,10 +22,6 @@ namespace :lint do
       # also do our standard apps lint
       RakeUtils.system 'grunt jshint'
     end
-    Dir.chdir(shared_js_dir) do
-      HipChat.log 'Linting <b>shared</b> JavaScript...'
-      RakeUtils.system 'npm run lint'
-    end
     Dir.chdir(code_studio_dir) do
       HipChat.log 'Linting <b>code-studio</b> JavaScript...'
       RakeUtils.system 'npm run lint-js'
@@ -99,23 +95,13 @@ namespace :build do
     end
   end
 
-  task :shared do
-    Dir.chdir(shared_js_dir) do
-      HipChat.log 'Installing <b>shared js</b> dependencies...'
-      RakeUtils.npm_install
-
-      HipChat.log 'Building <b>shared js</b>...'
-      RakeUtils.system 'npm run gulp'
-    end
-  end
-
   task :code_studio do
     Dir.chdir(code_studio_dir) do
       HipChat.log 'Installing <b>code-studio</b> dependencies...'
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run build'
+      RakeUtils.system 'npm run clean && npm run build'
     end
   end
 
@@ -207,7 +193,6 @@ namespace :build do
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
-  tasks << :shared if CDO.build_shared_js
   tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
@@ -286,16 +271,6 @@ namespace :install do
     end
   end
 
-  task :shared do
-    if local_environment?
-      Dir.chdir(shared_js_dir) do
-        shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
-        RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
-      end
-      install_npm
-    end
-  end
-
   task :code_studio do
     if local_environment?
       Dir.chdir(code_studio_dir) do
@@ -329,7 +304,6 @@ namespace :install do
   #tasks << :blockly_core if CDO.build_blockly_core
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
-  tasks << :shared if CDO.build_shared_js
   tasks << :code_studio if CDO.build_code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus

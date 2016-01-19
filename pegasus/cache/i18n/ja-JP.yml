@@ -219,6 +219,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: もっと詳しく知る
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: もっと詳しく知る
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
   homepage_slot_text_link_hoc: 「コードの時間」に挑戦する
@@ -227,6 +230,7 @@
   homepage_solot_text_link_volunteer: Hour of Code のボランティア
   homepage_slot_text_title_students: 生徒
   homepage_slot_text_blurb_students: チュートリアルをすべて見る
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Code Studioを試す
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_othercourses: その他のオンラインコース

@@ -1,0 +1,7 @@
+- margin_left = ["70px", "50px", "50px"]
+
+.row#testimonials{style: "font-weight: 500; font-size: 16px; color: rgb(26, 172, 186); margin-top: 40px;"}
+  - circles.each_with_index do |circle, index|
+    .col-sm-3{style: "text-align:center; margin-left: #{margin_left[index]}"}
+      %img{src: circle[:img], style: "border-radius: 50%"}
+      %p{style: "margin-top: 10px;"}= circle[:text]

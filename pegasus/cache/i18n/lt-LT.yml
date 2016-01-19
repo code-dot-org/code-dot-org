@@ -41,13 +41,13 @@
   hoc2014_support: Paremkite &#x25BE;
   hoc2014_whatishoc: Kas yra „Programavimo valanda“?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
+  csedweek_map_signup: Užregistruokite savo renginį
   csedweek_map_search_placeholder: Search for Hour of Code events
   csedweek_map_search_search: Ieškoti
   csedweek_map_search_reset: Iš naujo
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_title: Legenda
+  csedweek_map_legend_event: Programavimo valandos renginys
+  csedweek_map_legend_cs_tech_jam: Specialus renginys
   cded_sign_up: Užsiregistruoti
   cded_try_it: Išmėginkite
   twentyhours_trynow: Išmėginkite dabar
@@ -74,20 +74,20 @@
   thank_you_: Ačiū!
   congratulations: Sveikiname!
   congratulations_on_completing_hoc: Sveikiname užbaigus „Programavimo valandą“
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
+  congratulations_volunteer: Sveikiname! Dabar jūs išbandėte „Programavimo valandą”,
+    <a href="https://code.org/volunteer">savanoriškai užsiregistruokite klasėje</a>
+    ir padėkite mokiniams išmokti programuoti naudojant „Programavimo valandą”!
   course_name_accelerated: Pagreitintas kursas
   course_name_course1: Kursas 1
   course_name_course2: Kursas 2
   course_name_course3: Kursas 3
   course_name_course4: Kursas 4
-  congratulations_on_completing_course: Congratulations on completing %{course}
+  congratulations_on_completing_course: Sveikiname pabaigus %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
-  enter_valid_age: Please select a valid age
+  enter_valid_age: Prašome pasirinkti teisingą amžių
   enter_valid_email: Prašome įvesti galiojantį el. pašto adresą
   get_a_certificate_message: Išsiųsime Jums sertifikatą ir informaciją apie  <a href='/learn/beyond'>„Programavimo
     valandą“</a>
@@ -222,9 +222,9 @@
   homepage_slot_text_course4: Kursas 4
   homepage_slot_text_shop: Parduotuvė
   homepage_slot_text_flappy: Flappy kodas
-  homepage_action_text_hoc: An Hour of Code for every student.
+  homepage_action_text_hoc: '"Programavimo valanda" kiekvienam moksleiviui.'
   homepage_action_text_num_served: '# išbandė'
-  homepage_action_text_join_us: Join us
+  homepage_action_text_join_us: Prisijunkite
   homepage_action_text_sign_up: Užsiregistruoti
   homepage_action_text_try_it: Išmėginkite
   homepage_action_text_volunteers: Technical volunteers wanted
@@ -243,6 +243,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Sužinok daugiau
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Sužinok daugiau
   homepage_slot_text_title_hoc: „Programavimo valanda“
   homepage_slot_text_blurb_hoc: Išmokti gali kiekvienas. Pradėk šiandien
   homepage_slot_text_link_hoc: Išmėgink „Programavimo valandą“
@@ -251,6 +254,7 @@
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: Mokiniai
   homepage_slot_text_blurb_students: Peržiūrėkite visas mūsų pamokėles
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Išmėginkite Kodavimo studiją
   homepage_slot_text_link_local: Suraskite kursus savo gyvenvietėje
   homepage_slot_text_link_othercourses: Kiti internetiniai kursai
@@ -311,7 +315,7 @@
   inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
     videos</a> by role models and celebrities
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Klasikinis
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
   playlab_iceage_title_live: Ledynmetis
@@ -749,8 +753,8 @@
   mobile_devices: Pamokos mobiliesiems telefonams
   frozen_name: Programuokite kartu su Ana ir Elze
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Sukurk savo pirmą kompiuterinę programą
-  codeintl_name: Sukurk savo pirmą kompiuterinę programą
+  codeorg_name: Klasikinis labirintas
+  codeintl_name: Klasikinis labirintas
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Įvadas į JavaScript
   khanes_name: Įvadas į JavaScript
@@ -786,7 +790,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: „Akmuo, popierius, žirklės“
-  hourofcode_name: Sukurk savo pirmą kompiuterinę programą
+  hourofcode_name: Klasikinis labirintas
   playlab_name: Laboratorija
   infinity_name: Žaidimų laboratorija Infinity
   artist_name: Menininkas

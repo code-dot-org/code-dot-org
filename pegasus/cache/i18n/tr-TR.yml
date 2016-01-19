@@ -248,6 +248,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Daha fazlasını öğren
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Daha fazlasını öğren
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: Kodlama Saati'ni Deneyin
@@ -256,6 +259,7 @@
   homepage_solot_text_link_volunteer: '`Hour of Code` için gönüllü'
   homepage_slot_text_title_students: Öğrenciler
   homepage_slot_text_blurb_students: Tüm dersleri keşfedin
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Code Studio deneyin
   homepage_slot_text_link_local: En yakın sınıfı bulun
   homepage_slot_text_link_othercourses: Diğer online kurslar

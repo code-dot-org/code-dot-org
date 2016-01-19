@@ -12,6 +12,8 @@ include UsersHelper
 def get_program_type(script_name)
   if script_name.downcase.include? "k5"
     return "CSF"
+  elsif script_name.downcase.include? "ecs"
+    return "ECS"
   elsif script_name.downcase.include? "csp"
     return "CSP"
   # Some scripts (e.g., "algPDMiami") abbreviate "algebra" to "alg".
@@ -19,10 +21,8 @@ def get_program_type(script_name)
     return "CSinA"
   elsif script_name.downcase.include? "science"
     return "CSinS"
-  elsif script_name.downcase.include? "ecs"
-    return "ECS"
-  # There are known scripts (e.g., "equity-pd") that will receive this classification.
   else
+    # There are known scripts (e.g., "equity-pd") that will receive this classification.
     return "Unknown"
   end
 end

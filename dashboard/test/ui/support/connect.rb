@@ -51,8 +51,9 @@ def saucelabs_browser
                                         url: url,
                                         desired_capabilities: capabilities,
                                         http_client: Selenium::WebDriver::Remote::Http::Default.new.tap{|c| c.timeout = 5.minutes}) # iOS takes more time
-    rescue URI::InvalidURIError, Net::ReadTimeout
+    rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
+      puts 'Failed to get browser, retrying...'
       retries += 1
       retry
     end
@@ -130,10 +131,12 @@ After do |scenario|
   all_passed = all_passed && scenario.passed?
   log_result all_passed
 
-  if slow_browser?
-    @browser.execute_script 'sessionStorage.clear()'
-  else
-    @browser.quit unless @browser.nil?
+  unless @browser.nil?
+    if slow_browser?
+      @browser.execute_script 'sessionStorage.clear()'
+    else
+      @browser.quit
+    end
   end
 end
 

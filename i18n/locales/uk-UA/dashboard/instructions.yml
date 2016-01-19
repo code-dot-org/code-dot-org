@@ -1079,6 +1079,7 @@ uk:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1313,6 +1314,11 @@ uk:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: А тепер створимо 20 кіл, котрі накладаються, повертаючи на 18 градусів між колами.
       frozen circle function with parameter_instruction: 'Ось блок "Створити коло", який малює кола різних розмірів. Зможеш використати його для створення малого кола, розміром 5, та великого кола, розміром 10?'
@@ -1928,6 +1934,9 @@ uk:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Зараз бджолі потрібен тільки нектар. Не всі об'єкти є квітами, тож перевіряй під кожною хмаринкою, чи приховує вона квітку. Якщо так, то можна збирати нектар."
       Ryan - Bee Conditionals_instruction: "Бджола хоче збирати лише нектар. Пам'ятай, що не всі об'єкти є квітами, тож спершу перевіряй кожну хмаринку, щоб побачити, чи приховує вона квітку. Якщо так, то можна збирати нектар."
       Ryan Test Locked Blocks_instruction: 'Ось функції, яка називається "патрулювати." Зміни її так, щоб перемістити кішку на 400 пікселів вгору, а потім на 400 пікселів вниз.'
@@ -2713,8 +2722,8 @@ uk:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -3436,20 +3445,46 @@ uk:
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

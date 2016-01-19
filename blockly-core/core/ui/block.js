@@ -319,9 +319,6 @@ Blockly.Block.terminateDrag_ = function() {
   if (selected) {
     selected.blockSpace.fireChangeEvent();
     selected.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
-  } else {
-    // If not, at least trigger a cursor change on blocks.
-    Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null);
   }
 
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;

@@ -904,6 +904,18 @@ applabCommands.setText = function (opts) {
   return false;
 };
 
+applabCommands.getNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'getNumber', 'id', opts.elementId, true);
+  return parseFloat(applabCommands.getText(opts), 10);
+};
+
+applabCommands.setNumber = function (opts) {
+  apiValidateDomIdExistence(opts, 'setNumber', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setNumber', 'value', opts.number, 'number');
+  opts.text = opts.number;
+  return applabCommands.setText(opts);
+};
+
 /**
  * Attempts to emulate Chrome's version of innerText by way of innerHTML, only
  * for the simplified case of plain text content (in, for example, a
@@ -1346,6 +1358,16 @@ applabCommands.onEvent = function (opts) {
         domElement.addEventListener(
             opts.eventName,
             applabCommands.onEventFired.bind(this, opts));
+        // To allow INPUT type="range" (Slider) events to work on downlevel browsers, we need to
+        // register a 'change' listener whenever an 'input' listner is requested.  Downlevel
+        // browsers typically only sent 'change' events.
+        if (opts.eventName === 'input' &&
+            domElement.tagName.toUpperCase() === 'INPUT' &&
+            domElement.type === 'range') {
+          domElement.addEventListener(
+              'change',
+              applabCommands.onEventFired.bind(this, opts));
+        }
         break;
       case 'mousemove':
         domElement.addEventListener(
@@ -1516,7 +1538,7 @@ applabCommands.updateRecord = function (opts) {
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleUpdateRecord = function(opts, record) {
+applabCommands.handleUpdateRecord = function(opts, record, success) {
   if (opts.onComplete) {
     opts.onComplete.call(null, record);
   }
@@ -1536,9 +1558,9 @@ applabCommands.deleteRecord = function (opts) {
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
-applabCommands.handleDeleteRecord = function(opts) {
+applabCommands.handleDeleteRecord = function(opts, success) {
   if (opts.onComplete) {
-    opts.onComplete.call(null);
+    opts.onComplete.call(null, success);
   }
 };
 

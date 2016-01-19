@@ -97,7 +97,12 @@ Breakfast and lunch will be served.
 
 **February 20th Location**
 
-TBD
+[Alliance Leichtman-Levine Family Foundation Environmental Science High School<br/>
+Room TBD<br/>
+2930 Fletcher Drive<br/>
+Los Angeles, CA 90065](https://www.google.com/maps/place/2930+Fletcher+Dr,+Los+Angeles,+CA+90065/@34.1139623,-118.2487635,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c12eb4153f6b:0x1203f5b40ab9eab0)
+
+Plenty of free parking is available.
 
 **What to bring to Phase 3 quarterly sessions:**
 
