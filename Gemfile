@@ -48,8 +48,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'fakeweb'
   gem 'simplecov', '~> 0.9', require: false
+  gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'mocha', require: false
-  gem "codeclimate-test-reporter", require: false
   gem 'sqlite3'
   gem 'timecop'
   gem 'fake_sqs'
