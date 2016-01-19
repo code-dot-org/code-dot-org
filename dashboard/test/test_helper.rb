@@ -1,7 +1,7 @@
 if ENV['COVERAGE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
-elsif ENV['CIRCLE']
+elsif ENV['CI']
   require 'coveralls'
   Coveralls.wear!('rails')
 end
