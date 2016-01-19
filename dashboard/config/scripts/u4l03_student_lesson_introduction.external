@@ -16,7 +16,7 @@ In this lesson you'll use the `createRecord` command to programmatically add dat
  * **Table** - one collection of data in a database made up of rows and columns.
  * **Record** - a row in a table.  In App Lab a record is an object.
  * **Callback Function** - a function that is called by “the system” when the database sends information back.  In App Lab the database always sends something back. 
- * **`readRecord`** - the App Lab command for sending data to a database for storage.  You specify the name of the table, and an object you’d like to store.
+ * **`createRecord`** - the App Lab command for sending data to a database for storage.  You specify the name of the table, and an object you’d like to store.
 
 # Lesson
 

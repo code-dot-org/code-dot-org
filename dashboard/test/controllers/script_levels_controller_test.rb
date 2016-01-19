@@ -1,5 +1,5 @@
-require 'cdo/script_config'
 require 'test_helper'
+require 'cdo/script_config'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
@@ -537,13 +537,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should render title for puzzle in default script' do
     get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
-    assert_equal 'Code.org - Accelerated Intro to CS Course: The Maze #4',
+    assert_equal 'Code.org [test] - Accelerated Intro to CS Course: The Maze #4',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test 'should render title for puzzle in custom script' do
     get :show, script_id: @custom_script.name, stage_id: @custom_s2_l1.stage, id: @custom_s2_l1.position
-    assert_equal 'Code.org - custom-script-laurel: laurel-stage-2 #1',
+    assert_equal 'Code.org [test] - custom-script-laurel: laurel-stage-2 #1',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
