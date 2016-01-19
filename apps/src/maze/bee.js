@@ -78,6 +78,7 @@ Bee.prototype.reset = function () {
   }
   this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
   this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  this.resetCurrentValues();
 };
 
 Bee.prototype.useGridWithId = function (id) {
