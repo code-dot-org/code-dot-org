@@ -250,6 +250,9 @@
   homepage_banner_privacy_main: Ne e kemi rifreskuar linjën tonë të privacisë që të
     përfshijë vegla të përdorura në kursin tonë ë ri te shkollës, CS Principles.
   homepage_banner_privacy_link: Mëso më shumë
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Mëso më shumë
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
@@ -258,6 +261,7 @@
   homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
   homepage_slot_text_title_students: Studentët
   homepage_slot_text_blurb_students: Eksploro të gjitha tutorialet tona
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Provo Code Studio (studio e kodimit)
   homepage_slot_text_link_local: Gjej një klasë lokale
   homepage_slot_text_link_othercourses: Kurse të tjera online

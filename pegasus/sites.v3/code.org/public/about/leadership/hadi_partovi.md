@@ -7,13 +7,13 @@ nav: about_nav
 <img src='<%= avatar_image('Hadi Partovi') %>'/ width='320px'>
 <br/>
 <br/>
-Hadi is a tech entrepreneur and investor, and founder of education non-profit Code.org. As an entrepreneur, he was on the founding teams of Tellme and iLike. As a tech investor and startup advisor, Hadi’s portfolio includes [Facebook](http://www.facebook.com), [Dropbox](http://www.dropbox.com), [airbnb](http://airbnb.com), [Zappos](http://www.zappos.com), [OPOWER](http://opower.com/), [IndieGogo](http://www.indiegogo.com), [Bluekai](http://www.bluekai.com/), and other companies.
+Hadi is a tech entrepreneur and investor, and founder of education non-profit Code.org. As an entrepreneur, he was on the founding teams of Tellme and iLike. As a tech investor and startup advisor, Hadi’s portfolio includes [Facebook](http://www.facebook.com), [Dropbox](http://www.dropbox.com), [airbnb](http://airbnb.com),  and other companies.
 
 A graduate of Harvard University, Hadi began his career during the browser wars in the 1990s, when he was Microsoft’s Group Program Manager for Internet Explorer. After the release of IE 5.0, Hadi co-founded [Tellme Networks](http://en.wikipedia.org/wiki/Tellme_Networks), which was acquired by Microsoft. Hadi ran the MSN.com portal, where he delivered 30% annual growth.
 
 After leaving Microsoft a second time, Hadi co-founded [iLike](http://en.wikipedia.org/wiki/Ilike) with twin brother Ali Partovi, and together they built the leading music application on the Facebook platform. in 2009, iLike was acquired by MySpace where both Partovis worked as Senior Vice Presidents.
 
-Hadi has been a strategic advisor to numerous startups including Facebook, Dropbox, OPOWER, and Bluekai, and serves on the board of [TASER International](http://www.taser.com/). 
+Hadi has been a strategic advisor to numerous startups including Facebook, Dropbox, and OPOWER, and serves on the board of [TASER International](http://www.taser.com/). 
 
 <hr/>
 Educators: [Request a visit to your school assembly](/visit)

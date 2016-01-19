@@ -254,6 +254,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Daha ətraflı
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Daha ətraflı
   homepage_slot_text_title_hoc: Kod Saatı
   homepage_slot_text_blurb_hoc: Hər kəs öyrənə bilər. Elə bu gün başlayın
   homepage_slot_text_link_hoc: Kod Saatında özünüzü sınayın
@@ -262,6 +265,7 @@
   homepage_solot_text_link_volunteer: Kod Saatına könüllü kimi dəstək verin
   homepage_slot_text_title_students: Şagirdlər
   homepage_slot_text_blurb_students: Bütün dərsliklərimizi nəzərdən keçirin
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Kod Studiyasını sınaqdan keçirin
   homepage_slot_text_link_local: Yaxında bir sinif tapın
   homepage_slot_text_link_othercourses: Digər onlayn kurslar

@@ -32,6 +32,8 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
+var Instructions = require('./templates/Instructions.jsx');
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -345,7 +347,7 @@ StudioApp.prototype.init = function(config) {
   if (config.showInstructionsWrapper) {
     config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructions_(config.level, shouldAutoClose);
+      this.showInstructions_(config.level, shouldAutoClose, false);
     }, this));
   }
 
@@ -417,7 +419,7 @@ StudioApp.prototype.init = function(config) {
     var bubble = document.getElementById('bubble');
 
     this.authoredHintsController_.display(promptIcon, bubble, function () {
-      this.showInstructions_(config.level, false);
+      this.showInstructions_(config.level, false, true);
     }.bind(this));
   }
 
@@ -868,7 +870,7 @@ StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
 
-StudioApp.prototype.showInstructions_ = function(level, autoClose) {
+StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
   var headerElement;
@@ -892,16 +894,21 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     }
   }
 
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  var instructionsContent = React.createElement(Instructions, {
     puzzleTitle: puzzleTitle,
     instructions: this.substituteInstructionImages(level.instructions),
     instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
-    hintReviewTitle: msg.hintReviewTitle(),
-    authoredHints: this.authoredHintsController_.getSeenHints(),
     markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
-    aniGifURL: level.aniGifURL
+    aniGifURL: level.aniGifURL,
+    authoredHints: authoredHints
   });
+  React.render(instructionsContent, instructionsDiv);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -1472,7 +1479,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
   this.skin = config.skin;
-  this.showInstructions = this.showInstructions_.bind(this, config.level);
+  this.showInstructions = this.showInstructions_.bind(this, config.level, false);
   this.polishCodeHook = config.polishCodeHook;
 };
 
@@ -1595,17 +1602,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
         document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-        var wireframeSendToPhoneClick = function () {
-          $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
-            .off('click', wireframeSendToPhoneClick);
-          dashboard.initSendToPhone('#wireframeSendToPhone');
-          $('#send-to-phone').show();
-        };
-
-        var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
-        wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
-        wireframeSendToPhone.click(wireframeSendToPhoneClick);
-        $('body').append(wireframeSendToPhone);
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        React.render(React.createElement(WireframeSendToPhone, {
+          channelId: dashboard.project.getCurrentId(),
+          appType: dashboard.project.getStandaloneApp()
+        }), div);
       }
     } else if (!options.embed && !dom.isMobile()) {
       var runButton = document.getElementById('runButton');
@@ -1782,7 +1784,8 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
- * Add the starting block(s).
+ * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
+ * level will advance as soon as it's loaded.
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
@@ -1790,7 +1793,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
-  if (loadLastAttempt) {
+  if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
   if (config.forceInsertTopBlock) {

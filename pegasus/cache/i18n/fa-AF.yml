@@ -188,45 +188,50 @@
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
   studiobar_shop_title: فروشگاه
   studiobar_shop_body: شکستن کلیشه ها. لوگوی ما را با غرور بپوش.
-  homepage_hero_text_malala: |
-    &ldquo;من دختران هر کشوری را به چالش آموختن یک ساعت کدزدن دعوت میکنم&rdquo;
-    مالالا، برنده جایزه نوبل
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner\n"
   homepage_hero_text_susan: |
-    &ldquo;اگر شما بتوانید تکنولوژی را تغییر دهید، می توانید دنیا را تغییر دهید.&rdquo;
-    سوزان، مدیرعامل یوتیوب
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;فقط با گوشیتان بازی نکنید، برنامه نویسی اش کنید.&rdquo;
-    رئیس جمهور باراک اوباما
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;فرزندان ما&mdash;از جمله دخترهایمان&mdash;نیاز به فرصت یادگیری علوم کامپیوتر دارند.&rdquo;
-    شریل، رئیس ارشد اجرایی فیسبوک
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
   homepage_hero_text_satya: |
-    &ldquo; علوم کامپیوتر می تواند بهترین فرصت های دنیا را ایجاد کند&rdquo;
-    ساتیا، مدیرعامل مایکروسافت
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |
-    &ldquo;اگر شما کد بزنید، می توانید مسیر زندگیتان را مشخص و انتخاب کنید.&rdquo;
-    کریس بوش
+    &ldquo;If you code, you can pick and choose
+    the course of your life.&rdquo;
+    Chris Bosh
   homepage_hero_text_student1: |
-    &ldquo;این مهارت ها آینده ی من را تغییر دادند. لازم به ذکر نیست، این فقط تفریح ساده است.&rdquo;
-    لونا، کلاس هفتم
+    &ldquo;These skills have changed my future.
+    Not to mention, it's just plain fun.&rdquo;
+    Luna, 7th grade
   homepage_hero_text_student2: |
-    &ldquo;من هیچ وقت، هرگز بچه هامو درباره ی یادگیری اینقدر هیجان زده ندیده ام.&rdquo;
-    میشل، معلم
+    &ldquo;I have never, ever seen my kids
+    so excited about learning.&rdquo;
+    Michael, teacher
   homepage_hero_text_student3: |
-    &ldquo; علوم کامپیوتر رشته ای است که چه خوشتان بیاید چه نه نمی توانید قبل از امتحان کردنش آن را بشناسید.&rdquo;
-    جکسون، کلاس ششم
-  homepage_hero_text_student4: |
-    &ldquo; شما با برنامه نویسی می توانید هرکاری که ذهنتان می خواهد انجام دهید.&rdquo;
-    مایا، کلاس دوم
-  homepage_hero_text_student5: |
-    &ldquo;علوم کامپیوتر برای کس دیگری نیست. برای شماست، اینجا، حالا.&rdquo;
-    جرالدو، معلم
-  homepage_hero_text_teacher1: |
-    &ldquo; کد زدن خلاقیت، الهام گرفتن و نوآوری را پرورش می دهد&mdash; که همه ی آن ها در هر شغلی اساسی هستند.&rdquo;
-    فلوریسا، معلم
+    &ldquo;Computer science is a field you can't
+    know if you like or not before you try it.&rdquo;
+    Jackson, 6th grade
+  homepage_hero_text_student4: "&ldquo;You can do anything your mind\nwants to do
+    with programming.&rdquo; \nMaya, 2nd grade\n"
+  homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
+    for you, here, now.&rdquo; \nGeraldo, teacher\n"
+  homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
+    &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher\n"
   homepage_hero_text_teacher2: |
-    &ldquo;صد درصد دانش آموزان من در این برنامه درگیر شدند، حضور پیدا و شرکت کردند.&rdquo;
-    آدام، معلم
+    &ldquo;This program got 100% of my students
+    engaged, involved and participating.&rdquo;
+    Adam, teacher
   homepage_hero_text_stat_loc: 'خطوط #کد نوشته شده توسط دانش آموزان'
   homepage_hero_text_stat_students: '#دانش آموز- حساب کاربری نگه دارنده سوابق و اطلاعات
     دانش آموز در استودیو ی کد'
@@ -259,6 +264,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: بیشتر بیاموزید
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Learn more
   homepage_slot_text_title_hoc: ساعتی با کد
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_link_hoc: ساعتِ کد نویسی را امتحان کنید
@@ -267,6 +275,7 @@
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: دانش آموزان
   homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: استودیو ی کد را امتحان کنید
   homepage_slot_text_link_local: یک کلاس محلی پیدا کنید
   homepage_slot_text_link_othercourses: دوره های آنلاین دیگر

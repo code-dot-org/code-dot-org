@@ -228,24 +228,6 @@ div#visualizationResizeBar {
   }
 }
 
-#wireframeSendToPhone {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  text-align: right;
-  text-shadow: #000 -1px -1px 0;
-  &, .sharing label {
-    font: 12pt "Gotham 5r", sans-serif;
-    color: #8F9499;
-  }
-  i {
-    font-size: 1.5em
-  }
-  .sharing div {
-    margin: 0;
-  }
-}
-
 #visualizationColumn.chromelessShare {
   #designToggleRow, #gameButtons {
     display: none;

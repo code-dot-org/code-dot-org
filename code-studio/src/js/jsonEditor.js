@@ -86,7 +86,7 @@ module.exports = function (container, options) {
   }
 
   if (options.up_button) {
-    container.find(options.up_button).on("click", function () {
+    container.on("click", options.up_button, function () {
       var wrapper = $(this).closest(options.value_space);
       if (wrapper.prev().length) {
         wrapper.insertBefore(wrapper.prev());
@@ -96,7 +96,7 @@ module.exports = function (container, options) {
   }
 
   if (options.down_button) {
-    container.find(options.down_button).on("click", function () {
+    container.on("click", options.down_button, function () {
       var wrapper = $(this).closest(options.value_space);
       if (wrapper.next().length) {
         wrapper.insertAfter(wrapper.next());
@@ -105,8 +105,9 @@ module.exports = function (container, options) {
     });
   }
 
-  container.find(options.add_button).on("click", function () {
-    $createNewSpace();
+  container.on("click", options.add_button, function () {
+    var model = $.extend(true, {}, options.model);
+    updateTemplate(model, $createNewSpace());
     updateJSON();
   });
 
@@ -115,7 +116,7 @@ module.exports = function (container, options) {
     updateJSON();
   });
 
-  container.find(options.wrapper).on("change", function () {
+  container.on("change", options.wrapper, function () {
     updateJSON();
   });
 };

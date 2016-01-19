@@ -46,12 +46,15 @@ Breakfast and lunch will be served.
 
 **January 23rd Location**
 
+*Please note this is a new building and room number.* 
+
 [Orange County Department of Education<br/>
-Room: Esplanade 108B<br/>
+Building D, Room 1003<br/>
 200 Kalmus Dr<br/>
 Costa Mesa, CA 92626](https://www.google.com/maps/place/Orange+County+Department+of+Education/@33.6729962,-117.8832766,17z/data=!4m7!1m4!3m3!1s0x80dcdf02d89983eb:0xade5c39a8aba012d!2s200+Kalmus+Dr,+Costa+Mesa,+CA+92626!3b1!3m1!1s0x0000000000000000:0x4d5cc9efa1e6739a)
 
-For a campus map and parking information, [click here](code.org/files/OCDEmap.pdf)
+For a campus map and parking information [click here](/files/OCDEmap.pdf)
+
 
 **What to bring to Phase 3 quarterly sessions:**
 

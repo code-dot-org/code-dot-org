@@ -461,6 +461,12 @@ en:
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
       Forum-ECSPD-Unit 4-Teaching Practice: {}
+      GoodBadVisualizations_v1:
+        description here: description here
+        title: title
+      GoodBadVisualizations_v2:
+        description here: description here
+        title: title
       Hour of Code test content: {}
       Internet Simulator Setup:
         Internet Simulator Setup: Internet Simulator Setup
@@ -1011,10 +1017,16 @@ en:
       U4L02 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L02v2 - Finding Trends:
+        description here: description here
+        title: title
       U4L03 Student Lesson Introduction:
         description here: description here
         title: title
       U4L04 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U4L04v2 - Student Introduction:
         description here: description here
         title: title
       U4L05 Student Lesson Introduction:
@@ -1142,6 +1154,7 @@ en:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
       k5 what next 1: {}
+      rbo-test1: {}
       sciPD Course Overview: {}
       sciPD Intro: {}
       sciPD StarLogo intro 1:

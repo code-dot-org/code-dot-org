@@ -180,7 +180,6 @@ Dashboard::Application.routes.draw do
   post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
 
   # one-off internal reports
-  get '/admin/temp/csppd', to: 'reports#csp_pd_responses', as: 'csp_pd_responses'
   get '/admin/temp/hoc_signups', to: 'admin_reports#hoc_signups', as: 'hoc_signups'
 
   # internal report dashboards
@@ -189,6 +188,7 @@ Dashboard::Application.routes.draw do
   get '/admin/funometer/script/:script_id', to: 'admin_reports#funometer_by_script', as: 'funometer_by_script'
   get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_reports#funometer_by_script_level', as: 'funometer_by_script_level'
   get '/admin/levels(/:start_date)(/:end_date)(/filter/:filter)', to: 'admin_reports#level_completions', as: 'level_completions'
+  get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
@@ -201,6 +201,8 @@ Dashboard::Application.routes.draw do
 
   # internal engineering dashboards
   get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
@@ -209,10 +211,9 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
-  get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
+  get '/stats/usage/:user_id', to: redirect_to_teacher_dashboard
   get '/stats/students', to: redirect_to_teacher_dashboard
-  get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
-  get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
+  get '/stats/:user_id', to: redirect_to_teacher_dashboard
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 

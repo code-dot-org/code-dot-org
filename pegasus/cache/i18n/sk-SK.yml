@@ -252,6 +252,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Dozvedieť sa viac
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Dozvedieť sa viac
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
@@ -260,6 +263,7 @@
   homepage_solot_text_link_volunteer: Dobrovoľník pre Hour of Code
   homepage_slot_text_title_students: Študenti
   homepage_slot_text_blurb_students: Preskúmajte všetky naše tutoriály
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Skúsiť Code Studio
   homepage_slot_text_link_local: Nájdi triedu v tvojej lokalite
   homepage_slot_text_link_othercourses: Iné kurzy online

@@ -249,6 +249,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Aprèn més
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Aprèn més
   homepage_slot_text_title_hoc: Hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
@@ -257,6 +260,7 @@
   homepage_solot_text_link_volunteer: Voluntari per a l'Hora del Codi
   homepage_slot_text_title_students: Alumnes
   homepage_slot_text_blurb_students: Explora tots els nostres tutorials
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prova el Code Studio
   homepage_slot_text_link_local: Troba una classe a prop teu
   homepage_slot_text_link_othercourses: Altres cursos online
