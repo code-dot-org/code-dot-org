@@ -4,14 +4,12 @@
 'use strict';
 
 var build_commands = require('./build-commands');
+var config = require('./config');
 var fs = require('fs');
 var recursiveReaddirSync = require('recursive-readdir-sync');
 
-/** @const {string} */
-var BUILD_PATH = './build/js/';
-
 // Get the list of files in the build directory
-var builtFiles = recursiveReaddirSync(BUILD_PATH).filter(function (path) {
+var builtFiles = recursiveReaddirSync(config.JS_BUILD_PATH).filter(function (path) {
   return /\.js$/i.test(path);
 });
 

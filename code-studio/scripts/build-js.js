@@ -7,13 +7,7 @@ var _ = require('lodash');
 var build_commands = require('./build-commands');
 var chalk = require('chalk');
 var commander = require('commander');
-
-/** @const {string} */
-var BUILD_PATH = './build/js/';
-
-/** @const {string} */
-var SRC_PATH = './src/js/';
-
+var config = require('./config');
 
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
@@ -23,8 +17,8 @@ commander
     .parse(process.argv);
 
 var defaultOptions = {
-  srcPath: './src/js/',
-  buildPath: './build/js/',
+  srcPath: config.JS_SRC_PATH,
+  buildPath: config.JS_BUILD_PATH,
   shouldFactor: false,
   shouldMinify: commander.min,
   shouldWatch: commander.watch
