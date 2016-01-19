@@ -1139,7 +1139,6 @@ Maze.execute = function(stepMode) {
   // Maze. now contains a transcript of all the user's actions.
   // Reset the maze and animate the transcript.
   studioApp.reset(false);
-  Maze.bee.resetCurrentValues();
   resetDirtImages(true);
 
   // if we have extra top blocks, don't even bother animating
