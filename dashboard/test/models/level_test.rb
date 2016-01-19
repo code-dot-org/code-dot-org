@@ -10,6 +10,8 @@ class LevelTest < ActiveSupport::TestCase
     @custom_maze_data = @maze_data.merge(:user_id=>1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test 'create level' do

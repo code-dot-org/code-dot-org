@@ -10,6 +10,8 @@ class CharsetTest < ActionDispatch::IntegrationTest
     Rails.logger.info 'DISCONNECTING DATABASE'
     Rails.logger.info '--------------'
 
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
     ActiveRecord::Base.connection.disconnect!
   end
 
