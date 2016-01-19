@@ -26,6 +26,7 @@ module Honeybadger
         backtrace: backtrace,
         context: {
             stdout: stdout,
+            stderr: stderr,
             environment_variables: ENV.with_sensitive_values_redacted
         }
     }
