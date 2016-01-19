@@ -41,6 +41,7 @@ class HoneybadgerTest < Minitest::Test
         backtrace: EXPECTED_BACKTRACE,
         context: {
             stdout: 'captured stdout',
+            stderr: ERROR,
             environment_variables: {}
         }
     }
@@ -66,6 +67,7 @@ class HoneybadgerTest < Minitest::Test
         backtrace: [error],
         context: {
             stdout: '',
+            stderr: error,
             environment_variables: {}
         }
     }
