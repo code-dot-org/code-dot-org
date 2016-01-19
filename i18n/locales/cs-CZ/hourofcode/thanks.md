@@ -8,7 +8,7 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 * * *
 
-< % facebook = {: u => "na http://#{request.host}/us"}
+<% facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
@@ -22,9 +22,9 @@ Právě jste se připojili do akce Hodina kódu. Povězte to přátelům hashtag
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 2. Najděte lokálná dobrovolníky, aby vám pomohli s vaší událostí.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[ Prohledejte naší mapu dobrovolníku](%= resolve_url('https://code.org/volunteer/local') %) pro dobrovolníky, kteří můžou navštívit vaší učebnu nebo video chat na dálku, aby mohli inspirovat vaše studenty škálou možností s počítačovými vědami.
 
 ## 2. Požádejte, aby celá vaše škola nabídla akci Hodinu kódu
 
@@ -42,8 +42,8 @@ Právě jste se připojili do akce Hodina kódu. Povězte to přátelům hashtag
 
 [Pošlete tento email](%= resolve_url('/promote/resources#sample-emails') %) vašim místním politikům, městské radě nebo školní radě a pozvěte je k návštěvě vaší školy pro Hodinu kódu. Může to pomoci rozvoji informatiky ve vašem regionu za jednu hodinu.
 
-## 7. Plan your Hour of Code
+## 7. Naplánujte svojí Hodinu kódu
 
-Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+Vyberte aktivitu Hodiny kódu a [ prohlédněte si tento how-to průvodce](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

@@ -193,12 +193,13 @@ Artist.prototype.init = function(config) {
     this.avatarHeight = 51;
   }
 
+  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -1289,6 +1290,7 @@ Artist.prototype.onReportComplete = function(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
+  this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
 };
 
@@ -1325,12 +1327,9 @@ Artist.prototype.checkAnswer = function() {
 
   var level = this.level;
 
-  // Allow some number of pixels to be off, but be stricter
-  // for certain levels.
-  var permittedErrors = level.permittedErrors;
-  if (permittedErrors === undefined) {
-    permittedErrors = 150;
-  }
+  // Optionally allow some number of pixels to be off, default to
+  // pixel-perfect strictness
+  var permittedErrors = level.permittedErrors || 0;
 
   // Test whether the current level is a free play level, or the level has
   // been completed

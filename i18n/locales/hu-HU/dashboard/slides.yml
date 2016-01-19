@@ -383,19 +383,17 @@ hu:
         text: Ezek a rajzolási blokkjaid. Használd közülük az egyiket a művész mozgatásához arra a helyre, ahol megrajzolhatja a szürke vonalakat.
       2:
         image: notes/C1_artist_intro_2.png
-        text: "These are jump blocks. When you use these, your artist moves but doesn't draw, so use these to jump to the next grey line."
+        text: Ezek az ugrás blokk tagjai. Mikor ezeket használod, a művészed nem rajzol, hanem a következő szürke vonalra ugrik.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: |-
-          Aren't bees super cool? In this next set of puzzles, your goal is to help the bee get to the flowers and get nectar from the flowers and fly over to the honeycomb to make honey. You'll need to use the "get nectar" and the "make honey" blocks for this exercise.
+        text: 'Ugye milyen jó pofák ezek a méhek? A következő lépés a feladványban, hogy segíts a méhnek eljutni a virágokhoz, hogy összegyűjtse a nektárt és elrepüljön a méhsejtre, hogy mézet készítsen. Használnod kell a "get nectar" azaz nektár begyűjtés, és a "make honey" azaz készíts mézet blokkokat ebben a gyakorlatban.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We know how much nectar is in the red flowers, by the little number in the corner. So be sure to get all the nectar from the flower before you move forward. Also, every honeycomb can only hold so much honey: 1, 2, 3, or more. So be sure to make as much honey as the honeycomb can hold.'
+        text: 'Minden virágon különböző számú nektár van: 1, 2, 3 vagy több. Tudjuk, hogy mennyi nektár van piros virágban, amit a sarkában lévő kis szám mutat. Bizonyosodj meg róla, hogy minden nektárt összeszedtél, mielőtt tovább mész. Továbbá minden méhsejt 1, 2, 3 vagy többet tartalmazhat. Győződj meg róla, hogy csak annyi nektárt tegyél a sejtbe, amennyit elbír.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: |-
-          If you're able to get all the nectar and make all the honey, you succeed and go to the next level. Otherwise, you need to try this puzzle again. Play around a while and see what it feels like to "bee" a programmer!
+        text: Ha összegyűjtöttél minden nektárt, és elkészítetted az összes mézet, akkor vagy készen, és léphetsz a következő szintre. Ellenkező esetben meg kell ismételni a feladatot. Játszd végig és meg fogod érezni, milyen egy igazi programozó méh!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
@@ -1397,13 +1395,13 @@ hu:
         text: A következő leckében gépelési módban kezdünk. Még mindig behúzhatod az eszköztárból a blokkot, de beírhatod a parancs nevét is. Ahogy elkezdesz gépelni, látni fogod a lehetséges utasítások neveit az alatt, ahol gépelsz. Hogy gyorsabban haladj, ahelyett, hogy begépelnéd a teljes utasítás nevét, kiválaszthatod a felsorolásból az egyiket. Én mindig alkalmazom a munkámban ezt az automatikus-kiegészítés funkciót.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Amikor a kódot gépeled, akkor a számítógép elvárja, hogy nagyon precíz legyél. Pontosan kell gépelned az utasításneveket, figyelve a kis és nagybetűkre, a zárójelekre és a pontosvesszőkre. A legkisebb gépelési hiba is azt jelentheti, hogy BB-8 nem tudja megérteni a kódot és nem fog tudni mozogni.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Amikor egy sorban hibázol, akkor a szerkesztő kiemeli azt, így meg tudod próbálni kijavítani a szöveget.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Ha elakadsz, akkor az újrakezdés gomb megnyomásával bármikor elkezdheted az elejéről a feladatot, de visszaválthatsz blokk módba is a jobb felső sarokba kattintva. Akkor próbáljuk meg a gépelést! Ne keseredj el, ha hibázol. Mindenki próbálkozik egy darabig, mire összejön.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
@@ -1425,7 +1423,7 @@ hu:
         text: 'A "ha van felfelé nyíl" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a "ha van felfelé nyíl"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon.'
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: 'Ehhez a "ha van felfelé nyíl" whenUp() parancsot fogjuk használni. Amikor a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat.'
       8:
         image: notes/starwars_events_8.JPG
         text: Azt akarjuk, hogy R2-D2 felfelé menjen, így tegyünk be egy menj fel blokkot a parancsba. És ugyanezt fogjuk tenni, hogy R2-D2 lefelé menjen.
@@ -1667,4 +1665,57 @@ hu:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

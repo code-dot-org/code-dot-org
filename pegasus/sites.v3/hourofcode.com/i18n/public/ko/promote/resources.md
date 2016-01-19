@@ -132,4 +132,3 @@ Hour of Code는 구글, MSN, 야후 홈페이지에서 함께 진행되어왔습
 
 진심을 담아, [NAME], [TITLE]
 
-<%= view :signup_button %>

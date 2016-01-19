@@ -2573,37 +2573,35 @@
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: |
+          Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje
+          i pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: |
+          Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove
+          programiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: Za izradu igre, trebamo naučiti nešto što programeri svakodnevno koriste.
+          Riječ je o događajima. Događaji govore programu da sluša ili čeka dok se
+          nešto ne dogodi, a kada se dogodi izvršavaju se akcije.
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom
+          gore ili dodir na ekranu.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući
+          se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje
+          kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili
+          dolje, ili gumbe za gore ili dolje.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Koristit ćemo događaj 'kada je pritisnuta strelica prema gore' i ispod
+          nje postaviti naredbu 'idi gore'. Kada igrač pritisne tipku sa strelicom
+          prema gore, pokreće se dio koda ispod postavljenog događaja. Istu stvar
+          učinit ćemo kako bismo pokrenuli R2-D2-a prema dolje.
       7:
         image: notes/starwars_events_7.JPG
         text: To do this, we'll use a command called whenUp(). When you drag the command
@@ -2617,9 +2615,9 @@
           And we'll do the same thing to make R2-D2 go down.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Tako umjesto pisanja cijelog koda za kontrolu droida unaprijed, puštamo
+          R2-D2-a da reagira na događaj pritiska tipke kako bismo ga pomaknuli po
+          sceni. Korak po korak vaša igra postaje sve interaktivnija.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2709,32 +2707,29 @@
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: |
+          Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje
+          i pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: |
+          Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove
+          programiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: Za izradu igre, trebamo naučiti nešto što programeri svakodnevno koriste.
+          Riječ je o događajima. Događaji govore programu da sluša ili čeka dok se
+          nešto ne dogodi, a kada se dogodi izvršavaju se akcije.
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom
+          gore ili dodir na ekranu.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući
+          se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje
+          kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili
+          dolje, ili gumbe za gore ili dolje.
       6:
         image: notes/starwars_blocks_events_6.JPG
         text: We use the whenUp() event block and attach the goUp() block to it. When
@@ -3003,6 +2998,90 @@
           forever block.
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati
+          naš program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.

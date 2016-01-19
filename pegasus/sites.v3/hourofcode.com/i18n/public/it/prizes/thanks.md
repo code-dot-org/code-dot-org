@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
@@ -32,4 +31,3 @@ Recluta un po' di persone — tra i boy-scout, in parrocchia, all'università, t
 
 [Invia questo messaggio di posta elettronica](<%= resolve_url('/promote/resources#politicians') %>) al Sindaco, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola.
 
-<%= view :signup_button %>

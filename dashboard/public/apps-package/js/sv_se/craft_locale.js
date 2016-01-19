@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Du kan trycka på \"Fortsätt spela\" för att återgå till spelet."},
 "replayButton":function(d){return "Spela om"},
 "selectChooseButton":function(d){return "Välj"},
-"tooManyBlocksFail":function(d){return "Pussel "+craft_locale.v(d,"puzzleNumber")+" avklarat. Grattis! Det är också möjligt att klara det med "+craft_locale.p(d,"numBlocks",0,"sv",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Pussel "+craft_locale.v(d,"puzzleNumber")+" är klart. Grattis! Det är också möjligt att klara av det med "+craft_locale.p(d,"numBlocks",0,"sv",{"one":"ett block","other":craft_locale.n(d,"numBlocks")+" block"})+"."}};

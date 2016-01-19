@@ -2,7 +2,7 @@ vi:
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
-      too_young: Nội dung này có giới hạn độ tuổi và không có sẵn cho học sinh nhỏ tuổi
+      too_young: Nội dung này không dành cho học sinh nhỏ tuổi
   activerecord:
     errors:
       messages:
@@ -22,15 +22,16 @@ vi:
         error:
           future: không thể trong tương lai
   hello: Xin chào thế giới
-  welcome_back: 'Chào mừng bạn trở lại, %{name}'
+  welcome_back: 'Chào mừng trở lại, %{name}'
   submit: Chấp nhận
   add_teacher_form:
     code:
       label: 'Thêm một giáo viên:'
       placeholder: Phần mã (ABCDEF)
+      instructions: 'Vui lòng nhập mã được chia sẻ với bạn bởi giáo viên của bạn. Nó là một mã 6 chữ như "ABCDEF".'
     submit: Thêm giáo viên
   add_hint_form:
-    placeholder: Hãy nhập gợi ý của bạn ở đây
+    placeholder: Hãy nhập gợi ý mật khẩu của bạn ở đây
     submit: Thêm gợi ý
   appname: Code.org
   stage: giai đoạn
@@ -38,12 +39,13 @@ vi:
   puzzle: Câu đố
   trophies: những danh hiệu
   courses: Các khóa học
+  unplugged_activity: Hoạt động không dùng máy
   of: của
-  more: Thêm nữa
-  less: ít hơn
-  beta: Phiên bản beta
-  try_hoc: 'Thử Hour of Code, bấm vào đây >> '
-  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 hours)
+  more: NHIỀU HƠN
+  less: ÍT HƠN
+  beta: phiên bản thử nghiệm
+  try_hoc: 'Tham gia thử cuộc thi Hour of Code, bấm vào đây >> '
+  try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 giờ)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
   already_started: 'Đã bắt đầu rồi à? Tiếp tục ở đây >> '
   demos: 'Admin: Tất cả các bản demo'
@@ -84,7 +86,7 @@ vi:
     user_type: Bạn là học viên hay Giáo viên?
     submit: Đăng ký
     teacher: Bạn có phải là giáo viên?
-    valid_username: Đã tồn tại!
+    valid_username: Hợp lệ!
     invalid_username: Tên người dùng phải nhiều hơn 5 ký tự
     taken_username: Tên người dùng đã được sử dụng
     valid_password: Mật khẩu hợp lệ!
@@ -97,12 +99,12 @@ vi:
     title: Đã có một tài khoản? Đăng nhập
     login: Email hoặc tên người dùng
     password: Mật khẩu
-    remember: ghi nhớ tôi
+    remember: Nhớ mật khẩu
     submit: Đăng nhập
   signin:
     try_heading: Bạn muốn thử lập trình mà không cần đăng ký?
     try_hoc: Hãy thử Giờ Lập trình
-    try_20hours: 20 tiếng để xem bài giới thiệu về khoa học máy tính của chúng tôi
+    try_20hours: Thử 20 giờ giới thiệu về khoa học máy tính của chúng tôi
   signinsection:
     welcome: 'Chào mừng đến với %{section_name}'
     name: Chọn tên của bạn
@@ -113,27 +115,31 @@ vi:
     reset_form:
       title: Quên mật khẩu?
       email: Địa chỉ Email
-      submit: Hướng dẫn đặt lại mật khẩu
+      submit: Gửi cho tôi hướng dẫn đặt lại mật khẩu
     change_form:
-      title: Thay đổi mật khẩu
+      title: Thay đổi mật khẩu của bạn
       new_password: Mật khẩu mới
       confirm_password: Xác nhận mật khẩu mới
       submit: Thay đổi mật khẩu
   welcome_email:
     subject: Tham gia lớp học của tôi ( trên Code.org)
     body: |
-      Nhấp vào liên kết dưới đây để đăng nhập cho các hướng dẫn về khoa học máy tíng trên Code.org (với tôi như là giáo viên của bạn""): % {liên kết} Các hướng dẫn vui vẻ, trực quan hấp dẫn, và dạy các khái niệm cơ bản của khoa học máy tính bằng cách sử dụng từng kinh nghiệm đơn giản giống như hứơng dẫn chơi trò chơi. Tìm hiểu để mã lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, và nhà máy vs. zombie! :-) % (tên)
+      Nhấp vào liên kết dưới đây để đăng ký cho các hướng dẫn về khoa học máy tíng trên Code.org (với tôi như là "giáo viên" của bạn): 
       
+      %{link} 
       
+      Các hướng dẫn vui vẻ, trực quan hấp dẫn, và dạy các khái niệm cơ bản của khoa học máy tính bằng cách sử dụng ví dụ, hướng dẫn, trờ chơi - giống trải nghiệm. Học lập trình từ Bill Gates, Mark Zuckerberg, Angry Birds, Angry Birds và Plants vs. Zombies! :-) 
+      
+      %{name}
   follower:
     invite_sent: Gửi lời mời
-    added_teacher: '% (tên) được thêm như giáo viên của bạn'
+    added_teacher: '%{name} được thêm như giáo viên của bạn'
     registered: 'Bạn đã đăng kí cho mục %{section_name}.'
     error:
       signed_in: Xin vui lòng đăng xuất trước khi tiếp tục
       username_not_found: 'Tên người sử dụng % {username} không tìm thấy'
-      username_in_use: '% {tên người sử dụng} đã được chọn, xin vui lòng chọn một tên khác'
-      no_teacher: "Không thể tìm thấy bất cứ ai đã đăng nhập bằng '% {teacher_email_or_code}'. Xin vui lòng yêu cầu họ đăng nhập ở đây và sau đó thử thêm chúng một lần nữa"
+      username_in_use: '%{username} đã được dùng, xin vui lòng chọn một tên khác'
+      no_teacher: "Không tìm thấy ai đã đăng nhập bằng '%{teacher_email_or_code}'. Xin vui lòng yêu cầu họ đăng nhập ở đây và sau đó thử thêm họ một lần nữa"
       section_not_found: "Không thể tìm thấy một phần với mã '%{section_code}'."
       blank_code: Vui lòng nhập một phần mã
       cant_join_own_section: Xin lỗi, bạn không thể tham gia phần riêng của bạn.
@@ -154,7 +160,7 @@ vi:
     redeem_header: 'Để mua lại:'
     donorschoose_register: Đăng ký với tư cách là một giáo viên trên DonorsChoose.org
     donorschoose_project: Đăng một chương trình
-    donorschoose_how_to: Làm thế nào để sử dụng mã
+    donorschoose_how_to: Sử dụng mã như thế nào
     success: Giải thưởng của bạn đã mua lại thành công, xem mã dưới đây.
     error: Giải thưởng của bạn có thể không thu hồi được, xin vui lòng thử lại.
     error_us_only: Giải thưởng chỉ được trao cho người sử dụng ở Mỹ.
@@ -241,75 +247,28 @@ vi:
       prize_us_only: (Chỉ sinh viên Hoa Kỳ)
       prizes_link: Thông tin thêm
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Trả lời
+    for_teachers_only: Chỉ dành cho giáo viên
     title:
       one: 'Giáo viên của bạn:'
       other: 'Giáo viên của bạn:'
     remove: (thay đổi giáo viên)
     confirm:
       remove: Bạn có chắc bạn muốn loại bỏ giáo viên này không?
-    tools: Công cụ dành cho giáo viên
-    followers:
-      section: 'Mục:'
-      stages: '(Các) Quá trình để hiển thị:'
-      show_past: 'Hiển thị hoạt động của sinh viên (%{bullet_html}) trong quá khứ:'
-      levels_key: Cấp độ khóa
-      perfect: Hoàn thành, hoàn hảo
-      completed: Hoàn thành, nhưng bằng cách sử dụng quá nhiều khối
-      tried: Đã cố gắng, nhưng chưa hoàn thành
-      not_tried: Chưa thử
-      activity: 'Cho thấy hoạt động của sinh viên trong %{plural} %{hours} cuối'
-      no_section: Không có phần được chỉ định
-      trophies: những danh hiệu
     students:
-      name: Tên
-      username: tài khoản
-      password: mật khẩu
-      manage: Quản lý học sinh
       dashboard: Đi đến bảng điều khiển của giáo viên
-      add: Thêm học sinh
-      remove: loại bỏ sinh viên
-      confirm_remove: Bạn có chắc muốn loại bỏ sinh viên/học sinh này?
-      help_reassign: Để chia lớp của bạn thành nhiều nhóm, lựa chọn các học viên để phân công thành nhóm mới.
-      help_register: Thay vì dành nhiều thời gian cá nhân của bạn vào việc nhập dữ liệu của sinh viên/học sinh, bạn có thể thiết lập lớp học của bạn một cách nhanh chóng bằng cách yêu cầu sinh viên/học sinh của bạn đăng ký. Các sinh viên/học sinh cần chọn tên và mật khẩu, nhưng họ KHÔNG CẦN phải cung cấp địa chỉ email. Nếu sinh viên/học sinh của bạn quên mật khẩu của họ, bạn có thể tạo lại mật khẩu cho sinh viên/học sinh đó.
-      register: Yêu cầu học sinh của bạn tự đăng ký
-      vist: Yêu cầu sinh viên/học sinh của bạn truy cập vào
-      section_code: 'và nhập mã lớp học của họ:'
-      first_please: 'Trước tiên, xin vui lòng %{add_section}'
-      for: Đối với
-      enter: 'nhập:'
-    sections:
-      add: Thêm phần
-      manage: Quản lý các học phần
-      section: Học phần
-      students: học viên
-      section_code: Mã của học phần
-      add_section_code: Thêm học viên Vào Học Phần
-      secret: Loại bí mật
-      grade: Điểm số
-      course: Khóa học
-      rename: đổi tên
-      edit: chỉnh sửa
-      delete: xóa
-      confirm_delete: Bạn có chắc bạn muốn xóa phần này không?
-      email: Gửi trong email
-    rollup: Bảng tiến trình
-    activity: Hoạt động gần đây của lớp
-    user_not_found: Không thể tìm thấy giáo viên hoặc sinh viên này
-    cant_remove_student_no_email: '%{student_name} không thể được gỡ bỏ khỏi danh sách sinh viên của bạn vì %{student_name} chưa đăng ký với một địa chỉ email'
-    cant_remove_teacher_no_email: '%{teacher_name} không thể được gỡ bỏ khỏi danh sách giáo viên của bạn vì bạn chưa đăng ký địa chỉ email'
-    student_teacher_disassociated: '%{teacher_name} đã được thay thế như là môt giáo viên cho %{student_name}'
+    user_not_found: Không tìm thấy giáo viên.
+    student_teacher_disassociated: 'Bạn đã gỡ bỏ %{teacher_name} là giáo viên của bạn.'
     panel:
       answer_viewer: Xem câu trả lời
       student: học sinh
       viewing_solution: Xem đáp án
       try_it_yourself: Hãy thử làm bài tập này
       section: Học phần
-      example: Example Solution
-      example_with_number: 'Example Solution %{solution_number}'
-      submitted_on: 'Submitted on:'
-      unsubmit: Unsubmit
+      example: Ví dụ
+      example_with_number: 'Ví dụ giải pháp %{solution_number}'
+      submitted_on: 'Gửi lên ngày:'
+      unsubmit: Ngưng gửi
   user:
     email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
     email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
@@ -373,6 +332,7 @@ vi:
   share:
     title: Học về Xưởng Code
     description: Ai cũng có thẻ học khoa học máy tính. Làm trò chơi, ứng dụng và nghệ thuật với mã lệnh.
+    try_hour_of_code: Hãy thử Giờ lập trình!
   gender:
     male: Nam
     female: Nữ
@@ -384,8 +344,8 @@ vi:
     thank_you: 'Chúng tôi cảm ơn<a href="https://code.org/about/donors"> các nhà tài trợ</a>, <a href="https://code.org/about/partners">các đối tác</a>, <a href="https://code.org/about/team">các thành viên trong nhóm mở rộng của chúng tôi</a>, các <a href="https://code.org/about/advisors">chuyên gia video và giáo dục</a> của chúng tôi vì sự hỗ trợ của các bạn trong việc tạo nên Xưởng Mã.'
     help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo ra hướng dẫn này.
     help_from_html_old: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo ra các tài liệu này.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd. Bản quyền đã được bảo hộ.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic Arts Inc. Bản quyền đã được bảo hộ.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Bản Quyền Đã Được Bảo Hộ. < br / >Star Wars&#8482; &copy; %{current_year} Disney và Lucasfilm. Bản Quyền Đã Được Bảo Hộ. < br / >Frozen&#8482; &copy; %{current_year} Disney. Bản Quyền Đã Được Bảo Hộ. < br / >Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Bản Quyền Đã Được Bảo Hộ. < br / >Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Bản Quyền Đã Được Bảo Hộ. < br / >Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Bản Quyền Đã Được Bảo Hộ. < br / >The Amazing World of Gumball là thương hiệu và &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Bản Quyền Đã Được Bảo Hộ. Star Wars&#8482; &copy; %{current_year} Disney và Lucasfilm. Bản Quyền Đã Được Bảo Hộ. Frozen&#8482; &copy; %{current_year} Disney. Bản Quyền Đã Được Bảo Hộ. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Bản Quyền Đã Được Bảo Hộ. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Bản Quyền Đã Được Bảo Hộ. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Bản Quyền Đã Được Bảo Hộ. The Amazing World of Gumball là thương hiệu và &copy; 2015 Cartoon Network.'
     powered_by_aws: Được tài trợ bởi Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và Giờ Lập Trình &reg; là nhãn hiệu của Code.org.'
     copyright: Bản quyền
@@ -398,10 +358,11 @@ vi:
     tos: Các điều khoản của Code.org
     privacy: Chính sách riêng tư
     secure: Phiên bản an toàn
-    report_abuse: Report Abuse
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
+    report_abuse: Báo cáo lạm dụng
+    built_on_code_studio: Được xây dựng trên Code Studio
+    make_my_own_app: Tạo ứng dụng của tôi
+    how_it_works: Nó hoạt động như thế nào
+    try_hour_of_code: Hãy thử Giờ lập trình!
   reference_area:
     title: Cần trợ giúp?
     subtitle: Xem các video và gợi ý
@@ -433,7 +394,7 @@ vi:
   pdf_download: Tải phiên bản PDF
   download_coming_soon: Tải về các hoạt động sắp diễn ra.
   video_coming_soon: Video sắp tới!
-  not_started: The student has not attempted this level.
+  not_started: Học sinh chưa cố gắng cấp độ này.
   share_code:
     title: "Nhấp vào 'Chạy' để xem chương trình của tôi trực tiếp"
     bounce_og_title: Hãy xem thử trò chơi Bounce của tôi
@@ -458,7 +419,7 @@ vi:
       unused: Không sử dụng cấp độ
   upsell:
     hoc:
-      title: Giờ của mã
+      title: Mê cung cổ điển
       body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học các khóa này.
     flappy:
       title: Lập trình Flappy
@@ -476,13 +437,13 @@ vi:
     frozen:
       title: Bộ phim Frozen
     starwars:
-      title: Star Wars
+      title: Cuộc Chiến Giữa Các Vì Sao
     infinity:
       title: Phòng thí nghiệm Vui Chơi Bất Tận
       body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Khám phá thế giới Minecraft thông qua mã.
   gallery:
     students_drew_these_with_code: Các học sinh/sinh viên đã vẽ chúng bằng cách lập trình!
     students_made_these_with_code: Các học sinh/sinh viên đã tạo ra chúng bằng cách lập trình!
@@ -614,24 +575,24 @@ vi:
     view_all: Xem chương trình của tôi
     remix: đảo lại
     click_to_remix: "Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!"
-    edit_project: Edit Project
+    edit_project: Chỉnh sửa dự án
     abuse:
-      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
-      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
-      go_to_code_studio: Go to Code Studio
+      tos: "Dự án này đã bị báo cáo vi phạm <a href='http://code.org/tos'>điều khoản của Code.org</a> và không thể chia sẻ với những người khác."
+      contact_us: "Nếu bạn tin rằng đây là một lỗi, xin vui lòng <a href='https://code.org/contact'> liên hệ với chúng tôi.</a>"
+      go_to_code_studio: Đi đến Code Studio
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        intro: Nếu bạn gặp phải nội dung gây khó chịu, mối đe dọa, hăm dọa trên mạng, quấy rối hoặc một thể hiện của các vi phạm bản quyền nội dung bạn sở hữu trong khi sử dụng ứng dụng xây dựng trên Code Studio, xin vui lòng điền vào mẫu dưới đây. Chúng tôi sẽ xem xét báo cáo của bạn thật sự nghiêm túc, điều tra kỹ lưỡng, và có hành động thích hợp.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Vui lòng cung cấp địa chỉ email
+          age: Xin vui lòng cho biết tuổi
+          abuse_type: Xin vui lòng cho biết nội dung này vi phạm Điều khoản Dịch vụ như thế nào
+          abuse_detail: Xin vui lòng cung cấp chi tiết đối với nội dung bạn đang báo cáo
+        abusive_url: Địa chỉ trang web của nội dung được báo cáo
         abuse_type:
-          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: 'Nội dung này vi phạm %{link_start}Terms Service%{link_end} như thế nào?'
+          harassment: Mối đe dọa, hăm dọa trên mạng, sự quấy nhiễu
+          offensive: Nội dung gây khó chịu
+          infringement: Vi phạm bản quyền
           other: Khác
-        detail: Please provide as much detail as possible regarding the content you are reporting.
-        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'
+        detail: Xin vui lòng cung cấp càng nhiều chi tiết nếu có thể liên quan đến nội dung bạn đang báo cáo.
+        acknowledge: 'Bằng việc gửi thông tin này, bạn xác nhận nó sẽ bị xử lý theo quy định của các điều khoản của %{link_start_privacy}Privacy Policy%{link_end} và %{link_start_tos}Terms Service%{link_end}'

@@ -5,7 +5,6 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
 
@@ -265,4 +264,3 @@ Hvis du lager en veiledning som er skapt for personer med synsproblemer, hadde v
 
 [**Tilbake til toppen**](#top)
 
-<%= view :signup_button %>

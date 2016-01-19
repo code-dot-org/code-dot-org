@@ -20,6 +20,8 @@ es-ES:
   submit: Enviar
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: ¿Terminaste tu primera Hora de Código? Conoce más sobre informática y conceptos de programación en este curso de seguimiento.
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre 8 - 14, 2014<br/>'
   hoc2014_students: Alumnos
   hoc2014_try: Pruébalo
@@ -203,6 +205,8 @@ es-ES:
   homepage_banner_text_link: Aprende más
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Aprende más
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -211,6 +215,7 @@ es-ES:
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
   homepage_slot_text_title_students: Alumnos
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
@@ -266,18 +271,19 @@ es-ES:
   class_submission_level_vocational: Vocacional
   class_submission_languages_other: Otros idiomas
   inspirational_videos_more: 'Más <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> vídeos inspiradores</a> por modelos y celebridades'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Escoge el tema para tu laboratorio de juego
+  playlab_classic_title: Clásico
   playlab_gumball_title: Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title: 'La Era de Hielo - Próximamente'
+  playlab_iceage_title_live: La Era de Hielo
   starwars_subtitle: Construyendo una Galaxia con Código
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Arrastra y suelta bloques y utiliza JavaScript.
-  starwars_javascript_specs: Solo en inglés | Navegadores modernos | Mayores de 11 años
-  starwars_javascript_start_button: Probar ahora
+  starwars_javascript_description: Arrastra y suelta los bloques y utiliza JavaScript.
+  starwars_javascript_specs: Sólo en inglés | Navegadores Actuales | Mayores de 11 años
+  starwars_javascript_start_button: Prueba ahora
   starwars_blocks_title: Bloques
-  starwars_blocks_description: Arrastra y suelta bloques.
-  starwars_blocks_specs: Muchos idiomas (muy pronto) | Navegadores modernos, teléfonos inteligentes, tablets | Edades 6-10
+  starwars_blocks_description: Arrastra y suelta los bloques.
+  starwars_blocks_specs: Muchos lenguajes|Smartphones, tablets, navegadores actuales | Edad 6-106
   starwars_blocks_start_button: Aprenda más
   starwars_watch_videos: Antes de empezar, ve uno de estos videos inspiradores
   starwars_speak_languages: ¿Hablas otro idioma?
@@ -288,7 +294,7 @@ es-ES:
   mc_shortdescription: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
   mc_gradelevel: Mayores de 6 años
   mc_platformtext: Cualquier navegador moderno, smartphone, tableta
-  mc_specs: Muchos idiomas (muy pronto) | Navegadores modernos, tablets | Edades 6+
+  mc_specs: Muchos lenguajes| Navegadores modernos, tablets | Edad 6-106
   minecraft_subtitle: Hora de Código de Minecraft
   volunteer_engineer_submission_title: Inspirar a estudiantes y voluntarios para la Hora de Código.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a acoger una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015 ¡Y necesitan tu ayuda! '
@@ -298,6 +304,7 @@ es-ES:
     Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
   volunteer_engineer_submission_intro_links: '¿No está buscando ser voluntario? <a href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
@@ -532,7 +539,10 @@ es-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todo
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_button_text: Aprende más
   dashboard_announce_hoc: '<b>15 de Octubre, 2015</b> - Se viene la Hora de Código &mdash; cada organizador que participe recibirá una tarjeta de regalo de Amazon.com o de Microsoft Windows Store como agradecimiento. Únete a aulas en todo el mundo del 7 al 13 de Diciembre.'
+  dashboard_announce_playlab: '<b> 04 de diciembre 2015 </b> - ¡La Hora del Código ya está aquí! Prueba 50 tutoriales para todas las edades y todos los dispositivos. Novedades de esta semana: Códigos de tus propias historias y juegos en los nuevos laboratorios de reproducción, edad de hielo y Gumball.'
   code_hoc_coming: '¡La Hora del Código está aquí: del 8 al 14 de diciembre!'
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   learn_more: Aprenda más
@@ -562,7 +572,7 @@ es-ES:
   carousel_heading_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_javascript: Guías que enseñan JavaScript
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Tutoriales para aprender JavaScript
   carousel_heading_unplugged: ¿No tienes dispositivo o Internet? Prueba informática sin conexión
   carousel_heading_devices: Aplicaciones Tutorial para teléfonos y tablets
   carousel_heading_beyond_devices: Tutoriales en aplicaciones para teléfonos y tabletas
@@ -575,6 +585,7 @@ es-ES:
   carousel_heading_ide: Plataformas populares entre los docentes
   educator_notes: Notas del educador
   teach_led_lesson_plans: Profesor Llevó a Cabro Lecciones de la Hora del Código
+  learn_footer_all_tutorials: 'Vea la <a href="https://code.org/educate/allhourofcode">lista detallada de los tutoriales de la Hora de Código</a>. Para ver nuestros criterios y los lineamientos de envío para nuevos tutoriales de la hora de código, <a href="https://hourofcode.com/tutorial-guidelines">de clic aquí</a>'
   how_to_teach_hoc: 'Cómo enseñar  una "Hora de código"'
   more_resources_educators: Más recursos para profesores y educadores
   beyond_submission: ¿Desea entregar un tutorial despues de una hora? Ver los criterios y formulario de entrega.
@@ -587,9 +598,9 @@ es-ES:
   older_systems_subheading: 'Estos deberían funcionar sin problemas en navegadores no tan modernos. Para acceder al resto de los tutoriales vas a necesitar <a href="http://browsehappy.com/" target="_blank">actualizar tu navegador</a>.'
   mobile_devices: Guías para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
-  starwars_name: 'Star Wars: Contruyendo una Galaxia con Código'
-  codeorg_name: Escribí tu primer programa
-  codeintl_name: Codifica tu primer programa de computación
+  starwars_name: 'Star Wars: Creando una Galaxia con Código'
+  codeorg_name: Laberinto clásico
+  codeintl_name: Laberinto clásico
   thinkersmithspanish_name: Mis amigos robóticos
   khan_name: Una introducción a JavaScript
   khanes_name: Introducción a JavaScript
@@ -625,10 +636,17 @@ es-ES:
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Piedra, papel, tijera
-  hourofcode_name: Codifica tu primer programa de computación
+  hourofcode_name: Laberinto clásico
   playlab_name: Laboratorio de Juegos
   infinity_name: Laboratorio de Juego Infinity
   artist_name: Artista
+  monstercoding_name: Búsqueda de la isla Codificación
+  allcancode_name: ¡Ejecutar Marco!
+  csfirst_name: Primero CS
+  boxisland_name: Isla de caja
+  codesters_name: Codesters
+  texasinstruments_name: 10 minutos de código
+  teacherled_name: Profesor Llevó a Cabro Lecciones de la Hora del Código
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
@@ -672,6 +690,13 @@ es-ES:
   playlab_gradelevel: Edad 4-104
   infinity_gradelevel: Edad 4-104
   artist_gradelevel: Edad 4-104
+  monstercoding_gradelevel: Edad 5-13
+  allcancode_gradelevel: 5-10 años
+  csfirst_gradelevel: 9-14 años
+  boxisland_gradelevel: Escuela primaria
+  codesters_gradelevel: 12-14 años
+  texasinstruments_gradelevel: 13-16 años
+  teacherled_gradelevel: Mayores de 5 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
   thinkersmithspanish_platformtext: Desconectado
@@ -711,8 +736,15 @@ es-ES:
   projguts_platformtext: Desconectado
   hourofcode_platformtext: Cualquier navegador moderno, smartphone, tableta
   frozen_platformtext: Navegadores modernos y tabletas
-  starwars_platformtext: Navegadores modernos y tabletas
+  starwars_platformtext: Navegadores actuales y tabletas
   playlab_platformtext: Cualquier navegador moderno, smartphone, tableta
+  monstercoding_platformtext: Navegadores modernos, iOS, Android
+  allcancode_platformtext: Navegadores modernos, iOS
+  csfirst_platformtext: Navegadores modernos
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Navegadores modernos
+  texasinstruments_platformtext: Calculadoras de TI
+  teacherled_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeorg_shortdescription: ¡Aprende a programar con Mark Zuckerberg y Angry Birds!
   codeintl_shortdescription: Aprende a programar con el creador de Facebook y Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -752,10 +784,19 @@ es-ES:
   projguts_shortdescription: Aprende sobre modelado y simulación con piedra, papel, o tijeras
   hourofcode_shortdescription: Aprende a programar con el creador de Facebook y Angry Birds!
   frozen_shortdescription: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
-  starwars_shortdescription: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
+  starwars_shortdescription: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
   playlab_shortdescription: ¡Crea una historia o haz un juego con Laboratorio de Juegos!
   infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia o juego protagonizada por personajes de Disney Infinity.
   artist_shortdescription: ¡Dibuja imagenes estupendas y diseños con el Artista!
+  monsterocding_shortdescription: Una programación a color guiada para niños.
+  allcancode_shortdescription: Un juego de inmersión guiado por Marco con un lenguaje visual de programación.
+  csfirst_shortdescription: Una historia animada sobre dos personajes en el océano. ¡Añade tu propio estilo!
+  boxisland_shortdescription: Coge un viaje de codificación en la isla de caja con el valiente Hiro.
+  codesters_shortdescription: Crea tus propios juegos, animaciones y obras usando Python.
+  texasinstruments_shortdescription: 'Aprende codificación básica usando TI-84&#8482; calculadora Plus.'
+  teacherled_shortdescription: |
+    Esta inspirado para diseñar tu propia Hora de Código con estos planes de lecciones.
+     
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   codeintl_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -797,6 +838,13 @@ es-ES:
   frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con tus amigos!
   starwars_longdescription: Aprende a programar androides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
   playlab_longdescription: ¡Crea una historia o haz un juego con el Laboratorio de juegos! ¡Haz que animales, piratas, zombis, ninjas y muchos personajes más se muevan, hagan sonidos, marquen puntos y hasta lancen bolas de fuego!
+  monstercoding_longdescription: El misterio de la isla de la búsqueda de codificación por Codificación monstruo ofrece una aventura auto guiada llena de diversión que enseña varios conceptos de programación clave para los niños. Cada bloque se basa en una actividad que se basa en la anterior, la introducción de los niños a las funciones, valores booleanos, bucles, Si / Declaraciones, y matrices, utilizando gráficos animados de colores, instrucciones de audio.
+  allcancode_longdescription: 'Los estudiantes juegan un juego de aventura basado en una original historia. Ellos guiados por Marco- Personaje principal-a través de cada nivel, dándole paso a paso las instrucciones en la forma del lenguaje de programación visual utilizado por la Hora del Código. Ellos se presentaron a los comandos de secuenciación, iteración y condiciones sin ni siquiera darse cuenta.'
+  csfirst_longdescription: Crea una historia sobre dos personajes en el mar. Anima al agua y personaliza el paisaje,añade tu propia llamarada. ¡Utiliza el código para contar la historia que quieres contar!
+  boxisland_longdescription: '¡Toma un viaje en la caja de la isla y ayuda a Hiro a recoger todos los relojes esparcidos en el desierto! ¡En este tutorial  aprenderás los conceptos básicos de algoritmos, secuencias, bucles y condicionales!'
+  codesters_longdescription: 'Crea tus propios juegos, animaciones y obras de arte usando Python. Una vez que hayas terminado, compártelas con amigos! Programa en Python, un lenguaje de programación real que utiliza todos los días a las empresas -  arrastrar y soltar juego de herramientas, hace que sea fácil de aprender! Intenta construir un partido de baloncesto, la coreografía de un baile, o el diseño de una tarjeta animada! '
+  texasinstruments_longdescription: 'Los 10 minutos de actividades de código se puede utilizar en la clase como una forma de despertar el interés de los estudiantes en la codificación con la tecnología TI que llevan en sus mochilas todos los días. Aprende los conceptos básicos de la codificación utilizando la TI-84 Plus ™ y obtén la programación que comenzó en sólo 10 minutos - ¡ninguna experiencia necesaria! '
+  teacherled_longdescription: 'Ahora que decenas de miles de educadores han tratado de la Hora del Código, muchas aulas están listos para más creativo, menos de una talla única para todas las actividades que enseñan los conceptos básicos de la informática. Para ayudar a los maestros a encontrar la inspiración, se recogieron y comisariada lección y actividad planes dirigidas por el maestro de una hora diseñados para diferentes áreas temáticas para la Hora de los veteranos del Código. '
   codeorg_beyond_name: Introducción a ciencias de la computación (13 años)
   khan_beyond_name: Aprende programación de computadoras
   tynker_beyond_name: Aprende programación de computadoras en casa
@@ -985,11 +1033,11 @@ es-ES:
   compatibility_https_header: Por favor habilitar HTTPS para Code.org.
   compatibility_https_message: "Para aumentar la seguridad, nos cambio a HTTPS en %{https_date}. Usted no podrá accede Code.org después de esta fecha. <a href='%{it_requirements_url}'> haga clic aquí</a> para aprender cómo activar HTTPS para Code.org."
   compatibility_https_hide_this_warning: Ocultar esta advertencia
-  starwars_shortcode: sw
+  starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
   flappy_shortcode: aletear
   infinity_shortcode: inf
-  playlab_shortcode: jugar
+  playlab_shortcode: lab
   artist_shortcode: art

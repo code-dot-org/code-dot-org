@@ -2,7 +2,9 @@ name 'U3 - Arrays - Wrap Up 2'
 
 
 markdown <<MARKDOWN
-## In general, when do you think you should you store information in an array and when should you use a variable?
+## Free Response: Choosing Array or Variable
+
+In general, when do you think you should store information in an array, and when should you use a variable?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

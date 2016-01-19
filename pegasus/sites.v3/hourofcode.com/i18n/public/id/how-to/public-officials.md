@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Bagaimana untuk membawa Hour of Code ke seluruh komunitas Anda.
 
@@ -55,4 +54,3 @@ nav: how_to_nav
 
   8. **Terhubung secara lokal.** Kunjungi [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) untuk mempelajari lebih lanjut tentang pendidikan ilmu komputer di negara Anda. Tandatangani petisi yang ada dan Anda akan mendapatkan update dari Code.org pada upaya-upaya advokasi lokal, negara bagian dan federal mereka.
 
-<%= view :signup_button %>

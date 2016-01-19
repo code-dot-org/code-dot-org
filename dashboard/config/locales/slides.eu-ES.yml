@@ -87,8 +87,8 @@
         text: Menditxoak kentzen eta zuloak betetzen lagundu behar diozu.
       3:
         image: notes/stage9_3.jpg
-        text: Bloke berriek menditxo batetik palakada bat lur kendu eta zulo bat lur
-          palakada batez beteko dute.
+        text: Bloke berriek menditxo batetik palakada bat lur ezabatu eta zulo bat
+          lur palakada batez beteko dute.
       4:
         image: notes/stage9_4.jpg
         text: Menditxoak eta zuloak tamaina ezberdinetakoak dira, beraz baserritarrari
@@ -1452,8 +1452,8 @@
           lotu behar ditugu.
       3:
         image: notes/C3_bounce_3.png
-        text: Hau egin dezakegu "ezkerreko gezia sakatzean" blokea "mugitu ezkerrera"
-          blokera lotuz eta gauza bera "eskuineko gezia sakatzean" eta "mugitu eskuinera"
+        text: Hau egin dezakegu "ezkerrerako gezia sakatzean" blokea "mugitu ezkerrera"
+          blokera lotuz eta gauza bera "eskuinerako gezia sakatzean" eta "mugitu eskuinera"
           blokeekin eginez. Saiatu zaitez eta gutxi barru zure errebote jokoa programatzen
           ariko zara!
     C3_computational_thinking:
@@ -3063,6 +3063,92 @@
           errepikatu blokearen barruan jarriko ditugu.
       3:
         image: notes/gumball_repeat_3.JPG
+        text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
+          lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
+          emango dizu gero zure joko propioa egiten ari zarenean.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Zure jokoa egin nahi izanez gero, oso erraza da. Programazio pixka bat
+          ikasi eta zuk sortutako jokoa jokatzen hasi ahal izango duzu.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Bideo-joko faboritorik ba al daukazu? Pauso bat emango dugu Jolas Laborategiko
+          jokoaren antzeko jokoak sortzeko. Joko onek istorio bat izan ohi dute eta
+          istorio guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien
+          artean elkar eragiten dute. Agian puntuak ere eskuratuko dituzte, jokoaren
+          arauen arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan
+          bana nola egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan
+          daitekeen eta telefonoan jolasteko balioko duen joko bat gauzatuko dugu.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
+          ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta
+          telefonoak jolasteko balioko duen joko bat eraikiko dugu.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Zure pantaila hiru zati nagusitan banatuta dago. Ezkerrean programa
+          nola exekutatzen den ikusi ahal izango duzu. Maila bakoitzean egin beharrekoa
+          azpialdean azaltzen zaizu.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: Erdiko eremua tresna kutxa da non blokeetako bakoitza kode zati bat
+          den.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjarekin lotu beharko
+          dituzu. Hainbat bloke lotu ditzakezu elkarrekin hauek arrastatuz inguruko
+          marra horia agertu arte. Orduan elkar lotu egingo dira.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: Lehen puzzle honetan, aktoreek zerbait esatea lortuko dugu "esan" blokea
+          "martxan dagoenean" blokearekin lotzen eta zure mezua bertan idazten. Zure
+          blokeak behar den lekuan dituzunean hasi botoian sakatu programatu duzuna
+          ikusteko.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Has zaitez eta bukaerarako zure joko propioa sortzeko kapaz izango zara,
+          elkar eragin dezaketen mota guztietako jokalariekin, puntuekin, gauzak jaurtikiz,
+          eta elkar desagerraraziz. Dena zure esku dago!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Orain, joko programatzaileek egunero erabiltzen duten zerbait ikasiko
+          dugu. Gertaerak deritze. Gertaera batek zure programari esaten dio zerbait
+          gertatzearen zain adi egoteko, eta zerbait hori gertatzen denean jokoak
+          ekintza bat gauzatuko du.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Gertaera adibide batzuk dira saguaren klik bat edo gora eta beherako
+          gezi tekla bat edo baita ere pantaila ukitzea.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Hemen jokalariak aktorearen gainean klik egiten duenean honek zerbait
+          esatea lortuko dugu. "Klik egiterakoan" blokea erabiliko dugu eta horri
+          lotuko diogu "esan" blokea. Jokalariak klik egiterakoan, bloke horretara
+          lotutako bloke guztiak burutuko dira.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: Badira ere "gezia sakatzean" blokeak. Mugimendu blokeak lotzen badizkiozu
+          bloke horiei, zure aktoreak gora, behera, eskuin eta ezker mugitzen has
+          zaitezke geziekin. Pixkanaka zure jokoa elkarreragileago bihurtzen ari da.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Imajina dezakezu zerbait behin eta berriz betirako errepikatzen egon
+          beharko bazenu? Zorionez ez duzu horrelakorik inoiz egin beharko konputagailuak
+          oso onak baitira gauzak errepikatzen.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: Hau da betirako errepikatu blokea. Edozer gauza bloke honen barruan
+          betirako errepikatuko da jokoan. Aktore batek gauzaren bat errepikatzen
+          ibiltzea nahi badugu jokalariaren parte hartzerik gabe, bloke horiek betirako
+          errepikatu blokearen barruan jarriko ditugu.
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
           lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
           emango dizu gero zure joko propioa egiten ari zarenean.

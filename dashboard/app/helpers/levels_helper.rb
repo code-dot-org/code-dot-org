@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 
@@ -128,6 +129,16 @@ module LevelsHelper
     set_channel if @level.channel_backed?
 
     view_options server_level_id: @level.id
+    if @script_level
+      view_options(
+        stage_position: @script_level.stage.position,
+        level_position: @script_level.position
+      )
+    end
+
+    if @script
+      view_options script_name: @script.name
+    end
 
     unless params[:share]
       # Set videos and callouts.
@@ -146,8 +157,15 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
 
+    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
+    view_options(public_caching: @public_caching)
+
     if PuzzleRating.enabled?
       view_options(puzzle_ratings_url: puzzle_ratings_path)
+    end
+
+    if AuthoredHintViewRequest.enabled?
+      view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
     end
 
     if @level.is_a? Blockly
@@ -282,7 +300,6 @@ module LevelsHelper
     if level_overrides[:embed]
       view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
     end
-    view_options(no_footer: true) if level_overrides[:share] && browser.mobile?
 
     level_overrides.merge!(no_padding: view_options[:no_padding])
 

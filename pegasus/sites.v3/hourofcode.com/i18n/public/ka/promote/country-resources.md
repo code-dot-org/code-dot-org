@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 <% end %>
 
-<%= view :signup_button %>

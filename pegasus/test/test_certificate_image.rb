@@ -57,5 +57,6 @@ class CertificateImageTest < Minitest::Test
     assert info_line.match(/#{format}/)
     assert info_line.match(/#{width}x/)
     assert info_line.match(/x#{height}/)
+    image && image.destroy!
   end
 end

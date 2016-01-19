@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
@@ -97,4 +96,3 @@ Parādiet studentiem iedvosmojošu video, lai uzsāktu "Programmēšans stundu".
 
 <% end %>
 
-<%= view :signup_button %>

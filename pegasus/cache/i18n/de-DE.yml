@@ -29,6 +29,9 @@
   twentyhours_heading: Teste unseren "Einführung in die Informatik"-Kurs
   twentyhours_text: Du hast deine erste "Hour of Code" beendet? Erlerne weitere Informatik-
     und Programmierkonzepte in diesem Folgekurs.
+  og_title: Jedes Kind verdient eine Gelegenheit
+  og_description: In jeder Schule sollten die Schüler die Gelegenheit haben Informatik
+    zu lernen.
   hoc2014_heading: Nimm an der <a href="http://hourofcode.com">Hour of Code</a> <br/>8.-14.
     Dezember 2014  teil<br/>
   hoc2014_students: Schüler
@@ -248,6 +251,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Erfahre mehr
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Erfahre mehr
   homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
@@ -256,6 +262,7 @@
   homepage_solot_text_link_volunteer: Hilf mit bei der Hour of Code
   homepage_slot_text_title_students: Schüler
   homepage_slot_text_blurb_students: Entdecke all unsere Tutorials
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Probiere Code Studio aus
   homepage_slot_text_link_local: Finde Unterricht vor Ort
   homepage_slot_text_link_othercourses: Andere Onlinekurse
@@ -316,10 +323,11 @@
   class_submission_languages_other: Andere Sprache(n)
   inspirational_videos_more: Weitere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirierende
     Videos</a>, sortiert nach Rollen und Berühmtheiten
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_choose_theme: Wähle dein Spielelabor
+  playlab_classic_title: Klassisch
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Ice Age - In Kürze
+  playlab_iceage_title_live: Ice Age
   starwars_subtitle: Erbaue ein Galaxie mit Code
   starwars_javascript_title: Javascript
   starwars_javascript_description: Verwende Drag & Drop Blöcke und Javascript.
@@ -327,8 +335,8 @@
   starwars_javascript_start_button: Probiere es jetzt aus
   starwars_blocks_title: Bausteine
   starwars_blocks_description: Verwende Drag & Drop Blöcke.
-  starwars_blocks_specs: Viele Sprachen (in Kürze) | Moderne Browser, Smartphones,
-    Tablets | Alter 6-10
+  starwars_blocks_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets |
+    Alter: 6-106'
   starwars_blocks_start_button: Erfahre mehr
   starwars_watch_videos: Bevor du loslegst, sieh dir eines dieser inspirierende Videos
     an
@@ -342,7 +350,7 @@
     diese Minecraft-Welt zu schicken.
   mc_gradelevel: Ab 6 Jahren
   mc_platformtext: Moderne Browser, Smartphones, Tablets
-  mc_specs: Viele Sprachen (in Kürze) | Moderne Browser und Tablets | Alter 6 +
+  mc_specs: 'Viele Sprachen | Moderne Browser, Smartphones, Tablets | Alter: 6-106'
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspiriere Schüler und unterstütze Hour of
     Code.
@@ -369,6 +377,7 @@
   volunteer_engineer_submission_intro_links: Du suchst keine Freiwilligen? <a href="%{learn_more}">Lerne
     mehr</a> darüber, wie Du Dein eigenes "Hour of Code"-Event organisierst und Freiwillige
     in Deiner Nähe auf der <a href="%{volunteer_local}">Freiwilligenkarte</a> findest.
+  volunteer_engineer_submission_update_information: Aktualisieren Sie Ihre Daten
   volunteer_engineer_submission_header_shared: Mit Lehrern geteilte Informationen
     auf der Unterstützerkarte
   volunteer_engineer_submission_field_name: Name
@@ -690,11 +699,21 @@
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
+  dashboard_announce_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme
+    an der Hour of Code 2015! In allen Code Studio Tutorials und Kursen können die
+    Fortschritte wieder gespeichert werden. Hinweis: Code.org Büros sind vom 19. Dezember
+    bis 3. Januar geschlossen. Die Beantwortung von Fragen, die bis zum 4. Januar
+    eingereicht werden, kann sich verzögern.'
+  dashboard_announce_button_text: Erfahre mehr
   dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung
     ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen
     der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission
     zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten
     Galaxie zu erstellen und zu teilen.'
+  dashboard_announce_playlab: '<b>4. Dezember 2015</b> - "Hour of Code" ist da! Erkunde
+    50 Übungen, es spielt keine Rolle wie alt du bist oder welches Gerät du benutzt.
+    Diese Woche neu: Programmiere deine eigenen Geschichten und Spiele in neuen Spielelaboren,
+    Ice Age und Gumball.'
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
   code_sign_up: Melde dich an, um an der Woche der Informatik teilzunehmen
   learn_more: Erfahre mehr
@@ -748,6 +767,10 @@
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
   educator_notes: Notizen für Tutoren
   teach_led_lesson_plans: Hour of Code Lehranleitungen
+  learn_footer_all_tutorials: 'Sehen sie auch: <a href="Https://code.org/educate/allhourofcode">umfangeiche
+    Liste der "Hour of Code"-Tutorials</a>. Für unsere Kriterien und Richtlinien für
+    die Einreichung von "Hour of Code"-Tutorials, <a href="Https://hourofcode.com/tutorial-guidelines">hier
+    klicken.</a>'
   how_to_teach_hoc: Anleitung zum Unterrichten einer "Hour of Code"
   more_resources_educators: Weitere Quellen für Lehrer und Tutoren
   beyond_submission: Du willst eine weiterführende Anleitung für Beyond an Hour einreichen?
@@ -764,8 +787,8 @@
   mobile_devices: Anleitungen für mobile Geräte
   frozen_name: Programmiere mit Anna und Elsa
   starwars_name: 'Star Wars: Erbaue eine Galaxie mithilfe von Code'
-  codeorg_name: Schreibe dein erstes Computerprogramm
-  codeintl_name: Schreibe dein erstes Computerprogramm
+  codeorg_name: Klassisches Labyrinth
+  codeintl_name: Klassisches Labyrinth
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Eine Einführung in JavaScript
   khanes_name: Eine Einführung in JavaScript
@@ -801,10 +824,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Schere, Stein, Papier
-  hourofcode_name: Schreibe dein erstes Computerprogramm
+  hourofcode_name: Klassisches Labyrinth
   playlab_name: Play Lab
   infinity_name: Infinity Spiele Lab
   artist_name: Künstler
+  monstercoding_name: '"Mystery Island"-Programmierwettbewerb'
+  allcancode_name: Run Marco!
+  csfirst_name: CS First
+  boxisland_name: Box Island
+  codesters_name: Codesters
+  texasinstruments_name: 10 Minuten von Code
+  teacherled_name: Hour of Code Lehranleitungen
   codeorg_gradelevel: Im Alter von 4-104
   codeintl_gradelevel: Im Alter von 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -848,6 +878,13 @@
   playlab_gradelevel: Im Alter von 4-104
   infinity_gradelevel: Im Alter von 4-104
   artist_gradelevel: Im Alter von 4-104
+  monstercoding_gradelevel: Alter 5-13
+  allcancode_gradelevel: 'Alter: 5-10'
+  csfirst_gradelevel: 'Alter: 9-14'
+  boxisland_gradelevel: Grundschule
+  codesters_gradelevel: 'Alter: 12-14'
+  texasinstruments_gradelevel: 'Alter: 13-16'
+  teacherled_gradelevel: 'Alter: 5+'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
   thinkersmithspanish_platformtext: Offline
@@ -889,6 +926,13 @@
   frozen_platformtext: Moderne Browser und Tablets
   starwars_platformtext: Moderne Browser und Tablets
   playlab_platformtext: Moderne Browser, Smartphones, Tablets
+  monstercoding_platformtext: Aktuelle Browser, iOS, Android
+  allcancode_platformtext: Aktuelle Browser, iOS, Android
+  csfirst_platformtext: Moderne Web-Browser
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Moderne Web-Browser
+  texasinstruments_platformtext: TI-Taschenrechner
+  teacherled_platformtext: Moderne Browser, Smartphones, Tablets
   codeorg_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   codeintl_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -947,6 +991,20 @@
   infinity_shortdescription: Verwende das Spielelabor, um eine Geschichte oder ein
     Spiel mit den Disney Infinity Charakteren zu erstellen.
   artist_shortdescription: Zeichne coole Bilder und Designs mit dem Künstler!
+  monsterocding_shortdescription: Ein buntes selbstgeführtes Programmier-Abenteuer
+    für Kinder.
+  allcancode_shortdescription: Ein mitreißendes Spiel bei dem du Marco mit einer visuellen
+    Programmiersprache durch führst.
+  csfirst_shortdescription: Animieren Sie eine Geschichte mit zwei Figuren auf dem
+    Ozean. Fügen Sie Ihren eigenen Stil hinzu!
+  boxisland_shortdescription: Gehen Sie mit der mutigen Hiro auf eine Programmierreise
+    auf Box Island.
+  codesters_shortdescription: Erstellen Sie Ihre eigenen Spiele, Animationen und Grafiken
+    mit Python.
+  texasinstruments_shortdescription: Lernen Sie einfaches Programmieren mit dem TI-84&#8482;
+    Plus Taschenrechner.
+  teacherled_shortdescription: Lassen Sie sich mit diesem Studenplan zu einer eigenen
+    "Hour of Code" anregen.
   codeorg_longdescription: |
     Lerne die Grundlagen des Programmierens ganz einfach durch "Drag & Drop". Ganz spielerisch kannst Du dich selbst durch unseren Unterricht mit Videos von Bill Gates, Mark Zuckerberg, Angry Birds oder Plants vs. Zombies navigieren.
     Lerne, Schleifen zu programmieren, Bedingungen einzusetzen und einfache Algorithmen zu entwickeln. Das Programm ist in 34 Sprachen verfügbar.
@@ -1096,6 +1154,35 @@
   playlab_longdescription: Erfinde eine Geschichte oder ein Spiel mit dem Spielelabor!
     Erstelle Tiere, Piraten, Zombies, Ninjas und viele andere Charakter. Erstelle
     Sounds, erziele Punkte und werfe sogar Feuerbälle!
+  monstercoding_longdescription: Der Mystery Island Coding Quest, ein lustiges, selbstgeführtes
+    Abenteuer, das Kindern verschiedene Programmierkonzepte beibringt. Jeder Block
+    baut auf der vorherigen auf. Kinder erhalten eine Einführung in Funktionen, boolesche
+    Werte, Schleifen, if/else-Anweisungen, Arrays, unter Verwendung von bunten animierten
+    Grafiken und Audio-Anleitungen.
+  allcancode_longdescription: Ein Abenteuerspiel für Schüler, das auf einer originellen
+    Geschichte basiert. Sie führen die Hauptfigur Marco mit einer visuellen Programmiersprache
+    Schritt für Schritt durch verschiedene Spielstufen. Dabei lernen die Schüler ganz
+    nebenbei die Anwendung von Befehlsabfolgen, Wiederholungen und Bedingungen.
+  csfirst_longdescription: "Erstellen Sie eine Geschichte über zwei Personen auf hoher
+    See. Bewegen Sie das Wasser und ändern Sie die \nLandschaft nach Ihrem Geschmack.
+    Benutzen Sie Code um Ihre Version der Geschichte zu erzählen!\n"
+  boxisland_longdescription: Reise nach Box Island und hilf Hiro beim einsammeln aller
+    in der Wildnis verstreuten Uhren. Mit dieser Einführung lernen Sie die Grundlagen
+    von Algorithmen, Ainweisungsfolgen, Schleifen und Bedingungen kennen.
+  codesters_longdescription: 'Erstellen Sie Ihre eigenen Spiele, Animationen und Grafiken
+    mit Python. Teile sie mit Freunden! Schreiben Sie Programme in Python, einer echten
+    Programmiersprache, die in Unternehmen verwendet wird - mit dem drag und drop
+    Toolkit ist sie leicht zu erlernen. Probieren Sie ein Basketballspiel zu erstellen,
+    einen Tanzchoreographie oder eine animierte Karte zu erstellen. '
+  texasinstruments_longdescription: 'Mit den "10 Minute of Code"-Aktivitäten kann
+    in einer Klasse das Interesse der Schüler an der Programmierung der TI-Geräte
+    geweckt werden, die sie täglich bei sich haben. Lernen Sie die Grundlagen der
+    Programmierung mit dem TI-84&#8482; Plus in nur 10 Minuten - Vorkenntnisse sind
+    nicht erforderlich!  '
+  teacherled_longdescription: Nachdem zehntausende von Pädagogen, die "Hour of Code"
+    ausprobiert haben, sind viele Schulklassen bereit über die Grundlagen der Informatik
+    hinaus kreativ zu werden. Lehrer finden Anregung in unserer Sammlung von Unterichtsstunden
+    und Aktionsplänen zu Themen für erfahrene "Hour of Code"-Anwender.
   codeorg_beyond_name: Einführung in Informatik und Programmieren für Kinder zwischen
     5 und 14 Jahre
   khan_beyond_name: Lerne Computer-Programmierung und Programmiersprachen
@@ -1339,36 +1426,38 @@
     mobiele Apps zu kreieren und zu entwickeln, mit PHP und MySQL-Datenbank zu arbeiten.
     Starten sie mit der statistischen Aufbereitungs Sprache R und vieles mehr.[Hinweis:
     Bezahlung erforderlich]'
-  edx_beyond_longdescription: CS50x ist Harvard College-Einführung in die geistigen
-    Unternehmen der Informatik und die Kunst der Programmierung für Majors und nicht-Majors
-    gleichermaßen, mit oder ohne vorherige Erfahrung im Bereich Programmierung. Unter
-    anderem Abstraktion, Algorithmen, Datenstrukturen, Kapselung, Ressourcen-Management,
-    Sicherheit, Softwareentwicklung und Webentwicklung. Sprachen sind C, PHP und JavaScript
-    plus SQL, CSS und HTML. Die auf dem Campus-Version des CS50x ist Harvard zweitgrößte
-    Kurs.
-  coursera_beyond_longdescription: 'Stanford CS 101 Klasse gelehrt von Nick Parlante
-    (kostenlos!). CS101 lehrt die grundlegenden Ideen der Informatik für ein NULL-vor-Erfahrung-Publikum.
-    Spielen und experimentieren mit kurzen Bits des Codes, zum Leben, die Kraft und
-    die Einschränkungen von Computern. CS101 liefert auch einen allgemeinen Hintergrund
-    auf Computern heute: Was ist ein Computer, was ist Hardware, was ist Software,
-    was ist das Internet. Es sind keine Vorkenntnisse erforderlich, als die Möglichkeit,
-    einen Web-Browser zu verwenden.'
-  udacity_beyond_longdescription: In diesem Kurs lernst Du wichtige Konzepte der Informatik
-    kennen und schreibst Dein eigenes Programm für einen Webcrawler. Es sind keine
-    Programmierkenntnisse für diesen Kurs erforderlich. Anfänger sind herzlich willkommen!
-    Am Ende dieses Kurses hast Du wichtige Konzepte in der Informatik und Programmierung
-    gelernt und kannst "Python"-Programme schreiben.
+  edx_beyond_longdescription: Der Harvard Kurs CS50x ist eine Einführung in die intellektuellen
+    Herausforderungen der Informatik und die Kunst der Programmierung, gleichermaßen
+    für Anfänger und Fortgeschrittene mit und ohne vorherige Programmierkenntnisse
+    geeignet. Behandelt werden unter anderem Abstraktionen, Algorithmen, Datenstrukturen,
+    Kapselung, Ressourcen-Management, Sicherheit, Softwareentwicklung und Webentwicklung.
+    Verwendete Sprachen sind C, PHP und JavaScript, sowie SQL, CSS und HTML. Die universitäre
+    Variante des CS50x ist der zweitgrößte Kurs in Harvard.
+  coursera_beyond_longdescription: 'Der Kurs CS101 der Stanford University wird von
+    Nick Parlante (kostenlos!) unterrichtet. Im CS101 werden Zuhörern ohne Vorkenntnisse
+    die grundlegenden Konzepte der Informatik beigebracht. Experimentiere mit kleinen
+    Codeabschnitten mache dir die Möglichkeiten und Grenzen von Computern bewusst.
+    Der CS101 bietet allgemeinen Hintergrundinformationen über moderne Computern:
+    was ist ein Computer, was ist Hardware, was Software, woraus besteht das Internet...
+    Du brauchst keine Vorkenntnisse, nur einen Webbrowser musst du bedienen können.'
+  udacity_beyond_longdescription: In diesem Kurs lernst du wichtige Konzepte der Informatik
+    kennen und schreibst dein eigenes Programm für einen Webcrawler. Du benötigst
+    keine Programmierkenntnisse für diesen Kurs. Anfänger sind herzlich willkommen!
+    Am Ende des Kurses hast du wichtige Konzepte der Informatik und Programmierung
+    gelernt und kannst "Python"-Programme schreiben. Dieser Kurs Dienst als Vorbereitung
+    für fortgeschrittene Computerkurse.
   teachingtree_beyond_longdescription: '"TeachingTree" ist eine offene Plattform für
     die Zusammenstellung von Bildungsinformationen und Kursen. Unser Ziel ist es,
     dass Schüler und Studenten schnell auf die notwendigen Videos zugreifen können,
     um spezielle Programmierkonzepte zu lernen. Ausserdem sind alle eingeladen, selbst
     Videos einzustellen oder Programmierkonzepte zu verschlagworten.'
-  kodu_beyond_longdescription: '"Kodu" erlaubt es Schülern, auf dem PC oder auf der
-    XBOx einfache Spiele mit einer visuellen Programmiersprache zu entwickeln. "Kodu"
-    kann für die Lehre in Kreativitätsthemen, bei Problemlösung und Programmierung
-    genutzt werden. Ein jeder kann "Kodu" nutzen, um Spiele zu entwickeln - auch ohne
-    Programmier- und Designkenntnisse. "Kodu" ist für die XBox in den USA auf dem
-    XBox Marktplatz im "Indie Games Channel" für etwa 5$ erhältlich.'
+  kodu_beyond_longdescription: Mit "Kodu" können Schülern, auf dem PC oder auf der
+    XBox einfache Spiele mithilfe einer visuellen Programmiersprache entwickeln. "Kodu"
+    kann für den Unterricht von Kreativitätstechniken, bei Problemlösungen, zum Geschichten
+    erzählen und zur Programmierung genutzt werden. Ein jeder kann "Kodu" nutzen,
+    um Spiele zu entwickeln - auch ohne Programmier- und Designkenntnisse. "Kodu"
+    ist für die XBox in den USA auf dem XBox Marktplatz im "Indie Games Channel" für
+    etwa 5$ erhältlich.
   cargobot_beyond_longdescription: '"Cargo-Bot" ist ein Rätsel-Spiel, bei dem Du einem
     Roboter zeigst, wie er Behälter hin- und herschieben kann, ganz einfach! Mit 36
     Rätseln, toller Musik und einer beeindruckenden Grafik. Du kannst Deine Programmierlösungen
@@ -1392,33 +1481,34 @@
     um Deine Helden zu steuern und Deine Freunde zu retten. Lerne dabei als Anfänger
     in diesem HTML5-Spiel gleichzeitig die Programmierung in der Programmiersprache
     "JavaScript".
-  codea_beyond_longdescription: Codea für iPad können Sie Spiele und Simulationen
-    erstellen &mdash; oder fast jede visuelle Idee, die Sie haben. Verwandeln Sie
-    Ihre Gedanken in interaktiven Kreationen, die Verwendung von iPad-Funktionen wie
-    Multi-Touch und der Beschleunigungsmesser machen. Wir denken Codea ist die schönsten
-    Code-Editor, den Sie verwenden werden, und es ist einfach. Codea soll Sie Ihren
-    Code berühren lassen. Eine Anzahl ändern möchten? Einfach tippen Sie und ziehen
-    Sie es. Wie wär's mit einer Farbe oder ein Bild? Sie klopfen holt oben visuellen
-    Editoren, mit denen Sie wählen genau das, was Sie wollen.
+  codea_beyond_longdescription: Mit Codea für iPad kannst du Spiele und Simulationen
+    erstellen &mdash; oder fast jede visuelle Idee umsetzen. Verwandele deine Gedanken
+    in interaktiven Kreationen und mache Gebrauch von iPad-Funktionen wie Multi-Touch
+    und dem Beschleunigungsmesser. Codea ist unserer Ansicht nach einer der schönsten
+    und einfachsten Code-Editoren. Mit Codea kannst du deinen Code buchstäblich anfassen.
+    Um eine Zahl zu ändern, brauchst du sie nur anzutippen und zu ziehen. Möchte du
+    Farben oder Bilder verwenden? Tippe auf den Bildschirm mache mit den visuellen
+    Editoren genau das, was du dir vorstellst.
   lego_beyond_longdescription: Erstelle kleine, anpassbare und programmierbare Roboter
     aus Legosteinen.
-  finch_beyond_longdescription: Der "Finch" ist eine Roboterfigur für das Erlernen
-    von Computersprachen. Die Entwicklung wurde über 4 Jahre vom Computerlabor "Create"
-    an der Carnegie-Mellon Universität umgesetzt. Der "Finch" ist eine interactive
-    Einführung in die Kunst des Programmierens und unterstützt ein Dutzend verschiedener
-    Programmierumgebungen und Programmiersprachen zur Entwicklung von umfangreichen
-    Programmen und kann ab dem Alter von 8 Jahren genutzt werden.
+  finch_beyond_longdescription: Der "Finch" ist eine Roboterfigur mit der Computersprachen
+    erlernt werden können. Er ist das Ergebnis einer vierjährigen Studie an am Computerlabor
+    "Create" an der Carnegie-Mellon Universität. Der "Finch" ist bietet eine anregende
+    Einführung in die Programmierung. Erunterstützt über ein Dutzend verschiedener
+    Programmierumgebungen und Programmiersprachen, die von Schülern ab 8 Jahren zur
+    Erstellung von interaktiven Programmen eingesetzt werden können.
   arduino_beyond_longdescription: Der "Arduino" ist eine bekannte Hardware-Plattform,
     die es Entwicklern und Designern ermöglicht, mit echten Sensoren, Lampen, Lautsprechern
     etc. zu arbeiten. Die "Sparkfun Virtual Sandbox" erlaubt es, echten "Arduino-Code"
     im Internet-Browser zu entwickeln.
   processing_beyond_longdescription: '"Processing" ist eine Programmiersprache, eine
-    Entwicklungsumgebung und eine Online-Community. Seit 2001 vermittelt "Processing"
-    Softwarekenntnisse mittels einem sehr stark visuellen Ansatz. Ausgehend von einem
-    Software-Skizzenbuch hat sich "Processing" per heute in ein professionelles Entwicklungstool
-    weiterentwickelt. Heute nutzen zehntausende Studenten, Schüler, Künstler, Forscher,
-    Designer und Enthusiasten das "Processing"-Tool zum Lernen, für Prototypenerstellung
-    und für die Entwicklung.'
+    Entwicklungsumgebung und eine Online-Community. Seit 2001 fördert "Processing"
+    Softwarekenntnisse in der bildenden Kunst und visuelle Kompetenz in der Technik.
+    Ursprünglich wurde "Processing" als Software-Skizzenbuch entworfen und um Grundlagen
+    der Programmierung über einen visuellen Zugang zu unterrichten. Es hat sich bis
+    heute zu einem professionelles Entwicklungstool weiterentwickelt. Heute nutzen
+    zehntausende Studenten, Schüler, Künstler, Forscher, Designer und Enthusiasten
+    "Processing" als Lerntool, zur Entwicklung von Prototypen und bei der Produktion.'
   alice_beyond_longdescription: Das "Alice"-Projekt stellt Dir Werkzeuge und Materialien
     für die Lehre und das Erlernen und Programmieren von 3-dimensionalen Animationen
     zur Verfügung. Schüler aller Alterklassen erwerben dabei spielerisch Problemlösungskomptenzen

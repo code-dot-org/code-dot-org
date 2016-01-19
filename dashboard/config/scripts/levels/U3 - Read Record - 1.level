@@ -1,0 +1,61 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-12-07T15:11:30.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "readRecords": {
+        "params": [
+          "\"myTable\"",
+          "{}",
+          "function(records){\n\n}"
+        ],
+        "paletteParams": [
+          "table",
+          "terms",
+          "callback"
+        ]
+      },
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Console.log the records returned by a call to readRecords. (Click to see full instructions)\r\n",
+    "markdown_instructions": "# Reading Records\r\n\r\nYou have learned how `createRecord` can be used to create permanent copies of your data in a remote database. This allows your app to save information it has collected across multiple runs of your program. **In order to use this data you'll need a way to read it out of your database and back into your app**.\r\n\r\n<img src=\"https://images.code.org/ac5fb29d4935df7b5825f4cabd6b89e8-image-1449502640243.35.37 AM.png\" style=\"width: 350px; float: right\">\r\n\r\nCheck out the new command `readRecords`. This command **requests all of the records stored in one of the tables of your database**. Follow the instructions below to try running this command before moving on to learn more about how it works.\r\n\r\nWhen the database has collected all the records it responds by the sending an array of objects back to your program, one object for every record in the table. Your system will then **call the callback function of the `readRecords` command, placing this array of objects in the `records` parameter**.\r\n\r\n# Do This\r\n\r\n**Your database already contains data** in a table named 'myTable'\r\n\r\n* **Open the Data Viewer** to look at the data in 'myTable'\r\n* **Add a `readRecords` command** to your app.\r\n* **Add a `console.log` command** inside the callback function of `readRecords` to **display the `records`**\r\n* Run the program and **confirm that the same information you saw in the Data Viewer is displayed in the console**.\r\n\r\n![](https://images.code.org/fe3db85465b5dd8a983ba5615f4e851d-image-1449504949223.gif)",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "data_tables": "\"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\"\r\n    \"population\": 9,000,000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\"\r\n    \"population\": 4,000,000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\"\r\n    \"population\": 3,000,000\r\n  }\r\n  {\r\n     \"name\": \"Houston\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n]",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "slider_speed": "1"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

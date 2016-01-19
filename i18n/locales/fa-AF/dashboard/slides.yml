@@ -1,175 +1,183 @@
-fa-AF:
+fa:
   slides:
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: به اولین ساعت کدنویسی خود خوش آمدید! بیایید یکراست به سمت اولین تجربه برنامه نویسی شما شیرجه بزنیم.
+        text: "Welcome to your first hour of code! Let's dive right into your first taste of programming."
       2:
         image: notes/hoc1_2.jpg
-        text: ما از بلوکلی استفاده می کنیم، یک زبان برنامه نویسی تصویری که در آن با کشیدن و رها کردن قطعه های کد، برنامه نویسی می کنید.
+        text: "We'll be using Blockly, a visual programming language where you drag and drop blocks to write code."
       3:
         image: notes/hoc1_3.jpg
-        text: بیشتر کدها آماده هستند، اما Blockly یک زبان visual است. هر قطعه کد مظابق با یک خط کد دنیای واقعی است.
+        text: 'Most code is typed, but Blockly is visual. Each blocks corresponds to a line of "real" code.'
       4:
         image: notes/hoc1_4.jpg
-        text: شما مفاهیم پایه علوم رایانه ای را فرا خواهید گرفت، مفاهیمی که در هر جایی از ساخت برنامه ها تا کنترل یک مریخ نورد استفاده شده اند.
+        text: "You'll learn the foundations of computer science, concepts which are used anywhere from making apps to controlling the Mars rover."
       5:
         image: notes/hoc1_5.jpg
-        text: یک برنامه، مجموعه ای از دستورالعمل ها برای اجرا در رایانه شما می باشد.
+        text: A program is a set of instructions for your computer to follow.
       6:
         image: notes/hoc1_6.jpg
-        text: هدف اولین برنامه شما پرتاب یک پرنده خشمگین از میان هزارتو برای زدن یک خوک سبز است.
+        text: The goal of your first program is to get an Angry Bird through a maze to hit a Green Pig.
       7:
         image: notes/hoc1_7.jpg
-        text: سمت چپ پازل، هزارتو است جایی که برنامه شما اجرا می شود . دستورالعمل های هر پازل در زیر هزارتوی پازل است.
+        text: The left side is the maze where your program is run. The instructions for each puzzle are below the maze.
       8:
         image: notes/hoc1_8.jpg
-        text: دستورات پرنده عصبانی در وسط جعبه ابزار است. از این جعبه ابزار برای ساخت کد خود استفاده کنید.
+        text: "The middle toolbox has the commands for the Angry Bird. You'll use these to build your code."
       9:
         image: notes/hoc1_9.jpg
-        text: سمت راست فضای کاری شما جایی که در آن می توانید بلوک ها را از جعبه ابزار بکشید و برنامه خود را بسازید. برای حذف یک بلوک، آن را به سطل زباله که در گوشه قرار دارد بیندازید.
+        text: "On the right is your workspace where you'll drag blocks from the toolbox to build your program. To delete a block, drag it to the trash in the corner."
       10:
         image: notes/hoc1_10.jpg
-        text: 'هر بلوک یک دستورالعمل است. اگر شما یک بلوک "برو جلو" را به فضای کاری خود بکشید و "اجرای برنامه" را فشار دهید، پرنده یک فاصله در هزارتو حرکت می کند.'
+        text: 'Each block is one instruction. If you drag a "move forward" block to your workspace and press "Run Program", the bird moves one space on the maze.'
       11:
         image: notes/hoc1_11.jpg
-        text: برای انجام بیش از یک کار، میتونی بلوک های بسیاری رو به فضای کارت بکشی و آنها رو به هم وصل کنی. پرنده فرمان ها رو از بالا به پایین انجام خواهد داد.
+        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
-        text: 'اگر شما برنامه را اجرا کردید و می خواهید آن را تعمیر و دوباره اجرا کنید، دکمه "تنظیم مجدد" را فشار دهید.'
+        text: 'If you run a program and want to fix it and try again, press the "Reset" button.'
       13:
         image: notes/hoc1_13.jpg
-        text: بیایید برویم آن خوکها را بگیریم!
+        text: "Let's go get those pigs!"
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: سلام، من JR هستم! هر تیم‌ ماشین‌سواری برای برنده شدن به یک دانشمند کامپیوتر نیاز دارد. آنها داده‌های ماشین‌ها رو بررسی می‌کنند و کاری می‌کنند تا سریع‌تر حرکت کنند.
+        text: "Hi, I'm JR! Every race car team need computer scientists to win. They analyze data from the car to make it go faster."
       2:
         image: notes/stage5_2.jpg
-        text: در این پازل‌ها، تو یک هنرمند نقاش خواهی بود که هرجا می‌رود یک خط پشت سرش می‌کشد.
+        text: "In these puzzles, you'll be an artist that draws a line behind them everywhere they go."
       3:
         image: notes/stage5_3.jpg
-        text: این بلاک می‌گوید که ۱۰۰ پیکسل به جلو حرکت کنید. پیکسل‌ها، نقطه‌های کوچک روی صفحه نمایش شما هستند.
+        text: 'This block says "move forward by 100 pixels." Pixels are just really tiny dots on your screen.'
       4:
         image: notes/stage5_4.jpg
-        text: 'این بلاک می‌گوید: «۹۰ درجه به راست بچرخید». این مقدار هنرمند نقاش شما را به همان اندازه تغییر بلاک‌ها در پازل ماز تغییر می‌دهد.'
+        text: 'This block says "turn right by 90 degrees." This will turn your artist the same amount as the "turn" blocks in the maze puzzles.'
       5:
         image: notes/stage5_5.jpg
-        text: بر روی فلش در هر یک از این بلوک‌ها کلیک کن تا میزان حرکت یا چرخش هنرمند را تغییر بدهی. با این بلوک‌های جدید بیشتر بازی کن تا با اونها آشنا بشی.
+        text: Click on the arrow in either of these blocks to change the amount the artist moves forward or turns. Play around to get familiar with these new blocks.
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: سلام، من پائولا هستم! در این معماها، تو یک کشاورز هستی که باید زمینش را کاملا صاف کند تا محصول بکارد.
+        text: "Hi, I'm Paola! In these puzzles, you're a farmer who has to get her field completely flat to start planting crops."
       2:
         image: notes/stage9_2.jpg
-        text: باید به او کمک کنی تا همه توده‌های خاک را بردارد و همه چاله‌ها را پر کند.
+        text: You have to help her remove all the piles of dirt and fill in all the holes.
       3:
         image: notes/stage9_3.jpg
-        text: بلوک‌های جدید 1 بیل از یک توده خاک برمی‌دارد و 1 چاله را با یک بیل از خاک پر می‌کند.
+        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1 shovelful of dirt to a hole.
       4:
         image: notes/stage9_4.jpg
-        text: اندازه توده‌ها و چاله‌ها متفاوت است، بنابراین باید به کشاورز بگویی که چندبار از بیلچه استفاده کند.
+        text: The piles and holes are different sizes, so you have to tell the farmer how many shovelfuls to use.
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: سلام، من کتی هستم! یکی از جالب‌ترین چیزها در مورد علوم کامپیوتر این است که یک برنامه کامپیوتری می‌تواند تعاملی باشد.
+        text: "Hi, I'm Katie! One of the most exciting things about computer science is that a computer program can be interactive."
       2:
         image: notes/flappy02.jpg
-        text: هروقت کسی روی یک کامپیوتر یا گوشی، کلیک یا لمس یا تایپ کند، یک رویداد به وجود می‌آورد، و مقداری کد وجود دارد که تعیین می‌کند در هنگام یک رویداد چه کاری انجام شود.
+        text: "Any time somebody clicks or taps or types on a computer or phone, that generates an EVENT, and there's some code that decides what to do when an EVENT occurs."
       3:
         image: notes/flappy03.jpg
-        text: 'برای مثال، می‌توانی یک "کنترل‌کننده رویداد" داشته باشی که می‌گوید "وقتی ماوس کلیک شد، صدایی را پخش کن" '
+        text: 'For example, you could have an EVENT-HANDLER that says "when the mouse is clicked, play a sound" '
       4:
         image: notes/flappy04.jpg
-        text: تا حالا چیزی درباره بازی FlappyBird شنیدی؟ با استفاده از کنترل‌کننده‌های رویداد، می‌خواهیم یاد بگیریم که نسخه سفارشی خودمون از FlappyBird را برنامه‌نویسی کنیم!
+        text: "Have you ever heard of the game FlappyBird? By using Event handlers, we're going to learn to program our own custom version of FlappyBird!"
       5:
         image: notes/flappy05.jpg
-        text: کدی که خواهی نوشت، شامل کشیدن و انداختن بلوک‌هایی است که نماینده دستوراتی برای کامپیوتر است. در پشت صحنه، هر یک از این بلوک‌ها با کد واقعی نشان داده می‌شوند.
+        text: "The code you'll write involves dragging and dropping blocks that represent commands for the computer. Under the hood, each of these blocks is represented by real code."
       6:
         image: notes/flappy06.jpg
-        text: 'اگر نگاهی به محیط کار بیندازی، چند بلوک سبز رنگ وجود دارند که پر شده‌اند - این‌ها "کنترل‌کننده‌های رویداد" هستند '
+        text: 'If you take a look at the workspace, there are some green blocks that are filled in for you - these are "event handlers" '
       7:
         image: notes/flappy07.jpg
-        text: 'اگر می‌خواهی وقتی که ماوس را "کلیک" می‌کنی، پرنده "پرش" کند، می‌توانی این کار را با چسباندن بلوک "پرش" به کنترل‌کننده رویداد مناسب انجام بدهی، و حالا در بازی‌ات هر وقت ماوس را کلیک کنی، پرنده پرش خواهد کرد.'
+        text: 'If you want the bird to FLAP when you CLICK the mouse, you can do that by attaching the "FLAP" block to the appropriate event handler, and now in your game whenever you click the mouse, the bird will flap.'
       8:
         image: notes/flappy08.jpg
-        text: در هر معما از این فعالیت، ما انواع جدیدی از رویدادها را بصورت بلوک‌های سبز در محیط کاری معرفی خواهیم کرد، و می‌توانی تعیین کنی که بلوک‌های مناسب برای افزودن در پاسخ به هر رویداد، کدام است.
+        text: "In each puzzle of this activity we'll introduce new types of events as green blocks on the workspace, and you can decide the appropriate blocks to add in response to those events."
       9:
         image: notes/flappy09.jpg
-        text: 'هنگامی‌که یک فلش رو به پایین مثل این می‌بینی، یعنی می‌توانی تنظیمات را تغییر دهی - مثلا چه صدایی پخش شود وقتی که پرنده به زمین برخورد می‌کند.'
+        text: 'When you see a drop down arrow like this, that means you can change the settings - like what sound to play when flappy hits the ground.'
       10:
         image: notes/flappy10.jpg
-        text: در معمای پایانی، می‌توانی بازی خودت را بسازی و آن را با دوستانت به اشتراک بگذاری. خوش باش و لذت ببر!
+        text: "In the final puzzle you'll be able to create your own game and share it with your friends. Have fun!"
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: سلام, من مارک هستم! بیایید در باره حلقه ها یاد بگیریم. با استفاده از حلقه ها شما می توانید به کامپیوتر بگویید که بارها دستورالعمل را هزاران یا حتی بیلیون بار تکرار کند.
+        text: "Hi, I'm Mark! Let's learn about loops. Using loops you can tell a computer to repeat any set of actions over and over, thousands or even billions of times."
       2:
         image: notes/hoc2_2.jpg
-        text: در این پازل، ما می خواهیم که پرنده را ۵ فاصله به جلو حرکت بدهیم که به خوک برسد.
+        text: In this puzzle, we want to make the bird move forward 5 spaces to get to the pig.
       3:
         image: notes/hoc2_3.jpg
-        text: 'ما می توانیم از بلوک جدید "repeat" استفاده کنیم که به ما کمک کند.'
+        text: 'We can use the new "repeat" block to help us out.'
       4:
         image: notes/hoc2_4.jpg
-        text: 'به جای بیرون کشیدن ۵ بلوک "move forward"...'
+        text: 'Instead of dragging out 5 "move forward" blocks...'
       5:
         image: notes/hoc2_5.jpg
-        text: 'ما می توانیم بلوک "move forward" را در داخل بلوک "repeat" قرار دهیم و یک عدد را در آن بلوک بنویسیم که به آن بگه چند بار آن را تکرار کند.'
+        text: 'We can put the "move forward" block inside the "repeat" block and write a number in the block to tell it how many times to repeat.'
       6:
         image: notes/hoc2_6.jpg
-        text: 'و این مهم است: شما می توانید بیش از یک دستور داخل بلوک "repeat" قرار دهید.'
+        text: 'And this is important: you can put more than one command inside a "repeat" block.'
       7:
         image: notes/hoc2_7.jpg
-        text: 'لذت ببرید با استفاده از بلوک "repeat"!'
+        text: 'Enjoy using your new "repeat" block!'
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: 'سلام من کریس هستم. قبل از پیوستن به میامی هیت، من برای تحصیل علوم کامپیوتر به دانشگاه جورجیا تک رفتم. بیایید بلوک جدید "repeat until" را امتحان کنیم.'
+        text: |-
+          Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech to study Computer Science. Let's try our new block, the "repeat until" block.
       2:
         image: notes/hoc3_2.jpg
-        text: چگونه میتوانیم بدانیم که چقدر پرنده باید حرکت کند که به خوک برسد؟
+        text: "What if we didn't know how far the bird had to move to get to the pig?"
       3:
         image: notes/hoc3_3.jpg
-        text: 'اگر ما بلوک "move forward" را در داخل بلوک "repeat unit" قرار دهیم, پرنده به جلو حرکت خواهد کرد تا اینکه به خوک برسد (یا اینکه با دیواد برخورد کند).'
+        text: 'If we put a "move forward" block inside the "repeat until" block, the bird will move forward UNTIL it reaches the pig (or crashes into a wall).'
       4:
         image: notes/hoc3_4.jpg
-        text: 'و این مهم است: درست مثل قبل، ما می توانیم چند تا بلوک را داخل بلوک "repeat until" قرار دهیم، و آنها تکرار خواهند شد.'
+        text: 'And this is important: just like before, we can put multiple blocks inside the "repeat until" block, and they will all be repeated.'
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'سلام, من بیل هستم! اجازه دهید یک مفهوم اساسی جدید را یاد بگیریم: بیانیه "if". این نشان میدهد که چگونه کامپیوترها تصمیم گیری می کنند.'
+        text: |-
+          Hi, I'm Bill! Let's learn a new fundamental concept: "If" statements. This is how computers make decisions.
       2:
         image: notes/hoc4_2.jpg
-        text: 'شما هر روز بیانیه "if" را استفاده می کنید. قبل از اینکه شما هر روز صبح از خانه خارج شوید، شما می گویند اگر بیرون باران بیاید، آن وقت من نیاز دارم که ژاکت بپوشم.'
+        text: |-
+          You use "If" statements yourself everday. Before you go outside each morning, you say IF it's raining outside, I need to wear my jacket.
       3:
         image: notes/hoc4_3.jpg
-        text: ما می توانیم به آدم خورها بگوییم که بررسی کنند اگر مسیری در چپ وجود دارد، و اگر او بتواند مسیری در سمت چپ پیدا کند، ما به او اجازه می دهیم که به آن سمت بچرخد.
+        text: "We can tell the zombie to check IF there's path to the left, and if he finds a path to the left, we can have him turn in that direction."
       4:
         image: notes/hoc4_4.jpg
-        text: 'برای نوشتن این کد، بیایید  بلوک "if" را بیرون بکشیم و بلوک "turn left" را داخل آن قرار دهیم.'
+        text: |-
+          To write the code for this, let's drag out our "if" block and put a "turn left" block inside it.
       5:
         image: notes/hoc4_5.jpg
-        text: 'حالا، اگر ما بلوک "move forward" را بالای آن و بلوک "repeat" را اطراف همه چیز بگذاریم، هر زمان که آدم خور حرکت می کند، او بررسی می کند که اگر مسیری به چپ وجود داشته باشد، او می چرخد. استفاده از دستور "repeat" حیاتی است، به دلیل اینکه هر چرخش را در هر مرحله بررسی می کند.'
+        text: |-
+          Now, if we put a "move forward" block above it and a "repeat" block around everything, each time the zombie moves, he'll check if there's a path to the left and turn. The "repeat" command is critical, to check for a turn at every step.
       6:
         image: notes/hoc4_6.jpg
-        text: 'بیانیه "if" در علم کامپیوتر واقعا مهم است. یکی از اولین برنامه هایی که من نوشته بودم بازی تیک-تک-تو بود، که در آن بیانیه "if" وجود داشت که می گفت، اگر فرد دیگری داره برنده می شود، جا را برایش ببند، که آنها برنده شوند.'
+        text: If statements are really important in computer science. One of the first programs I wrote was a tic-tac-toe game, and there was a If statement that said IF the other person is about to win, block the spot that lets them win.
       7:
         image: notes/hoc4_7.jpg
-        text: 'لذت ببرید با استفاده از بلوک "if"!'
+        text: 'Have fun using the "if" block!'
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: 'سلام, اسم من سلونی است. من از علم کامپیوتر برای کمک به حل مشکلات در بهداشت و پزشکی استفاده میکنم. بیاید در باره بلوک "if else"  یاد بگیریم. به نظر می رسد مانند بلوک "if" هست، اما یک بخش اضافی دارد قسمت پایانی دارد که به آن"else" گفته میشود.'
+        text: |-
+          Hi, my name is Saloni. I use computer science to help solve problems in health and medicine. Let's learn about the "if else" block. It looks like the "if" block, but it has an extra part at the end that says "else".
       2:
         image: notes/hoc5_2.jpg
-        text: 'اگریک بلوک "move forward" در جایی که می گوید "do" قرار دهم ویک بلوک "turn left" در جایی که می گوید "else", این یعنی زامبی بین 2 گزینه میتواند انتخاب کند. اگر مانعی درمسیر وجود دارد زامبی به جلو میرود و در غیر این صورت (مانعی در مسیر وجود ندارد) به چپ میچرخد.'
+        text: |-
+          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
       3:
         image: notes/hoc5_3.jpg
-        text: 'درست مانند بلوک "if" می توانیم بلوک "if else" را داخل بلوکهای "repeat" قرار دادهیم تا زامبی بتواند به حرکت خود ادامه دهد و بلوک "if else" چک کند که ایا جایی برای چرخش وجود دارد.'
+        text: |-
+          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: حالا، آن آدم خورها را به جایی که آنها تعلق دارند بگذار!
+        text: Now, get those zombies where they belong!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -188,84 +196,89 @@ fa-AF:
     function:
       1:
         image: notes/stage13_1.jpg
-        text: سلام، من برینا هستم، یک مهندس در اینستاگرام. یک تابع عبارت است از خطوط مشخصی از کد که می‌خواهی بارها و بارها استفاده کنی، بنابراین بجای اینکه هربار آن کد را بنویسی، می‌توانی فقط از یک بلوک استفاده کنی.
+        text: "Hi, I'm Brina, an engineer at Instagram. A function is certain lines of code that you want to use over and over again, so instead of writing that code out everytime, you can just use one block."
       2:
         image: notes/stage13_2.jpg
-        text: حالا می‌خواهیم یاد بگیریم که چطور توابع را تعریف کنیم. توابع تعریف شده دارای یک ستاره در گوشه هستند. اسم تابع در بالاترین خط نوشته شده است.
+        text: "We're going to learn how to define functions. Function definitions have a star in the corner. The name of the function is written on the top line."
       3:
         image: notes/stage13_3.jpg
-        text: 'بلوک‌هایی که داخل تعریف قرار می‌گیرند به ما می‌گویند که چه کاری انجام می‌دهد. پس این تعریف تابع "5 تا پرکن" نام دارد و از یک بلوک "تکرار" و یک بلوک "پر کردن" تشکیل شده است.'
+        text: |-
+          The blocks that go inside the definition tell us what it does. So this function definition is called "fill 5" and it's made up of a "repeat" block and a "fill" block.
       4:
         image: notes/stage13_4.jpg
-        text: 'تعریف تابع در محیط کاری ما قرار می‌گیرد، اما کشاورز ما تابع را اجرا نخواهد کرد تا ما بلوک تابع "5 تا پر کن" را از دسته توابع بیرون بکشیم.'
+        text: |-
+          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
       5:
         image: notes/stage13_5.jpg
-        text: 'بیایید "fun" را در "FUNction" برگردانیم! '
+        text: |-
+          Let's put the "fun" back in "FUNction!" 
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'سلام من Makinde هستم! اجازه دهید "white block" را یاد بگیریم.'
+        text: |-
+          Hi, I'm Makinde! Let's learn about the "while block." 
       2:
         image: notes/stage9_6.jpg
-        text: '"بلوک مادامیکه" هر چیزی را که داخلش قرار دهید انجام می‌دهد "تا زمانیکه" عبارت بالایی "درست" باشد.'
+        text: 'The "while block" will do whatever you put inside it AS LONG AS the statement on the top is TRUE.'
       3:
         image: notes/stage9_7.jpg
-        text: 'برای مثال، اگر کشاورز روی یک توده ایستاده باشد، به برداشتن 1 بیل از خاک ادامه می‌دهد "تا زمانیکه" هنوز یک توده زیر پایش وجود داشته باشد.'
+        text: For example, if the farmer is standing on a pile, she will continue to remove 1 shovelful WHILE there is still a pile beneath her.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: سلام، من ترینا هستم، و برای شرکت پیکسار کار می‌کنم. من روی چند فیلم از جمله شرک کار کرده‌ام.
+        text: "Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies, including Shrek."
       2:
         image: notes/stage11_2.jpg
-        text: 'این حلقه "شمارنده" جدید ما است که عملیاتی را بارها و بارها انجام خواهد داد و می‌توانی عملیات را هر بار اندکی تغییر دهی.'
+        text: 'This is our new "counter" loop. It will perform actions over and over again and you can make the actions change slightly each time.'
       3:
         image: notes/stage11_3.jpg
-        text: 'در این مثال، حلقه "شمارنده" ما می‌گوید "از 50 تا 90 بصورت ده تا ده تا بشمار" و داخل آن، بلوک "یک مربع بکش" خودمان را داریم. بلوک "شمارنده" را از بخش "متغیرها" به داخل قسمت "طول" بکش.'
+        text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
       4:
         image: notes/stage11_4.jpg
-        text: یعنی هنرمند ما می‌خواهد یک مربع رسم کند که هر طرف آن 50 پیکسل طول دارد، سپس 10 تا به آن اضافه می‌کند و یک مربع با وجوه 60 پیکسل می‌کشد. سپس به اضافه کردن 10 پیکسل و کشیدن مربع‌ها ادامه می‌دهد تا به 90 برسد. بنابراین ما مربع‌هایی با اندازه‌های 50، 60، 70، 80 و 90 خواهیم داشت.
+        text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: سلام، من ژانت هستم، یک مهندس در شرکت زینگا.
+        text: "Hi, I'm Janete, and I'm an engineer at Zynga."
       2:
         image: notes/stage15_2.jpg
-        text: اگر بخواهیم یک دسته مثلث رسم کنیم که طول آن‌ها دارای اندازه‌های مختلف باشد، چطور؟
+        text: What if we want to draw a bunch of triangles and have their lengths be different sizes?
       3:
         image: notes/stage15_3.jpg
-        text: می‌توانیم همه آن کد را به صورت دستی بنویسیم یا اینکه از یک تابع با پارامترها استفاده کنیم.
+        text: We could write all that code out by hand or we can use a function with parameters.
       4:
         image: notes/stage15_4.jpg
-        text: 'برای این کار، روی ستاره آبی در تعریف تابع "رسم یک مثلث" کلیک کن. سپس "وارد کردن نام" را به داخل بلوک "ورودی" بکش.'
+        text: 'To do this, click the blue star on the "draw a triangle" function definition. Then drag "input name" into the "input" block.'
       5:
         image: notes/stage15_5.jpg
-        text: 'حالا اگر "طول" را در نقطه "x" بنویسی و "اینتر" را بزنی، یک ورودی طول برای تابع‌ات ایجاد خواهی کرد.'
+        text: |-
+          Then if you write "length" in the spot where it says "x" and press "Enter" you'll create a length input for your function.
       6:
         image: notes/stage15_6.jpg
-        text: 'سپس روی ستاره کلیک کن. حالا، روی دسته متغیرها کلیک کن و بلوک "طول" را به داخل بلوک "حرکت به جلو" در تعریف تابع خودت بکش. و بلوک شماره قدیمی را از آنجا خارج کن.'
+        text: 'Then click on the star. Now, you want to click on the variables category and drag the "length" block into the "move forward" block of your function definition. And drag away the old number block.'
       7:
         image: notes/stage15_7.jpg
-        text: 'برای استفاده از تابع‌ات همراه پارامترها، روی دسته توابع کلیک کن و تابع "رسم یک مثلث با طول" را بیرون بکش.'
+        text: 'To use your function with parameters, click on the functions category and drag out your "draw a triangle with length" function.'
       8:
         image: notes/stage15_8.jpg
-        text: حالا می‌توانی از بلوک ریاضی استفاده کنی تا اعداد مختلفی را وارد کرده و مثلث‌هایی با اندازه‌های مختلف رسم کنی.
+        text: Now you can use the math block to input different numbers to draw triangles of different sizes.
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: 'تبریک میگم! با حل آخرین پازل, شما کدی نوشتید که می تواند به هر رباتی بگوید که چگونه راهش را در یک  پیچ و خم غیر انشعابی یا یک تونل با هر طولی  پیدا کند, میتواند یک زامبی,  یک پرنده,  یک مریخ نورد, یا حتی یک ماشین بدون راننده باشد.'
+        text: "Congratulations! With the last puzzle you solved, you just wrote code that can tell ANY robot how to find it's way through a non-branching maze or tunnel of any length, whether it's a zombie, a bird, a mars rover, or even a self-driving car."
       2:
         image: notes/hoc6_2.jpg
-        text: 'مفاهیم اولیه ای که استفاده کردید در قلب هر برنامه و یا نرم افزاری که در اینده خواهید نوشت خواهد بود.  ما در مورد "if", "repeat until" , "repeat" و "if else" یاد گرفتیم.'
+        text: "The basic concepts you used are at the heart of every program or app you'll ever try.  We learned about repeat loops, repeat until statements, if statements, and if else statements."
       3:
         image: notes/hoc6_3.jpg
-        text: اگر از اولین یک ساعت کد خوشتان امد, code.org را بازدید کنید تا به تحصیلات خود درعلوم کامپیوتر ادامه دهید! پس از تکمیل دوره 20 ساعته ما, برمبانی برنامه نویسی مسلط خواهید شد, و می توانید شروع کنید به یادگیری نوشتن نرم افزار های تلفن, دستورالعمل های ربات, بازیها، و هر چیزی دیگری که بخواهید.
+        text: "If you liked your first hour of code, visit code.org to continue your education into computer science! Once you complete our 20 hour course, you'll have mastered the basics of programming, and can start learning how to write phone apps, robot instructions, games, you name it."
       4:
         image: notes/hoc6_4.jpg
-        text: هر چیزی را که ما انجام می دهیم تکنولوژی تغییر میدهد و مهم نیست که شما جوان باشید یا پیر:‌ برنامه نویسی لذت بخش است، خلاق است، و هر کسی می تواند یاد بگیرد!
+        text: "Technology is changing everything we do and it doesn't matter if you're young or old: programming is fun, it's creative, and anyone can learn!"
     20_wrapup:
       1:
         image: notes/bird.png
-        text: به زودی نوتها نشان داده می شود!
+        text: Show notes coming soon!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -304,7 +317,7 @@ fa-AF:
         text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
       2:
         image: notes/frozen2_2.jpg
-        text: 'در برنامه نویسی، ما به این  یک حلقه میگوییم. حلقه این است که چگونه  کد شما رابارها و بارها تکرار کند. در معمای آینده هدف شما این است که به آنا کمک کنید به ایجاد یک مربع با بلوک "تکرار" .'
+        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
       3:
         image: notes/frozen2_3.jpg
         text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
@@ -318,7 +331,7 @@ fa-AF:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: سلام, من کریس بش. من یک بازیکن حرفه ای بسکتبال, و من در کالج کدنویسی میکنم.
+        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
@@ -333,7 +346,7 @@ fa-AF:
         text: 'You can define this as a function called "create a square." '
       6:
         image: notes/frozen3_6.jpg
-        text: حالا شما یک بلوک جدید دارید که شما می توانید چندین بار برای ایجاد چند مربع از آن استفاده کنید
+        text: Now you have a new block that you can use multiple times to create multiple squares.
       7:
         image: notes/frozen3_7.jpg
         text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
@@ -1362,7 +1375,7 @@ fa-AF:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1418,7 +1431,7 @@ fa-AF:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1493,7 +1506,7 @@ fa-AF:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1675,4 +1688,57 @@ fa-AF:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: "The white space on the right is called the work space and this is where we'll build our program."
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

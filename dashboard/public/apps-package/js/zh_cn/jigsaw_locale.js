@@ -158,7 +158,7 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "nextLevel":function(d){return "恭喜你！你解决了这个谜题。"},
 "no":function(d){return "不"},
 "numBlocksNeeded":function(d){return "这个谜题可以用%1个块解决。"},
-"reinfFeedbackMsg":function(d){return "你可以按“重试”按钮来返回你的游戏"},
+"reinfFeedbackMsg":function(d){return "你可以按“重试”按钮来返回你的游戏。"},
 "share":function(d){return "分享"},
 "shareGame":function(d){return "分享你的游戏:"},
 "yes":function(d){return "对"}};

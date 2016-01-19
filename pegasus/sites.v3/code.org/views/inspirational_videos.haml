@@ -21,7 +21,8 @@
 %div{style: 'clear: both'}
 %br/
 -if request.locale == 'en-US'
-  %p= I18n.t(:inspirational_videos_more)
+
+  %p.video-smalltext= I18n.t(:inspirational_videos_more)
 
 
 %script{src: "http://vjs.zencdn.net/5.2.4/video.js"}
@@ -86,6 +87,3 @@
     window.testImages.push(img);
   }
   window.testImageAccess = testImageAccess;
-
-
-

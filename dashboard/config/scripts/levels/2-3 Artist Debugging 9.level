@@ -30,7 +30,8 @@
     "disable_sharing": "false",
     "markdown_instructions": "The code for this stem is incorrect. Hint: The angle is off by 60 degrees\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h4>",
     "examples_required": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -60,12 +61,6 @@
                             <block type="draw_move_by_constant">
                               <title name="DIR">moveForward</title>
                               <title name="VALUE">80</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnLeft</title>
-                                  <title name="VALUE">130</title>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>
@@ -139,10 +134,6 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">80</title>
         </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">130</title>
-        </block>
       </xml>
     </required_blocks>
     <solution_blocks>
@@ -171,12 +162,6 @@
                             <block type="draw_move_by_constant">
                               <title name="DIR">moveForward</title>
                               <title name="VALUE">80</title>
-                              <next>
-                                <block type="draw_turn_by_constant">
-                                  <title name="DIR">turnLeft</title>
-                                  <title name="VALUE">130</title>
-                                </block>
-                              </next>
                             </block>
                           </next>
                         </block>

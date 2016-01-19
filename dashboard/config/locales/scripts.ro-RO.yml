@@ -162,7 +162,7 @@
           description_short: Desenează poze şi proiecte mişto cu Artistul!
         hourofcode:
           Maze: Labirint
-          title: Oră de Programare
+          title: Labirint Clasic
           description: Încercaţi bazele informaticii cu personaje din Angry Birds,
             Plants vs Zombies şi Scrat din Ice Age!
           description_short: Încercați elemente de bază în informatică cu multe personaje
@@ -755,6 +755,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1134,7 +1135,7 @@
             sau un joc.
           description: Utilizează Laboratorul de joacă pentru a crea o poveste sau
             un joc.
-          Hour of Code: Oră de Programare
+          Hour of Code: Ora de Programare
           Hour of Code 2015: Ora de cod 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1382,6 +1383,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1509,6 +1511,22 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1646,7 +1664,7 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Ora de Cod Minecraft
+          title: Ora de Programare Minecraft
           description_short: Explorează o lume Minecraft programând
           description: Folosim blocuri de instructiuni pentru a-l lua pe Steve sau
             Alex într-o aventură prin aceasta lume Minecraft
@@ -1665,3 +1683,6 @@
           Welcome!: Bine ai venit!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Revizuire
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
+            Refresh your connection to Complex Adaptive Systems

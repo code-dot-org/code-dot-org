@@ -15,7 +15,7 @@
     "images": "[{\"filename\":\"lion.svg\",\"position\":[95,150]},{\"filename\":\"cow.svg\",\"position\":[185,150]}]",
     "scrollbars": "false",
     "free_play": "false",
-    "ideal": "14",
+    "ideal": "12",
     "slider_speed": "0.4",
     "embed": "false",
     "disable_param_editing": "true",
@@ -32,7 +32,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -71,14 +72,18 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

@@ -4,9 +4,10 @@ layout: wide
 nav: how_to_nav
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your entire school district.
+
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
 
 ## Get every school participating, every student learning!
 
@@ -30,4 +31,3 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 - [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 
-<%= view :signup_button %>

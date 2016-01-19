@@ -29,12 +29,12 @@ fr:
           Artist 2: "L'Artiste 2"
           Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
-          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes de la vraie vie : Planter une graine'
           Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
           The Big Event: Le Grand Evénement
           Going Places Safely: Se déplacer en toute sécurité
-          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui les aideront à apprendre à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persister à travers des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles moyenne-section."
+          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui leur aprendront à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persévérer malgré des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles de grande section et les CP."
           "Bee: Sequence": 'Abeille : séquence'
           "Artist: Sequence": "L'Artiste : Séquence"
           "Artist: Shapes": "L'Artiste : les Formes"
@@ -42,7 +42,7 @@ fr:
           "Bee: Loops": 'Abeille : Les boucles'
           "Studio: Create a Story": 'Labo: Créer une histoire'
           "Artist: Loops": 'Artiste : Les boucles'
-          description_audience: 4 ans et plus
+          description_audience: 4-6 ans
           description_short: "Le cours 1 s'adresse aux élèves qui commencent à lire."
         course2:
           The Maze: Le labyrinthe
@@ -102,14 +102,14 @@ fr:
           Artist Functions with Parameters: 'Artiste : fonctions avec paramètres'
           Computational Thinking: Algorithmique
           Functional Suncatchers: Vitraux fonctionnels
-          Songwriting Parameters: Paramètres de composition
+          Songwriting Parameters: Paramètres de composition de chansons
           Dice Race: Course de Dés
           Internet: Internet
           Crowdsourcing: Financement participatif
           Digital Citizenship: Citoyenneté numérique
           Farmer - While Loops: 'Fermier - les boucles "tant que"'
           description: "Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. A la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2."
-          "Studio: Create a Game": 'Laboratoire : Créer un jeu'
+          "Studio: Create a Game": 'Laboratoire de jeu : Créer un jeu'
           Maze: Labyrinthe
           Artist: Artiste
           "Artist: Functions": 'Artiste : les fonctions'
@@ -146,7 +146,7 @@ fr:
           description_short: "Dessinez des super images et schémas avec l'Artiste!"
         hourofcode:
           Maze: Labyrinthe
-          title: Heure de Code
+          title: Labyrinthe classique
           description: "Apprends à programmer avec les personnages d'Angry Birds, de Plantes contre Zombies et Scrat de l'age de glace !"
           description_short: Apprends à programmer avec des personnages rigolos !
         frozen:
@@ -227,7 +227,7 @@ fr:
           description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
           "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
           "Calc: Evaluation Blocks": "Blocs d'évaluation et expressions arithmétiques"
-          "Eval: Strings and Images": Textes et Images
+          "Eval: Strings and Images": Chaînes et Images
           "Unplugged: Contracts": 'Activité débranchée : contrats, domaine, et gamme'
           "Eval: Writing Contracts": Rédaction de contrats
           "Calc: Defining Variables": Définition de Variables et Substitution
@@ -492,7 +492,7 @@ fr:
           "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de collision et la formule de la distance'
           "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Contracts: Contrats
           Your Game - Defining Variables: 'Votre jeu - définition des Variables'
           Simple Function Definition: Définition de fonction simple
@@ -515,7 +515,7 @@ fr:
           description: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
           description_short: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Rocket-Height: Hauteur de la fusée
           Design Recipe Practice: Pratique de conception de recette
           Your Game - Animation: 'Votre jeu - Animation'
@@ -680,6 +680,7 @@ fr:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -690,7 +691,7 @@ fr:
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
           The Big Game: The Big Game
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           The Design Recipe: La Recette de la Conception
           Next Steps: Prochaines étapes
         sciPD complex adaptive 2:
@@ -882,7 +883,7 @@ fr:
           description: "Apprendre la programmation fonctionnelle par l'algèbre"
           description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Defining Variables: Définition de Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Labo : Définition de fonctions'
@@ -933,7 +934,7 @@ fr:
           Computer Science Pedagogy: Pédagogie des sciences informatiques
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Writing Contracts: Rédaction de contrats
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
@@ -1039,7 +1040,7 @@ fr:
           Computer Science Pedagogy: Pédagogie des sciences informatiques
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Writing Contracts: Rédaction de contrats
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
@@ -1166,7 +1167,7 @@ fr:
           description_audience: Ages 6-13
           Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
-          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes de la vraie vie : Planter une graine'
           Graph Paper Programming: Programmation sur papier quadrillé
           Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
@@ -1234,6 +1235,7 @@ fr:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,22 @@ fr:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1495,3 +1513,5 @@ fr:
           Welcome!: Bienvenue !
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Conclusions
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

@@ -160,5 +160,5 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
 "reinfFeedbackMsg":function(d){return "නැවත වරක් ක්‍රීඩා කිරීමට \"Try again\" බොත්තම ඔබන්න."},
 "share":function(d){return "බෙදා ගන්න"},
-"shareGame":function(d){return "ඔබෙගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
+"shareGame":function(d){return "ඔබගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"},
 "yes":function(d){return "ඔව්"}};

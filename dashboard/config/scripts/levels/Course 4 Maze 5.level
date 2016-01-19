@@ -25,8 +25,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "step_speed": "3",
-    "maze_data": null
+    "step_speed": "3"
   }
 }]]></config>
   <blocks>
@@ -47,5 +46,19 @@
         </block>
       </xml>
     </toolbox_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">4</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </recommended_blocks>
   </blocks>
 </Maze>

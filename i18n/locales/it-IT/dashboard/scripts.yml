@@ -146,7 +146,7 @@ it:
           description_short: "Disegna fantastiche immagini e decorazioni con l'artista!"
         hourofcode:
           Maze: 'Labirinto: Sequenze e Cicli'
-          title: "L'Ora del Codice"
+          title: Labirinto Classico
           description: "Impara i concetti base dell'informatica con i personaggi di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!"
           description_short: "Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!"
         frozen:
@@ -183,9 +183,9 @@ it:
           Artist Binary: 'Artista: Binario'
           description_audience: Da 10 anni in su (dopo il Corso 3)
           Super Challenge - Variables: 'Super Sfida - Variabili'
-          Super Challenge - For Loops: 'Super Sfida - Per Cicli'
+          Super Challenge - For Loops: 'Super Sfida - Cicli con Contatore'
           Super Challenge - Functions and Parameters: 'Super Sfida - Funzioni e Parametri'
-          Extreme Challenge - Comprehensive: 'Sfida Estrema - Completo'
+          Extreme Challenge - Comprehensive: Super Sfida Finale
         Course4pre:
           title: Prerequisiti del Corso 4
           description_short: Una breve presentazione dei concetti importanti per gli studenti che non hanno svolto i Corsi 2 e 3.
@@ -682,6 +682,7 @@ it:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1236,6 +1237,7 @@ it:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1354,6 +1356,22 @@ it:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1405,10 +1423,10 @@ it:
           Halloween 2015: Halloween 2015
           description: "Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!"
         iceage:
-          title: Laboratorio Gioco Età del ghiaccio
-          description_short: Crea una storia oppure fai un gioco con il Laboratorio Gioco Età del ghiaccio!
-          description: Crea una storia oppure fai un gioco con il Laboratorio Gioco Età del ghiaccio!
-          Ice Age Play Lab: Laboratorio Gioco Età del ghiaccio
+          title: "Laboratorio con L'Era Glaciale"
+          description_short: "Crea una storia oppure fai un gioco con il Laboratorio con L'Era Glaciale!"
+          description: "Crea una storia oppure fai un gioco con il Laboratorio con L'Era Glaciale!"
+          Ice Age Play Lab: "Laboratorio con L'Era Glaciale"
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1459,10 +1477,10 @@ it:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratorio di Gumball
-          description_short: Crea una storia oppure fai un gioco con il Laboratorio di Gumball!
-          description: Crea una storia oppure fai un gioco con il Laboratorio di Gumball!
-          Gumball Play Lab: Laboratorio di Gumball
+          title: Laboratorio con Gumball
+          description_short: Crea una storia oppure fai un gioco con il Laboratorio con Gumball!
+          description: Crea una storia oppure fai un gioco con il Laboratorio con Gumball!
+          Gumball Play Lab: Laboratorio con Gumball
         starwars:
           title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description_short: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
@@ -1480,8 +1498,8 @@ it:
           Craft: Craft
         mc:
           title: "L'Ora del Codice con Minecraft"
-          description_short: Esplora un mondo di Minecraft con la programmazione
-          description: Usa blocchi di codice per guidare Steve o Alex in questo mondo di Minecraft
+          description_short: Esplora il mondo di Minecraft attraverso il codice
+          description: Usa i blocchi di codice per avventurarti nel mondo di Minecraft con Steve o Alex
           Hour of Code 2015: "L'Ora del Codice 2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1497,3 +1515,5 @@ it:
           Welcome!: Benvenuto!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Conclusione
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

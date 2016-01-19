@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Du kan trycka på \"Fortsätt spela\" för att återgå till spelet.",
   "replayButton":"Spela om",
   "selectChooseButton":"Välj",
-  "tooManyBlocksFail":"Pussel {puzzleNumber} avklarat. Grattis! Det är också möjligt att klara det med {{numBlocks, plural, one {1 block} other {# blocks}}."
+  "tooManyBlocksFail":"Pussel {puzzleNumber} är klart. Grattis! Det är också möjligt att klara av det med {numBlocks, plural, one {ett block} other {# block}}."
 }

@@ -560,7 +560,7 @@
       2:
         image: notes/playlab_events_2.png
         text: Quelques exemples d'évènements sont l'écoute des clics de souris, une
-          touche fléchée, ou un effleurement de l'écran.
+          touche fléchée, ou une pression sur l'écran.
       3:
         image: notes/playlab_events_3.png
         text: Ici, nous allons faire en sorte que le robot de l'espace salue les terriens
@@ -1934,14 +1934,14 @@
           valeur de fin avec un pas spécifique.
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: Par exemple, un bloc 'répète 3' compte de 1 à 3 de 1 en 1. A chaque
+          fois qu'il compte 1, il exécute le code dans la boucle. La boucle 'for'
+          sait combien de fois elle a été exécutée grâce à une variable compteur.
+          Elle est initialisé à la valeur de départ avant d'entrer dans la boucle
+          et est incrémentée à chaque fois que la boucle est exécutée. Dès que la
+          variable compteur dépasse la valeur de fin, la boucle s'arrête. L'avantage
+          d'utiliser une vrai boucle plutôt qu'un bloc 'répéter' est que tu peux voir
+          la variable compteur et l'utiliser dans ta boucle.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
@@ -1994,13 +1994,15 @@
           fonction est censé faire.
       4:
         image: notes/C4_function_edit_4.png
-        text: In this case, it's supposed to draw a square. The white space below
-          this is the work space and works just like the work space you've already
-          been using. Drag and drop blocks from the toolbox into this work space.
-          Remember to put the blocks that create a square inside the green wrapping
-          block for the function. Once you're done, click on save and exit. This will
-          take you back to the main puzzle work space. Now you can use the draw the
-          square function block just like any other block to solve the puzzle.
+        text: Dans ce cas, il s'agit de dessiner un carré. L'espace blanc ci-dessous
+          c'est l'espace de travail, qui fonctionne exactement comme l' espace de
+          travail que vous avez déjà utilisé. Glissez et déposez les blocs de la boîte
+          à outils dans cet espace de travail. N'oubliez pas de mettre les blocs qui
+          créent un carré à l'intérieur du bloc vert qui encapsule le code de la fonction.
+          Une fois que vous avez terminé, cliquez sur "enregistrer et quitter", ce
+          qui vous ramène à l'espace de travail principal du puzzle. Désormais, vous
+          pouvez utiliser le Bloc fonction "dessiner un carré" comme n'importe quel
+          autre bloc pour terminer le puzzle.
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
@@ -2011,22 +2013,24 @@
           pouvons utiliser une seule fonction avec un paramètre.
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: Les paramètres permettent de transmettre à une fonction des valeurs
+          qui sont utilisées à l'intérieur de la fonction comme des variables. Nous
+          allons ajouter un paramètre "longueur" à cette fonction, pour créer des
+          carrés de différentes tailles. Dans l'éditeur de fonction, vous pouvez modifier
+          le nom et la description comme précédemment, mais vous pouvez également
+          ajouter un paramètre. Écrivez le nom du paramètre dans l'emplacement idoine,
+          puis cliquez sur" Ajouter un paramètre". Cela va créer un bloc rouge avec
+          le nom du paramètre que vous venez de créer. Maintenant, vous pouvez utiliser
+          ce paramètre pour modifier le bloc d'instructions "avancer de 100" afin
+          qu'il devienne "avancer de la valeur de longueur".
       3:
         image: notes/C4_function_parameters_3.png
-        text: Click save and close and drag out your new create a square block from
-          the functions category in the toolbox. You'll notice there's an empty space
-          next to length because the function wants to know what value the parameter
-          Length should have. Drag a number block from the Math category and place
-          it in this space. See how you can use the function again and again with
-          different lengths to make squares of different sizes? Try it for yourself!
+        text: Clique sur 'Enregistrer et Fermer' et glisse ton nouveau bloc 'Créer
+          un carré' depuis la catégorie 'Fonctions' de ta boite à outils. Tu remarqueras
+          qu'il y a un espace vide à côté de 'Longueur' parce que la fonction veut
+          savoir quelle valeur donner au paramètre 'Longueur'. Glisse un bloc nombre
+          depuis la catégorie 'Math' et dépose le dans cet espace. Tu comprends maintenant
+          comment créer des carrés de taille différente ? Alors vas-y, essaye !
     C4_intro:
       1:
         image: notes/C4_intro_1.png
@@ -2053,10 +2057,11 @@
           ajouter un autre bloc à notre programme.
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Je vais choisir un bloc 'tourne à droite' et je vais le glisser sous
+          mon bloc 'déplace toi' jusqu'à ce que la flèche jaune apparaisse. Je vais
+          le lâcher et les deux blocs vont s'accrocher ensemble. Lorsque j'appuierais
+          sur 'Exécuter', l'oiseau jouera les commandes qui sont empilées dans notre
+          espace de travail, du haut vers le bas.
       5:
         image: notes/C4_intro_5.png
         text: Si jamais tu veux supprimer un bloc, il te suffit de le retirer de la
@@ -2066,24 +2071,28 @@
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
-        text: If I want to draw a rectangle 50 pixels tall and that is twice as wide
-          as it is tall, how would I program the computer to do that? Well, I could
-          tell the artist to go up fifty, turn right, and then go over 100 and move
-          the whole thing twice. But then I'm doing the math for the computer.
+        text: Si je veux dessiner un rectangle de 50 pixels de haut et qui soit deux
+          fois plus large que haut, comment devrais-je programmer l'ordinateur pour
+          qu'il le fasse ? Et bien je pourrais dire au dessinateur de monter de 50
+          pixels, de tourner à droite, d'aller à 100 pixels et de refaire ça dans
+          l'autre sens mais là, c'est moi qui calcule pour l'ordinateur.
       2:
         image: notes/C4_math_artist_2.png
-        text: Multiplying fifty by two in your head may not that hard but computers
-          are really good at doing math so we should leave it to them whenever possible.
-          If I just used a variable called height instead, then I could easily change
-          height to fifty and then change my algorithm to tell the artist to go up
-          by height, turn right and then go over by height times 2, which gives us
-          a rectangle that is twice as wide as it is tall.
+        text: Multiplier cinquante par deux de tête n'est peut-être pas si compliqué,
+          mais les ordinateurs sont vraiment bons pour les maths, alors nous devons
+          leur laisser les calculs autant que possible. Si j'avais juste utilisé une
+          variable appelée hauteur à la place, alors j'aurais pu facilement changer
+          la hauteur pour cinquante, et ensuite changer mon algorithme pour qu'il
+          dise à l'artiste de monter de la hauteur, de tourner à droite, et ensuite
+          d'avancer de hauteur fois 2, ce qui nous donne un rectangle deux fois plus
+          large que haut.
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: This lesson is called Tangram Algorithms. A tangram is a puzzle with
-          seven pieces that can be put together to make other shapes. You'll be using
-          an algorithm to explain to your partner how to put the puzzle together.
+        text: Cette leçon s'appelle Algorithmes Tangram. Un Tangram est un puzzle
+          de sept pièces qui peuvent être assemblées pour créer d'autres formes. Tu
+          va devoir utiliser un algorithme pour expliquer à ton partenaire comment
+          assembler le puzzle.
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: Un algorithme est juste une liste d'étape que tu peux exécuter pour
@@ -2111,19 +2120,20 @@
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: Each team, the person who's instructing that's the person who's holding
-          the paper, has to figure out what their off symbol is going to be and what
-          their on symbol is going to be. In binary, it's kind of like an alphabet
-          with two letters. Like having A and B be your entire alphabet but you've
-          got a 0 and a 1.
+        text: Dans chaque équipe, la personne qui instruit et qui tient le papier,
+          doit comprendre quel sera leur symbole "On" et quel sera leur symbole "Off".
+          En binaire, c'est un genre d'alphabet, mais avec deux lettres. C'est comme
+          si l'alphabet n'était constitué que des lettres A et B, mais à la place
+          c'est 0 et 1.
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: The most common way you use binary is in an if statement. It's a classic
-          thing from programming. The program runs along and it says if something
-          is true, then do this. Or it's not true and you do something else. What
-          if you want to do something maybe a little more complicated. Instead an
-          if statement, you want to work with something like an image or a sound in
-          a computer.
+        text: 'La manière la plus courante d''utiliser le binaire, c''est dans une
+          instruction de type "if". C''est une chose classique dans la programmation.
+          Le programme s''exécute et dit : Si ceci est vrai, alors fait cela. Ou,
+          si ce n''est pas vrai, fais autre chose. Mais que se passe-t-il quand on
+          veut faire quelque chose d''un peu plus compliqué ? Plutôt qu''une instruction
+          if, on voudra travailler avec quelque chose comme une image, ou un son dans
+          un ordinateur.'
       3:
         image: notes/C4_unplugged_binary_3.png
         text: 'Un ordinateur ne connait que le binaire, mais une image, ce n''est
@@ -2142,147 +2152,163 @@
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png
-        text: This lesson is called for loop fun. In this lesson, we'll use a number
-          line to play a dice game. Each player will roll three times to assign a
-          starting value, a stopping value, and our interval. During each turn, we
-          circle our starting value, and every value that is the same number of steps
-          forward as our interval value. We stop circling when we get to our stopping
-          value. The person with the highest score wins!
+        text: Cette leçon est ici pour le plaisir de la boucle. Dans cette leçon,
+          nous utiliserons une ligne de nombre pour jouer à un jeu de dé. Chaque joueur
+          devra assigner trois fois une valeur de départ, une valeur d'arrêt, et notre
+          intervalle. Durant chaque tour, on entoure sa valeur de départ, et toutes
+          les valeurs qui ont le même nombre d'étapes que notre valeur d'intervalle.
+          On arrête d'entourer quand on obtient notre valeur d'arrêt. La personne
+          avec le plus grand score gagne !
       2:
         image: notes/C4_unplugged_forloops_2.png
-        text: For loops can come in handy a lot of places and if you were to become
-          a meteorologist, you would use for loops all the time. Hi, I'm Becky. I
-          work at EverPower Renewables as a wind meteorologist. I forecast wind speeds
-          for the Columbia River Gorge area where the company owns wind farms.
+        text: Les boucles peuvent être utilisées dans de nombreuses situations et
+          si vous deveniez météorologue, vous utiliseriez des boucles tout le temps.
+          Salut, je suis Becky. Je travaille chez EverPower Renewables comme météorologue
+          vent. Je prévois la vitesse du vent pour la région de la Columbia River
+          Gorge où la société possède des parcs éoliens.
       3:
         image: notes/C4_unplugged_forloops_3.png
-        text: We're trying to understand how much wind is going to be there so that
-          we know how much power is going to be outputted. We give that information
-          to real time energy traders. They buy and sell power based on how much power
-          we tell them is going to be there in order to make sure the power grid is
-          balanced, your lights stay on, and that we maximize the amount of energy
-          we get out of our farms.
+        text: Nous essayons de comprendre la quantité de vent qu'il va y avoir pour
+          que nous sachions combien d'électricité va être produite. Nous donnons cette
+          information en temps réel aux traders d'énergie. Ils achètent et vendent
+          l'électricité suivant les informations qu'on leur donne pour être sûrs que
+          le réseau électrique est équilibré, que vos lumières restent allumées, et
+          que la quantité d'énergie obtenue à partir des parcs soit maximisée.
       4:
         image: notes/C4_unplugged_forloops_4.png
-        text: We're at the national control center for EverPower Renewables here in
-          Portland and this is where we have information coming in from all our farms
-          across the country. Even the highest power computers today can't simulate
-          the atmosphere everywhere. In computer forecasting models, we have what
-          we call a grid. Each grid point is a latitude, longitude. We have to calculate
-          the physics and try and figure out the wind speed, temperature,  pressure,
-          that sort of thing.
+        text: Nous sommes au centre de contrôle nation d'EverPower Renewables à Portland
+          et c'est ici que les informations arrivent en provenance de toutes nos fermes
+          à travers le pays. Même les ordinateurs les plus puissants aujourd'hui ne
+          peuvent pas simuler l'atmosphère dans le monde. Dans les modèles de prévision
+          par ordinateur, nous avons ce que nous appelons une grille. Chaque point
+          de la grille est une latitude, longitude. Nous devons calculer la physique
+          et essayer de déterminer la vitesse du vent, la température, la pression,
+          ce genre de choses.
       5:
         image: notes/C4_unplugged_forloops_5.png
-        text: Since these are fairly big grids and we're doing this in a lot of points
-          we're looping over these things millions and millions of times. Everything
-          I do I'll use for loops. Here for example is a for loop right there. When
-          you're forecasting wind, there's so many different parameters that go into
-          it it would be impossible for a human to sit down and do all those calculations.
-          There's so many different aspects to what's going to be affecting what's
-          happening to the wind that we need a computer model in order to forecast
-          it.
+        text: Comme ce sont plutôt de grosses grilles et que nous faisons ça dans
+          beaucoup de points nous sommes en boucle sur ces choses des millions et
+          des millions de fois. Tout ce que je fais je vais l'utiliser pour des boucles.
+          Voici par exemple une boucle juste là. Quand vous prévoyez le vent, il y
+          a tellement de paramètres différents qu'il serait impossible pour un humain
+          de s'asseoir et de faire tous ces calculs. Il y a tellement d'aspects différents
+          à tout ce qui va affecter le vent que nous avons besoin d'un modèle informatique
+          pour le prévoir.
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: In this lesson, we'll be playing with some fill in the blank stories.
-          You have a template that you can fill in to create similar stories that
-          have very amusing differences.
+        text: Dans cette leçon, nous allons jouer à remplir les blancs dans l'histoire.
+          Vous avez un modèle que vous pouvez compléter pour créer des histoires similaires
+          qui ont des différences très amusantes.
       2:
         image: notes/C4_unplugged_madlibs_2.png
-        text: In this lesson, we also learned how to make an abstracted template from
-          two stories that have already been created. Abstraction is the art of removing
-          differences and details so that you can see how one solution might work
-          for many different problems. It's very helpful in computer science because
-          it allows us to create functions that may be useful in several different
-          situations.
+        text: Dans cette leçon, nous avons également appris comment faire un modèle
+          abstrait à partir de deux histoires qui ont déjà été créées. L'abstraction
+          est l'art de supprimer les différences et les détails pour que l'on puisse
+          voir comment une solution pourrait marcher pour de nombreux problèmes. C'est
+          très utile en informatique parce que ça nous permet de créer des fonctions
+          qui peuvent être utiles dans différentes situations.
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: This lesson is called songwriting with parameters. We're going to be
-          writing some songs here. Sometimes the chorus is just a little bit different
-          each time you sing it. Do you remember Old Macdonald Had a Farm? The chorus
-          is slightly different for each animal. And on that farm, he had a cow, e-i-e-i-o.
-          The small change in each chorus can be shown using something we call parameters.
+        text: Cette leçon s'appelle écrire une chanson à paramètres. Nous allons écrire
+          des chansons maintenant. Parfois, le refrain est juste légèrement différent
+          à chaque fois que tu le chantes. Te souviens-tu de la ferme du vieux MacDonald
+          ? Le refrain est légèrement différent pour chaque animal. Et dans cette
+          ferme, il y a une vache, hiya hiya ho. Le petit changement dans chaque refrain
+          peut être exprimé en utilisant ce que nous appelons des paramètres.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece
-          of information you can pass to a function to customize it for a special
-          need. When you make ice cream sundaes with your friends, you are using a
-          process similar to parameters in a computer program.
+        text: Parfois, une fonction a besoin d'un paramètre. Un paramètre est une
+          information supplémentaire que tu peux passer à une fonction pour la personnaliser
+          pour un besoin spécifique. Quand tu fais des coupes de glaces avec tes amis,
+          tu utilises un procédé similaire à la paramétrisation dans un programme
+          informatique.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: The disk of vanilla ice cream might be the same for every sundae but
-          when you ask your friends which two toppings they'd like, you could get
-          lots of different combinations. Topping is the function name but each type
-          of topping is a parameter. Functions and parameters work together to make
-          great computer programs and great sundaes too.
+        text: La boule de glace vanille sera peut être la même pour toutes les coupes
+          de glace, mais quand tu demandes à tes amis quelles garnitures ils veulent,
+          tu peux obtenir beaucoup de combinaisons différentes. Garniture est le nom
+          de la fonction, et chaque type de garniture est un paramètre. Les fonctions
+          et les paramètres s'associent pour créer de super programmes informatiques,
+          et de bonnes coupes de glaces également.
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: This lesson is called variables in envelopes. We're going to learn how
-          we can build sentences when we're still missing pieces of information. Most
-          of us are already familiar with the idea of filling in a blank. We do it
-          when we're putting our name on our homework. Sometimes there's more than
-          one word that needs to be filled out and in that case, we give that blank
-          a label so that we know which piece of information goes where.
+        text: Cette leçon s'appelle variables dans des enveloppes. Nous allons apprendre
+          comment nous pouvons construire des phrases quand il nous manque encore
+          des éléments d'information. La plupart d'entre nous sont déjà familier avec
+          l'idée de combler un vide. Nous le faisons lorsque nous mettons notre nom
+          sur nos devoirs. Parfois, il n'y a plus d'un mot qui doit être rempli et
+          dans ce cas, nous donnons ce vide une étiquette afin que nous sachions quel
+          élément d'information va où plus précisement.
       2:
         image: notes/C4_unplugged_variables_2.png
-        text: Variables are placeholders for pieces of information that can change.
-          By using a variable for the missing information, we can continue working
-          on whatever we were doing and let someone else fill in the missing information
-          later. In software, we use variables a lot. We use variables as placeholders
-          for name, email address, and even username. That way we can let the program
-          know where those details will appear after the user fills them in. We use
-          variables all the time in our work.
+        text: Les variables sont des espaces réservés pour les éléments d'information
+          qui peuvent changer. En utilisant une variable pour les informations manquantes,
+          nous pouvons continuer à travailler sur tout ce qui nous faisaient et laisser
+          quelqu'un d'autre à compléter les informations manquantes par la suite.
+          Dans le logiciel, nous utilisons beaucoup les variables. Nous utilisons
+          les variables comme marque substitutive pour les nom, adresse e-mail et
+          même username. De cette façon, nous pouvons faire le programme savoir où
+          ces détails seront affiche quand l'utilisateur renseigne les. Nous utilisons
+          les variables tout le temps dans notre travail.
       3:
         image: notes/C4_unplugged_variables_3.png
-        text: Any time you need to store a piece of information for later, we use
-          a variable. Let's say we need to count the number of times the user has
-          tweeted. Every time that user tweets, we'll add one to that number and every
-          time the user deletes a tweet, we'll decrease that number by one. Anytime
-          we need to know how many times that user has tweeted, we'll just look at
-          that variable.
+        text: A n'importe quel moment ou vous devez stocker un élément d'information
+          pour plus tard, nous utilisons évidement une variable. Disons que nous avons
+          besoin de compter le nombre de fois où que l'utilisateur a tweeter. Chaque
+          fois que l'utilisateur tweets, nous allons ajouter un à ce nombre et chaque
+          fois que l'utilisateur supprime un tweet, nous allons réduire ce nombre
+          par un. Chaque fois que nous avons besoin de savoir combien de fois que
+          l'utilisateur a tweeter, nous regarderons seulement cette variable.
     C4_variables_artist:
       1:
         image: notes/C4_variables_artist_1.png
-        text: A variable is a container you can store a value in. When you use that
-          variable in an algorithm, it opens up the container and looks at the value
-          inside. This lets you write smarter algorithms that behave differently depending
-          on the value stored in the variable.
+        text: Une variable est un conteneur, dans que vous pouvez stocker une valeur.
+          Lorsque vous utilisez cette variable dans un algorithme, il ouvre le conteneur
+          et se penche sur la valeur à l'intérieur. Cela vous permet d'écrire des
+          algorithmes intelligents qui se comportent différemment en fonction de la
+          valeur stockée dans la variable.
       2:
         image: notes/C4_variables_artist_2.png
-        text: For example, if you wanted to write an algorithm to say Happy birthday,
-          you're turning 10! to my little brother, that's great now but when I run
-          it next year I'd want it to say, Happy birthday, you're turning 11! I could
-          create a variable called age to store my brother's age and write my algorithm
-          to say Happy birthday, you're turning 'age' instead. Because variable can
-          change, every year I can update the variable 'age' to equal 'age' plus 1.
+        text: Par exemple, si vous vouliez écrire un algorithme permettant de dire
+          joyeux anniversaire, vous l'utiliserez 10 fois ! pour mon petit frère, c'est
+          très bien maintenant, mais quand je le lance l'année prochaine je voudrais
+          lui dire, joyeux anniversaire, vous l’exécuterez une 11 fois ! Je pourrais
+          créer une variable appelée âge pour stocker l'âge de mon frère et écrire
+          mon algorithme pour dire joyeux anniversaire, vous avez « âge » à la place.
+          Parce que la variable peut changer, chaque année je peux mettre à jour la
+          variable « âge » égale à « âge » plus 1.
       3:
         image: notes/C4_variables_artist_3.png
-        text: In this puzzle, we're going to be using a variable that will set the
-          length of the line our artist draws. Later on in our code, the move forward
-          block will look at that length variable to see what value you've set it
-          to.
+        text: Dans ce puzzle, nous allons utiliser une variable qui définit la longueur
+          de la ligne de que notre artiste dessine. Par la suite dans notre code,
+          le bloc avant déménagement se penchera sur cette variable de longueur pour
+          voir quelle valeur vous avez mis à l'interieur.
     C4_variables_playlab:
       1:
         image: notes/C4_variables_playlab_1.png
-        text: A variable is a container that you can store a value in. When you use
-          that variable in an algorithm, it opens up the container and looks at the
-          value inside. This lets you write smarter algorithms that behave differently
-          depending on the value stored in the variable.
+        text: Une variable est un conteneur, dans que vous pouvez stocker une valeur.
+          Lorsque vous utilisez cette variable dans un algorithme, il ouvre le conteneur
+          et se penche sur la valeur présente à l'intérieur. Cela vous permet d'écrire
+          des algorithmes intelligents qui se comportent différemment en fonction
+          de la valeur stockée dans la variable.
       2:
         image: notes/C4_variables_playlab_2.png
-        text: Now you're going to try playlab where you are given different games
-          and you can change the values of variables like speed, height, score, in
-          order to change the game. You won't have to change the algorithm of the
-          game to change how it plays, just the variable.
+        text: Maintenant, vous allez essayer le playlab où vous trouverez différents
+          jeux et vous pouvez modifier les valeurs des variables comme la vitesse,
+          hauteur, score, afin de changer le jeu. Vous n'aurez pas à changer l'algorithme
+          du jeu pour changer comment il se joue, juste la variable.
       3:
         image: notes/C4_variables_playlab_3.png
-        text: In my work for Kindle and on X-ray for books, we apply variables in
-          many different ways. One way that you can use a variable is to store page
-          numbers of a book. A user can increase and decrease the size of the font
-          on a page. Based on the font size, the number of pages in the book can change.
-          We can adjust it by storing the number of pages in the variable.
+        text: Dans mon travail pour Kindle et sur des rayons x pour les livres, nous
+          appliquons des variables de différentes manières. Une façon que vous pouvez
+          utiliser une variable consiste à stocker les numéros de page d'un livre.
+          Un utilisateur peut augmenter et diminuer la taille de la police sur une
+          page. Basé sur la taille de la police, le nombre de pages dans le livre
+          peut changer. Nous pouvons ajuster il en mémorisant le nombre de pages dans
+          la variable.
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
@@ -2294,44 +2320,49 @@
           l'écran.
       2:
         image: notes/infinity_playlab_events_2.png
-        text: Here, we're going to make Baymax move up to touch Hiro and move down
-          to touch Rapunzel when the player uses the up/down arrow keys or the up/down
-          buttons. We'll use the when up arrow block and attach the move actor up
-          block to it, so when the player presses the up arrow key, everything attached
-          to the "when up arrow" block is run. We'll do the same thing to make Baymax
-          move down. Step by step your game is getting more interactive.
+        text: Ici, nous allons faire déplacer Baymax jusqu'à ce qu'il rencontre Hiro
+          et descendre jusqu'à toucher Rapunzel lorsque le joueur utilise le haut/bas
+          touches de direction ou les touches haut/bas. Nous allons utiliser le bloc
+          de flèche et attacher l'acteur de déplacer vers le haut de bloc, donc lorsque
+          le joueur appuie sur la touche flèche haut, tout attaché au « quand flèche
+          vers le haut » est exécuté. Nous ferons la même chose pour faire les Baymax
+          à se déplacer vers le bas. Étape par étape votre jeu devient plus interactif.
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: So what grade are you in? Second. Tenth grade. First grade. I was in
-          eighth grade when I learned to program. I got my first computer when I was
-          in sixth grade. What gets me excited is being able to fix people's problems.
-          You can express yourself, you can build things from an idea.
+        text: Alors à quelle niveau vous êtes ? débutant. J'ai été en Cm2 quand j'ai
+          appris à programmer. J'ai eu mon premier ordinateur quand j'étais en sixième.
+          Ce qui m'excite c'est être en mesure de résoudre les problèmes du peuple.
+          Vous pouvez vous exprimer, vous pouvez construire des choses à partir d'une
+          idée.
       2:
         image: notes/infinity_playlab_intro_2.png
-        text: Computer science is the basis for a lot of the things that college students
-          and professionals will do for the next twenty or thirty years. I like programming
-          because I like helping people. I get the opportunity to build something
-          that's gonna make people's lives easier. I think it's the closest thing
-          we have to a superpower. Getting started is the most important part. I'm
-          a beginner myself and I want you to learn with me.
+        text: L'informatique est la base pour beaucoup de choses que les professionnels
+          et étudiants du Collège vont faire pour les vingt ou trente prochaines années.
+          J'aime la programmation parce que j'aime aider les gens. J'ai l'occasion
+          de construire quelque chose qui va rendre la vie plus facile. Je pense que
+          c'est la chose la plus proche qu'il faut une superpuissance. La mise en
+          route est la partie la plus importante. Je suis un débutant moi-même et
+          je veux que l'on apprenne ensemble.
       3:
         image: notes/infinity_playlab_intro_3.png
-        text: I'm John Vechey, I'm one of the co-founders of PopCap Games. We make
-          games like Plants vs. Zombies, Bejeweled, and Peggle. A lot about games
-          isn't how perfect your code is, it's not how perfect your art is, it's about
-          how does it feel and how much fun it is. You can only get that sense by
-          trying it, by doing it, by learning and adapting and iterating your own
-          skills of making games.
+        text: Mon nom est John Vechey, je suis l'un des co-fondateurs de PopCap Games.
+          Nous faisons des jeux comme Bejeweled, les Plants vs Zombies et Peggle.
+          Beaucoup de jeux ne sont pas parfait comment votre code, ce n'est pas comment
+          parfait votre art , il s'agit de ce que ça fait et combien c'est amusement.
+          Vous ne pouvez obtenir de sens en l'essayant, en le fabriquant, en apprenant
+          et en adaptant mais vos compétences seront la seul chose qui va faire des
+          jeux.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: Do you have a favorite video game? Well, we're going to take one step
-          towards creating games just like that using Play Lab. Good games have a
-          story and every story has actors. Actors do things like speak, move, and
-          interact with each other. Maybe even score points based on the rules of
-          the game. Today we'll be learning how to do all these things, one by one,
-          with Disney's characters like Anna, Elsa, Hiro, Baymax, and Rapunzel. We'll
-          build a game from scratch that can be shared and played on a phone.
+        text: As-tu un jeu vidéo favori ? Eh bien, nous allons mettre un pied devant
+          l'autre tout comme si on utilisait l'aire de jeux. Les bons jeux ont une
+          histoire et chaque histoire a ses acteurs. Ils font des choses comme parler,
+          bouger et interagir les uns avec les autres. Peut-être même que les points
+          de score peuvent être basés sur les règles du jeu. Aujourd'hui nous allons
+          apprendre comment faire toutes ces choses, une par une, avec des personnages
+          de Disney, comme Anna, Elsa, Hiro, Baymax et Raiponce. Nous allons créer
+          un jeu à partir de rien qui pourra être partagé et joué sur un téléphone.
       5:
         image: notes/infinity_playlab_intro_5.png
         text: Ton écran est divisé en trois parties principales. Sur la gauche se
@@ -2495,10 +2526,11 @@
           only specific arrows and try to describe how to recreate that drawing.
       2:
         image: notes/unplug4_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Dans la seconde moitié de l'activité, nous demandons aux élèves de combien
+          de façons différentes, ils peuvent plier un morceau de papier pour créer
+          seize rectangles identiques. Puis vous allez discuter comment plusieurs
+          solutions peuvent conduire au même résultat final et pourquoi certaines
+          solutions sont meilleures dans certaines situations.
     unplug5:
       1:
         image: notes/unplug5_1.png
@@ -2508,10 +2540,11 @@
           only specific arrows and try to describe how to recreate that drawing.
       2:
         image: notes/unplug5_2.png
-        text: In the second half of the activity, we ask students how many different
-          ways they can fold a piece of paper to create sixteen identical rectangles.
-          Then you'll discuss how multiple solutions can lead to the same end result
-          and why some solutions are better in certain situations.
+        text: Dans la seconde moitié de l'activité, nous demandons aux élèves de combien
+          de façons différentes, ils peuvent plier un morceau de papier pour créer
+          seize rectangles identiques. Puis vous allez discuter comment plusieurs
+          solutions peuvent conduire au même résultat final et pourquoi certaines
+          solutions sont meilleures dans certaines situations.
     unplug6:
       1:
         image: notes/unplug6_1.png
@@ -2629,10 +2662,11 @@
           aside another day to do a few of the student created activities.
       3:
         image: notes/unplug11_3.png
-        text: From everyone here at Code.org, we hope you've had a TON of fun during
-          this course. And whether your dream is to create the best new app, use programming
-          to help cure diseases, or you just want to be a stellar problem-solver,
-          this course was the first step in achieving those dreams.
+        text: Tout le monde ici à a Code.org, nous espérons que vous avez eu une tonne
+          de joie lors de ce cours. Et si votre rêve est de créer la meilleure nouvelle
+          application, utiliser la programmation pour aider à guérir les maladies,
+          ou vous voulez juste être un programmateur stellaire, ce cours a été la
+          première étape dans la réalisation de ses rêves.
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
@@ -2707,13 +2741,15 @@
           cela leur permet d'aller plus vite.
       2:
         image: notes/starwars_typing_2.JPG
-        text: We can type hundreds of commands without having to find them in the
-          toolbox or drag them out. Because you're learning typing may be slower at
-          first but we wanted you to give it a try.
+        text: Nous pouvons taper des centaines de commandes sans avoir à les trouver
+          dans la boîte à outils ou faites-les glisser vers. Vous apprendrez la dactylographie,
+          c'est peut être plus lent au début, mais nous vous souhaitons vous voir
+          essayer.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show
-          text button on any puzzle to switch from blocks to typing code as text.
+        text: Dans le coin supérieur droit sur votre espace de travail, vous pouvez
+          cliquer sur le bouton afficher le texte sur n'importe quel puzzle pour passer
+          de blocs à taper le code sous forme de texte.
       4:
         image: notes/starwars_typing_4.JPG
         text: In the next lesson, we'll start you out in typing mode. Here you can
@@ -2734,18 +2770,18 @@
           so that you can try changing your text to fix it.
       7:
         image: notes/starwars_typing_7.JPG
-        text: If you get stuck, you can always start over with the start over button
-          and you can switch back to block mode at any time by clicking in the top-right
-          corner. Ok, let's give typing a try! And if you make mistakes, don't get
-          frustrated. It takes everybody a few tries to get it right.
+        text: Si tu es bloqué, tu peux toujours recommencer avec le bouton de Recommencer
+          et tu peux basculer en mode bloc à tout moment en cliquant dans le coin
+          supérieur droit. Ok, essayons de taper du texte ! Et si tu fais des erreurs,
+          ne soit pas déçu. Aucun programmeur n'y arrive du premier coup.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Bonjour, mon nom est Charita Carter et je suis Manager à Walt Disney
+          Imagineering. Je suis chargée de diriger les équipes qui produisent effectivement
+          les attractions que nos invités viennent essayer. Nous cherchons toujours
+          des moyens pour améliorer cette expérience pour nos clients et la technologie
+          est au cœur de cela.
       2:
         image: notes/starwars_events_2.JPG
         text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense
@@ -2880,11 +2916,11 @@
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: Bonjour, mon nom est Charita Carter et je suis Manager à Walt Disney
+          Imagineering. Je suis chargée de diriger les équipes qui produisent effectivement
+          les attractions que nos invités viennent essayer. Nous cherchons toujours
+          des moyens pour améliorer cette expérience pour nos clients et la technologie
+          est au cœur de cela.
       2:
         image: notes/starwars_blocks_events_2.JPG
         text: Félicitations, tu as réussi ! Tu as programmé BB-8. Maintenant, je pense
@@ -2989,16 +3025,16 @@
           nous allons créer notre programme.'
       9:
         image: notes/mc_intro_9.JPG
-        text: Si j'y glisse le bloc "avancer" et que je clique sur Run (Exécuter),
+        text: Si j'y glisse le bloc "avancer plus" et que je clique sur Démarrer,
           Alex avance d'une case sur la grille.
       10:
         image: notes/mc_intro_10.JPG
         text: Pour lui faire faire quelque chose après avoir avancé d'une case, il
           suffit d'ajouter un autre bloc, par exemple "tourner à droite", et de le
-          glisser sous mon bloc "avancer" jusqu'à ce que cette ligne orange apparaisse.
+          glisser sous mon bloc "avancer plus" jusqu'à ce que cette ligne orange apparaisse.
           Je n'ai plus qu'à le lâcher pour que les deux blocs se connectent. Quand
-          je clique à nouveau sur Run, Alex exécute les commandes répertoriées dans
-          l'espace de travail, de haut en bas.
+          je clique à nouveau sur Démarrer, Alex exécute les commandes répertoriées
+          dans l'espace de travail, de haut en bas.
       11:
         image: notes/mc_intro_11.JPG
         text: Si vous avez besoin de supprimer un bloc, glissez-le de la pile vers
@@ -3006,10 +3042,9 @@
       12:
         image: notes/mc_intro_12.JPG
         text: 'Pour annuler une modification et revenir au début du niveau, utilisez
-          Start Over (Recommencer) en haut à droite de l''espace de travail. Encore
-          une chose : vous voyez le petit triangle sur les blocs servant à tourner ?
-          Ces triangles indiquent que vous pouvez choisir une autre possibilité. Sur
-          ce, bon code !'
+          Recommencer en haut à droite de l''espace de travail. Encore une chose :
+          vous voyez le petit triangle sur les blocs servant à tourner ? Ces triangles
+          indiquent que vous pouvez choisir une autre possibilité. Sur ce, bon code !'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
@@ -3023,7 +3058,7 @@
           enfin un peu de code.
       3:
         image: notes/mc_repeat_3.JPG
-        text: Le dernier niveau nécessitait pas mal de blocs "avancer". Ce serait
+        text: Le dernier niveau nécessitait pas mal de blocs "avancer plus". Ce serait
           plus simple d'indiquer à l'ordinateur d'avancer 4 ou 5 fois. Heureusement,
           les ordinateurs sont très forts pour répéter les commandes grâce aux boucles
           de répétition.
@@ -3127,22 +3162,22 @@
           on a phone.
       4:
         image: notes/gumball_intro_4.JPG
-        text: Your screen is split into three main parts. On the left is the gamespace
-          where your program will run. The instructions for each level are written
-          below.
+        text: Ton écran se divise en trois parties. A la gauche, se trouve l'espace
+          de jeu où le programme va s'exécuter. Les instructions pour chaque niveau
+          sont écrites en dessous.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: Cette zone centrale est la boîte à outils et chacun de ces blocs est
+          un morceau de code.
       6:
         image: notes/gumball_intro_6.JPG
         text: 'L''espace blanc à droite est appelé espace de travail : c''est là que
           nous allons créer notre programme.'
       7:
         image: notes/gumball_intro_7.JPG
-        text: To start off, you'll need to link your blocks to the orange when run
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line and then they'll snap together.
+        text: Pour commencer, tu devras relier tes blocs au bloc "lors du lancement".
+          Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu
+          voies la ligne jaune, et il s'emboiteront alors ensemble.
       8:
         image: notes/gumball_intro_8.JPG
         text: In this first puzzle, we'll make the actors say something by linking
@@ -3183,12 +3218,98 @@
           les choses.
       2:
         image: notes/gumball_repeat_2.JPG
-        text: This is the repeat forever block. Anything inside this block will happen
-          forever in the game. If we want an actor to do something repeatedly without
-          the player having to do anything, we'll put those blocks inside the repeat
-          forever block.
+        text: C'est le bloc 'répète à jamais'. Tout ce qui se trouve dans ce bloc
+          se produira 'à jamais' dans le jeu. Si nous voulons qu'un élément fasse
+          quelque chose de façon répétée, continuellement, sans que le joueur ai à
+          intervenir, nous placerons ces blocs à l'intérieur du bloc 'répète à jamais'.
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Dans ce puzzle, notre objectif est d'aider l'élément à faire un travail
+          en continu. Apprendre à utiliser la commande 'répéter' te permettras de
+          gagner énormément de temps plus tard quand tu construiras ton propre jeu.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Ton écran se divise en trois parties. A la gauche, se trouve l'espace
+          de jeu où le programme va s'exécuter. Les instructions pour chaque niveau
+          sont écrites en dessous.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: Cette zone centrale est la boîte à outils et chacun de ces blocs est
+          un morceau de code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: 'L''espace blanc à droite est appelé espace de travail : c''est là que
+          nous allons créer notre programme.'
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: Pour commencer, tu devras relier tes blocs au bloc "lors du lancement".
+          Tu peux relier plusieurs blocs ensemble en les glissant jusqu'à ce que tu
+          voies la ligne jaune, et il s'emboiteront alors ensemble.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Commence, et d'ici à la fin, tu sera capable de créer ton propre jeu,
+          avec toutes sortes de joueurs qui peuvent interagir, marquer des points,
+          jeter des objets, et se faire disparaitre. Ça ne dépend que de toi !
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Maintenant nous allons apprendre quelque chose que tous les programmeurs
+          de jeu utilisent tous les jours. On les appelle des événements. Un événement
+          dit à ton programme d'écouter jusqu’à ce qu'il ce passe quelque chose, et
+          quand ça arrive, le jeu exécute une action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Des exemples d’événements sont l'écoute d'un clic de souris ou d'une
+          touche flèche haut ou flèche bas, ou même une tape sur l'écran.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Peux-tu imaginer si tu avais à répéter quelque chose à l'infini? Heureusement
+          tu n'auras jamais à le faire car les ordinateurs sont vraiment bons à répéter
+          les choses.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: C'est le bloc 'répète à jamais'. Tout ce qui se trouve dans ce bloc
+          se produira 'à jamais' dans le jeu. Si nous voulons qu'un élément fasse
+          quelque chose de façon répétée, continuellement, sans que le joueur ai à
+          intervenir, nous placerons ces blocs à l'intérieur du bloc 'répète à jamais'.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: Dans ce puzzle, notre objectif est d'aider l'élément à faire un travail
+          en continu. Apprendre à utiliser la commande 'répéter' te permettras de
+          gagner énormément de temps plus tard quand tu construiras ton propre jeu.

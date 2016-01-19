@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"Kamu bisa menekan \"Tetap Main\" untuk kembali memainkan permainan kamu.",
   "replayButton":"Mainkan kembali",
   "selectChooseButton":"Pilih",
-  "tooManyBlocksFail":"Teka-teki {puzzleNumber} selesai. Selamat! Kamu juga bisa menyelesaikannya dengan {numBlocks, jamak, satu {1 block} {# blocks} lain}."
+  "tooManyBlocksFail":"Teka-teki {puzzleNumber} selesai. Selamat! Kamu juga bisa menyelesaikannya dengan {numBlocks, plural, one {1 block} other {# blocks}}."
 }

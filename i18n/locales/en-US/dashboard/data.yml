@@ -459,6 +459,9 @@ en:
         infinity_playlab_intro: crwdns35943:0crwdne35943:0
         infinity_playlab_events: crwdns35944:0crwdne35944:0
         infinity_playlab_repeat_forever: crwdns35945:0crwdne35945:0
+        csp_applab_conditionals_1: crwdns55188:0crwdne55188:0
+        csp_applab_conditionals_2: crwdns55189:0crwdne55189:0
+        csp_applab_conditionals_3: crwdns55190:0crwdne55190:0
         csp_applab_design: crwdns51942:0crwdne51942:0
         csp_applab_variables_1: crwdns51015:0crwdne51015:0
         csp_applab_variables_2: crwdns51016:0crwdne51016:0
@@ -512,6 +515,9 @@ en:
         gumball_intro: crwdns54742:0crwdne54742:0
         gumball_events: crwdns54743:0crwdne54743:0
         gumball_repeat: crwdns54744:0crwdne54744:0
+        iceage_intro: crwdns55191:0crwdne55191:0
+        iceage_events: crwdns55192:0crwdne55192:0
+        iceage_repeat: crwdns55193:0crwdne55193:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

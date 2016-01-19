@@ -64,6 +64,10 @@ export default class CommandQueue {
     }
   }
 
+  getLength() {
+    return this.commandList_ ? this.commandList_.length : 0;
+  }
+
   /**
    * Whether the command has started working.
    * @returns {boolean}

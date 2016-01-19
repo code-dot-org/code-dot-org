@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Como levar a Hora do Código para a sua empresa
 
@@ -135,4 +134,3 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar nesta jornada, [incentive os participantes a aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

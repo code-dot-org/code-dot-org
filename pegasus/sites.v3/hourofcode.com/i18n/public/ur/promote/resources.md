@@ -132,4 +132,3 @@ Get started at http://hourofcode.com/<%= @country %>
 
 آپ کا مخلص، [[NAME]]، [[TITLE]
 
-<%= view :signup_button %>

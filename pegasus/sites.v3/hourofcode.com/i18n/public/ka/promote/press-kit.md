@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ## როგორ მოიზიდოთ მედიის წარმომადგენლები თქვენს კოდის ერთ საათზე
 
@@ -62,4 +61,3 @@ Code.org არის 501c3 არამომგებიანი ორგა
   
 Find more resources and sample emails [here](<%= resolve_url('/promote') %>).
 
-<%= view :signup_button %>

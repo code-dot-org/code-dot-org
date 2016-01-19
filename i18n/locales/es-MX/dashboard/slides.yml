@@ -166,53 +166,55 @@ es-MX:
         text: 'Si coloco un bloque "move forward" (avanza hacia adelante) en el lugar dónde dice "do" (hacer) y un bloque "turn left" (giro izquierda) en dónde dice "else" (si no) esto quiere decir que el zombie eligirá una de las dos opciones. IF (si) existe un camino hacia adelante, el zombie se moverá adelante, de otra manera (no existe un camino hacia adelante), el zombie girará hacia la izquierda.'
       3:
         image: notes/hoc5_3.jpg
-        text: 'Al igual que el bloque "si", podemos poner el bloque "si sino" dentro de un bloque "repetir" para que el zombie siga moviéndose y el bloque "si sino" seguirá comprobando si hay espacio para girar.'
+        text: 'Al igual que el bloque "y", podemos poner el bloque "si sino" dentro de un bloque "repetir" para que el zombie siga moviéndose y el bloque "y sino" seguirá comprobando si hay espacio para girar.'
       4:
         image: notes/hoc5_4.jpg
-        text: ¡Ahora llevemos a esos zombies a donde pertenecen!
+        text: Ahora, a conseguir esos zombies donde pertenecen!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
         text: Una instrucción si-sino es una decisión entre dos cosas. Vamos a ver cómo podemos utilizar una instrucción si-sino con nuestro amigo Scrat la ardilla.
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: 'Este bloque se ve igual que el bloque "si", pero hay una pieza extra en la parte inferior que dice "sino". Si ponemos un bloque "avanzar" donde dice "hacer" y un bloque "girar a la izquierda" donde dice "sino", eso significa que la ardilla Scrat avanzará si hay un camino delante. Si no hay un camino a seguir, Scrat girará a la izquierda.'
+        text: Este bloque se ve igual que el bloque ¨si¨, pero hay una pieza extra en la parte inferior que dice ¨sino¨. Si ponemos un bloque ¨avanzar¨ donde dice ¨hacer¨ y un bloque ¨girar a la izquierda¨ donde dice ¨sino¨, eso significa que la ardilla Scrat avanzará si hay un camino delante. Si no hay un camino a seguir, Scrat girará a la izquierda.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: 'Es tomar una decisión y hacer una de las dos acciones en base a esa decisión. Y al igual que los bloques "si", puedes poner bloques "si-sino" dentro de bloques "repetir".'
+        text: 'Es tomar una decisión y hacer una de las dos acciones en base a esa decisión. Y al igual que los bloques , puedes poner bloques "si-sino" dentro de bloques "repetir".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: ¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!
     function:
       1:
         image: notes/stage13_1.jpg
-        text: '!Hola! soy Brina, una ingeniera de Instagram. Una función es un conjunto de líneas de código que quieres usar una y otra vez, así que en vez de escribir ese código cada vez, puedes usar solo un bloque.'
+        text: 'Hola! soy Brina,una ingeniera de instagram.Una función es un conjunto de líneas de código que quieres usar una y otra  vez,asi que en vez de escribir el código cada vez, Usted puede usar solo un    bloque. '
       2:
         image: notes/stage13_2.jpg
-        text: Vamos a aprender cómo definir funciones. Las definiciones de funciones tienen una estrella en la esquina. El nombre de la función está escrito en la línea superior.
+        text: Vamos a aprender cómo definir funciones.Las definiciones de funciones tienen una estrella en lá esquina.El nombre de la Función esta escrito en la linea superior.
       3:
         image: notes/stage13_3.jpg
-        text: 'Los bloques que se encuentran dentro de la definición nos dicen qué hace. Así que esta definición de función se llama "rellena 5" y está formada por un bloque "repetir" y un bloque "rellenar".'
+        text: 'Los bloques que se encuentra dentro de la definicion nos dicen que hace. Asi que esta definiction de funcion se llama "rellena 5" y esta formada por un bloque "repetir" y un bloque "rellenar"'
       4:
         image: notes/stage13_4.jpg
-        text: 'La definición se encuentra en el espacio de trabajo, pero nuestro agricultor no ejecutará la función hasta que arrastremos el bloque "llenar 5" desde la categoría de funciones.'
+        text: |
+          la denfinicion se encuentra en el espacio de trabajo, pero nuestro agricultor no ejecutara 
+          La funcion hasta que arrastremos el blogue "llenar 5" desde la categoria de categoria de funciones.
       5:
         image: notes/stage13_5.jpg
-        text: '¡Volvamos a hacer divertidas las funciones! '
+        text: '¡Volvamos a hacer divertidas las funciones '
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: '¡Hola! soy Makinde. Vamos a aprender acerca del bloque "mientras". '
+        text: '¡Hola! soy Makinde. Vamos a aprender acerca del bloque "mientras" '
       2:
         image: notes/stage9_6.jpg
-        text: 'El "bloque mientras que (While)" hará todo lo que pones en su interior mientras la declaración en la parte superior es verdadera.'
+        text: 'El "bloque mientras que" hará todo lo que pones en su interior como la declaración en la parte superior es TRUE.'
       3:
         image: notes/stage9_7.jpg
-        text: Por ejemplo, si la granjera está sobre un montón, continuará eliminando una palada llena mientras(WHILE) quede tierra debajo de ella.
+        text: Por ejemplo, si el agricultor está de pie sobre una pila, ella continuará eliminar 1 shovelful mientras que todavía hay un montón debajo de ella.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: '!Hola! soy Trina y trabajo para Pixar. He trabajado en un montón de películas incluyendo Shrek.'
+        text: Hola, soy Trina y trabajo para Pixar. Ha trabajado en un montn de pelicculas incluyendo Sherk.
       2:
         image: notes/stage11_2.jpg
         text: 'Esta es nuestra nueva iteración "contador". Realizará acciones una y otra ves y puedes hacer que las acciones cambien un poco cada vez.'
@@ -234,7 +236,7 @@ es-MX:
         text: Podemos escribir a mano ese código o podemos usar una función con parámetros.
       4:
         image: notes/stage15_4.jpg
-        text: 'Para hacer esto, haz clic en la estrella azul sobre la definición de la función "dibuja un triángulo". Después arrastra "nombre de entrada" en el bloque "entrada".'
+        text: 'Para ello, haga clic en la estrella azul en la definición de la función "dibujar un triángulo". Luego arrastre "nombre entrada" en el bloque de "entrado".'
       5:
         image: notes/stage15_5.jpg
         text: 'Después si escribes "longitud" en el lugar que dice "x" y presionas "Enter" crearás una entrada longitud para tu función.'
@@ -314,7 +316,7 @@ es-MX:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hola, soy Chris Bosh. Soy un jugador de baloncesto profesional, y programé en la Universidad.
+        text: Hola, yo soy Chris Bosh. Yo soy un profecional baquet bol jugador, y estoy en colegio.
       2:
         image: notes/frozen3_2.jpg
         text: Uno de los conceptos más importantes en Ciencias de la computación trata sobre cómo definir nuevos comandos. La mayoría de lenguajes de programación tienen solamente cerca de 100 palabras o comandos. Y en realidad, el arte y la magia está en definir tus propias nuevas palabras utilizando estos bloques de construcción.
@@ -414,7 +416,7 @@ es-MX:
         text: Suceden cosas a las que todos respondemos. Sentimos hambre y nos vamos a la nevera. Escuchamos que el cartero viene y pone nuestro correo en el buzón y luego vamos a obtener nuestro correo. Lo mismo pasa con los eventos de pulsar un botón o mover una palanca de mando. Son algo que pasa que provocan que hagamos algo.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: 'En los videojuegos, hay un evento llamado "Actualizar" y pasa 30 o 60 veces por segundo. Para los programadores de videojuegos eso es casi más importante como un evento, que los botones o la palanca de mando.'
+        text: 'En los videohugeos, hay un evento llamado "Actualizar" y pasa 30 o 60 veces por segundo. Para los programadores de videojuegos eso es casi mas importante como un evento, que los botones ola palanca de mando.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: |
@@ -523,7 +525,7 @@ es-MX:
         text: 'A veces en Internet conozco y hablo con las personas, como mi abuela que vive en otro Estado. ¡Hola abuela! Ella me está haciendo galletas que me enviará para mi cumpleaños. "Delicioso, ojalá que Internet tuviera smellrama!" Yo puedo hablar con diferentes personas en Internet, como mi prima, pero solamente hablo con la gente que conozco.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: Lo que más me gusta en la Internet es obtengo juegos divertidos. ¡Puntos! También me gusta dibujar y crear cosas nuevas y compartir con mis amigos. ¡Genial! A veces visito sitios donde aprendo cosas nuevas pero siempre sitios web que son adecuados para mí. ¡Oh, dinosaurios!
+        text: Lo que más me gusta de Internet es que puedo encontrar juegos divertidos. ¡Puntos! También me gusta dibujar y crear cosas nuevas y compartirlas con mis amigos. ¡Estupendo! Algunas veces visito sitios web donde aprendo cosas nuevas pero siempre me quedo en sitios ideales para mí. ¡Guau, dinosaurios!
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'Internet es un lugar super divertido. Pero al igual que cruzar la calle en tu barrio, también debes tener cuidado cuando estés en línea. Aquí hay tres reglas para recordar. Regla número 1: siempre pregunta a tus padres primero. Regla número 2: sólo hablar con gente que conozcas. Regla número 3: Visita lugares que son adecuados para ti.'
@@ -591,7 +593,7 @@ es-MX:
         text: En este ejemplo, debes conseguir mover el pájaro para coger el cerdo. Ahora vamos a poder usar el bloque Repetir para poder hacer esto más fácil. Lo puedes hacer diciendo al ordenador la instrucción mover adelante 5 veces para que el pájaro avance un paso cada vez hacia el cerdo, o puedes directamente decir al ordenador que se mueva adelante una vez y decirle que lo repita 5 veces, y hará la misma cosa.
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: La orden de esto es, arrastrar el comando avanzar y luego insertarlo dentro del bloque de repetición. Puedes hacer clic en él y decir cuantas veces quieres que se repita el bloque, para repetir la cantidad de pasos que deseas que avance.
+        text: Para hacer esto, arrastra el comando mover hacia adelante y colócalo dentro del bloque repetir. Puedes hacer clic en él y decirle cuántas veces repetir el bloque para indicarle cuantos pasos quieres mover hacia adelante.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
         text: Una cosa más, puedes insertar tantos comandos como quieras dentro del bloque de repetición. Así que en este ejemplo, está diciendo que seguir adelante y girar a la izquierda, que va a hacer cinco veces. ¡Que te diviertas!
@@ -742,7 +744,7 @@ es-MX:
         text: Esta lição é designada de Real Life Algorithms. Algorismos descrevem coisas que as pessoas fazem todos os dias. Receitas de bolachas e instruções de como construir uma casa para passáros são ambos algorismos usados no quotidiano.
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: Hoje, vamos fazer, criar e testar um algorismo para um avião de papel. Mas primeiro, necessitamos de separar este grande projecto em passos mais facéis de seguir. Para fazer um avião de papel, necessitamos de decidir que passos seguir e em que ordem devemos seguí-los.
+        text: Hoy vamos a realizar, crear y probar un algoritmo para un avión de papel. Pero primero, necesitamos romper este gran proyecto en pasos más pequeños y fáciles de seguir. Para hacer un avión de papel, necesitamos decidir qué pasos tomar y en qué orden realizarlos.
       3:
         image: notes/C2_paper_airplanes_3.png
         text: Crearás tu algoritmo con primero cortando aparte las fotos. Luego, selecciorás las 6 fotos que muestran los pasos necesarios para hacer un avión de papel y arregla esas fotos en el orden correcto. Después de tener todo en orden, cambiarás algoritmos con otro equipo de estudiantes para probar el algoritmo y ver si el algoritmo funciona. Es super importante un algoritmo bien diseñado para hacer el mejor aeroplano de papel.
@@ -1648,4 +1650,55 @@ es-MX:
         text: Este es el bloque de repetición por siempre. Cualquier cosa dentro de este bloque pasara por siempre en el juego. Si queremos que un actor haga algo repetidamente sin el jugador haga nada, pondremos eso bloques dentro del bloque de repetición por siempre.
       3:
         image: notes/gumball_repeat_3.JPG
+        text: En el sigueinte rompecabezas, nuestro objetivo es ayudar al actor a que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Si deseas hacer su propio juego, es muy fácil. Todo lo que necesita son unos pocos conceptos básicos de programación y puede empezar a jugar un juego que tu creaste.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: ¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación de juegos sólo asi en el LabDeJuego. Buenos juegos tienen una historia y cada historia tiene actores. Actores que hacen cosas como hablar, mover e interactúar con los demás. Tal vez incluso marcan puntos basado en las reglas del juego. Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos actores y luego construiremos un juego desde cero que puede compartir y reproducir en un teléfono.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos actores y luego construiremos un juego desde cero que puede ser compartido y reproducir en un teléfono.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: La pantalla se divide en tres partes principales. A la izquierda es el espacio de juego donde se ejecutará el programa. Las instrucciones para cada nivel están escritas abajo.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: En el área de en medio es de la caja de herramientas y cada uno de estos bloques es un pedazo de código.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: 'El espacio blanco a la derecha se llama área de trabajo y es ahí donde construiremos el programa. '
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: 'Para empezar, necesitarás unir tus bloques al bloque naranja llamado "cuando se ejecuta". Puedes unir múltiples bloques arrastrándolos hacia fuera hasta que veas la línea amarilla, y luego encajarán todos a la vez.'
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: 'En este primer rompecabezas, haremos que los actores digan algo poniendo el bloque de "decir" para cuando se ejecute el bloque y escribiendo tu mensaje. Una vez que tus bloques esten en lugar, da clic en el botón de ejecutar para ver lo que programaste.'
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Comienza y al final podrás crear tu propio juego con todo tipo de jugadores que puedan interactuar, tener puntos, tirar cosas y desaparece unos a otros. Todo depende de ti!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Ahora aprenderemos algo que todos los programadores de juego usan cada día. Son llamados eventos. Un evento le indica a tu programa escuchar para cuando algo sucede y entonces cuando lo hace, el juego realiza una acción.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Algunos ejemplos de eventos estan escuchando por un clic del ratón o un teclado de la flecha de arriba o abajo en la pantalla.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: 'Aquí, vamos a hacer al actor decir algo cuando el jugador haga clic en él. Usaremos el cuando haga clic en el bloque y agregar el bloque de "decir" a éste. Cuando el jugador haga clic en todos los bloques agregados, a este bloque se realizarán.'
+      4:
+        image: notes/iceage_events_4.JPG
+        text: También hay cuando bloques de flecha. Si tu enlace mueve bloques a esos, puedes comenzar a mover tus actores para arriba, abajo, izquierda, derecha, con las teclas de flecha. Poco a poco, tu juego es cada vez más interactivo.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: ¿Te imaginas si tuvieras que repetir algo por siempre y para siempre? Esperemos que nunca tengas orque los equipos son realmente buenos en repetir cosas.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: Este es el bloque de repetición por siempre. Cualquier cosa dentro de este bloque pasara por siempre en el juego. Si queremos que un actor haga algo repetidamente sin el jugador haga nada, pondremos eso bloques dentro del bloque de repetición por siempre.
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: En el sigueinte rompecabezas, nuestro objetivo es ayudar al actor a que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.

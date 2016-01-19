@@ -1660,3 +1660,54 @@ is:
       3:
         image: notes/gumball_repeat_3.JPG
         text: 'Í þessari næstu þraut er markmiðið að hjálpa leikaranum að gera eitthvað í sífellu. Ef þú lærir hvernig "endurtaka" skipunin virkar, mun það spara þér mikinn tíma þegar þú smíðar þinn eigin leik.'
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Ef þú vilt búa til þinn eigin leik þá er það mjög auðvelt. Allt sem þú þarft er að kunna nokkur grunnatriði í forritun og þú getur farið að spila leik sem er þín eigin sköpun.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Áttu þér uppáhalds tölvuleik? Við ætlum að taka eitt skref í áttina að því að búa til svoleiðis leiki og gera það í í Leikjasmiðjunni. Góðir leikir hafa sögu og hver saga hefur leikara. Leikara sem tala, hreyfast og eiga samskipti. Geta jafnvel skorað stig eftir sem reglur leiksins segja til um. Í dag munum við læra að gera þessa hluti einn og einn í einu með skemmtilegum leikurum og síðan smíða frá grunni leik sem hægt verður að deila og spila í síma.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: 'Í dag ætlum við að læra að gera alla þessa hluti - einn í einu - með skemmtilegum leikurum og smíða svo frá grunni leik sem er hægt að deila og spila í síma.'
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Skjárinn þinn skiptist í 3 meginhluta. Vinstra megin er leiksvæðið þar sem forritið þitt mun keyra. Leiðbeiningar fyrir hvert borð birtast fyrir neðan.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: Þetta miðsvæði er verkfærakassinn og hver þessara kubba er bútur af kóða.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Hvíta svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum byggja forritið okkar.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: 'Til að byrja þarf að tengja kubba við appelsínugula "þegar keyrt" kubbinn. Þú getur tengt saman marga kubba með því að draga þá fram þar til þú sérð gulu línuna og þá munu þeir smella saman.'
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: 'Í þessari fyrstu þraut látum við leikarana segja eitthvað með því að tengja "segja" kubbinn við "þegar keyrt" kubbinn og skrifa hvað á að segja. Þegar kubbarnir eru á sínum stað, smellir þú á "Keyra" hnappinn til að sjá hvað þú hefur forritað.'
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Byrjaðu bara og í lokin munt þú geta búið til þinn eigin leik með alls konar leikurum sem geta átt samskipti, skorað stig, kastað hlutum og látið hvern annan hverfa. Þetta er í þínum höndum!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Nú ætlum við læra nokkuð sem allir leikjaforritarar nota daginn út og inn. Þetta nokkuð er kallað atvik. Við segjum forriti að hlusta eftir einhverju sem gerist og þegar það gerist, þá gerir forritið eitthvað.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Dæmi um atvik eru að hlusta eftir músarsmelli eða upp eða niður örvarlykli eða jafnvel að pikkað sé á skjáinn.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: 'Hér ætlum við að láta leikarann segja eitthvað þegar spilarinn smellir á hann. Við munum nota "þegar smellt" kubbinn og tengja "segja" kubbinn við hann. Þegar spilarinn smellir, gerast allir kubbarnir sem eru tengdir við "þegar smellt".'
+      4:
+        image: notes/iceage_events_4.JPG
+        text: 'Það eru líka "þegar ör" kubbar. Ef þú tengir "færa" kubba við þá, getur þú byrjað að færa leikarana upp, niður, vinstri, hægri með örvarlyklunum. Smám saman er leikurinn þinn að verða gagnvirkari.'
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Geturðu ímyndað að þér að þurfa að endurtaka eitthvað til eilífðar? Vonandi þarftu þess aldrei vegna þess að tölvur eru virkilega góðar í að endurtaka hluti.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: 'Þetta er "endurtaka endalaust" kubburinn. Allt sem er í þessum kubb mun gerast án enda í leiknum. Ef við viljum að leikari geri eitthvað endurtekið án þess að spilarinn þurfi að koma nærri, þá setjum við kubba fyrir það inn í "endurtaka endalaust" kubbinn.'
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: 'Í þessari næstu þraut er markmiðið að hjálpa leikaranum að gera eitthvað í sífellu. Ef þú lærir hvernig "endurtaka" skipunin virkar, mun það spara þér mikinn tíma þegar þú smíðar þinn eigin leik.'

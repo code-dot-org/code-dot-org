@@ -205,7 +205,7 @@ de:
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, Ich bin Makinde! Lernen wir was über den "solange" Baustein. '
+        text: 'Hi, Ich bin Makinde! Ich zeige euch etwas über den "solange"-Baustein '
       2:
         image: notes/stage9_6.jpg
         text: 'Der "solange"-Baustein wird alles, was du hereintust, ausführen, SOLANGE die Anweisung darüber WAHR ist.'
@@ -516,10 +516,10 @@ de:
         text: 'Ich heiße Jeremiah. Hi! Ich bin 7 Jahre alt. Ich liebe es mit dem Computer meiner Mama zu spielen, aber erst, wenn sie es mir erlaubt. "Mama, kann ich an den Computer?" - "Na, klar, Schatz!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 'Ich liebe den Computer meiner Mutter, weil ich damit ins Internet gehen kann. Das Internet ist ein bisschen wie Dein Stadtteil: Du kannst coole Orte besuchen, mit Familie und Freunden plaudern und jede Menge neue Sachen lernen.'
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: 'Gestern habe ich den Zoo in der Nähe meines Hauses besucht. Ich habe ein Baby-Zebra gesehen. Ich habe ein Foto gemacht und dann die Farben der Streifen geändert, einen Hut hinzugefügt. Das Foto kam in meine Sammlung verrückter Tiere. Prima! Später habe ich dann einen weit entfernten Ort besucht: Kenia. Das ist ein Land in Afrika. Mit jeder Menge Zebras.'
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
@@ -651,24 +651,24 @@ de:
           Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: 'Ich wette du kannst Spiele erstellen, die noch mehr Spaß machen, indem du "Bedingungen" benutzt. Versuch es! Bedingungen sorgen dafür, dass der Computer schlau wirkt. Ein Computerprogramm, dass Bedingungen beinhaltet, kann auf den Benutzer reagieren und seine Handlungen entsprechend anpassen.'
       5:
         image: notes/C2_conditionals_with_cards_5.png
         text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Hier haben wir bereits ein paar Blöcke in unserem Arbeitsplatz. Aber hier ist noch etwas falsch.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: Lass uns den Code debuggen, indem wir die Geschwindigkeit reduzieren. Dadurch können wir sehen wie jeder Block einzeln ausgeführt wird.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Oh, da ist das Problem! Der Schnurrbart der Katze ist 75 Pixel groß und nicht 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Hast du jemals vom Begriff debugging gehört? Das ist eine Art und Weise, herraus zu finden, was nicht funktioniert. Wenn du Code debugst, dann kannst du Fehler finden und diese beheben.
       2:
         image: notes/C2_bee_debugging_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -837,7 +837,7 @@ de:
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Hast du jemals vom Begriff debugging gehört? Das ist eine Art und Weise, herraus zu finden, was nicht funktioniert. Wenn du Code debugst, dann kannst du Fehler finden und diese beheben.
       2:
         image: notes/C3_debugging_bee_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -1664,4 +1664,57 @@ de:
         text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
       3:
         image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
         text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

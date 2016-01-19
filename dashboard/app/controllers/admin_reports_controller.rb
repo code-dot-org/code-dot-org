@@ -88,64 +88,108 @@ class AdminReportsController < ApplicationController
     end
   end
 
+  def level_answers
+    authorize! :read, :reports
+
+    @headers = ['Level ID', 'User Email', 'Data']
+    @responses = {}
+    @response_limit = 100
+    if params[:levels]
+      # Parse the parameters, namely the set of levels to grab answers for.
+      @levels = params[:levels] ? params[:levels].split(',') : []
+
+      @levels.each do |level_id|
+        # Don't query for data if we've already retrieved it.
+        if @responses[level_id]
+          next
+        end
+
+        # Regardless of the level type, query the DB for level answers.
+        @responses[level_id] = LevelSource.
+          where(level_id: level_id).
+          joins(:activities).
+          joins("INNER JOIN users ON activities.user_id = users.id").
+          limit(@response_limit).
+          pluck(:level_id, :email, :data)
+
+        # Determine whether the level is a multi question, replacing the
+        # numerical answer with its corresponding text if so.
+        level_info = Level.where(id: level_id).pluck(:type, :properties).first
+        if level_info && level_info[0] == 'Multi' && level_info[1].length > 0
+          level_answers = level_info[1]["answers"]
+          @responses[level_id].each do |response|
+            response[2] = level_answers[response[2].to_i]["text"]
+          end
+        end
+      end
+    end
+
+    respond_to do |format|
+      format.html
+      format.csv { return level_answers_csv }
+    end
+  end
+
   def level_completions
     authorize! :read, :reports
     require 'date'
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
+      @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
 
-    @is_sampled = false
+      @is_sampled = false
 
-    output_data = {}
-    %w(Attempt Success).each do |key|
-      dimension = 'ga:eventLabel'
-      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
-      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter]
-        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+      output_data = {}
+      %w(Attempt Success).each do |key|
+        dimension = 'ga:eventLabel'
+        metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+        filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+        if params[:filter]
+          filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
+        end
+        ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
+
+        @is_sampled ||= ga_data.data.contains_sampled_data
+
+        ga_data.data.rows.each do |r|
+          label = r[0]
+          output_data[label] ||= {}
+          output_data[label]["Total#{key}"] = r[1].to_f
+          output_data[label]["Unique#{key}"] = r[2].to_f
+          output_data[label]["Avg#{key}"] = r[3].to_f
+        end
       end
-      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-
-      @is_sampled ||= ga_data.data.contains_sampled_data
-
-      ga_data.data.rows.each do |r|
-        label = r[0]
-        output_data[label] ||= {}
-        output_data[label]["Total#{key}"] = r[1].to_f
-        output_data[label]["Unique#{key}"] = r[2].to_f
-        output_data[label]["Avg#{key}"] = r[3].to_f
+      output_data.each_key do |key|
+        output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
+        output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
+        output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+        output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
       end
-    end
-    output_data.each_key do |key|
-      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
-      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
-      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
-      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
-    end
 
-    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+      page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
 
-    data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      data_array = output_data.map do |key, value|
+        {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      end
+      require 'naturally'
+      data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+      headers = [
+        "Puzzle",
+        "Total\nAttempts",
+        "Total Successful\nAttempts",
+        "Avg. Success\nRate",
+        "Avg. #attempts\nper Completion",
+        "Unique\nAttempts",
+        "Unique Successful\nAttempts",
+        "Perceived Dropout",
+        "Avg. Unique\nSuccess Rate",
+        "Avg. Time\non Page"
+      ]
+      render locals: {headers: headers, data: data_array}
     end
-    require 'naturally'
-    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
-    headers = [
-      "Puzzle",
-      "Total\nAttempts",
-      "Total Successful\nAttempts",
-      "Avg. Success\nRate",
-      "Avg. #attempts\nper Completion",
-      "Unique\nAttempts",
-      "Unique Successful\nAttempts",
-      "Perceived Dropout",
-      "Avg. Unique\nSuccess Rate",
-      "Avg. Time\non Page"
-    ]
-    render locals: {headers: headers, data: data_array}
   end
 
   def pd_progress
@@ -210,7 +254,7 @@ class AdminReportsController < ApplicationController
     authorize! :read, :reports
 
     @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
-    render 'reports/usage', formats: [:html]
+    render 'usage', formats: [:html]
   end
 
   def hoc_signups
@@ -278,4 +322,17 @@ class AdminReportsController < ApplicationController
     return 100.0 * ratings_to_process.where(rating: 1).count / ratings_to_process.count
   end
 
+  def level_answers_csv
+    send_data(
+      CSV.generate do |csv|
+        csv << @headers
+        @responses.each do |level_id, level_responses|
+          level_responses.each do |response|
+            csv << response
+          end
+        end
+        csv
+      end,
+      :type => 'text/csv')
+  end
 end

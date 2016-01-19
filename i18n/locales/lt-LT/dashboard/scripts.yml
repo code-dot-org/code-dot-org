@@ -146,7 +146,7 @@ lt:
           description_short: Nupiešk šaunius piešinius ir ornamentus su menininku!
         hourofcode:
           Maze: Labirintas
-          title: „Programavimo valanda“
+          title: Klasikinis labirintas
           description: Išmėginkite programavimo pradmenis kartu su personažais iš Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
         frozen:
@@ -680,6 +680,7 @@ lt:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1234,6 +1235,7 @@ lt:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1354,22 @@ lt:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1463,13 +1481,13 @@ lt:
           Gumball Play Lab: Gumball Play Lab
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
+          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
+          description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą tolimoje galaktikoje.
           Hour of Code 2015: Hour of Code 2015
         minecraft:
           title: Minecraft
@@ -1479,7 +1497,7 @@ lt:
         mc:
           title: Minecraft programavimo valanda
           description_short: Tyrinėkite Minecraft pasaulį per kodą
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1495,3 +1513,5 @@ lt:
           Welcome!: Welcome!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Apibendrinimas
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

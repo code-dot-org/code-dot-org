@@ -6,7 +6,6 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # How to bring the Hour of Code to your company
 
@@ -135,4 +134,3 @@ nav: how_to_nav
 
 ٹیکانالوجی کیسے کام کرتی ہے اور سوفٹ ویئر ایپلیکیشنز کیسے بنائی جاتی ہیں، یہ سب جاننے کے لیے آور-آف-کوڈ اس سفر کا صرف پہلا قدم ہے۔ اس سفر کو جاری رکھنے کے لیے، [ اپنے پارٹیسیپنٹ کی حوصلہ افزائی کریں کہ وہ آن لائن سیکھیں](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>
