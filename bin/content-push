@@ -51,9 +51,9 @@ OptionParser.new do |opts|
     puts opts
     exit
   end
-end
+end.parse!
 
-raise Option::MissingArgument, 'Name is required if forcing push' if @options['force'] && @options['name'].nil?
+raise OptionParser::MissingArgument, 'Name is required if forcing push' if @options['force'] && @options['name'].nil?
 
 Dir.chdir(deploy_dir) do
   name = @options['name'] || ask_for_name
