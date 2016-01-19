@@ -1,6 +1,7 @@
-/* global define */
+/* global $, define */
 
 var xml = require('./xml');
+var sanitizeHtml = require('sanitize-html');
 var savedAmd;
 
 // Do some hackery to make it so that lodash doesn't think it's being loaded
@@ -45,7 +46,7 @@ exports.cloneWithoutFunctions = function(object) {
 };
 
 /**
- * Returns a new object with the properties from defaults overriden by any
+ * Returns a new object with the properties from defaults overridden by any
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
@@ -65,6 +66,27 @@ exports.escapeHtml = function(unsafe) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+};
+
+// Sanitize html using a whitelist of tags and attributes.
+// see default options at https://www.npmjs.com/package/sanitize-html
+exports.sanitizeHtml = function(unsafe) {
+  var safe = sanitizeHtml(unsafe, {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+      'button', 'canvas', 'img', 'input', 'option', 'label', 'select']),
+    allowedAttributes: $.extend({}, sanitizeHtml.defaults.allowedAttributes, {
+      button: ['id', 'class', 'style'],
+      canvas: ['id', 'class', 'style', 'width', 'height'],
+      div: ['id', 'class', 'style', 'contenteditable', 'tabindex'],
+      img: ['id', 'class', 'data-canonical-image-url', 'src', 'style'],
+      input: ['id', 'checked', 'class', 'style', 'type', 'value'],
+      label: ['id', 'class', 'style'],
+      select: ['id', 'class', 'style']
+    })
+  });
+  console.log('unsafe: ' + unsafe);
+  console.log('safe: ' + safe);
+  return safe;
 };
 
 /**

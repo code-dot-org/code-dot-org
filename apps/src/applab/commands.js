@@ -186,7 +186,8 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  newDiv.innerHTML = opts.html;
+  var sanitized = utils.sanitizeHtml(opts.html);
+  newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
   return Boolean(Applab.activeScreen().appendChild(newDiv));
@@ -1042,7 +1043,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = opts.html;
+    div.innerHTML = utils.sanitizeHtml(opts.html);
     return true;
   }
   return false;
