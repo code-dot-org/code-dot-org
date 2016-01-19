@@ -209,6 +209,34 @@ exports.execute = function (commands) {
 };
 
 /**
+ * Execute a list of shell commands in parallel.
+ * @param {string[]} commands - array of shell commands to be executed in parallel.
+ * @return {Promise} which resolves when all subprocesses complete, or rejects if
+ *         any of them fail.
+ */
+exports.executeParallel = function (commands) {
+  var options = {
+    env: _.extend({}, process.env, {
+      PATH: './node_modules/.bin:' + process.env.PATH
+    }),
+    stdio: 'inherit'
+  };
+
+  return Promise.all(commands.map(function (command) {
+    return new Promise(function (resolve, reject) {
+      console.log(command);
+      child_process.exec(command, options, function (error, stdout) {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(stdout);
+        }
+      });
+    });
+  }));
+};
+
+/**
  * End the node process with the given error message and code.
  * Ensures an exit code of at least one, in case the error doesn't have a code.
  * @param {Error} err
