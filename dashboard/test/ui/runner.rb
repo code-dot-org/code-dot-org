@@ -92,6 +92,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
   end
+  opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
+    $options.fail_fast = true
+  end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit
@@ -220,6 +223,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
+  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
 
   # Force Applitools eyes to use a consistent host OS identifier for now
