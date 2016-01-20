@@ -4,6 +4,9 @@ class AdminReportsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    # Stub properties so we don't try to hit pegasus DB.
+    Properties.stubs(:get).returns nil
+
     @admin = create(:admin)
     sign_in(@admin)
 
@@ -30,8 +33,8 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :funometer
   generate_admin_only_tests_for :level_answers
+  generate_admin_only_tests_for :hoc_signups
   # TODO(asher): Add :funometer_by_script and :funometer_by_script_level after fixing routing.
-  # TODO(asher): Add :hoc_signups after fixing the pegasus-test DB issue.
 
   test 'should get admin progress page' do
     get :admin_progress
