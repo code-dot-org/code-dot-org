@@ -5,7 +5,11 @@ require 'time'
 
 REPO_DIR = File.expand_path('../../', __FILE__)
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__)
+
+#This file indicates whether the script is running
 LEVELBUILDER_CI_LOCK_FILENAME = 'levelbuilder_ci_lock'
+
+#This file contains the time of the last completed test run, successful or unsuccessful
 LEVELBUILDER_CI_LAST_RUN_FILENAME = 'levelbuilder_ci_last_run'
 
 Dir.chdir(REPO_DIR)
@@ -14,7 +18,8 @@ exit if File.exist? LEVELBUILDER_CI_LOCK_FILENAME
 
 system "touch #{LEVELBUILDER_CI_LOCK_FILENAME}"
 
-last_modified_time = File.exist?(LEVELBUILDER_CI_LAST_RUN_FILENAME) ? DateTime.parse(File.read(LEVELBUILDER_CI_LAST_RUN_FILENAME)).to_time : Time.at(0)
+last_modified_time = File.exist?(LEVELBUILDER_CI_LAST_RUN_FILENAME) ?
+    DateTime.parse(File.read(LEVELBUILDER_CI_LAST_RUN_FILENAME)).to_time : Time.at(0)
 
 modified_files = HooksUtils.get_modified_files
 unstaged_files = HooksUtils.get_unstaged_files
@@ -39,6 +44,7 @@ puts "Modifications to levelbuilder files detected - running testing"
 
 Dir.chdir(REPO_DIR + '/dashboard')
 
+#This test suite can be modified - we can test a smaller set or add UI tests here
 test_result = system 'rake test'
 
 Dir.chdir REPO_DIR
