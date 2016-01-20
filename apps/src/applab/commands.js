@@ -1540,7 +1540,7 @@ applabCommands.updateRecord = function (opts) {
 
 applabCommands.handleUpdateRecord = function(opts, record, success) {
   if (opts.onComplete) {
-    opts.onComplete.call(null, record);
+    opts.onComplete.call(null, record, success);
   }
 };
 
