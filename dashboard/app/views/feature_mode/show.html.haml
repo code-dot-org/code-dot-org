@@ -44,6 +44,12 @@
   .feature_grid tr:nth-child(odd) {
     background-color: #eee;
   }
+  .grid_preview_pending  {
+    display: none;
+  }
+  .grid_preview_pending table {
+    opacity: 0.6;
+  }
 
 %h1 Tutorial feature mode
 
@@ -82,8 +88,8 @@
         %td
           - for mode in FeatureModeManager::MODES
             - is_current_mode = (mode == @mode)
-            - style = is_current_mode ? '' : 'display: none; opacity: 0.6'
-            %div{id: "#{mode}_grid", class: 'grid_preview', style: style}
+            - extra_css_class = is_current_mode ? '' : 'grid_preview_pending'
+            %div{id: "#{mode}_grid", class: 'grid_preview ' + extra_css_class}
               %div.grid_title
                 = mode.capitalize
                 mode

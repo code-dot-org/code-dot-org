@@ -111,37 +111,20 @@ class FeatureModeManager
     end
   end
 
-  # Returns a set of the names of all of the Gatekeeper features enabled or disabled for
-  # the given mode.
-  def self.get_feature_names_for_mode(mode)
-    settings = MODE_SETTINGS_MAP[mode]
-    Set.new(settings[:gatekeeper_general_settings].keys +
-                settings[:gatekeeper_hoc_tutorial_settings].keys)
-  end
-
-  # Returns true if the given mode allows the given feature for a hoc script, false if
-  # it disallows it, and nil if the setting is unspecified.
-  def self.mode_allows_feature_for_hoc_scripts(mode, feature)
-    return nil unless MODES.include?(mode)
-    MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings][feature]
-  end
-
-  # Returns true if the given mode allows the given feature by default.
-  def self.mode_allows_feature_by_default(mode, feature)
-    return nil unless MODES.include?(mode)
-    MODE_SETTINGS_MAP[mode][:gatekeeper_general_settings][feature]
-  end
-
-  # Returns true if the feature mode manager allows the `feature` in `mode`,
-  # falling through to the value from the Gatekeeper if the manager doesn't specify a value.
+  # Returns true if the feature mode manager allows the `feature` in `mode` for hoc tutorial
+  # `script`, falling through to the value from the Gatekeeper if the manager doesn't
+  # specify a value.
   def self.allows(gatekeeper, mode, feature, script)
-    setting =
-        FeatureModeManager.mode_allows_feature_for_hoc_scripts(mode, feature) ||
-            FeatureModeManager.mode_allows_feature_by_default(mode, feature)
-    return setting unless setting.nil?
+    # Use the value from the mode settings map, if defined.
+    settings = MODE_SETTINGS_MAP[mode]
+    if settings
+      allowed = settings[:gatekeeper_general_settings][feature] ||
+          settings[:gatekeeper_hoc_tutorial_settings][feature]
+      return allowed unless allowed.nil?
+    end
 
     # Otherwise use the value from the Gatekeeper.
-    script ? gatekeeper.allows(feature, where: {script_name: script}) : gatekeeper.allows(feature)
+    gatekeeper.allows(feature, where: (script ? {script_name: script} : {}))
   end
 
   def self.dcdo_matches_mode?(dcdo, mode)
