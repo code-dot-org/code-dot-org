@@ -11,8 +11,6 @@ class FeatureModeController < ApplicationController
   PLEASE_WAIT_MESSAGE = "Updating feature mode. Please wait #{MAX_UPDATE_TIME} seconds for " +
       'changes to take effect, then send a CloudFront cache invalidation.'
 
-  CUSTOM_MODE = 'custom'
-
   # Shows the current or pending feature mode.
   def show
     authorize! :read, :reports
@@ -30,7 +28,7 @@ class FeatureModeController < ApplicationController
     elsif @current_mode
       @mode =  @current_mode
     else
-      @mode = CUSTOM_MODE
+      @mode = 'custom'
       flash[:alert] = 'The current feature flags do not match any of the pre-defined modes.'
     end
   end

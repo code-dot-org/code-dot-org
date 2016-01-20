@@ -75,7 +75,7 @@
       %tr
         %td
         %td
-          = submit_tag('Update', :id => 'submit', :disabled => 'true')
+          = submit_tag('Update feature mode', :id => 'submit', :disabled => 'true')
 
       %tr
         %td
@@ -91,5 +91,22 @@
                   (current)
                 - else
                   (preview)
-              - locals = { feature_names: @feature_names, script_names: @script_names, mode: mode }
-              = render :partial => 'feature_grid', :locals => locals
+              %div.feature_grid
+                %table{border: 1, cellpadding: 5}
+                  %tr
+                    %td
+                    %td
+                      DEFAULT
+                    - for script_name in @script_names
+                      %td
+                        = script_name
+                  - for feature in @feature_names
+                    %tr
+                      %td.heading
+                        = feature
+                      %td
+                        = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, nil)
+                      - for script in @script_names
+                        %td
+                          = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
+
