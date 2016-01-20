@@ -11,7 +11,7 @@ var commander = require('commander');
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
 commander
-    .option('--min', 'Build minified output', false)
+    .option('--dist', 'Build output optimized for distribution', false)
     .option('--watch', 'Watch file system', false)
     .parse(process.argv);
 
@@ -19,7 +19,7 @@ var defaultOptions = {
   srcPath: 'src/js/',
   buildPath: 'build/js/',
   shouldFactor: false,
-  shouldMinify: commander.min,
+  forDistribution: commander.dist,
   shouldWatch: commander.watch
 };
 

@@ -26,7 +26,7 @@ var INCLUDE_PATHS = [
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
 commander
-    .option('--min', 'Build minified output', false)
+    .option('--dist', 'Build output optimized for distribution', false)
     .parse(process.argv);
 
 // Run build (exits on failure)
@@ -36,8 +36,8 @@ build_commands
     ])
     .then(function () {
       return build_commands.executeParallel([
-        build_commands.sass(SRC_PATH, BUILD_PATH, 'levelbuilder.scss', INCLUDE_PATHS, commander.min),
-        build_commands.sass(SRC_PATH, BUILD_PATH, 'leveltype_widget.scss', INCLUDE_PATHS, commander.min)
+        build_commands.sass(SRC_PATH, BUILD_PATH, 'levelbuilder.scss', INCLUDE_PATHS, commander.dist),
+        build_commands.sass(SRC_PATH, BUILD_PATH, 'leveltype_widget.scss', INCLUDE_PATHS, commander.dist)
       ]);
     })
     .then(build_commands.logSuccess("code-studio css built"))
