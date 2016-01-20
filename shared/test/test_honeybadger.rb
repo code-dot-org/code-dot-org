@@ -1,9 +1,8 @@
-require 'minitest/autorun'
-require 'rack/test'
+require_relative 'test_helper'
 require 'mocha/mini_test'
 
-require_relative '../../lib/cdo/env'
-require_relative '../../lib/cdo/honeybadger'
+require 'cdo/env'
+require 'cdo/honeybadger'
 
 class HoneybadgerTest < Minitest::Test
 
