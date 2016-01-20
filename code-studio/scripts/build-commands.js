@@ -184,31 +184,6 @@ exports.ensureDirectoryExists = function (dir) {
 };
 
 /**
- * Execute a sequence of shell commands as a build script, with useful output
- * wherever possible.
- * Will call process.exit() if the command fails for any reason.
- * @param {string[]} commands - array of shell commands to be executed in sequence.
- */
-exports.execute = function (commands) {
-  commands.forEach(function (command) {
-    try {
-      console.log(command);
-
-      // For documentation on synchronous execution of shell commands from node scripts, see:
-      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-      var result = child_process.execSync(command, {
-        env: _.extend({}, process.env, {
-          PATH: './node_modules/.bin:' + process.env.PATH
-        }),
-        stdio: 'inherit'
-      });
-    } catch (e) {
-      exports.exitWithError(e);
-    }
-  });
-};
-
-/**
  * Execute a list of shell commands in sequence.
  * @param {string[]} commands - array of shell commands to be executed in sequence.
  * @return {Promise} which resolves when all commands complete (to the stdout
@@ -244,7 +219,8 @@ exports.executeSequence = function (commands) {
 /**
  * Execute a list of shell commands in parallel.
  * @param {string[]} commands - array of shell commands to be executed in parallel.
- * @return {Promise} which resolves when all subprocesses complete, or rejects if
+ * @return {Promise.<string[]>} which resolves to an array of stdout results
+ *         from each command when all subprocesses complete, or rejects if
  *         any of them fail.
  */
 exports.executeParallel = function (commands) {
@@ -267,17 +243,6 @@ exports.executeParallel = function (commands) {
       });
     });
   }));
-};
-
-/**
- * End the node process with the given error message and code.
- * Ensures an exit code of at least one, in case the error doesn't have a code.
- * @param {Error} err
- */
-exports.exitWithError = function (err) {
-  console.log("\nError: " + err.message);
-  warnIfWrongNodeVersion();
-  process.exit(err.status || 1);
 };
 
 /**
@@ -332,6 +297,30 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
 function ensureTargetDirectoryExists(target) {
   mkdirp.sync(path.dirname(target));
 }
+
+/**
+ * @param {!string} message
+ * @returns {Function} that logs the given message in a success style.
+ */
+exports.logSuccess = function (message) {
+  return function () {
+    exports.logBoxedMessage(message);
+  };
+};
+
+/**
+ * @param {!string} message
+ * @returns {Function} that logs the given message in a failure style along
+ *          with the error that triggered the failure, and rethrows the
+ *          error.
+ */
+exports.logFailure = function (message) {
+  return function (error) {
+    exports.logBoldRedError(error);
+    exports.logBoxedMessage(message, chalk.bold.red.bgBlack);
+    throw error;
+  };
+};
 
 /**
  * Helper for formatting error messages for the terminal.

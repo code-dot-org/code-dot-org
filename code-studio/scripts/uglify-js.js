@@ -8,37 +8,21 @@ var config = require('./config');
 var fs = require('fs');
 var recursiveReaddirSync = require('recursive-readdir-sync');
 
-/**
- * Run uglify on the built JavaScript files in the build directory.
- * @returns {Promise} that resolves when the build is completed or fails.
- */
-function uglifyBuiltJS() {
+// List all the .js files in the build directory
+var builtFiles = recursiveReaddirSync(config.JS_BUILD_PATH).filter(function (path) {
+  return /\.js$/i.test(path);
+});
 
-  // List all the .js files in the build directory
-  var builtFiles = recursiveReaddirSync(config.JS_BUILD_PATH).filter(function (path) {
-    return /\.js$/i.test(path);
-  });
+// Design the shell commands for uglifying those files
+var uglifyCommands = builtFiles.map(function (path) {
+  return [
+    'uglifyjs ' + path,
+    '--compress warnings=false',
+    '--mangle',
+    '--output ' + path
+  ].join(' \\\n    ');
+});
 
-  // Design the shell commands for uglifying those files
-  var uglifyCommands = builtFiles.map(function (path) {
-    return [
-      'uglifyjs ' + path,
-      '--compress warnings=false',
-      '--mangle',
-      '--output ' + path
-    ].join(' \\\n    ');
-  });
-
-  return build_commands.executeParallel(uglifyCommands)
-      .then(function () {
-        build_commands.logBoxedMessage("code-studio js uglified");
-      }, function (error) {
-        build_commands.logBoxedMessage("code-studio js uglify failed");
-        throw error;
-      });
-}
-
-module.exports = uglifyBuiltJS;
-if (!module.parent) {
-  uglifyBuiltJS();
-}
+build_commands.executeParallel(uglifyCommands)
+    .then(build_commands.logSuccess("code-studio js uglified"))
+    .catch(build_commands.logFailure("code-studio js uglify failed"));
