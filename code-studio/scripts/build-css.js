@@ -3,7 +3,6 @@
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
-var _ = require('lodash');
 var build_commands = require('./build-commands');
 var commander = require('commander');
 var path = require('path');
@@ -52,6 +51,6 @@ var sassCommands = FILES.map(function (file) {
 
 // Run build (exits on failure)
 build_commands.ensureDirectoryExists(BUILD_PATH)
-    .then(_.partial(build_commands.executeShellCommandsInParallel, sassCommands))
-    .then(_.partial(build_commands.logSuccess, "code-studio css built"))
-    .catch(_.partial(build_commands.logFailure, "code-studio css failed"));
+    .then(build_commands.executeShellCommandsInParallel.bind(undefined, sassCommands))
+    .then(build_commands.logSuccess.bind(undefined, "code-studio css built"))
+    .catch(build_commands.logFailure.bind(undefined, "code-studio css failed"));
