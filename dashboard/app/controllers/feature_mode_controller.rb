@@ -20,11 +20,10 @@ class FeatureModeController < ApplicationController
     @script_names = Gatekeeper.script_names.sort
     @feature_names = Gatekeeper.feature_names.sort
 
-      # If a mode update is still pending, show that mode and display a notice.
+      # If a mode update is still pending, display a notice.
     if @pending_mode && @current_mode != @pending_mode
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
-    # Otherwise show the mode determined from the gatekeeper settings (if any)
     elsif @current_mode
       @mode =  @current_mode
     else
