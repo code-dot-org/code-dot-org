@@ -119,14 +119,29 @@ class FeatureModeManager
                 settings[:gatekeeper_hoc_tutorial_settings].keys)
   end
 
-  # Returns true if the given mode allows the given feature for a hoc script.
+  # Returns true if the given mode allows the given feature for a hoc script, false if
+  # it disallows it, and nil if the setting is unspecified.
   def self.mode_allows_feature_for_hoc_scripts(mode, feature)
+    return nil unless MODES.include?(mode)
     MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings][feature]
   end
 
   # Returns true if the given mode allows the given feature by default.
   def self.mode_allows_feature_by_default(mode, feature)
+    return nil unless MODES.include?(mode)
     MODE_SETTINGS_MAP[mode][:gatekeeper_general_settings][feature]
+  end
+
+  # Returns true if the feature mode manager allows the `feature` in `mode`,
+  # falling through to the value from the Gatekeeper if the manager doesn't specify a value.
+  def self.allows(gatekeeper, mode, feature, script)
+    setting =
+        FeatureModeManager.mode_allows_feature_for_hoc_scripts(mode, feature) ||
+            FeatureModeManager.mode_allows_feature_by_default(mode, feature)
+    return setting unless setting.nil?
+
+    # Otherwise use the value from the Gatekeeper.
+    script ? gatekeeper.allows(feature, where: {script_name: script}) : gatekeeper.allows(feature)
   end
 
   def self.dcdo_matches_mode?(dcdo, mode)
