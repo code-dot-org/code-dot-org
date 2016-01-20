@@ -3,6 +3,7 @@
  * package and its dependencies over into the build output directory. */
 'use strict';
 
+var _ = require('lodash');
 var build_commands = require('./build-commands');
 
 /** @const {string} */
@@ -24,6 +25,6 @@ build_commands
       // we'd prefer to avoid this way of doing things.
       build_commands.copyDirectory('./node_modules/video.js/dist/video-js', BUILD_PATH)
     ])
-    .then(build_commands.logSuccess("code-studio assets copied"))
-    .catch(build_commands.logFailure("code-studio asset copy failed"));
+    .then(_.partial(build_commands.logSuccess, "code-studio assets copied"))
+    .catch(_.partial(build_commands.logFailure, "code-studio asset copy failed"));
 
