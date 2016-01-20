@@ -147,7 +147,7 @@ exports.sanitizeHtml = function(unsafe, warn) {
     allowedSchemes: sanitizeHtml.defaults.allowedSchemes.concat(['data'])
   });
 
-  if (typeof warn === 'function') {
+  if (typeof warn === 'function' && safe != unsafe) {
     warnAboutUnsafeHtml(warn, unsafe, safe);
   }
 
