@@ -16,7 +16,14 @@ class FeatureModeController < ApplicationController
     authorize! :read, :reports
     @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO, ScriptConfig.cached_scripts)
     @pending_mode = pending_mode
-    # If a mode update is still pending, show that mode and display a notice.
+
+    @script_names = Gatekeeper.script_names
+    @feature_names = Gatekeeper.feature_names
+    @allows_predicate = lambda do |feature, script|
+      script ? Gatekeeper.allows(feature, where: {script_name: script}) : Gatekeeper.allows(feature)
+    end
+
+        # If a mode update is still pending, show that mode and display a notice.
     if @pending_mode && @current_mode != @pending_mode
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
@@ -29,6 +36,7 @@ class FeatureModeController < ApplicationController
       flash[:alert] = 'The current feature flags do not match any of the pre-defined modes.'
     end
   end
+
 
   # Updates the feature mode based on params[:mode].
   def update

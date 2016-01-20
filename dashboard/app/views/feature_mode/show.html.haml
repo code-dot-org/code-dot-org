@@ -81,15 +81,15 @@
                   %td
                   %td
                     DEFAULT
-                  - for script_name in Gatekeeper.script_names
+                  - for script_name in @script_names
                     %td
                       = script_name
-                - for feature in Gatekeeper.feature_names
+                - for feature in @feature_names
                   %tr
                     %td.heading
                       = feature
                     %td
-                      = boolean_checkmark Gatekeeper.allows(feature)
-                    - for script in Gatekeeper.script_names
+                      = boolean_checkmark @allows_predicate.call(feature, nil)
+                    - for script in @script_names
                       %td
-                        = boolean_checkmark Gatekeeper.allows(feature, where: {script_name: script})
+                        = boolean_checkmark @allows_predicate.call(feature, script)
