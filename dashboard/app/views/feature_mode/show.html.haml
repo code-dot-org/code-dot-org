@@ -107,9 +107,7 @@
                     %tr
                       %td.heading
                         = feature
-                      %td
-                        = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, nil)
-                      - for script in @script_names
+                      - for script in [nil] + @script_names
                         %td
                           = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
 
