@@ -178,6 +178,13 @@ applabCommands.setScreen = function (opts) {
   Applab.changeScreen(opts.screenId);
 };
 
+function reportUnsafeHtml(removed, unsafe, safe) {
+  var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
+  var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+  outputError(msg, ErrorLevel.WARNING, currentLineNumber);
+}
+
 applabCommands.container = function (opts) {
   if (opts.elementId) {
     apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
@@ -186,7 +193,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = utils.sanitizeHtml(opts.html);
+  var sanitized = utils.sanitizeHtml(opts.html, reportUnsafeHtml);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -1043,7 +1050,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = utils.sanitizeHtml(opts.html);
+    div.innerHTML = utils.sanitizeHtml(opts.html, reportUnsafeHtml);
     return true;
   }
   return false;
