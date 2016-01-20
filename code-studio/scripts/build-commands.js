@@ -31,7 +31,7 @@ var watchify = require('watchify');
  *        <filenames>.js. If false, everything ends up in config.commonFile.
  * @param {boolean} config.shouldWatch if true, will watch file system for
  *        changes, and rebuild when it detects them
- * @param {boolean} [config.shouldMinify] - If true, this bundle step will be
+ * @param {boolean} [config.forDistribution] - If true, this bundle step will be
  *        treated as part of a build for distribution, with certain environment
  *        variables inlined, and dead code and whitespace removed.
  * @returns {Promise} that resolves after the build completes or fails - even
@@ -48,7 +48,7 @@ exports.bundle = function (config) {
   var commonFile = config.commonFile;
   var shouldFactor = config.shouldFactor;
   var shouldWatch = config.shouldWatch;
-  var shouldMinify = config.shouldMinify;
+  var forDistribution = config.forDistribution;
 
   var outPath = function (inPath) {
     return path
@@ -93,7 +93,7 @@ exports.bundle = function (config) {
   // babelify tranforms jsx files for us
   bundler.transform('babelify', { compact: false });
 
-  if (shouldMinify) {
+  if (forDistribution) {
     // We inline 'production' as the NODE_ENV in distribution builds because this
     // puts React into production mode, and allows uglifyify to remove related
     // dead code paths.
@@ -256,13 +256,13 @@ exports.logBoxedMessage = function (message, style) {
  * @param {string[]} includePaths - List of paths to search for files included
  *        via scss import directives, rooted at the working directory, with NO
  *        trailing slash.
- * @param {boolean} [shouldMinify] if provided and TRUE, will build minified
- *        output files (with .min.css extensions) instead of unminified output.
+ * @param {boolean} [forDistribution] if provided and TRUE, will build minified
+ *        output files instead of unminified output.
  * @returns {string}
  */
-exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
-  var command = 'node-sass' + (shouldMinify ? ' --output-style compressed' : '');
-  var extension = (shouldMinify ? '.min.css' : '.css');
+exports.sass = function (srcPath, buildPath, file, includePaths, forDistribution) {
+  var command = 'node-sass' + (forDistribution ? ' --output-style compressed' : '');
+  var extension = '.css';
   var includePathArgs = includePaths.map(function (path) {
     return '--include-path ' + path;
   }).join(" \\\n    ");

@@ -13,21 +13,30 @@
   },
   "scripts": {
     "postinstall": "linklocal",
-    "clean": "rm -rf build",
-    "lint": "npm run lint-js -s && npm run lint-css -s",
+
+    "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
-    "build": "npm run copy-assets && npm run build-js && npm run build-css",
-    "build:dist": "npm run lint && npm test && npm run clean && npm run copy-assets && npm run build-css && npm run build-js:min && npm run uglify-js",
-    "build:min": "npm run copy-assets && npm run build-js:min && npm run build-css:min",
-    "build-css": "scripts/build-css.js",
-    "build-css:min": "scripts/build-css.js --min",
-    "build-js": "scripts/build-js.js",
-    "build-js:min": "scripts/build-js.js --min",
-    "copy-assets": "scripts/copy-assets.js",
-    "start": "scripts/build-js.js --watch",
+
     "test": "echo \"Tests Unimplemented.\"",
-    "uglify-js": "scripts/uglify-js.js"
+
+    "clean": "npm run clean-assets && npm run clean-css && npm run clean-js && rm -rf build",
+    "clean-assets": "rm -rf build/assets",
+    "clean-css": "rm -rf build/css",
+    "clean-js": "rm -rf build/js",
+
+    "copy-assets": "scripts/copy-assets.js",
+
+    "build": "npm run copy-assets && npm run build-css && npm run build-js",
+    "build:dist": "npm run clean && npm run copy-assets && npm run build-css:dist && npm run build-js:dist",
+
+    "build-css": "scripts/build-css.js",
+    "build-css:dist": "npm run lint-css && npm run clean-css && scripts/build-css.js --dist",
+
+    "build-js": "scripts/build-js.js",
+    "build-js:dist": "npm run lint-js && npm test && npm run clean-js && scripts/build-js.js --dist && scripts/uglify-js.js",
+
+    "start": "scripts/build-js.js --watch"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
