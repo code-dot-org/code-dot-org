@@ -7,6 +7,7 @@ class GeocoderTest < Minitest::Test
   include SetupTest
 
   def test_finding_potential_addresses
+    Geocoder.configure lookup: :google, api_key: nil
     assert_nil(Geocoder.find_potential_street_address('this is just some text'))
     assert(Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
     assert_equal('1 Embarcadero Blvd SF CA', Geocoder.find_potential_street_address('1 Embarcadero Blvd SF CA'))
