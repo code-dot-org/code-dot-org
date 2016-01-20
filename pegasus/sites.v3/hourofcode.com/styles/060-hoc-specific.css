@@ -15,7 +15,7 @@
 }
 #language-dropdown {
   float: right;
-  margin-left: 2em;
+  margin-left: 1em;
   width: 150px;
   text-align: left;
 }
@@ -40,7 +40,7 @@
   display: inline-block;
   float: left;
   padding-top: 0.25em;
-  margin-right: 1.5em;
+  margin-right: 0.50em;
   text-indent: 0;
   list-style-type: none;
 }
