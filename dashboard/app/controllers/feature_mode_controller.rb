@@ -17,8 +17,8 @@ class FeatureModeController < ApplicationController
     @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO, ScriptConfig.cached_scripts)
     @pending_mode = pending_mode
 
-    @script_names = Gatekeeper.script_names
-    @feature_names = Gatekeeper.feature_names
+    @script_names = Gatekeeper.script_names.sort
+    @feature_names = Gatekeeper.feature_names.sort
     @allows_predicate = lambda do |feature, script|
       script ? Gatekeeper.allows(feature, where: {script_name: script}) : Gatekeeper.allows(feature)
     end
