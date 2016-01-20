@@ -190,7 +190,15 @@ exports.ensureDirectoryExists = function (dir) {
 exports.executeShellCommand = function (command) {
   return new Promise(function (resolve, reject) {
     console.log(command);
-    child_process.exec(command, getChildProcessOptions(), function (err, stdout) {
+    child_process.exec(command, getChildProcessOptions(), function (err, stdout, stderr) {
+      if (stderr && stderr.length) {
+        console.log(stderr);
+      }
+
+      if (stdout && stdout.length) {
+        console.log(stdout);
+      }
+
       if (err) {
         reject(transformExecError(err));
       } else {
@@ -302,8 +310,7 @@ function getChildProcessOptions() {
   return {
     env: _.extend({}, process.env, {
       PATH: './node_modules/.bin:' + process.env.PATH
-    }),
-    stdio: 'inherit'
+    })
   };
 }
 
