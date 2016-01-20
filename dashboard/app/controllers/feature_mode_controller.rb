@@ -16,7 +16,6 @@ class FeatureModeController < ApplicationController
     authorize! :read, :reports
     @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO, ScriptConfig.cached_scripts)
     @pending_mode = pending_mode
-
     @script_names = Gatekeeper.script_names.sort
     @feature_names = Gatekeeper.feature_names.sort
 
