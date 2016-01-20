@@ -60,7 +60,7 @@ def geocoder_config
   }.tap do |config|
     config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
 
-    if CDO.google_maps_client_id && CDO.google_maps_secret
+    if CDO.google_maps_client_id && CDO.google_maps_secret && ENV['UNIT_TEST'] != '1'
       config[:lookup] = :google_premier
       config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
     end
