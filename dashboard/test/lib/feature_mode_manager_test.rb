@@ -67,23 +67,8 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 360, @dcdo.get('public_max_age', nil)
   end
 
-  def test_mode_allows_feature
-    assert FeatureModeManager.mode_allows_feature_for_hoc_scripts('normal', 'postMilestone')
-    assert FeatureModeManager.mode_allows_feature_by_default('normal', 'puzzle_rating')
-    refute FeatureModeManager.mode_allows_feature_for_hoc_scripts('emergency', 'postMilestone')
-    refute FeatureModeManager.mode_allows_feature_by_default('emergency', 'puzzle_rating')
-  end
 
-  def test_mode_allows_feature_with_unknown_mode
-    assert_nil FeatureModeManager.mode_allows_feature_for_hoc_scripts('custom', 'postMilestone')
-  end
-
-  def test_mode_allows_feature_with_unknown_feature
-    assert_nil FeatureModeManager.mode_allows_feature_for_hoc_scripts('normal', 'unknownFeature')
-  end
-
-  def test_mode_or_gatekeeper_allows
-    scripts = ScriptConfig.cached_scripts
+  def test_allows
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, ['script'])
 
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
