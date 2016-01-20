@@ -82,7 +82,8 @@ exports.sanitizeHtml = function(unsafe) {
       input: ['id', 'checked', 'class', 'style', 'type', 'value'],
       label: ['id', 'class', 'style'],
       select: ['id', 'class', 'style']
-    })
+    }),
+    allowedSchemes: sanitizeHtml.defaults.allowedSchemes.concat(['data'])
   });
   console.log('unsafe: ' + unsafe);
   console.log('safe: ' + safe);
