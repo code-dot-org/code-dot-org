@@ -12,7 +12,8 @@
         %td.heading
           = feature
         %td
-          = boolean_checkmark allows_predicate.call(feature, nil)
+          = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, nil)
         - for script in script_names
           %td
-            = boolean_checkmark allows_predicate.call(feature, script)
+            = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
+

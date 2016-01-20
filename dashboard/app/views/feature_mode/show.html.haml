@@ -16,6 +16,15 @@
   #hoc_features .heading {
     text-align: left;
   }
+  .grid_title {
+    font-family: Arial;
+    font-size: 120%;
+    margin: 20px 0px 10px 0px;
+    font-weight: bold;
+  }
+  .preview_label {
+    color: red
+  }
   .true_flag {
     font-size: 150%;
     color: green
@@ -25,7 +34,6 @@
     color: red
   }
   .feature_grid {
-    margin-top: 20px;
   }
   .feature_grid table, #feature_grid tr, #feature_grid td {
     border-collapse: collapse;
@@ -49,7 +57,7 @@
         %tr{class: mode}
           %td
             = radio_button_tag 'mode', mode, mode == @mode, {id: mode,
-                onclick: "$('#submit').prop('disabled', false)"}
+                onclick: "$('.grid_preview').hide(); $('##{mode}_grid').show(); $('#submit').prop('disabled', false)"}
           %td
             %label{for: mode}
               %h3{class: @mode == mode ? 'selected' : ''}
@@ -71,10 +79,18 @@
         %td
           = submit_tag('Update', :id => 'submit', :disabled => 'true')
 
-      - unless @hide_feature_grid
-        %tr
-          %td
-          %td
-            = render :partial => 'feature_grid', :locals => { feature_names: @feature_names,
-              script_names: @script_names,
-              allows_predicate: @allows_predicate}
+      %tr
+        %td
+        %td
+          - for mode in FeatureModeManager::MODES
+            - is_current_mode = (mode == @mode)
+            %div{id: "#{mode}_grid", class: 'grid_preview', style: is_current_mode ? '' : 'display: none'}
+              %div.grid_title
+                = mode.capitalize
+                mode
+                - if is_current_mode
+                  (current)
+                - else
+                  (preview)
+              - locals = { feature_names: @feature_names, script_names: @script_names, mode: mode }
+              = render :partial => 'feature_grid', :locals => locals

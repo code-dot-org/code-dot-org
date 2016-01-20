@@ -65,7 +65,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 360, @dcdo.get('public_max_age', nil)
-
   end
 
   def test_get_feature_names_for_mode
@@ -78,6 +77,39 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert FeatureModeManager.mode_allows_feature_by_default('normal', 'puzzle_rating')
     refute FeatureModeManager.mode_allows_feature_for_hoc_scripts('emergency', 'postMilestone')
     refute FeatureModeManager.mode_allows_feature_by_default('emergency', 'puzzle_rating')
+  end
+
+  def test_mode_allows_feature_with_unknown_mode
+    assert_nil FeatureModeManager.mode_allows_feature_for_hoc_scripts('custom', 'postMilestone')
+  end
+
+  def test_mode_allows_feature_with_unknown_feature
+    assert_nil FeatureModeManager.mode_allows_feature_for_hoc_scripts('normal', 'unknownFeature')
+  end
+
+  def test_mode_or_gatekeeper_allows
+    scripts = ScriptConfig.cached_scripts
+    FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, ['script'])
+
+    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
+    @gatekeeper.set('postMilestone', where: {script_name: 'script'}, value: false)
+    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
+
+    # Feature mode manager settings should take priority over gatekeeper settings.
+    @gatekeeper.set('postMilestone', value: false)
+    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
+
+    # Features which aren't specified in the feature mode manager should fall back on the Gatekeeper
+    # setting.
+    refute FeatureModeManager.allows(@gatekeeper, 'normal', 'newFeature', 'script')
+    @gatekeeper.set('newFeature', where: {script_name: 'script'}, value: false)
+    refute FeatureModeManager.allows(@gatekeeper, 'normal', 'newFeature', 'script')
+    @gatekeeper.set('newFeature', where: {script_name: 'script'}, value: true)
+    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'newFeature', 'script')
+
+    # Make sure the disabled features work correctly as well.
+    FeatureModeManager.set_mode('emergency', @gatekeeper, @dcdo, ['script'])
+    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', 'script')
   end
 
   def test_scale_mode
