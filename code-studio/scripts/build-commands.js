@@ -280,24 +280,21 @@ exports.sass = function (srcPath, buildPath, file, includePaths, forDistribution
  * @returns {Function} that logs the given message in a success style.
  */
 exports.logSuccess = function (message) {
-  return function () {
-    exports.logBoxedMessage(message);
-  };
+  exports.logBoxedMessage(message);
 };
 
 /**
  * @param {!string} message
+ * @param {Error} reason
  * @returns {Function} that logs the given message in a failure style along
  *          with the error that triggered the failure, and rethrows the
  *          error.
  */
-exports.logFailure = function (message) {
-  return function (error) {
-    logBoldRedError(error);
-    warnIfWrongNodeVersion();
-    exports.logBoxedMessage(message, chalk.bold.red.bgBlack);
-    throw error;
-  };
+exports.logFailure = function (message, reason) {
+  logBoldRedError(reason);
+  warnIfWrongNodeVersion();
+  exports.logBoxedMessage(message, chalk.bold.red.bgBlack);
+  throw reason;
 };
 
 /**

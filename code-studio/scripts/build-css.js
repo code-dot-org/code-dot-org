@@ -3,6 +3,7 @@
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
+var _ = require('lodash');
 var build_commands = require('./build-commands');
 var commander = require('commander');
 
@@ -40,5 +41,5 @@ build_commands
         build_commands.sass(SRC_PATH, BUILD_PATH, 'leveltype_widget.scss', INCLUDE_PATHS, commander.dist)
       ]);
     })
-    .then(build_commands.logSuccess("code-studio css built"))
-    .catch(build_commands.logFailure("code-studio css failed"));
+    .then(_.partial(build_commands.logSuccess, "code-studio css built"))
+    .catch(_.partial(build_commands.logFailure, "code-studio css failed"));
