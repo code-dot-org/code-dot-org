@@ -1194,7 +1194,10 @@ Applab.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
   Applab.executionError = null;
-  Applab.JSInterpreter = null;
+  if (Applab.JSInterpreter) {
+    Applab.JSInterpreter.deinitialize();
+    Applab.JSInterpreter = null;
+  }
 };
 
 /**
