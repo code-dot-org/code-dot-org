@@ -54,15 +54,19 @@
 %strong Total student prizes redeemed
 #{@stats['student_prizes_redeemed']}
 %br/
-- @stats['prizes_redeemed'].each do |key, value|
-  #{key.name} #{value}
-  %br/
+-# Guard against there being no prizes_redeemed.
+- if @stats['prizes_redeemed'] != 0
+  - @stats['prizes_redeemed'].each do |key, value|
+    #{key.name} #{value}
+    %br/
 %strong Student prizes available to be redeemed
 #{@stats['student_prizes_available']}
 %br/
-- @stats['prizes_available'].each do |key, value|
-  #{key.name} #{value}
-  %br/
+-# Guard against there being no prizes_available.
+- if @stats['prizes_available'] != 0
+  - @stats['prizes_available'].each do |key, value|
+    #{key.name} #{value}
+    %br/
 %br/
 
 %strong Total teacher prizes earned
