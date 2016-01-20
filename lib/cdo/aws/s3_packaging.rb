@@ -1,6 +1,7 @@
 require 'aws-sdk' # TODO - should we be using the S3.rb in CDO?
 
 # TODO - figure out what should be public vs. private
+# TODO - rationalize arg ordering
 
 BUCKET_NAME = 'cdo-build-package'
 
@@ -65,6 +66,7 @@ class S3Packaging
       # TODO - probably need to be using RakeUtils.system instead in these places
       `tar -zcf #{package.path} *`
     end
+    puts 'Created'
     package
   end
 
@@ -83,6 +85,7 @@ class S3Packaging
       FileUtils.rm_rf Dir.glob("#{target_location}/*")
       `tar -zxf #{package.path}`
     end
+    puts "Decompressed"
   end
 
   # Uploads package to S3
@@ -93,23 +96,51 @@ class S3Packaging
     client = Aws::S3::Client.new
     key = s3_key(package_name, commit_hash)
 
-    # TODO (this yet unbuilt logic belongs elsewhere)
-    # try to get a package
-    # if we get one compare to our own and fail if different
-    # ^ this step is essentially an assert
-
-    # result = client.get_object(bucket: BUCKET_NAME, key: key).body.rea
+    raise "Generated different package for same contents" unless self.package_matches_download(package_name, commit_hash, package)
 
     puts "Uploading: #{key}"
     File.open(package) do |file|
       client.put_object(bucket: BUCKET_NAME, key: key, body: file)
     end
+    puts "Uploaded"
+  end
+
+  # This is essentially an assert.
+  # In general, before creating a package we'll check to see if we already have
+  # one. However, it's possible that while creating one, someone else uploaded
+  # a package (i.e. staging finished its build while test was doing a build of
+  # its own). This validates that the one we created is identical to the one
+  # that was uploaded.
+  # @return [Boolean] True unless we have an existing package and it's different
+  def self.package_matches_download(package_name, commit_hash, new_package)
+    begin
+      old_package = download_package(package_name, commit_hash)
+    rescue Aws::S3::Errors::NoSuchKey
+      # Nothing on S3, we dont have to worry about conflicting
+      return true
+    end
+
+    packages_equivalent(old_package, new_package)
+  end
+
+  # Checks to see if two packages are equivalent by unpacking them into tempfiles
+  # and comparing the results. Simply comparing the packages themselves is not
+  # sufficient, because they can contain metadata.
+  def self.packages_equivalent(package1, package2)
+    diff = Dir.mktmpdir do |dir1|
+      `tar -zxf #{package1.path} -C #{dir1}`
+      Dir.mktmpdir do |dir2|
+        `tar -zxf #{package2.path} -C #{dir2}`
+        `diff -rq #{dir1} #{dir2}`
+      end
+    end
+    diff.empty?
   end
 
   # Downloads package from S3, throws error if given package doesnt exist on s3
   # @param packge_name Name of the package, used in the s3 key
   # @param commit_hash
-  # @return path to the downloaded package
+  # @return tempfile for the downloaded package
   def self.download_package(package_name, commit_hash)
     # TODO - pass client in?
     client = Aws::S3::Client.new
@@ -122,6 +153,7 @@ class S3Packaging
         file.write(chunk)
       end
     end
+    puts "Downloaded"
     package
   end
 end

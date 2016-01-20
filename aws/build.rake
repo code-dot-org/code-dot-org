@@ -168,7 +168,7 @@ CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
   commit_hash = S3Packaging.commit_hash(code_studio_dir)
   next if S3Packaging.attempt_update_package('code-studio', dashboard_dir('public/code-studio-package'), commit_hash)
 
-  raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
+  # raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
 
   puts 'Building code-studio...'
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
@@ -177,8 +177,6 @@ CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
   package = S3Packaging.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
   S3Packaging.decompress_package(package, dashboard_dir('public/code-studio-package'))
 end
-
-
 
 file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
@@ -407,46 +405,15 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with
 
 task 'test-websites' => [$websites_test]
 
-# TODO - think about dev scenario (which i dont think ever goes through build.rake)
-# TODO - handle s3 failures somewhere (right now I think these will just raise exceptions)
-
-# Overall Design:
-# We have a set of built assets (code, css, images, etc) that change based off
-# of an input directory in our repository (i.e. code-dot-org/apps).
-# Rather than storing this built assets in our repo, we want to store them on
-# S3 and only rebuild them if necessary.
-# THe key for each package will be the most recent commit hash that touched the
-# input directory. We will store this commit hash in a file alongside the
-# decompressed built assets so that we can know if we're up to date.
-# glossary:
 task 'brent-upload' do
-  commit_hash = S3Packaging.commit_hash(code_studio_dir)
+  commit_hash = 'foobar'
 
-  temp_package = S3Packaging.create_package(dashboard_dir('public', 'code-studio-package'), commit_hash)
+  # create a package and upload it
+  assets_location = dashboard_dir('public', 'code-studio-package')
+  first_package = S3Packaging.create_package(assets_location, commit_hash)
+  S3Packaging.upload_package('code-studio', first_package, commit_hash)
 
-  S3Packaging.upload_package('code-studio', temp_package, commit_hash)
+  # create a new package and make sure its the same
+  match = S3Packaging.package_matches_download('code-studio', commit_hash, first_package)
+  puts "match: #{match}"
 end
-
-task 'brent-download' do
-  commit_hash = S3Packaging.commit_hash(code_studio_dir)
-
-  S3Packaging.unpack_from_s3('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
-end
-
-task 'brent-ensure' do
-  commit_hash = S3Packaging.commit_hash(code_studio_dir)
-
-  S3Packaging.ensure_updated_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
-end
-
-# task 'brent-build-studio' do
-#   commit_hash = commit_hash(code_studio_dir)
-#
-#   begin
-#     ensure_updated_package('code-studio', dashboard_dir('public', 'code-studio-package'), commit_hash)
-#   rescue Exception => e
-#     # TODO - only build on certain exceptions
-#
-#     #do our build?
-#   end
-# end
