@@ -214,10 +214,10 @@ task :build => ['build:all']
 ##
 ##################################################################################################
 
-# Whether this is a development or adhoc environment where we should install npm and create
+# Whether this is a local or adhoc environment where we should install npm and create
 # a local database.
 def local_environment?
-  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+  (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
 end
 
 def install_npm

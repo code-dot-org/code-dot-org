@@ -1,7 +1,7 @@
 require_relative '../src/env'
 require 'rack/test'
 require 'minitest/autorun'
-require 'fakeweb'
+require 'webmock/minitest'
 
 class HourOfCodeHelpersTest < Minitest::Test
   include Rack::Test::Methods
@@ -17,8 +17,9 @@ class HourOfCodeHelpersTest < Minitest::Test
     local_load_balancer = '10.31.164.34'
 
     # The geocoder gem resolve the IP using freegeoip, this mocks the underlying HTTP request.
-    FakeWeb.register_uri :get, "freegeoip.net/json/#{user_ip}",
+    stub_request(:get, "freegeoip.net/json/#{user_ip}").to_return(
       body: {ip: user_ip, country_code: 'GB'}.to_json
+    )
 
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', "#{user_ip}, #{cloudfront_ip}, #{local_load_balancer}"
