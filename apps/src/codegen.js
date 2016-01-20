@@ -195,7 +195,12 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     maxDepth = Infinity; // default to inifinite levels of depth
   }
   for (i = 0; i < exports.customMarshalObjectList.length; i++) {
-    if (nativeVar instanceof exports.customMarshalObjectList[i]) {
+    // If this is on our list of "custom marshal" objects - or if it a property
+    // on one of those objects (other than a function), create a special
+    // "custom marshal" interpreter object to represent it
+    if (nativeVar instanceof exports.customMarshalObjectList[i] ||
+        (typeof nativeVar !== 'function' &&
+            nativeParentObj instanceof exports.customMarshalObjectList[i])) {
       return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
     }
   }

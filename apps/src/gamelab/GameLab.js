@@ -325,14 +325,10 @@ GameLab.prototype.execute = function() {
       p5obj.setupGlobalMode();
 
       window.preload = function () {
-        // Artificially increment preloadCount to force _start/_setup to wait.
-        // p5._preloadCount++;
-        // this.p5decrementPreload = p5._getDecrementPreload(arguments, p5);
-        // var gamelabPreload = p5._wrapPreload(p5, 'gamelab');
+        // Call our gamelabPreload() to force _start/_setup to wait.
         window.gamelabPreload();
       };
       window.setup = _.bind(function () {
-        console.log("p5 setup");
         p5obj.createCanvas(400, 400);
         if (this.JSInterpreter && this.setupFunc) {
           this.JSInterpreter.queueEvent(this.setupFunc);
@@ -368,6 +364,12 @@ GameLab.prototype.execute = function() {
       enableEvents: true,
       studioApp: this.studioApp_,
       onExecutionError: _.bind(this.handleExecutionError, this),
+      customMarshalGlobalProperties: {
+        width: this.p5,
+        height: this.p5,
+        mouseX: this.p5,
+        mouseY: this.p5
+      }
     });
     if (!this.JSInterpreter.initialized()) {
       return;
@@ -379,25 +381,12 @@ GameLab.prototype.execute = function() {
     codegen.customMarshalObjectList = [ window.p5, window.Sprite, window.Camera, window.p5.Vector, window.p5.Color, window.p5.Image ];
     codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
 
-    var intP5 = codegen.marshalNativeToInterpreter(
-        this.JSInterpreter.interpreter,
-        this.p5,
-        window);
-
-    this.JSInterpreter.interpreter.setProperty(
-        this.JSInterpreter.globalScope,
-        'p5',
-        intP5);
-
-    var intGroup = codegen.marshalNativeToInterpreter(
-        this.JSInterpreter.interpreter,
-        window.Group,
-        window);
-
-    this.JSInterpreter.interpreter.setProperty(
-        this.JSInterpreter.globalScope,
-        'Group',
-        intGroup);
+    // Insert everything on p5 and the Group constructor from p5play into the
+    // global namespace of the interpreter:
+    for (var prop in this.p5) {
+      this.JSInterpreter.createGlobalProperty(prop, this.p5[prop], this.p5);
+    }
+    this.JSInterpreter.createGlobalProperty('Group', window.Group);
 
     /*
     if (this.checkForEditCodePreExecutionFailure()) {
