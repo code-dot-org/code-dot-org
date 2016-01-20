@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
+require_relative '../../common/mailing-list-utils'
 
 # all else petition (petition non-teachers)
 query_subscribed_contacts(q: "kind_s:Petition && -role_s:educator")
