@@ -132,7 +132,7 @@ exports.bundle = function (config) {
     // best indicator of when the bundle is actually done building.
     var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
         .on('error', function (err) {
-          logBoldRedError(err);
+          exports.logBoldRedError(err);
           onComplete(err);
         })
         .on('finish', function () {
@@ -144,7 +144,7 @@ exports.bundle = function (config) {
 
     // Bundle the files and pass them to the output stream
     bundler.bundle().on('error', function (err) {
-      logBoldRedError(err);
+      exports.logBoldRedError(err);
       bundlingAttemptError = err;
       // Necessary to close the stream if an error occurs
       // After calling this, the output stream 'finish' event will occur.
@@ -209,6 +209,39 @@ exports.execute = function (commands) {
 };
 
 /**
+ * Execute a list of shell commands in sequence.
+ * @param {string[]} commands - array of shell commands to be executed in sequence.
+ * @return {Promise} which resolves when all commands complete (to the stdout
+ *         value of the last command in the sequence), or rejects if any of
+ *         them fail.
+ */
+exports.executeSequence = function (commands) {
+  var options = {
+    env: _.extend({}, process.env, {
+      PATH: './node_modules/.bin:' + process.env.PATH
+    }),
+    stdio: 'inherit'
+  };
+
+  return new Promise(function (resolve, reject) {
+    var runNextCommand = function (commands) {
+      var nextCommand = commands[0];
+      console.log(nextCommand);
+      child_process.exec(nextCommand, options, function (error, stdout) {
+        if (error) {
+          reject(transformExecError(error));
+        } else if (1 === commands.length) {
+          resolve(stdout);
+        } else {
+          runNextCommand(commands.slice(1));
+        }
+      });
+    };
+    runNextCommand(commands);
+  });
+};
+
+/**
  * Execute a list of shell commands in parallel.
  * @param {string[]} commands - array of shell commands to be executed in parallel.
  * @return {Promise} which resolves when all subprocesses complete, or rejects if
@@ -227,7 +260,7 @@ exports.executeParallel = function (commands) {
       console.log(command);
       child_process.exec(command, options, function (error, stdout) {
         if (error) {
-          reject(error);
+          reject(transformExecError(error));
         } else {
           resolve(stdout);
         }
@@ -304,7 +337,7 @@ function ensureTargetDirectoryExists(target) {
  * Helper for formatting error messages for the terminal.
  * @param {Error} err
  */
-function logBoldRedError(err) {
+exports.logBoldRedError = function (err) {
   console.log([
     chalk.bold.red(timeStamp()),
     chalk.bold.red(err.name),
@@ -313,7 +346,10 @@ function logBoldRedError(err) {
   if (err.codeFrame) {
     console.log(err.codeFrame);
   }
-}
+  if (err.formatted) {
+    console.log(err.formatted);
+  }
+};
 
 /**
  * @returns {string} a time string formatted [HH:MM:SS] in 24-hour time.
@@ -322,6 +358,34 @@ function timeStamp() {
   return '[' + new Date().toLocaleTimeString('en-US', { hour12: false }) + ']';
 }
 
+/**
+ * Given an error raised by a child_process.exec or execSync call, extract the
+ * inner error JSON that gets dumped into the message and apply its properties
+ * to the original error object before returning it.  If no inner JSON is found,
+ * return the original Error unchanged.
+ * @param {!Error} error
+ * @returns {Error}
+ */
+function transformExecError(error) {
+  // Search for an opening brace on its own line to find the beginning of the
+  // inner error JSON text
+  var match = error.message.match(/^{$/m);
+  var innerErrorIndex = (match ? match.index : -1);
+  if (innerErrorIndex >= 0) {
+    var outerMessage = error.message.slice(0, innerErrorIndex);
+    var innerErrorJSON = error.message.slice(innerErrorIndex);
+    try {
+      var innerError = JSON.parse(innerErrorJSON);
+      for (var key in innerError) {
+        error[key] = innerError[key];
+      }
+      error.message = outerMessage;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  return error;
+}
 
 /**
  * Checks current node version, prints a warning if the expected version is not
