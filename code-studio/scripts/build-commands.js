@@ -156,7 +156,6 @@ exports.bundle = function (config) {
 };
 
 /**
- * Generate command to:
  * Copy one one directory (and entire contents) into another, only updating
  * if source file is newer or destination file is missing.
  * @param {!string} srcDir - Note: If you use trailing slash, the directory's
@@ -164,71 +163,75 @@ exports.bundle = function (config) {
  *                  the trailing slash, the directory itself will be copied
  *                  to destDir.  See `man rsync` for more info.
  * @param {!string} destDir
- * @returns {string}
+ * @returns {Promise}
  */
 exports.copyDirectory = function (srcDir, destDir) {
-  return 'rsync -av ' + srcDir + ' ' + destDir;
+  return exports.executeShellCommand('rsync -av ' + srcDir + ' ' + destDir);
 };
 
 /**
- * Generate command to:
  * Creates given director(y|ies) to any depth if it does not exist, no-op if
  * it does already exist.
  * @param {!string} dir
- * @returns {string}
+ * @returns {Promise}
  */
 exports.ensureDirectoryExists = function (dir) {
-  return 'mkdir -p ' + dir;
+  return exports.executeShellCommand('mkdir -p ' + dir);
 };
 
 /**
- * Execute a list of shell commands in sequence.
- * @param {string[]} commands - array of shell commands to be executed in sequence.
- * @return {Promise} which resolves when all commands complete (to the stdout
- *         value of the last command in the sequence), or rejects if any of
- *         them fail.
+ * Executes a single shell command in a child process that inherits the
+ * environment and stdout/stderr from this process.
+ *
+ * @param {!string} command
+ * @returns {Promise.<string>} which resolves to the child process' stdout if
+ * the command exits with code zero, or rejects if the child process fails.
  */
-exports.executeSequence = function (commands) {
-  var options = getChildProcessOptions();
+exports.executeShellCommand = function (command) {
   return new Promise(function (resolve, reject) {
-    var runNextCommand = function (commands) {
-      var nextCommand = commands[0];
-      console.log(nextCommand);
-      child_process.exec(nextCommand, options, function (error, stdout) {
-        if (error) {
-          reject(transformExecError(error));
-        } else if (1 === commands.length) {
-          resolve(stdout);
-        } else {
-          runNextCommand(commands.slice(1));
-        }
-      });
-    };
-    runNextCommand(commands);
+    console.log(command);
+    child_process.exec(command, getChildProcessOptions(), function (err, stdout) {
+      if (err) {
+        reject(transformExecError(err));
+      } else {
+        resolve(stdout);
+      }
+    });
   });
 };
 
 /**
- * Execute a list of shell commands in parallel.
- * @param {string[]} commands - array of shell commands to be executed in parallel.
- * @return {Promise.<string[]>} which resolves to an array of stdout results
- *         from each command when all subprocesses complete, or rejects if
- *         any of them fail.
+ * Given an array of shell commands, executes those commands in child processes
+ * in parallel.
+ * @param {!string[]} commands - list of shell commands
+ * @returns {Promise} which resolves when all commands are completed, or rejects
+ *          as soon as any command fails.
  */
-exports.executeParallel = function (commands) {
-  var options = getChildProcessOptions();
-  return Promise.all(commands.map(function (command) {
-    return new Promise(function (resolve, reject) {
-      console.log(command);
-      child_process.exec(command, options, function (error, stdout) {
-        if (error) {
-          reject(transformExecError(error));
-        } else {
-          resolve(stdout);
-        }
-      });
-    });
-  }));
+exports.executeShellCommandsInParallel = function (commands) {
+  return Promise.all(commands.map(exports.executeShellCommand));
+};
+
+/**
+ * Given an array of functions that return a promise, invokes the functions
+ * in sequence, waiting to invoke each function until the promise returned by
+ * the function before it in the list has resolved.  If any promise in the
+ * sequence rejects, the rest of the sequence is skipped.
+ *
+ * This is an alternative to manually chaining these functions.  Instead of:
+ *     fn1().then(fn2).then(fn3).then(fn4).then(done);
+ * You can call:
+ *     promiseSequence([fn1, fn2, fn3, fn4]).then(done);
+ *
+ * @param {function[]} functionSequence - functions that return Promises, to be
+ *        called in sequence.
+ * @returns {Promise} which resolves when the Promise returned by the last
+ *          function resolves, or rejects as soon as any Promise in the
+ *          sequence rejects.
+ */
+exports.promiseSequence = function (functionSequence) {
+  return functionSequence.reduce(function (memo, next) {
+    return memo.then(next);
+  }, Promise.resolve());
 };
 
 /**
@@ -240,39 +243,6 @@ exports.logBoxedMessage = function (message, style) {
   style = style || chalk.bold.green.bgBlack;
   var bar = style('+' + _.repeat('-', message.length + 2) + '+');
   console.log(bar + "\n" + style("| " + chalk.white(message) + " |") + "\n" + bar + "\n");
-};
-
-/**
- * Generate command to:
- * Process scss files into css files using node-sass.
- * @param {string} srcPath - Path to root of SCSS source files, absolute
- *        or relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} buildPath - Path to root of output directory, absolute or
- *        relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} file - SCSS file to build, given as a path rooted at
- *        the srcPath given.  Maps to an output file with a corresponding name.
- * @param {string[]} includePaths - List of paths to search for files included
- *        via scss import directives, rooted at the working directory, with NO
- *        trailing slash.
- * @param {boolean} [forDistribution] if provided and TRUE, will build minified
- *        output files instead of unminified output.
- * @returns {string}
- */
-exports.sass = function (srcPath, buildPath, file, includePaths, forDistribution) {
-  var command = 'node-sass' + (forDistribution ? ' --output-style compressed' : '');
-  var extension = '.css';
-  var includePathArgs = includePaths.map(function (path) {
-    return '--include-path ' + path;
-  }).join(" \\\n    ");
-
-  return [
-    command,
-    includePathArgs,
-    srcPath + file,
-    buildPath + path.basename(file, '.scss') + extension
-  ].join(" \\\n    ");
 };
 
 /**
