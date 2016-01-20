@@ -39,9 +39,22 @@
 
   window["playVideo_#{id}"] = function(play)
   {
-    var div = $("#showVideo_#{id} .videodiv")[0];
-    //var outerIframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    var iframe = div.getElementsById("video");
-    func = play ? 'playVideo' : 'pauseVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    var fallbackVideo = $("#showVideo_#{id} video")[0];
+
+    if (fallbackVideo)
+    {
+      //var video = $("#showVideo_#{id} video")[0];
+      videojs(fallbackVideo, {}, function() {
+        console.log("we have a videojs object");
+
+        play ? this.play() : this.pause();
+      });
+    }
+    else
+    {
+      var div = $("#showVideo_#{id} .videodiv")[0];
+      var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+      func = play ? 'playVideo' : 'pauseVideo';
+      iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
   }
