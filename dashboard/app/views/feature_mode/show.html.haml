@@ -33,8 +33,6 @@
     font-size: 150%;
     color: red
   }
-  .feature_grid {
-  }
   .feature_grid table, #feature_grid tr, #feature_grid td {
     border-collapse: collapse;
     border: solid 1px silver;
@@ -84,7 +82,8 @@
         %td
           - for mode in FeatureModeManager::MODES
             - is_current_mode = (mode == @mode)
-            %div{id: "#{mode}_grid", class: 'grid_preview', style: is_current_mode ? '' : 'display: none'}
+            - style = is_current_mode ? '' : 'display: none; opacity: 0.6'
+            %div{id: "#{mode}_grid", class: 'grid_preview', style: style}
               %div.grid_title
                 = mode.capitalize
                 mode
