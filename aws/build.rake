@@ -412,7 +412,7 @@ task 'test-websites' => [$websites_test]
 task 'brent-upload' do
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
-  package1 = packager.create_package('build')
+  package1 = packager.send(:create_package, 'build')
   # `tar -xzf #{package1.path} -C /Users/brent/git/cdo/aws/one`
 
   packager.send(:upload_package, package1)

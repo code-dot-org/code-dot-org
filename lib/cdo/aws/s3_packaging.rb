@@ -30,36 +30,9 @@ class S3Packaging
   # @return tempfile object of package
   def upload_as_package
     package = create_package
+    raise "Generated different package for same contents" unless package_matches_download(package)
     upload_package(package)
     package
-  end
-
-  # Creates a zipped package of the provided assets folder
-  # @param sub_path [String] Path to built assets, relative to source_location
-  # @return tempfile object of package
-  def create_package(sub_path)
-    package = Tempfile.new(@commit_hash)
-    puts "Creating #{package.path}"
-    Dir.chdir(@source_location + '/' + sub_path) do
-      # add a commit_hash file whose contents represent the key for this package
-      IO.write('commit_hash', @commit_hash)
-      # TODO - probably need to be using RakeUtils.system instead in these places
-      `tar -zcf #{package.path} *`
-    end
-    puts 'Created'
-    package
-  end
-
-  # Unzips package into target location
-  def decompress_package(package)
-    puts "Decompressing #{package.path}\nto #{@target_location}"
-    FileUtils.mkdir_p(@target_location)
-    Dir.chdir(@target_location) do
-      # Clear out existing package
-      FileUtils.rm_rf Dir.glob("#{@target_location}/*")
-      `tar -zxf #{package.path}`
-    end
-    puts "Decompressed"
   end
 
   private def s3_key
@@ -73,8 +46,36 @@ class S3Packaging
     IO.read(filename)
   end
 
+  # Creates a zipped package of the provided assets folder
+  # @param sub_path [String] Path to built assets, relative to source_location
+  # @return tempfile object of package
+  private def create_package(sub_path)
+    package = Tempfile.new(@commit_hash)
+    puts "Creating #{package.path}"
+    Dir.chdir(@source_location + '/' + sub_path) do
+      # add a commit_hash file whose contents represent the key for this package
+      IO.write('commit_hash', @commit_hash)
+      # TODO - probably need to be using RakeUtils.system instead in these places
+      `tar -zcf #{package.path} *`
+    end
+    puts 'Created'
+    package
+  end
+
+  # Unzips package into target location
+  private def decompress_package(package)
+    puts "Decompressing #{package.path}\nto #{@target_location}"
+    FileUtils.mkdir_p(@target_location)
+    Dir.chdir(@target_location) do
+      # Clear out existing package
+      FileUtils.rm_rf Dir.glob("#{@target_location}/*")
+      `tar -zxf #{package.path}`
+    end
+    puts "Decompressed"
+  end
+
   private def ensure_updated_package
-    if commit_hash == built_commit_hash
+    if @commit_hash == built_commit_hash
       puts "Package is current: #{commit_hash}"
       return
     end
@@ -85,8 +86,6 @@ class S3Packaging
   # Uploads package to S3
   # @param package File object of local zipped up package.
   private def upload_package(package)
-    raise "Generated different package for same contents" unless package_matches_download(package)
-
     puts "Uploading: #{s3_key}"
     File.open(package) do |file|
       @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file)
@@ -133,7 +132,7 @@ class S3Packaging
     package = Tempfile.new(@commit_hash)
 
     puts "Attempting to download: #{s3_key}\nto #{package.path}"
-    File.open(package, 'w') do |file|
+    File.open(package, 'wb') do |file|
       @client.get_object(bucket: BUCKET_NAME, key: s3_key) do |chunk|
         file.write(chunk)
       end
