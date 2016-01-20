@@ -3,7 +3,6 @@
  *        loaded by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
-var _ = require('lodash');
 var build_commands = require('./build-commands');
 var fs = require('fs');
 var recursiveReaddirSync = require('recursive-readdir-sync');
@@ -24,5 +23,5 @@ var uglifyCommands = builtFiles.map(function (path) {
 });
 
 build_commands.executeShellCommandsInParallel(uglifyCommands)
-    .then(_.partial(build_commands.logSuccess, "code-studio js uglified"))
-    .catch(_.partial(build_commands.logFailure, "code-studio js uglify failed"));
+    .then(build_commands.logSuccess.bind(undefined, "code-studio js uglified"))
+    .catch(build_commands.logFailure.bind(undefined, "code-studio js uglify failed"));
