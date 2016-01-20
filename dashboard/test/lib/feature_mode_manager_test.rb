@@ -65,6 +65,19 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 360, @dcdo.get('public_max_age', nil)
+
+  end
+
+  def test_get_feature_names_for_mode
+    assert_equal Set.new(['puzzle_rating', 'hint_view_request', 'postMilestone', 'shareEnabled']),
+                 FeatureModeManager.get_feature_names_for_mode('normal')
+  end
+
+  def test_mode_allows_feature
+    assert FeatureModeManager.mode_allows_feature_for_hoc_scripts('normal', 'postMilestone')
+    assert FeatureModeManager.mode_allows_feature_by_default('normal', 'puzzle_rating')
+    refute FeatureModeManager.mode_allows_feature_for_hoc_scripts('emergency', 'postMilestone')
+    refute FeatureModeManager.mode_allows_feature_by_default('emergency', 'puzzle_rating')
   end
 
   def test_scale_mode

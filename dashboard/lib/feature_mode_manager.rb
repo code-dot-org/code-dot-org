@@ -111,6 +111,24 @@ class FeatureModeManager
     end
   end
 
+  # Returns a set of the names of all of the Gatekeeper features enabled or disabled for
+  # the given mode.
+  def self.get_feature_names_for_mode(mode)
+    settings = MODE_SETTINGS_MAP[mode]
+    Set.new(settings[:gatekeeper_general_settings].keys +
+                settings[:gatekeeper_hoc_tutorial_settings].keys)
+  end
+
+  # Returns true if the given mode allows the given feature for a hoc script.
+  def self.mode_allows_feature_for_hoc_scripts(mode, feature)
+    MODE_SETTINGS_MAP[mode][:gatekeeper_hoc_tutorial_settings][feature]
+  end
+
+  # Returns true if the given mode allows the given feature by default.
+  def self.mode_allows_feature_by_default(mode, feature)
+    MODE_SETTINGS_MAP[mode][:gatekeeper_general_settings][feature]
+  end
+
   def self.dcdo_matches_mode?(dcdo, mode)
     expected_settings = MODE_SETTINGS_MAP[mode][:dcdo_settings]
     expected_settings.all? do |key, expected_value|
