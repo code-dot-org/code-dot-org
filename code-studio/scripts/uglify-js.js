@@ -23,6 +23,6 @@ var uglifyCommands = builtFiles.map(function (path) {
   ].join(' \\\n    ');
 });
 
-build_commands.executeParallel(uglifyCommands)
+build_commands.executeShellCommandsInParallel(uglifyCommands)
     .then(_.partial(build_commands.logSuccess, "code-studio js uglified"))
     .catch(_.partial(build_commands.logFailure, "code-studio js uglify failed"));
