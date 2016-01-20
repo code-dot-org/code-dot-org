@@ -122,8 +122,6 @@ exports.bundle = function (config) {
         });
   }
 
-  // TODO: release/dist settings
-
   makeBundle = function (onComplete) {
     onComplete = onComplete || function () {};
     var bundlingAttemptError;
@@ -132,7 +130,7 @@ exports.bundle = function (config) {
     // best indicator of when the bundle is actually done building.
     var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
         .on('error', function (err) {
-          exports.logBoldRedError(err);
+          logBoldRedError(err);
           onComplete(err);
         })
         .on('finish', function () {
@@ -144,7 +142,7 @@ exports.bundle = function (config) {
 
     // Bundle the files and pass them to the output stream
     bundler.bundle().on('error', function (err) {
-      exports.logBoldRedError(err);
+      logBoldRedError(err);
       bundlingAttemptError = err;
       // Necessary to close the stream if an error occurs
       // After calling this, the output stream 'finish' event will occur.
@@ -191,13 +189,7 @@ exports.ensureDirectoryExists = function (dir) {
  *         them fail.
  */
 exports.executeSequence = function (commands) {
-  var options = {
-    env: _.extend({}, process.env, {
-      PATH: './node_modules/.bin:' + process.env.PATH
-    }),
-    stdio: 'inherit'
-  };
-
+  var options = getChildProcessOptions();
   return new Promise(function (resolve, reject) {
     var runNextCommand = function (commands) {
       var nextCommand = commands[0];
@@ -224,13 +216,7 @@ exports.executeSequence = function (commands) {
  *         any of them fail.
  */
 exports.executeParallel = function (commands) {
-  var options = {
-    env: _.extend({}, process.env, {
-      PATH: './node_modules/.bin:' + process.env.PATH
-    }),
-    stdio: 'inherit'
-  };
-
+  var options = getChildProcessOptions();
   return Promise.all(commands.map(function (command) {
     return new Promise(function (resolve, reject) {
       console.log(command);
@@ -290,15 +276,6 @@ exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
 };
 
 /**
- * Given a filename, synchronously ensures the directory that would contain
- * that file exists (to any depth).
- * @param {string} target - path to a file.
- */
-function ensureTargetDirectoryExists(target) {
-  mkdirp.sync(path.dirname(target));
-}
-
-/**
  * @param {!string} message
  * @returns {Function} that logs the given message in a success style.
  */
@@ -316,7 +293,8 @@ exports.logSuccess = function (message) {
  */
 exports.logFailure = function (message) {
   return function (error) {
-    exports.logBoldRedError(error);
+    logBoldRedError(error);
+    warnIfWrongNodeVersion();
     exports.logBoxedMessage(message, chalk.bold.red.bgBlack);
     throw error;
   };
@@ -326,7 +304,7 @@ exports.logFailure = function (message) {
  * Helper for formatting error messages for the terminal.
  * @param {Error} err
  */
-exports.logBoldRedError = function (err) {
+function logBoldRedError(err) {
   console.log([
     chalk.bold.red(timeStamp()),
     chalk.bold.red(err.name),
@@ -338,7 +316,29 @@ exports.logBoldRedError = function (err) {
   if (err.formatted) {
     console.log(err.formatted);
   }
-};
+}
+
+/**
+ * Given a filename, synchronously ensures the directory that would contain
+ * that file exists (to any depth).
+ * @param {string} target - path to a file.
+ */
+function ensureTargetDirectoryExists(target) {
+  mkdirp.sync(path.dirname(target));
+}
+
+/**
+ * Generate options object to pass into child_process.exec()
+ * @returns {{env: Object, stdio: string}}
+ */
+function getChildProcessOptions() {
+  return {
+    env: _.extend({}, process.env, {
+      PATH: './node_modules/.bin:' + process.env.PATH
+    }),
+    stdio: 'inherit'
+  };
+}
 
 /**
  * @returns {string} a time string formatted [HH:MM:SS] in 24-hour time.
