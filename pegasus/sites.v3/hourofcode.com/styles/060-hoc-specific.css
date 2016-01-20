@@ -26,6 +26,8 @@
 #language-dropdown .selectize-input {
   padding: 2px 8px;
   min-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #hoc-nav {
   display: inline-block;
@@ -37,12 +39,18 @@
   padding: 0;
 }
 #hoc-nav ul li {
+  font-size: 18px;
+  color: white;
   display: inline-block;
   float: left;
-  padding-top: 0.25em;
-  margin-right: 0.50em;
+  padding: 0.25em 0em;
+  margin-right: 1em;
   text-indent: 0;
   list-style-type: none;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #hoc-nav ul li:before {
   content: none;      /* Needed to remove the bullet disc. This was set from other CSS. */
@@ -63,6 +71,7 @@
 #hoc-nav-hamburger {
   font-size: 24px;
   color: white;
+  vertical-align: middle;
   text-decoration: none;
   display: none;
 }
@@ -133,11 +142,7 @@ iframe {
   text-align:right;
   margin-top: 50px;
 }
-@media (max-width: 768px) {
-  .centered {
-    text-align: left;
-    margin-top: 0px;
-  }
+@media (max-width: 992px) {
   #hoc-nav {
     position: relative;
   }
@@ -154,7 +159,7 @@ iframe {
   }
   #hoc-nav ul:after {   /* This is the arrow in the responsive menu */
     bottom: 100%;
-    left: 2em;
+    left: 2.2em;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -170,6 +175,8 @@ iframe {
     display: block;
     float: none;
     margin: 1em 2em 1em 1em;
+    white-space: normal;
+    overflow: visible;
   }
   #hoc-nav-hamburger {
     display: inline-block;
@@ -177,6 +184,12 @@ iframe {
   #hoc-nav-hamburger:hover,
   #hoc-nav-hamburger:active {
     color: rgb(255, 138, 0);
+  }
+}
+@media (max-width: 768px) {
+  .centered {
+    text-align: left;
+    margin-top: 0px;
   }
 }
 @media (max-width: 500px) {
