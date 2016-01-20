@@ -5,6 +5,7 @@ require 'feature_mode_manager'
 class FeatureModeManagerTest < ActiveSupport::TestCase
   def setup
     CDO.hip_chat_logging = false
+    CDO.slack_endpoint = nil
     @gatekeeper = GatekeeperBase.create
     @dcdo = DCDOBase.create
   end
