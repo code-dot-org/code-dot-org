@@ -165,21 +165,21 @@ CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
 CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
 CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
 CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
-  packager = S3Packaging.new
-
-  commit_hash = packager.commit_hash(code_studio_dir)
-  target_location = dashboard_dir('public/code-studio-package')
-
-  next if packager.attempt_update_package('code-studio', target_location, commit_hash)
-
-  # raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
-
-  puts 'Building code-studio...'
-  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
-
-  package = packager.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
-  packager.decompress_package(package, target_location)
+  # packager = S3Packaging.new
+  #
+  # commit_hash = packager.commit_hash(code_studio_dir)
+  # target_location = dashboard_dir('public/code-studio-package')
+  #
+  # next if packager.attempt_update_package('code-studio', target_location, commit_hash)
+  #
+  # # raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
+  #
+  # puts 'Building code-studio...'
+  # RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
+  # RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+  #
+  # package = packager.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
+  # packager.decompress_package(package, target_location)
 end
 
 file deploy_dir('rebuild') do
@@ -410,16 +410,19 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with
 task 'test-websites' => [$websites_test]
 
 task 'brent-upload' do
-  packager = S3Packaging.new
+  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
-  commit_hash = 'foobar'
+  package1 = packager.create_package('build')
+  # `tar -xzf #{package1.path} -C /Users/brent/git/cdo/aws/one`
 
-  # create a package and upload it
-  assets_location = dashboard_dir('public', 'code-studio-package')
-  first_package = packager.create_package(assets_location, commit_hash)
-  packager.upload_package('code-studio', first_package, commit_hash)
+  packager.send(:upload_package, package1)
 
-  # create a new package and make sure its the same
-  match = packager.package_matches_download('code-studio', commit_hash, first_package)
-  puts "match: #{match}"
+
+
+  # package = packager.create_package
+  # packager.upload_package(package)
+  #
+  # # create a new package and make sure its the same
+  # match = packager.package_matches_download(package)
+  # puts "match: #{match}"
 end
