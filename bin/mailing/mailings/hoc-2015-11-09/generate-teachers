@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
+require_relative '../../common/mailing-list-utils'
 
 # BringToSchool2013
 query_subscribed_contacts(q: "kind_s:BringToSchool2013 && role_s:teacher")

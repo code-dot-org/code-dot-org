@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
+require_relative '../../common/mailing-list-utils'
 require 'set'
 
 # To the below lists targeted to the state of CA:

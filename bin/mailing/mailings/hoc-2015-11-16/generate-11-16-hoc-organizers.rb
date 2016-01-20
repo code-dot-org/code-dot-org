@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../mailing-common/mailing-list-utils'
+require_relative '../../common/mailing-list-utils'
 
 # 11-16-hoc-organizers.md, sent to current organizers and non-organizers
 
