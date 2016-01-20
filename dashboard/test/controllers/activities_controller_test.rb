@@ -994,6 +994,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing for some other script still works' do
+    WebPurify.stubs(:find_potential_profanity).returns false
     Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
 
     post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
