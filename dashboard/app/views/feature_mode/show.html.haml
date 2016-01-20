@@ -24,18 +24,18 @@
     font-size: 150%;
     color: red
   }
-  #feature_grid {
+  .feature_grid {
     margin-top: 20px;
   }
-  #feature_grid table, #feature_grid tr, #feature_grid td {
+  .feature_grid table, #feature_grid tr, #feature_grid td {
     border-collapse: collapse;
     border: solid 1px silver;
     text-align: center;
   }
-  #feature_grid td {
+  .feature_grid td {
     min-width: 6em;
   }
-  #feature_grid tr:nth-child(odd) {
+  .feature_grid tr:nth-child(odd) {
     background-color: #eee;
   }
 
@@ -75,21 +75,6 @@
         %tr
           %td
           %td
-            %div#feature_grid
-              %table{border: 1, cellpadding: 5}
-                %tr
-                  %td
-                  %td
-                    DEFAULT
-                  - for script_name in @script_names
-                    %td
-                      = script_name
-                - for feature in @feature_names
-                  %tr
-                    %td.heading
-                      = feature
-                    %td
-                      = boolean_checkmark @allows_predicate.call(feature, nil)
-                    - for script in @script_names
-                      %td
-                        = boolean_checkmark @allows_predicate.call(feature, script)
+            = render :partial => 'feature_grid', :locals => { feature_names: @feature_names,
+              script_names: @script_names,
+              allows_predicate: @allows_predicate}
