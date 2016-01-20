@@ -881,8 +881,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with swear word returns error' do
     # unless CDO.webpurify_key
-      # stub webpurify
-      WebPurify.stubs(:find_potential_profanity).returns true
+    # stub webpurify
+    WebPurify.stubs(:find_potential_profanity).returns true
     # end
 
     assert_does_not_create(LevelSource, GalleryActivity) do
@@ -901,8 +901,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with swear word in German rejects word' do
     # unless CDO.webpurify_key
-      # stub webpurify
-      WebPurify.stubs(:find_potential_profanity).returns true
+    # stub webpurify
+    WebPurify.stubs(:find_potential_profanity).returns true
     # end
 
     with_default_locale(:de) do
@@ -950,8 +950,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'sharing program with swear word in Spanish rejects word' do
     # unless CDO.webpurify_key
-      # stub webpurify
-      WebPurify.stubs(:find_potential_profanity).returns true
+    # stub webpurify
+    WebPurify.stubs(:find_potential_profanity).returns true
     # end
 
     with_default_locale(:es) do
