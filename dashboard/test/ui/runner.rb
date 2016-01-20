@@ -351,8 +351,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
 
   if scenario_count == 0
-    skip_warning =  <<EOS
-We didn't actually run any tests, did you mean to do this?
+    skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
+    skip_warning += <<EOS
 Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
   - Do the feature or scenario tags exclude #{browser_name}?
 EOS
