@@ -67,11 +67,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 360, @dcdo.get('public_max_age', nil)
   end
 
-  def test_get_feature_names_for_mode
-    assert_equal Set.new(['puzzle_rating', 'hint_view_request', 'postMilestone', 'shareEnabled']),
-                 FeatureModeManager.get_feature_names_for_mode('normal')
-  end
-
   def test_mode_allows_feature
     assert FeatureModeManager.mode_allows_feature_for_hoc_scripts('normal', 'postMilestone')
     assert FeatureModeManager.mode_allows_feature_by_default('normal', 'puzzle_rating')
