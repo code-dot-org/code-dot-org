@@ -263,12 +263,9 @@ end
 def ensure_code_studio_package
   return if CDO.use_my_code_studio
 
-  packager = S3Packaging.new
-  # get updated package from S3
-  # TODO - would it make more sense to pass code_studio_dir around, and let the packager derive the hash?
-  commit_hash = packager.commit_hash(code_studio_dir)
-  target_location = dashboard_dir('public/code-studio-package')
-  raise "No valid package found" unless packager.attempt_update_package('code-studio', target_location, commit_hash)
+  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
+  # TODO - better name than attempt_update_package?
+  raise "No valid package found" unless packager.attempt_update_package
 end
 
 namespace :install do
