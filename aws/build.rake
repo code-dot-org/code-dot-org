@@ -165,8 +165,12 @@ CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
 CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
 CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
 CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
-  commit_hash = S3Packaging.commit_hash(code_studio_dir)
-  next if S3Packaging.attempt_update_package('code-studio', dashboard_dir('public/code-studio-package'), commit_hash)
+  packager = S3Packaging.new
+
+  commit_hash = packager.commit_hash(code_studio_dir)
+  target_location = dashboard_dir('public/code-studio-package')
+
+  next if packager.attempt_update_package('code-studio', target_location, commit_hash)
 
   # raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
 
@@ -174,8 +178,8 @@ CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
   RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
   RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
 
-  package = S3Packaging.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
-  S3Packaging.decompress_package(package, dashboard_dir('public/code-studio-package'))
+  package = packager.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
+  packager.decompress_package(package, target_location)
 end
 
 file deploy_dir('rebuild') do
@@ -406,14 +410,16 @@ $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with
 task 'test-websites' => [$websites_test]
 
 task 'brent-upload' do
+  packager = S3Packaging.new
+
   commit_hash = 'foobar'
 
   # create a package and upload it
   assets_location = dashboard_dir('public', 'code-studio-package')
-  first_package = S3Packaging.create_package(assets_location, commit_hash)
-  S3Packaging.upload_package('code-studio', first_package, commit_hash)
+  first_package = packager.create_package(assets_location, commit_hash)
+  packager.upload_package('code-studio', first_package, commit_hash)
 
   # create a new package and make sure its the same
-  match = S3Packaging.package_matches_download('code-studio', commit_hash, first_package)
+  match = packager.package_matches_download('code-studio', commit_hash, first_package)
   puts "match: #{match}"
 end
