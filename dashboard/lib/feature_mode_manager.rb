@@ -118,8 +118,8 @@ class FeatureModeManager
     # Use the value from the mode settings map, if defined.
     settings = MODE_SETTINGS_MAP[mode]
     if settings
-      allowed = settings[:gatekeeper_general_settings][feature] ||
-          settings[:gatekeeper_hoc_tutorial_settings][feature]
+      allowed = settings[:gatekeeper_general_settings][feature]
+      allowed = settings[:gatekeeper_hoc_tutorial_settings][feature] if allowed.nil?
       return allowed unless allowed.nil?
     end
 
