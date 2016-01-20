@@ -3,7 +3,6 @@
  * package and its dependencies over into the build output directory. */
 'use strict';
 
-var _ = require('lodash');
 var build_commands = require('./build-commands');
 
 /** @const {string} */
@@ -19,7 +18,7 @@ build_commands.ensureDirectoryExists(BUILD_PATH)
     // root-relative paths.
     // We may have to do something similar with ace editor later, but generally
     // we'd prefer to avoid this way of doing things.
-    .then(_.partial(build_commands.copyDirectory, './node_modules/video.js/dist/video-js', BUILD_PATH))
-    .then(_.partial(build_commands.logSuccess, "code-studio assets copied"))
-    .catch(_.partial(build_commands.logFailure, "code-studio asset copy failed"));
+    .then(build_commands.copyDirectory.bind(undefined, './node_modules/video.js/dist/video-js', BUILD_PATH))
+    .then(build_commands.logSuccess.bind(undefined, "code-studio assets copied"))
+    .catch(build_commands.logFailure.bind(undefined, "code-studio asset copy failed"));
 
