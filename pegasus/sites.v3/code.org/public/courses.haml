@@ -1,0 +1,95 @@
+---
+title: Courses
+theme: responsive
+---
+
+- (1..13).each do |n|
+  :css
+    .courses .bar-#{n} {
+      float: left;
+      width: #{n * 7}%;
+    }
+
+:css
+
+  .courses .grouprow {
+    border: 3px solid white;
+    background-color: #bbb;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .courses .graderow {
+    border: 3px solid white;
+    background-color: #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  .courses .courserow {
+    border: 0px solid grey;
+    background-color: #ddd;
+    border: 3px solid white;
+    padding: 5px;
+  }
+
+
+
+  .courses .break {
+    clear: both;
+  }
+
+  .courses .title {
+    font-size: 14px;
+  }
+
+  .courses .subtitle {
+    font-size: 10px;
+  }
+
+  .courses .description {
+    font-size: 10px;
+    color: #888;
+  }
+
+- courses = []
+- courses << { name: "Course 1", starts: 0, ends: 2 }
+- courses << { name: "Course 2", starts: 1, ends: 5 }
+- courses << { name: "Course 3", starts: 1, ends: 5 }
+- courses << { name: "Course 4", starts: 4, ends: 6 }
+- courses << { name: "CS in Science", starts: 6, ends: 8, description: "Explore and develop complex scientific models through agent-based programming" }
+- courses << { name: "CS in Algebra ", starts: 6, ends: 8, description: "Learn how computer programmers use algebra and geometry to develop video games" }
+- courses << { name: "CS Discoveries", starts: 7, ends: 9 }
+- courses << { name: "Exploring Computer Science", starts: 9, ends: 12, description: "A high school course designed to broaden participation in computer science" }
+- courses << { name: "Computer Science Principles", subtitle: "upcoming AP course", starts: 9, ends: 12, description: "A course teaching a wide range of computer science topics, including programming in JavaScript" }
+
+.courses
+  .group
+    .grouprow.bar-6
+      elementary
+    .grouprow.bar-3
+      middle
+    .grouprow.bar-4
+      high
+  .grade.break
+    .graderow.bar-1
+      K
+    - (1..12).each do |n|
+      .graderow.bar-1
+        = n
+    - courses.each do |course|
+      .course.break
+        - unless course[:starts] == 0
+          %div{class: "bar-#{course[:starts]}"}
+            &nbsp;
+        %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}"}
+          .title
+            =course[:name]
+            %br/
+          -# if course[:subtitle]
+            .subtitle
+              =course[:subtitle]
+              %br/
+          -#.description
+            =course[:description]
+
