@@ -5,13 +5,12 @@ require 'aws-sdk'
 
 require_relative './test_helper'
 require_relative '../../lib/cdo/aws/s3_packaging'
-# require_relative '../../deployment'
 
 ORIGINAL_HASH = 'fake-hash'
 
 class RakeUtils
   def self.git_latest_commit_hash(_)
-    ''
+    ORIGINAL_HASH
   end
 end
 
@@ -81,8 +80,6 @@ class S3PackagingTest < Minitest::Test
 
     @packager.send(:upload_package, package)
 
-    # TODO - we could have a race condition with two people running this test at once
-    # that might just go away once this is all VCRed
     downloaded = @packager.send(:download_package)
     assert FileUtils.compare_file(package, downloaded)
   end
@@ -152,7 +149,6 @@ class S3PackagingTest < Minitest::Test
   def test_upload_as_package
     # create a random hash so that we dont have to worry about colliding with
     # others on s3
-    # TODO - cleanup this random package from s3
     random_hash = SecureRandom.hex
     alt_source_loc, alt_target_loc, alt_packager = create_packager(random_hash)
 
@@ -174,9 +170,8 @@ class S3PackagingTest < Minitest::Test
 
     ensure
       # in this case we also want to delete the s3 bucket so we're not polluting
-      # TODO - share BUCKET_NAME with s3packaging
       client = Aws::S3::Client.new
-      client.delete_object(bucket: 'cdo-build-package', key: alt_packager.send(:s3_key))
+      client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: alt_packager.send(:s3_key))
 
       cleanup_packager(alt_source_loc, alt_target_loc)
     end
