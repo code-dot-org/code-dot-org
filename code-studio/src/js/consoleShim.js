@@ -23,7 +23,7 @@ module.exports = function (window) {
     'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
     'timeStamp', 'trace', 'warn'];
   var method;
-  for (var i = methods.length - 1; i >= 0; i--) {
+  for (var i = 0; i < methods.length; i++) {
     method = methods[i];
     if (!console[method]) {
       console[method] = function () {};
