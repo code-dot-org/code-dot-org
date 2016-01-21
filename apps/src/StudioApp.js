@@ -866,6 +866,12 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
+/**
+ * Simple passthrough to AuthoredHints.displayMissingBlockHints
+ * @param {String[]} blocks An array of XML strings representing the
+ *        missing recommended Blockly Blocks for which we want to
+ *        display hints.
+ */
 StudioApp.prototype.displayMissingBlockHints = function (blocks) {
   this.authoredHintsController_.displayMissingBlockHints(blocks);
 };
