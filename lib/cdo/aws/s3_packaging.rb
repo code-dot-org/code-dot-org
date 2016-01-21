@@ -28,8 +28,8 @@ class S3Packaging
 
   # creates a package from the given assets location and upload it to s3
   # @return tempfile object of package
-  def upload_as_package
-    package = create_package
+  def upload_as_package(sub_path)
+    package = create_package(sub_path)
     raise "Generated different package for same contents" unless package_matches_download(package)
     upload_package(package)
     package
@@ -40,7 +40,7 @@ class S3Packaging
   end
 
   # The hash of the package at target_location (or nil if there is not one)
-  private def built_commit_hash
+  private def target_commit_hash
     filename = "#{@target_location}/commit_hash"
     return nil unless File.exist?(filename)
     IO.read(filename)
@@ -75,12 +75,11 @@ class S3Packaging
   end
 
   private def ensure_updated_package
-    if @commit_hash == built_commit_hash
-      puts "Package is current: #{commit_hash}"
-      return
+    if @commit_hash == target_commit_hash
+      puts "Package is current: #{@commit_hash}"
+    else
+      decompress_package(download_package)
     end
-
-    decompress_package(download_package)
   end
 
   # Uploads package to S3
