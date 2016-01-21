@@ -261,11 +261,11 @@ def install_npm
 end
 
 def ensure_code_studio_package
+  # never download if we build our own
   return if CDO.use_my_code_studio
 
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
-  # TODO - better name than attempt_update_package?
-  raise "No valid package found" unless packager.attempt_update_package
+  raise "No valid package found" unless packager.update_from_s3
 end
 
 namespace :install do

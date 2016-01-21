@@ -165,12 +165,13 @@ CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
 CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
 CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
 CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
+  # TODO !!
   # packager = S3Packaging.new
   #
   # commit_hash = packager.commit_hash(code_studio_dir)
   # target_location = dashboard_dir('public/code-studio-package')
   #
-  # next if packager.attempt_update_package('code-studio', target_location, commit_hash)
+  # next if packager.update_from_s3('code-studio', target_location, commit_hash)
   #
   # # raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
   #
@@ -408,21 +409,3 @@ multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack
 $websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]
-
-task 'brent-upload' do
-  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
-
-  package1 = packager.send(:create_package, 'build')
-  # `tar -xzf #{package1.path} -C /Users/brent/git/cdo/aws/one`
-
-  packager.send(:upload_package, package1)
-
-
-
-  # package = packager.create_package
-  # packager.upload_package(package)
-  #
-  # # create a new package and make sure its the same
-  # match = packager.package_matches_download(package)
-  # puts "match: #{match}"
-end

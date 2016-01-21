@@ -1,8 +1,8 @@
 require 'aws-sdk'
 
-BUCKET_NAME = 'cdo-build-package'
-
 class S3Packaging
+  BUCKET_NAME = 'cdo-build-package'
+
   def initialize(package_name, source_location, target_location)
     @client = Aws::S3::Client.new
     @commit_hash = RakeUtils.git_latest_commit_hash source_location
@@ -13,14 +13,14 @@ class S3Packaging
 
   # Tries to get an up to date package without building
   # @return True if our package is now up to date
-  def attempt_update_package
+  def update_from_s3
     begin
       ensure_updated_package
     rescue Aws::S3::Errors::NoSuchKey
       puts 'Package does not exist on S3'
       return false
     rescue Exception => e
-      puts "attempt_update_package failed: #{e.message}"
+      puts "update_from_s3 failed: #{e.message}"
       return false
     end
     return true
@@ -51,11 +51,12 @@ class S3Packaging
   # @return tempfile object of package
   private def create_package(sub_path)
     package = Tempfile.new(@commit_hash)
+    # TODO - better recommendation for logging that puts?
     puts "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       IO.write('commit_hash', @commit_hash)
-      # TODO - probably need to be using RakeUtils.system instead in these places
+      # TODO - should i be using RakeUtils.system instead in these places?
       `tar -zcf #{package.path} *`
     end
     puts 'Created'
