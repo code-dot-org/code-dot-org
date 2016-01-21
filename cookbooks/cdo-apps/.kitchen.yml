@@ -23,7 +23,7 @@ platforms:
         pegasus:
           port: 8081
       cdo-repository:
-        branch: cdo-apps-integration
+        branch: <%= `git rev-parse --abbrev-ref HEAD` %>
 suites:
   - name: default
     run_list:

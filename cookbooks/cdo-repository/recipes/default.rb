@@ -11,7 +11,7 @@ template "/home/#{node[:current_user]}/.gemrc" do
   group node[:current_user]
 end
 
-# Sync to the production or staging branch as appropriate.
+# Sync to the appropriate branch.
 adhoc = node.chef_environment == 'adhoc'
 branch = adhoc ?
   (node['cdo-repository']['branch'] || 'staging') :
