@@ -28,8 +28,7 @@
     code:
       label: '添加一个老师:'
       placeholder: 单元代码(ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: 请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。
     submit: 添加老师
   add_hint_form:
     placeholder: 请在这里输入您的密码提示
@@ -40,6 +39,7 @@
   puzzle: 题目
   trophies: 奖杯
   courses: 课程
+  unplugged_activity: 不用电脑的活动
   of: 的
   more: 更多
   less: 更少

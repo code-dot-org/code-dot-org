@@ -220,6 +220,8 @@ id-ID:
   homepage_banner_text_link: Pelajari lebih banyak
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Pelajari lebih banyak
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: 'Cobalah "Hour of Code"'
@@ -228,6 +230,7 @@ id-ID:
   homepage_solot_text_link_volunteer: Relawan untuk Hour of Code
   homepage_slot_text_title_students: Siswa
   homepage_slot_text_blurb_students: Jelajahi semua panduan kami
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Coba kode Studio
   homepage_slot_text_link_local: Temukan kelas setempat
   homepage_slot_text_link_othercourses: Kursus daring lainnya
@@ -551,7 +554,7 @@ id-ID:
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi yang sangat jauh.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

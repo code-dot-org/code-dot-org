@@ -62,7 +62,7 @@ button("submitButton", "Submit");
 onEvent("submitButton", "click", function() {
   var favFoodData={};
   favFoodData.name = getText("nameInput");
-  favFoodData.age = getText("ageInput");
+  favFoodData.age = getNumber("ageInput");
   favFoodData.food = getText("foodInput");
   createRecord("fav_foods", favFoodData, function(record) {
     console.log("Record created with id:" + record.id);
@@ -96,14 +96,14 @@ createRecord(table, record, function(record){
 |-----------------|------|-----------|-------------|
 | table | string | Yes | The name of the table the record should be added to. A new table gets created if it doesn't exist.  |
 | record | object | Yes | The data to be stored in the record. Either a javascript object variable or a javascript object defined using curly brace and colon notation (see examples above). |
-| callback | function | No | The callback function that is asynchronously called when the call to createRecord() is finished. The created record object is passed back as a parameter to the callback function. The unique ID of the new record can be accessed via record.id |
+| callback | function | No | The callback function that is asynchronously called when the call to createRecord() is finished. The created record object is returned as a parameter to the callback function. The unique ID of the new record can be accessed via record.id |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-When *createRecord()* is finished executing, the callback function is automatically called and is passed the created record object as a parameter.
+When *createRecord()* is finished executing, the callback function is automatically called and is returned as a parameter the created record object as a parameter.
 
 [/returns]
 
@@ -114,7 +114,8 @@ When *createRecord()* is finished executing, the callback function is automatica
 - The javascript object properties must match the App Lab table column names. Both are case sensitive.
 - Duplicate records are allowed in a table but will have different id values assigned automatically.
 - *createRecord()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
-- The callback function can be inline, or separately defined in your app and called from createRecord().
+- The callback function can be inline, or separately defined in your app and called from *createRecord()*.
+- Do not put functions inside a loop that contain asynchronous code, like *createRecord()*. The loop will not wait for the callback function to complete.
 - Use with [readRecords()](/applab/docs/readRecords), [deleteRecord()](/applab/docs/deleteRecord), and [updateRecord()](/applab/docs/updateRecord) records to view, delete, and update records in a table.
 
 [/tips]

@@ -252,6 +252,9 @@
     privacidad para incluir herramientas que se utilizan en nuestro nuevo curso básico
     de Ciencias de la Computación para la escuela secundaria.'
   homepage_banner_privacy_link: Aprende más
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -260,6 +263,7 @@
   homepage_solot_text_link_volunteer: Voluntarios para la Hora del Código
   homepage_slot_text_title_students: Estudiantes
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
@@ -379,11 +383,11 @@
   volunteer_engineer_submission_header_shared: La informasion esta compartida con
     los maestros voluntarios del mapa
   volunteer_engineer_submission_field_name: Nombre
-  volunteer_engineer_submission_field_name_placeholder: Nombre Completo
+  volunteer_engineer_submission_field_name_placeholder: Nombre completo
   volunteer_engineer_submission_field_company: Empresa (o Universidad)
   volunteer_engineer_submission_field_company_placeholder: Empresa (o Universidad)
-  volunteer_engineer_submission_field_experience_level: Nivel de experiencia
-  volunteer_engineer_submission_field_location: Ubicación
+  volunteer_engineer_submission_field_experience_level: Livel de experencia
+  volunteer_engineer_submission_field_location: Locaccion
   volunteer_engineer_submission_field_location_desc: Si introduce su dirección exacta
     no la compartiremos, simplemente se visualizará como un punto en el mapa.
   volunteer_engineer_submission_field_location_placeholder: Código postal, ciudad
@@ -396,7 +400,7 @@
     de la Hora del Código
   volunteer_engineer_submission_field_linkedin: Perfil de LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/tu_nombre
-  volunteer_engineer_submission_field_facebook: Perfil de Facebook
+  volunteer_engineer_submission_field_facebook: Profil de Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/tu_nombre
   volunteer_engineer_submission_field_description: Descripción
   volunteer_engineer_submission_field_description_desc: Describir su experiencia en
@@ -445,17 +449,17 @@
   volunteer_engineer_submission_distance_8: 5 millas
   volunteer_engineer_submission_distance_16: 10 millas
   volunteer_engineer_submission_distance_24: 15 millas
-  volunteer_engineer_submission_distance_32: 20 millas
-  volunteer_engineer_submission_num_volunteers_5: 5 voluntarios
-  volunteer_engineer_submission_num_volunteers_10: 10 voluntarios
-  volunteer_engineer_submission_num_volunteers_25: 25 voluntarios
-  volunteer_engineer_submission_num_volunteers_50: 50 voluntarios
+  volunteer_engineer_submission_distance_32: Vente millas
+  volunteer_engineer_submission_num_volunteers_5: Cinco voluntarios
+  volunteer_engineer_submission_num_volunteers_10: Diez voluntarios
+  volunteer_engineer_submission_num_volunteers_25: Vente y cinco voluntarios
+  volunteer_engineer_submission_num_volunteers_50: cinquenta voluntarios
   volunteer_engineer_submission_type_task_onsite: Quiero que visites mi clase para
-    ayuda técnica e inspiracional
-  volunteer_engineer_submission_type_task_remote: Quiero que hagas una llamada de
-    Skype a mi clase para que les digas algunas palabras inspiradoras a los niños
+    ayuda tecnica y inspiracional
+  volunteer_engineer_submission_type_task_remote: Quiero que hagas una llamada via
+    skype a mi clase para que les digas algunas palabras inspiradoras a los ninos
   volunteer_engineer_submission_type_task_mentor: Estoy buscando un mentor que me
-    ayude a prepararme para programar con mis alumnos
+    ayude prepararme para programar con mis alumnos
   petition_age: Edad
   dashboard_landing_title: Página de inicio del maestro
   dashboard_landing_welcome: Bienvenido al nuevo y mejorado panel para maestros.
@@ -491,9 +495,9 @@
   dashboard_landing_more_tutorials_desc: Hay más tutoriales <a href="/learn/beyond">
     ofrecidos por nuestros socios.</a> Aprende a programar con robots, a hacer páginas
     web, a hacer tu propia app o explora otros lenguajes como C++, Ruby o Python!
-  dashboard_hoc_courses: La Hora de Código para todas las edades
-  dashboard_hoc_courses_desc: Prueba alguno de estos tutoriales de menos de 1 hora
-    con tus alumnos!
+  dashboard_hoc_courses: La Hora de Codigo para todas las edades
+  dashboard_hoc_courses_desc: Trata alguno de estos corto un hora tutoriales con tus
+    alumnos!
   dashboard_hoc_courses_desc_and_cta: Pruebe estos tutoriales cortos de una hora con
     sus alumnos. <a href="https://hourofcode.com">Únete al movimiento de la Hora del
     Código</a> durante la Semana de Educación en Ciencias de la Computación.
@@ -629,7 +633,7 @@
     o te gustaría crear cuentas para ellos, cambia el tipo secreto de esta sección
     a <b>palabra</b> o <b>imagen</b>.
   dashboard_students_print_page: Imprimir esta página
-  dashboard_students_url: URL
+  dashboard_students_url: Stop
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haga
     clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
     o imprimirse para sus alumnos.
@@ -659,7 +663,7 @@
   dashboard_curriculum_csins: 'Informática en Ciencia:'
   dashboard_curriculum_csp: 'Principios informáticos AP®:'
   dashboard_curriculum_ecs: 'Explorando la Informática:'
-  dashboard_grade_k: K
+  dashboard_grade_k: Kah
   dashboard_grade_other: Otros
   dashboard_login_word: Palabra
   dashboard_login_picture: Imagen
@@ -697,7 +701,7 @@
     tipos de inicio de sesión, <b>imagen, palabra o correo electrónico</b>, querrá
     elegir para una sección.
   dashboard_faq: Preguntas frecuentes
-  dashboard_faq_k5: Preguntas frecuentes sobre K-5
+  dashboard_faq_k5: K-5 Preguntas frecuentes
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todo
   dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating

@@ -1,9 +1,9 @@
 "lv":
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      not_saved: 'Lūdzu, izlabojiet šādas kļūdas:'
+      too_young: Šim saturam ir vecuma ierobežojums un tas nav pieejams jaunākiem
+        skolēniem
   activerecord:
     errors:
       messages:
@@ -29,8 +29,8 @@
     code:
       label: 'Pievienot skolotāju:'
       placeholder: Izvēles kods (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Lūdzu, ievadiet kodu, ko jums piešķīra skolotājs. Tas ir 6 burtu
+        kods, kā piemēram "ABCDEF".
     submit: Pievieno skolotāju
   add_hint_form:
     placeholder: Lūdzu, ievadi šeit savu mājienu
@@ -41,6 +41,7 @@
   puzzle: Puzle
   trophies: Trofejas
   courses: Kursi
+  unplugged_activity: Atvienota aktivitāte
   of: 'no'
   more: VAIRĀK
   less: MAZĀK
@@ -69,8 +70,8 @@
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: '%{count} skolēni jau ir pierakstījušies.'
+    teacher_count: '%{count} skolotāji jau ir pierakstījušies.'
     overview_student: Pierakstaties, lai sekotu līdzi savam progresam, Jūsu e-pasts
       primāri tiek izmantots, lai pierakstītos un paroles atgūšanai. Lai iegūtu vairāk
       informāciju, apskatat mūsu <a href="http://code.org/privacy">konfidencialitātes
@@ -266,7 +267,7 @@
       signup: Piereģistrēties
       already_registered: Jau reģistrējies?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: '%{name} panākumi'
       progress: Jūsu progress
       lines: 'Kopējais koda līniju skaits: %{lines}'
       close: AIZVĒRT
@@ -277,8 +278,8 @@
       prize_us_only: (Tikai ASV studenti)
       prizes_link: Vairāk informācijas
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Atbilde
+    for_teachers_only: Tikai skolotājiem
     title:
       one: 'Tavs skolotājs:'
       other: 'Tavi skolotāji:'
@@ -287,32 +288,31 @@
       remove: Vai tu esi drošs, ka vēlies noņemt šo skolotāju?
     students:
       dashboard: Doties uz Skolotāja paneli
-    user_not_found: Skolotājs vai skolnieks netika atrasts
-    student_teacher_disassociated: Pasniedzējs %{teacher_name} ir noņemts no skolēna
-      %{student_name}
+    user_not_found: Nevar atrast skolotāju.
+    student_teacher_disassociated: Jūs esat noņēmis sev skolotāju %{teacher_name}.
     panel:
-      answer_viewer: Answer Viewer
+      answer_viewer: Atbilžu pārlūks
       student: Students
-      viewing_solution: Viewing Solution
-      try_it_yourself: Try it yourself
+      viewing_solution: Apskatīt risinājumu
+      try_it_yourself: Pamēģini pats
       section: Sadaļa
-      example: Example Solution
-      example_with_number: Example Solution %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
+      example: Atrisinājuma piemērs
+      example_with_number: Atrisinājuma %{solution_number} piemērs
+      submitted_on: 'Iesniegts:'
+      unsubmit: Atcelt iesniegšanu
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
-    email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
+    email_confirm_wrong_email: (Nepareiza e-pasta adrese?)
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
     new_password_hint: (atstājiet tukšu, ja nevēlaties mainīt to)
     current_password_hint: (nepieciešama jūsu pašreizējā parole, lai apstiprinātu
       izmaiņas)
-    delete: Delete your account
-    delete_text: Clicking the button below will delete your account.
-    delete_text_teacher_note: 'Please note: deleting your account will not delete
-      your students'' accounts.'
-    delete_confirm: Are you sure you want to delete your account?
+    delete: Izdzēst jūsu kontu
+    delete_text: Nospiežot šo pogu, jūs izdzēsīsiet savu kontu.
+    delete_text_teacher_note: Lūdzu, ņemiet vērā, ka jūsu konta dzēšana neizdzēsīs
+      jūsu skolēnu kontus.
+    delete_confirm: Vai jūs tiešām vēlaties dzēst savu kontu?
   user_level:
     completed: Pabeigts
     tried: Mēģināts
@@ -322,10 +322,10 @@
     classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    description: Code Studio ir vietne Code.org izstrādātiem tiešsaistes kursiem
+    lines_of_code: '%{lines_count} koda rindiņas ir uzrakstījuši skolēni'
+    lines_of_code_linebreak: '%{lines_count} KODA RINDIŅAS<br/> IR UZRAKSTĪJUŠI %{students_count}
+      MILJONI SKOLĒNU'
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: Jau reģistrējies? %{link}
@@ -351,7 +351,7 @@
     local_school: vietējā skola
     online: tiešsaiste
     see_details: Sīkāka informācija
-    view_course: View Course
+    view_course: Apskatīt kursu
     prize_info: 'Balvas par dalību (tikai ASV valsts skolu skolotājiem): līdz $1,000
       savā klasē.'
     tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
@@ -368,14 +368,14 @@
     heading_apps: <h2>Izklaide </h2><h1>visiem</h1>
     heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
     your_gallery: Galerija
-    no_primary_course: Try a course at Code Studio
-    choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    no_primary_course: Izmēģināt Code Studio kursu
+    choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
+    print_certificate: Izdrukāt sertifikātu
   share:
-    title: Learn on Code Studio
-    description: Anyone can learn computer science. Make games, apps and art with
-      code.
-    try_hour_of_code: Try an Hour of Code!
+    title: Mācies Code Studio
+    description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu
+      ar kodu.
+    try_hour_of_code: Izmēģini Koda Stundu!
   gender:
     male: Vīrietis
     female: Sieviete
@@ -384,10 +384,10 @@
     student: Students
     teacher: Skolotāja
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Mēs pateicamies mūsu <a href="https://code.org/about/donors">ziedotājiem</a>,
+      <a href="https://code.org/about/partners">partneriem</a>, mūsu<a href="https://code.org/about/team">paplašinātajai
+      komandai</a>, mūsu video veidotājiem un mūsu <a href="https://code.org/about/advisors">izglītības
+      konsultantiem</a> par atbalstu veidojot Code Studio.
     help_from_html: Inžinieri no Google, Microsoft, Facebook un Twitter palīzēja radīt
       šo pamācību.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
@@ -415,7 +415,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Izmēģini Koda Stundu!
   reference_area:
     title: Vajadzīga palīdzība?
     subtitle: Skatīt šos video un padomus

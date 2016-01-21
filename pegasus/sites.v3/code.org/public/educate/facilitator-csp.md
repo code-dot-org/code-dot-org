@@ -22,8 +22,8 @@ CSP Facilitators accepted to the program will work with Code.org’s local Profe
 For each workshop you host, CSP Facilitators will receive compensation for facilitating. We will also provide the venue, materials and food (at no cost) needed to host the workshop.
 
 
-## How to become a CPS Facilitator?
-Become a CSP Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (location TBD) and attend a 5 day training workshop with teachers enrolled in Code.org’s CSP Professional Learning Program to to observe, support and reflect on sessions led by master CSP Facilitators. At the Summit and teacher training, Code.org will prepare facilitators to deliver 4 in-person workshops to local high school teachers enrolled in Code.org’s CSP Professional Learning Program throughout the 2016-2017 school year. 
+## How to become a CSP Facilitator?
+Become a CSP Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN) and attend a 5 day training workshop with teachers enrolled in Code.org’s CSP Professional Learning Program to to observe, support and reflect on sessions led by master CSP Facilitators. At the Summit and teacher training, Code.org will prepare facilitators to deliver 4 in-person workshops to local high school teachers enrolled in Code.org’s CSP Professional Learning Program throughout the 2016-2017 school year. 
 
 Before applying please carefully review the the [criteria, requirements and commitments](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub) for the CSP Facilitator program.
 <br/>
@@ -35,3 +35,4 @@ Before applying please carefully review the the [criteria, requirements and comm
 
 We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
 
+If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).

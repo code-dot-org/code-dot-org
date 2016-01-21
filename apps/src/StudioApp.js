@@ -33,6 +33,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -1601,17 +1602,12 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
         document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-        var wireframeSendToPhoneClick = function () {
-          $(this).html(React.renderToStaticMarkup(React.createElement(dashboard.SendToPhone)))
-            .off('click', wireframeSendToPhoneClick);
-          dashboard.initSendToPhone('#wireframeSendToPhone');
-          $('#send-to-phone').show();
-        };
-
-        var wireframeSendToPhone = $('<div id="wireframeSendToPhone">');
-        wireframeSendToPhone.html('<i class="fa fa-mobile"></i> See this app on your phone');
-        wireframeSendToPhone.click(wireframeSendToPhoneClick);
-        $('body').append(wireframeSendToPhone);
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        React.render(React.createElement(WireframeSendToPhone, {
+          channelId: dashboard.project.getCurrentId(),
+          appType: dashboard.project.getStandaloneApp()
+        }), div);
       }
     } else if (!options.embed && !dom.isMobile()) {
       var runButton = document.getElementById('runButton');
@@ -1788,7 +1784,8 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
- * Add the starting block(s).
+ * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
+ * level will advance as soon as it's loaded.
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
@@ -1796,7 +1793,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
-  if (loadLastAttempt) {
+  if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
   if (config.forceInsertTopBlock) {

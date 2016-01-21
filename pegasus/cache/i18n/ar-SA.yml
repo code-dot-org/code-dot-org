@@ -26,7 +26,7 @@
   twentyhours_text: أتممت أول "ساعة من البرمجة" الخاصة بك؟ تعلم المزيد عن علوم الحاسوب
     ومفاهيم البرمجة الأساسية في الدورة التالية.
   og_title: كل طفل يستحق فرصة
-  og_description: كل طالب في المدرسة يستحق فرصة لدراسة علوم الحاسوب.
+  og_description: كل طالب في المدرسة يستحق الفرصة لدراسة علوم الحاسوب.
   hoc2014_heading: انضم<a href="http://hourofcode.com"> الى ساعة البرمجة</a> <br/>
     8-14 كانون الأول/ديسمبر، عام 2014 <br/>
   hoc2014_students: الطلاب
@@ -235,6 +235,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: اعرف المزيد
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: اعرف المزيد
   homepage_slot_text_title_hoc: ساعة البرمجة
   homepage_slot_text_blurb_hoc: بإمكان أي شخص أن يتعلم. ابدأ اليوم
   homepage_slot_text_link_hoc: جرب ساعة من البرمجة - "Hour of Code"
@@ -243,6 +246,7 @@
   homepage_solot_text_link_volunteer: تطوع لفعالية "ساعة برمجة"
   homepage_slot_text_title_students: الطلاب
   homepage_slot_text_blurb_students: استكشف جميع دروسنا
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: جرّب ستوديو البرمجة
   homepage_slot_text_link_local: البحث عن فصل في الجوار
   homepage_slot_text_link_othercourses: دورات أخرى على الإنترنت

@@ -12,13 +12,16 @@ class HttpCache
 
   # A map from script name to script level URL pattern.
   CACHED_SCRIPTS_MAP = {
-    'starwars' => '/s/starwars/stage/1/puzzle/*',
-    'starwarsblock' => '/s/starwarsblocks/stage/1/puzzle/*',
-    'mc' => '/s/mc/stage/1/puzzle/*',
-    'frozen' => '/s/frozen/stage/1/puzzle/*',
-    'gumball' => '/s/gumball/stage/1/puzzle/*',
-    'hourofcode' => '/hoc/*'
+      # We specify the "special case" routes here; standard routes are handled by the loop below.
+      'hourofcode' => '/hoc/*'
   }
+  %w(starwars starwarsblocks mc frozen gumball).each do |script_name|
+    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
+  end
+
+  def self.cached_scripts
+    CACHED_SCRIPTS_MAP.keys
+  end
 
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
   # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.

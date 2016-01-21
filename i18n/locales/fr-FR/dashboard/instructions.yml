@@ -155,7 +155,7 @@ fr:
         Emmène moi jusqu'au cochon, en utilisant cette fois le bloc "Répéter plusieurs fois" !
       2-3 Maze 12_instruction: |
         Peux-tu remplacer ces 5 blocs avec seulement 2 blocs ?
-        (Astuce : crée une boucle avec le bloc "répéter plusieurs fois")
+        (Astuce : tu dois créer une boucle avec le bloc "répéter plusieurs fois" pour passer au niveau suivant)
       2-3 Maze 13 (old)_instruction: |-
         Emmène moi jusqu'au cochon, en utilisant cette fois le bloc "Répéter jusqu'à" !
       2-3 Maze 13_instruction: "Emmène moi jusqu'au cochon en utilisant seulement deux blocs."
@@ -224,7 +224,7 @@ fr:
       4-5 Artist 5_instruction: Quel angle utilises-tu ?
       4-5 Artist 6_instruction: Ce triangle équilatéral a des angles de 60 degrés chacun. Chaque côté fait 200 pixels. Complète le dessin.
       4-5 Artist 7_instruction: "Ce triangle rectangle a des angles de 30, 60 et 90 degrés. La longueur du côté penché (l'hypoténuse) est le double de la hauteur de 100 pixels. Complète le dessin."
-      4-5 Artist 8_instruction: Sur un terrain de football, la ligne du milieu de terrain est perpendiculaire aux lignes de touche. Ce terrain a un périmètre de 800 pixels et une longueur de 240 pixels. Quelle est sa largeur ? Dessine les limites et la ligne médiane.
+      4-5 Artist 8_instruction: Sur un terrain de football, la ligne médiane du terrain est perpendiculaire aux lignes de touche. Ce terrain a un périmètre de 800 pixels et une longueur de 240 pixels. Quelle est sa largeur ? Trace les limites du terrain et la ligne médiane.
       4-5 Artist 9_instruction: "Dessine l'autre moitié pour que le dessin soit symétrique. Les triangles sont équilatéraux et mesurent 50 pixels de long."
       4-5 Artist Assessment 1_instruction: 'Consigne : Utilise une boucle pour dessiner le triangle équilatéral. Chaque côté fait 300 pixels.'
       4-5 Artist For Loops 1_instruction: 'Mets les nombres de 1 à 10 dans les blocs "largeur" et exécute le code.'
@@ -1173,6 +1173,7 @@ fr:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1407,6 +1408,11 @@ fr:
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Maintenant, nous allons créer 20 cercles superposés, en tournant de 18 degrés entre chaque cercle.
       frozen circle function with parameter_instruction: "Voici un bloc « Créer un cercle » qui peut faire des cercles de différentes tailles. Peux-tu l'utiliser pour créer un petit cercle de taille 5 et un plus grand cercle de taille 10 ?"
@@ -2032,11 +2038,11 @@ fr:
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour voir si une fleur s'y cache. Si c'est le cas, alors tu peux recueillir son nectar."
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: "L'abeille veut seulement du nectar maintenant. Tous les objets ne sont pas des fleurs, donc vérifie sous chaque nuage pour voir si une fleur s'y cache. Si c'est le cas, alors tu peux récolter son nectar."
       Ryan Test Locked Blocks_instruction: |
         Voilà une fonction appelée "patrouille".
         Edite-la pour déplacer le chat de 400 pixels vers le haut puis 400 pixels vers le bas.
@@ -2822,8 +2828,8 @@ fr:
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -3545,20 +3551,46 @@ fr:
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

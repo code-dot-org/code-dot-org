@@ -4,7 +4,7 @@
   select_language: කරුණාකර ඔබේ භාෂාව තෝරා ගන්න
   en: පරිගණක විද්‍යාව
   computer_science_edweek: පරිඝණක විද්‍යා අධ්‍යාපන සතිය
-  csedweek_dates: December 8-14, 2014
+  csedweek_dates: දෙසැම්බර් 8-14, 2014
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -37,7 +37,7 @@
   hoc2014_host: Host it
   hoc2014_everyone: හැමකෙනෙක්ම
   hoc2014_support: එයට සහය වන්න &#x25BE;
-  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2014_whatishoc: Hour of Code යනු කුමක්ද?
   csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
   csedweek_map_signup: Sign up your event
   csedweek_map_search_placeholder: Hour of Code සිදුවීම් සොයන්න
@@ -58,7 +58,7 @@
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: View English site
+  view_english_site: ඉංග්‍රීසි අඩවිය බලන්න
   non_english_tutorials: 'Tutorials translated into multiple languages:'
   write_your_first_program: Write your first computer program
   learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
@@ -253,6 +253,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Learn more
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Learn more
   homepage_slot_text_title_hoc: පැයේ කේතය
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Hour of Code උත්සාහ කරන්න
@@ -261,6 +264,7 @@
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: සිසුන්
   homepage_slot_text_blurb_students: Explore all of our tutorials
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Try Code Studio
   homepage_slot_text_link_local: Find a local class
   homepage_slot_text_link_othercourses: Other online courses
@@ -328,7 +332,7 @@
   starwars_javascript_description: Use drag-drop blocks and JavaScript.
   starwars_javascript_specs: English only | Modern browsers | Ages 11+
   starwars_javascript_start_button: දැන් අත්හදා බලන්න
-  starwars_blocks_title: Blocks
+  starwars_blocks_title: ආකෘති
   starwars_blocks_description: Use drag-drop blocks.
   starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
     Ages 6-10

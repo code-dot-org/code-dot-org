@@ -34,11 +34,7 @@
           Getting Loopy: 愈來愈糟
           The Big Event: 大事件
           Going Places Safely: 安全的到達地點
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
+          description: 初學者看這裡！在課程 1 中，學生們將會學習編寫電腦程式，這將有助於學生學習與他人合作，培養解決問題的能力，並堅定完成困難的任務。在這堂課之後，學生們將自由設計自己的遊戲或故事，並分享給任何人。這課程適合初年級的學生。
           'Bee: Sequence': 蜜蜂： 序列
           'Artist: Sequence': '小畫家: 次序'
           'Artist: Shapes': '小畫家: 形狀'
@@ -46,25 +42,25 @@
           'Bee: Loops': 蜜蜂： 迴圈
           'Studio: Create a Story': '播放實驗室: 創造一個故事'
           'Artist: Loops': '小畫家: 迴圈'
-          description_audience: 適合年齡4+(學齡前讀者)
-          description_short: Start with Course 1 for early readers.
+          description_audience: 適合年齡 4 到 6 歲
+          description_short: 初學者從課程1開始。
         course2:
           The Maze: 迷宮
           Suzi: 蘇西
           The Artist: 藝術家
-          Artist Debugging: Artist Debugging
+          Artist Debugging: 畫家：除錯
           Bounce: 彈跳
           'Studio: Create a Story': '播放實驗室: 創造一個故事'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          Artist Loops: 畫家：迴圈
+          Bee Conditionals: 蜜蜂：判斷條件
           Flappy: Flappy
-          title: Course 2
+          title: 課程 2
           Bee Loops: 蜜蜂 迴圈
           Artist Functions: 角色功能
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          The Artist Debugging: 角色：除錯
+          Bee Debugging: 蜜蜂：除錯
+          Bee Functions: 蜜蜂：函式
+          Maze Loops: '迷宮: 迴圈'
           Graph Paper Programming: 圖畫紙程式設計
           'Real-life Algorithms: Paper Planes': '真實生活裡的演算法: 紙飛機'
           Getting Loopy: 愈來愈糟
@@ -73,10 +69,7 @@
           Binary Bracelets: Binary Bracelets
           The Big Event: 大事件
           Your Digital Footprint: 你的數位足跡
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
+          description: 課程 2 給已有閱讀能力、但沒有任何寫程式經驗的學生。在這個課程裡，學生將編寫程式來解決問題，並且開發有互動的遊戲或故事分享給任何人。建議給二至五年級的學生參加。
           'Maze: Sequence': '迷宮: 序列'
           'Artist: Sequence': '小畫家: 次序'
           'Maze: Loops': 迷宮： 迴圈
@@ -84,12 +77,12 @@
           'Bee: Loops': 蜜蜂： 迴圈
           'Bee: Debugging': 蜜蜂： 除錯
           'Artist: Debugging': '小畫家: 除錯'
-          'Bee: Conditionals': '蜜蜂: 條件'
+          'Bee: Conditionals': '蜜蜂: 判斷條件'
           'Artist: Sequence2': '小畫家: 次序2'
-          'Maze: Sequence2': 'Maze: Sequence2'
+          'Maze: Sequence2': '迷宮: 序列 2'
           'Artist: Nested Loops': 畫家： 嵌套的迴圈
-          description_audience: 六歲以上 (閱讀要求)
-          description_short: 與能夠閱讀的學生開始課程2
+          description_audience: 適合年齡 6 至 18 歲
+          description_short: 有閱讀能力的學生可以進入課程 2
         course3:
           The Maze: 迷宮
           'Studio: Create a Story': '播放實驗室: 創造一個故事'
@@ -97,16 +90,16 @@
           title: 課程 3
           Artist Functions: 角色功能
           Artist For Loops: 小畫家 For 迴圈
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
+          Artist Nested Loops: 畫家： 巢狀迴圈
+          Bee Conditionals: 蜜蜂：判斷條件
           Bee Nested Loops: 蜜蜂巢狀迴圈
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          Bee Debuggin: 蜜蜂：除錯
+          Bee Debugging: 蜜蜂：除錯
+          Bee Functions: 蜜蜂：函式
+          Artist Functions with Params: 畫家： 帶參數的函式
           Bounce: 彈跳
           Maze Conditionals: 迷宮： 條件
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Artist Functions with Parameters: 畫家： 帶參數的函式
           Computational Thinking: 電腦計算式思維
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
@@ -122,7 +115,7 @@
           Artist: 畫家
           'Artist: Functions': 畫家：函數
           'Bee: Functions': 蜜蜂：函數
-          'Bee: Conditionals': '蜜蜂: 條件'
+          'Bee: Conditionals': '蜜蜂: 判斷條件'
           'Maze: Conditionals': 迷宮： 條件
           'Artist: Nested Loops': 畫家： 嵌套的迴圈
           'Farmer: While Loops': 農夫： ｢當｣迴圈　
@@ -130,18 +123,18 @@
           'Bee: Debugging': 蜜蜂： 除錯
           Maze2: 迷宮２
           Artist2: 畫家２
-          'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'Bee: Functions2'
-          'Bee: Conditionals2': 'Bee: Conditionals2'
-          'Maze: Conditionals2': 'Maze: Conditionals2'
-          'Artist: Nested Loops2': 'Artist: Nested Loops2'
-          'Farmer: While Loops2': 'Farmer: While Loops2'
-          'Bee: Nested Loops2': 'Bee: Nested Loops2'
+          'Artist: Functions2': 角色：函式 2
+          'Bee: Functions2': 蜜蜂：函數 2
+          'Bee: Conditionals2': 蜜蜂：判斷條件 2
+          'Maze: Conditionals2': 迷宮： 條件 2
+          'Artist: Nested Loops2': 角色：巢狀迴圈 2
+          'Farmer: While Loops2': 農夫：條件迴圈 While Loop 2
+          'Bee: Nested Loops2': 蜜蜂：巢狀迴圈 2
           'Bee: Debugging2': '蜜蜂: 除錯2'
           'Artist: Patterns': '小畫家: 圖樣'
           Songwriting: 寫歌
-          description_audience: 八歲以上 (學習課程二以後)
-          description_short: 課程三是課程二的延續課程
+          description_audience: 適合年齡 8 至 18 歲
+          description_short: 課程 3 是課程 2 的延續課程
         playlab:
           title: 播放實驗室
           description: 創建一個故事或做遊戲玩實驗室！
@@ -165,8 +158,7 @@
           Artist: 畫家
           description_short: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
         course4:
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
+          description_short: 完成課程 2 和課程 3 後，可以進入課程 4
           description: Course 4 is designed for students who have taken Course 2 and
             3. Students will delve deeper into programming topics introduced in previous
             courses to flexible solutions to more complex problems. By the end of
@@ -178,8 +170,8 @@
           'Algorithms: Tangrams': '演算法: 七巧板'
           Variables: 變數類
           'Play Lab: Variables': '播放實驗室: 變數'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-          'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+          'Play Lab: Functions with Parameters': '播放實驗室: 帶參數的函數'
+          'Bee: Functions with Parameters': '蜜蜂: 帶參數的函數'
           'Artist: For Loops': '小畫家: For 迴圈'
           'Play Lab: For Loops': '播放實驗室: For 迴圈'
           'Artist: Functions': 畫家：函數
@@ -190,18 +182,17 @@
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': '真人分享: For 迴圈的樂趣'
           'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
+          'Artist: Functions with Parameters': 角色： 帶參數的函式
           'Unplugged: Binary': '真人分享: 二進位'
           Bee Binary: 蜜蜂 二進位
           Farmer Binary: 農夫 二進位
           Maze and Bee: 蜜蜂與迷宮
           Artist Binary: 小畫家 二進位
-          description_audience: 十歲以上(課程三之後)
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          description_audience: 適合年齡 10 至 18 歲
+          Super Challenge - Variables: 高級挑戰：變數
+          Super Challenge - For Loops: 高級挑戰：For 迴圈
+          Super Challenge - Functions and Parameters: 高級挑戰：函式與參數
+          Extreme Challenge - Comprehensive: 終極挑戰：綜合題
         Course4pre:
           title: 課程四 先決條件
           description_short: A brief rampup of concepts for students who have not
@@ -212,7 +203,7 @@
           'Maze: Sequence': '迷宮: 序列'
           'Artist: Sequence': '小畫家: 次序'
           'Artist: Loops': '小畫家: 迴圈'
-          'Bee: Conditionals': '蜜蜂: 條件'
+          'Bee: Conditionals': '蜜蜂: 判斷條件'
           'Artist: Nested Loops': 畫家： 嵌套的迴圈
           'Farmer: While Loops': 農夫： ｢當｣迴圈　
           'Bee: Nested Loops': 蜜蜂： 嵌套的迴圈
@@ -221,7 +212,7 @@
         usability:
           Intro: 介紹
           Variables and For Loops: 變數與 For 迴圈
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Functions and Functions with Parameters: 函式與帶參數的函式
           title: 可用性測試
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
@@ -246,7 +237,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games
             and Coordinate Planes'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': 'Eval: Strings and Images'
+          'Eval: Strings and Images': 字串和圖像
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
@@ -269,7 +260,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
         infinity:
-          title: 播放實驗室
+          title: 迪士尼無限播放實驗室
           description_short: 創建一個故事或做遊戲玩實驗室！
           description: 創建一個故事或做遊戲玩實驗室！
           Play Lab: 播放實驗室
@@ -285,7 +276,7 @@
           Making Pictures: Making Pictures
           Defining Variables: Defining Variables
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
         K5PD:
           title: K5 Professional Development
           description: K5 課程的專業發展
@@ -350,7 +341,7 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: 20小時 課程簡介
-          description_audience: 十歲以上(課程三之後)
+          description_audience: 適合年齡 10 至 18 歲
           description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
@@ -452,7 +443,7 @@
           'Maze: Sequence': '迷宮: 序列'
           'Artist: Sequence': '小畫家: 次序'
           'Artist: Loops': '小畫家: 迴圈'
-          'Bee: Conditionals': '蜜蜂: 條件'
+          'Bee: Conditionals': '蜜蜂: 判斷條件'
           'Artist: Nested Loops': 畫家： 嵌套的迴圈
           'Farmer: While Loops': 農夫： ｢當｣迴圈　
           'Bee: Nested Loops': 蜜蜂： 嵌套的迴圈
@@ -529,16 +520,16 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Contracts: Contracts
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
           Your Game - Animation: Your Game - Animation
           Booleans: 布林值
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 你的遊戲-布林值
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: 條件和分段函數
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: PD 簡介
@@ -553,7 +544,7 @@
           description: 通過函數式程式設計教代數
           description_short: 通過函數式程式設計教代數
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -747,8 +738,8 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          Strings and Images: 字串和圖像
+          The Design Recipe: 設計程序
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -951,11 +942,11 @@
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Defining Variables: Defining Variables
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
           Big Game - Animation: Big Game - Animation
           Booleans: 布林值
           Sam the Bat: Sam the Bat
@@ -1002,7 +993,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
@@ -1123,7 +1114,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
@@ -1136,7 +1127,7 @@
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: Welcome!
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
@@ -1502,7 +1493,8 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1546,13 +1538,13 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 十歲以上(課程三之後)
+          description_audience: 適合年齡 10 至 18 歲
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 十歲以上(課程三之後)
+          description_audience: 適合年齡 10 至 18 歲
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
@@ -1653,3 +1645,6 @@
           Welcome!: Welcome!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: 總結
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
+            Refresh your connection to Complex Adaptive Systems

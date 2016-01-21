@@ -40,6 +40,7 @@ ca:
   puzzle: Puzzle
   trophies: trofeus
   courses: cursos
+  unplugged_activity: Activitat sense connexió
   of: de
   more: MÉS
   less: MENYS

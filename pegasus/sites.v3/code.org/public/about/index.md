@@ -51,13 +51,13 @@ Hour of Code has won the support of both [Republicans and Democrats](https://www
 | Code.org Goal | Accomplishment |
 |------|----------------|
 | Improve diversity in CS | In our online courses, <%= stats['percent_female'] %>% of  students are girls and 37% are black or Hispanic. In our high school classrooms, [34% are girls, and 60% African American or Hispanic](http://codeorg.tumblr.com/post/98856300118/diversity). |
-| Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(stats['number_served']) %> served. 48% female) |
+| Inspire students | Tens of millions have tried the [Hour of Code](/learn). (<%= format_integer_with_commas(fetch_hoc_metrics['started']) %> served. 49% female) |
 | Create fantastic  courses | 99% of surveyed teachers recommend the Code.org [intro CS curriculum](http://studio.code.org). |
 | Reach classrooms | <%= format_integer_with_commas(stats['number_teachers']) %> teachers have signed up to teach our intro courses on [Code Studio](http://studio.code.org) and <%= format_integer_with_commas(stats['number_students']) %> students are enrolled. |
 | Prep new CS teachers | We've prepared 20,000 new teachers to teach CS across grades K-12. Learn about our [professional development programs](/educate/professional-development).|
 | Change school district curriculum | We've partnered with [100 of the largest school districts](/educate/partner-districts) to [add CS to the curriculum](/educate/curriculum). These districts teach almost 10% of all U.S. students and 15% of Hispanic and African American students. Learn about [becoming a district partner](/educate/districts).|
-| Set up policies to support CS | Policy changed in [16 states](/action) including CA, NY, FL, IL, OH.|
-| Go global | Our courses are available in 40+ languages, used in all 180+ countries. |
+| Set up policies to support CS | Policy changed in [17 states](/action) including CA, NY, FL, IL, OH.|
+| Go global | Our courses are available in 45+ languages, used in all 180+ countries. |
 
 <br/>
 <br/>
@@ -74,7 +74,7 @@ To support our goal, we do work across the education spectrum: designing our own
 
 Our work builds upon [decades of effort, by countless organizations and individuals](https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community.
 
-- [Code.org 2014 Annual Report](/about/2014)
+- [Code.org 2015 Annual Report](/about/2015)
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 - [A letter from our founder addressing misconceptions about our motivations](http://codeorg.tumblr.com/post/73963049605/the-secret-agenda-of-code-org)
 

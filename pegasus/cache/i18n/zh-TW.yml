@@ -23,9 +23,8 @@
   submit: 送出
   twentyhours_heading: 試試看我們的資訊科學課程簡介
   twentyhours_text: 完成您的第一個小時的程式設計課程了嗎？在此後續課程中你可以瞭解更多資訊科學和程式設計的核心觀念。
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: 每個孩子都應該得到機會
+  og_description: 每個學校的每個學生都應有機會學習電腦科學。
   hoc2014_heading: 加入<a href="http://hourofcode.com">一小時的程式設計課程</a> <br/>，2014 年 12
     月 8 日至 14 日 <br/>
   hoc2014_students: 學生
@@ -69,7 +68,7 @@
   congratulations_volunteer: 恭喜：你已經試過一小時的程式設計課程了，你可以<a href="https://code.org/volunteer">開一間教室並註冊為志工</a>來幫助學生學習一小時的程式設計課程
   course_name_accelerated: 速成課程
   course_name_course1: 課程 1
-  course_name_course2: Course 2
+  course_name_course2: 課程 2
   course_name_course3: 課程 3
   course_name_course4: 課程 4
   congratulations_on_completing_course: 恭喜你完成了 %{course}
@@ -205,6 +204,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: 瞭解更多資訊
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: 瞭解更多資訊
   homepage_slot_text_title_hoc: 一小時的程式課程
   homepage_slot_text_blurb_hoc: 任何人都可以學習。從今天開始
   homepage_slot_text_link_hoc: 試試一小時的程式設計課程
@@ -213,6 +215,7 @@
   homepage_solot_text_link_volunteer: 在「一小時程式學習」活動中擔任志工
   homepage_slot_text_title_students: 學生
   homepage_slot_text_blurb_students: 瀏覽所有教學課程
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: 試試 Code Studio
   homepage_slot_text_link_local: 尋找地區性課程
   homepage_slot_text_link_othercourses: 其他線上課程
@@ -269,7 +272,7 @@
   class_submission_languages_other: 其他語言
   inspirational_videos_more: 更多名人的 <a href="HTTPs://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
     激勵影片</a>
-  playlab_choose_theme: Choose your Play Lab theme
+  playlab_choose_theme: 選擇您的遊戲實驗室主題
   playlab_classic_title: 經典
   playlab_gumball_title: 陶阿甘
   playlab_iceage_title: 冰原歷險記--敬請期待
@@ -308,7 +311,7 @@
     <span class="form-required-field">*</span>'
   volunteer_engineer_submission_intro_links: 你需要找到志願者嗎? 在我們 的<a href="%{volunteer_local}">
     志願者的地圖</a> 上找到當地的志願者。
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: 更新個人訊息
   volunteer_engineer_submission_header_shared: 在志工地圖上與老師共用的資訊
   volunteer_engineer_submission_field_name: 你的名字
   volunteer_engineer_submission_field_name_placeholder: 全名
@@ -373,9 +376,9 @@
   dashboard_landing_view_as_student: 作為一名學生，查看本網站
   dashboard_landing_students_title: 你的學生
   dashboard_landing_students_manage: 查看和管理您的學生們
-  dashboard_landing_news_title: K 5 教育者資源(僅有英文版)
-  dashboard_landing_new_beta: 新增功能！K 5 學生們請嘗試我們的 Beta 測試版課程。
-  dashboard_landing_new_k5courses: 新增功能！K 5 學生們請嘗試我們的課程。
+  dashboard_landing_news_title: 五年級教育者資源(僅有英文版)
+  dashboard_landing_new_beta: 新課程！請嘗試我們設計給五年級學生的 Beta 測試版課程。
+  dashboard_landing_new_k5courses: 新課程！請嘗試我們設計給五年級學生的課程。
   dashboard_landing_useful_links: 其他有用的連結 （僅有英文本）
   dashboard_landing_office_hours: 面對面提問！請訪問我們每月的視頻辦公時間。
   dashboard_landing_print_certificates: 為完成此課程的學生列印證書
@@ -395,7 +398,7 @@
   dashboard_hoc_courses_desc: 和您的學生一起試試這不超過一小時的課程！
   dashboard_hoc_courses_desc_and_cta: 跟您的學生一起試試這短短的、不超過一小時的課程。在電腦科學教育週<a href="https://hourofcode.com">加入Hour
     of Code的活動</a>。
-  dashboard_k5_courses: K-5 的 20 小時課程
+  dashboard_k5_courses: 給五年級學生的 20 小時課程
   dashboard_k5_courses_desc: These courses blend online, self-guided and self-paced
     tutorials with "unplugged" activities that require no computer at all. Each course
     consists of about 20 lessons that may be implemented as one unit or over the course
@@ -409,10 +412,8 @@
     to teach math and science concepts. To register for professional development workshops,
     apply for a <a href="/educate/districts">district-wide partnership</a> with Code.org.
   dashboard_high_courses: 為期一年的高中課程
-  dashboard_high_courses_desc: Our high school program helps school districts offer
-    full-year computer science classes by preparing existing teaching staff to offer
-    this new field. To register for professional development workshops, apply for
-    a <a href="/educate/districts">district-wide partnership</a> with Code.org.
+  dashboard_high_courses_desc: 我們的高中課程計劃介由現有的教師提供教學資源，提供學校一學年完整的電腦科學課程。若要報名參加此專業發展課程的討論，請至
+    Code.org 的<a href="/educate/districts">區域合作</a>。
   dashboard_course_csina: Computer Science in Algebra
   dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a
     curriculum which teaches algebraic and geometric concepts through computer programming.
@@ -445,7 +446,7 @@
   dashboard_navigation_section_community: 説明和社區
   dashboard_navigation_section_pd: 專業發展
   dashboard_navigation_section_speakers: 電腦科學 <br/> 特邀演講者
-  dashboard_navigation_all_sections: 學生戶口及進度
+  dashboard_navigation_all_sections: 學生帳戶及學習進度
   dashboard_navigation_view_progress: 查看進度
   dashboard_navigation_view_text_responses: 觀看文字回應
   dashboard_navigation_add_students: 新增學生
@@ -454,7 +455,7 @@
   dashboard_navigation_view_stats: 檢視統計資料
   dashboard_navigation_section: 分區： %{section_name}
   dashboard_navigation_student: 學生： %{student_name}
-  dashboard_sections_new_section: 新分區
+  dashboard_sections_new_section: 新增一堂課
   dashboard_sections_jumbotron_instruction: 建立新課程區段，並新增學生資料。課程區段可協助您將學生分成更小的群組，以便您可以追蹤他們的進度和管理他們的帳戶。
   dashboard_sections_table_section: 班級
   dashboard_sections_table_secret: 登入方式
@@ -507,7 +508,7 @@
   dashboard_students_url: 網址
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
     按這裡</a> 是我們的隱私安全性文件，可以分享或列印給您的學生。
-  dashboard_curriculum_k5_title: K-5 教育資源
+  dashboard_curriculum_k5_title: 五年級課程教育資源
   dashboard_curriculum_middle_title: 中學教育資源
   dashboard_curriculum_high_title: 高中教育資源
   dashboard_lesson_plans: 課程計畫
@@ -517,7 +518,7 @@
   dashboard_course3: 課程 3：
   dashboard_course4: '課程 4 (測試版):'
   dashboard_curriculum: 課程
-  dashboard_curriculum_overview: 學前至五年級課程概述
+  dashboard_curriculum_overview: 五年級課程概述
   dashboard_overview: 概觀
   dashboard_sequence: '序列 '
   dashboard_framework: 主架構
@@ -535,8 +536,8 @@
   dashboard_curriculum_ecs: 探索電腦科學
   dashboard_grade_k: 學前
   dashboard_grade_other: 其他
-  dashboard_login_word: 文字
-  dashboard_login_picture: 圖片
+  dashboard_login_word: 通關密語
+  dashboard_login_picture: 通關圖片
   dashboard_login_none: 電子郵件
   dashboard_new_password: 新密碼
   dashboard_progress_not_started: 未開始
@@ -564,7 +565,7 @@
   dashboard_sections_password_account_creation: 學生建立的文字密碼
   dashboard_sections_login_type_explanation: 本表協助説明您可以選擇的課程區段登入類型，<b>通關圖片、 通關密語或電子郵件</b>。
   dashboard_faq: 常見問題集
-  dashboard_faq_k5: K-5 的常見問題
+  dashboard_faq_k5: 五年級課程的常見問題
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
   dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
@@ -588,8 +589,8 @@
   learn_educator_resources_description: 學習如何教導一個小時的程式碼課程
   learn_educator_resources_button: 教育資源
   learn_are_you_educator: 你是教育工作者嗎？學習<a href="http://hourofcode.com/resources/how-to">如何教導一個小時的程式碼課程</a>
-  learn_find_volunteer: <a href="https://code.org/volunteer/local">Find a local volunteer</a>
-    to help during your Hour of Code
+  learn_find_volunteer: 在您程式設計課程的期間<a href="https://code.org/volunteer/local">尋找當地的志工</a>
+    來協助您。
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
     led Hour of Code lesson plans</a>
   learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
@@ -606,7 +607,7 @@
   carousel_heading_3rd_party: 由 協力廠商 所提供的教學課程
   carousel_heading_third_party: 由 協力廠商 所提供的教學課程
   carousel_heading_international: 使用你語言的教程
-  carousel_heading_domestic: 可用的在英語教程
+  carousel_heading_domestic: 可用的英語教程
   carousel_heading_beginners: 適合初學者的教程
   carousel_heading_beyond_beginners: 適合初學者的教程
   carousel_heading_javascript: 教 JAVAscript 的自學教案
@@ -683,7 +684,7 @@
   playlab_name: 播放實驗室
   infinity_name: Infinity Play Lab
   artist_name: 畫家
-  monstercoding_name: Mystery Island Coding Quest
+  monstercoding_name: 神秘島編程任務
   allcancode_name: Run Marco!
   csfirst_name: CS First
   boxisland_name: Box Island
@@ -734,12 +735,12 @@
   infinity_gradelevel: 適合年齡自 4 至104歲
   artist_gradelevel: 適合年齡自 4 至104歲
   monstercoding_gradelevel: 適合年齡自 5至13歲
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5歲至10歲
+  csfirst_gradelevel: 9歲至14歲
   boxisland_gradelevel: 小學
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12歲至14歲
+  texasinstruments_gradelevel: 13歲至16歲
+  teacherled_gradelevel: 5歲以上
   codeorg_platformtext: 瀏覽器, 智慧手機, 平板
   codeintl_platformtext: 瀏覽器, 智慧手機, 平板
   thinkersmithspanish_platformtext: 不插電的
@@ -905,11 +906,8 @@
     and make a winter wonderland that you can then share with your friends!
   starwars_longdescription: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
   playlab_longdescription: 創建一個故事或讓與發揮實驗室的遊戲!使動物，海盜，僵屍，忍者，和更多的角色移動，發出的聲音，得分，和甚至投擲火球!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
+  monstercoding_longdescription: 怪物軟體公司出品的神秘島編程任務提供了充滿樂趣的自我冒險，可以教導孩子們幾個重要的程式設計概念。裡頭將會有之前教給孩子們的每個程式積木，像是
+    "函式", "布林值", "如果... 否則", "陣列"等，還有多彩繽紛的動物圖案及音效。
   allcancode_longdescription: Students play an adventure game based on an original
     story. They guide Marco - the main character - through each level by giving him
     step-by-step instructions in the form of the visual programming language used

@@ -1,4 +1,5 @@
 %link{rel: "stylesheet", type: "text/css", href: "/css/map.css"}
+-max_height_percentage = 0.65 if max_height_percentage.nil?
 -if @company
   -company_name = hoc_s("company_" + @company)
   -company_total = format_integer_with_commas(company_count)
@@ -33,7 +34,7 @@
   var draggableOption = false;
   var resizeThrottleTimerId;
   var resizeThrottleTimeoutMs = 500;
-  var maxHeightPercentage = 0.65;
+  var maxHeightPercentage = "#{max_height_percentage}";
 
   $(document).ready(function() {
     initializeMap();

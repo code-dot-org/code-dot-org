@@ -68,7 +68,7 @@
           Graph Paper Programming: Програмування по клітинках
           'Real-life Algorithms: Paper Planes': 'Життєві алгоритми: Паперові літачки'
           Getting Loopy: Економія на повторах
-          Relay programming: Релейне програмування
+          Relay programming: Естафетне програмування
           Conditionals: Умови
           Binary Bracelets: Двійкові браслети
           The Big Event: Велика подія
@@ -383,7 +383,7 @@
           The Farmer 2: Фермерка 2
           Abstraction: Абстракції
           The Artist 4: Художник 4
-          Relay Programming: Релейне програмування
+          Relay Programming: Естафетне програмування
           The Farmer 3: Фермерка 3
           The Internet: Інтернет
           The Artist 5: Художник 5
@@ -1522,7 +1522,8 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1679,3 +1680,6 @@
           Welcome!: Ласкаво просимо!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Підведення підсумків
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
+            Refresh your connection to Complex Adaptive Systems

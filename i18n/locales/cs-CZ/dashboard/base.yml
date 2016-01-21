@@ -28,8 +28,7 @@ cs:
     code:
       label: 'Přidat učitele:'
       placeholder: Kód sekce (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Prosím, vložte kód, který vám dal váš učitel. Je to šestipísmenný kód, jako například "ABCDEF".'
     submit: Přidat učitele
   add_hint_form:
     placeholder: Zadej zde svůj tip
@@ -40,6 +39,7 @@ cs:
   puzzle: Rébus
   trophies: trofeje
   courses: kurzy
+  unplugged_activity: Aktivita bez počítače
   of: z
   more: VÍCE
   less: MÉNĚ
