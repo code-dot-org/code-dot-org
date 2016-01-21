@@ -1,4 +1,5 @@
 var msg = require('../locale');
+var Hint = require('./Hint.jsx');
 
 /**
  * @overview React Component for displaying Authored Hints in the
@@ -68,15 +69,8 @@ module.exports = React.createClass({
       seenHints = [
           <h1>{ this.props.hintReviewTitle }</h1>,
           <ul>
-            {hintsToShow.map(function (hint, i) {
-              var hintBlock;
-              if (hint.block) {
-                hintBlock = (<div className="block-hint" id={ hint.hintId } style={{ maxHeight: '100px' }} />);
-              }
-              return (<li style={{ marginBottom: '12px' }}>
-                <div dangerouslySetInnerHTML={{ __html : hint.content }} />
-                {hintBlock}
-              </li>);
+            {hintsToShow.map(function (hint) {
+              return <Hint hint={hint}/>;
             })}
           </ul>
       ];
