@@ -1,3 +1,8 @@
+.educate-banner {
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
 .educate-container {
   position:relative;
   float: left;
@@ -29,4 +34,9 @@
   position: absolute;
   bottom: 0;
   margin-bottom: 20px;
+}
+
+.resources-h1 {
+  text-align: center;
+  margin-bottom: 0px;
 }

@@ -1,5 +1,6 @@
+-color ||= "#59b9dc"
 .educate-container
-  .educate-box{style: "background-color: #{item[:color_s]}"}
+  .educate-box{style: "background-color: #{color}"}
     %h1.educate-h1= item[:title_s]
     %p.educate-p= item[:description_t]
     %a{:href => item[:url_s]}
