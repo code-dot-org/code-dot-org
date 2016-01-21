@@ -1,0 +1,9 @@
+---
+title: Educator Overview
+---
+
+%link{:href=>"/css/educate.css", :rel=>"stylesheet"}
+
+#educate-grid
+  - DB[:cdo_educate].each do |item|
+    = view :edumacate_box, item: item
