@@ -35,11 +35,8 @@ module.exports = React.createClass({
   },
 
   renderBlocklyHint: function (hint) {
-    var node = document.getElementById(hint.hintId);
-    // Only render if the node exists in the DOM
-    if (node) {
-      Blockly.BlockSpace.createReadOnlyBlockSpace(node, hint.block);
-    }
+    var ref = this.refs[hint.hintId];
+    ref.renderBlocklyHint();
   },
 
   componentDidMount: function () {
@@ -70,7 +67,7 @@ module.exports = React.createClass({
           <h1>{ this.props.hintReviewTitle }</h1>,
           <ul>
             {hintsToShow.map(function (hint) {
-              return <Hint hint={hint}/>;
+              return <Hint hint={hint} ref={hint.hintId} />;
             })}
           </ul>
       ];
