@@ -60,7 +60,7 @@ execute "setup-pegasus-db" do
 end
 
 execute "build-pegasus" do
-  command "bundle exec build:pegasus"
+  command "bundle exec rake build:pegasus"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
     'LC_ALL' => 'en_US.UTF-8'
