@@ -1,4 +1,6 @@
 /* global marked */
+var parseXmlElement = require('./xml').parseElement;
+var msg = require('./locale');
 
 /**
  * @overview A helper class for all actions associated with the Authored
@@ -222,9 +224,30 @@ authoredHintUtils.submitHints = function (url) {
 };
 
 /**
+ * Generates contextual hints as used by StudioApp from Blockly XML
+ * @param {String[]} - array of Blockly Block XML strings
+ * @return {AuthoredHint[]}
+ */
+authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
+  var xmlBlocks = blocks.map(parseXmlElement);
+  var hints = xmlBlocks.map(function (xmlBlock) {
+    var blockType = xmlBlock.firstChild.getAttribute("type");
+    return {
+      content: marked(msg.recommendedBlockContextualHintTitle()),
+      block: xmlBlock,
+      hintId: "recommended_block_" + blockType,
+      hintClass: 'recommended',
+      hintType: 'contextual',
+      alreadySeen: false
+    };
+  });
+  return hints;
+};
+
+/**
  * Generates authored hints as used by StudioApp from levelbuilder JSON.
  * @param {string} - JSON representing an array of hints
- * @return {Object[]}
+ * @return {AuthoredHint[]}
  */
 authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   if (!marked) {
