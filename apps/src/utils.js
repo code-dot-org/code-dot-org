@@ -1,4 +1,4 @@
-/* global $, define */
+/* global define */
 
 var xml = require('./xml');
 var savedAmd;
