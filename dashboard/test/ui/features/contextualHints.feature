@@ -18,8 +18,9 @@ Scenario: Hints viewed in feedback don't become contextual hints
   When I press "again-button"
   And I wait to see "#resetButton"
 
-  # This level has two recommended blocks, which now appear as hints
-  Then the hint lightbulb shows 5 hints available
+  # This level has two recommended blocks, the first of which now
+  # appears as a hint
+  Then the hint lightbulb shows 4 hints available
 
   When I press "resetButton"
   And I wait to see "#runButton"
@@ -34,8 +35,8 @@ Scenario: Hints viewed in feedback don't become contextual hints
   And I press "again-button"
   And I wait to see "#resetButton"
 
-  # I viewed one hint in the feedback, so now there are only four
-  Then the hint lightbulb shows 4 hints available
+  # I viewed the hint in the feedback, so now there are only three
+  Then the hint lightbulb shows 3 hints available
 
 Scenario: Blocks render in contextual hints
   Given I am on "http://learn.code.org/s/allthethings/stage/6/puzzle/2?noautoplay=true"
@@ -48,7 +49,7 @@ Scenario: Blocks render in contextual hints
   And I press "again-button"
   And I wait to see "#resetButton"
 
-  Then the hint lightbulb shows 5 hints available
+  Then the hint lightbulb shows 4 hints available
 
   When I view the next authored hint
 
@@ -62,11 +63,6 @@ Scenario: Blocks render in contextual hints
   Then I see jquery selector .authored-hints ul
   # the block renders when opening the instructions
   And I see jquery selector .authored-hints ul .block-hint:eq(0) svg
-
-  When I press "hint-button"
-
-  # the block renders when viewing a new hint from the instructions
-  Then I see jquery selector .authored-hints ul .block-hint:eq(1) svg
 
 Scenario: Contextual hints in level without Authored Hints
   Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/5?noautoplay=true"
