@@ -68,7 +68,7 @@ module.exports = function sanitizeHtml(unsafe, warn) {
     allowedTags: sanitize.defaults.allowedTags.concat([
       'button', 'canvas', 'img', 'input', 'option', 'label', 'select']),
     allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
-      button: ['id', 'class', 'style'],
+      button: ['id', 'class', 'style', 'data-canonical-image-url'],
       canvas: ['id', 'class', 'style', 'width', 'height'],
       div: ['id', 'class', 'style', 'contenteditable', 'tabindex'],
       img: ['id', 'class', 'data-canonical-image-url', 'src', 'style'],
