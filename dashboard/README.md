@@ -26,7 +26,7 @@ See the main website-ci/README for server install and running instructions.
 
 Please follow our [style guie](../STYLEGUIDE.md).  We've have set up linting to help.
 
-* To install our precommit hook that will lint the files you've changed, run `rake install:hooks` from the repository root. You should only have to do this once.  We _highly_ recommend it!
+* To ensure our precommit linting hook is set up, run `rake install:hooks` from the repository root. You should only have to do this once.
 * To manually lint in the dashboard directory, run `rubocop && haml-lint .`
 
 ## Testing
