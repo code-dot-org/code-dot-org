@@ -548,7 +548,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
             msg.missingRequiredBlocksErrorMsg();
         break;
       case TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED:
-        message = msg.unseenMissingRecommendedBlocksErrorMsg();
+        message = msg.missingRecommendedBlocksErrorMsg();
         break;
       case TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED:
         var numEnabledBlocks = this.getNumCountableBlocks();
