@@ -1,4 +1,4 @@
-var sanitizeHtml = require('sanitize-html');
+var sanitize = require('sanitize-html');
 
 /**
  * Return any html which is present in 'before' and absent in 'after'.
@@ -45,7 +45,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe) {
     return 0;
   };
 
-  var processed = sanitizeHtml(unsafe, {
+  var processed = sanitize(unsafe, {
     allowedTags: false,
     allowedAttributes: false,
     allowedSchemes: allSchemes
@@ -63,11 +63,11 @@ function warnAboutUnsafeHtml(warn, unsafe, safe) {
  * @param {function(removed, unsafe, safe)} warn Optional function to call if
  *     any unsafe html was removed from the output.
  */
-module.exports = function(unsafe, warn) {
-  var safe = sanitizeHtml(unsafe, {
-    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+module.exports = function sanitizeHtml(unsafe, warn) {
+  var safe = sanitize(unsafe, {
+    allowedTags: sanitize.defaults.allowedTags.concat([
       'button', 'canvas', 'img', 'input', 'option', 'label', 'select']),
-    allowedAttributes: $.extend({}, sanitizeHtml.defaults.allowedAttributes, {
+    allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
       button: ['id', 'class', 'style'],
       canvas: ['id', 'class', 'style', 'width', 'height'],
       div: ['id', 'class', 'style', 'contenteditable', 'tabindex'],
@@ -76,7 +76,7 @@ module.exports = function(unsafe, warn) {
       label: ['id', 'class', 'style'],
       select: ['id', 'class', 'style']
     }),
-    allowedSchemes: sanitizeHtml.defaults.allowedSchemes.concat(['data'])
+    allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data'])
   });
 
   if (typeof warn === 'function' && safe != unsafe) {
