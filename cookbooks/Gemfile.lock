@@ -22,8 +22,8 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/kitchen-ec2.git
-  revision: 1c767e20ed5919dcced28586b541c155e71b7193
-  branch: spot-duration
+  revision: 0deb6f793fe6daaaabb540c9c98f33d3c7640baa
+  branch: cdo
   specs:
     kitchen-ec2 (1.0.0.dev.0)
       aws-sdk (~> 2)
@@ -50,12 +50,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.8)
-    aws-sdk (2.2.12)
-      aws-sdk-resources (= 2.2.12)
-    aws-sdk-core (2.2.12)
+    aws-sdk (2.2.13)
+      aws-sdk-resources (= 2.2.13)
+    aws-sdk-core (2.2.13)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.2.12)
-      aws-sdk-core (= 2.2.12)
+    aws-sdk-resources (2.2.13)
+      aws-sdk-core (= 2.2.13)
     berkshelf-api-client (1.3.1)
       faraday (~> 0.9.1)
       httpclient (~> 2.6.0)
