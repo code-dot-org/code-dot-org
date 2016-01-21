@@ -229,8 +229,8 @@ authoredHintUtils.submitHints = function (url) {
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
-  var xmlBlocks = blocks.map(parseXmlElement);
-  var hints = xmlBlocks.map(function (xmlBlock) {
+  var hints = blocks.map(function (block) {
+    var xmlBlock = parseXmlElement(block.blockDisplayXML);
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
       content: marked(msg.recommendedBlockContextualHintTitle()),
@@ -238,7 +238,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
       hintId: "recommended_block_" + blockType,
       hintClass: 'recommended',
       hintType: 'contextual',
-      alreadySeen: false
+      alreadySeen: block.seen
     };
   });
   return hints;
