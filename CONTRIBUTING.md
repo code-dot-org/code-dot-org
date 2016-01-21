@@ -12,15 +12,14 @@ We'd love to have you join our group of contributors! Please e-mail your areas o
 
 Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We have implemented linting to help you with this:
 
-* To install our precommit hook that will lint the files you've changed, run `rake install:hooks`. You should only have to to this once.  We _highly_ recommend it!
+* To install our precommit hook that will lint the files you've changed, run `rake install:hooks`. You should only have to do this once.  We _highly_ recommend it!
 * To lint the entire project, run `rake lint` from the repository root.  This will check all Ruby, JavaScript and HAML.
 * To lint only part of the project, run one of these commands from the repository root:
-  * dashboard Ruby: `cd dashboard && rubocop`
-  * dashboard HAML: `haml-lint dashboard`
+  * dashboard: See the [dashboard README](./dashboard#code-style)
   * pegasus Ruby: `cd pegasus && rubocop`
   * pegasus HAML: `haml-lint pegasus`
-  * apps JS: `cd apps && grunt jshint`
-  * code-studio JS+SCSS: `cd code-studio && npm run lint`
+  * apps: See the [apps README](./apps#style-guide)
+  * code-studio: See the [code-studio README](./code-studio#code-style)
 
 ## Testing
 
