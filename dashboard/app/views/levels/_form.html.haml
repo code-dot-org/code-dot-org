@@ -32,8 +32,10 @@
   .field
     = f.hidden_field :published
   .actions
-    = f.submit 'Save your progress', {:id => 'saveProgress'}
-    = f.submit 'Save and publish your completed work', {:id => 'publishedLevel'}
+    = f.submit 'Save your progress but do not publish', {:id => 'saveProgress'}
+    %br
+    %br
+    = f.submit 'Save and publish your completed work', {:id => 'publishedLevel', :style => "background-color: #f0c14b"}
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   #{render partial: 'shared/ajax_submit', formats: [:js],  locals: {form_selector: @level.new_record? ? '#new_level' : '.edit_level'}}

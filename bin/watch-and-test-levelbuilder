@@ -26,7 +26,7 @@ unstaged_files = HooksUtils.get_unstaged_files
 
 all_interesting_files = modified_files | unstaged_files
 
-level_file_modified = false;
+level_file_modified = false
 
 all_interesting_files.each do |filename|
   if (filename.start_with? LEVELS_DIR) && File.mtime(filename) > last_modified_time
@@ -37,7 +37,7 @@ end
 unless level_file_modified
   puts 'No new changes, cleaning up'
   File.delete LEVELBUILDER_CI_LOCK_FILENAME
-  exit 0;
+  exit 0
 end
 
 puts "Modifications to levelbuilder files detected - running testing"
