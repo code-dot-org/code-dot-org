@@ -43,10 +43,7 @@
 
     if (fallbackVideo)
     {
-      //var video = $("#showVideo_#{id} video")[0];
       videojs(fallbackVideo, {}, function() {
-        console.log("we have a videojs object");
-
         play ? this.play() : this.pause();
       });
     }
