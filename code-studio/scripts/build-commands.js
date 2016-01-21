@@ -165,9 +165,9 @@ exports.bundle = function (config) {
  * @param {!string} destDir
  * @returns {Promise}
  */
-exports.copyDirectory = function (srcDir, destDir) {
-  return exports.executeShellCommand('rsync -av ' + srcDir + ' ' + destDir);
-};
+function copyDirectory(srcDir, destDir) {
+  return executeShellCommand('rsync -av ' + srcDir + ' ' + destDir);
+}
 
 /**
  * Creates given director(y|ies) to any depth if it does not exist, no-op if
@@ -175,9 +175,9 @@ exports.copyDirectory = function (srcDir, destDir) {
  * @param {!string} dir
  * @returns {Promise}
  */
-exports.ensureDirectoryExists = function (dir) {
-  return exports.executeShellCommand('mkdir -p ' + dir);
-};
+function ensureDirectoryExists(dir) {
+  return executeShellCommand('mkdir -p ' + dir);
+}
 
 /**
  * Executes a single shell command in a child process that inherits the
@@ -187,7 +187,7 @@ exports.ensureDirectoryExists = function (dir) {
  * @returns {Promise.<string>} which resolves to the child process' stdout if
  * the command exits with code zero, or rejects if the child process fails.
  */
-exports.executeShellCommand = function (command) {
+function executeShellCommand(command) {
   return new Promise(function (resolve, reject) {
     console.log(command);
     child_process.exec(command, getChildProcessOptions(), function (err, stdout, stderr) {
@@ -206,7 +206,19 @@ exports.executeShellCommand = function (command) {
       }
     });
   });
-};
+}
+
+/**
+ * Generate options object to pass into child_process.exec()
+ * @returns {{env: Object, stdio: string}}
+ */
+function getChildProcessOptions() {
+  return {
+    env: _.extend({}, process.env, {
+      PATH: './node_modules/.bin:' + process.env.PATH
+    })
+  };
+}
 
 /**
  * Given an array of shell commands, executes those commands in child processes
@@ -215,32 +227,9 @@ exports.executeShellCommand = function (command) {
  * @returns {Promise} which resolves when all commands are completed, or rejects
  *          as soon as any command fails.
  */
-exports.executeShellCommandsInParallel = function (commands) {
-  return Promise.all(commands.map(exports.executeShellCommand));
-};
-
-/**
- * Given an array of functions that return a promise, invokes the functions
- * in sequence, waiting to invoke each function until the promise returned by
- * the function before it in the list has resolved.  If any promise in the
- * sequence rejects, the rest of the sequence is skipped.
- *
- * This is an alternative to manually chaining these functions.  Instead of:
- *     fn1().then(fn2).then(fn3).then(fn4).then(done);
- * You can call:
- *     promiseSequence([fn1, fn2, fn3, fn4]).then(done);
- *
- * @param {function[]} functionSequence - functions that return Promises, to be
- *        called in sequence.
- * @returns {Promise} which resolves when the Promise returned by the last
- *          function resolves, or rejects as soon as any Promise in the
- *          sequence rejects.
- */
-exports.promiseSequence = function (functionSequence) {
-  return functionSequence.reduce(function (memo, next) {
-    return memo.then(next);
-  }, Promise.resolve());
-};
+function executeShellCommandsInParallel(commands) {
+  return Promise.all(commands.map(executeShellCommand));
+}
 
 /**
  * Log a message in a box, so it stands out from the rest of the logging info.
@@ -255,25 +244,23 @@ exports.logBoxedMessage = function (message, style) {
 
 /**
  * @param {!string} message
- * @returns {Function} that logs the given message in a success style.
+ * @returns {Promise} already resolved
  */
-exports.logSuccess = function (message) {
-  exports.logBoxedMessage(message);
-};
+function logSuccess(message) {
+  return Promise.resolve(exports.logBoxedMessage(message));
+}
 
 /**
  * @param {!string} message
  * @param {Error} reason
- * @returns {Function} that logs the given message in a failure style along
- *          with the error that triggered the failure, and rethrows the
- *          error.
+ * @returns {Promise} rejected with same reason
  */
-exports.logFailure = function (message, reason) {
+function logFailure(message, reason) {
   logBoldRedError(reason);
   warnIfWrongNodeVersion();
   exports.logBoxedMessage(message, chalk.bold.red.bgBlack);
-  throw reason;
-};
+  return Promise.reject(reason);
+}
 
 /**
  * Helper for formatting error messages for the terminal.
@@ -300,18 +287,6 @@ function logBoldRedError(err) {
  */
 function ensureTargetDirectoryExists(target) {
   mkdirp.sync(path.dirname(target));
-}
-
-/**
- * Generate options object to pass into child_process.exec()
- * @returns {{env: Object, stdio: string}}
- */
-function getChildProcessOptions() {
-  return {
-    env: _.extend({}, process.env, {
-      PATH: './node_modules/.bin:' + process.env.PATH
-    })
-  };
 }
 
 /**
@@ -362,3 +337,25 @@ function warnIfWrongNodeVersion() {
       console.log('You are using node ' + process.version + '. This build script expects ' + engines_node + '.');
   }
 }
+
+/**
+ * Wraps a function so that calling it with a set of arguments returns a new
+ * function with those arguments pre-bound - essentially a one-time curry.
+ * @param {!function} fn
+ * @returns {Function}
+ */
+function makeBuildCommand(fn) {
+  return function () {
+    return fn.bind.apply(fn, [undefined].concat([].slice.call(arguments)));
+  };
+}
+
+// Export wrapped versions of the commands we need, suitable for passing
+// into Promise.prototype.then()
+_.extend(module.exports, {
+  copyDirectory: makeBuildCommand(copyDirectory),
+  ensureDirectoryExists: makeBuildCommand(ensureDirectoryExists),
+  executeShellCommandsInParallel: makeBuildCommand(executeShellCommandsInParallel),
+  logSuccess: makeBuildCommand(logSuccess),
+  logFailure: makeBuildCommand(logFailure)
+});

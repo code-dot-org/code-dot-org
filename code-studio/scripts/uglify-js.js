@@ -3,9 +3,12 @@
  *        loaded by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
-var build_commands = require('./build-commands');
+var commands = require('./build-commands');
 var fs = require('fs');
 var recursiveReaddirSync = require('recursive-readdir-sync');
+var executeShellCommandsInParallel = commands.executeShellCommandsInParallel;
+var logSuccess = commands.logSuccess;
+var logFailure = commands.logFailure;
 
 // List all the .js files in the build directory
 var builtFiles = recursiveReaddirSync('build/js/').filter(function (file) {
@@ -22,6 +25,7 @@ var uglifyCommands = builtFiles.map(function (path) {
   ].join(' \\\n    ');
 });
 
-build_commands.executeShellCommandsInParallel(uglifyCommands)
-    .then(build_commands.logSuccess.bind(undefined, "code-studio js uglified"))
-    .catch(build_commands.logFailure.bind(undefined, "code-studio js uglify failed"));
+Promise.resolve()
+    .then(executeShellCommandsInParallel(uglifyCommands))
+    .then(logSuccess("code-studio js uglified"))
+    .catch(logFailure("code-studio js uglify failed"));

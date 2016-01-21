@@ -3,15 +3,13 @@
     by dashboard (our "Code Studio" Rails app). */
 'use strict';
 
-var build_commands = require('./build-commands');
 var commander = require('commander');
+var commands = require('./build-commands');
 var path = require('path');
-
-// Use commander to parse command line arguments
-// https://github.com/tj/commander.js
-commander
-    .option('--dist', 'Build output optimized for distribution', false)
-    .parse(process.argv);
+var ensureDirectoryExists = commands.ensureDirectoryExists;
+var executeShellCommandsInParallel = commands.executeShellCommandsInParallel;
+var logSuccess = commands.logSuccess;
+var logFailure = commands.logFailure;
 
 /** @const {string} */
 var SRC_PATH = './src/css/';
@@ -27,7 +25,7 @@ var FILES = [
 
 /**
  * Paths to search when evaluating scss @import directives.
- * Rooted at working directory, with NO trailing slash.
+ * Rooted at code-studio root, with NO trailing slash.
  * @const {string[]}
  */
 var INCLUDE_PATHS = [
@@ -35,6 +33,12 @@ var INCLUDE_PATHS = [
   'src/css',
   '../shared/css'
 ];
+
+// Use commander to parse command line arguments
+// https://github.com/tj/commander.js
+commander
+    .option('--dist', 'Build output optimized for distribution', false)
+    .parse(process.argv);
 
 // Build up list of shell commands to run SASS on each file
 var includePathArguments = INCLUDE_PATHS.map(function (path) {
@@ -49,8 +53,8 @@ var sassCommands = FILES.map(function (file) {
   ].join(" \\\n    ");
 });
 
-// Run build (exits on failure)
-build_commands.ensureDirectoryExists(BUILD_PATH)
-    .then(build_commands.executeShellCommandsInParallel.bind(undefined, sassCommands))
-    .then(build_commands.logSuccess.bind(undefined, "code-studio css built"))
-    .catch(build_commands.logFailure.bind(undefined, "code-studio css failed"));
+Promise.resolve()
+    .then(ensureDirectoryExists(BUILD_PATH))
+    .then(executeShellCommandsInParallel(sassCommands))
+    .then(logSuccess("code-studio css built"))
+    .catch(logFailure("code-studio css failed"));
