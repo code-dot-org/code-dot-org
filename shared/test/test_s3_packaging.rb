@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 require 'securerandom'
+require 'aws-sdk'
 
 require_relative '../../lib/cdo/aws/s3_packaging'
 require_relative '../../deployment'
@@ -148,6 +149,7 @@ class S3PackagingTest < Minitest::Test
   def test_upload_as_package
     # create a random hash so that we dont have to worry about colliding with
     # others on s3
+    # TODO - cleanup this random package from s3
     random_hash = SecureRandom.hex
     alt_source_loc, alt_target_loc, alt_packager = create_packager(random_hash)
 
@@ -168,6 +170,11 @@ class S3PackagingTest < Minitest::Test
       assert threw
 
     ensure
+      # in this case we also want to delete the s3 bucket so we're not polluting
+      # TODO - share BUCKET_NAME with s3packaging
+      client = Aws::S3::Client.new
+      client.delete_object(bucket: 'cdo-build-package', key: alt_packager.send(:s3_key))
+
       cleanup_packager(alt_source_loc, alt_target_loc)
     end
   end
