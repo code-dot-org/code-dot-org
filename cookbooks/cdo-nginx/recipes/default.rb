@@ -14,10 +14,11 @@ template '/etc/nginx/nginx.conf' do
   user 'root'
   group 'root'
   mode '0644'
-  notifies :restart, 'service[nginx]', :delayed
+  notifies :reload, 'service[nginx]', :delayed
 end
 
 service 'nginx' do
   supports restart: true, reload: true, status: true
+  restart_command 'service nginx restart'
   action [:enable, :start]
 end
