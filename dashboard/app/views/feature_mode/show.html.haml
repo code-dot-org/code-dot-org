@@ -22,7 +22,7 @@
   .grid_title {
     font-family: Arial;
     font-size: 120%;
-    margin: 0px 0px 10px 0px;
+    margin-bottom: 10px;
     font-weight: bold;
   }
   .true_flag {
@@ -35,6 +35,9 @@
   }
   .grid_preview {
     position: absolute;
+  }
+  .grid_preview:last-child {
+    position: relative;
   }
   .grid_preview table {
     transition: visibility 0.5s ease-in, visibility 0.1s ease-in;
@@ -49,12 +52,6 @@
   }
   .feature_grid tr:nth-child(odd) {
     background-color: #eee;
-  }
-  .grid_preview {
-    position: absolute;
-  }
-  .grid_preview:last-child {
-    position: relative;
   }
   .grid_preview_pending  {
     visibility: hidden;
