@@ -3,8 +3,9 @@ require 'rack/test'
 require 'securerandom'
 require 'aws-sdk'
 
+require_relative './test_helper'
 require_relative '../../lib/cdo/aws/s3_packaging'
-require_relative '../../deployment'
+# require_relative '../../deployment'
 
 ORIGINAL_HASH = 'fake-hash'
 
@@ -15,6 +16,8 @@ class RakeUtils
 end
 
 class S3PackagingTest < Minitest::Test
+  include SetupTest
+
   def create_packager(commit_hash = ORIGINAL_HASH)
     source_location = Dir.mktmpdir
     target_location = Dir.mktmpdir
