@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Bist du Informatiklehrer? Hier findest du weiteres Material
     zur Informatikwoche</a>'
-  n_have_learned_an_hoc: "<h1>Probiere eine</h1><h2>Hour of Code</h2><h3># </h3>"
+  n_have_learned_an_hoc: <h1>Probiere eine</h1><h2>Hour of Code</h2><h3># </h3>
   anybody_can_learn: Jeder kann es lernen.
   learn_now: Jetzt lernen
   petition_message: Jeder Schüler in jeder Schule sollte die Möglichkeit haben, Informatik
@@ -41,7 +41,7 @@
   hoc2014_everyone: jeder
   hoc2014_support: Unterstütze es &#x25BE;
   hoc2014_whatishoc: Was ist die Hour of Code?
-  csedweek_map_header: "#CSEdWeek / Hour of Code Veranstaltungen auf der ganzen Welt"
+  csedweek_map_header: '#CSEdWeek / Hour of Code Veranstaltungen auf der ganzen Welt'
   csedweek_map_signup: Melde deine Veranstaltung an
   csedweek_map_search_placeholder: Suche nach Hour of Code Veranstaltungen
   csedweek_map_search_search: Suche
@@ -71,7 +71,7 @@
     Wenn-Sonst-Befehle und einfache Programmabläufe.
   all_ages: Alle Altersgruppen
   beginner: Anfänger
-  n_participants: "# Teilnehmer"
+  n_participants: '# Teilnehmer'
   go: Start
   thank_you_: Vielen Dank!
   congratulations: Herzlichen Glückwunsch!
@@ -123,7 +123,7 @@
   beyond_an_hour: Nach der Hour of Code
   get_started: Start
   i_agree: Ich stimme zu
-  participant_select: "- Auswählen -"
+  participant_select: '- Auswählen -'
   participant_student: Schüler
   participant_parent: Elternteil
   participant_educator: Lehrer
@@ -156,12 +156,12 @@
   boy: Junge
   help_recruit_coders: Hilf uns weitere Programmierer/-innen für dein Team zu gewinnen!
   help_recruit: Hilf uns weitere Programmierer zu rekrutieren!
-  lines_of_code: "ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT."
-  lines_of_code_alt: "<b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN"
+  lines_of_code: ÜBER <b># ZEILEN CODE</b> GESCHRIEBEN BIS JETZT.
+  lines_of_code_alt: <b>#</b> CODEZEILEN, VON SCHÜLERN GESCHRIEBEN
   who_has_done_hoc: 'Wer hat die #HourOfCode geschafft? @codeorg'
   hoc_leaderboards: Die Hour of Code-Ranglisten
-  students_and_lines: "%{students} Schüler haben die Hour of Code ggeschafft und %{lines}
-    Zeilen Code geschrieben."
+  students_and_lines: '%{students} Schüler haben die Hour of Code ggeschafft und %{lines}
+    Zeilen Code geschrieben.'
   start_hoc: Starte die Hour of Code jetzt
   contact_form_topic_press: Presse/Medien (Interview oder Sprecherauftrag)
   stats_nina: '"Jeder einzelne Tag ergab die gleichen Resultate&mdash; 100% Engagement."
@@ -188,8 +188,8 @@
   studiobar_shop_body: Breche Stereotypen. Trage unser Logo mit Stolz.
   homepage_hero_text_malala: "&ldquo; Ich fordere Mädchen in jedem Land auf, an einer
     Hour of Code teilzunehmen &rdquo; \n Malala, Friedensnobelpreisträgerin\n"
-  homepage_hero_text_susan: "&ldquo; Wenn man Technologien verändern kann, kann man
-    auch die Welt verändern. &rdquo; Susan, CEO von YouTube"
+  homepage_hero_text_susan: '&ldquo; Wenn man Technologien verändern kann, kann man
+    auch die Welt verändern. &rdquo; Susan, CEO von YouTube'
   homepage_hero_text_fistbump: |
     &ldquo;Spiele nicht einfach mit deinem Handy, programmiere es.&rdquo;
     Präsident Barack Obama
@@ -220,8 +220,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Dieses Projekt hat 100% meiner Schüler gefesselt, einbezogen und teilhaben lassen.&rdquo;
     Adam, Lehrer
-  homepage_hero_text_stat_loc: "#loc geschriebene Zeilen, von Schülern"
-  homepage_hero_text_stat_students: "#student_count Schüler-Accounts bei Code Studio"
+  homepage_hero_text_stat_loc: '#loc geschriebene Zeilen, von Schülern'
+  homepage_hero_text_stat_students: '#student_count Schüler-Accounts bei Code Studio'
   homepage_hero_text_stat_served: 'The Hour of Code: #served mal genutzt'
   homepage_slot_text_hoc: Die "Hour of Code"
   homepage_slot_text_frozen: Die Eiskönigin mit Anna und Elsa
@@ -231,7 +231,7 @@
   homepage_slot_text_shop: Shop
   homepage_slot_text_flappy: Flappy Code
   homepage_action_text_hoc: Hour of Code für jeden Schüler.
-  homepage_action_text_num_served: "# bedient"
+  homepage_action_text_num_served: '# bedient'
   homepage_action_text_join_us: Mach mit
   homepage_action_text_sign_up: Registrieren
   homepage_action_text_try_it: Versuche es
@@ -251,14 +251,18 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Erfahre mehr
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Erfahre mehr
   homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann lernen. Fange heute an
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
   homepage_slot_text_link_host: Organisiere eine Hour of Code
-  homepage_slot_text_link_hocserved: "# bedient"
+  homepage_slot_text_link_hocserved: '# bedient'
   homepage_solot_text_link_volunteer: Hilf mit bei der Hour of Code
   homepage_slot_text_title_students: Schüler
   homepage_slot_text_blurb_students: Entdecke all unsere Tutorials
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Probiere Code Studio aus
   homepage_slot_text_link_local: Finde Unterricht vor Ort
   homepage_slot_text_link_othercourses: Andere Onlinekurse
@@ -353,10 +357,10 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer führen dieses Jahr
     eine Hour of Code mit ihren Klassen durch, 7. bis 13. Dezember 2015. Sie brauchen
     deine Hilfe! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} Lehrer suchen
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} Lehrer suchen
     begeisterte Unterstützer für die Informatikausbildung, für die Durchführung der
     Hour of Code diesen Dezember.<br>%{num_volunteers} haben sich bereits gemeldet.
-    Schließe dich ihnen an."
+    Schließe dich ihnen an.'
   volunteer_engineer_submission_intro_background: Hour of Code ist eine globale Bewegung,
     um sich mit Informatik zu beschäftigen. Millionen von Schülern in über 180 Ländern
     machen mit. Bitte beteilige dich während der Informatikwoche vom 7. bis 13. Dezember.
@@ -520,9 +524,9 @@
     für die Einführung in die Informatik, im Bereich Modellierung und Simulation,
     zu entwickeln.
   dashboard_course_ecs: Die Informatik erkunden
-  dashboard_course_ecs_desc: "'Die Informatik erkunden' ist ein ganzjähriger Kurs
+  dashboard_course_ecs_desc: '''Die Informatik erkunden'' ist ein ganzjähriger Kurs
     und besteht aus 6 Einheiten: Computer-Mensch-Interaktion, Problembewältigung,
-    Web Design, Programmieren, Datenverarbeitung und -analyse sowie Robotik."
+    Web Design, Programmieren, Datenverarbeitung und -analyse sowie Robotik.'
   dashboard_course_csp: AP® Informatikleitsätze
   dashboard_course_csp_desc: Code.org hat einen gründlichen, motivierenden und zugänglichen
     Kurs erstellt, welche die Grundlagen der Informatik erforscht.
@@ -642,7 +646,7 @@
   dashboard_course4: 'Kurs 4 (beta): '
   dashboard_curriculum: Lehrplan
   dashboard_curriculum_overview: Grundschullehrplan-Übersicht
-  dashboard_overview: "Übersicht"
+  dashboard_overview: Übersicht
   dashboard_sequence: Sequenz
   dashboard_framework: Rahmen
   dashboard_standards: Standards
@@ -695,17 +699,17 @@
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
-  dashboard_announce_message: "<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme
+  dashboard_announce_message: '<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme
     an der Hour of Code 2015! In allen Code Studio Tutorials und Kursen können die
     Fortschritte wieder gespeichert werden. Hinweis: Code.org Büros sind vom 19. Dezember
     bis 3. Januar geschlossen. Die Beantwortung von Fragen, die bis zum 4. Januar
-    eingereicht werden, kann sich verzögern."
+    eingereicht werden, kann sich verzögern.'
   dashboard_announce_button_text: Erfahre mehr
-  dashboard_announce_hoc: "<b>9. November 2015</b> - Eine neue Hour of Code Anleitung
+  dashboard_announce_hoc: '<b>9. November 2015</b> - Eine neue Hour of Code Anleitung
     ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen
     der Macht. Arbeite zusammen mit Rey um den neuen Droiden, BB-8, durch seine Mission
     zu leiten. Dann triff Leia, um dein eigenes Spiel in einer weit, weit entfernten
-    Galaxie zu erstellen und zu teilen."
+    Galaxie zu erstellen und zu teilen.'
   dashboard_announce_playlab: '<b>4. Dezember 2015</b> - "Hour of Code" ist da! Erkunde
     50 Übungen, es spielt keine Rolle wie alt du bist oder welches Gerät du benutzt.
     Diese Woche neu: Programmiere deine eigenen Geschichten und Spiele in neuen Spielelaboren,
@@ -1422,36 +1426,38 @@
     mobiele Apps zu kreieren und zu entwickeln, mit PHP und MySQL-Datenbank zu arbeiten.
     Starten sie mit der statistischen Aufbereitungs Sprache R und vieles mehr.[Hinweis:
     Bezahlung erforderlich]'
-  edx_beyond_longdescription: CS50x ist Harvard College-Einführung in die geistigen
-    Unternehmen der Informatik und die Kunst der Programmierung für Majors und nicht-Majors
-    gleichermaßen, mit oder ohne vorherige Erfahrung im Bereich Programmierung. Unter
-    anderem Abstraktion, Algorithmen, Datenstrukturen, Kapselung, Ressourcen-Management,
-    Sicherheit, Softwareentwicklung und Webentwicklung. Sprachen sind C, PHP und JavaScript
-    plus SQL, CSS und HTML. Die auf dem Campus-Version des CS50x ist Harvard zweitgrößte
-    Kurs.
-  coursera_beyond_longdescription: 'Stanford CS 101 Klasse gelehrt von Nick Parlante
-    (kostenlos!). CS101 lehrt die grundlegenden Ideen der Informatik für ein NULL-vor-Erfahrung-Publikum.
-    Spielen und experimentieren mit kurzen Bits des Codes, zum Leben, die Kraft und
-    die Einschränkungen von Computern. CS101 liefert auch einen allgemeinen Hintergrund
-    auf Computern heute: Was ist ein Computer, was ist Hardware, was ist Software,
-    was ist das Internet. Es sind keine Vorkenntnisse erforderlich, als die Möglichkeit,
-    einen Web-Browser zu verwenden.'
-  udacity_beyond_longdescription: In diesem Kurs lernst Du wichtige Konzepte der Informatik
-    kennen und schreibst Dein eigenes Programm für einen Webcrawler. Es sind keine
-    Programmierkenntnisse für diesen Kurs erforderlich. Anfänger sind herzlich willkommen!
-    Am Ende dieses Kurses hast Du wichtige Konzepte in der Informatik und Programmierung
-    gelernt und kannst "Python"-Programme schreiben.
+  edx_beyond_longdescription: Der Harvard Kurs CS50x ist eine Einführung in die intellektuellen
+    Herausforderungen der Informatik und die Kunst der Programmierung, gleichermaßen
+    für Anfänger und Fortgeschrittene mit und ohne vorherige Programmierkenntnisse
+    geeignet. Behandelt werden unter anderem Abstraktionen, Algorithmen, Datenstrukturen,
+    Kapselung, Ressourcen-Management, Sicherheit, Softwareentwicklung und Webentwicklung.
+    Verwendete Sprachen sind C, PHP und JavaScript, sowie SQL, CSS und HTML. Die universitäre
+    Variante des CS50x ist der zweitgrößte Kurs in Harvard.
+  coursera_beyond_longdescription: 'Der Kurs CS101 der Stanford University wird von
+    Nick Parlante (kostenlos!) unterrichtet. Im CS101 werden Zuhörern ohne Vorkenntnisse
+    die grundlegenden Konzepte der Informatik beigebracht. Experimentiere mit kleinen
+    Codeabschnitten mache dir die Möglichkeiten und Grenzen von Computern bewusst.
+    Der CS101 bietet allgemeinen Hintergrundinformationen über moderne Computern:
+    was ist ein Computer, was ist Hardware, was Software, woraus besteht das Internet...
+    Du brauchst keine Vorkenntnisse, nur einen Webbrowser musst du bedienen können.'
+  udacity_beyond_longdescription: In diesem Kurs lernst du wichtige Konzepte der Informatik
+    kennen und schreibst dein eigenes Programm für einen Webcrawler. Du benötigst
+    keine Programmierkenntnisse für diesen Kurs. Anfänger sind herzlich willkommen!
+    Am Ende des Kurses hast du wichtige Konzepte der Informatik und Programmierung
+    gelernt und kannst "Python"-Programme schreiben. Dieser Kurs Dienst als Vorbereitung
+    für fortgeschrittene Computerkurse.
   teachingtree_beyond_longdescription: '"TeachingTree" ist eine offene Plattform für
     die Zusammenstellung von Bildungsinformationen und Kursen. Unser Ziel ist es,
     dass Schüler und Studenten schnell auf die notwendigen Videos zugreifen können,
     um spezielle Programmierkonzepte zu lernen. Ausserdem sind alle eingeladen, selbst
     Videos einzustellen oder Programmierkonzepte zu verschlagworten.'
-  kodu_beyond_longdescription: '"Kodu" erlaubt es Schülern, auf dem PC oder auf der
-    XBOx einfache Spiele mit einer visuellen Programmiersprache zu entwickeln. "Kodu"
-    kann für die Lehre in Kreativitätsthemen, bei Problemlösung und Programmierung
-    genutzt werden. Ein jeder kann "Kodu" nutzen, um Spiele zu entwickeln - auch ohne
-    Programmier- und Designkenntnisse. "Kodu" ist für die XBox in den USA auf dem
-    XBox Marktplatz im "Indie Games Channel" für etwa 5$ erhältlich.'
+  kodu_beyond_longdescription: Mit "Kodu" können Schülern, auf dem PC oder auf der
+    XBox einfache Spiele mithilfe einer visuellen Programmiersprache entwickeln. "Kodu"
+    kann für den Unterricht von Kreativitätstechniken, bei Problemlösungen, zum Geschichten
+    erzählen und zur Programmierung genutzt werden. Ein jeder kann "Kodu" nutzen,
+    um Spiele zu entwickeln - auch ohne Programmier- und Designkenntnisse. "Kodu"
+    ist für die XBox in den USA auf dem XBox Marktplatz im "Indie Games Channel" für
+    etwa 5$ erhältlich.
   cargobot_beyond_longdescription: '"Cargo-Bot" ist ein Rätsel-Spiel, bei dem Du einem
     Roboter zeigst, wie er Behälter hin- und herschieben kann, ganz einfach! Mit 36
     Rätseln, toller Musik und einer beeindruckenden Grafik. Du kannst Deine Programmierlösungen
@@ -1475,33 +1481,34 @@
     um Deine Helden zu steuern und Deine Freunde zu retten. Lerne dabei als Anfänger
     in diesem HTML5-Spiel gleichzeitig die Programmierung in der Programmiersprache
     "JavaScript".
-  codea_beyond_longdescription: Codea für iPad können Sie Spiele und Simulationen
-    erstellen &mdash; oder fast jede visuelle Idee, die Sie haben. Verwandeln Sie
-    Ihre Gedanken in interaktiven Kreationen, die Verwendung von iPad-Funktionen wie
-    Multi-Touch und der Beschleunigungsmesser machen. Wir denken Codea ist die schönsten
-    Code-Editor, den Sie verwenden werden, und es ist einfach. Codea soll Sie Ihren
-    Code berühren lassen. Eine Anzahl ändern möchten? Einfach tippen Sie und ziehen
-    Sie es. Wie wär's mit einer Farbe oder ein Bild? Sie klopfen holt oben visuellen
-    Editoren, mit denen Sie wählen genau das, was Sie wollen.
+  codea_beyond_longdescription: Mit Codea für iPad kannst du Spiele und Simulationen
+    erstellen &mdash; oder fast jede visuelle Idee umsetzen. Verwandele deine Gedanken
+    in interaktiven Kreationen und mache Gebrauch von iPad-Funktionen wie Multi-Touch
+    und dem Beschleunigungsmesser. Codea ist unserer Ansicht nach einer der schönsten
+    und einfachsten Code-Editoren. Mit Codea kannst du deinen Code buchstäblich anfassen.
+    Um eine Zahl zu ändern, brauchst du sie nur anzutippen und zu ziehen. Möchte du
+    Farben oder Bilder verwenden? Tippe auf den Bildschirm mache mit den visuellen
+    Editoren genau das, was du dir vorstellst.
   lego_beyond_longdescription: Erstelle kleine, anpassbare und programmierbare Roboter
     aus Legosteinen.
-  finch_beyond_longdescription: Der "Finch" ist eine Roboterfigur für das Erlernen
-    von Computersprachen. Die Entwicklung wurde über 4 Jahre vom Computerlabor "Create"
-    an der Carnegie-Mellon Universität umgesetzt. Der "Finch" ist eine interactive
-    Einführung in die Kunst des Programmierens und unterstützt ein Dutzend verschiedener
-    Programmierumgebungen und Programmiersprachen zur Entwicklung von umfangreichen
-    Programmen und kann ab dem Alter von 8 Jahren genutzt werden.
+  finch_beyond_longdescription: Der "Finch" ist eine Roboterfigur mit der Computersprachen
+    erlernt werden können. Er ist das Ergebnis einer vierjährigen Studie an am Computerlabor
+    "Create" an der Carnegie-Mellon Universität. Der "Finch" ist bietet eine anregende
+    Einführung in die Programmierung. Erunterstützt über ein Dutzend verschiedener
+    Programmierumgebungen und Programmiersprachen, die von Schülern ab 8 Jahren zur
+    Erstellung von interaktiven Programmen eingesetzt werden können.
   arduino_beyond_longdescription: Der "Arduino" ist eine bekannte Hardware-Plattform,
     die es Entwicklern und Designern ermöglicht, mit echten Sensoren, Lampen, Lautsprechern
     etc. zu arbeiten. Die "Sparkfun Virtual Sandbox" erlaubt es, echten "Arduino-Code"
     im Internet-Browser zu entwickeln.
   processing_beyond_longdescription: '"Processing" ist eine Programmiersprache, eine
-    Entwicklungsumgebung und eine Online-Community. Seit 2001 vermittelt "Processing"
-    Softwarekenntnisse mittels einem sehr stark visuellen Ansatz. Ausgehend von einem
-    Software-Skizzenbuch hat sich "Processing" per heute in ein professionelles Entwicklungstool
-    weiterentwickelt. Heute nutzen zehntausende Studenten, Schüler, Künstler, Forscher,
-    Designer und Enthusiasten das "Processing"-Tool zum Lernen, für Prototypenerstellung
-    und für die Entwicklung.'
+    Entwicklungsumgebung und eine Online-Community. Seit 2001 fördert "Processing"
+    Softwarekenntnisse in der bildenden Kunst und visuelle Kompetenz in der Technik.
+    Ursprünglich wurde "Processing" als Software-Skizzenbuch entworfen und um Grundlagen
+    der Programmierung über einen visuellen Zugang zu unterrichten. Es hat sich bis
+    heute zu einem professionelles Entwicklungstool weiterentwickelt. Heute nutzen
+    zehntausende Studenten, Schüler, Künstler, Forscher, Designer und Enthusiasten
+    "Processing" als Lerntool, zur Entwicklung von Prototypen und bei der Produktion.'
   alice_beyond_longdescription: Das "Alice"-Projekt stellt Dir Werkzeuge und Materialien
     für die Lehre und das Erlernen und Programmieren von 3-dimensionalen Animationen
     zur Verfügung. Schüler aller Alterklassen erwerben dabei spielerisch Problemlösungskomptenzen
@@ -1522,7 +1529,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
-  homepage_banner_20k_teachers_link: Learn more
-  homepage_slot_text_blurb_students_courses: Explore our courses

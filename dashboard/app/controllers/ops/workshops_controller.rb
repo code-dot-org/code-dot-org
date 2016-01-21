@@ -27,7 +27,7 @@ module Ops
         if current_user.admin?
           # For admins, list all workshops.
           # include all associations loaded by the WorkshopSerializer
-          Workshop.includes(:cohorts, :facilitators).all
+          Workshop.includes(:cohorts, :facilitators, :segments).all
         elsif current_user.permission?('district_contact')
           # For district contacts, list all workshops in all cohorts in their district.
           Workshop.includes(cohorts: :districts).where(districts: {contact_id: current_user.try(:id)})
