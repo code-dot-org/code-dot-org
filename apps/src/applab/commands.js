@@ -5,6 +5,7 @@ var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
 
@@ -193,7 +194,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = utils.sanitizeHtml(opts.html, reportUnsafeHtml);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -1050,7 +1051,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = utils.sanitizeHtml(opts.html, reportUnsafeHtml);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml);
     return true;
   }
   return false;
