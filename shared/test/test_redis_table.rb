@@ -1,8 +1,6 @@
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
-require_relative '../middleware/helpers/null_pub_sub_api'
-require_relative '../middleware/helpers/redis_table'
+require_relative 'test_helper'
+require 'helpers/null_pub_sub_api'
+require 'helpers/redis_table'
 require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
