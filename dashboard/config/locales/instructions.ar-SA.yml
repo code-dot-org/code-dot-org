@@ -366,34 +366,28 @@
         قطعة برمجية؟
       2-3 Maze sq6_instruction: 'هل يمكنك استبدال الإجابة السابقة بقطعتي برمجة فقط؟
         (تلميح: أنشئ حلقة باستخدام قطعة البرمجة "كرر مرات".)'
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
-      2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
+      2-3 Maze sq7_instruction: يحصل لي للدخيل الخضراء باستخدام ثلاثة فقط من القطع.
+      2-3 Maze sq8_instruction: أوصلني الى الخنزير! (أين كانت قطع "كرر مرات" عندما
+        كنت في حاجة إليها؟)
+      2-3 Maze sq9_instruction: إنشاء حلقات للحصول على خنزير باستخدام قطع أقل.
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) \n"
-      4-5 Artist 10_instruction: |
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: Can you loop this code to complete the square?
-      4-5 Artist 3.5_instruction: |
-        Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
-      4-5 Artist 3_instruction: |
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle.
-      4-5 Artist 4_instruction: |
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
+      2-3level1_instruction: ساعد الطيور بصيد الخنزير المشاغب بتحريكه إلى الأمام
+      4-5 Artist 1_instruction: 'ساعدني على الانتهاء من رسم صندوقي. (كل سطر هو 300
+        بكسل طويل) '
+      4-5 Artist 10_instruction: اضغط على "تشغيل" لمحاولة التعليمة البرمجية. ثم كرر
+        ذلك مرات كافية لإكمال الرسم. الألوان تكون مختلفة في كل مرة.
+      4-5 Artist 11_instruction: استكمال الخطوط الخضراء. الخطوط هي 300 بكسل طويلة
+        و 15 بكسل متفرقة عن بعضها البعض.
+      4-5 Artist 2_instruction: هل يمكنك تكرار هذا الرمز لإكمال المربع؟
+      4-5 Artist 3.5_instruction: حسنا، حاول معرفة ماذا يحدث إذا قمت بتشغيل هذا الكود
+        (اضغط على "تنفيذ" لمحاولة ذلك). ثم كرر ذلك عدة مرات لإكمال الرسم. الألوان
+        ستكون مختلفة في كل مرة.
+      4-5 Artist 3_instruction: وقد هذا السرير المستطيل بشكل زهرة لديه محيط بمقدار
+        600. على الجانب الطويل قد يبلغ طوله 200. أرسم المستطيل.
+      4-5 Artist 4_instruction: كم عدد الدرجات في الدائرة ؟  كرر القطع لأنشاء دائرة
+        من الألوان.
       4-5 Artist 5_instruction: ما هي الزوايا التي تستخدمها؟
       4-5 Artist 6_instruction: هذا المثلث متساوي الأضلاع بزوايا 60،60 و60 درجة. طول
         كل ضلع 200 نقطة (بكسل). أكمل الرسم.
@@ -403,97 +397,67 @@
         The halfway line on a soccer field is perpendicular
         to the sidelines. This field has a perimeter of 800 pixels and it is 240 pixels
         long. How wide is it? Draw the bounds and the halfway line.
-      4-5 Artist 9_instruction: |
-        Draw the other half so that the design is symmetrical.
-        The triangles are equilateral and are 50 pixels long.
-      4-5 Artist Assessment 1_instruction: |
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. \n"
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
+      4-5 Artist 9_instruction: أرسم النصف الآخر بحيث يكون التصميم متماثل. المثلثات
+        متساوية الأضلاع وهي 50 بكسل طويلة.
+      4-5 Artist Assessment 1_instruction: 'التقييم: استخدام حلقة لرسم مثلث متساوي
+        الأضلاع. كل جانب هو 300 بكسل.'
+      4-5 Artist For Loops 1_instruction: وضع الأرقام من 1 إلى 10 إلى قطع العرض وشغل
+        التعليمات البرمجية.
+      4-5 Artist For Loops 11_instruction: إكمال قطعة "من أجل" حيث أن ذلك تحسب 0,
+        20, 40, 60, 80... 200.
+      4-5 Artist For Loops 12_instruction: 'ماذا يحدث إذا عكست "من" و "إلى" الأرقام؟
+        إنجاز القطع "من أجل" حيث أنها تحسب 200، 180، 160، 140، 120.. 0. '
+      4-5 Artist For Loops 13_instruction: 'هذا التصميم بدأنا دون حلقة "لأجل"، وهو
+        أخذ قطع كثيرة جداً!  استخدام كتلة "لأجل" لإكمال دوامة.  تلميح: طول السطر الأخير
+        250 بكسل.'
+      4-5 Artist For Loops 14_instruction: 'شخص بدء تشغيل التعليمات البرمجية، ولكن
+        أدرك بعد ذلك يجب أن يكون هناك طريقة أسرع! استخدام كتلة "لأجل" لاستبدال القطع
+        وإكمال الدوامة الثلاثية. (تلميح: طول السطر الأخير 300 بكسل.)'
+      4-5 Artist For Loops 15_instruction: 'شخص بدء تشغيل التعليمات البرمجية، ولكن
+        أدرك بعد ذلك يجب أن يكون هناك طريقة أسرع! استخدام كتلة "لأجل" لاستبدال القطع
+        وإكمال الدوامة الثلاثية. (تلميح: طول السطر الأخير 300 بكسل.)'
+      4-5 Artist For Loops 3_instruction: كيف يمكن أن نحسب من 1 إلى 50؟ تحرير قطعة
+        "لأجل".
+      4-5 Artist For Loops 4_instruction: إنجاز قطعة "لأجل" بحيث أنها تحسب من 1 إلى
+        10 من 1.
+      4-5 Artist For Loops 6_instruction: أرسم المربعات ذات الاوجه 50، 60، 70، 80
+        و 90 بكسل. سوف تحتاج إلى إستخدام دالة "أرسم مربع" خمس مرات.
+      4-5 Artist For Loops 7_instruction: 'أرسم نفس المربعات ولكن استخدام قطعة "أحسب
+        مع" لتغيير الأحجام. قطعة مكان "عداد" في وظيفة "ارسم مربعا". تلميح: أنها فئة
+        المتغيرات.'
+      4-5 Artist For Loops 8_instruction: هل يمكنك إكمال البرنامج بوضع قطع داخل قطعة
+        "من أجل" أن التهم من 10 إلى 200 من خلال 10؟ يمكنك العثور على كتلة "لأجل" في
+        فئة الحلقات.
+      4-5 Artist For Loops 9_instruction: هذه الدوائر بحجم 5، 10، 15، 20، 25 و 30
+        و 35. أرسم الدوائر باستخدام كتلة "لأجل".
+      4-5 Artist Free Draw 1_instruction: أرسم مجاناً!  أرسم ما تجده مصدر الهام لإنشائه.
+      4-5 Artist Functions 1_instruction: استخدم حلقة  تكرار لرسم هذا المثلث.
+      4-5 Artist Functions 10a_instruction: ضع هذه التعليمات البرمجية في الدالة 'رسم
+        رقاقة الثلج' واستبدال المعلمة 'حجم' 50. يتم استدعاء الدالة مسبقا على جعل رقاقة
+        الثلج الذي 100 بكسل.
+      4-5 Artist Functions 10b_instruction: 'استخدم الدالة ''رسم رقاقة الثلج'' لإنشاء
+        رقائق مختلفة الحجم.  تلميح: الثلج الأول هو 25 في الطول وكل رقائق الثلج هو
+        ضعف حجم المعروض.'
+      4-5 Artist Functions 11_instruction: 'تستخدم هذه الدالة "رسم مسدس" الدالة "رسم
+        مثلث". إكمل الدالة مسدس. (تلميح: مسدس يملك 6 جوانب، وكل جانب يساوي 100 بكسل
+        طويل)'
+      4-5 Artist Functions 12_instruction: 'إكمل الدالة ''رسم موجات''.  تتكون كل موجه
+        تتكون من موجه ارتفاع واحدة وموجه انخفاض واحدة.  تلميح: أرسم 5 أمواج زرقاء.'
+      4-5 Artist Functions 13 Free play_instruction: وفيما يلي بعض المهام لرسم الكواكب
+        والنجوم، والصواريخ، والروبوتات. استخدم أي طريقة تريدها لجعل الصور التي يمكنك
+        مشاركتها مع أصدقائك.
+      4-5 Artist Functions 14 Free play_instruction: هنا، لقد قمنا بتوفير لك العديد
+        من الدالات. استخدم أي طريقة  تريدها داخل حلقة واحدة أو أكثر لجعل الصور التي
+        يمكنك مشاركتها مع أصدقائك. انقر فوق 'تشغيل' لمشاهدة مثال.
+      4-5 Artist Functions 15 Assessment_instruction: 'التقييم: استخدام الدالة "رسم
+        مربع" لإنشاء المربعات. المربعات هي 50 و 100 و 150 بكسل.'
+      4-5 Artist Functions 2a_instruction: الآن ضع هذه القطع إلى وظيفة جديدة  تسمى
+        "رسم مثلث صغير" واستدعي على ذلك.
+      4-5 Artist Functions 2b_instruction: الآن قم بإنشاء دالة تسمى "رسم مثلث صغير"
+        استخدم كل القطع المتوفرة.
+      4-5 Artist Functions 3_instruction: 'الآن قم  بإنشاء الوظائف "رسم مثلث متوسط"
+        و "رسم مثلث كبير". ويتم لك الدالة "رسم مثلث صغير". المثلثات لها أطوال جانب
+        من 50 (صغير) و 100 (متوسطة)، و 150 (كبير). '
       4-5 Artist Functions 4_instruction: |
         This new "draw a triangle" function
         has a parameter and can do the work of all three functions before. Draw the
@@ -2142,6 +2106,7 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2388,6 +2353,11 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: الآن لنقم بإنشاء 20 دائرة متداخلة،
         استدر 18 درجة بين كل دائرة.
@@ -3310,6 +3280,9 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
@@ -4174,8 +4147,8 @@
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -4907,20 +4880,46 @@
         Add a new record to your table in the Data
         Viewer. (Click to see full instructions)
       U4 - Charts - drawChartFromRecords 1_instruction: |
-        Add screen element, pull
-        out drawCharts block, run the program!
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
       U4 - Charts - drawChartsFromRecords 1_instruction: |
         Add screen element, pull
         out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
       U4 - Charts - Import Data 1_instruction: |
         Download the CSV file we’ve provided,
         and then use the data viewer to import the data from the file into the “mydata”
         table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
       U4 - Charts - Line Chart Template_instruction: This is a template.
       U4 - Charts - Remixing Apps with Data_instruction: |
         Run this app and see what
         it prints to the console. Then remix the app and run the remixed version to
         see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
       U4 - CreateRecord - 1_instruction: |
         Add a createRecord command and run the
         program. (Click to see full instructions)

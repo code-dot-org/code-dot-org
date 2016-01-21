@@ -40,6 +40,7 @@ he:
   puzzle: חידה
   trophies: גביעי ניצחון
   courses: מסלולים
+  unplugged_activity: פעילות לא מחוברת
   of: של
   more: יותר
   less: פחות
@@ -367,8 +368,8 @@ he:
     privacy: הצהרת פרטיות
     secure: גרסה מאובטחת
     report_abuse: Report Abuse
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
+    built_on_code_studio: נבנה בסטודיו קוד
+    make_my_own_app: פיתוח האפליקציה שלי
     how_it_works: איך זה עובד
     try_hour_of_code: Try an Hour of Code!
   reference_area:

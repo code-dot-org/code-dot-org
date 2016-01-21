@@ -46,7 +46,9 @@ group :development, :test do
   gem 'active_record_query_trace'
   # for unit testing
   gem 'factory_girl_rails'
-  gem 'fakeweb'
+  gem 'webmock', require: false
+  gem 'vcr', require: false
+
   gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
@@ -64,6 +66,7 @@ group :development, :test do
   gem 'spring-commands-testunit'
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
+  gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.5.0'
 end
 

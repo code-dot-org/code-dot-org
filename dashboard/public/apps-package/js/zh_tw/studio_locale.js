@@ -674,7 +674,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setSpriteDiego":function(d){return "為狄亞哥 (Diego) 的圖像"},
 "setSpriteScrat":function(d){return "為鼠奎特 (Scrat)的圖像"},
 "setSpriteAnais":function(d){return "為陶安安(Annais)的圖像"},
-"setSpriteAnton":function(d){return "to an Anton image"},
+"setSpriteAnton":function(d){return "為安東 (Anton) 的圖像"},
 "setSpriteBananajoe":function(d){return "為蕉蕉(BananaJoe)的圖像"},
 "setSpriteDarwin":function(d){return "為陶阿達(Darwin)的圖像"},
 "setSpriteGumball":function(d){return "為陶阿甘(Gumball)的圖像"},

@@ -28,8 +28,7 @@ ko:
     code:
       label: '선생님 추가:'
       placeholder: 섹션 코드(ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: '당신의 선생님과 공유하고 있는 문자를 입력해주세요. 그 문자는 "ABCDEF" 와 같은 6개의 영어 문자입니다.'
     submit: 선생님 추가하기
   add_hint_form:
     placeholder: 도움내용을 입력하세요.
@@ -40,6 +39,7 @@ ko:
   puzzle: Puzzle
   trophies: 트로피들
   courses: courses
+  unplugged_activity: 언플러그드 활동
   of: 중
   more: 전체단계
   less: 현재단계

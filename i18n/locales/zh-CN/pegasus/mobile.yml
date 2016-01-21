@@ -191,6 +191,8 @@ zh-CN:
   homepage_banner_text_link: 了解详情
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: 了解详情
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: 了解详情
   homepage_slot_text_title_hoc: 编程一小时
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
   homepage_slot_text_link_hoc: 来试试“编程一小时”项目！
@@ -199,6 +201,7 @@ zh-CN:
   homepage_solot_text_link_volunteer: 成为编程一小时志愿者
   homepage_slot_text_title_students: 学生
   homepage_slot_text_blurb_students: 体验我们所有的教程
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: 尝试编程工作室
   homepage_slot_text_link_local: 找一个当地的班级
   homepage_slot_text_link_othercourses: 其他在线的课程
@@ -550,7 +553,7 @@ zh-CN:
   carousel_heading_codeorg_any_device: Code.org 的教程(适合所有的设备!)
   carousel_heading_3rd_party: 第三方教程
   carousel_heading_third_party: 第三方教程
-  carousel_heading_international: 中文教程
+  carousel_heading_international: 合作伙伴的教程
   carousel_heading_domestic: 英文教程可用
   carousel_heading_beginners: K-8教程
   carousel_heading_beyond_beginners: 初学者教程

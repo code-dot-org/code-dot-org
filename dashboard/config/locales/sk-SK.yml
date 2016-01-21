@@ -29,8 +29,8 @@
     code:
       label: 'Pridať učiteľa:'
       placeholder: Kód sekcie (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Zadajte prosím kód, ktorý ste obdržali od Vášho učiteľa. Je to
+        6 písmenový reťazec, niečo ako "ABCDEF".
     submit: Pridať učiteľa
   add_hint_form:
     placeholder: Prosím zadajte Váš tip sem
@@ -41,6 +41,7 @@
   puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
+  unplugged_activity: Nesúvisaca aktivita
   of: z
   more: VIAC
   less: MENEJ
@@ -294,8 +295,8 @@
       remove: Naozaj chcete odstrániť tohto učiteľa?
     students:
       dashboard: Prejsť na Učiteľovu Nástenku
-    user_not_found: Učiteľa alebo študenta nie je možné nájsť
-    student_teacher_disassociated: '%{teacher_name} bol odobraný ako učiteľ pre %{student_name}'
+    user_not_found: Učiteľa sa nepodarilo nájsť.
+    student_teacher_disassociated: Odstránili ste %{teacher_name} ako svojho učiteľa.
     panel:
       answer_viewer: Prehliadač odpovede
       student: Študent
@@ -397,12 +398,21 @@
       tento tutoriál.
     help_from_html_old: Kolegovia z Google, Microsoft-u, Facebook-u a Twitter-u pomoholi
       vytvoriť tento tutoriál.
-    art_from_html: Angry Birds&trade; & &copy; 2009-2014 Rovio zábava S.r.o. Všetky
-      práva vyhradené. <br/> Rastliny vs zombie&trade; & &copy; 2014 Electronic Arts
-      Inc Všetky práva vyhradené.
-    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
-      Ltd. Všetky práva vyhradené. < br / > Plants vs Zombies &#8482; &amp; © %{current_year}
-      Electronic Arts Inc Všetky práva vyhradené
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Všetky práva vyhradené.
+      < br / > Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva
+      vyhradené. < br / > Frozen &#8482; © %{current_year} Disney. Všetky práva vyhradené.
+      < br / > Doba ľadová &#8482; © %{current_year} 20th Century Fox. Všetky práva
+      vyhradené. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment
+      Ltd. Všetky práva vyhradené. < br / > Plants vs Zombies &#8482; © %{current_year}
+      Electronic Arts Inc. Všetky práva vyhradené. < br / > The Amazing World of Gumball
+      je ochranná známka a © 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Všetky práva
+      vyhradené. Star Wars &#8482; © %{current_year} Disney a Lucasfilm. Všetky práva
+      vyhradené. Frozen&#8482; © %{current_year} Disney. Všetky práva vyhradené. Ice
+      Age &#8482; © %{current_year} 20th Century Fox. Všetky práva vyhradené. Angry
+      Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Všetky práva vyhradené.
+      Plants vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Všetky práva
+      vyhradené. The Amazing World of Gumball je ochranná známka © 2015 Cartoon Network.
     powered_by_aws: Poháňaný službami Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org®, CODElogo a Hour of Code
       ® sú ochranné známky Code.org.'
