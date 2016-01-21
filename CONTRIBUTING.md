@@ -1,39 +1,48 @@
 # Contributing
 
-We'd love to have you join our group of contributors! Please e-mail your areas 
-of interest and your availability to Alice (alice@code.org), and we’ll be happy
-to match you with a project. You can start setting up with these next steps.
+We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to Alice (alice@code.org), and we’ll be happy to match you with a project. You can start setting up with these next steps.
 
 1. Anyone who would like to contribute to **[Code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
-2. [Join our community development HipChat room](http://www.hipchat.com/gBebkHP6g) for help getting set up, picking a task, etc. We're happy to have you! If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
+2. Get your local development build working by following our [README](README.md). Fork our repo and make sure to merge our staging branch into yours **WEEKLY** as we do update frequently.
 
-3. Get your build setup, following this README. Fork our repo and make sure to merge our staging branch in **WEEKLY** as we do update frequently.
+3. [Join our community development HipChat room](http://www.hipchat.com/gBebkHP6g) for help getting set up. We're happy to have you! If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
 
-## Submitting Contributions
-Please check your PR against our tests before submitting.
+## Code Style
 
-#### Code style
+Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We have implemented linting to help you with this:
 
-Running `rake lint` locally will find most Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
+* To install our precommit hook that will lint the files you've changed, run `rake install:hooks`. You should only have to to this once.  We _highly_ recommend it!
+* To lint the entire project, run `rake lint` from the repository root.  This will check all Ruby, JavaScript and HAML.
+* To lint only part of the project, run one of these commands from the repository root:
+  * dashboard Ruby: `cd dashboard && rubocop`
+  * dashboard HAML: `haml-lint dashboard`
+  * pegasus Ruby: `cd pegasus && rubocop`
+  * pegasus HAML: `haml-lint pegasus`
+  * apps JS: `cd apps && grunt jshint`
+  * code-studio JS+SCSS: `cd code-studio && npm run lint`
 
-#### Manually
+## Testing
 
-We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in IE9, iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
+Please test your changes before submitting them to us!
 
-#### Unit tests
+### Manually
+
+We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
+
+### Unit tests
 
 For dashboard changes, be sure to test your changes using `rake test`. For [apps or blockly](./apps) changes, see our [grunt testing instructions](./apps#running-tests).
 
-#### UI tests
+### UI tests
 
 Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
 
 If your changes might affect level paths, blockly UI, or critical path site logic, be sure to test your changes with a local UI test.
 
-### Submitting your Pull Request
+## Submitting your Pull Request
 
-Contributors should follow the GitHub [fork-and-pull model](https://help.github.com/articles/using-pull-requests) to submit pull requests into this repository.
+Once you've linted and tested your changes, send us a pull request!  Contributors should follow the GitHub [fork-and-pull model](https://help.github.com/articles/using-pull-requests) to submit pull requests into this repository.
 
 1. On your fork, you'll either push to your own finished branch or checkout a new branch for your feature before you start your feature
     - `git checkout -b branch_name`
