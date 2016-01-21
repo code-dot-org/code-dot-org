@@ -165,22 +165,21 @@ CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
 CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
 CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
 CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
-  # TODO !!
-  # packager = S3Packaging.new
-  #
-  # commit_hash = packager.commit_hash(code_studio_dir)
-  # target_location = dashboard_dir('public/code-studio-package')
-  #
-  # next if packager.update_from_s3('code-studio', target_location, commit_hash)
-  #
-  # # raise "No valid package found" unless rack_env?(:staging) || rack_env?(:test)
-  #
-  # puts 'Building code-studio...'
-  # RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-  # RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
-  #
-  # package = packager.upload_as_package('code-studio', code_studio_dir('build'), commit_hash)
-  # packager.decompress_package(package, target_location)
+  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
+
+  next if packager.update_from_s3
+
+  # Test and staging are the only environments that should be uploading new packages
+  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  HipChat.log 'Building code-studio...'
+  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+  HipChat.log 'code-studio built'
+
+  # upload to s3
+  package = packager.upload_packge_to_s3('/build')
+  packager.decompress_package(package)
 end
 
 file deploy_dir('rebuild') do
