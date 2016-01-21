@@ -250,6 +250,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Μάθετε περισσότερα
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Μάθετε περισσότερα
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
@@ -258,6 +261,7 @@
   homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
   homepage_slot_text_title_students: Μαθητές
   homepage_slot_text_blurb_students: Διερευνήστε όλα τα σεμινάρια μας
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Δοκιμάστε το Studio κώδικα
   homepage_slot_text_link_local: Βρείτε μια τάξη κοντά στον τόπο σας
   homepage_slot_text_link_othercourses: Άλλα online μαθήματα

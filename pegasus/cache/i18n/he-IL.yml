@@ -232,6 +232,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: למד עוד
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: למד עוד
   homepage_slot_text_title_hoc: שעה של קוד
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
@@ -240,6 +243,7 @@
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
   homepage_slot_text_title_students: סטודנטים
   homepage_slot_text_blurb_students: נסה את כל ההדרכות שלנו
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: נסה את סטודיו הקוד
   homepage_slot_text_link_local: מצא כיתה מקומית
   homepage_slot_text_link_othercourses: קורסים אחרים באינטרנט

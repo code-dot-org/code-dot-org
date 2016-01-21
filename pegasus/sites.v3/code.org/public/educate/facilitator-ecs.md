@@ -25,7 +25,7 @@ For each workshop you host, ECS Facilitators will receive between $400-450 in co
 
 
 ## How to become an ECS Facilitator?
-Become an ECS Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (location TBD). At the Summit and teacher training, Code.org will prepare facilitators to deliver the in-person workshops to local high school teachers enrolled in Code.org’s ECS Professional Learning Program throughout the 2016-2017 school year. 
+Become an ECS Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit and teacher training, Code.org will prepare facilitators to deliver the in-person workshops to local high school teachers enrolled in Code.org’s ECS Professional Learning Program throughout the 2016-2017 school year. 
 
 Before applying please carefully review the the [criteria, requirements and commitments](https://docs.google.com/document/d/1y9Pi8WR28nkQcvRNyf3bF1NAI-8uVrvTdNIOwjLmazE/pub) for the ECS Facilitator program.
 <br/>
@@ -37,3 +37,4 @@ Before applying please carefully review the the [criteria, requirements and comm
 
 We will review applications on a rolling basis until March 15, 2016. After that we will review applications once every 12 months. **This program is currently only operated in the US.**
 
+If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).

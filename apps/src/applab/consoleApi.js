@@ -6,17 +6,11 @@ var outputApplabConsole = errorHandler.outputApplabConsole;
 var consoleApi = module.exports;
 
 consoleApi.log = function() {
-  var nativeArgs = Array.prototype.map.call(arguments, function (item) {
-    if (item === null || item === undefined) {
-      return item;
-    }
-    return codegen.marshalInterpreterToNative(Applab.JSInterpreter.interpreter, item);
-  });
-
+  var nativeArgs = arguments;
   var output = '';
   var firstArg = nativeArgs[0];
   if (typeof firstArg === 'string' || firstArg instanceof String) {
-    output = vsprintf(firstArg, nativeArgs.slice(1));
+    output = vsprintf(firstArg, Array.prototype.slice.call(nativeArgs, 1));
   } else if (nativeArgs.length === 1) {
     output = firstArg;
   } else {

@@ -201,6 +201,8 @@ Dashboard::Application.routes.draw do
 
   # internal engineering dashboards
   get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
   get '/admin/assume_identity', to: 'reports#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'reports#assume_identity', as: 'assume_identity'
@@ -209,10 +211,9 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/:action', controller: 'reports', as: 'reports'
 
-  get '/stats/usage/:user_id', to: 'reports#usage', as: 'usage'
+  get '/stats/usage/:user_id', to: redirect_to_teacher_dashboard
   get '/stats/students', to: redirect_to_teacher_dashboard
-  get '/stats/:user_id', to: 'reports#user_stats', as: 'user_stats'
-  get '/stats/level/:level_id', to: 'reports#level_stats', as: 'level_stats'
+  get '/stats/:user_id', to: redirect_to_teacher_dashboard
   get '/popup/stats', to: 'reports#header_stats', as: 'header_stats'
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 

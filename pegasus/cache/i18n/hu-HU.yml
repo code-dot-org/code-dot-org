@@ -29,9 +29,9 @@
   twentyhours_heading: Próbáld ki a Bevezetés a számítástechnikába tanfolyamunkat
   twentyhours_text: Végeztél az első tanfolyammal? Tudj meg többet a számítástechnikáról
     és a programozási koncepciókról a következő tanfolyamon.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Minden gyermek megérdemli lehetőséget
+  og_description: Minden diák minden iskolában megérdemli a lehetőséget, hogy tanulhasson
+    számítástechnikát.
   hoc2014_heading: Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014.
     December 8-14.<br/>
   hoc2014_students: Tanuló
@@ -253,6 +253,9 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Tudj meg többet
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
@@ -261,6 +264,7 @@
   homepage_solot_text_link_volunteer: Önkéntes az kódolás órájához
   homepage_slot_text_title_students: Tanuló
   homepage_slot_text_blurb_students: Tekintsd meg az összes gyakorlatunkat
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Próbáld ki a Kód stúdiót
   homepage_slot_text_link_local: Keress egy helyi osztályt
   homepage_slot_text_link_othercourses: További online tanfolyamok
@@ -319,10 +323,10 @@
   inspirational_videos_more: További<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspiráló
     videók</a> példaképekkel és hírességekkel
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
+  playlab_classic_title: Klasszikus
+  playlab_gumball_title: Gumball csodálatos világa
   playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: Jégkorszak
   starwars_subtitle: Galaxis építése kóddal
   starwars_javascript_title: Javascript
   starwars_javascript_description: Használd a mozgatható blokkokat és JavaScriptet.

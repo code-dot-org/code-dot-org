@@ -4,40 +4,57 @@
   "description": "Pipeline for static assets used by our Code Studio rails app (i.e. dashboard)",
   "author": "Code.org",
   "license": "Apache-2.0",
+  "config": {
+    "engine-strict": true
+  },
   "engines": {
-    "node": ">=0.12.0 <0.13",
+    "node": ">=0.12.0",
     "npm": "^2.9.1"
   },
   "scripts": {
     "postinstall": "linklocal",
-    "clean": "rm -rf build",
-    "lint": "npm run lint-js -s && npm run lint-css -s",
+    "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
-    "build": "npm run build-js && npm run build-css",
-    "build:min": "npm run build-js:min && npm run build-css:min",
-    "build-css": "./build-css.js",
-    "build-css:min": "./build-css.js --min",
-    "build-js": "./build-js.js",
-    "build-js:min": "./build-js.js --min",
-    "start": "echo \"Unimplemented.\"",
-    "stop": "echo \"Unimplemented.\"",
-    "test": "echo \"Unimplemented.\""
+    "test": "echo \"Tests Unimplemented.\"",
+    "clean": "rm -rf build",
+    "clean-assets": "rm -rf build/assets",
+    "clean-css": "rm -rf build/css",
+    "clean-js": "rm -rf build/js",
+    "copy-assets": "scripts/copy-assets.js",
+    "build": "npm run copy-assets && npm run build-css && npm run build-js",
+    "build:dist": "npm run clean && npm run copy-assets && npm run build-css:dist && npm run build-js:dist",
+    "build-css": "scripts/build-css.js",
+    "build-css:dist": "npm run lint-css && npm run clean-css && scripts/build-css.js --dist",
+    "build-js": "scripts/build-js.js",
+    "build-js:dist": "npm run lint-js && npm test && npm run clean-js && scripts/build-js.js --dist && scripts/uglify-js.js",
+    "start": "scripts/build-js.js --watch"
   },
   "devDependencies": {
+    "babelify": "^6.3.0",
     "browserify": "^12.0.1",
+    "chalk": "^1.1.1",
     "commander": "^2.9.0",
+    "envify": "^3.4.0",
     "factor-bundle": "^2.5.0",
     "jshint": "^2.8.0",
+    "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
+    "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",
-    "uglify-js": "^2.6.1"
+    "semver": "^5.1.0",
+    "uglify-js": "^2.6.1",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.7.0"
   },
   "dependencies": {
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
+    "jquery": "^1.11.3",
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
-    "marked": "0.3.2"
+    "marked": "0.3.2",
+    "react": "^0.13.1",
+    "video.js": "4.5.2"
   }
 }

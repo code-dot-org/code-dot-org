@@ -94,14 +94,12 @@ module Dashboard
     config.assets.precompile += %w(
       js/*.js
       css/*.css
+      assets/**/*
       angularProjects.js
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js
-      video/video.js video-js.css video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff
     )
-    config.react.variant = :development
-    config.react.addons = true
     config.autoload_paths << Rails.root.join('lib')
 
     # use https://(*-)studio.code.org urls in mails
