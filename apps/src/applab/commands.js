@@ -866,7 +866,7 @@ applabCommands.getAttribute = function (opts) {
 
 // Whitelist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
-var MUTABLE_ATTRIBUTES = ['innerHTML', 'scrollTop'];
+var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
 applabCommands.setAttribute = function (opts) {
   var divApplab = document.getElementById('divApplab');
