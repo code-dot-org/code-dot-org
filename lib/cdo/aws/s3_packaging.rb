@@ -87,7 +87,7 @@ class S3Packaging
   # @param package File object of local zipped up package.
   private def upload_package(package)
     puts "Uploading: #{s3_key}"
-    File.open(package) do |file|
+    File.open(package, 'rb') do |file|
       @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file)
     end
     puts "Uploaded"

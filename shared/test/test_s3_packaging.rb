@@ -81,7 +81,7 @@ class S3PackagingTest < Minitest::Test
     @packager.send(:upload_package, package)
 
     downloaded = @packager.send(:download_package)
-    assert FileUtils.compare_file(package, downloaded)
+    assert @packager.send(:packages_equivalent, package, downloaded)
   end
 
   def test_download_nonexistent
@@ -147,34 +147,28 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_upload_as_package
-    # create a random hash so that we dont have to worry about colliding with
-    # others on s3
-    random_hash = SecureRandom.hex
-    alt_source_loc, alt_target_loc, alt_packager = create_packager(random_hash)
+    # Note: In a world where we were regularly running this test without VCR, we'd need to worry about clients
+    # colliding (since they're using the same S3 paths). However, because all of our network requests end up being
+    # mocked, this is not a concern
 
+    # begin by deleting existing object
+    client = Aws::S3::Client.new
+    client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: @packager.send(:s3_key))
+
+    # upload a package
+    assert @packager.upload_as_package('/build')
+
+    # upload the same package again, it works
+    assert @packager.upload_as_package('/build')
+
+    # try uploading a different package under the same name, it fails
+    threw = false
     begin
-      # upload a package
-      assert alt_packager.upload_as_package('/build')
-
-      # upload the same package again, it works
-      assert alt_packager.upload_as_package('/build')
-
-      # try uploading a different package under the same name, it fails
-      threw = false
-      begin
-        assert !alt_packager.upload_as_package('/src')
-      rescue
-        threw = true
-      end
-      assert threw
-
-    ensure
-      # in this case we also want to delete the s3 bucket so we're not polluting
-      client = Aws::S3::Client.new
-      client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: alt_packager.send(:s3_key))
-
-      cleanup_packager(alt_source_loc, alt_target_loc)
+      assert !@packager.upload_as_package('/src')
+    rescue
+      threw = true
     end
+    assert threw
   end
 
 end
