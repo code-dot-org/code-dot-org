@@ -181,7 +181,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       return block.blockDisplayXML;
     });
   var onHidden = onlyContinue ? options.onContinue : function () {
-    this.studioApp_.addContextualHints(unseenMissingRecommendedBlocks);
+    this.studioApp_.displayMissingBlockHints(unseenMissingRecommendedBlocks);
   }.bind(this);
 
   var icon;

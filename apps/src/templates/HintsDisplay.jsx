@@ -31,6 +31,26 @@ module.exports = React.createClass({
     });
   },
 
+  renderBlocklyHint: function (hint) {
+    var node = document.getElementById(hint.hintId);
+    // Only render if the node exists in the DOM
+    if (node) {
+      Blockly.BlockSpace.createReadOnlyBlockSpace(node, hint.block);
+    }
+  },
+
+  componentDidMount: function () {
+    this.props.seenHints.filter(function (hint) {
+      return hint.block;
+    }).forEach(this.renderBlocklyHint);
+  },
+
+  componentDidUpdate: function () {
+    if (this.state.showNextUnseenHint && this.props.unseenHints[0].block) {
+      this.renderBlocklyHint(this.props.unseenHints[0]);
+    }
+  },
+
   render: function () {
     var hintsToShow = this.props.seenHints;
     if (this.state.showNextUnseenHint) {
@@ -42,8 +62,15 @@ module.exports = React.createClass({
       seenHints = [
           <h1>{ this.props.hintReviewTitle }</h1>,
           <ul>
-            {hintsToShow.map(function (hint) {
-              return <li dangerouslySetInnerHTML={{ __html : hint.content }} style={{ marginBottom: '12px' }}/>;
+            {hintsToShow.map(function (hint, i) {
+              var hintBlock;
+              if (hint.block) {
+                hintBlock = (<div className="block-hint" id={ hint.hintId } style={{ maxHeight: '100px' }} />);
+              }
+              return (<li style={{ marginBottom: '12px' }}>
+                <div dangerouslySetInnerHTML={{ __html : hint.content }} />
+                {hintBlock}
+              </li>);
             })}
           </ul>
       ];
