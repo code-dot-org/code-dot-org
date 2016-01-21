@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-nonexistent-hash.tar.gz
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Date:
+      - Thu, 21 Jan 2016 17:14:45 GMT
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 21 Jan 2016 17:14:45 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>test-package/fake-nonexistent-hash.tar.gz</Key><RequestId>25B0162AF83ED6C4</RequestId><HostId>jXZJjW+o1ShR5Ln0GwUTMBdl2XEfwKWfHFpLpo3rdR84FU51pchbl1VPkW44HjPsdTe5u9opYFg=</HostId></Error>
+    http_version: 
+  recorded_at: Thu, 21 Jan 2016 17:14:46 GMT
+recorded_with: VCR 3.0.0
