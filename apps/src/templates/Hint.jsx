@@ -4,7 +4,10 @@ module.exports = React.createClass({
     hint: React.PropTypes.object.isRequired
   },
 
-  renderBlocklyHint: function () {
+  /**
+   * @see HintsDisplay.injectBlocklyHint
+   */
+  injectBlocklyHint: function () {
     var node = React.findDOMNode(this.refs.hintBlock);
     // Only render if the node exists in the DOM
     if (node && document.contains(node)) {
