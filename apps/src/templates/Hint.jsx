@@ -1,7 +1,7 @@
 module.exports = React.createClass({
 
   propTypes: {
-    hint: React.PropTypes.objectisRequired
+    hint: React.PropTypes.object.isRequired
   },
 
   renderBlocklyHint: function () {
