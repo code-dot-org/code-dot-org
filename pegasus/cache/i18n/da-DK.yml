@@ -11,7 +11,7 @@
     font-weight:bold"> planlæg din Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Underviser du i programmering? Se andre CSEdWeek ressourcer</a>'
-  n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>"
+  n_have_learned_an_hoc: <h1>Prøv en</h1><h2>Hour of Code</h2><h3># har prøvet</h3>
   anybody_can_learn: Alle kan lære.
   learn_now: Lær Nu
   petition_message: Alle elever i alle skoler burde have muligheden for at lære programmering
@@ -38,7 +38,7 @@
   hoc2014_everyone: Alle
   hoc2014_support: Støt &#x25BE;
   hoc2014_whatishoc: Hvad er "Hour of Code"?
-  csedweek_map_header: "# CSEdWeek / Hour of Code begivenheder over hele verden"
+  csedweek_map_header: '# CSEdWeek / Hour of Code begivenheder over hele verden'
   csedweek_map_signup: Tilmeld dit arrangement
   csedweek_map_search_placeholder: Søg efter Hour of Code arrangementer
   csedweek_map_search_search: Søg
@@ -68,7 +68,7 @@
     gentag-loops, hvis-så præmisser og grundlæggende algoritmer.
   all_ages: Alle aldre
   beginner: Nybegynder
-  n_participants: "# deltagere"
+  n_participants: '# deltagere'
   go: Start
   thank_you_: Tak!
   congratulations: Tillykke!
@@ -117,7 +117,7 @@
   beyond_an_hour: Lær mere når du har gennemført Hour of Code
   get_started: Start
   i_agree: Jeg er enig
-  participant_select: "- Vælg -"
+  participant_select: '- Vælg -'
   participant_student: Elev
   participant_parent: Forældre
   participant_educator: Underviser
@@ -138,7 +138,7 @@
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: "#HourOfCode er her - tjek det ud! @codeorg"
+  hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
   twitter_teach_cs: Hvorfor underviser så få skoler i programmering? Lad os hjælpe
     dem i gang. http://youtu.be/nKIu9yen5nc. Besøg http://code.org/ for at lære mere.
@@ -150,11 +150,11 @@
   help_recruit_coders: Hjælpe os med at rekruttere flere programmører til dit hold!
   help_recruit: Hjælp os med at rekruttere flere programmører!
   lines_of_code: OVER <b># LINJER KODE</b> SKREVET TIL DATO.
-  lines_of_code_alt: "<b>#</b> LINJER AF KODE SKREVET AF ELEVER"
+  lines_of_code_alt: <b>#</b> LINJER AF KODE SKREVET AF ELEVER
   who_has_done_hoc: 'Hvem har lavet #HourOfCode @codeorg'
   hoc_leaderboards: Rangelisten for Hour Of Code
-  students_and_lines: "%{students} elever har gennemført Hour of Code og skrevet %{lines}
-    linjer kode."
+  students_and_lines: '%{students} elever har gennemført Hour of Code og skrevet %{lines}
+    linjer kode.'
   start_hoc: Start Hour of Code nu
   contact_form_topic_press: Pressen/medierne (interview eller taler-arrangementer)
   stats_nina: '"Hver eneste dag gav de samme resultater&mdash; 100% engagement." -
@@ -219,8 +219,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Det fik 100% af mine elever engagerede, involverede og til at deltage.&rdquo;
     Adam, lærer
-  homepage_hero_text_stat_loc: "#loc linjer kode skrevet af elever"
-  homepage_hero_text_stat_students: "#student_count elever oprettet på Code Studio"
+  homepage_hero_text_stat_loc: '#loc linjer kode skrevet af elever'
+  homepage_hero_text_stat_students: '#student_count elever oprettet på Code Studio'
   homepage_hero_text_stat_served: 'Hour of Code: #served har prøvet'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frozen med Anna og Elsa
@@ -230,7 +230,7 @@
   homepage_slot_text_shop: Butik
   homepage_slot_text_flappy: Flappy kode
   homepage_action_text_hoc: An Hour of Code er programmering for alle elever.
-  homepage_action_text_num_served: "# har prøvet"
+  homepage_action_text_num_served: '# har prøvet'
   homepage_action_text_join_us: Slut dig til os
   homepage_action_text_sign_up: Tilmeld
   homepage_action_text_try_it: Prøv det
@@ -251,14 +251,18 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Lær mere
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Lær mere
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Alle kan lære det. Start i dag
   homepage_slot_text_link_hoc: Prøv Hour of Code
   homepage_slot_text_link_host: Hold selv en Hour of Code
-  homepage_slot_text_link_hocserved: "# har prøvet"
+  homepage_slot_text_link_hocserved: '# har prøvet'
   homepage_solot_text_link_volunteer: Meld dig som frivillig til Hour Of Code
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Gå på opdagelse i vores øvelser
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prøv Code Studio
   homepage_slot_text_link_local: Find et lokalt arrangement
   homepage_slot_text_link_othercourses: Andre online kurser
@@ -348,10 +352,10 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 lærere vil være værter
     i Hour Of Code i deres klasseværelser i år d. 7.-13. december 2015. De vil gerne
     bede om din hjælp! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lærere vil gerne
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} lærere vil gerne
     have frivillige, som er dedikerede i deres interesse for uddannelse i tekniske
     videnskaber, til at hjælpe med Hour of Code her i december. <br>%{num_volunteers}
-    frivillige har meldt sig. Slut dig til dem."
+    frivillige har meldt sig. Slut dig til dem.'
   volunteer_engineer_submission_intro_background: Kodetimen er en global bevægelse
     vil give en times Introduktion til programmering, nå millioner af studerende i
     180 + lande. Blive involveret i programmeringsuddannelse uge, December 7-13.
@@ -683,20 +687,20 @@
   dashboard_faq_k5: K-5 Ofte stillede spørgsmål
   dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: "<b>16. December 2015</b> - Tak for deltagelse i Hour
+  dashboard_announce_message: '<b>16. December 2015</b> - Tak for deltagelse i Hour
     of Code 2015! Følg og gem fremskridt er nu genoptaget i alle Kode-Studio tutorials
-    og kurser. Bemærk: Code.org's kontorer vil være lukket 19. december - 3. januar.
+    og kurser. Bemærk: Code.org''s kontorer vil være lukket 19. december - 3. januar.
     Forbehold for forsinkede svar på eventuelle spørgsmål, som du indsender i perioden
-    indtil 4. januar."
+    indtil 4. januar.'
   dashboard_announce_button_text: Lær mere
-  dashboard_announce_hoc: "<b>23 November 2015</b> - Ønsker du en frivillig, som er
+  dashboard_announce_hoc: <b>23 November 2015</b> - Ønsker du en frivillig, som er
     dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over
     7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse
     eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit
-    område."
-  dashboard_announce_playlab: "<b>4. December 2015</b> - The Hour of Code er her!
+    område.
+  dashboard_announce_playlab: '<b>4. December 2015</b> - The Hour of Code er her!
     Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne
-    historier og spil i nye Spil-Labs, Ice Age og Gumball."
+    historier og spil i nye Spil-Labs, Ice Age og Gumball.'
   code_hoc_coming: Hour of Code er her - 8.-14. december!
   code_sign_up: Tilmeld dig til at deltage i CS Education Week
   learn_more: Lær mere
@@ -732,7 +736,7 @@
   carousel_heading_domestic: Tutorials på engelsk
   carousel_heading_beginners: Tutorials for begyndere
   carousel_heading_beyond_beginners: Tutorials for begyndere
-  carousel_heading_javascript: "Øvelser, hvor du lærer Javascript"
+  carousel_heading_javascript: Øvelser, hvor du lærer Javascript
   carousel_heading_beyond_javascript: Tutorials hvor du lærer Javascript
   carousel_heading_unplugged: Ingen enhed eller internettet? Prøv "unplugged" kodning
   carousel_heading_devices: Tutorial apps for mobiler og tablets
@@ -752,8 +756,8 @@
     Klik her.</a>
   how_to_teach_hoc: Sådan undervises i Én Times Kode
   more_resources_educators: Flere ressourcer til lærere og undervisere
-  beyond_submission: "Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
-    og indsendelseformularen."
+  beyond_submission: Ønsker du at indsende en tutorial til Beyond an Hour? Se kriterierne
+    og indsendelseformularen.
   participants: deltagerne
   teachers_notes: Lærerens noter
   teachers_notes_hoc: 'Lærere: Læs vigtigte noter til undervisningen her'
@@ -1481,7 +1485,3 @@
   infinity_shortcode: inf
   playlab_shortcode: afspil
   artist_shortcode: art
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
-  homepage_banner_20k_teachers_link: Learn more
-  homepage_slot_text_blurb_students_courses: Explore our courses
