@@ -63,13 +63,13 @@ module.exports = FeedbackBlocks;
 
 FeedbackBlocks.prototype.render = function () {
   // Only render if this.div exists in the DOM
-  var div = document.getElementById("feedbackBlocks");
-  if (div !== this.div) {
+  if (!document.contains(this.div)) {
     return;
   }
 
   var parsedXml = parseXmlElement(this.xml);
-  Blockly.BlockSpace.createReadOnlyBlockSpace(this.div, parsedXml);
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.div, parsedXml);
+  this.blockSpaceEditor = blockSpace.blockSpaceEditor;
 };
 
 FeedbackBlocks.prototype.show = function () {

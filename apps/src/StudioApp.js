@@ -866,6 +866,10 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
+StudioApp.prototype.displayMissingBlockHints = function (blocks) {
+  this.authoredHintsController_.displayMissingBlockHints(blocks);
+};
+
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };

@@ -175,7 +175,15 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
-  var onHidden = onlyContinue ? options.onContinue : null;
+  var unseenMissingRecommendedBlocks = this.getMissingBlocks_(recommendedBlocks, Infinity)
+    .blocksToDisplay
+    .map(function (block) {
+      return block.blockDisplayXML;
+    });
+  var onHidden = onlyContinue ? options.onContinue : function () {
+    this.studioApp_.addContextualHints(unseenMissingRecommendedBlocks);
+  }.bind(this);
+
   var icon;
   if (!options.hideIcon) {
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
@@ -233,6 +241,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
+
+      // remove the corresponding block from the set of blocks to
+      // convert into contextual hints
+      unseenMissingRecommendedBlocks.shift();
     } else {
 
       // Generate a generic feedback message to display when we show the
@@ -246,6 +258,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
+        // remove the corresponding block from the set of blocks to
+        // convert into contextual hints
+        unseenMissingRecommendedBlocks.shift();
 
         // Swap out the specific feedback message with a generic one.
         var parentNode = feedbackMessage.parentNode;
@@ -533,7 +548,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
             msg.missingRequiredBlocksErrorMsg();
         break;
       case TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED:
-        message = msg.missingRecommendedBlocksErrorMsg();
+        message = msg.unseenMissingRecommendedBlocksErrorMsg();
         break;
       case TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED:
         var numEnabledBlocks = this.getNumCountableBlocks();
