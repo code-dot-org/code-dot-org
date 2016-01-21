@@ -28,11 +28,23 @@ class S3Packaging
 
   # creates a package from the given assets location and upload it to s3
   # @return tempfile object of package
-  def upload_as_package(sub_path)
+  def upload_packge_to_s3(sub_path)
     package = create_package(sub_path)
     raise "Generated different package for same contents" unless package_matches_download(package)
     upload_package(package)
     package
+  end
+
+  # Unzips package into target location
+  def decompress_package(package)
+    puts "Decompressing #{package.path}\nto #{@target_location}"
+    FileUtils.mkdir_p(@target_location)
+    Dir.chdir(@target_location) do
+      # Clear out existing package
+      FileUtils.rm_rf Dir.glob("#{@target_location}/*")
+      `tar -zxf #{package.path}`
+    end
+    puts "Decompressed"
   end
 
   private def s3_key
@@ -61,18 +73,6 @@ class S3Packaging
     end
     puts 'Created'
     package
-  end
-
-  # Unzips package into target location
-  private def decompress_package(package)
-    puts "Decompressing #{package.path}\nto #{@target_location}"
-    FileUtils.mkdir_p(@target_location)
-    Dir.chdir(@target_location) do
-      # Clear out existing package
-      FileUtils.rm_rf Dir.glob("#{@target_location}/*")
-      `tar -zxf #{package.path}`
-    end
-    puts "Decompressed"
   end
 
   private def ensure_updated_package

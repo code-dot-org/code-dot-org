@@ -65,7 +65,7 @@ class S3PackagingTest < Minitest::Test
     assert package.is_a?(Tempfile)
 
     `rm -rf #{@target_location}/*`
-    @packager.send(:decompress_package, package)
+    @packager.decompress_package(package)
 
     # package contains a commit_hash
     commit_hash_file = @target_location + '/commit_hash'
@@ -146,7 +146,7 @@ class S3PackagingTest < Minitest::Test
     end
   end
 
-  def test_upload_as_package
+  def test_upload_packge_to_s3
     # Note: In a world where we were regularly running this test without VCR, we'd need to worry about clients
     # colliding (since they're using the same S3 paths). However, because all of our network requests end up being
     # mocked, this is not a concern
@@ -156,15 +156,15 @@ class S3PackagingTest < Minitest::Test
     client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: @packager.send(:s3_key))
 
     # upload a package
-    assert @packager.upload_as_package('/build')
+    assert @packager.upload_packge_to_s3('/build')
 
     # upload the same package again, it works
-    assert @packager.upload_as_package('/build')
+    assert @packager.upload_packge_to_s3('/build')
 
     # try uploading a different package under the same name, it fails
     threw = false
     begin
-      assert !@packager.upload_as_package('/src')
+      assert !@packager.upload_packge_to_s3('/src')
     rescue
       threw = true
     end
