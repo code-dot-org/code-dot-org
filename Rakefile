@@ -260,7 +260,7 @@ namespace :install do
 
     files.each do |f|
       path = File.expand_path("../tools/hooks/#{f}", __FILE__)
-      system "ln -s #{path} #{git_path}/#{f}"
+      RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
 
@@ -302,6 +302,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
+  tasks << :hooks
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :code_studio if CDO.build_code_studio
