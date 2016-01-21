@@ -103,32 +103,31 @@
       %tr
         %td
         %td
-          %div{id: 'grid_container', style: 'position: relative'}
-            - for mode in FeatureModeManager::MODES
-              - is_current_mode = (mode == @mode)
-              - extra_css_class = is_current_mode ? '' : 'grid_preview_pending'
-              %div{id: "#{mode}_grid", class: 'grid_preview ' + extra_css_class}
-                %div.grid_title
-                  = mode.capitalize
-                  mode
-                  - if is_current_mode
-                    (current)
-                  - else
-                    (preview)
-                %div.feature_grid
-                  %table{border: 1, cellpadding: 5}
+          - for mode in FeatureModeManager::MODES
+            - is_current_mode = (mode == @mode)
+            - extra_css_class = is_current_mode ? '' : 'grid_preview_pending'
+            %div{id: "#{mode}_grid", class: 'grid_preview ' + extra_css_class}
+              %div.grid_title
+                = mode.capitalize
+                mode
+                - if is_current_mode
+                  (current)
+                - else
+                  (preview)
+              %div.feature_grid
+                %table{border: 1, cellpadding: 5}
+                  %tr
+                    %td
+                    %td
+                      DEFAULT
+                    - for script_name in @script_names
+                      %td
+                        = script_name
+                  - for feature in @feature_names
                     %tr
-                      %td
-                      %td
-                        DEFAULT
-                      - for script_name in @script_names
+                      %td.heading
+                        = feature
+                      - for script in [nil] + @script_names
                         %td
-                          = script_name
-                    - for feature in @feature_names
-                      %tr
-                        %td.heading
-                          = feature
-                        - for script in [nil] + @script_names
-                          %td
-                            = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
+                          = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
 
