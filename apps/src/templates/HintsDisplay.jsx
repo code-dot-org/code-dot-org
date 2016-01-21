@@ -1,3 +1,5 @@
+var msg = require('../locale');
+
 /**
  * @overview React Component for displaying Authored Hints in the
  * Instructions dialog. Any hints the user has already requested to see
@@ -40,12 +42,16 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function () {
+    // now that we're in the DOM, we can render our Blockly blocks for
+    // those hints that have them
     this.props.seenHints.filter(function (hint) {
       return hint.block;
     }).forEach(this.renderBlocklyHint);
   },
 
   componentDidUpdate: function () {
+    // if our update has us showing a new hint, make sure to render the
+    // block if it has one
     if (this.state.showNextUnseenHint && this.props.unseenHints[0].block) {
       this.renderBlocklyHint(this.props.unseenHints[0]);
     }
@@ -79,9 +85,9 @@ module.exports = React.createClass({
     var viewHintButton;
     if (!this.state.showNextUnseenHint && this.props.unseenHints && this.props.unseenHints.length) {
       viewHintButton = (
-        <button id="hint-button" onClick={ this.viewHint }>
+        <button id="hint-button" onClick={ this.viewHint } className="lightbulb-button">
           <span dangerouslySetInnerHTML={{ __html: this.props.lightbulbSVG }} />
-          Get a new hint
+          {msg.hintSelectNewHint()}
         </button>
       );
     }

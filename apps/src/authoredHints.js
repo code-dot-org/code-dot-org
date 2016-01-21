@@ -68,9 +68,12 @@ AuthoredHints.prototype.getSeenHints = function () {
 };
 
 /**
- * @param {String[]} An array of Blockly Blocks represented as XML
- *        strings, representing the missing recommended blocks for which
- *        we want to display hints.
+ * Creates contextual hints for the specified blocks and adds them to
+ * the queue of hints to display. Triggers an animation on the hint
+ * lightbulb if the queue has changed.
+ * @param {String[]} blocks An array of XML strings representing the
+ *        missing recommended Blockly Blocks for which we want to
+ *        display hints.
  */
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
@@ -171,7 +174,9 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
 
 /**
  * Adjusts the displayed number of unseen hints. Dims the lightbulb
- * image if there are no hints.
+ * image if there are no hints. Optionally plays a simple CSS animation
+ * to highlight the update.
+ * @param {boolean} animate defaults to false
  */
 AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
   animate = animate || false;

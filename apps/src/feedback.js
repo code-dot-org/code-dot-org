@@ -175,6 +175,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
+  // get a list of all missing recommended blocks, and display them as
+  // contextual hints when the dialog closes. If the user views one of
+  // the blocks in the dialog, it is removed from this list.
   var unseenMissingRecommendedBlocks = this.getMissingBlocks_(recommendedBlocks, Infinity)
     .blocksToDisplay
     .map(function (block) {
