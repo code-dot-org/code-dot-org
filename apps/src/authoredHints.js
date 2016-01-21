@@ -153,7 +153,9 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
  * Adjusts the displayed number of unseen hints. Dims the lightbulb
  * image if there are no hints.
  */
-AuthoredHints.prototype.updateLightbulbDisplay_ = function () {
+AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
+  animate = animate || false;
+
   var hintCount = this.getUnseenHints().length; 
   // If there are more than nine hints, simply display "9+"
   var hintText = (hintCount > 9) ? "9+" : hintCount;
@@ -163,10 +165,14 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function () {
     this.lightbulb.innerHTML = lightbulbSVG;
     this.lightbulb.querySelector('#hintCount').textContent = hintText;
   }
+
+  var bulb = document.getElementById("bulb");
+  if (animate && bulb) {
+    bulb.setAttribute('class', 'animate-hint');
+  }
 };
 
 AuthoredHints.prototype.getHintsDisplay = function () {
-
   var hintsDisplay = React.createElement(HintsDisplay, {
     hintReviewTitle: msg.hintReviewTitle(),
     seenHints: this.getSeenHints(),
