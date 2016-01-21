@@ -5,6 +5,7 @@ var _ = require('lodash');
 var browserify = require('browserify');
 var chalk = require('chalk');
 var child_process = require('child_process');
+var envify = require('envify/custom'); // Specify custom enviornment variable map
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var path = require('path');
@@ -30,6 +31,9 @@ var watchify = require('watchify');
  *        <filenames>.js. If false, everything ends up in config.commonFile.
  * @param {boolean} config.shouldWatch if true, will watch file system for
  *        changes, and rebuild when it detects them
+ * @param {boolean} [config.forDistribution] - If true, this bundle step will be
+ *        treated as part of a build for distribution, with certain environment
+ *        variables inlined, and dead code and whitespace removed.
  * @returns {Promise} that resolves after the build completes or fails - even
  *          if the build fails, the promise should resolve, but get an Error
  *          object as its result.  If watch is enabled, the promise resolves
@@ -37,13 +41,14 @@ var watchify = require('watchify');
  *          running.
  */
 exports.bundle = function (config) {
-  var runBundle, resolvePromise;
+  var makeBundle;
   var srcPath = config.srcPath;
   var buildPath = config.buildPath;
   var filenames = config.filenames;
   var commonFile = config.commonFile;
   var shouldFactor = config.shouldFactor;
   var shouldWatch = config.shouldWatch;
+  var forDistribution = config.forDistribution;
 
   var outPath = function (inPath) {
     return path
@@ -86,9 +91,16 @@ exports.bundle = function (config) {
   }));
 
   // babelify tranforms jsx files for us
-  bundler.transform('babelify', {
-    compact: false
-  });
+  bundler.transform('babelify', { compact: false });
+
+  if (forDistribution) {
+    // We inline 'production' as the NODE_ENV in distribution builds because this
+    // puts React into production mode, and allows uglifyify to remove related
+    // dead code paths.
+    bundler
+        .transform(envify({ NODE_ENV: 'production' }))
+        .transform('uglifyify');
+  }
 
   // factor-bundle splits the bundle back up into parts, but leaves common
   // modules in the main browserify stream.
@@ -102,15 +114,16 @@ exports.bundle = function (config) {
 
   // Optionally enable watch/rebuild loop
   if (shouldWatch) {
-    bundler.plugin(watchify).on('update', function () {
-      console.log(timeStamp() + ' Changes detected...');
-      runBundle();
-    });
+    bundler
+        .plugin(watchify)
+        .on('update', function () {
+          console.log(timeStamp() + ' Changes detected...');
+          makeBundle();
+        });
   }
 
-  // TODO: release/dist settings
-
-  runBundle = function () {
+  makeBundle = function (onComplete) {
+    onComplete = onComplete || function () {};
     var bundlingAttemptError;
 
     // We attach events to our filesystem output stream, because it's the
@@ -118,15 +131,13 @@ exports.bundle = function (config) {
     var outStream = fs.createWriteStream(outPath(srcPath + commonFile))
         .on('error', function (err) {
           logBoldRedError(err);
-          resolvePromise(err);
+          onComplete(err);
         })
         .on('finish', function () {
-          if (bundlingAttemptError) {
-            resolvePromise(bundlingAttemptError);
-          } else {
+          if (!bundlingAttemptError) {
             logTargetsBuilt();
-            resolvePromise();
           }
+          onComplete(bundlingAttemptError);
         });
 
     // Bundle the files and pass them to the output stream
@@ -140,13 +151,11 @@ exports.bundle = function (config) {
   };
 
   return new Promise(function (resolve) {
-    resolvePromise = _.once(resolve);
-    runBundle();
+    makeBundle(resolve);
   });
 };
 
 /**
- * Generate command to:
  * Copy one one directory (and entire contents) into another, only updating
  * if source file is newer or destination file is missing.
  * @param {!string} srcDir - Note: If you use trailing slash, the directory's
@@ -154,58 +163,73 @@ exports.bundle = function (config) {
  *                  the trailing slash, the directory itself will be copied
  *                  to destDir.  See `man rsync` for more info.
  * @param {!string} destDir
- * @returns {string}
+ * @returns {Promise}
  */
-exports.copyDirectory = function (srcDir, destDir) {
-  return 'rsync -av ' + srcDir + ' ' + destDir;
-};
+function copyDirectory(srcDir, destDir) {
+  return executeShellCommand('rsync -av ' + srcDir + ' ' + destDir);
+}
 
 /**
- * Generate command to:
  * Creates given director(y|ies) to any depth if it does not exist, no-op if
  * it does already exist.
  * @param {!string} dir
- * @returns {string}
+ * @returns {Promise}
  */
-exports.ensureDirectoryExists = function (dir) {
-  return 'mkdir -p ' + dir;
-};
+function ensureDirectoryExists(dir) {
+  return executeShellCommand('mkdir -p ' + dir);
+}
 
 /**
- * Execute a sequence of shell commands as a build script, with useful output
- * wherever possible.
- * Will call process.exit() if the command fails for any reason.
- * @param {string[]} commands - array of shell commands to be executed in sequence.
+ * Executes a single shell command in a child process that inherits the
+ * environment and stdout/stderr from this process.
+ *
+ * @param {!string} command
+ * @returns {Promise.<string>} which resolves to the child process' stdout if
+ * the command exits with code zero, or rejects if the child process fails.
  */
-exports.execute = function (commands) {
-  commands.forEach(function (command) {
-    try {
-      console.log(command);
+function executeShellCommand(command) {
+  return new Promise(function (resolve, reject) {
+    console.log(command);
+    child_process.exec(command, getChildProcessOptions(), function (err, stdout, stderr) {
+      if (stderr && stderr.length) {
+        console.log(stderr);
+      }
 
-      // For documentation on synchronous execution of shell commands from node scripts, see:
-      // https://nodejs.org/docs/latest/api/child_process.html#child_process_synchronous_process_creation
-      var result = child_process.execSync(command, {
-        env: _.extend({}, process.env, {
-          PATH: './node_modules/.bin:' + process.env.PATH
-        }),
-        stdio: 'inherit'
-      });
-    } catch (e) {
-      exports.exitWithError(e);
-    }
+      if (stdout && stdout.length) {
+        console.log(stdout);
+      }
+
+      if (err) {
+        reject(transformExecError(err));
+      } else {
+        resolve(stdout);
+      }
+    });
   });
-};
+}
 
 /**
- * End the node process with the given error message and code.
- * Ensures an exit code of at least one, in case the error doesn't have a code.
- * @param {Error} err
+ * Generate options object to pass into child_process.exec()
+ * @returns {{env: Object, stdio: string}}
  */
-exports.exitWithError = function (err) {
-  console.log("\nError: " + err.message);
-  warnIfWrongNodeVersion();
-  process.exit(err.status || 1);
-};
+function getChildProcessOptions() {
+  return {
+    env: _.extend({}, process.env, {
+      PATH: './node_modules/.bin:' + process.env.PATH
+    })
+  };
+}
+
+/**
+ * Given an array of shell commands, executes those commands in child processes
+ * in parallel.
+ * @param {!string[]} commands - list of shell commands
+ * @returns {Promise} which resolves when all commands are completed, or rejects
+ *          as soon as any command fails.
+ */
+function executeShellCommandsInParallel(commands) {
+  return Promise.all(commands.map(executeShellCommand));
+}
 
 /**
  * Log a message in a box, so it stands out from the rest of the logging info.
@@ -219,45 +243,23 @@ exports.logBoxedMessage = function (message, style) {
 };
 
 /**
- * Generate command to:
- * Process scss files into css files using node-sass.
- * @param {string} srcPath - Path to root of SCSS source files, absolute
- *        or relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} buildPath - Path to root of output directory, absolute or
- *        relative to execution path for this script (which is the code-studio
- *        folder for this build system), with trailing slash.
- * @param {string} file - SCSS file to build, given as a path rooted at
- *        the srcPath given.  Maps to an output file with a corresponding name.
- * @param {string[]} includePaths - List of paths to search for files included
- *        via scss import directives, rooted at the working directory, with NO
- *        trailing slash.
- * @param {boolean} [shouldMinify] if provided and TRUE, will build minified
- *        output files (with .min.css extensions) instead of unminified output.
- * @returns {string}
+ * @param {!string} message
+ * @returns {Promise} already resolved
  */
-exports.sass = function (srcPath, buildPath, file, includePaths, shouldMinify) {
-  var command = 'node-sass' + (shouldMinify ? ' --output-style compressed' : '');
-  var extension = (shouldMinify ? '.min.css' : '.css');
-  var includePathArgs = includePaths.map(function (path) {
-    return '--include-path ' + path;
-  }).join(" \\\n    ");
-
-  return [
-    command,
-    includePathArgs,
-    srcPath + file,
-    buildPath + path.basename(file, '.scss') + extension
-  ].join(" \\\n    ");
-};
+function logSuccess(message) {
+  return Promise.resolve(exports.logBoxedMessage(message));
+}
 
 /**
- * Given a filename, synchronously ensures the directory that would contain
- * that file exists (to any depth).
- * @param {string} target - path to a file.
+ * @param {!string} message
+ * @param {Error} reason
+ * @returns {Promise} rejected with same reason
  */
-function ensureTargetDirectoryExists(target) {
-  mkdirp.sync(path.dirname(target));
+function logFailure(message, reason) {
+  logBoldRedError(reason);
+  warnIfWrongNodeVersion();
+  exports.logBoxedMessage(message, chalk.bold.red.bgBlack);
+  return Promise.reject(reason);
 }
 
 /**
@@ -273,6 +275,18 @@ function logBoldRedError(err) {
   if (err.codeFrame) {
     console.log(err.codeFrame);
   }
+  if (err.formatted) {
+    console.log(err.formatted);
+  }
+}
+
+/**
+ * Given a filename, synchronously ensures the directory that would contain
+ * that file exists (to any depth).
+ * @param {string} target - path to a file.
+ */
+function ensureTargetDirectoryExists(target) {
+  mkdirp.sync(path.dirname(target));
 }
 
 /**
@@ -282,6 +296,34 @@ function timeStamp() {
   return '[' + new Date().toLocaleTimeString('en-US', { hour12: false }) + ']';
 }
 
+/**
+ * Given an error raised by a child_process.exec or execSync call, extract the
+ * inner error JSON that gets dumped into the message and apply its properties
+ * to the original error object before returning it.  If no inner JSON is found,
+ * return the original Error unchanged.
+ * @param {!Error} error
+ * @returns {Error}
+ */
+function transformExecError(error) {
+  // Search for an opening brace on its own line to find the beginning of the
+  // inner error JSON text
+  var match = error.message.match(/^{$/m);
+  var innerErrorIndex = (match ? match.index : -1);
+  if (innerErrorIndex >= 0) {
+    var outerMessage = error.message.slice(0, innerErrorIndex);
+    var innerErrorJSON = error.message.slice(innerErrorIndex);
+    try {
+      var innerError = JSON.parse(innerErrorJSON);
+      for (var key in innerError) {
+        error[key] = innerError[key];
+      }
+      error.message = outerMessage;
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  return error;
+}
 
 /**
  * Checks current node version, prints a warning if the expected version is not
@@ -295,3 +337,25 @@ function warnIfWrongNodeVersion() {
       console.log('You are using node ' + process.version + '. This build script expects ' + engines_node + '.');
   }
 }
+
+/**
+ * Wraps a function so that calling it with a set of arguments returns a new
+ * function with those arguments pre-bound - essentially a one-time curry.
+ * @param {!function} fn
+ * @returns {Function}
+ */
+function makeBuildCommand(fn) {
+  return function () {
+    return fn.bind.apply(fn, [undefined].concat([].slice.call(arguments)));
+  };
+}
+
+// Export wrapped versions of the commands we need, suitable for passing
+// into Promise.prototype.then()
+_.extend(module.exports, {
+  copyDirectory: makeBuildCommand(copyDirectory),
+  ensureDirectoryExists: makeBuildCommand(ensureDirectoryExists),
+  executeShellCommandsInParallel: makeBuildCommand(executeShellCommandsInParallel),
+  logSuccess: makeBuildCommand(logSuccess),
+  logFailure: makeBuildCommand(logFailure)
+});
