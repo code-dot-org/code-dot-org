@@ -212,6 +212,8 @@ no-NO:
   homepage_banner_text_link: Lær mer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Lær mer
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Lær mer
   homepage_slot_text_title_hoc: Kodetimen
   homepage_slot_text_blurb_hoc: Alle kan lære. Start i dag
   homepage_slot_text_link_hoc: Prøv Kodetimen
@@ -220,6 +222,7 @@ no-NO:
   homepage_solot_text_link_volunteer: Meld deg som frivillig til Kodetimen
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Utforsk alle våre opplæringsprogrammer
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prøv Code Studio
   homepage_slot_text_link_local: Finn et lokalt kurs
   homepage_slot_text_link_othercourses: Andre nettbaserte kurs
@@ -543,7 +546,7 @@ no-NO:
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjøringer
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Lær mer
   dashboard_announce_hoc: '<b>9 November 2015</b> - en ny time av koden tutorial er her, med kommende film Star Wars: The Force våkner. Arbeide med Rey å veilede nye droid, BB-8, gjennom et oppdrag. Deretter delta Leia for å opprette og dele dine egne spill i en galakse langt, langt borte.'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

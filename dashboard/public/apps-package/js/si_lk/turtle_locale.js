@@ -155,7 +155,7 @@ p:function(d,k,o,l,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:(k=turtle_lo
 s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).turtle_locale = {
 "blocksUsed":function(d){return "Blocks used: %1"},
-"branches":function(d){return "branches"},
+"branches":function(d){return "ශාඛා"},
 "catColour":function(d){return "පාට"},
 "catControl":function(d){return "ලූපයන්"},
 "catMath":function(d){return "ගණිත"},
@@ -180,8 +180,8 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "drawAFlower":function(d){return "මලක් අඳින්න"},
 "drawAHexagon":function(d){return "ෂඩස්‍රයක් අඳින්න"},
 "drawAHouse":function(d){return "ගෙයක් අඳින්න"},
-"drawAPlanet":function(d){return "draw a planet"},
-"drawARhombus":function(d){return "draw a rhombus"},
+"drawAPlanet":function(d){return "ග්‍රහලොවක් අඳින්න"},
+"drawARhombus":function(d){return "රොම්බසයක් අඳින්න"},
 "drawARobot":function(d){return "රොබෝවෙක් අදින්න"},
 "drawARocket":function(d){return "රොකටයක් අදින්න"},
 "drawASnowflake":function(d){return "draw a snowflake"},

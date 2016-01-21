@@ -205,6 +205,8 @@ es-ES:
   homepage_banner_text_link: Aprende más
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Aprende más
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
@@ -213,6 +215,7 @@ es-ES:
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
   homepage_slot_text_title_students: Alumnos
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
@@ -536,7 +539,7 @@ es-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todo
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Aprende más
   dashboard_announce_hoc: '<b>15 de Octubre, 2015</b> - Se viene la Hora de Código &mdash; cada organizador que participe recibirá una tarjeta de regalo de Amazon.com o de Microsoft Windows Store como agradecimiento. Únete a aulas en todo el mundo del 7 al 13 de Diciembre.'
   dashboard_announce_playlab: '<b> 04 de diciembre 2015 </b> - ¡La Hora del Código ya está aquí! Prueba 50 tutoriales para todas las edades y todos los dispositivos. Novedades de esta semana: Códigos de tus propias historias y juegos en los nuevos laboratorios de reproducción, edad de hielo y Gumball.'

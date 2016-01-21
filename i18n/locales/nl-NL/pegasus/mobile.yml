@@ -215,6 +215,8 @@ nl-NL:
   homepage_banner_text_link: Leer meer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Leer meer
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Leer meer
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
@@ -223,6 +225,7 @@ nl-NL:
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
   homepage_slot_text_title_students: Leerlingen
   homepage_slot_text_blurb_students: Verken onze handleidingen
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Probeer Code Studio
   homepage_slot_text_link_local: Vind een groep in de buurt
   homepage_slot_text_link_othercourses: Andere online cursussen

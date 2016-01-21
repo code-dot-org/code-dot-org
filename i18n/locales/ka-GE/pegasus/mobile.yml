@@ -191,6 +191,8 @@ ka-GE:
   homepage_banner_text_link: გაიგეთ მეტი
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: გაიგეთ მეტი
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: გაიგეთ მეტი
   homepage_slot_text_title_hoc: კოდის ერთი საათი
   homepage_slot_text_blurb_hoc: სწავლა შეუძლია ყველას. დაიწყეთ დღეს
   homepage_slot_text_link_hoc: სცადეთ კოდის ერთი საათი
@@ -199,6 +201,7 @@ ka-GE:
   homepage_solot_text_link_volunteer: გახდით კოდის ერთი საათის მოხალისე
   homepage_slot_text_title_students: მოსწავლეები
   homepage_slot_text_blurb_students: ყველა ჩვენი ტუტორიალის ნახვა
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: ნახეთ კოდის სტუდია
   homepage_slot_text_link_local: ადგილობრივი კლასის ნახვა
   homepage_slot_text_link_othercourses: სხვა ონლაინ კურსები
@@ -522,7 +525,7 @@ ka-GE:
   dashboard_faq_k5: K-5 ხშირად დასმული კითხვები
   dashboard_announcements: განცხადებები
   dashboard_announce_view_all: ყველას ნახვა
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: გაიგეთ მეტი
   dashboard_announce_hoc: '<b>2015, 9 ნოემბერი</b> - აი, კოდის ერთი საათის ახალი ტუტორიალი, რომელიც მომავალ ვარსკვლავურ ომება ეხება. იმუშავეთ რეისთან ერთად და მართეთ ახალი დროიდი BB-8. შემდეგ კი შექმენით შორეულ გალაქტიკაში თქვენი საკუთარი თამაში ლეიასთან ერთად.'
   dashboard_announce_playlab: '<b>2015 წლის 4 დეკემბერი</b> - კოდის ერთი საათი დაიწყო! გამოსცადეთ 50 ტუტორიალი ნებისმიერი ასაკისა და მოწყობილობისთვის. ამ კვირის სიახლე: დაწერეთ კოდი თქვენი საკუთარი ისტორიებისა და თამაშებისთვის თამაშების ახალ ლაბორატორიებში: გამყინვარების პერიოდი და გამბოლი.'

@@ -160,8 +160,8 @@ sk:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>above'
-        <br/><br/>below: '<br/><br/>below'
+        <br/><br/>above: '<br/> <br/> nad'
+        <br/><br/>below: '<br/> <br/> pod'
         <br/><br/>next to: '<br/><br/>next to'
         Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
         Matching: Zodpovedajúce
@@ -306,7 +306,7 @@ sk:
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Viacnásobný výber
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Ktorý program vytvorí tento obrázok?
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
@@ -329,7 +329,7 @@ sk:
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: Viacnásobný výber
-        Which program makes this image?: Which program makes this image?
+        Which program makes this image?: Ktorý program vytvorí tento obrázok?
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
@@ -344,7 +344,7 @@ sk:
         /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
         /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
         Multiple Choice: Viacnásobný výber
-        Which program does not create this image?: Which program does not create this image?
+        Which program does not create this image?: Ktorý program nevytvorí tento obrázok?
       2-3 Relay Programming Multi 2:
         /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
         /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png

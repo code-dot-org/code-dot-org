@@ -217,6 +217,8 @@ fi-FI:
   homepage_banner_text_link: Lue lisää
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Lue lisää
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Lue lisää
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
@@ -225,6 +227,7 @@ fi-FI:
   homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
   homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Kokeile Koodistudiota
   homepage_slot_text_link_local: Etsi kerho läheltäsi
   homepage_slot_text_link_othercourses: Muut verkkokurssit
@@ -548,7 +551,7 @@ fi-FI:
   dashboard_faq_k5: 'Esi- ja alakoulu, usein kysyttyjä kysymyksiä'
   dashboard_announcements: Ilmoituksia
   dashboard_announce_view_all: Näytä kaikki
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Lue lisää
   dashboard_announce_hoc: '<b>9. Marraskuuta 2015</b> - Uusi Kooditunti-harjoitus on täällä, teemanaan elokuva Star Wars: The Force Awakens. Auta Rey:tä opastamaan uutta droidia, BB-8:aa, joukossa tehtäviä. Sitten, yhdessä Leian kanssa, luo ja jaa oma, kaukaiseen galaksiin sijoittuva, pelisi.'
   dashboard_announce_playlab: '<b>4. joulukuuta 2015</b> - Koodauskoodi on täällä! 50 harjoitusta kaikenikäisille ja kaikille eri laitteille. Uutta tällä viikolla: Ohjelmoi omia tarinoita ja pelejä Pelilabrassa, tai Ice Age- ja Gumball-maailmoissa.'

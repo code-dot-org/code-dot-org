@@ -3,13 +3,13 @@
     confirmations:
       confirmed: Tu dirección de correo electrónico ha sido confirmada con éxito.
       send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
-        tu cuenta en pocos minutos.
+        tu cuenta en unos minutos.
       send_paranoid_instructions: Si tu dirección de email existe en nuestra base
         de datos, recibirás un correo electrónico con instrucciones para confirmar
         tu cuenta en pocos minutos.
     failure:
       already_authenticated: Ya has iniciado sesión.
-      inactive: Tu cuenta todavía no ha sido activada.
+      inactive: Tu cuenta todavía no esta activada.
       invalid: Correo electrónico o contraseña inválidos.
       invalid_token: Token de autenticación no válido.
       locked: Tu cuenta está bloqueada.

@@ -217,6 +217,8 @@ sv-SE:
   homepage_banner_text_link: Lär dig mer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Lär dig mer
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Lär dig mer
   homepage_slot_text_title_hoc: Timmen med Kod
   homepage_slot_text_blurb_hoc: Alla kan lära sig. Börja idag
   homepage_slot_text_link_hoc: Prova Kodtimmen
@@ -225,6 +227,7 @@ sv-SE:
   homepage_solot_text_link_volunteer: Ställ upp som frivillig för Hour of Code
   homepage_slot_text_title_students: Elever
   homepage_slot_text_blurb_students: Utforska alla våra tutorials
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prova KodStudio
   homepage_slot_text_link_local: Hitta en klass i närheten
   homepage_slot_text_link_othercourses: Andra online-kurser
@@ -549,7 +552,7 @@ sv-SE:
   dashboard_faq_k5: K-5 vanliga frågor
   dashboard_announcements: Anslagstavla
   dashboard_announce_view_all: Visa alla
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating in the Hour of Code 2015! Tracking and saving progress have now resumed in all Code Studio tutorials and courses. Note: Code.org offices will be closed December 19 - January 3. Please expect delayed answers to any questions you submit until January 4.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Lär dig mer
   dashboard_announce_hoc: '<b>23 November 2015</b> - Skulle du vilja få hjälp av en frivillig som brinner för datavetenskaplig utbildning under ditt Kodtimmen evenemang? Över 7 000 frivilliga vill inspirera dina elever genom att besöka ditt klassrum eller videochatta på distans. Kolla in frivillig-kartan för att kontakta frivilliga i ditt område.'
   dashboard_announce_playlab: '<b>4 december, 2015</b> - Kodtimmen är här! Prova 50 övningar för alla åldrar och alla mobila enheter. Nytt den här veckan: Koda dina egna historier och spel i nya spel-labb, Ice Age och Gumball.'

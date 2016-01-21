@@ -29,8 +29,8 @@
     code:
       label: 'Adaugă un profesor:'
       placeholder: Secțiune Cod (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Te rugăm să introduci codul atribuit ție de profesorul tău. Acesta
+        este un cod din 6 litere ca "ABCDEF".
     submit: Adaugă profesor
   add_hint_form:
     placeholder: Te rugăm să introduci indiciul tău aici
@@ -41,6 +41,7 @@
   puzzle: Puzzle
   trophies: trofee
   courses: cursuri
+  unplugged_activity: Activitate fără Calculator
   of: de
   more: MAI MULT
   less: MAI PUŢIN

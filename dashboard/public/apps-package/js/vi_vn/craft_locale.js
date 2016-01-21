@@ -162,7 +162,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockPlaceXAheadAhead":function(d){return "phía trước"},
 "blockPlaceXAheadPlace":function(d){return "đặt"},
 "blockPlaceXPlace":function(d){return "đặt"},
-"blockPlantCrop":function(d){return "trồng cây"},
+"blockPlantCrop":function(d){return "gieo hạt"},
 "blockShear":function(d){return "xén"},
 "blockTillSoil":function(d){return "cày đất"},
 "blockTurnLeft":function(d){return "rẽ trái"},
