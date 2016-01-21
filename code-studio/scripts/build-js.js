@@ -8,25 +8,18 @@ var build_commands = require('./build-commands');
 var chalk = require('chalk');
 var commander = require('commander');
 
-/** @const {string} */
-var BUILD_PATH = './build/js/';
-
-/** @const {string} */
-var SRC_PATH = './src/js/';
-
-
 // Use commander to parse command line arguments
 // https://github.com/tj/commander.js
 commander
-    .option('--min', 'Build minified output', false)
+    .option('--dist', 'Build output optimized for distribution', false)
     .option('--watch', 'Watch file system', false)
     .parse(process.argv);
 
 var defaultOptions = {
-  srcPath: './src/js/',
-  buildPath: './build/js/',
+  srcPath: 'src/js/',
+  buildPath: 'build/js/',
   shouldFactor: false,
-  shouldMinify: commander.min,
+  forDistribution: commander.dist,
   shouldWatch: commander.watch
 };
 
