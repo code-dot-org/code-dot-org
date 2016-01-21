@@ -22,6 +22,20 @@ The learn.code.org code is segmented into three parts:
 
 See the main website-ci/README for server install and running instructions.
 
+## Code Style
+
+Please follow our [style guie](../STYLEGUIDE.md).  We've have set up linting to help.
+
+* To install our precommit hook that will lint the files you've changed, run `rake install:hooks` from the repository root. You should only have to do this once.  We _highly_ recommend it!
+* To manually lint in the dashboard directory, run `rubocop && haml-lint .`
+
+## Testing
+
+You can run our unit tests by running `rake test` from the dashboard directory.
+
+Our continuous integration server regularly runs a suite of [UI tests](./test/ui) using Selenium / Cucumber which run against many browsers, and can also be run locally using `chromedriver`. See the [README](./test/ui) in that folder for instructions.
+
+
 ### Adding an Admin Account
 
 1. Create a first user which will be your admin
