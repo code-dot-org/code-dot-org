@@ -381,6 +381,7 @@
   "projectilePompom": "pompom",
   "projectileToaster": "toaster",
   "projectileWaterball": "waterball",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
   "reinfFeedbackMsg": "You can press the \"{backButton}\" button to go back to playing your story.",
   "removePoints10": "remove 10 points",
   "removePoints50": "remove 50 points",
