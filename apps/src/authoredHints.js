@@ -132,23 +132,16 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
  *        the "default" action when there are no unseen hints. 
  */
 AuthoredHints.prototype.display = function (promptIcon, clickTarget, callback) {
-  if (this.hints_ && this.hints_.length) {
-    $(promptIcon.parentNode).addClass('authored_hints');
-    this.updateLightbulbDisplay_();
-
-    promptIcon.parentNode.insertBefore(this.lightbulb, promptIcon);
-
-    clickTarget.addEventListener('click', function () {
-      var hintsToShow = this.getUnseenHints(); 
-      if (hintsToShow.length > 0) {
-        this.showHint_(hintsToShow[0], callback);
-      } else {
-        callback();
-      }
-    }.bind(this));
-  } else {
-    dom.addClickTouchEvent(clickTarget, callback);
-  }
+  this.promptIcon = promptIcon;
+  this.updateLightbulbDisplay_();
+  clickTarget.addEventListener('click', function () {
+    var hintsToShow = this.getUnseenHints();
+    if (hintsToShow.length > 0) {
+      this.showHint_(hintsToShow[0], callback);
+    } else {
+      callback();
+    }
+  }.bind(this));
 };
 
 /**
@@ -182,6 +175,16 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
   animate = animate || false;
 
   var hintCount = this.getUnseenHints().length; 
+
+  // If we have hints to show, but are not in the DOM, insert ourselves
+  // into the DOM. This can happen when contextual hints appear in a
+  // level that was initialized with no hints. Note that we can be in
+  // the DOM and have zero hints to show, and that's just fine.
+  if (hintCount > 0 && !document.contains(this.lightbulb)) {
+    this.promptIcon.parentNode.className += ' authored_hints';
+    this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
+  }
+
   // If there are more than nine hints, simply display "9+"
   var hintText = (hintCount > 9) ? "9+" : hintCount;
   if (hintCount === 0) {
