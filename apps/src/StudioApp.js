@@ -912,7 +912,13 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     aniGifURL: level.aniGifURL,
     authoredHints: authoredHints
   });
-  React.render(instructionsContent, instructionsDiv);
+
+  // Create a div to eventually hold this content, and add it to the
+  // overall container. We don't want to render directly into the
+  // container just yet, because our React component could contain some
+  // elements that don't want to be rendered until they are in the DOM
+  var instructionsReactContainer = document.createElement('div');
+  instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -962,6 +968,12 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     scrollContent: true,
     scrollableSelector: ".instructions-container",
     header: headerElement
+  });
+
+  // Now that our elements are guaranteed to be in the DOM, we can
+  // render in our react components
+  $(this.instructionsDialog.div).on('show.bs.modal', function () {
+    React.render(instructionsContent, instructionsReactContainer);
   });
 
   if (autoClose) {

@@ -26,6 +26,7 @@ var AuthoredHints = function (studioApp) {
    * @type {!AuthoredHint[]}
    */
   this.hints_ = [];
+  this.contextualHints_ = [];
 
   /**
    * @type {number}
@@ -50,7 +51,7 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  var hints = this.hints_ || [];
+  var hints = this.contextualHints_.concat(this.hints_ || []);
   return hints.filter(function (hint) {
     return hint.alreadySeen === false;
   });
@@ -60,10 +61,29 @@ AuthoredHints.prototype.getUnseenHints = function () {
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  var hints = this.hints_ || [];
+  var hints = this.contextualHints_.concat(this.hints_ || []);
   return hints.filter(function (hint) {
     return hint.alreadySeen === true;
   });
+};
+
+/**
+ * @param {String[]} An array of Blockly Blocks represented as XML
+ *        strings, representing the missing recommended blocks for which
+ *        we want to display hints.
+ */
+AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
+  var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
+
+  // if the set of contextual hints currently being shown has changed,
+  // animate the hint display lightbulb when we update it.
+  var oldContextualHints = this.contextualHints_.filter(function (hint) {
+    return hint.alreadySeen === false;
+  });
+  var animateLightbulb = oldContextualHints.length !== newContextualHints.length;
+
+  this.contextualHints_ = newContextualHints;
+  this.updateLightbulbDisplay_(animateLightbulb);
 };
 
 /**
@@ -206,7 +226,18 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
             callback();
           }.bind(this),
           showHint: function () {
-            api.set('content.text', hint.content);
+            if (hint.block) {
+              var content = document.createElement('div');
+              content.innerHTML = hint.content;
+              var blockContainer = document.createElement('div');
+              blockContainer.style.height = '100px';
+              content.appendChild(blockContainer);
+              api.set('content.text', content);
+
+              Blockly.BlockSpace.createReadOnlyBlockSpace(blockContainer, hint.block);
+            } else {
+              api.set('content.text', hint.content);
+            }
             $(api.elements.content).find('img').on('load', function (e) {
               api.reposition(e);
             });
