@@ -75,6 +75,7 @@
     "react-tools": "0.13.3",
     "require-globify": "1.2.1",
     "rgbcolor": "0.0.4",
+    "sanitize-html": "^1.11.3",
     "seedrandom": "2.4.2",
     "sinon": "^1.16.1",
     "stackblur": "^1.0.0",

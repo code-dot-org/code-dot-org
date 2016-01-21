@@ -1,8 +1,4 @@
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
-
-ENV['RACK_ENV'] = 'test'
+require_relative 'test_helper'
 
 class LogTest < Minitest::Test
   def setup

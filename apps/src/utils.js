@@ -45,7 +45,7 @@ exports.cloneWithoutFunctions = function(object) {
 };
 
 /**
- * Returns a new object with the properties from defaults overriden by any
+ * Returns a new object with the properties from defaults overridden by any
  * properties in options. Leaves defaults and options unchanged.
  * NOTE: For new code, use $.extend({}, defaults, options) instead
  */

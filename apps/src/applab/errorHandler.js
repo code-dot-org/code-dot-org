@@ -49,10 +49,8 @@ function outputError(warning, level, lineNum) {
 }
 
 function handleError(opts, message) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onError && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onError, [message]);
+  if (opts.onError) {
+    opts.onError.call(null, message);
   } else {
     outputApplabConsole(message);
   }

@@ -1,0 +1,339 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/0.5488135039273248
+    body:
+      encoding: UTF-8
+      string: hello\x00\x01\xFF
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - xruPxxpYtRerSkidF9dBDA==
+      Content-Length:
+      - '17'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:20 GMT
+      Etag:
+      - '"c6bb8fc71a58b517ab4a489d17d7410c"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:19 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/0.5488135039273248
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:20 GMT
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:20 GMT
+      Etag:
+      - '"c6bb8fc71a58b517ab4a489d17d7410c"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '17'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: hello\x00\x01\xFF
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:19 GMT
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/video_key
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKiss
+        LS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZ
+        WltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWG
+        h4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKz
+        tLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g
+        4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/w==
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 4shl20Fivtljv6qe9qwY8A==
+      Content-Length:
+      - '256'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:21 GMT
+      Etag:
+      - '"e2c865db4162bed963bfaa9ef6ac18f0"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:20 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/video_key
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:21 GMT
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:21 GMT
+      Etag:
+      - '"e2c865db4162bed963bfaa9ef6ac18f0"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - video/mp4
+      Content-Length:
+      - '256'
+      Server:
+      - AmazonS3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKiss
+        LS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZ
+        WltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWG
+        h4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKz
+        tLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g
+        4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/w==
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:20 GMT
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/ac0a7f8c2faac49775a616b7c0cc21d8-key
+    body:
+      encoding: US-ASCII
+      string: '0.7151893663724195'
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - MjkNIQAEHiuRWPSTvxpZIA==
+      Content-Length:
+      - '18'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:22 GMT
+      Etag:
+      - '"32390d2100041e2b9158f493bf1a5920"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:21 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/ac0a7f8c2faac49775a616b7c0cc21d8-key
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:22 GMT
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:22 GMT
+      Etag:
+      - '"32390d2100041e2b9158f493bf1a5920"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '18'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '0.7151893663724195'
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:21 GMT
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/43b34e9afb52a2dbc3767d8b677de5d8-key
+    body:
+      encoding: US-ASCII
+      string: '0.6027633760716439'
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - VY5ZfU3xYT/IO6hpxBQjdA==
+      Content-Length:
+      - '18'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:23 GMT
+      Etag:
+      - '"558e597d4df1613fc83ba869c4142374"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:22 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/43b34e9afb52a2dbc3767d8b677de5d8-key
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:23 GMT
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:23 GMT
+      Etag:
+      - '"558e597d4df1613fc83ba869c4142374"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '18'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: '0.6027633760716439'
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:22 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/nonexistent_key
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 16 Nov 2015 23:11:22 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>nonexistent_key</Key><RequestId>BB5277310F100E12</RequestId><HostId>1rpU8cs/CZP1zxOsapsSEp75rdXxIzfVjPr6uRMLRlnyxe9u9gy3YBMK0YmPOVKt+SMW/fPtfCU=</HostId></Error>
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:23 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/video_key
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:24 GMT
+      Last-Modified:
+      - Mon, 16 Nov 2015 23:11:21 GMT
+      Etag:
+      - '"e2c865db4162bed963bfaa9ef6ac18f0"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - video/mp4
+      Content-Length:
+      - '256'
+      Server:
+      - AmazonS3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKiss
+        LS4vMDEyMzQ1Njc4OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZ
+        WltcXV5fYGFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6e3x9fn+AgYKDhIWG
+        h4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmqq6ytrq+wsbKz
+        tLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g
+        4eLj5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/w==
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:23 GMT
+recorded_with: VCR 3.0.0
