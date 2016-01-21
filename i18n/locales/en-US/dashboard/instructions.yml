@@ -705,6 +705,7 @@ en:
       CSP U4 - JSON Object Intro - Bad Way_instruction: crwdns49706:0crwdne49706:0
       CSP U4 - JSON Object Intro - Good Way_instruction: crwdns55160:0crwdne55160:0
       CSP U4 - Objects - createObject_instruction: crwdns55161:0crwdne55161:0
+      drawings!_instruction: crwdns55886:0crwdne55886:0
       ECSPD Binary Odometer_instruction: crwdns48371:0crwdne48371:0
       Eval Booleans 1_instruction: crwdns35153:0crwdne35153:0
       Eval Booleans 2_instruction: crwdns34454:0crwdne34454:0
@@ -765,6 +766,7 @@ en:
       Eval Strings Images 7_instruction: crwdns38338:0crwdne38338:0
       Eval Strings Images 8_instruction: crwdns36009:0crwdne36009:0
       Eval Strings Images Free Play_instruction: crwdns36446:0crwdne36446:0
+      Farmer for Authored Hint testing_instruction: crwdns55887:0crwdne55887:0
       Frequency Analysis_instruction: crwdns49707:0crwdne49707:0
       frozen circle function in circle_instruction: crwdns34503:0crwdne34503:0
       frozen circle function with parameter_instruction: crwdns34504:0crwdne34504:0
@@ -1091,6 +1093,7 @@ en:
       Play Lab Rocket 4_instruction: crwdns35189:0crwdne35189:0
       Play Lab Rocket 5_instruction: crwdns35190:0crwdne35190:0
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
+      Poorva-test_instruction: crwdns55888:0crwdne55888:0
       Ryan - 4-5 Bee Conditionals 2_instruction: crwdns50295:0crwdne50295:0
       Ryan - Bee Conditionals_instruction: crwdns55791:0crwdne55791:0
       Ryan Test Locked Blocks_instruction: crwdns50669:0crwdne50669:0
@@ -1560,10 +1563,17 @@ en:
       U4 - add createRecord to contacts App_instruction: crwdns55808:0crwdne55808:0
       U4 - Add Row By Hand_instruction: crwdns55809:0crwdne55809:0
       U4 - Charts - drawChartFromRecords 1_instruction: crwdns55881:0crwdne55881:0
+      U4 - Charts - drawChartFromRecords Options 1_instruction: crwdns55889:0crwdne55889:0
+      U4 - Charts - drawChartFromRecords Options 2_instruction: crwdns55890:0crwdne55890:0
       U4 - Charts - drawChartsFromRecords 1_instruction: crwdns55810:0crwdne55810:0
+      U4 - Charts - Export Data_instruction: crwdns55891:0crwdne55891:0
       U4 - Charts - Import Data 1_instruction: crwdns55811:0crwdne55811:0
+      U4 - Charts - Import Data 2_instruction: crwdns55892:0crwdne55892:0
+      U4 - Charts - Line Chart 1_instruction: crwdns55893:0crwdne55893:0
+      U4 - Charts - Line Chart 2_instruction: crwdns55894:0crwdne55894:0
       U4 - Charts - Line Chart Template_instruction: crwdns55882:0crwdne55882:0
       U4 - Charts - Remixing Apps with Data_instruction: crwdns55812:0crwdne55812:0
+      U4 - Charts - Scatter Chart_instruction: crwdns55895:0crwdne55895:0
       U4 - CreateRecord - 1_instruction: crwdns55162:0crwdne55162:0
       U4 - CreateRecord - 2.5_instruction: crwdns55813:0crwdne55813:0
       U4 - CreateRecord - 2_instruction: crwdns55163:0crwdne55163:0

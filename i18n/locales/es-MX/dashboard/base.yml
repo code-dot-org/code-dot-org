@@ -28,8 +28,7 @@ es-MX:
     code:
       label: 'Agregar un maestro:'
       placeholder: Código de sección (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Por favor introduzca el código compartido contigo por tu profesor. Es un código de 6 letras como "ABCDEF".'
     submit: Añadir maestro
   add_hint_form:
     placeholder: Por favor introduce aquí tu pista
@@ -40,6 +39,7 @@ es-MX:
   puzzle: Rompecabezas
   trophies: trofeos
   courses: cursos
+  unplugged_activity: Actividad fuera de línea
   of: de
   more: MÁS
   less: MENOS

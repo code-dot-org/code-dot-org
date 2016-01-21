@@ -35,7 +35,20 @@ def main()
   total_cities = to_date['cities']
   total_states = to_date['states']
   total_countries = to_date['countries']
-  total_codedotorg = 0
+  # The code.org HOC count for tutorials on or before 11 January 2016, noting
+  # that our counting (via the JSON files) began on 12 January 2016.
+  # Computation: https://docs.google.com/spreadsheets/d/1xglCme-BRvtQhVg7G7OV7OZOmrIkpM06g2v7g8Zh8z8
+  total_codedotorg = 104896901
+  # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
+  # February 2014.
+  total_started += 409216
+  # Increase the 'started' metric by 14.8M to reflect undercounting by the
+  # database in comparison to Google Analytics and Amazon Elastic Load Balancing
+  # logs between 2015-11-07 and 2015-12-18 (inclusive).
+  # Discussion of the problem, links to the computation of the 14.8M number, and
+  # discussion of ways to resolve the problem can be found in this document:
+  # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
+  total_started += 14861327
 
   today = DateTime.now.to_date
   day = Date.strptime('2014/12/06', '%Y/%m/%d')

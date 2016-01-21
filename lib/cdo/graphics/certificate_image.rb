@@ -28,6 +28,8 @@ def create_certificate_image2(image_path, name, params={})
   background
 end
 
+# This method returns a newly-allocated Magick::Image object.
+# NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
   name = name.gsub(/@/,'\@')
   name = ' ' if name.empty?
@@ -36,14 +38,15 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 
   template_file = certificate_template_for(course)
 
+  path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
   if prefilled_title_course?(course)
     # only need to fill in student name
     vertical_offset = course == '20-hour' ? -115 : -110
-    image = create_certificate_image2(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file), name, y: vertical_offset)
+    image = create_certificate_image2(path, name, y: vertical_offset)
   else # all other courses use a certificate image where the course name is also blank
     course_title ||= fallback_course_title_for(course)
 
-    image = Magick::Image.read(pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)).first
+    image = Magick::Image.read(path).first
 
     # student name
     name_vertical_offset = 445

@@ -28,8 +28,8 @@
     code:
       label: 'Bæta við kennara:'
       placeholder: Hópkóði (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Vinsamlegast færðu inn kóðann sem kennarinn lét þig hafa. Það
+        er 6 stafa kóði líkur "ABCDEF".
     submit: Bæta við kennara
   add_hint_form:
     placeholder: Færðu vísbendingu þína inn hér
@@ -40,6 +40,7 @@
   puzzle: Þraut
   trophies: bikarar
   courses: námskeið
+  unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
   less: MINNA
