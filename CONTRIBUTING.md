@@ -12,7 +12,7 @@ We'd love to have you join our group of contributors! Please e-mail your areas o
 
 Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We have implemented linting to help you with this:
 
-* To install our precommit hook that will lint the files you've changed, run `rake install:hooks`. You should only have to do this once.  We _highly_ recommend it!
+* To ensure our precommit linting hook is installed, run `rake install:hooks`. You should only have to do this once.
 * To lint the entire project, run `rake lint` from the repository root.  This will check all Ruby, JavaScript and HAML.
 * To lint only part of the project, run one of these commands from the repository root:
   * dashboard: See the [dashboard README](./dashboard#code-style)
@@ -25,9 +25,9 @@ Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We hav
 
 Please test your changes before submitting them to us!
 
-### Manually
+### Manual testing
 
-We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
+We support recent versions of Firefox, Chrome, Internet Explorer, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
 
 ### Unit tests
 
