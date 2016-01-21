@@ -10,6 +10,7 @@
     .end { background-color: lime !important }
     .obstacle { background-color: gold !important }
     .dirt { background-color: #d1d567 !important }
+    .conditional { background-color: green !important }
     tr {
       height: 40px;
     }
@@ -34,7 +35,6 @@
     td.conditional {
       background-size: 100% 100%;
       text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
-      background-color: green;
     }
     td.flower-or-nothing {
       background-image: url('/assets/editor/flower-or-nothing.png');
@@ -68,6 +68,10 @@
     %ul(style="list-style-type:none;margin:0;")
       %li.dirt +x = nectar. +99 = unlimited
       %li.dirt -x = honey. -99 = unlimited
+      %li.conditional +xC = nectar or nothing
+      %li.conditional -xC = honey or nothing
+      %li.conditional xC = nectar or honey
+      %li.conditional xCany = nectar, honey, or nothing
     PLAYLAB:
     %ul(style="list-style-type:none;margin:0;")
       %li.start 16 = character
