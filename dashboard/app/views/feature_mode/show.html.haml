@@ -5,12 +5,15 @@
   #hoc_features h3.selected {margin: 0px; padding: 0px; font-weight: bold}
 
   #hoc_features tr.normal:hover {
+    transition: background-color 0.6s ease;
     background-color: #f5fff5
   }
   #hoc_features tr.scale:hover {
+    transition: background-color 0.6s ease;
     background-color: #fffff5
   }
   #hoc_features tr.emergency:hover {
+    transition: background-color 0.6s ease;
     background-color: #fff5f5
   }
   #hoc_features .heading {
@@ -19,7 +22,7 @@
   .grid_title {
     font-family: Arial;
     font-size: 120%;
-    margin: 20px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
     font-weight: bold;
   }
   .true_flag {
@@ -29,6 +32,12 @@
   .false_flag {
     font-size: 150%;
     color: red
+  }
+  .grid_preview {
+    position: absolute;
+  }
+  .grid_preview table {
+    transition: visibility 0.5s ease-in, visibility 0.1s ease-in;
   }
   .feature_grid table, #feature_grid tr, #feature_grid td {
     border-collapse: collapse;
@@ -41,11 +50,21 @@
   .feature_grid tr:nth-child(odd) {
     background-color: #eee;
   }
+  .grid_preview {
+    position: absolute;
+  }
+  .grid_preview:last-child {
+    position: relative;
+  }
   .grid_preview_pending  {
-    display: none;
+    visibility: hidden;
   }
   .grid_preview_pending table {
     opacity: 0.6;
+  }
+  .submit_div {
+    height: 2em;
+    margin-bottom: 20px;
   }
 
 %h1 Tutorial feature mode
@@ -58,7 +77,7 @@
         %tr{class: mode}
           %td
             = radio_button_tag 'mode', mode, mode == @mode, {id: mode,
-                onclick: "$('.grid_preview').hide(); $('##{mode}_grid').show(); $('#submit').prop('disabled', false)"}
+                onclick: "$('.grid_preview').css('visibility', 'hidden'); $('##{mode}_grid').css('visibility', 'visible'); $('#submit').prop('disabled', false)"}
           %td
             %label{for: mode}
               %h3{class: @mode == mode ? 'selected' : ''}
@@ -78,36 +97,38 @@
       %tr
         %td
         %td
-          = submit_tag('Update feature mode', :id => 'submit', :disabled => 'true')
+          %div.submit_div
+            = submit_tag('Update feature mode', :id => 'submit', :disabled => 'true')
 
       %tr
         %td
         %td
-          - for mode in FeatureModeManager::MODES
-            - is_current_mode = (mode == @mode)
-            - extra_css_class = is_current_mode ? '' : 'grid_preview_pending'
-            %div{id: "#{mode}_grid", class: 'grid_preview ' + extra_css_class}
-              %div.grid_title
-                = mode.capitalize
-                mode
-                - if is_current_mode
-                  (current)
-                - else
-                  (preview)
-              %div.feature_grid
-                %table{border: 1, cellpadding: 5}
-                  %tr
-                    %td
-                    %td
-                      DEFAULT
-                    - for script_name in @script_names
-                      %td
-                        = script_name
-                  - for feature in @feature_names
+          %div{id: 'grid_container', style: 'position: relative'}
+            - for mode in FeatureModeManager::MODES
+              - is_current_mode = (mode == @mode)
+              - extra_css_class = is_current_mode ? '' : 'grid_preview_pending'
+              %div{id: "#{mode}_grid", class: 'grid_preview ' + extra_css_class}
+                %div.grid_title
+                  = mode.capitalize
+                  mode
+                  - if is_current_mode
+                    (current)
+                  - else
+                    (preview)
+                %div.feature_grid
+                  %table{border: 1, cellpadding: 5}
                     %tr
-                      %td.heading
-                        = feature
-                      - for script in [nil] + @script_names
+                      %td
+                      %td
+                        DEFAULT
+                      - for script_name in @script_names
                         %td
-                          = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
+                          = script_name
+                    - for feature in @feature_names
+                      %tr
+                        %td.heading
+                          = feature
+                        - for script in [nil] + @script_names
+                          %td
+                            = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
 
