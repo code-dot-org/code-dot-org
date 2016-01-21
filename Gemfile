@@ -177,3 +177,5 @@ gem 'httparty'
 gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
+
+gem 'rest-client', '~> 1.8'
