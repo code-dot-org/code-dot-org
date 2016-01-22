@@ -1,10 +1,12 @@
-require_relative 'test_helper'
-require 'channels_api'
-require 'properties_api'
+require 'minitest/autorun'
+require 'rack/test'
+require File.expand_path '../../../deployment', __FILE__
+require File.expand_path '../../middleware/channels_api', __FILE__
+require File.expand_path '../../middleware/properties_api', __FILE__
+
+ENV['RACK_ENV'] = 'test'
 
 class PropertiesTest < Minitest::Test
-  include SetupTest
-
   def setup
     init_apis
     create_channel

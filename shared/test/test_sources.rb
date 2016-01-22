@@ -1,30 +1,15 @@
-require_relative 'test_helper'
-require 'files_api'
-require 'channels_api'
+require 'minitest/autorun'
+require 'rack/test'
+require File.expand_path '../../../deployment', __FILE__
+require File.expand_path '../../middleware/files_api', __FILE__
+require File.expand_path '../../middleware/channels_api', __FILE__
+
+ENV['RACK_ENV'] = 'test'
 
 class SourcesTest < Minitest::Test
-  include SetupTest
 
   def setup
     init_apis
-  end
-
-  # Delete all versions of the specified file from S3.
-  def delete_all_versions(bucket, key)
-    s3 = Aws::S3::Client.new
-    objects = s3.list_object_versions(bucket: bucket, prefix: key).versions.map do |version|
-      {
-        key: key,
-        version_id: version.version_id
-      }
-    end
-    s3.delete_objects(
-      bucket: bucket,
-      delete: {
-        objects: objects,
-        quiet: true
-      }
-    ) if objects.any?
   end
 
   def test_source_versions
@@ -33,7 +18,6 @@ class SourcesTest < Minitest::Test
 
     # Upload a source file.
     filename = 'test.js'
-    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'abc 123'
     @files.put "/v3/sources/#{channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
     assert @files.last_response.successful?
@@ -69,7 +53,6 @@ class SourcesTest < Minitest::Test
 
     # Upload a source file.
     filename = 'replace_me.js'
-    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'version 1'
     @files.put "/v3/sources/#{channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
     assert @files.last_response.successful?

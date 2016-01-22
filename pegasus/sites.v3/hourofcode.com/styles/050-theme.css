@@ -18,8 +18,7 @@ body {
 
 #pageheader {
   width: 100%; 
-  background-color: rgb(0, 178, 192);   /* Needed as the opaque fallback colour for IE8 */
-  background-color: rgba(0, 178, 192, 0.5);
+  background-color: #000;
   margin: 40px 0 0 0;
   height: 4em;
 }

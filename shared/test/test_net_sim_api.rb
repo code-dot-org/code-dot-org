@@ -1,10 +1,13 @@
-require_relative 'test_helper'
-require 'net_sim_api'
+require 'minitest/autorun'
+require 'rack/test'
+require_relative '../../deployment'
+require_relative '../middleware/net_sim_api'
 require_relative 'fake_redis_client'
 require_relative 'spy_pub_sub_api'
 
+ENV['RACK_ENV'] = 'test'
+
 class NetSimApiTest < Minitest::Test
-  include SetupTest
 
   TABLE_NAMES = NetSimApi::TABLE_NAMES
   NODE_TYPES = NetSimApi::NODE_TYPES

@@ -1,35 +1,18 @@
 require 'mocha/mini_test'
-require_relative 'test_helper'
+require 'minitest/autorun'
+require 'rack/test'
+require File.expand_path '../../../deployment', __FILE__
+require File.expand_path '../../middleware/files_api', __FILE__
+require File.expand_path '../../middleware/channels_api', __FILE__
+require File.expand_path '../../middleware/helpers/asset_bucket', __FILE__
+require File.expand_path '../spy_newrelic_agent', __FILE__
 
-require 'files_api'
-require 'channels_api'
-require 'helpers/asset_bucket'
-require_relative 'spy_newrelic_agent'
+ENV['RACK_ENV'] = 'test'
 
 class AssetsTest < Minitest::Test
-  include SetupTest
 
   def setup
     @channels, @assets = init_apis
-    # Ensure the s3 path starts empty.
-    delete_all_objects('cdo-v3-assets', 'assets_test/1/1')
-    @random = Random.new(0)
-  end
-
-  # Delete all objects in the specified path from S3.
-  def delete_all_objects(bucket, prefix)
-    raise "Not a test path: #{prefix}" unless prefix.include?('test')
-    s3 = Aws::S3::Client.new
-    objects = s3.list_objects(bucket: bucket, prefix: prefix).contents.map do |object|
-      { key: object.key }
-    end
-    s3.delete_objects(
-      bucket: bucket,
-      delete: {
-        objects: objects,
-        quiet: true
-      }
-    ) if objects.any?
   end
 
   def test_assets
@@ -196,8 +179,6 @@ class AssetsTest < Minitest::Test
   end
 
   def test_assets_copy_all
-    # This test creates 2 channels
-    delete_all_objects('cdo-v3-assets', 'assets_test/1/2')
     src_channel_id = create_channel(@channels)
     dest_channel_id = create_channel(@channels)
 
@@ -349,8 +330,7 @@ class AssetsTest < Minitest::Test
     get @assets, channel, filename
     v1_last_modified = @assets.last_response.headers['Last-Modified']
 
-    # We can't Timecop here because the last-modified time needs to change on the server.
-    sleep 1 if VCR.current_cassette.recording?
+    sleep 1
 
     post @assets, channel, file
     get @assets, channel, filename, '', 'HTTP_IF_MODIFIED_SINCE' => v1_last_modified
@@ -438,15 +418,10 @@ class AssetsTest < Minitest::Test
 
   def create_uploaded_file(filename, contents, content_type)
     basename = [filename.split('.')[0], '.' + filename.split('.')[1]]
-    temp_filename = basename[0] + @random.bytes(10).unpack('H*')[0] + basename[1]
-    Dir.mktmpdir do |dir|
-      file_path = "#{dir}/#{temp_filename}"
-      File.open(file_path, 'w') do |file|
-        file.write(contents)
-        file.rewind
-      end
-      [Rack::Test::UploadedFile.new(file_path, content_type), temp_filename]
-    end
+    tmp = Tempfile.new(basename)
+    tmp.write(contents)
+    tmp.rewind
+    [Rack::Test::UploadedFile.new(tmp.path, content_type),  ::File.basename(tmp.path)]
   end
 
   def post_file(assets, channel_id, filename, contents, content_type)

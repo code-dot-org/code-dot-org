@@ -105,7 +105,7 @@ Your email *IS* being watched by somebody, and you can bet that a hacker will ge
 
 <h2>Tip #6: Use Strong Passwords</h2>
 
-<img src="images/password-on-sticky-note.jpg" height="230px" style="float:left; margin:0px 20px 0px 0px;">
+<img src="images/242345959.jpg" height="230px" style="float:left; margin:0px 20px 0px 0px;">
 Nothing you do online is safe unless you use strong passwords that actually protect your information.
 
 Most people use the same password everywhere, and their password is easy to guess. You’d be amazed how many people use the password “ABC123” or “12345”.  Using a password like this is basically like asking to be hacked.
@@ -125,7 +125,7 @@ In addition to creating strong passwords, you unfortunately must use a different
 
 A few years back, hackers got access to EVERY password at a popular social networking site and they published all these logins online for anybody to see. If your login was published, anybody in the world can now access your account on any website where you use that same password.
 
-<img src="images/social-media-illustration.png" height="280px" style="float:right; margin:0px 0px 0px 20px;">
+<img src="images/244262566.jpg" height="280px" style="float:right; margin:0px 0px 0px 20px;">
 What’s worse, in the Spring of 2014, a vulnerability was discovered that let hackers tap into all secure communication with most websites. This disastrous event was referred to as <a href="http://www.heartbleed.com">“Heartbleed”</a>. Because of Heartbleed, if you logged into almost any Web site before May 2014, hackers could steal your password even if you saw a lock in your browser. If they could steal it, that means somebody definitely has stolen it. Hackers don’t do this by hand; they write a computer program that steals everybody’s passwords. This means you really should change every password you’ve used back in 2014, especially on important web sites.
 
 If it seems like a huge burden to remember all your new, longer passwords, that’s because it is. But there are <a href="http://www.entrepreneur.com/article/238816">tools you can add to your browser</a> that can make this easier. Whether you use a browser add-on or not, it’s absolutely critical to use longer passwords, and a different password on any web site.
@@ -133,7 +133,7 @@ If it seems like a huge burden to remember all your new, longer passwords, that�
 
 <h2>Tip #8: Enable Two-Factor Authentication</h2>
 
-<img src="images/double-authentication-illustration.png" height="150px" style="float:left; margin:0px 20px 0px 0px;">
+<img src="images/330197285.jpg" height="150px" style="float:left; margin:0px 20px 0px 0px;">
 This next one makes a big difference! Enable two-factor authentication wherever possible, especially for your most sensitive data -- like email, social media, or cloud storage accounts.
 
 Two-factor authentication adds extra security to your password, so even if somebody knows your password, they need something else to log in as you. Usually this is a security code that’s sent to your phone, which means to login somebody needs your password AND your phone. Most email or social networking sites offer this security feature. When they do, you should use it.
@@ -141,7 +141,7 @@ Two-factor authentication adds extra security to your password, so even if someb
 
 <h2>Tip #9: Do NOT Plug In Devices/Accessories From Strangers</h2>
 
-<img src="images/computer-device-plug-in-hack.png" height="220px" style="float:right; margin:0px 0px 0px 20px;">
+<img src="images/331329218.jpg" height="220px" style="float:right; margin:0px 0px 0px 20px;">
 One last piece of advice: don’t plug in a device or accessory from a stranger. If somebody gives you a memory card for your computer or even a USB power cable for your phone, it could infect your device with a virus the moment you plug it in. The person giving it to you may not even know that their plug is infected.
 
 Of course, sometimes you don’t have a choice, and most of the time it’s probably not a big deal. But you should be aware that anytime you plug something into your computer or device, you take a small risk. 

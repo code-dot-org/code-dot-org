@@ -1,34 +1,22 @@
-name_s,url_s,description_t,kind_s
-Ashley Dillinger,https://www.linkedin.com/in/ashley-dillinger-b58b0a58,"Software Engineer, Slalom Consulting",active
-Brian McBarron,,Software Engineer,active
-Charing Wong,,Software Engineer,active
-Chris Pirich,https://www.linkedin.com/in/chris-pirich-b9a42660,Software Engineer,active
-David Pickett,,Software Engineer,active
-David Wu,,Software Engineer,active
-Evan Zheng,,"Software Engineer, Microsoft",active
-Henri-Bastien Lamontagne,https://www.linkedin.com/in/henribastien,"Software Engineer 2, Microsoft",active
-Kyle Reed,https://www.linkedin.com/in/kyle-reed-a9bb3aa2,"Senior Software Engineer, Microsoft",active
-Larry Kubin,,Software Engineer,active
-Matt Swann,https://www.linkedin.com/in/swannman,"Principal Engineering Manager, Microsoft",active
-Mike Schmidt,,Software Engineer,active
-Min Cheol Jeong,,"Software Engineer, Microsoft",active
-Mitchell Schmidt,,Computer Science Student,active
-Patrick O'Donnell,https://www.linkedin.com/in/patrickodo,Software Engineer,active
-Tyler Polen,,Software Engineer,active
-Zachary Brown,,"Software Engineer 2, Microsoft",active
-Anthony Bau,,Engineering Team Intern,inactive
-Brandon Bloom,https://www.linkedin.com/in/brandondbloom,Software Developer,inactive
-Ellen Spertus,,"Senior Research Scientist, Google",inactive
-Erik Bronnum,,"Developer, Penny Arcade",inactive
-Franci Penov,,Facebook,inactive
-Geoffrey Elliott,,Software Engineer,inactive
-Hamid Safi,https://www.linkedin.com/in/henry-hamid-safi-741aa928,"Senior Software Development Engineer, Microsoft",inactive
-Hans Fugal,https://www.linkedin.com/in/hansfugal,Software Engineer,inactive
-Jie Jin,,Software Engineer,inactive
-Justin Rogers,https://www.linkedin.com/in/justin-rogers-7359626,Principal Software Developer at Microsoft,inactive
-Mahta Amirzadeh,,Software Developer,inactive
-Nan Li,,Curriculum Researcher,inactive
-Neil Fraser,,"Software Engineer, Google",inactive
-Rick Hawkins,https://www.linkedin.com/in/rlhawk,"Web Developer, Alchemy Design",inactive
-Steve Eisner,,Dropbox,inactive
-Toby Kahan,https://www.linkedin.com/in/tobiaskahan,Software Engineer ,inactive
+name_s,title_s,url_s,description_t,kind_s
+Anthony Bau,Engineering Team Intern,,,active
+Ashley Dillinger,"Software Engineer, Slalom Consulting",https://www.linkedin.com/pub/ashley-dillinger/58/b0a/b58,,active
+Chris Pirich,Software Engineer,http://www.linkedin.com/pub/chris-pirich/60/426/b9a,,active
+David Pickett,Software Engineer,,,active
+Geoffrey Elliott,Software Engineer,,,active
+Patrick O'Donnell,Software Engineer,http://www.linkedin.com/in/patrickodo,,active
+Tyler Polen,Software Engineer,,,active
+Brandon Bloom,Software Developer,http://www.linkedin.com/in/brandondbloom,,inactive
+Ellen Spertus,"Senior Research Scientist, Google",,,inactive
+Erik Bronnum,"Developer, Penny Arcade",,,inactive
+Franci Penov,Facebook,,,inactive
+Hamid Safi,"Senior Software Development Engineer, Microsoft",http://www.linkedin.com/pub/henry-hamid-safi/28/aa9/741,,inactive
+Hans Fugal,Software Engineer,http://www.linkedin.com/in/hansfugal,,inactive
+Jie Jin,Software Engineer,,,inactive
+Justin Rogers,Principal Software Developer at Microsoft,http://www.linkedin.com/pub/justin-rogers/6/962/735,,inactive
+Mahta Amirzadeh,Software Developer,,,inactive
+Nan Li,Curriculum Researcher,,,inactive
+Neil Fraser,"Software Engineer, Google",,,inactive
+Rick Hawkins,"Web Developer, Alchemy Design",http://www.linkedin.com/in/rlhawk,,inactive
+Steve Eisner,Dropbox,,,inactive
+Toby Kahan,Software Engineer ,http://www.linkedin.com/in/tobiaskahan,,inactive

@@ -242,19 +242,13 @@
 
                  
             //  }
-
-            $(document).ready(function(){
-              makeGraph();
-              toggleShowGhostEdges(true);
-              console.log('foo')
-            });
             
                
            
            
     </script>
     </head>
-    <body>
+    <body onLoad="makeGraph(); toggleShowGhostEdges(true)">
     <h1>Traveling Salesperson</h1>
     <p>Directions:</p>
     <li>Make a map, and then try to find the minimum cost tour.

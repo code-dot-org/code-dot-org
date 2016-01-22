@@ -919,7 +919,7 @@ en:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
+          description: All the level types for UI testing
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere

@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "instructions": "Backed by a template #2. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "instructions": "Backed by a template #2",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

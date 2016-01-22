@@ -13,9 +13,7 @@ Dear teacher, principal or administrator,
 Computer science opens more doors for students than any other discipline in today’s world. Learning even the basics will help students in virtually any career—from architecture to zoology. Just as we teach students how to dissect a frog, or how electricity works, it’s important for every 21st century student to have a chance to “dissect an app,” or learn how the Internet works.
 
 ### 90% of parents want schools to teach computer science including computer programming.
-A [2015 Gallup poll](https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf) sponsored by Google found that 9 out of 10 parents want schools to teach computer science - so our children grow up not just using technology but learning how to *create* it. In fact, among low-income families, the majority of parents and teachers believe the computer science should be *required* for students to learn! 
-
-A [subsequent poll](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html) shows that 50% of parents consider computer programming the *most* important subject for students to learn after reading, writing, and math.
+A [2015 Gallup poll](https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf) sponsored by Google found that 9 out of 10 parents want schools to teach computer science - so our children grow up not just using technology but learning how to *create* it. Among low-income families, the majority of parents believe the computer science should be *required* for most students to learn. A [subsequent poll](http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html) shows that 50% of parents consider computer programming the most important subject for students to learn after reading, writing, and math.
 
  
 ### Will you help bring computer science  to our classrooms?

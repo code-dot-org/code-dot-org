@@ -11,18 +11,3 @@
     });
     $('#language-dropdown').attr('style', 'visibility: visible;');
   });
-
-  $(document).ready(function() {
-    // When nav hamburger is clicked, toggle responsive menu
-    $('#hoc-nav-hamburger').click(function(e){
-        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
-        e.preventDefault();
-    });
-
-    // When clicking anywhere outside the responsive menu, dismiss the menu
-    $(document).click(function(e) {
-      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
-        $('#hoc-nav ul').addClass('hide-responsive-menu');
-      }
-    });
-  });

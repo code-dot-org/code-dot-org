@@ -84,6 +84,9 @@ class QueueProcessorTest < ActiveSupport::TestCase
   end
 
   def setup
+    # We need to allow http connections from the test to either the real or FAKE SQS service.
+    FakeWeb.allow_net_connect = true
+
     @sqs = Aws::SQS::Client.new
     unless ENV['USE_REAL_SQS'] == 'true'
       $fake_sqs_service.start

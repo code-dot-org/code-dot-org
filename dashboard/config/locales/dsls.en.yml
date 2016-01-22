@@ -1008,9 +1008,6 @@ en:
         'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
       U3L34 Student Lesson Introduction:
         'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
-      U4 - Cleaning Data - Activity Guide:
-        description here: description here
-        title: title
       U4 - Read Record - Local vs Remote Data External:
         Local vs. Remote Data: Local vs. Remote Data
       U4 - Unique Ids Explanation:
@@ -1052,9 +1049,6 @@ en:
         description here: description here
         title: title
       U4L08 Student Lesson Introduction:
-        description here: description here
-        title: title
-      U4L08v2 Making Pivot Tables:
         description here: description here
         title: title
       U4L09 Student Lesson Introduction:
@@ -4692,7 +4686,8 @@ en:
         'The Need for DNS: Getting Started': 'The Need for DNS: Getting Started'
       U3 - Arrays - Wrap Up 1: {}
       U3 - Arrays - Wrap Up 2: {}
-      U3- Keys - Code Refactoring Exit Ticket: {}
+      U3- Keys - Code Refactoring Exit Ticket:
+        Enter answer here: Enter answer here
       U3L01 Assessment1:
         'Free Response: Interpreting Instructions': 'Free Response: Interpreting Instructions'
       U3L01 Assessment3:

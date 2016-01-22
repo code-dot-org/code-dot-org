@@ -48,13 +48,13 @@ social:
 
 %div{style: "clear:both"}
 
+%h2.sw-header2
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/starwars"}= I18n.t(:starwars_help_translate)
+
 .starwars-videos{style: "clear: both;"}
   %h2.sw-header2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
-
-%h2.sw-header2
-  = I18n.t(:starwars_speak_languages)
-  %a{href: "/translate/starwarws"}= I18n.t(:starwars_help_translate)
 
 = view 'mobilecheck.js'
 

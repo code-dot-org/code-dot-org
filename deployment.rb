@@ -281,9 +281,8 @@ def rack_env()
   CDO.rack_env
 end
 
-def rack_env?(*env)
-  e = *env
-  e.include? rack_env
+def rack_env?(env)
+  rack_env == env
 end
 
 def deploy_dir(*dirs)

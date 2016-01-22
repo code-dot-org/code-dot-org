@@ -42,14 +42,9 @@ module AWS
     # @return [String] The key of the new value, derived from filename.
     def self.upload_to_bucket(bucket, filename, data, options={})
       no_random = options.delete(:no_random)
-      filename = "#{random}-#{filename}" unless no_random
+      filename = "#{SecureRandom.hex}-#{filename}" unless no_random
       create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
       filename
-    end
-
-    # Allow the RNG to be stubbed in tests
-    def self.random
-      SecureRandom.hex
     end
 
     def self.public_url(bucket, filename)

@@ -56,8 +56,8 @@ class MilestoneParser
       match && !(IGNORE_HOSTS.include? match[:host])
     end
     logs = Parallel.map(hosts, in_threads: 16) do |host|
-      s3_resource.bucket('cdo-logs').objects(prefix: "#{host}dashboard/milestone.log")
-    end.map(&:to_a).flatten
+      s3_resource.bucket('cdo-logs').objects(prefix: "#{host}dashboard/milestone.log").to_a
+    end.flatten
     debug "Found #{logs.length} logs.."
     counts = logs.map do |log|
       (cache[log.key] = count_lines_of_code(log))['count']

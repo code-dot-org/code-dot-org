@@ -1,6 +1,6 @@
 require 'minitest/autorun'
-require_relative 'test_helper'
-require 'cdo/analytics/milestone_parser'
+require_relative '../../deployment'
+require_relative '../../lib/cdo/analytics/milestone_parser'
 
 class MilestoneParser
   # self.log_debug = true # Uncomment to show debug logs

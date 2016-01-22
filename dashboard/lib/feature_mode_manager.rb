@@ -111,22 +111,6 @@ class FeatureModeManager
     end
   end
 
-  # Returns true if the feature mode manager allows the `feature` in `mode` for hoc tutorial
-  # `script`, falling through to the value from the Gatekeeper if the manager doesn't
-  # specify a value.
-  def self.allows(gatekeeper, mode, feature, script)
-    # Use the value from the mode settings map, if defined.
-    settings = MODE_SETTINGS_MAP[mode]
-    if settings
-      allowed = settings[:gatekeeper_general_settings][feature]
-      allowed = settings[:gatekeeper_hoc_tutorial_settings][feature] if allowed.nil?
-      return allowed unless allowed.nil?
-    end
-
-    # Otherwise use the value from the Gatekeeper.
-    gatekeeper.allows(feature, where: (script ? {script_name: script} : {}))
-  end
-
   def self.dcdo_matches_mode?(dcdo, mode)
     expected_settings = MODE_SETTINGS_MAP[mode][:dcdo_settings]
     expected_settings.all? do |key, expected_value|

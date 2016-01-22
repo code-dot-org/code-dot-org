@@ -50,18 +50,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run">
-          <next>
-            <block type="variables_set" inline="false">
-              <title name="VAR">points</title>
-              <value name="VALUE">
-                <block type="math_number">
-                  <title name="NUM">0</title>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
+        <block type="when_run"/>
         <block type="studio_whenSpriteCollided">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">yellow_hearts</title>

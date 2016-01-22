@@ -5,25 +5,16 @@
   #hoc_features h3.selected {margin: 0px; padding: 0px; font-weight: bold}
 
   #hoc_features tr.normal:hover {
-    transition: background-color 0.6s ease;
     background-color: #f5fff5
   }
   #hoc_features tr.scale:hover {
-    transition: background-color 0.6s ease;
     background-color: #fffff5
   }
   #hoc_features tr.emergency:hover {
-    transition: background-color 0.6s ease;
     background-color: #fff5f5
   }
   #hoc_features .heading {
     text-align: left;
-  }
-  .grid_title {
-    font-family: Arial;
-    font-size: 120%;
-    margin-bottom: 10px;
-    font-weight: bold;
   }
   .true_flag {
     font-size: 150%;
@@ -33,35 +24,19 @@
     font-size: 150%;
     color: red
   }
-  .grid_preview {
-    position: absolute;
+  #feature_grid {
+    margin-top: 20px;
   }
-  .grid_preview:last-child {
-    position: relative;
-  }
-  .grid_preview table {
-    transition: visibility 0.5s ease-in, visibility 0.1s ease-in;
-  }
-  .feature_grid table, #feature_grid tr, #feature_grid td {
+  #feature_grid table, #feature_grid tr, #feature_grid td {
     border-collapse: collapse;
     border: solid 1px silver;
     text-align: center;
   }
-  .feature_grid td {
+  #feature_grid td {
     min-width: 6em;
   }
-  .feature_grid tr:nth-child(odd) {
+  #feature_grid tr:nth-child(odd) {
     background-color: #eee;
-  }
-  .grid_preview_pending  {
-    visibility: hidden;
-  }
-  .grid_preview_pending table {
-    opacity: 0.6;
-  }
-  .submit_div {
-    height: 2em;
-    margin-bottom: 20px;
   }
 
 %h1 Tutorial feature mode
@@ -74,7 +49,7 @@
         %tr{class: mode}
           %td
             = radio_button_tag 'mode', mode, mode == @mode, {id: mode,
-                onclick: "$('.grid_preview').css('visibility', 'hidden'); $('##{mode}_grid').css('visibility', 'visible'); $('#submit').prop('disabled', false)"}
+                onclick: "$('#submit').prop('disabled', false)"}
           %td
             %label{for: mode}
               %h3{class: @mode == mode ? 'selected' : ''}
@@ -94,37 +69,27 @@
       %tr
         %td
         %td
-          %div.submit_div
-            = submit_tag('Update feature mode', :id => 'submit', :disabled => 'true')
+          = submit_tag('Update', :id => 'submit', :disabled => 'true')
 
-      %tr
-        %td
-        %td
-          - for mode in FeatureModeManager::MODES
-            - is_current_mode = (mode == @mode)
-            - extra_css_class = is_current_mode ? '' : 'grid_preview_pending'
-            %div{id: "#{mode}_grid", class: 'grid_preview ' + extra_css_class}
-              %div.grid_title
-                = mode.capitalize
-                mode
-                - if is_current_mode
-                  (current)
-                - else
-                  (preview)
-              %div.feature_grid
-                %table{border: 1, cellpadding: 5}
+      - unless @hide_feature_grid
+        %tr
+          %td
+          %td
+            %div#feature_grid
+              %table{border: 1, cellpadding: 5}
+                %tr
+                  %td
+                  %td
+                    DEFAULT
+                  - for script_name in Gatekeeper.script_names
+                    %td
+                      = script_name
+                - for feature in Gatekeeper.feature_names
                   %tr
+                    %td.heading
+                      = feature
                     %td
-                    %td
-                      DEFAULT
-                    - for script_name in @script_names
+                      = boolean_checkmark Gatekeeper.allows(feature)
+                    - for script in Gatekeeper.script_names
                       %td
-                        = script_name
-                  - for feature in @feature_names
-                    %tr
-                      %td.heading
-                        = feature
-                      - for script in [nil] + @script_names
-                        %td
-                          = boolean_checkmark FeatureModeManager.allows(Gatekeeper, mode, feature, script)
-
+                        = boolean_checkmark Gatekeeper.allows(feature, where: {script_name: script})

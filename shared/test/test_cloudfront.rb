@@ -1,5 +1,6 @@
-require_relative 'test_helper'
-require 'cdo/aws/cloudfront'
+require 'minitest/autorun'
+require_relative '../../deployment'
+require_relative '../../lib/cdo/aws/cloudfront'
 require 'active_support/core_ext/hash/except'
 
 # These unit tests simply confirm that the #create_or_update method will pass

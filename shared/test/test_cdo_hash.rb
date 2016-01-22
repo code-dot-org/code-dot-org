@@ -1,6 +1,8 @@
-require_relative 'test_helper'
+require 'minitest/autorun'
+require 'rack/test'
+
 require 'yaml'
-require 'cdo/hash'
+require File.expand_path '../../../lib/cdo/hash', __FILE__
 
 class CdoHashTest < Minitest::Test
   def test_deep_sort

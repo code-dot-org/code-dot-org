@@ -1,16 +1,19 @@
-require_relative 'test_helper'
-require 'channels_api'
-require 'tables_api'
+require 'minitest/autorun'
+require 'rack/test'
+require File.expand_path '../../../deployment', __FILE__
+require File.expand_path '../../middleware/channels_api', __FILE__
+require File.expand_path '../../middleware/tables_api', __FILE__
+
+ENV['RACK_ENV'] = 'test'
 
 class TablesTest < Minitest::Test
-  include SetupTest
 
   def test_create_read_update_delete
     init_apis
 
     create_channel
 
-    assert_nil read_records.first
+    assert read_records.first.nil?
 
     record_id = create_record({'name' => 'alice', 'age' => 7, 'male' => false})
     record = read_records.first
@@ -28,7 +31,7 @@ class TablesTest < Minitest::Test
     assert_equal 8, record['age']
 
     delete_record(record_id)
-    assert_nil read_records.first
+    assert read_records.first.nil?
 
     delete_channel
   end
@@ -111,10 +114,10 @@ class TablesTest < Minitest::Test
     create_record('name' => 'mitra', 'age' => 29)
 
     rename_column('name', 'first_name')
-    records = read_records
+    records = read_records()
 
-    assert_equal 'trevor', records[0]['first_name']
-    assert_nil records[1]['name']
+    assert_equal records[0]['first_name'], 'trevor'
+    assert_equal records[1]['name'], nil
 
     delete_channel
   end
@@ -128,9 +131,9 @@ class TablesTest < Minitest::Test
 
     delete_column('age')
 
-    records = read_records
-    assert_nil records[0]['age']
-    assert_nil records[1]['age']
+    records = read_records()
+    assert_equal records[0]['age'], nil
+    assert_equal records[1]['age'], nil
 
     delete_channel
   end
@@ -143,13 +146,13 @@ class TablesTest < Minitest::Test
     create_record('name' => 'mitra', 'age' => 29)
 
     records = read_records
-    assert_equal 2, records.length
+    assert_equal records.length, 2
 
     delete_table
 
     records = read_records
 
-    assert_equal 0, records.length
+    assert_equal records.length, 0
     delete_channel
   end
 
@@ -187,7 +190,6 @@ class TablesTest < Minitest::Test
   def create_channel
     @channels.post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     @channel_id = @channels.last_response.location.split('/').last
-    delete_table
   end
 
   def delete_channel
@@ -231,7 +233,7 @@ class TablesTest < Minitest::Test
     @tables.post "/v3/shared-tables/#{@channel_id}/#{@table_name}/column/#{old}?new_name=#{new}"
   end
 
-  def delete_table
+  def delete_table()
     @tables.delete "/v3/shared-tables/#{@channel_id}/#{@table_name}"
   end
 

@@ -41,13 +41,8 @@ class BucketHelper
   end
 
   def get_abuse_score(encrypted_channel_id, filename, version = nil)
-    response = get(encrypted_channel_id, filename, nil, version)
-    if response.nil?
-      0
-    else
-      metadata = response[:metadata]
-      [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    end
+    response = get(encrypted_channel_id, filename, version)
+    response.nil? ? 0 : response[:metadata]['abuse_score'].to_i
   end
 
   def copy_files(src_channel, dest_channel)

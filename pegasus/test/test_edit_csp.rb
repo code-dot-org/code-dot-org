@@ -1,4 +1,5 @@
-require_relative '../../shared/test/test_helper'
+require 'minitest/autorun'
+require 'rack/test'
 require 'mocha/mini_test'
 require_relative 'fixtures/mock_pegasus'
 # needed by /v3/edit-csp-app/splat.haml
@@ -6,7 +7,6 @@ require_relative '../../shared/middleware/helpers/table'
 require 'channels_api'
 
 class EditCspTest < Minitest::Test
-  include SetupTest
 
   def setup
     @owned_channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, "studio.code.org"))

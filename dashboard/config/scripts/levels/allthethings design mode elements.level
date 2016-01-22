@@ -6,8 +6,6 @@
   "user_id": 18,
   "properties": {
     "skin": "applab",
-    "markdown_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
-    "instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
     "code_functions": {
       "onEvent": null,
       "button": null,

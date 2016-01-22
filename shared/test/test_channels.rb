@@ -1,10 +1,12 @@
-require_relative 'test_helper'
-require 'channels_api'
-require 'timecop'
+require 'minitest/autorun'
+require 'rack/test'
+require File.expand_path '../../../deployment', __FILE__
+require File.expand_path '../../middleware/channels_api', __FILE__
+
+ENV['RACK_ENV'] = 'test'
 
 class ChannelsTest < Minitest::Test
   include Rack::Test::Methods
-  include SetupTest
 
   def build_rack_mock_session
     @session = Rack::MockSession.new(ChannelsApi, 'studio.code.org')
@@ -35,7 +37,7 @@ class ChannelsTest < Minitest::Test
     assert_equal created, result['updatedAt']
     assert (start..DateTime.now).cover? DateTime.parse(created)
 
-    Timecop.travel 1
+    sleep 1
 
     # Update.
     start = DateTime.now - 1
@@ -51,8 +53,6 @@ class ChannelsTest < Minitest::Test
     assert_equal created, result['createdAt']
     refute_equal result['createdAt'], result['updatedAt']
     assert (start..DateTime.now).cover? DateTime.parse(result['updatedAt'])
-  ensure
-    Timecop.return
   end
 
   def test_delete_channel
@@ -155,12 +155,12 @@ class ChannelsTest < Minitest::Test
     post '/v3/channels', {level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     abc_channel_id = last_response.location.split('/').last
 
-    Timecop.travel 1
+    sleep 1
 
     post '/v3/channels', {level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     xyz_channel_id = last_response.location.split('/').last
 
-    Timecop.travel 1
+    sleep 1
 
     # These hidden and frozen projects should be skipped when considering most_recent
     post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -170,7 +170,5 @@ class ChannelsTest < Minitest::Test
 
     assert_equal abc_channel_id, StorageApps.new(user_storage_id).most_recent('abc')
     assert_equal xyz_channel_id, StorageApps.new(user_storage_id).most_recent('xyz')
-  ensure
-    Timecop.return
   end
 end

@@ -16,13 +16,12 @@ class FeatureModeController < ApplicationController
     authorize! :read, :reports
     @current_mode = FeatureModeManager.get_mode(Gatekeeper, DCDO, ScriptConfig.cached_scripts)
     @pending_mode = pending_mode
-    @script_names = Gatekeeper.script_names.sort
-    @feature_names = Gatekeeper.feature_names.sort
-
-      # If a mode update is still pending, display a notice.
+    # If a mode update is still pending, show that mode and display a notice.
     if @pending_mode && @current_mode != @pending_mode
       @mode = @pending_mode
       flash[:notice] = PLEASE_WAIT_MESSAGE
+      @hide_feature_grid = true
+    # Otherwise show the mode determined from the gatekeeper settings (if any)
     elsif @current_mode
       @mode =  @current_mode
     else

@@ -51,7 +51,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "false",
-    "markdown_instructions": "This level is submittable. For testing only! Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
+    "markdown_instructions": "This level is submittable. For testing only!",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-leftSquare.gif",
     "encrypted_examples": "W3q87n8NyBYYlbn6V96A+lnBp6SYwxZLzfl8Jkyjv1YcCqEVP6Fh8kfoJVeK\nSkZy\n",
     "examples_required": "false",

@@ -1,17 +1,17 @@
-require_relative 'test_helper'
-require 'cdo/aws/s3'
+require 'minitest/autorun'
+require 'rack/test'
+
+require_relative '../../lib/cdo/aws/s3'
+require_relative '../../deployment'
 
 class AwsS3IntegrationTest < Minitest::Test
-  include SetupTest
-
   # A test bucket, only used for these tests.
   TEST_BUCKET = 'cdo-temp'
 
   # An integration test of the AWS S3 wrapper that runs against the actual AWS service.
   def test_aws_s3
     # Test upload_to_bucket and download_from_bucket with :no_random.
-    random = Random.new(0)
-    test_key = random.rand.to_s
+    test_key = Random.rand.to_s
     test_value = 'hello\x00\x01\xFF'
     upload_key = AWS::S3::upload_to_bucket(TEST_BUCKET, test_key, test_value, :no_random => true)
     assert_equal test_value, AWS::S3::download_from_bucket(TEST_BUCKET, test_key)
@@ -32,13 +32,13 @@ class AwsS3IntegrationTest < Minitest::Test
 
     # Test upload_to_bucket and download_from_bucket with key randomization.
     key = 'key'
-    test_value2 = random.rand.to_s
+    test_value2 = Random.rand.to_s
     randomized_key = AWS::S3::upload_to_bucket(TEST_BUCKET, key, test_value2)
     assert randomized_key.end_with? key
     assert randomized_key.length > key.length
     assert_equal test_value2, AWS::S3::download_from_bucket(TEST_BUCKET, randomized_key)
 
-    test_value3 = random.rand.to_s
+    test_value3 = Random.rand.to_s
     randomized_key2 = AWS::S3::upload_to_bucket(TEST_BUCKET, key, test_value3)
     assert randomized_key2 != randomized_key
     assert_equal test_value3, AWS::S3::download_from_bucket(TEST_BUCKET, randomized_key2)

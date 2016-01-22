@@ -3,15 +3,8 @@
   %head
     =view :theme_common_head_before
 
-    -unless page_translated?
-      %link{rel:'stylesheet', type:'text/css', href:'/css/common.css'}
-    -else
-      %link{rel:'stylesheet', type:'text/css', href:'/css/common-international.css'}
-
-    /[if lt IE 9]
-      %script{src:'/js/respond.min.js'}
-
-    %meta{:'http-equiv'=>'X-UA-Compatible', content:'IE=8'}
+    %link{rel:'stylesheet', type:'text/css', href:'/css/common.css'}
+    %link{rel:'stylesheet', type:'text/css', href:'/css/brstrap-nonresponsive.css'}
 
     =view :theme_common_head_after
   %body

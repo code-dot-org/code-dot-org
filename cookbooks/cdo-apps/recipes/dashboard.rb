@@ -69,7 +69,7 @@ execute "bundle-install-dashboard" do
 end
 
 execute "setup-dashboard-db" do
-  command "bundle exec rake dashboard:setup_db"
+  command "rake dashboard:setup_db"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
     'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
@@ -81,7 +81,7 @@ execute "setup-dashboard-db" do
 end
 
 execute "build-dashboard" do
-  command "bundle exec rake build:dashboard"
+  command "rake build:dashboard"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
     'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"

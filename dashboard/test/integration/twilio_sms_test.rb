@@ -13,8 +13,6 @@ class TwilioSmsTest < ActionDispatch::IntegrationTest
   test 'Twilio SMS test API' do
     if CDO.twilio_sid_test.blank? || CDO.twilio_auth_test.blank?
       skip 'twilio_sid_test credential not provided'
-    else
-      skip 'todo mock API requests'
     end
 
     account_sid = CDO.twilio_sid_test

@@ -1,5 +1,6 @@
 ---
 layout: wide_index
+theme: responsive
 title: "<%= hoc_s(:front_title).gsub(/%{campaign_date}/, campaign_date('short')) %>"
 social:
   "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
@@ -25,10 +26,16 @@ social:
 -if request.site == 'translate.hourofcode.com'
   %script{type: "text/javascript", src: "/js/crowdin-incontext.js"}
   %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 %link{rel: "stylesheet", type: "text/css", href: "/css/front-page.css"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+/[if lt IE 9]
+  %script{src: "/js/es5-shim.min.js"}
 
 :css
   html, body, #gmap {
@@ -213,7 +220,7 @@ social:
     if (videoStarted)
       return;
 
-    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/Ofze6CWUCx8?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+    $("<iframe allowfullscreen frameborder='0' src='https://www.youtubeeducation.com/embed/2DxWIxec6yo?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
 
     $("#videodiv").fadeTo(1000, 1);
     $("#leftbutton").fadeTo(500, 0).remove();

@@ -4,8 +4,6 @@ require 'feature_mode_manager'
 
 class FeatureModeManagerTest < ActiveSupport::TestCase
   def setup
-    CDO.hip_chat_logging = false
-    CDO.slack_endpoint = nil
     @gatekeeper = GatekeeperBase.create
     @dcdo = DCDOBase.create
   end
@@ -67,32 +65,6 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     assert_equal 1, @dcdo.get('hoc_activity_sample_weight', nil).to_i
     assert_equal 180, @dcdo.get('public_proxy_max_age', nil)
     assert_equal 360, @dcdo.get('public_max_age', nil)
-  end
-
-
-  def test_allows
-    FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, ['script'])
-
-    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
-    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', 'script')
-    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', 'script')
-    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'hint_view_request', 'script')
-
-    # Feature mode manager settings should take priority over gatekeeper settings.
-    @gatekeeper.set('postMilestone', value: false)
-    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
-
-    # Features which aren't specified in the feature mode manager should fall back on the Gatekeeper
-    # setting.
-    refute FeatureModeManager.allows(@gatekeeper, 'normal', 'newFeature', 'script')
-    @gatekeeper.set('newFeature', where: {script_name: 'script'}, value: false)
-    refute FeatureModeManager.allows(@gatekeeper, 'normal', 'newFeature', 'script')
-    @gatekeeper.set('newFeature', where: {script_name: 'script'}, value: true)
-    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'newFeature', 'script')
-
-    # Make sure the disabled features work correctly as well.
-    FeatureModeManager.set_mode('emergency', @gatekeeper, @dcdo, ['script'])
-    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', 'script')
   end
 
   def test_scale_mode

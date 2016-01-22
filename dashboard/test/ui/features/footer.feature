@@ -239,7 +239,7 @@ Feature: Checking the footer appearance
 
     # Additional wait to let scroll position settle and possibly have the
     # pin-to-home-screen popup go away
-    And I wait for 20 seconds
+    And I wait for 10 seconds
 
     When I open my eyes to test "Mobile Applab share small footer"
     Then I see no difference for "small footer"
