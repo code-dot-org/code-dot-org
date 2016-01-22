@@ -92,6 +92,9 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
   end
+  opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
+    $options.fail_fast = true
+  end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit
@@ -220,11 +223,12 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
+  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  ENV['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 8.x' : 'Windows 6x'
+  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
@@ -243,7 +247,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
-  arguments += " -t ~@no_ios" if browser['browserName'] == 'iphone'
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
@@ -346,6 +349,21 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
       'failed'.red
     end
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
+
+  if scenario_count == 0
+    skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
+    skip_warning += <<EOS
+Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
+  - Do the feature or scenario tags exclude #{browser_name}?
+EOS
+    unless $options.run_eyes_tests
+      skip_warning += "  - Are you trying to run --eyes tests?\n"
+    end
+    unless $options.dashboard_db_access
+      skip_warning += "  - Do you need to run this test on the test instance or against localhost (-l) for @dashboard_db_access?\n"
+    end
+    print skip_warning
+  end
 
   [succeeded, message]
 end.each do |succeeded, message|

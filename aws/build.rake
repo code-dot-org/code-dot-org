@@ -174,7 +174,9 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit', [deploy_dir('rebuild'), CODE_STUDIO_TASK]) do
     code_studio_changed = false
     Dir.chdir(dashboard_dir('public/code-studio-package')) do
-      code_studio_changed = !`git status --porcelain .`.strip.empty?
+      code_studio_git_status = `git status --porcelain .`
+      code_studio_changed = !code_studio_git_status.strip.empty?
+      HipChat.log "<b>code-studio</b> package changes:\n#{code_studio_git_status}" if code_studio_changed
     end
 
     if code_studio_changed
@@ -188,6 +190,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       else
         HipChat.log 'Committing updated <b>code-studio</b> package...', color: 'purple'
         RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/code-studio-package')
+        HipChat.log "<b>code-studio</b> staged changes:\n#{`git status --porcelain .`}"
         message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-code-studio'))}"
         RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
         RakeUtils.git_push
@@ -389,7 +392,7 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--auto_retry', '--html', '--fail_fast'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message

@@ -12,8 +12,7 @@ nav: about_nav
 - **Engineering**
 	- [Engineering Manager / Chief Architect](#eng)
 	- [Software Engineer](#engineer)
-- **Operations & Professional Development**
-	- [Operations Program Coordinator](#ops)
+- **Professional Learning & Community**
 	- [VP of Professional Learning & Community](#vp)
 
 
@@ -86,7 +85,7 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
-Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [http://learn.code.org](http://learn.code.org). With tens of millions of students using our tutorials in over 20 languages and in 170 countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
+Code.org is building interactive tutorials for computer science courses starting as early as Kindergarten through 12th grade. You can see our latest tutorials at [studio.code.org](https://studio.code.org). With tens of millions of students using our tutorials in over 45 languages and in 180+ countries, this is an opportunity to redefine how computer science is taught, not only in the USA but worldwide.
 
 **Skills and Qualifications:**
 
@@ -105,32 +104,6 @@ Code.org is building interactive tutorials for computer science courses starting
 
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="ops" href="#ops">Operations Program Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is looking for a Operations Program Coordinator, an event planning expert, to join Code.org’s Operations team. Responsibilities of the position include:
-
-- Coordinate event logistics (dates, location, travel, accommodations, catering); act as primary logistics point-of-contact
-- Update and manage event participant lists
-- Draft communications to stakeholders; use mark-up to create e-mail communications
-- Utilize customer service system to respond to questions in a timely manner
-- Analyze survey results and report findings to Operations Manager
-- Attend and participate in meetings and record notes/follow-up items, as appropriate
-- Respond to requests for information, distribute materials externally
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-
-
-
-**Skills and Qualifications:**
-
-The ideal candidate has a demonstrated interest and aptitude for utilizing technology to automate routine functions and has strong administrative and event planning skills, as well as an excellent customer service attitude. 
-
-Must be extremely detail-oriented, possess exceptional writing and communications ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Candidate should be flexible and willing to work in a fast-paced, start-up environment. Proficiency in working with Google Docs and Microsoft Office a must.
-
-
-Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="vp"href="#vp">VP of Professional Learning & Community  (Seattle, WA)</a>
 

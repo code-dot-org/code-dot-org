@@ -67,6 +67,10 @@ class GatekeeperTest < ActiveSupport::TestCase
 
     assert_equal Set.new(['hint_view_request', 'postMilestone', 'shareEnabled']), Gatekeeper.feature_names
     assert_equal Set.new(['frozen', 'gumball', 'mc']), Gatekeeper.script_names
+
+    # Make sure that a deleted feature no longer shows up in the list of feature names.
+    Gatekeeper.delete('hint_view_request')
+    assert_equal Set.new(['postMilestone', 'shareEnabled']), Gatekeeper.feature_names
   end
 
 end
