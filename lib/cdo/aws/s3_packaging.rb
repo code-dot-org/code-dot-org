@@ -55,7 +55,7 @@ class S3Packaging
     Dir.chdir(@target_location) do
       # Clear out existing package
       FileUtils.rm_rf Dir.glob("#{@target_location}/*")
-      `tar -zxf #{package.path}`
+      RakeUtils.system "tar -zxf #{package.path}"
     end
     @logger.info "Decompressed"
   end
@@ -74,14 +74,13 @@ class S3Packaging
   # Creates a zipped package of the provided assets folder
   # @param sub_path [String] Path to built assets, relative to source_location
   # @return tempfile object of package
-  private def create_package(sub_path)
+  def create_package(sub_path)
     package = Tempfile.new(@commit_hash)
     @logger.info "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       IO.write('commit_hash', @commit_hash)
-      # TODO - should i be using RakeUtils.system instead in these places?
-      `tar -zcf #{package.path} *`
+      RakeUtils.system "tar -zcf #{package.path} *"
     end
     @logger.info 'Created'
     package
@@ -129,10 +128,11 @@ class S3Packaging
   # sufficient, because they can contain metadata.
   private def packages_equivalent(package1, package2)
     diff = Dir.mktmpdir do |dir1|
-      `tar -zxf #{package1.path} -C #{dir1}`
+      RakeUtils.system "tar -zxf #{package1.path} -C #{dir1}"
       Dir.mktmpdir do |dir2|
-        `tar -zxf #{package2.path} -C #{dir2}`
-        `diff -rq #{dir1} #{dir2}`
+        RakeUtils.system "tar -zxf #{package2.path} -C #{dir2}"
+        _, output = RakeUtils.system__ "diff -rq #{dir1} #{dir2}"
+        output
       end
     end
     diff.empty?
