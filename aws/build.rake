@@ -161,13 +161,11 @@ end
 #
 # Define the CODE STUDIO BUILD task.
 #
-CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
-CODE_STUDIO_BUILD_PRODUCTS = [code_studio_dir('npm-debug.log')] + Dir.glob(code_studio_dir('build', '**/*'))
-CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
-CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
+CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) do
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
-  break if packager.update_from_s3
+  updated_package = packager.update_from_s3
+  next if updated_package # no need to do anything if we already got a package from s3
 
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
