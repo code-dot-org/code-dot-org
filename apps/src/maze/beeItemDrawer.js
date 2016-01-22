@@ -13,17 +13,14 @@ var SQUARE_SIZE = 50;
  * @param dirtMap The dirtMap from the maze, which shows the current state of
  *   the dirt (or flowers/honey in this case).
  * @param skin The app's skin, used to get URLs for our images
- * @param initialDirtMap The state of the dirtMap at start time.
  * @param bee The maze's Bee object.
  */
-function BeeItemDrawer(dirtMap, skin, initialDirtMap, bee) {
+function BeeItemDrawer(dirtMap, skin, bee) {
   this.__base = BeeItemDrawer.superPrototype;
 
   DirtDrawer.call(this, dirtMap, '');
 
   this.skin_ = skin;
-  this.initialDirt_ = initialDirtMap;
-
   this.bee_ = bee;
 
   this.honeyImages_ = [];
