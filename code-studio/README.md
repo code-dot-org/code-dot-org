@@ -1,30 +1,34 @@
 # The code-studio package
 
-This package contains static assets used by our "Code Studio" rails app (also known as "dashboard").
+This package contains static assets consumed by our "Code Studio" rails app (also known as "dashboard").  Dashboard consumes a transpiled, concatenated, factored, compressed, mangled distribution version of this package (which it unpacks to `dashboard/public/code-studio-package`).  What you're looking at is the original source for that package, and the tools to build the distribution.
 
-## Dev dependencies
+## Dev setup
 You should have the following tools installed globally.
 
-  * [GNU coreutils](http://www.gnu.org/software/coreutils/coreutils.html)
-  * [rsync](https://rsync.samba.org/)
+* [rsync](https://rsync.samba.org/)
 
-## Building code-studio static assets
+Then, run `npm install` from the `code-studio` directory (the location of this README), which will do the following:
 
-1. Navigate to the `code-studio` directory (the location of this README).
-2. Run `npm install` which does the following:
-  * Downloads and installs all package dependencies, dev utilities, etc into the `node_modules` directory.
-  * Creates a symlink from `node_modules/vendor` to the `vendor` directory in the package root, for easily including vendor code from our source files.
-3. Run `npm run build` which does the following:
-  * Copies various package assets to ./build/assets
-  * Uses [browserify](http://browserify.org/) to build our JavaScript assets at ./build/js
-  * Uses [node-sass](https://github.com/sass/node-sass) to build our CSS assets at ./build/css
+1. Downloads and installs all package dependencies, dev utilities, etc into the `node_modules` directory.
+1. Creates a symlink from `node_modules/vendor` to the `vendor` directory in the package root, for easily including vendor code from our source files.
+
+## Building the code-studio package
+You have a few options.  In each case, the package will end up in `code-studio/build`.
+
+Running **`npm run build:dist`** will create the whole distribution package from scracth - it runs linting and tests, wipes the build directory, and generates all the appropriate JS, CSS, and other assets, mangled and ready for production use.
+
+Most of the time, though, you'll want a development build.  **`npm run build`** is faster and generates prettier output - and for JS and JSX files, it includes embedded sourcemaps for easy debugging.
+
+We support auto-rebuilding too.  **`npm start`** beings a watch process that updates the build any time a JS or JSX file changes (Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop).
+
+There are other useful commands, like `npm run build-css` or `npm run copy-assets` - use `npm run` to list them all.
 
 ## Code Style
 
 Please follow our [style guide](../STYLEGUIDE.md).  We've set up linting to help:
 
-* To ensure our precommit linting hook is set up, run `rake install:hooks` from the repository root. You should only have to do this once.
-* To manually lint in the code-studio directory, run `npm run lint`
+* If you haven't already, run `rake install:hooks` to ensure our precommit linting is set up.
+* Use **`npm run lint`** to lint the code-studio package.
 
 ## Resources:
 
