@@ -621,7 +621,7 @@ Maze.init = function(config) {
     resetDirt();
 
     if (mazeUtils.isBeeSkin(config.skinId)) {
-      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.initialDirtMap, Maze.bee);
+      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.bee);
     } else {
       Maze.gridItemDrawer = new DirtDrawer(Maze.dirt_, skin.dirt);
     }

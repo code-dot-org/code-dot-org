@@ -253,8 +253,6 @@ Bee.prototype.getMessage = function (terminationValue) {
 };
 
 /**
- * Each cell of initialDirt is below zero if it's a hive. The number represents
- * how much honey can be made at the hive.
  * @param {boolean} userCheck Is this being called from user code
  */
 Bee.prototype.isHive = function (row, col, userCheck) {
@@ -356,7 +354,6 @@ Bee.prototype.hiveRemainingCapacity = function (row, col) {
  * How much more nectar can be collected from the flower at (row, col)
  */
 Bee.prototype.flowerRemainingCapacity = function (row, col) {
-  //var val = this.maze_.dirt_[row][col];
   var val = this.getValue(row, col);
   if (val < 0) {
     // not a flower
@@ -465,7 +462,7 @@ Bee.prototype.animateGetNectar = function () {
   var col = this.maze_.pegmanX;
   var row = this.maze_.pegmanY;
 
-  if (this.maze_.dirt_[row][col] <= 0) {
+  if (this.getValue(row, col) <= 0) {
     throw new Error("Shouldn't be able to end up with a nectar animation if " +
       "there was no nectar to be had");
   }
