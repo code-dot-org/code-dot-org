@@ -165,6 +165,9 @@ namespace :build do
         RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
       end
     end
+
+    # Make sure we have an up to date package for code studio
+    ensure_code_studio_package
   end
 
   task :pegasus do
@@ -265,7 +268,8 @@ def ensure_code_studio_package
   return if CDO.use_my_code_studio
 
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
-  raise "No valid package found" unless packager.update_from_s3
+  package_found = packager.update_from_s3
+  raise "No valid package found" unless package_found
 end
 
 namespace :install do

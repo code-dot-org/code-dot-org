@@ -1,14 +1,27 @@
 require 'aws-sdk'
+require 'logger'
 
+#
+# In the past, we've committed build outputs into our git repo. This has various
+# drawbacks. Instead, we'd like to store our build outputs in S3. This class
+# helps us create zipped up packages that we can upload to/download from S3.
+# As a part of the package, it includes a commit_hash file, whose contents
+# contain the git commit hash of the build source used to create this package.
+#
 class S3Packaging
   BUCKET_NAME = 'cdo-build-package'
 
+  # @param package_name [String] Friendly name of the package, used as part of our S3 key
+  # @param source_location [String] Path to the location on the filesystem where the build input lives
+  # @param target_location [String] Path to the location on the file system where the unzipped packaged contents should lvie
   def initialize(package_name, source_location, target_location)
+    throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
     @client = Aws::S3::Client.new
     @commit_hash = RakeUtils.git_latest_commit_hash source_location
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location
+    @logger = Logger.new(STDOUT)
   end
 
   # Tries to get an up to date package without building
@@ -17,10 +30,10 @@ class S3Packaging
     begin
       ensure_updated_package
     rescue Aws::S3::Errors::NoSuchKey
-      puts 'Package does not exist on S3'
+      @logger.info 'Package does not exist on S3'
       return false
     rescue Exception => e
-      puts "update_from_s3 failed: #{e.message}"
+      @logger.info "update_from_s3 failed: #{e.message}"
       return false
     end
     return true
@@ -28,7 +41,7 @@ class S3Packaging
 
   # creates a package from the given assets location and upload it to s3
   # @return tempfile object of package
-  def upload_packge_to_s3(sub_path)
+  def upload_package_to_s3(sub_path)
     package = create_package(sub_path)
     raise "Generated different package for same contents" unless package_matches_download(package)
     upload_package(package)
@@ -37,14 +50,14 @@ class S3Packaging
 
   # Unzips package into target location
   def decompress_package(package)
-    puts "Decompressing #{package.path}\nto #{@target_location}"
+    @logger.info "Decompressing #{package.path}\nto #{@target_location}"
     FileUtils.mkdir_p(@target_location)
     Dir.chdir(@target_location) do
       # Clear out existing package
       FileUtils.rm_rf Dir.glob("#{@target_location}/*")
       `tar -zxf #{package.path}`
     end
-    puts "Decompressed"
+    @logger.info "Decompressed"
   end
 
   private def s3_key
@@ -63,21 +76,20 @@ class S3Packaging
   # @return tempfile object of package
   private def create_package(sub_path)
     package = Tempfile.new(@commit_hash)
-    # TODO - better recommendation for logging that puts?
-    puts "Creating #{package.path}"
+    @logger.info "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
       IO.write('commit_hash', @commit_hash)
       # TODO - should i be using RakeUtils.system instead in these places?
       `tar -zcf #{package.path} *`
     end
-    puts 'Created'
+    @logger.info 'Created'
     package
   end
 
   private def ensure_updated_package
     if @commit_hash == target_commit_hash
-      puts "Package is current: #{@commit_hash}"
+      @logger.info "Package is current: #{@commit_hash}"
     else
       decompress_package(download_package)
     end
@@ -86,11 +98,11 @@ class S3Packaging
   # Uploads package to S3
   # @param package File object of local zipped up package.
   private def upload_package(package)
-    puts "Uploading: #{s3_key}"
+    @logger.info "Uploading: #{s3_key}"
     File.open(package, 'rb') do |file|
       @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file)
     end
-    puts "Uploaded"
+    @logger.info "Uploaded"
   end
 
   # This is essentially an assert.
@@ -108,7 +120,7 @@ class S3Packaging
       return true
     end
 
-    puts 'Existing package on s3. Validating equivalence'
+    @logger.info 'Existing package on s3. Validating equivalence'
     packages_equivalent(old_package, package)
   end
 
@@ -126,18 +138,18 @@ class S3Packaging
     diff.empty?
   end
 
-  # Downloads package from S3, throws error if given package doesnt exist on s3
+  # Downloads package from S3, throws error if given package doesn't exist on s3
   # @return tempfile for the downloaded package
   private def download_package
     package = Tempfile.new(@commit_hash)
 
-    puts "Attempting to download: #{s3_key}\nto #{package.path}"
+    @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"
     File.open(package, 'wb') do |file|
       @client.get_object(bucket: BUCKET_NAME, key: s3_key) do |chunk|
         file.write(chunk)
       end
     end
-    puts "Downloaded"
+    @logger.info "Downloaded"
     package
   end
 end

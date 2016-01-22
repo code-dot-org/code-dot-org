@@ -146,7 +146,7 @@ class S3PackagingTest < Minitest::Test
     end
   end
 
-  def test_upload_packge_to_s3
+  def test_upload_package_to_s3
     # Note: In a world where we were regularly running this test without VCR, we'd need to worry about clients
     # colliding (since they're using the same S3 paths). However, because all of our network requests end up being
     # mocked, this is not a concern
@@ -156,15 +156,15 @@ class S3PackagingTest < Minitest::Test
     client.delete_object(bucket: S3Packaging::BUCKET_NAME, key: @packager.send(:s3_key))
 
     # upload a package
-    assert @packager.upload_packge_to_s3('/build')
+    assert @packager.upload_package_to_s3('/build')
 
     # upload the same package again, it works
-    assert @packager.upload_packge_to_s3('/build')
+    assert @packager.upload_package_to_s3('/build')
 
     # try uploading a different package under the same name, it fails
     threw = false
     begin
-      assert !@packager.upload_packge_to_s3('/src')
+      assert !@packager.upload_package_to_s3('/src')
     rescue
       threw = true
     end
