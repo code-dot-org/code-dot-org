@@ -73,9 +73,6 @@ namespace :build do
         RakeUtils.bundle_install
       end
     end
-
-    make_blockly_symlink
-    make_code_studio_symlink
   end
 
   task :blockly_core do
@@ -137,6 +134,9 @@ namespace :build do
   end
 
   task :dashboard do
+    make_blockly_symlink
+    make_code_studio_symlink
+
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
