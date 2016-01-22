@@ -247,6 +247,5 @@
   "watchVideo": "Titta på videon",
   "when": "när",
   "whenRun": "vid start",
-  "workspaceHeaderShort": "Arbetsyta: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "workspaceHeaderShort": "Arbetsyta: "
 }

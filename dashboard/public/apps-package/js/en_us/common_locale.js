@@ -356,7 +356,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "print":function(d){return "Print"},
 "puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" of "+common_locale.v(d,"stage_total")},
 "readonlyWorkspaceHeader":function(d){return "View only: "},
-"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."},
 "repeat":function(d){return "repeat"},
 "resetProgram":function(d){return "Reset"},
 "rotateText":function(d){return "Rotate your device."},
