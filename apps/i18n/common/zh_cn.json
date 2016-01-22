@@ -247,5 +247,6 @@
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域"
+  "workspaceHeaderShort": "工作区域",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }
