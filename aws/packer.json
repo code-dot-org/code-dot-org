@@ -1,0 +1,47 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": ""
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-west-2",
+    "availability_zone": "us-west-2b",
+    "source_ami": "ami-9abea4fb",
+    "instance_type": "m4.10xlarge",
+    "ssh_username": "ubuntu",
+    "ami_name": "cdo-{{timestamp}}",
+    "ami_groups": "all",
+    "associate_public_ip_address": true,
+    "force_deregister": true,
+    "spot_price": "2",
+    "security_group_id": "sg-af6d98c8",
+    "subnet_id": "subnet-404a7937",
+    "ami_block_device_mappings": [{
+      "device_name": "/dev/sda1",
+      "volume_size": "64",
+      "delete_on_termination": true,
+      "volume_type": "gp2"
+    }],
+    "launch_block_device_mappings": [{
+      "device_name": "/dev/sda1",
+      "volume_size": "64",
+      "delete_on_termination": true,
+      "volume_type": "gp2"
+    }]
+  }],
+  "provisioners": [{
+    "type": "chef-solo",
+    "install_command":"curl -L https://www.opscode.com/chef/install.sh | {{if .Sudo}}sudo{{end}} bash -s -- -v 11.18.12",
+    "cookbook_paths": ["../cookbooks/.berkshelf"],
+    "chef_environment": "adhoc",
+    "environments_path": "../cookbooks/cdo-apps/test/environments",
+    "run_list": [
+      "cdo-mysql::server",
+      "cdo-apps"
+    ],
+    "config_template":"./solo.rb.template"
+  }]
+}
