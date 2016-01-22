@@ -113,13 +113,13 @@ class FeatureModeManager
 
   # Returns true if the feature mode manager allows the `feature` in `mode` for hoc tutorial
   # `script`, falling through to the value from the Gatekeeper if the manager doesn't
-  # specify a value.
+  # specify a value.  (If script is nil, only considers general settings.)
   def self.allows(gatekeeper, mode, feature, script)
     # Use the value from the mode settings map, if defined.
     settings = MODE_SETTINGS_MAP[mode]
     if settings
-      allowed = settings[:gatekeeper_general_settings][feature]
-      allowed = settings[:gatekeeper_hoc_tutorial_settings][feature] if allowed.nil?
+      allowed = settings[:gatekeeper_hoc_tutorial_settings][feature] if script
+      allowed = settings[:gatekeeper_general_settings][feature] if allowed.nil?
       return allowed unless allowed.nil?
     end
 
