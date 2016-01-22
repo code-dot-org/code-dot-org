@@ -2,17 +2,12 @@ require 'minitest/autorun'
 require 'rack/test'
 require 'securerandom'
 require 'aws-sdk'
+require 'cdo/rake_utils'
 
 require_relative './test_helper'
 require_relative '../../lib/cdo/aws/s3_packaging'
 
 ORIGINAL_HASH = 'fake-hash'
-
-class RakeUtils
-  def self.git_latest_commit_hash(_)
-    ORIGINAL_HASH
-  end
-end
 
 class S3PackagingTest < Minitest::Test
   include SetupTest
@@ -170,5 +165,4 @@ class S3PackagingTest < Minitest::Test
     end
     assert threw
   end
-
 end
