@@ -19,6 +19,13 @@ You should have the following tools installed globally.
   * Uses [browserify](http://browserify.org/) to build our JavaScript assets at ./build/js
   * Uses [node-sass](https://github.com/sass/node-sass) to build our CSS assets at ./build/css
 
+## Code Style
+
+Please follow our [style guide](../STYLEGUIDE.md).  We've set up linting to help:
+
+* To ensure our precommit linting hook is set up, run `rake install:hooks` from the repository root. You should only have to do this once.
+* To manually lint in the code-studio directory, run `npm run lint`
+
 ## Resources:
 
 Places we looked while getting this build system working:
