@@ -16,7 +16,7 @@ var baseLevel = {
   ],
   flowerType: 'redWithNectar',
   startDirection: 1,
-  initialDirt: [
+  rawDirt: [
     [ 0 ]
   ]
 };
@@ -51,17 +51,12 @@ describe("Bee", function () {
      * Shim a 1x1 maze with the given values and validate that we get the
      * expected result when calling isRedFlower
      */
-    function validate(flowerType, mapValue, initialDirtValue, expected, msg) {
-      var map = [[mapValue]];
-
-      var maze = {
-        map: map
-      };
+    function validate(flowerType, rawDirtValue, expected, msg) {
+      var maze = {};
       var config = {
         level: utils.extend(baseLevel, {
           flowerType: flowerType,
-          map: map,
-          initialDirt: [[initialDirtValue]]
+          rawDirt: [[rawDirtValue]]
         })
       };
       var bee = new Bee(maze, null, config);
@@ -69,19 +64,19 @@ describe("Bee", function () {
     }
 
     it("red default", function () {
-      validate('redWithNectar', 1, 1, true, 'default flower');
-      validate('redWithNectar', 1, -1, false, 'default hive');
-      validate('redWithNectar', 'P', 1, false, 'overriden purple');
-      validate('redWithNectar', 'R', 1, true, 'overriden red');
-      validate('redWithNectar', 'FC', 1, true, 'overriden cloud');
+      validate('redWithNectar', '+1', true, 'default flower');
+      validate('redWithNectar', '-1', false, 'default hive');
+      validate('redWithNectar', '+1P', false, 'overriden purple');
+      validate('redWithNectar', '+1R', true, 'overriden red');
+      validate('redWithNectar', '+1FC', true, 'overriden cloud');
     });
 
     it("purple default", function () {
-      validate('purpleNectarHidden', 1, 1, false, 'default flower');
-      validate('purpleNectarHidden', 1, -1, false, 'default hive');
-      validate('purpleNectarHidden', 'P', 1, false, 'overriden purple');
-      validate('purpleNectarHidden', 'R', 1, true, 'overriden red');
-      validate('purpleNectarHidden', 'FC', 1, false, 'overriden cloud');
+      validate('purpleNectarHidden', '+1', false, 'default flower');
+      validate('purpleNectarHidden', '-1', false, 'default hive');
+      validate('purpleNectarHidden', '+1P', false, 'overriden purple');
+      validate('purpleNectarHidden', '+1R', true, 'overriden red');
+      validate('purpleNectarHidden', '+1FC', false, 'overriden cloud');
     });
   });
 });
