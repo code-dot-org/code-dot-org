@@ -46,7 +46,9 @@ group :development, :test do
   gem 'active_record_query_trace'
   # for unit testing
   gem 'factory_girl_rails'
-  gem 'fakeweb'
+  gem 'webmock', require: false
+  gem 'vcr', require: false
+
   gem 'simplecov', '~> 0.9', require: false
   gem 'mocha', require: false
   gem "codeclimate-test-reporter", require: false
@@ -64,6 +66,7 @@ group :development, :test do
   gem 'spring-commands-testunit'
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
+  gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.5.0'
 end
 
@@ -98,7 +101,7 @@ gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-windowslive', '~> 0.0.9'
-gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git'
+gem 'omniauth-clever', '~> 1.2.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -174,3 +177,5 @@ gem 'httparty'
 gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
+
+gem 'rest-client', '~> 1.8'

@@ -3,9 +3,7 @@
 # real instance on localhost by setting the USE_REAL_REDIS environment variable;
 # e.g. "USE_REAL_REDIS=true ruby test_redis_property_bag.rb".
 
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
+require_relative 'test_helper'
 require_relative '../middleware/helpers/redis_property_bag'
 require_relative 'fake_redis_client'
 

@@ -1,0 +1,42 @@
+.educate-banner {
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.educate-container {
+  position:relative;
+  float: left;
+  width: 33%;
+  height: 270px;
+  padding: 15px;
+}
+
+.educate-box {
+  position: absolute;
+  min-height: 255px;
+  color: white; 
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.educate-h1 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: white; 
+}
+
+.educate-p {
+  height: 60px;
+}
+
+.educate-button {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+.resources-h1 {
+  text-align: center;
+  margin-bottom: 0px;
+}
