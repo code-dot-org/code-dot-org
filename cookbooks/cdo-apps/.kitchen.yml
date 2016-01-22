@@ -5,7 +5,6 @@ driver:
   volume: <%= File.absolute_path(File.join(__dir__, '..', '..')) %>:/home/kitchen/adhoc
 transport:
   name: ssh_tgz
-  ssh_key: ~/.ssh/server_access_key
   connection_timeout: 10
   connection_retries: 5
 provisioner:
