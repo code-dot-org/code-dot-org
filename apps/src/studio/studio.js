@@ -787,7 +787,7 @@ function callHandler (name, allowQueueExtension, extraArgs) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        handler.func.apply(null, extraArgs);
+        Studio.JSInterpreter.queueEvent(handler.func, extraArgs);
       }
     }
   });
@@ -2218,10 +2218,7 @@ Studio.reset = function(first) {
   Studio.yieldExecutionTicks = 0;
   if (studioApp.editCode) {
     Studio.executionError = null;
-    if (Studio.JSInterpreter) {
-      Studio.JSInterpreter.deinitialize();
-      Studio.JSInterpreter = null;
-    }
+    Studio.JSInterpreter = null;
   }
 
   var renderOffset = {

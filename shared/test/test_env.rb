@@ -1,7 +1,5 @@
-require 'minitest/autorun'
-require 'rack/test'
-
-require_relative '../../lib/cdo/env'
+require_relative 'test_helper'
+require 'cdo/env'
 
 class ENVTest < Minitest::Test
 

@@ -24,8 +24,7 @@
 
 -# Droplet script dependencies (all editCode - regardless of editor)
 - if use_droplet
-  %script{src: minifiable_asset_path('js/jsinterpreter/acorn.js')}
-  %script{src: minifiable_asset_path('js/jsinterpreter/interpreter.js')}
+  %script{src: asset_path('js/jsinterpreter/acorn_interpreter.js')}
 -# Droplet script dependencies (only when editor present)
 - if use_droplet && !hide_source
   %script{src: "#{static_asset_base_path}js/ace/ace.js"}

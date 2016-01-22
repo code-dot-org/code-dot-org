@@ -135,7 +135,8 @@ class FilesApi < Sinatra::Base
     not_modified if result[:status] == 'NOT_MODIFIED'
     last_modified result[:last_modified]
 
-    abuse_score = result[:metadata]['abuse_score'].to_i
+    metadata = result[:metadata]
+    abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     not_found if abuse_score > 0 and !can_view_abusive_assets?(encrypted_channel_id)
 
     result[:body]

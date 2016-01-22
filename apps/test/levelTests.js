@@ -105,8 +105,7 @@ describe('Level tests', function() {
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('http://localhost:8001/apps/lib/jsinterpreter/acorn.js')
-    .then(function () { return loadSource('http://localhost:8001/apps/lib/jsinterpreter/interpreter.js'); })
+    loadSource('http://localhost:8001/apps/lib/jsinterpreter/acorn_interpreter.js')
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ace.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ext-language_tools.js'); })

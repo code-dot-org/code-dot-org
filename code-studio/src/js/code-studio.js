@@ -9,6 +9,9 @@
 'use strict';
 /* global Sounds */
 
+// Shim window.console to be safe in IE
+require('./consoleShim')(window);
+
 require('./videos');
 
 window.React = require('react');
