@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "වීඩියෝව නරඹන්න"},
 "when":function(d){return "when"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "වැඩ අවකාශය: "}};
+"workspaceHeaderShort":function(d){return "වැඩ අවකාශය: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

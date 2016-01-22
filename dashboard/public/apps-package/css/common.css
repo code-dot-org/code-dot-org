@@ -1,3 +1,19 @@
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(-20deg); }
+  75% {
+    transform: rotate(20deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.animate-hint {
+  animation-name: wiggle;
+  animation-duration: 200ms;
+  transform-origin: 50% 50%;
+  animation-iteration-count: 3; }
+
 body {
   font-family: "Gotham 4r", sans-serif, sans-serif;
   font-weight: normal;
