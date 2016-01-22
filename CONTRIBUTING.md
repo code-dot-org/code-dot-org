@@ -41,7 +41,7 @@ If your changes might affect level paths, blockly UI, or critical path site logi
 
 ## Submitting your Pull Request
 
-Once you've linted and tested your changes, send us a pull request!  Contributors should follow the GitHub [fork-and-pull model](https://help.github.com/articles/using-pull-requests) to submit pull requests into this repository.
+Once you've linted and tested your changes, send us a pull request!  Contributors should follow the GitHub [fork-and-pull model](https://help.github.com/articles/using-pull-requests) to submit pull requests into this repository.  Code.org developers should also work on a branch and use a pull request to merge to staging; please do not merge directly to the code-dot-org/staging branch.
 
 1. On your fork, you'll either push to your own finished branch or checkout a new branch for your feature before you start your feature
     - `git checkout -b branch_name`
