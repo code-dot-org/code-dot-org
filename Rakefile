@@ -5,6 +5,25 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
+# Helper functions
+def make_blockly_symlink
+  if local_environment?
+    Dir.chdir(apps_dir) do
+      apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+      RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
+    end
+  end
+end
+
+def make_code_studio_symlink
+  if local_environment?
+    Dir.chdir(code_studio_dir) do
+      code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
+      RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
+    end
+  end
+end
+
 namespace :lint do
   task :ruby do
     RakeUtils.bundle_exec 'rubocop'
@@ -101,7 +120,7 @@ namespace :build do
       RakeUtils.npm_install
 
       HipChat.log 'Building <b>code-studio</b>...'
-      RakeUtils.system 'npm run clean && npm run build'
+      RakeUtils.system 'npm run build:dist'
     end
   end
 
@@ -115,6 +134,9 @@ namespace :build do
   end
 
   task :dashboard do
+    make_blockly_symlink
+    make_code_studio_symlink
+
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
@@ -214,10 +236,10 @@ task :build => ['build:all']
 ##
 ##################################################################################################
 
-# Whether this is a development or adhoc environment where we should install npm and create
+# Whether this is a local or adhoc environment where we should install npm and create
 # a local database.
 def local_environment?
-  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+  (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
 end
 
 def install_npm
@@ -242,12 +264,7 @@ namespace :install do
   # Create a symlink in the public directory that points at the appropriate blockly
   # code (either the static blockly or the built version, depending on CDO.use_my_apps).
   task :blockly_symlink do
-    if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(apps_dir) do
-        apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
-        RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
-      end
-    end
+    make_blockly_symlink
   end
 
   task :hooks do
@@ -273,10 +290,7 @@ namespace :install do
 
   task :code_studio do
     if local_environment?
-      Dir.chdir(code_studio_dir) do
-        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
-        RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
-      end
+      make_code_studio_symlink
       install_npm
     end
   end

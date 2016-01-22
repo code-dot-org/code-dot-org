@@ -5,6 +5,7 @@ var ChartApi = require('./ChartApi');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
 var keyEvent = require('./keyEvent');
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
 
@@ -178,6 +179,13 @@ applabCommands.setScreen = function (opts) {
   Applab.changeScreen(opts.screenId);
 };
 
+function reportUnsafeHtml(removed, unsafe, safe) {
+  var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
+  var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+  outputError(msg, ErrorLevel.WARNING, currentLineNumber);
+}
+
 applabCommands.container = function (opts) {
   if (opts.elementId) {
     apiValidateDomIdExistence(opts, 'container', 'id', opts.elementId, false);
@@ -186,7 +194,8 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  newDiv.innerHTML = opts.html;
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml);
+  newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
   return Boolean(Applab.activeScreen().appendChild(newDiv));
@@ -857,7 +866,7 @@ applabCommands.getAttribute = function (opts) {
 
 // Whitelist of HTML Element attributes which can be modified, to
 // prevent DOM manipulation which would violate the sandbox.
-var MUTABLE_ATTRIBUTES = ['innerHTML', 'scrollTop'];
+var MUTABLE_ATTRIBUTES = ['scrollTop'];
 
 applabCommands.setAttribute = function (opts) {
   var divApplab = document.getElementById('divApplab');
@@ -1042,7 +1051,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = opts.html;
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml);
     return true;
   }
   return false;
