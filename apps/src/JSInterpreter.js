@@ -23,7 +23,6 @@ var JSInterpreter = module.exports = function (options) {
   this.startedHandlingEvents = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
-  this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
 
   if (!this.studioApp.hideSource) {
@@ -34,7 +33,6 @@ var JSInterpreter = module.exports = function (options) {
     this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   }
 
-  var self = this;
   if (options.enableEvents) {
     this.eventQueue = [];
     // Append our mini-runtime after the user's code. This will spin and process
@@ -42,45 +40,16 @@ var JSInterpreter = module.exports = function (options) {
     options.code += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                  'setCallbackRetVal(ret); }}';
-
-    codegen.createNativeFunctionFromInterpreterFunction = function (intFunc) {
-      return function () {
-        if (self.initialized()) {
-          self.queueEvent(intFunc, arguments);
-          
-          if (self.executeLoopDepth === 0) {
-            // Execute the interpreter and if a return value is sent back from the
-            // interpreter's event handler, pass that back in the native world
-
-            // NOTE: the interpreter will not execute forever, if the event handler
-            // takes too long, executeInterpreter() will return and the native side
-            // will just see 'undefined' as the return value. The rest of the interpreter
-            // event handler will run in the next onTick(), but the return value will
-            // no longer have any effect.
-            self.executeInterpreter(false, true);
-            return self.lastCallbackRetVal;
-          }
-        }
-      };
-    };
   }
 
+  var self = this;
   var initFunc = function (interpreter, scope) {
-    // Store Interpreter on JSInterpreter
-    self.interpreter = interpreter;
-    // Store globalScope on JSInterpreter
     self.globalScope = scope;
-    // Override Interpreter's get/set Property functions with JSInterpreter
-    self.baseGetProperty = interpreter.getProperty;
-    interpreter.getProperty = _.bind(self.getProperty, self);
-    self.baseSetProperty = interpreter.setProperty;
-    interpreter.setProperty = _.bind(self.setProperty, self);
     codegen.initJSInterpreter(
         interpreter,
         options.blocks,
         options.blockFilter,
-        scope,
-        options.globalFunctions);
+        scope);
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain
@@ -104,7 +73,7 @@ var JSInterpreter = module.exports = function (options) {
   };
 
   try {
-    new window.Interpreter(options.code, initFunc);
+    this.interpreter = new window.Interpreter(options.code, initFunc);
   }
   catch(err) {
     this.onExecutionError(err);
@@ -120,13 +89,6 @@ JSInterpreter.prototype.initialized = function () {
   return !!this.interpreter;
 };
 
-/**
- * Detech the Interpreter instance. Call before releasing references to
- * JSInterpreter so any async callbacks will not execute.
- */
-JSInterpreter.prototype.deinitialize = function () {
-  this.interpreter = null;
-};
 
 JSInterpreter.StepType = {
   RUN:  0,
@@ -181,7 +143,7 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
 JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
   this.eventQueue.push({
     'fn': interpreterFunc,
-    'arguments': nativeArgs ? Array.prototype.slice.call(nativeArgs) : []
+    'arguments': nativeArgs
   });
 };
 
@@ -212,7 +174,6 @@ function safeStepInterpreter(jsi) {
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
-  this.executeLoopDepth++;
   this.runUntilCallbackReturn = runUntilCallbackReturn;
   if (runUntilCallbackReturn) {
     delete this.lastCallbackRetVal;
@@ -416,7 +377,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       }
     } else {
       this.onExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
-      this.executeLoopDepth--;
       return;
     }
   }
@@ -425,7 +385,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // code may not be selected in the editor, so do it now:
     this.selectCurrentCode();
   }
-  this.executeLoopDepth--;
 };
 
 /**
@@ -435,51 +394,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 JSInterpreter.prototype.createPrimitive = function (data) {
   if (this.interpreter) {
     return this.interpreter.createPrimitive(data);
-  }
-};
-
-/**
- * Wrapper to Interpreter's getProperty (extended for custom marshaling)
- *
- * Fetch a property value from a data object.
- * @param {!Object} obj Data object.
- * @param {*} name Name of property.
- * @return {!Object} Property value (may be UNDEFINED).
- */
-JSInterpreter.prototype.getProperty = function (obj, name) {
-  name = name.toString();
-  if (obj.isCustomMarshal) {
-    var value = obj.data[name];
-    var type = typeof value;
-    if (type === 'number' || type === 'boolean' || type === 'string' ||
-        type === 'undefined' || value === null) {
-      return this.interpreter.createPrimitive(value);
-    } else {
-      return codegen.marshalNativeToInterpreter(this.interpreter, value, obj.data);
-    }
-  } else {
-    return this.baseGetProperty.call(this.interpreter, obj, name);
-  }
-};
-
-/**
- * Wrapper to Interpreter's setProperty (extended for custom marshaling)
- *
- * Set a property value on a data object.
- * @param {!Object} obj Data object.
- * @param {*} name Name of property.
- * @param {*} value New property value.
- * @param {boolean} opt_fixed Unchangeable property if true.
- * @param {boolean} opt_nonenum Non-enumerable property if true.
- */
-JSInterpreter.prototype.setProperty = function(obj, name, value,
-                                               opt_fixed, opt_nonenum) {
-  name = name.toString();
-  if (obj.isCustomMarshal) {
-    obj.data[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
-  } else {
-    return this.baseSetProperty.call(
-        this.interpreter, obj, name, value, opt_fixed, opt_nonenum);
   }
 };
 

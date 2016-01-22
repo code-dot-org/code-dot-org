@@ -37,6 +37,7 @@ var renderApp = function(app, req, res) {
       containerId: 'codeApp',
       levelId: req.query.level,
       skinId: req.query.skin,
+      debugInterpreter: req.query.debugInterpreter,
       baseUrl: baseUrl(req)
     }
   });
