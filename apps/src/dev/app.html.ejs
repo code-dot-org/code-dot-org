@@ -23,12 +23,6 @@
    -->
   <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/dev/jquery-ui.min.js"></script>
-
-<% if (app === "gamelab") { %>
-  <script type="text/javascript" src="../js/p5play/p5.js"></script>
-  <script type="text/javascript" src="../js/p5play/p5.play.js"></script>
-<% } %>
-
 <% if ((app === "maze" && options.levelId.indexOf('3_') === 0) ||
        (app === "applab" && options.levelId.indexOf('ec_') === 0) ||
        (app === "gamelab" && options.levelId.indexOf('ec_') === 0) ||
@@ -36,8 +30,12 @@
        (app === "studio" && options.levelId.indexOf('js_') === 0) ||
        (app === "turtle" && options.levelId.indexOf('ec_') === 0) ||
        (app === "netsim")) { -%>
-  <script type="text/javascript" src="../js/jsinterpreter/acorn.js"></script>
-  <script type="text/javascript" src="../js/jsinterpreter/interpreter.js"></script>
+  <% if (options.debugInterpreter) { -%>
+    <script type="text/javascript" src="../js/jsinterpreter/acorn.js"></script>
+    <script type="text/javascript" src="../js/jsinterpreter/interpreter.js"></script>
+  <% } else { -%>
+    <script type="text/javascript" src="../js/jsinterpreter/acorn_interpreter.js"></script>
+  <% } -%>
   <script type="text/javascript" src="../js/ace/ace.js"></script>
   <script type="text/javascript" src="../js/ace/ext-language_tools.js"></script>
   <script type="text/javascript" src="../js/droplet/droplet-full.js"></script>
