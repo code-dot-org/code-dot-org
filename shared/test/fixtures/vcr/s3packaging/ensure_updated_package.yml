@@ -6,28 +6,28 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAMk3oVYAA+3TbQrCMAyA4R2lF1DSbu2OI1NWpjInW3d/qwURf0wQ6ge8
-        z5+0NNCEkN3Q9/uw6ZqpK3IREVdV6hprZ29RTLonWittnBVTlnU8iy5tpQsl
-        2Sp6ME+hGWMp27E9hYW8mOb9wnvqRN3jn/DNsV1lnT5+2TCH8xzWhynjHy/3
-        X9zz/htj2f9PSPP/dhUAAAAAAAAAAAAAAAB41wV3T92RACgAAA==
+        H4sIAFuHolYAA+3TWwrCMBCF4S4lG1Am1y5HqrRUpVbadP9WAyI+VBDiBf7v
+        5RAykAnD7Pqu28dNW41tkYuIBOfUNcvgbykmnROtlTbBixfrrVWirXe2UJKt
+        owfTGKthbmU71Ke4UDeXNc3CffqJuuefaKpjvco6ffyyfornKa4PY8Y3Xu6/
+        hOf9N6Zk/z8hzf/bXQAAAAAAAAAAAAAAAOBdF1PgjxUAKAAA
     headers:
       Expect:
       - 100-continue
       Content-Md5:
-      - EYpI7FylkyquM7SJVnAQ6g==
+      - zR88L1H9T4s5fOgYPnaZLw==
       Date:
-      - Thu, 21 Jan 2016 19:55:53 GMT
+      - Fri, 22 Jan 2016 19:47:39 GMT
       Content-Length:
-      - '172'
+      - '171'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:54 GMT
+      - Fri, 22 Jan 2016 19:47:42 GMT
       Etag:
-      - '"118a48ec5ca5932aae33b489567010ea"'
+      - '"cd1f3c2f51fd4f8b397ce8183e76992f"'
       Content-Length:
       - '0'
       Server:
@@ -36,35 +36,35 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 21 Jan 2016 19:55:54 GMT
+  recorded_at: Fri, 22 Jan 2016 19:47:42 GMT
 - request:
     method: put
     uri: https://cdo-build-package.s3.amazonaws.com/test-package/alternate-hash.tar.gz
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAMo3oVYAA+3T7wqCMBSHYS9lN1CcTTcvJ1YoFqmh8/7TBuEng2D9gff5
-        chg7sDO236lv23M4NH5sslRExBWFWmrp7KOKietIO6WNs2LyvNRGic5tUWZK
-        kk20Mo3BD/Mox6Hqwkbf3FbXG/vxJupZ/4S/hmrofKh2Sb8AflQ/hdsU9pcx
-        4Rkv8y/r/Osl/8ZY8v8J8f2/PQUAAAAAAAAAAAAAAADedQe8XTcuACgAAA==
+        H4sIAF6HolYAA+3T7wqCMBSHYS9lN1AcNzcvJ1YoFqmh8/7TBuEng2D9gff5
+        chg7sDO236lv23M4NH5sslRExBWFWmrp7KOKjusodyrXzooVY41TkhtrTaYk
+        2UQr0xj8MI9yHKoubPTNbXW9sR9vop71T/hrqIbOh2qX9AvgR/VTuE1hfxkT
+        nvEy/7LOv1nyr3VJ/j8hvv+3pwAAAAAAAAAAAAAAAMC77rypB20AKAAA
     headers:
       Expect:
       - 100-continue
       Content-Md5:
-      - nsaKY4AcS6o9MNjQ1+BgpQ==
+      - Nyi5L6F8f0dF+UlVWHpElw==
       Date:
-      - Thu, 21 Jan 2016 19:55:54 GMT
+      - Fri, 22 Jan 2016 19:47:42 GMT
       Content-Length:
-      - '178'
+      - '177'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:55 GMT
+      - Fri, 22 Jan 2016 19:47:55 GMT
       Etag:
-      - '"9ec68a63801c4baa3d30d8d0d7e060a5"'
+      - '"3728b92fa17c7f4745f94955587a4497"'
       Content-Length:
       - '0'
       Server:
@@ -73,7 +73,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 21 Jan 2016 19:55:54 GMT
+  recorded_at: Fri, 22 Jan 2016 19:47:54 GMT
 - request:
     method: get
     uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
@@ -82,7 +82,7 @@ http_interactions:
       string: ''
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:54 GMT
+      - Fri, 22 Jan 2016 19:47:54 GMT
       Content-Length:
       - '0'
   response:
@@ -91,28 +91,28 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:56 GMT
+      - Fri, 22 Jan 2016 19:48:05 GMT
       Last-Modified:
-      - Thu, 21 Jan 2016 19:55:54 GMT
+      - Fri, 22 Jan 2016 19:47:42 GMT
       Etag:
-      - '"118a48ec5ca5932aae33b489567010ea"'
+      - '"cd1f3c2f51fd4f8b397ce8183e76992f"'
       Accept-Ranges:
       - bytes
       Content-Type:
       - ''
       Content-Length:
-      - '172'
+      - '171'
       Server:
       - AmazonS3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAMk3oVYAA+3TbQrCMAyA4R2lF1DSbu2OI1NWpjInW3d/qwURf0wQ6ge8
-        z5+0NNCEkN3Q9/uw6ZqpK3IREVdV6hprZ29RTLonWittnBVTlnU8iy5tpQsl
-        2Sp6ME+hGWMp27E9hYW8mOb9wnvqRN3jn/DNsV1lnT5+2TCH8xzWhynjHy/3
-        X9zz/htj2f9PSPP/dhUAAAAAAAAAAAAAAAB41wV3T92RACgAAA==
+        H4sIAFuHolYAA+3TWwrCMBCF4S4lG1Am1y5HqrRUpVbadP9WAyI+VBDiBf7v
+        5RAykAnD7Pqu28dNW41tkYuIBOfUNcvgbykmnROtlTbBixfrrVWirXe2UJKt
+        owfTGKthbmU71Ke4UDeXNc3CffqJuuefaKpjvco6ffyyfornKa4PY8Y3Xu6/
+        hOf9N6Zk/z8hzf/bXQAAAAAAAAAAAAAAAOBdF1PgjxUAKAAA
     http_version: 
-  recorded_at: Thu, 21 Jan 2016 19:55:55 GMT
+  recorded_at: Fri, 22 Jan 2016 19:48:04 GMT
 - request:
     method: get
     uri: https://cdo-build-package.s3.amazonaws.com/test-package/alternate-hash.tar.gz
@@ -121,7 +121,7 @@ http_interactions:
       string: ''
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:55 GMT
+      - Fri, 22 Jan 2016 19:48:04 GMT
       Content-Length:
       - '0'
   response:
@@ -130,28 +130,28 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:56 GMT
+      - Fri, 22 Jan 2016 19:48:05 GMT
       Last-Modified:
-      - Thu, 21 Jan 2016 19:55:55 GMT
+      - Fri, 22 Jan 2016 19:47:55 GMT
       Etag:
-      - '"9ec68a63801c4baa3d30d8d0d7e060a5"'
+      - '"3728b92fa17c7f4745f94955587a4497"'
       Accept-Ranges:
       - bytes
       Content-Type:
       - ''
       Content-Length:
-      - '178'
+      - '177'
       Server:
       - AmazonS3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAMo3oVYAA+3T7wqCMBSHYS9lN1CcTTcvJ1YoFqmh8/7TBuEng2D9gff5
-        chg7sDO236lv23M4NH5sslRExBWFWmrp7KOKietIO6WNs2LyvNRGic5tUWZK
-        kk20Mo3BD/Mox6Hqwkbf3FbXG/vxJupZ/4S/hmrofKh2Sb8AflQ/hdsU9pcx
-        4Rkv8y/r/Osl/8ZY8v8J8f2/PQUAAAAAAAAAAAAAAADedQe8XTcuACgAAA==
+        H4sIAF6HolYAA+3T7wqCMBSHYS9lN1AcNzcvJ1YoFqmh8/7TBuEng2D9gff5
+        chg7sDO236lv23M4NH5sslRExBWFWmrp7KOKjusodyrXzooVY41TkhtrTaYk
+        2UQr0xj8MI9yHKoubPTNbXW9sR9vop71T/hrqIbOh2qX9AvgR/VTuE1hfxkT
+        nvEy/7LOv1nyr3VJ/j8hvv+3pwAAAAAAAAAAAAAAAMC77rypB20AKAAA
     http_version: 
-  recorded_at: Thu, 21 Jan 2016 19:55:55 GMT
+  recorded_at: Fri, 22 Jan 2016 19:48:04 GMT
 - request:
     method: get
     uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-nonexistent-hash.tar.gz
@@ -160,7 +160,7 @@ http_interactions:
       string: ''
     headers:
       Date:
-      - Thu, 21 Jan 2016 19:55:55 GMT
+      - Fri, 22 Jan 2016 19:48:04 GMT
       Content-Length:
       - '0'
   response:
@@ -173,14 +173,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 21 Jan 2016 19:55:55 GMT
+      - Fri, 22 Jan 2016 19:48:05 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>test-package/fake-nonexistent-hash.tar.gz</Key><RequestId>60536C2C8B54B9BE</RequestId><HostId>3Cwcf6B7EIdSKBl4IETb6VO3BTW7Ljo1Fp4ayqbzvyTLjn277hRGqHy8oTziOyQL</HostId></Error>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>test-package/fake-nonexistent-hash.tar.gz</Key><RequestId>5751DFBDFDAEFF07</RequestId><HostId>m5cEquHacNFxiia9Z0DYQextiAB0XNA8EuE+PK5xqw4ouR7zWZflgx0fTYgJFNaw</HostId></Error>
     http_version: 
-  recorded_at: Thu, 21 Jan 2016 19:55:56 GMT
+  recorded_at: Fri, 22 Jan 2016 19:48:05 GMT
 recorded_with: VCR 3.0.0

@@ -95,7 +95,7 @@ def threaded_each(array, thread_count=2)
   threads.each(&:join)
 end
 
-if rack_env?(:staging) || rack_env?(:development)
+if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   #
   # Define the BLOCKLY[-CORE] BUILD task
   #
@@ -167,7 +167,7 @@ CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_
 CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
-  next if packager.update_from_s3
+  break if packager.update_from_s3
 
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
@@ -178,7 +178,7 @@ CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
   HipChat.log 'code-studio built'
 
   # upload to s3
-  package = packager.upload_packge_to_s3('/build')
+  package = packager.upload_package_to_s3('/build')
   packager.decompress_package(package)
 end
 
@@ -308,6 +308,7 @@ end
 $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
+# TODO - im only here for test purposes. remove me
 task 'build-code-studio' => [CODE_STUDIO_TASK] {}
 
 task :pegasus_unit_tests do
