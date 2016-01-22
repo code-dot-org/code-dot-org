@@ -175,7 +175,19 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
-  var onHidden = onlyContinue ? options.onContinue : null;
+  // get a list of all missing recommended blocks, and display them as
+  // contextual hints when the dialog closes. If the user views one of
+  // the blocks in the dialog, it is removed from this list.
+  var missingRecommendedBlockHints = this.getMissingBlocks_(recommendedBlocks, 1)
+    .blocksToDisplay
+    .map(function (block) {
+      block.seen = false;
+      return block;
+    });
+  var onHidden = onlyContinue ? options.onContinue : function () {
+    this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+  }.bind(this);
+
   var icon;
   if (!options.hideIcon) {
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
@@ -233,6 +245,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
+
+      // mark the corresponding block hint as seen
+      missingRecommendedBlockHints[0].seen = true;
     } else {
 
       // Generate a generic feedback message to display when we show the
@@ -246,6 +261,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
+        // mark the corresponding block hint as seen
+        missingRecommendedBlockHints[0].seen = true;
 
         // Swap out the specific feedback message with a generic one.
         var parentNode = feedbackMessage.parentNode;
