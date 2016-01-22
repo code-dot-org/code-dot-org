@@ -1,0 +1,7 @@
+#!/bin/bash
+# Run this script to
+set -e
+
+(cd ../cookbooks; bundle exec berks vendor .berkshelf)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+./packer build -debug -var "branch=${BRANCH}" packer.json

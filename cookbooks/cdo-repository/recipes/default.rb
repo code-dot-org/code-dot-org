@@ -24,12 +24,11 @@ git "/home/#{node[:current_user]}/#{node.chef_environment}" do
     repository 'https://github.com/code-dot-org/code-dot-org.git'
   end
 
+  # Make adhoc checkouts as small as possible.
   depth 1 if node.chef_environment == 'adhoc'
 
-  # No need to checkout 'staging' which is the default branch.
-  enable_checkout (branch != 'staging')
-
-  # Set the name of the local deploy branch to match the upstream.
+  # Checkout at clone time, disable the additional checkout step.
+  enable_checkout false
   checkout_branch branch
   revision branch
 
@@ -37,13 +36,4 @@ git "/home/#{node[:current_user]}/#{node.chef_environment}" do
   action :sync
   user node[:current_user]
   group node[:current_user]
-
-  # Set the upstream branch to the appropriate origin.
-  notifies :run, 'execute[select-upstream-branch]', :immediately
-end
-
-execute 'select-upstream-branch' do
-  command "git branch --set-upstream-to=origin/#{branch} #{branch}"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
-  action :nothing
 end

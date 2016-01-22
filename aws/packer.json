@@ -1,16 +1,13 @@
 {
   "variables": {
-    "aws_access_key": "",
-    "aws_secret_key": ""
+    "branch": "staging"
   },
   "builders": [{
     "type": "amazon-ebs",
-    "access_key": "{{user `aws_access_key`}}",
-    "secret_key": "{{user `aws_secret_key`}}",
     "region": "us-west-2",
     "availability_zone": "us-west-2b",
     "source_ami": "ami-9abea4fb",
-    "instance_type": "m4.10xlarge",
+    "instance_type": "m4.4xlarge",
     "ssh_username": "ubuntu",
     "ami_name": "cdo-{{timestamp}}",
     "ami_groups": "all",
@@ -39,9 +36,15 @@
     "chef_environment": "adhoc",
     "environments_path": "../cookbooks/cdo-apps/test/environments",
     "run_list": [
+      "apt",
       "cdo-mysql::server",
       "cdo-apps"
     ],
-    "config_template":"./solo.rb.template"
+    "config_template":"./solo.rb.template",
+    "json": {
+      "cdo-repository": {
+        "branch": "{{user `branch`}}"
+      }
+    }
   }]
 }

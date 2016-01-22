@@ -3,3 +3,5 @@
 [user]
 	name = Continuous Integration
 	email = dev@code.org
+[pack]
+  threads = 0

@@ -3,7 +3,12 @@
 # Recipe:: default
 #
 
-apt_package 'git'
+# Use latest git.
+apt_repository 'git' do
+  uri          'ppa:git-core/ppa'
+  distribution 'trusty'
+end
+apt_package('git') { action :upgrade }
 
 cookbook_file "/home/#{node[:current_user]}/.gitconfig" do
   source 'gitconfig'
@@ -29,5 +34,6 @@ end
     user node[:current_user]
     group node[:current_user]
     variables data: node['cdo-github-access'][file]
+    not_if { node['cdo-github-access'][file] == '' }
   end
 end
