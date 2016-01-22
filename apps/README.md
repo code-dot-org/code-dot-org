@@ -164,3 +164,4 @@ For notes on our pull process, where to find tasks to work on, etc.—see the Da
 - 2 space indent.
 - 4 space indent on long line breaks.
 - `grunt jshint` should report 0 warnings or errors.
+- See our [project style guide](../STYLEGUIDE.md) for details.
