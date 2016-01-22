@@ -101,7 +101,7 @@ gem 'cancancan', '~> 1.10' #CanCan is dead, long live CanCanCan
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-windowslive', '~> 0.0.9'
-gem 'omniauth-clever', git: 'https://github.com/code-dot-org/omniauth-clever.git'
+gem 'omniauth-clever', '~> 1.2.1'
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml'
@@ -177,3 +177,5 @@ gem 'httparty'
 gem 'jquery-cookie-rails'
 gem 'oj'
 gem 'daemons'
+
+gem 'rest-client', '~> 1.8'
