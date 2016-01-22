@@ -15,7 +15,7 @@ Then, run `npm install` from the `code-studio` directory (the location of this R
 ## Building the code-studio package
 You have a few options.  In each case, the package will end up in `code-studio/build`.
 
-Running **`npm run build:dist`** will create the whole distribution package from scracth - it runs linting and tests, wipes the build directory, and generates all the appropriate JS, CSS, and other assets, mangled and ready for production use.
+Running **`npm run build:dist`** will create the whole distribution package from scratch - it runs linting and tests, wipes the build directory, and generates all the appropriate JS, CSS, and other assets, mangled and ready for production use.
 
 Most of the time, though, you'll want a development build.  **`npm run build`** is faster and generates prettier output - and for JS and JSX files, it includes embedded sourcemaps for easy debugging.
 
@@ -23,7 +23,7 @@ We support auto-rebuilding too.  **`npm start`** beings a watch process that upd
 
 There are other useful commands, like `npm run build-css` or `npm run copy-assets` - use `npm run` to list them all.
 
-## Code Style
+## Code style
 
 Please follow our [style guide](../STYLEGUIDE.md).  We've set up linting to help:
 
