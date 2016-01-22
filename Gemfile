@@ -46,7 +46,9 @@ group :development, :test do
   gem 'active_record_query_trace'
   # for unit testing
   gem 'factory_girl_rails'
-  gem 'fakeweb'
+  gem 'webmock', require: false
+  gem 'vcr', require: false
+
   gem 'simplecov', '~> 0.9', require: false
   gem 'coveralls', require: false # test coverage; https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
   gem 'mocha', require: false
@@ -64,6 +66,7 @@ group :development, :test do
   gem 'spring-commands-testunit'
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
+  gem 'minitest-around'
   gem 'eyes_selenium', '~> 2.5.0'
 end
 
@@ -150,7 +153,6 @@ gem 'heroku_rails_deflate', group: [:staging, :production, :test, :levelbuilder]
 
 gem "paranoia", "~> 2.0" # 'delete' Rails model objects by setting a deleted_at column instead of deleting the row
 
-gem 'react-rails', '~> 1.0'
 # JSON model serializer for REST APIs
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
 gem 'aws-sdk', '~> 2'

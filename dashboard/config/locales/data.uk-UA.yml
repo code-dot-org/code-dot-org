@@ -88,7 +88,7 @@
         Farmer2: Фермерка 2
         Unplug8: Абстракції
         Artist4: Художник 4
-        Unplug9: Релейне програмування
+        Unplug9: Естафетне програмування
         Farmer3: Фермерка 3
         Unplug10: Інтернет
         Artist5: Художник 5
@@ -665,7 +665,7 @@
         Unplug6: Умови
         Unplug7: Написання пісень
         Unplug8: Абстракції
-        Unplug9: Релейне програмування
+        Unplug9: Естафетне програмування
         Unplug10: Інтернет
         Unplug11: Підведення підсумків
         C1_happy_maps_unplugged: Щасливі карти
@@ -697,7 +697,7 @@
         C2_graph_paper: Програмування по клітинках
         C2_conditionals_with_cards: Умови
         C2_binary_bracelets: Двійкові браслети
-        C2_relay_programming: Релейне програмування
+        C2_relay_programming: Естафетне програмування
         C2_paper_airplanes: Паперові літачки
         C2_digital_footprint: Твій цифровий слід
         C2_digital_footprint_v2: Твій цифровий слід

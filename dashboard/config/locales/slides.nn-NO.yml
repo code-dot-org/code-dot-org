@@ -1888,10 +1888,10 @@
           bygge programmet vårt.
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og
+          trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet.
+          Hva hvis jeg vil at fuglen skal gjøre noe annet etter at den har flyttet
+          seg frem en boks? Da legger jeg til en blokk til i programmet vårt.
       4:
         image: notes/C4_intro_4.png
         text: I'm going to choose the "turn right" block and I'll drag it under my

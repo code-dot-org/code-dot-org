@@ -29,8 +29,8 @@
     code:
       label: 'Добавить учителя:'
       placeholder: Код раздела (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Пожалуйста, введите код и поделились со своим учителем. Это 6
+        буквенный код типа "АБВГДЕ".
     submit: Добавить учителя
   add_hint_form:
     placeholder: Пожалуйста, введите Вашу подсказку здесь
@@ -41,6 +41,7 @@
   puzzle: Головоломка
   trophies: трофеи
   courses: курсы
+  unplugged_activity: Урок без компьютера
   of: из
   more: ЕЩЁ
   less: СВЕРНУТЬ

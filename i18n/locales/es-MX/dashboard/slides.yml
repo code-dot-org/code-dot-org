@@ -166,7 +166,7 @@ es-MX:
         text: 'Si coloco un bloque "move forward" (avanza hacia adelante) en el lugar dónde dice "do" (hacer) y un bloque "turn left" (giro izquierda) en dónde dice "else" (si no) esto quiere decir que el zombie eligirá una de las dos opciones. IF (si) existe un camino hacia adelante, el zombie se moverá adelante, de otra manera (no existe un camino hacia adelante), el zombie girará hacia la izquierda.'
       3:
         image: notes/hoc5_3.jpg
-        text: 'Al igual que el bloque "si", podemos poner el bloque "si sino" dentro de un bloque "repetir" para que el zombie siga moviéndose y el bloque "si sino" seguirá comprobando si hay espacio para girar.'
+        text: 'Al igual que el bloque "y", podemos poner el bloque "si sino" dentro de un bloque "repetir" para que el zombie siga moviéndose y el bloque "y sino" seguirá comprobando si hay espacio para girar.'
       4:
         image: notes/hoc5_4.jpg
         text: Ahora, a conseguir esos zombies donde pertenecen!
@@ -179,7 +179,7 @@ es-MX:
         text: Este bloque se ve igual que el bloque ¨si¨, pero hay una pieza extra en la parte inferior que dice ¨sino¨. Si ponemos un bloque ¨avanzar¨ donde dice ¨hacer¨ y un bloque ¨girar a la izquierda¨ donde dice ¨sino¨, eso significa que la ardilla Scrat avanzará si hay un camino delante. Si no hay un camino a seguir, Scrat girará a la izquierda.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: 'Es tomar una decisión y hacer una de las dos acciones en base a esa decisión. Y al igual que los bloques "si", puedes poner bloques "si-sino" dentro de bloques "repetir".'
+        text: 'Es tomar una decisión y hacer una de las dos acciones en base a esa decisión. Y al igual que los bloques , puedes poner bloques "si-sino" dentro de bloques "repetir".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
         text: ¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!
@@ -192,27 +192,29 @@ es-MX:
         text: Vamos a aprender cómo definir funciones.Las definiciones de funciones tienen una estrella en lá esquina.El nombre de la Función esta escrito en la linea superior.
       3:
         image: notes/stage13_3.jpg
-        text: 'Los bloques que se encuentran dentro de la definición nos dicen qué hace. Así que esta definición de función se llama "rellena 5" y está formada por un bloque "repetir" y un bloque "rellenar".'
+        text: 'Los bloques que se encuentra dentro de la definicion nos dicen que hace. Asi que esta definiction de funcion se llama "rellena 5" y esta formada por un bloque "repetir" y un bloque "rellenar"'
       4:
         image: notes/stage13_4.jpg
-        text: 'La definición se encuentra en el espacio de trabajo, pero nuestro agricultor no ejecutará la función hasta que arrastremos el bloque "llenar 5" desde la categoría de funciones.'
+        text: |
+          la denfinicion se encuentra en el espacio de trabajo, pero nuestro agricultor no ejecutara 
+          La funcion hasta que arrastremos el blogue "llenar 5" desde la categoria de categoria de funciones.
       5:
         image: notes/stage13_5.jpg
-        text: '¡Volvamos a hacer divertidas las funciones! '
+        text: '¡Volvamos a hacer divertidas las funciones '
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: '¡Hola! soy Makinde. Vamos a aprender acerca del bloque "mientras". '
+        text: '¡Hola! soy Makinde. Vamos a aprender acerca del bloque "mientras" '
       2:
         image: notes/stage9_6.jpg
-        text: 'El "bloque mientras que (While)" hará todo lo que pones en su interior mientras la declaración en la parte superior es verdadera.'
+        text: 'El "bloque mientras que" hará todo lo que pones en su interior como la declaración en la parte superior es TRUE.'
       3:
         image: notes/stage9_7.jpg
-        text: Por ejemplo, si la granjera está sobre un montón, continuará eliminando una palada llena mientras(WHILE) quede tierra debajo de ella.
+        text: Por ejemplo, si el agricultor está de pie sobre una pila, ella continuará eliminar 1 shovelful mientras que todavía hay un montón debajo de ella.
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: '!Hola! soy Trina y trabajo para Pixar. He trabajado en un montón de películas incluyendo Shrek.'
+        text: Hola, soy Trina y trabajo para Pixar. Ha trabajado en un montn de pelicculas incluyendo Sherk.
       2:
         image: notes/stage11_2.jpg
         text: 'Esta es nuestra nueva iteración "contador". Realizará acciones una y otra ves y puedes hacer que las acciones cambien un poco cada vez.'
@@ -234,7 +236,7 @@ es-MX:
         text: Podemos escribir a mano ese código o podemos usar una función con parámetros.
       4:
         image: notes/stage15_4.jpg
-        text: 'Para hacer esto, haz clic en la estrella azul sobre la definición de la función "dibuja un triángulo". Después arrastra "nombre de entrada" en el bloque "entrada".'
+        text: 'Para ello, haga clic en la estrella azul en la definición de la función "dibujar un triángulo". Luego arrastre "nombre entrada" en el bloque de "entrado".'
       5:
         image: notes/stage15_5.jpg
         text: 'Después si escribes "longitud" en el lugar que dice "x" y presionas "Enter" crearás una entrada longitud para tu función.'
@@ -314,7 +316,7 @@ es-MX:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hola, soy Chris Bosh. Soy un jugador de baloncesto profesional, y programé en la Universidad.
+        text: Hola, yo soy Chris Bosh. Yo soy un profecional baquet bol jugador, y estoy en colegio.
       2:
         image: notes/frozen3_2.jpg
         text: Uno de los conceptos más importantes en Ciencias de la computación trata sobre cómo definir nuevos comandos. La mayoría de lenguajes de programación tienen solamente cerca de 100 palabras o comandos. Y en realidad, el arte y la magia está en definir tus propias nuevas palabras utilizando estos bloques de construcción.
@@ -414,7 +416,7 @@ es-MX:
         text: Suceden cosas a las que todos respondemos. Sentimos hambre y nos vamos a la nevera. Escuchamos que el cartero viene y pone nuestro correo en el buzón y luego vamos a obtener nuestro correo. Lo mismo pasa con los eventos de pulsar un botón o mover una palanca de mando. Son algo que pasa que provocan que hagamos algo.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: 'En los videojuegos, hay un evento llamado "Actualizar" y pasa 30 o 60 veces por segundo. Para los programadores de videojuegos eso es casi más importante como un evento, que los botones o la palanca de mando.'
+        text: 'En los videohugeos, hay un evento llamado "Actualizar" y pasa 30 o 60 veces por segundo. Para los programadores de videojuegos eso es casi mas importante como un evento, que los botones ola palanca de mando.'
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: |

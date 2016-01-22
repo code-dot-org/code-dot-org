@@ -9,20 +9,27 @@
 'use strict';
 /* global Sounds */
 
+// Shim window.console to be safe in IE
+require('./consoleShim')(window);
+
 require('./videos');
+
+window.React = require('react');
+// TODO (bbuchanan): Stop including these components in a global way, just
+//                   require them specifically where needed.
+require('./components/abuse_error.jsx');
+require('./components/abuse_exclamation.jsx');
+require('./components/dialog.jsx');
+require('./components/report_abuse_form.jsx');
+require('./components/send_to_phone.jsx');
+require('./components/share_dialog.jsx');
+require('./components/share_dialog_body.jsx');
+require('./components/small_footer.jsx');
+require('./components/stage_progress.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
-
-// In IE console is only defined when developer tools is open. Define it as a
-// noop when undefined (otherwise exceptions get thrown)
-if (!window.console) {
-  window.console = {};
-}
-if (!window.console.log) {
-  window.console.log = function () { };
-}
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.

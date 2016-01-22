@@ -4,7 +4,6 @@
     %ul
       %li= link_to level_path(@level), @level
       %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
-      %li= link_to 'stats', level_stats_path(@level)
       - if can? :edit, @level
         %li
           = link_to 'edit', edit_level_path(@level)

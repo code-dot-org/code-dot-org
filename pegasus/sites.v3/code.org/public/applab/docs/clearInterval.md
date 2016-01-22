@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Control
@@ -20,11 +19,11 @@ Category: Control
 
 [short_description]
 
-Clear an existing interval timer by passing in the value returned by `setInterval`.
+Clears an existing interval timer by passing in the numeric value returned by *setInterval()*.
 
 [/short_description]
 
-**Note:** This function uses the value returned by the [setInterval(function, milliseconds)](/applab/docs/setInterval) function.
+Some interval timers do not run forever, but need to be stopped at some time (maybe like a countdown, see the first example). *clearInterval()* uses the value returned by the [setInterval(function, milliseconds)](/applab/docs/setInterval) function.
 
 [/description]
 
@@ -33,22 +32,17 @@ ____________________________________________________
 
 [example]
 
-In this example, we display a countdown from 10 to 0, then stop the interval timer.
-
 ```
-var countdown = 10; //Initialize the countdown variable to 10
-textLabel("countdown", countdown); //Display the value of the countdown in a text label
-var i = setInterval(function() { //Save the interval timer value in variable i
-  //When the code runs, update the value of the countdown
+var countdown = 10;
+textLabel("countdown", countdown);
+var i = setInterval(function() {
   countdown = countdown - 1;
-  //Then update the display text
   setText("countdown", countdown);
-  //If the countdown has arrived to 0, cancel the interval using variable i
   if(countdown === 0) {
     clearInterval(i);
   }
-}, 1000); //Set the delay to 1000 milliseconds
-console.log("Interval timer ID: " + i); //Print the timer ID to the console
+}, 1000);
+console.log("Interval timer ID: " + i);
 ```
 
 [/example]
@@ -57,16 +51,16 @@ ____________________________________________________
 
 [example]
 
-In this example, we run an interval timer and provide a button that can be used to interrupt it.
+**Example: Stop the Presses!** Run a half second interval timer until a button is pressed.
 
 ```
+// Run a half second interval timer until a button is pressed.
 button("stop", "Stop the timer");
-var i = setInterval(function() { //Save the interval timer value in variable i
-  //Write text to the display to indicate that the timer code was executed
+var i = setInterval(function() {
   write("Timer code ran!");
-}, 1000); //Set the delay to 1000 milliseconds
-onEvent("stop", "click", function(event){
-  clearInterval(i); //Use variable i to cancel the interval timer
+}, 500);
+onEvent("stop", "click", function(){
+  clearInterval(i);
 });
 ```
 
@@ -90,7 +84,7 @@ clearInterval(interval);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| interval | number | Yes | The value returned by the setInterval function to clear.  |
+| interval | number | Yes | The value returned by the setInterval function that you want clear.  |
 
 [/parameters]
 
@@ -104,6 +98,7 @@ No return value.
 [tips]
 
 ### Tips
+- If you want to clear an interval you need to save the value returned by setInterval, var i = setInterval(callback, ms);
 
 [/tips]
 
