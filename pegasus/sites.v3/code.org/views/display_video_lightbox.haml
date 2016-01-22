@@ -39,19 +39,28 @@
 
   window["playVideo_#{id}"] = function(play)
   {
-    var fallbackVideo = $("#showVideo_#{id} video")[0];
+    var fallbackVideo = $("#showVideo_#{id} video");
 
-    if (fallbackVideo)
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_#{id} .videodiv");
+    if (videoDiv.length > 0)
     {
-      videojs(fallbackVideo, {}, function() {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
         play ? this.play() : this.pause();
       });
     }
-    else
+    else if (youtubeIframeContent)
     {
-      var div = $("#showVideo_#{id} .videodiv")[0];
-      var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
       func = play ? 'playVideo' : 'pauseVideo';
-      iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
     }
   }
