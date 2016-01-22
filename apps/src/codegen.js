@@ -1,7 +1,6 @@
 /* global Interpreter, CanvasPixelArray */
 
 var dropletUtils = require('./dropletUtils');
-var utils = require('./utils');
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
@@ -153,58 +152,19 @@ function isCanvasImageData(nativeVar) {
 }
 
 
-/**
- * Create a new "custom marshal" interpreter object that corresponds to a native
- * object.
- * @param {Interpreter} interpreter Interpreter instance
- * @param {Object} nativeObj Object to wrap
- * @param {Object} nativeParentObj Parent of object to wrap
- * @return {!Object} New interpreter object.
- */
-var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentObj) {
-  if (nativeObj === undefined && interpreter.UNDEFINED) {
-    return interpreter.UNDEFINED;  // Reuse the same object.
-  }
-  var type = typeof nativeObj;
-  var obj = {
-    data: nativeObj,
-    isPrimitive: false,
-    isCustomMarshal: true,
-    type: typeof nativeObj,
-    parent: nativeParentObj, // TODO (cpirich): replace with interpreter object?
-    toBoolean: function() {return Boolean(this.data);},
-    toNumber: function() {return Number(this.data);},
-    toString: function() {return String(this.data);},
-    valueOf: function() {return this.data;}
-  };
-  return obj;
-};
-
-exports.customMarshalObjectList = [];
-exports.customMarshalModifiedObjectList = [];
-
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
-  if (maxDepth === 0 || typeof nativeVar === 'undefined') {
+  if (typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
   }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to inifinite levels of depth
   }
-  for (i = 0; i < exports.customMarshalObjectList.length; i++) {
-    if (nativeVar instanceof exports.customMarshalObjectList[i]) {
-      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
-    }
-  }
-  for (i = 0; i < exports.customMarshalModifiedObjectList.length; i++) {
-    var modObj = exports.customMarshalModifiedObjectList[i];
-    if (nativeVar instanceof modObj.instance &&
-        nativeVar[modObj.methodName] !== undefined) {
-      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
-    }
+  if (maxDepth === 0) {
+    return interpreter.createPrimitive(undefined);
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
@@ -247,10 +207,8 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
-exports.createNativeFunctionFromInterpreterFunction = null;
-
 exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
-  if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
+  if (interpreterVar.isPrimitive) {
     return interpreterVar.data;
   } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
@@ -260,25 +218,17 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
                                                           interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT) ||
-      interpreterVar.type === 'object') {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
       nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
                                                               interpreterVar.properties[prop]);
     }
     return nativeObject;
-  } else if (interpreter.isa(interpreterVar, interpreter.FUNCTION)) {
-    if (exports.createNativeFunctionFromInterpreterFunction) {
-      return exports.createNativeFunctionFromInterpreterFunction(interpreterVar);
-    } else {
-      // Just return the interpreter object if we can't convert it. This is needed
-      // for passing interpreter callback functions into native.
-
-      return interpreterVar;
-    }
   } else {
-    throw "Can't marshal type " + typeof interpreterVar;
+    // Just return the interpreter object if we can't convert it. This is needed
+    // for passing interpreter callback functions into native.
+    return interpreterVar;
   }
 };
 
@@ -307,18 +257,18 @@ exports.makeNativeMemberFunction = function (opts) {
   }
 };
 
-function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj, options) {
+function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
   for (var prop in funcsObj) {
     var func = funcsObj[prop];
     if (func instanceof Function) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction(utils.extend(options, {
+      var wrapper = exports.makeNativeMemberFunction({
           interpreter: interpreter,
           nativeFunc: func,
           nativeParentObj: parent,
-      }));
+      });
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -394,27 +344,20 @@ function populateJSFunctions(interpreter) {
  * blockFilter (optional): an object with block-name keys that should be used
  *  to filter which blocks are populated.
  * scope (required): interpreter's global scope.
- * globalObjects (optional): objects containing functions to placed in a new scope
+ * options (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, globalObjects) {
-  for (var globalObj in globalObjects) {
-    // The globalObjects object contains objects that will be referenced
+exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, options) {
+  for (var optsObj in options) {
+    // The options object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
     // world, we need to create associated objects in the interpreter's world
     // so the interpreted code can call out to these native objects
 
     // Create global objects in the interpreter for everything in options
     var obj = interpreter.createObject(interpreter.OBJECT);
-    interpreter.setProperty(scope, globalObj.toString(), obj);
-    // Marshal return values with a maxDepth of 2 (just an object and its child
-    // methods and properties only)
-    populateFunctionsIntoScope(
-        interpreter,
-        obj,
-        globalObjects[globalObj],
-        null,
-        { maxDepth: 2 });
+    interpreter.setProperty(scope, optsObj.toString(), obj);
+    populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
   }
   populateGlobalFunctions(
       interpreter,
