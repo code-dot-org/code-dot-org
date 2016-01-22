@@ -26,7 +26,6 @@ var AuthoredHints = function (studioApp) {
    * @type {!AuthoredHint[]}
    */
   this.hints_ = [];
-  this.contextualHints_ = [];
 
   /**
    * @type {number}
@@ -51,7 +50,7 @@ module.exports = AuthoredHints;
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getUnseenHints = function () {
-  var hints = this.contextualHints_.concat(this.hints_ || []);
+  var hints = this.hints_ || [];
   return hints.filter(function (hint) {
     return hint.alreadySeen === false;
   });
@@ -61,32 +60,10 @@ AuthoredHints.prototype.getUnseenHints = function () {
  * @return {AuthoredHints[]}
  */
 AuthoredHints.prototype.getSeenHints = function () {
-  var hints = this.contextualHints_.concat(this.hints_ || []);
+  var hints = this.hints_ || [];
   return hints.filter(function (hint) {
     return hint.alreadySeen === true;
   });
-};
-
-/**
- * Creates contextual hints for the specified blocks and adds them to
- * the queue of hints to display. Triggers an animation on the hint
- * lightbulb if the queue has changed.
- * @param {String[]} blocks An array of XML strings representing the
- *        missing recommended Blockly Blocks for which we want to
- *        display hints.
- */
-AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
-  var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
-
-  // if the set of contextual hints currently being shown has changed,
-  // animate the hint display lightbulb when we update it.
-  var oldContextualHints = this.contextualHints_.filter(function (hint) {
-    return hint.alreadySeen === false;
-  });
-  var animateLightbulb = oldContextualHints.length !== newContextualHints.length;
-
-  this.contextualHints_ = newContextualHints;
-  this.updateLightbulbDisplay_(animateLightbulb);
 };
 
 /**
@@ -132,16 +109,23 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
  *        the "default" action when there are no unseen hints. 
  */
 AuthoredHints.prototype.display = function (promptIcon, clickTarget, callback) {
-  this.promptIcon = promptIcon;
-  this.updateLightbulbDisplay_();
-  clickTarget.addEventListener('click', function () {
-    var hintsToShow = this.getUnseenHints();
-    if (hintsToShow.length > 0) {
-      this.showHint_(hintsToShow[0], callback);
-    } else {
-      callback();
-    }
-  }.bind(this));
+  if (this.hints_ && this.hints_.length) {
+    $(promptIcon.parentNode).addClass('authored_hints');
+    this.updateLightbulbDisplay_();
+
+    promptIcon.parentNode.insertBefore(this.lightbulb, promptIcon);
+
+    clickTarget.addEventListener('click', function () {
+      var hintsToShow = this.getUnseenHints(); 
+      if (hintsToShow.length > 0) {
+        this.showHint_(hintsToShow[0], callback);
+      } else {
+        callback();
+      }
+    }.bind(this));
+  } else {
+    dom.addClickTouchEvent(clickTarget, callback);
+  }
 };
 
 /**
@@ -167,24 +151,10 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
 
 /**
  * Adjusts the displayed number of unseen hints. Dims the lightbulb
- * image if there are no hints. Optionally plays a simple CSS animation
- * to highlight the update.
- * @param {boolean} animate defaults to false
+ * image if there are no hints.
  */
-AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
-  animate = animate || false;
-
+AuthoredHints.prototype.updateLightbulbDisplay_ = function () {
   var hintCount = this.getUnseenHints().length; 
-
-  // If we have hints to show, but are not in the DOM, insert ourselves
-  // into the DOM. This can happen when contextual hints appear in a
-  // level that was initialized with no hints. Note that we can be in
-  // the DOM and have zero hints to show, and that's just fine.
-  if (hintCount > 0 && !document.contains(this.lightbulb)) {
-    this.promptIcon.parentNode.className += ' authored_hints';
-    this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
-  }
-
   // If there are more than nine hints, simply display "9+"
   var hintText = (hintCount > 9) ? "9+" : hintCount;
   if (hintCount === 0) {
@@ -193,14 +163,10 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
     this.lightbulb.innerHTML = lightbulbSVG;
     this.lightbulb.querySelector('#hintCount').textContent = hintText;
   }
-
-  var bulb = document.getElementById("bulb");
-  if (animate && bulb) {
-    bulb.setAttribute('class', 'animate-hint');
-  }
 };
 
 AuthoredHints.prototype.getHintsDisplay = function () {
+
   var hintsDisplay = React.createElement(HintsDisplay, {
     hintReviewTitle: msg.hintReviewTitle(),
     seenHints: this.getSeenHints(),
@@ -234,18 +200,7 @@ AuthoredHints.prototype.showHint_ = function (hint, callback) {
             callback();
           }.bind(this),
           showHint: function () {
-            if (hint.block) {
-              var content = document.createElement('div');
-              content.innerHTML = hint.content;
-              var blockContainer = document.createElement('div');
-              blockContainer.style.height = '100px';
-              content.appendChild(blockContainer);
-              api.set('content.text', content);
-
-              Blockly.BlockSpace.createReadOnlyBlockSpace(blockContainer, hint.block);
-            } else {
-              api.set('content.text', hint.content);
-            }
+            api.set('content.text', hint.content);
             $(api.elements.content).find('img').on('load', function (e) {
               api.reposition(e);
             });
