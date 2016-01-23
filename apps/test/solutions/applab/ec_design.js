@@ -604,8 +604,10 @@ module.exports = {
 
         // a remixed button with a previous channel id in its background image url.
         var yellowImageRegex = new RegExp("^url\\(http://localhost:[0-9]+/v3/assets/applab-channel-id/yellow\\.png\\)$");
-        assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')), 'after init, design mode button image prefixed with new channel id');
-        assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')), 'after init, code mode button image prefixed with new channel id');
+        assert.isTrue(yellowImageRegex.test($('#design_button1').css('background-image')),
+          'after init, design mode button image prefixed with new channel id: ' + $('#design_button1').css('background-image'));
+        assert.isTrue(yellowImageRegex.test($('#button1').css('background-image')),
+          'after init, code mode button image prefixed with new channel id: ' + $('#button1').css('background-image'));
 
         // a legacy image element whose image url was never set.
         assert.equal($('#design_image2').attr('src'), '/blockly/media/1x1.gif', 'after init, in design mode, empty image has placeholder image src');

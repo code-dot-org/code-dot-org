@@ -1,5 +1,6 @@
-var original = null;
-var listeners = [];
+function isNativeCode(func) {
+  return func && func.toString().indexOf('[native code]') > -1;
+}
 
 /**
  * Wraps window.addEventListener to catch all added listeners, allowing us to
@@ -10,15 +11,22 @@ module.exports = {
    * Attach our wrapper, tracking all added listeners
    */
   attach: function () {
-    if (original) {
+    if (!isNativeCode(window.addEventListener)) {
       throw new Error('addEventListener already wrapped');
     }
+    if (window.originalAddEventListener) {
+      throw new Error('originalAddEventListener already exists');
+    }
+    if (window.wrappedListeners) {
+      throw new Error('wrappedListeners already exists');
+    }
 
-    original = window.addEventListener;
+    window.originalAddEventListener = window.addEventListener;
+    window.wrappedListeners = [];
 
     window.addEventListener = function () {
-      listeners.push(arguments);
-      original.apply(window, arguments);
+      window.wrappedListeners.push(arguments);
+      window.originalAddEventListener.apply(window, arguments);
     };
   },
 
@@ -26,11 +34,14 @@ module.exports = {
    * Detach our wrapper, removing all added listeners
    */
   detach: function () {
-    window.addEventListener = original;
-    original = null;
-    listeners.forEach(function (argList) {
+    if (!isNativeCode(window.originalAddEventListener)) {
+      throw new Error('originalAddEventListener is not a native function');
+    }
+    window.addEventListener = window.originalAddEventListener;
+    window.originalAddEventListener = null;
+    window.wrappedListeners.forEach(function (argList) {
       window.removeEventListener.apply(window, argList);
     });
-    listeners = [];
+    window.wrappedListeners = null;
   }
 };
