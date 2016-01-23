@@ -2650,10 +2650,10 @@
           enemmän.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
+        text: "[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
           Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper
           ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat
-          kymmentätuhatta sikaa voitat pelin.'
+          kymmentätuhatta sikaa voitat pelin."
       4:
         image: notes/starwars_congrats_4.JPG
         text: |
@@ -2776,10 +2776,10 @@
           enemmän.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
+        text: "[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla
           Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper
           ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat
-          kymmentätuhatta sikaa voitat pelin.'
+          kymmentätuhatta sikaa voitat pelin."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
         text: |
@@ -2911,8 +2911,8 @@
           selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
-          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!'
+        text: "[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
+          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Voit jakaa valmiin luomuksesi ystävillesi jakolinkin avulla. - Pidä
@@ -2927,8 +2927,8 @@
           selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
-          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!'
+        text: "[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista.
+          - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Voit rakentaa ihan mitä haluat. - Pidä hauskaa!

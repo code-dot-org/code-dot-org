@@ -71,8 +71,8 @@
     need_confirmation: Mottok du ikke instruksjoner om hvordan du bekrefter?
     need_unlock: Mottok du ingen instruksjoner om hvordan du låser opp?
   signup_form:
-    student_count: '%{count} elever har allerede registrert seg.'
-    teacher_count: '%{count} lærere har allerede registrert seg.'
+    student_count: "%{count} elever har allerede registrert seg."
+    teacher_count: "%{count} lærere har allerede registrert seg."
     overview_student: Registrer en konto for å følge med på progresjonen din. Din
       epost er hovedsaklig brukt for å tillate deg å logge inn og for å gjenopprette
       passord. For mer informasjon, se våre <a href="http://code.org/privacy">rettningslinjer
@@ -149,12 +149,12 @@
       %{name}
   follower:
     invite_sent: Invitasjon er sendt
-    added_teacher: '%{name} er lagt til som din lærer'
+    added_teacher: "%{name} er lagt til som din lærer"
     registered: Du har meldt deg på %{section_name}.
     error:
       signed_in: Vennligst logg ut før du fortsetter
       username_not_found: Brukernavnet %{username} finnes ikke
-      username_in_use: '%{username} er allerede tatt. Vennligst velg et annet'
+      username_in_use: "%{username} er allerede tatt. Vennligst velg et annet"
       no_teacher: Kan ikke finne noen som er logget på med '%{teacher_email_or_code}'.
         Vennligst be dem melde seg på og forsøk deretter å legge dem til på nytt
       section_not_found: Kunne ikke finne en seksjon med koden '%{section_code}'.
@@ -197,7 +197,7 @@
       msg_publicschool: Bekreft at du er amerikanske offentlige skolelærer.
       msg_visit_website: Besøk nettsiden
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox plass
@@ -206,7 +206,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Velg en premie:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -249,12 +249,12 @@
     edit: Rediger
     edit_model: Rediger %{model}
     update: Oppdater
-    destroy: Ødelegg
+    destroy: "Ødelegg"
     back: Tilbake
     confirm: Er du sikker?
-    created: '%{model} ble opprettet.'
-    updated: '%{model} ble oppdatert.'
-    destroyed: '%{model} ble slettet.'
+    created: "%{model} ble opprettet."
+    updated: "%{model} ble oppdatert."
+    destroyed: "%{model} ble slettet."
     access_denied: Du har ikke tilgang til denne %{model}.
   nav:
     header:
@@ -277,7 +277,7 @@
       signup: Meld deg på
       already_registered: Allerede registrert?
     popup:
-      progress_for_user: '%{name} s fremgang'
+      progress_for_user: "%{name} s fremgang"
       progress: Din fremdrift
       lines: 'Totalt antall linjer kode: %{lines}'
       close: LUKK
@@ -285,7 +285,7 @@
       puzzle_map: Stadier
       prizes: Samle alle %{total_trophies} pokalene og vinn premier!
       prize_earned: Alle %{total_trophies} premiene er samlet. Premien er vunnet!
-      prize_us_only: (Kun amerikanske elever)
+      prize_us_only: "(Kun amerikanske elever)"
       prizes_link: Mer info
   teacher:
     answer: Svar
@@ -293,13 +293,13 @@
     title:
       one: 'Din lærer:'
       other: 'Dine lærere:'
-    remove: (Fjern lærer)
+    remove: "(Fjern lærer)"
     confirm:
       remove: Er du sikker på at du vil fjerne denne læreren?
     students:
       dashboard: Gå til lærer-oversikten
     user_not_found: Læreren eller eleven ble ikke funnet
-    student_teacher_disassociated: '%{teacher_name} er fjernet som lærer for %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} er fjernet som lærer for %{student_name}"
     panel:
       answer_viewer: Visning av svaret
       student: elev
@@ -313,11 +313,11 @@
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
-    email_confirm_wrong_email: (Feil e-postadresse?)
+    email_confirm_wrong_email: "(Feil e-postadresse?)"
     email_resend_confirm: Send bekreftelse på nytt
-    new_password_hint: (la stå tomt hvis du ikke vil endre det)
-    current_password_hint: (vi trenger ditt gjeldende passord for å bekrefte dine
-      endringer)
+    new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
+    current_password_hint: "(vi trenger ditt gjeldende passord for å bekrefte dine
+      endringer)"
     delete: Slett kontoen
     delete_text: Klikk på knappen under for å slette kontoen din.
     delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers
@@ -326,16 +326,12 @@
   user_level:
     completed: Fullført
     tried: Forsøkt
-  user_stats:
-    recent_activity: Nylig aktivitet
-    show_more: Vis mer
-    classroom_activity: Frakoblet Aktivitet
   home:
     title: Kodestudio
     description: Code Studio er hjemmet til nettbaserte kurs av Code.org
-    lines_of_code: '%{lines_count} LINJER MED KODE SKREVET AV ELEVER'
-    lines_of_code_linebreak: '%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count}
-      MILLIONER STUDENTER'
+    lines_of_code: "%{lines_count} LINJER MED KODE SKREVET AV ELEVER"
+    lines_of_code_linebreak: "%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count}
+      MILLIONER STUDENTER"
     all_courses: Oversikt over kurs 1, 2 og 3
     lesson_plans: Plan for øvelser
     signin_message: Allerede registrert? %{link}
@@ -371,10 +367,10 @@
     test_videos_help: Test vår nye videospiller på skolen din
     try_beta_courses: Nyhet! Prøv våre betakurs for barneskoleelever
     use_as_teacher: Bruk denne nettsiden som lærer
-    heading_hoc2014: <h2>Kodetimen for</h2><h1>Alle aldre</h1>
-    heading_elementary: <h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>
-    heading_apps: <h2>Moro for</h2><h1>Alle</h1>
-    heading_legacy: <h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>
+    heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
+    heading_elementary: "<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>"
+    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
+    heading_legacy: "<h2>Våre generelle kurs for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: Prøv et kurs på Code Studio
     choose_next_course: Prøv et av Code Studio kursene ved å velge nedenfor
@@ -407,8 +403,8 @@
       tilhører Rovio Entertainment Ltd.<br />Plants vs. Zombies&#8482; &amp; &copy;
       %{current_year} Alle rettigheter tilhører Electronic Arts Inc.
     powered_by_aws: Drevet av Amazon Web Services
-    trademark: © Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code
-      (Kodetimen) ® er varemerker tilhørende Code.org.
+    trademark: "© Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code
+      (Kodetimen) ® er varemerker tilhørende Code.org."
     copyright: Opphavsrett
     more: Mer
     feedback: Gi tilbakemelding
@@ -458,7 +454,7 @@
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: Åpne oppgavelisten
+  download_pdf: "Åpne oppgavelisten"
   lesson_plan: Leksjonsplan
   view_lesson_plan: Vis leksjonsplan
   pdf_download: Last ned PDF
@@ -533,7 +529,7 @@
     want_to_make_your_own: Vil du lage din egen?
     more: Flere &rarr;
     caption_by_name_age: av %{name}, %{age} år
-    caption_time_ago: '%{time_ago} siden'
+    caption_time_ago: "%{time_ago} siden"
     header: Galleri
     header_playlab: Spill-lab
     header_artist: Kunstner
@@ -546,7 +542,7 @@
     feedback: Gi tilbakemelding
     report_bug: Rapporter feil
     support: Få hjelp
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!

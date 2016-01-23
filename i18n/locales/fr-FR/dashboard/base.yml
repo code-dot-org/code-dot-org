@@ -261,7 +261,7 @@ fr:
       remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
     students:
       dashboard: "Aller au tableau de bord de l'enseignant"
-    user_not_found: Le professeur est indisponible.
+    user_not_found: "L'enseignant est introuvable."
     student_teacher_disassociated: '%{teacher_name} est ton nouveau professeur.'
     panel:
       answer_viewer: Visualisation des réponses
@@ -287,10 +287,6 @@ fr:
   user_level:
     completed: Terminé
     tried: A essayé
-  user_stats:
-    recent_activity: Activité récente
-    show_more: Afficher plus
-    classroom_activity: Activité manuelle
   home:
     title: Code Studio
     description: Code Studio héberge les cours en ligne créés par code.org

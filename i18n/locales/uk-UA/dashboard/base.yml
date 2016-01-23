@@ -283,10 +283,6 @@ uk:
   user_level:
     completed: Завершено
     tried: Спробував
-  user_stats:
-    recent_activity: Останні дії
-    show_more: Показати більше
-    classroom_activity: Безмашинна вправа
   home:
     title: Студія коду
     description: Студія коду є домівкою для онлайн курсів, створених Code.org

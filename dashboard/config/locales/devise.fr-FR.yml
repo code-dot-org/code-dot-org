@@ -75,7 +75,7 @@
       not_locked: n'a pas été verrouillé
       not_saved:
         one: 'Une erreur a empêché ce(tte) %{resource} d''être enregistrée :'
-        other: '%{count} erreurs ont empêché ce(tte) %{resource} d''être enregistrée :'
+        other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être enregistrée :"
     invitations:
       send_instructions: Un e-mail d'invitation à été envoyé à %{email}.
       invitation_token_invalid: Le jeton d'invitation fourni n'est pas valide !

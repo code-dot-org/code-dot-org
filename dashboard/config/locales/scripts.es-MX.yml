@@ -152,22 +152,22 @@
           description_short: El Curso 3 es una continuación del Curso 2.
         playlab:
           title: Laboratorio de Juegos
-          description: ¡Crea una historia o haz un juego con el Laboratorio de Juegos!
+          description: "¡Crea una historia o haz un juego con el Laboratorio de Juegos!"
           Play Lab: Laboratorio de Juegos
-          description_short: ¡Crea una historia o haz un juego con el Laboratorio
-            de Juegos!
+          description_short: "¡Crea una historia o haz un juego con el Laboratorio
+            de Juegos!"
         artist:
           title: Artista
-          description: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
           Artist: Artista
-          description_short: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          description_short: "¡Dibuja imagenes estupendas y diseños con el Artista!"
         hourofcode:
           Maze: Laberinto
           title: Laberinto clásico
-          description: ¡Prueba los fundamentos de la informática con los personajes
-            de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!
-          description_short: ¡Prueba los fundamentos de la informática con muchos
-            personajes divertidos!
+          description: "¡Prueba los fundamentos de la informática con los personajes
+            de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!"
+          description_short: "¡Prueba los fundamentos de la informática con muchos
+            personajes divertidos!"
         frozen:
           title: Programa con Ana y Elsa
           description: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
@@ -415,9 +415,9 @@
           Eval: Eval
         flappy:
           title: Código Flappy
-          description: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
-            nuestro tutorial de Código Flappy!
-          description_short: ¡Escribe tu propio juego Flappy en menos de 10 minutos!
+          description: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
+            nuestro tutorial de Código Flappy!"
+          description_short: "¡Escribe tu propio juego Flappy en menos de 10 minutos!"
           Flappy Code: Código Flappy
         jigsaw:
           title: Rompecabezas
@@ -431,10 +431,10 @@
           Step: Paso
         Hour of Code:
           title: Hora del código 2013
-          description: ¡Prueba los fundamentos de las ciencias de la computación con
-            personajes de Angry Birds y Plantas vs. Zombis!
-          description_short: ¡Prueba los fundamentos de la informática con muchos
-            personajes divertidos!
+          description: "¡Prueba los fundamentos de las ciencias de la computación
+            con personajes de Angry Birds y Plantas vs. Zombis!"
+          description_short: "¡Prueba los fundamentos de la informática con muchos
+            personajes divertidos!"
           Hour of Code 2013: Hora del código 2013
         Code Studio Puzzle Challenge:
           title: Código Studio Desafio de Rompecabezas
@@ -605,7 +605,7 @@
           title: Principios de la Ciencia de la Computación PD
           description: Introducción en linea de CSP
           description_short: Introducción en linea de CSP
-          What is CSP?: ¿Qué es CSP?
+          What is CSP?: "¿Qué es CSP?"
           Exploring CSP Instructional Materials: Explorando Materiales Instructivos
             de CSP
           Impact of Computer Science: Impact of Computer Science
@@ -1018,7 +1018,7 @@
           online pd?: online pd?
           AppLab: AppLab
           Online PD: PD en línea
-          title: ¡Todas las cosas!
+          title: "¡Todas las cosas!"
           description: Todos los tipos de niveles para las pruebas de la Interfaz
             de Usuario
           description_short: Todos los tipos de niveles para las pruebas de la Interfaz
@@ -1058,12 +1058,12 @@
           App Lab: Laboratorio de App
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Simulador de internet
@@ -1092,7 +1092,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1173,14 +1173,14 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           The Design Recipe: La receta de diseño
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Wrap-Up: Cierre
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1197,7 +1197,7 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1215,7 +1215,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Próximos pasos
         sciencePD2b-iZone:
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
@@ -1229,7 +1229,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1253,7 +1253,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1371,7 +1371,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1404,7 +1404,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1439,7 +1439,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1474,7 +1474,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1483,7 +1483,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1541,13 +1541,15 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1569,7 +1571,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1596,6 +1598,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Edad de hielo juego de laboratorio
           description_short: Crear una historia o hacer un juego con el laboratorio
@@ -1699,9 +1702,9 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Cierre
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

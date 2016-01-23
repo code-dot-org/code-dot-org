@@ -284,10 +284,6 @@ nl:
   user_level:
     completed: Voltooid
     tried: Geprobeerd
-  user_stats:
-    recent_activity: Recente activiteiten
-    show_more: Toon meer
-    classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
     description: Code Studio is de basis voor online cursussen gemaakt door code.org

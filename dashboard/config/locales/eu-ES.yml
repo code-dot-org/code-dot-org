@@ -42,7 +42,7 @@
   trophies: garaikurrak
   courses: Mailak
   unplugged_activity: Lineaz kanpoko ekintza
-  of: -tik
+  of: "-tik"
   more: GEHIAGO
   less: GUTXIAGO
   beta: beta
@@ -70,8 +70,8 @@
     need_confirmation: Ez dituzu konfirmazio argibideak jaso?
     need_unlock: Ez dituzu liberatzeko argibideak jaso?
   signup_form:
-    student_count: '%{count} ikasleek izena eman dute.'
-    teacher_count: '%{count} irakaslek izena eman dute.'
+    student_count: "%{count} ikasleek izena eman dute."
+    teacher_count: "%{count} irakaslek izena eman dute."
     overview_student: Zure aurrerapena jarraitzeko ireki kontu bat. Zure email helbidea
       batez ere saioa hasteko eta pasahitza berreskuratzeko erabiliko dugu. Informazio
       gehiago lortzeko, ikusi gure <a href="http://code.org/privacy">Pribatutasun
@@ -147,13 +147,13 @@
       %{name}
   follower:
     invite_sent: Gonbidapena bidalita
-    added_teacher: '%{name} zure irakasle moduan gehituta'
-    registered: '%{section_name}-n izena eman duzu.'
+    added_teacher: "%{name} zure irakasle moduan gehituta"
+    registered: "%{section_name}-n izena eman duzu."
     error:
       signed_in: Mesedez, itxi saioa jarraitu aurretik
-      username_not_found: '%{username} erabiltzaile izena ez da topatzen'
-      username_in_use: '%{username} erabiltzaile izena existitzen da; mesedez, aukeratu
-        beste bat'
+      username_not_found: "%{username} erabiltzaile izena ez da topatzen"
+      username_in_use: "%{username} erabiltzaile izena existitzen da; mesedez, aukeratu
+        beste bat"
       no_teacher: Ezin izan da '%{teacher_email_or_code}'rekin izen emandako inor
         aurkitu. Mesedez, eska iezaiezu hemen izena emateko eta saiatu berriro gehitzen
       section_not_found: Ez da aurkitu '%{section_code}' kodea duen atalik.
@@ -198,7 +198,7 @@
         zarela.
       msg_visit_website: Bisitatu web orria
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB-ko biltegia Dropboxen
@@ -207,7 +207,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -237,14 +237,14 @@
           not_earned_title: Oraindik irabaz dezakezu 250$ gehiago <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEB-ko
             irakasleak bakarrik)
-          earned: '%{num_trophies} garaikur guztiak lortu dituztenen artean gutxienez
-            7 neska daude. Bonus-sari bat irabazi duzu! (AEBko irakasleek bakarrik)'
+          earned: "%{num_trophies} garaikur guztiak lortu dituztenen artean gutxienez
+            7 neska daude. Bonus-sari bat irabazi duzu! (AEBko irakasleek bakarrik)"
           not_earned: '%{num_trophies} garaikur guztiak lortzen dituzten zure ikasleen
             artean gutxienez 7 neska badaude, zure saria 250$ gehiago da <a target="_blank"
             href="http://DonorsChoose.org">DonorsChoose.org</a> kreditutan (AEBko
             eskola publikoko irakasleeentzat bakarrik).'
   crud:
-    new_model: '%{model} berria'
+    new_model: "%{model} berria"
     show: Erakutsi
     edit: Editatu
     edit_model: Editatu %{model}
@@ -252,9 +252,9 @@
     destroy: Suntsitu
     back: Atzera
     confirm: Ziur zaude?
-    created: '%{model} ongi sortu da.'
-    updated: '%{model} ongi eguneratu da.'
-    destroyed: '%{model} ongi ezabatu da.'
+    created: "%{model} ongi sortu da."
+    updated: "%{model} ongi eguneratu da."
+    destroyed: "%{model} ongi ezabatu da."
     access_denied: Ez daukazu %{model} eredu honetarako baimenik.
   nav:
     header:
@@ -277,15 +277,15 @@
       signup: Eman izena
       already_registered: Dagoeneko izena emanda?
     popup:
-      progress_for_user: '%{name}''ren aurrerapenak'
+      progress_for_user: "%{name}'ren aurrerapenak"
       progress: Zure aurrerapena
       lines: 'Kode lerro kopuru osoa: %{lines}'
       close: ITXI
       mastery: Kontzeptuak
       puzzle_map: Mailak
       prizes: Eskuratu %{total_trophies} garaikur guztiak eta sariak irabazi!
-      prize_earned: '%{total_trophies} garaikur guztiak lortuta. Saria irabazita!'
-      prize_us_only: (AEB-ko ikasleak bakarrik)
+      prize_earned: "%{total_trophies} garaikur guztiak lortuta. Saria irabazita!"
+      prize_us_only: "(AEB-ko ikasleak bakarrik)"
       prizes_link: informazio gehiago
   teacher:
     answer: Erantzuna
@@ -293,13 +293,13 @@
     title:
       one: 'Zure irakaslea:'
       other: 'Zure irakasleak:'
-    remove: (irakaslea ezabatu)
+    remove: "(irakaslea ezabatu)"
     confirm:
       remove: Ziur zaude irakasle hau ezabatu nahi duzula?
     students:
       dashboard: Joan irakaslearen mahaigainera
     user_not_found: Irakaslea ezin izan da aurkitu.
-    student_teacher_disassociated: '%{teacher_name} zure irakasleetatik ezabatu duzu.'
+    student_teacher_disassociated: "%{teacher_name} zure irakasleetatik ezabatu duzu."
     panel:
       answer_viewer: Erantzun Ikusgailua
       student: Ikaslea
@@ -308,15 +308,15 @@
       section: Atala
       example: Emaitza adibidea
       example_with_number: Emaitza adibidea %{solution_number}
-      submitted_on: '%{date}-n bidalia'
+      submitted_on: "%{date}-n bidalia"
       unsubmit: Bidalketa ezeztatu
   user:
     email_confirm_needed: 'Email helbidea ez da baieztatu:'
-    email_confirm_needed_required: '%{email} zure emaila ez da baieztatu:'
-    email_confirm_wrong_email: (Email helbide okerra?)
+    email_confirm_needed_required: "%{email} zure emaila ez da baieztatu:"
+    email_confirm_wrong_email: "(Email helbide okerra?)"
     email_resend_confirm: Baieztatzeko jarraibideak birbidali
-    new_password_hint: (ez baduzu aldatu nahi, bete gabe utzi)
-    current_password_hint: (zure egungo pasahitza behar dugu aldaketak baieztatzeko)
+    new_password_hint: "(ez baduzu aldatu nahi, bete gabe utzi)"
+    current_password_hint: "(zure egungo pasahitza behar dugu aldaketak baieztatzeko)"
     delete: Zure kontua ezabatu
     delete_text: Beheko botoia klikatuz gero zure kontua ezabatuko da.
     delete_text_teacher_note: 'Mesedez kontutan izan: zure kontua ezabatzeak ez ditu
@@ -325,16 +325,12 @@
   user_level:
     completed: Amaituta
     tried: Saiatua
-  user_stats:
-    recent_activity: Azkenaldiko jarduera
-    show_more: Gehiago erakutsi
-    classroom_activity: Lineaz kanpoko ekintza
   home:
     title: Kode Estudioa
     description: Code Studio Code.org-ek sortutako online kurtsoen hasiera da
-    lines_of_code: '%{lines_count} KODE LERRO IKASLEEK IDATZITA'
-    lines_of_code_linebreak: '%{lines_count} KODE LERRO<br/> %{students_count} MILIOI
-      IKASLEK IDATZITA'
+    lines_of_code: "%{lines_count} KODE LERRO IKASLEEK IDATZITA"
+    lines_of_code_linebreak: "%{lines_count} KODE LERRO<br/> %{students_count} MILIOI
+      IKASLEK IDATZITA"
     all_courses: 1., 2. eta 3. Kurtsoen laburpena
     lesson_plans: Ikasketa plana
     signin_message: Jadanik erregistratuta? %{link}
@@ -344,7 +340,7 @@
       egin klase osoaren jarraipena.
     teacher_dashboard: Ikusi aurrerapen panela
     teacher_student_count_one: Ikasle %{count} duzu.
-    teacher_student_count: '%{count} ikasle dituzu.'
+    teacher_student_count: "%{count} ikasle dituzu."
     teacher_averages: Batezbeste, zure ikasleek "kontzeptuen menperatze" %{trophy_max}
       garaikurretatik %{trophy_average} irabazi dituzte.
     teacher_print_certificates: Inprimatu ikastaro hau bukatu duten ikasleen ziurtagiriak
@@ -373,11 +369,11 @@
     test_videos_help: Probatu gure bideo irakurgailu berria zure eskolan
     try_beta_courses: Berria! proba itzazu LH5 ikasleentzako beta ikastaroak
     use_as_teacher: Erabili gune hau irakasle gisa
-    heading_hoc2014: <h2>Kode Ordua</h2><h1>Adin guztietarako</h1>
-    heading_elementary: <h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei
-      buruz (adin guztiak)</h1>
-    heading_apps: <h2>Dibertsioa</h2><h1>Guztiontzat</h1>
-    heading_legacy: <h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>
+    heading_hoc2014: "<h2>Kode Ordua</h2><h1>Adin guztietarako</h1>"
+    heading_elementary: "<h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei
+      buruz (adin guztiak)</h1>"
+    heading_apps: "<h2>Dibertsioa</h2><h1>Guztiontzat</h1>"
+    heading_legacy: "<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>"
     your_gallery: Galeria
     no_primary_course: Probatu Code Studioko ikastaro bat
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
@@ -422,8 +418,8 @@
       The Amazing World of Gumball marka erregistratua da eta &copy; 2015 Cartoon
       Network.
     powered_by_aws: Amazon Web Servicesek sostengatua
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode
-      Ordua&reg; Code.org-ren marka bereziak dira.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg; CODE logoa eta Kode
+      Ordua&reg; Code.org-ren marka bereziak dira."
     copyright: Egile-eskubideak
     more: Gehiago
     feedback: Bidali iruzkina
@@ -548,7 +544,7 @@
       programa bakoitza martxan ikusteko.
     want_to_make_your_own: Zurea egin nahi duzu?
     more: Gehiago &rarr;
-    caption_by_name_age: '%{name}, adina %{age}'
+    caption_by_name_age: "%{name}, adina %{age}"
     caption_time_ago: orain dela %{time_ago}
     header: Galeria
     header_playlab: Istorio eta jokoak
@@ -562,7 +558,7 @@
     feedback: Bidali iruzkina
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Erantzun okerra
     wrong_body: Erantzuna ez da zuzena. Saiatu berriro!

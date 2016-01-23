@@ -283,10 +283,6 @@ lv:
   user_level:
     completed: Pabeigts
     tried: Mēģināts
-  user_stats:
-    recent_activity: Pēdējā aktivitāte
-    show_more: Rādīt vairāk
-    classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
     description: Code Studio ir vietne Code.org izstrādātiem tiešsaistes kursiem

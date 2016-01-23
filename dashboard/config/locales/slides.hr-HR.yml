@@ -169,7 +169,7 @@
           Tech na studij informatike. Isprobajmo naš novi blok "ponavljaj dok ne bude".
       2:
         image: notes/hoc3_2.jpg
-        text: Što ako nismo znali koliko ptica treba ići dok ne dođe do svinje?
+        text: "Što ako nismo znali koliko ptica treba ići dok ne dođe do svinje?"
       3:
         image: notes/hoc3_3.jpg
         text: Ako stavimo blok "idi naprijed" unutar bloka "ponavljaj dok ne bude",
@@ -310,8 +310,8 @@
         text: Cao ja sam Janete, i ja sam inzinjer na Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: Što ako želimo nacrtati niz trokuta, a da njihove stranice budu različitih
-          duljina?
+        text: "Što ako želimo nacrtati niz trokuta, a da njihove stranice budu različitih
+          duljina?"
       3:
         image: notes/stage15_3.jpg
         text: Možemo napisati cijeli kôd ručno ili možemo koristiti funkciju s parametrima.
@@ -339,10 +339,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Čestitam! U posljednjem zadatku koji si riješio, upravo si napisao kôd
-          kojim možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez sprednih
-          puteva ili tunela bilo koje duljine, bez obzira radi li se o zombiju, ptici,
-          svemirskom vozilu ili čak automobilu s autopilotom.
+        text: "Čestitam! U posljednjem zadatku koji si riješio, upravo si napisao
+          kôd kojim možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez
+          sprednih puteva ili tunela bilo koje duljine, bez obzira radi li se o zombiju,
+          ptici, svemirskom vozilu ili čak automobilu s autopilotom."
       2:
         image: notes/hoc6_2.jpg
         text: Osnovni pojmovi koje si koristio nalaze se u srcu svake aplikacije koju
@@ -2633,17 +2633,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2755,17 +2755,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2885,7 +2885,7 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti.
+        text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više
@@ -2893,9 +2893,9 @@
           odaberi.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Kad završiš svoj rad, odaberi "dijeli" (share) da dohvatiš poveznicu
@@ -2903,7 +2903,7 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti.
+        text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više
@@ -2911,9 +2911,9 @@
           odaberi.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Sad možeš napraviti što god želiš. Zabavi se!

@@ -54,7 +54,7 @@
           el botón "Reiniciar".
       13:
         image: notes/hoc1_13.jpg
-        text: ¡Vamos por esos cerdos!
+        text: "¡Vamos por esos cerdos!"
     artist_intro:
       1:
         image: notes/stage5_1.jpg
@@ -97,8 +97,8 @@
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: ¡Hola, soy Katie! Una de las cosas más emocionantes de las Ciencias
-          de la computación es que un programa de computadora puede ser interactivo.
+        text: "¡Hola, soy Katie! Una de las cosas más emocionantes de las Ciencias
+          de la computación es que un programa de computadora puede ser interactivo."
       2:
         image: notes/flappy02.jpg
         text: Cada vez que alguien hace click, toca o teclea en una computadora o
@@ -110,8 +110,8 @@
           clic en el ratón, reproduce un sonido" '
       4:
         image: notes/flappy04.jpg
-        text: ¿Has oído del juego FlappyBird? Mediante el uso de controladores de
-          eventos, vamos a aprender a programar nuestra propia versión de FlappyBird!
+        text: "¿Has oído del juego FlappyBird? Mediante el uso de controladores de
+          eventos, vamos a aprender a programar nuestra propia versión de FlappyBird!"
       5:
         image: notes/flappy05.jpg
         text: El código que vas a escribir involucra arrastrar y soltar bloques que
@@ -174,8 +174,8 @@
           el bloque "repetir hasta".
       2:
         image: notes/hoc3_2.jpg
-        text: ¿Qué sucedería si no supiéramos cuanto debería moverse el pájaro para
-          llegar al cerdo?
+        text: "¿Qué sucedería si no supiéramos cuanto debería moverse el pájaro para
+          llegar al cerdo?"
       3:
         image: notes/hoc3_3.jpg
         text: Si ponemos un bloque "avanzar" dentro del bloque "repetir hasta", el
@@ -260,7 +260,7 @@
           de bloques "repetir".
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: ¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!
+        text: "¡Ahora vamos a ayudar a la ardilla Scrat a conseguir esa bellota!"
     function:
       1:
         image: notes/stage13_1.jpg
@@ -284,7 +284,7 @@
           5\" desde la categoria de categoria de funciones.\n"
       5:
         image: notes/stage13_5.jpg
-        text: '¡Volvamos a hacer divertidas las funciones '
+        text: "¡Volvamos a hacer divertidas las funciones "
     loop_while:
       1:
         image: notes/stage9_5.jpg
@@ -313,19 +313,19 @@
           Arrastra el bloque "contador" desde la sección "Variables" al sitio "longitud".
       4:
         image: notes/stage11_4.jpg
-        text: Esto significa que nuestro artista dibujará un cuadrado que tiene lados
-          de 50 píxeles de longitud, luego agregará 10 para dibujar un cuadrado con
-          lados de 60 píxeles de longitud, Después continuará agregando 10 para dibujar
-          cuadrados hasta que alcance 90. Así que tendremos cuadrados de 50, 60, 70,
-          80 y 90.
+        text: Esto significa que nuestro artista dibujará un cuadrado que tiene 50
+          píxeles de longitud por cada lado, luego le agregará 10 para dibujar un
+          cuadrado con 60 píxeles de longitud de cada lado. Después continuará agregando
+          10 para dibujar cuadrados que alcancen 90. Así que tendremos cuadrados de
+          50, 60, 70, 80 y 90.
     parameters:
       1:
         image: notes/stage15_1.jpg
         text: Hola, yo soy Janete y yo soy una ingeniera en Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: ¿Qué pasa si queremos dibujar un montón de triángulos y sus lados tienen
-          que ser de longitudes diferentes?
+        text: "¿Qué pasa si queremos dibujar un montón de triángulos y sus lados tienen
+          que ser de longitudes diferentes?"
       3:
         image: notes/stage15_3.jpg
         text: Podemos escribir a mano ese código o podemos usar una función con parámetros.
@@ -355,10 +355,11 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: ¡Felicidades! Con el último puzzle resuelto, acabas de escribir código
-          que puede decir a cualquier robot cómo encontrar su camino a través de un
-          laberinto sin ramificación o túnel de cualquier longitud, no importa si
-          es un zombie, un pájaro, un rover de Marte o incluso un coche sin conductor.
+        text: "¡Felicidades! Con este último rompecabezas resuelto, acabas de escribir
+          código que puede decir a cualquier robot cómo encontrar su camino a través
+          de un laberinto sin ramificación o túnel de cualquier longitud, no importa
+          si es un zombie, un pájaro, un vagabundo en marte o incluso un coche sin
+          conductor."
       2:
         image: notes/hoc6_2.jpg
         text: Los conceptos básicos que utilizaste son el corazón de cualquier programa
@@ -375,11 +376,11 @@
         image: notes/hoc6_4.jpg
         text: 'La tecnología está cambiando todo lo que hacemos y no importa si eres
           joven o viejo: la programación es divertida, es creativa, y cualquier persona
-          puede aprenderla!'
+          puede aprender!'
     20_wrapup:
       1:
         image: notes/bird.png
-        text: ¡Mostrar notas estará disponible pronto!
+        text: "¡Mostrar notas estará disponible pronto!"
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -405,19 +406,18 @@
           más complejos.
       5:
         image: notes/frozen1_5.jpg
-        text: La pantalla se divide en tres partes principales. A la izquierda, está
+        text: Tu pantalla se divide en tres partes principales. A la izquierda, está
           la superficie de hielo donde se ejecutará tu programa. Las instrucciones
           para cada nivel se escriben justo debajo de la superficie.
       6:
         image: notes/frozen1_6.jpg
-        text: Esta zona media es la caja de herramientas, y cada uno de estos bloques
-          es una acción que pueden hacer Elsa y Anna.
+        text: Esta zona de enmedio es la caja de herramientas, y cada uno de estos
+          bloques es una acción que Elsa y Anna pueden hacer.
       7:
         image: notes/frozen1_7.jpg
         text: El espacio en blanco a la derecha se conoce como "área de trabajo",
-          y es ahí dónde crearemos nuestro programa. Para poder movernos alrededor
-          de la superficie de hielo necesitarás utilizar el bloque de "Mover hacia
-          adelante".
+          ahí es donde se crea nuestro programa. Para poder moverte alrededor de la
+          superficie de hielo necesitarás usar el bloque de "Mover hacia adelante".
       8:
         image: notes/frozen1_8.jpg
         text: 'Aquí, el bloque de "Moverse hacia adelante" dice: "Moverse hacia adelante
@@ -439,11 +439,11 @@
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: ¡Hola, soy Paola! Las computadoras son muy buenas repitiendo acciones.
+        text: "¡Hola, soy Paola! Las computadoras son muy buenas repitiendo acciones.
           Tu puedes contar hasta 10, 20 o 100. Pero una computadora puede contar hasta
           1 billón o 1 trillón. No se aburrirá y sólo le costará unos pocos segundos.
           Ya sea contando, o dibujando, o haciendo cualquier otra cosa -- las computadoras
-          pueden repetir acciones cientos o incluso miles de millones de veces.
+          pueden repetir acciones cientos o incluso miles de millones de veces."
       2:
         image: notes/frozen2_2.jpg
         text: En programación, esto se llama bucle. Un bucle es la forma en la que
@@ -1094,14 +1094,14 @@
           medida que avanza bloque a bloque.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: ¡Oh, ahi está el problema! Los bigotes del gato tienen 75 pixeles de
-          largo, no 25.
+        text: "¡Oh, ahi está el problema! Los bigotes del gato tienen 75 pixeles de
+          largo, no 25."
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: ¿Alguna vez has escuchado lo que es depurar un programa? Esta es la
+        text: "¿Alguna vez has escuchado lo que es depurar un programa? Esta es la
           manera en la que te das cuenta qué es lo que no está funcionando. Cuando
-          depuras un código, identificas y arreglas errores.
+          depuras un código, identificas y arreglas errores."
       2:
         image: notes/C2_bee_debugging_2.png
         text: Aquí estamos dando unos pocos bloques ya en nuestro lugar de trabajo.
@@ -1428,9 +1428,9 @@
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: ¿Alguna vez has escuchado lo que es depurar un programa? Esta es la
+        text: "¿Alguna vez has escuchado lo que es depurar un programa? Esta es la
           manera en la que te das cuenta qué es lo que no está funcionando. Cuando
-          depuras un código, identificas y arreglas errores.
+          depuras un código, identificas y arreglas errores."
       2:
         image: notes/C3_debugging_bee_2.png
         text: Aquí estamos dando unos pocos bloques ya en nuestro lugar de trabajo.
@@ -2269,14 +2269,14 @@
           aprendiendo y adaptando e iterando en sus propias habilidades de hacer juegos.
       4:
         image: notes/infinity_playlab_intro_4.png
-        text: ¿Tienes un juego de video favorito? Bueno, vamos a dar un paso hacia
+        text: "¿Tienes un juego de video favorito? Bueno, vamos a dar un paso hacia
           la creación de juegos usando Play Lab. Los buenos juegos tienen una historia
           y cada historia tiene actores. Actores hacen cosas como hablar, moverse
           e interactuar con los demás. Tal vez incluso anotan puntos basado en las
           reglas del juego. Hoy vamos a aprender cómo hacer todas estas cosas, una
           por una, con personajes de Disney como Ana, Elsa, Hiro, Baymax y Rapunzel.
           Construiremos un juego desde cero que puedes compartir y reproducir en un
-          teléfono.
+          teléfono."
       5:
         image: notes/infinity_playlab_intro_5.png
         text: La pantalla se divide en tres partes principales. Sobre la izquierda
@@ -2302,10 +2302,10 @@
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: ¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
+        text: "¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
           Esperemos que nunca tengas que porque los equipos son realmente buenos en
           repetir cosas. Este es el bloque de repetición por siempre. Cualquier cosa
-          dentro de este bloque pasará por siempre en el juego.
+          dentro de este bloque pasará por siempre en el juego."
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
         text: Así que si queríamos un actor que haga algo repetidamente sin el jugador
@@ -2317,11 +2317,11 @@
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: ¿Qué quieres ser cuando crezcas Olivia? Un astronauta. ¿Sabes qué es
+        text: "¿Qué quieres ser cuando crezcas Olivia? Un astronauta. ¿Sabes qué es
           un programador de computadoras? Sí umm no. ¿Umm espera qué? No estoy realmente
           segura cómo explicar programación de computadoras es bastante simple. Es
           un conjunto de instrucciones como una receta, tienes que seguirlas paso
-          a paso para obtener el resultado final que deseas.
+          a paso para obtener el resultado final que deseas."
       2:
         image: notes/tutorial_puzzle_challenge_2.png
         text: Puedo cambiar el número de píxeles, la longitud de la línea, utilizando
@@ -2362,11 +2362,11 @@
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: ¿Qué quieres ser cuando crezcas Olivia? Un astronauta. ¿Sabes qué es
+        text: "¿Qué quieres ser cuando crezcas Olivia? Un astronauta. ¿Sabes qué es
           un programador de computadoras? Sí umm no. ¿Umm espera qué? No estoy realmente
           segura cómo explicar programación de computadoras es bastante simple. Es
           un conjunto de instrucciones como una receta, tienes que seguirlas paso
-          a paso para obtener el resultado final que deseas.
+          a paso para obtener el resultado final que deseas."
       2:
         image: notes/unplug1_2.png
         text: Ciencias de la computación es una manera de impactar el mundo. Puede
@@ -2485,9 +2485,9 @@
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: ¿Sabes cómo cuando buscas la letra de una canción y definen el coro
+        text: "¿Sabes cómo cuando buscas la letra de una canción y definen el coro
           al principio y luego por el resto de la canción, solo te regresan al coro?
-          Asi es cómo llamas a una función.
+          Asi es cómo llamas a una función."
       2:
         image: notes/unplug7_2.png
         text: En esta lección, definimos el coro al principio de nuestra canción y
@@ -2768,29 +2768,29 @@
           comandos para hacer aún más cosas.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[alumnos hablando] Así que nosotors hicimos un juego en el que obtienes
+        text: "[alumnos hablando] Así que nosotors hicimos un juego en el que obtienes
           puntos cuando obtienes cerdos inflables. La idea es que cada vez que obtienes
           un cerdo inflable aparece un soldado de asalto. En realidad toda la pantalla
-          está mmena de cerdos inflables y cuando tocas 10.000, ganas.'
+          está mmena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: Направихме игра в която неможете да губите печелите точки от всичко.
+        text: "Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
+          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
       5:
         image: notes/starwars_congrats_5.JPG
-        text: След като сте направите играта, изберете сподели за да я споделите с
-          приятели или да играете на телефон. Забавлявайте се!
+        text: "След като сте направите играта, изберете сподели за да я споделите
+          с приятели или да играете на телефон. Забавлявайте се!"
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Здравейте! Аз съм Катлийн Кенеди Продуцент на Междузвездни Войни: Силата
+        text: "Здравейте! Аз съм Катлийн Кенеди Продуцент на Междузвездни Войни: Силата
           се Пробужда. Днес ще работите с една от нашите звезди, ББ-8, който е сферичен
           дроид. Всичко което прави и всяко негово движение се контролира от софтуер.
           Компютърните науки оказват влияние във всяка една сфера от маркетинг до
           медицина и филмо-производство. Всъщност хиляди Инженери работят заедно за
-          да създадават филми като Силата се Пробужда.'
+          да създадават филми като Силата се Пробужда."
       2:
         image: notes/starwars_blocks_intro_2.JPG
         text: Hola, soy Rachel Rose. Soy una ingeniera de I+D en ILM y lidero el equipo
@@ -2894,20 +2894,20 @@
           comandos para hacer aún más cosas.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[alumnos hablando] Así que nosotors hicimos un juego en el que obtienes
+        text: "[alumnos hablando] Así que nosotors hicimos un juego en el que obtienes
           puntos cuando obtienes cerdos inflables. La idea es que cada vez que obtienes
           un cerdo inflable aparece un soldado de asalto. En realidad toda la pantalla
-          está mmena de cerdos inflables y cuando tocas 10.000, ganas.'
+          está mmena de cerdos inflables y cuando tocas 10.000, ganas."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: Направихме игра в която неможете да губите печелите точки от всичко.
+        text: "Направихме игра в която неможете да губите печелите точки от всичко.
           В моята програма обърнах бутоните, когато натиснете горе, вашият герой отива
           долу, като натиснете дясно, той отива на ляво. Трудно е! Понякога това е
-          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!
+          предимство ако сте създателя на играта. Правилно ли го разбрах? Уау!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: След като сте направите играта, изберете сподели за да я споделите с
-          приятели или да играете на телефон. Забавлявайте се!
+        text: "След като сте направите играта, изберете сподели за да я споделите
+          с приятели или да играете на телефон. Забавлявайте се!"
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -3041,8 +3041,8 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: '¡Felicitaciones! Aprendiste los bloques de construcción básicos de
-          la ciencia de la informática. '
+        text: "¡Felicitaciones! Aprendiste los bloques de construcción básicos de
+          la ciencia de la informática. "
       2:
         image: notes/mc_congrats_share_2.JPG
         text: 'Ahora puedes usar estos bloques para construir tu propia creación.
@@ -3050,9 +3050,9 @@
           lo que quieras, ya puedes elegir. '
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[estudiantes charlando] ¡Ahora es en serio! Tijera. Hice una L con
+        text: "[estudiantes charlando] ¡Ahora es en serio! Tijera. Hice una L con
           antorchas. Yo hice una A con tablones de abedul. ¡Funcionó! ¡Funcionó! ¡Construimos
-          una casa con lana! '
+          una casa con lana! "
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Cuando termines de construir tu creación, elige "compartir" para compartirla
@@ -3060,8 +3060,8 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: '¡Felicitaciones! Aprendiste los bloques de construcción básicos de
-          la ciencia de la informática. '
+        text: "¡Felicitaciones! Aprendiste los bloques de construcción básicos de
+          la ciencia de la informática. "
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: 'Ahora puedes usar estos bloques para construir tu propia creación.
@@ -3069,9 +3069,9 @@
           lo que quieras, ya puedes elegir. '
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[estudiantes charlando] ¡Ahora es en serio! Tijera. Hice una L con
+        text: "[estudiantes charlando] ¡Ahora es en serio! Tijera. Hice una L con
           antorchas. Yo hice una A con tablones de abedul. ¡Funcionó! ¡Funcionó! ¡Construimos
-          una casa con lana! '
+          una casa con lana! "
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Ahora puedes construir todo lo que quieras. ¡Diviértete!
@@ -3083,13 +3083,13 @@
           un juego que tu creaste.
       2:
         image: notes/gumball_intro_2.JPG
-        text: ¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación
+        text: "¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación
           de juegos sólo asi en el LabDeJuego. Buenos juegos tienen una historia y
           cada historia tiene actores. Actores que hacen cosas como hablar, mover
           e interactúar con los demás. Tal vez incluso marcan puntos basado en las
           reglas del juego. Hoy aprenderemos cómo hacer todas estas cosas uno por
           uno con divertidos actores y luego construiremos un juego desde cero que
-          puede compartir y reproducir en un teléfono.
+          puede compartir y reproducir en un teléfono."
       3:
         image: notes/gumball_intro_3.JPG
         text: Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos
@@ -3148,9 +3148,9 @@
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: ¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
+        text: "¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
           Esperemos que nunca tengas orque los equipos son realmente buenos en repetir
-          cosas.
+          cosas."
       2:
         image: notes/gumball_repeat_2.JPG
         text: Este es el bloque de repetición por siempre. Cualquier cosa dentro de
@@ -3170,13 +3170,13 @@
           un juego que tu creaste.
       2:
         image: notes/iceage_intro_2.JPG
-        text: ¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación
+        text: "¿Tienes un video juego favorito? Vamos a dar un paso hacia la creación
           de juegos sólo asi en el LabDeJuego. Buenos juegos tienen una historia y
           cada historia tiene actores. Actores que hacen cosas como hablar, mover
           e interactúar con los demás. Tal vez incluso marcan puntos basado en las
           reglas del juego. Hoy aprenderemos cómo hacer todas estas cosas uno por
           uno con divertidos actores y luego construiremos un juego desde cero que
-          puede compartir y reproducir en un teléfono.
+          puede compartir y reproducir en un teléfono."
       3:
         image: notes/iceage_intro_3.JPG
         text: Hoy aprenderemos cómo hacer todas estas cosas uno por uno con divertidos
@@ -3235,9 +3235,9 @@
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: ¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
+        text: "¿Te imaginas si tuvieras que repetir algo por siempre y para siempre?
           Esperemos que nunca tengas orque los equipos son realmente buenos en repetir
-          cosas.
+          cosas."
       2:
         image: notes/iceage_repeat_2.JPG
         text: Este es el bloque de repetición por siempre. Cualquier cosa dentro de

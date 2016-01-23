@@ -191,7 +191,7 @@ zh-CN:
   homepage_banner_text_link: 了解详情
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: 了解详情
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 两万名老师经过训练后，正在课堂上传授计算机科学。
   homepage_banner_20k_teachers_link: 了解详情
   homepage_slot_text_title_hoc: 编程一小时
   homepage_slot_text_blurb_hoc: 任何人都可学习。立即开始
@@ -201,7 +201,7 @@ zh-CN:
   homepage_solot_text_link_volunteer: 成为编程一小时志愿者
   homepage_slot_text_title_students: 学生
   homepage_slot_text_blurb_students: 体验我们所有的教程
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: 探索我们的课程
   homepage_slot_text_link_codestudio: 尝试编程工作室
   homepage_slot_text_link_local: 找一个当地的班级
   homepage_slot_text_link_othercourses: 其他在线的课程
@@ -525,7 +525,7 @@ zh-CN:
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: 公告
   dashboard_announce_view_all: 查看全部
-  dashboard_announce_message: '<b>2015年12月16日</b> - 谢谢您参与《编程一小时》2015！现在所有代码工作室的教程和课程的进度都已经恢复了。注意：Code.org办公室将在12月19日到明年1月3日关闭。您询问的问题可能会延迟到1月4日才会有答复。'
+  dashboard_announce_message: '<b>2015年1月16日</b> - 在课堂上继续学习代码。开始新的课程介绍，并跟踪学生进度。'
   dashboard_announce_button_text: 了解详情
   dashboard_announce_hoc: '<b>2015 年 11 月 23 日</b>-在你发起的编程一小时活动期间，你是否需要一名热衷于计算机科学教育的志愿者提供帮助？逾7,000 名志愿者正在寻找通过参与您的课堂或远程视频聊天的形式激发你学生的潜质。查看你所在地区的志愿者分布地图并取得的联系。'
   dashboard_announce_playlab: '<b>2015 年 12 月 4 日</b>-编程一小时就在这里！面向所有年龄段、通过所有类型的设备尝试 50 节教程。本周新内容：在全新的游戏实验室里用冰河世纪和陶阿甘编写你自己的代码故事和游戏。'

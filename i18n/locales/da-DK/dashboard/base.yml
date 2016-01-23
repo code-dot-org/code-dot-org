@@ -28,8 +28,7 @@ da:
     code:
       label: 'Tilføje en lærer:'
       placeholder: Afsnitskode (SOVS)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Indtast venligst koden din lærer har delt med dig. Det er en kode på 6 bogstaver som "ABCDEF".'
     submit: Tilføj lærer
   add_hint_form:
     placeholder: Skriv dit huske-ord her
@@ -284,10 +283,6 @@ da:
   user_level:
     completed: Fuldført
     tried: Forsøgt
-  user_stats:
-    recent_activity: Nylig aktivitet
-    show_more: Vis mere
-    classroom_activity: Unplugged aktivitet
   home:
     title: Kode Værktøj
     description: Code Studio er hjem for online kurser lavet af Code.org

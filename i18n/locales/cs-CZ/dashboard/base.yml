@@ -285,10 +285,6 @@ cs:
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno
-  user_stats:
-    recent_activity: Nedávná aktivita
-    show_more: Zobrazit více
-    classroom_activity: Aktivita bez počítače
   home:
     title: Code studio
     description: Code Studio je místem pro on-line kurzy vytvořené Code.org

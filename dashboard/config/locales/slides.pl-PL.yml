@@ -401,8 +401,8 @@
           dla danego poziomu.
       6:
         image: notes/frozen1_6.jpg
-        text: Środkowy obszar zajmuje przybornik i każdy z bloków w tym obszarze odpowiada
-          działaniu, które może wykonać Elsa i Anna.
+        text: "Środkowy obszar zajmuje przybornik i każdy z bloków w tym obszarze
+          odpowiada działaniu, które może wykonać Elsa i Anna."
       7:
         image: notes/frozen1_7.jpg
         text: Po prawej stronie znajduje się obszar roboczy, gdzie będziemy budować
@@ -501,9 +501,9 @@
           wykonywany jest program. Instrukcja dla danej łamigłówki znajduje się poniżej.
       3:
         image: notes/playlab_intro_3.png
-        text: Środkowy obszar zajmuje przybornik, i każdy z bloków w przyborniku jest
-          fragmentem kodu. Obszar po prawej stronie to obszar roboczy, gdzie będziecie
-          budować programy.
+        text: "Środkowy obszar zajmuje przybornik, i każdy z bloków w przyborniku
+          jest fragmentem kodu. Obszar po prawej stronie to obszar roboczy, gdzie
+          będziecie budować programy."
       4:
         image: notes/playlab_intro_4.png
         text: Aby rozpocząć budowanie programu, należy podłączyć wybrane bloki do
@@ -2650,17 +2650,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2774,17 +2774,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2932,9 +2932,9 @@
           co tylko zechcesz. Masz wybór. '
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[wypowiedzi uczniów] Trzeba naprawdę to zrobić. Strzyżenie. Zrobiłem
+        text: "[wypowiedzi uczniów] Trzeba naprawdę to zrobić. Strzyżenie. Zrobiłem
           L z pochodni. Ja zrobiłam A z brzozowych desek. To działa, to działa. Zbudowałyśmy
-          dom z wełny!'
+          dom z wełny!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Gdy skończysz tworzyć swoje dzieło, wybierz opcję udostępniania, aby
@@ -2951,9 +2951,9 @@
           co tylko zechcesz. Masz wybór. '
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[wypowiedzi uczniów] Trzeba naprawdę to zrobić. Strzyżenie. Zrobiłem
+        text: "[wypowiedzi uczniów] Trzeba naprawdę to zrobić. Strzyżenie. Zrobiłem
           L z pochodni. Ja zrobiłam A z brzozowych desek. To działa, to działa. Zbudowałyśmy
-          dom z wełny!'
+          dom z wełny!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Teraz możesz zbudować, co tylko zechcesz. Baw się dobrze!

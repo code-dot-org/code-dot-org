@@ -1,7 +1,7 @@
 hu:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Szia, én egy művész vagyok. Ha kódot írsz nekem, akkor szinte bármit le tudok rajzolni. Használj fel néhány blokkot, hogy a szürke vonalakat követve rajzoljak. (Minden vonal 100 képpont hosszú.)
+      2-3 Artist 1 new_instruction: Szia, én egy művész vagyok. Ha kódot írsz nekem, akkor szinte bármit le tudok rajzolni. Használj fel néhány blokkot, hogy a szürke vonalakat követve rajzoljak. (Minden vonal 100 pixel hosszú.)
       2-3 Artist 11_instruction: 'Készítsd el a stoptábla keretét egy olyan nyolcszög megrajzolásával, aminek minden oldala 100 pixel hosszú. Hány fokot kell fordulnod? (Tipp: mennyi 360 osztva 8-cal?)'
       2-3 Artist 12_instruction: 'Állítsd be az "ismételd...alkalommal" blokkot, úgy, hogy rajzoljon egy kört a szemgolyó befejezéséhez. Ha minden lépés egy fokkal jobbra fordul, hányszor kell ismételni a teljes kör befejezéséhez? 180? 360? 500?'
       2-3 Artist 2 new_instruction: 'Ennek a háznak csak félig van kész az egyik fala. Minden oldal 100 hosszúságú, de a félkész csak 50-es. Fejezd be a falat! '
@@ -12,7 +12,7 @@ hu:
         Az "ugrás" blokk vonalhúzás nélkül mozgatja a művészt.
         Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
       2-3 Artist 3_instruction: Ez a kalap 100 pixel magas. Rajzolj egy 70 pixellel kisebb kalapot.
-      2-3 Artist 3new_instruction: A vörös kalap 100 képpont magas. Fejezd be a fekete kalapot, ami 70 képponttal alacsonyabb. A fekete kalap szélessége 50 pixel.
+      2-3 Artist 3new_instruction: A vörös kalap 100 pixel magas. Fejezd be a fekete kalapot, ami 70 pixellel alacsonyabb. A fekete kalap szélessége 50 pixel.
       2-3 Artist 4_instruction: Segíts befejezni a cica házát!
       2-3 Artist 5_instruction: 'Helyettesítsd ezt a kódot egy "ismételd...alkalommal" blokkal, hogy ugyanazt a házat mindössze 3 blokk felhasználásával rajzold meg.'
       2-3 Artist 6_instruction: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget. Tipp: Mind a három oldal egyforma hosszú.'
@@ -40,10 +40,10 @@ hu:
       2-3 Artist Functions 11_instruction: 'Átneveztük a "rajzolj egy négyzetet" függvényt "rajzolj egy hatszöget"-re, de még mindig négyzetet rajzol! Meg tudod változtatni a "rajzolj egy hatszöget" függvényt úgy, hogy 50 pixeles oldalhosszúságú hatszöget rajzoljon, és segítségével meg tudod rajzolni a képet?'
       2-3 Artist Functions 12_instruction: 'A függvények nagyszerűen használhatók összetett dolgok többszöri megrajzolására. Fel tudod használni a "rajzolj egy virágot" függvényt  az egész láda beültetésére? (Tipp: A növények 100 pixeles távolságban állnak egymástól.)'
       2-3 Artist Functions 13_instruction: 'Készítettünk számodra négy függvényt. Változtasd meg kedvedre a belsejüket egy vagy több ismétléssel, hogy az elkészült képet megoszthasd barátaiddal. Kattints a "Futtatás"-ra, hogy láthass egy példát. '
-      2-3 Artist Functions 2_instruction: 'A függvények segítségével új blokkokat határozhatsz meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg készítéséhez? A négyzetek 75 képpont távolságra vannak egymástól.'
-      2-3 Artist Functions 3_instruction: Módosítsd a függvényt, hogy 115 képpont oldalú négyzetet rajzolj, és nagyobb legyen a szemüveg. A négyzetek most 45 képpont távolságra vannak egymástól.
+      2-3 Artist Functions 2_instruction: 'A függvények segítségével új blokkokat határozhatsz meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.'
+      2-3 Artist Functions 3_instruction: Módosítsd a függvényt, hogy 115 pixel oldalú négyzetet rajzolj, és nagyobb legyen a szemüveg. A négyzetek most 45 pixel távolságra vannak egymástól.
       2-3 Artist Functions 4_instruction: 'Használd az "ismételd" blokkot a három négyzet megrajzolásához.'
-      2-3 Artist Functions 7_instruction: 'Használd a "rajzoljon egy házat" függvényt, hogy két különböző tulajdonságokkal rendelkező házat rajzolj. (Tipp: az első ház 100 képpontos).'
+      2-3 Artist Functions 7_instruction: 'Használd a "rajzoljon egy házat" függvényt, hogy két különböző tulajdonságokkal rendelkező házat rajzolj. (Tipp: az első ház 100 pixeles).'
       2-3 Artist Functions 9_instruction: Ez itt a hópehely függvény. Kísérletezz vele, és hozz létre egy téli tájat! Szabad a játék, nincs megoldandó feladvány. Jó szórakozást!
       2-3 Artist Loops 1_instruction: A sejt befejezéséhez tudsz készíteni 100 pixel oldalhosszúságú hatszöget? Ne feledd, ebben az esetben csak 60 fokot kell fordulnod!
       2-3 Artist Loops 10_instruction: Mi történik vajon a mintával, ha az utolsó lépés csak fele akkora?
@@ -77,8 +77,8 @@ hu:
       2-3 Artist Nested Loops 2_instruction: Ismételd a háromszög rajzolást 6-szor. Minden háromszög után el kell fordulnod 60 fokot, mielőtt nekikezdesz a következő rajzolásának.
       2-3 Artist Nested Loops 3_instruction: A háromszög rajzolását 12-szer kell ismételned ennek a mintának a megrajzolásához. Oszd el a teljes körfordulat fokszámát (360) a rajzolni kívánt formák számával (12), hogy kiszámold, hány fokot kell fordulni az egyes formák rajzolása után.
       2-3 Artist Nested Loops 4_instruction: 'Ismételd 12 alkalommal a gyémánt rajzolást a virág megrajzolásához. Tipp: a 12 gyémánt hasonló, mint a korábban rajzolt 12 háromszög - mennyit kell fordulni egy-egy forma megrajzolása után?'
-      2-3 Artist Nested Loops 5_instruction: Rajzold meg ennek az épületnek az ablakait egymásba ágyazott ciklusokkal. Az alakok oldalai 20 képpontos szélesek, és 20 képpont távolságra vannak egymástól.
-      2-3 Artist Nested Loops 6_instruction: A dinoszaurusz hátán 8 tüske van. A tüskék oldalai 30 képpont hosszúak. Ismételd a háromszög rajzolást 8-szor, de ne feledj el előre haladni minden egyes háromszög után.
+      2-3 Artist Nested Loops 5_instruction: Rajzold meg ennek az épületnek az ablakait egymásba ágyazott ciklusokkal. Az alakok oldalai 20 pixel szélesek, és 20 pixel távolságra vannak egymástól.
+      2-3 Artist Nested Loops 6_instruction: A dinoszaurusz hátán 8 tüske van. A tüskék oldalai 30 pixel hosszúak. Ismételd a háromszög rajzolást 8-szor, de ne feledj el előre haladni minden egyes háromszög után.
       2-3 Artist Nested Loops 7_instruction: Ismételd 10-szer ezt a háromszöget a Nap megrajzolásához. Minden háromszög után el kell fordulnod. Kitalálhatod, hány fokkal kell elfordulni, ha elosztod a teljes fordulat fokszámát a Napot alkotó formák számával.
       2-3 Artist Nested Loops 8_instruction: Most rajzoljunk a képre füvet. A fűcsomók 50 képpont távolságra vannak egymástól.
       2-3 Artist Nested Loops 9_instruction: A kép egy virág rajzolásával lesz teljes. Ismételd a gyémánt rajzolását 12-szer, hogy megrajzold a virágot.
@@ -226,7 +226,7 @@ hu:
       4-5 Artist Free Draw 1_instruction: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved van.
       4-5 Artist Functions 1_instruction: Használj ciklust a háromszög megrajzolásához.
       4-5 Artist Functions 10a_instruction: 'Rakd be ezt a blokkot a "Rajzolj egy hópelyhet" funkcióba és cseréld le a húszat a "méret" paraméterre. Ez a funkció elő lett hívva hogy egy 100 pixeles hópelyhet rajzoljon.'
-      4-5 Artist Functions 10b_instruction: 'Használd a "hópehely rajzolása" függvényt különböző méretű hópehlyhek készítésére. Tipp: az első hópehely 25 hosszú és minden hópehely kétszer nagyobb az előzőnél.'
+      4-5 Artist Functions 10b_instruction: 'Használd a "hópehely rajzolása" függvényt különböző méretű hópelyhek készítésére. Tipp: az első hópehely 25 hosszú és minden hópehely kétszer nagyobb az előzőnél.'
       4-5 Artist Functions 11_instruction: 'Ez a "rajzolj hatszöget" függvény a "rajzolj háromszöget" függvényt használja. Fejezd be a hatszög függvényt. (Tipp: A hatszögnek 6 oldala van, mindegyik 100 pixel hosszú)'
       4-5 Artist Functions 12_instruction: 'Fejezd be a "Rajzolj hullámokat" függvényt. Minden hullám egy felső hullámból és egy alsó hullámból áll. Tipp: Rajzolj 5 kék hullámot.'
       4-5 Artist Functions 13 Free play_instruction: Van itt néhány függvény bolygók, csillagok, rakéták és robotok rajzolásához. Használd őket bárhogy, ahogy szeretnéd képek készítésére, amiket megoszthatsz a barátaiddal.
@@ -422,11 +422,29 @@ hu:
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: |
+        Backed by a template #1. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script). 
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: 'kifejezés:'
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1311,7 +1329,7 @@ hu:
         Extreme Challenge: No rules. No clues. Just the
         challenge!
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: Kerüld el a TNT-t!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
@@ -1883,8 +1901,8 @@ hu:
       K-1 Maze 8_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze 9_instruction: Mozgass egy irányba, aztán egy másik irányba, hogy elkapjam a malacot!
       K-1 Maze Assessment 1_instruction: 'Assessment -- Get me to the pig!'
-      K-1 Maze Assessment 12_instruction: Assessment Level
-      K-1 Maze Assessment 13_instruction: Assessment Level
+      K-1 Maze Assessment 12_instruction: Értékelési Szint
+      K-1 Maze Assessment 13_instruction: Értékelési Szint
       K-1 Maze Assessment 2_instruction: 'Assessment -- Get me to the pig!'
       K-1 maze debug 1_instruction: Változtasd meg a kódot, hogy elkapjam a malacot!
       K-1 maze debug 10_instruction: Keresd meg a hibát és javítsd ki ezen a szinten! Juttass el a malacig úgy, hogy újrarendezed a blokkokat és újakat adsz hozzá!
@@ -1912,8 +1930,8 @@ hu:
       K-1 Maze Loops 9_instruction: Juttass el a malachoz!
       K-1 Maze Loops Assessment 1_instruction: 'Értékelés: használj ciklusokat, hogy eljuttass a malachoz!'
       K-1 Maze Loops Assessment 2_instruction: 'Értékelés: használj ciklusokat, hogy eljuttass a malachoz!'
-      K-1 Maze Multi 14_instruction: Assessment Level
-      K-1 Maze Multi 15_instruction: Assessment Level
+      K-1 Maze Multi 14_instruction: Értékelési Szint
+      K-1 Maze Multi 15_instruction: Értékelési Szint
       K-1 Maze Sequence Assessment 1_instruction: "Let's see what you've learned!\r\nMove\none way, then another to get me to the pig."
       K-1 Maze Sequence Assessment 2_instruction: |
         Move one way, then another to
@@ -2111,7 +2129,7 @@ hu:
         the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
         function so that you don't have to call it twice.  Notice, you'll have to
         move forward a certain number of pixels and turn 144 degrees.
-      NEW Course 4 Artist Functions 14_instruction: 'Free-play time! '
+      NEW Course 4 Artist Functions 14_instruction: 'Szabad játék! '
       NEW Course 4 Artist Functions 2_instruction: |
         Can you draw 3 squares 20 pixels
         apart from one another? Hint: each square is 100 pixels in size
@@ -2391,7 +2409,7 @@ hu:
         Hello. Me zombie artist. Me love drawing! Help
         me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels
         shorter than the square length.
-      PDK5 Functions 2_instruction: 'A függvények segítségével új blokkokat határozhatsz meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg készítéséhez? A négyzetek 75 képpont távolságra vannak egymástól.'
+      PDK5 Functions 2_instruction: 'A függvények segítségével új blokkokat határozhatsz meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.'
       PDK5 Loops 1_instruction: |
         Instead of using 5 "move forward" blocks, use
         the "repeat" block with a "move forward" block inside of it. In computer
@@ -4259,7 +4277,7 @@ hu:
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: Template
+      U4L02 - Objects - Template1_instruction: Sablon
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\", run the app and click the button. Run it multiple times with different\nnames! Watch the console and use the ‘View Data” button to see how the table\nis updated. As you play around make sure you can explain the purpose of each\nof the circled parts of the diagram.\r\n\r\n"
       U4L06 Data Storage 2_instruction: "The app is a continuation of the previous\none we started. Add a text label to collect the users name and use that as\nthe data input for the record.\r\n\r\nRun the app and click the button multiple\ntimes and see what happens. Is there a problem you notice? "
       U4L06 Data Storage 3_instruction: |

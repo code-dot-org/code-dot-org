@@ -945,12 +945,29 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
-      App Lab test_instruction: টেস্ট
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
+      App Lab test_instruction: "টেস্ট"
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -2521,16 +2538,16 @@
         that fills it until the ground is even?  Hint:  Try using the while loop this
         time.
       Frequency Analysis_instruction: Test
-      frozen circle function in circle_instruction: এখন চলুন 18 ডিগ্রি তফাতে 20 টি
-        উপরিপাতিত বৃত্ত তৈরি করা যাক।
+      frozen circle function in circle_instruction: "এখন চলুন 18 ডিগ্রি তফাতে 20 টি
+        উপরিপাতিত বৃত্ত তৈরি করা যাক।"
       frozen circle function with parameter_instruction: '"Create Circle" একটি ব্লক
         যা বিভিন্ন আকারের বৃত্ত তৈরি করে । আপনি এই ব্লক ব্যবহার করে কি একটি ছোটো বৃত্ত
         যার আকার ৫ এবং একটি বড় বৃত্ত যার আকার ১০ বানাতে পারবেন ?'
       frozen circle function_instruction: নতুন "Create a circle" ব্লক ব্যবহার করে
         ১০ টি উপরিপাতিত বৃত্ত তৈরি করেন । বৃত্তের মাঝে লাফ দিয়ে এগিয়ে যেতে ভুলবেন
         না।
-      frozen circle_instruction: একটি বৃত্ত একটি বিশেষ আকৃতি । আপনি কি বলতে পারবেন
-        প্রশ্নবোধক চিহ্নের পরিবর্তে কোন সংখ্যা বসালে একটি বৃত্ত তৈরি হবে ?
+      frozen circle_instruction: "একটি বৃত্ত একটি বিশেষ আকৃতি । আপনি কি বলতে পারবেন
+        প্রশ্নবোধক চিহ্নের পরিবর্তে কোন সংখ্যা বসালে একটি বৃত্ত তৈরি হবে ?"
       frozen cross rotate dense_instruction: |
         Let's repeat it 90 times! How many
         times does 90 go into 360? Hint: It's a really small number.
@@ -3579,8 +3596,8 @@
         Can you add just 3 blocks to help me solve a more complex
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
-      SpecialFrozenLevel_instruction: আপনি আনুষ্ঠানিক ভাবে এখন একজন শিল্পী। আপনি আপনার
-        শীতকালীন ওয়ান্ডারল্যান্ড তৈরি করুন।
+      SpecialFrozenLevel_instruction: "আপনি আনুষ্ঠানিক ভাবে এখন একজন শিল্পী। আপনি
+        আপনার শীতকালীন ওয়ান্ডারল্যান্ড তৈরি করুন।"
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
@@ -3660,9 +3677,9 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2 frequency caesar_instruction: নির্দেশনা
-      U2 frequency random sub_instruction: নির্দেশনা
-      U2 vigenere cipher_instruction: নির্দেশনা
+      U2 frequency caesar_instruction: "নির্দেশনা"
+      U2 frequency random sub_instruction: "নির্দেশনা"
+      U2 vigenere cipher_instruction: "নির্দেশনা"
       U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
