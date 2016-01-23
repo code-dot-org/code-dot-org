@@ -52,9 +52,9 @@ theme: responsive
   .courses .description {
     font-size: 12px;
     color: #888;
-    white-space: nowrap;
+    /*white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;*/
   }
 
 
@@ -83,8 +83,8 @@ theme: responsive
     - (1..12).each do |n|
       .graderow.bar-1
         = n
-    - courses.each do |course|
-      .course.break
+    - courses.each_with_index do |course, course_index|
+      .course.break{id: "course-#{course_index}", onclick: "$('#courseextra-#{course_index}').slideToggle(); $('.extra').not('#courseextra-#{course_index}').slideUp();"}
         - unless course[:starts] == 0
           %div{class: "bar-#{course[:starts]}"}
             &nbsp;
@@ -92,10 +92,23 @@ theme: responsive
           .title
             =course[:name]
             %br/
-          -# if course[:subtitle]
+          .extra{id: "courseextra-#{course_index}", style: "display: none"}
+            - if course[:subtitle]
+              .subtitle
+                =course[:subtitle]
+                %br/
+            .description
+              =course[:description]
+
+      -# info block underneath the course block
+      .course.break.courseextra{id: "courseinfo-#{course_index}", style: "display: none"}
+        - unless course[:starts] <= 1
+          %div{class: "bar-#{course[:starts]-1}"}
+            &nbsp;
+        %div{class: "courserow bar-#{course[:ends] - course[:starts] + 3}"}
+          - if course[:subtitle]
             .subtitle
-              =course[:subtitle]
-              %br/
-          -#.description
+              = course[:subtitle]
+          .description
             =course[:description]
 
