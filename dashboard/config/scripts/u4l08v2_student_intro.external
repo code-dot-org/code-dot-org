@@ -1,0 +1,25 @@
+name 'U4L08v2 Student Intro'
+title 'title'
+description 'description here'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 4: Lesson 08 - Creating Summary Tables
+
+# Background
+
+A summary table is a table used to compute summary statistics of a larger dataset. Summary tables are another way that computational tools can be used to look more closely at data in order to identify trends and patterns. They can often be good data visualizations on their own, and they are quite useful when trying to make charts from larger collections of data.
+
+# Lesson
+
+* Learn how to make summary tables in Google Sheets
+* Make two (2) summary tables of your own data
+
+# Resources
+
+* Activity guides are presented in Code Studio.  
+* Click **Continue** to move on.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

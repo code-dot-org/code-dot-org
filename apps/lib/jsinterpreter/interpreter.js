@@ -408,12 +408,7 @@ Interpreter.prototype.initArray = function(scope) {
       removed.properties[removed.length++] = this.properties[i];
       this.properties[i] = this.properties[i + howmany];
     }
-    // Move other element to fill the gap.
-    for (var i = index + howmany; i < this.length - howmany; i++) {
-      this.properties[i] = this.properties[i + howmany];
-    }
-    // Delete superfluous properties.
-    for (var i = this.length - howmany; i < this.length; i++) {
+    for (var i = index + howmany; i < this.length; i++) {
       delete this.properties[i];
     }
     this.length -= howmany;
@@ -558,7 +553,7 @@ Interpreter.prototype.initNumber = function(scope) {
       this.toBoolean = function() {return !!value;};
       this.toNumber = function() {return value;};
       this.toString = function() {return String(value);};
-      return thisInterpreter.UNDEFINED;
+      return undefined;
     } else {
       return thisInterpreter.createPrimitive(value);
     }
@@ -602,7 +597,7 @@ Interpreter.prototype.initNumber = function(scope) {
     var n = this.toNumber();
     return thisInterpreter.createPrimitive(n.toString(radix));
   };
-  this.setProperty(this.NUMBER.properties.prototype, 'toString',
+  this.setProperty(this.OBJECT.properties.prototype, 'toString',
                    this.createNativeFunction(wrapper), false, true);
 };
 
@@ -622,7 +617,7 @@ Interpreter.prototype.initString = function(scope) {
       this.toString = function() {return value;};
       this.valueOf = function() {return value;};
       this.data = value;
-      return thisInterpreter.UNDEFINED;
+      return undefined;
     } else {
       return thisInterpreter.createPrimitive(value);
     }
@@ -804,7 +799,7 @@ Interpreter.prototype.initBoolean = function(scope) {
       this.toNumber = function() {return Number(value);};
       this.toString = function() {return String(value);};
       this.valueOf = function() {return value;};
-      return thisInterpreter.UNDEFINED;
+      return undefined;
     } else {
       return thisInterpreter.createPrimitive(value);
     }
@@ -838,7 +833,24 @@ Interpreter.prototype.initDate = function(scope) {
       for (var i = 0; i < arguments.length; i++) {
         args[i] = arguments[i] ? arguments[i].toNumber() : undefined
       }
-      newDate.date = new (Function.prototype.bind.apply(Date, args));
+      // Sadly there is no way to use 'apply' on a constructor.
+      if (args.length == 1) {
+        newDate.date = new Date(args[0]);
+      } else if (args.length == 2) {
+        newDate.date = new Date(args[0], args[1]);
+      } else if (args.length == 3) {
+        newDate.date = new Date(args[0], args[1], args[2]);
+      } else if (args.length == 4) {
+        newDate.date = new Date(args[0], args[1], args[2], args[3]);
+      } else if (args.length == 5) {
+        newDate.date = new Date(args[0], args[1], args[2], args[3], args[4]);
+      } else if (args.length == 6) {
+        newDate.date = new Date(args[0], args[1], args[2], args[3], args[4],
+                                args[5]);
+      } else {
+        newDate.date = new Date(args[0], args[1], args[2], args[3], args[4],
+                                args[5], args[6]);
+      }
     }
     newDate.toString = function() {return String(this.date);};
     newDate.toNumber = function() {return Number(this.date);};
@@ -1207,7 +1219,7 @@ Interpreter.prototype.createObject = function(parent) {
     nonenumerable: Object.create(null),
     properties: Object.create(null),
     toBoolean: function() {return true;},
-    toNumber: function() {return NaN;},
+    toNumber: function() {return 0;},
     toString: function() {return '[' + this.type + ']';},
     valueOf: function() {return this;}
   };
@@ -1219,7 +1231,6 @@ Interpreter.prototype.createObject = function(parent) {
   // Arrays have length.
   if (this.isa(obj, this.ARRAY)) {
     obj.length = 0;
-    obj.toNumber = function () {return 0;};
     obj.toString = function() {
       var strs = [];
       for (var i = 0; i < this.length; i++) {
@@ -1459,20 +1470,6 @@ Interpreter.prototype.createScope = function(node, parentScope) {
     this.initGlobalScope(scope);
   }
   this.populateScope_(node, scope);
-
-  // Determine if this scope starts with 'use strict'.
-  scope.strict = false;
-  if (parentScope && parentScope.strict) {
-    scope.strict = true;
-  } else {
-    var firstNode = node.body && node.body[0];
-    if (firstNode && firstNode.expression) {
-      if (firstNode.expression.type == 'Literal' &&
-          firstNode.expression.value == 'use strict') {
-        scope.strict = true;
-      }
-    }
-  }
   return scope;
 };
 
@@ -1500,10 +1497,9 @@ Interpreter.prototype.getValueFromScope = function(name) {
  */
 Interpreter.prototype.setValueToScope = function(name, value) {
   var scope = this.getScope();
-  var strict = scope.strict;
   var nameStr = name.toString();
   while (scope) {
-    if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
+    if (this.hasProperty(scope, nameStr)) {
       return this.setProperty(scope, nameStr, value);
     }
     scope = scope.parentScope;
@@ -1755,9 +1751,7 @@ Interpreter.prototype['stepBreakStatement'] = function() {
     label = node.label.name;
   }
   state = this.stateStack.shift();
-  while (state &&
-          state.node.type != 'CallExpression' &&
-          state.node.type != 'NewExpression') {
+  while (state && state.node.type != 'callExpression') {
     if (label ? label == state.label : (state.isLoop || state.isSwitch)) {
       return;
     }
@@ -1899,11 +1893,8 @@ Interpreter.prototype['stepCallExpression'] = function() {
       }
     } else {
       this.stateStack.shift();
-      if (state.isConstructor_ && state.value.type !== 'object') {
-        this.stateStack[0].value = state.funcThis_;
-      } else {
-        this.stateStack[0].value = state.value;
-      }
+      this.stateStack[0].value = state.isConstructor_ ?
+          state.funcThis_ : state.value;
     }
   }
 };
@@ -1937,9 +1928,7 @@ Interpreter.prototype['stepContinueStatement'] = function() {
     label = node.label.name;
   }
   var state = this.stateStack[0];
-  while (state &&
-          state.node.type != 'CallExpression' &&
-          state.node.type != 'NewExpression') {
+  while (state && state.node.type != 'callExpression') {
     if (state.isLoop) {
       if (!label || (label == state.label)) {
         return;
@@ -2209,8 +2198,7 @@ Interpreter.prototype['stepReturnStatement'] = function() {
         throw new SyntaxError('Illegal return statement');
       }
       state = this.stateStack[0];
-    } while (state.node.type != 'CallExpression' &&
-              state.node.type != 'NewExpression');
+    } while (state.node.type != 'CallExpression');
     state.value = value;
   }
 };
@@ -2309,7 +2297,11 @@ Interpreter.prototype['stepUnaryExpression'] = function() {
     } else if (node.operator == '+') {
       value = state.value.toNumber();
     } else if (node.operator == '!') {
-      value = !state.value.toBoolean();
+      if (state.value.isPrimitive) {
+        value = !state.value.data;
+      } else {
+        value = !state.value.toNumber();
+      }
     } else if (node.operator == '~') {
       value = ~state.value.toNumber();
     } else if (node.operator == 'typeof') {

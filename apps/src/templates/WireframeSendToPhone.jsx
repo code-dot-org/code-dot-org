@@ -1,6 +1,6 @@
 /* globals $, dashboard */
 
-var SendToPhone = window.dashboard ? window.dashboard.SendToPhone : undefined;
+var SendToPhone = window.dashboard.SendToPhone;
 
 var styles = {
   main: {
