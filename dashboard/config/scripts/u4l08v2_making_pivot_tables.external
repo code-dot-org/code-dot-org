@@ -2,6 +2,7 @@ name 'U4L08v2 Making Pivot Tables'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
+css 'unplugged'
 markdown <<MARKDOWN
 # Making Summary Tables
 
@@ -66,5 +67,24 @@ Let's show **both the average rating *and* the count side-by-side.**  To do this
 ![](https://images.code.org/19191ba9dbf453025ce42422a17e96f6-image-1453396497102.gif)
 
 ## Add a Column
-A column in a pivot table is **another aggregation** that you can specify to futher break down the values you want to see.  
+A column in a pivot table is **another aggregation** that you can specify to futher break down the values you want to see.  Here we show **adding gender as a column.**
+
+This will **recalcuate every value, the average rating and the count** but break it down by movie title *and* gender.  The pivot table will always preserve the "grand totals" which is what the caluculations would be if you didn't specify a column.  
+
+![](https://images.code.org/ec76826cc17a1795dfe8c4b0f6955fbe-image-1453403307134.gif)
+*The cell that's highlighted in the table shows that female respondants rated Star Wars with an average of 4.8 out of 5 stars.  If you read the whole row for Star Wars you'll see the average rating and count for male, female and total.*
+
+## Filter still works
+Filtering in a pivot table works just like it does in a normal spreadsheet.  If you're interested in filtering out some of the rows, or even some of the data that's contributing to the calculations, you can.  In the animation below shows first filtering out 14-year-olds from the calculations, and then filtering out some of the movies.
+
+![](https://images.code.org/e68af08aea545c2a689c06c6afb00483-image-1453404825011.gif)
+
+# The Next Step - Manipulating the Pivot Table
+A pivot table is constantly calculated and re-made based on any changes to the underlying data, or pivot table settings.  For example, if you attempt to sort a column the table will immediately re-calculate and go back to the way it was.  
+
+That means once you've gotten the pivot table to compute some of the things you want, to maninpulate it further - sort, re-arrange columns, chart it, etc. - it's best to **copy the table, paste the values into a new spreadsheet**.
+
+**Special NOTE:** Notice that you want to choose **Edit** -> **Paste Special** -> **Paste *values* Only**.  If you just do a normal copy/paste, it will paste another copy of the live pivot table.
+
+![](https://images.code.org/e59c8c95b652f2b94c2d80b3ddb3166b-image-1453405236332.gif)
 MARKDOWN
