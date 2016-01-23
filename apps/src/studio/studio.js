@@ -787,7 +787,7 @@ function callHandler (name, allowQueueExtension, extraArgs) {
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        Studio.JSInterpreter.queueEvent(handler.func, extraArgs);
+        handler.func.apply(null, extraArgs);
       }
     }
   });
@@ -796,8 +796,9 @@ function callHandler (name, allowQueueExtension, extraArgs) {
 Studio.initAutoHandlers = function (map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
+    var nativeFunc = codegen.createNativeFunctionFromInterpreterFunction(func);
     if (func) {
-      registerEventHandler(Studio.eventHandlers, map[funcName], func);
+      registerEventHandler(Studio.eventHandlers, map[funcName], nativeFunc);
     }
   }
 };
@@ -2217,7 +2218,10 @@ Studio.reset = function(first) {
   Studio.yieldExecutionTicks = 0;
   if (studioApp.editCode) {
     Studio.executionError = null;
-    Studio.JSInterpreter = null;
+    if (Studio.JSInterpreter) {
+      Studio.JSInterpreter.deinitialize();
+      Studio.JSInterpreter = null;
+    }
   }
 
   var renderOffset = {
