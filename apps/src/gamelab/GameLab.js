@@ -23,14 +23,9 @@ var GameLab = function () {
   this.tickCount = 0;
   this.studioApp_ = null;
   this.JSInterpreter = null;
-  this.drawFunc = null;
-  this.setupFunc = null;
-  this.mousePressedFunc = null;
   this.eventHandlers = [];
   this.Globals = {};
   this.currentCmdQueue = null;
-  this.p5 = null;
-  this.p5decrementPreload = null;
 
   this.api = api;
   this.api.injectGameLab(this);
@@ -62,33 +57,9 @@ GameLab.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  window.p5.prototype.setupGlobalMode = function () {
-    /*
-     * Copied code from p5 for no-sketch Global mode
-     */
-    var p5 = window.p5;
-
-    this._isGlobal = true;
-    // Loop through methods on the prototype and attach them to the window
-    for (var p in p5.prototype) {
-      if(typeof p5.prototype[p] === 'function') {
-        var ev = p.substring(2);
-        if (!this._events.hasOwnProperty(ev)) {
-          window[p] = p5.prototype[p].bind(this);
-        }
-      } else {
-        window[p] = p5.prototype[p];
-      }
-    }
-    // Attach its properties to the window
-    for (var p2 in this) {
-      if (this.hasOwnProperty(p2)) {
-        window[p2] = this[p2];
-      }
-    }
-  };
-
   config.dropletConfig = dropletConfig;
+
+  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
@@ -104,7 +75,7 @@ GameLab.prototype.init = function (config) {
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
-      visualization: require('./visualization.html.ejs')(),
+      visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
       controls: firstControlsRow,
       extraControlRows: extraControlRows,
@@ -139,14 +110,11 @@ GameLab.prototype.afterInject_ = function (config) {
     Blockly.JavaScript.addReservedWords('GameLab,code');
   }
 
+  // TODO (cpirich): remove?
+
   // Adjust visualizationColumn width.
   var visualizationColumn = document.getElementById('visualizationColumn');
   visualizationColumn.style.width = '400px';
-
-  var divGameLab = document.getElementById('divGameLab');
-  divGameLab.style.width = '400px';
-  divGameLab.style.height = '400px';
-
 };
 
 
@@ -162,59 +130,9 @@ GameLab.prototype.reset = function (ignore) {
   this.tickIntervalId = 0;
   this.tickCount = 0;
 
-  /*
-  var divGameLab = document.getElementById('divGameLab');
-  while (divGameLab.firstChild) {
-    divGameLab.removeChild(divGameLab.firstChild);
-  }
-  */
-
-  if (this.p5) {
-    this.p5.remove();
-    this.p5 = null;
-    this.p5decrementPreload = null;
-
-    // Clear registered methods on the prototype:
-    for (var member in window.p5.prototype._registeredMethods) {
-      delete window.p5.prototype._registeredMethods[member];
-    }
-    window.p5.prototype._registeredMethods = { pre: [], post: [], remove: [] };
-    delete window.p5.prototype._registeredPreloadMethods.gamelabPreload;
-
-    window.p5.prototype.allSprites = new window.Group();
-    window.p5.prototype.spriteUpdate = true;
-
-    window.p5.prototype.camera = new window.Camera(0, 0, 1);
-    window.p5.prototype.camera.init = false;
-
-    //keyboard input
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.readPresses);
-
-    //automatic sprite update
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.updateSprites);
-
-    //quadtree update
-    window.p5.prototype.registerMethod('post', window.updateTree);
-
-    //camera push and pop
-    window.p5.prototype.registerMethod('pre', window.cameraPush);
-    window.p5.prototype.registerMethod('post', window.cameraPop);
-
-  }
-
-  window.p5.prototype.gamelabPreload = _.bind(function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
-  }, this);
-
   // Discard the interpreter.
-  if (this.JSInterpreter) {
-    this.JSInterpreter.deinitialize();
-    this.JSInterpreter = null;
-  }
+  this.JSInterpreter = null;
   this.executionError = null;
-  this.drawFunc = null;
-  this.setupFunc = null;
-  this.mousePressedFunc = null;
 };
 
 /**
@@ -256,7 +174,7 @@ GameLab.prototype.callHandler = function (name, allowQueueExtension, extraArgs) 
     } else {
       // TODO (cpirich): support events with parameters
       if (handler.name === name) {
-        handler.func.apply(null, extraArgs);
+        this.JSInterpreter.queueEvent(handler.func, extraArgs);
       }
     }
   }, this));
@@ -303,6 +221,29 @@ GameLab.prototype.evalCode = function(code) {
 };
 
 /**
+ * Set up this.code, this.interpreter, etc. to run code for editCode levels
+ */
+
+/*
+GameLab.prototype.generateTurtleCodeFromJS_ = function () {
+  this.code = dropletUtils.generateCodeAliases(dropletConfig, 'Turtle');
+  this.userCodeStartOffset = this.code.length;
+  this.code += this.studioApp_.editor.getValue();
+  this.userCodeLength = this.code.length - this.userCodeStartOffset;
+
+  var session = this.studioApp_.editor.aceEditor.getSession();
+  this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+
+  var initFunc = _.bind(function(interpreter, scope) {
+    codegen.initJSInterpreter(interpreter, null, null, scope, {
+      Turtle: this.api
+    });
+  }, this);
+  this.interpreter = new window.Interpreter(this.code, initFunc);
+};
+*/
+
+/**
  * Execute the user's code.  Heaven help us...
  */
 GameLab.prototype.execute = function() {
@@ -317,49 +258,6 @@ GameLab.prototype.execute = function() {
     return;
   }
 
-  new window.p5(_.bind(function (p5obj) {
-      this.p5 = p5obj;
-
-      p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
-
-      p5obj.setupGlobalMode();
-
-      window.preload = function () {
-        // Artificially increment preloadCount to force _start/_setup to wait.
-        // p5._preloadCount++;
-        // this.p5decrementPreload = p5._getDecrementPreload(arguments, p5);
-        // var gamelabPreload = p5._wrapPreload(p5, 'gamelab');
-        window.gamelabPreload();
-      };
-      window.setup = _.bind(function () {
-        console.log("p5 setup");
-        p5obj.createCanvas(400, 400);
-        if (this.JSInterpreter && this.setupFunc) {
-          this.JSInterpreter.queueEvent(this.setupFunc);
-          this.JSInterpreter.executeInterpreter();
-        }
-      }, this);
-      window.draw = _.bind(function () {
-        if (this.JSInterpreter) {
-          var startTime = window.performance.now();
-          if (this.drawFunc) {
-            this.JSInterpreter.queueEvent(this.drawFunc);
-          }
-          this.JSInterpreter.executeInterpreter();
-          var timeElapsed = window.performance.now() - startTime;
-          $('#bubble').text(timeElapsed.toFixed(2) + ' ms');
-        }
-      }, this);
-      window.mousePressed = _.bind(function () {
-        if (this.JSInterpreter) {
-          if (this.mousePressedFunc) {
-            this.JSInterpreter.queueEvent(this.mousePressedFunc);
-          }
-          this.JSInterpreter.executeInterpreter();
-        }
-      }, this);
-    }, this), 'divGameLab');
-
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
       code: this.studioApp_.getCode(),
@@ -372,33 +270,6 @@ GameLab.prototype.execute = function() {
     if (!this.JSInterpreter.initialized()) {
       return;
     }
-    this.drawFunc = this.JSInterpreter.findGlobalFunction('draw');
-    this.setupFunc = this.JSInterpreter.findGlobalFunction('setup');
-    this.mousePressedFunc = this.JSInterpreter.findGlobalFunction('mousePressed');
-
-    codegen.customMarshalObjectList = [ window.p5, window.Sprite, window.Camera, window.p5.Vector, window.p5.Color, window.p5.Image ];
-    codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
-
-    var intP5 = codegen.marshalNativeToInterpreter(
-        this.JSInterpreter.interpreter,
-        this.p5,
-        window);
-
-    this.JSInterpreter.interpreter.setProperty(
-        this.JSInterpreter.globalScope,
-        'p5',
-        intP5);
-
-    var intGroup = codegen.marshalNativeToInterpreter(
-        this.JSInterpreter.interpreter,
-        window.Group,
-        window);
-
-    this.JSInterpreter.interpreter.setProperty(
-        this.JSInterpreter.globalScope,
-        'Group',
-        intGroup);
-
     /*
     if (this.checkForEditCodePreExecutionFailure()) {
       return this.onPuzzleComplete();
@@ -409,7 +280,9 @@ GameLab.prototype.execute = function() {
     this.evalCode(this.code);
   }
 
+  // api.log now contains a transcript of all the user's actions.
   this.studioApp_.playAudio('start', {loop : true});
+  // animate the transcript.
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
@@ -421,6 +294,7 @@ GameLab.prototype.execute = function() {
 
 GameLab.prototype.onTick = function () {
   this.tickCount++;
+  var i;
 
   if (this.tickCount === 1) {
     this.callHandler('whenGameStarts');
@@ -501,12 +375,7 @@ GameLab.prototype.onTick = function () {
 
   if (this.JSInterpreter) {
     this.JSInterpreter.executeInterpreter(this.tickCount === 1);
-
-    if (this.JSInterpreter.startedHandlingEvents && this.p5decrementPreload) {
-      this.p5decrementPreload();
-    }
   }
-
 
 /*
   var currentTime = new Date().getTime();

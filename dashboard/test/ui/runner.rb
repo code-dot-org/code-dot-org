@@ -95,6 +95,10 @@ opt_parser = OptionParser.new do |opts|
   opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
     $options.fail_fast = true
   end
+  opts.on('-s', '--script Scriptname', String, 'Run tests associated with this script, or have Scriptname somewhere in the URL') do |scriptname|
+    f = `egrep -r "Given I am on .*#{scriptname.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
+    $options.feature = f.split ','
+  end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit

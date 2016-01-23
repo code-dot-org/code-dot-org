@@ -158,12 +158,6 @@ config.copy = {
       },
       {
         expand: true,
-        cwd: 'lib/p5play',
-        src: ['*.js'],
-        dest: 'build/package/js/p5play/'
-      },
-      {
-        expand: true,
         cwd: 'lib/droplet',
         src: ['droplet-full' + dotMinIfNotDev + '.js'],
         dest: 'build/package/js/droplet/',
@@ -366,15 +360,9 @@ config.uglify = {
   config.uglify[app] = {files: appUglifiedFiles };
 });
 
-config.uglify.interpreter = { files: {} };
-config.uglify.interpreter.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
-      outputDir + 'jsinterpreter/interpreter.js';
-config.uglify.interpreter.files[outputDir + 'jsinterpreter/acorn.min.js'] =
-      outputDir + 'jsinterpreter/acorn.js';
-
 // Run uglify task across all apps in parallel
 config.concurrent = {
-  uglify: APPS.concat('common', 'interpreter').map( function (x) {
+  uglify: APPS.concat('common').map( function (x) {
     return 'uglify:' + x;
   })
 };
@@ -497,7 +485,6 @@ module.exports = function(grunt) {
     'pseudoloc',
     'newer:messages',
     'newer:copy:src',
-    'newer:copy:lib',
     'locales',
     'newer:strip_code',
     'ejs'
@@ -505,6 +492,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
+    'newer:copy:lib',
     'newer:concat',
     'newer:sass'
   ]);
