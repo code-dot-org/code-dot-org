@@ -71,7 +71,7 @@ AuthoredHints.prototype.getSeenHints = function () {
  * Creates contextual hints for the specified blocks and adds them to
  * the queue of hints to display. Triggers an animation on the hint
  * lightbulb if the queue has changed.
- * @param {Objec[]} blocks @see authoredHintUtils.createContextualHintsFromBlocks
+ * @param {Object[]} blocks @see authoredHintUtils.createContextualHintsFromBlocks
  */
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
