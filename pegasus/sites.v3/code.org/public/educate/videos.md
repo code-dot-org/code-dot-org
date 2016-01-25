@@ -1,6 +1,7 @@
 ---
 title: Video library
 nav: educate_nav
+video_player: true
 ---
 
 
@@ -89,7 +90,7 @@ We are building a growing library of educational videos available for re-use by 
 <% facebook = {:u=>'https://youtu.be/fVUL-vzrIcM'} %>
 <% twitter = {:url=>'https://youtu.be/fVUL-vzrIcM', :related=>'codeorg', :text=>'Bill Gates explains IF/ELSE statements @codeorg'} %>
 <%=view :display_video_thumbnail, id: "BillGatesIF", video_code: "fVUL-vzrIcM", caption: "Bill Gates explains IF/ELSE statements", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/bill-gates-saloni-ifelse-general.mp4" %>
-            
+
 </div>
 
 <div style="float:left; padding:10px; width:49%">
@@ -97,7 +98,7 @@ We are building a growing library of educational videos available for re-use by 
 <% facebook = {:u=>'https://youtu.be/vgkahOzFH2Q'} %>
 <% twitter = {:url=>'https://youtu.be/vgkahOzFH2Q', :related=>'codeorg', :text=>'How to use PAIR PROGRAMMING @codeorg'} %>
 <%=view :display_video_thumbnail, id: "PairProgramming", video_code: "vgkahOzFH2Q", caption: "How to use PAIR PROGRAMMING", play_button: 'center', facebook: facebook, twitter: twitter, download_path: "https://s3.amazonaws.com/videos.code.org/2015/social/pair-programming.mp4" %>
- 
+
 </div>
 
 <div style='clear:both'></div>
