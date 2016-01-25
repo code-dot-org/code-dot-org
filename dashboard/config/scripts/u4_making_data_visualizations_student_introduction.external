@@ -1,5 +1,6 @@
 name 'U4 - Making Data Visualizations - Student Introduction'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
@@ -7,7 +8,7 @@ markdown <<MARKDOWN
 
 # Background
 
-Good visualizations can help people make sense of data sets that are too large to interpret just by looking at the raw data. Now that you’ve had the chance to see and evaluate some data visualizations, you will learn to use Google Sheets to make visualizations of your own.
+Good visualizations can help people make sense of data sets that are too large to interpret just by looking at the raw data. Now that you’ve had the chance to see and evaluate some data visualizations, you will learn to use a spreadsheet tool to make visualizations of your own.
 
 # Lesson
 
