@@ -862,27 +862,38 @@ describe('mergeCategoriesWithConfig', function () {
 describe('filteredBlocksFromConfig', function () {
   var filteredBlocksFromConfig = dropletUtils.__TestInterface.filteredBlocksFromConfig;
 
-  it('properly handles docFunc', function () {
-    var codeFunctions = {
-      sourceBlock: null
-    };
+  var codeFunctions = {
+    sourceBlock: null
+  };
 
-    var dropletConfig = {
-      blocks :[
-        {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
-        {func: 'targetBlock', category: 'Math', type: 'value'},
-        {func: 'thirdBlock',  category: 'Math', type: 'value'}
-      ]
-    };
+  var dropletConfig = {
+    blocks: [
+      {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+      {func: 'targetBlock', category: 'Math', type: 'value'},
+      {func: 'thirdBlock',  category: 'Math', type: 'value'}
+    ]
+  };
 
+  it('returns source and target when paletteOnly is true', function () {
     var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
     assert.deepEqual(mergedBlocks, [
       {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
       {func: 'targetBlock', category: 'Math', type: 'value'}
-    ], 'returns source and target when paletteOnly is true');
+    ]);
+  });
 
-    mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, false);
-    assert.deepEqual(mergedBlocks, dropletConfig.blocks,
-      'returns all blocks when paletteOnly is false');
+  it('returns all blocks when paletteOnly is false', function () {
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, false);
+    assert.deepEqual(mergedBlocks, dropletConfig.blocks);
+  });
+
+  it('doesnt return target when source is not in codeFunctions', function () {
+    var codeFunctions = {
+      thirdBlock: null
+    };
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
+    assert.deepEqual(mergedBlocks, [
+      {func: 'thirdBlock',  category: 'Math', type: 'value'}
+    ]);
   });
 });
