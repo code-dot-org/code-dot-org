@@ -7,7 +7,7 @@
   activerecord:
     errors:
       messages:
-        blank: è un dato obbligatorio
+        blank: "è un dato obbligatorio"
     attributes:
       user:
         name: Nome da visualizzare
@@ -29,8 +29,8 @@
     code:
       label: 'Aggiungi un insegnante:'
       placeholder: Codice Classe (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Inserisci il codice condiviso con te dal tuo insegnante. È un
+        codice di 6 lettere come "ABCDEF".
     submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
@@ -72,8 +72,8 @@
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
   signup_form:
-    student_count: '%{count} studenti si sono già iscritti.'
-    teacher_count: '%{count} insegnanti si sono già iscritti.'
+    student_count: "%{count} studenti si sono già iscritti."
+    teacher_count: "%{count} insegnanti si sono già iscritti."
     overview_student: Iscriviti per avere un account che ti permetta di tener traccia
       dei tuoi progressi. Il tuo indirizzo di posta elettronica verrà usato soprattutto
       per accedere e recuperare la tua password. Per maggiori informazioni, consulta
@@ -152,12 +152,12 @@
       Angry Birds e Plants vs Zombies! :-) \n\n%{name}\n"
   follower:
     invite_sent: Invito spedito
-    added_teacher: '%{name} è stato aggiunto come tuo insegnante'
+    added_teacher: "%{name} è stato aggiunto come tuo insegnante"
     registered: Ti sei iscritto alla classe %{section_name}.
     error:
       signed_in: Per favore esci prima di procedere
       username_not_found: Nome utente %{username} non trovato
-      username_in_use: '%{username} è già stato preso, per favore scegline un''altro'
+      username_in_use: "%{username} è già stato preso, per favore scegline un'altro"
       no_teacher: Non è stato trovato alcun insegnante con %{teacher_email_or_code}.
         Per favore chiedigli di iscriversi qui e poi prova ad aggiungerlo nuovamente
       section_not_found: Impossibile trovare una classe con il codice-classe '%{section_code}'.
@@ -204,7 +204,7 @@
         degli Stati Uniti.
       msg_visit_website: Visita il sito
     providers:
-      apple_itunes: $10 Carta Regalo iTunes
+      apple_itunes: "$10 Carta Regalo iTunes"
       donors_choose: Buono di $750 di DonorsChoose.org
       donors_choose_bonus: Buono di $250 di DonorsChoose.org
       dropbox: 10GB di spazio su Dropbox
@@ -267,9 +267,9 @@
     destroy: Elimina
     back: Indietro
     confirm: Sei sicuro?
-    created: '%{model} è stato creato correttamente.'
-    updated: '%{model} è stato aggiornato correttamente.'
-    destroyed: '%{model} è stato eliminato correttamente.'
+    created: "%{model} è stato creato correttamente."
+    updated: "%{model} è stato aggiornato correttamente."
+    destroyed: "%{model} è stato eliminato correttamente."
     access_denied: Non hai accesso a questo %{model}.
   nav:
     header:
@@ -292,7 +292,7 @@
       signup: Iscriviti
       already_registered: Sei già iscritto?
     popup:
-      progress_for_user: '%{name} in corso'
+      progress_for_user: "%{name} in corso"
       progress: I tuoi progressi
       lines: 'Totale delle linee di codice:  %{lines}'
       close: CHIUDI
@@ -300,7 +300,7 @@
       puzzle_map: Fasi
       prizes: Ottieni tutti i %{total_trophies} trofei e vinci premi!
       prize_earned: Hai ottenuto tutti i %{total_trophies} trofei. Hai vinto il premio!
-      prize_us_only: (Solo per gli studenti degli Stati Uniti)
+      prize_us_only: "(Solo per gli studenti degli Stati Uniti)"
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
@@ -308,7 +308,7 @@
     title:
       one: 'Il tuo insegnante:'
       other: 'I tuoi insegnanti:'
-    remove: (rimuovi insegnante)
+    remove: "(rimuovi insegnante)"
     confirm:
       remove: Sei sicuro di voler rimuovere questo insegnante?
     students:
@@ -329,10 +329,10 @@
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}
       non è stato confermato:'
-    email_confirm_wrong_email: (Indirizzo di posta elettronica sbagliato?)
+    email_confirm_wrong_email: "(Indirizzo di posta elettronica sbagliato?)"
     email_resend_confirm: Reinvia le istruzioni di conferma
-    new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
-    current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
+    new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
+    current_password_hint: "(inserisci la tua password corrente per confermare i cambiamenti)"
     delete: Elimina il tuo account
     delete_text: Cliccando sul pulsante qua sotto elimini il tuo account.
     delete_text_teacher_note: Nota che eliminando il tuo account non verranno eliminati
@@ -341,16 +341,12 @@
   user_level:
     completed: Completato
     tried: Provato
-  user_stats:
-    recent_activity: Attività recenti
-    show_more: Mostra di più
-    classroom_activity: Attività Tradizionale
   home:
     title: Officina del Codice
     description: Code Studio è la base di partenza per i corsi online creati da Code.org
-    lines_of_code: '%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI'
-    lines_of_code_linebreak: '%{lines_count} linee di codice<br/>scritte da %{students_count}
-      milioni di studenti'
+    lines_of_code: "%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI"
+    lines_of_code_linebreak: "%{lines_count} linee di codice<br/>scritte da %{students_count}
+      milioni di studenti"
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: Già iscritto? %{link}
@@ -392,11 +388,12 @@
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
-    heading_hoc2014: <h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque età)
-    heading_elementary: <h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque
-      età)
-    heading_apps: <h2>Divertimento per</h2><h1>tutti</h1>
-    heading_legacy: <h2>Corso rapido</h2> per <h1>i più grandi</h1>
+    heading_hoc2014: "<h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque
+      età)"
+    heading_elementary: "<h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque
+      età)"
+    heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
+    heading_legacy: "<h2>Corso rapido</h2> per <h1>i più grandi</h1>"
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Code Studio
     choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
@@ -439,8 +436,8 @@
       Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball
       è un marchio registrato e &copy; 2015 Cartoon Network.
     powered_by_aws: Eseguito su Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
-      of Code&reg; sono marchi registrati di Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
+      of Code&reg; sono marchi registrati di Code.org."
     copyright: Diritto d'autore
     more: Di più
     feedback: Facci sapere che ne pensi
@@ -571,7 +568,7 @@
     want_to_make_your_own: Vuoi farne uno tuo?
     more: Di più &rarr;
     caption_by_name_age: da %{name}, età %{age}
-    caption_time_ago: '%{time_ago} fa'
+    caption_time_ago: "%{time_ago} fa"
     header: La tua collezione
     header_playlab: Laboratorio
     header_artist: 'Artista: Sequenze e Cicli'
@@ -584,7 +581,7 @@
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
-    support_url: //programmailfuturo.it/aiuto
+    support_url: "//programmailfuturo.it/aiuto"
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!

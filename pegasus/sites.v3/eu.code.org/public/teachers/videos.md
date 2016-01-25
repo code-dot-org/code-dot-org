@@ -11,32 +11,32 @@ nav: teachers_nav
 Over time, as we recruit unique role models and celebrities to record educational content, we hope to build a growing library of educational videos available for reuse by educators worldwide, online or in classrooms. While it may take us time to make all our videos available, our goal is to enable our efforts to be amplified beyond our own curriculum's reach. **Note:** see below for the licensing restrictions on use of these videos
 
 <div style="float:left; padding:10px">
- 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/8T5acEwfJbw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-            
+
+<iframe width="350" height="195" src="https://www.youtube.com/embed/8T5acEwfJbw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 <p><a href="https://www.youtube.com/watch?v=8T5acEwfJbw"><strong>Chris Bosh explains FUNCTIONS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/viyVhu0ik7/Bosh-Functions-general.mp4"><img src="/images/download.png" width="30px"></a></p>
 </div>
 
 <div style="float:left; padding:10px">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/fVUL-vzrIcM?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-            
+<iframe width="350" height="195" src="https://www.youtube.com/embed/fVUL-vzrIcM?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+
             <p><a href="https://www.youtube.com/watch?v=fVUL-vzrIcM"><strong>Bill Gates explains IF/ELSE statements</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/mWiztYFLeR/BillGates-IF%26IFELSE-general.mp4"><img src="/images/download.png" width="30px"></a></p>
-            
+
           </div>
 
 <div style='clear:both'></div>
 
 <div style="float:left; padding:10px">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/jsUN0NV5RfQ?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="350" height="195" src="https://www.youtube.com/embed/jsUN0NV5RfQ?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 <p><a href="https://www.youtube.com/watch?v=jsUN0NV5RfQ"><strong>Chris Bosh explains REPEAT UNTIL</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/DsK7LCOiDK/Bosh-repeat-general.mp4"><img src="/images/download.png" width="30px"></a></p>
 </div>
 
 <div style="float:left; padding:10px">
 
-<iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/hYvcoRkAkOU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="350" height="195" src="https://www.youtube.com/embed/hYvcoRkAkOU?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 <p><a href="https://www.youtube.com/watch?v=hYvcoRkAkOU"><strong>Mark Zuckerberg teaches REPEAT LOOPS</strong></a> <a href="https://www.dropbox.com/sh/mmlq474q1y572c0/Gb3xnOXsDr/Zuck-repeat-loops.mp4"><img src="/images/download.png" width="30px"></a></p>
 </div>

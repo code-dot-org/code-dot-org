@@ -28,8 +28,7 @@ it:
     code:
       label: 'Aggiungi un insegnante:'
       placeholder: Codice Classe (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Inserisci il codice condiviso con te dal tuo insegnante. È un codice di 6 lettere come "ABCDEF".'
     submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
@@ -286,10 +285,6 @@ it:
   user_level:
     completed: Completato
     tried: Provato
-  user_stats:
-    recent_activity: Attività recenti
-    show_more: Mostra di più
-    classroom_activity: Attività Tradizionale
   home:
     title: Officina del Codice
     description: Code Studio è la base di partenza per i corsi online creati da Code.org

@@ -3,7 +3,7 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'Øvelse: Lær at trække og slippe'
+          'Jigsaw: Learn to drag and drop': "Øvelse: Lær at trække og slippe"
           The Maze: Labyrinten
           Multi: Multi
           Match: Match
@@ -12,7 +12,7 @@
           description: Bare en intern test bane.
           description_short: Bare en intern test bane.
         course1:
-          'Jigsaw: Learn to drag and drop': 'Øvelse: Lær at trække og slippe'
+          'Jigsaw: Learn to drag and drop': "Øvelse: Lær at trække og slippe"
           'Maze: Sequence': 'Labyrint: Sekvens'
           'Maze: Debugging': 'Labyrint: Fejlfinding'
           'Artist 1: Intro': 'Kunstner 1: Intro'
@@ -1517,8 +1517,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1572,6 +1574,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Lav en historie eller et spil med Ice Age Play Lab!
@@ -1675,5 +1678,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Konklusion
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

@@ -486,7 +486,7 @@
       4-5 Artist 4_instruction: |
         Sa gradë është një rreth? Ciklo
         blloqet për të krijuar një rreth ngjyrash.
-      4-5 Artist 5_instruction: Çfarë këndi përdor ti?
+      4-5 Artist 5_instruction: "Çfarë këndi përdor ti?"
       4-5 Artist 6_instruction: |
         Trekëndëshi barabrinjës ka kënde 60, 60,
         dhe 60 gradë. Çdo brinjë është 200 piksela. Përfundo vizatimin.
@@ -785,7 +785,7 @@
       4-5 Maze 2 (copy 1)_instruction: |
         Çoje zombin tek luledielli, por shmang
         përtypjen!
-      4-5 Maze 2_instruction: Çoje zombin tek luledielli, por shmang përtypjen!
+      4-5 Maze 2_instruction: "Çoje zombin tek luledielli, por shmang përtypjen!"
       4-5 Maze 3 (copy 1)_instruction: Duhet... të arrij... tek luledielli.
       4-5 Maze 3_instruction: Duhet... të arrij... tek luledielli.
       4-5 Maze 4 (copy 1)_instruction: Provo bllokun "repeat" për të përdorur më pak
@@ -909,11 +909,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1745,8 +1762,8 @@
       Course 4 Bee For Loops 10_instruction: Nese cikli yt po dobësohet, rritja bie
         nga variabla jote e kundert për secilin cikël. Sa duhet te jetë rritja jote
         për të mbledhur 9, pastaj 6 dhe me pas 3 nektar?
-      Course 4 Bee For Loops 11_instruction: Çfarë ka që nuk shkon me ciklin? Shikoni
-        nëse mund t'a rregulloni dhe të bëni bletën të mbledhi të gjithë nektarin.
+      Course 4 Bee For Loops 11_instruction: "Çfarë ka që nuk shkon me ciklin? Shikoni
+        nëse mund t'a rregulloni dhe të bëni bletën të mbledhi të gjithë nektarin."
       Course 4 Bee For Loops 2_instruction: Ja një tjetër lloj cikli, i quajtur cikli
         "for". Ky "cikël for" i veçantë do të numerojë nga 1 deri në 5 me nga 1, dhe
         do të ekzekutoj përmbajtjen e ciklit pas çdo numërimi. Ndihmoje bletën të
@@ -2479,8 +2496,8 @@
         6 viza?
       K-1 Artist Loops 4_instruction: A mundet një cikël të na ndihmojë të vizatojmë
         tavanin e kësaj kështjelle?
-      K-1 Artist Loops 5_instruction: Çfarë mund të futësh në cikël 4 herë që të vizatosh
-        këto shkallë?
+      K-1 Artist Loops 5_instruction: "Çfarë mund të futësh në cikël 4 herë që të
+        vizatosh këto shkallë?"
       K-1 Artist Loops 6_instruction: Kjo do dy cikle; një që të ngjisësh shkallët
         dhe një që të zbresësh.
       K-1 Artist Loops 7_instruction: A mund t'a përfundosh këtë model me dy cikle?

@@ -88,7 +88,7 @@
         Farmer2: Farmer 2
         Unplug8: Apstrakcija
         Artist4: Umjetnik 4
-        Unplug9: Štafeta Programiranje
+        Unplug9: "Štafeta Programiranje"
         Farmer3: Farmer 3
         Unplug10: Internet
         Artist5: Umjetnik 5
@@ -328,8 +328,8 @@
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi
           ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati
           zemljište i pripremiti ga za sadnju?
-        maze_karel_debug_seq_2: Šta ne valja u ovom programu? Kako ga treba popraviti
-          tako da ja mogu ukloniti ovu hrpu?
+        maze_karel_debug_seq_2: "Šta ne valja u ovom programu? Kako ga treba popraviti
+          tako da ja mogu ukloniti ovu hrpu?"
         maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje
           bude poravnato.
         maze_karel_debug_while: Kako treba izmijeniti ovaj program da bih ja zatrpao
@@ -644,7 +644,7 @@
         loop_for: Blok "Brojač"
         parameters: Funkcije sa Parametrima
         hoc_wrapup: Sažetak Sata Kodiranja
-        Unplug1: Šta je to informatika?
+        Unplug1: "Šta je to informatika?"
         Unplug2: Računarsko razmišljanje
         Unplug3: Papirno Programiranje Grafikona
         Unplug4: Algoritmi
@@ -684,7 +684,7 @@
         C2_graph_paper: Papirno Programiranje Grafikona
         C2_conditionals_with_cards: Uvjeti
         C2_binary_bracelets: Binarne narukvice
-        C2_relay_programming: Štafeta Programiranje
+        C2_relay_programming: "Štafeta Programiranje"
         C2_paper_airplanes: Avioni od Papira
         C2_digital_footprint: Digitalni otisak stopala
         C2_digital_footprint_v2: Digitalni otisak stopala
@@ -817,8 +817,8 @@
         replace_questions_degree: Koristi padajući meni za zamjenu "???" sa tačnim
           brojem stepeni za okret
         repeat_blocks: Uzmi blok "Ponovi" i omotaj ga oko blokova na radnoj površini
-        repeat_blocks_1: (1) Koristi ovaj blok i stavi ga oko sivih blokova na radnoj
-          površini
+        repeat_blocks_1: "(1) Koristi ovaj blok i stavi ga oko sivih blokova na radnoj
+          površini"
         repeat_blocks_2: (2) Pomakni blok "Ponovi" ovamo i stavi sive blokove unutar
           njega
         snowflake_dropdown: Koristi ovaj padajući meni za stvaranje različitih pahuljica!

@@ -612,9 +612,9 @@
           la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid
           (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore
           della Nonnina a felice quando viene colpita dai cuori.
-        studio_iceage_free_play: È il momento di creare un gioco o una storia per
+        studio_iceage_free_play: "È il momento di creare un gioco o una storia per
           conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco
-          ai tuoi amici sui loro smartphone, tablet o computer!
+          ai tuoi amici sui loro smartphone, tablet o computer!"
         studio_gumball_hello1: Anais vuole farsi nuovi amici. Puoi aiutarla a dire
           "Ciao" trascinando il blocco "pronuncia" nell'area di lavoro e digitando
           la parola "Ciao" al suo interno?
@@ -898,8 +898,8 @@
           con il valore corretto di gradi di cui girare
         repeat_blocks: Usa il blocco "ripeti" ed includi in esso gli altri blocchi
           nell'area di lavoro
-        repeat_blocks_1: (1) Usa questo blocco e mettilo intorno ai blocchi grigi
-          nell'area di lavoro
+        repeat_blocks_1: "(1) Usa questo blocco e mettilo intorno ai blocchi grigi
+          nell'area di lavoro"
         repeat_blocks_2: (2) Sposta qui  il blocco "ripeti" e posiziona i blocchi
           grigi al suo interno
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve

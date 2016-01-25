@@ -10,7 +10,7 @@
     attributes:
       user:
         name: Tên hiển thị
-        email: Địa chỉ email
+        email: "Địa chỉ email"
         username: tài khoản
         password: mật khẩu
         password_confirmation: Xác nhận mật khẩu
@@ -43,23 +43,23 @@
   unplugged_activity: Hoạt động không dùng máy
   of: của
   more: NHIỀU HƠN
-  less: ÍT HƠN
+  less: "ÍT HƠN"
   beta: phiên bản thử nghiệm
   try_hoc: 'Tham gia thử cuộc thi Hour of Code, bấm vào đây >> '
   try_k8intro: Hãy thử khóa học K-8 Khoa Học Máy Tính Căn Bản (15-25 giờ)
   k8intro: Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)
-  already_started: 'Đã bắt đầu rồi à? Tiếp tục ở đây >> '
+  already_started: "Đã bắt đầu rồi à? Tiếp tục ở đây >> "
   demos: 'Admin: Tất cả các bản demo'
   continue: Tiếp tục
   prize: giải thưởng
   more_info: Thông tin thêm
   auth:
-    sign_in_with: Đăng nhập bằng %{provider}
-    signed_in: Đăng nhập!
+    sign_in_with: "Đăng nhập bằng %{provider}"
+    signed_in: "Đăng nhập!"
     signed_out: Bạn đã đăng xuất khỏi <a href="%{url}"> Code.org</a>.
     sign_out_of: Bạn sử dụng %{provider} để đăng nhập. <a href="%{url}"> Click vào
       đây</a> để đăng xuất khỏi %{provider}.
-    already_signedup: Đã đăng ký?
+    already_signedup: "Đã đăng ký?"
     notyet_signedup: Chưa tham gia?
     google_oauth2: Tài khoản Google
     twitter: Twitter
@@ -69,8 +69,8 @@
     need_confirmation: Không nhận được hướng dẫn xác nhận?
     need_unlock: Chưa nhận hướng dẫn mở khóa?
   signup_form:
-    student_count: '%{count} sinh viên đã đăng ký.'
-    teacher_count: '%{count} giáo viên đã đăng ký.'
+    student_count: "%{count} sinh viên đã đăng ký."
+    teacher_count: "%{count} giáo viên đã đăng ký."
     overview_student: Đăng ký cho một tài khoản để theo dõi tiến độ của bạn. Email
       của bạn chủ yếu được sử dụng để cho phép bạn đăng nhập vào và phục hồi mật khẩu.
       Để biết thêm chi tiết, xem <a href="http://code.org/privacy">Chính sách bảo
@@ -87,13 +87,13 @@
     student_pitch: Sinh viên đăng ký Code.org
     student_title: Sinh viên đăng ký
     school_name: Tên trường (tùy chọn)
-    school_address: Địa chỉ trường (không bắt buộc)
-    address_placeholder: địa chỉ, thành phố, tỉnh, mã bưu điện
+    school_address: "Địa chỉ trường (không bắt buộc)"
+    address_placeholder: "địa chỉ, thành phố, tỉnh, mã bưu điện"
     gender: Giới tính (không bắt buộc)
     birthday: Ngày sinh (tùy chọn)
     age: Tuổi
     user_type: Bạn là học viên hay Giáo viên?
-    submit: Đăng ký
+    submit: "Đăng ký"
     teacher: Bạn có phải là giáo viên?
     valid_username: Hợp lệ!
     invalid_username: Tên người dùng phải nhiều hơn 5 ký tự
@@ -111,11 +111,11 @@
     additional_information: Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng
       ký cho bạn.
   signin_form:
-    title: Đã có một tài khoản? Đăng nhập
+    title: "Đã có một tài khoản? Đăng nhập"
     login: Email hoặc tên người dùng
     password: Mật khẩu
     remember: Nhớ mật khẩu
-    submit: Đăng nhập
+    submit: "Đăng nhập"
   signin:
     try_heading: Bạn muốn thử lập trình mà không cần đăng ký?
     try_hoc: Hãy thử Giờ Lập trình
@@ -125,11 +125,11 @@
     name: Chọn tên của bạn
     picture: Bây giờ tìm hình ảnh bí mật của bạn
     words: Bây giờ nhập từ bí mật của bạn
-    login: Đăng nhập
+    login: "Đăng nhập"
   password:
     reset_form:
       title: Quên mật khẩu?
-      email: Địa chỉ Email
+      email: "Địa chỉ Email"
       submit: Gửi cho tôi hướng dẫn đặt lại mật khẩu
     change_form:
       title: Thay đổi mật khẩu của bạn
@@ -146,12 +146,12 @@
       vs. Zombies! :-) \n\n%{name}\n"
   follower:
     invite_sent: Gửi lời mời
-    added_teacher: '%{name} được thêm như giáo viên của bạn'
+    added_teacher: "%{name} được thêm như giáo viên của bạn"
     registered: Bạn đã đăng kí cho mục %{section_name}.
     error:
       signed_in: Xin vui lòng đăng xuất trước khi tiếp tục
       username_not_found: Tên người sử dụng % {username} không tìm thấy
-      username_in_use: '%{username} đã được dùng, xin vui lòng chọn một tên khác'
+      username_in_use: "%{username} đã được dùng, xin vui lòng chọn một tên khác"
       no_teacher: Không tìm thấy ai đã đăng nhập bằng '%{teacher_email_or_code}'.
         Xin vui lòng yêu cầu họ đăng nhập ở đây và sau đó thử thêm họ một lần nữa
       section_not_found: Không thể tìm thấy một phần với mã '%{section_code}'.
@@ -174,9 +174,9 @@
     title: 'Mua lại giải thưởng: %{name}'
     provider: 'Nhà cung cấp:'
     code: 'Mã:'
-    redeem_header: 'Để mua lại:'
-    donorschoose_register: Đăng ký với tư cách là một giáo viên trên DonorsChoose.org
-    donorschoose_project: Đăng một chương trình
+    redeem_header: "Để mua lại:"
+    donorschoose_register: "Đăng ký với tư cách là một giáo viên trên DonorsChoose.org"
+    donorschoose_project: "Đăng một chương trình"
     donorschoose_how_to: Sử dụng mã như thế nào
     success: Giải thưởng của bạn đã mua lại thành công, xem mã dưới đây.
     error: Giải thưởng của bạn có thể không thu hồi được, xin vui lòng thử lại.
@@ -199,7 +199,7 @@
         lập Hoa Kỳ.
       msg_visit_website: Truy cập trang web
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10Gb dung lượng Dropbox
@@ -208,7 +208,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -259,14 +259,14 @@
     destroy: Xóa
     back: Quay lại
     confirm: Bạn chắc chứ?
-    created: '%{model} đã được tạo thành công.'
-    updated: '%{model} đã được tạo thành công.'
-    destroyed: '%{model} đã được xóa thành công.'
+    created: "%{model} đã được tạo thành công."
+    updated: "%{model} đã được tạo thành công."
+    destroyed: "%{model} đã được xóa thành công."
     access_denied: Bạn không được quyền truy cập vào %{model} này.
   nav:
     header:
       finished_hoc: Tôi đã hoàn thành giờ mã của tôi
-      sign_in_to_save: Đăng nhập để lưu lại những tiến bộ của bạn
+      sign_in_to_save: "Đăng nhập để lưu lại những tiến bộ của bạn"
       free_play:
         playlab: Tạo một ứng dụng
         artist: Vẽ một cái gì đó
@@ -279,21 +279,21 @@
       stats: TIến trình của bạn
       settings: Tài khoản của bạn
       prizes: Giải thưởng
-      logout: Đăng xuất
-      signin: Đăng nhập
-      signup: Đăng ký
+      logout: "Đăng xuất"
+      signin: "Đăng nhập"
+      signup: "Đăng ký"
       already_registered: Bạn đã đăng ký?
     popup:
       progress_for_user: sự tiến bộ của %{name}
       progress: Qua trình của bạn
       lines: 'Tổng số dòng mã: %{lines}'
-      close: ĐÓNG
+      close: "ĐÓNG"
       mastery: Khái niệm
       puzzle_map: Màn
       prizes: Thu thập tất cả  %{total_trophies} cúp và giành giải thưởng!
       prize_earned: Tất cả %{total_trophies} danh hiệu thu thập được. Bạn đã chiến
         thắng được phần thưởng này!
-      prize_us_only: (Chỉ sinh viên Hoa Kỳ)
+      prize_us_only: "(Chỉ sinh viên Hoa Kỳ)"
       prizes_link: Thông tin thêm
   teacher:
     answer: Trả lời
@@ -301,11 +301,11 @@
     title:
       one: 'Giáo viên của bạn:'
       other: 'Giáo viên của bạn:'
-    remove: (thay đổi giáo viên)
+    remove: "(thay đổi giáo viên)"
     confirm:
       remove: Bạn có chắc bạn muốn loại bỏ giáo viên này không?
     students:
-      dashboard: Đi đến bảng điều khiển của giáo viên
+      dashboard: "Đi đến bảng điều khiển của giáo viên"
     user_not_found: Không tìm thấy giáo viên.
     student_teacher_disassociated: Bạn đã gỡ bỏ %{teacher_name} là giáo viên của bạn.
     panel:
@@ -319,33 +319,29 @@
       submitted_on: 'Gửi lên ngày:'
       unsubmit: Ngưng gửi
   user:
-    email_confirm_needed: 'Địa chỉ email chưa được xác nhận:'
-    email_confirm_needed_required: 'Địa chỉ email của bạn %{email} chưa được xác nhận:'
-    email_confirm_wrong_email: (Địa chỉ email sai?)
+    email_confirm_needed: "Địa chỉ email chưa được xác nhận:"
+    email_confirm_needed_required: "Địa chỉ email của bạn %{email} chưa được xác nhận:"
+    email_confirm_wrong_email: "(Địa chỉ email sai?)"
     email_resend_confirm: Gửi lại hướng dẫn xác nhận
-    new_password_hint: (để trống nếu bạn không muốn thay đổi nó)
-    current_password_hint: (chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)
+    new_password_hint: "(để trống nếu bạn không muốn thay đổi nó)"
+    current_password_hint: "(chúng tôi cần mật khẩu của bạn để xác nhận thay đổi)"
     delete: Xóa tài khoản của bạn
     delete_text: Nhấp vào nút bên dưới sẽ xóa tài khoản của bạn.
     delete_text_teacher_note: 'Xin lưu ý: xóa tài khoản của bạn sẽ không xóa tài khoản
       học viên của bạn.'
     delete_confirm: Bạn có chắc rằng bạn muốn xóa tài khoản của bạn không?
   user_level:
-    completed: Đã hoàn thành
+    completed: "Đã hoàn thành"
     tried: thử lại
-  user_stats:
-    recent_activity: Hoạt động gần đây
-    show_more: Hiển thị thêm
-    classroom_activity: Hoạt động không dùng máy
   home:
     title: TIến trình của bạn
     description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org
-    lines_of_code: '%{lines_count} DÒNG MÃ ĐƯỢC VIẾT BỞI HỌC SINH/SINH VIÊN'
-    lines_of_code_linebreak: '%{lines_count} dòng mã <br/> được viết bởi %{students_count}
-      hàng triêu học viên'
+    lines_of_code: "%{lines_count} DÒNG MÃ ĐƯỢC VIẾT BỞI HỌC SINH/SINH VIÊN"
+    lines_of_code_linebreak: "%{lines_count} dòng mã <br/> được viết bởi %{students_count}
+      hàng triêu học viên"
     all_courses: Tổng quan về các khóa học 1, 2 và 3
     lesson_plans: Giáo án
-    signin_message: Đã đăng ký? %{link}
+    signin_message: "Đã đăng ký? %{link}"
     student_reg_link: Sinh viên đăng ký
     teacher_reg_link: Giáo viên đăng ký
     signin_directions: Sử dụng một tài khoản để theo dõi tiến độ. <br/> Giáo viên,
@@ -357,8 +353,8 @@
       tổng số %{trophy_max} danh hiệu "Thành Thạo Khái Niệm".
     teacher_print_certificates: In giấy chứng nhận cho học sinh hoàn thành khóa học
       này
-    teacher_read_blog: Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog
-      giáo dục của chúng tôi
+    teacher_read_blog: "Đọc về tin tức và cập nhật của chúng tôi tại tài liệu blog
+      giáo dục của chúng tôi"
     classroom: Lớp học của bạn
     student_progress: Tiến độ học tập của bạn
     student_stats: Bạn đã kiếm được %{trophy_count} trong số %{trophy_max} huy hiệu
@@ -383,11 +379,11 @@
     try_beta_courses: Tính năng mới! Hãy thử nghiệm các khóa học phiên bản beta cho
       học sinh lớp 5
     use_as_teacher: Sử dụng trang web này với tư cách là giáo viên
-    heading_hoc2014: <h2> Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>
-    heading_elementary: <h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi lứa
-      tuổi)</h1>
-    heading_apps: <h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>
-    heading_legacy: <h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>
+    heading_hoc2014: "<h2> Giờ Lập Trình</h2><h1>Mọi lứa tuổi</h1>"
+    heading_elementary: "<h2>các khóa học 20 giờ cho</h2> <h1>Người nhập môn (mọi
+      lứa tuổi)</h1>"
+    heading_apps: "<h2>Thú vị cho</h2><h1>Tất cả mọi người</h1>"
+    heading_legacy: "<h2>Khóa học cơ bản của chúng tôi</h2><h1>Mọi lứa tuổi</h1>"
     your_gallery: Bộ sưu tập
     no_primary_course: Hãy thử một khóa học ở Code Studio
     choose_next_course: Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới
@@ -430,9 +426,9 @@
       Ltd. Bản Quyền Đã Được Bảo Hộ. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Bản Quyền Đã Được Bảo Hộ. The Amazing World of Gumball
       là thương hiệu và &copy; 2015 Cartoon Network.
-    powered_by_aws: Được tài trợ bởi Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và
-      Giờ Lập Trình &reg; là nhãn hiệu của Code.org.'
+    powered_by_aws: "Được tài trợ bởi Amazon Web Services"
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, biểu tượng CODE và
+      Giờ Lập Trình &reg; là nhãn hiệu của Code.org."
     copyright: Bản quyền
     more: Nhiều hơn
     feedback: Cung cấp thông tin phản hồi
@@ -444,7 +440,7 @@
     privacy: Chính sách riêng tư
     secure: Phiên bản an toàn
     report_abuse: Báo cáo lạm dụng
-    built_on_code_studio: Được xây dựng trên Code Studio
+    built_on_code_studio: "Được xây dựng trên Code Studio"
     make_my_own_app: Tạo ứng dụng của tôi
     how_it_works: Nó hoạt động như thế nào
     try_hour_of_code: Hãy thử Giờ lập trình!
@@ -470,7 +466,7 @@
         web. Xin vui lòng giúp chúng tôi bằng cách <a href='%{report_issue_url}'>
         báo cáo bất kỳ vấn đề nào bạn tìm thấy</a>. Bạn cũng có thể <a href='%{supported_browsers_url}'>
         nâng cấp trình duyệt của bạn lên một phiên bản được hỗ trợ</a>.
-      hide_this_warning: Ẩn cảnh báo này
+      hide_this_warning: "Ẩn cảnh báo này"
     upgrade:
       header: Hãy nâng cấp trình duyệt của bạn.
       message: Code.org sử dụng công nghệ web hiện đại. Điều này làm cho việc sử dụng
@@ -480,7 +476,7 @@
         thể <a href='#'> thử xem trang</a>, nhưng có thể khó tránh khỏi việc các chức
         năng bị hỏng.
       button: Cho tôi xem danh sách các trình duyệt được hỗ trợ
-  slow_loading: Điều này mất nhiều thời gian hơn bình thường...
+  slow_loading: "Điều này mất nhiều thời gian hơn bình thường..."
   try_reloading: Hãy thử tải lại trang
   next_stage: Hoàn thành! Tiếp tục màn tiếp theo
   download_pdf: Mở bài học
@@ -564,7 +560,7 @@
     want_to_make_your_own: Bạn muốn tự tạo chương trình này?
     more: Nhiều &rarr;
     caption_by_name_age: bởi  %{name}, %{age} tuổi
-    caption_time_ago: '%{time_ago} trước'
+    caption_time_ago: "%{time_ago} trước"
     header: Bộ sưu tập
     header_playlab: Phòng trò chơi
     header_artist: Nghệ sĩ
@@ -578,19 +574,19 @@
     feedback: Gửi ý kiến phản hồi
     report_bug: Báo cáo lỗi
     support: Nhận trợ giúp
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!
     correct_title: Chính xác
-    correct_body: Đó là câu trả lời chính xác.
+    correct_body: "Đó là câu trả lời chính xác."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Cách giải chưa chính xác
     wrong_body: Cách giải bạn đã nhập chưa chính xác. Xin vui lòng thử lại!
     correct_title: Chính xác
-    correct_body: Đó là câu trả lời chính xác.
+    correct_body: "Đó là câu trả lời chính xác."
   contract_match:
     wrong_title: Câu trả lời không chính xác
     badname: Hợp đồng của bạn có tên sai.
@@ -607,7 +603,7 @@
     open_response_title: Xin cảm ơn
     open_response_body: Cảm ơn câu trả lời của bạn!
   dialog:
-    ok: Đồng ý
+    ok: "Đồng ý"
     startover_title: Bạn có chắc bạn muốn bắt đầu lại?
     startover_body: Cái này sẽ cài lại bảng đố về trạng thái bắt đầu và xóa hết dữ
       liệu bạn đã thêm hoặc thay đổi.
@@ -669,8 +665,8 @@
     in_progress: trong tiến trình
     completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
     completed_perfect: hoàn thành, hoàn hảo
-    furthest_level_attempted: đã cố gắng ở mức độ cao nhất
-    assessment: đánh giá
+    furthest_level_attempted: "đã cố gắng ở mức độ cao nhất"
+    assessment: "đánh giá"
   studio:
     courses_working_on: Các khóa học bạn đang tiến hành
     completed_courses: Hoàn thành khóa học
@@ -680,7 +676,7 @@
     create: Tạo ra chương trình
     create_a_project: 'Tạo một chương trình mới:'
     new: Tạo mới
-    rename: Đổi tên
+    rename: "Đổi tên"
     save: Lưu
     delete: Xóa
     exit: Trở về khóa học
@@ -688,10 +684,10 @@
     share: Chia sẻ
     share_title: Chia sẻ chương trình của tôi
     share_copy_link: 'Sao chép liên kết:'
-    close: Đóng
+    close: "Đóng"
     more: Nhiều hơn
     name: Tên
-    updated: Đã cập nhật
+    updated: "Đã cập nhật"
     project_type: loại chương trình
     help_text: Nhấp vào liên kết bên dưới để tạo một chương trình Play Lap (trò chơi
       thí nghiệm) hoặc Artist (đồ họa) <strong>Make an App</strong> hoặc <strong>Draw
@@ -699,9 +695,9 @@
       có thể trở lại và làm việc với các dự án của mình bất cứ lúc nào
     need_help: Cần trợ giúp ban đầu?
     really_delete: Xóa?
-    delete_yes: Đồng ý
+    delete_yes: "Đồng ý"
     delete_no: Không
-    saved: Đã lưu
+    saved: "Đã lưu"
     not_saved: Không lưu
     cancel: Huỷ
     delete_confirm_title: Bạn có chắc bạn muốn xóa bỏ chương trình này?
@@ -709,7 +705,7 @@
       sách chương trình của bạn. Bất cừ ai đã được bạn chia sẽ sẽ không còn nhìn thấy
       chương trình của bạn.
     view_all: Xem chương trình của tôi
-    remix: đảo lại
+    remix: "đảo lại"
     click_to_remix: Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!
     edit_project: Chỉnh sửa dự án
     abuse:
@@ -717,7 +713,7 @@
         của Code.org</a> và không thể chia sẻ với những người khác.
       contact_us: Nếu bạn tin rằng đây là một lỗi, xin vui lòng <a href='https://code.org/contact'>
         liên hệ với chúng tôi.</a>
-      go_to_code_studio: Đi đến Code Studio
+      go_to_code_studio: "Đi đến Code Studio"
       report_abuse_form:
         intro: Nếu bạn gặp phải nội dung gây khó chịu, mối đe dọa, hăm dọa trên mạng,
           quấy rối hoặc một thể hiện của các vi phạm bản quyền nội dung bạn sở hữu
@@ -731,7 +727,7 @@
             như thế nào
           abuse_detail: Xin vui lòng cung cấp chi tiết đối với nội dung bạn đang báo
             cáo
-        abusive_url: Địa chỉ trang web của nội dung được báo cáo
+        abusive_url: "Địa chỉ trang web của nội dung được báo cáo"
         abuse_type:
           question: Nội dung này vi phạm %{link_start}Terms Service%{link_end} như
             thế nào?

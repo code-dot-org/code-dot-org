@@ -89,7 +89,7 @@
           'Maze: Sequence2': 'Labürint: jada 2'
           'Artist: Nested Loops': 'Kunstnik: korduvad tsüklid'
           description_audience: Vanustele 6-18
-          description_short: Õpilastega, kes suudavad lugeda, alustage kursus 2-ga.
+          description_short: "Õpilastega, kes suudavad lugeda, alustage kursus 2-ga."
         course3:
           The Maze: Labürint
           'Studio: Create a Story': 'Play Lab: Kirjuta lugu'
@@ -112,7 +112,7 @@
           Songwriting Parameters: Laulukirjutamise parameetrid
           Dice Race: Täringuralli
           Internet: Internet
-          Crowdsourcing: Ühistegevused
+          Crowdsourcing: "Ühistegevused"
           Digital Citizenship: Digitaalne kodakondsus
           Farmer - While Loops: Talunik - Kui tsükkel
           description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse 2. Õpilane
@@ -170,8 +170,8 @@
           description_short: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
             kui nad avastavad jää võlu ja ilu.
         course4:
-          description_short: Õpilased, kes võtavad Kursus 4-ja peaksid enne olema
-            läbinud Kursused 2 ja 3.
+          description_short: "Õpilased, kes võtavad Kursus 4-ja peaksid enne olema
+            läbinud Kursused 2 ja 3."
           description: Kursus 4 on disainitud õpilastele, kes on võtnud Kursus 2 ja
             3. Õpilased lähevad sügavamale programmeerimise teemadega, mida tutvustati
             eelmistes kursustes, et moodustada rohkem painduvamaid lahendusi rohkem
@@ -740,7 +740,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: „Kui“ tsüklid
+          While Loops: "„Kui“ tsüklid"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1018,7 +1018,7 @@
           Strings and Images: Sõned ja kujutised
           Writing Contracts: Writing Contracts
           Defining Variables: Muutujate määratlemine
-          Defining Functions: Ülesannete määratlemine
+          Defining Functions: "Ülesannete määratlemine"
           Rocket-Height: Rocket-Height
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Tingimuslaused'
@@ -1139,7 +1139,7 @@
           Strings and Images: Sõned ja kujutised
           Writing Contracts: Writing Contracts
           Defining Variables: Muutujate määratlemine
-          Defining Functions: Ülesannete määratlemine
+          Defining Functions: "Ülesannete määratlemine"
           Rocket-Height: Rocket-Height
           Booleans: Booleans
           'Eval: Conditionals': 'Eval: Tingimuslaused'
@@ -1515,8 +1515,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1570,6 +1572,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Jääaja Play Lab
           description_short: Loo lugu või mäng Jääaja Play Labiga!
@@ -1609,7 +1612,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: „Kui“ tsüklid
+          While Loops: "„Kui“ tsüklid"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1635,17 +1638,17 @@
           Gumball Play Lab: Gumballi Play Lab
         starwars:
           title: 'Star Wars: galaktika loomine koodiga'
-          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
-            kauges, kauges galaktikas.
-          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
-            kauges galaktikas.
+          description_short: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+            kauges, kauges galaktikas."
+          description: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
+            kauges galaktikas."
           Hour of Code 2015: Kooditund 2015
         starwarsblocks:
           title: 'Star Wars: galaktika loomine koodiga'
-          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
-            kauges, kauges galaktikas.
-          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
-            kauges galaktikas.
+          description_short: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+            kauges, kauges galaktikas."
+          description: "Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
+            kauges galaktikas."
           Hour of Code 2015: Kooditund 2015
         minecraft:
           title: Minecraft
@@ -1673,5 +1676,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Kokkuvõte
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

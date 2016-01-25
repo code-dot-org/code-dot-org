@@ -312,17 +312,16 @@ hu:
         studio_playlab_9: Állítsd be ennek a földönkívüli inváziónak a hátterét, és segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd a nyíl billentyűket, hogy elérjen a földönkívülihez, és figyelmeztetni tudjon másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_iceage_hello1: 'Sid összeakar mindenkit gyűjteni egy új kalandra. Tudsz neki segíteni hogy azt mondja "helló" azzal hogy odahúzod a "mond" blokkot a a munkaterületre és beleirod "hello"?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello2: 'Sid (szereplő 1) megtalálta Manny-t (szereplő 2) és szeretné meghívni őt egy kalandra. Segíts nekik egymást üdvözölni a "szereplő mondja" blokkot használva kétszer.'
+        studio_iceage_move_to_flag: 'Motkány a makkját keresi! Segíts neki az utolsó 200 képponton a "mozgás" blokkot használva.'
+        studio_iceage_move_to_actor: 'Diego (szereplő 1) keresi Manny-t (szereplő 2). Segíts Diego-nak 200 képpontot haladni Manny felé a "szereplő mozgatása" blokkal. Aztán kapcsold a blokkot a "szereplő megérinti" eseményhez egy zene lejátszásához amikor megtalálják egymást.'
+        studio_iceage_repeat: 'A "ismételd végtelenszer" blokk segít hogy kódod folyamatosan fusson. Hozzá tudsz kapcsolni blokkokat hogy Granny egy kicsit tornázzon jobbra-balra mozogva?'
+        studio_iceage_click_hello: Segítenél Sid-nek hogy kattintásnál hívja a barátait? Futtatás után ne felejts el rákattintani.
+        studio_iceage_move_events: 'Motkány még mindig a makkját keresi! Segíts neki körbeszökdécselni "mozgás" blokkot csatolva minden eseményhez és lenyomott nyíl billentyűhöz. Amikor kész vagy, kattints a Futtatásra és próbálj minden makkot összegyűjteni.'
+        studio_iceage_sound_and_points: 'Megadtuk a kódok többségét amivel Granny tud jobbra és balra, valamint Sid tud a képernyőn mozogni. Be tudnád fejezni a kódot és blokkot adni a "amikor a szereplő megérinti" eseményhez hogy mindketten lejátszanak egy hangot és kapjanak pontot amikor összeütköznek? Kattints a futtatásra a játék elindításához.'
+        studio_iceage_warn_ice_age: Mindenkinek sietnie kell mert a jégkorszak közeledik! Változtasd meg a hátteret egy jeges témára és állítsd Sid-et gyorsabb mozgásra. Kattints a Futtatásra hogy elküld Diego-hoz hogy figyelmeztesse.
+        studio_iceage_throw_hearts: 'Sid szeretné ha nagymamája Granny tudná mennyire szereti. Használd a "szereplő dobja" parancsot hogy Sid (szereplő 1) dobjon egy szivecskét Granny-nak (szereplő 2)! Állítsd Granny hangulatát boldogra amikor hozzáér az eldobott szivecske.'
+        studio_iceage_free_play: Készíts saját játékot vagy történetet! Ha elkészültél, kattints a Készre, hogy barátaid is kipróbálhassák játékodat telefonon, tableten vagy számítógépen!
         studio_gumball_hello1: 'Anais új barátokat szeretne. Tudnál segíteni neki azt mondani, hogy "helló", úgy, hogy a munkafelületre vonszolod a mondd blokkot, és beleírod, hogy "helló"?'
         studio_gumball_hello2: 'Darwin (1. szereplő) és a testvére, Gumball (2. szereplő) iskolába mennek. Segíts nekik üdvözölni egymást a "szereplő mondja" blokk kétszeri használatával.'
         studio_gumball_move_to_flag: 'Banán Joe meg fogja nyerni a versenyt a kiránduláson! Segíts neki 200 képpontot mozogni a "mozogj" blokkal.'
@@ -426,7 +425,7 @@ hu:
         C3_bee_nested_loops: Egymásba ágyazott ciklusok
         C3_bee_debugging: 'Méh: hibakeresés'
         C3_bounce: Ugrál
-        C3_playlab_create_game: 'Játéklabor: Hozz létre egy játékot'
+        C3_playlab_create_game: 'Játéklabor: hozz létre egy játékot'
         C3_computational_thinking: Számítógépes gondolkodás
         C3_dice_race: Kocka verseny
         C3_internet: Internet
@@ -461,7 +460,7 @@ hu:
         tutorial_puzzle_challenge: Bemutató a feladvány megoldásához
         infinity_playlab_intro: 'Játéklabor - bevezetés'
         infinity_playlab_events: 'Játéklabor - események'
-        infinity_playlab_repeat_forever: 'Játéklabor - végtelen ismétlés'
+        infinity_playlab_repeat_forever: 'Játéklabor - végtelen ciklus'
         csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
         csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
         csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'

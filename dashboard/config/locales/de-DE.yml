@@ -70,8 +70,8 @@
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
   signup_form:
-    student_count: '%{count} Schüler haben sich bereits angemeldet.'
-    teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
+    student_count: "%{count} Schüler haben sich bereits angemeldet."
+    teacher_count: "%{count} Lehrer haben sich bereits angemeldet."
     overview_student: Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail
       Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr
       Informationen kannst Du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a>
@@ -132,7 +132,7 @@
       email: E-Mail-Adresse
       submit: Sende mir Anweisungen um das Passwort zurückzusetzen
     change_form:
-      title: Ändern Sie Ihr Passwort
+      title: "Ändern Sie Ihr Passwort"
       new_password: Neues Passwort
       confirm_password: Neues Passwort bestätigen
       submit: Mein Passwort ändern
@@ -148,12 +148,12 @@
       %{name}
   follower:
     invite_sent: Einladung gesendet
-    added_teacher: '%{name} wurde als dein Lehrer hinzugefügt'
+    added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
     registered: Sie haben Sich für %{section_name} registriert.
     error:
       signed_in: Bitte melde dich ab bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
-      username_in_use: '%{username} ist bereits vergeben, bitte wähle einen anderen'
+      username_in_use: "%{username} ist bereits vergeben, bitte wähle einen anderen"
       no_teacher: Es konnte niemand angemeldet mit '%{teacher_email_or_code}' gefunden
         werden. Bitten Sie bitte denjenigen sich hier registrieren und versuchen Sie
         es dann erneut.
@@ -202,7 +202,7 @@
         US-Schule bist.
       msg_visit_website: Website besuchen
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox-Speicherplatz
@@ -211,7 +211,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Wähle einen Preis:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -260,9 +260,9 @@
     destroy: Zerstören
     back: Zurück
     confirm: Bist du sicher?
-    created: '%{model} wurde erfolgreich erstellt.'
-    updated: '%{model} wurde erfolgreich aktualisiert.'
-    destroyed: '%{model} wurde erfolgreich gelöscht.'
+    created: "%{model} wurde erfolgreich erstellt."
+    updated: "%{model} wurde erfolgreich aktualisiert."
+    destroyed: "%{model} wurde erfolgreich gelöscht."
     access_denied: Sie haben keinen Zugriff auf dieses %{model}.
   nav:
     header:
@@ -285,7 +285,7 @@
       signup: Registrieren
       already_registered: Bereits registriert?
     popup:
-      progress_for_user: '%{name}''s Fortschritt'
+      progress_for_user: "%{name}'s Fortschritt"
       progress: Ihre Fortschritte
       lines: 'Gesamte Codezeilen: %{lines}'
       close: schließen
@@ -293,7 +293,7 @@
       puzzle_map: Level
       prizes: Sammle alle %{total_trophies} Trophäen und gewinne Preise!
       prize_earned: Alle %{total_trophies} Trophäen gesammelt. Preis gewonnen!
-      prize_us_only: (nur für Schüler der USA)
+      prize_us_only: "(nur für Schüler der USA)"
       prizes_link: Mehr Informationen
   teacher:
     answer: Antwort
@@ -301,7 +301,7 @@
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
-    remove: (entferne Lehrer)
+    remove: "(entferne Lehrer)"
     confirm:
       remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
     students:
@@ -321,11 +321,11 @@
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'
-    email_confirm_wrong_email: (Falsche E-Mail-Adresse?)
+    email_confirm_wrong_email: "(Falsche E-Mail-Adresse?)"
     email_resend_confirm: Anmeldebestätigung erneut senden
-    new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
-    current_password_hint: (wir benötigen dein aktuelles Passwort, um deine Änderungen
-      zu bestätigen)
+    new_password_hint: "(freilassen, wenn Sie es nicht verändern möchten)"
+    current_password_hint: "(wir benötigen dein aktuelles Passwort, um deine Änderungen
+      zu bestätigen)"
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen deines Accounts wird nicht
@@ -334,17 +334,13 @@
   user_level:
     completed: Abgeschlossen
     tried: Versucht
-  user_stats:
-    recent_activity: Letzte Aktivität
-    show_more: Erweiterte Ansicht
-    classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
     description: Code-Studio ist Heimat von online Kurse erstellt von Code.org
-    lines_of_code: '%{lines_count} Codezeilen von den Studenten erstellt'
-    lines_of_code_linebreak: '%{lines_count} Zeilen CODE <br/> von %{students_count}
-      Millionen Studenten geschrieben'
-    all_courses: Übersicht der Level 1, 2 und 3
+    lines_of_code: "%{lines_count} Codezeilen von den Studenten erstellt"
+    lines_of_code_linebreak: "%{lines_count} Zeilen CODE <br/> von %{students_count}
+      Millionen Studenten geschrieben"
+    all_courses: "Übersicht der Level 1, 2 und 3"
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
     student_reg_link: Registrierung (Schüler)
@@ -366,7 +362,7 @@
     student_left_off: 'Wo du aufgehört hast:'
     student_finished: Du hast alle Tutorials abgeschlossen. Wähle eine andere Klasse
       %{online_link} oder in deiner %{local_school_link}
-    local_school: örtliche Schule
+    local_school: "örtliche Schule"
     online: online
     see_details: Zeige Details
     view_course: Zeige Kurs
@@ -382,10 +378,10 @@
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen
       1-6
     use_as_teacher: Verwende diese Seite als Lehrer
-    heading_hoc2014: <h2>Die Hour of Code für</h2><h1>jedes Alter</h1>
-    heading_elementary: <h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>
-    heading_apps: <h2>Spass für</h2><h1>Alle</h1>
-    heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
+    heading_hoc2014: "<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>"
+    heading_elementary: "<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>"
+    heading_apps: "<h2>Spass für</h2><h1>Alle</h1>"
+    heading_legacy: "<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>"
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
     choose_next_course: Wähle einen der Code Studio Kurse unten aus um ihn auszuprobieren
@@ -428,8 +424,8 @@
       %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
       Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
     powered_by_aws: Betrieben von Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
-      Hour of Code&reg; sind eingetragene Marken der Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
+      Hour of Code&reg; sind eingetragene Marken der Code.org."
     copyright: Copyright
     more: Mehr
     feedback: Feedback geben
@@ -480,7 +476,7 @@
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
   lesson_plan: Stundenplan
-  view_lesson_plan: Überblick des Unterrichtsplans
+  view_lesson_plan: "Überblick des Unterrichtsplans"
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
@@ -558,7 +554,7 @@
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: Mehr &rarr;
     caption_by_name_age: Von %{name}, Alter %{age}
-    caption_time_ago: '%{time_ago} früher'
+    caption_time_ago: "%{time_ago} früher"
     header: Galerie
     header_playlab: Play Lab
     header_artist: Künstler
@@ -571,7 +567,7 @@
     feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Die Antwort, die du eingegeben hast, ist nicht korrekt. Bitte versuche
