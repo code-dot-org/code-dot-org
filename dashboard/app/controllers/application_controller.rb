@@ -215,4 +215,8 @@ class ApplicationController < ActionController::Base
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
   end
+
+  def require_admin
+    authorize! :read, :reports
+  end
 end
