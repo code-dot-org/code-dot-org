@@ -70,9 +70,6 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
       properType = (typeof varValue === 'string') ||
                    (typeof varValue === 'number') ||
                    (typeof varValue === 'boolean');
-    } else if (expectedType === 'function') {
-      // Special handling for functions, it must be an interpreter function:
-      properType = (typeof varValue === 'object') && (varValue.type === 'function');
     } else if (expectedType === 'number') {
       properType = (typeof varValue === 'number' ||
                     (typeof varValue === 'string' && !isNaN(varValue)));
@@ -695,7 +692,7 @@ applabCommands.drawImageURL = function (opts) {
   var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
     if (opts.callback) {
-      queueCallback(jsInterpreter, opts.callback, [success]);
+      opts.callback.call(null, success);
     }
   };
 
@@ -1211,6 +1208,7 @@ function clearLastMouseMoveEvent(e) {
 }
 
 applabCommands.onEventFired = function (opts, e) {
+  var funcArgs = opts.extraArgs;
   if (typeof e != 'undefined') {
     var div = document.getElementById('divApplab');
     var xScale = div.getBoundingClientRect().width / div.offsetWidth;
@@ -1290,22 +1288,11 @@ applabCommands.onEventFired = function (opts, e) {
 
     // Push a function call on the queue with an array of arguments consisting
     // of the applabEvent parameter (and any extraArgs originally supplied)
-    Applab.JSInterpreter.queueEvent(opts.func, [applabEvent].concat(opts.extraArgs));
-  } else {
-    Applab.JSInterpreter.queueEvent(opts.func, opts.extraArgs);
-  }
-  if (Applab.JSInterpreter) {
-    // Execute the interpreter and if a return value is sent back from the
-    // interpreter's event handler, pass that back in the native world
 
-    // NOTE: the interpreter will not execute forever, if the event handler
-    // takes too long, executeInterpreter() will return and the native side
-    // will just see 'undefined' as the return value. The rest of the interpreter
-    // event handler will run in the next onTick(), but the return value will
-    // no longer have any effect.
-    Applab.JSInterpreter.executeInterpreter(false, true);
-    return Applab.JSInterpreter.lastCallbackRetVal;
+    funcArgs = [applabEvent].concat(opts.extraArgs);
   }
+  // Call the callback function:
+  return opts.func.apply(null, funcArgs);
 };
 
 applabCommands.onEvent = function (opts) {
@@ -1414,12 +1401,13 @@ applabCommands.onHttpRequestEvent = function (opts) {
   // that is currently active before proceeding...
   if (opts.JSInterpreter === Applab.JSInterpreter) {
     if (this.readyState === 4) {
-      Applab.JSInterpreter.queueEvent(
-        opts.func,
-        [ Number(this.status),
+      // Call the callback function:
+      opts.func.call(
+          null,
+          Number(this.status),
           String(this.getResponseHeader('content-type')),
           String(this.responseText)
-        ]);
+      );
     }
   }
 };
@@ -1435,12 +1423,7 @@ applabCommands.startWebRequest = function (opts) {
 };
 
 applabCommands.onTimerFired = function (opts) {
-  // ensure that this event came from the active interpreter instance:
-  Applab.JSInterpreter.queueEvent(opts.func);
-  // NOTE: the interpreter will not execute forever, if the event handler
-  // takes too long, executeInterpreter() will return and the rest of the
-  // user's code will execute in the next onTick()
-  Applab.JSInterpreter.executeInterpreter(false, true);
+  opts.func.call(null);
 };
 
 applabCommands.setTimeout = function (opts) {
@@ -1490,10 +1473,8 @@ applabCommands.createRecord = function (opts) {
 };
 
 applabCommands.handleCreateRecord = function(opts, record) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [record]);
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null, record);
   }
 };
 
@@ -1509,10 +1490,8 @@ applabCommands.getKeyValue = function(opts) {
 };
 
 applabCommands.handleReadValue = function(opts, value) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [value]);
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null, value);
   }
 };
 
@@ -1529,10 +1508,8 @@ applabCommands.setKeyValue = function(opts) {
 };
 
 applabCommands.handleSetKeyValue = function(opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess);
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null);
   }
 };
 
@@ -1551,10 +1528,8 @@ applabCommands.readRecords = function (opts) {
 };
 
 applabCommands.handleReadRecords = function(opts, records) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onSuccess && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onSuccess, [records]);
+  if (opts.onSuccess) {
+    opts.onSuccess.call(null, records);
   }
 };
 
@@ -1573,10 +1548,8 @@ applabCommands.updateRecord = function (opts) {
 };
 
 applabCommands.handleUpdateRecord = function(opts, record, success) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onComplete, [record, success]);
+  if (opts.onComplete) {
+    opts.onComplete.call(null, record, success);
   }
 };
 
@@ -1595,10 +1568,8 @@ applabCommands.deleteRecord = function (opts) {
 };
 
 applabCommands.handleDeleteRecord = function(opts, success) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.onComplete && opts.JSInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(opts.onComplete, [success]);
+  if (opts.onComplete) {
+    opts.onComplete.call(null, success);
   }
 };
 
@@ -1654,7 +1625,9 @@ applabCommands.drawChart = function (opts) {
     chartApi.warnings.forEach(function (warning) {
       outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
     });
-    queueCallback(jsInterpreter, opts.callback);
+    if (opts.callback) {
+      opts.callback.call(null);
+    }
   };
 
   /**
@@ -1724,7 +1697,9 @@ applabCommands.drawChartFromRecords = function (opts) {
     chartApi.warnings.forEach(function (warning) {
       outputError(warning.message, ErrorLevel.WARNING, currentLineNumber);
     });
-    queueCallback(jsInterpreter, opts.callback);
+    if (opts.callback) {
+      opts.callback.call(null);
+    }
   };
 
   /**
@@ -1779,23 +1754,6 @@ function stopLoadingSpinnerFor(elementId) {
     return !(/loading/i.test(x));
   }).join(' ');
 }
-
-/**
- * Queue the given callback in the given interpreter IF the callback exists
- * AND the interpreter is still the active interpreter for Applab.
- * @param {JSInterpreter} jsInterpreter
- * @param {function} callback
- * @param {Object[]} args
- */
-var queueCallback = function (jsInterpreter, callback, args) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active, so we don't queue callbacks for slow async events
-  // from past executions of the app.
-  // (We use a different interpreter instance for every run.)
-  if (callback && jsInterpreter === Applab.JSInterpreter) {
-    Applab.JSInterpreter.queueEvent(callback, args);
-  }
-};
 
 /**
  * For the provided interpreter, get the nearest line number in user code

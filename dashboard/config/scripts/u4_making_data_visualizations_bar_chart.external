@@ -1,0 +1,68 @@
+name 'U4 - Making Data Visualizations - Bar Chart'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+# Making A Bar Chart
+
+One very important thing to remember is that you can use the same data set to chart many different relationships and explore connections in the data. In this exercise, you will use some different columns in the spreadsheet to create a bar chart. Bar charts are useful for viewing data grouped by different categories.
+
+# Select Cells to Chart
+
+For this visualization, you will be charting the relationship between the age of movie reviewers and the number of reviews by gender.
+
+**Do This:** Select the cells to chart. You should select the values for “age,” “number of women,” and “number of men.” Remember, include the column headers, but don’t include the “Grand Total” summary row. Then insert a new chart.
+
+* **Hint:** To select cells in non-adjacent columns, first select the cells from the first column using the SHIFT+click combination. Then, hold down COMMAND (if using a Mac) or CONTROL (if using Windows) and click to select the first cell of the next column. Finally, hold COMMAND/CONTROL **and** SHIFT simultaneously, then click to select the last cell in the new column.
+	* **Note:** If you’re having difficulty with this method, you can always insert a new chart and use the “Select data range” method to select which columns you want to use.
+
+[INSERT GIF OF SELECTING CELLS AND INSERTING CHART]
+*Select cells and then insert a new chart.”
+
+<hr>
+
+# Set Chart Type
+
+**Do This:** Change the chart type of your chart to “Column chart.” Make sure the two checkboxes for headers and labels are checked.
+
+Your chart preview should look something like this:
+[INSERT IMAGE “Bar Chart after Step 1.PNG”]
+
+<hr>
+
+# Adjust Ranges
+
+The bar chart you created has so many columns in it that it’s difficult to really distinguish between the different columns. In order to make your chart more readable, you will focus in on a smaller subset of ages, rather than charting the values for every single age in the spreadsheet.
+
+**Do This:** In the Chart Editor, open the “Select data range” menu. Reassign the ranges so that they only include the rows for reviewers between the ages of 7 and 30 (inclusive). Update your chart, which should now only show the number of ratings for reviewers who are 30 or younger.
+
+[INSERT GIF OF REASSIGNING RANGES]
+*Reassign the column ranges to only show values for reviewers who are 30 or younger.*
+
+<hr>
+
+# Edit Chart Appearance
+
+Now that your chart is less crowded, update the labels to make sure your chart clearly conveys what data it’s showing.
+
+**Do This:** Update the labels for your chart appropriately:
+* Chart title: “Number of Ratings by Age of Reviewer”
+* X-axis: “Age”
+* Y-axis: “Number of Ratings”
+* Legend labels: “Ratings by Women” and “Ratings by Men”
+
+[INSERT GIF OF UPDATING LABELS FOR TITLE, AXES, LEGEND]
+*Update labels for chart title, axes, and legend.*
+
+# Explore Other Types of Bar Charts
+
+**Do This:** Open the Chart Editor and play around with the different types of bar charts.
+
+* What happens if you change the chart type to “Stacked column chart”?
+* What happens if you change the chart type to use horizontal bars instead of vertical columns?
+
+Once you feel comfortable with the different types of bar charts, move on to the next section.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
