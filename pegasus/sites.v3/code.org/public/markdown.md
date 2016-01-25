@@ -109,9 +109,9 @@ In this technique, give us a thumbnail image and optional caption, and we'll mak
 
 <%= view :display_video_thumbnail, id: "video3", video_code: "h5_SsNSaJJI", image: '/images/test-video-sample.jpg' %>
 
-### making the fallback player available
+### providing mp4 for download & fallback player
 
-<%= view :display_video_thumbnail, id: "video4", video_code: "nKIu9yen5nc", image: '/images/test-video-sample.jpg', fallback_player: true, download_path: 'http://videos.code.org/social/what-most-schools-dont-teach.mp4' %>
+<%= view :display_video_thumbnail, id: "video4", video_code: "nKIu9yen5nc", image: '/images/test-video-sample.jpg', download_path: 'http://videos.code.org/social/what-most-schools-dont-teach.mp4' %>
 
 (A path to an mp4 video must be provided.  A custom thumbnail should also be provided since we can't depend on YouTube.)
 
