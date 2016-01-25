@@ -1,0 +1,36 @@
+- short_code = I18n.t(:"#{id}_shortcode")
+- short_url = "https://hourofcode.com/#{short_code}"
+- if id == "starwars"
+  - if request.locale != "en-US"
+    - launch_path = "/api/hour/begin/starwarsblocks"
+  - else
+    - launch_path = "/starwars"
+- elsif id == "gumball" || id == "iceage" || id == "playlab"
+  - launch_path = "/playlab"
+- else
+  - launch_path = "/api/hour/begin/#{id}"
+
+.container-fluid
+  .row-fluid
+    .courseblock-tall{id: "miniblock-#{id}"}
+      %a{href: launch_path, target: "_blank"}
+        .imgspan
+          %img{src: "/shared/images/courses/logo_tall_#{id}.jpg", style: "width: 100%;"}
+        .clear
+        .heading
+          %h4{style: "font-size: 18px;"}= I18n.t(:"#{id}_name")
+        .clear
+        .smalltext{style: "height: 50px;"}
+          = I18n.t(:"#{id}_shortdescription")
+          = "(" + I18n.t(:"#{id}_gradelevel") + ")"
+      #bottomalign
+        #quicklinks.smalltext
+          %br
+          %a{href: "/hourofcode/#{id}", target: "_blank"}
+            = I18n.t(:teachers_notes)
+          %br
+          %a{href: short_url, style: "font-family: 'Gotham 4r', sans-serif;", target: "_blank"}
+            = short_url
+        %div{id: "gobutton-#{id}", style: "position: relative;"}
+          %a{href: launch_path, target: "_blank"}
+            %button{style: "float: right; margin: 15px 10px 0 0;"}= I18n.t(:go)

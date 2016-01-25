@@ -45,7 +45,7 @@
     outline: 0;
   }
 
-  img[src=''] {
+  img[data-canonical-image-url=''] {
     display: none;
   }
 
@@ -56,7 +56,7 @@
 
 #designModeViz.appModern, .draggingParent {
 
-  img[src=''], canvas, .chart {
+  img[data-canonical-image-url=''], canvas, .chart {
     border: 5px solid #fff;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -64,7 +64,7 @@
     outline-offset: -1px;
   }
 
-  img[src=''] {
+  img[data-canonical-image-url=''] {
     display: block;
     background: #bdc3c7 url("/blockly/media/applab/placeholder_img.png") center center no-repeat;
   }

@@ -43,7 +43,9 @@
     - @ratings_by_level.each do |level|
       %tr
         %td
-          %span= level.level_id
+          %span
+            = link_to funometer_by_script_level_path(:script_id => @script_id, :level_id => level.level_id) do
+              = level.level_id
         %td
           %span
             = link_to level_url(level.level_id) do

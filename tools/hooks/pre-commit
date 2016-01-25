@@ -1,3 +1,4 @@
 #!/bin/sh
 ruby tools/hooks/lint.rb &&
-  ruby tools/hooks/scary_changes.rb
+  ruby tools/hooks/scary_changes.rb &&
+  ruby tools/hooks/restrict_levelbuilder_changes.rb

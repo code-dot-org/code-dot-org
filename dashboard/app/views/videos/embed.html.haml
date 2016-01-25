@@ -3,8 +3,8 @@
 !!! 5
 - video_info = local_assigns[:video_info]
 %head
-  = stylesheet_link_tag    'video-js', media: 'all'
-  = javascript_include_tag 'video/video'
+  = stylesheet_link_tag    '/code-studio/assets/video-js/video-js', media: 'all'
+  = javascript_include_tag 'js/embedVideo'
 %html{:dir => locale_dir}
   :css
     #video-container {

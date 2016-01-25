@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## setTimeout(callback, milliseconds)
+## setTimeout(callback, ms)
 
 [/name]
-
 
 [category]
 
@@ -20,11 +19,11 @@ Category: Control
 
 [short_description]
 
-Set a timer and execute code when that number of milliseconds has elapsed.
+Sets a timer and executes code when that number of milliseconds has elapsed.
 
 [/short_description]
 
-**Note:** This function returns a value that can be used with the [clearTimeout(timeout)](/applab/docs/clearTimeout) function.
+Some apps need code to be executed once after a certain amount of time has elapsed, like a bank logon is disabled if you take to long to enter your password. Other code in your app can be executed while waiting for the timeout interval to end. *setTimeout()* returns a numeric value that can be used with [clearTimeout(timeout)](/applab/docs/clearTimeout) to prevent the execution of the callback function.
 
 [/description]
 
@@ -33,11 +32,10 @@ ____________________________________________________
 
 [example]
 
-
 ```
 setTimeout(function() {
-  console.log("1000 milliseconds have elapsed"); //When the code runs, print a message to the debugging console
-}, 1000); //Set the delay to 1000 milliseconds
+  console.log("1000 milliseconds have elapsed");
+}, 1000);
 ```
 
 [/example]
@@ -46,14 +44,14 @@ ____________________________________________________
 
 [example]
 
-Here we use the timeout function to make the turtle pause between two moves.
+**Example: Pause between Moves** Use the timeout function to make the turtle pause between two moves.
 
 ```
-show(); //Display the turtle
-moveForward(50); //Move the turtle 50 pixels
+// Use the timeout function to make the turtle pause between two moves.
+moveForward(50);
 setTimeout(function() {
-  moveForward(100); //Move the turtle another 100 pixels after the timeout
-}, 2000); //Set the delay to 2000 milliseconds
+  moveForward(100);
+}, 2000);
 ```
 
 [/example]
@@ -62,15 +60,15 @@ ____________________________________________________
 
 [example]
 
-In this variant from the previous example, we add an instruction to turn right after we start the timeout. Note how the turtle turns right before moving forward again. When using `setTimeout`, things don't always happen in the intuitive order.
+**Example: Pause between Moves v2** Use the timeout function to make the turtle pause between two moves. Note how the turnRight() does not wait for the timeout.
 
 ```
-show(); //Display the turtle
-moveForward(50); //Move the turtle 50 pixels
+// Use the timeout function to make the turtle pause between two moves. Note how the turnRight() does not wait for the timeout.
+moveForward(50);
 setTimeout(function() {
-  moveForward(100); //Move the turtle another 100 pixels after the timeout
-}, 2000); //Set the delay to 2000 milliseconds
-turnRight(90); //Make the turtle turn right
+  moveForward(100);
+}, 2000);
+turnRight(90);
 ```
 
 [/example]
@@ -79,29 +77,23 @@ ____________________________________________________
 
 [example]
 
-In this more advanced example, we build a simple game where you must click a button as many times as possible in less than 10 seconds. We use `setTimeout` to hide the button after 10 seconds and end the game.
+**Example: Click Speed** Count the number of clicks of a button in 10 seconds.
 
 ```
-//Write text explaining the game rules
+//  Count the number of clicks of a button in 10 seconds.
 textLabel("instructions", "Click the button as many times as possible in 10 seconds");
-//Create a button to click
 button("gameButton", "Click me!");
-//Create an empty text label where we will show the game results
 textLabel("results", "");
-//Create a variable to count the number of times the button is clicked
 var counter = 0;
-//Define the actions to do once 10 seconds have elapsed
 setTimeout(function() {
-  hideElement("gameButton"); //Hide the game button so it can no longer be clicked
-  console.log("10000 milliseconds have elapsed"); //Print a message to the debugging console
-}, 10000); //Set the timeout to 10000 milliseconds
-//Define the actions to do when the button is clicked
+  hideElement("gameButton");
+  console.log("10000 milliseconds have elapsed");
+}, 10000);
 onEvent("gameButton", "click", function(){
-  counter = counter + 1; //Add 1 to the click counter variable
-  setText("results", "You have clicked " + counter + " times."); //Display the current click counter
+  counter = counter + 1;
+  setText("results", "You have clicked " + counter + " times.");
 });
 ```
-
 
 [/example]
 
@@ -112,7 +104,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-setTimeout(callback, milliseconds);
+setTimeout(callback, ms);
 ```
 
 [/syntax]
@@ -123,15 +115,15 @@ setTimeout(callback, milliseconds);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| callback | function | Yes | A function to execute.  |
-| milliseconds | number | Yes | The number of milliseconds to wait before executing the function.  |
+| callback | function | Yes | A function to execute when the timeout interval has completed.  |
+| ms | number | Yes | The number of milliseconds to wait before executing the function.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-A number identifying the timer, which can be used to cancel the timer before it executes.
+A numeric interval timer ID, which can be used to cancel the timer before it executes.
 
 [/returns]
 
@@ -139,6 +131,7 @@ A number identifying the timer, which can be used to cancel the timer before it 
 
 ### Tips
 - Use the [clearTimeout(timeout)](/applab/docs/clearTimeout) function to cancel the execution of code scheduled using setTimeout().
+- Do not put functions inside a loop that contain timers, like setTimeout(). The loop will not wait for the timer to complete.
 
 [/tips]
 

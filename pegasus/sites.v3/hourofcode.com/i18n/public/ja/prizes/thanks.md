@@ -6,7 +6,6 @@ nav: prizes_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Thanks for signing up for a chance to win the $10,000 Hardware Prize
 
@@ -20,7 +19,7 @@ Your whole school is now entered to win a class-set of laptops (or $10,000 for o
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your principal.
 
-## 3. 雇用主にも参加するよう聞いてみてください。
+## 3. 会社の方々にも働きかける
 
 [Send this email](<%= resolve_url('/promote/resources#email') %>) to your manager, or the CEO.
 
@@ -32,4 +31,3 @@ Recruit a local group — boy/girl scouts club, church, university, veterans gro
 
 [Send this email](<%= resolve_url('/promote/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school.
 
-<%= view :signup_button %>

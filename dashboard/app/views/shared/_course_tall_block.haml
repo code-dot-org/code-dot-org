@@ -31,12 +31,15 @@
     - title = t('upsell.frozen.title')
   - elsif id == 'starwars' || id == 'starwarsblocks'
     - title = t('upsell.starwars.title')
-    - url = 'https://code.org/starwars'
+    - url = CDO.code_org_url('/starwars')
   - elsif id == 'mc'
     - title = t('upsell.minecraft.title')
-    - url = 'https://code.org/mc'
+    - url = CDO.code_org_url('/api/hour/begin/mc')
   - elsif id == 'infinity'
     - title = t('upsell.infinity.title')
+  - elsif id == 'iceage' || id == 'gumball' || id == 'playlab'
+    - url = CDO.code_org_url('/playlab')
+    - title = data_t_suffix('script.name', id, 'title')
   - else
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
@@ -56,9 +59,9 @@
     .clear
     - if Script.beta? id
       .beta
-        %h3
+        %h3.betatitle
           = title
-        .betatext
+        %h3.betatext
           = t('beta')
     - else
       .heading
@@ -67,9 +70,9 @@
     .clear
     .smalltext= body
     .clear
-    - if audience && current_user
+    - if audience && current_user && showState
       .audiencebar.smalltext.audience= audience
-    - elsif audience && !current_user
+    - elsif audience
       .bottombar.smalltext.audience= audience
 
     = render partial: 'shared/courseblock_action', locals: { id: id, showState: showState, url: url, current_user: current_user }

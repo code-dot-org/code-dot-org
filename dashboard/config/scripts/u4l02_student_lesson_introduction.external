@@ -4,25 +4,40 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson XX - Title of lesson here
+## Unit 4: Lesson 02 - JavaScript Objects
 
 # Background
 
-Background goes here
+This lesson introduces JavaScript objects. It's not the first time you have come across objects in the course. You previously saw and used the `event` object for determining which keys were struck on the keyboard and the location of the mouse.
+
+In this lesson, you'll learn more about objects and practice creating and using objects yourself. Finally, you'll incorporate objects into an app for storing contact information for a number of people. 
+
 
 # Vocabulary
-* **Word 1:** Definition 1
-* **Word 2:** Definition 2 
+* **JavaScript object:** a type of variable that contains a group of related properties with assigned values.
+* **Property:** a named variable that's part of an object.
+* **Name/value pair:** term for a single property of an object and the value assigned to it.
+
+Vocabulary in use:
+
+<pre>
+var person = {};      // person is a <strong>JavaScript object</strong>
+person.name = "Mary"; // name is a <strong>property</strong> of the person object
+person.age = 16;      // age is a <strong>named</strong> property with the <strong>value</strong> 16
+
+					  // the person object has 2 <strong>name/value pairs</strong>
+</pre>
 
 # Lesson
 
-* Activity description 1
-* Activity description 2
+* Video: Tutorial - JavaScript Objects
+* Introduction to creating and manipulating objects in App Lab.
+* Develop an app for storing contacts using an array of objects.
+
 
 # Resources
 
-* Worksheet: <a href="https://google.com” target="_blank">TBD</a>
-* Worksheet: <a href="https://google.com” target="_blank">TBD</a>
+* Video: <a href="https://google.com" target="_blank"> Tutorial - JavaScript Objects</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

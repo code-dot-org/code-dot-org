@@ -14,17 +14,17 @@
   %table.filters
     %tr
       %td
-        Email Filter
+        Email Domain (e.g., "cps.edu" or "lausd.net" [no at symbol])
       %td
-        %input{name: "emailFilter", id: "emailFilter"}
+        %input{name: "emailFilter", id: "emailFilter", value: params[:emailFilter]}
     %tr
       %td
-        Address Filter
+        Address Filter (e.g., "Seattle" or "20500")
       %td
-        %input{name: "addressFilter", id: "addressFilter"}
+        %input{name: "addressFilter", id: "addressFilter", value: params[:addressFilter]}
     %tr
       %td
-        PD Filter
+        Filter on whether teachers have attended PD
       %td
         %input.radio{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
         %input.radio{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
@@ -33,8 +33,7 @@
   %br/
 
   %center
-    %button
-      = link_to "Search", :search_for_teachers
+    %input{type: "submit", name: "submit"}
 
 %br/
 
@@ -47,7 +46,8 @@
     displayed.
     %br
 
-  #{link_to 'Download CSV', {:format => :csv}}
+  -# Note that newlines were replaced in the controller, the commas are replaced in the .csv.erb.
+  #{link_to 'Download CSV', {:format => :csv}} (commas and newlines have been replaced by spaces)
 
   %br
 

@@ -7,6 +7,15 @@ Here are some things you can do to celebrate Computer Science Education Week.
 
 NOTE: Please celebrate computer science throughout the year, with highlighted activities whenever it’s convenient for you, your students, your school.
 
+<hr/>
+## New for 2015: CS Tech Jams
+
+Check out these "in a box" event ideas for community events.
+
+[<button>Learn More</button>](/educate/cstechjam)
+<hr/>
+<br/>
+
 ## How can you promote computer science during CS Ed Week 2015?
 
 ## 1) Host an event

@@ -281,8 +281,14 @@ exports.SPRITE_COLLIDE_DISTANCE_SCALING = 0.9;
 
 exports.DEFAULT_SPRITE_SPEED = exports.SpriteSpeed.NORMAL;
 exports.DEFAULT_SPRITE_SIZE = 1;
+exports.DEFAULT_SPRITE_ANIMATION_FRAME_DURATION = 6;
+
+exports.DEFAULT_PROJECTILE_SPEED = exports.SpriteSpeed.SLOW;
+exports.DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION = 1.5;
 
 exports.DEFAULT_ITEM_SPEED = exports.SpriteSpeed.SLOW;
+exports.DEFAULT_ITEM_ANIMATION_FRAME_DURATION = 1.5;
+
 
 /**
  * The types of squares in the maze, which is represented
@@ -362,6 +368,10 @@ exports.HIDDEN_VALUE = '"hidden"';
 exports.CLICK_VALUE = '"click"';
 exports.VISIBLE_VALUE = '"visible"';
 
+// Number of extra ticks between the last time the sprite moved and when we
+// reset them to face south.
+exports.IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
+
 /** @type {number} animation rate in frames per second. */
 exports.DEFAULT_ANIMATION_RATE = 20;
 
@@ -387,3 +397,7 @@ exports.CLOUD_OPACITY = 0.7;
 
 // How many milliseconds to throttle between playing sounds.
 exports.SOUND_THROTTLE_TIME = 200;
+
+// How many milliseconds to throttle between whenTouchObstacle events when
+// blockMovingIntoWalls is enabled.
+exports.TOUCH_OBSTACLE_THROTTLE_TIME = 330;

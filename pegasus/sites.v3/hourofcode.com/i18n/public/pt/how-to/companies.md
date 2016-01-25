@@ -6,18 +6,22 @@ nav: how_to_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Como levar a Hora do Código para a sua empresa
 
-**Há muitas maneiras de as empresas participarem da Hora do Código e ajudarem a expandir o ensino da ciência da computação. Considere:**
+## Inspire students and volunteer for the Hour of Code
+
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+
+  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
+  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+
+## Additional ways companies can support the Hour of Code:
 
   * Use nosso [kit de ferramentas de marketing](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) para criar um cronograma de comunicações e compartilhar conteúdos promocionais.
-  * Pedir ao seu CEO para enviar um e-mail para toda a empresa enfatizando a importância da ciência da computação e incentivando os funcionários a divulgar. [Veja este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Organizar um Happy Hour da Hora do Código com seus colegas de trabalho para experimentar os [tutoriais](<%= resolve_url('https://code.org/learn') %>).
-  * Convidar uma turma de alunos ou de outros parceiros sem fins lucrativos para realizar uma Hora do Código no escritório da empresa.
-  * Incentivar os **engenheiros de software** da sua empresa a visitar uma sala de aula local para ajudar a conduzir uma Hora do Código e inspirar os alunos a estudar ciência da computação. Eles podem se [cadastrar](<%= resolve_url('https://code.org/volunteer/engineer') %>) para se conectar com uma sala de aula.
-  * Para mais instruções sobre como conectar seus funcionários com salas de aula, use nosso [guia para parceiros corporativos](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>)
+  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [Veja este e-mail](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## Como sediar um evento da Hora do Código
 
@@ -101,6 +105,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
   * [Imprima certificados](<%= resolve_url('https://code.org/certificates') %>) para os participantes.
   * Imprima adesivos com a mensagem ["Eu participei da Hora do Código!"](<%= resolve_url('/promote/resources#stickers') %>)
+  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
   * Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso, também!
 
 [col-33]
@@ -129,4 +134,3 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar nesta jornada, [incentive os participantes a aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
 
-<%= view :signup_button %>

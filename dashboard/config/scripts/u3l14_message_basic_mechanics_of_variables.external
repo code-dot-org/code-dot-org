@@ -6,7 +6,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # What's happening in this lesson and next
 
-We are going to take the **next two lessons** to learn about how to work with variables and then incorporate them into our clicker game in order to keep score.  Here's the breakdown:
+We are going to take the **next two lessons** to learn about how to work with variables and then incorporate them into our clicker game in order to keep score. Here's the breakdown:
 
 **This lesson:**
 
@@ -24,13 +24,13 @@ We are going to take the **next two lessons** to learn about how to work with va
 
 **Next lesson:**
 
-* Adding variables to our apps
-* Understanding when and where and to create variables so you can use them the way you want
-* Useful things you can do with variables in apps
-* Making decisions based on variables
+* Adding variables to our apps.
+* Understanding when and where and to create variables so you can use them the way you want.
+* Useful things you can do with variables in apps.
+* Making decisions based on variables.
 
-# The basic mechanics of variables
-Next section acquaints you with the bare-bones basic mechanics of using variables in programs, creating, assigning a value and displaying the value to the screen or console,  so you can see what's going on.
+# The Basic Mechanics of Variables
+Next section acquaints you with the bare-bones basic mechanics of using variables in programs, creating, assigning a value and displaying the value to the screen or console, so you can see what's going on.
 
 You will:
 

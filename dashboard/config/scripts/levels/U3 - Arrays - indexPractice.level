@@ -15,8 +15,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Write the contents of the array to the screen in order. (Click to see full instructions)",
-    "markdown_instructions": "# Index Practice\r\n\r\nIt will take some practice to get comfortable using array indexes. We'll do a couple of exercises to build your confidence.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/4d52429f1d6f8e7812e14d73e2a89c45-image-1447366245418.08.51 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n* **Starter code** has been provided that creates an array called **myNumbers**\r\n* Use `console.log` and array indexes to write the contents of **myNumbers** to the screen in order, as shown below. Your commands should be of the form `console.log(myNumbers[index])`\r\n\r\n",
+    "instructions": "Write the contents of the array to the screen in numerical order. (Click to see full instructions)",
+    "markdown_instructions": "# Index Practice\r\n\r\nIt will take some practice to get comfortable using array indexes. We'll do a couple of exercises to build your confidence.\r\n\r\n# Do This:\r\n\r\n<img src=\"https://images.code.org/4d52429f1d6f8e7812e14d73e2a89c45-image-1447366245418.08.51 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Starter code** has been provided that creates an array called `myNumbers`.\r\n\r\n* Use `console.log` and array indexes to write the contents of `myNumbers` to the screen in order, as shown to the right. Your commands should be of the form `console.log(myNumbers[index])`.\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,7 +46,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\n\r\n// Use console.log to display the contents of this array in order from smallest to largest"
+    "start_blocks": "var myNumbers = [3, 2, 5, 7, 4];\r\n\r\n// Use console.log to display the\r\n// contents of this array in order \r\n// from smallest to largest",
+    "encrypted_examples": "B+DdHPLd10HYwoSJ9G+oIsRURjVjxgqp17AaZ45k+5Sj9lSXoTaiJ4TZE7K6\no7w5\n"
   }
 }]]></config>
   <blocks/>

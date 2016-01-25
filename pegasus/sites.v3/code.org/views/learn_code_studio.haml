@@ -1,0 +1,129 @@
+:ruby
+  page_mode = PageMode.get(request)
+  if page_mode == "feature-starwars"
+    first_tutorial = "starwars"
+    second_tutorial = "mc"
+  else
+    first_tutorial = "mc"
+    second_tutorial = "starwars"
+  end
+  if request.locale != "en-US"
+    launch_path = "/api/hour/begin/starwarsblocks"
+  else
+    launch_path = "/starwars"
+  end
+  if request.GET['company']
+    company = URI.escape(request.GET['company'])
+    response.set_cookie('company', {value: company, domain: ".code.org", path: '/', expires: Time.now + (365 * 24 * 3600)})
+  end
+
+#banner-slideshow
+  %a#banner-mc-link{href: "/api/hour/begin/mc"}
+    %img.banner#banner-mc{src: "/images/mc/MC_Wide_Learn_s_V4.jpg", style: "display: none;"}
+  %a#banner-starwars-link{href: launch_path}
+    %img.banner#banner-starwars{src: "/images/starwars_banner.jpg", style: "display: none;"}
+
+#learnCodeStudio.container.col-md-12
+  #codeStudioCarousel.carousel.slide.multi-item-carousel
+    .carousel-inner
+      .item.active
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: first_tutorial
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: second_tutorial
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "frozen"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "hourofcode"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "flappy"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "infinity"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "playlab"
+      .item
+        .col-md-4.col-sm-6.col-xs-12
+          = view :learn_carousel_block, id: "artist"
+    %a.left.carousel-control{href: "#codeStudioCarousel", "data-slide" => "prev"}
+      %i.fa.fa-3x.fa-caret-left
+    %a.right.carousel-control{href: "#codeStudioCarousel", "data-slide" => "next"}
+      %i.fa.fa-3x.fa-caret-right
+
+.clear
+
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+
+:javascript
+  $(document).ready()
+  {
+    if ("#{page_mode}" == "feature-starwars") {
+      $("#banner-starwars").fadeIn(1000);
+    }
+    else {
+      $("#banner-mc").fadeIn(1000);
+    }
+
+    if ("#{request.locale}" != "en-US") {
+      $("#codeStudioCarousel").removeClass('slide');
+    }
+
+    $("#codeStudioCarousel").swipe( {
+      swipeLeft: function() {
+        $(this).parent().carousel('next');
+      },
+      swipeRight: function() {
+        $(this).parent().carousel('prev');
+      },
+      excludedElements: "button, .noSwipe",
+      threshold: 25
+    });
+  }
+
+  $.ready()
+  {
+    timerId = setInterval(cycleBanner, 13000);
+  }
+
+  function cycleBanner() {
+    if ($("#banner-starwars").is(':visible')) {
+      $("#banner-starwars").fadeOut(1000);
+      $("#banner-mc").delay(1000).fadeIn(4000);
+    }
+    else {
+      $("#banner-mc").fadeOut(1000);
+      $("#banner-starwars").delay(1000).fadeIn(4000);
+    }
+  }
+
+  $('#codeStudioCarousel').carousel({
+    interval: false
+  })
+
+  // Populates the Code Studio carousel to have
+  // multiple items per slide
+  $('.multi-item-carousel .item').each(function() {
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    if (next.next().length > 0) {
+      next.next().children(':first-child').clone().appendTo($(this));
+    } else {
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    }
+  });
+
+  // If mobile Star Wars block & banner go to blockly version
+  if (window.mobilecheck()) {
+    $('#banner-starwars-link').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#miniblock-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+    $('#gobutton-starwars a').attr("href", "/api/hour/begin/starwarsblocks");
+  }

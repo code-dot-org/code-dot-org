@@ -5,7 +5,7 @@ css 'unplugged'
 
 
 markdown <<MARKDOWN
-# Creating variables in the right place
+# Creating Variables in the Right Place
 <style>
 
 td{
@@ -19,9 +19,9 @@ td{
   <td>
     <strong>Problem: writing <code>var count</code> again</strong>
     <p>
-    The problem you encountered was caused by Line 4: <strong><code>var count = count+1</code></strong> is telling the computer to create a <em>new variable</em> called <strong>count</strong> inside the event handling function. 
+    The problem you encountered was caused by Line 4: <strong><code>var count = count + 1</code></strong> is telling the computer to create a <em>new variable</em> called <strong>count</strong> inside the event handling function. 
     <br><br>
-    So it creates a new variable, but then when trying to assign it a value it cannot compute <code>count+1</code> because <code>count</code> doesn't have a value anymore.  We don’t want a new variable; we want to reassign the value of the variable we already created in Line 1.
+    So it creates a new variable, but then when trying to assign it a value it cannot compute <code>count + 1</code> because <code>count</code> doesn't have a value anymore.  We don’t want a new variable; we want to reassign the value of the variable we already created in Line 1.
     </p>
   </td>
   <td>
@@ -46,19 +46,19 @@ td{
 </tr>
 </table>
 
-# Where you decide to *create* variables in your code **matters**.  
+# Where You Decide to *Create* Variables in Your Code **Matters**
 
 In Javascript you have two choices: 
 
-1. Create a variable **outside** of any function
+1. Create a variable **outside** of any function.
 
-2. Create a variable **inside** a function
+2. Create a variable **inside** a function.
 
 The term for this concept is **"variable scope."** The **scope** of a variable defines which parts of your code can access and modify the variable.
 
-# Understanding variable scope
+# Understanding Variable Scope
 
-Javascript has two scopes: **global** and **local**.   Here's the difference...
+Javascript has two scopes: **global** and **local**. Here's the difference...
 
 <hr>
 <strong style="font-size: 20px; color: #00adbc">Local Variables</strong><br>
@@ -150,7 +150,7 @@ By convention global variables are created and initialized in the **very first l
 
  
 <hr>
-# Moving on...
+# Moving On...
 Now let's practice a little bit more with variables.  
 
 For our programs coming up we're particularly interested in global variables since that gives us the ability to remember data like the score of a game over the life of a program.

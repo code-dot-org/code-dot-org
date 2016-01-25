@@ -105,7 +105,8 @@ describe('Level tests', function() {
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
-    loadSource('http://localhost:8001/apps/lib/jsinterpreter/acorn_interpreter.js')
+    loadSource('http://localhost:8001/apps/lib/jsinterpreter/acorn.js')
+    .then(function () { return loadSource('http://localhost:8001/apps/lib/jsinterpreter/interpreter.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ace.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/mode-javascript.js'); })
     .then(function () { return loadSource('http://localhost:8001/apps/lib/ace/src-noconflict/ext-language_tools.js'); })
@@ -124,7 +125,7 @@ describe('Level tests', function() {
         clock.tick(100); // fake 1000 ms for every real 1ms
       }
     }, 1);
-    clock = sinon.useFakeTimers();
+    clock = sinon.useFakeTimers(Date.now());
 
     testUtils.setupBlocklyFrame();
     studioApp = testUtils.getStudioAppSingleton();

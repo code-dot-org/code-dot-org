@@ -44,6 +44,7 @@ Share these inspiring stories about students and teachers who are changing the f
 
 ## 5. Other Materials
 
+- Check out these [Teaching tips for introducing CS to a classroom](/files/CSTT_IntroducingCS.PDF)
 - Video library: [Use these videos to teach computer science in any class worldwide.](/educate/videos)
 - One-pager: [What can you do with CS?](https://www.dropbox.com/s/o1mafeosi0xuwb0/What_is_CS_and_Careers.pdf)
 

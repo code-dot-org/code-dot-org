@@ -23,8 +23,19 @@
 %h2= hoc_s(:hoc_faq_host_q)
 %div= hoc_s(:hoc_faq_host_a).gsub('/how-to', resolve_url('/how-to')).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
+%h2= hoc_s(:hoc_faq_devices_q)
+%div= hoc_s(:hoc_faq_devices_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org')).gsub(/%{partner_url}/, resolve_url('code.org'))
+
 %h2= hoc_s(:hoc_faq_need_computers_q)
-%div= hoc_s(:hoc_faq_need_computers_a)
+%div= hoc_s(:hoc_faq_need_computers_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+
+-if @country == 'us'
+  %h2= hoc_s(:hoc_faq_logo_q)
+  %div= hoc_s(:hoc_faq_logo_a)
+
+-if @country == 'us'
+  %h2= hoc_s(:hoc_faq_posters_q)
+  %div= hoc_s(:hoc_faq_posters_a).gsub('/promote/resources', resolve_url('/promote/resources'))
 
 -if @country != 'us'
   %h2= hoc_s(:hoc_faq_international_q).gsub(/<country>/, HOC_COUNTRIES[@country]['full_name'])
@@ -35,6 +46,9 @@
 
 %h2= hoc_s(:hoc_faq_account_q)
 %div= hoc_s(:hoc_faq_account_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
+
+%h2= hoc_s(:hoc_faq_certificates_q)
+%div= hoc_s(:hoc_faq_certificates_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
 %h2= hoc_s(:hoc_faq_frozen_q)
 %div= hoc_s(:hoc_faq_frozen_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
@@ -48,6 +62,11 @@
 %h2= hoc_s(:hoc_faq_count_hoc_q)
 %div= hoc_s(:hoc_faq_count_hoc_a).gsub(/%{codeorg_url}/, resolve_url('https://code.org'))
 
--if @country == 'us'
-  %h2= hoc_s(:hoc_faq_one_hour_q)
-  %div= hoc_s(:hoc_faq_one_hour_a)
+%h2= hoc_s(:hoc_faq_map_q)
+%div= hoc_s(:hoc_faq_map_a)
+
+%h2= hoc_s(:hoc_faq_one_hour_q)
+%div= hoc_s(:hoc_faq_one_hour_a)
+
+%h2= hoc_s(:hoc_faq_keep_learning_q)
+%div= hoc_s(:hoc_faq_keep_learning_a).gsub('/promote', resolve_url('/promote'))

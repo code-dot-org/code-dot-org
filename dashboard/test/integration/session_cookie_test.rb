@@ -1,3 +1,4 @@
+require 'cdo/script_config'
 require 'test_helper'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
@@ -18,6 +19,18 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
     get '/reset_session'
 
     assert_equal nil, cookies['_learn_session_test']
+  end
+
+  test 'session cookie not set in publicly cached level page' do
+    ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
+    get '/hoc/1'
+    assert_nil cookies['_learn_session_test']
+  end
+
+  test 'session cookie is set in on non-cached level page' do
+    ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
+    get '/hoc/1'
+    assert_not_nil cookies['_learn_session_test']
   end
 
 end

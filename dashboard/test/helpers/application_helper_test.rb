@@ -83,18 +83,21 @@ class ApplicationHelperTest < ActionView::TestCase
     assert(browser.version.to_s.to_i == 34)
   end
 
-  test 'certificate images for hoc-type scripts are all hoc certificates' do
-    # old hoc, new hoc, frozen, flappy, playlab, and starwars are all the same certificate
+  test 'script_certificate_image_url helper encodes correct information' do
     user = create :user
-    hoc_2013 = Script.get_from_cache(Script::HOC_2013_NAME)
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::HOC_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FROZEN_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::FLAPPY_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::PLAYLAB_NAME))
-    assert_equal script_certificate_image_url(user, hoc_2013), script_certificate_image_url(user, Script.get_from_cache(Script::STARWARS_NAME))
-
-     # but course1 is a different certificate
-    assert_not_equal script_certificate_image_url(user, Script.get_from_cache(Script::HOC_2013_NAME)), script_certificate_image_url(user, Script.get_from_cache(Script::COURSE1_NAME))
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_2013_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::HOC_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::FROZEN_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::FLAPPY_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::PLAYLAB_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::STARWARS_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE1_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE2_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE3_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::COURSE4_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::MINECRAFT_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::ARTIST_NAME)
+    assert_certificate_url_encodes user, Script.get_from_cache(Script::INFINITY_NAME)
   end
 
   test 'client state lines' do
@@ -106,13 +109,17 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state level progress' do
+    script = create :script, name: 'zzz'
+    sl1 = create :script_level, script: script
+    sl2 = create :script_level, script: script
+
     assert client_state.level_progress_is_empty_for_test
-    assert_equal 0, client_state.level_progress(10)
-    client_state.set_level_progress(10, 20)
-    assert_equal 20, client_state.level_progress(10)
-    client_state.set_level_progress(11, 25)
-    assert_equal 25, client_state.level_progress(11)
-    assert_equal 20, client_state.level_progress(10)
+    assert_equal 0, client_state.level_progress(sl1)
+    client_state.set_level_progress(sl1, 20)
+    assert_equal 20, client_state.level_progress(sl1)
+    client_state.set_level_progress(sl2, 25)
+    assert_equal 25, client_state.level_progress(sl2)
+    assert_equal 20, client_state.level_progress(sl1)
   end
 
   # Make sure that we correctly access and back-migrate future
@@ -124,9 +131,12 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '37', cookies[:lines]
     assert_nil session[:lines]
 
-    session[:progress] = {1 => 100}
-    assert_equal 100, client_state.level_progress(1)
-    assert_equal '{"1":100}', cookies[:progress]
+    script = create :script, name: 'progress_test'
+    sl = create(:script_level, script: script)
+    data = {'progress_test' => {sl.level_id => 100}}
+    session[:progress] = data
+    assert_equal 100, client_state.level_progress(sl)
+    assert_equal data.to_json, cookies[:progress]
     assert_nil session[:progress]
   end
 
@@ -169,11 +179,12 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state with invalid cookie' do
+    sl = create :script_level
     cookies[:progress] = '&*%$% mangled #$#$$'
-    assert_equal 0, client_state.level_progress(10),
+    assert_equal 0, client_state.level_progress(sl),
                  'Invalid cookie should show no progress'
-    client_state.set_level_progress(10, 20)
-    assert_equal 20, client_state.level_progress(10),
+    client_state.set_level_progress(sl, 20)
+    assert_equal 20, client_state.level_progress(sl),
                  'Should be able to overwrite invalid cookie state'
   end
 
@@ -210,5 +221,18 @@ class ApplicationHelperTest < ActionView::TestCase
   private
   def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
+  end
+
+  def assert_certificate_url_encodes(user, script)
+    url = script_certificate_image_url(user, script)
+    uri = URI.parse(url)
+    filename = uri.path
+    extname = File.extname(filename)
+    encoded = File.basename(filename, extname)
+    data = JSON.parse(Base64.urlsafe_decode64(encoded))
+
+    assert_equal user.name, data['name']
+    assert_equal script.name, data['course']
+    assert_equal data_t_suffix('script.name', script.name, 'title'), data['course_title']
   end
 end

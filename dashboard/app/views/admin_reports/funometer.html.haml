@@ -25,7 +25,9 @@
   - @script_ratings.each do |script|
     %tr
       %td
-        %span= script.script_id
+        %span
+          = link_to funometer_by_script_path(:script_id => script.script_id) do
+            = script.script_id
       %td
         %span
           = link_to script_url(script.script_id) do
@@ -46,9 +48,13 @@
   - @favorite_level_ratings.each do |level|
     %tr
       %td
-        %span= level.script_id
+        %span
+          = link_to funometer_by_script_path(:script_id => level.script_id) do
+            = level.script_id
       %td
-        %span= level.level_id
+        %span
+          = link_to funometer_by_script_level_path(:script_id => level.script_id, :level_id => level.level_id) do
+            = level.level_id
       %td
         %span
           = link_to script_url(level.script_id) do
@@ -73,9 +79,13 @@
   - @hated_level_ratings.each do |level|
     %tr
       %td
-        %span= level.script_id
+        %span
+          = link_to funometer_by_script_path(:script_id => level.script_id) do
+            = level.script_id
       %td
-        %span= level.level_id
+        %span
+          = link_to funometer_by_script_level_path(:script_id => level.script_id, :level_id => level.level_id) do
+            = level.level_id
       %td
         %span
           = link_to script_url(level.script_id) do

@@ -18,15 +18,16 @@ module Ops
       add_facilitators
 
       @workshop.update!(workshop_params)
-      respond_with :ops, @workshop
+      render json: @workshop, serializer: DetailedWorkshopSerializer
     end
 
     # GET /ops/workshops
     def index
-      my_workshops =
+      workshops =
         if current_user.admin?
           # For admins, list all workshops.
-          Workshop.all
+          # include all associations loaded by the WorkshopSerializer
+          Workshop.includes(:cohorts, :facilitators, :segments).all
         elsif current_user.permission?('district_contact')
           # For district contacts, list all workshops in all cohorts in their district.
           Workshop.includes(cohorts: :districts).where(districts: {contact_id: current_user.try(:id)})
@@ -37,12 +38,12 @@ module Ops
           # For other teachers, list all workshops they're attending.
           Workshop.includes(:teachers).where(users: {id: current_user.try(:id)})
         end
-      respond_with my_workshops
+      respond_with workshops
     end
 
     # GET /ops/workshops/1
     def show
-      respond_with @workshop
+      render json: @workshop, serializer: DetailedWorkshopSerializer
     end
 
     # PATCH/PUT /ops/workshops/1
@@ -52,7 +53,7 @@ module Ops
       add_unexpected_teachers
 
       @workshop.update!(workshop_params)
-      respond_with @workshop
+      render json: @workshop, serializer: DetailedWorkshopSerializer
     end
 
     # DELETE /ops/workshops/1

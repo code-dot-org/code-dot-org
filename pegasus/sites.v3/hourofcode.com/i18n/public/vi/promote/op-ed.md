@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Dưới đây là mẫu bài báo của một tác giả hỗ trợ tuần lễ giáo dục về khoa học máy tính và mục tiêu của nó có thể được sử dụng cho các bang, các nhà lập pháp địa phương , lãnh đạo doanh nghiệp vv.
 
@@ -47,4 +46,3 @@ Theo thống kê Cục Lao động, đến năm 2020, sẽ có 9.2 triệu việ
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. Tại các trường học trong suốt **[bang]**, sinh viên của chúng tôi sẽ được tham gia vào một giờ mã quốc gia, chủ đề khoa học máy tính sẽ được làm sáng tỏ và hy vọng sẽ thúc đẩy ham muốn tìm hiểu của các bạn. Tôi sẽ tham gia cùng họ, và tôi xin mời các bạn cùng tham gia. Tất cả mọi người nên tìm hiểu làm thế nào để mã hóa. Visit https://hourofcode.com/<%= @country %> to learn more and get started. Và hỗ trợ sự nỗ lực của chúng tôi để mang khoa học máy tính tới các trường học tại **[bang]**.
 
-<%= view :signup_button %>

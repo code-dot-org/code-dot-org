@@ -6,9 +6,10 @@ nav: how_to_nav
 
 <h1>How to teach one Hour of Code</h1>
 
-## 1) Sign up
-- Sign up to host an [Hour of Code](<%= resolve_url('/') %>) during <%= campaign_date('short') %>.
-- Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
+Computer Science Education Week is over but you can still do an Hour of Code all year round. 
+
+## 1) Promote your Hour of Code
+Promote your [Hour of Code](<%= resolve_url('/promote') %>) and encourage others to host.
 
 ## 2) Watch this how-to video
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
@@ -77,6 +78,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
+**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
 **What to do if a student finishes early?**
 
@@ -139,4 +141,3 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 - Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
 - [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>

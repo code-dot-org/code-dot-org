@@ -128,8 +128,8 @@
     "edit_code": true,
     "encrypted_examples": "GPXFnF+1wV0v9rwXPd0VYlBfXKUCc+LQo4fBvFOBPV05iBekTaW0yMm3cBn2\noDoi\n",
     "embed": "false",
-    "instructions": "Add a parameter to drawFish() that changes the size of the fish drawn. (Click to see full instructions)",
-    "markdown_instructions": "# Adding parameters to functions: drawSeaGrass()\r\n\r\nLet's update our `drawFish()` function to accept a parameter. Currently `drawFish()` can only draw a fish of size 30.\r\n\r\n**Add a parameter** to the function definition for `drawFish()` that allows you to control its size (Note: the pen width is important here.) Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawFish()` and change the size of the fish in your image.\r\n\r\n![](https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55 PM.png)",
+    "instructions": "Add a parameter to drawFish that changes the size of the fish drawn. (Click to see full instructions)",
+    "markdown_instructions": "# Adding parameters to functions: *drawFish*\r\n\r\nLet's update our `drawFish` function to accept a parameter. Currently `drawFish` can only draw a fish of size 30.\r\n\r\n**Add a parameter** to the function definition for `drawFish` that allows you to control its size (Note: the pen width is important here.) Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawFish` and change the size of the fish in your image.\r\n\r\n![](https://images.code.org/35f9a55244004dad62781f4ae0ce7eb2-image-1442608034411.26.55 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -158,7 +158,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

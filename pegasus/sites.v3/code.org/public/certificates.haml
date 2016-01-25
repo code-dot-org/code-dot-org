@@ -3,21 +3,16 @@ Title: Print Certificates
 ---
 -personalized = (request.site == 'uk.code.org') ? 'personalised' : 'personalized'
 
--course = request.params['course'] || nil
--courseName = course == "20hours" || course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
--if course == "20hours" || course == "20-hour"
-  -smallCertificateImageUrl = "/images/fit-240/20hours_certificate.jpg"
--elsif course == "hoc" || course == "hourofcode" || course == nil
-  -smallCertificateImageUrl = "/images/fit-240/hour_of_code_certificate.jpg"
--else
-  -smallCertificateImageUrl = "/images/fit-240/blank_certificate.jpg"
+-course = request.params['course'] || ScriptConstants::HOC_NAME
+-course_name = course == "20-hour" ? "K-8 Intro to Computer Science Course" : "Hour of Code"
+-small_certificate_image_url = "/images/fit-240/#{certificate_template_for(course)}"
 
 %h1 Print a batch of certificates
 %div.clear
   %div{:style=>"float: left; margin: 0 40px 0 0;"}<
-    %img{:src=>smallCertificateImageUrl}
+    %img{:src=>small_certificate_image_url}
   %p{:style=>"float: left; width: 360px; margin-top: 20px;"}<
-    Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{courseName} certificates will be generated.
+    Enter up to 30 names, <strong>one per line</strong>. A printable page with #{personalized} #{course_name} certificates will be generated.
 %form{:method=>"post", :action=>'/printcertificates'}
   -if course
     %input{:type=>"hidden", :name=>'course', :value=>course}

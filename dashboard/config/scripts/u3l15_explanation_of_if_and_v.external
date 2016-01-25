@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Having your app make decisions
+# Having Your App Make Decisions
 
 Now that you have variables keeping track of useful information in an app, the next thing you probably want to do is make decisions based on their values.
 
@@ -28,7 +28,7 @@ Here’s an example of an `if` statement (shown in both block and text form)
 
 There are a couple of things happening here that we should explain.
 
-# How to add an *if* statement to your program.
+# How to Add an *if* Statement to Your Program
 
 In the toolbox you’ll now see an `if` statement.  To add it to your program just drag it out.  For our current program we want to check the value of count *inside* the up arrow event handler.
 
@@ -41,7 +41,7 @@ The `if` statement defines a block of code to execute between open and closing c
 **If the condition is true** then the block of code inside the curly braces is executed from top to bottom, exactly once.
 **If the condition is false** then the entire block of code is ignored.
 
-# Misconception Alert - where to put *if* statements
+# Misconception Alert - Where to Put *if* Statements
 
 An `if` statement does not constantly monitor your program checking the condition to see if it's true or false.  An `if` statement is an instruction just like any other that gets executed line by line in order from top to bottom.
 
@@ -51,7 +51,7 @@ This is why we need to **check the value of <code>count</code> EVERY time the up
 
 ![](https://images.code.org/a65dec71bc103397f2ceed603f328531-image-1446154248803.png)
 
-# How to define a condition for an *if* statement
+# How to Define a Condition for an *if* Statement
 
 An `if` statement requires you to define an **expression that evaluates to true or false.** 
 
@@ -72,7 +72,7 @@ For example:
 | `a == b` | false |
 
 
-# The == operator vs. =
+# The == Operator vs. =
 
 `=` read as: “gets”
 

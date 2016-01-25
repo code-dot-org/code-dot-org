@@ -21,7 +21,7 @@ No. Hour of Code modules and tools are self-directed. All you have to do is pick
 
 ---
 
-## Do we need computers for every participant? 
+## Do we need computers for every participant?
 
 NO COMPUTERS NEEDED!
 We will curate a selection of computer science tutorials that work on PC’s, smartphones, and tablets – so really you can join wherever you are with whatever you have.
@@ -36,7 +36,7 @@ And if you don't have any internet-connected devices, you can still participate.
 
 ## What can you do if YouTube is blocked at your school?
 
-We're using youtubeeducation.com, which is a different domain than youtube.com, and the Code.org videos are whitelisted to play through this domain. Most schools that block YouTube still allow [YouTube Education](https://www.youtube.com/education). (For example, we've confirmed this with Chicago schools and NYC schools).  If you're in a school district where the videos on [code.org](http://code.org) and [csedweek.org](http://csedweek.org) videos are blocked from playing, [contact us](http://code.org/contact). Youtubeeducation.com isn't a web site, but a domain name that will work for embedded videos.
+We use YouTube to host video content, and if that's not accessible we fall back to video files served from videos.code.org.  If your school blocks YouTube, consider using [YouTube Settings for Google Apps users](http://googleappsupdates.blogspot.co.uk/2015/08/new-settings-in-admin-console-for.html) to gain YouTube access.
 
 ---
 
@@ -64,7 +64,7 @@ See this [infographic](http://www.code.org/stats) for more information.
 - Try an hour of computer science yourself
 - Or organize an Hour of Code for your local school, employer or community.
 
---- 
+---
 
 ## How can I host the Hour of Code at my school, company, or organization?
 
@@ -85,7 +85,7 @@ Organize a family hour of code and let your kids teach you. You can use PCs, tab
 ---
 
 ## What day do I need to do my Hour of Code?
-You can do your Hour of Code on any day during CSEdWeek (December 8-14, 2014).
+You can do your Hour of Code on any day during CSEdWeek (December 7-13, 2015).
 
 ---
 
@@ -147,7 +147,7 @@ Start with the [videos](/resource_kit/videos)!
 
 It’s inspiring to see music, sports and business stars talk about how important it is to code. Help your students connect the dots between coding and fame, fortune, and fun and they will be more open to the Hour of Code.
 
-Then, check out our [press kit](/resource_kit/press_kit). 
+Then, check out our [press kit](/resource_kit/press_kit).
 
 ## Slow internet? Want offline tutorials?
 Code.org tutorials only work on an internet connection. But if you need offline support, you can download the original Blockly tutorials using this ZIP file, and then run them locally from a file server or even from a USB drive. These do not include any tutorial videos, and require a modern browser.

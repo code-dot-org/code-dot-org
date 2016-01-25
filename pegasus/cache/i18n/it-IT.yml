@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Sei un insegnante interessato all''Informatica? Guarda
     le altre risorse disponibili</a>'
-  n_have_learned_an_hoc: <h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>
+  n_have_learned_an_hoc: "<h1>Prova una</h1><h3># completa</h3><h2>Ora del Codice</h2>"
   anybody_can_learn: Chiunque può imparare.
   learn_now: Impara Adesso
   petition_message: Ogni studente di ogni Scuola dovrebbe avere l'opportunità di imparare
@@ -29,6 +29,8 @@
   twentyhours_heading: Prova la nostra introduzione all'Informatica
   twentyhours_text: Hai terminato la tua prima Ora del Codice? Impara un altro po'
     di concetti di informatica e di programmazione in quest'altro corso.
+  og_title: Ogni bambino merita un'opportunità
+  og_description: Ogni alunno in ogni scuola merita l'opportunità di studiare informatica.
   hoc2014_heading: Iscriviti alla <a href="http://hourofcode.com/it">Ora del Codice</a>
     <br/>8-14 dicembre 2014 <br/>
   hoc2014_students: Studenti
@@ -38,7 +40,7 @@
   hoc2014_everyone: Tutti
   hoc2014_support: Sostienilo &#x25BE;
   hoc2014_whatishoc: Cosa è l'Ora del Codice?
-  csedweek_map_header: '#CSEdWeek / Eventi dell''Ora del Codice nel mondo'
+  csedweek_map_header: "#CSEdWeek / Eventi dell'Ora del Codice nel mondo"
   csedweek_map_signup: Iscrivi il tuo evento
   csedweek_map_search_placeholder: Cerca eventi per l'Ora del codice
   csedweek_map_search_search: Cerca
@@ -68,7 +70,7 @@
     Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali.
   all_ages: Per tutte le età
   beginner: Principiante
-  n_participants: '# partecipanti'
+  n_participants: "# partecipanti"
   go: Inizia
   thank_you_: Grazie!
   congratulations: Complimenti!
@@ -117,7 +119,7 @@
   beyond_an_hour: Dopo l'Ora del Codice
   get_started: Inizia
   i_agree: Firmo
-  participant_select: '- Seleziona -'
+  participant_select: "- Seleziona -"
   participant_student: Studente
   participant_parent: Genitore
   participant_educator: Insegnante
@@ -144,8 +146,6 @@
   twitter_teach_cs: Perchè molte scuole non insegnano informatica? Possiamo migliorare
     questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per
     saperne di più.
-  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Scopri</a> i premi per
-    gli organizzatori.
   learn_hoc: Fai l'Ora del Codice
   beyond_hoc: Dopo l'Ora del Codice
   what_gender: Di che sesso sei?
@@ -154,11 +154,11 @@
   help_recruit_coders: Aiutaci a reclutare più scrittori di codice per la tua squadra!
   help_recruit: Aiutaci a reclutare più scrittori di codice!
   lines_of_code: OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA.
-  lines_of_code_alt: <b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI
+  lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
   hoc_leaderboards: Le classifiche dell'Ora del Codice
-  students_and_lines: '%{students} studenti hanno svolto l''Ora del Codice e scritto
-    %{lines} linee di codice.'
+  students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto
+    %{lines} linee di codice."
   start_hoc: Inizia l'Ora del Codice adesso
   contact_form_topic_press: Stampa/media (appuntamento per un'intervista o per un
     intervento)
@@ -192,17 +192,17 @@
   homepage_hero_text_susan: |
     &ldquo;Se si può cambiare la tecnologia,
     si può cambiare il mondo.&rdquo;
-    Susan, CEO di YouTube
+    Susan, Amministratore Delegato di YouTube
   homepage_hero_text_fistbump: |
-    &ldquo;Non giocare soltanto con il tuo telefono,
+    &ldquo;Col tuo telefono non giocarci soltanto,
     programmalo.&rdquo;
-    Presidente Barack Obama
+    Il Presidente Barack Obama
   homepage_hero_text_sheryl: |
-    &ldquo;I nostri bambini &mdash; comprese le nostre bambine &mdash;
+    &ldquo;I nostri figli &mdash; tra cui le nostre ragazze &mdash;
     devono avere l'opportunità di imparare informatica.&rdquo;
-    Sheryl, COO di Facebook
+    Sheryl, Direttore Operativo di Facebook
   homepage_hero_text_satya: "&ldquo;L'informatica può creare \nle migliori opportunità
-    del mondo.&rdquo;\nSatya, CEO di Microsoft\n"
+    del mondo.&rdquo;\nSatya, Amministratore Delegato di Microsoft\n"
   homepage_hero_text_bosh: |
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
@@ -231,7 +231,7 @@
     Adam, insegnante
   homepage_hero_text_stat_loc: 2,5 milioni di ragazze si sono iscritte per imparare
     con Code Studio
-  homepage_hero_text_stat_students: '#student_count account di studenti in Code Studio'
+  homepage_hero_text_stat_students: "#student_count account di studenti in Code Studio"
   homepage_hero_text_stat_served: 'L''Ora del Codice: ne hanno già fatte #served'
   homepage_slot_text_hoc: L'Ora del Codice
   homepage_slot_text_frozen: Frozen con Anna ed Elsa
@@ -241,14 +241,14 @@
   homepage_slot_text_shop: Acquista
   homepage_slot_text_flappy: Flappy
   homepage_action_text_hoc: Un'Ora del Codice per ogni studente.
-  homepage_action_text_num_served: '# servito'
+  homepage_action_text_num_served: "# fatte"
   homepage_action_text_join_us: Unisciti a noi
   homepage_action_text_sign_up: Iscriviti
   homepage_action_text_try_it: Prova
   homepage_action_text_volunteers: Siamo alla ricerca di volontari tecnici
   homepage_action_text_codevideo: Guarda il video
   homepage_action_text_teachervideo: Guarda il video
-  homepage_action_text_girlvideo: Stimola una ragazza
+  homepage_action_text_girlvideo: Convinci una ragazza a partecipare
   homepage_action_text_learn: Inizia ad apprendere
   homepage_action_text_signpetition: Firma la petizione
   homepage_signpetition_dropdown: Firma la nostra petizione &#x25BE;
@@ -262,14 +262,18 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Ulteriori informazioni
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
   homepage_slot_text_link_host: Organizza un'Ora del Codice
-  homepage_slot_text_link_hocserved: '# servito'
+  homepage_slot_text_link_hocserved: "# fatte"
   homepage_solot_text_link_volunteer: Volontario per l'Ora del Codice
   homepage_slot_text_title_students: Studenti
   homepage_slot_text_blurb_students: Guarda tutti i nostri corsi
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Prova Code Studio
   homepage_slot_text_link_local: Trova una classe nella tua zona
   homepage_slot_text_link_othercourses: Altri corsi online
@@ -279,7 +283,7 @@
   homepage_slot_text_link_fullcurriculum: Guarda il nostro curriculum completo
   homepage_slot_text_link_pd: Professional Development
   homepage_slot_text_title_advocates: Sostenitori
-  homepage_slot_text_blurb_advocates: Appoggia le diversità nell'informatica
+  homepage_slot_text_blurb_advocates: Appoggia la diffusione della diversità nell'informatica
   homepage_slot_text_link_stats: Guarda le statistiche
   homepage_slot_text_link_buy: Fatti coinvolgere
   homepage_slot_text_link_donate: Fai una donazione
@@ -330,6 +334,11 @@
   class_submission_languages_other: Altre lingue
   inspirational_videos_more: Altri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video
     stimolanti</a> fatti da celebrità e modelli di riferimento
+  playlab_choose_theme: Scegli il tema del tuo Laboratorio
+  playlab_classic_title: Classico
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: L'Era Glaciale - È in arrivo
+  playlab_iceage_title_live: L'Era Glaciale
   starwars_subtitle: Costruisci una galassia con il codice
   starwars_javascript_title: Javascript
   starwars_javascript_description: Usa la programmazione a blocchi e il JavaScript.
@@ -337,43 +346,49 @@
   starwars_javascript_start_button: Prova adesso
   starwars_blocks_title: Blocchi
   starwars_blocks_description: Usa la programmazione a blocchi.
-  starwars_blocks_specs: In molte lingue (in corso di preparazione) | Browser moderni,
-    smartphone, tablet | Da 6 a 10 anni
+  starwars_blocks_specs: Molte lingue | Browser, smartphone e tablet moderni | Da
+    6 anni in su
   starwars_blocks_start_button: Prova adesso
   starwars_watch_videos: Prima di iniziare, guarda uno di questi video stimolanti
   starwars_speak_languages: Parli un'altra lingua?
   starwars_help_translate: Aiutaci a tradurre
   starwars_platform_text: Browser moderni, smartphone, tablet
-  mc_name: Minecraft L'Ora del Codice
-  mc_longdescription: Usa i blocchi di codice per vivere con Steve o Alex un'avventura
-    nel mondo di Minecraft.
-  mc_shortdescription: Usa i blocchi di codice per vivere con Steve o Alex un'avventura
-    nel mondo di Minecraft.
-  mc_gradelevel: Da 6 anni in su
+  mc_name: L'Ora del Codice con Minecraft
+  mc_longdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
+    con Steve o Alex.
+  mc_shortdescription: Usa i blocchi di codice per avventurarti nel mondo di Minecraft
+    con Steve o Alex.
+  mc_gradelevel: Da 4 a 104 anni
   mc_platformtext: Browser moderni, smartphone, Tablet
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft L'Ora del Codice
-  volunteer_engineer_submission_title: Volontario per l'ora del codice
+  mc_specs: Molte lingue | Browser e tablet moderni | Da 6 anni in su
+  minecraft_subtitle: L'Ora del Codice con Minecraft
+  volunteer_engineer_submission_title: Invita studenti e volontari a partecipare all'ora
+    del codice.
   volunteer_engineer_submission_subtitle_generic: '100.000 insegnanti ospiteranno
     un''Ora di Codice nelle loro classi quest''anno: 7-13 Dicembre 2015. Hanno bisogno
     del tuo aiuto! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers are looking
-    for volunteers to help with their Hour of Code.<br>%{num_volunteers} volunteers
-    have signed up.'
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} insegnanti cercano
+    volontari appassionati di formazione informatica per aiutarli nella loro Ora del
+    Codice questo Dicembre.<br>%{num_volunteers} volontari hanno aderito. Unisciti
+    a loro."
   volunteer_engineer_submission_intro_background: L'Ora del Codice è un movimento
     globale per far provare un'ora di introduzione all'informatica, che raggiunge
     decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana
     di Educazione all'Informatica, dal 7-13 Dicembre 2015.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">technical</span>
-    who can help in the classroom, or for somebody who can <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the
-    breadth of possibilities with computer science (which could be done through a
-    video chat). If you''re not an engineer, anyone can organize an Hour of Code.
-    <a href="%{url}">Learn more here</a>.'
+  volunteer_engineer_submission_intro_recruit: 'Questi insegnanti cercano <span style="font-family:
+    ''Gotham 7r'', sans-serif;"> appassionati di formazione informatica</span> che
+    possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham
+    7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità
+    dell''informatica (che potrebbe essere fatto con una chat video). Se non siete
+    in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento
+    dell''Ora del Codice.'
   volunteer_engineer_submission_intro_signup: Compila i campi sottostanti se sei uno
     studente di informatica o uno sviluppatore professionista. I campi contrassegnati
     con un <span class="form-required-field">*</span> sono obbligatori.
+  volunteer_engineer_submission_intro_links: Non vuoi offrirti volontario? <a href="%{learn_more}">Scopri
+    di più</a> riguardo organizzare il tuo evento dell' Ora del Codice e trova un
+    volontario locale sulla nostra <a href="%{volunteer_local}">Mappa Volontari</a>.
+  volunteer_engineer_submission_update_information: Aggiorna le tue informazioni
   volunteer_engineer_submission_header_shared: Informazioni condivise con gli insegnanti
     sulla mappa dei volontari
   volunteer_engineer_submission_field_name: Nome
@@ -405,17 +420,17 @@
   volunteer_engineer_submission_header_private: Le informazioni sono mantenute private
     e mai condivise
   volunteer_engineer_submission_field_email: Indirizzo di posta elettronica
-  volunteer_engineer_submission_field_email_desc: Il tuo indirizzo email non sarà
-    mai condiviso. Ti invieremo le richieste da parte degli insegnanti.
+  volunteer_engineer_submission_field_email_desc: Il tuo indirizzo di posta elettronica
+    non sarà mai condiviso. Ti invieremo le richieste da parte degli insegnanti.
   volunteer_engineer_submission_field_email_placeholder: Indirizzo di posta elettronica
   volunteer_engineer_submission_final_paragraph: Sarai segnalato su una mappa così
     da poter essere contattato dagli insegnanti locali per l'Ora di Codice o altre
-    opportunità di volontariato. Non comunicheremo MAI la tua email e l'indirizzo
-    esatto. Le altre informazioni invece (inclusa la localizzazione approssimata)
-    saranno pubblicamente accessibili dagli insegnanti locali.
+    opportunità di volontariato. Non comunicheremo MAI il tuo indirizzo di posta elettronica
+    e l'indirizzo esatto. Le altre informazioni invece (inclusa la localizzazione
+    approssimata) saranno pubblicamente accessibili dagli insegnanti locali.
   volunteer_engineer_submission_checkbox_contact: 'Sono d''accordo che gli insegnanti
-    possono contattarmi per opportunità di volontariato (Nota: il tuo indirizzo email
-    non sarà condivisa)'
+    possano contattarmi per richiedere attività di volontariato (Nota: il tuo indirizzo
+    di posta elettronica non sarà condiviso)'
   volunteer_engineer_submission_submit: Invia
   volunteer_engineer_submission_thankyou: Grazie per il l'attività di volontariato
     per l'Ora di Codice. Pre prepararsi all'Ora del Codice e reclutare altri appassionati,
@@ -499,13 +514,14 @@
     durante la Settimana di Educazione all''Informatica. Per gli insegnanti in Italia:
     aderisci attraverso <a href="http://programmailfuturo.it">Programma il Futuro</a>.'
   dashboard_k5_courses: Corsi da 20 ore
-  dashboard_k5_courses_desc: Questi corsi uniscono attività on line, tutorial autoguidati
+  dashboard_k5_courses_desc: 'Questi corsi uniscono attività on line, tutorial autoguidati
     e adatti al vostro ritmo, anche con attività da svolgere senza essere connessi
     (attività tradizionali o "unplugged"). Ogni corso è composto da circa 20 lezioni
-    che possono essere svolte tutte di seguito o durante l'anno. Per gli insegnanti
-    negli USA offriamo dei laboratori/workshop professionali gratuiti e di elevata
-    qualità. <a href="/professional-development-workshops"> Trovate quello più vicino
-    a voi!</a>
+    che possono essere svolte tutte di seguito o durante l''anno. Per gli insegnanti
+    in Italia: accedi a <a href="http://programmailfuturo.it">Programma il Futuro</a>
+    per avere assistenza specifica. Per gli insegnanti negli USA offriamo dei laboratori/workshop
+    professionali gratuiti e di elevata qualità: <a href="/professional-development-workshops">trovate
+    quello più vicino a voi!</a>'
   dashboard_middle_courses: Corsi da 20 ore per la scuola secondaria di primo grado
   dashboard_middle_courses_desc: Il nostro curriculum per la secondaria di primo grado
     utilizza l'informatica e la programmazione all'interno della matematica e delle
@@ -680,7 +696,8 @@
   dashboard_progress_not_completed: non completato
   dashboard_progress_completed_too_many_blocks: completato, ma usando troppi blocchi
   dashboard_progress_completed_perfect: completato in modo perfetto
-  dashboard_progress_furthest_level_attempted: livello più avanzato che è stato provato
+  dashboard_progress_furthest_level_attempted: esercizio più avanzato che è stato
+    provato
   dashboard_stage: Lezione
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
@@ -707,38 +724,63 @@
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_hoc: <b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando!
+  dashboard_announce_message: "<b>16 Dicembre 2015</b> - Grazie per aver partecipato
+    all'Ora di Codice 2015! I risultati e i progressi delle esercitazioni e delle
+    lezioni di coding saranno registrati e salvati. Nota: gli uffici di Code.org rimarranno
+    chiusi dal 19 dicembre al 4 gennaio. Aspettatevi un leggero ritardo per eventuali
+    domande inviate fino al 4 gennaio."
+  dashboard_announce_button_text: Ulteriori informazioni
+  dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando!
     Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto
     di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti
-    agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015.
+    agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
+  dashboard_announce_playlab: "<b>4 Dicembre, 2015</b> - L'Ora del Codice è qua! Prova
+    uno dei 50 corsi per tutte le età e tutti i dispositivi. Novità della settimana:
+    programma le tue storie e i tuoi giochi con i nuovi corsi del Laboratorio: L'Era
+    Glaciale e Gumball."
   code_hoc_coming: 'L''Ora del Codice è qui: 8-14 Dicembre!'
   code_sign_up: Iscriviti per partecipare durante la Settimana di Educazione all'Informatica
   learn_more: Ulteriori informazioni
   learn_sign_up_description: Iscriviti per partecipare all'Ora del Codice durante
     la Settimana di Educazione all'Informatica
   learn_sign_up_button: Iscriviti
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_videos_watch: Guarda questo video stimolante con la classe
+  learn_videos_show: Mostra questo video stimolante alla tua classe
+  learn_videos_before_hoc: Guarda un video stimolante prima della tua Ora di Codice
   learn_educator_resources_description: Impara ad insegnare l'Ora del Codice
   learn_educator_resources_button: Risorse per gli insegnanti
   learn_are_you_educator: Sei un insegnante? Impara <a href="http://hourofcode.com/resources/how-to">
     con insegnare un'Ora del Codice</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local">Trova un volontario
+    locale</a> che aiuti durante l'Ora del Codice
+  learn_teacher_led_lesson_plans: Ispirati<a href="https://code.org/teacher-led">a
+    piani di lezioni per l'Ora del Codice guidate da professori</a>
+  learn_how_to_hoc: Segui <a href="https://hourofcode.com/how-to">la nostra guida
+    </a> su come insegnare l'Ora del Codice
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Scopri</a> i premi per
+    gli organizzatori.
+  learn_inspirational_videos: Ispira student mostrandogli <a href="https://code.org/educate/inspire">questi
+    video</a>
   hoc2014_try_new_tutorials: Prova i nuovi corsi dell'Ora del Codice
   hoc2014_try_new_tutorial: Prova il nuovo corso dell'Ora del Codice in versione provvisoria
   hoc2014_try_scrat: Angry Birds, PvZ, e Scrat
   hoc2014_try_frozen: Artista con Anna ed Elsa, da Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  carousel_heading_codeorg: Tutorial di Code.org
+  carousel_heading_codeorg_any_device: Tutorial di Code.org (per tutti i dispositivi)
+  carousel_heading_3rd_party: Tutorial di terze parti
+  carousel_heading_third_party: Tutorial di terze parti
   carousel_heading_international: Corsi nella tua lingua
   carousel_heading_domestic: Corsi disponibili in Inglese
   carousel_heading_beginners: Corsi per principianti
-  carousel_heading_javascript: Corsi che insegnano il linguaggio Javascript
+  carousel_heading_beyond_beginners: Tutorial per principianti
+  carousel_heading_javascript: Lezioni che insegnano il linguaggio Javascript
+  carousel_heading_beyond_javascript: Tutorial che insegnano JavaScript
   carousel_heading_unplugged: Non hai Internet o dispositivi informatici? Prova l'informatica
     con mezzi tradizionali!
   carousel_heading_devices: App per imparare su smartphone e tablet
+  carousel_heading_beyond_devices: Applicazioni tutorial per smartphone e tablet
   carousel_heading_languages: Corsi per imparare altri linguaggi di programmazione
+  carousel_heading_beyond_languages: Tutorial in altre lingue di programmazione
   carousel_heading_apps_games: Costruisci la tua app o il tuo gioco
   carousel_heading_university: Corsi universitari online
   carousel_heading_webpages: Impara a costruire pagine web
@@ -747,6 +789,10 @@
   educator_notes: Note per gli insegnanti
   teach_led_lesson_plans: Piani di attività "Gestite dagli Insegnanti" per l'Ora del
     Codice
+  learn_footer_all_tutorials: Guarda <a href="https://code.org/educate/allhourofcode">la
+    lista comprensiva dei tutorial per l'Ora del Codice</a>. Per vedere I criteri
+    e linee guida di sottomissione per l'Ora del Codice, <a href="https://hourofcode.com/tutorial-guidelines">clicca
+    qui.</a>
   how_to_teach_hoc: Come insegnare un ora di codice
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   beyond_submission: Desideri inviarci un corso da svolgere "Dopo l'Ora del Codice"?
@@ -762,9 +808,9 @@
     target="_blank">versione più moderna</a>.
   mobile_devices: Corsi per dispositivi mobili
   frozen_name: Programma con Anna ed Elsa
-  starwars_name: 'Star Wars: Costruisci una galassia con il codice'
-  codeorg_name: Scrivi il tuo primo programma
-  codeintl_name: Scrivi il tuo primo programma
+  starwars_name: 'Guerre Stellari: Costruisci una galassia con il codice'
+  codeorg_name: Labirinto Classico
+  codeintl_name: Labirinto Classico
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Un'introduzione a JavaScript
   khanes_name: Un'introduzione a JavaScript
@@ -801,8 +847,17 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Sasso, Carta, Forbici
-  hourofcode_name: Segnaposto per il nuovo code.org/hoc
+  hourofcode_name: Labirinto Classico
   playlab_name: Laboratorio
+  infinity_name: Disney Infinity
+  artist_name: 'Artista: Sequenze e Cicli'
+  monstercoding_name: Missione del Coding dell' Isola Misteriosa
+  allcancode_name: Corri Marco!
+  csfirst_name: Prima il CS
+  boxisland_name: Isola scatola
+  codesters_name: Codesters
+  texasinstruments_name: 10 minuti di Coding
+  teacherled_name: Piani di attività "Gestite dagli Insegnanti" per l'Ora del Codice
   codeorg_gradelevel: Da 4 a 104 anni
   codeintl_gradelevel: Da 4 a 104 anni
   thinkersmithspanish_gradelevel: Por todos
@@ -842,8 +897,17 @@
   projguts_gradelevel: Da 10 a 13 anni
   hourofcode_gradelevel: Da 4 a 104 anni
   frozen_gradelevel: Da 8 anni in su
-  starwars_gradelevel: Da 6 anni in su
+  starwars_gradelevel: Da 6 a 106 anni
   playlab_gradelevel: Da 4 a 104 anni
+  infinity_gradelevel: Da 4 a 104 anni
+  artist_gradelevel: Da 8 anni in su
+  monstercoding_gradelevel: Da 5 a 13 anni
+  allcancode_gradelevel: Anni 5-10
+  csfirst_gradelevel: Anni 9-14
+  boxisland_gradelevel: Scuola elementare
+  codesters_gradelevel: Anni 12-14
+  texasinstruments_gradelevel: Anni 13-16
+  teacherled_gradelevel: Anni 5+
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet
   thinkersmithspanish_platformtext: Tradizionale
@@ -885,6 +949,13 @@
   frozen_platformtext: Browser moderni  + tablet
   starwars_platformtext: Browser moderni  + tablet
   playlab_platformtext: Browser moderni, smartphone, Tablet
+  monstercoding_platformtext: Browser moderni, iOS e Android
+  allcancode_platformtext: Browser moderni e iOS
+  csfirst_platformtext: Browser Web moderni
+  boxisland_platformtext: Android e iOS
+  codesters_platformtext: Browser Web moderni
+  texasinstruments_platformtext: Calcolatori TI
+  teacherled_platformtext: Browser moderni, smartphone, Tablet
   codeorg_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   codeintl_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -939,12 +1010,29 @@
     zeri per rappresentare le informazioni
   kodableunplugged_shortdescription: Un divertente esercizio tradizionale
   projguts_shortdescription: Prova a modellare e simulare usando il gioco sasso/carta/forbici
-  hourofcode_shortdescription: Segnaposto per il nuovo code.org/hoc
+  hourofcode_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   frozen_shortdescription: Usiamo la programmazione per unirci ad Anna ed Elsa mentre
     esplorano la magia e la bellezza del ghiaccio.
   starwars_shortdescription: Impara a programmare i droidi e crea la tua versione
-    di Star Wars ... in una galassia molto molto lontana.
+    di Guerre Stellari, in una galassia lontana lontana...
   playlab_shortdescription: Crea una storia o inventa un gioco col Laboratorio!
+  infinity_shortdescription: Crea una storia o inventa un gioco con i personaggi di
+    Disney Infinity come protagonisti!
+  artist_shortdescription: Disegna fantastiche immagini e decorazioni con l'artista!
+  monsterocding_shortdescription: Una colorata avventura dir programmazione autoguidata  per
+    i bambini.
+  allcancode_shortdescription: Un gioco coinvolgente per guidare Marco tramite un
+    linguaggio di programmazione visuale.
+  csfirst_shortdescription: Anima una storia di due personaggi sull'oceano. Aggiungi
+    il tuo stile!
+  boxisland_shortdescription: Fare un viaggio di codifica sull'isola di Box con il
+    coraggioso Hiro.
+  codesters_shortdescription: Creare il proprio giochi, animazioni e grafica usando
+    Python.
+  texasinstruments_shortdescription: Imparare la codificazione di base utilizzando
+    la calcolatrice TI-84 &#8482; Plus.
+  teacherled_shortdescription: Essere ispirati a progettare il tuo evento per l'ora
+    di codice con queste proposte di lezione.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -1101,10 +1189,42 @@
     sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi
     condividere con i tuoi amici!
   starwars_longdescription: Impara a programmare i droidi e crea la tua versione di
-    Star Wars ... in una galassia molto molto lontana.
+    Guerre Stellari, in una galassia lontana lontana...
   playlab_longdescription: Crea una storia o realizza un gioco col Laboratorio! Fai
     muovere animali, zombie, Ninja, pirati e molti altri personaggi. Crea suoni, fai
     guadagnare punti e addirittura lancia palle di fuoco!
+  monstercoding_longdescription: L'isola del Mistero codificata da Quest Monster propone
+    che una divertente avventura autoguidata che insegna alcuni concetti chiave sulla
+    programmazione per bambini. Ogni blocco è basato su attività apprese nel blocco
+    precedente, introducendo i bambini a funzioni, valori booleani, loop, istruzioni
+    If/Else e matrici, utilizzando una grafica animata colorata, istruzioni audio.
+  allcancode_longdescription: Gli studenti sviluppano un gioco di avventura basato
+    su una storia originale. Marco, il personaggio principale, guida attraverso ogni
+    livello dando istruzioni dettagliate sotto forma di linguaggio di programmazione
+    visuale utilizzato dalle ore di codice. Hanno introdotto i comandi di sequenziamento,
+    di iterazione e condizioni senza accorgersene.
+  csfirst_longdescription: Creare una storia di due personaggi in mare. Animare l'acqua
+    e personalizzare il paesaggio per aggiungere il tuo riflesso. Utilizzare il codice
+    per raccontare la storia che volete narrare!
+  boxisland_longdescription: Partire per un viaggio sull'isola Box e aiutare Hiro
+    a raccogliere tutti gli orologi sparsi nel deserto! In questo tutorial imparerete
+    le nozioni di base sugli algoritmi, le sequenze, i cicli e le istruzioni condizionali!
+  codesters_longdescription: 'Creare il proprio giochi, animazioni e grafica usando
+    Python.  Una volta che hai finito, è possibile condividerli con gli amici! Programmare
+    in Python, un linguaggio di programmazione vero e proprio utilizzato ogni giorno
+    nelle aziende - il nostro Toolkit copia ed incolla rende facile da imparare!  Provare
+    a costruire un gioco di basket, coreografare una danza, o disegnare un biglietto
+    animato! '
+  texasinstruments_longdescription: 'I 10 minuti di attività di codice utilizzabile
+    in classe come un modo per suscitare l''interesse degli studenti nella codifica
+    con la tecnologia TI che portano nel loro zaino tutti i giorni.  Nozioni di base
+    di codifica utilizzando la TI-84 &#8482; Plus e iniziare la programmazione in
+    soli 10 minuti – nessuna esperienza è necessaria!  '
+  teacherled_longdescription: Ora che decine di migliaia di educatori hanno provato
+    l'ora di codice, molte aule sono pronte per essere più creative, meno omologate
+    per insegnare le basi dell'informatica. Per aiutare gli insegnanti a trovare una
+    ispirazione, abbiamo raccolto e curato un'ora guidata dal Maestro e piani di attività
+    progettati per diverse aree tematiche per i veterani dell'ora di codice.
   codeorg_beyond_name: Corso Introduttivo di Informatica per scuole elementari e medie
     inferiori
   khan_beyond_name: Impara la programmazione informatica
@@ -1453,3 +1573,11 @@
     href='%{it_requirements_url}'> Clicca qui</a> per informazioni su come abilitare
     HTTPS per accedere a Code.org.
   compatibility_https_hide_this_warning: Nascondi questo avviso
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: sbatti le ali
+  infinity_shortcode: inf
+  playlab_shortcode: inizia
+  artist_shortcode: art

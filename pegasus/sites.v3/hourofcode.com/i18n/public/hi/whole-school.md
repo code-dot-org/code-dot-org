@@ -5,10 +5,8 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # अपनी पाठशाला को इसमें हिस्सा लेने का प्रोत्साहन दें
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+पाठसालाये किस प्रकार हिस्सा ले, इस पर अधिक जानकारी इस भाग में लिखा जायेगा
 
-<%= view :signup_button %>

@@ -36,8 +36,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use an if statement to only print the values in the array that are greater than 5. (Click to see full instructions)",
-    "markdown_instructions": "# For Loop with If\r\n\r\nSometimes we want to find values in an array that meet certain conditions.  We can add an **if statement inside the for loop** to individually check every value within the array. To practice this we will create a for loop that will **display every value in the array greater than 5**.\r\n\r\n# Do This\r\n\r\n* ** Starter code** has been been provided that creates an array of random values\r\n* Add a `for` loop that references every index in the array.\r\n* Add an `if` statement inside the for loop that **displays every value in the array greater than 5** using `console.log`\r\n\t![](https://images.code.org/969077ff23232e410ce17520b0a71e1e-image-1447390972867.gif)\r\n* **Note**: because the original array is being constructed with random values it's *possible* that it might not have any values greater than 5.  Just run the program a few times to make sure it works.  An example of the possible output is below.\r\n\r\n![](https://images.code.org/266e23afc3533ebd63b393b2ee8682d8-image-1447796380510.39.26 PM.png)",
+    "instructions": "Use an if statement to only display the values in the array that are greater than 5. (Click to see full instructions)",
+    "markdown_instructions": "# *for* Loop with *if*\r\n\r\nSometimes we want to find values in an array that meet certain conditions.  We can add an **`if` statement inside the `for` loop** to individually check every value within the array. To practice this, we will create a `for` loop that will **display every value in the array greater than 5**.\r\n\r\n# Do This:\r\n** Starter code** has been been provided that creates an array of random values.\r\n\r\n* Add a `for` loop that references every index in the array.\r\n\r\n* Add an `if` statement inside the `for` loop that **displays every value in the array greater than 5** using `console.log`\r\n\t![](https://images.code.org/969077ff23232e410ce17520b0a71e1e-image-1447390972867.gif)\r\n    \r\n* **Note:** Because the original array is being constructed with random values it's *possible* that it might not have any values greater than 5.  Just run the program a few times to make sure it works.  An example of the possible output is below.\r\n\r\n![](https://images.code.org/266e23afc3533ebd63b393b2ee8682d8-image-1447796380510.39.26 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -67,7 +67,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original: \"+myArray);\r\nconsole.log(\"Values greater than 5\");\r\n\r\n// Your code goes here"
+    "start_blocks": "var myArray = [];\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\nappendItem(myArray, randomNumber(1,10));\r\n\r\nconsole.log(\"Original: \" + myArray);\r\nconsole.log(\"Values greater than 5\");\r\n\r\n// Your code goes here",
+    "encrypted_examples": "kVvcEXvCFx5TDpvTTozp9VZwxMHzN0YgWCSUDy/cXQoTU0EIThYlcmO7hPN0\ndHG/\n"
   }
 }]]></config>
   <blocks/>

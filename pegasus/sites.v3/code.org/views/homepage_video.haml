@@ -10,7 +10,7 @@
 - video_actions.each_with_index do |entry, index|
   - video_code = entry[:param2_s]
   - if video_code == "2DxWIxec6yo"
-    - download_path = 'http://videos.code.org/social/hourofcode-2015-50MB.mp4'
+    - download_path = '//videos.code.org/social/hourofcode-2015-50MB.mp4'
     - facebook = {:u=>"http://#{request.site}/"}
     - if request.site == 'csedweek.org'
       - twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
@@ -20,10 +20,9 @@
     - twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
 
 - unless video_code.nil_or_empty?
-  - # temmporary for hoc2015
-  - if page_mode == "minecraft"
-    - video_code = "mFPg96gdPkc"
-    - video_path = "http://videos.code.org/social/ChangeTheWorld_v5.mp4"
+  // Inspire Girls video for HoC 2015
+  - video_code = "mFPg96gdPkc"
+  - download_path = "//videos.code.org/social/ChangeTheWorld_v5.mp4"
 
   #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
     = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, download_path: download_path, facebook:facebook, twitter:twitter

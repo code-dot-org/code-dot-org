@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 # Uzorak za tisak za izabrane dužnosnike
 
@@ -49,4 +48,3 @@ Za više informacija o [**Događaj/PROGRAM/ETC**], posjetite [**Umetnuti stranic
   
 
 
-<%= view :signup_button %>

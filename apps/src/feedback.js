@@ -1,4 +1,4 @@
-/* global trackEvent */
+/* global trackEvent, appOptions */
 
 // NOTE: These must be kept in sync with activity_hint.rb in dashboard.
 var HINT_REQUEST_PLACEMENT = {
@@ -80,7 +80,10 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   }
 
   var hadShareFailure = (options.response && options.response.share_failure);
-  var showingSharing = options.showingSharing && !hadShareFailure;
+  // options.response.level_source is the url that we are sharing; can't
+  // share without it
+  var canShare = options.response && options.response.level_source;
+  var showingSharing = options.showingSharing && !hadShareFailure && canShare;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
@@ -146,8 +149,11 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   if (options.appDiv) {
     feedback.appendChild(options.appDiv);
   }
-  
+
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
+
+  var finalLevel = (options.response &&
+    (options.response.message === "no more levels"));
 
   feedback.appendChild(
     this.getFeedbackButtons_({
@@ -157,7 +163,8 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
-      freePlay: options.level.freePlay
+      freePlay: options.level.freePlay,
+      finalLevel: finalLevel
     })
   );
 
@@ -232,15 +239,9 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // feedback block
       var genericFeedback = this.getFeedbackMessage_({message: msg.tryBlocksBelowFeedback()});
 
-      // If there are feedback blocks, temporarily remove them.
-      // Get pointers to the parent and next sibling so we can re-insert
-      // the feedback blocks into the correct location if needed.
-      var feedbackBlocksParent = null;
-      var feedbackBlocksNextSib = null;
+      // If there are feedback blocks, temporarily hide them.
       if (feedbackBlocks && feedbackBlocks.div) {
-        feedbackBlocksParent = feedbackBlocks.div.parentNode;
-        feedbackBlocksNextSib = feedbackBlocks.div.nextSibling;
-        feedbackBlocksParent.removeChild(feedbackBlocks.div);
+        feedbackBlocks.hide();
       }
 
       // If the user requests the hint...
@@ -255,8 +256,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
         hintRequestButton.parentNode.removeChild(hintRequestButton);
 
         // Restore feedback blocks, if present.
-        if (feedbackBlocks && feedbackBlocks.div && feedbackBlocksParent) {
-          feedbackBlocksParent.insertBefore(feedbackBlocks.div, feedbackBlocksNextSib);
+        if (feedbackBlocks && feedbackBlocks.div) {
           feedbackBlocks.show();
         }
 
@@ -330,7 +330,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
   });
 
   if (feedbackBlocks && feedbackBlocks.div) {
-    feedbackBlocks.show();
+    feedbackBlocks.render();
   }
 };
 
@@ -397,7 +397,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
         !this.canContinueToNextLevel(options.feedbackType) &&
         options.showPreviousButton,
       tryAgain: tryAgainText,
-      continueText: options.continueText || msg.continue(),
+      continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
       nextLevel: this.canContinueToNextLevel(options.feedbackType),
       shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
       isK1: options.isK1,
@@ -556,7 +556,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
         var finalLevel = (options.response &&
-            (options.response.message == "no more levels"));
+          (options.response.message === "no more levels"));
         var stageCompleted = null;
         if (options.response && options.response.stage_changing) {
           stageCompleted = options.response.stage_changing.previous.name;
@@ -568,7 +568,15 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (options.feedbackType === TestResults.FREE_PLAY && !options.level.disableSharing) {
-          message = options.appStrings.reinfFeedbackMsg;
+          var reinfFeedbackMsg = (options.appStrings &&
+              options.appStrings.reinfFeedbackMsg) || '';
+
+          if (options.level.disableFinalStageMessage) {
+            message = reinfFeedbackMsg;
+          } else {
+            message = finalLevel ? (msg.finalStage(msgParams) + ' ') : '';
+            message = message + reinfFeedbackMsg;
+          }
         } else if (options.numTrophies > 0) {
           message = finalLevel ? msg.finalStageTrophies(msgParams) :
                                  stageCompleted ?
@@ -617,13 +625,8 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
  *
  */
 FeedbackUtils.prototype.createSharingDiv = function(options) {
-  if (!options.response || !options.response.level_source) {
-    // don't even try if our caller didn't give us something that can be shared
-    // options.response.level_source is the url that we are sharing
-    return null;
-  }
-
-  if (this.studioApp_.disableSocialShare) {
+  // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
+  if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
     options.facebookUrl = undefined;
@@ -666,24 +669,24 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   options.assetUrl = this.studioApp_.assetUrl;
 
   var sharingDiv = document.createElement('div');
-  sharingDiv.setAttribute('style', 'display:inline-block');
+  sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
     options: options
   });
+
+  // Note: We have a dependency on dashboard here. This dependency has always
+  // been here (we used to mysteriously just always bubble clicks on body to
+  // a.popup-window if it existed), but it is now more explicit
+  if (window.dashboard && window.dashboard.popupWindow) {
+    $(sharingDiv).find('a.popup-window').click(window.dashboard.popupWindow);
+  }
 
   var sharingInput = sharingDiv.querySelector('#sharing-input');
   if (sharingInput) {
     dom.addClickTouchEvent(sharingInput, function() {
       sharingInput.focus();
       sharingInput.select();
-    });
-  }
-
-  var sharingShapeways = sharingDiv.querySelector('#sharing-shapeways');
-  if (sharingShapeways) {
-    dom.addClickTouchEvent(sharingShapeways, function() {
-      $('#send-to-phone').hide();
-      $('#shapeways-message').show();
+      sharingInput.setSelectionRange(0, 9999);
     });
   }
 
@@ -693,8 +696,7 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     dom.addClickTouchEvent(sharingPhone, function() {
       var sendToPhone = sharingDiv.querySelector('#send-to-phone');
       if ($(sendToPhone).is(':hidden')) {
-        $('#shapeways-message').hide();
-        sendToPhone.setAttribute('style', 'display:inline-block');
+        $(sendToPhone).show();
         var phone = $(sharingDiv.querySelector("#phone"));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
@@ -731,6 +733,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
               trackEvent("SendToPhone", "error");
             });
         });
+      } else { // not hidden, hide
+        $(sendToPhone).hide();
       }
     });
   }
@@ -853,7 +857,7 @@ FeedbackUtils.prototype.getGeneratedCodeElement_ = function(options) {
 
   var infoMessage = this.getGeneratedCodeDescription(codeInfoMsgParams,
       options.generatedCodeDescription);
-  var code = this.getGeneratedCodeString_();
+  var code = this.studioApp_.polishGeneratedCodeString(this.getGeneratedCodeString_());
 
   var codeDiv = document.createElement('div');
   codeDiv.innerHTML = require('./templates/code.html.ejs')({
@@ -1109,7 +1113,14 @@ FeedbackUtils.prototype.hasAllBlocks_ = function(blocks) {
 FeedbackUtils.prototype.getUserBlocks_ = function() {
   var allBlocks = Blockly.mainBlockSpace.getAllBlocks();
   var blocks = allBlocks.filter(function(block) {
-    return !block.disabled && block.isEditable() && block.type !== 'when_run';
+    var blockValid = !block.disabled && block.type !== 'when_run';
+    // If Blockly is in readOnly mode, then all blocks are uneditable
+    // so this filter would be useless. Ignore uneditable blocks only if
+    // Blockly is in edit mode.
+    if (!Blockly.mainBlockSpace.isReadOnly()) {
+      blockValid = blockValid && block.isEditable();
+    }
+    return blockValid;
   });
   return blocks;
 };
@@ -1307,6 +1318,7 @@ FeedbackUtils.prototype.getTestResults = function(levelComplete, requiredBlocks,
  * @param {string} options.icon
  * @param {HTMLElement} options.contentDiv
  * @param {string} options.defaultBtnSelector
+ * @param {boolean} options.markdownMode
  * @param {boolean} options.scrollContent
  * @param {boolean} options.scrollableSelector
  * @param {function} options.onHidden
@@ -1324,6 +1336,11 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
   } else {
     options.contentDiv.className += ' no-modal-icon';
   }
+
+  if (options.markdownMode) {
+    modalBody.className += ' markdown';
+  }
+
   options.contentDiv.className += ' modal-content';
   modalBody.appendChild(options.contentDiv);
 

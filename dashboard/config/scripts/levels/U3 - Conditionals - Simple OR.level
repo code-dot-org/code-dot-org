@@ -53,10 +53,13 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# OR Operator\r\n\r\n<img src=\"https://images.code.org/c1ec7743b3c8a888d76380f789263851-image-1446155863558.57.24 PM.png\" style=\"width: 100px; float: right\">\r\n\r\nYou will now see the JavaScript boolean operators AND(`&&`)  and OR (`||`) in code toolbox. You can drag them out or simply type them.\r\n\r\nLet's try OR right now.  As a reminder: the OR operator will evaluate to true if *either or both* statements are true. If both are false, the OR operator will evaluate to false. \r\n\r\n<img src=\"https://images.code.org/48d59f73e701d452dd74ae304db59d93-image-1446482464792.png\" style=\"width: 200px; float:right\"> \r\n\r\n\r\n# Do This\r\nWe've provided you with starting code that prompts the user to enter a day of the week and stores it in a variable.\r\n\r\n**Add an if statement that uses an OR (||)** \r\n\r\n * The program should write **\"It's the weekend!\"** if the day entered by the user is a weekend day.  \r\n * Otherwise it should write **\"Can't wait for the weekend to get here.\"**",
-    "instructions": "Write an if statement that uses OR to display \"It's the weekend\" if the user enters a weekend day at the prompt. (Click to see full instructions)",
+    "markdown_instructions": "# OR Operator\r\n\r\n<img src=\"https://images.code.org/c1ec7743b3c8a888d76380f789263851-image-1446155863558.57.24 PM.png\" style=\"width: 100px; float: right\">\r\n\r\nYou will now see the JavaScript boolean operators AND (`&&`)  and OR (`||`) in code toolbox. You can drag them out or simply type them.\r\n\r\nLet's try OR right now.  As a reminder: the OR operator will evaluate to true if *either or both* statements are true. If both are false, the OR operator will evaluate to false. \r\n\r\n<img src=\"https://images.code.org/48d59f73e701d452dd74ae304db59d93-image-1446482464792.png\" style=\"width: 200px; float:right\"> \r\n\r\n\r\n# Do This:\r\nWe've provided you with starting code that prompts the user to enter a day of the week and stores it in a variable.\r\n\r\n**Add an `if` statement that uses an OR (`||`)** \r\n\r\n * The program should write **\"It's the weekend!\"** if the day entered by the user is a weekend day.  \r\n * Otherwise it should write **\"Can't wait for the weekend to get here.\"**",
+    "instructions": "Write an if statement that uses OR to display \"It's the weekend!\" if the user enters a weekend day at the prompt. (Click to see full instructions)",
     "start_blocks": "var day = prompt(\"Enter a day of the week.\");\r\nwrite(\"Day is: \"+day);\r\n//write your code here\r\n",
-    "slider_speed": "1.0"
+    "slider_speed": "1.0",
+    "encrypted_examples": "uqk/TLr6g7Obx3LElZLpi2JKCGdBXE75n0cZA67X8zZ3ikQ2IGyCL2vWTLgd\nt+Tm\n",
+    "lock_zero_param_functions": "false",
+    "video_key": "csp_applab_conditionals_3"
   }
 }]]></config>
   <blocks/>

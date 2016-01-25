@@ -1,6 +1,7 @@
 ---
 title: Star Wars
 theme: responsive
+video_player: true
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
@@ -23,35 +24,45 @@ social:
 
 %div{style: "clear:both"}
 
-%div.starwars-container
-  %div.img-container
+.starwars-container
+  .img-container
     %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
   %h1.starwars-heading= I18n.t(:starwars_subtitle)
 
-  .col-25.starwars-tutorial{style: "right: 20px;"}
-    %div.tutorial-box
+  .col-25.starwars-tutorial.starwars-js-tutorial{style: "display: none"}
+    .tutorial-box
       %h2.sw-h2= I18n.t(:starwars_javascript_title)
-      %div.sw-tutorial-info
+      .sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
         %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
-      %a{:href => CDO.studio_url('/s/starwars/reset'), :target=>'_self'}
+      %a{:href => '/api/hour/begin/starwars', :target=>'_self'}
         %button.sw-try-button= I18n.t(:starwars_javascript_start_button)
 
-  .col-25.starwars-tutorial{style: "right: 270px;"}
-    %div.tutorial-box
+  .col-25.starwars-tutorial.starwars-blocks-tutorial
+    .tutorial-box
       %h2.sw-h2= I18n.t(:starwars_blocks_title)
-      %div.sw-tutorial-info
+      .sw-tutorial-info
         %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
         %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
-      %a{:href => CDO.studio_url('/s/starwarsblocks/reset'), :target=>'_self'}
+      %a{:href => '/api/hour/begin/starwarsblocks', :target=>'_self'}
         %button.sw-try-button= I18n.t(:starwars_blocks_start_button)
 
 %div{style: "clear:both"}
 
-%h2
-  = I18n.t(:starwars_speak_languages)
-  %a{href: "/translate/starwars"}= I18n.t(:starwars_help_translate)
-
-%div.starwars-videos{style: "clear: both;"}
-  %h2= I18n.t(:starwars_watch_videos)
+.starwars-videos{style: "clear: both;"}
+  %h2.sw-header2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
+
+%h2.sw-header2
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/starwarws"}= I18n.t(:starwars_help_translate)
+
+= view 'mobilecheck.js'
+
+:javascript
+
+  $(document).ready(function() {
+    if (!window.mobilecheck() && "#{request.locale}" == "en-US") {
+      $('.starwars-js-tutorial').show();
+    }
+  });

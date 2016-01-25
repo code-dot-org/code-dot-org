@@ -30,9 +30,6 @@ If accepted into the Code.org program the following terms will apply.
 	- Online forums for teacher questions and feedback, self-help videos
 <br/>
 <br/>
-- Provide matching funding with the district for middle school and high school teacher stipends for professional development (up to 50% of total). Code.org will not fund taxes/benefits
-<br/>
-<br/>
 - Organize all professional development activities associated with Code.org’s courses, including:
 	- Providing qualified professional development facilitators for all in-person workshops
 	- For K-5 workshops, providing local affiliates (to the best of Code.org’s ability) to prepare K-5 teachers or training a district employee to be an affiliate K-5 trainer
@@ -79,16 +76,14 @@ If accepted into the Code.org program the following terms will apply.
 	- How the district will implement specific programs
 	- How the district will promote the program to teachers and students
 	- Support for the partnership within the district and local community
-	- How the district will fund the stipends
 <br/>
 <br/>
 - Participate in Code.org’s Professional Development Program:
 	- Guarantee that each teacher participating in Code.org’s professional development will teach the appropriate course in the upcoming school year
-	- High School Teachers -Four phases over 15 months, approximately 100 hours (50% of stipends provided)
-	- Middle School Teachers -Three phases over 12 months, approximately 55 hours (50% of stipends provided)
-	- Elementary School -Handled through Code.org’s Elementary School Affiliate Program or a District-Based Affiliate (no stipends provided)
-	- Counselors and principals from participating high school in Code.org’s Counselor/Administrator Professional Development
-	- Program (full stipends provided)
+	- High School Teachers -Four phases over 15 months, approximately 100 hours
+	- Middle School Teachers -Three phases over 12 months, approximately 55 hours
+	- Elementary School -Handled through Code.org’s Elementary School Affiliate Program or a District-Based Affiliate
+	- Counselors and principals from participating high school in Code.org’s Counselor/Administrator Professional Development Program
 	- Allow PD to satisfy district hourly requirements for annual professional development
 <br/>
 <br/>

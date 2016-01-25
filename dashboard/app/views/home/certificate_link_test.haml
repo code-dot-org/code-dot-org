@@ -1,0 +1,3 @@
+- Script.all.each do |script|
+  %p= script.name
+  %img{width: 350, src: "#{script_certificate_image_url(current_user, script)}"}

@@ -1,12 +1,6 @@
-:ruby
-  SOLR = Solr::Server.new(host:CDO.solr_server)
-  num_teachers = format_integer_with_commas(SOLR.query(q:'kind_s:"HocSignup2015" && match_volunteer_flag_b:true').count)
-  num_volunteers = format_integer_with_commas(SOLR.query(q:'kind_s:"VolunteerEngineerSubmission2015"').count)
 %h1= I18n.t(:volunteer_engineer_submission_title)
-
-%p= I18n.t(:volunteer_engineer_submission_intro_background)
-%p{style: 'color: #00adbc; font-size: 1.125em; padding: 20px 20px 15px 20px;'}= I18n.t(:volunteer_engineer_submission_subtitle_specific).gsub('%{num_teachers}', num_teachers).gsub('%{num_volunteers}', num_volunteers)
-%p= I18n.t(:volunteer_engineer_submission_intro_recruit).gsub('%{url}', 'https://hourofcode.com')
+%p= I18n.t(:volunteer_engineer_submission_intro_recruit)
+%p= I18n.t(:volunteer_engineer_submission_intro_links).gsub('%{learn_more}', 'https://hourofcode.com').gsub('%{volunteer_local}', '/volunteer/local')
 %img{src: "/images/fill-610x200/impact-hero.png", style: "margin-top: 10px;"}
 %img{src: "/images/fill-295x150/sotm31.jpg", style: "margin: 10px 10px 20px 0;"}
 %img{src: "/images/fill-300x150/homepage/kids3_2x.jpg", style: "margin: 10px 0 20px 0;"}

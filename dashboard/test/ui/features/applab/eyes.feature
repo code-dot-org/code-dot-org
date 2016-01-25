@@ -25,6 +25,8 @@ Scenario: App Lab UI elements from initial code and html
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://learn.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
+  And I wait to see "#x-close"
+  And I press "x-close"
   And I wait to see "#runButton"
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -45,6 +47,16 @@ Scenario: Text area with multiple lines, radio button, checkbox
 
   Then I drag a TEXT_AREA into the app
   And I press keys "This is a lot of text that should wrap onto a second line" for element "#design-properties textarea"
+  And I set input "xpos" to "0"
+  And I set input "ypos" to "0"
+  Then I see no difference for "text area in upper left"
+  Then I delete the current design mode element
+
+  Then I drag a TEXT_AREA into the app
+  And I press keys "This is a bunch of text" for element "#design-properties textarea"
+  And I press enter key
+  And I press enter key
+  And I press keys "Here is more text on a new line"
   And I set input "xpos" to "0"
   And I set input "ypos" to "0"
   Then I see no difference for "text area in upper left"

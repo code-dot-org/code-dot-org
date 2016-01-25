@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022174100) do
+ActiveRecord::Schema.define(version: 20151207223210) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -41,6 +41,37 @@ ActiveRecord::Schema.define(version: 20151022174100) do
 
   add_index "activity_hints", ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
   add_index "activity_hints", ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
+
+  create_table "authored_hint_view_requests", force: :cascade do |t|
+    t.integer  "user_id",               limit: 4
+    t.integer  "script_id",             limit: 4
+    t.integer  "level_id",              limit: 4
+    t.string   "hint_id",               limit: 255
+    t.string   "hint_class",            limit: 255
+    t.string   "hint_type",             limit: 255
+    t.integer  "prev_time",             limit: 4
+    t.integer  "prev_attempt",          limit: 4
+    t.integer  "prev_test_result",      limit: 4
+    t.integer  "prev_activity_id",      limit: 4
+    t.integer  "prev_level_source_id",  limit: 4
+    t.integer  "next_time",             limit: 4
+    t.integer  "next_attempt",          limit: 4
+    t.integer  "next_test_result",      limit: 4
+    t.integer  "next_activity_id",      limit: 4
+    t.integer  "next_level_source_id",  limit: 4
+    t.integer  "final_time",            limit: 4
+    t.integer  "final_attempt",         limit: 4
+    t.integer  "final_test_result",     limit: 4
+    t.integer  "final_activity_id",     limit: 4
+    t.integer  "final_level_source_id", limit: 4
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
+
+  add_index "authored_hint_view_requests", ["level_id"], name: "fk_rails_8f51960e09", using: :btree
+  add_index "authored_hint_view_requests", ["script_id", "level_id"], name: "index_authored_hint_view_requests_on_script_id_and_level_id", using: :btree
+  add_index "authored_hint_view_requests", ["user_id", "script_id", "level_id", "hint_id"], name: "index_authored_hint_view_requests_on_all_related_ids", using: :btree
+  add_index "authored_hint_view_requests", ["user_id"], name: "index_authored_hint_view_requests_on_user_id", using: :btree
 
   create_table "callouts", force: :cascade do |t|
     t.string   "element_id",       limit: 1024,  null: false
@@ -178,6 +209,7 @@ ActiveRecord::Schema.define(version: 20151022174100) do
     t.string   "app",         limit: 255, default: "turtle", null: false
   end
 
+  add_index "gallery_activities", ["activity_id"], name: "index_gallery_activities_on_activity_id", using: :btree
   add_index "gallery_activities", ["app", "autosaved"], name: "index_gallery_activities_on_app_and_autosaved", using: :btree
   add_index "gallery_activities", ["user_id", "activity_id"], name: "index_gallery_activities_on_user_id_and_activity_id", unique: true, using: :btree
 
@@ -551,9 +583,9 @@ ActiveRecord::Schema.define(version: 20151022174100) do
 
   create_table "workshops", force: :cascade do |t|
     t.string   "name",         limit: 255
-    t.string   "program_type", limit: 255, null: false
-    t.string   "location",     limit: 255
-    t.string   "instructions", limit: 255
+    t.string   "program_type", limit: 255,  null: false
+    t.string   "location",     limit: 1000
+    t.string   "instructions", limit: 1000
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "phase",        limit: 4
@@ -562,5 +594,8 @@ ActiveRecord::Schema.define(version: 20151022174100) do
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
+  add_foreign_key "authored_hint_view_requests", "levels"
+  add_foreign_key "authored_hint_view_requests", "scripts"
+  add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
 end

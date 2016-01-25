@@ -1,11 +1,7 @@
-gem 'mocha'
-require 'mocha/api'
-require 'mocha/mini_test'
 require 'test_helper'
-include ActionDispatch::TestProcess
 
 class LevelTest < ActiveSupport::TestCase
-  include Mocha::API
+  include ActionDispatch::TestProcess
 
   setup do
     @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
@@ -389,5 +385,19 @@ EOS
     # does not crash if decryption is busted
     CDO.stubs(:properties_encryption_key).returns(nil)
     assert_equal nil, level.examples
+  end
+
+  test 'cached_find' do
+    level1 = Script.twenty_hour_script.script_levels[0].level
+    cache_level1 = Level.cache_find(level1.id)
+    assert_equal(level1, cache_level1)
+
+    level2 = Script.course1_script.script_levels.last.level
+    cache_level2 = Level.cache_find(level2.id)
+    assert_equal(level2, cache_level2)
+
+    # Make sure that we can also locate a newly created level.
+    level3 = create(:level)
+    assert_equal(level3, Level.cache_find(level3.id))
   end
 end

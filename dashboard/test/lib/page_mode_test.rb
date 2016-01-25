@@ -2,8 +2,8 @@ require 'test_helper'
 require 'dynamic_config/page_mode'
 
 class PageModeTest < ActionController::TestCase
-  test 'returns default if unset' do
-    assert_equal PageModeBase::DEFAULT_PAGE_MODE, PageMode.get(@request)
+  test 'returns sw or mc if unset' do
+    assert ['feature-starwars', 'feature-mc'].include?(PageMode.get(@request))
   end
 
   test 'get and set' do

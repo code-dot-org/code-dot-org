@@ -1,7 +1,8 @@
 !!! 5
 %html{dir: locale_dir}
   %head
-    - title = @page_title ? "#{t(:appname)} - #{@page_title}" : t(:appname)
+    - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
+    - title = @page_title ? "#{appname} - #{@page_title}" : appname
     %title= title
     = ::NewRelic::Agent.browser_timing_header rescue ''
     = tag :meta, name: 'viewport', content: 'minimal-ui'
@@ -9,6 +10,8 @@
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+    = javascript_include_tag 'js/code-studio-common'
+    = javascript_include_tag 'js/code-studio'
     = csrf_meta_tags
     = yield :head
     - if content_for? :og
@@ -20,10 +23,18 @@
     = render partial: 'layouts/analytics'
     = render partial: 'layouts/javascript_strings'
   %body
+    - unless Rails.env.production?
+      = render partial: 'layouts/environment_tag'
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
+      - if view_options[:try_hoc_banner]
+        %div{id: 'tryHoc'}
+          = image_tag(image_url('hour-of-code-logo.png'))
+          %a{href:'https://code.org/learn'}
+            = I18n.t('share.try_hour_of_code')
+
       - unless view_options[:no_header]
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, full_width: view_options[:full_width]}
       - page = yield
@@ -37,10 +48,16 @@
       - unless view_options[:no_footer] || view_options[:small_footer]
         .push
 
+      - unless view_options[:no_footer]
+        - if view_options[:share_footer]
+          = render partial: 'layouts/share_footer'
+        - elsif view_options[:small_footer]
+          = render partial: 'layouts/small_footer'
+
     - unless view_options[:no_footer]
-      - if view_options[:small_footer]
-        = render partial: 'layouts/small_footer'
-      - else
+      - unless view_options[:share_footer] || view_options[:small_footer]
         = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
+      = render partial: 'shared/maybe_set_hoc_secret'
+
 
     = yield :body_scripts

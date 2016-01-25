@@ -28,7 +28,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.commitments()
-    @commitments ||= commitments_with_i18n_labels(
+    (@commitments ||= {})[I18n.locale] ||= commitments_with_i18n_labels(
       'annually',
       'monthly',
       'weekly',
@@ -37,14 +37,14 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.locations()
-    @locations ||= locations_with_i18n_labels(
+    (@locations ||= {})[I18n.locale] ||=  locations_with_i18n_labels(
       'onsite',
       'remote',
     )
   end
 
   def self.experiences()
-    @experiences ||= experiences_with_i18n_labels(
+    (@experiences ||= {})[I18n.locale] ||= experiences_with_i18n_labels(
       'unspecified',
       'tech_company',
       'university_student_or_researcher',
@@ -54,7 +54,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
   def self.distances()
     # distance is in km
-    @distances ||= distances_with_i18n_labels(
+    (@distances ||= {})[I18n.locale] ||=  distances_with_i18n_labels(
       '8',
       '16',
       '24',
@@ -63,7 +63,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.num_volunteers()
-    @num_volunteers ||= num_volunteers_with_i18n_labels(
+    (@num_volunteers ||= {})[I18n.locale] ||= num_volunteers_with_i18n_labels(
       '5',
       '10',
       '25',
@@ -103,7 +103,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   end
 
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_2016}\" && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
+    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && volunteer_after_hoc_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
 
     coordinates = params['coordinates']
     distance = params['distance'] || DEFAULT_DISTANCE

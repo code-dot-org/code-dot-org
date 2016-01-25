@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Free Play!  Use what you learned from loops and random to make your own little scene.  Have fun.",
+    "instructions": "Free Play! Use what you learned from loops and random to make your own little scene. Have fun.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -146,7 +146,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Free Play!\r\n(Optional)\r\n\r\nMess around with your \"Under the Sea\" scene to make it do different things.  \r\n\r\n**Ideas:**\r\n* Make different amounts of each component\r\n* Play with the ranges of random values\r\n* Add other creatures\r\n* Play with color values to give the scene a different feel (nighttime? red dawn?)\r\n* Get creative\r\n\r\n# Don't Worry...you can't screw it up\r\n* Play around as much as you want - you can **always go back to a previous version**.\r\n* Each time you hit \"Run\" your code is saved in a way that lets you get back to it.\r\n* Notice that there is button at the top of the page called **Version History** that lets you see and use any previous version of your code.\r\n\r\n![](https://images.code.org/881d72d190c0637705f8021369962701-image-1443117323816.gif)",
+    "markdown_instructions": "# Free Play!\r\n(Optional)\r\n\r\nMess around with your \"Under the Sea\" scene to make it do different things.  \r\n\r\n**Ideas:**\r\n* Make different amounts of each component.\r\n* Play with the ranges of random values.\r\n* Add other creatures.\r\n* Play with color values to give the scene a different feel (nighttime? red dawn?).\r\n* Get creative!\r\n\r\n# Don't Worry... You Can't Screw It Up\r\n* Play around as much as you want - you can **always go back to a previous version**.\r\n* Each time you hit \"Run\" your code is saved in a way that lets you get back to it.\r\n* Notice that there is button at the top of the page called **Version History** that lets you see and use any previous version of your code.\r\n\r\n![](https://images.code.org/881d72d190c0637705f8021369962701-image-1443117323816.gif)",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "project_template_level_name": "U3L07 - underTheSeaLoopsTemplate",
@@ -157,7 +157,9 @@
     "submittable": "true",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>
