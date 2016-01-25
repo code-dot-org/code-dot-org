@@ -965,17 +965,26 @@ Maze.onReportComplete = function(response) {
 };
 
 /**
- * Execute the user's code.  Heaven help us...
+ * Perform some basic initialization/resetting operations before
+ * execution. This function should be idempotent, as it can be called
+ * during execution when running multiple trials.
  */
-Maze.execute = function(stepMode) {
-  beginAttempt();
-
+Maze.prepareForExecution = function () {
   Maze.executionInfo = new ExecutionInfo({ticks: 100});
   Maze.result = ResultType.UNSET;
   Maze.testResults = TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
   Maze.animating_ = false;
   Maze.response = null;
+};
+
+/**
+ * Execute the user's code.  Heaven help us...
+ */
+Maze.execute = function(stepMode) {
+  beginAttempt();
+  Maze.prepareForExecution();
+
 
   var code;
   if (studioApp.isUsingBlockly()) {
@@ -1006,17 +1015,23 @@ Maze.execute = function(stepMode) {
 
     if (runCode) {
       if (Maze.bee && Maze.bee.staticGrids.length > 1) {
+        // If this level is a Bee level with multiple possible grids, we
+        // need to run against all grids and sort them into successes
+        // and failures
         var successes = [];
         var failures = [];
 
         Maze.bee.staticGrids.forEach(function(grid, i) {
           Maze.bee.useGridWithId(i);
+
+          // Run trial
           codegen.evalWith(code, {
             StudioApp: studioApp,
             Maze: api,
             executionInfo: Maze.executionInfo
           });
 
+          // Sort static grids based on trial result
           Maze.onExecutionFinish();
           if (Maze.executionInfo.terminationValue() === true) {
             successes.push(i);
@@ -1024,24 +1039,19 @@ Maze.execute = function(stepMode) {
             failures.push(i);
           }
 
-          // TODO figure out exactly which of these are necessary and
-          // make this "reset" process cleaner. Alternatively, modify
-          // codegen.evalWith to give it a "clean run" option
-          Maze.executionInfo = new ExecutionInfo({ticks: 100});
-          Maze.result = ResultType.UNSET;
-          Maze.testResults = TestResults.NO_TESTS_RUN;
-          Maze.waitingForReport = false;
-          Maze.animating_ = false;
-          Maze.response = null;
-          Maze.gridItemDrawer.clouded_ = Maze.initialDirtMap.map(function (row) {
-            return [];
-          });
+          // Reset for next trial
+          Maze.gridItemDrawer.resetClouded();
+          Maze.prepareForExecution();
           studioApp.reset(false);
-          resetDirtImages(true);
         });
 
+        // The user's code needs to succeed against all possible grids
+        // to be considered actually successful; if there are any
+        // failures, randomly select one of the failing grids to be the
+        // "real" state of the map. If all grids are successful,
+        // randomly select any one of them.
         var i;
-        if (failures.length) {
+        if (failures.length > 0) {
           i = failures[Math.floor(Math.random()*failures.length)];
         } else {
           i = successes[Math.floor(Math.random()*successes.length)];
