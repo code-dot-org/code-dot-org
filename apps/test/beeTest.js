@@ -25,9 +25,10 @@ describe("Bee", function () {
   it("fails if no flowerType", function () {
     var maze = {};
     var config = {
-      level: baseLevel
+      level:  utils.extend(baseLevel, {
+        flowerType: undefined
+      })
     };
-    delete config.level.flowerType;
     assert.throws(function () {
       new Bee(maze, null, config);
     }, Error, /bad flowerType for Bee/);
@@ -106,6 +107,38 @@ describe("Bee", function () {
       validate(["1Cany"], 3);
       validate(["+1C", "-1C"], 4);
       validate(["+1C", "1Cany"], 6);
+    });
+  });
+
+  describe("staticGrids", function () {
+    var bee;
+
+    beforeEach(function () {
+      var maze = {};
+      var config = {
+        level: utils.extend(baseLevel, {
+          rawDirt: [["1Cany"]]
+        })
+      };
+      bee = new Bee(maze, null, config);
+    });
+
+    it("can switch between static grids", function () {
+      bee.useGridWithId(0);
+      assert.equal(bee.getValue(0, 0), 1);
+      bee.useGridWithId(1);
+      assert.equal(bee.getValue(0, 0), -1);
+      bee.useGridWithId(2);
+      assert.equal(bee.getValue(0, 0), 0);
+    });
+
+    it("switching grids resets current values", function () {
+      bee.useGridWithId(0);
+      assert.equal(bee.getValue(0, 0), 1);
+      bee.setValue(0, 0, 50);
+      assert.equal(bee.getValue(0, 0), 50);
+      bee.useGridWithId(0);
+      assert.equal(bee.getValue(0, 0), 1);
     });
   });
 });

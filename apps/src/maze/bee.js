@@ -121,8 +121,10 @@ Bee.prototype.reset = function () {
       };
     }
   }
-  this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
-  this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  if (this.maze_.gridItemDrawer) {
+    this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
+    this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  }
   this.resetCurrentValues();
 };
 
