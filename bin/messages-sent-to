@@ -7,7 +7,7 @@ def poste_message(id)
   message = $poste_messages[id]
   return message if message
 
-  message = POSTE_DB[:poste_messages].where(id: id).first;
+  message = POSTE_DB[:poste_messages].where(id: id).first
   $poste_messages[id] = message if message
 
   message
@@ -18,7 +18,7 @@ def poste_url(id)
   url = $poste_urls[id]
   return url if url
 
-  url = POSTE_DB[:poste_urls].where(id: id).first;
+  url = POSTE_DB[:poste_urls].where(id: id).first
   $poste_urls[id] = url if url
 
   url
