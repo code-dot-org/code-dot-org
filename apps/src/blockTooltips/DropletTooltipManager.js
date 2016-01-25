@@ -89,26 +89,25 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
  * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
-  dropletUtils.getAllAvailableDropletBlocks(
+  var blocks = dropletUtils.getAllAvailableDropletBlocks(
     this.dropletConfig,
     this.codeFunctions,
-    this.autocompletePaletteApisOnly).forEach(
-    function (dropletBlockDefinition) {
-      if (this.autocompletePaletteApisOnly &&
-          this.codeFunctions &&
-          typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
-        // autocompletePaletteApisOnly mode enabled and block is not in palette:
-        return;
-      }
-      if (dropletBlockDefinition.docFunc) {
-        // If a docFunc was specified, update our mapping 
-        this.docFuncMapping_[dropletBlockDefinition.func] = dropletBlockDefinition.docFunc;
-      } else {
-        this.blockTypeToTooltip_[dropletBlockDefinition.func] =
-          new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
-      }
-    },
-    this);
+    this.autocompletePaletteApisOnly);
+  blocks.forEach(function (dropletBlockDefinition) {
+    if (this.autocompletePaletteApisOnly &&
+        this.codeFunctions &&
+        typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
+      // autocompletePaletteApisOnly mode enabled and block is not in palette:
+      return;
+    }
+    if (dropletBlockDefinition.docFunc) {
+      // If a docFunc was specified, update our mapping
+      this.docFuncMapping_[dropletBlockDefinition.func] = dropletBlockDefinition.docFunc;
+    } else {
+      this.blockTypeToTooltip_[dropletBlockDefinition.func] =
+        new DropletFunctionTooltip(this.appMsg, dropletBlockDefinition);
+    }
+  }, this);
 };
 
 DropletTooltipManager.prototype.hasDocFor = function (functionName) {

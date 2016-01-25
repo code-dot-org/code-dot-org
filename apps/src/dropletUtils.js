@@ -172,28 +172,30 @@ function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig, pal
     return [];
   }
 
-  var merged = [];
-
-  var blockSets = [ dropletConfig.blocks ];
+  var blocks = [];
   if (otherConfig) {
-    blockSets.splice(0, 0, otherConfig.blocks);
+    blocks = blocks.concat(otherConfig.blocks);
   }
+  blocks = blocks.concat(dropletConfig.blocks);
+
+  blocks.forEach(function (block) {
+    // For cases where we use a different block for our tooltips, make sure that
+    // the target block ends up in the list of blocks we want
+    var docFunc = block.docFunc;
+    if (docFunc && codeFunctions[docFunc] === undefined) {
+      codeFunctions[docFunc] = null;
+    }
+  });
 
   // codeFunctions is an object with named key/value pairs
   //  key is a block name from dropletBlocks or standardBlocks
   //  value is an object that can be used to override block defaults
-  for (var s = 0; s < blockSets.length; s++) {
-    var set = blockSets[s];
-    for (var i = 0; i < set.length; i++) {
-      var block = set[i];
-      if (!paletteOnly || block.func in codeFunctions) {
-        // We found this particular block, now override the defaults with extend
-        merged.push($.extend({}, block, codeFunctions[block.func]));
-      }
-    }
-  }
-
-  return merged;
+  return blocks.filter(function (block) {
+    return !paletteOnly || block.func in codeFunctions;
+  }).map(function (block) {
+    // We found this particular block, now override the defaults with extend
+    return $.extend({}, block, codeFunctions[block.func]);
+  });
 }
 
 /**
@@ -470,5 +472,6 @@ exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, p
 };
 
 exports.__TestInterface = {
-  mergeCategoriesWithConfig: mergeCategoriesWithConfig
+  mergeCategoriesWithConfig: mergeCategoriesWithConfig,
+  mergeFunctionsWithConfig: mergeFunctionsWithConfig
 };
