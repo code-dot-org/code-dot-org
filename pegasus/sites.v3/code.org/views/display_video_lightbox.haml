@@ -2,7 +2,6 @@
 - twitter ||= nil
 - download_filename ||= nil
 - download_path ||= nil
-- fallback_player ||= false
 
 .modal.fade{id: "showVideo_#{id}"}
   .modal-dialog.modal-lg
@@ -13,7 +12,7 @@
           %span{:class=>"sr-only"} Close
         %div{style: "clear:both"}
       .modal-body{style: "padding-top: 0px"}
-        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path, fallback_player: fallback_player
+        =view :index_video_reveal, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
 
 :css
   .modal{

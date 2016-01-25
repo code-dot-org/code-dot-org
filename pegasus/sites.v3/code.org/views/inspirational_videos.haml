@@ -1,5 +1,3 @@
-- fallback_player = true
-
 - videos = []
 - videos << { id: 'girlpower', code: 'mFPg96gdPkc', text: 'Inspire a girl', duration: '2 min', download: 'http://videos.code.org/social/ChangeTheWorld_v5.mp4', image: '/images/inspirational_videos_thumbnail_0.jpg'}
 - videos << { id: 'csintro',   code: '_IiPLtP-jm8', text: 'Computer Science intro', duration: '1 min', download: 'http://videos.code.org/2015/social/hour_of_code_cs_matters.mp4', image: '/images/inspirational_videos_thumbnail_1.jpg'}
@@ -13,7 +11,7 @@
     - url = "https://www.youtube.com/watch?v=#{video[:code]}"
     - facebook = {u: url}
     - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
-    =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], image: video[:image], fallback_player: fallback_player
+    =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], image: video[:image]
 
 %div{style: 'clear: both'}
 %br/

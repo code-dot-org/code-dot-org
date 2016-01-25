@@ -8,7 +8,7 @@
   $(window).load(function() {
     if (window.location.search.indexOf("fallback_video") !== -1)
     {
-      setupVideos(false);
+      setupVideos("fallback");
     }
     else
     {
@@ -19,6 +19,12 @@
     }
   });
 
+  // Set up appropriate video players by inserting them into the DOM alongisde all items with
+  // class "insert_video_player".
+  // Such insertion points have two attributes:
+  //   data-video_code with the youtube ID, and
+  //   data-download_path with a full URL to an mp4 video.
+  // Parameter player is either "youtube" or "fallback".
   function setupVideos(player) {
 
     $(".insert_video_player").each(function() {

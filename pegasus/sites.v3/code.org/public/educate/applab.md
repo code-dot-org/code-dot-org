@@ -1,6 +1,7 @@
 ---
 title: AppLab
 nav: educate_nav
+video_player: true
 ---
 
 # App Lab (BETA)
