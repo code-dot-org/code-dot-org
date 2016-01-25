@@ -67,7 +67,7 @@ BeeItemDrawer.prototype.updateItemImage = function (row, col, running) {
 
   var isCloudable = this.bee_.isCloudable(row, col);
   var isClouded = !running && isCloudable;
-  var wasClouded = isCloudable && (this.clouded_[row][col] === true);// && (this.bee_.checkedCloud(row, col) === true);
+  var wasClouded = isCloudable && (this.clouded_[row][col] === true);
 
   var counterText;
   var ABS_VALUE_UNLIMITED = 99;  // Repesents unlimited nectar/honey.
@@ -227,10 +227,6 @@ BeeItemDrawer.prototype.showCloud_ = function(row, col) {
     unclippedWidth: 50
   };
   this.updateImageWithIndex_('cloud', row, col, cloudImageInfo, 0);
-  //var underlyingElement = document.getElementById(cellId('beeItem', row, col));
-  //if (underlyingElement) {
-  //  underlyingElement.setAttribute('visibility', 'hidden');
-  //}
 
   // Make sure the animation is cached by the browser.
   this.displayCloudAnimation_(row, col, false /* animate */);
@@ -244,10 +240,6 @@ BeeItemDrawer.prototype.hideCloud_ = function(row, col) {
   if (cloudElement) {
     cloudElement.setAttribute('visibility', 'hidden');
   }
-  //var underlyingElement = document.getElementById(cellId('beeItem', row, col));
-  //if (underlyingElement) {
-  //  underlyingElement.setAttribute('visibility', '');
-  //}
 
   this.displayCloudAnimation_(row, col, true /* animate */);
 };
