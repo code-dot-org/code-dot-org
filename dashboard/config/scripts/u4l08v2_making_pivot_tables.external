@@ -4,87 +4,99 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
+# Getting Started - Copy the Data
+**To start, make a copy** of <a href="https://drive.google.com/open?id=0B2QFqkDgv9LjZU1sZ0hDdnZ6ck0" target="_blank">Teenage Movie Ratings Subset.csv</a> and open it in a spreadsheet program.  
+
+* The data is a subset of the larger <a href="https://drive.google.com/drive/u/0/folders/0B78N8p4zhHFgZTJMR1J6V1Bnc3c" target="_blank">movie ratings dataset</a> we saw in a previous lesson.
+* The dataset contains roughly 300 movie ratings that were collected online in 1997-98.   
+* The data has been filtered so that it only contains movies that were rated by at least 2 females and 2 males in the 14-18 year-old range.
+
+
 # Making Summary Tables
+We’re first going to make a simple summary table that shows the average rating for every movie that’s in the data. 
 
-1. Make a copy of <a href="https://drive.google.com/open?id=0B2QFqkDgv9LjZU1sZ0hDdnZ6ck0" target="_blank">Teenage Movie Ratings.csv</a> and open it in a spreadsheet program
+Here is what we're going for:
 
-We’re going to make a summary table that shows the average rating for every movie that’s in the data and also split it by male and female.  Our final summary table will look something like this:
+![](https://images.code.org/399c2c159f2a7cee60f32ff8ffcc2e0b-image-1453479504429.png)
 
-| Movie              | Avg. Rating |
-|--------------------|-------------|
-| Air Force One &nbsp; &nbsp;| 3.615384615 |
-| Chasing Amy        | 4.0         |
-| Contact            | 4.05        |
-|        . . .       |    . . .    |
-| Toy Story          | 3.615384615 |
+<hr>
 
-# Your first Summary Table
+# Your First Summary Table
 In most spreadsheet programs a Summary Table is called a **pivot table**.
 
-1. With the spreadsheet open in google sheets choose **Data** -> **Pivot Table...**
+**Do This:** With the spreadsheet open in Google Sheets choose **Data** -> **Pivot Table...**
 
-![](https://images.code.org/8ffc5a9ab8c3f6ba87569f6c43ff9830-image-1453393968897.png)
+![](https://images.code.org/385c4a2bd1e6f8b61d4b10c12a473bdf-image-1453471640227.gif)
 
-2. This will create a new tab in your spreadsheet and present you with an empty table and a menu on the right side that lets you choose what you want the rows, columns and values to be in your summary table.
+*Creating a new pivot table*
 
-The animation below goes through all the steps.  Here's the quick synopsis:
-* **Rows** - Movies
-* **Values** - Rating (avg)
+<hr>
+
+# Add Rows and Values to Your Table
+The menu on the right side of the pivot table lets you choose what you want the rows, columns, and values to be in your summary table. We want to set it up so that:
+ 
+ * Each **row** is one movie.
+ * Each **value** is the average rating of that movie.
+
+**Do This:** Follow the animation below to make a table that displays the average rating for every movie listed in the data set.
 
 ![](https://images.code.org/e98f12034c463945e9d8d0b09951047c-image-1453394952054.gif)
 
-# What happened? Computation!
-It's worth pointing out that a pivot table allows you to compute things you could *never* do just by filtering and sorting.  The pivot table is doing a lot of computing behind the scenes for you - which is great!
+*Setting the Rows to "movie", Values to "rating", and Summarize By to AVERAGE*
 
-Here's the quick synopsis:
+# What Happened? Computation!
+**The power of the pivot table** is that it allows you to compute things you could *never* do by just filtering and sorting.  The pivot table is doing a lot of computing behind the scenes for you - which is great - but you should understand what's really happening so you can make your own choices in the future.  Here's a synopsis:
 
-* **Rows** - Movies
-	
-    **The Computation:** Make a list of all the unique movie names in the raw data and sort alphabetically.
-    
-    When you set the rows to be movies, the software finds all of the unique movies in the raw data set and puts one on each row.  This is called **aggregation**.  
+* **Rows** - Group By: movie
+	* **Rows act like the major categories or groupings for which you want to calculate values.**   
+    * **The Computation:** When you set the rows to be "movie", the software finds all of the unique movie titles in the raw data set and puts one on each row.  This is called **aggregation** which is a fancy word that means grouping or clustering.  
     
     
-* **Values** - Rating (avg)
-	
-    **The Computation:** For each movie, find all the ratings and average them
-    
-    In this step you specify the **values you want to see associated with each row.**  We're interested in how each movie was rated, so we choose rating and then summarized by: average. 
-   
-    
+* **Values** - Display: rating summarized by: AVERAGE
+	* **Values** lets you specify the **computation that should happen for each row.**
+    * **The Computation:** We're interested in the average rating for each movie, so for **Values we choose *rating*, summarized by: *AVERAGE* **. 
 
-# What else can we do?
-
-## Summarize by: COUNT
-Instead of computing the average rating, this will **count the number of ratings for each movie**. 
+<hr>
+  
+# Let's Change the Value -- Summarize by: COUNT
+Change *summarize by* from AVERAGE to COUNT. Now, instead of computing the average rating, this will **count the number of ratings for each movie**. 
 
 ![](https://images.code.org/4e3cceb21e2d54c500564a352abc4b0c-image-1453396358019.gif)
 
-## Add another field to Values.
+*Switching summarize by from AVERAGE to COUNT.  The result shows the total number of ratings for a given movie.*
 
-Let's show **both the average rating *and* the count side-by-side.**  To do this we **add another Values field**.  Now, for each movie we'll see the total number of ratings the average rating.
+<hr>
 
-![](https://images.code.org/19191ba9dbf453025ce42422a17e96f6-image-1453396497102.gif)
+# Add Another Field to Values
 
-## Add a Column
-A column in a pivot table is **another aggregation** that you can specify to futher break down the values you want to see.  Here we show **adding gender as a column.**
+Let's show **both the average rating *and* the count** side-by-side in the table.  To do this we **add another Values field**.  The count is already there, so let's add the average rating again. Now, for each movie we'll see the total number of ratings the average rating.
 
-This will **recalcuate every value, the average rating and the count** but break it down by movie title *and* gender.  The pivot table will always preserve the "grand totals" which is what the caluculations would be if you didn't specify a column.  
+![](https://images.code.org/c7d47637b9d817c2341432207f7047ed-image-1453505027024.gif)
 
-![](https://images.code.org/ec76826cc17a1795dfe8c4b0f6955fbe-image-1453403307134.gif)
-*The cell that's highlighted in the table shows that female respondants rated Star Wars with an average of 4.8 out of 5 stars.  If you read the whole row for Star Wars you'll see the average rating and count for male, female and total.*
+*Making a table that shows the average rating and number of ratings for every movie in the dataset.*    
 
-## Filter still works
-Filtering in a pivot table works just like it does in a normal spreadsheet.  If you're interested in filtering out some of the rows, or even some of the data that's contributing to the calculations, you can.  In the animation below shows first filtering out 14-year-olds from the calculations, and then filtering out some of the movies.
+<hr>
 
-![](https://images.code.org/e68af08aea545c2a689c06c6afb00483-image-1453404825011.gif)
+# That's it for the Basics of Pivot Tables!
+There's not much more to it than that. Once you get the hang of pivot tables they can be a very powerful tool for manipulating data. There are more advanced things you can do with a pivot table if you like, but you know enough now that you can probably just play around with the other settings and see what happens.
 
-# The Next Step - Manipulating the Pivot Table
-A pivot table is constantly calculated and re-made based on any changes to the underlying data, or pivot table settings.  For example, if you attempt to sort a column the table will immediately re-calculate and go back to the way it was.  
+**Key Ideas**:
 
-That means once you've gotten the pivot table to compute some of the things you want, to maninpulate it further - sort, re-arrange columns, chart it, etc. - it's best to **copy the table, paste the values into a new spreadsheet**.
+ * **Summary tables (pivot tables) are a form of visualizing data**. Yes, it's a table, but by aggregating and summarizing information from a large data set, **summary tables allow you to see things in the data** you might otherwise not.
+    
+ * **Summary tables allow you to manipulate and create new data** Even for our simple movies example here, the raw data didn't contain the average rating for every movie, or count how many ratings there were, we had to compute it, and the pivot table let us do that quickly and easily.
+    
+ * **A summary table helps you look at your data in new ways.** Think: how could data be grouped? What could be calculated? Once you know how to make a summary table you can begin to look at raw data and ask questions that you know might be possible to answer.  
+ 
+ * **A summary table can be a first step toward a good visualization** Often it's difficult to make a meaningful chart or graphic out of raw data.  You often want to **summarize it first, then chart it!** 
 
-**Special NOTE:** Notice that you want to choose **Edit** -> **Paste Special** -> **Paste *values* Only**.  If you just do a normal copy/paste, it will paste another copy of the live pivot table.
 
-![](https://images.code.org/e59c8c95b652f2b94c2d80b3ddb3166b-image-1453405236332.gif)
+Click continue to see an example...
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+ 
+
+
 MARKDOWN

@@ -285,10 +285,6 @@ el:
   user_level:
     completed: Ολοκληρώθηκε
     tried: Δοκιμάστηκε
-  user_stats:
-    recent_activity: Πρόσφατη δραστηριότητα
-    show_more: Περισσότερα
-    classroom_activity: Αποσυνδεδεμένη Δραστηριότητα
   home:
     title: Στούντιο Κώδικα
     description: Το Code Studio φιλοξενεί τα online μαθήματα που δημιουργήθηκαν από το Code.org

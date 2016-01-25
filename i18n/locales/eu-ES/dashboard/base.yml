@@ -284,10 +284,6 @@ eu:
   user_level:
     completed: Amaituta
     tried: Saiatua
-  user_stats:
-    recent_activity: Azkenaldiko jarduera
-    show_more: Gehiago erakutsi
-    classroom_activity: Lineaz kanpoko ekintza
   home:
     title: Kode Estudioa
     description: Code Studio Code.org-ek sortutako online kurtsoen hasiera da

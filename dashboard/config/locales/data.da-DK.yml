@@ -829,8 +829,8 @@
         replace_questions_degree: Brug drop-down til at erstatte "???" med det korrekte
           antal grad der skal drejes
         repeat_blocks: Brug "Repeat" blokken og lad omslutte blokkene på arbejdsområdet
-        repeat_blocks_1: (1) Brug denne blok og sæt den rundt om de grå i arbejdsområdet
-        repeat_blocks_2: (2) Flyt gentag blokken hertil, og sæt de grå blokke indeni
+        repeat_blocks_1: "(1) Brug denne blok og sæt den rundt om de grå i arbejdsområdet"
+        repeat_blocks_2: "(2) Flyt gentag blokken hertil, og sæt de grå blokke indeni"
         snowflake_dropdown: Brug denne drop-down menu til at oprette forskellige snefnug!
         degrees_per_side: Divider 360 med antallet af sider for, at få størrelsen
           af hver vinkel i grader.

@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Úvod do počítačové vědy
+        title: "Úvod do počítačové vědy"
         desc: Tato lekce představí koncept informatiky a vysvětlí, co dělá počítačový
           vědec. Také dá studentům možnost zkusit si roli počítačového vědce. Na konci
           lekce každý student shrne to, co se naučil. Možná, že nebudete chtít dětem
@@ -70,11 +70,11 @@
         video: Unplug6
       Unplug7:
         title: Psaní Písně
-        desc: Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.  Vezmeme
-          nějakou činnost, která je již všeobecně známo a posuneme ji do solidního
-          vzdělání na definování a volání funkcí. Jakmile se studenti se obeznámí
-          s procesem definování/volání, přidáváme zvláštní schopnosti, které přicházejí
-          spolu s předáváním parametrů do volání těchto funkcí.
+        desc: "Čtení textů písní je docela intuitivní dobrodružství pro většinu studentů.
+          \ Vezmeme nějakou činnost, která je již všeobecně známo a posuneme ji do
+          solidního vzdělání na definování a volání funkcí. Jakmile se studenti se
+          obeznámí s procesem definování/volání, přidáváme zvláštní schopnosti, které
+          přicházejí spolu s předáváním parametrů do volání těchto funkcí."
         pdfs:
         - unplug7
         video: Unplug7
@@ -86,7 +86,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Štafetové Programování
+        title: "Štafetové Programování"
         desc: V této lekci vezmeme myšlenku z předchozí aktivity (4. programování
           s milimetrovým papírem) a využití těchto dovednost ke zdůraznění významu
           dokončení programů, které fungují v posloupnosti a často kontrolních programů
@@ -110,7 +110,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Šťastné mapy
+        title: "Šťastné mapy"
         desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
           bludištěm pomocí jediného příkazu.
         video: C1_happy_maps_unplugged
@@ -234,7 +234,7 @@
           hit do jádra myšlenky.
         video: C4_unplugged_variables
       MadGlibs:
-        title: Šílená Glibs hra
+        title: "Šílená Glibs hra"
         desc: Abstrakce je jednou z nejdůležitějších dovedností pro počítačového vědce,
           aby pochopil.  Tato aktivita bude mít vaše studenty analýzu příběhů o rozdíly,
           které lze  abstrahovat pryč. Tyto abstrahované příběhy se stávají šablony

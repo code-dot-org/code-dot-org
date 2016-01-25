@@ -285,10 +285,6 @@ lt:
   user_level:
     completed: Baigta
     tried: Išbandyta
-  user_stats:
-    recent_activity: Neseniai atlikta veikla
-    show_more: Rodyti daugiau
-    classroom_activity: Veikla be kompiuterių
   home:
     title: Programavimo kursai
     description: Code Studio yra pagridinis online kursų puslapis, kuriuos sukūrė Code.org

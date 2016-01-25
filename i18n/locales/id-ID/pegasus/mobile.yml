@@ -20,8 +20,8 @@ id-ID:
   submit: Kirim
   twentyhours_heading: Cobalah pendahuluan pelajaran ilmu Komputer
   twentyhours_text: "Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Setiap anak berhak atas kesempatan
+  og_description: Setiap siswa di setiap sekolah berhak atas kesempatan untuk mempelajari ilmu komputer.
   hoc2014_heading: 'Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a> <br/> 8-14 Desember 2014 <br/>'
   hoc2014_students: Siswa
   hoc2014_try: Cobalah
@@ -220,7 +220,7 @@ id-ID:
   homepage_banner_text_link: Pelajari lebih banyak
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Pelajari lebih banyak
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20.000 guru telah dilatih, dan sekarang mereka mengajar ilmu komputer di kelas-kelas.
   homepage_banner_20k_teachers_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
@@ -230,7 +230,7 @@ id-ID:
   homepage_solot_text_link_volunteer: Relawan untuk Hour of Code
   homepage_slot_text_title_students: Siswa
   homepage_slot_text_blurb_students: Jelajahi semua panduan kami
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Eksplorasi mata pelajaran kami
   homepage_slot_text_link_codestudio: Coba kode Studio
   homepage_slot_text_link_local: Temukan kelas setempat
   homepage_slot_text_link_othercourses: Kursus daring lainnya
@@ -286,11 +286,11 @@ id-ID:
   class_submission_level_vocational: Kejuruan
   class_submission_languages_other: Bahasa Lainnya
   inspirational_videos_more: 'Selebihnya <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video inspiratif</a> oleh para role model dan selebriti'
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: The Amazing World of Gumball
-  playlab_iceage_title: 'Ice Age - Coming soon'
-  playlab_iceage_title_live: Ice Age
+  playlab_choose_theme: Pilih laboratorium bermain-mu
+  playlab_classic_title: Klasik
+  playlab_gumball_title: Dunia Gumball yang menakjubkan
+  playlab_iceage_title: 'Zaman Es - Segera hadir'
+  playlab_iceage_title_live: Zaman Es
   starwars_subtitle: Membangun sebuah galaksi dengan kode
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Menggunakan blok drag-drop dan JavaScript.
@@ -298,7 +298,7 @@ id-ID:
   starwars_javascript_start_button: Coba sekarang
   starwars_blocks_title: Blok
   starwars_blocks_description: Gunakan blok drag-drop.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets | Ages 6-106
+  starwars_blocks_specs: Berbagai bahasa | Situs pencarian modern, ponsel pintar, tablet | Usia 6-106
   starwars_blocks_start_button: Pelajari lebih banyak
   starwars_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif ini
   starwars_speak_languages: Berbicara dengan bahasa lain?
@@ -309,17 +309,17 @@ id-ID:
   mc_shortdescription: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
+  mc_specs: Berbagai bahasa | Situs pencarian | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspirasi siswa dan relawan untuk Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh bantuan Anda! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} guru-guru memerlukan bantuan sukarela.<br>%{num_volunteers} bantuan sukarela telah terdaftar. Bergabung.'
+  volunteer_engineer_submission_intro_background: The Hour of Code merupakan gerakan bagi siswa di seluruh dunia untuk mencoba 1 jam pengenalan terhadap ilmu komputer. Gerakan ini meliputi puluhan juta siswa di lebih dari 180 negara. Silakan bergabung dalam Pekan Pendidikan Ilmu Komputer, 7--13 Desember.
   volunteer_engineer_submission_intro_recruit: |-
-    Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
+    Guru akan senang untuk memiliki seseorang <span style="font-family: 'Gotham 7r', sans-serif;"> bergairah tentang pendidikan ilmu komputer</span> yang dapat membantu di dalam kelas (melalui video), atau untuk seseorang yang dapat <span style="font-family: 'Gotham 7r', sans-serif;"> menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan dengan ilmu komputer.
   volunteer_engineer_submission_intro_signup: 'Masukkan informasi berikut jika Anda seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai dengan <span class="form-required-field"> *</span> diperlukan.'
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: 'Apakah Anda membutuhkan voluntir? Temukan seorang voluntir dari lingkungan anda pada <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_update_information: Perbarui informasi Anda
   volunteer_engineer_submission_header_shared: Informasi yang dibagi dengan guru-guru pada peta relawan
   volunteer_engineer_submission_field_name: Nama
   volunteer_engineer_submission_field_name_placeholder: Nama Lengkap
@@ -337,8 +337,8 @@ id-ID:
   volunteer_engineer_submission_field_facebook: Profil Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/nama_anda
   volunteer_engineer_submission_field_description: Deskripsi
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
+  volunteer_engineer_submission_field_description_desc: Deskripsikan pengalaman Anda seputar ilmu komputer, dan bagaimana Anda ingin berpartisipasi sebagai tenaga sukarela untuk membantu para guru lokal.
+  volunteer_engineer_submission_field_description_placeholder: Deskripsi pengalaman dan/atau partisipasi. Jika Anda berbahasa lain selain Bahasa Inggris, pastikan Anda juga terlibat di dalamnya.
   volunteer_engineer_submission_header_private: Informasi tetap dirahasiakan dan tidak pernah berbagi
   volunteer_engineer_submission_field_email: Alamat email
   volunteer_engineer_submission_field_email_desc: Alamat email Anda tidak akan pernah dibagikan, tetapi kami akan mengirimkan anda permintaan dari guru.
@@ -706,12 +706,12 @@ id-ID:
   infinity_gradelevel: Usia 4-104
   artist_gradelevel: Usia 4-104
   monstercoding_gradelevel: Usia 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Usia 5-10 tahun
+  csfirst_gradelevel: Usia 9-14 tahun
   boxisland_gradelevel: Sekolah Dasar
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Usia 12-14 tahun
+  texasinstruments_gradelevel: Usia 13-16 tahun
+  teacherled_gradelevel: Usia 5 tahun atau lebih
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
   thinkersmithspanish_platformtext: Dicabut
@@ -808,7 +808,7 @@ id-ID:
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
   boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
   codesters_shortdescription: Create your own games, animations, and artwork using Python.
-  texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
+  texasinstruments_shortdescription: 'Mempelajari pemrograman dasar menggunakan TI-84&#8482; dan kalkulator.'
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.
   codeintl_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa.

@@ -49,7 +49,7 @@ hu-HU:
   view_english_site: Az angol oldal megtekintése
   non_english_tutorials: 'Több nyelvre lefordított útmutatók:'
   write_your_first_program: Írd meg az első számítógépes programod
-  learn_cs_concepts: Tanulja meg a Számítógép Tudomány alapvető fogalmait. A útmutatók játék szerűek ,a videók-előadások főszereplői Bill Gates, Mark Zuckerberg, Angry Birds és Plants vs. Zombies. Tanulj ciklusokról, if utasításról és alapvető algoritmusokról.
+  learn_cs_concepts: Tanuld meg a számítástechnika alapgondolatait fogd és vidd elvű programozással. Az útmutatók játékosak, a videók és előadások főszereplői pedig Bill Gates, Mark Zuckerberg, Angry Birds és Plants vs. Zombies. Tanulj ciklusokról, feltételes utasításról és alapvető algoritmusokról.
   all_ages: Minden korosztály számára
   beginner: Kezdő
   n_participants: '# résztvevő'
@@ -138,7 +138,7 @@ hu-HU:
   studiobar_elementary_title: Kurzusok alsósoknak
   studiobar_elementary_body: 'Három új tanfolyamunk k &#8209; 5 nek'
   studiobar_hoc_title: A kódolás órája
-  studiobar_hoc_body: Tanulj programozni a dühös madarakkal
+  studiobar_hoc_body: Tanulj programozni az Angry Birds-el
   studiobar_flappy_title: Flappy kód
   studiobar_flappy_body: Készítsd el és oszd meg saját Flappy Bird játékodat
   studiobar_teacher_title: Tanároknak
@@ -287,19 +287,19 @@ hu-HU:
   class_submission_level_vocational: Szakmai
   class_submission_languages_other: Egyéb nyelv(ek)
   inspirational_videos_more: 'További<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspiráló videók</a> példaképekkel és hírességekkel'
-  playlab_choose_theme: Choose your Play Lab theme
+  playlab_choose_theme: Válaszd ki a Játéklabor témáját
   playlab_classic_title: Klasszikus
   playlab_gumball_title: Gumball csodálatos világa
-  playlab_iceage_title: 'Ice Age - Coming soon'
+  playlab_iceage_title: 'Jégkorszak - hamarosan'
   playlab_iceage_title_live: Jégkorszak
   starwars_subtitle: Galaxis építése kóddal
   starwars_javascript_title: JavaScript
   starwars_javascript_description: Használd a mozgatható blokkokat és JavaScriptet.
-  starwars_javascript_specs: 'Csak angol nyelvű | Modern böngészők | Korosztály: 11 +'
+  starwars_javascript_specs: Csak angol nyelvű | Modern böngészők | 11 éves kortól
   starwars_javascript_start_button: Próbálja ki most
   starwars_blocks_title: blokkok
   starwars_blocks_description: Használd a mozgatható blokkokat.
-  starwars_blocks_specs: 'Több nyelv | Modern böngészők, okostelefonok, táblagépek | Korosztál: 6-10 évesek'
+  starwars_blocks_specs: Több nyelven | Modern böngészők, okostelefonok, táblagépek | 6-tól 106 éves korig
   starwars_blocks_start_button: Próbálja ki most
   starwars_watch_videos: Mielőtt elkezded, nézz meg egy inspiráló videót
   starwars_speak_languages: Beszél egy másik nyelven is?
@@ -308,9 +308,9 @@ hu-HU:
   mc_name: Minecraft Kódolás Órája
   mc_longdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
   mc_shortdescription: Használd a kódblokkokat, hogy segítsd Steve és Alex kalandjait a Minecraft világában.
-  mc_gradelevel: 4-től 104 éves korig
+  mc_gradelevel: 6-tól 106 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
+  mc_specs: Több nyelven | Modern böngészők, táblagépek | 6-tól 106 éves korig
   minecraft_subtitle: Minecraft Kódolás Órája
   volunteer_engineer_submission_title: Ösztönözz tanulókat és önkénteseket a Kódolás Órájára.
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
@@ -320,7 +320,7 @@ hu-HU:
     Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
   volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Frissítse az adatait
   volunteer_engineer_submission_header_shared: Az információ meg lett osztva az önkéntes tanárok térképén
   volunteer_engineer_submission_field_name: Név
   volunteer_engineer_submission_field_name_placeholder: Teljes név
@@ -334,9 +334,9 @@ hu-HU:
   volunteer_engineer_submission_checkbox_after_hoc: Éngem érdekel az önkéntesség a Kódolás Órája után
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
   volunteer_engineer_submission_field_linkedin: LinkedIn adatlap
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/saját_neved
   volunteer_engineer_submission_field_facebook: Facebook adatlap
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/saját_neved
   volunteer_engineer_submission_field_description: Leírás
   volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
@@ -577,7 +577,7 @@ hu-HU:
   learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
   hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
-  hoc2014_try_scrat: Angry Birds, PvZ és Scrat
+  hoc2014_try_scrat: Angry Birds, PvZ és Motkány
   hoc2014_try_frozen: 'Művészkedj Annával és  Elzával a Jégvarázsból'
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
@@ -586,14 +586,14 @@ hu-HU:
   carousel_heading_international: Oktatóanyagok az anyanyelveden
   carousel_heading_domestic: Az angolul elérhető oktatóanyagok
   carousel_heading_beginners: Oktatóanyagok kezdőknek
-  carousel_heading_beyond_beginners: Tutorials for Beginners
+  carousel_heading_beyond_beginners: Oktatóanyagok kezdőknek
   carousel_heading_javascript: Oktatóanyagok JavaScript oktatásához
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Oktatóanyagok JavaScript oktatásához
   carousel_heading_unplugged: Nincs eszközöd vagy internet kapcsolatod? Próbáld ki az offline számítástechnikát
   carousel_heading_devices: Oktató alkalmazások telefonra és tabletre
-  carousel_heading_beyond_devices: Tutorial apps for phones and tablets
+  carousel_heading_beyond_devices: Oktató alkalmazások telefonra és tabletre
   carousel_heading_languages: Oktatóanyagok egyéb programozási nyelveken
-  carousel_heading_beyond_languages: Tutorials in other programming languages
+  carousel_heading_beyond_languages: Oktatóanyagok egyéb programozási nyelveken
   carousel_heading_apps_games: Csinálj saját appot vagy játékot.
   carousel_heading_university: Egyetemi kurzusok online
   carousel_heading_webpages: Tanulj weblapkészítést
@@ -657,7 +657,7 @@ hu-HU:
   infinity_name: Infinity játéklabor
   artist_name: Művész
   monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  allcancode_name: Fuss Marco!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
@@ -691,7 +691,7 @@ hu-HU:
   kodable_gradelevel: Általános iskola
   tynkerapp_gradelevel: 5-től 13 éves korig
   robomindnl_gradelevel: 8-tól 13 éves korig
-  flappy_gradelevel: 4-től 104 éves korig
+  flappy_gradelevel: 6-tól 106 éves korig
   bitsbox_gradelevel: Általános iskola
   makeschool_gradelevel: Középiskola
   touchdevelop_gradelevel: Középiskola
@@ -700,19 +700,19 @@ hu-HU:
   thinkersmith2_gradelevel: 8 éves kortól
   kodableunplugged_gradelevel: 8-tól 13 éves korig
   projguts_gradelevel: 10-től 13 éves korig
-  hourofcode_gradelevel: 4-től 104 éves korig
-  frozen_gradelevel: 8 éves kortól
+  hourofcode_gradelevel: 6-tól 106 éves korig
+  frozen_gradelevel: 8-tól 108 éves korig
   starwars_gradelevel: 'Korosztály: 6 +'
-  playlab_gradelevel: 4-től 104 éves korig
-  infinity_gradelevel: 4-től 104 éves korig
-  artist_gradelevel: 8 éves kortól
+  playlab_gradelevel: 6-tól 14 éves korig
+  infinity_gradelevel: 6-tól 14 éves korig
+  artist_gradelevel: 8-tól 108 éves korig
   monstercoding_gradelevel: 5-től 13 éves korig
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5-től 10 éves korig
+  csfirst_gradelevel: 9-től 14 éves korig
   boxisland_gradelevel: Általános iskola
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: 12-től 14 éves korig
+  texasinstruments_gradelevel: 13-tól 16 éves korig
+  teacherled_gradelevel: 5 éves kortól
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
   thinkersmithspanish_platformtext: Offline
@@ -754,8 +754,8 @@ hu-HU:
   frozen_platformtext: Modern böngészők és tabletek
   starwars_platformtext: Modern böngészők és tabletek
   playlab_platformtext: Modern böngészők, okostelefonok, tabletek
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Modern webböngészők, iOS, Android
+  allcancode_platformtext: Modern webböngészők, iOS
   csfirst_platformtext: Modern web böngészők
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Modern web böngészők
@@ -802,7 +802,7 @@ hu-HU:
   frozen_shortdescription: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
   starwars_shortdescription: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
   playlab_shortdescription: Hozz létre egy történetet vagy készíts egy játékot a Játéklaborral!
-  infinity_shortdescription: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
+  infinity_shortdescription: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
   artist_shortdescription: Rajzolj menő rajzokat és dizájnokat a Művész segítségével!
   monsterocding_shortdescription: A colorful self-guided programming adventure for children.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
@@ -1007,7 +1007,7 @@ hu-HU:
   processing_beyond_shortdescription: Tanuld meg a Processing nyelvet
   alice_beyond_shortdescription: Taníts programozást egy 3D környezetben
   sphero_beyond_shortdescription: A SPRK leckék szórakoztató gyorstalpalók a robotok programozásához gyerekeknek, miközben a matek és egyéb képességeiket is fejlesztik.
-  codeorg_beyond_longdescription: Tanuld meg a programozás alap koncepcióit a húzd és dobd programozási rendszerrel. Három teljes kurzus, egyenként 15-20 leckével, offline tantermi tevékenységekkel, játékokokkal, Bill Gateset, Mark Zuckerberget, Angry Birdsöket és a Plants vs. Zombies figuráit felsorakoztató tananyagokkal. Tanuld meg az ismétlő ciklusok, feltételek, az alap algoritmusok, függvények és változók használatát.
+  codeorg_beyond_longdescription: Tanuld meg a számítástechnika alap koncepcióit fogd és vidd programozással. Több teljes kurzus, egyenként 15-20 leckével amelyek tantermi foglalkozásokkal tarkított játékos oktatóanyagok, olyan szereplőkkel mint Bill Gates, Mark Zuckerberg, Angry Birds és a Plants vs. Zombies figurái. Tanuld meg az ismétlő ciklusok, feltételek, az alap algoritmusok, függvények és változók használatát.
   khan_beyond_longdescription: Tanuld meg a JavaScript programozás alapjait, miközben szórakoztató rajzokat készítesz a programoddal. Csináld egyedül vagy akár az osztályoddal!
   tynker_beyond_longdescription: A Tynker segítségével könnyű és élvezetes a programozás tanulása. A gyerekek kódblokkok rendezésével készíthetnek játékokat és mobil appokat. Nincs többé szükség a pontos szintaktika ismeretére. A gyerekek az ötleteket animált történetekké alakíthatják. Lehetővé teszi a progresszív tanulást. Ahogy a gyerekek megtanulják az alapokat, Tynker egyre komolyabb koncepciók vezet be, köztük a szintaktikai rendszerű programozást is.
   scratch_beyond_longdescription: 'A Scratch segítségével elkészítheted saját játékaidat, sztorijaidat, animációidat &mdash; és megoszthatod azokat a barátaiddal. Kezdd az ismerkedést azzal, hogy animálod a neved, készítesz egy üdvözlőlapot, vagy írsz egy pong játékot.'

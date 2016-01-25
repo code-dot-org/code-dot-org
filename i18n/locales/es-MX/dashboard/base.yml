@@ -283,10 +283,6 @@ es-MX:
   user_level:
     completed: Completada
     tried: Intentaste
-  user_stats:
-    recent_activity: Actividad reciente
-    show_more: Mostrar más
-    classroom_activity: Actividad fuera de línea
   home:
     title: Mi progreso
     description: Code studio es hogar de los cursos en linea creados por Code.org

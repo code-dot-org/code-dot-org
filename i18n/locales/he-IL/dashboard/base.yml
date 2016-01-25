@@ -292,10 +292,6 @@ he:
   user_level:
     completed: הושלם
     tried: נוסה
-  user_stats:
-    recent_activity: פעילות אחרונה
-    show_more: הצג יותר
-    classroom_activity: פעילות לא מחוברת
   home:
     title: ההתקדמות שלי
     description: 'ב"code studio"  נמצאים קורסים אינטרנטיים שמיוצרים על ידי code.org'
@@ -367,7 +363,7 @@ he:
     tos: תנאים
     privacy: הצהרת פרטיות
     secure: גרסה מאובטחת
-    report_abuse: Report Abuse
+    report_abuse: דווח על התעללות
     built_on_code_studio: נבנה בסטודיו קוד
     make_my_own_app: פיתוח האפליקציה שלי
     how_it_works: איך זה עובד
@@ -378,7 +374,7 @@ he:
     teacher: תראה את הפתרון
     auth_error: אינך מורשה לראות את הפתרון.
     submit: עדכן מיקום אומן
-    direction: Start Direction (in degrees)
+    direction: התחל כיוון (במעלות)
   video:
     tab: וידאו.
     notes: אין וידאו? הצג הערות.
@@ -399,9 +395,9 @@ he:
   next_stage: סיימת! המשך לשלב הבא
   download_pdf: שיעור פתוח
   lesson_plan: מערך שיעור
-  view_lesson_plan: View Lesson Plan
+  view_lesson_plan: הצג תוכנית השיעור
   pdf_download: הורדת PDF
-  download_coming_soon: Downloadable activity coming soon.
+  download_coming_soon: פעילות להורדה בקרוב.
   video_coming_soon: וידאו בקרוב!
   not_started: The student has not attempted this level.
   share_code:
@@ -448,11 +444,11 @@ he:
     starwars:
       title: מלחמת הכוכבים
     infinity:
-      title: Infinity Play Lab
+      title: אינסוף לשחק מעבדה
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: מיינקראפט
-      body: Explore a Minecraft world through code.
+      body: גלה את העולם של מיינקראפט באמצעות קוד.
   gallery:
     students_drew_these_with_code: תלמידים ציירו את אלה בעזרת קוד!
     students_made_these_with_code: סטודנטים יצרו את זה עם קוד!
@@ -460,7 +456,7 @@ he:
     activity_count: 'In the past <b>%{days}</b> days, students have made <b>%{count}</b> apps and pictures by writing their own computer programs. Click on the pictures and screenshots to see each program in action.'
     want_to_make_your_own: רוצה להכין אחד משלך?
     more: 'עוד &rarr;'
-    caption_by_name_age: 'by %{name}, age %{age}'
+    caption_by_name_age: 'מאת %{name}, גיל %{age}'
     caption_time_ago: '%{time_ago} לפני'
     header: גלריה
     header_playlab: סיפורים ומשחקים
@@ -544,11 +540,11 @@ he:
   zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
   progress:
     not_started: לא החל
-    in_progress: in progress
-    completed_too_many_blocks: completed, too many blocks
+    in_progress: בביצוע
+    completed_too_many_blocks: הושלם, בלוקים רבים מדי
     completed_perfect: הושלם, מושלם
-    furthest_level_attempted: furthest level attempted
-    assessment: assessment
+    furthest_level_attempted: רמת הרחוקה ניסיון
+    assessment: הערכה
   studio:
     courses_working_on: "Courses you're working on"
     completed_courses: קורסים שהושלמו
@@ -569,7 +565,7 @@ he:
     close: סגור
     more: יותר
     name: שם
-    updated: Updated
+    updated: עודכן
     project_type: סוג פרויקט
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?

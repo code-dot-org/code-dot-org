@@ -316,13 +316,13 @@ ar:
         studio_iceage_hello1: |-
           سيد يريد جمع الجميع لمغامرة جديدة.هل يمكنك مساعدته ليقول "مرحبا" بسحب كتلة 'يقول' إلى منطقة العمل وكتابة كلمة "hello" داخلها ؟
         studio_iceage_hello2: '"سيد" (الممثل 1) وجد "ماني" (الممثل 2) ويريد أن يدعوه الى مغامرة. ساعدهم على تحية بعضهم البعض عن طريق استخدام مكعب "الممثل يقول" مرتين.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_flag: 'سكارت يبحث عن ثمرة البلوط الخاصة به! ساعده على قطع 200 بكسل الأخيرة باستخدام قطعة "تحرك".'
         studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
         studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
         studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
         studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
         studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
+        studio_iceage_warn_ice_age: الجميع بحاجة إلى التحرك بسرعة أكبرلأن العصر الجليدي قادم! غيَّر الخلفية إلى خلفية جليدية وعيَّن سرعة سيد إلى سريع، ثم اضغط نفذ وحركه إلى ديغو لتحذيريه.
         studio_iceage_throw_hearts: |-
           Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
         studio_iceage_free_play: حان الوقت لإنشاء اللعبة أو القصة الخاصة بك! عند انتهائك، انقر فوق زر الإنهاء للسماح لأصدقائك بلعب اللعبة الخاصة بك على هواتفهم، ألواحهم المحمولة، أو أجهزة الكمبيوتر!

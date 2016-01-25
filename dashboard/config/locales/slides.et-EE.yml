@@ -97,9 +97,9 @@
           et arvutid saavad olla interaktiivsed.
       2:
         image: notes/flappy02.jpg
-        text: Ükskõik millal, kui keegi klõpsab, vajutab ekraanile või kirjutab arvutis
+        text: "Ükskõik millal, kui keegi klõpsab, vajutab ekraanile või kirjutab arvutis
           või telefonis luuakse SÜNDMUS ja siin on jupp koodi mis otsustab mida teha
-          kui SÜNDMUS aset leiab.
+          kui SÜNDMUS aset leiab."
       3:
         image: notes/flappy03.jpg
         text: 'Näiteks sul võib olla mõni SÜNDMUSE- KÄSITSEJA mis ütleb "kui klikitakse,
@@ -342,10 +342,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Õnnitlused! Koos viimase lahendatud puslega kirjutasid sa just koodi,
+        text: "Õnnitlused! Koos viimase lahendatud puslega kirjutasid sa just koodi,
           mis saab öelda igale robotile, kuidas leida tee läbi iga pikkusega mitte-hargneva
           labürindi või tunneli, olgu see siis zombi, lind, marsi kulgur või isegi
-          isesõitev auto.
+          isesõitev auto."
       2:
         image: notes/hoc6_2.jpg
         text: Põhimõisted, mida sa kasutasid, on iga programmi või rakenduse südames,
@@ -447,10 +447,10 @@
           kolledžis.
       2:
         image: notes/frozen3_2.jpg
-        text: Üks kõige tähtsamaid küsimusi arvutiteaduses on see, kuidas määratleda
+        text: "Üks kõige tähtsamaid küsimusi arvutiteaduses on see, kuidas määratleda
           uusi käske. Enamikus arvutikeeltes on kõigest umbes 100 sõna või käsku.
           Ja võlu peitubki selles, kuidas nendest ehitusplokkidest kokku panna omaenda
-          uusi sõnu.
+          uusi sõnu."
       3:
         image: notes/frozen3_3.jpg
         text: Kui oled arvutile õpetanud, kuidas käsujada abil mõnd tegevust sooritada,
@@ -735,9 +735,10 @@
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused. Kui
-          inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti võib
-          sama asja korrata miljon või biljon korda ning temal ei hakka kunagi igav.
+        text: "Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused.
+          Kui inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti
+          võib sama asja korrata miljon või biljon korda ning temal ei hakka kunagi
+          igav."
       2:
         image: notes/C1_maze_loops_2.png
         text: Näiteks kui tahaksin kõigile Facebookis palju õnne soovida e-kirjaga,
@@ -858,13 +859,13 @@
           järgides maha istutada? See on nagu piltidega programmeerimine! '
       5:
         image: notes/C1_planting_seed_5.png
-        text: 'Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
+        text: "Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
           suur samm koosneb paljudest väiksematest sammudest. Saame valida erinevate
           retseptide ja algoritmide vahel, sõltuvalt sellest, mis maitsega šokolaadi
           soovime. Iga samm, isegi kõige väiksem, on nii oluline, et ilma seda läbimata
           ei saa sooritada ka ülejäänud toiminguid. On väga tähtis luua algoritme,
           millest teised aru saavad. Seepärast tuleb iga samm kirja panna nii, et
-          ükskõik kes seda teeb, oleks tulemus sama.  '
+          ükskõik kes seda teeb, oleks tulemus sama.  "
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
@@ -899,9 +900,10 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused. Kui
-          inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti võib
-          sama asja korrata miljon või biljon korda ning temal ei hakka kunagi igav.
+        text: "Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused.
+          Kui inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti
+          võib sama asja korrata miljon või biljon korda ning temal ei hakka kunagi
+          igav."
       2:
         image: notes/C1_zuck_repeat_loop_2.png
         text: Näiteks kui tahaksin kõigile Facebookis palju õnne soovida e-kirjaga,
@@ -971,10 +973,10 @@
           käevõrule, mida saame kanda ja oma sõpradele näidata!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: '„Binaarne“ tähendab, et infot esitatakse ainult kahe võimalusena. Mõnikord
+        text: "„Binaarne“ tähendab, et infot esitatakse ainult kahe võimalusena. Mõnikord
           mõeldakse seoses binaarsega ainult ühtedest ja nullidest. Aga binaarsed
           on ka sellised paarid nagu „sisse“ ja „välja“, „üles“ ja „alla“, „sees“
-          ja „väljas“ või tegelikult igat sorti vastandid. '
+          ja „väljas“ või tegelikult igat sorti vastandid. "
       3:
         image: notes/C2_binary_bracelets_3.png
         text: 'Tere! Mu nimi on Orion ja ma programmeerin Play-im‘is roboteid. Arvuti
@@ -1106,9 +1108,9 @@
           kasutades ainult käsitsi joonistatud nooli.
       2:
         image: notes/C2_graph_paper_2.png
-        text: ' Algoritm on teatud hulk juhiseid mingi ülesande sooritamiseks. Nende
+        text: " Algoritm on teatud hulk juhiseid mingi ülesande sooritamiseks. Nende
           juhiste abil saame teha klaasvaagna . Algoritmid on väga kasulikud, kui
-          sul on vaja kellelegi selgitada, kuidas midagi teha.'
+          sul on vaja kellelegi selgitada, kuidas midagi teha."
       3:
         image: notes/C2_graph_paper_3.png
         text: Kui kirjutad arvutile algoritmi, pead selle jagama väikesteks sammukesteks.
@@ -1198,13 +1200,13 @@
           saamiseks äärmiselt vajalik.   '
       4:
         image: notes/C2_paper_airplanes_4.png
-        text: 'Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
+        text: "Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga
           suur samm koosneb paljudest väiksematest sammudest. Saame valida erinevate
           retseptide ja algoritmide vahel, sõltuvalt sellest, mis maitsega šokolaadi
           soovime. Iga samm, isegi kõige väiksem, on nii oluline, et ilma seda läbimata
           ei saa sooritada ka ülejäänud toiminguid. On väga tähtis luua algoritme,
           millest teised aru saavad. Seepärast tuleb iga samm kirja panna, nii et
-          ükskõik kes seda teeb, oleks tulemus sama.  '
+          ükskõik kes seda teeb, oleks tulemus sama.  "
     C2_playlab_createastory:
       1:
         image: notes/C2_playlab_createastory_1.png
@@ -1248,10 +1250,10 @@
     C2_zuck_repeat_loop:
       1:
         image: notes/C2_zuck_repeat_loop_1.png
-        text: Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused. Kui
-          inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti võib
-          sama asja korrata miljoneid või miljardeid kordi ning temal ei hakka kunagi
-          igav.
+        text: "Üks asi, millega arvutid suurepäraselt toime tulevad, on kordused.
+          Kui inimese jaoks läheks ühe ja sama asja kordamine igavaks, siis arvuti
+          võib sama asja korrata miljoneid või miljardeid kordi ning temal ei hakka
+          kunagi igav."
       2:
         image: notes/C2_zuck_repeat_loop_2.png
         text: 'Näiteks kui tahaksin kõigile Facebookis palju õnne soovida e-kirjaga,
@@ -1279,10 +1281,10 @@
     C3_artist_functions:
       1:
         image: notes/C3_artist_functions_1.png
-        text: Üks tore asi programmeerimise juures on see, et kui olete arvutile õpetanud,
-          kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni uuesti
-          teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha. See
-          on nagu keelde uute sõnade lisamine.
+        text: "Üks tore asi programmeerimise juures on see, et kui olete arvutile
+          õpetanud, kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni
+          uuesti teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha.
+          See on nagu keelde uute sõnade lisamine."
       2:
         image: notes/C3_artist_functions_2.png
         text: Oma programmis õppisime, kuidas joonistada ruutu neli korda edasi liikudes
@@ -1360,10 +1362,10 @@
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
-        text: Üks kõige tähtsamaid küsimusi arvutiteaduses  on see, kuidas määratleda
+        text: "Üks kõige tähtsamaid küsimusi arvutiteaduses  on see, kuidas määratleda
           uusi käske – kuidas lisada arvutikeelde uusi sõnu. Enamikus arvutikeeltes
           on kõigest umbes 100 sõna või käsku. Võlu peitub selles, kuidas nendest
-          klotsidest kokku panna omaenda uusi sõnu.
+          klotsidest kokku panna omaenda uusi sõnu."
       2:
         image: notes/C3_bee_functions_2.png
         text: 'Spordis teeme seda kogu aeg. Näiteks korvpallis alustatakse sellest,
@@ -1507,9 +1509,9 @@
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: „Kui“ tsüklid sarnanevad sinu igapäevategevustele. Kujuta ette, et pesed
-          oma autot ja nühid autot seni, kui see on puhas. Kui see pole puhas, jätkad
-          nühkimist. Jälgid selliseid asju kogu aeg.
+        text: "„Kui“ tsüklid sarnanevad sinu igapäevategevustele. Kujuta ette, et
+          pesed oma autot ja nühid autot seni, kui see on puhas. Kui see pole puhas,
+          jätkad nühkimist. Jälgid selliseid asju kogu aeg."
       2:
         image: notes/C3_farmer_while_2.png
         text: Mängul on uus ilme taluniku aitamiseks. Seda nimetatakse plokiks „kui“.
@@ -1596,10 +1598,10 @@
           matemaatikat ja mõnda „kui“ lauset, mille korral otsus vastu võetakse.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: '„Kui“ plokk aitab zombil otsustada. Ta kontrollib midagi. Kasutame
+        text: "„Kui“ plokk aitab zombil otsustada. Ta kontrollib midagi. Kasutame
           näiteks plokki, mis ütleb: „Kui tee viib vasakule“ ja paneme sinna sisse
           käsu „Pööra vasakule“. Käsime zombil oma ümbrust kontrollida ning vaadata,
-          kas vasakule jääb tee ja kui jääb, siis sinna pöörata.'
+          kas vasakule jääb tee ja kui jääb, siis sinna pöörata."
       3:
         image: notes/C3_maze_conditionals_3.png
         text: Siis kasutame selle korduse sees edasiliikumise plokki, et zombi liiguks
@@ -1676,13 +1678,13 @@
           oled teise ossa (teine) pannud.
       2:
         image: notes/C4_conditionals_2.png
-        text: '„Kui“ lausete järgi oskavad arvutid otsuseid vastu võtta. Inimesed
+        text: "„Kui“ lausete järgi oskavad arvutid otsuseid vastu võtta. Inimesed
           määravad arvutile tingimused, mis ütlevad, et kui arvuti on teatud olukorras,
           siis tee seda. „Teine“ tähendab, et muul juhul tee teist asja. „Kui teise“
           ploki ülaosa ütleb: „Kui oled lille juures“. Kuid meie ploki ülaosa võib
           öelda muid asju, nt kui nektar võrdub kahega või kui ees on teerada, toimib
           meie plokk samal viisil. Kui ülalasuv tingimuslause on tõene, teeb mesilane
-          esimest asja, aga kui see on väär, siis teist.'
+          esimest asja, aga kui see on väär, siis teist."
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
@@ -1708,8 +1710,8 @@
           lillest, kahte teiselt ja kolme kolmandalt.
       4:
         image: notes/C4_for_loops_4.png
-        text: „Korduste arvu“ abil ei pea te loenduri vahemikuks määrama ainult ühte.
-          Te saate vahemikuks määrata 2, 4 või isegi iga kord muutuva arvu.
+        text: "„Korduste arvu“ abil ei pea te loenduri vahemikuks määrama ainult ühte.
+          Te saate vahemikuks määrata 2, 4 või isegi iga kord muutuva arvu."
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
@@ -1735,8 +1737,8 @@
           lillest, kahte teiselt ja kolme kolmandalt.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: „Korduste arvu“ abil ei pea te loenduri vahemikuks määrama ainult ühte.
-          Te saate vahemikuks määrata 2, 4 või isegi iga kord muutuva arvu.
+        text: "„Korduste arvu“ abil ei pea te loenduri vahemikuks määrama ainult ühte.
+          Te saate vahemikuks määrata 2, 4 või isegi iga kord muutuva arvu."
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
@@ -1776,10 +1778,10 @@
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
-        text: Üks tore asi programmeerimise juures on see, et kui olete arvutile õpetanud,
-          kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni uuesti
-          teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha. See
-          on nagu keelde uute sõnade lisamine.
+        text: "Üks tore asi programmeerimise juures on see, et kui olete arvutile
+          õpetanud, kuidas mõnd toimingut teha, saate arvutil lasta seda funktsiooni
+          uuesti teha. Saate sellele nime anda ja siis lasta arvutil seda uuesti teha.
+          See on nagu keelde uute sõnade lisamine."
       2:
         image: notes/C4_function_edit_2.png
         text: Oma programmis õppisime, kuidas joonistada ruutu neli korda edasi liikudes
@@ -2223,10 +2225,10 @@
           õppetunni plaanist.
       2:
         image: notes/unplug2_2.png
-        text: 'Õpilased jagunevad juhiste kirjutamiseks rühmadesse ja annavad need
+        text: "Õpilased jagunevad juhiste kirjutamiseks rühmadesse ja annavad need
           üle teisele rühmale, kes peab koletise joonistama. Rühmad kirjutavad juhised,
           kasutades arvutusliku mõtlemise nelja etappi: osadeks jaotamine, mustrite
-          otsimine, eraldamine ja algoritmid.'
+          otsimine, eraldamine ja algoritmid."
       3:
         image: notes/unplug2_3.png
         text: Rühmad jaotavad kõigepealt ülesande osadeks ehk koostavad mänguplaani.
@@ -2236,9 +2238,9 @@
           on silmad, seega saame kirjutada rea, mis jätab koletise silmad tühjaks.
       4:
         image: notes/unplug2_4.png
-        text: Õpilased saavad kirjutada juhised, mida nimetatakse algoritmiks ja mis
-          loetleb koletise osad, jättes silmad tühjaks. Nad annavad juhised edasi
-          teistele õpilastele, kes loovad oma koletise.
+        text: "Õpilased saavad kirjutada juhised, mida nimetatakse algoritmiks ja
+          mis loetleb koletise osad, jättes silmad tühjaks. Nad annavad juhised edasi
+          teistele õpilastele, kes loovad oma koletise."
     unplug3:
       1:
         image: notes/unplug3_1.png
@@ -2264,10 +2266,10 @@
           teha.
       2:
         image: notes/unplug4_2.png
-        text: Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
+        text: "Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
           paberilehte voltida, et moodustada kuusteist identset ristkülikut. Seejärel
           arutame, kuidas mitu eri lahendust võivad anda sama lõpptulemuse ja miks
-          mõni lahendus on parem kui teine.
+          mõni lahendus on parem kui teine."
     unplug5:
       1:
         image: notes/unplug5_1.png
@@ -2278,10 +2280,10 @@
           teha.
       2:
         image: notes/unplug5_2.png
-        text: Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
+        text: "Ülesande teises pooles küsime õpilastelt, mitmel eri viisil on võimalik
           paberilehte voltida, et moodustada kuusteist identset ristkülikut. Seejärel
           arutame, kuidas mitu eri lahendust võivad anda sama lõpptulemuse ja miks
-          mõni lahendus on parem kui teine.
+          mõni lahendus on parem kui teine."
     unplug6:
       1:
         image: notes/unplug6_1.png
@@ -2331,10 +2333,10 @@
           abi.
       3:
         image: notes/unplug8_3.png
-        text: Üks funktsioon võib lahendada paljusid eri probleeme. Tihti kirjutatakse
+        text: "Üks funktsioon võib lahendada paljusid eri probleeme. Tihti kirjutatakse
           kõigi nende probleemide jaoks eraldi funktsioonid märkamata, et nende vahe
           on väga väike. Kui see väike erinevus lahendada, saab 14 funktsiooni asemel
-          üht funktsiooni palju kordi kasutada
+          üht funktsiooni palju kordi kasutada"
     unplug9:
       1:
         image: notes/unplug9_1.png
@@ -2361,10 +2363,10 @@
           sõnumi (nt meili) saatmist.
       2:
         image: notes/unplug10_2.png
-        text: 'Õpilased edastavad sõnumeid, mängides üht kolmest edastusmeetodist:
+        text: "Õpilased edastavad sõnumeid, mängides üht kolmest edastusmeetodist:
           traadita Internet, DSL või kiudoptiline kaabel. WiFit mängivad õpilased
           peavad sõnumit peas kandma, sest WiFi kaudu on suurim tõenäosus osa teavet
-          kaotada.'
+          kaotada."
       3:
         image: notes/unplug10_3.png
         text: DSL-i või kaablit mängivad õpilased kannavad sõnumit käeseljal, kus
@@ -2491,10 +2493,10 @@
           Ja tehnoloogia ongi selle võtmeks.
       2:
         image: notes/starwars_events_2.JPG
-        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
+        text: "Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
           proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
           selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
-          on R2-D2 ja C3PO.
+          on R2-D2 ja C3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
@@ -2543,17 +2545,17 @@
           üks asi. Sa avasid uued helid ja käsud, mis võimaldavad veelgi enamat.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
+        text: "[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
           Konks on sellest, et iga kord, kui sa saad nuuskursea, ilmub tormisõdur.
           Kogu ekraan on nuuskursigu täis ja kui sa kogud neid 10000 tükki, võidad
-          mängu.'
+          mängu."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
+        text: "[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
           sa tapad, annab punkte. Vahetasin klahvid ära nii, et ülesnoolt vajutades
           liigub tegelane alla ja paremnoolt vajutades liigub tegelane vasakule. See
           on väga raske! Mängu arendajana on sul ebaõiglane eelis. Kas mul õnnestus?
-          Jee!'
+          Jee!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Kui mängu loomine on valmis, siis vali „jagamine,“ et saada link, mida
@@ -2618,10 +2620,10 @@
           Ja tehnoloogia ongi selle võtmeks.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
+        text: "Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
           proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
           selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
-          on R2-D2 ja C3PO.
+          on R2-D2 ja C3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
@@ -2660,17 +2662,17 @@
           üks asi. Sa avasid uued helid ja käsud, mis võimaldavad veelgi enamat.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
+        text: "[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
           Konks on sellest, et iga kord, kui sa saad nuuskursea, ilmub tormisõdur.
           Kogu ekraan on nuuskursigu täis ja kui sa kogud neid 10000 tükki, võidad
-          mängu.'
+          mängu."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
+        text: "[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
           sa tapad, annab punkte. Vahetasin klahvid ära nii, et ülesnoolt vajutades
           liigub tegelane alla ja paremnoolt vajutades liigub tegelane vasakule. See
           on väga raske! Mängu arendajana on sul ebaõiglane eelis. Kas mul õnnestus?
-          Jee!'
+          Jee!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Kui mängu loomine on valmis, siis vali „jagamine,“ et saada link, mida
@@ -2757,8 +2759,8 @@
           liigutamiseks. Kordustsüklid on programmeerimises väga võimsad.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Öö saabub ja paaril järgmisel tasemel ehitame maja, et meil oleks turvaline.
-          Kordusploki kasutamine muudab selle meile lihtsaks.
+        text: "Öö saabub ja paaril järgmisel tasemel ehitame maja, et meil oleks turvaline.
+          Kordusploki kasutamine muudab selle meile lihtsaks."
       6:
         image: notes/mc_repeat_6.JPG
         text: Majaseina ehitamiseks võime käskida Alexil edasi liikuda ja neli planku
@@ -2802,9 +2804,9 @@
           sinu valik.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
+        text: "[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
           L-tähe. Ma tegin kaseplankudest A-tähe. See töötas! Me ehitasime villast
-          maja!'
+          maja!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Kui sinu looming on valmis, vajuta nuppu „jaga,“ et saada link selle
@@ -2820,9 +2822,9 @@
           sinu valik.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
+        text: "[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
           L-tähe. Ma tegin kaseplankudest A-tähe. See töötas! Me ehitasime villast
-          maja!'
+          maja!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Nüüd sa saad ehitada just seda, mida ise soovid. Lõbutse!

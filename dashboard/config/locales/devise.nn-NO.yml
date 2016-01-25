@@ -14,7 +14,7 @@
       invalid_token: Ugyldig godkjenningstoken.
       locked: Kontoen din er låst.
       not_found_in_database: Ugyldig epostadresse eller passord.
-      timeout: Økta er utløpt. Logg inn på nytt for å fortsette.
+      timeout: "Økta er utløpt. Logg inn på nytt for å fortsette."
       unauthenticated: Du må logge inn eller registrere deg før du held fram.
       unconfirmed: Du må stadfesta kontoen før du kan halde fram.
     mailer:
@@ -69,7 +69,7 @@
       not_locked: var ikkje låst
       not_saved:
         one: '1 feil hindra denne %{resource} frå å bli lagra:'
-        other: '%{count} feil hindra denne %{resource} frå å bli lagra:'
+        other: "%{count} feil hindra denne %{resource} frå å bli lagra:"
     invitations:
       send_instructions: Ein invitasjon er blitt send på e-post til %{email}.
       invitation_token_invalid: Invitasjonstokenet gitt er ikkje gyldig!

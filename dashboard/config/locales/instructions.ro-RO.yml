@@ -778,11 +778,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1343,12 +1360,12 @@
         pixeli mărime. Tip: folosește un bloc "repetă".'
       Course 4 Artist For Loops 10_instruction: Timpul jocului liber! Distrează-te
         desenând orice îţi place folosind construcţiile învăţate
-      Course 4 Artist For Loops 11_instruction: 'Îți amintești cum am folosit o variabilă
+      Course 4 Artist For Loops 11_instruction: "Îți amintești cum am folosit o variabilă
         pentru a controla numărul laturilor unei forme? Acest model începe cu un triunghi
         și adaugă pe rând câte o latură până când desenează un decagon (10 laturi).
         Fiecare latură ar trebui să aibă o lungime de 100 de pixeli. Sugestie: 360
         împărțit la numărul de laturi ale unei forme dă numărul de grade la care va
-        trebui să virezi.'
+        trebui să virezi."
       Course 4 Artist For Loops 11a_instruction: "Hai să le punem la un loc! Folosind
         cunoştiinţele despre \"bucle\" şi despre \"contor\", crează acest desen unde
         fiecare formă are două laturi în plus faţă de ultima. Asigură-te că fiecare
@@ -1468,9 +1485,9 @@
         dimensiune de 200 de pixeli. Sugestie: fă clic pe "editează" pentru a schimba
         dimensiunea în editorul funcției "desenează un pătrat". Amintește-ți să faci
         clic pe "salvează și închide" pentru a ieși din editorul de funcție. '
-      Course 4 Artist Functions 9_instruction: Ți-am dat cea mai mare parte din codul
+      Course 4 Artist Functions 9_instruction: "Ți-am dat cea mai mare parte din codul
         pentru crearea unei funcții. Cu toate acestea se pare că ceva lipsește. Poți
-        finaliza acest bloc de funcție?
+        finaliza acest bloc de funcție?"
       Course 4 Artist Functions challenge_instruction: Fă clic aici pentru a vedea
         din nou indiciile.
       Course 4 Artist Functions Inspiration_instruction: Fă clic aici pentru a vedea
@@ -1663,29 +1680,29 @@
         la funcție un parametru numit "direcție". Folosește variabilele "stânga" și
         "dreapta" pentru a controla direcția. Completează restul definiției funcției
         și apoi fă clic pe "Salvează și Închide".
-      Course 4 Bee Params 4 (copy 1)_instruction: Încearcă să folosești noua ta funcție
-        pentru a colecta toate florile. Amintește-ți, 0 = stânga și 1 = dreapta.
-      Course 4 Bee Params 4 - Two WhenRun_instruction: Încearcă să utilizezi funcţia
+      Course 4 Bee Params 4 (copy 1)_instruction: "Încearcă să folosești noua ta funcție
+        pentru a colecta toate florile. Amintește-ți, 0 = stânga și 1 = dreapta."
+      Course 4 Bee Params 4 - Two WhenRun_instruction: "Încearcă să utilizezi funcţia
         ta nouă pentru a colecta toate florile. Amintește-ți să utilizezi variabilele
-        stânga şi dreapta.
+        stânga şi dreapta."
       Course 4 Bee Params 4 backup_instruction: Nu ar fi frumos dacă am putea colecta
         toate aceste nectaruri cu o singură funcţie? Încearcă să adăugi un parametru
         nou la funcţia ta numit "nectaruri" pentru a controla cantitatea de nectar
         de colectat. Probabil vei dori și să redenumești funcţia!
-      Course 4 Bee Params 4_instruction: Încearcă să utilizezi funcţia ta nouă pentru
-        a colecta toate florile. Amintește-ți să utilizezi variabilele stânga şi dreapta.
+      Course 4 Bee Params 4_instruction: "Încearcă să utilizezi funcţia ta nouă pentru
+        a colecta toate florile. Amintește-ți să utilizezi variabilele stânga şi dreapta."
       Course 4 Bee Params 5_instruction: Hai să începem de la zero - poți crea o funcție
         nouă numită "obține 5 nectaruri" cu un parametru de direcție?
-      Course 4 Bee Params 6 (copy 1)_instruction: Încearcă să aduni tot nectarul folosind
-        noua funcţie construită de tine.
+      Course 4 Bee Params 6 (copy 1)_instruction: "Încearcă să aduni tot nectarul
+        folosind noua funcţie construită de tine."
       Course 4 Bee Params 6_instruction: Nu ar fi frumos dacă am putea colecta toate
         aceste nectaruri cu o singură funcţie? Încearcă să adăugi un parametru nou
         la funcţia ta numit "unităţi de nectar" pentru a controla cantitatea de nectar
         de colectat. Probabil vei dori și să redenumești funcţia!
-      Course 4 Bee Params 7 (copy 1)_instruction: Încearcă să aduni tot nectarul folosind
-        noua funcţie construită de tine.
-      Course 4 Bee Params 7_instruction: Încearcă să aduni tot nectarul folosind noua
-        funcţie construită de tine.
+      Course 4 Bee Params 7 (copy 1)_instruction: "Încearcă să aduni tot nectarul
+        folosind noua funcţie construită de tine."
+      Course 4 Bee Params 7_instruction: "Încearcă să aduni tot nectarul folosind
+        noua funcţie construită de tine."
       Course 4 Bee Params 8 Clone 2_instruction: Oooh, acum există miere de care să
         ne ocupăm! Cum ți-ai putea tu actualiza funcţia ca ori să obţină nectar ori
         să facă miere.
@@ -1702,8 +1719,8 @@
         să ne ocupăm. Rescrie funcţia ta să ia atât numărul de unităţi de miere cât
         şi numărul de unităţi de nectar.  Cum ai folosi aceste numere pentru a decide
         ce ar trebui să faci?'
-      Course 4 Bee Params Ex_instruction: Încearcă să aduni tot nectarul folosind
-        noua funcţie construită de tine.
+      Course 4 Bee Params Ex_instruction: "Încearcă să aduni tot nectarul folosind
+        noua funcţie construită de tine."
       Course 4 Binary 1_instruction: Aici este o funcţie care primeşte un şir binar
         de 1 şi 0 şi îndrumă fermierul să se se întoarcă de la stânga la dreapta şi
         de sus în jos, întorcând valoarea pătratelor cu valoarea 0. Rulează codul
@@ -1728,12 +1745,12 @@
         un număr de 4 biţi pentru a ajunge în colţul din parta dreapta jos.
       Course 4 EC 1a_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
       Course 4 EC 1b_instruction: Nici o regulă. Nici un indiciu. Doar provocare!
-      Course 4 EC 2a_instruction: '** Provocare extremă: ** Nici o regulă. Nici un
-        indiciu. Doar provocare!'
-      Course 4 EC 2b_instruction: '** Provocare extremă: ** Nici o regulă. Nici un
-        indiciu. Doar provocare!'
-      Course 4 EC 2c_instruction: '** Provocare extremă: ** Nici o regulă. Nici un
-        indiciu. Doar provocare!'
+      Course 4 EC 2a_instruction: "** Provocare extremă: ** Nici o regulă. Nici un
+        indiciu. Doar provocare!"
+      Course 4 EC 2b_instruction: "** Provocare extremă: ** Nici o regulă. Nici un
+        indiciu. Doar provocare!"
+      Course 4 EC 2c_instruction: "** Provocare extremă: ** Nici o regulă. Nici un
+        indiciu. Doar provocare!"
       Course 4 EC 3_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului
         precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu
         dacă încorporezi parametri. '
@@ -1901,15 +1918,15 @@
       Course 4 SCF 1_instruction: Utilizează funcţiile sugerate pentru a desena patru
         rânduri de hexagoane. Observi cum rândurile noastre pare sunt întoarse către
         dreapta?
-      Course 4 SCF 1a_instruction: Îţi poți da seama cum să colectezi tot acest nectar
-        cu cât mai puţine blocuri posibil?
-      Course 4 SCF 1b_instruction: Îţi poți da seama cum să colectezi tot acest nectar
-        cu cât mai puţine blocuri posibil?
+      Course 4 SCF 1a_instruction: "Îţi poți da seama cum să colectezi tot acest nectar
+        cu cât mai puţine blocuri posibil?"
+      Course 4 SCF 1b_instruction: "Îţi poți da seama cum să colectezi tot acest nectar
+        cu cât mai puţine blocuri posibil?"
       Course 4 SCF 2_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului
         precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu
         dacă încorporezi parametri. '
-      Course 4 SCF 3 Fail 1_instruction: Îți poți da seama cum să...
-      Course 4 SCF 3 Fail 2_instruction: Îți poți da seama cum să...
+      Course 4 SCF 3 Fail 1_instruction: "Îți poți da seama cum să..."
+      Course 4 SCF 3 Fail 2_instruction: "Îți poți da seama cum să..."
       Course 4 SCF 3_instruction: 'Utilizează ceea ce ai învățat în cadrul nivelului
         precedent pentru a desena o imagine ca aceasta. Notă: Codul devine mai simplu
         dacă încorporezi parametri. '
@@ -1921,11 +1938,11 @@
         cât mai puține blocuri posibil?
       Course 4 SCFL 2_instruction: Rezolvă acest puzzle folosind cât mai puține blocuri
         posibil.
-      Course 4 SCFL 3_instruction: Îți poți da seama cum să re-creezi acest desen?
-      Course 4 SCFL 4_instruction: Îți poți da seama cum să re-creezi acest desen?
-      Course 4 SCFL 5_instruction: Îți poți da seama cum să re-creezi acest desen?
-      Course 4 SCFL 6_instruction: Îţi poți da seama cum să re-creezi acest desen
-        cu o singură buclă?
+      Course 4 SCFL 3_instruction: "Îți poți da seama cum să re-creezi acest desen?"
+      Course 4 SCFL 4_instruction: "Îți poți da seama cum să re-creezi acest desen?"
+      Course 4 SCFL 5_instruction: "Îți poți da seama cum să re-creezi acest desen?"
+      Course 4 SCFL 6_instruction: "Îţi poți da seama cum să re-creezi acest desen
+        cu o singură buclă?"
       Course 4 SCFL 7_instruction: Artistul vrea să prindă nişte valuri! Îţi poți
         da seama cum să re-creezi acest desen?
       Course 4 SCFP 1_instruction: Creează o funcție cu parametri care permite artistului
@@ -4902,7 +4919,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: Șablon
+      U4L02 - Objects - Template1_instruction: "Șablon"
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis

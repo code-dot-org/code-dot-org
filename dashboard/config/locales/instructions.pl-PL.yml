@@ -744,11 +744,28 @@
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: Dodaj przycisk, który
         przesuwa żółwia po kliknięciu.  (Kliknij, aby zobaczyć pełne instrukcje)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1681,14 +1698,14 @@
       Course 4 Binary 8_instruction: Możesz wykonać większość tego obrazka powtarzając
         w pętli 5-cio bitową liczbę - następnie będziesz potrzebować 4-bitową liczbę,
         aby otrzymać prawy dolny róg.
-      Course 4 EC 1a_instruction: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
-      Course 4 EC 1b_instruction: Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!
-      Course 4 EC 2a_instruction: '** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych
-        wskazówek. Po prostu wyzwanie!'
-      Course 4 EC 2b_instruction: '** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych
-        wskazówek. Po prostu wyzwanie!'
-      Course 4 EC 2c_instruction: '** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych
-        wskazówek. Po prostu wyzwanie!'
+      Course 4 EC 1a_instruction: "Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!"
+      Course 4 EC 1b_instruction: "Żadnych reguł. Żadnych wskazówek. Po prostu wyzwanie!"
+      Course 4 EC 2a_instruction: "** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych
+        wskazówek. Po prostu wyzwanie!"
+      Course 4 EC 2b_instruction: "** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych
+        wskazówek. Po prostu wyzwanie!"
+      Course 4 EC 2c_instruction: "** Ekstremalne Wyzwanie: ** Żadnych reguł. Żadnych
+        wskazówek. Po prostu wyzwanie!"
       Course 4 EC 3_instruction: "Wykorzystaj to, czego nauczyłeś się na poprzednim
         poziomie, aby narysować taki oto rysunek.\nUwaga: Kod stanie się prostszy,
         jeśli wprowadzisz parametry. \n"
@@ -1775,11 +1792,11 @@
         postać 2 dotyka czegoś\", by uaktualnić wynik, Możesz zwiększyć wartość wyniku
         (points) przypisując \"points = points + 1\". Aby ukończyć tę grę, otrzymaj
         wynik równy 10 (powiększając go co jeden!)."
-      Course 4 Play Lab Vars 7_instruction: Ładnie, teraz spowodujmy, że ta gra nie
+      Course 4 Play Lab Vars 7_instruction: "Ładnie, teraz spowodujmy, że ta gra nie
         jest zbyt łatwa - za każdym razem, gdy pies (postać 1) zostaje trafiony żółtymi
         sercami przez kota (postać 2) powinieneś stracić punkt. Zacznij z 10 punktami,
         aby nie było to zbyt trudne. Do ukończenia tej łamigłówki, niech Twój wynik
-        zmniejszy się od 10 do 0.
+        zmniejszy się od 10 do 0."
       Course 4 Play Lab Vars 8 (copy 1)_instruction: OK, ostatnia już rzecz dla tej
         gry - tak ustawmy, by gracz mógł wygrać (lub przegrać). Użyj pętli "powtarzaj
         w nieskończoność" (forever) do sprawdzania wyniku (score) - jeśli wynik jest
@@ -2870,9 +2887,9 @@
         w pętli powtórzeń.
       Overworld Plant Crops_instruction: Dobrze jest planować z wyprzedzeniem. Zasadź
         rośliny po obu stronach wody, aby później nie konać z głodu.
-      Overworld Powered Minecart_instruction: Świetna robota! Udało Ci się zgromadzić
+      Overworld Powered Minecart_instruction: "Świetna robota! Udało Ci się zgromadzić
         wiele zasobów i zbudować skromny dom. Teraz ułóż tory prowadzące od drzwi
-        swojego domu do końca mapy.
+        swojego domu do końca mapy."
       Overworld Shear Sheep_instruction: Nadszedł czas strzyży! Używając polecenia
         "strzyż" pozyskaj wełnę z obu owiec.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |

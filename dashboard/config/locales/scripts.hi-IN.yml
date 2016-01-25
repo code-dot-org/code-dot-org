@@ -69,7 +69,7 @@
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: शर्तें
+          Conditionals: "शर्तें"
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -181,7 +181,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: चर
+          Variables: "चर"
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -230,7 +230,7 @@
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: चर
+          Variables: "चर"
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -268,7 +268,7 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
-          'Eval: Conditionals': शर्तें
+          'Eval: Conditionals': "शर्तें"
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
@@ -278,7 +278,7 @@
           description_short: Create a story or make a game with Play Lab!
           description: Create a story or make a game with Play Lab!
           Play Lab: Play Lab
-          Infinity: अनंत
+          Infinity: "अनंत"
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -369,9 +369,9 @@
           The Artist: The Artist
           Algorithms: Algorithms
           The Artist 2: The Artist 2
-          Functions: कार्य
+          Functions: "कार्य"
           The Farmer: The Farmer
-          Conditionals: शर्तें
+          Conditionals: "शर्तें"
           The Artist 3: The Artist 3
           Song Writing: Song Writing
           The Farmer 2: The Farmer 2
@@ -393,9 +393,9 @@
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: घटनाएँ
-          description: घटनाएँ
-          description_short: घटनाएँ
+          title: "घटनाएँ"
+          description: "घटनाएँ"
+          description_short: "घटनाएँ"
           Bounce: Bounce
           Studio: Studio
           Calc: Calc
@@ -643,7 +643,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: कार्य
+          Functions: "कार्य"
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -703,7 +703,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: चर
+          Variables: "चर"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -1511,8 +1511,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1566,6 +1568,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1630,14 +1633,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
+          title: "स्टार वार्स: कोड के झरीये आकाशगंगा बनाए"
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
+          title: "स्टार वार्स: कोड के झरीये आकाशगंगा बनाए"
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
@@ -1650,9 +1653,9 @@
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
-          description: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
-            को ले जाने के लिए कोड ब्लॉक का उपयोग करें
+          description_short: "कोड के जरिए Minecraft की दुनिया का पता लगाएँ"
+          description: "इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
+            को ले जाने के लिए कोड ब्लॉक का उपयोग करें"
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1669,5 +1672,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Wrap-Up
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

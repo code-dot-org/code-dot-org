@@ -4,104 +4,104 @@
       name:
         20-hour:
           desc: K-8 সূচনা থেকে কম্পিউটার সায়েন্স কোর্স
-          Unplug1: ধাপ ১
-          Maze: ধাপ ২
-          Unplug2: ধাপ ৩
-          Unplug3: ধাপ ৪
-          Artist: ধাপ ৫
-          Unplug4: ধাপ ৬
-          Artist2: ধাপ ৭
-          Unplug5: ৮ম ধাপ
-          Farmer: ৯ম ধাপ
-          Unplug6: ১০ম ধাপ
-          Artist3: ধাপ ১১
-          Unplug7: ধাপ ১২
-          Farmer2: স্তর ১৩
-          Unplug8: স্তর ১৪
-          Artist4: স্তর ১৫
-          Unplug9: স্তর ১৬
-          Farmer3: স্তর ১৭
-          Unplug10: স্তর ১৮
-          Artist5: স্তর ১৯
-          Unplug11: স্তর ২০
+          Unplug1: "ধাপ ১"
+          Maze: "ধাপ ২"
+          Unplug2: "ধাপ ৩"
+          Unplug3: "ধাপ ৪"
+          Artist: "ধাপ ৫"
+          Unplug4: "ধাপ ৬"
+          Artist2: "ধাপ ৭"
+          Unplug5: "৮ম ধাপ"
+          Farmer: "৯ম ধাপ"
+          Unplug6: "১০ম ধাপ"
+          Artist3: "ধাপ ১১"
+          Unplug7: "ধাপ ১২"
+          Farmer2: "স্তর ১৩"
+          Unplug8: "স্তর ১৪"
+          Artist4: "স্তর ১৫"
+          Unplug9: "স্তর ১৬"
+          Farmer3: "স্তর ১৭"
+          Unplug10: "স্তর ১৮"
+          Artist5: "স্তর ১৯"
+          Unplug11: "স্তর ২০"
         Hour of Code:
-          desc: এক ঘন্টার কোড
-          Maze: ধাপ ১
+          desc: "এক ঘন্টার কোড"
+          Maze: "ধাপ ১"
         Edit Code:
-          desc: কোড বদলাও (বেটা)
-          MazeEC: ধাপ ১
+          desc: "কোড বদলাও (বেটা)"
+          MazeEC: "ধাপ ১"
         2014 Levels:
-          desc: বাউন্স (বেটা)
-          Bounce: ধাপ ১
+          desc: "বাউন্স (বেটা)"
+          Bounce: "ধাপ ১"
         Builder Levels:
-          desc: তোমাদের তৈরি ধাঁধা (বেটা)
-          Custom: ধাপ ১
+          desc: "তোমাদের তৈরি ধাঁধা (বেটা)"
+          Custom: "ধাপ ১"
         Flappy Levels:
-          desc: ডানা ঝাপটানো পাখি
-          Flappy: ধাপ ১
+          desc: "ডানা ঝাপটানো পাখি"
+          Flappy: "ধাপ ১"
         Jigsaw Levels:
-          desc: জিগ-স (বেটা)
-          Jigsaw: ধাপ ১
+          desc: "জিগ-স (বেটা)"
+          Jigsaw: "ধাপ ১"
         Step Levels:
-          desc: গোলকধাঁধা (বেটা)
+          desc: "গোলকধাঁধা (বেটা)"
           MazeStep: Stage Step
         edit-code:
-          desc: কোড বদলাও (বেটা)
-          MazeEC: ধাপ ১
-          Applab: ধাপ ২
-          ArtistEC: ধাপ ৩
-          StudioEC: ধাপ ৪
+          desc: "কোড বদলাও (বেটা)"
+          MazeEC: "ধাপ ১"
+          Applab: "ধাপ ২"
+          ArtistEC: "ধাপ ৩"
+          StudioEC: "ধাপ ৪"
         events:
-          desc: বাউন্স (বেটা)
-          Bounce: ধাপ ১
-          Studio: ধাপ ২
+          desc: "বাউন্স (বেটা)"
+          Bounce: "ধাপ ১"
+          Studio: "ধাপ ২"
         builder:
-          desc: তোমাদের তৈরি ধাঁধা (বেটা)
-          Custom: ধাপ ১
+          desc: "তোমাদের তৈরি ধাঁধা (বেটা)"
+          Custom: "ধাপ ১"
         flappy:
-          desc: ডানা ঝাপটানো পাখি
-          Flappy: ধাপ ১
+          desc: "ডানা ঝাপটানো পাখি"
+          Flappy: "ধাপ ১"
         jigsaw:
-          desc: জিগ-স (বেটা)
-          Jigsaw: ধাপ ১
+          desc: "জিগ-স (বেটা)"
+          Jigsaw: "ধাপ ১"
         step:
-          desc: গোলকধাঁধা (বেটা)
+          desc: "গোলকধাঁধা (বেটা)"
           MazeStep: Stage Step
         wordsearch:
-          desc: বানান-পটু মৌমাছি (বেটা)
-          WordSearch: ধাপ ১
+          desc: "বানান-পটু মৌমাছি (বেটা)"
+          WordSearch: "ধাপ ১"
     game:
       name:
-        Unplug1: কম্পিউটার বিজ্ঞান পরিচিতি
-        Maze: গোলকধাঁধা
-        Multi: বহুনির্বাচনী বিষয়াদি
-        Unplug2: গণিতিক চিন্তা-ভাবনা
-        Unplug3: ছক-কাগজে প্রোগ্রামিং
-        Artist: শিল্পী
-        Unplug4: অ্যালগরিদম
-        Artist2: চিত্রকর ২
-        Unplug5: ফাংশনগুলি
-        Farmer: কৃষক
-        Unplug6: শর্তযুক্ত
-        Artist3: পটুয়া ৩
-        Unplug7: গান লিখা
-        Farmer2: কৃষক ২
+        Unplug1: "কম্পিউটার বিজ্ঞান পরিচিতি"
+        Maze: "গোলকধাঁধা"
+        Multi: "বহুনির্বাচনী বিষয়াদি"
+        Unplug2: "গণিতিক চিন্তা-ভাবনা"
+        Unplug3: "ছক-কাগজে প্রোগ্রামিং"
+        Artist: "শিল্পী"
+        Unplug4: "অ্যালগরিদম"
+        Artist2: "চিত্রকর ২"
+        Unplug5: "ফাংশনগুলি"
+        Farmer: "কৃষক"
+        Unplug6: "শর্তযুক্ত"
+        Artist3: "পটুয়া ৩"
+        Unplug7: "গান লিখা"
+        Farmer2: "কৃষক ২"
         Unplug8: Abstraction
-        Artist4: চিত্রকর ৪
-        Unplug9: রিলে-স্যুইচ প্রোগ্রামিং
-        Farmer3: কৃষক ৩
-        Unplug10: ইন্টারনেট
-        Artist5: চিত্রকর ৫
-        Unplug11: গুটিয়ে নেয়া
-        MazeEC: গোলকধাঁধা
-        Bounce: বল লাফানো
-        Flappy: ডানা ঝাপটানো পাখি
-        Jigsaw: টুকরো কাঠের ধাঁধা
+        Artist4: "চিত্রকর ৪"
+        Unplug9: "রিলে-স্যুইচ প্রোগ্রামিং"
+        Farmer3: "কৃষক ৩"
+        Unplug10: "ইন্টারনেট"
+        Artist5: "চিত্রকর ৫"
+        Unplug11: "গুটিয়ে নেয়া"
+        MazeEC: "গোলকধাঁধা"
+        Bounce: "বল লাফানো"
+        Flappy: "ডানা ঝাপটানো পাখি"
+        Jigsaw: "টুকরো কাঠের ধাঁধা"
         MazeStep: Maze Step Mode
-        Wordsearch: শব্দ খোঁজা
+        Wordsearch: "শব্দ খোঁজা"
         Webapp: Webapp
-        ArtistEC: শিল্পী
-        TextMatch: লেখা মিলানো
+        ArtistEC: "শিল্পী"
+        TextMatch: "লেখা মিলানো"
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Internet Simulator
@@ -109,29 +109,29 @@
         CustomStudio: Play Lab
     trophy:
       name:
-        Bronze: ব্রোঞ্জ
-        Silver: রৌপ্য
-        Gold: স্বর্ণ
+        Bronze: "ব্রোঞ্জ"
+        Silver: "রৌপ্য"
+        Gold: "স্বর্ণ"
     concept:
       description:
-        sequence: অনুক্রম
+        sequence: "অনুক্রম"
         if: If ব্লক
         if_else: If-else ব্লক
-        loop_times: পুনরাবৃত্তি ব্লক
-        loop_until: অনবধি পুনরাবৃত্তি ব্লক
+        loop_times: "পুনরাবৃত্তি ব্লক"
+        loop_until: "অনবধি পুনরাবৃত্তি ব্লক"
         loop_while: While ব্লক
-        loop_for: গোণা-গ‌ুনির ব্লক
-        function: ফাংশনগুলি
-        parameters: বৈশিষ্ট্য-যুক্ত ফাংশনগুলি
+        loop_for: "গোণা-গ‌ুনির ব্লক"
+        function: "ফাংশনগুলি"
+        parameters: "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
     level:
       instructions:
         maze_2_2: 'তুমি কি সাহায্য করতে পার আমাকে, ওই দুষ্টু শ‌ুকরছানাগুলিকে ধরতে?
           একজোড়া "সামনে এগোও" ব্লক জড়ো করে "রান" এ চাপ দাও আর আমাকে সেখানে পৌঁছাতে
           সাহায্য কর। '
-        maze_2_1: এই শ‌ুকরছানাটি আমার পালকগুলো অগোছালো করে ফেলছে। ওটাকে খুঁজে পেতে
-          সাহায্য কর আমাকে!
-        maze_2_2_5: পথ ধরে আমাকে বোকা শ‌ুকরছানাটির কাছে নিয়ে চল। TNT এড়িয়ে চল নয়তো
-          পালকগুলো সব উড়ে যাবে!
+        maze_2_1: "এই শ‌ুকরছানাটি আমার পালকগুলো অগোছালো করে ফেলছে। ওটাকে খুঁজে পেতে
+          সাহায্য কর আমাকে!"
+        maze_2_2_5: "পথ ধরে আমাকে বোকা শ‌ুকরছানাটির কাছে নিয়ে চল। TNT এড়িয়ে চল নয়তো
+          পালকগুলো সব উড়ে যাবে!"
         maze_2_3: Guide me to the green evilness! (Watch out for TNT)
         maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
           angry!
@@ -170,7 +170,7 @@
           Use a few blocks to make me draw over the grey lines in the picture.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "set color" block.'
-        turtle_1_3: শুধুমাত্র ৩টি ব্লক নিয়ে একটি বর্গক্ষেত্র বানাও।
+        turtle_1_3: "শুধুমাত্র ৩টি ব্লক নিয়ে একটি বর্গক্ষেত্র বানাও।"
         turtle_1_4: '"এলোমেলো রঙ" ব্লকটি যা প্রতিবার আলাদা রঙ বেছে নেয়, ব্যবহার করে
           একটি ত্রিভূজ আঁক যার বাহুগুলো সব ভিন্ন রঙের। ইঙ্গিত: তোমাকে বুঝে নিতে হবে
           "ঘূর্ণন" ব্লকটির সংখ্যাটিতে ক্লিক করে ঠিক কতটুকু ঘুরাতে হবে।'
@@ -210,8 +210,8 @@
           more blocks to complete the drawing?
         turtle_4_9: Here's the solution to the previous puzzle. How many degrees should
           you turn to complete the drawing? (You probably need to guess a few times)
-        turtle_4_10: এই হল আগের ধাঁধাটির সমাধান। আঁকাটি সম্পূর্ণ করতে তুমি কতবার পুনরাবৃত্তি
-          করবে?
+        turtle_4_10: "এই হল আগের ধাঁধাটির সমাধান। আঁকাটি সম্পূর্ণ করতে তুমি কতবার
+          পুনরাবৃত্তি করবে?"
         turtle_4_11: '"ঘূর্ণন" ও "পুনরাবৃত্তি" ব্লকের নাম্বারগুলি পরিবর্তন করে বিভিন্ন
           নকশা তৈরি করে দেখতে পার। আবার, বাকি কোডগুলি নিয়েও গবেষণা করে যেমন খুশি আঁকতে
           পার।'
@@ -435,8 +435,8 @@
           "when run" block.
         flappy_k1_9: Try changing the player by attaching a "set player" block to
           the "when run" block.
-        jigsaw_1: ব্লকটিতে ক্লিক কর
-        jigsaw_2: ব্লকটিকে টেনে তার লক্ষ্যে পৌঁছে দাও।
+        jigsaw_1: "ব্লকটিতে ক্লিক কর"
+        jigsaw_2: "ব্লকটিকে টেনে তার লক্ষ্যে পৌঁছে দাও।"
         jigsaw_3: Arrange the blocks to form the image
         jigsaw_4: Arrange the blocks to form the image
         jigsaw_5: Arrange the blocks to form the image
@@ -630,22 +630,22 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: ফাংশনগুলি
+        function: "ফাংশনগুলি"
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: গণিতিক চিন্তা-ভাবনা
-        Unplug3: ছক-কাগজে প্রোগ্রামিং
-        Unplug4: অ্যালগরিদম
-        Unplug5: ফাংশনগুলি
-        Unplug6: শর্তযুক্ত
+        Unplug2: "গণিতিক চিন্তা-ভাবনা"
+        Unplug3: "ছক-কাগজে প্রোগ্রামিং"
+        Unplug4: "অ্যালগরিদম"
+        Unplug5: "ফাংশনগুলি"
+        Unplug6: "শর্তযুক্ত"
         Unplug7: Songwriting
         Unplug8: Abstraction
         Unplug9: Relay programming
         Unplug10: Internet
-        Unplug11: গুটিয়ে নেয়া
+        Unplug11: "গুটিয়ে নেয়া"
         C1_happy_maps_unplugged: Happy Maps
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: The Big Event
@@ -672,10 +672,10 @@
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: ছক-কাগজে প্রোগ্রামিং
-        C2_conditionals_with_cards: শর্তযুক্ত
+        C2_graph_paper: "ছক-কাগজে প্রোগ্রামিং"
+        C2_conditionals_with_cards: "শর্তযুক্ত"
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: রিলে-স্যুইচ প্রোগ্রামিং
+        C2_relay_programming: "রিলে-স্যুইচ প্রোগ্রামিং"
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
@@ -689,9 +689,9 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: বল লাফানো
+        C3_bounce: "বল লাফানো"
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: গণিতিক চিন্তা-ভাবনা
+        C3_computational_thinking: "গণিতিক চিন্তা-ভাবনা"
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
@@ -709,7 +709,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: শর্তযুক্ত
+        C4_conditionals: "শর্তযুক্ত"
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -810,8 +810,8 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!

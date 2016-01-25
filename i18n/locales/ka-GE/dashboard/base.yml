@@ -284,10 +284,6 @@ ka:
   user_level:
     completed: დასრულებულია
     tried: უკვე ნაცადია
-  user_stats:
-    recent_activity: უკანასკნელი აქტივობა
-    show_more: მაჩვენე მეტი
-    classroom_activity: აქტივობა უკომპიუტეროდ
   home:
     title: კოდის სტუდია
     description: კოდის სტუდიაში ინახება Code.org-ის მიერ შექმნილი ონლაინ-კურსები

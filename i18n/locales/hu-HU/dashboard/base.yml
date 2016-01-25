@@ -270,7 +270,7 @@ hu:
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
     email_confirm_wrong_email: (Helytelen e-mail cím?)
     email_resend_confirm: Megerősítés újraküldése
-    new_password_hint: (hagyja üresen, ha nem akarja megváltoztatni)
+    new_password_hint: (hagyd üresen, ha nem akarod megváltoztatni)
     current_password_hint: (szükségünk van a jelenlegi jelszavadra a módosítások végrehajtásához)
     delete: Fiók törlése
     delete_text: Az alábbi gombra kattintva törlöd a fiókot.
@@ -279,10 +279,6 @@ hu:
   user_level:
     completed: Befejezve
     tried: Próbáltam
-  user_stats:
-    recent_activity: Legutóbbi tevékenységek
-    show_more: Mutass többet
-    classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
     description: A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített
@@ -313,12 +309,12 @@ hu:
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
     trynow: Próbálja ki most
     add_hint_help: Segíts, hogy okos tippekkel láthassuk el oktatóanyagainkat a Code.org-on
-    20hour_overview: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+    20hour_overview: Ez a 20 órás kurzus bemutatja a számítástechnika és programozás alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki számára jó időtöltés lehet.
     test_videos_help: Teszteld az új videó lejátszót az iskolában
     try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak
     use_as_teacher: használd ezt az oldalt tanárként
-    heading_hoc2014: '<h2>A Kódolás Órája</h2><h1>Minden korosztály számára</h1>'
-    heading_elementary: '<h2>20 órás tanfolyamok</h2><h1>Kezdőknek (minden korosztály)</h1>'
+    heading_hoc2014: '<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>'
+    heading_elementary: '<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai (minden korosztálynak)</h1>'
     heading_apps: '<h2>Vidámság </h2><h1>Mindenkinek</h1>'
     heading_legacy: '<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>'
     your_gallery: Galéria
@@ -361,7 +357,7 @@ hu:
     try_hour_of_code: Próbáld ki a Kódolás Óráját!
   reference_area:
     title: Segítségre van szükséged?
-    subtitle: Nézd meg ezeket a videókat és tanácsokat
+    subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
     auth_error: Nem vagy jogosult a megoldás megtekintésére.
     submit: Frissítsd a szereplő helyét
@@ -436,7 +432,7 @@ hu:
       title: Star Wars
     infinity:
       title: Infinity játéklabor
-      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
     minecraft:
       title: Minecraft
       body: Fedezd fel a Minecraft világát kódokkal.

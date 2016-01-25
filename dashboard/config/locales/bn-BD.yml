@@ -1,145 +1,145 @@
 "bn":
   errors:
     messages:
-      not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
+      not_saved: "অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:"
       too_young: This content has age restrictions in place and is not available for
         younger students
   activerecord:
     errors:
       messages:
-        blank: প্রয়োজন
+        blank: "প্রয়োজন"
     attributes:
       user:
-        name: প্রদর্শিত নাম
-        email: ই-মেইল
-        username: উজারন্যাম
-        password: পাসওআর্ড
-        password_confirmation: পাসওআর্ড নিশ্চিতকরণ
-        current_password: বর্তমান পাসওআর্ড
-        locale: ভাষা
-        age: বয়স
-        gender: লিঙ্গ
-        edit_header: একাউন্ট বিস্তারিত সম্পাদনা করুন
+        name: "প্রদর্শিত নাম"
+        email: "ই-মেইল"
+        username: "উজারন্যাম"
+        password: "পাসওআর্ড"
+        password_confirmation: "পাসওআর্ড নিশ্চিতকরণ"
+        current_password: "বর্তমান পাসওআর্ড"
+        locale: "ভাষা"
+        age: "বয়স"
+        gender: "লিঙ্গ"
+        edit_header: "একাউন্ট বিস্তারিত সম্পাদনা করুন"
         error:
-          future: ভবিষ্যতের হতে পারবে না
-  hello: হ্যালো ওয়ার্ল্ড
-  welcome_back: স্বাগতম %{name}
-  submit: জমা করুন
+          future: "ভবিষ্যতের হতে পারবে না"
+  hello: "হ্যালো ওয়ার্ল্ড"
+  welcome_back: "স্বাগতম %{name}"
+  submit: "জমা করুন"
   add_teacher_form:
     code:
-      label: 'শিক্ষক যুক্ত করুন:'
-      placeholder: অংশের কোড (ABCDEF)
+      label: "শিক্ষক যুক্ত করুন:"
+      placeholder: "অংশের কোড (ABCDEF)"
       instructions: Please enter the code shared with you by your teacher. It's a
         6 letter code like "ABCDEF".
-    submit: শিক্ষক যুক্ত করুন
+    submit: "শিক্ষক যুক্ত করুন"
   add_hint_form:
-    placeholder: আপনার সংকেত দিন
-    submit: সংকেত যুক্ত করুন
+    placeholder: "আপনার সংকেত দিন"
+    submit: "সংকেত যুক্ত করুন"
   appname: Code.org
-  stage: ধাপ
-  stage_number: স্টেইজ %{number}
-  puzzle: ধাঁধা
-  trophies: পুরষ্কার
-  courses: পাঠ্যতালিকা
+  stage: "ধাপ"
+  stage_number: "স্টেইজ %{number}"
+  puzzle: "ধাঁধা"
+  trophies: "পুরষ্কার"
+  courses: "পাঠ্যতালিকা"
   unplugged_activity: Unplugged Activity
-  of: এর
-  more: বেশি
-  less: কম
-  beta: বেটা
+  of: "এর"
+  more: "বেশি"
+  less: "কম"
+  beta: "বেটা"
   try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
-  try_k8intro: আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫
-    ঘন্টা)
-  k8intro: '''K-৮ পরিচিতি'' থেকে ''কম্পিউটার বিজ্ঞানের কোর্স'' (১৫-২৫ ঘন্টা)'
-  already_started: 'ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> '
+  try_k8intro: "আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫
+    ঘন্টা)"
+  k8intro: "'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' (১৫-২৫ ঘন্টা)"
+  already_started: "ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> "
   demos: 'Admin: সকল Demos'
-  continue: চালিয়ে যান
-  prize: পুরস্কার
-  more_info: আরও তথ্য
+  continue: "চালিয়ে যান"
+  prize: "পুরস্কার"
+  more_info: "আরও তথ্য"
   auth:
-    sign_in_with: '%{provider} এর সাথে সাইন ইন করো'
-    signed_in: সাইনড ইন!
+    sign_in_with: "%{provider} এর সাথে সাইন ইন করো"
+    signed_in: "সাইনড ইন!"
     signed_out: আপনি <a href="%{url}">Code.org</a> থেকে বের হয়ে গেছেন।
     sign_out_of: আপনি সাইন ইন করার জন্য %{provider} ব্যবহার করেছেন। %{provider} থেকে
       সাইন আউট করার জন্য <a href="%{url}">এখানে ক্লিক</a> করুন।
-    already_signedup: ইতিমধ্যে সাইন আপ করেছ?
-    notyet_signedup: এখনো যোগ দেননি?
-    google_oauth2: গুগল অ্যাকাউন্ট
-    twitter: টুইটার
-    facebook: ফেইসবুক
-    windowslive: মাইক্রোসফট অ্যাকাউন্ট
-    forgot_password: আপনার পাসওয়ার্ড ভুলে গেছেন?
-    need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
-    need_unlock: আনলক করার নির্দেশাবলী পাওনি?
+    already_signedup: "ইতিমধ্যে সাইন আপ করেছ?"
+    notyet_signedup: "এখনো যোগ দেননি?"
+    google_oauth2: "গুগল অ্যাকাউন্ট"
+    twitter: "টুইটার"
+    facebook: "ফেইসবুক"
+    windowslive: "মাইক্রোসফট অ্যাকাউন্ট"
+    forgot_password: "আপনার পাসওয়ার্ড ভুলে গেছেন?"
+    need_confirmation: "নিশ্চিতকরণ নির্দেশনা পাওনি?"
+    need_unlock: "আনলক করার নির্দেশাবলী পাওনি?"
   signup_form:
-    student_count: '%{count} জন ছাত্রছাত্রী ইতিমধ্যে সাইন আপ করেছেন।'
-    teacher_count: '%{count} জন শিক্ষক ইতোমধ্যে সাইন আপ করেছেন।'
+    student_count: "%{count} জন ছাত্রছাত্রী ইতিমধ্যে সাইন আপ করেছেন।"
+    teacher_count: "%{count} জন শিক্ষক ইতোমধ্যে সাইন আপ করেছেন।"
     overview_student: আপনার উন্নতি সম্পর্কে জানার জন্য সাইন আপ করার মাধ্যমে একটি একাউন্ট
       তৈরি করুন। প্রাথমিকভাবে আপনাকে লগ ইন করতে দেয়া এবং পাসওয়ার্ড উদ্ধার করার জন্য
       আপনার ইমেইল ঠিকানাটি ব্যবহৃত হবে। বিস্তারিত তথ্যের জন্য <a href="http://code.org/privacy">গোপনীয়তা
       নীতি</a> দেখুন।
-    overview_teacher: একটি একাউন্ট খোলার মাধ্যমে আপনার শ্রেণীকক্ষে কম্পিউটার বিজ্ঞান
+    overview_teacher: "একটি একাউন্ট খোলার মাধ্যমে আপনার শ্রেণীকক্ষে কম্পিউটার বিজ্ঞান
       শিক্ষা দিন।<p/> আপনি আপনার ছাত্রছাত্রীদের এতে যুক্ত করতে পারবেন এবং তাদের উন্নতি
-      তদারকি করতে সক্ষম হবেন।
+      তদারকি করতে সক্ষম হবেন।"
     no_signup_message: আপনি <a target="_blank" href="http://learn.code.org">বিভিন্ন
       স্টেজ এবং পাজলসমূহ ব্রাউজ</a> করতে পারবেন, কিন্তু আপনার অগ্রগতি সংরক্ষন করতে
       আপনাকে সাইন আপ করতে হবে।
-    teacher_educator_guide: নির্দেশিকা দেখুন
-    teacher_pitch: শিক্ষক সাইন আপ Code.org-এর জন্য
-    teacher_title: শিক্ষক সাইন আপ
-    student_pitch: ছাত্রছাত্রী সাইন আপ Code.org-এর জন্য
-    student_title: ছাত্রছাত্রী সাইন আপ
-    school_name: স্কুলের নাম (ঐচ্ছিক)
-    school_address: স্কুলের ঠিকানা (ঐচ্ছিক)
-    address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
-    gender: লিঙ্গ (ঐচ্ছিক)
-    birthday: জন্মদিন (ঐচ্ছিক)
-    age: বয়স
-    user_type: আপনি কি একজন ছাত্র বা শিক্ষক?
-    submit: সাইন আপ
-    teacher: আপনি কি শিক্ষক?
-    valid_username: লভ্য!
-    invalid_username: ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে
-    taken_username: ব্যবহারকারীর নাম ইতিপূর্বে নেয়া হয়েছে।
-    valid_password: সঠিক পাসওয়ার্ড!
-    invalid_password: পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে
-    mismatch_password: আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না
+    teacher_educator_guide: "নির্দেশিকা দেখুন"
+    teacher_pitch: "শিক্ষক সাইন আপ Code.org-এর জন্য"
+    teacher_title: "শিক্ষক সাইন আপ"
+    student_pitch: "ছাত্রছাত্রী সাইন আপ Code.org-এর জন্য"
+    student_title: "ছাত্রছাত্রী সাইন আপ"
+    school_name: "স্কুলের নাম (ঐচ্ছিক)"
+    school_address: "স্কুলের ঠিকানা (ঐচ্ছিক)"
+    address_placeholder: "ঠিকানা, শহর, রাজ্য, জিপ"
+    gender: "লিঙ্গ (ঐচ্ছিক)"
+    birthday: "জন্মদিন (ঐচ্ছিক)"
+    age: "বয়স"
+    user_type: "আপনি কি একজন ছাত্র বা শিক্ষক?"
+    submit: "সাইন আপ"
+    teacher: "আপনি কি শিক্ষক?"
+    valid_username: "লভ্য!"
+    invalid_username: "ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে"
+    taken_username: "ব্যবহারকারীর নাম ইতিপূর্বে নেয়া হয়েছে।"
+    valid_password: "সঠিক পাসওয়ার্ড!"
+    invalid_password: "পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে"
+    mismatch_password: "আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না"
     student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
       of service</a>. If I am under 13 years of age, I confirm by submitting this
       form that I have my parent or legal guardian's permission to use the Code.org
       services.<br/>For users under 13, email addresses are not stored in a form that
       allows us to contact them.
-    teacher_terms: আমি Code.org <a href='http://code.org/tos'> শর্তাবলী ও সেবা</a>
-      মেনে নিতে রাজি।
-    additional_information: সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত
-      তথ্যের প্রয়োজন।
+    teacher_terms: "আমি Code.org <a href='http://code.org/tos'> শর্তাবলী ও সেবা</a>
+      মেনে নিতে রাজি।"
+    additional_information: "সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত
+      তথ্যের প্রয়োজন।"
   signin_form:
-    title: একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন
-    login: ব্যবহারকারীর নাম অথবা ই-মেইল
-    password: পাসওআর্ড
-    remember: আমাকে মনে রাখুন
-    submit: সাইন ইন করুন
+    title: "একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন"
+    login: "ব্যবহারকারীর নাম অথবা ই-মেইল"
+    password: "পাসওআর্ড"
+    remember: "আমাকে মনে রাখুন"
+    submit: "সাইন ইন করুন"
   signin:
-    try_heading: সাইন ইন ছাড়াই কোডিং চেষ্টা করতে চান?
-    try_hoc: প্রথমে এক ঘণ্টার কোড চেষ্টা করুন
-    try_20hours: আমাদের 20 ঘন্টা কম্পিউটার বিজ্ঞানের সাথে পরিচিতি দেখুন।
+    try_heading: "সাইন ইন ছাড়াই কোডিং চেষ্টা করতে চান?"
+    try_hoc: "প্রথমে এক ঘণ্টার কোড চেষ্টা করুন"
+    try_20hours: "আমাদের 20 ঘন্টা কম্পিউটার বিজ্ঞানের সাথে পরিচিতি দেখুন।"
   signinsection:
-    welcome: '%{section_name}-এ স্বাগতম'
-    name: আপনার নাম পছন্দ করুন।
-    picture: এখন আপনার গোপন ছবি সন্ধান করুন
-    words: এখন আপনার গোপন কথা লিখুন
-    login: সাইন ইন করুন
+    welcome: "%{section_name}-এ স্বাগতম"
+    name: "আপনার নাম পছন্দ করুন।"
+    picture: "এখন আপনার গোপন ছবি সন্ধান করুন"
+    words: "এখন আপনার গোপন কথা লিখুন"
+    login: "সাইন ইন করুন"
   password:
     reset_form:
-      title: আপনার পাসওয়ার্ড ভুলে গেছেন?
-      email: ইমেইল ঠিকানা
-      submit: আমাকে পাসওয়ার্ড রিসেট নির্দেশাবলী পাঠান
+      title: "আপনার পাসওয়ার্ড ভুলে গেছেন?"
+      email: "ইমেইল ঠিকানা"
+      submit: "আমাকে পাসওয়ার্ড রিসেট নির্দেশাবলী পাঠান"
     change_form:
-      title: আপনার পাসওয়ার্ড পরিবর্তন করুন
-      new_password: নতুন পাসওয়ার্ড
-      confirm_password: নতুন পাসওয়ার্ড নিশ্চিত করুন
-      submit: আমার পাসওয়ার্ড পরিবর্তন করুন
+      title: "আপনার পাসওয়ার্ড পরিবর্তন করুন"
+      new_password: "নতুন পাসওয়ার্ড"
+      confirm_password: "নতুন পাসওয়ার্ড নিশ্চিত করুন"
+      submit: "আমার পাসওয়ার্ড পরিবর্তন করুন"
   welcome_email:
-    subject: আমার ক্লাসে (Code.org তে) যোগ দিন।
+    subject: "আমার ক্লাসে (Code.org তে) যোগ দিন।"
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
 
@@ -149,19 +149,19 @@
 
       %{name}
   follower:
-    invite_sent: আমন্ত্রণ পাঠানো হল।
-    added_teacher: '%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।'
-    registered: আপনি %{section_name} এর জন্য নিবন্ধন করেছেন।
+    invite_sent: "আমন্ত্রণ পাঠানো হল।"
+    added_teacher: "%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।"
+    registered: "আপনি %{section_name} এর জন্য নিবন্ধন করেছেন।"
     error:
-      signed_in: অগ্রসর হওয়ার আগে অনুগ্রহ করে সাইন আউট করুন
-      username_not_found: ইউজার নেম %{username} খুঁজে পাওয়া যায়নি
-      username_in_use: '%{username} ইতিমধ্যে নেয়া হয়েছে, অনুগ্রহ করে অন্য একটি চয়ন
-        করুন'
-      no_teacher: '''%{teacher_email_or_code}'' দিয়ে সাইন আপ করা কাউকে খুঁজে পাওয়া
-        যায় নি। অনুগ্রহ করে তাদের সাইন আপ করতে বলুন এবং আবার অ্যাড করুন'
-      section_not_found: কোন শাখা খুঁজে পাওয়া যায়নি এই কোডের '%{section_code}
-      blank_code: অনুগ্রহ করে একটি শাখা কোড প্রবেশ করান
-      cant_join_own_section: দুঃখিত, আপনি আপনার নিজের সেকশনে যোগ দিতে পারবেন না।
+      signed_in: "অগ্রসর হওয়ার আগে অনুগ্রহ করে সাইন আউট করুন"
+      username_not_found: "ইউজার নেম %{username} খুঁজে পাওয়া যায়নি"
+      username_in_use: "%{username} ইতিমধ্যে নেয়া হয়েছে, অনুগ্রহ করে অন্য একটি চয়ন
+        করুন"
+      no_teacher: "'%{teacher_email_or_code}' দিয়ে সাইন আপ করা কাউকে খুঁজে পাওয়া যায়
+        নি। অনুগ্রহ করে তাদের সাইন আপ করতে বলুন এবং আবার অ্যাড করুন"
+      section_not_found: "কোন শাখা খুঁজে পাওয়া যায়নি এই কোডের '%{section_code}"
+      blank_code: "অনুগ্রহ করে একটি শাখা কোড প্রবেশ করান"
+      cant_join_own_section: "দুঃখিত, আপনি আপনার নিজের সেকশনে যোগ দিতে পারবেন না।"
     mail:
       invite_student:
         subject: Code.org এ %{teacher_name} -এর সাথে একটি ক্লাসে যোগ দিন!
@@ -173,15 +173,15 @@
           নেই।'
   reports:
     error:
-      access_denied: আপনার এই ব্যক্তির পরিসংখ্যান দেখার অনুমতি নেই
+      access_denied: "আপনার এই ব্যক্তির পরিসংখ্যান দেখার অনুমতি নেই"
   redeem_prizes:
     title: 'Redeem Prizes: %{name}'
-    provider: 'প্রদানকারী:'
-    code: 'কোড:'
+    provider: "প্রদানকারী:"
+    code: "কোড:"
     redeem_header: 'To redeem:'
-    donorschoose_register: শিক্ষক হিসেবে DonorsChoose.org-এ নিবন্ধন করুন
-    donorschoose_project: একটি প্রকল্প পোস্ট করুন
-    donorschoose_how_to: কিভাবে আপনার কোড ব্যবহার করতে হবে
+    donorschoose_register: "শিক্ষক হিসেবে DonorsChoose.org-এ নিবন্ধন করুন"
+    donorschoose_project: "একটি প্রকল্প পোস্ট করুন"
+    donorschoose_how_to: "কিভাবে আপনার কোড ব্যবহার করতে হবে"
     success: Your prize was succesfully redeemed, see code below.
     error: Your prize could not be redeemed, please try again.
     error_us_only: The prize offer is only valid for U.S. users.
@@ -191,15 +191,15 @@
     teacher_info_required: 'Teacher prizes require school name and address information:'
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
-      title: অনুগ্রহ করে নিশ্চিত করুন
-      'no': না
+      title: "অনুগ্রহ করে নিশ্চিত করুন"
+      'no': "না"
       'yes': '"হ্যাঁ"'
       msg: Are you sure you want to claim the %{prize_name} prize?
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
-      msg_visit_website: ওয়েব সাইট ভিজিট করুন
+      msg_visit_website: "ওয়েব সাইট ভিজিট করুন"
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB of Dropbox Space
@@ -208,7 +208,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -248,68 +248,68 @@
             used by teachers in U.S. public schools.
   crud:
     new_model: New %{model}
-    show: প্রদর্শন করুন
-    edit: সম্পাদনা
-    edit_model: '%{model} সম্পাদনা করুন'
-    update: আপডেট
-    destroy: ধ্বংস
-    back: পেছনে
-    confirm: আপনি কি নিশ্চিত?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
+    show: "প্রদর্শন করুন"
+    edit: "সম্পাদনা"
+    edit_model: "%{model} সম্পাদনা করুন"
+    update: "আপডেট"
+    destroy: "ধ্বংস"
+    back: "পেছনে"
+    confirm: "আপনি কি নিশ্চিত?"
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    destroyed: "%{model} was successfully deleted."
     access_denied: You do not have access to this %{model}.
   nav:
     header:
       finished_hoc: I've finished my Hour of Code
       sign_in_to_save: Sign in to save progress
       free_play:
-        playlab: একটি অ্যাপ তৈরি করুন
+        playlab: "একটি অ্যাপ তৈরি করুন"
         artist: Draw Something
         calculate: Calculate Something
-        applab: একটি অ্যাপ তৈরি করুন
+        applab: "একটি অ্যাপ তৈরি করুন"
     user:
-      classroom: শিক্ষক হোম পেজ
+      classroom: "শিক্ষক হোম পেজ"
       district_dashboard: District Dashboard
-      label: হ্যালো %{username}
-      stats: কোড স্টুডিও
-      settings: আমার একাউন্ট
-      prizes: পুরস্কারসমূহ
-      logout: সাইন আউট
-      signin: সাইন ইন করুন
-      signup: সাইন আপ
+      label: "হ্যালো %{username}"
+      stats: "কোড স্টুডিও"
+      settings: "আমার একাউন্ট"
+      prizes: "পুরস্কারসমূহ"
+      logout: "সাইন আউট"
+      signin: "সাইন ইন করুন"
+      signup: "সাইন আপ"
       already_registered: Already registered?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: "%{name}'s progress"
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
-      close: বন্ধ
+      close: "বন্ধ"
       mastery: Concepts
-      puzzle_map: ষ্টেজসমূহ
+      puzzle_map: "ষ্টেজসমূহ"
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: (U.S. students only)
-      prizes_link: আরও তথ্য
+      prize_us_only: "(U.S. students only)"
+      prizes_link: "আরও তথ্য"
   teacher:
-    answer: উত্তর
-    for_teachers_only: শুধু শিক্ষকদের জন্য
+    answer: "উত্তর"
+    for_teachers_only: "শুধু শিক্ষকদের জন্য"
     title:
-      one: 'আপনার শিক্ষক:'
-      other: 'আপনার শিক্ষক:'
-    remove: (শিক্ষক অপসারণ করুন)
+      one: "আপনার শিক্ষক:"
+      other: "আপনার শিক্ষক:"
+    remove: "(শিক্ষক অপসারণ করুন)"
     confirm:
       remove: Are you sure you want to remove this teacher?
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: The teacher or student could not be found
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
     panel:
       answer_viewer: Answer Viewer
-      student: ছাত্র
+      student: "ছাত্র"
       viewing_solution: Viewing Solution
-      try_it_yourself: নিজে চেষ্টা করুন
-      section: শাখা
+      try_it_yourself: "নিজে চেষ্টা করুন"
+      section: "শাখা"
       example: Example Solution
       example_with_number: Example Solution %{solution_number}
       submitted_on: Submitted on %{date}
@@ -317,10 +317,10 @@
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: (leave blank if you don't want to change it)
-    current_password_hint: (we need your current password to confirm your changes)
+    new_password_hint: "(leave blank if you don't want to change it)"
+    current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
@@ -328,20 +328,16 @@
     delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: Completed
-    tried: চেষ্টা করা হয়েছে
-  user_stats:
-    recent_activity: সাম্প্রতিক কর্মকান্ড
-    show_more: Show more
-    classroom_activity: Unplugged Activity
+    tried: "চেষ্টা করা হয়েছে"
   home:
-    title: কোড স্টুডিও
+    title: "কোড স্টুডিও"
     description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
+    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS"
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: পাঠ পরিকল্পনা
-    signin_message: ইতিমধ্যে রেজিস্ট্রেশন করেছেন? %{link}
+    lesson_plans: "পাঠ পরিকল্পনা"
+    signin_message: "ইতিমধ্যে রেজিস্ট্রেশন করেছেন? %{link}"
     student_reg_link: Student Sign Up
     teacher_reg_link: Teacher Sign Up
     signin_directions: Use an account to track progress.<br/> Teachers, track your
@@ -362,25 +358,25 @@
     student_finished: You've completed all tutorials, pick another class %{online_link}
       or at a %{local_school_link}
     local_school: local school
-    online: অনলাইন
-    see_details: বিস্তারিত দেখুন
+    online: "অনলাইন"
+    see_details: "বিস্তারিত দেখুন"
     view_course: View Course
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to
       $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
-    trynow: এখন চেষ্টা করুন
+    trynow: "এখন চেষ্টা করুন"
     add_hint_help: Please help us to add smart hints to Code.org tutorials
     20hour_overview: This 20-hour course introduces core computer science and programming
       concepts. The course is designed for use in classrooms for grades K-8, but it
       is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
-      (all ages)</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
+    use_as_teacher: "শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন"
+    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
@@ -395,8 +391,8 @@
     female: Female
     none: Prefer not to answer
   user_type:
-    student: ছাত্র
-    teacher: শিক্ষক
+    student: "ছাত্র"
+    teacher: "শিক্ষক"
   footer:
     thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
       href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
@@ -413,10 +409,10 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
-    more: আরো
+    more: "আরো"
     feedback: Provide feedback
     translate: Help us translate to your language
     support: Support
@@ -497,7 +493,7 @@
       unused: Unused Levels
   upsell:
     hoc:
-      title: এক ঘন্টার কোড
+      title: "এক ঘন্টার কোড"
       body: Try the basics of computer science. Millions have given it a shot.
     flappy:
       title: Flappy Code
@@ -538,7 +534,7 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: "%{time_ago} ago"
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
@@ -551,7 +547,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -579,12 +575,12 @@
     open_response_title: Thanks
     open_response_body: Thanks for your response!
   dialog:
-    ok: ঠিক আছে
-    startover_title: তুমি কি সব আবার আগের থেকে শুরু করতে চাও?
+    ok: "ঠিক আছে"
+    startover_title: "তুমি কি সব আবার আগের থেকে শুরু করতে চাও?"
     startover_body: This will reset the puzzle to its start state and reset all the
       data you've added or changed.
-    startover_ok: আবার শুরু কর
-    startover_cancel: বাতিল করুন
+    startover_ok: "আবার শুরু কর"
+    startover_cancel: "বাতিল করুন"
   time:
     hour: 1 hour
     day: day
@@ -593,18 +589,18 @@
     script:
       name:
         20-hour:
-          title: '''K-৮ পরিচিতি'' থেকে ''কম্পিউটার বিজ্ঞানের কোর্স'' (১৫-২৫ ঘন্টা)'
+          title: "'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' (১৫-২৫ ঘন্টা)"
           description: This 20-hour course introduces core computer science and programming
             concepts. The course is designed for use in classrooms for grades K-8,
             but it is fun to learn at all ages.
         Hour of Code:
-          title: এক ঘন্টার কোড
+          title: "এক ঘন্টার কোড"
           description: ''
         edit-code:
-          title: কোড সম্পাদনা করুন
+          title: "কোড সম্পাদনা করুন"
           description: ''
         events:
-          title: ঘটনাবলী
+          title: "ঘটনাবলী"
           description: ''
         builder:
           title: Builder
@@ -614,10 +610,10 @@
           description: Wanna write your own game in less than 10 minutes? Try our
             Flappy Code tutorial!
         jigsaw:
-          title: টুকরো কাঠের ধাঁধা
+          title: "টুকরো কাঠের ধাঁধা"
           description: ''
         step:
-          title: ধাপ
+          title: "ধাপ"
           description: ''
         sample_level_builder:
           title: Sample Level Builder
@@ -651,28 +647,28 @@
     create_a_project: 'Create a new project:'
     new: Create New
     rename: Rename
-    save: সংরক্ষন করন
-    delete: বাদ দিন
+    save: "সংরক্ষন করন"
+    delete: "বাদ দিন"
     exit: Return to Course
     my_projects: My Projects
-    share: শেয়ার
+    share: "শেয়ার"
     share_title: Share your project
     share_copy_link: 'Copy the link:'
     close: Close
-    more: আরো
-    name: নাম
+    more: "আরো"
+    name: "নাম"
     updated: Updated
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
       below to make a new Play Lab or Artist project!<br/>You can come back and work
       on your projects at any time.
     need_help: Need help getting started?
-    really_delete: বাদ দিবেন কি?
+    really_delete: "বাদ দিবেন কি?"
     delete_yes: '"হ্যাঁ"'
-    delete_no: না
-    saved: গ্যালারিতে সংরক্ষিত!
+    delete_no: "না"
+    saved: "গ্যালারিতে সংরক্ষিত!"
     not_saved: Not saved
-    cancel: বাতিল করুন
+    cancel: "বাতিল করুন"
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your
       My Projects list. Anyone you have shared the link to will no longer be able
@@ -704,7 +700,7 @@
           harassment: Threats, cyberbullying, harassement
           offensive: Offensive content
           infringement: Copyright Infringement
-          other: অন্যান্য
+          other: "অন্যান্য"
         detail: Please provide as much detail as possible regarding the content you
           are reporting.
         acknowledge: By submitting this information, you acknowledge it will be handled

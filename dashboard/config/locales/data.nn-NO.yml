@@ -821,8 +821,8 @@
         replace_questions_degree: Bruk nedtrekkslista for å erstatte «???» med rett
           antal grader for å snu
         repeat_blocks: Bruk «Gjenta»-blokka og legg den rundt blokkene i arbeidsområdet
-        repeat_blocks_1: (1) Bruk denne blokka og sett han rundt dei grå blokkene
-          i arbeidsområdet
+        repeat_blocks_1: "(1) Bruk denne blokka og sett han rundt dei grå blokkene
+          i arbeidsområdet"
         repeat_blocks_2: (2) Flytt "Gjenta"-blokka hit og sett dei grå blokkene inni
         snowflake_dropdown: Bruk denne nedtrekkslista for å lage ulike snøflak!
         degrees_per_side: Del 360 på antall sider for å finne kor mange grader kvar

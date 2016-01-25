@@ -541,9 +541,9 @@
           2). Auta Diegoa kulkemaan 200 pikseliä Mannyn luokse käyttämällä 'liikuta
           näyttelijää' lohkoa. Sitten, yhdistä lohko tapahtumaan 'kun näyttelijä koskee'
           saadaksesi äänen kuulumaan kun he löytävät toisensa.
-        studio_iceage_repeat: '''Toista ikuisesti'' komento antaa sinun toistaa koodia
+        studio_iceage_repeat: "'Toista ikuisesti' komento antaa sinun toistaa koodia
           jatkuvasti. Voitko yhdistää lohkoja auttaaksesi isoäitiä kuntoilemaan liikkumalla
-          oikeaan ja vasempaan toistuvasti?'
+          oikeaan ja vasempaan toistuvasti?"
         studio_iceage_click_hello: Voitko auttaa Sidiä tekemään viimeisen kutsun ystävilleen
           kun häntä klikataan? Älä unohda klikata häntä kun olet painanut 'Suorita'.
         studio_iceage_move_events: Scrat etsii vieläkin tammenterhoja! Auta häntä
@@ -830,8 +830,8 @@
           astekulmalla
         repeat_blocks: Käytä "Toista" lohkoa ja laita se työtilassa olevien toisten
           lohkojen ympärille
-        repeat_blocks_1: (1) Käytä tätä lohkoa ja laita se harmaiden lohkojen ympärille
-          työtilassa
+        repeat_blocks_1: "(1) Käytä tätä lohkoa ja laita se harmaiden lohkojen ympärille
+          työtilassa"
         repeat_blocks_2: (2) Vedä "Toista"-lohko tähän, ja laita harmaat lohkot sen
           sisälle
         snowflake_dropdown: Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!
@@ -859,8 +859,8 @@
         length_parameter: Osaatko päivittää tämän funktion niin, että se käyttää "pituus"
           parametria?
         frozen_diamond_repeat: Käytä "toista"-lohkoa luodaksesi tämä muoto.
-        frozen_circle_function_in_circle_turn: Älä unohda kääntyä luotuasi kunkin
-          ympyrän.
+        frozen_circle_function_in_circle_turn: "Älä unohda kääntyä luotuasi kunkin
+          ympyrän."
         frozen_circle_function_with_parameter_circle: Käytä "Luo ympyrä"-lohkoa ja
           muuta kokoa.
         frozen_snowflake_branch: Käytä "luo lumihiutalehaara" -lohkoa

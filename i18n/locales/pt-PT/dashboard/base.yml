@@ -284,10 +284,6 @@ pt:
   user_level:
     completed: Concluído
     tried: Tentado
-  user_stats:
-    recent_activity: Atividade recente
-    show_more: Mostrar mais
-    classroom_activity: Atividade off-line
   home:
     title: Code Studio
     description: No Code Studio podes encontrar os cursos online do Code.org

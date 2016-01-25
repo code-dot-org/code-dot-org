@@ -284,10 +284,6 @@ km:
   user_level:
     completed: បាន​បញ្ចប់
     tried: បាន​ព្យាយាម
-  user_stats:
-    recent_activity: សកម្មភាព​ថ្មីៗ
-    show_more: បង្ហាញ​ច្រើន​ទៀត
-    classroom_activity: Unplugged Activity
   home:
     title: ដំណើការ​របស់​ខ្ញុំ
     description: Code Studio is home to online courses created by Code.org
@@ -491,9 +487,9 @@ km:
     open_response_body: Thanks for your response!
   dialog:
     ok: យល់ព្រម
-    startover_title: Are you sure you want to start over?
+    startover_title: តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: Start Over
+    startover_ok: ចាប់ផ្ដើម​ឡើង​វិញ
     startover_cancel: បោះបង់
   time:
     hour: 1 hour

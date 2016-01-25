@@ -410,7 +410,7 @@
       2-3 Maze 1_instruction: |
         Can you help me to catch the naughty pig? Stack a
         couple of "move forward" blocks together and press "Run".
-      2-3 Maze 10_instruction: นำฉันไป green evilness! (ระวังระเบิด)
+      2-3 Maze 10_instruction: "นำฉันไป green evilness! (ระวังระเบิด)"
       2-3 Maze 11_instruction: |
         Get me to the flower I'm hungry! How many times
         do you have to repeat a block?
@@ -446,14 +446,14 @@
       2-3 Maze 3_instruction: |
         Trace the path and lead me to the silly pig. Avoid
         TNT or feathers will fly!
-      2-3 Maze 4_instruction: นำฉันไป green evilness! (ระวังระเบิด)
-      2-3 Maze 5_instruction: นำฉันไป green evilness! (ระวังระเบิด)
+      2-3 Maze 4_instruction: "นำฉันไป green evilness! (ระวังระเบิด)"
+      2-3 Maze 5_instruction: "นำฉันไป green evilness! (ระวังระเบิด)"
       2-3 Maze 6_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
-      2-3 Maze 7_instruction: นำฉันไป green evilness! (ระวังระเบิด)
+      2-3 Maze 7_instruction: "นำฉันไป green evilness! (ระวังระเบิด)"
       2-3 Maze 8_instruction: Get me to the pig!
-      2-3 Maze 9_instruction: นำฉันไป green evilness! (ระวังระเบิด)
+      2-3 Maze 9_instruction: "นำฉันไป green evilness! (ระวังระเบิด)"
       2-3 Maze Loops 1_instruction: Can you get me to the pig using 5 blocks?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
       2-3 Maze Loops 18_instruction: "Get me to the sunflower!\r\n(Hint: You'll\nneed
@@ -484,7 +484,7 @@
       2-3 Maze sq2_instruction: |
         Trace the path and lead me to the silly pig.  Avoid
         the TNT or the feathers will fly!
-      2-3 Maze sq3_instruction: นำฉันไป green evilness! (ระวังระเบิด)
+      2-3 Maze sq3_instruction: "นำฉันไป green evilness! (ระวังระเบิด)"
       2-3 Maze sq4_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
@@ -958,12 +958,29 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
-      App Lab test_instruction: ทดสอบ
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
+      App Lab test_instruction: "ทดสอบ"
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -3271,15 +3288,15 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: การวิ่งไปหาไม้เลื้อยไม่ได้เป็นความคิดที่ดี
-        วิ่งผ่านไม้เลื้อยด้วยความรวดเร็วอย่างระมัดระวัง และเข้าไปในบ้านของคุณด้วยความปลอดภัย
+      Overworld Avoid Monsters_instruction: "การวิ่งไปหาไม้เลื้อยไม่ได้เป็นความคิดที่ดี
+        วิ่งผ่านไม้เลื้อยด้วยความรวดเร็วอย่างระมัดระวัง และเข้าไปในบ้านของคุณด้วยความปลอดภัย"
       Overworld Chop Tree_instruction: ไม้เป็นทรัพยากรที่สำคัญมาก หลายสิ่งหลายอย่างสร้างขึ้นด้วยไม้
         เดินไปที่ต้นไม้และใช้คำสั่ง "destroy block" เพื่อตัดต้นไม้
-      Overworld Chop Trees_instruction: เราจำเป็นต้องสร้างบ้านก่อนพระอาทิตย์ตกดิน
-        ต้องใช้ไม้จำนวนมากในการสร้างบ้าน ตัดต้นไม้ทั้ง 3 ต้น
-      Overworld Free Play 20x20_instruction: ขอแสดงความยินดี! คุณได้เล่นเกมปริศนาของเราครบทั้งหมดแล้ว
-        ตอนนี้คุณสามารถระเบิด สร้างและสร้างสรรค์บางสิ่งบางอย่างที่ไม่ซ้ำกันโดยใช้ทุกสิ่งที่คุณได้เรียนรู้มาแล้ว
-      Overworld Free Play_instruction: คุณจะสนุกกับการเล่นในภูมิทัศน์ของคุณ ให้คุณเลือกสิ่งที่จะสร้าง
+      Overworld Chop Trees_instruction: "เราจำเป็นต้องสร้างบ้านก่อนพระอาทิตย์ตกดิน
+        ต้องใช้ไม้จำนวนมากในการสร้างบ้าน ตัดต้นไม้ทั้ง 3 ต้น"
+      Overworld Free Play 20x20_instruction: "ขอแสดงความยินดี! คุณได้เล่นเกมปริศนาของเราครบทั้งหมดแล้ว
+        ตอนนี้คุณสามารถระเบิด สร้างและสร้างสรรค์บางสิ่งบางอย่างที่ไม่ซ้ำกันโดยใช้ทุกสิ่งที่คุณได้เรียนรู้มาแล้ว"
+      Overworld Free Play_instruction: "คุณจะสนุกกับการเล่นในภูมิทัศน์ของคุณ ให้คุณเลือกสิ่งที่จะสร้าง"
       Overworld House Frame - A_instruction: |
         Let's make our own house! This spot
         looks good. Build a frame on the dirt blocks.
@@ -3301,17 +3318,17 @@
       Overworld House Frame Chosen_instruction: |
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: มาเลือกบ้านของเรากันเถอะ! สถานที่นี้ดูดี
-        สร้างกรอบบนบล็อกดิน
-      Overworld Minecart Track_instruction: คุณกลับมาบนพื้นดินพร้อมทรัพยากรใต้ดินจำนวนมาก
+      Overworld House Frame_instruction: "มาเลือกบ้านของเรากันเถอะ! สถานที่นี้ดูดี
+        สร้างกรอบบนบล็อกดิน"
+      Overworld Minecart Track_instruction: "คุณกลับมาบนพื้นดินพร้อมทรัพยากรใต้ดินจำนวนมาก
         ตอนนี้เรากำลังจะสร้างการติดตามตามแนวดินจากบ้านของคุณ ขั้นตอนแรกให้นำแนวดินออก
-        เดินตามแนวดินและนำต้นไม้ออก
+        เดินตามแนวดินและนำต้นไม้ออก"
       Overworld Move to Sheep_instruction: เพิ่มคำสั่งที่สอง "เคลื่อนไปข้างหน้า" เพื่อไปหาแกะ
       Overworld Place Wall_instruction: บ้านทุกหลังเริ่มต้นด้วยกำแพง สร้างส่วนแรกของบ้านคุณโดยการเพิ่มคำสั่ง
         "วาง" และ "เคลื่อนไปข้างหน้า" ภายในรอบการวนซ้ำ
-      Overworld Plant Crops_instruction: การวางแผนล่วงหน้าเป็นสิ่งที่ดี ปลูกพืชบนทั้งสองด้านของน้ำเพื่อคุณจะได้ไม่หิวในภายหลัง
-      Overworld Powered Minecart_instruction: ทำได้ดีมาก! คุณได้รวบรวมทรัพยากรจำนวนมากและสร้างบ้านที่มีขนาดพอดี
-        ตอนนี้วางรั้วจากขอบของแผนที่ไปที่ประตูบ้านของคุณ
+      Overworld Plant Crops_instruction: "การวางแผนล่วงหน้าเป็นสิ่งที่ดี ปลูกพืชบนทั้งสองด้านของน้ำเพื่อคุณจะได้ไม่หิวในภายหลัง"
+      Overworld Powered Minecart_instruction: "ทำได้ดีมาก! คุณได้รวบรวมทรัพยากรจำนวนมากและสร้างบ้านที่มีขนาดพอดี
+        ตอนนี้วางรั้วจากขอบของแผนที่ไปที่ประตูบ้านของคุณ"
       Overworld Shear Sheep_instruction: ถึงเวลาตัดขนแกะแล้ว! ใช้คำสั่ง "ตัดขน" เพื่อเก็บขนแกะจากแกะทั้ง
         2 ตัว
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
@@ -3570,8 +3587,8 @@
       scrat 17 (copy 1)_instruction: |
         Ok, let's do that again for practice - this
         isn't very different, but watch out for the <insert obstacle name for Scrat>!
-      scrat 17_instruction: โอเค, ลองฝึกฝนกันอีกครั้ง - ครั้งนี้ไม่แตกต่างจากเดิมมาก
-        แต่ให้ระมัดระวังกำแพงไว้ให้ดี
+      scrat 17_instruction: "โอเค, ลองฝึกฝนกันอีกครั้ง - ครั้งนี้ไม่แตกต่างจากเดิมมาก
+        แต่ให้ระมัดระวังกำแพงไว้ให้ดี"
       scrat 18 (copy 1)_instruction: |
         The "If-else" blocks checks a condition,
         and then does one thing OR another. To get me to the acorn try to use this
@@ -3582,9 +3599,9 @@
         One more practice of the "if-else" block,
         can you get it right on your first try?
       scrat 19_instruction: มาลองทำอีกแบบฝึกหัด กล่องคำสั่ง "If-else" อีกครั้ง มาลองดูกันว่าเธอจะทำสำเร็จตั้งแต่ครั้งแรกเลยได้ไหม
-      scrat 20_instruction: ลองดูซิว่า เธอจะใช้กล่องคำสั่งแค่ 3 กล่อง เพื่อช่วยให้ฉันออกจากเส้นทางทางที่คดเคี้ยวได้ไหม?
+      scrat 20_instruction: "ลองดูซิว่า เธอจะใช้กล่องคำสั่งแค่ 3 กล่อง เพื่อช่วยให้ฉันออกจากเส้นทางทางที่คดเคี้ยวได้ไหม?
         ซึ่งถ้าเธอทำได้ถูกต้องฉันก็จะสามารถเดินไปตามเส้นทางที่คดเคี้ยวไมว่าเส้นทางจะยาวเท่าไหร่
-        เร็วเข้า! น้ำแข็งกำลังละลายแล้ว
+        เร็วเข้า! น้ำแข็งกำลังละลายแล้ว"
       SpecialFrozenLevel_instruction: |
         You've officially become a master artist!
         Create a winter wonderland.
@@ -3667,9 +3684,9 @@
         With your partner, develop a
         protocol or set of rules for communicating a drawing using only bits. See
         the worksheet handed out by your teacher for more detailed instructions!
-      U2 frequency caesar_instruction: คำแนะนำ
-      U2 frequency random sub_instruction: คำแนะนำ
-      U2 vigenere cipher_instruction: คำแนะนำ
+      U2 frequency caesar_instruction: "คำแนะนำ"
+      U2 frequency random sub_instruction: "คำแนะนำ"
+      U2 vigenere cipher_instruction: "คำแนะนำ"
       U2 Vigenere_instruction: Test
       U2L04 - NetSim Routers with Addresses_instruction: |
         Send messages with your
@@ -5359,12 +5376,12 @@
         "เคลื่อนไปข้างหน้า"  ในที่ที่เหมาะสมเพื่อระเบิดบล็อกเหล่านี้
       Underground If Statements_instruction: ตอนนี้สิ่งต่างๆ กำลังยากขึ้น ระเบิดหินสีแดง
         3 บล็อก แต่ต้องไม่ตกลงในลาวา ใช้คำสั่ง "หากมี" เพื่อวางหินกรวดบนลาวาที่คุณค้นพบ
-      Underground Iron_instruction: การเดินไปหาลาวาที่กำลังละลายไม่ได้เป็นความคิดที่ดี
-        วางหินกรวดเพื่อสร้างสะพาน จากนั้นระเบิดบล็อกเหล็กอย่างน้อย 2 บล็อก
-      Underground Mine in a Circle_instruction: หาวิธีที่จะได้รับเพชร 5 บล็อกและหินสีแดง
-        7 บล็อก! ลองใช้คำสั่งซ้ำภายในคำสั่งซ้ำเพื่อเดินในตาราง
-      Underground Mining Coal_instruction: คุณจะพบทรัพยากรที่มีคุณค่ามากที่สุดใต้ดิน
-        แต่ก็อาจจะพบกับความมืด วางคบไฟอย่างน้อย 2 อันและระเบิดถ่านหินอย่างน้อย 2 บล็อก
+      Underground Iron_instruction: "การเดินไปหาลาวาที่กำลังละลายไม่ได้เป็นความคิดที่ดี
+        วางหินกรวดเพื่อสร้างสะพาน จากนั้นระเบิดบล็อกเหล็กอย่างน้อย 2 บล็อก"
+      Underground Mine in a Circle_instruction: "หาวิธีที่จะได้รับเพชร 5 บล็อกและหินสีแดง
+        7 บล็อก! ลองใช้คำสั่งซ้ำภายในคำสั่งซ้ำเพื่อเดินในตาราง"
+      Underground Mining Coal_instruction: "คุณจะพบทรัพยากรที่มีคุณค่ามากที่สุดใต้ดิน
+        แต่ก็อาจจะพบกับความมืด วางคบไฟอย่างน้อย 2 อันและระเบิดถ่านหินอย่างน้อย 2 บล็อก"
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

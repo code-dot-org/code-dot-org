@@ -42,7 +42,7 @@ hu:
           "Bee: Loops": 'Méh: ciklusok'
           "Studio: Create a Story": 'Játéklabor: hozz létre egy történetet'
           "Artist: Loops": 'Művész: ciklusok'
-          description_audience: 'Korosztály: 4+ (nemolvasók)'
+          description_audience: 4-től 6 éves korig
           description_short: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő korosztály számára készült.
         course2:
           The Maze: A labirintus
@@ -81,7 +81,7 @@ hu:
           "Artist: Sequence2": 'Művész: sorozat 2'
           "Maze: Sequence2": 'Labirintus: sorozat 2'
           "Artist: Nested Loops": 'Művész: egymásba ágyazott ciklusok'
-          description_audience: 'Korosztály: 6+ (olvasni tudók)'
+          description_audience: 6-tól 18 éves korig
           description_short: A 2. tanfolyam a már olvasó korosztály számára készült.
         course3:
           The Maze: A labirintus
@@ -132,7 +132,7 @@ hu:
           "Bee: Debugging2": 'Méh: hibakeresés 2'
           "Artist: Patterns": 'Művész: minták'
           Songwriting: Dalszerzés
-          description_audience: 'Korosztály: 8+ (a 2. tanfolyam elvégzése után)'
+          description_audience: 8-tól 18 éves korig
           description_short: A 3. tanfolyam a 2. tanfolyam folytatása.
         playlab:
           title: Játéklabor
@@ -147,7 +147,7 @@ hu:
         hourofcode:
           Maze: Labirintus
           title: Hagyományos Útvesztö
-          description: Ismerd meg a számítógép-tudomány alapjait közösen a Dühös Madarak, a Növények kontra Zombik karaktereivel és a Motkányal a Jégkorszakból!
+          description: Ismerd meg a számítástechnika alapjait közösen az Angry Birds, Plants vs. Zombies karaktereivel valamint Motkányal a Jégkorszakból!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok szórakoztató karakterrel!
         frozen:
           title: Kódolás Annával és Elsával
@@ -166,7 +166,7 @@ hu:
           "Play Lab: Functions with Parameters": 'Játéklabor: függvények paraméterekkel'
           "Bee: Functions with Parameters": 'Méh: függvények paraméterekkel'
           "Artist: For Loops": 'Művész: számláló ciklusok'
-          "Play Lab: For Loops": 'Játéklabor: számláló ciklusok'
+          "Play Lab: For Loops": 'Játéklabor: ciklusok'
           "Artist: Functions": 'Művész: függvények'
           "Unplugged: Tangrams": 'Gép nélküli feladatok: Tangram'
           Artist: Művész
@@ -181,10 +181,10 @@ hu:
           Farmer Binary: 'Farmer: a kettes számrendszer'
           Maze and Bee: Labirintus és a méh
           Artist Binary: 'Művész: a kettes számrendszer'
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           Super Challenge - Variables: 'Szuper kihívás: változók'
           Super Challenge - For Loops: 'Szuper kihívás - For Loops (számláló ciklus)'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
+          Super Challenge - Functions and Parameters: 'Szuper kihívás - Funkciók és Paraméterek'
           Extreme Challenge - Comprehensive: 'Extrém kihívás - Átfogó'
         Course4pre:
           title: A 4. tanfolyam előfeltétel
@@ -247,8 +247,8 @@ hu:
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
           title: Disney Infinity játéklabor
-          description_short: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
-          description: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney Infinity karakterek szereplésével.
+          description_short: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
+          description: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
           Play Lab: Játéklabor
           Infinity: Végtelen
         algebrademo:
@@ -323,7 +323,7 @@ hu:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Gyorsított bemutató a CS tanfolyamra
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           description: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
           description_short: A 20 órás tanfolyam kiterjed az alapvető számítógépes tudományra és a programozási fogalmakra a 2-4. tanfolyamban.
           Introduction to Computer Science: Bevezetés a számítástechnikába
@@ -381,7 +381,7 @@ hu:
           Step: Lépés
         Hour of Code:
           title: Kódolás órája 2013
-          description: Próbáld ki az alapvető számítógépes tudományokat az Angry Birds, a növények vs zombik alapján!
+          description: Próbáld ki az alapszintű számítástechnikát az Angry Birds, Plants vs. Zombies karaktereivel!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok szórakoztató karakterrel!
           Hour of Code 2013: Kódolás órája 2013
         Code Studio Puzzle Challenge:
@@ -803,8 +803,8 @@ hu:
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -880,8 +880,8 @@ hu:
           Practice PT - Cybersecurity Innovations: 'Practice PT - Cybersecurity Innovations'
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Evaluation Blocks: Értékelési blokk
           Strings and Images: Húrok és Képek
           Defining Variables: Változók definiálása
@@ -917,7 +917,7 @@ hu:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -928,8 +928,8 @@ hu:
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -982,8 +982,8 @@ hu:
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Welcome!: Üdvözlünk!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1034,8 +1034,8 @@ hu:
           Hour of Code 2015: A kódolás órája 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1056,8 +1056,8 @@ hu:
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
           Welcome!: Üdvözlünk!
           Wrap-Up: Összegzés
           Review StarLogo Nova: Review StarLogo Nova
@@ -1073,8 +1073,8 @@ hu:
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
           Welcome!: Üdvözlünk!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1093,8 +1093,8 @@ hu:
         sciencePD2b-iZone:
           Welcome!: Üdvözlünk!
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1103,8 +1103,8 @@ hu:
           Wrap-Up: Összegzés
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
           Welcome!: Üdvözlünk!
           0: |
             Unit 1, Days 1-2
@@ -1122,8 +1122,8 @@ hu:
           Wrap-up: Összefoglaló
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
           Welcome!: Üdvözlünk!
           0: |
             Unit 1, Days 1-2
@@ -1368,8 +1368,10 @@ hu:
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1412,14 +1414,15 @@ hu:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Jégkorszak játéklabor
           description_short: Mesélj el egy történetet vagy készíts egy játékot a Jégkorszak játéklaborral!
@@ -1475,10 +1478,10 @@ hu:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball játéklabor
-          description_short: írj egy történetet vagy készíts egy játékot a Gumball játéklaborban!
-          description: írj egy történetet vagy készíts egy játékot a Gumball játéklaborban!
-          Gumball Play Lab: Gumball játéklabor
+          title: Gumball Játéklabor
+          description_short: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
+          description: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
+          Gumball Play Lab: Gumball Játéklabor
         starwars:
           title: 'Star Wars: A galaxis építése kóddal'
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.

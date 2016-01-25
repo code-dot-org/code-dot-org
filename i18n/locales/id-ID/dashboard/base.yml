@@ -285,10 +285,6 @@ id:
   user_level:
     completed: Selesai
     tried: Telah mencoba
-  user_stats:
-    recent_activity: Aktivitas terakhir
-    show_more: Tunjukkan lebih banyak
-    classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
     description: Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org

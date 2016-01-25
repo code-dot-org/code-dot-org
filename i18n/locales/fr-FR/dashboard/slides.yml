@@ -1295,11 +1295,11 @@ fr:
           To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow outline, and then they'll snap together. In this first puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get to Baymax by dragging the "move right" block out and linking it to the "when run" block. Once you have your blocks in place, hit the "Run" button to see what you've programmed.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: "Get started and by the end you'll be able to create your own game with these amazing actors that can interact, score points, throw microbots, cherries, saucepans, sparkles, and ice.. and vanish each other. It's all up to you!"
+        text: "Commence et d'ici la fin, tu seras en mesure de créer ton propre jeu avec ces acteurs talentueux qui peuvent interagir, marquer des points, lancer des microbots, des cerises, des casseroles, des étincelles et de la glace... et se faire disparaître l'un l'autre. Ça ne dépend que de toi !"
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you'll never have to because computers are really good at repeating things. This is the repeat forever block. Anything inside this block will happen forever in the game."
+        text: "Peux-tu imaginer avoir à répéter quelque chose à l'infini ? Avec un peu de chance, tu n'auras jamais à le faire parce que les ordinateurs sont vraiment bon pour répéter les choses. Ça, c'est le bloc de répétition à l'infini. Tout ce qui se trouve dans ce bloc se déroulera dans le jeu pour toujours."
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
         text: "So if we wanted an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block. In this next puzzle, our goal is to help Anna walk up and down continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game."

@@ -70,8 +70,8 @@
     need_confirmation: Tidak menerima arahan pengesahan?
     need_unlock: Tidak menerima kunci arahan?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: "%{count} students have already signed up."
+    teacher_count: "%{count} teachers have already signed up."
     overview_student: Daftarkan akaun untuk menjejaki kemajuan anda. Email anda digunakan
       terutamanya untuk membenarkan anda untuk mendaftar masuk dan memulihan kata
       laluan. Untuk maklumat lanjut, lihat  <a href="http://code.org/privacy">Polisi
@@ -145,12 +145,12 @@
       dan Plants vs Zombie! :-) % {nama}'
   follower:
     invite_sent: Jemputan dihantar
-    added_teacher: '%{name} ditambah sebagai guru anda'
+    added_teacher: "%{name} ditambah sebagai guru anda"
     registered: Anda telah berdaftar untuk %{section_name}.
     error:
       signed_in: Sila daftar keluar sebelum teruskan
       username_not_found: Pengguna %{username} tidak dijumpai
-      username_in_use: '%{username} telah dipilih, silih pilih yang lain'
+      username_in_use: "%{username} telah dipilih, silih pilih yang lain"
       no_teacher: Tidak dapat menemui sesiapa yang mendaftar masuk  dengan '%{teacher_email_or_code}'.
         Sila minta mereka untuk mendaftar di sini dan cuba tambah mereka lagi
       section_not_found: Tidak dapat mencari bahagian dengan kod '%{section_code}'.
@@ -196,7 +196,7 @@
         Syarikat.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB ruang Dropbox
@@ -205,7 +205,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -252,9 +252,9 @@
     destroy: Hapuskan
     back: Belakang
     confirm: Adakah anda pasti?
-    created: '%{model} telah berjaya dicipta.'
-    updated: '%{model} telah berjaya diperbaharui.'
-    destroyed: '%{model} telah berjaya dihapuskan.'
+    created: "%{model} telah berjaya dicipta."
+    updated: "%{model} telah berjaya diperbaharui."
+    destroyed: "%{model} telah berjaya dihapuskan."
     access_denied: Anda tidak mempunyai akses kepada %{model} ini.
   nav:
     header:
@@ -277,7 +277,7 @@
       signup: Mendaftar
       already_registered: Already registered?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: "%{name}'s progress"
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'
       close: TUTUP
@@ -285,7 +285,7 @@
       puzzle_map: Peringkat
       prizes: Kumpul semua %{total_trophies} trofi dan menangi hadiah-hadiah!
       prize_earned: Semua %{total_trophies} Piala telah dikumpul. Menang Hadiah!
-      prize_us_only: (Pelajar dari  A.S. sahaja)
+      prize_us_only: "(Pelajar dari  A.S. sahaja)"
       prizes_link: maklumat lanjut
   teacher:
     answer: Answer
@@ -293,14 +293,14 @@
     title:
       one: 'Guru anda:'
       other: 'Guru anda:'
-    remove: (keluarkan guru)
+    remove: "(keluarkan guru)"
     confirm:
       remove: Adakah anda pasti anda mahu keluarkan guru ini?
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: Guru atau pelajar tidak dapat dijumpai
-    student_teacher_disassociated: '%{teacher_name} telah dikeluarkan sebagai guru
-      %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} telah dikeluarkan sebagai guru
+      %{student_name}"
     panel:
       answer_viewer: Answer Viewer
       student: pelajar
@@ -314,11 +314,11 @@
   user:
     email_confirm_needed: 'Alamat e-mel belum disahkan:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Hantar semula arahan pengesahan
-    new_password_hint: (biarkan kosong jika anda tidak mahu mengubahnya)
-    current_password_hint: (kami memerlukan kata laluan semasa anda untuk mengesahkan
-      perubahan anda)
+    new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
+    current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
+      perubahan anda)"
     delete: Delete your account
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
@@ -327,16 +327,12 @@
   user_level:
     completed: Lengkap
     tried: Telah dicuba
-  user_stats:
-    recent_activity: Aktiviti terkini
-    show_more: Tunjukkan Lagi
-    classroom_activity: Cabut aktiviti
   home:
     title: Kemajuan saya
     description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
+    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS"
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Sudah mendaftar? %{link}
@@ -374,11 +370,11 @@
     test_videos_help: Uji pemain video baru kami di sekolah anda
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
-      (all ages)</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our general course for</h2><h1>All Ages</h1>
+    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our general course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a course at Code Studio
     choose_next_course: Try a Code Studio course by choosing one below
@@ -411,8 +407,8 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
     more: Lagi
     feedback: Sediakan maklum balas
@@ -536,7 +532,7 @@
     want_to_make_your_own: Ingin buat anda punya sendiri?
     more: Lagi &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: "%{time_ago} ago"
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
@@ -549,7 +545,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Jawapan yang salah
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!

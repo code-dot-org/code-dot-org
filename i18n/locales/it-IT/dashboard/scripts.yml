@@ -1370,8 +1370,10 @@ it:
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1422,6 +1424,7 @@ it:
           description_audience: Da 10 anni in su (dopo il Corso 3)
           Halloween 2015: Halloween 2015
           description: "Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!"
+          Valentine 2016: Valentine 2016
         iceage:
           title: "Laboratorio con L'Era Glaciale"
           description_short: "Crea una storia oppure fai un gioco con il Laboratorio con L'Era Glaciale!"

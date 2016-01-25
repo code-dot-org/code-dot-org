@@ -282,10 +282,6 @@ bg:
   user_level:
     completed: Завършено
     tried: Опитах
-  user_stats:
-    recent_activity: Скорошна активност
-    show_more: Покажи още
-    classroom_activity: Ънплъгд дейност
   home:
     title: Студио по кодиране
     description: Студиото за кодиране представя всички онлайн курсове, създадени от Code.org

@@ -10,22 +10,22 @@
       2-3 Artist 12_instruction: Stilltu "endurtaka" kubbinn þannig að hann búi til
         "hring" til að ljúka auganu. Hve oft þarf að endurtaka til að ljúka hringnum,
         ef hver hreyfing snýr til hægri um 1 gráðu? 180? 360? 500?
-      2-3 Artist 2 new_instruction: 'Þetta hús er með hálfbyggðan vegg. Hver hlið
-        er 100 dílar, en hálfbyggði veggurinn er bara 50. Ljúktu við vegginn. '
-      2-3 Artist 2_instruction: 'Þetta hús er með hálfbyggðan vegg. Hver hlið er 100
-        dílar, en hálfbyggði veggurinn er bara 50. Ljúktu við vegginn. '
+      2-3 Artist 2 new_instruction: "Þetta hús er með hálfbyggðan vegg. Hver hlið
+        er 100 dílar, en hálfbyggði veggurinn er bara 50. Ljúktu við vegginn. "
+      2-3 Artist 2_instruction: "Þetta hús er með hálfbyggðan vegg. Hver hlið er 100
+        dílar, en hálfbyggði veggurinn er bara 50. Ljúktu við vegginn. "
       2-3 Artist 3.4_instruction: Kubburinn "hoppa" færir listamanninn án þess að
         teikna. Gerðu brotalínuna með því að nota bæði hoppa og færa kubbana.
-      2-3 Artist 3_instruction: Þessi hattur er 100 dílar á hæð. Teiknaðu hatt sem
-        er 70 dílum lægri.
+      2-3 Artist 3_instruction: "Þessi hattur er 100 dílar á hæð. Teiknaðu hatt sem
+        er 70 dílum lægri."
       2-3 Artist 3new_instruction: Rauði hatturinn er 100 díla hár. Ljúktu við að
         teikna svartan hatt sem er 70 dílum styttri. Breidd svarta hattsins er 50
         dílar.
       2-3 Artist 4_instruction: Hjálpaðu mér að ljúka húsinu fyrir þennan kött.
       2-3 Artist 5_instruction: Skiptu út þessum kóða fyrir "endurtaka" kubb og teiknaðu
         sama hús með aðeins 3 kubbum.
-      2-3 Artist 6_instruction: 'Þetta hús er án þaks! Teiknaðu þríhyrninginn. Vísbending:
-        Hliðarnar þrjár eru jafnlangar.'
+      2-3 Artist 6_instruction: "Þetta hús er án þaks! Teiknaðu þríhyrninginn. Vísbending:
+        Hliðarnar þrjár eru jafnlangar."
       2-3 Artist 7_instruction: 'Ljúktu við að teikna gluggann. Hver ferningur gluggans
         er 25 dílar. '
       2-3 Artist 8_instruction: Ljúktu við básana fyrir dýrin með því að skipta rétthyrningnum
@@ -40,27 +40,27 @@
         er of mjótt. Vísbending: Breikkaðu það um 10 díla'
       2-3 Artist Debugging 11_instruction: Hjálpaðu mér að ljúka við fallega snjókornið.
         Hve oft þarf ég að endurtaka til að ljúka því?
-      2-3 Artist Debugging 12_instruction: Ég á að bæta haföldu við þessa mynd. Getur
-        þú hjálpað?
-      2-3 Artist Debugging 2_instruction: 'Þessi kóði fyrir veiðihárin þrjú er rangur.
-        Vísbending: Hvert hár er 75 díla langt. Lagaðu kóðann svo hann teikni veiðihárin.'
+      2-3 Artist Debugging 12_instruction: "Ég á að bæta haföldu við þessa mynd. Getur
+        þú hjálpað?"
+      2-3 Artist Debugging 2_instruction: "Þessi kóði fyrir veiðihárin þrjú er rangur.
+        Vísbending: Hvert hár er 75 díla langt. Lagaðu kóðann svo hann teikni veiðihárin."
       2-3 Artist Debugging 3_instruction: 'Báturinn minn lekur! Getur þú lagað hann
         með því að breyta horni línunnar? Vísbending: Síðasta hornið er skakkt um
         15 gráður.'
       2-3 Artist Debugging 4_instruction: Hvaða mynd erum við að reyna að teikna?
         Ljúktu við að tengja punktana með viðeigandi línum og hornum.
-      2-3 Artist Debugging 5_instruction: 'Þessi kóði fyrir fótlegg er rangur. Vísbending:
-        Hann er of langur. Við gætum þurft að stytta um einn lið (þ.e. í kóðanum!)'
-      2-3 Artist Debugging 6_instruction: Það virðist vanta fót á stólinn sem ég sit
-        á. Lagaðu kubbana svo hann fái fótinn.
+      2-3 Artist Debugging 5_instruction: "Þessi kóði fyrir fótlegg er rangur. Vísbending:
+        Hann er of langur. Við gætum þurft að stytta um einn lið (þ.e. í kóðanum!)"
+      2-3 Artist Debugging 6_instruction: "Það virðist vanta fót á stólinn sem ég
+        sit á. Lagaðu kubbana svo hann fái fótinn."
       2-3 Artist Debugging 7_instruction: Hér virðist C vera teiknað öfugt. Getur
         þú teiknað það rétt?
       2-3 Artist Debugging 8_instruction: Hjólið mitt er ekki búið. Hve oft þarf ég
         að endurtaka til að ljúka því?
-      2-3 Artist Debugging 9_instruction: 'Þessi kóði fyrir stilk er rangur. Vísbending:
-        Hornið er skakkt um 60 gráður'
-      2-3 Artist Debugging Assessment 1_instruction: 'Þetta form er of lítið. Getur
-        þú stækkað það? Vísbending: Það ætti að vera 70 dílar á hverja hlið.'
+      2-3 Artist Debugging 9_instruction: "Þessi kóði fyrir stilk er rangur. Vísbending:
+        Hornið er skakkt um 60 gráður"
+      2-3 Artist Debugging Assessment 1_instruction: "Þetta form er of lítið. Getur
+        þú stækkað það? Vísbending: Það ætti að vera 70 dílar á hverja hlið."
       2-3 Artist Free Play_instruction: Frjáls æfing! Teiknaðu eigin hugmynd.
       2-3 Artist Functions 1_instruction: 'Halló. Ég uppvakningur listamaður. Ég elska
         teikna! Hjálpa mér teikna ferköntuðu gleraugun. Vísbending: Brúin milli glerja
@@ -152,9 +152,9 @@
         12 - hve mikið þarf að snúa eftir hvert form?'
       2-3 Artist Nested Loops 5_instruction: Teiknaðu glugga þessarar byggingar með
         faldaðri lykkju. Gluggarnir eru 20 díla langir og með 20 díla millibili.
-      2-3 Artist Nested Loops 6_instruction: Þessi risaeðla er með 8 brodda á halanum.
+      2-3 Artist Nested Loops 6_instruction: "Þessi risaeðla er með 8 brodda á halanum.
         Hver broddur er 30 dílar á lengd. Endurtaktu þríhyrninginn 8 sinnum, en gættu
-        þess að fara áfram eftir hvern.
+        þess að fara áfram eftir hvern."
       2-3 Artist Nested Loops 7_instruction: Endurtaktu þennan þríhyrning 10 sinnum
         í lykkju til að teikna sólina. Þú verður að færa og snúa eftir hvern þríhyrning.
         Þú finnur gráður snúningsins með því að deila fjölda gráða í hring með fjölda
@@ -198,27 +198,27 @@
       2-3 Bee Conditionals 9_instruction: Safnaðu öllum blómasafa úr hverju blómi.
       2-3 Bee Conditionals Assessment 1_instruction: 'Mat: Safnaðu öllum blómasafanum.
         Gættu þess að safna ekki safa úr fjólubláu blómi sem hefur engan.'
-      2-3 Bee Debugging 1_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 10_instruction: Þessi kóði er lúsugur. Lagaðu villu(r) til
-        að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 2_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 3_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 4_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 5_instruction: Þennan kóða þarf að kemba. Lagaðu villu(r)
+      2-3 Bee Debugging 1_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 10_instruction: "Þessi kóði er lúsugur. Lagaðu villu(r) til
+        að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 2_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 3_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 4_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 5_instruction: "Þennan kóða þarf að kemba. Lagaðu villu(r)
         til að safna öllum blómasafanum og búa til allt hunangið. Þú getur nú keyrt
-        í skrefum.
-      2-3 Bee Debugging 6_instruction: Þessir kubbar eru eitthvað lúsugir. Lagaðu
-        villu(r) til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 7_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 8_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
-      2-3 Bee Debugging 9_instruction: Þessir kubbar eru að stríða mér. Lagaðu villu(r)
-        til að safna öllum blómasafanum og búa til allt hunangið.
+        í skrefum."
+      2-3 Bee Debugging 6_instruction: "Þessir kubbar eru eitthvað lúsugir. Lagaðu
+        villu(r) til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 7_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 8_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
+      2-3 Bee Debugging 9_instruction: "Þessir kubbar eru að stríða mér. Lagaðu villu(r)
+        til að safna öllum blómasafanum og búa til allt hunangið."
       2-3 Bee Debugging Assessment 1_instruction: 'Mat: Þetta er ekki í lagi. Lagaðu
         villu(r) til að safna öllum blómasafanum og búa til allt hunangið.'
       2-3 Bee Functions 1_instruction: Föll eru kubbar með kóða sem leysir tiltekið
@@ -317,8 +317,8 @@
         kubbi!
       2-3 Maze 16 before_instruction: Komdu mér til svínsins.
       2-3 Maze 16_instruction: Komdu mér til sólblómsins. Settu kubbana í lykkju!
-      2-3 Maze 2_instruction: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að komast
-        þangað!
+      2-3 Maze 2_instruction: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að komast
+        þangað!"
       2-3 Maze 3_instruction: Fylgdu slóðinni og láttu mig ná þessu kjánalega svíni.
         Ekki snerta TNT annars verður fjaðrafok!
       2-3 Maze 4_instruction: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT
@@ -354,8 +354,8 @@
         Búa til lykkju með "endurtaka þar til" kubbi.
       2-3 maze sq14_instruction: Geturðu komist til sólblómsins með aðeins 4 kubbum?
       2-3 maze sq15_instruction: Geturðu komist til sólblómsins með aðeins 5 kubbum?
-      2-3 maze sq16_instruction: Þetta er líkt, en aðeins öðruvísi. Getur þú leyst
-        þetta með aðeins fimm kubbum?
+      2-3 maze sq16_instruction: "Þetta er líkt, en aðeins öðruvísi. Getur þú leyst
+        þetta með aðeins fimm kubbum?"
       2-3 Maze sq2_instruction: Fylgdu slóðinni og komdu mér til kjánasvínsins. Ekki
         snerta TNT annars verður fjaðrafok!
       2-3 Maze sq3_instruction: Leiddu mig að hinum illa græna grís! (Gættu þín á
@@ -366,8 +366,8 @@
         kubb?
       2-3 Maze sq6_instruction: 'Getur þú notað aðeins tvo kubba í stað síðasta svars?
         (Vísbending: Búðu til lykkju með "endurtaka" kubbi.)'
-      2-3 Maze sq7_instruction: Þetta græna er ekki velkomið. Komdu mér þangað með
-        3 kubbum.
+      2-3 Maze sq7_instruction: "Þetta græna er ekki velkomið. Komdu mér þangað með
+        3 kubbum."
       2-3 Maze sq8_instruction: Komdu mér til svínsins! (Hvar er nú þessi "endurtaka"
         kubbur?)
       2-3 Maze sq9_instruction: Notaðu lykkjur til að ná svínka með færri kubbum.
@@ -387,16 +387,16 @@
       4-5 Artist 3.5_instruction: Jæja, hvað skyldi gerast ef þú keyrir þennan kóða?
         Endurtaktu hann nógu oft til að ljúka við teikninguna. Litirnir verða (sennilega)
         mismunandi í hvert sinn.
-      4-5 Artist 3_instruction: Þetta rétthyrnda blómabeð hefur ummálið 600. Langa
-        hliðin er 200. Teiknaðu rétthyrninginn.
+      4-5 Artist 3_instruction: "Þetta rétthyrnda blómabeð hefur ummálið 600. Langa
+        hliðin er 200. Teiknaðu rétthyrninginn."
       4-5 Artist 4_instruction: Hve margar gráður eru í hring? Endurtaktu kubbana
         í lykkju til að búa til litahring.
       4-5 Artist 5_instruction: Hvaða horn notar þú?
-      4-5 Artist 6_instruction: Þessi jafnhliða þríhyrningur hefur hornin 60, 60 og
-        60 gráður. Hver hlið er 200 dílar. Ljúktu við teikninguna.
-      4-5 Artist 7_instruction: Þessi rétthyrndi þríhyrningur hefur hornin 30, 60
+      4-5 Artist 6_instruction: "Þessi jafnhliða þríhyrningur hefur hornin 60, 60
+        og 60 gráður. Hver hlið er 200 dílar. Ljúktu við teikninguna."
+      4-5 Artist 7_instruction: "Þessi rétthyrndi þríhyrningur hefur hornin 30, 60
         og 90 gráður. Lengd hallandi hliðarinnar er tvöföld hæðin, sem er 100 dílar.
-        Ljúktu við teikninguna.
+        Ljúktu við teikninguna."
       4-5 Artist 8_instruction: Miðlínan á fótboltavelli liggur hornrétt á hliðarlínurnar.
         Þessi völlur hefur ummálið 800 dílar og hann er 240 dílar á lengd. Hve breiður
         er hann? Teiknaðu útlínurnar og miðlínuna.
@@ -481,10 +481,10 @@
         100 dílar.
       4-5 Artist Patterns 1_instruction: Getur þú teiknað þennan ferning með því að
         nota lykkju? Hliðarnar eru 20 dílar.
-      4-5 Artist Patterns 10_instruction: 'Þessi kóði teiknar tvær raðir af sexhyrningum
+      4-5 Artist Patterns 10_instruction: "Þessi kóði teiknar tvær raðir af sexhyrningum
         - endurtaktu hann í lykkju 4 sinnum til að teikna allt býflugnabúið. Vísbending:
         Í ytri lykkjunni þarf að hoppa til baka um 120 díla til að fara ekki út af
-        skjánum.'
+        skjánum."
       4-5 Artist Patterns 11_instruction: 'Hversu oft þarf að endurtaka þetta til
         að teikna hálfan hring? Vísbending: Ef það eru 360 gráður í hring og hver
         umferð lykkju snýr 3 gráður, hve oft þarf þá að endurtaka til að teikna heilan
@@ -504,8 +504,8 @@
         faldaður í annarri lykkju, en við þurfum að koma listamanninum aftur á sama
         stað til að teikna næstu línu. Hvaða kóða vantar í endann á ytri lykkjunni
         til að teikna alla grindina?
-      4-5 Artist Patterns 4_instruction: Þessi tígull hefur 50 díla hliðar og 120
-        og 90 gráðu horn. Notaðu lykkju til að teikna hann.
+      4-5 Artist Patterns 4_instruction: "Þessi tígull hefur 50 díla hliðar og 120
+        og 90 gráðu horn. Notaðu lykkju til að teikna hann."
       4-5 Artist Patterns 5.5_instruction: Hve oft þarf að endurtaka þennan kóða til
         að teikna alla tíglana?
       4-5 Artist Patterns 5_instruction: Teiknum nú 6 tígla í röð. Taktu eftir að
@@ -526,23 +526,23 @@
         ystu marka til vinstri og hægri.'
       4-5 Artist Patterns Free Play_instruction: Frjáls æfing. Spreyttu þig á að búa
         til eigið mynstur!
-      4-5 Bee Conditionals - FC Test_instruction: Þessa stundina vill býflugan bara
+      4-5 Bee Conditionals - FC Test_instruction: "Þessa stundina vill býflugan bara
         blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
-        SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
+        SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: Þessi býfluga sér ekki hvort þetta er blóm
+      4-5 Bee Conditionals 1_instruction: "Þessi býfluga sér ekki hvort þetta er blóm
         eða býflugnabú. Athugaðu hvort hlutur er blóm eða bú og safnaðu blómasafa
-        aðeins úr blómum.
+        aðeins úr blómum."
       4-5 Bee Conditionals 2 (copy 1)_instruction: |
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
-      4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara blómasafa.
+      4-5 Bee Conditionals 2_instruction: "Þessa stundina vill býflugan bara blómasafa.
         Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til
-        að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
+        að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
       4-5 Bee Conditionals 3_instruction: Nú vill býflugan aðeins búa til hunang.
         Gættu þess að hún geri það aðeins í býflugnabúum.
       4-5 Bee Conditionals 4 (copy 1)_instruction: |
@@ -574,21 +574,21 @@
         við fallið "sækja blómasafa eða búa til hunang" og kallaðu svo á það til að
         safna öllum safanum og búa til hunangið. Mundu að fjólublá blóm geta haft
         3, 2 eða 1 af blómasafa.'
-      4-5 Bee Debugging 1_instruction: Þessir kubbar eru eitthvað í ólagi. Getur þú
-        lagað þá?
+      4-5 Bee Debugging 1_instruction: "Þessir kubbar eru eitthvað í ólagi. Getur
+        þú lagað þá?"
       4-5 Bee Debugging 10_instruction: Finndu villurnar og leiðréttu þær.
       4-5 Bee Debugging 11_instruction: Telur þetta rétt?
       4-5 Bee Debugging 2_instruction: Hjálpaðu býflugunni að sækja blómasafann og
         búa til hunang.
       4-5 Bee Debugging 3_instruction: Finndu villurnar og leiðréttu þær.
-      4-5 Bee Debugging 4_instruction: Þessir kubbar eru ekki að virka. Hvaða mynstur
-        er þetta?
+      4-5 Bee Debugging 4_instruction: "Þessir kubbar eru ekki að virka. Hvaða mynstur
+        er þetta?"
       4-5 Bee Debugging 5_instruction: Hér er eitthvað ekki í lagi...
       4-5 Bee Debugging 6_instruction: Fjólubláa blómið hefur óþekkt magn af blómasafa.
         Lagaðu kubbana til að ná öllum safanum úr blóminu.
-      4-5 Bee Debugging 7_instruction: Það vantar eitthvað í þetta fall...
-      4-5 Bee Debugging 8_instruction: Þetta fall er í lagi, en það er ekki notað
-        á réttan hátt.
+      4-5 Bee Debugging 7_instruction: "Það vantar eitthvað í þetta fall..."
+      4-5 Bee Debugging 8_instruction: "Þetta fall er í lagi, en það er ekki notað
+        á réttan hátt."
       4-5 Bee Debugging 9_instruction: Af hverju býr býflugan ekki til nóg af hunangi?
       4-5 Bee Debugging Assessment 1_instruction: 'Mat: Lagaðu kóðann.'
       4-5 Bee Nested Loops 1_instruction: Notaðu lykkju til að safna öllum blómasafanum.
@@ -612,12 +612,12 @@
         og búðu til allt hunangið með því að nota lykkjur.
       4-5 Bee Nested Loops Rows_instruction: Safnaðu blómasafa úr blómabeðunum! Notaðu
         faldaða lykkju.
-      4-5 Maze 1 (copy 1)_instruction: Þú mannvera. Ég uppvakningur. Verð...komast...sólblóm.
-      4-5 Maze 1_instruction: Þú mannvera. Ég uppvakningur. Verð...komast...sólblóm.
+      4-5 Maze 1 (copy 1)_instruction: "Þú mannvera. Ég uppvakningur. Verð...komast...sólblóm."
+      4-5 Maze 1_instruction: "Þú mannvera. Ég uppvakningur. Verð...komast...sólblóm."
       4-5 Maze 10_instruction: Geturðu komist til sólblómsins með aðeins 4 kubbum?
       4-5 Maze 11_instruction: Getur þú komið mér að sólblóminu með aðeins 6 kubbum?
-      4-5 Maze 12_instruction: Þetta er aðeins öðruvísi. Geturðu leyst þetta með aðeins
-        6 kubbum?
+      4-5 Maze 12_instruction: "Þetta er aðeins öðruvísi. Geturðu leyst þetta með
+        aðeins 6 kubbum?"
       4-5 Maze 13_instruction: Komdu mér til svínsins!
       4-5 Maze 14_instruction: Komdu mér til svínsins! Notaðu "endurtaka þar til"
         kubb.
@@ -635,7 +635,7 @@
       4-5 Maze 6 (copy 1)_instruction: Getur þú leyst þessa þraut með sem allra fæstum
         kubbum?
       4-5 Maze 6_instruction: Getur þú leyst þessa þraut með sem allra fæstum kubbum?
-      4-5 Maze 7_instruction: Þú mannvera. Ég uppvakningur. Verð...komast...sólblóm.
+      4-5 Maze 7_instruction: "Þú mannvera. Ég uppvakningur. Verð...komast...sólblóm."
       4-5 Maze 8_instruction: Notaðu "endurtaka" kubbinn til að færa uppvakninginn
         til blómsins. (Gættu þín á ætunum!)
       4-5 Maze 9_instruction: Búðu til lykkju með "endurtaka þar til" kubbnum.
@@ -656,8 +656,8 @@
         að koma mér þangað með sem fæstum kubbum.
       4-5 Maze Conditionals 6_instruction: Ég verða fá sólblóm! Notaðu "ef" kubb til
         að koma mér þangað með sem fæstum kubbum.
-      4-5 Maze Conditionals 7_instruction: Æfum þetta betur. Þetta er ekki mjög ólíkt,
-        en gættu þín á ætunum!
+      4-5 Maze Conditionals 7_instruction: "Æfum þetta betur. Þetta er ekki mjög ólíkt,
+        en gættu þín á ætunum!"
       4-5 Maze Conditionals 8_instruction: '"Ef-annars" kubburinn athugar skilyrði
         og gerir svo eitt EÐA annað. Komdu mér til sólblómsins með því að nota þennan
         nýja kubb.'
@@ -713,11 +713,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: prófun
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -830,10 +847,10 @@
         returns true if the distance between two points is less than 100 pixels apart.
       Big Game Complete_instruction: Sýnishorn af verkefninu Stórleikur í Tölvunarfræði
         í algebru
-      Big Game Final_instruction: Þér tókst þetta! Nú ætti leikurinn að hafa fulla
+      Big Game Final_instruction: "Þér tókst þetta! Nú ætti leikurinn að hafa fulla
         virkni. Taktu þér tíma til að njóta hans og fínpússa ef með þarf. Þegar þú
         ert ánægð/ur með afraksturinn, skaltu smella á Ljúka og þá færðu tækifæri
-        til að deila tengli á leikinn. Vel gert!
+        til að deila tengli á leikinn. Vel gert!"
       Big Game Player 1_instruction: Við erum næstum komin með fullbúinn leik! Síðast
         þegar vannst að leiknum notaðir þú Boole gildi til að láta markið og hættuna
         snúa aftur á skjáinn ef þau fóru út af honum. Smelltu á Keyra til að sjá hvernig
@@ -881,10 +898,10 @@
       Building a Foundation Assessment_instruction: Byggðu þriggja laga pýramída.
         Það eru engar aðrar leiðbeiningar svo þú verður að leika þér með kubbana  þar
         til þetta tekst!
-      Busy Bee 2_instruction: Þessi býfluga hefur nóg að gera! Sérðu einhver mynstur
-        sem þú getur notað til að einfalda kóðann?
-      Busy Bee_instruction: Þessi býfluga hefur nóg að gera! Sérðu einhver mynstur
-        sem þú getur notað til að einfalda kóðann?
+      Busy Bee 2_instruction: "Þessi býfluga hefur nóg að gera! Sérðu einhver mynstur
+        sem þú getur notað til að einfalda kóðann?"
+      Busy Bee_instruction: "Þessi býfluga hefur nóg að gera! Sérðu einhver mynstur
+        sem þú getur notað til að einfalda kóðann?"
       C3-Farmer While Loops 1_instruction: Færðu mig að holunni og notaðu "fylla"
         kubbinn til að fylla hana með tveimur skóflufyllum af mold.
       C3-Farmer While Loops 2_instruction: Færðu mig að moldarhaugnum og notaðu "fjarlægja"
@@ -908,9 +925,9 @@
       Calc Circles of Eval .1_instruction: Hér notum við svonefnda matskubba, sem
         heita það því að hver kubbur er metinn þar til hann gefur stakt gildi. Breyttu
         ??? í þessum kóða svo að kubburinn gefi 5 við mat.
-      Calc Circles of Eval .2_instruction: Þessi matskubbur er margföldunarfall sem
+      Calc Circles of Eval .2_instruction: "Þessi matskubbur er margföldunarfall sem
         tekur tvær tölur og skilar margfeldi þeirra. Breyttu kubbnum svo að hann margfaldi
-        2 * 5
+        2 * 5"
       Calc Circles of Eval .3_instruction: Hér er fall fyrir samlagningu sem tekur
         tvær tölur og skilar summu þeirra. Notaðu samlagningarkubbinn til að reikna
         3 + 6.
@@ -927,8 +944,8 @@
         kóða.
       Calc Circles of Eval 3_instruction: Ljúktu við matskubbinn svo hann samsvari
         þessari formúlu.
-      Calc Circles of Eval 4_instruction: Í þennan kóða vantar tvo matskubba. Gættu
-        þess að hafa allt í réttri röð.
+      Calc Circles of Eval 4_instruction: "Í þennan kóða vantar tvo matskubba. Gættu
+        þess að hafa allt í réttri röð."
       Calc Circles of Eval 5_instruction: Ljúktu við matskubbana svo þeir samsvari
         þessari formúlu.
       Calc Circles of Eval 6_instruction: Ljúktu við matskubbana svo þeir samsvari
@@ -985,8 +1002,8 @@
         "rocket-height" (hæð-flaugar), sem segir að sviðið sé Tala, gildamengið Tala
         og að það eigi að skila hæð flaugar, sem flýgur á 15 m/s, eftir tiltekinn
         fjölda sekúndna. Skrifum nú dæmi fyrir hæð flaugar eftir 3 sekúndur.
-      Calc Rocket 2_instruction: Þetta er fínt, en bætum öðru dæmi við áður en við
-        skrifum fallið - hver ætti hæð flaugarinnar að vera eftir 30 sekúndur?
+      Calc Rocket 2_instruction: "Þetta er fínt, en bætum öðru dæmi við áður en við
+        skrifum fallið - hver ætti hæð flaugarinnar að vera eftir 30 sekúndur?"
       Calc Vars 1.1_instruction: |
         Hér höfum við sett 17 ár í breytuna "age".
         Getur þú skrifað formúlu sem umreiknar "age" í daga?
@@ -1397,12 +1414,12 @@
         af blómasafa. Hér er "ef-annars" kubbur settur í annan "ef-annars" kubb til
         að búa til "ef/annars-ef/annars" yrðingu. Ljúktu við lausnina til að safna
         óþekktu magni af safa.
-      Course 4 Bee 5_instruction: Þetta fjólubláa blóm er með 3, 2 eða 1 af blómasafa.
+      Course 4 Bee 5_instruction: "Þetta fjólubláa blóm er með 3, 2 eða 1 af blómasafa.
         Bættu við ef-annars kubbi til að búa til ef, annars-ef, annars stæðu. Ljúktu
-        við lausnina til að safna óþekktu magni af safa.
-      Course 4 Bee 6_instruction: Þetta fjólubláa blóm er með 3, 2 eða 1 af blómasafa.
+        við lausnina til að safna óþekktu magni af safa."
+      Course 4 Bee 6_instruction: "Þetta fjólubláa blóm er með 3, 2 eða 1 af blómasafa.
         Bættu við ef-annars kubbi til að búa til ef, annars-ef, annars stæðu. Ljúktu
-        við lausnina til að safna óþekktu magni af safa.
+        við lausnina til að safna óþekktu magni af safa."
       Course 4 Bee 7_instruction: Notaðu allt sem þú hefur lært til að safna öllum
         blómasafanum. Fjólubláa blómið er með 3, 2 eða 1 af safa.
       Course 4 Bee For Loops 1_instruction: Notaðu lykkju til að safna blómasafa úr
@@ -1415,8 +1432,8 @@
       Course 4 Bee For Loops 2_instruction: Hér er ný tegund lykkju sem nefnist "frá"
         lykkjan. Þessi tiltekna "frá" lykkja telur frá 1 til 5. Hún keyrir innihald
         sitt og hækkar teljarann um 1 í hverri umferð. Hjálpaðu býinu að ná blómasafanum.
-      Course 4 Bee For Loops 3_instruction: Þessa þraut getur þú leyst með því að
-        nota lykkju sem telur frá 1 til 3 um 1. Sækjum svo þennan safa!
+      Course 4 Bee For Loops 3_instruction: "Þessa þraut getur þú leyst með því að
+        nota lykkju sem telur frá 1 til 3 um 1. Sækjum svo þennan safa!"
       Course 4 Bee For Loops 4_instruction: Safnaðu öllum blómasafanum úr þessum blómum.
         Skyldi vera til auðveldari leið...
       Course 4 Bee For Loops 5_instruction: 'Einmitt, "frá" lykkja gerir þetta miklu
@@ -1486,10 +1503,10 @@
       Course 4 Bee Params 8 new_instruction: 'Namm, nú bætist hunang við! Hvernig
         gætir þú uppfært fallið þitt svo það geri annaðhvort: sæki blómasafa eða búi
         til hunang.'
-      Course 4 Bee Params 8_instruction: 'Áskorun: Nú er komið hunang til að fást
+      Course 4 Bee Params 8_instruction: "Áskorun: Nú er komið hunang til að fást
         við líka! Endurskrifaðu fallið svo að það taki inn bæði fjölda eininga af
         blómasafa og fjölda eininga af hunangi. Hvernig gætir þú notað þessar tölur
-        til að ákveða hvað á að gera?'
+        til að ákveða hvað á að gera?"
       Course 4 Bee Params Ex_instruction: Prófaðu að nota nýja fallið þitt til að
         safna öllum þessum safa.
       Course 4 Binary 1_instruction: Hér er fall sem tekur tvíundarstreng með 1 og
@@ -1510,21 +1527,21 @@
         mun teikna þessa mynd?
       Course 4 Binary 7_instruction: Hvaða tvíundarstrengur, endurtekinn 10 sinnum,
         mun teikna þessa mynd?
-      Course 4 Binary 8_instruction: Þú getir teiknað mestalla myndina með því að
+      Course 4 Binary 8_instruction: "Þú getir teiknað mestalla myndina með því að
         endurtaka 5 bita tvíundartölu. Síðan þarftu eina 4 bita tölu í viðbót til
-        að komast í hornið neðst til hægri.
+        að komast í hornið neðst til hægri."
       Course 4 EC 1a_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
       Course 4 EC 1b_instruction: Engar reglur. Engar vísbendingar. Bara áskorunin!
-      Course 4 EC 2a_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
-        Bara áskorunin!'
-      Course 4 EC 2b_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
-        Bara áskorunin!'
-      Course 4 EC 2c_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
-        Bara áskorunin!'
+      Course 4 EC 2a_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
+        Bara áskorunin!"
+      Course 4 EC 2b_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
+        Bara áskorunin!"
+      Course 4 EC 2c_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
+        Bara áskorunin!"
       Course 4 EC 3_instruction: 'Notaðu það sem þú lærðir í síðasta borði til að
         teikna svona mynd. Athugasemd: Kóðinn verður einfaldari ef þú notar stika. '
-      Course 4 EC 3a_instruction: '**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
-        Bara áskorunin!'
+      Course 4 EC 3a_instruction: "**Ýkt áskorun:** Engar reglur. Engar vísbendingar.
+        Bara áskorunin!"
       Course 4 Maze 1_instruction: Láttu reiða fuglinn ná svíninu!
       Course 4 Maze 2_instruction: Gættu þín á TNT!
       Course 4 Maze 3_instruction: 'Forritaðu reiða fuglinn svo hann nái svíninu. '
@@ -1970,8 +1987,8 @@
         búa til samsíðung. Hann er alveg eins og rétthyrningur en hefur mismunandi
         horn. Þessi er með 60 gráðu og 120 gráðu horn í stað þess að öll hornin séu
         90 gráður.
-      frozen freeplay_instruction: Þú ert hér með orðin meistari í ísteikningu! Búðu
-        nú til ævintýralegt vetrarríki.
+      frozen freeplay_instruction: "Þú ert hér með orðin meistari í ísteikningu! Búðu
+        nú til ævintýralegt vetrarríki."
       frozen line_instruction: Hæ! Ég heiti Elsa frá Arendelle. Hjálpaðu mér að búa
         til eitt strik.
       frozen perpendicular_instruction: Nú skulum við athuga hvort við getum búið
@@ -2034,10 +2051,10 @@
         kastalann?
       K-1 Artist Loops 5_instruction: Hvað gætir þú endurtekið 4 sinnum til að teikna
         þessar tröppur?
-      K-1 Artist Loops 6_instruction: 'Þessi þarf tvær lykkjur: eina til að fara upp
-        tröppurnar og aðra til að fara niður.'
+      K-1 Artist Loops 6_instruction: "Þessi þarf tvær lykkjur: eina til að fara upp
+        tröppurnar og aðra til að fara niður."
       K-1 Artist Loops 7_instruction: Lykkjur geta hjálpað þér að klára þetta mynstur.
-      K-1 Artist Loops 8_instruction: Þessi stigi er með lengri tröppur.
+      K-1 Artist Loops 8_instruction: "Þessi stigi er með lengri tröppur."
       K-1 Artist Loops 9_instruction: Hver er auðveldasta aðferðin til að teikna þennan
         stiga?
       K-1 Artist Loops Free Play_instruction: Frjáls æfing. Teiknaðu eitthvað skemmtilegt!
@@ -2215,14 +2232,14 @@
       MSM Big Game Empty_instruction: Allar breytur og föll byrja hér sem innantómir
         stúfar. Hver þraut mun fást við að skilgreina nokkra í einu og þannig smám
         saman auka við virknina.
-      MSM Big Game Vars 1 (copy 1)_instruction: Í flokknum Breytur í verkfærakassanum
+      MSM Big Game Vars 1 (copy 1)_instruction: "Í flokknum Breytur í verkfærakassanum
         eru nokkrar breytur sem skilgreina útlit, hreyfingar og samskipti veranna
-        í leiknum
-      MSM Big Game Vars 1_instruction: Í flokknum Breytur í verkfærakassanum eru nokkrar
-        breytur sem skilgreina útlit, hreyfingar og samskipti veranna í leiknum
-      MSM Big Game Vars Backup_instruction: Í flokknum Breytur í verkfærakassanum
+        í leiknum"
+      MSM Big Game Vars 1_instruction: "Í flokknum Breytur í verkfærakassanum eru
+        nokkrar breytur sem skilgreina útlit, hreyfingar og samskipti veranna í leiknum"
+      MSM Big Game Vars Backup_instruction: "Í flokknum Breytur í verkfærakassanum
         eru nokkrar breytur sem skilgreina útlit, hreyfingar og samskipti veranna
-        í leiknum
+        í leiknum"
       MSM Defining Vars 1 (copy 1)_instruction: Skrifaðu forrit sem býr til 50 díla
         gegnheilan grænan þríhyrning.
       MSM Defining Vars 1_instruction: Skrifaðu forrit sem býr til 50 díla gegnheilan
@@ -2309,20 +2326,20 @@
       NetSim_AddressingMessages_instruction: 'Í þessari útgáfu af herminum, munt þú
         tengjast við beini (enska: router) í stað þess að tengjast beint við annan
         nemanda. Settu vistfang í "Til" reitinn til að senda skilaboð til annars nemanda.'
-      NetSim_AutomaticDNS_instruction: Í þessari útgáfu af herminum er DNS þjónusta
+      NetSim_AutomaticDNS_instruction: "Í þessari útgáfu af herminum er DNS þjónusta
         til staðar fyrir þig. Sendu skilaboð á forminu GET[hostname] til DNS þjónustunnar
-        í vistfangi 15 til að fá vistfang annars nemanda.
-      NetSim_ManualDNS_instruction: Í þessari útgáfu af herminum getur þú ekki séð
+        í vistfangi 15 til að fá vistfang annars nemanda."
+      NetSim_ManualDNS_instruction: "Í þessari útgáfu af herminum getur þú ekki séð
         vistföng hinna nemendanna. Í stað þess verður eitt ykkar að leika nafnaþjónustu
-        sem sér um að útvega vistföngin.
+        sem sér um að útvega vistföngin."
       NetSim_SendAB_instruction: Tengstu öðrum nemanda. Hvor ykkar getur stillt gildi
         vírsins á milli ykkar á "A" eða "B". Gáðu hvort þú getur sent heilt skeyti!
-      NetSim_SendAscii_instruction: Í þessari útgáfu hermisins getið þið sent hvort
-        öðru tölur eða ASCII tákn, einn bita í einu.
+      NetSim_SendAscii_instruction: "Í þessari útgáfu hermisins getið þið sent hvort
+        öðru tölur eða ASCII tákn, einn bita í einu."
       NetSim_SendBits_instruction: Tengstu öðrum nemanda. Þið getið nú stillt vírinn
         á "0" eða "1". Sendu félaga þínum skilaboð!
-      NetSim_SendingABTest_instruction: Þetta er tilraun Söru til að búa til netsim
-        áfanga
+      NetSim_SendingABTest_instruction: "Þetta er tilraun Söru til að búa til netsim
+        áfanga"
       NetSim_SendNumbers_instruction: |
         In this version of the simulator, you can
         view the decimal representations of the binary you are sending.
@@ -2539,8 +2556,8 @@
       Overworld Free Play 20x20_instruction: Til hamingju! Þú hefur lokið við allar
         þrautirnar okkar! Nú getur þú grafið, byggt og búið til eitthvað sérstakt
         með því að nota allt sem þú hefur lært hingað til.
-      Overworld Free Play_instruction: Þetta landslag er fyrir þig að leika þér með.
-        Þú ræður hvað þú byggir.
+      Overworld Free Play_instruction: "Þetta landslag er fyrir þig að leika þér með.
+        Þú ræður hvað þú byggir."
       Overworld House Frame - A_instruction: Byggjum okkar eigið hús! Þessi staður
         er álitlegur. Byggðu undirstöðu á moldarblokkunum.
       Overworld House Frame - C_instruction: Byggjum okkar eigið hús! Þessi staður
@@ -2558,16 +2575,16 @@
         efni sem þú vilt. "Endurtaka" skipunin kemur að góðu gagni.
       Overworld House Frame_instruction: Byggjum okkar eigið hús! Þessi staður er
         álitlegur. Byggðu undirstöðu á moldarblokkunum.
-      Overworld Minecart Track_instruction: Þú ert aftur uppi á yfirborðinu með fullt
+      Overworld Minecart Track_instruction: "Þú ert aftur uppi á yfirborðinu með fullt
         af neðanjarðarhráefni. Nú ætlum við að leggja teina eftir moldarslóðinni frá
-        húsinu. Fyrst er að hreinsa slóðina. Fylgdu slóðinni og fjarlægðu trén.
+        húsinu. Fyrst er að hreinsa slóðina. Fylgdu slóðinni og fjarlægðu trén."
       Overworld Move to Sheep_instruction: Bættu við annarri "færa áfram" skipun til
         að ná til kindarinnar.
       Overworld Place Wall_instruction: Sérhvert hús byrjar með vegg. Byggðu fyrsta
         hluta hússins með því að láta "setja" og "færa áfram" skipanir inn í "endurtaka"
         lykkju.
-      Overworld Plant Crops_instruction: Það er gott að hugsa fram í tímann. Gróðursettu
-        jurtir báðum megin við vatnið til að forða hungri seinna.
+      Overworld Plant Crops_instruction: "Það er gott að hugsa fram í tímann. Gróðursettu
+        jurtir báðum megin við vatnið til að forða hungri seinna."
       Overworld Powered Minecart_instruction: Vel af sér vikið! Þú hefur safnað heilmiklu
         af hráefni og skapað lítið heimili. Nú áttu að leggja teina frá jaðri kortsins
         til dyra hússins.
@@ -2750,9 +2767,9 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
-      Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara
+      Ryan - 4-5 Bee Conditionals 2_instruction: "Þessa stundina vill býflugan bara
         blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
-        SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
+        SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur
         er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá
         hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
@@ -2763,11 +2780,11 @@
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
         \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move
         to the next puzzle. "
-      Sam the Butterfly 1 (copy 1)_instruction: Þetta fiðrildi heitir Sammi og leiksvæðið
+      Sam the Butterfly 1 (copy 1)_instruction: "Þetta fiðrildi heitir Sammi og leiksvæðið
         er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins
         og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum
         uppfærast til að sýna hvar hann er. Notaðu örvarlyklana til að færa Samma
-        um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram.
+        um garðinn sinn. Hjálpaðu Samma að safna öllum flöggunum til að komast áfram."
       Sam the Butterfly 1_instruction: Þessi leðurblaka heitir Sammi og leiksvæðið
         er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins
         og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum
@@ -2825,8 +2842,8 @@
       scrat 20_instruction: Getur þú bætt við bara 3 kubbum til að hjálpa mér að rata
         um flóknara völundarhús? Ef þú gerir það rétt, get ég ratað hvaða slóð sem
         er óháð lengd. Flýttu þér! Ísinn bráðnar!
-      SpecialFrozenLevel_instruction: Þú ert hér með orðin meistari í ísteikningu!
-        Búðu nú til ævintýralegt vetrarríki.
+      SpecialFrozenLevel_instruction: "Þú ert hér með orðin meistari í ísteikningu!
+        Búðu nú til ævintýralegt vetrarríki."
       Standalone_Artist_1_instruction: Velkomin til listamannsins! Byrjum á að búa
         til einfaldan ferning með "snúa hægri" og "færa áfram" kubbunum. Hver hlið
         á að vera 100 díla löng.
@@ -3647,9 +3664,9 @@
         lit. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L06 Challenge 4 bullseye_instruction: Búðu til miðju marksins með hexkóðum
         lita og fallinu dot(). (Smelltu til að sjá ítarlegar leiðbeiningar)
-      U3L06 Challenge 5 overlapping circles_instruction: Þessi mynd er búin til eingöngu
+      U3L06 Challenge 5 overlapping circles_instruction: "Þessi mynd er búin til eingöngu
         með því að nota dot() og penColor(), en hvernig fáum við hringana svona gegnsæja?
-        Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!
+        Ef þú áttar þig ekki á þessu, er best að lesa skjölunina!"
       U3L06 Challenge 6 squiggles_instruction: 'Lestu skjölunina til skipanirnar "arcLeft"
         (vinstriBogi) og "arcRight" (hægriBogi) og teiknaðu svo línurnar sem sjást. '
       U3L06 Challenge 7 smiley face_instruction: Notaðu turnTo() og moveTo() til að
@@ -4568,9 +4585,9 @@
       Underground Mine in a Circle_instruction: "Finndu leið til að ná 5 af demanti
         og 7 af roðasteini! Prófaðu að nota endurtaka skipun innan í endurtaka skipun
         til að ganga í ferning.\r\n"
-      Underground Mining Coal_instruction: Þú finnur dýrmætasta hráefnið neðanjarðar,
+      Underground Mining Coal_instruction: "Þú finnur dýrmætasta hráefnið neðanjarðar,
         en það getur orðið dimmt. Settu upp minnst 2 kyndla og grafðu út minnst 2
-        af kolum.
+        af kolum."
       Underground Test Level_instruction: Safnaðu öllum steindunum!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Nota þennan prófáfanga til að ná í xml fyrir áfangapróf
