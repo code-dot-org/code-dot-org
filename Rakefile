@@ -302,7 +302,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
-  tasks << :hooks
+  tasks << :hooks if rack_env?(:development)
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :code_studio if CDO.build_code_studio
