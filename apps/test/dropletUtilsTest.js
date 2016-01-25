@@ -859,8 +859,8 @@ describe('mergeCategoriesWithConfig', function () {
   });
 });
 
-describe('mergeFunctionsWithConfig', function () {
-  var mergeFunctionsWithConfig = dropletUtils.__TestInterface.mergeFunctionsWithConfig;
+describe('filteredBlocksFromConfig', function () {
+  var filteredBlocksFromConfig = dropletUtils.__TestInterface.filteredBlocksFromConfig;
 
   it('properly handles docFunc', function () {
     var codeFunctions = {
@@ -875,13 +875,13 @@ describe('mergeFunctionsWithConfig', function () {
       ]
     };
 
-    var mergedBlocks = mergeFunctionsWithConfig(codeFunctions, dropletConfig, null, true);
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
     assert.deepEqual(mergedBlocks, [
       {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
       {func: 'targetBlock', category: 'Math', type: 'value'}
     ], 'returns source and target when paletteOnly is true');
 
-    mergedBlocks = mergeFunctionsWithConfig(codeFunctions, dropletConfig, null, false);
+    mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, false);
     assert.deepEqual(mergedBlocks, dropletConfig.blocks,
       'returns all blocks when paletteOnly is false');
   });
