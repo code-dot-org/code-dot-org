@@ -286,10 +286,6 @@ zh:
   user_level:
     completed: 已完成
     tried: 已試過
-  user_stats:
-    recent_activity: 最近的活動
-    show_more: 顯示更多
-    classroom_activity: 不用電腦的活動
   home:
     title: 程式工作室
     description: Code.org 建立的所有線上課程，通通放在 Code Studio 中。

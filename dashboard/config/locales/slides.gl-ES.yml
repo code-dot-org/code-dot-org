@@ -35,9 +35,9 @@
           vai usalos para crear o seu programa.
       9:
         image: notes/hoc1_9.jpg
-        text: Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
+        text: "Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
           bloques da caixa de ferramentas para crear o seu programa. Para excluír
-          un bloque, arrástreo para a recolledora de lixo no recanto.
+          un bloque, arrástreo para a recolledora de lixo no recanto."
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloque é unha instrución. Se vostede arrastra un bloque "avance"
@@ -721,7 +721,7 @@
           resolver. O segundo é igual, pero vai para baixo.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: É como programar con papel. E é iso mesmo!
+        text: "É como programar con papel. E é iso mesmo!"
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -1975,11 +1975,11 @@
           A pintura por números me di exactamente cal cor usar e onde.
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: É moi específica, entón podo seguir as instrucións e a pintura ficará
+        text: "É moi específica, entón podo seguir as instrucións e a pintura ficará
           incríbel! É un excelente algoritmo. Se as instrucións non fosen abondo específicas,
           os meus lobos non ficarían tan bos. Cando realmente quixeras que algunha
           cousa fique exactamente do xeito que planeaches, é mellor ser extremamente
-          preciso.
+          preciso."
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
@@ -2077,10 +2077,10 @@
           "parámetros".
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Ás veces unha función precisa dun parámetro. Un parámetro é unha información
+        text: "Ás veces unha función precisa dun parámetro. Un parámetro é unha información
           adicional que podes pasar para unha función e personalizala para unha necesidade
           especial. Cando fas xelado na casa cos teus amigos, está usando un proceso
-          similar aos parámetros nun programa de computador.
+          similar aos parámetros nun programa de computador."
       3:
         image: notes/C4_unplugged_parameters_3.png
         text: A bóla do xelado de crema pode ser igual en todos os cucuruchos, pero
@@ -2275,12 +2275,12 @@
           preciso agregar as lonxitudes e graos apropiados.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: Ás veces podes accidentalmente estragar o código inicial. O que facer
+        text: "Ás veces podes accidentalmente estragar o código inicial. O que facer
           nese caso? Podes presionar limpar desafío e comezar de novo. Vou arrastrar
           este bloque numérico para as distintas áreas de pixels. Seleccione 100 para
           pixels, 45 para graos e 100 para pixels de novo. Fantásticol! Aquí está
           a abella do Code Studio. Necesito mover a abella para cada unha das flores
-          e recoller néctar.
+          e recoller néctar."
       6:
         image: notes/tutorial_puzzle_challenge_6.png
         text: A primeira flor está a tres bloques de distancia, entón necesito tres
@@ -2684,18 +2684,18 @@
           poder facer aínda máis.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
+        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
           puntos cando colle porcos inchábeis. O truco é que sempre que colles un
           porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
-          inchábeis e, cando toques 10.000, vences.'
+          inchábeis e, cando toques 10.000, vences."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
+        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
           que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
           que premes para enriba, o teu personaxe vai para abaixo, e cando premes
           para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
           unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
-          Si!'
+          Si!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Cando termines o teu xogo, selecciona compartir para recibir un link
@@ -2812,18 +2812,18 @@
           poder facer aínda máis.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
+        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
           puntos cando colle porcos inchábeis. O truco é que sempre que colles un
           porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
-          inchábeis e, cando toques 10.000, vences.'
+          inchábeis e, cando toques 10.000, vences."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
+        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
           que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
           que premes para enriba, o teu personaxe vai para abaixo, e cando premes
           para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
           unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
-          Si!'
+          Si!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Cando termines o teu xogo, selecciona compartir para recibir un link
@@ -2968,9 +2968,9 @@
           queiras. Ti escolles.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
+        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
           fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
-          Construímos unha casa de lá!'
+          Construímos unha casa de lá!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Cando termines a túa creación, escolle compartir para recibir un link
@@ -2986,9 +2986,9 @@
           queiras. Ti escolles.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
+        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
           fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
-          Construímos unha casa de lá!'
+          Construímos unha casa de lá!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Cando termines a a túa creación, escolle compartir para recibir un link

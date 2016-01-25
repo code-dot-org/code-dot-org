@@ -284,10 +284,6 @@ pl:
   user_level:
     completed: Ukończono
     tried: Próbowano
-  user_stats:
-    recent_activity: Ostatnia aktywność
-    show_more: Pokaż więcej
-    classroom_activity: Aktywność unplugged (bez komputera)
   home:
     title: Studio Kodowania (Code Studio)
     description: Studio Kodowania jest miejscem dla kursów online utworzonych przez Code.org

@@ -286,10 +286,6 @@ fil:
   user_level:
     completed: Completed
     tried: Sinubukan
-  user_stats:
-    recent_activity: Recent activity
-    show_more: Magpakita pa
-    classroom_activity: Unplugged Activity
   home:
     title: Code Studio
     description: Code Studio is home to online courses created by Code.org

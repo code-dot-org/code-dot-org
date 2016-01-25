@@ -293,10 +293,6 @@ fi:
   user_level:
     completed: Valmis
     tried: Kokeili
-  user_stats:
-    recent_activity: Tapahtumat
-    show_more: Näytä lisää
-    classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
     description: Code Studio on paikka josta löydät Code.org:in verkkokurssit.

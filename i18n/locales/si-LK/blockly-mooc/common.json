@@ -176,7 +176,7 @@
   "hintRequest":"ඉඟිය බලන්න",
   "hintReviewTitle":"Review Your Hints",
   "hintSelectInstructions":"Instructions and old hints",
-  "hintSelectNewHint":"Get a new hint",
+  "hintSelectNewHint":"අලුත් ඉගියක් ලබා ගන්න",
   "hintTitle":"ඉඟිය:",
   "ignore":"නොසලකා හරින්න",
   "infinity":"අනන්තය",
@@ -245,7 +245,7 @@
   "unnamedFunction":"ඔබේ යම්කිසි විචල්‍යයක් හෝ ශ්‍රිතයක් සඳහා නාමයක් ලබාදී නොමැත. සෑම එකකටම නාමයක් ලබාදීමට අමතක නොකරන්න.",
   "wantToLearn":"Code කරන්න ඉගෙනගන්න කැමතිද?",
   "watchVideo":"වීඩියෝව නරඹන්න",
-  "when":"when",
-  "whenRun":"when run",
+  "when":"විට",
+  "whenRun":"දුවන විට",
   "workspaceHeaderShort":"වැඩ අවකාශය: "
 }

@@ -18,13 +18,13 @@ hu:
         text: Minden program a számítógép által végrehajtandó utasítások listája.
       6:
         image: notes/hoc1_6.jpg
-        text: Első programodban egy Angry Bird madarat kell irányítanod az útvesztőn át, hogy eljusson a Zöld Disznóig.
+        text: Első programodban egy Angry Birds madarat kell irányítanod az útvesztőn át, hogy eljusson a Zöld Disznóig.
       7:
         image: notes/hoc1_7.jpg
         text: A bal oldal egy útvesztő, ahol a programod fut. A pálya megoldásához szükséges útmutató az útvesztő alatt olvasható.
       8:
         image: notes/hoc1_8.jpg
-        text: A középső eszköztár tartalmazza az Angry Bird irányításához szükséges utasításokat. Ezeket fogod használni a kód felépítéséhez.
+        text: A középső eszköztár tartalmazza az Angry Birds madár irányításához szükséges utasításokat. Ezeket fogod használni a kód felépítéséhez.
       9:
         image: notes/hoc1_9.jpg
         text: A középső eszköztárból a jobb oldali munkaterületre kell majd áthúznod a blokkokat a program felépítéséhez. Egy blokk törléséhez húzd azt a sarokban lévő kukára.
@@ -49,7 +49,7 @@ hu:
         text: Ezeknél a rejtvényeknél te leszel a művész, aki vonalat húz maga mögött, bármerre megy.
       3:
         image: notes/stage5_3.jpg
-        text: 'Ez a blokk azt mondja: " előrelépni 100 pixel. " A pixelek csak nagyon apró pontok a képernyőn .'
+        text: 'Ez a blokk azt mondja: " előrelépni 100 pixel. " A pixelek csak nagyon apró pontok a képernyőn.'
       4:
         image: notes/stage5_4.jpg
         text: 'Ez a blokk azt mondja "forduljon jobbra 90 fokban." Ez el fogja fordítani a művészt ugyanabban a mennyiségben, mint amennyiben a "fordulj" blokkok a labirintus rejtvényekben.'

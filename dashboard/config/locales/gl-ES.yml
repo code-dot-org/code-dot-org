@@ -7,7 +7,7 @@
   activerecord:
     errors:
       messages:
-        blank: é obrigatorio
+        blank: "é obrigatorio"
     attributes:
       user:
         name: Nome a mostrar
@@ -37,7 +37,7 @@
     submit: Agregar pista
   appname: Code.org
   stage: Etapa
-  stage_number: '%{number}.ª Etapa'
+  stage_number: "%{number}.ª Etapa"
   puzzle: Quebracabeza
   trophies: Trofeos
   courses: Cursos
@@ -71,8 +71,8 @@
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?
   signup_form:
-    student_count: '%{count} alumnos xa crearon unha conta.'
-    teacher_count: '%{count} profesores xa crearon unha conta.'
+    student_count: "%{count} alumnos xa crearon unha conta."
+    teacher_count: "%{count} profesores xa crearon unha conta."
     overview_student: Crea unha conta para poderes ver o teu progreso. O teu e-mail
       será utilizado para iniciares sesión e para repores o contrasinal (no caso de
       te esqueceres dela). Para máis informacións, le a nosa <a href="http://code.org/privacy">Política
@@ -95,7 +95,7 @@
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
-    teacher: É un profesor?
+    teacher: "É un profesor?"
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
     taken_username: O nome de usuario xa existe
@@ -149,12 +149,12 @@
       %{name}
   follower:
     invite_sent: Convite enviado
-    added_teacher: '%{name} foi agregado como o teu profesor'
+    added_teacher: "%{name} foi agregado como o teu profesor"
     registered: Registrouse para %{section_name}.
     error:
       signed_in: Antes de proseguires, pecha a sesión
       username_not_found: Nome de usuario %{username} non atopado
-      username_in_use: '%{username} xa existe, por favor escolle outro'
+      username_in_use: "%{username} xa existe, por favor escolle outro"
       no_teacher: Non foi posíbel encontrar ninguén que teña entrado con '%{teacher_email_or_code}'.
         Por favor, pídelles para se rexistaren aquí e tente agregalos novamente
       section_not_found: Non foi posíbel atopar unha sección co código '%{section_code}'.
@@ -206,7 +206,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Escoje un premio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -256,9 +256,9 @@
     destroy: Destruír
     back: Voltar
     confirm: Tes a certeza?
-    created: '%{model} foi creado con éxito.'
-    updated: '%{model} foi actualizado con éxito.'
-    destroyed: '%{model} foi eliminado con éxito.'
+    created: "%{model} foi creado con éxito."
+    updated: "%{model} foi actualizado con éxito."
+    destroyed: "%{model} foi eliminado con éxito."
     access_denied: Vostede non ten acesso a este %{model}.
   nav:
     header:
@@ -289,7 +289,7 @@
       puzzle_map: Etapas
       prizes: Recolle todos os %{total_trophies} trofeos e gaña premios!
       prize_earned: Recollidos todos os %{total_trophies} trofeos. Gañaches premio!
-      prize_us_only: (Só para estudantes dos E.U.A.)
+      prize_us_only: "(Só para estudantes dos E.U.A.)"
       prizes_link: máis información
   teacher:
     answer: Resposta
@@ -297,7 +297,7 @@
     title:
       one: 'O seu profesor:'
       other: 'Os teus profesores:'
-    remove: (remover profesor)
+    remove: "(remover profesor)"
     confirm:
       remove: Tes a certeza de que pretendes remover este profesor?
     students:
@@ -317,11 +317,11 @@
   user:
     email_confirm_needed: 'O enderezo de email non foi confirmado:'
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
-    email_confirm_wrong_email: (Enderezo de e-mail errado?)
+    email_confirm_wrong_email: "(Enderezo de e-mail errado?)"
     email_resend_confirm: Reenviar instrucións de confirmación
-    new_password_hint: (deixe en branco se non quixese facer alteración)
-    current_password_hint: (necesitamos o seu contrasinal actual para confirmar os
-      seus cambios)
+    new_password_hint: "(deixe en branco se non quixese facer alteración)"
+    current_password_hint: "(necesitamos o seu contrasinal actual para confirmar os
+      seus cambios)"
     delete: Eliminar a súa conta
     delete_text: Clicando no botón de abaixo, vostede vai eliminar a súa conta.
     delete_text_teacher_note: 'Lémbrese: a eliminación da súa conta non vai eliminar
@@ -330,16 +330,12 @@
   user_level:
     completed: Concluído
     tried: Probado
-  user_stats:
-    recent_activity: Actividade recente
-    show_more: Mostrar máis
-    classroom_activity: Actividade off-line
   home:
     title: Code Studio
     description: No Code Studio podes atopar os cursos online da Code.org
-    lines_of_code: '%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS'
-    lines_of_code_linebreak: '%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count}
-      MILLÓNS DE ALUMNOS'
+    lines_of_code: "%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS"
+    lines_of_code_linebreak: "%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count}
+      MILLÓNS DE ALUMNOS"
     all_courses: Visión xeral dos cursos 1, 2 e 3
     lesson_plans: Plan de estudo
     signin_message: Xa estás rexistrado? %{link}
@@ -378,11 +374,11 @@
     try_beta_courses: Novo! Coñeza os nosos cursos experimentais para alumnos do pré
       ao 5º ano
     use_as_teacher: Use este sitio Web como profesor
-    heading_hoc2014: <h2>A Hora de Código para</h2><h1>Todas as idades</h1>
-    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>Principiantes (todas as
-      idades)</h1>
-    heading_apps: <h2>Diversión para</h2><h1>todos</h1>
-    heading_legacy: <h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>
+    heading_hoc2014: "<h2>A Hora de Código para</h2><h1>Todas as idades</h1>"
+    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas
+      as idades)</h1>"
+    heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
+    heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
     no_primary_course: Faga un curso no Code Studio
     choose_next_course: Experimenta un dos seguintes cursos do Code Studio
@@ -425,8 +421,8 @@
       Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball
       é marca rexistrada e &copy; 2015 Cartoon Network.
     powered_by_aws: Sostido por Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
-      e Hora do Código&reg; son marcas rexistradas da Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
+      e Hora do Código&reg; son marcas rexistradas da Code.org."
     copyright: Dereitos de Autor
     more: Máis
     feedback: Enviar comentarios
@@ -567,7 +563,7 @@
     feedback: Enviar comentarios
     report_bug: Comunicar erro
     support: Obter axuda
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: A resposta que vostede tecleou non é correcta. Tente novamente!
@@ -677,7 +673,7 @@
     close: Pechar
     more: Máis
     name: Nome
-    updated: Última actualización
+    updated: "Última actualización"
     project_type: Tipo de proxecto
     help_text: Clica en <strong>Desenvolver unha aplicación</strong> ou <strong>Desenhar
       algunha cousa</strong> para entrares nun novo Laboratorio de xogos ou faceres

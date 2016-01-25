@@ -283,10 +283,6 @@ kk:
   user_level:
     completed: Аяқталған
     tried: Байқап көру саны
-  user_stats:
-    recent_activity: Соңғы іс-әрекеттер
-    show_more: Көбірек білу
-    classroom_activity: Іс-әрекеттерді өшіру
   home:
     title: Код Студиясы
     description: Код Студиясы Code.org бағдарламаушыларымен жасалған онлайн курстар жинағы болып табылады

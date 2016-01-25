@@ -28,8 +28,7 @@ et:
     code:
       label: 'Lisa õpetaja:'
       placeholder: Üksuse kood (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline tähtedest koosnev kood, näiteks "ABCDEF".'
     submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
@@ -251,8 +250,8 @@ et:
       remove: Oled kindel, et tahad seda õpetajat eemaldada?
     students:
       dashboard: Mine õpetaja menüüsse
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Õpetajat ei leitud.
+    student_teacher_disassociated: 'Olete eemaldanud %{teacher_name} oma õpetajate nimekirjast.'
     panel:
       answer_viewer: Vastuse Vaataja
       student: Õpilane
@@ -277,10 +276,6 @@ et:
   user_level:
     completed: Tehtud
     tried: Proovisin
-  user_stats:
-    recent_activity: Viimane tegevus
-    show_more: Näita rohkem
-    classroom_activity: Lahutatud tegevus
   home:
     title: Kood stuudio
     description: Code Stuudio on koduks online kursustele, mis on loodud Code.org poolt.
@@ -326,7 +321,7 @@ et:
   share:
     title: Õpi Code stuudios
     description: Igaüks saab õppida arvutiteadust. Tee mänge, äppe ja kunsti koodimisega.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proovi Koodi Tundi!
   gender:
     male: Mees
     female: Naine
@@ -338,8 +333,8 @@ et:
     thank_you: 'Me täname oma <a href="https://code.org/about/donors"> sponsoreid </a>,<a href="https://code.org/about/partners">partnereid</a>, meie <a href="https://code.org/about/team"> tervet meeskonda</a>, video tiimi, ja meie <a href="https://code.org/about/advisors"> haridusnõustajaid</a> nende teenete eest Code Studio valmimisele.'
     help_from_html: Insenerid Google´st, Microsoftist, Facebookist ja Twitterist aitasid luua selle õppekeskkonna.
     help_from_html_old: "Insenerid Google'st, Microsoft'st, Facebook'st ja Twitter'st aitasid luua neid materjale."
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused kaitstud.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Kõik õigused kaitstud.<br />Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused kaitstud.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused kaitstud.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Kõik õigused kaitstud.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused kaitstud. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Kõik õigused kaitstud. Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused kaitstud. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused kaitstud. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Amazoni poolt toetatud
     trademark: '&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg; on Code.org kaubamärgid.'
     copyright: Autoriõigus
@@ -356,7 +351,7 @@ et:
     built_on_code_studio: Code Studio abil loodud
     make_my_own_app: Oma rakenduse loomine
     how_it_works: Tööpõhimõtted
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proovi Koodi Tundi!
   reference_area:
     title: Vajad abi?
     subtitle: Vaata neid videosid ja vihjeid

@@ -284,10 +284,6 @@ ta:
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
-  user_stats:
-    recent_activity: சமீப செயற்பாடு
-    show_more: மேலும் காண்பி
-    classroom_activity: Unplugged Activity
   home:
     title: Code Studio
     description: Code Studio is home to online courses created by Code.org

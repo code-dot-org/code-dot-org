@@ -277,10 +277,6 @@ ms:
   user_level:
     completed: Lengkap
     tried: Telah dicuba
-  user_stats:
-    recent_activity: Aktiviti terkini
-    show_more: Tunjukkan Lagi
-    classroom_activity: Cabut aktiviti
   home:
     title: Kemajuan saya
     description: Code Studio is home to online courses created by Code.org

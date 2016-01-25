@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Lūdzu, izlabojiet šādas kļūdas:'
-      too_young: Šim saturam ir vecuma ierobežojums un tas nav pieejams jaunākiem
-        skolēniem
+      too_young: "Šim saturam ir vecuma ierobežojums un tas nav pieejams jaunākiem
+        skolēniem"
   activerecord:
     errors:
       messages:
@@ -70,8 +70,8 @@
     need_confirmation: Nesaņēmi apstiprinājuma instrukcijas?
     need_unlock: Nesaņēmi atslēgšanas norādijumus?
   signup_form:
-    student_count: '%{count} skolēni jau ir pierakstījušies.'
-    teacher_count: '%{count} skolotāji jau ir pierakstījušies.'
+    student_count: "%{count} skolēni jau ir pierakstījušies."
+    teacher_count: "%{count} skolotāji jau ir pierakstījušies."
     overview_student: Pierakstaties, lai sekotu līdzi savam progresam, Jūsu e-pasts
       primāri tiek izmantots, lai pierakstītos un paroles atgūšanai. Lai iegūtu vairāk
       informāciju, apskatat mūsu <a href="http://code.org/privacy">konfidencialitātes
@@ -147,12 +147,12 @@
       %{name}
   follower:
     invite_sent: Uzaicinājums nosūtīts
-    added_teacher: '%{name} pievienots kā jūsu skolotājs'
+    added_teacher: "%{name} pievienots kā jūsu skolotājs"
     registered: Jūs esat reģistrēts %{section_name}.
     error:
       signed_in: Lūdzu izrakstaties pirms turpināšanas
       username_not_found: Lietotājvārds %{username} nav atrasts
-      username_in_use: '%{username} ir jau aizņemts, lūdzu, izvēlieties citu'
+      username_in_use: "%{username} ir jau aizņemts, lūdzu, izvēlieties citu"
       no_teacher: Nevarēja atrast, kurš būtu pierakstījies ar '%{teacher_email_or_code}'.
         Lūdzat viņiem piereģistrēties un mēģinat viņus pievienot vēlreiz
       section_not_found: Nevarēja atrast sadaļu ar kodu'%{section_code}'.
@@ -194,7 +194,7 @@
       msg_publicschool: Lūdzu, apstipriniet, ka esat ASV publiskās skolas skolotājs.
       msg_visit_website: Apmeklējiet mājaslapu
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB vietas Dropbox
@@ -203,7 +203,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -242,9 +242,9 @@
     destroy: Iznīcināt
     back: Atpakaļ
     confirm: Vai esat pārliecināts?
-    created: '%{model} ir veiksmīgi izveidots.'
-    updated: '%{model} tika veiksmīgi atjaunināts.'
-    destroyed: '%{model} tika veiksmīgi izdzēsts.'
+    created: "%{model} ir veiksmīgi izveidots."
+    updated: "%{model} tika veiksmīgi atjaunināts."
+    destroyed: "%{model} tika veiksmīgi izdzēsts."
     access_denied: Tev nav pieejas šim %{model}.
   nav:
     header:
@@ -267,7 +267,7 @@
       signup: Piereģistrēties
       already_registered: Jau reģistrējies?
     popup:
-      progress_for_user: '%{name} panākumi'
+      progress_for_user: "%{name} panākumi"
       progress: Jūsu progress
       lines: 'Kopējais koda līniju skaits: %{lines}'
       close: AIZVĒRT
@@ -275,7 +275,7 @@
       puzzle_map: Stadijas
       prizes: Sakrāj visas %{total_trophies} trofejas un laimē balvas!
       prize_earned: Visas %{total_trophies} Trofejas sakrātas. Balva laimēta!
-      prize_us_only: (Tikai ASV studenti)
+      prize_us_only: "(Tikai ASV studenti)"
       prizes_link: Vairāk informācijas
   teacher:
     answer: Atbilde
@@ -283,7 +283,7 @@
     title:
       one: 'Tavs skolotājs:'
       other: 'Tavi skolotāji:'
-    remove: (noņemt skolotāju)
+    remove: "(noņemt skolotāju)"
     confirm:
       remove: Vai tu esi drošs, ka vēlies noņemt šo skolotāju?
     students:
@@ -303,11 +303,11 @@
   user:
     email_confirm_needed: 'E-pasta adrese nav apstiprināta:'
     email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
-    email_confirm_wrong_email: (Nepareiza e-pasta adrese?)
+    email_confirm_wrong_email: "(Nepareiza e-pasta adrese?)"
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
-    new_password_hint: (atstājiet tukšu, ja nevēlaties mainīt to)
-    current_password_hint: (nepieciešama jūsu pašreizējā parole, lai apstiprinātu
-      izmaiņas)
+    new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
+    current_password_hint: "(nepieciešama jūsu pašreizējā parole, lai apstiprinātu
+      izmaiņas)"
     delete: Izdzēst jūsu kontu
     delete_text: Nospiežot šo pogu, jūs izdzēsīsiet savu kontu.
     delete_text_teacher_note: Lūdzu, ņemiet vērā, ka jūsu konta dzēšana neizdzēsīs
@@ -316,16 +316,12 @@
   user_level:
     completed: Pabeigts
     tried: Mēģināts
-  user_stats:
-    recent_activity: Pēdējā aktivitāte
-    show_more: Rādīt vairāk
-    classroom_activity: Atvienota aktivitāte
   home:
     title: Kodu studija
     description: Code Studio ir vietne Code.org izstrādātiem tiešsaistes kursiem
-    lines_of_code: '%{lines_count} koda rindiņas ir uzrakstījuši skolēni'
-    lines_of_code_linebreak: '%{lines_count} KODA RINDIŅAS<br/> IR UZRAKSTĪJUŠI %{students_count}
-      MILJONI SKOLĒNU'
+    lines_of_code: "%{lines_count} koda rindiņas ir uzrakstījuši skolēni"
+    lines_of_code_linebreak: "%{lines_count} KODA RINDIŅAS<br/> IR UZRAKSTĪJUŠI %{students_count}
+      MILJONI SKOLĒNU"
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: Jau reģistrējies? %{link}
@@ -357,16 +353,16 @@
     tryfirst: 'Vai vari izmēģināt sākumā un pierakstīties vēlāk:'
     trynow: Izmēģini tūlīt
     add_hint_help: Lūdzu palīdziet mums pievienot gudrus padomus Code.org pamācībās
-    20hour_overview: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
+    20hour_overview: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
       pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet
-      tas sagādās prieku mācīties visos vecumos.
+      tas sagādās prieku mācīties visos vecumos."
     test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
     try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
     use_as_teacher: Izmantojiet šo vietni, kā skolotājs
-    heading_hoc2014: <h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>
-    heading_elementary: <h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>
-    heading_apps: <h2>Izklaide </h2><h1>visiem</h1>
-    heading_legacy: <h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>
+    heading_hoc2014: "<h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>"
+    heading_elementary: "<h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>"
+    heading_apps: "<h2>Izklaide </h2><h1>visiem</h1>"
+    heading_legacy: "<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>"
     your_gallery: Galerija
     no_primary_course: Izmēģināt Code Studio kursu
     choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
@@ -399,8 +395,8 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Nodrošina Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
     more: Vairāk
     feedback: nodrošināt atsauksmes
@@ -490,9 +486,9 @@
         koda apmācību!
     20-hour:
       title: Accelerated Course
-      body: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
+      body: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem.
         Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās
-        prieku mācīties visos vecumos.
+        prieku mācīties visos vecumos."
       body_short: Learn basic computer science in an accelerated version of courses
         2-4.
     hoc2014:
@@ -522,21 +518,21 @@
       un ekrānšāviņiem, lai apskatītu katru programmu darbībā.
     want_to_make_your_own: Vēlies uzveidot pats savu?
     more: Vēl &rarr;
-    caption_by_name_age: '%{name}, vecums %{age}'
-    caption_time_ago: '%{time_ago} pirms'
+    caption_by_name_age: "%{name}, vecums %{age}"
+    caption_time_ago: "%{time_ago} pirms"
     header: Galerija
     header_playlab: Spēles laboratorija
     header_artist: Mākslinieks
   landing:
-    prerelease: Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
+    prerelease: "Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
       ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju
-      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti.
-    prerelease_hoc2014: Šī pamācība ir <span class='betatext'>beta</span >stadijā.
-      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes.
+      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti."
+    prerelease_hoc2014: "Šī pamācība ir <span class='betatext'>beta</span >stadijā.
+      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes."
     feedback: Sniegt atsauksmes
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Nepareiza atbilde
     wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
@@ -579,9 +575,9 @@
       name:
         20-hour:
           title: K-8 Ievads Datorzinātņu kursos (15-25stundas)
-          description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
+          description: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
             pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs,
-            bet tas sagādās prieku mācīties visos vecumos.
+            bet tas sagādās prieku mācīties visos vecumos."
         Hour of Code:
           title: Programmēšanas stunda
           description: ''

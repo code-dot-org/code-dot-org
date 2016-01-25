@@ -714,7 +714,7 @@
         C3_bee_conditionals: 'Bi: Villkor'
         C3_maze_conditionals: 'Labyrint: Villkorssatser'
         C3_artist_nested_loops: Kapslade slingor(loopar)
-        C3_farmer_while: '''Medan'' loopar(slingor)'
+        C3_farmer_while: "'Medan' loopar(slingor)"
         C3_bee_nested_loops: Kapslade slingor(loopar)
         C3_bee_debugging: 'Biet: Felsökning'
         C3_bounce: Studsa
@@ -730,9 +730,9 @@
         C4_bee_conditional: 'Bi: Villkor'
         C4_variables_artist: Variabler - Konstnär
         C4_variables_playlab: Variabler - Play Lab
-        C4_for_loops: '''För'' loopar'
-        C4_for_loops_bee: '''För'' loopar'
-        C4_for_loops_no_bee: '''För'' loopar'
+        C4_for_loops: "'För' loopar"
+        C4_for_loops_bee: "'För' loopar"
+        C4_for_loops_no_bee: "'För' loopar"
         C4_math_artist: Programmera Konstnären med matematik
         C4_function_edit: Redigera funktioner
         C4_function_create: Skapa funktioner
@@ -741,7 +741,7 @@
         C4_unplugged_algorithms: Algoritmer med Tangram
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variabler i kuvert
-        C4_unplugged_forloops: '''För'' loopar'
+        C4_unplugged_forloops: "'För' loopar"
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
         frozen_intro: Kodtimmen introduktion
@@ -836,8 +836,8 @@
         replace_questions_degree: Använd rullistan för att ersätta "???" med rätt
           antal grader att svänga
         repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
-        repeat_blocks_1: (1) använd detta block och lägga det runt de grå blocken
-          på arbetsytan
+        repeat_blocks_1: "(1) använd detta block och lägga det runt de grå blocken
+          på arbetsytan"
         repeat_blocks_2: (2) flytta blocket "Upprepa" hit, och placera de grå blocken
           inuti
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!

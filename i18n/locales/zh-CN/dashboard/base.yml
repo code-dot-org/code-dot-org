@@ -280,10 +280,6 @@ zh:
   user_level:
     completed: 已完成
     tried: 试过了
-  user_stats:
-    recent_activity: 最近的动态
-    show_more: 显示更多
-    classroom_activity: 不用电脑的活动
   home:
     title: 代码工作室
     description: 代码工作室是Code.org创办的在线课程的家园

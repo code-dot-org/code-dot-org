@@ -1543,8 +1543,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1601,6 +1603,7 @@
           description: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
             Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
             finché ci sono!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Laboratorio con L'Era Glaciale
           description_short: Crea una storia oppure fai un gioco con il Laboratorio
@@ -1708,5 +1711,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Conclusione
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

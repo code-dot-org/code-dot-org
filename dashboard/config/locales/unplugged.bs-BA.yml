@@ -90,7 +90,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Štafeta Programiranje
+        title: "Štafeta Programiranje"
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".

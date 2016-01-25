@@ -71,8 +71,8 @@
     need_confirmation: Tidak menerima instruksi konfirmasi?
     need_unlock: Tidak menerima instruksi untuk membuka?
   signup_form:
-    student_count: '%{count} Pelajar telah mendaftar.'
-    teacher_count: '%{count} Pengajar telah mendaftar.'
+    student_count: "%{count} Pelajar telah mendaftar."
+    teacher_count: "%{count} Pengajar telah mendaftar."
     overview_student: Buatlah akun untuk melacak kemajuan kamu. Email kamu akan dipakai
       terutama untuk log in dan pemulihan password. Untuk informasi lebih lanjut,
       lihat <a href="http://code.org/privacy">kebijakan privasi</a>.
@@ -146,12 +146,12 @@
       %{name}
   follower:
     invite_sent: Undangan telah dikirim
-    added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
+    added_teacher: "%{name} telah dicantumkan sebagai nama guru Anda"
     registered: Anda sudah terdaftar pada %{section_name}.
     error:
       signed_in: Silahkan logout sebelum melanjutkan
       username_not_found: Nama akun %{username} tidak ditemukan
-      username_in_use: '%{username} sudah diambil, silakan memilih nama lain'
+      username_in_use: "%{username} sudah diambil, silakan memilih nama lain"
       no_teacher: 'Tidak di temukan siapapun dengan akun ''%{teacher_email_or_code}''.
         Mintalah mereka untuk registrasi di sini dan kemudian cobalah lagi untuk tambahkan
         mereka '
@@ -198,7 +198,7 @@
         umum US.
       msg_visit_website: Kunjungi website
     providers:
-      apple_itunes: $10 iTunes hadiah voucher
+      apple_itunes: "$10 iTunes hadiah voucher"
       donors_choose: kredit DonorsChoose.org $750
       donors_choose_bonus: kredit DonorsChoose.org $250
       dropbox: 10GB ruang Dropbox
@@ -207,7 +207,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Pilih hadiah:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -251,7 +251,7 @@
             kredit. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>
             kredit hanya dapat berlaku untuk guru-guru sekolah umum di Amerika Serikat.
   crud:
-    new_model: '%{model} baru'
+    new_model: "%{model} baru"
     show: Tampilkan
     edit: Edit
     edit_model: Edit %{model}
@@ -259,9 +259,9 @@
     destroy: Hancurkan
     back: Kembali
     confirm: Anda yakin?
-    created: '%{model} berhasil dibuat.'
-    updated: '%{model} berhasil dibuat.'
-    destroyed: '% {model} telah berhasil dihapus.'
+    created: "%{model} berhasil dibuat."
+    updated: "%{model} berhasil dibuat."
+    destroyed: "% {model} telah berhasil dihapus."
     access_denied: Anda tidak memiliki akses untuk %{model} ini.
   nav:
     header:
@@ -284,7 +284,7 @@
       signup: Daftar
       already_registered: Apa Sudah Terdaftar?
     popup:
-      progress_for_user: '%{name} kemajuan'
+      progress_for_user: "%{name} kemajuan"
       progress: Kemajuan Anda
       lines: 'Jumlah baris kode: %{lines}'
       close: TUTUP
@@ -292,7 +292,7 @@
       puzzle_map: Tahap
       prizes: Kumpulkan semua %{total_trophies} piala dan menangkan hadiah!
       prize_earned: Semua Piala %{total_trophies} telah terkumpul. Memenangkan hadiah!
-      prize_us_only: (Hanya untuk siswa dari Amerika Serikat)
+      prize_us_only: "(Hanya untuk siswa dari Amerika Serikat)"
       prizes_link: Info lebih lanjut
   teacher:
     answer: Jawaban
@@ -300,14 +300,14 @@
     title:
       one: 'Guru anda:'
       other: 'Guru Anda:'
-    remove: (hapus guru)
+    remove: "(hapus guru)"
     confirm:
       remove: Apakah anda yakin ingin menghapus guru ini?
     students:
       dashboard: Pergi ke Dashboard Guru
     user_not_found: Guru atau murid tidak dapat ditemukan
-    student_teacher_disassociated: '%{teacher_name} telah dihapus sebagai guru dari
-      %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} telah dihapus sebagai guru dari
+      %{student_name}"
     panel:
       answer_viewer: Menjawab Pembaca
       student: siswa
@@ -321,11 +321,11 @@
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
-    email_confirm_wrong_email: (Alamat email salah?)
+    email_confirm_wrong_email: "(Alamat email salah?)"
     email_resend_confirm: Kirim ulang petunjuk konfirmasi
-    new_password_hint: (Kosongkan jika Anda tidak ingin mengubahnya)
-    current_password_hint: (kita perlu password Anda saat ini untuk mengkonfirmasi
-      perubahan Anda)
+    new_password_hint: "(Kosongkan jika Anda tidak ingin mengubahnya)"
+    current_password_hint: "(kita perlu password Anda saat ini untuk mengkonfirmasi
+      perubahan Anda)"
     delete: Hapuslah akun anda
     delete_text: Klik tombol di bawah ini akan menghapus akun Anda.
     delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus
@@ -334,16 +334,12 @@
   user_level:
     completed: Selesai
     tried: Telah mencoba
-  user_stats:
-    recent_activity: Aktivitas terakhir
-    show_more: Tunjukkan lebih banyak
-    classroom_activity: Kegiatan tanpa komputer
   home:
     title: Kode Studio
     description: Kode Studio adalah rumah untuk kursus online yang dibuat oleh Code.org
-    lines_of_code: '%{lines_count} GARIS KODE DITULIS OLEH PELAJAR'
-    lines_of_code_linebreak: '%{lines_count} baris kode <br/> DITULIS oleh %{students_count}
-      jutaan siswa'
+    lines_of_code: "%{lines_count} GARIS KODE DITULIS OLEH PELAJAR"
+    lines_of_code_linebreak: "%{lines_count} baris kode <br/> DITULIS oleh %{students_count}
+      jutaan siswa"
     all_courses: Tinjauan Kursus 1, 2, dan 3
     lesson_plans: Rencana pelajaran
     signin_message: Sudah terdaftar? %{link}
@@ -384,10 +380,10 @@
     test_videos_help: Coba pemutar video baru kami di sekolah anda
     try_beta_courses: Baru! Cobalah kelas percobaan kami untuk siswa K-5
     use_as_teacher: Gunakan situs ini sebagai seorang guru
-    heading_hoc2014: <h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>
-    heading_elementary: <h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>
-    heading_apps: <h2>Menyenagkan bagi</h2><h1>Semua orang</h1>
-    heading_legacy: <h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>
+    heading_hoc2014: "<h2>The Hour of Code untuk</h2><h1>Segala Usia</h1>"
+    heading_elementary: "<h2>20 jam kursus untuk</h2><h1>Pemula (segala usia)</h1>"
+    heading_apps: "<h2>Menyenagkan bagi</h2><h1>Semua orang</h1>"
+    heading_legacy: "<h2>Kursus umum kami untuk</h2><h1>Semua Umur</h1>"
     your_gallery: Galeri
     no_primary_course: Coba kursus di Code Studio
     choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah
@@ -421,8 +417,8 @@
       Ltd. Hak Cipta dilindungi undang-undang<br />Plants vs. Zombies &#8482;&amp;&copy;%{current_year}
       Electronic Arts Inc. Hak Cipta dilindungi undang
     powered_by_aws: Didukung oleh Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; adalah merk dagang dari Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; adalah merk dagang dari Code.org."
     copyright: Hak cipta
     more: Lebih
     feedback: Berikan pendapat
@@ -546,7 +542,7 @@
     want_to_make_your_own: Mau membuat sendiri ?
     more: lebih &rarr;
     caption_by_name_age: oleh %{name}, usia %{age}
-    caption_time_ago: '%{time_ago} yang lalu'
+    caption_time_ago: "%{time_ago} yang lalu"
     header: Galeri
     header_playlab: Play Lab/Lab Permainan
     header_artist: Artis
@@ -559,7 +555,7 @@
     feedback: Berikan usulan
     report_bug: Laporkan kesalahan
     support: Dapatkan bantuan
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!

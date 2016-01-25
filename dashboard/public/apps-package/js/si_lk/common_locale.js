@@ -331,7 +331,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "hintRequest":function(d){return "ඉඟිය බලන්න"},
 "hintReviewTitle":function(d){return "Review Your Hints"},
 "hintSelectInstructions":function(d){return "Instructions and old hints"},
-"hintSelectNewHint":function(d){return "Get a new hint"},
+"hintSelectNewHint":function(d){return "අලුත් ඉගියක් ලබා ගන්න"},
 "hintTitle":function(d){return "ඉඟිය:"},
 "ignore":function(d){return "නොසලකා හරින්න"},
 "infinity":function(d){return "අනන්තය"},
@@ -400,6 +400,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "unnamedFunction":function(d){return "ඔබේ යම්කිසි විචල්‍යයක් හෝ ශ්‍රිතයක් සඳහා නාමයක් ලබාදී නොමැත. සෑම එකකටම නාමයක් ලබාදීමට අමතක නොකරන්න."},
 "wantToLearn":function(d){return "Code කරන්න ඉගෙනගන්න කැමතිද?"},
 "watchVideo":function(d){return "වීඩියෝව නරඹන්න"},
-"when":function(d){return "when"},
-"whenRun":function(d){return "when run"},
+"when":function(d){return "විට"},
+"whenRun":function(d){return "දුවන විට"},
 "workspaceHeaderShort":function(d){return "වැඩ අවකාශය: "}};
