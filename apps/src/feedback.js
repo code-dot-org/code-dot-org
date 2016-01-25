@@ -175,15 +175,23 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
-  // get a list of all missing recommended blocks, and display them as
-  // contextual hints when the dialog closes. If the user views one of
-  // the blocks in the dialog, it is removed from this list.
+  // get the topmost missing recommended block, if it exists, to be
+  // added to the queue of contextual hints. If the user views the block
+  // in the dialog, mark it as seen and add it to the list as such.
   var missingRecommendedBlockHints = this.getMissingBlocks_(recommendedBlocks, 1)
     .blocksToDisplay
     .map(function (block) {
-      block.seen = false;
+      block.alreadySeen = false;
       return block;
     });
+  var markContextualHintsAsSeen = function () {
+    missingRecommendedBlockHints.filter(function (hint) {
+      return feedbackBlocks && feedbackBlocks.xml && feedbackBlocks.xml.indexOf(hint.blockDisplayXML) > -1;
+    }).forEach(function (hint) {
+      hint.alreadySeen = true;
+    });
+  };
+
   var onHidden = onlyContinue ? options.onContinue : function () {
     this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
   }.bind(this);
@@ -247,7 +255,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       hintRequestButton.parentNode.removeChild(hintRequestButton);
 
       // mark the corresponding block hint as seen
-      missingRecommendedBlockHints[0].seen = true;
+      markContextualHintsAsSeen();
     } else {
 
       // Generate a generic feedback message to display when we show the
@@ -262,7 +270,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
         // mark the corresponding block hint as seen
-        missingRecommendedBlockHints[0].seen = true;
+        markContextualHintsAsSeen();
 
         // Swap out the specific feedback message with a generic one.
         var parentNode = feedbackMessage.parentNode;

@@ -225,7 +225,11 @@ authoredHintUtils.submitHints = function (url) {
 
 /**
  * Generates contextual hints as used by StudioApp from Blockly XML
- * @param {String[]} - array of Blockly Block XML strings
+ * @param {Object[]} blocks An array of objects representing the
+ *        missing recommended Blockly Blocks for which we want to
+ *        create hints.
+ * @param {string} blocks[].blockDisplayXML
+ * @param {boolean} blocks[].alreadySeen
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
@@ -238,7 +242,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
       hintId: "recommended_block_" + blockType,
       hintClass: 'recommended',
       hintType: 'contextual',
-      alreadySeen: block.seen
+      alreadySeen: block.alreadySeen
     };
   });
   return hints;

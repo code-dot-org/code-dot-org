@@ -71,9 +71,7 @@ AuthoredHints.prototype.getSeenHints = function () {
  * Creates contextual hints for the specified blocks and adds them to
  * the queue of hints to display. Triggers an animation on the hint
  * lightbulb if the queue has changed.
- * @param {String[]} blocks An array of XML strings representing the
- *        missing recommended Blockly Blocks for which we want to
- *        display hints.
+ * @param {Objec[]} blocks @see authoredHintUtils.createContextualHintsFromBlocks
  */
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
