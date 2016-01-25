@@ -29,13 +29,23 @@ function BeeItemDrawer(dirtMap, skin, bee) {
   this.pegman_ = null;
 
   // is item currently covered by a cloud?
-  this.clouded_ = dirtMap.map(function (row) {
-    return [];
-  });
+  this.clouded_ = undefined;
+  this.resetClouded();
 }
 
 BeeItemDrawer.inherits(DirtDrawer);
 module.exports = BeeItemDrawer;
+
+/**
+ * Resets our tracking of clouded/revealed squares. Used on
+ * initialization and also to reset the drawer between randomized
+ * conditionals runs.
+ */
+BeeItemDrawer.prototype.resetClouded = function () {
+  this.clouded_ = this.bee_.currentStaticGrid.map(function (row) {
+    return [];
+  });
+};
 
 /**
  * Override DirtDrawer's updateItemImage.
@@ -217,6 +227,10 @@ BeeItemDrawer.prototype.showCloud_ = function(row, col) {
     unclippedWidth: 50
   };
   this.updateImageWithIndex_('cloud', row, col, cloudImageInfo, 0);
+  //var underlyingElement = document.getElementById(cellId('beeItem', row, col));
+  //if (underlyingElement) {
+  //  underlyingElement.setAttribute('visibility', 'hidden');
+  //}
 
   // Make sure the animation is cached by the browser.
   this.displayCloudAnimation_(row, col, false /* animate */);
@@ -230,6 +244,10 @@ BeeItemDrawer.prototype.hideCloud_ = function(row, col) {
   if (cloudElement) {
     cloudElement.setAttribute('visibility', 'hidden');
   }
+  //var underlyingElement = document.getElementById(cellId('beeItem', row, col));
+  //if (underlyingElement) {
+  //  underlyingElement.setAttribute('visibility', '');
+  //}
 
   this.displayCloudAnimation_(row, col, true /* animate */);
 };
