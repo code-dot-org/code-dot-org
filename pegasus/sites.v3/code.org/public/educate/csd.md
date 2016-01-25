@@ -1,5 +1,5 @@
 ---
-title: Computer Science Q
+title: CS Discoveries
 nav: educate_nav
 ---
 
