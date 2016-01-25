@@ -58,10 +58,12 @@ goog.require('goog.array');
  * Class for a functional block-specific contract editor.
  * @param {Object} configuration - configuration parameters
  * @param {boolean} configuration.disableExamples - whether to never show examples
+ * @param {Object} blockSpaceOptions - inherited options to be passed
+ *        along to the blockSpace constructor
  * @constructor
  */
-Blockly.ContractEditor = function(configuration) {
-  Blockly.ContractEditor.superClass_.constructor.call(this);
+Blockly.ContractEditor = function(configuration, blockSpaceOptions) {
+  Blockly.ContractEditor.superClass_.constructor.call(this, blockSpaceOptions);
 
   /**
    * Whether examples should be hidden for the lifetime of this editor

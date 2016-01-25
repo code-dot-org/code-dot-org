@@ -18,9 +18,11 @@ goog.require('goog.structs.LinkedMap');
 
 /**
  * Class for a modal function editor.
+ * @param {Object} blockSpaceOptions - inherited options to be passed
+ *        along to the blockSpace constructor
  * @constructor
  */
-Blockly.FunctionEditor = function() {
+Blockly.FunctionEditor = function(blockSpaceOptions) {
   /**
    * Whether this editor has been initialized
    * @type {boolean}
@@ -69,6 +71,9 @@ Blockly.FunctionEditor = function() {
   this.frameText_ = null;
   this.modalBackground_ = null;
   this.onResizeWrapper_ = null;
+
+  /** @type {Object} */
+  this.blockSpaceOptions = blockSpaceOptions;
 
   /** @type {BlockSpace} */
   this.modalBlockSpace = null;
@@ -441,39 +446,29 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   goog.dom.insertSiblingAfter(this.container_, Blockly.mainBlockSpaceEditor.svg_);
   this.container_.style.top = Blockly.mainBlockSpaceEditor.getWorkspaceTopOffset() + 'px';
   var self = this;
-  this.modalBlockSpaceEditor =
-      new Blockly.BlockSpaceEditor(this.container_,
 
-        // getMetrics():
-        function() {
-          // `this` is the new BlockSpaceEditor
-          var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
-          if (!metrics) {
-            return null;
-          }
+  var blockSpaceOptions = goog.object.clone(this.blockSpaceOptions);
+  goog.mixin(blockSpaceOptions, {
+    modifyMetrics: function (metrics) {
+      metrics.absoluteLeft +=
+          FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
+      metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
+      metrics.viewWidth -=
+          (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
+      metrics.viewHeight -=
+          FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + self.getWindowBorderChromeHeight();
+      return metrics;
+    },
+    onSetMetrics: function () {
+      if (self.contractDiv_) {
+        self.resizeUIComponents_();
+        self.layOutBlockSpaceItems_();
+      }
+    },
+    hideTrashRect: true
+  });
 
-          metrics.absoluteLeft +=
-              FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH + 1;
-          metrics.absoluteTop += self.getBlockSpaceEditorToScreenTop_();
-          metrics.viewWidth -=
-              (FRAME_MARGIN_SIDE + Blockly.Bubble.BORDER_WIDTH) * 2;
-          metrics.viewHeight -=
-              FRAME_MARGIN_TOP + Blockly.Bubble.BORDER_WIDTH + self.getWindowBorderChromeHeight();
-          return metrics;
-        },
-
-        // setMetrics():
-        function (xyRatio) {
-          // `this` is the new BlockSpaceEditor
-          Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
-          if (self.contractDiv_) {
-            self.resizeUIComponents_();
-            self.layOutBlockSpaceItems_();
-          }
-        },
-
-        // hideTrashRect:
-        true);
+  this.modalBlockSpaceEditor = new Blockly.BlockSpaceEditor(this.container_, blockSpaceOptions);
 
   this.modalBlockSpace = this.modalBlockSpaceEditor.blockSpace;
   this.modalBlockSpace.customFlyoutMetrics_ = Blockly.mainBlockSpace.getMetrics;

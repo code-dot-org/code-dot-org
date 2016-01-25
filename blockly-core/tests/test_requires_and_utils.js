@@ -44,8 +44,9 @@ Blockly.Test.initializeBlockSpaceEditor = function () {
   container.style.height = 500 + 'px';
   Blockly.assetUrl = function(){return ''};
   Blockly.Css.inject(container);
-  Blockly.hasVerticalScrollbars = true;
-  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container);
+  Blockly.mainBlockSpaceEditor = new Blockly.BlockSpaceEditor(container, {
+    hasVerticalScrollbars: true,
+  });
   Blockly.mainBlockSpace = Blockly.mainBlockSpaceEditor.blockSpace;
   return container;
 };
@@ -55,7 +56,9 @@ Blockly.Test.testWithReadOnlyBlockSpaceEditor = function (callback) {
   document.body.appendChild(container);
   container.style.width = 500 + 'px';
   container.style.height = 500 + 'px';
-  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, undefined, undefined, undefined, true);
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, {
+    readOnly: true
+  });
   callback(blockSpaceEditor);
   return container;
 };
