@@ -23,23 +23,26 @@
         error:
           future: nem lehet a jövőben
   hello: Helló világ
-  welcome_back: Üdv újra, %{name}
+  welcome_back: "Üdv újra, %{name}"
   submit: Elküldés
   add_teacher_form:
     code:
       label: 'Tanár hozzáadása:'
       placeholder: Szakasz kód (ABCDEF)
+      instructions: Kélek, írd be a tanárod által megadott kódot. Ez egy 6 betűs kód
+        - például "ABCDEF".
     submit: Tanár hozzáadása
   add_hint_form:
     placeholder: Kérjük, írd ide a javaslatod
-    submit: Írja le a véleményét
+    submit: "Írja le a véleményét"
   appname: Code.org
   stage: szakasz
   stage_number: Szint %{number}
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
-  of: /
+  unplugged_activity: Offline tevékenység
+  of: "/"
   more: TÖBB
   less: KEVESEBB
   beta: béta
@@ -68,8 +71,8 @@
     need_confirmation: Nem kapta meg a megerősítő instrukciókat?
     need_unlock: Nem kaptál a zárolás megszüntetéséhez útmutatót?
   signup_form:
-    student_count: '%{count} diák már feliratkozott.'
-    teacher_count: '%{count} tanár már feliratkozott.'
+    student_count: "%{count} diák már feliratkozott."
+    teacher_count: "%{count} tanár már feliratkozott."
     overview_student: Regisztrálj, hogy nyomon tudd követni a haladásodat. Az e-mail
       címedet csak azonosításként használjuk, vagy ha esetleg elfelejtetted a jelszavadat.
       További információkért olvasd el az <a href="http://code.org/privacy"> Adatvédelmi
@@ -96,7 +99,7 @@
     valid_username: Elérhető!
     invalid_username: Felhasználónév minimum 5 karakter hosszú
     taken_username: Felhasználónév már foglalt
-    valid_password: Érvényes jelszó!
+    valid_password: "Érvényes jelszó!"
     invalid_password: A jelszónak legalább 6 karakter hosszúnak kell lennie
     mismatch_password: A megadott két jelszó nem egyezik
     student_terms: Beleegyezem a Code.org <a href='http://code.org/tos'>Felhasználói
@@ -118,10 +121,10 @@
     try_hoc: Először próbáld meg a Kódolás Óráját
     try_20hours: Próbáld ki a 20 órás bevezetést a számítógép-tudományba
   signinsection:
-    welcome: 'Üdvözlünk itt: %{section_name}'
+    welcome: "Üdvözlünk itt: %{section_name}"
     name: Válaszd ki a neved
     picture: Keress egy titkos képet
-    words: Írd be a titkos szavaidat
+    words: "Írd be a titkos szavaidat"
     login: Bejelentkezés
   password:
     reset_form:
@@ -130,7 +133,7 @@
       submit: Küldj új jelszó beállítási útmutatót
     change_form:
       title: Jelszó módosítása
-      new_password: Új jelszó
+      new_password: "Új jelszó"
       confirm_password: Erősítse meg új jelszavát
       submit: Jelszavam módosítása
   welcome_email:
@@ -142,12 +145,12 @@
       Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}\n"
   follower:
     invite_sent: Meghívó elküldve
-    added_teacher: '%{name} hozzáadva mint a tanárod'
+    added_teacher: "%{name} hozzáadva mint a tanárod"
     registered: Regisztráltál %{section_name}-ra.
     error:
       signed_in: Mielőtt folytatná kérem jelentkezzen ki
-      username_not_found: '%{username} felhasználónév nem található'
-      username_in_use: '%{username} már foglalt, kérjük válasszon egy újat'
+      username_not_found: "%{username} felhasználónév nem található"
+      username_in_use: "%{username} már foglalt, kérjük válasszon egy újat"
       no_teacher: 'Nem található bejelentkezett felhasználó ezzel az értékkel: ''%{teacher_email_or_code}''.
         Kérdd meg, hogy jelentkezzen be itt, majd próbáld felvenni újra'
       section_not_found: 'Nem található szakasz ezzel a kóddal: ''%{section_code}''.'
@@ -188,7 +191,7 @@
       msg_publicschool: Kérjük, erősítse meg, hogy Ön egy U.S. állami iskolai tanár.
       msg_visit_website: Weboldal meglátogatása
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox tárhely
@@ -197,7 +200,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -236,17 +239,17 @@
             DonorsChoose.org</a> díj az amerikai állami iskolákban tanító tanároknak
             juttatható. .
   crud:
-    new_model: Új %{model}
+    new_model: "Új %{model}"
     show: Mutat
     edit: Szerkeszt
-    edit_model: '%{model} módosítása'
+    edit_model: "%{model} módosítása"
     update: Frissítés
     destroy: Elpusztítás
     back: Vissza
     confirm: Biztos benne?
-    created: '%{model} sikeresen létrehozva.'
-    updated: '%{model} sikeresen frissítve.'
-    destroyed: '%{model} sikeresen törölve.'
+    created: "%{model} sikeresen létrehozva."
+    updated: "%{model} sikeresen frissítve."
+    destroyed: "%{model} sikeresen törölve."
     access_denied: 'Nincs jogosultsága ehhez: %{model}.'
   nav:
     header:
@@ -256,10 +259,11 @@
         playlab: Készíts egy applikációt
         artist: Rajzolj valamit
         calculate: Calculate Something
+        applab: Készíts egy applikációt
     user:
       classroom: Tanári kezdőlap
       district_dashboard: Tankerületi munkafelület
-      label: Üdv %{username}
+      label: "Üdv %{username}"
       stats: Fejlődésem
       settings: Profilom
       prizes: Díjak
@@ -268,7 +272,7 @@
       signup: Regisztrálás
       already_registered: Már regisztráltál?
     popup:
-      progress_for_user: '%{name} fejlődése'
+      progress_for_user: "%{name} fejlődése"
       progress: Fejlődése
       lines: 'A kód teljes hossza: %{lines} sor'
       close: BEZÁRÁS
@@ -277,7 +281,7 @@
       prizes: Gyűjtse össze az összes %{total_trophies} trófeát, és nyerjen díjakat!
       prize_earned: Az összes  %{total_trophies}  trófeát  összegyűjtötte. Megnyerte
         a díjat!
-      prize_us_only: (Kizárólag U.S. Diákoknak)
+      prize_us_only: "(Kizárólag U.S. Diákoknak)"
       prizes_link: További információk
   teacher:
     answer: Válasz
@@ -285,68 +289,13 @@
     title:
       one: 'A tanára:'
       other: 'A tanáraid:'
-    remove: (tanár eltávolítása)
+    remove: "(tanár eltávolítása)"
     confirm:
       remove: Biztosan el szeretné bocsátani ezt a tanárt?
-    tools: Tanári eszközök
-    followers:
-      section: 'Szakasz:'
-      stages: 'Elérhető szintek:'
-      show_past: 'Mutasd meg a diákok tevékenységét (%{bullet_html}):'
-      levels_key: Szint kódja
-      perfect: Tökéletesen megcsináltad
-      completed: Sikeresen megcsináltad de túl sok blokkot használtál
-      tried: Megpróbáltad, de nem sikerült
-      not_tried: Még nem próbáltam
-      activity: Diákok tevékenységét jelzi az utóbbi %{hours}%{plural} órában
-      no_section: Nincs feladott szakasz
-      trophies: trófeák
     students:
-      name: Név
-      username: felhasználónév
-      password: jelszó
-      manage: Diákok kezelése
       dashboard: Vissza a Tanári Nyitólapra
-      add: Diákok hozzáadása
-      remove: diák eltávolítása
-      confirm_remove: Biztos el akarod távolítani ezt a diákot?
-      help_reassign: Ahhoz, hogy az osztályodat több részre oszd, válassz ki néhány
-        diákot, és adj fel nekik egy új szakaszt.
-      help_register: Ahelyett, hogy neked kéne sok időt töltened azzal, hogy egyesével
-        hozzáadd a diákjaidat a csoportodhoz, megkérheted őket, hogy regisztráljanak
-        az osztályodba. A diákjaidnak meg kell adniuk egy felhasználó nevet és jelszót,
-        de nekik NEM kell e-mail címet megadniuk. ha egy diák elfelejti a jelszavát,
-        te újat tudsz neki adni.
-      register: Kérd meg a diákjaidat, hogy regisztrálják magukat
-      vist: Kérd meg a diákjaidat, hogy látogassák meg
-      section_code: 'és írják be ezt a kódot:'
-      first_please: Először is kérjük, %{add_section}
-      for: nak
-      enter: 'írd be:'
-    sections:
-      add: Adj hozzá egy szakaszt
-      manage: Vezetési szakasz
-      section: Szakasz
-      students: Diákok
-      section_code: Szakasz kódja
-      add_section_code: Adj a listához diákokat a kódjukkal
-      secret: Titkos
-      grade: Évfolyam
-      course: Tanfolyam
-      rename: átnevezés
-      edit: szerkeszt
-      delete: törlés
-      confirm_delete: Biztos vagy benne, hogy törölni szeretnéd ezt a szakaszt?
-      email: Küldj e-mailt
-    rollup: Nyomonkövetési felület
-    activity: Legutóbbi osztálytermi aktivitás
-    user_not_found: A tanár vagy a diák nem található
-    cant_remove_student_no_email: '%{student_name} nem törölhető a listáról, mert
-      %{student_name} nem regisztrált e-mail címet'
-    cant_remove_teacher_no_email: '%{teacher_name} nem törölhető, mert még nem regisztráltál
-      e-mail címet'
-    student_teacher_disassociated: '%{teacher_name} már nem %{student_name} tanára
-      a rendszerben'
+    user_not_found: Ez a tanár nem található.
+    student_teacher_disassociated: Eltávolítottad %{teacher_name} a tanáraid közül.
     panel:
       answer_viewer: Válasz megtekintő
       student: Diák
@@ -360,10 +309,11 @@
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'
     email_confirm_needed_required: 'Az e-mail cím %{email} nincs megerősítve:'
-    email_confirm_wrong_email: (Helytelen e-mail cím?)
+    email_confirm_wrong_email: "(Helytelen e-mail cím?)"
     email_resend_confirm: Megerősítés újraküldése
-    new_password_hint: (hagyja üresen, ha nem akarja megváltoztatni)
-    current_password_hint: (szükségünk van a jelenlegi jelszavadra a módosítások végrehajtásához)
+    new_password_hint: "(hagyd üresen, ha nem akarod megváltoztatni)"
+    current_password_hint: "(szükségünk van a jelenlegi jelszavadra a módosítások
+      végrehajtásához)"
     delete: Fiók törlése
     delete_text: Az alábbi gombra kattintva törlöd a fiókot.
     delete_text_teacher_note: 'Kérjük, vedd figyelembe: a fiók törlésével együtt nem
@@ -372,26 +322,22 @@
   user_level:
     completed: Befejezve
     tried: Próbáltam
-  user_stats:
-    recent_activity: Legutóbbi tevékenységek
-    show_more: Mutass többet
-    classroom_activity: Offline tevékenység
   home:
     title: Kód stúdió
-    description: A Code Studio az online tanfolyamok otthona, melyet a Code.org készített
-    lines_of_code: '%{lines_count} sor kódot írtak eddig a diákok'
-    lines_of_code_linebreak: '%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
-      TANULÓ'
+    description: A Kód stúdió az online tanfolyamok otthona, melyet a Code.org készített
+    lines_of_code: "%{lines_count} sor kódot írtak eddig a diákok"
+    lines_of_code_linebreak: "%{lines_count} sor kódot<br/>írt %{students_count} MILLIÓ
+      TANULÓ"
     all_courses: 1., 2. és 3. tanfolyam áttekintése
-    lesson_plans: Óravázlatok
+    lesson_plans: "Óravázlatok"
     signin_message: Már regisztráltál? %{link}
     student_reg_link: Diák Bejelentkezés
     teacher_reg_link: Tanári bejelentkezés
     signin_directions: Fiók használatával nyomon követheted a haladásodat. <br/> Tanárok
       nyomon követhetik az egész osztályt.
     teacher_dashboard: Nézd meg a nyomonkövetési felületet
-    teacher_student_count_one: '%{count} diákod van.'
-    teacher_student_count: '%{count} diákod van.'
+    teacher_student_count_one: "%{count} diákod van."
+    teacher_student_count: "%{count} diákod van."
     teacher_averages: Diákjaid átlagosan   %{trophy_average} trófeát szereztek meg
       a %{trophy_max}  "Concept Mastery" trófeákból.
     teacher_print_certificates: Nyomtasd ki az okleveleket azoknak a diákoknak, akik
@@ -414,18 +360,19 @@
     tryfirst: 'Akár ki is próbálhatja, és csak utána jelentkezik be:'
     trynow: Próbálja ki most
     add_hint_help: Segíts, hogy okos tippekkel láthassuk el oktatóanyagainkat a Code.org-on
-    20hour_overview: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás
-      alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
+    20hour_overview: Ez a 20 órás kurzus bemutatja a számítástechnika és programozás
+      alapfogalmait. A kurzus általános iskolai használatra lett kitalálva, de mindenki
       számára jó időtöltés lehet.
     test_videos_help: Teszteld az új videó lejátszót az iskolában
-    try_beta_courses: ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak
+    try_beta_courses: "ÚJ! Próbáld ki a béta kurzusokat alsó tagozatos diákoknak"
     use_as_teacher: használd ezt az oldalt tanárként
-    heading_hoc2014: <h2>A Kódolás Órája</h2><h1>Minden korosztály számára</h1>
-    heading_elementary: <h2>20 órás tanfolyamok</h2><h1>Kezdőknek (minden korosztály)</h1>
-    heading_apps: <h2>Vidámság </h2><h1>Mindenkinek</h1>
-    heading_legacy: <h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>
+    heading_hoc2014: "<h2>A Kódolás Órája</h2><h1>Minden korosztálynak</h1>"
+    heading_elementary: "<h2>20 órás tanfolyamok</h2><h1>Számítástechnika alapjai
+      (minden korosztálynak)</h1>"
+    heading_apps: "<h2>Vidámság </h2><h1>Mindenkinek</h1>"
+    heading_legacy: "<h2>Általános kurzus </h2><h1>Minden Korosztálynak</h1>"
     your_gallery: Galéria
-    no_primary_course: Próbálj ki egy tanfolyamot a Code Studio-nál
+    no_primary_course: Próbálj ki egy tanfolyamot a Kód stúdióban
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Igazolás kinyomtatása
@@ -433,6 +380,7 @@
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
       alkalmazásokat vagy alkoss a kódolás segítségével!
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   gender:
     male: Férfi
     female: Nő
@@ -450,15 +398,25 @@
       létrehozni ezt a gyakorlatot.
     help_from_html_old: A Google, Microsoft, Facebook, és a Twitter mérnökei segítettek
       létrehozni ezeket a tartalmakat.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Minden jog fenntartva.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Minden jog fenntartva.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Minden jog fenntartva
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog fenntartva.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm. Minden jog fenntartva.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. Minden jog fenntartva.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. Minden jog fenntartva.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Minden
+      jog fenntartva.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. Minden jog fenntartva.<br /> a Gumball csodálatos világa a Cartoon
+      Network beejgyzett védjegye.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Minden jog
+      fenntartva.<br />Star Wars&#8482; &copy; %{current_year} Disney és Lucasfilm.
+      Minden jog fenntartva.<br />Frozen&#8482; &copy; %{current_year} Disney. Minden
+      jog fenntartva.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Minden jog fenntartva.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Minden jog fenntartva.<br />Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Minden jog fenntartva.<br /> a Gumball
+      csodálatos világa a Cartoon Network bejegyzett védjegye.
     powered_by_aws: Az Amazon Web Services működteti
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
-      Hour of Code&reg; a Code.org védjegyei.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
+      Hour of Code&reg; a Code.org védjegyei."
     copyright: Szerzői jog
     more: Mégtöbb
     feedback: Visszajelzés küldése
@@ -470,9 +428,13 @@
     privacy: Adatvédelmi Elvek
     secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
+    built_on_code_studio: Készült a Code Studio seggítségével
+    make_my_own_app: Készítsd el saját alkalmazásod
+    how_it_works: Hogyan működik
+    try_hour_of_code: Próbáld ki a Kódolás Óráját!
   reference_area:
     title: Segítségre van szükséged?
-    subtitle: Nézd meg ezeket a videókat és tanácsokat
+    subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
     auth_error: Nem vagy jogosult a megoldás megtekintésére.
     submit: Frissítsd a szereplő helyét
@@ -504,9 +466,9 @@
   slow_loading: Ez tovább tart majd, mint szokásosan...
   try_reloading: Próbálja meg újratölteni az oldalt
   next_stage: Befejezve! Folytatás a következő pályára
-  download_pdf: Óravázlat
-  lesson_plan: Óravázlat
-  view_lesson_plan: Óravázlat megtekintése
+  download_pdf: "Óravázlat"
+  lesson_plan: "Óravázlat"
+  view_lesson_plan: "Óravázlat megtekintése"
   pdf_download: Letöltés PDF-ben
   download_coming_soon: Hamarosan lesz letölthető tevékenység.
   video_coming_soon: Hamarosan lesz videó!
@@ -523,8 +485,8 @@
     address_not_allowed: Olyan, mintha címet tartalmazna. Próbálj módosítani a szövegen.
     email_not_allowed: Olyan, mintha e-mail címet tartalmazna. Próbálj módosítani
       a szövegen.
-    profanity_not_allowed: Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
-      módosítani a szövegen.
+    profanity_not_allowed: "Úgy tűnik, mintha csúnya kifejezést tartalmazna. Próbálj
+      módosítani a szövegen."
   builder:
     created: Létrehoztál egy új szkriptet.
     destroyed: Töröltél egy szkriptet.
@@ -538,7 +500,7 @@
       unused: Nem használt szintek
   upsell:
     hoc:
-      title: A kódolás órája
+      title: Hagyományos Útvesztö
       body: Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.
     flappy:
       title: Flappy kód
@@ -563,11 +525,11 @@
       title: Star Wars
     infinity:
       title: Infinity játéklabor
-      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot a Disney
-        Infinity karakterek szereplésével.
+      body: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney
+        Infinity szereplőkkel.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Fedezd fel a Minecraft világát kódokkal.
   gallery:
     students_drew_these_with_code: Diákok rajzolták ezeket a kódot.
     students_made_these_with_code: Ezeket diákok készítették kódolással!
@@ -594,7 +556,7 @@
     feedback: Visszajelzés küldése
     report_bug: Hiba bejelentése
     support: Segítség kérés
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Helytelen válasz
     wrong_body: A megadott válasz nem megfelelő.  Próbáld újra!
@@ -626,7 +588,7 @@
     startover_title: Biztosan újra szeretnéd kezdeni?
     startover_body: Visszaállítja a kiindulási állapotot és töröl minden blokkot,
       amit hozzáadtál a programhoz, vagy amit megváltoztattál.
-    startover_ok: Újrakezdés
+    startover_ok: "Újrakezdés"
     startover_cancel: Mégsem
   time:
     hour: 1 óra
@@ -650,7 +612,7 @@
           title: Események
           description: ''
         builder:
-          title: Építő
+          title: "Építő"
           description: ''
         flappy:
           title: Flappy kód
@@ -684,7 +646,7 @@
     completed_too_many_blocks: elkészült, túl sok a blokk
     completed_perfect: elkészült, tökéletes
     furthest_level_attempted: a legmagasabb szint megpróbálva
-    assessment: értékelés
+    assessment: "értékelés"
   studio:
     courses_working_on: Tanfolyamok, amelyeken dolgozol
     completed_courses: Teljesített tanfolyamok
@@ -692,9 +654,9 @@
   project:
     projects: Projektek
     create: Projekt létrehozása
-    create_a_project: 'Új projekt létrehozása:'
-    new: Új létrehozása
-    rename: Átnevezés
+    create_a_project: "Új projekt létrehozása:"
+    new: "Új létrehozása"
+    rename: "Átnevezés"
     save: Mentés
     delete: Törlés
     exit: Vissza a tanfolyamhoz

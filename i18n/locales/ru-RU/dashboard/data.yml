@@ -105,6 +105,8 @@ ru:
         StudioEC: Лаборатория игр
         Applab: Лаборатория Программ
         NetSim: Интернет симулятор
+        Custom: Художник
+        CustomStudio: Лаборатория игр
     trophy:
       name:
         Bronze: Бронзовый
@@ -309,26 +311,28 @@ ru:
         studio_playlab_8: Можете разместить блоки так, чтобы добавлялся балл и исполнялся звук каждый раз, когда единорог прикасается к волшебнику, и переместить его стрелками, чтобы проверить свою программу?
         studio_playlab_9: Установите фон для сцены инопланетного вторжения, и помогите Космоботу добраться до Инопланетянина быстрее, изменяя его скорость. Затем с помощью стрелок переместите Инопланетянина в Космобота и предупредите всех о вторжении
         studio_playlab_10: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
-        studio_iceage_1: 'Мэнни хочет сказать «привет» - можешь помочь ему?'
-        studio_iceage_2: Диего (актер 1) и бабушка (актер 2) хотели бы сказать «Привет» друг к другу. Можешь помочь им с помощью блока «сказать», используя его дважды?
-        studio_iceage_3: Поможешь добраться Скрэту до флага?
-        studio_iceage_4: Можешь помочь Скрэту (актёр 1) добраться до бабушки (актёр 2), а затем воспроизвести звук?
-        studio_iceage_5: Пусть Сиду говорит «Привет», когда на него кликают. Не забудь по нему кликнуть, после того как ты нажмешь кнопку пуск
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
-        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
-        studio_iceage_10: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
-        studio_gumball_1: 'Anais wants to say "hello" - can you help her?'
-        studio_gumball_2: 'Darwin (actor 1) and Gumball (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and play a sound when he gets there?
-        studio_gumball_5: 'Can you help Antony say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_gumball_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Antony move right and left repeatedly?'
-        studio_gumball_8: Can you add a block to score a point and a block to play a sound when Banana Joe runs into Antony, and then move him with the arrows until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole get to Penny faster by changing its speed. Then move him with the arrow keys to get to Nicole and alert everyone else.
-        studio_gumball_10: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
+        studio_iceage_hello1: 'Сид хочет собрать всех для нового приключения. Не поможешь ему сказать "Привет"? Для этого перетащи блок "сказать" в рабочую область и напечатай внутри блока "Привет" .'
+        studio_iceage_hello2: 'Сид (персонаж 1) нашел Мэнни (персонаж 2) и хочет пригласить его принять участие в приключении. Помоги им поприветствовать друг друга,  дважды использовав блок "персонаж говорит".'
+        studio_iceage_move_to_flag: 'Скрат ищет свой желудь. Помоги ему пройти последние 200 пикселей, использую для этого блок "переместить".'
+        studio_iceage_move_to_actor: 'Диего (персонаж 1) ищет Мэнни (персонаж 2). Используй блок "переместить персонажа", чтобы помочь Диего опуститься на 200 пикселей навстречу Мэнни. Затем для того, чтобы при их встречи заиграл звуковой сигнал, соедини блок с событием "когда персонаж касается ".'
+        studio_iceage_repeat: 'Блок "повторять бесконечно" позволяет выполнять фрагмент кода непрерывно. Можешь присоединить блоки к блоку "повторять бесконечно", чтобы Гренни повторно ходил вправо и влево?'
+        studio_iceage_click_hello: 'Поможешь Сиду позвать друзей, когда по нему кликнут "мышкой"? Не забудь нажать на него после запуска программы.'
+        studio_iceage_move_events: 'Скрат все еще ищет желуди! Соедини блок "переместить" с каждым из событий, чтобы при нажатии на клавиши с изображением стрелки он мог бегать, меняя направление. Когда закончишь, нажми "Выполнить" и попробуй собрать все желуди.'
+        studio_iceage_sound_and_points: 'Большая часть программы, позволяющая Гренни ходить влево и вправо, а также Сиду двигатьтся по экрану, уже написана. Закончишь код, добавив блоки к событию "когда персонаж касается", чтобы заиграла музыка и насчитывалось очко при столкновении Сида и Гренни? Нажми "Выполнить", чтобы запустить игру.'
+        studio_iceage_warn_ice_age: 'Ледниковый период наступает, поэтому всем нужно двигаться быстрее! Измени фон на "ледянной" и увеличь скорость Сида. Потом нажми "Выполнить" и перемести его по направлению к Диего, чтобы он смог его предупредить.'
+        studio_iceage_throw_hearts: 'Сид хочет, чтобы его бабушка, Гренни, знала, что он ее любит. Используй комманду "персонаж посылает", чтобы Сид (персонаж 1) послал сердечки Гренни (персонаж 2)! Установи у Гренни счастливое настроение, когда она поймает сердечки.'
+        studio_iceage_free_play: 'Пришло время создать собственную игру или историю! После того, как закончишь, нажми "Финиш", чтобы твои друзья смогли запустить твою игру на своих телефонах, планшетах и компьютерах!'
+        studio_gumball_hello1: 'Анаис желает завести новых друзей. Можешь помочь ей сказать "Привет", перетащив блок "Привет" в рабочую область и напечатав слово "Привет" внутри?'
+        studio_gumball_hello2: 'Дарвин (персонаж 1) и его брат Гамбол (персонаж 2) направляются в школу. Используй дважды блок "персонаж говорит", чтобы они могли поприветствовать друг друга.'
+        studio_gumball_move_to_flag: 'Банан Джо собирается победить в забеге! Помоги ему преодолеть последние 200 пикселей, использовав для этого блог "переместить".'
+        studio_gumball_move_to_actor: 'Гамбол (персонаж 1) и Дарвин (персонаж 2) опоздали на соревнования! Используя блок "переместить персонажа", помоги Гамболу опуститься на 200 пикселей к Дарвину. Затем соедини блок с событием "когда персонаж касается" для того, чтобы при их встречи заиграл звуковой сигнал.'
+        studio_gumball_repeat: 'Блок "повторять бесконечно" позволяет непрерывно выполнять фрагмент кода. Можешь присоединить блоки к блоку "повторять бесконечно", чтобы Гамбол размялся перед забегом, перемещаясь вправо и влево?'
+        studio_gumball_click_hello: 'Можете помочь Антону объявить старт гонки словами "На старт! Внимание! Марш!"? Для проверки программы не забудьте кликнуть на Антона после того, как нажали "Старт"!'
+        studio_gumball_move_events: 'Дарвин участвует в соревновании по собиранию флажков! Соедини блок "переместить" с каждым из событий, чтобы он смог собрать флажки. Когда закончишь, нажми "Выполнить" и попробуй собрать все флажки.'
+        studio_gumball_sound_and_points: 'Большая часть программы, позволяющая Антону (персонаж 2) ходить влево и вправо, а также Банану Джо (персонаж 1) двигатьтся по экрану, уже написана. Закончишь код, добавив блоки к событию "когда персонаж касается", чтобы заиграла музыка и насчитывалось очко при столкновении Банана Джо и Антона? Нажми "Выполнить", чтобы запустить игру.'
+        studio_gumball_warn_food_fight: 'Дарвин только что избежал обкидывания едой! Поменяй фон на "персонажи" и увеличь скорость Дарвина. Потом нажми кнопку "Выполнить" и направь Дарвина к Пенни, чтобы он смог предупредить ее.'
+        studio_gumball_join_food_fight: 'Присоединяйся к обкидыванию едой! Чтобы Банан Джо (персонаж 1) смог бросить еду в Антона (персонаж 2), используй комманду "персонаж бросает объект вправо"! Сделай так, чтобы при попадании в Антона, его настроение менялось на злое.'
+        studio_gumball_free_play: 'Создайте собственную игру или историю. После того, как закончите, нажмите "Финиш" для того, чтобы ваши друзья смогли запустить созданную вами игру или историю на своих телефонах, планшетах или компьютерах!'
         studio_full_sandbox: 'Создайте свою собственную игру. Когда закончите, нажмите кнопку "Готово", чтобы друзья могли попробовать вашу игру на своих телефонах.'
         studio_k1_1: Вы можете заставить собаку сказать «hello world»?
         studio_k1_2: Можешь сделать так, чтобы сначала заговорила собака, а потом и кошка?
@@ -377,7 +381,7 @@ ru:
         Unplug9: Эстафетное программирование
         Unplug10: интернет
         Unplug11: Итоги
-        C1_happy_maps_unplugged: Счастливые карты
+        C1_happy_maps_unplugged: Весёлые карты
         C1_moveitmoveit_unplugged: Переместить это, переместить это
         C1_bigevent_unplugged: Большое Событие
         C1_getting_loopy: Зацикливание
@@ -392,7 +396,7 @@ ru:
         C1_maze_loops: 'Лабиринт: Циклы'
         C1_playlab_storytelling: 'Лаборатория игр: Создай историю'
         C1_planting_seed: Посади семечко
-        C1_building_foundation: Построение фундамента
+        C1_building_foundation: Создание основы
         C1_going_places_safely: Безопасное путешествие
         C2_maze_intro: 'Лабиринт - Введение'
         C2_artist_intro: 'Художник - Введение'
@@ -457,6 +461,9 @@ ru:
         infinity_playlab_intro: 'Лаборатория игр - введение'
         infinity_playlab_events: 'Лаборатория игр - события'
         infinity_playlab_repeat_forever: 'Лаборатория игр - повторять бесконечно'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -502,11 +509,17 @@ ru:
         starwars_blocks_intro: 'Звездные войны: Создавая Галактику с Code - Введение'
         starwars_blocks_events: 'Звездные войны: Создавая Галактику с Code - События'
         starwars_blocks_congrats: 'Звездные войны: Создавая Галактику с Code - Поздравляем'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - знакомство'
+        mc_repeat: 'Minecraft - повтор'
+        mc_if_statements: 'Minecraft - оператор «если»'
+        mc_congrats_share: 'Minecraft - поздравляем'
+        mc_congrats_no_share: 'Minecraft - поздравляем'
+        gumball_intro: '"Час Кода": Гамбол - Вступление'
+        gumball_events: '"Час Кода": Гамбол - События'
+        gumball_repeat: '"Час кода". "Гамбол" - Операторы цикла'
+        iceage_intro: '"Час Кода": Ледниковый период - Вступление'
+        iceage_events: '"Час Кода": Ледниковый период - События'
+        iceage_repeat: '"Час кода".  "Ледниковый период" - Операторы цикла'
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока
@@ -578,10 +591,10 @@ ru:
         Infinity_move_directions_callout_arrow: Используйте эти стрелки, чтобы управлять
         Infinity_move_collide_callout: Воспроизведение звука, когда происходит данное событие.
         Infinity_repeat_callout: Место переместить блоки внутри здесь
-        craft_run_button_callout: Нажмите «Выполнить», чтобы протестировать вашу программу
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Это железо принадлежит мне!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: Нажмите «Выполнить», чтобы опробовать свою программу
+        craft_drag_block_callout: Перетащите блок «двигаться вперед» и поставьте его под другим блоком
+        craft_callout_preplaced: Мы поместили сюда несколько блоков, чтобы помочь вам начать работу
+        craft_inside_repeat: Повторяйте действия, помещая блоки сюда
+        craft_callout_preplaced_house: Этот код начнет строить вам дом. Сможете закончить эту задачу?
+        craft_what_is_iron: Добывайте это железо!
+        craft_callout_moveforward: Этот код проверит наличие лавы, можете ли вы добавить команду движения вперед?

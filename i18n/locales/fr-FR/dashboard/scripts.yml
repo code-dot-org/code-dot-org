@@ -24,17 +24,17 @@ fr:
           "Bee 2: Loops": 'Abeille 2: boucles'
           Multi & Match: 'Multi & Match'
           K-1 Flappy: Flappy niveau maternelle et CP
-          Flappy non blockly: Flappy sans block
+          Flappy non blockly: Flappy sans blockly
           title: Cours 1
           Artist 2: "L'Artiste 2"
           Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
-          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes de la vraie vie : Planter une graine'
           Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
           The Big Event: Le Grand Evénement
           Going Places Safely: Se déplacer en toute sécurité
-          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui les aideront à apprendre à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persister à travers des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles moyenne-section."
+          description: "Ce 1er cours est conçu pour les lecteurs débutants, afin de leur permettre de créer des programmes informatiques qui leur aprendront à collaborer les uns avec les autres, développer les compétences de résolution de problèmes et persévérer malgré des tâches difficiles. A la fin de ce cours, les élèves créeront leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les maternelles de grande section et les CP."
           "Bee: Sequence": 'Abeille : séquence'
           "Artist: Sequence": "L'Artiste : Séquence"
           "Artist: Shapes": "L'Artiste : les Formes"
@@ -42,7 +42,7 @@ fr:
           "Bee: Loops": 'Abeille : Les boucles'
           "Studio: Create a Story": 'Labo: Créer une histoire'
           "Artist: Loops": 'Artiste : Les boucles'
-          description_audience: 4 ans et plus
+          description_audience: 4-6 ans
           description_short: "Le cours 1 s'adresse aux élèves qui commencent à lire."
         course2:
           The Maze: Le labyrinthe
@@ -51,7 +51,7 @@ fr:
           Artist Debugging: "L'Artiste et le débogage"
           Bounce: Rebond
           "Studio: Create a Story": 'Labo: Créer une histoire'
-          Artist Loops: "L'Artiste et boucles"
+          Artist Loops: "L'Artiste et les boucles"
           Bee Conditionals: Abeilles et instructions conditionnelles
           Flappy: Flappy
           title: Cours 2
@@ -102,14 +102,14 @@ fr:
           Artist Functions with Parameters: 'Artiste : fonctions avec paramètres'
           Computational Thinking: Algorithmique
           Functional Suncatchers: Vitraux fonctionnels
-          Songwriting Parameters: Paramètres de composition
+          Songwriting Parameters: Paramètres de composition de chansons
           Dice Race: Course de Dés
           Internet: Internet
           Crowdsourcing: Financement participatif
           Digital Citizenship: Citoyenneté numérique
           Farmer - While Loops: 'Fermier - les boucles "tant que"'
           description: "Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. A la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2."
-          "Studio: Create a Game": 'Laboratoire : Créer un jeu'
+          "Studio: Create a Game": 'Laboratoire de jeu : Créer un jeu'
           Maze: Labyrinthe
           Artist: Artiste
           "Artist: Functions": 'Artiste : les fonctions'
@@ -146,7 +146,7 @@ fr:
           description_short: "Dessinez des super images et schémas avec l'Artiste!"
         hourofcode:
           Maze: Labyrinthe
-          title: Heure de Code
+          title: Labyrinthe classique
           description: "Apprends à programmer avec les personnages d'Angry Birds, de Plantes contre Zombies et Scrat de l'age de glace !"
           description_short: Apprends à programmer avec des personnages rigolos !
         frozen:
@@ -227,7 +227,7 @@ fr:
           description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
           "Unplugged: Video Games and Coordinate Planes": 'Activité débranchée : jeux vidéo et les plans de coordonnées'
           "Calc: Evaluation Blocks": "Blocs d'évaluation et expressions arithmétiques"
-          "Eval: Strings and Images": Textes et Images
+          "Eval: Strings and Images": Chaînes et Images
           "Unplugged: Contracts": 'Activité débranchée : contrats, domaine, et gamme'
           "Eval: Writing Contracts": Rédaction de contrats
           "Calc: Defining Variables": Définition de Variables et Substitution
@@ -492,7 +492,7 @@ fr:
           "Unplugged: Collision Detection and the Distance Formula": 'Activité débranchée : la détection de collision et la formule de la distance'
           "Play Lab: Collision Detection (Big Game)": 'Labo : détection de Collision (grand jeu)'
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Contracts: Contrats
           Your Game - Defining Variables: 'Votre jeu - définition des Variables'
           Simple Function Definition: Définition de fonction simple
@@ -515,7 +515,7 @@ fr:
           description: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
           description_short: "Enseigner l'algèbre par le biais de la programmation fonctionnelle"
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Rocket-Height: Hauteur de la fusée
           Design Recipe Practice: Pratique de conception de recette
           Your Game - Animation: 'Votre jeu - Animation'
@@ -672,6 +672,15 @@ fr:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Pendant que les Boucles
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -682,7 +691,7 @@ fr:
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
           The Big Game: The Big Game
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           The Design Recipe: La Recette de la Conception
           Next Steps: Prochaines étapes
         sciPD complex adaptive 2:
@@ -874,7 +883,7 @@ fr:
           description: "Apprendre la programmation fonctionnelle par l'algèbre"
           description_short: "Apprendre la programmation fonctionnelle par l'algèbre"
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Defining Variables: Définition de Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Labo : Définition de fonctions'
@@ -925,7 +934,7 @@ fr:
           Computer Science Pedagogy: Pédagogie des sciences informatiques
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Writing Contracts: Rédaction de contrats
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
@@ -1031,7 +1040,7 @@ fr:
           Computer Science Pedagogy: Pédagogie des sciences informatiques
           Teacher Dashboard: Tableau de bord enseignant
           Evaluation Blocks: "Blocs d'évaluation"
-          Strings and Images: Textes et Images
+          Strings and Images: Chaînes et Images
           Writing Contracts: Rédaction de contrats
           Defining Variables: Définition de Variables
           Defining Functions: Définition de fonctions
@@ -1158,7 +1167,7 @@ fr:
           description_audience: Ages 6-13
           Happy Maps: Cartes joyeuses
           Move it, Move it: Déplacez le, déplacez le
-          "Real-life Algorithms: Plant a Seed": 'Les algorithmes : Planter une graine'
+          "Real-life Algorithms: Plant a Seed": 'Les algorithmes de la vraie vie : Planter une graine'
           Graph Paper Programming: Programmation sur papier quadrillé
           Building a Foundation: Créer une Fondation
           Getting Loopy: Tourner en rond
@@ -1226,6 +1235,7 @@ fr:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1340,6 +1350,28 @@ fr:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1390,6 +1422,7 @@ fr:
           description_audience: 10 ans et + (après le Cours 3)
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Labo Age de Glace
           description_short: Crée une histoire ou fais un jeu avec le Labo Age de Glace !
@@ -1408,6 +1441,8 @@ fr:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1457,13 @@ fr:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Pendant que les Boucles
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,12 +1483,12 @@ fr:
           description: Crée une histoire ou fais un jeu avec le Labo Gumball !
           Gumball Play Lab: Labo Gumball
         starwars:
-          title: 'Star Wars : Construire une galaxie avec du Code'
+          title: 'Star Wars : Construire une galaxie en codant'
           description_short: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           Hour of Code 2015: Heure de Code 2015
         starwarsblocks:
-          title: 'Star Wars : Construire une galaxie avec du Code'
+          title: 'Star Wars : Construire une galaxie en codant'
           description_short: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           Hour of Code 2015: Heure de Code 2015
@@ -1457,6 +1499,22 @@ fr:
           Craft: Craft
         mc:
           title: Une Heure de Code Minecraft
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Explorez un monde Minecraft tout en code
+          description: Utilisez des blocs de code pour vivre une aventure avec Steve ou Alex dans ce monde Minecraft
           Hour of Code 2015: Heure de Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Bienvenue !
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Conclusions
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

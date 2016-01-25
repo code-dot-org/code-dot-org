@@ -7,30 +7,40 @@ theme: none
 -if ! request.params['course'].nil? && ! request.params['course'].empty?
   -course = request.params['course']
 -else
-  -course = 'hoc'
+  -course = ScriptConstants::HOC_NAME
 
 %div.hide-print
   -case course
-    -when '20hours', '20-hour'
+    -when ScriptConstants::TWENTY_HOUR_NAME
       %h1 K-8 Intro to Computer Science Course Certificates
-    -when 'hoc', 'hourofcode'
+    -when ScriptConstants::HOC_NAME
       %h1 Hour of Code Certificates
-    -when 'artist'
+    -when ScriptConstants::ARTIST_NAME
       %h1 Artist Certificates
-    -when 'course1'
+    -when ScriptConstants::COURSE1_NAME
       %h1 Course 1 Certificates
-    -when 'course2'
+    -when ScriptConstants::COURSE2_NAME
       %h1 Course 2 Certificates
-    -when 'course3'
+    -when ScriptConstants::COURSE3_NAME
       %h1 Course 3 Certificates
-    -when 'course3'
+    -when ScriptConstants::COURSE4_NAME
       %h1 Course 4 Certificates
-    -when 'frozen'
+    -when ScriptConstants::FROZEN_NAME
       %h1 Frozen Certificates
-    -when 'playlab'
+    -when ScriptConstants::PLAYLAB_NAME
       %h1 Play Lab Certificates
-    -when 'flappy'
+    -when ScriptConstants::GUMBALL_NAME
+      %h1 Gumball Play Lab Certificates
+    -when ScriptConstants::ICEAGE_NAME
+      %h1 Ice Age Play Lab Certificates
+    -when ScriptConstants::FLAPPY_NAME
       %h1 Flappy Bird Certificates
+    -when ScriptConstants::MINECRAFT_NAME
+      %h1 Minecraft Certificates
+    -when ScriptConstants::INFINITY_NAME
+      %h1 Infinity Certificates
+    -when ScriptConstants::ARTIST_NAME
+      %h1 Artist Certificates
     -else
       %h1 Code.org Certificates
 
@@ -50,7 +60,7 @@ theme: none
 -names = request.params['names']
 -unless names.nil_or_empty?
   -count = 0
-  -names.split("\n").shift(30).each do |name|
+  -names.split("\n").reject{ |s| s.strip.empty? }.shift(30).each do |name|
     -unless count == 0
       .page-break
     -name.chomp!

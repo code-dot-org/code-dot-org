@@ -11,6 +11,10 @@ def replace_hostname(url)
   if ENV['PEGASUS_TEST_DOMAIN']
     url = url.gsub(/\/\/code.org\//, "//" + ENV['PEGASUS_TEST_DOMAIN'] + "/")
   end
+  if ENV['HOUROFCODE_TEST_DOMAIN']
+    url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
+  end
+
   # Convert http to https
   url = url.gsub(/^http:\/\//,'https://') unless url.starts_with? 'http://localhost'
   # Convert x.y.code.org to x-y.code.org
@@ -63,18 +67,18 @@ end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(\"#{selector}\").text();").include? text }
+  wait.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('#{selector}').is(':visible')") }
+  wait.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('#{selector}', $('#{parent_selector}').contents()).is(':visible')") }
+  wait.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -96,8 +100,14 @@ When /^I submit$/ do
 end
 
 When /^I rotate to landscape$/ do
-  if ENV['BS_AUTOMATE_OS'] == 'android'
+  if ENV['BS_ROTATABLE'] == "true"
     @browser.rotate(:landscape)
+  end
+end
+
+When /^I rotate to portrait$/ do
+  if ENV['BS_ROTATABLE'] == "true"
+    @browser.rotate(:portrait)
   end
 end
 
@@ -128,16 +138,39 @@ When /^I press the "([^"]*)" button$/ do |buttonText|
 end
 
 When /^I press "([^"]*)" using jQuery$/ do |selector|
-  @browser.execute_script("$('" + selector + "').click()");
+  @browser.execute_script("$(#{selector.dump}).click()")
 end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
-  @browser.execute_script("$('" + selector + "').simulate('drag', function(){});")
+  @browser.execute_script("$(#{selector.dump}).simulate('drag', function(){});")
 end
 
 When /^I press the last button with text "([^"]*)"$/ do |name|
   name_selector = "button:contains(#{name})"
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
+end
+
+When /^I (?:open|close) the small footer menu$/ do
+  menu_selector = 'div.small-footer-base a.more-link'
+  steps %{
+    Then I wait until element "#{menu_selector}" is visible
+    And I click selector "#{menu_selector}"
+  }
+end
+
+When /^I press menu item "([^"]*)"$/ do |menuItemText|
+  menu_item_selector = "ul#more-menu a:contains(#{menuItemText})"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
+    And I click selector "#{menu_item_selector}"
+  }
+end
+
+When /^I select the "([^"]*)" small footer item$/ do |menuItemText|
+  steps %{
+    Then I open the small footer menu
+    And I press menu item "#{menuItemText}"
+  }
 end
 
 When /^I press the SVG text "([^"]*)"$/ do |name|
@@ -238,6 +271,27 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
   @browser.execute_script("return #{expression}")
 end
 
+Then /^mark the current level as completed on the client/ do
+  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+end
+
+Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
+  steps %{
+    And I wait to see ".progress_container"
+    And I wait for 10 seconds
+    And element ".progress_container a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+  }
+end
+
+Then /^I navigate to the course page and verify progress for course "([^"]*)" stage (\d+) level (\d+) is "([^"]*)"/ do |course, stage, level, test_result|
+  steps %{
+    Then I am on "http://studio.code.org/s/#{course}"
+    And I wait to see ".user-stats-block"
+    And I wait for 10 seconds
+    And element ".user-stats-block .games:nth(#{stage.to_i - 1}) a.level_link:nth(#{level.to_i - 1})" has class "#{test_result}"
+  }
+end
+
 # The second regex matches strings in which all double quotes and backslashes
 # are quoted (preceded by a backslash).
 Then /^element "([^"]*)" has text "((?:[^"\\]|\\.)*)"$/ do |selector, expectedText|
@@ -262,6 +316,13 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expectedText|
   steps %{
     Then I wait to see a ".dialog-title"
     And element ".dialog-title" has text "#{expectedText}"
+  }
+end
+
+Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".congrats"
+    And element ".congrats" contains text "#{expected_text}"
   }
 end
 
@@ -303,23 +364,23 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
-  visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
-  visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
   visible.should eq (negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  @browser.execute_script("return $('#{selector}').length").should eq 0
+  @browser.execute_script("return $(#{selector.dump}).length").should eq 0
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
-  visibility = @browser.execute_script("return $('#{selector}').css('visibility')");
-  visible = @browser.execute_script("return $('#{selector}').is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
   visible.should eq false
 end
 
 def has_class(selector, class_name)
-  @browser.execute_script("return $('#{selector}').hasClass('#{class_name}')")
+  @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
 
 Then /^element "([^"]*)" has class "([^"]*)"$/ do |selector, class_name|
@@ -361,13 +422,26 @@ Then /^there's an image "([^"]*)"$/ do |path|
   exists.should eq true
 end
 
+Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
+  puts @browser.execute_script("return $('##{element_to_print}').html()")
+end
+
+Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
+end
+
+Then /^I click an image "([^"]*)"$/ do |path|
+  @browser.execute_script("$('img[src*=\"#{path}\"]').click();")
+end
+
 Then /^I see jquery selector (.*)$/ do |selector|
   exists = @browser.execute_script("return $(\"#{selector}\").length != 0;")
   exists.should eq true
 end
 
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
-  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0");
+  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
   exists.should eq true
 end
 
@@ -388,11 +462,11 @@ Then(/^"([^"]*)" should be in front of "([^"]*)"$/) do |selector_front, selector
 end
 
 Then(/^I set slider speed to medium/) do
-  @browser.execute_script("__TestInterface.setSpeedSliderValue(0.8)");
+  @browser.execute_script("__TestInterface.setSpeedSliderValue(0.8)")
 end
 
 Then(/^I slow down execution speed$/) do
-  @browser.execute_script("Maze.scale.stepSpeed = 10;");
+  @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
 # Note: only works for levels other than the current one
@@ -580,6 +654,10 @@ When /^I press keys "([^"]*)"$/ do |keys|
   @browser.action.send_keys(make_symbol_if_colon(keys)).perform
 end
 
+When /^I press enter key$/ do
+  @browser.action.send_keys(:return).perform
+end
+
 When /^I disable onBeforeUnload$/ do
   @browser.execute_script("window.__TestInterface.ignoreOnBeforeUnload = true;")
 end
@@ -587,6 +665,16 @@ end
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
   wait = Selenium::WebDriver::Wait.new(timeout: 30)
   wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+end
+
+Then /^my query params match "(.*)"$/ do |matcher|
+  wait = Selenium::WebDriver::Wait.new(timeout: 30)
+  wait.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
+end
+
+Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
+  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  wait.until { @browser.find_element(:id => element_id_to_seek) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|

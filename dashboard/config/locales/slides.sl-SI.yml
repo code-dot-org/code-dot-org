@@ -38,37 +38,36 @@
           da zgradiš tvoj program. Da zbrišeš blok, ga povleci do smetnjaka v kotu.
       10:
         image: notes/hoc1_10.jpg
-        text: Each block is one instruction. If you drag a "move forward" block to
-          your workspace and press "Run Program", the bird moves one space on the
-          maze.
+        text: Vsak blok je eno navodilo. Če povlečete blok "korak naprej" v delovno
+          mesto in pritisnete "Zaženi program", se ptič premakne za en prostor v labirintu.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: "Če želite narediti več kot eno dejanje, lahko povlečete več blokov
+          v vaš delovni prostor in jih pritrdite skupaj. Ptica bo izvršila ukaze od
+          zgoraj navzdol."
       12:
         image: notes/hoc1_12.jpg
-        text: If you run a program and want to fix it and try again, press the "Reset"
-          button.
+        text: Če zaženete program in želite popraviti in poskusiti znova, pritisnite
+          gumb "Reset"
       13:
         image: notes/hoc1_13.jpg
-        text: Let's go get those pigs!
+        text: Gremo nad te pujse!
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
+        text: Zdravo, sem JR! vsaka avtomobilska ekipa potrebuje računalniškega strokovnjaka
+          da zmaga. Podatke iz avta analizira, da lahko avto vozi še hitreje.
       2:
         image: notes/stage5_2.jpg
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
+        text: V teh sestavljankah boš umetnik, ki riše sled za sabo, kamorkoli gre.
       3:
         image: notes/stage5_3.jpg
-        text: This block says "move forward by 100 pixels." Pixels are just really
-          tiny dots on your screen.
+        text: Ta blok pravi "premakni se za 100 slikovnih pik naprej". Slikovne pike
+          so res drobne pike na vašem zaslonu.
       4:
         image: notes/stage5_4.jpg
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
+        text: Ta blok pravi "obrni se za 90 stopinj desno". To bo tvojega risarja
+          obrnilo za enako vrednost kot "obrni" blok v labirintih.
       5:
         image: notes/stage5_5.jpg
         text: Click on the arrow in either of these blocks to change the amount the
@@ -2644,17 +2643,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2769,17 +2768,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2923,9 +2922,9 @@
           You get to choose.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: When you're done making your creation, choose share to get a link to
@@ -2942,9 +2941,177 @@
           You get to choose.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Now you can build whatever you want. Have fun!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

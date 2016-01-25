@@ -128,8 +128,8 @@
     "edit_code": true,
     "encrypted_examples": "3EcNOIphNLcB+2PODo2/YG2pNpwBxtAeGTuFvrVxAmyE0gb2EApVq/W6h8uY\ngCtH\n",
     "embed": "false",
-    "instructions": "Add a parameter to drawStarfish() that changes the size of the starfish drawn. (Click to see full instructions)",
-    "markdown_instructions": "# Adding parameters to functions: drawStarfish()\r\n\r\nWe want to make our picture more interesting by adding some variety. Currently the `drawStarfish()` function can only draw a starfish of size 60.\r\n\r\n**Add a parameter** to the function definition for `drawStarfish()` that allows you to control its size. Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawStarfish()` and change the size of your starfish.\r\n\r\n![](https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12 PM.png)",
+    "instructions": "Add a parameter to drawStarfish that changes the size of the starfish drawn. (Click to see full instructions)",
+    "markdown_instructions": "# Adding Parameters to Functions: *drawStarfish*\r\n\r\nWe want to make our picture more interesting by adding some variety. Currently the `drawStarfish` function can only draw a starfish of size 60.\r\n\r\n**Add a parameter** to the function definition for `drawStarfish` that allows you to control its size. Make sure your parameter has a **descriptive and meaningful** name.\r\n\r\n**Update your function calls** to use your new version of `drawStarfish` and change the size of your starfish.\r\n\r\n![](https://images.code.org/320485cb05b50bcdb8aa8d13c0164502-image-1442606362191.59.12 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -159,7 +159,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
-    "debugger_disabled": "true"
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

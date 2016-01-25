@@ -3,196 +3,195 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'بانوراما: تعلم السحب والإسقاط'
-          The Maze: المتاهة
-          Multi: متعدد
-          Match: مماثلة
-          Math Image: صورة الرياضيات
-          title: دورة الاختبار
-          description: مجرد اختبار داخلي لدرس.
-          description_short: مجرد اختبار داخلي لدرس.
+          'Jigsaw: Learn to drag and drop': "بانوراما: تعلم السحب والإسقاط"
+          The Maze: "المتاهة"
+          Multi: "متعدد"
+          Match: "مماثلة"
+          Math Image: "صورة الرياضيات"
+          title: "دورة الاختبار"
+          description: "مجرد اختبار داخلي لدرس."
+          description_short: "مجرد اختبار داخلي لدرس."
         course1:
-          'Jigsaw: Learn to drag and drop': 'بانوراما: تعلم السحب والإسقاط'
-          'Maze: Sequence': 'المتاهة : التسلسل'
-          'Maze: Debugging': 'متاهة: تصحيح الأخطاء'
-          'Artist 1: Intro': 'الفنان 1: مقدمة'
-          Artists 2: الفنانين 2
-          Spelling Bee: مسابقة التهجئة
-          Spelling Bee not blockly: مسابقة التهجئة من غير بلوكلي
-          'Bee 1: Intro': 'التهجئة 1: مقدمة'
-          'Maze 2: Loops': 'المتاهة 2: الحلقات'
-          'Bee 2: Loops': 'التهجئة 2: الحلقات'
-          Multi & Match: التعدد والمماثلة
-          K-1 Flappy: لعبة الطائر المرفرف لصف K-1
-          Flappy non blockly: لعبة الطائر المرفرف من غير بلوكلي
-          title: الدرس الأول
-          Artist 2: الفنان 2
-          Happy Maps: الخرائط السعيدة
-          Move it, Move it: حركها، حركها
-          'Real-life Algorithms: Plant a Seed': 'خوارزميات الحياة الحقيقية: زراعة
-            البذور'
-          Building a Foundation: بناء الأساس
-          Getting Loopy: القبض على المعتوهون
-          The Big Event: الحدث الكبير
-          Going Places Safely: التنقّل بأمان
-          description: تم تصميم الدورة 1 للسماح للمبتدئين في القراءة إنشاء برامج الكمبيوتر
-            التي سوف تساعدهم على التعلم بالتعاون مع الآخرين، وتطوير مهارات حل المشاكل،
-            وتستمر من خلال المهام الصعبة. بنهاية هذه الدورة التدريبية، إنشاء الطلاب
-            على لعبة مخصصة الخاصة جداً أو القصة التي يمكن أن تشترك فيها. وأوصت للصفوف
-            1 ك.
-          'Bee: Sequence': 'التهجئة: التسلسل'
-          'Artist: Sequence': 'الرسام : التسلسل'
-          'Artist: Shapes': 'الفنان: الأشكال'
-          'Maze: Loops': 'المتاهة : الحلقات'
-          'Bee: Loops': 'النحلة : الحلقات'
-          'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
-          'Artist: Loops': 'الرسام : الحلقات'
-          description_audience: الأعمار 4-6
-          description_short: الدورة 1 مصممة للطلاب المبتدئين في القراءة.
+          'Jigsaw: Learn to drag and drop': "بانوراما: تعلم السحب والإسقاط"
+          'Maze: Sequence': "المتاهة : التسلسل"
+          'Maze: Debugging': "متاهة: تصحيح الأخطاء"
+          'Artist 1: Intro': "الفنان 1: مقدمة"
+          Artists 2: "الفنانين 2"
+          Spelling Bee: "مسابقة التهجئة"
+          Spelling Bee not blockly: "مسابقة التهجئة من غير بلوكلي"
+          'Bee 1: Intro': "التهجئة 1: مقدمة"
+          'Maze 2: Loops': "المتاهة 2: الحلقات"
+          'Bee 2: Loops': "التهجئة 2: الحلقات"
+          Multi & Match: "التعدد والمماثلة"
+          K-1 Flappy: "لعبة الطائر المرفرف لصف K-1"
+          Flappy non blockly: "لعبة الطائر المرفرف من غير بلوكلي"
+          title: "الدرس الأول"
+          Artist 2: "الفنان 2"
+          Happy Maps: "الخرائط السعيدة"
+          Move it, Move it: "حركها، حركها"
+          'Real-life Algorithms: Plant a Seed': "خوارزميات الحياة الحقيقية: زراعة
+            البذور"
+          Building a Foundation: "بناء الأساس"
+          Getting Loopy: "القبض على المعتوهون"
+          The Big Event: "الحدث الكبير"
+          Going Places Safely: "التنقّل بأمان"
+          description: "تم تصميم الدورة 1 للسماح للمبتدئين في القراءة إنشاء برامج
+            الكمبيوتر التي سوف تساعدهم على التعلم بالتعاون مع الآخرين، وتطوير مهارات
+            حل المشاكل، وتستمر من خلال المهام الصعبة. بنهاية هذه الدورة التدريبية،
+            إنشاء الطلاب على لعبة مخصصة الخاصة جداً أو القصة التي يمكن أن تشترك فيها.
+            وأوصت للصفوف 1 ك."
+          'Bee: Sequence': "التهجئة: التسلسل"
+          'Artist: Sequence': "الرسام : التسلسل"
+          'Artist: Shapes': "الفنان: الأشكال"
+          'Maze: Loops': "المتاهة : الحلقات"
+          'Bee: Loops': "النحلة : الحلقات"
+          'Studio: Create a Story': "مختبر اللعب: إنشاء قصة"
+          'Artist: Loops': "الرسام : الحلقات"
+          description_audience: "الأعمار 4-6"
+          description_short: "الدورة 1 مصممة للطلاب المبتدئين في القراءة."
         course2:
-          The Maze: المتاهة
-          Suzi: سوزي
-          The Artist: الاعب
-          Artist Debugging: تصحيح الأخطاء للرسام
-          Bounce: الارتداد
-          'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
-          Artist Loops: حلقات الفنان
-          Bee Conditionals: النحل الشرطية
-          Flappy: فلابي
-          title: الدورة الثانية
-          Bee Loops: حلقات النحلة
-          Artist Functions: وظائف الرسام
-          The Artist Debugging: تصحيح الأخطاء للرسام
-          Bee Debugging: تصحيح الأخطاء للنحلة
-          Bee Functions: مهام النحلة
-          Maze Loops: حلقات المتاهة
-          Graph Paper Programming: برمجة ورقة الرسم البياني
-          'Real-life Algorithms: Paper Planes': 'خوارزميات من واقع الحياة : طائرات
-            ورقية'
-          Getting Loopy: القبض على المعتوهون
-          Relay programming: برمجة السباق
-          Conditionals: الجمل الشرطية
-          Binary Bracelets: أساور الثنائية
-          The Big Event: الحدث الكبير
-          Your Digital Footprint: البصمة الرقمية الخاصة بك
-          description: تم تصميم الدورة 2 للطلاب الذين يستطيعون القراءة وليس لديهم
+          The Maze: "المتاهة"
+          Suzi: "سوزي"
+          The Artist: "الاعب"
+          Artist Debugging: "تصحيح الأخطاء للرسام"
+          Bounce: "الارتداد"
+          'Studio: Create a Story': "مختبر اللعب: إنشاء قصة"
+          Artist Loops: "حلقات الفنان"
+          Bee Conditionals: "النحل الشرطية"
+          Flappy: "فلابي"
+          title: "الدورة الثانية"
+          Bee Loops: "حلقات النحلة"
+          Artist Functions: "وظائف الرسام"
+          The Artist Debugging: "تصحيح الأخطاء للرسام"
+          Bee Debugging: "تصحيح الأخطاء للنحلة"
+          Bee Functions: "مهام النحلة"
+          Maze Loops: "حلقات المتاهة"
+          Graph Paper Programming: "برمجة ورقة الرسم البياني"
+          'Real-life Algorithms: Paper Planes': "خوارزميات من واقع الحياة : طائرات
+            ورقية"
+          Getting Loopy: "القبض على المعتوهون"
+          Relay programming: "برمجة السباق"
+          Conditionals: "الجمل الشرطية"
+          Binary Bracelets: "أساور الثنائية"
+          The Big Event: "الحدث الكبير"
+          Your Digital Footprint: "البصمة الرقمية الخاصة بك"
+          description: "تم تصميم الدورة 2 للطلاب الذين يستطيعون القراءة وليس لديهم
             خبرة في البرمجة. في هذه الدورة سيقوم الطلاب بتكوين برامج حل المشاكل وتطوير
-            ألعاب تفاعلية أو قصص يمكنهم مشاركة. وأوصت للصفوف من 2-5.
-          'Maze: Sequence': 'المتاهة : التسلسل'
-          'Artist: Sequence': 'الرسام : التسلسل'
-          'Maze: Loops': 'المتاهة : الحلقات'
-          'Artist: Loops': 'الرسام : الحلقات'
-          'Bee: Loops': 'النحلة : الحلقات'
-          'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
-          'Artist: Debugging': 'الرسام : تصحيح الأخطاء'
-          'Bee: Conditionals': 'النحلة: الجمل الشرطية'
-          'Artist: Sequence2': 'الرسام : التسلسل 2'
-          'Maze: Sequence2': 'المتاهة : التسلسل 2'
-          'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
-          description_audience: الأعمار 6-18
-          description_short: الدورة 2 مصممة لطلاب القادرين على القراءة.
+            ألعاب تفاعلية أو قصص يمكنهم مشاركة. وأوصت للصفوف من 2-5."
+          'Maze: Sequence': "المتاهة : التسلسل"
+          'Artist: Sequence': "الرسام : التسلسل"
+          'Maze: Loops': "المتاهة : الحلقات"
+          'Artist: Loops': "الرسام : الحلقات"
+          'Bee: Loops': "النحلة : الحلقات"
+          'Bee: Debugging': "النحلة: تصحيح الأخطاء"
+          'Artist: Debugging': "الرسام : تصحيح الأخطاء"
+          'Bee: Conditionals': "النحلة: الجمل الشرطية"
+          'Artist: Sequence2': "الرسام : التسلسل 2"
+          'Maze: Sequence2': "المتاهة : التسلسل 2"
+          'Artist: Nested Loops': "الرسام : الحلقات المتداخلة"
+          description_audience: "الأعمار 6-18"
+          description_short: "الدورة 2 مصممة لطلاب القادرين على القراءة."
         course3:
-          The Maze: المتاهة
-          'Studio: Create a Story': 'مختبر اللعب: إنشاء قصة'
-          The Artist: الاعب
-          title: الدورة الثالثة
-          Artist Functions: وظائف الرسام
-          Artist For Loops: الفنان للحلقات
-          Artist Nested Loops: 'الرسام : الحلقات المتداخلة'
-          Bee Conditionals: النحل الشرطية
-          Bee Nested Loops: التهجئة حلقات متداخلة
-          Bee Debuggin: التهجئة تصحيح الأخطاء
-          Bee Debugging: تصحيح الأخطاء للنحلة
-          Bee Functions: مهام النحلة
-          Artist Functions with Params: مهام الرسام مع Params
-          Bounce: الارتداد
-          Maze Conditionals: متاهة الشرطية
-          Artist Functions with Parameters: مهام الرسام مع المعلمات
-          Computational Thinking: التفكير الحاسوبي
-          Functional Suncatchers: سونكاتشيرس الوظيفية
-          Songwriting Parameters: معلمات تأليف الأغاني
-          Dice Race: سباق الزهر
-          Internet: الإنترنت
-          Crowdsourcing: التعهيد الجماعي
-          Digital Citizenship: المواطنة الرقمية
-          Farmer - While Loops: 'المزارع : حلقات بينما'
-          description: تم تصميم الدورة 3 للطلاب الذين أخذوا 2 بالطبع. وسوف يتعمق الطلاب
-            في البرمجة المواضيع التي أدخلت في الدورات السابقة لحلول مرنة لمشاكل أكثر
-            تعقيداً. بنهاية هذه الدورة، والطلاب إنشاء القصص التفاعلية والألعاب التي
-            يمكن مشاركتها مع أي شخص. وأوصت للصفوف 4-5.
-          'Studio: Create a Game': 'مختبر اللعب : أنشئ لعبة'
-          Maze: المتاهة
-          Artist: الرسام
-          'Artist: Functions': 'الرسام : المهام'
-          'Bee: Functions': 'النحلة : الوظائف'
-          'Bee: Conditionals': 'النحلة: الجمل الشرطية'
-          'Maze: Conditionals': 'المتاهة : الجمل الشرطية'
-          'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
-          'Farmer: While Loops': 'المزارع : حلقات بينما'
-          'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
-          'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
-          Maze2: المتاهة 2
-          Artist2: الرسام 2
-          'Artist: Functions2': 'الرسام : المهام 2'
-          'Bee: Functions2': 'النحلة : الوظائف 2'
-          'Bee: Conditionals2': 'النحلة : الجمل الشرطية 2'
-          'Maze: Conditionals2': 'المتاهة : الجمل الشرطية 2'
-          'Artist: Nested Loops2': 'الرسام : الحلقات المتداخلة 2'
-          'Farmer: While Loops2': 'المزارع : حلقات بينما 2'
-          'Bee: Nested Loops2': 'النحلة : الحلقات المتداخلة 2'
-          'Bee: Debugging2': 'النحلة: تصحيح الأخطاء 2'
-          'Artist: Patterns': 'الفنان: أنماط'
-          Songwriting: تأليف الأغاني
-          description_audience: الأعمار 8-18
-          description_short: الدورة 3 تعتبر تكملة لدورة 2.
+          The Maze: "المتاهة"
+          'Studio: Create a Story': "مختبر اللعب: إنشاء قصة"
+          The Artist: "الاعب"
+          title: "الدورة الثالثة"
+          Artist Functions: "وظائف الرسام"
+          Artist For Loops: "الفنان للحلقات"
+          Artist Nested Loops: "الرسام : الحلقات المتداخلة"
+          Bee Conditionals: "النحل الشرطية"
+          Bee Nested Loops: "التهجئة حلقات متداخلة"
+          Bee Debuggin: "التهجئة تصحيح الأخطاء"
+          Bee Debugging: "تصحيح الأخطاء للنحلة"
+          Bee Functions: "مهام النحلة"
+          Artist Functions with Params: "مهام الرسام مع Params"
+          Bounce: "الارتداد"
+          Maze Conditionals: "متاهة الشرطية"
+          Artist Functions with Parameters: "مهام الرسام مع المعلمات"
+          Computational Thinking: "التفكير الحاسوبي"
+          Functional Suncatchers: "سونكاتشيرس الوظيفية"
+          Songwriting Parameters: "معلمات تأليف الأغاني"
+          Dice Race: "سباق الزهر"
+          Internet: "الإنترنت"
+          Crowdsourcing: "التعهيد الجماعي"
+          Digital Citizenship: "المواطنة الرقمية"
+          Farmer - While Loops: "المزارع : حلقات بينما"
+          description: "تم تصميم الدورة 3 للطلاب الذين أخذوا 2 بالطبع. وسوف يتعمق
+            الطلاب في البرمجة المواضيع التي أدخلت في الدورات السابقة لحلول مرنة لمشاكل
+            أكثر تعقيداً. بنهاية هذه الدورة، والطلاب إنشاء القصص التفاعلية والألعاب
+            التي يمكن مشاركتها مع أي شخص. وأوصت للصفوف 4-5."
+          'Studio: Create a Game': "مختبر اللعب : أنشئ لعبة"
+          Maze: "المتاهة"
+          Artist: "الرسام"
+          'Artist: Functions': "الرسام : المهام"
+          'Bee: Functions': "النحلة : الوظائف"
+          'Bee: Conditionals': "النحلة: الجمل الشرطية"
+          'Maze: Conditionals': "المتاهة : الجمل الشرطية"
+          'Artist: Nested Loops': "الرسام : الحلقات المتداخلة"
+          'Farmer: While Loops': "المزارع : حلقات بينما"
+          'Bee: Nested Loops': "النحلة : الحلقات المتداخلة"
+          'Bee: Debugging': "النحلة: تصحيح الأخطاء"
+          Maze2: "المتاهة 2"
+          Artist2: "الرسام 2"
+          'Artist: Functions2': "الرسام : المهام 2"
+          'Bee: Functions2': "النحلة : الوظائف 2"
+          'Bee: Conditionals2': "النحلة : الجمل الشرطية 2"
+          'Maze: Conditionals2': "المتاهة : الجمل الشرطية 2"
+          'Artist: Nested Loops2': "الرسام : الحلقات المتداخلة 2"
+          'Farmer: While Loops2': "المزارع : حلقات بينما 2"
+          'Bee: Nested Loops2': "النحلة : الحلقات المتداخلة 2"
+          'Bee: Debugging2': "النحلة: تصحيح الأخطاء 2"
+          'Artist: Patterns': "الفنان: أنماط"
+          Songwriting: "تأليف الأغاني"
+          description_audience: "الأعمار 8-18"
+          description_short: "الدورة 3 تعتبر تكملة لدورة 2."
         playlab:
-          title: مختبر اللعب
-          description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
-          Play Lab: مختبر اللعب
-          description_short: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
+          title: "مختبر اللعب"
+          description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+          Play Lab: "مختبر اللعب"
+          description_short: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
         artist:
-          title: الرسام
-          description: ارسم صور رائعة و صمم مع الرسام !
-          Artist: الرسام
-          description_short: ارسم صور رائعة و صمم مع الرسام !
+          title: "الرسام"
+          description: "ارسم صور رائعة و صمم مع الرسام !"
+          Artist: "الرسام"
+          description_short: "ارسم صور رائعة و صمم مع الرسام !"
         hourofcode:
-          Maze: المتاهة
-          title: ساعة من البرمجة
-          description: جرب تعلم مبادئ الحاسب الآلي من خلال شخصيات لعبة الطيور الغاضبة
+          Maze: "المتاهة"
+          title: "المتاهة الكلاسيكية"
+          description: "جرب تعلم مبادئ الحاسب الآلي من خلال شخصيات لعبة الطيور الغاضبة
             (Angry Birds) ، ولعبة المزروعات ضذ الزومبي (Plants vs. Zombies) ، وشخصية
-            القنفذ سكارت من فيلم عصر الجليد (Ice Age) !
-          description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
-            الممتعة!
+            القنفذ سكارت من فيلم عصر الجليد (Ice Age) !"
+          description_short: "جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
+            الممتعة!"
         frozen:
-          title: برمج مع آنا و إلسا
-          description: هيا نستخدم التعليمات البرمجية لنشارك آنا وإلسا رحلتهم لاستكشاف
+          title: "برمج مع آنا و إلسا"
+          description: "هيا نستخدم التعليمات البرمجية لنشارك آنا وإلسا رحلتهم لاستكشاف
             سحر وجمال الجليد. سوف تصنع ندفات الثلج والرسومات على الجليد عندما تتزلج
-            عليه وأرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
-          Artist: الرسام
-          description_short: هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا
-            في رحلتهم لاستكشاف سحر وجمال الجليد.
+            عليه وأرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!"
+          Artist: "الرسام"
+          description_short: "هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا
+            في رحلتهم لاستكشاف سحر وجمال الجليد."
         course4:
-          description_short: يجب على الطالب أخذ الدورة 2 و 3 ليتمكنوا من أخذ الدورة
-            4.
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
-          'Artist: Variables': 'الفنان: المتغيرات'
-          'Bee: For Loops': 'النحل: للحلقات'
-          title: الدورة 4
-          'Algorithms: Tangrams': 'خوارزميات: تانقرامس (أشكال عشوائية داخل مربع)'
-          Variables: المتغيرات
-          'Play Lab: Variables': 'تشغيل مختبر: المتغيرات'
+          description_short: "يجب على الطالب أخذ الدورة 2 و 3 ليتمكنوا من أخذ الدورة
+            4."
+          description: "تم تصميم الدورة 4 للطلاب الذين أخذوا دورة 2 و 3. سيقوم الطلاب
+            في هذه الدورة بالتعمق في موضوعات البرمجة التي أدخلت في الدورات السابقة
+            وحل مشاكل أكثر تعقيدا. بنهاية هذه الدورة،سيتمكن الطلاب من خلق القصص والألعاب
+            التفاعلية التي يمكن مشاركتها مع أي شخص.  للصفوف 4-8."
+          'Artist: Variables': "الفنان: المتغيرات"
+          'Bee: For Loops': "النحل: للحلقات"
+          title: "الدورة 4"
+          'Algorithms: Tangrams': "خوارزميات: تانقرامس (أشكال عشوائية داخل مربع)"
+          Variables: "المتغيرات"
+          'Play Lab: Variables': "تشغيل مختبر: المتغيرات"
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
           'Artist: For Loops': 'Artist: For Loops'
           'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': 'الرسام : المهام'
-          'Unplugged: Tangrams': 'غير موصول: تانغرام Tangrams'
-          Artist: الرسام
-          Bee: Bee
+          'Artist: Functions': "الرسام : المهام"
+          'Unplugged: Tangrams': "غير موصول: تانغرام Tangrams"
+          Artist: "الرسام"
+          Bee: "نحلة"
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
@@ -216,25 +215,25 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'المتاهة : التسلسل'
-          'Artist: Sequence': 'الرسام : التسلسل'
-          'Artist: Loops': 'الرسام : الحلقات'
-          'Bee: Conditionals': 'النحلة: الجمل الشرطية'
-          'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
-          'Farmer: While Loops': 'المزارع : حلقات بينما'
-          'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
-          'Artist: Functions': 'الرسام : المهام'
-          'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
+          'Maze: Sequence': "المتاهة : التسلسل"
+          'Artist: Sequence': "الرسام : التسلسل"
+          'Artist: Loops': "الرسام : الحلقات"
+          'Bee: Conditionals': "النحلة: الجمل الشرطية"
+          'Artist: Nested Loops': "الرسام : الحلقات المتداخلة"
+          'Farmer: While Loops': "المزارع : حلقات بينما"
+          'Bee: Nested Loops': "النحلة : الحلقات المتداخلة"
+          'Artist: Functions': "الرسام : المهام"
+          'Bee: Debugging': "النحلة: تصحيح الأخطاء"
         usability:
-          Intro: Intro
+          Intro: "مقدمة"
           Variables and For Loops: Variables and For Loops
           Functions and Functions with Parameters: Functions and Functions with Parameters
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: المتغيرات
+          Variables: "المتغيرات"
           For Loops: For Loops
-          Binary: ثنائي
+          Binary: "ثنائي"
         potus:
           title: special
           description_short: special
@@ -245,43 +244,43 @@
           description_short: special
           description: special
           Special: Special
-          Binary: ثنائي
+          Binary: "ثنائي"
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'موصول: ألعاب الفيديو وتنسيق
-            طائرات'
-          'Calc: Evaluation Blocks': 'احسب: كتل التقييم'
+          'Unplugged: Video Games and Coordinate Planes': "موصول: ألعاب الفيديو وتنسيق
+            طائرات"
+          'Calc: Evaluation Blocks': "احسب: كتل التقييم"
           'Eval: Strings and Images': 'Eval: سلاسل والصور'
-          'Unplugged: Contracts': 'موصول: العقود'
+          'Unplugged: Contracts': "موصول: العقود"
           'Eval: Writing Contracts': 'Eval: كتابة العقود'
-          'Calc: Defining Variables': 'احسب: تعريف المتغيرات'
-          'Play Lab: Defining Variables (Big Game)': 'مختبر اللعب: تعريف المتغيرات
-            (اللعبة الكبرى)'
+          'Calc: Defining Variables': "احسب: تعريف المتغيرات"
+          'Play Lab: Defining Variables (Big Game)': "مختبر اللعب: تعريف المتغيرات
+            (اللعبة الكبرى)"
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'موصول: الوصفة التصميم'
+          'Unplugged: The Design Recipe': "موصول: الوصفة التصميم"
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'مختبر اللعب: الرسوم المتحركة (اللعبة
-            الكبرى)'
-          'Unplugged: Booleans': 'موصول: القيم المنطقية'
+          'Play Lab: Animation (Big Game)': "مختبر اللعب: الرسوم المتحركة (اللعبة
+            الكبرى)"
+          'Unplugged: Booleans': "موصول: القيم المنطقية"
           'Eval: Boolean Operators': 'Eval: عوامل التشغيل المنطقية'
-          'Play Lab: Booleans': 'تشغيل مختبر: القيم المنطقية'
-          'Play Lab: Boolean (Big Game)': 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
-          'Unplugged: Conditionals and Piecewise Functions': 'موصول: الشرطية ووظائف
-            Piecewise'
-          'Eval: Conditionals': الجمل الشرطية
-          'Unplugged: Collision Detection and the Distance Formula': 'موصول: الكشف
-            عن التصادم وصيغة المسافة'
-          'Play Lab: Collision Detection (Big Game)': 'مختبر اللعب: الكشف عن التصادم
-            (اللعبة الكبرى)'
+          'Play Lab: Booleans': "تشغيل مختبر: القيم المنطقية"
+          'Play Lab: Boolean (Big Game)': "مختبر اللعب: قيمة منطقية (اللعبة الكبرى)"
+          'Unplugged: Conditionals and Piecewise Functions': "موصول: الشرطية ووظائف
+            Piecewise"
+          'Eval: Conditionals': "الجمل الشرطية"
+          'Unplugged: Collision Detection and the Distance Formula': "موصول: الكشف
+            عن التصادم وصيغة المسافة"
+          'Play Lab: Collision Detection (Big Game)': "مختبر اللعب: الكشف عن التصادم
+            (اللعبة الكبرى)"
         infinity:
-          title: مختبر اللعب
-          description_short: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
-          description: أنشئ قصة أو إصنع لعبة مع مختبر اللعب !
-          Play Lab: مختبر اللعب
-          Infinity: ما لانهاية
+          title: "مختبر اللعب"
+          description_short: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+          description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
+          Play Lab: "مختبر اللعب"
+          Infinity: "ما لانهاية"
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -293,7 +292,7 @@
           Making Pictures: Making Pictures
           Defining Variables: Defining Variables
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: وصفه التصميم
+          The Design Recipe: "وصفه التصميم"
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -319,12 +318,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: محاكاة الإنترنت
+          title: "محاكاة الإنترنت"
           description_short: ''
           description: ''
-          Internet Simulator: محاكاة الإنترنت
-          Unit 1: الوحدة الأولى
-          Unit 2: الوحدة الثانية
+          Internet Simulator: "محاكاة الإنترنت"
+          Unit 1: "الوحدة الأولى"
+          Unit 2: "الوحدة الثانية"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -347,8 +346,8 @@
           Peer to Peer - Sending Ascii: Peer to Peer - Sending Ascii
         pixelation:
           title: Pixelation
-          description: انشئ  صور مع ال bits و bytes.
-          description_short: انشئ  صور مع ال bits و bytes.
+          description: "انشئ  صور مع ال bits و bytes."
+          description_short: "انشئ  صور مع ال bits و bytes."
           Pixelation: Pixelation
           Black & White Pixelation Widget: Black & White Pixelation Widget
           Color Pixelation Widget: Color Pixelation Widget
@@ -361,71 +360,71 @@
           title: مقدمة عن درس "علوم الكمبيوتر" للمستوى المبتدئ والمتوسط  (من 15 الى
             25 ساعة)
           description_audience: Ages 10-18
-          description: هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة.
+          description: "هذا الكورس 20 ساعة حول مقدمة عن علوم الكمبيوتر ومفاهيم البرمجة.
             تم تصميم هذا الكورس للاستخدام في الفصول الدراسية للصفوف الابتدائية والمتوسطة،
-            ولكن أنها متعة للتعلم لكل الإعمار.
+            ولكن أنها متعة للتعلم لكل الإعمار."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: مقدمة في علوم الكمبيوتر
-          The Maze: المتاهة
-          Computational Thinking: التفكير الحاسوبي
-          Graph Paper Programming: برمجة ورقة الرسم البياني
-          The Artist: الاعب
-          Algorithms: الخوارزميات
-          The Artist 2: الرسام 2
-          Functions: الدوال
-          The Farmer: المزارع
-          Conditionals: الجمل الشرطية
-          The Artist 3: الرسام 3
-          Song Writing: كتابة الاغنية
-          The Farmer 2: المزارع 2
-          Abstraction: خلاصة
-          The Artist 4: الرسام 4
-          Relay Programming: برمجة السباق
-          The Farmer 3: المزارع 3
-          The Internet: الانترنت
-          The Artist 5: الرسام 5
-          Wrap-up: الجلسة الختامية
+          Introduction to Computer Science: "مقدمة في علوم الكمبيوتر"
+          The Maze: "المتاهة"
+          Computational Thinking: "التفكير الحاسوبي"
+          Graph Paper Programming: "برمجة ورقة الرسم البياني"
+          The Artist: "الاعب"
+          Algorithms: "الخوارزميات"
+          The Artist 2: "الرسام 2"
+          Functions: "الدوال"
+          The Farmer: "المزارع"
+          Conditionals: "الجمل الشرطية"
+          The Artist 3: "الرسام 3"
+          Song Writing: "كتابة الاغنية"
+          The Farmer 2: "المزارع 2"
+          Abstraction: "خلاصة"
+          The Artist 4: "الرسام 4"
+          Relay Programming: "برمجة السباق"
+          The Farmer 3: "المزارع 3"
+          The Internet: "الانترنت"
+          The Artist 5: "الرسام 5"
+          Wrap-up: "الجلسة الختامية"
         edit-code:
-          title: تعديل كود البرنامج
-          description: تعديل كود البرنامج
-          description_short: تعديل كود البرنامج
-          The Maze: المتاهة
+          title: "تعديل كود البرنامج"
+          description: "تعديل كود البرنامج"
+          description_short: "تعديل كود البرنامج"
+          The Maze: "المتاهة"
           Applab: Applab
-          The Artist: الاعب
-          Play Lab: مختبر اللعب
+          The Artist: "الاعب"
+          Play Lab: "مختبر اللعب"
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: الأحداث
-          description: الأحداث
-          description_short: الأحداث
-          Bounce: الارتداد
+          title: "الأحداث"
+          description: "الأحداث"
+          description_short: "الأحداث"
+          Bounce: "الارتداد"
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: رمز لعبة flappy
-          description: هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس
-            برمجة Flappy التعليمية الخاصة بنا!
+          title: "رمز لعبة flappy"
+          description: "هل ترغب في كتابة لعبة الخاصة فيك في أقل من 10 دقائق؟ جرب دروس
+            برمجة Flappy التعليمية الخاصة بنا!"
           description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: رمز لعبة flappy
+          Flappy Code: "رمز لعبة flappy"
         jigsaw:
-          title: بانوراما
+          title: "بانوراما"
           description: ''
           description_short: Try our Jigsaw tutorial
-          Jigsaw: بانوراما
+          Jigsaw: "بانوراما"
         step:
-          title: الخطوة
+          title: "الخطوة"
           description: ''
           description_short: Step tutorial
-          Step: الخطوة
+          Step: "الخطوة"
         Hour of Code:
-          title: ساعة من البرمجة 2013
+          title: "ساعة من البرمجة 2013"
           description: ''
-          description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
-            الممتعة!
-          Hour of Code 2013: ساعة من البرمجة 2013
+          description_short: "جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
+            الممتعة!"
+          Hour of Code 2013: "ساعة من البرمجة 2013"
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -463,15 +462,15 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'المتاهة : التسلسل'
-          'Artist: Sequence': 'الرسام : التسلسل'
-          'Artist: Loops': 'الرسام : الحلقات'
-          'Bee: Conditionals': 'النحلة: الجمل الشرطية'
-          'Artist: Nested Loops': 'الرسام : الحلقات المتداخلة'
-          'Farmer: While Loops': 'المزارع : حلقات بينما'
-          'Bee: Nested Loops': 'النحلة : الحلقات المتداخلة'
-          'Artist: Functions': 'الرسام : المهام'
-          'Bee: Debugging': 'النحلة: تصحيح الأخطاء'
+          'Maze: Sequence': "المتاهة : التسلسل"
+          'Artist: Sequence': "الرسام : التسلسل"
+          'Artist: Loops': "الرسام : الحلقات"
+          'Bee: Conditionals': "النحلة: الجمل الشرطية"
+          'Artist: Nested Loops': "الرسام : الحلقات المتداخلة"
+          'Farmer: While Loops': "المزارع : حلقات بينما"
+          'Bee: Nested Loops': "النحلة : الحلقات المتداخلة"
+          'Artist: Functions': "الرسام : المهام"
+          'Bee: Debugging': "النحلة: تصحيح الأخطاء"
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -517,43 +516,43 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'موصول: ألعاب الفيديو وتنسيق
-            طائرات'
-          'Calc: Evaluation Blocks': 'احسب: كتل التقييم'
+          'Unplugged: Video Games and Coordinate Planes': "موصول: ألعاب الفيديو وتنسيق
+            طائرات"
+          'Calc: Evaluation Blocks': "احسب: كتل التقييم"
           'Eval: Strings and Images': 'Eval: سلاسل والصور'
-          'Unplugged: Contracts': 'موصول: العقود'
+          'Unplugged: Contracts': "موصول: العقود"
           'Eval: Writing Contracts': 'Eval: كتابة العقود'
-          'Calc: Defining Variables': 'احسب: تعريف المتغيرات'
-          'Play Lab: Defining Variables (Big Game)': 'مختبر اللعب: تعريف المتغيرات
-            (اللعبة الكبرى)'
+          'Calc: Defining Variables': "احسب: تعريف المتغيرات"
+          'Play Lab: Defining Variables (Big Game)': "مختبر اللعب: تعريف المتغيرات
+            (اللعبة الكبرى)"
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'موصول: الوصفة التصميم'
+          'Unplugged: The Design Recipe': "موصول: الوصفة التصميم"
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'مختبر اللعب: الرسوم المتحركة (اللعبة
-            الكبرى)'
-          'Unplugged: Booleans': 'غير موصول: القيم المنطقية'
+          'Play Lab: Animation (Big Game)': "مختبر اللعب: الرسوم المتحركة (اللعبة
+            الكبرى)"
+          'Unplugged: Booleans': "غير موصول: القيم المنطقية"
           'Eval: Boolean Operators': 'Eval: عوامل التشغيل المنطقية'
-          'Play Lab: Booleans': 'تشغيل مختبر: القيم المنطقية'
-          'Play Lab: Boolean (Big Game)': 'مختبر اللعب: قيمة منطقية (اللعبة الكبرى)'
-          'Unplugged: Conditionals and Piecewise Functions': 'موصول: الشرطية ووظائف
-            Piecewise'
-          'Eval: Conditionals': 'التقييم: الجمل الشرطية'
-          'Unplugged: Collision Detection and the Distance Formula': 'غير موصول: الكشف
-            عن التصادم وصيغة المسافة'
-          'Play Lab: Collision Detection (Big Game)': 'مختبر اللعب: الكشف عن التصادم
-            (اللعبة الكبرى)'
+          'Play Lab: Booleans': "تشغيل مختبر: القيم المنطقية"
+          'Play Lab: Boolean (Big Game)': "مختبر اللعب: قيمة منطقية (اللعبة الكبرى)"
+          'Unplugged: Conditionals and Piecewise Functions': "موصول: الشرطية ووظائف
+            Piecewise"
+          'Eval: Conditionals': "التقييم: الجمل الشرطية"
+          'Unplugged: Collision Detection and the Distance Formula': "غير موصول: الكشف
+            عن التصادم وصيغة المسافة"
+          'Play Lab: Collision Detection (Big Game)': "مختبر اللعب: الكشف عن التصادم
+            (اللعبة الكبرى)"
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
-          Contracts: العقود
+          Contracts: "العقود"
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: وصفه التصميم
+          The Design Recipe: "وصفه التصميم"
           Your Game - Animation: Your Game - Animation
-          Booleans: القيم المنطقية
+          Booleans: "القيم المنطقية"
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: الجمل الشرطية ووظائف مقطّعة
+          Conditionals and Piecewise Functions: "الجمل الشرطية ووظائف مقطّعة"
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: Introduction to PD
@@ -572,12 +571,12 @@
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: القيم المنطقية
+          Booleans: "القيم المنطقية"
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'مختبر اللعب: الكشف عن التصادم
-            (اللعبة الكبرى)'
+          'Play Lab: Collision Detection (Big Game)': "مختبر اللعب: الكشف عن التصادم
+            (اللعبة الكبرى)"
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
         text-compression:
@@ -649,7 +648,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: الدوال
+          Functions: "الدوال"
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -702,14 +701,14 @@
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: إضافة الدوال
+          Creating Functions: "إضافة الدوال"
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: المتغيرات
+          Variables: "المتغيرات"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -742,6 +741,15 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: "حلقات بينما"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -754,7 +762,7 @@
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
           Strings and Images: Strings and Images
-          The Design Recipe: وصفه التصميم
+          The Design Recipe: "وصفه التصميم"
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -869,7 +877,7 @@
           description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
-          Multi: متعدد
+          Multi: "متعدد"
           Big Game: Big Game
           new stage: new stage
         sciencePD2:
@@ -903,7 +911,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: الانترنت
+          description_short: "الانترنت"
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -922,7 +930,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: الانترنت
+          The Internet: "الانترنت"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -961,9 +969,9 @@
           Defining Variables: Defining Variables
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: وصفه التصميم
+          The Design Recipe: "وصفه التصميم"
           Big Game - Animation: Big Game - Animation
-          Booleans: القيم المنطقية
+          Booleans: "القيم المنطقية"
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -973,16 +981,16 @@
           Big Game - Collision Detection: Big Game - Collision Detection
           Free Play: Free Play
         allthethings:
-          Jigsaw: بانوراما
-          Maze: المتاهة
-          Artist: الرسام
-          Bee: Bee
+          Jigsaw: "بانوراما"
+          Maze: "المتاهة"
+          Artist: "الرسام"
+          Bee: "نحلة"
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: فلابي
-          Bounce: الارتداد
-          Multi: متعدد
-          Match: مماثلة
+          Flappy: "فلابي"
+          Bounce: "الارتداد"
+          Multi: "متعدد"
+          Match: "مماثلة"
           TextMatch: TextMatch
           CSinA: CSinA
           Netsim: Netsim
@@ -1013,8 +1021,8 @@
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
           Rocket-Height: Rocket-Height
-          Booleans: القيم المنطقية
-          'Eval: Conditionals': 'التقييم: الجمل الشرطية'
+          Booleans: "القيم المنطقية"
+          'Eval: Conditionals': "التقييم: الجمل الشرطية"
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1024,20 +1032,20 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: محاكاة الإنترنت
-          App Lab: مختبر التطبيق
+          Internet Simulator: "محاكاة الإنترنت"
+          App Lab: "مختبر التطبيق"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: محاكاة الإنترنت
-          App Lab: مختبر التطبيق
+          Internet Simulator: "محاكاة الإنترنت"
+          App Lab: "مختبر التطبيق"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1062,7 +1070,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1071,7 +1079,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: الجلسة الختامية
+          Wrap-up: "الجلسة الختامية"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1116,11 +1124,11 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
+          title: "ساعة من البرمجة 2015"
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: ساعة من البرمجة
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code: "ساعة من البرمجة"
+          Hour of Code 2015: "ساعة من البرمجة 2015"
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1134,22 +1142,22 @@
           Defining Variables: Defining Variables
           Defining Functions: Defining Functions
           Rocket-Height: Rocket-Height
-          Booleans: القيم المنطقية
-          'Eval: Conditionals': 'التقييم: الجمل الشرطية'
+          Booleans: "القيم المنطقية"
+          'Eval: Conditionals': "التقييم: الجمل الشرطية"
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
-          The Design Recipe: وصفه التصميم
+          Welcome!: "مرحبا ! "
+          The Design Recipe: "وصفه التصميم"
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
-          Wrap-Up: الجلسة الختامية
+          Welcome!: "مرحبا ! "
+          Wrap-Up: "الجلسة الختامية"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1165,13 +1173,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: الجلسة الختامية
+          Wrap-Up: "الجلسة الختامية"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1183,7 +1191,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1192,12 +1200,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: الجلسة الختامية
+          Wrap-Up: "الجلسة الختامية"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1216,12 +1224,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: الجلسة الختامية
+          Wrap-up: "الجلسة الختامية"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1240,7 +1248,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: الجلسة الختامية
+          Wrap-up: "الجلسة الختامية"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1281,16 +1289,16 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: الخرائط السعيدة
-          Move it, Move it: حركها، حركها
-          'Real-life Algorithms: Plant a Seed': 'خوارزميات الحياة الحقيقية: زراعة
-            البذور'
-          Graph Paper Programming: برمجة ورقة الرسم البياني
-          Building a Foundation: بناء الأساس
-          Getting Loopy: القبض على المعتوهون
-          The Big Event: الحدث الكبير
-          Binary Bracelets: أساور الثنائية
-          Songwriting: تأليف الأغاني
+          Happy Maps: "الخرائط السعيدة"
+          Move it, Move it: "حركها، حركها"
+          'Real-life Algorithms: Plant a Seed': "خوارزميات الحياة الحقيقية: زراعة
+            البذور"
+          Graph Paper Programming: "برمجة ورقة الرسم البياني"
+          Building a Foundation: "بناء الأساس"
+          Getting Loopy: "القبض على المعتوهون"
+          The Big Event: "الحدث الكبير"
+          Binary Bracelets: "أساور الثنائية"
+          Songwriting: "تأليف الأغاني"
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1339,7 +1347,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1367,11 +1375,12 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1406,7 +1415,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1441,7 +1450,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1450,7 +1459,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1472,7 +1481,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: سياسة الخصوصية
+          Privacy Policy: "سياسة الخصوصية"
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1490,15 +1499,37 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: الجلسة الختامية
+          Wrap-Up: "الجلسة الختامية"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1516,7 +1547,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: "مرحبا ! "
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1543,6 +1574,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1561,6 +1593,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1579,6 +1613,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: "حلقات بينما"
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1593,32 +1634,49 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: "مختبر اللّعب غامبول"
+          description_short: "تخيّل قصة أو إصنع لعبة مع مختبر اللّعب غامبول!"
+          description: "تخيّل قصة أو إصنع لعبة مع مختبر اللّعب غامبول!"
+          Gumball Play Lab: "مختبر اللّعب غامبول"
         starwars:
-          title: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
-          description_short: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
-            مجرة بعيدة، بعيدة جدا.
-          description: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة،
-            بعيدة جدا.
-          Hour of Code 2015: Hour of Code 2015
+          title: "حرب النجوم: بناء مجرة باستعمال البرمجة"
+          description_short: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
+            مجرة بعيدة، بعيدة جدا."
+          description: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة
+            بعيدة، بعيدة جدا."
+          Hour of Code 2015: "ساعة من البرمجة 2015"
         starwarsblocks:
-          title: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
-          description_short: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
-            مجرة بعيدة، بعيدة جدا.
-          description: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة بعيدة،
-            بعيدة جدا.
-          Hour of Code 2015: Hour of Code 2015
+          title: "حرب النجوم: بناء مجرة باستعمال البرمجة"
+          description_short: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
+            مجرة بعيدة، بعيدة جدا."
+          description: "تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في مجرة
+            بعيدة، بعيدة جدا."
+          Hour of Code 2015: "ساعة من البرمجة 2015"
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: ساعة البرمجة ماين كرافت
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          Hour of Code 2015: Hour of Code 2015
+          title: "ساعة البرمجة ماين كرافت"
+          description_short: "اكتشف عالم Minecraft من خلال التعليمات البرمجية"
+          description: "استخدم كتل التعليمات البرمجية لاصطحاب Steve أو Alex في مغامرة
+            من خلال عالم Minecraft"
+          Hour of Code 2015: "ساعة من البرمجة 2015"
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: "مرحبا ! "
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: "الجلسة الختامية"
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

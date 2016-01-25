@@ -105,6 +105,8 @@
         StudioEC: Spēles laboratorija
         Applab: Aplikāciju laborotorija
         NetSim: Interneta simulators
+        Custom: Mākslinieks
+        CustomStudio: Spēles laboratorija
     trophy:
       name:
         Bronze: Bronzas
@@ -125,7 +127,7 @@
       instructions:
         maze_2_2: 'Vai vari man palīdzēt notvert nerātno cūku? Saliec vairākus "kustēties
           uz priekšu" blokus kopā un spied "Skriet" lai palīdzēt man tur nonākt. '
-        maze_2_1: Šī cūka ir man traucē. Palīdzi man to atrast!
+        maze_2_1: "Šī cūka ir man traucē. Palīdzi man to atrast!"
         maze_2_2_5: Izseko ceļu un aizved mani līdz muļķīgajai cūkai. Izvairies no
           Dinamīta, savādāk spalvas lidos!
         maze_2_3: Aizved mani līdz zaļajam ļaunumam! (Izvairies no Dinamīta)
@@ -145,8 +147,8 @@
         maze_2_10: Pēdēja prakses reize - vai vari atrisināt, izmantojot tikai 4 blokus?
         maze_2_11: Dārgais cilvēks. Es zombijs. Es izsalcis. Vajag... tikt... līdz
           saulespuķei... Vari mani tu nogādāt, izmantojot tikai 5 blokus?
-        maze_2_12: Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt, izmantojot
-          tikai 5 blokus?
+        maze_2_12: "Šeit ir ļoti līdzīgi, bet nedaudz savādāk Vai vari atrisināt,
+          izmantojot tikai 5 blokus?"
         maze_2_13: 'Izmanto jauno "Ja" bloku, lai ļautu man izlemt kad pagriezties.
           Padoms: tev jāizmanto tikai vēl viens bloks, bet iemācies kā to uzstādīt
           pašam nākamajā reizē.'
@@ -195,23 +197,23 @@
         turtle_4_3: Šis ir kods, ko tu uzrakstīji, lai uzzīmētu vienu trijstūril.
           Vai vari pievienot "atkārtot" un "pagriezt" blokus lai izveidotu skaistu
           puķi?
-        turtle_4_4: 'Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus
+        turtle_4_4: "Šis ir kods no iepriekšējās mīklas, bet pagriežot tikai 36 grādus
           pēc katra trijstūra uzzīmēšanas. Cik reizes ir jāatkārto šī darbība? (Padoms:
-          pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)'
-        turtle_4_5: 'Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36
+          pēc 360 grādu griešanas, zīmējums izveidos pilnu apli)"
+        turtle_4_5: "Šis ir kods no iepriekšējās mīklas, atkārtojot pagriezienus 36
           reizes. Cik grādu lenķim vajadzētu būt katrā pagriezienā? (Padoms: pēc 360
-          grādu pagriešanas, zīmējums izveidos pilnu apli)'
+          grādu pagriešanas, zīmējums izveidos pilnu apli)"
         turtle_4_6: Vai tu vari uzzīmēt kvadrātu ar malu garumu 20 pikseļi, izmantojot
           tikai 3 blokus?
-        turtle_4_7: 'Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai
+        turtle_4_7: "Šis ir kods, lai uzzīmētu kvadrātu no iepriekšējās mīklas. Vai
           tu vari atkārtot to, lai uzzīmētu 10 blakus esošus kvadrātus kā pakāpienus?
-          Padoms: Tev vajag izmantot tikai papildus 2 blokus.'
-        turtle_4_8: Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt
-          vēl tikai 2 blokus, lai pabeigtu zīmējumu?
-        turtle_4_9: Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu
-          jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)
-        turtle_4_10: Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams
-          atkārtot šo darbību, lai pabeigtu zīmējumu?
+          Padoms: Tev vajag izmantot tikai papildus 2 blokus."
+        turtle_4_8: "Šis ir risinājums iepriekšējai mīklai. Vai vari pievienot klāt
+          vēl tikai 2 blokus, lai pabeigtu zīmējumu?"
+        turtle_4_9: "Šis ir risinājums iepriekšējai mīklai. Cik grādu leņķa pagriezienu
+          jāizmanto, lai pabeigtu zīmējumu? (Iespējams vajadzēs minēt dažas reizes)"
+        turtle_4_10: "Šis ir risinājums iepriekšējai mīklai. Cik daudz reizes nepieciešams
+          atkārtot šo darbību, lai pabeigtu zīmējumu?"
         turtle_4_11: Mēģini izmainīt skaitļus "pagrieziens" un "atkārtot" blokos,
           lai veidot citus zīmējumus. Vai arī izmēģini mainīt citas koda daļas, lai
           zīmēt ko vien vēlies.
@@ -272,9 +274,9 @@
         turtle_2_9: Izmanto "Skaitīt ar" cilpu, lai uzzīmētu sniegavīru ģimeni, kurā
           ģimenes locekļu augumi ir 110, 100, 90, 80 un 70. Visiem sniegavīriem vajadzētu
           būt 60 pikseļu attālumā vienam no otra.
-        turtle_2_10: Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek,
-          ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?  Uzzīmē
-          jebko, ko gribi.
+        turtle_2_10: "Šeit ir kods eksperimentēšanai ar dažādām spirālēm. Kas notiek,
+          ja Tu pamaini apgriezienu daudzumu? Vai arī ciklā uzliec nejaušu krāsu?
+          \ Uzzīmē jebko, ko gribi."
         maze_karel_2_1: 'Pamēģini izmantot blokus, lai palīdzētu man noņemt visas
           čupiņas un aizpildīt visas bedres. Mēģini daudzo bloku vietā izmantot cilpas.
           Norādījums: Tu vari ielikt  vienu cilpa iekšā otrā cilpā.'
@@ -374,8 +376,8 @@
           Parvieto dēlīti ar labo bultu lai sasniegtu abus mērķus.
         bounce_3: Tagad izmēģini ko līdzīgu ar "kad bulta uz augšu" bloku. Pārvieto
           dēlīti, lai sasniegtu augšējo mērķi.
-        bounce_4: Šoreiz tev vajag pievienot četrus blokus. Pārvieto airi uz visiem
-          četriem gala mērķiem, lai pabeigto šo puzli.
+        bounce_4: "Šoreiz tev vajag pievienot četrus blokus. Pārvieto airi uz visiem
+          četriem gala mērķiem, lai pabeigto šo puzli."
         bounce_5: Liksim, lai bumba lido lejā dēlīša virzienā. Pievieno bloku pie
           "kad bumba atsit dēlīti", lai nodrošinātu, ka bumba sasniedz mērķi.
         bounce_6: Tagad gala mērķis ir augšā. Tev vajag pievienot blokus abiem "kad
@@ -528,46 +530,77 @@
           viņu ar bultam, lai tiktu pie Spacebota un brīdināt visus citus.
         studio_playlab_10: Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini
           draugus to spēlēt.
-        studio_iceage_1: Manny wants to say "hello" - can you help him?
-        studio_iceage_2: Diego (actor 1) and Granny (actor 2) would like to say "hello"
-          to each other. Can you help them by using the "say" block twice?
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and
-          play a sound when he gets there?
-        studio_iceage_5: Can you help Sid say "greetings" when it is clicked? Don’t
-          forget to click it after you click Run
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_iceage_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Sid move right and left repeatedly?
-        studio_iceage_8: Can you add a block to score a point and a block to play
-          a sound when Sid runs into Manny, and then move him with the arrows until
-          you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
-          faster by changing its speed. Then move him with the arrow keys to get to
-          Sid and alert everyone else.
-        studio_iceage_10: Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini
-          draugus to spēlēt.
-        studio_gumball_1: Anais wants to say "hello" - can you help her?
-        studio_gumball_2: Darwin (actor 1) and Gumball (actor 2) would like to say
-          "hello" to each other. Can you help them by using the "say" block twice?
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and
-          play a sound when he gets there?
-        studio_gumball_5: Can you help Antony say "greetings" when it is clicked?
-          Don’t forget to click it after you click Run
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_gumball_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Antony move right and left repeatedly?
-        studio_gumball_8: Can you add a block to score a point and a block to play
-          a sound when Banana Joe runs into Antony, and then move him with the arrows
-          until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole
-          get to Penny faster by changing its speed. Then move him with the arrow
-          keys to get to Nicole and alert everyone else.
-        studio_gumball_10: Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini
-          draugus to spēlēt.
+        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
+          you help him say "hello" by dragging the `say` block out into the work area
+          and typing the word "hello" inside?
+        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
+          him on the adventure.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
+          and right repeatedly?
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Izveido savu spēli. Kad gatavs, spied "Pabeigts" aicini
           draugus to spēlēt.
         studio_k1_1: Vai vari likt šim sunim pateikt "Sveika pasaule"?
@@ -591,8 +624,8 @@
           ABOVE
         maze_wordsearch_k_16: Pārvieto manu uz vienu pusi, tad citu, lai pateiktu
           BELOW
-        maze_wordsearch_k_20: Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad
-          citu, lai pateiktu STORY
+        maze_wordsearch_k_20: "Šis ir izmēģinājums. Pārvieto manu uz vienu pusi, tad
+          citu, lai pateiktu STORY"
         applab_ec_simple: Izveido savu aplikāciju, lietojot rīkus, kas atrodas instrumentu
           kastē.
         turtle_ec_1_2: 'Tagad uzzīmē kvadrātu. Ievēro: izmanto savu mīļāko krāsu,
@@ -709,6 +742,9 @@
         infinity_playlab_intro: Spēļu laboratorija - ievads
         infinity_playlab_events: Spēļu laboratorija - notikumi
         infinity_playlab_repeat_forever: Spēļu laboratorija - mūžīgie cikli
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -759,6 +795,12 @@
         mc_if_statements: Minecraft - If statements
         mc_congrats_share: Minecraft - Congratulations
         mc_congrats_no_share: Minecraft - Congratulations
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Pārvieto "pārvietot" bloku un pielipini zem cita bloka
@@ -772,7 +814,7 @@
           kategorijās
         set_sprite_image: Pievieno "uzstādi tēlu attēlam" bloku pie "kad stāsts sakas"
           bloka, lai iespējotu tēlu šim stāstam
-        studio_say_text: Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu
+        studio_say_text: "Šajās pēdiņās uzraksti, ko vēlies, lai tavs tēls teiktu"
         jigsaw_click: Klikšķini uz šī bloka!
         move_elsa_forward: Velc "Iet uz priekšu" bloku un pieliec zem "Kad palaists"
           bloka, lai Elza ietu uz priekšu
@@ -782,8 +824,8 @@
         replace_questions_degree: Izmanto izkrītošo izvēlni, lai aizstātu "???" ar
           grādiem, par cik jāpagriežas
         repeat_blocks: Izmanto bloku "atkārtot" un ietver tajā visus blokus uz darbagalda
-        repeat_blocks_1: (1) Izmanto šo bloku un apliec to ap pelēkajiem blokiem darba
-          vietā
+        repeat_blocks_1: "(1) Izmanto šo bloku un apliec to ap pelēkajiem blokiem
+          darba vietā"
         repeat_blocks_2: (2) Pārvieto bloku "atkārtot" bloku uz šejieni un ievieto
           iekšā pelēkos blokus
         snowflake_dropdown: Izmanto šo izvēlni, lai veidotu dažādas sniegpārslas!
@@ -826,7 +868,7 @@
           nospiešanas
         playlab_add_move: Atkārtošanas blokā pievieno blokus "pārvietot"
         playlab_add_score: Pievieno šeit punktu blokus
-        playlab_add_blocks: Šeit pievieno savus blokus
+        playlab_add_blocks: "Šeit pievieno savus blokus"
         set_variable: Velc skaitļu bloku te, lai noteiktu mainīgo
         place_variable: Ievelc mainīgo šajā blokā
         bee_for_loop: Velc lielāko nektāra vērtību, kādu gribi savākt.

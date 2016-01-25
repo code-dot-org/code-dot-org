@@ -16,7 +16,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Display the first and last element in the array. Display the number 5 from the array. (Click to see full instructions)",
-    "markdown_instructions": "# Accessing Items in an Array\r\n\r\nAn array is comprised of many locations. You can individually set or reference the information at each location of your array just like a variable. To tell your locations apart each has a separate number, or **index**, that identifies it.\r\n\r\nArrays in JavaScript are **zero-indexed** which means the first index is 0. This is similar to binary number systems which begin counting at 0. For example an array of 10 items would have indexes 0-9. As a result **the last index is always one less than the length of the array**.\r\n\r\n**Accessing Array Items by Index:** If you know the index of the item you wish to access you can reference it using square brackets `list[index]` . The example below prints the value of the 4th element in the array.  \r\n\r\n![](https://images.code.org/8b2da597fccaeeafb30b04991074cd8b-image-1447365422277.56.45 PM.png)\r\n\r\n# Do This\r\n\r\n* **Starter code** has been provided which creates an array of the numbers 1 through 10\r\n* Use `console.log` to display the first item in your array.\r\n* Use `console.log` to display the last item  in your array.\r\n* Use `console.log` to display the number 5 from the array.",
+    "markdown_instructions": "# Accessing Items in an Array\r\n\r\nAn array is comprised of many locations. You can individually set or reference the information at each location of your array just like a variable. To tell your locations apart each has a separate number, or **index**, that identifies it.\r\n\r\nArrays in JavaScript are **zero-indexed** which means the first index is 0. This is similar to binary number systems which begin counting at 0. For example an array of 10 items would have indexes 0-9. As a result **the last index is always one less than the length of the array**.\r\n\r\n**Accessing Array Items by Index:** If you know the index of the item you wish to access you can reference it using square brackets `list[index]` . The example below prints the value of the 4th element in the array.  \r\n\r\n![](https://images.code.org/8b2da597fccaeeafb30b04991074cd8b-image-1447365422277.56.45 PM.png)\r\n\r\n# Do This:\r\n\r\n**Starter code** has been provided which creates an array of the numbers 1 through 10\r\n\r\n* Use `console.log` to display the first item in your array.\r\n* Use `console.log` to display the last item  in your array.\r\n* Use `console.log` to display the number 5 from the array.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,7 +46,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "start_blocks": "var myArray = [1,2,3,4,5,6,7,8,9,10];\r\n\r\n// Use console.log to display the \r\n// first item, last item, and the \r\n// number 5 from this array"
+    "start_blocks": "var myArray = [1,2,3,4,5,6,7,8,9,10];\r\n\r\n// Use console.log to display the \r\n// first item, last item, and the \r\n// number 5 from this array",
+    "encrypted_examples": "gXMZh6WpC9OfwewBjxmCHWcqyKCONrkHV8vu1EhUCWi8ZC5Jt57arGN2RP3M\nl4Rv\n"
   }
 }]]></config>
   <blocks/>

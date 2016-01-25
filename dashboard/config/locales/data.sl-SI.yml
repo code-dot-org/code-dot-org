@@ -68,7 +68,7 @@
           desc: Labirint (beta)
           MazeStep: Nivo
         wordsearch:
-          desc: Čebelica črkuje besede (beta)
+          desc: "Čebelica črkuje besede (beta)"
           WordSearch: Stopnja 1
     game:
       name:
@@ -105,6 +105,8 @@
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Internet Simulator
+        Custom: Artist
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: Bronasta
@@ -113,12 +115,12 @@
     concept:
       description:
         sequence: Zaporedje
-        if: Če (if) blok
-        if_else: Če- sicer pa blok
+        if: "Če (if) blok"
+        if_else: "Če- sicer pa blok"
         loop_times: Ponovi
         loop_until: Ponavljaj dokler ne velja
         loop_while: Dokler velja
-        loop_for: Števec
+        loop_for: "Števec"
         function: Funkcije
         parameters: Funkcije s parametri
     level:
@@ -164,9 +166,9 @@
         maze_2_19: Poskusi uporabiti še tri dodatne bloke in ta zapletenejši labirint
           ne bo več težava. Če jih prav sestaviš, lahko prehodim vse ovinke in vse
           razdalje.
-        turtle_1_1: Živjo, sem umetnica in s pomočjo tvojih blokov lahko rišem zelo
+        turtle_1_1: "Živjo, sem umetnica in s pomočjo tvojih blokov lahko rišem zelo
           različne like. Vidiš sive črte po katerih se moram zadrsati? Uporabite nekaj
-          blokov, da bom lahko drsala po črtah.
+          blokov, da bom lahko drsala po črtah."
         turtle_1_2: 'Zdaj pa poskusi narisati kvadrat. Svojo najljubšo barvo lahko
           izbireš z ukazom: "izberi barvo pisala" (ang.: "pick color").'
         turtle_1_3: Nariši kvadrat z uporabo le treh blokov.
@@ -242,9 +244,9 @@
         maze_karel_1_11: 'Še vedno je mrak. Premikaj me po polju. Če naletim na kup,
           ga odstrani, in če naletim na luknjo, jo napolni. Namig: v bloku "če (if)"
           uporabi spustni seznam z možnostmi.'
-        turtle_2_1: 'Živ''. Jaz zombi-umetnik. Jaz rad risati! Jaz narisati kvadrat
+        turtle_2_1: "Živ'. Jaz zombi-umetnik. Jaz rad risati! Jaz narisati kvadrat
           s posebno barvo. Pomembna opomba: na voljo imaš iste bloke, le da so zdaj
-          razvrščeni v kategorije.'
+          razvrščeni v kategorije."
         turtle_2_2: S funkcijami lahko zdaj ustvariš čisto svoje bloke! Poglej v kategorijo
           "Funkcije", kjer imaš zdaj na voljo nov blok "nariši kvadrat".  Narisal
           bo zelen kvadrat s stranicami 50 x 50 pik.
@@ -512,46 +514,77 @@
           the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
-        studio_iceage_1: Manny wants to say "hello" - can you help him?
-        studio_iceage_2: Diego (actor 1) and Granny (actor 2) would like to say "hello"
-          to each other. Can you help them by using the "say" block twice?
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and
-          play a sound when he gets there?
-        studio_iceage_5: Can you help Sid say "greetings" when it is clicked? Don’t
-          forget to click it after you click Run
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_iceage_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Sid move right and left repeatedly?
-        studio_iceage_8: Can you add a block to score a point and a block to play
-          a sound when Sid runs into Manny, and then move him with the arrows until
-          you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
-          faster by changing its speed. Then move him with the arrow keys to get to
-          Sid and alert everyone else.
-        studio_iceage_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_gumball_1: Anais wants to say "hello" - can you help her?
-        studio_gumball_2: Darwin (actor 1) and Gumball (actor 2) would like to say
-          "hello" to each other. Can you help them by using the "say" block twice?
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and
-          play a sound when he gets there?
-        studio_gumball_5: Can you help Antony say "greetings" when it is clicked?
-          Don’t forget to click it after you click Run
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_gumball_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Antony move right and left repeatedly?
-        studio_gumball_8: Can you add a block to score a point and a block to play
-          a sound when Banana Joe runs into Antony, and then move him with the arrows
-          until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole
-          get to Penny faster by changing its speed. Then move him with the arrow
-          keys to get to Nicole and alert everyone else.
-        studio_gumball_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
+          you help him say "hello" by dragging the `say` block out into the work area
+          and typing the word "hello" inside?
+        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
+          him on the adventure.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
+          and right repeatedly?
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your game on their phones.
         studio_k1_1: Can you make this dog say "hello world"?
@@ -595,7 +628,7 @@
         if_else_scrat: '"Če- sicer pa" blok'
         function: Funkcije
         loop_while: Dokler velja
-        loop_for: Števec
+        loop_for: "Števec"
         parameters: Funkcije s parametri
         hoc_wrapup: Povzetek Ure kodiranja
         Unplug1: Kaj je računalništvo?
@@ -616,9 +649,9 @@
         C1_pair_programming: Programiranje parov
         C1_maze_intro_sequencing: Uvod v reševanje labirinta
         C1_maze_debugging: 'Labirint: odpravljanje napak'
-        C1_bee_level_intro: 'Čebelica: uvodni nivo'
+        C1_bee_level_intro: "Čebelica: uvodni nivo"
         C1_artist_intro: 'Umetnik: uvod'
-        C1_spelling_bee_intro: 'Čebelica črkuje: uvod'
+        C1_spelling_bee_intro: "Čebelica črkuje: uvod"
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
@@ -689,6 +722,9 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -739,6 +775,12 @@
         mc_if_statements: Minecraft - If statements
         mc_congrats_share: Minecraft - Congratulations
         mc_congrats_no_share: Minecraft - Congratulations
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Povleci blok "premakni se" in ga postavi pod drugi blok
@@ -762,13 +804,13 @@
           stopinj
         repeat_blocks: Uporabi blok "Ponovi" in spravi vanj vse bloke, ki jih imaš
           v svojem delovnem prostoru
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Uporabi ta spustni seznam za ustvarjanje različnih snežink!
-        degrees_per_side: Če deliš 360 s številom stranic, je rezultat število stopinj
-          za posamezen kot (obrat).
+        degrees_per_side: "Če deliš 360 s številom stranic, je rezultat število stopinj
+          za posamezen kot (obrat)."
         set_sides: Uporabi ta blok za število "stranic", potrebnih za rešitev naloge.
         set_length: Uporabi ta blok in "dolžini" dodeli pravo količino.
         which_equation: Which equation makes each side shorter for shapes with more
@@ -781,11 +823,11 @@
         edit_function: Click here to edit your function.
         create_function: Klikni tukaj, če želiš delati s funkcijami; nato klikni na
           "ustvari funkcijo".
-        house_hint: Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
-          nalogi bo še bolj podobna hiši.
+        house_hint: "Čeprav risba še ni podobna hiši, smo z njo zadovoljni. V naslednji
+          nalogi bo še bolj podobna hiši."
         edit_draw_square: Uporabi ta gumb za urejanje funkcije in dodaj zanko.
-        edit_get_nectar: Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
-          potem uporabi ta gumb za urejanje funkcije.
+        edit_get_nectar: "Če želiš spremeniti smer Čebelice zato,  da bo našla nektar,
+          potem uporabi ta gumb za urejanje funkcije."
         logic_category: 'Odpri list "Logika" in poišči ukaz "če- sicer pa" (ang.:
           "if/else").'
         length_parameter: Znaš popraviti to funkcijo tako, da bo uporabljala parameter

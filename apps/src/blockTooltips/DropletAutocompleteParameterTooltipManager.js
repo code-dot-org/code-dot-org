@@ -165,7 +165,8 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
   }
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
 
-  if (currentParameterIndex >= tooltipInfo.parameterInfos.length) {
+  var hasTooltipParams = tooltipInfo.parameterInfos.length > 0;
+  if ((hasTooltipParams && currentParameterIndex >= tooltipInfo.parameterInfos.length)) {
     return;
   }
 
@@ -180,6 +181,10 @@ DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = f
       this.dropletTooltipManager.showDocFor(functionName);
       event.stopPropagation();
     }.bind(this));
+  }
+
+  if (!hasTooltipParams) {
+    return;
   }
 
   var chooseAsset = tooltipInfo.parameterInfos[currentParameterIndex].assetTooltip;
@@ -252,6 +257,10 @@ DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor,
   if (this.overrideCompleter) {
     var allCompleters = editor.completers;
     editor.completers = [ this.overrideCompleter ];
+
+    // Ensure that autoInsert is off so we don't insert immediately when there is only one option:
+    editor.completer.autoInsert = false;
+
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions.call(this, editor, callback);
     editor.completers = allCompleters;
   } else {
@@ -289,15 +298,15 @@ DropletAutocompleteParameterTooltipManager.insertMatch = function (self, data) {
     // Execute detach() method here to ensure that the popup goes
     // away before we call the click() method
     this.detach();
-    
+
     // And hide our cursor tooltip as well:
     self.getCursorTooltip_().tooltipster('hide');
 
     // Note: stop dropdowns and tooltips until the callback is complete...
     self.blockDropdownsAndTooltips = true;
-    
+
     var lang = ace.require("./lib/lang");
-    
+
     // Use delayedCall so the popup and tooltip disappear in the case where the
     // Enter key was pressed before we choose this autocomplete item
     var clickFunc = lang.delayedCall(function () {
@@ -305,7 +314,7 @@ DropletAutocompleteParameterTooltipManager.insertMatch = function (self, data) {
       // string which will be inserted.
       data.click(function (data) {
         this.editor.execCommand("insertstring", data);
-        self.blockDropdownsAndTooltips = false;    
+        self.blockDropdownsAndTooltips = false;
       }.bind(this));
     }.bind(this));
 

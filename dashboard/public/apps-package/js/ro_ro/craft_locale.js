@@ -172,7 +172,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeClay":function(d){return "lut"},
 "blockTypeClayHardened":function(d){return "lut intarit"},
 "blockTypeCobblestone":function(d){return "pietruite"},
-"blockTypeDirt":function(d){return "murdărie"},
+"blockTypeDirt":function(d){return "noroi"},
 "blockTypeDirtCoarse":function(d){return "murdărie mare"},
 "blockTypeEmpty":function(d){return "gol"},
 "blockTypeFarmlandWet":function(d){return "terenuri agricole"},
@@ -218,7 +218,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level10FailureMessage":function(d){return "Acopera lava pentru a merge peste ea, apoi pune 2 blocuri de fier pe partea cealalta."},
 "level11FailureMessage":function(d){return "Asigura-te sa plasezi pietrele in fata daca exista lava. Acestea te vor lasa sa pastrezi in siguranta resursele."},
 "level12FailureMessage":function(d){return "Asigura-te sa ai 3 blocuri de minereu rosu. Aceasta miscare combina ce ai invatat din construirea casei tale si folosind \"daca\" pentru a evita caderea in lava."},
-"level13FailureMessage":function(d){return "Aseaza \"feroviar\" pe calea murdara ce duce de la usa ta pana la marginea hartii."},
+"level13FailureMessage":function(d){return "Aseaza \"feroviar\" pe calea de noroi ce duce de la usa ta pana la marginea hartii."},
 "level1FailureMessage":function(d){return "Trebuie sa folosesti comenzi pentru a ajunge la oi."},
 "level1TooFewBlocksMessage":function(d){return "Incercati mai multe comenzi pentru a ajunge la oi."},
 "level2FailureMessage":function(d){return "Pentru a taia un copac, mergi pana la baza lui si foloseste comanda \"distruge bloc\"."},
@@ -227,7 +227,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "level3TooFewBlocksMessage":function(d){return "Incearca sa folosesti mai multe comenzi pentru a aduna lana de la ambele oi. Mergi catre fiecare si utilizeaza comanda \"forfecare\"."},
 "level4FailureMessage":function(d){return "Trebuie sa folosesti blocul \"distruge\" pentru cele 3 trunchiuri."},
 "level5FailureMessage":function(d){return "Aseaza-ti blocurile pe conturul de noroi pentru a face un zid. Comanda roz \"repeta\" va rula comenzile incluse in el, ca si \"pune blocul\" sau \"mergi inainte\"."},
-"level6FailureMessage":function(d){return "Pune blocurile pe conturul de noroi din fata casei pentru a realiza puzzle-ul."},
+"level6FailureMessage":function(d){return "Pune blocurile pe conturul de noroi din fata casei pentru a completa puzzle-ul."},
 "level7FailureMessage":function(d){return "Foloseste comanda \"planteaza\" pentru a cultiva pe fiecare parte de sol inchis la culoare."},
 "level8FailureMessage":function(d){return "Daca atingi un vierme va exploda. Strecoara-te in jurul lor si intra in casa ta."},
 "level9FailureMessage":function(d){return "Nu uita sa asezi cel putin 2 torte pentru a-ti lumina drumul si pune cel putin 2 carbuni."},
@@ -239,4 +239,4 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "reinfFeedbackMsg":function(d){return "Poți apăsa \"Joacă în continuare\" pentru a reveni la jocul tău."},
 "replayButton":function(d){return "Reluare"},
 "selectChooseButton":function(d){return "Selectare"},
-"tooManyBlocksFail":function(d){return "Puzzle-ul "+craft_locale.v(d,"puzzleNumber")+" finalizat. Felicitări! De asemenea, este posibil să îl completezi cu "+craft_locale.p(d,"numBlocks",0,"ro",{"one":"1 block","other":craft_locale.n(d,"numBlocks")+" blocks"})+"."}};
+"tooManyBlocksFail":function(d){return "Puzzle-ul "+craft_locale.v(d,"puzzleNumber")+" finalizat. Felicitări! De asemenea, este posibil să îl completezi cu "+craft_locale.p(d,"numBlocks",0,"ro",{"one":"1 bloc","other":craft_locale.n(d,"numBlocks")+" blocuri"})+"."}};

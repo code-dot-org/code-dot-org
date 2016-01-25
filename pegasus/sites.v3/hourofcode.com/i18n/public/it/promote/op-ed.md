@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Qui di seguito trovate un esempio di articolo di appoggio alla Settimana dell'Educazione Informatica e una descrizione dei suoi obiettivi che potrebbero essere usati dallo stato, da legislatori locali, imprenditori, ecc.
 
@@ -47,4 +46,3 @@ Secondo il Bureau of Labor Statistics americano, entro il 2020, ci saranno nei s
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. In molte scuole italiane gli studenti parteciperanno ad un evento dell'Ora del Codice, sollevando il velo di mistero che avvolge l'informatica e, speriamo, stuzzicando la loro curiosità affinché possano andare avanti e imparare molto di più. Io mi unirò a loro e invito anche voi a partecipare. Tutti dovrebbero imparare a programmare. Visit https://hourofcode.com/<%= @country %> to learn more and get started. E sostieni i nostri sforzi per portare l'informatica in molte più scuole in **[NAZIONE]**.
 
-<%= view :signup_button %>

@@ -11,7 +11,7 @@ Then /^ensure Flappy tickCount is positive$/ do
 end
 
 Then /^I simulate a mousedown on the svg$/ do
-  @browser.execute_script("$('\#svgFlappy rect').last().simulate('mousedown')");
+  @browser.execute_script("$('\#svgFlappy rect').last().simulate('mousedown')")
 end
 
 And /^I've initialized the workspace with my flappy puzzle.$/ do
@@ -21,7 +21,6 @@ And /^I've initialized the workspace with my flappy puzzle.$/ do
 end
 
 Then /^I see the first Flappy YouTube video with the correct parameters$/ do
-  correct_video_url = 'https://www.youtube.com/embed/VQ4lo6Huylc/?autoplay=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent'
-  result = @browser.execute_script("return $('iframe').attr('src') === '#{correct_video_url}'")
-  result.should eq true
+  correct_video_url = 'https://www.youtube.com/embed/VQ4lo6Huylc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent'
+  correct_video_url.should eq @browser.execute_script("return $('iframe').attr('src')")
 end

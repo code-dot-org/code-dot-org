@@ -8,6 +8,6 @@ title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 # خپل ټول ښوونځی ګډون ته راوبلئ
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+د کوډ په ساعت کې د ګډون لپاره د ټول ښوونځي د بوختونې اړوند معلومات دلته راځئ.
 
 <%= view :signup_button %>

@@ -136,7 +136,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add key functionality to your app. As you are doing so keep an eye out for moments when you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how this app is supposed to work you can always go back to the example from earlier in this lesson.\r\n\r\n# Do This\r\n\r\n* Using the skills you've learned in this lesson, add the ability to respond to **key events** to your app\r\n* **Refactor your old code** to remove redundant portions of your code.\r\n* Keeping adding to your program. What other features do you want to include?",
+    "markdown_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add key event functionality to your app! As you are doing so, keep an eye out for places where you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how key events work, you can always go back to the example from earlier in this lesson.  You will need to add `if` statements to check for which keys were pressed, just as before.\r\n\r\n# Do This:\r\n\r\n* Add the ability to respond to **key events** to your app.\r\n\r\n* **Refactor your old code** to remove redundant portions.\r\n\r\n* Keeping adding to your program. What other features do you want to include?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -167,7 +167,8 @@
     "debugger_disabled": "false",
     "slider_speed": "1.0",
     "project_template_level_name": "U3 - Arrays - favThings Template",
-    "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)"
+    "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
+    "encrypted_examples": "nU5ZBmISYMCtPZSntFE3cPjHKyjK41u/d5qa1SokNjTovI79y2G6xkcT5Ub/\n5Uwr\n"
   }
 }]]></config>
   <blocks/>

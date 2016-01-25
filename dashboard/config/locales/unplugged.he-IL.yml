@@ -2,17 +2,17 @@
   data:
     unplugged:
       Unplug1:
-        title: היכרות למדעי המחשב
-        desc: בשיעור זה נציג את הרעיון של מדעי המחשב, ונראה מה מהנדס תכנה עושה. התלמידים
+        title: "היכרות למדעי המחשב"
+        desc: "בשיעור זה נציג את הרעיון של מדעי המחשב, ונראה מה מהנדס תכנה עושה. התלמידים
           יקבלו הזדמנות להתנסות בתפקיד של מהנדס תכנה. בסוף הפעילות, כל תמיד יחזור
           עם רשימת התוכן הנלמד בשיעור. אין צורך להבהל מללמד את הילדים את אוצר המילים
           הנדרש לשיעורים הבאים, פעילות זו יכולה להיות מהנה וקלילה, ותתרום הרבה יותר
-          מלחכות להזדמנויות אחרות.
+          מלחכות להזדמנויות אחרות."
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: חשיבה חישובית
+        title: "חשיבה חישובית"
         desc: With nothing but paper and markers, students will learn the four steps
           of computational thinking. After a brief introduction, students should be
           split into groups where they will have to create directions for other students
@@ -27,7 +27,7 @@
         - unplug2
         video: Unplug2
       Unplug3:
-        title: תכנות לנייר משבצות
+        title: "תכנות לנייר משבצות"
         desc: By programming one another to draw pictures, students will begin to
           understand what programming is really about. The class will begin by students
           instructing each other to color squares in on graph paper in an effort to
@@ -37,7 +37,7 @@
         - unplug3
         video: Unplug3
       Unplug4:
-        title: אלגוריתמים
+        title: "אלגוריתמים"
         desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
           the first exercise will show how important it is to make each instruction
           as clear and unambiguous as possible.  Afterward, the class will explore
@@ -47,7 +47,7 @@
         - unplug4
         video: Unplug4
       Unplug5:
-        title: פונקציות
+        title: "פונקציות"
         desc: In this lesson, students will make a suncatcher out of string, beads,
           and a special charm. The students will follow a series of repetitive steps,
           then be asked to identify certain sets of "skills" that are duplicated several
@@ -62,7 +62,7 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: תנאים
+        title: "תנאים"
         desc: This is a class game.  After introducing the idea of conditionals, if-statements,
           and loops, the class can practice together using a pre-written program,
           a deck of cards, and luck of the draw.
@@ -70,7 +70,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: כתיבת שיר
+        title: "כתיבת שיר"
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -80,7 +80,7 @@
         - unplug7
         video: Unplug7
       Unplug8:
-        title: הפשטה
+        title: "הפשטה"
         desc: This activity combines your students' everyday routine and a Mad-Lib
           style thinking game to help your class learn about the effectiveness of
           abstraction.
@@ -88,7 +88,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: הרץ פעולה בשנית
+        title: "הרץ פעולה בשנית"
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -96,14 +96,14 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: האינטרנט
+        title: "האינטרנט"
         desc: In this lesson, students will pretend to flow through the Internet,
           all the while learning about web addresses, IPs and the DNS.
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: "אריזה"
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -112,7 +112,7 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: "מפות שמחות"
         desc: Students create simple algorithms (sets of instructions) to move a character
           through a maze using a single command.
         video: C1_happy_maps_unplugged
@@ -147,13 +147,13 @@
           erase everything back to that point.
         video: C2_relay_programming
       Conditionals:
-        title: תנאים
+        title: "תנאים"
         desc: To learn about conditional statements, students play a card game and
           create rules like "If I draw a red card, I get a point" and "If I draw a
           black card, you get a point."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
+        title: "האירוע הגדול"
         desc: Students are introduced to the programming concept of "events," which
           are actions that a computer constantly monitors for. The teacher will press
           buttons on a paper remote and students will react depending on which button
@@ -165,7 +165,7 @@
           introduce how to stay safe while navigating the Internet.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: תכנות לנייר משבצות
+        title: "תכנות לנייר משבצות"
         desc: Students write an algorithm (a set of instructions) using a set of predefined
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
@@ -187,7 +187,7 @@
           themselves online creates a digital footprint or "trail" that has consequences.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: חשיבה חישובית
+        title: "חשיבה חישובית"
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
@@ -226,7 +226,7 @@
         desc: Students explore the difference between private information and personal
           information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram Algorithms
+        title: "טנגרם אלגוריתמים"
         desc: This lesson shows us something important about algorithms. If you keep
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
@@ -276,11 +276,11 @@
         desc: Contracts unplugged lesson description
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: "עיצוב המתכון"
         desc: Design Recipe lesson description
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans
+        title: "בוליאנים ולוגיקה"
         desc: Booleans lesson description
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
@@ -289,5 +289,8 @@
         video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection
-        desc: Collision Detection lesson description
+        desc: "קביעת כאשר אובייקטים על המסך מגע היא היבט חשוב של רוב המשחקים. בשיעור
+          זה אנו נראה איך את משפט פיתגורס ואת הנוסחה מרחק יכול לשמש כדי למדוד את המרחק
+          בין שתי נקודות על המטוס, ולאחר מכן החלט אם אלה שתי נקודות (או הדמויות במשחק)
+          נוגעות."
         video: alg_16_biggame_collision_detection

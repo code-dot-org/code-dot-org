@@ -42,6 +42,7 @@ locales = {
   'Kurdish' => 'ku-IQ',
   'Latvian' => 'lv-LV',
   'Lithuanian' => 'lt-LT',
+  'Maori' => 'mi-NZ',
   'Macedonian (FYROM)' => 'mk-MK',
   'Malay' => 'ms-MY',
   'Maltese' => 'mt-MT',
@@ -69,7 +70,8 @@ locales = {
   'Ukrainian' => 'uk-UA',
   'Urdu (Pakistan)' => 'ur-PK',
   'Uzbek' => 'uz-UZ',
-  'Vietnamese' => 'vi-VN'
+  'Vietnamese' => 'vi-VN',
+  'Zulu' => 'zu-ZA'
 }
 
 untranslated_apps = [

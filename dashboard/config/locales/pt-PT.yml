@@ -7,7 +7,7 @@
   activerecord:
     errors:
       messages:
-        blank: é obrigatório
+        blank: "é obrigatório"
     attributes:
       user:
         name: Nome a apresentar
@@ -29,16 +29,19 @@
     code:
       label: 'Adiciona um professor:'
       placeholder: Código (ABCDEF)
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Adicionar professor
   add_hint_form:
     placeholder: Por favor, digite a sua pista aqui
     submit: Adicionar pista
   appname: Code.org
   stage: Etapa
-  stage_number: '%{number}.ª ETAPA'
+  stage_number: "%{number}.ª ETAPA"
   puzzle: Desafio
   trophies: Troféus
   courses: Cursos
+  unplugged_activity: Atividade off-line
   of: de
   more: MAIS
   less: MENOS
@@ -69,8 +72,8 @@
     need_confirmation: Não recebeste as instruções de confirmação?
     need_unlock: Não recebeste as instruções de desbloqueio?
   signup_form:
-    student_count: '%{count} alunos já criaram uma conta.'
-    teacher_count: '%{count} professores já criaram uma conta.'
+    student_count: "%{count} alunos já criaram uma conta."
+    teacher_count: "%{count} professores já criaram uma conta."
     overview_student: Cria uma conta para poderes ver o teu progresso. O teu e-mail
       será utilizado para iniciares sessão e para repores a palavra-passe (no caso
       de te esqueceres dela). Para mais informações, lê a nossa <a href="http://code.org/privacy">Política
@@ -93,7 +96,7 @@
     age: Idade
     user_type: Aluno ou professor?
     submit: Criar conta
-    teacher: É um professor?
+    teacher: "É um professor?"
     valid_username: Disponível!
     invalid_username: O nome de utilizador tem de ter, pelo menos, 5 caracteres
     taken_username: O nome de utilizador já existe
@@ -120,7 +123,7 @@
     try_hoc: Primeiro, experimente a Hora de Código
     try_20hours: Experimente introdução de 20 horas às Ciências da Computação
   signinsection:
-    welcome: '%{section_name} dá-te as boas-vindas'
+    welcome: "%{section_name} dá-te as boas-vindas"
     name: Escolha o nome de utilizador
     picture: Agora localize a sua foto secreta
     words: Agora digite as palavras secretas
@@ -147,12 +150,12 @@
       %{name}
   follower:
     invite_sent: Convite enviado
-    added_teacher: '%{name} foi adicionado como teu professor'
+    added_teacher: "%{name} foi adicionado como teu professor"
     registered: Registou-se para %{section_name}.
     error:
       signed_in: Antes de prosseguires, termina sessão
       username_not_found: Nome de utilizador %{username} não encontrado
-      username_in_use: '%{username} já existe, por favor escolhe outro'
+      username_in_use: "%{username} já existe, por favor escolhe outro"
       no_teacher: Não foi possível encontrar ninguém que tenha entrado com '%{teacher_email_or_code}'.
         Por favor, pede-lhes para se registarem aqui e tente adicioná-los novamente
       section_not_found: Não foi possível encontrar uma turma com o código '%{section_code}'.
@@ -195,7 +198,7 @@
       msg_publicschool: Confirme que é um professor de uma escola pública dos E.U.A.
       msg_visit_website: Visitar o site
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB de espaço no Dropbox
@@ -204,7 +207,7 @@
       ea_fifa: FIFA Soccer 13 (PC)
       ea_simcity: SimCity 4 Deluxe Edition (PC)
       ea_pvz: Plants vs. Zombies (PC)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Escolhe um prémio:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -255,9 +258,9 @@
     destroy: Eliminar
     back: Voltar
     confirm: Tens a certeza?
-    created: '% {modelo} foi criado com êxito.'
-    updated: '% {modelo} foi actualizado com sucesso.'
-    destroyed: '%{model} foi eliminado com êxito.'
+    created: "% {modelo} foi criado com êxito."
+    updated: "% {modelo} foi actualizado com sucesso."
+    destroyed: "%{model} foi eliminado com êxito."
     access_denied: Você não tem acesso a este %{model}.
   nav:
     header:
@@ -267,6 +270,7 @@
         playlab: Desenvolver uma aplicação
         artist: Desenhar alguma coisa
         calculate: Calculate Something
+        applab: Desenvolver uma aplicação
     user:
       classroom: Página inicial do Professor
       district_dashboard: Painel do distrito
@@ -287,7 +291,7 @@
       puzzle_map: Etapas
       prizes: Recolhe todos os %{total_trophies} troféus e ganha prémios!
       prize_earned: Recolhidos todos os %{total_trophies} troféus. Ganhaste prémio!
-      prize_us_only: (Apenas para estudantes dos E.U.A.)
+      prize_us_only: "(Apenas para estudantes dos E.U.A.)"
       prizes_link: Mais informação
   teacher:
     answer: Resposta
@@ -295,68 +299,14 @@
     title:
       one: 'Seu professor:'
       other: 'Os teus professores:'
-    remove: (remover professor)
+    remove: "(remover professor)"
     confirm:
       remove: Tens a certeza de que pretendes remover este professor?
-    tools: Ferramentas do Professor
-    followers:
-      section: 'Turma:'
-      stages: 'Níveis a mostrar:'
-      show_past: 'Exibir as atividades feitas pelo aluno (%{bullet_html}) em:'
-      levels_key: Níveis
-      perfect: 'Concluído: Perfeito'
-      completed: 'Concluído: Usou demasiados blocos'
-      tried: 'Tentou: Por concluir'
-      not_tried: Ainda não tentou
-      activity: Indica as atividades do alunos nas últimas %{hours} %{plural}
-      no_section: Nenhuma seção atribuída
-      trophies: troféus
     students:
-      name: Nome
-      username: nome de utilizador
-      password: Palavra-passe
-      manage: Gerir alunos
       dashboard: Vá para o painel de controle do professor
-      add: Adicionar alunos
-      remove: remover aluno
-      confirm_remove: Tem a certeza de que pretende remover este aluno?
-      help_reassign: Para dividir sua turma em várias seções, selecione alguns alunos
-        para atribuir a uma nova seção.
-      help_register: Em vez de passar muito tempo importando dados dos alunos individualmente,
-        você pode configurar sua turma rapidamente, pedindo para que eles se cadastrem.
-        Seus alunos terão de escolher nomes de usuário e senhas, mas NÃO serão obrigados
-        a fornecer um endereço de e-mail. Se um aluno esquecer sua senha, você poderá
-        redefini-la para ele.
-      register: Peça para que seus alunos se cadastrem
-      vist: Peça para que seus alunos visitem
-      section_code: 'e digite seu código de seção:'
-      first_please: Em primeiro lugar, %{add_section}
-      for: Para
-      enter: 'digite:'
-    sections:
-      add: Adicionar turma
-      manage: Gerir turmas
-      section: Turma
-      students: Alunos
-      section_code: Código
-      add_section_code: Adicionar código-seção dos alunos
-      secret: Tipo secreto
-      grade: Ano
-      course: Curso
-      rename: renomear
-      edit: editar
-      delete: apagar
-      confirm_delete: Tem a certeza de que pretende apagar esta turma?
-      email: Enviar por e-mail
-    rollup: Painel de controlo do Progresso
-    activity: Atividade recente da turma
     user_not_found: Não é possível localizar o professor ou aluno
-    cant_remove_student_no_email: '%{student_name} não pode ser eliminado como seu
-      aluno porque %{student_name} não tem um endereço de email registrado'
-    cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu
-      professor porque não registou o seu endereço de email'
-    student_teacher_disassociated: '%{teacher_name} foi removido como professor de
-      %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} foi removido como professor de
+      %{student_name}"
     panel:
       answer_viewer: Resposta
       student: Aluno
@@ -370,11 +320,11 @@
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
-    email_confirm_wrong_email: (Endereço de e-mail errado?)
+    email_confirm_wrong_email: "(Endereço de e-mail errado?)"
     email_resend_confirm: Reenviar instruções de confirmação
-    new_password_hint: (deixa em branco se não pretenderes alterá-la)
-    current_password_hint: (precisamos da tua palavra-passe para confirmarmos as tuas
-      alterações)
+    new_password_hint: "(deixa em branco se não pretenderes alterá-la)"
+    current_password_hint: "(precisamos da tua palavra-passe para confirmarmos as
+      tuas alterações)"
     delete: Apagar conta
     delete_text: Para apagares a tua conta, clica no seguinte botão.
     delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir
@@ -383,16 +333,12 @@
   user_level:
     completed: Concluído
     tried: Tentado
-  user_stats:
-    recent_activity: Atividade recente
-    show_more: Mostrar mais
-    classroom_activity: Atividade off-line
   home:
     title: O meu progresso
     description: No Code Studio podes encontrar os cursos online do Code.org
-    lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
-    lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count}
-      MILHÕES DE ALUNOS'
+    lines_of_code: "%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS"
+    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS %{students_count}
+      MILHÕES DE ALUNOS"
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos das aulas
     signin_message: Já criaste uma conta? %{link}
@@ -432,10 +378,11 @@
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_hoc2014: <h2>A Hora de Código para</h2><h1>Todas as idades</h1>
-    heading_elementary: <h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as idades)</h1>
-    heading_apps: <h2>Diversão para</h2><h1>todos</h1>
-    heading_legacy: <h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>
+    heading_hoc2014: "<h2>A Hora de Código para</h2><h1>Todas as idades</h1>"
+    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Iniciantes (todas as
+      idades)</h1>"
+    heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
+    heading_legacy: "<h2>O nosso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimenta um dos seguintes cursos do Code Studio
@@ -444,6 +391,7 @@
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
       com código.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Masculino
     female: Feminino
@@ -467,8 +415,8 @@
       Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
       &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
-      e a Hora de Código&reg; são marcas registadas do Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
+      e a Hora de Código&reg; são marcas registadas do Code.org."
     copyright: Copyright
     more: Mais
     feedback: Fornecer feedback
@@ -480,6 +428,10 @@
     privacy: Política de privacidade
     secure: Versão segura
     report_abuse: Denunciar abuso
+    built_on_code_studio: Construído no "Code Studio"
+    make_my_own_app: Fazer a minha própria "app"
+    how_it_works: Como funciona
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Precisas de ajuda?
     subtitle: Vê estes vídeos e sugestões
@@ -547,7 +499,7 @@
       unused: Níveis por utilizar
   upsell:
     hoc:
-      title: Hora de Código
+      title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas
         já experimentaram.
     flappy:
@@ -579,7 +531,7 @@
         da Disney Infinity.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Explora um mundo Minecraft através do código.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -606,7 +558,7 @@
     feedback: Enviar comentários
     report_bug: Comunicar erro
     support: Obter ajuda
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -717,7 +669,7 @@
     close: Fechar
     more: Mais
     name: Nome
-    updated: Última atualização
+    updated: "Última atualização"
     project_type: Tipo de projeto
     help_text: Clica em <strong>Desenvolver uma aplicação</strong> ou <strong>Desenhar
       alguma coisa</strong> para entrares num novo Laboratório de jogos ou fazeres

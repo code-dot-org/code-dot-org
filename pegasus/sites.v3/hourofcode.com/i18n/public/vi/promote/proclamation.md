@@ -6,7 +6,6 @@ nav: promote_nav
 
 ---
 
-<%= view :signup_button %>
 
 ### Dưới đây là mẫu nghị quyết trợ giúp Tuần Khoa Học Máy Tính và các nhà lập pháp liên bang và địa phương có thể sử dụng những mục tiêu của nó.
 
@@ -55,4 +54,3 @@ Quyết định, [Nhà Trắng hoặc Thượng viện, Tiểu bang, Quận, Th�
 
 (5) khuyến khích cơ hội, gồm những chương trình hiện có, cho phụ nữ và dân tộc thiểu số trong khoa học máy tính.
 
-<%= view :signup_button %>

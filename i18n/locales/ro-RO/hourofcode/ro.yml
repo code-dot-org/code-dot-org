@@ -12,6 +12,7 @@ ro:
   front_intro_default: 'Hour of Code (Ora de Programare) este o mişcare globală ce a atins zeci de milioane de elevi si studenţi din peste 180+ de ţări. Oricine, oriunde poate organiza un eveniment Hour of Code. Tutoriale de o ora sunt traduse în peste 40 de limbi. Nu ai nevoie de cunostinte speciale. <strong>Vârsta: de la 4 la 104 ani.</strong>'
   front_watch_video: Urmăriţi noul clip video
   front_watch_regular_video: Urmăriţi clipul video
+  front_volunteers: Cautam voluntari tehnici
   header_menu_resources: Resurse
   header_menu_faq: Întrebări frecvente
   header_menu_prizes: Premii
@@ -125,6 +126,7 @@ ro:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: Scoala San Juan
   company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
@@ -194,18 +196,22 @@ ro:
   front_join_us_button: Alătură-te
   front_what_is_hoc: Ce reprezintă Hour of Code?
   front_join_us_header: Oricine poate învăţa bazele programarii şi să se distreze in acelasi timp!
+  front_join_us_volunteer_header: Voluntari pentru Hour of Code
   front_join_us_teacher: Esti profesor?
   front_join_us_inspire: Inspiră elevii cu
   front_join_us_inspire_link: o Oră de Programare în sala de clasă.
   front_join_us_teacher_link: Inspira elevi organizand o Ora de Programare in clasa
+  front_join_us_teacher_volunteer: Cautati voluntari locali care pot vizita clasa dumneavoastra sau pot inspira elevii de la distanţă
   front_join_us_parent: Sunteţi părinte?
   front_join_us_ask_link: Solicita şcolii tale
   front_join_us_ask: sa gazduiasca Hour of Code.
   front_join_us_parent_link: Solicitati scolii dumneavoastra sa organizeze un eveniment Hour of Code
   front_join_us_computer_science: Iti place tehnologia computerelor si programarea?
+  front_join_us_cs_volunteer: Pasionat de tehnologia computerului si programare?
   front_join_us_spread: Răspândește vestea.
   front_join_us_spread_word: Răspândeste vestea în comunitatea ta
   front_join_us_spread_word_work: Raspandeste vestea in comunitatea ta sau la locul de munca
+  front_join_us_sign_up_volunteer: Înscrieţi-vă ca voluntar al unei scoli locale sau printr-un video chat
   front_join_us_organize: Sau organizeaza chiar tu un eveniment Hour of Code.
   front_join_us_how_to_run: Iată cum organizati un eveniment Hour of Code
   front_join_us_help_promote: Ajuta la promovarea Hour of Code
@@ -233,6 +239,7 @@ ro:
   signup_whole_school_flag_label: Acest eveniment este pentru întreaga şcoală
   signup_your_event: Înscrieţi-vă evenimentul
   signup_match_volunteer: Ajuta-ma sa gasesc un inginer software care sa ii poata inspira pe elevii mei
+  signup_multiple_event_warning: Daca organizati mai multe evenimente, va rog sa trimiteti un nume unic sau cate un e-mail pentru fiecare. Noi luam in considerare doar un event pe un nume sau combinatie de e-mail.
   signup_name_placeholder: Numele tău
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: 'De exemplu, Colegiul Național "Sfântul Sava"'
@@ -252,8 +259,8 @@ ro:
   map_search_placeholder: Cauta evenimente Hour of Code
   map_search_search: Cautare
   map_search_reset: Resetare
-  map_legend_title: Legend
-  map_legend_hoc_events: Hour of Code Event
+  map_legend_title: Legendă
+  map_legend_hoc_events: Evenimentele Hour of Code
   map_legend_cs_tech_jam: CS Tech Jam
   meta_tag_og_title: Hour of Code este aici
   meta_tag_og_description: Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 30 de limbi vorbite. Vârstele de la 4 la 104 ani.
@@ -296,14 +303,14 @@ ro:
   hoc_faq_behind_hoc_a: "Evenimentul Hour of Code este organizat de <a href='http://code.org'> Code.org</a>, o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor minorități.  O <a href='http://code.org/about/partners'> coaliţie de parteneri fără precedent</a> susțin împreună Hour of Code &mdash; inclusiv Microsoft, Apple, Amazon, Boys and Girls Clubs of America şi College Board."
   hoc_faq_host_q: Nu ştiu nimic despre programare. Pot să organizez un eveniment?
   hoc_faq_host_a: "Desigur. Activităţile Hour of Code sunt autodidacte si pot fi realizate individual. Tot ce trebuie să faceţi este <a href='%{codeorg_url}/learn'> să accesaţi tutorialele noastre</a>, sa alegeţi tutorialul pe care il doriţi şi o oră &mdash; noi vom avea grijă de restul. Avem opţiuni pentru fiecare vârsta si nivel de experienta, de la grădiniţă in sus. Începeți planificarea evenimentului dumneavoastră citind <a href='/resources/how-to'>ghidul de organizare</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
   hoc_faq_need_computers_q: Am nevoie de calculator pentru fiecare participant?
   hoc_faq_need_computers_a: "Nu. Avem Tutoriale Hour of Code care funcționează pe PC-uri, smartphone-uri, tablete şi chiar unele care nu necesită nici un calculator! Puteţi organiza oriunde vă aflați, cu orice resurse aveți. <p><i>Iată câteva opţiuni:</i> <br><ul><li><b>Lucru în perechi.</b> Cercetările arată elevii învaţă cel mai bine în <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> perechi de lucru</a>, împarțind un computer şi lucrând împreună. Încurajați elevii să formeze perechi de lucru. <li><b>Folosiți un proiector.</b> Dacă aveţi un proiector şi un calculator conectat la internet, întregul grup pot participa la Hour of Code împreună. Urmăriți porțiuni din clipurile video împreună şi rezolvați pe rând puzzle-uri sau răspundeți la întrebări. <li><b>Fără computer.</b> Noi oferim și Tutoriale care nu necesită nici un computer. </ul>"
   hoc_faq_international_q: 'Eu sunt în <country>. Cum pot participa la nivel internaţional?'
   hoc_faq_international_a: "Oricine poate organiza un eveniment Hour of Code, oriunde în lume. Anul trecut, elevi din întreaga lume s-au alăturat pentru a realiza o Ora de Programare. Află mai multe <a href='target-resources'>aici</a>."
   hoc_faq_tutorial_q: Cum pot face un tutorial Hour of Code?
   hoc_faq_tutorial_a: "Dacă sunteţi interesat să deveniți partener pentru tutoriale, <a href='/tutorial-guidelines'> consultaţi referințele și instrucţiunile noastre</a>. Ne dorim să oferim o varietate de opţiuni interactive, dar obiectivul principal este de a optimiza experienţa pentru elevi şi profesori care sunt incepatori."
-  hoc_faq_more_questions_q: Încă mai ai multe întrebări?
-  hoc_faq_more_questions_a: "Încercaţi găsirea unui răspuns în  <a href='http://support.code.org'> forumul nostru de sprijin</a>."
   hoc_faq_account_q: Elevii trebuie sa se inregistreze folosind un cont?
   hoc_faq_account_a: "Nu. Nu este necesara niciun fel de inregistrare pentru ca elevii sa incerce Ora de Programare. Majoritatea  <a href='http://code.org/learn/beyond'>cursurilor</a> au nevoie de cont doar pentru a salva progresul elevului."
   hoc_faq_frozen_q: Unde este tutorialul cu Anna si Elsa?
@@ -313,7 +320,17 @@ ro:
   hoc_faq_scratch_q: Folosesc programul Scratch pentru Ora de Programare, dar ce se intampla daca elevii mei au iPad-uri si nu laptop-uri?
   hoc_faq_scratch_a: "Scratch nu ruleaza pe tablete. Daca elevii tai sunt tineri, pot folosi aplicatia ScratchJR pentru iPad(pentru cei ce inca nu au invatat sa citeasca). Daca urmariti tutorialele de pe <a href='http://code.org/learn'>Code.org/learn</a>, puteti gasi si alte tutoriale care functioneaza pe iPad-uri - Code.org, Tynker, Lightbot, sau CodeSpark."
   hoc_faq_count_hoc_q: Cum numeri Orele de Programare?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
   hoc_faq_count_hoc_a: "Nu este o unitate de masurare clara. Nu se numara cont-urile elevilor unici cand urmarim participarea la Hour of Code, in special pentru ca nu le cerem acestora sa se inregistreze. Ca rezultat, am supra estima sau subestima numarul de participanti in acelasi timp. Citeste toate detaliile <a href='%{codeorg_url}/loc'>aici</a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: Încă mai ai multe întrebări?
+  hoc_faq_more_questions_a: "Încercaţi găsirea unui răspuns în  <a href='http://support.code.org'> forumul nostru de sprijin</a>."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: Statistici Hour of Code (Ora de Programare) din 2013
   stats_growth: A fost proiectul cu cea mai rapida crestere pana la 15 milioane de utilizatori.
   stats_i18n: Elevii învaţa în 40 de limbi
@@ -383,7 +400,7 @@ ro:
   title_prizes: Premii
   title_hardware_prize_form: Înscrie-te pentru premiile hardware
   title_resources: Resurse
-  title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea Hour of Code!
+  title_signup_thanks: Vă mulţumim ca v-ați înscris pentru organizarea unui eveniment Hour of Code!
   title_tutorial_guidelines: Orientari si ghiduri pentru tutoriale
   title_whole_school: Participarea intregii scoli
   events_nav_title: Evenimentele Hour of Code

@@ -19,11 +19,11 @@
           'Maze: Debugging': 'Labirint: odpravljanje napak'
           'Artist 1: Intro': 'Umetnik 1: Uvod'
           Artists 2: Umetniki 2
-          Spelling Bee: Čebelica črkuje besede
+          Spelling Bee: "Čebelica črkuje besede"
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'Čebelica 1: Uvod'
+          'Bee 1: Intro': "Čebelica 1: Uvod"
           'Maze 2: Loops': 'Labirint 2: zanke'
-          'Bee 2: Loops': 'Čebelica 2: zanke'
+          'Bee 2: Loops': "Čebelica 2: zanke"
           Multi & Match: Multi & Match
           K-1 Flappy: Plahutaček za prvi razred
           Flappy non blockly: Plahutaček ne blokaček
@@ -159,7 +159,7 @@
           description_short: Draw cool pictures and designs with the Artist!
         hourofcode:
           Maze: Maze
-          title: Ura kode
+          title: Klasičen labirint
           description: Try the basics of computer science with characters from Angry
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
@@ -738,6 +738,15 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: 'Zanka: dokler velja'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1362,6 +1371,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1485,6 +1495,28 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1538,6 +1570,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1556,6 +1589,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1574,6 +1609,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: 'Zanka: dokler velja'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1612,8 +1654,25 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          title: Minecraft Ura za kodo
+          description_short: Razišči svet Minecraft-a s pomočjo kode
+          description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+            v svet Minecraft-a
           Hour of Code 2015: Hour of Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Welcome!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Zaključek
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

@@ -17,12 +17,14 @@ var JSInterpreter = module.exports = function (options) {
   this.onPause = options.onPause || function() {};
   this.onExecutionError = options.onExecutionError || function() {};
   this.onExecutionWarning = options.onExecutionWarning || function() {};
+  this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
 
   this.paused = false;
   this.yieldExecution = false;
   this.startedHandlingEvents = false;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
+  this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
 
   if (!this.studioApp.hideSource) {
@@ -33,6 +35,7 @@ var JSInterpreter = module.exports = function (options) {
     this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
   }
 
+  var self = this;
   if (options.enableEvents) {
     this.eventQueue = [];
     // Append our mini-runtime after the user's code. This will spin and process
@@ -40,23 +43,52 @@ var JSInterpreter = module.exports = function (options) {
     options.code += '\nwhile (true) { var obj = getCallback(); ' +
       'if (obj) { var ret = obj.fn.apply(null, obj.arguments ? obj.arguments : null);' +
                  'setCallbackRetVal(ret); }}';
+
+    codegen.createNativeFunctionFromInterpreterFunction = function (intFunc) {
+      return function () {
+        if (self.initialized()) {
+          self.queueEvent(intFunc, arguments);
+          
+          if (self.executeLoopDepth === 0) {
+            // Execute the interpreter and if a return value is sent back from the
+            // interpreter's event handler, pass that back in the native world
+
+            // NOTE: the interpreter will not execute forever, if the event handler
+            // takes too long, executeInterpreter() will return and the native side
+            // will just see 'undefined' as the return value. The rest of the interpreter
+            // event handler will run in the next onTick(), but the return value will
+            // no longer have any effect.
+            self.executeInterpreter(false, true);
+            return self.lastCallbackRetVal;
+          }
+        }
+      };
+    };
   }
 
-  var self = this;
   var initFunc = function (interpreter, scope) {
+    // Store Interpreter on JSInterpreter
+    self.interpreter = interpreter;
+    // Store globalScope on JSInterpreter
     self.globalScope = scope;
+    // Override Interpreter's get/set Property functions with JSInterpreter
+    self.baseGetProperty = interpreter.getProperty;
+    interpreter.getProperty = self.getProperty.bind(self);
+    self.baseSetProperty = interpreter.setProperty;
+    interpreter.setProperty = self.setProperty.bind(self);
     codegen.initJSInterpreter(
         interpreter,
         options.blocks,
         options.blockFilter,
-        scope);
+        scope,
+        options.globalFunctions);
 
     // Only allow five levels of depth when marshalling the return value
     // since we will occasionally return DOM Event objects which contain
     // properties that recurse over and over...
     var wrapper = codegen.makeNativeMemberFunction({
         interpreter: interpreter,
-        nativeFunc: _.bind(self.nativeGetCallback, self),
+        nativeFunc: self.nativeGetCallback.bind(self),
         maxDepth: 5
     });
     interpreter.setProperty(scope,
@@ -65,7 +97,7 @@ var JSInterpreter = module.exports = function (options) {
 
     wrapper = codegen.makeNativeMemberFunction({
         interpreter: interpreter,
-        nativeFunc: _.bind(self.nativeSetCallbackRetVal, self),
+        nativeFunc: self.nativeSetCallbackRetVal.bind(self),
     });
     interpreter.setProperty(scope,
                             'setCallbackRetVal',
@@ -73,7 +105,10 @@ var JSInterpreter = module.exports = function (options) {
   };
 
   try {
-    this.interpreter = new window.Interpreter(options.code, initFunc);
+    // Return value will be stored as this.interpreter inside the supplied
+    // initFunc() (other code in initFunc() depends on this.interpreter, so
+    // we can't wait until the constructor returns)
+    new window.Interpreter(options.code, initFunc);
   }
   catch(err) {
     this.onExecutionError(err);
@@ -89,6 +124,13 @@ JSInterpreter.prototype.initialized = function () {
   return !!this.interpreter;
 };
 
+/**
+ * Detech the Interpreter instance. Call before releasing references to
+ * JSInterpreter so any async callbacks will not execute.
+ */
+JSInterpreter.prototype.deinitialize = function () {
+  this.interpreter = null;
+};
 
 JSInterpreter.StepType = {
   RUN:  0,
@@ -143,7 +185,7 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
 JSInterpreter.prototype.queueEvent = function (interpreterFunc, nativeArgs) {
   this.eventQueue.push({
     'fn': interpreterFunc,
-    'arguments': nativeArgs
+    'arguments': nativeArgs ? Array.prototype.slice.call(nativeArgs) : []
   });
 };
 
@@ -174,6 +216,7 @@ function safeStepInterpreter(jsi) {
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
+  this.executeLoopDepth++;
   this.runUntilCallbackReturn = runUntilCallbackReturn;
   if (runUntilCallbackReturn) {
     delete this.lastCallbackRetVal;
@@ -377,6 +420,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       }
     } else {
       this.onExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      this.executeLoopDepth--;
       return;
     }
   }
@@ -385,6 +429,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // code may not be selected in the editor, so do it now:
     this.selectCurrentCode();
   }
+  this.executeLoopDepth--;
 };
 
 /**
@@ -394,6 +439,63 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 JSInterpreter.prototype.createPrimitive = function (data) {
   if (this.interpreter) {
     return this.interpreter.createPrimitive(data);
+  }
+};
+
+/**
+ * Wrapper to Interpreter's getProperty (extended for custom marshaling)
+ *
+ * Fetch a property value from a data object.
+ * @param {!Object} obj Data object.
+ * @param {*} name Name of property.
+ * @return {!Object} Property value (may be UNDEFINED).
+ */
+JSInterpreter.prototype.getProperty = function (obj, name) {
+  name = name.toString();
+  var nativeParent;
+  if (obj.isCustomMarshal ||
+      (obj === this.globalScope &&
+          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
+    var value;
+    if (obj.isCustomMarshal) {
+      value = obj.data[name];
+    } else {
+      value = nativeParent[name];
+    }
+    var type = typeof value;
+    if (type === 'number' || type === 'boolean' || type === 'string' ||
+        type === 'undefined' || value === null) {
+      return this.interpreter.createPrimitive(value);
+    } else {
+      return codegen.marshalNativeToInterpreter(this.interpreter, value, obj.data);
+    }
+  } else {
+    return this.baseGetProperty.call(this.interpreter, obj, name);
+  }
+};
+
+/**
+ * Wrapper to Interpreter's setProperty (extended for custom marshaling)
+ *
+ * Set a property value on a data object.
+ * @param {!Object} obj Data object.
+ * @param {*} name Name of property.
+ * @param {*} value New property value.
+ * @param {boolean} opt_fixed Unchangeable property if true.
+ * @param {boolean} opt_nonenum Non-enumerable property if true.
+ */
+JSInterpreter.prototype.setProperty = function(obj, name, value,
+                                               opt_fixed, opt_nonenum) {
+  name = name.toString();
+  var nativeParent;
+  if (obj.isCustomMarshal) {
+    obj.data[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
+  } else if (obj === this.globalScope &&
+      (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
+    nativeParent[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
+  } else {
+    return this.baseSetProperty.call(
+        this.interpreter, obj, name, value, opt_fixed, opt_nonenum);
   }
 };
 
@@ -477,6 +579,44 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
 };
 
 /**
+ * Creates a property in the interpreter's global scope. When a parent is
+ * supplied and that parent object is in codegen's customMarshalObjectList,
+ * property gets/sets in the interpreter will be reflected on the native parent
+ * object. Functions can also be inserted into the global namespace using this
+ * method. If a parent is supplied, they will be invoked natively with that
+ * parent as the this parameter.
+ *
+ * @param {String} name Name for the property in the global scope.
+ * @param {*} value Native value that will be marshalled to the interpreter.
+ * @param {Object} parent (Optional) parent for the native value.
+ */
+JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
+
+  var interpreterVal;
+  if (typeof value === 'function') {
+    var wrapper = codegen.makeNativeMemberFunction({
+        interpreter: this.interpreter,
+        nativeFunc: value,
+        nativeParentObj: parent
+    });
+    interpreterVal = this.interpreter.createNativeFunction(wrapper);
+  } else {
+    interpreterVal = codegen.marshalNativeToInterpreter(
+        this.interpreter,
+        value,
+        utils.valueOr(parent, window));
+  }
+
+  // Bypass setProperty since we've hooked it and it will not create the
+  // property if it is in customMarshalGlobalProperties
+  this.baseSetProperty.call(
+      this.interpreter,
+      this.globalScope,
+      name,
+      interpreterVal);
+};
+
+/**
  * Returns the interpreter function object corresponding to 'funcName' if a
  * function with that name is found in the interpreter's global scope.
  */
@@ -485,4 +625,46 @@ JSInterpreter.prototype.findGlobalFunction = function (funcName) {
   if (funcObj.type === 'function') {
     return funcObj;
   }
+};
+
+/**
+ * Returns an array containing the names of all of the global functions
+ * in the interpreter's global scope. Built-in global functions are excluded.
+ */
+JSInterpreter.prototype.getGlobalFunctionNames = function () {
+  var builtInExclusionList = [ "eval", "getCallback", "setCallbackRetVal" ];
+
+  var names = [];
+  for (var objName in this.globalScope.properties) {
+    var object = this.globalScope.properties[objName];
+    if (object.type === 'function' &&
+        !object.nativeFunc &&
+        builtInExclusionList.indexOf(objName) === -1) {
+      names.push(objName);
+    }
+  }
+  return names;
+};
+
+/**
+ * Returns an array containing the names of all of the functions defined
+ * inside other functions.
+ */
+JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
+  if (!scope) {
+    scope = this.globalScope;
+  }
+  var names = [];
+  for (var objName in scope.properties) {
+    var object = scope.properties[objName];
+    if (object.type === 'function' && !object.nativeFunc && object.node) {
+      if (scope !== this.globalScope) {
+        names.push(objName);
+      }
+      var localScope = this.interpreter.createScope(object.node.body, object.parentScope);
+      var localNames = this.getLocalFunctionNames(localScope);
+      names = names.concat(localNames);
+    }
+  }
+  return names;
 };

@@ -28,6 +28,7 @@ cs:
     code:
       label: 'Přidat učitele:'
       placeholder: Kód sekce (ABCDEF)
+      instructions: 'Prosím, vložte kód, který vám dal váš učitel. Je to šestipísmenný kód, jako například "ABCDEF".'
     submit: Přidat učitele
   add_hint_form:
     placeholder: Zadej zde svůj tip
@@ -38,12 +39,13 @@ cs:
   puzzle: Rébus
   trophies: trofeje
   courses: kurzy
+  unplugged_activity: Aktivita bez počítače
   of: z
   more: VÍCE
   less: MÉNĚ
   beta: beta
   try_hoc: 'Zkus Hodinu Kódu kliknutím zde >> '
-  try_k8intro: Vyzkoušejte náš kurz K-8 Úvod do informatiky (15-25 hodin)
+  try_k8intro: Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)
   k8intro: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
   already_started: 'Už jsi začal? Pokračuj zde >> '
   demos: 'Admin: Všechny Ukázky'
@@ -104,7 +106,7 @@ cs:
   signin:
     try_heading: Chcete zkusit kódovat bez registrace?
     try_hoc: Nejprve vyzkoušej Hodinu kódování
-    try_20hours: Vyzkoušej náš 20ti hodinový Úvod do počítačové vědy
+    try_20hours: Vyzkoušej náš 20hodinový Úvod do informatiky
   signinsection:
     welcome: 'Vítejte v %{section_name}'
     name: Vyber si své jméno
@@ -223,8 +225,9 @@ cs:
         playlab: Vytvořit aplikaci
         artist: Nakresli něco
         calculate: Calculate Something
+        applab: Vytvořit aplikaci
     user:
-      classroom: Domovská stránka pro učitele
+      classroom: Učitelská domovská stránka
       district_dashboard: Okresní řídicí panel
       label: 'Ahoj %{username}'
       stats: Code studio
@@ -254,57 +257,10 @@ cs:
     remove: (odstranit učitele)
     confirm:
       remove: Jsi si jist/á, že chceš odstranit tohoto učitele?
-    tools: Nástroje pro učitele
-    followers:
-      section: 'Sekce:'
-      stages: 'Zobrazit dílčí fáze:'
-      show_past: 'Zobrazit studentské aktivity (%{bullet_html}) v minulosti:'
-      levels_key: Úrovňové klíče
-      perfect: Dokončeno, perfektně
-      completed: Dokončeno, ale příliš použito mnoho bloků
-      tried: Pokus, ale není dokončeno
-      not_tried: Žádný pokus
-      activity: 'Označuje studentské aktivity v posledních %{hours} %{plural}'
-      no_section: Nepřiřazená sekce
-      trophies: trofeje
     students:
-      name: Jméno
-      username: uživatelské jméno
-      password: heslo
-      manage: Správa studentů
       dashboard: Přejít na přehled učitele
-      add: Přidat studenty
-      remove: odebrání studenta
-      confirm_remove: Jste si jistý, že chcete smazat tento prvek?
-      help_reassign: Rozdělte třídu do několika skupin, vyberte studenty k přiřazení do nové skupiny.
-      help_register: Místo strávení spousty času individuálním importem dat studentů, nastavte rychle třídu požadavkem na registraci. Studenti si potřebují zvolit uživatelská jména a hesla, ale nebudou mít povinnost poskytovat e-mailovou adresu. Pokud student zapomene své heslo, budete schopni obnovit jej pro ně.
-      register: Požadejte studenty, aby se zaregistrovali
-      vist: Požádejte studenty, aby navšítivili
-      section_code: 'a zadejte jejich kód sekce:'
-      first_please: 'Prvně prosím %{add_section}'
-      for: Pro
-      enter: 'zadejte:'
-    sections:
-      add: Přidat sekci
-      manage: Spravovat části
-      section: Sekce
-      students: Studenti
-      section_code: Kód sekce
-      add_section_code: Přidat studentům kód sekce
-      secret: Tajný typ
-      grade: Stupeň
-      course: Kurz
-      rename: přejmenovat
-      edit: úpravy
-      delete: smazat
-      confirm_delete: Jste si jisti, že chcete odstranit tuto sekci?
-      email: Odeslat v e-mailu
-    rollup: Panel pokroku
-    activity: Nedávné aktivity třídy
-    user_not_found: Učitel nebo student nebyl nalezen
-    cant_remove_student_no_email: '%{student_name} nemůže být zaregistrován jako tvůj student, protože student%{student_name} nezaregistroval e-mailovou adresu'
-    cant_remove_teacher_no_email: '%{teacher_name} nemůže být odstraněn jako tvůj učitel, protože jsi nezaregistroval e-mailovou adresu'
-    student_teacher_disassociated: '%{teacher_name} byl odstraněn jako učitel pro %{student_name}'
+    user_not_found: Učitel nebyl nalezen.
+    student_teacher_disassociated: 'Odebrali jste %{teacher_name} jako svého učitele.'
     panel:
       answer_viewer: Odpověď diváka
       student: student
@@ -329,10 +285,6 @@ cs:
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno
-  user_stats:
-    recent_activity: Nedávná aktivita
-    show_more: Zobrazit více
-    classroom_activity: Aktivita bez počítače
   home:
     title: Code studio
     description: Code Studio je místem pro on-line kurzy vytvořené Code.org
@@ -378,6 +330,7 @@ cs:
   share:
     title: Poznat Code studio
     description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění s kódem.
+    try_hour_of_code: Vyzkoušejte Hodinu kódu!
   gender:
     male: Muž
     female: Žena
@@ -389,8 +342,8 @@ cs:
     thank_you: 'Děkujeme, našim <a href="https://code.org/about/donors"> dárcům</a>, <a href="https://code.org/about/partners"> partnerům</a>, náš <a href="https://code.org/about/team"> rozšířený tým</a>, náše video obsazení a naši <a href="https://code.org/about/advisors"> poradci ve vzdělávání </a> za jejich podporu při vytváření Code studia.'
     help_from_html: Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit tento kurz.
     help_from_html_old: Inženýři od Google, Microsoft, Facebook a Twitter pomohli vytvořit tyto materiály.
-    art_from_html: 'Rozzlobený ptáci ™ & © 2009-2014 Rovio Entertainment Ltd. Všechna práva vyhrazena. <br/> Rostliny vs. Zombies ™ & © 2014 Electronic Arts Inc. Všechna práva vyhrazena.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Poháněn Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour of Code&reg; jsou trademarks of Code.org.'
     copyright: Autorská práva
@@ -404,6 +357,10 @@ cs:
     privacy: Zásady ochrany osobních údajů
     secure: Zabezpečená verze
     report_abuse: Ohlásit urážlivý příspěvek
+    built_on_code_studio: Postavenn na Code Studio
+    make_my_own_app: Vytvořit svou vlastní app
+    how_it_works: Jak to funguje
+    try_hour_of_code: Vyzkoušejte Hodinu kódu!
   reference_area:
     title: Potřebujete pomoc?
     subtitle: Podívej se na tyto videa a tipy
@@ -460,7 +417,7 @@ cs:
       unused: Nepoužívané úrovně
   upsell:
     hoc:
-      title: Hodina kódu
+      title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
     flappy:
       title: Tenký kód
@@ -478,7 +435,7 @@ cs:
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Hvězdné války
     infinity:
       title: Infinity Play Lab
       body: Použij Play Lab k vytvoření příběhu nebo hry s Disney Infinity postavami.

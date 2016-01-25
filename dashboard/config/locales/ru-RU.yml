@@ -1,216 +1,220 @@
 "ru":
   errors:
     messages:
-      not_saved: 'Пожалуйста, исправьте следующие ошибки:'
-      too_young: Этот урок имеет возрастные ограничения и не доступен для школьников
-        младшего возраста
+      not_saved: "Пожалуйста, исправьте следующие ошибки:"
+      too_young: "Этот урок имеет возрастные ограничения и не доступен для школьников
+        младшего возраста"
   activerecord:
     errors:
       messages:
-        blank: требуется
+        blank: "требуется"
     attributes:
       user:
-        name: Имя в системе
-        email: Электронная почта
-        username: имя пользователя
-        password: пароль
-        password_confirmation: Подтверждение пароля
-        current_password: Текущий пароль
-        locale: Язык
-        age: Возраст
-        gender: Пол
-        edit_header: Изменить данные регистрации
+        name: "Имя в системе"
+        email: "Электронная почта"
+        username: "имя пользователя"
+        password: "пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Текущий пароль"
+        locale: "Язык"
+        age: "Возраст"
+        gender: "Пол"
+        edit_header: "Изменить данные регистрации"
         error:
-          future: не может быть в будущем
-  hello: Привет, мир!
-  welcome_back: С возвращением, %{name}
-  submit: Отправить
+          future: "не может быть в будущем"
+  hello: "Привет, мир!"
+  welcome_back: "С возвращением, %{name}"
+  submit: "Отправить"
   add_teacher_form:
     code:
-      label: 'Добавить учителя:'
-      placeholder: Код раздела (ABCDEF)
-    submit: Добавить учителя
+      label: "Добавить учителя:"
+      placeholder: "Код раздела (ABCDEF)"
+      instructions: Пожалуйста, введите код и поделились со своим учителем. Это 6
+        буквенный код типа "АБВГДЕ".
+    submit: "Добавить учителя"
   add_hint_form:
-    placeholder: Пожалуйста, введите Вашу подсказку здесь
-    submit: Добавить подсказку
+    placeholder: "Пожалуйста, введите Вашу подсказку здесь"
+    submit: "Добавить подсказку"
   appname: Code.org
-  stage: этап
-  stage_number: Этап %{number}
-  puzzle: Головоломка
-  trophies: трофеи
-  courses: курсы
-  of: из
-  more: ЕЩЁ
-  less: СВЕРНУТЬ
-  beta: Бета-версия
+  stage: "этап"
+  stage_number: "Этап %{number}"
+  puzzle: "Головоломка"
+  trophies: "трофеи"
+  courses: "курсы"
+  unplugged_activity: "Урок без компьютера"
+  of: "из"
+  more: "ЕЩЁ"
+  less: "СВЕРНУТЬ"
+  beta: "Бета-версия"
   try_hoc: Для участия в "Часе кода" нажми здесь >> 
   try_k8intro: Попробуйте наш курс "Введение в информатику" (15-25 часов)
   k8intro: Курс "Введение в информатику" (15-25 часов)
-  already_started: 'Уже начали? Продолжайте здесь >> '
+  already_started: "Уже начали? Продолжайте здесь >> "
   demos: 'Admin: Все демо'
-  continue: Продолжить
-  prize: приз
-  more_info: Дополнительная информация
+  continue: "Продолжить"
+  prize: "приз"
+  more_info: "Дополнительная информация"
   auth:
-    sign_in_with: Войти через %{provider}
-    signed_in: Вошли!
+    sign_in_with: "Войти через %{provider}"
+    signed_in: "Вошли!"
     signed_out: Вы вышли с сайта <a href="%{url}"> Code.org</a>.
     sign_out_of: Вы использовали %{provider}, чтобы зайти.  <a href="%{url}">Нажмите
       здесь</a>, чтобы выйти из %{provider}.
-    already_signedup: Уже зарегистрировались?
-    notyet_signedup: Еще не присоединились?
-    google_oauth2: Учетная запись Google
+    already_signedup: "Уже зарегистрировались?"
+    notyet_signedup: "Еще не присоединились?"
+    google_oauth2: "Учетная запись Google"
     twitter: Twitter
     facebook: Facebook
-    windowslive: Учетная запись Майкрософт
-    forgot_password: Забыли пароль?
-    need_confirmation: Не получили письмо для подтверждения?
-    need_unlock: Не получили письмо-инструкцию для разблокировки?
+    windowslive: "Учетная запись Майкрософт"
+    forgot_password: "Забыли пароль?"
+    need_confirmation: "Не получили письмо для подтверждения?"
+    need_unlock: "Не получили письмо-инструкцию для разблокировки?"
   signup_form:
-    student_count: 'Зарегистрировано учеников: %{count}.'
-    teacher_count: 'Зарегистрировано учителей: %{count}.'
+    student_count: "Зарегистрировано учеников: %{count}."
+    teacher_count: "Зарегистрировано учителей: %{count}."
     overview_student: Зарегистрироваться, чтобы отслеживать свои успехи. Ваш электронный
       адрес используется, главным образом, для  входа в систему и для восстановления
       пароля. Дополнительную информацию смотрите в наших <a href="http://code.org/privacy">Правилах  конфиденциальности</a>.
-    overview_teacher: Зарегистрируйтесь для преподавания информатики в Вашем классе.
-      <p/> Вы сможете включать Ваших учеников и отслеживать их прогресс.
+    overview_teacher: "Зарегистрируйтесь для преподавания информатики в Вашем классе.
+      <p/> Вы сможете включать Ваших учеников и отслеживать их прогресс."
     no_signup_message: Вы можете <a target="_blank" href="http://learn.code.org">
       просматривать различные этапы и головоломки</a>, но Вам нужно зарегистрироваться,
       чтобы сохранять свои  результаты.
-    teacher_educator_guide: Смотри руководство учителя
-    teacher_pitch: Регистрация на code.org  для учителей
-    teacher_title: Регистрация учителя
-    student_pitch: Регистрация на code.org  для учеников
-    student_title: Регистрация для ученика
-    school_name: Название школы (не обязательно)
-    school_address: Адрес школы (не обязательно)
-    address_placeholder: адрес, город, область, индекс
-    gender: Пол (не обязательно)
-    birthday: Дата рождения (не обязательно)
-    age: Возраст
-    user_type: Вы студент или преподаватель?
-    submit: Зарегистрироваться
-    teacher: Вы учитель?
-    valid_username: Доступно!
-    invalid_username: Имя пользователя должно содержать не менее 5 символов
-    taken_username: Имя пользователя уже занято
-    valid_password: Действительный пароль!
-    invalid_password: Пароль должен содержать не менее 6 символов
-    mismatch_password: Введённые пароли не совпадают
-    student_terms: Я принимаю <a href='http://code.org/tos'>условия предоставления
+    teacher_educator_guide: "Смотри руководство учителя"
+    teacher_pitch: "Регистрация на code.org  для учителей"
+    teacher_title: "Регистрация учителя"
+    student_pitch: "Регистрация на code.org  для учеников"
+    student_title: "Регистрация для ученика"
+    school_name: "Название школы (не обязательно)"
+    school_address: "Адрес школы (не обязательно)"
+    address_placeholder: "адрес, город, область, индекс"
+    gender: "Пол (не обязательно)"
+    birthday: "Дата рождения (не обязательно)"
+    age: "Возраст"
+    user_type: "Вы студент или преподаватель?"
+    submit: "Зарегистрироваться"
+    teacher: "Вы учитель?"
+    valid_username: "Доступно!"
+    invalid_username: "Имя пользователя должно содержать не менее 5 символов"
+    taken_username: "Имя пользователя уже занято"
+    valid_password: "Действительный пароль!"
+    invalid_password: "Пароль должен содержать не менее 6 символов"
+    mismatch_password: "Введённые пароли не совпадают"
+    student_terms: "Я принимаю <a href='http://code.org/tos'>условия предоставления
       услуг</a> Code.org. Если я младше 13 лет, я подтверждаю, отправляя эту форму,
       что у меня есть разрешение моих родителей или законного опекуна на пользование
       услугами Code.org. <br/>Для пользователей младше 13 лет адреса электронной почты,
-      не хранятся в форме, которая позволяет нам связаться с ними.
-    teacher_terms: Я согласен с условиями предоставления услуг <a href='http://code.org/tos'>  Code.org</a>.
-    additional_information: Нам нужна дополнительная информация для продолжения Вашей
-      регистрации.
+      не хранятся в форме, которая позволяет нам связаться с ними."
+    teacher_terms: "Я согласен с условиями предоставления услуг <a href='http://code.org/tos'>
+      \ Code.org</a>."
+    additional_information: "Нам нужна дополнительная информация для продолжения Вашей
+      регистрации."
   signin_form:
-    title: Уже зарегистрированы? Войти
-    login: Адрес электронной почты или имя пользователя
-    password: Пароль
-    remember: Запомнить меня
-    submit: Вход
+    title: "Уже зарегистрированы? Войти"
+    login: "Адрес электронной почты или имя пользователя"
+    password: "Пароль"
+    remember: "Запомнить меня"
+    submit: "Вход"
   signin:
-    try_heading: Хотите начать программировать без регистрации?
-    try_hoc: Попробуйте сначала один Час Кода
+    try_heading: "Хотите начать программировать без регистрации?"
+    try_hoc: "Попробуйте сначала один Час Кода"
     try_20hours: Попробуйте наше двадцатичасовое "Введение в информатику"
   signinsection:
-    welcome: '%{section_name} приветствует тебя'
-    name: Выберите ваше имя
-    picture: Теперь найди свою секретную картинку
-    words: Теперь введите ваши секретные слова
-    login: Вход
+    welcome: "%{section_name} приветствует тебя"
+    name: "Выберите ваше имя"
+    picture: "Теперь найди свою секретную картинку"
+    words: "Теперь введите ваши секретные слова"
+    login: "Вход"
   password:
     reset_form:
-      title: Забыли Ваш пароль?
-      email: Адрес электронной почты
-      submit: Отправить мне инструкцию для изменения пароля
+      title: "Забыли Ваш пароль?"
+      email: "Адрес электронной почты"
+      submit: "Отправить мне инструкцию для изменения пароля"
     change_form:
-      title: Смена пароля
-      new_password: Новый пароль
-      confirm_password: Подтвердить новый пароль
-      submit: Изменить пароль
+      title: "Смена пароля"
+      new_password: "Новый пароль"
+      confirm_password: "Подтвердить новый пароль"
+      submit: "Изменить пароль"
   welcome_email:
-    subject: Присоединяйся к моему классу (на Code.org)
+    subject: "Присоединяйся к моему классу (на Code.org)"
     body: 'Нажми на ссылку ниже, чтобы зарегистрироваться  на занятия по информатике
       на Code.org (со мной как  твоим «учителем»): %{link} Занятия веселые, яркие
       и учат основным понятиям информатики по ходу увлекательной игры. Учись кодировать
       с Биллом Гейтсом, Марком Цукербергом, персонажами "Angry Birds"  ("Сердитые
       птицы") и  "Plants vs. Zombies" ("Растения против зомби")! :-) %{name}'
   follower:
-    invite_sent: Приглашение отправлено
-    added_teacher: '%{name} добавлен как твой учитель'
-    registered: Вы зарегистрированы в %{section_name}.
+    invite_sent: "Приглашение отправлено"
+    added_teacher: "%{name} добавлен как твой учитель"
+    registered: "Вы зарегистрированы в %{section_name}."
     error:
-      signed_in: Прежде чем продолжить, пожалуйста, выйдите
-      username_not_found: Пользователь %{username} не найден
-      username_in_use: '%{username} уже занято, пожалуйста, выберите другое'
-      no_teacher: Не найден кто-либо с «%{teacher_email_or_code}». Пожалуйста, попросите
-        их в зарегистрироваться здесь, и затем снова попробуйте
-      section_not_found: Не удается найти раздел с кодом '%{section_code}'.
-      blank_code: Пожалуйста, введите код раздела
-      cant_join_own_section: К сожалению, вы не можете присоединиться к своему разделу.
+      signed_in: "Прежде чем продолжить, пожалуйста, выйдите"
+      username_not_found: "Пользователь %{username} не найден"
+      username_in_use: "%{username} уже занято, пожалуйста, выберите другое"
+      no_teacher: "Не найден кто-либо с «%{teacher_email_or_code}». Пожалуйста, попросите
+        их в зарегистрироваться здесь, и затем снова попробуйте"
+      section_not_found: "Не удается найти раздел с кодом '%{section_code}'."
+      blank_code: "Пожалуйста, введите код раздела"
+      cant_join_own_section: "К сожалению, вы не можете присоединиться к своему разделу."
     mail:
       invite_student:
-        subject: Присоединяйся к классу учителя %{teacher_name} на Code.org!
+        subject: "Присоединяйся к классу учителя %{teacher_name} на Code.org!"
       student_disassociated:
-        subject: 'Уведомление от Code.org: %{student_name} больше не является Вашим
-          учеником.'
+        subject: "Уведомление от Code.org: %{student_name} больше не является Вашим
+          учеником."
       teacher_disassociated:
-        subject: 'Уведомление от Code.org: %{teacher_name} больше не является Вашим
-          учителем.'
+        subject: "Уведомление от Code.org: %{teacher_name} больше не является Вашим
+          учителем."
   reports:
     error:
-      access_denied: Вы не имеете доступа к статистике этого пользователя
+      access_denied: "Вы не имеете доступа к статистике этого пользователя"
   redeem_prizes:
-    title: 'Востребовать призы: %{name}'
-    provider: 'Поставщик:'
-    code: 'Код:'
-    redeem_header: 'Востребовать:'
-    donorschoose_register: Зарегистрируйтесь как учитель на DonorsChoose.org
-    donorschoose_project: Опубликовать проект
-    donorschoose_how_to: Как использовать Ваш код
-    success: Ваш приз был успешно реализован, см. код ниже.
-    error: Ваш приз не может быть реализован, пожалуйста, попробуйте еще раз.
-    error_us_only: Предложение приза действительно только для пользователей в США.
-    error_not_earned: Вы ещё не заработали этот приз.
-    error_already_redeemed: Ваш приз уже получен.
-    no_prizes_available: Извините, но сейчас у нас нет призов.
-    teacher_info_required: 'Для награды учителю требуется сообщить название и адрес
-      школы:'
-    teacher_email_required: 'Для награда учителю требуется подтверждённый адрес электронной
-      почты:'
+    title: "Востребовать призы: %{name}"
+    provider: "Поставщик:"
+    code: "Код:"
+    redeem_header: "Востребовать:"
+    donorschoose_register: "Зарегистрируйтесь как учитель на DonorsChoose.org"
+    donorschoose_project: "Опубликовать проект"
+    donorschoose_how_to: "Как использовать Ваш код"
+    success: "Ваш приз был успешно реализован, см. код ниже."
+    error: "Ваш приз не может быть реализован, пожалуйста, попробуйте еще раз."
+    error_us_only: "Предложение приза действительно только для пользователей в США."
+    error_not_earned: "Вы ещё не заработали этот приз."
+    error_already_redeemed: "Ваш приз уже получен."
+    no_prizes_available: "Извините, но сейчас у нас нет призов."
+    teacher_info_required: "Для награды учителю требуется сообщить название и адрес
+      школы:"
+    teacher_email_required: "Для награда учителю требуется подтверждённый адрес электронной
+      почты:"
     confirm:
-      title: Пожалуйста, подтвердите
-      'no': Нет
-      'yes': Да
-      msg: Вы уверены, что хотите востребовать приз %{prize_name}?
-      msg_student: 'Примечание: Можно выбрать только один вид приза.'
-      msg_publicschool: Пожалуйста, подтвердите, что Вы являетесь учителем государственной
-        школы США.
-      msg_visit_website: Посетите веб-сайт
+      title: "Пожалуйста, подтвердите"
+      'no': "Нет"
+      'yes': "Да"
+      msg: "Вы уверены, что хотите востребовать приз %{prize_name}?"
+      msg_student: "Примечание: Можно выбрать только один вид приза."
+      msg_publicschool: "Пожалуйста, подтвердите, что Вы являетесь учителем государственной
+        школы США."
+      msg_visit_website: "Посетите веб-сайт"
     providers:
-      apple_itunes: $10 iTunes Подарочная карта
-      donors_choose: Кредит DonorsChoose.org $750
-      donors_choose_bonus: Кредит DonorsChoose.org $250
+      apple_itunes: "$10 iTunes Подарочная карта"
+      donors_choose: "Кредит DonorsChoose.org $750"
+      donors_choose_bonus: "Кредит DonorsChoose.org $250"
       dropbox: 10GB на Dropbox Space
       valve: Portal 2 (PC или Mac игра скачать)
       ea_bejeweled: Bejeweled 3 (PC-игра скачать)
       ea_fifa: FIFA Soccer 13 (PC-игра скачать)
       ea_simcity: SimCity 4 Deluxe Edition (PC-игра скачать)
-      ea_pvz: Растения против зомби (PC-игра скачать)
-      skype: $10 в Skype
+      ea_pvz: "Растения против зомби (PC-игра скачать)"
+      skype: "$10 в Skype"
     msg:
-      choose: 'Выберите приз:'
-      choose_teacher: 'Нажмите на логотип ниже, чтобы потребовать ваш приз:'
-      earned: Вы заработали приз! (Только для учеников в США)
-      not_earned_title: Закончите учебник, заработайте призы (только для учащихся
-        в США)
-      not_earned: 'Изучите основы информатики, соберите все %{num_trophies} кубков,
+      choose: "Выберите приз:"
+      choose_teacher: "Нажмите на логотип ниже, чтобы потребовать ваш приз:"
+      earned: "Вы заработали приз! (Только для учеников в США)"
+      not_earned_title: "Закончите учебник, заработайте призы (только для учащихся
+        в США)"
+      not_earned: "Изучите основы информатики, соберите все %{num_trophies} кубков,
         и получите реальные призы. Вы можете выбрать 10GB на Dropbox, $10 кредит Skype
         или бесплатное скачивание игр. ПРИМЕЧАНИЕ: действительно только для учеников
-        в США, пока призы не закончатся.'
+        в США, пока призы не закончатся."
       teacher:
         earned: 10 или более учеников собрали все %{num_trophies} кубков. Вы выиграли
           учительский приз $750! (Только для учителей США)
@@ -232,442 +236,401 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a> может использоваться
             только учителями в государственных школах США.
   crud:
-    new_model: Новый %{model}
-    show: Показать
-    edit: Редактировать
-    edit_model: Редактировать %{model}
-    update: Обновить
-    destroy: Уничтожить
-    back: Назад
-    confirm: Уверен?
-    created: '%{model} был успешно создан.'
-    updated: '%{model} был успешно обновлен.'
-    destroyed: '%{model} был успешно удален.'
-    access_denied: У вас нет доступа к этим %{model}.
+    new_model: "Новый %{model}"
+    show: "Показать"
+    edit: "Редактировать"
+    edit_model: "Редактировать %{model}"
+    update: "Обновить"
+    destroy: "Уничтожить"
+    back: "Назад"
+    confirm: "Уверен?"
+    created: "%{model} был успешно создан."
+    updated: "%{model} был успешно обновлен."
+    destroyed: "%{model} был успешно удален."
+    access_denied: "У вас нет доступа к этим %{model}."
   nav:
     header:
-      finished_hoc: Я закончил мой Час Кода
-      sign_in_to_save: Войдите для сохранения результатов
+      finished_hoc: "Я закончил мой Час Кода"
+      sign_in_to_save: "Войдите для сохранения результатов"
       free_play:
-        playlab: Создать приложение
-        artist: Нарисовать что-нибудь
+        playlab: "Создать приложение"
+        artist: "Нарисовать что-нибудь"
         calculate: Calculate Something
+        applab: "Создать приложение"
     user:
-      classroom: Домашняя страница Преподавателя
-      district_dashboard: Панель управления области
-      label: Привет, %{username}
-      stats: Мои результаты
-      settings: Моя регистрация
-      prizes: Призы
-      logout: Выйти
-      signin: Вход
-      signup: Зарегистрироваться
-      already_registered: Уже зарегистрированы?
+      classroom: "Домашняя страница Преподавателя"
+      district_dashboard: "Панель управления области"
+      label: "Привет, %{username}"
+      stats: '"Студия Кода"'
+      settings: "Моя регистрация"
+      prizes: "Призы"
+      logout: "Выйти"
+      signin: "Вход"
+      signup: "Зарегистрироваться"
+      already_registered: "Уже зарегистрированы?"
     popup:
-      progress_for_user: прогресс студента %{name}
-      progress: Ваши результаты
-      lines: 'Всего строк кода: %{lines}'
-      close: ЗАКРЫТЬ
-      mastery: Основные понятия
-      puzzle_map: Этапы
-      prizes: Соберите все %{total_trophies} кубков и выиграйте призы!
-      prize_earned: Все %{total_trophies} кубков собраны. Ты выиграл  приз!
-      prize_us_only: (Только для учеников в США)
-      prizes_link: Дополнительная информация
+      progress_for_user: "прогресс студента %{name}"
+      progress: "Ваши результаты"
+      lines: "Всего строк кода: %{lines}"
+      close: "ЗАКРЫТЬ"
+      mastery: "Основные понятия"
+      puzzle_map: "Этапы"
+      prizes: "Соберите все %{total_trophies} кубков и выиграйте призы!"
+      prize_earned: "Все %{total_trophies} кубков собраны. Ты выиграл  приз!"
+      prize_us_only: "(Только для учеников в США)"
+      prizes_link: "Дополнительная информация"
   teacher:
-    answer: Ответ
-    for_teachers_only: Только для учителей
+    answer: "Ответ"
+    for_teachers_only: "Только для учителей"
     title:
-      one: 'Ваш учитель:'
-      other: 'Ваши учителя:'
-    remove: (удалить учителя)
+      one: "Ваш учитель:"
+      other: "Ваши учителя:"
+    remove: "(удалить учителя)"
     confirm:
-      remove: Вы уверены, что хотите удалить этого учителя?
-    tools: Инструментарий учителя
-    followers:
-      section: 'Раздел:'
-      stages: 'Этап(ы) для отображения:'
-      show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
-      levels_key: Ключевые уровни
-      perfect: Завершено, отлично
-      completed: Завершено, но использовано слишком много блоков
-      tried: Пытался, но не завершено
-      not_tried: Ещё не пытался
-      activity: Показывает активность студента за последние %{plural} %{hours}
-      no_section: Нет назначенного раздела
-      trophies: трофеи
+      remove: "Вы уверены, что хотите удалить этого учителя?"
     students:
-      name: Имя
-      username: имя пользователя
-      password: пароль
-      manage: Управление учениками
-      dashboard: Перейти к панели учитель
-      add: Пригласить учеников
-      remove: удалить ученика
-      confirm_remove: Вы уверены, что хотите удалить этого ученика?
-      help_reassign: Чтобы разделить класс на несколько групп выберите студентов и
-        привяжите их к новой группе.
-      help_register: Вместо того, чтобы терять время на добавление данных о своих
-        студентах, Вы можете быстро получить информацию о своих учениках попросив
-        их зарегистрироваться на сайте. Вашим студентам потребуется выбрать имя пользователя
-        и пароль, но им НЕ НУЖНО предоставлять адрес электронной почты. Если студент
-        забудет свой пароль, Вы будете иметь возможность сбросить пароль за него.
-      register: Попросите ваших учеников зарегистрироваться самостоятельно
-      vist: Предложите Вашим ученикам посетить
-      section_code: 'И ввести их в section-code:'
-      first_please: Во-первых, пожалуйста %{add_section}
-      for: Для
-      enter: 'введите:'
-    sections:
-      add: Добавить раздел
-      manage: Управление классами
-      section: Раздел
-      students: Ученики
-      section_code: Код раздела
-      add_section_code: Добавить раздел Студенты в раздел кода
-      secret: Секретный тип
-      grade: Оценка
-      course: Курс
-      rename: переименовать
-      edit: редактировать
-      delete: удалить
-      confirm_delete: Вы уверены, что хотите удалить этот раздел?
-      email: Отправить письмо
-    rollup: Панель контроля хода выполнения
-    activity: Последние данные по работе класса
-    user_not_found: Преподаватель или ученик не может быть найден
-    cant_remove_student_no_email: '%{student_name} не может быть удален из списка
-      Ваших  учеников,, поскольку %{student_name} не зарегистрировал адрес электронной
-      почты'
-    cant_remove_teacher_no_email: Учитель %{teacher_name} не может быть удален, поскольку  Вы
-      не зарегистрировали адрес электронной почты
-    student_teacher_disassociated: Учитель %{teacher_name} удалён у ученика %{student_name}
+      dashboard: "Перейти к панели учитель"
+    user_not_found: "Не удалось найти учителя."
+    student_teacher_disassociated: "Вы удалили %{teacher_name} как вашего учителя."
     panel:
-      answer_viewer: Просмотр ответов
-      student: Ученик
-      viewing_solution: Просмотр решения
-      try_it_yourself: Попробуйте сами
-      section: Раздел
-      example: Пример решения
-      example_with_number: Пример решения %{solution_number}
-      submitted_on: Отправлено %{date}
-      unsubmit: Снять подтверждение
+      answer_viewer: "Просмотр ответов"
+      student: "Ученик"
+      viewing_solution: "Просмотр решения"
+      try_it_yourself: "Попробуйте сами"
+      section: "Раздел"
+      example: "Пример решения"
+      example_with_number: "Пример решения %{solution_number}"
+      submitted_on: "Отправлено %{date}"
+      unsubmit: "Снять подтверждение"
   user:
-    email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
-    email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был
-      подтверждён:'
-    email_confirm_wrong_email: (Неверный адрес электронной почты?)
-    email_resend_confirm: Выслать инструкции для подтверждения
-    new_password_hint: (оставьте пустым, если не хотите ничего менять)
-    current_password_hint: (нам нужен Ваш текущий пароль для подтверждения изменений)
-    delete: Удалить свою учетную запись
-    delete_text: Нажатие на кнопку ниже удалит вашу учетную запись.
-    delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не
-      удалит учетные записи ваших студентов.'
-    delete_confirm: Вы действительно хотите удалить вашу учетную запись?
+    email_confirm_needed: "Адрес электронной почты не был подтвержден:"
+    email_confirm_needed_required: "Адрес вашей электронной почты %{email} не был
+      подтверждён:"
+    email_confirm_wrong_email: "(Неверный адрес электронной почты?)"
+    email_resend_confirm: "Выслать инструкции для подтверждения"
+    new_password_hint: "(оставьте пустым, если не хотите ничего менять)"
+    current_password_hint: "(нам нужен Ваш текущий пароль для подтверждения изменений)"
+    delete: "Удалить свою учетную запись"
+    delete_text: "Нажатие на кнопку ниже удалит вашу учетную запись."
+    delete_text_teacher_note: "Обратите внимание: удаление вашей учетной записи не
+      удалит учетные записи ваших студентов."
+    delete_confirm: "Вы действительно хотите удалить вашу учетную запись?"
   user_level:
-    completed: Завершено
-    tried: Пытался
-  user_stats:
-    recent_activity: Последние данные по работе
-    show_more: Показать ещё
-    classroom_activity: Урок без компьютера
+    completed: "Завершено"
+    tried: "Пытался"
   home:
-    title: Студия кода
+    title: "Студия кода"
     description: Code Studio является домом для онлайн курсов, созданных Code.org
-    lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
-    lines_of_code_linebreak: '%{lines_count} СТРОК КОДА <br/> НАПИСАНЫ %{students_count}
-      МИЛЛИОНАМИ УЧЕНИКОВ'
-    all_courses: Обзор курсов 1, 2 и 3
-    lesson_plans: Планы уроков
-    signin_message: Уже зарегистрированы? %{link}
-    student_reg_link: Регистрация для ученика
-    teacher_reg_link: Регистрация для учителя
-    signin_directions: Используйте учетную запись для отслеживания прогресса.<br/>
-      Учителя, отслеживайте весь класс.
-    teacher_dashboard: Открыть панель контроля хода выполнения
-    teacher_student_count_one: У Вас %{count} ученик.
-    teacher_student_count: У Вас %{count} учеников.
-    teacher_averages: В среднем Ваши ученики заработали  %{trophy_average} из %{trophy_max}
-      возможных кубков «Знаток основ».
-    teacher_print_certificates: Распечатать сертификаты учеников, которые закончили
-      этот курс
-    teacher_read_blog: Знакомтесь с новостями и обновлениями наших материалов на нашем
-      Учебном Блоге
-    classroom: Ваш класс
-    student_progress: Ваши результаты обучения
+    lines_of_code: "%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ"
+    lines_of_code_linebreak: "%{lines_count} СТРОК КОДА <br/> НАПИСАНЫ %{students_count}
+      МИЛЛИОНАМИ УЧЕНИКОВ"
+    all_courses: "Обзор курсов 1, 2 и 3"
+    lesson_plans: "Планы уроков"
+    signin_message: "Уже зарегистрированы? %{link}"
+    student_reg_link: "Регистрация для ученика"
+    teacher_reg_link: "Регистрация для учителя"
+    signin_directions: "Используйте учетную запись для отслеживания прогресса.<br/>
+      Учителя, отслеживайте весь класс."
+    teacher_dashboard: "Открыть панель контроля хода выполнения"
+    teacher_student_count_one: "У Вас %{count} ученик."
+    teacher_student_count: "У Вас %{count} учеников."
+    teacher_averages: "В среднем Ваши ученики заработали  %{trophy_average} из %{trophy_max}
+      возможных кубков «Знаток основ»."
+    teacher_print_certificates: "Распечатать сертификаты учеников, которые закончили
+      этот курс"
+    teacher_read_blog: "Знакомтесь с новостями и обновлениями наших материалов на
+      нашем Учебном Блоге"
+    classroom: "Ваш класс"
+    student_progress: "Ваши результаты обучения"
     student_stats: Вы заработали %{trophy_count} из %{trophy_max} возможных кубков
       "Знаток  основ".
-    student_left_off: 'Вы остановились:'
-    student_finished: Вы завершили весь материал, выберите другой курс %{online_link}
-      или в %{local_school_link}
-    local_school: местная школа
-    online: онлайн
-    see_details: Подробнее
-    view_course: Просмотр курса
-    prize_info: 'Призы за участие (только для учителей государственных школ США):
-      до $1000 на  класс.'
-    tryfirst: 'Или Вы можете сначала попробовать, а зарегистрироваться позже:'
-    trynow: Попробуйте сейчас
-    add_hint_help: Пожалуйста, помогите нам добавить умные подсказки к учебникам Code.org
-    20hour_overview: Этот 20-часовой курс является введением в основы информатики.
+    student_left_off: "Вы остановились:"
+    student_finished: "Вы завершили весь материал, выберите другой курс %{online_link}
+      или в %{local_school_link}"
+    local_school: "местная школа"
+    online: "онлайн"
+    see_details: "Подробнее"
+    view_course: "Просмотр курса"
+    prize_info: "Призы за участие (только для учителей государственных школ США):
+      до $1000 на  класс."
+    tryfirst: "Или Вы можете сначала попробовать, а зарегистрироваться позже:"
+    trynow: "Попробуйте сейчас"
+    add_hint_help: "Пожалуйста, помогите нам добавить умные подсказки к учебникам
+      Code.org"
+    20hour_overview: "Этот 20-часовой курс является введением в основы информатики.
       Курс предназначен для работы с детьми с дошкольного возраста до 8-ого класса,
-      но он занимателен для всех возрастов.
-    test_videos_help: Протестировать наш новый видео-плеер в вашей школе
-    try_beta_courses: Новинка! Попробуйте наши бета-курсы для дошкольников и начальной
-      школы
-    use_as_teacher: Используйте этот сайт как учитель
-    heading_hoc2014: <h2>Час Кода для</h2><h1>Для всех возрастов</h1>
-    heading_elementary: <h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>
-    heading_apps: <h2>Развлечения для</h2><h1>всех</h1>
-    heading_legacy: <h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>
-    your_gallery: Галерея
-    no_primary_course: Попробуйте курс Студии Кода
-    choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
-    print_certificate: Распечатать сертификат
+      но он занимателен для всех возрастов."
+    test_videos_help: "Протестировать наш новый видео-плеер в вашей школе"
+    try_beta_courses: "Новинка! Попробуйте наши бета-курсы для дошкольников и начальной
+      школы"
+    use_as_teacher: "Используйте этот сайт как учитель"
+    heading_hoc2014: "<h2>Час Кода для</h2><h1>Для всех возрастов</h1>"
+    heading_elementary: "<h2>20-часовые курсы по</h2><h1>Основам Информатики (для
+      всех возрастов)</h1>ы"
+    heading_apps: "<h2>Развлечения для</h2><h1>всех</h1>"
+    heading_legacy: "<h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>"
+    your_gallery: "Галерея"
+    no_primary_course: Попробуйте курс "Студии Кода"
+    choose_next_course: Попробуйте курс "Студии Кода", выбрав один из вариантов ниже
+    print_certificate: "Распечатать сертификат"
   share:
-    title: Учиться в Студии кода
-    description: Любой человек может обучиться информатике. Создавайте игры, приложения
-      и искусство с помощью кода.
+    title: Учиться в "Студии Кода"
+    description: "Любой человек может обучиться информатике. Создавайте игры, приложения
+      и произведения искусства с помощью программного кода."
+    try_hour_of_code: "Попробуй Час Кода!"
   gender:
-    male: Мужской
-    female: Женский
-    none: Предпочитаю не отвечать
+    male: "Мужской"
+    female: "Женский"
+    none: "Предпочитаю не отвечать"
   user_type:
-    student: Ученик
-    teacher: Учитель
+    student: "Ученик"
+    teacher: "Учитель"
   footer:
-    thank_you: Мы благодарим наших <a href="https://code.org/about/donors">доноров</a>,
-      <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team">
-      большую команду</a>, наши участников видеозаписей и наших <a href="https://code.org/about/advisors">
-      консультантов по вопросам образования</a> за их поддержку в создании Студии
-      Кода.
-    help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать
-      этот учебник.
-    help_from_html_old: Инженеры из Google, Microsoft, Facebook, и Twitter помогли
-      с созданием этих материалов.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Все права защищены.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. Все права защищены
-    powered_by_aws: Создано с помощью Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
-      of Code&reg; являются товарными знаками Code.org.'
-    copyright: Авторское право
-    more: Ещё
-    feedback: Оставить отзыв
-    translate: Помогите нам выполнить перевод на Ваш язык
-    support: Поддержка
+    thank_you: Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает
+      нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>,
+      нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников
+      наших видеозаписей, а также наших <a href="https://code.org/about/advisors">
+      консультантов по вопросам образования</a> за поддержку в создании "Студии Кода".
+    help_from_html: "Мы хотим особенно отметить инженеров компаний Google, Microsoft,
+      Facebook, Twitter и многих других, которые помогали нам в создании этих материалов."
+    help_from_html_old: "При создании данных материалов нам помогали инженеры из компаний
+      Google, Microsoft, Facebook, и Twitter."
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br
+      />Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права
+      защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br
+      />Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права
+      защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола является
+      торговой маркой и &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Все права
+      защищены. Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все
+      права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.
+      Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права
+      защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой
+      и &copy; 2015 Cartoon Network.
+    powered_by_aws: "Создано с помощью Amazon Web Services"
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour
+      of Code&reg; являются товарными знаками Code.org."
+    copyright: "Авторское право"
+    more: "Ещё"
+    feedback: "Оставить отзыв"
+    translate: "Помогите нам выполнить перевод на Ваш язык"
+    support: "Поддержка"
     support_url: http://support.сode.org
-    tos_short: Условия использования
-    tos: Условия использования
-    privacy: Правила конфиденциальности
-    secure: Защищенная версия
-    report_abuse: Сообщить о нарушении
+    tos_short: "Условия использования"
+    tos: "Условия использования"
+    privacy: "Правила конфиденциальности"
+    secure: "Защищенная версия"
+    report_abuse: "Сообщить о нарушении"
+    built_on_code_studio: Создать в "Студии Кода"
+    make_my_own_app: "Создать собственное приложение"
+    how_it_works: "Как это работает"
+    try_hour_of_code: "Попробуй Час Кода!"
   reference_area:
-    title: Нужна помощь?
-    subtitle: Смотрите эти видео и подсказки
-    teacher: Посмотреть решение
-    auth_error: У Вас нет прав смотреть решение.
-    submit: Обновите расположение художника
-    direction: Начальное направление (в градусах)
+    title: "Нужна помощь?"
+    subtitle: "Смотрите эти видео и подсказки"
+    teacher: "Посмотреть решение"
+    auth_error: "У Вас нет прав смотреть решение."
+    submit: "Обновите расположение художника"
+    direction: "Начальное направление (в градусах)"
   video:
-    tab: Видео.
-    notes: Не надо видео? Смотреть текстовый вариант.
-    notes_coming_soon: Текст для этого видео скоро будет.
-    autoplay_option: Автозапуск видео
-    download: Скачать видео
+    tab: "Видео."
+    notes: "Не надо видео? Смотреть текстовый вариант."
+    notes_coming_soon: "Текст для этого видео скоро будет."
+    autoplay_option: "Автозапуск видео"
+    download: "Скачать видео"
   compatability:
     working:
-      header: Мы работаем над поддержкой для Вашего браузера.
+      header: "Мы работаем над поддержкой для Вашего браузера."
       message: Code.org использует современные Web-технологии. Это делает сайт быстрее
         в использовании. Ваш браузер не поддерживает все необходимые функции, поэтому
         могут возникнуть проблемы при использовании этой части сайта. Пожалуйста,
         помогите нам, <a href='%{report_issue_url}'> сообщая любые проблемы, которые
         вы обнаружите</a>. Вы также можете <a href='%{supported_browsers_url}'> обновить
         ваш браузер до поддерживаемой версии</a>.
-      hide_this_warning: Скрыть это предупреждение
+      hide_this_warning: "Скрыть это предупреждение"
     upgrade:
-      header: Пожалуйста, обновите Ваш браузер.
+      header: "Пожалуйста, обновите Ваш браузер."
       message: Code.org использует современные Web-технологии. Это делает сайт быстрее
         в использовании. К сожалению, ваш браузер не поддерживает все функции, необходимые
         для работы этой части сайта. <br/> <br/>Установите браузер из нашего списка
         поддерживаемых браузеров, чтобы продолжить. Вы можете, <a href='#'> попробуйте
         зайти на страницу</a>, но ожидать некорректной работы функционала.
-      button: Добавьте меня в список поддерживаемых браузеров
-  slow_loading: Это занимает больше времени, чем обычно...
-  try_reloading: Попробуйте перезагрузить страницу
-  next_stage: Завершено! Перейти к следующему этапу
-  download_pdf: Показать план урока
-  lesson_plan: План урока
-  view_lesson_plan: Посмотреть план урока
-  pdf_download: Скачать PDF
-  download_coming_soon: Возможность загрузки появится в  ближайшее время.
-  video_coming_soon: Данное видео скоро появится!
-  not_started: Студент не пытался пройти этот уровень.
+      button: "Добавьте меня в список поддерживаемых браузеров"
+  slow_loading: "Это занимает больше времени, чем обычно..."
+  try_reloading: "Попробуйте перезагрузить страницу"
+  next_stage: "Завершено! Перейти к следующему этапу"
+  download_pdf: "Показать план урока"
+  lesson_plan: "План урока"
+  view_lesson_plan: "Посмотреть план урока"
+  pdf_download: "Скачать PDF"
+  download_coming_soon: "Возможность загрузки появится в  ближайшее время."
+  video_coming_soon: "Данное видео скоро появится!"
+  not_started: "Студент не пытался пройти этот уровень."
   share_code:
-    title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
-    bounce_og_title: Оцените мою Bounce игру
-    flappy_og_title: Оцените мою Flappy игру
-    studio_og_title: Оцените приложение Play Lab
-    check_out_what_i_made: Оцените, что я сделал
-    og_description: Я сам написал код  на Code.org
-    phone_number_not_allowed: Похоже, здесь есть номер телефона. Попробуйте изменить
-      текст.
-    address_not_allowed: Похоже, здесь есть адрес. Попробуйте изменить текст.
-    email_not_allowed: Похоже, здесь есть адрес электронной почты. Попробуйте изменить
-      текст.
-    profanity_not_allowed: Кажется, в коде есть неточности. Попробуйте изменить текст.
+    title: "Нажмите кнопку «Run», чтобы увидеть мою программу в действии"
+    bounce_og_title: "Оцените мою Bounce игру"
+    flappy_og_title: "Оцените мою Flappy игру"
+    studio_og_title: "Оцените приложение Play Lab"
+    check_out_what_i_made: "Оцените, что я сделал"
+    og_description: "Я сам написал код  на Code.org"
+    phone_number_not_allowed: "Похоже, здесь есть номер телефона. Попробуйте изменить
+      текст."
+    address_not_allowed: "Похоже, здесь есть адрес. Попробуйте изменить текст."
+    email_not_allowed: "Похоже, здесь есть адрес электронной почты. Попробуйте изменить
+      текст."
+    profanity_not_allowed: "Кажется, в коде есть неточности. Попробуйте изменить текст."
   builder:
-    created: Вы создали новый скрипт.
-    destroyed: Вы уничтожили скрипт.
-    manage: Построение уровней
-    view: Просмотр
-    back: Назад к скриптам
-    success: Вы успешно отредактировали блоки.
+    created: "Вы создали новый скрипт."
+    destroyed: "Вы уничтожили скрипт."
+    manage: "Построение уровней"
+    view: "Просмотр"
+    back: "Назад к скриптам"
+    success: "Вы успешно отредактировали блоки."
     level:
-      create: Создать новый уровень
-      current: Текущие уровни
-      unused: Неиспользованные уровни
+      create: "Создать новый уровень"
+      current: "Текущие уровни"
+      unused: "Неиспользованные уровни"
   upsell:
     hoc:
-      title: Hour of Code
-      body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
+      title: "Классический лабиринт"
+      body: "Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом."
     flappy:
-      title: Порхающий код
+      title: "Порхающий код"
       body: Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш
         учебник "Порхающий  код"!
     20-hour:
-      title: Ускоренный курс
-      body: Этот 20-часовой курс является введением в основы информатики. Курс предназначен
+      title: "Ускоренный курс"
+      body: "Этот 20-часовой курс является введением в основы информатики. Курс предназначен
         для работы с детьми с дошкольного возраста до 8-ого класса, но он занимателен
-        для всех возрастов.
-      body_short: Освойте азы программирования по ускоренной версии курсов 2-4.
+        для всех возрастов."
+      body_short: "Освойте азы программирования по ускоренной версии курсов 2-4."
     hoc2014:
       try_new_tutorial: Попробуй наше новое пособие "Час кода" в бета-версии
       try_frozen: Рисуй вместе с Анной и Эльзой из "Холодного сердца"
     gallery:
-      title: Галерея
-      body: Показать галерею приложений и картинок, созданных нашими пользователями
+      title: "Галерея"
+      body: "Показать галерею приложений и картинок, созданных нашими пользователями"
     frozen:
       title: '"Холодное сердце"'
     starwars:
-      title: Звёздные войны
+      title: "Звёздные войны"
     infinity:
-      title: Лаборатория игр Infinity
-      body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами
-        Disney Infinity.
+      title: "Лаборатория игр Infinity"
+      body: "Используйте лабораторию игр, чтобы создать историю или игру с персонажами
+        Disney Infinity."
     minecraft:
       title: Minecraft
-      body: Изучайте мир Minecraft через программный код.
+      body: "Изучайте мир Minecraft через программный код."
   gallery:
-    students_drew_these_with_code: Ученики нарисовали это с помощью кода!
-    students_made_these_with_code: Сделано учениками с помощью кода!
-    picture_count: За прошедшие <b>%{days}</b> дней, ученики нарисовали <b>%{count}</b>
+    students_drew_these_with_code: "Ученики нарисовали это с помощью кода!"
+    students_made_these_with_code: "Сделано учениками с помощью кода!"
+    picture_count: "За прошедшие <b>%{days}</b> дней, ученики нарисовали <b>%{count}</b>
       рисунков, написав свои собственные компьютерные программы. Нажмите на картинку,
-      чтобы увидеть каждую программу в действии.
-    activity_count: За последние несколько <b>%{days}</b> дней, студенты сделали  <b>%{count}</b>
-      приложений и картинок, посредством написания своих собственных компьютерных
-      программ. Нажмите на картинки и скриншоты, чтобы увидеть каждую программу в
-      действии.
-    want_to_make_your_own: Хотите сделать свой собственный?
-    more: Больше &rarr;
-    caption_by_name_age: Создатель %{name}, возраст %{age}
-    caption_time_ago: '%{time_ago} назад'
-    header: Галерея
-    header_playlab: Лаборатория игр
-    header_artist: Художник
+      чтобы увидеть каждую программу в действии."
+    activity_count: "За последние несколько <b>%{days}</b> дней, студенты сделали
+      \ <b>%{count}</b> приложений и картинок, посредством написания своих собственных
+      компьютерных программ. Нажмите на картинки и скриншоты, чтобы увидеть каждую
+      программу в действии."
+    want_to_make_your_own: "Хотите сделать свой собственный?"
+    more: "Больше &rarr;"
+    caption_by_name_age: "Создатель %{name}, возраст %{age}"
+    caption_time_ago: "%{time_ago} назад"
+    header: "Галерея"
+    header_playlab: "Лаборатория игр"
+    header_artist: "Художник"
   landing:
-    prerelease: Это <span class='betatext'> бета-версия</span> курса.  Это означает,
+    prerelease: "Это <span class='betatext'> бета-версия</span> курса.  Это означает,
       что это не окончательный вариант курса,  и он будет дорабатываться, с учётом
-      полученных отзывов.
-    prerelease_hoc2014: Этот учебник находится в <span class='betatext'> бета-версии</span>.  Он
-      подлежит пересмотру для получения обратной связи и улучшений.
-    feedback: Оставить отзыв
-    report_bug: Сообщить об ошибке
-    support: Получить помощь
+      полученных отзывов."
+    prerelease_hoc2014: "Этот учебник находится в <span class='betatext'> бета-версии</span>.
+      \ Он подлежит пересмотру для получения обратной связи и улучшений."
+    feedback: "Оставить отзыв"
+    report_bug: "Сообщить об ошибке"
+    support: "Получить помощь"
     support_url: support.code.org
   multi:
-    wrong_title: Неправильный ответ
-    wrong_body: Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще
-      раз!
-    correct_title: Верно
-    correct_body: Это правильный ответ.
+    wrong_title: "Неправильный ответ"
+    wrong_body: "Ответ, который вы ввели неправильный.  Пожалуйста, попробуйте еще
+      раз!"
+    correct_title: "Верно"
+    correct_body: "Это правильный ответ."
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
-    wrong_title: Неправильное решение
-    wrong_body: Твоё решение неверно.  Пожалуйста, попробуй еще раз!
-    correct_title: Верно
-    correct_body: Это правильный ответ.
+    wrong_title: "Неправильное решение"
+    wrong_body: "Твоё решение неверно.  Пожалуйста, попробуй еще раз!"
+    correct_title: "Верно"
+    correct_body: "Это правильный ответ."
   contract_match:
-    wrong_title: Неправильный ответ
-    badname: Ваше определение имеет неправильное имя.
-    badname_case: В именах функций учитывается регистр. Попробуйте изменить регистр
-      букв в имени вашего определения.
-    badrange: Ваше определение имеет неправильный диапазон.
-    baddomainsize: Ваше определение имеет неправильное число элементов в домене.
-    baddomainname: Один или несколько элементов в вашем домене имеют неправильное
-      имя.
-    baddomaintype: Один или несколько элементов домена имеет неверный тип, или они
-      находятся в неправильном порядке.
+    wrong_title: "Неправильный ответ"
+    badname: "Ваше определение имеет неправильное имя."
+    badname_case: "В именах функций учитывается регистр. Попробуйте изменить регистр
+      букв в имени вашего определения."
+    badrange: "Ваше определение имеет неправильный диапазон."
+    baddomainsize: "Ваше определение имеет неправильное число элементов в домене."
+    baddomainname: "Один или несколько элементов в вашем домене имеют неправильное
+      имя."
+    baddomaintype: "Один или несколько элементов домена имеет неверный тип, или они
+      находятся в неправильном порядке."
   text_match:
-    placeholder: Внеси сюда свой ответ
-    open_response_title: Спасибо
-    open_response_body: Спасибо за ваш ответ!
+    placeholder: "Внеси сюда свой ответ"
+    open_response_title: "Спасибо"
+    open_response_body: "Спасибо за ваш ответ!"
   dialog:
-    ok: Продолжить
-    startover_title: Вы уверены, что хотите начать заново?
-    startover_body: Так вы удалите все блоки, которые вы добавили или изменили, и
-      начнёте головоломку сначала.
-    startover_ok: Начать заново
-    startover_cancel: Отмена
+    ok: "Продолжить"
+    startover_title: "Вы уверены, что хотите начать заново?"
+    startover_body: "Так вы удалите все блоки, которые вы добавили или изменили, и
+      начнёте головоломку сначала."
+    startover_ok: "Начать заново"
+    startover_cancel: "Отмена"
   time:
     hour: 1 час
-    day: день
-    week: неделя
+    day: "день"
+    week: "неделя"
   data:
     script:
       name:
         20-hour:
           title: Курс "Введение в информатику" (15-25 часов)
-          description: Этот 20-часовой курс является введением в основы информатики.
+          description: "Этот 20-часовой курс является введением в основы информатики.
             Курс предназначен для работы с детьми с дошкольного возраста до 8-ого
-            класса, но он занимателен для всех возрастов.
+            класса, но он занимателен для всех возрастов."
         Hour of Code:
-          title: Час кода 2013
+          title: "Час кода 2013"
           description: ''
         edit-code:
-          title: Редактирование кода
+          title: "Редактирование кода"
           description: ''
         events:
-          title: События
+          title: "События"
           description: ''
         builder:
-          title: Конструктор
+          title: "Конструктор"
           description: ''
         flappy:
-          title: Порхающий код
-          description: '{отите написать собственную игру меньше, чем за 10 минут?
-            Попробуйте наш учебник Flappy код!'
+          title: "Порхающий код"
+          description: "{отите написать собственную игру меньше, чем за 10 минут?
+            Попробуйте наш учебник Flappy код!"
         jigsaw:
-          title: Головоломки
+          title: "Головоломки"
           description: ''
         step:
-          title: Шаг
+          title: "Шаг"
           description: ''
         sample_level_builder:
-          title: Пример строителя уровня
+          title: "Пример строителя уровня"
           description: ''
   age_interstitial:
-    age: Ваш возраст
-    header: Обновление информации учетной записи
-    message: Мы совершенствуем нашу практику, чтобы предоставить вам ещё большую защиту
-      личной информации. Для этого нужно, чтобы пользователи ввеси здесь их возраст.
-      <br/> Как и всегда, code.org не будет продавать или делиться этой информации
-      с третьими сторонами.
+    age: "Ваш возраст"
+    header: "Обновление информации учетной записи"
+    message: "Мы совершенствуем нашу практику, чтобы предоставить вам ещё большую
+      защиту личной информации. Для этого нужно, чтобы пользователи ввеси здесь их
+      возраст. <br/> Как и всегда, code.org не будет продавать или делиться этой информации
+      с третьими сторонами."
     sign_out: Если Вы не хотите предоставлять ваш возраст, Вы можете <a href="%{url}">
       выйти</a>.
   zendesk_too_young_message: Извини, но пользователи твоего возраста не могут авторизоваться
@@ -675,80 +638,80 @@
     без авторизации или попросить своих родителей или учителя связаться с нами за
     тебя.
   progress:
-    not_started: не начато
-    in_progress: в процессе
-    completed_too_many_blocks: Завершено, слишком много блоков
-    completed_perfect: Завершено, отлично
-    furthest_level_attempted: запрошен слишком высокий уровень
-    assessment: оценка
+    not_started: "не начато"
+    in_progress: "в процессе"
+    completed_too_many_blocks: "Завершено, слишком много блоков"
+    completed_perfect: "Завершено, отлично"
+    furthest_level_attempted: "запрошен слишком высокий уровень"
+    assessment: "оценка"
   studio:
-    courses_working_on: Курсы, в процессе изучения
-    completed_courses: Завершенные курсы
-    all_courses: Все курсы
+    courses_working_on: "Курсы, в процессе изучения"
+    completed_courses: "Завершенные курсы"
+    all_courses: "Все курсы"
   project:
-    projects: Проекты
-    create: Создать проект
-    create_a_project: 'Создать новый проект:'
-    new: Создать новый
-    rename: Переименовать
-    save: Сохранить
-    delete: Удалить
-    exit: Вернуться к курсу
-    my_projects: Мои проекты
-    share: Поделитесь
-    share_title: Поделитесь вашим проектом
-    share_copy_link: 'Скопировать ссылку:'
-    close: Закрыть
-    more: Ещё
-    name: Имя
-    updated: Обновлено
-    project_type: Тип проекта
-    help_text: Нажмите кнопку <strong>Сделать приложение</strong> или <strong>Нарисовать
+    projects: "Проекты"
+    create: "Создать проект"
+    create_a_project: "Создать новый проект:"
+    new: "Создать новый"
+    rename: "Переименовать"
+    save: "Сохранить"
+    delete: "Удалить"
+    exit: "Вернуться к курсу"
+    my_projects: "Мои проекты"
+    share: "Поделитесь"
+    share_title: "Поделитесь вашим проектом"
+    share_copy_link: "Скопировать ссылку:"
+    close: "Закрыть"
+    more: "Ещё"
+    name: "Имя"
+    updated: "Обновлено"
+    project_type: "Тип проекта"
+    help_text: "Нажмите кнопку <strong>Сделать приложение</strong> или <strong>Нарисовать
       что-то</strong> ниже, чтобы создать новый проект лаборатории игр или художника!
-      <br/>Вы можете вернуться и работать над вашими проектами в любое время.
-    need_help: Нужна помощь, чтобы начать работать?
-    really_delete: Удалить?
-    delete_yes: Да
-    delete_no: Нет
-    saved: Сохранено
-    not_saved: Не сохранено
-    cancel: Отмена
-    delete_confirm_title: Вы уверены, что хотите удалить этот проект?
-    delete_confirm_text: Удаление вашего проекта окончательно удалит его из вашего
+      <br/>Вы можете вернуться и работать над вашими проектами в любое время."
+    need_help: "Нужна помощь, чтобы начать работать?"
+    really_delete: "Удалить?"
+    delete_yes: "Да"
+    delete_no: "Нет"
+    saved: "Сохранено"
+    not_saved: "Не сохранено"
+    cancel: "Отмена"
+    delete_confirm_title: "Вы уверены, что хотите удалить этот проект?"
+    delete_confirm_text: "Удаление вашего проекта окончательно удалит его из вашего
       списка Мои проекты. Если вы поделились ссылкой на этот проект с друзьями, у
-      них больше не будет доступа к этому проекту.
-    view_all: Посмотреть Мои проекты
-    remix: Ремикс
-    click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!
-    edit_project: Редактировать проект
+      них больше не будет доступа к этому проекту."
+    view_all: "Посмотреть Мои проекты"
+    remix: "Ремикс"
+    click_to_remix: "Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!"
+    edit_project: "Редактировать проект"
     abuse:
-      tos: Этот проект нарушает <a href='http://code.org/tos'>правила использования</a>
-        Code.org, о чем было уведомлено, связи с этим проектом нельзя поделиться.
-      contact_us: Если вы считаете, что произошла ошибка, пожалуйста, <a href='https://code.org/contact'>свяжитесь
-        с нами.</a>
-      go_to_code_studio: Перейти в студию кода
+      tos: "Этот проект нарушает <a href='http://code.org/tos'>правила использования</a>
+        Code.org, о чем было уведомлено, связи с этим проектом нельзя поделиться."
+      contact_us: "Если вы считаете, что произошла ошибка, пожалуйста, <a href='https://code.org/contact'>свяжитесь
+        с нами.</a>"
+      go_to_code_studio: Перейти в "Студию Кода"
       report_abuse_form:
-        intro: Если вы столкнулись с оскорбительным содержанием, угрозой, киберзапугиванием,
+        intro: "Если вы столкнулись с оскорбительным содержанием, угрозой, киберзапугиванием,
           домогательством или нарушением вашего авторского права, во время работы
           в Code Studio, пожалуйста, заполните форму ниже. Ваша жалоба будет рассмотрена,
           так же будет проведено необходимое расследование и приняты соответствующие
-          меры, так как мы относимся к этому делу очень серьезно.
+          меры, так как мы относимся к этому делу очень серьезно."
         validation:
-          email: Пожалуйста предоставьте адрес электронной почты
-          age: Пожалуйста, укажите возраст
-          abuse_type: Пожалуйста, ответьте, как это содержание нарушает условия предоставления
-            услуг
-          abuse_detail: Пожалуйста предоставьте подробную информацию относительно
-            содержания, по поводу которого вы отправляете жалобу
+          email: "Пожалуйста предоставьте адрес электронной почты"
+          age: "Пожалуйста, укажите возраст"
+          abuse_type: "Пожалуйста, ответьте, как это содержание нарушает условия предоставления
+            услуг"
+          abuse_detail: "Пожалуйста предоставьте подробную информацию относительно
+            содержания, по поводу которого вы отправляете жалобу"
         abusive_url: URL-адрес содержимого был передан на рассмотрение
         abuse_type:
-          question: Как это содержание нарушает %{link_start}Правила использования%{link_end}?
-          harassment: Угрозы, запугивания, домогательство
-          offensive: Оскорбительное содержание
-          infringement: Нарушение авторских прав
-          other: Другое
-        detail: Пожалуйста укажите как можно больше подробностей относительно содержания,
-          которое вы сообщаете.
-        acknowledge: Отправляя эту информацию, вы признаёте, что она будет обрабатываться
+          question: "Как это содержание нарушает %{link_start}Правила использования%{link_end}?"
+          harassment: "Угрозы, запугивания, домогательство"
+          offensive: "Оскорбительное содержание"
+          infringement: "Нарушение авторских прав"
+          other: "Другое"
+        detail: "Пожалуйста укажите как можно больше подробностей относительно содержания,
+          которое вы сообщаете."
+        acknowledge: "Отправляя эту информацию, вы признаёте, что она будет обрабатываться
           в соответствии с %{link_start_privacy}Правилами конфиденциальности%{link_end}
-          и %{link_start_tos}Условиями использования%{link_end}
+          и %{link_start_tos}Условиями использования%{link_end}"

@@ -105,6 +105,8 @@ pt-BR:
         StudioEC: Laboratório
         Applab: Laboratório de Aplicativo
         NetSim: Simulador de internet
+        Custom: Artista
+        CustomStudio: Laboratório
     trophy:
       name:
         Bronze: Bronze
@@ -311,26 +313,28 @@ pt-BR:
         studio_playlab_8: Você pode adicionar um bloco para marcar um ponto e um bloco para emitir um som quando o unicórnio corre em direção ao mago e, depois, movê-lo com as teclas de direção até marcar um ponto?
         studio_playlab_9: Defina o plano de fundo para esta invasão alienígena e ajude o robô espacial a alcançar o alienígena mais rapidamente, mudando sua velocidade. Depois, mova-o com as teclas de direção para alcançar o robô espacial e alertar a todos
         studio_playlab_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
-        studio_iceage_1: 'Manny quer dizer "Olá" - você pode ajudá-lo?'
-        studio_iceage_2: 'Diego (personagem 1) e vovó (personagem 2) querem dizer "olá" um para o outro. Você pode ajudá-los usando o bloco "diga" duas vezes?'
-        studio_iceage_3: Você pode ajudar o Scrat a chegar à bandeira?
-        studio_iceage_4: Você pode ajudar o Scrat (personagem 1) a chegar à vovó (personagem 2) e reproduzir um som quando ele chegar lá?
-        studio_iceage_5: 'Você pode ajudar o Sid a dizer "saudações" quando ele for clicado? Não se esqueça de clicar nele depois de clicar em Executar'
-        studio_iceage_6: Você pode ajudar o Diego a se mover usando as setas para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
-        studio_iceage_7: 'O bloco "repita infinitamente" permite que você execute um código continuamente. Você pode conectar blocos a ele para ajudar o Sid a se mover para a direita e para a esquerda repetidamente?'
-        studio_iceage_8: Você pode adicionar um bloco para marcar um ponto e um bloco para reproduzir um som quando o Sid chega ao Manny, e então movê-lo com as setas até marcar um ponto?
-        studio_iceage_9: Defina o plano de fundo para esta era do gelo e ajude o Sid a chegar à vovó mais rápido alterando sua velocidade. Então mova-o com as setas para chegar até a vovó e alertar todos.
-        studio_iceage_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
-        studio_gumball_1: 'Anais quer dizer "olá" - você pode ajudá-la?'
-        studio_gumball_2: 'Darwin (personagem 1) e Gumball (personagem 2) querem dizer olá um para o outro. Você pode ajudá-los usando o bloco "diga" duas vezes?'
-        studio_gumball_3: Você pode ajudar o João Banana a chegar até a bandeira?
-        studio_gumball_4: Você pode ajudar o Gumball (personagem 1) a chegar ao Darwin (personagem 2) e reproduzir um som quando ele chegar lá?
-        studio_gumball_5: 'Você pode ajudar o Antony a dizer "saudações" quando ele for clicado? Não se esqueça de clicá-lo depois de clicar em Executar'
-        studio_gumball_6: Você pode ajudar o Darwin a se mover usando as setas para cima/para baixo/direita/esquerda para chegar a todas as bandeiras?
-        studio_gumball_7: 'O bloco "repita infinitamente" permite que você execute um código continuamente. Você pode conectar blocos a ele para ajudar o Antony a se mover para a direita e para a esquerda repetidamente?'
-        studio_gumball_8: Você pode adicionar um bloco para marcar um ponto e um bloco para reproduzir um som quando o João Banana chegar ao Antony, e então movê-lo com as setas até marcar um ponto?
-        studio_gumball_9: Defina o plano de fundo para esta invasão espacial e ajude a Nicole a chegar até a Penny mais rápido, alterando sua velocidade. Em seguida, mova-a com as setas para chegar à Nicole e alertar todos os outros.
-        studio_gumball_10: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
+        studio_iceage_hello1: 'Sid quer reunir todos para uma nova aventura. Você pode ajudá-lo a dizer "olá" arrastando o bloco "diga" para nossa área de trabalho e digitando "olá" dentro dele?'
+        studio_iceage_hello2: 'Sid (personagem 1) encontrou Manny (actor 2) e quer convidá-lo para a aventura. Ajude-os a cumprimentarem-se usando o bloco "personagem diz" duas vezes.'
+        studio_iceage_move_to_flag: 'O Scrat está procurando sua bolota! Ajude-o a andar os últimos 200 pixels usando o bloco "mova".'
+        studio_iceage_move_to_actor: 'Diego (personagem 1) está procurando por Manny (personagem 2). Ajude Diego a andar 200 pixels para chegar até Manny usando o bloco "mova o personagem". Em seguida, conecte um bloco ao evento "quando o personagem tocar" para reproduzir um som quando eles se encontrarem.'
+        studio_iceage_repeat: 'O bloco "repita infinitamente" permite que você execute o código sem parar. Você pode anexar blocos a ele para ajudar a Vovó a fazer exercícios movendo-a para a esquerda e para a direita repetidamente?'
+        studio_iceage_click_hello: Você pode ajudar Sid a fazer uma chamada final para seus amigos quando for clicado? Não se esqueça de clicar nele depois de clicar em Executar.
+        studio_iceage_move_events: 'O Scrat ainda está procurando por bolotas! Ajude-o a correr por aí anexando o bloco "mova" a cada um dos eventos e alterando a direção para funcionar para cada seta do teclado. Quando você terminar, clique em Executar e tente coletar todas as bolotas.'
+        studio_iceage_sound_and_points: 'Foi fornecida a maior parte do código que mantém a Vovó se movendo para a esquerda e para a direita, bem como o código para mover o Sid pela tela. Você consegue terminar o código e adicionar blocos ao evento "quando o personagem tocar" para que ambos reproduzam um som e marquem um ponto quando Sid e a Vovó colidirem? Pressione Executar para jogar o jogo.'
+        studio_iceage_warn_ice_age: Todos precisam se mover rapidamente porque uma era do gelo está chegando! Altere para o plano de fundo de gelo e defina a velocidade de Sid como rápida, então pressione Executar e mova-o até Diego para avisá-lo.
+        studio_iceage_throw_hearts: 'Sid quer dizer para a Vovó o quanto ele a ama. Use o comando "personagem lança" para que Sid (personagem 1) lance corações para a Vovó (personagem 2)! Defina o humor da Vovó como feliz quando ela for atingida pelos corações.'
+        studio_iceage_free_play: Hora de criar seu próprio jogo ou história! Ao terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus telefones, tablets ou computadores!
+        studio_gumball_hello1: 'Anais quer fazer novos amigos. Você pode ajudá-la a dizer "olá" arrastando o bloco "diga" em nossa área de trabalho e digitando a palavra "olá" dentro dele?'
+        studio_gumball_hello2: 'Darwin (personagem 1) e seu irmão Gumball (personagem 2) estão indo para a escola. Ajude-os a cumprimentarem-se usando o bloco "personagem diz" duas vezes.'
+        studio_gumball_move_to_flag: 'João Banana está prestes a ganhar uma corrida no campo! Ajude-o a andar os últimos 200 pixels usando o bloco "mova".'
+        studio_gumball_move_to_actor: 'Gumball (personagem 1) e Darwin (personagem 2) estão atrasados para a o dia no campo! Ajude Gumball a andar 200 pixels para baixo para chegar até Darwin usando o bloco "mova o personagem".  Em seguida, conecte um bloco ao evento "quando o personagem tocar" para reproduzir um som quando eles se encontrarem.'
+        studio_gumball_repeat: 'O bloco "repita infinitamente" permite que você execute o código de forma contínua. Você pode adicionar blocos a ele para ajudar Gumball no aquecimento para sua corrida, movendo-se para a esquerda e para a direita repetidamente?'
+        studio_gumball_click_hello: 'Você pode ajudar o Anton a anunciar o início da corrida dizendo "Em suas marcas, preparar, já!"? Para testar seu programa, não se esqueça de clicar no Anton depois de clicar em Executar!'
+        studio_gumball_move_events: 'Darwin está no concurso de capturar a bandeira! Ajude-o a correr anexando o bloco "mova" a cada um dos eventos. Quanto terminar, clique em Executar e tente pegar todas as bandeiras.'
+        studio_gumball_sound_and_points: 'Foi fornecida a maior parte do código que mantém Anton (personagem 2) se movendo para a esquerda e para a direita, bem como o código para mover o João Banana (personagem 1) pela tela. Você consegue terminar o código e adicionar blocos ao evento "quando o personagem tocar" para que ambos reproduzam um som e marquem um ponto quando João Banana e Anton colidirem? Pressione Executar para jogar o jogo.'
+        studio_gumball_warn_food_fight: 'Darwin acabou de escapar de uma guerra de comida! Altere o plano de fundo para "personagens" e configure a velocidade de Darwin como rápida, então pressione Executar e faça-o mover-se até Penny para avisá-la.'
+        studio_gumball_join_food_fight: 'Participe da guerra de comida! Use o comando "personagem joga item para a direita" para que o João Banana (personagem 1) jogue comida em Anton (personagem 2)! Configure o humor de Anton como bravo quando ele for atingido.'
+        studio_gumball_free_play: Crie seu próprio jogo ou história. Ao terminar, clique em Concluir para que seus amigos possam jogar seu jogo em seus telefones, tablets ou computadores!
         studio_full_sandbox: Crie seu próprio jogo. Quando terminar, clique em Concluir para deixar que seus amigos experimentem seu jogo em seus celulares.
         studio_k1_1: 'Você consegue fazer esse cachorro dizer "Olá, mundo"?'
         studio_k1_2: Você pode fazer o cachorro dizer alguma coisa e, depois, fazer o gato dizer alguma coisa?
@@ -459,6 +463,9 @@ pt-BR:
         infinity_playlab_intro: 'Laboratório - Introdução'
         infinity_playlab_events: 'Laboratório - Eventos'
         infinity_playlab_repeat_forever: 'Laboratório - Repetir infinitamente'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -506,9 +513,15 @@ pt-BR:
         starwars_blocks_congrats: 'Star Wars: Construindo uma galáxia com código - Parabéns'
         mc_intro: 'Minecraft - Introdução'
         mc_repeat: 'Minecraft - Repetição'
-        mc_if_statements: 'Minecraft - If statements'
+        mc_if_statements: 'Minecraft - Instruções se'
         mc_congrats_share: 'Minecraft - Parabéns'
         mc_congrats_no_share: 'Minecraft - Parabéns'
+        gumball_intro: 'Hora do Código com Gumball - Introdução'
+        gumball_events: 'Hora do Código com Gumball - Eventos'
+        gumball_repeat: 'Hora do Código com Gumball - Instruções de repetição'
+        iceage_intro: 'Hora do Código com A Era do Gelo - Introdução'
+        iceage_events: 'Hora do Código com A Era do Gelo - Eventos'
+        iceage_repeat: 'Hora do Código com A Era do Gelo - Instruções de repetição'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
@@ -580,10 +593,10 @@ pt-BR:
         Infinity_move_directions_callout_arrow: Use as setas para direcionar
         Infinity_move_collide_callout: Reproduza um som quando esse evento ocorrer.
         Infinity_repeat_callout: Coloque blocos Mova aqui dentro
-        craft_run_button_callout: 'Clique em "Executar" para iniciar seu programa'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Selecione "Executar" para abrir seu programa'
+        craft_drag_block_callout: 'Arraste um bloco de "andar à frente" e encaixe-o embaixo do outro bloco'
+        craft_callout_preplaced: Já colocamos alguns blocos aqui para você começar
+        craft_inside_repeat: Repita as ações colocando blocos aqui
+        craft_callout_preplaced_house: Este código começará a construção da sua casa. Você consegue terminá-la?
+        craft_what_is_iron: Minere este ferro!
+        craft_callout_moveforward: Este código verifica se há lava. Você consegue adicionar um comando para avançar?

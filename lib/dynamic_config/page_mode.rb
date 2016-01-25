@@ -5,10 +5,7 @@
 # variable. In the future we will support more complicated page mode policies
 # (e.g. A-B testing of different modes with session stickiness).
 class PageModeBase
-  # The default page mode to use for all requests if no page mode has
-  # been explicitly set.
-  DEFAULT_PAGE_MODE = 'starwars'
-
+  DEFAULT_PAGE_MODE = nil
   PAGE_MODE_KEY = 'pm'
 
   # Returns the page mode to use for rendering the given request.
@@ -16,9 +13,13 @@ class PageModeBase
   # @return {string}
   def get(request)
     # If a session page mode is set the 'pm' cookie, return that,
-    # otherwise return the default page mode from DCDO.
+    # or return the default page mode from DCDO,
+    # otherwise return a sw or mc page mode.
+    page_mode = rand(2) == 0 ? "feature-starwars" : "feature-mc"
+
     (request && request.cookies[PAGE_MODE_KEY]) ||
-        DCDO.get('page_mode', DEFAULT_PAGE_MODE)
+        DCDO.get('page_mode', DEFAULT_PAGE_MODE) ||
+        page_mode
   end
 
   # Sets the default page mode for all requests.

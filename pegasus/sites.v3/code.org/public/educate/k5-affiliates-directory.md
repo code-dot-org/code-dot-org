@@ -3,8 +3,8 @@ title: K-5 Program
 nav: educate_nav
 ---
 <a name="top"></a>
-# Find a K-5 Affiliate
-Below is a list of all K-5 Affiliates. To find and sign up for a workshop they are hosting, visit our [professional development workshops page](http://code.org/professional-development-workshops).
+# Find a Computer Science Fundamentals Facilitator
+Below is a list of all Computer Science Fundamentals Facilitators. To find and sign up for a workshop they are hosting, visit our [professional development workshops page](http://code.org/professional-development-workshops).
 
 [col-25]
 
@@ -257,6 +257,15 @@ rowland@pd.code.org
 Elk Grove, CA
 
 gargiulo@pd.code.org
+
+[/col-33]
+
+[col-33]
+
+### Sandy Feder
+Fair Oaks, CA
+
+feder@pd.code.org
 
 [/col-33]
 

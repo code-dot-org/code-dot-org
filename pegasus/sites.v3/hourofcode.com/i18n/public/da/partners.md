@@ -4,11 +4,10 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-<%= view :signup_button %>
 
 <% if @country == 'la' %>
 
-# Latin America Partners
+# Latinamerikanske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
 
@@ -16,7 +15,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Afrikanske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -24,7 +23,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'au' %>
 
-# Australia Partners
+# Australske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
 
@@ -32,15 +31,23 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'id' %>
 
-# Indonesia Partners
+# Indonesiske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
 
 <% end %>
 
+<% if @country == 'ie' %>
+
+# Ireland Partners
+
+<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
+
+<% end %>
+
 <% if @country == 'in' %>
 
-# India Partners
+# Indiske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -48,7 +55,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'jp' %>
 
-# Japan Partners
+# Japanske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
 
@@ -56,7 +63,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# New Zealandske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -64,7 +71,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'uk' %>
 
-# United Kingdom Partners
+# Britiske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
 
@@ -72,7 +79,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ca' %>
 
-# Canada Partners
+# Canadiske partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
 
@@ -96,20 +103,19 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-# Tutorial Partners
+# Øvelsespartnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 ---
 
-# Infrastruktur partnere og værktøjer
+# Infrastrukturpartnere og værktøjer
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 ---
 
-# Additional Partners
+# Øvrige partnere
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 
-<%= view :signup_button %>

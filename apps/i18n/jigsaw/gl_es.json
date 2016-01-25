@@ -1,10 +1,10 @@
 {
-  "continue": "Continue",
-  "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
-  "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
-  "reinfFeedbackMsg": "You can press the \"Try Again\" button to go back to playing your game.",
-  "share": "Share",
-  "shareGame": "Share your game:",
-  "yes": "Yes"
+  "continue": "Continuar",
+  "nextLevel": "Parabéns! Vostede completou o desafío.",
+  "no": "Non",
+  "numBlocksNeeded": "Este desafío pode ser resolvido com %1 bloques.",
+  "reinfFeedbackMsg": "Pode presionar o botón de \"Tentar novamente\" para voltar a xogar o seu xogo.",
+  "share": "Compartir",
+  "shareGame": "Comparta o seu xogo:",
+  "yes": "Si"
 }

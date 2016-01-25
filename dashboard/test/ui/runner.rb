@@ -21,6 +21,7 @@ $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
 $options.dashboard_domain = 'test-studio.code.org'
+$options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
@@ -55,6 +56,7 @@ opt_parser = OptionParser.new do |opts|
     $options.local = 'true'
     $options.pegasus_domain = 'localhost.code.org:3000'
     $options.dashboard_domain = 'localhost.studio.code.org:3000'
+    $options.hourofcode_domain = 'localhost.hourofcode.com:3000'
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
     print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
@@ -65,6 +67,9 @@ opt_parser = OptionParser.new do |opts|
     print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
           "Try '-d localhost.studio.code.org:3000' instead (this is the default when using '-l').\n" if d == 'localhost:3000'
     $options.dashboard_domain = d
+  end
+  opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
+    $options.hourofcode = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
     $options.realmobile = 'true'
@@ -86,6 +91,13 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
+  end
+  opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
+    $options.fail_fast = true
+  end
+  opts.on('-s', '--script Scriptname', String, 'Run tests associated with this script, or have Scriptname somewhere in the URL') do |scriptname|
+    f = `egrep -r "Given I am on .*#{scriptname.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
+    $options.feature = f.split ','
   end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
@@ -187,9 +199,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
-    message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
+    message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
-    next
+    raise Parallel::Kill
   end
 
   if $options.browser and browser['browser'] and $options.browser.casecmp(browser['browser']) != 0
@@ -211,10 +223,16 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
+  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
+
+  # Force Applitools eyes to use a consistent host OS identifier for now
+  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
+  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
@@ -223,7 +241,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments = ''
 #  arguments += "#{$options.feature}" if $options.feature
   arguments += feature
-  arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
+  arguments += " -t #{$options.run_eyes_tests && !browser['mobile'] ? '' : '~'}@eyes"
+  arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
@@ -334,6 +353,21 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
       'failed'.red
     end
   print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
+
+  if scenario_count == 0
+    skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
+    skip_warning += <<EOS
+Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
+  - Do the feature or scenario tags exclude #{browser_name}?
+EOS
+    unless $options.run_eyes_tests
+      skip_warning += "  - Are you trying to run --eyes tests?\n"
+    end
+    unless $options.dashboard_db_access
+      skip_warning += "  - Do you need to run this test on the test instance or against localhost (-l) for @dashboard_db_access?\n"
+    end
+    print skip_warning
+  end
 
   [succeeded, message]
 end.each do |succeeded, message|

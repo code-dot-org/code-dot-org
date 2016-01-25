@@ -23,8 +23,8 @@
           'Maze 2: Loops': 'Labyrint 2: Sløyfer'
           'Bee 2: Loops': 'Staving 2: Sløyfer'
           Multi & Match: Multi & Kamp
-          K-1 Flappy: Barnehage og 1. klasse Flappy
-          Flappy non blockly: Flappy utan blockly
+          K-1 Flappy: Barnehage og 1. klasse Flakse
+          Flappy non blockly: Flakse utan blockly
           title: Kurs 1
           Artist 2: Kunstnar 2
           Happy Maps: Glade Kart
@@ -69,7 +69,7 @@
           Graph Paper Programming: Programmering på millimeterpapir
           'Real-life Algorithms: Paper Planes': 'Verkelege algoritmar: Papirfly'
           Getting Loopy: Me blir sløyfete
-          Relay programming: Programmering med relé
+          Relay programming: Programmeringsstafett
           Conditionals: Betingelser
           Binary Bracelets: Binær armbånd
           The Big Event: Den store hendinga
@@ -138,7 +138,7 @@
           'Bee: Functions2': 'Bier: Funksjonar2'
           'Bee: Conditionals2': 'Bier: Vilkår2'
           'Maze: Conditionals2': 'Labyrint: Vilkår2'
-          'Artist: Nested Loops2': 'Kunstnar: Løkker inni løkker2'
+          'Artist: Nested Loops2': 'Kunstnar: Løkker inni løkker 2'
           'Farmer: While Loops2': 'Bonde: Medan-løkker2'
           'Bee: Nested Loops2': 'Bier: Løkker inni løkker2'
           'Bee: Debugging2': 'Bier: Feilsøking2'
@@ -158,7 +158,7 @@
           description_short: Teikn stilige bilde og design med Kunstnaren!
         hourofcode:
           Maze: Labyrint
-          title: Kodetimen
+          title: Klassisk labyrint
           description: Prøv grunnleggjande programmering med figurane frå Angry Birds,
             planter mot zombiar og Scrat frå Istid!
           description_short: Prøv grunnleggande programmering med mange morsomme figurar!
@@ -189,26 +189,25 @@
           'Artist: For Loops': Kunstnar For-løkker
           'Play Lab: For Loops': 'Spel-lab: For-løkker'
           'Artist: Functions': 'Kunstnar: Funksjonar'
-          'Unplugged: Tangrams': 'Struamlaust: Tangram-puslespel'
+          'Unplugged: Tangrams': 'Trådlaust: Tangram-puslespel'
           Artist: Kunstnar
           Bee: Bier
           'Unplugged: Envelope Variables': 'Trådlaust: Konvolutt-variable'
-          'Unplugged: Madlibs': 'Straumlaust: Adjektiv-historier'
-          'Unplugged: For Loop Fun': 'Straumlaust: Moro med for-løkker'
-          'Unplugged: Songwriting with Parameters': 'Straumlaust: Låtskriving med
-            parameter'
+          'Unplugged: Madlibs': 'Trådlaust: Adjektiv-historier'
+          'Unplugged: For Loop Fun': 'Trådlaust: Moro med for-løkker'
+          'Unplugged: Songwriting with Parameters': 'Trådlaust: Låtskriving med parameter'
           'Artist: Functions with Parameters': 'Kunstnar: Funksjonar med parameter'
-          'Unplugged: Binary': 'Straumlaust: Binær'
+          'Unplugged: Binary': 'Trådlaust: Binær'
           Bee Binary: 'Bier: binær'
           Farmer Binary: Bonde binær
           Maze and Bee: Labyrint og bier
           Artist Binary: Kunstnar binær
           description_audience: Frå 10+ år (etter Kurs 3)
-          Super Challenge - Variables: Super-utfordring - Variablar
+          Super Challenge - Variables: Superutfordring - Variablar
           Super Challenge - For Loops: Superutfordring - For-løkker
           Super Challenge - Functions and Parameters: Superutfordring - Funksjoner
             og parametere
-          Extreme Challenge - Comprehensive: Ekstrem utfordring - Omfattande
+          Extreme Challenge - Comprehensive: Superutfordring - Omfattande
         Course4pre:
           title: Kurs 4 forkunnskapar
           description_short: Ei kort oppsummering av konsept for elevar som ikkje
@@ -229,7 +228,7 @@
           Intro: Introduksjon
           Variables and For Loops: Variablar og for-løkker
           Functions and Functions with Parameters: Funksjonar og funksjonar med parameter
-          title: Brukbarheits testing
+          title: Brukbarheitstesting
           description_short: ''
           description: Eit utval av tema om brukbarheitstesting frå kurs 4.
           Variables: Variablar
@@ -250,8 +249,8 @@
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
-          'Unplugged: Video Games and Coordinate Planes': 'Straumlaust: Videospel
-            og kooridinat-plan'
+          'Unplugged: Video Games and Coordinate Planes': 'Trådlaust: Videospel og
+            kooridinat-plan'
           'Calc: Evaluation Blocks': 'Beregning: Evaluering blokker'
           'Eval: Strings and Images': Strenger og bilder
           'Unplugged: Contracts': 'Frakoblet: kontrakter'
@@ -260,7 +259,7 @@
           'Play Lab: Defining Variables (Big Game)': 'Spill-Lab: Definere variabler
             (Stort spill)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Straumlaust: Design oppskrifta'
+          'Unplugged: The Design Recipe': 'Trådlaust: Design oppskrifta'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Spill-Lab: Animasjon (Big Game)'
@@ -268,8 +267,8 @@
           'Eval: Boolean Operators': 'Evaueringl: Boolske operatorer'
           'Play Lab: Booleans': 'Spill-Lab: Boolske verdier'
           'Play Lab: Boolean (Big Game)': 'Spille Lab: Logiske verdier (Big Game)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Straumlaust: Vilkår
-            og stykkevise funksjonar'
+          'Unplugged: Conditionals and Piecewise Functions': 'Trådlaust: Vilkår og
+            stykkevise funksjonar'
           'Eval: Conditionals': Betingelser
           'Unplugged: Collision Detection and the Distance Formula': 'Frakoblet: Oppdage
             kollisjoner og formel for avstand'
@@ -359,7 +358,7 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: 20-timers introduksjonskurs
+          title: Aksellerert intro til CS-kurs
           description_audience: Frå 10+ år (etter Kurs 3)
           description: Dette kurset på 20 timar introduserer grunnleggjande informasjonsvitskap
             og prinsipp frå programmering. Kurset er utvikla for bruk i 5. klasse
@@ -406,9 +405,9 @@
           Eval: Eval
         flappy:
           title: Flakse-kode
-          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringen
+          description: Vil du lage ditt eige spel på mindre enn 10 minutt? Prøv opplæringa
             i Flaksekode!
-          description_short: Lag ditt eige Flappy-spel på mindre enn ti minutt!
+          description_short: Lag ditt eige Flakse-spel på mindre enn ti minutt!
           Flappy Code: Flakse-kode
         jigsaw:
           title: Puslespill
@@ -517,30 +516,30 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'Straumlaust: Videospel
-            og kooridinat-plan'
+          'Unplugged: Video Games and Coordinate Planes': 'Trådlaust: Videospel og
+            kooridinat-plan'
           'Calc: Evaluation Blocks': 'Rekning: Evaluering av blokker'
           'Eval: Strings and Images': 'Eval: Tekst og bilder'
-          'Unplugged: Contracts': 'Straumlaust: Kontrakter'
+          'Unplugged: Contracts': 'Trådlaust: Kontrakter'
           'Eval: Writing Contracts': 'Eval: Skrive kontrakter'
           'Calc: Defining Variables': 'Rekning: Definere Variablar'
           'Play Lab: Defining Variables (Big Game)': 'Spel-lab: Definere variablar
             (Stort spel)'
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'Straumlaust: Design oppskrifta'
+          'Unplugged: The Design Recipe': 'Trådlaust: Design oppskrifta'
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
           'Play Lab: Animation (Big Game)': 'Spel-lab: Animasjon (Stort spel)'
-          'Unplugged: Booleans': 'Straumlaust: Boolske variable'
+          'Unplugged: Booleans': 'Trådlaust: Boolske variable'
           'Eval: Boolean Operators': 'Eval: Boolske operatorar'
           'Play Lab: Booleans': 'Spel-lab: Boolske verdiar'
           'Play Lab: Boolean (Big Game)': 'Spel-lab: Boolsk (Stort spel)'
-          'Unplugged: Conditionals and Piecewise Functions': 'Straumlaust: Vilkår
-            og stykkevise funksjonar'
+          'Unplugged: Conditionals and Piecewise Functions': 'Trådlaust: Vilkår og
+            stykkevise funksjonar'
           'Eval: Conditionals': 'Eval: Vilkår'
-          'Unplugged: Collision Detection and the Distance Formula': 'Straumlaust:
-            Deteksjon av kollisjonar og distanseformelen'
-          'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Detekssjon av kollisjong
+          'Unplugged: Collision Detection and the Distance Formula': 'Trådlaust: Deteksjon
+            av kollisjonar og distanseformelen'
+          'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Deteksjon av kollisjon
             (Stort spel)'
           Evaluation Blocks: Evalueringsblokker
           Strings and Images: Strenger og bilder
@@ -575,7 +574,7 @@
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Detekssjon av kollisjong
+          'Play Lab: Collision Detection (Big Game)': 'Spel-lab: Deteksjon av kollisjon
             (Stort spel)'
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
@@ -741,6 +740,15 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Medan-løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -873,8 +881,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -953,8 +961,8 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Evaluation Blocks: Evalueringsblokker
           Strings and Images: Strenger og bilder
           Defining Variables: Definering av variablar
@@ -970,7 +978,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Gratis spel
+          Free Play: Gjer kva du vil
         allthethings:
           Jigsaw: Puslespill
           Maze: Labyrint
@@ -978,7 +986,7 @@
           Bee: Bier
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: Flappy
+          Flappy: Flakse
           Bounce: Sprett
           Multi: Multi
           Match: Kamp
@@ -1001,8 +1009,8 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1059,8 +1067,8 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
@@ -1122,8 +1130,8 @@
           Hour of Code 2015: Kodetimen 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
+          description: 'Fase 2 Online: Blanda sommerstudie'
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -1145,8 +1153,8 @@
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           Wrap-Up: Oppsummering
           Review StarLogo Nova: Review StarLogo Nova
@@ -1162,8 +1170,8 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1184,8 +1192,8 @@
         sciencePD2b-iZone:
           Welcome!: Velkomen!
           title: Computer Science in Science PD Phase 2b
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1194,8 +1202,8 @@
           Wrap-Up: Oppsummering
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           0: |
             Unit 1, Days 1-2
@@ -1218,8 +1226,8 @@
           Wrap-up: Oppsummering
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: Lär ut funktionell programmering genom algebra
-          description: Lär ut funktionell programmering genom algebra
+          description_short: 'Fase 2 Online: Blanda sommerstudie'
+          description: 'Fase 2 Online: Blanda sommerstudie'
           Welcome!: Velkomen!
           0: |
             Unit 1, Days 1-2
@@ -1366,6 +1374,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1489,6 +1498,28 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1542,6 +1573,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Istid Spel-lab
           description_short: Lag ei historie eller eit spel med Istid Spel-lab!
@@ -1560,6 +1592,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1578,6 +1612,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Medan-løkker
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1592,10 +1633,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Spill-lab
-          description_short: Lag ei historie eller eit spell ve å bruke Gumball spel-lab!
-          description: Lag ei historie eller eit spell ve å bruke Gumball spel-lab!
-          Gumball Play Lab: Gumball Spill-lab
+          title: Gumball Spel-lab
+          description_short: Lag ei historie eller eit spel med Gumball spel-lab!
+          description: Lag ei historie eller eit spel med Gumball spel-lab!
+          Gumball Play Lab: Gumball Spel-lab
         starwars:
           title: 'Star Wars: Skap ein galakse med kode'
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel
@@ -1617,7 +1658,24 @@
           Craft: Craft
         mc:
           title: Kodetimen med Minecraft
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          description_short: Utforsk ei Minecraft-verd gjennom kode
+          description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr
+            gjennom denne Minecraft-verda
           Hour of Code 2015: Kodetimen 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Velkomen!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Oppsummering
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

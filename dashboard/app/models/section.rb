@@ -56,8 +56,24 @@ class Section < ActiveRecord::Base
     self.followers_attributes = follower_params
   end
 
+  def add_student(student)
+    if follower = student.followeds.where(user_id: self.user_id).first
+      # if this student is already in another section owned by the
+      # same teacher, move them to this section instead of creating a
+      # new one
+      follower.update_attributes!(section: self)
+    else
+      follower = Follower.create!(user_id: self.user_id, student_user: student, section: self)
+    end
+    follower
+  end
+
+  def teacher
+    user
+  end
+
   private
-  CHARS = ("A".."Z").to_a
+  CHARS = ("A".."Z").to_a - %w(A E I O U)
   def random_text(len)
     len.times.to_a.collect{ CHARS.sample }.join
   end

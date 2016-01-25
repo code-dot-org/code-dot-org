@@ -146,7 +146,7 @@ is:
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
         hourofcode:
           Maze: Völundarhús
-          title: Klukkustund kóðunar
+          title: Hefðbundið völundarhús
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum fígúrum!
         frozen:
@@ -672,6 +672,15 @@ is:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Á meðan lykkjur
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1226,6 +1235,7 @@ is:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1340,6 +1350,28 @@ is:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1390,6 +1422,7 @@ is:
           description_audience: Fyrir 10-18 ára
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Leikjasmiðja
           description_short: Búðu til sögu eða leik með Ice Age Leikjasmiðju!
@@ -1408,6 +1441,8 @@ is:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1457,13 @@ is:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Á meðan lykkjur
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1457,6 +1499,22 @@ is:
           Craft: Craft
         mc:
           title: Klukkustund kóðunar með Minecraft
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Kannaðu Minecraft heim með kóða
+          description: Notaðu kubba með kóða til að fara með Steve eða Alex í ævintýraferð um þennan Minecraft heim
           Hour of Code 2015: Klukkustund kóðunar 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Velkomin!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Samantekt
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

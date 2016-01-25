@@ -1,13 +1,15 @@
 / Show the correct answer to authorized teachers
-- if current_user.try(:authorized_teacher?)
-  - correct_answers = data['answers'].select { |answer| answer['correct'] }
+- if current_user.try(:authorized_teacher?) && !@script.try(:pd?)
+  - correct_answers = data['answers'].select { |answer| answer['correct'] } if data['answers']
   - unless correct_answers.empty?
     #markdown.teacher
       %h3= t('teacher.answer')
       .content
         - correct_answers.each do |correct_answer|
-          %span.answerbutton.btn{style: "height: #{height}"}
-            .item-mark
-              .fa{class: checked_class}
-            .item-label
-              %label{style: "height: #{height}"}!= multi_t(correct_answer['text'])
+          .multi
+            .mainblock
+              %span.answerbutton.btn{style: "height: #{height}"}
+                .item-mark
+                  .fa{class: checked_class}
+                .item-label
+                  %label{style: "height: #{height}"}!= multi_t(correct_answer['text'])

@@ -1,0 +1,62 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-12-07T20:54:25.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "readRecords": {
+        "params": [
+          "\"myTable\"",
+          "{}",
+          "function(records){\n\n}"
+        ],
+        "paletteParams": [
+          "table",
+          "terms",
+          "callback"
+        ]
+      },
+      "ifBlock": null,
+      "forLoop_i_0_4": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Create an array of all the movies made in 2008 and print it out. (Click to see full instructions)\r\n",
+    "markdown_instructions": "# Printing Specific Records\r\n\r\nSometimes we want to search through the records in the table to find certain records. For instance let's search through the records for all the movies made in 2008.\r\n\r\nloop over element in the array returned from readRecord and print out only the ones that meet a certain criteria - uses if statement and forshadows to search terms\r\n\r\n# Do This\r\n\r\nThe data from the last level has also been provided. \r\n\r\n* Add a call to readRecords to get the most current version of the data table.\r\n* Make a global array which will hold the movies that match our search\r\n* Add a for loop to loop over all the records in the array\r\n* As you loop over the array check each object to see if the year is equal to 2008\r\n* If the movie was made in 2008 add the whole object to our global array.\r\n* After you have checked all the items in the array print out the array of movies matching the search.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "data_tables": "\"myTable\" :[\r\n  {\r\n    \"name\": \"New York City\",\r\n    \"state\": \"New York\"\r\n    \"population\": 9,000,000\r\n  },\r\n  {\r\n     \"name\": \"Los Angeles\",\r\n    \"state\": \"California\"\r\n    \"population\": 4,000,000\r\n  },\r\n  {\r\n     \"name\": \"Chicago\",\r\n    \"state\": \"Illinios\"\r\n    \"population\": 3,000,000\r\n  }\r\n  {\r\n     \"name\": \"Houston\",\r\n    \"state\": \"Texas\"\r\n    \"population\": 2,000,000\r\n  }\r\n],\r\n\"myMovies\" :[\r\n  {\r\n    \"name\": \"Top Gun\",\r\n    \"year\": 1986\r\n  },\r\n  {\r\n  \"name\": \"Breakfast at Tiffany's\",\r\n    \"year\": 1961\r\n  },\r\n  {\r\n   \"name\": \"The Goonies\",\r\n    \"year\": 1985\r\n  }\r\n  {\r\n    \"name\": \"Say Anything\",\r\n    \"year\": 1989\r\n  }\r\n  {\r\n    \"name\": \"Fight Club\",\r\n    \"year\": 1999\r\n  }\r\n  {\r\n    \"name\": \"The Dark Knight\",\r\n    \"year\": 2008\r\n  }\r\n   {\r\n    \"name\": \"WALL-E\",\r\n    \"year\": 2008\r\n  }\r\n]",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

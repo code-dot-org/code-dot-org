@@ -280,7 +280,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whenCollideObstacle":function(d){return "Bir engele çarptığı zaman"},
 "whenCollideObstacleTooltip":function(d){return "Flappy bir engele çarptığı zaman aşağıdaki eylemler yürüt."},
 "whenEnterObstacle":function(d){return "Engel geçildiği zaman"},
-"whenEnterObstacleTooltip":function(d){return "Flappy bir engele giriş yaptığı zaman aşağıdaki eylemler yürüt."},
+"whenEnterObstacleTooltip":function(d){return "Flappy bir engele giriş yaptığı zaman aşağıdaki eylemleri yürüt."},
 "whenRunButtonClick":function(d){return "oyun başladığında"},
 "whenRunButtonClickTooltip":function(d){return "Oyun başladığında aşağıdaki eylemleri yürüt."},
 "yes":function(d){return "Evet"}};

@@ -2,7 +2,7 @@
  * Copyright (c) 2015 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-11-01
+ * Date: 2015-11-20
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -4148,8 +4148,8 @@ exports.isBuffer = isBuffer;
 function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
-}).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":9}],19:[function(require,module,exports){
+}).call(this,{"isBuffer":require("/Users/Chris/Code/dabbler_droplet/node_modules/browserify/node_modules/insert-module-globals/node_modules/is-buffer/index.js")})
+},{"/Users/Chris/Code/dabbler_droplet/node_modules/browserify/node_modules/insert-module-globals/node_modules/is-buffer/index.js":9}],19:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
 },{"./lib/_stream_passthrough.js":14}],20:[function(require,module,exports){
@@ -6071,7 +6071,7 @@ hook = function(event, priority, fn) {
 
 exports.Editor = Editor = (function() {
   function Editor(wrapperElement, options1) {
-    var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4, ref5, ref6, useBlockMode;
+    var binding, boundListeners, dispatchKeyEvent, dispatchMouseEvent, elements, eventName, fn1, j, len, ref1, ref2, ref3, ref4, ref5, ref6, ref7, useBlockMode;
     this.wrapperElement = wrapperElement;
     this.options = options1;
     this.readOnly = false;
@@ -6079,6 +6079,7 @@ exports.Editor = Editor = (function() {
     this.showPaletteInTextMode = (ref1 = this.options.showPaletteInTextMode) != null ? ref1 : false;
     this.paletteEnabled = (ref2 = this.options.enablePaletteAtStart) != null ? ref2 : true;
     this.dropIntoAceAtLineStart = (ref3 = this.options.dropIntoAceAtLineStart) != null ? ref3 : false;
+    this.allowFloatingBlocks = (ref4 = this.options.allowFloatingBlocks) != null ? ref4 : true;
     this.options.mode = this.options.mode.replace(/$\/ace\/mode\//, '');
     if (this.options.mode in modes) {
       this.mode = new modes[this.options.mode](this.options.modeOptions);
@@ -6137,13 +6138,13 @@ exports.Editor = Editor = (function() {
     this.bindings = {};
     this.view = new view.View(this.standardViewSettings);
     this.paletteView = new view.View(helper.extend({}, this.standardViewSettings, {
-      showDropdowns: (ref4 = this.options.showDropdownInPalette) != null ? ref4 : false
+      showDropdowns: (ref5 = this.options.showDropdownInPalette) != null ? ref5 : false
     }));
     this.dragView = new view.View(this.standardViewSettings);
     boundListeners = [];
-    ref5 = editorBindings.populate;
-    for (j = 0, len = ref5.length; j < len; j++) {
-      binding = ref5[j];
+    ref6 = editorBindings.populate;
+    for (j = 0, len = ref6.length; j < len; j++) {
+      binding = ref6[j];
       binding.call(this);
     }
     window.addEventListener('resize', (function(_this) {
@@ -6153,15 +6154,15 @@ exports.Editor = Editor = (function() {
     })(this));
     dispatchMouseEvent = (function(_this) {
       return function(event) {
-        var handler, k, len1, ref6, state, trackPoint;
+        var handler, k, len1, ref7, state, trackPoint;
         if (event.type !== 'mousemove' && event.which !== 1) {
           return;
         }
         trackPoint = new _this.draw.Point(event.clientX, event.clientY);
         state = {};
-        ref6 = editorBindings[event.type];
-        for (k = 0, len1 = ref6.length; k < len1; k++) {
-          handler = ref6[k];
+        ref7 = editorBindings[event.type];
+        for (k = 0, len1 = ref7.length; k < len1; k++) {
+          handler = ref7[k];
           handler.call(_this, trackPoint, event, state);
         }
         if (event.type === 'mousedown') {
@@ -6175,18 +6176,18 @@ exports.Editor = Editor = (function() {
     })(this);
     dispatchKeyEvent = (function(_this) {
       return function(event) {
-        var handler, k, len1, ref6, results, state;
+        var handler, k, len1, ref7, results, state;
         state = {};
-        ref6 = editorBindings[event.type];
+        ref7 = editorBindings[event.type];
         results = [];
-        for (k = 0, len1 = ref6.length; k < len1; k++) {
-          handler = ref6[k];
+        for (k = 0, len1 = ref7.length; k < len1; k++) {
+          handler = ref7[k];
           results.push(handler.call(_this, event, state));
         }
         return results;
       };
     })(this);
-    ref6 = {
+    ref7 = {
       keydown: [this.dropletElement, this.paletteElement],
       keyup: [this.dropletElement, this.paletteElement],
       mousedown: [this.dropletElement, this.paletteElement, this.dragCover],
@@ -6209,8 +6210,8 @@ exports.Editor = Editor = (function() {
         return results;
       };
     })(this);
-    for (eventName in ref6) {
-      elements = ref6[eventName];
+    for (eventName in ref7) {
+      elements = ref7[eventName];
       fn1(eventName, elements);
     }
     this.tree = new model.Document();
@@ -6844,15 +6845,18 @@ Editor.prototype.getPreserves = function(dropletDocument) {
   });
 };
 
-Editor.prototype.spliceOut = function(node) {
+Editor.prototype.spliceOut = function(node, container) {
   var dropletDocument, i, j, k, len, len1, operation, parent, record, ref1, ref2, socket;
+  if (container == null) {
+    container = null;
+  }
   if (!(node instanceof model.List)) {
     node = new model.List(node, node);
   }
   operation = null;
   dropletDocument = node.getDocument();
+  parent = node.parent;
   if (dropletDocument != null) {
-    parent = node.parent;
     operation = node.getDocument().remove(node, this.getPreserves(dropletDocument));
     this.pushUndo({
       operation: operation,
@@ -6886,6 +6890,8 @@ Editor.prototype.spliceOut = function(node) {
         }
       }
     }
+  } else if (container != null) {
+    container.remove(node);
   }
   this.prepareNode(node, null);
   this.correctCursor();
@@ -6898,12 +6904,14 @@ Editor.prototype.spliceIn = function(node, location) {
   if (container.type === 'block') {
     container = container.parent;
   } else if (container.type === 'socket' && container.start.next !== container.end) {
-    this.rememberedSockets.push(new RememberedSocketRecord(this.toCrossDocumentLocation(container), container.textContent()));
-    this.spliceOut(new model.List(container.start.next, container.end.prev));
+    if (this.documentIndex(container) !== -1) {
+      this.rememberedSockets.push(new RememberedSocketRecord(this.toCrossDocumentLocation(container), container.textContent()));
+    }
+    this.spliceOut(new model.List(container.start.next, container.end.prev), container);
   }
   dropletDocument = location.getDocument();
+  this.prepareNode(node, container);
   if (dropletDocument != null) {
-    this.prepareNode(node, container);
     operation = dropletDocument.insert(location, node, this.getPreserves(dropletDocument));
     this.pushUndo({
       operation: operation,
@@ -6912,6 +6920,7 @@ Editor.prototype.spliceIn = function(node, location) {
     this.correctCursor();
     return operation;
   } else {
+    container.insert(location, node);
     return null;
   }
 };
@@ -7506,23 +7515,36 @@ Editor.prototype.inDisplay = function(block) {
 };
 
 hook('mouseup', 0, function(point, event, state) {
-  var el, i, j, len, newDocument, palettePoint, ref1, ref2, ref3, ref4, rememberedSocketOffsets, renderPoint, trackPoint;
+  var addBlockAsFloatingBlock, el, i, j, len, newDocument, palettePoint, ref1, ref2, ref3, ref4, rememberedSocketOffsets, removeBlock, renderPoint, trackPoint;
   if ((this.draggingBlock != null) && (this.lastHighlight == null) && !this.dragReplacing) {
     trackPoint = new this.draw.Point(point.x + this.draggingOffset.x, point.y + this.draggingOffset.y);
     renderPoint = this.trackerPointToMain(trackPoint);
     palettePoint = this.trackerPointToPalette(trackPoint);
-    this.undoCapture();
-    rememberedSocketOffsets = this.spliceRememberedSocketOffsets(this.draggingBlock);
-    this.spliceOut(this.draggingBlock);
+    removeBlock = true;
+    addBlockAsFloatingBlock = true;
     palettePoint = this.trackerPointToPalette(point);
     if ((0 < (ref1 = palettePoint.x - this.scrollOffsets.palette.x) && ref1 < this.paletteCanvas.width) && (0 < (ref2 = palettePoint.y - this.scrollOffsets.palette.y) && ref2 < this.paletteCanvas.height) || !((-this.gutter.offsetWidth < (ref3 = renderPoint.x - this.scrollOffsets.main.x) && ref3 < this.mainCanvas.width) && (0 < (ref4 = renderPoint.y - this.scrollOffsets.main.y) && ref4 < this.mainCanvas.height))) {
       if (this.draggingBlock === this.lassoSelection) {
         this.lassoSelection = null;
       }
+      addBlockAsFloatingBlock = false;
+    } else {
+      if (renderPoint.x - this.scrollOffsets.main.x < 0) {
+        renderPoint.x = this.scrollOffsets.main.x;
+      }
+      if (!this.allowFloatingBlocks) {
+        addBlockAsFloatingBlock = false;
+        removeBlock = false;
+      }
+    }
+    if (removeBlock) {
+      this.undoCapture();
+      rememberedSocketOffsets = this.spliceRememberedSocketOffsets(this.draggingBlock);
+      this.spliceOut(this.draggingBlock);
+    }
+    if (!addBlockAsFloatingBlock) {
       this.endDrag();
       return;
-    } else if (renderPoint.x - this.scrollOffsets.main.x < 0) {
-      renderPoint.x = this.scrollOffsets.main.x;
     }
     newDocument = new model.Document({
       roundedSingletons: true
@@ -7679,6 +7701,10 @@ hook('mousedown', 6, function(point, event, state) {
   }
   palettePoint = this.trackerPointToPalette(point);
   if ((this.scrollOffsets.palette.y < (ref1 = palettePoint.y) && ref1 < this.scrollOffsets.palette.y + this.paletteCanvas.height) && (this.scrollOffsets.palette.x < (ref2 = palettePoint.x) && ref2 < this.scrollOffsets.palette.x + this.paletteCanvas.width)) {
+    if (this.handleTextInputClickInPalette(palettePoint)) {
+      state.consumedHitTest = true;
+      return;
+    }
     ref3 = this.currentPaletteBlocks;
     for (j = 0, len = ref3.length; j < len; j++) {
       entry = ref3[j];
@@ -8128,6 +8154,34 @@ Editor.prototype.handleTextInputClick = function(mainPoint, dropletDocument) {
   }
 };
 
+Editor.prototype.hitTestTextInputInPalette = function(point, block) {
+  var head;
+  head = block.start;
+  while (head != null) {
+    if (head.type === 'socketStart' && head.container.isDroppable() && this.paletteView.getViewNodeFor(head.container).path.contains(point)) {
+      return head.container;
+    }
+    head = head.next;
+  }
+  return null;
+};
+
+Editor.prototype.handleTextInputClickInPalette = function(palettePoint) {
+  var entry, hitTestResult, j, len, ref1;
+  ref1 = this.currentPaletteBlocks;
+  for (j = 0, len = ref1.length; j < len; j++) {
+    entry = ref1[j];
+    hitTestResult = this.hitTestTextInputInPalette(palettePoint, entry.block);
+    if (hitTestResult != null) {
+      if (hitTestResult.hasDropdown()) {
+        this.showDropdown(hitTestResult, true);
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
 hook('populate', 0, function() {
   this.dropdownElement = document.createElement('div');
   this.dropdownElement.className = 'droplet-dropdown';
@@ -8137,13 +8191,16 @@ hook('populate', 0, function() {
   return this.dropdownVisible = false;
 });
 
-Editor.prototype.formatDropdown = function(socket) {
+Editor.prototype.formatDropdown = function(socket, view) {
   if (socket == null) {
     socket = this.getCursor();
   }
+  if (view == null) {
+    view = this.view;
+  }
   this.dropdownElement.style.fontFamily = this.fontFamily;
   this.dropdownElement.style.fontSize = this.fontSize;
-  return this.dropdownElement.style.minWidth = this.view.getViewNodeFor(socket).bounds[0].width;
+  return this.dropdownElement.style.minWidth = view.getViewNodeFor(socket).bounds[0].width;
 };
 
 Editor.prototype.getDropdownList = function(socket) {
@@ -8172,16 +8229,19 @@ Editor.prototype.getDropdownList = function(socket) {
   });
 };
 
-Editor.prototype.showDropdown = function(socket) {
+Editor.prototype.showDropdown = function(socket, inPalette) {
   var dropdownItems, el, fn1, i, j, len, ref1;
   if (socket == null) {
     socket = this.getCursor();
+  }
+  if (inPalette == null) {
+    inPalette = false;
   }
   this.dropdownVisible = true;
   dropdownItems = [];
   this.dropdownElement.innerHTML = '';
   this.dropdownElement.style.display = 'inline-block';
-  this.formatDropdown(socket);
+  this.formatDropdown(socket, inPalette ? this.paletteView : this.view);
   ref1 = this.getDropdownList(socket);
   fn1 = (function(_this) {
     return function(el) {
@@ -8193,12 +8253,20 @@ Editor.prototype.showDropdown = function(socket) {
       div.style.paddingLeft = helper.DROPDOWN_ARROW_WIDTH;
       setText = function(text) {
         _this.undoCapture();
-        if ((!_this.cursorAtSocket()) || _this.dropdownElement.style.display === 'none') {
+        if (_this.dropdownElement.style.display === 'none') {
           return;
         }
-        _this.populateSocket(_this.getCursor(), text);
-        _this.hiddenInput.value = text;
-        _this.redrawMain();
+        if (inPalette) {
+          _this.populateSocket(socket, text);
+          _this.redrawPalette();
+        } else {
+          if (!_this.cursorAtSocket()) {
+            return;
+          }
+          _this.populateSocket(_this.getCursor(), text);
+          _this.hiddenInput.value = text;
+          _this.redrawMain();
+        }
         return _this.hideDropdown();
       };
       div.addEventListener('mouseup', function() {
@@ -8219,17 +8287,32 @@ Editor.prototype.showDropdown = function(socket) {
   this.dropdownElement.style.left = '-9999px';
   return setTimeout(((function(_this) {
     return function() {
-      var k, len1, location;
+      var dropdownTop, k, len1, location;
       if (_this.dropdownElement.offsetHeight < _this.dropdownElement.scrollHeight) {
         for (k = 0, len1 = dropdownItems.length; k < len1; k++) {
           el = dropdownItems[k];
           el.style.paddingRight = DROPDOWN_SCROLLBAR_PADDING;
         }
       }
-      location = _this.view.getViewNodeFor(socket).bounds[0];
-      _this.dropdownElement.style.top = location.y + _this.fontSize - _this.scrollOffsets.main.y + 'px';
-      _this.dropdownElement.style.left = location.x - _this.scrollOffsets.main.x + _this.dropletElement.offsetLeft + _this.mainCanvas.offsetLeft + 'px';
-      return _this.dropdownElement.style.minWidth = location.width + 'px';
+      if (inPalette) {
+        location = _this.paletteView.getViewNodeFor(socket).bounds[0];
+        _this.dropdownElement.style.left = location.x - _this.scrollOffsets.palette.x + _this.paletteCanvas.offsetLeft + 'px';
+        _this.dropdownElement.style.minWidth = location.width + 'px';
+        dropdownTop = location.y + _this.fontSize - _this.scrollOffsets.palette.y + _this.paletteCanvas.offsetTop;
+        if (dropdownTop + _this.dropdownElement.offsetHeight > _this.paletteElement.offsetHeight) {
+          dropdownTop -= _this.fontSize + _this.dropdownElement.offsetHeight;
+        }
+        return _this.dropdownElement.style.top = dropdownTop + 'px';
+      } else {
+        location = _this.view.getViewNodeFor(socket).bounds[0];
+        _this.dropdownElement.style.left = location.x - _this.scrollOffsets.main.x + _this.dropletElement.offsetLeft + _this.mainCanvas.offsetLeft + 'px';
+        _this.dropdownElement.style.minWidth = location.width + 'px';
+        dropdownTop = location.y + _this.fontSize - _this.scrollOffsets.main.y;
+        if (dropdownTop + _this.dropdownElement.offsetHeight > _this.dropletElement.offsetHeight) {
+          dropdownTop -= _this.fontSize + _this.dropdownElement.offsetHeight;
+        }
+        return _this.dropdownElement.style.top = dropdownTop + 'px';
+      }
     };
   })(this)), 0);
 };
@@ -12310,11 +12393,15 @@ exports.List = List = (function() {
     }
     helper.connect(list.end, after);
     list.notifyChange();
-    operation = new Operation('insert', list);
-    operation.location = location;
-    updates.forEach(function(x, i) {
-      return x.set(updateTokens[i].getLocation());
-    });
+    if (location != null) {
+      operation = new Operation('insert', list);
+      operation.location = location;
+      updates.forEach(function(x, i) {
+        return x.set(updateTokens[i].getLocation());
+      });
+    } else {
+      operation = null;
+    }
     return operation;
   };
 
@@ -13066,6 +13153,9 @@ exports.Token = Token = (function() {
     count = 0;
     head = this;
     dropletDocument = this.getDocument();
+    if (dropletDocument == null) {
+      return null;
+    }
     while (head !== dropletDocument.start) {
       head = head.prev;
       count += 1;

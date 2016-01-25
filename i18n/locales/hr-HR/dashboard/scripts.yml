@@ -146,7 +146,7 @@ hr:
           description_short: Nacrtaj cool slike i uzorke pomoću Umjetnika!
         hourofcode:
           Maze: Labirint
-          title: Hour of Code
+          title: Klasični labirint
           description: Isprobaj osnove informatike s likovima kao što su Angry Birds, Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
           description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
         frozen:
@@ -183,9 +183,9 @@ hr:
           Artist Binary: Umjetnik binarno
           description_audience: Dob 10+ (nakon Tečaja 3)
           Super Challenge - Variables: 'Super izazov - Varijable'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          Super Challenge - For Loops: 'Super izazov - For petlja'
+          Super Challenge - Functions and Parameters: 'Super izazov - funkcije i parametri'
+          Extreme Challenge - Comprehensive: 'Ekstremni izazov - sveobuhvatno'
         Course4pre:
           title: Preduvjeti za Tečaj 4
           description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve 2 i 3.
@@ -337,7 +337,7 @@ hr:
           The Farmer: Farmer
           Conditionals: Uvjeti
           The Artist 3: Umjetnik 3
-          Song Writing: Skladanje pjesmi
+          Song Writing: Skladanje pjesama
           The Farmer 2: Farmer 2
           Abstraction: Apstrakcija
           The Artist 4: Umjetnik 4
@@ -672,6 +672,15 @@ hr:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Petlje s uvjetom
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -908,7 +917,7 @@ hr:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -1226,6 +1235,7 @@ hr:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1340,6 +1350,28 @@ hr:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1390,10 +1422,11 @@ hr:
           description_audience: Dob 10+ (nakon Tečaja 3)
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Izradi priču ili načini igru s Ice Age Play Lab!
+          description: Izradi priču ili načini igru s Ice Age Play Lab!
           Ice Age Play Lab: Ice Age Play Lab
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1408,6 +1441,8 @@ hr:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1457,13 @@ hr:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Petlje s uvjetom
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1437,18 +1479,18 @@ hr:
           Challenge Overview: Challenge Overview
         gumball:
           title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Izradi priču ili načini igru s Gumball Play Lab!
+          description: Izradi priču ili načini igru s Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
+          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
+          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
           Hour of Code 2015: Sat kodiranja 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
+          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
+          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
           Hour of Code 2015: Sat kodiranja 2015
         minecraft:
           title: Minecraft
@@ -1456,7 +1498,23 @@ hr:
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: Minecraft Sat Kodiranja
+          description_short: Istraži Minecraft svijet pomoću koda
+          description: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu kroz ovaj svijet Minecrafta
           Hour of Code 2015: Sat kodiranja 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Dobro došli!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Wrap-Up
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

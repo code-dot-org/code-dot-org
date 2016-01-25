@@ -2,7 +2,7 @@ require_relative '../../pegasus/src/env'
 require 'cdo/solr'
 require src_dir 'database'
 
-SOLR = Solr::Server.new(host: 'ec2-54-83-22-254.compute-1.amazonaws.com')
+SOLR = Solr::Server.new(host: CDO.solr_server)
 
 def common_script_path(name)
   File.join(File.dirname(__FILE__), name)
@@ -59,7 +59,6 @@ def query_contacts(params)
   [].tap do |results|
     SOLR.query(params.merge(rows: 10000)).each do |i|
       next unless i
-      i['international'] = international?(i)
       results << {email: i['email_s'].downcase.strip, name: i['name_s'], international: international?(i).to_s}.merge(i.slice(*fields))
     end
   end

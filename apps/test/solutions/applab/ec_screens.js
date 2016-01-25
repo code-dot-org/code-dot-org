@@ -67,6 +67,10 @@ module.exports = {
         assert.equal($("#propertyRowContainer input:eq(0)").val(), 'screen1',
             'expected default screen property row container');
 
+        //Default button and delete button should not show up
+        assert.equal($('#propertyRowContainer button').length, 1, 'expected 1 button');
+        assert.equal($('#propertyRowContainer button').attr('class'), 'rainbow-gradient', 'should be color picker');
+
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
@@ -145,13 +149,26 @@ module.exports = {
         validatePropertyRow(0, 'id', 'screen2', assert);
 
         var deleteButton = $("#design-properties button").eq(-1);
-        assert.equal(deleteButton.text(), 'Delete');
+        assert.equal(deleteButton.text(), 'Delete', 'delete button on screen 2 should say delete');
+
+        // Both screen 1 and 2 should have delete buttons
+        $('#screenSelector').val('screen1');
+        ReactTestUtils.Simulate.change(screenSelector);
+        deleteButton = $("#design-properties button").eq(-1);
+        validatePropertyRow(0, 'id', 'screen1', assert);
+        assert.equal(deleteButton.text(), 'Delete', 'delete button on screen 1 should say delete');
+
+        $('#screenSelector').val('screen2');
+        ReactTestUtils.Simulate.change(screenSelector);
+        validatePropertyRow(0, 'id', 'screen2', assert);
+        deleteButton = $("#design-properties button").eq(-1);
+        assert.equal(deleteButton.text(), 'Delete', 'last button is delete button');
 
         ReactTestUtils.Simulate.click(deleteButton[0]);
 
         // Should have resulted in two new buttons
-        assert.equal($("#design-properties button").eq(-2).text(), 'No');
-        assert.equal($("#design-properties button").eq(-1).text(), 'Yes');
+        assert.equal($("#design-properties button").eq(-2).text(), 'No', 'second to last button should be no');
+        assert.equal($("#design-properties button").eq(-1).text(), 'Yes', 'last button should be no');
 
         ReactTestUtils.Simulate.click($("#design-properties button").eq(-1)[0]);
 
@@ -165,9 +182,10 @@ module.exports = {
         $("#design_screen1").click();
         validatePropertyRow(0, 'id', 'screen1', assert);
 
-        // One button, and it isn't delete
-        assert.equal($("#design-properties button").length, 1);
-        assert.equal($("#design-properties button").text(), '');
+        // Two buttons, first is color picker, second is default
+        assert.equal($("#design-properties button").length, 1, 'There should be one button');
+        assert.equal($("#design-properties button").first().attr('class'), 'rainbow-gradient',
+          'First button is color picker');
 
         // Change name
         var inputId = $('#design-properties input').first();
@@ -176,8 +194,8 @@ module.exports = {
         assert(document.getElementById('design_renamed_screen'));
 
         // Still can't delete
-        assert.equal($("#design-properties button").length, 1);
-        assert.equal($("#design-properties button").text(), '');
+        assert.equal($("#design-properties button").length, 1, 'There should be one button');
+        assert.equal($("#design-properties button:contains('Delete')").length, 0, 'None should say Delete');
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
@@ -545,11 +563,15 @@ module.exports = {
         assert.equal($("#designModeViz").children().length, 2, 'design mode has two screen divs');
         assert.equal($("#designModeViz #design_screen1 #design_button1").length, 1, 'design mode screen1 contains button1');
         assert.equal($("#designModeViz #design_screen2 #design_button2").length, 1, 'design mode screen2 contains button2');
+        assert.equal($("#propertyRowContainer button").last().text(), '', 'First screen should have no default button');
+        assert.equal($("#propertiesBody button").last().text(), 'Delete', 'last button should be delete');
 
         // drag a new screen in
         testUtils.dragToVisualization('SCREEN', 10, 10);
         assert.equal($("#designModeViz").children().length, 3, 'has three screen divs');
         validatePropertyRow(0, 'id', 'screen3', assert);
+        assert.equal($("#propertyRowContainer button").last().text(), 'Make Default', 'Third screen should have default button');
+        assert.equal($("#propertiesBody button").last().text(), 'Delete', 'last button should be delete');
 
         assert.equal($("#screenSelector").children().length, 4);
         assert.equal($("#screenSelector").children().eq(3).text(), "New screen...");
@@ -560,6 +582,8 @@ module.exports = {
 
         assert.equal($("#designModeViz").children().length, 4, 'has four screen divs');
         assert.equal($("#screenSelector").children().length, 5);
+        assert.equal($("#propertyRowContainer button").last().text(), 'Make Default', 'New screen should have default button');
+        assert.equal($("#propertiesBody button").last().text(), 'Delete', 'last button should be delete');
         validatePropertyRow(0, 'id', 'screen4', assert);
 
         Applab.onPuzzleComplete();

@@ -378,27 +378,27 @@ fi:
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: Nämä ovat piirtämispalikkasi. Käytä oikeaa palikkaa liikkuttaaksesi taiteilijaa sinne, minne hänen täytyy mennä täyttääkseen harmaat viivat.
+        text: Nämä ovat piirtämispalikkasi. Käytä oikeaa palikkaa liikuttaaksesi taiteilijaa sinne, minne hänen täytyy mennä täyttääkseen harmaat viivat.
       2:
         image: notes/C1_artist_intro_2.png
         text: Nämä ovat hyppypalikoita. Kun käytät näitä, taiteilija liikkuu, mutta ei piirrä, joten käytä näitä hypätäksesi seuraavalle harmaalle viivalle.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: 'Eivätkö mehiläiset olekin tosi siistejä? Tässä seuraavassa tehtäväryhmässä sinun tehtäväsi on auttaa mehiläistä pääsemään kukkiin, saamaan mettä kukista ja lentämään hunajakennon yli tehdäkseen hunajaa. Sinun täytyy käyttää "get nectar" ja "make honey" -palikoita tätä tehtävää varten.'
+        text: 'Eivätkö mehiläiset olekin tosi siistejä? Tässä seuraavassa tehtäväryhmässä sinun tehtäväsi on auttaa mehiläistä pääsemään kukkiin, saamaan mettä kukista ja lentämään hunajakennon yli tehdäkseen hunajaa. Sinun täytyy käyttää "kerää"- ja "tee" -palikoita tätä tehtävää varten.'
       2:
         image: notes/C1_bee_level_intro_2.png
-        text: 'Jokaisessa kukassa on eri määrä mettä: 1, 2, 3, tai enemmän. Tiedämme, miten paljon mettä on punaisissa kukissa, nurkassa olevasta pienestä numerosta. Varmista siis, että saat kaikki medet kukasta ennen kuin liikut eteen päin. Myös jokaiseen hunajakennoon mahtuu vain tietty määrä hunajaa: 1, 2, 3 tai enemmän. Joten muista tehdä niin paljon hunajaa kuin hunajakennoon mahtuu.'
+        text: 'Jokaisessa kukassa on eri määrä mettä: 1, 2, 3, tai enemmän. Tiedämme, miten paljon mettä on punaisissa kukissa, nurkassa olevasta pienestä numerosta. Varmista siis, että saat kaikki medet kukasta ennen kuin liikut eteenpäin. Myös jokaiseen hunajakennoon mahtuu vain tietty määrä hunajaa: 1, 2, 3 tai enemmän. Joten, muista tehdä niin paljon hunajaa, kuin hunajakennoon mahtuu.'
       3:
         image: notes/C1_bee_level_intro_3.png
         text: Jos pystyt saamaan kaikki medet ja tekemään kaiken hunajan, onnistut ja siirryt seuraavalle tasolle. Muussa tapauksessa sinun täytyy yrittää tätä tehtävää uudelleen. Leiki vähän aikaa ja koe, miltä tuntuu olla ohjelmoija!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: Silmukka on toiminnan toistamista. Joten menessäni mehiläispesälle tarkistamaan, katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä useita kertoja.
+        text: Silmukka on toiminnan toistamista. Mennessäni mehiläispesälle tarkistamaan, katson kehikon ja sitten laitan sen takaisin, joten toistan samaa toimintoa useita kertoja. Se on liikkumista silmukassa, saman toiminnon tekemistä useita kertoja.
       2:
         image: notes/C1_bee_loops_2.png
-        text: 'Tällä tasolla, haluamme mehiläisen keräävän kolme mettä kukasta. Sen sijaan, että käyttäisit kolmea "get nectar" -palikkaa, käytät "repeat" -palikkaa saadaksesi mettä kolme kertaa. Klikkaa "Run" ja katso, menikö sinulla oikein. Kivaa!'
+        text: 'Tällä tasolla, haluamme mehiläisen keräävän kolme mettä kukasta. Sen sijaan, että käyttäisit kolmea "kerää" -palikkaa, käytät "toista" -palikkaa saadaksesi mettä kolme kertaa. Klikkaa "Suorita" ja katso, menikö sinulla oikein. Kivaa!'
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -421,7 +421,7 @@ fi:
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: Hiekanveistossa sinun täytyy tietää että epäonnistuminen on osa ohjelmaa. Mutta jos jatkat, siitä ei tule mitään muuta kuin parempaa ja jännnittävämpää sinulle. Kärsivällisyys on pelin nimi. Pysy sen kanssa, tulet rakastamaan sitä.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
@@ -603,16 +603,16 @@ fi:
         text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia muotoja. Minne tahansa taiteilijasi liikkuukin, hän jättää kulkiessaan peräänsä viivan.
       3:
         image: notes/C2_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Liikkuaksesi kankaalla sinun tulee käyttää liiku eteenpäin palikkaa. Tämä liiku eteenpäin palikka käskee liikkumaan eteenpäin 100 pikselin verran. Kun painamme suorita, mitä tapahtuu? Taiteilija liikkuu eteenpäin juuri sadan pikselin verran. Nämä pikselit ovat käytännössä laitteesi näytöllä olevia todella pieniä neliöitä.
       4:
         image: notes/C2_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Toinen tehtävässä tarjolla olevista palikoista käskee kääntymään oikealla 90 astetta. Kun raahaamme sen mukaan, taiteilijamme kääntyy halutun verran. Voit kokeilla ja valita kuinka paljon pitäisi kääntyä. Tämä on 90 asteen käännös.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Ja tämä vuorostaan on 120 asteen käännös. Muista että voit milloin vain vaihtaa näitä lukuja, painamalla pikseleitä tai asteita osoittavaa lukua tai sen vieressä olevaa pikku kolmiota. Nauti piirtämisestä taiteilijasi kanssa!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -730,7 +730,7 @@ fi:
         text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
       2:
         image: notes/C2_maze_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Blockly on jaettu kolmeen pääosaan. Vasemmalla on lintulabyrintti, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle. Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on komento jonka lintu ymmärtää. Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme.
       3:
         image: notes/C2_maze_intro_3.png
         text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
@@ -740,7 +740,7 @@ fi:
           I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "Run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
       5:
         image: notes/C2_maze_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen roskakoriin. Kun painat Suorita, voit aina painaa Alusta-painiketta saadaksesi linnun takaisin alkuun. Nyt, annetaanpa sioille kyytiä!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
@@ -805,16 +805,16 @@ fi:
         text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: Näissä tehtävissä olet taiteilija, joka piirtää kynällään erilaisia muotoja. Minne tahansa taiteilijasi liikkuukin, hän jättää kulkiessaan peräänsä viivan.
       3:
         image: notes/C3_artist_intro_3.png
-        text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
+        text: Liikkuaksesi kankaalla sinun tulee käyttää liiku eteenpäin palikkaa. Tämä liiku eteenpäin palikka käskee liikkumaan eteenpäin 100 pikselin verran. Kun painamme suorita, mitä tapahtuu? Taiteilija liikkuu eteenpäin juuri sadan pikselin verran. Nämä pikselit ovat käytännössä laitteesi näytöllä olevia todella pieniä neliöitä.
       4:
         image: notes/C3_artist_intro_4.png
-        text: The other block we have in this puzzle says turn right by 90 degrees. And when we drag that out that makes our artist turn a certain amount. So you can play around with how far you want the artist to turn. This is a 90 degree turn.
+        text: Toinen tehtävässä tarjolla olevista palikoista käskee kääntymään oikealla 90 astetta. Kun raahaamme sen mukaan, taiteilijamme kääntyy halutun verran. Voit kokeilla ja valita kuinka paljon pitäisi kääntyä. Tämä on 90 asteen käännös.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values by clicking the arrows next to the numbers for pixels and degrees. Enjoy drawing with your artist!
+        text: Ja tämä vuorostaan on 120 asteen käännös. Muista että voit milloin vain vaihtaa näitä lukuja, painamalla pikseleitä tai asteita osoittavaa lukua tai sen vieressä olevaa pikku kolmiota. Nauti piirtämisestä taiteilijasi kanssa!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -872,19 +872,19 @@ fi:
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
-        text: "This lesson is computational thinking. Sometimes learning a new game can be tough, right? At first it might seem really confusing and sometimes, there's no one there to teach you the rules, so you have to figure it out on your own."
+        text: Tämä oppitunti sisältää automatisointiajattelua. Joskus uuden pelin oppiminen voi olla haastavaa, vai mitä? Aluksi kaikki voi tuntua todella sekavalta ja joskus ei ole edes olemssa ketään joka kertoisi sinulle pelin säännöt, joten sinun täytyy selvittää ne itse.
       2:
         image: notes/C3_computational_thinking_2.png
-        text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
+        text: Hyvä uutinen on, että voit tulla paremmaksi hahmottamaan uusia asioita, kun osaat muutamia ajattelutemppuja. Nämä temput ovat ainutlaatuisia tapoja tarkastella ja ratkaista ongelmia. Tällä oppitunnilla opit noin neljä temppua ja harjoittelet niitä ystäviesi kanssa selvittääksesi erään pelin säännöt.
       3:
         image: notes/C3_computational_thinking_3.png
-        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+        text: Kun purat suuren ongelman pienemmiksi paloiksi, käytät aivojasi ongelman hajoittamiseen. Ja kun suuri ongelma on hajoitettu pienemmiksi ongelmiksi, voimme siirtyä seuraavaan temppuun, jota kutsutaan mallien havainnoinniksi.
       4:
         image: notes/C3_computational_thinking_4.png
-        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+        text: Silloin etsimme yhtäläisyyksiä asioiden välillä. Kun löydämme asioita, jotka ovat samanlaisia, voimme selvittää, mitkä asiat ovat erilaisia. Näiden erojen poistamista kutsutaan abstrahoinniksi. (abstraktio)
       5:
         image: notes/C3_computational_thinking_5.png
-        text: "After I have figured out the steps to solving a problem, I can put those steps in a specific order called an algorithm so that anyone can use my directions to solve that problem. We're going to use these four steps to figure out how to play the game with no rules. By the end of the game, you'll be able to play something that looks like this!"
+        text: Kun olemme löytäneet askelet joilla ratkaista ongelma, voimme asettaa ne tiettyyn järjestykseen, tuottaen algoritmin. Nyt kuka tahansa voi käyttää ohjeitani tämän ongelman ratkaisemiseen. Aiomme käyttää näitä neljää vaihetta selvittääksemme kuinka pelata peliä jonka sääntöjä emme tunne. Pelin lopussa sinun tulisi pystyä pelaämaan jotain, joka näyttää tältä!
     C3_crowdsourcing:
       1:
         image: notes/C3_crowdsourcing_1.png
@@ -1076,7 +1076,7 @@ fi:
         text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
       2:
         image: notes/C4_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: Blockly on jaettu kolmeen pääosaan. Vasemmalla on lintulabyrintti, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle. Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on komento jonka lintu ymmärtää. Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme.
       3:
         image: notes/C4_intro_3.png
         text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
@@ -1086,7 +1086,7 @@ fi:
           I'm going to choose the "turn right" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press "run" again,  the bird will perform the commands that are stacked from top to bottom on our work space.
       5:
         image: notes/C4_intro_5.png
-        text: "If you ever want to delete a block, just remove it from the stack and drag it to the trash can. After you've hit run, you can always hit the reset button to get the bird back to the start. Now let's get those pigs!"
+        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen roskakoriin. Kun painat Suorita, voit aina painaa Alusta-painiketta saadaksesi linnun takaisin alkuun. Nyt, annetaanpa sioille kyytiä!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
@@ -1227,7 +1227,7 @@ fi:
         text: "What do you want to be when you grow up Olivia? An astronaut. Do you happen to know what a computer programmer is? Yeah um no. Ummm wait what? I'm not really sure how to explain it computer programming is pretty simple. It's a set of instructions like a recipe, you have to follow them step-by-step to get the end result you want."
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: "I can change the number of pixels, the length of the line, using this dropdown. How long was it again? You can see the instructions again by looking under the run button. Here I used the move forward block and I'm going to select 100 pixels. I can delete a block by dragging it into the toolbox or the trash can. Let's put it back."
+        text: Voin muuttaa pikselien määrää, viivan pituutta, käyttäen tätä alasvetovalikkoa. Kuinka pitkä sen pitikään olla? Voit katsoa ohjeita uudelleen Suorita-nappulan alapuolelta. Tässä käytimme Siirry eteenpäin -palikkaa ja aion valita matkaksi 100 pikseliä. Voin halutessani poistaa palikan vetämällä sen työkalupakkiin tai roskakoriin. Laitetaanpa se takaisin.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
         text: "Run the code by pressing run. Well that didn't work! I'll press reset and figure out what's wrong. You can try a puzzle as many times as you'd like and skip puzzles and come back to them. Just make sure to try your best and don't give up. Let's add another move forward. That still didn't work. I can place a block between other blocks."
@@ -1256,10 +1256,10 @@ fi:
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to take a big difficult problem and break it down into several simpler problems. The goal of this lesson is to write a set of instructions that someone can follow to draw one of the monsters included in the lesson plan.
+        text: Tämän automatisointiajattelun oppitunnin on tarkoitus opettaa sinulle, kuinka vaikea ongelma voidaan pilkkoa joukoksi useita yksinkertaisempia ongelmia. Oppitunnin tavoitteena on kirjoittaa joukko ohjeita, joita joku voi seurata ja piirtää jonkin oppitunnin kuvauksessa olevan hirviön.
       2:
         image: notes/unplug2_2.png
-        text: "Students will break into groups to write instructions and then they'll switch them with another group that will have to draw the monster. Groups will write instructions using the four steps of computational thinking: decomposition, pattern location, abstraction and algorithms."
+        text: 'Oppilaat jakautuvat ryhmiin kirjoittaakseen ohjeet ja vaihtavat ne sitten toisen ryhmän kanssa, jonka tehtävänä on piirtää hirviö. Ryhmät kirjoittavat ohjeet käyttäen automatisointiajattelun neljää vaihetta: osiin jakaminen, mallien havainnointi, abstraktio ja algoritmien luominen.'
       3:
         image: notes/unplug2_3.png
         text: "First groups will decompose the task which means make a game plan. Then they'll look for patterns between all the monsters in the catalog. When they come across differences between the monsters, they'll abstract or remove those details. For instance, one monster in the catalog has vegitas eyes and another has spritem eyes. But they both have eyes so we can write a line that says the monster has blank eyes."
@@ -1347,7 +1347,7 @@ fi:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Hei, olen Kathleen Kennedy ja olen elokuvan, Star Wars: Force Awakens, tuottaja. Tänään saat työskennellä yhden tähdistämme, BB-8:n parissa. BB-8 on pallomainen droidi. Kaikkea sen toimintaa ja liikkumista ohjaa tietokoneohjelmisto. Tietojenkäsittelytiede vaikuttaa kaikkiin teollisuudenaloihin, markkinoinnista terveydenhuoltoon tai elokuva-alalle. Itse asiassa tämäkin elokuva, The Force Awakens, vaati satojen tietokoneinsinöörien työpanoksen toteutuakseen.'
       2:
         image: notes/starwars_intro_2.JPG
         text: 'Hei olen Rachel Rose, ja olen vanhempi tuotekehitysinsinööri ILM:llä (Industrial Light and Magic), jossa johdan animaatio- ja olentojenkehitystiimiä. Elokuvassa The Force Awakens vastualueeni on auttaa taiteilijoita kehittämään hahmoillemme liikkuvat rungot, joiden avulla luomamme hahmot saadaan liikkumaan ja näyttämään hyvin uskottavilta tuossa kaukaisessa galaksissa.'
@@ -1356,91 +1356,95 @@ fi:
         text: Seuraavan tunnin aikana rakennamme oman star Wars pelin. Opetamme sinulle ohjelmoinnin perusasiat. Yleensä ohjelmointi tapahtuu pitkälti tekstillä, mutta me käytämme ohjelmointiin valmiita koodipalikoita, joista ohjelmia voidaan koota raahaamalla ne osaksi ohjelmaa. Konepellin alla luot kuitenkin ihan oikeaa koodia. Kun olet oppinut perusteet palikoita käyttäen, voit vaihtaa Javascript:iin, joka on yksi webin suosituimmista ohjelmointikielistä.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: Aluksi autamme Rey:tä ohjelmoimaan BB-8:n noutamaan tarvittavat romun palaset. Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on Star Wars -pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: 'Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on palanen ohjelmakoodia - käsky jonka BB-8 ymmärtää.'
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: 'Jos raahaan työtilaan "siirry vasemmalle" -palikan, mitä tapahtuu? BB-8 siirtyy yhden ruudun verran vasemmalle ruudukossa.'
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: 'Entä jos haluan BB-8:n tekevän jotain sen siirryttyä vasemmalle? Voin lisätä ohjelmaamme uuden palikan. Valitsen "siirry ylös"-palikan ja raahaan sen juuri "siirry vasemmalle"-palikan alle. Oikean paikan löytyessä ilmestyy pudotuskohtaan korostusväri. Päästäessäni nyt irti raahaamastani palikasta, palikat liittyvät yhteen.'
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Kun painan Suorita-nappia uudelleen, BB-8 tekee työtilaan kasaamani komennot järjestyksessä ylhäältä alas. Jos missään vaiheessa haluat poistaa yksittäisen koodipalikan, poista se komentojen pinkasta ja raahaa se takaisin työkalupakkiin.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: ' Painettuasi "Suorita", voit aina painaa "Alusta"-nappia palauttaaksesi BB-8:n alkuun. Lähdetäänpä rullailemaan!'
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: "Inside the blocks we've been using are JavaScript commands. JavaScript is the most popular programming language for professional developers today. Blocks are a great way to get started learning to code and in fact, top universities like Harvard and Berkeley start teaching this way. But once we learn the basics, engineers write code by typing because it allows us to go faster."
+        text: 'Palikoidemme sisällä olemme käyttäneet JavaScript-komentoja. JavaScript on tällä hetkellä maailman eniten käytetty ohjelmointikieli. Koodipalikat ovat mahtava tapa opetella ohjelmoimaan ja itse asiassa jopa huippuyliopistot kuten {harvardLink} ja {berkeleyLink} opettavat alkeita tällä tavoin. Kuitenkin kun alkeet ovat hallussa, insinöörit kirjoittavat koodinsa tekstimuodossa - se on lopulta aina nopeampaa.'
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Voimme kirjoittaa satoja komentoja etsimättä niitä työkalupakista tai raahaamalla niitä minnekään. Koska olet yhä oppimassa uutta, kirjoittaminen voi olla aluksi hitaampaa, mutta haluaisimme silti että kokeilet.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: 'Klikkaamalla "näytä teksti" -nappia työtilan oikeassa yläkulmassa, voit siirtyä missä tahansa tehtävässä palikkatilasta, tilaan, jossa kirjoitat koodisi tekstinä.'
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: Seuraavalla oppitunnilla aloitamme työt kirjoitustilassa. Täällä voit edelleen vetää lohkoja työkalupakista tai kirjoittaa komentojen nimiä käyttäen näppäimistöä. Kun alat kirjoittaa, näet mahdollisten komentojen nimet kirjoittamasi kohdan alapuolella. Sen sijaan että kirjoittaisit koko komennon nimen, voit valita jonkin niistä toimiaksesi nopeammin. Omassa työssäni käytän automaattista täydennystoimintoa aina kun kirjoitan koodia.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Kun kirjoitat koodia, sinun täytyy olla tarkka jotta tietokone osaa tulkita mitä tarkoitat. Jokaisen komennon nimi täytyy kirjoittaa täsmälleen oikein, kiinnittäen huomiota myös isoihin ja pieniin kirjaimiin. Sulkujen ja puolipisteiden tulee olla oikeilla paikoillaan. Pienikin kirjoitusvirhe, ja BB-8 lakkaa liikkumasta koska se ei enää ymmärrä koodiasi.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Jos teet virheen jollakin rivillä, virheesi korostetaan, jotta voit muuttaa tekstiäsi ja korjata ongelman.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Jos jäät jumiin, voit aina aloittaa alusta käyttäen Alusta -painiketta. Voit myös palata palikkanäkymään milloin tahansa, napsauttamalla nappia oikeassa yläkulmassa. No niin, kokeillaanpa vaihteeksi kirjoittaa koodia. Älä hermostu jos teet virheitä. Jokainen tarvitsee muutaman harjoituskerran saadakseen kaiken kohdalleen.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja, joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia. Teknologia onkin keskeistä tämän tavoitteen kannalta.
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin, jonka pääosassa seikkailevat R2-D2 ja C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu suoritetaan sinun määräämäsi komennot.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset, nuoli-näppäinten painamiset ja näytön napauttamiset.
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan. Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp() -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: Tätä varten käytämme komentoa nimeltä whenUp(). Kun vedät ulos komennon työkalupakista, huomaat että puolipisteen sijaan se alkaa ja loppuu kaarisulkeisiin. Tämä antaa meille tilaa laittaa muita komentoja kaarisulkeiden väliin. Jokainen käsky jonka asetamme näiden sulkeiden sisään suoritetaan kun pelaaja painaa ylänuolta.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Haluamme R2-D2:n liikkuvan ylöspäin, joten laitamme komennon sisään goUp(); -palikan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: Nyt, sen sijaan että kirjoittaisimme kaikki ohjeet droidillemme ennalta, voimme saada R2-D2:n reagoimaan näppäinten painalluksiin. Tällöin voimme liikuttaa droidia ympäri ruutua. Peli muuttuu näin askel askeleelta enemmän ja enemmän vuorovaikutteiseksi.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: 'Hei nimeni on Alice ja johdan tuote- ja suunnittelutiimejä täällä Code.org:issa. Olin mukana kehittämässä oppituntia, jota pelaat ja opiskelet juuri nyt.'
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 'Olet juuri saavuttanut viimeisen tason. Onnittelut! Olet juuri oppinut kaiken mitä sinun tarvitsee tietää tehdäksesi oman Star Wars pelin. Tästä eteenpäin ei ole enempää lisäohjeita, eikä pulmia ratkottaviksi. Voit tehdä oman pelin ja valita itse, miten kaikki toimii. Vielä yksi asia - olet juuri saanut käyttöösi uusia ääniä ja uusia komentoja joilla voit tehdä vielä enemmän.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat kymmentätuhatta sikaa voitat pelin.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: |
+          [opiskelijat kertovat]
+          "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
+          "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
+          "Pelin kehittäjänä saat joskus melkoisen edun kun tunnet pelisi. Sainko minä? Takuulla!"!
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: Kun olet saanut pelisi valmiiksi, voit jakaa saamasi linkin kaveriesi kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -1453,158 +1457,268 @@ fi:
         text: Seuraavan tunnin aikana tulemme rakentamaan oman Star Wars pelin ja oppimaan ohjelmoinnin perusasioita. Yleensä ohjelmointi tapahtuu pitkälti tekstillä, mutta me käytämme ohjelmointiin valmiita koodipalikoita, joista ohjelmia voidaan koota raahaamalla ne osaksi ohjelmaa. Aluksi autamme Rey:tä ohjelmoimaan BB-8:n, keräämään kaikki tarvittavat romuosaset.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on Tähtien Sota -pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: 'Keskimmäinen alue on työkalupakki, ja jokainen sen sisältämistä palikoista on palanen ohjelmakoodia - käsky jonka BB-8 ymmärtää.'
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: Valkea alue ruudun oikeassa laidassa on työtila, jonne tulemme rakentamaan ohjelmamme.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: 'Jos raahaan työtilaan "siirry vasemmalle" -palikan, mitä tapahtuu? BB-8 siirtyy yhden ruudun verran vasemmalle ruudukossa.'
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: 'Entä jos haluan BB-8:n tekevän jotain sen siirryttyä vasemmalle? Voin lisätä ohjelmaamme uuden palikan. Valitsen "siirry ylös"-palikan ja raahaan sen juuri "siirry vasemmalle"-palikan alle. Oikean paikan löytyessä ilmestyy pudotuskohtaan korostusväri. Päästäessäni nyt irti raahaamastani palikasta, palikat liittyvät yhteen. Kun painan "Suorita"-nappia, BB-8 suorittaa työtilaan kasaamamme komennot järjestyksessä ylhäältä alas.'
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Jos haluat joskus poistaa palikan, voit vain poistaa sen pinosta vetämällä sen työkalupakkiin.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: 'Painettuasi "Suorita", voit aina painaa "Alusta"-nappia palauttaaksesi BB-8:n alkuun. Lähdetäänpä rullailemaan!'
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Hei, nimeni on Charita Carter. Olen vanhempi luova tuottaja täällä Walt Disney Imagineering:illa. Vastuullani on johtaa tiimejä, jotka tuottavat vierailukohteet, jotka vieraamme pääsevät kokemaan. Etsimme jatkuvasti tapoja, joilla voimme kehittyä ja siten luoda asiakkaillemme yhä hienompia kokemuksia. Teknologia onkin keskeistä tämän tavoitteen kannalta.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Onnittelut, sinä teit sen! Olet ohjelmoinut BB-8:n. Nyt olemme valmiita kokeilemaan jotain vaikeampaa, joten eiköhän jatketa. Nyt kun olet oppinut ohjelmoinnin perusteet, matkaamme ajassa taaksepäin rakentamaan oman pelin, jonka pääosassa seikkailevat R2-D2 ja C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'Tehdäksemme pelin, meidän tulee oppia jotakin, joka on peliohjelmoijille arkipäivää - eli mitä ovat tapahtumat. Tapahtumien avulla ohjelmasi voi kuunnella tai odottaa tiettyjen asioiden tapahtumista. Kun jotain tapahtuu suoritetaan sinun määräämäsi komennot.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Esimerkkejä tapahtumista, joita voidaan kuunnella, ovat hiiren napsautukset, nuoli-näppäinten painamiset ja näytön napauttamiset.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Nyt tarkoituksenamme on saada R2-D2 liikkumaan ylöspäin ja toimittamaan viesti yhdelle kapinallispilotille ja sitten jatkamaan alaspäin toisen pilotin luo. Käytämme tapahtumia saadaksemme sen liikkumaan, kun pelaaja käyttää ylös/alas nuolinäppäimiä tai vastaavia nappuloita ruudulla.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Käytämme whenUp() -tapahtumapalikkaa ja liitämme siihen goUp() -palikan. Kun pelaaja painaa nuolinäppäintä ylös, koodi joka on liitetty whenUp() -palikkaan suoritetaan. Samalla tavoin saamme R2-D2:n liikkumaan myös alaspäin. Nyt R2-D2 reagoi näppäinten painalluksiin ja liikkuu niiden mukaan ruudulla, sen sijaan, että se vain seuraisi ennalta koodattuja ohjeita.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Pelisi tulee askel askeleelta yhä vuorovaikutteisemmaksi.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: 'Hei nimeni on Alice ja johdan tuote- ja suunnittelutiimejä täällä Code.org:issa. Olin mukana kehittämässä oppituntia, jota pelaat ja opiskelet juuri nyt.'
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: 'Olet juuri saavuttanut viimeisen tason. Onnittelut! Olet juuri oppinut kaiken mitä sinun tarvitsee tietää tehdäksesi oman Star Wars pelin. Tästä eteenpäin ei ole enempää lisäohjeita, eikä pulmia ratkottaviksi. Voit tehdä oman pelin ja valita itse, miten kaikki toimii. Vielä yksi asia - olet juuri saanut käyttöösi uusia ääniä ja uusia komentoja joilla voit tehdä vielä enemmän.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[opiskelijat kertovat] Me teimme pelin jossa voi kerätä pisteitä jahtaamalla Paisusikoja. Jujuna on että aina kun pyydystät paisusian, yksi stormtrooper ilmestyy kentälle. Lopulta koko ruutu on pullollaan paisusikoja ja kun kosketat kymmentätuhatta sikaa voitat pelin.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: |
+          [opiskelijat kertovat]
+          "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
+          "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
+          "Pelin kehittäjänä saat joskus melkoisen edun kun tunnet pelisi. Sainko minä? Takuulla!"!
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: Kun olet saanut pelisi valmiiksi, voit jakaa saamasi linkin kaveriesi kanssa tai vaikkapa kokeilla peliäsi kännykällä. Pidä hauskaa!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Olen Jens Bergensten, eli Jeb. Toimin pääkehittäjänä Mojangilla Tukholmassa. Olin 11 tai 12 kun aloitin ohjelmoinnin, koska halusin tehdä pelejä. Sain kuulla, että pelejä tehtäessä pitää osata ohjelmoida. Siitä urani sai alkunsa. Tykkään suunnittelusta ja arkkitehtuurista. Sen vuoksi pidän paljon Minecraftista.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: Seuraavan tunnin aikana opettelemme ohjelmoinnin perusteita Alexin ja Steven avulla. Autamme heitä liikkumaan Minecraft-maailmassa.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Tavallisesti ohjelmointi tehdään koodilla, mutta tänään käytämme Blocklya, jonka avulla voimme ohjelmoida palikoilla. Pinnan alla koodaatte JavaScriptillä.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Opitte konsepteja, joita ohjelmoijat käyttävät päivittäin ja jotka toimivat ohjelmoinnin perustana. Mojangilla me käytämme samoja konsepteja Minecraftin ohjelmoinnissa.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Valitaan ensin hahmo. Minä valitsen Alexin. Ohjelmoidaan koodi, joka auttaa häntä liikkumaan ruudulla.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Ruutu on jaettu kolmeen osaan. Vasemmalla on Minecraft-pelimaailma, jossa ohjelma pyörii. Kunkin tason ohjeet ovat alla.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Työkalut ovat keskellä. Nämä palikat ohjaavat Alexin toimintaa.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: 'Jos vedämme "liiku eteenpäin" -palikan työtilaan ja suoritamme, mitä tapahtuu? Alex liikkuu yhden ruudun eteenpäin.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: 'Entä jos haluamme Alexin tekevän jotain muuta liikkumisen jälkeen? Voimme lisätä toisen palikan ohjelmaan. Valitsen "käänny oikeaan" -palikan ja vedän sen "liiku eteenpäin" -palikan alle siten, että oranssi kehys ilmestyy. Palikat napsahtavat kiinni toisiinsa. Kun suoritan, Alex seuraa jonossa olevia käskyjä ylhäältä alas.'
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Jos haluat poistaa komennon, vedä se jonosta takaisin työkaluihin.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Peru tekemäsi muutokset ja palauta taso alkuasetelmaan Start Over [Aloita alusta] -painikkeella, joka on oikeassa yläkulmassa. Entäpä tuo pieni kolmio kääntymiskomennossa? "Kolmio tarkoittaa, että voit valita eri vaihtoehtoja." Aletaan koodata!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Olen Lydia Winters, Mojangin brändijohtaja. Me teimme pelin nimeltä Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Tutkiminen on suosikkipuuhaani Minecraftissa. Rakastan luolissa seikkailemista. En itse ole ohjelmoija, joten minusta on jännittävää ottaa osaa harjoitukseen ja oppia koodaamista itsekin.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: 'Viimeksi käytimme paljon "liiku eteenpäin" -palikkaa. Olisi hyvä, jos tietokone automatisoisi liikkeet. Onneksi tietokoneet ovat tosi hyviä toistamaan komentoja toistorakenteilla, eli luupeilla.'
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Kun rakennamme Minecraftia, käytämme luuppeja maailman luomisessa. Se tarkoittaa tuhansia ja taas tuhansia kuutioita. Käytämme luuppeja muuhunkin, kuten Alexin jalkojen liikuttamiseen. Luupit ovat tehokas osa ohjelmointia.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: Yö lähestyy, joten rakennamme talon suojaksemme. Se on helppoa toistopalikan avulla.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: Jos haluamme seinän taloon, voimme käskeä Alexin liikkua eteenpäin ja asettaa lankun neljä kertaa. Voimme myös tehdä komennon vain kerran ja käyttää sitä useita kertoja toistopalikan avulla. Napsautamme toistopalikkaa ja määrittelemme toistojen määrän. Rakennetaan talo, ennen kuin on yö. Pidä hauskaa!
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: Nyt opimme jos-lauseista. Ne ovat yksi ohjelmoinnin perustekijöistä. Ne auttavat tietokoneita tekemään päätöksiä.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: Kaikki tietokoneet käyttävät jos-lauseita. Puhelimenikin käyttää. Kun avaan sen, koodi määrää, että jos salasana on oikea, puhelimeni aukeaa, muutoin tulee virheilmoitus.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: Jos-lauseilla voit koodata Steven ja Alicen reagoimaan pelimaailmaan. Esimerkiksi jos edessä on kivi, he voivat kääntyä vasemmalle tai puun kohdalla oikealle.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: Emme halua pudota laavaan. Laavaa on helppo väistellä, koska näemme sen. Mutta entä kiven alla oleva laava?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: Kun olemme louhineet kiven pois, meidän on tarkistettava, onko alla laavaa, ennen kuin jatkamme. Jos kiven alla on laavaa, hahmon eteen on syytä asettaa mukulakivi, jotta voimme edetä turvassa. Aloitetaan louhiminen! Muista varoa askeleitasi jos-lauseiden avulla.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Onneksi olkoon! Nyt olet oppinut ohjelmoinnin perusteet.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista. - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: 'Voit jakaa valmiin luomuksesi ystävillesi jakolinkin avulla. - Pidä hauskaa!'
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Onneksi olkoon! Nyt olet oppinut ohjelmoinnin perusteet.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Nyt voit käyttää palikoita omiin luomuksiisi. Enää ei ole ohjeita tai selvitettäviä tehtäviä. Voit rakentaa ihan mitä haluat. Saat itse valita.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[oppilaat puhuvat] Nyt alkaa tapahtua. Keritse. - Tein L:n soihduista. - Tein A:n koivulankuista. Se toimii! - Me teimme talon villasta!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: 'Voit rakentaa ihan mitä haluat. - Pidä hauskaa!'
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Oikealla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Näyttösi on jaettu kolmeen pääosaan. Vasemmalla on pelialue, jossa ohjelmasi suoritetaan. Ohjeet kullekin tasolle on kirjoitettu tämän alle.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Vasemmalla oleva alue on työtila. Työtilassa rakennamme ohjelmamme.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

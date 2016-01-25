@@ -478,7 +478,7 @@ bg:
         text: За да научим повече за отстраняване на грешките, ние ще започнем с набор от блокове вече в сцената. Ще забележите, че с тези блокове няма да се стигнете до целта. Ние трябва да ги проследите блоковете и да ги оправите. Какво се е объркало? Ще забележите, че имате нужда да продължите на запад с един блок повече.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Нека да се определим това чрез добавяне на друг блок на запад и натиснете Старт,, за да видим дали е правилно. Уау, направил си го!
+        text: 'Нека да се определим това чрез добавяне на друг блок на запад и натиснете "Старт,, за да видим дали е правилно. Уау, направил си го!'
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
@@ -492,14 +492,14 @@ bg:
         text: Едно от нещата, в които компютрите са наистина добри е повтарянето на команди. Като човек, за Вас е наистина скучно, ако трябва да направите едно и също нещо много и много пъти. Но компютърът може да прави едно и също нещо милиони или дори милиарди пъти и да не се отегчава, а дори ще изпълнява това винаги наистина добре.
       2:
         image: notes/C1_maze_loops_2.png
-        text: Например, ако исках да пожелая на всички от Facebook Честит рожден ден като им изпратя имейл, това можеше да ми отнеме повече от век, ако пишех всички тези имейли по отделно. Но само с няколко линии код, може да имам система, която ще изпрати имейл до всички във Facebook, които имат рожден ден днес.
+        text: 'Например, ако исках да пожелая на всички рожденици от Facebook "Честит рожден ден" като им изпратя имейл, това можеше да ми отнеме повече от век, ако пишех всички тези имейли по отделно. Но само с няколко линии код, може да имам система, която ще изпрати имейл до всички във Facebook, които имат рожден ден днес.'
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'За да придвижим птицата към прасето в това ниво..., вместо да плъзнете три С блокове към работната област, ще използвате "повтори" блок. Плъзнете "повтори" блок към работната област и въведете 3 на мястото на???. След това плъзнете С блок в "повтори" блока и натиснете "Старт. Честито! Готово!'
+        text: 'За да придвижим птицата към прасето в това ниво..., вместо да плъзнете три "С" блокове към работната област, ще използвате "повтори" блок. Плъзнете "повтори" блок към работната област и въведете 3 на мястото на???. След това плъзнете С блок в "повтори" блока и натиснете "Старт. Честито! Готово!'
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: Този урок се нарича я премести го, премести го. Заедно, ние ще напишем програма, за да преведем съучениците си от компаса до усмихнатия емотикон.
+        text: Този урок се нарича премести го, премести го. Заедно, ние ще напишем програма, за да преведем съучениците си от компаса до усмихнатия емотикон.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
         text: Но усмихнатия емотикон е с лицето надолу и само един човек знае как се стига до него. Нека да стартираме програмата.
@@ -521,7 +521,7 @@ bg:
         text: 'Понякога в интернет аз говоря с хора, които познавам, като баба ми, която живее в друг град. Здравей, бабо! Тя ми прави "бисквитки", които ще ми изпрати за моя рожден ден. "Сладко, искам интернет да има миризмограф!" Мога да говоря с различни хора в интернет, като братовчед ми, но говоря само с хора, които познавам.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: Това което ми харесва най-много в Интернет е, че мога играят Забавни игри. Точка! Също така обичам да рисувам и създаване на нови неща и да го споделите с приятелите си. Готино! Понякога посещавам уеб сайтове, където да науча нови неща, но винаги се придържам към уеб сайтове, които са подходящи за мен. Уау динозаври!
+        text: Това, което ми харесва най-много в Интернет е, че могат да се играят Забавни игри. Да събирам точки! Също така, обичам да рисувам и създавам нови неща и да ги споделям с приятелите си. Готино! Понякога посещавам уеб сайтове, където да науча нови неща, но винаги се придържам към уеб сайтове, които са подходящи за мен. Уау динозаври!
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'Интернет е супер забавно място. Но точно както когато пресичате улица във вашия квартал, вие трябва да бъдете внимателни, когато сте онлайн. Това са три правила за запомняне. Правило №1: Винаги питам първо родителите си. Правило №2: Говорим само с хора, които познаваме. Правило №3: Да посещаваме места, които са точно за нашата възраст.'
@@ -550,7 +550,7 @@ bg:
         text: Компютрите могат да бъдат наистина умни, но те могат да ви разбират, ако им кажете точно какво искате стъпка по стъпка. Голямото нещо за алгоритмите е, че ако следвате инструкциите в правилния ред, можете да направите нещо, което не сте знаели как се прави преди време. Това е като рецепта.
       3:
         image: notes/C1_planting_seed_3.png
-        text: Днес, ние ще посадим наши собствени семена, като ще използваме алгоритъм. Създайте свой собствен алгоритъм като изрежите снимките. Изберете снимките, които показват стъпките в засаждане на семена и подредете тези снимки в правилния ред.
+        text: Днес, ние ще посадим наши собствени семена, като за това ще използваме алгоритъм. Създайте свой собствен алгоритъм като изрежите снимките. Изберете снимките, които показват стъпките в засаждане на семена и подредете тези снимки в правилния ред.
       4:
         image: notes/C1_planting_seed_4.png
         text: Сега е време да видите дали вашият алгоритъм работи. Следвайте стъпките в алгоритъма много внимателно. Те в правилния ред ли са? Успяхте ли да засадите семенатакато следвахте алгоритъма? Това е като програмиране със снимки!
@@ -583,7 +583,7 @@ bg:
         text: Едно от нещата, в които компютрите са наистина добри е повтарянето на команди. Като човек, за Вас е наистина скучно, ако трябва да направите едно и също нещо много и много пъти. Но компютърът може да прави едно и също нещо милиони или дори милиарди пъти и да не се отегчава, а дори ще изпълнява това винаги наистина добре.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: Например, ако исках да пожелая на всички от Facebook Честит рожден ден като им изпратя имейл, това можеше да ми отнеме повече от век, ако пишех всички тези имейли по отделно. Но само с няколко линии код, може да имам система, която ще изпрати имейл до всички във Facebook, които имат рожден ден днес.
+        text: 'Например, ако исках да пожелая на всички рожденици от Facebook "Честит рожден ден" като им изпратя имейл, това можеше да ми отнеме повече от век, ако пишех всички тези имейли по отделно. Но само с няколко линии код, може да имам система, която ще изпрати имейл до всички във Facebook, които имат рожден ден днес.'
       3:
         image: notes/C1_zuck_repeat_loop_3.png
         text: В този пример Вашата цел ще бъде да преместите птицата, така че да хване прасето. Вече можем да използваме блок за повторение, за да може да направим това много по-лесно. Кажете на компютъра да върви стъпка напред веднъж а след това му кажете да я повтаря пет пъти.
@@ -612,33 +612,33 @@ bg:
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
-        text: Това е условен блок. Той казва, ако има нектар или мед, който е по-малък, равен или по-голям от посочения, тогава направи нещо.
+        text: Това е блок условие. Той казва, ако има нектар или мед, който е по-малък, равен или по-голям от посочения, тогава да се направи нещо.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем, когато виждаме само този въпросителен знак.
+        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем и виждаме само този въпросителен знак.
       3:
         image: notes/C2_bee_conditionals_3.png
-        text: В този пример ние ще да кажем Ако лилавото цвете има нектар по-голям от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме нектар, докато има. TA-даа!
+        text: В този пример, ние ще трябва да кажем Ако лилавото цвете има нектар по-голям от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме нектар, докато има. TA-даа!
     C2_binary_bracelets:
       1:
         image: notes/C2_binary_bracelets_1.png
-        text: Това е урок за бинарни гривни. Ние ще създадем код на нашите инициали на гривна, която можем да носим и показваме на всички наши приятели!
+        text: Това е урок за бинарни гривни. Ние ще създадем код с нашите инициали на гривна, която можем да носим и показваме на всички наши приятели!
       2:
         image: notes/C2_binary_bracelets_2.png
         text: Binary е начин на представяне на информация, използвайки само две опции. Понякога хора мислят за това като само 1-ци и 0-ли. Но Вие може да си представите комбинациите от включено/изключено, нагоре/надолу и навън/навътре или всеки набор от противоположности.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: Здравейте аз съм Орион и аз програмирам роботи тук в Play-im. Всички компютърни и роботски мозъци, на базово ниво са малки електронни порти. Когато вратата е отворена, може свободно да преминава ток и когато тя е затворена, електричество не преминава.
+        text: Здравейте аз съм Орион и програмирам роботи тук в Play-im. Всички компютърни и роботски мозъци на базово ниво са малки електронни порти. Когато вратата е отворена, може свободно да преминава ток, а когато тя е затворена, електричество не преминава.
       4:
         image: notes/C2_binary_bracelets_4.png
-        text: Пример за бинарност са очите на робота. Очите на робота са светодиоди и те са светлини, които са включени или изключени. Това е бинарна система, едното или другото. Можем да използваме осветлението да представяме двоични числа. Ако имаме набор от роботи, можем да кажем, че първият робот е 1s място и вторият робот е 2s място, третият робот е 4s място и така нататък. Ето как вие можете да представите двоично число. Роботите ще го направят с очите си и ще преброят за вас.
+        text: Пример за бинарност са очите на робота. Очите на робота са светодиоди и светят, те са включени или изключени. Това е бинарна система-едно нещо или друго. Можем да използваме осветлението, за да представяме двоични числа. Ако имаме набор от роботи, първият робот ще е на първо място, вторият робот на второ място и така нататък. Ето как вие можете да представите двоично число. Роботите ще го направят с очите си и ще преброят за вас.
     C2_conditionals_with_cards:
       1:
         image: notes/C2_conditionals_with_cards_1.png
         text: Този урок се нарича условия с карти. Всеки ден Вие взимате решения въз основа на това, което виждате и чувате.
       2:
         image: notes/C2_conditionals_with_cards_2.png
-        text: Искам да отида в парка, но първо трябва да реша дали трябва да взема чадър или не. Така че, аз поглеждам през прозореца. Ако е облачно, ще взема моя чадър. Иначе аз ще взема очила. Мисля, че ще взема чадър. Това, което виждате и чувате определя какво ще вземете в парка.
+        text: Искам да отида в парка, но първо трябва да реша дали трябва да взема чадър или не. Така че, аз поглеждам през прозореца. Ако е облачно, ще взема моя чадър. Иначе ще си взема очила. Мисля, че ще взема чадър. Това, което виждате и чувате определя какво ще вземете в парка.
       3:
         image: notes/C2_conditionals_with_cards_3.png
         text: 'Условията се използват и в игрите. Днес ние започваме да се упражняваме в условията с игра на карти. В тази игра картата, която вадиш определя това, което моите приятели ще направят. Ако извадя седмица, всеки пляска. Иначе всеки казва "о." Нека да го опитате! "aw" "Наздраве"'
@@ -654,17 +654,17 @@ bg:
         text: Тук вече имаме някои блокове, поставени в работното място. Но нещо не е наред.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: 'Нека да проследим този код като забавим скоростта и го гледаме, как работи всеки блок - стъпка по стъпка.'
+        text: 'Нека да проследим този код като забавим скоростта и гледаме как работи всеки блок - стъпка по стъпка.'
       3:
         image: notes/C2_artist_debugging_3.png
         text: О, там е проблемът! Котешките мустаци са 75 пиксела дълги, не 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: Чувал ли си някога за дебъгване на програма? Това е начина, по който да разберете какво не работи. Когато поправяте код, Вие идентифицирате и премахвате грешки.
+        text: Чувал ли си някога за дебъгване на програма? Това е начина, по който да разбереш какво не работи. Когато поправяш код, ти идентифицираш и премахваш грешки.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: 'Тук, ние сме поставили няколко блока в работното място. Ние ще да използваме "стъпка" бутона, за да проследим действието на блокове, стъпка по стъпка, за да разберем дали това е правилното решение и къде може да се наложи да го поправим.'
+        text: 'Тук, ние сме поставили няколко блока в работното поле. Ние ще да използваме "стъпка" бутона, за да проследим действието на блокове, стъпка по стъпка, за да разберем дали това е правилното решение и къде може да се наложи да го поправим.'
       3:
         image: notes/C2_bee_debugging_3.png
         text: 'Изглежда, че там е нашият проблем! Имаме нужда от още един "напред" блок. Бутона "стъпка" ни помага да поправим нашия проблем чрез откриване и поправяне на грешките.'
@@ -697,10 +697,10 @@ bg:
         text: 'Този урок се нарича "Програмиране на милиметрова хартия" и става въпрос за алгоритми. Днес, ние ще се научим как да пишем програми, чрез които ще пресъздадем простички черно-бели изображения, използвайки само ръчно изписани стрели.'
       2:
         image: notes/C2_graph_paper_2.png
-        text: Алгоритъм е списък с инструкции за изпълнение на задача. Ние ще следваме този набор от инструкции, за да направи Купа. Алгоритмите са наистина полезни, когато трябва някой да разбере как да се направи нещо.
+        text: Алгоритъм е списък с инструкции за изпълнение на задача. Ние ще следваме този набор от инструкции, за да направим купа. Алгоритмите са наистина полезни, когато трябва някой да разбере как да се направи нещо.
       3:
         image: notes/C2_graph_paper_3.png
-        text: Ако пишете алгоритъм за компютър, трябва да го разделяме до много малки стъпки. Попълнете този ред и преминете към следващия, после следващия и вие ще го направите.
+        text: Ако пишем алгоритъм за компютър, трябва да го разделяме до много малки стъпки. Попълнете този ред и преминете към следващия, после следващия и ще го направите.
       4:
         image: notes/C2_graph_paper_4.png
         text: Аз използвам алгоритми в моята работа. Ако опиша всички стъпки ще мога да пресъздам същото парче отново, или мога да науча някой друг да го направи. Сложете стъклото в пещ, докато парчетата се слеят, следвайте останалата част от инструкциите, за да направите купа. Алгоритмите ще Ви дадат пътна карта, за да направите нещо.
@@ -812,24 +812,24 @@ bg:
         text: Когато поставите цикъл в друг цикъл, ние наричаме това вложен цикъл. За пример, тук ние сме дали кода на вече изготвения триъгълник със страни, дълги 100 пиксела, като използвате блок за повторение и го настроите на 3, по веднъж за всяка страна на триъгълника.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+        text: Но ние искаме да начертаем шест триъгълника. За да направим това, трябва да вземем този цикъл и да го поставим в друг. Много готино!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
-        text: Това е условен блок. Той казва, ако има нектар или мед, който е по-малък, равен или по-голям от посочения, тогава направи нещо.
+        text: Това е блок условие. Той казва, ако има нектар или мед, който е по-малък, равен или по-голям от посочения, тогава да се направи нещо.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем, когато виждаме само този въпросителен знак.
+        text: Това е полезно, когато не знаем колко е нектара или меда, за да го вземем и виждаме само този въпросителен знак.
       3:
         image: notes/C3_bee_conditionals_3.png
-        text: В този пример ние ще да кажем Ако лилавото цвете има нектар по-голям от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме нектар, докато има. TA-даа!
+        text: В този пример, ние ще трябва да кажем Ако лилавото цвете има нектар по-голям от 0, вземи нектар. Това ще кажем на нашата пчела, за да събираме нектар, докато има. TA-даа!
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: Чувал ли си някога за дебъгване на програма? Това е начина, по който да разберете какво не работи. Когато поправяте код, Вие идентифицирате и премахвате грешки.
+        text: Чувал ли си някога за дебъгване на програма? Това е начина, по който да разбереш какво не работи. Когато поправяш код, ти идентифицираш и премахваш грешки.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: 'Тук, ние сме поставили няколко блока в работното място. Ние ще да използваме "стъпка" бутона, за да проследим действието на блокове, стъпка по стъпка, за да разберем дали това е правилното решение и къде може да се наложи да го поправим.'
+        text: 'Тук, ние сме поставили няколко блока в работното поле. Ние ще да използваме "стъпка" бутона, за да проследим действието на блокове, стъпка по стъпка, за да разберем дали това е правилното решение и къде може да се наложи да го поправим.'
       3:
         image: notes/C3_debugging_bee_3.png
         text: 'Изглежда, че там е нашият проблем! Имаме нужда от още един "напред" блок. Бутона "стъпка" ни помага да поправим нашия проблем чрез откриване и поправяне на грешките.'
@@ -892,16 +892,16 @@ bg:
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
+        text: Този урок се нарича сазтезание с зарове. Почти всеки обича да играе компютърни игри. Замисляли ли сте се за това как компютърни програмисти превращат стъпките на игра в една програма? Първата стъпка в създаване на компютърни игри и при решаването на всеки проблем изисква мислене и планиране.
       2:
         image: notes/C3_dice_race_2.png
         text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
       3:
         image: notes/C3_dice_race_3.png
-        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+        text: Почти всичко, което правим всеки ден изисква алгоритъм, списък от стъпки, който можете да следвате за да завършиет дадена задача. Помислете за оправянето за училище или планиране на забавен ден с вашите приятели или фиксиране на лека закуска. За да изпълните някоя от тези задачи, ще трябва да го раздобите на по-малки стъпки и понякога стъпките трябва да бъдат в определен ред.
       4:
         image: notes/C3_dice_race_4.png
-        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+        text: Помислете за правенето на един сандвич. Няма значение коя съставка сйставка извадите от шкафа първа. Но не може да намажете фъстъченото масло, докато не сте отворили буркана. Компютрите използват алгоритми и програми, за да им покажете какво да направя дори прости неща, които ние можем да направим и без да мислим за тях.
       5:
         image: notes/C3_dice_race_5.png
         text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
@@ -1338,100 +1338,100 @@ bg:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Здравейте! Аз съм Катлийн Кенеди и съм продуцент на Междузвездни Войни: Силата се Пробужда. Днес ще работите с една от нашите звезди, ББ-8, който е сферичен дроид. Всичко, което прави и всяко негово движение се контролира от софтуер. Компютърните науки оказват влияние във всяка една сфера от маркетинг до медицина и филмово производство. Всъщност, хиляди инженери работят заедно, за да създадават филми като Силата се Пробужда.'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Здравейте, Аз съм Рейчъл Роуз Глaвен Инженер в отдела за Разработки в Ай Ел Ем, аз ръководя групата за създаване на амимираните ефекти. В Силата се Пробужда аз отговарям за ефектите които карат героя да извършва движения като че ли е наистина от далечно съзвездие.
+        text: Здравейте, аз съм Рейчъл Роуз, глaвен инженер в отдела за Разработки в Ай Ел Ем. Аз ръководя групата за създаване на анимираните ефекти. В Силата се Пробужда отговарям за ефектите, които карат героя да извършва движения като че ли е наистина от далечно съзвездие.
       3:
         image: notes/starwars_intro_3.JPG
-        text: В следващият час ще създадем наша собствена игра Междузвездни Войни която ще ви научи на основните методи в Програмирането. Обикновенно програмирането представлява текст но ние ще използваме Блокове, за да можем да ги влачим и оставяме. Но въпреки това вие все пак съсздавате код. След като пробвате основните методи с блокове, ще преминем на JavaScript един от най-известните езици за програмиране на интернет.
+        text: 'В следващият час ще създадем наша собствена игра Междузвездни Войни, която ще ви научи на основните методи в програмирането. Обикновено програмирането представлява текст, но ние ще използваме блокове, за да можем да ги влачим и оставяме. Но въпреки това, вие създавате код. След като пробвате основните методи с блокове, ще преминем на JavaScript- един от най-известните езици за програмиране в интернет.'
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: За начало, ще работим с Рей, който ще програмира ББ-8 да ходи и събира скрап. Монитора е разделен на три части. Отляво е игровото пространство, където играта се извършва. Инструкциите са написани под него.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Пространството по средата е кутията с инструменти, и всеки блок е команда, която ББ-8 може да разбере.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Бялото пространство вдясно е работното поле, където ще създадем играта.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: Какво ще стане, ако завлека блока moveLeft(); в работното пространство и натисна Старт? ББ-8 ще се премести наляво с една стъпка.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: А ако поискам ББ-8 да направи още нещо след блока moveLeft();? Мога да добавя друг блок към нашата програма. Ще избера блока moveUp(); и ще го завлека под блока moveLeft(); докато очертанията не се появят. Тогава ще го пусна и двата блока ще се свържат.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Когато натисна Старт отново, ББ-8 ще изпълни командите отгоре до долу от работното пространство. Ако искате да изтриете блок, просто го извадете от работното поле и го завлечете обратно в кутията с инструментите.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: 'След като натиснете Старт, винаги може да натиснете бутона "стартиране отначало", за да накарате ББ-8 да започне отново. Да започваме!'
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Зада създадем Блок ние изпозваме JavaScript. Един от най-използваните езици за програмиране от Програмистите. Блоковете са прекрасен начин за начинаещи да навлизат в програмирането, факт е че някои университети като Харвард и Бъркли започнаха да въвеждат Блоково програмиране. Но веднъж научили основите Инженерите пишат код защото е по бързо.
+        text: 'Вътре в блока ние изпозваме JavaScript. Това е един от най-използваните езици за програмиране. Блоковете са прекрасен начин за начинаещи да навлязат в програмирането, а дори някои университети като Харвард и Бъркли започнаха да въвеждат Блоково програмиране. Но веднъж научили основите, инженерите пишат кода, защото е по- бързо.'
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Можем да напишем хиляди команди без да търсим и измъкваме от кутията с инструментите. Може в началото да сте по бавни в писането, но все пак пробвайте.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: В горният десен ъгъл на работното пространство се намира бутона, с който преминавате от текстово в блоково програмиране.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: 'Следващия урок ще започнем в текстови режим. Ще можете да избирате блокове или текстови команди. Възможни команди ще се появяват след като започнете да пишете, така вместо да изписвате цялата команда ще може да избирате и завършите по бързо. В моята работа използвам инструмента "завършване по подразбиране" когато пиша код.'
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Когато пишете код, трябва да сте много внимателни. Нужно е да изписвате правилно командите, главните букви, включително скобите и двоеточието. Дори незначителни грешки могат да попречат на ББ-8 да разбере кода и няма да може да извърши действието.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Когато направите грешка редактора ще я подчертае, така че ще може да я поправите.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: 'Ако се затрудните, винаги може да започнете отначало с бутона "стартиране отначало" и да изберете режим Блокове, като натиснете в горния десен ъгъл. Хайде да пробваме! Ако направите грешка не се отчайвайте. Всеки пробва по няколко пъти докато го направи правилно.'
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Здравейте, казвам се Шарита Картер. Аз съм главен творчески директор в Уолт Дисни, Отдел за Инженерно Моделиране. Отговарям за групата, която създава атракциите които нашите гости могат да пробват. Винаги се опитваме да подобрим и направим нашите атракции по впечатляващи за гостите ни, а технологиите са в основата на това.
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Поздравления! Вие програмирахте ББ-8. Мисля, че вече сте готови за нещо по сложно. След като научихте основите на програмирането, да се върнем във времето и направим собствена игра с участието на R2-D2 и C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'За да създадем игра, трябва да научим нещо което всеки програмист използва всекидневно: наричат се събития. Събитията казват на програмата да слуша или чака нещо да се случи и тогава да изпълни действието.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Примери за събития са слушане за щракване с мишката, натискане на бутона със стрелка или натискане на екрана.
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Ще накараме R2-D2 да се премести нагоре и после надолу, за да предаде съобщение до пилотите на бунтовниците. Ще използваме Събития, за да го накараме да се движи. Това ще се случва, когато играча използва стрелките нагоре/надолу или бутоните нагоре/надолу.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: Използваме whenUp() събитийния блок и ще добавим блок goUp(). Когато играчът натисне клавиша със стрелка нагоре кода от блока goUp() ще се извърши. Ще направим същото, за да преместим Р2-Д2 надолу.
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: За да постигнем това, ще използваме командата whenUp(). Когато я извлечете от кутията с инструменти, ще видите че тя започва и завършва с кръгли скоби вместо с двоеточие. Това ни позволява да добавим команди по средата. Когато играчът натисне клавиша със стрелката нагоре, тези вмъкнати команди ще се изпълнят.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Искаме Р2-Д2 да отиде нагоре, за това ще вмъкнем блока goUp(); в командата. Ще направим същото, за да накараме Р2-Д2 да отиде надолу.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: Вместо да пишем кода предварително, можем да направим Р2-Д2 да реагира на събитие, свързано с натискане, което ще го движи по монитора. Стъпка, по стъпка играта става по интерактивна.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Здравейте, аз съм Алис и отговарям за инженерния отдел в Code.org, също работех върху ръководството, което сега използвате.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: Достигнахте до последното ниво. Поздравления! Вече научихте всичко, което трябва, за да направите собствена игра Междузвездни войни. Няма повече инструкции и пъзели за решаване. Може да направите собствена игра със собствени правила. Още нещо, отключихте нови звукове и команди, с които да подобрите играта.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[students speaking]Значи направихме игра, в която печелите точки като вземете пафър прасета. Уловката е, че всеки път когато вземете прасе се появява войник от империята. Постепенно целият екран ще се изпълни с прасета и като достигнат 10,000 печелите.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[students speaking] Направихме игра, в която не можете да губите точки и всичко, което убиете, ще ви носи точки. В моята програма обърнах бутоните, когато натиснете нагоре, вашият герой отива надолу, когато натиснете надясно, той отива наляво. Трудно е! Понякога това е предимство, ако сте създателя на играта. Правилно ли го разбрах? Уау!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: След като сте направили играта, изберете сподели, за да я споделите с приятели или да я играете на телефон. Забавлявайте се!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -1444,158 +1444,264 @@ bg:
         text: В следващият час ще създадем наша собствена игра Междузвездни Войни която ще ви научи на основните методи в Програмирането. Обикновенно програмирането представлява текст но ние ще използваме Блокове, за да можем да ги влачим и оставяме. За начало ще работим с Рей за да програмираме ББ-8 да върви и събира металните остатъци.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: Екрана ви е разделен на три части. В ляво е пространствоте където кода на играта Междузвездни войни ще се извърши. Инструкциите за всяко ниво са написани под игровото пространство.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Пространството по средата е кутията с инструменти, и всеки блок е команда, която ББ-8 може да разбере.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: Бялото пространство в дясно е работното пространство където ще създадем играта.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: Какво ще стане ако завлечем блока ПреместиНаляво(); до работното пространство? ББ-8 ще се премести наляво по мрежата.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: А ако искам ББ-8 да направи още нещо след като изпълни командата от блок ПреместиНаляво(); Мога да добавя блок. Ще избера блока ПреместиНагоре(); и ще го завлека под блока ПреместиНаляво(); докато не се появят очертанията. Тогава ще го пусна и двата ще се споят. ББ-8 ще испълни комадите по ред отгоре до долу.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Ако изкате да изтриете блок, просто го преместет от купчината и го завлечете обратно в кутията с инструменти.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: След като натиснете Тръгни, винаги може да натиснете бутона върни обратно за да накарете ББ-8 да започне отначало. Да започваме!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Здравейте, казвам се Шарита Картер. Аз съм главен творчески директор в Уолт Дисни, Отдел за Инженерно Моделиране. Отговарям за групата, която създава атракциите които нашите гости могат да пробват. Винаги се опитваме да подобрим и направим нашите атракции по впечатляващи за гостите ни, а технологиите са в основата на това.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Поздравления! Вие програмирахте ББ-8. Мисля, че вече сте готови за нещо по сложно. След като научихте основите на програмирането, да се върнем във времето и направим собствена игра с участието на R2-D2 и C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'За да създадем игра, трябва да научим нещо което всеки програмист използва всекидневно: наричат се събития. Събитията казват на програмата да слуша или чака нещо да се случи и тогава да изпълни действието.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Примери за събития са слушане за щракване с мишката, натискане на бутона със стрелка или натискане на екрана.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Ще накараме R2-D2 да се премести нагоре и после надолу, за да предаде съобщение до пилотите на бунтовниците. Ще използваме Събития, за да го накараме да се движи. Това ще се случва, когато играча използва стрелките нагоре/надолу или бутоните нагоре/надолу.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Използваме блокът Събитие КогатоНагоре() с добавен блок ОтидиНагоре(). Когато играчът натисне клавиша със стрелка нагоре кода от блока КогатоНагоре() ще се извърши. Ще направим същото за да преместим Р2-Д2 надолу. Обаче, вместо да пишем кода предварително, да направим Р2-Д2 да реагира на бутона натисни събития който го движи из екрана.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Стъпка по стъпка играта става по-интерактивна.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Здравейте, аз съм Алис и отговарям за инженерния отдел в Code.org, също работех върху ръководството, което сега използвате.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: Достигнахте до последното ниво. Поздравления! Вече научихте всичко, което трябва, за да направите собствена игра Междузвездни войни. Няма повече инструкции и пъзели за решаване. Може да направите собствена игра със собствени правила. Още нещо, отключихте нови звукове и команди, с които да подобрите играта.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[students speaking]Значи направихме игра, в която печелите точки като вземете пафър прасета. Уловката е, че всеки път когато вземете прасе се появява войник от империята. Постепенно целият екран ще се изпълни с прасета и като достигнат 10,000 печелите.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[students speaking] Направихме игра, в която не можете да губите точки и всичко, което убиете, ще ви носи точки. В моята програма обърнах бутоните, когато натиснете нагоре, вашият герой отива надолу, когато натиснете надясно, той отива наляво. Трудно е! Понякога това е предимство, ако сте създателя на играта. Правилно ли го разбрах? Уау!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: След като сте направили играта, изберете сподели, за да я споделите с приятели или да я играете на телефон. Забавлявайте се!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: Казвам се Йенс Бергенстен, но съм по известен като Джеб. Аз съм главният разработчик в Minecraft, в студио Моянг в Стокхолм. Мисля, че бях единадесет или дванадесет годишен, когато започнах да програмирам защото изках да създавам игри. Един от приятелите на моя баща ми каза, че трябва да се науча да програмирам ако искам да правя игри. Така започнах. Обичам да проектирам структурата на играта. Това е нещото, което харесвам в Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: В следващият час ще се запознаете с основите на компютърните науки като програмирате Алекс или Стив да преминат през симулираната част от света на Minecraft.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: Програмирането представлява текст, но ние ще използваме Blockly. Това е система от блокове, които може да влачите и пускате, за да напишете програмата. В действителност се използва Javascript код.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Концепциите, които ще научите, са същите които програмистите използват всеки ден. Те са в основата на програмирането. В Моянг използваме същите концепции, за да накараме Minecraft да проработи.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Преди да започнете, трябва да изберете герой. Аз ще избера Алекс. Хайде да напишем код за програма, която ще ѝ помогне да се мести по екрана.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Вашият екран е разделен на три основни части. Вляво е Minecraft игровото пространство, където вашата програма ще се изпълни. Инструкции за всяко ниво са дадени под него.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Тази средна област е кутията с инструменти, а всеки от тези блокове е команда, която насочва действията на Алекс.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Бялото пространство вдясно, се нарича работно пространство и това е мястото, където ние ще изградим нашата програма.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: Какво ще стане ако завлечете блока moveForward(); в работното пространство и после натиснете Старт? Алекс ще се премести напред с едно място.
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: А ако искаме тя да направи още нещо след като се премести напред? Трябва да добавим друг блок в програмата. Ще избера блока turnRight(); и ще го плъзна под блока moveForward(); докато не се появят оранжеви линии. Тогава ще го пусна и двата блока ще се споят. Като натисна Старт, Алекс ще изпълни командите, които са съединени, отгоре до долу.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Ако някога искате да изтриете блок, просто го плъзнете обратно към кутията с инструменти.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'За да отмените промените и отидете обратно в началото на нивото, използвайте бутона Стартиране отначало в горния десен ъгъл. Още нещо: виждате ли малкият триъгълник на блока Завърти? Всеки път като видите триъгълник, означава че може да изберете друга опция. Хайде да започваме да кодираме!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Аз съм Лидия Уинтерс, Директор в Моянг, където направихме игра, наречена Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Любимото ми нещо в Minecraft е опознаването. Обичам приключенията, защото мога да намеря нещо. Аз не съм програмист и съм много развълнувана да чета уроците на Minecraft и действително да науча някои програмни кодове.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: Последното ниво се нуждае от много moveForward(); блокове. Ще бъде по-лесно, ако ние просто може да кажем на компютъра да изпълнява moveForward(); командата четири или пет пъти. За щастие, компютрите са наистина добри в повтарянето на команди чрез цикли.
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Когато изграждаме Minecraft, ние използваме цикли за повторение, за да поставим всички първоначални материали за създаване на нов свят. Това са хиляди, хиляди блокове. Ние също използваме циклите по малко начини, например да накараме краката на Alex да се движат назад и напред, когато тя ходи. Циклите за повторение са мощна част от програмирането.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: 'Спуска се нощ, така че в следващите няколко нива, ние ще си построим къща, за да сме в безопасност. Ние ще използваме блок за повторение, за да направим това много по- лесно.'
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: За да изградим стената на къщата ни, ще кажем на Alex да постави дъски четири пъти. Това става като се постави тази команда в блок за повторение, който да извърши действието многократно. Сега ние ще кликнем на блока за повторение и ще изберем колко пъти искаме той да извършва това действие. Сега, нека построим къщата ни преди да падне нощта! Забавлявайте се.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: 'Сега ще научите за "ако" отчетите. Те са основна част от обучението по програмиране. Те помагат компютърът да взима решения.'
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: 'Всички компютри използват "ако" отчети, включително моя телефон. Например, когато аз отключвам телефона се изпълнява код, който казва, че ако въведете паролата правилно, тогава ще се отключи телефона. В противен случай ще се покаже съобщение за грешка.'
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: 'Можете да използвате "ако" отчети в кода си, за да накарате Стив и Алис да реагират на това, което виждат в света. Например, ако има камък пред тях, да могат да се завъртят наляво. Или да завият надясно, ако има опасност да се блъснат в дърво.'
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: В този случай, ние не искаме да паднем в лавата. Лесно е да проверяваме за лава. Можем да го видим на екрана. Но, ако лавата е скрита под камък?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: 'След като изкопаем камък, ние ще трябва да проверим дали има някаква лава на това място, преди да тръгнем напред. Ако има лава там, ние трябва да поставим камък пред нашия герой, преди да върви напред. По този начин, можем спокойно да преминем. Време е за повече добив! И не забравяйте да използвате "ако", за да следите пътя си.'
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Поздравления! Ти научи основните градивни елементи на компютърните науки.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Сега можете да използвате тези блокове, за да изградите своя собствена творба. Няма повече инструкции и пъзели за решаване. Можете да създадете всичко, което искате. Вие решавате.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[ученически разговор] За да придобиете реална представа. Остригване. Направих L от факли. Направих А от брезови дъски. Работи, работи. Ние изградихме къща от вълна!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: 'Когато приключите, изберете "сподели", за да получите връзка за споделяне с вашите приятели. Забавлявайте се!'
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Поздравления! Ти научи основните градивни елементи на компютърните науки.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Сега можете да използвате тези блокове, за да изградите своя собствена творба. Няма повече инструкции и пъзели за решаване. Можете да създадете всичко, което искате. Вие решавате.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[ученически разговор] За да придобиете реална представа. Остригване. Направих L от факли. Направих А от брезови дъски. Работи, работи. Ние изградихме къща от вълна!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Можете да създадете каквото си искате. Забавлявайте се!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Бялото пространство вдясно, се нарича работно пространство и това е мястото, където ние ще изградим нашата програма.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: "If you'd like to make your own game, it's really easy. All you need are just a few basics of programming and you can start playing a game that you created."
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: "Do you have a favorite video game? We're going to take one step toward creating games just like that in PlayLab. Good games have a story and every story has actors. Actors that do things like speak, move and interact with each other. Maybe even score points based on the rules of the game. Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: "Today, we'll be learning how to do all these things one by one with fun actors and then build a game from scratch that can be shared and played on a phone."
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace where your program will run. The instructions for each level are written below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Бялото пространство вдясно, се нарича работно пространство и това е мястото, където ние ще изградим нашата програма.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: |-
+          In this first puzzle, we'll make the actors say something by linking the "say" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: "Get started and by the end you'll be able to create your own game with all kinds of players that can interact, score points, throw things, and vanish each other. It's all up to you!"
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: "Now we're going to learn about something all game programmers use everyday. They're called events. An event tells your program to listen for when something happens and then when it does, the game performs an action."
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: |-
+          Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the "say" block to it. When the player clicks, all the blocks attached to this block will be performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those, you can start to move your actors up, down, left, right, with the arrow keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously. Learning how the repeat commands work will save you a ton of time later when you build your own game.

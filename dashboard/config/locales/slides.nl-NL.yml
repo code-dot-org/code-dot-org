@@ -639,113 +639,111 @@
           vele malen belangrijker dan de klik op een knop of beweging van een joystick.
       6:
         image: notes/C1_bigevent_unplugged_6.png
-        text: The main event we're watching for is that "Update" tick happening. And
-          then we check the joystick in the tick. So we say, "Oh, has somebody pushed
-          the button this frame? Yes or no?" Without events, the player couldn't move,
-          you couldn't jump, you wouldn't be able to control what's going on. The
-          videogame wouldn't be able to animate anything.
+        text: Het belangrijkste waar we naar uitzien, is dat de "Update" aangeraakt
+          werd. En dan bekijken we de joystick in d.
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: In sand sculpture you've got to know that failure is part of the program.
-          But if you're persist, it's just going to get nothing but better and more
-          exciting for you.Persistence is the name of the game. Stay with it, you'll
-          love it.
+        text: In zand sculptuur is het belangrijk om te begrijpen dat je van je fouten
+          moet leren. Maar als je weet vol te houden dan wordt het alleen maar mooier
+          en beter. Volhouden is het devies. Gewoon doorgaan, het wordt geweldig.
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: This lesson is called building a foundation. In this lesson, we'll work
-          on a task that is meant to be really difficult. You will figure out how
-          to make a structure at least as tall as one of these cups and it's got to
-          be strong enough to hold the weight of a book.
+        text: 'Dit is de les: ''een stevige basis maken''. In deze les gaan we aan
+          een taak werken die opzettelijk heel moeilijk is. Je gaat ontdekken hoe
+          je een constructie moet bouwen die tenminste net zo hoog is als één van
+          deze kopjes en toch sterk genoeg is om een het gewicht van een boek te dragen.'
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: There might be times that our creation doesn't work out. There might
-          be times that we get frusrated and want to give up. There might be a lot
-          of those moments. But if we keep on trying, give it our best shot over and
-          over again, then we're sure to get it before long.
+        text: Soms lukt onze creatie niet goed. Soms raken we gefrustreerd en willen
+          we het opgeven. Soms zijn er best vaak van die momenten. Maar als we het
+          blijven proberen en keer op keer ons best blijven doen dan gaat het ons
+          zeker snel lukken.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: Volharding draait om doorgaan wanneer je eigenlijk had willen opgeven.
+          Wanneer je iets nieuws en iets anders wilt maken dan gaan er zeker een paar
+          mislukkingen op je pad komen.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: The trick to persistence is choosing to keep on going and learn from
-          your failures instead of quitting because you're frustrated. Frustration
-          actually just means there's something wonderful around the corner. So don't
-          quit before you get to it. Wooo!
+        text: Waar het om gaat bij volhouden is dat je er voor kiest om door te gaan
+          en leert van je fouten in plaats van stoppen uit frustratie. Die frustratie
+          betekent dat je het dus erg vindt dat het niet is gelukt en dat het dus
+          de moeite waard is en dat het bijna was gelukt. Dus geef niet op en ga d'r
+          voor!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Hallo, mijn naam is Miral Kotb en ik ben de bedenker van Iluminate.
+          Bij mijn werk is er iets dat we gebruiken bij zowel het dansen als het programmeren
+          van onze verlichte kostuums. En dat zijn herhalingen! Lussen zijn acties
+          die zich herhalen en herhalen en herhalen en herhalen.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: Als je iets meerdere keren herhaalt, zoals mijn bewegingen om de hoepel
+          rond te laten gaan. dan voer ik een lus uit van die actie. Dit is een lus.
+          Dit is een lus. En dit is een lus.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Today we're going to have a dance party. We'll act out loops with a
-          new dance. The Iteration. We're going to learn about loops using a dance.
-          You will learn a couple of easy steps and repeat them over and over to complete
-          the dance.
+        text: Vandaag gaan we een dansfeestje vieren. We gaan lussen uitbeelden met
+          een nieuwe dans. De iteratie. We gaan leren over lussen door middel van
+          een dans. Je gaat een paar eenvoudige stappen leren die we steeds herhalen
+          om de dans af te maken.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands
-          behind your head. Put your hands on your waist. Lift your left hand up.
-          Lift your right hand up. Pretty simple, right? You will discover that you
-          can shorten the directions by putting some dance steps in loops.
+        text: Hier zijn de stappen die je moet leren. Klap in je handen. Houd je handen
+          achter je hoofd, Houd je handen op je heupen. Til je linker hand op. Til
+          je rechter hand op. Best makkelijk, toch? Je zult ontdekken dat je de aanwijzingen
+          kunt verkorten door wat herhalingen in te bouwen.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: We gebruiken zeker herhalingen in onze dansen. De dansers dragen computers,
+          allemaal verbonden met hetzelfde netwerk. Ik zou de lichten kunnen laten
+          lussen naar dezelfde dansers, steeds weer en steeds weer. In die lus kan
+          ik een iteratie maken waarbij ik zeg dat deze lus zich steeds moet herhalen
+          over deze zes dansers maar dan in die lus de snelheid van het licht steeds
+          verhogen. Dat wordt allemaal gedaan met lussen. Lussen zijn belangrijk in
+          de informatica omdat ze ons werk besparen en het makkelijker maken.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: This lesson is called Happy Maps. Today we're gonna help our furry little
-          friend Flurb get to her fruit.
+        text: Deze les heet Vrolijke Kaarten. Vandaag gaan we onze pluizige kleine
+          vriend Flurb aan haar fruit helpen.
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: Make your Flurb go to your fruit. To do this you'll need to figure out
-          which way the Flurb needs to go and direct her with arrows. In order for
-          the Flurb to get to the apple, what direction does the Flurb have to go?
-          Line to make it go up.
+        text: Zorg dat jouw Flurb naar het fruit gaat. Dit doe je door te bedenken
+          hoe Flurb moet lopen en haar de weg te wijzen met pijlen. Om de Flurb bij
+          de appel te krijgen, welke kant moet de Flurb dan op? Lijn om het omhoog
+          te laten gaan.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: Om het daar te krijgen omcirkel je de richting die het op moet.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: Maak je algoritme door pijlen te plakken naast de kaart die je probeert
+          op te lossen. De tweede is hetzelfde, maar gaat naar beneden.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: Het is zoals programmeren met papier. Dat is alles!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: Debuggen is het vinden en oplossen van problemen. Er zijn veel manieren
+          om problemen te debuggen. Een van de makkelijkste is om stap voor stap te
+          gaan tot je iets vindt dat verkeerd gaat. Hier probeer ik een achterwaartse
+          radslag op de balk te doen, maar blijf er af vallen.
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: I ging door elk deel stap voor stap and realiseerde waar ik een fout
+          gemaakt had. Ik zette mijn handen fout op de balk. Dus probeerde ik opnieuw
+          met een andere positie en uiteindelijk lukte het. Ik was super blij dat
+          ik terug handstand op een bal kon doen.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: Om te leren debuggen beginnen we al met een paar blokken op het veld.
+          Je kan misschien wel zien dat de blokken je niet naar het doel zullen krijgen.
+          We zullen de oplossing moeten debuggen en het repareren. Wat is er mis gegaan?
+          Je zal zien dat je één blok meer naar het westen had moeten gaan.
       4:
         image: notes/C1_maze_debugging_4.png
         text: Let's fix this by adding another west block and hitting run to see if
@@ -753,8 +751,8 @@
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: Voor deze puzzel moet de vogel naar het varken. Kijk naar de puzzel
+          en zoeken voor de weg die de vogel moet nemen.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: You need to drag the blocks over from the toolbox to the workspace.
@@ -992,9 +990,9 @@
           90 degree turn.
       5:
         image: notes/C2_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
+          wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken.
+          Geniet van het tekenen met uw artiest!
     C2_bee_conditionals:
       1:
         image: notes/C2_bee_conditionals_1.png
@@ -1016,10 +1014,10 @@
           on a bracelet we can wear and show all our friends!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options.
-          Sometimes people think of this as only 1s and 0s. But you can represent
-          binary with combinations of on or off, up and down, in and out or really
-          any set of opposites.
+        text: Binair is een manier om informatie weer te geven met behulp van slechts
+          twee opties. Soms denken mensen dat dit alleen enen en nullen kunnen zijn.
+          Maar je kunt binair ook weergeven met combinaties als aan en uit, op en
+          neer en werkelijk elk paar tegengestelden.
       3:
         image: notes/C2_binary_bracelets_3.png
         text: Hi, I'm Orion and I program robots here at Play-im. All computer and
@@ -1364,9 +1362,9 @@
           90 degree turn.
       5:
         image: notes/C3_artist_intro_5.png
-        text: And this is a 120 degree turn. And remember, you can change these values
-          by clicking the arrows next to the numbers for pixels and degrees. Enjoy
-          drawing with your artist!
+        text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
+          wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken.
+          Geniet van het tekenen met uw artiest!
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
@@ -2659,17 +2657,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2784,17 +2782,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2802,164 +2800,331 @@
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: My name is Jens Bergensten but I'm better known as Jeb. I'm the lead
-          developer on Minecraft, here at Mojang in Stockholm. I think I was eleven
-          or maybe twelve and I started programming because I wanted to make games.
-          One of my father's friends told me that in order to make games, you need
-          to learn how to program. That's how I got started. I like designing and
-          figuring out the architecture of games. That's what I really like about
-          Minecraft.
+        text: Mijn naam is Jens Bergensten, maar ik ben beter bekend als Jeb. Ik ben
+          de hoofdontwikkelaar van Minecraft, hier bij Mojang in Stockholm. Volgens
+          mij was ik elf of misschien twaalf toen ik begon met programmeren omdat
+          ik games wilde maken. Een vriend van mijn vader zei dat ik om games te kunnen
+          maken moest leren programmeren. Zo ben ik begonnen. Ik houd van ontwerpen
+          en onderzoeken hoe games in elkaar zitten. Dat vind ik echt het leukste
+          aan Minecraft.
       2:
         image: notes/mc_intro_2.JPG
-        text: Over the next hour, you're going to learn the basics of computer science
-          by programming Alex or Steve to move through a simulated piece of a Minecraft
-          world.
+        text: In het komende uur leer je de basis van informatica door te programmeren
+          hoe Alex of Steve zich moeten bewegen door een gesimuleerd stuk van een
+          Minecraft-wereld.
       3:
         image: notes/mc_intro_3.JPG
-        text: Traditional programming is usually in text but today we'll use Blockly,
-          a system which uses visual blocks that you can drag and drop to write programs.
-          Under the hood, you're creating Javascript code.
+        text: 'Meestal programmeer je met behulp van tekst, maar vandaag gebruiken
+          we blockly: een systeem met blokken die je kunt slepen en plaatsen om programma''s
+          te schrijven. Onder het oppervlak schrijf je JavaScript-code.'
       4:
         image: notes/mc_intro_4.JPG
-        text: The concepts you'll be learning are what computer programmers use every
-          day and are the foundation to computer science. Here at Mojang, we use these
-          same concepts to make Minecraft work.
+        text: De concepten die je leert worden elke dag door computerprogrammeurs
+          gebruikt en vormen de basis van de informatica. Hier bij Mojang, gebruiken
+          we dezelfde concepten om Minecraft te laten werken.
       5:
         image: notes/mc_intro_5.JPG
-        text: Before you start, you'll pick your character. I'm going to choose Alex.
-          Let's build code for a program that will help her move around the screen.
+        text: Voordat je begint, moet je een personage kiezen. Ik kies Alex. Laten
+          we code maken voor een programma dat haar helpt over het scherm te bewegen.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft
-          playspace where your program will run. The instructions for each level are
-          written below.
+        text: Je scherm is in drie hoofddelen gesplitst. Links bevindt zich de Minecraft-ruimte
+          waar je programma draait. De instructies voor elk level worden eronder geschreven.
       7:
         image: notes/mc_intro_7.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that directs Alex's actions.
+        text: Dit middelste gebied is de gereedschapskist en elk van deze blokken
+          is een commando dat Alex' acties bepaalt.
       8:
         image: notes/mc_intro_8.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click
-          run, what happens? Alex moves forward one space on the grid.
+        text: Als we het "beweeg vooruit"-blok naar onze werkruimte slepen en op Run
+          klikken, wat gebeurt er dan? Alex beweegt een vakje vooruit in het raster.
       10:
         image: notes/mc_intro_10.JPG
-        text: And what if we want to do something after she has moved forward one
-          space? We can add another block to our program. I'm going to choose the
-          turnRight(); block and I'll drag it underneath my moveForward(); block until
-          this orange line appears. Then I'll drop it and the two blocks will snap
-          together. When we press run again, Alex will perform the commands that are
-          stacked from top to bottom in our workspace.
+        text: En wat als we iets willen doen nadat ze één vakje vooruit heeft bewogen?
+          Dan kunnen we een ander blok toevoegen aan ons programma. Ik kies het "draai
+          rechts"-blok en sleep het onder mijn "beweeg vooruit"-blok tot deze oranje
+          lijn verschijnt. Dan laat ik het los en de twee blokken klikken in elkaar.
+          Als we weer op Run klikken, voert Alex de commando's uit die van boven naar
+          beneden zijn gestapeld in onze werkruimte.
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back
-          to the toolbox.
+        text: En als je ooit een blok wilt wissen, sleep je het gewoon van de stapel
+          terug naar de gereedschapskist.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'To undo your changes and get back to how the level started, use the
-          Start Over button in the top right corner of the workspace. One more thing:
-          you see the little triangle on the turn blocks? Anytime you see these triangles,
-          it means that you can pick a different option. Let''s start coding!'
+        text: Om veranderingen ongedaan te maken en terug te gaan naar het begin,
+          gebruik je de Start Over-knop rechtsboven in de werkruimte. Nog één ding,
+          zie je dat driehoekje op de draaiblokken? Als je zo'n driehoekje ziet, betekent
+          dit dat je een andere optie kunt kiezen. Laten we beginnen met programmeren!
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: I'm Lydia Winters, Mojang's brand director and we made a little game
-          called Minecraft.
+        text: Ik ben Lydia Winters, Mojangs merkdirecteur, en we hebben een spelletje
+          gemaakt dat Minecraft heet.
       2:
         image: notes/mc_repeat_2.JPG
-        text: My favorite thing to do in Minecraft is explore. I love adventuring
-          in caves and seeing what I can find. As someone who isn't a programmer,
-          I'm really excited to go through the Minecraft lesson and actually learn
-          some coding myself.
+        text: In Minecraft ga ik het liefst verkennen. Ik ga graag op avontuur in
+          grotten om te zien wat ik er kan vinden. Omdat ik geen programmeur ben,
+          vind ik het echt spannend om de Minecraft-lessen te volgen en zelf een beetje
+          te leren programmeren.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier
-          if we could just tell the computer to perform the moveForward(); command
-          four or five times. Luckily for us, computers are really good at repeating
-          commands with repeat loops.
+        text: In het laatste level waren veel "beweeg vooruit"-blokken nodig. Het
+          zou makkelijker zijn als we de computer gewoon konden zeggen het commando
+          beweeg vooruit vier of vijf keer te gebruiken. Gelukkig voor ons, zijn computers
+          erg goed in het herhalen van commando's in herhalingsloops.
       4:
         image: notes/mc_repeat_4.JPG
-        text: When building Minecraft, we use repeat loops to place all the initial
-          materials for creating a new world. That's thousands and thousands of blocks.
-          We also use loops in little ways, for example to make Alex's feet move back
-          and forth as she walks. Repeat loops are a powerful part of programming.
+        text: Bij het maken van Minecraft gebruikten we herhalingsloops voor het plaatsen
+          van alle basismaterialen voor een nieuwe wereld. Dat zijn duizenden blokken.
+          We gebruiken loops ook op kleinere manieren, bijvoorbeeld om Alex' voeten
+          heen en weer te laten bewegen tijdens het lopen. Herhalingsloops zijn een
+          krachtig onderdeel van programmeren.
       5:
         image: notes/mc_repeat_5.JPG
-        text: Night is coming so in the next couple of levels, we're going to build
-          a house to stay safe. We're going to use the repeat block to do this very
-          easily.
+        text: De nacht komt eraan, dus gaan we in de volgende levels een huis bouwen
+          om veilig te blijven. Met het herhalingsblok wordt dit heel makkelijk.
       6:
         image: notes/mc_repeat_6.JPG
-        text: To build a wall of our house, we can either tell Alex to moveForward();
-          and place planks four times or we can tell her to moveForward(); and place
-          one plank, then take this command and use the repeat block to have her perform
-          the action multiple times. Now we'll click on the repeat block and tell
-          her how many times we want her to perform this action. Now let's build our
-          house before night falls! Have fun.
+        text: Om een muur van ons huis te bouwen, kunnen we Alex vier keer de opdrachten
+          "beweeg vooruit" en plaats een plank geven, of één keer de opdrachten "beweeg
+          vooruit" en plaats een plank geven, en dan het herhalingsblok gebruiken
+          om haar de actie vaker uit te laten voeren. Nu klikken we op het herhalingsblok
+          en zeggen we hoe vaak we willen dat ze deze actie uitvoert. Laten we nu
+          ons huis bouwen, voor de nacht valt! Veel plezier.
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: Now we're going to learn about if statements. If statements are a fundamental
-          part of learning to program. They help a computer make decisions.
+        text: Nu gaan we wat leren over als-instructies. Als-instructies zijn van
+          groot belang als je wilt leren programmeren. Ze helpen een computer beslissingen
+          maken.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when
-          I unlock my phone, it runs some code that says if I enter the password correctly,
-          then unlock the phone. Otherwise, it shows an error message.
+        text: Alle computers gebruiken als-instructies, inclusief mijn telefoon. Als
+          ik bijvoorbeeld mijn telefoon ontgrendel, zegt het programma dat mijn telefoon
+          pas wordt geopend als ik het wachtwoord correct heb ingevoerd. Anders verschijnt
+          er een foutmelding.
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react
-          to what they see in the world. For example, if there is a rock in front
-          of them, they can turn left. Or turn right if they run into a tree.
+        text: Je kunt als-instructies in je code gebruiken om te zorgen dat Steve
+          en Alex reageren op wat ze zien in de wereld. Als ze bijvoorbeeld een steen
+          op hun pad vinden, kunnen ze naar links draaien. Of naar rechts als ze tegen
+          een boom op lopen.
       4:
         image: notes/mc_if_statements_4.JPG
-        text: In this case, we don't want to fall in the lava. It's easy to plan for
-          the lava. We can see it on the screen. But what about the lava that we can't
-          under the stone?
+        text: In dit geval willen we niet in de lava vallen. Het is makkelijk om de
+          lava te ontwijken. We zien de lava op het scherm. Maar wat doen we met de
+          lava die we niet kunnen zien, onder de steen?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: After we mine the stone, we'll need to check if there's any lava in
-          that place before moving forward. If there is lava there, we want to place
-          a stone in front of our character before we can move forward. That way we
-          can safely move on. Time for more mining! And remember to use the if statement
-          to watch your step.
+        text: Als we de steen hebben gedolven, moeten we kijken of er op die plek
+          geen lava is voordat we verdergaan. Als er lava is, willen we een steen
+          voor ons personage plaatsen, zodat we verder vooruit kunnen bewegen. Zo
+          kunnen we veilig onze weg vervolgen. Tijd om verder door de mijn te gaan!
+          En vergeet niet de als-instructies om veilig te blijven.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
+          geleerd.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
+          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
+          je wilt. Je mag zelf kiezen.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
+          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
+          We hebben een huis van wol gemaakt!"
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+        text: Als je creatie is voltooid, kun je delen kiezen voor een link om met
+          je vrienden te delen. Veel plezier!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
+          geleerd.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no
-          more instructions and no puzzles to solve. You can build anything you want.
-          You get to choose.
+        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
+          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
+          je wilt. Je mag zelf kiezen.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
+          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
+          We hebben een huis van wol gemaakt!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Nu kun je maken wat je maar wilt. Veel plezier!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

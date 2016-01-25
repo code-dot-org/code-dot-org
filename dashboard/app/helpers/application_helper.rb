@@ -62,17 +62,6 @@ module ApplicationHelper
     end
   end
 
-  def level_info(user, script_level, user_levels)
-    result = nil
-    if user
-      ul = user_levels[script_level.level_id]
-      result = ul.try(:best_result) if ul
-    else
-      result = client_state.level_progress(script_level.level_id.to_i)
-    end
-    activity_css_class(result)
-  end
-
   def show_flashes
     ret = ''
     if notice.present?
@@ -125,6 +114,15 @@ module ApplicationHelper
     end
   end
 
+  # A view helper that returns a unicode checkmark ✓ or ✗ depending on the value of flag.
+  def boolean_checkmark(flag)
+    if flag
+      '<span class="true_flag">&#x2713;</span>'.html_safe
+    else
+      '<span class="false_flag">&#x2717;</span>'.html_safe
+    end
+  end
+
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
 
@@ -138,7 +136,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO].include? app
+    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT].include? app
       asset_url "#{app}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
@@ -173,14 +171,10 @@ module ApplicationHelper
   end
 
   def script_certificate_image_url(user, script)
-    if script.hoc?
-      script_name = 'hoc'
-    elsif script.twenty_hour?
-      script_name = '20hours'
-    else
-      script_name = data_t_suffix('script.name', script.name, "title")
-    end
-    certificate_image_url(name: user.name, course: script_name)
+    certificate_image_url(
+        name: user.name,
+        course: script.name,
+        course_title: data_t_suffix('script.name', script.name, 'title'))
   end
 
   def minifiable_asset_path(path)

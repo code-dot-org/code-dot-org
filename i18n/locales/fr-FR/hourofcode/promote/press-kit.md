@@ -47,7 +47,7 @@ Nous espérons que cette initiative va susciter l'intérêt de nos élèves et q
 
 *Pourquoi est-ce important?*
 
-En Chine, tous les étudiants apprennent les sciences informatiques afin d'obtenir leur diplôme l'équivalent du baccalauréat. Aux États-Unis, 90 % des écoles ne l'enseignent même pas. Il est temps pour nous de prendre le tournant du XXIe siècle. Nous savons que quelque soit la filière que nos élèves prendont plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artistes, savoir programmer leur donnera la confiance et le savoir-faire pour maitriser les technologies et comprendre les bases du succès.
+In China, every student takes computer science to graduate high school. Aux États-Unis, 90 % des écoles ne l'enseignent même pas. Il est temps pour nous de prendre le tournant du XXIe siècle. Nous savons que quelque soit la filière que nos élèves prendont plus tard, qu'ils deviennent médecin, se lancent dans les affaires, fassent de la politique, ou épousent une carrière d'artistes, savoir programmer leur donnera la confiance et le savoir-faire pour maitriser les technologies et comprendre les bases du succès.
 
 **Plus d'informations et une citation que vous pouvez utiliser dans vos outils promotionnels**
 

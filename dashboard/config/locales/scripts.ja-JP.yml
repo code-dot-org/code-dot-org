@@ -3,109 +3,109 @@
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': ジグソーパズル：ドラッグ＆ドロップを学びましょう
-          The Maze: 迷路
-          Multi: マルチ
+          'Jigsaw: Learn to drag and drop': "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
+          The Maze: "迷路"
+          Multi: "マルチ"
           Match: Match
           Math Image: Math Image
           title: Test Course
           description: Just an internal test course.
           description_short: Just an internal test course.
         course1:
-          'Jigsaw: Learn to drag and drop': ジグソーパズル：ドラッグ＆ドロップを学びましょう
-          'Maze: Sequence': '迷路: シーケンス'
-          'Maze: Debugging': '迷路: デバッグ'
-          'Artist 1: Intro': 'アーティスト 1: イントロ'
-          Artists 2: アーティスト 2
-          Spelling Bee: つづりみつばち
+          'Jigsaw: Learn to drag and drop': "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
+          'Maze: Sequence': "迷路: シーケンス"
+          'Maze: Debugging': "迷路: デバッグ"
+          'Artist 1: Intro': "アーティスト 1: イントロ"
+          Artists 2: "アーティスト 2"
+          Spelling Bee: "つづりみつばち"
           Spelling Bee not blockly: Spelling Bee not blockly
-          'Bee 1: Intro': 'みつばち 1: イントロ'
-          'Maze 2: Loops': '迷路2: くりかえし'
-          'Bee 2: Loops': 'みつばち 2: ループ'
+          'Bee 1: Intro': "みつばち 1: イントロ"
+          'Maze 2: Loops': "迷路2: くりかえし"
+          'Bee 2: Loops': "みつばち 2: ループ"
           Multi & Match: Multi & Match
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: blocklyを使わないFlappy
-          title: コース1
-          Artist 2: アーティスト 2
-          Happy Maps: ハッピーマップ
-          Move it, Move it: 動かせ！動かせ！
-          'Real-life Algorithms: Plant a Seed': 現実のアルゴリズム：種を植えましょう
+          title: "コース1"
+          Artist 2: "アーティスト 2"
+          Happy Maps: "ハッピーマップ"
+          Move it, Move it: "動かせ！動かせ！"
+          'Real-life Algorithms: Plant a Seed': "現実のアルゴリズム：種を植えましょう"
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
-          Going Places Safely: 安全な道を通って行く
-          description: コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
-            1 年生 (5-7歳) におすすめのコースです。
-          'Bee: Sequence': 'みつばち: シーケンス'
-          'Artist: Sequence': 'アーティスト: シーケンス'
+          Going Places Safely: "安全な道を通って行く"
+          description: "コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
+            1 年生 (5-7歳) におすすめのコースです。"
+          'Bee: Sequence': "みつばち: シーケンス"
+          'Artist: Sequence': "アーティスト: シーケンス"
           'Artist: Shapes': 'Artist: Shapes'
-          'Maze: Loops': '迷路: ループ'
-          'Bee: Loops': 'みつばち: ループ'
-          'Studio: Create a Story': プレイラボ：お話を作りましょう
-          'Artist: Loops': アーティスト：ループ
+          'Maze: Loops': "迷路: ループ"
+          'Bee: Loops': "みつばち: ループ"
+          'Studio: Create a Story': "プレイラボ：お話を作りましょう"
+          'Artist: Loops': "アーティスト：ループ"
           description_audience: 4-6 歳対象
-          description_short: コース１は初心者向けです。
+          description_short: "コース１は初心者向けです。"
         course2:
-          The Maze: 迷路
+          The Maze: "迷路"
           Suzi: Suzi
-          The Artist: アーティスト
-          Artist Debugging: アーティスト デバッグ
-          Bounce: バウンド
-          'Studio: Create a Story': プレイラボ：お話を作りましょう
-          Artist Loops: アーティスト ループ
+          The Artist: "アーティスト"
+          Artist Debugging: "アーティスト デバッグ"
+          Bounce: "バウンド"
+          'Studio: Create a Story': "プレイラボ：お話を作りましょう"
+          Artist Loops: "アーティスト ループ"
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
-          title: コース2
-          Bee Loops: 'みつばち: ループ'
+          title: "コース2"
+          Bee Loops: "みつばち: ループ"
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
-          Graph Paper Programming: グラフ用紙のプログラミング
-          'Real-life Algorithms: Paper Planes': '現実世界のアルゴリズム: 紙飛行機を作る場合'
+          Maze Loops: "迷路ループ"
+          Graph Paper Programming: "グラフ用紙のプログラミング"
+          'Real-life Algorithms: Paper Planes': "現実世界のアルゴリズム: 紙飛行機を作る場合"
           Getting Loopy: Getting Loopy
-          Relay programming: Relay programming
-          Conditionals: 条件
-          Binary Bracelets: Binary Bracelets
+          Relay programming: "リレープログラミング"
+          Conditionals: "条件"
+          Binary Bracelets: "バイナリブレスレット"
           The Big Event: The Big Event
-          Your Digital Footprint: Your Digital Footprint
-          description: コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。
-          'Maze: Sequence': '迷路: シーケンス'
-          'Artist: Sequence': 'アーティスト: シーケンス'
-          'Maze: Loops': '迷路: ループ'
-          'Artist: Loops': アーティスト：ループ
-          'Bee: Loops': 'みつばち: ループ'
-          'Bee: Debugging': 'みつばち: デバッグ'
-          'Artist: Debugging': アーティスト：デバッグ
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Sequence2': 'アーティスト: シーケンス2'
-          'Maze: Sequence2': '迷路: シーケンス2'
-          'Artist: Nested Loops': アーティスト：入れ子のループ
+          Your Digital Footprint: "あなたのデジタルフットプリント"
+          description: "コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。"
+          'Maze: Sequence': "迷路: シーケンス"
+          'Artist: Sequence': "アーティスト: シーケンス"
+          'Maze: Loops': "迷路: ループ"
+          'Artist: Loops': "アーティスト：ループ"
+          'Bee: Loops': "みつばち: ループ"
+          'Bee: Debugging': "みつばち: デバッグ"
+          'Artist: Debugging': "アーティスト：デバッグ"
+          'Bee: Conditionals': "ビー：条件文"
+          'Artist: Sequence2': "アーティスト: シーケンス2"
+          'Maze: Sequence2': "迷路: シーケンス2"
+          'Artist: Nested Loops': "アーティスト：入れ子のループ"
           description_audience: 6-18 才
-          description_short: コース2は読み書きができる生徒のためのコースです。
+          description_short: "コース2は読み書きができる生徒のためのコースです。"
         course3:
-          The Maze: 迷路
-          'Studio: Create a Story': プレイラボ：お話を作りましょう
-          The Artist: アーティスト
-          title: コース3
-          Artist Functions: アーティスト：関数
-          Artist For Loops: アーティスト：Forループ
-          Artist Nested Loops: アーティスト：入れ子のループ
+          The Maze: "迷路"
+          'Studio: Create a Story': "プレイラボ：お話を作りましょう"
+          The Artist: "アーティスト"
+          title: "コース3"
+          Artist Functions: "アーティスト：関数"
+          Artist For Loops: "アーティスト：Forループ"
+          Artist Nested Loops: "アーティスト：入れ子のループ"
           Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
+          Bee Nested Loops: "ビーネストされたループ"
           Bee Debuggin: Bee Debuggin
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
-          Artist Functions with Params: アーティスト：引数のある関数
-          Bounce: バウンド
-          Maze Conditionals: Maze Conditionals
-          Artist Functions with Parameters: アーティスト：引数のある関数
-          Computational Thinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
+          Artist Functions with Params: "アーティスト：引数のある関数"
+          Bounce: "バウンド"
+          Maze Conditionals: "迷路条件文"
+          Artist Functions with Parameters: "アーティスト：引数のある関数"
+          Computational Thinking: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
-          Dice Race: Dice Race
-          Internet: インターネット
+          Dice Race: "言うレース"
+          Internet: "インターネット"
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
           Farmer - While Loops: Farmer - While Loops
@@ -114,21 +114,21 @@
             courses to flexible solutions to more complex problems. By the end of
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-5.
-          'Studio: Create a Game': プレイラボ：ゲームを作りましょう
-          Maze: 迷路
-          Artist: アーティスト
-          'Artist: Functions': アーティスト：関数
-          'Bee: Functions': 'みつばち: 関数'
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Maze: Conditionals': 'Maze: Conditionals'
-          'Artist: Nested Loops': アーティスト：入れ子のループ
+          'Studio: Create a Game': "プレイラボ：ゲームを作りましょう"
+          Maze: "迷路"
+          Artist: "アーティスト"
+          'Artist: Functions': "アーティスト：関数"
+          'Bee: Functions': "みつばち: 関数"
+          'Bee: Conditionals': "ビー：条件文"
+          'Maze: Conditionals': "迷路：条件文"
+          'Artist: Nested Loops': "アーティスト：入れ子のループ"
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Bee: Debugging': 'みつばち: デバッグ'
+          'Bee: Debugging': "みつばち: デバッグ"
           Maze2: Maze2
-          Artist2: アーティスト2
+          Artist2: "アーティスト2"
           'Artist: Functions2': 'Artist: Functions2'
-          'Bee: Functions2': 'みつばち: 関数2'
+          'Bee: Functions2': "みつばち: 関数2"
           'Bee: Conditionals2': 'Bee: Conditionals2'
           'Maze: Conditionals2': 'Maze: Conditionals2'
           'Artist: Nested Loops2': 'Artist: Nested Loops2'
@@ -140,27 +140,27 @@
           description_audience: 8-18 才
           description_short: Course 3 is a follow-up to Course 2.
         playlab:
-          title: プレイラボ
-          description: プレイラボでお話やゲームを作りましょう！
-          Play Lab: プレイラボ
-          description_short: プレイラボでお話やゲームを作りましょう！
+          title: "プレイラボ"
+          description: "プレイラボでお話やゲームを作りましょう！"
+          Play Lab: "プレイラボ"
+          description_short: "プレイラボでお話やゲームを作りましょう！"
         artist:
-          title: アーティスト
-          description: アーティストでかっこいい絵やデザインを描きましょう！
-          Artist: アーティスト
-          description_short: アーティストでかっこいい絵やデザインを描きましょう！
+          title: "アーティスト"
+          description: "アーティストでかっこいい絵やデザインを描きましょう！"
+          Artist: "アーティスト"
+          description_short: "アーティストでかっこいい絵やデザインを描きましょう！"
         hourofcode:
-          Maze: 迷路
-          title: Hour of Code（コーディングを学ぶ時間）
-          description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！
-          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
+          Maze: "迷路"
+          title: "古典的な迷路"
+          description: "アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター科学の基礎を試してみよう！"
+          description_short: "いろいろなキャラクターでコンピューター科学の基礎を試してみよう！"
         frozen:
-          title: アナとエルサとコードを書く
-          description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
-          Artist: アーティスト
-          description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
+          title: "アナとエルサとコードを書く"
+          description: "コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！"
+          Artist: "アーティスト"
+          description_short: "コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう"
         course4:
-          description_short: コース4を始める前に、コース2とコース3を終わらせてください。
+          description_short: "コース4を始める前に、コース2とコース3を終わらせてください。"
           description: Course 4 is designed for students who have taken Course 2 and
             3. Students will delve deeper into programming topics introduced in previous
             courses to flexible solutions to more complex problems. By the end of
@@ -168,28 +168,28 @@
             with anyone. Recommended for grades 4-8.
           'Artist: Variables': 'Artist: Variables'
           'Bee: For Loops': 'Bee: For Loops'
-          title: コース4
+          title: "コース4"
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: 変数
-          'Play Lab: Variables': 'Play Lab: Variables'
-          'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
+          Variables: "変数"
+          'Play Lab: Variables': "ラボ再生：変数"
+          'Play Lab: Functions with Parameters': "ラボを再生する：関数のパラメータを持ちます"
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-          'Artist: For Loops': 芸術家：ループ用
+          'Artist: For Loops': "芸術家：ループ用"
           'Play Lab: For Loops': 'Play Lab: For Loops'
-          'Artist: Functions': アーティスト：関数
+          'Artist: Functions': "アーティスト：関数"
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: アーティスト
-          Bee: みつばち
+          Artist: "アーティスト"
+          Bee: "みつばち"
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
           'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-          'Artist: Functions with Parameters': 芸術家：　変数装置（パラメータ）をつけた関数
+          'Artist: Functions with Parameters': "芸術家：　変数装置（パラメータ）をつけた関数"
           'Unplugged: Binary': 'Unplugged: Binary'
-          Bee Binary: ハチ　２進法
-          Farmer Binary: 農家　２進法
-          Maze and Bee: 迷路とみつばち
-          Artist Binary: 芸術家　２進法
+          Bee Binary: "ハチ　２進法"
+          Farmer Binary: "農家　２進法"
+          Maze and Bee: "迷路とみつばち"
+          Artist Binary: "芸術家　２進法"
           description_audience: 10-18 才
           Super Challenge - Variables: Super Challenge - Variables
           Super Challenge - For Loops: Super Challenge - For Loops
@@ -203,25 +203,25 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': '迷路: シーケンス'
-          'Artist: Sequence': 'アーティスト: シーケンス'
-          'Artist: Loops': アーティスト：ループ
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': アーティスト：入れ子のループ
+          'Maze: Sequence': "迷路: シーケンス"
+          'Artist: Sequence': "アーティスト: シーケンス"
+          'Artist: Loops': "アーティスト：ループ"
+          'Bee: Conditionals': "ビー：条件文"
+          'Artist: Nested Loops': "アーティスト：入れ子のループ"
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': アーティスト：関数
-          'Bee: Debugging': 'みつばち: デバッグ'
+          'Artist: Functions': "アーティスト：関数"
+          'Bee: Debugging': "みつばち: デバッグ"
         usability:
-          Intro: イントロ
+          Intro: "イントロ"
           Variables and For Loops: Variables and For Loops
           Functions and Functions with Parameters: Functions and Functions with Parameters
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: 変数
-          For Loops: ループ用
-          Binary: ２しんすう
+          Variables: "変数"
+          For Loops: "ループ用"
+          Binary: "２しんすう"
         potus:
           title: special
           description_short: special
@@ -232,7 +232,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: ２しんすう
+          Binary: "２しんすう"
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -257,16 +257,16 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
-          'Eval: Conditionals': 条件
+          'Eval: Conditionals': "条件"
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
             (Big Game)'
         infinity:
           title: Play Lab
-          description_short: プレイラボでお話やゲームを作りましょう！
-          description: プレイラボでお話やゲームを作りましょう！
-          Play Lab: プレイラボ
+          description_short: "プレイラボでお話やゲームを作りましょう！"
+          description: "プレイラボでお話やゲームを作りましょう！"
+          Play Lab: "プレイラボ"
           Infinity: |
             無限
         algebrademo:
@@ -306,12 +306,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: インターネット シミュレータ
+          title: "インターネット シミュレータ"
           description_short: ''
           description: ''
-          Internet Simulator: インターネット シミュレータ
-          Unit 1: ユニット 1
-          Unit 2: ユニット 2
+          Internet Simulator: "インターネット シミュレータ"
+          Unit 1: "ユニット 1"
+          Unit 2: "ユニット 2"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -345,46 +345,46 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: コンピュータサイエンスコース （15-25 時間）の入門編
+          title: "コンピュータサイエンスコース （15-25 時間）の入門編"
           description_audience: 10-18 才
-          description: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
+          description: "この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。"
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: コンピューター・サイエンス入門
-          The Maze: 迷路
-          Computational Thinking: コンピュテーショナル・シンキング（コンピューターの様に考える）
-          Graph Paper Programming: プログラミングのグラフ用紙
-          The Artist: アーティスト
-          Algorithms: アルゴリズム
-          The Artist 2: アーティスト 2
-          Functions: 機能
-          The Farmer: 農家
-          Conditionals: 条件
-          The Artist 3: アーティスト 3
-          Song Writing: 作曲
-          The Farmer 2: 農家 2
-          Abstraction: 抽象化
-          The Artist 4: アーティスト 4
-          Relay Programming: プログラミングをリレーする
-          The Farmer 3: 農家 3
-          The Internet: インターネット
-          The Artist 5: アーティスト 5
-          Wrap-up: まとめ
+          Introduction to Computer Science: "コンピューター・サイエンス入門"
+          The Maze: "迷路"
+          Computational Thinking: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
+          Graph Paper Programming: "プログラミングのグラフ用紙"
+          The Artist: "アーティスト"
+          Algorithms: "アルゴリズム"
+          The Artist 2: "アーティスト 2"
+          Functions: "機能"
+          The Farmer: "農家"
+          Conditionals: "条件"
+          The Artist 3: "アーティスト 3"
+          Song Writing: "作曲"
+          The Farmer 2: "農家 2"
+          Abstraction: "抽象化"
+          The Artist 4: "アーティスト 4"
+          Relay Programming: "プログラミングをリレーする"
+          The Farmer 3: "農家 3"
+          The Internet: "インターネット"
+          The Artist 5: "アーティスト 5"
+          Wrap-up: "まとめ"
         edit-code:
-          title: コードを編集します。
-          description: コードを編集します。
-          description_short: コードを編集します。
-          The Maze: 迷路
+          title: "コードを編集します。"
+          description: "コードを編集します。"
+          description_short: "コードを編集します。"
+          The Maze: "迷路"
           Applab: Applab
-          The Artist: アーティスト
-          Play Lab: プレイラボ
+          The Artist: "アーティスト"
+          Play Lab: "プレイラボ"
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: イベント
-          description: イベント
-          description_short: イベント
-          Bounce: はずむ
+          title: "イベント"
+          description: "イベント"
+          description_short: "イベント"
+          Bounce: "はずむ"
           Studio: Studio
           Calc: Calc
           Eval: Eval
@@ -394,19 +394,19 @@
           description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Flappy Code
         jigsaw:
-          title: ジグソーパズル
+          title: "ジグソーパズル"
           description: ''
           description_short: Try our Jigsaw tutorial
-          Jigsaw: ジグソーパズル
+          Jigsaw: "ジグソーパズル"
         step:
-          title: ステップ
+          title: "ステップ"
           description: ''
           description_short: Step tutorial
-          Step: ステップ
+          Step: "ステップ"
         Hour of Code:
           title: Hour of Code 2013
-          description: ''
-          description_short: いろいろなキャラクターでコンピューター科学の基礎を試してみよう！
+          description: "基礎試してくださいコンピュータと科学を文字ゾンビ対怒っている鳥や植物から！"
+          description_short: "いろいろなキャラクターでコンピューター科学の基礎を試してみよう！"
           Hour of Code 2013: Hour of Code 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -445,15 +445,15 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': '迷路: シーケンス'
-          'Artist: Sequence': 'アーティスト: シーケンス'
-          'Artist: Loops': アーティスト：ループ
-          'Bee: Conditionals': 'Bee: Conditionals'
-          'Artist: Nested Loops': アーティスト：入れ子のループ
+          'Maze: Sequence': "迷路: シーケンス"
+          'Artist: Sequence': "アーティスト: シーケンス"
+          'Artist: Loops': "アーティスト：ループ"
+          'Bee: Conditionals': "ビー：条件文"
+          'Artist: Nested Loops': "アーティスト：入れ子のループ"
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
-          'Artist: Functions': アーティスト：関数
-          'Bee: Debugging': 'みつばち: デバッグ'
+          'Artist: Functions': "アーティスト：関数"
+          'Bee: Debugging': "みつばち: デバッグ"
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -526,7 +526,7 @@
             (Big Game)'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Strings and Images
-          Contracts: 契約
+          Contracts: "契約"
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
           The Design Recipe: The Design Recipe
@@ -630,7 +630,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: 機能
+          Functions: "機能"
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -690,7 +690,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: 変数
+          Variables: "変数"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -723,6 +723,15 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -850,7 +859,7 @@
           description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
-          Multi: マルチ
+          Multi: "マルチ"
           Big Game: Big Game
           new stage: new stage
         sciencePD2:
@@ -884,7 +893,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: インターネット
+          description_short: "インターネット"
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -903,7 +912,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: インターネット
+          The Internet: "インターネット"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -954,15 +963,15 @@
           Big Game - Collision Detection: Big Game - Collision Detection
           Free Play: Free Play
         allthethings:
-          Jigsaw: ジグソーパズル
-          Maze: 迷路
-          Artist: アーティスト
-          Bee: みつばち
+          Jigsaw: "ジグソーパズル"
+          Maze: "迷路"
+          Artist: "アーティスト"
+          Bee: "みつばち"
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: はずむ
-          Multi: マルチ
+          Bounce: "はずむ"
+          Multi: "マルチ"
           Match: Match
           TextMatch: TextMatch
           CSinA: CSinA
@@ -1005,20 +1014,20 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: インターネット シミュレータ
-          App Lab: アプリ ラボ
+          Internet Simulator: "インターネット シミュレータ"
+          App Lab: "アプリ ラボ"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: インターネット シミュレータ
-          App Lab: アプリ ラボ
+          Internet Simulator: "インターネット シミュレータ"
+          App Lab: "アプリ ラボ"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1043,7 +1052,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1052,7 +1061,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: まとめ
+          Wrap-up: "まとめ"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1122,15 +1131,15 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ようこそ!
-          Wrap-Up: まとめ
+          Welcome!: "ようこそ!"
+          Wrap-Up: "まとめ"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1146,13 +1155,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: まとめ
+          Wrap-Up: "まとめ"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1164,7 +1173,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1173,12 +1182,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: まとめ
+          Wrap-Up: "まとめ"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1197,12 +1206,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: まとめ
+          Wrap-up: "まとめ"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1221,7 +1230,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: まとめ
+          Wrap-up: "まとめ"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1262,14 +1271,14 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: ハッピーマップ
-          Move it, Move it: 動かせ！動かせ！
-          'Real-life Algorithms: Plant a Seed': 現実のアルゴリズム：種を植えましょう
-          Graph Paper Programming: プログラミングのグラフ用紙
+          Happy Maps: "ハッピーマップ"
+          Move it, Move it: "動かせ！動かせ！"
+          'Real-life Algorithms: Plant a Seed': "現実のアルゴリズム：種を植えましょう"
+          Graph Paper Programming: "プログラミングのグラフ用紙"
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
           The Big Event: The Big Event
-          Binary Bracelets: Binary Bracelets
+          Binary Bracelets: "バイナリブレスレット"
           Songwriting: Songwriting
         afterschool1:
           title: Afterschool 1
@@ -1319,7 +1328,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1347,11 +1356,12 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1386,7 +1396,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1421,7 +1431,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1430,7 +1440,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1452,7 +1462,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: プライバシー ポリシー
+          Privacy Policy: "プライバシー ポリシー"
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1470,15 +1480,37 @@
           'Debate: Privacy vs Utility': 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and
             Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: まとめ
+          Wrap-Up: "まとめ"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1496,7 +1528,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: ようこそ!
+          Welcome!: "ようこそ!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1523,6 +1555,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1541,6 +1574,8 @@
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: CSP Unit 3 - Temp
           description_short: Programming
@@ -1559,6 +1594,13 @@
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: While Loops
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          'Practice PT: Create': 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1578,23 +1620,39 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'スター・ウォーズ: コーディングで銀河をつくろう'
-          description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          title: "スター・ウォーズ: コードを書いて銀河をつくろう"
+          description_short: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
+          description: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
           Hour of Code 2015: Hour of Code 2015　（コードの時間　２０１５）
         starwarsblocks:
-          title: 'スター・ウォーズ: コーディングで銀河をつくろう'
-          description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
+          title: "スター・ウォーズ: コードを書いて銀河をつくろう"
+          description_short: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
+          description: "ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！"
           Hour of Code 2015: Hour of Code 2015　（コードの時間　２０１５）
         minecraft:
-          title: Minecraft
+          title: "マインクラフト"
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
+          title: Minecraftプログラミング入門
+          description_short: "コードでMinecraftの世界を探検しましょう"
+          description: "コードブロックでキャラクターを動かし、世界を探検します"
           Hour of Code 2015: Hour of Code 2015　（コードの時間　２０１５）
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
+          description: Online Exploration of CSP Unit 3-- Lesson Challenges
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: "ようこそ!"
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: "まとめ"
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

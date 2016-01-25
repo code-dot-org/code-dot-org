@@ -159,7 +159,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "elseCode":function(d){return "remaining"},
 "endGame":function(d){return "गेम खत्म करें"},
 "endGameTooltip":function(d){return "गेम को खत्म करें"},
-"finalLevel":function(d){return "Congratulations! You have solved the final puzzle."},
+"finalLevel":function(d){return "बधाइयाँ! आपने अंतिम पहेली हल कर दी है।"},
 "flap":function(d){return "फ़ड़फ़ड़ाय"},
 "flapRandom":function(d){return "इतना फ़ड़फ़ड़ाय"},
 "flapVerySmall":function(d){return "बिलकुल ज़रा सा फ़ड़फ़ड़ाय"},

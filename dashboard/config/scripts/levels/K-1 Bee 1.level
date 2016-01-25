@@ -11,7 +11,7 @@
     "skin": "bee",
     "instructions": "Move me to the flower, get the nectar, then move me to the honeycomb, and make honey",
     "start_direction": "1",
-    "step_mode": 1,
+    "step_mode": "1",
     "is_k1": "true",
     "flower_type": "redWithNectar",
     "skip_instructions_popup": "false",
@@ -19,7 +19,20 @@
     "honey_goal": "1",
     "ideal": "6",
     "video_key": "C1_bee_level_intro",
-    "disable_param_editing": "true"
+    "disable_param_editing": "true",
+    "never_autoplay_video": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "false"
   }
 }]]></config>
   <blocks>
@@ -31,12 +44,12 @@
         <block type="maze_honey"/>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_moveEast"/>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Karel>

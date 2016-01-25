@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "กดดินสอลงเพื่อวาด และยกดินสอขึ้นเพื่อหยุดวาด"},
 "penUp":function(d){return "ยกดินสอขึ้น"},
 "reinfFeedbackMsg":function(d){return "นี่เป็นที่ของรูปวาดคุณ! คุณยังจะทำมันต่อ หรือจะเลือกปริศนาต่อไป"},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "ตั้งค่าอัลฟา"},
 "setColour":function(d){return "ตั้งค่าสี"},
 "setPattern":function(d){return "ตั้งค่ารูปแบบ"},
 "setWidth":function(d){return "ตั้งค่าความกว้าง"},

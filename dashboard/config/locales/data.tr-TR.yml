@@ -74,37 +74,39 @@
       name:
         Unplug1: Bilgisayar Bilimlerine Giriş
         Maze: Labirent
-        Multi: Çok Seçimli Şeyler
+        Multi: "Çok Seçimli Şeyler"
         Unplug2: Sayısal Düşünme
         Unplug3: Grafikli Kağıdıyla Programlama
         Artist: Sanatçı
         Unplug4: Algoritmalar
         Artist2: Sanatçı 2
         Unplug5: Fonksiyonlar
-        Farmer: Çiftçi
+        Farmer: "Çiftçi"
         Unplug6: Koşullar
         Artist3: Sanatçı 3
-        Unplug7: Şarkı Yazma
-        Farmer2: Çiftçi 2
+        Unplug7: "Şarkı Yazma"
+        Farmer2: "Çiftçi 2"
         Unplug8: Soyutlama
         Artist4: Sanatçı 4
         Unplug9: Röle Programlama
-        Farmer3: Çiftçi 3
-        Unplug10: İnternet
+        Farmer3: "Çiftçi 3"
+        Unplug10: "İnternet"
         Artist5: Sanatçı 5
-        Unplug11: Özet
+        Unplug11: "Özet"
         MazeEC: Labirent
         Bounce: Sıçrama
         Flappy: Flappy Bird
         Jigsaw: Yapboz
         MazeStep: Labirent Adım Modu
-        Wordsearch: Kelime Arama
+        Wordsearch: Kelime arama
         Webapp: Uygulama Laboratuvarı
         ArtistEC: Sanatçı
         TextMatch: Metin Eşleştirmesi
         StudioEC: Oyun Laboratuvarı
         Applab: Uygulama Laboratuvarı
-        NetSim: İnternet Simülatörü
+        NetSim: "İnternet Simülatörü"
+        Custom: Aktör
+        CustomStudio: Oyun Laboratuvarı
     trophy:
       name:
         Bronze: Bronz
@@ -174,8 +176,8 @@
           kullanarak tüm kenarları farklı renkte olan bir üçgen çizin. İpucu: Ne kadar
           uzağa dönmeniz gerektiğini dönüş blogundaki numaraya tıklayarak bulmanız
           gerek.'
-        turtle_1_5: Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için bir
-          kare çizin.
+        turtle_1_5: "Şimdi, uygulama için bir üçgen ve sonra bir zarf çizmek için
+          bir kare çizin."
         turtle_1_6: 'Bir karenin ve bir üçgenin nasıl çizileceğini anlayabildiniz
           mi? İpucu: Önce üçgeni çizin, sonra kare çizmeden önce kaç kez dönmeniz
           gerektiğini bulun.'
@@ -185,8 +187,8 @@
         turtle_1_8: Tamam, bu kodu çalıştırıdığınızda ne olduğunu görelim (ya da "Çalıştır"
           düğmesini tıklayın). O halde, çizimi tamalamak için yeteri kadar tekrar
           edin. Renkler her defasında farkı olsun.
-        turtle_1_9: Çember çizmek için soru işaretli yere gelmesi gereken sayısı bulabilir
-          misiniz?
+        turtle_1_9: "Çember çizmek için soru işaretli yere gelmesi gereken sayısı
+          bulabilir misiniz?"
         turtle_1_10: Başardınız! Şimdi, istediğiniz her hangi bir şeyi çiziniz.Eğlenceli
           olabilecek bazı fikirler:kartanesi ya da spiral olabilir.Ayrıca "kalınlığını
           belirleyin " bloğunu kullanabilirisniz.Eğlenin!
@@ -205,15 +207,15 @@
           bir çember 360 derece döndürülerek oluşturulabilir.)
         turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel lacak bir kare
           çizebilir misiniz?
-        turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine
+        turtle_4_7: "İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine
           merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu:
-          Yalnızca iki bloga daha ihtiyacın var.'
-        turtle_4_8: Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2
-          blok daha ekleyebilir misin?
-        turtle_4_9: Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması
-          için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
-        turtle_4_10: Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar
-          gerekli?
+          Yalnızca iki bloga daha ihtiyacın var."
+        turtle_4_8: "Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2
+          blok daha ekleyebilir misin?"
+        turtle_4_9: "Önceki bulmaca çözümü burada. Kaç derece çizimin tamamlanması
+          için kaç derece dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)"
+        turtle_4_10: "Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar
+          gerekli?"
         turtle_4_11: Farklı desenler yapmak için "dön" ve "tekrarla" bloklarındaki
           sayıları değiştirmeyi dene. Ya da, istediğin herhangi bir şeyi çizmek için
           kodun geri kalanını değiştirmeyi dene.
@@ -254,9 +256,9 @@
         turtle_2_3: 100 boyutunda 120 derece aralıklı 3 kare çizmek için döngüler
           kategorisinde ki tekrar et bloğunu kullan.Ve 3 ünüde farklı,rastgele renklerde
           yap.
-        turtle_2_4: 'Şimdi biraz kafayı çekeceğiz. Kodu 36 kare çizmek için ayarla,
+        turtle_2_4: "Şimdi biraz kafayı çekeceğiz. Kodu 36 kare çizmek için ayarla,
           100 piksel genişliğinde ve her biri 10 aşama uzakta olsun. İpucu: Belki
-          daha hızlı gitmem için kaydırgacı kullanmak istersin.'
+          daha hızlı gitmem için kaydırgacı kullanmak istersin."
         turtle_2_5: '"Kare çiz" fonksiyonunu 5 kere kullanarak, 50, 60, 70, 80 ve
           90 piksel boyutlarında kareler çizin.'
         turtle_2_6: 'Pekala,  bu program sonuncu karenin aynısını çizmek için bir
@@ -324,8 +326,8 @@
           çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin?
           Bir dene ve bir dizi ev çiz.'
-        turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
-          spiral veya bir kar tanesi çizmeye çalışın.
+        turtle_3_10: "Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
+          spiral veya bir kar tanesi çizmeye çalışın."
         maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün
           çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve
           ekim için hazır olur.
@@ -436,16 +438,16 @@
           bloğuna ekleme yaparak oyuncuyu değiştirmeyi dene.'
         jigsaw_1: Bloğu tıklayın
         jigsaw_2: Bloğu hedefe sürükle
-        jigsaw_3: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_4: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_5: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_6: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_7: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_8: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_9: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_10: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_11: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_12: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_3: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_4: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_5: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_6: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_7: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_8: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_9: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_10: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_11: "Şekli oluşturacak biçimde blokları düzenleyin"
+        jigsaw_12: "Şekli oluşturacak biçimde blokları düzenleyin"
         jigsaw_13: Bulmacayı düzelt!
         mazestep_1: Labirent adım tanımları
         mazestep_2: Labirent adım tanımları
@@ -525,46 +527,79 @@
           ok tuşlarıyla kontrol ederek bota ulaş ve diğer herkesi uyar
         studio_playlab_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_iceage_1: Manny "merhaba" demek istiyor. Ona yardımcı olabilir misin?
-        studio_iceage_2: Diego (actor 1) and Granny (actor 2) would like to say "hello"
-          to each other. Can you help them by using the "say" block twice?
-        studio_iceage_3: Scrat'e bayrağı alması için yardımcı olabilir misin?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and
-          play a sound when he gets there?
-        studio_iceage_5: Can you help Sid say "greetings" when it is clicked? Don’t
-          forget to click it after you click Run
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_iceage_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Sid move right and left repeatedly?
-        studio_iceage_8: Can you add a block to score a point and a block to play
-          a sound when Sid runs into Manny, and then move him with the arrows until
-          you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny
-          faster by changing its speed. Then move him with the arrow keys to get to
-          Sid and alert everyone else.
-        studio_iceage_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
-          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_gumball_1: Anais wants to say "hello" - can you help her?
-        studio_gumball_2: Darwin (actor 1) and Gumball (actor 2) would like to say
-          "hello" to each other. Can you help them by using the "say" block twice?
-        studio_gumball_3: Muz Joe'nun bayrağı almasına yardımcı olabilir misin?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and
-          play a sound when he gets there?
-        studio_gumball_5: Can you help Antony say "greetings" when it is clicked?
-          Don’t forget to click it after you click Run
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left
-          arrow keys to get to all the flags?
-        studio_gumball_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Antony move right and left repeatedly?
-        studio_gumball_8: Can you add a block to score a point and a block to play
-          a sound when Banana Joe runs into Antony, and then move him with the arrows
-          until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole
-          get to Penny faster by changing its speed. Then move him with the arrow
-          keys to get to Nicole and alert everyone else.
-        studio_gumball_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
-          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
+        studio_iceage_hello1: Sid herkesi yeni bir macera için toplamak istiyor. Sid'in
+          herkese merhaba diyebilmesi için çalışma alanına 'söyle' bloğunu sürükleyip;
+          bloğun içine de "merhaba" yazarmısın?
+        studio_iceage_hello2: Sid (Aktör 1), Manny'i (Aktör 2)  buldu ve onu macerasına
+          davet etmek istiyor. "Aktör der" bloğunu iki kere kullanarak birbirlerini
+          tanımalarına yardım et.
+        studio_iceage_move_to_flag: Scrat meşe palamudunu arıyor! Son 200 pikseli
+          gitmesine yardım etmek için "ilerle" bloğunu kullan.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: '"Sonsuza kadar tekrarla" bloğu size kodu sürekli oynatma
+          imkanı verir. Büyükanneyi sağa ve sola tekrar tekrar hareket ettirerek egzersiz
+          yaptırmak için blokları ekleyebilir misiniz?'
+        studio_iceage_click_hello: Sid'e, tıklandığında arkadaşları için son çağrı
+          yapmasına yardım eder misin? Çalıştıra bastıktan sonra Sid'in üstüne tıklamayı
+          unutma.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe günlük bir yarışı kazanmak üzere!
+          Son 200 pikseli gitmesine yardım etmek için "ilerle" bloğunu kullanın.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Antona "Hazır, vaziyet, başla!" diyerek yarışı
+          başlatmasına yardım edebilir misin? Programı denemek için Çalıştıra tıkladıktan
+          sona Antona tıklamayı unutmayın!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Kendi oyununu ya da hikayeni yarat. Bitirdiğinde,
+          Arkadaşlarının da telefon, tablet veya bilgisayarlarında oynaması için "Bitir"e
+          tıkla!
         studio_full_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
           ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
         studio_k1_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
@@ -609,13 +644,13 @@
       name:
         maze_intro: 'Labirent: Tanıtım'
         artist_intro: 'Ressam: Giriş'
-        farmer_intro: Çiftçi girişi
+        farmer_intro: "Çiftçi girişi"
         flappy_intro: Flappy Tanıtım
         loop_times: Bloğu tekrarlayın
         loop_until: Blok kadar tekrarlayın
         if: if bloğu
-        if_else: İf/else bloğu
-        if_else_scrat: İf/else bloğu
+        if_else: "İf/else bloğu"
+        if_else_scrat: "İf/else bloğu"
         function: Fonksiyonlar
         loop_while: while bloğu
         loop_for: Sayaç bloğu
@@ -627,13 +662,13 @@
         Unplug4: Algoritmalar
         Unplug5: Fonksiyonlar
         Unplug6: Koşullar
-        Unplug7: Şarkı yazma
+        Unplug7: "Şarkı yazma"
         Unplug8: Soyutlama
         Unplug9: Röle Programlama
-        Unplug10: İnternet
-        Unplug11: Özet
+        Unplug10: "İnternet"
+        Unplug11: "Özet"
         C1_happy_maps_unplugged: Mutlu Haritalar
-        C1_moveitmoveit_unplugged: Çabuk, Çabuk Taşı
+        C1_moveitmoveit_unplugged: "Çabuk, Çabuk Taşı"
         C1_bigevent_unplugged: Büyük Olay
         C1_getting_loopy: Döngüselleşme
         C1_pair_programming: Eşli Programlama
@@ -660,7 +695,7 @@
         C2_playlab_createstory: Laboratuvar Oyna - Bir Hikaye Oluştur
         C2_graph_paper: Grafikli Kağıdıyla Programlama
         C2_conditionals_with_cards: Koşullar
-        C2_binary_bracelets: İkilik Bileklikler
+        C2_binary_bracelets: "İkilik Bileklikler"
         C2_relay_programming: Röle Programlama
         C2_paper_airplanes: Kağıt Uçaklar
         C2_digital_footprint: Dijital İziniz
@@ -671,15 +706,15 @@
         C3_bee_functions: Arı Fonksiyonları
         C3_bee_conditionals: Arı Koşullandırmaları
         C3_maze_conditionals: Labirent Koşullandırıcıları
-        C3_artist_nested_loops: İç İçe Döngüler
+        C3_artist_nested_loops: "İç İçe Döngüler"
         C3_farmer_while: While(...durumunda) Döngüleri
-        C3_bee_nested_loops: İç İçe Döngüler
+        C3_bee_nested_loops: "İç İçe Döngüler"
         C3_bee_debugging: Arı Ayıklama
         C3_bounce: Sıçrama
         C3_playlab_create_game: 'Oyun Laboratuvarı: Bir Oyun Oluştur'
         C3_computational_thinking: Sayısal Düşünme
         C3_dice_race: Zar Yarışı
-        C3_internet: İnternet
+        C3_internet: "İnternet"
         C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
         C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
         C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
@@ -697,11 +732,11 @@
         C4_function_parameters: Fonksiyon parametreleri
         C4_conditionals: Koşullar
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
-        C4_unplugged_madlibs: Çılgın Kütüphaneler
+        C4_unplugged_madlibs: "Çılgın Kütüphaneler"
         C4_unplugged_variables: Zarfların içindeki Değişkenler
         C4_unplugged_forloops: For Döngüleri
         C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
-        C4_unplugged_binary: İkili
+        C4_unplugged_binary: "İkili"
         frozen_intro: Kodlama Saati Giriş
         frozen_loops: Döngülere Giriş
         frozen_functions: Fonksiyonlara Giriş
@@ -712,6 +747,9 @@
         infinity_playlab_intro: Oyun Laboratuvarı - Giriş
         infinity_playlab_events: Oyun Laboratuvarı - Olaylar
         infinity_playlab_repeat_forever: Oyun Laboratuvarı - Sonsuz Döngü
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -750,18 +788,27 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Kod ile Galaksiyi inşa et - Başlarken'
-        starwars_typing: 'Star Wars: Kod ile Galaksiyi inşa et - JavaScript'
-        starwars_events: 'Star Wars: Kod ile Galaksiyi inşa et - Etkinlikler'
-        starwars_congrats: 'Star Wars: Kod ile Galaksiyi inşa et - Tebrikler'
-        starwars_blocks_intro: 'Star Wars: Kod ile Galaksiyi inşa et - Başlarken'
-        starwars_blocks_events: 'Star Wars: Kod ile Galaksiyi inşa et - Etkinlikler'
-        starwars_blocks_congrats: 'Star Wars: Kod ile Galaksiyi inşa et - Tebrikler'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        starwars_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Giriş'
+        starwars_typing: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - JavaScript'
+        starwars_events: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Etkinlikler'
+        starwars_congrats: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Tebrikler'
+        starwars_blocks_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+          - Giriş'
+        starwars_blocks_events: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+          - Etkinlikler'
+        starwars_blocks_congrats: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+          - Tebrikler'
+        mc_intro: Minecraft - Giriş
+        mc_repeat: Minecraft - Tekrar
+        mc_if_statements: Minecraft - Eğer ifadeleri
+        mc_congrats_share: Minecraft - Tebrikler
+        mc_congrats_no_share: Minecraft - Tebrikler
+        gumball_intro: Gumball Kod Saati - Giriş
+        gumball_events: Gumball Kodlama Saati - Olaylar
+        gumball_repeat: Gumball Kodlama Saati - Tekrarlayan İfadeler
+        iceage_intro: Buz Devri Kodlama Saati - Giriş
+        iceage_events: Buz Devri Kodlama Saati - Olaylar
+        iceage_repeat: Buz Devri Kodlama Saati - Tekrarlayan İfadeler
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
@@ -789,8 +836,8 @@
           seçin
         repeat_blocks: '"Tekrarla" bloğunu kullanarak çalışma alanındaki blokların
           etrafında döndürün'
-        repeat_blocks_1: (1) Bu bloğu kullan ve çalışma alanındaki gri blokların etrafına
-          koy
+        repeat_blocks_1: "(1) Bu bloğu kullan ve çalışma alanındaki gri blokların
+          etrafına koy"
         repeat_blocks_2: (2) "Tekrarla" bloğunu buraya taşı ve gri bloklar içine yerleştir
         snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
         degrees_per_side: 360'ı kenar sayısına bölerek her açının derecesini bulun.
@@ -802,7 +849,7 @@
         get_nectar: Yeni "nektarı al" bloğunu kullan.
         actions_category: Ataç kutusunun yeni bir görünümü var! "Eylemler" blokları
           artık burada.
-        draw_square_hint: 'İpucu: Son bulmacada yaptığın kare döngüsünü kullan.'
+        draw_square_hint: "İpucu: Son bulmacada yaptığın kare döngüsünü kullan."
         edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
         create_function: '"Fonksiyonlar" açılır penceresini açmak için buraya tıkla,
           ardından "Yeni bir fonksiyon oluştur" butonuna tıkla.'
@@ -827,8 +874,8 @@
           unutma
         playlab_move_girl: Tenisçi kızı yürütmek için "sağa git" bloğunu kullan
         playlab_play_sound: '"Sesi çal" bloğunu buraya ekle'
-        playlab_arrow_keys: Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
-          kullanmayı unutma
+        playlab_arrow_keys: "Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
+          kullanmayı unutma"
         playlab_add_move: '"Hareket et" bloğunu tekrarla bloğunun içine ekle'
         playlab_add_score: Skor bloklarını buraya ekle
         playlab_add_blocks: Bloklarını buraya ekle
@@ -841,8 +888,8 @@
         change_here: Değişikliği burada yap
         write_draw_square_function: Kare çizmek için blokları araç kutusundan buraya
           sürükle
-        write_draw_triangle_function: Üçgen çizmek için blokları araç kutusundan buraya
-          sürükle
+        write_draw_triangle_function: "Üçgen çizmek için blokları araç kutusundan
+          buraya sürükle"
         edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
         add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın
           ve ardından fonksiyonunuzun tanımına sürükleyin
@@ -863,13 +910,13 @@
         Infinity_move_directions_callout_arrow: Yönlendirmek için bu okları kullanın
         Infinity_move_collide_callout: Bu olay gerçekleştiğinde ses çal.
         Infinity_repeat_callout: '"İlerle" bloklarının buraya yerleştir'
-        craft_run_button_callout: Programınızı denemek için "Çalıştır" düğmesine basın
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
+        craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun
+          altına dayayın
+        craft_callout_preplaced: Başlamanız için buraya birkaç blok koyduk
+        craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
+        craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım
+          bitirebilecek misiniz?
+        craft_what_is_iron: Bu demiri çıkar!
+        craft_callout_moveforward: Bu kod, lav olup olmadığını kontrol edecek, ileri
+          gitmek için bir komut ekleyebilir misiniz?

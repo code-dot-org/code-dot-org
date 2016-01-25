@@ -7,7 +7,7 @@ class PropertyBag
   end
 
   def initialize(channel_id, storage_id)
-    _, @channel_id = storage_decrypt_channel_id(channel_id) # TODO(if/when needed): Ensure this is a registered channel?
+    @channel_id = channel_id # TODO(if/when needed): Ensure this is a registered channel?
     @storage_id = storage_id
 
     @table = PEGASUS_DB[:app_properties]
@@ -69,7 +69,7 @@ class DynamoPropertyBag
   end
 
   def initialize(channel_id, storage_id)
-    _, @channel_id = storage_decrypt_channel_id(channel_id)
+    @channel_id = channel_id
     @storage_id = storage_id
 
     @hash = "#{@channel_id}:#{storage_id}"
@@ -102,13 +102,13 @@ class DynamoPropertyBag
     JSON.load(item['value'])
   end
 
-  def set(name, value, ip_address)
+  def set(name, value, ip_address, time = DateTime.now)
     db.put_item(
       table_name: CDO.dynamo_properties_table,
       item: {
         hash: @hash,
         name: name,
-        updated_at: DateTime.now.to_s,
+        updated_at: time.to_s,
         updated_ip: ip_address,
         value: value.to_json,
       },

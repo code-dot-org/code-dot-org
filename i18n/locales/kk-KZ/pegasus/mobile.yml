@@ -1,12 +1,14 @@
 kk-KZ:
-  hour_of_code: Hour of Code
+  hour_of_code: Код жазу Сағаты
   hello: Сәлем, әлем
   select_language: Тілді таңдаңыз
   en: Информатика
   computer_science_edweek: Компьютерлік технологияның білім беру апталығы
   csedweek_dates: Желтоқсан 8-14, 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
-  csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
+  csedweek_banner_hoc: |-
+    '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">"Код жазу Сағаты"</a> жақындап келе жатыр. Барлық оқытушылар мен ұйымдастырушыларды шақырамыз, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">өзіңіздің "Код жазу Сағатыңызды" белгілеңіз</a>'
+  csedweek_banner_teachers: |-
+    '<a href="/Информатикаteacher" style="color: white; text-decoration: none; font-weight: 400">Сіз информатика пәнінің оқытушысыз ба? ИнформатикаEdWeek-тің басқа да ресурстарын қарап көріңіз</a>'
   n_have_learned_an_hoc: '<h2>"Код жазу Сағатын" </h2><h1>қарап көріңіз</h1><h3>#</h3>'
   anybody_can_learn: Бұны бәрі игере алады.
   learn_now: Оқуды бастау
@@ -15,29 +17,31 @@ kk-KZ:
   petition_sign_message_support: 'Егер сіз бізді қолдасаңыз, өзіңіздің атыңызды жазыңыз.  #Басқаларға қосылыңыз.'
   petition_join_others: '#Басқаларға қосылыңыз'
   name: Атыңыз
-  email: Email
+  email: Электронды пошта
   zipcode: Пошталық индекс немесе мемлекет аты
   submit: Жіберу
   twentyhours_heading: 'Біздің курсты қолданып көріңіз: информатикаға кіріспе'
   twentyhours_text: 'Бірінші "Код жазу Сағатын" аяқтадыңыз ба? Информатика және бағдарламалау ұғымы туралы толығырақ келесі курста біліңіз.'
+  og_title: Әр бір бала мүмкіндікке лайық
+  og_description: Кез келген мектептегі әр бір оқушы компьютер ғылымдарын оқуға лайық.
   hoc2014_heading: |-
     8-14 желтоқсан 2014 ж. <br/><a href="http://hourofcode.com">"Код жазу Сағатына"</a> қатысыңыз <br/>'
-  hoc2014_students: Students
+  hoc2014_students: Оқушылар
   hoc2014_try: Қолданып көріңіз
   hoc2014_teachers: Оқытушылар
   hoc2014_host: Ұйымдастырып көріңіз
   hoc2014_everyone: Барлығы
   hoc2014_support: 'Қолдаңыз &#x25BE;'
   hoc2014_whatishoc: '"Код жазу Сағаты" деген не'
-  csedweek_map_header: '# CSEdWeek / Hour of Code events around the world'
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_header: '# CSEdWeek /Кодтау сағаты бүкіл әлемдік іс-шара'
+  csedweek_map_signup: Сіздің Код Жазу Сағатын тіркеңіз
+  csedweek_map_search_placeholder: Кодтау Сағаты бастамасын табу
   csedweek_map_search_search: Іздеу
-  csedweek_map_search_reset: Reset
+  csedweek_map_search_reset: қалпына келтіру
   csedweek_map_legend_title: Аңыз
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
-  cded_sign_up: Sign up
+  csedweek_map_legend_event: Кодтау Сағатының бастамалары
+  csedweek_map_legend_cs_tech_jam: Арнайы іс-шара
+  cded_sign_up: Тіркелу
   cded_try_it: Қолданып көріңіз
   twentyhours_trynow: Қазір қолданып көріңіз
   california_heading: Өзіңіздің мектебіңізді информатика пәнін оқытуды сұрап көріңіз
@@ -48,7 +52,7 @@ kk-KZ:
   view_english_site: Сайтты ағылшын тілінде көру
   non_english_tutorials: 'Оқыту құралдары келесі тілдерге аударылған:'
   write_your_first_program: Бірінші компьютерлік бағдарламаны жазу
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then statements, and basic algorithms.
+  learn_cs_concepts: Визуальді бағдарламалауды зерттей отырып компьютерлік технологиялардың негізгі ұғымдарын үйреніңіз. Бұл ойын түріндегі және басты рөлдерді Билл Гейтс, Марк Цукерберг, Angry Birds и Plants vs. Zombies ойнайтын бейне лекциялар көмегімен оқыту. Циклдармен, тармақталу операторларымен және алгоритмдер негіздерімен танысыңыз.
   all_ages: Кез келген жастағыларға
   beginner: Бастаушы
   n_participants: '# қатысушы'
@@ -56,12 +60,12 @@ kk-KZ:
   thank_you_: Рахмет!
   congratulations: Құттықтаймыз!
   congratulations_on_completing_hoc: Код Жазу Сағатының бір бөлімінің бітуімен құттықтаймыз
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
-  course_name_accelerated: Accelerated Course
-  course_name_course1: Course 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
+  congratulations_volunteer: 'Құттықтаймыз, енді сіз <a href="https://code.org/volunteer"> "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге көмектесіңіз!'
+  course_name_accelerated: Жеделдетілген курс
+  course_name_course1: Курс 1
+  course_name_course2: Курс 2
+  course_name_course3: Курс 3
+  course_name_course4: Курс 4
   congratulations_on_completing_course: '%{course} бітіруіңізбен құттықтаймыз'
   congrats_next_tutorials_title: Келесі
   congrats_next_tutorials_desc: '1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің сабақтарын</a> өтіп көріңіз.'
@@ -114,8 +118,7 @@ kk-KZ:
   learn_classes: Бағдарламалауды үйрететін ұйымдарды іздеу
   hoc_is_here: '#HourOfCode осы жерде - көріңіз! @codeorg'
   just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
-  twitter_teach_cs: "Why don't more schools teach computer science? We can fix this. http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more."
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Learn more</a> about the prizes for every educator.'
+  twitter_teach_cs: Не себепті кейбір мектептерде информатика оқытылмайды? Біз бұл олқылықты түзете аламыз ttp://youtu.be/nKIu9yen5nc. Көбірек ақпарат алу үшін http://code.org/ біздің сайтқа кіріңіз.
   learn_hoc: Код жазу Сағатымен бағдарламалауды үйреніңіз
   beyond_hoc: Бірінші сағаттан кейін
   what_gender: Сіздің жынысыңыз қандай?
@@ -139,7 +142,7 @@ kk-KZ:
   studiobar_elementary_body: 'Біздің K&#8209;5 арналған жаңа үш курс'
   studiobar_hoc_title: Код Жазу Сағаты
   studiobar_hoc_body: Angry Birds-пен код жазуды үйрен
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Қанат Қағу Коды
   studiobar_flappy_body: Flappy ойынын жаса және бөліс
   studiobar_teacher_title: Оқытушылар үшін жасалған
   studiobar_teacher_body: Сыныбыңызды Студия Кодымен таныстырыңыз
@@ -169,36 +172,39 @@ kk-KZ:
   homepage_slot_text_frozen: Анна және Эльзамен Суық жүрек бағдарламасы
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Біздің барлық оқулықтарымыз
-  homepage_slot_text_course4: Course 4
+  homepage_slot_text_course4: Курс 4
   homepage_slot_text_shop: Дүкен
-  homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: An Hour of Code for every student.
-  homepage_action_text_num_served: '# served'
+  homepage_slot_text_flappy: Қанат Қағу Коды
+  homepage_action_text_hoc: Кодтау сағаты әр оқушыға.
+  homepage_action_text_num_served: Қызмет етілген саны
   homepage_action_text_join_us: Бізге қосыл
-  homepage_action_text_sign_up: Sign up
+  homepage_action_text_sign_up: Тіркелу
   homepage_action_text_try_it: Қолданып көріңіз
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Техникалық волонтер керек
   homepage_action_text_codevideo: Видеоны көріңіз
   homepage_action_text_teachervideo: Видеоны көріңіз
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Қызды шабыттандыр
   homepage_action_text_learn: Оқуды бастау
   homepage_action_text_signpetition: Қолдаухатқа қол қою
   homepage_signpetition_dropdown: 'Біздің қолдаухатқа қол қою &#x25BE;'
   homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_banner_text_prizes: 'Кодтау сағаты қайтадан келе жатыр, 7-13 желтоқсан. '
+  homepage_banner_link_prizes: 'Тарихтағы ең ірі үйрену бастамасына қосыл. '
   homepage_banner_text_main: Информатика пәнін түрлендірді жақсарту үшін Code.org және колледж Кеңесімен альянс құру.
   homepage_banner_text_link: толығырақ білу
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: толығырақ білу
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: толығырақ білу
   homepage_slot_text_title_hoc: Код Жазу Сағаты
   homepage_slot_text_blurb_hoc: Барлығы үйрене алады. Бүгін бастаңыз
-  homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_link_hoc: Код Сағатын қолданып көріңіз
   homepage_slot_text_link_host: Код Жазу Сағатын өткізу
-  homepage_slot_text_link_hocserved: '# served'
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
-  homepage_slot_text_title_students: Students
+  homepage_slot_text_link_hocserved: Қызмет етілген саны
+  homepage_solot_text_link_volunteer: Кодтау сағатына волонтер бол
+  homepage_slot_text_title_students: Оқушылар
   homepage_slot_text_blurb_students: Біздің барлық оқыту курстарымызды үйреніңіз
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Студия Кодын пайдаланып көріңіз
   homepage_slot_text_link_local: Жергілікті сыныпты іздеңіз
   homepage_slot_text_link_othercourses: Басқа да онлайн курстар
@@ -230,10 +236,10 @@ kk-KZ:
   class_submission_in_school: мектепте
   class_submission_in_school_daily_programming_course: Күнделікті бағдараламау курсы
   class_submission_in_school_ap_computer_science: Информатиканың бастапқы деңгейі
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
-  class_submission_in_school_robotics_club: Robotics club
+  class_submission_in_school_full_university_cs_curriculum: Университет толық бағдарламалау оқу жоспары
+  class_submission_in_school_robotics_club: Робототехника клубы
   class_submission_in_school_programming_integrated_in_other_classes: Басқа пәндер бағдарламасына қосылған бағдарламалау курстары (математика, және т.б.)
-  class_submission_in_school_summer_school_cs_program: Summer school CS program
+  class_submission_in_school_summer_school_cs_program: Жазғы мектеп информатика бағдарламасы
   class_submission_in_school_exploring_computer_science: Информатика пәнін оқу
   class_submission_in_school_other: Мектепте
   class_submission_out_of_school: Мектептен тыс
@@ -253,34 +259,41 @@ kk-KZ:
   class_submission_level_college: Арнайы орта білім беру
   class_submission_level_vocational: Кәсіптік
   class_submission_languages_other: Басқа тілдер
-  inspirational_videos_more: 'More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational videos</a> by role models and celebrities'
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: 'Көбірек<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">мотивациялық бейнелер</a>атақты азаматтардан'
+  playlab_choose_theme: '"Ойындар Лабораториясы" үшін өзіңіздің тақырыбыңызды таңдаңыз'
+  playlab_classic_title: Классикалық
+  playlab_gumball_title: Гамболдың таңғажайып әлемі
+  playlab_iceage_title: 'Мұз дәуірі - жақында'
+  playlab_iceage_title_live: Мұз дәуірі
+  starwars_subtitle: Код арқылу Галактика құру
   starwars_javascript_title: JavaScript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Жылжытымды блоктар мен JavaScript-ті қолдан.
+  starwars_javascript_specs: Тек ағылшын тілінде | Жаңа браузерлер | 11+ жас аралығы
   starwars_javascript_start_button: Қазір қолданып көріңіз
-  starwars_blocks_title: Blocks
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages (coming soon) | Modern browsers, smartphones, tablets | Ages 6-10
+  starwars_blocks_title: Блоктар
+  starwars_blocks_description: Жылжытымды блоктарды қолдан.
+  starwars_blocks_specs: Көптеген тілдерде | Заманауи браузерлерде, планшеттерде, смартфондарда | 6-106 жасына
   starwars_blocks_start_button: Қазір қолданып көріңіз
-  starwars_watch_videos: Before you get started, watch one of these inspirational videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
-  starwars_platform_text: Modern browsers, smartphones, tablets
-  mc_name: Minecraft Hour of Code
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
-  mc_gradelevel: Жас аралық 6+
+  starwars_watch_videos: Бастар алдында мына шабыттандырушы бейне-роликтерден біреуін қараңыз
+  starwars_speak_languages: Басқа тілде сөйлейсіз бе?
+  starwars_help_translate: Басқа тілге аударуға көмектес
+  starwars_platform_text: Заманауи браузерлер, смартфондар, планшеттер
+  mc_name: Minecraft Кодтау Сағаты
+  mc_longdescription: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына көмектесу үшін код блоктарын қолданыңыз.
+  mc_shortdescription: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына көмектесу үшін код блоктарын қолданыңыз.
+  mc_gradelevel: Жас аралығы 4-14
   mc_platformtext: Заманауи браузерлер, смартфондар, планшеттер
-  mc_specs: Many languages (coming soon) | Modern browsers and tablets | Ages 6+
-  minecraft_subtitle: Minecraft Hour of Code
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour of Code.
-  volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want volunteers passionate about computer science education to help with their Hour of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13.
+  mc_specs: Әр түрлі тілдерде| Заманауи браузерлер, смартфондар, планшеттер | 6 жастан және жоғары
+  minecraft_subtitle: Minecraft Кодтау Сағаты
+  volunteer_engineer_submission_title: Оқушылар мен еріктілерді шабыттандыру
+  volunteer_engineer_submission_subtitle_generic: '2015 жылдың 7-13 желтоқсанында 100000 мұғалім өз сыныптарында Бағдарламалау сағатын өткізбек. Оларға сенің көмегің қажет! '
+  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} Мұғалімдерге еріктілер қажет.<br>Осы уақытқа дейін %{num_volunteers} ерікті жазылды. Сенд де қосыл.'
+  volunteer_engineer_submission_intro_background: 'Бағдарламалау сағаты бұл 180 астам елдің ондаған миллион студенттерің тартатын, бір сағат ішінде информатикаға кіріспе болатын жаһандық қозғалыс. Өтінеміз, 7-13 желтоқсан аралығында болатын "Информатика үйрету апталығына" қатыс.'
   volunteer_engineer_submission_intro_recruit: |-
-    These teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat). If you're not looking to volunteer, <a href="%{url}">learn more</a> about organizing your own Hour of Code event.
-  volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
+    Бұл оқытушыларға информатика оқып үйренуге көңілі бар <span style="font-family: 'Gotham 7r', sans-serif;"> біреудің болғандығы дұрыс болар еді,</span>сыныпта көмектесе алатын немесе компьютер ғылымдарын зерттеу арқылы қандай табыстарға қол жеткізуге болатындығын айту арқылы<span style="font-family: 'Gotham 7r', sans-serif;">оқушыларды ынталандыра алатын</span>біреудің болғаны (бейнечат арқылы жасауға болады).
+  volunteer_engineer_submission_intro_signup: 'Өтінеміз, егерде сіз компьютер ғылымдары факультетінің студенті немесе кәсіби бағдарламалаушы болсаңыз келесі ақпаратты толтыруыңызды сұраймыз. <span class="form-required-field">*</span> белгіленген жолдар міндетті түрде толтырылуы қажет.'
+  volunteer_engineer_submission_intro_links: 'Сізге еріктілерді табу қажет пе? Жергілікті еріктілердерді <a href="%{volunteer_local}"> еріктілерер базасынан тауып ал</a>.'
+  volunteer_engineer_submission_update_information: Сіздің ақпаратыңызды жаңғырту
   volunteer_engineer_submission_header_shared: Ақпарат еріктілер картасында мұғалімдерге көрінеді
   volunteer_engineer_submission_field_name: Атыңыз
   volunteer_engineer_submission_field_name_placeholder: Толық аты-жөніңіз
@@ -301,9 +314,9 @@ kk-KZ:
   volunteer_engineer_submission_field_description_desc: Өзіңіздің информатика пәнінен тәжірибеңізді және жергілікті жердің оқытушыларына ерікті ретінді қалай көмек көрсете аласыз, сол туралы жазыңыз.
   volunteer_engineer_submission_field_description_placeholder: Тәжірибе және/немесе қатысу туралы анықтама
   volunteer_engineer_submission_header_private: Ақпарат құпия сақталынады және ешқашан жарияланбайды
-  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email: Электронды поштаңыз
   volunteer_engineer_submission_field_email_desc: Сіздің электрондық поштаңыз ешқашан жарияланбайды, бірақ біз мұғалімдерден болған сұранымдарды сізге жібереміз.
-  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_placeholder: Электронды поштаңыз
   volunteer_engineer_submission_final_paragraph: Жергілікті мұғалімдер сізбен Код Жазу Сағаты немесе ерікті болу жайында байланысуы үшін картада белгіленесіз. Біз сіздің электрондық адресіңізді және тұрғылықты жеріңізді ЕШҚАШАН жарияламаймыз. Бірақ басқа ақпарат (соның ішінде шамамен орналасқан жеріңіз) жергілікті мұғалімдер үшін көрінетін болады.
   volunteer_engineer_submission_checkbox_contact: 'Мен оқытушылардың ерікті болу жайында менімен байланысуына келісемін (Ескерту: сіздің электрондық адресіңіз жарияланбайды)'
   volunteer_engineer_submission_submit: Жіберу
@@ -321,7 +334,7 @@ kk-KZ:
   volunteer_engineer_submission_location_flexibility_remote: Қашықтықтан оқыту (мұғалімдер немесе оқушылар)
   volunteer_engineer_submission_location_flexibility_curriculum: Open-source оқыту бағдарламаларына атсалысу
   volunteer_engineer_submission_experience_unspecified: Көрсетілмеген
-  volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
+  volunteer_engineer_submission_experience_tech_company: Техникалық компаниядағы инженер емес
   volunteer_engineer_submission_experience_university_student_or_researcher: Университет студент (немесе ғылыми)
   volunteer_engineer_submission_experience_software_professional: Кәсіби бағдарламалық жабдықтама
   volunteer_engineer_submission_distance_8: 5 миля
@@ -331,10 +344,10 @@ kk-KZ:
   volunteer_engineer_submission_num_volunteers_5: 5 еріктілер
   volunteer_engineer_submission_num_volunteers_10: 10 еріктілер
   volunteer_engineer_submission_num_volunteers_25: 25 еріктілер
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
-  volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom for technical help and inspiration
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: "I'm looking for a mentor to help prepare me for coding with my students"
+  volunteer_engineer_submission_num_volunteers_50: 50 еріктілер
+  volunteer_engineer_submission_type_task_onsite: Мен сізді өзімнің оқушыларды ынталандыру және техникалық көмек сыныбыма шақырғым келеді
+  volunteer_engineer_submission_type_task_remote: Мен сізді өз оқушыларымды ынталандыру үшн Skype-қоңырауға шақырғым келеді
+  volunteer_engineer_submission_type_task_mentor: Мен өзімнің оқушыларыма бірге бағдарламалауды үйретуге көмегін тигізетін тәлімгер іздеудемін
   petition_age: Жасы
   dashboard_landing_title: Оқытушының жеке парақшасы
   dashboard_landing_welcome: Оқытушының жетілдірілген басқару панеліне қош келдіңіз.
@@ -348,14 +361,14 @@ kk-KZ:
   dashboard_landing_new_k5courses: Жаңа! 5-сынып оқушыларына арналған курсымызды көріңіз.
   dashboard_landing_useful_links: Басқа да пайдалы сілтемелер (тек ағылшын тілінде)
   dashboard_landing_office_hours: Жеке сұрағыңды қой ! Біздің ай сайынғы видео-қабылдауымызды көріңіз.
-  dashboard_landing_print_certificates: Print certificates for students who finish this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at our Educator Blog
-  dashboard_landing_smart_hints: Please help us to add smart hints to Code.org tutorials
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_print_certificates: Осы курсты бітірген оқушылардың сертификаттарын басып шығару
+  dashboard_landing_educator_blog: Біздің Оқытушы Блогымыздан жаңалықтар мен жаңартулар жайында оқыңыз
+  dashboard_landing_smart_hints: Өтінеміз бізге Code.org сабақтарына көмексөздерді қосуға көмектесіңіз
+  dashboard_landing_video_player: Біздің жаңа видео ойнатқышты сыныбыңызда тексеріп көріңіз
   dashboard_landing_progress_title: Сыныптың басты жетістіктері
   dashboard_landing_progress_biggest: Бұл сіздің үлкен бөліміңіздің жетістіктері.
   dashboard_landing_view_progress: '%{biggest_section} Ілгерілеуін көру '
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Прогресіңізді басып шығару
   dashboard_landing_available_title: Қолжетімді курстар
   dashboard_landing_available_courses: Сізге және сіздің оқушыларыңызға қолжетімді курстар.
   dashboard_landing_more_tutorials: Бұдан да көбірек сабақ көргіңіз келе ме?
@@ -370,21 +383,21 @@ kk-KZ:
   dashboard_high_courses: Жоғары мектеп оқушылары үшін бір жылдық курстар
   dashboard_high_courses_desc: 'Біздің жоғарғы сынып оқушыларына арналған бағдарламамыз, мектеп аудандарына, оқытушылар құрамын жаңа деңгейге дайындау арқылы, информатикадан жылдық бағдарлама ұсынады. Кәсіби жетілуге қатысты сұрақтар бойынша семинарға тіркелу үшін, Code.org-тан <a href="/educate/districts">өзіңіздің ауданыңызда</a> өтініш қалдырыңыз.'
   dashboard_course_csina: Computer Science in Algebra
-  dashboard_course_csina_desc: Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming.
-  dashboard_course_csins: Computer Science in Science
-  dashboard_course_csins_desc: Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation.
+  dashboard_course_csina_desc: Code.org өз серіктесі Bootstrap-пен бірге алгебра және геометрия негіздерін бағдарламалау көмегімен үйрететін бағдарлама жасап шықты.
+  dashboard_course_csins: Информатика ғылымда
+  dashboard_course_csins_desc: Code.org өз серіктесі Project GUTS информатиканың негізгі ұғымдарына модельдеу және симуляция мәнмәтіні негізінде кіріспе жасады.
   dashboard_course_ecs: Информатика пәнін оқу
-  dashboard_course_ecs_desc: 'Exploring Computer Science is a yearlong course consisting of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming, Computing and Data Analysis, and Robotics.'
-  dashboard_course_csp: AP® Computer Science Principles
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable course that explores the foundational ideas of computing.
+  dashboard_course_ecs_desc: 'Информатиканы оқып үйрену бұл 6 блоктан тұратын бір жылдық курс: адамның компьютермен қарым-қатынасы, есептерді шешу, веб-дизайн, мәлңметтерді талдау және бағдарламалау, және де робототехника.'
+  dashboard_course_csp: AP® Информатика қағидалары
+  dashboard_course_csp_desc: Code.org есептеу идеяларының негізін зерттейтін қатаң, қызықты әрі қол жетімді курс ойлап шығарды.
   dashboard_landing_loading: ЖҮКТЕЛУДЕ...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Өзгерту
   dashboard_action_save: Сақтау
   dashboard_action_save_all: Барлығын сақтау
-  dashboard_action_cancel: Cancel
+  dashboard_action_cancel: Болдырмау
   dashboard_action_delete: Өшіру
-  dashboard_action_delete_yes: 'Yes'
-  dashboard_action_delete_no: 'No'
+  dashboard_action_delete_yes: Иә
+  dashboard_action_delete_no: Жоқ
   dashboard_action_confirm: Өшіру?
   dashboard_action_remove: Өшіру
   dashboard_action_remove_confirm: Өшіру?
@@ -408,12 +421,12 @@ kk-KZ:
   dashboard_navigation_student: 'Оқушы: %{student_name}'
   dashboard_sections_new_section: Жаңа бөлім
   dashboard_sections_jumbotron_instruction: 'Жаңа бөлім құрыңыз және оған оқушыларды қосыңыз. Бөлімдер - оқушылардың оқу барысын және тіркеу жазбасын қадағалау үшін кішкене топтарға бөлуге көмектеседі.'
-  dashboard_sections_table_section: Section
+  dashboard_sections_table_section: Секция
   dashboard_sections_table_secret: Кіру түрі
-  dashboard_sections_table_grade: Grade
-  dashboard_sections_table_course: Course
-  dashboard_sections_table_students: Students
-  dashboard_sections_table_code: Section Code
+  dashboard_sections_table_grade: Сынып
+  dashboard_sections_table_course: Курс
+  dashboard_sections_table_students: Оқушылар
+  dashboard_sections_table_code: Секция Коды
   dashboard_sections_name: Бөлім атауы
   dashboard_sections_choose_secret: 'Егер оқушыларыңызға тіркелу жазбаларын таратқыңыз келсе, онда берілген бөлімдегі құпия <b>сөзді</b> немесе <b>сурет</b> түрін таңдаңыз.'
   dashboard_sections_secret_word: '<b>Сөз</b> әрбір оқушы үшін құпия сөз қоюға мүмкіндік береді.'
@@ -430,10 +443,10 @@ kk-KZ:
   dashboard_students_progress: Ілгерілеуі
   dashboard_students_age: Жасы
   dashboard_students_gender: Жынысы
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_male: Ер
+  dashboard_students_female: Әйел
   dashboard_students_secret: Құпия
-  dashboard_students_password: Password
+  dashboard_students_password: Құпия сөз
   dashboard_students_username: 'Қолданушы аты: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Аяқталған деңгейлер
@@ -467,7 +480,7 @@ kk-KZ:
   dashboard_curriculum: Оқу бағдарламасы
   dashboard_curriculum_overview: Мектепке дейінгі және бастауыш мектеп оқушылары үшін бағдарламаны шолу
   dashboard_overview: Қысқаша шолу
-  dashboard_sequence: Sequence
+  dashboard_sequence: Жүйелілік
   dashboard_framework: Құрылым
   dashboard_standards: Стандарттар
   dashboard_implementation_guide: Іске асыру туралы нұсқаулық
@@ -477,24 +490,24 @@ kk-KZ:
   dashboard_puzzle_solving: 'Басқатырғыштарды шешу:'
   dashboard_student_worksheet: Студент парағы
   dashboard_teacher_worksheet: Оқытушы парағы
-  dashboard_curriculum_csina: 'Computer Science in Algebra:'
-  dashboard_curriculum_csins: 'Computer Science in Science:'
-  dashboard_curriculum_csp: 'AP® Computer Science Principles:'
+  dashboard_curriculum_csina: 'Алгебрадағы информатика:'
+  dashboard_curriculum_csins: 'Компьютер ғылымдары, ғылымның өзінде түсіндіріледі:'
+  dashboard_curriculum_csp: 'AP® Информатика қағидалары:'
   dashboard_curriculum_ecs: 'Информатика пәнін оқу:'
   dashboard_grade_k: Балабақша
   dashboard_grade_other: Басқасы
   dashboard_login_word: Сөз
   dashboard_login_picture: Сурет
-  dashboard_login_none: Email
+  dashboard_login_none: Электронды пошта
   dashboard_new_password: жаңа құпия сөз
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: басталмады
+  dashboard_progress_in_progress: оқу барысында
   dashboard_progress_not_completed: Аяқталмаған
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_stage: Stage
-  dashboard_puzzle: Puzzle
+  dashboard_progress_completed_too_many_blocks: аяқталды, тым көп бөлімдер
+  dashboard_progress_completed_perfect: аяқталды, тамаша
+  dashboard_progress_furthest_level_attempted: жетілген ең жоғарғы деңгей
+  dashboard_stage: Деңгей
+  dashboard_puzzle: Басқатырғыш
   dashboard_question: Сұрақ
   dashboard_response: Жауап
   stats_hoc_2013_heading: 'Өткен жылғы Код Жазу Сағытының таңқалдырар сараптамасы. Бір аптаның өзінде:'
@@ -515,39 +528,53 @@ kk-KZ:
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
+  dashboard_announce_message: '<b>16желтоқасан 2015 жыл</b> - Бағдарламалау сағаты 2015 іс-шарасына қатысқаны үшін сізге алғыс білдіреміз! Үдерісті сақтау және бақылау енді барлық код студияларында, сабақтарда және курстарда қайта жүргізідуде. Ескерту: Code.org кеңселері 19 желтоқсан - 3 қараша аралығында жабық болады. Өтінеміз, өзіңіз жазған кез елген сұрақтың жауабын 4 желтоқсанға дейін күтіңіз.'
+  dashboard_announce_button_text: толығырақ білу
   dashboard_announce_hoc: '<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында басталады! Бүкіләлемдік тарихи оқу шарасына қатыс.'
+  dashboard_announce_playlab: '<b>4 желтоқсан 2015 жыл</b> - Бағдарламалау сағаты осы жерде! Кез келген жасқа және құрылғыға арналған 50 нұсқаулықтарды қарап көріңіз. Апта жаңалығы: жаңғыртылған Ойындар Лабороториясы, Мұз дәуірі, және Гамболдың таңғажайып әлемінде өзіңнің жеке ойындарың мен әңгімелеріңді бағдарламала.'
   code_hoc_coming: '"Код Жазу Сағаты" - 8-14 желтоқсанда басталады!'
   code_sign_up: Информатика Апталығына қатысу үшін тіркеліңіз
   learn_more: Қазір қолданып көріңіз
   learn_sign_up_description: Информатика Апталығында Код Жазу Сағатына қатысу үшін тіркеліңіз
-  learn_sign_up_button: Sign up
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
-  learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
+  learn_sign_up_button: Тіркелу
+  learn_videos_watch: Өзіңіздің оқушыларыңызбе бірге ынталандырушы роликтерді көріңіз
+  learn_videos_show: Бұл ынталандырушы роликті өз сыныбыңызға көрсетіңіз
+  learn_videos_before_hoc: Осы ынталандырушы бейнені Бағдарламалау Сағаты алдында көріп шығыңыз
   learn_educator_resources_description: Код Жазу Сағатында қалай сабақ беру керек жайында оқыңыз
   learn_educator_resources_button: Оқытушы материалдары
   learn_are_you_educator: 'Сіз оқытушысыз ба? <a href="http://hourofcode.com/resources/how-to">Код Жазу Сағатында қалай сабақ беру керек</a> жайында оқыңыз'
+  learn_find_volunteer: 'Бағдарламалау сағатын ұйымдастыруға көмектесетін</a> жергілікті <a href="https://code.org/volunteer/local">еріктілерді табыңыз'
+  learn_teacher_led_lesson_plans: '<a href="https://code.org/teacher-led">Мұғалімдерге арналған сабақтар жоспарын</a>негіз етіп алыңыз'
+  learn_how_to_hoc: 'Біздің <a href="https://hourofcode.com/how-to">практиалық нұсқаулығымызды басшылыққа алыңыз</a>'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Әрбір оқытушы үшін</a>берілетін сыйлықтар жайлы толығырақ біліңіз'
+  learn_inspirational_videos: 'Оқушыларды <a href="https://code.org/educate/inspire">мына видео</a> көрсету арқылы шабыттандыру'
   hoc2014_try_new_tutorials: Код Жазу Сағаты үшін арналған біздің жаңа оқу құралдарымызды қараңыз
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: Біздің жаңа Код Жазу Сағаты сабағын бета нұсқасында көріңіз
   hoc2014_try_scrat: Angry Birds, PvZ, және Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
-  carousel_heading_codeorg: Tutorials by Code.org
-  carousel_heading_3rd_party: Tutorials by 3rd parties
-  carousel_heading_third_party: Tutorials by third parties
+  hoc2014_try_frozen: Мұзды жүрек кейіпкерлері, Анна және Эльзамен суретші бол
+  carousel_heading_codeorg: Code.org оқыту құралдары
+  carousel_heading_codeorg_any_device: Code.org оқыту құралдары(барлық құрылғыларға)
+  carousel_heading_3rd_party: 3-ші тараптардан оқыту құралдары
+  carousel_heading_third_party: Үшінші тараптардан оқыту құралдары
   carousel_heading_international: Сіздің тіліңіздегі оқыту нұсқаулығы
   carousel_heading_domestic: Оқыту құралдары ағылшын тілінде қолжетімді
   carousel_heading_beginners: Бастаушылар үшін оқулықтар
+  carousel_heading_beyond_beginners: Бастаушылар үшін оқулықтар
   carousel_heading_javascript: JavaScript тілін үйрену үшін арналған оқулықтар
+  carousel_heading_beyond_javascript: JavaScript тілін үйрену үшін арналған оқулықтар
   carousel_heading_unplugged: 'Желіге шығуға мүмкіндік жоқ па ? Онда "информатиканы оффлайн оқуды" пайдаланып көр'
   carousel_heading_devices: Телефон және планшеттер үшін оқыту қосымшалары
+  carousel_heading_beyond_devices: Телефон және планшеттер үшін оқыту қосымшалары
   carousel_heading_languages: Басқа да бағдарламау тілдерінен оқу материалдары
+  carousel_heading_beyond_languages: Басқа да бағдарламау тілдерінен оқу материалдары
   carousel_heading_apps_games: Өзіңнің қосымшаларыңды немесе ойындарыңды жаз
   carousel_heading_university: Университеттің онлайн курстары
   carousel_heading_webpages: Веб-парақтарды жасауды үйрен
   carousel_heading_robots: Роботтарды бағдарламалауды үйрен
   carousel_heading_ide: Оқытушылар арасындағы танымал платформалар
   educator_notes: Мұғалім жазбалары
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Мұғалімдерге арналған Бағдарламалау Сағаты сабақтарының жоспары
+  learn_footer_all_tutorials: '<a href="https://code.org/educate/allhourofcode">оқу әдістемелерінің толық тізімін</a>қарап шығыңыз. Біздің шарттарымызды және оқу әдістемелрін дайындау ережелерін көру үшін <a href="https://hourofcode.com/tutorial-guidelines">осында басыңыз.</a>'
   how_to_teach_hoc: Код Жазу Сағатына қалай үйретуге болады
   more_resources_educators: Мұғалімдер мен оқытушылар үшін көбірек ресурстар
   beyond_submission: Бір Сағаттық сабақтарыңызды жібергіңіз келеді ме? Онда талаптар мен жіберу формасын толтыру мысалын көріңіз
@@ -559,10 +586,10 @@ kk-KZ:
   older_systems: Ескі жүйедегі қолжетімді сабақтар
   older_systems_subheading: 'Бұл сабақтар ескі нұсқадағы браузерлерде де жұмыс істеуі қажет. Барлық сабақтарға қол жеткізу үшін, <a href="http://browsehappy.com/" target="_blank">браузердің жаңа нұсқасын</a> орнатыңыз.'
   mobile_devices: Мобильді құралдар үшін оқулықтар
-  frozen_name: Code with Anna and Elsa
-  starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Бірінші компьютерлік бағдарламаны жазу
-  codeintl_name: Бірінші компьютерлік бағдарламаны жазу
+  frozen_name: Анна және Эльзамен код жазыңыз
+  starwars_name: 'Жұлдызды соғыстар: Галактиканы код арқылы жаса'
+  codeorg_name: Классикалық лабиринт
+  codeintl_name: Классикалық лабиринт
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: JavaScript-ке Кіріспе
   khanes_name: JavaScript-ке Кіріспе
@@ -594,12 +621,21 @@ kk-KZ:
   makeschool_name: iPhone ойының браузеріңізде жасаңыз!
   touchdevelop_name: TouchDevelop
   appinventor_name: AppInventor Код Жазу Сағаты
-  blockly_name: Blockly
+  blockly_name: Блокты
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Тас, қайшы, қағаз
-  hourofcode_name: Жаңадан тіркелушілерге code.org/hoc
-  playlab_name: Play Lab
+  hourofcode_name: Классикалық лабиринт
+  playlab_name: Ойындар Лабораториясы
+  infinity_name: Шексіз Ойын Лабораториясы
+  artist_name: Кейіпкер
+  monstercoding_name: 'Оқиғалар - Қазына аралы үшін өзіңнің жеке кодыңды жазып шық'
+  allcancode_name: Жүгір, Марко!
+  csfirst_name: Алғашқы CS
+  boxisland_name: Қорап аралы
+  codesters_name: Codesters
+  texasinstruments_name: кодтың 10 минуты
+  teacherled_name: Мұғалімдерге арналған Бағдарламалау Сағаты сабақтарының жоспары
   codeorg_gradelevel: Жас аралығы 4-14
   codeintl_gradelevel: Жас аралығы 4-14
   thinkersmithspanish_gradelevel: Por todos
@@ -639,8 +675,17 @@ kk-KZ:
   projguts_gradelevel: Жас аралығы 10-13
   hourofcode_gradelevel: Жас аралығы 4-14
   frozen_gradelevel: Жасы 8 +
-  starwars_gradelevel: Жас аралық 6+
+  starwars_gradelevel: Жас аралық 6-106
   playlab_gradelevel: Жас аралығы 4-14
+  infinity_gradelevel: Жас аралығы 4-14
+  artist_gradelevel: Жасы 8 +
+  monstercoding_gradelevel: Жас аралығы 5-13
+  allcancode_gradelevel: Жас аралығы 5-10
+  csfirst_gradelevel: Жас аралығы 9-14
+  boxisland_gradelevel: Бастауыш сыныптары
+  codesters_gradelevel: 'Жас аралығы 12 - 14 жас'
+  texasinstruments_gradelevel: Жас аралығы 13-16 жас
+  teacherled_gradelevel: Жас аралығы 5+ жас
   codeorg_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   codeintl_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   thinkersmithspanish_platformtext: Оффлайн
@@ -682,6 +727,13 @@ kk-KZ:
   frozen_platformtext: Заманауи браузерлер + планшеттер
   starwars_platformtext: Заманауи браузерлер + планшеттер
   playlab_platformtext: Заманауи браузерлер, смартфондар, планшеттер
+  monstercoding_platformtext: Заманауи браузерлер, iOS және Android базасындағы жүйелер
+  allcancode_platformtext: Заманауи браузерлер, iOS базасындағы жүйелер
+  csfirst_platformtext: Заманауи веб-браузерлер
+  boxisland_platformtext: Android, iOS базасындағы жүйелер
+  codesters_platformtext: Заманауи веб-браузерлер
+  texasinstruments_platformtext: Тi калькуляторлары
+  teacherled_platformtext: Заманауи браузерлер, смартфондар, планшеттер
   codeorg_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды үйреніңіз!
   codeintl_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды үйреніңіз!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -719,10 +771,19 @@ kk-KZ:
   thinkersmith2_shortdescription: Ақпаратты тану үшін компьютерлер нөл мен бірліктерді қалай қолданатынын біліңіз
   kodableunplugged_shortdescription: Компьютерсіз қызықты жаттығулар
   projguts_shortdescription: '"Тас - қайшы - қағаз" ойыны арқылы модельдеуді байқап көріңіз'
-  hourofcode_shortdescription: Жаңадан тіркелушілерге code.org/hoc
+  hourofcode_shortdescription: Марк Цукерберг және Angry Birds-пен бағдарламалауды үйреніңіз!
   frozen_shortdescription: Анна мен Эльзаға қосылу үшін, мұздың сиқыры мен әдемілігін көрсететін кодты пайдаланайық.
-  starwars_shortdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-  playlab_shortdescription: Create a story or make a game with Play Lab!
+  starwars_shortdescription: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
+  playlab_shortdescription: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
+  infinity_shortdescription: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
+  artist_shortdescription: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
+  monsterocding_shortdescription: Балаларға арналған бағдарламалау бойынша керемет оқиғалар.
+  allcancode_shortdescription: 'Қызықтырарлық ойын - Marco-ны басқару үшін визуальді бағдарламалу тілін қолданыңыз.'
+  csfirst_shortdescription: Мұхиттағы екі кейіпкердің тарихын аниациялаңыз. Өзіңіздің жеке стильіңізді қосыңыз!
+  boxisland_shortdescription: Батыл Hiro-мен бірге Box Island саяхаттау кодын құрыңыз.
+  codesters_shortdescription: Pyton бағдарламалау тілін қолдана отырып өзіңіздің жеке ойыныңызды, анимацияңызды, графикалық жұмысыңызды құрыңыз.
+  texasinstruments_shortdescription: 'TI-84&#8482; Plus графикалық калькуляторы көмегімен бағдарламалу негізін оқып-зерттеңіз.'
+  teacherled_shortdescription: Осы сабақ жоспарларымен өзіңіздің жеке Бағдарламалау сағаты оқиғаңыздың дизайнымен ынталаныңыз.
   codeorg_longdescription: Информатика негіздерін drag-and-drop бағдарламасы көмегімен үйреніңіз. Бұл өзіндік оқу Билл Гейтс, Марк Цукерберг, Angry Birds және Plants vs. Zombies видеодәрістері ойынына ұқсас. Циклдерді, шартты операторлар және негізгі алгоритмдерді үйреніңіз. 34 тілде қолжетімді.
   codeintl_longdescription: Информатика негіздерін drag-and-drop бағдарламасы көмегімен үйреніңіз. Бұл өзіндік оқу Билл Гейтс, Марк Цукерберг, Angry Birds және Plants vs. Zombies видеодәрістері ойынына ұқсас. Циклдерді, шартты операторлар және негізгі алгоритмдерді үйреніңіз. 34 тілде қолжетімді.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -761,9 +822,16 @@ kk-KZ:
   kodableunplugged_longdescription: fuzzFamily Frenzy жаттығуы кәдімгі қағазда қолдану үшін жасалған, және 5 жастан асқан балалар үшін алгоритм логикасына кіріспе ретінде пайдаланылады. Мұғалім ойын ережесін түсіндіруі қажет, ал оқушылар кедергілерден өту үшін сыныптастарына нұсқаулар береді.
   projguts_longdescription: 'Бұл курс компьютердің көмегінсіз оқушыларға модельдеуді, "тас-қайшы-қағаз" ойынының әртүрлі нұсқаларын жасау және эксперимент нәтижелерін бақылау арқылы таныстырады.'
   hourofcode_longdescription: Жаңадан тіркелушілерге code.org/hoc
-  frozen_longdescription: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!"
-  starwars_longdescription: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+  frozen_longdescription: Анна мен Эльзаның мұздың әдемілігі мен сиқырын зерттеулері үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай, қысты көркін келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен бөлісесіз!
+  starwars_longdescription: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар ойыныңды алыстағы галактикада жаса.
   playlab_longdescription: Ойын Лабораториясымен әңгіме немесе ойын құрыңыз ! Аңдар, зомби, ниндзя, және басқа да көптеген кейіпкерлер сөйлейтін, ұпай жинайтын, тіпті аузынан от шашатын бағдарлама жазыңыз!
+  monstercoding_longdescription: Monster Coding балаларға бағдарламалаудың бірнеше негізгі ұғымдары көрсетілетін Құпияға толы Аралдағы таңғажайып оқиғаларға толы саяхатты ұсынады. Бар білім бөлімдерге бөлінген, және әр бір бөлім алғашқы бөлімге негізделген. Балаларда фунциялар, бульдік (логикалық) мәндер, цикл, шартты if/else (егер/немесе) операторы және жиымдар жайлы түсінік қалыптасады. Ақпарат түрлі-түсті анимацияланған графиктер және дыбыстық нұсқаулықтар түрінде беріледі.
+  allcancode_longdescription: Оқушылар өзіндік хикая негізіндегі саяхат ойынын ойнайды. Олар басты кейіпкер Марконы басқарады да оған Бағдарламалау сағатында қолданылатын визуальді бағдарламалау тілі инерфейсін қолдана отырып оны әр бір деңгейден өткізеді. Оқушылар тізбектік командалар, шарттардағы итерациялар жайлы ақпараттар жайлы оларға көңілін аудармай ақ түйіндейді.
+  csfirst_longdescription: Екі теңіз тұрғындары жайлы хикая құрыңыз. Суға анимация қосыңыз және өз сценарияңыз бойынша декорация құрыңыз. Өзіңіз ойлап тапқан хиаяны бағдарламалық код көмегімен айтып шығыңыз!
+  boxisland_longdescription: Қорапша аралына саяхат жасап Хироға шөл далада шашылып жатқан барлық сағаттарды жинауға көмек беріңіз. Бұл сабақта сіз алгоритмдеу негіздерін, тізбектік, шарттық және қайталану алгоритмдерін үйренесіз!
+  codesters_longdescription: 'Python бағдарламалау тілін қолдана отырып өзіңіздің жеке ойыныңыз, анимация және графикалық жұмыстарыңызды құрыңыз. Жасаған жұмысыңызды достарыңызбен бөлісіңіз. Біздің "drag and drop" құрал жабдық жиынтығымыз  күнделіті өмірде бүкіл әлемдік мекемелерде кеңінен қолданылатын шынайы бағдарламалу тілі Python-ды зерттеуді жеңілдетеді. Баскетбол ойынын, би үшін хареография немесе анимацияланған визитка жасап көріңіз! '
+  texasinstruments_longdescription: 'Кодтаудың 10 минуты  сыныпта оқушылардың өздері күніге өз сөмкелерінде ұстап жүрген  ТІ технологияларымен бірге кодтауға деген қызығушылығын арттыруға қолданылуы мүмкін.  TI-84&#8482 ПЛЮС қолдана отырып кодтаудың негіздерін үйреніңіз және де тәжірибесіз 10 минут үшінде бағдарламалауды бастаңыз!  '
+  teacherled_longdescription: Ендігі кезекте ондаған мың оқытушылар Бағдарламалау сағатын қарап көрді, көптеген сыныптар шығармашылық, барлығына да жақын информатика негіздерін үйренуде. Оқытушыларды ынталандыруға көмектесу үшін Бағдарламалау сағаты ардагерлері көмегімен дайындалған компьютер ғылымдарының түрлі бағыттарын ашып көрсететін бір сағаттық оқытушы нұсқаулығын және жоспарын жинақтап сақтадық.
   codeorg_beyond_name: Информатикаға кіріспе (8-сынып оқушыларына)
   khan_beyond_name: Компьютерлік бағдарламалауды үйреніңіз
   tynker_beyond_name: Бағдарламалауды үйіңізде оқыңыз
@@ -951,4 +1019,12 @@ kk-KZ:
   sphero_beyond_longdescription: Сіз мұғалім немесе ата-ана болсаңыз да, SPRK сабақтары бүлдіршіндерге роботтарды бағдарламалаудың жедетілген курсын өтуге мүмкіндік береді және де олардың математика мен нақты ғылым дағдыларын арттырады.
   compatibility_https_header: Өтінеміз, Code.org үшін HTTPS-ті қосыңыз.
   compatibility_https_message: "Қауіпсіздікті арттыру үшін біз %{https_date} - ден HTTPS-ке көштік. Сіз Code.org сайтына көрсетілген уақыттан кейін кіре алмайсыз. Code.org сайтында HTTPS-ті қосу туралы білу үшін <a href='%{it_requirements_url}'> осы жерге басыңыз</a>"
-  compatibility_https_hide_this_warning: Hide this warning
+  compatibility_https_hide_this_warning: Бұл ескертуді жасыру
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: қанат қағу
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art

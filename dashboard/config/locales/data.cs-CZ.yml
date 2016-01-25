@@ -72,7 +72,7 @@
           WordSearch: Fáze 1
     game:
       name:
-        Unplug1: Úvod do počítačové vědy
+        Unplug1: "Úvod do počítačové vědy"
         Maze: Bludiště
         Multi: Více voleb
         Unplug2: Aritmetické Myšlení
@@ -88,7 +88,7 @@
         Farmer2: Farmářka 2
         Unplug8: Abstrakce
         Artist4: Malíř 4
-        Unplug9: Štafetové programování
+        Unplug9: "Štafetové programování"
         Farmer3: Farmář 3
         Unplug10: Internet
         Artist5: Umělec 5
@@ -105,6 +105,8 @@
         StudioEC: Play Lab
         Applab: App Lab
         NetSim: Simulátor Internetu
+        Custom: Umělec
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: Bronz
@@ -508,46 +510,77 @@
           klávesami se dostat k Spacebotovi a varovat všechny ostatní
         studio_playlab_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
-        studio_iceage_1: Manny chce říci "Ahoj" - umíš mu pomoci?
-        studio_iceage_2: Diego (aktér1) a Babička (aktér 2) by si rádi navzájem řekli
-          "Ahoj". Umíš jim pomoci tím, že použiješ blok "say" dvakrát?
-        studio_iceage_3: Umíš pomoci Scrat dostat se k vlajce?
-        studio_iceage_4: Umíš pomoci Scrat (aktér 1) dostat se k babičce (aktér 22)
-          a přehrávat zvuk, když se tam dostaneš?
-        studio_iceage_5: Umíš pomoci Sidovi po klepnutí, aby řekl "pozdravy"? Nezapomeň
-          klepnout na něj a poté na Run
-        studio_iceage_6: Umíš pomoci Diegovi, aby se pohyboval pomocí šipek nahoru/dolů/vpravo/vlevo
-          dostat všechny příznaky?
-        studio_iceage_7: Blok "opakovat natrvalo" umožňuje nepřetržitý běh kódu. Lze
-          připojit bloky k tomu, abys pomohl Sidovi se pohyboval opakovaně doleva
-          a doprava?
-        studio_iceage_8: Umíš přidat bloků ke skórování bodu a přehrání zvuku, když
-          Sid narazí do Mannyho a potom jej přesuň pomocí šipek, dokud neskóruješ?
-        studio_iceage_9: Nastav pozadí pro dobu ledovou a pomoz Sid se dostat k babičce
-          rychleji změnou jeho rychlosti. Přesuň jej pomocí šipkových klávesnic, aby
-          dostal k Sidovi a varovat všechny ostatní.
-        studio_iceage_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
-        studio_gumball_1: Anais chce říci "Ahoj" - umíš ji pomoci?
-        studio_gumball_2: Darwin (herec 1) a žvýkačku (herec 2) by si rádi řekli "ahoj".
-          Umíš jim pomoci použitím dvakrát bloku "říkat"?
-        studio_gumball_3: Umíš pomoci banánový Joe dostat se k vlajce?
-        studio_gumball_4: Umíš pomoci žvýkačku (aktér1) dostat se k Darwinovi (aktér
-          2) a přehrávat zvuk, když se tam dostane?
-        studio_gumball_5: Umíš pomoci Sidovi, aby řekl po klepnutí na něj "pozdravy"?
-          Nezapomeň klepnout na něj a poté na Run
-        studio_gumball_6: Umíš pomoci Darwinovi se pohybovat okolo pomocí šipek nahoru/dolů/vpravo/vlevo,
-          aby dostal všechny vlajky?
-        studio_gumball_7: Blok "opakovat natrvalo" umožňuje nepřetržitý běh kódu.
-          Lze připojit bloky k tomu, abys pomohl Antonymu opakovaně se pohybovat doleva
-          a doprava?
-        studio_gumball_8: Umíš přidat bloky ke skórování bodu a přehrání zvuku, když
-          Banana Joe narazí do Mannyho a potom jej přesuň pomocí šipek, dokud neskóruješ?
-        studio_gumball_9: Nastav pozadí pro tento prostor invazi a pomoz Nicole dostat
-          se k Pennymu rychleji změnou jeho rychlost. Přesuň jej pomocí šipek dostat
-          k Nicole a varuj všechny ostatní.
-        studio_gumball_10: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni na
-          Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
+        studio_iceage_hello1: Sid chce shromáždit všechny na nové dobrodružství. Pomůžeš
+          mu říci "Hello" přetažením bloku 'say' do pracovního prostoru a zadáním
+          slova "hello" dovnitř?
+        studio_iceage_hello2: Sid (aktér 1) nalezl Mannyho (aktér 2) a chce jej pozvat
+          na dobrodružství.  Pomoz jim pozdravit se navzájem pomocí dvakrát bloku
+          "actor say".
+        studio_iceage_move_to_flag: Scrat hledá svůj žalud!  Pomoz mu jít posledních
+          200 pixelů pomocí bloku "move".
+        studio_iceage_move_to_actor: Diego (aktér 1) hledá Mannyho (aktér 2). Pomoz
+          Diegovi se dostat o 200 pixelů dolů k Mannymu pomocí bloku "move actor".
+          Dále připoj blok k události "when actor touces" přehrát zvuk, když zjistí,
+          že nalezl jeden druhého.
+        studio_iceage_repeat: Blok "repeat ever" umožňuje ti, aby běžel kód nepřetržitě.
+          Lze připojit bloky k tomu, abys pomohl Granny babičce si zacvičit opakovaně
+          pohybem vlevo a vpravo?
+        studio_iceage_click_hello: Můžeš pomoci Sidovi udělat závěrečnou výzvu přátelům
+          při klepnutí? Nezapomeň klepnout na něj poté, co stiskneš Run.
+        studio_iceage_move_events: Scrat stále hledá žaludy! Pomoz mu poskočit připojením
+          bloku "move" ke každé z událostí a změnou směru pracovat pro každou šipkovou
+          klávesnici. Když jsi hotov, klepni na příkaz Run a pokus se sesbírat všechny
+          žaludy.
+        studio_iceage_sound_and_points: /oskytli jsme většinu kódu, který udržuje
+          Granny v pohybu vlevo a vpravo, stejně jako kód pro pohyb Sida po obrazovce.
+          Múžeš dokončit kód a přidat bloky k události "when actor touches", abys
+          udělal, oba si přehrají zvuk a skórují bod, když Sid a Granny se srazí?
+          Stiskni Run k zahrání hry.
+        studio_iceage_warn_ice_age: Každý se musí pohybovat rychleji, protože se blíží
+          doba ledová! Změna pozadí na "ledy" a nastavit rychlost Sida na rychle,
+          pak stiskni tlačítko Run a přesuň je k Diegovi, aby jej varoval.
+        studio_iceage_throw_hearts: Sid se chce nechat svou babičku, aby babička věděla,
+          že ji má moc rád. Použije povel "actor throw" na Sida (actor 1), aby hodil
+          srdce na babičku (actor 2)! Nastav náladu Granny na spojenost, když se jí
+          zasáhnou srdce.
+        studio_iceage_free_play: "Čas vytvořit si vlastní hru nebo příběh! Když budeš
+          hotov, klepni na Finish, abys nechal přátelé si zkusit tvou hru na jejich
+          mobilech, tabletech nebo Pc!"
+        studio_gumball_hello1: Anais chce mít nějaké nové přátele. Pomůžeš jí, aby
+          řekla "Ahoj" přetažením bloku "say" do pracovní oblasti se zadáním uvnitř
+          slova "hello"?
+        studio_gumball_hello2: Darwin (aktér1) a jeho bratr Gumball (aktér 2) míří
+          do školy.  Pomož jim se pozdravit navzájem s použitím dvakrát bloku "aktor
+          say".
+        studio_gumball_move_to_flag: Banánový Joe je vyhrát závod smlsne!  Pomoz mu
+          jít posledních 200 pixelů pomocí bloku "move".
+        studio_gumball_move_to_actor: Gumball (aktér1) a Darwin (aktér 2) jsou pozdě
+          na polní den! Pomoz Gumballovi se dostat o 200 pixelů dolů k Darwinovi pomocí
+          bloku "move actor".  Dále připoj blok k události "when actor touches" přehrát
+          zvuk, když se najdou navzájem.
+        studio_gumball_repeat: Blok "repeat forever" umožňuje, aby kód běžel nepřetržitě.  Umíš
+          připojit bloky k tomu, abys pomohl Gumballovi, aby se zahřál opakovaně pohybem  vlevo
+          a vpravo?
+        studio_gumball_click_hello: 'Umíš pomoci Antonovi, aby oznámil zahájení závodu
+          slovy: "Ready, set, go!"? Chceš-li si vyzkoušet program, nezapomeň klepnout
+          Antona po klepnutí Run!'
+        studio_gumball_move_events: Darwin je vlajka shromáždění soutěž! Pomoz mu
+          běhat kolem připojením "move" bloku ke každé události. Když jsi hotov, klepni
+          na Run a snaž se sesbírat všechny vlajky.
+        studio_gumball_sound_and_points: Poskytli jsme většinu kódu, který drží Antona
+          (aktér 2) neustále pohybovat vlevo a vpravo, stejně jako kód Banana Joe
+          (aktér 1) pohybovat po obrazovce.  Můžeš dokončit kód a přidat bloky k události
+          "when actor touches" tak, aby vám oboje přehrát zvuk a skórovat bod, když
+          Banana Joe a Anton se srazí?  Stiskni  Runk přehrání hry.
+        studio_gumball_warn_food_fight: Darwin právě utekl z potravinového boje! Změň
+          pozadí k "characters" a nastav Darwinovy rychlost na rychle, pak stiskni
+          tlačítko Run a přesuň jej k Penny, abys jí varoval.
+        studio_gumball_join_food_fight: Připoj se k potravinovému boji! Použij povel
+          "actor throw item right", aby jí měl Banana Joe (herec 1) k hození jídla
+          na Antona (aktér 2)! Nastav náladu Antonovi, aby se zlobil, když jej zasáhne.
+        studio_gumball_free_play: Vytvoř si vlastní hru nebo příběh. Až budeš hotov,
+          klepni na tlačítko Finish, aby si přátele zkusili tvou hru na jejich mobilech,
+          tabletech nebo počítačích!
         studio_full_sandbox: Vytvoř svou vlastní hru. Až budeš mít hotovo, klikni
           na Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
         studio_k1_1: Umíš udělat, aby tento pes řekl "hello world"?
@@ -583,10 +616,10 @@
           Dokončit, aby ji mohli tví přátelé vyzkoušet na svých telefonech.
     video:
       name:
-        maze_intro: Úvod Bludiště
-        artist_intro: Úvod Malíř
-        farmer_intro: Úvod Farmářka
-        flappy_intro: Úvod do Flappy
+        maze_intro: "Úvod Bludiště"
+        artist_intro: "Úvod Malíř"
+        farmer_intro: "Úvod Farmářka"
+        flappy_intro: "Úvod do Flappy"
         loop_times: Blok Opakovat n-krát
         loop_until: Blok Opakovat Dokud
         if: Blok Pokud
@@ -608,7 +641,7 @@
         Unplug9: Relay programování
         Unplug10: Internet
         Unplug11: Shrnutí
-        C1_happy_maps_unplugged: Šťastné mapy
+        C1_happy_maps_unplugged: "Šťastné mapy"
         C1_moveitmoveit_unplugged: Pohyb, pohyb
         C1_bigevent_unplugged: Velká událost
         C1_getting_loopy: Bláznit
@@ -616,7 +649,7 @@
         C1_maze_intro_sequencing: Bludiště sekvenování Intro
         C1_maze_debugging: 'Bludiště: ladění'
         C1_bee_level_intro: Včelí Level - Úvod
-        C1_artist_intro: Úvod Malíř
+        C1_artist_intro: "Úvod Malíř"
         C1_spelling_bee_intro: Hláskování Intro
         C1_zuck_repeat_loop: Bludištní cykly
         C1_bee_loops: Včelí cykly
@@ -625,8 +658,8 @@
         C1_planting_seed: Sázení semínka
         C1_building_foundation: Budování nadace
         C1_going_places_safely: Cestování bezpečně
-        C2_maze_intro: Úvod Bludiště
-        C2_artist_intro: Úvod Malíř
+        C2_maze_intro: "Úvod Bludiště"
+        C2_artist_intro: "Úvod Malíř"
         C2_zuck_repeat_loop: Bludištní cykly
         C2_artist_loops: Umělec cykly
         C2_artist_debugging: Umělecké ladění
@@ -637,12 +670,12 @@
         C2_graph_paper: Programování Na Milimetrovém Papíru
         C2_conditionals_with_cards: Podmínky
         C2_binary_bracelets: Binární náramky
-        C2_relay_programming: Štafetové programování
+        C2_relay_programming: "Štafetové programování"
         C2_paper_airplanes: Papírová letadla
         C2_digital_footprint: Tvé digitální stopy
         C2_digital_footprint_v2: Tvé digitální stopy
         C3_maze_level_4: Bludištní cykly
-        C3_artist_intro: Úvod Malíř
+        C3_artist_intro: "Úvod Malíř"
         C3_artist_functions: Umělec funkce
         C3_bee_functions: Včelí funkce
         C3_bee_conditionals: Včela podmínky
@@ -659,7 +692,7 @@
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funkční náhrdelníky
         C3_songwriting_with_parameters: Psaní písniček s parametry
-        C4_intro: Úvod
+        C4_intro: "Úvod"
         C4_loops_zombie: Smyčky
         C4_bee_conditional: Včela podmínky
         C4_variables_artist: Proměnné - umělec
@@ -678,20 +711,23 @@
         C4_unplugged_forloops: For cykly
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
-        frozen_intro: Úvod do Hodiny kódu
-        frozen_loops: Úvod do cyklů
-        frozen_functions: Úvod do funkcí
-        playlab_intro: Úvod do Play Labu
+        frozen_intro: "Úvod do Hodiny kódu"
+        frozen_loops: "Úvod do cyklů"
+        frozen_functions: "Úvod do funkcí"
+        playlab_intro: "Úvod do Play Labu"
         playlab_events: Play Lab události
         playlab_repeat_forever: Play Lab trvalé opakování
         tutorial_puzzle_challenge: Výukový program Puzzle výzva
         infinity_playlab_intro: Play Lab - Úvod
         infinity_playlab_events: Play Lab - události
         infinity_playlab_repeat_forever: Play Lab trvalé opakování
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
-        csp_applab_functions: Úvod do funkcí
+        csp_applab_functions: "Úvod do funkcí"
         csp_applab_functions_parameters: Funkce s Parametry
         csp_applab_loops: Smyčky
         csp_applab_turtle: Turtle Programming
@@ -726,18 +762,24 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Budování Galaxy s kódem - úvod'
-        starwars_typing: 'Star Wars: Budování Galaxy s kódem - JavaScript'
-        starwars_events: 'Star Wars: Budování Galaxy s kódem - události'
-        starwars_congrats: 'Star Wars: Budování Galaxy s kódem - blahopřejeme'
-        starwars_blocks_intro: 'Star Wars: Budování Galaxy s kódem - úvod'
-        starwars_blocks_events: 'Star Wars: Budování Galaxy s kódem - události'
-        starwars_blocks_congrats: 'Star Wars: Budování Galaxy s kódem - blahopřejeme'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        starwars_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
+        starwars_typing: 'Hvězdné války: Budování Galaxy s kódem - JavaScript'
+        starwars_events: 'Hvězdné války: Budování Galaxy s kódem - události'
+        starwars_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        starwars_blocks_intro: 'Hvězdné války: Budování Galaxy s kódem - úvod'
+        starwars_blocks_events: 'Hvězdné války: Budování Galaxy s kódem - události'
+        starwars_blocks_congrats: 'Hvězdné války: Budování Galaxy s kódem - blahopřejeme'
+        mc_intro: Minecraft - Úvod
+        mc_repeat: Minecraft - opakování
+        mc_if_statements: Minecraft - if příkazy
+        mc_congrats_share: Minecraft - Gratulujeme
+        mc_congrats_no_share: Minecraft - Gratulujeme
+        gumball_intro: Gumballova Hodina kódu - úvod
+        gumball_events: Gumballova Hodina kódu - události
+        gumball_repeat: Gumballova Hodina kódu - Opakovací příkazy
+        iceage_intro: Dobá ledová hodinového kódu - Instrukce
+        iceage_events: Doba ledová Hodinového kódu - události
+        iceage_repeat: Doba ledová hodinového kódu - Opakovaní příkazů
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok
@@ -763,8 +805,8 @@
           otočky
         repeat_blocks: Použij blok "Opakování" a zabal je kolem bloků v pracovním
           prostoru
-        repeat_blocks_1: (1) Použij tento blok a polož je kolem šedých bloků v pracovním
-          prostoru
+        repeat_blocks_1: "(1) Použij tento blok a polož je kolem šedých bloků v pracovním
+          prostoru"
         repeat_blocks_2: (2) Přesuň blok "Opakovat" sem a umísti šedé bloky dovnitř
         snowflake_dropdown: Použij tento drop-down k vytváření různých sněhových vloček!
         degrees_per_side: Vyděl 360 počtem stran, aby si získal velikost každého úhlu
@@ -835,13 +877,13 @@
         Infinity_move_directions_callout_arrow: Použij těchto šipek k řízení
         Infinity_move_collide_callout: Přehraj zvuk, když dojde k této události.
         Infinity_repeat_callout: Umísti dovnit přesouvací bloky
-        craft_run_button_callout: Stisknutím tlačítka "Spustit" vyzkoušíš svůj program
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_run_button_callout: Stisknutím tlačítka "Spustit" si vyzkoušíš program
+        craft_drag_block_callout: Přetáhni blok "moveForward();" a připoj jej pod
+          jiným blokem
+        craft_callout_preplaced: Položme zde určité bloky, které ti pomohou začít
+        craft_inside_repeat: Opakuj akce umístěním zde bloků
+        craft_callout_preplaced_house: Tento kód zahájí budování tvého domu. Umíš
+          to dokončit?
+        craft_what_is_iron: Dobývej toto železo!
+        craft_callout_moveforward: Tento kód kontroluje za lavu, umíš přidat povel
+          k posunu dopředu?

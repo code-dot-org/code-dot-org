@@ -1,31 +1,31 @@
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
-require 'cdo/rack/whitelist_cookies'
-
-ENV['RACK_ENV'] = 'test'
+require_relative 'test_helper'
+require 'cdo/rack/whitelist'
 
 class CookieWhitelistTest < Minitest::Test
   include Rack::Test::Methods
 
   ESCAPED_KEY = '1;2&3=4%'
   ESCAPED_VALUE = '3;4&5=6%'
+  HEADERS = REMOVED_HEADERS.map{|x|x.split(':')[0]}
   COOKIE_CONFIG = {
     behaviors: [
       {
         path: '/all/*',
-        cookies: 'all'
+        cookies: 'all',
+        headers: HEADERS
       },
       {
         path: '/some/*',
-        cookies: %w(one two)
+        cookies: %w(one two),
+        headers: HEADERS
       },
       {
         path: '/weird/*',
-        cookies: %w(one two) << ESCAPED_KEY
+        cookies: %w(one two) << ESCAPED_KEY,
+        headers: HEADERS
       }
     ],
-    default: {cookies: 'none'}
+    default: {cookies: 'none', headers: HEADERS}
   }
 
   def build_rack_mock_session
@@ -39,7 +39,7 @@ class CookieWhitelistTest < Minitest::Test
       [200, {'Content-Type' => 'text/plain'}, ['OK']]
     end
     Rack::Builder.app do
-      use Rack::WhitelistCookies, COOKIE_CONFIG
+      use Rack::Whitelist::Downstream, COOKIE_CONFIG
       run cookie_grabber
     end
   end

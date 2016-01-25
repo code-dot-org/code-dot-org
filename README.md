@@ -26,15 +26,17 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. `rbenv rehash`
 1. Set up nvm
   1. These steps are now necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
-  1. Install node version manager `brew install nvm` 
+  1. Install node version manager `brew install nvm`
     1. follow the instructions in the output of the previous command to finish installing nvm. It should be something like this: `echo "source $(brew --prefix nvm)/nvm.sh" >> ~/.bashrc`
   1. Install the right version of node `nvm install v0.12.4`
   1. Make that your default version `nvm alias default v0.12.4`
   1. reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` (can be skipped if your version of node did not just change)
+1. Ensure that openssl is linked (El Capitan issue)
+  1. `brew link --force openssl`
 1. Check that you have the correct versions of everything:
   1. open a new Terminal window  
   1. `ruby --version  # --> ruby 2.2.3`
-  1. `nvm ls          # --> v0.12.4` 
+  1. `nvm ls          # --> v0.12.4`
   1. `node --version  # --> v0.12.4`
   1. `npm --version   # --> 2.10.1`
 
@@ -43,7 +45,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk libsqlite3-dev phantomjs`
   * **Hit enter and select default options for any configuration popups**
-1. Upgrade npm to 2.0. If `npm -v` says less than 2.0,
+1. Upgrade npm to 2.0. If `npm -v` says less than 2.0 then
   * `sudo add-apt-repository ppa:chris-lea/node.js  `
   * `sudo apt-get update`
   * `sudo apt-get install nodejs`
@@ -94,7 +96,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `cd code-dot-org`
 1. `bundle install`
 1. `rake install`
-1. `rake install:hooks` (recommended, to install precommit linting hooks)
 1. `rake build`
 1. `sudo chown -R $(whoami) $HOME/.npm` (do we still need this step when using nvm?)
 
@@ -127,9 +128,9 @@ Our code is segmented into four parts:
 3. `bin/pegasus-server`
 4. Visit [http://localhost.code.org:3000/](http://localhost.code.org:3000/)
 
-## Building Javascript (apps, blockly-core, and shared) (optional)
+## Building Javascript (apps, blockly-core, and code-studio) (optional)
 
-The studio.code.org default dashboard install includes a static build of blockly and of the shared js, but if you want to make modifications to these you'll want to enable building them in the build:
+The studio.code.org default dashboard install includes a static build of blockly and of code-studio js, but if you want to make modifications to these you'll want to enable building them in the build:
 
 ### Enabling Apps Builds
 
@@ -142,12 +143,11 @@ You'll need to do this once:
   1. Add `build_apps: true`
   1. Add `build_blockly_core: true` (if you want to build blockly core -- not necessary if you only want to make changes to apps)
   1. Add `use_my_apps: true`
-1. To build shared js, edit `locals.yml` to add:
-  1. Add `build_shared_js: true`
-  1. Add `use_my_shared_js: true`
+1. To build code_studio js, edit `locals.yml` to add:
+  1. Add `use_my_code_studio: true`
 1. `rake install`
 
-This configures your system to build apps/blockly-core/shared whenever you run `rake build` and to use the versions that you build yourself.
+This configures your system to build apps/blockly-core/code-studio whenever you run `rake build` and to use the versions that you build yourself.
 
 ### Building
 
@@ -156,7 +156,7 @@ This configures your system to build apps/blockly-core/shared whenever you run `
 
 This will build everything you have set to build in `locals.yml`.
 
-You can use `rake build:apps`, `rake build:blockly_core` and `rake build:shared` to build a specific project.
+You can use `rake build:apps`, `rake build:blockly_core` and `rake build:code_studio` to build a specific project.
 
 You can also set `build_dashboard: false` and/or `build_pegasus: false` in `locals.yml` if you don't need to build these frequently. They default to `true`.
 
@@ -164,53 +164,5 @@ Alternatively, you can run: `rake build:core_and_apps_dev`, which will build blo
 
 ## Contributing
 
-We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to Alice (alice@code.org), and we’ll be happy to match you with a project. You can start setting up with these next steps.
-
-1. Anyone who would like to contribute to **[code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
-
-2. [Join our community development HipChat room](http://www.hipchat.com/gBebkHP6g) for help getting set up, picking a task, etc. We're happy to have you! If you want to make sure you get our attention, include an **@all** (everyone) or **@here** (everyone currently in the room) in your message.
-
-3. Get your build setup, following this README. Fork our repo and make sure to merge our staging branch in **WEEKLY** as we do update frequently.
-
-## Submitting Contributions
-Please check your PR against our tests before submitting.
-
-#### Code style
-
-Running `rake lint` locally will find most Ruby warnings. For other languages see the [style guide](STYLEGUIDE.md).
-
-#### Manually
-
-We support recent versions of Firefox, Chrome, IE9, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in IE9, iOS and Android if it's a risk. [BrowserStack live](http://www.browserstack.com) or [Sauce Labs manual](https://saucelabs.com/manual) let you run manual tests in these browsers remotely.
-
-#### Unit tests
-
-For dashboard changes, be sure to test your changes using `rake test`. For [apps or blockly](./apps) changes, see our [grunt testing instructions](./apps#running-tests).
-
-#### UI tests
-
-Our continuous integration server regularly runs a suite of [UI tests](./dashboard/test/ui) using Selenium / Cucumber which run against many browsers via [BrowserStack Automate](https://www.browserstack.com/automate), and can also be run locally using `chromedriver`. See the [README](./dashboard/test/ui) in that folder for instructions.
-
-If your changes might affect level paths, blockly UI, or critical path site logic, be sure to test your changes with a local UI test.
-
-### Submitting your Pull Request
-
-Contributors should follow the GitHub [fork-and-pull model](https://help.github.com/articles/using-pull-requests) to submit pull requests into this repository.
-
-1. On your fork, you'll either push to your own finished branch or checkout a new branch for your feature before you start your feature
-    - `git checkout -b branch_name`
-2. Develop the new feature and push the changes to **your** fork and branch
-    - `git add YYY`
-    - `git commit -m "ZZZ"`
-    - `git push origin branch_name`
-3. Go to the code-dot-org GitHub page
-    - [https://github.com/code-dot-org/code-dot-org](https://github.com/code-dot-org/code-dot-org)
-4. For your submission to be reviewed
-    - Click on the "Pull Request" link, look over and confirm your diff
-    - Submit a pull request for your branch to be merged into staging
-    - For bonus points, include screenshots in the description. Command + Ctrl + Shift + 4 in OS X lets you copy a screen selection to your clipboard, which GitHub will let you paste right into the description
-5. After your pull request is merged into staging, you can review your changes on the following sites:
-  * [https://staging.code.org/](https://staging.code.org/)
-  * [https://staging-studio.code.org/](https://staging-studio.studio.code.org/)
-  * [https://staging.csedweek.org/](https://staging.csedweek.org/)
-
+Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md)
+for more information on helping us out.

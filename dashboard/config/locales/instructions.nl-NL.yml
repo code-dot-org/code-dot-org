@@ -741,17 +741,37 @@
         programma schrijven dat alles verwijderd, zodat de grond gelijk is?
       4-5 While Loops 7_instruction: Wow, nu is er een drie hopen vuil! Kan je een
         programma schrijven dat ze alledrie verwijderd, zodat de grond gelijk is?
-      4-5 While Loops 8_instruction: ' Er is er een heel diep gat en een hele grote
+      4-5 While Loops 8_instruction: " Er is er een heel diep gat en een hele grote
         hoop vuil. Hoeveel scheppen vuil heb je nodig om de grond gelijk te krijgen?
-        Hint: gebruik voor allebei de zolang lus.'
+        Hint: gebruik voor allebei de zolang lus."
       4-5 While Loops Assessment 1_instruction: Er zijn veel gaten en hopen. Help
         me met vullen en verwijderen om de grond gelijk te krijgen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
+      allthethings_moviebot_instruction: |
+        This level cloned from "U3 Digital Assistant
+        Target"
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1509,12 +1529,13 @@
         patroon wordt! Laten we een nieuwe variabele met de naam "lengte" toevoegen
         en deze gebruiken wanneer je een "beweeg vooruit" hebt. Zet de variabele "lengte"
         op 75 voor deze vorm.
-      Course 4 Artist Vars 13_instruction: "When a shape has lots of sides, each\nside
-        needs to be shorter if you want the whole pattern to fit on the screen.\n\r\nLet's
-        recreate the algorithm for this amazing pattern, but instead of\nmanually
-        setting the \"length\" variable, let's use a math block with the\n\"sides\"
-        variable inside to make sure that each shape fits correctly. The\nperimeter
-        of each polygon is 300 pixels.\r\nNeed some hints?  Click here."
+      Course 4 Artist Vars 13_instruction: "Wanneer een vorm veel zijden heeft, moet
+        elke zijde korter zijn als je wil dat het hele patroon op het scherm past.
+        \r laten we opnieuw het algoritme voor dit verbazingwekkend patroon maken,
+        maar in plaats van de \"lengte\" variabele handmatig in te stellen,  gebruiken
+        we een wiskunde-blok met de \"zijden\" variabele er in om te zorgen dat elke
+        vorm correct past. De omtrek van elke veelhoek is 300 pixels. \r enkele tips
+        nodig?  Klik hier."
       Course 4 Artist Vars 14_instruction: 'Vrij Spel: Probeer het eens nu je algoritme
         met nog een lus genest is. Experimenteer met het veranderen van de waarden
         van je twee variabelen om coole patronen te tekenen.'
@@ -1679,12 +1700,12 @@
         nog een 4 bit getal nodig om in de rechts onder hoek te komen.
       Course 4 EC 1a_instruction: Geen regels, geen hints. Los het op!
       Course 4 EC 1b_instruction: Geen regels, geen hints. Los het op!
-      Course 4 EC 2a_instruction: '**Mega uitdaging:** Geen regels, geen hints. Los
-        het op!'
-      Course 4 EC 2b_instruction: '**Mega uitdaging:** Geen regels, geen hints. Los
-        het op!'
-      Course 4 EC 2c_instruction: '**Mega uitdaging:** Geen regels, geen hints. Los
-        het op!'
+      Course 4 EC 2a_instruction: "**Mega uitdaging:** Geen regels, geen hints. Los
+        het op!"
+      Course 4 EC 2b_instruction: "**Mega uitdaging:** Geen regels, geen hints. Los
+        het op!"
+      Course 4 EC 2c_instruction: "**Mega uitdaging:** Geen regels, geen hints. Los
+        het op!"
       Course 4 EC 3_instruction: 'Gebruik wat je hebt geleerd bij het vorige niveau
         om deze tekening te maken. Hint: de code wordt eenvoudiger als je parameters
         gebruikt. '
@@ -1717,29 +1738,28 @@
         aan de jump-functie, zodat we het kunnen gebruiken met andere figuren. Elk
         figuur stelt een nummer voor, beginnend bij 1. verander de "jump"-functie,
         zodat het ook om de "actor"-parameter vraagt. '
-      Course 4 Play Lab Params 4_instruction: Hier is een functie genaamd "surveilleren".
+      Course 4 Play Lab Params 4_instruction: Hier is een functie genaamd "patrol".
         Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten
         bewegen.
       Course 4 Play Lab Params 5_instruction: Voeg een 'speler'-parameter toe aan
         de 'patrol'-functie, zodat we hem kunnen aanroepen voor alle spelers op het
         scherm. De spelers hebben nummer 1, 2 en 3.
-      Course 4 Play Lab Params 6_instruction: |
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 6_instruction: Voeg een 'snelheid'-parameter toe aan
+        de 'patrol'-functie. Probeer een 'bepaal snelheid'-blok te gebruiken met de
+        nieuwe 'snelheid'-parameter om de Penguin te helpen allebei de flaggen te
+        pakken voor de andere figuren er eentje krijgen.
       Course 4 Play Lab Params 7_instruction: Gebruik de pijltjes om naar de hond
         te gaan en alle vlaggen te pakken.
       Course 4 Play Lab Params 8_instruction: Gebruik een "wanneer de speler aanraakt"-blok
         om de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij
         een van de andere spelers aanraakt.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function \"score_points.\"\r\n\r\nEdit\nthe
-        function so that a \"points\" parameter is added to the \"player_score\"\nvariable.
-        \r\n\r\nThe variable \"player_score\" should increase each time\nDog tags
-        Cat with hearts, and decrease each time that Cat tags Dog with hearts.\r\n\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
+      Course 4 Play Lab Params 9_instruction: "Hier is ons spel van eerder, maar de
+        meeste code is nu verborgen. Er is een nieuwe functie \"punten_scoren\".\r\n\r\nPas
+        de functie zo aan dat de \"punten\"-parameter toegevoegd wordt aan de \"speler_score\"
+        variabele.\r\n\r\nDe variabele \"speler_score\" moet iedere keer stijgen als
+        de hond katten raakt met hartjes, en dalen als katten honden raken met hartjes\r\n\r\nLet
+        op: als je klaar bent, klik dan op \"Run\" om af te spelen. Als de hond 6
+        punten scoort ga je verder naar de volgende puzzel. "
       Course 4 Play Lab Vars 1_instruction: Hier hoef je niet te programmeren. druk
         gewoon op de knop "uitvoeren" om het spel te spelen! In dit spel ben je een
         hond die meer vlaggen moet verzamelen dan de kat. gebruik de pijltjes om de
@@ -1907,7 +1927,18 @@
         \r\nfind the length of an array\r\n"
       CSP Data Unit -Counting Records - Hard Way_instruction: "\r\n1. ReadRecords\nfor
         all records\r\n2. Way to loop through and count\r\n"
-      CSP U4 - JSON Object Intro - Bad Way_instruction: How do we make a JSON Object
+      CSP U4 - JSON Object Intro - Bad Way_instruction: |
+        Trigger both the keyboard
+        and mouse event and examine the event objects displayed in the console. Why
+        might an object be the best way to store this information? (Click to see full
+        instructions)
+      CSP U4 - JSON Object Intro - Good Way_instruction: "Create an object with at\nleast
+        5 values including at least one string and one number. (Click to see\nfull
+        instructions) \n"
+      CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      drawings!_instruction: Draw the equilateral triangle, or else.
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2154,6 +2185,11 @@
       Eval Strings Images Free Play_instruction: |
         Free Play: Explore the blocks available
         to create something interesting. Make sure to share your favorite creations.
+      Farmer for Authored Hint testing_instruction: |
+        Wow, I found a really deep hole!
+        I don't know how many shovelfuls of dirt it needs.  Can you write a program
+        that fills it until the ground is even?  Hint:  Try using the while loop this
+        time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: Laten we nu 20 overlappende cirkels
         maken, draai 18 graden tussen elke cirkel.
@@ -2169,21 +2205,18 @@
         keer gaat 90 in 360? Tip: Het is een heel klein getal.'
       frozen cross rotate_instruction: Probeer het nu 10 maal te herhalen. Hoeveel
         graden moet je draaien tussen de lijnen?
-      frozen cross_instruction: |
-        Wrap a “Repeat” block around these commands to create
-        a plus sign. Did you notice Elsa can move forward and backward?
-      frozen diamond mini snowflake_instruction: |
-        Did you know every snowflake is
-        a different shape? Let's create a new snowflake by using another “Repeat"
-        block to repeat a parallelogram 4 times, turning right by 90 degrees between
-        each parallelogram.
+      frozen cross_instruction: Plak een 'herhaal'-blok om deze commando's om een
+        plus-teken te maken. Heb je al gezien dat Elsa vooruit en achteruit kan lopen?
+      frozen diamond mini snowflake_instruction: Wist je dat iedere sneeuwvolk een
+        andere vorm heeft? Laten we een nieuwe sneeuwvlok maken door nog een 'herhaal'-blok
+        te gebruiken om 4 keer een parallellogram te tekenen, waarbij we 90 graden
+        naar rechts draaien na ieder parallellogram.
       frozen diamond snowflake_instruction: Laten we nu een nieuwe sneeuwvlok maken
         door met het "Herhaal" blok een parallellogram 10 keer te herhalen, draai
         steeds 36 graden tussen de parallellogrammen.
-      frozen diamond_instruction: |
-        Use a repeat around these blocks to create a parallelogram.
-        It's just like a rectangle but has different angles. This one has 60 degree
-        and 120 degree angles instead of all 90 degree angles.
+      frozen diamond_instruction: Gebruik een lus om deze blokken om een parallellogram
+        te maken. Dat is net een rechthoek, maar met andere hoeken. Deze heeft hoeken
+        van 60 en van 120 graden in plaats van allemaal hoeken van 90 graden.
       frozen freeplay_instruction: Je bent nu officieel een meester kunstenaar geworden!
         Maak een winter wonderland.
       frozen line_instruction: Hoi! Ik ben Elsa van Arendelle. Help mij met het maken
@@ -2327,7 +2360,8 @@
         honing te maken!
       K-1 Bee Loops 7_instruction: Gebruik lussen om nectar te pakken en honing te
         maken!
-      K-1 Bee Loops 8_instruction: Gebruik lussen om de nectar en honing te pakken!
+      K-1 Bee Loops 8_instruction: Gebruik lussen om nectar te pakken en honing te
+        maken!
       K-1 Bee Loops 9_instruction: Gebruik herhaal blokken om nectar te pakken en
         honing te maken!
       K-1 Bee Loops Assessment 1_instruction: Pak nectar om honing te maken en gebruik
@@ -2752,8 +2786,8 @@
       NEW Course 4 Play Lab Params 11_instruction: 'Het is vrije speel tijd! Veel
         plezier met alle blokken in je gereedschapskist. '
       NEW Course 4 Play Lab Params 5 5_instruction: Laten we dat opnieuw proberen,
-        maar dan met minder hulp. Wat moet je nu bewerken om de spelers te laten patrouilleren
-        (rondlopen)?
+        maar dan met minder hulp. Wat moet je nu aanpassen om de spelers te laten
+        patrouilleren (rondlopen)?
       NEW Course 4 Play Lab Vars 4 5_instruction: Wat denk je dat deze code zal doen?
         Druk op "Start" om te zien wat er gebeurt.
       NEW Course 4 Play Labs For Loops 7a_instruction: Kan je, met behulp van wat
@@ -2794,46 +2828,48 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Tegen een Creeper aanlopen is een slecht
-        idee. Beweeg voorzichtig om de Creepers hen om je veilige huis te bereiken.
-      Overworld Chop Tree_instruction: Hout is een erg belangrijke grondstof. Veel
-        dingen worden er mee gemaakt. Loop naar een boom en gebruik het "vernietig
-        blok" commando op de boom om te hakken.
-      Overworld Chop Trees_instruction: We moeten een huis bouwen voor de zon onder
-        gaat. Voor een huis hebben we veel hout nodig. Zaag alle 3 de bomen om.
-      Overworld Free Play 20x20_instruction: Gefeliciteerd! Je hebt alle puzzels opgelost!
-        Graaf, bouw en maak iets unieks en gebruik alles wat tot nu toe geleerd hebt.
-      Overworld Free Play_instruction: Dit landschap is speciaal voor jou om mee te
-        spelen. Jij mag kiezen wat je wilt bouwen.
+      Overworld Avoid Monsters_instruction: Het is een slecht idee om tegen een Creeper
+        aan te botsen. Beweeg voorzichtig langs de Creepers om veilig je huis te bereiken.
+      Overworld Chop Tree_instruction: Hout is een zeer belangrijke grondstof. Veel
+        dingen zijn ervan gemaakt. Loop naar de boom en gebruik het \“vernietig blok\”-commando
+        om hem om te hakken.
+      Overworld Chop Trees_instruction: We moeten een huis bouwen voordat de zon ondergaat.
+        Voor een huis is veel hout nodig. Hak alle drie bomen om.
+      Overworld Free Play 20x20_instruction: Gefeliciteerd! Je hebt al onze puzzels
+        voltooid! Nu kun je wat je hebt geleerd gebruiken om te delven en te bouwen,
+        om zo iets unieks te maken.
+      Overworld Free Play_instruction: Bepaal zelf hoe je de omgeving gebruikt. Kies
+        zelf wat je maakt.
       Overworld House Frame - A_instruction: Laten we ons eigen huis bouwen! Deze
         plek ziet er goed uit. Bouw een basis op deze aarde blokken.
       Overworld House Frame - C_instruction: Laten we ons eigen huis bouwen! Deze
         plek ziet er goed uit. Bouw een basis op deze aarde blokken.
-      Overworld House Frame B_instruction: één muur is af, laten we nu de rest van
-        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
-      Overworld House Frame B2_instruction: één muur is af, laten we nu de rest van
-        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
-      Overworld House Frame C_instruction: één muur is af, laten we nu de rest van
-        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
+      Overworld House Frame B_instruction: "één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen."
+      Overworld House Frame B2_instruction: "één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen."
+      Overworld House Frame C_instruction: "één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen."
       Overworld House Frame Chosen_instruction: Bouw de rest van je huis met welk
         materiaal je zelf wilt. Het commando "herhalen" komt hier handig van pas.
-      Overworld House Frame_instruction: Laten we ons huis gaan maken! Deze plek ziet
-        er goed uit. Bouw een basis op de aarde blokken.
-      Overworld Minecart Track_instruction: Je bent terug op de oppervlakte met veel
-        ondergrondse grondstoffen. We gaan we een spoor maken langs het pad naar je
-        huis. De eerste stap is het pad vrij maken. Volg het pad en verwijder de bomen.
-      Overworld Move to Sheep_instruction: Voeg een tweede "vooruit" commando toe
-        om bij de schapen te komen.
-      Overworld Place Wall_instruction: Ieder huis start met een muur. Bouw het eerste
-        deel van je huis door "plaats" en "vooruit" commando's in het "herhaal" commando
+      Overworld House Frame_instruction: Laten we ons eigen huis maken! Dit lijkt
+        een geschikte plek. Bouw een omtrek op de aardeblokken.
+      Overworld Minecart Track_instruction: Je bent terug aan het oppervlak met veel
+        grondstoffen uit de mijnen. Nu gaan we een spoor bouwen langs het zandpad
+        dat naar je huis loopt. Eerst moeten we het pad vrijmaken. Volg het pad en
+        verwijder de bomen.
+      Overworld Move to Sheep_instruction: Voeg een tweede "beweeg vooruit"-commando
+        toe om de schapen te bereiken.
+      Overworld Place Wall_instruction: Elk huis begint met een muur. Bouw het eerste
+        deel van je huis door de opdrachten "plaats" en "beweeg vooruit" in de herhalingsloop
         te plaatsen.
-      Overworld Plant Crops_instruction: Het is goed om vooruit te plannen. Plant
-        gewassen aan beide zijden van het water zodat je later geen honger krijgt.
-      Overworld Powered Minecart_instruction: Goed gedaan! Je hebt veel grondstoffen
-        verzameld en een mooi huis gebouwd. Leg nu een spoor aan van de rand van de
-        kaart naar de deur van uw huis.
-      Overworld Shear Sheep_instruction: Schaap scheertijd! gebruik het "scheer" commando
-        om wol te verzamelen van beide schapen.
+      Overworld Plant Crops_instruction: Het is slim om vooruit te denken. Plant gewassen
+        aan beide kanten van het water, zodat je later geen honger krijgt.
+      Overworld Powered Minecart_instruction: Goed gedaan! Je verzamelde veel grondstoffen
+        en bouwde een bescheiden huis. Plaats nu een spoor van de rand van de plattegrond
+        naar de deur van je huis.
+      Overworld Shear Sheep_instruction: Tijd om schapen te scheren! Gebruik het commando
+        "knippen" om wol van beide schapen te krijgen.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all
@@ -3017,12 +3053,17 @@
         Free Play: Experiment with your rocket-height
         function to make the rocket fly in different ways. Click "Finish" when you
         are done.
+      Poorva-test_instruction: |
+        Here are regular instructions for a level. There
+        is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: De bij wil op dit moment alleen nectar.
         Niet alle objecten zijn bloemen, dus kijk onder IEDERE WOLK om te zien of
         hij een bloem verbergt. Dan kun je nectar verzamelen.
-      Ryan Test Locked Blocks_instruction: Hier is een functie genaamd "surveilleren".
-        Bewerk hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten
-        bewegen.
+      Ryan - Bee Conditionals_instruction: |
+        De bij wil nu alleen nectar.
+        Niet alles is een bloem, dus kijk onder ELKE WOLK of daar een bloem is verstopt. Zo ja, verzamel dan de nectar.
+      Ryan Test Locked Blocks_instruction: Hier is een functie genaamd "patrol". Bewerk
+        hem om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\"\nfunction
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample:
@@ -3227,7 +3268,8 @@
         the randomly generated array by 1. (Click to see full instructions)
       U3 - Arrays - createFirstArray_instruction: |
         Create an array of the even numbers
-        from 0-10 and display its contents with console.log. (Click to see full instructions)
+        from 0 to 10 and display its contents with console.log. (Click to see full
+        instructions)
       U3 - Arrays - Demo App_instruction: |
         Use the "My Favorite Things" app. How
         might this app be making use of an array? (Click to see full instructions)
@@ -3273,7 +3315,7 @@
         and meaningful IDs. (Click to see full instructions)
       U3 - Arrays - indexPractice_instruction: |
         Write the contents of the array to
-        the screen in order. (Click to see full instructions)
+        the screen in numerical order. (Click to see full instructions)
       U3 - Arrays - insertingItems_instruction: |
         Insert items into an array to form
         a complete sentence. (Click to see full instructions)
@@ -3296,9 +3338,78 @@
       U3 - Arrays - stringsInArrays_instruction: |
         Write a sentence word by word by
         adding strings to an array. (Click to see full instructions)
+      U3 - Canvas - 200dots_instruction: |
+        Add a loop to your program that draws 200
+        dots on your canvas. (Click to see full instructions)
+      U3 - Canvas - appendToArray_instruction: |
+        Create an array to store each event
+        parameter. Append each event parameter to this array within your event handler.
+        (Click to see full instructions)
+      U3 - Canvas - changeToMouseMove_instruction: |
+        Change your program so that dots
+        are drawn at the location of the mouse as the user moves the mouse on the
+        canvas. (Click to see full instructions)
+      U3 - Canvas - clickToAdd_instruction: |
+        Change your program so that dots are
+        added to the canvas when the user clicks on it. (Click to see full instructions)
+      U3 - Canvas - delete_instruction: |
+        Create a button that deletes the drawing
+        by clearing the canvas and removing all stored values. (Click to see full
+        instructions)
+      U3 - Canvas - draw at click point_instruction: |
+        Change your program so that
+        dots are drawn at the location of the mouse click. (Click to see full instructions)
+      U3 - Canvas - freePlay_instruction: |
+        Extend the functionality of one of the
+        effects, or create an entirely new one of your own. (Click to see full instructions)
+      U3 - Canvas - introCanvas_instruction: |
+        Add a canvas to your app and set it
+        to be the active canvas. Then add a large dot to your canvas. (Click to see
+        full instructions)
+      U3 - Canvas - movementFunction fix Orig_instruction: |
+        Modify the "Original"
+        button event handler so that it takes the movement of the mouse into account.
+        (Click to see full instructions)
+      U3 - Canvas - movementFunction_instruction: |
+        Write a function that takes the
+        movement of the mouse as input and generates a line width as output. (Click
+        to see full instructions)
+      U3 - Canvas - One Dot sprayPaint_instruction: |
+        Write code that redraws your
+        image using a dot whose x and y locations use offsetX and offsetY with a small
+        random value added. (Click to see full instructions)
+      U3 - Canvas - redrawOriginal_instruction: |
+        Write a function that processes
+        your array, redrawing the dots as they originally appeared. (Click to see
+        full instructions)
+      U3 - Canvas - redrawRandom_instruction: |
+        Set up a button and event handler
+        for the random function. (Click to see full instructions)
+      U3 - Canvas - redrawRandom2_instruction: |
+        Write a function that processes your
+        array, redrawing every dot with a random size. (Click to see full instructions)
+      U3 - Canvas - shiftKey_instruction: |
+        Add an if statement to your event handler
+        so dots are only drawn when the shift key is pressed. (Click to see full instructions)
+      U3 - Canvas - sketch_instruction: |
+        Write code that redraws your image using
+        a sketch effect. (Click to see full instructions)
+      U3 - Canvas - sprayPaint_instruction: |
+        Update the spray paint code so that
+        it redraws your image using multiple random dots instead of using a nested
+        for loop. (Click to see full instructions)
+      U3 - Canvas - transparentDots_instruction: |
+        Change the colors of your dots
+        so they have a fully transparent stroke and partially transparent fill. (Click
+        to see full instructions)
+      U3 - Canvas - usingOffsetXY_instruction: |
+        Add a console.log command inside
+        the function of your event handler. Use it to display the event parameter.
+        Click on the screen to see the contents of the event parameter (Click to see
+        full instructions)
       U3 - Conditional Basics - 6_instruction: |
         Add a setText after the if statement
-        to "Nope. Guess again" (Click to see full instructions)
+        to "Nope. Guess again." (Click to see full instructions)
       U3 - Conditionals - Combine AND and OR_instruction: |
         Write an if statement
         that uses AND and OR to display "Time to go to school!" if it's not the
@@ -3309,7 +3420,7 @@
         weekend and the user is under 18. (Click to see full instrucitons.
       U3 - Conditionals - Combine AND OR Simple_instruction: |
         Write an if statement
-        that uses AND and OR to display "Sleep in" if it's the weekend and the
+        that uses AND and OR to display "Sleep in!" if it's the weekend and the
         user is a teenager. (Click to see full instructions.
       U3 - Conditionals - intoOr_instruction: |
         Add 2 if statements that use the OR
@@ -3319,14 +3430,14 @@
         OR operator. (Click to see full instructions)
       U3 - Conditionals - Simple AND_instruction: |
         Write an if statement that uses
-        AND to display "You are a teenager" if the user enters an age between 13
+        AND to display "You are a teenager." if the user enters an age between 13
         and 19. (Click to see full instructions)
       U3 - Conditionals - Simple OR_instruction: |
         Write an if statement that uses
-        OR to display "It's the weekend" if the user enters a weekend day at the
+        OR to display "It's the weekend!" if the user enters a weekend day at the
         prompt. (Click to see full instructions)
       U3 - Design Mode - Console Log_instruction: |
-        Update the ID names and `console.log()`
+        Update the ID names and `console.log`
         messages to match the correct button. (Click to see full instructions.)
       U3 - Design Mode - Layers and Delete_instruction: |
         Fix the layout of the bullseye
@@ -3356,14 +3467,14 @@
         Add guess and score to the Dice
         Game (Click to see full instructions)
       U3 - Dice - Dropdown with Strings_instruction: |
-        Add a dropdown for difficult
+        Add a dropdown for difficulty
         level that prints the difficulty level in the console. (Click to see full
         instructions)
       U3 - Dice - If_instruction: |
-        Show different dice images for the random number
+        Show different die images for the random number
         generated. (Click to see full instructions)
       U3 - Dice - Nested_instruction: |
-        Use nested if statements to making the scoring
+        Use nested if statements to make the scoring
         different for the different game levels. (Click to see full instructions)
       U3 - High Low - Debug_instruction: |
         Debug the order of the conditionals so
@@ -3373,14 +3484,14 @@
         Add a dropdown for their guess instead
         of promptNum (Click to see full instructions)
       U3 - High Low - Else if_instruction: |
-        Add an else if statement in order to
+        Add an else-if statement in order to
         tell the user if their guess is high or low instead of just wrong. (Click
         to see full instructions)
       U3 - High Low - Else_instruction: "Add an else statement so that the program\nwill
         tell the user when they are right and when they are wrong. (Click to\nsee
         full instructions)\r\n"
       U3 - High Low - If_instruction: |
-        Add code to the if-statement that indicates
+        Add code to the if statement that indicates
         the user guessed the secret number. (Click to see full instructions)
       U3 - Keys - Add Image URLs_instruction: |
         Add image URLs to your array. Replace
@@ -3388,8 +3499,8 @@
         (Click to see full instructions)
       U3 - Keys - Buttons and Keys_instruction: |
         Have the program respond the same
-        way for both up and down arrows as it does to the up and down buttons. (Click
-        to see full instructions)
+        way for both clicking images on the screen and hitting the up and down keys
+        on the keyboard. (Click to see full instructions)
       U3 - Keys - Demo App_instruction: |
         Play with the image scroller. Press the
         left and right arrows to progress through the images.
@@ -3397,7 +3508,7 @@
         Update the image scroller to
         respond to buttons and key presses. (Click to see full instructions)
       U3 - Keys - Functions_instruction: |
-        Write a doUpArrow and doDownArrow function
+        Write doUpArrow and doDownArrow functions
         and call the functions instead of duplicating the code. (Click to see full
         instructions)
       U3 - Keys - Key Up and Down_instruction: |
@@ -3419,31 +3530,31 @@
         to see full instructions)
       U3 - Loops -  Complex Condition_instruction: |
         Change the boolean expression
-        for the while loop so that it will roll until both dice are greater than 3.
-        (Click to see full instructions)
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)
       U3 - Loops - 1_instruction: |
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that if the sum of the dice is
-        a 7 or 11 roll again and keep rolling until the sum is not 7 or 11. (Click
-        to see full instructions)
+        Write a program that, if the sum of the dice
+        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
+        (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
         (Click to see full instructions)
       U3 - Loops - 12_instruction: |
         Change the code so that it prints the string
-        'Hi' 5 times. (Click to see full instructions)
+        "Hi" 5 times. (Click to see full instructions)
       U3 - Loops - 13_instruction: |
         Update the code to count up by 3 instead of 1.
         (Click to see full instructions)
       U3 - Loops - 14_instruction: |
         Change the loop condition to prevent the infinite
-        loop and stop counting at once the count is past 30. (Click to see full instructions)
+        loop and stop counting once the count is past 30. (Click to see full instructions)
       U3 - Loops - 15_instruction: |
         Count the number of times the sum of the dice
-        is 7. (Click to see full instructions)
+        is 12. (Click to see full instructions)
       U3 - Loops - 16_instruction: |
         Find out how many times you have to roll to get
         the sum of 7 100 times (Click to see full instructions)
@@ -3454,7 +3565,7 @@
         Change the if statement to a while loop so the
         program will run until it rolls a 6. (Click to see full instructions)
       U3 - Loops - 4_instruction: |2
-         Use the Debug Commands to to make a list of all
+         Use the Debug Commands to make a list of all
         the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - 5_instruction: |
         Add code inside the while loop which will update
@@ -3478,10 +3589,10 @@
         of all the values rolled before a 6. (Click to see full instructions)
       U3 - Loops - minus = operator_instruction: |
         Update the code to use the -= operator
-        to count from 30 down to 0 by 3s. (Click to see full instructions)
+        to count from 30 down to 0 by 3's. (Click to see full instructions)
       U3 - Loops - Minus Minus_instruction: |
         Change the code to count down from 10
-        to 1! (Click to see full instructions)
+        to 1. (Click to see full instructions)
       U3 - Loops - plus and minus = operator_instruction: |
         Update the code to use
         the += operator. (Click to see full instructions)
@@ -3506,35 +3617,39 @@
       U3 - Loops And Arrays - Divid by 2_instruction: |
         Divide every value in the
         array by 2. (Click to see full instructions)
+      U3 - Loops And Arrays - Find Max_instruction: |
+        Design a function that displays
+        the smallest number in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Find Min_instruction: |
-        Write a function that returns
-        the smaller of two numbers.  (Click to see full instructions)
+        Complete the findMinVal function
+        to find and display the smallest value in an array  (Click to see full instructions)
       U3 - Loops And Arrays - Functions that Return Value_instruction: |
-        Test out
-        the return values of the findMax function.  (Click to see full instructions)
+        Call findMin
+        within the console.log statement to calculate the minimum of two values.  (Click
+        to see full instructions)
       U3 - Loops And Arrays - General Search Param_instruction: |
-        Add a parameter
-        for the search value to make the function more general. (Click to see full
-        instructions)
+        Add a second parameter
+        to the search function for the value to search for.  (Click to see full instructions)
       U3 - Loops And Arrays - Intro For Loop_instruction: |
         Add a for loop with a
         console.log inside and test out the 3 pieces of the for loop. (Click to see
         full instructions)
       U3 - Loops And Arrays - Linear Search_instruction: |
-        Print true if the value
-        5 appears in the array and false when it is not a 5. (Click to see full instructions)
+        Visit every element in
+        the array and display "true" if the value is a 5, and "false" otherwise.
+        (Click to see full instructions)
       U3 - Loops And Arrays - Loop Array If_instruction: |
         Use an if statement to
-        only print the values in the array that are greater than 5. (Click to see
+        only display the values in the array that are greater than 5. (Click to see
         full instructions)
       U3 - Loops And Arrays - Make it a Function - add list parameter_instruction: |
         Create
         a function that takes a list parameter and prints if the list contains a 5.
         (Click to see full instructions)
       U3 - Loops And Arrays - Make it a Function_instruction: |
-        Create a function
-        that takes a list parameter and prints if the list contains a 5. (Click to
-        see full instructions)
+        Move the code that
+        searches the list for a 5 into a function called "search". (Click to see
+        full instructions)
       U3 - Loops And Arrays - Multiple Returns_instruction: |
         Test out the return
         values of the findMax function.  (Click to see full instructions)
@@ -3542,52 +3657,127 @@
         Use a for loop to print out
         all the values in an array. (Click to see full instructions)
       U3 - Loops And Arrays - Printing Single True_instruction: |
-        Count the number
-        of times 5 appears in an array. (Click to see full instructions)
+        Process the array
+        and display a single "true" if the array contains a 5 or a single "false"
+        if it does not.  (Click to see full instructions)
       U3 - Loops And Arrays - Return Index_instruction: |
         Make the search function
         return the index of the search value in the array. (Click to see full instructions)
       U3 - Loops And Arrays - Return Value_instruction: |
-        Make the search function
-        return the value of true or false.  (Click to see full instructions)
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
       U3 - Loops And Arrays - Search and Remove_instruction: |
         Search for 5 in the
         array and remove it from the array. (Click to see full instructions)
       U3 - Loops And Arrays - Search with Boolean Var_instruction: |
         Make a boolean
-        variable to keep track of if there is a 5 in the array. (Click to see full
-        instructions)
+        variable to use as a flag to keep track of whether there is a 5 in the array.
+        (Click to see full instructions)
+      U3 - Loops And Arrays - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
       U3 - Movie Bot - Multiple If Sequences_instruction: |
         Add another set of if,
-        else if, and else statements insides the question if statement to check for
-        keywords for movies ratings (G, PG, PG-13, and R). (Click to see full instructions)
+        else if, and else statements inside the question if statement to check for
+        keywords for movie ratings (G, PG, PG-13, and R). (Click to see full instructions)
       U3 - Movie Bot - Nested Motivation_instruction: |
-        Add a seperate set of if statements
-        to check for a ? in the input. (Click to see full instructions)
+        Add a separate set of if statements
+        to check for a "?" in the input. (Click to see full instructions)
       U3 - Movie Bot - toLowerCase_instruction: |
-        Use the toLowerCase() command to
-        change all user input into lower case letters after they enter it. (Click
-        to see full instructions)
+        Use the toLowerCase command to change
+        all user input into lowercase letters after they enter it. (Click to see full
+        instructions)
       U3 - Movie Bot - When Multiple If Statements_instruction: |
-        Add an if and else
-        if statement that checks for please and thank you. (Click to see full instructions)
+        Add an if and else-if
+        statement that checks for please and thank you. (Click to see full instructions)
+      U3 - Practice Create Performance Task_instruction: |
+        Design and implement your
+        practice Create Performance Task. (Click to see full instructions)
+      U3 - Read Record - 1.2_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.5_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1.6_instruction: "Console.log the records returned by a\ncall
+        to readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 1_instruction: "Console.log the records returned by a call\nto
+        readRecords. (Click to see full instructions)\r\n"
+      U3 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table.(Click to see full instructions)\r\n"
+      U3 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4.1_instruction: "Print out each record return from the\nreadRecords
+        call individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5 and half_instruction: "Print out the name of each movie\nin
+        the records return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Read Record - 5_instruction: "Print out the name of each movie in the\nrecords
+        return from the readRecords call. (Click to see full instructions)\r\n"
+      U3 - Return Values - constrainTurtle_instruction: |
+        Use constrain in this simple
+        app to keep the turtle from driving off the screen.  (Click to see full instructions)
+      U3 - Return Values - debuggingConstrain_instruction: |
+        Correct the error in
+        constrain so that it returns the appropriate value.  (Click to see full instructions)
+      U3 - Return Values - debuggingMaxVal_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - debuggingReturns_instruction: |
+        Correct the error in maxVal
+        so that it correctly reports the maximum value.  (Click to see full instructions)
+      U3 - Return Values - increase1_instruction: |
+        Call the increase function within
+        moveForward, write, and console.log.  (Click to see full instructions)
+      U3 - Return Values - increase2_instruction: |
+        Change the increase function to
+        return 3 times the input value. (Click to see full instructions)
+      U3 - Return Values - min1_instruction: |
+        Test out the return values of the findMax
+        function.  (Click to see full instructions)
+      U3 - Return Values - useFindMin_instruction: |
+        Call findMin within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - useMinVal_instruction: |
+        Call minVal within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)
+      U3 - Return Values - wrapTurtle_instruction: |
+        Write wrap in this simple app
+        to let the turtle "wrap" to the other side of the screen when it goes off.  (Click
+        to see full instructions)
+      U3 - Return Values - writeMaxVal_instruction: |
+        Write the function maxVal and
+        then use it within the console.log statement to calculate the maximum of two
+        values.  (Click to see full instructions)
+      U3 - Search Terms - 1_instruction: "Create an array of all the movies made\nin
+        2008 and print it out. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 2_instruction: "Print out all the movies with year 2008\nusing
+        the readRecords search terms. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 3_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 4_instruction: "Print whether or not there are movies matching\nthe
+        search criteria (Click to see full instructions)\r\n"
+      U3 - Search Terms - 5_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
+      U3 - Search Terms - 6_instruction: "Print out the cities that are in California\nor
+        have a population of 2,000,000. (Click to see full instructions)\r\n"
       U3 - Simulation - 1_instruction: |
-        Use a while loop to "flip 10 coins" and
-        write them to the screen. (Click to see full instructions)
+        Use a while loop to "flip a coin 10 times"
+        and write the values to the screen. (Click to see full instructions)
       U3 - Simulation - 2.1_instruction: |
-        Change your looping condition to be based
-        on the number of heads flipped. (Click to see full instructions)
+        Change your looping condition so the simulation
+        runs until there are 5 heads flipped. (Click to see full instructions)
       U3 - Simulation - 2.5_instruction: |
         Run your simulation to get the full 10,000
-        flips! How long did it take? (Click to see full instructions)
+        heads! How long did it take? (Click to see full instructions)
       U3 - Simulation - 2_instruction: |
-        Keep track of how many heads (1s) your program
-        generates and print the results to the screen. (Click to see full instructions)
-      U3 - Simulation - 3_instruction: "Add functionality that counts the length\nof
-        your streaks. (Click to see full instructions)\r\n"
+        Keep track of how many heads (1's) your
+        program generates and print the results to the screen. (Click to see full
+        instructions)
+      U3 - Simulation - 3_instruction: "Add functionality that counts how many heads\nin
+        a row are flipped. (Click to see full instructions)\r\n"
       U3 - Simulation - 4_instruction: |
-        Update your while loop's condition to be
-        based on the streak of heads. (Click to see full instructions)
+        Update your while loop's condition so the
+        the coin flips until there are three heads in a row. (Click to see full instructions)
       U3 - Simulation - 5_instruction: |
         Change your while loop to run until you get
         a streak of 12 heads. How many flips did it take? (Click to see full instructions)
@@ -3603,7 +3793,7 @@
         and write them to the screen. (Click to see full instructions)
       U3 - User Input - Save getText To Variable_instruction: |
         Save the age and name
-        of the user in a variable (Click to see full instructions)
+        of the user in variables (Click to see full instructions)
       U3 - User Input - Saving After Input_instruction: |
         Save the age of the user
         in a variable using getText() (Click to see full instructions)
@@ -3686,7 +3876,7 @@
         called "lives" and assign it the value 3. Print it to the console. (Click
         to see full instructions)
       U3- Variables - Text Mode_instruction: |
-        1. switch to text mode and type instructions;
+        1. Switch to text mode and type instructions;
         2. drag blocks out into text mode; 3. experiment with code completion
       U3-Design Mode-ID and Event Handler_instruction: |
         Add an event handler for
@@ -3696,7 +3886,7 @@
         Using the Design Mode Events change the button
         ID and update the code to match. (Click to see detail instructions).
       U3-Design Mode-Image_instruction: |
-        Recreate the "Chaser-Game" from the last
+        Recreate the "Chaser Game" from the last
         lesson using Design Mode. (Click to see full instructions.)
       U313 drag Two Buttons_instruction: |
         Run a program with two buttons that have
@@ -3724,8 +3914,8 @@
         Write the turnAround() function and
         use it to make the turtle move as depicted. see: U3L03-turnAndDown.gif
       U3L03 Define and use turnAround_instruction: |
-        Define a function called turnAround
-        and call it to make the turtle move as depicted. (Click to see full instructions)
+        Define a function called turnAround.
+        Call the function and then move the turtle forward. (Click to see full instructions)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -3817,8 +4007,8 @@
         Add 15 fish to the image by writing drawAllFish
         with a loop. (Click to see full instructions)
       U3L07 - Free Play Loops and Random_instruction: |
-        Free Play!  Use what you learned
-        from loops and random to make your own little scene.  Have fun.
+        Free Play! Use what you learned
+        from loops and random to make your own little scene. Have fun.
       U3L07 - introSquare_instruction: |
         Use a loop to draw a square. (Click to see
         full instructions)
@@ -3874,7 +4064,7 @@
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance.
       U3L08 - fish_instruction: |
-        Add a parameter to drawFish() that changes the size
+        Add a parameter to drawFish that changes the size
         of the fish drawn. (Click to see full instructions)
       U3L08 - freePlay_instruction: |
         Keep adding to your image by making more calls
@@ -3887,21 +4077,21 @@
         of sea grass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)
       U3L08 - multiParamFish_instruction: |
-        Add three parameters to your drawFish()
+        Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)
       U3L08 - multipleLayersofParams_instruction: |
         Call drawPlusSign() to complete
         the image. (Click to see full instructions)
       U3L08 - paramsToStarfish_instruction: |
-        Add a parameter to drawStarfish() that
+        Add a parameter to drawStarfish that
         changes the size of the starfish drawn. (Click to see full instructions)
       U3L08 - randomInput_instruction: |
         Use the randomNumber() blocks to test the
         functions you designed with random input. (Click to see full instructions)
       U3L08 - seaGrass_instruction: |
-        Add a parameter to drawSeaGrass() that changes
-        the size of the piece of sea grass drawn. (Click to see full instructions)
+        Add a parameter to drawSeagrass that changes
+        the size of the piece of seagrass drawn. (Click to see full instructions)
       U3L08 - squareTwoParams_instruction: |
         Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)
@@ -4064,8 +4254,8 @@
         they hit 'enter' in the text input, using the 'change' event. (Click to
         see full instructions)
       U3L16 - chaserApp_instruction: |
-        Create your own "Chaser App". (Click to see
-        full instructions)
+        Create your own "Chaser Game." (Click to
+        see full instructions)
       U3L16 - chooseImages_instruction: |
         Replace the image in your application with
         one of your own. (Click to see full instructions)
@@ -4098,8 +4288,8 @@
         of the last level, you can copy your code from that level into\nhere if you
         prefer. \n"
       U3L16 - intro getText_instruction: |
-        Add an Text Inputs for name and age. (Click
-        to see full instructions)
+        Add text input UI elements for name and
+        age. (Click to see full instructions)
       U3L16 - introSetPosition_instruction: |
         Move the buttons to the bottom of the
         screen. (Click to see full instructions)
@@ -4113,7 +4303,7 @@
         Experiment with different event types and
         select the one that you think is best. (Click to see full instructions)
       U3L16 - outputWithTextArea_instruction: |
-        Output a message to the Text Area
+        Output a message to the 'textArea'
         (Click to see full instructions)
       U3L16 - projectTemplate_instruction: |
         Create your own "Chaser App". (Click
@@ -4128,7 +4318,7 @@
         it!  For more details see the Activity guide for this lesson.
       U3L16 - setPosition to move button_instruction: |
         Introducing the setPosition
-        command!  Replace the moveTo in the button-click event handler to use setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
         to move the button itself to a random location when it's clicked.
       U3L16 - setPositionMoveButton_instruction: Use setPositon to moveButton
       U3L16 - setupMoveToRandom_instruction: |
@@ -4148,7 +4338,7 @@
         Add an Text Input box for the
         name and age. (Click to see full instructions)
       U3L16 - toUpper_instruction: |
-        Make the name of the user appear in upper case
+        Make the name of the user appear in uppercase
         (Click to see full instructions)
       U3L16 - use images_instruction: |
         Use the image command to replace the text
@@ -4157,10 +4347,10 @@
         Play Again button is clicked (Click to see full instructions) \n"
       U3L16 Mad Lib Demo_instruction: Mad Libs Demo - Try it out!
       U3L16 Mad Lib getText_instruction: "Before setting the text area with your\nMad
-        Lib outline, get the user's text and incorporate their responses. (Click\nto
+        Libs outline, get the user's text and incorporate their responses. (Click\nto
         see full instructions) \n"
       U3L16 Mad Lib setText_instruction: "When the Next button is clicked, set the\ntext
-        area to have the main outline of your How-to Mad Lib (without the user's\ninput).
+        area to have the main outline of your How-to Mad Libs (without the user's\ninput).
         (Click to see full instructions) \n"
       U3L16 Mad Lib Student Setup_instruction: |
         Back to Mad Libs: To get started,
@@ -4191,9 +4381,9 @@
         Run the program several times to observe
         how often setKeyValue commands arrive out of order. (Click to see full instructions)
       U3L18 comparison operators_instruction: |
-        Use `console.log` to print out the
-        different boolean expressions below to see what information they return. (Click
-        to see full instructions)
+        Use console.log to print out the different
+        boolean expressions below to see what information they return. (Click to see
+        full instructions)
       U3L18 comparison operators_for_video_instruction: |
         Use `console.log` to print
         out the different boolean expressions below to see what information they return.
@@ -4267,7 +4457,7 @@
         shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif
       U3L19 - variable reassignment challenge pt2_instruction: |
         Make a prediction
-        about the ending values of a,b, and c. Then use console.log to check your
+        about the ending values of a, b, and c. Then use console.log to check your
         understanding (Click to see full instructions)
       U3L19 - variable reassignment part 1_instruction: |
         Predict the value of a and
@@ -4377,8 +4567,8 @@
         outputs.
       U3L25 - drag out key event_instruction: |
         Set up an event handler to respond
-        to keypress events.  Hit keys on the keyboard to see what happens.  (Click
-        to see full instructions)
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)
       U3L25 - play sound when up key_instruction: |
         Change the code so the sound will
         only play when the up arrow is pressed. (Click to see full instructions)
@@ -4417,7 +4607,7 @@
         and str.toLowerCase().
       U3L26 AND operator_instruction: |
         Update the genre and rating if statements
-        to only give one movie suggestion at a time. (Click to see full instructions)
+        to give only one movie suggestion at a time. (Click to see full instructions)
       U3L26 Chatbot Compound Conditionals_instruction: |
         Update your digital assistant
         to include at least one each of AND, OR, and NOT
@@ -4435,8 +4625,8 @@
         don't know about bad movies.\" \n"
       U3L26 OR operator_instruction: |
         Update the if statement to use an OR to check
-        for a '?' as well as who, what, where, when, why, in the user input. (Click
-        to see full instructions)
+        for a "?" as well as who, what, where, when, why, how in the user input.
+        (Click to see full instructions)
       U3L27 Chatbot Final_instruction: |
         Make your digital assistant awesome and when
         you are finished, ask one of your classmates to test it for you using the
@@ -4449,6 +4639,229 @@
       U3L2_TurtleSquare_right_instruction: |
         Draw a square to the front and to the
         right of the starting location. (Click to show full instructions)
+      U4 - add createRecord to contacts App_instruction: |
+        Add code to your contacts
+        app so that newly added contacts are saved in a table. (Click to see full
+        instructions)
+      U4 - Add Row By Hand_instruction: |
+        Add a new record to your table in the Data
+        Viewer. (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords 1_instruction: |
+        Use the drawChartFromRecords
+        block to create a scatter plot from the table in the database. (Click to see
+        full instructions)
+      U4 - Charts - drawChartFromRecords Options 1_instruction: |
+        Add a title to your
+        chart and change the colors of your lines using the options parameter of drawChartFromRecords.
+        (Click to see full instructions)
+      U4 - Charts - drawChartFromRecords Options 2_instruction: |
+        Look through the
+        drawChartFromRecords API and choose some more options to customize. (Click
+        to see full instructions)
+      U4 - Charts - drawChartsFromRecords 1_instruction: |
+        Add screen element, pull
+        out drawCharts block, run the program!
+      U4 - Charts - Export Data_instruction: |
+        Export the data from the “ages” table
+        as a CSV file, then remix this app and import the CSV file. (Click to see
+        full instructions)
+      U4 - Charts - Import Data 1_instruction: |
+        Download the CSV file we’ve provided,
+        and then use the data viewer to import the data from the file into the “mydata”
+        table. (Click to see full instructions)
+      U4 - Charts - Import Data 2_instruction: |
+        Call readRecords on the “mydata”
+        table and print each record to the console. (Click to see full instructions)
+      U4 - Charts - Line Chart 1_instruction: |
+        Create a line chart showing the change
+        in popularity of “#tbt” over time. (Click to see full instructions)
+      U4 - Charts - Line Chart 2_instruction: |
+        Add a second line to your chart to
+        show the change in popularity of both “#tbt” and “#nofilter” at the same time.
+        (Click to see full instructions)
+      U4 - Charts - Line Chart Template_instruction: This is a template.
+      U4 - Charts - Remixing Apps with Data_instruction: |
+        Run this app and see what
+        it prints to the console. Then remix the app and run the remixed version to
+        see what happened to the data. (Click to see full instructions)
+      U4 - Charts - Scatter Chart_instruction: |
+        Create a scatter plot of the “rottenTomatoes”
+        table, using the new table and column names. (Click to see full instructions)
+      U4 - CreateRecord - 1_instruction: |
+        Add a createRecord command and run the
+        program. (Click to see full instructions)
+      U4 - CreateRecord - 2.5_instruction: |
+        Change the table name in createRecord
+        then check the Data Viewer to see the new table. (Click to see  full instructions)
+      U4 - CreateRecord - 2_instruction: |
+        Change the name from "Alice" to something
+        else in the createRecord command.  Run the program and use the Data Viewer
+        to see the changes to your table. (Click to see full instructions)
+      U4 - CreateRecord - 3_instruction: |
+        Use createRecord to add the song object
+        as a record to a table. (Click to see full instructions)
+      U4 - CreateRecord - 4_instruction: |
+        Run the program. Verify the song object
+        was added to the database. Note the callback function now displays the copy
+        of the record sent back back by the database. (Click to see full instructions)
+      U4 - CreateRecord - 5_instruction: |
+        Add a property to the JavaScript object,
+        then run the program.  View the data table and see how changing the object
+        affects the data table. (Click to see full instructions)
+      U4 - debug column names are case sensitive_instruction: |
+        Change song.title
+        to song.Title (capital T).  And run the program.  Check the data table  (Click
+        to see full instructions)
+      U4 - deleteRecords 0_instruction: |
+        Use the deleteRecord command with default
+        values. Verify the record was deleted. (Click for full instructions).
+      U4 - deleteRecords 1_instruction: |
+        Find the id of "Little Bunny Foo Foo"
+        in the data table "mySongs".  Use the deleteRecord command to delete it.  See
+        what happens when you try to delete an ID a second time. (Click for full Instructions).
+      U4 - deleteRecords 2 delete object_instruction: |
+        Use the song object to delete
+        multiple objects in the database by changing only the "id" property. (Click
+        for full Instructions).
+      U4 - deleteRecords 2_instruction: |
+        Using the data viewer, find the id of a
+        a record you want to delete. Use the deleteRecord command to delete it. (Click
+        for full instructions).
+      U4 - Edit Data Table by Hand_instruction: |
+        View the data table and click edit
+        next to each row.  Add the artists names for each song by hand. (Click to
+        see full instructions)
+      U4 - Exploring Data Tools - Template_instruction: |
+        Use createRecord to add
+        the song object as a record to a table. (Click to see full instructions)
+      U4 - fix contacts by hand in data table_instruction: |
+        Use the data viewer to
+        add rows to the data table.  Add the original hard-coded contacts from your
+        app to the database. (Click to see full instructions)
+      U4 - last stage test adding contcts_instruction: |
+        Confirm that new contacts
+        you add are saved to the database.  Verify that after restarting your app,
+        the contacts you added no longer show in the app, but still exist in the database.
+        (Click to see full instructions)
+      U4 - Objects - accessingPropertiesInArray_instruction: |
+        Access the properties
+        of the objects stored in an array. (Click to see full instructions)
+      U4 - Objects - arraysOfObjects_instruction: |
+        Create an array called "students"
+        and add all 5 student objects to the array. (Click to see full instructions)
+      U4 - Objects - createContactObject_instruction: |
+        Construct a new object from
+        the user inputs, and append it to your array. (Click to see full instructions)
+      U4 - Objects - createContactsData_instruction: |
+        Add values to the three contact
+        objects provided in the starter code. (Click to see full instructions)
+      U4 - Objects - createDotNotation_instruction: |
+        Create a student Object yourself.
+        Add properties to your object one at a time using dot notation. (Click to
+        see full instructions)
+      U4 - Objects - createObject_instruction: |
+        Create an object with at least 3
+        properties and display it in the Debug Console. (Click to see full instructions)
+      U4 - Objects - dotNotation_instruction: |
+        Use dot notation to display individual
+        properties of the object. (Click to see full instructions)
+      U4 - Objects - eventHandlersToSwitchScreen_instruction: |
+        Attach event handlers
+        to the "Add Contact" and "Go Back" buttons that allow the user to switch
+        screens. (Click to see full instructions)
+      U4 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and mouse
+        event and examine the event objects displayed in the console. Why might an
+        object be the best way to store this information? (Click to see full instructions)
+      U4 - Objects - exemplarContactsApp_instruction: |
+        Use the Contacts app and then
+        add a contact of your own. (Click to see full instructions)
+      U4 - Objects - loopingArray_instruction: |
+        Loop over your array of students
+        and print the name of every students. (Click to see full instructions)
+      U4 - Objects - loopingArray2_instruction: |
+        Loop over your array of students
+        and print the name and grade of every student. (Click to see full instructions)
+      U4 - Objects - loopingCompoundConditions_instruction: |
+        Loop over the array
+        of students and display the information of students who are present and in
+        the 11th grade. (Click to see full instructions)
+      U4 - Objects - loopingConditions_instruction: |
+        Loop over your array of student
+        objects and display the names of every student who is present in class. (Click
+        to see full instructions)
+      U4 - Objects - pullValues_instruction: |
+        Create an event handler for the "Add
+        Contact" button that displays the contents of the 4 text input fields in
+        the console. (Click to see full instructions)
+      U4 - Objects - readStarterCode_instruction: |
+        Familiarize yourself with the
+        starter code and UI elements provided. (Click to see full instructions)
+      U4 - Objects - resetIndexAndShow_instruction: |
+        Add code to your event handler
+        fro the "Add Contact" button so that when a new contact is added the inputs
+        are cleared, the screen is switched, and the correct contact is shown. (Click
+        to see full instructions)
+      U4 - Objects - showContact1_instruction: |
+        Add code to the showCurrentContact
+        function to show the name of the contact stored at the currentIndex of your
+        array. (Click to see full instructions)
+      U4 - Objects - showContact2_instruction: |
+        Add the phone number and birthday
+        text to your text area. (Click to see full instructions)
+      U4 - Objects - showContact3_instruction: |
+        Display the image information for
+        each contact. (Click to see full instructions)
+      U4 - Objects - showSampleImage_instruction: |
+        Attach an event handler to the
+        image URL text input so that the user can confirm their image will work as
+        expected. (Click to see full instructions)
+      U4 - Objects - writeWrap_instruction: |
+        Use the wrap function to prevent currentIndex
+        from leaving the bounds of your array. (Click to see full instructions)
+      U4 - Read Record - 1.2_instruction: "Place a console.log command below the\nreadRecords
+        command. (Click to see full instructions)\r\n"
+      U4 - Read Record - 1.3_instruction: "Add a console.log command inside the callback\nfunction.
+        (Click to see full instructions)\r\n"
+      U4 - Read Record - 1_instruction: "Use console.log to display the records returned\nby
+        a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - Read Record - 2_instruction: "Change the table name so that the records\nare
+        read from the new table. (Click to see full instructions)\r\n"
+      U4 - Read Record - 3_instruction: "Change the name of the table in a readRecords\ncommand
+        to read from a table that does not exist. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4.1_instruction: "Use indexes and dot notation to reference\nvalues
+        in the response from the database. (Click to see full instructions)\r\n"
+      U4 - Read Record - 4_instruction: "Print out each record return from the readRecords\ncall
+        individually. (Click to see full instructions)\r\n"
+      U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie
+        in your database. (Click to see full instructions)\r\n"
+      U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
+        records returned by a call to readRecords. (Click to see full instructions)\r\n"
+      U4 - ReadRecords - Contacts App 1_instruction: |
+        Write a function called "updateLocalData"
+        that copies the data in your database into your "contacts" global variable.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 2_instruction: |
+        Create a function called "refreshLocalData"
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 3_instruction: |
+        Add a call to "refreshLocalData"
+        to the callback function of the createRecord you use to add a new contact
+        to your database. (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 4_instruction: |
+        Create a "Delete" button.
+        (Click to see full instructions)
+      U4 - ReadRecords - Contacts App 5 make delete work_instruction: |
+        Create an
+        event handler for the "Delete" button you created. (Click to see full instructions)
+      U4L02 - Objects - createObject_instruction: "Create an object with at least\n5
+        values including at least one string and one number. (Click to see full\ninstructions)
+        \n"
+      U4L02 - Objects - eventParameter_instruction: |
+        Trigger both the keyboard and
+        mouse event and examine the event objects displayed in the console. Why might
+        an object be the best way to store this information? (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: Sjabloon
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4484,21 +4897,21 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
-      Underground Avoiding Lava_instruction: Lava is verborgen onder sommige van deze
-        blokken, Deze moet je bedekken voordat je vooruit beweegt. een "als" commando
-        is hier handig. Voeg een "vooruit" commando toe op de juiste plaats om de
-        blokken te graven.
-      Underground If Statements_instruction: Nu wordt het lastiger. Graaf 3 redstone
-        blokken maar val niet in de lava. Gebruik een "als" commando om een keisteen
-        te plaatsen op ieder blok lava dat je ontdekt.
-      Underground Iron_instruction: Lopen in gesmolten lava is een slecht idea. Plaats
-        een keisteen om een brug te maken. Graaf daarna minimaal 2 blokken ijzer.
-      Underground Mine in a Circle_instruction: Vind een manier om 5 blokken diamant
-        en 7 blokken redstone te graven! Probeer een herhaal commando om in een vierkant
-        te lopen.
-      Underground Mining Coal_instruction: Je vind de meest waardevolle grondstoffen
-        onder de grond, Maar het kan donker worden. Plaats minimaal 2 fakkels en graaf
-        minimaal 2 kolen blokken.
+      Underground Avoiding Lava_instruction: Onder sommige van deze blokken zit lava
+        verstopt. Dat moet je bedekken voordat je verder kunt. Een als-opdracht komt
+        hier goed van pas. Voeg op de juiste plaats een "beweeg vooruit"-opdracht
+        toe om deze blokken te delven.
+      Underground If Statements_instruction: Nu wordt het een beetje lastig. Delf
+        3 redstone, maar val niet in de lava. Gebruik een "als"-instructie om keien
+        te plaatsen op de lava die je ontdekt.
+      Underground Iron_instruction: Het is niet slim om in gesmolten lava te lopen.
+        Plaats keien om een brug te maken. Delf vervolgens minstens twee blokken ijzer.
+      Underground Mine in a Circle_instruction: Verzin een manier om 5 blokken diamant
+        en 7 blokken redstone te verzamelen! Probeer een herhaalopdracht in een herhaalopdracht
+        te plaatsen om in een vierkant te lopen.
+      Underground Mining Coal_instruction: De kostbaarste grondstoffen vind je onder
+        de grond, maar daar is het donker. Plaats minstens 2 fakkels en delf minstens
+        2 blokken steenkool.
       Underground Test Level_instruction: Verzamel alle mineralen!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

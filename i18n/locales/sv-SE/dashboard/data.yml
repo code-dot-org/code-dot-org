@@ -102,9 +102,11 @@ sv:
         Webapp: App Lab
         ArtistEC: Konstnären
         TextMatch: Textmatchning
-        StudioEC: Play Lab
+        StudioEC: Spel-labb
         Applab: App Lab
         NetSim: Internet Simulator
+        Custom: Konstnären
+        CustomStudio: Spel-labb
     trophy:
       name:
         Bronze: Brons
@@ -131,7 +133,7 @@ sv:
         maze_2_5: Det finns ett sätt för mig att nå den dumma grisen genom att använda bara två block. Kan du lista ut det?
         maze_2_6: Försök få mig till den gröna inkräktaren genom att använda bara tre block.
         maze_2_7: "Hjälp mig att bannlysa den här dumma grisen genom att använda så få block som möjligt. Försök att använda mer än ett 'upprepa gånger' block."
-        maze_2_8: 'När ett block är grått betyder det att du inte kan ta bort det. Lös det här pusslet genom att använda "upprepa" blocket som upprepar 3 gånger. Prova att sätta dessa tre block i det grå "upprepa" blocket: flytta, flytta, sväng.'
+        maze_2_8: 'När ett block är grått betyder det att du inte kan ta bort det. Lös det här pusslet genom att använda blocket "upprepa" som upprepar 3 gånger. Prova att sätta dessa tre block i det grå "upprepa"-blocket: flytta, flytta, sväng.'
         maze_2_9: "Ok, försök nu att använda det nya 'upprepa tills' blocket - det kommer att 'upprepa tills' jag når den irriterande grisen."
         maze_2_10: 'Okej, öva en gång till - kan du lösa den här med bara 4 block?'
         maze_2_11: 'Kära människa.  Jag zombie. Jag hungrig. Måste... komma... till solros... Kan du ta mig dit med bara 5 block?'
@@ -298,7 +300,7 @@ sv:
         studio_c3_game_6: Kan du lägga till block för att ändra bakgrunden och hastigheten på pingvinen och så flytta honom med pilarna tills du får poäng?
         studio_c3_game_7: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         studio_playlab_1: 'Pingvinen vill säga "Hej" - kan du hjälpa honom?'
-        studio_playlab_2: 'Grottpojken (skådespelare 1) och grottflickan (skådespelare 2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säga" två gånger?'
+        studio_playlab_2: 'Grottpojken (skådespelare 1) och grottflickan (skådespelare 2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket "säg" två gånger?'
         studio_playlab_3: Kan du hjälpa Tennisflickan att komma till flaggan?
         studio_playlab_4: Kan du hjälpa Tennispojken (skådespelare 1) att komma till Tennisflickan (skådespelare 2) och spela upp ett ljud när han kommer dit?
         studio_playlab_5: 'Kan du hjälpa Rymdroboten att säga "Var hälsade jordbor" när den blir klickad? Glöm inte att klicka på roboten efter du klickat på kör'
@@ -307,26 +309,30 @@ sv:
         studio_playlab_8: Kan du lägga till ett block för att få en poäng och ett block för att spela ett ljud när enhörningen kör på trollkarlen, och sedan flytta honom med pilarna tills du får poäng?
         studio_playlab_9: Ställ in bakgrunden för denna invasion av utomjordingar och hjälp Rymdroboten att komma till utomjordingen snabbare genom att ändra dess hastighet. Flytta honom sedan med piltangenterna för att komma till Rymdroboten och varna alla andra
         studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
-        studio_iceage_1: 'Manny wants to say "hello" - can you help him?'
-        studio_iceage_2: 'Diego (actor 1) and Granny (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_iceage_3: Can you help Scrat get to the flag?
-        studio_iceage_4: Can you help Scrat (actor 1) get to Granny (actor 2) and play a sound when he gets there?
-        studio_iceage_5: 'Can you help Sid say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_iceage_6: Can you help Diego move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_iceage_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Sid move right and left repeatedly?'
-        studio_iceage_8: Can you add a block to score a point and a block to play a sound when Sid runs into Manny, and then move him with the arrows until you score?
-        studio_iceage_9: Set the background for this ice age and help Sid get to Granny faster by changing its speed. Then move him with the arrow keys to get to Sid and alert everyone else.
-        studio_iceage_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
-        studio_gumball_1: 'Anais wants to say "hello" - can you help her?'
-        studio_gumball_2: 'Darwin (actor 1) and Gumball (actor 2) would like to say "hello" to each other. Can you help them by using the "say" block twice?'
-        studio_gumball_3: Can you help Banana Joe get to the flag?
-        studio_gumball_4: Can you help Gumball (actor 1) get to Darwin (actor 2) and play a sound when he gets there?
-        studio_gumball_5: 'Can you help Antony say "greetings" when it is clicked? Don’t forget to click it after you click Run'
-        studio_gumball_6: Can you help Darwin move around using the up/down/right/left arrow keys to get to all the flags?
-        studio_gumball_7: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Antony move right and left repeatedly?'
-        studio_gumball_8: Can you add a block to score a point and a block to play a sound when Banana Joe runs into Antony, and then move him with the arrows until you score?
-        studio_gumball_9: Set the background for this space invasion and help Nicole get to Penny faster by changing its speed. Then move him with the arrow keys to get to Nicole and alert everyone else.
-        studio_gumball_10: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
+        studio_iceage_hello1: 'Sid vill samla alla för ett nytt äventyr. Kan du hjälpa honom att säga "hej" genom att dra ett "säg"-block ut i arbetsytan och skriva ordet "hej" inuti?'
+        studio_iceage_hello2: 'Sid (figur 1) hittade Manny (figur 2) och vill bjuda in honom till äventyret. Hjälp dem att hälsa på varandra genom att använda blocket "figur säg" två gånger.'
+        studio_iceage_move_to_flag: 'Scrat letar efter sitt ekollon! Hjälp honom att gå de sista 200 pixlarna genom att använda blocket "flytta".'
+        studio_iceage_move_to_actor: 'Diego (skådespelare 1) söker efter Manny (skådespelare 2). Hjälp Diego flytta 200 pixlar ner till Manny genom att använda blocket "flytta skådespelare". Anslut ett block till händelsen "när skådespelare berör" för att spela ett ljud när de hittar varandra.'
+        studio_iceage_repeat: 'Med "Upprepa forever" blocket kan du köra kod kontinuerligt. Kan du bifoga ett block till det att för hjälpa farmor få lite motion genom att flytta vänster och höger upprepade gånger?'
+        studio_iceage_click_hello: Kan du hjälpa Sid ringa ett sista samtal till vänner när du klickar på? Glöm inte att klicka på honom när du trycker Run.
+        studio_iceage_move_events: 'Scrat söker fortfarande efter ekollon! Hjälp honom att rusa runt genom att fästa "move" blocket till var och en av händelserna och genom att ändra riktning så att den fungerar för varje pil. När du är klar, klicka på kör och försöka samla ihop alla ekollon.'
+        studio_iceage_sound_and_points: 'Vi har gett dig den mesta av koden som gör att Anton (skådespelare 2) flyttar sig till vänster och till höger samt koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen. Kan du avsluta koden och lägga block till händelsen "när skådespelare berör" så att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton kolliderar? Tryck på "Kör" för att spela spelet.'
+        studio_iceage_warn_ice_age: Alla behöver gå snabbare eftersom en istid är på väg! Ändra bakgrunden till en isig bakgrund och ange Sids hastighet till snabbt. Tryck sedan på Kör och flytta honom till Diego för att varna honom.
+        studio_iceage_throw_hearts: |
+          Sid vill låta sin mormor, farmor, veta att han älskar henne. Med kommandot "skådespelare kasta" kastar Sid (skådespelare 1) hjärtan på farmor (skådespelare 2)! 
+          Ställ in mormors, farmors humör så att hon blir glad när hon blir träffad av hjärtan.
+        studio_iceage_free_play: 'Skapa ditt eget spel eller din egen berättelse. När du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel på sina telefoner, surfplattor eller datorer!'
+        studio_gumball_hello1: 'Anais vill få lite nya vänner. Kan du hjälpa henne att säga "hej" genom att dra blocket "säg" till arbetsytan och skriva ordet "hej" i det?'
+        studio_gumball_hello2: 'Darwin (karaktär 1) och hanns bror Gumball (karaktär 2) är på väg till skolan. Hjälp dem att hälsa på varandra genom att använda blocket "prata karaktär" två gånger.'
+        studio_gumball_move_to_flag: 'Banan-Joe är på väg att vinna marknadsrallyt!  Hjälpa honom att gå de sista 200 pixlarna med hjälp av blocket "flytta".'
+        studio_gumball_move_to_actor: 'Gumball (skådespelare 1) och Darwin (skådespelare 2) är sena till marknaden! Hjälp Gumball att gå 200 pixlar ner till Darwin med blocket "flytta skådespelare".  Anslut sedan ett block till händelsen "när skådespelare berör" för att spela ett ljud när de hittar varandra.'
+        studio_gumball_repeat: '"Upprepa för evigt"-blocket gör att du kan köra kod kontinuerligt.  Gumball behöver värma upp för sitt lopp genom att flytta sig till vänster och till höger upprepade gånger. Kan du bifoga block till "Upprepa för evigt"-blocket för att hjälpa hen med det?'
+        studio_gumball_click_hello: 'Kan du hjälpa Anton att starta loppet genom att säga "Ready, set, go!"? För att testa programmet, glöm inte att klicka på Anton efter att du klickat på "Kör"!'
+        studio_gumball_move_events: 'Darwin är med i flaggtävlingen! Hjälpa honom att springa runt genom att bifoga "Flytta"-blocket till var och en av händelserna. När du är klar, klicka på kör och försöka samla alla flaggorna.'
+        studio_gumball_sound_and_points: 'Vi har gett dig den mesta av koden som gör att Anton (skådespelare 2) flyttar sig till vänster och till höger samt koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen.  Kan du avsluta koden och lägga block till händelsen "när skådespelare berör" så att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton kolliderar?  Tryck på "Kör" för att spela spelet.'
+        studio_gumball_warn_food_fight: 'Darwin lyckades precis komma undan från ett matkrig! Ändra bakgrunden till "figurer" och ange Darwins hastighet till "snabb". Sedan trycker du på "Kör" och flyttar honom till Penny att varna henne.'
+        studio_gumball_join_food_fight: 'Gå med i matkriget! Använd kommandot "Skådespelare kastar objekt till höger" för att få Banan-Joe (skådespelare 1) att kasta mat på Anton (skådespelare 2)! Ställ Antons humör till "Arg" när han blir träffad.'
+        studio_gumball_free_play: 'Skapa ditt eget spel eller din egen berättelse. När du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel på sina telefoner, surfplattor eller datorer!'
         studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför för att låta vänner prova ditt spel på sina telefoner.
         studio_k1_1: 'Kan du göra så att hunden säger "hello world"?'
         studio_k1_2: Kan du göra så att hunden säger något och så att katten säger något efteråt?
@@ -372,34 +378,34 @@ sv:
         Unplug6: Villkor
         Unplug7: Låtskrivande
         Unplug8: Abstraktion
-        Unplug9: Relä programmering
+        Unplug9: Stafettprogrammering
         Unplug10: Internet
         Unplug11: Gör klart
         C1_happy_maps_unplugged: Glada kartor
         C1_moveitmoveit_unplugged: Flytta det, flytta den
         C1_bigevent_unplugged: Den stora händelsen
-        C1_getting_loopy: Bli Snurrig
-        C1_pair_programming: 'Par- programmering'
+        C1_getting_loopy: Att bli snurrig
+        C1_pair_programming: Par-programmering
         C1_maze_intro_sequencing: 'Labyrint- sekvensering Intro'
         C1_maze_debugging: Labyrint felsökning
         C1_bee_level_intro: 'Bee nivå - Intro'
         C1_artist_intro: Konstnär Introduktion
         C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: 'Labyrint: slingor'
-        C1_bee_loops: 'Bee: slingor'
-        C1_maze_loops: 'Labyrint: slingor'
+        C1_zuck_repeat_loop: 'Labyrint: Slingor'
+        C1_bee_loops: 'Bi: Slingor'
+        C1_maze_loops: 'Labyrint: Slingor'
         C1_playlab_storytelling: 'Play Lab - skapa en berättelse'
         C1_planting_seed: Plantera ett frö
         C1_building_foundation: Bygga en grund
-        C1_going_places_safely: Tryggt gå till platser
+        C1_going_places_safely: Trygg resa
         C2_maze_intro: Labyrint Introduktion
         C2_artist_intro: Konstnär Introduktion
-        C2_zuck_repeat_loop: 'Labyrint: slingor'
-        C2_artist_loops: Artist Loopar
-        C2_artist_debugging: Artist Felsökning
-        C2_bee_loops: 'Bee: slingor'
-        C2_bee_debugging: Bee felsökning
-        C2_bee_conditionals: Bee Villkorssatser
+        C2_zuck_repeat_loop: 'Labyrint: Slingor'
+        C2_artist_loops: 'Konstnären: Slingor'
+        C2_artist_debugging: 'Konstnären: Felsökning'
+        C2_bee_loops: 'Bi: Slingor'
+        C2_bee_debugging: 'Biet: Felsökning'
+        C2_bee_conditionals: 'Bi: Villkor'
         C2_playlab_createstory: 'Play Lab - skapa en berättelse'
         C2_graph_paper: Kalkyleringsprogrammering
         C2_conditionals_with_cards: Villkor
@@ -408,16 +414,16 @@ sv:
         C2_paper_airplanes: Pappersflygplan
         C2_digital_footprint: Ditt digitala fotavtryck
         C2_digital_footprint_v2: Ditt digitala fotavtryck
-        C3_maze_level_4: 'Labyrint: slingor'
+        C3_maze_level_4: 'Labyrint: Slingor'
         C3_artist_intro: Konstnär Introduktion
-        C3_artist_functions: Artist Funktioner
-        C3_bee_functions: Bee funktioner
-        C3_bee_conditionals: Bee Villkorssatser
-        C3_maze_conditionals: Labyrint villkorssatser
+        C3_artist_functions: 'Konstnären: Funktioner'
+        C3_bee_functions: 'Biet: Funktioner'
+        C3_bee_conditionals: 'Bi: Villkor'
+        C3_maze_conditionals: 'Labyrint: Villkorssatser'
         C3_artist_nested_loops: Kapslade slingor(loopar)
         C3_farmer_while: "'Medan' loopar(slingor)"
         C3_bee_nested_loops: Kapslade slingor(loopar)
-        C3_bee_debugging: Bee felsökning
+        C3_bee_debugging: 'Biet: Felsökning'
         C3_bounce: Studsa
         C3_playlab_create_game: 'PlayLab - skapa ett spel'
         C3_computational_thinking: Uträkningstänkande
@@ -425,10 +431,10 @@ sv:
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Funktionella Solfångare
-        C3_songwriting_with_parameters: Låtskrivande Med parametrar
+        C3_songwriting_with_parameters: Låtskrivande med parametrar
         C4_intro: Introduktion
         C4_loops_zombie: Loopar
-        C4_bee_conditional: Bee Villkorssatser
+        C4_bee_conditional: 'Bi: Villkor'
         C4_variables_artist: 'Variabler - Konstnär'
         C4_variables_playlab: 'Variabler - Play Lab'
         C4_for_loops: "'För' loopar"
@@ -445,7 +451,7 @@ sv:
         C4_unplugged_forloops: "'För' loopar"
         C4_unplugged_parameters: Låtskrivande Med parametrar
         C4_unplugged_binary: Binära
-        frozen_intro: Introduktion Hour of Code
+        frozen_intro: Kodtimmen introduktion
         frozen_loops: Introduktion till loopar
         frozen_functions: Introduktion till funktioner
         playlab_intro: Introduktion till Play Lab
@@ -455,6 +461,9 @@ sv:
         infinity_playlab_intro: 'Play Lab - introduktion'
         infinity_playlab_events: 'Play Lab - Händelser'
         infinity_playlab_repeat_forever: 'Play Lab -  Upprepa för evigt'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -500,11 +509,17 @@ sv:
         starwars_blocks_intro: 'Star Wars: Bygg en galax med kod - introduktion'
         starwars_blocks_events: 'Star Wars: Bygg en galax med kod - händelser'
         starwars_blocks_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
-        mc_intro: 'Minecraft - introduktion'
-        mc_repeat: 'Minecraft - Upprepa'
-        mc_if_statements: 'Minecraft - omuttalanden'
+        mc_intro: 'Minecraft - Introduktion'
+        mc_repeat: 'Minecraft - Upprepning'
+        mc_if_statements: 'Minecraft - om-satser'
         mc_congrats_share: 'Minecraft - Grattis'
         mc_congrats_no_share: 'Minecraft - Grattis'
+        gumball_intro: 'Gumball En timme av kod - introduktion'
+        gumball_events: 'Gumball Kodtimmen - händelser'
+        gumball_repeat: 'Gumball En timme av kod - Upprepa-satser'
+        iceage_intro: 'Ice Age timme av kod - introduktion'
+        iceage_events: 'Ice Age Kodtimmen - händelser'
+        iceage_repeat: 'Ice Age timme av kod - upprepa påståeenden'
     callout:
       text:
         drag_blocks: 'Dra ett "gå framåt" block och fäst det under det andra blocket'
@@ -517,13 +532,13 @@ sv:
         set_sprite_image: 'Bifoga en "sätt figur till bild" block till "när berättelsen börjar" blocket för att ange figur/actor i  denna berättelse'
         studio_say_text: Skriv vad du vill att din figur ska säga inom dessa citat
         jigsaw_click: Klicka på detta block!
-        move_elsa_forward: 'Dra ett "gå framåt" block och fäst det under "när startat" blocket för att få Elsa att gå framåt'
+        move_elsa_forward: 'Dra ett "flytta framåt" block och fäst det under "vid start" blocket för att få Elsa att gå framåt'
         turn_elsa: 'Använd "sväng" blocket för att få Elsa att vända sig. Siffran i rullistan bestämmer hur mycket hon svänger'
         replace_questions: 'Använd rullistan för att ersätta "???" med en siffra'
         replace_questions_degree: 'Använd rullistan för att ersätta "???" med rätt antal grader att svänga'
-        repeat_blocks: 'Använda "Upprepa" blocket, lägg det runt blocken i arbetsytan'
+        repeat_blocks: 'Använda blocket "Upprepa", lägg det runt blocken i arbetsytan'
         repeat_blocks_1: (1) använd detta block och lägga det runt de grå blocken på arbetsytan
-        repeat_blocks_2: '(2) flytta "Upprepa" blocket hit, och placera de grå blocken inuti'
+        repeat_blocks_2: '(2) flytta blocket "Upprepa" hit, och placera de grå blocken inuti'
         snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
         degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje vinkel i grader.
         set_sides: "Använd detta block för att det nummer av 'sidor' som behövs för att slutföra pussel."
@@ -544,7 +559,7 @@ sv:
         frozen_circle_function_with_parameter_circle: 'Använd blocket "skapa en cirkel"  och ändra storleken.'
         frozen_snowflake_branch: 'Använd blocket "skapa en snöflinge-gren"'
         frozen_create_square: Lägg till fler block här för att skapa en kvadrat
-        playlab_drag_say: 'Dra blocket "säga" här och skriv "Hej"'
+        playlab_drag_say: 'Dra blocket "säg" här och skriv "Hej"'
         playlab_use_twice: Använda detta block två gånger och kom ihåg att ändra figur numret
         playlab_move_girl: 'Använda "flytta höger" blocket för att flytta tennis-flickan'
         playlab_play_sound: 'Lägg till "spela ljud" block här'
@@ -577,10 +592,10 @@ sv:
         Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
         Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
         Infinity_repeat_callout: 'Placera flytta - block  här inne'
-        craft_run_button_callout: 'Klicka på "Kör" för att prova ditt program'
-        craft_drag_block_callout: 'Dra ett #gå framåt()", block och fäst det under det andra blocket'
-        craft_callout_preplaced: Vi har lagt några block här för så attdu kan komma igång
-        craft_inside_repeat: Upprepa åtgärderna genom att placera block härinne
-        craft_callout_preplaced_house: Denna kod kommer att börja bygga ditt hus. Kan du avsluta det?
-        craft_what_is_iron: Gräv upp detta järn!
-        craft_callout_moveforward: Denna kod kommer att kontrollera om det finns lava, kan du lägga till ett kommando för att gå framåt?
+        craft_run_button_callout: 'Tryck på "Kör" för att prova programmet'
+        craft_drag_block_callout: 'Dra ett "gå framåt"-block och fäst det under det andra blocket'
+        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma igång
+        craft_inside_repeat: Upprepa handlingar genom att placera block här
+        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du avsluta det?
+        craft_what_is_iron: Bryt järnet!
+        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?

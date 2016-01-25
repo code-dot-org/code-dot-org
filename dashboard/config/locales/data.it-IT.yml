@@ -105,6 +105,8 @@
         StudioEC: Laboratorio
         Applab: Laboratorio per le App
         NetSim: Simulatore di Internet
+        Custom: 'Artista: Sequenze e Cicli'
+        CustomStudio: Laboratorio
     trophy:
       name:
         Bronze: Bronzo
@@ -187,9 +189,10 @@
         turtle_1_7: 'Ok, ora è un po'' più difficile: vedi se riesci a disegnare questi
           occhiali verdi. I quadrati hanno 100 pixel su ciascun lato, e sono distanti
           tra loro 50 pixel. Non dimenticarti di disegnare usando il verde!'
-        turtle_1_8: Cerca di immaginare cosa succede se si esegue questo codice (o
-          premi "Esegui" per verificarlo). Dopo, ripetilo una quantità di volte sufficiente
-          a completare il disegno. I colori saranno diversi ogni volta.
+        turtle_1_8: Cerca di immaginare cosa succede se si eseguono questi blocchi
+          di codice già pronti (o premi "Esegui" per verificarlo). Poi, ripetili una
+          quantità di volte sufficiente a completare il disegno. I colori saranno
+          diversi ogni volta.
         turtle_1_9: Riesci a capire con quale numero devi sostituire i punti interrogativi
           per disegnare un cerchio?
         turtle_1_10: 'Ce l''hai fatta! Ora, disegna qualcosa a piacere. Ecco alcune
@@ -429,9 +432,9 @@
         flappy_2: Ora nello scenario c'è anche il terreno.  Attacca un blocco di azione
           al blocco di evento "quando precipita a terra".  Il tuo codice ha bisogno
           del blocco "fine del gioco" quando Flappy precipita a terra.
-        flappy_3: Il blocco "quando inizia il gioco" permette di eseguire delle specifiche
-          istruzioni all'inizio del gioco.  Prova a cambiare la velocità con cui Flappy
-          vola verso il bersaglio.
+        flappy_3: Il blocco "quando si clicca su 'Esegui' " permette di eseguire delle
+          specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità
+          con cui Flappy vola verso il bersaglio.
         flappy_4: Scrivi del codice per aiutare Flappy a volare attraverso i tubi
           che lo ostacolano. Il tuo programma deve eseguire il blocco "fine del gioco"
           quando Flappy si schianta contro i tubi.
@@ -442,7 +445,7 @@
         flappy_6: Vedi se, cambiando di quanto Flappy ogni volta sbatte le ali, riesci
           ancora a segnare un punto.
         flappy_7: Adesso, prova a cambiare la scena attaccando un altro blocco al
-          blocco "quando inizia il gioco".
+          blocco "quando si clicca su 'Esegui' ".
         flappy_8: Puoi impostare le scene in qualsiasi momento, non solo quando il
           gioco inizia. Prova a impostare una scena scelta a caso quando accadono
           altri eventi, per esempio quando si supera un ostacolo o si colpisce qualcosa.
@@ -459,8 +462,8 @@
         flappy_k1_3: Ora nello scenario c'è anche il terreno.  Attacca un blocco di
           quelli a sinistra al blocco "quando precipita a terra".  Il tuo codice ha
           bisogno del blocco "fine del gioco" quando Flappy precipita a terra.
-        flappy_k1_4: Il blocco "quando inizia il gioco" permette di eseguire delle
-          specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità
+        flappy_k1_4: Il blocco "quando si clicca su 'Esegui' " permette di eseguire
+          delle specifiche istruzioni all'inizio del gioco.  Prova a cambiare la velocità
           con cui Flappy vola verso il bersaglio.
         flappy_k1_5: Scrivi del codice per aiutare Flappy a volare attraverso i tubi
           che lo ostacolano. Il tuo programma deve eseguire il blocco "fine del gioco"
@@ -471,7 +474,7 @@
           la prima serie di tubi.
         flappy_k1_7: Vedi se riesci a segnare più punti quando Flappy supera un ostacolo
         flappy_k1_8: Adesso, prova a cambiare la scena attaccando un altro blocco
-          al blocco "quando inizia il gioco".
+          al blocco "quando si clicca su 'Esegui' ".
         flappy_k1_9: Provare a cambiare il giocatore attaccando un blocco "imposta
           il giocatore" al blocco "quando inizia il fioco".
         jigsaw_1: Clicca sul blocco
@@ -551,18 +554,18 @@
         studio_playlab_2: Il Cavernicolo (personaggio 1) e la Cavernicola (personaggio
           2) vorrebbero dirsi "ciao". Puoi aiutarli usando due volte il blocco "il
           personaggio ... dice"?
-        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandiera?
+        studio_playlab_3: Puoi aiutare la tennista a raggiungere la bandierina?
         studio_playlab_4: Puoi aiutare il tennista (personaggio 1) a raggiungere la
           tennista (personaggio 2) e a riprodurre un suono quando la raggiunge?
         studio_playlab_5: Puoi aiutare il robot spaziale a dire "salve terrestri"
-          quando clicchi su di lui ? Non dimenticarti di cliccare sul robot spaziale
-          dopo aver cliccato su "Esegui"
+          quando clicchi su di lui? Dopo aver cliccato su "Esegui", ricordati di cliccare
+          sul robot spaziale!
         studio_playlab_6: Puoi aiutare la Strega a muoversi usando i tasti freccia
           in alto / in basso / a sinistra / a destra per raggiungere le palle di fuoco
           magiche?
         studio_playlab_7: Il blocco "ripeti per sempre" permette di eseguire il codice
-          senza fermarsi mai. Puoi attaccare ad esso dei blocchi  per aiutare il mago
-          a spostarsi in continuazione a destra e a sinistra?
+          senza fermarsi mai. Puoi attaccare ad esso dei blocchi per spostare il mago
+          in continuazione a destra e a sinistra?
         studio_playlab_8: Aggiungi dei blocchi in modo che quando l'unicorno incontra
           il mago si segna un punto e si riproduce un suono. Poi usa le frecce per
           spostare l'unicorno fino a che fai un punto.
@@ -572,49 +575,89 @@
           fino all'alieno ed avvisare tutti.
         studio_playlab_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
           Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_iceage_1: Manny vuole dire "Ciao" - puoi aiutarlo?
-        studio_iceage_2: Diego (attore 1) e la nonna (attore 2) vorrebbero dirsi "Ciao".
-          Li puoi aiutare utilizzando il blocco "dire" due volte?
-        studio_iceage_3: Puoi aiutare Scrat ad arrivare alla bandiera?
-        studio_iceage_4: Puoi aiutare Scrat (attore 1) ad arrivare a Nonnina (attore
-          2) e riprodurre un suono una volta raggiunta?
-        studio_iceage_5: Puoi aiutare Sid a dire "Saluti" una volta cliccato? Non
-          dimenticare di fare clic dopo il clic su Esegui
-        studio_iceage_6: Puoi aiutare Diego a muoversi utilizzando i tasti freccia
-          su/giù/destra/sinistra per arrivare a tutte le bandiere?
-        studio_iceage_7: Il blocco "ripeti per sempre" ti permette di eseguire il
-          codice in continuazione. Puoi attaccare ad esso dei blocchi per aiutare
-          Sid a spostarsi ripetutamente a destra e a sinistra?
-        studio_iceage_8: Puoi aggiungere un blocco per segnare un punto e un blocco
-          per riprodurre un suono quando Sid si imbatte in Manny e quindi muoverlo
-          con le frecce per riuscirci?
-        studio_iceage_9: Imposta lo sfondo per questa era glaciale e aiuta Sid a raggiungere
-          Nonnina più velocemente modificando la sua velocità. Quindi muovilo con
-          i tasti freccia per arrivare da Sid e avvisare tutti gli altri.
-        studio_iceage_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_gumball_1: Anais vuole dire "Ciao" - puoi aiutarla?
-        studio_gumball_2: Darwin (attore 1) e Gumball (attore 2) vorrebbero dirsi
-          "Ciao". Li puoi aiutare utilizzando il blocco "dire" due volte?
-        studio_gumball_3: Può aiutare Banana Joe a raggiungere la bandiera?
-        studio_gumball_4: Potete aiutare Gumball (attore 1) ad arrivare a Darwin (attore
-          2) e riprodurre un suono una volta arrivato?
-        studio_gumball_5: Puoi aiutare Antony a dire "Saluti" una volta cliccato?
-          Non dimenticare di fare clic dopo il clic su Esegui
-        studio_gumball_6: Puoi aiutare Darwin a muoversi utilizzando i tasti freccia
-          su/giù/destra/sinistra per arrivare a tutte le bandiere?
-        studio_gumball_7: Il blocco "ripeti per sempre" ti permette di eseguire il
-          codice in continuazione. Puoi attaccare ad esso dei blocchi per aiutare
-          Antony a spostarsi ripetutamente a destra e a sinistra?
-        studio_gumball_8: Puoi aggiungere un blocco per segnare un punto e un blocco
-          per riprodurre un suono quando Banana Joe si imbatte in Antony e quindi
-          muoverlo con le frecce per riuscirci?
-        studio_gumball_9: Imposta lo sfondo per questa invasione spaziale e aiuta
-          Nicole a raggiungere Penny più velocemente modificando la sua velocità.
-          Quindi muoverla con i tasti freccia per arrivare a Nicole e avvisare tutti
-          gli altri.
-        studio_gumball_10: Crea un gioco per conto tuo. Quando hai fatto, clicca su
-          Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
+        studio_iceage_hello1: Sid vuole riunire tutti per una nuova avventura. Puoi
+          aiutarlo a dire "Ciao" trascinando il blocco "pronuncia" nell'area di lavoro
+          e digitando la parola "Ciao" al suo interno?
+        studio_iceage_hello2: Sid (il personaggio 1) incontra Manny (il personaggio
+          2) e vuole invitarlo ad unirsi all'avventura. Puoi aiutarli a salutarsi
+          usando due volte il blocco "il personaggio ... dice"?
+        studio_iceage_move_to_flag: Scrat è alla ricerca della sua ghianda! Aiutalo
+          a percorrere gli ultimi 200 pixel usando il blocco "sposta".
+        studio_iceage_move_to_actor: Diego (il personaggio 1) è alla ricerca di Manny
+          (il personaggio 2). Aiuta Diego ad avvicinarsi a Manny di 200 pixel usando
+          il blocco "sposta il personaggio". Poi unisci un blocco all'evento "quando
+          un personaggio tocca ..." per riprodurre un suono quando si incontrano.
+        studio_iceage_repeat: Il blocco "ripeti per sempre" permette di eseguire il
+          codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
+          la Nonnina a fare un po' di esercizio muovendosi in continuazione a destra
+          e a sinistra?
+        studio_iceage_click_hello: Puoi aiutare Sid a fare un ultimo invito ai suoi
+          amici quando si clicca su di lui? Non dimenticarti di cliccare su di lui
+          dopo aver premuto "Esegui".
+        studio_iceage_move_events: Scrat è ancora alla ricerca di ghiande! Aiutalo
+          a scorrazzare in giro attaccando il blocco "sposta ..." a ciascuno degli
+          eventi e cambiando la direzione di marcia in base al tasto freccia. Quando
+          hai finito, clicca su "Esegui" per raccogliere tutte le ghiande.
+        studio_iceage_sound_and_points: Ti abbiamo dato del codice già scritto che
+          permette alla Nonnina di muoversi a destra e a sinistra, e permette a Sid
+          di muoversi sullo schermo. Puoi completare questo codice aggiungendo dei
+          blocchi all'evento "quando i personaggi si toccano" per fare in modo che
+          entrambi i personaggi riproducano un suono e guadagnino un punto quando
+          Sid e la Nonnina si scontrano? Clicca su "Esegui" per lanciare il gioco.
+        studio_iceage_warn_ice_age: Tutti devono muoversi più velocemente perché l'era
+          glaciale sta arrivando! Cambia lo sfondo impostando uno sfondo con ghiaccio
+          e imposta la velocità di Sid a veloce, quindi premi "Esegui" per farlo correre
+          da Diego ad avvertirlo.
+        studio_iceage_throw_hearts: Sid vuol far sapere a sua nonna, la Nonnina, che
+          la ama. Usa l'istruzione "il personaggio lancia" per far lanciare a Sid
+          (il personaggio 1) dei cuori alla Nonnina (il personaggio 2)! Imposta l'umore
+          della Nonnina a felice quando viene colpita dai cuori.
+        studio_iceage_free_play: "È il momento di creare un gioco o una storia per
+          conto tuo. Quando hai fatto, clicca su Condividi per far provare il gioco
+          ai tuoi amici sui loro smartphone, tablet o computer!"
+        studio_gumball_hello1: Anais vuole farsi nuovi amici. Puoi aiutarla a dire
+          "Ciao" trascinando il blocco "pronuncia" nell'area di lavoro e digitando
+          la parola "Ciao" al suo interno?
+        studio_gumball_hello2: Darwin (personaggio 1) e suo fratello Gumball (personaggio
+          2) stanno andando a scuola. Puoi aiutarli a salutarsi usando due volte il
+          blocco "il personaggio ... dice"?
+        studio_gumball_move_to_flag: Banana Joe sta per vincere in una giornata di
+          gare all'aperto! Aiutalo a percorrere gli ultimi 200 pixel usando il blocco
+          "sposta".
+        studio_gumball_move_to_actor: Gumball (personaggio 1) e Darwin (personaggio
+          2) sono in ritardo per una giornata di gare all'aperto. Aiuta Gumball ad
+          avvicinarsi a Darwin di 200 pixel usando il blocco "sposta il personaggio".
+          Poi unisci un blocco all'evento "quando un personaggio tocca ..." per riprodurre
+          un suono quando si incontrano.
+        studio_gumball_repeat: Il blocco "ripeti per sempre" permette di eseguire
+          il codice senza fermarsi mai. Puoi attaccare ad esso dei blocchi per aiutare
+          Gumball a riscaldarsi per la sua corsa muovendosi in continuazione a destra
+          e a sinistra?
+        studio_gumball_click_hello: Puoi aiutare Anton a dare inizio alla gara pronunciando
+          le parole "Pronti, partenza, via!"? Per provare il tuo programma, non dimenticarti
+          di cliccare su Anton dopo aver cliccato su "Esegui"!
+        studio_gumball_move_events: Darwin partecipa alla gara di raccolta delle bandierine.
+          Aiutalo a correre in tutte le direzioni attaccando il blocco "sposta ..."
+          a ciascuno degli eventi. Quando hai fatto, clicca su "Esegui" per collezionare
+          tutte le bandierine.
+        studio_gumball_sound_and_points: Ti abbiamo dato del codice già scritto che
+          permette ad Anton (il personaggio 2) di muoversi a destra e a sinistra,
+          e permette a Banana Joe (il personaggio 1) di muoversi sullo schermo. Puoi
+          completare questo codice aggiungendo dei blocchi all'evento "quando il personaggio
+          ... tocca" per fare in modo che entrambi i personaggi riproducano un suono
+          e guadagnino un punto quando Banana Joe e Anton si scontrano? Clicca su
+          "Esegui" per lanciare il gioco.
+        studio_gumball_warn_food_fight: Darwin è appena sfuggito a una battaglia del
+          cibo! Cambia lo sfondo impostando quello con personaggi e imposta la velocità
+          di Darwin a veloce, quindi premi "Esegui" per farlo correre da Penny ad
+          avvertirla.
+        studio_gumball_join_food_fight: Unisciti alla battaglia del cibo! Usa l'istruzione
+          "il personaggio lancia l'oggetto a destra" per far buttare a Banana Joe
+          (il personaggio 1) del cibo verso Anton (il personaggio 2). Imposta l'umore
+          di Anton ad arrabbiato quando viene colpito.
+        studio_gumball_free_play: Crea un gioco o una storia per conto tuo. Quando
+          hai fatto, clicca su Condividi per far provare il gioco ai tuoi amici sui
+          loro smartphone, tablet o computer!
         studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
           su Condividi per far provare il gioco ai tuoi amici sui loro smartphone.
         studio_k1_1: Riesci a far dire a questo cane "Ciao a tutti"?
@@ -737,7 +780,7 @@
         C4_for_loops: Cicli con Contatore
         C4_for_loops_bee: Cicli con Contatore
         C4_for_loops_no_bee: Cicli con Contatore
-        C4_math_artist: Programmazione de L'Artista con la matematica
+        C4_math_artist: Programmare l'Artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
         C4_function_parameters: Funzioni con parametri
@@ -758,6 +801,9 @@
         infinity_playlab_intro: Laboratorio - Introduzione
         infinity_playlab_events: Laboratorio - Eventi
         infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
         csp_applab_variables_2: Introduction to Variables - Part 2
@@ -797,21 +843,31 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Costruisci una galassia con il codice - Introduzione'
-        starwars_typing: 'Star Wars: Costruisci una galassia con il codice - JavaScript'
-        starwars_events: 'Star Wars: Costruisci una galassia con il codice - Eventi'
-        starwars_congrats: 'Star Wars: Costruisci una galassia con il codice - Complimenti'
-        starwars_blocks_intro: 'Star Wars: Costruisci una galassia con il codice -
+        starwars_intro: 'Guerre Stellari: Costruisci una galassia con il codice -
           Introduzione'
-        starwars_blocks_events: 'Star Wars: Costruisci una galassia con il codice
-          - Eventi'
-        starwars_blocks_congrats: 'Star Wars: Costruisci una galassia con il codice
+        starwars_typing: 'Guerre Stellari: Costruisci una galassia con il codice -
+          JavaScript'
+        starwars_events: 'Guerre Stellari: Costruisci una galassia con il codice -
+          Eventi'
+        starwars_congrats: 'Guerre Stellari: Costruisci una galassia con il codice
           - Complimenti'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        starwars_blocks_intro: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Introduzione'
+        starwars_blocks_events: 'Guerre Stellari: Costruisci una galassia con il codice
+          - Eventi'
+        starwars_blocks_congrats: 'Guerre Stellari: Costruisci una galassia con il
+          codice - Complimenti'
+        mc_intro: Minecraft - Introduzione
+        mc_repeat: Minecraft - Ripetizione
+        mc_if_statements: Minecraft - Istruzione "se"
+        mc_congrats_share: Minecraft - Complimenti
+        mc_congrats_no_share: Minecraft - Complimenti
+        gumball_intro: L'Ora del Codice di Gumball - introduzione
+        gumball_events: L'Ora del Codice di Gumball - Eventi
+        gumball_repeat: L'Ora del Codice di Gumball - Ripetizione
+        iceage_intro: L'Ora del Codice con L'Era Glaciale - Introduzione
+        iceage_events: L'Ora del Codice con L'Era Glaciale - Eventi
+        iceage_repeat: L'Ora del Codice con L'Era Glaciale - Ripetizione
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto
@@ -842,8 +898,8 @@
           con il valore corretto di gradi di cui girare
         repeat_blocks: Usa il blocco "ripeti" ed includi in esso gli altri blocchi
           nell'area di lavoro
-        repeat_blocks_1: (1) Usa questo blocco e mettilo intorno ai blocchi grigi
-          nell'area di lavoro
+        repeat_blocks_1: "(1) Usa questo blocco e mettilo intorno ai blocchi grigi
+          nell'area di lavoro"
         repeat_blocks_2: (2) Sposta qui  il blocco "ripeti" e posiziona i blocchi
           grigi al suo interno
         snowflake_dropdown: Usa questo elenco a discesa per creare fiocchi di neve
@@ -931,12 +987,12 @@
         Infinity_repeat_callout: Aggiungi i blocchi "sposta" all'interno di questo
           blocco di ripetizione
         craft_run_button_callout: Clicca su "Esegui" per provare il tuo programma
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Prendi il blocco "vai avanti" e attaccalo sotto
+          l'altro blocco
+        craft_callout_preplaced: Qui ci sono dei blocchi per farti iniziare
+        craft_inside_repeat: Ripeti le azioni inserendo qui i relativi blocchi
+        craft_callout_preplaced_house: Questo codice inizia la costruzione della tua
+          casa. Riesci a finirla tu?
+        craft_what_is_iron: Estrai il ferro!
+        craft_callout_moveforward: Questo codice controlla se c'è lava, sai aggiungere
+          un comando per andare avanti?

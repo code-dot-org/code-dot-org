@@ -29,6 +29,8 @@ class ProjectsController < ApplicationController
     }
   }.with_indifferent_access
 
+  @@project_level_cache = {}
+
   def index
   end
 
@@ -82,7 +84,8 @@ class ProjectsController < ApplicationController
         # for sharing pages, the app will display the footer inside the playspace instead
         no_footer: sharing && @game.owns_footer_for_share?,
         small_footer: (@game.uses_small_footer? || enable_scrolling?),
-        has_i18n: @game.has_i18n?
+        has_i18n: @game.has_i18n?,
+        game_display_name: data_t("game.name", @game.name)
     )
     render 'levels/show'
   end
@@ -106,7 +109,13 @@ class ProjectsController < ApplicationController
   end
 
   def set_level
-    @level = Level.find_by_key STANDALONE_PROJECTS[params[:key]][:name]
+    @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
+  end
+
+  private
+
+  def get_from_cache(key)
+    @@project_level_cache[key] ||= Level.find_by_key(key)
   end
 end

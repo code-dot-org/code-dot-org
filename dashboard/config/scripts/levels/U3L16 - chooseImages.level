@@ -72,7 +72,7 @@
     "autocomplete_palette_apis_only": "true",
     "app_width": "320",
     "app_height": "480",
-    "markdown_instructions": "# Choosing Your Own Images\r\n\r\nThe second parameter of the `image` command allows you to set the image to be displayed.  There are two ways to do this:\r\n1. Provide the URL of an image on the web \r\n2. Upload an image from your computer (by clicking \"choose...\")\r\n\r\n![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49 PM.png)\r\n\r\n\r\n# Do This\r\n\r\n* **Read the documentation for `image`** for tips on how to find an image's URL and how to upload.\r\n* **Change the image** to one you've found online or from your own computer.\r\n\r\n**NOTE:** many images are bigger than the screen of your app, so it's likely you'll need to add a `setPosition` command to get it on the screen sized the way you want.",
+    "markdown_instructions": "# Choosing Your Own Images\r\n\r\nThe second parameter of the `image` command allows you to set the image to be displayed.  There are two ways to do this:\r\n1. Provide the URL of an image on the web.\r\n2. Upload an image from your computer (by clicking \"choose...\").\r\n\r\n![](https://images.code.org/e726e56fd3e4c7cd4a0d58cba731a855-image-1444240440116.53.49 PM.png)\r\n\r\n\r\n# Do This:\r\n\r\n* **Read the documentation for `image`** for tips on how to find an image's URL and how to upload.\r\n* **Change the image** to one you've found online or from your own computer.\r\n\r\n**NOTE:** many images are bigger than the screen of your app, so it's likely you'll need to add a `setPosition` command to get it on the screen sized the way you want.",
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
@@ -85,9 +85,8 @@
     "project_template_level_name": "U3L16 - projectTemplate",
     "droplet_tooltips_disabled": "false",
     "debugger_disabled": "true",
-    "encrypted_examples": [
-
-    ]
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
   }
 }]]></config>
   <blocks/>

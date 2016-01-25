@@ -44,6 +44,7 @@ languages = {
   'Kurdish' => ['ku-IQ', 'ku'],
   'Latvian' => ['lv-LV', 'lv'],
   'Lithuanian' => ['lt-LT', 'lt'],
+  'Maori' => ['mi-NZ', 'mi'],
   'Macedonian (FYROM)' => ['mk-MK', 'mk'],
   'Malay' => ['ms-MY', 'ms'],
   'Maltese' => ['mt-MT', 'mt'],
@@ -71,7 +72,8 @@ languages = {
   'Ukrainian' => ['uk-UA', 'uk'],
   'Urdu (Pakistan)' => ['ur-PK', 'ur'],
   'Uzbek' => ['uz-UZ', 'uz'],
-  'Vietnamese' => ['vi-VN', 'vi']
+  'Vietnamese' => ['vi-VN', 'vi'],
+  'Zulu' => ['zu-ZA', 'zu']
 }
 
 locale_index = 0

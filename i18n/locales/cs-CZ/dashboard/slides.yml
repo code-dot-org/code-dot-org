@@ -205,7 +205,7 @@ cs:
         text: 'Čau, já jsem Makinde! Pojďme si říct něco o bloku "dokud".'
       2:
         image: notes/stage9_6.jpg
-        text: 'Blok "dokud" bude provádět cokoliv umístíš dovnitř, DOKUD bude prohlášení ve vrchní části bloku PRAVDA.'
+        text: '"while blok" bude provádět cokoliv umístíš dovnitř, DOKUD bude příkaz ve vrchní části bloku PRAVDA.'
       3:
         image: notes/stage9_7.jpg
         text: Např. když farmářka stojí na hromadě, bude odstraňovat neustále 1 lopatou, POKUD pod ní je stále ještě nějaká hromádka.
@@ -449,7 +449,7 @@ cs:
         text: Zde jsou kroky, které je třeba se naučit. Tleskat rukama. Dát ruce za hlavu. Dát ruce do pasu. Zvednout levou ruku. Zvednout pravou ruku. Docela jednoduché, že? Objevíš, že pokyny se mohou zkrátit tím položením některých tanečních kroků do cyklů.
       5:
         image: notes/C1_getting_loopy_5.png
-        text: V našem tanci používáme cykly ve skutečnosti. Tanečníci mají počítače, vše je v téže síti. Mohl bych cyklovat světla znova a znova smyčka pro stejné tanečníky. V cyklu bych mohl mít průchod, kde vám řeknu chcete jít znova a znova opakovat prostřednictvím těchto šest tanečníků a pak v rámci cyklu chceš zvýšit rychlost osvětlení. A který je vytvořen pomocí cyklů. Cykly jsou důležité v informatice, naší práci zkracují a zjednodušují.
+        text: V našem tanci používáme ve skutečnosti cykly. Tanečníci mají počítače, vše je v téže síti. Mohl bych cyklovat světla znova a znova smyčka pro stejné tanečníky. V cyklu bych mohl mít průchod, kde vám řeknu chcete jít znova a znova opakovat prostřednictvím těchto šest tanečníků a pak v rámci cyklu chceš zvýšit rychlost osvětlení. A který je vytvořen pomocí cyklů. Cykly jsou důležité v informatice, zkracují a zjednodušují naší práci.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -908,7 +908,7 @@ cs:
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png
-        text: While cykly jsou dost podobné, co můžeš udělat v každodenním životě. Představ si, že myješ tvé auto, budeš drhnout, dokud není čisté. Zatímco to není čisté, pokračuje se v drhnutí. Vyhodnocuješ tyto věci po celou dobu.
+        text: While cykly jsou dost podobné, co můžeš dělat v každodenním životě. Představ si, že myješ tvé auto, budeš drhnout, dokud není čisté. Zatímco to není čisté, pokračuješ v drhnutí. Vyhodnocuješ tyto věci po celou dobu.
       2:
         image: notes/C3_farmer_while_2.png
         text: Máme nový pohled na to, abys pomohl tvému farmáři. Tomu se říká while blok. Je to vlastně docela jednoduché. While příkaz v horní části je pravdivý, udělají něco. Např. zatímco existuje hromada přesunout jedno seno. Nestyď se a zkus to s tvým farmářem.
@@ -937,7 +937,7 @@ cs:
         text: Zaslání zpráv na internet je tak trochu jako odeslání zpráv v e-mailu s několika rozdíly. Já jsem zde na webu Google.cz. Toto číslo je IP adresa pro tento web. Adresy IP lze považovat jako tvou zpáteční poštovní adresu. Představme si, že chci poslat zprávu do pošty někomu v kanceláři u tebe. Vidíš na dveřích URL a IP adresu? Napsal Jsem tuto zprávu a stiskl posláním. odeslat.
       4:
         image: notes/C3_internet_4.png
-        text: Na rozdíl od poštovní služby první věc, co se stane. je, že internet rozdělí zprávu na menší části, takže lze je snadno poslat. Tyto malé části se nazývají pakety. Každý paket zprávy je dodáván do cíle jeden po druhém. Tyto pakety jsou všechny dohromady ve správném pořadí tak, aby zprávu příjemce správně přečetl. Samozřejmě existuje mnoho dalších věcí, které se dozvíš o tom, jak internet funguje, ale je to skvělý start. Jsi na cestě se stát zdatným uživatelem Internetu! Ujisti se, že si tvé rodině a přátelům pověděl, co jsi se naučil!
+        text: Na rozdíl od poštovní služby první věc, co se stane. Internet rozdělí zprávu na menší části, takže lze je snadno poslat. Tyto malé části se nazývají pakety. Každý paket zprávy je dodáván do cíle jeden po druhém. Tyto pakety jsou všechny dohromady ve správném pořadí tak, aby zprávu příjemce správně přečetl. Samozřejmě existuje mnoho dalších věcí, které se dozvíš o tom, jak internet funguje, ale je to skvělý start. Jsi na cestě se stát zdatným uživatelem Internetu! Ujisti se, že si tvé rodině a přátelům pověděl, co jsi se naučil!
       5:
         image: notes/C3_internet_5.png
         text: Jmenuji se Amanda Camp, jsem softwarový inženýr v Googlu. Pracuji v týmu, který pracuje na backendovém serveru, který ukládá profily a kontakty. V mé práci musím hodně přemýšlet, jak kontakty lze zaslat na jiná zařízení, například tvůj telefon. Většina lidí má spoustu kontaktů, řekněme, 1 000 kontaktů a my nechceme posílat všechny kontakty najednou do telefonu, protože je to příliš velká zpráva. Podobně jako internet štěpí objemné zprávy do paketů, používáme koncept nazvaný stránkování, abychom mohli jen 100 telefonních kontaktů a nechat tvůj telefon reagovat na nás a požádat o dalších 100.
@@ -1318,7 +1318,7 @@ cs:
         text: Tato aktivita vysvětluje způsob snadného porozumění, jak internet funguje. Vysvětlíme celou terminologii, kterou budeš potřebovat jednoduchými pojmy tak, aby studenti uměli simulovat přenášení zpráv, jako je e-mail.
       2:
         image: notes/unplug10_2.png
-        text: Studenti budou přenášet zprávy a zatímco předstírají, že je to jedním ze tří způsobů přenosu. Bezdrátový internet DSL nebo opické vlákno. Studenti, kteří představují wi-fi bude muset nosit zprávu, kterou vysílají v jejich hlavách, protože wifi má největší pravděpodobnost vynechat nějaké informace.
+        text: Studenti budou přenášet zprávy a zatímco předstírají, že je to jedním ze tří způsobů přenosu. Bezdrátový internet DSL nebo optické vlákno. Studenti představující wi-fi budou muset nosit zprávu, kterou vysílají v jejich hlavách, protože wifi má největší pravděpodobnost vynechat nějaké informace.
       3:
         image: notes/unplug10_3.png
         text: Studenti předstírající DSL nebo kabel budou přenášet zprávu na opačné straně jejich ruky, kde jsou méně pravděpodobné, že by upadla informace. A studenti reprezentující optická vlákna budou ji nosit oběma rukama. Tato aktivita je skvělý způsob, jak pochopit něco, co mnozí z nás denně používá.
@@ -1335,264 +1335,373 @@ cs:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: 'Ahoj, jsem Kathleen Kennedy, producent Star Wars: Síla se probouzí. Dnes budeš pracovat s jednou z našich hvězd, BB-8. BB-8 je kulovitý droid. Vše, co udělá i každý jeho pohyb je řízen počítačovým softwarem. Informatika má dopady na každé odvětví, od marketingu po zdravotní péči, po film. Ve skutečnosti stovky počítačových inženýrů spolupracovali, aby udělali tento film Síla se probouzí.'
       2:
         image: notes/starwars_intro_2.JPG
         text: 'Ahoj, jsem Rachel Rose, vedoucí inženýr R&D v ILM, vedu vývojový tým animace a tvorby postav. V Probuzené síle jsem zodpovědná za pomoc umělcům k vývoji výbavy, která je součásti pohybujících postav umožňující postavě vypadat velmi přesvědčive v galaxii, daleko daleko pryč.'
       3:
         image: notes/starwars_intro_3.JPG
-        text: V další hodině budeme budovat naší vlastní Star Wars hru. Naučíme tě základní koncepty programování. Obvykle programování je celé text, ale zde budeme používat bloky, které přetažením a puštěním jsme napsali programy. Pod kapotou se stále vytváří kód. Pak vyzkoušíš základy s bloky, přepneme tě na JavaScript, jeden z nejpopulárnějších programovacích jazyků na webu.
+        text: V další hodině budeme budovat naší vlastní Hvězdné války. Naučíme tě základní koncepty programování. Obvykle programování je celé text, ale zde budeme používat bloky, které přetažením a puštěním napíšeme programy. Pod kapotou se vytváří kód. Pak vyzkoušíš základy s bloky, přepneme tě na JavaScript, do jednoho z nejpopulárnějších programovacích jazyků na webu.
       4:
         image: notes/starwars_intro_4.JPG
-        text: "To start off, we're going to work with Rey to program BB-8 to walk to collect all of the scrap parts. Your screen is split into three parts. On the left is the Star Wars game space, where code will run. The instructions for each level are written below the game space."
+        text: Na začátku budeme pracovat s Reyem, abychom naprogramovali BB-8 k procházce ke sběru veškerého šrotu. Tvá obrazovka je rozdělená do tří částí. Vlevo je herní prostor Hvězdných válek, kde bude spuštěn kód. Pokyny pro jednotlivé úrovně jsou zapsané pod herním prostorem.
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Tato střední oblast je panel nástrojů, kde každý z těchto bloků je povel srozumitelný pro BB-8.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where we are going to build our program.
+        text: Prázdné místo napravo se nazývá pracovní prostor, kde budeme budovat náš program.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what happens? BB-8 moves left one block on the grid.
+        text: Když jsem natáhl blok moveLeft(); do našeho pracovního prostoru, stisknu run. Co se stane? BB-8 se přesune vlevo o jeden blok na mřížce.
       8:
         image: notes/starwars_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together."
+        text: A co když chci, aby BB-8 udělal něco po moveLeft(); bloku? Můžeš přidat další blok do našeho programu. Vyberu si blok moveUp(); přetahnu jej pod můj blok moveLeft();, dokud nebude zvýrazněn. Pak jej tam hodím a dva bloky se přichytí dohromady.
       9:
         image: notes/starwars_intro_9.JPG
-        text: When I press run again, BB-8 will perform the commands that are stacked from top to bottom on our workspace. If you ever want to delete a block, just remove it from the stack and drag it back into the tool box.
+        text: Když jsem stisknu run znova, BB-8 bude provádět uložené povely od shora dolů v našem prostoru. Pokud někdy chceš odstranit blok, prostě jej vyjmi ze zásobníku a přetáhni jej zpět do panelu nástrojů.
       10:
         image: notes/starwars_intro_10.JPG
-        text: "After you've hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Poté, co stiskneš run, můžeš vždy stisknutím tlačítka reset k návratu BB-8 na začátek. Nyní to rozjedeme!
     starwars_typing:
       1:
         image: notes/starwars_typing_1.JPG
-        text: Uvnitř použitých bloků příkazy JavaScriptu. JavaScript je dnes nejoblíbenějším programovacím jazykem pro profesionální vývojáře. Bloky jsou skvělý způsob, jak se začít učit kódovat. I na špičkových univerzitách jako jsou Harvard a Berkeley se začíná učit tímto způsobem. Ale jakmile se naučíme základy, inženýři píšou přímo kód, protože jim to umožňuje pracovat rychleji.
+        text: Uvnitř použitých bloků příkazy JavaScriptu, který je nejoblíbenějším programovacím jazykem pro profesionální vývojáře dneška. Bloky jsou skvělý způsob, jak se začít s učením kódovat. I na špičkových univerzitách jako jsou Harvard a Berkeley se začíná učení tímto způsobem. Ale jakmile se naučíme základy, inženýři píšou přímo kód, protože jim to umožní rychleji pracovat.
       2:
         image: notes/starwars_typing_2.JPG
-        text: "We can type hundreds of commands without having to find them in the toolbox or drag them out. Because you're learning typing may be slower at first but we wanted you to give it a try."
+        text: Umíme napsat stovky povelů bez nutnosti je najít na panelu nástrojů nebo je přetahovat. Jelikož se teprve učíš, psaní napoprvé může být pomalejší, ale chceme ti dát možnost si to zkusit.
       3:
         image: notes/starwars_typing_3.JPG
-        text: In the upper right corner on your workspace, you can click the show text button on any puzzle to switch from blocks to typing code as text.
+        text: Na horní pravý roh pracovního prostoru můžeš klepnout, aby se ti ukázalo tlačítko text na jakékoli hádance k přepnutí z bloků na zadávání textu jako kódu.
       4:
         image: notes/starwars_typing_4.JPG
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: V další lekci začneme v režimu zadávání. Zde můžeš stále přetahovat blok z panelu nástrojů nebo můžeš zadat název povelu. Když začneš zadávat, uvidíš jména možných povelů, které se ti ukazují dole, kde píšeš. Místo zadávání názvu celého příkazu můžeš si vybrat jednu z nabízených k rychlejší orientaci. V mé práci používám při psaní kódu neustále tuto funkci automatického doplňování.
       5:
         image: notes/starwars_typing_5.JPG
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: Když budeš psát kód, počítač potřebuje, abys byl velmi přesný. Musíš přesně uvádět písmena včetně jejich velikosti v názvu povelu, správně použít povel včetně závorek a oddělování středníkem. I malá nepřesnost v zadání způsobí, že BB-8 neporozumí kódu a není schopen se pohybovat.
       6:
         image: notes/starwars_typing_6.JPG
-        text: When you make an error on the line, the editor highlights it for you so that you can try changing your text to fix it.
+        text: Když uděláš chybu na řádku, editor ji zvýrazní za tebe, můžeš se tak pokusit změnit text, abys to opravil.
       7:
         image: notes/starwars_typing_7.JPG
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: Když tvrdě narazíš, vždy můžeš začít znova s tlačítkem start a můžeš se kdykoli přepnout zpět do blokového režimu klepnutím na tlačítko v pravém horním rohu. Ok, vyzkoušejme si, co jsi napsal! A pokud uděláš chybu, Nelekni se. Každý to několikrát zkouší než uspěje.
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Dobrý den, jmenuji se Charita Carter. Jsem senior kreativní producent tady v Walt Disney Imagineering. Jsem zodpovědná za vedení týmů, které ve skutečnosti produkují atrakce, které naši hosté uvádějí do praxe. Vždy hledáme způsoby, jak můžeme vylepšit a udělat lepší zážitek pro naše hosty a technologie je základem toho.
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Gratulujeme, povedlo se ti to udělat! Naprogramoval jsi BB-8. Teď si myslím, že jsme připraveni na něco těžšího. Pojďme na to. Nyní, když jsi se naučili základy programování, vrátíme se zpět v čase, abys vybudoval svou vlastní hru s hvězdami R2-D2 a C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'Chceš-li si vytvořit hru, musíme se naučit o něčem, co programátoři her používají denně: nazývají to události. Události poví tvému programu, aby naslouchal nebo čekal, až se něco stane a pak když se to stane, provede akci.'
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Některé příklady událostí naslouchají na klepnutí myší, kurzorové směrové tlačítko nebo dotek na obrazovku.
       5:
         image: notes/starwars_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Zde chceme udělat, aby R2-D2 se posunul nahoru k dodání zprávy rebel pilotovi a pak posunout dolů k jinému rebel pilotovi. Použijeme události, abychom jej přesunuli. Když hráč používá šipky nahoru/dolů nebo tlačítka nahoru/dolů.
       6:
         image: notes/starwars_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down."
+        text: Použijeme blok události whenUp() a k němu připojíme blok goUp(). Když hráč stiskne klávesu šipka nahoru, spustí se kód připojený k bloku whenUp(). A uděláme to totéž pro R2-D2 dolů.
       7:
         image: notes/starwars_events_7.JPG
-        text: "To do this, we'll use a command called whenUp(). When you drag the command out of the toolbox, you'll see that it starts and ends with a curly bracket instead of a semi-colon. This gives us space to put other commands in the middle. Every command that we place inside these brackets will run when the player presses the up arrow."
+        text: K tomu použijeme povel s názvem whenUp(). Když přetáhneš povel z panelu nástrojů, uvidíš, že začíná a končí složenou závorkou místo středníku. To nám dává prostor k vložení dalších povelů. Každý povel umístěný v těchto závorkách bude spuštěn, když hráč stiskne šipku nahoru.
       8:
         image: notes/starwars_events_8.JPG
-        text: "We want R2-D2 to go up so let's put a goUp(); block inside the command. And we'll do the same thing to make R2-D2 go down."
+        text: Chceme, aby R2-D2 šel nahoru, tak dáme blok goUp(); uvnitř povelu. A uděláme totéž, aby šel R2-D2 dolů.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen. Step by step, your game is getting more interactive.
+        text: Nyní místo psaní celého kódu k řízení našeho droidu k posunu dopředu, můžeme nechat R2-D2 reagovat na události stisknutí tlačítka, které jej pohybují po obrazovce. Krok za krokem se stává tvoje hra interaktivnější.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Ahoj, jmenuji se Alice, řídím projektové a inženýrské týmy zde na Code.org. Pracovala jsem na tomto výukovém kurzu, se kterým si právě hraješ.
       2:
         image: notes/starwars_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: Právě jsi se dopracoval do poslední úrovně. Blahopřejeme! Právě jsi se naučil vše, co potřebuješ vědět, aby sis udělal vlastní hru Hvězdné války. Nyní neexistují žádné další instrukce, žádné hádanky k řešení. Můžeš si vytvořit vlastní hru a zvolit, jak to bude fungovat. Ještě jedna věc, odemkni si nové zvuky a příkazy, abys toho dokázal ještě víc.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body, když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko a objeví se útočník. Nakonec celá obrazovka je plná prasátek a když se dotkneš 10 000 z nich, vyhraješ.'
       4:
         image: notes/starwars_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co jsi dostal, máš za to body. V mém programu jsem obrátil směry tak, že při každém klepnutí nahoru jde tvoje postava dolů a při klepnutí na tlačítko vpravo tvoje postava jde doleva. Je to opravdu těžké někdy získat výhodu! Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!'
       5:
         image: notes/starwars_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: Až budeš hotov s hrou, vyber si pro sdílení dostat odkaz. Ten můžeš pak sdílet s přáteli nebo hrát hru na telefonu. Bav se!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
-        text: 'Ahoj, jsem Kathleen Kennedy, producent Star Wars: Probuzené síly. Dnes budeš pracovat s jednou z našich hvězd, BB-8. BB-8 je to kulovitý droid. Cokoli dělá a každý pohyb, který dělá, je řízen počítačovým softwarem. Informatika má dopady na každé odvětví, od marketingu na zdravotní péči, film. Ve skutečnosti stovky počítačových inženýrů spolupracovali, aby udělali film jako Probuzená síla.'
+        text: 'Ahoj, jsem Kathleen Kennedy, producent Hvězdných válek: Síla se probouzí. Dnes budeš pracovat s jednou z našich hvězd, BB-8. BB-8 je to kulovitý droid. Cokoli dělá i udělaný pohyb je řízen počítačovým softwarem. Informatika má dopady na každé odvětví, od marketingu na zdravotní péči, film. Ve skutečnosti stovky počítačových inženýrů spolupracovali, aby udělali film Síla se probouzí.'
       2:
         image: notes/starwars_blocks_intro_2.JPG
-        text: 'Ahoj, jsem Rachel Rose, vedoucí R&Dinženýr v ILM, vedu vývojový tým animace a tvorby postav. V Probuzené síle jsem zodpovědná za pomoc umělcům k vývoji výbavy, které jsou části postavy, aby pohybující postava vypadala velmi přesvědčivě v galaxii daleko daleko pryč.'
+        text: 'Ahoj, jsem Rachel Rose, vedoucí R&D inženýr v ILM, vedu zde vývojový tým animace a tvorby postav. V Síle se probouzí jsem zodpovědná za pomoc umělcům k vývoji výstroje, která je části postavy tak, aby pohybující postava vypadala velmi přesvědčivě v galaxii daleko daleko pryč.'
       3:
         image: notes/starwars_blocks_intro_3.JPG
-        text: V příští hodině budeme budovat vlastní hru Star Wars, která tě naučí základní koncepty programování. Obvykle programování je veškerý text, ale zde budeme používat bloky, kterými přetažením a spuštěním zapíšeme programy. Chceš-li začít, budeme pracovat s Reyem, aby naprogramoval, že BB-8 chodí ke sběru všeho šrotu.
+        text: V příští hodině budeme budovat vlastní hru Hvězdné války, která tě naučí základním konceptům programování. Obvykle programování je představuje text, zde budeme používat bloky, kterými přetažením a spuštěním zapíšeme programy. Chceš-li začít, budeme pracovat s Reyem, aby naprogramoval, že BB-8 chodí ke sběru všeho šrotu.
       4:
         image: notes/starwars_blocks_intro_4.JPG
-        text: Your screen is split into three parts. On the left is the Star Wars game space where code will run. The instructions for each level are written below the game space.
+        text: Obrazovka je rozdělená na tři části. Nalevo je herní prostor Hvězdných válek, kde bude spuštěn kód. Pokyny pro jednotlivé úrovně jsou zapsané pod herním prostorem.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command that BB-8 can understand.
+        text: Tato střední oblast je panel nástrojů, kde každý z těchto bloků je povel srozumitelný pro BB-8.
       6:
         image: notes/starwars_blocks_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we're going to build our program."
+        text: Prázdné místo napravo se nazývá pracovní prostor, kde budeme budovat náš program.
       7:
         image: notes/starwars_blocks_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace, what happens? BB-8 moves left one block on the grid.
+        text: Když natáhnu blok moveLeft(); do našeho pracovního prostoru. Co se stane? BB-8 se přesune vlevo o jeden blok na mřížce.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: "And what if I want BB-8 to do something after the moveLeft(); block? I can add another block to our program. I'm going to choose the moveUp(); block and I'll drag it under my moveLeft(); block until the highlight appears. Then I'll drop it and the two blocks will snap together. When I press run again, BB-8 will perform the commands that are stacked top to bottom on our workspace."
+        text: A co když chci, aby BB-8 udělal něco po moveLeft(); bloku? Můžeš přidat další blok do našeho programu. Vyberu si moveUp(); blok a přetáhnu jej pod můj moveLeft(); blok, dokud se nezvýrazní. Pak to tam vhodím a dva bloky se přichytí dohromady. Když stisknu znovu run, BB-8 bude provádět naskládané příkazy od shora dolů v našem pracovním prostoru.
       9:
         image: notes/starwars_blocks_intro_9.JPG
-        text: If you ever want to delete a block, just remove it from the stack and drag it back into the toolbox.
+        text: Když chceš někdy odstranit blok, prostě jej vyjmi ze zásobníku a přetáhni jej zpět do panelu nástrojů.
       10:
         image: notes/starwars_blocks_intro_10.JPG
-        text: "After you hit run, you can always hit the reset button to get BB-8 back to the start. Now let's get rolling!"
+        text: Pak stiskneš run, můžeš vždy stisknout tlačítko reset k návratu BB-8 na začátek. Nyní to rozjedeme!
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
+        text: Dobrý den, jmenuji se Charita Carter. Jsem senior kreativní producent tady v Walt Disney Imagineering. Jsem zodpovědná za vedení týmů, které ve skutečnosti produkují atrakce, které naši hosté uvádějí do praxe. Vždy hledáme způsoby, jak můžeme vylepšit a udělat lepší zážitek pro naše hosty a technologie je základem toho.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: Gratulujeme, povedlo se ti to udělat! Naprogramoval jsi BB-8. Teď si myslím, že jsme připraveni na něco těžšího. Pojďme na to. Nyní, když jsi se naučili základy programování, vrátíme se zpět v čase, abys vybudoval svou vlastní hru s hvězdami R2-D2 a C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
+        text: 'Chceš-li si vytvořit hru, musíme se naučit o něčem, co programátoři her používají denně: nazývají to události. Události poví tvému programu, aby naslouchal nebo čekal, až se něco stane a pak když se to stane, provede akci.'
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button or a tap on the screen.
+        text: Některé příklady událostí naslouchají na klepnutí myší, kurzorové směrové tlačítko nebo dotek na obrazovku.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: "Here we're going to make R2-D2 move up to deliver a message to a rebel pilot and then move down to the other rebel pilot. We'll use events to make him move. When the player uses the up/down arrow keys, or the up/down buttons."
+        text: Zde chceme udělat, aby R2-D2 se posunul nahoru k dodání zprávy rebel pilotovi a pak posunout dolů k jinému rebel pilotovi. Použijeme události, abychom jej přesunuli. Když hráč používá šipky nahoru/dolů nebo tlačítka nahoru/dolů.
       6:
         image: notes/starwars_blocks_events_6.JPG
-        text: "We use the whenUp() event block and attach the goUp() block to it. When the player presses the up arrow key, the code attached to the whenUp() block is run. And we'll do the same thing to make R2-D2 move down. Now instead of writing all the code to control our droid in advance, we can let R2-D2 react to button press events that move him around the screen."
+        text: Použijeme blok události whenUp(), připojíme k němu goUp() blok. Když hráč pak stiskne klávesu šipka nahoru, spustí se kód připojený k bloku whenUp(). A uděláme totéž, aby R2-D2 se posunul dolů. Místo psaní napřed celého kódu k řízení našeho droida, můžeme teď nechat R2-D2 reagovat na události stisknutí tlačítka pro jeho pohyb po obrazovce.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Krok za krokem se stává tvoje hra stále interaktivnější.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
-        text: "Hi, my name is Alice and I run the project and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: Ahoj, jmenuji se Alice, řídím projektové a inženýrské týmy zde na Code.org. Pracovala jsem na tomto výukovém kurzu, se kterým si právě hraješ.
       2:
         image: notes/starwars_blocks_congrats_2.JPG
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: Právě jsi se dopracoval do poslední úrovně. Blahopřejeme! Právě jsi se naučil vše, co potřebuješ vědět, aby sis udělal vlastní hru Hvězdné války. Nyní neexistují žádné další instrukce, žádné hádanky k řešení. Můžeš si vytvořit vlastní hru a zvolit, jak to bude fungovat. Ještě jedna věc, odemkni si nové zvuky a příkazy, abys toho dokázal ještě víc.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win.'
+        text: '[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body, když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko a objeví se útočník. Nakonec celá obrazovka je plná prasátek a když se dotkneš 10 000 z nich, vyhraješ.'
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: '[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co jsi dostal, máš za to body. V mém programu jsem obrátil směry tak, že při každém klepnutí nahoru jde tvoje postava dolů a při klepnutí na tlačítko vpravo tvoje postava jde doleva. Je to opravdu těžké někdy získat výhodu! Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!'
       5:
         image: notes/starwars_blocks_congrats_5.JPG
-        text: "When you're done making your game, choose share to get a link you can share with friends or play your game on your phone. Have fun!"
+        text: Až budeš hotov s hrou, vyber si pro sdílení dostat odkaz. Ten můžeš pak sdílet s přáteli nebo hrát hru na telefonu. Bav se!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
-        text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
+        text: |
+          Jmenuji se Jens Bergensten, ale jsem znám jako Jeb. Jsem vedoucí vývojář Minecraftu zde v mojang.com. Myslím, že mi bylo 11 nebo 12, když jsem programovat, protože jsem chtěl dělat hry. Jeden z přátel táty mi pověděl, že abych dělal hry, potřebuji se naučit, jak se programuje. Takže jsem se do toho dal. Rád navrhuji a zjišťuji architekturu věcí. Tohle je to, co
+          mám skutečně rád na Minecraftu.
       2:
         image: notes/mc_intro_2.JPG
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: |
+          Během následující hodiny se naučíš základy informatiky programováním pohybů Alex nebo Steva v simulovaném kousku světa
+          Minecraftu.
       3:
         image: notes/mc_intro_3.JPG
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: |
+          Tradiční programování je běžně text, ale dnes použijeme Blockly: 
+          využívání bloků, které přetahujete k psaní programů. Na pozadí tvoříte
+          JavaScript kód.
       4:
         image: notes/mc_intro_4.JPG
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: Pojmy, které se naučíš, počítačoví programátoři používají denně a jsou základem informatiky. Tady v Mojangu používáme tyto stejné koncepty, aby Minecraft pracoval.
       5:
         image: notes/mc_intro_5.JPG
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: Než začneš, vyber si svoji postavu. Vyberu si Alexu. Budujeme kód pro program, který jí pomůže se pohybovat po obrazovce.
       6:
         image: notes/mc_intro_6.JPG
-        text: Your screen is split into three main parts. On the left is the Minecraft playspace where your program will run. The instructions for each level are written below.
+        text: Tvoje obrazovka je rozdělená do tří hlavních částí. Na levé straně je hrací místo pro Minecraft., Zde bude tvůj program spuštěn. Pokyny pro jednotlivé úrovně jsou napsané dole.
       7:
         image: notes/mc_intro_7.JPG
-        text: "This middle area is the toolbox and each of these blocks is a command that directs Alex's actions."
+        text: Tato střední oblast je panel nástrojů a každý z těchto bloků je povel řídící akce Alexy.
       8:
         image: notes/mc_intro_8.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme stavět náš program.
       9:
         image: notes/mc_intro_9.JPG
-        text: If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid.
+        text: 'Když přetáhneme blok "posunout vpřed" do našeho pracovního prostoru a klepneme na tlačítko Spustit. Co se stane? Alex se pohybuje vpřed o jedno pole na mřížce.'
       10:
         image: notes/mc_intro_10.JPG
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: 'A co, když chceme udělat něco poté, co se přesune dopředu o jedno pole? Můžeme přidat další blok do našeho programu. Vyberu si blok "otočit vpravo" a přetáhnu jej pod "posunout vpřed", dokud se neobjeví tato oranžová čára. Potom ho pustím a dva bloky se přichytí dohromady. Když stiskneme znova Spustit, Alex bude provádět příkazy v našem pracovním prostoru odshora dolů.'
       11:
         image: notes/mc_intro_11.JPG
-        text: If you ever want to delete a block, just drag it from the stack back to the toolbox.
+        text: Když chceš někdy odstranit blok, stačí jej přetáhnout ze zásobníku zpět do panelu nástrojů.
       12:
         image: notes/mc_intro_12.JPG
-        text: "To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let's start coding!"
+        text: 'Ke zrušení změn a dostat se zpět na počáteční úroveň, použij tlačítko Start Over v pravém horním rohu pracovního prostoru. Ještě jedna věc: vidíš malý trojúhelník na otáčecích blocích? Kdykoli uvidíš tyto trojúhelníky, znamená to, že můžeš si vybrat jinou možnost. Začněme s kódováním!'
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: Jsem Lydie Winters, ředitelka značky Mojang a udělali jsme malou hru nazvanou Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: Mojí oblíbenou věcí, co dělám v Minecraftu, je zkoumání. Mám ráda dobrodružství v jeskyních a vidět, co mohu najít. Jako někdo, kdo není programátor, jsem opravdu nadšená, projít lekci Minecraftu a skutečně se sama naučit kódování.
       3:
         image: notes/mc_repeat_3.JPG
-        text: The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops.
+        text: 'Pro poslední úroveň je zapotřebí spousty bloků "posunout vpřed". Bylo by snazší, kdyby jsme mohli jen povědět počítači, aby provedl povel "posunout vpřed" čtyřikrát nebo pětkrát. Naštěstí pro nás, počítače jsou opravdu dobré v opakovaných příkazech díky s cyklům.'
       4:
         image: notes/mc_repeat_4.JPG
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: Při vytváření Minecraftu požíváme k opakování cykly, aby umístili počáteční materiály k vytvoření nového světa. Jsou to tisíce a tisíce bloků. Používáme též cyklů i v malém např. aby Alexovy nohy se pohybovaly sem a tam při chůzi. Opakování pomocí cyklů je silná součást programování.
       5:
         image: notes/mc_repeat_5.JPG
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: Noc se blíží, takže v příštích několika úrovních, budeme stavět dům, abychom bydleli v bezpečí. Budeme používat k tomu velmi snadno bloku opakování.
       6:
         image: notes/mc_repeat_6.JPG
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: 'K vybudování zdi našeho domu, můžeme buď povědět Alex "posun vpřed" a umísti prkna čtyřikrát nebo jí povíme "posun vpřed" a umísti jedno prkno, pak tento povel a použij blok opakování, aby to provedla tuto akci vícekrát. Teď klepneme na bloku opakování a povíme jí kolikrát chceme, aby se tato akci provedla. Pojďme stavět náš dům než nastane noc! Bav se!'
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: Nyní se budeme učit o if příkazech. If příkazy jsou základní součástí výuky programování. Pomáhají počítači dělat rozhodnutí.
       2:
         image: notes/mc_if_statements_2.JPG
-        text: All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message.
+        text: 'Všechny počítače používají if příkazy, včetně mého telefonu. Např. když odemknu můj telefon, běží v něm nějaký kód, který povídá, že if - když zadám správně heslo, then - pak se telefon odemkne. Else - jinak se zobrazí chybová zpráva.'
       3:
         image: notes/mc_if_statements_3.JPG
-        text: You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree.
+        text: 'Umíš použít if příkazy ve tvém kódu, aby Steve a Alice reagovali na to, co vidí ve světě. Např. if - pokud je kámen před nimi, umí se otočit doleva. Nebo otočit doprava, if - když běží do stromu.'
       4:
         image: notes/mc_if_statements_4.JPG
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: V tomto případě nechceme spadnout na lavu. Je snadné naplánovat pro lavu. Můžeme to vidět na obrazovce. Ale co lava, kterou nemůžeme dát pod kámen?
       5:
         image: notes/mc_if_statements_5.JPG
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: Poté, co jsme vydolovali kámen, potřebujeme zkontrolovat napřed, jestli je nějaká lava v daném místě před posunem dopředu. Pokud je tam lava, chceme umístit kámen před naší postavu, než se posuneme dopředu. Tímto způsobem můžeme se bezpečně pohybovat. Čas pro další těžbu! A nezapomeň používat if příkazy, k prohlédnutí kam šlapeš.
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Blahopřejeme! Právě jsi se naučil základní stavební kameny informatiky.
       2:
         image: notes/mc_congrats_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Nyní umíš použít tyto bloky k budování tvé vlastní tvorby. Neexistují žádné další instrukce a puzzly k řešení. Můžeš si vybudovat, co chceš. Můžeš si vybrat.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L z pochodní. Udělal jsem A z březových prkýnek. Fungovalo to, fungovalo. Postavili jsme dům z vlny!'
       4:
         image: notes/mc_congrats_share_4.JPG
-        text: "When you're done making your creation, choose share to get a link to share with your friends. Have fun!"
+        text: Po dokončení tvého výtvoru vyber si získat odkaz ke sdílení se svými přáteli. Pobav se!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer science.
+        text: Blahopřejeme! Právě jsi se naučil základní stavební kameny informatiky.
       2:
         image: notes/mc_congrats_no_share_2.JPG
-        text: Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose.
+        text: Nyní umíš použít tyto bloky k budování tvé vlastní tvorby. Neexistují žádné další instrukce a puzzly k řešení. Můžeš si vybudovat, co chceš. Můžeš si vybrat.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: "[students talking] It's about to get real. Shear. I made an L out of torches. I made an A out of birch planks. It worked, it worked. We built a house out of wool!"
+        text: '[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L z pochodní. Udělal jsem A z březových prkýnek. Fungovalo to, fungovalo. Postavili jsme dům z vlny!'
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Nyní umíš si postavit, co chceš. Pobav se!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co potřebuješ je jen pár základů programování a můžeš začít hrát hru, kterou jsi vytvořil.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Máš oblíbenou videohru? Projdeme jeden krok k vytvoření hry, stejně jako v PlayLab. Dobré hry mají příběh a každý příběh má aktéry. Aktéři dělají věci jako mluví, pohybují se a komunikují. Možná dokonce skórují na základě pravidel hry. Dnes se naučíme jak udělat všechny tyto věci jednu po druhé se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrát na mobilu.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Dnes se učíme, jak dělat všechny tyto věci jednu po druhé se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrál na mobilu.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Tvá obrazovka je rozdělena na 3 hlavní části. Nalevo je herní prostor, kde poběží program. Pokyny pro každou úroveň jsou napsané dole.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: Ta střední oblast je panel nástrojů, a každý z těchto bloků je kus kódu.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme stavět náš program.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: 'Chceš-li začít, budeš potřebovat propojit bloky na oranžový blok "když běží blok". Můžeš dohromady propojit více bloků jejich přetažením, dokud se neuvidí žlutá čára, a pak se společně přichytí.'
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: 'V této první hádance uděláme, aby si aktéři si něco řekli propojením bloku "say" při spuštění bloku se zadáním zprávy. Jakmile máte své bloky na místě, stiskni tlačítko run, aby se ti zobrazilo, co jsi naprogramoval.'
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Začněme a na konci jsi schopen si vytvořit vlastní hru se všemi druhy hráčů, kteří umí komunikovat, skórovat, házet věcmi a zmizet jeden druhého. Je to všechno jen na tobě!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Teď jsme se dozvěděli něco, co všichni programátoři her používají každý den. Říká se tomu události. Událost povídá tvému programu, aby naslouchal něco a když na stane, pak to udělá, hra provede akci.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Někteé příklady událostí jsou naslouchání klepnutí myší, nahoru nebo dolů se šipkovou klávesou nebo dokonce dotyk na obrazovku.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: 'Tady dělat, aby aktér něco řěkl, když hráč klepne na něj. Použijeme, když klepneme blok s připojením blok "say" blok. Když hráč klepne, všechny bloky připojenyé k tomuto bloku se provedou.'
+      4:
+        image: notes/gumball_events_4.JPG
+        text: Existují bloky when arrows. Když propojíte bloky přesunu k těm, můžete začít pohybovat s aktéry nahoru, dolů, vlevo, vpravo se šipkovými klávesami. Kousek po kousku tvoje hra je stále více interaktivní.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Umíš si představit, kdybys něco měl opakovat navěky a navždy? Doufejme, že to nikdy nebudeš muset, protože počítače jsou opravdu dobré na opakujících se věcí.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě. Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš vlastní hru.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co potřebuješ je jen pár základů programování a můžeš začít hrát hru, kterou jsi vytvořil.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Máš oblíbenou videohru? Projdeme jeden krok k vytvoření hry, stejně jako v PlayLab. Dobré hry mají příběh a každý příběh má aktéry. Aktéři dělají věci jako mluví, pohybují se a komunikují. Možná dokonce skórují na základě pravidel hry. Dnes se naučíme jak udělat všechny tyto věci jednu po druhé se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrát na mobilu.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Dnes se učíme, jak dělat všechny tyto věci jednu po druhé se zábavnými aktéry a pak si vytvoříme hru od začátku, kterou lze sdílet a hrál na mobilu.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Tvá obrazovka je rozdělena na 3 hlavní části. Nalevo je herní prostor, kde poběží program. Pokyny pro každou úroveň jsou napsané dole.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: Ta střední oblast je panel nástrojů, a každý z těchto bloků je kus kódu.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: Prázdné místo na pravé straně se nazývá pracovní prostor. Tam budeme stavět náš program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: 'Chceš-li začít, budeš potřebovat propojit bloky na oranžový blok "když běží blok". Můžeš dohromady propojit více bloků jejich přetažením, dokud se neuvidí žlutá čára, a pak se společně přichytí.'
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: 'V této první hádance uděláme, aby si aktéři si něco řekli propojením bloku "say" při spuštění bloku se zadáním zprávy. Jakmile máte své bloky na místě, stiskni tlačítko run, aby se ti zobrazilo, co jsi naprogramoval.'
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Začněme a na konci jsi schopen si vytvořit vlastní hru se všemi druhy hráčů, kteří umí komunikovat, skórovat, házet věcmi a zmizet jeden druhého. Je to všechno jen na tobě!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Teď jsme se dozvěděli něco, co všichni programátoři her používají každý den. Říká se tomu události. Událost povídá tvému programu, aby naslouchal něco a když na stane, pak to udělá, hra provede akci.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Někteé příklady událostí jsou naslouchání klepnutí myší, nahoru nebo dolů se šipkovou klávesou nebo dokonce dotyk na obrazovku.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: 'Tady dělat, aby aktér něco řěkl, když hráč klepne na něj. Použijeme, když klepneme blok s připojením blok "say" blok. Když hráč klepne, všechny bloky připojenyé k tomuto bloku se provedou.'
+      4:
+        image: notes/iceage_events_4.JPG
+        text: Existují bloky when arrows. Když propojíte bloky přesunu k těm, můžete začít pohybovat s aktéry nahoru, dolů, vlevo, vpravo se šipkovými klávesami. Kousek po kousku tvoje hra je stále více interaktivní.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Umíš si představit, kdybys něco měl opakovat navěky a navždy? Doufejme, že to nikdy nebudeš muset, protože počítače jsou opravdu dobré na opakujících se věcí.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: To je blok opakování navždy. Něco uvnitř tohoto bloku se stane pořád ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě. Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš vlastní hru.

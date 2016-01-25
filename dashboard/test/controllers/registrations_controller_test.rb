@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class RegistrationsControllerTest < ActionController::TestCase
@@ -100,6 +101,51 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
+  test "create does not allow pandas in name" do
+    student_params = {name: panda_panda,
+                      password: "apassword",
+                      email: 'an@email.address',
+                      gender: 'F',
+                      age: '15',
+                      user_type: 'student'}
+
+    assert_does_not_create(User) do
+      post :create, user: student_params
+    end
+
+    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
+  end
+
+  test "create does not allow pandas in email" do
+    student_params = {name: "A name",
+                      password: "apassword",
+                      email: "#{panda_panda}@panda.com",
+                      gender: 'F',
+                      age: '15',
+                      user_type: 'student'}
+
+    # don't ask the db for existing panda emails
+    User.expects(:find_by_email_or_hashed_email).never
+
+    assert_does_not_create(User) do
+      post :create, user: student_params
+    end
+
+    assert_equal ["Email is invalid"], assigns(:user).errors.full_messages
+  end
+
+  test "create allows chinese in name" do
+    student_params = {name: '樊瑞',
+                      password: "apassword",
+                      email: 'an@email.address',
+                      gender: 'F',
+                      age: '15',
+                      user_type: 'student'}
+
+    assert_creates(User) do
+      post :create, user: student_params
+    end
+  end
 
   test "create as teacher requires age" do
     teacher_params = {name: "A name",
@@ -144,6 +190,36 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
 
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
+  end
+
+  test "update student with utf8mb4 in name fails" do
+    student = create :student
+
+    sign_in student
+
+    assert_does_not_create(User) do
+      post :update, user: {name: panda_panda}
+    end
+    assert_response :success # which actually means an error...
+    assert_equal ['Display Name is invalid'], assigns(:user).errors.full_messages
+    assert_select 'div#error_explanation', /Display Name is invalid/ # ... is rendered on the page
+  end
+
+  test "update student with utf8mb4 in email fails" do
+    student = create :student
+
+    sign_in student
+
+    # don't ask the db for existing panda emails
+    User.expects(:find_by_email_or_hashed_email).never
+
+    assert_does_not_create(User) do
+      post :update, user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
+    end
+
+    assert_response :success # which actually means an error...
+    assert_equal ['Email is invalid'], assigns(:user).errors.full_messages
+    assert_select 'div#error_explanation', /Email is invalid/ # ... is rendered on the page
   end
 
   test "update student with age" do

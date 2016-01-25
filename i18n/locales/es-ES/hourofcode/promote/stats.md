@@ -6,15 +6,15 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Reseñas y estadisticas útiles
+# Propaganda y estadisticas útiles
 
-## Usar esta breve reseña en boletines de noticias
+## Usar esta breve propaganda en las hojas informativas
 
 ### Lleva las Ciencias de Computación a tu escuela o colegio. Empiece con una Hora de Código
 
-Los ordenadores están en todas partes, pero hoy hay menos escuelas que enseñan ciencia de la computación que hace 10 años. La buena noticias es que estamos trabajando para cambiar esto. If you heard about the [Hour of Code](%= resolve_url('/') %) last year, you might know it made history. In the first Hour of Code, 15 million students tried computer science. Last year, that number increased to 60 million students! The [Hour of Code](%= resolve_url('/') %) is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. [Sign up](%= resolve_url('/') %) to host an Hour of Code this <%= campaign_date('full') %> during Computer Science Education Week. To add your school to the map, go to https://hourofcode.com/<%= @country %>
+Los ordenadores están en todas partes, pero hoy hay menos escuelas que enseñan ciencia de la computación que hace 10 años. La buena noticias es que estamos trabajando para cambiar esto. Si haz oído de la [ Hora de Código](%= resolve_ur('/') %>) el año pasado, sabrás que hizo historia. En la primera Hora de Código, 15 millones de estudiantes probaron ciencias de la computación. El año pasado, ese número incremento a 60 millones de estudiantes! La [Hora de Código](%= resolve_ur('/') %), es una hora de introducción a las ciencias de computación, diseñada para desmitificar lo que se piensa sobre programación y demostrar que cualquiera puede aprender los conceptos básicos. [Registrate](%= resolve_url('/') %) para realizar una Hora de Código esta <%= fecha_campaña('completa') %> durante la Semana de la Educación de Ciencia de la computación. Para añadir tu escuela en el mapa, ir a https://hourofcode.com/<%= @country %>
 
-## Infographics
+## Infografías
 
 <%= view :stats_carousel %>
 

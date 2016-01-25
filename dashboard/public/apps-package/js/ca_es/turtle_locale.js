@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Puja o baixa el llapis per començar o deixar de dibuixar."},
 "penUp":function(d){return "puja el llapis"},
 "reinfFeedbackMsg":function(d){return "Aquí tens el dibuix! Segueix treballant-hi o continua al puzzle següent."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "establir alfa"},
 "setColour":function(d){return "defineix color"},
 "setPattern":function(d){return "defineix el patró"},
 "setWidth":function(d){return "defineix l'amplada"},

@@ -38,7 +38,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "lock_zero_param_functions": "false"
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "twW5emIwP4E7yYV6+/JzTn4A63QALN+OviV7rN0osnJwFcb1Sxft8H41nHuk\nXAiV\n"
   }
 }]]></config>
   <blocks/>

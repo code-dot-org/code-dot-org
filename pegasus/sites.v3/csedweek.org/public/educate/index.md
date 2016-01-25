@@ -23,6 +23,10 @@ Click below for links to other resources for educators interested in teaching co
 
 [<button>Learn more</button>](/educate/3rdparty)
 
+Or check out these lists of other resources for CS curriculum and PD:
+
+- [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
+- [TeachCS](http://www.teachcs.org) - crowdfunding for teachers to attend CS PD, such as at [CSPDWeek](http://cspdweek.org), July 18-22, 2016
 
 ## Inspire students (especially women) to try Computer Science
 

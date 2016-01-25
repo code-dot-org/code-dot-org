@@ -105,6 +105,8 @@ de:
         StudioEC: Play Lab
         Applab: App-Labor
         NetSim: Internet-Simulator
+        Custom: Künstler
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: Bronze
@@ -309,28 +311,28 @@ de:
         studio_playlab_9: Bestimme den Hintergrund für diese Alien-Invasion und hilf dem Spacebot, schneller zu den Aliens zu gelangen, indem Du die Geschwindigkeit einstellst. Dann bewege ihn mit den Pfeiltasten um zum Alien zu gelangen und benachrichtige alle anderen.
         studio_playlab_10: |-
           Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
-        studio_iceage_1: 'Manny möchte "Hallo" sagen - kannst du ihm helfen?'
-        studio_iceage_2: 'Diego (Darsteller 1) und Granny (Darsteller 2) möchten einander "Hallo" sagen. Kannst du ihnen helfen, indem du den "sagen" Block zweimal benutzt?'
-        studio_iceage_3: Kannst du Scrat helfen, die Flagge zu bekommen?
-        studio_iceage_4: Kannst du Scrat (Darsteller 1) helfen, zu Granny (Darsteller 2) zu gelangen und einen Sound abspielen, wenn er dort ankommt?
-        studio_iceage_5: 'Kannst Du Sid helfen, "Grüße!" zu sagen, wenn er angeklickt ist? Vergiß nicht, ihn anzuklicken nach dem Start.'
-        studio_iceage_6: Kannst du Diego helfen, alle Flaggen zu bekommen, indem du ihn mit den Pfeiltasten bewegst?
-        studio_iceage_7: 'Die Anweisung "wiederhole dauerhaft" ermöglicht dir, Code ständig auszuführen. Kannst Du Anweisungen hinzufügen und Sid helfen, ständig nach rechts und links zu gehen?'
-        studio_iceage_8: Kannst du einen Block hinzufügen, um einen Punkt zu bekommen und einen Block erstellen, die einen Sound abspielt, wenn Sid auf Manny trifft? Kannst du ihn dann mit den Pfeilsymbolen bewegen, bis du Punkte erhältst?
-        studio_iceage_9: Setze den Hintergrund für die Eiszeit und helfe Sid schneller zu Granny zu kommen, indem du seine Geschwindigkeit änderst. Dann bewege ihn mit den Pfeilsymbolen, um Sid zu bewegen und alle anderen zu alarmieren.
-        studio_iceage_10: |-
-          Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
-        studio_gumball_1: 'Anais möchte "Hallo" sagen - kannst du ihr helfen?'
-        studio_gumball_2: 'Darwin (Darsteller 1) und Gumball (Darsteller 2) möchten einander "Hallo" sagen. Kannst du ihnen helfen, indem du den "sagen" Block zweimal benutzt?'
-        studio_gumball_3: Kannst du Banana Joe helfen, zur Flagge zu gelangen?
-        studio_gumball_4: Kannst du Gumball (Darsteller 1) helfen zu Darwin (Darsteller 2) zu kommen und einen Sound zu spielen, wenn er da ist?
-        studio_gumball_5: 'Kannst Du Antony helfen, "Grüße!" zu sagen, wenn er angeklickt ist? Vergiß nicht, ihn anzuklicken nach dem Start'
-        studio_gumball_6: Kannst du Darwin helfen, alle Flaggen zu bekommen, indem du ihn mit den Pfeiltasten bewegst?
-        studio_gumball_7: 'Der Block "wiederhole dauerhaft" ermöglicht dir, Code ständig auszuführen. Kannst Du Blöcke hinzufügen und Antony helfen, ständig nach rechts und links zu gehen?'
-        studio_gumball_8: Kannst du einen Block hinzufügen, um einen Punkt zu bekommen und einen Block erstellen, der einen Sound abspielt, wenn Banana Joe auf Anony trifft? Kannst du ihn dann mit den Pfeilsymbolen bewegen, bis du Punkte erhältst?
-        studio_gumball_9: Setze den HIntergrund für diese Invasion aus dem All und hilf Nicole schneller zu Penny zu gelangen, indem du seine Geschwindigkeit änderst. Dann bewege ihn mit den Pfeiltasten, um zu Nicole zu gehen und alle anderen zu warnen.
-        studio_gumball_10: |-
-          Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
+        studio_iceage_hello1: 'Sid möchte jeden für ein neues Abenteuer begeistern. Kannst Du ihm dabei helfen "Hallo" zu sagen, indem du den "sagen" Block in den Arbeitsbereich ziehst und das Wort "Hallo" eintippst?'
+        studio_iceage_hello2: 'Sid (Schauspieler 1) hat Manny (Schauspieler 2) gefunden und will ihn auf ein Abendteuer einladen. Helfe ihnen sich gegenseitig zu begrüßen indem du den "Schauspieler sagt" Block zweimal benutzt.'
+        studio_iceage_move_to_flag: 'Scrat sucht nach seiner Eichel! Hilf ihm dabei die letzten 200 Pixel zurückzulegen, indem du den "bewegen"-Baustein benutzt.'
+        studio_iceage_move_to_actor: 'Diego (Figur 1) sucht nach Manni (Figur 2). Hilf Diego dabei sich 200 Pixel nach unten zu bewegen, indem du den Block "Figur bewegen" benutzt. Danach verbindest du einen Block mit dem "wenn Figur berührt wird" Ereignis, um einen Ton zu generieren, sobald die beiden sich finden.'
+        studio_iceage_repeat: 'Der Baustein "ewig wiederholen" ermöglicht dir Code ununterbrochen auszuführen. Kannst du die Bausteine zusammenfügen, damit Granny ein wenig Übung im Bewegen nach rechts und links bekommt?'
+        studio_iceage_click_hello: Hilf Sid, dass er nach seinen Freunden ruft, wenn er angeklickt wird. Vergiss nicht auf ihn zu klicken, nachdem du das Programm gestartet hast.
+        studio_iceage_move_events: 'Scrat sucht immer noch nach Eicheln! Hilf ihm dabei, indem du den "Bewegen" Block mit jedem der Ereignisse verknüpfst und durch drücken der Pfeiltasten seine Richtung geändert wird. Wenn du fertig bist, drücke auf "Ausführen", um alle Eicheln einzusammeln.'
+        studio_iceage_sound_and_points: 'Wir haben den größten Teil des Codes bereitgestellt, um Granny hin und her laufen zu lassen und Sid auf dem Bildschirm zu bewegen. Kannst du den Code mit dem Baustein "wenn die Figur berührt" so vervollständigen, dass ein Geräusch ertönt und du einen Punkt gewinnst, wenn Sid un Granny sich berühren? Klicke "Ausführen", um das Spiel zu starten.'
+        studio_iceage_warn_ice_age: 'Alle müssen sich schneller bewegen, denn es beginnt eine Eiszeit! Setze eine Eisfläche in den Hintergrund und ändere die Geschwindigkeit von Sid auf "schnell". Drücke auf "Ausführen" und bewege ihn zu Diego um ihn zu warnen.'
+        studio_iceage_throw_hearts: 'Sid möchte seiner Großmutter zeigen, dass er sie gern hat. Benutze den Baustein "Wurf von Figur" um Sid (Figur1) Herzen auf Granny (Figur 2) werfen zu lassen. Ändere Grannys Stimmung auf "fröhlich", wenn sie von den Herzen getroffen wird.'
+        studio_iceage_free_play: 'Es ist Zeit für eine eigenes Spiel oder eine eigene Geschichte! Klicke am Ende auf "Abschließen", damit deinen Freunden das Spiel auf ihren Geräten ausprobieren können.'
+        studio_gumball_hello1: 'Anais will neue Freunde kennen lernen. Kannst du ihr helfen "Hallo" zu sagen, indem du den Baustein "sagen" in den Arbeitsbereich ziehst und das Wort "Hallo" eingibst?'
+        studio_gumball_hello2: 'Darwin (Schauspieler 1) und seinem Bruder Gumball (Schauspieler 2) gehen zur Schule.  Helfen sie einander zu grüßen, indem Sie den "Schauspieler sagen" Block zweimal benutzen.'
+        studio_gumball_move_to_flag: 'Banana Joe soll ein gefundenes Fressen-Rennen zu gewinnen!  Helfen Sie ihm die letzten 200 Pixel mit dem "verschieben"-Block zu gehen.'
+        studio_gumball_move_to_actor: 'Gumball (Figur 1) und Darwin (Figur 2) haben sich beim Klassenausflug verspätet! Bewege Gumball mit dem Baustein "bewege Figur" 200 Pixel nach unten zu Darwin. Setzte einen Baustein an das "wenn die Figur berührt"-Ereignis damit ein Geräusch ertönt, wenn Sie zueinander finden.'
+        studio_gumball_repeat: 'Der "ewig wiederholen"-Baustein ermöglicht die ununterbrochene Ausführung von Code. Kannst du ein paar Bausteine anbringen, damit sich Gumball durch Hin und Herlaufen für sein Rennen aufwärmt?'
+        studio_gumball_click_hello: 'Hilf Anton das Rennen zu beginnen, indem du ihn "Auf die Plätze, fertig, los" sagen lässt. Teste dein Programm. Vergiss nicht auf "Ausführen" zu klicken!'
+        studio_gumball_move_events: 'Darwin nimmt am Flaggen-sammeln-Wettbewerb teil. Setze "bewegen"-Bausteine an Ereignisse um ihn zu bewegen. Klicke auf "Ausführen" wenn du fertig bist und versuche alle Flaggen einzusammeln.'
+        studio_gumball_sound_and_points: 'Wir haben den meisten Code zum Hin und Herlaufen lassen von Anton (Figur 2) und zum Bewegen von Banana Joe (Figur 1) schon vorbereitet. Füge Bausteine an das "wenn die Figurberührt"-Ereignis an um ein Geräusch abzuspielen und einen Punkt zu machen, wenn Banana Joe und Anton sich berühren. Klicke zum Spielen auf "Ausführen".'
+        studio_gumball_warn_food_fight: 'Darwin ist gerade einer Essensschlacht entkommen! Ändere den Hintergrund zu "Figuren" und setze Darwin Geschwindigkeit auf schnell, klicke auf "Ausführen" und bewege ihn zu Penny, um sie zu warnen.'
+        studio_gumball_join_food_fight: 'Nimm an der Essensschlacht teil! Verwende den Baustein "Wurf von Figur... rechts" damit Banana Joe (Figur 1) Essen zu Anton (Figur 2) wirft. Ändere Antons Stimmung zu "wütend", wenn er getroffen wird.'
+        studio_gumball_free_play: 'Hier kannst du dein eigenes Spiel, oder deine eigene Geschichte erstellen. Wenn du fertig bist, klicke auf "Abschließen", damit Freunde dein Spiel auf ihrem Telefon, Tablet, oder Computer ausprobieren können.'
         studio_full_sandbox: |-
           Entwickele Dein eigenes Spiel. Wenn Du fertig bist, klicke auf "Fertig" und lass' Deine Freunde das Spiel auf ihren Smartphones ausprobieren.
         studio_k1_1: 'Kannst du diesen Hund "Hallo Welt" sagen lassen?'
@@ -385,7 +387,7 @@ de:
         C1_moveitmoveit_unplugged: Bewegung, Bewegung
         C1_bigevent_unplugged: Der große Event
         C1_getting_loopy: Schöne Schleifen
-        C1_pair_programming: Paar Programmierung
+        C1_pair_programming: Paarprogrammierung
         C1_maze_intro_sequencing: Labyrinth-Sequenzierung-Intro
         C1_maze_debugging: 'Labyrinth: Debuggen'
         C1_bee_level_intro: 'Bienen Level - Intro'
@@ -461,6 +463,9 @@ de:
         infinity_playlab_intro: 'Play Lab - Einführung'
         infinity_playlab_events: 'Play Lab - Ereignisse'
         infinity_playlab_repeat_forever: 'Play Lab - Wiederhole ohne Ende'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -501,16 +506,22 @@ de:
         hoc2015_preview_conclusion: Make your own game conclusion
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code - JavaScript'
-        starwars_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse (Events)'
+        starwars_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse'
         starwars_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen Glückwunsch'
         starwars_blocks_intro: 'Star Wars: Baue eine Galaxie aus Code - Einführung'
-        starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse (Events)'
+        starwars_blocks_events: 'Star Wars: Baue eine Galaxie aus Code - Ereignisse'
         starwars_blocks_congrats: 'Star Wars: Baue eine Galaxie aus Code - Herzlichen Glückwunsch'
         mc_intro: 'Minecraft - Einführung'
-        mc_repeat: 'Minecraft - Wiederholung'
-        mc_if_statements: 'Minecraft - If Anweisungen'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_repeat: Minecraft – Wiederholen
+        mc_if_statements: 'Minecraft - If Anweisungen ("wenn"-Anweisung)'
+        mc_congrats_share: 'Minecraft - Glückwunsch'
+        mc_congrats_no_share: 'Minecraft - Glückwunsch'
+        gumball_intro: 'Gumball Hour of Code - Einführung'
+        gumball_events: 'Gumball Hour of Code - Ereignisse'
+        gumball_repeat: 'Gumball Hour of Code - "wiederholen"-Anweisungen'
+        iceage_intro: 'Ice Age Hour of Code - Einführung'
+        iceage_events: 'Ice Age Programmierstunde - Ereignisse'
+        iceage_repeat: 'Ice Age Hour of Code - "wiederholen"-Anweisungen'
     callout:
       text:
         drag_blocks: 'Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten'
@@ -582,10 +593,10 @@ de:
         Infinity_move_directions_callout_arrow: Benutze die Pfeiltasten zum Bewegen
         Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
         Infinity_repeat_callout: 'Platziere "bewegen"-Bausteine hier drin'
-        craft_run_button_callout: 'Drücke "Ausführen", um dein Programm zu testen'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Drücke auf "Ausführen", um dein Programm auszuprobieren.'
+        craft_drag_block_callout: 'Ziehe einen "vorwärts"-Block zu einem anderen Block und docke ihn darunter an.'
+        craft_callout_preplaced: Hier haben wir ein paar Blöcke für den Anfang.
+        craft_inside_repeat: Wiederhole Aktionen, indem du hier Blöcke hineinplatzierst.
+        craft_callout_preplaced_house: Dieser Code wird anfangen, dein Haus zu bauen. Kannst du es fertigstellen?
+        craft_what_is_iron: Baue dieses Eisen ab!
+        craft_callout_moveforward: Dieser Code sucht nach Lava. Kannst du einen Befehl zum Vorwärtsbewegen hinzufügen?

@@ -7,7 +7,7 @@
   activerecord:
     errors:
       messages:
-        blank: è un dato obbligatorio
+        blank: "è un dato obbligatorio"
     attributes:
       user:
         name: Nome da visualizzare
@@ -29,6 +29,8 @@
     code:
       label: 'Aggiungi un insegnante:'
       placeholder: Codice Classe (ABCDEF)
+      instructions: Inserisci il codice condiviso con te dal tuo insegnante. È un
+        codice di 6 lettere come "ABCDEF".
     submit: Aggiungi insegnante
   add_hint_form:
     placeholder: Scrivi qui il tuo suggerimento
@@ -39,6 +41,7 @@
   puzzle: Esercizio
   trophies: Trofei
   courses: Corsi
+  unplugged_activity: Attività Tradizionale
   of: di
   more: DI PIÙ
   less: DI MENO
@@ -69,8 +72,8 @@
     need_confirmation: Non hai ricevuto le istruzioni di conferma?
     need_unlock: Non hai ricevuto le istruzioni di sblocco?
   signup_form:
-    student_count: '%{count} studenti si sono già iscritti.'
-    teacher_count: '%{count} insegnanti si sono già iscritti.'
+    student_count: "%{count} studenti si sono già iscritti."
+    teacher_count: "%{count} insegnanti si sono già iscritti."
     overview_student: Iscriviti per avere un account che ti permetta di tener traccia
       dei tuoi progressi. Il tuo indirizzo di posta elettronica verrà usato soprattutto
       per accedere e recuperare la tua password. Per maggiori informazioni, consulta
@@ -149,12 +152,12 @@
       Angry Birds e Plants vs Zombies! :-) \n\n%{name}\n"
   follower:
     invite_sent: Invito spedito
-    added_teacher: '%{name} è stato aggiunto come tuo insegnante'
+    added_teacher: "%{name} è stato aggiunto come tuo insegnante"
     registered: Ti sei iscritto alla classe %{section_name}.
     error:
       signed_in: Per favore esci prima di procedere
       username_not_found: Nome utente %{username} non trovato
-      username_in_use: '%{username} è già stato preso, per favore scegline un''altro'
+      username_in_use: "%{username} è già stato preso, per favore scegline un'altro"
       no_teacher: Non è stato trovato alcun insegnante con %{teacher_email_or_code}.
         Per favore chiedigli di iscriversi qui e poi prova ad aggiungerlo nuovamente
       section_not_found: Impossibile trovare una classe con il codice-classe '%{section_code}'.
@@ -201,7 +204,7 @@
         degli Stati Uniti.
       msg_visit_website: Visita il sito
     providers:
-      apple_itunes: $10 Carta Regalo iTunes
+      apple_itunes: "$10 Carta Regalo iTunes"
       donors_choose: Buono di $750 di DonorsChoose.org
       donors_choose_bonus: Buono di $250 di DonorsChoose.org
       dropbox: 10GB di spazio su Dropbox
@@ -264,9 +267,9 @@
     destroy: Elimina
     back: Indietro
     confirm: Sei sicuro?
-    created: '%{model} è stato creato correttamente.'
-    updated: '%{model} è stato aggiornato correttamente.'
-    destroyed: '%{model} è stato eliminato correttamente.'
+    created: "%{model} è stato creato correttamente."
+    updated: "%{model} è stato aggiornato correttamente."
+    destroyed: "%{model} è stato eliminato correttamente."
     access_denied: Non hai accesso a questo %{model}.
   nav:
     header:
@@ -276,6 +279,7 @@
         playlab: Costruisci una App
         artist: Disegna qualcosa
         calculate: Calculate Something
+        applab: Costruisci una App
     user:
       classroom: Cruscotto di Controllo dell'insegnante
       district_dashboard: Dashboard
@@ -288,7 +292,7 @@
       signup: Iscriviti
       already_registered: Sei già iscritto?
     popup:
-      progress_for_user: '%{name} in corso'
+      progress_for_user: "%{name} in corso"
       progress: I tuoi progressi
       lines: 'Totale delle linee di codice:  %{lines}'
       close: CHIUDI
@@ -296,7 +300,7 @@
       puzzle_map: Fasi
       prizes: Ottieni tutti i %{total_trophies} trofei e vinci premi!
       prize_earned: Hai ottenuto tutti i %{total_trophies} trofei. Hai vinto il premio!
-      prize_us_only: (Solo per gli studenti degli Stati Uniti)
+      prize_us_only: "(Solo per gli studenti degli Stati Uniti)"
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
@@ -304,70 +308,13 @@
     title:
       one: 'Il tuo insegnante:'
       other: 'I tuoi insegnanti:'
-    remove: (rimuovi insegnante)
+    remove: "(rimuovi insegnante)"
     confirm:
       remove: Sei sicuro di voler rimuovere questo insegnante?
-    tools: Strumenti dell'insegnante
-    followers:
-      section: 'Classe:'
-      stages: 'Lezione/i da visualizzare:'
-      show_past: 'Mostra l''attività svolta dallo studente (%{bullet_html}):'
-      levels_key: Chiave dei livelli
-      perfect: Completato, perfettamente
-      completed: Completato, ma usando troppi blocchi
-      tried: Provato, ma non completato
-      not_tried: Non ancora provato
-      activity: Indica le attività degli studenti nelle ultime %{hours} %{plural}
-      no_section: Non hai creato alcuna classe
-      trophies: Trofei
     students:
-      name: Nome
-      username: Nome utente
-      password: Password
-      manage: Gestisci i tuoi studenti
       dashboard: Vai al Cruscotto di controllo dell'insegnante
-      add: Aggiungi i tuoi studenti
-      remove: rimuovi studente
-      confirm_remove: Sei sicuro di voler rimuovere questo studente?
-      help_reassign: Per dividere i tuoi studenti fra più classi, scegli gli studenti
-        da assegnare alla nuova classe.
-      help_register: Invece di farti spendere un sacco di tempo importando individualmente
-        i dati di ogni studente, puoi definire rapidamente la tua classe chiedendo
-        ai tuoi studenti di iscriversi. I tuoi studenti dovranno scegliere uno username
-        e una password, ma loro NON sono obbligati a fornire un indirizzo di posta
-        elettronica. Se uno studente perde la sua password, potrai definirne una nuova
-        per lui.
-      register: Chiedi ai tuoi studenti di iscriversi
-      vist: Chiedi ai tuoi studenti di visitare
-      section_code: 'e inserire il loro codice-classe:'
-      first_please: Per favore, aggiungi prima %{add_section}
-      for: Per
-      enter: 'entrare:'
-    sections:
-      add: Aggiungi classe
-      manage: Gestisci le classi
-      section: Classe
-      students: Studenti
-      section_code: Codice-Classe
-      add_section_code: Aggiungere il codice-classe degli studenti
-      secret: Tipo di password
-      grade: Livello
-      course: Corso
-      rename: rinomina
-      edit: modifica
-      delete: cancella
-      confirm_delete: Sei sicuro di voler cancellare questa classe?
-      email: Invita uno studente mediante un messaggio di posta elettronica
-    rollup: Cruscotto di avanzamento
-    activity: Attività recenti della classe
-    user_not_found: L'insegnante o lo studente non è stato trovato
-    cant_remove_student_no_email: '%{student_name} non può essere rimosso come tuo
-      studente perché %{student_name} non si è iscritto con un indirizzo di posta
-      elettronica'
-    cant_remove_teacher_no_email: '%{teacher_name} non può essere rimosso come tuo
-      insegnante perché non si è iscritto con un indirizzo di posta elettronica'
-    student_teacher_disassociated: '%{teacher_name} è stato rimosso come insegnante
-      per %{student_name}'
+    user_not_found: L' insegnante non può essere trovato.
+    student_teacher_disassociated: Hai rimosso %{teacher_name} come tuo insegnante.
     panel:
       answer_viewer: Visualizzatore delle risposte
       student: Studente
@@ -382,10 +329,10 @@
     email_confirm_needed: 'L''indirizzo di posta elettronica non è stato confermato:'
     email_confirm_needed_required: 'Il tuo indirizzo di posta elettronica %{email}
       non è stato confermato:'
-    email_confirm_wrong_email: (Indirizzo di posta elettronica sbagliato?)
+    email_confirm_wrong_email: "(Indirizzo di posta elettronica sbagliato?)"
     email_resend_confirm: Reinvia le istruzioni di conferma
-    new_password_hint: (lascialo vuoto se non vuoi cambiarlo)
-    current_password_hint: (inserisci la tua password corrente per confermare i cambiamenti)
+    new_password_hint: "(lascialo vuoto se non vuoi cambiarlo)"
+    current_password_hint: "(inserisci la tua password corrente per confermare i cambiamenti)"
     delete: Elimina il tuo account
     delete_text: Cliccando sul pulsante qua sotto elimini il tuo account.
     delete_text_teacher_note: Nota che eliminando il tuo account non verranno eliminati
@@ -394,16 +341,12 @@
   user_level:
     completed: Completato
     tried: Provato
-  user_stats:
-    recent_activity: Attività recenti
-    show_more: Mostra di più
-    classroom_activity: Attività Tradizionale
   home:
     title: Officina del Codice
     description: Code Studio è la base di partenza per i corsi online creati da Code.org
-    lines_of_code: '%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI'
-    lines_of_code_linebreak: '%{lines_count} linee di codice<br/>scritte da %{students_count}
-      milioni di studenti'
+    lines_of_code: "%{lines_count} LINEE DI CODICE SCRITTE DAGLI STUDENTI"
+    lines_of_code_linebreak: "%{lines_count} linee di codice<br/>scritte da %{students_count}
+      milioni di studenti"
     all_courses: Panoramica dei corsi 1, 2 e 3
     lesson_plans: Piani di lavoro delle lezioni
     signin_message: Già iscritto? %{link}
@@ -445,11 +388,12 @@
     try_beta_courses: Novità! Prova i nostri corsi specifici per studenti delle scuole
       elementari (in versione provvisoria)
     use_as_teacher: Guarda questo sito come insegnante
-    heading_hoc2014: <h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque età)
-    heading_elementary: <h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque
-      età)
-    heading_apps: <h2>Divertimento per</h2><h1>tutti</h1>
-    heading_legacy: <h2>Corso rapido</h2> per <h1>i più grandi</h1>
+    heading_hoc2014: "<h2>L'Ora del Codice</h2><h1>per iniziare</h1> (a qualunque
+      età)"
+    heading_elementary: "<h2>Corsi di 20 ore</h2><h1>per approfondire</h1> (a qualunque
+      età)"
+    heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
+    heading_legacy: "<h2>Corso rapido</h2> per <h1>i più grandi</h1>"
     your_gallery: La tua collezione
     no_primary_course: Prova un corso presso Code Studio
     choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
@@ -458,6 +402,7 @@
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
       artistici con la programmazione.
+    try_hour_of_code: Prova un Ora di Programmazione!
   gender:
     male: Maschile
     female: Femminile
@@ -474,16 +419,25 @@
       Facebook, Twitter, e molti altri, che hanno aiutato a creare questi corsi.
     help_from_html_old: Gli ingegneri di Google, Microsoft, Facebook e Twitter hanno
       contribuito a creare questi materiali.
-    art_from_html: |
-      Ice Age™ & © %{current_year} 20th Century Fox. Tutti i diritti riservati. <br />
-      AngryBirds™ & © 2009-%{current_year} Rovio Entertainment Ltd. Tutti i diritti riservati. <br/>
-      Plants vs Zombies™ & © %{current_year} Electronic Arts Inc. Tutti i diritti riservati
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti i diritti
+      riservati.<br />Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti
+      riservati.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti
+      i diritti riservati.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Tutti i diritti riservati.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati
+      &copy; %{current_year} Electronic Arts Inc. Tutti i diritti riservati.<br />The
+      Amazing World of Gumball è un marchio registrato e &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Tutti
+      i diritti riservati. Frozen&#8482; &copy; %{current_year} Disney. Tutti i diritti
+      riservati. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Tutti i diritti
+      riservati. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Tutti i diritti riservati. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Tutti i diritti riservati. The Amazing World of Gumball
+      è un marchio registrato e &copy; 2015 Cartoon Network.
     powered_by_aws: Eseguito su Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
-      of Code&reg; sono marchi registrati di Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
+      of Code&reg; sono marchi registrati di Code.org."
     copyright: Diritto d'autore
     more: Di più
     feedback: Facci sapere che ne pensi
@@ -495,6 +449,10 @@
     privacy: Informativa sulla privacy
     secure: Versione sicura
     report_abuse: Segnala un abuso
+    built_on_code_studio: Crea in Code Studio
+    make_my_own_app: Crea la tua App
+    how_it_works: Come funziona
+    try_hour_of_code: Prova un Ora di Programmazione!
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -536,7 +494,7 @@
   pdf_download: Scarica il PDF
   download_coming_soon: La descrizione di questa attività è in corso di preparazione.
   video_coming_soon: Il video è in corso di preparazione!
-  not_started: Lo studente non ha provato questo livello.
+  not_started: Lo studente non ha provato questo esercizio.
   share_code:
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del Ping-Pong
@@ -560,12 +518,12 @@
     back: Ritorna agli script
     success: Hai modificato correttamente i blocchi.
     level:
-      create: Crea un nuovo livello
+      create: Crea un nuovo esercizio
       current: Livelli correnti
       unused: LIvelli non usati
   upsell:
     hoc:
-      title: L'Ora del Codice
+      title: Labirinto Classico
       body: Impara i concetti base dell'informatica. Milioni di persone l'hanno già
         fatto.
     flappy:
@@ -590,14 +548,14 @@
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Guerre Stellari
     infinity:
       title: Disney Infinity
       body: Crea una storia o inventa un gioco con i personaggi di Disney Infinity
         come protagonisti!
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Esplora il mondo di Minecraft attraverso il codice.
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti l'hanno creato scrivendo del codice!
@@ -610,7 +568,7 @@
     want_to_make_your_own: Vuoi farne uno tuo?
     more: Di più &rarr;
     caption_by_name_age: da %{name}, età %{age}
-    caption_time_ago: '%{time_ago} fa'
+    caption_time_ago: "%{time_ago} fa"
     header: La tua collezione
     header_playlab: Laboratorio
     header_artist: 'Artista: Sequenze e Cicli'
@@ -623,7 +581,7 @@
     feedback: Dicci che ne pensi
     report_bug: Segnala un errore
     support: Ottieni aiuto
-    support_url: //programmailfuturo.it/aiuto
+    support_url: "//programmailfuturo.it/aiuto"
   multi:
     wrong_title: Risposta non corretta
     wrong_body: La risposta che hai scelto non è corretta.  Per favore riprova!
@@ -641,7 +599,7 @@
     badname: Il vostro contratto ha il nome sbagliato.
     badname_case: I nomi delle funzioni sono sensibili al maiuscolo/minuscolo. Provate
       a cambiare il nome del vostro contratto.
-    badrange: Il vostro contratto ha dimensioni errate.
+    badrange: Il tuo contratto è fuori dai limiti.
     baddomainsize: Il contratto non ha il giusto numero di elementi nel dominio.
     baddomainname: Uno o più elementi del dominio ha il nome sbagliato.
     baddomaintype: Uno o più dei tuoi elementi del dominio è di tipo errato o sono
@@ -694,7 +652,7 @@
           title: Passo
           description: ''
         sample_level_builder:
-          title: Costruttore di un livello di prova
+          title: Costruttore di un esercizio
           description: ''
   age_interstitial:
     age: La tua età
@@ -713,7 +671,7 @@
     in_progress: in corso
     completed_too_many_blocks: completato, ma usando troppi blocchi
     completed_perfect: completato in modo perfetto
-    furthest_level_attempted: livello più avanzato che è stato provato
+    furthest_level_attempted: esercizio più avanzato che è stato provato
     assessment: verifica
   studio:
     courses_working_on: Corsi su cui stai lavorando
@@ -758,7 +716,7 @@
     edit_project: Modifica progetto
     abuse:
       tos: Questo progetto è stato segnalato per una violazione dei <a href='http://code.org/tos'>
-        Termini di servizio</a> di Code.org e non può essere condivisa con altri.
+        Termini di servizio</a> di Code.org e non può essere condiviso con altri.
       contact_us: Se credi che questo sia un errore, si prega di <a href='https://code.org/contact'>
         contattarci.</a>
       go_to_code_studio: Vai al Code Studio
@@ -769,7 +727,7 @@
           in seria considerazione la vostra segnalazione, indagheremo e prenderemo
           i provvedimenti opportuni.
         validation:
-          email: Si prega di fornire un indirizzo email
+          email: Fornisci per favore un indirizzo di posta elettronica
           age: Si prega di specificare un'età
           abuse_type: Indicate come questo contenuto violi i Termini del servizio
           abuse_detail: Si prega di fornire i dettagli concernenti il contenuto che

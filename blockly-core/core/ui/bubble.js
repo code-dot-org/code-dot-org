@@ -77,7 +77,7 @@ Blockly.Bubble = function(blockSpace, content, shape,
   this.renderArrow_();
   this.rendered_ = true;
 
-  if (!Blockly.readOnly) {
+  if (!blockSpace.isReadOnly()) {
     Blockly.bindEvent_(this.bubbleBack_, 'mousedown', this,
                        this.bubbleMouseDown_);
     if (this.resizeGroup_) {
@@ -260,7 +260,7 @@ Blockly.Bubble.prototype.bubbleMouseDown_ = function(e) {
     return;
   }
   // Left-click (or middle click)
-  this.blockSpace_.blockSpaceEditor.setCursor(Blockly.CSS.Cursor.CLOSED);
+  this.blockSpace_.blockSpaceEditor.setCursor(Blockly.Css.Cursor.CLOSED);
   // Record the starting offset between the current location and the mouse.
   if (Blockly.RTL) {
     this.dragDeltaX = this.relativeLeft_ + e.clientX;

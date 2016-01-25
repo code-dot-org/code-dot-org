@@ -25,7 +25,7 @@ ro:
           Artist5: Etapa 19
           Unplug11: Etapa 20
         Hour of Code:
-          desc: Oră de Cod
+          desc: Ora de Programare
           Maze: Etapa 1
         Edit Code:
           desc: Editează codul (beta)
@@ -105,6 +105,8 @@ ro:
         StudioEC: Laborator de Joacă
         Applab: Laboratului Aplicației
         NetSim: Simulator Internet
+        Custom: Artist
+        CustomStudio: Laborator de Joacă
     trophy:
       name:
         Bronze: Bronz
@@ -307,26 +309,30 @@ ro:
         studio_playlab_8: Puteţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet când unicornul îl lovește pe expert şi apoi să îl mutaţi cu săgeţile până când marcați?
         studio_playlab_9: 'Setați fundalul pentru această invazie extraterestră şi ajutați-l pe Spacebot să ajungă mai repede la extraterestru, prin schimbarea vitezei sale. Apoi, mutaţi-l cu tastele săgeată să ajungă la Spacebot şi  să-i alerteze pe toți ceilalți'
         studio_playlab_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_iceage_1: 'Manny vrea să spună "Bună ziua" - îl poți ajuta?'
-        studio_iceage_2: 'Diego (actorul 1) şi bunica (actorul 2) ar dori să-și spună "Bună ziua" reciproc. Îi poți ajuta utilizând de două ori blocul "spune"?'
-        studio_iceage_3: Îl poți ajuta pe Scrat să ajungă la steag?
-        studio_iceage_4: Îl poți ajuta pe Scrat (actorul 1) să ajungă la bunica (actorul 2) şi să emită un sunet atunci când el ajunge acolo?
-        studio_iceage_5: 'Îl poți ajuta pe Sid să spună "Salutare", atunci când acesta este apasat? Nu uita să faci clic pe el după ce dai clic pe Rulează'
-        studio_iceage_6: Îl poți ajuta pe Diego să se deplaseze folosind tastele cu săgeţi sus/jos/dreapta/stânga pentru a ajunge la toate steagurile?
-        studio_iceage_7: 'Blocul "repetă pentru totdeauna" îți permite să rulezi continuu un cod. Poți ataşa blocuri acestuia pentru a-l ajuta pe Sid să se miște la dreapta şi la stânga în mod repetat?'
-        studio_iceage_8: Poţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet atunci când Sid se lovește de Manny, urmând ca mai apoi să-l muţi cu săgeţile până când marchează scor?
-        studio_iceage_9: Setează fundalul pentru această epocă de gheață şi ajută-l pe Sid să ajungă mai repede la bunica prin schimbarea vitezei sale. Apoi mută-l cu tastele săgeată pentru a ajunge la Sid şi alertează-i pe toți ceilalți.
-        studio_iceage_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
-        studio_gumball_1: 'Anais vrea să spună "Bună ziua" - o poţi ajuta?'
-        studio_gumball_2: 'Darwin (actorul 1) şi Gumball (actorul 2) ar dori să-și spună "Bună ziua" reciproc. Îi poți ajuta utilizând de două ori blocul "spune"?'
-        studio_gumball_3: Poți să-l ajuți pe Banana Joe să ajungă la steag?
-        studio_gumball_4: Poți să-l ajuți pe Gumball (actorul 1) să ajungă la Darwin (actorul 2) și să emită un sunet când ajunge acolo?
-        studio_gumball_5: 'Îl poți ajuta pe Antony să spună "Salutare", atunci când acesta este apăsat? Nu uita să faci clic pe el după ce dai clic pe Rulează'
-        studio_gumball_6: Îl poți ajuta pe Darwin să se deplaseze folosind tastele cu săgeţi sus/jos/dreapta/stânga pentru a ajunge la toate steagurile?
-        studio_gumball_7: 'Blocul "repetă pentru totdeauna" îți permite să rulezi continuu un cod. Îi poți ataşa blocuri acestuia pentru a-l ajuta pe Antony să se miște la dreapta şi la stânga în mod repetat?'
-        studio_gumball_8: Poţi adăuga un bloc pentru a marca un punct și un bloc pentru a reda un sunet atunci când Banana Joe se lovește de Antony, urmând ca mai apoi să-l muţi cu săgeţile până când marchezi scor?
-        studio_gumball_9: Setează fundalul pentru această invazie spațială şi ajut-o pe Nicole să ajungă la Penny mai repede schimbându-i viteza. Apoi, mută-l pe el cu tastele săgeată ca să ajungă la Nicole şi să-i alerteze pe toți ceilalți.
-        studio_gumball_10: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
+        studio_iceage_hello1: 'Sid vrea să adune pe toată lumea pentru o nouă aventură. Poți să îl ajuți să spună "Bună ziua" glisând blocul "spune" în zona de lucru şi tastând cuvintele "Bună ziua" în interiorul lui?'
+        studio_iceage_hello2: 'Sid (actorul 1) l-a găsit pe Manny (actorul 2) şi vrea să-l invite într-o aventură.  Ajută-i să se salute reciproc folosind blocul "actorul spune" de două ori.'
+        studio_iceage_move_to_flag: 'Scrat este în căutarea ghindei lui! Ajută-l să parcurgă ultimii 200 de pixeli folosind blocul "mergi".'
+        studio_iceage_move_to_actor: 'Diego (actorul 1) este în căutarea lui Manny (actorul 2). Ajută-l pe Diego să meargă 200 pixeli în jos către Manny folosind blocul "mutare actor". Apoi, conectează un bloc la evenimentul "când actorul atinge" pentru a reda un sunet atunci când se vor găsi unul pe celălalt.'
+        studio_iceage_repeat: 'Blocul "repetă la nesfârșit" iți permite să rulezi codul în mod continuu. Poți atașa blocuri pentru a-l ajuta pe Granny să se antreneze mișcându-se la stânga și la dreapta în mod repetat?'
+        studio_iceage_click_hello: "Poți să îl ajuți pe Sid să facă o ultimă strigare pentru prieteni când faci click pe el? Nu uita să faci click pe el după ce ai apăsat 'Rulează'."
+        studio_iceage_move_events: |-
+          Scrat caută încă ghinde! Ajută-l să alerge prin zonă atașând blocul "mută" la fiecare eveniment și schimbând direcția pentru fiecare săgeată. Când ai terminat, fă clic pe 'Rulează' și încearcă să aduni toate ghindele.
+        studio_iceage_sound_and_points: |-
+          Am furnizat deja cea mai mare parte din codul ce o menține pe Granny să se miște la stânga și dreapta, precum și codul care îl mișcă pe Sid de-a lungul ecranului. Poți termina codul și adăuga blocuri evenimentului "cand actorul atinge" pentru ca amandoi să emită un sunet și să marcheze un punct atunci când Sid și Granny se lovesc? Apasă 'Rulează' pentru a juca jocul.
+        studio_iceage_warn_ice_age: 'Toată lumea trebuie să se mişte mai repede, pentru că vine o epocă de gheaţă! Schimbă fundalul cu "ghețari" şi setează-i viteza lui Sid la rapid, apoi apasă Rulează şi mută-l lângă Diego pentru a-l avertiza.'
+        studio_iceage_throw_hearts: 'Sid vrea ca bunica lui, Granny, să știe că o iubește. Folosește comanda "actorul aruncă" pentru a-l face pe Sid (actorul 1) să arunce inimi către Granny (actorul 2)! Setează starea lui Granny la fericită când este lovită cu inimi.'
+        studio_iceage_free_play: "E timpul să îți creezi propriul joc sau poveste! Când termini, apasă 'Terminat' pentru a-i lăsa pe prietenii tăi să testeze jocul tău pe telefoanele, tabletele sau calculatoarele lor!"
+        studio_gumball_hello1: 'Anais vrea sa isi faca noi prieteni. O poti ajuta sa spuna "buna" folosind blocul "spune" in spatiul de lucru si scriind inauntru cuvantul "buna"?'
+        studio_gumball_hello2: 'Darwin (actorul 1) și fratele său, Gumball (actorul 2), se îndreaptă către școală. Ajută-i să se salute reciproc folosind blocul "actorul spune" de două ori.'
+        studio_gumball_move_to_flag: 'Banana Joe este cat pe ce sa castige o cursa! Ajuta-l sa mearga cel putin 200 de pixeli folosind blocul "mergi".'
+        studio_gumball_move_to_actor: 'Gumball (actorul 1) si Darwin (actorul 2) au intarziat la ora! Ajuta-l pe Gumball sa mearga 200 de pixeli in jos catre Darwin folosind blocul "muta actor". Apoi, conecteaza un bloc la evenimentul "cand actorul" pentru a rula un sunet de cate ori se gasesc unul pe altul.'
+        studio_gumball_repeat: 'Blocul "repeta mereu" iti permite sa rulezi continuu. Poti atasa blocuri la el ca sa il ajuti pe Gumball sa faca incalzirea pentru cursa lui miscandu-se in stanga si in dreapta continuu?'
+        studio_gumball_click_hello: 'Poti sa il ajuti pe Anton sa anunte start-ul cursei spunand "Pe locuri, fiti gata, start!"? Pentru a-ti testa programul, nu uita sa apesi pe Anton dupa de apesi "ruleaza"!'
+        studio_gumball_move_events: 'Darwin este la concursul de strans steaguri! Ajuta-l sa alerge de colo colo atasand blocul "mergi" la fiecare eveniment. Cand esti gata, apasa ruleaza si incearca sa strangi toate stegurile.'
+        studio_gumball_sound_and_points: 'Am notat majoritatea codului care il tine pe Anton ( actorul 2) sa alerge din stanga in dreapta, la fel ca si codul care il muta pe Banana Joe (actorul 1) de-a lungul ecranului. Poti termina codul si adauga blocuri la evenimentul "cand actorii se ating" pentru a-i face sa ruleze un sunet apoi sa inscrie cate un punct cand Banana Joe si Anton se lovesc? Apasa Ruleaza pentru a juca jocul.'
+        studio_gumball_warn_food_fight: 'Darvin a scapat de o lupta cu alimente! Schimba fundalul la "caractere" si seteaza viteza lui Darwin la rapid, apoi apasa Ruleaza si muta-l catre Penny pentru a o avertiza.'
+        studio_gumball_join_food_fight: 'Alaturati-va luptei cu mancare! Foloseste comanda "actorul arunca elementul in dreapta" pentru ca Banana Joe (actorul 1) sa arunce cu mancare in Anton (actorul 2)! Seteaza-l pe Anton sa fie nervos cand este lovit.'
+        studio_gumball_free_play: 'Creeaza-ti propria poveste a jocului. Cand e gata, apasa "terminare"si spune-le prietenilor tai sa incerce jocul pe telefoane, tablete sau calculatoare!'
         studio_full_sandbox: Creați-vă propriul joc. Când aţi terminat, faceţi clic pe Terminare pentru a permite prietenilor să vă testeze jocul pe telefoanele lor.
         studio_k1_1: 'Poți face acest câine să spună "Bună ziua lume"?'
         studio_k1_2: Puteţi face cainele sa spuna ceva şi apoi dupa aceea pisica sa continue sa spuna altceva?
@@ -363,7 +369,7 @@ ro:
         loop_while: Bloc În timp ce
         loop_for: Bloc Contor
         parameters: Funcții cu Parametrii
-        hoc_wrapup: Încheierea Orei de Cod
+        hoc_wrapup: Încheierea Orei de Programare
         Unplug1: Ce este informatica?
         Unplug2: Gândire de Calcul
         Unplug3: Programare pe Hârtie Milimetrică
@@ -445,7 +451,7 @@ ro:
         C4_unplugged_forloops: Bucle Pentru
         C4_unplugged_parameters: Compoziții muzicale cu parametri
         C4_unplugged_binary: Binar
-        frozen_intro: Introducere în Ora de cod
+        frozen_intro: Introducere în Ora de Programare
         frozen_loops: Introducere în Bucle
         frozen_functions: Introducere în Funcții
         playlab_intro: Introducere in Play Lab
@@ -455,6 +461,9 @@ ro:
         infinity_playlab_intro: 'Atelier de Joacă - Introducere'
         infinity_playlab_events: 'Atelier de Joacă - Evenimente'
         infinity_playlab_repeat_forever: 'Atelier de Joacă - Repetare la nesfârșit'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: 'Introduction to Variables - Part 1'
         csp_applab_variables_2: 'Introduction to Variables - Part 2'
@@ -500,11 +509,17 @@ ro:
         starwars_blocks_intro: 'Star Wars: Programarea unei galaxii - Introducere'
         starwars_blocks_events: 'Star Wars: Programarea unei galaxii - Evenimente'
         starwars_blocks_congrats: 'Star Wars: Programarea unei galaxii - Felicitări'
-        mc_intro: 'Minecraft - Introduction'
-        mc_repeat: 'Minecraft - Repeat'
-        mc_if_statements: 'Minecraft - If statements'
-        mc_congrats_share: 'Minecraft - Congratulations'
-        mc_congrats_no_share: 'Minecraft - Congratulations'
+        mc_intro: 'Minecraft - introducere'
+        mc_repeat: 'Minecraft - Structuri repetitive'
+        mc_if_statements: 'Minecraft - Structuri de decizie'
+        mc_congrats_share: 'Minecraft - Felicitari'
+        mc_congrats_no_share: 'Minecraft - Felicitari'
+        gumball_intro: 'Gumball Hour of Code - Introducere'
+        gumball_events: 'Gumball Hour of Code - Evenimente'
+        gumball_repeat: 'Gumball Hour of Code - Declaratiile de repetare'
+        iceage_intro: 'Ora de programare Epoca de Gheata - Introducere'
+        iceage_events: 'Ora de programare Epoca de Gheata - Evenimente'
+        iceage_repeat: 'Ora de cod Epoca de Gheata - Repetarea declaratiilor'
     callout:
       text:
         drag_blocks: 'Trage un bloc "mutare" şi fixează-l sub alt bloc'
@@ -576,10 +591,10 @@ ro:
         Infinity_move_directions_callout_arrow: Utilizează aceste săgeți pentru a pune în mișcare
         Infinity_move_collide_callout: Emite un sunet când se produce acest eveniment.
         Infinity_repeat_callout: Plasează blocuri de mutare în interior aici
-        craft_run_button_callout: 'Apasă "Rulează" pentru a încerca programul tău'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_run_button_callout: 'Apasă "Run" pentru a încerca programul tău'
+        craft_drag_block_callout: 'Trageţi un bloc "moveForward();" şi fixaţi-l sub alt bloc'
+        craft_callout_preplaced: Am pus cateva blocuri aici pentru a incepe
+        craft_inside_repeat: Repetati actiunile prin plasarea blocurilor aici
+        craft_callout_preplaced_house: Acest cod va incepe sa construiasca casa ta. Il poti termina?
+        craft_what_is_iron: Extrage acest fier!
+        craft_callout_moveforward: Acest cod va cauta dupa lava, poti adauga o comanda pentru a inainta?

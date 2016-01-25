@@ -291,7 +291,7 @@ tr:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Kare ile başla<br/>Karenin üzerine bir paralelkenar koy<br/>Paralelkenarın sağına bir üçgen koy'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Kare ile başlayın<br/>Karenin üstünü üçgen yerleştirin<br/>Karenin altına üçgen yerleştirin'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Kare ile başla<br/>Karenin üzerine bir üçgen koy<br/>Üçgenin sağına bir paralelkenar koy'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Kare ile başla<br/>Karenin sağına bir üçgen koy<br/>Karenin altına paralel kenar koy<br/>Paralel kenarın sağına üçgen koy'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -420,7 +420,7 @@ tr:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Maze Multiple Choice One: Labirent çoktan seçmeli Bir
-        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
+        Which set of blocks is the correct answer?: Hangi blok seti doğru cevap?
       4-5 Algorithms Multi 1:
         Baking cookies: Tanımlama bilgileri
         Banana: Muz
@@ -433,8 +433,8 @@ tr:
         0: '? Cümleler burada. Aşağıdaki şablonlardan hangisi kesin olarak diğer üç parça şablona uyar?'
         1: ': Burada üç cümle var. Aşağıdaki şablonlardan hangisi en iyi şekilde özetler, yani aynı desenlerin üçünü birden şablonla eşleştirir?'
         Multiple Choice: Çoktan Seçmeli
-        Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle _____ a _____ _____.: Seattle _____ bir _____ _____.
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle büyük bir şehirdir. <br/> Eugene orta bir şehirdir <br/> Hillview küçük bir şehirdir.'
         _____ is _____ a _____.: _____ is _____ a _____.
         _____ is a _____ city.: _____ bir _____ şehirdir.
       4-5 Crowdsourcing Multi 1:
@@ -516,7 +516,7 @@ tr:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
         Artist Multiple Choice: Sanatçı çoktan seçmeli
-        Which blocks draw a rectangle with a perimeter of 100?: Hangi bloklar çapı 100 olan bir dikdörtgen çizer?
+        Which blocks draw a rectangle with a perimeter of 100?: Hangi bloklar çevre 100 olan bir dikdörtgen çizer?
       4-5 artist multi 2:
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png

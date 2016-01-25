@@ -1,13 +1,5 @@
 = render partial: 'shared/sharing_meta_tags'
 
-- if browser.safari?
-  :javascript
-    if (!window.navigator.standalone) {
-      window.addEventListener("load", function() {
-        addToHome.show(true);
-      }, false);
-    }
-
 = render partial: "levels/blockly", locals: { slider_speed: "0.9" }
 
 = render partial: 'level_sources/admin'

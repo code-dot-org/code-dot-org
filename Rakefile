@@ -5,6 +5,25 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
+# Helper functions
+def make_blockly_symlink
+  if local_environment?
+    Dir.chdir(apps_dir) do
+      apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+      RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
+    end
+  end
+end
+
+def make_code_studio_symlink
+  if local_environment?
+    Dir.chdir(code_studio_dir) do
+      code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
+      RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
+    end
+  end
+end
+
 namespace :lint do
   task :ruby do
     RakeUtils.bundle_exec 'rubocop'
@@ -16,13 +35,15 @@ namespace :lint do
 
   task :javascript do
     Dir.chdir(apps_dir) do
+      HipChat.log 'Linting <b>apps</b> JavaScript...'
       # lint all js/jsx files in dashboardd/app/assets/javascript
       RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
       # also do our standard apps lint
       RakeUtils.system 'grunt jshint'
     end
-    Dir.chdir(shared_js_dir) do
-      RakeUtils.system 'npm run lint'
+    Dir.chdir(code_studio_dir) do
+      HipChat.log 'Linting <b>code-studio</b> JavaScript...'
+      RakeUtils.system 'npm run lint-js'
     end
   end
 
@@ -93,13 +114,13 @@ namespace :build do
     end
   end
 
-  task :shared do
-    Dir.chdir(shared_js_dir) do
-      HipChat.log 'Installing <b>shared js</b> dependencies...'
+  task :code_studio do
+    Dir.chdir(code_studio_dir) do
+      HipChat.log 'Installing <b>code-studio</b> dependencies...'
       RakeUtils.npm_install
 
-      HipChat.log 'Building <b>shared js</b>...'
-      RakeUtils.system 'npm run gulp'
+      HipChat.log 'Building <b>code-studio</b>...'
+      RakeUtils.system 'npm run build:dist'
     end
   end
 
@@ -113,6 +134,9 @@ namespace :build do
   end
 
   task :dashboard do
+    make_blockly_symlink
+    make_code_studio_symlink
+
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
@@ -191,7 +215,7 @@ namespace :build do
   tasks << :configure
   tasks << :blockly_core if CDO.build_blockly_core
   tasks << :apps if CDO.build_apps
-  tasks << :shared if CDO.build_shared_js
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
@@ -212,13 +236,17 @@ task :build => ['build:all']
 ##
 ##################################################################################################
 
-# Whether this is a development or adhoc environment where we should install npm and create
+# Whether this is a local or adhoc environment where we should install npm and create
 # a local database.
 def local_environment?
-  (rack_env?(:development) && !CDO.chef_managed) || rack_env?(:adhoc)
+  (rack_env?(:development, :test) && !CDO.chef_managed) || rack_env?(:adhoc)
 end
 
 def install_npm
+  # Temporary workaround to play nice with nvm-managed npm installation.
+  # See discussion of a better approach at https://github.com/code-dot-org/code-dot-org/pull/4946
+  return if RakeUtils.system_('which npm') == 0
+
   if OS.linux?
     RakeUtils.system 'sudo apt-get install -y nodejs npm'
     RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
@@ -236,12 +264,7 @@ namespace :install do
   # Create a symlink in the public directory that points at the appropriate blockly
   # code (either the static blockly or the built version, depending on CDO.use_my_apps).
   task :blockly_symlink do
-    if rack_env?(:development) && !CDO.chef_managed
-      Dir.chdir(apps_dir) do
-        apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
-        RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
-      end
-    end
+    make_blockly_symlink
   end
 
   task :hooks do
@@ -254,7 +277,7 @@ namespace :install do
 
     files.each do |f|
       path = File.expand_path("../tools/hooks/#{f}", __FILE__)
-      system "ln -s #{path} #{git_path}/#{f}"
+      RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
 
@@ -265,12 +288,9 @@ namespace :install do
     end
   end
 
-  task :shared do
+  task :code_studio do
     if local_environment?
-      Dir.chdir(shared_js_dir) do
-        shared_js_build = CDO.use_my_shared_js ? shared_js_dir('build/package') : 'shared-package'
-        RakeUtils.ln_s shared_js_build, dashboard_dir('public','shared')
-      end
+      make_code_studio_symlink
       install_npm
     end
   end
@@ -296,15 +316,43 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
+  tasks << :hooks if rack_env?(:development)
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
-  tasks << :shared if CDO.build_shared_js
+  tasks << :code_studio if CDO.build_code_studio
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   task :all => tasks
 
 end
 task :install => ['install:all']
+
+# Commands to update built static asset packages
+namespace :update_package do
+
+  task :code_studio do
+    if RakeUtils.git_staged_changes?
+      puts 'You have changes staged for commit; please unstage all changes before running an `update_package` command.'
+    else
+      # Lint, Clean, Build, Test
+      Dir.chdir(code_studio_dir) do
+        RakeUtils.system "npm run lint && npm run clean && npm run build"
+      end
+
+      # Remove old built package
+      package_dir = dashboard_dir('public', 'code-studio-package')
+      RakeUtils.system "rm -rf #{package_dir}"
+
+      # Copy in new built package
+      RakeUtils.system "cp -r #{code_studio_dir('build')} #{package_dir}"
+
+      # Commit directory
+      RakeUtils.git_add '-A', package_dir
+      RakeUtils.system 'git commit --no-verify -m "Updated code-studio-package."'
+    end
+  end
+
+end
 
 task :default do
   puts 'List of valid commands:'

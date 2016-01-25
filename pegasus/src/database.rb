@@ -5,10 +5,11 @@ class Tutorials
 
   def initialize(table)
     @table = table
+    @contents = DB[@table].all
   end
 
   def launch_url_for(code,domain)
-    return DB[:beyond_tutorials].where(code: code).first[:url] if @table == :beyond_tutorials
+    return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org','code.org')
     api_domain = api_domain.gsub('al.code.org','code.org')
@@ -24,7 +25,7 @@ class Tutorials
 
   def find_with_tag(tag)
     results = {}
-    DB[@table].all.each do |i|
+    @contents.each do |i|
       tags = CSV.parse_line(i[:tags].to_s)
       next unless tags.include?(tag)
       results[i[:code]] = i
@@ -34,7 +35,7 @@ class Tutorials
 
   def find_with_tag_and_language(tag, language)
     results = {}
-    DB[@table].all.each do |i|
+    @contents.each do |i|
       tags = CSV.parse_line(i[:tags].to_s)
       next unless tags.include?(tag)
 

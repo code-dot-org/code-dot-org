@@ -10,10 +10,23 @@ class HttpCache
   LANGUAGE_HEADER = %w(Accept-Language)
   LANGUAGE_COOKIES = %w(language_ pm)
 
+  # A map from script name to script level URL pattern.
+  CACHED_SCRIPTS_MAP = {
+      # We specify the "special case" routes here; standard routes are handled by the loop below.
+      'hourofcode' => '/hoc/*'
+  }
+  %w(starwars starwarsblocks mc frozen gumball).each do |script_name|
+    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
+  end
+
+  def self.cached_scripts
+    CACHED_SCRIPTS_MAP.keys
+  end
+
   # HTTP-cache configuration that can be applied both to CDN (e.g. Cloudfront) and origin-local HTTP cache (e.g. Varnish).
-# Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
-# This hash provides extra application-specific configuration for whitelisting specific request headers and
-# cookies based on the request path.
+  # Whenever possible, the application should deliver correct HTTP response headers to direct cache behaviors.
+  # This hash provides extra application-specific configuration for whitelisting specific request headers and
+  # cookies based on the request path.
   def self.config(env)
     env_suffix = env.to_s == 'production' ? '' : "_#{env}"
     session_key = "_learn_session#{env_suffix}"
@@ -37,7 +50,8 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: LANGUAGE_HEADER,
-            cookies: whitelisted_cookies
+            # Allow the company cookie to be read and set to track company users for tutorials.
+            cookies: whitelisted_cookies + ['company']
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
@@ -76,6 +90,9 @@ class HttpCache
               /
               /learn*
               /congrats
+              /mc
+              /starwars
+              /playlab
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,
@@ -94,15 +111,11 @@ class HttpCache
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies
           },
-          # Turn off cookie stripping for the starwars script until we fix the bug where users are
-          # logged out after visiting this level. This must be re-enable before HOC 2015 to get
-          # the benefits of the CDN.
-          #
-          # {
-          # path: "/s/starwars/stage/1/puzzle/*",
-          # headers: LANGUAGE_HEADER,
-          # cookies: LANGUAGE_COOKIES
-          # },
+          {
+            path: CACHED_SCRIPTS_MAP.values,
+            headers: LANGUAGE_HEADER,
+            cookies: LANGUAGE_COOKIES
+          },
           {
             path: '/api/*',
             headers: LANGUAGE_HEADER,
@@ -128,5 +141,10 @@ class HttpCache
         }
       }
     }
+  end
+
+  # Return true if the levels for the given script name can be publicly cached by proxies.
+  def self.allows_public_caching_for_script(script_name)
+    CACHED_SCRIPTS_MAP.include?(script_name)
   end
 end

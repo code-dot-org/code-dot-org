@@ -146,7 +146,7 @@ bg:
           description_short: Начертайте готини картинки и дизайни с художника!
         hourofcode:
           Maze: Лабиринт
-          title: Час на Кодирането
+          title: Класически лабиринт
           description: Опитайте основите на програмирането с героите отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
           description_short: Опитайте основите на програмирането с много забавни герои!
         frozen:
@@ -672,6 +672,15 @@ bg:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: Докато цикли
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
@@ -1226,6 +1235,7 @@ bg:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1340,6 +1350,28 @@ bg:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: 'Постоянно съхраняване на данни и кликър: завършване'
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1390,6 +1422,7 @@ bg:
           description_audience: Възраст 10 + (след курс 3)
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: 'Ледена епоха: игрална лаборатория'
           description_short: Създай история или си направи игра с Ледена епоха игрална лаборатория!
@@ -1408,6 +1441,8 @@ bg:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Програмиране
@@ -1422,6 +1457,13 @@ bg:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: Докато цикли
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1436,10 +1478,10 @@ bg:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: 'Гъмбъл- игрална лаборатория'
-          description_short: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          description: Създай история или си направи игра с Гъмбълl игрална лаборатория!
-          Gumball Play Lab: 'Гъмбъл- игрална лаборатория'
+          title: 'Гъмбол- игрална лаборатория'
+          description_short: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
+          Gumball Play Lab: 'Гъмбол- игрална лаборатория'
         starwars:
           title: 'Междузвездни войни: Изграждане на галактика с код'
           description_short: Научете се да програмирате дроиди и създайте своя собствена Междузвездни войни игра в галактиката далече, далече.
@@ -1457,6 +1499,22 @@ bg:
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          description_short: Изследвайте Minecraft света чрез код
+          description: Използвайте блокове с код, за да преведете Steve или Alex през приключението в този Minecraft свят
           Hour of Code 2015: Часът на кодирането 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: Добре дошли!
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: Заключение
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

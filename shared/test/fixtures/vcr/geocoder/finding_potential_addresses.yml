@@ -1,0 +1,1229 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1%20Embarcadero%20Blvd%20SF%20CA&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:01 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '1871'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "subpremise" ]
+                    },
+                    {
+                       "long_name" : "220",
+                       "short_name" : "220",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Sansome Street",
+                       "short_name" : "Sansome St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Financial District",
+                       "short_name" : "Financial District",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94104",
+                       "short_name" : "94104",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "220 Sansome St #1, San Francisco, CA 94104, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 37.7923011,
+                       "lng" : -122.4007313
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.79365008029149,
+                          "lng" : -122.3993823197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.7909521197085,
+                          "lng" : -122.4020802802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJbd40-GGAhYAR-PaFZDownnw",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "subpremise" ]
+                    },
+                    {
+                       "long_name" : "50",
+                       "short_name" : "50",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Post Street",
+                       "short_name" : "Post St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Financial District",
+                       "short_name" : "Financial District",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94104",
+                       "short_name" : "94104",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "50 Post St #1, San Francisco, CA 94104, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 37.7892597,
+                          "lng" : -122.4027374
+                       },
+                       "southwest" : {
+                          "lat" : 37.7891853,
+                          "lng" : -122.4028335
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.7892299,
+                       "lng" : -122.40278
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.7905714802915,
+                          "lng" : -122.4014364697085
+                       },
+                       "southwest" : {
+                          "lat" : 37.7878735197085,
+                          "lng" : -122.4041344302915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJORgHyomAhYARDUkrx5XxsC8",
+                 "types" : [ "subpremise" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "subpremise" ]
+                    },
+                    {
+                       "long_name" : "1477",
+                       "short_name" : "1477",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Chestnut Street",
+                       "short_name" : "Chestnut St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Marina District",
+                       "short_name" : "Marina District",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94123",
+                       "short_name" : "94123",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1477 Chestnut St #1, San Francisco, CA 94123, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 37.8018693,
+                       "lng" : -122.4271297
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.8032182802915,
+                          "lng" : -122.4257807197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.8005203197085,
+                          "lng" : -122.4284786802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJx0R3StyAhYARW-uaa5EOTyw",
+                 "types" : [ "subpremise" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Officers' Club",
+                       "short_name" : "Officers' Club",
+                       "types" : [ "premise" ]
+                    },
+                    {
+                       "long_name" : "Marina District",
+                       "short_name" : "Marina District",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94109",
+                       "short_name" : "94109",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Officers' Club, San Francisco, CA 94109, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 37.806261,
+                          "lng" : -122.4261007
+                       },
+                       "southwest" : {
+                          "lat" : 37.8058875,
+                          "lng" : -122.426781
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.8060454,
+                       "lng" : -122.4263738
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.8074232302915,
+                          "lng" : -122.4250918697085
+                       },
+                       "southwest" : {
+                          "lat" : 37.8047252697085,
+                          "lng" : -122.4277898302915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJi38br9-AhYAR_s_UzV6XRmE",
+                 "types" : [ "premise" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Embarcadero",
+                       "short_name" : "Embarcadero",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Downtown Oakland",
+                       "short_name" : "Downtown Oakland",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Oakland",
+                       "short_name" : "Oakland",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Alameda County",
+                       "short_name" : "Alameda County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94607",
+                       "short_name" : "94607",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1 Embarcadero, Oakland, CA 94607, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 37.791023,
+                       "lng" : -122.2683102
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.79237198029149,
+                          "lng" : -122.2669612197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.7896740197085,
+                          "lng" : -122.2696591802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJb4ShQ82Aj4ARTux9dgahZfs",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1st Street",
+                       "short_name" : "1st St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "1st St, San Francisco, CA, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 37.7910528,
+                          "lng" : -122.3918668
+                       },
+                       "southwest" : {
+                          "lat" : 37.7856015,
+                          "lng" : -122.3991866
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.7881209,
+                       "lng" : -122.3954958
+                    },
+                    "location_type" : "GEOMETRIC_CENTER",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.7910528,
+                          "lng" : -122.3918668
+                       },
+                       "southwest" : {
+                          "lat" : 37.7856015,
+                          "lng" : -122.3991866
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJgTyIqXyAhYARaPYlivgyUn4",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1st Street",
+                       "short_name" : "1st St",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Treasure Island",
+                       "short_name" : "Treasure Island",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94130",
+                       "short_name" : "94130",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1st St, San Francisco, CA 94130, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 37.8138247,
+                          "lng" : -122.3624842
+                       },
+                       "southwest" : {
+                          "lat" : 37.8114061,
+                          "lng" : -122.363332
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.8126469,
+                       "lng" : -122.3625226
+                    },
+                    "location_type" : "GEOMETRIC_CENTER",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.8139643802915,
+                          "lng" : -122.3615591197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.8112664197085,
+                          "lng" : -122.3642570802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJz-M0CSSAhYARJ--IVMKeDD8",
+                 "types" : [ "route" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Embarcadero Road",
+                       "short_name" : "Embarcadero Rd",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Belvedere",
+                       "short_name" : "Belvedere",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Belvedere Tiburon",
+                       "short_name" : "Belvedere Tiburon",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Marin County",
+                       "short_name" : "Marin County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94920",
+                       "short_name" : "94920",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "2470",
+                       "short_name" : "2470",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "1 Embarcadero Rd, Belvedere Tiburon, CA 94920, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 37.870505,
+                       "lng" : -122.462815
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.8718539802915,
+                          "lng" : -122.4614660197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.86915601970851,
+                          "lng" : -122.4641639802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJGRj9zGOEhYARMsha5zRIUVk",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Pier 1",
+                       "short_name" : "Pier 1",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "The Embarcadero",
+                       "short_name" : "The Embarcadero",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Embarcadero",
+                       "short_name" : "Embarcadero",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94105",
+                       "short_name" : "94105",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Pier 1 The Embarcadero, San Francisco, CA 94105, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 37.797093,
+                       "lng" : -122.3952442
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.79844198029149,
+                          "lng" : -122.3938952197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.7957440197085,
+                          "lng" : -122.3965931802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJ63srMWeAhYARdi2UizT91wE",
+                 "types" : [ "subpremise" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "1",
+                       "short_name" : "1",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Embarcadero Center",
+                       "short_name" : "Embarcadero Center",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Financial District",
+                       "short_name" : "Financial District",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco",
+                       "short_name" : "SF",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "San Francisco County",
+                       "short_name" : "San Francisco County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "94111",
+                       "short_name" : "94111",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "1 Embarcadero Center, San Francisco, CA 94111, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 37.7949973,
+                       "lng" : -122.3994346
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 37.79634628029149,
+                          "lng" : -122.3980856197085
+                       },
+                       "southwest" : {
+                          "lat" : 37.7936483197085,
+                          "lng" : -122.4007835802915
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJ66ICTWCAhYARsPKj6-TLcuc",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123%20Post%20Road%20Westport%20CT&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:01 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '600'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Post Road",
+                       "short_name" : "Post Rd",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Westport",
+                       "short_name" : "Westport",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Fairfield County",
+                       "short_name" : "Fairfield County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Connecticut",
+                       "short_name" : "CT",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "06880",
+                       "short_name" : "06880",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4212",
+                       "short_name" : "4212",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Post Rd, Westport, CT 06880, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.1371891,
+                          "lng" : -73.3676839
+                       },
+                       "southwest" : {
+                          "lat" : 41.1371787,
+                          "lng" : -73.3676966
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.1371787,
+                       "lng" : -73.3676839
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.1385328802915,
+                          "lng" : -73.3663412697085
+                       },
+                       "southwest" : {
+                          "lat" : 41.1358349197085,
+                          "lng" : -73.36903923029152
+                       }
+                    }
+                 },
+                 "place_id" : "EiQxMjMgUG9zdCBSZCwgV2VzdHBvcnQsIENUIDA2ODgwLCBVU0E",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:01 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '600'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Post Road",
+                       "short_name" : "Post Rd",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Westport",
+                       "short_name" : "Westport",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Fairfield County",
+                       "short_name" : "Fairfield County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Connecticut",
+                       "short_name" : "CT",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "06880",
+                       "short_name" : "06880",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4212",
+                       "short_name" : "4212",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Post Rd, Westport, CT 06880, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.1371891,
+                          "lng" : -73.3676839
+                       },
+                       "southwest" : {
+                          "lat" : 41.1371787,
+                          "lng" : -73.3676966
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.1371787,
+                       "lng" : -73.3676839
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.1385328802915,
+                          "lng" : -73.3663412697085
+                       },
+                       "southwest" : {
+                          "lat" : 41.1358349197085,
+                          "lng" : -73.36903923029152
+                       }
+                    }
+                 },
+                 "place_id" : "EiQxMjMgUG9zdCBSZCwgV2VzdHBvcnQsIENUIDA2ODgwLCBVU0E",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=123,%20Post%20Road,%20Westport,%20CT%20and%20other%20stuff&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:01 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '617'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "123",
+                       "short_name" : "123",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Post Road",
+                       "short_name" : "Post Rd",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Westport",
+                       "short_name" : "Westport",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Fairfield County",
+                       "short_name" : "Fairfield County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Connecticut",
+                       "short_name" : "CT",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "06880",
+                       "short_name" : "06880",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "4212",
+                       "short_name" : "4212",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "123 Post Rd, Westport, CT 06880, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.1371891,
+                          "lng" : -73.3676839
+                       },
+                       "southwest" : {
+                          "lat" : 41.1371787,
+                          "lng" : -73.3676966
+                       }
+                    },
+                    "location" : {
+                       "lat" : 41.1371787,
+                       "lng" : -73.3676839
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.1385328802915,
+                          "lng" : -73.3663412697085
+                       },
+                       "southwest" : {
+                          "lat" : 41.1358349197085,
+                          "lng" : -73.36903923029152
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "EiQxMjMgUG9zdCBSZCwgV2VzdHBvcnQsIENUIDA2ODgwLCBVU0E",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1st%202%20and%203rd%20person%20in%20California&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:01 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '432'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "California",
+                       "short_name" : "CA",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "California, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 42.0095169,
+                          "lng" : -114.1313926
+                       },
+                       "southwest" : {
+                          "lat" : 32.5342643,
+                          "lng" : -124.415165
+                       }
+                    },
+                    "location" : {
+                       "lat" : 36.778261,
+                       "lng" : -119.4179324
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 42.0095169,
+                          "lng" : -114.1313926
+                       },
+                       "southwest" : {
+                          "lat" : 32.5342643,
+                          "lng" : -124.415165
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "ChIJPV4oX_65j4ARVW8IJ6IJUYs",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=3%20Rover%20Road%20in%20Christmasville%20MA%2012346&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:01 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:01 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '65'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [],
+           "status" : "ZERO_RESULTS"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:01 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1500000001230b&language=en&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Jan 2016 00:12:02 GMT
+      Expires:
+      - Wed, 20 Jan 2016 00:12:02 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '65'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [],
+           "status" : "ZERO_RESULTS"
+        }
+    http_version: 
+  recorded_at: Tue, 19 Jan 2016 00:12:02 GMT
+recorded_with: VCR 3.0.0

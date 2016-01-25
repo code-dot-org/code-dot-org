@@ -8,7 +8,7 @@ title: Terms of Service
 
 # Terms of Service(서비스 약관)
 
-Last Revised: December 5, 2014
+최신 개정판: 2014 년 12 월 5 일
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the web sites located at <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”), including the tutorial platform at <http://studio.code.org> (“**Code Studio**”).
 
@@ -70,7 +70,7 @@ Code.org’s [library of videos](http://youtube.com/user/CodeOrg) may be redistr
 
 The celebrities and video “cast“ members appearing in Code.org tutorial videos reserve all rights to their likeness and name. By allowing you to redistribute these videos or tutorials AS-IS, Code.org does not grant any additional rights to use of the likeness or name of these individuals.
 
-The artwork used in our tutorials is copyrighted and use of these tutorials does not grant you any rights to use the artwork in any other manner. Plants vs. Zombies are (c) 2014 [Electronic Arts Inc](http://www.ea.com/). Plants vs. Zombies and PopCap are trademarks of [Electronic Arts Inc](http://www.ea.com/). Angry Birds are (c) 2014 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds is a trademark of [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat and Ice Age are trademarks and © Twentieth Century Fox Licensing and Merchandising.
+The artwork used in our tutorials is copyrighted and use of these tutorials does not grant you any rights to use the artwork in any other manner. Plants vs. Zombies are (c) 2012 [Electronic Arts Inc](http://www.ea.com/). Plants vs. Zombies and PopCap are trademarks of [Electronic Arts Inc](http://www.ea.com/). Angry Birds are (c) 2013 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds is a trademark of [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat and Ice Age are trademarks and © Twentieth Century Fox Licensing and Merchandising.
 
 The software powering Code.org tutorials is governed by an open source license which is posted as part of the [source code repository](https://github.com/code-dot-org/).
 

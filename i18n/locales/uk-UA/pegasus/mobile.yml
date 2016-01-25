@@ -20,6 +20,8 @@ uk-UA:
   submit: Надіслати
   twentyhours_heading: Спробуйте наш курс вступу до інформатики
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні поняття комп'ютерних наук та програмування на подальших курсах."
+  og_title: Every child deserves opportunity
+  og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a> <br/> 8-14 грудня 2014 року <br/>'
   hoc2014_students: Учні
   hoc2014_try: Спробувати
@@ -36,7 +38,7 @@ uk-UA:
   csedweek_map_legend_title: Умовні позначення
   csedweek_map_legend_event: Заходи Години коду
   csedweek_map_legend_cs_tech_jam: Технічні студії
-  cded_sign_up: Зареєструватися
+  cded_sign_up: Реєстрація
   cded_try_it: Спробувати
   twentyhours_trynow: Спробувати
   california_heading: Попросіть свою школу викладати інформатику
@@ -114,7 +116,6 @@ uk-UA:
   hoc_is_here: '#HourOfCode вже тут - подивіться, що там! @codeorg'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   twitter_teach_cs: Чому більше шкіл не викладають інформатику? Ми можемо це виправити. http://youtu.be/2DxWIxec6yo. Відвідайте http://code.org/ щоб дізнатися більше.
-  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Дізнатися більше</a> про призи для кожного вчителя.'
   learn_hoc: Вивчати Годину Коду
   beyond_hoc: Поза Годиною коду
   what_gender: Якої ви статі?
@@ -142,7 +143,7 @@ uk-UA:
   studiobar_flappy_body: Створіть та поділиться своєю власною грою Пурха
   studiobar_teacher_title: Створено для вчителів
   studiobar_teacher_body: Введіть студію коду в свій клас
-  studiobar_frozen_title: Година Коду
+  studiobar_frozen_title: Година коду
   studiobar_frozen_body: Створіть зимову казку з Анною та Ельзою
   studiobar_donate_title: Підтримати
   studiobar_donate_body: На кожен долар пожертв ми навчимо одну дитину
@@ -211,9 +212,9 @@ uk-UA:
   homepage_slot_text_shop: Магазин
   homepage_slot_text_flappy: Код Пурха
   homepage_action_text_hoc: Година коду для кожного учня.
-  homepage_action_text_num_served: '# спробували'
+  homepage_action_text_num_served: '# вже спробували'
   homepage_action_text_join_us: Приєднуйтесь
-  homepage_action_text_sign_up: Зареєструватися
+  homepage_action_text_sign_up: Реєстрація
   homepage_action_text_try_it: Спробувати
   homepage_action_text_volunteers: Потрібні технічні волонтери
   homepage_action_text_codevideo: Переглянути відео
@@ -229,14 +230,17 @@ uk-UA:
   homepage_banner_text_link: Дізнайтеся більше
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Дізнайтеся більше
-  homepage_slot_text_title_hoc: Година Коду
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers_link: Дізнайтеся більше
+  homepage_slot_text_title_hoc: Година коду
   homepage_slot_text_blurb_hoc: Кожен може навчитися. Почніть сьогодні
   homepage_slot_text_link_hoc: Спробуйте годину коду
   homepage_slot_text_link_host: Провести Годину Коду
-  homepage_slot_text_link_hocserved: '# спробували'
+  homepage_slot_text_link_hocserved: '# вже спробували'
   homepage_solot_text_link_volunteer: Волонтер для Години коду
   homepage_slot_text_title_students: Учні
   homepage_slot_text_blurb_students: Пройдіть всі наші навчальні курси
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Спробуйте Студію Коду
   homepage_slot_text_link_local: Знайти місцевий клас
   homepage_slot_text_link_othercourses: Інші онлайн курси
@@ -252,7 +256,7 @@ uk-UA:
   homepage_slot_text_link_donate: Зробити пожертвування
   homepage_header_codestudio: Творчість учнів Студії Коду
   homepage_header_donors: Code.org дякує своїм помічникам
-  homepage_donors_seall: Подивитися все
+  homepage_donors_seall: Подивитися усіх
   homepage_donors_donate: Підтримати
   contact_form_topic_student: Я учень
   contact_form_topic_parent: Я батько/мати
@@ -292,26 +296,31 @@ uk-UA:
   class_submission_level_vocational: Професійна освіта
   class_submission_languages_other: Інші мови
   inspirational_videos_more: 'Більше <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">надихаючих відео</a> від рольових моделей та знаменитостей'
+  playlab_choose_theme: Обери тему Ігрової лабораторїі
+  playlab_classic_title: Класична
+  playlab_gumball_title: Гамбол
+  playlab_iceage_title: 'Льодовиковий період - скоро'
+  playlab_iceage_title_live: Льодовиковий період
   starwars_subtitle: Закодуємо далеку Галактику
   starwars_javascript_title: JavaScript
   starwars_javascript_description: На основі рухомих блоків та JavaScript.
   starwars_javascript_specs: Лише англійська | Сучасні браузери| Вік 11+
-  starwars_javascript_start_button: Спробувати
-  starwars_blocks_title: блоки
+  starwars_javascript_start_button: Спробувати зараз
+  starwars_blocks_title: Блоки
   starwars_blocks_description: На основі рухомих блоків.
-  starwars_blocks_specs: Багато мов (скоро) | Сучасні браузери, смартфони, планшети| Вік 6-10
-  starwars_blocks_start_button: Спробувати
+  starwars_blocks_specs: Багато мов | Сучасні браузери, смартфони, планшети| Вік 6-106
+  starwars_blocks_start_button: Спробувати зараз
   starwars_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
   starwars_speak_languages: Інша мова?
   starwars_help_translate: Допоможіть нам з перекладом
   starwars_platform_text: Сучасні браузери, смартфони, планшети
-  mc_name: Година коду від Minecraft
-  mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх пригодах у світі Minecraft.
-  mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алексу в їхніх пригодах у світі Minecraft.
+  mc_name: Година коду від Майнкрафт
+  mc_longdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх пригодах у світі Майнкрафт.
+  mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх пригодах у світі Майнкрафт.
   mc_gradelevel: Вік 6+
   mc_platformtext: Сучасні браузери, смартфони, планшети
-  mc_specs: Багато мов (скоро) | Сучасні браузери та планшети| Вік 6+
-  minecraft_subtitle: Година коду від Minecraft
+  mc_specs: Багато мов | Сучасні браузери та планшети| Вік 6-106
+  minecraft_subtitle: Година коду від Майнкрафт
   volunteer_engineer_submission_title: Надихайте учнів та волонтерів на Годину коду.
   volunteer_engineer_submission_subtitle_generic: '100000 вчителів збираються провести Годину коду в своїх класах цьогоріч 7-13 грудня 2015 року. Їм потрібна допомога! '
   volunteer_engineer_submission_subtitle_specific: '%{num_teachers} вчителів потребують волонтерів, натхненних інформатичною освітою для допомоги у проведенні Години коду цього грудня.<br>%{num_volunteers} волонтерів вже підписались. Приєднуйтесь.'
@@ -320,6 +329,8 @@ uk-UA:
     Ці вчителі хочуть, щоб хтось, <span style="font-family: 'Gotham 7r', sans-serif;">захоплений інформатичною освітою</span> допоміг їм у класі, або <span style="font-family: 'Gotham 7r', sans-serif;">надихнув</span> їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат). Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію власного заходу Години коду.
   volunteer_engineer_submission_intro_signup: |-
     Вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span class="form-required-field">*</span> є обов'язковими для заповнення.
+  volunteer_engineer_submission_intro_links: 'Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів на нашій <a href="%{volunteer_local}">карті волонтерів</a>.'
+  volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам на карті
   volunteer_engineer_submission_field_name: Ім’я
   volunteer_engineer_submission_field_name_placeholder: "Повне ім'я"
@@ -399,7 +410,7 @@ uk-UA:
   dashboard_landing_available_courses: Перелік курсів, які на даний момент доступні для Вас і Ваших учнів.
   dashboard_landing_more_tutorials: Хочите побачити більше уроків?
   dashboard_landing_more_tutorials_desc: 'Є й інші навчальні посібники <a href="/learn/beyond"> від наших партнерів.</a> Навчіться програмувати з роботами, робити веб-сторінки, створювати власні програмки або вивчати інші мови, як C++, Ruby або Python!'
-  dashboard_hoc_courses: Година код для людей різного віку
+  dashboard_hoc_courses: Година коду для людей різного віку
   dashboard_hoc_courses_desc: Спробуйте один із цих коротше 1 годину підручники з вашими студентами!
   dashboard_hoc_courses_desc_and_cta: 'Спробуйте зі своїми учнями ці короткі, 1-годинні підручники. <a href="https://hourofcode.com">Приєднуйтесь до руху Години коду</a> протягом тижня інформатики.'
   dashboard_k5_courses: 20-годинні курси для К-5
@@ -508,7 +519,7 @@ uk-UA:
   dashboard_curriculum: Навчальний план
   dashboard_curriculum_overview: Огляд навчальної програми
   dashboard_overview: Огляд
-  dashboard_sequence: Послідовність
+  dashboard_sequence: Огляд
   dashboard_framework: Програма
   dashboard_standards: Стандарти
   dashboard_implementation_guide: Практика впровадження
@@ -534,7 +545,7 @@ uk-UA:
   dashboard_progress_completed_too_many_blocks: завершено, забагато блоків
   dashboard_progress_completed_perfect: виконано, ідеально
   dashboard_progress_furthest_level_attempted: останній відкритий рівень
-  dashboard_stage: етап
+  dashboard_stage: Етап
   dashboard_puzzle: Завдання
   dashboard_question: Питання
   dashboard_response: Відповідь
@@ -556,39 +567,53 @@ uk-UA:
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
   dashboard_announce_view_all: Переглянути всі
-  dashboard_announce_hoc: '<b>9 листопада 2015</b> - Новий підручник Години коду вже тут, за участі нового фільму Зоряні війни: Пробудження сили. Попрацюємо з Реєм, щоб запрограмувати нового дроїда BB-8 на виконання місії. А тоді приєднаємось до Леї, щоб створити і поділитись власною грою у далекій-далекій галактиці.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_button_text: Дізнайтеся більше
+  dashboard_announce_hoc: "<b>23 листопада 2015</b> - Хочете допомогти інформатичній освіті протягом Години коду? Більше 7000 волонтерів вже збираються надихати учнів, відвідавши клас чи взявши участь у відео-чаті. Перегляньте карту, щоб зв'язатися з місцевими волонтерами."
+  dashboard_announce_playlab: '<b>4 грудня 2015</b> - Година коду вже тут! Спробуйте наші 50 підручників для будь-якого віку та пристрою. Новинка цього тижня: закодуйте власні історії та ігри у новій Ігровій лабораторії, Льодовиковому періоді та Гамболі.'
   code_hoc_coming: 'Година коду вже тут - 8-14 грудня!'
   code_sign_up: Зареєструватися для участі протягом тижня інформатики
   learn_more: Спробувати зараз
   learn_sign_up_description: Зареєструйтесь для участі в Годині коду протягом тижня інформатики
-  learn_sign_up_button: Зареєструватися
+  learn_sign_up_button: Реєстрація
   learn_videos_watch: Перегляньте у класі ці відео для натхнення
   learn_videos_show: Покажіть ці відео своєму класу для натхнення
   learn_videos_before_hoc: Перегляньте у класі ці відео для натхнення перед Годиною коду
   learn_educator_resources_description: Дізнайтесь як викладати Годину коду
   learn_educator_resources_button: Ресурси для вчителів
   learn_are_you_educator: 'Ви педагог? Дізнайтеся, <a href="http://hourofcode.com/resources/how-to">як провести Годину коду</a>'
+  learn_find_volunteer: '<a href="https://code.org/volunteer/local">Знайдіть місцевого волонтера</a> для допомоги протягом Години коду'
+  learn_teacher_led_lesson_plans: 'Знайдіть натхнення <a href="https://code.org/teacher-led">у планах занять Години коду для вчителів</a>'
+  learn_how_to_hoc: 'Дотримуйтесь <a href="https://hourofcode.com/how-to">наших інструкцій</a> з викладання Години коду'
+  learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Дізнатися більше</a> про призи для кожного вчителя.'
+  learn_inspirational_videos: 'Надихайте учнів, показуючи їи <a href="https://code.org/educate/inspire">ці відео</a>'
   hoc2014_try_new_tutorials: Спробуйте наш новий підручник Години коду
   hoc2014_try_new_tutorial: Спробуйте новий підручник Години коду в бета-версії
   hoc2014_try_scrat: Angry Birds, PvZ та Scrat
   hoc2014_try_frozen: Художник з Анною та Ельзою, із Крижаного серця
   carousel_heading_codeorg: Підручники від Code.org
+  carousel_heading_codeorg_any_device: Підручники від Code.org (для будь-якого пристрою)
   carousel_heading_3rd_party: Підручники від інших учасників
   carousel_heading_third_party: Підручники від інших учасників
   carousel_heading_international: Підручники вашою мовою
   carousel_heading_domestic: Підручники англійською мовою
-  carousel_heading_beginners: Посібники для початківців
+  carousel_heading_beginners: Посібники для середніх класів від партнерів
+  carousel_heading_beyond_beginners: Посібники для початківців
   carousel_heading_javascript: Посібники з вивчення Javascript
+  carousel_heading_beyond_javascript: Посібники з вивчення JavaScript
   carousel_heading_unplugged: Немає пристроїв або Інтернету? Спробуйте безмашинні вправи
   carousel_heading_devices: Підручники для телефонів та планшетів
+  carousel_heading_beyond_devices: Підручники для телефонів та планшетів
   carousel_heading_languages: Підручники інших мов програмування
+  carousel_heading_beyond_languages: Підручники інших мов програмування
   carousel_heading_apps_games: Створіть власні програми чи ігри
   carousel_heading_university: Курси університетів онлайн
   carousel_heading_webpages: Навчіться створювати веб-сторінки
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
   educator_notes: Інформація для вчителя
-  teach_led_lesson_plans: Плани уроків Години коду для вчителів
+  teach_led_lesson_plans: Плани уроків для вчителів
+  learn_footer_all_tutorials: 'Перегляньте<a href="https://code.org/educate/allhourofcode">вичерпний перелік підручників Години коду</a>. Щоб ознайомитись з нашими критеріями та інструкціями з подання підручників Години коду, <a href="https://hourofcode.com/tutorial-guidelines">клацніть тут.</a>'
   how_to_teach_hoc: 'Як викладати "Годину коду"'
   more_resources_educators: Більше ресурсів для вчителів та освітян
   beyond_submission: Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте критерії та форму подання.
@@ -602,8 +627,8 @@ uk-UA:
   mobile_devices: Підручники для мобільних пристроїв
   frozen_name: Програмуємо з Анною та Ельзою
   starwars_name: 'Зоряні війни: Закодуємо далеку Галактику'
-  codeorg_name: "Напишіть свою першу комп'ютерну програму"
-  codeintl_name: "Напишіть свою першу комп'ютерну програму"
+  codeorg_name: Класичний лабіринт
+  codeintl_name: Класичний лабіринт
   thinkersmithspanish_name: Мої друзі-роботи
   khan_name: Вступ до JavaScript
   khanes_name: Вступ до JavaScript
@@ -639,8 +664,17 @@ uk-UA:
   thinkersmith2_name: Двійкові дрібнички
   kodableunplugged_name: Безумна сімейка fuzzFamily
   projguts_name: Камінь, папір, ножиці
-  hourofcode_name: Бланк для нового code.org/hoc
+  hourofcode_name: Класичний лабіринт
   playlab_name: Ігрова студія
+  infinity_name: Ігрова лабораторія Infiinty
+  artist_name: Художник
+  monstercoding_name: Квест кодування Загадкового острова
+  allcancode_name: Біжи, Марко!
+  csfirst_name: Перша інформатика
+  boxisland_name: Острів Бокс
+  codesters_name: Codesters
+  texasinstruments_name: 10 хвилин коду
+  teacherled_name: Плани уроків для вчителів
   codeorg_gradelevel: Вік 4-104
   codeintl_gradelevel: Вік 4-104
   thinkersmithspanish_gradelevel: Для всіх
@@ -680,8 +714,17 @@ uk-UA:
   projguts_gradelevel: Вік 10-13
   hourofcode_gradelevel: Вік 4-104
   frozen_gradelevel: Вік 8 +
-  starwars_gradelevel: Вік 6+
+  starwars_gradelevel: Вік 6-106
   playlab_gradelevel: Вік 4-104
+  infinity_gradelevel: Вік 4-104
+  artist_gradelevel: Вік 4-104
+  monstercoding_gradelevel: Вік 5-13
+  allcancode_gradelevel: Вік 5-10
+  csfirst_gradelevel: Вік 9-14
+  boxisland_gradelevel: Початкова школа
+  codesters_gradelevel: Вік 12-14
+  texasinstruments_gradelevel: Вік 13-16
+  teacherled_gradelevel: Вік 5+
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
   thinkersmithspanish_platformtext: Безмашинні вправи
@@ -723,6 +766,13 @@ uk-UA:
   frozen_platformtext: Сучасні браузери + планшети
   starwars_platformtext: Сучасні браузери + планшети
   playlab_platformtext: Сучасні браузери, смартфони, планшети
+  monstercoding_platformtext: Сучасні браузери, iOS, Android
+  allcancode_platformtext: Сучасні браузери, iOS
+  csfirst_platformtext: Сучасні веб-браузери
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Сучасні веб-браузери
+  texasinstruments_platformtext: Калькулятори ТІ
+  teacherled_platformtext: Сучасні браузери, смартфони, планшети
   codeorg_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   codeintl_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   thinkersmithspanish_shortdescription: Tutorial para un grupo sin computadoras
@@ -760,10 +810,19 @@ uk-UA:
   thinkersmith2_shortdescription: "Дізнайтесь, як інформація подається в комп'ютері за допомогою 0 та 1"
   kodableunplugged_shortdescription: Веселі безмашинні вправи
   projguts_shortdescription: 'Спробуйте змоделювати гру "камінь-ножиці-папір"'
-  hourofcode_shortdescription: Бланк для нового code.org/hoc
+  hourofcode_shortdescription: Вчіться програмувати з Марком Цукенбергом та Злими птахами!
   frozen_shortdescription: Вивчимо програмування, приєднавшись до Анни та Ельзи у подорожі чарівною зимовою казкою.
   starwars_shortdescription: Навчись програмувати дроїдів, створи власну гру Зоряних воєн у далекій-далекій галактиці.
   playlab_shortdescription: Складіть історію або створіть гру в Ігровій студії!
+  infinity_shortdescription: За допомогою Ігрової лабораторії створіть гру або історію за участі персонажів Діснея Infiinty.
+  artist_shortdescription: Малюйте картини та узори разом з Художником!
+  monsterocding_shortdescription: Барвиста пригода самостійного програмування для дітей.
+  allcancode_shortdescription: Захоплююча гра з керування Марко за допомогою візуальної мови програмування.
+  csfirst_shortdescription: Анімуйте історію про двох персонажів в океані. І додайте власний стиль!
+  boxisland_shortdescription: Подорожуйте на острів Бокс з хоробрим Хіро.
+  codesters_shortdescription: Створюйте власні ігри, анімації та ілюстрації у Python.
+  texasinstruments_shortdescription: 'Вивчайте основи програмування за допомогою калькулятора TI-84&#8482; Plus.'
+  teacherled_shortdescription: Надихайтесь для проведення власної події Години коду з цими планами уроків.
   codeorg_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
   codeintl_longdescription: 'Вивчайте основи програмування шляхом перетягування блоків. Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові алгоритми як цикли та умови. Перекладено 34 мовами.'
   thinkersmithspanish_longdescription: 'За допомогою визначеного словника робота, учні навчаться скеровувати один одного для досягнення певної мети, без попередніх домовленостей. Ця вправа навчає встановлювати відповідність між символами та діями, а також розвиває навик відлагодження. "Мої друзі-роботи" працює найкраще як групова діяльність, і містить робочі аркуші вчителя для використання у класі.'
@@ -805,6 +864,13 @@ uk-UA:
   frozen_longdescription: Скористаємось вмінням програмувати, щоб допомогти Анні та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки та узори, покатаєтесь на ковзанах та створите зимову казку, якою зможете поділитися з друзями!
   starwars_longdescription: Навчись програмувати дроїдів, створи власну гру Зоряних воєн у далекій-далекій галактиці.
   playlab_longdescription: Створіть історію або гру в Ігровій лабораторії! Запрограмуйте тварин, піратів, зомбі, ніндзя і багато інших персонажів, щоб вони рухалися, говорили, набирали бали і навіть запускали вогняні кулі!
+  monstercoding_longdescription: Квест кодування Загадкового острова від Monster Coding пропонує веселу самостійну пригоду, яка навчає дітей кільком поняттям програмування. Кожна вправа, що базується на блоках, виконується на основі попередньої, вводячи поняття функцій, логічних виразів, циклів, команд розгалуження, масивів, за допомогою кольорової анімованої графіки та аудіо-інструкцій.
+  allcancode_longdescription: 'Учні грають у пригодницьку гру на основі оригінальної історії. Вони проведуть Марко - головного персонажа - через кожен рівень, надаючи покрокові інструкції у формі візуальної мови програмування, що використовується у Годині коду. Вони знайомляться з послідовним виконанням команд, повтореннями, розгалуженнями, навіть не помічаючи цього.'
+  csfirst_longdescription: Створіть історію про двох персонажів у морі. Анімуйте воду, налаштуйте сцену, щоб додати власну іскру. Використайте код, щоб розповісти свою історію!
+  boxisland_longdescription: Відправляйтесь у подорож на острів Бокс і допоможуть Хіро зібрати усі годинники, розсипані у пустелі! У цьому підручнику можна вивчити основи алгоритмів, послідовного виконання, цикли та умови!
+  codesters_longdescription: 'Створюйте власні ігри, анімації та ілюстрації за допомогою Python. Кои буде готово, можна поділитися з друзями! Програмуйте у Python, справжній мові програмування, яка щодня використовується у компаніях - наша збірка інструментів для перетягування робить її вивчення дуже легким! Спробуйте створити гру в баскетбол зрежисуйте танець чи створіть анімаційну листівку! '
+  texasinstruments_longdescription: 'Вправи 10 хвилин коду можна використати у класі для того, щоб розпалити інтерес учнів до програмування через технології TI, які вони носять у своїх портфелях. Вивчайте основи програмування на TI-84&#8482; Plus і починайте програмувати всього за 10 хвилин - попередній досвід не потрібен!  '
+  teacherled_longdescription: Тепер, коли десятки тисяч вчителів вже спробували Годину коду, багато з них вже готові до більш творчих, менш універсальних вправ, які викладають основи інформатики. Щоб допомогти вчителям знайти натхнення, ми зібрали і перевірили одногодинні уроки та вправи, розроблені для різних предметних галузей для ветеранів Години коду.
   codeorg_beyond_name: Вступ до інформатики (до 8 класу)
   khan_beyond_name: Вивчайте програмування
   tynker_beyond_name: Вивчайте програмування вдома
@@ -993,3 +1059,11 @@ uk-UA:
   compatibility_https_header: Будь ласка, увімкніть HTTPS для Code.org.
   compatibility_https_message: "Для підвищення безпеки, ми перейшли до HTTPS %{https_date}. Ви не зможете отримати доступ до Code.org після цієї дати. <a href='%{it_requirements_url}'> натисніть тут</a>, щоб дізнатися, як увімкнути HTTPS для Code.org."
   compatibility_https_hide_this_warning: Сховати попередження
+  starwars_shortcode: star
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: махати
+  infinity_shortcode: inf
+  playlab_shortcode: lab
+  artist_shortcode: art

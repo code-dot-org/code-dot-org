@@ -19,12 +19,6 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <%= view :promote_posters %>
 
-<a id="banners"></a>
-
-## Vis disse bannere på din hjemmeside
-
-[![image](/images/fit-250/banner1.jpg)](/images/banner1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/banner3.jpg)](/images/banner3.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-500/banner5.jpg)](/images/banner5.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
-
 <a id="social"></a>
 
 ## Del dette på sociale medier
@@ -40,6 +34,16 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+
+**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+
+  1. Enhver reference til "Hour of Code" bør anvendes på en måde, der ikke tyder på, at det er dit eget navn, men snarere henviser til Hour of Code som en græsrodsbevægelse. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  3. Inkluder sprog på siden (eller i den sidefod), herunder links til hjemmesiderne CSEdWeek og Code.org, der siger følgende:
+    
+    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+
+  4. No use of "Hour of Code" in app names.
 
 <a id="stickers"></a>
 

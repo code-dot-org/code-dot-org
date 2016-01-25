@@ -3,61 +3,61 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: ברוכים הבאים אל שעת הקוד הראשונה שלכם! בואו נצלול אל תוך הטעימה הראשונה
-          שלכם בתכנות.
+        text: "ברוכים הבאים אל שעת הקוד הראשונה שלכם! בואו נצלול אל תוך הטעימה הראשונה
+          שלכם בתכנות."
       2:
         image: notes/hoc1_2.jpg
-        text: אנחנו נשתמש בבלוקלי, שפת תכנות חזותית בה קוד נכתב על ידי גרירה ושחרור
-          של בלוקים.
+        text: "אנחנו נשתמש בבלוקלי, שפת תכנות חזותית בה קוד נכתב על ידי גרירה ושחרור
+          של בלוקים."
       3:
         image: notes/hoc1_3.jpg
         text: רוב תוכניות המחשב נכתבות, אבל בלוקלי הינה שפה חזותית. כל בלוק מקביל
           לשורת קוד "אמיתית" אחת.
       4:
         image: notes/hoc1_4.jpg
-        text: כאן תלמד את יסודות מדעי המחשב, מושגים אשר משמשים בכל מקום מיצירת אפליקציות
-          ועד שליטה על רכב החלל במאדים.
+        text: "כאן תלמד את יסודות מדעי המחשב, מושגים אשר משמשים בכל מקום מיצירת אפליקציות
+          ועד שליטה על רכב החלל במאדים."
       5:
         image: notes/hoc1_5.jpg
-        text: תוכנית היא אוסף של הוראות אשר על המחשב שלך לבצע.
+        text: "תוכנית היא אוסף של הוראות אשר על המחשב שלך לבצע."
       6:
         image: notes/hoc1_6.jpg
-        text: המטרה של התוכנית הראשונה שלך היא להעביר את הציפור הכועסת דרך מבוך ולהכות
-          חזיר ירוק.
+        text: "המטרה של התוכנית הראשונה שלך היא להעביר את הציפור הכועסת דרך מבוך ולהכות
+          חזיר ירוק."
       7:
         image: notes/hoc1_7.jpg
-        text: הצד השמאלי הוא המבוך בו התוכנית שלך מופעלת. ההוראות עבור כל פאזל נמצאות
-          מתחת למבוך.
+        text: "הצד השמאלי הוא המבוך בו התוכנית שלך מופעלת. ההוראות עבור כל פאזל נמצאות
+          מתחת למבוך."
       8:
         image: notes/hoc1_8.jpg
-        text: ההוראות עבור הציפור הכועסת נמצאות בארגז הכלים האמצעי. השתמש בהן כדי
-          לבנות את הקוד שלך.
+        text: "ההוראות עבור הציפור הכועסת נמצאות בארגז הכלים האמצעי. השתמש בהן כדי
+          לבנות את הקוד שלך."
       9:
         image: notes/hoc1_9.jpg
-        text: מצד ימין נמצאת סביבת העבודה, אליה תגרור בלוקים מארגז הכלים כדי לבנות
-          את התוכנית שלך. כדי למחוק בלוק, גרור אותו אל פח האשפה שבפינה.
+        text: "מצד ימין נמצאת סביבת העבודה, אליה תגרור בלוקים מארגז הכלים כדי לבנות
+          את התוכנית שלך. כדי למחוק בלוק, גרור אותו אל פח האשפה שבפינה."
       10:
         image: notes/hoc1_10.jpg
         text: כל בלוק הוא הוראה אחת. אם תגרור בלוק "התקדם" אל סביבת העבודה שלך ותלחץ
           על "הפעל תוכנית", הציפור תנוע צעד אחד על המבוך.
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace
-          and attach them together. The bird will do the commands from top to bottom.
+        text: "על מנת לבצע יותר מפעולה אחת, ניתן לגרור בלוקים רבים אל סביבת העבודה
+          שלך, ולחבר אותם יחדיו. הציפור תבצע את הפקודות מלמעלה למטה."
       12:
         image: notes/hoc1_12.jpg
         text: אם אתה מפעיל תוכנית ורוצה לתקן אותה ולנסות שוב, לחץ על לחצן "איפוס".
       13:
         image: notes/hoc1_13.jpg
-        text: בואו נתפוס את החזירים האלה!
+        text: "בואו נתפוס את החזירים האלה!"
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: הי, אני ג'וניור! כל צוות מכוניות מירוץ צריך מדעני מחשב כדי לנצח. הם
-          מנתחים נתונים מהמכונית כדי לגרום לה לנסוע מהר יותר.
+        text: "הי, אני ג'וניור! כל צוות מכוניות מירוץ צריך מדעני מחשב כדי לנצח. הם
+          מנתחים נתונים מהמכונית כדי לגרום לה לנסוע מהר יותר."
       2:
         image: notes/stage5_2.jpg
-        text: במהלך החידות הבאות תהיה אמן המשרטט קו מאחוריו בכל מקום אליו הוא הולך.
+        text: "במהלך החידות הבאות תהיה אמן המשרטט קו מאחוריו בכל מקום אליו הוא הולך."
       3:
         image: notes/stage5_3.jpg
         text: בלוק זה אומר "התקדם כ- 100 פיקסלים". פיקסלים הם נקודות ממש זעירות על
@@ -68,72 +68,72 @@
           ״פנה״ שבפאזלי המבוך.
       5:
         image: notes/stage5_5.jpg
-        text: לחץ על החץ באחד מבלוקים אלו כדי לשנות את הכמות שבה האמן ינוע קדימה או
-          יפנה. שחק מעט כדי להכיר את בלוקים חדשים אלו.
+        text: "לחץ על החץ באחד מבלוקים אלו כדי לשנות את הכמות שבה האמן ינוע קדימה
+          או יפנה. שחק מעט כדי להכיר את בלוקים חדשים אלו."
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: היי, אני פאולה! בחידות אלו אתה איכר הצריך לשטח את השדה שלו לחלוטין לשם
-          שתילת יבולים.
+        text: "היי, אני פאולה! בחידות אלו אתה איכר הצריך לשטח את השדה שלו לחלוטין
+          לשם שתילת יבולים."
       2:
         image: notes/stage9_2.jpg
-        text: עליך לעזור לה להסיר את כל ערמות העפר ולמלא את כל החורים.
+        text: "עליך לעזור לה להסיר את כל ערמות העפר ולמלא את כל החורים."
       3:
         image: notes/stage9_3.jpg
-        text: הבלוקים החדשים משמשים להסרת דלי עפר מהערימה ולמילוי החור בדלי עפר.
+        text: "הבלוקים החדשים משמשים להסרת דלי עפר מהערימה ולמילוי החור בדלי עפר."
       4:
         image: notes/stage9_4.jpg
-        text: הערימות והחורים הם בגדלים שונים, כך שעליך לספר לאיכר בכמה דליים עליו
-          להשתמש.
+        text: "הערימות והחורים הם בגדלים שונים, כך שעליך לספר לאיכר בכמה דליים עליו
+          להשתמש."
     flappy_intro:
       1:
-        image: הערות/flappy01.jpg
-        text: . היי, אני קייטי! אחד הדברים הכי מרגשים על מדעי המחשב הוא כי תוכנת מחשב
-          יכול להיות אינטראקטיביים.
+        image: "הערות/flappy01.jpg"
+        text: ". היי, אני קייטי! אחד הדברים הכי מרגשים על מדעי המחשב הוא כי תוכנת
+          מחשב יכול להיות אינטראקטיביים."
       2:
-        image: הערות/flappy02.jpg
-        text: בכל פעם שמישהו לוחץ או מקיש או מקליד במחשב או טלפון, זה יוצר אירוע,
-          ויש קוד שמחליט מה לעשות כאשר מתרחש אירוע.
+        image: "הערות/flappy02.jpg"
+        text: "בכל פעם שמישהו לוחץ או מקיש או מקליד במחשב או טלפון, זה יוצר אירוע,
+          ויש קוד שמחליט מה לעשות כאשר מתרחש אירוע."
       3:
-        image: הערות/flappy03.jpg
+        image: "הערות/flappy03.jpg"
         text: 'לדוגמה, יכולת מטפל באירועים שאומרת "בעת לחיצה על העכבר, להשמיע צליל" '
       4:
-        image: הערות/flappy04.jpg
-        text: אי פעם שמעת על המשחק FlappyBird ? על ידי שימוש באירועים, אנחנו הולכים
-          ללמוד לתכנת משלנו גירסה מותאמת אישית של FlappyBird!
+        image: "הערות/flappy04.jpg"
+        text: "אי פעם שמעת על המשחק FlappyBird ? על ידי שימוש באירועים, אנחנו הולכים
+          ללמוד לתכנת משלנו גירסה מותאמת אישית של FlappyBird!"
       5:
-        image: הערות/flappy05.jpg
-        text: הקוד שתכתוב מערב גרירה והוספה של בלוקים המייצגים פקודות למחשב. מתחת
-          למכסה המנוע, כל אחת מן הלבנים הללו מייצגת קוד.
+        image: "הערות/flappy05.jpg"
+        text: "הקוד שתכתוב מערב גרירה והוספה של בלוקים המייצגים פקודות למחשב. מתחת
+          למכסה המנוע, כל אחת מן הלבנים הללו מייצגת קוד."
       6:
-        image: הערות/flappy06.jpg
+        image: "הערות/flappy06.jpg"
         text: 'אם אתה תסתכל על סביבת העבודה, ישנן כמה בלוקים ירוקים ימולאו עבורך -
           אלה "". באירועים- '
       7:
-        image: הערות/flappy07.jpg
+        image: "הערות/flappy07.jpg"
         text: אם אתה רוצה את הציפור על דש בעת לחיצה על העכבר, אתה יכול לעשות זאת על-ידי
           הצמדת את הבלוק "דש" למטפל האירוע המתאים, ולנפנף עכשיו במשחק שלך בכל פעם
           שתלחץ על העכבר, הציפור.
       8:
-        image: הערות/flappy08.jpg
-        text: בתוך כל הפאזל של פעילות זו אנו להציג סוגים חדשים של אירועים כמו רחובות
+        image: "הערות/flappy08.jpg"
+        text: "בתוך כל הפאזל של פעילות זו אנו להציג סוגים חדשים של אירועים כמו רחובות
           ירוקים על סביבת העבודה, באפשרותך להחליט הבלוקים המתאימים כדי להוסיף בתגובה
-          לאירועים האלה.
+          לאירועים האלה."
       9:
-        image: הערות/flappy09.jpg
-        text: כאשר אתה רואה טיפה למטה/חץ למעלה כזה, כלומר, שבאפשרותך לשנות את ההגדרות
-          - כמו איזה צליל שיושמע flappy פוגע בקרקע.
+        image: "הערות/flappy09.jpg"
+        text: "כאשר אתה רואה טיפה למטה/חץ למעלה כזה, כלומר, שבאפשרותך לשנות את ההגדרות
+          - כמו איזה צליל שיושמע flappy פוגע בקרקע."
       10:
-        image: הערות/flappy10.jpg
-        text: בפאזל הסופי תוכל ליצור משחק שלך ולשתף אותו עם חברים שלך. תהנה!
+        image: "הערות/flappy10.jpg"
+        text: "בפאזל הסופי תוכל ליצור משחק שלך ולשתף אותו עם חברים שלך. תהנה!"
     loop_times:
       1:
         image: notes/hoc2_1.jpg
-        text: . היי, אני מארק! בואו ללמוד על לולאות. באמצעות לולאות אתה יכול להגיד
-          למחשב לחזור על כל סדרת פעולות שוב ושוב, אלפי או אפילו מיליארדי פעמים.
+        text: ". היי, אני מארק! בואו ללמוד על לולאות. באמצעות לולאות אתה יכול להגיד
+          למחשב לחזור על כל סדרת פעולות שוב ושוב, אלפי או אפילו מיליארדי פעמים."
       2:
         image: notes/hoc2_2.jpg
-        text: בחידה הזו, אנחנו רוצים לגרום לציפור לזוז קדימה 5 מקומות כדי להגיע לחזיר.
+        text: "בחידה הזו, אנחנו רוצים לגרום לציפור לזוז קדימה 5 מקומות כדי להגיע לחזיר."
       3:
         image: notes/hoc2_3.jpg
         text: אנחנו יכולים להיעזר בבלוק "חזור" החדש.
@@ -157,7 +157,7 @@
           ג'ורג'יה טק. בואו ננסה בלוק חדש, בלוק "חזור עד".
       2:
         image: notes/hoc3_2.jpg
-        text: מה אם אנחנו לא יודעים כמה רחוק הציפור צריכה לעבור כדי להגיע לחזיר?
+        text: "מה אם אנחנו לא יודעים כמה רחוק הציפור צריכה לעבור כדי להגיע לחזיר?"
       3:
         image: notes/hoc3_3.jpg
         text: אם נשים בלוק "התקדם" בתוך הבלוק "חזור עד", הציפור תזוז קדימה עד שתגיע
@@ -173,12 +173,12 @@
           החלטות.'
       2:
         image: notes/hoc4_2.jpg
-        text: אתה משתמש במשפטי ״אם״ יום יום בעצמך. לפני שאתה יוצא החוצה בכל בוקר,
-          אתה אומר - אם יורד גשם בחוץ, אני צריך ללבוש מעיל.
+        text: "אתה משתמש במשפטי ״אם״ יום יום בעצמך. לפני שאתה יוצא החוצה בכל בוקר,
+          אתה אומר - אם יורד גשם בחוץ, אני צריך ללבוש מעיל."
       3:
         image: notes/hoc4_3.jpg
-        text: אנחנו יכולים להגיד לזומבי לבדוק אם יש שביל שמאלה, ואם אכן הוא ימצא נתיב
-          לשמאל, נוכל לגרום לו להסתובב לכיוון זה.
+        text: "אנחנו יכולים להגיד לזומבי לבדוק אם יש שביל שמאלה, ואם אכן הוא ימצא
+          נתיב לשמאל, נוכל לגרום לו להסתובב לכיוון זה."
       4:
         image: notes/hoc4_4.jpg
         text: כדי לכתוב את הקוד לזה, בואו נגרור בלוק "אם" ונשים בלוק "פנה שמאלה" בתוכו.
@@ -189,44 +189,41 @@
           לבדוק בכל צעד האם ניתן לפנות.
       6:
         image: notes/hoc4_6.jpg
-        text: הצהרות ״אם״ מאד חשובות במדעי המחשב. אחת התוכניות הראשונות שכתבתי היתה
+        text: "הצהרות ״אם״ מאד חשובות במדעי המחשב. אחת התוכניות הראשונות שכתבתי היתה
           משחק איקס-עיגול, והיה בה משפט ״אם״ שאמר - אם השחקן האחר עומד לנצח, חסום
-          את המקום שמאפשר לו לנצח.
+          את המקום שמאפשר לו לנצח."
       7:
         image: notes/hoc4_7.jpg
         text: תהנה בשימוש בבלוק "אם"!
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: שלום! שמי הוא סאלוני. אני נעזרת בתכנות על מנת לפתור בעיות בעולם הבריאות
+          והרפואה. בואו נלמד מה עושה בלוק "If else". הוא נראה כמו בלוק "if", אך יש
+          לו חלק נוסף הנקרא "else".
       2:
         image: notes/hoc5_2.jpg
-        text: If I put a "move forward" block in the spot where it says "do" and a
-          "turn left" block where it says "else" that means that the zombie will choose
-          between 2 options. IF there is a path ahead, the zombie will move forward,
-          and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: אם אשים בלוק "התקדם" היכן שכתוב "עשה", ובלוק "פנה שמאלה" היכן שכתוב
+          "אחרת", הזומבי יבחר בין שתי אפשרויות. אם קיימת דרך קדימה, הזומבי יתקדם הלאה,
+          אחרת (אין דרך קדימה), הזומבי יפנה שמאלה.
       3:
         image: notes/hoc5_3.jpg
-        text: Just like the "if" block, we can put "if else" blocks inside a "repeat"
-          blocks so that the zombie keeps moving and the "if else" block will keep
-          checking if there's somewhere to turn.
+        text: בדיוק כמו בבלוק "אם", נוכל לשים בלוקי ״אם-אחרת" בתוך בלוקי "חזור", כך
+          שהזומבי יצעד ובלוק ה- "אם-אחרת" ימשיך לבדוק אם יש מקום בו ניתן לפנות.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: "עכשיו, הצעידו את הזומבים למקום אליו הם שייכים!"
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: An if-else statement is a decision between two things. Let's see how
-          we can use an if-else statement with our buddy Scrat the squirrel.
+        text: "משפט אם-אחרת הוא החלטה בין שני דברים. בואו נראה כיצד נוכל להשתמש במשפט
+          אם-אחרת עם החבר שלנו, סקראט הסנאי."
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: This block looks the same as the "if" block, but there's an extra part
-          at the bottom that says "else". If I put a "move forward" block where it
-          says "do" and a "turn left" block where it says "else", that means Scrat
-          the squirrel will move forward if there's a path ahead. If there's not a
-          path ahead, Scrat will turn left.
+        text: בלוק זה נראה כמו הבלוק "אם", אבל הוא מכיל חלק נוסף בתחתיתו שבו כתוב
+          "אחר". אם נציב בלוק "להתקדם" היכן שכתוב "עשה" ובלוק "פנה שמאלה" היכן שכתוב
+          "אחרת", סקראט הסנאי יזוז קדימה אם יש שביל בהמשך. אם לא קיים מסלול בהמשך,
+          סקראט יפנה שמאלה.
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: It's making a decision and doing one of the two actions based on that
@@ -234,17 +231,17 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: "עכשיו בואו נעזור לסקראט הסנאי להגיע לבלוט הזה!"
     function:
       1:
         image: notes/stage13_1.jpg
-        text: הי, שמי ברינה, מהנדסת באינסטגרם. פונקציה היא קבוצת שורות קוד שברצוננו
+        text: "הי, שמי ברינה, מהנדסת באינסטגרם. פונקציה היא קבוצת שורות קוד שברצוננו
           להשתמש בהן שוב ושוב, כך שבמקום לכתוב את הקוד מחדש בכל פעם, נוכל להשתמש בבלוק
-          אחד בלבד.
+          אחד בלבד."
       2:
         image: notes/stage13_2.jpg
-        text: כעת נלמד איך להגדיר פונקציות. להגדרות פונקציה יש כוכב בפינה. שמה של
-          הפונקציה כתוב בשורה העליונה.
+        text: "כעת נלמד איך להגדיר פונקציות. להגדרות פונקציה יש כוכב בפינה. שמה של
+          הפונקציה כתוב בשורה העליונה."
       3:
         image: notes/stage13_3.jpg
         text: הבלוקים ששמים בתוך ההגדרה אומרים לנו מה הבלוק עושה. בפונקציה הזאת, ההגדרה
@@ -255,7 +252,7 @@
           נוציא את הבלוק של הפונקציה "מלא 5" מתוך קטגורית הפונקציות.
       5:
         image: notes/stage13_5.jpg
-        text: פונקציות הן כיף!
+        text: "פונקציות הן כיף!"
     loop_while:
       1:
         image: notes/stage9_5.jpg
@@ -266,12 +263,12 @@
           אמת.
       3:
         image: notes/stage9_7.jpg
-        text: לדוגמה, אם האיכר עומד על ערימה, הוא ימשיך להסיר דלי אחר דלי כל עוד עדיין
-          נמצאת ערימה תחתיו.
+        text: "לדוגמה, אם האיכר עומד על ערימה, הוא ימשיך להסיר דלי אחר דלי כל עוד
+          עדיין נמצאת ערימה תחתיו."
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: הי, אני טרינה ואני עובדת עבור פיקסאר. עבדתי במספר סרטים וביניהם שרק.
+        text: "הי, אני טרינה ואני עובדת עבור פיקסאר. עבדתי במספר סרטים וביניהם שרק."
       2:
         image: notes/stage11_2.jpg
         text: זוהי לולאת ה-"מונה" החדשה שלנו. היא תבצע פעולות שוב ושוב, כך שבאפשרותך
@@ -283,20 +280,20 @@
           מקום ה- "אורך".
       4:
         image: notes/stage11_4.jpg
-        text: זה אומר שהאמן שלנו הולך לצייר ריבוע שכל צד באורך 50 פיקסלים, ואז הוא
+        text: "זה אומר שהאמן שלנו הולך לצייר ריבוע שכל צד באורך 50 פיקסלים, ואז הוא
           יוסיף 10 לזה ויצייר ריבוע שכל צד באורך 60 פיקסלים. אחר-כך הוא ימשיך להוסיף
           10 ולצייר ריבועים עד שהוא יגיע ל90. אז יהיו לנו ריבועים של 50, 60, 70, 80,
-          ו90.
+          ו90."
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: . היי, אני ג'אנט, אני מהנדסת ב-זינגה.
+        text: ". היי, אני ג'אנט, אני מהנדסת ב-זינגה."
       2:
         image: notes/stage15_2.jpg
-        text: מה אם אנחנו רוצים לצייר כמה משולשים עם אורכים בגדלים שונים?
+        text: "מה אם אנחנו רוצים לצייר כמה משולשים עם אורכים בגדלים שונים?"
       3:
         image: notes/stage15_3.jpg
-        text: היינו יכולים לכתוב את כל הקוד בעצמנו או שנוכל להשתמש בפונקציה עם פרמטרים.
+        text: "היינו יכולים לכתוב את כל הקוד בעצמנו או שנוכל להשתמש בפונקציה עם פרמטרים."
       4:
         image: notes/stage15_4.jpg
         text: כדי לעשות זאת לחץ על הכפתור הכחול של הגדרת הפונקציה "צייר משולש". אז
@@ -316,31 +313,31 @@
           החוצה את הפונקציה "צייר משולש עם אורך".
       8:
         image: notes/stage15_8.jpg
-        text: עכשיו אתה יכול להשתמש בבלוק מתמטיקה כדי להכניס מספרים שונים כדי לצייר
-          משולשים בגדלים שונים.
+        text: "עכשיו אתה יכול להשתמש בבלוק מתמטיקה כדי להכניס מספרים שונים כדי לצייר
+          משולשים בגדלים שונים."
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: מזל טוב! עם הפאזל האחרון שפתרת, כתבת קוד שיכול לומר לכל רובוט (בין אם
-          זה זומבי, ציפור, מארס-רובר או אפילו מכונית שנוהגת מעצמה) איך למצוא את הדרך
-          מבוך או מנהרה באורך כלשהו, .
+        text: "מזל טוב! עם הפאזל האחרון שפתרת, כתבת קוד שיכול לומר לכל רובוט (בין
+          אם זה זומבי, ציפור, מארס-רובר או אפילו מכונית שנוהגת מעצמה) איך למצוא את
+          הדרך מבוך או מנהרה באורך כלשהו, ."
       2:
         image: notes/hoc6_2.jpg
-        text: המושגים הבסיסיים בהם השתמשת הם בליבה של כל תוכנית או אפליקציה שאי פעם
-          תנסה. למדנו על לולאות ״חזור״, הצהרות ״חזור-עד״,  הצהרות ״אם״ והצהרות ״אם-אחרת״.
+        text: "המושגים הבסיסיים בהם השתמשת הם בליבה של כל תוכנית או אפליקציה שאי פעם
+          תנסה. למדנו על לולאות ״חזור״, הצהרות ״חזור-עד״,  הצהרות ״אם״ והצהרות ״אם-אחרת״."
       3:
         image: notes/hoc6_3.jpg
-        text: אם אהבת את השעה הראשונה של קוד שלך, בקר ב- code.org כדי להמשיך בלימוד
+        text: "אם אהבת את השעה הראשונה של קוד שלך, בקר ב- code.org כדי להמשיך בלימוד
           מדעי המחשב! לאחר השלמת הקורס בן 20 השעות שלנו, תשלוט ביסודות התכנות, ותוכל
-          ללמוד כיצד לכתוב אפליקציות לטלפון, הוראות הפעלה לרובוט, משחקים ומה שתרצה.
+          ללמוד כיצד לכתוב אפליקציות לטלפון, הוראות הפעלה לרובוט, משחקים ומה שתרצה."
       4:
         image: notes/hoc6_4.jpg
-        text: 'הטכנולוגיה משנה את כל מה שאנו עושים ולא משנה אם אתה צעיר או זקן: תכנות
-          זה כיף, זה יצירתי וכל אחד יכול ללמוד!'
+        text: "הטכנולוגיה משנה את כל מה שאנו עושים ולא משנה אם אתה צעיר או זקן: תכנות
+          זה כיף, זה יצירתי וכל אחד יכול ללמוד!"
     20_wrapup:
       1:
         image: notes/bird.png
-        text: הצגת הערות תגיע בקרוב!
+        text: "הצגת הערות תגיע בקרוב!"
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -358,18 +355,16 @@
           students learn the basics. Under the hood, you're still creating code.
       4:
         image: notes/frozen1_4.jpg
-        text: A program is a set of instructions that tells a computer what to do.
-          Let's build a code, or a program, that will help Elsa create a simple line.
-          We will use this later to create more complex patterns.
+        text: "תוכנה היא אוסף הוראות שאומרות למחשב מה לעשות. בואו נבנה קוד או תוכנה
+          שיעזרו לאלזה ליצור קו פשוט. נשתמש בו בהמשך כדי ליצור צורות מורכבות יותר."
       5:
         image: notes/frozen1_5.jpg
-        text: Your screen is split into three main parts. On the left, is the ice
-          surface where you'll run your program. The instructions for each level are
-          written right below the surface.
+        text: "המסך שלך מחולק לשלושה חלקים עיקריים. משמאל, זהו משטח הקרח שבו תריץ
+          את התוכנה שלך. ההוראות לכל שלב כתובות בדיוק מתחת למשטח."
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: "החלק האמצעי הזה הוא ארגז הכלים, וכל אחד מהבלוקים האלו הוא פעולה שאלזה
+          ואנה יכולות לבצע."
       7:
         image: notes/frozen1_7.jpg
         text: The white space on the right is called the workspace, and this is where
@@ -390,8 +385,8 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: "זכור, אתה יכול לשנות את מספר הפיקסלים והמעלות על ידי לחיצה על החצים
+          שלידם."
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -418,8 +413,8 @@
           Right" block inside a "Repeat" block.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: זכור, אתה יכול לשנות את המספר בבלוק "חזור שוב" לכל מספר שתרצה, והפעולה
+          תחזור על עצמה לפי אותו מספר.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
@@ -2460,51 +2455,44 @@
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force
-          Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a
-          spherical droid. Everything he does and every movement that he makes is
-          controlled by computer software. Computer science impacts every industry,
-          from marketing to health care to film. In fact, hundreds of computer engineers
-          worked together to make a film like The Force Awakens.
+        text: 'הי, שמי קתלין קנדי ואני המפיקה של הסרט "מלחמת הכוכבים: הכח מתעורר".
+          היום תעבדו עם אחד הכוכבים שלנו, BB-8. BB-8 הוא דרואיד כדורי, כל תנועה שלו
+          נשלטת על ידי תוכנת מחשב. מדעי המחשב משפיעים על כל התעשיות החל משיווק, דרך
+          רפואה ועד לקולנוע. למעשה, מאות מהנדסי תוכנה עבדו ביחד ליצור את הסרט "הכח
+          מתעורר".'
       2:
         image: notes/starwars_intro_2.JPG
-        text: Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the
-          animation and creature development team. In The Force Awakens, I'm responsible
-          for helping the artists develop rigs which are the parts of the character
-          that move that allow the character to look very believable in a galaxy far
-          far away.
+        text: היי שמי רייצ'ל רוז, אני מהנדסת בכירה ב-ILM ואני מובילה צוות פיתוח אנימציה
+          והיצורים. ב"הכוח מתעורר", אני אחראית על סיוע לאמנים לפתח תשתיתיות שהן חלק
+          מהדמויות שזזות וגורמות לדמויות להיראות אמינות מאוד בגלקסיה רחוק רחוק.
       3:
         image: notes/starwars_intro_3.JPG
-        text: In the next hour, we're going to build our own Star Wars game. We'll
-          teach you the basic concepts of programming. Usually programming is all
-          text but we're going to use blocks here so that we can drag and drop to
-          write the programs. Under the hood, you're still creating code. After you
-          try the basics with blocks, we'll switch you to JavaScript, one of the most
-          popular programming languages on the web.
+        text: בשעה הקרובה נבנה משחק "מלחמת הכוכבים" משלנו. נלמד אותכם מושגי יסוד בתכנות.
+          בדרך כלל תכנות נעשה על ידי כתיבה אבל אנחנו נשתמש בבלוקים ונגרור אותם על
+          מנת לכתוב את התוכניות. מאחורי הקלעים אתם עדיין יוצרים קוד. אחרי שתתנסו בדברים
+          בסיסיים עם בלוקים, נעביר אותכם לשפת JavaScript, אחת משפות התכנות הנפוצות
+          ביותר.
       4:
         image: notes/starwars_intro_4.JPG
-        text: To start off, we're going to work with Rey to program BB-8 to walk to
-          collect all of the scrap parts. Your screen is split into three parts. On
-          the left is the Star Wars game space, where code will run. The instructions
-          for each level are written below the game space.
+        text: "בתחילה נעבוד עם ריי לתכנת את BB-8 ללכת ולאסוף את כל חלקי הגרוטאות.
+          המסך שלכם מחולק לשלושה חלקים. החלק השמאלי הוא אזור המשחק בו ירוץ הקוד שכתבתם.
+          ההוראות לכל רמה כתובות מתחת לאזור המשחק."
       5:
         image: notes/starwars_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: "החלק המרכזי מכיל את ארגז הכלים עם הפקודות ש BB-8 יכול להבין."
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: לחלק הלבן מימין קוראים "סביבת העבודה" ושם נבנה את התוכנית.
       7:
         image: notes/starwars_intro_7.JPG
-        text: If I drag the moveLeft(); block to our workspace and press run, what
-          happens? BB-8 moves left one block on the grid.
+        text: "אם אני גורר את בלוק ;()moveLeft לסביבת העבודה שלנו ומריץ את התוכנית
+          (run), מה קורה? BB-8 זז צעד אחד שמאלה על הרשת."
       8:
         image: notes/starwars_intro_8.JPG
-        text: And what if I want BB-8 to do something after the moveLeft(); block?
-          I can add another block to our program. I'm going to choose the moveUp();
-          block and I'll drag it under my moveLeft(); block until the highlight appears.
-          Then I'll drop it and the two blocks will snap together.
+        text: "ומה אם אני רוצה ש BB-8 יעשה משהו אחרי בלוק ;()moveLeft? אני יכול להוסיף
+          בלוק נוסף בתוכנית שלנו. אני הולך לבחור את בלוק ;()moveUp ואני אגרור אותו
+          אל מתחת ל ;()moveLeft שלי על להופעת ההדגשה של חיבור הבלוקים. כשאעזוב את
+          הבלוק שלי הבלוקים יתחברו ותישמע נקישה."
       9:
         image: notes/starwars_intro_9.JPG
         text: When I press run again, BB-8 will perform the commands that are stacked
@@ -2621,17 +2609,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2666,8 +2654,7 @@
           below the game space.
       5:
         image: notes/starwars_blocks_intro_5.JPG
-        text: This middle area is the toolbox and each of these blocks is a command
-          that BB-8 can understand.
+        text: "החלק המרכזי מכיל את ארגז הכלים עם הפקודות ש BB-8 יכול להבין."
       6:
         image: notes/starwars_blocks_intro_6.JPG
         text: The white space on the right is called the work space and this is where
@@ -2746,17 +2733,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2900,9 +2887,9 @@
           You get to choose.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: When you're done making your creation, choose share to get a link to
@@ -2919,9 +2906,177 @@
           You get to choose.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Now you can build whatever you want. Have fun!
+    gumball_intro:
+      1:
+        image: notes/gumball_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/gumball_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/gumball_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/gumball_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/gumball_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/gumball_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/gumball_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/gumball_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/gumball_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    gumball_events:
+      1:
+        image: notes/gumball_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/gumball_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/gumball_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/gumball_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    gumball_repeat:
+      1:
+        image: notes/gumball_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/gumball_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/gumball_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.
+    iceage_intro:
+      1:
+        image: notes/iceage_intro_1.JPG
+        text: If you'd like to make your own game, it's really easy. All you need
+          are just a few basics of programming and you can start playing a game that
+          you created.
+      2:
+        image: notes/iceage_intro_2.JPG
+        text: Do you have a favorite video game? We're going to take one step toward
+          creating games just like that in PlayLab. Good games have a story and every
+          story has actors. Actors that do things like speak, move and interact with
+          each other. Maybe even score points based on the rules of the game. Today,
+          we'll be learning how to do all these things one by one with fun actors
+          and then build a game from scratch that can be shared and played on a phone.
+      3:
+        image: notes/iceage_intro_3.JPG
+        text: Today, we'll be learning how to do all these things one by one with
+          fun actors and then build a game from scratch that can be shared and played
+          on a phone.
+      4:
+        image: notes/iceage_intro_4.JPG
+        text: Your screen is split into three main parts. On the left is the gamespace
+          where your program will run. The instructions for each level are written
+          below.
+      5:
+        image: notes/iceage_intro_5.JPG
+        text: This middle area is the tool box and each of these blocks is a piece
+          of code.
+      6:
+        image: notes/iceage_intro_6.JPG
+        text: The white space on the right is called the work space and this is where
+          we'll build our program.
+      7:
+        image: notes/iceage_intro_7.JPG
+        text: To start off, you'll need to link your blocks to the orange when run
+          block. You can link multiple blocks together by dragging them out until
+          you see the yellow line and then they'll snap together.
+      8:
+        image: notes/iceage_intro_8.JPG
+        text: In this first puzzle, we'll make the actors say something by linking
+          the "say" block to the when run block and typing in your message. Once you
+          have your blocks in place, hit the run button to see what you programmed.
+      9:
+        image: notes/iceage_intro_9.JPG
+        text: Get started and by the end you'll be able to create your own game with
+          all kinds of players that can interact, score points, throw things, and
+          vanish each other. It's all up to you!
+    iceage_events:
+      1:
+        image: notes/iceage_events_1.JPG
+        text: Now we're going to learn about something all game programmers use everyday.
+          They're called events. An event tells your program to listen for when something
+          happens and then when it does, the game performs an action.
+      2:
+        image: notes/iceage_events_2.JPG
+        text: Some examples of events are listening for a mouse click or an up or
+          down arrow key or even a tap on the screen.
+      3:
+        image: notes/iceage_events_3.JPG
+        text: Here, we're going to make the actor say something when the player clicks
+          on it. We will use the when clicked block and attach the "say" block to
+          it. When the player clicks, all the blocks attached to this block will be
+          performed.
+      4:
+        image: notes/iceage_events_4.JPG
+        text: There are also when arrow blocks. If you link move blocks to those,
+          you can start to move your actors up, down, left, right, with the arrow
+          keys. Little by little your game is getting more interactive.
+    iceage_repeat:
+      1:
+        image: notes/iceage_repeat_1.JPG
+        text: Can you imagine if you had to repeat something forever and ever? Hopefully
+          you never have to because computers are really good at repeating things.
+      2:
+        image: notes/iceage_repeat_2.JPG
+        text: This is the repeat forever block. Anything inside this block will happen
+          forever in the game. If we want an actor to do something repeatedly without
+          the player having to do anything, we'll put those blocks inside the repeat
+          forever block.
+      3:
+        image: notes/iceage_repeat_3.JPG
+        text: In this next puzzle, our goal is to help the actor do a job continuously.
+          Learning how the repeat commands work will save you a ton of time later
+          when you build your own game.

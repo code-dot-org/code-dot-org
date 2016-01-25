@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## getImageURL(imageId)
+## getImageURL(id)
 
 [/name]
 
@@ -104,7 +104,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-getImageURL(imageId);
+getImageURL(id);
 ```
 
 [/syntax]
@@ -115,7 +115,7 @@ getImageURL(imageId);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| imageId | string | Yes | The id of the image element. |
+| id | string | Yes | The id of the image element. |
 
 [/parameters]
 

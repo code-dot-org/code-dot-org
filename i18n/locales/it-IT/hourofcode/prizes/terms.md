@@ -8,25 +8,33 @@ title: <%= hoc_s(:title_prizes_terms) %> layout: wide nav: prizes_nav
 
 # Premi - Termini e condizioni di partecipazione
 
-## Amazon.com, iTunes and Windows Store credit:
+## Un buono acquisto per Amazon.com, iTunes e Microsoft's Windows Store:
 
-The Amazon.com, iTunes and Windows Store credit are limited to K-12 faculty, educators for afterschool clubs, and education organizations. The $10 credit must be added to an existing account, and the credit expires after 1 year. Ogni organizzatore può ricevere un solo premio.
+I buoni acquisto di Amazon.com, iTunes e Microsoft's Windows Store sono limitati agli insegnanti e agli organizzatori di eventi dell'Ora del Codice. Il buono acquisto da 10$ deve essere aggiunto ad un account già esistente, e il buono scade dopo 1 anno. Ogni organizzatore può ricevere un solo premio.
 
-Every organizer must register for the Hour of Code in order to receive the Amazon.com, iTunes or Windows Store credit. Se tutta la vostra scuola partecipa all'Ora del Codice, è necessario che ogni educatore si registrarsi singolarmente come organizzatore.
+Ogni organizzatore deve essere iscritto all'Ora del Codice per ricevere il buono acquisto di Amazon.com, iTunes o Microsoft's Windows Store. Se tutta la scuola partecipa all'Ora del Codice, è necessario che ogni insegnante si registri singolarmente come organizzatore.
 
-Code.org will contact organizers after the Hour of Code (Dec. 7-13) to provide instructions for redeeming Amazon.com, iTunes and Windows Store credit.
+Code.org contatterà gli organizzatori dopo la Settimana di Educazione all'Informatica promossa da l'Ora del Codice (7-13 Dic.) per fornire le istruzioni per ottenere il buono da Amazon.com, iTunes e Microsoft's Windows Store.
 
 <% if @country == 'us' %>
 
 ## Class-set of laptops (or $10,000 for other technology):
 
-Prize limited to public K-12 U.S. schools only. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org selezionerà i vincitori e li avviserà via email entro il 1° dicembre 2015.
+Premi solo per le scuole pubbliche degli U.S.A. To qualify, your entire school must register for the Hour of Code by November 16, 2015. One school in every U.S. state will receive a class-set of computers. Code.org will select and notify winners via email by December 1, 2015.
 
-To clarify, this is not a sweepstakes or a contest involving pure chance.
+Per chiarire, questo non è un concorso a premi o ad un concorso che coinvolge il puro caso.
 
-1) There is no financial stake or risk involved in applying - any school or classroom may participate, without any payment to Code.org or any other organization
+1) non c'è alcuna partecipazione finanziaria o rischio coinvolti nell'applicazione - qualsiasi scuola o in aula può partecipare, senza alcun pagamento a Code.org o qualsiasi altra organizzazione
 
-2) Winners will only be selected among schools where the entire classroom (or school) participates in an Hour of Code, which involves a test of the students' and teachers' collective skill.
+2) vincitori saranno selezionati solo tra le scuole in cui l'intera scuola partecipa all'Ora del Codice, che prevede una prova di abilità collettiva degli studenti e degli insegnanti.
+
+<% end %>
+
+<% if @country == 'us' || @country == 'ca' %>
+
+## Video chat with a guest speaker:
+
+Prize limited to K-12 classrooms in the U.S. and Canada only. Code.org will select winning classrooms, provide a time slot for the web chat, and work with the appropriate teacher to set up the technology details. Your whole school does not need to apply to qualify for this prize. Both public and private schools are eligible to win.
 
 <% end %>
 

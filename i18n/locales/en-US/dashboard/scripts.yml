@@ -146,7 +146,7 @@ en:
           description_short: crwdns8823:0crwdne8823:0
         hourofcode:
           Maze: crwdns23304:0crwdne23304:0
-          title: crwdns23305:0crwdne23305:0
+          title: crwdns55287:0crwdne55287:0
           description: crwdns23307:0crwdne23307:0
           description_short: crwdns24911:0crwdne24911:0
         frozen:
@@ -672,6 +672,15 @@ en:
           Introduction to Conditional Logic: crwdns51248:0crwdne51248:0
           Compound Conditional Logic: crwdns51249:0crwdne51249:0
           Digital Assistant Project: crwdns51250:0crwdne51250:0
+          While Loops: crwdns54697:0crwdne54697:0
+          Loops and Simulations: crwdns54698:0crwdne54698:0
+          Introduction to Arrays: crwdns54699:0crwdne54699:0
+          Image Scroller with Key Events: crwdns54700:0crwdne54700:0
+          Processing Arrays: crwdns54701:0crwdne54701:0
+          Functions with Return Values: crwdns54702:0crwdne54702:0
+          Canvas and Arrays in Apps: crwdns54703:0crwdne54703:0
+          "Practice PT: Create": crwdns54704:0crwdne54704:0
+          Introduction to Digital Assistants: crwdns55883:0crwdne55883:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -1209,6 +1218,7 @@ en:
           Unit 2 Challenge Preview: crwdns49763:0crwdne49763:0
           Unit 2 Challenge: crwdns49764:0crwdne49764:0
           Close & Next Steps: crwdns49765:0crwdne49765:0
+          Lesson Overviews: crwdns55884:0crwdne55884:0
         ECSPD3-Unit3:
           title: crwdns48442:0crwdne48442:0
           description_short: crwdns48443:0crwdne48443:0
@@ -1320,6 +1330,28 @@ en:
           "Data App Part 9: Reflect": crwdns48527:0crwdne48527:0
           "Debate: Privacy vs Utility": crwdns48528:0crwdne48528:0
           Permanent Data Storage and Clicker Completion: crwdns51267:0crwdne51267:0
+          Why Make Apps?: crwdns55172:0crwdne55172:0
+          Creating Javascript Objects: crwdns55173:0crwdne55173:0
+          Permanent Data Storage: crwdns55174:0crwdne55174:0
+          Reading Records: crwdns55175:0crwdne55175:0
+          Search Terms: crwdns55850:0crwdne55850:0
+          Unique IDs, Delete and Update Records: crwdns55851:0crwdne55851:0
+          Import, Export, and Visualize Data: crwdns55852:0crwdne55852:0
+          Interpreting Data Visualizations: crwdns55853:0crwdne55853:0
+          How is Data Collected?: crwdns55854:0crwdne55854:0
+          Using Data in the Real World: crwdns55855:0crwdne55855:0
+          Web Requests and APIs: crwdns55856:0crwdne55856:0
+          Data, Security, and Privacy: crwdns55857:0crwdne55857:0
+          Privacy vs Utility: crwdns55858:0crwdne55858:0
+          Privacy in a Digital World: crwdns55859:0crwdne55859:0
+          Compiling Data: crwdns55860:0crwdne55860:0
+          Cleaning Data: crwdns55861:0crwdne55861:0
+          Designing Data Collection: crwdns55862:0crwdne55862:0
+          Designing for Your User: crwdns55863:0crwdne55863:0
+          "Practice Create PT: Data App": crwdns55905:0crwdne55905:0
+          Good and Bad Data Visualizations: crwdns55896:0crwdne55896:0
+          Finding Trends with Visualizations: crwdns55897:0crwdne55897:0
+          Check Your Assumptions: crwdns55906:0crwdne55906:0
         ScienceP3OLPT2:
           title: crwdns49768:0crwdne49768:0
           description_short: crwdns49769:0crwdne49769:0
@@ -1370,6 +1402,7 @@ en:
           description_audience: crwdns50716:0crwdne50716:0
           Halloween 2015: crwdns50717:0crwdne50717:0
           description: crwdns51271:0crwdne51271:0
+          Valentine 2016: crwdns55907:0crwdne55907:0
         iceage:
           title: crwdns51272:0crwdne51272:0
           description_short: crwdns51273:0crwdne51273:0
@@ -1388,6 +1421,8 @@ en:
           Chunk 5 Overview: crwdns51285:0crwdne51285:0
           Practice Performance Task: crwdns51286:0crwdne51286:0
           Challenge Overview: crwdns51287:0crwdne51287:0
+          Complete the Challenge: crwdns54705:0crwdne54705:0
+          Share out and Submit: crwdns54706:0crwdne54706:0
         cspunit3temp:
           title: crwdns51288:0crwdne51288:0
           description_short: crwdns51289:0crwdne51289:0
@@ -1402,6 +1437,13 @@ en:
           Key Events with Image Scroller: crwdns51298:0crwdne51298:0
           Processing Arrays: crwdns54311:0crwdne54311:0
           Functions with Return Values: crwdns54312:0crwdne54312:0
+          Practice Create Performance Task: crwdns54707:0crwdne54707:0
+          While Loops: crwdns54708:0crwdne54708:0
+          Loops and Simulations: crwdns54709:0crwdne54709:0
+          Introduction to Arrays: crwdns54710:0crwdne54710:0
+          Image Scroller with Key Events: crwdns54711:0crwdne54711:0
+          Canvas and Arrays in Apps: crwdns54712:0crwdne54712:0
+          "Practice PT: Create": crwdns54713:0crwdne54713:0
         CSP-Unit3-Support:
           title: crwdns51299:0crwdne51299:0
           description_short: crwdns51300:0crwdne51300:0
@@ -1440,3 +1482,19 @@ en:
           description_short: crwdns54318:0crwdne54318:0
           description: crwdns54319:0crwdne54319:0
           Hour of Code 2015: crwdns54320:0crwdne54320:0
+        CSPPD3-Unit3-pt2:
+          title: crwdns54658:0crwdne54658:0
+          description_short: crwdns54659:0crwdne54659:0
+          description: crwdns54660:0crwdne54660:0
+          Challenge Overview: crwdns54661:0crwdne54661:0
+          Complete the Challenge: crwdns54662:0crwdne54662:0
+          Share out and Submit: crwdns54663:0crwdne54663:0
+        ScienceP3OLPT3:
+          title: crwdns54747:0crwdne54747:0
+          description_short: crwdns54748:0crwdne54748:0
+          description: crwdns54749:0crwdne54749:0
+          Welcome!: crwdns54750:0crwdne54750:0
+          Thinking About Implementation: crwdns54751:0crwdne54751:0
+          Wrap-Up: crwdns54752:0crwdne54752:0
+          Assessing Computer Models: crwdns55898:0crwdne55898:0
+          (optional) Refresh your connection to Complex Adaptive Systems: crwdns55899:0crwdne55899:0

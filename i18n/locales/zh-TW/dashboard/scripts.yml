@@ -34,7 +34,7 @@ zh:
           Getting Loopy: 愈來愈糟
           The Big Event: 大事件
           Going Places Safely: 安全的到達地點
-          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
+          description: 初學者看這裡！在課程 1 中，學生們將會學習編寫電腦程式，這將有助於學生學習與他人合作，培養解決問題的能力，並堅定完成困難的任務。在這堂課之後，學生們將自由設計自己的遊戲或故事，並分享給任何人。這課程適合初年級的學生。
           "Bee: Sequence": 蜜蜂： 序列
           "Artist: Sequence": '小畫家: 次序'
           "Artist: Shapes": '小畫家: 形狀'
@@ -42,34 +42,34 @@ zh:
           "Bee: Loops": 蜜蜂： 迴圈
           "Studio: Create a Story": '播放實驗室: 創造一個故事'
           "Artist: Loops": '小畫家: 迴圈'
-          description_audience: 適合年齡4+(學齡前讀者)
-          description_short: Start with Course 1 for early readers.
+          description_audience: 適合年齡 4 到 6 歲
+          description_short: 初學者從課程1開始。
         course2:
           The Maze: 迷宮
           Suzi: 蘇西
           The Artist: 藝術家
-          Artist Debugging: Artist Debugging
+          Artist Debugging: 畫家：除錯
           Bounce: 彈跳
           "Studio: Create a Story": '播放實驗室: 創造一個故事'
-          Artist Loops: Artist Loops
-          Bee Conditionals: Bee Conditionals
+          Artist Loops: 畫家：迴圈
+          Bee Conditionals: 蜜蜂：判斷條件
           Flappy: Flappy
-          title: Course 2
+          title: 課程 2
           Bee Loops: 蜜蜂 迴圈
           Artist Functions: 角色功能
-          The Artist Debugging: The Artist Debugging
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Maze Loops: Maze Loops
+          The Artist Debugging: 角色：除錯
+          Bee Debugging: 蜜蜂：除錯
+          Bee Functions: 蜜蜂：函式
+          Maze Loops: '迷宮: 迴圈'
           Graph Paper Programming: 圖畫紙程式設計
-          "Real-life Algorithms: Paper Planes": 'Real-life Algorithms: Paper Planes'
+          "Real-life Algorithms: Paper Planes": '真實生活裡的演算法: 紙飛機'
           Getting Loopy: 愈來愈糟
           Relay programming: Relay programming
           Conditionals: 流程類別
           Binary Bracelets: Binary Bracelets
           The Big Event: 大事件
           Your Digital Footprint: 你的數位足跡
-          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          description: 課程 2 給已有閱讀能力、但沒有任何寫程式經驗的學生。在這個課程裡，學生將編寫程式來解決問題，並且開發有互動的遊戲或故事分享給任何人。建議給二至五年級的學生參加。
           "Maze: Sequence": '迷宮: 序列'
           "Artist: Sequence": '小畫家: 次序'
           "Maze: Loops": 迷宮： 迴圈
@@ -77,12 +77,12 @@ zh:
           "Bee: Loops": 蜜蜂： 迴圈
           "Bee: Debugging": 蜜蜂： 除錯
           "Artist: Debugging": '小畫家: 除錯'
-          "Bee: Conditionals": '蜜蜂: 條件'
+          "Bee: Conditionals": '蜜蜂: 判斷條件'
           "Artist: Sequence2": '小畫家: 次序2'
-          "Maze: Sequence2": 'Maze: Sequence2'
+          "Maze: Sequence2": '迷宮: 序列 2'
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
-          description_audience: 六歲以上 (閱讀要求)
-          description_short: Start with Course 2 for students who can read.
+          description_audience: 適合年齡 6 至 18 歲
+          description_short: 有閱讀能力的學生可以進入課程 2
         course3:
           The Maze: 迷宮
           "Studio: Create a Story": '播放實驗室: 創造一個故事'
@@ -90,31 +90,31 @@ zh:
           title: 課程 3
           Artist Functions: 角色功能
           Artist For Loops: 小畫家 For 迴圈
-          Artist Nested Loops: Artist Nested Loops
-          Bee Conditionals: Bee Conditionals
-          Bee Nested Loops: Bee Nested Loops
-          Bee Debuggin: Bee Debuggin
-          Bee Debugging: Bee Debugging
-          Bee Functions: Bee Functions
-          Artist Functions with Params: Artist Functions with Params
+          Artist Nested Loops: 畫家： 巢狀迴圈
+          Bee Conditionals: 蜜蜂：判斷條件
+          Bee Nested Loops: 蜜蜂巢狀迴圈
+          Bee Debuggin: 蜜蜂：除錯
+          Bee Debugging: 蜜蜂：除錯
+          Bee Functions: 蜜蜂：函式
+          Artist Functions with Params: 畫家： 帶參數的函式
           Bounce: 彈跳
           Maze Conditionals: 迷宮： 條件
-          Artist Functions with Parameters: Artist Functions with Parameters
+          Artist Functions with Parameters: 畫家： 帶參數的函式
           Computational Thinking: 電腦計算式思維
           Functional Suncatchers: Functional Suncatchers
-          Songwriting Parameters: Songwriting Parameters
+          Songwriting Parameters: 作曲參數
           Dice Race: 骰子比賽
           Internet: 互聯網
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digital Citizenship
-          Farmer - While Loops: 'Farmer - While Loops'
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          Farmer - While Loops: '農夫 - While 迴圈　'
+          description: 課程3是為已經完成課程2的學生設計的。學生將深入前面介紹的程式設計主題到靈活的解法和更複雜的問題。這門課程結束時，學生將創建互動式故事和遊戲並可以與任何人分享。建議 4-5 年級。
           "Studio: Create a Game": '播放實驗室: 設計一個遊戲'
           Maze: 迷宮
           Artist: 畫家
           "Artist: Functions": 畫家：函數
           "Bee: Functions": 蜜蜂：函數
-          "Bee: Conditionals": '蜜蜂: 條件'
+          "Bee: Conditionals": '蜜蜂: 判斷條件'
           "Maze: Conditionals": 迷宮： 條件
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
           "Farmer: While Loops": 農夫： ｢當｣迴圈　
@@ -122,18 +122,18 @@ zh:
           "Bee: Debugging": 蜜蜂： 除錯
           Maze2: 迷宮２
           Artist2: 畫家２
-          "Artist: Functions2": 'Artist: Functions2'
-          "Bee: Functions2": 'Bee: Functions2'
-          "Bee: Conditionals2": 'Bee: Conditionals2'
-          "Maze: Conditionals2": 'Maze: Conditionals2'
-          "Artist: Nested Loops2": 'Artist: Nested Loops2'
-          "Farmer: While Loops2": 'Farmer: While Loops2'
-          "Bee: Nested Loops2": 'Bee: Nested Loops2'
+          "Artist: Functions2": 角色：函式 2
+          "Bee: Functions2": 蜜蜂：函數 2
+          "Bee: Conditionals2": 蜜蜂：判斷條件 2
+          "Maze: Conditionals2": 迷宮： 條件 2
+          "Artist: Nested Loops2": 角色：巢狀迴圈 2
+          "Farmer: While Loops2": 農夫：條件迴圈 While Loop 2
+          "Bee: Nested Loops2": 蜜蜂：巢狀迴圈 2
           "Bee: Debugging2": '蜜蜂: 除錯2'
           "Artist: Patterns": '小畫家: 圖樣'
           Songwriting: 寫歌
-          description_audience: 八歲以上 (學習課程二以後)
-          description_short: 課程三是課程二的延續課程
+          description_audience: 適合年齡 8 至 18 歲
+          description_short: 課程 3 是課程 2 的延續課程
         playlab:
           title: 播放實驗室
           description: 創建一個故事或做遊戲玩實驗室！
@@ -146,7 +146,7 @@ zh:
           description_short: 和小畫家一起畫圖和設計!
         hourofcode:
           Maze: 迷宮
-          title: 一小時的程式設計課程
+          title: 經典迷宮
           description: 嘗試計算機科學的基礎知識與憤怒的小鳥人物，植物大戰殭屍，和Scrat從冰河時代！
           description_short: 嘗試計算機科學的基礎知識與許多好玩的人物！
         frozen:
@@ -155,16 +155,16 @@ zh:
           Artist: 畫家
           description_short: 讓我們使用程式碼加入安娜(Anna)和愛莎(Elsa)一同探索神奇而美麗的冰。
         course4:
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
+          description_short: 完成課程 2 和課程 3 後，可以進入課程 4
           description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
           "Artist: Variables": '小畫家: 變數'
           "Bee: For Loops": 蜜蜂： For 迴圈
           title: 課程 4
           "Algorithms: Tangrams": '演算法: 七巧板'
-          Variables: 變數類別
+          Variables: 變數類
           "Play Lab: Variables": '播放實驗室: 變數'
-          "Play Lab: Functions with Parameters": 'Play Lab: Functions with Parameters'
-          "Bee: Functions with Parameters": 'Bee: Functions with Parameters'
+          "Play Lab: Functions with Parameters": '播放實驗室: 帶參數的函數'
+          "Bee: Functions with Parameters": '蜜蜂: 帶參數的函數'
           "Artist: For Loops": '小畫家: For 迴圈'
           "Play Lab: For Loops": '播放實驗室: For 迴圈'
           "Artist: Functions": 畫家：函數
@@ -175,17 +175,17 @@ zh:
           "Unplugged: Madlibs": 'Unplugged: Madlibs'
           "Unplugged: For Loop Fun": '真人分享: For 迴圈的樂趣'
           "Unplugged: Songwriting with Parameters": 'Unplugged: Songwriting with Parameters'
-          "Artist: Functions with Parameters": 'Artist: Functions with Parameters'
+          "Artist: Functions with Parameters": 角色： 帶參數的函式
           "Unplugged: Binary": '真人分享: 二進位'
           Bee Binary: 蜜蜂 二進位
           Farmer Binary: 農夫 二進位
           Maze and Bee: 蜜蜂與迷宮
           Artist Binary: 小畫家 二進位
-          description_audience: 十歲以上(課程三之後)
-          Super Challenge - Variables: 'Super Challenge - Variables'
-          Super Challenge - For Loops: 'Super Challenge - For Loops'
-          Super Challenge - Functions and Parameters: 'Super Challenge - Functions and Parameters'
-          Extreme Challenge - Comprehensive: 'Extreme Challenge - Comprehensive'
+          description_audience: 適合年齡 10 至 18 歲
+          Super Challenge - Variables: 高級挑戰：變數
+          Super Challenge - For Loops: 高級挑戰：For 迴圈
+          Super Challenge - Functions and Parameters: 高級挑戰：函式與參數
+          Extreme Challenge - Comprehensive: 終極挑戰：綜合題
         Course4pre:
           title: 課程四 先決條件
           description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
@@ -194,7 +194,7 @@ zh:
           "Maze: Sequence": '迷宮: 序列'
           "Artist: Sequence": '小畫家: 次序'
           "Artist: Loops": '小畫家: 迴圈'
-          "Bee: Conditionals": '蜜蜂: 條件'
+          "Bee: Conditionals": '蜜蜂: 判斷條件'
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
           "Farmer: While Loops": 農夫： ｢當｣迴圈　
           "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
@@ -203,13 +203,13 @@ zh:
         usability:
           Intro: 介紹
           Variables and For Loops: 變數與 For 迴圈
-          Functions and Functions with Parameters: Functions and Functions with Parameters
+          Functions and Functions with Parameters: 函式與帶參數的函式
           title: 可用性測試
           description_short: ""
           description: A selection of Course 4 levels for usability testing.
-          Variables: 變數類別
+          Variables: 變數類
           For Loops: For 迴圈
-          Binary: Binary
+          Binary: 二進位
         potus:
           title: 特別
           description_short: 特別
@@ -220,14 +220,14 @@ zh:
           description_short: 特別
           description: 特別
           Special: 特別
-          Binary: Binary
+          Binary: 二進位
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
           description_short: Learn Functional Programming through Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Unplugged: Video Games and Coordinate Planes'
           "Calc: Evaluation Blocks": Evaluation Blocks and Arithmetic Expressions
-          "Eval: Strings and Images": Strings and Images
+          "Eval: Strings and Images": 字串和圖像
           "Unplugged: Contracts": 'Unplugged: Contracts, Domain, and Range'
           "Eval: Writing Contracts": Writing Contracts
           "Calc: Defining Variables": Defining Variables and Substitution
@@ -246,11 +246,11 @@ zh:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Pythagorean Theorem'
           "Play Lab: Collision Detection (Big Game)": 'The Big Game - Collision Detection'
         infinity:
-          title: Disney Infinity Play Lab
+          title: 迪士尼無限播放實驗室
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
           Play Lab: 播放實驗室
-          Infinity: 無窮
+          Infinity: 無限大
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -260,7 +260,7 @@ zh:
           Making Pictures: Making Pictures
           Defining Variables: Defining Variables
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
         K5PD:
           title: K5 Professional Development
           description: K5 課程的專業發展
@@ -285,10 +285,10 @@ zh:
           "Programming Concept: Functions": 'Programming Concept: Functions'
           "Programming Concept: Events": 'Programming Concept: Events'
         netsim:
-          title: Internet Simulator
+          title: 網路模擬器
           description_short: Learn about how the Internet works
           description: Learn about how the Internet works
-          Internet Simulator: Internet Simulator
+          Internet Simulator: 網路模擬器
           Unit 1: 單元 1
           Unit 2: 單元 2
           Sending Bits: Sending Bits
@@ -323,7 +323,7 @@ zh:
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: 20小時 課程簡介
-          description_audience: 十歲以上(課程三之後)
+          description_audience: 適合年齡 10 至 18 歲
           description: 這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。
           description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
           Introduction to Computer Science: 電腦科學導論
@@ -333,7 +333,7 @@ zh:
           The Artist: 藝術家
           Algorithms: 演算法
           The Artist 2: '藝術家 2 '
-          Functions: 函數類別
+          Functions: 函式類別
           The Farmer: 農夫
           Conditionals: 流程類別
           The Artist 3: '藝術家 3 '
@@ -370,10 +370,10 @@ zh:
           description_short: Write your own Flappy game in less than 10 minutes!
           Flappy Code: Flappy遊戲設計
         jigsaw:
-          title: Jigsaw
+          title: 拼圖
           description: Try our Jigsaw tutorial
           description_short: Try our Jigsaw tutorial
-          Jigsaw: Jigsaw
+          Jigsaw: 拼圖
         step:
           title: 步驟
           description: Step tutorial
@@ -422,7 +422,7 @@ zh:
           "Maze: Sequence": '迷宮: 序列'
           "Artist: Sequence": '小畫家: 次序'
           "Artist: Loops": '小畫家: 迴圈'
-          "Bee: Conditionals": '蜜蜂: 條件'
+          "Bee: Conditionals": '蜜蜂: 判斷條件'
           "Artist: Nested Loops": 畫家： 嵌套的迴圈
           "Farmer: While Loops": 農夫： ｢當｣迴圈　
           "Bee: Nested Loops": 蜜蜂： 嵌套的迴圈
@@ -492,16 +492,16 @@ zh:
           "Unplugged: Collision Detection and the Distance Formula": 'Unplugged: Collision Detection and the Distance Formula'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Contracts: Contracts
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
           Your Game - Animation: 'Your Game - Animation'
           Booleans: 布林值
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 你的遊戲-布林值
-          Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
+          Conditionals and Piecewise Functions: 條件和分段函數
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Introduction to PD: PD 簡介
@@ -515,7 +515,7 @@ zh:
           description: 通過函數式程式設計教代數
           description_short: 通過函數式程式設計教代數
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
@@ -592,7 +592,7 @@ zh:
           description_short: Programming
           description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           Getting to know AppLab: Getting to know AppLab
-          Functions: 函數類別
+          Functions: 函式類別
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: 'Creating Procedures - Part 1'
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction and Programming Efficiency
@@ -640,14 +640,14 @@ zh:
           Chained and Nested Conditionals: Chained and Nested Conditionals
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: Creating Functions
+          Creating Functions: 建立函數
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: 變數類別
+          Variables: 變數類
           Looping and Random Numbers - Under the Sea: 'Looping and Random Numbers - Under the Sea'
           Multi-screen App: Multi-screen App
           Variables Conceptorial Fodder: Variables Conceptorial Fodder
@@ -672,6 +672,15 @@ zh:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
+          While Loops: '"當..."迴圈'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Processing Arrays: Processing Arrays
+          Functions with Return Values: Functions with Return Values
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -682,8 +691,8 @@ zh:
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
-          Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          Strings and Images: 字串和圖像
+          The Design Recipe: 設計程序
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -874,11 +883,11 @@ zh:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Defining Variables: Defining Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: 設計程序
           Big Game - Animation: 'Big Game - Animation'
           Booleans: 布林值
           Sam the Bat: Sam the Bat
@@ -888,9 +897,9 @@ zh:
           Big GAme - Collision Detection: 'Big GAme - Collision Detection'
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: 'Big Game - Collision Detection'
-          Free Play: Free Play
+          Free Play: 自由發揮
         allthethings:
-          Jigsaw: Jigsaw
+          Jigsaw: 拼圖
           Maze: 迷宮
           Artist: 畫家
           Bee: 蜜蜂
@@ -908,7 +917,7 @@ zh:
           AppLab: App實驗室
           Online PD: Online PD
           title: 所有的東西!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -925,10 +934,10 @@ zh:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Functions: 定義函數
           Rocket-Height: Rocket-Height
           Booleans: 布林值
           "Eval: Conditionals": 'Eval: Conditionals'
@@ -940,19 +949,19 @@ zh:
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: 網路模擬器
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: Internet Simulator
+          Internet Simulator: 網路模擬器
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -975,7 +984,7 @@ zh:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1031,10 +1040,10 @@ zh:
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Evaluation Blocks
-          Strings and Images: Strings and Images
+          Strings and Images: 字串和圖像
           Writing Contracts: Writing Contracts
           Defining Variables: Defining Variables
-          Defining Functions: Defining Functions
+          Defining Functions: 定義函數
           Rocket-Height: Rocket-Height
           Booleans: 布林值
           "Eval: Conditionals": 'Eval: Conditionals'
@@ -1042,14 +1051,14 @@ zh:
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
-          The Design Recipe: The Design Recipe
+          Welcome!: 歡迎！
+          The Design Recipe: 設計程序
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Wrap-Up: 總結
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1066,7 +1075,7 @@ zh:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1082,7 +1091,7 @@ zh:
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1096,7 +1105,7 @@ zh:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1115,7 +1124,7 @@ zh:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1204,7 +1213,7 @@ zh:
           title: 'Exploring Computer Science: Unit 2'
           description_short: Unit 2 of the Exploring Computer Science curriculum
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 2 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1226,11 +1235,12 @@ zh:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 3 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1260,7 +1270,7 @@ zh:
           title: 'Exploring Computer Science: Unit 4'
           description_short: Unit 4 of the version 5 Exploring Computer Science curriculum.
           description: Refer to this online professional development content throughout the 2015-16 school year as you plan, deliver and reflect on Unit 4 of the version 5 Exploring Computer Science curriculum.
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1293,7 +1303,7 @@ zh:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1302,7 +1312,7 @@ zh:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1340,11 +1350,33 @@ zh:
           "Data App Part 9: Reflect": 'Data App Part 9: Reflect'
           "Debate: Privacy vs Utility": 'Debate: Privacy vs Utility'
           Permanent Data Storage and Clicker Completion: Permanent Data Storage and Clicker Completion
+          Why Make Apps?: Why Make Apps?
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1366,7 +1398,7 @@ zh:
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: 歡迎！
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1382,14 +1414,15 @@ zh:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 十歲以上(課程三之後)
+          description_audience: 適合年齡 10 至 18 歲
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: 十歲以上(課程三之後)
+          description_audience: 適合年齡 10 至 18 歲
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1408,6 +1441,8 @@ zh:
           Chunk 5 Overview: Chunk 5 Overview
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         cspunit3temp:
           title: 'CSP Unit 3 - Temp'
           description_short: Programming
@@ -1422,6 +1457,13 @@ zh:
           Key Events with Image Scroller: Key Events with Image Scroller
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
+          Practice Create Performance Task: Practice Create Performance Task
+          While Loops: '"當..."迴圈'
+          Loops and Simulations: Loops and Simulations
+          Introduction to Arrays: Introduction to Arrays
+          Image Scroller with Key Events: Image Scroller with Key Events
+          Canvas and Arrays in Apps: Canvas and Arrays in Apps
+          "Practice PT: Create": 'Practice PT: Create'
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1441,22 +1483,38 @@ zh:
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: '星際大戰: 用程式建立一個銀河系'
+          description_short: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
+          description: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: '星際大戰: 用程式建立一個銀河系'
+          description_short: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
+          description: 學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲
           Hour of Code 2015: Hour of Code 2015
         minecraft:
-          title: Minecraft
+          title: 當個創世神
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: Minecraft 程式碼時間
+          description_short: 從程式碼的角度探索 Minecraft 的世界
+          description: 請利用程式碼方塊帶領 Steve 或 Alex 在這個 Minecraft 世界當中遊歷一番
           Hour of Code 2015: Hour of Code 2015
+        CSPPD3-Unit3-pt2:
+          title: 'Computer Science Principles: Unit 3 PD Challenges'
+          description_short: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          description: 'Online Exploration of CSP Unit 3-- Lesson Challenges'
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        ScienceP3OLPT3:
+          title: Computer Science in Science PD Pre-Phase 3B
+          description_short: Phase 3 Academic Year Development
+          description: Phase 3 Academic Year Development
+          Welcome!: 歡迎！
+          Thinking About Implementation: Thinking About Implementation
+          Wrap-Up: 總結
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

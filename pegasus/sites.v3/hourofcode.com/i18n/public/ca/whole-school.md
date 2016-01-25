@@ -5,10 +5,8 @@ layout: wide
 
 ---
 
-<%= view :signup_button %>
 
 # Aconsegueix tota l'escola per participar
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+La informació sobre com aconseguir escoles complertes per participar en l'Hora de Codi anirà aquí.
 
-<%= view :signup_button %>

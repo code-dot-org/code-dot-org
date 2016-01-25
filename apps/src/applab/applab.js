@@ -1194,7 +1194,10 @@ Applab.reset = function(first) {
   // Reset the Globals object used to contain program variables:
   Applab.Globals = {};
   Applab.executionError = null;
-  Applab.JSInterpreter = null;
+  if (Applab.JSInterpreter) {
+    Applab.JSInterpreter.deinitialize();
+    Applab.JSInterpreter = null;
+  }
 };
 
 /**
@@ -1333,6 +1336,7 @@ Applab.onSubmitComplete = function(response) {
 Applab.onReportComplete = function(response) {
   Applab.response = response;
   Applab.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 };
 
@@ -1550,7 +1554,8 @@ Applab.onCodeModeButton = function() {
   }
 };
 
-var HTTP_REGEXP = new RegExp('^http://');
+// starts with http or https
+var ABSOLUTE_REGEXP = new RegExp('^https?://');
 
 // Exposed for testing
 Applab.assetPathPrefix = "/v3/assets/";
@@ -1559,15 +1564,20 @@ Applab.assetPathPrefix = "/v3/assets/";
  * If the filename is relative (contains no slashes), then prepend
  * the path to the assets directory for this project to the filename.
  *
- * If the filename URL is absolute and non-https, route it through the
- * MEDIA_PROXY.
+ * If the filename URL is absolute, route it through the MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 Applab.maybeAddAssetPathPrefix = function (filename) {
 
-  if (HTTP_REGEXP.test(filename)) {
-    return MEDIA_PROXY + encodeURIComponent(filename);
+  if (ABSOLUTE_REGEXP.test(filename)) {
+    // We want to be able to handle the case where our filename contains a
+    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
+    // technically invalid URL. encodeURIComponent will replace space with %20
+    // for us, but as soon as it's decoded, we again have an invalid URL. For
+    // this reason we first replace space with %20 ourselves, such that we now
+    // have a valid URL, and then call encodeURIComponent on the result.
+    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
   }
 
   filename = filename || '';
@@ -1932,6 +1942,7 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen').first().attr('id');
+  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
+    $('#divApplab .screen').first().attr('id');
   Applab.changeScreen(defaultScreen);
 };

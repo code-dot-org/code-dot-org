@@ -221,7 +221,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setBackgroundRandom":function(d){return "imposta una scena scelta a caso"},
 "setBackgroundHardcourt":function(d){return "imposta una scena tradizionale"},
 "setBackgroundRetro":function(d){return "imposta una scena retrò"},
-"setBackgroundTooltip":function(d){return "Imposta l'immagine di sfondo"},
+"setBackgroundTooltip":function(d){return "Imposta l'immagine per lo sfondo"},
 "setBallRandom":function(d){return "imposta una palla scelta a caso"},
 "setBallHardcourt":function(d){return "imposta una palla tradizionale"},
 "setBallRetro":function(d){return "imposta una palla retrò"},
