@@ -24,6 +24,10 @@ class S3Packaging
     @logger = Logger.new(STDOUT)
   end
 
+  def commit_hash
+    @commit_hash
+  end
+
   # Tries to get an up to date package without building
   # @return True if our package is now up to date
   def update_from_s3

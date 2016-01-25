@@ -15,7 +15,7 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
-require 'cdo/aws/s3_packaging' # TODO - ultimately may not belong here
+require 'cdo/aws/s3_packaging'
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -165,7 +165,10 @@ CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) 
   packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
 
   updated_package = packager.update_from_s3
-  next if updated_package # no need to do anything if we already got a package from s3
+  if updated_package
+    HipChat.log "Downloaded package from S3: ${packager.commit_hash}"
+    next # no need to do anything if we already got a package from s3
+  end
 
   # Test and staging are the only environments that should be uploading new packages
   raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
@@ -306,9 +309,6 @@ end
 $websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
-# TODO - im only here for test purposes. remove me
-task 'build-code-studio' => [CODE_STUDIO_TASK] {}
-
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
     with_hipchat_logging("pegasus ruby unit tests") do
@@ -404,6 +404,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]
