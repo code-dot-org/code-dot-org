@@ -924,6 +924,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   // container just yet, because our React component could contain some
   // elements that don't want to be rendered until they are in the DOM
   var instructionsReactContainer = document.createElement('div');
+  instructionsReactContainer.className='instructions-container';
   instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
