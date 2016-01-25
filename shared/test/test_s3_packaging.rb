@@ -48,10 +48,10 @@ class S3PackagingTest < Minitest::Test
 
   def test_target_commit_hash
     # starts out as nil, since we don't have a commit_hash file
-    assert @packager.send(:target_commit_hash).nil?
+    assert @packager.send(:target_commit_hash, @target_location).nil?
 
     IO.write(@target_location + '/commit_hash', 'manual-hash')
-    assert_equal @packager.send(:target_commit_hash), 'manual-hash'
+    assert_equal @packager.send(:target_commit_hash, @target_location), 'manual-hash'
     FileUtils.rm(@target_location + '/commit_hash')
   end
 
@@ -108,22 +108,22 @@ class S3PackagingTest < Minitest::Test
 
       # we have no package, so we download one
       FileUtils.rm_rf(@target_location + '/*')
-      assert @packager.send(:target_commit_hash).nil?
+      assert @packager.send(:target_commit_hash, @target_location).nil?
       @packager.send(:ensure_updated_package)
-      assert_equal @packager.send(:target_commit_hash), ORIGINAL_HASH
+      assert_equal @packager.send(:target_commit_hash, @target_location), ORIGINAL_HASH
 
       # trash output.js, but keep our commit_hash.
       FileUtils.rm_rf(@target_location + '/output.js')
       @packager.send(:ensure_updated_package)
       # we shouldn't have redownloaded output, because commit_hash still claims we're up to date
-      assert_equal @packager.send(:target_commit_hash), ORIGINAL_HASH
+      assert_equal @packager.send(:target_commit_hash, @target_location), ORIGINAL_HASH
       assert !File.exist?(@target_location + '/output.js')
 
       # if we have the wrong package, we download
       FileUtils.cp(@target_location + '/commit_hash', alt_target_loc)
-      assert_equal alt_packager.send(:target_commit_hash), ORIGINAL_HASH
+      assert_equal alt_packager.send(:target_commit_hash, alt_target_loc), ORIGINAL_HASH
       alt_packager.send(:ensure_updated_package)
-      assert_equal alt_packager.send(:target_commit_hash), 'alternate-hash'
+      assert_equal alt_packager.send(:target_commit_hash, alt_target_loc), 'alternate-hash'
       assert File.exist?(alt_target_loc + '/output.js')
 
       # if there is no package to download, we throw

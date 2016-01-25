@@ -64,9 +64,9 @@ class S3Packaging
     "#{@package_name}/#{@commit_hash}.tar.gz"
   end
 
-  # The hash of the package at target_location (or nil if there is not one)
-  private def target_commit_hash
-    filename = "#{@target_location}/commit_hash"
+  # The hash of the package at the given location (or nil if there is no package there)
+  private def target_commit_hash(location)
+    filename = "#{location}/commit_hash"
     return nil unless File.exist?(filename)
     IO.read(filename)
   end
@@ -87,7 +87,7 @@ class S3Packaging
   end
 
   private def ensure_updated_package
-    if @commit_hash == target_commit_hash
+    if @commit_hash == target_commit_hash(@target_location)
       @logger.info "Package is current: #{@commit_hash}"
     else
       decompress_package(download_package)
