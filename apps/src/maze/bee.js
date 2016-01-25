@@ -10,9 +10,6 @@ var UNLIMITED_NECTAR = 99;
 var EMPTY_HONEY = -98; // Hive with 0 honey
 var EMPTY_NECTAR = 98; // flower with 0 honey
 
-// FC is short for FlowerComb, which we were originally using instead of cloud
-var CLOUD_MARKER = 'FC';
-
 var Bee = function (maze, studioApp, config) {
   this.maze_ = maze;
   this.studioApp_ = studioApp;
@@ -54,40 +51,11 @@ var Bee = function (maze, studioApp, config) {
 
 module.exports = Bee;
 
-Bee.prototype.resetCurrentValues = function () {
-  this.currentStaticGrid.forEach(function (row) {
-    row.forEach(function (cell) {
-      cell.resetCurrentValue();
-    });
-  });
-};
-
-Bee.prototype.reset = function () {
-  this.honey_ = 0;
-  // list of the locations we've grabbed nectar from
-  this.nectars_ = [];
-  for (var i = 0; i < this.currentStaticGrid.length; i++) {
-    this.userChecks_[i] = [];
-    for (var j = 0; j < this.currentStaticGrid[i].length; j++) {
-      this.userChecks_[i][j] = {
-        checkedForFlower: false,
-        checkedForHive: false,
-        checkedForNectar: false
-      };
-    }
-  }
-  this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
-  this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
-  this.resetCurrentValues();
-};
-
-Bee.prototype.useGridWithId = function (id) {
-  this.currentStaticGridId = id;
-  this.currentStaticGrid = this.staticGrids[id];
-  this.resetCurrentValues();
-  this.reset();
-};
-
+/**
+ * Clones the given grid of BeeCells by calling BeeCell.clone
+ * @param {BeeCell[][]} grid
+ * @return {BeeCell[][]} grid
+ */
 Bee.cloneGrid = function (grid) {
   return grid.map(function (row) {
     return row.map(function (cell) {
@@ -96,6 +64,13 @@ Bee.cloneGrid = function (grid) {
   });
 };
 
+/**
+ * Given a single grid of BeeCells, some of which may be "variable"
+ * cells, return a list of grids of non-variable BeeCells representing
+ * all possible variable combinations.
+ * @param {BeeCell[][]} variableGrid
+ * @return {BeeCell[][][]} grids
+ */
 Bee.getAllStaticGrids = function (variableGrid) {
   var grids = [ variableGrid ];
   variableGrid.forEach(function (row, x) {
@@ -117,10 +92,66 @@ Bee.getAllStaticGrids = function (variableGrid) {
   return grids;
 };
 
+/**
+ * Simple passthrough that calls resetCurrntValue for every BeeCell in
+ * this.currentStaticGrid
+ */
+Bee.prototype.resetCurrentValues = function () {
+  this.currentStaticGrid.forEach(function (row) {
+    row.forEach(function (cell) {
+      cell.resetCurrentValue();
+    });
+  });
+};
+
+/**
+ * Resets current state, for easy reexecution of tests
+ */
+Bee.prototype.reset = function () {
+  this.honey_ = 0;
+  // list of the locations we've grabbed nectar from
+  this.nectars_ = [];
+  for (var i = 0; i < this.currentStaticGrid.length; i++) {
+    this.userChecks_[i] = [];
+    for (var j = 0; j < this.currentStaticGrid[i].length; j++) {
+      this.userChecks_[i][j] = {
+        checkedForFlower: false,
+        checkedForHive: false,
+        checkedForNectar: false
+      };
+    }
+  }
+  this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
+  this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  this.resetCurrentValues();
+};
+
+/**
+ * Assigns this.currentStaticGrid to the appropriate grid and resets all
+ * current values
+ * @param {Number} id
+ */
+Bee.prototype.useGridWithId = function (id) {
+  this.currentStaticGridId = id;
+  this.currentStaticGrid = this.staticGrids[id];
+  this.resetCurrentValues();
+  this.reset();
+};
+
+/**
+ * @param {Number} row
+ * @param {Number} col
+ * @returns {Number} val
+ */
 Bee.prototype.getValue = function (row, col) {
   return this.currentStaticGrid[row][col].getCurrentValue();
 };
 
+/**
+ * @param {Number} row
+ * @param {Number} col
+ * @param {Number} val
+ */
 Bee.prototype.setValue = function (row, col, val) {
   this.currentStaticGrid[row][col].setCurrentValue(val);
 };
