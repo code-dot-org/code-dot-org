@@ -186,10 +186,10 @@ class AssetsTest < Minitest::Test
     FilesApi.any_instance.unstub(:admin?)
 
     # teacher can view
-    FilesApi.any_instance.stubs(:teaces_student?).returns(true)
-    get(@assets, channel_id, asset_name)
-    assert @assets.last_response.successful?
-    FilesApi.any_instance.unstub(:teaces_student?)
+    FilesApi.any_instance.stubs(:teaches_student?).returns(true)
+    get(non_owner_assets, channel_id, asset_name)
+    assert non_owner_assets.last_response.successful?
+    FilesApi.any_instance.unstub(:teaches_student?)
 
     delete(@assets, channel_id, asset_name)
     delete_channel(@channels, channel_id)
