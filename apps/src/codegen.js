@@ -149,8 +149,8 @@ function marshalNativeToInterpreterObject(
   for (var prop in nativeObject) {
     var value = safeReadProperty(nativeObject, prop);
     if (isFunc &&
-        (value == Function.prototype.trigger ||
-            value == Function.prototype.inherits)) {
+        (value === Function.prototype.trigger ||
+            value === Function.prototype.inherits)) {
       // Don't marshal these that were added by jquery or else we will recurse
       continue;
     }
