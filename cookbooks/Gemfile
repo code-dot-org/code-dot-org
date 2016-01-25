@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'chef', '~> 11.18.12'
-
 # Test-kitchen fork includes several helpful PRs not merged in the official repo:
 # 845 (ssh_tgz transport)
 # 825 (fix zlib warning)
@@ -12,3 +10,4 @@ gem 'kitchen-docker'
 # Use solve 2.0 to remove gecode dependency (cf. berkshelf/berkshelf#1475)
 gem 'berkshelf', github: 'berkshelf/berkshelf', ref: 'a05e392'
 gem 'kitchen-ec2', github: 'wjordan/kitchen-ec2', branch: 'cdo'
+gem 'kitchen-sync'

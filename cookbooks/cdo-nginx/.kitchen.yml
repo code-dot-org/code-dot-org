@@ -4,7 +4,6 @@ transport:
 driver:
   name: docker
   use_sudo: false
-  privileged: true
 provisioner:
   name: chef_zero
   require_chef_omnibus: 11.18.12
@@ -18,7 +17,14 @@ platforms:
           port: 8080
         pegasus:
           port: 8081
+        i18n:
+          languages:
+            en: English
 suites:
   - name: default
     run_list:
+      - recipe[nginx_test]
+  - name: https
+    run_list:
+      - recipe[cdo-varnish]
       - recipe[nginx_test]

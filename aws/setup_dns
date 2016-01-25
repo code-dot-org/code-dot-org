@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+# A script for setting up DNS entries for a new adhoc instance.
+require_relative '../deployment'
+
+hostname = ENV['HOSTNAME'] || raise('HOSTNAME required')
+name = ENV['NAME'] || "#{rack_env}#{rack_env == 'adhoc' && `git rev-parse --abbrev-ref HEAD`}"
+domain = ENV['DOMAIN'] || 'cdn-code.org'
+
+require 'aws-sdk'
+route53 = Aws::Route53::Client.new
+zone_id = route53.list_hosted_zones_by_name(
+  dns_name: domain,
+  max_items: 1
+).hosted_zones.first.id
+puts "zone id: #{zone_id}, name: #{name}"
+return
+
+route53.change_resource_record_sets(
+  hosted_zone_id: zone_id,
+  change_batch: {
+    changes: %w(-studio -pegasus -dashboard).push('').map do |subdomain|
+      {
+        action: 'UPSERT',
+        resource_record_set: {
+          name: "#{name}#{subdomain}",
+          type: 'A',
+          ttl: '30',
+          hostname: hostname
+        }
+      }
+    end
+  }
+)
