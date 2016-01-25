@@ -9,7 +9,6 @@ class AdminReportsController < ApplicationController
   before_action :set_script
   include LevelSourceHintsHelper
 
-
   def admin_concepts
     SeamlessDatabasePool.use_persistent_read_connection do
       render 'admin_concepts', formats: [:html]
