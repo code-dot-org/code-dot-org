@@ -1,14 +1,56 @@
 name 'U4 - Cleaning Data - Activity Guide'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
 # Cleaning Data
 
-Even when data is collected carefully (and especially if it isn't) it usually has issues that make it difficult to use for analysis. Data may have been entered incorrectly, not be in a usable format, or just be poorly organized. It is important to fix these issues prior to exploring the data for trends and patterns. Otherwise you may think you’ve found an interesting story, only to find it’s just being caused by issues with the data.
+Even when it is collected carefully (and especially if it isn't) **data usually has issues that make it difficult to use for analysis**. Values may have been entered incorrectly, not be in a usable format, or just be poorly organized. It is important to fix these issues prior to exploring the data for trends and patterns. **The process of preparing data for analyis is called "cleaning" the data**.
 
-# Getting Your Own Copy
+# Getting Your Own Copy of the Data
 
-You will need to get your own copy of the data to clean. If your data is currently in 
+You will need to get your own copy of the data to clean. If your data is currently in a Google Sheet you'll need to "Make a copy" of the data, as shown below.
 
+![](https://images.code.org/52f5a4b1304a7b74add7551db31590bf-image-1453401438419.gif)
+
+# Preparing to Clean Data
+
+To prepare to clean your data you'll need to select it. Click the top left cell of your data and then click the "Filter" button, as shown below.
+
+![](https://images.code.org/8856475fa423378cc912a2b947b3bf7d-image-1453402040849.gif)
+
+# Identifying Errors in the Data
+
+Looking at a dataset without the help of computational tools can be challenging. You will be using the **sort** and **filter** tools in this spreadsheet to identify errors in your data.
+
+**Sorting will reorder the rows of data based on the column used to sort**. This makes it easy to find **outliers**, or values that are much larger or lower than they should be.
+
+![](https://images.code.org/9cb572a102c5bfdfdcd2003aecbf4c2e-image-1453404968536.gif)
+
+**Filtering will temporarily hide rows which don't contain certain values**. Filtering is useful for quickly checking for other errors in your data.
+
+![](https://images.code.org/e52d537fba5beb7b43897b654a065a13-image-1453405036160.gif)
+
+# Fixing Errors
+
+As you look through your data you will notice errors in your data. Some values will include text instead of numbers. Some values will be clearly inaccurate or accidentally entered.
+
+**If you can easily convert the data to its correct form, you should. Otherwise you should delete that cell so that incorrect values will not be used in analysis.**
+
+![](https://images.code.org/6c8810fe279977cc519af8d2030b092c-image-1453405130614.gif)
+
+# Categorizing Data
+
+Some data you collected may be useful, but it is not in a form that you can use to do analysis. One way to fix this problem is to **create new columns of data which standardize data that is otherwise disorganized**.
+
+In the example below we show how you might create a new standardized column from a free-text column.
+
+![](https://images.code.org/b7bd7bd954072681fa685afc0756108d-image-1453406846291.gif)
+
+**Note:** standardizing data will often be very subjective. You will need to make judgment calls.
 MARKDOWN

@@ -1011,6 +1011,18 @@ en:
       U4 - Cleaning Data - Activity Guide:
         description here: description here
         title: title
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Free Play:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Line Chart:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: description here
+        title: title
       U4 - Read Record - Local vs Remote Data External:
         Local vs. Remote Data: Local vs. Remote Data
       U4 - Unique Ids Explanation:
@@ -3585,6 +3597,11 @@ en:
         wrong3: wrong3
         wrong4: wrong4
       U4L01 Multiple Choice:
+        "**wrong1**": "**wrong1**"
+        "<code>wrong2</code>": "<code>wrong2</code>"
+        ? <img src="https://www.google.com/imgres?imgurl=http://simpleicon.com/wp-content/uploads/arrow-35.svg&imgrefurl=http://simpleicon.com/sets/arrow/&h=512&w=512&tbnid=Q_U422Xpx-vYLM:&docid=yz6vfaVFshxyGM&ei=fD6hVtjfG47ejwPFj7r4Aw&tbm=isch">wrong2
+        : <img src="https://www.google.com/imgres?imgurl=http://simpleicon.com/wp-content/uploads/arrow-35.svg&imgrefurl=http://simpleicon.com/sets/arrow/&h=512&w=512&tbnid=Q_U422Xpx-vYLM:&docid=yz6vfaVFshxyGM&ei=fD6hVtjfG47ejwPFj7r4Aw&tbm=isch">wrong2
+        "<strong>wrong1</strong>": "<strong>wrong1</strong>"
         'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
         right: right
         wrong1: wrong1
@@ -4048,6 +4065,13 @@ en:
         What is f(2)?: What is f(2)?
         f(x) = x + 3: f(x) = x + 3
         x: x
+      poorva-test-not-a-number:
+        "<code> Right answer </code>": "<code> Right answer </code>"
+        "<code> Wrong answer</code>": "<code> Wrong answer</code>"
+        Multiple choice question: Multiple choice question
+        My <i> description </i>: My <i> description </i>
+        Question: Question
+        another answer: another answer
       sciPD PreQ 1:
         Before now, have you ever participated in an online PD program?: Before now, have you ever participated in an online PD program?
         'No': 'No'
@@ -4873,6 +4897,7 @@ en:
         'Hidden Images: Getting Started': 'Hidden Images: Getting Started'
       U4L01 Free Response:
         'Free Response: Short description here': 'Free Response: Short description here'
+        this is a description: this is a description
       U4L02 Free Response:
         'Free Response: Short description here': 'Free Response: Short description here'
       U4L03 Free Response:
