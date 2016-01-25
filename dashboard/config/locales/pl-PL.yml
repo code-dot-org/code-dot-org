@@ -37,7 +37,7 @@
   appname: Code.org
   stage: Etap
   stage_number: Etap %{number}
-  puzzle: Łamigłówka
+  puzzle: "Łamigłówka"
   trophies: Trofea
   courses: Kursy
   unplugged_activity: Aktywność unplugged (bez komputera)
@@ -69,8 +69,8 @@
     need_confirmation: Czy nie otrzymałeś instrukcji potwierdzającej?
     need_unlock: Czy nie otrzymałeś instrukcji, jak odblokować?
   signup_form:
-    student_count: '%{count} uczniów już się zarejestrowało.'
-    teacher_count: '%{count} nauczycieli już się zarejestrowało.'
+    student_count: "%{count} uczniów już się zarejestrowało."
+    teacher_count: "%{count} nauczycieli już się zarejestrowało."
     overview_student: Zarejestruj się na konto, aby śledzić swoje postępy. Twój e-mail
       służy przede wszystkim do logowania i do odzyskiwania hasła. Aby uzyskać więcej
       informacji, zobacz naszą <a href="http://code.org/privacy"> Politykę prywatności</a>.
@@ -146,7 +146,7 @@
       %{name}
   follower:
     invite_sent: Zaproszenie wysłane
-    added_teacher: '%{name} dodany jako Twój nauczyciel'
+    added_teacher: "%{name} dodany jako Twój nauczyciel"
     registered: Zarejestrowałeś się do %{section_name}.
     error:
       signed_in: Wyloguj się, zanim będziesz kontynuować
@@ -256,9 +256,9 @@
     destroy: Zniszcz
     back: Wstecz
     confirm: Czy jesteś pewien?
-    created: '%{model} został pomyślnie utworzony.'
-    updated: '%{model} został pomyślnie zaktualizowany.'
-    destroyed: '%{model} został pomyślnie usunięty.'
+    created: "%{model} został pomyślnie utworzony."
+    updated: "%{model} został pomyślnie zaktualizowany."
+    destroyed: "%{model} został pomyślnie usunięty."
     access_denied: Nie masz dostępu do tego %{model}.
   nav:
     header:
@@ -281,15 +281,15 @@
       signup: Zarejestruj się
       already_registered: Czy jesteś Już zarejestrowany?
     popup:
-      progress_for_user: '%{name} w toku'
+      progress_for_user: "%{name} w toku"
       progress: Twoje postępy
-      lines: 'Łączna ilość linii kodu: %{lines}'
+      lines: "Łączna ilość linii kodu: %{lines}"
       close: ZAMKNIJ
       mastery: Pojęcia
       puzzle_map: Etapy
       prizes: Zbierz wszystkie %{total_trophies} trofea i wygraj nagrody!
       prize_earned: Zebrane zostały wszystkie %{total_trophies} trofea. Wygrałeś nagrodę!
-      prize_us_only: (Tylko dla uczniów w USA)
+      prize_us_only: "(Tylko dla uczniów w USA)"
       prizes_link: Więcej informacji
   teacher:
     answer: Odpowiedź
@@ -297,7 +297,7 @@
     title:
       one: 'Twój nauczyciel:'
       other: 'Twoi nauczyciele:'
-    remove: (usuń nauczyciela)
+    remove: "(usuń nauczyciela)"
     confirm:
       remove: Czy na pewno chcesz usunąć tego nauczyciela?
     students:
@@ -317,11 +317,11 @@
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
-    email_confirm_wrong_email: (Zły adres e-mail?)
+    email_confirm_wrong_email: "(Zły adres e-mail?)"
     email_resend_confirm: Wyślij ponownie instrukcje potwierdzenia
-    new_password_hint: (zostaw puste, jeśli nie chcesz tego zmienić)
-    current_password_hint: (potrzebujemy Twojego aktualnego hasła, aby potwierdzić
-      Twoje zmiany)
+    new_password_hint: "(zostaw puste, jeśli nie chcesz tego zmienić)"
+    current_password_hint: "(potrzebujemy Twojego aktualnego hasła, aby potwierdzić
+      Twoje zmiany)"
     delete: Usuń swoje konto
     delete_text: Kliknięcie na poniższym przycisku spowoduje usunięcie Twojego konta.
     delete_text_teacher_note: 'Uwaga: usunięcie Twojego konta nie spowoduje usunięcia
@@ -330,17 +330,13 @@
   user_level:
     completed: Ukończono
     tried: Próbowano
-  user_stats:
-    recent_activity: Ostatnia aktywność
-    show_more: Pokaż więcej
-    classroom_activity: Aktywność unplugged (bez komputera)
   home:
     title: Studio Kodowania (Code Studio)
     description: Studio Kodowania jest miejscem dla kursów online utworzonych przez
       Code.org
-    lines_of_code: '%{lines_count} LINIE KODU NAPISANEGO PRZEZ UCZNIÓW'
-    lines_of_code_linebreak: '%{lines_count} LINII KODU<br/> NAPISANYCH PRZEZ %{students_count}
-      MILIONÓW UCZNIÓW'
+    lines_of_code: "%{lines_count} LINIE KODU NAPISANEGO PRZEZ UCZNIÓW"
+    lines_of_code_linebreak: "%{lines_count} LINII KODU<br/> NAPISANYCH PRZEZ %{students_count}
+      MILIONÓW UCZNIÓW"
     all_courses: Streszczenie Kursów 1, 2 i 3
     lesson_plans: Plany lekcji
     signin_message: Jesteś już zarejestrowany? %{link}
@@ -378,11 +374,11 @@
     test_videos_help: Sprawdź nasz nowy odtwarzacz wideo w swojej szkole
     try_beta_courses: Nowość! Wypróbuj nasze beta kursy dla uczniów w K-5
     use_as_teacher: Korzystaj z tej strony jako nauczyciel
-    heading_hoc2014: <h2>Godzina kodowania dla</h2><h1>Wszystkich grup wiekowych</h1>
-    heading_elementary: <h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym
-      wieku)</h1>
-    heading_apps: <h2>Zabawy dla</h2><h1>Wszystkich</h1>
-    heading_legacy: <h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>
+    heading_hoc2014: "<h2>Godzina kodowania dla</h2><h1>Wszystkich grup wiekowych</h1>"
+    heading_elementary: "<h2>20-godzinne kursy z</h2><h1>Podstaw informatyki (w każdym
+      wieku)</h1>"
+    heading_apps: "<h2>Zabawy dla</h2><h1>Wszystkich</h1>"
+    heading_legacy: "<h2>Nasz przyspieszony kurs dla</h2><h1>Wszystkich grup wiekowych</h1>"
     your_gallery: Galeria
     no_primary_course: Wypróbuj kurs w Code Studio
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
@@ -427,8 +423,8 @@
       < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon
       Network.
     powered_by_aws: Zasilany przez Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
-      of Code&reg; są znakami handlowymi Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour
+      of Code&reg; są znakami handlowymi Code.org."
     copyright: Prawa autorskie
     more: Więcej
     feedback: Wyraź swoją opinię
@@ -554,7 +550,7 @@
     want_to_make_your_own: Chcesz zrobić własną?
     more: Więcej &rarr;
     caption_by_name_age: przez %{name}, w wieku %{age}
-    caption_time_ago: '%{time_ago} temu'
+    caption_time_ago: "%{time_ago} temu"
     header: Galeria
     header_playlab: Opowiadania i gry
     header_artist: Sztuka kodu
@@ -567,7 +563,7 @@
     feedback: Przekaż opinię
     report_bug: Zgłoś błędy
     support: Uzyskaj pomoc
-    support_url: //support.Code.org
+    support_url: "//support.Code.org"
   multi:
     wrong_title: Błędna odpowiedź
     wrong_body: Wprowadzona przez Ciebie odpowiedź nie jest poprawna. Spróbuj ponownie!

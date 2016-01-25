@@ -162,15 +162,15 @@
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
         frozen:
-          title: اینا اور ایلسا کے ساتھ کوڈ
-          description: آئیں اینا اور ایلسا کو جوائن کرنے کے لیے کوڈ کو استعمال کریں
+          title: "اینا اور ایلسا کے ساتھ کوڈ"
+          description: "آئیں اینا اور ایلسا کو جوائن کرنے کے لیے کوڈ کو استعمال کریں
             اورسیکھیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔ آپ
             سنوفلیکس اور پیٹرنز ایسے کری-ایٹ کریں گے جیسا کہ آپ آئس-اسکیٹنگ کر رہے
             ہوں اور ایسی یادگار سردیاں منائیں جو بعد میں آپ اپنے دوستوں کے ساتھ شیئر
-            بھی کرسکیں!
+            بھی کرسکیں!"
           Artist: Artist
-          description_short: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن
-            کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
+          description_short: "آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن
+            کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔"
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -183,7 +183,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: متغیرات
+          Variables: "متغیرات"
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -232,7 +232,7 @@
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: متغیرات
+          Variables: "متغیرات"
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -705,7 +705,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: متغیرات
+          Variables: "متغیرات"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -1513,8 +1513,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1568,6 +1570,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1671,5 +1674,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Wrap-Up
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

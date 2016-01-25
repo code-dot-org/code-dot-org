@@ -64,20 +64,20 @@
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Điều kiện
-        desc: Đây là trò chơi theo nhóm. Sau khi giới thiệu ý tưởng, mẫu if, và vòng
+        title: "Điều kiện"
+        desc: "Đây là trò chơi theo nhóm. Sau khi giới thiệu ý tưởng, mẫu if, và vòng
           lặp, cả lớp có thể luyện tập cùng nhau sử dụng một chương trình viết trước,
-          một cỗ bài, và vẽ vận may.
+          một cỗ bài, và vẽ vận may."
         pdfs:
         - unplug6
         video: Unplug6
       Unplug7:
         title: Viết nhạc
-        desc: Đọc lời bài hát là một việc làm theo cảm tính hết sức mạo hiểm. Chúng
+        desc: "Đọc lời bài hát là một việc làm theo cảm tính hết sức mạo hiểm. Chúng
           tôi sẽ thực hiện một hành động mà nó đã là kiến thức phổ biến và thay đổi
           thành một nền giáo dục vững chắc đang được xác định và đang hoạt động. Một
           khi các em quen thuộc với quá trình xác định/cuộc gọi, chúng tôi sẽ thêm
-          khả năng phụ cùng với những tham số trong những cuộc gọi chức năng đó.
+          khả năng phụ cùng với những tham số trong những cuộc gọi chức năng đó."
         pdfs:
         - unplug7
         video: Unplug7
@@ -152,7 +152,7 @@
           đi và quay lại từ đầu từ điểm đó.
         video: C2_relay_programming
       Conditionals:
-        title: Điều kiện
+        title: "Điều kiện"
         desc: Để tìm hiểu về câu điều kiện, học sinh nên chơi trò đánh bài và tạo
           ra những luật như "Nếu tôi rút ra một thẻ đỏ, tôi sẽ được 1 điểm" và "Nếu
           Tôi rút được một thẻ đen, bạn sẽ được một điểm."
@@ -165,7 +165,7 @@
           nhấn.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Đến nơi an toàn
+        title: "Đến nơi an toàn"
         desc: Internet là một nơi có uy lực rất lớn, nhưng đồng thời cũng là một nơi
           nguy hiểm. Giáo viên nên hướng dẫn các em làm sao để được an toàn khi lướt
           web.
@@ -223,7 +223,7 @@
           bưu thiếp .
         video: C3_internet
       Crowdsourcing:
-        title: Đa nguồn
+        title: "Đa nguồn"
         desc: Học sinh sử dụng đa nguồn, kỹ thuật giải quyết vấn đề phổ biến trong
           khoa học máy tính, để hoàn thành một nhiệm vụ với nhau như một lớp học hiệu
           quả hơn hơn cố làm nó một mình.

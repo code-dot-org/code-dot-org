@@ -12,7 +12,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek
     yang lain</a>'
-  n_have_learned_an_hoc: <h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>
+  n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
   anybody_can_learn: Siapa pun bisa belajar.
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
@@ -29,9 +29,9 @@
   twentyhours_heading: Cobalah pendahuluan pelajaran ilmu Komputer
   twentyhours_text: Selesai dengan Jam pertama 'Hour of Code? Pelajari lebih lanjut
     inti ilmu komputer dan konsep pemrograman di pelajaran selanjutnya.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Setiap anak berhak atas kesempatan
+  og_description: Setiap siswa di setiap sekolah berhak atas kesempatan untuk mempelajari
+    ilmu komputer.
   hoc2014_heading: Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a>
     <br/> 8-14 Desember 2014 <br/>
   hoc2014_students: Siswa
@@ -41,7 +41,7 @@
   hoc2014_everyone: Semua orang
   hoc2014_support: Dukunglah &#x25BE;
   hoc2014_whatishoc: Apa itu Hour of Code?
-  csedweek_map_header: '# CSEdWeek / acara Hour of Code di seluruh dunia'
+  csedweek_map_header: "# CSEdWeek / acara Hour of Code di seluruh dunia"
   csedweek_map_signup: Daftarkan acaramu
   csedweek_map_search_placeholder: Telusuri acara Hour of Code
   csedweek_map_search_search: Telusuri
@@ -71,7 +71,7 @@
     vs Zombies. Pelajari ulangi (repeat-loop), pernyataan jika-maka, dan dasar algoritma.
   all_ages: Segala usia
   beginner: Pemula
-  n_participants: '# peserta'
+  n_participants: "# peserta"
   go: Buka
   thank_you_: Terima kasih!
   congratulations: Selamat!
@@ -122,7 +122,7 @@
   beyond_an_hour: Setelah Satu Jam Kode
   get_started: Mulai
   i_agree: Saya setuju
-  participant_select: -Pilih-
+  participant_select: "-Pilih-"
   participant_student: siswa
   participant_parent: Orang tua
   participant_educator: Guru
@@ -143,7 +143,7 @@
   learn_next_level: Lanjut ke tingkat berikutnya
   learn_online: Coba kursus online lain
   learn_classes: Cari kelas kursus
-  hoc_is_here: '#HourOfCode ada di sini – coba lihat! @codeorg'
+  hoc_is_here: "#HourOfCode ada di sini – coba lihat! @codeorg"
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer?
     Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/
@@ -157,7 +157,7 @@
     tim Anda!
   help_recruit: Bantu kami merekrut lebih banyak orang untuk bergabung!
   lines_of_code: Sebanyak <b># baris kode</b> telah ditulis sampai saat ini.
-  lines_of_code_alt: <b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI
+  lines_of_code_alt: "<b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI"
   who_has_done_hoc: 'Siapakah yang telah menyelesaikan #HourOfCode? @codeorg'
   hoc_leaderboards: 'Papan Prestasi Jam kode '
   students_and_lines: Sebanyak %{students} siswa telah menyelesaikan jam kode dan
@@ -186,8 +186,8 @@
   studiobar_donate_body: Satu anak belajar untuk setiap US dollar yang Anda sumbangkan
   studiobar_shop_title: Belanja
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
-  homepage_hero_text_malala: '&ldquo;Saya menantang anak-anak di setiap negara untuk
-    belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian'
+  homepage_hero_text_malala: "&ldquo;Saya menantang anak-anak di setiap negara untuk
+    belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian"
   homepage_hero_text_susan: |
     &ldquo;Jika Anda bisa mengubah teknologi,
     Anda bisa mengubah dunia.&rdquo;
@@ -228,8 +228,8 @@
   homepage_hero_text_teacher2: |
     &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
     Adam, guru
-  homepage_hero_text_stat_loc: '#loc baris kode ditulis oleh para pelajar'
-  homepage_hero_text_stat_students: '#student_count akun pelajar pada kode Studio'
+  homepage_hero_text_stat_loc: "#loc baris kode ditulis oleh para pelajar"
+  homepage_hero_text_stat_students: "#student_count akun pelajar pada kode Studio"
   homepage_hero_text_stat_served: 'Hour of Code: #served disediakan'
   homepage_slot_text_hoc: Jam Kode
   homepage_slot_text_frozen: Frozen bersama Anna dan Elsa
@@ -239,7 +239,7 @@
   homepage_slot_text_shop: Belanja
   homepage_slot_text_flappy: Kode Flappy
   homepage_action_text_hoc: Hour of Code untuk setiap pelajar.
-  homepage_action_text_num_served: '# disajikan'
+  homepage_action_text_num_served: "# disajikan"
   homepage_action_text_join_us: Bergabung dengan kami
   homepage_action_text_sign_up: Daftar
   homepage_action_text_try_it: Cobalah
@@ -259,18 +259,18 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Pelajari lebih banyak
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20.000 guru telah dilatih, dan sekarang mereka mengajar
+    ilmu komputer di kelas-kelas.
   homepage_banner_20k_teachers_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
   homepage_slot_text_link_host: Selenggarakan Hour of Code
-  homepage_slot_text_link_hocserved: '# disajikan'
+  homepage_slot_text_link_hocserved: "# disajikan"
   homepage_solot_text_link_volunteer: Relawan untuk Hour of Code
   homepage_slot_text_title_students: Siswa
   homepage_slot_text_blurb_students: Jelajahi semua panduan kami
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Eksplorasi mata pelajaran kami
   homepage_slot_text_link_codestudio: Coba kode Studio
   homepage_slot_text_link_local: Temukan kelas setempat
   homepage_slot_text_link_othercourses: Kursus daring lainnya
@@ -329,11 +329,11 @@
   class_submission_languages_other: Bahasa Lainnya
   inspirational_videos_more: Selebihnya <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video
     inspiratif</a> oleh para role model dan selebriti
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_choose_theme: Pilih laboratorium bermain-mu
+  playlab_classic_title: Klasik
+  playlab_gumball_title: Dunia Gumball yang menakjubkan
+  playlab_iceage_title: Zaman Es - Segera hadir
+  playlab_iceage_title_live: Zaman Es
   starwars_subtitle: Membangun sebuah galaksi dengan kode
   starwars_javascript_title: Javascript
   starwars_javascript_description: Menggunakan blok drag-drop dan JavaScript.
@@ -342,8 +342,8 @@
   starwars_javascript_start_button: Coba sekarang
   starwars_blocks_title: Blok
   starwars_blocks_description: Gunakan blok drag-drop.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_specs: Berbagai bahasa | Situs pencarian modern, ponsel pintar,
+    tablet | Usia 6-106
   starwars_blocks_start_button: Pelajari lebih banyak
   starwars_watch_videos: Sebelum Anda memulai, lihat salah satu video inspiratif ini
   starwars_speak_languages: Berbicara dengan bahasa lain?
@@ -356,32 +356,31 @@
     petualangan dengan dunia Minecraft ini.
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Berbagai bahasa | Situs pencarian | Ages 6-106
   minecraft_subtitle: Minecraft Hour of Code
   volunteer_engineer_submission_title: Inspirasi siswa dan relawan untuk Hour of Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan
     rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh
     bantuan Anda! '
-  volunteer_engineer_submission_subtitle_specific: '%{num_teachers} teachers want
-    volunteers passionate about computer science education to help with their Hour
-    of Code this December.<br>%{num_volunteers} volunteers have signed up. Join them.'
-  volunteer_engineer_submission_intro_background: The Hour of Code is a global movement
-    to try an hour introduction to computer science, reaching tens of millions of
-    students in 180+ countries. Please get involved during Computer Science Education
-    Week, December 7-13.
-  volunteer_engineer_submission_intro_recruit: 'These teachers would love to have
-    somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about
-    computer science education</span> who can help in the classroom, or for somebody
-    who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their
-    students by talking about the breadth of possibilities with computer science (which
-    could be done through a video chat).'
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} guru-guru memerlukan
+    bantuan sukarela.<br>%{num_volunteers} bantuan sukarela telah terdaftar. Bergabung."
+  volunteer_engineer_submission_intro_background: The Hour of Code merupakan gerakan
+    bagi siswa di seluruh dunia untuk mencoba 1 jam pengenalan terhadap ilmu komputer.
+    Gerakan ini meliputi puluhan juta siswa di lebih dari 180 negara. Silakan bergabung
+    dalam Pekan Pendidikan Ilmu Komputer, 7--13 Desember.
+  volunteer_engineer_submission_intro_recruit: 'Guru akan senang untuk memiliki seseorang
+    <span style="font-family: ''Gotham 7r'', sans-serif;"> bergairah tentang pendidikan
+    ilmu komputer</span> yang dapat membantu di dalam kelas (melalui video), atau
+    untuk seseorang yang dapat <span style="font-family: ''Gotham 7r'', sans-serif;">
+    menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan
+    dengan ilmu komputer.'
   volunteer_engineer_submission_intro_signup: Masukkan informasi berikut jika Anda
     seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai
     dengan <span class="form-required-field"> *</span> diperlukan.
-  volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
-    more</a> about organizing your own Hour of Code event and finding a local volunteer
-    on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: Apakah Anda membutuhkan voluntir? Temukan
+    seorang voluntir dari lingkungan anda pada <a href="%{volunteer_local}">volunteer
+    map</a>.
+  volunteer_engineer_submission_update_information: Perbarui informasi Anda
   volunteer_engineer_submission_header_shared: Informasi yang dibagi dengan guru-guru
     pada peta relawan
   volunteer_engineer_submission_field_name: Nama
@@ -407,10 +406,12 @@
   volunteer_engineer_submission_field_facebook: Profil Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/nama_anda
   volunteer_engineer_submission_field_description: Deskripsi
-  volunteer_engineer_submission_field_description_desc: Describe your computer science
-    experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+  volunteer_engineer_submission_field_description_desc: Deskripsikan pengalaman Anda
+    seputar ilmu komputer, dan bagaimana Anda ingin berpartisipasi sebagai tenaga
+    sukarela untuk membantu para guru lokal.
+  volunteer_engineer_submission_field_description_placeholder: Deskripsi pengalaman
+    dan/atau partisipasi. Jika Anda berbahasa lain selain Bahasa Inggris, pastikan
+    Anda juga terlibat di dalamnya.
   volunteer_engineer_submission_header_private: Informasi tetap dirahasiakan dan tidak
     pernah berbagi
   volunteer_engineer_submission_field_email: Alamat email
@@ -581,11 +582,11 @@
   dashboard_sections_name: Nama kelompok
   dashboard_sections_choose_secret: Jika Anda ingin memberikan akun kepada murid Anda,
     pilih <b>kata</b> atau <b>gambar</b> rahasia untuk bagian tersebut.
-  dashboard_sections_secret_word: <b>Kata</b> memungkinkan Anda untuk menetapkan kata
-    rahasia yang berbeda untuk setiap siswa.
-  dashboard_sections_secret_picture: <b>Gambar</b> yang memungkinkan Anda untuk menetapkan
+  dashboard_sections_secret_word: "<b>Kata</b> memungkinkan Anda untuk menetapkan
+    kata rahasia yang berbeda untuk setiap siswa."
+  dashboard_sections_secret_picture: "<b>Gambar</b> yang memungkinkan Anda untuk menetapkan
     gambar rahasia untuk setiap siswa, ideal untuk siswa yang lebih muda yang belum
-    bisa mengetik.
+    bisa mengetik."
   dashboard_sections_secret_none: Jika Anda ingin siswa Anda untuk mengelola akun
     mereka sendiri, termasuk memilih kata sandi mereka sendiri, maka pilihlah tipe
     kata sandi <b>kosong</b>.
@@ -664,7 +665,7 @@
   dashboard_teacher_worksheet: lembar kerja guru
   dashboard_curriculum_csina: 'Ilmu Komputer dalam Aljabar:'
   dashboard_curriculum_csins: 'Ilmu komputer dalam ilmu pengetahuan:'
-  dashboard_curriculum_csp: '® AP Prinsip-prinsip ilmu komputer :'
+  dashboard_curriculum_csp: "® AP Prinsip-prinsip ilmu komputer :"
   dashboard_curriculum_ecs: 'Menjelajahi ilmu komputer:'
   dashboard_grade_k: K
   dashboard_grade_other: Lain
@@ -706,19 +707,19 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: '<b>December 16, 2015</b> - Thank you for participating
+  dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
     in the Hour of Code 2015! Tracking and saving progress have now resumed in all
     Code Studio tutorials and courses. Note: Code.org offices will be closed December
     19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4.'
+    January 4."
   dashboard_announce_button_text: Pelajari lebih banyak
-  dashboard_announce_hoc: '<b>9 November 2015</b> - tutorial Hour of Code baru ada
+  dashboard_announce_hoc: "<b>9 November 2015</b> - tutorial Hour of Code baru ada
     di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah
     dengan Rey untuk membimbing droid baru, BB-8, melalui misi. Kemudian, bergabung
     dengan Leia untuk membuat dan berbagi pertandingan Anda sendiri di sebuah galaksi
-    yang sangat jauh.'
-  dashboard_announce_playlab: <b>December 4, 2015</b> - The Hour of Code is here!
-    Try out a tutorial, like the new Gumball and Ice Age Play Lab.
+    yang sangat jauh."
+  dashboard_announce_playlab: "<b>December 4, 2015</b> - The Hour of Code is here!
+    Try out a tutorial, like the new Gumball and Ice Age Play Lab."
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   learn_more: Pelajari lebih banyak
@@ -882,12 +883,12 @@
   infinity_gradelevel: Usia 4-104
   artist_gradelevel: Usia 4-104
   monstercoding_gradelevel: Usia 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Usia 5-10 tahun
+  csfirst_gradelevel: Usia 9-14 tahun
   boxisland_gradelevel: Sekolah Dasar
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Usia 12-14 tahun
+  texasinstruments_gradelevel: Usia 13-16 tahun
+  teacherled_gradelevel: Usia 5 tahun atau lebih
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
   thinkersmithspanish_platformtext: Dicabut
@@ -1007,8 +1008,8 @@
   boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
   codesters_shortdescription: Create your own games, animations, and artwork using
     Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
+  texasinstruments_shortdescription: Mempelajari pemrograman dasar menggunakan TI-84&#8482;
+    dan kalkulator.
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with
     these lesson plans.
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman

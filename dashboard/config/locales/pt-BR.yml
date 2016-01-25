@@ -7,7 +7,7 @@
   activerecord:
     errors:
       messages:
-        blank: é obrigatório
+        blank: "é obrigatório"
     attributes:
       user:
         name: Nome para exibição
@@ -72,8 +72,8 @@
     need_confirmation: Não recebeu as instruções de confirmação?
     need_unlock: Não recebeu as instruções de desbloqueio?
   signup_form:
-    student_count: '%{count} alunos já se registraram.'
-    teacher_count: '%{count} professores já se registraram.'
+    student_count: "%{count} alunos já se registraram."
+    teacher_count: "%{count} professores já se registraram."
     overview_student: Crie uma conta para acompanhar seu progresso. Seu e-mail é usado
       principalmente para permitir que você faça logon e para a recuperação de senha.
       Para obter mais informações, consulte nossa <a href="http://code.org/privacy">Política
@@ -150,12 +150,12 @@
       %{name}
   follower:
     invite_sent: Convite enviado
-    added_teacher: '%{name} foi adicionado como seu professor'
+    added_teacher: "%{name} foi adicionado como seu professor"
     registered: Você se cadastrou para %{section_name}.
     error:
       signed_in: Saia antes de prosseguir
       username_not_found: Nome de usuário %{username} não encontrado
-      username_in_use: '%{username} já está em uso, escolha outro'
+      username_in_use: "%{username} já está em uso, escolha outro"
       no_teacher: Nenhum cadastro com '%{teacher_email_or_code}' foi encontrado. Verifique
         se o cadastro está feito, e então adicione novamente
       section_not_found: Não foi possível encontrar uma seção com o código '%{section_code}'.
@@ -207,7 +207,7 @@
       ea_fifa: FIFA Soccer 13 (baixar para PC)
       ea_simcity: SimCity 4 Deluxe Edition (baixar para PC)
       ea_pvz: Plants vs. Zombies (baixar para PC)
-      skype: $10 em créditos para Skype
+      skype: "$10 em créditos para Skype"
     msg:
       choose: 'Escolha um prêmio:'
       choose_teacher: 'Clique no logo abaixo para retirar seu prêmio:'
@@ -259,9 +259,9 @@
     destroy: Destruir
     back: Voltar
     confirm: Tem certeza?
-    created: '%{model} foi criado com sucesso.'
-    updated: '%{model} foi atualizado com sucesso.'
-    destroyed: '%{model} foi excluído com êxito.'
+    created: "%{model} foi criado com sucesso."
+    updated: "%{model} foi atualizado com sucesso."
+    destroyed: "%{model} foi excluído com êxito."
     access_denied: Você não tem acesso a esse %{model}.
   nav:
     header:
@@ -293,7 +293,7 @@
       prizes: Colete todos os %{total_trophies} troféus e ganhe prêmios!
       prize_earned: Todos os %{total_trophies} troféus foram conquistados. Você ganhou
         o prêmio!
-      prize_us_only: (Somente para alunos dos EUA)
+      prize_us_only: "(Somente para alunos dos EUA)"
       prizes_link: Mais informação
   teacher:
     answer: Resposta
@@ -301,7 +301,7 @@
     title:
       one: 'Seu professor:'
       other: 'Seus professores:'
-    remove: (remover professor)
+    remove: "(remover professor)"
     confirm:
       remove: Você tem certeza que deseja remover esse professor?
     students:
@@ -321,10 +321,10 @@
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
-    email_confirm_wrong_email: (Endereço de e-mail errado?)
+    email_confirm_wrong_email: "(Endereço de e-mail errado?)"
     email_resend_confirm: Reenviar instruções de confirmação
-    new_password_hint: (deixe em branco se não quiser fazer alteração)
-    current_password_hint: (precisamos de sua senha atual para confirmar suas alterações)
+    new_password_hint: "(deixe em branco se não quiser fazer alteração)"
+    current_password_hint: "(precisamos de sua senha atual para confirmar suas alterações)"
     delete: Excluir sua conta
     delete_text: Clicando no botão abaixo, você vai excluir sua conta.
     delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir
@@ -333,17 +333,13 @@
   user_level:
     completed: Concluído
     tried: Provado
-  user_stats:
-    recent_activity: Atividade recente
-    show_more: Mostrar mais
-    classroom_activity: Atividade off-line
   home:
     title: Code Studio
     description: No Code Studio você pode encontrar os cursos on-line criados pela
       Code.org
-    lines_of_code: '%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS'
-    lines_of_code_linebreak: '%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
-      MILHÕES DE ESTUDANTES'
+    lines_of_code: "%{lines_count} LINHAS DE CÓDIGO ESCRITAS POR ALUNOS"
+    lines_of_code_linebreak: "%{lines_count} LINHAS DE CÓDIGO<br/>ESCRITAS POR %{students_count}
+      MILHÕES DE ESTUDANTES"
     all_courses: Visão geral dos cursos 1, 2 e 3
     lesson_plans: Planos de aula
     signin_message: Já se registrou? %{link}
@@ -383,11 +379,11 @@
     try_beta_courses: Novo! Conheça nossos cursos experimentais para alunos do pré
       ao 5º ano
     use_as_teacher: Use este site como um professor
-    heading_hoc2014: <h2>A Hora do Código para</h2><h1>Todas as idades</h1>
-    heading_elementary: <h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
-      da Computação (todas as idades)</h1>
-    heading_apps: <h2>Diversão para</h2><h1>todos</h1>
-    heading_legacy: <h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>
+    heading_hoc2014: "<h2>A Hora do Código para</h2><h1>Todas as idades</h1>"
+    heading_elementary: "<h2>Cursos de 20 horas sobre</h2><h1>Fundamentos de Ciência
+      da Computação (todas as idades)</h1>"
+    heading_apps: "<h2>Diversão para</h2><h1>todos</h1>"
+    heading_legacy: "<h2>Nosso curso acelerado para</h2><h1>todas as idades</h1>"
     your_gallery: Galeria
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
@@ -431,8 +427,8 @@
       &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O
       Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
-      e Hora do Código&reg; são marcas registradas da Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
+      e Hora do Código&reg; são marcas registradas da Code.org."
     copyright: Direitos Autorais
     more: Mais
     feedback: Fornecer feedback
@@ -574,7 +570,7 @@
     feedback: Dar feedback
     report_bug: Reportar erro
     support: Obter ajuda
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!

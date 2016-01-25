@@ -223,7 +223,7 @@ es-MX:
         text: 'En este ejemplo, nuestra iteración "contador" dice "cuenta con un contador de 50 a 90 de 10 en 10" y dentro de ella tenemos un bloque "dibuja un cuadrado". Arrastra el bloque "contador" desde la sección "Variables" al sitio "longitud".'
       4:
         image: notes/stage11_4.jpg
-        text: Esto significa que nuestro artista dibujará un cuadrado que tiene lados de 50 píxeles de longitud, luego agregará 10 para dibujar un cuadrado con lados de 60 píxeles de longitud, Después continuará agregando 10 para dibujar cuadrados hasta que alcance 90. Así que tendremos cuadrados de 50, 60, 70, 80 y 90.
+        text: Esto significa que nuestro artista dibujará un cuadrado que tiene 50 píxeles de longitud por cada lado, luego le agregará 10 para dibujar un cuadrado con 60 píxeles de longitud de cada lado. Después continuará agregando 10 para dibujar cuadrados que alcancen 90. Así que tendremos cuadrados de 50, 60, 70, 80 y 90.
     parameters:
       1:
         image: notes/stage15_1.jpg
@@ -252,7 +252,7 @@ es-MX:
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: ¡Felicidades! Con el último puzzle resuelto, acabas de escribir código que puede decir a cualquier robot cómo encontrar su camino a través de un laberinto sin ramificación o túnel de cualquier longitud, no importa si es un zombie, un pájaro, un rover de Marte o incluso un coche sin conductor.
+        text: ¡Felicidades! Con este último rompecabezas resuelto, acabas de escribir código que puede decir a cualquier robot cómo encontrar su camino a través de un laberinto sin ramificación o túnel de cualquier longitud, no importa si es un zombie, un pájaro, un vagabundo en marte o incluso un coche sin conductor.
       2:
         image: notes/hoc6_2.jpg
         text: 'Los conceptos básicos que utilizaste son el corazón de cualquier programa o aplicación que encuentres.  Aprendimos acerca de iteraciones, las declaraciones "repetir hasta", las declaraciones "si" y las "si sí no".'
@@ -261,7 +261,7 @@ es-MX:
         text: Si te gustó tu primera hora del código, visita code.org para continuar tu educación en Ciencias de la Computación. Una vez que completes nuestro curso de 20 horas, habrás dominado los fundamentos de la programación y podrás empezar a aprender cómo escribir aplicaciones para teléfonos, instrucciones para robots, juegos, o lo que quieras.
       4:
         image: notes/hoc6_4.jpg
-        text: 'La tecnología está cambiando todo lo que hacemos y no importa si eres joven o viejo: la programación es divertida, es creativa, y cualquier persona puede aprenderla!'
+        text: 'La tecnología está cambiando todo lo que hacemos y no importa si eres joven o viejo: la programación es divertida, es creativa, y cualquier persona puede aprender!'
     20_wrapup:
       1:
         image: notes/bird.png
@@ -281,13 +281,13 @@ es-MX:
         text: Un programa es un conjunto de instrucciones que le dice una computadora qué hacer. Vamos a construir un código o un programa que ayudará a Elsa a crear una línea simple. Más tarde utilizaremos esto para crear patrones más complejos.
       5:
         image: notes/frozen1_5.jpg
-        text: La pantalla se divide en tres partes principales. A la izquierda, está la superficie de hielo donde se ejecutará tu programa. Las instrucciones para cada nivel se escriben justo debajo de la superficie.
+        text: Tu pantalla se divide en tres partes principales. A la izquierda, está la superficie de hielo donde se ejecutará tu programa. Las instrucciones para cada nivel se escriben justo debajo de la superficie.
       6:
         image: notes/frozen1_6.jpg
-        text: Esta zona media es la caja de herramientas, y cada uno de estos bloques es una acción que pueden hacer Elsa y Anna.
+        text: Esta zona de enmedio es la caja de herramientas, y cada uno de estos bloques es una acción que Elsa y Anna pueden hacer.
       7:
         image: notes/frozen1_7.jpg
-        text: 'El espacio en blanco a la derecha se conoce como "área de trabajo", y es ahí dónde crearemos nuestro programa. Para poder movernos alrededor de la superficie de hielo necesitarás utilizar el bloque de "Mover hacia adelante".'
+        text: 'El espacio en blanco a la derecha se conoce como "área de trabajo", ahí es donde se crea nuestro programa. Para poder moverte alrededor de la superficie de hielo necesitarás usar el bloque de "Mover hacia adelante".'
       8:
         image: notes/frozen1_8.jpg
         text: 'Aquí, el bloque de "Moverse hacia adelante" dice: "Moverse hacia adelante 100 pixeles". Cuando oprimimos el botón "Ejecutar/Run". ¿Qué ocurre? Elsa se mueve hacia adelante una cierta distancia en la pantalla. ¡De hecho se mueve 100 pixeles! Los pixeles son básicamente cuadros muy pequeños que se encuentran en la pantalla de la computadora.'

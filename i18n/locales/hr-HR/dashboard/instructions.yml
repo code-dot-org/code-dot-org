@@ -844,11 +844,29 @@ hr:
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: |
+        Backed by a template #1. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script). 
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: uvjet
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -2993,53 +3011,24 @@ hr:
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |
-        Running into a Creeper is a bad idea.
-        Carefully move past the Creepers and reach the safety of your home.
+        Naletjeti na "creepera" loša je ideja.
+        Oprezno se provucite pored Creepera do sigurnosti svog doma.
       Overworld Chop Tree_instruction: 'Drvo je vrlo važan resurs. Mnoge stvari napravljeni su od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe "uništiti blok".'
       Overworld Chop Trees_instruction: Moramo sagraditi kuću prije zalaska sunca. Kuće zahtijevaju puno drva stoga srušite sva 3 stabla.
-      Overworld Free Play 20x20_instruction: |
-        Congratulations! You've completed
-        all our puzzles! Now mine, build, and create something unique by using everything
-        you've learned so far.
-      Overworld Free Play_instruction: |
-        This landscape is yours to play with. You
-        choose what to build.
-      Overworld House Frame - A_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame - C_instruction: |
-        Let's make our own house! This spot
-        looks good. Build a frame on the dirt blocks.
-      Overworld House Frame B_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame B2_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
-      Overworld House Frame C_instruction: |
-        One wall is finished, let’s build the
-        rest of the house by following your floor plan! You’ll have to repeat yourself
-        quite a lot here.
+      Overworld Free Play 20x20_instruction: Čestitamo! Završili ste sve naše zagonetke! Sada rudarite, gradite i stvorite nešto jedinstveno pomoću svega što ste dosad naučili.
+      Overworld Free Play_instruction: Poigrajte se s krajolikom. Možete odabrati što želite izgraditi.
+      Overworld House Frame - A_instruction: Napravimo vlastitu kuću! Ovo mjesto izgleda dobro. Napravite temelje na zemljanim blokovima.
+      Overworld House Frame - C_instruction: Napravimo vlastitu kuću! Ovo mjesto izgleda dobro. Napravite temelje na zemljanim blokovima.
+      Overworld House Frame B_instruction: Jedan zid je gotov, idemo izgraditi cijelu kuću slijedeći tlocrt! Morat ćete ponoviti iste naredbe više puta.
+      Overworld House Frame B2_instruction: Jedan zid je gotov, idemo izgraditi cijelu kuću slijedeći tlocrt! Morat ćete ponoviti iste naredbe više puta.
+      Overworld House Frame C_instruction: Jedan zid je gotov, idemo izgraditi cijelu kuću slijedeći tlocrt! Morat ćete ponoviti iste naredbe više puta.
       Overworld House Frame Chosen_instruction: Izgradite ostatak svoje kuće od bilo kojeg materijala. Petlja za ponavljanje dobro će vam doći.
-      Overworld House Frame_instruction: |
-        Let's make our own house! This spot looks
-        good. Build a frame on the dirt blocks.
-      Overworld Minecart Track_instruction: |
-        You’re back on the surface with lots
-        of underground resources. Now, we're going to build a track along the dirt
-        path from your house. The first step is clearing the path. Follow the path
-        and clear the trees.
+      Overworld House Frame_instruction: Napravimo vlastitu kuću! Ovo mjesto izgleda dobro. Napravite temelje na zemljanim blokovima.
+      Overworld Minecart Track_instruction: Ponovno si na površini s mnogo podzemnih resursa. Sada ćemo izgraditi stazu duž zemljanog puteljka od tvoje kuće. Prvi je korak pročistiti puteljak. Slijedi puteljak i ukloni drveće.
       Overworld Move to Sheep_instruction: "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce."
       Overworld Place Wall_instruction: 'Izgradnja svake kuće počinje od zidova. Izgradi prvi dio svoje kuće stavljanjem "postaviti dasku breze" i "idi naprijed" naredbe unutar petlje za ponavljanje.'
-      Overworld Plant Crops_instruction: |
-        It’s good to plan ahead. Plant crops on
-        both sides of the water so you don’t get hungry later on.
-      Overworld Powered Minecart_instruction: |
-        Great job! You’ve gathered lots of
-        resources and built a modest home. Now lay rail from the edge of the map to
-        the door of your house.
+      Overworld Plant Crops_instruction: Dobro je planirati unaprijed. Posadite usjeve na obje obale kako ne biste bili gladni kasnije.
+      Overworld Powered Minecart_instruction: Odličan posao! Skupili ste puno resursa i izgradili skromni dom. Sada položite željeznicu od ruba karte do vratiju svoje kuće.
       Overworld Shear Sheep_instruction: 'Vrijeme je za šišanje ovaca! Upotrijebi naredbu "ošišaj" kako biste prikupili vunu s obje ovce.'
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
@@ -5009,11 +4998,7 @@ hr:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
-      Underground Avoiding Lava_instruction: |
-        Lava is hiding beneath some of these
-        blocks, which you'll need to cover up before moving forward. An "if" command
-        will come in handy here. Add a "move forward" command in the correct place
-        to mine these blocks.
+      Underground Avoiding Lava_instruction: 'Ispod nekih blokova skriva se lava koju će biti potrebno prekriti prije pomicanje naprijed. Naredba "ako" može vam za to pomoći. Dodajte i "idi naprijed" naredbu na pravo mjesto kako biste izvadili rudu iz blokova.'
       Underground If Statements_instruction: |
         Now things are getting tricky. Mine
         3 redstone, but don’t fall in the lava. Use an "If" command to place cobblestone
@@ -5022,10 +5007,7 @@ hr:
         Walking into molten lava is a bad idea. Place
         cobblestone to create a bridge, then mine at least two of the iron blocks.
       Underground Mine in a Circle_instruction: "Find a way to get 5 diamond and\n7 redstone! Try using a repeat command inside a repeat command to walk in\na square.\r\n"
-      Underground Mining Coal_instruction: |
-        You’ll find the most valuable resources
-        underground, but it can get dark. Place at least 2 torches and mine at least
-        2 coal.
-      Underground Test Level_instruction: Collect all of the minerals!
+      Underground Mining Coal_instruction: Najcjenjenije resurse pronaći će te ispod zemlje, no tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar dva bloka ugljena.
+      Underground Test Level_instruction: Prikupi sve minerale!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

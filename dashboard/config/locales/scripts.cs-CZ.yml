@@ -27,7 +27,7 @@
           Flappy non blockly: Flappy verze bez blockly
           title: Kurz 1
           Artist 2: Umělec 2
-          Happy Maps: Šťastné mapy
+          Happy Maps: "Šťastné mapy"
           Move it, Move it: Pohyb, pohyb
           'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
           Building a Foundation: Budování nadace
@@ -223,7 +223,7 @@
           'Artist: Functions': 'Malíř: Funkce'
           'Bee: Debugging': 'Včela: ladění'
         usability:
-          Intro: Úvod
+          Intro: "Úvod"
           Variables and For Loops: Proměnné a cykly
           Functions and Functions with Parameters: Funkce a funkce s parametry
           title: Usability Testing
@@ -250,7 +250,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Nezapojené: Video hry a
             souřadnicových roviny'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': Řetězce a obrázky
+          'Eval: Strings and Images': "Řetězce a obrázky"
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Definice proměnných'
@@ -363,7 +363,7 @@
             K-8), ale jistě bude bavit studenty jakéhokoliv věku.
           description_short: Tento 20ceti hodinový kurz zahrnuje základní pojmy informatiky
             a programování v kurzech 2-4.
-          Introduction to Computer Science: Úvod do počítačové vědy
+          Introduction to Computer Science: "Úvod do počítačové vědy"
           The Maze: Bludiště
           Computational Thinking: Aritmetické Myšlení
           Graph Paper Programming: Programování Na Milimetrovém Papíru
@@ -378,7 +378,7 @@
           The Farmer 2: Farmářka 2
           Abstraction: Abstrakce
           The Artist 4: Malíř 4
-          Relay Programming: Štafetové programování
+          Relay Programming: "Štafetové programování"
           The Farmer 3: Farmář 3
           The Internet: Internet
           The Artist 5: Umělec 5
@@ -540,7 +540,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekce kolizí (Velká
             hra)'
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Contracts: Smlouvy
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -564,7 +564,7 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -758,7 +758,7 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Bloky vyhodnocení
           The Big Game: The Big Game
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           The Design Recipe: Návrhový předpis
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -962,7 +962,7 @@
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Defining Variables: Definující proměnné
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
@@ -1013,7 +1013,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Writing Contracts: Writing Contracts
           Defining Variables: Definující proměnné
           Defining Functions: Definice funkcí
@@ -1134,7 +1134,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Writing Contracts: Writing Contracts
           Defining Variables: Definující proměnné
           Defining Functions: Definice funkcí
@@ -1286,7 +1286,7 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Šťastné mapy
+          Happy Maps: "Šťastné mapy"
           Move it, Move it: Pohyb, pohyb
           'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
           Graph Paper Programming: Programování Na Milimetrovém Papíru
@@ -1513,8 +1513,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1568,6 +1570,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Doba ledová Play Lab
           description_short: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
@@ -1627,10 +1630,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Žvýkačka Play Lab
+          title: "Žvýkačka Play Lab"
           description_short: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
           description: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
-          Gumball Play Lab: Žvýkačka Play Lab
+          Gumball Play Lab: "Žvýkačka Play Lab"
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
           description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star
@@ -1671,5 +1674,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Rekapitulace
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

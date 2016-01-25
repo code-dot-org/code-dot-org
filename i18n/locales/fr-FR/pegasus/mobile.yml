@@ -39,7 +39,7 @@ fr-FR:
   csedweek_map_search_reset: Réinitialiser
   csedweek_map_legend_title: Légende
   csedweek_map_legend_event: 'Un événement : Heure de code'
-  csedweek_map_legend_cs_tech_jam: Jam Informatique
+  csedweek_map_legend_cs_tech_jam: Événement spécial
   cded_sign_up: Inscription
   cded_try_it: Participez
   twentyhours_trynow: Essaie maintenant
@@ -70,7 +70,7 @@ fr-FR:
   congratulations_on_completing_course: 'Félicitations pour avoir complété %{course}'
   congrats_next_tutorials_title: Essayez ensuite ces tutoriels
   congrats_next_tutorials_desc: |-
-    Essaye ces tutoriels plus courts d'une heure ou essaye un <a href="%{current_path}/next"> tutoriel partenaire</a>.
+    Essaye ces tutoriels plus courts d'une durée d'une heure ou essaye un <a href="%{current_path}/next"> tutoriel partenaire</a>.
   get_a_certificate_of_achievement: Obtenir un certificat de réussite
   enter_valid_age: Veuillez sélectionner un âge valide
   enter_valid_email: Veuillez saisir une adresse de messagerie valide
@@ -213,7 +213,7 @@ fr-FR:
   homepage_banner_text_link: Pour en savoir plus
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Pour en savoir plus
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: "20 000 enseignants formés enseignant maintenant l'informatique dans les classes."
   homepage_banner_20k_teachers_link: Pour en savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
@@ -223,7 +223,7 @@ fr-FR:
   homepage_solot_text_link_volunteer: Soyez bénévole pour Une Heure de Code
   homepage_slot_text_title_students: Élèves
   homepage_slot_text_blurb_students: "Découvre l'ensemble de nos tutoriels"
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explorer nos cours
   homepage_slot_text_link_codestudio: Essaie le Code Studio
   homepage_slot_text_link_local: Trouve un cours près de chez toi
   homepage_slot_text_link_othercourses: Autres cours en ligne

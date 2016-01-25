@@ -945,11 +945,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -2559,7 +2576,7 @@
       frozen freeplay_instruction: |
         You've officially become a master artist! Create
         a winter wonderland.
-      frozen line_instruction: 'Բարև: Ես Էլզան եմ Էռենդելլաից: Օգնիր ինձ մի գիծ գծել:'
+      frozen line_instruction: "Բարև: Ես Էլզան եմ Էռենդելլաից: Օգնիր ինձ մի գիծ գծել:"
       frozen perpendicular_instruction: |
         Now let's see if we can create two lines
         that are at a 90 degree angle to each other. You will need to use the “Turn”
@@ -2574,8 +2591,8 @@
         Intricate snow patterns can be created with
         very simple shapes. Can you make a pattern by repeating 5 circles of size
         5 and 5 circles of size 10?
-      frozen square iterative_instruction: 'Կարծես մենք  քառակուսի գծելու կես ճանապարհինենք:
-        Արի գծենք 4 գիծ այնպես, որ ստացվի քառակուսի:'
+      frozen square iterative_instruction: "Կարծես մենք  քառակուսի գծելու կես ճանապարհինենք:
+        Արի գծենք 4 գիծ այնպես, որ ստացվի քառակուսի:"
       frozen square loop 3x_instruction: |
         Let's create three squares, turning after
         each square. Be sure to turn by 120 degrees before each new square.

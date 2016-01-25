@@ -904,11 +904,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -3198,11 +3215,11 @@
       Overworld Place Wall_instruction: Toda casa comeza cunha parede. Constrúe a
         primeira parte da túa casa colocando os comandos "colocar" e "andar adiante"
         dentro do bucle de repetición.
-      Overworld Plant Crops_instruction: É sempre bon pensar no futuro. Cultiva nos
-        dous lados da auga para non pasar fame despois.
-      Overworld Powered Minecart_instruction: Óptimo traballo! Colleitaches varios
+      Overworld Plant Crops_instruction: "É sempre bon pensar no futuro. Cultiva nos
+        dous lados da auga para non pasar fame despois."
+      Overworld Powered Minecart_instruction: "Óptimo traballo! Colleitaches varios
         recursos e construíches unha casiña modesta. Agora constrúe o paso desde o
-        bordo do mapa até a porta da túa casa.
+        bordo do mapa até a porta da túa casa."
       Overworld Shear Sheep_instruction: Hora de rapar ovellas! Usa o comando "tosquiar"
         para obter lá das dúas ovellas.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |

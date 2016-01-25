@@ -206,7 +206,7 @@ s:function(d,k,p){flappy_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "setGapLarge":function(d){return "設定一個較大的間距"},
 "setGapVeryLarge":function(d){return "設定一個非常大的間距"},
 "setGapHeightTooltip":function(d){return "設定障礙物的垂直間距"},
-"setGravityRandom":function(d){return "設定為隨機重力"},
+"setGravityRandom":function(d){return "設定為隨機重力強度"},
 "setGravityVeryLow":function(d){return "設定為極小重力"},
 "setGravityLow":function(d){return "設定為較小重力"},
 "setGravityNormal":function(d){return "設定為正常重力"},

@@ -553,10 +553,10 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: À présent, nous allons apprendre une chose que tous les programmeurs
+        text: "À présent, nous allons apprendre une chose que tous les programmeurs
           de jeu utilisent. On appelle ça des événements. Un événement dit à ton programme
           d'écouter lorsque quelque chose se produit. Quand cette chose arrive, il
-          effectue une action.
+          effectue une action."
       2:
         image: notes/playlab_events_2.png
         text: Quelques exemples d'évènements sont l'écoute des clics de souris, une
@@ -2312,12 +2312,12 @@
     infinity_playlab_events:
       1:
         image: notes/infinity_playlab_events_1.png
-        text: À présent, nous allons apprendre une chose que tous les programmeurs
+        text: "À présent, nous allons apprendre une chose que tous les programmeurs
           de jeu utilisent tous les jours. On appelle ça des événements. Un événement
           dit à ton programme d'écouter lorsque quelque chose se produit. Quand cette
           chose arrive, il effectue une action. Quelques exemples d'évènements sont
           l'écoute des clics de souris, une touche fléchée, ou un effleurement de
-          l'écran.
+          l'écran."
       2:
         image: notes/infinity_playlab_events_2.png
         text: Ici, nous allons faire déplacer Baymax jusqu'à ce qu'il rencontre Hiro
@@ -2382,16 +2382,18 @@
           see what you've programmed.
       7:
         image: notes/infinity_playlab_intro_7.png
-        text: Get started and by the end you'll be able to create your own game with
-          these amazing actors that can interact, score points, throw microbots, cherries,
-          saucepans, sparkles, and ice.. and vanish each other. It's all up to you!
+        text: Commence et d'ici la fin, tu seras en mesure de créer ton propre jeu
+          avec ces acteurs talentueux qui peuvent interagir, marquer des points, lancer
+          des microbots, des cerises, des casseroles, des étincelles et de la glace...
+          et se faire disparaître l'un l'autre. Ça ne dépend que de toi !
     infinity_playlab_repeat_forever:
       1:
         image: notes/infinity_playlab_repeat_forever_1.png
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you'll never have to because computers are really good at repeating things.
-          This is the repeat forever block. Anything inside this block will happen
-          forever in the game.
+        text: Peux-tu imaginer avoir à répéter quelque chose à l'infini ? Avec un
+          peu de chance, tu n'auras jamais à le faire parce que les ordinateurs sont
+          vraiment bon pour répéter les choses. Ça, c'est le bloc de répétition à
+          l'infini. Tout ce qui se trouve dans ce bloc se déroulera dans le jeu pour
+          toujours.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
         text: So if we wanted an actor to do something repeatedly without the player
@@ -2839,17 +2841,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2951,7 +2953,7 @@
           react to button press events that move him around the screen.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Étape par étape, ton jeu devient plus interactif.
+        text: "Étape par étape, ton jeu devient plus interactif."
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -2967,17 +2969,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -3117,9 +3119,9 @@
           pouvez créer ce que vous voulez. À vous de choisir.'
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[élèves qui discutent] Là ça va être chouette. J''ai fait un L avec
-          des torches. J''ai fait un A avec des planches en bouleau. Ça a marché !
-          On a créé une maison en laine !'
+        text: "[élèves qui discutent] Là ça va être chouette. J'ai fait un L avec
+          des torches. J'ai fait un A avec des planches en bouleau. Ça a marché !
+          On a créé une maison en laine !"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Une fois votre création terminée, choisissez Share (Partager) et envoyez
@@ -3135,9 +3137,9 @@
           pouvez créer ce que vous voulez. À vous de choisir.'
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[élèves qui discutent] Là ça va être chouette. J''ai fait un L avec
-          des torches. J''ai fait un A avec des planches en bouleau. Ça a marché !
-          On a créé une maison en laine !'
+        text: "[élèves qui discutent] Là ça va être chouette. J'ai fait un L avec
+          des torches. J'ai fait un A avec des planches en bouleau. Ça a marché !
+          On a créé une maison en laine !"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Vous pouvez créer ce que vous voulez. Amusez-vous bien !

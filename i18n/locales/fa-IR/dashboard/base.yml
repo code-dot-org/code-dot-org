@@ -282,10 +282,6 @@ fa:
   user_level:
     completed: انجام شد
     tried: سعی شد
-  user_stats:
-    recent_activity: فعالیت اخیر
-    show_more: نمایش بیشتر
-    classroom_activity: فعالیت کلاسی
   home:
     title: کد استودیو
     description: کارگاه کد محلی برای دوره های آنلاین است که توسط Code.org ایجاد شده است

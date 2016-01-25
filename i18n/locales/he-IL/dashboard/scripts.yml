@@ -131,7 +131,7 @@ he:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: כתיבת שירים
           description_audience: גילאי 8-18
           description_short: קורס 3 הינו המשך לקורס 2.
         playlab:
@@ -209,7 +209,7 @@ he:
           description: A selection of Course 4 levels for usability testing.
           Variables: משתנים
           For Loops: בשביל לולאות
-          Binary: Binary
+          Binary: בינארי
         potus:
           title: special
           description_short: special
@@ -220,7 +220,7 @@ he:
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: בינארי
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -260,7 +260,7 @@ he:
           Making Pictures: Making Pictures
           Defining Variables: Defining Variables
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -496,7 +496,7 @@ he:
           Contracts: Contracts
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Your Game - Animation: 'Your Game - Animation'
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -672,7 +672,7 @@ he:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: בעוד לולאות
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -692,7 +692,7 @@ he:
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
           Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -887,7 +887,7 @@ he:
           Defining Variables: Defining Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Big Game - Animation: 'Big Game - Animation'
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -917,7 +917,7 @@ he:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -1052,14 +1052,14 @@ he:
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: ברוכים הבאים!
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: ברוכים הבאים!
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1081,7 +1081,7 @@ he:
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free, self-paced online course.
@@ -1100,7 +1100,7 @@ he:
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -1173,7 +1173,7 @@ he:
           Getting Loopy: Getting Loopy
           The Big Event: האירוע הגדול
           Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Songwriting: כתיבת שירים
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1368,8 +1368,10 @@ he:
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1378,7 +1380,7 @@ he:
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1420,6 +1422,7 @@ he:
           description_audience: גילאי 10-18
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: עידן הקרח Play Lab
           description_short: צור סיפור או משחק עם עידן הקרח בPlay Lab!
@@ -1455,7 +1458,7 @@ he:
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: בעוד לולאות
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1512,6 +1515,6 @@ he:
           description: Phase 3 Academic Year Development
           Welcome!: ברוכים הבאים!
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
           Assessing Computer Models: Assessing Computer Models
           (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems

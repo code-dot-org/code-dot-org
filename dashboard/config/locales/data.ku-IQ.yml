@@ -4,72 +4,72 @@
       name:
         20-hour:
           desc: K-8 Intro to Computer Science Course
-          Unplug1: قۆناغی 1
-          Maze: قۆناغی 2
-          Unplug2: قۆناغی 3
-          Unplug3: قۆناغی 4
-          Artist: قۆناغی 5
-          Unplug4: قۆناغی 6
-          Artist2: قۆناغی 7
-          Unplug5: قۆناغی 8
-          Farmer: قۆناغی 9
-          Unplug6: قۆناغی 10
-          Artist3: قۆناغی 11
-          Unplug7: قۆناغی 12
-          Farmer2: قۆناغی 13
-          Unplug8: قۆناغی 14
-          Artist4: قۆناغی 15
-          Unplug9: قۆناغی 16
-          Farmer3: قۆناغی 17
-          Unplug10: قۆناغی 18
-          Artist5: قۆناغی 19
-          Unplug11: قۆناغی 20
+          Unplug1: "قۆناغی 1"
+          Maze: "قۆناغی 2"
+          Unplug2: "قۆناغی 3"
+          Unplug3: "قۆناغی 4"
+          Artist: "قۆناغی 5"
+          Unplug4: "قۆناغی 6"
+          Artist2: "قۆناغی 7"
+          Unplug5: "قۆناغی 8"
+          Farmer: "قۆناغی 9"
+          Unplug6: "قۆناغی 10"
+          Artist3: "قۆناغی 11"
+          Unplug7: "قۆناغی 12"
+          Farmer2: "قۆناغی 13"
+          Unplug8: "قۆناغی 14"
+          Artist4: "قۆناغی 15"
+          Unplug9: "قۆناغی 16"
+          Farmer3: "قۆناغی 17"
+          Unplug10: "قۆناغی 18"
+          Artist5: "قۆناغی 19"
+          Unplug11: "قۆناغی 20"
         Hour of Code:
-          desc: كاژێری كۆدنووسی
-          Maze: قۆناغی 1
+          desc: "كاژێری كۆدنووسی"
+          Maze: "قۆناغی 1"
         Edit Code:
           desc: Edit Code (beta)
-          MazeEC: قۆناغی 1
+          MazeEC: "قۆناغی 1"
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: قۆناغی 1
+          Bounce: "قۆناغی 1"
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: قۆناغی 1
+          Custom: "قۆناغی 1"
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: قۆناغی 1
+          Flappy: "قۆناغی 1"
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: قۆناغی 1
+          Jigsaw: "قۆناغی 1"
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
           desc: Edit Code (beta)
-          MazeEC: قۆناغی 1
-          Applab: قۆناغی 2
-          ArtistEC: قۆناغی 3
-          StudioEC: قۆناغی 4
+          MazeEC: "قۆناغی 1"
+          Applab: "قۆناغی 2"
+          ArtistEC: "قۆناغی 3"
+          StudioEC: "قۆناغی 4"
         events:
           desc: Bounce (beta)
-          Bounce: قۆناغی 1
-          Studio: قۆناغی 2
+          Bounce: "قۆناغی 1"
+          Studio: "قۆناغی 2"
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: قۆناغی 1
+          Custom: "قۆناغی 1"
         flappy:
           desc: Flappy Bird
-          Flappy: قۆناغی 1
+          Flappy: "قۆناغی 1"
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: قۆناغی 1
+          Jigsaw: "قۆناغی 1"
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: قۆناغی 1
+          WordSearch: "قۆناغی 1"
     game:
       name:
         Unplug1: Introduction to Computer Science
@@ -696,7 +696,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: گرێکان
+        C4_loops_zombie: "گرێکان"
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -732,7 +732,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: گرێکان
+        csp_applab_loops: "گرێکان"
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
@@ -808,8 +808,8 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!

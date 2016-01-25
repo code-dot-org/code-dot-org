@@ -283,10 +283,6 @@ sk:
   user_level:
     completed: Dokončené
     tried: Vyskúšaný
-  user_stats:
-    recent_activity: Posledná aktivita
-    show_more: Zobraziť viac
-    classroom_activity: Nesúvisaca aktivita
   home:
     title: Štúdio kódu
     description: Code Studio je domov pre online kurzy vytvorené Code.org

@@ -825,11 +825,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1712,8 +1729,8 @@
         contando alla rovescia da 5 ad 1 a passi di 1.
       Course 4 Bee For Loops 7_instruction: Usa la variabile "contatore" del ciclo
         per controllare lo spostamento in senso orizzontale.
-      Course 4 Bee For Loops 8_instruction: È possibile utilizzare la variabile del
-        ciclo per controllare il movimento e la raccolta di nettare?
+      Course 4 Bee For Loops 8_instruction: "È possibile utilizzare la variabile del
+        ciclo per controllare il movimento e la raccolta di nettare?"
       Course 4 Bee For Loops 9_instruction: Il valore più a destra nel ciclo con contatore
         viene chiamato "passo". Ogni volta che il ciclo viene eseguito, la variabile
         "contatore" (counter) cambia del valore indicato dal "passo". Prova a raccogliere
@@ -2077,9 +2094,9 @@
       Course 4 SCVP 1_instruction: Crea una funzione con parametri che permetta all'artista
         di saltare all'indietro e in avanti di x pixel e anche su e giù di y pixel
         (con numeri positivi e negativi).
-      Course 4 Variables Assessment_instruction: È possibile creare questa immagine
+      Course 4 Variables Assessment_instruction: "È possibile creare questa immagine
         utilizzando una variabile per i lati? Ogni latio dovrebbe essere lungo 50
-        pixel.
+        pixel."
       Course1BeePuzzle12_instruction: Prendi tre dosi di nettare e poi fai due dosi
         di miele
       Course1MazeAssessment1_instruction: "This is a test!\r\nMove one way, then\nanother
@@ -2590,7 +2607,7 @@
       K-1 maze debug 2_instruction: Cerca di capire che cosa manca, quindi aggiungi
         i blocchi necessari per farmi arrivare al maialino!
       K-1 maze debug 3_instruction: Cerca di capire che cosa va eliminato, quindi
-        rimuovi i blocchi necessari per farmi arrivare al maialino!
+        rimuovi i blocchi che non mi hanno arrivare al maialino!
       K-1 maze debug 4_instruction: Esegui questi blocchi di codice e poi correggili!
         Credo che ci sia un errore nel percorso.
       K-1 maze debug 5_instruction: Correggi questo programma riordinando, aggiungendo
@@ -2975,8 +2992,8 @@
         tutto quello che hai imparato sui cicli per risolvere questo problema. Ricordati:
         molto probabilmente avrai bisogno di più tentativi prima di riuscire a capire
         tutti i passaggi necessari.'
-      NEW Course 4 Bee For Loops 11_instruction: È possibile utilizzare la variabile
-        del ciclo per controllare il movimento e la raccolta di nettare?
+      NEW Course 4 Bee For Loops 11_instruction: "È possibile utilizzare la variabile
+        del ciclo per controllare il movimento e la raccolta di nettare?"
       NEW Course 4 Bee For Loops 2_instruction: Aggiungi il codice necessario per
         esser sicuro che l'ape raccolga tutto il nettare. Osserva di quanto codice
         hai bisogno per risolvere questo esercizio! (Vedremo una soluzione più semplice
@@ -3026,8 +3043,8 @@
       NEW Course 4 Play Labs For Loops 7a_instruction: Utilizzando quello che hai
         imparato finora, si può fare in modo che il dinosauro faccia un passo in avanti
         ogni volta che il pinguino conta?
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'È tempo di giocare.
-        Divertiti con tutti i blocchi della cassetta degli attrezzi. '
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "È tempo di giocare.
+        Divertiti con tutti i blocchi della cassetta degli attrezzi. "
       NEW Course 4 Play Labs For Loops 8a_instruction: 'Sfida. Come useresti il ciclo
         for per fare in kodo che ogni ogni attore vada in giro e dica il che gli corrisponde
         per poi sparire dallo schermo? '
@@ -3097,8 +3114,8 @@
       Overworld Place Wall_instruction: Per costruire una casa devi iniziare con le
         mura. Costruisci la prima parte della tua casa mettendo le istruzioni "metti
         assi di ..." e "vai avanti" all'interno di un ciclo “ripeti … volte”.
-      Overworld Plant Crops_instruction: È bene pensare al futuro. Semina del grano
-        su entrambi i lati dell'acqua così avrai di che sfamarti.
+      Overworld Plant Crops_instruction: "È bene pensare al futuro. Semina del grano
+        su entrambi i lati dell'acqua così avrai di che sfamarti."
       Overworld Powered Minecart_instruction: 'Ottimo lavoro! Hai raccolto un sacco
         di risorse e hai costruito la tua casetta. Ora posa i binari dal bordo della
         mappa fino alla porta di casa tua. (Se ti va prova anche la versione più difficile:

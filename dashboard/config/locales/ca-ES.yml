@@ -7,7 +7,7 @@
   activerecord:
     errors:
       messages:
-        blank: és obligatori
+        blank: "és obligatori"
     attributes:
       user:
         name: Nom a mostrar
@@ -29,8 +29,8 @@
     code:
       label: 'Afegeix un mestre:'
       placeholder: Secció Codi (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Si us plau, introdueixi el codi compartit pel seu professor. És
+        un codi de 6 lletres com "ABCDEF".
     submit: Afegeix un professor
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
@@ -71,8 +71,8 @@
     need_confirmation: No has rebut les instruccions de confirmació?
     need_unlock: No has rebut les instruccions de desbloqueig?
   signup_form:
-    student_count: '%{count} estudiants ja s''han inscrit.'
-    teacher_count: '%{count} professors ja s''han inscrit.'
+    student_count: "%{count} estudiants ja s'han inscrit."
+    teacher_count: "%{count} professors ja s'han inscrit."
     overview_student: Registreu-vos per fer el seguiment del vostre progrés. El correu
       s'utilitza principalment per a l'inici de sessió i la recuperació de la contrasenya.
       Per a més informació, mireu la nostra <a href="http://code.org/privacy">Política
@@ -155,7 +155,7 @@
     error:
       signed_in: Tanca la sessió abans de continuar
       username_not_found: Usuari %{username} no trobat
-      username_in_use: '%{username} ja existeix, tria''n un altre'
+      username_in_use: "%{username} ja existeix, tria'n un altre"
       no_teacher: No s'ha trobat ningú registrat amb '%{teacher_email_or_code}'. Si
         us plau, demana'ls que es registrin aquí i després, prova a afegir-los una
         altra vegada
@@ -258,9 +258,9 @@
     destroy: Destrueix
     back: Torna
     confirm: Estàs segur?
-    created: '%{model} s''ha creat correctament.'
-    updated: '%{model} s''ha actualitzat correctament.'
-    destroyed: '%{model} s''ha esborrat correctament.'
+    created: "%{model} s'ha creat correctament."
+    updated: "%{model} s'ha actualitzat correctament."
+    destroyed: "%{model} s'ha esborrat correctament."
     access_denied: No tens accés a aquest %{model}.
   nav:
     header:
@@ -291,7 +291,7 @@
       puzzle_map: Etapes
       prizes: Recull els %{total_trophies} trofeus i guanya premis!
       prize_earned: Has agafat els %{total_trophies} trofeus. El premi és teu!
-      prize_us_only: (només estudiants EUA)
+      prize_us_only: "(només estudiants EUA)"
       prizes_link: Més informació
   teacher:
     answer: Resposta
@@ -299,14 +299,13 @@
     title:
       one: 'El teu mestre:'
       other: 'Els teus mestres:'
-    remove: (elimina el mestre)
+    remove: "(elimina el mestre)"
     confirm:
       remove: Esteu segur que voleu eliminar aquest mestre?
     students:
       dashboard: Ves al Tauler del Mestre
     user_not_found: No es troba el mestre o l'alumne
-    student_teacher_disassociated: '%{teacher_name} s''ha esborrat com a mestre de
-      %{student_name}'
+    student_teacher_disassociated: Vostè ha tret %{teacher_name} com el seu mestre.
     panel:
       answer_viewer: Visualitzador de respostes
       student: estudiant
@@ -321,11 +320,11 @@
     email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
     email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
       ha estat confirmada:'
-    email_confirm_wrong_email: (Adreça d'e-mail equivocada?)
+    email_confirm_wrong_email: "(Adreça d'e-mail equivocada?)"
     email_resend_confirm: Torna a enviar les instruccions de confirmació
-    new_password_hint: (deixa-ho en blanc si no vols canviar-lo)
-    current_password_hint: (necessitem la teva contrasenya actual per a confirmar
-      els canvis)
+    new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
+    current_password_hint: "(necessitem la teva contrasenya actual per a confirmar
+      els canvis)"
     delete: Suprimir el vostre compte
     delete_text: Fent clic al botó de sota suprimirà el compte.
     delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
@@ -334,16 +333,12 @@
   user_level:
     completed: Completat
     tried: Provat
-  user_stats:
-    recent_activity: Activitat recent
-    show_more: Mostra més
-    classroom_activity: Activitat sense connexió
   home:
     title: Code Studio
     description: Code Studio és on hi ha els cursos en xarxa de Code.org
-    lines_of_code: '%{lines_count} LÍNIES DE CODI ESCRITES PELS ALUMNES'
-    lines_of_code_linebreak: '%{lines_count} LÍNIES DE CODI<br/>ESCRITES PER %{students_count}
-      MILIONS D''ESTUDIANTS'
+    lines_of_code: "%{lines_count} LÍNIES DE CODI ESCRITES PELS ALUMNES"
+    lines_of_code_linebreak: "%{lines_count} LÍNIES DE CODI<br/>ESCRITES PER %{students_count}
+      MILIONS D'ESTUDIANTS"
     all_courses: Informació general dels cursos 1, 2 i 3
     lesson_plans: Unitats didàctiques
     signin_message: Ja estàs registrat? %{link}
@@ -382,11 +377,11 @@
     test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
     try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
     use_as_teacher: Utilitza aquest lloc com a mestre
-    heading_hoc2014: <h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>
-    heading_elementary: <h2>Cursos de 20 hores per a</h2><h1>Principiants (totes les
-      edats)</h1>
-    heading_apps: <h2>Diversió per a</h2><h1>Tothom</h1>
-    heading_legacy: <h2>El nostre curs general per a</h2><h1>Totes les edats</h1>
+    heading_hoc2014: "<h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>"
+    heading_elementary: "<h2>Cursos de 20 hores per a</h2><h1>Principiants (totes
+      les edats)</h1>"
+    heading_apps: "<h2>Diversió per a</h2><h1>Tothom</h1>"
+    heading_legacy: "<h2>El nostre curs general per a</h2><h1>Totes les edats</h1>"
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
     choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
@@ -394,7 +389,7 @@
   share:
     title: Aprendre sobre Code Studio
     description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proveu una hora de codi!
   gender:
     male: Home
     female: Dona
@@ -403,23 +398,28 @@
     student: estudiant
     teacher: Mestre
   footer:
-    thank_you: We thank our <a href="https://code.org/about/donors">donors</a>, <a
-      href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended
-      team</a>, our video cast, and our <a href="https://code.org/about/advisors">education
-      advisors</a> for their support in creating Code Studio.
+    thank_you: Agraïm als nostres <a href="https://code.org/about/donors"> donants</a>,
+      <a href="https://code.org/about/partners"> socis</a>, al nostre <a href="https://code.org/about/team">
+      extens equip</a>, al nostre elenc de vídeo i als nostres <a href="https://code.org/about/advisors">
+      assessors d'educació</a> pel seu suport en la creació de Code Studio.
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
       a crear aquesta classe.
     help_from_html_old: Enginyers de Google, Microsoft, Facebook i Twitter han ajudat
       a crear aquests materials.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Tots els drets reservats.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Tots els drets reservats.
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets
+      reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets
+      reservats. < br / > Ice Age &#8482; © %{current_year} segle Xx Fox. Tots els
+      drets reservats. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio entreteniment
+      Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year}
+      Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de
+      Gumball és marca registrada i © 2015 Cartoon Network.
     art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Desenvolupat per Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
     more: Més
     feedback: Digues la teva
@@ -434,7 +434,7 @@
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Fer la meva aplicació
     how_it_works: Com funciona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proveu una hora de codi!
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells

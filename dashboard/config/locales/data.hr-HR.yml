@@ -325,8 +325,8 @@
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi
           ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati
           zemljište i pripremiti ga za sadnju?
-        maze_karel_debug_seq_2: Što je krivo u ovom programu? Kako bi ga ti popravio
-          tako da ja mogu ukloniti ovu hrpu?
+        maze_karel_debug_seq_2: "Što je krivo u ovom programu? Kako bi ga ti popravio
+          tako da ja mogu ukloniti ovu hrpu?"
         maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje
           bude poravnato.
         maze_karel_debug_while: Kako bi ti izmijenio ovaj program i pomogao mi da
@@ -643,7 +643,7 @@
         loop_for: Blok "Brojač"
         parameters: Funkcije s parametrima
         hoc_wrapup: Sažetak Sata Kodiranja
-        Unplug1: Što je informatika?
+        Unplug1: "Što je informatika?"
         Unplug2: Razmišljati poput računala
         Unplug3: Grafičko programiranje
         Unplug4: Algoritmi
@@ -780,15 +780,15 @@
         starwars_intro: 'Star Wars: Izgradnja galaksije pomoću koda - Uvod'
         starwars_typing: 'Star Wars: Izgradnja galaksije pomoću koda - JavaScript'
         starwars_events: 'Star Wars: Izgradnja galaksije pomoću koda - Događaji'
-        starwars_congrats: 'Star Wars: Izgradnja galaksije pomoću koda - Čestitamo'
+        starwars_congrats: 'Star Wars: Izgradnja galaksije pomoću koda - Čestitke'
         starwars_blocks_intro: 'Star Wars: Izgradnja galaksije pomoću koda - Uvod'
         starwars_blocks_events: 'Star Wars: Izgradnja galaksije pomoću koda - Događaji'
-        starwars_blocks_congrats: 'Star Wars: Izgradnja galaksije pomoću koda - Čestitamo'
-        mc_intro: Minecraft - Introduction
-        mc_repeat: Minecraft - Repeat
-        mc_if_statements: Minecraft - If statements
-        mc_congrats_share: Minecraft - Congratulations
-        mc_congrats_no_share: Minecraft - Congratulations
+        starwars_blocks_congrats: 'Star Wars: Izgradnja galaksije pomoću koda - Čestitke'
+        mc_intro: Minecraft - Uvod
+        mc_repeat: Minecraft - Ponavljanje
+        mc_if_statements: Minecraft - "Ako" naredbe
+        mc_congrats_share: Minecraft - Čestitamo
+        mc_congrats_no_share: Minecraft - Čestitamo
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
@@ -818,8 +818,8 @@
         replace_questions_degree: Koristi padajući izbornik da bi zamijenio "???"
           s točnim brojem stupnjeva za okret
         repeat_blocks: Uzmi blok "ponovi" i omotaj ga oko blokova na radnoj površini
-        repeat_blocks_1: (1) Uzmi ovaj blok i stavi ga oko sivih blokova na radnoj
-          površini
+        repeat_blocks_1: "(1) Uzmi ovaj blok i stavi ga oko sivih blokova na radnoj
+          površini"
         repeat_blocks_2: (2) Pomakni blok "ponovi" ovamo i stavi sive blokove unutar
           njega
         snowflake_dropdown: Koristi ovaj padajući izbornik za stvaranje različitih

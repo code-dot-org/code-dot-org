@@ -212,10 +212,10 @@
           Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
         Course4pre:
           title: 4. kursa priekšnoteikums
-          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
-            2. un 3. kursu.
-          description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un
-            3. kursu.
+          description_short: "Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu."
+          description: "Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2.
+            un 3. kursu."
           Course 4 Prerequisite: 4. kursa priekšnoteikums
           'Maze: Sequence': 'Labirints: secība'
           'Artist: Sequence': 'Māsklinieks: secība'
@@ -237,15 +237,15 @@
           For Loops: '"par" cikli'
           Binary: Binārie
         potus:
-          title: īpaša
-          description_short: īpaša
-          description: īpaša
-          Special: īpaša
+          title: "īpaša"
+          description_short: "īpaša"
+          description: "īpaša"
+          Special: "īpaša"
         special:
-          title: īpaša
-          description_short: īpaša
-          description: īpaša
-          Special: īpaša
+          title: "īpaša"
+          description_short: "īpaša"
+          description: "īpaša"
+          Special: "īpaša"
           Binary: Binārie
         algebra:
           title: Computer Science in Algebra
@@ -362,9 +362,9 @@
         20-hour:
           title: K-8 Ievads Datorzinātņu kursos (15-25stundas)
           description_audience: Vecumā no 10 gadiem (pēc 3. kursa)
-          description: šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
+          description: "šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas
             pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs,
-            bet tas sagādās prieku mācīties visos vecumos.
+            bet tas sagādās prieku mācīties visos vecumos."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
           Introduction to Computer Science: Ievads datorzinātnēs
@@ -458,10 +458,10 @@
           Puzzles: Puzzles
         course4pre:
           title: 4. kursa priekšnoteikums
-          description_short: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
-            2. un 3. kursu.
-          description: Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2. un
-            3. kursu.
+          description_short: "Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši
+            2. un 3. kursu."
+          description: "Īss jēdzienu kopsavilkums skolēniem, kas nav pildījuši 2.
+            un 3. kursu."
           Course 4 Prerequisite: 4. kursa priekšnoteikums
           'Maze: Sequence': 'Labirints: secība'
           'Artist: Sequence': 'Māsklinieks: secība'
@@ -1519,8 +1519,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1574,6 +1576,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1677,5 +1680,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Kopsavilkums
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

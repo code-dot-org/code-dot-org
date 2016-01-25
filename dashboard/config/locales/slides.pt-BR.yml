@@ -35,9 +35,9 @@
           vai usá-los para criar o seu programa.
       9:
         image: notes/hoc1_9.jpg
-        text: À direita você tem sua área de trabalho, onde você vai arrastar os blocos
-          da caixa de ferramentas para criar o seu programa. Para excluir um bloco,
-          arraste-o para a lixeira no canto.
+        text: "À direita você tem sua área de trabalho, onde você vai arrastar os
+          blocos da caixa de ferramentas para criar o seu programa. Para excluir um
+          bloco, arraste-o para a lixeira no canto."
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloco é uma instrução. Se você arrastar um bloco "avance" para
@@ -725,7 +725,7 @@
           resolver. O segundo é igual, mas ela vai para baixo.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: É como programar com papel. E é isso mesmo!
+        text: "É como programar com papel. E é isso mesmo!"
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -2098,10 +2098,10 @@
           que chamamos de parâmetros.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Às vezes uma função precisa de um parâmetro. Um parâmetro é uma informação
+        text: "Às vezes uma função precisa de um parâmetro. Um parâmetro é uma informação
           adicional que você pode passar para uma função e personalizá-la para uma
           necessidade especial. Quando você faz sorvete com seus amigos, está usando
-          um processo similar aos parâmetros em um programa de computador.
+          um processo similar aos parâmetros em um programa de computador."
       3:
         image: notes/C4_unplugged_parameters_3.png
         text: A bola de sorvete de creme pode ser igual em todos os sundaes, mas quando
@@ -2296,12 +2296,12 @@
           Aqui, eu preciso adicionar os comprimentos e graus apropriados.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: Às vezes, você pode acidentalmente estragar o código inicial. O que
+        text: "Às vezes, você pode acidentalmente estragar o código inicial. O que
           fazer nesse caso? Você pode pressionar limpar desafio e começar de novo.
           Vou arrastar esse bloco numérico para as diferentes áreas de pixels. Selecione
           100 para pixels, 45 para graus e 100 para pixels de novo. Legal! Aqui está
           a abelha do Code Studio. Eu preciso mover a abelha para cada uma das flores
-          e coletar néctar.
+          e coletar néctar."
       6:
         image: notes/tutorial_puzzle_challenge_6.png
         text: A primeira flor está a três blocos de distância, então eu preciso de
@@ -2710,18 +2710,18 @@
           novos sons e comandos para poder fazer ainda mais.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[alunos falando] Então, fizemos um jogo em que, basicamente, você marca
+        text: "[alunos falando] Então, fizemos um jogo em que, basicamente, você marca
           pontos quando pega puffer pigs. O truque é que sempre que você pega um puffer
           pig, um Stormtrooper aparece. Na verdade, a tela está cheia de puffer pigs
-          e, quando tocar 10.000 deles, você vence.'
+          e, quando tocar 10.000 deles, você vence."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[alunos falando] Fizemos um jogo em que você não pode perder, e tudo
+        text: "[alunos falando] Fizemos um jogo em que você não pode perder, e tudo
           que você mata lhe dá pontos. No meu programa, eu inverti os botões, então
           sempre que você clica para cima, seu personagem vai para baixo, e quando
           clica para a direita, ele vai para a esquerda. É bem difícil! Às vezes você
           tem uma vantagem, uma vantagem injusta quando é o desenvolvedor do jogo.
-          Eu consegui? Sim!'
+          Eu consegui? Sim!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Quando tiver terminado seu jogo, selecione compartilhar para receber
@@ -2838,18 +2838,18 @@
           novos sons e comandos para poder fazer ainda mais.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[alunos falando] Então, fizemos um jogo em que, basicamente, você marca
+        text: "[alunos falando] Então, fizemos um jogo em que, basicamente, você marca
           pontos quando pega puffer pigs. O truque é que sempre que você pega um puffer
           pig, um Stormtrooper aparece. Na verdade, a tela está cheia de puffer pigs
-          e, quando tocar 10.000 deles, você vence.'
+          e, quando tocar 10.000 deles, você vence."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[alunos falando] Fizemos um jogo em que você não pode perder, e tudo
+        text: "[alunos falando] Fizemos um jogo em que você não pode perder, e tudo
           que você mata lhe dá pontos. No meu programa, eu inverti os botões, então
           sempre que você clica para cima, seu personagem vai para baixo, e quando
           clica para a direita, ele vai para a esquerda. É bem difícil! Às vezes você
           tem uma vantagem, uma vantagem injusta quando é o desenvolvedor do jogo.
-          Eu consegui? Sim!'
+          Eu consegui? Sim!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Quando tiver terminado seu jogo, selecione compartilhar para receber
@@ -2881,9 +2881,9 @@
           mesmos conceitos para fazer o Minecraft funcionar.
       5:
         image: notes/mc_intro_5.JPG
-        text: ' Antes de começar, você vai escolher seu personagem. Eu vou escolher
+        text: " Antes de começar, você vai escolher seu personagem. Eu vou escolher
           a Alex. Vamos construir o código para um programa que vai ajudá-la a andar
-          pela tela.'
+          pela tela."
       6:
         image: notes/mc_intro_6.JPG
         text: Sua tela é dividida em três partes principais. Na esquerda, está sua
@@ -2997,9 +2997,9 @@
           o que quiser. Você escolhe.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[alunos falando] Agora é pra valer. Tosar. Eu fiz um L usando tochas.
+        text: "[alunos falando] Agora é pra valer. Tosar. Eu fiz um L usando tochas.
           Eu fiz um A usando tábuas de eucalipto. Deu certo, deu certo. Construímos
-          uma casa de lã!'
+          uma casa de lã!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Quando terminar a sua criação, escolha compartilhar para receber um
@@ -3015,9 +3015,9 @@
           escolhe.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[alunos falando] Agora é pra valer. Tosar. Eu fiz um L usando tochas.
+        text: "[alunos falando] Agora é pra valer. Tosar. Eu fiz um L usando tochas.
           Eu fiz um A usando tábuas de eucalipto. Deu certo, deu certo. Construímos
-          uma casa de lã!'
+          uma casa de lã!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Quando terminar a sua criação, escolha compartilhar para receber um
