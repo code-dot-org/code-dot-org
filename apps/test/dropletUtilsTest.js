@@ -858,3 +858,31 @@ describe('mergeCategoriesWithConfig', function () {
     assert(result.Turtle.blocks !== appConfig.categories.Turtle.blocks);
   });
 });
+
+describe('mergeFunctionsWithConfig', function () {
+  var mergeFunctionsWithConfig = dropletUtils.__TestInterface.mergeFunctionsWithConfig;
+
+  it('properly handles docFunc', function () {
+    var codeFunctions = {
+      sourceBlock: null
+    };
+
+    var dropletConfig = {
+      blocks :[
+        {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+        {func: 'targetBlock', category: 'Math', type: 'value'},
+        {func: 'thirdBlock',  category: 'Math', type: 'value'}
+      ]
+    };
+
+    var mergedBlocks = mergeFunctionsWithConfig(codeFunctions, dropletConfig, null, true);
+    assert.deepEqual(mergedBlocks, [
+      {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+      {func: 'targetBlock', category: 'Math', type: 'value'}
+    ], 'returns source and target when paletteOnly is true');
+
+    mergedBlocks = mergeFunctionsWithConfig(codeFunctions, dropletConfig, null, false);
+    assert.deepEqual(mergedBlocks, dropletConfig.blocks,
+      'returns all blocks when paletteOnly is false');
+  });
+});
