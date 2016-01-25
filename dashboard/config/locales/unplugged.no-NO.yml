@@ -72,11 +72,11 @@
         video: Unplug6
       Unplug7:
         title: Låtskriving
-        desc: Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
+        desc: "Å lese en tekst er en ganske kjent aktivitet for for de fleste elever.
           Vi vil ta en aktivitet som allerede er kjent, og benytte den for å gi en
           god opplæring i å definere og kalle funksjoner. Når elevene er blitt kjent
           med definere/kalle prosessen, vi vil legge til ekstra funksjoner, kombinert
-          med med passerende parametre.
+          med med passerende parametre."
         pdfs:
         - unplug7
         video: Unplug7
@@ -304,9 +304,9 @@
         video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection og Pytagoras læresetning
-        desc: Å finne ut når objekter på skjermen berører hverandre er et viktig aspekt
-          i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
+        desc: "Å finne ut når objekter på skjermen berører hverandre er et viktig
+          aspekt i de fleste video-spill. Nå skal vi se på hvordan Pythagoras læresetning
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
-          hverandre.
+          hverandre."
         video: alg_16_biggame_collision_detection

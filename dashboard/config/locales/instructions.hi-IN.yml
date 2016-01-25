@@ -1,31 +1,31 @@
 "hi":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: हाय, मैं एक कलाकार हूँ। तुम मुझे लगभग कुछ भी आकर्षित
-        करने के लिए कोड लिख सकते हैं। मेरे चित्र में ग्रे लाइनों से अधिक आकर्षित करने
-        के लिए कुछ ही ब्लॉक का उपयोग करें। (प्रत्येक लाइन 100 पिक्सल लंबी है)
-      2-3 Artist 11_instruction: 'बंद करो साइन इन करें एक बॉर्डर प्रत्येक 100 पिक्सल
+      2-3 Artist 1 new_instruction: "हाय, मैं एक कलाकार हूँ। तुम मुझे लगभग कुछ भी
+        आकर्षित करने के लिए कोड लिख सकते हैं। मेरे चित्र में ग्रे लाइनों से अधिक आकर्षित
+        करने के लिए कुछ ही ब्लॉक का उपयोग करें। (प्रत्येक लाइन 100 पिक्सल लंबी है)"
+      2-3 Artist 11_instruction: "बंद करो साइन इन करें एक बॉर्डर प्रत्येक 100 पिक्सल
         लंबे, 8 पक्षों के साथ एक अष्टकोना बना कर दे। आप कितने डिग्री बारी चाहिए? (सुझाव:
-        8 द्वारा विभाजित 360 क्या है?) '
+        8 द्वारा विभाजित 360 क्या है?) "
       2-3 Artist 12_instruction: '"बार दोहराएँ" खंड सेट करें जिससे कि यह नेत्रगोलक
         खत्म करने के लिए एक "सर्किल" बनाता है। यदि प्रत्येक आंदोलन सही एक डिग्री द्वारा
         बदल जाता है, कितनी बार आप चक्र को पूरा करने के लिए दोहराने की आवश्यकता है?
         180? 360? 500?'
-      2-3 Artist 2 new_instruction: 'यह सदन एक दीवार के आधा समाप्त हो गया है। 100
-        प्रत्येक पक्ष है, लेकिन केवल 50 आधे समाप्त दीवार है। दीवार को पूरा। '
+      2-3 Artist 2 new_instruction: "यह सदन एक दीवार के आधा समाप्त हो गया है। 100
+        प्रत्येक पक्ष है, लेकिन केवल 50 आधे समाप्त दीवार है। दीवार को पूरा। "
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. \n"
-      2-3 Artist 3.4_instruction: यहां जाईयें ब्लॉक कलाकार आहरण के बिना ले जाता है।
-        दोनों के कूदने का उपयोग करके डैश्ड रेखा खींचना और ब्लॉकों आकर्षित।
-      2-3 Artist 3_instruction: इस टोपी 100 पिक्सल ऊँचा है। आकर्षित एक टोपी है कि
-        70 पिक्सल कम है।
-      2-3 Artist 3new_instruction: लाल टोपी 100 पिक्सल लंबा है। एक काली टोपी है कि
-        70 पिक्सल छोटा कद है आरेखण कर लें। काले hat की चौड़ाई 50 पिक्सल है।
-      2-3 Artist 4_instruction: मदद मुझे घर के इस बिल्ली के लिए पूरा करें।
+      2-3 Artist 3.4_instruction: "यहां जाईयें ब्लॉक कलाकार आहरण के बिना ले जाता है।
+        दोनों के कूदने का उपयोग करके डैश्ड रेखा खींचना और ब्लॉकों आकर्षित।"
+      2-3 Artist 3_instruction: "इस टोपी 100 पिक्सल ऊँचा है। आकर्षित एक टोपी है कि
+        70 पिक्सल कम है।"
+      2-3 Artist 3new_instruction: "लाल टोपी 100 पिक्सल लंबा है। एक काली टोपी है कि
+        70 पिक्सल छोटा कद है आरेखण कर लें। काले hat की चौड़ाई 50 पिक्सल है।"
+      2-3 Artist 4_instruction: "मदद मुझे घर के इस बिल्ली के लिए पूरा करें।"
       2-3 Artist 5_instruction: इस कोड को एक ही घर के केवल 3 ब्लॉकों का उपयोग करने
         आकर्षित करने के लिए एक "बार दोहराएँ" ब्लॉक के साथ प्रतिस्थापित।
-      2-3 Artist 6_instruction: 'यह सदन एक छत की जरूरत है! त्रिकोण आकर्षित।  संकेत:
-        सभी तीन पक्षों ने एक ही लंबाई हैं।'
+      2-3 Artist 6_instruction: "यह सदन एक छत की जरूरत है! त्रिकोण आकर्षित।  संकेत:
+        सभी तीन पक्षों ने एक ही लंबाई हैं।"
       2-3 Artist 7_instruction: "Finish drawing the right half of the last window.\nEach
         square window pane is 25 pixels wide. \n"
       2-3 Artist 8_instruction: |
@@ -939,12 +939,29 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
-      App Lab test_instruction: परिक्षा
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
+      App Lab test_instruction: "परिक्षा"
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
         One sentence summary of the activity. Click to
@@ -3235,18 +3252,18 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: बेल से उलझना ख़राब आइडिया है।  सावधानी
-        से बेल पार करें और अपने घर सुरक्षित पहुँचें।
+      Overworld Avoid Monsters_instruction: "बेल से उलझना ख़राब आइडिया है।  सावधानी
+        से बेल पार करें और अपने घर सुरक्षित पहुँचें।"
       Overworld Chop Tree_instruction: लकड़ी एक महत्वपूर्ण संसाधन है। उससे कई चीज़ें
         बनाई जाती हैं। पेड़ के पास जाएँ और उसे काट कर नीचे गिराने के लिए "destroy
         block" कमांड का उपयोग करें।
-      Overworld Chop Trees_instruction: हमें सूरज ढलने से पहले घर का निर्माण करना
-        होगा। मकानों के लिए बहुत अधिक लकड़ी की ज़रूरत होती है। सभी 3 पेड़ काटें।
-      Overworld Free Play 20x20_instruction: बधाई! आपने हमारी सभी पहेलियों को बूझा
+      Overworld Chop Trees_instruction: "हमें सूरज ढलने से पहले घर का निर्माण करना
+        होगा। मकानों के लिए बहुत अधिक लकड़ी की ज़रूरत होती है। सभी 3 पेड़ काटें।"
+      Overworld Free Play 20x20_instruction: "बधाई! आपने हमारी सभी पहेलियों को बूझा
         है! अब तक आपने जो कुछ सीखा है, उनका उपयोग करते हुए अब खनन, निर्माण और कुछ
-        अनोखी रचना तैयार करें।
-      Overworld Free Play_instruction: यह लैंडस्केप आपके उपयोग के लिए है। आप क्या
-        निर्माण करना चाहते हैं उसे चुनें।
+        अनोखी रचना तैयार करें।"
+      Overworld Free Play_instruction: "यह लैंडस्केप आपके उपयोग के लिए है। आप क्या
+        निर्माण करना चाहते हैं उसे चुनें।"
       Overworld House Frame - A_instruction: |
         Let's make our own house! This spot
         looks good. Build a frame on the dirt blocks.
@@ -3268,21 +3285,21 @@
       Overworld House Frame Chosen_instruction: |
         Build the rest of your house from
         any material you'd like. The "repeat" command will come in handy.
-      Overworld House Frame_instruction: चलिए हम अपना घर बनाते हैं! यह जगह अच्छी नज़र
-        आती है। मिट्टी के खंडों पर फ़्रेम का निर्माण करें।
-      Overworld Minecart Track_instruction: आप अनेक भूमिगत संसाधनों के साथ वापस सतह
+      Overworld House Frame_instruction: "चलिए हम अपना घर बनाते हैं! यह जगह अच्छी
+        नज़र आती है। मिट्टी के खंडों पर फ़्रेम का निर्माण करें।"
+      Overworld Minecart Track_instruction: "आप अनेक भूमिगत संसाधनों के साथ वापस सतह
         पर आ गए हैं। अब, हम आपके घर से मिट्टी वाले मार्ग पर ट्रैक का निर्माण करेंगे।
-        पहला चरण है रास्ता साफ़ करना। पथ का अनुसरण करें और पेड़ साफ़ करें।
+        पहला चरण है रास्ता साफ़ करना। पथ का अनुसरण करें और पेड़ साफ़ करें।"
       Overworld Move to Sheep_instruction: भेड़ तक पहुँचने के लिए दूसरा "move forward"
         कमांड जोड़ें।
       Overworld Place Wall_instruction: हर घर की शुरूआत दीवार से होती है।  repeat
         लूप में "place" और "move forward" कमांड रखते हुए अपने घर के पहले हिस्से का
         निर्माण करें।
-      Overworld Plant Crops_instruction: पहले से योजना बनाना अच्छा है। पानी के दोनों
-        ओर फसल रोपें ताकि आपको बाद में भूख न लगे।
-      Overworld Powered Minecart_instruction: बढ़िया काम! आपने बहुत संसाधन एकत्रित
+      Overworld Plant Crops_instruction: "पहले से योजना बनाना अच्छा है। पानी के दोनों
+        ओर फसल रोपें ताकि आपको बाद में भूख न लगे।"
+      Overworld Powered Minecart_instruction: "बढ़िया काम! आपने बहुत संसाधन एकत्रित
         किए हैं और साधारण घर का निर्माण किया है। अब नक्शे के किनारे से अपने घर के
-        दरवाज़े तक रेलिंग बिछाएँ।
+        दरवाज़े तक रेलिंग बिछाएँ।"
       Overworld Shear Sheep_instruction: भेड़-कतरन समय! दोनों भेड़ों से ऊन एकत्रित
         करने के लिए "shear" कमांड का उपयोग करें।
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
@@ -5338,14 +5355,14 @@
       Underground If Statements_instruction: अब चीज़ें मुश्किल होने लगी हैं। 3 रेडस्टोन
         का खनन करें, लेकिन लावा में न गिरें। आप किसी लावा को उजागर करते हैं तो उस
         पर गोल पत्थर रखने के लिए "If" कमांड का उपयोग करें।
-      Underground Iron_instruction: पिघले हुए लावा में चलना ग़लत विचार है। पुल बनाने
-        के लिए गोल पत्थर रखें, फिर कम से कम दो लौह खंडों का खनन करें।
+      Underground Iron_instruction: "पिघले हुए लावा में चलना ग़लत विचार है। पुल बनाने
+        के लिए गोल पत्थर रखें, फिर कम से कम दो लौह खंडों का खनन करें।"
       Underground Mine in a Circle_instruction: '5 हीरे और 7 रेडस्टोन पाने का रास्ता
         खोजें! चौकोर भाग में चलने के लिए repeat कमांड के अंदर repeat कमांड का उपयोग
         करने की कोशिश करें। '
-      Underground Mining Coal_instruction: आप अत्यंत मूल्यवान संसाधन भूमिगत पाएँगे,
+      Underground Mining Coal_instruction: "आप अत्यंत मूल्यवान संसाधन भूमिगत पाएँगे,
         लेकिन वहाँ अंधेरा हो सकता है। कम से कम 2 टार्च रखें और कम से कम 2 कोयले का
-        खनन करें।
+        खनन करें।"
       Underground Test Level_instruction: Collect all of the minerals!
       Vigenere_instruction: Test
       XML Scratchpad_instruction: Using this test level to grab xml for unit tests

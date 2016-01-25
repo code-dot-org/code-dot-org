@@ -284,10 +284,6 @@ sl:
   user_level:
     completed: Zaključeno
     tried: Poskus
-  user_stats:
-    recent_activity: Nedavna dejavnost
-    show_more: Prikaži več
-    classroom_activity: Dejavnost brez prijave
   home:
     title: Studio za kodiranje
     description: Code Studio is home to online courses created by Code.org

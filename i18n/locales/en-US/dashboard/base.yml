@@ -276,10 +276,6 @@ en:
   user_level:
     completed: crwdns3079:0crwdne3079:0
     tried: crwdns3080:0crwdne3080:0
-  user_stats:
-    recent_activity: crwdns3081:0crwdne3081:0
-    show_more: crwdns3082:0crwdne3082:0
-    classroom_activity: crwdns5090:0crwdne5090:0
   home:
     title: crwdns8814:0crwdne8814:0
     description: crwdns41699:0crwdne41699:0

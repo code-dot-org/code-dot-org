@@ -362,7 +362,7 @@
             študentov všetkých vekových kategórií.
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: Úvod do vedy o počítačoch (informatiky)
+          Introduction to Computer Science: "Úvod do vedy o počítačoch (informatiky)"
           The Maze: Bludisko
           Computational Thinking: Aritmetické myslenie
           Graph Paper Programming: Programovanie na milimetrovom papieri
@@ -377,7 +377,7 @@
           The Farmer 2: Farmár 2
           Abstraction: Abstrakcia
           The Artist 4: Umelec 4
-          Relay Programming: Štafetové programovanie
+          Relay Programming: "Štafetové programovanie"
           The Farmer 3: Farmár 3
           The Internet: Internet
           The Artist 5: Umelec 5
@@ -1511,8 +1511,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1566,6 +1568,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1669,5 +1672,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Zbaliť
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

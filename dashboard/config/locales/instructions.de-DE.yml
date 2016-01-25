@@ -786,9 +786,9 @@
         du ein Programm schreiben, welches alles entfernt, damit der Boden eben ist?
       4-5 While Loops 7_instruction: Wow, da sind jetzt drei Haufen Erde! Kannst du
         ein Programm schreiben, welches jeden entfernt bis der Boden eben ist?
-      4-5 While Loops 8_instruction: ' Hier ist ein wirklich tiefes Loch und ein wirklich
+      4-5 While Loops 8_instruction: " Hier ist ein wirklich tiefes Loch und ein wirklich
         großer Haufen Erde. Wie viele Schaufeln voller Erde müssen bewegt werden,
-        damit der Grund wieder eben ist? Tipp: Verwende die Solange-Schleife für beides.'
+        damit der Grund wieder eben ist? Tipp: Verwende die Solange-Schleife für beides."
       4-5 While Loops Assessment 1_instruction: Hier sind viele Löcher und Erdhaufen.
         Hilf mir, die Löcher zu füllen und die Haufen zu entfernen und den Grund wieder
         zu ebnen.
@@ -796,11 +796,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: teste
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1526,9 +1543,9 @@
         a parameter for line length, but it doesn't do anything yet. Can you update
         the function so it uses the "length" parameter when it draws each side?
         The triangle sizes are 150 pixels, 75 pixels and 25 pixels.
-      Course 4 Artist Params 3_instruction: Überragend! Kannst Du jedes dieser Dreiecke
+      Course 4 Artist Params 3_instruction: "Überragend! Kannst Du jedes dieser Dreiecke
         mit dieser neuen Funktion zeichnen? Das erste ist 25 Pixel lang, das zweite
-        ist 50, das dritte ist 75.
+        ist 50, das dritte ist 75."
       Course 4 Artist Params 4_instruction: Kannst Du eine neue Funktion "square"
         (Quadrat) hinzufügen? Sie sollte auch einen Längenparameter annehmen, wie
         das Dreieck. Dieses Mal zeichne 3 Quadrate, jeweils mit 25, 50 und 75 Pixeln
@@ -1751,12 +1768,12 @@
         benötigst du für rechts unten noch eine weitere 4-stellige Binärfolge.
       Course 4 EC 1a_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
       Course 4 EC 1b_instruction: Keine Regeln, keine Hinweise. Du kannst es schaffen!
-      Course 4 EC 2a_instruction: '**Extrem-Herausforderung:** Es gibt keine Regeln
-        oder Hinweise, nur die Aufgabe.'
-      Course 4 EC 2b_instruction: '**Extrem-Herausforderung:** Es gibt keine Regeln
-        oder Hinweise, nur die Aufgabe.'
-      Course 4 EC 2c_instruction: '**Extrem-Herausforderung:** Es gibt keine Regeln
-        oder Hinweise, nur die Aufgabe.'
+      Course 4 EC 2a_instruction: "**Extrem-Herausforderung:** Es gibt keine Regeln
+        oder Hinweise, nur die Aufgabe."
+      Course 4 EC 2b_instruction: "**Extrem-Herausforderung:** Es gibt keine Regeln
+        oder Hinweise, nur die Aufgabe."
+      Course 4 EC 2c_instruction: "**Extrem-Herausforderung:** Es gibt keine Regeln
+        oder Hinweise, nur die Aufgabe."
       Course 4 EC 3_instruction: 'Jetzt kannst du mit dem bisher gelernten ein solches
         Bild zeichnen. Beachte, dass der Code einfacher wird, wenn du mit Parametern
         arbeitest. '

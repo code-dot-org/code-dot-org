@@ -2121,11 +2121,11 @@
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: Čím chceš být, až vyrosteš, Olivia? Astronautem. Nevíš náhodou, kdo
+        text: "Čím chceš být, až vyrosteš, Olivia? Astronautem. Nevíš náhodou, kdo
           je počítačový programátor? Ano, No ne. Na co čekat? Nejsem si úplně jistý,
           jak vysvětlit to počítačové programování, že je to velmi jednoduché. Je
           to sada instrukcí, jako recept, musíš je následovat krok za krokem, abys
-          dostal konečný výsledek, který chceš.
+          dostal konečný výsledek, který chceš."
       2:
         image: notes/tutorial_puzzle_challenge_2.png
         text: Mohu změnit počet pixelů, délku řádku pomocí tohoto rozevíracího seznamu.
@@ -2162,11 +2162,11 @@
     unplug1:
       1:
         image: notes/unplug1_1.png
-        text: Čím chceš být, až vyrosteš, Olivia? Hm, Astronaut. Nevíš náhodou, kdo
+        text: "Čím chceš být, až vyrosteš, Olivia? Hm, Astronaut. Nevíš náhodou, kdo
           je počítačový programátor? Ano, No ne. Na co čekat? Nejsem si úplně jistý,
           jak vysvětlit to počítačové programování, že je to velmi jednoduché. Je
           to sada instrukcí, jako recept, musíš je následovat krok za krokem, abys
-          dostal konečný výsledek, který chceš.
+          dostal konečný výsledek, který chceš."
       2:
         image: notes/unplug1_2.png
         text: Informatika je cesta k ovlivnění světa. Mohou to být hudební videa,
@@ -2313,10 +2313,10 @@
     unplug9:
       1:
         image: notes/unplug9_1.png
-        text: Štafetové programování je velmi zábavná lekce, která se dostane napříč
+        text: "Štafetové programování je velmi zábavná lekce, která se dostane napříč
           přes informatiku. Někdy všichni jsou stále ještě trochu netrpěliví a chcejí
           se postavit na své nohy. To je skvělý způsob, jak přidat jisté povzbuzení
-          do informatiky.
+          do informatiky."
       2:
         image: notes/unplug9_2.png
         text: Jste všichni rozdělení do dvou skupin, kde stojí v řadě a spustí štafetový
@@ -2530,17 +2530,17 @@
           si nové zvuky a příkazy, abys toho dokázal ještě víc.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
+        text: "[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
           když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko
           a objeví se útočník. Nakonec celá obrazovka je plná prasátek a když se dotkneš
-          10 000 z nich, vyhraješ.'
+          10 000 z nich, vyhraješ."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co
+        text: "[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co
           jsi dostal, máš za to body. V mém programu jsem obrátil směry tak, že při
           každém klepnutí nahoru jde tvoje postava dolů a při klepnutí na tlačítko
           vpravo tvoje postava jde doleva. Je to opravdu těžké někdy získat výhodu!
-          Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!'
+          Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Až budeš hotov s hrou, vyber si pro sdílení dostat odkaz. Ten můžeš
@@ -2652,17 +2652,17 @@
           si nové zvuky a příkazy, abys toho dokázal ještě víc.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
+        text: "[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
           když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko
           a objeví se útočník. Nakonec celá obrazovka je plná prasátek a když se dotkneš
-          10 000 z nich, vyhraješ.'
+          10 000 z nich, vyhraješ."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co
+        text: "[studenti mluví] Udělali jsme hru, kde nemůžeš prohrát a všechno, co
           jsi dostal, máš za to body. V mém programu jsem obrátil směry tak, že při
           každém klepnutí nahoru jde tvoje postava dolů a při klepnutí na tlačítko
           vpravo tvoje postava jde doleva. Je to opravdu těžké někdy získat výhodu!
-          Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!'
+          Výhodou je však, pokud jsi vývojář hry. Povedlo se mi to? Hurá!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Až budeš hotov s hrou, vyber si pro sdílení dostat odkaz. Ten můžeš
@@ -2799,9 +2799,9 @@
           si vybrat.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L
+        text: "[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L
           z pochodní. Udělal jsem A z březových prkýnek. Fungovalo to, fungovalo.
-          Postavili jsme dům z vlny!'
+          Postavili jsme dům z vlny!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Po dokončení tvého výtvoru vyber si získat odkaz ke sdílení se svými
@@ -2817,9 +2817,9 @@
           si vybrat.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L
+        text: "[studenti mluví] Jde o to, že je to skutečné. Shera. Udělal jsem L
           z pochodní. Udělal jsem A z březových prkýnek. Fungovalo to, fungovalo.
-          Postavili jsme dům z vlny!'
+          Postavili jsme dům z vlny!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Nyní umíš si postavit, co chceš. Pobav se!

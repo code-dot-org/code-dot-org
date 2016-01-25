@@ -264,7 +264,7 @@
           'Play Lab: Animation (Big Game)': Velika Igra - Animacija
           'Unplugged: Booleans': 'Izvanmrežno: Logičke varijable i Logika'
           'Eval: Boolean Operators': Logički Operatori
-          'Play Lab: Booleans': Šišmiš Sem
+          'Play Lab: Booleans': "Šišmiš Sem"
           'Play Lab: Boolean (Big Game)': Velika Igra - Logičke Varijable i Vrijednosti
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Uslovna i
             izvedena funkcija'
@@ -378,7 +378,7 @@
           The Farmer 2: Farmer 2
           Abstraction: Apstrakcija
           The Artist 4: Umjetnik 4
-          Relay Programming: Štafeta Programiranje
+          Relay Programming: "Štafeta Programiranje"
           The Farmer 3: Farmer 3
           The Internet: Internet
           The Artist 5: Umjetnik 5
@@ -403,8 +403,8 @@
           Eval: Eval
         flappy:
           title: Flappy kôd
-          description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
-            naš tutorijal izrade Flappy kôda!
+          description: "Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
+            naš tutorijal izrade Flappy kôda!"
           description_short: Napiši vlastitu Flappy igru za manje od 10 minuta!
           Flappy Code: Flappy kôd
         jigsaw:
@@ -550,7 +550,7 @@
           The Design Recipe: Recept za Dizajn
           Your Game - Animation: Your Game - Animation
           Booleans: Logika
-          Sam the Bat: Šišmiš Sem
+          Sam the Bat: "Šišmiš Sem"
           Your Game - Booleans: Your Game - Booleans
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
           Rocket-Height: Rocket-Height
@@ -572,7 +572,7 @@
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
           Booleans: Logika
-          Sam the Bat: Šišmiš Sem
+          Sam the Bat: "Šišmiš Sem"
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekcije Kolizije
@@ -972,7 +972,7 @@
           The Design Recipe: Recept za Dizajn
           Big Game - Animation: Big Game - Animation
           Booleans: Logika
-          Sam the Bat: Šišmiš Sem
+          Sam the Bat: "Šišmiš Sem"
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           Big Game - Player Movement: Big Game - Player Movement
@@ -1517,8 +1517,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1572,6 +1574,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ledeno doba Play Lab
           description_short: Napisati priču ili napraviti igru s Ice Age Play Lab!
@@ -1675,5 +1678,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Wrap-Up
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

@@ -849,8 +849,8 @@
           nahi den angelu zehatzarekin
         repeat_blocks: Erabili "Errepikatu" blokea eta inguratu horrekin lan eremuko
           blokeak
-        repeat_blocks_1: (1) Erabili bloke hau eta inguratu berarekin lan eremuko
-          bloke grisak
+        repeat_blocks_1: "(1) Erabili bloke hau eta inguratu berarekin lan eremuko
+          bloke grisak"
         repeat_blocks_2: (2) Mugitu "Errepikatu" blokea hona, eta bloke grisak barruan
           jarri
         snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!

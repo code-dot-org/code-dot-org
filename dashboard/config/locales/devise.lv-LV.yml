@@ -69,8 +69,8 @@
       not_found: nav atrasts
       not_locked: nav slēgts
       not_saved:
-        one: '%{resource} netika saglabāts šādas kļūdas dēļ:'
-        other: '%{resource} netika saglabāts %{count} kļūdu dēļ:'
+        one: "%{resource} netika saglabāts šādas kļūdas dēļ:"
+        other: "%{resource} netika saglabāts %{count} kļūdu dēļ:"
     invitations:
       send_instructions: An invitation email has been sent to %{email}.
       invitation_token_invalid: The invitation token provided is not valid!

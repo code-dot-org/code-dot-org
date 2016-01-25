@@ -283,10 +283,6 @@ ro:
   user_level:
     completed: Finalizat
     tried: Încercat
-  user_stats:
-    recent_activity: Activitate recentă
-    show_more: Arată mai multe
-    classroom_activity: Activitate fără Calculator
   home:
     title: Studio-ul Code
     description: Studio-ul Code este gazda cursurilor online create de Code.org

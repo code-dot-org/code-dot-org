@@ -286,10 +286,6 @@ de:
   user_level:
     completed: Abgeschlossen
     tried: Versucht
-  user_stats:
-    recent_activity: Letzte Aktivität
-    show_more: Erweiterte Ansicht
-    classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
     description: Code-Studio ist Heimat von online Kurse erstellt von Code.org

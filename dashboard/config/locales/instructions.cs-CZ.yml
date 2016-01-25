@@ -18,8 +18,8 @@
         Vytvoř přerušovanou čáru za použití bloků "skoč" a "posuň".
       2-3 Artist 3_instruction: Tento klobouk je vysoký 100 pixelů. Nakresli klobouk
         který je o 70 pixelů nižší.
-      2-3 Artist 3new_instruction: Červený klobouk je vysoký 100 pixelů. Dokonči černý
-        klobouk, který je o 70 pixelů kratší. Délka černého klobouku je 50 pixelů.
+      2-3 Artist 3new_instruction: "Červený klobouk je vysoký 100 pixelů. Dokonči
+        černý klobouk, který je o 70 pixelů kratší. Délka černého klobouku je 50 pixelů."
       2-3 Artist 4_instruction: Pomoz mi dokončit domeček pro tuto kočičku.
       2-3 Artist 5_instruction: Nahraď kód v tomto bloku "opakuj" tak, abys vytvořil
         stejný domek s použitím jen 3 bloků.
@@ -687,20 +687,37 @@
         program, který odstraní všechno?
       4-5 While Loops 7_instruction: Wow, nyní jsou tři hromady špíny! Umíš napsat
         program, který odstraní každou z nich?
-      4-5 While Loops 8_instruction: ' Jsou opravdu hluboké díry a opravdu velká hromada
+      4-5 While Loops 8_instruction: " Jsou opravdu hluboké díry a opravdu velká hromada
         kompostu.  Kolik lopat špíny je třeba přemístit, aby byla půda rovná?  Rada:
-        Použij cyklus while pro obě strany.'
+        Použij cyklus while pro obě strany."
       4-5 While Loops Assessment 1_instruction: Existuje mnoho děr a hromad.  Pomoz
         mi vyplnit a odstranit je aby země plochá.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: otestuj
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1247,8 +1264,8 @@
         nakreslit tvar hvězdy pomocí funkce "Kreslit čtvercovou linku"? Hodně zdaru!
       Course 4 Artist For Loops 1_instruction: 'Nakresli tento trojúhelník, který
         je široký 50 pixelů. Rada: použij blok opakování.'
-      Course 4 Artist For Loops 10_instruction: Čas volné hry! Pobav se kreslením
-        s bloky, které jsi se naučil používat
+      Course 4 Artist For Loops 10_instruction: "Čas volné hry! Pobav se kreslením
+        s bloky, které jsi se naučil používat"
       Course 4 Artist For Loops 11_instruction: 'Připomeňme si fázi 6, když jsme použili
         proměnnou k řízení počtu stran v obrazci? Udělejme totéž s proměnnou "čítač".
         Tento vzor začíná s trojúhelníkem a přidává jednu stranu najednou, dokud se
@@ -1585,14 +1602,14 @@
       Course 4 Binary 8_instruction: Můžeš dokončit většinu z tohoto obrázku opakováním
         5 bitového binární čísla - pak budete potřebovat jedno 4 bitové číslo dostat
         do pravého dolního rohu.
-      Course 4 EC 1a_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
-      Course 4 EC 1b_instruction: Žádná pravidla. Žádné záhady. Jen výzva!
-      Course 4 EC 2a_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady.
-        Jen výzva!'
-      Course 4 EC 2b_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady.
-        Jen výzva!'
-      Course 4 EC 2c_instruction: '** Extrémní  výzva: ** žádná pravidla. Žádné záhady.
-        Jen výzva!'
+      Course 4 EC 1a_instruction: "Žádná pravidla. Žádné záhady. Jen výzva!"
+      Course 4 EC 1b_instruction: "Žádná pravidla. Žádné záhady. Jen výzva!"
+      Course 4 EC 2a_instruction: "** Extrémní  výzva: ** žádná pravidla. Žádné záhady.
+        Jen výzva!"
+      Course 4 EC 2b_instruction: "** Extrémní  výzva: ** žádná pravidla. Žádné záhady.
+        Jen výzva!"
+      Course 4 EC 2c_instruction: "** Extrémní  výzva: ** žádná pravidla. Žádné záhady.
+        Jen výzva!"
       Course 4 EC 3_instruction: 'Používej to, co jsi se naučil v předchozí úrovni
         k nakreslení obrázku, jako je tento. Poznámka: Kód se stává jednodušší, pokud
         zahrneš parametry. '

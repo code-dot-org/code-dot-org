@@ -70,8 +70,8 @@
     need_confirmation: Didn't receive confirmation instructions?
     need_unlock: Didn't receive unlock instructions?
   signup_form:
-    student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    student_count: "%{count} students have already signed up."
+    teacher_count: "%{count} teachers have already signed up."
     overview_student: Sign up for an account to track your progress. Your email is
       primarily used to allow you to log in and for password recovery. For more information,
       see our <a href="http://code.org/privacy">Privacy Policy</a>.
@@ -147,12 +147,12 @@
       %{name}
   follower:
     invite_sent: Invite sent
-    added_teacher: '%{name} added as your teacher'
+    added_teacher: "%{name} added as your teacher"
     registered: You've registered for %{section_name}.
     error:
       signed_in: Please signout before proceeding
       username_not_found: Username %{username} not found
-      username_in_use: '%{username} is already taken, please pick another'
+      username_in_use: "%{username} is already taken, please pick another"
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Could not find a section with code '%{section_code}'.
@@ -195,7 +195,7 @@
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
       msg_visit_website: Visit website
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB of Dropbox Space
@@ -204,7 +204,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -251,9 +251,9 @@
     destroy: Destroy
     back: Back
     confirm: Aminmisiz?
-    created: '%{model} was successfully created.'
-    updated: '%{model} was successfully updated.'
-    destroyed: '%{model} was successfully deleted.'
+    created: "%{model} was successfully created."
+    updated: "%{model} was successfully updated."
+    destroyed: "%{model} was successfully deleted."
     access_denied: You do not have access to this %{model}.
   nav:
     header:
@@ -276,7 +276,7 @@
       signup: Sign up
       already_registered: Already registered?
     popup:
-      progress_for_user: '%{name}''s progress'
+      progress_for_user: "%{name}'s progress"
       progress: Your progress
       lines: 'Total lines of code: %{lines}'
       close: CLOSE
@@ -284,7 +284,7 @@
       puzzle_map: Stages
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: (U.S. students only)
+      prize_us_only: "(U.S. students only)"
       prizes_link: more info
   teacher:
     answer: Answer
@@ -292,14 +292,14 @@
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
-    remove: (remove teacher)
+    remove: "(remove teacher)"
     confirm:
       remove: Are you sure you want to remove this teacher?
     students:
       dashboard: Go to Teacher Dashboard
     user_not_found: The teacher or student could not be found
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher
-      for %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} has been removed as a teacher
+      for %{student_name}"
     panel:
       answer_viewer: Answer Viewer
       student: O‘quvchi
@@ -313,10 +313,10 @@
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
-    email_confirm_wrong_email: (Wrong email address?)
+    email_confirm_wrong_email: "(Wrong email address?)"
     email_resend_confirm: Resend confirmation instructions
-    new_password_hint: (leave blank if you don't want to change it)
-    current_password_hint: (we need your current password to confirm your changes)
+    new_password_hint: "(leave blank if you don't want to change it)"
+    current_password_hint: "(we need your current password to confirm your changes)"
     delete: Delete your account
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: 'Please note: deleting your account will not delete
@@ -325,16 +325,12 @@
   user_level:
     completed: Completed
     tried: Tried
-  user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
-    classroom_activity: Unplugged Activity
   home:
     title: Code Studio
     description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS'
+    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
+    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
+      MILLION STUDENTS"
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
@@ -372,11 +368,11 @@
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_hoc2014: <h2>The Hour of Code for</h2><h1>All Ages</h1>
-    heading_elementary: <h2>20 hour courses for</h2><h1>Computer Science Fundamentals
-      (all ages)</h1>
-    heading_apps: <h2>Fun for</h2><h1>Everybody</h1>
-    heading_legacy: <h2>Our accelerated course for</h2><h1>All Ages</h1>
+    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
+    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
+      (all ages)</h1>"
+    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
+    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
@@ -410,8 +406,8 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
     more: Yana
     feedback: Provide feedback
@@ -535,7 +531,7 @@
     want_to_make_your_own: Want to make your own?
     more: More &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ago'
+    caption_time_ago: "%{time_ago} ago"
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
@@ -548,7 +544,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Get Help
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Noto‘g‘ri javob
     wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!
