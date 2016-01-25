@@ -79,4 +79,33 @@ describe("Bee", function () {
       validate('purpleNectarHidden', '+1FC', false, 'overriden cloud');
     });
   });
+
+  describe("variable grids", function () {
+    function validate(rawDirtValues, expected) {
+      var maze = {};
+      var config = {
+        level: utils.extend(baseLevel, {
+          rawDirt: [rawDirtValues]
+        })
+      };
+      var bee = new Bee(maze, null, config);
+      assert.equal(bee.staticGrids.length, expected);
+    }
+
+    it("generates a single static grid when no variable cells are specified", function () {
+      validate([0], 1);
+      validate([1], 1);
+      validate([2], 1);
+      validate(["+1"], 1);
+    });
+
+    it("generates the correct number of static grids when some variable cells are specified", function () {
+      validate(["+1C"], 2);
+      validate(["-1C"], 2);
+      validate(["1C"], 2);
+      validate(["1Cany"], 3);
+      validate(["+1C", "-1C"], 4);
+      validate(["+1C", "1Cany"], 6);
+    });
+  });
 });
