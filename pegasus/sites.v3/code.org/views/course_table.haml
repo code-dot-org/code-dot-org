@@ -1,7 +1,3 @@
----
-title: Courses
-theme: responsive
----
 
 - (1..13).each do |n|
   :css
@@ -30,6 +26,10 @@ theme: responsive
     text-align: center;
   }
 
+  .courses .course {
+    cursor: pointer;
+  }
+
   .courses .courserow {
     border: 0px solid grey;
     background-color: #ddd;
@@ -52,7 +52,6 @@ theme: responsive
   .courses .description {
     font-size: 12px;
     color: #888;
-    /*white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;*/
   }
@@ -99,16 +98,3 @@ theme: responsive
                 %br/
             .description
               =course[:description]
-
-      -# info block underneath the course block
-      .course.break.courseextra{id: "courseinfo-#{course_index}", style: "display: none"}
-        - unless course[:starts] <= 1
-          %div{class: "bar-#{course[:starts]-1}"}
-            &nbsp;
-        %div{class: "courserow bar-#{course[:ends] - course[:starts] + 3}"}
-          - if course[:subtitle]
-            .subtitle
-              = course[:subtitle]
-          .description
-            =course[:description]
-
