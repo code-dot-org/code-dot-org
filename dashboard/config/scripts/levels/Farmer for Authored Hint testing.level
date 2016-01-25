@@ -30,7 +30,8 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the first hint.\\n\\nIt has *some* **basic** `markup`\",\r\n  \"hint_id\": \"first_hint\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"This is the second hint. It has an image.\\n\\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)\",\r\n  \"hint_id\": \"second_hint\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"This is the third and final hint. It doesn't have anything special.\",\r\n  \"hint_id\": \"last_hint\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "fast_get_nectar_animation": "false"
+    "fast_get_nectar_animation": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>
@@ -53,13 +54,13 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="maze_untilBlockedOrNotClear">
           <title name="DIR">holePresent</title>
         </block>
         <block type="maze_fill"/>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
   </blocks>
 </Karel>
