@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'chef'
+
 # Test-kitchen fork includes several helpful PRs not merged in the official repo:
 # 845 (ssh_tgz transport)
 # 825 (fix zlib warning)
