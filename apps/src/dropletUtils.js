@@ -182,6 +182,10 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, pal
 
   var docFunctions = {};
   blocks.forEach(function (block) {
+    if (!(block.func in codeFunctions)) {
+      return;
+    }
+    
     // For cases where we use a different block for our tooltips, make sure that
     // the target block ends up in the list of blocks we want
     var docFunc = block.docFunc;
