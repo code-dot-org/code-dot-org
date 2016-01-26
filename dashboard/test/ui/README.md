@@ -52,27 +52,28 @@ You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.
 
 Here are some example command line options.  Run `./runner.rb --help` for a full list.
 
-Run with a specific OS version, browser, browser version, and feature:
+Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-```
-./runner.rb -c IE9Win7 -f features/simpledrag.feature
-```
+`./runner.rb -d localhost.studio.code.org:3000`
+Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -p <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
-Run with a specific domain substituted in place of the default
+Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
+`./runner.rb -l`
 
-```
-./runner.rb -d localhost-studio.code.org:3000
-```
+Run all UI tests for a given browser/os combination - full list of combinations is in browsers.json
+`./runner.rb --config ChromeLatestWin7`
 
-see "Saucelabs tunnel" section above for how to set up the tunnel
+Run all UI tests for a given browser
+`./runner.rb --browser Chrome`
 
-Run against local Chrome webdriver instead of saucelabs:
+Run all tests in a given feature file for all browser/os combinations
+`./runner.rb --feature features/awesomeStuff.feature`
 
-```
-./runner.rb -l
-```
+Run exactly one UI test in a given feature file for all browser/os combinations
+`./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
 
-Note that this requires a local webdriver running on port 9515, such as Chromedriver at http://chromedriver.storage.googleapis.com/index.html.
+Run the eyes tests (see top section for more information on Eyes)
+`./runner.rb --eyes`
 
 ## Tips
 
