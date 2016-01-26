@@ -74,7 +74,7 @@
         - unplug6
         video: Unplug6
       Unplug7:
-        title: Şarkı yazma
+        title: "Şarkı yazma"
         desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
           take an activity that's already common knowledge and shift it into a solid
           education on defining and calling functions. Once students are familiar
@@ -100,7 +100,7 @@
         - unplug9
         video: Unplug9
       Unplug10:
-        title: İnternet
+        title: "İnternet"
         desc: Bu derste öğrenciler IPs ve DNS web adresleri hakkındaki her şeyi öğrenirken,internetteki
           akışı taklit edecekler.
         pdfs:
@@ -117,13 +117,13 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Mutlu Haritalar
-        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler.
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Oynat, Oynat
-        desc: Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
-          bir komutla bir karakteri labirentte hareket ettirirler.
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
@@ -165,8 +165,8 @@
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Biryerlere Güvenle Gitmek
-        desc: İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
-          gezinirken nasıl güvende olunabileceğine dair bilgi verir.
+        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Grafik Kağıdı Programlama
@@ -180,7 +180,7 @@
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: İkilik Bileklikler
+        title: "İkilik Bileklikler"
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
@@ -215,9 +215,9 @@
           kaydedecekler.
         video: C3_zar_yarışı
       Internet:
-        title: İnternet
-        desc: Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
-          mesajlar yollayarak gösterecekler.
+        title: "İnternet"
+        desc: "Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
+          mesajlar yollayarak gösterecekler."
         video: C3_internet
       Crowdsourcing:
         title: Kalabalık Kaynaklandırma 'Crowdsourcing'
@@ -265,7 +265,7 @@
           kavramalarına yardımcı olacaktır.  '
         video: C4_tıkanmamış_parametreler
       BinaryImages:
-        title: İkili resimler
+        title: "İkili resimler"
         desc: Though many people think of binary as strictly zeros and ones, our previous
           courses taught students that information can be represented in a variety
           of binary options.  This lesson takes that concept one step further as it
@@ -293,6 +293,6 @@
         desc: Conditionals and Piecewise Functions lesson description
         video: alg_10_conditionals
       CollisionDetection:
-        title: Çakışma Bulma
-        desc: Çakışma Bulma dersi tanımı
+        title: "Çakışma Bulma"
+        desc: "Çakışma Bulma dersi tanımı"
         video: alg_16_biggame_collision_detection

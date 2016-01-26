@@ -247,5 +247,6 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: "
+  "workspaceHeaderShort": "Pracovná plocha: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

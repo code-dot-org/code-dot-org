@@ -171,13 +171,13 @@
   "hashError": "Sajnálom, de \"%1\" nem felel meg egyetlen mentett programnak sem.",
   "help": "Segítség",
   "hideToolbox": "(Elrejtés)",
-  "hintHeader": "Itt egy ötlet:",
+  "hintHeader": "Íme egy tipp:",
   "hintPrompt": "Segítségre van szükséged?",
   "hintRequest": "Segítség",
-  "hintReviewTitle": "Review Your Hints",
-  "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint",
-  "hintTitle": "Tanács:",
+  "hintReviewTitle": "Nézd át a tippeket",
+  "hintSelectInstructions": "Utasítások és korábbi tippek",
+  "hintSelectNewHint": "Új tipp kérése",
+  "hintTitle": "Tipp:",
   "ignore": "Mellőzd",
   "infinity": "Végtelen",
   "jump": "Ugorj",
@@ -247,5 +247,6 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: "
+  "workspaceHeaderShort": "Munkaterület: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

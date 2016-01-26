@@ -209,7 +209,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockWhileXAheadDo":function(d){return "do"},
 "blockWhileXAheadWhile":function(d){return "එතෙක්"},
 "generatedCodeDescription":function(d){return "By dragging and placing blocks in this puzzle, you've created a set of instructions in a computer language called Javascript. This code tells computers what to display on the screen. Everything you see and do in Minecraft also starts with lines of computer code like these."},
-"houseSelectChooseFloorPlan":function(d){return "Choose the floor plan for your house."},
+"houseSelectChooseFloorPlan":function(d){return "ඔබේ නිවස සඳහා මහල් සැලස්ම තෝරාගන්න."},
 "houseSelectEasy":function(d){return "පහසු"},
 "houseSelectHard":function(d){return "ඉතා අමාරු"},
 "houseSelectLetsBuild":function(d){return "නිවසක් තනමු."},

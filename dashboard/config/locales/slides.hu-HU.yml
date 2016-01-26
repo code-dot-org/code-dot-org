@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Üdvözlünk az első kódolás órádon! Kezdjük is el az első programozási
-          leckét.
+        text: "Üdvözlünk az első kódolás órádon! Kezdjük is el az első programozási
+          leckét."
       2:
         image: notes/hoc1_2.jpg
         text: A Blockly nevű vizuális programozási nyelvet fogjuk használni, amelyben
@@ -22,7 +22,7 @@
         text: Minden program a számítógép által végrehajtandó utasítások listája.
       6:
         image: notes/hoc1_6.jpg
-        text: Első programodban egy Angry Bird madarat kell irányítanod az útvesztőn
+        text: Első programodban egy Angry Birds madarat kell irányítanod az útvesztőn
           át, hogy eljusson a Zöld Disznóig.
       7:
         image: notes/hoc1_7.jpg
@@ -30,7 +30,7 @@
           szükséges útmutató az útvesztő alatt olvasható.
       8:
         image: notes/hoc1_8.jpg
-        text: A középső eszköztár tartalmazza az Angry Bird irányításához szükséges
+        text: A középső eszköztár tartalmazza az Angry Birds madár irányításához szükséges
           utasításokat. Ezeket fogod használni a kód felépítéséhez.
       9:
         image: notes/hoc1_9.jpg
@@ -67,7 +67,7 @@
       3:
         image: notes/stage5_3.jpg
         text: 'Ez a blokk azt mondja: " előrelépni 100 pixel. " A pixelek csak nagyon
-          apró pontok a képernyőn .'
+          apró pontok a képernyőn.'
       4:
         image: notes/stage5_4.jpg
         text: Ez a blokk azt mondja "forduljon jobbra 90 fokban." Ez el fogja fordítani
@@ -167,7 +167,7 @@
         text: 'Fontos: az „ismétlés” blokkba több mint egy utasítást is betehetsz.'
       7:
         image: notes/hoc2_7.jpg
-        text: Élvezd az új „ismétlés” blokk használatát!
+        text: "Élvezd az új „ismétlés” blokk használatát!"
     loop_until:
       1:
         image: notes/hoc3_1.jpg
@@ -371,7 +371,7 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Útmutató jegyzetek hamarosan!
+        text: "Útmutató jegyzetek hamarosan!"
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -457,7 +457,7 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Üdv, Chris Bosh vagyok. Profi kosaras vagyok, és én a fősulin programoztam.
+        text: "Üdv, Chris Bosh vagyok. Profi kosaras vagyok, és én a fősulin programoztam."
       2:
         image: notes/frozen3_2.jpg
         text: Egyike legfontosabb ötleteknek a számítástechnikában, hogy hogyan határozzunk
@@ -2538,10 +2538,10 @@
           kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson.
       8:
         image: notes/starwars_intro_8.JPG
-        text: És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
+        text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
           balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj
           fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés
-          meg nem jelenik. Ekkor elengedem, és a két blokk összekattan.
+          meg nem jelenik. Ekkor elengedem, és a két blokk összekattan."
       9:
         image: notes/starwars_intro_9.JPG
         text: Ha ezután megnyomom a Futtatást, BB-8 minden a munkafelületen található
@@ -2642,9 +2642,9 @@
           blokkot a parancsba. És ugyanezt fogjuk tenni, hogy R2-D2 lefelé menjen.
       9:
         image: notes/starwars_events_9.JPG
-        text: Így ahelyett, hogy a droid minden mozgását előre megterveznénk, R2-D2
+        text: "Így ahelyett, hogy a droid minden mozgását előre megterveznénk, R2-D2
           a gombnyomásokra fog reagálni, és így fog mozogni a képernyőn. Lépésről
-          lépésre egyre interaktívabb lesz a játék.
+          lépésre egyre interaktívabb lesz a játék."
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2659,17 +2659,17 @@
           hogy még több dolgot tudj csinálni.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot,
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot,
           ha elkapsz egy Malacot. Viszont az a csavar, hogy valahányszor elkapsz egy
           Malacot, megjelenik egy Rohamosztagos. Az egész képernyő tele van Malacokkal,
-          és ha 10 000-et elkapsz, akkor nyersz.'
+          és ha 10 000-et elkapsz, akkor nyersz."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz,
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz,
           és minden, amit megölsz, pontot ér. Én a programomhoz megfordítottam a nyilak
           irányát, így ha a föl nyilat megnyomod, a szereplő lefelé megy, és ha a
           jobb gombot megnyomod, balra megy. Elég nehéz! Néha előnyhöz jutsz, igazságtalan
-          előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!'
+          előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével
@@ -2713,12 +2713,12 @@
           kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson.
       8:
         image: notes/starwars_blocks_intro_8.JPG
-        text: És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
+        text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj
           balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj
           fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés
           meg nem jelenik. Ekkor elengedem, és a két blokk összekattan. Ha ezután
           megnyomom a Futtatást, BB-8 minden a munkafelületen található parancsot
-          teljesíteni fog föntről lefelé haladó sorrendben.
+          teljesíteni fog föntről lefelé haladó sorrendben."
       9:
         image: notes/starwars_blocks_intro_9.JPG
         text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
@@ -2780,17 +2780,17 @@
           hogy még több dolgot tudj csinálni.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot,
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy akkor kapsz pontot,
           ha elkapsz egy Malacot. Viszont az a csavar, hogy valahányszor elkapsz egy
           Malacot, megjelenik egy Rohamosztagos. Az egész képernyő tele van Malacokkal,
-          és ha 10 000-et elkapsz, akkor nyersz.'
+          és ha 10 000-et elkapsz, akkor nyersz."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz,
+        text: "[tanulók beszélnek] Olyan játékot készítettünk, hogy nem veszthetsz,
           és minden, amit megölsz, pontot ér. Én a programomhoz megfordítottam a nyilak
           irányát, így ha a föl nyilat megnyomod, a szereplő lefelé megy, és ha a
           jobb gombot megnyomod, balra megy. Elég nehéz! Néha előnyhöz jutsz, igazságtalan
-          előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!'
+          előnyhöz, ha te vagy a játék fejlesztője. Megcsináltad? Jaj!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével
@@ -2841,12 +2841,12 @@
           kattintunk, mi fog történni? Alex előremozdul egy lépéssel a rácson.
       10:
         image: notes/mc_intro_10.JPG
-        text: És mi van, ha még valamit kellene csinálnia, miután előrelépett egyet?
+        text: "És mi van, ha még valamit kellene csinálnia, miután előrelépett egyet?
           Még egy blokkot hozzáadhatunk a programhoz. Én most a fordulj jobbra parancsot
           választom, és az előrelépni blokk alá vonszolom, amíg a narancssárga csík
           meg nem jelenik. Ekkor elengedem, és a két blokk összepattan. Ezután újra
           megnyomhatjuk a futtatást. Alex a Munkaterületen szereplő utasításokat fentről
-          lefelé történő sorrendben fogja végrehajtani.
+          lefelé történő sorrendben fogja végrehajtani."
       11:
         image: notes/mc_intro_11.JPG
         text: Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba.
@@ -2931,9 +2931,9 @@
           szeretnél. A választás a tiéd.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam
+        text: "[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam
           egy L betűt. Én egy A-t készítettem nyírfa deszkából. Építettünk egy házat
-          gyapjúból!'
+          gyapjúból!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Ha elkészültél az alkotásoddal, válaszd a megosztást, hogy a link segítségével
@@ -2949,9 +2949,9 @@
           szeretnél. A választás a tiéd.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam
+        text: "[tanulók beszélnek] Nagyon valódi. Birkanyírás! Fáklyákból csináltam
           egy L betűt. Én egy A-t készítettem nyírfa deszkából. Építettünk egy házat
-          gyapjúból!'
+          gyapjúból!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Most bármit építhetsz, amit csak szeretnél! Jó szórakozást!

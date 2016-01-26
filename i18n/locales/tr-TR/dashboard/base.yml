@@ -282,10 +282,6 @@ tr:
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
-  user_stats:
-    recent_activity: Son etkinlik
-    show_more: Daha fazla göster
-    classroom_activity: Bağlantısız Etkinlik
   home:
     title: Code Studio
     description: Code.org tarafından Code Studio evinizde online kurslar oluşturur

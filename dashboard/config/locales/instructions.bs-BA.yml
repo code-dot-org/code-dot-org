@@ -101,8 +101,8 @@
       2-3 Artist Loops 1_instruction: Da bi se dovršila ćelija, možeš li napraviti
         šestougaonik sa stranicama dugim 100 piksela? Zapamti da ovo znači da trebaš
         okrenuti za 60 stepeni!
-      2-3 Artist Loops 10_instruction: 'Šta se dogodi sa ovim dizajnom ako načinimo
-        zadnji korak upola manjim?  '
+      2-3 Artist Loops 10_instruction: "Šta se dogodi sa ovim dizajnom ako načinimo
+        zadnji korak upola manjim?  "
       2-3 Artist Loops 11_instruction: Hadje da sada postavimo *još jednu* petlju
         koja će obuhvatiti našu čitavu kreaciju! Nemoj zaboraviti da dodaš ugao na
         kraju vanjske petlje.
@@ -284,8 +284,8 @@
         sakupio/la sav nektar i napravio/la sav med.
       2-3 Bee Loops 4_instruction: Upotrijebi sličnu petlju kao u prethodnom zadatku,
         ali sada ubaci zaokret.
-      2-3 Bee Loops 4A_instruction: Šta će se dogoditi ako ponoviš ovaj slijed 3 puta?
-        Ne zaboravi napraviti med na kraju!
+      2-3 Bee Loops 4A_instruction: "Šta će se dogoditi ako ponoviš ovaj slijed 3
+        puta? Ne zaboravi napraviti med na kraju!"
       2-3 Bee Loops 5_instruction: Upotrijebi petlju da bi se išlo prema dolje i sakupi
         nektar.
       2-3 Bee Loops 6_instruction: Upotrijebi petlju za sakupljanje nektra iz svakog
@@ -725,11 +725,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: uslov
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1125,8 +1142,8 @@
         se sakupio sav nektar i napravio sav med.
       Course 2 Bee Loops 3__instruction: Možeš li upotrijebiti petlju da sakupiš sav
         nektar?
-      Course 2 Bee Loops 4_instruction: Šta će se desiti ako ponoviš ovaj niz radnji
-        u petlji 3 puta? Nemoj zaboraviti napraviti med na kraju!
+      Course 2 Bee Loops 4_instruction: "Šta će se desiti ako ponoviš ovaj niz radnji
+        u petlji 3 puta? Nemoj zaboraviti napraviti med na kraju!"
       Course 2 Maze Loops 1_instruction: Možeš li me dovesti do svinje koristeći 5
         blokova?
       Course 4 2_instruction: Pčela želi nektar ovog trenutka. Sjeti se, nisu svi
@@ -2153,8 +2170,8 @@
         se nacrtalo 6 linija?
       K-1 Artist Loops 4_instruction: Može li nam petlja pomoći da nacrtamo vrh ovog
         dvorca?
-      K-1 Artist Loops 5_instruction: Šta možeš ponavljati u petlji 4 puta da bi se
-        nacrtale ove stepenice?
+      K-1 Artist Loops 5_instruction: "Šta možeš ponavljati u petlji 4 puta da bi
+        se nacrtale ove stepenice?"
       K-1 Artist Loops 6_instruction: 'Za ovo su potrebne dvije petlje: jedna za penjanje
         uz stepenice, a jedna za silaženje niz stepenice.'
       K-1 Artist Loops 7_instruction: Možeš li završiti ovaj uzorak sa dvije petlje?

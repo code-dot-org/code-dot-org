@@ -36,9 +36,9 @@
           dụng chúng để xây dựng đoạn code của bạn.
       9:
         image: notes/hoc1_9.jpg
-        text: Ở bên phải là chỗ làm việc nơi mà bạn sẽ kéo từng khối từ hộp công cụ
-          để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào thùng rác
-          ở trong góc.
+        text: "Ở bên phải là chỗ làm việc nơi mà bạn sẽ kéo từng khối từ hộp công
+          cụ để xây dựng chương trình của bạn. Để xóa một khối, kéo nó vào thùng rác
+          ở trong góc."
       10:
         image: notes/hoc1_10.jpg
         text: Mỗi khối là một chỉ dẫn. Nếu bạn kéo một khối "tiến lên" vào trong không
@@ -46,9 +46,9 @@
           trong mê cung.
       11:
         image: notes/hoc1_11.jpg
-        text: để làm nhiều hơn một việc, bạn có thể kéo nhiều khối vào vùng làm việc
+        text: "để làm nhiều hơn một việc, bạn có thể kéo nhiều khối vào vùng làm việc
           của bạn và gắn chúng vào với nhau. con chim sẽ thực hiện các dòng lệnh từ
-          trên xuống dưới.
+          trên xuống dưới."
       12:
         image: notes/hoc1_12.jpg
         text: Nếu bạn chạy một chương trình và muốn sửa nó và thử lại, ấn nút "Khởi
@@ -2658,17 +2658,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2783,17 +2783,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2860,11 +2860,11 @@
           cụ.
       12:
         image: notes/mc_intro_12.JPG
-        text: 'Để hoàn tác các thay đổi và quay lại mức ban đầu của cấp độ, hãy sử
+        text: "Để hoàn tác các thay đổi và quay lại mức ban đầu của cấp độ, hãy sử
           dụng nút Start Over ở góc phải trên cùng của không gian làm việc. Một điều
           nữa: bạn nhìn thấy hình tam giác nhỏ trên các khối rẽ không? Bất cứ khi
           nào bạn nhìn thấy các hình tam giác này, có nghĩa là bạn có thể chọn một
-          tùy chọn khác. Hãy bắt đầu lập mã nào!'
+          tùy chọn khác. Hãy bắt đầu lập mã nào!"
     mc_repeat:
       1:
         image: notes/mc_repeat_1.JPG
@@ -2872,10 +2872,10 @@
           tạo ra một trò chơi nhỏ gọi là Minecraft.
       2:
         image: notes/mc_repeat_2.JPG
-        text: Điều mà tôi thích làm trong Minecraft là khám phá. Tôi yêu thích khám
+        text: "Điều mà tôi thích làm trong Minecraft là khám phá. Tôi yêu thích khám
           phá trong những hang động và quan sát những gì tôi có thể tìm thấy. Vì không
           phải là lập trình viên, nên tôi thực sự rất thích thú khi khám phá bài học
-          của Minecraft và thực sự tự học được một vài cách mã hóa.
+          của Minecraft và thực sự tự học được một vài cách mã hóa."
       3:
         image: notes/mc_repeat_3.JPG
         text: Cấp cuối cùng cần nhiều khối moveForward();. Sẽ dễ hơn nếu chúng ta
@@ -2895,13 +2895,13 @@
           làm được điều này cực dễ dàng.
       6:
         image: notes/mc_repeat_6.JPG
-        text: Để xây tường của ngôi nhà, chúng ta có thể hoặc là yêu cầu Alex moveForward();
+        text: "Để xây tường của ngôi nhà, chúng ta có thể hoặc là yêu cầu Alex moveForward();
           và đặt các tấm ván bốn lần hoặc chúng ta có thể yêu cầu cô ấy moveForward();
           và đặt một tấm ván, sau đó nhận lệnh này và sử dụng khối lặp để yêu cầu
           cô ấy thực hiện hành động này nhiều lần. Bây giờ, chúng ta sẽ bấm vào khối
           lặp và cho cô ấy biết số lần mà chúng ta muốn cô ấy thực hiện hành động
           này. Bây giờ, hãy xây ngôi nhà của chúng ta trước khi trời tối! Chúc vui
-          vẻ.
+          vẻ."
     mc_if_statements:
       1:
         image: notes/mc_if_statements_1.JPG
@@ -2944,9 +2944,9 @@
           Bạn có thể xây bất cứ thứ gì mà bạn muốn. Bạn có sự lựa chọn.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ
+        text: "[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ
           L bằng đuốc rồi. Em làm được chữ A bằng ván gỗ bulo rồi. Làm được rồi, làm
-          được rồi. Chúng em đã xây được môi ngôi nhà bằng len!'
+          được rồi. Chúng em đã xây được môi ngôi nhà bằng len!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Khi các bạn hoàn thành tác phẩm của mình, hãy chọn chia sẻ để nhận liên
@@ -2963,9 +2963,9 @@
           Bạn có thể xây bất cứ thứ gì mà bạn muốn. Bạn có sự lựa chọn.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ
+        text: "[học sinh đang nói chuyện] Sắp hành hình rồi. Xén đi. Em làm được chữ
           L bằng đuốc rồi. Em làm được chữ A bằng ván gỗ bulo rồi. Làm được rồi, làm
-          được rồi. Chúng em đã xây được môi ngôi nhà bằng len!'
+          được rồi. Chúng em đã xây được môi ngôi nhà bằng len!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Bây giờ bạn có thể xây dựng bất cứ thứ gì mà bạn muốn. Chúc vui vẻ!

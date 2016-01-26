@@ -70,8 +70,8 @@
     need_confirmation: Geen bevestigingsinstructies ontvangen?
     need_unlock: Nog geen unlock instructies ontvangen?
   signup_form:
-    student_count: '%{count} studenten hebben zich reeds aangemeld.'
-    teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
+    student_count: "%{count} studenten hebben zich reeds aangemeld."
+    teacher_count: "%{count} leraren hebben zich reeds aangemeld."
     overview_student: Meld je aan voor een account om je voortgang bij te houden.
       Je e-mail wordt voornamelijk gebruikt om je te laten inloggen en om je wachtwoord
       aan te passen. Zie voor meer informatie ons <a href="http://code.org/privacy">Privacy-beleid
@@ -149,12 +149,12 @@
       %{name}
   follower:
     invite_sent: Uitnodiging verstuurd
-    added_teacher: '%{name} toegevoegd als jouw leraar'
+    added_teacher: "%{name} toegevoegd als jouw leraar"
     registered: Je hebt je aangemeld voor %{section_name}.
     error:
       signed_in: Log uit voordat je doorgaat
       username_not_found: Gebruikersnaam %{username} niet gevonden
-      username_in_use: '%{username} wordt al gebruikt, kies een andere'
+      username_in_use: "%{username} wordt al gebruikt, kies een andere"
       no_teacher: Er is niemand ingelogd met '%{teacher_email_or_code}'. Vraag ze
         zich hier aan te melden en probeer ze dan nog eens toe te voegen
       section_not_found: Kan geen onderdeel vinden met code '%{section_code}'.
@@ -200,7 +200,7 @@
         school.
       msg_visit_website: Website bezoeken
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox ruimte
@@ -209,7 +209,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Kies een prijs:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -261,9 +261,9 @@
     destroy: Vernietig
     back: Terug
     confirm: Weet je het zeker?
-    created: '%{model} aangemaakt.'
-    updated: '%{model} bijgewerkt.'
-    destroyed: '%{model} is succesvol verwijderd.'
+    created: "%{model} aangemaakt."
+    updated: "%{model} bijgewerkt."
+    destroyed: "%{model} is succesvol verwijderd."
     access_denied: Je hebt geen toegang tot dit %{model}.
   nav:
     header:
@@ -286,7 +286,7 @@
       signup: Meld je aan
       already_registered: Al aangemeld?
     popup:
-      progress_for_user: '%{name} de vooruitgang'
+      progress_for_user: "%{name} de vooruitgang"
       progress: Jouw voortgang
       lines: 'Totaal aantal regels code: %{lines}'
       close: SLUITEN
@@ -294,7 +294,7 @@
       puzzle_map: Niveaus
       prizes: Verzamel alle %{total_trophies} trofeeën en win prijzen!
       prize_earned: Alle %{total_trophies} bekers verzameld!
-      prize_us_only: (alleen voor leerlingen in de Verenigde Staten)
+      prize_us_only: "(alleen voor leerlingen in de Verenigde Staten)"
       prizes_link: Meer info
   teacher:
     answer: Antwoord
@@ -302,7 +302,7 @@
     title:
       one: 'Je leraar:'
       other: 'Je leraren:'
-    remove: (verwijder leraar)
+    remove: "(verwijder leraar)"
     confirm:
       remove: Weet je zeker dat je deze leraar wilt verwijderen?
     students:
@@ -322,11 +322,11 @@
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
-    email_confirm_wrong_email: (Verkeerde e-mailadres?)
+    email_confirm_wrong_email: "(Verkeerde e-mailadres?)"
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
-    new_password_hint: (laat leeg als je het niet wilt veranderen)
-    current_password_hint: (we hebben je huidige wachtwoord nodig om je veranderingen
-      te bevestigen)
+    new_password_hint: "(laat leeg als je het niet wilt veranderen)"
+    current_password_hint: "(we hebben je huidige wachtwoord nodig om je veranderingen
+      te bevestigen)"
     delete: Verwijder jouw account
     delete_text: Door op de knop hieronder te drukken verwijder je jouw account.
     delete_text_teacher_note: 'Let op: door jouw account te verwijderen, worden de
@@ -335,16 +335,12 @@
   user_level:
     completed: Voltooid
     tried: Geprobeerd
-  user_stats:
-    recent_activity: Recente activiteiten
-    show_more: Toon meer
-    classroom_activity: Losgekoppelde activiteit
   home:
     title: Code Studio
     description: Code Studio is de basis voor online cursussen gemaakt door code.org
-    lines_of_code: '%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN'
-    lines_of_code_linebreak: '%{lines_count} REGELS CODE<br/>GESCHREVEN DOOR %{students_count}
-      MILJOEN LEERLINGEN'
+    lines_of_code: "%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN"
+    lines_of_code_linebreak: "%{lines_count} REGELS CODE<br/>GESCHREVEN DOOR %{students_count}
+      MILJOEN LEERLINGEN"
     all_courses: Overzicht van cursussen 1, 2 en 3
     lesson_plans: Lesplannen
     signin_message: Al aangemeld? %{link}
@@ -383,10 +379,10 @@
     test_videos_help: Test de nieuwe video-speler op uw school
     try_beta_courses: Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen
     use_as_teacher: Gebruik de site als leerkracht
-    heading_hoc2014: <h2>Uur Code voor</h2><h1>Alle leeftijden</h1>
-    heading_elementary: <h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>
-    heading_apps: <h2>Leuk voor</h2><h1>Iedereen</h1>
-    heading_legacy: <h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>
+    heading_hoc2014: "<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>"
+    heading_elementary: "<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>"
+    heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
+    heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
     your_gallery: Galerij
     no_primary_course: Probeer een cursus bij Code Studio
     choose_next_course: Probeer een Code Studio cursus door er hier onder één te kiezen
@@ -428,8 +424,8 @@
       %{current_year} Electronic Arts Inc. Alle rechten voorbehouden. The Amazing
       World of Gumball is handelsmerk en &copy; 2015 Cartoon Network.
     powered_by_aws: Aangedreven door Amazon webservices
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
-      Hour of Code&reg; zijn handelsmerken van Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, het CODE logo en
+      Hour of Code&reg; zijn handelsmerken van Code.org."
     copyright: Copyright
     more: Meer
     feedback: Geef feedback
@@ -555,7 +551,7 @@
     want_to_make_your_own: Wil je dit zelf doen?
     more: Meer &rarr;
     caption_by_name_age: door %{name}, %{age} jaar
-    caption_time_ago: '%{time_ago} geleden'
+    caption_time_ago: "%{time_ago} geleden"
     header: Galerij
     header_playlab: Speel Lab
     header_artist: Kunstenaar
@@ -569,7 +565,7 @@
     feedback: Geef Feedback
     report_bug: Meld Bug
     support: Help
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!
@@ -590,8 +586,8 @@
     badrange: Je ontwerp heeft het verkeerde bereik.
     baddomainsize: Je ontwerp heeft niet het juiste aantal variabeletypen.
     baddomainname: Een of meer van je variabeletypen heeft een verkeerde naam.
-    baddomaintype: Één of meer van de items van uw domein heeft het verkeerde type,
-      of ze zijn in de verkeerde volgorde.
+    baddomaintype: "Één of meer van de items van uw domein heeft het verkeerde type,
+      of ze zijn in de verkeerde volgorde."
   text_match:
     placeholder: Voer uw antwoord hier in
     open_response_title: Bedankt

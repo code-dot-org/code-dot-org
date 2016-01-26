@@ -283,10 +283,6 @@ vi:
   user_level:
     completed: Đã hoàn thành
     tried: thử lại
-  user_stats:
-    recent_activity: Hoạt động gần đây
-    show_more: Hiển thị thêm
-    classroom_activity: Hoạt động không dùng máy
   home:
     title: TIến trình của bạn
     description: Code Studio là nơi có các khóa học trực tuyến được tạo bởi Code.org

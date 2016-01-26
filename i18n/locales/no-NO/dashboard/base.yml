@@ -284,10 +284,6 @@
   user_level:
     completed: Fullført
     tried: Forsøkt
-  user_stats:
-    recent_activity: Nylig aktivitet
-    show_more: Vis mer
-    classroom_activity: Frakoblet Aktivitet
   home:
     title: Kodestudio
     description: Code Studio er hjemmet til nettbaserte kurs av Code.org

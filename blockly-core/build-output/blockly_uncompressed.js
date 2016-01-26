@@ -6255,6 +6255,21 @@ Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP = 16;
 Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT = 16;
 Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
 Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
+Blockly.BlockSpace.createReadOnlyBlockSpace = function(container, xml) {
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, function() {
+    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if(!metrics) {
+      return null
+    }
+    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+    return metrics
+  }, function(xyRatio) {
+    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio)
+  }, true, true);
+  var blockSpace = blockSpaceEditor.blockSpace;
+  Blockly.Xml.domToBlockSpace(blockSpace, xml);
+  return blockSpace
+};
 Blockly.BlockSpace.prototype.xOffsetFromView = 0;
 Blockly.BlockSpace.prototype.yOffsetFromView = 0;
 Blockly.BlockSpace.prototype.trashcan = null;

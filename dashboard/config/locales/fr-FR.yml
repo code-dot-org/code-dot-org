@@ -36,8 +36,8 @@
     placeholder: Entrer votre indice de mot de passe ici
     submit: Ajouter un indice
   appname: Code.org
-  stage: étape
-  stage_number: Étape %{number} 
+  stage: "étape"
+  stage_number: "Étape %{number} "
   puzzle: Puzzle
   trophies: trophées
   courses: cours
@@ -71,8 +71,8 @@
     need_confirmation: Vous n'avez pas reçu les instructions de confirmation ?
     need_unlock: Vous n'avez pas reçu les instructions de déverrouillage ?
   signup_form:
-    student_count: '%{count} élèves se sont déjà enregistrés.'
-    teacher_count: '%{count} enseignants se sont déjà inscrits.'
+    student_count: "%{count} élèves se sont déjà enregistrés."
+    teacher_count: "%{count} enseignants se sont déjà inscrits."
     overview_student: Crée ton compte pour suivre tes progrès. Ton adresse email sera
       utilisée essentiellement utilisé pour te permettre de te connecter et pour récupérer
       ton mot de passe. Pour plus d'informations, consultez notre <a href="http://code.org/privacy">Politique
@@ -95,7 +95,7 @@
     age: Age
     user_type: Etes-vous un élève ou un enseignant ?
     submit: S’inscrire
-    teacher: Êtes-vous enseignant ?
+    teacher: "Êtes-vous enseignant ?"
     valid_username: Disponible !
     invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
     taken_username: Nom d'utilisateur déjà pris
@@ -150,7 +150,7 @@
       %{name}
   follower:
     invite_sent: Invitation envoyée
-    added_teacher: '%{name} ajouté en tant qu''enseignant'
+    added_teacher: "%{name} ajouté en tant qu'enseignant"
     registered: Vous vous êtes inscrit à %{section_name}.
     error:
       signed_in: Merci de vous déconnecter avant de continuer
@@ -197,13 +197,13 @@
       title: Merci de confirmer
       'no': Non
       'yes': Oui
-      msg: Êtes-vous certain de que vouloir réclamer le prix de %{prize_name} ?
+      msg: "Êtes-vous certain de que vouloir réclamer le prix de %{prize_name} ?"
       msg_student: 'Remarque : Vous ne pouvez choisir qu''un type de prix.'
       msg_publicschool: Veuillez confirmer que vous êtes enseignant dans une école
         publique aux États-Unis.
       msg_visit_website: Visiter le site
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 Go de stockage sur Dropbox
@@ -212,7 +212,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choisis un prix :'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -264,10 +264,10 @@
     update: Mise à jour
     destroy: Détruire
     back: Retour
-    confirm: Êtes-vous certain ?
-    created: '%{model} a été créé avec succès.'
-    updated: '%{model} a été mis à jour avec succès.'
-    destroyed: '%{model} a été supprimé avec succès.'
+    confirm: "Êtes-vous certain ?"
+    created: "%{model} a été créé avec succès."
+    updated: "%{model} a été mis à jour avec succès."
+    destroyed: "%{model} a été supprimé avec succès."
     access_denied: Vous n'avez pas accès à ce %{model}.
   nav:
     header:
@@ -295,10 +295,10 @@
       lines: 'Total de lignes de code: %{lines}'
       close: FERMER
       mastery: Concepts
-      puzzle_map: Étapes
+      puzzle_map: "Étapes"
       prizes: Remporte les %{total_trophies} trophées et gagne des prix!
       prize_earned: Les %{total_trophies} trophées ont été remportés. Prix gagné !
-      prize_us_only: (Élèves états-uniens seulement)
+      prize_us_only: "(Élèves états-uniens seulement)"
       prizes_link: Plus d'informations
   teacher:
     answer: Réponse
@@ -306,13 +306,13 @@
     title:
       one: 'Ton enseignant :'
       other: 'Vos enseignants :'
-    remove: (supprimer l'enseignant)
+    remove: "(supprimer l'enseignant)"
     confirm:
-      remove: Êtes-vous sûr de vouloir supprimer cet enseignant ?
+      remove: "Êtes-vous sûr de vouloir supprimer cet enseignant ?"
     students:
       dashboard: Aller au tableau de bord de l'enseignant
-    user_not_found: Le professeur est indisponible.
-    student_teacher_disassociated: '%{teacher_name} est ton nouveau professeur.'
+    user_not_found: L'enseignant est introuvable.
+    student_teacher_disassociated: "%{teacher_name} est ton nouveau professeur."
     panel:
       answer_viewer: Visualisation des réponses
       student: Elève
@@ -327,29 +327,25 @@
     email_confirm_needed: 'L''adresse email n''a pas été confirmée :'
     email_confirm_needed_required: 'Votre addresse email %{email} n''a pas été confirmée
       :'
-    email_confirm_wrong_email: (Adresse email invalide ?)
+    email_confirm_wrong_email: "(Adresse email invalide ?)"
     email_resend_confirm: Envoyer à nouveau les instructions de confirmation
-    new_password_hint: (laissez vide si vous ne voulez rien changer)
-    current_password_hint: (nous avons besoin de votre mot de passe pour confirmer
-      vos modifications)
+    new_password_hint: "(laissez vide si vous ne voulez rien changer)"
+    current_password_hint: "(nous avons besoin de votre mot de passe pour confirmer
+      vos modifications)"
     delete: Supprimer votre compte
     delete_text: Cliquer sur le bouton ci-dessous supprimera votre compte.
     delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
       pas les comptes de vos élèves.'
-    delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
+    delete_confirm: "Êtes-vous sûr de vouloir supprimer votre compte ?"
   user_level:
     completed: Terminé
     tried: A essayé
-  user_stats:
-    recent_activity: Activité récente
-    show_more: Afficher plus
-    classroom_activity: Activité manuelle
   home:
     title: Code Studio
     description: Code Studio héberge les cours en ligne créés par code.org
-    lines_of_code: '%{lines_count} LIGNES DE CODE ÉCRIT PAR DES ÉLÈVES'
-    lines_of_code_linebreak: '%{lines_count} lignes de CODE <br/> écrites par %{students_count}
-      millions d''élèves'
+    lines_of_code: "%{lines_count} LIGNES DE CODE ÉCRIT PAR DES ÉLÈVES"
+    lines_of_code_linebreak: "%{lines_count} lignes de CODE <br/> écrites par %{students_count}
+      millions d'élèves"
     all_courses: Présentation des cours 1, 2 et 3
     lesson_plans: Plans des cours
     signin_message: Déjà inscrit ? %{link}
@@ -373,7 +369,7 @@
     student_left_off: 'Tu t''es arrêté là la dernière fois:'
     student_finished: Tu as terminé toutes les leçons, choisis une autre classe  %{online_link}
       ou à une %{local_school_link}
-    local_school: école locale
+    local_school: "école locale"
     online: en ligne
     see_details: Voir les détails
     view_course: Voir le cours
@@ -389,11 +385,11 @@
     try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de Grande Section
       à CM2 (fin Maternelle à Ecole Primaire)
     use_as_teacher: Utiliser ce site en tant qu'enseignant
-    heading_hoc2014: <h2>L'Heure du Code pour</h2><h1>tous les âges</h1>
-    heading_elementary: <h2>20 heures de cours pour</h2><h1>Débutants en informatique
-      (tous les âges)</h1>
-    heading_apps: <h2>Amusant pour</h2><h1>Tout le monde</h1>
-    heading_legacy: <h2>Nos cours pour</h2><h1>Tous les âges</h1>
+    heading_hoc2014: "<h2>L'Heure du Code pour</h2><h1>tous les âges</h1>"
+    heading_elementary: "<h2>20 heures de cours pour</h2><h1>Débutants en informatique
+      (tous les âges)</h1>"
+    heading_apps: "<h2>Amusant pour</h2><h1>Tout le monde</h1>"
+    heading_legacy: "<h2>Nos cours pour</h2><h1>Tous les âges</h1>"
     your_gallery: Galerie
     no_primary_course: Essayer un cours sur Code Studio
     choose_next_course: Essayer un cours de Code Studio en le choisissant ci-dessous
@@ -437,8 +433,8 @@
       Arts Inc. tous droits réservés. Le monde incroyable de Gumball est une marque
       déposée &copy; 2015 Cartoon Network.
     powered_by_aws: Fourni par Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi
-      que Heures de Code&reg; sont des marques commerciales de Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE ainsi
+      que Heures de Code&reg; sont des marques commerciales de Code.org."
     copyright: Copyright
     more: Plus
     feedback: Envoyer un commentaire
@@ -580,7 +576,7 @@
     feedback: Envoyer un commentaire
     report_bug: Signaler un bogue
     support: Obtenir de l'aide
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Réponse incorrecte
     wrong_body: La réponse que tu as entrée n'est pas correcte. Essaie encore !
@@ -634,7 +630,7 @@
           title: Modifier le Code
           description: ''
         events:
-          title: Événements
+          title: "Événements"
           description: ''
         builder:
           title: Générateur
@@ -647,7 +643,7 @@
           title: Pièces de Puzzle
           description: ''
         step:
-          title: Étape
+          title: "Étape"
           description: ''
         sample_level_builder:
           title: Exemple de générateur de niveau
@@ -670,7 +666,7 @@
     completed_too_many_blocks: terminé, trop de blocs
     completed_perfect: terminé, parfait
     furthest_level_attempted: le plus haut niveau tenté
-    assessment: évaluation
+    assessment: "évaluation"
   studio:
     courses_working_on: Les cours sur lesquels vous travaillez
     completed_courses: Cours terminés

@@ -286,10 +286,6 @@ az:
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
-  user_stats:
-    recent_activity: Son fəaliyyət
-    show_more: Daha çox göstər
-    classroom_activity: Sərbəst fəaliyyət
   home:
     title: Mənim nəticələrim
     description: 'Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların məskənidir'

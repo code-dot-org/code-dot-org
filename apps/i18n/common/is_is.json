@@ -247,5 +247,6 @@
   "watchVideo": "Horfa á videóið",
   "when": "þegar",
   "whenRun": "þegar keyrt",
-  "workspaceHeaderShort": "Vinnusvæði: "
+  "workspaceHeaderShort": "Vinnusvæði: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

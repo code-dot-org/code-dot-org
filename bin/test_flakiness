@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+# Determine how flaky our UI tests by measuring recent failure rate
+# using data from the Saucelabs API. Prints out every UI test from
+# least flaky to most flaky.
+
+require_relative '../deployment'
+require 'rest-client'
+
+username = ENV['SAUCE_USERNAME'] || CDO.saucelabs_username
+key = ENV['SAUCE_ACCESS_KEY'] || CDO.saucelabs_authkey
+
+PER_REQUEST = 1500 # maximum returned per API call (undocumented)
+NUM_REQUESTS = 50 # rate limit: 15 request/s with 300 request burst https://wiki.saucelabs.com/display/DOCS/Rate+Limits+for+the+Sauce+Labs+REST+API
+
+jobs = []
+
+TEST_ACCOUNT_USERNAME = 'testcodeorg'
+
+NUM_REQUESTS.times do
+  # docs for this API: https://wiki.saucelabs.com/display/DOCS/Job+Methods
+  url =  "https://saucelabs.com/rest/v1/#{TEST_ACCOUNT_USERNAME}/jobs"
+  url += "?" + URI::encode_www_form(limit: PER_REQUEST, full: 'true', skip: jobs.count)
+
+  response = RestClient::Request.execute(method: :get,
+                                         url: url,
+                                         user: username,
+                                         password: key)
+  jobs += JSON.parse(response.body)
+end
+
+jobs_by_name = jobs.group_by {|job| job['name']}
+
+name_to_flakiness = jobs_by_name.map do |name, jobs|
+  total = jobs.count
+  failed = jobs.count {|job| !job["passed"]}
+  [name, (1.0 * failed / total).round(2)]
+end
+
+puts name_to_flakiness.sort_by(&:last).map{|pair| pair.reverse.join("\t")}.join("\n")

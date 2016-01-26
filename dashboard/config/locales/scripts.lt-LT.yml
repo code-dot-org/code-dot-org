@@ -44,7 +44,7 @@
           'Artist: Shapes': 'Menininkas: formos'
           'Maze: Loops': 'Labirintas: kartojimas'
           'Bee: Loops': 'Bitė: kartojimas'
-          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
           'Artist: Loops': 'Menininkas: kartojimas'
           description_audience: Amžius 4+ (pradedantiesiems skaityti)
           description_short: 1 kursas yra skirtas pradedantiesiems skaityti.
@@ -54,7 +54,7 @@
           The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
           Bounce: Tenisas
-          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
           Flappy: Flappy
@@ -92,7 +92,7 @@
           description_short: 2 kursas yra skirtas mokiniams, kurie jau moka skaityti.
         course3:
           The Maze: Labirintas
-          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
           The Artist: Menininkas
           title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
@@ -114,7 +114,7 @@
           Internet: Internetas
           Crowdsourcing: Komandinis programavimas
           Digital Citizenship: Virtuali pilietybė
-          Farmer - While Loops: 'Ūkininkas: kartojimas'
+          Farmer - While Loops: "Ūkininkas: kartojimas"
           description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
           'Studio: Create a Game': 'Laboratorija: sukurk žaidimą'
           Maze: Labirintas
@@ -124,7 +124,7 @@
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Maze: Conditionals': 'Labirintas: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Farmer: While Loops': "Ūkininkas: kartojimas"
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
           Maze2: Labirintas2
@@ -134,7 +134,7 @@
           'Bee: Conditionals2': 'Bitė: sąlyginiai sakiniai2'
           'Maze: Conditionals2': 'Labirintas: sąlyginiai sakiniai2'
           'Artist: Nested Loops2': 'Menininkas: Kartojimas kartojime'
-          'Farmer: While Loops2': 'Ūkininkas: kartojimas2'
+          'Farmer: While Loops2': "Ūkininkas: kartojimas2"
           'Bee: Nested Loops2': 'Bitė: kartojimas kartojime'
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
           'Artist: Patterns': 'Menininkas: raštai'
@@ -174,12 +174,12 @@
           title: Kursas 4
           'Algorithms: Tangrams': 'Algoritmai: tanagramos'
           Variables: Kintamieji
-          'Play Lab: Variables': 'Žaidimų laboratorija: kintamieji'
-          'Play Lab: Functions with Parameters': 'Žaidimų laboratorija: komandos su
-            parametrais'
+          'Play Lab: Variables': "Žaidimų laboratorija: kintamieji"
+          'Play Lab: Functions with Parameters': "Žaidimų laboratorija: komandos su
+            parametrais"
           'Bee: Functions with Parameters': 'Bitė: komandos su parametrais'
           'Artist: For Loops': 'Menininkas: kartojimai'
-          'Play Lab: For Loops': 'Žaidimų laboratorija: kartojimai'
+          'Play Lab: For Loops': "Žaidimų laboratorija: kartojimai"
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Unplugged: Tangrams': 'Be kompiuterio: tanagramos'
           Artist: Menininkas
@@ -211,12 +211,12 @@
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Farmer: While Loops': "Ūkininkas: kartojimas"
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
         usability:
-          Intro: Įvadas
+          Intro: "Įvadas"
           Variables and For Loops: Kintamieji ir kartojimas
           Functions and Functions with Parameters: Komandos ir komandos su parametrais
           title: Usability Testing
@@ -255,15 +255,15 @@
           'Play Lab: Animation (Big Game)': Didysis žaidimas – animacija
           'Unplugged: Booleans': 'Papildoma pamokėlė: Būlio kintamieji ir logika'
           'Eval: Boolean Operators': Būlio loginiai operatoriai
-          'Play Lab: Booleans': Šikšnosparnis Semas
+          'Play Lab: Booleans': "Šikšnosparnis Semas"
           'Play Lab: Boolean (Big Game)': Didysis žaidimas – Būlio kintamieji
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': Sąlyginiai sakiniai
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
-            nustatymas (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)"
         infinity:
           title: Laboratorija
           description_short: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
@@ -351,9 +351,9 @@
         20-hour:
           title: 20-ties valandų įvadiniai kursai
           description_audience: Amžius 10+ (pabaigus 3 kursą)
-          description: Šis 20-ties valandų informatikos kursas supažindina su programavimo
+          description: "Šis 20-ties valandų informatikos kursas supažindina su programavimo
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
-            esant bet kurioje amžiaus grupėje.
+            esant bet kurioje amžiaus grupėje."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
           Introduction to Computer Science: Programavimo įvadas
@@ -364,15 +364,15 @@
           Algorithms: Algoritmai
           The Artist 2: Menininkas 2
           Functions: Komandų kūrimas
-          The Farmer: Ūkininkas
+          The Farmer: "Ūkininkas"
           Conditionals: Sąlyginiai sakiniai
           The Artist 3: Menininkas 3
           Song Writing: Dainos ir funkcijos
-          The Farmer 2: Ūkininkas 2
+          The Farmer 2: "Ūkininkas 2"
           Abstraction: Komandos su parametrais
           The Artist 4: Menininkas 4
           Relay Programming: Programavimas komandoje
-          The Farmer 3: Ūkininkas 3
+          The Farmer 3: "Ūkininkas 3"
           The Internet: Internetas
           The Artist 5: Menininkas 5
           Wrap-up: Apibendrinimas
@@ -387,9 +387,9 @@
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Įvykiai
-          description: Įvykiai
-          description_short: Įvykiai
+          title: "Įvykiai"
+          description: "Įvykiai"
+          description_short: "Įvykiai"
           Bounce: Tenisas
           Studio: Studio
           Calc: Calc
@@ -406,10 +406,10 @@
           description_short: Try our Jigsaw tutorial
           Jigsaw: Dėlionės
         step:
-          title: Žingsnis
+          title: "Žingsnis"
           description: ''
           description_short: Step tutorial
-          Step: Žingsnis
+          Step: "Žingsnis"
         Hour of Code:
           title: Programavimo valanda 2013
           description: ''
@@ -455,7 +455,7 @@
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Farmer: While Loops': "Ūkininkas: kartojimas"
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
@@ -511,25 +511,25 @@
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Žaidimų laboratorija: kintamųjų
-            apibrėžimas (Didysis žaidimas)'
+          'Play Lab: Defining Variables (Big Game)': "Žaidimų laboratorija: kintamųjų
+            apibrėžimas (Didysis žaidimas)"
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Žaidimų laboratorija: komandų apibrėžimas'
+          'Play Lab: Defining Functions': "Žaidimų laboratorija: komandų apibrėžimas"
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Žaidimų laboratorija: animacijos (Didysis
-            žaidimas)'
+          'Play Lab: Animation (Big Game)': "Žaidimų laboratorija: animacijos (Didysis
+            žaidimas)"
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Žaidimų laboratorija: loginės reikšmės'
-          'Play Lab: Boolean (Big Game)': 'Žaidimų laboratorija: Logika (Big Game)'
+          'Play Lab: Booleans': "Žaidimų laboratorija: loginės reikšmės"
+          'Play Lab: Boolean (Big Game)': "Žaidimų laboratorija: Logika (Big Game)"
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Papildoma pamokėlė:
             susidūrimo aptikimas ir atstumo formulė'
-          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
-            nustatymas (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)"
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Eilutės ir paveikslėliai
           Contracts: Contracts
@@ -538,7 +538,7 @@
           The Design Recipe: The Design Recipe
           Your Game - Animation: Tavo žaidimas – animacijos
           Booleans: Loginės reikšmės
-          Sam the Bat: Šikšnosparnis Semas
+          Sam the Bat: "Šikšnosparnis Semas"
           Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
           Conditionals and Piecewise Functions: Sąlygos ir funkcijos iš dalių
           Rocket-Height: Rocket-Height
@@ -560,11 +560,11 @@
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Tavo žaidimas – animacijos
           Booleans: Loginės reikšmės
-          Sam the Bat: Šikšnosparnis Semas
+          Sam the Bat: "Šikšnosparnis Semas"
           Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
-            nustatymas (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)"
           Your Game - Player Movement: Tavo žaidimas – veikėjų judėjimas
           Your Game - Collision Detection: Tavo žaidimas – susidūrimo aptikimas
         text-compression:
@@ -729,7 +729,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: „Kol“ kartojimas
+          While Loops: "„Kol“ kartojimas"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -956,11 +956,11 @@
           Strings and Images: Eilutės ir paveikslėliai
           Defining Variables: Kintamųjų apibrėžimas
           Big Game - Variables: Big Game - Variables
-          'Play Lab: Defining Functions': 'Žaidimų laboratorija: komandų apibrėžimas'
+          'Play Lab: Defining Functions': "Žaidimų laboratorija: komandų apibrėžimas"
           The Design Recipe: The Design Recipe
           Big Game - Animation: Big Game - Animation
           Booleans: Loginės reikšmės
-          Sam the Bat: Šikšnosparnis Semas
+          Sam the Bat: "Šikšnosparnis Semas"
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           Big Game - Player Movement: Big Game - Player Movement
@@ -1115,7 +1115,7 @@
           title: Hour of Code 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: „Programavimo valanda“
+          Hour of Code: "„Programavimo valanda“"
           Hour of Code 2015: Hour of Code 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
@@ -1505,8 +1505,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1560,6 +1562,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1599,7 +1602,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: „Kol“ kartojimas
+          While Loops: "„Kol“ kartojimas"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1663,5 +1666,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Apibendrinimas
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

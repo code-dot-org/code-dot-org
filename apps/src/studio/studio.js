@@ -796,8 +796,9 @@ function callHandler (name, allowQueueExtension, extraArgs) {
 Studio.initAutoHandlers = function (map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
+    var nativeFunc = codegen.createNativeFunctionFromInterpreterFunction(func);
     if (func) {
-      registerEventHandler(Studio.eventHandlers, map[funcName], func);
+      registerEventHandler(Studio.eventHandlers, map[funcName], nativeFunc);
     }
   }
 };

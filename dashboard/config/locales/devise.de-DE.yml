@@ -73,7 +73,7 @@
       not_locked: war nicht gesperrt
       not_saved:
         one: '1 Fehler verhinderte das Speichern von %{resource}:'
-        other: '%{count} Fehler verhinderten das Speichern von %{resource}:'
+        other: "%{count} Fehler verhinderten das Speichern von %{resource}:"
     invitations:
       send_instructions: Eine Einladungs-Email wurde an %{email} gesendet.
       invitation_token_invalid: Das Einladungs-Token ist ungültig!

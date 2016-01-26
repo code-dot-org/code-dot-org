@@ -286,10 +286,6 @@ sq:
   user_level:
     completed: E përfunduar
     tried: U përpoqe
-  user_stats:
-    recent_activity: Aktiviteti i fundit
-    show_more: Shfaq më shumë
-    classroom_activity: Aktiviteti Unplugged
   home:
     title: Code Studio
     description: Code Studio është një shtëpi për kurset online të krijuara nga Code.org

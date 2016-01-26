@@ -368,7 +368,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "sendToPhone":function(d){return "إرسال إلى الهاتف"},
 "shareFailure":function(d){return "عذراً، لا يمكن أن نشارك هذا البرنامج."},
 "shareWarningsAge":function(d){return "الرجاء تعبئة عمرك أدناه ثم اضغط حسنا للمتابعة."},
-"shareWarningsMoreInfo":function(d){return "مزيد من المعلومات"},
+"shareWarningsMoreInfo":function(d){return "المزيد من المعلومات"},
 "shareWarningsStoreData":function(d){return "هذا التطبيق تم بنائه في استوديو التعليمات البرمجية و يمكن مشاهدته من قبل أي شخص لديه هذا الرابط, لذا كن حذرا إذا طلب منك تقديم معلومات شخصية."},
 "showBlocksHeader":function(d){return "إظهار المربعات البرمجية"},
 "showCodeHeader":function(d){return "إظهار الكود البرمجي"},
@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "شاهد الفيديو"},
 "when":function(d){return "عندما"},
 "whenRun":function(d){return "عند التشغيل"},
-"workspaceHeaderShort":function(d){return "مساحة العمل: "}};
+"workspaceHeaderShort":function(d){return "مساحة العمل: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

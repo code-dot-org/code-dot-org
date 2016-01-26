@@ -374,32 +374,32 @@ he:
         loop_for: בלוק ספירה
         parameters: פונקציות ופרמטרים
         hoc_wrapup: סיום שעה של קוד
-        Unplug1: What is CS?
+        Unplug1: מהו מדעי המחשב?
         Unplug2: חשיבה חישובית
         Unplug3: תכנות לנייר משבצות
         Unplug4: אלגוריתמים
         Unplug5: פונקציות
         Unplug6: תנאים
-        Unplug7: Songwriting
+        Unplug7: כתיבת שירים
         Unplug8: הפשטה
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: סיום
         C1_happy_maps_unplugged: מפות שמחות
-        C1_moveitmoveit_unplugged: Move It, Move It
+        C1_moveitmoveit_unplugged: זוזו, זוזו
         C1_bigevent_unplugged: האירוע הגדול
         C1_getting_loopy: Getting Loopy
-        C1_pair_programming: Pair Programming
+        C1_pair_programming: תכנות בזוגות
         C1_maze_intro_sequencing: Maze Sequencing Intro
-        C1_maze_debugging: Maze Debugging
+        C1_maze_debugging: 'מבוך: איתור באגים'
         C1_bee_level_intro: 'שלב הדבורה - מבוא'
         C1_artist_intro: מבוא לאמן
         C1_spelling_bee_intro: Spelling Bee Intro
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: 'Play Lab - Create a Story'
-        C1_planting_seed: Planting a Seed
+        C1_playlab_storytelling: 'שחק במעבדה - ליצור סיפור'
+        C1_planting_seed: זריעת זרע
         C1_building_foundation: Building a Foundation
         C1_going_places_safely: Going Places Safely
         C2_maze_intro: מבוא למבוך
@@ -410,7 +410,7 @@ he:
         C2_bee_loops: Bee Loops
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: 'Play Lab - Create a Story'
+        C2_playlab_createstory: 'שחק במעבדה - ליצור סיפור'
         C2_graph_paper: תכנות לנייר משבצות
         C2_conditionals_with_cards: תנאים
         C2_binary_bracelets: Binary Bracelets
@@ -425,7 +425,7 @@ he:
         C3_bee_conditionals: Bee Conditionals
         C3_maze_conditionals: Maze Conditionals
         C3_artist_nested_loops: Nested Loops
-        C3_farmer_while: While Loops
+        C3_farmer_while: בעוד לולאות
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
         C3_bounce: להקפיץ
@@ -450,11 +450,11 @@ he:
         C4_function_parameters: פונקציות ופרמטרים
         C4_conditionals: תנאים
         C4_unplugged_algorithms: Algorithms with Tangrams
-        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_madlibs: ליפס
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: בשביל לולאות
         C4_unplugged_parameters: Songwriting with Parameters
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: בינארי
         frozen_intro: Hour of Code Intro
         frozen_loops: Introduction to Loops
         frozen_functions: Introduction to Functions
@@ -535,7 +535,7 @@ he:
         category_explanation: "You have all the same blocks but they've now been arranged in categories"
         set_sprite_image: 'Attach a "set actor to image" block to the "when story starts" block to enable an actor for this story'
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: לחץ על הבלוק הזה!
         move_elsa_forward: 'גרור בלוק "הזז קדימה" והצמד מתחת לבלוק "מתי לרוץ", בשביל שאלזה תזוז קדימה'
         turn_elsa: 'Use the "Turn" block to make Elsa turn. The number in the drop-down determines how much Elsa turns'
         replace_questions: 'Use the drop-down to replace "???" with a number'

@@ -20,8 +20,8 @@ et-EE:
   submit: Esita
   twentyhours_heading: Proovige meie arvutiteaduse sissejuhatavat kursust
   twentyhours_text: Lõpetasid oma esimese KoodiTunni? Õpi rohkem informaatika ja programmeerimise mõistete kohta selle järgneva kursuse abil.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Iga laps väärib võimalust
+  og_description: Iga õpilane mistahes koolis väärib võimalust õppida infotehnoloogiat.
   hoc2014_heading: 'Liitu <a href="http://hourofcode.com">KoodiTunniga</a><br/>8-14 detsembril, 2014<br/>'
   hoc2014_students: Õpilased
   hoc2014_try: Proovi seda
@@ -191,7 +191,7 @@ et-EE:
   homepage_banner_text_link: Lisateave
   homepage_banner_privacy_main: 'Aug3: Oleme uuendatud oma privaatsusreegleid. Need sisaldavad nüüd uusi vahendeid, mida kasutatakse gümnaasiumile mõeldud CS Principles kuruses.'
   homepage_banner_privacy_link: Lisateave
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20 000 õpetajat on läbinud koolituse ning õpetavad nüüd infotehnoloogiat klassides.
   homepage_banner_20k_teachers_link: Lisateave
   homepage_slot_text_title_hoc: KoodiTund
   homepage_slot_text_blurb_hoc: Kõik suudavad õppida. Alusta täna
@@ -201,7 +201,7 @@ et-EE:
   homepage_solot_text_link_volunteer: Ole KoodiTund vabatahtlik
   homepage_slot_text_title_students: Õpilased
   homepage_slot_text_blurb_students: Tutvu kõikide meie õpetustega
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Avastage meie kursusi
   homepage_slot_text_link_codestudio: Proovi Code Studio võimalusi
   homepage_slot_text_link_local: Otsi kohalik klass
   homepage_slot_text_link_othercourses: Teised veebikursused
@@ -290,7 +290,7 @@ et-EE:
     Need õpetajad otsivad kedagi, <span style="font-family: 'Gotham 7r', sans-serif;">kes armastab arvutiteaduse õpetamist</span> ja kes aitaks neid klassiruumis või kes <span style="font-family: 'Gotham 7r', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse arvukatest võimalustest (seda saab teha ka videovestluse teel). Kui Sa ei soovi olla vabatahtlik, loe <a href="%{url}">lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta.
   volunteer_engineer_submission_intro_signup: 'Palun sisesta järgnev info, kui oled arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class="form-required-field">*</span> on kohustuslikud.'
   volunteer_engineer_submission_intro_links: 'Sa ei soovi olla vabatahtlik? <a href="%{learn_more}">Loe lisateavet</a> oma enda KoodiTunni sündmuse korraldamise kohta ja selle kohta, kuidas leida kohalik vabatahtlik meie <a href="%{volunteer_local}">vabatahtlike kaardilt</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Uuendage oma andmeid
   volunteer_engineer_submission_header_shared: Vabatahtlike kaardil õpetajatega jagatud informatsioon
   volunteer_engineer_submission_field_name: Nimi
   volunteer_engineer_submission_field_name_placeholder: Täisnimi

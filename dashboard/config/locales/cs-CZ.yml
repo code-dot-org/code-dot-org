@@ -143,12 +143,12 @@
       %{name}
   follower:
     invite_sent: Pozvánka odeslána
-    added_teacher: '%{name} přidán jako tvůj učitel'
+    added_teacher: "%{name} přidán jako tvůj učitel"
     registered: Zaregistroval ses k %{section_name}.
     error:
       signed_in: Dříve než budeš pokračovat se, prosím, odhlas
       username_not_found: Uživatelské jméno %{username} nebylo nalezeno
-      username_in_use: '%{username} je již obsazeno, vyber si jiný, prosím'
+      username_in_use: "%{username} je již obsazeno, vyber si jiný, prosím"
       no_teacher: Nenalezen nikdo přihlášený jako '%{teacher_email_or_code}'. Prosím
         Požádejte je, prosím, aby se zde přihlásili a poté zkuste je znovu přidat
       section_not_found: Nelze nalézt sekci s kódem "%{section_code}".
@@ -189,7 +189,7 @@
       msg_publicschool: Prosím potvrďte, že jste učitel veřejné školy v USA.
       msg_visit_website: Navštivte webové stránky
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10BG Místa na Dropbox
@@ -198,7 +198,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Zvol cenu:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -244,9 +244,9 @@
     destroy: Zrušit
     back: Zpět
     confirm: Jsi si jistý?
-    created: '%{model} byl úspěšně vytvořen.'
-    updated: '%{model} byl úspěšně aktualizován.'
-    destroyed: '%{model} byl/a úspěšně odstraněn/a.'
+    created: "%{model} byl úspěšně vytvořen."
+    updated: "%{model} byl úspěšně aktualizován."
+    destroyed: "%{model} byl/a úspěšně odstraněn/a."
     access_denied: nemáte přístup k tomuto %{model}.
   nav:
     header:
@@ -277,7 +277,7 @@
       puzzle_map: Fáze
       prizes: Posbírej všech %{total_trophies} trofejí a vyhraj ceny!
       prize_earned: Všech %{total_trophies} trofejí získáno. Vyhrál jsi!
-      prize_us_only: (Pouze studenti z USA)
+      prize_us_only: "(Pouze studenti z USA)"
       prizes_link: Více informací
   teacher:
     answer: Odpověď
@@ -285,7 +285,7 @@
     title:
       one: 'Tvůj učitel:'
       other: 'Tvoji učitelé:'
-    remove: (odstranit učitele)
+    remove: "(odstranit učitele)"
     confirm:
       remove: Jsi si jist/á, že chceš odstranit tohoto učitele?
     students:
@@ -305,10 +305,10 @@
   user:
     email_confirm_needed: 'E-mailová adresa nebyla potvrzena:'
     email_confirm_needed_required: 'Vaše e-mailová adresa %{email} nebyla potvrzena:'
-    email_confirm_wrong_email: (Špatná e-mailová adresa?)
+    email_confirm_wrong_email: "(Špatná e-mailová adresa?)"
     email_resend_confirm: Znovu odeslat instrukce o potvrzení
-    new_password_hint: (zanech prázdné, pokud nechceš provést změnu)
-    current_password_hint: (potřebujeme tvé aktuální heslo pro potvrzení změn)
+    new_password_hint: "(zanech prázdné, pokud nechceš provést změnu)"
+    current_password_hint: "(potřebujeme tvé aktuální heslo pro potvrzení změn)"
     delete: Vymazat účet
     delete_text: Klepnutím na následující tlačítko se vymaže váš účet.
     delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské
@@ -317,16 +317,12 @@
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno
-  user_stats:
-    recent_activity: Nedávná aktivita
-    show_more: Zobrazit více
-    classroom_activity: Aktivita bez počítače
   home:
     title: Code studio
     description: Code Studio je místem pro on-line kurzy vytvořené Code.org
-    lines_of_code: '%{lines_count} ŘÁDKY KÓDU NAPSANÝCH STUDENTY'
-    lines_of_code_linebreak: ŘÁDKY KÓDU, %{lines_count} <br/> NAPSANÉ %{students_count}
-      MILIONY STUDENTŮ
+    lines_of_code: "%{lines_count} ŘÁDKY KÓDU NAPSANÝCH STUDENTY"
+    lines_of_code_linebreak: "ŘÁDKY KÓDU, %{lines_count} <br/> NAPSANÉ %{students_count}
+      MILIONY STUDENTŮ"
     all_courses: Přehled kurzů 1, 2 a 3
     lesson_plans: Plány hodin
     signin_message: Nejsi už zaregistrován? %{link}
@@ -350,7 +346,7 @@
     student_left_off: 'Kde jsi přestal:'
     student_finished: Dokončil jsi všechna cvičení, vyber si další třídu %{online_link}
       nebo v %{local_school_link}
-    local_school: škola v okolí
+    local_school: "škola v okolí"
     online: online
     see_details: Viz podrobnosti
     view_course: Prohlídka kurzu
@@ -366,11 +362,11 @@
     test_videos_help: Vyzkoušejte náš nový video přehrávač ve vaší škole
     try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
     use_as_teacher: Použijte jako učitel tento web
-    heading_hoc2014: <h2>Hodina kódu pro</h2> <h1>všechny věkové kategorie</h1>
-    heading_elementary: <h2>20 hodinové kurzy pro</h2> <h1>Základy počítačové vědy
-      (všechny věkové kategorie)</h1>
-    heading_apps: <h2>Zábava pro</h2> <h1>kohokoliv</h1>
-    heading_legacy: <h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>
+    heading_hoc2014: "<h2>Hodina kódu pro</h2> <h1>všechny věkové kategorie</h1>"
+    heading_elementary: "<h2>20 hodinové kurzy pro</h2> <h1>Základy počítačové vědy
+      (všechny věkové kategorie)</h1>"
+    heading_apps: "<h2>Zábava pro</h2> <h1>kohokoliv</h1>"
+    heading_legacy: "<h2>Náš všeobecný kurz pro</h2><h1>Všechny věkové kategorie</h1>"
     your_gallery: Galerie
     no_primary_course: Zkuste Code Studio kurz
     choose_next_course: Zkuste kurz Code Studio výběrem níže
@@ -382,7 +378,7 @@
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
   gender:
     male: Muž
-    female: Žena
+    female: "Žena"
     none: Raději bych neodpovídal/a
   user_type:
     student: student
@@ -403,8 +399,8 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Poháněn Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
-      of Code&reg; jsou trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
+      of Code&reg; jsou trademarks of Code.org."
     copyright: Autorská práva
     more: Více
     feedback: Poskytnout zpětnou vazbu
@@ -429,7 +425,7 @@
     direction: Počáteční směr (ve stupních)
   video:
     tab: Video.
-    notes: Žádné video? Zobrazit poznámky.
+    notes: "Žádné video? Zobrazit poznámky."
     notes_coming_soon: Poznámky pro toto video přijdou brzy.
     autoplay_option: Automatické přehrávání videí
     download: Stáhnout Video
@@ -479,7 +475,7 @@
     manage: Sestavení úrovně
     view: Zobrazit
     back: Zpět ke skriptům
-    success: Úspěšně jste upravili bloky.
+    success: "Úspěšně jste upravili bloky."
     level:
       create: Vytvořit novou úroveň
       current: Současné úrovně
@@ -538,7 +534,7 @@
     feedback: Poskytnout zpětnou vazbu
     report_bug: Nahlásit chybu
     support: Získat pomoc
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Nesprávná odpověď
     wrong_body: Odpověď, kterou jste zadali, není správné.  Opakujte akci!
@@ -548,7 +544,7 @@
     toofew_body: Please select two answers before submitting.
   match:
     wrong_title: Nesprávné řešení
-    wrong_body: Řešení, které jste zadali, není správné.  Opakujte akci!
+    wrong_body: "Řešení, které jste zadali, není správné.  Opakujte akci!"
     correct_title: Správně
     correct_body: To je správná odpověď.
   contract_match:

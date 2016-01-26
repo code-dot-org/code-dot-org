@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Погледни го видеото"},
 "when":function(d){return "Кога"},
 "whenRun":function(d){return "Кога трча"},
-"workspaceHeaderShort":function(d){return "Работна површина: "}};
+"workspaceHeaderShort":function(d){return "Работна површина: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

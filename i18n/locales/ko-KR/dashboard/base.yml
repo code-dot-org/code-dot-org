@@ -283,10 +283,6 @@ ko:
   user_level:
     completed: 완료
     tried: 시도함
-  user_stats:
-    recent_activity: 최근 활동
-    show_more: 자세히
-    classroom_activity: 언플러그드 활동
   home:
     title: 코드 스튜디오
     description: Code Studio는 Code.org에서 만든, 집에서 온라인으로 학습하는 과정입니다.
