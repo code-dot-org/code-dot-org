@@ -296,6 +296,12 @@ Style/RedundantSelf:
 Style/RescueModifier:
   Enabled: false
 
+# Offense count: 31
+# Cop supports --auto-correct.
+# Configuration parameters: AllowAsExpressionSeparator.
+Style/Semicolon:
+  Enabled: false
+
 # Offense count: 299
 # Cop supports --auto-correct.
 Style/SingleSpaceBeforeFirstArg:

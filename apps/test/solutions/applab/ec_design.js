@@ -540,13 +540,14 @@ module.exports = {
 
         // Validate property rows and some default values
         assertPropertyRowValue(0, 'id', 'image1', assert);
-        assertPropertyRowValue(1, 'width (px)', 100, assert);
-        assertPropertyRowValue(2, 'height (px)', 100, assert);
-        assertPropertyRowExists(3, 'x position (px)', assert);
-        assertPropertyRowExists(4, 'y position (px)', assert);
-        assertPropertyRowExists(5, 'picture Choose...', assert);
-        assertPropertyRowExists(6, 'hidden', assert);
-        assertPropertyRowExists(7, 'depth', assert);
+        assertPropertyRowValue(1, 'text', '', assert);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
+        assertPropertyRowValue(3, 'height (px)', 100, assert);
+        assertPropertyRowExists(4, 'x position (px)', assert);
+        assertPropertyRowExists(5, 'y position (px)', assert);
+        assertPropertyRowExists(6, 'picture Choose...', assert);
+        assertPropertyRowExists(7, 'hidden', assert);
+        assertPropertyRowExists(8, 'depth', assert);
 
         // Make sure it's draggable
         var manipulator = newImage.parent();

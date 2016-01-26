@@ -325,10 +325,14 @@ GameLab.prototype.execute = function() {
       p5obj.setupGlobalMode();
 
       window.preload = function () {
-        // Call our gamelabPreload() to force _start/_setup to wait.
+        // Artificially increment preloadCount to force _start/_setup to wait.
+        // p5._preloadCount++;
+        // this.p5decrementPreload = p5._getDecrementPreload(arguments, p5);
+        // var gamelabPreload = p5._wrapPreload(p5, 'gamelab');
         window.gamelabPreload();
       };
       window.setup = _.bind(function () {
+        console.log("p5 setup");
         p5obj.createCanvas(400, 400);
         if (this.JSInterpreter && this.setupFunc) {
           this.JSInterpreter.queueEvent(this.setupFunc);
@@ -364,49 +368,6 @@ GameLab.prototype.execute = function() {
       enableEvents: true,
       studioApp: this.studioApp_,
       onExecutionError: _.bind(this.handleExecutionError, this),
-      customMarshalGlobalProperties: {
-        width: this.p5,
-        height: this.p5,
-        displayWidth: this.p5,
-        displayHeight: this.p5,
-        windowWidth: this.p5,
-        windowHeight: this.p5,
-        focused: this.p5,
-        frameCount: this.p5,
-        keyIsPressed: this.p5,
-        key: this.p5,
-        keyCode: this.p5,
-        mouseX: this.p5,
-        mouseY: this.p5,
-        pmouseX: this.p5,
-        pmouseY: this.p5,
-        winMouseX: this.p5,
-        winMouseY: this.p5,
-        pwinMouseX: this.p5,
-        pwinMouseY: this.p5,
-        mouseButton: this.p5,
-        mouseIsPressed: this.p5,
-        touchX: this.p5,
-        touchY: this.p5,
-        ptouchX: this.p5,
-        ptouchY: this.p5,
-        touches: this.p5,
-        touchIsDown: this.p5,
-        pixels: this.p5,
-        deviceOrientation: this.p5,
-        accelerationX: this.p5,
-        accelerationY: this.p5,
-        accelerationZ: this.p5,
-        pAccelerationX: this.p5,
-        pAccelerationY: this.p5,
-        pAccelerationZ: this.p5,
-        rotationX: this.p5,
-        rotationY: this.p5,
-        rotationZ: this.p5,
-        pRotationX: this.p5,
-        pRotationY: this.p5,
-        pRotationZ: this.p5
-      }
     });
     if (!this.JSInterpreter.initialized()) {
       return;
@@ -415,30 +376,28 @@ GameLab.prototype.execute = function() {
     this.setupFunc = this.JSInterpreter.findGlobalFunction('setup');
     this.mousePressedFunc = this.JSInterpreter.findGlobalFunction('mousePressed');
 
-    codegen.customMarshalObjectList = [
-      window.p5,
-      window.Sprite,
-      window.Camera,
-      window.p5.Vector,
-      window.p5.Color,
-      window.p5.Image,
-      window.p5.Renderer,
-      window.p5.Graphics,
-      window.p5.Font,
-      window.p5.Table,
-      window.p5.TableRow,
-      window.p5.Element
-    ];
+    codegen.customMarshalObjectList = [ window.p5, window.Sprite, window.Camera, window.p5.Vector, window.p5.Color, window.p5.Image ];
     codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
 
-    // Insert everything on p5 and the Group constructor from p5play into the
-    // global namespace of the interpreter:
-    for (var prop in this.p5) {
-      this.JSInterpreter.createGlobalProperty(prop, this.p5[prop], this.p5);
-    }
-    this.JSInterpreter.createGlobalProperty('Group', window.Group);
-    // And also create a 'p5' object in the global namespace:
-    this.JSInterpreter.createGlobalProperty('p5', { Vector: window.p5.Vector });
+    var intP5 = codegen.marshalNativeToInterpreter(
+        this.JSInterpreter.interpreter,
+        this.p5,
+        window);
+
+    this.JSInterpreter.interpreter.setProperty(
+        this.JSInterpreter.globalScope,
+        'p5',
+        intP5);
+
+    var intGroup = codegen.marshalNativeToInterpreter(
+        this.JSInterpreter.interpreter,
+        window.Group,
+        window);
+
+    this.JSInterpreter.interpreter.setProperty(
+        this.JSInterpreter.globalScope,
+        'Group',
+        intGroup);
 
     /*
     if (this.checkForEditCodePreExecutionFailure()) {

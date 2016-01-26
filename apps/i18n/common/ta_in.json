@@ -247,6 +247,5 @@
   "watchVideo": "காணொளியை பார்க்கவும்",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "workspaceHeaderShort": "Workspace: "
 }

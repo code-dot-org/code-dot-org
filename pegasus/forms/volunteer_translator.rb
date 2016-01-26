@@ -80,7 +80,7 @@ class VolunteerTranslator
 
   def self.index(data)
     data['language_ss'] = data['language_ss'] - ['Other']
-    data['language_ss'].concat(data['language_other_ss'] || []).sort.uniq
+    data['language_ss'].concat(data['language_other_ss'] || []).sort.uniq;
     data
   end
 

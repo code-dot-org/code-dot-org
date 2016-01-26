@@ -247,6 +247,5 @@
   "watchVideo": "Nézd meg a videót",
   "when": "amikor",
   "whenRun": "futtatáskor",
-  "workspaceHeaderShort": "Munkaterület: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "workspaceHeaderShort": "Munkaterület: "
 }
