@@ -117,7 +117,7 @@ class Karel < Maze
 
   def self.unparse_maze(contents)
     maze = contents['raw_dirt'] || self.generate_raw_dirt(contents['maze'], contents['initial_dirt'])
-    maze.is_a?(Array) ? maze.to_json : maze
+    maze.is_a?(String) ? JSON.parse(maze) : maze
   end
 
   def toolbox(type)
