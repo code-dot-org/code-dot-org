@@ -247,5 +247,6 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når den kjører",
-  "workspaceHeaderShort": "Arbeidsområde: "
+  "workspaceHeaderShort": "Arbeidsområde: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

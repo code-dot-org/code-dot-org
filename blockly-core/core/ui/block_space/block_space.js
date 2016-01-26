@@ -163,6 +163,31 @@ Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
 Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
 
 /**
+ * Creates a read-only BlockSpace inside the given container, containing
+ * the given XML. Used to display single blocks in feedback dialogs.
+ * @param {!Element} container HTML Element into which to render
+ * @param {!Element} xml XML block
+ * @returns {Blockly.BlockSpace}
+ */
+Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml) {
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, function () {
+    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if (!metrics) {
+      return null;
+    }
+    // Expand the view so we don't see scrollbars
+    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+    return metrics;
+  }, function (xyRatio) {
+    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+  }, true, true);
+
+  var blockSpace = blockSpaceEditor.blockSpace;
+  Blockly.Xml.domToBlockSpace(blockSpace, xml);
+  return blockSpace;
+};
+
+/**
  * Current horizontal scrolling offset.
  * @type {number}
  */

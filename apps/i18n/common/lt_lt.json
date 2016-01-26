@@ -247,5 +247,6 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: "
+  "workspaceHeaderShort": "Darbo laukas: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }
