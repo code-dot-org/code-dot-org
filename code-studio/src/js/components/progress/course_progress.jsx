@@ -20,7 +20,7 @@ window.dashboard.CourseProgress = (function (React) {
     render: function () {
       var rows = this.props.stages.map(function (stage) {
         return (
-          <div className='game-group'>
+          <div className='game-group' key={stage.name}>
             <div className='stage'>
               {stage.title}
               <div className='stage-lesson-plan-link' style={{display: 'none'}}>
@@ -29,7 +29,7 @@ window.dashboard.CourseProgress = (function (React) {
                 </a>
               </div>
             </div>
-            <window.dashboard.StageProgress levels={stage.levels} outerClass='games' />
+            <window.dashboard.StageProgress levels={stage.levels} largeDots={true} />
           </div>
         );
       });
