@@ -110,9 +110,9 @@ DropletTooltipManager.prototype.registerBlocks = function () {
   }, this);
 };
 
-DropletTooltipManager.prototype.hasDocFor = function (functionName) {
+DropletTooltipManager.prototype.getDocFor = function (functionName) {
   var docFuncName = this.docFuncMapping_[functionName] || functionName;
-  return this.blockTypeToTooltip_.hasOwnProperty(docFuncName);
+  return this.blockTypeToTooltip_[docFuncName];
 };
 
 DropletTooltipManager.prototype.showDocFor = function (functionName) {
@@ -136,12 +136,12 @@ DropletTooltipManager.prototype.showDocFor = function (functionName) {
  * @returns {DropletFunctionTooltip}
  */
 DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
-  if (!this.hasDocFor(functionName)) {
+  var tooltip = this.getDocFor(functionName);
+  if (!tooltip) {
     throw "Function name " + functionName + " not registered in documentation manager.";
   }
 
-  var docFuncName = this.docFuncMapping_[functionName] || functionName;
-  return this.blockTypeToTooltip_[docFuncName];
+  return tooltip;
 };
 
 /**
