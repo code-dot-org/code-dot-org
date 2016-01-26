@@ -6,9 +6,10 @@ class PairingsControllerTest < ActionController::TestCase
   setup do
   end
 
-  test 'should get admin progress page' do
-    get :admin_progress
-    assert_select 'h1', 'Admin progress'
+  test 'should get show for logged in user' do
+    sign_in create(:user)
+    get :show
+    assert_response :success
   end
 
 end
