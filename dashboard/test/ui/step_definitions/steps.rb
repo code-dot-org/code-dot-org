@@ -138,7 +138,7 @@ When /^I press the "([^"]*)" button$/ do |buttonText|
 end
 
 When /^I press "([^"]*)" using jQuery$/ do |selector|
-  @browser.execute_script("$(#{selector.dump}).click()");
+  @browser.execute_script("$(#{selector.dump}).click()")
 end
 
 When /^I press SVG selector "([^"]*)"$/ do |selector|
@@ -364,8 +364,8 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
-  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')");
-  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
   visible.should eq (negation.nil?)
 end
 
@@ -374,8 +374,8 @@ Then /^element "([^"]*)" does not exist/ do |selector|
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
-  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')");
-  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden');
+  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
+  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
   visible.should eq false
 end
 
@@ -441,7 +441,7 @@ Then /^I see jquery selector (.*)$/ do |selector|
 end
 
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
-  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0");
+  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
   exists.should eq true
 end
 
@@ -462,11 +462,11 @@ Then(/^"([^"]*)" should be in front of "([^"]*)"$/) do |selector_front, selector
 end
 
 Then(/^I set slider speed to medium/) do
-  @browser.execute_script("__TestInterface.setSpeedSliderValue(0.8)");
+  @browser.execute_script("__TestInterface.setSpeedSliderValue(0.8)")
 end
 
 Then(/^I slow down execution speed$/) do
-  @browser.execute_script("Maze.scale.stepSpeed = 10;");
+  @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
 # Note: only works for levels other than the current one

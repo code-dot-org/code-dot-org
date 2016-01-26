@@ -247,5 +247,6 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: "
+  "workspaceHeaderShort": "Место сбора блоков: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

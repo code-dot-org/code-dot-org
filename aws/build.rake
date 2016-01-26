@@ -15,6 +15,7 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
+require 'cdo/aws/s3_packaging'
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -120,19 +121,6 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   end
 
   #
-  # Define the CODE STUDIO BUILD task
-  #
-  CODE_STUDIO_NODE_MODULES = Dir.glob(code_studio_dir('node_modules', '**/*'))
-  CODE_STUDIO_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| code_studio_dir(i)} + Dir.glob(code_studio_dir('build', '**/*'))
-  CODE_STUDIO_SOURCE_FILES = Dir.glob(code_studio_dir('**/*')) - CODE_STUDIO_NODE_MODULES - CODE_STUDIO_BUILD_PRODUCTS
-  CODE_STUDIO_TASK = build_task('code-studio', CODE_STUDIO_SOURCE_FILES) do
-    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
-    RakeUtils.system 'rm', '-rf', dashboard_dir('public/code-studio-package')
-    RakeUtils.system 'cp', '-R', code_studio_dir('build'), dashboard_dir('public/code-studio-package')
-  end
-
-  #
   # Define the APPS COMMIT task. If APPS_TASK produces new output, that output needs to be
   #   committed because it's input for the DASHBOARD task.
   #
@@ -166,45 +154,33 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
     end
   end
-
-  #
-  # Define the CODE_STUDIO COMMIT task. If CODE_STUDIO_COMMIT_TASK produces new output, that output needs to be
-  #   committed because it's input for the DASHBOARD task.
-  #
-  CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit', [deploy_dir('rebuild'), CODE_STUDIO_TASK]) do
-    code_studio_changed = false
-    Dir.chdir(dashboard_dir('public/code-studio-package')) do
-      code_studio_git_status = `git status --porcelain .`
-      code_studio_changed = !code_studio_git_status.strip.empty?
-      HipChat.log "<b>code-studio</b> package changes:\n#{code_studio_git_status}" if code_studio_changed
-    end
-
-    if code_studio_changed
-      if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building CODE_STUDIO_TASK, but there are new
-        # commits pending in the repository, it is better to pull the repository first and commit
-        # these changes after we're caught up with the repository because, if we committed the changes
-        # before pulling we would need to manually handle a "merge commit" even though it's impossible
-        # for there to be file conflicts (because nobody changes the files CODE_STUDIO_TASK builds manually).
-        HipChat.log '<b>code-studio</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
-      else
-        HipChat.log 'Committing updated <b>code-studio</b> package...', color: 'purple'
-        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/code-studio-package')
-        HipChat.log "<b>code-studio</b> staged changes:\n#{`git status --porcelain .`}"
-        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-code-studio'))}"
-        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-        RakeUtils.git_push
-        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-code-studio')
-      end
-    else
-      HipChat.log '<b>code-studio</b> package unmodified, nothing to commit.'
-      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-code-studio')
-    end
-  end
-
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
-  CODE_STUDIO_COMMIT_TASK = build_task('code-studio-commit') {}
+end
+
+#
+# Define the CODE STUDIO BUILD task.
+#
+CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) do
+  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
+
+  updated_package = packager.update_from_s3
+  if updated_package
+    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
+    next # no need to do anything if we already got a package from s3
+  end
+
+  # Test and staging are the only environments that should be uploading new packages
+  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  HipChat.log 'Building code-studio...'
+  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+  HipChat.log 'code-studio built'
+
+  # upload to s3
+  package = packager.upload_package_to_s3('/build')
+  packager.decompress_package(package)
 end
 
 file deploy_dir('rebuild') do
@@ -330,7 +306,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_COMMIT_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -349,32 +325,14 @@ task :shared_unit_tests do
   end
 end
 
-# currently this is only implemented for dashboard ruby unit tests but
-# maybe in the future it will work for other types of tests
-def log_coverage_results(name)
-  results_file = dashboard_dir('coverage/.last_run.json')
-  results = JSON.parse(File.read(results_file))
-  HipChat.log "<b>#{name}</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
-rescue Exception => e
-  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
-end
-
-COVERAGE_SYMLINK = dashboard_dir 'public/coverage'
-file COVERAGE_SYMLINK do
-  Dir.chdir(dashboard_dir('public')) do
-    RakeUtils.system_ 'ln', '-s', '../coverage', 'coverage'
-  end
-end
-
-task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
+task :dashboard_unit_tests do
   Dir.chdir(dashboard_dir) do
     name = "dashboard ruby unit tests"
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:schema:load'
-      RakeUtils.rake 'test', 'COVERAGE=1'
-      log_coverage_results(name)
+      RakeUtils.rake 'test'
       RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
@@ -428,6 +386,6 @@ end
 # do the eyes and browserstack ui tests in parallel
 multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
 
 task 'test-websites' => [$websites_test]
