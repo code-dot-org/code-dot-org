@@ -16,7 +16,7 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 ## Running tests
 
 ### Mocha Tests
-`grunt exec:mocha test` will run all mocha tests. Run this from the `apps` directory
+`grunt mochaTest` will run all mocha tests. Run this from the `apps` directory
 
 To run a subset of tests, you can run 
 `grunt exec:mochaTest --grep "Interesting Test Name"` - Run all tests with a given string in the description
@@ -26,8 +26,8 @@ You can append `--fast` if you don't want to test turtle/maze levels and want th
 You can expect a full test run to take about 5-10 minutes.
 
 ### Konacha Tests
-
-`bundle exec rake konacha:server` will run konacha tests. Run this from the `dashboard` directory, then visit the URL it provides to see your test results.
+`cd dashboard`
+`bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.
 
 Tests run pretty quickly
 
@@ -46,6 +46,8 @@ To run a specific unit test, you can run
 
 ### UI Tests
 Our UI tests live in dashboard/test/ui, so all commands need to be run out of there. The script `runner.rb` is responsible for actually running tests and accepts many parameters. For a full list, run `runner.rb -h`
+
+More information about dashboard UI tests is available at https://github.com/code-dot-org/code-dot-org/tree/staging/dashboard/test/ui
 
 Sample Commands
 
