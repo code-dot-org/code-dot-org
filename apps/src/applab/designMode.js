@@ -131,6 +131,10 @@ function appendPx (input) {
   return input ? input + 'px' : '';
 }
 
+function isDraggableContainer(element) {
+  return $(element).hasClass('ui-draggable');
+}
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -164,12 +168,16 @@ designMode.updateProperty = function(element, name, value) {
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      element.parentNode.style.left = newLeft;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.left = newLeft;
+      }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      element.parentNode.style.top = newTop;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.top = newTop;
+      }
       break;
     case 'width':
       element.setAttribute('width', appendPx(value));
@@ -180,7 +188,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      element.parentNode.style.width = newWidth;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.width = newWidth;
+      }
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -190,7 +200,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      element.parentNode.style.height = newHeight;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.height = newHeight;
+      }
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -250,7 +262,7 @@ designMode.updateProperty = function(element, name, value) {
           // naturalWidth/Height aren't populated until image has loaded.
           element.style.width = element.naturalWidth + 'px';
           element.style.height = element.naturalHeight + 'px';
-          if ($(element.parentNode).is('.ui-resizable')) {
+          if (isDraggableContainer(element.parentNode)) {
             element.parentNode.style.width = element.naturalWidth + 'px';
             element.parentNode.style.height = element.naturalHeight + 'px';
           }

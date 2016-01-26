@@ -1152,6 +1152,28 @@ function setSize_(elementId, width, height) {
   }
 }
 
+applabCommands.setProperty = function(opts) {
+  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
+
+  var elementId = opts.elementId;
+  var property = opts.property;
+  var value = opts.value;
+
+  var element = document.getElementById(elementId);
+  // Unless we're a canvas, when editing width/height we actually want to change
+  // element.style.width/height.
+  if (!(element instanceof HTMLCanvasElement)) {
+    if (property === 'width' || property === 'height') {
+      property = 'style-' + property;
+    }
+  }
+
+  // TODO - probably want to whitelist, and perhaps map, properties here
+
+  Applab.updateProperty(element, property, value);
+};
+
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getXPosition', 'id', opts.elementId, true);
