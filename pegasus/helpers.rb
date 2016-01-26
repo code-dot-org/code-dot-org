@@ -71,7 +71,7 @@ def only_for(site)
 end
 
 def service_unavailable!()
-  halt(503, "Service Unavailable\n")
+  halt(503, "Service Unavailable\n");
 end
 
 def unsupported_media_type!()
