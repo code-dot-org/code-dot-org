@@ -277,4 +277,12 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('20-hour').twenty_hour?
     assert_not Script.find_by_name('mc').twenty_hour?
   end
+
+  test 'should summarize script' do
+    script = create(:script, name: 'Single Stage Script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    assert_equal 1, script.summarize[:stages].count
+  end
 end
