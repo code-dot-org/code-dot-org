@@ -8,49 +8,59 @@ teacher_markdown <<MARKDOWN
 MARKDOWN
 
 markdown <<MARKDOWN
-# Cleaning Data
+# Getting to Know Your Data
 
-Even when it is collected carefully (and especially if it isn't) **data usually has issues that make it difficult to use for analysis**. Values may have been entered incorrectly, not be in a usable format, or just be poorly organized. It is important to fix these issues prior to exploring the data for trends and patterns. **The process of preparing data for analyis is called "cleaning" the data**.
+Before analyzing a dataset you'll want to familiarize yourself with the data. Computational tools like a spreadsheet make it easy to quickly get a sense of what your data looks like.
 
-# Getting Your Own Copy of the Data
+<hr>
+
+# Make a copy of the data
 
 You will need to get your own copy of the data to clean. If your data is currently in a Google Sheet you'll need to "Make a copy" of the data, as shown below.
 
+**Do This:** Make your own copy of the data collected by your class
+
 ![](https://images.code.org/52f5a4b1304a7b74add7551db31590bf-image-1453401438419.gif)
 
-# Preparing to Clean Data
+*Making a copy of the dataset*
 
-To prepare to clean your data you'll need to select it. Click the top left cell of your data and then click the "Filter" button, as shown below.
+<hr>
 
-![](https://images.code.org/8856475fa423378cc912a2b947b3bf7d-image-1453402040849.gif)
+# Filtering Your Data
 
-# Identifying Errors in the Data
+Your data may be too large to look at all at once. One way to address this problem is to **filter the data** so that you are only looking at some of the rows. Here's how you can do it in Google Sheets.
 
-Looking at a dataset without the help of computational tools can be challenging. You will be using the **sort** and **filter** tools in this spreadsheet to identify errors in your data.
+**Do This:** Follow the example in the animation below. Filter your own data on one of its columns
 
-**Sorting will reorder the rows of data based on the column used to sort**. This makes it easy to find **outliers**, or values that are much larger or lower than they should be.
+![](https://images.code.org/755bee755392bf0fa5495d2daa3109e2-image-1453478942214.gif)
 
-![](https://images.code.org/9cb572a102c5bfdfdcd2003aecbf4c2e-image-1453404968536.gif)
+*Filtering the dataset so that only rows in which a person slept for 7 hours are shown.*
 
-**Filtering will temporarily hide rows which don't contain certain values**. Filtering is useful for quickly checking for other errors in your data.
+<hr>
 
-![](https://images.code.org/e52d537fba5beb7b43897b654a065a13-image-1453405036160.gif)
+# More Complex Filtering
 
-# Fixing Errors
+Filters may include more than one value, just check all the values you'd like to include. You can even use a conditional statement as a filter. For example, you can make a filter that will only show values if the value is less than some number you specify. It's also possible to filter on multiple columns at the same time. More complex filters help refine how you look at your data.
 
-As you look through your data you will notice errors in your data. Some values will include text instead of numbers. Some values will be clearly inaccurate or accidentally entered.
+**Do This:** Add filters to two different columns. In one column choose at least two values. In the other column use a Conditional filter, as shown below.
 
-**If you can easily convert the data to its correct form, you should. Otherwise you should delete that cell so that incorrect values will not be used in analysis.**
+![](https://images.code.org/f6f068910c7251409748417c9323c134-image-1453479998755.gif)
 
-![](https://images.code.org/6c8810fe279977cc519af8d2030b092c-image-1453405130614.gif)
+*Filtering to include people who feel "Good" or "Great" and who slept 7 hours or more.*
 
-# Categorizing Data
+<hr>
 
-Some data you collected may be useful, but it is not in a form that you can use to do analysis. One way to fix this problem is to **create new columns of data which standardize data that is otherwise disorganized**.
+# Sorting Data
 
-In the example below we show how you might create a new standardized column from a free-text column.
+**Sorting will reorder your rows of data by one of the columns**. This makes it easy to see the smallest or largest value in each column. You may also notice patterns in your data once it is in sorted order.
 
-![](https://images.code.org/b7bd7bd954072681fa685afc0756108d-image-1453406846291.gif)
+**Do This:** Sort your data by at least one of the columns, both A -> Z and Z -> A
 
-**Note:** standardizing data will often be very subjective. You will need to make judgment calls.
+![](https://images.code.org/6f26617b9fb3752ca8f273c6b4de0219-image-1453483577941.gif)
+
+*Sorting the dataset by number of hours worked, both from smallest to largest and from largest to smallest*
+
+<hr>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

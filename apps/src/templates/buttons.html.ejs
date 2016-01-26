@@ -34,7 +34,8 @@
     </div>
   <% } else { -%>
     <% if (data.shouldPromptForHint) { -%>
-      <button id="hint-request-button" class="launch">
+      <button id="hint-request-button" class="lightbulb-button">
+        <span><%- include lightbulb.svg.ejs %></span>
         <%= msg.hintRequest() %>
       </button>
     <% } %>

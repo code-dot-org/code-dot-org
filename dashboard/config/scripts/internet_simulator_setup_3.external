@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 # Internet Simulator: FAQ
 
 #### Where can I find the activities you've designed to use with the Internet Simulator?
-The activities we've designed for our Computer Science Principles curriculum, including the specific Internet Simulator configurations can be found in the Unit lesson plans [here](/educate/csp). Many of the lesson plans have "Teacher Tips & Tricks" support videos that show demonstrations of the Internet Simulator used as a part of the classroom activities. You can use these activities as is, or feel free to modify to best suit your class!
+The activities we've designed for our Computer Science Principles curriculum, including the specific Internet Simulator configurations can be found in the Unit lesson plans [here](https://code.org/educate/csp). Many of the lesson plans have "Teacher Tips & Tricks" support videos that show demonstrations of the Internet Simulator used as a part of the classroom activities. You can use these activities as is, or feel free to modify to best suit your class!
 
 #### Can I customize the Internet Simulator for my class?
 Right now, we unfortunately don't have a way for people outside of Code.org to create specific configurations and instructions for the Internet Simulator. We've tried to expose a variety of different configurations that can hopefully work for your classroom and activity. Long-term, we'd love to have a way to let others configure the tool.

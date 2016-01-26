@@ -50,7 +50,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should allow public caching for script level pages with default lifetime' do
-    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true);
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true)
 
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
@@ -60,7 +60,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should allow public caching for script level pages with dynamic lifetime' do
-    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true);
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true)
     DCDO.set('public_max_age', 3600)
     DCDO.set('public_proxy_max_age', 7200)
     get_show_script_level_page(@script_level)
@@ -69,7 +69,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should make script level pages uncachable if disabled' do
     # Configure the script not to use public caching and make the headers disable caching.
-    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(false);
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(false)
     get_show_script_level_page(@script_level)
     assert_caching_disabled response.headers['Cache-Control']
   end
