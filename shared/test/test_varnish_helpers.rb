@@ -114,7 +114,7 @@ if (req.http.host ~ "(dashboard|studio).*$") {
 STR
     output = setup_behavior(BEHAVIOR, 'bereq', &method(:process_response))
     assert_equal <<STR.strip, output
-if (bereq.http.host ~ "(dashboard|studio).code.org$") {
+if (bereq.http.host ~ "(dashboard|studio).*$") {
   # Allow set-cookie responses.
 } else {
   if (bereq.url ~ "^/api/.*#{END_URL_REGEX}") {
