@@ -159,6 +159,8 @@ standardConfig.categories = {
 };
 
 /**
+ * Given a collection of code functions and a set of dropletteConfig, returns a
+ * a list of blocks.
  * @param codeFunctions {object} A collection of named key/value pairs
  *   key is a block name from dropletBlocks or standardBlocks
  *   value is an object that can be used to override block defaults
@@ -185,7 +187,7 @@ function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, pal
     if (!(block.func in codeFunctions)) {
       return;
     }
-    
+
     // For cases where we use a different block for our tooltips, make sure that
     // the target block ends up in the list of blocks we want
     var docFunc = block.docFunc;
