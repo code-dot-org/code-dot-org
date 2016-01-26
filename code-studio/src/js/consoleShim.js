@@ -24,7 +24,7 @@ module.exports = function (window) {
     'timeStamp', 'trace', 'warn'];
   var method;
   for (var i = 0; i < methods.length; i++) {
-    method = methods[i]
+    method = methods[i];
     if (!console[method]) {
       console[method] = function () {};
     }
