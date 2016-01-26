@@ -12,16 +12,6 @@ var createCategory = blockUtils.createCategory;
  */
 var levels = module.exports = {};
 
-// Base config for levels created via levelbuilder
-levels.custom = {
-  ideal: Infinity,
-  requiredBlocks: [],
-  scale: {
-    'snapRadius': 2
-  },
-  startBlocks: ''
-};
-
 levels.sandbox =  {
   ideal: Infinity,
   requiredBlocks: [
@@ -42,7 +32,8 @@ levels.sandbox =  {
    '<block type="when_run" deletable="false" x="20" y="20"></block>'
 };
 
-levels.ec_sandbox = utils.extend(levels.sandbox, {
+// Base config for levels created via levelbuilder
+levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
   codeFunctions: {
     // Game Lab
@@ -166,3 +157,7 @@ levels.ec_sandbox = utils.extend(levels.sandbox, {
     '}',
     ''].join('\n'),
 });
+
+levels.ec_sandbox = utils.extend(levels.custom, {
+});
+

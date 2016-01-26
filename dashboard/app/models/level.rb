@@ -217,7 +217,7 @@ class Level < ActiveRecord::Base
   # on that level.
   def channel_backed?
     return false if self.try(:is_project_level)
-    self.project_template_level || self.game == Game.applab || self.game == Game.pixelation
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation
   end
 
   def key

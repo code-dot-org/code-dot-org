@@ -21,6 +21,7 @@
     = render partial: 'levels/editors/karel', locals: {f: f} if @level.is_a? Karel
     = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
     = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
+    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.is_a? Gamelab
     = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
 
