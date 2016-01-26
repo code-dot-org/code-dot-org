@@ -109,39 +109,35 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
-This critical senior management role would manage an integrated team responsible for ensuring a high-quality professional learning and professional development (PD) experience for Code.org’s K-12 partner schools, districts, and local organizations. 
-The primary responsibility of this role is to establish a nationwide network of facilitators and professional learning organizations, and to use this local PD capacity to train 100,000 in-service teachers to begin teaching computer science. 
-The job includes leading or managing the following activities:
+This critical senior management role would lead an integrated team responsible for ensuring a high-quality professional learning and professional development (PD) experience for Code.org’s K-12 partner teachers, schools, districts, and local organizations. 
 
-- Manage the development of online and in-person mastery-based teacher and facilitator PD programs, content, and communications
-- Oversee the implementation of all K-12 PD activities, including the operational logistics to facilitate all middle-school and high-school teacher in-person PD workshops nationwide (dates, locations, travel, accommodations, catering) 
-- Oversee the ongoing management of a nationwide train-the-trainer program
-- Supervise the creation and management of high-level relationships with regionally-based PD organizations 
-- Ensure cross-team alignment of workflows with District Outreach and Curriculum Development teams
-- Coordinate PD program evaluation with the Director of Research and Evaluation and third party evaluator
+The primary responsibility of this role is to manage a team working to establish a nationwide network of facilitators and professional learning organizations, and to use this local PD capacity to train 100,000 in-service teachers to begin teaching computer science. 
+
+Responsibilities of this job include:
+
+- Ensure cross-team alignment of workflows with Professional Learning & Community, Product, District Outreach, and Curriculum Development teams
+- Oversee the implementation of all Professional Learning & Community program activities
+- Supervise the creation and management of high-level relationships with external partners
 - Develop a culture of efficiencies through the development of standardized, automated, and/or streamlined processes, including driving technical automation projects in collaboration with the engineering team
 - Utilize data to inform program improvements
-Other duties, as assigned
-
-
 
 **Skills and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
-- Bachelor’s degree (minimum) with a major in Education, Business or other similarly comparable field; Master’s degree or higher is preferred
-- 5+ years senior management experience, skilled in managing cross-functional teams
-- Direct experience in planning, managing, and executing end-to-end professional development experiences for teachers and/or school districts at a national scale
+- Bachelor’s degree (minimum) with 5+ years senior management experience, skilled in managing cross-functional teams
+- Demonstrated successful project management leadership in the scaling of a national program
 - Experience and aptitude for managing complex projects and relationships to realize successful project outcomes
 - Professional demeanor, possessing excellent communication, organizational, project management and interpersonal skills
-- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team 
+- Must be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team
 - A high level of computer literacy is required; proficiency in working with Microsoft Office and Google Docs a must
 
 Additional desired strengths include:
 
-- Experience in developing or delivering online/asynchronous professional development and/or managing train-the-trainer models is highly preferred 
-- Experience in a fast growth start-up environment desired
+- Experience in developing or delivering online/asynchronous professional development and/or managing train-the-trainer models 
+- Experience in a fast growth start-up environment 
 - Understanding of and passion for equity in computer science and K-12 education
+
  
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
