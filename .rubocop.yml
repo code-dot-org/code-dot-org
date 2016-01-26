@@ -34,3 +34,6 @@ Metrics/LineLength:
 
 Metrics/ModuleLength:
   Enabled: false
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true

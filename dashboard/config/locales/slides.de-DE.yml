@@ -925,10 +925,10 @@
           order.
       4:
         image: notes/C1_planting_seed_4.png
-        text: Now, it's time for you to see if your algorithm works. Follow the steps
-          in the algorithm very carefully. Are they in the correct order? Did you
-          succeed in planting a seed by following the algorithm? It's like programming
-          with pictures!
+        text: Nun ist es Zeit um zu schauen ob dein Algorithmus funktioniert. Gehe
+          die Schritte im Algorithmus vorsichtig durch. Sind sie in der richtigen
+          Reihenfolge? Ist es dir gelungen einen Samen zu pflanzen, indem du dem Algorithmus
+          gefolgt bist? Es ist wie mit Bildern programmieren!
       5:
         image: notes/C1_planting_seed_5.png
         text: When we want to make chocolate, there are many big steps to that process
@@ -2702,18 +2702,18 @@
           freigeschalten, um noch mehr zu machen.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[Schüler reden] Wir haben ein Spiel erschaffen, bei dem du Punkte für
+        text: "[Schüler reden] Wir haben ein Spiel erschaffen, bei dem du Punkte für
           Ballonsäue bekommst. Das Schwierige dabei ist, dass jedes Mal ein Sturmtruppler
           auftaucht. Eventuell ist dein ganzer Bildschirm voll mit Ballonsäuen und
-          wenn du 10.000 berührst, gewinnst du.'
+          wenn du 10.000 berührst, gewinnst du."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[Schüler reden] Wir haben ein Spiel erstellt, bei dem du nicht verlieren
+        text: "[Schüler reden] Wir haben ein Spiel erstellt, bei dem du nicht verlieren
           kannst und alles was du tötest bringt dir Punkte. Für mein Programm habe
           ich die Tasten vertauscht. Wenn du nach oben klickst, läuft der Charakter
           nach unten, wenn du rechts klickst läuft er nach links. Das macht es echt
           schwer! Manchmal bekommst du einen Vorteil wenn du der Entwickler des Spiels
-          bist. Habe ich ihn bekommen? Klar!'
+          bist. Habe ich ihn bekommen? Klar!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Wenn du mit deinem Spiel fertig bist, wähle "abschließen" um einen Link
@@ -2829,18 +2829,18 @@
           freigeschalten, um noch mehr zu machen.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[Schüler reden] Wir haben ein Spiel erschaffen, bei dem du Punkte für
+        text: "[Schüler reden] Wir haben ein Spiel erschaffen, bei dem du Punkte für
           Ballonsäue bekommst. Das Schwierige dabei ist, dass jedes Mal ein Sturmtruppler
           auftaucht. Eventuell ist dein ganzer Bildschirm voll mit Ballonsäuen und
-          wenn du 10.000 berührst, gewinnst du.'
+          wenn du 10.000 berührst, gewinnst du."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[Schüler reden] Wir haben ein Spiel erstellt, bei dem du nicht verlieren
+        text: "[Schüler reden] Wir haben ein Spiel erstellt, bei dem du nicht verlieren
           kannst und alles was du tötest bringt dir Punkte. Für mein Programm habe
           ich die Tasten vertauscht. Wenn du nach oben klickst, läuft der Charakter
           nach unten, wenn du rechts klickst läuft er nach links. Das macht es echt
           schwer! Manchmal bekommst du einen Vorteil wenn du der Entwickler des Spiels
-          bist. Habe ich ihn bekommen? Klar!'
+          bist. Habe ich ihn bekommen? Klar!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Wenn du mit deinem Spiel fertig bist, wähle "abschließen" um einen Link
@@ -2989,9 +2989,9 @@
           was du willst. Die Wahl liegt bei dir.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[Schüler reden] Jetzt wird es ernst. Scheren. Ich habe ein L aus Fackeln
+        text: "[Schüler reden] Jetzt wird es ernst. Scheren. Ich habe ein L aus Fackeln
           gemacht. Ich habe ein A aus Birkenholzbrettern gemacht. Es klappt, es klappt.
-          Wir haben ein Haus aus Wolle gebaut!'
+          Wir haben ein Haus aus Wolle gebaut!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Wenn dein Werk fertig ist, hol dir über "teilen" einen Link, um es mit
@@ -3007,9 +3007,9 @@
           was du willst. Die Wahl liegt bei dir.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[Schüler reden] Jetzt wird es ernst. Scheren. Ich habe ein L aus Fackeln
+        text: "[Schüler reden] Jetzt wird es ernst. Scheren. Ich habe ein L aus Fackeln
           gemacht. Ich habe ein A aus Birkenholzbrettern gemacht. Es klappt, es klappt.
-          Wir haben ein Haus aus Wolle gebaut!'
+          Wir haben ein Haus aus Wolle gebaut!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Jetzt kannst du alles bauen, was du willst. Viel Spaß!

@@ -284,10 +284,6 @@ bn:
   user_level:
     completed: Completed
     tried: চেষ্টা করা হয়েছে
-  user_stats:
-    recent_activity: সাম্প্রতিক কর্মকান্ড
-    show_more: Show more
-    classroom_activity: Unplugged Activity
   home:
     title: কোড স্টুডিও
     description: Code Studio is home to online courses created by Code.org

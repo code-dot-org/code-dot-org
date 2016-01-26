@@ -174,9 +174,9 @@
         4 krát?
       2-3 Artist Loops New 9_instruction: Nakresli jednoduchý tvar V, kde obe strany
         sú dlhé 50 pixelov aby si dokončil šípku.
-      2-3 Artist Match Hex Pic_instruction: 'Úloha: Pomôž dokončiť Osemuholník.'
-      2-3 Artist Match Rho Pic_instruction: 'Úloha: Doplň chýbajúci kód.'
-      2-3 Artist Match Sq Pic_instruction: 'Úloha: Doplň chýbajúci kód'
+      2-3 Artist Match Hex Pic_instruction: "Úloha: Pomôž dokončiť Osemuholník."
+      2-3 Artist Match Rho Pic_instruction: "Úloha: Doplň chýbajúci kód."
+      2-3 Artist Match Sq Pic_instruction: "Úloha: Doplň chýbajúci kód"
       2-3 Artist Match Tri pic_instruction: 'Párovanie: Doplň chýbajúci kód.'
       2-3 Artist Nested Loops 1_instruction: "Už si použil si slučky na kreslenie
         tvarov, ale vedel si, že môžeš dať slučku dovnútra inej slučky? \r Opakuj
@@ -892,11 +892,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |

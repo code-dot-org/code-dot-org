@@ -4,7 +4,7 @@
       name:
         test:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          The Maze: המבוך
+          The Maze: "המבוך"
           Multi: Multi
           Match: Match
           Math Image: Math Image
@@ -13,26 +13,26 @@
           description_short: Just an internal test course.
         course1:
           'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-          'Maze: Sequence': 'מבוך: רצף'
-          'Maze: Debugging': 'מבוך: איתור באגים'
-          'Artist 1: Intro': 'אמן 1: מבוא'
-          Artists 2: אמנים 2
-          Spelling Bee: תחרות איות
-          Spelling Bee not blockly: תחרות האיות ללא blockly
-          'Bee 1: Intro': 'דבורה 1: מבוא'
-          'Maze 2: Loops': 'מבוך 2: לולאות'
-          'Bee 2: Loops': 'דבורה 2: לולאות'
-          Multi & Match: התאמה ורב בחירה
+          'Maze: Sequence': "מבוך: רצף"
+          'Maze: Debugging': "מבוך: איתור באגים"
+          'Artist 1: Intro': "אמן 1: מבוא"
+          Artists 2: "אמנים 2"
+          Spelling Bee: "תחרות איות"
+          Spelling Bee not blockly: "תחרות האיות ללא blockly"
+          'Bee 1: Intro': "דבורה 1: מבוא"
+          'Maze 2: Loops': "מבוך 2: לולאות"
+          'Bee 2: Loops': "דבורה 2: לולאות"
+          Multi & Match: "התאמה ורב בחירה"
           K-1 Flappy: K-1 Flappy
           Flappy non blockly: Flappy non blockly
-          title: קורס 1
-          Artist 2: אמן 2
-          Happy Maps: מפות שמחות
+          title: "קורס 1"
+          Artist 2: "אמן 2"
+          Happy Maps: "מפות שמחות"
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: האירוע הגדול
+          The Big Event: "האירוע הגדול"
           Going Places Safely: Going Places Safely
           description: Start with Course 1 for early readers. Students will create
             computer programs that will help them learn to collaborate with others,
@@ -46,37 +46,37 @@
           'Bee: Loops': 'Bee: Loops'
           'Studio: Create a Story': 'Play Lab: Create a Story'
           'Artist: Loops': 'Artist: Loops'
-          description_audience: גילאי 4-6
-          description_short: קורס 1 מתאים לקוראים מתחילים.
+          description_audience: "גילאי 4-6"
+          description_short: "קורס 1 מתאים לקוראים מתחילים."
         course2:
-          The Maze: המבוך
+          The Maze: "המבוך"
           Suzi: Suzi
-          The Artist: האמן
+          The Artist: "האמן"
           Artist Debugging: Artist Debugging
-          Bounce: להקפיץ
+          Bounce: "להקפיץ"
           'Studio: Create a Story': 'Play Lab: Create a Story'
           Artist Loops: Artist Loops
           Bee Conditionals: Bee Conditionals
           Flappy: Flappy
-          title: קורס 2
+          title: "קורס 2"
           Bee Loops: Bee Loops
           Artist Functions: Artist Functions
           The Artist Debugging: The Artist Debugging
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Maze Loops: Maze Loops
-          Graph Paper Programming: תכנות לנייר משבצות
+          Graph Paper Programming: "תכנות לנייר משבצות"
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: תנאים
+          Conditionals: "תנאים"
           Binary Bracelets: Binary Bracelets
-          The Big Event: האירוע הגדול
+          The Big Event: "האירוע הגדול"
           Your Digital Footprint: Your Digital Footprint
-          description: קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס
+          description: "קורס 2 מתאים לסטונדטים קוראים ללא ניסיון קודם בתכנות. בקורס
             זה הסטונדטים יצרו תוכניות על מנת לפתור בעיות ויפתחו משחקים אינטראקטיביים
-            וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה.
-          'Maze: Sequence': 'מבוך: רצף'
+            וסיפורים אותם יוכלו לשתף. מומלץ לילדים בכיתה ב עד ה."
+          'Maze: Sequence': "מבוך: רצף"
           'Artist: Sequence': 'Artist: Sequence'
           'Maze: Loops': 'Maze: Loops'
           'Artist: Loops': 'Artist: Loops'
@@ -87,13 +87,13 @@
           'Artist: Sequence2': 'Artist: Sequence2'
           'Maze: Sequence2': 'Maze: Sequence2'
           'Artist: Nested Loops': 'Artist: Nested Loops'
-          description_audience: גילאי 6-18
+          description_audience: "גילאי 6-18"
           description_short: Start with Course 2 for students who can read.
         course3:
-          The Maze: המבוך
+          The Maze: "המבוך"
           'Studio: Create a Story': 'Play Lab: Create a Story'
-          The Artist: האמן
-          title: קורס 3
+          The Artist: "האמן"
+          title: "קורס 3"
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
@@ -103,10 +103,10 @@
           Bee Debugging: Bee Debugging
           Bee Functions: Bee Functions
           Artist Functions with Params: Artist Functions with Params
-          Bounce: להקפיץ
+          Bounce: "להקפיץ"
           Maze Conditionals: Maze Conditionals
           Artist Functions with Parameters: Artist Functions with Parameters
-          Computational Thinking: חשיבה חישובית
+          Computational Thinking: "חשיבה חישובית"
           Functional Suncatchers: Functional Suncatchers
           Songwriting Parameters: Songwriting Parameters
           Dice Race: Dice Race
@@ -120,8 +120,8 @@
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-5.
           'Studio: Create a Game': 'Play Lab: Create a Game'
-          Maze: מבוך
-          Artist: אמן
+          Maze: "מבוך"
+          Artist: "אמן"
           'Artist: Functions': 'Artist: Functions'
           'Bee: Functions': 'Bee: Functions'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -130,8 +130,8 @@
           'Farmer: While Loops': 'Farmer: While Loops'
           'Bee: Nested Loops': 'Bee: Nested Loops'
           'Bee: Debugging': 'Bee: Debugging'
-          Maze2: מבוך2
-          Artist2: אמן 2
+          Maze2: "מבוך2"
+          Artist2: "אמן 2"
           'Artist: Functions2': 'Artist: Functions2'
           'Bee: Functions2': 'Bee: Functions2'
           'Bee: Conditionals2': 'Bee: Conditionals2'
@@ -141,32 +141,32 @@
           'Bee: Nested Loops2': 'Bee: Nested Loops2'
           'Bee: Debugging2': 'Bee: Debugging2'
           'Artist: Patterns': 'Artist: Patterns'
-          Songwriting: Songwriting
-          description_audience: גילאי 8-18
-          description_short: קורס 3 הינו המשך לקורס 2.
+          Songwriting: "כתיבת שירים"
+          description_audience: "גילאי 8-18"
+          description_short: "קורס 3 הינו המשך לקורס 2."
         playlab:
-          title: מעבדת משחקים
-          description: ליצור סיפור או משחק עם Play Lab!
-          Play Lab: מעבדת משחקים
-          description_short: ליצור סיפור או משחק עם Play Lab!
+          title: "מעבדת משחקים"
+          description: "ליצור סיפור או משחק עם Play Lab!"
+          Play Lab: "מעבדת משחקים"
+          description_short: "ליצור סיפור או משחק עם Play Lab!"
         artist:
-          title: אמן
-          description: ציירו תמונות מגניבות ועיצובים עם האמן!
-          Artist: אמן
-          description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
+          title: "אמן"
+          description: "ציירו תמונות מגניבות ועיצובים עם האמן!"
+          Artist: "אמן"
+          description_short: "ציירו תמונות מגניבות ועיצובים עם האמן!"
         hourofcode:
-          Maze: מבוך
-          title: מבוך קלאסי
-          description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
-            זומבים וסקראט מעידן הקרח!
-          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
+          Maze: "מבוך"
+          title: "מבוך קלאסי"
+          description: "נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד
+            זומבים וסקראט מעידן הקרח!"
+          description_short: "נסו את יסודות מדעי המחשב עם המון דמויות כפיות!"
         frozen:
-          title: תכנתו עם אנה ואלזה
-          description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
-            שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
-          Artist: אמן
-          description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם
-            והיופי של קרח.
+          title: "תכנתו עם אנה ואלזה"
+          description: "תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+            שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!"
+          Artist: "אמן"
+          description_short: "בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את
+            הקסם והיופי של קרח."
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -177,9 +177,9 @@
             with anyone. Recommended for grades 4-8.
           'Artist: Variables': 'Artist: Variables'
           'Bee: For Loops': 'Bee: For Loops'
-          title: קורס 4
+          title: "קורס 4"
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: משתנים
+          Variables: "משתנים"
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -187,8 +187,8 @@
           'Play Lab: For Loops': 'Play Lab: For Loops'
           'Artist: Functions': 'Artist: Functions'
           'Unplugged: Tangrams': 'Unplugged: Tangrams'
-          Artist: אמן
-          Bee: דבורה
+          Artist: "אמן"
+          Bee: "דבורה"
           'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
           'Unplugged: Madlibs': 'Unplugged: Madlibs'
           'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
@@ -198,9 +198,9 @@
           Bee Binary: Bee Binary
           Farmer Binary: Farmer Binary
           Maze and Bee: Maze and Bee
-          Artist Binary: אמן בינארי
-          description_audience: גילאי 10-18
-          Super Challenge - Variables: אתגר מיוחד - משתנים
+          Artist Binary: "אמן בינארי"
+          description_audience: "גילאי 10-18"
+          Super Challenge - Variables: "אתגר מיוחד - משתנים"
           Super Challenge - For Loops: Super Challenge - For Loops
           Super Challenge - Functions and Parameters: Super Challenge - Functions
             and Parameters
@@ -212,7 +212,7 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'מבוך: רצף'
+          'Maze: Sequence': "מבוך: רצף"
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -222,15 +222,15 @@
           'Artist: Functions': 'Artist: Functions'
           'Bee: Debugging': 'Bee: Debugging'
         usability:
-          Intro: מבוא
+          Intro: "מבוא"
           Variables and For Loops: Variables and For Loops
           Functions and Functions with Parameters: Functions and Functions with Parameters
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: משתנים
-          For Loops: בשביל לולאות
-          Binary: Binary
+          Variables: "משתנים"
+          For Loops: "בשביל לולאות"
+          Binary: "בינארי"
         potus:
           title: special
           description_short: special
@@ -241,7 +241,7 @@
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: "בינארי"
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -266,7 +266,7 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
-          'Eval: Conditionals': תנאים
+          'Eval: Conditionals': "תנאים"
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
@@ -275,8 +275,8 @@
           title: Play Lab
           description_short: Create a story or make a game with Play Lab!
           description: Create a story or make a game with Play Lab!
-          Play Lab: מעבדת משחקים
-          Infinity: אינסוף
+          Play Lab: "מעבדת משחקים"
+          Infinity: "אינסוף"
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -288,7 +288,7 @@
           Making Pictures: Making Pictures
           Defining Variables: Defining Variables
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: "עיצוב המתכון"
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -314,12 +314,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: מדמה אינטרנט
+          title: "מדמה אינטרנט"
           description_short: ''
           description: ''
-          Internet Simulator: מדמה אינטרנט
-          Unit 1: יחידה 1
-          Unit 2: יחידה 2
+          Internet Simulator: "מדמה אינטרנט"
+          Unit 1: "יחידה 1"
+          Unit 2: "יחידה 2"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -353,71 +353,71 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)
-          description_audience: גילאי 10-18
-          description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
-            הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+          title: "ק-8 מבוא לקורס במדעי המחשב (15-25 שעות)"
+          description_audience: "גילאי 10-18"
+          description: "קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות
+            בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: היכרות למדעי המחשב
-          The Maze: המבוך
-          Computational Thinking: חשיבה חישובית
-          Graph Paper Programming: תכנות לנייר משבצות
-          The Artist: האמן
-          Algorithms: אלגוריתמים
-          The Artist 2: האומן 2
-          Functions: פונקציות
-          The Farmer: האיכר
-          Conditionals: תנאים
-          The Artist 3: האומן 3
-          Song Writing: כתיבת שיר
-          The Farmer 2: האיכר 2
-          Abstraction: הפשטה
-          The Artist 4: האמן 4
-          Relay Programming: הרץ פעולה בשנית
-          The Farmer 3: האיכר 3
-          The Internet: האינטרנט
-          The Artist 5: האומן 5
-          Wrap-up: סיום
+          Introduction to Computer Science: "היכרות למדעי המחשב"
+          The Maze: "המבוך"
+          Computational Thinking: "חשיבה חישובית"
+          Graph Paper Programming: "תכנות לנייר משבצות"
+          The Artist: "האמן"
+          Algorithms: "אלגוריתמים"
+          The Artist 2: "האומן 2"
+          Functions: "פונקציות"
+          The Farmer: "האיכר"
+          Conditionals: "תנאים"
+          The Artist 3: "האומן 3"
+          Song Writing: "כתיבת שיר"
+          The Farmer 2: "האיכר 2"
+          Abstraction: "הפשטה"
+          The Artist 4: "האמן 4"
+          Relay Programming: "הרץ פעולה בשנית"
+          The Farmer 3: "האיכר 3"
+          The Internet: "האינטרנט"
+          The Artist 5: "האומן 5"
+          Wrap-up: "סיום"
         edit-code:
-          title: עריכת קוד
-          description: עריכת קוד
-          description_short: עריכת קוד
-          The Maze: המבוך
+          title: "עריכת קוד"
+          description: "עריכת קוד"
+          description_short: "עריכת קוד"
+          The Maze: "המבוך"
           Applab: Applab
-          The Artist: האמן
-          Play Lab: מעבדת משחקים
+          The Artist: "האמן"
+          Play Lab: "מעבדת משחקים"
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: אירועים
-          description: אירועים
-          description_short: אירועים
-          Bounce: להקפיץ
+          title: "אירועים"
+          description: "אירועים"
+          description_short: "אירועים"
+          Bounce: "להקפיץ"
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: קוד מתנופף
-          description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות
-            שלנו!
+          title: "קוד מתנופף"
+          description: "רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות
+            שלנו!"
           description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: קוד מתנופף
+          Flappy Code: "קוד מתנופף"
         jigsaw:
-          title: פאזל
+          title: "פאזל"
           description: ''
           description_short: Try our Jigsaw tutorial
-          Jigsaw: פאזל
+          Jigsaw: "פאזל"
         step:
-          title: צעד
+          title: "צעד"
           description: ''
           description_short: Step tutorial
-          Step: צעד
+          Step: "צעד"
         Hour of Code:
-          title: שעה של קוד 2013
+          title: "שעה של קוד 2013"
           description: ''
-          description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          Hour of Code 2013: שעה של קוד 2013
+          description_short: "נסו את יסודות מדעי המחשב עם המון דמויות כפיות!"
+          Hour of Code 2013: "שעה של קוד 2013"
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -455,7 +455,7 @@
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           Course 4 Prerequisite: Course 4 Prerequisite
-          'Maze: Sequence': 'מבוך: רצף'
+          'Maze: Sequence': "מבוך: רצף"
           'Artist: Sequence': 'Artist: Sequence'
           'Artist: Loops': 'Artist: Loops'
           'Bee: Conditionals': 'Bee: Conditionals'
@@ -539,7 +539,7 @@
           Contracts: Contracts
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: "עיצוב המתכון"
           Your Game - Animation: Your Game - Animation
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -640,7 +640,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: פונקציות
+          Functions: "פונקציות"
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -700,7 +700,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: משתנים
+          Variables: "משתנים"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -733,7 +733,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: "בעוד לולאות"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -754,7 +754,7 @@
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
           Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          The Design Recipe: "עיצוב המתכון"
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -903,7 +903,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: האינטרנט
+          description_short: "האינטרנט"
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -922,7 +922,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: האינטרנט
+          The Internet: "האינטרנט"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -961,7 +961,7 @@
           Defining Variables: Defining Variables
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: "עיצוב המתכון"
           Big Game - Animation: Big Game - Animation
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -971,16 +971,16 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: משחק חופשי
+          Free Play: "משחק חופשי"
         allthethings:
-          Jigsaw: פאזל
-          Maze: מבוך
-          Artist: אמן
-          Bee: דבורה
+          Jigsaw: "פאזל"
+          Maze: "מבוך"
+          Artist: "אמן"
+          Bee: "דבורה"
           PlayLab: PlayLab
           Farmer: Farmer
           Flappy: Flappy
-          Bounce: להקפיץ
+          Bounce: "להקפיץ"
           Multi: Multi
           Match: Match
           TextMatch: TextMatch
@@ -1024,20 +1024,20 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: מדמה אינטרנט
-          App Lab: מעבדת היישומים
+          Internet Simulator: "מדמה אינטרנט"
+          App Lab: "מעבדת היישומים"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: מדמה אינטרנט
-          App Lab: מעבדת היישומים
+          Internet Simulator: "מדמה אינטרנט"
+          App Lab: "מעבדת היישומים"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1062,7 +1062,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1071,7 +1071,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: סיום
+          Wrap-up: "סיום"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1116,11 +1116,11 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: שעה של קוד 2015
-          description_short: השתמש בPlayLab כדי ליצור סיפור או משחק.
-          description: השתמש בPlayLab כדי ליצור סיפור או משחק.
-          Hour of Code: שעה של קוד
-          Hour of Code 2015: שעה של קוד 2015
+          title: "שעה של קוד 2015"
+          description_short: "השתמש בPlayLab כדי ליצור סיפור או משחק."
+          description: "השתמש בPlayLab כדי ליצור סיפור או משחק."
+          Hour of Code: "שעה של קוד"
+          Hour of Code 2015: "שעה של קוד 2015"
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1141,15 +1141,15 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: ברוכים הבאים!
-          The Design Recipe: The Design Recipe
+          Welcome!: "ברוכים הבאים!"
+          The Design Recipe: "עיצוב המתכון"
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ברוכים הבאים!
-          Wrap-Up: Wrap-Up
+          Welcome!: "ברוכים הבאים!"
+          Wrap-Up: "אריזה"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1165,13 +1165,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "אריזה"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1183,7 +1183,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1192,12 +1192,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "אריזה"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1216,12 +1216,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: סיום
+          Wrap-up: "סיום"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1240,7 +1240,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: סיום
+          Wrap-up: "סיום"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1281,15 +1281,15 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: מפות שמחות
+          Happy Maps: "מפות שמחות"
           Move it, Move it: Move it, Move it
           'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-          Graph Paper Programming: תכנות לנייר משבצות
+          Graph Paper Programming: "תכנות לנייר משבצות"
           Building a Foundation: Building a Foundation
           Getting Loopy: Getting Loopy
-          The Big Event: האירוע הגדול
+          The Big Event: "האירוע הגדול"
           Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Songwriting: "כתיבת שירים"
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1338,7 +1338,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1371,7 +1371,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1406,7 +1406,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1441,7 +1441,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1450,7 +1450,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1472,7 +1472,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: הצהרת פרטיות
+          Privacy Policy: "הצהרת פרטיות"
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1508,17 +1508,19 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "אריזה"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1536,7 +1538,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1553,21 +1555,22 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: גילאי 10-18
+          description_audience: "גילאי 10-18"
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: גילאי 10-18
+          description_audience: "גילאי 10-18"
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
-          title: עידן הקרח Play Lab
-          description_short: צור סיפור או משחק עם עידן הקרח בPlay Lab!
-          description: צור סיפור או משחק עם עידן הקרח בPlay Lab!
-          Ice Age Play Lab: עידן הקרח Play Lab
+          title: "עידן הקרח Play Lab"
+          description_short: "צור סיפור או משחק עם עידן הקרח בPlay Lab!"
+          description: "צור סיפור או משחק עם עידן הקרח בPlay Lab!"
+          Ice Age Play Lab: "עידן הקרח Play Lab"
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1602,7 +1605,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: "בעוד לולאות"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1627,30 +1630,30 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
+          title: "מלחמת הכוכבים: בונים גלקסיה באמצעות קוד"
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
             הפרטי שלכם בגלקסיה רחוקה, רחוקה...
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי
             שלכם בגלקסיה רחוקה, רחוקה...
-          Hour of Code 2015: שעה של קוד 2015
+          Hour of Code 2015: "שעה של קוד 2015"
         starwarsblocks:
-          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד'
+          title: "מלחמת הכוכבים: בונים גלקסיה באמצעות קוד"
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
             הפרטי שלכם בגלקסיה רחוקה, רחוקה...
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי
             שלכם בגלקסיה רחוקה, רחוקה...
-          Hour of Code 2015: שעה של קוד 2015
+          Hour of Code 2015: "שעה של קוד 2015"
         minecraft:
-          title: מיינקראפט
+          title: "מיינקראפט"
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: 'שעת הקוד: גרסת מיינקראפט'
-          description_short: גלה את העולם של מיינקראפט באמצעות קוד
-          description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
-            של מיינקראפט
-          Hour of Code 2015: שעה של קוד 2015
+          title: "שעת הקוד: גרסת מיינקראפט"
+          description_short: "גלה את העולם של מיינקראפט באמצעות קוד"
+          description: "השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם
+            של מיינקראפט"
+          Hour of Code 2015: "שעה של קוד 2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1662,9 +1665,9 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ברוכים הבאים!
+          Welcome!: "ברוכים הבאים!"
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: "אריזה"
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

@@ -720,7 +720,7 @@ it:
       2:
         image: notes/C2_bee_debugging_2.png
         text: |-
-          Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Premi il pulsante "Fai un passo" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario risolvere un problema.
+          Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario risolvere un problema.
       3:
         image: notes/C2_bee_debugging_3.png
         text: |-
@@ -903,7 +903,7 @@ it:
       2:
         image: notes/C3_debugging_bee_2.png
         text: |-
-          Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Premi il pulsante "Fai un passo" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario risolvere un problema.
+          Hai a tua disposizione una serie di blocchi già pronti nell'area di lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario risolvere un problema.
       3:
         image: notes/C3_debugging_bee_3.png
         text: |-
@@ -1477,7 +1477,7 @@ it:
       7:
         image: notes/starwars_intro_7.JPG
         text: |-
-          Se sposti il blocco "moveLeft();" (vai a sinistra) sull'area di lavoro come illustrato e premi il pulsante "Esegui" (Run), cosa succede? BB-8 si sposta di una casella a sinistra sulla griglia.
+          Se sposti il blocco "moveLeft();" (vai a sinistra) sull'area di lavoro come illustrato e clicchi su "Esegui" (Run), cosa succede? BB-8 si sposta di una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_intro_8.JPG
         text: 'E cosa puoi fare se vuoi che BB-8 faccia qualcosa dopo essere andato a sinistra? Puoi aggiungere un altro blocco al programma. Scegli il blocco "moveUp();" (vai in alto) e spostalo sotto il blocco "moveLeft();" che hai aggiunto prima. Non appena appare una linea gialla sul contorno puoi rilasciarlo e i due blocchi si agganceranno.'
@@ -1584,7 +1584,7 @@ it:
       7:
         image: notes/starwars_blocks_intro_7.JPG
         text: |-
-          Se sposti il blocco "move left" (vai a sinistra) nell'area di lavoro come illustrato e premi il pulsante "Esegui" (Run), cosa succede? BB-8 si sposta di una casella a sinistra sulla griglia.
+          Se sposti il blocco "move left" (vai a sinistra) nell'area di lavoro come illustrato e clicchi su "Esegui" (Run), cosa succede? BB-8 si sposta di una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_blocks_intro_8.JPG
         text: |-
@@ -1666,7 +1666,7 @@ it:
       9:
         image: notes/mc_intro_9.JPG
         text: |-
-          Se sposti il blocco "moveForward" (vai avanti) nell'area di lavoro come illustrato e premi il pulsante "Esegui", cosa succede? Alex si sposta di una casella avanti sulla griglia.
+          Se sposti il blocco "moveForward" (vai avanti) nell'area di lavoro come illustrato e clicchi su "Esegui", cosa succede? Alex si sposta di una casella avanti sulla griglia.
       10:
         image: notes/mc_intro_10.JPG
         text: |-

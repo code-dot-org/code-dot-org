@@ -163,10 +163,10 @@
         hourofcode:
           Maze: Labirint
           title: Labirint Clasic
-          description: Încercaţi bazele informaticii cu personaje din Angry Birds,
-            Plants vs Zombies şi Scrat din Ice Age!
-          description_short: Încercați elemente de bază în informatică cu multe personaje
-            amuzante!
+          description: "Încercaţi bazele informaticii cu personaje din Angry Birds,
+            Plants vs Zombies şi Scrat din Ice Age!"
+          description_short: "Încercați elemente de bază în informatică cu multe personaje
+            amuzante!"
         frozen:
           title: Codați cu Anna și Elsa
           description: Hai să folosim programarea pentru a ne alătura Annei şi Elsei
@@ -236,7 +236,7 @@
           Variables and For Loops: Variabile și Bucle pentru
           Functions and Functions with Parameters: Funcții și funcții cu parametri
           title: Testarea uzabilității
-          description_short: '[șir gol]'
+          description_short: "[șir gol]"
           description: O selecție din nivelurile cursului 4 pentru testarea uzabilității.
           Variables: Variabile
           For Loops: Bucle Pentru
@@ -254,12 +254,12 @@
           Binary: Binar
         algebra:
           title: Informatică în Algebră
-          description: Învață Programare Funcțională prin Algebră
-          description_short: Învață Programare Funcțională prin Algebră
+          description: "Învață Programare Funcțională prin Algebră"
+          description_short: "Învață Programare Funcțională prin Algebră"
           'Unplugged: Video Games and Coordinate Planes': 'Fără calculator: Jocuri
             video și planuri de coordonate'
           'Calc: Evaluation Blocks': 'Calcul: Blocuri de evaluare'
-          'Eval: Strings and Images': Șiruri și Imagini
+          'Eval: Strings and Images': "Șiruri și Imagini"
           'Unplugged: Contracts': 'Fără calculator: Contracte'
           'Eval: Writing Contracts': 'Evaluare: Scrierea de contracte'
           'Calc: Defining Variables': 'Calcul: Definirea variabilelor'
@@ -327,8 +327,8 @@
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
           title: Simulator Internet
-          description_short: '[șir gol]'
-          description: '[șir gol]'
+          description_short: "[șir gol]"
+          description: "[șir gol]"
           Internet Simulator: Simulator Internet
           Unit 1: Unitatea 1
           Unit 2: Unitatea 2
@@ -391,7 +391,7 @@
           The Farmer 3: Fermierul 3
           The Internet: Internetul
           The Artist 5: Artistul 5
-          Wrap-up: Încheiere
+          Wrap-up: "Încheiere"
         edit-code:
           title: Editează Codul
           description: Editează Codul
@@ -418,19 +418,19 @@
           Flappy Code: Codul Flappy
         jigsaw:
           title: Puzzle
-          description: '[șir gol]'
-          description_short: '[șir gol]'
+          description: "[șir gol]"
+          description_short: "[șir gol]"
           Jigsaw: Puzzle
         step:
           title: Pas
-          description: '[șir gol]'
-          description_short: '[șir gol]'
+          description: "[șir gol]"
+          description_short: "[șir gol]"
           Step: Pas
         Hour of Code:
           title: Ora de Programare 2013
-          description: '[șir gol]'
-          description_short: Încercați elemente de bază în informatică cu multe personaje
-            amuzante!
+          description: "[șir gol]"
+          description_short: "Încercați elemente de bază în informatică cu multe personaje
+            amuzante!"
           Hour of Code 2013: Ora de Programare 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
@@ -549,7 +549,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Laboratorul de joc: Detectarea
             de coliziuni (jocul mare)'
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri și Imagini
+          Strings and Images: "Șiruri și Imagini"
           Contracts: Contracte
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -573,7 +573,7 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri și Imagini
+          Strings and Images: "Șiruri și Imagini"
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -767,7 +767,7 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Blocuri de evaluare
           The Big Game: The Big Game
-          Strings and Images: Șiruri și Imagini
+          Strings and Images: "Șiruri și Imagini"
           The Design Recipe: Rețeta pentru design
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -971,7 +971,7 @@
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri și Imagini
+          Strings and Images: "Șiruri și Imagini"
           Defining Variables: Definirea Variabilelor
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
@@ -1022,7 +1022,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri și Imagini
+          Strings and Images: "Șiruri și Imagini"
           Writing Contracts: Writing Contracts
           Defining Variables: Definirea Variabilelor
           Defining Functions: Definirea Funcțiilor
@@ -1085,7 +1085,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Încheiere
+          Wrap-up: "Încheiere"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1145,7 +1145,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Blocuri de evaluare
-          Strings and Images: Șiruri și Imagini
+          Strings and Images: "Șiruri și Imagini"
           Writing Contracts: Writing Contracts
           Defining Variables: Definirea Variabilelor
           Defining Functions: Definirea Funcțiilor
@@ -1232,7 +1232,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Încheiere
+          Wrap-up: "Încheiere"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -1256,7 +1256,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Încheiere
+          Wrap-up: "Încheiere"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1525,8 +1525,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1580,6 +1582,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Laboratorul Joaca Ice Age
           description_short: Creeaza o poveste sau un joc cu Laboratorul Joaca Ice
@@ -1684,5 +1687,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Revizuire
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

@@ -13,17 +13,17 @@
           Artist2: Processus 7
           Unplug5: Processus 8
           Farmer: Processus 9
-          Unplug6: Étape 10 
-          Artist3: Étape 11 
-          Unplug7: Étape 12 
-          Farmer2: Étape 13 
-          Unplug8: Étape 14 
-          Artist4: Étape 15 
-          Unplug9: Étape 16 
-          Farmer3: Étape 17 
-          Unplug10: Étape 18 
-          Artist5: Étape 19 
-          Unplug11: Étape 20 
+          Unplug6: "Étape 10 "
+          Artist3: "Étape 11 "
+          Unplug7: "Étape 12 "
+          Farmer2: "Étape 13 "
+          Unplug8: "Étape 14 "
+          Artist4: "Étape 15 "
+          Unplug9: "Étape 16 "
+          Farmer3: "Étape 17 "
+          Unplug10: "Étape 18 "
+          Artist5: "Étape 19 "
+          Unplug11: "Étape 20 "
         Hour of Code:
           desc: Heure de Code
           Maze: Processus 1
@@ -34,7 +34,7 @@
           desc: Rebond (bêta)
           Bounce: Processus 1
         Builder Levels:
-          desc: Énigmes créées par l'utilisateur (bêta)
+          desc: "Énigmes créées par l'utilisateur (bêta)"
           Custom: Processus 1
         Flappy Levels:
           desc: Flappy Bird
@@ -56,7 +56,7 @@
           Bounce: Processus 1
           Studio: Processus 2
         builder:
-          desc: Énigmes créées par l'utilisateur (bêta)
+          desc: "Énigmes créées par l'utilisateur (bêta)"
           Custom: Processus 1
         flappy:
           desc: Flappy Bird
@@ -394,7 +394,7 @@
           différent à la place.)
         maze_3_1: Je dois atteindre ce cochon ! Écrivez deux appels à move(); pour
           que je puisse retrouver mes œufs.
-        maze_3_2: Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon.
+        maze_3_2: "Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon."
         maze_3_3: Comment puis-je atteindre le cochon ? Assurez-vous que je ne trébuche
           pas sur la caisse pleine d'explosifs !
         maze_3_4: Argh ! Écrivez-moi un programme qui me permette d'éviter les explosifs
@@ -433,8 +433,8 @@
           sur « Démarrer » quand vous êtes prêt.
         flappy_1: Attache un bloc au bloc « lors d'un clic », puis clique sur « Démarrer ».
           Clique sur l'écran ou touche le pour déplacer Flappy vers la cible.
-        flappy_2: À présent, nous avons ajouté le sol. Attache un bloc au bloc « lorsque
-          le sol est touché ». Ton code doit « terminer le jeu » lorsque Flappy s'écrase.
+        flappy_2: "À présent, nous avons ajouté le sol. Attache un bloc au bloc « lorsque
+          le sol est touché ». Ton code doit « terminer le jeu » lorsque Flappy s'écrase."
         flappy_3: Le bloc « quand la partie démarre » te permet d'exécuter du code
           au démarrage de ton jeu.  Essaie de régler la vitesse du niveau et le battement
           d'ailes.
@@ -463,9 +463,9 @@
         flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
           « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
           la cible.
-        flappy_k1_3: À présent, nous avons ajouté du sol. Attachez un bloc au bloc
+        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase.
+          Flappy s'écrase."
         flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
           au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
           battement d'ailes.
@@ -719,7 +719,7 @@
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: Écriture de chansons
+        Unplug7: "Écriture de chansons"
         Unplug8: Abstraction
         Unplug9: Les relais
         Unplug10: Internet
@@ -798,7 +798,7 @@
         frozen_loops: Introduction aux boucles
         frozen_functions: Introduction aux fonctions
         playlab_intro: Introduction au Labo
-        playlab_events: Évènements du Play Lab
+        playlab_events: "Évènements du Play Lab"
         playlab_repeat_forever: Play Lab Répétition Infinie
         tutorial_puzzle_challenge: Tutoriel Puzzle Challenge
         infinity_playlab_intro: Play Lab - Introduction
@@ -891,10 +891,10 @@
           le bon nombre de degrés à tourner
         repeat_blocks: Utiliser le bloc « Repeat » et enroulez-le autour des blocs
           dans l'espace de travail
-        repeat_blocks_1: (1) Utilise ce bloc et place-le autour des blocs gris dans
-          l'espace de travail
-        repeat_blocks_2: (2) Fais glisser le bloc «Répéter» ici et place les blocs
-          gris à l'intérieur
+        repeat_blocks_1: "(1) Utilise ce bloc et place-le autour des blocs gris dans
+          l'espace de travail"
+        repeat_blocks_2: "(2) Fais glisser le bloc «Répéter» ici et place les blocs
+          gris à l'intérieur"
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
         degrees_per_side: Divisez 360 ar le nombre de côtés pour obtenir la taille
@@ -912,8 +912,8 @@
         edit_function: Cliquez ici pour modifier votre fonction.
         create_function: Clique ici pour ouvrir la fenêtre "Fonctions" et clique ensuite
           sur le bouton "Créer une fonction".
-        house_hint: Ça n'est pas grave si l'image ne ressemble pas encore à une maison.
-          Nous règlerons ça dans la prochaine épreuve.
+        house_hint: "Ça n'est pas grave si l'image ne ressemble pas encore à une maison.
+          Nous règlerons ça dans la prochaine épreuve."
         edit_draw_square: Utilise ce bouton pour éditer la fonction et ajouter la
           boucle.
         edit_get_nectar: Utilise ce bouton pour éditer la fonction et changer la direction
@@ -955,8 +955,8 @@
           pour dessiner un triangle
         edit_add_parameter: Clique sur "éditer" pour ajouter un paramètre dans ta
           fonction
-        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur ajouter,
-          et glisse-le ensuite dans la définition de ta fonction
+        add_and_drag_parameter: "Écris le nom de ton paramètre ici, clique sur ajouter,
+          et glisse-le ensuite dans la définition de ta fonction"
         fill_in_actor: Remplace les ??? par les nombres qui correspondent à chacun
           des acteurs (1, 2, et 3)
         repeat: Mets des blocs à l'intérieur de la boucle pour répéter les commandes
@@ -970,7 +970,7 @@
           points d'interrogation
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
         right_arrow_fireball: Utilise la flèche droite pour tirer des boules de feu
-        name_function: Écris le now de ta fonction ici
+        name_function: "Écris le now de ta fonction ici"
         Infinity_move_right_runbutton: Ajouter déplacer bloc ici
         Infinity_move_directions_callout: Quel bloc fera déplacer Baymax vers le haut
           lorsque tu appuies sur la flèche vers le haut ?

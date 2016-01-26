@@ -283,10 +283,6 @@ is:
   user_level:
     completed: Lokið
     tried: Reynt
-  user_stats:
-    recent_activity: Nýleg virkni
-    show_more: Sýna meira
-    classroom_activity: Verkefni án tölvu
   home:
     title: Kóðastúdíó
     description: Í Kóðastúdíóinu er að finna netnámskeið frá Code.org

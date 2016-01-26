@@ -24,8 +24,8 @@
       unlock_instructions:
         subject: Qulfdan chiqarish yo‘riqnomasi
     omniauth_callbacks:
-      failure: '%{kind} bo‘yicha tekshirish omadsiz, sababi: %{reason}.'
-      success: '%{kind} bo‘yicha tekshirish omadli yakunlandi.'
+      failure: "%{kind} bo‘yicha tekshirish omadsiz, sababi: %{reason}."
+      success: "%{kind} bo‘yicha tekshirish omadli yakunlandi."
     passwords:
       no_token: Siz bu sahifaga parolni qayta tuzish xabari orqaligina kirolasiz.
         Agar shu emaildan foydalanib kirgan bo‘lsangiz, havolaning butunligicha ko‘chirilganini
@@ -64,14 +64,14 @@
     messages:
       already_confirmed: allaqachon tasdiqlangan, iltimos, tizimga qaytadan kirib
         ko‘ring
-      confirmation_period_expired: '%{period} muddat ichida tasdiqlash kerak, iltimos
-        yangisini so‘rang'
+      confirmation_period_expired: "%{period} muddat ichida tasdiqlash kerak, iltimos
+        yangisini so‘rang"
       expired: tugagan, iltimos yangisini so‘rang
       not_found: topilmadi
       not_locked: qulflanmagan
       not_saved:
         one: '1 ta xato %{resource} ni saqlashga yo‘l qo‘ymayapti:'
-        other: '%{count} ta xatolar %{resource} ni saqlashga yo‘l qo‘ymayapti:'
+        other: "%{count} ta xatolar %{resource} ni saqlashga yo‘l qo‘ymayapti:"
     invitations:
       send_instructions: Taklifnoma %{email} ga jo‘natildi.
       invitation_token_invalid: Keltirilgan taklifnoma tokeni mavjud emas!

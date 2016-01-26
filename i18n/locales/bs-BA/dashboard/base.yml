@@ -281,10 +281,6 @@ bs:
   user_level:
     completed: Kompletirano
     tried: Pokušano
-  user_stats:
-    recent_activity: Nedavna aktivnost
-    show_more: Pokaži više
-    classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
     description: Code Studio je početna stranica online kurseva napravljenih u Code.org

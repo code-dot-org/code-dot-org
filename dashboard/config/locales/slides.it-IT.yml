@@ -334,11 +334,11 @@
           e lo inserisci al fianco di "lunghezza" (length) ...
       4:
         image: note/stadio11_4.jpg
-        text: '...questo significa che il nostro artista inizia disegnando un quadrato
+        text: "...questo significa che il nostro artista inizia disegnando un quadrato
           con lati lunghi 50 pixel. Poi aggiungerà 10 e disegnerà un quadrato con
           lati lunghi 60 pixel. Poi continuerà ad aggiungere 10 e disegnare quadrati
           con lati sempre più lunghi fino a quando raggiungerà 90. Così avremo quadrati
-          di 50, 60, 70, 80 e 90 pixel.'
+          di 50, 60, 70, 80 e 90 pixel."
     parameters:
       1:
         image: note/stadio15_1.jpg
@@ -1146,9 +1146,9 @@
       2:
         image: notes/C2_bee_debugging_2.png
         text: Hai a tua disposizione una serie di blocchi già pronti nell'area di
-          lavoro. Premi il pulsante "Fai un passo" (step) per eseguire questi blocchi
-          passo dopo passo e verificare se la soluzione è giusta, oppure se può essere
-          necessario risolvere un problema.
+          lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo
+          dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario
+          risolvere un problema.
       3:
         image: notes/C2_bee_debugging_3.png
         text: Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco
@@ -1488,9 +1488,9 @@
       2:
         image: notes/C3_debugging_bee_2.png
         text: Hai a tua disposizione una serie di blocchi già pronti nell'area di
-          lavoro. Premi il pulsante "Fai un passo" (step) per eseguire questi blocchi
-          passo dopo passo e verificare se la soluzione è giusta, oppure se può essere
-          necessario risolvere un problema.
+          lavoro. Clicca su "Fai un passo" (step) per eseguire questi blocchi passo
+          dopo passo e verificare se la soluzione è giusta, oppure se può essere necessario
+          risolvere un problema.
       3:
         image: notes/C3_debugging_bee_3.png
         text: Sembra proprio che ci sia un problema! Devi aggiungere un altro blocco
@@ -2727,8 +2727,8 @@
       7:
         image: notes/starwars_intro_7.JPG
         text: Se sposti il blocco "moveLeft();" (vai a sinistra) sull'area di lavoro
-          come illustrato e premi il pulsante "Esegui" (Run), cosa succede? BB-8 si
-          sposta di una casella a sinistra sulla griglia.
+          come illustrato e clicchi su "Esegui" (Run), cosa succede? BB-8 si sposta
+          di una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_intro_8.JPG
         text: E cosa puoi fare se vuoi che BB-8 faccia qualcosa dopo essere andato
@@ -2869,19 +2869,19 @@
           di più.'
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti
+        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti
           quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi
-          un Porco-Palla viene visualizzato un Assaltatore. Alla fine l''intero schermo
-          è pieno di Porco-Palla e quando ne tocchi 10.000, vinci.'
+          un Porco-Palla viene visualizzato un Assaltatore. Alla fine l'intero schermo
+          è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
+        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
           e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i
-          tasti in modo che ogni volta che si preme la freccia verso l''alto, il personaggio
+          tasti in modo che ogni volta che si preme la freccia verso l'alto, il personaggio
           va giù e quando si preme la freccia verso destra, il tuo personaggio va
           a sinistra. È molto difficile! A volte basta avere un vantaggio, e se sei
-          lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l''ho fatta?
-          Sìì!'
+          lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l'ho fatta?
+          Sìì!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: Quando hai finito di creare la tua versione del gioco, clicca su condividi
@@ -2930,8 +2930,8 @@
       7:
         image: notes/starwars_blocks_intro_7.JPG
         text: Se sposti il blocco "move left" (vai a sinistra) nell'area di lavoro
-          come illustrato e premi il pulsante "Esegui" (Run), cosa succede? BB-8 si
-          sposta di una casella a sinistra sulla griglia.
+          come illustrato e clicchi su "Esegui" (Run), cosa succede? BB-8 si sposta
+          di una casella a sinistra sulla griglia.
       8:
         image: notes/starwars_blocks_intro_8.JPG
         text: E cosa puoi fare se vuoi che BB-8 faccia qualcosa dopo essere andato
@@ -3008,19 +3008,19 @@
           di più.'
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti
+        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui si ottengono punti
           quando raggiungi i Porco-Palla. Il colpo di scena è che ogni volta che raggiungi
-          un Porco-Palla viene visualizzato un Assaltatore. Alla fine l''intero schermo
-          è pieno di Porco-Palla e quando ne tocchi 10.000, vinci.'
+          un Porco-Palla viene visualizzato un Assaltatore. Alla fine l'intero schermo
+          è pieno di Porco-Palla e quando ne tocchi 10.000, vinci."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
+        text: "[parlano gli studenti] Abbiamo fatto un gioco in cui non si può perdere
           e tutto ciò che uccidi ti dà punti. Per il mio programma, ho invertito i
-          tasti in modo che ogni volta che si preme la freccia verso l''alto, il personaggio
+          tasti in modo che ogni volta che si preme la freccia verso l'alto, il personaggio
           va giù e quando si preme la freccia verso destra, il tuo personaggio va
           a sinistra. È molto difficile! A volte basta avere un vantaggio, e se sei
-          lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l''ho fatta?
-          Sìì!'
+          lo sviluppatore del gioco puoi darti un vantaggio sleale. Ce l'ho fatta?
+          Sìì!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: Quando hai finito di creare la tua versione del gioco, clicca su condividi
@@ -3074,8 +3074,8 @@
       9:
         image: notes/mc_intro_9.JPG
         text: Se sposti il blocco "moveForward" (vai avanti) nell'area di lavoro come
-          illustrato e premi il pulsante "Esegui", cosa succede? Alex si sposta di
-          una casella avanti sulla griglia.
+          illustrato e clicchi su "Esegui", cosa succede? Alex si sposta di una casella
+          avanti sulla griglia.
       10:
         image: notes/mc_intro_10.JPG
         text: E cosa puoi fare se vuoi che Alex faccia qualcosa dopo essere avanzata
@@ -3177,9 +3177,9 @@
           voglia. A te la scelta.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con
+        text: "[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con
           le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona.
-          Abbiamo costruito una casa di lana!'
+          Abbiamo costruito una casa di lana!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Quando hai finito di creare la tua versione del gioco, clicca su "Condividi"
@@ -3196,9 +3196,9 @@
           voglia. A te la scelta.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con
+        text: "[parlano gli studenti] Sembra reale. Tosare. Io ho fatto una L con
           le torce. Io ho fatto una A con le assi di betulla. Funziona, funziona.
-          Abbiamo costruito una casa di lana!'
+          Abbiamo costruito una casa di lana!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Ora puoi costruire qualunque cosa tu voglia. Buon divertimento!

@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Mira el vídeo"},
 "when":function(d){return "quan"},
 "whenRun":function(d){return "quan s'executa"},
-"workspaceHeaderShort":function(d){return "Zona de treball: "}};
+"workspaceHeaderShort":function(d){return "Zona de treball: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

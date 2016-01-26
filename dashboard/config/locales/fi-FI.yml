@@ -42,7 +42,7 @@
   trophies: Pokaalit
   courses: Kurssit
   unplugged_activity: Tietokoneeton tekeminen
-  of: /
+  of: "/"
   more: LISÄÄ
   less: VÄHEMMÄN
   beta: beta
@@ -70,8 +70,8 @@
     need_confirmation: Etkö saanut vahvistusviestiä?
     need_unlock: Etkö saanut avausohjeita?
   signup_form:
-    student_count: '%{count} oppilasta on jo rekisteröitynyt.'
-    teacher_count: '%{count} opettajaa on jo rekisteröitynyt.'
+    student_count: "%{count} oppilasta on jo rekisteröitynyt."
+    teacher_count: "%{count} opettajaa on jo rekisteröitynyt."
     overview_student: Rekisteröidy niin voit seurata edistymistäsi. Sähköpostiosoitettasi
       käytetään pääasiassa sisäänkirjautumiseen ja salasanan palauttamiseen. Katso
       lisätietoja <a href="http://code.org/privacy">Yksityisyyskäytännöstämme</a>.
@@ -145,7 +145,7 @@
       %{name}
   follower:
     invite_sent: Kutsu lähetetty
-    added_teacher: '%{name} lisätty opettajaksesi'
+    added_teacher: "%{name} lisätty opettajaksesi"
     registered: Olet registeröitynyt ryhmään %{section_name}.
     error:
       signed_in: Ole hyvä ja kirjaudu ensin sisään
@@ -194,7 +194,7 @@
         opettaja.
       msg_visit_website: Käy websivulla
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 Gt Dropbox-tilaa
@@ -203,7 +203,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Valitse palkinto:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -220,16 +220,16 @@
         not_earned_title: Opeta kurssia, ansaitse jopa 1000 dollaria <a target="_blank"
           href="http://DonorsChoose.org">DonorsChoose.org</a> krediitteinä (vain USA:n
           opettajat)
-        not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain
-          USA:ssa)
+        not_earned: "(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain
+          USA:ssa)"
         bonus:
           not_earned_title: Voit edelleen ansaita 250 dollaria <a target="_blank"
             href="http://DonorsChoose.org"> DonorsChoose.org</a> palveluun (vain USA)
           earned: "Hieno suoritus! 7 tai useampi oppilaistasi, jotka keräsivät kaikki
             %{num_trophies} ovat tyttöjä. \n\nHuom: sivustolla mainitut raha- ja tavarapalkinnot
             ovat voimassa vain USA:ssa\n"
-          not_earned: (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
-            vain USA:ssa)
+          not_earned: "(sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa
+            vain USA:ssa)"
   crud:
     new_model: Uusi %{model}
     show: Näytä
@@ -239,9 +239,9 @@
     destroy: Tuhoa
     back: Takaisin
     confirm: Oletko varma?
-    created: '%{model} luotiin onnistuneesti.'
-    updated: '%{model} päivitettiin onnistuneesti.'
-    destroyed: '%{model} poistaminen onnistui.'
+    created: "%{model} luotiin onnistuneesti."
+    updated: "%{model} päivitettiin onnistuneesti."
+    destroyed: "%{model} poistaminen onnistui."
     access_denied: Sinulla ei ole pääsyä tähän %{model}.
   nav:
     header:
@@ -276,7 +276,7 @@
         Hienoa! Keräsit kaikki %{total_trophies} pokaalia.
 
         (sivustolla mainitut raha- ja tavarapalkinnot ovat voimassa vain USA:ssa)
-      prize_us_only: (vain oppilaille USA:ssa)
+      prize_us_only: "(vain oppilaille USA:ssa)"
       prizes_link: lisätietoja
   teacher:
     answer: Vastaus
@@ -284,7 +284,7 @@
     title:
       one: 'Opettajasi:'
       other: 'Opettajasi:'
-    remove: (poista opettaja)
+    remove: "(poista opettaja)"
     confirm:
       remove: Oletko varma, että haluat poistaa tämän opettajan?
     students:
@@ -305,10 +305,10 @@
   user:
     email_confirm_needed: 'Sähköpostiosoitetta ei ole vahvistettu:'
     email_confirm_needed_required: 'Sinun sähköpostiosoitettasi %{email} ei ole vahvistettu:'
-    email_confirm_wrong_email: (Väärä sähköpostiosoite?)
+    email_confirm_wrong_email: "(Väärä sähköpostiosoite?)"
     email_resend_confirm: Lähetä vahvistusohjeet uudestaan
-    new_password_hint: (jätä tyhjäksi jos et halua vaihtaa)
-    current_password_hint: (anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)
+    new_password_hint: "(jätä tyhjäksi jos et halua vaihtaa)"
+    current_password_hint: "(anna nykyinen salasanasi, jotta voimme vahvistaa muutokset)"
     delete: Poista tilisi
     delete_text: Klikkaamalla alla olevaa painiketta poistat tilisi.
     delete_text_teacher_note: 'Huomaa: oman tilisi poistaminen ei poista opiskelijoittesi
@@ -317,16 +317,12 @@
   user_level:
     completed: Valmis
     tried: Kokeili
-  user_stats:
-    recent_activity: Tapahtumat
-    show_more: Näytä lisää
-    classroom_activity: Tietokoneeton tekeminen
   home:
     title: Code Studio
     description: Code Studio on paikka josta löydät Code.org:in verkkokurssit.
-    lines_of_code: '%{lines_count} OPPILAIDEN KIRJOITTAMAA KOODIRIVIÄ'
-    lines_of_code_linebreak: '%{lines_count} KIRJOITETTUA KOODIRIVIÄ<br/>%{students_count}
-      MILJOONAA OPISKELIJAA'
+    lines_of_code: "%{lines_count} OPPILAIDEN KIRJOITTAMAA KOODIRIVIÄ"
+    lines_of_code_linebreak: "%{lines_count} KIRJOITETTUA KOODIRIVIÄ<br/>%{students_count}
+      MILJOONAA OPISKELIJAA"
     all_courses: Katsaus kursseihin 1, 2 ja 3
     lesson_plans: Tuntisuunnitelmat
     signin_message: Jo rekisteröitynyt? %{link}
@@ -363,10 +359,10 @@
     test_videos_help: Testaa uutta videosoitintamme koulussasi
     try_beta_courses: Uutta! Kokeile beta-kurssejamme K-5 oppilaille
     use_as_teacher: Käytä sivustoa opettajana
-    heading_hoc2014: <h2>Koodaustunti</h2><h1>kaikille ikäryhmille</h1>
-    heading_elementary: <h2>20 tunnin kurssit</h2><h1>aloittelijoille (kaikki ikäryhmät)</h1>
-    heading_apps: <h2>Hauskaa</h2><h1>kaikille</h1>
-    heading_legacy: <h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>
+    heading_hoc2014: "<h2>Koodaustunti</h2><h1>kaikille ikäryhmille</h1>"
+    heading_elementary: "<h2>20 tunnin kurssit</h2><h1>aloittelijoille (kaikki ikäryhmät)</h1>"
+    heading_apps: "<h2>Hauskaa</h2><h1>kaikille</h1>"
+    heading_legacy: "<h2>Yleinen kurssimme</h2><h1>kaiken ikäisille</h1>"
     your_gallery: Galleria
     no_primary_course: Kokeile kurssia Code Studiossa
     choose_next_course: Kokeile jotakin allaolevista Code Studion kursseista
@@ -399,8 +395,8 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Toimii Amazon Web Services -palvelun päällä
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Copyright
     more: Lisää
     feedback: Anna palautetta
@@ -521,8 +517,8 @@
       ja kuvaruutukaappauksia nähdäksesi kunkin ohjelman toiminnassa.
     want_to_make_your_own: Haluatko tehdä omasi?
     more: Lisää &rarr;
-    caption_by_name_age: '%{name} tekemä, ikä %{age}'
-    caption_time_ago: '%{time_ago} sitten'
+    caption_by_name_age: "%{name} tekemä, ikä %{age}"
+    caption_time_ago: "%{time_ago} sitten"
     header: Galleria
     header_playlab: Pelilabra
     header_artist: Taiteilija
@@ -535,7 +531,7 @@
     feedback: Anna palautetta
     report_bug: Raportoi ongelma
     support: Katso ohjeet
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!

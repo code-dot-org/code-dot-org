@@ -1057,8 +1057,8 @@
           på den när den går igenom varje block steg för steg.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Åh, där är problemet! Kattens morrhår är 75 bildpunkter långa, inte
-          25.
+        text: "Åh, där är problemet! Kattens morrhår är 75 bildpunkter långa, inte
+          25."
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -2651,17 +2651,17 @@
           för att göra ännu mer.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[elever berättar] Så vi gjorde ett spel som går ut på att du får poäng
+        text: "[elever berättar] Så vi gjorde ett spel som går ut på att du får poäng
           för varje puffer-gris gris du fångar. Utmaningen är att en stormtrooper
           dyker upp varje gång du fångat en gris. Hela skärmen är full med grisar
-          och när du fångat 10 000 grisar vinner du.'
+          och när du fångat 10 000 grisar vinner du."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[elever berättar] Vi gjorde ett spel där man inte kan förlora och allt
+        text: "[elever berättar] Vi gjorde ett spel där man inte kan förlora och allt
           man dödar ger poäng. I mitt program lät jag tangenterna byta plats så att
           när man klickar upp går den ned, och när man klickar höger går den åt vänster.
           Det är verkligen svårt! Ibland får du en fördel, en orättvis sådan, om du
-          är en spelutvecklare. Fick jag det? Yay!'
+          är en spelutvecklare. Fick jag det? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: När du är klar med ditt spel, välj 'Dela' för att få en länk du kan
@@ -2775,17 +2775,17 @@
           för att göra ännu mer.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[elever berättar] Så vi gjorde ett spel som går ut på att du får poäng
+        text: "[elever berättar] Så vi gjorde ett spel som går ut på att du får poäng
           för varje puffer-gris gris du fångar. Utmaningen är att en stormtrooper
           dyker upp varje gång du fångat en gris. Hela skärmen är full med grisar
-          och när du fångat 10 000 grisar vinner du.'
+          och när du fångat 10 000 grisar vinner du."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[elever berättar] Vi gjorde ett spel där man inte kan förlora och allt
+        text: "[elever berättar] Vi gjorde ett spel där man inte kan förlora och allt
           man dödar ger poäng. I mitt program lät jag tangenterna byta plats så att
           när man klickar upp går den ned, och när man klickar höger går den åt vänster.
           Det är verkligen svårt! Ibland får du en fördel, en orättvis sådan, om du
-          är en spelutvecklare. Fick jag det? Yay!'
+          är en spelutvecklare. Fick jag det? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: När du är klar med ditt spel, välj 'Dela' för att få en länk du kan

@@ -105,7 +105,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Összegzés
+        title: "Összegzés"
         desc: Az első 20 órás sorozat vége segít átélni az osztály kedvenc pillanatait
           és rávezeti őket a következő lépésekre, ha érdekli őket a számítógép tudománnyal
           megkezdett út folytatása.
@@ -291,6 +291,6 @@
         desc: Feltételes és "Piecewise funkciók" lecke leírása
         video: alg_10_conditionals
       CollisionDetection:
-        title: Ütközés felismerés
-        desc: Ütközés felismerés lecke leírása
+        title: "Ütközés felismerés"
+        desc: "Ütközés felismerés lecke leírása"
         video: alg_16_biggame_collision_detection

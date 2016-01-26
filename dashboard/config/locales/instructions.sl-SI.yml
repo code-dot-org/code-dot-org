@@ -1,9 +1,9 @@
 "sl":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: Živio, jaz sem umetnik. Lahko sestaviš kodo, s
-        pomočjo katere bom narisal skoraj vse. Uporabi nekaj blokov, da bom risal
-        preko sivih črt v sliki. (Vsaka črta je dolga 100 pixlov)
+      2-3 Artist 1 new_instruction: "Živio, jaz sem umetnik. Lahko sestaviš kodo,
+        s pomočjo katere bom narisal skoraj vse. Uporabi nekaj blokov, da bom risal
+        preko sivih črt v sliki. (Vsaka črta je dolga 100 pixlov)"
       2-3 Artist 11_instruction: 'Obrobi Stop znak, tako da narišeš osmerokotnik,
         torej lik z 8 stranicami, katera vsaka je dolga 100 pixlov. Koliko kotnih
         stopinj se moraš obrniti po vsaki stranici? (Namig: Koliko je 360 deljeno
@@ -289,8 +289,8 @@
       2-3 Bee Loops 13_instruction: |
         Assessment: Use the repeat block to collect
         all of the nectar.
-      2-3 Bee Loops 1A_instruction: 'Živio, jaz sem čebela. Mi pomagaš nabrati nektar
-        od teh rožic? '
+      2-3 Bee Loops 1A_instruction: "Živio, jaz sem čebela. Mi pomagaš nabrati nektar
+        od teh rožic? "
       2-3 Bee Loops 2_instruction: Uporabi zanko, da nabereš nektar in narediš med.
       2-3 Bee Loops 2A_instruction: Ali lahko to opraviš preprosteje z zanko?
       2-3 Bee Loops 3_instruction: 'Naberi nektar od vsake rožice in naredi med v
@@ -851,11 +851,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: preizkusi
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -2458,8 +2475,8 @@
         and 120 degree angles instead of all 90 degree angles.
       frozen freeplay_instruction: Uradno si postal mojster umetnik! Ustvari zimsko
         čudežno deželo.
-      frozen line_instruction: Živijo! Jaz sem Elsa Ardanelska. Pomagaj mi ustvariti
-        eno črto.
+      frozen line_instruction: "Živijo! Jaz sem Elsa Ardanelska. Pomagaj mi ustvariti
+        eno črto."
       frozen perpendicular_instruction: |
         Pa poglejmo, če lahko ustvarimo dve liniji,
         med katerima je kot 90 stopinj. Uporabiti
@@ -3142,9 +3159,9 @@
         narediti iz njega. Pojdi do drevesa in uporabi ukaz 'uniči', da ga posekaš.
       Overworld Chop Trees_instruction: Zgraditi moramo hišo preden sonce zaide. Hiše
         potrebujejo veliko lesa. Posekaj vsa 3 drevesa.
-      Overworld Free Play 20x20_instruction: Čestitamo! Zaključili ste vse uganke!
+      Overworld Free Play 20x20_instruction: "Čestitamo! Zaključili ste vse uganke!
         Sedaj pa razbijajte, gradite in ustvarite nekaj edinstvenega z uporabo vsega
-        naučenega do sedaj.
+        naučenega do sedaj."
       Overworld Free Play_instruction: Ta pokrajina je vaša za igranje. Izberite kaj
         želite zgraditi.
       Overworld House Frame - A_instruction: Naredimo našo hišo! To mesto zgleda vredu.
@@ -3174,8 +3191,8 @@
       Overworld Powered Minecart_instruction: Dobro opravljeno! Zbrali ste veliko
         virov in si zgradili skomen dom. Sedaj položite tračnice od roba zemljevida
         do vrat vaše hiše.
-      Overworld Shear Sheep_instruction: Čas je za striženje ovc! Uporabite ukaz 'ostriži'
-        in zberite volno od obeh ovc.
+      Overworld Shear Sheep_instruction: "Čas je za striženje ovc! Uporabite ukaz
+        'ostriži' in zberite volno od obeh ovc."
       PDAlg 13-16 Sam Extension Puzzle_instruction: |
         Add a second parameter to "onscreen?"
         for Sam's y coordinate and update the function so it keeps him safe on all

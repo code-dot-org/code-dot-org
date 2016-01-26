@@ -427,16 +427,16 @@ zh:
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: "In sand sculpture you've got to know that failure is part of the program. But if you persist, it's just going to get nothing but better and more exciting for you. Persistence is the name of the game. Stay with it, you'll love it."
+        text: 從沙雕中，你知道失敗是程式的一部份。但如果你繼續堅持下去的話，這只會越來越好、越來越刺激。這個遊戲的名字叫做堅持下去。別走開，你將會愛上它。
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: "This lesson is called building a foundation. In this lesson, we'll work on a task that is meant to be really difficult. You will figure out how to make a structure at least as tall as one of these cups and it's got to be strong enough to hold the weight of a book."
+        text: 這個單元叫做建立基礎。在這個課程中，我們將完成一個本來就很很難的任務。你將會理解要怎麼做出一個至少和這些杯子一樣高的結構，而且它必須能承受一本書的重量。
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: "There might be times that our creation doesn't work out. There might be times that we get frusrated and want to give up. There might be a lot of those moments. But if we keep on trying, give it our best shot over and over again, then we're sure to get it before long."
+        text: 有時候，我們的創作不一定會成功。有時候我們會覺得很挫敗而想放棄。也有可能常常會有這種感覺。但如果我們繼續嘗試，不停的盡我們最大的努力，那我們不久後一定能找出解決之道。
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: "Persistence is all about hanging in there when you really want to give up. If you want to create something new and different, there's going to be a lot of failures along the way."
+        text: 堅持也就是即使你很想要放棄，你都還是繼續留在那裏。如果你想要創造出與眾不同的新東西，沿途一定會有很多的失敗。
       5:
         image: notes/C1_building_foundation_5.jpg
         text: "The trick to persistence is choosing to keep on going and learn from your failures instead of quitting because you're frustrated. Frustration actually just means there's something wonderful around the corner. So don't quit before you get to it. Wooo!"
@@ -702,14 +702,13 @@ zh:
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
-        text: |-
-          This lesson is called "Graph Paper Programming" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows.
+        text: 這堂課叫做「方格紙程式設計」，來談談演算法 (Algorithm)。今天我們要學習如何只用手繪的箭頭，來告訴其他人繪製簡單的黑、白交錯的圖案。
       2:
         image: notes/C2_graph_paper_2.png
-        text: "An algorithm is a list of instructions for completing a task. We'll follow this set of instructions to make the bowl. Algorithms are really helpful when you need someone else to understand how to do something."
+        text: 演算法是用來完成某項任務的指令清單。我們依序執行這一組指令來完成事情。演算法在你需要讓別人瞭解如何做某件事時是很有用的。
       3:
         image: notes/C2_graph_paper_3.png
-        text: "If you're writing an algorithm for a computer, you have to break it down to little tiny steps. So finish this row and go to the next, then the next one, and you'll be done."
+        text: 若你要給電腦演算法，你就要把事情切割成小小的步驟。先做這一步，然後到下一步，再來這一步等，最後完成它。
       4:
         image: notes/C2_graph_paper_4.png
         text: I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done.
@@ -908,16 +907,16 @@ zh:
         text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
       2:
         image: notes/C3_dice_race_2.png
-        text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
+        text: 思考如何一步一步的解決問題就是演算法，用步驟來解決問題或完成任務。這堂課裡，你會為骰子遊戲設計演算法。然後請你的朋友來試試看，看他們是否可以按照你計劃的步驟來玩遊戲。當程式設計師確認步驟是正確的之後，就可以把演算法用電腦看得懂的語言 (程式語言) 來寫成程式。
       3:
         image: notes/C3_dice_race_3.png
-        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+        text: 我們每天做的事情都有一套演算法，你依著步驟來做就可以完成事情。想看看你上學前要準備什麼？或者如何規劃跟朋友一起出遊的行程或者要去吃什麼。要完成這些事情，你需要把它分解成小步驟，有時候這些小步驟還得有一定的順序。
       4:
         image: notes/C3_dice_race_4.png
-        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+        text: 想一下要怎麼做一個三明治。是否要先打開罐子不是很重要，但你沒辦法先塗花生醬後才打開罐子。有些小事情小到我們都不用去思考，但是電腦就需要演算法和程式來告訴它如何做這些小事情，
       5:
         image: notes/C3_dice_race_5.png
-        text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
+        text: 電腦真正執行的是程式裡的指令，而程式是讓電腦執行它背後的想法，這就是演算法。演算法轉化為程式讓電腦去執行。有時候要把步驟拆解成演算法會遇到困難。但就就像學習新的技能一樣，透過不斷的練習就會愈來愈簡單。
     C3_farmer_while:
       1:
         image: notes/C3_farmer_while_1.png

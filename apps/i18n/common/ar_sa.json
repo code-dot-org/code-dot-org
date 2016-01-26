@@ -213,7 +213,7 @@
   "sendToPhone": "إرسال إلى الهاتف",
   "shareFailure": "عذراً، لا يمكن أن نشارك هذا البرنامج.",
   "shareWarningsAge": "الرجاء تعبئة عمرك أدناه ثم اضغط حسنا للمتابعة.",
-  "shareWarningsMoreInfo": "مزيد من المعلومات",
+  "shareWarningsMoreInfo": "المزيد من المعلومات",
   "shareWarningsStoreData": "هذا التطبيق تم بنائه في استوديو التعليمات البرمجية و يمكن مشاهدته من قبل أي شخص لديه هذا الرابط, لذا كن حذرا إذا طلب منك تقديم معلومات شخصية.",
   "showBlocksHeader": "إظهار المربعات البرمجية",
   "showCodeHeader": "إظهار الكود البرمجي",
@@ -247,5 +247,6 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

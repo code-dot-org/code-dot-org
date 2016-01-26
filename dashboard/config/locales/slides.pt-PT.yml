@@ -35,10 +35,10 @@
           Usarás estas para construir o teu código.
       9:
         image: notes/hoc1_9.jpg
-        text: À direita está o teu espaço de trabalho, que é a área para onde irás
+        text: "À direita está o teu espaço de trabalho, que é a área para onde irás
           arrastar os blocos da caixa de ferramentas que vais usar para criares o
           teu programa. Para apagares um bloco, arrasta-o para o lixo que aparece
-          no canto.
+          no canto."
       10:
         image: notes/hoc1_10.jpg
         text: Cada bloco é uma instrução. Se arrastares o bloco "Avançar" para a tua
@@ -2666,17 +2666,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2791,17 +2791,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2950,9 +2950,9 @@
           Tu é que escolhes.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
+        text: "[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
           Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma
-          casa com lã!'
+          casa com lã!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Quando acabares a tua criação, escolhe "partilhar" para obteres uma
@@ -2968,9 +2968,9 @@
           Tu é que escolhes.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
+        text: "[estudantes a falar] Agora é que vai ser. Tosquiar. Fiz um L com tochas.
           Eu fiz um A com pranchas de bétula. Funcionou, funcionou. Construímos uma
-          casa com lã!'
+          casa com lã!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Agora podes construir o que quiseres. Diverte-te!

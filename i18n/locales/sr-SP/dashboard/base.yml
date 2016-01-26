@@ -284,10 +284,6 @@ sr:
   user_level:
     completed: Готово
     tried: Покушао
-  user_stats:
-    recent_activity: Недавна активност
-    show_more: Покажи још
-    classroom_activity: Unplugged Activity
   home:
     title: Мој напредак
     description: У Студију за кодирање се налазе сви курсеви које је креирао Code.org

@@ -247,5 +247,6 @@
   "watchVideo": "Tonton Videonya",
   "when": "ketika",
   "whenRun": "ketika dijalankan",
-  "workspaceHeaderShort": "Area kerja: "
+  "workspaceHeaderShort": "Area kerja: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

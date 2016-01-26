@@ -69,8 +69,8 @@
     need_confirmation: Nisi prejel/a navodil za potrditev?
     need_unlock: Nisi prejel/a navodil za odklepanje?
   signup_form:
-    student_count: '%{count} študentov se je že prijavilo.'
-    teacher_count: '%{count} učiteljev se je že prijavilo.'
+    student_count: "%{count} študentov se je že prijavilo."
+    teacher_count: "%{count} učiteljev se je že prijavilo."
     overview_student: Registrirajte se, če želite spremljati svoj napredek. Vaš email
       bo služil za ponovni vpis ali novo geslo, če ga pozabite. Če želite več informacij,
       si oglejte našo <a href="http://code.org/privacy"> Politiko zasebnosti</a>.
@@ -108,13 +108,13 @@
       Code.org
     additional_information: Potrebujemo nekaj dodatnih informacij za uspešno prijavo.
   signin_form:
-    title: Že imate račun? Vpišite se
+    title: "Že imate račun? Vpišite se"
     login: Elektronska pošta ali uporabniško ime
     password: Geslo
     remember: Zapomni si me
     submit: Vpis
   signin:
-    try_heading: Želiš poskusiti kodirati brez prijave?
+    try_heading: "Želiš poskusiti kodirati brez prijave?"
     try_hoc: Poizkusite najprej eno Uro kode
     try_20hours: Poizkusite naš 20 urni Uvod v računalništvo
   signinsection:
@@ -145,17 +145,17 @@
       %{name}
   follower:
     invite_sent: Povabilo poslano
-    added_teacher: '%{name} dodan/a kot tvoj/a učitelj/ica'
+    added_teacher: "%{name} dodan/a kot tvoj/a učitelj/ica"
     registered: Registriral si se za %{section_name}.
     error:
       signed_in: Prosim, izpiši se pred nadaljevanjem
       username_not_found: Uporabniško ime %{username} ne obstaja
-      username_in_use: '%{username} že obstaja, prosim izberi drugo'
+      username_in_use: "%{username} že obstaja, prosim izberi drugo"
       no_teacher: Ni vpisanega nikogar z '%{teacher_email_or_code}'. Prosi jih za
         prijavo tukaj in jih potem poskusi ponovno dodati
       section_not_found: Odseka s kodo "%{section_code}" ni bilo mogoče najti.
       blank_code: Vnesite šifro razdelka
-      cant_join_own_section: Žal se ne morete pridružiti svojemu razdelku.
+      cant_join_own_section: "Žal se ne morete pridružiti svojemu razdelku."
     mail:
       invite_student:
         subject: Pridruži se razredu z %{teacher_name} pri Code.org!
@@ -192,7 +192,7 @@
       msg_publicschool: Prosim potrdi, da si učitelj/ica na ameriški javni šoli.
       msg_visit_website: Obišči spletno stran
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10 GB prostora na Dropbox-u
@@ -201,7 +201,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -245,9 +245,9 @@
     destroy: Uniči
     back: Nazaj
     confirm: Si prepričan/a?
-    created: '%{model} je bil usprešno ustvarjen.'
-    updated: '%{model} je bil uspešno posodobljen.'
-    destroyed: '%{model} je bil uspešno izbrisan.'
+    created: "%{model} je bil usprešno ustvarjen."
+    updated: "%{model} je bil uspešno posodobljen."
+    destroyed: "%{model} je bil uspešno izbrisan."
     access_denied: Nimaš dostopa do tega %{model}.
   nav:
     header:
@@ -261,14 +261,14 @@
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: District Dashboard
-      label: Živjo %{username}
+      label: "Živjo %{username}"
       stats: Moj napredek
       settings: Moj račun
       prizes: Nagrade
       logout: Izpis
       signin: Prijava
       signup: Prijava
-      already_registered: Že registrirani?
+      already_registered: "Že registrirani?"
     popup:
       progress_for_user: Napredek od %{name}
       progress: Tvoj napredek
@@ -278,7 +278,7 @@
       puzzle_map: Stopnje
       prizes: Zberi vse %{total_trophies} trofeje in osvoji nagrade!
       prize_earned: Vse %{total_trophies} trofeje zbrane. Osvojena nagrada!
-      prize_us_only: (samo ameriški učenci)
+      prize_us_only: "(samo ameriški učenci)"
       prizes_link: več informacij
   teacher:
     answer: Odgovor
@@ -286,14 +286,14 @@
     title:
       one: 'Vaš učitelj:'
       other: 'Tvoji učitelji:'
-    remove: (odstrani učitelja/ico)
+    remove: "(odstrani učitelja/ico)"
     confirm:
       remove: Ali ste prepričani da želite odstraniti tega učitelja?
     students:
       dashboard: K nadzorni plošči za učitelje
     user_not_found: Učitelj ali študent ni bil najden
-    student_teacher_disassociated: '%{teacher_name} je bil/a odstranjen/a kot učitelj/ica
-      %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} je bil/a odstranjen/a kot učitelj/ica
+      %{student_name}"
     panel:
       answer_viewer: Ogled rešitve
       student: Učenec
@@ -307,10 +307,10 @@
   user:
     email_confirm_needed: 'Elektronska pošta ni bila potrjena:'
     email_confirm_needed_required: 'Vaš email naslov %{email} ni bil potrjen:'
-    email_confirm_wrong_email: (Napačen email naslov?)
+    email_confirm_wrong_email: "(Napačen email naslov?)"
     email_resend_confirm: Ponovno pošlji potrditvena navodila
-    new_password_hint: (pusti prazno, če tega nočeš spremeniti)
-    current_password_hint: (potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)
+    new_password_hint: "(pusti prazno, če tega nočeš spremeniti)"
+    current_password_hint: "(potrebujemo tvoje trenutno geslo, da potrdimo tvoje spremembe)"
     delete: Izbriši svoj račun
     delete_text: S klikom na gumb boste izbrisali svoj račun.
     delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo
@@ -319,19 +319,15 @@
   user_level:
     completed: Zaključeno
     tried: Poskus
-  user_stats:
-    recent_activity: Nedavna dejavnost
-    show_more: Prikaži več
-    classroom_activity: Dejavnost brez prijave
   home:
     title: Studio za kodiranje
     description: Code Studio is home to online courses created by Code.org
-    lines_of_code: ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE
-    lines_of_code_linebreak: '%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count}
-      VRSTIC KODE'
+    lines_of_code: "ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE"
+    lines_of_code_linebreak: "%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count}
+      VRSTIC KODE"
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
-    signin_message: Že registrirani? %{link}
+    signin_message: "Že registrirani? %{link}"
     student_reg_link: Vpis študenta
     teacher_reg_link: Vpis učitelja
     signin_directions: Uporabi račun za sledenje napredka.<br/> Učitelji pa sledite
@@ -367,10 +363,10 @@
     try_beta_courses: Novo! Poskusite naše beta tečaje za učence prvih dveh triad
       na ameriških šolah
     use_as_teacher: Uporabi to stran kot učitelj
-    heading_hoc2014: <h2>Ura kodiranja za</h2><h1>vse starosti</h1>
-    heading_elementary: <h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>
-    heading_apps: <h2>Zabavno učenje za</h2><h1>vsakogar</h1>
-    heading_legacy: <h2>Naš tečaj za</h2><h1>vse starosti</h1>
+    heading_hoc2014: "<h2>Ura kodiranja za</h2><h1>vse starosti</h1>"
+    heading_elementary: "<h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>"
+    heading_apps: "<h2>Zabavno učenje za</h2><h1>vsakogar</h1>"
+    heading_legacy: "<h2>Naš tečaj za</h2><h1>vse starosti</h1>"
     your_gallery: Galerija
     no_primary_course: Poskusite Code Studio smer
     choose_next_course: Try a Code Studio course by choosing one below
@@ -382,7 +378,7 @@
     try_hour_of_code: Try an Hour of Code!
   gender:
     male: Moški
-    female: Ženska
+    female: "Ženska"
     none: Raje ne bi odgovoril
   user_type:
     student: Učenec
@@ -403,8 +399,8 @@
       Entertainment Ltd. Vse pravice pridržane.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. Vse pravice pridržane.
     powered_by_aws: Podprto s strani Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour
-      of Code&reg; sta blagovni znamki Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, logotip CODE in Hour
+      of Code&reg; sta blagovni znamki Code.org."
     copyright: Avtorska pravice
     more: Več
     feedback: Povratne informacije
@@ -539,7 +535,7 @@
     feedback: Tvoje mnenje
     report_bug: Sporoči napako
     support: Pomoč
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Nepravilen odgovor
     wrong_body: Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!
@@ -613,9 +609,9 @@
   age_interstitial:
     age: Tvoja starost
     header: Posodobitev podatkov o računu
-    message: Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
+    message: "Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
       o starosti učencev. <br/>Kot vedno, code.org podatkov ne bo nikoli posodil,
-      prodal ali delil s tretjimi osebami.
+      prodal ali delil s tretjimi osebami."
     sign_out: Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.
   zendesk_too_young_message: Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa
     brez prijave brskate po <a href="http://support.code.org">support.code.org</a>,
@@ -688,7 +684,7 @@
         abuse_type:
           question: Kako ta vsebina krši %{link_start}Pogoje storitve%{link_end}?
           harassment: Grožnje, ustrahovanje, nadlegovanje
-          offensive: Žaljiva vsebina
+          offensive: "Žaljiva vsebina"
           infringement: Kršitev avtorskih pravic
           other: Drugi
         detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.

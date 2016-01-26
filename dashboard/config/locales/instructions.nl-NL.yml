@@ -741,20 +741,37 @@
         programma schrijven dat alles verwijderd, zodat de grond gelijk is?
       4-5 While Loops 7_instruction: Wow, nu is er een drie hopen vuil! Kan je een
         programma schrijven dat ze alledrie verwijderd, zodat de grond gelijk is?
-      4-5 While Loops 8_instruction: ' Er is er een heel diep gat en een hele grote
+      4-5 While Loops 8_instruction: " Er is er een heel diep gat en een hele grote
         hoop vuil. Hoeveel scheppen vuil heb je nodig om de grond gelijk te krijgen?
-        Hint: gebruik voor allebei de zolang lus.'
+        Hint: gebruik voor allebei de zolang lus."
       4-5 While Loops Assessment 1_instruction: Er zijn veel gaten en hopen. Help
         me met vullen en verwijderen om de grond gelijk te krijgen.
       AlgPD DR Free Play_instruction: Create a function based on your own word problem.
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: test
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1683,12 +1700,12 @@
         nog een 4 bit getal nodig om in de rechts onder hoek te komen.
       Course 4 EC 1a_instruction: Geen regels, geen hints. Los het op!
       Course 4 EC 1b_instruction: Geen regels, geen hints. Los het op!
-      Course 4 EC 2a_instruction: '**Mega uitdaging:** Geen regels, geen hints. Los
-        het op!'
-      Course 4 EC 2b_instruction: '**Mega uitdaging:** Geen regels, geen hints. Los
-        het op!'
-      Course 4 EC 2c_instruction: '**Mega uitdaging:** Geen regels, geen hints. Los
-        het op!'
+      Course 4 EC 2a_instruction: "**Mega uitdaging:** Geen regels, geen hints. Los
+        het op!"
+      Course 4 EC 2b_instruction: "**Mega uitdaging:** Geen regels, geen hints. Los
+        het op!"
+      Course 4 EC 2c_instruction: "**Mega uitdaging:** Geen regels, geen hints. Los
+        het op!"
       Course 4 EC 3_instruction: 'Gebruik wat je hebt geleerd bij het vorige niveau
         om deze tekening te maken. Hint: de code wordt eenvoudiger als je parameters
         gebruikt. '
@@ -2827,12 +2844,12 @@
         plek ziet er goed uit. Bouw een basis op deze aarde blokken.
       Overworld House Frame - C_instruction: Laten we ons eigen huis bouwen! Deze
         plek ziet er goed uit. Bouw een basis op deze aarde blokken.
-      Overworld House Frame B_instruction: één muur is af, laten we nu de rest van
-        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
-      Overworld House Frame B2_instruction: één muur is af, laten we nu de rest van
-        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
-      Overworld House Frame C_instruction: één muur is af, laten we nu de rest van
-        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen.
+      Overworld House Frame B_instruction: "één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen."
+      Overworld House Frame B2_instruction: "één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen."
+      Overworld House Frame C_instruction: "één muur is af, laten we nu de rest van
+        het huis bouwen volgens jouw plattegrond! Je moet hier vaak hetzelfde herhalen."
       Overworld House Frame Chosen_instruction: Bouw de rest van je huis met welk
         materiaal je zelf wilt. Het commando "herhalen" komt hier handig van pas.
       Overworld House Frame_instruction: Laten we ons eigen huis maken! Dit lijkt

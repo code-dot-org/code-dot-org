@@ -278,10 +278,6 @@ ru:
   user_level:
     completed: Завершено
     tried: Пытался
-  user_stats:
-    recent_activity: Последние данные по работе
-    show_more: Показать ещё
-    classroom_activity: Урок без компьютера
   home:
     title: Студия кода
     description: Code Studio является домом для онлайн курсов, созданных Code.org

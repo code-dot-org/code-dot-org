@@ -28,8 +28,7 @@ ca:
     code:
       label: 'Afegeix un mestre:'
       placeholder: Secció Codi (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Si us plau, introdueixi el codi compartit pel seu professor. És un codi de 6 lletres com "ABCDEF".'
     submit: Afegeix un professor
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
@@ -264,7 +263,7 @@ ca:
     students:
       dashboard: Ves al Tauler del Mestre
     user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    student_teacher_disassociated: 'Vostè ha tret %{teacher_name} com el seu mestre.'
     panel:
       answer_viewer: Visualitzador de respostes
       student: estudiant
@@ -289,10 +288,6 @@ ca:
   user_level:
     completed: Completat
     tried: Provat
-  user_stats:
-    recent_activity: Activitat recent
-    show_more: Mostra més
-    classroom_activity: Activitat sense connexió
   home:
     title: Code Studio
     description: Code Studio és on hi ha els cursos en xarxa de Code.org
@@ -340,7 +335,7 @@ ca:
   share:
     title: Aprendre sobre Code Studio
     description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proveu una hora de codi!
   gender:
     male: Home
     female: Dona
@@ -349,10 +344,11 @@ ca:
     student: estudiant
     teacher: Mestre
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
+    thank_you: |-
+      Agraïm als nostres <a href="https://code.org/about/donors"> donants</a>, <a href="https://code.org/about/partners"> socis</a>, al nostre <a href="https://code.org/about/team"> extens equip</a>, al nostre elenc de vídeo i als nostres <a href="https://code.org/about/advisors"> assessors d'educació</a> pel seu suport en la creació de Code Studio.
     help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat a crear aquesta classe.
     help_from_html_old: Enginyers de Google, Microsoft, Facebook i Twitter han ajudat a crear aquests materials.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats. < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets reservats. < br / > Ice Age &#8482; © %{current_year} segle Xx Fox. Tots els drets reservats. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio entreteniment Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de Gumball és marca registrada i © 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Desenvolupat per Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
@@ -370,7 +366,7 @@ ca:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Fer la meva aplicació
     how_it_works: Com funciona
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Proveu una hora de codi!
   reference_area:
     title: Necessites ajuda?
     subtitle: Mira aquests vídeos i consells

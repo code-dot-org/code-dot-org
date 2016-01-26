@@ -846,8 +846,8 @@
           pel nombre correcte de graus a girar
         repeat_blocks: Utilitza el bloc "Repeteix" i fica-hi a dins els blocs en l'àrea
           de treball
-        repeat_blocks_1: (1) Utilitza aquest bloc i posa-ho al voltant dels blocs
-          grisos en l'àrea de treball
+        repeat_blocks_1: "(1) Utilitza aquest bloc i posa-ho al voltant dels blocs
+          grisos en l'àrea de treball"
         repeat_blocks_2: (2) Mou el bloc "Repetir" aquí i posa els blocs grisos dins
         snowflake_dropdown: Utilitza aquesta llista desplegable per crear diferents
           flocs de neu!

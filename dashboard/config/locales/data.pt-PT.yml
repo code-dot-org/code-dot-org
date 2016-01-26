@@ -862,8 +862,8 @@
         replace_questions_degree: Use o menu suspenso para substituir "???" pelo grau
           correto para virar
         repeat_blocks: Use o bloco "Repita" e conecte-o aos blocos na área de trabalho
-        repeat_blocks_1: (1) Use este bloco e coloque-o em torno dos blocos cinza
-          na área de trabalho
+        repeat_blocks_1: "(1) Use este bloco e coloque-o em torno dos blocos cinza
+          na área de trabalho"
         repeat_blocks_2: (2) Traga o bloco "repita" aqui e coloque os blocos cinza
           dentro dele
         snowflake_dropdown: Use este menu suspenso para criar diferentes flocos de

@@ -504,11 +504,11 @@ he-IL:
   dashboard_login_none: דואר אלקטרוני
   dashboard_new_password: סיסמה חדשה
   dashboard_progress_not_started: לא החל
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_in_progress: בביצוע
   dashboard_progress_not_completed: לא הושלם
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
+  dashboard_progress_completed_too_many_blocks: הושלם, בלוקים רבים מדי
   dashboard_progress_completed_perfect: הושלם, מושלם
-  dashboard_progress_furthest_level_attempted: furthest level attempted
+  dashboard_progress_furthest_level_attempted: רמת הרחוקה ניסיון
   dashboard_stage: שלב
   dashboard_puzzle: חידה
   dashboard_question: Question
@@ -630,7 +630,7 @@ he-IL:
   projguts_name: אבן, נייר ומספריים
   hourofcode_name: מבוך קלאסי
   playlab_name: מעבדת משחקים
-  infinity_name: Infinity Play Lab
+  infinity_name: אינסוף לשחק מעבדה
   artist_name: אמן
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!

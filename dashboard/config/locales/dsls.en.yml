@@ -1011,10 +1011,34 @@ en:
       U4 - Cleaning Data - Activity Guide:
         description here: description here
         title: title
+      U4 - Making Data Visualizations - Bar Chart:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Free Play:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Getting Started:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Line Chart:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Scatter Plot:
+        description here: description here
+        title: title
+      U4 - Making Data Visualizations - Student Introduction:
+        description here: description here
+        title: title
       U4 - Read Record - Local vs Remote Data External:
         Local vs. Remote Data: Local vs. Remote Data
       U4 - Unique Ids Explanation:
         Records Have Unique IDs: Records Have Unique IDs
+        title: title
+      U4 Cleaning Data Activity Guide Pt2:
+        description here: description here
+        title: title
+      U4 Cleaning Data Activity Guide Pt3:
+        description here: description here
         title: title
       U4 Inspirational Data Video: {}
       U4L01 Student Lesson Introduction:
@@ -1055,6 +1079,15 @@ en:
         description here: description here
         title: title
       U4L08v2 Making Pivot Tables:
+        description here: description here
+        title: title
+      U4L08v2 Making Pivot Tables Part 2:
+        description here: description here
+        title: title
+      U4L08v2 Making Pivot Tables Part 3:
+        description here: description here
+        title: title
+      U4L08v2 Student Intro:
         description here: description here
         title: title
       U4L09 Student Lesson Introduction:
@@ -3585,10 +3618,10 @@ en:
         wrong3: wrong3
         wrong4: wrong4
       U4L01 Multiple Choice:
+        "<code>wrong2</code>": "<code>wrong2</code>"
+        "<strong>wrong1</strong>": "<strong>wrong1</strong>"
         'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
         right: right
-        wrong1: wrong1
-        wrong2: wrong2
         wrong3: wrong3
         wrong4: wrong4
       U4L02 Choose 2:

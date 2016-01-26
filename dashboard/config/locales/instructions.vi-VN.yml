@@ -32,8 +32,8 @@
         hình chữ nhật thành 2 hình vuông có kích thước bằng nhau. Hình chữ nhật rộng
         200 pixels và cao 100 pixels.
       2-3 Artist 9_instruction: Hoàn thành diều này
-      2-3 Artist Assessment 1_instruction: 'Đánh giá: Hoàn thành bản vẽ chiếc răng
-        cuối, rộng 25 pixels và cao 25 pixels.'
+      2-3 Artist Assessment 1_instruction: "Đánh giá: Hoàn thành bản vẽ chiếc răng
+        cuối, rộng 25 pixels và cao 25 pixels."
       2-3 Artist Debugging 1_instruction: Bạn có thể làm mũ này với chiều dài 100?
       2-3 Artist Debugging 10_instruction: 'Các phím hướng trên bộ điều khiển trò
         chơi của tôi là quá hẹp. Gợi ý: Làm cho nó rộng hơn 10 pixels'
@@ -63,8 +63,8 @@
       2-3 Artist Functions 1_instruction: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích
         vẽ! Giúp tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels
         ngắn hơn so với độ dài cạnh vuông.'
-      2-3 Artist Functions 10_instruction: Đây là hai hàm, một để vẽ một chiếc bánh
-        răng to và một vẽ bánh răng nhỏ. Hãy dùng chúng để vẽ bên trong một cỗ máy!
+      2-3 Artist Functions 10_instruction: "Đây là hai hàm, một để vẽ một chiếc bánh
+        răng to và một vẽ bánh răng nhỏ. Hãy dùng chúng để vẽ bên trong một cỗ máy!"
       2-3 Artist Functions 11.5_instruction: Đây cũng là hàm "vẽ hình lục giác". Nếu
         sau mỗi vòng lặp cho xoay thêm 60 độ thì sẽ như thế nào?
       2-3 Artist Functions 11_instruction: Chúng ta đã đổi tên hàm "vẽ hình vuông"
@@ -86,14 +86,14 @@
       2-3 Artist Functions 4_instruction: Dùng khối "lặp lại" để vẽ 3 hình vuông.
       2-3 Artist Functions 7_instruction: 'Dùng hàm "vẽ ngôi nhà" để vẽ hai ngôi nhà
         dùng hai tham số khác nhau. (Gợi ý: ngôi nhà đầu tiên là 100 điểm ảnh).'
-      2-3 Artist Functions 9_instruction: Đây là một hàm hoa tuyết. Thử nghiệm với
+      2-3 Artist Functions 9_instruction: "Đây là một hàm hoa tuyết. Thử nghiệm với
         nó để tạo ra khung cảnh mùa đông! Đây là bàn tự do nên không có câu đố nào
-        để giải. Chúc vui vẻ!
+        để giải. Chúc vui vẻ!"
       2-3 Artist Loops 1_instruction: bạn có thể tạo hình lục giác với các cạnh bên
         là 100 điểm ảnh đủ để hoàn thành tế bào? hãy nhớ, điều đó có nghĩa là bạn
         sẽ chỉ cần quay 60 độ!
-      2-3 Artist Loops 10_instruction: điều gì xảy ra với thiết kế khi chúng tôi đặt
-        bước cuối sớm hơn nửa như đã biết?
+      2-3 Artist Loops 10_instruction: "điều gì xảy ra với thiết kế khi chúng tôi
+        đặt bước cuối sớm hơn nửa như đã biết?"
       2-3 Artist Loops 11_instruction: Giờ chúng ta hãy đặt vòng lặp *khác* xung quanh
         toàn bộ sản phẩm của chúng ta!  Đừng quên đặt thêm một góc ở phía cuối vòng
         lặp.
@@ -125,9 +125,9 @@
       2-3 Artist Loops New 14_instruction: Tiếp theo hãy vẽ viên kim cương 10 lần,
         nhưng hãy xoay viên kim cương 90 độ giữa mỗi viên.
       2-3 Artist Loops New 15_instruction: Vẽ một cái gì đó vui vẻ.
-      2-3 Artist Loops New 2_instruction: Đây là một số mã bạn sử dụng để vẽ hình
+      2-3 Artist Loops New 2_instruction: "Đây là một số mã bạn sử dụng để vẽ hình
         chữ nhật. Điều gì xảy ra nếu bạn sử dụng các khối lặp lại để chạy mã này 4
-        lần?
+        lần?"
       2-3 Artist Loops New 9_instruction: Vẽ một V đơn giản mà cả hai bên là 50 điểm
         ảnh để hoàn thành mũi tên.
       2-3 Artist Match Hex Pic_instruction: 'Nối: Giúp hoàn thành các hình lục giác.'
@@ -151,8 +151,8 @@
       2-3 Artist Nested Loops 4_instruction: 'lặp lại hình kim cương này 12 lần để
         vẽ một bông hoa. Gợi ý: 12 kim cương là giống như hình tam giác 12 bạn đã
         làm - bạn cần phải quay bao nhiêu lần sau mỗi hình?'
-      2-3 Artist Nested Loops 5_instruction: Điền vào cửa sổ này xây dựng với một
-        vòng lặp lồng nhau. Các cửa sổ là 20 điểm ảnh dài và 20 pixel bên.
+      2-3 Artist Nested Loops 5_instruction: "Điền vào cửa sổ này xây dựng với một
+        vòng lặp lồng nhau. Các cửa sổ là 20 điểm ảnh dài và 20 pixel bên."
       2-3 Artist Nested Loops 6_instruction: Khủng long này có 8 gai chạy lên đuôi
         của nó; mỗi cành là 30 pixel dài. Vòng lặp tam giác 8 lần, nhưng chắc chắn
         rằng để di chuyển về phía trước sau khi mỗi một.
@@ -884,11 +884,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: kiểm thử
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -2468,8 +2485,8 @@
       frozen circle function_instruction: Sử dụng khối "Tạo vòng tròn" mới để tạo
         ra 10 vòng tròn chồng chéo lên nhau. Đừng quên nhảy chuyển tiếp giữa các vòng
         tròn.
-      frozen circle_instruction: Đường tròn là một hình đặc biệt. Bạn có thể tìm ra
-        con số thay thế dấu hỏi chấm để vẽ một vòng tròn?
+      frozen circle_instruction: "Đường tròn là một hình đặc biệt. Bạn có thể tìm
+        ra con số thay thế dấu hỏi chấm để vẽ một vòng tròn?"
       frozen cross rotate dense_instruction: 'Hãy lặp lại 90 lần! Bao nhiêu lần 90
         thì thành 360? Gợi ý: Nó là một số rất nhỏ.'
       frozen cross rotate_instruction: |
@@ -2559,7 +2576,7 @@
       K-1 Artist Loops 7_instruction: Bạn có thể hoàn thành họa tiết này với 2 vòng
         lặp?
       K-1 Artist Loops 8_instruction: Cầu thang này có nhiều bậc hơn.
-      K-1 Artist Loops 9_instruction: 'Đánh giá: Dùng một vòng lặp để vẽ cầu thang'
+      K-1 Artist Loops 9_instruction: "Đánh giá: Dùng một vòng lặp để vẽ cầu thang"
       K-1 Artist Loops Free Play_instruction: Chơi miễn phi, hãy vẽ gì đó vui nhộn!
       K-1 Artist1 1_instruction: Vẽ chân người đàn ông với một đường
       K-1 Artist1 10_instruction: Vẽ và nhảy để tạo nét đứt tới kho báu X
@@ -2585,25 +2602,25 @@
       K-1 Artist2 4_instruction: Vẽ một hình chữ nhật để hoàn thành cây cầu.
       K-1 Artist2 5_instruction: Vẽ một hình chữ nhật để hoàn thành cầu hỗ trợ
       K-1 Artist2 6_instruction: Vẽ hai ô vuông để làm một hình chữ nhật!
-      K-1 Artist2 Assessment1_instruction: 'Đánh giá: Vẽ một hình vuông bên cạnh hình
-        vuông khác.'
+      K-1 Artist2 Assessment1_instruction: "Đánh giá: Vẽ một hình vuông bên cạnh hình
+        vuông khác."
       K-1 Artist2 Free Draw_instruction: Vẽ bất cứ thứ gì!
       K-1 Artist2_7_instruction: Vẽ một hình chữ nhật để cho tủ quần áo có một ngăn
         kéo!
-      K-1 Bee 1_instruction: Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới
-        tổ ong, và làm mật ong
+      K-1 Bee 1_instruction: "Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới
+        tổ ong, và làm mật ong"
       K-1 Bee 10_instruction: Lấy bốn mật hoa và sau đó làm hai mật ong!
       K-1 Bee 11.5_instruction: Lấy bốn mật hoa để làm bốn mật ong!
       K-1 Bee 11_instruction: Lấy ba mật hoa và sau đó làm một mật ong
       K-1 Bee 12_instruction: Lấy ba mật hoa và sau đó làm một mật ong!
       K-1 Bee 13_instruction: Lấy ba mật hoa và sau đó làm một mật ong!
-      K-1 Bee 14_instruction: Đưa tôi đến mật hoa, lấy chúng, đưa tôi đến chỗ mật
-        ong, và làm mật ong
+      K-1 Bee 14_instruction: "Đưa tôi đến mật hoa, lấy chúng, đưa tôi đến chỗ mật
+        ong, và làm mật ong"
       K-1 Bee 15_instruction: Lấy hai mật hoa để làm hai mật ong!
-      K-1 Bee 2_instruction: Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới
-        tổ ong, và làm mật ong
-      K-1 Bee 3_instruction: Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới
-        tổ ong, và làm mật ong
+      K-1 Bee 2_instruction: "Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới
+        tổ ong, và làm mật ong"
+      K-1 Bee 3_instruction: "Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới
+        tổ ong, và làm mật ong"
       K-1 Bee 4_instruction: Lấy hai mật hoa và sau đó làm hai mật ong!
       K-1 Bee 5_instruction: Lấy ba mật hoa và sau đó làm một mật ong!
       K-1 Bee 6_instruction: Lấy hai mật hoa và sau đó làm hai mật ong!
@@ -2615,10 +2632,10 @@
       K-1 Bee Loops 1_instruction: Lấy mật hoa để làm mật ong!
       K-1 Bee Loops 10_instruction: Sử dụng vòng lặp để lấy mật hoa, mật ong, và di
         chuyển!
-      K-1 Bee Loops 11_instruction: 'Đánh giá: Sử dụng vòng lặp và lấy mật hoa và
-        mật ong!'
-      K-1 Bee Loops 12_instruction: 'Đánh giá: Sử dụng vòng lặp để lấy mật hoa, mật
-        ong, và di chuyển!'
+      K-1 Bee Loops 11_instruction: "Đánh giá: Sử dụng vòng lặp và lấy mật hoa và
+        mật ong!"
+      K-1 Bee Loops 12_instruction: "Đánh giá: Sử dụng vòng lặp để lấy mật hoa, mật
+        ong, và di chuyển!"
       K-1 Bee Loops 2_instruction: Sử dụng một vòng lặp để di chuyển và sau đó lấy
         mật hoa và làm mật ong!
       K-1 Bee Loops 3_instruction: Sử dụng vòng để lấy mật hoa và làm mật ong!
@@ -3139,9 +3156,9 @@
       October15 stars 1_instruction: |
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
-      Overworld Avoid Monsters_instruction: Đi thẳng về phía một Creeper là một ý
+      Overworld Avoid Monsters_instruction: "Đi thẳng về phía một Creeper là một ý
         kiến không hay. Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách
-        an toàn.
+        an toàn."
       Overworld Chop Tree_instruction: Gỗ là tài nguyên rất quan trọng. Có nhiều thứ
         được làm từ gỗ. Hãy đi về phía cây và sử dụng lệnh "destroy block" để đốn
         cây.
@@ -5235,8 +5252,8 @@
       Underground If Statements_instruction: Mọi việc hiện đang trở nên rắc rối. Hãy
         đào 3 viên đá đỏ, nhưng đừng để rơi vào dung nham. Hãy sử dụng lệnh "If" để
         đặt đá cuội bên trên bất cứ dung nham nào mà bạn muốn lấp.
-      Underground Iron_instruction: Đi vào dung nham nóng chảy không phải là ý kiến
-        hay. Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt.
+      Underground Iron_instruction: "Đi vào dung nham nóng chảy không phải là ý kiến
+        hay. Hãy đặt đá cuội để xây một cây cầu, sau đó đào ít nhất hai khối sắt."
       Underground Mine in a Circle_instruction: Hãy tìm cách để có được 5 viên kim
         cương và 7 viên đá đỏ! Hãy thử sử dụng một lệnh lặp bên trong một lệnh lặp
         để đi theo hình vuông.

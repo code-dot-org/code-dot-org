@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pozrieť video"},
 "when":function(d){return "keď"},
 "whenRun":function(d){return "pri spustení"},
-"workspaceHeaderShort":function(d){return "Pracovná plocha: "}};
+"workspaceHeaderShort":function(d){return "Pracovná plocha: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

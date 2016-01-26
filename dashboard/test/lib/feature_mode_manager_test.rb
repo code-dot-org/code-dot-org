@@ -74,9 +74,17 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, ['script'])
 
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', 'script')
+    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'postMilestone', nil)
     assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', 'script')
+    assert FeatureModeManager.allows(@gatekeeper, 'normal', 'hint_view_request', nil)
+    assert FeatureModeManager.allows(@gatekeeper, 'scale', 'postMilestone', nil)
+    refute FeatureModeManager.allows(@gatekeeper, 'scale', 'postMilestone', 'script')
+    refute FeatureModeManager.allows(@gatekeeper, 'scale', 'hint_view_request', 'script')
+    refute FeatureModeManager.allows(@gatekeeper, 'scale', 'hint_view_request', nil)
     refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', 'script')
+    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'postMilestone', nil)
     refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'hint_view_request', 'script')
+    refute FeatureModeManager.allows(@gatekeeper, 'emergency', 'hint_view_request', nil)
 
     # Feature mode manager settings should take priority over gatekeeper settings.
     @gatekeeper.set('postMilestone', value: false)
