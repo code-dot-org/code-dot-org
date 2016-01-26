@@ -279,10 +279,6 @@ mt:
   user_level:
     completed: Lesta
     tried: Ppruvat
-  user_stats:
-    recent_activity: Attività riċenti
-    show_more: Uri aktar
-    classroom_activity: Attivita bla kompjuter
   home:
     title: Code Stuwdjo
     description: Code Studio huwa id-dar tal-korsijiet online maħluqa mill-Code.org

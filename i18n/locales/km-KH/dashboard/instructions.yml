@@ -2,9 +2,9 @@ km:
   data:
     instructions:
       2-3 Artist 1 new_instruction: |
-        Hi, I'm an artist. You can write code to make
-        me draw almost anything. Use a few blocks to make me draw over the grey lines
-        in the picture. (Each line is 100 pixels long)
+        សួស្ដី, ខ្ញុំ​គឺជា​វិចិត្រករ។ អ្នក​អាច​សរសេរ​កូដ​បញ្ជា​ឲ្យ​ខ្ញុំ​គូរ​អ្វី​ក៏​បាន​ដែរ។
+        សូម​ប្រើ​ប្លុក​ពីរបី ដើម្បី​បញ្ជា​ឲ្យ​ខ្ញុំ​គូរ​ពី​លើ​បន្ទាត់​ពណ៌​ប្រផេះ
+        ដូច​ក្នុង​រូប។ (បន្ទាត់​នីមួយៗ​មាន​ប្រវែង 100 ភីកសែល)
       2-3 Artist 11_instruction: |
         Give the stop sign a border by making an octagon
         with 8 sides, each 100 pixels long. How many degrees should you turn? (Hint:
@@ -953,11 +953,29 @@ km:
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: |
+        Backed by a template #1. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script). 
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: សាក​ល្បង
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |

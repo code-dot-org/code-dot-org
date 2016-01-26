@@ -281,10 +281,6 @@ hr:
   user_level:
     completed: Završen
     tried: Pokušan
-  user_stats:
-    recent_activity: Nedavna aktivnost
-    show_more: Pokaži više
-    classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
     description: Code Studio je početna stranica online tečajeva koje su stvorili Code.org

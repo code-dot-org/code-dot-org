@@ -48,7 +48,7 @@
           'Bee: Loops': 'Méh: ciklusok'
           'Studio: Create a Story': 'Játéklabor: hozz létre egy történetet'
           'Artist: Loops': 'Művész: ciklusok'
-          description_audience: 'Korosztály: 4+ (nemolvasók)'
+          description_audience: 4-től 6 éves korig
           description_short: Az 1. tanfolyam a olvasással épp hogy csak ismerkedő
             korosztály számára készült.
         course2:
@@ -92,7 +92,7 @@
           'Artist: Sequence2': 'Művész: sorozat 2'
           'Maze: Sequence2': 'Labirintus: sorozat 2'
           'Artist: Nested Loops': 'Művész: egymásba ágyazott ciklusok'
-          description_audience: 'Korosztály: 6+ (olvasni tudók)'
+          description_audience: 6-tól 18 éves korig
           description_short: A 2. tanfolyam a már olvasó korosztály számára készült.
         course3:
           The Maze: A labirintus
@@ -148,7 +148,7 @@
           'Bee: Debugging2': 'Méh: hibakeresés 2'
           'Artist: Patterns': 'Művész: minták'
           Songwriting: Dalszerzés
-          description_audience: 'Korosztály: 8+ (a 2. tanfolyam elvégzése után)'
+          description_audience: 8-tól 18 éves korig
           description_short: A 3. tanfolyam a 2. tanfolyam folytatása.
         playlab:
           title: Játéklabor
@@ -164,8 +164,8 @@
         hourofcode:
           Maze: Labirintus
           title: Hagyományos Útvesztö
-          description: Ismerd meg a számítógép-tudomány alapjait közösen a Dühös Madarak,
-            a Növények kontra Zombik karaktereivel és a Motkányal a Jégkorszakból!
+          description: Ismerd meg a számítástechnika alapjait közösen az Angry Birds,
+            Plants vs. Zombies karaktereivel valamint Motkányal a Jégkorszakból!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok
             szórakoztató karakterrel!
         frozen:
@@ -195,7 +195,7 @@
           'Play Lab: Functions with Parameters': 'Játéklabor: függvények paraméterekkel'
           'Bee: Functions with Parameters': 'Méh: függvények paraméterekkel'
           'Artist: For Loops': 'Művész: számláló ciklusok'
-          'Play Lab: For Loops': 'Játéklabor: számláló ciklusok'
+          'Play Lab: For Loops': 'Játéklabor: ciklusok'
           'Artist: Functions': 'Művész: függvények'
           'Unplugged: Tangrams': 'Gép nélküli feladatok: Tangram'
           Artist: Művész
@@ -211,11 +211,11 @@
           Farmer Binary: 'Farmer: a kettes számrendszer'
           Maze and Bee: Labirintus és a méh
           Artist Binary: 'Művész: a kettes számrendszer'
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           Super Challenge - Variables: 'Szuper kihívás: változók'
           Super Challenge - For Loops: Szuper kihívás - For Loops (számláló ciklus)
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
+          Super Challenge - Functions and Parameters: Szuper kihívás - Funkciók és
+            Paraméterek
           Extreme Challenge - Comprehensive: Extrém kihívás - Átfogó
         Course4pre:
           title: A 4. tanfolyam előfeltétel
@@ -286,9 +286,9 @@
         infinity:
           title: Disney Infinity játéklabor
           description_short: Használd a Játéklabort, hogy megalkoss egy történetet
-            vagy játékot a Disney Infinity karakterek szereplésével.
+            vagy játékot Disney Infinity szereplőkkel.
           description: Használd a Játéklabort, hogy megalkoss egy történetet vagy
-            játékot a Disney Infinity karakterek szereplésével.
+            játékot Disney Infinity szereplőkkel.
           Play Lab: Játéklabor
           Infinity: Végtelen
         algebrademo:
@@ -298,7 +298,7 @@
           description: A handful of puzzles to demonstrate the environment and programming
             language used in Code.org CS in Algebra
           Algebra Demo: Algebra Demo
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           Making Pictures: Making Pictures
           Defining Variables: Változók definiálása
           Defining Simple Functions: Defining Simple Functions
@@ -368,7 +368,7 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: Gyorsított bemutató a CS tanfolyamra
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           description: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás
             alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki
             számára jó időtöltés lehet.
@@ -393,7 +393,7 @@
           The Farmer 3: A Farmer 3
           The Internet: Az internet
           The Artist 5: A Művész 5
-          Wrap-up: Összefoglaló
+          Wrap-up: "Összefoglaló"
         edit-code:
           title: Kód szerkesztése
           description: Kód szerkesztése
@@ -416,8 +416,8 @@
           title: Flappy kód
           description: Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc
             alatt? Próbáld ki a Flappy kód gyakorlatot!
-          description_short: Írd meg a saját Flappy játékod kevesebb, mint 10 perc
-            alatt!
+          description_short: "Írd meg a saját Flappy játékod kevesebb, mint 10 perc
+            alatt!"
           Flappy Code: Flappy kód
         jigsaw:
           title: Kirakós játék
@@ -431,8 +431,8 @@
           Step: Lépés
         Hour of Code:
           title: Kódolás órája 2013
-          description: Próbáld ki az alapvető számítógépes tudományokat az Angry Birds,
-            a növények vs zombik alapján!
+          description: Próbáld ki az alapszintű számítástechnikát az Angry Birds,
+            Plants vs. Zombies karaktereivel!
           description_short: Ismerd meg a számítógép-tudomány alapjait közösen a sok
             szórakoztató karakterrel!
           Hour of Code 2013: Kódolás órája 2013
@@ -552,7 +552,7 @@
             feladatok: Ütközés észlelése és a távolság képlete'
           'Play Lab: Collision Detection (Big Game)': 'Játéklabor: az ütközés észlelése
             (A Nagy Játék)'
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           Strings and Images: Húrok és Képek
           Contracts: Szerződések
           Your Game - Defining Variables: Your Game - Defining Variables
@@ -577,7 +577,7 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           Strings and Images: Húrok és Képek
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
@@ -770,7 +770,7 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           The Big Game: The Big Game
           Strings and Images: Húrok és Képek
           The Design Recipe: A dizájn receptje
@@ -821,7 +821,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -834,7 +834,7 @@
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
           Introduction to PD: Introduction to PD
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -893,8 +893,8 @@
           new stage: new stage
         sciencePD2:
           title: Computer Science in Science PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Phase 2 Summer Workshop: Phase 2 Summer Workshop
           Welcome: Welcome
           Resources: Resources
@@ -973,9 +973,9 @@
           Practice PT - Cybersecurity Innovations: Practice PT - Cybersecurity Innovations
         algebraPD2a:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: Értékelési blokk
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          Evaluation Blocks: "Értékelési blokk"
           Strings and Images: Húrok és Képek
           Defining Variables: Változók definiálása
           Big Game - Variables: Big Game - Variables
@@ -1021,12 +1021,12 @@
           Markdown Details: Markdown Details
         algebraPD2b:
           title: Computer Science in Algebra PD
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           Strings and Images: Húrok és Képek
           Writing Contracts: Writing Contracts
           Defining Variables: Változók definiálása
@@ -1047,12 +1047,12 @@
           App Lab: App Lab
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Internet szimulátor
@@ -1079,9 +1079,9 @@
           Looking Ahead: Looking Ahead
         ECSPD2:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Üdvözlünk!
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          Welcome!: "Üdvözlünk!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1090,7 +1090,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Összefoglaló
+          Wrap-up: "Összefoglaló"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1144,12 +1144,12 @@
           Hour of Code 2015: A kódolás órája 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: Értékelési blokk
+          Evaluation Blocks: "Értékelési blokk"
           Strings and Images: Húrok és Képek
           Writing Contracts: Writing Contracts
           Defining Variables: Változók definiálása
@@ -1162,15 +1162,15 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           The Design Recipe: A dizájn receptje
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Üdvözlünk!
-          Wrap-Up: Összegzés
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          Welcome!: "Üdvözlünk!"
+          Wrap-Up: "Összegzés"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1184,15 +1184,15 @@
           Code.org Equity PD: Code.org Equity PD
         science-PD2:
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Üdvözlünk!
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          Welcome!: "Üdvözlünk!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Összegzés
+          Wrap-Up: "Összegzés"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1204,21 +1204,21 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           title: Computer Science in Science PD Phase 2b
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Összegzés
+          Wrap-Up: "Összegzés"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Üdvözlünk!
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          Welcome!: "Üdvözlünk!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1237,12 +1237,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Összefoglaló
+          Wrap-up: "Összefoglaló"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: Üdvözlünk!
+          description_short: '2. Fázis: Online összetett nyári tanulmány'
+          description: '2. Fázis: Online összetett nyári tanulmány'
+          Welcome!: "Üdvözlünk!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1261,7 +1261,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Összefoglaló
+          Wrap-up: "Összefoglaló"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1360,7 +1360,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1393,7 +1393,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1428,7 +1428,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1463,7 +1463,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1472,7 +1472,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1530,17 +1530,19 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Összegzés
+          Wrap-Up: "Összegzés"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1558,7 +1560,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1575,16 +1577,17 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: 'Korosztály: 10+ (a 3. tanfolyam elvégzése után)'
+          description_audience: 10-től 18 éves korig
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Jégkorszak játéklabor
           description_short: Mesélj el egy történetet vagy készíts egy játékot a Jégkorszak
@@ -1646,11 +1649,11 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball játéklabor
-          description_short: írj egy történetet vagy készíts egy játékot a Gumball
-            játéklaborban!
-          description: írj egy történetet vagy készíts egy játékot a Gumball játéklaborban!
-          Gumball Play Lab: Gumball játéklabor
+          title: Gumball Játéklabor
+          description_short: "írj egy történetet vagy készíts egy játékot a Gumball
+            Játéklaborban!"
+          description: "írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!"
+          Gumball Play Lab: Gumball Játéklabor
         starwars:
           title: 'Star Wars: A galaxis építése kóddal'
           description_short: Tanulj meg droidokat programozni és készítsd el a saját
@@ -1687,9 +1690,9 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Üdvözlünk!
+          Welcome!: "Üdvözlünk!"
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Összegzés
+          Wrap-Up: "Összegzés"
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

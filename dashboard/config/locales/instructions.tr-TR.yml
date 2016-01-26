@@ -53,8 +53,8 @@
       2-3 Artist Debugging 3_instruction: |
         Teknemde delik var! Çizginin açısını değiştirerek
         düzeltebilir misin? İpucu: Son açı 15 derece kadar kapalı.
-      2-3 Artist Debugging 4_instruction: Çizmeye çalıştığımız resim nedir?Düz çizgiler
-        ve açılar kullanarak noktaları birleştirmeyi bitir.
+      2-3 Artist Debugging 4_instruction: "Çizmeye çalıştığımız resim nedir?Düz çizgiler
+        ve açılar kullanarak noktaları birleştirmeyi bitir."
       2-3 Artist Debugging 5_instruction: |
         Bacak ve ayak için gördüğün kod yanlış.
         İpucu: Ayak çok uzun, bir adımı silmen gerekebilir(cinas istendi)
@@ -106,10 +106,10 @@
         uzunluğunda bir altıgen yapabilir misin? Unutma, sadece 60 derece dönmen gerekiyor!
       2-3 Artist Loops 10_instruction: Eğer son adımımızı yarım adım daha ileriye
         atarsak tasarıma ne olur?
-      2-3 Artist Loops 11_instruction: Şimdi tüm kreasyonumuzun etrafına *başka* bir
-        döngü koyalım! Dış döngünün sonuna bir açı eklemeyi unutma.
-      2-3 Artist Loops 2_instruction: Şimdi tekrarla bloğunu kullanarak hücreyi kabuk
-        yapın.
+      2-3 Artist Loops 11_instruction: "Şimdi tüm kreasyonumuzun etrafına *başka*
+        bir döngü koyalım! Dış döngünün sonuna bir açı eklemeyi unutma."
+      2-3 Artist Loops 2_instruction: "Şimdi tekrarla bloğunu kullanarak hücreyi kabuk
+        yapın."
       2-3 Artist Loops 4_instruction: 'Bu şekli üst üst yeniden kullanarak tekrar
         ettiğimizde ne olduğunu görmek ister misin? '
       2-3 Artist Loops 5_instruction: Hadi şimdi döngüde küçük bir değişiklik yapalım
@@ -130,9 +130,9 @@
         30 derece dönüş ekle ve hepsini tekrarla bloğuna yerleştir. '
       2-3 Artist Loops New 12_instruction: "Kenarları 100 piksel olan bir elmas çiz.
         \n"
-      2-3 Artist Loops New 13_instruction: Şimdi elması döngü içinde 3 kere çizelim.
-      2-3 Artist Loops New 14_instruction: Şimdi, 10 kez elmas çizelim. Ama her elmastan
-        sonra 90 derece dön.
+      2-3 Artist Loops New 13_instruction: "Şimdi elması döngü içinde 3 kere çizelim."
+      2-3 Artist Loops New 14_instruction: "Şimdi, 10 kez elmas çizelim. Ama her elmastan
+        sonra 90 derece dön."
       2-3 Artist Loops New 15_instruction: Eğlenceli bir şeyler çiz.
       2-3 Artist Loops New 2_instruction: Bunlar senin kare çizmek için kullandığın
         kodların bazıları. Tekrarla bloğunu, bu kodu 4 kez çalıştırmak için kullanırsan
@@ -148,19 +148,19 @@
         kullanmıştın. Biliyor musun, bir döngünün içine başka bir döngü yerleştirebilirsin./r\nBu
         kod bloğu döngüsünü 3 kez çalıştırarak motifi çiz. \n"
       2-3 Artist Nested Loops 10_instruction: 'Kodu 12 kez döngüleyerek motifi tamamlayın. '
-      2-3 Artist Nested Loops 11_instruction: Örneği tamamlamak için bu kodu 4 kez
-        tekrarlayın,her daireden sonra 90 derece döndürün.
+      2-3 Artist Nested Loops 11_instruction: "Örneği tamamlamak için bu kodu 4 kez
+        tekrarlayın,her daireden sonra 90 derece döndürün."
       2-3 Artist Nested Loops 12_instruction: 'Bukleleri tamamlamak için bu kodu 12
         kez döngüle. '
-      2-3 Artist Nested Loops 2_instruction: 'Şimdi, üçgeni 6 kez döngüle. Her üçgenden
-        sonra, yeni bir tane çizmeden önce 60 derece dönmen gerek. '
+      2-3 Artist Nested Loops 2_instruction: "Şimdi, üçgeni 6 kez döngüle. Her üçgenden
+        sonra, yeni bir tane çizmeden önce 60 derece dönmen gerek. "
       2-3 Artist Nested Loops 3_instruction: 'Bu motifi çizmek için üçgeni 12 kez
         döngülemen gerekecek. Her şekilden sonra kaç derece döneceğini anlamak için
         bir çemberin içindeki derecelerin sayısını (360), çizdiğin şekillerin sayısına
         (12) böl. '
-      2-3 Artist Nested Loops 4_instruction: 'Çiçek çizmek için bu elması 12 kez döngüle.
+      2-3 Artist Nested Loops 4_instruction: "Çiçek çizmek için bu elması 12 kez döngüle.
         İpucu: Elmaslar tıpkı yaptığın 12 üçgen gibidir - her şekilden sonra kaç derece
-        dönmen gerek?'
+        dönmen gerek?"
       2-3 Artist Nested Loops 5_instruction: 'Bu binan pencerelerini içiçe döngüyle
         doldur. Pencereler 20 piksel uzunluğunda ve 20 piksel uzaklıklatalar. '
       2-3 Artist Nested Loops 6_instruction: 'Bu dinazorun kuruğu boyunca 8 boynuzu
@@ -170,8 +170,8 @@
         Her üçgenden sonra hareket edip dönmen gerekecek. Ne kadar dönmen gerektiğini
         bir çemberdeki derecelerin sayısını şekli oluşturmak için gereken sayıya bölerek
         bulabilirsin. '
-      2-3 Artist Nested Loops 8_instruction: 'Şimdi, resmimize biraz da çimen ekleyelim.
-        Her tutam çimen birbirinden 50 piksel uzaklıktadır. '
+      2-3 Artist Nested Loops 8_instruction: "Şimdi, resmimize biraz da çimen ekleyelim.
+        Her tutam çimen birbirinden 50 piksel uzaklıktadır. "
       2-3 Artist Nested Loops 9_instruction: 'Bu resmi bir çiçek ekleyerek bitireceğiz.
         Çiçeğini çizmek için 12 kez elmas döngüsü oluştur. '
       2-3 Artist Nested Loops Free Play_instruction: Serbest oyun, içiçe döngülerle
@@ -191,10 +191,10 @@
       2-3 Bee Conditionals 15_instruction: 4 çiçekten nektar toplayın.
       2-3 Bee Conditionals 2_instruction: Merhaba! Ben bir arıyım. Bana çiçeklerden
         nektar toplamak için yardım et. Bunun için döngü kullanın.
-      2-3 Bee Conditionals 3_instruction: 'Çiçeklerden tüm nektarı toplayıp bal yapmama
-        yardım et. Döngü kullan. '
-      2-3 Bee Conditionals 4_instruction: 'Çiçeklerden tüm nektarı toplamama ve bal
-        yapmama yardım et. '
+      2-3 Bee Conditionals 3_instruction: "Çiçeklerden tüm nektarı toplayıp bal yapmama
+        yardım et. Döngü kullan. "
+      2-3 Bee Conditionals 4_instruction: "Çiçeklerden tüm nektarı toplamama ve bal
+        yapmama yardım et. "
       2-3 Bee Conditionals 5_instruction: 'Mor çiçeklerde ya 1 nektar olabilir ya
         da 0 , fakat hangisini olduğunu bilmiyorsun. Nektarın 1 olup olmadığını eğer
         bloğuyla öğren. '
@@ -240,16 +240,16 @@
         bloklarıdır.Bir seferde 5 nektar almak için ''5 al''fonksiyonunu kulllan.En
         ideal döngü bloğunu kullandığından emin ol.
       2-3 Bee Functions 3_instruction: Her bir çiçekten tüm  nektarları topla.
-      2-3 Bee Functions 4_instruction: '''''taşı ve nektarı al'''' arıyı döndürür
-        ve nektarı toplar,sonra arıyı başladığı noktaya döndürür.Tüm nektarları toplamak
-        için fonksiyonu kullan.'
-      2-3 Bee Functions 5_instruction: Şimdi çiçeklerde daha fazla nektar var.4 nektar
+      2-3 Bee Functions 4_instruction: "''taşı ve nektarı al'' arıyı döndürür ve nektarı
+        toplar,sonra arıyı başladığı noktaya döndürür.Tüm nektarları toplamak için
+        fonksiyonu kullan."
+      2-3 Bee Functions 5_instruction: "Şimdi çiçeklerde daha fazla nektar var.4 nektar
         toplamak için verilen fonksiyonu düzenle ve çiçeklerden tüm nektarları toplamak
-        için bunu kullan.
-      2-3 Bee Functions 6_instruction: Şimdi aynı fonksiyonu üç çiçekten nektar toplamak
-        için kullanın.
-      2-3 Bee Functions 7_instruction: Çiçekler şimdi daha da uzakta. Verilen fonksiyonu
-        düzenleyin ve çiçeklerden tüm nektarı toplamak için kullanın.
+        için bunu kullan."
+      2-3 Bee Functions 6_instruction: "Şimdi aynı fonksiyonu üç çiçekten nektar toplamak
+        için kullanın."
+      2-3 Bee Functions 7_instruction: "Çiçekler şimdi daha da uzakta. Verilen fonksiyonu
+        düzenleyin ve çiçeklerden tüm nektarı toplamak için kullanın."
       2-3 Bee Functions 8_instruction: 7 nektar toplayan ve ilerleyip 7 bal yapan
         kendi fonksiyonunuzu oluşturun.Her petekte bal yapan ve her çiçekten nektar
         toplayan fonksiyonu kullanın.
@@ -278,8 +278,8 @@
         Her petekte bal yap ve her çiçekten nektar toplayın.
       2-3 Bee Loops 3A_instruction: Tüm bitki özlerini toplamak için bir döngü kullanbilir
         misin?
-      2-3 Bee Loops 3B_instruction: Şimdi tüm nektarları toplamak için yeni yineleme
-        bloğunu kullanın ve tüm balları yapın.
+      2-3 Bee Loops 3B_instruction: "Şimdi tüm nektarları toplamak için yeni yineleme
+        bloğunu kullanın ve tüm balları yapın."
       2-3 Bee Loops 4_instruction: Son bulmacadaki gibi benzer bir döngü kullan,fakat
         içeri doğru bir dönüşe çalış.
       2-3 Bee Loops 4A_instruction: |
@@ -303,7 +303,8 @@
         misin? Birkaç "ileri git" bloğunu ard arda koyarak "çalıştır" tuşuna basın. '
       2-3 Maze 10_instruction: Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat
         et)
-      2-3 Maze 11_instruction: Çok açım, beni çiçeklere götür! Bir bloğu kaç kez tekrarlamalısın?
+      2-3 Maze 11_instruction: "Çok açım, beni çiçeklere götür! Bir bloğu kaç kez
+        tekrarlamalısın?"
       2-3 Maze 12 (copy 1)_instruction: 'Bir önceki çözümünü sadece iki blok kullanarak
         tekrarlayabilir misin? (İpucu: "tekrarla" bloğunu kullanarak bir döngü oluştur.)'
       2-3 Maze 12 (copy 2)_instruction: 'Bir önceki çözümünü sadece iki blok kullanarak
@@ -380,8 +381,8 @@
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: İleri giderek kuşa yaramaz domuzu yakalamak için yardım
-        et
+      2-3level1_instruction: "İleri giderek kuşa yaramaz domuzu yakalamak için yardım
+        et"
       4-5 Artist 1_instruction: 'Kutumu çizmemi tamamlamak için yardım et.(Her doğru
         parçası 300 piksel uzunluğundadır) '
       4-5 Artist 10_instruction: Kodu denemek için "Çalıştır" düğmesine basın. Ardından
@@ -788,11 +789,28 @@
       AllTheThings Applab - Turtle move with button_instruction: |
         Add a button that
         moves the turtle when clicked.  (Click to see full instructions)
+      allthethings data blocks test_instruction: |
+        Please sign in to test applab levels
+        (By design, applab levels only work if signed in. Normally, we make people
+        sign in, but this is only enforceable for a whole script and would be annoying
+        to do for the allthethings script).
+      allthethings design mode elements_instruction: |
+        Please sign in to test applab
+        levels (By design, applab levels only work if signed in. Normally, we make
+        people sign in, but this is only enforceable for a whole script and would
+        be annoying to do for the allthethings script).
       allthethings_moviebot_instruction: |
         This level cloned from "U3 Digital Assistant
         Target"
-      allthethings_template_backed1_instruction: 'Backed by a template #1'
-      allthethings_template_backed2_instruction: 'Backed by a template #2'
+      allthethings_template_backed1_instruction: "Backed by a template #1. Please\nsign
+        in to test applab levels (By design, applab levels only work if signed\nin.
+        Normally, we make people sign in, but this is only enforceable for a whole\nscript
+        and would be annoying to do for the allthethings script). \n"
+      allthethings_template_backed2_instruction: |
+        Backed by a template #2. Please
+        sign in to test applab levels (By design, applab levels only work if signed
+        in. Normally, we make people sign in, but this is only enforceable for a whole
+        script and would be annoying to do for the allthethings script).
       App Lab test_instruction: dene
       Applab test_instruction: This level is submittable. For testing only!
       AppLab_test02_instruction: |
@@ -1344,15 +1362,15 @@
       Course 4 Artist Binary 6_instruction: |
         What is the shortest binary string that
         you can repeat to draw this image?
-      Course 4 Artist Binary 7_instruction: Çizimi bitirin.
+      Course 4 Artist Binary 7_instruction: "Çizimi bitirin."
       Course 4 Artist Binary Free Play 2_instruction: |
         Free Play: Here's a blank
         canvas for you to draw on.  Have fun!
       Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas
         to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart
         to get creative with the bits?"
-      Course 4 Artist Binary Free Play 2b_instruction: İpuçlarını görmek için burayı
-        tıklatın.
+      Course 4 Artist Binary Free Play 2b_instruction: "İpuçlarını görmek için burayı
+        tıklatın."
       Course 4 Artist Binary Free Play_instruction: |
         Free Play: Draw whatever you
         like with binary!
@@ -2467,7 +2485,7 @@
       K-1 artist 1 level 10_instruction: |
         Draw the dashed line by using both the
         jump and draw blocks
-      K-1 artist 1 level 9_instruction: Üç satır kullanarak bunu çizin
+      K-1 artist 1 level 9_instruction: "Üç satır kullanarak bunu çizin"
       K-1 Artist Loops 1_instruction: Doğuya doğru 4 defa hareket ederek çizgi çiz.
       K-1 Artist Loops 2_instruction: Can you draw the same line using a loop?
       K-1 Artist Loops 3_instruction: Can you loop these blocks to draw 6 lines?
@@ -2506,7 +2524,7 @@
       K-1 Artist1 9_instruction: Draw and Jump to make the dashed line
       K-1 Artist1 Assessment 1_instruction: Kısa ve uzun çizgiler çiz!
       K-1 Artist1 Assessment 2_instruction: Kısa kesik çizgiler çiz!
-      K-1 Artist2 1_instruction: Üçgenin altına bir kare çiz.
+      K-1 Artist2 1_instruction: "Üçgenin altına bir kare çiz."
       K-1 Artist2 2_instruction: Zıpla ve evin yanına bir kare çiz.
       K-1 Artist2 3_instruction: Diğer karenin yukarısına bir kare çiz
       K-1 Artist2 4_instruction: Dikdörtgen çizerek köprüyü tamamla.
@@ -2520,22 +2538,22 @@
         yanına götür ve bal yap
       K-1 Bee 10_instruction: Dört nektar topla ve iki bal yap!
       K-1 Bee 11.5_instruction: Dört bal yapmak için dört nektar topla!
-      K-1 Bee 11_instruction: Üç nektar topla ve bir bal yap.
-      K-1 Bee 12_instruction: Üç nektar topla ve iki bal yap!
-      K-1 Bee 13_instruction: Üç nektar topla ve bir bal yap!
+      K-1 Bee 11_instruction: "Üç nektar topla ve bir bal yap."
+      K-1 Bee 12_instruction: "Üç nektar topla ve iki bal yap!"
+      K-1 Bee 13_instruction: "Üç nektar topla ve bir bal yap!"
       K-1 Bee 14_instruction: Nektara beni getir,nektarı al,beni bala götür ve bal
         yap
-      K-1 Bee 15_instruction: İki bal yapmak için iki nektar topla!
+      K-1 Bee 15_instruction: "İki bal yapmak için iki nektar topla!"
       K-1 Bee 2_instruction: Beni çiçeğe doğru ilerlet,nektarı topla sonra beni peteğin
         yanına götür ve bal yap
       K-1 Bee 3_instruction: Beni çiçeğe doğru ilerlet,nektarı topla sonra beni peteğin
         yanına götür ve bal yap
-      K-1 Bee 4_instruction: İki nektar topla ve iki bal yap!
-      K-1 Bee 5_instruction: Üç nektar al ve üç bal yap!
-      K-1 Bee 6_instruction: İki nektar topla ve iki bal yap!
-      K-1 Bee 7_instruction: Üç nektar topla ve iki bal yap!
-      K-1 Bee 8_instruction: İki nektar topla ve iki bal yap!
-      K-1 Bee 9_instruction: İki nektar topla ve iki bal yap!
+      K-1 Bee 4_instruction: "İki nektar topla ve iki bal yap!"
+      K-1 Bee 5_instruction: "Üç nektar al ve üç bal yap!"
+      K-1 Bee 6_instruction: "İki nektar topla ve iki bal yap!"
+      K-1 Bee 7_instruction: "Üç nektar topla ve iki bal yap!"
+      K-1 Bee 8_instruction: "İki nektar topla ve iki bal yap!"
+      K-1 Bee 9_instruction: "İki nektar topla ve iki bal yap!"
       K-1 Bee Assessment 1_instruction: Bal yapmak için nektarı al!
       K-1 Bee Assessment 2_instruction: Bal yapmak için nektarı al!
       K-1 Bee Loops 1_instruction: Bal yapmak için nektarı al!
@@ -3102,11 +3120,11 @@
       Overworld Place Wall_instruction: Her ev bir duvarla başlar. Tekrar döngüsünün
         içinde "yerleştir" ve "ileri git" komutlarını kullanarak evinizin ilk parçasını
         inşa edin.
-      Overworld Plant Crops_instruction: İleriyi planlamak iyidir. Suyun her iki tarafına
-        ekinlerinizi ekin, böylece daha sonra aç kalmazsınız.
-      Overworld Powered Minecart_instruction: Çok güzel! Bir sürü kaynak topladınız
+      Overworld Plant Crops_instruction: "İleriyi planlamak iyidir. Suyun her iki
+        tarafına ekinlerinizi ekin, böylece daha sonra aç kalmazsınız."
+      Overworld Powered Minecart_instruction: "Çok güzel! Bir sürü kaynak topladınız
         ve mütevazı bir ev inşa ettiniz. Şimdi haritanın ucundan evinizin kapısına
-        kadar ray döşeyin.
+        kadar ray döşeyin."
       Overworld Shear Sheep_instruction: Koyun kırkma zamanı! İki koyundan yün toplamak
         için "kırk" komutunu kullanın.
       PDAlg 13-16 Sam Extension Puzzle_instruction: |

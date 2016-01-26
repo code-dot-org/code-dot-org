@@ -34,7 +34,7 @@
           Building a Foundation: Xây dựng nền tảng
           Getting Loopy: Tạo vòng lặp
           The Big Event: Sự kiện lớn
-          Going Places Safely: Đến nơi an toàn
+          Going Places Safely: "Đến nơi an toàn"
           description: Khóa học 1 được thiết kế để cho phép học viên tạo ra các chương
             trình máy tính giúp họ  hợp tác với những người khác, phát triển kỹ năng
             giải quyết vấn đề thông qua các nhiệm vụ khó khăn. Cuối khóa học này,
@@ -72,7 +72,7 @@
             giấy'
           Getting Loopy: Tạo vòng lặp
           Relay programming: Chương trình chuyển tiếp
-          Conditionals: Điều kiện
+          Conditionals: "Điều kiện"
           Binary Bracelets: Vòng đeo tay nhị phân
           The Big Event: Sự kiện lớn
           Your Digital Footprint: 'Dấu chân kỹ thuật số '
@@ -118,7 +118,7 @@
           Songwriting Parameters: Tham số sáng tác
           Dice Race: Vòng quay xúc sắc
           Internet: Kết nối mạng
-          Crowdsourcing: Đa nguồn
+          Crowdsourcing: "Đa nguồn"
           Digital Citizenship: Dân kỹ thuật số
           Farmer - While Loops: Nông dân - trong các vòng
           description: Khóa học 3 được thiết kế cho những người đã học qua khóa 2.
@@ -284,7 +284,7 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Điều kiện
             và đường chức năng'
-          'Eval: Conditionals': Điều kiện
+          'Eval: Conditionals': "Điều kiện"
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
@@ -389,7 +389,7 @@
           The Artist 2: Nghệ sĩ 2
           Functions: Các hàm
           The Farmer: người nông dân
-          Conditionals: Điều kiện
+          Conditionals: "Điều kiện"
           The Artist 3: nghệ sĩ 3
           Song Writing: Viết nhạc
           The Farmer 2: Người nông dân 2
@@ -1539,8 +1539,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1594,6 +1596,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1697,5 +1700,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Tổng hợp
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

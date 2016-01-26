@@ -284,10 +284,6 @@ nn:
   user_level:
     completed: Fullført
     tried: Forsøkt
-  user_stats:
-    recent_activity: Nyleg aktivitet
-    show_more: Vis meir
-    classroom_activity: Aktivitet utan datamaskinar
   home:
     title: Code Studio
     description: Code Studio er kvar Code.org sine online kurs finnast

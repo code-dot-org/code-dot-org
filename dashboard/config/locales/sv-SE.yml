@@ -17,7 +17,7 @@
         password_confirmation: Lösenordsbekräftelse
         current_password: Nuvarande lösenord
         locale: språk
-        age: Ålder
+        age: "Ålder"
         gender: Kön
         edit_header: Redigera kontouppgifter
         error:
@@ -70,8 +70,8 @@
     need_confirmation: Har du inte fått bekräftelseinstruktioner?
     need_unlock: Har du inte fått instruktioner för att låsa upp?
   signup_form:
-    student_count: '%{count} elever har redan kommit med.'
-    teacher_count: '%{count} lärare har redan kommit med.'
+    student_count: "%{count} elever har redan kommit med."
+    teacher_count: "%{count} lärare har redan kommit med."
     overview_student: Registrera dig för ett konto för att spåra dina framsteg. Din
       e-post används främst för att inloggning och för återställning av lösenord.
       För mer information, se vår <a href="http://code.org/privacy"> Sekretesspolicy</a>.
@@ -91,10 +91,10 @@
     address_placeholder: adress, stad, län, postnummer
     gender: Kön (valfritt)
     birthday: Födelsedag (valfritt)
-    age: Ålder
-    user_type: Är du elev eller lärare?
+    age: "Ålder"
+    user_type: "Är du elev eller lärare?"
     submit: Registrera dig
-    teacher: Är du en lärare?
+    teacher: "Är du en lärare?"
     valid_username: Tillgängligt!
     invalid_username: Användarnamnet måste innehålla minst fem tecken
     taken_username: Användarnamnet är upptaget
@@ -132,10 +132,10 @@
       email: E-postadress
       submit: Skicka "byta lösenord"-instruktioner till mig
     change_form:
-      title: Ändra ditt lösenord
+      title: "Ändra ditt lösenord"
       new_password: Nytt lösenord
       confirm_password: Bekräfta nytt lösenord
-      submit: Ändra mitt lösenord
+      submit: "Ändra mitt lösenord"
   welcome_email:
     subject: Gå med i min klass (på Code.org)
     body: |
@@ -148,12 +148,12 @@
       %{name}
   follower:
     invite_sent: Inbjuda skickades
-    added_teacher: '%{name} är tillagd som din lärare'
+    added_teacher: "%{name} är tillagd som din lärare"
     registered: Du har registrerat dig för %{section_name}.
     error:
       signed_in: Vänligen logga ut innan du fortsätter
       username_not_found: Användarnamnet %{username} hittades inte
-      username_in_use: '%{username} används redan, vänligen välj ett annat'
+      username_in_use: "%{username} används redan, vänligen välj ett annat"
       no_teacher: Kunde inte hitta någon inloggad med '%{teacher_email_or_code}'.
         Vänligen be dem att registrera sig här och försök sedan lägga till dem igen
       section_not_found: Kunde inte hitta ett avsnitt med koden "%{section_code}".
@@ -192,13 +192,13 @@
       title: Vänligen bekräfta
       'no': Nej
       'yes': Ja
-      msg: Är du säker på att du vill begära %{prize_name} priset?
+      msg: "Är du säker på att du vill begära %{prize_name} priset?"
       msg_student: 'OBS: Du kan bara välja en sorts pris.'
       msg_publicschool: Var vänlig och bekräfta att du är en amerikansk ''Public School''
         lärare.
       msg_visit_website: Besök hemsida
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox utrymme
@@ -207,7 +207,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Välj ett pris:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -245,10 +245,10 @@
     update: Uppdatera
     destroy: Förstöra
     back: Tillbaka
-    confirm: Är du säker?
-    created: '%{model} har skapats.'
-    updated: '%{model} har uppdaterats.'
-    destroyed: '%{model} har tagits bort.'
+    confirm: "Är du säker?"
+    created: "%{model} har skapats."
+    updated: "%{model} har uppdaterats."
+    destroyed: "%{model} har tagits bort."
     access_denied: Du har inte tillgång till denna %{model}.
   nav:
     header:
@@ -271,7 +271,7 @@
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
-      progress_for_user: '%{name}''s framsteg'
+      progress_for_user: "%{name}'s framsteg"
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -279,7 +279,7 @@
       puzzle_map: Nivåer
       prizes: Samla in alla %{total_trophies} troféer och vinn priser!
       prize_earned: Alla %{total_trophies} troféerna är insamlade. Pris vunnet!
-      prize_us_only: (Endast US-studenter)
+      prize_us_only: "(Endast US-studenter)"
       prizes_link: Mer information
   teacher:
     answer: Svar
@@ -287,9 +287,9 @@
     title:
       one: 'Din lärare:'
       other: 'Dina lärare:'
-    remove: (ta bort lärare)
+    remove: "(ta bort lärare)"
     confirm:
-      remove: Är du säker du vill ta bort denna lärare?
+      remove: "Är du säker du vill ta bort denna lärare?"
     students:
       dashboard: Gå till Dashboard för lärare
     user_not_found: Läraren kunde inte hittas.
@@ -303,33 +303,30 @@
       example: Exempel lösning
       example_with_number: Exempel lösning %{solution_number}
       submitted_on: 'Inlämnad den %{date} '
-      unsubmit: Ångra Inlämnad
+      unsubmit: "Ångra Inlämnad"
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
-    email_confirm_wrong_email: (Fel e-postadress?)
+    email_confirm_wrong_email: "(Fel e-postadress?)"
     email_resend_confirm: Skicka instruktioner för bekräftelse igen
-    new_password_hint: (lämna tomt om du inte vill ändra det)
-    current_password_hint: (vi behöver ditt nuvarande lösenord att bekräfta dina ändringar)
+    new_password_hint: "(lämna tomt om du inte vill ändra det)"
+    current_password_hint: "(vi behöver ditt nuvarande lösenord att bekräfta dina
+      ändringar)"
     delete: Ta bort ditt konto
     delete_text: Ett klick på knappen nedan kommer att ta bort ditt konto.
     delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas
       konton bort.'
-    delete_confirm: Är du säker du vill ta bort ditt konto?
+    delete_confirm: "Är du säker du vill ta bort ditt konto?"
   user_level:
     completed: Avklarade
     tried: Försökte
-  user_stats:
-    recent_activity: Senaste händelserna
-    show_more: Visa mer
-    classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
     description: Code Studio är basen för onlinekurser skapade av Code.org
-    lines_of_code: '%{lines_count} RADER KOD SKRIVEN AV STUDENTER'
-    lines_of_code_linebreak: '%{lines_count} rader kod <br/> skrivna av %{students_count}
-      miljoner studenter'
-    all_courses: Översikt över kurser 1, 2 och 3
+    lines_of_code: "%{lines_count} RADER KOD SKRIVEN AV STUDENTER"
+    lines_of_code_linebreak: "%{lines_count} rader kod <br/> skrivna av %{students_count}
+      miljoner studenter"
+    all_courses: "Översikt över kurser 1, 2 och 3"
     lesson_plans: Lektionsplaneringar
     signin_message: Redan registrerad? %{link}
     student_reg_link: Registrera dig som elev
@@ -367,10 +364,10 @@
     try_beta_courses: Nytt! Prova våra beta-kurser för elever från förskoleklass till
       åk 5
     use_as_teacher: Använda denna webbplats som lärare
-    heading_hoc2014: <h2>Timmen med kod för</h2><h1>Alla åldrar</h1>
-    heading_elementary: <h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>
-    heading_apps: <h2>Kul för</h2><h1>Alla</h1>
-    heading_legacy: <h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>
+    heading_hoc2014: "<h2>Timmen med kod för</h2><h1>Alla åldrar</h1>"
+    heading_elementary: "<h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>"
+    heading_apps: "<h2>Kul för</h2><h1>Alla</h1>"
+    heading_legacy: "<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>"
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
     choose_next_course: Prova en Code Studio kurs genom att välja en nedan
@@ -402,8 +399,8 @@
       Ltd. Alla rättigheter reserverade. < br / > Plants vs Zombies &#8482; &amp;
       © %{current_year} Electronic Arts Inc. Alla rättigheter reserverade
     powered_by_aws: Drivs av Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och
-      Hour of Code&reg; är varumärken som tillhör Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och
+      Hour of Code&reg; är varumärken som tillhör Code.org."
     copyright: Copyright
     more: Mer
     feedback: Ge feedback
@@ -454,7 +451,7 @@
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
   next_stage: Klar! Fortsätt till nästa nivå
-  download_pdf: Öppen kursplan
+  download_pdf: "Öppen kursplan"
   lesson_plan: Lektionsplan
   view_lesson_plan: Visa lektionsplan
   pdf_download: Ladda ner PDF
@@ -531,7 +528,7 @@
     want_to_make_your_own: Vill du göra din egen?
     more: Mer &rarr;
     caption_by_name_age: av %{name}, ålder %{age}
-    caption_time_ago: '%{time_ago} tid sedan'
+    caption_time_ago: "%{time_ago} tid sedan"
     header: Galleri
     header_playlab: Spel-labb
     header_artist: Konstnären
@@ -544,7 +541,7 @@
     feedback: Ge feedback
     report_bug: Rapportera bugg
     support: Få hjälp
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Felaktigt svar
     wrong_body: Svaret du angett är inte korrekt.  Försök igen!
@@ -572,7 +569,7 @@
     open_response_body: Tack för ditt svar!
   dialog:
     ok: Ok
-    startover_title: Är du säker på att du vill börja om?
+    startover_title: "Är du säker på att du vill börja om?"
     startover_body: Detta kommer att återställa pusslet och ta bort all data du har
       lagt till eller ändrat.
     startover_ok: Börja om
@@ -642,7 +639,7 @@
     create: Skapa projekt
     create_a_project: 'Skapa ett nytt projekt:'
     new: Skapa ny
-    rename: Ändra namn
+    rename: "Ändra namn"
     save: Spara
     delete: Ta bort
     exit: Tillbaka till kursen
@@ -665,7 +662,7 @@
     saved: Sparade
     not_saved: Inte sparad
     cancel: Avbryt
-    delete_confirm_title: Är du säker på att du vill ta bort detta projekt?
+    delete_confirm_title: "Är du säker på att du vill ta bort detta projekt?"
     delete_confirm_text: Genom att Ta bort ditt projekt kommer det att tas bort permanent
       från listan Mina projekt. Någon du har delat länken till kommer inte längre
       att kunna se ditt projekt.

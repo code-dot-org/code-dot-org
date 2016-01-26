@@ -63,7 +63,7 @@ he:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: אריזה
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
@@ -149,7 +149,7 @@ he:
         title: Digital Citizenship
         desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
       TangramAlgorithms:
-        title: Tangram Algorithms
+        title: טנגרם אלגוריתמים
         desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
@@ -181,11 +181,11 @@ he:
         desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: עיצוב המתכון
         desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans and Logic
+        title: בוליאנים ולוגיקה
         desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
@@ -194,5 +194,5 @@ he:
         video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        desc: קביעת כאשר אובייקטים על המסך מגע היא היבט חשוב של רוב המשחקים. בשיעור זה אנו נראה איך את משפט פיתגורס ואת הנוסחה מרחק יכול לשמש כדי למדוד את המרחק בין שתי נקודות על המטוס, ולאחר מכן החלט אם אלה שתי נקודות (או הדמויות במשחק) נוגעות.
         video: alg_16_biggame_collision_detection

@@ -12,7 +12,7 @@
       inactive: Your account was not activated yet.
       invalid: Invalid email or password.
       invalid_token: Invalid authentication token.
-      locked: ඔබටගේ ගිණුම ලොක් වී ඇත.
+      locked: "ඔබටගේ ගිණුම ලොක් වී ඇත."
       not_found_in_database: Invalid email or password.
       timeout: Your session expired, please sign in again to continue.
       unauthenticated: You need to sign in or sign up before continuing.
@@ -70,7 +70,7 @@
       not_locked: was not locked
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
-        other: '%{count} errors prohibited this %{resource} from being saved:'
+        other: "%{count} errors prohibited this %{resource} from being saved:"
     invitations:
       send_instructions: An invitation email has been sent to %{email}.
       invitation_token_invalid: The invitation token provided is not valid!
@@ -81,8 +81,8 @@
         header: Send invitation
         submit_button: Send an invitation
       edit:
-        header: ඔබේ මුරපදය සකසන්න
-        submit_button: මගේ මුරපදය සකසන්න
+        header: "ඔබේ මුරපදය සකසන්න"
+        submit_button: "මගේ මුරපදය සකසන්න"
     mailer:
       invitation_instructions:
         subject: Invitation instructions

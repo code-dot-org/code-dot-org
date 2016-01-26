@@ -284,10 +284,6 @@ th:
   user_level:
     completed: สมบูรณ์
     tried: Tried
-  user_stats:
-    recent_activity: กิจกรรมล่าสุด
-    show_more: แสดงเพิ่มเติม
-    classroom_activity: Unplugged Activity
   home:
     title: Code Studio
     description: Code Studio is home to online courses created by Code.org

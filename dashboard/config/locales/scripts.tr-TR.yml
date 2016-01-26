@@ -6,7 +6,7 @@
           'Jigsaw: Learn to drag and drop': 'Yapboz: Nasıl sürükleyip bırakacağınızı
             öğrenin'
           The Maze: Labirent
-          Multi: Çoklu
+          Multi: "Çoklu"
           Match: Eşleştir
           Math Image: Matematik Görseli
           title: Deneme Kursu
@@ -24,7 +24,7 @@
           'Bee 1: Intro': 'Arı 1: Giriş'
           'Maze 2: Loops': 'Labirent 2: Döngüler'
           'Bee 2: Loops': 'Arı 2: Döngüler'
-          Multi & Match: Çoklu & Eşleştirme
+          Multi & Match: "Çoklu & Eşleştirme"
           K-1 Flappy: K-1 Salınım
           Flappy non blockly: Bloksuz salınma
           title: Ders 1
@@ -74,7 +74,7 @@
           Getting Loopy: Döngüselleşme
           Relay programming: Röle Programlama
           Conditionals: Koşullar
-          Binary Bracelets: İkilik Bileklikler
+          Binary Bracelets: "İkilik Bileklikler"
           The Big Event: Büyük Olay
           Your Digital Footprint: Dijital İziniz
           description: Ders 2 önceden herhangi bir programlama deneyimi olmayan ve
@@ -115,10 +115,10 @@
           Functional Suncatchers: Fonksiyonel Güneş Avcıları
           Songwriting Parameters: Müzik yazarlığı parametreleri
           Dice Race: Zar Yarışı
-          Internet: İnternet
+          Internet: "İnternet"
           Crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
           Digital Citizenship: Sayısal Vatandaşlık
-          Farmer - While Loops: Çiftçi - While Döngüleri
+          Farmer - While Loops: "Çiftçi - While Döngüleri"
           description: Ders 3, Ders 2'yi alan öğrenciler için tasarlanmıştır. Öğrenciler,
             daha karmaşık sorunlar için bulunan esnek çözümleri uygulamak için önceki
             derste öğrendikleri programlama konularını daha çok inceleyecekler. Dersin
@@ -132,7 +132,7 @@
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Maze: Conditionals': 'Labirent: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Bee: Debugging': 'Arı: Ayıklama'
           Maze2: Labirent2
@@ -142,11 +142,11 @@
           'Bee: Conditionals2': 'Arı: Koşullandırıcılar2'
           'Maze: Conditionals2': 'Labirent: Koşullandırıcılar2'
           'Artist: Nested Loops2': 'Aktör: Yerleştirilmiş Döngüler2'
-          'Farmer: While Loops2': 'Çiftçi: While Döngüleri2'
+          'Farmer: While Loops2': "Çiftçi: While Döngüleri2"
           'Bee: Nested Loops2': 'Arı: Yerleştirilmiş Döngüler2'
           'Bee: Debugging2': 'Arı: Ayıklama2'
           'Artist: Patterns': 'Sanatçı: Desenler'
-          Songwriting: Şarkı yazma
+          Songwriting: "Şarkı yazma"
           description_audience: 8 yaş ve üstü (Ders 2 sonrası)
           description_short: Ders 3, Ders 2'nin devamıdır.
         playlab:
@@ -204,7 +204,7 @@
           'Artist: Functions with Parameters': 'Sanatçı: Fonksiyonlar ve Parametreler'
           'Unplugged: Binary': 'Unplugged: İkili Taban'
           Bee Binary: Arı İkili Taban
-          Farmer Binary: Çiftçi İkili Taban
+          Farmer Binary: "Çiftçi İkili Taban"
           Maze and Bee: Labirent ve Arı
           Artist Binary: Sanaçtı İkili Taban
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
@@ -223,7 +223,7 @@
           'Artist: Loops': 'Aktör: Döngüler'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Artist: Functions': 'Aktör: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
@@ -237,18 +237,18 @@
           description: Kullanılabilirlik testi için Ders 4 seviyelerinden bir seçim.
           Variables: Değişkenler
           For Loops: For Döngüleri
-          Binary: İkili
+          Binary: "İkili"
         potus:
-          title: özel
-          description_short: özel
-          description: özel
-          Special: Özel
+          title: "özel"
+          description_short: "özel"
+          description: "özel"
+          Special: "Özel"
         special:
-          title: özel
-          description_short: özel
-          description: özel
-          Special: Özel
-          Binary: İkili
+          title: "özel"
+          description_short: "özel"
+          description: "özel"
+          Special: "Özel"
+          Binary: "İkili"
         algebra:
           title: Cebirde Bilgisayar Bilimi
           description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren
@@ -286,10 +286,10 @@
           Infinity: Sonsuz
         algebrademo:
           title: Cebir Demo
-          description_short: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
-            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar
-          description: Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar biliminde
-            kullanılan programlama dilini göstermek için kullanışlı bulmacalar
+          description_short: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
+            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
+          description: "Çevrendekileri ve Code.org'ta cebirin içindeki bilgisayar
+            biliminde kullanılan programlama dilini göstermek için kullanışlı bulmacalar"
           Algebra Demo: Cebir Demo
           Evaluation Blocks: Değerlendirme Blokları
           Making Pictures: Resim Yapma
@@ -303,7 +303,7 @@
           Introduction to PD: Kişisel Geliştirme Giriş
           Blockly Basics: Balockly'nin temelleri
           Writing computer programs: Bilgisayar programları yazma
-          Navigating the teacher dashboard: Öğretmen panosunda gezinme
+          Navigating the teacher dashboard: "Öğretmen panosunda gezinme"
           Unplugged lessons: Bağımsız dersler
           Classroom Culture: Sınıf kültürü
           Ways to go beyond Courses 1, 2, and 3: kurs 1,2 ve 3 ünde ilersine gitmek
@@ -321,12 +321,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: İnternet Simülatörü
+          title: "İnternet Simülatörü"
           description_short: ''
           description: ''
-          Internet Simulator: İnternet Simülatörü
-          Unit 1: Ünite 1
-          Unit 2: İkinci Ünite
+          Internet Simulator: "İnternet Simülatörü"
+          Unit 1: "Ünite 1"
+          Unit 2: "İkinci Ünite"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -375,18 +375,18 @@
           Algorithms: Algoritmalar
           The Artist 2: Sanatçı 2
           Functions: Fonksiyonlar
-          The Farmer: Çiftçi
+          The Farmer: "Çiftçi"
           Conditionals: Koşullar
           The Artist 3: Sanatçı 3
-          Song Writing: Şarkı Yazma
-          The Farmer 2: Çiftçi 2
+          Song Writing: "Şarkı Yazma"
+          The Farmer 2: "Çiftçi 2"
           Abstraction: Soyutlama
           The Artist 4: Sanatçı 4
           Relay Programming: Röle Programlama
-          The Farmer 3: Çiftçi 3
-          The Internet: İnternet
+          The Farmer 3: "Çiftçi 3"
+          The Internet: "İnternet"
           The Artist 5: Sanatçı 5
-          Wrap-up: Özet
+          Wrap-up: "Özet"
         edit-code:
           title: Kodu Düzenle
           description: Kodu Düzenle
@@ -468,7 +468,7 @@
           'Artist: Loops': 'Aktör: Döngüler'
           'Bee: Conditionals': 'Arı: Koşullandırıcılar'
           'Artist: Nested Loops': 'Aktör: Yerleştirilmiş Döngüler'
-          'Farmer: While Loops': 'Çiftçi: While Döngüleri'
+          'Farmer: While Loops': "Çiftçi: While Döngüleri"
           'Bee: Nested Loops': 'Arı: Yerleştirilmiş Döngüler'
           'Artist: Functions': 'Aktör: Fonksiyonlar'
           'Bee: Debugging': 'Arı: Ayıklama'
@@ -489,12 +489,12 @@
           Lesson 7: Ders 7
           Lesson 1: Ders 1
           Innovation: Yenilik
-          Sending Binary Messages: İkili Mesajları Gönderiyor
+          Sending Binary Messages: "İkili Mesajları Gönderiyor"
           Sending More Complex Messages: Daha fazla kompleks mesaj gönderiyor
           Bit Sending Widget: Bit Sending Widget
           Sending Bits in the Real World: Sending Bits in the Real World
           Number Systems: Sayı Sistemleri
-          Binary Numbers: İkili Sayılar
+          Binary Numbers: "İkili Sayılar"
           Sending Numbers: Sending Numbers
           Encoding Numbers in the Real World: Encoding Numbers in the Real World
           Encoding and Sending Text: Encoding and Sending Text
@@ -877,7 +877,7 @@
           description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
-          Multi: Çoklu
+          Multi: "Çoklu"
           Big Game: Big Game
           new stage: yeni kademe
         sciencePD2:
@@ -911,7 +911,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: İnternet
+          description_short: "İnternet"
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -930,7 +930,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: İnternet
+          The Internet: "İnternet"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -979,7 +979,7 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: Ücretsiz Oyna
+          Free Play: "Ücretsiz Oyna"
         allthethings:
           Jigsaw: Yapboz
           Maze: Labirent
@@ -989,7 +989,7 @@
           Farmer: Farmer
           Flappy: Flappy
           Bounce: Sıçrama
-          Multi: Çoklu
+          Multi: "Çoklu"
           Match: Eşleştir
           TextMatch: TextMatch
           CSinA: CSinA
@@ -1032,7 +1032,7 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: İnternet Simülatörü
+          Internet Simulator: "İnternet Simülatörü"
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1044,7 +1044,7 @@
           Welcome!: Hoşgeldiniz!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: İnternet Simülatörü
+          Internet Simulator: "İnternet Simülatörü"
           App Lab: Uygulama Laboratuvarı
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
@@ -1079,7 +1079,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: Özet
+          Wrap-up: "Özet"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1224,7 +1224,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Özet
+          Wrap-up: "Özet"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
@@ -1248,7 +1248,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: Özet
+          Wrap-up: "Özet"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1297,8 +1297,8 @@
           Building a Foundation: Bir Temel Oluşturma
           Getting Loopy: Döngüselleşme
           The Big Event: Büyük Olay
-          Binary Bracelets: İkilik Bileklikler
-          Songwriting: Şarkı yazma
+          Binary Bracelets: "İkilik Bileklikler"
+          Songwriting: "Şarkı yazma"
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1517,8 +1517,10 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1572,6 +1574,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Buz Devri Oyun Laboratuvarı
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1675,5 +1678,5 @@
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: paketlemek
           Assessing Computer Models: Assessing Computer Models
-          (optional) Refresh your connection to Complex Adaptive Systems: (optional)
-            Refresh your connection to Complex Adaptive Systems
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"

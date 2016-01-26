@@ -27,14 +27,14 @@
   submit: Submit
   add_teacher_form:
     code:
-      label: 'Żid Għalliem:'
+      label: "Żid Għalliem:"
       placeholder: Sezzjoni kodiċi (ABCDEF)
       instructions: Please enter the code shared with you by your teacher. It's a
         6 letter code like "ABCDEF".
-    submit: Żid għalliem
+    submit: "Żid għalliem"
   add_hint_form:
     placeholder: Daħħal suġġeriment tiegħek hawn
-    submit: Żid suġġeriment
+    submit: "Żid suġġeriment"
   appname: Core.org
   stage: Stadju
   stage_number: Stadju numru %{number}
@@ -72,8 +72,8 @@
     need_confirmation: Ma rcevejtx istruzzjonijiet tal-konferma?
     need_unlock: Ma rcevejtx istruxzzjonijiet biex tanlokkja?
   signup_form:
-    student_count: '%{count} l-istudenti diġà irregistraw.'
-    teacher_count: '%{count} għalliema diġà irregistraw.'
+    student_count: "%{count} l-istudenti diġà irregistraw."
+    teacher_count: "%{count} għalliema diġà irregistraw."
     overview_student: Irreġistra għall-kont biex timmarka l-progress tiegħek. Posta
       elettronika tiegħek huwa primarjament użat biex tilloggja fil-sit u għall-irkupru
       tal-password. Għal aktar informazzjoni, ara tagħna <a href="http://code.org/privacy">Polza
@@ -103,7 +103,7 @@
     taken_username: Isem l-utent huwa diġà meħud
     valid_password: Il-password valida!
     invalid_password: Il-password irid ikun mill-inqas 6 karattri
-    mismatch_password: -Żewġ passwords li daħħalt ma jaqblux
+    mismatch_password: "-Żewġ passwords li daħħalt ma jaqblux"
     student_terms: Jien naqbel li tkun marbuta bl-Code.org <a href='http://code.org/tos'>
       it-termini tas-servizz</a>. Jekk jiena taħt 13-il sena, jiena nikkonferma billi
       jissottometti din il-formola li għandi tiegħi ġenitur jew tutur legali permess
@@ -149,12 +149,12 @@
       Zombies! :-) %{name}
   follower:
     invite_sent: Lis-stedina mibgħuta
-    added_teacher: '%{name} miżjuda bħala l-għalliem tiegħek'
+    added_teacher: "%{name} miżjuda bħala l-għalliem tiegħek"
     registered: Inti rreġistrajt għall-%{section_name}.
     error:
       signed_in: Jekk jogħġbok ghamel signout qabel ma tipproċedi
-      username_not_found: '%{username} isem l-utent ma nstabx'
-      username_in_use: '%{username} huwa diġà meħud, jekk jogħġbok agħżel ieħor'
+      username_not_found: "%{username} isem l-utent ma nstabx"
+      username_in_use: "%{username} huwa diġà meħud, jekk jogħġbok agħżel ieħor"
       no_teacher: Could not find anyone signed in with '%{teacher_email_or_code}'.
         Please ask them to sign up here and then try adding them again
       section_not_found: Ma' nistax insib taqsima bil-kodiċi "%{section_code}".
@@ -196,13 +196,13 @@
       title: Jekk jogħġbok ikkonferma
       'no': 'No'
       'yes': 'Yes'
-      msg: Żgur li tixtieq tikklejmja l-premju %{prize_name}?
+      msg: "Żgur li tixtieq tikklejmja l-premju %{prize_name}?"
       msg_student: 'Nota: Tista'' biss tagħżel tip wieħed ta premju.'
       msg_publicschool: Jekk jogħġbok ikkonferma li int għalliem fi skola pubblika
         Amerikana.
-      msg_visit_website: Żur is-sit elettroniku
+      msg_visit_website: "Żur is-sit elettroniku"
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB ta' spazju fuq Dropbox
@@ -211,7 +211,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -252,7 +252,7 @@
             href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
             used by teachers in U.S. public schools.
   crud:
-    new_model: '%{model} ġdid'
+    new_model: "%{model} ġdid"
     show: Uri
     edit: Editja
     edit_model: Editja l-%{model}
@@ -260,9 +260,9 @@
     destroy: Eqred
     back: Lura
     confirm: Cert?
-    created: '%{model} kien maħluq.'
-    updated: '%{model} ġie aġġornat.'
-    destroyed: '%{model} gie imħassar.'
+    created: "%{model} kien maħluq."
+    updated: "%{model} ġie aġġornat."
+    destroyed: "%{model} gie imħassar."
     access_denied: M'għandekx aċċess għal %{model}.
   nav:
     header:
@@ -293,7 +293,7 @@
       puzzle_map: Stadji
       prizes: Collect all %{total_trophies} trophies and win prizes!
       prize_earned: All %{total_trophies} trophies collected. Prize won!
-      prize_us_only: (U.S. students only)
+      prize_us_only: "(U.S. students only)"
       prizes_link: aktar tagħrif
   teacher:
     answer: Answer
@@ -301,13 +301,13 @@
     title:
       one: 'L-għalliem tiegħek:'
       other: 'L-għalliema tiegħek:'
-    remove: (neħħi l-għalliem)
+    remove: "(neħħi l-għalliem)"
     confirm:
-      remove: Żgur tixtieq tneħħi dan l-għalliem?
+      remove: "Żgur tixtieq tneħħi dan l-għalliem?"
     students:
-      dashboard: Żur il-Pannell tal-Kontroll tal-Għalliem
+      dashboard: "Żur il-Pannell tal-Kontroll tal-Għalliem"
     user_not_found: L-għalliem jew student ma nstabx
-    student_teacher_disassociated: '%{teacher_name} tneħħa bħala għalliem ta'' %{student_name}'
+    student_teacher_disassociated: "%{teacher_name} tneħħa bħala għalliem ta' %{student_name}"
     panel:
       answer_viewer: Werrej tar-risposta
       student: Student
@@ -322,30 +322,26 @@
     email_confirm_needed: 'Indirizz elettroniku ma giex ikkonfermat:'
     email_confirm_needed_required: 'L-indirizz tal-email: tiegħek %{email} ma ġiex
       ikkonfermat:'
-    email_confirm_wrong_email: (Indirizz elettroniku ħażin?)
+    email_confirm_wrong_email: "(Indirizz elettroniku ħażin?)"
     email_resend_confirm: Erga ibghat l'istruzzjonijiet tal-konferma
-    new_password_hint: (ħalli vojt jekk ma tixtieqx tibdel)
-    current_password_hint: (neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet
-      tiegħek)
-    delete: Ħassar l'Account tiegħek
+    new_password_hint: "(ħalli vojt jekk ma tixtieqx tibdel)"
+    current_password_hint: "(neħtieġu il-password attwali biex nikkonfermaw it-tibdiliet
+      tiegħek)"
+    delete: "Ħassar l'Account tiegħek"
     delete_text: Meta tikklikkja l-buttuna hawn taħt jithassarlek l'Account.
     delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar
       il-kontijiet ta'' l-istudenti tiegħek.'
-    delete_confirm: Żgur tixtieq tħassar l'Account tiegħek?
+    delete_confirm: "Żgur tixtieq tħassar l'Account tiegħek?"
   user_level:
     completed: Lesta
     tried: Ppruvat
-  user_stats:
-    recent_activity: Attività riċenti
-    show_more: Uri aktar
-    classroom_activity: Attivita bla kompjuter
   home:
     title: Code Stuwdjo
     description: Code Studio huwa id-dar tal-korsijiet online maħluqa mill-Code.org
-    lines_of_code: '%{lines_count} LINJI TAL-KODIĊI MIKTUBA MILL-ISTUDENTI'
-    lines_of_code_linebreak: '%{lines_count} linji tal-Kodiċi <br/> miktuba minn %{students_count}
-      MILJUNI ta '' studenti'
-    all_courses: Ħarsa ġenerali tal-korsijiet 1, 2 u 3
+    lines_of_code: "%{lines_count} LINJI TAL-KODIĊI MIKTUBA MILL-ISTUDENTI"
+    lines_of_code_linebreak: "%{lines_count} linji tal-Kodiċi <br/> miktuba minn %{students_count}
+      MILJUNI ta ' studenti"
+    all_courses: "Ħarsa ġenerali tal-korsijiet 1, 2 u 3"
     lesson_plans: Pjanijiet tal-Lezzjoni
     signin_message: Diġà rreġistrat? %{link}
     student_reg_link: Registrazzjoni ta' lis-Studenti
@@ -381,13 +377,13 @@
       u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi
       mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f'kull età.
     test_videos_help: Ittestja il-Video Plyer il-gdid taghna flis-skola tieghek
-    try_beta_courses: Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja
+    try_beta_courses: "Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja"
     use_as_teacher: Uża dan is-sit bħala għalliem
-    heading_hoc2014: <h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>
-    heading_elementary: <h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza
-      fil-Kompjuter (etajiet kollha)</h1>
-    heading_apps: <h2>Gost għal</h2> <h1>Kulħadd.</h1>
-    heading_legacy: <h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>
+    heading_hoc2014: "<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>"
+    heading_elementary: "<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza
+      fil-Kompjuter (etajiet kollha)</h1>"
+    heading_apps: "<h2>Gost għal</h2> <h1>Kulħadd.</h1>"
+    heading_legacy: "<h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>"
     your_gallery: Gallery
     no_primary_course: Ipprova kors tal-Code Studio
     choose_next_course: Ipprova kors mill-Course Studio billi tagħżel wieħed minn
@@ -422,8 +418,8 @@
       Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
       &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
     powered_by_aws: Powered by Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
-      Hour of Code&reg; are trademarks of Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
+      Hour of Code&reg; are trademarks of Code.org."
     copyright: Drittijiet tal-Awtur
     more: More
     feedback: Provide feedback
@@ -547,7 +543,7 @@
     want_to_make_your_own: Tixtieq tikteb il-porgramm tieghek stess?
     more: Aktar &rarr;
     caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: '%{time_ago} ilu'
+    caption_time_ago: "%{time_ago} ilu"
     header: Gallery
     header_playlab: Play Lab
     header_artist: Artist
@@ -560,7 +556,7 @@
     feedback: Give Feedback
     report_bug: Report Bug
     support: Ikseb l-Għajnuna
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: It-tweġiba żbaljata
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -597,7 +593,7 @@
   time:
     hour: siegħa
     day: jum
-    week: ġimgħa
+    week: "ġimgħa"
   data:
     script:
       name:

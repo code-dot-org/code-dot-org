@@ -289,10 +289,6 @@ sv:
   user_level:
     completed: Avklarade
     tried: Försökte
-  user_stats:
-    recent_activity: Senaste händelserna
-    show_more: Visa mer
-    classroom_activity: Ouppkopplad aktivitet
   home:
     title: Code Studio
     description: Code Studio är basen för onlinekurser skapade av Code.org

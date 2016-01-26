@@ -294,7 +294,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_randomNumber_signatureOverride":function(d){return "randomNumber(min, max)"},
 "dropletBlock_randomNumber_min_max_signatureOverride":function(d){return "randomNumber(min, max)"},
 "dropletBlock_return_description":function(d){return "Return a value from a function"},
-"dropletBlock_return_signatureOverride":function(d){return "return"},
+"dropletBlock_return_signatureOverride":function(d){return "qaytarish"},
 "dropletBlock_setAttribute_description":function(d){return "Sets the given value"},
 "dropletBlock_subtractOperator_description":function(d){return "Subtract two numbers"},
 "dropletBlock_subtractOperator_signatureOverride":function(d){return "Subtract operator"},
@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Watch the Video"},
 "when":function(d){return "when"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "Workspace: "}};
+"workspaceHeaderShort":function(d){return "Workspace: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

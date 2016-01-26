@@ -163,7 +163,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catActions":function(d){return "操作（そうさ）"},
 "catColour":function(d){return "色"},
 "catLists":function(d){return "リスト"},
-"catLogic":function(d){return "ロジック〔論理（ろんり）〕"},
+"catLogic":function(d){return "ロジック（論理（ろんり））"},
 "catLoops":function(d){return "ループ〔くりかえし〕"},
 "catMath":function(d){return "数値"},
 "catProcedures":function(d){return "関数"},
@@ -274,7 +274,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_mathMin_param0":function(d){return "n1, n2,..., nX"},
 "dropletBlock_mathMin_param0_description":function(d){return "One or more numbers to compare."},
 "dropletBlock_mathMin_signatureOverride":function(d){return "Math.min(n1, n2, ..., nX)"},
-"dropletBlock_mathRandom_description":function(d){return "0以上（いじょう）であり1より小（ちい）さい範囲（はんい）のランダムな数字（すうじ）を返（かえ）します。"},
+"dropletBlock_mathRandom_description":function(d){return "0以上（いじょう）であり1より小（ちい）さい範囲（はんい）のランダムな数字（すうじ）を返（かえ）します"},
 "dropletBlock_mathRandom_signatureOverride":function(d){return "Math.random()"},
 "dropletBlock_mathRound_description":function(d){return "Round to the nearest integer"},
 "dropletBlock_mathRound_param0":function(d){return "x"},
@@ -336,7 +336,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ignore":function(d){return "無視する"},
 "infinity":function(d){return "無限\n"},
 "jump":function(d){return "ジャンプ"},
-"keepPlaying":function(d){return "ゲームを続（つづ）ける。"},
+"keepPlaying":function(d){return "ゲームをつづける"},
 "levelIncompleteError":function(d){return "構成に必要なブロックをすべて使っていますが、使い方が適切ではありません。"},
 "listVariable":function(d){return "リスト"},
 "makeYourOwnFlappy":function(d){return "自分だけの「パタパタゲーム」を作りましょう。"},
@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行した時"},
-"workspaceHeaderShort":function(d){return "ワークスペース："}};
+"workspaceHeaderShort":function(d){return "ワークスペース："},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

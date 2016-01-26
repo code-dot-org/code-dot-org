@@ -1,5 +1,9 @@
 require 'eyes_selenium'
 
+# Override default match timeout (2 seconds) to help prevent laggy UI from breaking eyes tests.
+# See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
+MATCH_TIMEOUT = 5
+
 When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   ensure_eyes_available
   @original_browser = @browser
@@ -16,7 +20,7 @@ And(/^I close my eyes$/) do
 end
 
 And(/^I see no difference for "([^"]*)"$/) do |identifier|
-  @eyes.check_window(identifier)
+  @eyes.check_window(identifier, MATCH_TIMEOUT)
 end
 
 def ensure_eyes_available
