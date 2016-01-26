@@ -77,7 +77,7 @@ Run exactly one UI test in a given feature file for all browser/os combinations
 
 `./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
 
-Run the eyes tests (see top section for more information on Eyes)
+Run the eyes tests
 
 `./runner.rb --eyes`
 
