@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Horfa á videóið"},
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
-"workspaceHeaderShort":function(d){return "Vinnusvæði: "}};
+"workspaceHeaderShort":function(d){return "Vinnusvæði: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

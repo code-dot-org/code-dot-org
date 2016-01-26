@@ -247,5 +247,6 @@
   "watchVideo": "ویڈیو دیکھیں",
   "when": "کب",
   "whenRun": "رَن کب ہوگا",
-  "workspaceHeaderShort": "ورک اسپیس "
+  "workspaceHeaderShort": "ورک اسپیس ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

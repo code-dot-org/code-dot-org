@@ -1,6 +1,20 @@
-# The code-studio package
+# The code-studio assets package
 
-This package contains static assets consumed by our "Code Studio" rails app (also known as "dashboard").  Dashboard consumes a transpiled, concatenated, factored, compressed, mangled distribution version of this package (which it unpacks to `dashboard/public/code-studio-package`).  What you're looking at is the original source for that package, and the tools to build the distribution.
+This package contains static assets (JS, CSS and more) for use by "dashboard," our Rails app ("dashboard" is [studio.code.org](https://studio.code.org), also known as "Code Studio").  Dashboard consumes a transpiled, concatenated, factored, compressed, mangled distribution version of this package (which it unpacks to `dashboard/public/code-studio-package`).  What you're looking at is the original source for that package, and the tools to build the distribution.
+
+This includes (not an exhaustive list):
+
+* Our video player/fallback player system
+* React and a number of our custom components
+* Some app initialization glue logic (see [initApp.js](src/js/initApp/initApp.js))
+* Levelbuildler-specific JavaScript and CSS
+
+It does not include:
+
+* The [apps package](../apps), which contains our puzzle and project level types
+* [blockly-core](../blockly-core), our fork of the Blockly visual programming environment
+* [dashboard](../dashboard), the actual Rails app that serves these assets at studio.code.org
+* [pegasus](../pegasus), the Sinatra app that serves pages at code.org.
 
 ## Dev setup
 You should have the following tools installed globally.
