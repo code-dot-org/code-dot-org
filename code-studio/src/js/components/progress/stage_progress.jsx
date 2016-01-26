@@ -12,7 +12,7 @@ window.dashboard.StageProgress = (function (React) {
     propTypes: {
       levels: STAGE_PROGRESS_TYPE,
       currentLevelIndex: React.PropTypes.number,
-      outerClass: React.PropTypes.string
+      largeDots: React.PropTypes.bool
     },
 
     render: function () {
@@ -30,12 +30,22 @@ window.dashboard.StageProgress = (function (React) {
           outerClass += ' last';
         }
 
+        var isUnplugged = isNaN(level.title);
+        var dotStyle = {};
+        if (this.props.largeDots) {
+          if (isUnplugged) {
+            dotStyle = {fontSize: '13px', padding: '4px 10px', margin: '1px'};
+          } else {
+            dotStyle = {padding: '5px 4px 3px 4px', margin: '1px'};
+          }
+        }
+
         return ([
           <div className={outerClass}>
             <a
               href={level.url}
               className={innerClass + ' level-' + level.id}
-              style={level.url ? isNaN(level.title) ? {'font-size': '13px', padding: '4px 10px', margin: '1px'} : {padding: '5px 4px 3px 4px', margin: '1px'} : {}}>
+              style={dotStyle}>
               {level.title}
             </a>
           </div>,
@@ -44,7 +54,7 @@ window.dashboard.StageProgress = (function (React) {
       }.bind(this));
 
       return (
-        <div className={this.props.outerClass || 'progress_container'}>
+        <div className={this.props.largeDots ? 'games' : 'progress_container'}>
           {progressDots}
         </div>
       );
