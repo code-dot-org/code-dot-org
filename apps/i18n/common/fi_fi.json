@@ -247,6 +247,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "workspaceHeaderShort": "Työtila: "
 }

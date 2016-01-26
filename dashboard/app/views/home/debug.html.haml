@@ -19,7 +19,10 @@
       %td= c[1]
   %tr
     %th Request Env
-  - EnvUtils.redact_sensitive_values(request.env).each_pair do |k,v|
+  - request.env.each_pair do |k,v|
     %tr
       %td= k
       %td= v
+  %tr
+    %td Request
+    %td= request.inspect

@@ -247,6 +247,5 @@
   "watchVideo": "Погледај видео",
   "when": "када",
   "whenRun": "када се извршава",
-  "workspaceHeaderShort": "Радни простор: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "workspaceHeaderShort": "Радни простор: "
 }

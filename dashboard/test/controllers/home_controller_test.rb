@@ -248,11 +248,4 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '.alert', 0
   end
 
-  test 'no more debug' do
-    # this action is now in AdminReportsController and requires admin privileges
-    assert_raises AbstractController::ActionNotFound do
-      get :debug
-    end
-  end
-
 end

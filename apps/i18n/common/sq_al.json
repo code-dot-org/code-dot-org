@@ -247,6 +247,5 @@
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur vrapon",
-  "workspaceHeaderShort": "Vendi i punës: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "workspaceHeaderShort": "Vendi i punës: "
 }

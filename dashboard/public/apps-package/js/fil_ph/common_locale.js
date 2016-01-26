@@ -402,5 +402,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Panoorin ang Video"},
 "when":function(d){return "kelan"},
 "whenRun":function(d){return "kapag tumakbo"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

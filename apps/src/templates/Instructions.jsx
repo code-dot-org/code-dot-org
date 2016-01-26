@@ -55,7 +55,7 @@ module.exports = React.createClass({
     }
 
     return (
-      <div>
+      <div className='instructions-container'>
         {body}
         {aniGif}
         {this.props.authoredHints}

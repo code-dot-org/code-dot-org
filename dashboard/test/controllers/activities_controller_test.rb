@@ -987,7 +987,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
 
     assert_response :success
-    response = JSON.parse(@response.body)
+    response = JSON.parse(@response.body);
 
     assert_nil response['share_failure']
     assert_nil response['level_source']
@@ -1000,7 +1000,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
 
     assert_response :success
-    response = JSON.parse(@response.body)
+    response = JSON.parse(@response.body);
 
     assert_nil response['share_failure']
     assert response['level_source'].match(/^http:\/\/test.host\/c\//)
