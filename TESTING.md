@@ -1,6 +1,6 @@
 # Testing
 
-We use many different kind of tests to maintain quality in our codebase. Here's an overview of what these tests are, and how to run them.
+We use automated tests to maintain quality in our codebase. Here's an overview of the kinds of tests we use, and how to run them.
 
 ## Kinds of tests
 * Apps directory
