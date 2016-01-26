@@ -246,7 +246,7 @@ EOS
 
     # update the same level with different dsl text
     dsl_text = dsl_text.gsub('star', 'bar')
-    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text)
+    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text, published: true)
 
     cm = ContractMatch.find(cm.id)
     # star -> bar
