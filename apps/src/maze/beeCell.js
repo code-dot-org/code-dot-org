@@ -15,6 +15,10 @@ var CLOUD = {
   VARIABLE: 'C',
   ANY: 'Cany'
 };
+var FLOWER = {
+  RED: 'R',
+  PURPLE: 'P'
+};
 
 var BeeCell = function (value, clouded, prefix, color) {
   /**
@@ -86,8 +90,20 @@ BeeCell.prototype.isHive = function () {
   return this.prefix_ === '-';
 };
 
-BeeCell.prototype.getColor = function () {
-  return this.color_;
+/**
+ * Flowers can be red, purple, or undefined.
+ * @return {boolean}
+ */
+BeeCell.prototype.isRedFlower = function () {
+  return this.isFlower() && this.color_ === FLOWER.RED;
+};
+
+/**
+ * Flowers can be red, purple, or undefined.
+ * @return {boolean}
+ */
+BeeCell.prototype.isPurpleFlower = function () {
+  return this.isFlower() && this.color_ === FLOWER.PURPLE;
 };
 
 /**

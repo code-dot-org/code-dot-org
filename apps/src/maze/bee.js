@@ -327,22 +327,21 @@ Bee.prototype.checkedCloud = function (row, col) {
  * Flowers are either red or purple. This function returns true if a flower is red.
  */
 Bee.prototype.isRedFlower = function (row, col) {
-  if (!this.isFlower(row, col)) {
+  if (!this.isFlower(row, col, false)) {
     return false;
   }
 
-  // The default flower type is overriden by setting Maze.map[row][col]
-  // to the type you want ('R' for red, 'P' for purple).  Clouds are
-  // ignored here.
-  var override = this.currentStaticGrid[row][col].getColor();
-  if (override && override[0] === 'R') {
+  // If the flower has been overridden to be red, return true.
+  // Otherwise, if the flower has been overridden to be purple, return
+  // false. If neither of those are true, then the flower is whatever
+  // the default flower color is.
+  if (this.currentStaticGrid[row][col].isRedFlower()) {
     return true;
+  } else if (this.currentStaticGrid[row][col].isPurpleFlower()) {
+    return false;
+  } else {
+    return this.defaultFlowerColor_ === 'red';
   }
-  if (!override && this.defaultFlowerColor_ === 'red') {
-    return true;
-  }
-
-  return false;
 };
 
 /**
