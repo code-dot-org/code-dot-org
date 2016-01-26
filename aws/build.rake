@@ -166,7 +166,7 @@ CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) 
 
   updated_package = packager.update_from_s3
   if updated_package
-    HipChat.log "Downloaded package from S3: ${packager.commit_hash}"
+    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
     next # no need to do anything if we already got a package from s3
   end
 
