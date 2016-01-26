@@ -1,5 +1,3 @@
-node.default['ssl_certificate']['service']['compatibility'] = 'modern'
-
 apt_repository 'nginx' do
   uri          'ppa:nginx/development'
   distribution 'trusty'
@@ -12,16 +10,17 @@ directory '/run/unicorn' do
 end
 
 # Get/create the SSL cert via the `ssl_certificate` cookbook resource
+node.default['ssl_certificate']['service']['compatibility'] = 'modern'
 ssl = node['cdo-nginx']['ssl_key']['content'] != '' &&
   node['cdo-nginx']['ssl_cert']['content'] != ''
 
 cert = ssl_certificate 'cdo-nginx' do
   namespace node['cdo-nginx']
-  source 'attribute'
-  key_source 'attribute'
-  chain_name 'cdo-chain'
-  chain_source 'attribute'
-  cert_source 'attribute'
+  if ssl
+    chain_name 'cdo-chain'
+    chain_source 'attribute'
+    source 'attribute'
+  end
 end
 
 template '/etc/nginx/nginx.conf' do

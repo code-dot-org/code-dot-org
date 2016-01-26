@@ -36,14 +36,15 @@ GIT
 
 GIT
   remote: git://github.com/wjordan/test-kitchen.git
-  revision: 6891ddc7b63af02f93b4f9a56abfd1f3866b65cc
+  revision: 721244eba68762c37ab8796f639885743ac0b769
   branch: cdo
   specs:
-    test-kitchen (1.4.3.dev.0)
+    test-kitchen (1.5.0)
+      chef-config (>= 12.5.1)
       mixlib-install (~> 0.7)
       mixlib-shellout (>= 1.2, < 3.0)
       net-scp (~> 1.1)
-      net-ssh (~> 2.7, < 2.10)
+      net-ssh (>= 2.9, < 4.0)
       safe_yaml (~> 1.0)
       thor (~> 0.18)
 
