@@ -1,0 +1,10 @@
+instrumentation:
+  root: src/js
+  include-all-sources: true
+check:
+  global:
+    # Required coverage, as a percentage.
+    statements: 0.9
+    branches: 0.9
+    functions: 1.1
+    lines: 0.9
