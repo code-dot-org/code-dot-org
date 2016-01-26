@@ -20,6 +20,9 @@ dependencies:
     - bash build_with_core.sh:
         pwd:
             apps
+    - npm install:
+        pwd:
+            code-studio
     - bundle exec rake assets:precompile:
         pwd:
             dashboard
