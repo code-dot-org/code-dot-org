@@ -8,7 +8,7 @@ nav: plc_plp_nav
 
 ## Your Commitment (Professional Learning Partner)
 
-- Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a ¼ FTE time commitment at first, but will grow with time)
+- Provide a dedicated Professional Learning Partner Program Manager who will participate fully in the Program Manager onboarding & on-going program management responsibilities. (this is a 0.15 FTE time commitment at first, but will grow with time)
 - Attend our Facilitation Summit, May 20-22, 2016 in Nashville, TN
 - Attend our 5-day Code.org Summer Institute with teachers from your state
 	- June 20-24 in Atlanta, GA - states attending (AL, FL, GA, KY, IN, MD, NC, OH, TX)
@@ -33,8 +33,8 @@ organize informal local meetups for educators, ideally together with a local uni
 - Pay for round-trip airfare, hotel, ground transportation to and from the airport, and meals during the Facilitation Summit and the summer professional development workshop in Year 1 of the partnership.
 - Host the 5-day Code.org Summer Institute for CS Principles starting in Year 1 of the partnership, and for the CS Discoveries starting in Year 2.
 - For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=0" target=_blank>see example budget here</a>). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
-  - For a cohort of 10 or fewer teachers, the funding would amount to $4,000 for overall costs + $160 per teacher in the cohort.
-  - For a cohort of more than 10 teachers, the funding would amount to $6,000 for overall costs + $160 per teacher in the cohort.
+  - For a cohort of 10 or fewer teachers, the funding would amount to $6,000 for overall costs + $160 per teacher in the cohort.
+  - For a cohort of more than 10 teachers, the funding would amount to $8,000 for overall costs + $160 per teacher in the cohort.
   - For urban districts, there would be a 25% multiplier added to the costs.
   - For <5 teachers, the PD would be done online.
 - Provide promotional materials to assist in community-building.
@@ -44,7 +44,7 @@ organize informal local meetups for educators, ideally together with a local uni
 - Evaluate your success based on a mixture of factors, which could include a count of teachers participating in workshops, workshop evaluation reports, teacher surveys, and actual participation/performance by students in classrooms hosted by these teachers.
 
 ## Joint Commitment
-- We will cooperate together to transition your work to 100% local funding. Our vision for this is that the long-term funding comes from state or local sources. We will provide you guidance, introductions, sample grant applications, etc., and establish you as a Code.org-accredited provider. In some regions, we may also be able to connect you to local philanthropists.
+- We will work together to transition your work to 100% local funding. Our vision for this is that the long-term funding comes from state or local sources. We will provide you guidance, introductions, sample grant applications, etc., and establish you as a Code.org-accredited provider. In some regions, we may also be able to connect you to local philanthropists.
 - We will collaborate to establish your organization as a certified regional provider of computer science PD, so teachers from local districts can receive formal PD credit.
 - We will cooperate to identify, recruit, build and maintain local facilitator capacity. Facilitators need to meet Code.org’s established selection criteria.
 
