@@ -63,7 +63,7 @@ module.exports = {
       description: 'drawImageURL with callback',
       editCode: true,
       xml:
-        'createCanvas("id", 320, 450);\n' +
+        'createCanvas("canvas", 320, 450);\n' +
         'textLabel("result1", "");\n' +
         'textLabel("result2", "");\n' +
         'drawImageURL("' + imageUrl + '", function (success) {\n' +
@@ -75,7 +75,8 @@ module.exports = {
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
-        testUtils.runOnAppTick(Applab, 400, function () {
+        testUtils.runOnAppTick(Applab, 1000, function () {
+          assert(document.getElementById('canvas'), 'canvas took too long to initialize');
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
           Applab.onPuzzleComplete();
@@ -97,7 +98,7 @@ module.exports = {
       description: 'drawImageURL with extra args and callback',
       editCode: true,
       xml:
-        'createCanvas("id", 320, 450);\n' +
+        'createCanvas("canvas", 320, 450);\n' +
         'textLabel("result1", "");\n' +
         'textLabel("result2", "");\n' +
         'drawImageURL("' + imageUrl + '", 5, 10, 15, 20, function (success) {\n' +
@@ -109,7 +110,8 @@ module.exports = {
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
-        testUtils.runOnAppTick(Applab, 400, function () {
+        testUtils.runOnAppTick(Applab, 1000, function () {
+          assert(document.getElementById('canvas'), 'canvas took too long to initialize');
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
           Applab.onPuzzleComplete();

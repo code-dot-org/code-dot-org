@@ -1,0 +1,16 @@
+name 'U4 - Making Data Visualizations - Getting Started'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# One Chart, Two Chart, Red Chart, Blue Chart
+
+Different types of charts allow people to make sense of data in different ways. In this lesson, you will learn to make **scatter**, **line**, and **bar charts**, but there are many other types of visualizations that people use to interpret data in different ways. You will see that **you can use the same table of data to make several different types of charts**! Look through the Data Visualizations 101 resource and familiarize yourself with the different chart types, **paying particular attention to the scatter, line, and bar charts.**
+
+# Disclaimer
+
+This lesson is about using charts to **explore** trends in the data - **not** about creating the world’s greatest chart! While the early parts of the lesson will walk you through very specific steps to make a particular chart, by the end of the lesson you will be creating your own customized charts to **see what trends you can discover in the data**.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

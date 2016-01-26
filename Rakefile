@@ -5,6 +5,25 @@ require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 
+# Helper functions
+def make_blockly_symlink
+  if local_environment?
+    Dir.chdir(apps_dir) do
+      apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+      RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
+    end
+  end
+end
+
+def make_code_studio_symlink
+  if local_environment?
+    Dir.chdir(code_studio_dir) do
+      code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
+      RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
+    end
+  end
+end
+
 namespace :lint do
   task :ruby do
     RakeUtils.bundle_exec 'rubocop'
@@ -115,6 +134,9 @@ namespace :build do
   end
 
   task :dashboard do
+    make_blockly_symlink
+    make_code_studio_symlink
+
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
       RakeUtils.stop_service CDO.dashboard_unicorn_name unless rack_env?(:development)
@@ -242,12 +264,7 @@ namespace :install do
   # Create a symlink in the public directory that points at the appropriate blockly
   # code (either the static blockly or the built version, depending on CDO.use_my_apps).
   task :blockly_symlink do
-    if local_environment?
-      Dir.chdir(apps_dir) do
-        apps_build = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
-        RakeUtils.ln_s apps_build, dashboard_dir('public','blockly')
-      end
-    end
+    make_blockly_symlink
   end
 
   task :hooks do
@@ -260,7 +277,7 @@ namespace :install do
 
     files.each do |f|
       path = File.expand_path("../tools/hooks/#{f}", __FILE__)
-      system "ln -s #{path} #{git_path}/#{f}"
+      RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
 
@@ -273,10 +290,7 @@ namespace :install do
 
   task :code_studio do
     if local_environment?
-      Dir.chdir(code_studio_dir) do
-        code_studio_build = CDO.use_my_code_studio ? code_studio_dir('build') : 'code-studio-package'
-        RakeUtils.ln_s code_studio_build, dashboard_dir('public','code-studio')
-      end
+      make_code_studio_symlink
       install_npm
     end
   end
@@ -302,6 +316,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
+  tasks << :hooks if rack_env?(:development)
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :code_studio if CDO.build_code_studio

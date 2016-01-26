@@ -19,6 +19,35 @@ level 'GoodBadVisualizations_v2'
 stage 'Check Your Assumptions'
 level 'U4L03v2 - Student Introduction'
 
+#5new
+stage 'Making Data Visualizations'
+level 'U4 - Making Data Visualizations - Student Introduction'
+level 'U4 - Making Data Visualizations - Getting Started'
+level 'U4 - Making Data Visualizations - Scatter Plot'
+level 'U4 - Making Data Visualizations - Line Chart'
+level 'U4 - Making Data Visualizations - Bar Chart'
+level 'U4 - Making Data Visualizations - Free Play'
+
+#6new
+stage 'Discover a Data Story'
+level 'U4L06v2 Student Lesson Introduction'
+
+
+#7new
+stage 'Cleaning Data'
+level 'U4L16 Student Lesson Introduction'
+level 'U4 - Cleaning Data - Activity Guide'
+level 'U4 Cleaning Data Activity Guide Pt2'
+level 'U4 Cleaning Data Activity Guide Pt3'
+
+#8new
+stage 'Creating Summary Tables'
+level 'U4L08v2 Student Intro'
+level 'U4L08v2 Making Pivot Tables'
+level 'U4L08v2 Making Pivot Tables Part 2'
+level 'U4L08v2 Making Pivot Tables Part 3'
+
+
 #1old
 stage 'Why Make Apps?'
 level 'U4L01 Student Lesson Introduction'
@@ -176,7 +205,6 @@ assessment 'U4L15 Multiple Choice'
 
 #16
 stage 'Cleaning Data'
-level 'U4L16 Student Lesson Introduction'
 assessment 'U4L16 Free Response'
 assessment 'U4L16 Choose 2'
 assessment 'U4L16 Multiple Choice'

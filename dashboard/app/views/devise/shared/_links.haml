@@ -21,9 +21,15 @@
   %br/
   %br/
 - if devise_mapping.omniauthable?
+  - if !Rails.env.production?
+    .alert
+      Hi! If you are having trouble with OAuth features on
+      %strong= Rails.env
+      %a{href: 'http://wiki.code.org/display/PROD/Developer+Oauth+setup'}
+        check the wiki.
   - [:google_oauth2, :facebook, :windowslive].each do |provider|
-    = link_to image_tag("auth/#{provider}.png"), omniauth_authorize_path(resource_name, provider)
-    = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT), class: 'oauth_sign_in'
+    = link_to image_tag("auth/#{provider}.png"), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT)
+    = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT), class: "oauth_sign_in with_#{provider}"
     %br/
     %br/
 :javascript
