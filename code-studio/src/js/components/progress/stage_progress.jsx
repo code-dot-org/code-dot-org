@@ -33,7 +33,7 @@ window.dashboard.StageProgress = (function (React) {
         return ([
           <div className={outerClass}>
             <a
-              href={level.link || level.url}
+              href={level.url}
               className={innerClass + ' level-' + level.id}
               style={level.url ? isNaN(level.title) ? {'font-size': '13px', padding: '4px 10px', margin: '1px'} : {padding: '5px 4px 3px 4px', margin: '1px'} : {}}>
               {level.title}

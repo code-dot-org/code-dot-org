@@ -97,7 +97,7 @@ window.dashboard.progress = (function () {
         title: level.title,
         status: status,
         kind: level.kind,
-        link: href,
+        url: href,
         id: level.id
       };
     });
