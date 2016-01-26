@@ -30,7 +30,7 @@ You can expect a full test run to take about 5-10 minutes.
 Tests run pretty quickly
 
 ### Dashboard Tests
-`cd <your repo directory>/dashboard`
+`cd dashboard`
 `rake test` 
 This will run all of our Ruby tests. This can take about 15 minutes to run
 
