@@ -36,7 +36,7 @@ window.dashboard.Pairing = (function (React) {
       console.log(event);
 
       var section = this.props.sections.find(function (s) {
-        return (s.id == event.target.value)
+        return (s.id == event.target.value);
       });
 
       if (section) {
