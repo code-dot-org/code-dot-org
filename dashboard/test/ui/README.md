@@ -58,21 +58,27 @@ Run all UI tests on all browsers against your local host (by default, tests poin
 Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -p <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
 Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
+
 `./runner.rb -l`
 
 Run all UI tests for a given browser/os combination - full list of combinations is in browsers.json
+
 `./runner.rb --config ChromeLatestWin7`
 
 Run all UI tests for a given browser
+
 `./runner.rb --browser Chrome`
 
 Run all tests in a given feature file for all browser/os combinations
+
 `./runner.rb --feature features/awesomeStuff.feature`
 
 Run exactly one UI test in a given feature file for all browser/os combinations
+
 `./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
 
 Run the eyes tests (see top section for more information on Eyes)
+
 `./runner.rb --eyes`
 
 ## Tips
