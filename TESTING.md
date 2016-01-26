@@ -47,32 +47,7 @@ To run a specific unit test, you can run
 ### UI Tests
 Our UI tests live in dashboard/test/ui, so all commands need to be run out of there. The script `runner.rb` is responsible for actually running tests and accepts many parameters. For a full list, run `runner.rb -h`
 
-More information about dashboard UI tests is available at https://github.com/code-dot-org/code-dot-org/tree/staging/dashboard/test/ui
-
-Sample Commands
-
-Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
-
-`./runner.rb -d localhost.studio.code.org:3000`
-Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -p <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
-
-Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
-`./runner.rb -l`
-
-Run all UI tests for a given browser/os combination - full list of combinations is in browsers.json
-`./runner.rb --config ChromeLatestWin7`
-
-Run all UI tests for a given browser
-`./runner.rb --browser Chrome`
-
-Run all tests in a given feature file for all browser/os combinations
-`./runner.rb --feature features/awesomeStuff.feature`
-
-Run exactly one UI test in a given feature file for all browser/os combinations
-`./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
-
-Run the eyes tests (see top section for more information on Eyes)
-`./runner.rb --eyes`
+Detailed information about dashboard UI tests is available at https://github.com/code-dot-org/code-dot-org/tree/staging/dashboard/test/ui
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
