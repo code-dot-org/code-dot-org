@@ -28,10 +28,6 @@ var ImageProperties = React.createClass({
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
-          desc={'text'}
-          initialValue={$(element).text()}
-          handleChange={this.props.handleChange.bind(this, 'text')} />
-        <PropertyRow
           desc={'width (px)'}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
