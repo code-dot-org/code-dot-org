@@ -12,6 +12,8 @@
 // Shim window.console to be safe in IE
 require('./consoleShim')(window);
 
+console.log('Brent is testing things that should be removed before the next DTP');
+
 require('./videos');
 
 window.React = require('react');
