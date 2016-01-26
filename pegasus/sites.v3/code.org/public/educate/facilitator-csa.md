@@ -18,17 +18,17 @@ Code.org CS in Algebra is a block-based adaptation of the Bootstrap curriculum, 
 
 CS in Algebra Facilitators accepted to the program will work with Code.org’s local Professional Learning Partner organization (a higher education institution, a nonprofit or a school district) to plan and lead:
 
-- One 3-day in-person workshop for local teachers enrolled in Code.org’s CS in Algebra Professional Learning Program during the 2016-17 school year.
+- One 2-day in-person workshop for local teachers enrolled in Code.org’s CS in Algebra Professional Learning Program during the 2016-17 school year.
 - Two 1-day, in-person follow-up workshops for local teachers enrolled in Code.org’s CS in Algebra Professional Learning Program during the 2016-17 school year.
 
 
-For each workshop you host, CS in Algebra Facilitators will receive between $400-450 in compensation for facilitating. We will also provide the venue, materials and food (at no cost) needed to host the workshop.
+For each workshop you host, CS in Algebra Facilitators will receive between $450-500/day in compensation for facilitating. We will also provide the venue, materials and food (at no cost) needed to host the workshop.
 
 
 ## How to become a CS in Algebra Facilitator?
-Become a CS in Algebra Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver 5 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Algebra Professional Learning Program throughout the 2016-2017 school year. 
+Become a CS in Algebra Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Algebra Professional Learning Program throughout the 2016-2017 school year. 
 
-Before applying please carefully review the the [criteria, requirements and commitments](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub) for the CS in Algebra Facilitator program.
+Before applying please carefully review the the [requirements and commitments](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub) for the CS in Algebra Facilitator program.
 <br/>
 <br/>
 

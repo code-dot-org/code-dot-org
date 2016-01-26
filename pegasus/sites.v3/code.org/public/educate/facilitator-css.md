@@ -18,16 +18,16 @@ Code.org CS in Science curriculum consists of 4 instructional modules focused on
 
 CS in Science Facilitators accepted to the program will work with Code.org’s local Professional Learning Partner organization (a higher education institution, a nonprofit or a school district) to plan and lead:
 
-- One 3 day in-person workshop for local teachers enrolled in Code.org’s CS in Science Professional Learning Program during the 2016-17 school year.
+- One 2-day in-person workshop for local teachers enrolled in Code.org’s CS in Science Professional Learning Program during the 2016-17 school year.
 - Two 1-day, in-person follow-up workshops for local teachers enrolled in Code.org’s CS in Science Professional Learning Program during the 2016-17 school year.
 
-For each workshop you host, CS in Science Facilitators will receive between $400-450 in compensation for facilitating. We will also provide the venue, materials and food (at no cost) needed to host the workshop.
+For each workshop you host, CS in Science Facilitators will receive betwee $450-500/day in compensation for facilitating. We will also provide the venue, materials and food (at no cost) needed to host the workshop.
 
 
 ## How to become a CS in Science Facilitator?
-Become a CS in Science Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver 5 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Science Professional Learning Program throughout the 2016-2017 school year. 
+Become a CS in Science Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Science Professional Learning Program throughout the 2016-2017 school year. 
 
-Before applying please carefully review the the [criteria, requirements and commitments](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub) for the CS in Science Facilitator program.
+Before applying please carefully review the the [requirements and commitments](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub) for the CS in Science Facilitator program.
 <br/>
 <br/>
 
