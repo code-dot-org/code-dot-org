@@ -323,22 +323,24 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
 
   # if autorertrying, output a rerun file so on retry we only run failed tests
   rerun_filename = test_run_string + ".rerun"
-  first_time_arguments = (max_reruns > 0) ? " --format rerun --out #{rerun_filename}" : ""
+  if max_reruns > 0
+    arguments += "--format rerun --out #{rerun_filename}"
+  end
 
   FileUtils.rm rerun_filename, force: true
 
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + first_time_arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
 
   reruns = 0
-  while !succeeded && (max_reruns - reruns > 1)
+  while !succeeded && (reruns < max_reruns)
     reruns += 1
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
 
-    second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
+    rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + first_time_arguments + second_time_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
   end
 
   $lock.synchronize do
