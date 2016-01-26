@@ -23,6 +23,10 @@ We support auto-rebuilding too.  **`npm start`** beings a watch process that upd
 
 There are other useful commands, like `npm run build-css` or `npm run copy-assets` - use `npm run` to list them all.
 
+## Testing
+
+Tests are found in the [test](test) subdirectory.  Use **`npm test`** to run [Mocha](https://mochajs.org/) tests with [Chai assertions](http://chaijs.com/api/assert/) and [Istanbul](https://github.com/gotwarlost/istanbul) coverage.
+
 ## Code style
 
 Please follow our [style guide](../STYLEGUIDE.md).  We've set up linting to help:
