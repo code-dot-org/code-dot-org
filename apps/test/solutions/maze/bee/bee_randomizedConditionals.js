@@ -2,7 +2,7 @@ var testUtils = require('../../../util/testUtils');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 var blockUtils = require('@cdo/apps/block_utils');
 
-// Bee level in which we have a flower with zero nectar
+// Bee level in which we have one of each randomized conditional
 var levelDef = {
   'map': [
     [0, 0, 0, 0, 0, 0, 0, 0],
