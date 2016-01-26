@@ -1,4 +1,4 @@
-/* global dashboard, React */
+/* global React */
 
 window.dashboard = window.dashboard || {};
 
@@ -15,7 +15,7 @@ window.dashboard.Pairing = (function (React) {
 
   return React.createClass({
     propTypes: {
-      sections: React.PropTypes.object,
+      sections: React.PropTypes.array,
       style: React.PropTypes.object
     },
 
@@ -28,30 +28,29 @@ window.dashboard.Pairing = (function (React) {
 
     componentDidMount: function() {
       $.get(this.props.source, function(result) {
-        var lastGist = result[0];
-        if (this.isMounted()) {
-          this.setState({
-            username: lastGist.owner.login,
-            lastGistUrl: lastGist.html_url
-          });
-        }
+        var x;
     }.bind(this));
   },
 
     handleSectionChange: function(event) {
       console.log(event);
-      this.setState({sectionId: event.target.value,
-                     studentsInSection: [{id: 1, name: event.target.value + " Student 1"},
-                                         {id: 2, name: event.target.value + " Student 2"},
-                                         {id: 3, name: event.target.value + " Student 3"}],
-                     selectedStudentIds: {}
-                    });
+
+      var section = this.props.sections.find(function (s) {
+        return (s.id == event.target.value)
+      });
+
+      if (section) {
+        this.setState({sectionId: section.id,
+                       studentsInSection: section.students,
+                       selectedStudentIds: {}
+                      });
+      }
     },
 
     handleStudentClicked: function(event) {
       var selectedStudentIds = this.state.selectedStudentIds;
       var studentId = $(event.target).data('id');
-      if(selectedStudentIds[studentId]) {
+      if (selectedStudentIds[studentId]) {
         delete selectedStudentIds[studentId];
       } else {
         selectedStudentIds[studentId] = true;
