@@ -176,5 +176,3 @@ Cell.parse = function (string) {
 
   return new Cell(value, clouded, prefix, color);
 };
-
-
