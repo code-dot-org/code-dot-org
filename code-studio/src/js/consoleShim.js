@@ -21,10 +21,10 @@ module.exports = function (window) {
   var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
     'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
     'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-    'timeStamp', 'trace'];
+    'timeStamp', 'trace', 'warn'];
   var method;
   for (var i = 0; i < methods.length; i++) {
-    method = methods[i];
+    method = methods[i]
     if (!console[method]) {
       console[method] = function () {};
     }
