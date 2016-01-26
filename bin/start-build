@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../deployment.rb'
+
+raise "#{$0} does not work in development mode" if rack_env?(:development)
+
+Dir.chdir(deploy_dir) do
+  raise "file 'build-started' already exists" if File.file?('build-started')
+  puts "touch #{`pwd`.chomp}/build-started"
+  system 'touch ./build-started'
+end
