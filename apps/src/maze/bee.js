@@ -75,7 +75,7 @@ Bee.getAllStaticGrids = function (variableGrid) {
   var grids = [ variableGrid ];
   variableGrid.forEach(function (row, x) {
     row.forEach(function (cell, y) {
-      if (cell.isVariable()) {
+      if (cell.isVariableCloud()) {
         var possibleAssets = cell.getPossibleGridAssets();
         var newGrids = [];
         possibleAssets.forEach(function(asset) {
@@ -313,7 +313,7 @@ Bee.prototype.isFlower = function (row, col, userCheck) {
  * Returns true if cell should be clovered by a cloud while running
  */
 Bee.prototype.isCloudable = function (row, col) {
-  return this.currentStaticGrid[row][col].isClouded();
+  return this.currentStaticGrid[row][col].isStaticCloud();
 };
 
 /**
