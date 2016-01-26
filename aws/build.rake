@@ -325,32 +325,14 @@ task :shared_unit_tests do
   end
 end
 
-# currently this is only implemented for dashboard ruby unit tests but
-# maybe in the future it will work for other types of tests
-def log_coverage_results(name)
-  results_file = dashboard_dir('coverage/.last_run.json')
-  results = JSON.parse(File.read(results_file))
-  HipChat.log "<b>#{name}</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
-rescue Exception => e
-  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
-end
-
-COVERAGE_SYMLINK = dashboard_dir 'public/coverage'
-file COVERAGE_SYMLINK do
-  Dir.chdir(dashboard_dir('public')) do
-    RakeUtils.system_ 'ln', '-s', '../coverage', 'coverage'
-  end
-end
-
-task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
+task :dashboard_unit_tests do
   Dir.chdir(dashboard_dir) do
     name = "dashboard ruby unit tests"
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:schema:load'
-      RakeUtils.rake 'test', 'COVERAGE=1'
-      log_coverage_results(name)
+      RakeUtils.rake 'test'
       RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end

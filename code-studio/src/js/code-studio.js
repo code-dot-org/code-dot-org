@@ -25,7 +25,8 @@ require('./components/send_to_phone.jsx');
 require('./components/share_dialog.jsx');
 require('./components/share_dialog_body.jsx');
 require('./components/small_footer.jsx');
-require('./components/stage_progress.jsx');
+require('./components/progress/stage_progress.jsx');
+require('./components/progress/course_progress.jsx');
 require('./components/pairing.jsx');
 
 // Prevent callstack exceptions when opening multiple dialogs
