@@ -63,7 +63,7 @@ module.exports = FeedbackBlocks;
 
 FeedbackBlocks.prototype.render = function () {
   // Only render if this.div exists in the DOM
-  if (!document.contains(this.div)) {
+  if (!document.body.contains(this.div)) {
     return;
   }
 
