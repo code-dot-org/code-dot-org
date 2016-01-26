@@ -1,6 +1,6 @@
 /**
- * @overview Cell represents the contets of the grid elements for Bee.
- * Bee Cells are more complex than many other kinds of cell; they can be
+ * @overview BeeCell represents the contets of the grid elements for Bee.
+ * Bee BeeCells are more complex than many other kinds of cell; they can be
  * "hidden" with clouds, they can represent multiple different kinds of
  * element (flower, hive), some of which can be multiple colors (red,
  * purple), and which can have a range of possible values.
@@ -10,9 +10,13 @@
  */
 
 // FC is short for FlowerComb, which we were originally using instead of cloud
-var CLOUD_MARKER = 'FC';
+var CLOUD = {
+  STATIC: 'FC',
+  VARIABLE: 'C',
+  ANY: 'Cany'
+};
 
-var Cell = function (value, clouded, prefix, color) {
+var BeeCell = function (value, clouded, prefix, color) {
   /**
    * @type {String}
    */
@@ -40,33 +44,33 @@ var Cell = function (value, clouded, prefix, color) {
   this.resetCurrentValue();
 };
 
-module.exports = Cell;
+module.exports = BeeCell;
 
 /**
- * Returns a new Cell that's an exact replica of this one
- * @return {Cell}
+ * Returns a new BeeCell that's an exact replica of this one
+ * @return {BeeCell}
  */
-Cell.prototype.clone = function () {
-  var newCell = new Cell(this.originalValue_, this.clouded_, this.prefix_, this.color_);
-  newCell.setCurrentValue(this.currentValue_);
-  return newCell;
+BeeCell.prototype.clone = function () {
+  var newBeeCell = new BeeCell(this.originalValue_, this.clouded_, this.prefix_, this.color_);
+  newBeeCell.setCurrentValue(this.currentValue_);
+  return newBeeCell;
 };
 
 /**
  * @return {Number}
  */
-Cell.prototype.getCurrentValue = function () {
+BeeCell.prototype.getCurrentValue = function () {
   return this.currentValue_;
 };
 
 /**
  * @param {Number}
  */
-Cell.prototype.setCurrentValue = function (val) {
+BeeCell.prototype.setCurrentValue = function (val) {
   this.currentValue_ = val;
 };
 
-Cell.prototype.resetCurrentValue = function () {
+BeeCell.prototype.resetCurrentValue = function () {
   if (this.prefix_) {
     this.currentValue_ = parseInt(this.prefix_ + this.originalValue_);
   } else {
@@ -74,70 +78,61 @@ Cell.prototype.resetCurrentValue = function () {
   }
 };
 
-Cell.prototype.isFlower = function () {
+BeeCell.prototype.isFlower = function () {
   return this.prefix_ === '+';
 };
 
-Cell.prototype.isHive = function () {
+BeeCell.prototype.isHive = function () {
   return this.prefix_ === '-';
 };
 
-Cell.prototype.isClouded = function () {
-  return this.clouded_ === CLOUD_MARKER;
-};
-
-Cell.prototype.getColor = function () {
+BeeCell.prototype.getColor = function () {
   return this.color_;
 };
 
 /**
- * Possible values for 'clouded' are "FC", "C", or "Cany".  FC
- * represents an old-style, static cloud. C and Cany represent new,
- * variable clouds
  * @return {boolean}
  */
-Cell.prototype.isVariable = function () {
-  return (this.clouded_ === 'C' || this.clouded_ === 'Cany');
+BeeCell.prototype.isStaticCloud = function () {
+  return this.clouded_ === CLOUD.STATIC;
+};
+
+/**
+ * @return {boolean}
+ */
+BeeCell.prototype.isVariableCloud = function () {
+  return (this.clouded_ === CLOUD.VARIABLE || this.clouded_ === CLOUD.ANY);
 };
 
 /**
  * Variable cells can represent multiple possible kinds of grid assets,
  * whereas non-variable cells can represent only a single kind. This
- * method returns an array of non-variable Cells based on this Cell's
+ * method returns an array of non-variable BeeCells based on this BeeCell's
  * configuration.
- * @return {Cell[]}
+ * @return {BeeCell[]}
  */
-Cell.prototype.getPossibleGridAssets = function () {
+BeeCell.prototype.getPossibleGridAssets = function () {
   // Variable configurations are:
   //   Flower or nothing: +nC
   //   Honeycomb or nothing: -nC
   //   Flower or Honeycomb: nC
   //   Flower, Honeycomb, or Nothing: nCany
 
-  if (this.isVariable()) {
-    var thisCanBeA = {
-      flower: true,
-      honeycomb: true,
-      nothing: false,
-    };
-    if (this.clouded_ === 'Cany') {
-      thisCanBeA.nothing = true;
-    } else if (this.prefix_) {
-      thisCanBeA.nothing = true;
-      thisCanBeA.flower = this.isFlower();
-      thisCanBeA.honeycomb = this.isHive();
+  if (this.isVariableCloud()) {
+    var possibilities = [];
+
+    if (this.isFlower() || !this.prefix_) {
+      possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, '+', this.color_));
     }
 
-    var possibilities = [];
-    if (thisCanBeA.flower) {
-      possibilities.push(new Cell(this.originalValue_, CLOUD_MARKER, '+', this.color_));
+    if (this.isHive() || !this.prefix_) {
+      possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, '-'));
     }
-    if (thisCanBeA.honeycomb) {
-      possibilities.push(new Cell(this.originalValue_, CLOUD_MARKER, '-'));
+
+    if (this.clouded_ === CLOUD.ANY || this.prefix_) {
+      possibilities.push(new BeeCell(0, CLOUD.STATIC));
     }
-    if (thisCanBeA.nothing) {
-      possibilities.push(new Cell(0, CLOUD_MARKER));
-    }
+
     return possibilities;
   }
 
@@ -146,11 +141,11 @@ Cell.prototype.getPossibleGridAssets = function () {
 
 
 /**
- * Generates a new Cell from a config string, as provided by
+ * Generates a new BeeCell from a config string, as provided by
  * Levelbuilder.
- * @return {Cell}
+ * @return {BeeCell}
  */
-Cell.parse = function (string) {
+BeeCell.parse = function (string) {
   var matches = string.match && string.match(/^(\+|-)?(\d+)(R|P)?(FC|C|Cany)?$/);
   var value, clouded, prefix, color;
   if (matches) {
@@ -174,5 +169,5 @@ Cell.parse = function (string) {
   };
   */
 
-  return new Cell(value, clouded, prefix, color);
+  return new BeeCell(value, clouded, prefix, color);
 };
