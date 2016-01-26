@@ -63,27 +63,13 @@ module.exports = FeedbackBlocks;
 
 FeedbackBlocks.prototype.render = function () {
   // Only render if this.div exists in the DOM
-  var div = document.getElementById("feedbackBlocks");
-  if (div !== this.div) {
+  if (!document.body.contains(this.div)) {
     return;
   }
 
-  // Initialize a new readOnly blockSpaceEditor with some custom sizing
-  this.blockSpaceEditor = new Blockly.BlockSpaceEditor(this.div, function () {
-    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
-    if (!metrics) {
-      return null;
-    }
-    // Expand the view so we don't see scrollbars
-    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
-    return metrics;
-  }, function (xyRatio) {
-    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
-  }, true, true);
-
-  var blockSpace = this.blockSpaceEditor.blockSpace;
   var parsedXml = parseXmlElement(this.xml);
-  Blockly.Xml.domToBlockSpace(blockSpace, parsedXml);
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(this.div, parsedXml);
+  this.blockSpaceEditor = blockSpace.blockSpaceEditor;
 };
 
 FeedbackBlocks.prototype.show = function () {

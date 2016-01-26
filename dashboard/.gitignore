@@ -23,3 +23,5 @@
 # symlinks we use to provide links to test output
 /public/coverage
 /public/ui_test
+
+/public/code-studio-package

@@ -402,4 +402,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoyu İzle"},
 "when":function(d){return "Ne zaman"},
 "whenRun":function(d){return "Çalıştığı zaman"},
-"workspaceHeaderShort":function(d){return "Çalışma alanı: "}};
+"workspaceHeaderShort":function(d){return "Çalışma alanı: "},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};
