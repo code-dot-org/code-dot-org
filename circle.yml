@@ -42,6 +42,12 @@ test:
         - for i in 1 2; do grunt test && break; done:
             pwd:
                 apps
+        - npm run lint
+            pwd:
+                code-studio
+        - npm test
+            pwd:
+                code-studio
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
