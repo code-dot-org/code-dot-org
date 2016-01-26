@@ -1050,12 +1050,7 @@ Maze.execute = function(stepMode) {
         // failures, randomly select one of the failing grids to be the
         // "real" state of the map. If all grids are successful,
         // randomly select any one of them.
-        var i;
-        if (failures.length > 0) {
-          i = failures[Math.floor(Math.random()*failures.length)];
-        } else {
-          i = successes[Math.floor(Math.random()*successes.length)];
-        }
+        var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
         Maze.bee.useGridWithId(i);
       }
 
