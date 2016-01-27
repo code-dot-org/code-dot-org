@@ -13,13 +13,20 @@
  */
 'use strict';
 
+var DebugArea = require('./applab/DebugArea');
+
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
  * App Lab, Game Lab, etc.
  * @constructor
  */
 var JSDebuggerUI = module.exports = function () {
-
+  /**
+   * Helper that handles open/shut actions for debugger UI
+   * @type {DebugArea}
+   * @private
+   */
+  this.debugOpenShutController_ = null;
 };
 
 /**
@@ -35,4 +42,23 @@ JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
     debugButtons: showButtons,
     debugConsole: showConsole
   });
+};
+
+/**
+ * Post-DOM initialization, which allows this controller to grab all the DOM
+ * references it needs, bind handlers, and create any subordinate controllers.
+ */
+JSDebuggerUI.prototype.initializeAfterDOMCreated = function () {
+  this.debugOpenShutController_ = new DebugArea(
+      document.getElementById('debug-area'),
+      document.getElementById('codeTextbox'));
+};
+
+/**
+ * Opens the debugger area if it is closed.
+ */
+JSDebuggerUI.prototype.ensureOpen = function () {
+  if (this.debugOpenShutController_.isShut()) {
+    this.debugOpenShutController_.snapOpen();
+  }
 };
