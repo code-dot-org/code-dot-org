@@ -464,6 +464,14 @@ class Documents < Sinatra::Base
         end
       end
 
+      if not metadata['og:image']
+        if request.site != 'csedweek.org'
+          metadata['og:image'] = 'https://code.org/images/code-logo-640x640.png'
+          metadata['og:image:width'] = 640
+          metadata['og:image:height'] = 640
+        end
+      end
+
       metadata
     end
 
