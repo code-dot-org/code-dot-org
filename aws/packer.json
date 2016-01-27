@@ -75,7 +75,8 @@
       "run_list": [
         "apt",
         "cdo-mysql::server",
-        "cdo-apps"
+        "cdo-apps",
+        "cdo-apps::stop"
       ],
       "config_template": "./client.rb.template",
       "json": {
