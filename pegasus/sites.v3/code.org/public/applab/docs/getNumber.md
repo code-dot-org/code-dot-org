@@ -46,10 +46,10 @@ ____________________________________________________
 
 [example]
 
-**Example: Fahrenheit to Celcius** Demonstrate reading a number from a slider. Assumes a slider had been placed on the screen in design mode.
+**Example: Fahrenheit to Celcius** Demonstrate reading a number from a slider. Assumes a slider named todayTempID has been placed on the screen in design mode.
 
 ```
-// Demonstrate reading a number from a slider. Assumes a slider had been placed on the screen in design mode.
+// Demonstrate reading a number from a slider. Assumes a slider named todayTempID has been placed on the screen in design mode.
 var todayTemp=50;
 textLabel("id", "Choose a temperature (in F) with the slider:");
 textLabel("displayTemp", todayTemp);
