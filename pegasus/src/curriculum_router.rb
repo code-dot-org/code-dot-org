@@ -60,7 +60,7 @@ class HttpDocument
   end
 
   def self.from_file(path,headers={}, status=200)
-    content_type = content_type_from_path(path)
+    content_type = content_type_from_path(path);
     self.new(IO.read(path), {'Content-Type'=>content_type, 'X-Pegasus-File'=>path}.merge(headers))
   end
 

@@ -175,27 +175,7 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
   var onlyContinue = continueButton && !againButton && !previousLevelButton;
 
-  // get the topmost missing recommended block, if it exists, to be
-  // added to the queue of contextual hints. If the user views the block
-  // in the dialog, mark it as seen and add it to the list as such.
-  var missingRecommendedBlockHints = this.getMissingBlocks_(recommendedBlocks, 1)
-    .blocksToDisplay
-    .map(function (block) {
-      block.alreadySeen = false;
-      return block;
-    });
-  var markContextualHintsAsSeen = function () {
-    missingRecommendedBlockHints.filter(function (hint) {
-      return feedbackBlocks && feedbackBlocks.xml && feedbackBlocks.xml.indexOf(hint.blockDisplayXML) > -1;
-    }).forEach(function (hint) {
-      hint.alreadySeen = true;
-    });
-  };
-
-  var onHidden = onlyContinue ? options.onContinue : function () {
-    this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
-  }.bind(this);
-
+  var onHidden = onlyContinue ? options.onContinue : null;
   var icon;
   if (!options.hideIcon) {
     icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
@@ -253,9 +233,6 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
       // Remove "Show hint" button.  Making it invisible isn't enough,
       // because it will still take up space.
       hintRequestButton.parentNode.removeChild(hintRequestButton);
-
-      // mark the corresponding block hint as seen
-      markContextualHintsAsSeen();
     } else {
 
       // Generate a generic feedback message to display when we show the
@@ -269,8 +246,6 @@ FeedbackUtils.prototype.displayFeedback = function(options, requiredBlocks,
 
       // If the user requests the hint...
       dom.addClickTouchEvent(hintRequestButton, function () {
-        // mark the corresponding block hint as seen
-        markContextualHintsAsSeen();
 
         // Swap out the specific feedback message with a generic one.
         var parentNode = feedbackMessage.parentNode;

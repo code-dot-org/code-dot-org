@@ -46,7 +46,7 @@ class Game < ActiveRecord::Base
   MAZE = 'maze'
   CALC = 'calc'
   EVAL = 'eval'
-  TEXT_COMPRESSION = 'text_compression'
+  TEXT_COMPRESSION = 'text_compression';
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
