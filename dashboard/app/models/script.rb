@@ -507,6 +507,8 @@ class Script < ActiveRecord::Base
   end
 
   def self.update_i18n(custom_i18n)
+    # Skip scripts.en.yml update in 'deployed' (production/adhoc) environments.
+    return if rack_env?(:production, :adhoc)
     scripts_yml = File.expand_path('config/locales/scripts.en.yml')
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
     i18n.deep_merge!(custom_i18n){|_, old, _| old} # deep reverse merge
