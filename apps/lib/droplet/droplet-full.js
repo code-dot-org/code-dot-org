@@ -1,8 +1,8 @@
 /* Droplet.
- * Copyright (c) 2015 Anthony Bau.
+ * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-11-20
+ * Date: 2016-01-26
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -4148,8 +4148,8 @@ exports.isBuffer = isBuffer;
 function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
-}).call(this,{"isBuffer":require("/Users/Chris/Code/dabbler_droplet/node_modules/browserify/node_modules/insert-module-globals/node_modules/is-buffer/index.js")})
-},{"/Users/Chris/Code/dabbler_droplet/node_modules/browserify/node_modules/insert-module-globals/node_modules/is-buffer/index.js":9}],19:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":9}],19:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
 },{"./lib/_stream_passthrough.js":14}],20:[function(require,module,exports){
@@ -12081,7 +12081,7 @@ JavaScriptParser.drop = function(block, context, pred) {
 };
 
 isStandardForLoop = function(node) {
-  var variableName;
+  var ref, variableName;
   if (!((node.init != null) && (node.test != null) && (node.update != null))) {
     return false;
   }
@@ -12092,7 +12092,7 @@ isStandardForLoop = function(node) {
   } else {
     return false;
   }
-  return node.test.type === 'BinaryExpression' && node.test.operator === '<' && node.test.left.type === 'Identifier' && node.test.left.name === variableName && node.update.type === 'UpdateExpression' && node.update.operator === '++' && node.update.argument.type === 'Identifier' && node.update.argument.name === variableName;
+  return node.test.type === 'BinaryExpression' && node.test.operator === '<' && node.test.left.type === 'Identifier' && node.test.left.name === variableName && ((ref = node.test.right.type) === 'Literal' || ref === 'Identifier') && node.update.type === 'UpdateExpression' && node.update.operator === '++' && node.update.argument.type === 'Identifier' && node.update.argument.name === variableName;
 };
 
 JavaScriptParser.empty = "__";
@@ -12131,7 +12131,7 @@ JavaScriptParser.handleButton = function(text, button, oldBlock) {
     }
     if (elseLocation != null) {
       lines = text.split('\n');
-      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column;
+      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
       return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
     } else {
       return text + ' else {\n  __\n}';
