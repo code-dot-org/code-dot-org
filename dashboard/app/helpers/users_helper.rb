@@ -33,26 +33,8 @@ module UsersHelper
     result
   end
 
-  def percent_complete(script, user = current_user)
-    summary = summarize_user_progress(script, user)
-    script.stages.map do |stage|
-      levels = stage.script_levels.map(&:level)
-      completed = levels.select{|l|sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
-      completed.to_f / levels.count
-    end
-  end
-
-  def percent_complete_total(script, user = current_user)
-    summary = summarize_user_progress(script, user)
-    levels = script.script_levels.map(&:level)
-    completed = levels.select { |l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
-    completed.to_f / levels.count
-  end
-
-  private
-
   # Merge the user summary into the specified result hash.
-  def merge_user_summary(result, user)
+  private def merge_user_summary(result, user)
     if user
       result[:disableSocialShare] = true if user.under_13?
       result[:isTeacher] = true if user.teacher?
@@ -65,7 +47,7 @@ module UsersHelper
   end
 
   # Merge the progress for all scripts into the specified result hash.
-  def merge_scripts_progress(result, user)
+  private def merge_scripts_progress(result, user)
     UserLevel.where(user_id: user.id).each do |ul|
       script_id = ul.script_id
       script = Script.get_from_cache(script_id)
@@ -76,7 +58,7 @@ module UsersHelper
   end
 
   # Merge the progress for the specified script by user into the user_data result hash.
-  def merge_script_progress(user_data, user, script, exclude_level_progress = false)
+  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     if user
       # Populate trophies data if the script has trophies.
       if script.trophies
@@ -112,6 +94,23 @@ module UsersHelper
     user_data
   end
 
+  def percent_complete(script, user = current_user)
+    summary = summarize_user_progress(script, user)
+    script.stages.map do |stage|
+      levels = stage.script_levels.map(&:level)
+      completed = levels.select{|l|sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
+      completed.to_f / levels.count
+    end
+  end
+
+  def percent_complete_total(script, user = current_user)
+    summary = summarize_user_progress(script, user)
+    levels = script.script_levels.map(&:level)
+    completed = levels.select { |l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}.count
+    completed.to_f / levels.count
+  end
+
+  private
 
   def level_info(user, script_level, user_levels)
     if user
