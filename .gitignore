@@ -34,3 +34,4 @@
 /apps/npm-debug.log
 *_temp.json
 /.ruby-version
+/coverage
