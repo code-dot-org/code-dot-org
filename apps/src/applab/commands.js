@@ -8,6 +8,7 @@ var keyEvent = require('./keyEvent');
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var setPropertyDropdown = require('./setPropertyDropdown');
 
 var errorHandler = require('./errorHandler');
 var outputError = errorHandler.outputError;
@@ -1163,15 +1164,11 @@ applabCommands.setProperty = function(opts) {
   var element = document.getElementById(elementId);
   // Unless we're a canvas, when editing width/height we actually want to change
   // element.style.width/height.
-  if (!(element instanceof HTMLCanvasElement)) {
-    if (property === 'width' || property === 'height') {
-      property = 'style-' + property;
-    }
-  }
+  var internalPropName = setPropertyDropdown.getInternalPropertyName(element, property);
 
-  // TODO - probably want to whitelist, and perhaps map, properties here
+  // TODO - updateProperty may need to be more resilient to unknown data
 
-  Applab.updateProperty(element, property, value);
+  Applab.updateProperty(element, internalPropName, value);
 };
 
 applabCommands.getXPosition = function (opts) {
