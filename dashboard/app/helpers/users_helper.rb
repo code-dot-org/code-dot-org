@@ -56,7 +56,7 @@ module UsersHelper
     UserLevel.where(user_id: user.id).each do |ul|
       script_id = ul.script_id
       script = Script.get_from_cache(script_id)
-      result[script_id] ||= { name: script.name }
+      result[script_id] ||= {name: script.name}
       merge_script_progress(result[script_id], user, script)
     end
     result
