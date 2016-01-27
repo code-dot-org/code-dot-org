@@ -42,7 +42,7 @@ test:
         - bundle exec rake test:
             pwd:
                 shared
-        - for i in 1 2; do grunt test && break; done:
+        - ./test.sh:
             pwd:
                 apps
         - npm run lint:
