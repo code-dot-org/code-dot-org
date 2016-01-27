@@ -22,6 +22,7 @@
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "continue": "Continue",
   "copy": "Copy",
+  "debugConsoleHeader": "Debug Console",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Design",
   "dialogCancel": "Cancel",
