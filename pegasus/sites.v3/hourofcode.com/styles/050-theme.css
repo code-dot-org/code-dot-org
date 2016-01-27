@@ -80,8 +80,7 @@ body {
 
 #pagefooter {
   width: 100%; 
-  padding: 20px; 
-  padding-top: 12px;
+  padding: 12px 20px; 
   background-color: #5c3f7f;
   box-sizing: border-box;
   overflow: auto;
@@ -91,7 +90,6 @@ body {
   float: right;
   color: white;
   font-size: 12px;
-  opacity: 0.5;
 }
 
 #footer-links ul {
@@ -101,21 +99,22 @@ body {
 }
 
 #footer-links ul li {
-  display: inline-block;
+  display: inline;
   text-indent: 0;
   padding: 0;
 }
 
-#footer-links ul li::before {
+#footer-links ul li:before {
   content: none;    /* Needed to remove the bullet disc. This was set from other CSS. */
 }
 
-#footer-links ul li::after {
+#footer-links ul li:after {
   content: "|";     /* Vertical separator between the links */
   margin: 0 12px;
+  opacity: 0.5;
 }
 
-#footer-links ul li:last-child::after {
+#footer-links ul li:last-child:after {
   content: none;    /* No separator needed for the last item */
 }
 
@@ -123,6 +122,17 @@ body {
   color: white;
   font-weight: normal;
   font-family: 'Gotham 4r', sans-serif;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+#footer-links a:hover {
+  opacity: 1.0;
+}
+
+#footer-toggle {
+  display: none;
+  text-align: right;
 }
 
 #copyright {
@@ -257,7 +267,24 @@ body {
 
 @media (max-width: 500px) {
   #pagefooter {
-    padding-bottom: 48px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  #footer-links {
+    position: relative;
+    margin: 0;
+  }
+
+  #footer-links ul.hide-responsive-footer-menu {
+    display: none;
+  }
+
+  #footer-links ul {
+    position: absolute;
+    bottom: 3em;
+    width: 100%;
+    background-color: #5c3f7f;
   }
 
   #footer-links ul li {
@@ -268,15 +295,21 @@ body {
     border-bottom: 1px solid #ffffff;
   }
 
-  #footer-links ul li::after {
+  #footer-links ul li:after {
     content: none;    /* Remove the vertical separators */
   }
 
-  #footer-links a {
-    font-size: 18px;
+  #footer-links ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  #footer-toggle {
+    display: block;
+    padding: 8px 16px;
   }
 
   #copyright {
-    text-align: center;
+    display: none;
   }
 }
