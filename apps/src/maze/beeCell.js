@@ -19,6 +19,10 @@ var FLOWER = {
   RED: 'R',
   PURPLE: 'P'
 };
+var PREFIX = {
+  FLOWER: '+',
+  HIVE: '-'
+};
 
 var BeeCell = function (value, clouded, prefix, color) {
   /**
@@ -83,11 +87,11 @@ BeeCell.prototype.resetCurrentValue = function () {
 };
 
 BeeCell.prototype.isFlower = function () {
-  return this.prefix_ === '+';
+  return this.prefix_ === PREFIX.FLOWER;
 };
 
 BeeCell.prototype.isHive = function () {
-  return this.prefix_ === '-';
+  return this.prefix_ === PREFIX.HIVE;
 };
 
 /**
@@ -138,11 +142,11 @@ BeeCell.prototype.getPossibleGridAssets = function () {
     var possibilities = [];
 
     if (this.isFlower() || !this.prefix_) {
-      possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, '+', this.color_));
+      possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, PREFIX.FLOWER, this.color_));
     }
 
     if (this.isHive() || !this.prefix_) {
-      possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, '-'));
+      possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, PREFIX.HIVE));
     }
 
     if (this.clouded_ === CLOUD.ANY || this.prefix_) {
