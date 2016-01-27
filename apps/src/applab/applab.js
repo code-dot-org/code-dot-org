@@ -35,6 +35,7 @@ var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
+var JSDebuggerUI = require('../JSDebuggerUI');
 var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
@@ -63,6 +64,11 @@ var Applab = module.exports;
  * @type {DebugArea}
  */
 var debugAreaController = null;
+
+/**
+ * @type {JSDebuggerUI} Controller for JS debug buttons and console area
+ */
+Applab.jsDebuggerUI = null;
 
 //Debug console history
 Applab.debugConsoleHistory = {
@@ -720,11 +726,9 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
-  var extraControlsRow = require('./extraControlRows.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    debugButtons: showDebugButtons,
-    debugConsole: showDebugConsole
-  });
+  Applab.jsDebuggerUI = new JSDebuggerUI();
+  var extraControlsRow = this.jsDebuggerUI.getMarkup(studioApp.assetUrl,
+      showDebugButtons, showDebugConsole);
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
