@@ -178,7 +178,7 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (animate) {
   // into the DOM. This can happen when contextual hints appear in a
   // level that was initialized with no hints. Note that we can be in
   // the DOM and have zero hints to show, and that's just fine.
-  if (hintCount > 0 && !document.contains(this.lightbulb)) {
+  if (hintCount > 0 && !document.body.contains(this.lightbulb)) {
     this.promptIcon.parentNode.className += ' authored_hints';
     this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
   }

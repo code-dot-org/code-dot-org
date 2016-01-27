@@ -5,7 +5,7 @@ var _ = require('lodash');
 var browserify = require('browserify');
 var chalk = require('chalk');
 var child_process = require('child_process');
-var envify = require('envify/custom'); // Specify custom enviornment variable map
+var envify = require('envify');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
 var path = require('path');
@@ -97,8 +97,9 @@ exports.bundle = function (config) {
     // We inline 'production' as the NODE_ENV in distribution builds because this
     // puts React into production mode, and allows uglifyify to remove related
     // dead code paths.
+    process.env.NODE_ENV = 'production';
     bundler
-        .transform(envify({ NODE_ENV: 'production' }))
+        .transform(envify)
         .transform('uglifyify');
   }
 

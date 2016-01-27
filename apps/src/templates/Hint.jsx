@@ -10,7 +10,7 @@ module.exports = React.createClass({
   injectBlocklyHint: function () {
     var node = React.findDOMNode(this.refs.hintBlock);
     // Only render if the node exists in the DOM
-    if (node && document.contains(node)) {
+    if (node && document.body.contains(node)) {
       Blockly.BlockSpace.createReadOnlyBlockSpace(node, this.props.hint.block);
     }
   },
