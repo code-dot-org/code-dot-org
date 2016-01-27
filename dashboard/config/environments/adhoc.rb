@@ -1,6 +1,7 @@
 # The adhoc environment extends the staging environment.
 # It is used for testing a branch in a staging-like environment with
 # a local database and a load balancer.
+require 'tmpdir'
 require Rails.root.join('config/environments/staging')
 
 Dashboard::Application.configure do
@@ -56,4 +57,10 @@ Dashboard::Application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  sprockets_path = File.join Dir.tmpdir, 'sprockets'
+  config.assets.manifest = File.join sprockets_path, 'sprockets-manifest.json'
+  config.assets.configure do |env|
+    env.cache = ActiveSupport::Cache::FileStore.new sprockets_path
+  end
 end
