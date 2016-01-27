@@ -57,14 +57,13 @@ onEvent("clickCounter", "click", function() {
 ____________________________________________________
 [example]
 
-**Example Random Thoughts** Demonstrate reading and then clearing a textInput box.
+**Example: Where is the mouse click?** Demonstrate setting the number on a slider. Assumes sliders named xPositionSlider and yPositionSlider have been placed on the screen in design mode.
 
 ```
-// Demonstrate reading and then clearing a textInput box.
-textInput("yourThought","");
-onEvent("yourThought", "change", function(event) {
-  write(getText("yourThought"));
-  setText("yourThought","");
+// Demonstrate setting the number on a slider. Assumes sliders named xPositionSlider and yPositionSlider have been placed on the screen in design mode.
+onEvent("screen1", "click", function(event) {
+  setNumber("xPositionSlider",event.offsetX);
+  setNumber("yPositionSlider",event.offsetY);
 });
 ```
 
@@ -75,7 +74,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-setText(id, text)
+setNumber(id, number)
 ```
 
 [/syntax]
@@ -87,7 +86,7 @@ setText(id, text)
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
 | id | string | Yes | The unique identifier for the screen element. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
-| text | string | Yes | The text displayed within the screen element. |
+| number | number | Yes | The number displayed within the screen element. |
 
 [/parameters]
 
@@ -101,7 +100,7 @@ No return value. Modifies screen only.
 [tips]
 
 ### Tips
-- To clear the text on a screen element set the text to be "". Make sure you [getText()](/applab/docs/getText) first if you need to save the data from a [textInput()](/applab/docs/textInput) to a variable.
+- You cannot use setText() with sliders which require a number to be set.
 
 [/tips]
 
