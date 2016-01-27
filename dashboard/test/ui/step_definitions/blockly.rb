@@ -40,7 +40,7 @@ When /^I drag block "([^"]*)" above block "([^"]*)"$/ do |from, to|
   to_id = get_block_id(to)
   height = @browser.execute_script("return $(\"[block-id='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
   destination_has_parent = @browser.execute_script("return $(\"[block-id='#{to_id}']\").parent().attr('block-id') !== undefined;")
-  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height)
+  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height);
   @browser.execute_script code
 end
 

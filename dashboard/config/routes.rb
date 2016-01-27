@@ -88,6 +88,7 @@ Dashboard::Application.routes.draw do
   root :to => "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
+  get '/admin/debug', to: 'home#debug'
   get '/home/:action', controller: 'home'
 
   resources :p, path: '/p/', only: [:index] do
@@ -192,7 +193,6 @@ Dashboard::Application.routes.draw do
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
-  get '/admin/debug', to: 'admin_reports#debug'
 
   # internal search tools
   get 'admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'

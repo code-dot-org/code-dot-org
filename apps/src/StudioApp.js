@@ -866,16 +866,6 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
-/**
- * Simple passthrough to AuthoredHints.displayMissingBlockHints
- * @param {String[]} blocks An array of XML strings representing the
- *        missing recommended Blockly Blocks for which we want to
- *        display hints.
- */
-StudioApp.prototype.displayMissingBlockHints = function (blocks) {
-  this.authoredHintsController_.displayMissingBlockHints(blocks);
-};
-
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 };
@@ -918,14 +908,7 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     aniGifURL: level.aniGifURL,
     authoredHints: authoredHints
   });
-
-  // Create a div to eventually hold this content, and add it to the
-  // overall container. We don't want to render directly into the
-  // container just yet, because our React component could contain some
-  // elements that don't want to be rendered until they are in the DOM
-  var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className='instructions-container';
-  instructionsDiv.appendChild(instructionsReactContainer);
+  React.render(instructionsContent, instructionsDiv);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -975,12 +958,6 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
     scrollContent: true,
     scrollableSelector: ".instructions-container",
     header: headerElement
-  });
-
-  // Now that our elements are guaranteed to be in the DOM, we can
-  // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', function () {
-    React.render(instructionsContent, instructionsReactContainer);
   });
 
   if (autoClose) {

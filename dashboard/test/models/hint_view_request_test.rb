@@ -34,8 +34,8 @@ class HintViewRequestTest < ActiveSupport::TestCase
       feedback_xml: '<block type="third"></block>'
     )
 
-    first_level_response = HintViewRequest.milestone_response(@script, @level_one, @student)
-    second_level_response = HintViewRequest.milestone_response(@script, @level_two, @student)
+    first_level_response = HintViewRequest.milestone_response(@script, @level_one, @student);
+    second_level_response = HintViewRequest.milestone_response(@script, @level_two, @student);
 
     assert_equal first_level_response, [{feedback_type: 1, feedback_xml: '<block type="first"></block>'}, {feedback_type: 1, feedback_xml: '<block type="second"></block>'}]
     assert_equal second_level_response, [{feedback_type: 1, feedback_xml: '<block type="third"></block>'}]
@@ -52,7 +52,7 @@ class HintViewRequestTest < ActiveSupport::TestCase
       feedback_xml: '<block type="first"></block>'
     )
 
-    empty_response = HintViewRequest.milestone_response(@script, @level_one, @student)
+    empty_response = HintViewRequest.milestone_response(@script, @level_one, @student);
     assert_equal empty_response, []
   end
 end

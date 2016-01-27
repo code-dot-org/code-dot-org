@@ -130,30 +130,10 @@ function safeReadProperty(object, property) {
 // (Chrome V8 says ForInStatement is not fast case)
 //
 
-/**
- * Marshal a native object to an interpreter object.
- *
- * @param {Interpreter} interpreter Interpreter instance
- * @param {Object} nativeObject Object to marshal
- * @param {Number} maxDepth Optional maximum depth to traverse in properties
- * @param {Object} interpreterObject Optional existing interpreter object
- * @return {!Object} The interpreter object, which was created if needed.
- */
-function marshalNativeToInterpreterObject(
-    interpreter,
-    nativeObject,
-    maxDepth,
-    interpreterObject) {
-  var retVal = interpreterObject || interpreter.createObject(interpreter.OBJECT);
-  var isFunc = interpreter.isa(retVal, interpreter.FUNCTION);
+function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
+  var retVal = interpreter.createObject(interpreter.OBJECT);
   for (var prop in nativeObject) {
     var value = safeReadProperty(nativeObject, prop);
-    if (isFunc &&
-        (value === Function.prototype.trigger ||
-            value === Function.prototype.inherits)) {
-      // Don't marshal these that were added by jquery or else we will recurse
-      continue;
-    }
     interpreter.setProperty(retVal,
                             prop,
                             exports.marshalNativeToInterpreter(interpreter,
@@ -212,15 +192,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
-    maxDepth = Infinity; // default to infinite levels of depth
+    maxDepth = Infinity; // default to inifinite levels of depth
   }
   for (i = 0; i < exports.customMarshalObjectList.length; i++) {
-    // If this is on our list of "custom marshal" objects - or if it a property
-    // on one of those objects (other than a function), create a special
-    // "custom marshal" interpreter object to represent it
-    if (nativeVar instanceof exports.customMarshalObjectList[i] ||
-        (typeof nativeVar !== 'function' &&
-            nativeParentObj instanceof exports.customMarshalObjectList[i])) {
+    if (nativeVar instanceof exports.customMarshalObjectList[i]) {
       return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
     }
   }
@@ -252,8 +227,6 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
         nativeParentObj: nativeParentObj,
     });
     retVal = interpreter.createNativeFunction(wrapper);
-    // Also marshal properties on the native function object:
-    marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1, retVal);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
     if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {

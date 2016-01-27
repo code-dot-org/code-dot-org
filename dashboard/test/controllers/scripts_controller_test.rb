@@ -230,4 +230,14 @@ class ScriptsControllerTest < ActionController::TestCase
     get :show, id: admin_script.name
     assert_response :success
   end
+
+  test "should have one game group if one stage" do
+    @script = create(:script, name: 'Single Stage Script')
+    @stage = create(:stage, script: @script, name: 'Stage 1')
+    @script_level = create(:script_level, script: @script, stage: @stage)
+
+    get :show, id: @script.name
+    css = css_select "div.game-group"
+    assert_equal 1, css.count
+  end
 end

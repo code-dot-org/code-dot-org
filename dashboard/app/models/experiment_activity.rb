@@ -35,7 +35,7 @@ class ExperimentActivity < ActiveRecord::Base
   end
 
   def self.set_experimenting_feedback_design(is_active)
-    @@is_experimenting_feedback_design = is_active
+    @@is_experimenting_feedback_design = is_active;
   end
 
   def self.get_feedback_design(activity_id)
@@ -45,7 +45,7 @@ class ExperimentActivity < ActiveRecord::Base
       if activity.user_id
         target_design = self.pick_mod_length(TYPES_FEEDBACK_DESIGN, activity.user_id)
         # Record
-        ExperimentActivity.create(activity_id: activity_id, feedback_design: target_design)
+        ExperimentActivity.create(activity_id: activity_id, feedback_design: target_design);
         target_design
       end
     end
