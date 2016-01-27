@@ -430,12 +430,10 @@ $errfile.close
 $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
-$average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
   "Total duration: #{format_duration($suite_duration)}. " +
-  "Average test duration: #{format_duration($average_test_duration)}."
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"
