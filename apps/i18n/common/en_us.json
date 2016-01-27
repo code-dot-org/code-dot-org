@@ -23,6 +23,8 @@
   "continue": "Continue",
   "copy": "Copy",
   "debugConsoleHeader": "Debug Console",
+  "debugCommandsHeaderWhenOpen": "Debug Commands",
+  "debugCommandsHeaderWhenClosed": "Show Debug Commands",
   "defaultTwitterText": "Check out what I made",
   "designMode": "Design",
   "dialogCancel": "Cancel",
