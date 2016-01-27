@@ -4,6 +4,7 @@ var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
 
 var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
+var ElementSelect = require('./ElementSelect.jsx');
 
 var nextKey = 0;
 
@@ -184,6 +185,7 @@ var DesignProperties = module.exports = React.createClass({
             <span style={styles.tabLabel}>EVENTS</span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
+            <ElementSelect elements={['a', 'b', 'c']} />
           </div>
         </div>
         <div id="designWorkspaceBody" style={styles.workspaceBody}>
