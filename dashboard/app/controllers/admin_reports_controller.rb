@@ -1,20 +1,21 @@
+require 'cdo/env'
+
 # The controller for reports of internal admin-only data.
 class AdminReportsController < ApplicationController
-  before_filter :authenticate_user!, except: [:header_stats]
+  before_filter :authenticate_user!
+  before_action :require_admin
+  check_authorization
 
   before_action :set_script
   include LevelSourceHintsHelper
 
   def admin_concepts
-    authorize! :read, :reports
     SeamlessDatabasePool.use_persistent_read_connection do
       render 'admin_concepts', formats: [:html]
     end
   end
 
   def funometer
-    authorize! :read, :reports
-
     SeamlessDatabasePool.use_persistent_read_connection do
       # Compute the global funometer percentage.
       ratings = PuzzleRating.all
@@ -40,8 +41,6 @@ class AdminReportsController < ApplicationController
   end
 
   def funometer_by_script
-    authorize! :read, :reports
-
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
       @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
@@ -69,8 +68,6 @@ class AdminReportsController < ApplicationController
   end
 
   def funometer_by_script_level
-    authorize! :read, :reports
-
     SeamlessDatabasePool.use_persistent_read_connection do
       @script_id = params[:script_id]
       @script_name = Script.where('id = ?', @script_id).pluck(:name)[0]
@@ -89,8 +86,6 @@ class AdminReportsController < ApplicationController
   end
 
   def level_answers
-    authorize! :read, :reports
-
     @headers = ['Level ID', 'User Email', 'Data']
     @responses = {}
     @response_limit = 100
@@ -131,7 +126,6 @@ class AdminReportsController < ApplicationController
   end
 
   def level_completions
-    authorize! :read, :reports
     require 'date'
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
@@ -193,7 +187,6 @@ class AdminReportsController < ApplicationController
   end
 
   def pd_progress
-    authorize! :read, :reports
     script = Script.find_by!(name: params[:script] || 'K5PD').cached
     require 'cdo/properties'
     locals_options = Properties.get("pd_progress_#{script.id}")
@@ -205,8 +198,6 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_progress
-    authorize! :read, :reports
-
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
       @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
@@ -221,8 +212,6 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_stats
-    authorize! :read, :reports
-
     SeamlessDatabasePool.use_persistent_read_connection do
       @user_count = User.count
       @teacher_count = User.where(:user_type => 'teacher').count
@@ -251,16 +240,12 @@ class AdminReportsController < ApplicationController
   end
 
   def all_usage
-    authorize! :read, :reports
-
     @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
     render 'usage', formats: [:html]
   end
 
   def hoc_signups
     # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
-    authorize! :read, :reports
-
     # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
     # We restrict by dates to avoid long trails of (inappropriate?) signups.
     data_2014 = DB[:forms].

@@ -247,5 +247,6 @@
   "watchVideo": "Mira el Video",
   "when": "cuando",
   "whenRun": "cuando se ejecuta",
-  "workspaceHeaderShort": "Espacio de trabajo: "
+  "workspaceHeaderShort": "Espacio de trabajo: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

@@ -247,5 +247,6 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "התחל ריצה",
-  "workspaceHeaderShort": "סביבת העבודה: "
+  "workspaceHeaderShort": "סביבת העבודה: ",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

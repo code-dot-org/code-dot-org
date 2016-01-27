@@ -52,7 +52,7 @@ module.exports = function (callback) {
           var status = dashboard.progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId]);
 
           // Clear the existing class and replace
-          $('#header-level-' + levelId).attr('class', 'level_link ' + status);
+          $('.level-' + levelId).attr('class', 'level_link ' + status);
 
           // Write down new progress in sessionStorage
           dashboard.clientState.trackProgress(null, null, serverProgress[levelId], appOptions.scriptName, levelId);
