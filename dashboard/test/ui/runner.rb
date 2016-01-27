@@ -324,7 +324,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   # if autorertrying, output a rerun file so on retry we only run failed tests
   rerun_filename = test_run_string + ".rerun"
   if max_reruns > 0
-    arguments += "--format rerun --out #{rerun_filename}"
+    arguments += " --format rerun --out #{rerun_filename}"
   end
 
   FileUtils.rm rerun_filename, force: true
