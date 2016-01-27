@@ -116,7 +116,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal script, assigns(:script)
   end
 
-  test "should get user progress for a script" do
+  test "should get user progress" do
     script = Script.twenty_hour_script
 
     user = create :user, total_lines: 2
