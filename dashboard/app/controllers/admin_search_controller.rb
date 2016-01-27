@@ -1,11 +1,10 @@
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
-  before_filter :authenticate_user!, except: [:header_stats]
-
-  check_authorization except: [:header_stats, :students]
+  before_filter :authenticate_user!
+  before_action :require_admin
+  check_authorization
 
   def lookup_section
-    authorize! :manage, :all
     @section = Section.find_by_code params[:section_code]
     if params[:section_code] && @section.nil?
       flash[:alert] = 'Section code not found'
@@ -13,8 +12,6 @@ class AdminSearchController < ApplicationController
   end
 
   def search_for_teachers
-    authorize! :read, :reports
-
     SeamlessDatabasePool.use_persistent_read_connection do
       email_filter = "%#{params[:emailFilter]}%"
       address_filter = "%#{params[:addressFilter]}%"

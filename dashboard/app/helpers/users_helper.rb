@@ -11,6 +11,7 @@ module UsersHelper
 
       uls = user.user_levels_by_level(script)
       user_data[:disableSocialShare] = true if user.under_13?
+      user_data[:isTeacher] = true if user.teacher?
 
       if script.trophies
         progress = user.progress(script)
