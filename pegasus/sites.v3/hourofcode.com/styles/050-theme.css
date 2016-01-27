@@ -132,7 +132,10 @@ body {
 
 #footer-toggle {
   display: none;
-  text-align: right;
+  text-align: center;
+  border-bottom: 1px solid #aaa2bd;
+  padding: 8px 16px;
+  margin: 0 24px;
 }
 
 #copyright {
@@ -254,18 +257,20 @@ body {
   height: 37px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   #footer-links {
     float: none;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   #copyright {
     float: none;
+    text-align: center;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   #pagefooter {
     overflow: visible;
     padding: 0;
@@ -282,7 +287,7 @@ body {
 
   #footer-links ul {
     position: absolute;
-    bottom: 3em;
+    bottom: 38px;
     width: 100%;
     background-color: #5c3f7f;
   }
@@ -290,9 +295,9 @@ body {
   #footer-links ul li {
     display: block;
     text-align: center;
-    margin: 0;
-    padding: 5px;
-    border-bottom: 1px solid #ffffff;
+    margin: 0 24px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #aaa2bd;
   }
 
   #footer-links ul li:after {
@@ -306,10 +311,9 @@ body {
 
   #footer-toggle {
     display: block;
-    padding: 8px 16px;
   }
 
   #copyright {
-    display: none;
+    padding: 12px 12px 36px 12px;
   }
 }

@@ -11,9 +11,10 @@
         %a{:href=>resolve_url('https://code.org/tos'), :target=>"_blank"}= hoc_s(:footer_menu_terms)
       %li
         %a{:href=>resolve_url('https://code.org/privacy'), :target=>"_blank"}= hoc_s(:footer_menu_privacy)
-    %a#footer-toggle{href: "#"}
-      Code.org
-      %i{:class=>"fa fa-chevron-up"}
+    #footer-toggle
+      %a{href: "#"}
+        Code.org
+        %i{:class=>"fa fa-chevron-up"}
   #copyright
     = hoc_s(:footer_copyright_message)
     %br
