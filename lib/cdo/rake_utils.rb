@@ -32,7 +32,7 @@ module RakeUtils
 
   def self.system_with_hipchat_logging(*args)
     command = command_(*args)
-    HipChat.log command
+    HipChat.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
     system_ command
   end
 
