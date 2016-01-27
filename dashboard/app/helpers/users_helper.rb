@@ -57,36 +57,35 @@ module UsersHelper
     user_data
   end
 
-  # Merge the progress for the specified script by user into the user_data result hash.
+  # Merge the progress for the specified script and user into the user_data result hash.
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
-    if user
-      # Populate trophies data if the script has trophies.
-      if script.trophies
-        progress = user.progress(script)
-        user_data[:trophies] = {
-            current: progress['current_trophies'],
-            of: I18n.t(:of),
-            max: progress['max_trophies'],
-        }
+    return user_data if not user
 
-        user.concept_progress(script).each_pair do |concept, counts|
-          user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
-        end
+    if script.trophies
+      progress = user.progress(script)
+      user_data[:trophies] = {
+          current: progress['current_trophies'],
+          of: I18n.t(:of),
+          max: progress['max_trophies'],
+      }
+
+      user.concept_progress(script).each_pair do |concept, counts|
+        user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
       end
+    end
 
-      unless exclude_level_progress
-        uls = user.user_levels_by_level(script)
-        script_levels = script.script_levels
-        user_data[:levels] = {}
-        script_levels.each do |sl|
-          result = level_info(user, sl, uls)
-          completion_status = activity_css_class result
-          if completion_status != 'not_tried'
-            user_data[:levels][sl.level_id] = {
-                status: completion_status,
-                result: result
-            }
-          end
+    unless exclude_level_progress
+      uls = user.user_levels_by_level(script)
+      script_levels = script.script_levels
+      user_data[:levels] = {}
+      script_levels.each do |sl|
+        result = level_info(user, sl, uls)
+        completion_status = activity_css_class result
+        if completion_status != 'not_tried'
+          user_data[:levels][sl.level_id] = {
+              status: completion_status,
+              result: result
+          }
         end
       end
     end
