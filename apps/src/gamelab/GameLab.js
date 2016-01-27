@@ -361,7 +361,7 @@ GameLab.prototype.execute = function() {
       return;
     }
 
-    ['draw', 'setup'].concat(this.p5eventNames).forEach(function (eventName) {
+    this.p5specialFunctions.forEach(function (eventName) {
       var func = this.JSInterpreter.findGlobalFunction(eventName);
       if (func) {
         this.eventHandlers[eventName] =
@@ -383,6 +383,11 @@ GameLab.prototype.execute = function() {
       window.p5.TableRow,
       window.p5.Element
     ];
+    // The p5play Group object should be custom marshalled, but its constructor
+    // actually creates a standard Array instance with a few additional methods
+    // added. The customMarshalModifiedObjectList allows us to set up additional
+    // object types to be custom marshalled by matching both the instance type
+    // and the presence of additional method name on the object.
     codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
 
     // Insert everything on p5 and the Group constructor from p5play into the
