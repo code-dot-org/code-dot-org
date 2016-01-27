@@ -26,15 +26,12 @@ You can append `--fast` if you don't want to test turtle/maze levels and want th
 You can expect a full test run to take about 5-10 minutes.
 
 ### Konacha Tests
-`cd dashboard`
-`bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.
+`cd dashboard && bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.
 
 Tests run pretty quickly
 
 ### Dashboard Tests
-`cd dashboard`
-`rake test` 
-This will run all of our Ruby tests. This can take about 15 minutes to run
+`cd dashboard && rake test` will run all of our Ruby tests. This can take about 15 minutes to run
 
 If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, you can try running `RAILS_ENV test rake db:reset db:migrate seed:all` to recreate the db.
 
@@ -44,10 +41,8 @@ If you just want to run a single file of tests, you can run
 To run a specific unit test, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb --name your_amazing_test_name`
 
-### UI Tests
-Our UI tests live in dashboard/test/ui, so all commands need to be run out of there. The script `runner.rb` is responsible for actually running tests and accepts many parameters. For a full list, run `runner.rb -h`
-
-Detailed information about dashboard UI tests is available at https://github.com/code-dot-org/code-dot-org/tree/staging/dashboard/test/ui
+### UI Tests and Eyes Tests
+We have a set of integration tests, divided into "UI tests" (Selenim+Cucumber) and "Eyes tests" (Selenim+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui).
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
