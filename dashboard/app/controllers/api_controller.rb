@@ -65,7 +65,7 @@ class ApiController < ApplicationController
   end
 
   # Return a JSON summary of the user's progress across all scripts.
-  def user_progress_full
+  def user_progress_for_all_scripts
     user = current_user
     if user
       render json: summarize_user_progress_for_all_scripts(user)

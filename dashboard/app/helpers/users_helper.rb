@@ -19,17 +19,16 @@ module UsersHelper
   #     "scripts": {
   #         "49": {
   #             "name": "course2",
-  #             "progress": { "levels": { "135": {"status": "perfect", "result": 100 } } }
-  #         },
+  #             "levels": { "135": {"status": "perfect", "result": 100 } } },
   #         "46": {
   #             "name": "artist",
-  #             "progress": {
-  #                 "levels": {
-  #                     "1138": { "status": "attempted", "result": 5},
-  #                     "1147": { "status": "perfect", "result": 30 } } } } }
+  #             "levels": {
+  #                "1138": { "status": "attempted", "result": 5},
+  #                "1147": { "status": "perfect", "result": 30 } } } } }
   def summarize_user_progress_for_all_scripts(user)
-    result = {scripts: []}
+    result = {}
     merge_user_summary(result, user)
+    result[:scripts] = {}
     merge_scripts_progress(result[:scripts], user)
     result
   end
@@ -54,10 +53,11 @@ module UsersHelper
 
   # Merge the progress for all scripts into the specified result hash.
   def merge_scripts_progress(result, user)
-    UserLevel.where(user: user) do |ul|
+    UserLevel.where(user_id: user.id).each do |ul|
       script_id = ul.script_id
       script = Script.get_from_cache(script_id)
-      result[script_id] =  { name: script.name, progress: script_progress(user, script) }
+      result[script_id] ||= { name: script.name }
+      merge_script_progress(result[script_id], user, script)
     end
     result
   end
