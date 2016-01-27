@@ -12,7 +12,7 @@ class UsersHelperTest < ActionView::TestCase
          linesOfCode: 42,
          linesOfCodeText: 'Total lines of code: 42',
          levels: {},
-         :trophies=>{:current=>0, :of=>"of", :max=>27},
+         trophies: {current: 0, of: 'of', max: 27},
     }, summarize_user_progress(script, user))
 
     assert_equal({
@@ -40,7 +40,7 @@ class UsersHelperTest < ActionView::TestCase
        linesOfCodeText: 'Total lines of code: 42',
        scripts: {
            script.id => {
-               name: "20-hour",
+               name: '20-hour',
                levels: {
                    ul1.level_id => {status: 'perfect', result: 100},
                    ul3.level_id => {status: 'passed', result: 20}
