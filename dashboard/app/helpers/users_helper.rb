@@ -51,17 +51,6 @@ module UsersHelper
 
   private
 
-  # Merge the progress for all scripts into the specified result hash.
-  def merge_scripts_progress(result, user)
-    UserLevel.where(user_id: user.id).each do |ul|
-      script_id = ul.script_id
-      script = Script.get_from_cache(script_id)
-      result[script_id] ||= {name: script.name}
-      merge_script_progress(result[script_id], user, script)
-    end
-    result
-  end
-
   # Merge the user summary into the specified result hash.
   def merge_user_summary(result, user)
     if user
@@ -72,6 +61,17 @@ module UsersHelper
       result[:linesOfCode] = client_state.lines
     end
     result[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: result[:linesOfCode])
+    result
+  end
+
+  # Merge the progress for all scripts into the specified result hash.
+  def merge_scripts_progress(result, user)
+    UserLevel.where(user_id: user.id).each do |ul|
+      script_id = ul.script_id
+      script = Script.get_from_cache(script_id)
+      result[script_id] ||= {name: script.name}
+      merge_script_progress(result[script_id], user, script)
+    end
     result
   end
 
