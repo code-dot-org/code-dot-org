@@ -1,15 +1,15 @@
-<% var msg = require('./locale'); %>
+<% var i18n = require('./locale'); %>
 
 <div id="debug-area">
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
   <div id="debug-area-header">
-    <span class="header-text"><%= msg.debugConsoleHeader() %></span>
+    <span class="header-text"><%= i18n.debugConsoleHeader() %></span>
     <i id="show-hide-debug-icon" class="fa fa-chevron-circle-down"></i>
     <% if (debugButtons) { %>
     <div id="debug-commands-header" class="workspace-header">
       <i id="running-spinner" style="display: none;" class="fa fa-spinner fa-spin"></i>
       <i id="paused-icon" style="display: none;" class="fa fa-pause"></i>
-      <span class="header-text"><%= msg.debugCommandsHeaderWhenOpen() %></span>
+      <span class="header-text"><%= i18n.debugCommandsHeaderWhenOpen() %></span>
     </div>
     <div id="clear-console-header" class="workspace-header workspace-header-button"><span><i class="fa fa-eraser"></i>Clear</span></div>
     <% } %>
@@ -42,23 +42,23 @@
     <div id="debug-buttons">
       <button id="pauseButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
-        <%= msg.pause() %>
+        <%= i18n.pause() %>
       </button>
       <button id="continueButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="continue-btn icon21">
-        <%= msg.continue() %>
+        <%= i18n.continue() %>
       </button>
       <button id="stepOverButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-over-btn icon21">
-        <%= msg.stepOver() %>
+        <%= i18n.stepOver() %>
       </button>
       <button id="stepOutButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-out-btn icon21">
-        <%= msg.stepOut() %>
+        <%= i18n.stepOut() %>
       </button>
       <button id="stepInButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-in-btn icon21">
-        <%= msg.stepIn() %>
+        <%= i18n.stepIn() %>
       </button>
     </div>
   </div>
