@@ -119,3 +119,17 @@ module UsersHelper
     end
   end
 end
+
+# Summarize a user and his or her progress across all scripts.
+# Example return value:
+# {
+#     "lines": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
+#     "scripts": {
+#         "49": {
+#             "name": "course2",
+#             "levels": { "135": {"status": "perfect", "result": 100 } } },
+#         "46": {
+#             "name": "artist",
+#             "levels": {
+#                "1138": { "status": "attempted", "result": 5},
+#                "1147": { "status": "perfect", "result": 30 } } } } }
