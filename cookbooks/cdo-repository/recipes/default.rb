@@ -2,7 +2,7 @@
 # Cookbook Name:: cdo-repository
 # Recipe:: default
 #
-
+require 'etc'
 include_recipe 'cdo-github-access'
 
 template "/home/#{node[:current_user]}/.gemrc" do
@@ -17,7 +17,8 @@ branch = adhoc ?
   (node['cdo-repository']['branch'] || 'staging') :
   node.chef_environment
 
-git "/home/#{node[:current_user]}/#{node.chef_environment}" do
+git_path = "/home/#{node[:current_user]}/#{node.chef_environment}"
+git git_path do
   if node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
     repository 'git@github.com:code-dot-org/code-dot-org.git'
   else
@@ -36,4 +37,6 @@ git "/home/#{node[:current_user]}/#{node.chef_environment}" do
   action :sync
   user node[:current_user]
   group node[:current_user]
+  # skip git-repo sync when running build within shared volume (where uid of git repo is different from current login).
+  only_if { !::File.directory?(git_path) || ::File.stat(git_path).uid == Etc.getpwnam(Etc.getlogin).uid }
 end
