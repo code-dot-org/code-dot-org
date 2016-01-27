@@ -13,7 +13,7 @@ module CdoApps
       mode '0755'
       variables src_file: "#{app_root}/config/unicorn.rb",
         app_root: app_root,
-        pid_file: "#{app_root}/config/unicorn.rb.pid",
+        pid_file: "/run/unicorn/#{app_name}.pid",
         user: node[:current_user],
         env: node.chef_environment
       notifies :run, setup_cmd, :immediately
