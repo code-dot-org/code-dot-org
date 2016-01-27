@@ -5,8 +5,21 @@ end
 
 apt_package 'nginx'
 
-directory '/run/unicorn' do
+run_unicorn = '/run/unicorn'
+directory run_unicorn do
   user node[:current_user]
+end
+
+execute 'change-permission-unicorn' do
+  command "chown -R #{node[:current_user]}: #{run_unicorn}"
+end
+
+%w(dashboard pegasus).each do |app|
+  socket_path = File.join run_unicorn, "#{app}.sock"
+  file socket_path do
+    action :delete
+    not_if { ::File.socket?(socket_path) }
+  end
 end
 
 # Get/create the SSL cert via the `ssl_certificate` cookbook resource

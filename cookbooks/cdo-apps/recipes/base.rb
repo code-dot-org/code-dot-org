@@ -9,14 +9,14 @@ root = "/home/#{node[:current_user]}/#{env}"
 rack_envs = [:development, :production, :adhoc, :staging, :test, :levelbuilder, :integration]
 without = rack_envs - [env.to_sym]
 
-directory "#{root}/.bundle" do
-  user node[:current_user]
-  group node[:current_user]
-end
+require 'etc'
+user = Etc.getpwuid(::File.stat(root).uid).name
+
+directory("#{root}/.bundle") { user user }
 
 file "#{root}/.bundle/config" do
-  user node[:current_user]
-  group node[:current_user]
+  user user
+  group user
   content <<BUNDLE
 ---
 BUNDLE_JOBS: #{cores}
@@ -32,3 +32,4 @@ execute 'bundle-install' do
   group node[:current_user]
   not_if 'bundle check', cwd: root
 end
+
