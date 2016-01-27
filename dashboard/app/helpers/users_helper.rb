@@ -2,27 +2,50 @@ module UsersHelper
   include ApplicationHelper
 
   # Summarize a user and his or progress progress within a certain script.
+  # Example output:
+  # { "linesOfCode": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
+  #   "levels": { "135": { "status": "perfect", "result": 100 } } }
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
-    user_summary(user).merge(script_progress(user, script, exclude_level_progress))
+    result = {}
+    merge_user_summary(result, user)
+    merge_script_progress(result, user, script)
+    result
   end
 
   # Summarize a user and his or her progress across all scripts.
+  # Sample output:
+  # {
+  #     "disableSocialShare": true, "lines": 34, "linesOfCodeText": "Total lines of code: 34",
+  #     "scripts": {
+  #         "49": {
+  #             "name": "course2",
+  #             "progress": { "levels": { "135": {"status": "perfect", "result": 100 } } }
+  #         },
+  #         "46": {
+  #             "name": "artist",
+  #             "progress": {
+  #                 "levels": {
+  #                     "1138": { "status": "attempted", "result": 5},
+  #                     "1147": { "status": "perfect", "result": 30 } } } } }
   def summarize_user_progress_for_all_scripts(user)
-    user_summary(user).merge(scripts: scripts_progress(user))
+    result = {scripts: []}
+    merge_user_summary(result, user)
+    merge_scripts_progress(result[:scripts], user)
+    result
   end
 
-  private def scripts_progress(user)
-    progress_entries = UserLevel.where(user_id: user.id).map do |ul|
+  # Merge the progress for all scripts into the specified result hash.
+  private def merge_scripts_progress(result, user)
+    UserLevel.where(user: user) do |ul|
       script_id = ul.script_id
       script = Script.get_from_cache(script_id)
-      progress = script_progress(user, script)
-      [script_id, { name: script.name, progress: progress }]
+      result[script_id] =  { name: script.name, progress: script_progress(user, script) }
     end
-    Hash[progress_entries]
+    result
   end
 
-  private def user_summary(user)
-    result = {}
+  # Merge the user summary into the specified result hash.
+  private def merge_user_summary(result, user)
     if user
       result[:disableSocialShare] = true if user.under_13?
       result[:isTeacher] = true if user.teacher?
@@ -34,8 +57,8 @@ module UsersHelper
     result
   end
 
-  private def script_progress(user, script, exclude_level_progress = false)
-    user_data = {}
+  # Merge the progress for the specified script by user into the user_data result hash.
+  private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     if user
       # Populate trophies data if the script has trophies.
       if script.trophies
