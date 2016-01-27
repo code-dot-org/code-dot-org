@@ -4,7 +4,7 @@ module UsersHelper
   # Summarize a user and his or progress progress within a certain script.
   # Example return value:
   # { "linesOfCode": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
-  #   "levels": { "135": { "status": "perfect", "result": 100 } } }
+  #   "levels": {"135": {"status": "perfect", "result": 100}}}
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = {}
     merge_user_summary(user_data, user)
@@ -19,12 +19,12 @@ module UsersHelper
   #     "scripts": {
   #         "49": {
   #             "name": "course2",
-  #             "levels": { "135": {"status": "perfect", "result": 100 } } },
+  #             "levels": {"135": {"status": "perfect", "result": 100}}},
   #         "46": {
   #             "name": "artist",
   #             "levels": {
-  #                "1138": { "status": "attempted", "result": 5},
-  #                "1147": { "status": "perfect", "result": 30 } } } } }
+  #                "1138": {"status": "attempted", "result": 5},
+  #                "1147": {"status": "perfect", "result": 30}}}}}
   def summarize_user_progress_for_all_scripts(user)
     user_data = {}
     merge_user_summary(user_data, user)
