@@ -54,7 +54,7 @@ class UsersHelperTest < ActionView::TestCase
       0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], percent_complete(script, user)
     assert_in_delta 0.0183, percent_complete_total(script, user)
 
-    # Verify summarize_user_progress_for_all_scripts  for multiple completed levels across multiple scripts.
+    # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
     course1 = Script.course1_script
     ul1b = create :user_level, user: user, best_result: 10, script: course1, level: course1.script_levels[1].level
 

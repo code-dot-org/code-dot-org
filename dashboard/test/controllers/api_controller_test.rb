@@ -120,7 +120,7 @@ class ApiControllerTest < ActionController::TestCase
     script = Script.twenty_hour_script
 
     user = create :user, total_lines: 2
-    ul1 = create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
+    create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
     sign_in user
 
     get :user_progress, script_name: script.name
