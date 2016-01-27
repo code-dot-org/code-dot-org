@@ -248,5 +248,6 @@
   "when": "當",
   "whenRun": "當按下\"執行\"時",
   "workspaceHeaderShort": "工作區:",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

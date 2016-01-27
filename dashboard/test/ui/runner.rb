@@ -3,6 +3,7 @@
 require_relative '../../../deployment'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
+require 'cdo/test_flakiness'
 
 require 'json'
 require 'yaml'
@@ -26,6 +27,7 @@ $options.local = nil
 $options.html = nil
 $options.maximize = nil
 $options.auto_retry = false
+$options.magic_retry = false
 $options.parallel_limit = 1
 
 # start supporting some basic command line filtering of which browsers we run against
@@ -85,6 +87,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
+  end
+  opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
+    $options.magic_retry = true
   end
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
@@ -282,22 +287,60 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     end
   end
 
+  def how_many_reruns?(test_run_string)
+    if $options.auto_retry
+      return 1
+    elsif $options.magic_retry
+      # ask saucelabs how flaky the test is
+      flakiness = TestFlakiness.test_flakiness[test_run_string]
+      if !flakiness
+        $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
+        return 0
+      elsif flakiness == 0.0
+        $lock.synchronize { puts "#{test_run_string} is not flaky".green }
+        return 0
+      else
+        flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
+        max_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
+        flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
+
+        if max_reruns < 2
+          $lock.synchronize { puts flakiness_message.green }
+        elsif max_reruns < 3
+          $lock.synchronize { puts flakiness_message.yellow }
+        else
+          $lock.synchronize { puts flakiness_message.red }
+        end
+        return max_reruns
+      end
+    else # no retry options
+      return 0
+    end
+  end
+
+  max_reruns = how_many_reruns?(test_run_string)
+
   # if autorertrying, output a rerun file so on retry we only run failed tests
   rerun_filename = test_run_string + ".rerun"
-  first_time_arguments = $options.auto_retry ? " --format rerun --out #{rerun_filename}" : ""
+  if max_reruns > 0
+    arguments += "--format rerun --out #{rerun_filename}"
+  end
 
   FileUtils.rm rerun_filename, force: true
 
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + first_time_arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
 
-  if !succeeded && $options.auto_retry
+  reruns = 0
+  while !succeeded && (reruns < max_reruns)
+    reruns += 1
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
 
-    second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
+    rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + second_time_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
   end
 
   $lock.synchronize do
@@ -323,6 +366,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     scenario_info = ", #{scenario_info}" unless scenario_info.blank?
   end
 
+
+  rerun_info = " with #{reruns} reruns" if reruns > 0
+
   if !parsed_output.nil? && scenario_count == 0 && succeeded
     # Don't log individual skips because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
@@ -332,7 +378,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   else
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})"
 
     if $options.html
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
@@ -352,7 +398,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     else
       'failed'.red
     end
-  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
+  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})\n"
 
   if scenario_count == 0
     skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
@@ -384,12 +430,10 @@ $errfile.close
 $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
-$average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
   "Total duration: #{format_duration($suite_duration)}. " +
-  "Average test duration: #{format_duration($average_test_duration)}."
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"
