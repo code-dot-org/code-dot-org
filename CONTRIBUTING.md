@@ -1,6 +1,6 @@
 # Contributing
 
-We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to Alice (alice@code.org), and we’ll be happy to match you with a project.
+We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to contributing@code.org, and we’ll be happy to match you with a project.
 
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
 [code-of-conduct]: http://todogroup.org/opencodeofconduct/#Code.org/abuse@code.org
