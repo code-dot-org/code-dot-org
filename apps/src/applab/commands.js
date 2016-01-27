@@ -55,6 +55,10 @@ function isPrimitiveType(value) {
   }
 }
 
+/**
+ * Validates a user function paramer, and outputs error to the console if invalid
+ * @returns {boolean} True if param passed validation.
+ */
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
@@ -93,6 +97,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     opts[validatedTypeKey] = properType;
   }
+  return !!opts[validatedTypeKey];
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
@@ -1162,13 +1167,23 @@ applabCommands.setProperty = function(opts) {
   var value = opts.value;
 
   var element = document.getElementById(elementId);
-  // Unless we're a canvas, when editing width/height we actually want to change
-  // element.style.width/height.
-  var internalPropName = setPropertyDropdown.getInternalPropertyName(element, property);
+
+  var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  if (!info) {
+    var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter)
+    outputError('Cannot set property "' + property + '" on element "' + elementId + '".',
+      ErrorLevel.ERROR, currentLineNumber);
+    return;
+  }
+
+  var valid = apiValidateType(opts, 'setProperty', 'value', opts.value, info.type);
+  if (!valid) {
+    return;
+  }
 
   // TODO - updateProperty may need to be more resilient to unknown data
 
-  Applab.updateProperty(element, internalPropName, value);
+  Applab.updateProperty(element, info.name, value);
 };
 
 applabCommands.getXPosition = function (opts) {

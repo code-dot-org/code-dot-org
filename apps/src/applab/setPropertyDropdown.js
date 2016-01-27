@@ -5,18 +5,17 @@ var ElementType = library.ElementType;
 
 /**
  * For each element type, lists the valid properties we can set via setProperty.
- * Also maps each from the name used for setProperty (key) to the name used
- * internally by designMode.updateProperty (value)
+ * Also maps each from the name used for setProperty to the name used
+ * internally by designMode.updateProperty, and the expected type
  */
 var settableProps = {};
-// TODO - may later want to also have the type so that we can log errors if it doesnt match?
 settableProps[ElementType.IMAGE] = {
-  width: 'style-width',
-  height: 'style-height',
-  x: 'left',
-  y: 'top',
-  picture: 'picture',
-  hidden: 'hidden'
+  width: { name: 'style-width', type: 'number'},
+  height: { name: 'style-height', type: 'number' },
+  x: { name: 'left', type: 'number' },
+  y: { name: 'top', type: 'number' },
+  picture: { name: 'picture', type: 'string' },
+  hidden: { name: 'hidden', type: 'boolean' },
 };
 
 // May belong in droplet, should possibly be cleaner
@@ -38,6 +37,9 @@ function getValueOfNthParam(block, n) {
   return null;
 }
 
+/**
+ * Given a string like <"asdf"> strips quotes and returns <asdf>
+ */
 function stripQuotes(str) {
   var match = str.match(/^['|"](.*)['|"]$/);
   if (match) {
@@ -46,17 +48,29 @@ function stripQuotes(str) {
   return str;
 }
 
-module.exports.getInternalPropertyName = function (element, property) {
+/**
+ * Given an element and a friendly name for that element, returns an object
+ * containing the internal equivalent for that friendly name, or undefined
+ * if we don't have info for this element/property.
+ */
+module.exports.getInternalPropertyInfo = function (element, property) {
   var elementType = library.getElementType(element);
+  var info;
   if (elementType) {
-    return settableProps[elementType][property] || property;
+    info = settableProps[elementType][property];
   }
-  return property;
+  return info;
 };
 
-// TODO - comment me
+/**
+ * @returns {function} Gets the value of the first param for this block, gets
+ *   the element that it refers to, and then enumerates a list of possible
+ *   properties that can be set on this element. If it can't determine element
+ *   types, provides full list of properties across all types.
+ */
 module.exports.setPropertyDropdown = function () {
   return function () {
+    // Note: We depend on "this" being the droplet socket.
     var param1 = getValueOfNthParam(this.parent, 0);
 
     // TODO
