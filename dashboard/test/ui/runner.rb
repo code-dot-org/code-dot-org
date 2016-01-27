@@ -336,7 +336,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     reruns += 1
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
@@ -433,7 +433,7 @@ $suite_duration = Time.now - $suite_start_time
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{format_duration($suite_duration)}. " +
+  "Total duration: #{format_duration($suite_duration)}. "
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"
