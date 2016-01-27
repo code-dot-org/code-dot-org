@@ -1,5 +1,4 @@
-<% var msg = require('./locale') %>
-<% var applabMsg = require('./applab/locale') %>
+<% var msg = require('./locale'); %>
 
 <div id="debug-area">
   <div id="debugResizeBar" class="fa fa-ellipsis-h"></div>
@@ -43,23 +42,23 @@
     <div id="debug-buttons">
       <button id="pauseButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="pause-btn icon21">
-        <%= applabMsg.pause() %>
+        <%= msg.pause() %>
       </button>
       <button id="continueButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="continue-btn icon21">
-        <%= applabMsg.continue() %>
+        <%= msg.continue() %>
       </button>
       <button id="stepOverButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-over-btn icon21">
-        <%= applabMsg.stepOver() %>
+        <%= msg.stepOver() %>
       </button>
       <button id="stepOutButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-out-btn icon21">
-        <%= applabMsg.stepOut() %>
+        <%= msg.stepOut() %>
       </button>
       <button id="stepInButton" class="debugger_button">
         <img src="<%= assetUrl('media/1x1.gif') %>" class="step-in-btn icon21">
-        <%= applabMsg.stepIn() %>
+        <%= msg.stepIn() %>
       </button>
     </div>
   </div>
