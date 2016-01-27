@@ -91,20 +91,20 @@ module UsersHelper
           user_data[:trophies][concept.name] = counts[:current].to_f / counts[:max]
         end
       end
-    end
 
-    unless exclude_level_progress
-      uls = user.user_levels_by_level(script)
-      script_levels = script.script_levels
-      user_data[:levels] = {}
-      script_levels.each do |sl|
-        result = level_info(user, sl, uls)
-        completion_status = activity_css_class result
-        if completion_status != 'not_tried'
-          user_data[:levels][sl.level_id] = {
-              status: completion_status,
-              result: result
-          }
+      unless exclude_level_progress
+        uls = user.user_levels_by_level(script)
+        script_levels = script.script_levels
+        user_data[:levels] = {}
+        script_levels.each do |sl|
+          result = level_info(user, sl, uls)
+          completion_status = activity_css_class result
+          if completion_status != 'not_tried'
+            user_data[:levels][sl.level_id] = {
+                status: completion_status,
+                result: result
+            }
+          end
         end
       end
     end
