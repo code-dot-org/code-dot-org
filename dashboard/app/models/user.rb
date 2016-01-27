@@ -339,7 +339,7 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
-      user.email = auth.info.email || ''
+      user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
       # treat clever admin types as teachers
