@@ -1,5 +1,6 @@
+require 'tmpdir'
 def only_one_running?(script)
-  pidfile = "#{File.expand_path(script)}.pid"
+  pidfile = File.join Dir.tmpdir, "#{File.expand_path(script)}.pid"
   if File.exist?(pidfile)
     oldpid = File.read(pidfile).to_i
     # does that process exist?

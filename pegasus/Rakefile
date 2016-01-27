@@ -1,4 +1,5 @@
 require_relative 'src/env'
+require 'tmpdir'
 
 SECONDS_TO_WAIT = 60
 TIMES_TO_TRY = 5
@@ -36,7 +37,7 @@ def there_can_be_only_one(pidfile)
   at_exit { File.unlink(pidfile) }
 end
 
-there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.downcase == 'true'
+there_can_be_only_one(File.join(Dir.tmpdir, "#{File.basename(__FILE__)}.pid")) unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.downcase == 'true'
 
 if ENV['PEGASUS_RAKE_LOGGER'].to_s.downcase != 'true'
   $log = Logger.new STDOUT
