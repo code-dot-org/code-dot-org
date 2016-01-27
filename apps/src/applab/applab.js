@@ -42,7 +42,6 @@ var elementUtils = require('./designElements/elementUtils');
 var assetsApi = require('../clientApi').assets;
 var assetListStore = require('./assetManagement/assetListStore');
 var showAssetManager = require('./assetManagement/show.js');
-var DebugArea = require('./DebugArea');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
@@ -58,17 +57,9 @@ var TestResults = studioApp.TestResults;
 var Applab = module.exports;
 
 /**
- * Controller for debug console and controls on page
- * TODO: Rename to debugArea once other debugArea references are moved out of
- *       this file.
- * @type {DebugArea}
- */
-var debugAreaController = null;
-
-/**
  * @type {JSDebuggerUI} Controller for JS debug buttons and console area
  */
-Applab.jsDebuggerUI = null;
+var jsDebuggerUI = null;
 
 //Debug console history
 Applab.debugConsoleHistory = {
@@ -726,8 +717,10 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
-  Applab.jsDebuggerUI = new JSDebuggerUI();
-  var extraControlsRow = this.jsDebuggerUI.getMarkup(studioApp.assetUrl,
+
+  // Create the debugger
+  jsDebuggerUI = new JSDebuggerUI();
+  var extraControlsRow = jsDebuggerUI.getMarkup(studioApp.assetUrl,
       showDebugButtons, showDebugConsole);
 
   config.html = page({
@@ -873,9 +866,7 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  debugAreaController = new DebugArea(
-      document.getElementById('debug-area'),
-      document.getElementById('codeTextbox'));
+  jsDebuggerUI.initializeAfterDOMCreated();
 
   if (level.editCode) {
     // Initialize the slider.
@@ -1029,9 +1020,7 @@ Applab.onMouseMoveDebugResizeBar = function (event) {
                        Math.min(MAX_DEBUG_AREA_HEIGHT,
                                 (window.innerHeight - event.pageY) - offset));
 
-  if (debugAreaController.isShut()) {
-    debugAreaController.snapOpen();
-  }
+  jsDebuggerUI.ensureOpen();
 
   codeTextbox.style.bottom = newDbgHeight + 'px';
   debugArea.style.height = newDbgHeight + 'px';
