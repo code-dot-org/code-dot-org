@@ -53,4 +53,7 @@ Dashboard::Application.configure do
   config.pretty_sharedjs = false
 
   config.lograge.enabled = true
+
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
 end
