@@ -1,6 +1,7 @@
 {
   "variables": {
-    "branch": "staging"
+    "branch": "staging",
+    "root": "{{pwd}}"
   },
   "builders": [
     {
@@ -37,29 +38,46 @@
     {
       "type": "docker",
       "image": "wjordan/ubuntu-chef",
-      "commit": true
+      "commit": true,
+      "pull": false,
+      "volumes": {
+        "{{user `root`}}": "/home/ubuntu/adhoc"
+      }
     }
   ],
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["apt-get -y update; apt-get install -y curl"],
-      "only": ["docker"]
+      "inline": [
+        "sudo mkdir -p /var/chef && sudo chown -R root:root /var/chef",
+        "sudo mkdir -p /tmp/packer-chef-client && sudo chown -R root:root /tmp/packer-chef-client"
+      ]
     },
     {
-      "type": "chef-solo",
-      "install_command": "curl -L https://www.opscode.com/chef/install.sh | {{if .Sudo}}sudo{{end}} bash -s -- -v 11.18.12",
-      "cookbook_paths": [
-        "../cookbooks/.berkshelf"
-      ],
+      "type": "file",
+      "source": "../cookbooks/.berkshelf/",
+      "destination": "/var/chef/cookbooks"
+    },
+    {
+      "type": "file",
+      "source": "../cookbooks/cdo-apps/test/environments/",
+      "destination": "/var/chef/environments"
+    },
+    {
+      "type": "chef-client",
+      "install_command": "test /opt/chef/bin && true || curl -L https://www.chef.io/chef/install.sh | {{if .Sudo}}sudo{{end}} bash -s -- -v 11.18.12",
+      "execute_command": "echo $(id -u ubuntu) > /proc/self/loginuid; sudo -u ubuntu -H /bin/bash -c 'sudo chef-client -z --no-color -c {{.ConfigPath}} -j {{.JsonPath}}'",
       "chef_environment": "adhoc",
-      "environments_path": "../cookbooks/cdo-apps/test/environments",
+      "node_name": "cdo-adhoc",
+      "server_url": "http://localhost:8889",
+      "skip_clean_node": true,
+      "skip_clean_client": true,
       "run_list": [
         "apt",
         "cdo-mysql::server",
         "cdo-apps"
       ],
-      "config_template": "./solo.rb.template",
+      "config_template": "./client.rb.template",
       "json": {
         "cdo-repository": {
           "branch": "{{user `branch`}}"
@@ -68,15 +86,18 @@
     }
   ],
   "post-processors": [
-    {
-      "type": "docker-tag",
-      "only": ["docker"],
-      "repository": "wjordan/code-dot-org",
-      "tag": "0.1"
-    },
-    {
-      "type": "docker-push",
-      "only": ["docker"]
-    }
+    [
+      {
+        "type": "docker-tag",
+        "repository": "wjordan/code-dot-org",
+        "tag": "0.2",
+        "force": true,
+        "only": ["docker"]
+      },
+      {
+        "type": "docker-push",
+        "only": ["docker"]
+      }
+    ]
   ]
 }

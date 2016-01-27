@@ -1,5 +1,0 @@
-cookbook_path [{{.CookbookPaths}}]
-node_name         "cdo-adhoc"
-environment "{{.ChefEnvironment}}"
-environment_path "{{.EnvironmentsPath}}"
-ssl_verify_mode :verify_peer

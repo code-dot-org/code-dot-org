@@ -25,3 +25,9 @@ if git log --format="%B" -1 | grep -i "\[REVIEW\]" -q || true; then
     HOST=$(ruby -r yaml -e "puts YAML.load_file('cdo-apps/.kitchen/default-ubuntu-1404.yml')['hostname']") && \
     (cd ../aws; RAILS_ENV=adhoc ./setup_dns ${HOST})
 fi
+
+# When the commit has '[PACK]' in the latest commit message,
+# deploy a packer build using the setup_ script.
+if git log --format="%B" -1 | grep -i "\[PACK\]" -q || true; then
+  (cd ../aws; ./build_docker.sh)
+fi
