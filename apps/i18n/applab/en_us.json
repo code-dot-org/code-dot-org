@@ -13,8 +13,6 @@
   "container": "create container",
   "containerTooltip": "Creates a division container and sets its inner HTML.",
   "copyright": "Copyright",
-  "debugCommandsHeaderWhenOpen": "Debug Commands",
-  "debugCommandsHeaderWhenClosed": "Show Debug Commands",
   "designToolboxDescription": "Drag the elements into your app!",
   "designToolboxHeader": "Design Toolbox",
   "designWorkspaceDescription": "Click on an element to edit its properties. Create code in Events.",
