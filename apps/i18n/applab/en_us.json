@@ -15,7 +15,6 @@
   "copyright": "Copyright",
   "debugCommandsHeaderWhenOpen": "Debug Commands",
   "debugCommandsHeaderWhenClosed": "Show Debug Commands",
-  "debugConsoleHeader": "Debug Console",
   "designToolboxDescription": "Drag the elements into your app!",
   "designToolboxHeader": "Design Toolbox",
   "designWorkspaceDescription": "Click on an element to edit its properties. Create code in Events.",
