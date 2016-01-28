@@ -814,19 +814,6 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
-    var pauseButton = document.getElementById('pauseButton');
-    var continueButton = document.getElementById('continueButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
-      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
-      dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
-      dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
-      dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
-    }
-
     // Prevent the backspace key from navigating back. Make sure it's still
     // allowed on other elements.
     // Based on http://stackoverflow.com/a/2768256/2506748
@@ -1225,10 +1212,10 @@ Applab.execute = function() {
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-        onNextStepChanged: Applab.updatePauseUIState,
-        onPause: Applab.onPauseContinueButton,
+        onNextStepChanged: jsDebuggerUI.updatePauseUIState.bind(jsDebuggerUI),
+        onPause: jsDebuggerUI.onPauseContinueButton.bind(jsDebuggerUI),
         onExecutionError: handleExecutionError,
-        onExecutionWarning: Applab.log
+        onExecutionWarning: jsDebuggerUI.log.bind(jsDebuggerUI)
       });
       if (!Applab.JSInterpreter.initialized()) {
         return;
@@ -1275,74 +1262,6 @@ Applab.execute = function() {
   $('#codeWorkspace').addClass('dimmed');
   designMode.renderDesignWorkspace();
   queueOnTick();
-};
-
-Applab.onPauseContinueButton = function() {
-  if (Applab.running) {
-    // We have code and are either running or paused
-    if (Applab.JSInterpreter.paused &&
-        Applab.JSInterpreter.nextStep === StepType.RUN) {
-      Applab.JSInterpreter.paused = false;
-    } else {
-      Applab.JSInterpreter.paused = true;
-      Applab.JSInterpreter.nextStep = StepType.RUN;
-    }
-    Applab.updatePauseUIState();
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    stepInButton.disabled = !Applab.JSInterpreter.paused;
-    stepOverButton.disabled = !Applab.JSInterpreter.paused;
-    stepOutButton.disabled = !Applab.JSInterpreter.paused;
-  }
-};
-
-Applab.updatePauseUIState = function() {
-  var pauseButton = document.getElementById('pauseButton');
-  var continueButton = document.getElementById('continueButton');
-  var spinner = document.getElementById('running-spinner');
-  var pausedIcon = document.getElementById('paused-icon');
-
-  if (pauseButton && continueButton && spinner && pausedIcon) {
-    if (Applab.JSInterpreter.paused &&
-        Applab.JSInterpreter.nextStep === StepType.RUN) {
-      pauseButton.style.display = "none";
-      continueButton.style.display = "inline-block";
-      spinner.style.display = 'none';
-      pausedIcon.style.display = 'inline-block';
-    } else {
-      pauseButton.style.display = "inline-block";
-      continueButton.style.display = "none";
-      spinner.style.display = 'inline-block';
-      pausedIcon.style.display = 'none';
-    }
-  }
-};
-
-Applab.onStepOverButton = function() {
-  if (Applab.running) {
-    Applab.JSInterpreter.paused = true;
-    Applab.JSInterpreter.nextStep = StepType.OVER;
-    Applab.updatePauseUIState();
-  }
-};
-
-Applab.onStepInButton = function() {
-  if (!Applab.running) {
-    Applab.runButtonClick();
-    Applab.onPauseContinueButton();
-  }
-  Applab.JSInterpreter.paused = true;
-  Applab.JSInterpreter.nextStep = StepType.IN;
-  Applab.updatePauseUIState();
-};
-
-Applab.onStepOutButton = function() {
-  if (Applab.running) {
-    Applab.JSInterpreter.paused = true;
-    Applab.JSInterpreter.nextStep = StepType.OUT;
-    Applab.updatePauseUIState();
-  }
 };
 
 Applab.feedbackImage = '';
