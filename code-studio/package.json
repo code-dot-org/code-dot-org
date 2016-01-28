@@ -1,6 +1,7 @@
 {
   "name": "@cdo/code-studio",
   "version": "0.0.1",
+  "private": "true",
   "description": "Pipeline for static assets used by our Code Studio rails app (i.e. dashboard)",
   "author": "Code.org",
   "license": "Apache-2.0",
@@ -53,6 +54,7 @@
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
     "jquery": "^1.11.3",
+    "jquery.cookie": "1.4.1",
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",
