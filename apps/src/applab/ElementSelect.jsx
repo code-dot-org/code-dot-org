@@ -11,9 +11,9 @@ module.exports = React.createClass({
 
     return (
       <div style={{float: 'right', marginRight: '-10px'}}>
-        <select style={{width: '100px'}}>
+        <select style={{width: '150px'}}>
           {this.props.elements.map(function (element) {
-            return <option>{element}</option>;
+            return <option>{element.display}</option>;
           })}
         </select>
       </div>
