@@ -10,6 +10,8 @@ class LevelTest < ActiveSupport::TestCase
     @custom_maze_data = @maze_data.merge(:user_id=>1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test 'create level' do
@@ -244,7 +246,7 @@ EOS
 
     # update the same level with different dsl text
     dsl_text = dsl_text.gsub('star', 'bar')
-    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text)
+    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text, published: true)
 
     cm = ContractMatch.find(cm.id)
     # star -> bar
@@ -268,6 +270,7 @@ EOS
   def update_maze
     maze = Maze.last
     maze.start_blocks = '<xml/>'
+    maze.published = true
     maze.save!
 
     maze.reload
@@ -288,7 +291,7 @@ EOS
   end
 
   def create_maze
-    maze = create(:maze)
+    maze = create(:maze, :published => true)
     assert maze
   end
 
