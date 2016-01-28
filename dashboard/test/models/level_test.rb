@@ -44,7 +44,7 @@ class LevelTest < ActiveSupport::TestCase
       parsed = Karel.parse_maze(json)
       assert_equal(maze, JSON.parse(parsed['maze'])[0][0])
       assert_equal(initial_dirt, JSON.parse(parsed['initial_dirt'])[0][0])
-      assert_equal(0, JSON.parse(parsed['final_dirt'])[0][0])
+      assert_equal(input, JSON.parse(parsed['raw_dirt'])[0][0])
 
       # some of our values won't roundtrip, because they get converted to ints
       # but not back to strings
