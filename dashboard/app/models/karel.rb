@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -37,20 +38,44 @@ class Karel < Maze
   end
 
   # If type is "Karel" return a 3 entry hash with keys 'maze', 'initial_dirt',
-  # and 'final_dirt', the keys map to 2d arrays blockly can render.
-  # final_dirt is always zeroed out until it is removed from Blockly.
+  # and 'raw', the keys map to 2d arrays blockly can render.
   def self.parse_maze(maze_json)
     maze_json = maze_json.to_json if maze_json.is_a? Array
     maze = JSON.parse(maze_json)
-    map, initial_dirt, final_dirt = (0...3).map { Array.new(maze.length) { Array.new(maze[0].length, 0) }}
+    maze.each_with_index do |row, x|
+      row.each_with_index do |cell, y|
+        # optional +/-
+        # followed by the number
+        # optionally followed by R or P to override default flower color
+        # optionally followed by:
+        #   FC to indicate an old-style "fixed" cloud or
+        #   C or Cany to indicate a new "dynamic" cloud
+        match = /^(\+|-)?(\d+)(R|P)?(FC|Cany|C)?$/.match(cell.to_s)
+        unless match
+          raise ArgumentError.new("Cell (#{x},#{y}) with content \"#{cell}\" is invalid")
+        end
+      end
+    end
+
+    # "Karel" covers both Bee and Farmer levels. As of Jan 2016, Bee has
+    # been converted to look only at RawDirt, but Farmer levels and
+    # shared code still use a combination of "Map" and "InitialDirt".
+    # Once all clientside logic has been converted to use just
+    # "RawDirt", this can be vastly simplified.
+    map, initial_dirt = (0...2).map { Array.new(maze.length) { Array.new(maze[0].length, 0) }}
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
         # optional +/-
         # followed by the number
         # followed by optional R/P/FC, used to override default flower color
-        match = /([+|-])?(\d+)(R|P|FC)?/.match(cell.to_s)
+        # followed by optional C/Cany, used to indicate new clouds
+        match = /(\+|-)?(\d+)(R|P|FC)?(Cany|C)?/.match(cell.to_s)
 
-        if match[1] # we have +/-
+        if match[4] # we're a 'new' level using the clouds
+          map[x][y] = 1
+          digits = (match[2] == '0' ? ZERO_DIRT_ITEM.to_s : match[2])
+          initial_dirt[x][y] = (match[1] || '' + digits).to_i
+        elsif match[1] # we have +/-
           map[x][y] = match[3] || 1 # R/P/FC can be used to override flowertype
 
           digits = (match[2] == '0' ? ZERO_DIRT_ITEM.to_s : match[2])
@@ -62,17 +87,19 @@ class Karel < Maze
       end
     end
 
-    { 'maze' => map.to_json, 'initial_dirt' => initial_dirt.to_json, 'final_dirt' => final_dirt.to_json }
+    { 'maze' => map.to_json, 'initial_dirt' => initial_dirt.to_json, 'raw_dirt' => maze_json }
   end
 
-  def self.unparse_maze(contents)
-    maze, initial_dirt = %w(maze initial_dirt).map do |x|
-      data = contents[x]
-      data = JSON.parse(data) if data.is_a?(String)
-      data
-    end
-    output = Array.new(maze.size) { Array.new(maze[0].size, 0) }
-    maze.each_with_index do |row, x|
+  # Bee now uses "RawDirt" rather than a combination of "map" and
+  # "initialDirt". However, older bee levels do not have "RawDirt" in
+  # the level properties, and will need to be updated. Until then,
+  # here's a temporary function to recombine "map" and "initial_dirt"
+  # into "raw_dirt"
+  def self.generate_raw_dirt(map, initial_dirt)
+    map = JSON.parse(map) if map.is_a?(String)
+    initial_dirt = JSON.parse(initial_dirt) if initial_dirt.is_a?(String)
+    raw_dirt = Array.new(map.size) { Array.new(map[0].size, 0) }
+    map.each_with_index do |row, x|
       row.each_with_index do |map, y|
         dirt = initial_dirt[x][y]
         if map.to_s =~ /[1|R|P|FC]/ and dirt != 0
@@ -80,13 +107,18 @@ class Karel < Maze
           digits = dirt.abs == ZERO_DIRT_ITEM ? '0' : dirt.abs.to_s
           suffix = map == 1 ? '' : map.to_s
 
-          output[x][y] = prefix + digits + suffix
+          raw_dirt[x][y] = prefix + digits + suffix
         else
-          output[x][y] = map
+          raw_dirt[x][y] = map
         end
       end
     end
-    output
+    raw_dirt
+  end
+
+  def self.unparse_maze(contents)
+    maze = contents['raw_dirt'] || self.generate_raw_dirt(contents['maze'], contents['initial_dirt'])
+    maze.is_a?(String) ? JSON.parse(maze) : maze
   end
 
   def toolbox(type)
