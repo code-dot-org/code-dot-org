@@ -1907,7 +1907,7 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentSc
     documentRoot = documentRoot.find('#designModeViz');
   }
 
-  var elements = documentRoot.find('[id^="design_"]');
+  var elements = documentRoot.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]');
 
   // Return all elements when no filter is given
   if (filterSelector) {
@@ -1918,7 +1918,7 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentSc
   var comparator = currentScreenOnly ? sortByZIndex : sortById;
 
   return elements.sort(comparator).map(function (_, element) {
-    var id = quote(element.id.replace(/^design_/, ''));
+    var id = quote(element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), ''));
     return {text: id, display: id};
   }).get();
 };
