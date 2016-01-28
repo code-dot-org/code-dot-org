@@ -249,6 +249,8 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
 
+  config.getCode = this.getCode.bind(this);
+
   if (config.isLegacyShare && config.hideSource) {
     $("body").addClass("legacy-share-view");
     if (dom.isMobile()) {

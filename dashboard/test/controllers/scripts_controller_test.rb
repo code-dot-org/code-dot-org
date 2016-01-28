@@ -7,6 +7,8 @@ class ScriptsControllerTest < ActionController::TestCase
   setup do
     @admin = create(:admin)
     @not_admin = create(:user)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test "should get index" do

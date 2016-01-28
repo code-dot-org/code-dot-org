@@ -21,7 +21,7 @@ nav: about_nav
 	- [Marketing & Communications Manager](#market)
 - **Professional Learning & Community Team**
 	- [VP of Professional Learning & Community](#vp)
-	- [Learning and Development Specialist](#learn)
+	- [Training and Development Specialist](#train)
 
 
 **[Working at Code.org](#info)**
@@ -66,7 +66,7 @@ Please include lesson plan samples that are your original work, and highlight re
 
 **Job Summary:**
 
-Code.org is looking for experienced Curriculum Writers to work with and support the goals of Code.org’s Education team as a full-time, 8-week contract. This summer cohort will help develop the curriculum for our newest middle school course, Computer Science Discoveries. You can learn more at https://code.org/educate/csd.
+Code.org is looking for experienced Curriculum Writers to work with and support the goals of Code.org’s Education team as a full-time, 8-week contract from June 27-August 19. This summer cohort will help develop the curriculum for our newest middle school course, Computer Science Discoveries. You can learn more at https://code.org/educate/csd.
 
 Responsibilities of the position include: 
 
@@ -345,6 +345,10 @@ Additional desired strengths include:
  
 Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+
+## <a name="train"href="#train">Training and Development Specialist (Seattle, WA)</a>
+
+**Job Summary:**
 
 
 
