@@ -460,31 +460,10 @@ function onDebugInputKeyDown(e) {
     e.target.textContent = '';
     outputApplabConsole('> ' + input);
     if (Applab.JSInterpreter) {
-      var currentScope = Applab.JSInterpreter.interpreter.getScope();
-      var evalInterpreter = new window.Interpreter(input);
-      // Set console scope to the current scope of the running program
-
-      // NOTE: we are being a little tricky here (we are re-running
-      // part of the Interpreter constructor with a different interpreter's
-      // scope)
-      evalInterpreter.populateScope_(evalInterpreter.ast, currentScope);
-      evalInterpreter.stateStack = [{
-          node: evalInterpreter.ast,
-          scope: currentScope,
-          thisExpression: currentScope
-      }];
-      // Copy these properties directly into the evalInterpreter so the .isa()
-      // method behaves as expected
-      ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
-        'UNDEFINED'].forEach(
-        function (prop) {
-          evalInterpreter[prop] = Applab.JSInterpreter.interpreter[prop];
-        });
       try {
-        evalInterpreter.run();
-        outputApplabConsole('< ' + String(evalInterpreter.value));
-      }
-      catch (err) {
+        var result = Applab.JSInterpreter.evalInCurrentScope(input);
+        outputApplabConsole('< ' + String(result));
+      } catch (err) {
         outputApplabConsole('< ' + String(err));
       }
     } else {
