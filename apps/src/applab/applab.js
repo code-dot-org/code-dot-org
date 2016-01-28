@@ -640,6 +640,7 @@ Applab.init = function(config) {
   });
 
   // Create the debugger
+  // TODO (bbuchanan): Don't make one of these at all if !level.editCode?
   jsDebuggerUI = new JSDebuggerUI(function () {
     return Applab.JSInterpreter;
   });
@@ -789,9 +790,11 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  jsDebuggerUI.initializeAfterDOMCreated({
-    defaultStepSpeedPercent: config.level.sliderSpeed
-  });
+  if (level.editCode) {
+    jsDebuggerUI.initializeAfterDOMCreated({
+      defaultStepSpeedPercent: config.level.sliderSpeed
+    });
+  }
 
   window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
@@ -811,11 +814,6 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
-
-    var clearButton = document.getElementById('clear-console-header');
-    if (clearButton) {
-      dom.addClickTouchEvent(clearButton, clearDebugOutput);
-    }
     var pauseButton = document.getElementById('pauseButton');
     var continueButton = document.getElementById('continueButton');
     var stepInButton = document.getElementById('stepInButton');
@@ -1061,16 +1059,6 @@ Applab.renderVisualizationOverlay = function() {
 };
 
 /**
- * Empty the contents of the debug console scrollback area.
- */
-function clearDebugOutput() {
-  var debugOutput = document.getElementById('debug-output');
-  if (debugOutput) {
-    debugOutput.textContent = '';
-  }
-}
-
-/**
  * Empty the debug console input area.
  */
 function clearDebugInput() {
@@ -1197,7 +1185,7 @@ Applab.execute = function() {
 
   studioApp.reset(false);
   studioApp.attempts++;
-  clearDebugOutput();
+  jsDebuggerUI.clearDebugOutput();
   clearDebugInput();
 
   // Set event handlers and start the onTick timer
