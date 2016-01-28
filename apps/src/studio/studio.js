@@ -4231,10 +4231,20 @@ Studio.setDroidSpeed = function (opts) {
 };
 
 Studio.setSpriteSize = function (opts) {
+  if (Studio.sprite[opts.spriteIndex].size === opts.value) {
+    return;
+  }
+
   Studio.sprite[opts.spriteIndex].size = opts.value;
   var curSpriteValue = Studio.sprite[opts.spriteIndex].value;
 
   if (curSpriteValue !== 'hidden') {
+    // Unset .image and .legacyImage so that setSprite's calls to
+    // setImage and setLegacyImage will complete.
+    // In the future, an implementation that allows for setSpriteSize to
+    // update the display more precisely would be valuable.
+    Studio.sprite[opts.spriteIndex].image = undefined;
+    Studio.sprite[opts.spriteIndex].legacyImage = undefined;
     // call setSprite with existing index/value now that we changed the size
     Studio.setSprite({
       spriteIndex: opts.spriteIndex,
