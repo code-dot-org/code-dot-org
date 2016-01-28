@@ -385,6 +385,16 @@ JSDebuggerUI.prototype.clearDebugOutput = function () {
   }
 };
 
+/**
+ * Empty the debug console input area.
+ */
+JSDebuggerUI.prototype.clearDebugInput = function () {
+  var debugInput = this.getElement_('#debug-input');
+  if (debugInput) {
+    debugInput.textContent = '';
+  }
+};
+
 JSDebuggerUI.prototype.onPauseContinueButton = function() {
   var jsInterpreter = this.getJSInterpreter_();
   if (jsInterpreter) {
