@@ -2,6 +2,7 @@ require 'os'
 require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
+require 'cdo/hip_chat'
 
 module RakeUtils
 
@@ -25,12 +26,18 @@ module RakeUtils
   end
 
   def self.system_(*args)
-    status, _ = system__ command_ *args
+    status, _ = system__(command_(*args))
     status
   end
 
+  def self.system_with_hipchat_logging(*args)
+    command = command_(*args)
+    HipChat.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
+    system_ command
+  end
+
   def self.system(*args)
-    command = command_ *args
+    command = command_(*args)
     status, output = system__ command
     unless status == 0
       error = RuntimeError.new("'#{command}' returned #{status}")
