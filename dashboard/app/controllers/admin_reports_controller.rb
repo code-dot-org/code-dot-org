@@ -213,7 +213,7 @@ class AdminReportsController < ApplicationController
 
   def admin_stats
     require 'cdo/properties'
-    @stats = Properties.get('admin_stats') 
+    @stats = Properties.get('admin_stats')
   end
 
   def all_usage
