@@ -466,8 +466,8 @@ class Documents < Sinatra::Base
 
       if not metadata['og:image']
         if request.site != 'csedweek.org'
-          metadata['og:image'] = 'https://code.org/images/code-logo-640x640.png'
-          metadata['og:image:width'] = 640
+          metadata['og:image'] = CDO.code_org_url('/images/code-logo-1220x640.png')
+          metadata['og:image:width'] = 1220
           metadata['og:image:height'] = 640
         end
       end
