@@ -35,7 +35,6 @@ var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
 var JSDebuggerUI = require('../JSDebuggerUI');
-var StepType = JSInterpreter.StepType;
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var assetsApi = require('../clientApi').assets;
@@ -1004,16 +1003,6 @@ Applab.renderVisualizationOverlay = function() {
 };
 
 /**
- * Empty the debug console input area.
- */
-function clearDebugInput() {
-  var debugInput = document.getElementById('debug-input');
-  if (debugInput) {
-    debugInput.textContent = '';
-  }
-}
-
-/**
  * Save the app state and trigger any callouts, then call the callback.
  * @param callback {Function}
  */
@@ -1131,7 +1120,7 @@ Applab.execute = function() {
   studioApp.reset(false);
   studioApp.attempts++;
   jsDebuggerUI.clearDebugOutput();
-  clearDebugInput();
+  jsDebuggerUI.clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
