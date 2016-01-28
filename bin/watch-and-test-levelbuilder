@@ -58,4 +58,3 @@ if test_result
 end
 
 File.delete LEVELBUILDER_CI_LOCK_FILENAME
-
