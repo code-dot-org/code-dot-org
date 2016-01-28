@@ -3,7 +3,10 @@
 'use strict';
 
 var assert = require('assert');
-var state = require('../../src/js/clientState')(localStorage);
+var state = require('../../src/js/clientState')(window.sessionStorage);
+var chai = require('chai');
+
+chai.should();
 
 describe("clientState#sourceForLevel", function() {
 
@@ -13,7 +16,8 @@ describe("clientState#sourceForLevel", function() {
 
   it("returns cached levelSource if timestamp is newer", function () {
     state.writeSourceForLevel('sample', 1, 200, 'abc');
-    state.sourceForLevel('sample', 1, 100).should.equal('abc');
+    var source = state.sourceForLevel('sample', 1, 100);
+    source.should.equal('abc');
   });
 
   it("returns cached levelSource if no timestamp given", function () {
