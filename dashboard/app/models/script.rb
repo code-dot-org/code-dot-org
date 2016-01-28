@@ -498,12 +498,13 @@ class Script < ActiveRecord::Base
     end
   end
 
+  SEEDED = File.join Rails.application.config.paths['tmp'].first, '.seeded'
   def self.rake
     # cf. http://stackoverflow.com/a/9943895
     require 'rake'
     Rake::Task.clear
     Dashboard::Application.load_tasks
-    Rake::FileTask['config/scripts/.seeded'].invoke
+    Rake::FileTask[SEEDED].invoke
   end
 
   def self.update_i18n(custom_i18n)

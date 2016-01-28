@@ -6,7 +6,6 @@ require 'etc'
 user = Etc.getpwuid(::File.stat(app_root).uid).name
 {
   "#{app_root}/public/blockly" => './apps-package',
-  "#{app_root}/public/shared" => './shared-package',
   "#{app_root}/public/code-studio" => './code-studio-package',
   "#{app_root}/.bundle" => '../.bundle'
 }.each do |from, to|
@@ -16,6 +15,10 @@ user = Etc.getpwuid(::File.stat(app_root).uid).name
     group user
   end
 end
+
+execute 'change-permission-tmpdir' do
+  command "chown -R #{node[:current_user]}: /tmp/*"
+end if node.chef_environment == 'adhoc'
 
 ::Chef::Recipe.send(:include, CdoApps)
 setup_app 'dashboard'

@@ -3,7 +3,7 @@ listen '/run/unicorn/pegasus.sock'
 worker_processes CDO.pegasus_workers
 pid '/run/unicorn/pegasus.pid'
 timeout 60
-stderr_path pegasus_dir('log/unicorn_stderr.log')
-stdout_path pegasus_dir('log/unicorn_stdout.log')
+stderr_path log_dir('pegasus', 'unicorn_stderr.log')
+stdout_path log_dir('pegasus', 'unicorn_stdout.log')
 working_directory pegasus_dir
 #logger $log

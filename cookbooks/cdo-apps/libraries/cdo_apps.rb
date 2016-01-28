@@ -1,10 +1,16 @@
 module CdoApps
   def setup_app(app_name)
-    root = "/home/#{node[:current_user]}/#{node.chef_environment}"
+    home = "/home/#{node[:current_user]}"
+    root = File.join home, node.chef_environment
     app_root = File.join root, app_name
-    log_dir = File.join app_root, 'log'
     setup_cmd = "execute[#{node['cdo-apps']['local_mysql'] ? "setup-#{app_name}" : "build-#{app_name}"}]"
     init_script = "/etc/init.d/#{app_name}"
+
+    log_dir = File.join home, 'log', app_name
+    directory log_dir do
+      recursive true
+      user node[:current_user]
+    end
 
     template init_script do
       source 'init.d.erb'

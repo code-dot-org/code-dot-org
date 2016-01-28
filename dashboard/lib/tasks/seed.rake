@@ -1,4 +1,5 @@
 require "csv"
+require_relative '../../../deployment'
 
 namespace :seed do
   verbose false
@@ -32,7 +33,7 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten
-  SEEDED = 'config/scripts/.seeded'
+  SEEDED = tmp_dir '.seeded'
 
   file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
     update_scripts
@@ -66,7 +67,9 @@ namespace :seed do
   # detect changes to dsldefined level files
   DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
   DSLS_GLOB = DSL_TYPES.map{|x|Dir.glob("config/scripts/**/*.#{x.underscore}*")}.sort.flatten
-  file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
+  DSLS_SEEDED = tmp_dir '.dsls_seeded'
+
+  file DSLS_SEEDED => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
     touch t.name
   end

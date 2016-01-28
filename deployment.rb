@@ -10,6 +10,7 @@ require 'yaml'
 require 'cdo/erb'
 require 'cdo/slog'
 require 'os'
+require 'tmpdir'
 
 def load_yaml_file(path)
   return nil unless File.file?(path)
@@ -324,4 +325,14 @@ end
 
 def code_studio_dir(*dirs)
   deploy_dir('code-studio', *dirs)
+end
+
+def log_dir(*dirs)
+  home_dir('log', *dirs)
+end
+
+def tmp_dir(*dirs)
+  rack_env?(:adhoc) ?
+    File.join(Dir.tmpdir, *dirs) :
+    dashboard_dir('tmp', *dirs)
 end

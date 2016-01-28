@@ -55,10 +55,15 @@ Dashboard::Application.configure do
 
   config.lograge.enabled = true
 
+  # Store logs outside the Rails root.
+  config.paths['log'] = log_dir('dashboard', "#{Rails.env}.log")
+  config.paths['tmp'] = tmp_dir
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  sprockets_path = File.join Dir.tmpdir, 'sprockets'
+  # Store compiled sprockets assets outside the Rails root.
+  sprockets_path = tmp_dir 'sprockets'
   config.assets.manifest = File.join sprockets_path, 'sprockets-manifest.json'
   config.assets.configure do |env|
     env.cache = ActiveSupport::Cache::FileStore.new sprockets_path
