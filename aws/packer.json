@@ -39,7 +39,7 @@
       "type": "docker",
       "image": "wjordan/ubuntu-chef",
       "commit": true,
-      "pull": false,
+      "pull": true,
       "volumes": {
         "{{user `root`}}": "/home/ubuntu/adhoc"
       }
