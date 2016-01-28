@@ -333,6 +333,6 @@ end
 
 def tmp_dir(*dirs)
   rack_env?(:adhoc) ?
-    File.join(Dir.tmpdir, *dirs) :
+    home_dir('.cdo', *dirs) :
     dashboard_dir('tmp', *dirs)
 end

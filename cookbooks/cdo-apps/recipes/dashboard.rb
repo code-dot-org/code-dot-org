@@ -16,9 +16,17 @@ user = Etc.getpwuid(::File.stat(app_root).uid).name rescue node[:current_user]
   end
 end
 
-execute 'change-permission-tmpdir' do
-  command "chown -R #{node[:current_user]}: /tmp/*"
-end if node.chef_environment == 'adhoc'
+home = "/home/#{node[:current_user]}"
+if node.chef_environment == 'adhoc'
+  directory "#{home}/.cdo" do
+    user node[:current_user]
+    group node[:current_user]
+  end
+
+  execute 'change-permission-tmpdir' do
+    command "chown -R #{node[:current_user]}: #{home}/.cdo/*"
+  end
+end
 
 ::Chef::Recipe.send(:include, CdoApps)
 setup_app 'dashboard'

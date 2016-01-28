@@ -5,7 +5,7 @@ driver:
   aws_ssh_key_id: server_access_key
   security_group_ids: ["sg-af6d98c8"]
   subnet_id: subnet-404a7937
-  instance_type: m4.4xlarge
+  instance_type: m3.2xlarge
   image_search:
     name: cdo-*
     virtualization-type: hvm
