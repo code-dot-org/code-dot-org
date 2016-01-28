@@ -19,7 +19,7 @@ done
 
 # When the commit has '[REVIEW]' in the latest commit message,
 # deploy a 'review app' using Test Kitchen ec2 config and setup_dns script.
-if git log --format="%B" -1 | grep -i "\[REVIEW\]" -q || true; then
+if git log --format="%B" -1 | grep -i "\[REVIEW\]" -q; then
   (cd cdo-apps; \
     KITCHEN_LOCAL_YAML=.kitchen.ec2.yml bundle exec kitchen verify) && \
     HOST=$(ruby -r yaml -e "puts YAML.load_file('cdo-apps/.kitchen/default-ubuntu-1404.yml')['hostname']") && \
@@ -28,6 +28,6 @@ fi
 
 # When the commit has '[PACK]' in the latest commit message,
 # deploy a packer build using the setup_ script.
-if git log --format="%B" -1 | grep -i "\[PACK\]" -q || true; then
+if git log --format="%B" -1 | grep -i "\[PACK\]" -q; then
   (cd ../aws; ./build_docker.sh)
 fi
