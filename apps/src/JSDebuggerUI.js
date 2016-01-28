@@ -13,15 +13,30 @@
  */
 'use strict';
 
+var constants = require('./constants');
 var DebugArea = require('./applab/DebugArea');
 var Slider = require('./slider');
+
+var KeyCodes = constants.KeyCodes;
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
  * App Lab, Game Lab, etc.
+ * @param {!function} getJSInterpreter - Must be a function that returns the
+ *        current active interpreter, or a falsy value if no interpreter is
+ *        running.
  * @constructor
  */
-var JSDebuggerUI = module.exports = function () {
+var JSDebuggerUI = module.exports = function (getJSInterpreter) {
+
+  /**
+   * Function for getting the active JSInterpreter (which may get replaced on a
+   * regular basis, i.e. for each run).  Should return undefined/null if no
+   * interpreter is currently running.
+   * @type {function}
+   */
+  this.getJSInterpreter_ = getJSInterpreter;
+
   /**
    * Helper that handles open/shut actions for debugger UI
    * @private {DebugArea}
@@ -85,6 +100,11 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
     if (options.defaultStepSpeedPercent) {
       this.setStepSpeedPercent(options.defaultStepSpeedPercent);
     }
+  }
+
+  var debugInput = document.getElementById('debug-input');
+  if (debugInput) {
+    debugInput.addEventListener('keydown', this.onDebugInputKeyDown.bind(this));
   }
 };
 
@@ -161,4 +181,78 @@ function stringifyNonStrings(object) {
   } else {
     return JSON.stringify(object);
   }
+}
+
+/**
+ * Handler for key events in the debug console input box.
+ * @param {KeyboardEvent} e
+ */
+JSDebuggerUI.prototype.onDebugInputKeyDown = function (e) {
+  var input = e.target.textContent;
+  if (e.keyCode === KeyCodes.ENTER) {
+    e.preventDefault();
+    pushDebugConsoleHistory(input);
+    e.target.textContent = '';
+    this.log('> ' + input);
+    var jsInterpreter = this.getJSInterpreter_();
+    if (jsInterpreter) {
+      try {
+        var result = jsInterpreter.evalInCurrentScope(input);
+        this.log('< ' + String(result));
+      } catch (err) {
+        this.log('< ' + String(err));
+      }
+    } else {
+      this.log('< (not running)');
+    }
+  }
+  if (e.keyCode === KeyCodes.UP) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveUpDebugConsoleHistory(input);
+  }
+  if (e.keyCode === KeyCodes.DOWN) {
+    updateDebugConsoleHistory(input);
+    e.target.textContent = moveDownDebugConsoleHistory(input);
+  }
+};
+
+//Debug console history
+var consoleHistory = {
+  history: [],
+  currentIndex: 0
+};
+
+function pushDebugConsoleHistory(commandText) {
+  consoleHistory.currentIndex = consoleHistory.history.length + 1;
+  consoleHistory.history[consoleHistory.currentIndex - 1] = commandText;
+}
+
+function updateDebugConsoleHistory(commandText) {
+  if (typeof consoleHistory.history[consoleHistory.currentIndex]!== 'undefined') {
+    consoleHistory.history[consoleHistory.currentIndex] = commandText;
+  }
+}
+
+function moveUpDebugConsoleHistory(currentInput) {
+  if (consoleHistory.currentIndex > 0) {
+    consoleHistory.currentIndex -= 1;
+  }
+  if (typeof consoleHistory.history[consoleHistory.currentIndex] !== 'undefined') {
+    return consoleHistory.history[consoleHistory.currentIndex];
+  }
+  return currentInput;
+}
+
+function moveDownDebugConsoleHistory(currentInput) {
+  if (consoleHistory.currentIndex < consoleHistory.history.length) {
+    consoleHistory.currentIndex += 1;
+  }
+  if (consoleHistory.currentIndex === consoleHistory.history.length &&
+      currentInput === consoleHistory.history[consoleHistory.currentIndex - 1]) {
+    return '';
+  }
+  if (typeof consoleHistory.history[consoleHistory.currentIndex] !== 'undefined') {
+    return consoleHistory.history[consoleHistory.currentIndex];
+  }
+  return currentInput;
 }
