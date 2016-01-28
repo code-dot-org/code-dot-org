@@ -131,6 +131,12 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
           this.onMouseUpDebugResizeBar.bind(this));
     }
   }
+
+  // Attach handler for console clear button
+  var clearButton = document.getElementById('clear-console-header');
+  if (clearButton) {
+    dom.addClickTouchEvent(clearButton, this.clearDebugOutput.bind(this));
+  }
 };
 
 /**
@@ -333,5 +339,14 @@ JSDebuggerUI.prototype.onMouseUpDebugResizeBar = function () {
           boundMouseMoveHandler);
     }
     draggingDebugResizeBar = false;
+  }
+};
+
+/**
+ * Empty the contents of the debug console scrollback area.
+ */
+JSDebuggerUI.prototype.clearDebugOutput = function () {
+  if (this.debugOutputDiv_) {
+    this.debugOutputDiv_.textContent = '';
   }
 };
