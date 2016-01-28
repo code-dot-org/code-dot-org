@@ -248,5 +248,6 @@
   "when": "とき",
   "whenRun": "実行した時",
   "workspaceHeaderShort": "ワークスペース：",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }
