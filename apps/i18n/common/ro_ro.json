@@ -247,5 +247,7 @@
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: "
+  "workspaceHeaderShort": "Spaţiu de lucru: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

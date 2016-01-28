@@ -402,4 +402,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pogledaj Video"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "pri pokretanju"},
-"workspaceHeaderShort":function(d){return "Radni prostor: "}};
+"workspaceHeaderShort":function(d){return "Radni prostor: "},
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

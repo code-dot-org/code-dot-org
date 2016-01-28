@@ -247,5 +247,7 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: "
+  "workspaceHeaderShort": "Çalışma alanı: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

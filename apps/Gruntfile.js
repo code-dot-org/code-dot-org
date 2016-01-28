@@ -382,32 +382,51 @@ config.concurrent = {
 config.watch = {
   js: {
     files: ['src/**/*.{js,jsx}'],
-    tasks: ['newer:copy:src']
+    tasks: ['newer:copy:src'],
+    options: {
+      interval: 5007
+    }
   },
   style: {
     files: ['style/**/*.scss', 'style/**/*.sass'],
-    tasks: ['newer:sass']
+    tasks: ['newer:sass'],
+    options: {
+      interval: 5007
+    }
   },
   content: {
     files: ['static/**/*'],
-    tasks: ['newer:copy']
+    tasks: ['newer:copy'],
+    options: {
+      interval: 5007
+    }
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['newer:concat', 'newer:copy:lib']
+    tasks: ['newer:concat', 'newer:copy:lib'],
+    options: {
+      interval: 5007
+    }
   },
   ejs: {
     files: ['src/**/*.ejs'],
-    tasks: ['ejs']
+    tasks: ['ejs'],
+    options: {
+      interval: 5007
+    }
   },
   messages: {
     files: ['i18n/**/*.json'],
-    tasks: ['pseudoloc', 'messages']
+    tasks: ['pseudoloc', 'messages'],
+    options: {
+      interval: 5007
+    }
   },
   dist: {
     files: ['build/package/**/*'],
     options: {
-      livereload: true
+      livereload: true,
+      interval: 5007
     }
   }
 };

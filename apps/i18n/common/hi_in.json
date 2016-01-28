@@ -247,5 +247,7 @@
   "watchVideo": "ये वीडियो देखें",
   "when": "कब",
   "whenRun": "जब चलाएँ",
-  "workspaceHeaderShort": "Workspace: "
+  "workspaceHeaderShort": "Workspace: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

@@ -247,5 +247,7 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: "
+  "workspaceHeaderShort": "Radni prostor: ",
+  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
 }

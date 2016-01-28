@@ -4,6 +4,7 @@ require_relative './deployment'
 require 'os'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
+require 'cdo/aws/s3_packaging'
 
 # Helper functions
 def make_blockly_symlink
@@ -136,6 +137,8 @@ namespace :build do
   task :dashboard do
     make_blockly_symlink
     make_code_studio_symlink
+    # Make sure we have an up to date package for code studio
+    ensure_code_studio_package
 
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
@@ -259,6 +262,15 @@ def install_npm
   end
 end
 
+def ensure_code_studio_package
+  # never download if we build our own
+  return if CDO.use_my_code_studio
+
+  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
+  package_found = packager.update_from_s3
+  raise "No valid package found" unless package_found
+end
+
 namespace :install do
 
   # Create a symlink in the public directory that points at the appropriate blockly
@@ -277,7 +289,7 @@ namespace :install do
 
     files.each do |f|
       path = File.expand_path("../tools/hooks/#{f}", __FILE__)
-      system "ln -s #{path} #{git_path}/#{f}"
+      RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
 
@@ -291,6 +303,7 @@ namespace :install do
   task :code_studio do
     if local_environment?
       make_code_studio_symlink
+      ensure_code_studio_package
       install_npm
     end
   end
@@ -316,6 +329,7 @@ namespace :install do
 
   tasks = []
   #tasks << :blockly_core if CDO.build_blockly_core
+  tasks << :hooks if rack_env?(:development)
   tasks << :blockly_symlink
   tasks << :apps if CDO.build_apps
   tasks << :code_studio if CDO.build_code_studio
@@ -330,25 +344,7 @@ task :install => ['install:all']
 namespace :update_package do
 
   task :code_studio do
-    if RakeUtils.git_staged_changes?
-      puts 'You have changes staged for commit; please unstage all changes before running an `update_package` command.'
-    else
-      # Lint, Clean, Build, Test
-      Dir.chdir(code_studio_dir) do
-        RakeUtils.system "npm run lint && npm run clean && npm run build"
-      end
-
-      # Remove old built package
-      package_dir = dashboard_dir('public', 'code-studio-package')
-      RakeUtils.system "rm -rf #{package_dir}"
-
-      # Copy in new built package
-      RakeUtils.system "cp -r #{code_studio_dir('build')} #{package_dir}"
-
-      # Commit directory
-      RakeUtils.git_add '-A', package_dir
-      RakeUtils.system 'git commit --no-verify -m "Updated code-studio-package."'
-    end
+    ensure_code_studio_package
   end
 
 end

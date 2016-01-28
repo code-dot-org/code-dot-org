@@ -402,4 +402,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行した時"},
-"workspaceHeaderShort":function(d){return "ワークスペース："}};
+"workspaceHeaderShort":function(d){return "ワークスペース："},
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

@@ -402,4 +402,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Shlédnout Video"},
 "when":function(d){return "když"},
 "whenRun":function(d){return "po spuštění"},
-"workspaceHeaderShort":function(d){return "Pracovní prostor: "}};
+"workspaceHeaderShort":function(d){return "Pracovní prostor: "},
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};
