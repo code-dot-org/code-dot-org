@@ -1914,13 +1914,22 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentSc
     elements = elements.filter(filterSelector);
   }
 
-  return elements.sort(function (a, b) {
-    return a.zIndex - b.zIndex
-  }).map(function (_, element) {
+  // Sort alphabetically by ID, except when showing elements on the current screen (then sort by z-index)
+  var comparator = currentScreenOnly ? sortByZIndex : sortById;
+
+  return elements.sort(comparator).map(function (_, element) {
     var id = quote(element.id.replace(/^design_/, ''));
     return {text: id, display: id};
   }).get();
 };
+
+function sortByZIndex(a, b) {
+  return a.zIndex - b.zIndex;
+}
+
+function sortById(a, b) {
+  return a.id > b.id ? 1 : -1;
+}
 
 /**
  * @returns {HTMLElement} The first "screen" that isn't hidden.
