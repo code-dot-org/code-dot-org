@@ -1,22 +1,176 @@
 // TODO - may want to rename file
-
+var _ = require('lodash');
 var library = require('./designElements/library');
 var ElementType = library.ElementType;
 
 /**
- * For each element type, lists the valid properties we can set via setProperty.
- * Also maps each from the name used for setProperty to the name used
- * internally by designMode.updateProperty, and the expected type
+ * A set of all properties that can be set using setProperty. Elsewhere, we
+ * filter these according to element type. Note: There are some properties
+ * where friendlyName is shared (canvasWidth and width both use 'width') but
+ * internalName is not.
+ * Note: The order here affects the order of items in the dropdown for unknown
+ * element types
+ * friendlyName: Name used in the code editor to refer to this property
+ * internalName: Name used in updateProperty to refer to this property
+ * type: Type of this property, used for validation at run time.
  */
-var settableProps = {};
-settableProps[ElementType.IMAGE] = {
-  width: { name: 'style-width', type: 'number'},
-  height: { name: 'style-height', type: 'number' },
-  x: { name: 'left', type: 'number' },
-  y: { name: 'top', type: 'number' },
-  picture: { name: 'picture', type: 'string' },
-  hidden: { name: 'hidden', type: 'boolean' },
+var ALL_PROPS = {
+  width: { friendlyName: 'width', internalName: 'style-width', type: 'number'},
+  height: { friendlyName: 'height', internalName: 'style-height', type: 'number' },
+  canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number'},
+  canvasHeight: { friendlyName: 'height', internalName: 'height', type: 'number' },
+  x: { friendlyName: 'x', internalName: 'left', type: 'number' },
+  y: { friendlyName: 'y', internalName: 'top', type: 'number' },
+  textColor: { friendlyName: 'text-color', internalName: 'textColor', type: 'string' },
+  backgroundColor: { friendlyName: 'background-color', internalName: 'backgroundColor', type: 'string' },
+  fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number' },
+  hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean' },
+  text: { friendlyName: 'text', internalName: 'text', type: 'string' },
+  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'string' },
+  image: { friendlyName: 'image', internalName: 'image', type: 'string' },
+  screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string' },
+  picture: { friendlyName: 'picture', internalName: 'picture', type: 'string' },
+  groupId: { friendlyName: 'group-id', internalName: 'groupId', type: 'string' },
+  checked: { friendlyName: 'checked', internalName: 'checked', type: 'boolean' },
+  readonly: { friendlyName: 'readonly', internalName: 'readonly', type: 'boolean' },
+  options: { friendlyName: 'options', internalName: 'options', type: 'array' },
+  value: { friendlyName: 'value', internalName: 'defaultValue', type: 'number' },
+  min: { friendlyName: 'min', internalName: 'min', type: 'number' },
+  max: { friendlyName: 'max', internalName: 'max', type: 'number' },
+  step: { friendlyName: 'step', internalName: 'step', type: 'number' }
 };
+
+// When we don't know the element type, we display all possible friendly names
+var fullDropdownOptions = _.uniq(Object.keys(ALL_PROPS).map(function (key) {
+  return '"' + ALL_PROPS[key].friendlyName + '"';
+}));
+
+// Which of the items from ALL_PROPS should each element type use
+var PROP_NAMES = {};
+PROP_NAMES[ElementType.BUTTON] = [
+  'text',
+  'width',
+  'height',
+  'x',
+  'y',
+  'textColor',
+  'backgroundColor',
+  'fontSize',
+  'image',
+  'hidden'
+];
+PROP_NAMES[ElementType.TEXT_INPUT] = [
+  'placeholder',
+  'width',
+  'height',
+  'x',
+  'y',
+  'textColor',
+  'backgroundColor',
+  'fontSize',
+  'hidden'
+];
+PROP_NAMES[ElementType.LABEL] = [
+  'text',
+  'width',
+  'height',
+  'x',
+  'y',
+  'textColor',
+  'backgroundColor',
+  'fontSize',
+  'hidden'
+];
+PROP_NAMES[ElementType.DROPDOWN] = [
+  'options',
+  'width',
+  'height',
+  'x',
+  'y',
+  'textColor',
+  'backgroundColor',
+  'fontSize',
+  'hidden'
+];
+PROP_NAMES[ElementType.RADIO_BUTTON] = [
+  'groupId',
+  'width',
+  'height',
+  'x',
+  'y',
+  'hidden',
+  'checked'
+];
+PROP_NAMES[ElementType.CHECKBOX] = [
+  'width',
+  'height',
+  'x',
+  'y',
+  'hidden',
+  'checked'
+];
+PROP_NAMES[ElementType.IMAGE] = [
+  'width',
+  'height',
+  'x',
+  'y',
+  'picture',
+  'hidden'
+];
+PROP_NAMES[ElementType.CANVAS] = [
+  'width',
+  'height',
+  'x',
+  'y',
+];
+PROP_NAMES[ElementType.SCREEN] = [
+  'backgroundColor',
+  'screenImage'
+];
+PROP_NAMES[ElementType.TEXT_AREA] = [
+  'text',
+  'width',
+  'height',
+  'x',
+  'y',
+  'textColor',
+  'backgroundColor',
+  'fontSize',
+  'readonly',
+  'hidden'
+];
+PROP_NAMES[ElementType.CHART] = [
+  'width',
+  'height',
+  'x',
+  'y',
+  'hidden'
+];
+PROP_NAMES[ElementType.SLIDER] = [
+  'width',
+  'height',
+  'x',
+  'y',
+  'value',
+  'min',
+  'max',
+  'step',
+  'hidden'
+];
+
+// Create a mapping of PROPS_PER_TYPE[elementType][friendlyName] => prop info
+var PROPS_PER_TYPE = {};
+Object.keys(PROP_NAMES).map(function (elementType) {
+  PROPS_PER_TYPE[elementType] = {};
+  PROP_NAMES[elementType].forEach(function (propName) {
+    var friendlyName = ALL_PROPS[propName].friendlyName;
+    if (PROPS_PER_TYPE[elementType][friendlyName]) {
+      throw new Error('Multiple props for friendlyName: ' + friendlyName +
+        ' in elementType: ' + elementType);
+    }
+    PROPS_PER_TYPE[elementType][friendlyName] = ALL_PROPS[propName];
+  });
+});
 
 // May belong in droplet, should possibly be cleaner
 function getValueOfNthParam(block, n) {
@@ -53,11 +207,11 @@ function stripQuotes(str) {
  * containing the internal equivalent for that friendly name, or undefined
  * if we don't have info for this element/property.
  */
-module.exports.getInternalPropertyInfo = function (element, property) {
+module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
   var elementType = library.getElementType(element);
   var info;
   if (elementType) {
-    info = settableProps[elementType][property];
+    info = PROPS_PER_TYPE[elementType][friendlyPropName];
   }
   return info;
 };
@@ -73,23 +227,20 @@ module.exports.setPropertyDropdown = function () {
     // Note: We depend on "this" being the droplet socket.
     var param1 = getValueOfNthParam(this.parent, 0);
 
-    // TODO
-    var allProps = ['allProps'];
-
     var elementId = stripQuotes(param1);
     var element = document.querySelector("#divApplab #" + elementId);
     if (!element) {
-      return allProps;
+      return fullDropdownOptions;
     }
 
     var elementType = library.getElementType(element);
     if (!elementType) {
-      return allProps;
+      return fullDropdownOptions;
     }
 
-    var keys = Object.keys(settableProps[elementType]);
+    var keys = Object.keys(PROPS_PER_TYPE[elementType]);
     if (!keys) {
-      return allProps;
+      return fullDropdownOptions;
     }
 
     return keys.map(function (key) { return '"' + key + '"'; });
