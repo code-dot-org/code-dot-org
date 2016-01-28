@@ -4243,6 +4243,15 @@ Studio.setSpriteSize = function (opts) {
     // setImage and setLegacyImage will complete.
     // In the future, an implementation that allows for setSpriteSize to
     // update the display more precisely would be valuable.
+    // TODO because we skip this step when the sprite is hidden, the
+    // following case will not work:
+    //    setSprite 'witch'
+    //    setSprite 'hidden'
+    //    setSpriteSize 0.5
+    //    setSprite 'visible'
+    // Since setSpriteSize and 'visible' are currently never in the same
+    // level, this is not a problem right now, but it would be good to
+    // eventually address.
     Studio.sprite[opts.spriteIndex].image = undefined;
     Studio.sprite[opts.spriteIndex].legacyImage = undefined;
     // call setSprite with existing index/value now that we changed the size
