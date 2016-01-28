@@ -24,7 +24,7 @@ if node.chef_environment == 'adhoc'
   end
 
   execute 'change-permission-tmpdir' do
-    command "chown -R #{node[:current_user]}: #{home}/.cdo/*"
+    command "chown -R #{node[:current_user]}: #{home}/.cdo"
   end
 end
 
