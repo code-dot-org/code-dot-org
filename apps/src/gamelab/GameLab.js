@@ -23,14 +23,17 @@ var GameLab = function () {
   this.tickCount = 0;
   this.studioApp_ = null;
   this.JSInterpreter = null;
-  this.drawFunc = null;
-  this.setupFunc = null;
-  this.mousePressedFunc = null;
-  this.eventHandlers = [];
+  this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
   this.p5 = null;
   this.p5decrementPreload = null;
+  this.p5eventNames = [
+    'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
+    'mouseClicked', 'mouseWheel',
+    'keyPressed', 'keyReleased', 'keyTyped'
+  ];
+  this.p5specialFunctions = ['draw', 'setup'].concat(this.p5eventNames);
 
   this.api = api;
   this.api.injectGameLab(this);
@@ -119,6 +122,10 @@ GameLab.prototype.init = function (config) {
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
 
+  // Store p5specialFunctions in the unusedConfig array so we don't give warnings
+  // about these functions not being called:
+  config.unusedConfig = this.p5specialFunctions;
+
   this.studioApp_.init(config);
 };
 
@@ -157,7 +164,7 @@ GameLab.prototype.afterInject_ = function (config) {
  */
 GameLab.prototype.reset = function (ignore) {
 
-  this.eventHandlers = [];
+  this.eventHandlers = {};
   window.clearInterval(this.tickIntervalId);
   this.tickIntervalId = 0;
   this.tickCount = 0;
@@ -212,9 +219,6 @@ GameLab.prototype.reset = function (ignore) {
     this.JSInterpreter = null;
   }
   this.executionError = null;
-  this.drawFunc = null;
-  this.setupFunc = null;
-  this.mousePressedFunc = null;
 };
 
 /**
@@ -228,57 +232,6 @@ GameLab.prototype.runButtonClick = function () {
   }
   this.studioApp_.attempts++;
   this.execute();
-};
-
-/**
- * Execute the code for all of the event handlers that match an event name
- * @param {string} name Name of the handler we want to call
- * @param {boolean} allowQueueExension When true, we allow additional cmds to
- *  be appended to the queue
- * @param {Array} extraArgs Additional arguments passed into the virtual
-*   JS machine for consumption by the student's event-handling code.
- */
-GameLab.prototype.callHandler = function (name, allowQueueExtension, extraArgs) {
-  this.eventHandlers.forEach(_.bind(function (handler) {
-    if (this.studioApp_.isUsingBlockly()) {
-      // Note: we skip executing the code if we have not completed executing
-      // the cmdQueue on this handler (checking for non-zero length)
-      if (handler.name === name &&
-          (allowQueueExtension || (0 === handler.cmdQueue.length))) {
-        this.currentCmdQueue = handler.cmdQueue;
-        try {
-          handler.func(this.studioApp_, this.api, this.Globals);
-        } catch (e) {
-          // Do nothing
-        }
-        this.currentCmdQueue = null;
-      }
-    } else {
-      // TODO (cpirich): support events with parameters
-      if (handler.name === name) {
-        handler.func.apply(null, extraArgs);
-      }
-    }
-  }, this));
-};
-
-//
-// Execute an entire command queue (specified with the name parameter)
-//
-
-GameLab.prototype.executeQueue = function (name, oneOnly) {
-  this.eventHandlers.forEach(_.bind(function (handler) {
-    if (handler.name === name && handler.cmdQueue.length) {
-      for (var cmd = handler.cmdQueue[0]; cmd; cmd = handler.cmdQueue[0]) {
-        if (this.callCmd(cmd)) {
-          // Command executed immediately, remove from queue and continue
-          handler.cmdQueue.shift();
-        } else {
-          break;
-        }
-      }
-    }
-  }, this));
 };
 
 GameLab.prototype.evalCode = function(code) {
@@ -330,29 +283,25 @@ GameLab.prototype.execute = function() {
       };
       window.setup = _.bind(function () {
         p5obj.createCanvas(400, 400);
-        if (this.JSInterpreter && this.setupFunc) {
-          this.JSInterpreter.queueEvent(this.setupFunc);
-          this.JSInterpreter.executeInterpreter();
+        if (this.JSInterpreter && this.eventHandlers.setup) {
+          this.eventHandlers.setup.apply(null);
         }
       }, this);
       window.draw = _.bind(function () {
-        if (this.JSInterpreter) {
+        if (this.JSInterpreter && this.eventHandlers.draw) {
           var startTime = window.performance.now();
-          if (this.drawFunc) {
-            this.JSInterpreter.queueEvent(this.drawFunc);
-          }
+          this.eventHandlers.draw.apply(null);
           this.JSInterpreter.executeInterpreter();
           var timeElapsed = window.performance.now() - startTime;
           $('#bubble').text(timeElapsed.toFixed(2) + ' ms');
         }
       }, this);
-      window.mousePressed = _.bind(function () {
-        if (this.JSInterpreter) {
-          if (this.mousePressedFunc) {
-            this.JSInterpreter.queueEvent(this.mousePressedFunc);
+      this.p5eventNames.forEach(function (eventName) {
+        window[eventName] = _.bind(function () {
+          if (this.JSInterpreter && this.eventHandlers[eventName]) {
+            this.eventHandlers[eventName].apply(null);
           }
-          this.JSInterpreter.executeInterpreter();
-        }
+        }, this);
       }, this);
     }, this), 'divGameLab');
 
@@ -411,9 +360,14 @@ GameLab.prototype.execute = function() {
     if (!this.JSInterpreter.initialized()) {
       return;
     }
-    this.drawFunc = this.JSInterpreter.findGlobalFunction('draw');
-    this.setupFunc = this.JSInterpreter.findGlobalFunction('setup');
-    this.mousePressedFunc = this.JSInterpreter.findGlobalFunction('mousePressed');
+
+    this.p5specialFunctions.forEach(function (eventName) {
+      var func = this.JSInterpreter.findGlobalFunction(eventName);
+      if (func) {
+        this.eventHandlers[eventName] =
+            codegen.createNativeFunctionFromInterpreterFunction(func);
+      }
+    }, this);
 
     codegen.customMarshalObjectList = [
       window.p5,
@@ -429,6 +383,11 @@ GameLab.prototype.execute = function() {
       window.p5.TableRow,
       window.p5.Element
     ];
+    // The p5play Group object should be custom marshalled, but its constructor
+    // actually creates a standard Array instance with a few additional methods
+    // added. The customMarshalModifiedObjectList allows us to set up additional
+    // object types to be custom marshalled by matching both the instance type
+    // and the presence of additional method name on the object.
     codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
 
     // Insert everything on p5 and the Group constructor from p5play into the
@@ -463,83 +422,6 @@ GameLab.prototype.execute = function() {
 GameLab.prototype.onTick = function () {
   this.tickCount++;
 
-  if (this.tickCount === 1) {
-    this.callHandler('whenGameStarts');
-  }
-
-  this.executeQueue('whenGameStarts');
-
-  this.callHandler('repeatForever');
-  this.executeQueue('repeatForever');
-
-/*
-  // Run key event handlers for any keys that are down:
-  for (var key in KeyCodes) {
-    if (Studio.keyState[KeyCodes[key]] &&
-        Studio.keyState[KeyCodes[key]] === "keydown") {
-      switch (KeyCodes[key]) {
-        case KeyCodes.LEFT:
-          callHandler('when-left');
-          break;
-        case KeyCodes.UP:
-          callHandler('when-up');
-          break;
-        case KeyCodes.RIGHT:
-          callHandler('when-right');
-          break;
-        case KeyCodes.DOWN:
-          callHandler('when-down');
-          break;
-      }
-    }
-  }
-
-  for (var btn in ArrowIds) {
-    if (Studio.btnState[ArrowIds[btn]] &&
-        Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
-      switch (ArrowIds[btn]) {
-        case ArrowIds.LEFT:
-          callHandler('when-left');
-          break;
-        case ArrowIds.UP:
-          callHandler('when-up');
-          break;
-        case ArrowIds.RIGHT:
-          callHandler('when-right');
-          break;
-        case ArrowIds.DOWN:
-          callHandler('when-down');
-          break;
-      }
-    }
-  }
-
-  for (var gesture in Studio.gesturesObserved) {
-    switch (gesture) {
-      case 'left':
-        callHandler('when-left');
-        break;
-      case 'up':
-        callHandler('when-up');
-        break;
-      case 'right':
-        callHandler('when-right');
-        break;
-      case 'down':
-        callHandler('when-down');
-        break;
-    }
-    if (0 === Studio.gesturesObserved[gesture]--) {
-      delete Studio.gesturesObserved[gesture];
-    }
-  }
-
-  Studio.executeQueue('when-left');
-  Studio.executeQueue('when-up');
-  Studio.executeQueue('when-right');
-  Studio.executeQueue('when-down');
-*/
-
   if (this.JSInterpreter) {
     this.JSInterpreter.executeInterpreter(this.tickCount === 1);
 
@@ -547,41 +429,6 @@ GameLab.prototype.onTick = function () {
       this.p5decrementPreload();
     }
   }
-
-
-/*
-  var currentTime = new Date().getTime();
-
-  if (!Studio.succeededTime && checkFinished()) {
-    Studio.succeededTime = currentTime;
-  }
-
-  if (!animationOnlyFrame) {
-    Studio.executeQueue('whenTouchGoal');
-  }
-
-  if (Studio.succeededTime &&
-      !spritesNeedMoreAnimationFrames &&
-      (!level.delayCompletion || currentTime > Studio.succeededTime + level.delayCompletion)) {
-    Studio.onPuzzleComplete();
-  }
-
-  // We want to make sure any queued event code related to all goals being visited is executed
-  // before we evaluate conditions related to this event.  For example, if score is incremented
-  // as a result of all goals being visited, recording allGoalsVisited here allows the score
-  // to be incremented before we check for a completion condition that looks for both all
-  // goals visited, and the incremented score, on the next tick.
-  if (Studio.allGoalsVisited()) {
-    Studio.trackedBehavior.allGoalsVisited = true;
-  }
-
-  // And we don't want a timeout to be used in evaluating conditions before the all goals visited
-  // events are processed (as described above), so also record that here.  This is particularly
-  // relevant to levels which "time out" immediately when all when_run code is complete.
-  if (Studio.timedOut()) {
-    Studio.trackedBehavior.timedOut = true;
-  }
-*/
 };
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {

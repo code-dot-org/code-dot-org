@@ -145,6 +145,8 @@ class LevelsController < ApplicationController
         @game = Game.eval
       elsif @type_class <= Applab
         @game = Game.applab
+      elsif @type_class <= Gamelab
+        @game = Game.gamelab
       elsif @type_class <= Maze
         @game = Game.custom_maze
       elsif @type_class <= DSLDefined

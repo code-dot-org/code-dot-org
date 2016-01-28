@@ -35,7 +35,7 @@ window.apps = {
         if (window.dashboard.isChrome34) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
           $('#versions-header').show();
         }
@@ -169,8 +169,8 @@ window.apps = {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
           Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-      } else {
-        source = window.Applab && Applab.getCode();
+      } else if (appOptions.getCode) {
+        source = appOptions.getCode();
       }
       return source;
     },

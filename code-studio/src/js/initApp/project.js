@@ -339,6 +339,8 @@ var projects = module.exports = {
     switch (appOptions.app) {
       case 'applab':
         return 'applab';
+      case 'gamelab':
+        return 'gamelab';
       case 'turtle':
         return 'artist';
       case 'calc':
@@ -531,9 +533,10 @@ var projects = module.exports = {
   },
   serverSideRemix: function() {
     if (current && !current.name) {
-      if (projects.appToProjectUrl() === '/projects/algebra_game') {
+      var url = projects.appToProjectUrl();
+      if (url === '/projects/algebra_game') {
         this.setName('Big Game Template');
-      } else if (projects.appToProjectUrl() === '/projects/applab') {
+      } else if (url === '/projects/applab' || url === '/projects/gamelab') {
         this.setName('My Project');
       }
     }
