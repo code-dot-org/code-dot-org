@@ -537,11 +537,9 @@ Blockly.FunctionEditor.prototype.create_ = function() {
   });
 
   // Enable editor close on press of ESC key
-  Blockly.bindEvent_(goog.dom.getDocument().body, 'keydown', this, function(e) {
+  Blockly.bindEvent_(goog.dom.getDocument().body, 'keyup', this, function(e) {
     if (e.keyCode === goog.events.KeyCodes.ESC) {
       this.onClose();
-      e.preventDefault();
-      e.stopPropagation();
     }
   });
 
