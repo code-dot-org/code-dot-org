@@ -1183,7 +1183,7 @@ applabCommands.setProperty = function(opts) {
 
   // TODO - updateProperty may need to be more resilient to unknown data
 
-  Applab.updateProperty(element, info.name, value);
+  Applab.updateProperty(element, info.internalName, value);
 };
 
 applabCommands.getXPosition = function (opts) {
