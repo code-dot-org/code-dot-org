@@ -1882,10 +1882,11 @@ Applab.getAssetDropdown = function (typeFilter) {
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
  * @param {string} [filterSelector] Optional selector to filter for.
+ * @param {boolean} [currentScreenOnly] Optionally limit results to the current screen.
  * @returns {Array}
  */
-Applab.getIdDropdown = function (filterSelector) {
-  return Applab.getIdDropdownFromDom_($(document), filterSelector);
+Applab.getIdDropdown = function (filterSelector, currentScreenOnly) {
+  return Applab.getIdDropdownFromDom_($(document), filterSelector, currentScreenOnly);
 };
 
 /**
@@ -1893,29 +1894,32 @@ Applab.getIdDropdown = function (filterSelector) {
  * argument to remove its global dependency and make it testable.
  * @param {jQuery} documentRoot
  * @param {string} filterSelector
+ * @param {boolean} currentScreenOnly
  * @returns {Array}
  * @private
  */
-Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var divApplabChildren = documentRoot.find('#divApplab').children();
-  var elements = divApplabChildren.toArray().concat(
-      divApplabChildren.children().toArray());
+Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentScreenOnly) {
+  if (currentScreenOnly) {
+    documentRoot = documentRoot.find('#designModeViz .screen').filter(function () {
+      return this.style.display !== 'none';
+    }).first();
+  } else {
+    documentRoot = documentRoot.find('#designModeViz');
+  }
+
+  var elements = documentRoot.find('[id^="design_"]');
 
   // Return all elements when no filter is given
   if (filterSelector) {
-    elements = $(elements).filter(filterSelector).get();
+    elements = elements.filter(filterSelector);
   }
 
-  return elements
-      .sort(function (elementA, elementB) {
-        return elementA.id < elementB.id ? -1 : 1;
-      })
-      .map(function (element) {
-        return {
-          text: quote(element.id),
-          display: quote(element.id)
-        };
-      });
+  return elements.sort(function (a, b) {
+    return a.zIndex - b.zIndex
+  }).map(function (_, element) {
+    var id = quote(element.id.replace(/^design_/, ''));
+    return {text: id, display: id};
+  }).get();
 };
 
 /**
