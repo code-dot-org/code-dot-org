@@ -5,7 +5,7 @@ class AdminReportsControllerTest < ActionController::TestCase
 
   setup do
     # Stub the DB[:forms] table (used by :hoc_signups).
-    DB[:forms].stubs(:where).returns(stub(:group => stub(:group_and_count => stub(:order => stub(:all => [])))))
+    DB.stubs(:[]).returns(stub(:where => stub(:group => stub(:group_and_count => stub(:order => stub(:all => []))))))
 
     @admin = create(:admin)
     sign_in(@admin)
