@@ -60,6 +60,19 @@ var Applab = module.exports;
  */
 var jsDebuggerUI = null;
 
+/**
+ * Temporary: Some code depends on global access to logging, but only Applab
+ * knows about the debugger UI where logging should occur.
+ * Eventually, I'd like to replace this with window events that the debugger
+ * UI listens to, so that the Applab global is not involved.
+ * @param {*} object
+ */
+Applab.log = function (object) {
+  if (jsDebuggerUI) {
+    jsDebuggerUI.log(object);
+  }
+};
+
 //Debug console history
 Applab.debugConsoleHistory = {
   'history': [],
@@ -67,7 +80,6 @@ Applab.debugConsoleHistory = {
 };
 
 var errorHandler = require('./errorHandler');
-var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
@@ -458,16 +470,16 @@ function onDebugInputKeyDown(e) {
     e.preventDefault();
     pushDebugConsoleHistory(input);
     e.target.textContent = '';
-    outputApplabConsole('> ' + input);
+    Applab.log('> ' + input);
     if (Applab.JSInterpreter) {
       try {
         var result = Applab.JSInterpreter.evalInCurrentScope(input);
-        outputApplabConsole('< ' + String(result));
+        Applab.log('< ' + String(result));
       } catch (err) {
-        outputApplabConsole('< ' + String(err));
+        Applab.log('< ' + String(err));
       }
     } else {
-      outputApplabConsole('< (not running)');
+      Applab.log('< (not running)');
     }
   }
   if (e.keyCode === KeyCodes.UP) {
@@ -1372,7 +1384,7 @@ Applab.execute = function() {
         onNextStepChanged: Applab.updatePauseUIState,
         onPause: Applab.onPauseContinueButton,
         onExecutionError: handleExecutionError,
-        onExecutionWarning: outputApplabConsole
+        onExecutionWarning: Applab.log
       });
       if (!Applab.JSInterpreter.initialized()) {
         return;

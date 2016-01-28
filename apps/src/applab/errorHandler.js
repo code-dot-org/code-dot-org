@@ -5,31 +5,6 @@ var ErrorLevel = {
   ERROR: 'ERROR'
 };
 
-function outputApplabConsole(output) {
-  function stringifyNonStrings(object) {
-    if (typeof object === 'string' || object instanceof String) {
-      return object;
-    } else {
-      return JSON.stringify(object);
-    }
-  }
-
-  // first pass through to the real browser console log if available:
-  if (console.log) {
-    console.log(output);
-  }
-  // then put it in the applab console visible to the user:
-  var debugOutput = document.getElementById('debug-output');
-  if (debugOutput) {
-    if (debugOutput.textContent.length > 0) {
-      debugOutput.textContent += '\n';
-    }
-    debugOutput.textContent += stringifyNonStrings(output);
-
-    debugOutput.scrollTop = debugOutput.scrollHeight;
-  }
-}
-
 /**
  * Output error to console and gutter as appropriate
  * @param {string} warning Text for warning
@@ -42,7 +17,7 @@ function outputError(warning, level, lineNum) {
     text += 'Line: ' + lineNum + ': ';
   }
   text += warning;
-  outputApplabConsole(text);
+  Applab.log(text);
   if (lineNum !== undefined) {
     annotationList.addRuntimeAnnotation(level, lineNum, warning);
   }
@@ -52,14 +27,13 @@ function handleError(opts, message) {
   if (opts.onError) {
     opts.onError.call(null, message);
   } else {
-    outputApplabConsole(message);
+    Applab.log(message);
   }
 }
 
 
 module.exports = {
   ErrorLevel: ErrorLevel,
-  outputApplabConsole: outputApplabConsole,
   outputError: outputError,
   handleError: handleError
 };
