@@ -18,7 +18,7 @@ if (!window.dashboard) {
   window.dashboard = {};
 }
 
-window.dashboard.clientState = require('./clientState.js');
+require('./clientState.js')(window.sessionStorage);
 
 window.React = require('react');
 // TODO (bbuchanan): Stop including these components in a global way, just
