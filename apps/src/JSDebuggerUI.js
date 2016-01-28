@@ -15,9 +15,16 @@
 
 var constants = require('./constants');
 var DebugArea = require('./applab/DebugArea');
+var dom = require('./dom');
 var Slider = require('./slider');
+var utils = require('./utils');
 
 var KeyCodes = constants.KeyCodes;
+
+/** @const {number} */
+var MIN_DEBUG_AREA_HEIGHT = 120;
+/** @const {number} */
+var MAX_DEBUG_AREA_HEIGHT = 400;
 
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
@@ -81,6 +88,7 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
   // Get references to important elements of the DOM
   this.rootDiv_ = document.getElementById('debug-area');
   this.debugOutputDiv_ = this.rootDiv_.querySelector('#debug-output');
+  this.resizeBar_ = this.rootDiv_.querySelector('#debugResizeBar');
 
   // Create controller for open/shut behavior of debug area
   this.debugOpenShutController_ = new DebugArea(
@@ -102,9 +110,26 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
     }
   }
 
-  var debugInput = document.getElementById('debug-input');
+  // Attach keydown handler for debug console input area
+  var debugInput = this.rootDiv_.querySelector('#debug-input');
   if (debugInput) {
     debugInput.addEventListener('keydown', this.onDebugInputKeyDown.bind(this));
+  }
+
+  // Attach handlers for the debug area resize control
+  if (this.resizeBar_) {
+    dom.addMouseDownTouchEvent(this.resizeBar_,
+        this.onMouseDownDebugResizeBar.bind(this));
+
+    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
+    // all touchend events on the page, breaking click events...
+    document.body.addEventListener('mouseup',
+        this.onMouseUpDebugResizeBar.bind(this));
+    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+    if (mouseUpTouchEventName) {
+      document.body.addEventListener(mouseUpTouchEventName,
+          this.onMouseUpDebugResizeBar.bind(this));
+    }
   }
 };
 
@@ -138,15 +163,6 @@ JSDebuggerUI.prototype.setStepSpeedPercent = function (percent) {
  */
 JSDebuggerUI.stepDelayFromSliderPercent = function (stepSpeedPercentage) {
   return 300 * Math.pow(1 - stepSpeedPercentage, 2);
-};
-
-/**
- * Opens the debugger area if it is closed.
- */
-JSDebuggerUI.prototype.ensureOpen = function () {
-  if (this.debugOpenShutController_.isShut()) {
-    this.debugOpenShutController_.snapOpen();
-  }
 };
 
 /**
@@ -256,3 +272,66 @@ function moveDownDebugConsoleHistory(currentInput) {
   }
   return currentInput;
 }
+
+/** @type {boolean} */
+var draggingDebugResizeBar = false;
+
+/** @type {function} */
+var boundMouseMoveHandler;
+
+/** @type {string} */
+var mouseMoveTouchEventName;
+
+JSDebuggerUI.prototype.onMouseDownDebugResizeBar = function (event) {
+  // When we see a mouse down in the resize bar, start tracking mouse moves:
+  var eventSourceElm = event.srcElement || event.target;
+  if (eventSourceElm.id === 'debugResizeBar') {
+    draggingDebugResizeBar = true;
+    boundMouseMoveHandler = this.onMouseMoveDebugResizeBar.bind(this);
+    document.body.addEventListener('mousemove', boundMouseMoveHandler);
+    mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
+    if (mouseMoveTouchEventName) {
+      document.body.addEventListener(mouseMoveTouchEventName,
+          boundMouseMoveHandler);
+    }
+
+    event.preventDefault();
+  }
+};
+
+/**
+ *  Handle mouse moves while dragging the debug resize bar.
+ */
+JSDebuggerUI.prototype.onMouseMoveDebugResizeBar = function (event) {
+  var codeApp = document.getElementById('codeApp');
+  var codeTextbox = document.getElementById('codeTextbox');
+
+  var rect = this.resizeBar_.getBoundingClientRect();
+  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
+      rect.height / 2;
+  var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
+      Math.min(MAX_DEBUG_AREA_HEIGHT,
+          (window.innerHeight - event.pageY) - offset));
+
+  if (this.debugOpenShutController_.isShut()) {
+    this.debugOpenShutController_.snapOpen();
+  }
+
+  codeTextbox.style.bottom = newDbgHeight + 'px';
+  this.rootDiv_.style.height = newDbgHeight + 'px';
+
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
+};
+
+JSDebuggerUI.prototype.onMouseUpDebugResizeBar = function () {
+  // If we have been tracking mouse moves, remove the handler now:
+  if (draggingDebugResizeBar) {
+    document.body.removeEventListener('mousemove', boundMouseMoveHandler);
+    if (mouseMoveTouchEventName) {
+      document.body.removeEventListener(mouseMoveTouchEventName,
+          boundMouseMoveHandler);
+    }
+    draggingDebugResizeBar = false;
+  }
+};

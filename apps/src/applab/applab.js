@@ -100,9 +100,6 @@ var twitterOptions = {
   hashtag: "ApplabCode"
 };
 
-var MIN_DEBUG_AREA_HEIGHT = 120;
-var MAX_DEBUG_AREA_HEIGHT = 400;
-
 var FOOTER_HEIGHT = applabConstants.FOOTER_HEIGHT;
 
 // The typical width of the visualization area (indepdendent of appWidth)
@@ -796,20 +793,6 @@ Applab.init = function(config) {
     defaultStepSpeedPercent: config.level.sliderSpeed
   });
 
-  var debugResizeBar = document.getElementById('debugResizeBar');
-  if (debugResizeBar) {
-    dom.addMouseDownTouchEvent(debugResizeBar,
-                               Applab.onMouseDownDebugResizeBar);
-    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
-    // all touchend events on the page, breaking click events...
-    document.body.addEventListener('mouseup', Applab.onMouseUpDebugResizeBar);
-    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
-    if (mouseUpTouchEventName) {
-      document.body.addEventListener(mouseUpTouchEventName,
-                                     Applab.onMouseUpDebugResizeBar);
-    }
-  }
-
   window.addEventListener('resize', Applab.renderVisualizationOverlay);
 
   var finishButton = document.getElementById('finishButton');
@@ -893,59 +876,6 @@ Applab.init = function(config) {
 Applab.appendToEditor = function(newCode) {
   var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
   studioApp.editor.setValue(code);
-};
-
-Applab.onMouseDownDebugResizeBar = function (event) {
-  // When we see a mouse down in the resize bar, start tracking mouse moves:
-  var eventSourceElm = event.srcElement || event.target;
-  if (eventSourceElm.id === 'debugResizeBar') {
-    Applab.draggingDebugResizeBar = true;
-    document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.addEventListener(Applab.mouseMoveTouchEventName,
-                                     Applab.onMouseMoveDebugResizeBar);
-    }
-
-    event.preventDefault();
-  }
-};
-
-/**
-*  Handle mouse moves while dragging the debug resize bar.
-*/
-Applab.onMouseMoveDebugResizeBar = function (event) {
-  var debugResizeBar = document.getElementById('debugResizeBar');
-  var codeApp = document.getElementById('codeApp');
-  var codeTextbox = document.getElementById('codeTextbox');
-  var debugArea = document.getElementById('debug-area');
-
-  var rect = debugResizeBar.getBoundingClientRect();
-  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
-               rect.height / 2;
-  var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
-                       Math.min(MAX_DEBUG_AREA_HEIGHT,
-                                (window.innerHeight - event.pageY) - offset));
-
-  jsDebuggerUI.ensureOpen();
-
-  codeTextbox.style.bottom = newDbgHeight + 'px';
-  debugArea.style.height = newDbgHeight + 'px';
-
-  // Fire resize so blockly and droplet handle this type of resize properly:
-  utils.fireResizeEvent();
-};
-
-Applab.onMouseUpDebugResizeBar = function (event) {
-  // If we have been tracking mouse moves, remove the handler now:
-  if (Applab.draggingDebugResizeBar) {
-    document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
-                                        Applab.onMouseMoveDebugResizeBar);
-    }
-    Applab.draggingDebugResizeBar = false;
-  }
 };
 
 /**
