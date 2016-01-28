@@ -1,10 +1,14 @@
-/* global dashboard, assert */
+/** @file Tests for clientState.js */
 
-//= require client_state
-//= require jquery.cookie
+'use strict';
+
+var assert = require('assert');
+var state = require('../../src/js/clientState')(window.sessionStorage);
+var chai = require('chai');
+
+chai.should();
 
 describe("clientState#sourceForLevel", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function () {
     state.reset();
@@ -12,7 +16,8 @@ describe("clientState#sourceForLevel", function() {
 
   it("returns cached levelSource if timestamp is newer", function () {
     state.writeSourceForLevel('sample', 1, 200, 'abc');
-    state.sourceForLevel('sample', 1, 100).should.equal('abc');
+    var source = state.sourceForLevel('sample', 1, 100);
+    source.should.equal('abc');
   });
 
   it("returns cached levelSource if no timestamp given", function () {
@@ -33,7 +38,6 @@ describe("clientState#sourceForLevel", function() {
 });
 
 describe("clientState#trackProgress", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
@@ -118,7 +122,6 @@ describe("clientState#trackProgress", function() {
 });
 
 describe("clientState#hasSeenVideo/hasSeenCallout", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
@@ -219,7 +222,6 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function() {
 });
 
 describe("clientState#reset", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
