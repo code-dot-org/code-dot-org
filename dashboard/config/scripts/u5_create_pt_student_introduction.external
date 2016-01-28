@@ -1,0 +1,22 @@
+name 'U5 - Create PT - Student Introduction'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+css 'unplugged'
+markdown <<MARKDOWN
+## Unit 5: Lesson 04 - Create Performance Task
+
+# Background
+
+WORDS
+
+# Lesson
+
+* THINGS
+
+# Resources
+
+* LINKS
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
