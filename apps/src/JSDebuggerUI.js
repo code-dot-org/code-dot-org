@@ -34,17 +34,26 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
  * @param {!function} getJSInterpreter - Must be a function that returns the
  *        current active interpreter, or a falsy value if no interpreter is
  *        running.
+ * @param {!function} runApp - callback for "launching" the app, which is used
+ *        by the "Step In" button when the app isn't running.
  * @constructor
  */
-var JSDebuggerUI = module.exports = function (getJSInterpreter) {
+var JSDebuggerUI = module.exports = function (getJSInterpreter, runApp) {
 
   /**
    * Function for getting the active JSInterpreter (which may get replaced on a
    * regular basis, i.e. for each run).  Should return undefined/null if no
    * interpreter is currently running.
-   * @type {function}
+   * @private {function}
    */
   this.getJSInterpreter_ = getJSInterpreter;
+
+  /**
+   * Callback for "launching" the app, used by the "Step In" button when the app
+   * isn't currently running.
+   * @private {function}
+   */
+  this.runApp_ = runApp;
 
   /**
    * Helper that handles open/shut actions for debugger UI
@@ -393,10 +402,12 @@ JSDebuggerUI.prototype.updatePauseUIState = function() {
     if (jsInterpreter.paused && jsInterpreter.nextStep === StepType.RUN) {
       this.pauseButton_.style.display = "none";
       this.continueButton_.style.display = "inline-block";
+      this.continueButton_.disabled = false;
       this.spinner_.style.display = 'none';
       this.pausedIcon_.style.display = 'inline-block';
     } else {
       this.pauseButton_.style.display = "inline-block";
+      this.pauseButton_.disabled = false;
       this.continueButton_.style.display = "none";
       this.spinner_.style.display = 'inline-block';
       this.pausedIcon_.style.display = 'none';
@@ -422,8 +433,9 @@ JSDebuggerUI.prototype.onStepOverButton = function() {
 JSDebuggerUI.prototype.onStepInButton = function() {
   var jsInterpreter = this.getJSInterpreter_();
   if (!jsInterpreter) {
-    Applab.runButtonClick();
+    this.runApp_();
     this.onPauseContinueButton();
+    jsInterpreter = this.getJSInterpreter_();
   }
   jsInterpreter.paused = true;
   jsInterpreter.nextStep = StepType.IN;
