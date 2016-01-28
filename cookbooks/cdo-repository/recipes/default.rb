@@ -42,8 +42,12 @@ git git_path do
   # Skip git-repo sync when running a shared-volume.
   # Assume shared-volume if the git folder has a different uid/dev from the home folder.
   not_if do
-    stat = ::File.stat(git_path)
-    home_stat = ::File.stat(home_path)
-    ::File.directory?(git_path) && (stat.uid != home_stat.uid || stat.dev != home_stat.dev)
+    if ::File.directory?(git_path)
+      stat = ::File.stat(git_path)
+      home_stat = ::File.stat(home_path)
+      stat.uid != home_stat.uid || stat.dev != home_stat.dev
+    else
+      false
+    end
   end
 end

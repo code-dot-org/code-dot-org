@@ -49,9 +49,16 @@
     {
       "type": "shell",
       "inline": [
-        "sudo mkdir -p /var/chef && sudo chown -R root:root /var/chef",
-        "sudo mkdir -p /tmp/packer-chef-client && sudo chown -R root:root /tmp/packer-chef-client"
+        "sudo mkdir -p /var/chef/environments && sudo mkdir -p /var/chef/cookbooks && sudo chown -R ubuntu:ubuntu /var/chef",
+        "sudo mkdir -p /tmp/packer-chef-client && sudo chown -R ubuntu:ubuntu /tmp/packer-chef-client"
       ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "echo $(id -u ubuntu) > /proc/self/loginuid"
+      ],
+      "only": ["docker"]
     },
     {
       "type": "file",
@@ -65,8 +72,8 @@
     },
     {
       "type": "chef-client",
-      "install_command": "test /opt/chef/bin && true || curl -L https://www.chef.io/chef/install.sh | {{if .Sudo}}sudo{{end}} bash -s -- -v 11.18.12",
-      "execute_command": "echo $(id -u ubuntu) > /proc/self/loginuid; sudo -u ubuntu -H /bin/bash -c 'sudo chef-client -z --no-color -c {{.ConfigPath}} -j {{.JsonPath}}'",
+      "install_command": "[ -d /opt/chef/bin ] && true || curl -L https://www.chef.io/chef/install.sh | {{if .Sudo}}sudo{{end}} bash -s -- -v 11.18.12",
+      "execute_command": "sudo -u ubuntu -H /bin/bash -c 'sudo chef-client -z --no-color -c {{.ConfigPath}} -j {{.JsonPath}}'",
       "chef_environment": "adhoc",
       "node_name": "cdo-adhoc",
       "server_url": "http://localhost:8889",

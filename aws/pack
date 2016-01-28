@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run this script to build a Docker image using Packer.
+# Run this script to build Docker and AWS images using Packer.
 set -e
 
 # Download and install Packer to a temp directory.

@@ -3,7 +3,7 @@ root = "/home/#{node[:current_user]}/#{node.chef_environment}"
 app_root = File.join root, 'dashboard'
 
 require 'etc'
-user = Etc.getpwuid(::File.stat(app_root).uid).name
+user = Etc.getpwuid(::File.stat(app_root).uid).name rescue node[:current_user]
 {
   "#{app_root}/public/blockly" => './apps-package',
   "#{app_root}/public/code-studio" => './code-studio-package',

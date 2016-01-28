@@ -10,7 +10,7 @@ rack_envs = [:development, :production, :adhoc, :staging, :test, :levelbuilder, 
 without = rack_envs - [env.to_sym]
 
 require 'etc'
-user = Etc.getpwuid(::File.stat(root).uid).name
+user = Etc.getpwuid(::File.stat(root).uid).name rescue node[:current_user]
 
 directory("#{root}/.bundle") { user user }
 
