@@ -643,7 +643,7 @@ Applab.init = function(config) {
   // TODO (bbuchanan): Don't make one of these at all if !level.editCode?
   jsDebuggerUI = new JSDebuggerUI(function () {
     return Applab.JSInterpreter;
-  });
+  }, Applab.runButtonClick);
   var extraControlsRow = jsDebuggerUI.getMarkup(studioApp.assetUrl,
       showDebugButtons, showDebugConsole);
 
@@ -1229,28 +1229,8 @@ Applab.execute = function() {
     }
   }
 
-  if (level.editCode) {
-    var pauseButton = document.getElementById('pauseButton');
-    var continueButton = document.getElementById('continueButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.style.display = "inline-block";
-      pauseButton.disabled = false;
-      continueButton.style.display = "none";
-      stepInButton.disabled = true;
-      stepOverButton.disabled = true;
-      stepOutButton.disabled = true;
-    }
-    var spinner = document.getElementById('running-spinner');
-    if (spinner) {
-      spinner.style.display = 'inline-block';
-    }
-    var pausedIcon = document.getElementById('paused-icon');
-    if (pausedIcon) {
-      pausedIcon.style.display = 'none';
-    }
+  if (jsDebuggerUI) {
+    jsDebuggerUI.updatePauseUIState();
   }
 
   // Set focus on the default screen so key events can be handled
