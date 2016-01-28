@@ -4,8 +4,9 @@ class AdminReportsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    # Stub properties so we don't try to hit pegasus DB.
-    Properties.stubs(:get).returns nil
+    # Stub the DB[:forms] table (used by :hoc_signups).
+    DB[:forms].stubs(:where).returns(stub(:group => stub(:group_and_count => stub(:order => stub(:all => [])))))
+#    DB[:forms].stub_chain(:where, :group, :group_and_count, :order, :all).returns([])
 
     @admin = create(:admin)
     sign_in(@admin)
