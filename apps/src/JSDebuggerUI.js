@@ -14,7 +14,7 @@
 'use strict';
 
 var constants = require('./constants');
-var DebugArea = require('./applab/DebugArea');
+var DebugArea = require('./DebugArea');
 var dom = require('./dom');
 var Slider = require('./slider');
 var utils = require('./utils');
