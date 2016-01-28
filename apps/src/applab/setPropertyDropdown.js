@@ -174,7 +174,7 @@ Object.keys(PROP_NAMES).map(function (elementType) {
   });
 });
 
-// May belong in droplet, should possibly be cleaner
+// May belong in droplet
 function getValueOfNthParam(block, n) {
   var token = block.start;
   do {
