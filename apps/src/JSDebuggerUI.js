@@ -96,7 +96,7 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
       document.getElementById('codeTextbox'));
 
   // Initialize debug speed slider
-  var slider = this.rootDiv_.querySelector('#applab-slider');
+  var slider = this.rootDiv_.querySelector('#speed-slider');
   if (slider) {
     var sliderXOffset = 10,
         sliderYOffset = 22,
