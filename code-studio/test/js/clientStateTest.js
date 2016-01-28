@@ -1,10 +1,11 @@
-/* global dashboard, assert */
+/** @file Tests for clientState.js */
 
-//= require client_state
-//= require jquery.cookie
+'use strict';
+
+var assert = require('assert');
+var state = require('../../src/js/clientState')(localStorage);
 
 describe("clientState#sourceForLevel", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function () {
     state.reset();
@@ -33,7 +34,6 @@ describe("clientState#sourceForLevel", function() {
 });
 
 describe("clientState#trackProgress", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
@@ -118,7 +118,6 @@ describe("clientState#trackProgress", function() {
 });
 
 describe("clientState#hasSeenVideo/hasSeenCallout", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
@@ -219,7 +218,6 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function() {
 });
 
 describe("clientState#reset", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
