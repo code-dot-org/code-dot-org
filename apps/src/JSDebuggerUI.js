@@ -20,6 +20,7 @@ var JSInterpreter = require('./JSInterpreter');
 var Slider = require('./slider');
 var utils = require('./utils');
 
+var _ = utils.getLodash();
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
 
@@ -66,12 +67,6 @@ var JSDebuggerUI = module.exports = function (getJSInterpreter, runApp) {
    * @private {HTMLDivElement}
    */
   this.rootDiv_ = null;
-
-  /**
-   * Container for debug console output.
-   * @private {HTMLDivElement}
-   */
-  this.debugOutputDiv_ = null;
 };
 
 /**
@@ -90,6 +85,19 @@ JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
 };
 
 /**
+ * Element getter for elements within the debugger UI, which caches its results
+ * so that it's cheap to use over and over.
+ * @type {Function}
+ * @private
+ * @param {string} selector
+ * @returns {HTMLElement}
+ */
+JSDebuggerUI.prototype.getElement_ = _.memoize(function (selector) {
+  var rootDiv = document.getElementById('debug-area');
+  return rootDiv.querySelector(selector);
+});
+
+/**
  * Post-DOM initialization, which allows this controller to grab all the DOM
  * references it needs, bind handlers, and create any subordinate controllers.
  * @param {!Object} options
@@ -98,15 +106,6 @@ JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
 JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
   // Get references to important elements of the DOM
   this.rootDiv_ = document.getElementById('debug-area');
-  this.debugOutputDiv_ = this.rootDiv_.querySelector('#debug-output');
-  this.resizeBar_ = this.rootDiv_.querySelector('#debugResizeBar');
-  this.pauseButton_ = this.rootDiv_.querySelector('#pauseButton');
-  this.continueButton_ = this.rootDiv_.querySelector('#continueButton');
-  this.stepInButton_ = this.rootDiv_.querySelector('#stepInButton');
-  this.stepOverButton_ = this.rootDiv_.querySelector('#stepOverButton');
-  this.stepOutButton_ = this.rootDiv_.querySelector('#stepOutButton');
-  this.spinner_ = this.rootDiv_.querySelector('#running-spinner');
-  this.pausedIcon_ = this.rootDiv_.querySelector('#paused-icon');
 
   // Create controller for open/shut behavior of debug area
   this.debugOpenShutController_ = new DebugArea(
@@ -135,9 +134,9 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
   }
 
   // Attach handlers for the debug area resize control
-  if (this.resizeBar_) {
-    dom.addMouseDownTouchEvent(this.resizeBar_,
-        this.onMouseDownDebugResizeBar.bind(this));
+  var resizeBar = this.getElement_('#debugResizeBar');
+  if (resizeBar) {
+    dom.addMouseDownTouchEvent(resizeBar, this.onMouseDownDebugResizeBar.bind(this));
 
     // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
     // all touchend events on the page, breaking click events...
@@ -157,13 +156,17 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
   }
 
   // Attach handlers for debugger controls
-  if (this.pauseButton_ && this.continueButton_ && this.stepInButton_ &&
-      this.stepOverButton_ && this.stepOutButton_) {
-    dom.addClickTouchEvent(this.pauseButton_, this.onPauseContinueButton.bind(this));
-    dom.addClickTouchEvent(this.continueButton_, this.onPauseContinueButton.bind(this));
-    dom.addClickTouchEvent(this.stepInButton_, this.onStepInButton.bind(this));
-    dom.addClickTouchEvent(this.stepOverButton_, this.onStepOverButton.bind(this));
-    dom.addClickTouchEvent(this.stepOutButton_, this.onStepOutButton.bind(this));
+  var pauseButton = this.getElement_('#pauseButton');
+  var continueButton = this.getElement_('#continueButton');
+  var stepInButton = this.getElement_('#stepInButton');
+  var stepOverButton = this.getElement_('#stepOverButton');
+  var stepOutButton = this.getElement_('#stepOutButton');
+  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
+    dom.addClickTouchEvent(pauseButton, this.onPauseContinueButton.bind(this));
+    dom.addClickTouchEvent(continueButton, this.onPauseContinueButton.bind(this));
+    dom.addClickTouchEvent(stepInButton, this.onStepInButton.bind(this));
+    dom.addClickTouchEvent(stepOverButton, this.onStepOverButton.bind(this));
+    dom.addClickTouchEvent(stepOutButton, this.onStepOutButton.bind(this));
   }
 };
 
@@ -211,13 +214,14 @@ JSDebuggerUI.prototype.log = function (output) {
   }
 
   // then put it in the debug console visible to the user:
-  if (this.debugOutputDiv_) {
-    if (this.debugOutputDiv_.textContent.length > 0) {
-      this.debugOutputDiv_.textContent += '\n';
+  var debugOutputDiv = this.getElement_('#debug-output');
+  if (debugOutputDiv) {
+    if (debugOutputDiv.textContent.length > 0) {
+      debugOutputDiv.textContent += '\n';
     }
-    this.debugOutputDiv_.textContent += stringifyNonStrings(output);
+    debugOutputDiv.textContent += stringifyNonStrings(output);
 
-    this.debugOutputDiv_.scrollTop = this.debugOutputDiv_.scrollHeight;
+    debugOutputDiv.scrollTop = debugOutputDiv.scrollHeight;
   }
 };
 
@@ -340,7 +344,8 @@ JSDebuggerUI.prototype.onMouseMoveDebugResizeBar = function (event) {
   var codeApp = document.getElementById('codeApp');
   var codeTextbox = document.getElementById('codeTextbox');
 
-  var rect = this.resizeBar_.getBoundingClientRect();
+  var resizeBar = this.getElement_('#debugResizeBar');
+  var rect = resizeBar.getBoundingClientRect();
   var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
       rect.height / 2;
   var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
@@ -374,8 +379,9 @@ JSDebuggerUI.prototype.onMouseUpDebugResizeBar = function () {
  * Empty the contents of the debug console scrollback area.
  */
 JSDebuggerUI.prototype.clearDebugOutput = function () {
-  if (this.debugOutputDiv_) {
-    this.debugOutputDiv_.textContent = '';
+  var debugOutputDiv = this.getElement_('#debug-output');
+  if (debugOutputDiv) {
+    debugOutputDiv.textContent = '';
   }
 };
 
@@ -398,26 +404,60 @@ JSDebuggerUI.prototype.onPauseContinueButton = function() {
 JSDebuggerUI.prototype.updatePauseUIState = function() {
   var jsInterpreter = this.getJSInterpreter_();
 
-  if (this.pauseButton_ && this.continueButton_ && this.spinner_ && this.pausedIcon_) {
+  var pauseButton = this.getElement_('#pauseButton');
+  var continueButton = this.getElement_('#continueButton');
+  var spinner = this.getElement_('#running-spinner');
+  var pausedIcon = this.getElement_('#paused-icon');
+  if (pauseButton && continueButton && spinner && pausedIcon) {
     if (jsInterpreter.paused && jsInterpreter.nextStep === StepType.RUN) {
-      this.pauseButton_.style.display = "none";
-      this.continueButton_.style.display = "inline-block";
-      this.continueButton_.disabled = false;
-      this.spinner_.style.display = 'none';
-      this.pausedIcon_.style.display = 'inline-block';
+      pauseButton.style.display = "none";
+      continueButton.style.display = "inline-block";
+      continueButton.disabled = false;
+      spinner.style.display = 'none';
+      pausedIcon.style.display = 'inline-block';
     } else {
-      this.pauseButton_.style.display = "inline-block";
-      this.pauseButton_.disabled = false;
-      this.continueButton_.style.display = "none";
-      this.spinner_.style.display = 'inline-block';
-      this.pausedIcon_.style.display = 'none';
+      pauseButton.style.display = "inline-block";
+      pauseButton.disabled = false;
+      continueButton.style.display = "none";
+      spinner.style.display = 'inline-block';
+      pausedIcon.style.display = 'none';
     }
   }
 
-  if (this.stepInButton_ && this.stepOverButton_ && this.stepOutButton_) {
-    this.stepInButton_.disabled = !jsInterpreter.paused;
-    this.stepOverButton_.disabled = !jsInterpreter.paused;
-    this.stepOutButton_.disabled = !jsInterpreter.paused;
+  var stepInButton = this.getElement_('#stepInButton');
+  var stepOverButton = this.getElement_('#stepOverButton');
+  var stepOutButton = this.getElement_('#stepOutButton');
+  if (stepInButton && stepOverButton && stepOutButton) {
+    stepInButton.disabled = !jsInterpreter.paused;
+    stepOverButton.disabled = !jsInterpreter.paused;
+    stepOutButton.disabled = !jsInterpreter.paused;
+  }
+};
+
+JSDebuggerUI.prototype.resetDebugControls = function () {
+  var spinner = this.getElement_('#running-spinner');
+  if (spinner) {
+    spinner.style.display = 'none';
+  }
+
+  var pausedIcon = this.getElement_('#paused-icon');
+  if (pausedIcon) {
+    pausedIcon.style.display = 'none';
+  }
+
+  var pauseButton = this.getElement_('#pauseButton');
+  var continueButton = this.getElement_('#continueButton');
+  var stepInButton = this.getElement_('#stepInButton');
+  var stepOverButton = this.getElement_('#stepOverButton');
+  var stepOutButton = this.getElement_('#stepOutButton');
+  if (pauseButton && continueButton && stepInButton &&
+      stepOverButton && stepOutButton) {
+    pauseButton.style.display = "inline-block";
+    pauseButton.disabled = true;
+    continueButton.style.display = "none";
+    stepInButton.disabled = false;
+    stepOverButton.disabled = true;
+    stepOutButton.disabled = true;
   }
 };
 

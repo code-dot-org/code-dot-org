@@ -872,29 +872,8 @@ Applab.clearEventHandlersKillTickLoop = function() {
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
   Applab.tickCount = 0;
-
-  var spinner = document.getElementById('running-spinner');
-  if (spinner) {
-    spinner.style.display = 'none';
-  }
-
-  var pausedIcon = document.getElementById('paused-icon');
-  if (pausedIcon) {
-    pausedIcon.style.display = 'none';
-  }
-
-  var pauseButton = document.getElementById('pauseButton');
-  var continueButton = document.getElementById('continueButton');
-  var stepInButton = document.getElementById('stepInButton');
-  var stepOverButton = document.getElementById('stepOverButton');
-  var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.style.display = "inline-block";
-    pauseButton.disabled = true;
-    continueButton.style.display = "none";
-    stepInButton.disabled = true;
-    stepOverButton.disabled = true;
-    stepOutButton.disabled = true;
+  if (jsDebuggerUI) {
+    jsDebuggerUI.resetDebugControls();
   }
 };
 
@@ -981,29 +960,8 @@ Applab.reset = function(first) {
     level.goal.successState = {};
   }
 
-  if (level.editCode) {
-    // Reset the pause button:
-    var pauseButton = document.getElementById('pauseButton');
-    var continueButton = document.getElementById('continueButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.style.display = "inline-block";
-      pauseButton.disabled = true;
-      continueButton.style.display = "none";
-      stepInButton.disabled = false;
-      stepOverButton.disabled = true;
-      stepOutButton.disabled = true;
-    }
-    var spinner = document.getElementById('running-spinner');
-    if (spinner) {
-      spinner.style.display = 'none';
-    }
-    var pausedIcon = document.getElementById('paused-icon');
-    if (pausedIcon) {
-      pausedIcon.style.display = 'none';
-    }
+  if (jsDebuggerUI) {
+    jsDebuggerUI.resetDebugControls();
   }
 
   // Reset the Globals object used to contain program variables:
