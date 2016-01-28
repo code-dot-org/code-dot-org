@@ -56,4 +56,7 @@ Dashboard::Application.configure do
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # Set to :debug to see everything in the log.
+  config.log_level = :info
 end
