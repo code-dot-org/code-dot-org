@@ -23,7 +23,6 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
-var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
@@ -399,16 +398,19 @@ Applab.hasDataStoreAPIs = function (code) {
     /setKeyValue/.test(code);
 };
 
-Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
-  return 300 * Math.pow(1 - sliderSpeed, 2);
+/**
+ * Set the current interpreter step speed as a percentage (a slider position).
+ * @param {!number} percent - range 0.0-1.0
+ */
+Applab.setStepSpeedPercent = function (percent) {
+  jsDebuggerUI.setStepSpeedPercent(percent);
+  Applab.scale.stepSpeed = JSDebuggerUI.stepDelayFromSliderPercent(percent);
 };
 
 function getCurrentTickLength() {
-  var stepSpeed = Applab.scale.stepSpeed;
-  if (Applab.speedSlider) {
-    stepSpeed = Applab.stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
-  }
-  return stepSpeed;
+  // debugStepDelay will be undefined if no speed slider is present
+  var debugStepDelay = jsDebuggerUI.getStepDelay();
+  return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
 function queueOnTick() {
@@ -866,23 +868,11 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  jsDebuggerUI.initializeAfterDOMCreated();
+  jsDebuggerUI.initializeAfterDOMCreated({
+    defaultStepSpeedPercent: config.level.sliderSpeed
+  });
 
   if (level.editCode) {
-    // Initialize the slider.
-    var slider = document.getElementById('applab-slider');
-    if (slider) {
-      var sliderXOffset = 10,
-          sliderYOffset = 22,
-          sliderWidth = 130;
-      Applab.speedSlider = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
-          slider);
-
-      // Change default speed (eg Speed up levels that have lots of steps).
-      if (config.level.sliderSpeed) {
-        Applab.speedSlider.setValue(config.level.sliderSpeed);
-      }
-    }
     var debugInput = document.getElementById('debug-input');
     if (debugInput) {
       debugInput.addEventListener('keydown', onDebugInputKeyDown);
