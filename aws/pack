@@ -1,12 +1,14 @@
 #!/bin/bash
 # Run this script to build Docker and AWS images using Packer.
+# Works on Linux AMD64 platform.
+# Requires `bsdtar` and `curl` installed on the host machine (for Packer install).
 set -e
 
 # Download and install Packer to a temp folder.
 PACKER_VERSION=0.8.6
 PACKER_URL="https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip"
 TMPDIR=~/.cdo
-PACKER_PATH = ${TMPDIR}/packer
+PACKER_PATH=${TMPDIR}/packer
 if [ ! -f ${PACKER_PATH} ]; then
   mkdir -p ${PACKER_PATH}
   curl -sSL ${PACKER_URL} | bsdtar -xkqf- -C ${PACKER_PATH}
