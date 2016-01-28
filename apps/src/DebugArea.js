@@ -10,9 +10,9 @@
  maxstatements: 200
  */
 
-var i18n = require('../locale');
-var dom = require('../dom');
-var utils = require('../utils');
+var i18n = require('./locale');
+var dom = require('./dom');
+var utils = require('./utils');
 
 /**
  * Creates the debug area controller and configures it to operate on the given
