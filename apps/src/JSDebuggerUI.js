@@ -24,10 +24,21 @@ var Slider = require('./slider');
 var JSDebuggerUI = module.exports = function () {
   /**
    * Helper that handles open/shut actions for debugger UI
-   * @type {DebugArea}
-   * @private
+   * @private {DebugArea}
    */
   this.debugOpenShutController_ = null;
+
+  /**
+   * Root element for debug UI: div#debug-area
+   * @private {HTMLDivElement}
+   */
+  this.rootDiv_ = null;
+
+  /**
+   * Container for debug console output.
+   * @private {HTMLDivElement}
+   */
+  this.debugOutputDiv_ = null;
 };
 
 /**
@@ -52,13 +63,17 @@ JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
  * @param {number} [options.defaultStepSpeedPercent]
  */
 JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
+  // Get references to important elements of the DOM
+  this.rootDiv_ = document.getElementById('debug-area');
+  this.debugOutputDiv_ = this.rootDiv_.querySelector('#debug-output');
+
   // Create controller for open/shut behavior of debug area
   this.debugOpenShutController_ = new DebugArea(
-      document.getElementById('debug-area'),
+      this.rootDiv_,
       document.getElementById('codeTextbox'));
 
   // Initialize debug speed slider
-  var slider = document.getElementById('applab-slider');
+  var slider = this.rootDiv_.querySelector('#applab-slider');
   if (slider) {
     var sliderXOffset = 10,
         sliderYOffset = 22,
@@ -113,3 +128,37 @@ JSDebuggerUI.prototype.ensureOpen = function () {
     this.debugOpenShutController_.snapOpen();
   }
 };
+
+/**
+ * Given some object or message, attempt to log it both to the browser console
+ * and to the user-facing debug console.
+ * @param {*} output
+ */
+JSDebuggerUI.prototype.log = function (output) {
+  // first pass through to the real browser console log if available:
+  if (console && console.log) {
+    console.log(output);
+  }
+
+  // then put it in the debug console visible to the user:
+  if (this.debugOutputDiv_) {
+    if (this.debugOutputDiv_.textContent.length > 0) {
+      this.debugOutputDiv_.textContent += '\n';
+    }
+    this.debugOutputDiv_.textContent += stringifyNonStrings(output);
+
+    this.debugOutputDiv_.scrollTop = this.debugOutputDiv_.scrollHeight;
+  }
+};
+
+/**
+ * @param {*} object
+ * @returns {string}
+ */
+function stringifyNonStrings(object) {
+  if (typeof object === 'string' || object instanceof String) {
+    return object;
+  } else {
+    return JSON.stringify(object);
+  }
+}
