@@ -1099,6 +1099,9 @@ en:
       U4L11 Student Lesson Introduction:
         description here: description here
         title: title
+      U4L12 - Student Introduction:
+        description here: description here
+        title: title
       U4L12 Student Lesson Introduction:
         description here: description here
         title: title
@@ -1136,6 +1139,18 @@ en:
         description here: description here
         title: title
       U4L24 Student Lesson Introduction:
+        description here: description here
+        title: title
+      U5 - Create PT - Student Introduction:
+        description here: description here
+        title: title
+      U5 - Create PT Prep - Student Introduction:
+        description here: description here
+        title: title
+      U5 - Explore PT - Student Introduction:
+        description here: description here
+        title: title
+      U5 - Explore PT Prep - Student Introduction:
         description here: description here
         title: title
       Unit 3 Survey 2: {}
