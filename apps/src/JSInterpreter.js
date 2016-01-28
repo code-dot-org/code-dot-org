@@ -17,6 +17,7 @@ var JSInterpreter = module.exports = function (options) {
   this.onPause = options.onPause || function() {};
   this.onExecutionError = options.onExecutionError || function() {};
   this.onExecutionWarning = options.onExecutionWarning || function() {};
+  this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
 
   this.paused = false;
   this.yieldExecution = false;
@@ -72,9 +73,9 @@ var JSInterpreter = module.exports = function (options) {
     self.globalScope = scope;
     // Override Interpreter's get/set Property functions with JSInterpreter
     self.baseGetProperty = interpreter.getProperty;
-    interpreter.getProperty = _.bind(self.getProperty, self);
+    interpreter.getProperty = self.getProperty.bind(self);
     self.baseSetProperty = interpreter.setProperty;
-    interpreter.setProperty = _.bind(self.setProperty, self);
+    interpreter.setProperty = self.setProperty.bind(self);
     codegen.initJSInterpreter(
         interpreter,
         options.blocks,
@@ -87,7 +88,7 @@ var JSInterpreter = module.exports = function (options) {
     // properties that recurse over and over...
     var wrapper = codegen.makeNativeMemberFunction({
         interpreter: interpreter,
-        nativeFunc: _.bind(self.nativeGetCallback, self),
+        nativeFunc: self.nativeGetCallback.bind(self),
         maxDepth: 5
     });
     interpreter.setProperty(scope,
@@ -96,7 +97,7 @@ var JSInterpreter = module.exports = function (options) {
 
     wrapper = codegen.makeNativeMemberFunction({
         interpreter: interpreter,
-        nativeFunc: _.bind(self.nativeSetCallbackRetVal, self),
+        nativeFunc: self.nativeSetCallbackRetVal.bind(self),
     });
     interpreter.setProperty(scope,
                             'setCallbackRetVal',
@@ -104,6 +105,9 @@ var JSInterpreter = module.exports = function (options) {
   };
 
   try {
+    // Return value will be stored as this.interpreter inside the supplied
+    // initFunc() (other code in initFunc() depends on this.interpreter, so
+    // we can't wait until the constructor returns)
     new window.Interpreter(options.code, initFunc);
   }
   catch(err) {
@@ -448,8 +452,16 @@ JSInterpreter.prototype.createPrimitive = function (data) {
  */
 JSInterpreter.prototype.getProperty = function (obj, name) {
   name = name.toString();
-  if (obj.isCustomMarshal) {
-    var value = obj.data[name];
+  var nativeParent;
+  if (obj.isCustomMarshal ||
+      (obj === this.globalScope &&
+          (!!(nativeParent = this.customMarshalGlobalProperties[name])))) {
+    var value;
+    if (obj.isCustomMarshal) {
+      value = obj.data[name];
+    } else {
+      value = nativeParent[name];
+    }
     var type = typeof value;
     if (type === 'number' || type === 'boolean' || type === 'string' ||
         type === 'undefined' || value === null) {
@@ -475,8 +487,12 @@ JSInterpreter.prototype.getProperty = function (obj, name) {
 JSInterpreter.prototype.setProperty = function(obj, name, value,
                                                opt_fixed, opt_nonenum) {
   name = name.toString();
+  var nativeParent;
   if (obj.isCustomMarshal) {
     obj.data[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
+  } else if (obj === this.globalScope &&
+      (!!(nativeParent = this.customMarshalGlobalProperties[name]))) {
+    nativeParent[name] = codegen.marshalInterpreterToNative(this.interpreter, value);
   } else {
     return this.baseSetProperty.call(
         this.interpreter, obj, name, value, opt_fixed, opt_nonenum);
@@ -560,6 +576,44 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
     }
   }
   return userCodeRow;
+};
+
+/**
+ * Creates a property in the interpreter's global scope. When a parent is
+ * supplied and that parent object is in codegen's customMarshalObjectList,
+ * property gets/sets in the interpreter will be reflected on the native parent
+ * object. Functions can also be inserted into the global namespace using this
+ * method. If a parent is supplied, they will be invoked natively with that
+ * parent as the this parameter.
+ *
+ * @param {String} name Name for the property in the global scope.
+ * @param {*} value Native value that will be marshalled to the interpreter.
+ * @param {Object} parent (Optional) parent for the native value.
+ */
+JSInterpreter.prototype.createGlobalProperty = function (name, value, parent) {
+
+  var interpreterVal;
+  if (typeof value === 'function') {
+    var wrapper = codegen.makeNativeMemberFunction({
+        interpreter: this.interpreter,
+        nativeFunc: value,
+        nativeParentObj: parent
+    });
+    interpreterVal = this.interpreter.createNativeFunction(wrapper);
+  } else {
+    interpreterVal = codegen.marshalNativeToInterpreter(
+        this.interpreter,
+        value,
+        utils.valueOr(parent, window));
+  }
+
+  // Bypass setProperty since we've hooked it and it will not create the
+  // property if it is in customMarshalGlobalProperties
+  this.baseSetProperty.call(
+      this.interpreter,
+      this.globalScope,
+      name,
+      interpreterVal);
 };
 
 /**

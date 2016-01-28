@@ -41,7 +41,7 @@ class HocSurvey2014
 
   def self.process(data)
     {}.tap do |results|
-      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s']);
+      results['prize_code_s'] = claim_prize_code(data['prize_choice_s'], data['email_s'])
     end
   end
 

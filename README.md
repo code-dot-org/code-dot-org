@@ -1,4 +1,9 @@
-[Travis says](https://travis-ci.org/code-dot-org/code-dot-org): [![Build Status](https://travis-ci.org/code-dot-org/code-dot-org.svg?branch=staging)](https://travis-ci.org/code-dot-org/code-dot-org)
+[![Build Status](https://travis-ci.org/code-dot-org/code-dot-org.svg?branch=staging)](https://travis-ci.org/code-dot-org/code-dot-org) on Travis
+
+[![Circle CI](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging.svg?style=svg)](https://circleci.com/gh/code-dot-org/code-dot-org/tree/staging) on Circle
+
+[![Coverage Status](https://coveralls.io/repos/github/code-dot-org/code-dot-org/badge.svg?branch=staging)](https://coveralls.io/github/code-dot-org/code-dot-org?branch=staging) for dashboard unit tests
+
 
 # Build setup
 This document describes how to set up your workstation to develop for Code.org.
@@ -96,7 +101,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 1. `cd code-dot-org`
 1. `bundle install`
 1. `rake install`
-1. `rake install:hooks` (recommended, to install precommit linting hooks)
 1. `rake build`
 1. `sudo chown -R $(whoami) $HOME/.npm` (do we still need this step when using nvm?)
 
