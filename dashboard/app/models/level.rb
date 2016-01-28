@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -141,7 +142,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if changed? && write_to_file?
+    if changed? && write_to_file? && self.published
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
