@@ -3,10 +3,8 @@
  *       combination of cookies and HTML5 web storage.
  */
 'use strict';
-window.$ = require('jquery');
-require('jquery.cookie');
 
-module.exports = function (sessionStorage) {
+module.exports = function (sessionStorage, $) {
 
 var clientState = {};
 
