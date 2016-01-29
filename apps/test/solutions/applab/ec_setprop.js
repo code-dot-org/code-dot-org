@@ -14,6 +14,140 @@ module.exports = {
   levelId: "ec_simple",
   tests: [
     {
+      description: "setProperty on API created button",
+      editCode: true,
+      xml:
+        'button("my_button", "text");' +
+        'setProperty("my_button", "text", "newtext");' +
+        'setProperty("my_button", "text-color", "red");' +
+        'setProperty("my_button", "background-color", "green");' +
+        'setProperty("my_button", "font-size", 21);' +
+        'setProperty("my_button", "image", "' + facebookImage + '");',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var button = document.getElementById('my_button');
+
+          assert.equal(button.textContent, 'newtext');
+          assert.equal(button.style.color, 'red');
+          assert.equal(button.style.backgroundColor, 'green');
+          assert.equal(button.style.fontSize, '21px');
+
+          assert(/facebook_purple.png$/.test(button.getAttribute('data-canonical-image-url')));
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on design mode created button",
+      editCode: true,
+      levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><button id="my_button" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 85px; background-color: rgb(26, 188, 156);">Button</button></div></div>',
+      xml:
+        'setProperty("my_button", "text", "newtext");' +
+        'setProperty("my_button", "text-color", "red");' +
+        'setProperty("my_button", "background-color", "green");' +
+        'setProperty("my_button", "font-size", 21);' +
+        'setProperty("my_button", "image", "' + facebookImage + '");',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var button = document.getElementById('my_button');
+
+          assert.equal(button.textContent, 'newtext');
+          assert.equal(button.style.color, 'red');
+          assert.equal(button.style.backgroundColor, 'green');
+          assert.equal(button.style.fontSize, '21px');
+
+          assert(/facebook_purple.png$/.test(button.getAttribute('data-canonical-image-url')));
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on API created text input",
+      editCode: true,
+      xml:
+        'textInput("my_text_input", "text");' +
+        'setProperty("my_text_input", "placeholder", "placeholdertext");',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var textInput = document.getElementById('my_text_input');
+
+          assert.equal(textInput.getAttribute('placeholder'), 'placeholdertext');
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on design mode slider ",
+      editCode: true,
+      levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="range" value="50" min="0" max="100" step="1" id="my_slider" style="margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 75px; top: 95px;" /></div></div>',
+      xml:
+        'setProperty("my_slider", "value", 51);' +
+        'setProperty("my_slider", "min", 1);' +
+        'setProperty("my_slider", "max", 101);' +
+        'setProperty("my_slider", "step", 3);',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var slider = document.getElementById('my_slider');
+
+          assert.equal(slider.getAttribute('value'), '51');
+          assert.equal(slider.getAttribute('min'), '1');
+          assert.equal(slider.getAttribute('max'), '101');
+          assert.equal(slider.getAttribute('step'), '3');
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
       description: "setProperty on API created Image",
       editCode: true,
       xml:
