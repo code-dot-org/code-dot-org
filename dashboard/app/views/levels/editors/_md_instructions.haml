@@ -19,7 +19,7 @@
       .children('details').details();
   }, true);
 
-  locallyStoredMarkdown = localStorage.getItem('markdown_' + #{@level.id});
+  var locallyStoredMarkdown = localStorage.getItem('markdown_' + #{@level.id});
   if (locallyStoredMarkdown) {
     mdEditor.setValue(locallyStoredMarkdown);
   }
