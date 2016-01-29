@@ -406,13 +406,18 @@ Applab.hasDataStoreAPIs = function (code) {
  * @param {!number} speed - range 0..1
  */
 Applab.setStepSpeed = function (speed) {
-  jsDebuggerUi.setStepSpeed(speed);
+  if (jsDebuggerUi) {
+    jsDebuggerUi.setStepSpeed(speed);
+  }
   Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
-  // debugStepDelay will be undefined if no speed slider is present
-  var debugStepDelay = jsDebuggerUi.getStepDelay();
+  var debugStepDelay;
+  if (jsDebuggerUi) {
+    // debugStepDelay will be undefined if no speed slider is present
+    debugStepDelay = jsDebuggerUi.getStepDelay();
+  }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
@@ -642,14 +647,15 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
+  var extraControlsRow = '';
 
-  // Create the debugger
-  // TODO (bbuchanan): Don't make one of these at all if !level.editCode?
-  jsDebuggerUi = new JsDebuggerUi(function () {
-    return Applab.JSInterpreter;
-  }, Applab.runButtonClick);
-  var extraControlsRow = jsDebuggerUi.getMarkup(studioApp.assetUrl,
-      showDebugButtons, showDebugConsole);
+  if (showDebugButtons || showDebugConsole) {
+    jsDebuggerUi = new JsDebuggerUi(function () {
+      return Applab.JSInterpreter;
+    }, Applab.runButtonClick);
+    extraControlsRow = jsDebuggerUi.getMarkup(
+        studioApp.assetUrl, showDebugButtons, showDebugConsole);
+  }
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -795,7 +801,7 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  if (level.editCode) {
+  if (jsDebuggerUi) {
     jsDebuggerUi.initializeAfterDomCreated({
       defaultStepSpeed: config.level.sliderSpeed
     });
@@ -1125,8 +1131,10 @@ Applab.execute = function() {
 
   studioApp.reset(false);
   studioApp.attempts++;
-  jsDebuggerUi.clearDebugOutput();
-  jsDebuggerUi.clearDebugInput();
+  if (jsDebuggerUi) {
+    jsDebuggerUi.clearDebugOutput();
+    jsDebuggerUi.clearDebugInput();
+  }
 
   // Set event handlers and start the onTick timer
 
@@ -1157,7 +1165,7 @@ Applab.execute = function() {
   if (codeWhenRun) {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
-      Applab.JSInterpreter = new JSInterpreter({
+      var jsInterpreterOptions = {
         code: codeWhenRun,
         blocks: dropletConfig.blocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
@@ -1165,11 +1173,18 @@ Applab.execute = function() {
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-        onNextStepChanged: jsDebuggerUi.updatePauseUiState.bind(jsDebuggerUi),
-        onPause: jsDebuggerUi.onPauseContinueButton.bind(jsDebuggerUi),
-        onExecutionError: handleExecutionError,
-        onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
-      });
+        onExecutionError: handleExecutionError
+      };
+
+      if (jsDebuggerUi) {
+        _.extend(jsInterpreterOptions, {
+          onNextStepChanged: jsDebuggerUi.updatePauseUiState.bind(jsDebuggerUi),
+          onPause: jsDebuggerUi.onPauseContinueButton.bind(jsDebuggerUi),
+          onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
+        });
+      }
+
+      Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
       if (!Applab.JSInterpreter.initialized()) {
         return;
       }
