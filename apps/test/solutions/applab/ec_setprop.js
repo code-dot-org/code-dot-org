@@ -108,7 +108,7 @@ module.exports = {
       description: "setProperty on API created dropdown",
       editCode: true,
       xml:
-        'dropdown("my_drop", "option1", "option2");' +
+        'dropdown("my_drop", "option1", "option2", "option3", "option4", "option5");' +
         'setProperty("my_drop", "options", ["one", "two", "three"]);',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
