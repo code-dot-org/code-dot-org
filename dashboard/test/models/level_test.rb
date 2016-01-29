@@ -437,12 +437,12 @@ EOS
       create(:activity, level: level, level_source: right, test_result: 100)
     end
 
-    wrong = create(:level_source, level: level, data: "<xml><right/></xml>")
+    wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
     10.times do
       create(:activity, level: level, level_source: wrong, test_result: 0)
     end
 
-    right_but_unpopular = create(:level_source, level: level, data: "<xml><right/></xml>")
+    right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
     2.times do
       create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
     end
