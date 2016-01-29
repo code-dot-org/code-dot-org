@@ -313,7 +313,7 @@ designMode.updateProperty = function(element, name, value) {
         optionElement.textContent = value[i];
       }
       // remove any extra options
-      for (i = value.length; i < element.children.length; i++) {
+      while(element.children[i]) {
         element.removeChild(element.children[i]);
       }
       break;
