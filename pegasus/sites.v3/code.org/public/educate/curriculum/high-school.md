@@ -1,6 +1,6 @@
 ---
 title: CS Curriculum for grades 9-12
-nav: educate2_nav
+nav: educate_nav
 ---
 
 # High School 
@@ -14,7 +14,7 @@ Leveraging years of research by the [National Science Foundation](http://www.nsf
 Download this [one-pager](/files/ECSonepager.pdf) describing Exploring Computer Science.
 Find the curriculum and other resources at [exploringcs.org/curriculum](http://www.exploringcs.org/curriculum)  
 
-[<button>Learn more about curriculum</button>](http://exploringcs.org) [<button>Apply for our professional learning program</button>](/educate/professional-learning/exploring-cs)
+[<button>Learn more about curriculum</button>](http://exploringcs.org)
 
 ## Computer Science Principles
 
@@ -26,7 +26,7 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 
 AP® is a registered trademark of the College Board.
 
-[<button>Learn more about curriculum</button>](/educate/csp) [<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-principles)
+[<button>Learn more about curriculum</button>](/educate/csp) [<button>Apply for our professional learning program</button>](/educate/plc/csp)
 
 ## 3rd Party Educator Resources
 
