@@ -14,9 +14,6 @@ require('./consoleShim')(window);
 
 require('./videos');
 
-window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('./clientState.js')(window.sessionStorage);
-
 window.React = require('react');
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
@@ -34,6 +31,11 @@ require('./components/progress/course_progress.jsx');
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
+
+window.$ = require('jquery');
+require('jquery.cookie');
+window.dashboard = window.dashboard || {};
+window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, window.$);
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
