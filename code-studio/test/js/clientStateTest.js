@@ -124,9 +124,13 @@ describe("clientState#trackProgress", function() {
 describe("clientState#queryParams", function() {
   it("parses query params", function () {
     window.history.replaceState("", "", "?foo=1&bar=2");
+
     var params = state.queryParams();
-    params['foo'].should.equal('1');
-    params['bar'].should.equal('2');
+    params.foo.should.equal('1');
+    params.bar.should.equal('2');
+
+    state.queryParams('foo').should.equal('1');
+    state.queryParams('bar').should.equal('2');
   });
 });
 
