@@ -34,7 +34,7 @@ var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
-var JSDebuggerUI = require('../JSDebuggerUI');
+var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var assetsApi = require('../clientApi').assets;
@@ -55,7 +55,7 @@ var TestResults = studioApp.TestResults;
 var Applab = module.exports;
 
 /**
- * @type {JSDebuggerUI} Controller for JS debug buttons and console area
+ * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
 var jsDebuggerUi = null;
 
@@ -407,7 +407,7 @@ Applab.hasDataStoreAPIs = function (code) {
  */
 Applab.setStepSpeed = function (speed) {
   jsDebuggerUi.setStepSpeed(speed);
-  Applab.scale.stepSpeed = JSDebuggerUI.stepDelayFromStepSpeed(speed);
+  Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
@@ -645,7 +645,7 @@ Applab.init = function(config) {
 
   // Create the debugger
   // TODO (bbuchanan): Don't make one of these at all if !level.editCode?
-  jsDebuggerUi = new JSDebuggerUI(function () {
+  jsDebuggerUi = new JsDebuggerUi(function () {
     return Applab.JSInterpreter;
   }, Applab.runButtonClick);
   var extraControlsRow = jsDebuggerUi.getMarkup(studioApp.assetUrl,

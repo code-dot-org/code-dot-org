@@ -38,7 +38,7 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
  *        by the "Step In" button when the app isn't running.
  * @constructor
  */
-var JSDebuggerUI = module.exports = function (getJsInterpreter, runApp) {
+var JsDebuggerUi = module.exports = function (getJsInterpreter, runApp) {
 
   /**
    * Function for getting the active JSInterpreter (which may get replaced on a
@@ -75,8 +75,8 @@ var JSDebuggerUI = module.exports = function (getJsInterpreter, runApp) {
  * @param {!boolean} showConsole - Whether to show the debug console
  * @returns {string} of HTML markup to be embedded in page.html.ejs
  */
-JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole) {
-  return require('./JSDebuggerUI.html.ejs')({
+JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole) {
+  return require('./JsDebuggerUi.html.ejs')({
     assetUrl: assetUrl,
     debugButtons: showButtons,
     debugConsole: showConsole
@@ -90,7 +90,7 @@ JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
  * @param {string} selector
  * @returns {HTMLElement}
  */
-JSDebuggerUI.prototype.getElement_ = function (selector) {
+JsDebuggerUi.prototype.getElement_ = function (selector) {
   var rootDiv = document.getElementById('debug-area');
   return rootDiv.querySelector(selector);
 };
@@ -101,7 +101,7 @@ JSDebuggerUI.prototype.getElement_ = function (selector) {
  * @param {!Object} options
  * @param {number} [options.defaultStepSpeed] in range 0..1
  */
-JSDebuggerUI.prototype.initializeAfterDomCreated = function (options) {
+JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
   // Get references to important elements of the DOM
   this.rootDiv_ = document.getElementById('debug-area');
 
@@ -173,9 +173,9 @@ JSDebuggerUI.prototype.initializeAfterDomCreated = function (options) {
  * If no speed slider is present, returns undefined.
  * @return {number|undefined}
  */
-JSDebuggerUI.prototype.getStepDelay = function () {
+JsDebuggerUi.prototype.getStepDelay = function () {
   if (this.speedSlider_) {
-    return JSDebuggerUI.stepDelayFromStepSpeed(this.speedSlider_.getValue());
+    return JsDebuggerUi.stepDelayFromStepSpeed(this.speedSlider_.getValue());
   }
   return undefined;
 };
@@ -184,7 +184,7 @@ JSDebuggerUI.prototype.getStepDelay = function () {
  * Set the speed slider position.
  * @param {!number} speed - in range 0..1
  */
-JSDebuggerUI.prototype.setStepSpeed = function (speed) {
+JsDebuggerUi.prototype.setStepSpeed = function (speed) {
   if (this.speedSlider_) {
     this.speedSlider_.setValue(speed);
   }
@@ -196,7 +196,7 @@ JSDebuggerUI.prototype.setStepSpeed = function (speed) {
  * @param {!number} stepSpeed in range 0..1
  * @returns {number} step delay in milliseconds
  */
-JSDebuggerUI.stepDelayFromStepSpeed = function (stepSpeed) {
+JsDebuggerUi.stepDelayFromStepSpeed = function (stepSpeed) {
   return 300 * Math.pow(1 - stepSpeed, 2);
 };
 
@@ -205,7 +205,7 @@ JSDebuggerUI.stepDelayFromStepSpeed = function (stepSpeed) {
  * and to the user-facing debug console.
  * @param {*} output
  */
-JSDebuggerUI.prototype.log = function (output) {
+JsDebuggerUi.prototype.log = function (output) {
   // first pass through to the real browser console log if available:
   if (console && console.log) {
     console.log(output);
@@ -239,7 +239,7 @@ function stringifyNonStrings(object) {
  * Handler for key events in the debug console input box.
  * @param {KeyboardEvent} e
  */
-JSDebuggerUI.prototype.onDebugInputKeyDown = function (e) {
+JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
   var input = e.target.textContent;
   if (e.keyCode === KeyCodes.ENTER) {
     e.preventDefault();
@@ -318,7 +318,7 @@ var boundMouseMoveHandler;
 /** @type {string} */
 var mouseMoveTouchEventName;
 
-JSDebuggerUI.prototype.onMouseDownDebugResizeBar = function (event) {
+JsDebuggerUi.prototype.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
   var eventSourceElm = event.srcElement || event.target;
   if (eventSourceElm.id === 'debugResizeBar') {
@@ -338,7 +338,7 @@ JSDebuggerUI.prototype.onMouseDownDebugResizeBar = function (event) {
 /**
  *  Handle mouse moves while dragging the debug resize bar.
  */
-JSDebuggerUI.prototype.onMouseMoveDebugResizeBar = function (event) {
+JsDebuggerUi.prototype.onMouseMoveDebugResizeBar = function (event) {
   var codeApp = document.getElementById('codeApp');
   var codeTextbox = document.getElementById('codeTextbox');
 
@@ -361,7 +361,7 @@ JSDebuggerUI.prototype.onMouseMoveDebugResizeBar = function (event) {
   utils.fireResizeEvent();
 };
 
-JSDebuggerUI.prototype.onMouseUpDebugResizeBar = function () {
+JsDebuggerUi.prototype.onMouseUpDebugResizeBar = function () {
   // If we have been tracking mouse moves, remove the handler now:
   if (draggingDebugResizeBar) {
     document.body.removeEventListener('mousemove', boundMouseMoveHandler);
@@ -376,7 +376,7 @@ JSDebuggerUI.prototype.onMouseUpDebugResizeBar = function () {
 /**
  * Empty the contents of the debug console scrollback area.
  */
-JSDebuggerUI.prototype.clearDebugOutput = function () {
+JsDebuggerUi.prototype.clearDebugOutput = function () {
   var debugOutputDiv = this.getElement_('#debug-output');
   if (debugOutputDiv) {
     debugOutputDiv.textContent = '';
@@ -386,14 +386,14 @@ JSDebuggerUI.prototype.clearDebugOutput = function () {
 /**
  * Empty the debug console input area.
  */
-JSDebuggerUI.prototype.clearDebugInput = function () {
+JsDebuggerUi.prototype.clearDebugInput = function () {
   var debugInput = this.getElement_('#debug-input');
   if (debugInput) {
     debugInput.textContent = '';
   }
 };
 
-JSDebuggerUI.prototype.onPauseContinueButton = function() {
+JsDebuggerUi.prototype.onPauseContinueButton = function() {
   var jsInterpreter = this.getJsInterpreter_();
   if (jsInterpreter) {
     // We have code and are either running or paused
@@ -409,7 +409,7 @@ JSDebuggerUI.prototype.onPauseContinueButton = function() {
   }
 };
 
-JSDebuggerUI.prototype.updatePauseUiState = function() {
+JsDebuggerUi.prototype.updatePauseUiState = function() {
   var jsInterpreter = this.getJsInterpreter_();
   if (!jsInterpreter) {
     return;
@@ -445,7 +445,7 @@ JSDebuggerUI.prototype.updatePauseUiState = function() {
   }
 };
 
-JSDebuggerUI.prototype.resetDebugControls = function () {
+JsDebuggerUi.prototype.resetDebugControls = function () {
   var spinner = this.getElement_('#running-spinner');
   if (spinner) {
     spinner.style.display = 'none';
@@ -472,7 +472,7 @@ JSDebuggerUI.prototype.resetDebugControls = function () {
   }
 };
 
-JSDebuggerUI.prototype.onStepOverButton = function() {
+JsDebuggerUi.prototype.onStepOverButton = function() {
   var jsInterpreter = this.getJsInterpreter_();
   if (jsInterpreter) {
     jsInterpreter.paused = true;
@@ -481,7 +481,7 @@ JSDebuggerUI.prototype.onStepOverButton = function() {
   }
 };
 
-JSDebuggerUI.prototype.onStepInButton = function() {
+JsDebuggerUi.prototype.onStepInButton = function() {
   var jsInterpreter = this.getJsInterpreter_();
   if (!jsInterpreter) {
     this.runApp_();
@@ -493,7 +493,7 @@ JSDebuggerUI.prototype.onStepInButton = function() {
   this.updatePauseUiState();
 };
 
-JSDebuggerUI.prototype.onStepOutButton = function() {
+JsDebuggerUi.prototype.onStepOutButton = function() {
   var jsInterpreter = this.getJsInterpreter_();
   if (jsInterpreter) {
     jsInterpreter.paused = true;
