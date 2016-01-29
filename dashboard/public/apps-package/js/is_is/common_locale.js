@@ -403,5 +403,12 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
 "workspaceHeaderShort":function(d){return "Vinnusvæði: "},
+"debugConsoleHeader":function(d){return "Debug Console"},
+"debugCommandsHeaderWhenOpen":function(d){return "Debug Commands"},
+"debugCommandsHeaderWhenClosed":function(d){return "Show Debug Commands"},
 "dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
-"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};
+"pause":function(d){return "Break"},
+"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."},
+"stepIn":function(d){return "Step in"},
+"stepOver":function(d){return "Step over"},
+"stepOut":function(d){return "Step out"}};
