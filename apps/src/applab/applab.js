@@ -57,7 +57,7 @@ var Applab = module.exports;
 /**
  * @type {JSDebuggerUI} Controller for JS debug buttons and console area
  */
-var jsDebuggerUI = null;
+var jsDebuggerUi = null;
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -67,8 +67,8 @@ var jsDebuggerUI = null;
  * @param {*} object
  */
 Applab.log = function (object) {
-  if (jsDebuggerUI) {
-    jsDebuggerUI.log(object);
+  if (jsDebuggerUi) {
+    jsDebuggerUi.log(object);
   }
 };
 
@@ -406,13 +406,13 @@ Applab.hasDataStoreAPIs = function (code) {
  * @param {!number} speed - range 0..1
  */
 Applab.setStepSpeed = function (speed) {
-  jsDebuggerUI.setStepSpeed(speed);
+  jsDebuggerUi.setStepSpeed(speed);
   Applab.scale.stepSpeed = JSDebuggerUI.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
   // debugStepDelay will be undefined if no speed slider is present
-  var debugStepDelay = jsDebuggerUI.getStepDelay();
+  var debugStepDelay = jsDebuggerUi.getStepDelay();
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
@@ -641,10 +641,10 @@ Applab.init = function(config) {
 
   // Create the debugger
   // TODO (bbuchanan): Don't make one of these at all if !level.editCode?
-  jsDebuggerUI = new JSDebuggerUI(function () {
+  jsDebuggerUi = new JSDebuggerUI(function () {
     return Applab.JSInterpreter;
   }, Applab.runButtonClick);
-  var extraControlsRow = jsDebuggerUI.getMarkup(studioApp.assetUrl,
+  var extraControlsRow = jsDebuggerUi.getMarkup(studioApp.assetUrl,
       showDebugButtons, showDebugConsole);
 
   config.html = page({
@@ -791,7 +791,7 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
-    jsDebuggerUI.initializeAfterDOMCreated({
+    jsDebuggerUi.initializeAfterDomCreated({
       defaultStepSpeed: config.level.sliderSpeed
     });
   }
@@ -872,8 +872,8 @@ Applab.clearEventHandlersKillTickLoop = function() {
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
   Applab.tickCount = 0;
-  if (jsDebuggerUI) {
-    jsDebuggerUI.resetDebugControls();
+  if (jsDebuggerUi) {
+    jsDebuggerUi.resetDebugControls();
   }
 };
 
@@ -960,8 +960,8 @@ Applab.reset = function(first) {
     level.goal.successState = {};
   }
 
-  if (jsDebuggerUI) {
-    jsDebuggerUI.resetDebugControls();
+  if (jsDebuggerUi) {
+    jsDebuggerUi.resetDebugControls();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1120,8 +1120,8 @@ Applab.execute = function() {
 
   studioApp.reset(false);
   studioApp.attempts++;
-  jsDebuggerUI.clearDebugOutput();
-  jsDebuggerUI.clearDebugInput();
+  jsDebuggerUi.clearDebugOutput();
+  jsDebuggerUi.clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
@@ -1160,10 +1160,10 @@ Applab.execute = function() {
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-        onNextStepChanged: jsDebuggerUI.updatePauseUIState.bind(jsDebuggerUI),
-        onPause: jsDebuggerUI.onPauseContinueButton.bind(jsDebuggerUI),
+        onNextStepChanged: jsDebuggerUi.updatePauseUiState.bind(jsDebuggerUi),
+        onPause: jsDebuggerUi.onPauseContinueButton.bind(jsDebuggerUi),
         onExecutionError: handleExecutionError,
-        onExecutionWarning: jsDebuggerUI.log.bind(jsDebuggerUI)
+        onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
       });
       if (!Applab.JSInterpreter.initialized()) {
         return;
@@ -1177,8 +1177,8 @@ Applab.execute = function() {
     }
   }
 
-  if (jsDebuggerUI) {
-    jsDebuggerUI.updatePauseUIState();
+  if (jsDebuggerUi) {
+    jsDebuggerUi.updatePauseUiState();
   }
 
   // Set focus on the default screen so key events can be handled
