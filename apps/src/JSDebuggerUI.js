@@ -20,7 +20,6 @@ var JSInterpreter = require('./JSInterpreter');
 var Slider = require('./slider');
 var utils = require('./utils');
 
-var _ = utils.getLodash();
 var KeyCodes = constants.KeyCodes;
 var StepType = JSInterpreter.StepType;
 
@@ -85,17 +84,16 @@ JSDebuggerUI.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
 };
 
 /**
- * Element getter for elements within the debugger UI, which caches its results
- * so that it's cheap to use over and over.
+ * Element getter for elements within the debugger UI.
  * @type {Function}
  * @private
  * @param {string} selector
  * @returns {HTMLElement}
  */
-JSDebuggerUI.prototype.getElement_ = _.memoize(function (selector) {
+JSDebuggerUI.prototype.getElement_ = function (selector) {
   var rootDiv = document.getElementById('debug-area');
   return rootDiv.querySelector(selector);
-});
+};
 
 /**
  * Post-DOM initialization, which allows this controller to grab all the DOM
@@ -413,6 +411,9 @@ JSDebuggerUI.prototype.onPauseContinueButton = function() {
 
 JSDebuggerUI.prototype.updatePauseUiState = function() {
   var jsInterpreter = this.getJsInterpreter_();
+  if (!jsInterpreter) {
+    return;
+  }
 
   var pauseButton = this.getElement_('#pauseButton');
   var continueButton = this.getElement_('#continueButton');
