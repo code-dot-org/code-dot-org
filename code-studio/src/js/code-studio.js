@@ -27,7 +27,8 @@ require('./components/share_dialog_body.jsx');
 require('./components/small_footer.jsx');
 require('./components/progress/stage_progress.jsx');
 require('./components/progress/course_progress.jsx');
-require('./components/pairing.jsx');
+
+window.dashboard.Pairing = require('./components/pairing.jsx')(window.React);
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
