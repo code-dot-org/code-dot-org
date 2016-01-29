@@ -12,6 +12,7 @@ var KeyCodes = require('../constants').KeyCodes;
 var constants = require('./constants');
 var applabCommands = require('./commands');
 var designMode = module.exports;
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 
 var currentlyEditedElement = null;
@@ -499,7 +500,7 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  var levelDom = $.parseHTML(Applab.levelHtml);
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml));
   var children = $(levelDom).children();
 
   children.each(function () {
