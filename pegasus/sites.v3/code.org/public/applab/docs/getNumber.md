@@ -23,9 +23,9 @@ Gets the number from the specified screen element.
 
 [/short_description]
 
-To capture numeric data entered by the user your apps will need to read data from [textInput()](/applab/docs/textInput) or slider screen elements. getNumber() is usually used in an [onEvent()](/applab/docs/onEvent) callback function, and returns a number that can be stored in a variable, used as a parameter in another function call, or used in an arithmetic expression.
+To capture numeric data entered by the user your apps will need to read data from [textInput()](/applab/docs/textInput) or slider screen elements*. getNumber() is usually used in an [onEvent()](/applab/docs/onEvent) callback function, and returns a number that can be stored in a variable, used as a parameter in another function call, or used in an arithmetic expression.
 
-The slider design element was contributed by Mike and Mitchell Schmidt.
+*The slider design element was contributed by Mike and Mitchell Schmidt.
 
 [/description]
 
