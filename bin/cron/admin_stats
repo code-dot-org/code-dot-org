@@ -2,7 +2,7 @@
 #
 # This script caches database queries whose results are displayed at studio.code.org/admin/stats.
 #
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/hip_chat'
 require 'cdo/properties'
