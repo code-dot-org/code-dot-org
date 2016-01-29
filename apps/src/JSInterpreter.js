@@ -668,3 +668,35 @@ JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
   }
   return names;
 };
+
+/**
+ * Evaluate an expression in the interpreter's current scope, and return the
+ * value of the evaluated expression.
+ * @param {!string} expression
+ * @returns {?} value of the expression
+ * @throws if there's a problem evaluating the expression
+ */
+JSInterpreter.prototype.evalInCurrentScope = function (expression) {
+  var currentScope = this.interpreter.getScope();
+  var evalInterpreter = new window.Interpreter(expression);
+  // Set scope to the current scope of the running program
+  // NOTE: we are being a little tricky here (we are re-running
+  // part of the Interpreter constructor with a different interpreter's
+  // scope)
+  evalInterpreter.populateScope_(evalInterpreter.ast, currentScope);
+  evalInterpreter.stateStack = [{
+    node: evalInterpreter.ast,
+    scope: currentScope,
+    thisExpression: currentScope
+  }];
+  // Copy these properties directly into the evalInterpreter so the .isa()
+  // method behaves as expected
+  ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
+    'UNDEFINED'].forEach(function (prop) {
+    evalInterpreter[prop] = this.interpreter[prop];
+  }, this);
+
+  // run() may throw if there's a problem in the expression
+  evalInterpreter.run();
+  return evalInterpreter.value;
+};
