@@ -16,7 +16,7 @@ var ElementType = library.ElementType;
  * internalName: Name used in updateProperty to refer to this property
  * type: Type of this property, used for validation at run time.
  */
-var ALL_PROPS = {
+var PROP_INFO = {
   width: { friendlyName: 'width', internalName: 'style-width', type: 'number'},
   height: { friendlyName: 'height', internalName: 'style-height', type: 'number' },
   canvasWidth: { friendlyName: 'width', internalName: 'width', type: 'number'},
@@ -43,11 +43,11 @@ var ALL_PROPS = {
 };
 
 // When we don't know the element type, we display all possible friendly names
-var fullDropdownOptions = _.uniq(Object.keys(ALL_PROPS).map(function (key) {
-  return '"' + ALL_PROPS[key].friendlyName + '"';
+var fullDropdownOptions = _.uniq(Object.keys(PROP_INFO).map(function (key) {
+  return '"' + PROP_INFO[key].friendlyName + '"';
 }));
 
-// Which of the items from ALL_PROPS should each element type use
+// Which of the items from PROP_INFO should each element type use
 var PROP_NAMES = {};
 PROP_NAMES[ElementType.BUTTON] = [
   'text',
@@ -165,12 +165,12 @@ var PROPS_PER_TYPE = {};
 Object.keys(PROP_NAMES).map(function (elementType) {
   PROPS_PER_TYPE[elementType] = {};
   PROP_NAMES[elementType].forEach(function (propName) {
-    var friendlyName = ALL_PROPS[propName].friendlyName;
+    var friendlyName = PROP_INFO[propName].friendlyName;
     if (PROPS_PER_TYPE[elementType][friendlyName]) {
       throw new Error('Multiple props for friendlyName: ' + friendlyName +
         ' in elementType: ' + elementType);
     }
-    PROPS_PER_TYPE[elementType][friendlyName] = ALL_PROPS[propName];
+    PROPS_PER_TYPE[elementType][friendlyName] = PROP_INFO[propName];
   });
 });
 
@@ -210,7 +210,7 @@ function stripQuotes(str) {
  * if we don't have info for this element/property.
  */
 module.exports.getInternalPropertyInfo = function (element, friendlyPropName) {
-  var elementType = library.getElementType(element);
+  var elementType = library.getElementType(element, true);
   var info;
   if (elementType) {
     info = PROPS_PER_TYPE[elementType][friendlyPropName];
