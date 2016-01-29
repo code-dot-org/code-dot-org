@@ -1,11 +1,7 @@
-/* global React */
-
-window.dashboard = window.dashboard || {};
-
 /**
  * A component for managing pair programming
  */
-window.dashboard.Pairing = (function (React) {
+var Pairing = function (React) {
   var INPUT_WIDTH = 500;
   // dropdown width is wider so that it still lines up with inputs (which have
   // padding)
@@ -15,22 +11,24 @@ window.dashboard.Pairing = (function (React) {
 
   return React.createClass({
     propTypes: {
+      pairings: React.PropTypes.array,
       sections: React.PropTypes.array,
       style: React.PropTypes.object
     },
 
     getInitialState: function() {
       return {
+        pairings: {},
         sectionId: '',
         selectedStudentIds: {}
       };
     },
 
     componentDidMount: function() {
-      $.get(this.props.source, function(result) {
-        var x;
-    }.bind(this));
-  },
+//      $.get(this.props.source, function(result) {
+//        var x;
+//      }.bind(this));
+    },
 
     handleSectionChange: function(event) {
       console.log(event);
@@ -105,4 +103,6 @@ window.dashboard.Pairing = (function (React) {
       );
     }
   });
-})(React);
+};
+
+module.exports = Pairing;

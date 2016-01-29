@@ -10,6 +10,10 @@ class PairingsController < ApplicationController
       }
     end
 
-    @react_props = {sections: @sections}
+    @pairings = User.limit(1).map do |user|
+      {id: user.id, name: user.name}
+    end
+
+    @react_props = {pairings: @pairings, sections: @sections}
   end
 end
