@@ -1,6 +1,6 @@
 ---
 title: Curriculum
-nav: educate2_nav
+nav: educate_nav
 ---
 
 # Computer Science Fundamentals for elementary school
