@@ -23,8 +23,9 @@ Scenario: Opening the function editor and moving an inner block doesn't bump fun
 Scenario: Opening the function editor and hitting the ESC key should close the editor
   When I press SVG selector ".blocklyIconGroup:contains(edit)"
   And I wait to see "#modalEditorClose"
-  And I hold key "ESC"
-  Then element "#modalEditorClose" is hidden
+  And the modal function editor is open
+  Then I press keys ":escape" for element "body"
+  And the modal function editor is closed
 
 @chrome
 Scenario: Opening / closing the function editor, shouldn't be able to connect to invisible child blocks
