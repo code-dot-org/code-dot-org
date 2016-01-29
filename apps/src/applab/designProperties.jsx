@@ -11,6 +11,7 @@ var nextKey = 0;
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
+    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string),
     handleChange: React.PropTypes.func.isRequired,
     onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
@@ -187,7 +188,7 @@ var DesignProperties = module.exports = React.createClass({
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
             <ElementSelect onChangeElement={this.props.onChangeElement}
-              elements={Applab.getIdDropdown(null, true)}
+              elementIdList={this.props.elementIdList}
               selected={this.props.element} />
           </div>
         </div>
