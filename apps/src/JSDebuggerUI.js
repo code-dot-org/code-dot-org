@@ -101,7 +101,7 @@ JSDebuggerUI.prototype.getElement_ = _.memoize(function (selector) {
  * Post-DOM initialization, which allows this controller to grab all the DOM
  * references it needs, bind handlers, and create any subordinate controllers.
  * @param {!Object} options
- * @param {number} [options.defaultStepSpeedPercent]
+ * @param {number} [options.defaultStepSpeed] in range 0..1
  */
 JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
   // Get references to important elements of the DOM
@@ -122,8 +122,8 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
         slider);
 
     // Change default speed (eg Speed up levels that have lots of steps).
-    if (options.defaultStepSpeedPercent) {
-      this.setStepSpeedPercent(options.defaultStepSpeedPercent);
+    if (options.defaultStepSpeed) {
+      this.setStepSpeed(options.defaultStepSpeed);
     }
   }
 
@@ -177,29 +177,29 @@ JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
  */
 JSDebuggerUI.prototype.getStepDelay = function () {
   if (this.speedSlider_) {
-    return JSDebuggerUI.stepDelayFromSliderPercent(this.speedSlider_.getValue());
+    return JSDebuggerUI.stepDelayFromStepSpeed(this.speedSlider_.getValue());
   }
   return undefined;
 };
 
 /**
  * Set the speed slider position.
- * @param {!number} percent - range 0.0-1.0
+ * @param {!number} speed - in range 0..1
  */
-JSDebuggerUI.prototype.setStepSpeedPercent = function (percent) {
+JSDebuggerUI.prototype.setStepSpeed = function (speed) {
   if (this.speedSlider_) {
-    this.speedSlider_.setValue(percent);
+    this.speedSlider_.setValue(speed);
   }
 };
 
 /**
- * Exponential conversion from slider position as a percentile to a step delay
- * in milliseconds.
- * @param {!number} stepSpeedPercentage range 0.0-1.0
+ * Exponential conversion from step speed (as slider position, range 0..1) to
+ * a step delay in milliseconds.
+ * @param {!number} stepSpeed in range 0..1
  * @returns {number} step delay in milliseconds
  */
-JSDebuggerUI.stepDelayFromSliderPercent = function (stepSpeedPercentage) {
-  return 300 * Math.pow(1 - stepSpeedPercentage, 2);
+JSDebuggerUI.stepDelayFromStepSpeed = function (stepSpeed) {
+  return 300 * Math.pow(1 - stepSpeed, 2);
 };
 
 /**

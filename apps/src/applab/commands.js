@@ -482,7 +482,7 @@ applabCommands.speed = function (opts) {
   // DOCBUG: range is 0-100, not 1-100
   apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
-    Applab.setStepSpeedPercent(opts.percent / 100);
+    Applab.setStepSpeed(opts.percent / 100);
   }
 };
 

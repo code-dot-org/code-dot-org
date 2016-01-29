@@ -401,12 +401,13 @@ Applab.hasDataStoreAPIs = function (code) {
 };
 
 /**
- * Set the current interpreter step speed as a percentage (a slider position).
- * @param {!number} percent - range 0.0-1.0
+ * Set the current interpreter step speed as a value from 0 (stopped)
+ * to 1 (full speed).
+ * @param {!number} speed - range 0..1
  */
-Applab.setStepSpeedPercent = function (percent) {
-  jsDebuggerUI.setStepSpeedPercent(percent);
-  Applab.scale.stepSpeed = JSDebuggerUI.stepDelayFromSliderPercent(percent);
+Applab.setStepSpeed = function (speed) {
+  jsDebuggerUI.setStepSpeed(speed);
+  Applab.scale.stepSpeed = JSDebuggerUI.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
@@ -791,7 +792,7 @@ Applab.init = function(config) {
 
   if (level.editCode) {
     jsDebuggerUI.initializeAfterDOMCreated({
-      defaultStepSpeedPercent: config.level.sliderSpeed
+      defaultStepSpeed: config.level.sliderSpeed
     });
   }
 
