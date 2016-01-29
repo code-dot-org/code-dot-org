@@ -32,14 +32,14 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
  * App Lab, Game Lab, etc.
- * @param {!function} getJSInterpreter - Must be a function that returns the
+ * @param {!function} getJsInterpreter - Must be a function that returns the
  *        current active interpreter, or a falsy value if no interpreter is
  *        running.
  * @param {!function} runApp - callback for "launching" the app, which is used
  *        by the "Step In" button when the app isn't running.
  * @constructor
  */
-var JSDebuggerUI = module.exports = function (getJSInterpreter, runApp) {
+var JSDebuggerUI = module.exports = function (getJsInterpreter, runApp) {
 
   /**
    * Function for getting the active JSInterpreter (which may get replaced on a
@@ -47,7 +47,7 @@ var JSDebuggerUI = module.exports = function (getJSInterpreter, runApp) {
    * interpreter is currently running.
    * @private {function}
    */
-  this.getJSInterpreter_ = getJSInterpreter;
+  this.getJsInterpreter_ = getJsInterpreter;
 
   /**
    * Callback for "launching" the app, used by the "Step In" button when the app
@@ -103,7 +103,7 @@ JSDebuggerUI.prototype.getElement_ = _.memoize(function (selector) {
  * @param {!Object} options
  * @param {number} [options.defaultStepSpeed] in range 0..1
  */
-JSDebuggerUI.prototype.initializeAfterDOMCreated = function (options) {
+JSDebuggerUI.prototype.initializeAfterDomCreated = function (options) {
   // Get references to important elements of the DOM
   this.rootDiv_ = document.getElementById('debug-area');
 
@@ -248,7 +248,7 @@ JSDebuggerUI.prototype.onDebugInputKeyDown = function (e) {
     pushDebugConsoleHistory(input);
     e.target.textContent = '';
     this.log('> ' + input);
-    var jsInterpreter = this.getJSInterpreter_();
+    var jsInterpreter = this.getJsInterpreter_();
     if (jsInterpreter) {
       try {
         var result = jsInterpreter.evalInCurrentScope(input);
@@ -396,7 +396,7 @@ JSDebuggerUI.prototype.clearDebugInput = function () {
 };
 
 JSDebuggerUI.prototype.onPauseContinueButton = function() {
-  var jsInterpreter = this.getJSInterpreter_();
+  var jsInterpreter = this.getJsInterpreter_();
   if (jsInterpreter) {
     // We have code and are either running or paused
     if (jsInterpreter.paused &&
@@ -407,12 +407,12 @@ JSDebuggerUI.prototype.onPauseContinueButton = function() {
       jsInterpreter.nextStep = StepType.RUN;
     }
 
-    this.updatePauseUIState();
+    this.updatePauseUiState();
   }
 };
 
-JSDebuggerUI.prototype.updatePauseUIState = function() {
-  var jsInterpreter = this.getJSInterpreter_();
+JSDebuggerUI.prototype.updatePauseUiState = function() {
+  var jsInterpreter = this.getJsInterpreter_();
 
   var pauseButton = this.getElement_('#pauseButton');
   var continueButton = this.getElement_('#continueButton');
@@ -472,31 +472,31 @@ JSDebuggerUI.prototype.resetDebugControls = function () {
 };
 
 JSDebuggerUI.prototype.onStepOverButton = function() {
-  var jsInterpreter = this.getJSInterpreter_();
+  var jsInterpreter = this.getJsInterpreter_();
   if (jsInterpreter) {
     jsInterpreter.paused = true;
     jsInterpreter.nextStep = StepType.OVER;
-    this.updatePauseUIState();
+    this.updatePauseUiState();
   }
 };
 
 JSDebuggerUI.prototype.onStepInButton = function() {
-  var jsInterpreter = this.getJSInterpreter_();
+  var jsInterpreter = this.getJsInterpreter_();
   if (!jsInterpreter) {
     this.runApp_();
     this.onPauseContinueButton();
-    jsInterpreter = this.getJSInterpreter_();
+    jsInterpreter = this.getJsInterpreter_();
   }
   jsInterpreter.paused = true;
   jsInterpreter.nextStep = StepType.IN;
-  this.updatePauseUIState();
+  this.updatePauseUiState();
 };
 
 JSDebuggerUI.prototype.onStepOutButton = function() {
-  var jsInterpreter = this.getJSInterpreter_();
+  var jsInterpreter = this.getJsInterpreter_();
   if (jsInterpreter) {
     jsInterpreter.paused = true;
     jsInterpreter.nextStep = StepType.OUT;
-    this.updatePauseUIState();
+    this.updatePauseUiState();
   }
 };
