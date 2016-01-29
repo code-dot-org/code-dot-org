@@ -403,4 +403,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "کب"},
 "whenRun":function(d){return "رَن کب ہوگا"},
 "workspaceHeaderShort":function(d){return "ورک اسپیس "},
+"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
 "recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."}};

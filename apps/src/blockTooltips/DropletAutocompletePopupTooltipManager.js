@@ -91,7 +91,7 @@ DropletAutocompletePopupTooltipManager.prototype.updateAutocompletePopupTooltip 
 
   this.destroyAutocompleteTooltips_();
 
-  if (!this.dropletTooltipManager.hasDocFor(funcName)) {
+  if (!this.dropletTooltipManager.getDocFor(funcName)) {
     return;
   }
 

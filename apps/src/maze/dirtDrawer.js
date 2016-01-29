@@ -32,7 +32,7 @@ DirtDrawer.prototype.updateItemImage = function (row, col, running) {
  * Update the image at the given row,col with the provided spriteIndex.
  */
 DirtDrawer.prototype.updateImageWithIndex_ = function (prefix, row, col, imageInfo, spriteIndex) {
-  var hiddenImage = spriteIndex < 0;
+  var hiddenImage = (spriteIndex < 0 || imageInfo.href === null);
 
   var img = document.getElementById(cellId(prefix, row, col));
   if (!img) {
@@ -42,6 +42,9 @@ DirtDrawer.prototype.updateImageWithIndex_ = function (prefix, row, col, imageIn
     }
     // we want an image, so let's create one
     img = createImage(prefix, row, col, imageInfo);
+  } else if (imageInfo.href) {
+    //update img
+    img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', imageInfo.href);
   }
 
   img.setAttribute('visibility', hiddenImage ? 'hidden' : 'visible');
