@@ -14,11 +14,8 @@ require('./consoleShim')(window);
 
 require('./videos');
 
-if (!window.dashboard) {
-  window.dashboard = {};
-}
-
-require('./clientState.js')(window.sessionStorage);
+window.dashboard = window.dashboard || {};
+window.dashboard.clientState = require('./clientState.js')(window.sessionStorage);
 
 window.React = require('react');
 // TODO (bbuchanan): Stop including these components in a global way, just
