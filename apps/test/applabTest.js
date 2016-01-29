@@ -19,6 +19,7 @@ window.dashboard = window.dashboard || {};
 var Applab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
+var constants = require('@cdo/apps/applab/constants');
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -63,10 +64,10 @@ describe('applab: getIdDropdown filtering modes', function () {
     // Create a sample DOM to test against
     var sampleDom =
         '<div>' +
-          '<div id="divApplab">' +
-            '<div class="screen" id="screen1">' +
-              '<div class="chart" id="chart9"></div>' +
-              '<img src="" class="chart-friend" id="image1">' +
+          '<div id="designModeViz">' +
+            '<div class="screen" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'screen1">' +
+              '<div class="chart" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'chart9"></div>' +
+              '<img src="" class="chart-friend" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'image1">' +
             '</div>' +
           '</div>' +
         '</div>';
@@ -97,18 +98,6 @@ describe('applab: getIdDropdown filtering modes', function () {
     ]);
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.screen'), [
       { "display": '"screen1"', "text": '"screen1"' }
-    ]);
-  });
-
-  it('can filter on ID', function () {
-    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
-      { "display": '"screen1"', "text": '"screen1"' }
-    ]);
-    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
-      { "display": '"chart9"', "text": '"chart9"' }
-    ]);
-    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#image1'), [
-      { "display": '"image1"', "text": '"image1"' }
     ]);
   });
 
