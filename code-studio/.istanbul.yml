@@ -6,5 +6,5 @@ check:
     # Required coverage, as a percentage.
     statements: 0.9
     branches: 0.9
-    functions: 1.1
+    functions: 1.0
     lines: 0.9
