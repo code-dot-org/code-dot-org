@@ -20,11 +20,11 @@ The Summit is designed to be a fabulous experience to welcome you to the extende
 ## Learn more
 All focus areas share a basic framework and approach, drawn from adult learning theory and best practices for facilitation, that ensures participants are well prepared to lead high-quality training. However, each focus area’s training curriculum is designed for the specific needs of the teachers and students impacted by the program, and for that reason has its own unique selection criteria, requirements, commitments and benefits.
 
-- [Computer Science Principles Facilitator Development](/educate/facilitator-csp)
-- [Exploring Computer Science Facilitator Development](/educate/facilitator-ecs)
-- [Computer Science in Algebra Facilitator Development](/educate/facilitator-csa)
-- [Computer Science in Science Facilitator Development](/educate/facilitator-css)
-- [Computer Science Fundamentals Facilitator Development](/educate/k5-affiliates)
+- [Computer Science Principles Facilitator Development](/educate/facilitator-csp) (High School)
+- [Exploring Computer Science Facilitator Development](/educate/facilitator-ecs) (High School)
+- [Computer Science in Algebra Facilitator Development](/educate/facilitator-csa) (Middle School)
+- [Computer Science in Science Facilitator Development](/educate/facilitator-css) (Middle School)
+- [Computer Science Fundamentals Facilitator Development](/educate/k5-affiliates) (Elementary School)
 
 Please carefully review the criteria, requirements and commitments for the curriculum focus area of your choice before applying. 
 

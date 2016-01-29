@@ -1,6 +1,6 @@
 ---
 title: CS Curriculum for grades 6-8
-nav: educate2_nav
+nav: educate_nav
 ---
 
 # Middle School
@@ -12,7 +12,7 @@ Our current middle school curriculum focuses on using computer science and progr
 
 Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
 
-[<button>Learn more about curriculum</button>](/curriculum/science) [<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-in-science)
+[<button>Learn more about curriculum</button>](/curriculum/science)
 
 ## Computer Science in Algebra
 
@@ -20,7 +20,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
 
 Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
-[<button>Learn more about curriculum</button>](/curriculum/algebra) [<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-in-algebra)
+[<button>Learn more about curriculum</button>](/curriculum/algebra)
 
 ## Computer Science Fundamentals - Accelerated
 
