@@ -8,7 +8,7 @@ module UsersHelper
   def summarize_user_progress(script, user = current_user, exclude_level_progress = false)
     user_data = {}
     merge_user_summary(user_data, user)
-    merge_script_progress(user_data, user, script)
+    merge_script_progress(user_data, user, script, exclude_level_progress)
     user_data
   end
 
@@ -17,11 +17,9 @@ module UsersHelper
   # {
   #     "lines": 34, "linesOfCodeText": "Total lines of code: 34", "disableSocialShare": true,
   #     "scripts": {
-  #         "49": {
-  #             "name": "course2",
+  #         "course2": {
   #             "levels": {"135": {"status": "perfect", "result": 100}}},
-  #         "46": {
-  #             "name": "artist",
+  #         "artist": {
   #             "levels": {
   #                "1138": {"status": "attempted", "result": 5},
   #                "1147": {"status": "perfect", "result": 30}}}}}
@@ -51,15 +49,15 @@ module UsersHelper
     UserLevel.where(user_id: user.id).each do |ul|
       script_id = ul.script_id
       script = Script.get_from_cache(script_id)
-      user_data[script_id] ||= {name: script.name}
-      merge_script_progress(user_data[script_id], user, script)
+      script_progress = (user_data[script.name] ||= {})
+      merge_script_progress(script_progress, user, script)
     end
     user_data
   end
 
   # Merge the progress for the specified script and user into the user_data result hash.
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
-    return user_data if not user
+    return user_data unless user
 
     if script.trophies
       progress = user.progress(script)

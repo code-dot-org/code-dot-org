@@ -35,12 +35,19 @@ class UsersHelperTest < ActionView::TestCase
       trophies: {current: 0, of: 'of', max: 27}
     }, summarize_user_progress(script, user))
 
+    # Also test with level progress excluded.
+    exclude_level_progress = true
+    assert_equal({
+                     linesOfCode: 42,
+                     linesOfCodeText: 'Total lines of code: 42',
+                     trophies: {current: 0, of: 'of', max: 27}
+                 }, summarize_user_progress(script, user, exclude_level_progress))
+
     assert_equal({
        linesOfCode: 42,
        linesOfCodeText: 'Total lines of code: 42',
        scripts: {
-           script.id => {
-               name: '20-hour',
+           script.name => {
                levels: {
                    ul1.level_id => {status: 'perfect', result: 100},
                    ul3.level_id => {status: 'passed', result: 20}
@@ -62,16 +69,14 @@ class UsersHelperTest < ActionView::TestCase
          linesOfCode: 42,
          linesOfCodeText: 'Total lines of code: 42',
          scripts: {
-             script.id => {
-                 name: '20-hour',
+             script.name => {
                  levels: {
                      ul1.level_id => {status: 'perfect', result: 100},
                      ul3.level_id => {status: 'passed', result: 20}
                  },
                  trophies: {current: 0, of: 'of', max: 27}
              },
-             course1.id => {
-                 name: 'course1',
+             course1.name => {
                  levels: {
                      ul1b.level_id => {status: 'attempted', result: 10},
                  }
