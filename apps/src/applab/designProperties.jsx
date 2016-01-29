@@ -12,6 +12,7 @@ var DesignProperties = module.exports = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
     handleChange: React.PropTypes.func.isRequired,
+    onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired
@@ -185,7 +186,9 @@ var DesignProperties = module.exports = React.createClass({
             <span style={styles.tabLabel}>EVENTS</span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
-            <ElementSelect elements={Applab.getIdDropdown(null, true)} selected={this.props.element} />
+            <ElementSelect onChangeElement={this.props.onChangeElement}
+              elements={Applab.getIdDropdown(null, true)}
+              selected={this.props.element} />
           </div>
         </div>
         <div id="designWorkspaceBody" style={styles.workspaceBody}>

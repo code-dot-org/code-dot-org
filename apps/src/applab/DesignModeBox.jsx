@@ -8,6 +8,7 @@ module.exports = React.createClass({
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
     handleChange: React.PropTypes.func.isRequired,
+    onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
@@ -63,6 +64,7 @@ module.exports = React.createClass({
           <DesignProperties
             element={this.props.element}
             handleChange={this.props.handleChange}
+            onChangeElement={this.props.onChangeElement}
             onDepthChange={this.props.onDepthChange}
             onDelete={this.props.onDelete}
             onInsertEvent={this.props.onInsertEvent}/>
