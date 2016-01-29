@@ -108,3 +108,6 @@ level 'PDK5 Foundations F'
 
 stage 'Markdown Details'
 level 'Test External Markdown'
+
+stage 'Studio'
+level 'Resizing Test'

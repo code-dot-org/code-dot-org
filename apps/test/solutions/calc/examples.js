@@ -203,7 +203,6 @@ module.exports = {
         solutionBlocks +
         invalidExampleMissingResult +
         validExample2 +
-        '</block>' +
         '</xml>'
     },
     {
