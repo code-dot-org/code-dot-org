@@ -10,9 +10,9 @@
  maxstatements: 200
  */
 
-var applabMsg = require('./locale');
-var dom = require('../dom');
-var utils = require('../utils');
+var i18n = require('./locale');
+var dom = require('./dom');
+var utils = require('./utils');
 
 /**
  * Creates the debug area controller and configures it to operate on the given
@@ -201,8 +201,8 @@ DebugArea.prototype.setIconPointingDown = function (isPointingDown) {
   icon.toggleClass('fa-chevron-circle-down', isPointingDown);
 
   var headerText = commandsHeader.find('.header-text');
-  headerText.text(isPointingDown ? applabMsg.debugCommandsHeaderWhenOpen() :
-      applabMsg.debugCommandsHeaderWhenClosed());
+  headerText.text(isPointingDown ? i18n.debugCommandsHeaderWhenOpen() :
+      i18n.debugCommandsHeaderWhenClosed());
 
 };
 

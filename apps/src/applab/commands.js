@@ -10,7 +10,6 @@ var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
 
 var errorHandler = require('./errorHandler');
-var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
@@ -483,11 +482,7 @@ applabCommands.speed = function (opts) {
   // DOCBUG: range is 0-100, not 1-100
   apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
-    var sliderSpeed = opts.percent / 100;
-    if (Applab.speedSlider) {
-      Applab.speedSlider.setValue(sliderSpeed);
-    }
-    Applab.scale.stepSpeed = Applab.stepSpeedFromSliderSpeed(sliderSpeed);
+    Applab.setStepSpeed(opts.percent / 100);
   }
 };
 

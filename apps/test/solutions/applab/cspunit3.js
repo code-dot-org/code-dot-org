@@ -213,7 +213,8 @@ module.exports = {
         var errorText = 'Unknown identifier: turnRight';
 
         var debugOutput = document.getElementById('debug-output');
-        assert(debugOutput.textContent.indexOf(errorText) !== -1);
+        assert(debugOutput.textContent.indexOf(errorText) !== -1,
+            'Debug output did not contain text "' + errorText + '":\n' + debugOutput.textContent);
         return true;
       },
       expected: {
