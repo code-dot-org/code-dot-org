@@ -578,6 +578,10 @@ Applab.startSharedAppAfterWarnings = function () {
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function(config) {
+  // Gross, but necessary for tests, until we can instantiate AppLab and make
+  // this a member variable: Reset this thing until we're ready to create it!
+  jsDebuggerUi = null;
+
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
