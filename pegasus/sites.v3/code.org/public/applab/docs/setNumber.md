@@ -23,9 +23,10 @@ Sets the number for the specified screen element.
 
 [/short_description]
 
-Your apps will sometimes need to change, or clear, the numbers displayed on screen elements. setNumber() can be used to update the number on a textInput, textLabel, button or slider screen element.
+Your apps will sometimes need to change, or clear, the numbers displayed on screen elements*. setNumber() can be used to update the number on a textInput, textLabel, button or slider screen element.
 
-The slider design element was contributed by Mike and Mitchell Schmidt.
+*The slider design element was contributed by Mike and Mitchell Schmidt.
+
 [/description]
 
 ### Examples
