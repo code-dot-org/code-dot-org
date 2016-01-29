@@ -3,7 +3,7 @@ var elementUtils = require('./designElements/elementUtils.js');
 module.exports = React.createClass({
   propTypes: {
     onChangeElement: React.PropTypes.func.isRequired,
-    elements: React.PropTypes.arrayOf(React.PropTypes.string),
+    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     selected: React.PropTypes.instanceOf(HTMLElement)
   },
 
@@ -18,7 +18,7 @@ module.exports = React.createClass({
     return (
       <div style={{float: 'right', marginRight: '-10px'}}>
         <select value={selected} onChange={this.handleChange} style={{width: '150px'}}>
-          {this.props.elements.map(function (element) {
+          {this.props.elementIdList.map(function (element) {
             return <option>{element.display}</option>;
           })}
         </select>
