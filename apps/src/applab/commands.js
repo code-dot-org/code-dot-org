@@ -63,30 +63,36 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
-    if (expectedType === 'color') {
-      // Special handling for colors, must be a string and a valid RGBColor:
-      properType = (typeof varValue === 'string');
-      if (properType) {
-        var color = new RGBColor(varValue);
-        properType = color.ok;
-      }
-    } else if (expectedType === 'uistring') {
-      properType = (typeof varValue === 'string') ||
-                   (typeof varValue === 'number') ||
-                   (typeof varValue === 'boolean');
-    } else if (expectedType === 'number') {
-      properType = (typeof varValue === 'number' ||
-                    (typeof varValue === 'string' && !isNaN(varValue)));
-    } else if (expectedType === 'primitive') {
-      properType = isPrimitiveType(varValue);
-      if (!properType) {
-        // Ensure a descriptive error message is displayed.
-        expectedType = 'string, number, boolean, undefined or null';
-      }
-    } else if (expectedType === 'array') {
-      properType = Array.isArray(varValue);
-    } else {
-      properType = (typeof varValue === expectedType);
+    switch (expectedType) {
+      case 'color':
+        // Special handling for colors, must be a string and a valid RGBColor:
+        properType = (typeof varValue === 'string');
+        if (properType) {
+          var color = new RGBColor(varValue);
+          properType = color.ok;
+        }
+        break;
+      case 'uistring':
+        properType = (typeof varValue === 'string') ||
+          (typeof varValue === 'number') || (typeof varValue === 'boolean');
+        break;
+      case 'number':
+        properType = (typeof varValue === 'number' ||
+          (typeof varValue === 'string' && !isNaN(varValue)));
+        break;
+      case 'primitive':
+        properType = isPrimitiveType(varValue);
+        if (!properType) {
+          // Ensure a descriptive error message is displayed.
+          expectedType = 'string, number, boolean, undefined or null';
+        }
+        break;
+      case 'array':
+        properType = Array.isArray(varValue);
+        break;
+      default:
+        properType = (typeof varValue === expectedType);
+        break;
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
