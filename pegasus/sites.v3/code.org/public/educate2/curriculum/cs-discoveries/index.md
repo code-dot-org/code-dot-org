@@ -23,16 +23,68 @@ CS Discoveries aims to introduce students to tools and programming languages tha
 ### <a name="flexible"></a>Designed for flexible implementation options
 CS Discoveries will be designed primarily for students in grades 6-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
-### <a name="content"></a>A wide lens on Computer Science
-Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, including:
+## <a name="content"></a>Course Overview
+Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both as they are personally relevant and as they impact society
 
-- **Human Computer Interaction:** The myriad ways in which people interface with the computing objects in their lives.
-- **Computational Thinking and Problem Solving:** Learning to think like a Computer Scientist and use computers to solve problems.
-- **The Social Web:** Understanding the internet, its impact on society, and how to use the web as a publishing platform.
-- **Animations and Interactions:** Programming computers to create art, animations, stories, and interactive games.
-- **Physical Computing:** Building computing devices that interact with and sense the physical world in novel and exciting ways.
-- **Making Sense of Data:** Harnessing, processing, and building understanding from the mountains of data all around us.
-- **Mobile App Development:** Designing, creating, and iterating on  mobile apps that solve a real problem.
+### Semester 1: CS Discoveries: Exploration and Expression
+
+The first semester of CS Discoveries introduces students to Computer Science as a vehicle for problem solving, communication, and personal expression. As a whole this semester focuses on the visible aspects of computing and computer science, encouraging students to see where computer science exists around them and how they can engage with it as a tool for exploration and expression.
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 1 - Problem Solving: Computers and Logic </h4>
+
+Computers are all around us, and for students much of their everyday action is impacted by computing. In the unit students will explore what it means for something to be a computer - what core functionality brings together all these items we think of as computers. Students should know how to use computers effectively - this means being able to navigate a computer and accomplish tasks. Students look at the many things computers allow people to do.
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 2 - The Internet: Web Development </h4>
+
+Students will find empowerment through the realization that they too can take part in this creation and dissemination of information online by developing their own web pages from scratch using just HTML and CSS. By critical examining the web pages they visit every day, students will start to explore makes a strong website and then use their new design process to implement parts of those designs. 
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 3 - Programming: Interactive Games and Animations </h4>
+
+Starting off with simple primitive shapes and building up to more sophisticated sprite based games, students will become familiar with the basic concepts that for the foundation of computer programming. The development of a personalized final project will engage students in design, testing, and iteration as they come to see that failure and debugging are an expected (and valuable) part of the programming process which make your end product better. 
+
+</div>
+
+<div style="clear:both"></div>
+
+### Semester 2: CS Discoveries: Innovation and Impact
+
+Where the first semester centered on the immediately observable and personally applicable elements of computer science, the second semester asks students to look outward and explore the impact of computer science on society. Students will see how a thorough user centered design process produces a better application, they’ll investigate how their personal data is collected and used on the web, and they’ll work with bare circuit boards to see how computers collect input and return output in a variety of ways. Through the entirety of this semester student groups will continue to iterate on and refine a mobile app that integrates everything they’ve learned throughout the course into one capstone project.
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 4 - Problem Solving: The Design Process </h4>
+
+By following the design process and working with structured group roles, student groups will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, students will then develop and interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 5 - The Internet: Data and Society </h4>
+
+Students will learn what information they leave behind online, and ways to control who has access to their information. In addition students will learn simple ways to collect data and use it to create apps the display the data to the user in visual ways so that they can gain insight into how data that is uninteresting at the individual level can reveal useful information when compiled. Finally, students will return to the app they began in unit 4 to integrate simple data collection.
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 6 - Programming: The Internet of Things </h4>
+
+By exploring innovative computing devices from a variety of fields, students will explore the essential elements of computer hardware. Using a bare microcontroller board with several integrated sensors and output devices students will learn how software interacts with hardware and they’ll develop prototypes of physical computing devices. In the final stage of the course student groups will once again return to their capstone apps, this time connecting them with their physical computing boards as a means of input, output, or both.
+
+</div>
+
+<div style="clear:both"></div>
 
 ## <a name="involved"></a>Get Involved
 
