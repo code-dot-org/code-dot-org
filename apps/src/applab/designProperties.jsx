@@ -185,7 +185,7 @@ var DesignProperties = module.exports = React.createClass({
             <span style={styles.tabLabel}>EVENTS</span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
-            <ElementSelect elements={Applab.getIdDropdown(null, true)} />
+            <ElementSelect elements={Applab.getIdDropdown(null, true)} selected={this.props.element} />
           </div>
         </div>
         <div id="designWorkspaceBody" style={styles.workspaceBody}>

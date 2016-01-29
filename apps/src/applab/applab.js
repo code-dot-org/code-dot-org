@@ -1914,11 +1914,19 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentSc
     elements = elements.filter(filterSelector);
   }
 
+  // Current screen only list should include the screen itself
+  if (currentScreenOnly) {
+    elements = elements.add(documentRoot);
+  }
+
   // Sort alphabetically by ID, except when showing elements on the current screen (then sort by z-index)
   var comparator = currentScreenOnly ? sortByZIndex : sortById;
 
   return elements.sort(comparator).map(function (_, element) {
-    var id = quote(element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), ''));
+    var id = element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
+    if (!currentScreenOnly) {
+      id = quote(id);
+    }
     return {text: id, display: id};
   }).get();
 };
