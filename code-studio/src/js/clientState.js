@@ -232,14 +232,14 @@ clientState.recordCalloutSeen = function (calloutId) {
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
   var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
-
+  var elementSeen;
   try {
-    var elementSeen = JSON.parse(elementSeenJson);
+    elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
     safelySetItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
     //Something went wrong parsing the json. Blow it up and just put in the new callout
-    var elementSeen = {};
+    elementSeen = {};
     elementSeen[visualElementId] = true;
     safelySetItem(visualElementType, JSON.stringify(elementSeen));
   }
