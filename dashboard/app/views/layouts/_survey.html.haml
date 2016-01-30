@@ -10,7 +10,7 @@
     - if current_user && true # !current_user.survey2016_value
 
       -# If at least 13, and account is at least 14 days old
-      - if !current_user.under_13? && (DateTime.now - current_user.created_at.to_datetime) >= 14
+      - if !current_user.under_13? && true # (DateTime.now - current_user.created_at.to_datetime) >= 14
 
         .survey{style: "background-color: rgb(200,200,200); padding:40px"}
           #surveythanks{style: "display: none"} Thank you for your response.
