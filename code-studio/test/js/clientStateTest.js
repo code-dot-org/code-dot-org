@@ -3,7 +3,8 @@
 'use strict';
 
 var assert = require('assert');
-var $ = require('jquery');
+window.$ = require('jquery');
+require('jquery.cookie');
 var state = require('../../src/js/clientState')(window.sessionStorage, window.$);
 var chai = require('chai');
 

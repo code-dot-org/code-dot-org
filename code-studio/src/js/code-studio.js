@@ -32,8 +32,7 @@ require('./components/progress/course_progress.jsx');
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
-var jquery = require('jquery');
-require('jquery.cookie');
+var jquery = require('jquery-shim');
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
 
