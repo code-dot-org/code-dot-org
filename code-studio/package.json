@@ -47,8 +47,6 @@
     "envify": "^3.4.0",
     "factor-bundle": "^2.5.0",
     "istanbul": "^0.4.2",
-    "jquery": "^2.2.0",
-    "jquery.cookie": "^1.4.1",
     "jshint": "^2.8.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
@@ -66,6 +64,8 @@
   "dependencies": {
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
+    "jquery": "^2.2.0",
+    "jquery.cookie": "^1.4.1",
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",
