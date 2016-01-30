@@ -255,7 +255,7 @@ module AWS
         },
         smooth_streaming: false,
         default_ttl: 0,
-        max_ttl: 31536000, # =1 year
+        max_ttl: 31_536_000, # =1 year
       }
       behavior[:path_pattern] = path if path
       behavior
