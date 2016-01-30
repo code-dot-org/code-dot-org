@@ -14,9 +14,9 @@
   },
   "browserify": {
     "transform": [ "browserify-shim" ]
-  }
+  },
   "browserify-shim": {
-    "jquery": "global:$"
+    "jquery-shim": "global:$"
   },
   "scripts": {
     "postinstall": "linklocal",
@@ -47,6 +47,8 @@
     "envify": "^3.4.0",
     "factor-bundle": "^2.5.0",
     "istanbul": "^0.4.2",
+    "jquery": "^2.2.0",
+    "jquery.cookie": "^1.4.1",
     "jshint": "^2.8.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
