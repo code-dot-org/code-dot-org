@@ -1,4 +1,8 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :survey_result do
+    user nil
+properties "MyText"
+  end
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }

@@ -6,6 +6,7 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
+  resources :survey_results
   def redirect_to_teacher_dashboard
     redirect CDO.code_org_url('/teacher-dashboard')
   end
