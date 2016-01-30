@@ -1,29 +1,44 @@
+- ethnicities = [ "American Indian or Alaska Native", "Asian", "Black or African American", "Hispanic or Latino", "Native Hawaiian or Other Pacific Islander ", "White"]
+
 -# English only for now
 - if language == "en"
 
-  -# Never show the survey.
-  - if false
+  -# Show the survey.
+  - if true
 
     -# If signed in, and user hasn't already filled out this survey
-    - if current_user && !current_user.survey2015_value
+    - if current_user && true # !current_user.survey2016_value
 
       -# If at least 13, and account is at least 14 days old
       - if !current_user.under_13? && (DateTime.now - current_user.created_at.to_datetime) >= 14
 
-        .survey{style: "background-color: rgb(200,200,200); padding:40px; font-size:18px"}
+        .survey{style: "background-color: rgb(200,200,200); padding:40px"}
           #surveythanks{style: "display: none"} Thank you for your response.
           #surveybody
             %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Quick survey
-            %p{style: "padding-top: 10px; font-size:18px"}
-              How likely are you to recommend Code.org to a friend or colleague?
             = form_for(current_user, url: registration_url('user'), html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
-              #dots{style: "padding-top: 10px; padding-bottom: 20px"}
-                - -1.upto(10) do |i|
-                  - display = i == -1 ? "none" : "inline"
-                  %input{style: "margin-right:3px; vertical-align:top; display: #{display}", id: "radio_#{i}", type: "radio", name: "user[survey2015_value]", value: i, onclick: "enableSurveySubmit()"}
-                  %label{style: "display: #{display}; font-size: 20px; padding-right:20px", for: "radio_#{i}"}= i
+              %p{style: "padding-top: 10px; font-size:16px"}
+                Of your students using Code.org's courses, how many are
+              .dots{style: "padding-top: 10px; padding-bottom: 20px"}
+                - ethnicities.each_with_index do |ethnicity, i|
+                  %input{type: "text",  style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicitycount_#{ethnicity}]", onclick: "enableSurveySubmit()"}
+                  =ethnicity
+                  %br/
+
+
+              %p{style: "padding-top: 10px; font-size:16px"}
+                Free and Reduced Meals
+                %div{style: "font-size: 14px"}
+                  (only answer this if you're using Code Studio during school hours)
+              .dots{style: "padding-top: 0px; padding-bottom: 0px; font-size: 14px"}
+                %input{type: "text", style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_comment]"}
+                \% of students with free and reduced meals (FARMs) at your school
+                %br/
+                %br/
+
+
               #textbox{style: "display:none"}
-                %p{style: "font-size:18px"}
+                %p{style: "font-size:16px"}
                   Do you have any additional comments?
                 %input{type: "text", style: "width:600px; height:35px", name: "user[survey2015_comment]"}
               #submit
