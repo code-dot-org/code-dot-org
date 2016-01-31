@@ -1,6 +1,7 @@
-FactoryGirl.define do  factory :survey_result do
+FactoryGirl.define do
+  factory :survey_result do
     user nil
-properties "MyText"
+    properties "MyText"
   end
 
   factory :user do
