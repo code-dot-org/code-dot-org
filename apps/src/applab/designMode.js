@@ -853,7 +853,7 @@ designMode.renderDesignWorkspace = function(element) {
       }
     },
     element: element || null,
-    elementIdList: Applab.getIdDropdown(null, true),
+    elementIdList: Applab.getIdDropdownForCurrentScreen(),
     handleChange: designMode.onPropertyChange.bind(this, element),
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
