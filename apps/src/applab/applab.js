@@ -1926,8 +1926,9 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentSc
     var id = element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
     if (!currentScreenOnly) {
       id = quote(id);
+      return {text: id, display: id};
     }
-    return {text: id, display: id};
+    return id;
   }).get();
 };
 

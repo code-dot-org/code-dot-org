@@ -18,8 +18,8 @@ module.exports = React.createClass({
     return (
       <div style={{float: 'right', marginRight: '-10px'}}>
         <select value={selected} onChange={this.handleChange} style={{width: '150px'}}>
-          {this.props.elementIdList.map(function (element) {
-            return <option>{element.display}</option>;
+          {this.props.elementIdList.map(function (id) {
+            return <option key={id}>{id}</option>;
           })}
         </select>
       </div>
