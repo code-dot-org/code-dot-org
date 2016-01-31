@@ -1882,11 +1882,10 @@ Applab.getAssetDropdown = function (typeFilter) {
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
  * @param {string} [filterSelector] Optional selector to filter for.
- * @param {boolean} [currentScreenOnly] Optionally limit results to the current screen.
  * @returns {Array}
  */
-Applab.getIdDropdown = function (filterSelector, currentScreenOnly) {
-  return Applab.getIdDropdownFromDom_($(document), filterSelector, currentScreenOnly);
+Applab.getIdDropdown = function (filterSelector) {
+  return Applab.getIdDropdownFromDom_($(document), filterSelector);
 };
 
 /**
@@ -1894,49 +1893,44 @@ Applab.getIdDropdown = function (filterSelector, currentScreenOnly) {
  * argument to remove its global dependency and make it testable.
  * @param {jQuery} documentRoot
  * @param {string} filterSelector
- * @param {boolean} currentScreenOnly
  * @returns {Array}
  * @private
  */
-Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector, currentScreenOnly) {
-  if (currentScreenOnly) {
-    documentRoot = documentRoot.find('#designModeViz .screen').filter(function () {
-      return this.style.display !== 'none';
-    }).first();
-  } else {
-    documentRoot = documentRoot.find('#designModeViz');
-  }
-
-  var elements = documentRoot.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]');
+Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
+  var elements = documentRoot.find('#designModeViz [id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]');
 
   // Return all elements when no filter is given
   if (filterSelector) {
     elements = elements.filter(filterSelector);
   }
 
-  // Current screen only list should include the screen itself
-  if (currentScreenOnly) {
-    elements = elements.add(documentRoot);
-  }
-
-  // Sort alphabetically by ID, except when showing elements on the current screen (then sort by z-index)
-  var comparator = currentScreenOnly ? sortByZIndex : sortById;
-
-  return elements.sort(comparator).map(function (_, element) {
-    var id = element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
-    if (!currentScreenOnly) {
-      id = quote(id);
-      return {text: id, display: id};
-    }
-    return id;
+  return elements.sort(byId).map(function (_, element) {
+    var id = quote(element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), ''));
+    return {text: id, display: id};
   }).get();
 };
 
-function sortByZIndex(a, b) {
+/**
+ * Returns a list of IDs currently present in the DOM of the current screen,
+ * including the screen, sorted by z-index.
+ */
+Applab.getIdDropdownForCurrentScreen = function () {
+  var screen = $('#designModeViz .screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first();
+
+  var elements = screen.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]').add(screen);
+
+  return elements.sort(byZIndex).map(function (_, element) {
+    return element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
+  }).get();
+};
+
+function byZIndex(a, b) {
   return a.zIndex - b.zIndex;
 }
 
-function sortById(a, b) {
+function byId(a, b) {
   return a.id > b.id ? 1 : -1;
 }
 
