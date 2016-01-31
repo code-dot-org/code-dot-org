@@ -14,5 +14,7 @@
 #
 
 class SurveyResult < ActiveRecord::Base
+  include SerializedProperties
+  serialized_attrs %w(survey2016_ethnicity_indian survey2016_ethnicity_asian survey2016_ethnicity_black survey2016_ethnicity_hispanic survey2016_ethnicity_hawaiian survey2016_ethnicity_white survey2016_foodstamps)
   belongs_to :user
 end

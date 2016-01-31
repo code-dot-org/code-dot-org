@@ -16,7 +16,7 @@
           #surveythanks{style: "display: none"} Thank you for your response.
           #surveybody
             %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Quick survey
-            = form_for(current_user, url: registration_url('user'), html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
+            = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
               %p{style: "padding-top: 10px; font-size:16px"}
                 Of your students using Code.org's courses, how many are
               .dots{style: "padding-top: 10px; padding-bottom: 20px"}
@@ -36,11 +36,6 @@
                 %br/
                 %br/
 
-
-              #textbox{style: "display:none"}
-                %p{style: "font-size:16px"}
-                  Do you have any additional comments?
-                %input{type: "text", style: "width:600px; height:35px", name: "user[survey2015_comment]"}
               #submit
                 %button#submitSurvey{type: "submit", disabled: true} Submit
                 %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
@@ -50,7 +45,6 @@
 
   function enableSurveySubmit()
   {
-    $("#survey #textbox").slideDown();
     $("#submitSurvey").prop("disabled",false);
   }
 
