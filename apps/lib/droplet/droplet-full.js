@@ -1,8 +1,8 @@
 /* Droplet.
- * Copyright (c) 2015 Anthony Bau.
+ * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2015-11-20
+ * Date: 2016-02-01
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -11397,12 +11397,8 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     return this.mark(0, tree, 0, null);
   };
 
-  JavaScriptParser.prototype.fullFunctionNameArray = function(node) {
-    var obj, props;
-    if (node.type !== 'CallExpression' && node.type !== 'NewExpression') {
-      throw new Error;
-    }
-    obj = node.callee;
+  JavaScriptParser.prototype.fullNameArray = function(obj) {
+    var props;
     props = [];
     while (obj.type === 'MemberExpression') {
       props.unshift(obj.property.name);
@@ -11416,11 +11412,19 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     return props;
   };
 
-  JavaScriptParser.prototype.lookupFunctionName = function(node) {
-    var fname, full, last, wildcard;
-    fname = this.fullFunctionNameArray(node);
+  JavaScriptParser.prototype.lookupKnownName = function(node) {
+    var fn, fname, full, identifier, last, wildcard;
+    if (node.type === 'CallExpression' || node.type === 'NewExpression') {
+      identifier = false;
+    } else if (node.type === 'Identifier' || node.type === 'MemberExpression') {
+      identifier = true;
+    } else {
+      throw new Error;
+    }
+    fname = this.fullNameArray(identifier ? node : node.callee);
     full = fname.join('.');
-    if (full in this.opts.functions) {
+    fn = this.opts.functions[full];
+    if (fn && ((identifier && fn.property) || (!identifier && !fn.property))) {
       return {
         name: full,
         anyobj: false,
@@ -11435,11 +11439,14 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       wildcard = null;
     }
     if (wildcard !== null) {
-      return {
-        name: last,
-        anyobj: true,
-        fn: this.opts.functions[wildcard]
-      };
+      fn = this.opts.functions[wildcard];
+      if (fn && ((identifier && fn.property) || (!identifier && !fn.property))) {
+        return {
+          name: last,
+          anyobj: true,
+          fn: this.opts.functions[wildcard]
+        };
+      }
     }
     return null;
   };
@@ -11455,8 +11462,8 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     if (node.type in CLASS_EXCEPTIONS) {
       return CLASS_EXCEPTIONS[node.type].concat([node.type]);
     } else {
-      if (node.type === 'CallExpression') {
-        known = this.lookupFunctionName(node);
+      if (node.type === 'CallExpression' || node.type === 'NewExpression' || node.type === 'Identifier') {
+        known = this.lookupKnownName(node);
         if (!known || (known.fn.value && known.fn.command)) {
           return [node.type, 'any-drop'];
         }
@@ -11529,21 +11536,20 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
       case 'ExpressionStatement':
         return this.getColor(node.expression);
       case 'CallExpression':
-        known = this.lookupFunctionName(node);
-        if (!known) {
-          return this.opts.categories.command.color;
-        } else if (known.fn.color) {
-          return known.fn.color;
-        } else if (known.fn.value && !known.fn.command) {
-          return this.opts.categories.value.color;
-        } else {
-          return this.opts.categories.command.color;
+      case 'NewExpression':
+      case 'MemberExpression':
+      case 'Identifier':
+        known = this.lookupKnownName(node);
+        if (known) {
+          if (known.fn.color) {
+            return known.fn.color;
+          } else if (known.fn.value && !known.fn.command) {
+            return this.opts.categories.value.color;
+          }
         }
-        break;
-      default:
-        category = this.lookupCategory(node);
-        return (category != null ? category.color : void 0) || 'command';
     }
+    category = this.lookupCategory(node);
+    return (category != null ? category.color : void 0) || 'command';
   };
 
   JavaScriptParser.prototype.getSocketLevel = function(node) {
@@ -11839,12 +11845,14 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         if (node.name === '__') {
           block = this.jsBlock(node, depth, bounds);
           return block.flagToRemove = true;
+        } else if (this.lookupKnownName(node)) {
+          return this.jsBlock(node, depth, bounds);
         }
         break;
       case 'CallExpression':
       case 'NewExpression':
         this.jsBlock(node, depth, bounds);
-        known = this.lookupFunctionName(node);
+        known = this.lookupKnownName(node);
         if (!known) {
           this.jsSocketAndMark(indentDepth, node.callee, depth + 1, NEVER_PAREN);
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
@@ -11885,8 +11893,14 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'MemberExpression':
         this.jsBlock(node, depth, bounds);
-        this.jsSocketAndMark(indentDepth, node.object, depth + 1);
-        return this.jsSocketAndMark(indentDepth, node.property, depth + 1);
+        known = this.lookupKnownName(node);
+        if (!known) {
+          this.jsSocketAndMark(indentDepth, node.property, depth + 1);
+        }
+        if (!known || known.anyobj) {
+          return this.jsSocketAndMark(indentDepth, node.object, depth + 1);
+        }
+        break;
       case 'UpdateExpression':
         this.jsBlock(node, depth, bounds);
         return this.jsSocketAndMark(indentDepth, node.argument, depth + 1);
@@ -12008,14 +12022,15 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
     });
   };
 
-  JavaScriptParser.prototype.jsSocketAndMark = function(indentDepth, node, depth, precedence, bounds, classes, dropdown) {
+  JavaScriptParser.prototype.jsSocketAndMark = function(indentDepth, node, depth, precedence, bounds, classes, dropdown, empty) {
     if (node.type !== 'BlockStatement') {
       this.addSocket({
         bounds: bounds != null ? bounds : this.getBounds(node),
         depth: depth,
         precedence: precedence,
         classes: classes != null ? classes : [],
-        dropdown: dropdown
+        dropdown: dropdown,
+        empty: empty
       });
     }
     return this.mark(indentDepth, node, depth + 1, bounds);
@@ -12081,7 +12096,7 @@ JavaScriptParser.drop = function(block, context, pred) {
 };
 
 isStandardForLoop = function(node) {
-  var variableName;
+  var ref, variableName;
   if (!((node.init != null) && (node.test != null) && (node.update != null))) {
     return false;
   }
@@ -12092,7 +12107,7 @@ isStandardForLoop = function(node) {
   } else {
     return false;
   }
-  return node.test.type === 'BinaryExpression' && node.test.operator === '<' && node.test.left.type === 'Identifier' && node.test.left.name === variableName && node.update.type === 'UpdateExpression' && node.update.operator === '++' && node.update.argument.type === 'Identifier' && node.update.argument.name === variableName;
+  return node.test.type === 'BinaryExpression' && node.test.operator === '<' && node.test.left.type === 'Identifier' && node.test.left.name === variableName && ((ref = node.test.right.type) === 'Literal' || ref === 'Identifier') && node.update.type === 'UpdateExpression' && node.update.operator === '++' && node.update.argument.type === 'Identifier' && node.update.argument.name === variableName;
 };
 
 JavaScriptParser.empty = "__";
@@ -12131,7 +12146,7 @@ JavaScriptParser.handleButton = function(text, button, oldBlock) {
     }
     if (elseLocation != null) {
       lines = text.split('\n');
-      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column;
+      elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
       return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
     } else {
       return text + ' else {\n  __\n}';
