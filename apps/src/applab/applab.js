@@ -1615,3 +1615,8 @@ Applab.loadDefaultScreen = function() {
     $('#divApplab .screen').first().attr('id');
   Applab.changeScreen(defaultScreen);
 };
+
+// Wrap design mode function so that we can call from commands
+Applab.updateProperty = function (element, property, value) {
+  return designMode.updateProperty(element, property, value);
+};

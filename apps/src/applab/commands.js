@@ -8,6 +8,7 @@ var keyEvent = require('./keyEvent');
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var setPropertyDropdown = require('./setPropertyDropdown');
 
 var errorHandler = require('./errorHandler');
 var outputError = errorHandler.outputError;
@@ -54,34 +55,44 @@ function isPrimitiveType(value) {
   }
 }
 
+/**
+ * Validates a user function paramer, and outputs error to the console if invalid
+ * @returns {boolean} True if param passed validation.
+ */
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
-    if (expectedType === 'color') {
-      // Special handling for colors, must be a string and a valid RGBColor:
-      properType = (typeof varValue === 'string');
-      if (properType) {
-        var color = new RGBColor(varValue);
-        properType = color.ok;
-      }
-    } else if (expectedType === 'uistring') {
-      properType = (typeof varValue === 'string') ||
-                   (typeof varValue === 'number') ||
-                   (typeof varValue === 'boolean');
-    } else if (expectedType === 'number') {
-      properType = (typeof varValue === 'number' ||
-                    (typeof varValue === 'string' && !isNaN(varValue)));
-    } else if (expectedType === 'primitive') {
-      properType = isPrimitiveType(varValue);
-      if (!properType) {
-        // Ensure a descriptive error message is displayed.
-        expectedType = 'string, number, boolean, undefined or null';
-      }
-    } else if (expectedType === 'array') {
-      properType = Array.isArray(varValue);
-    } else {
-      properType = (typeof varValue === expectedType);
+    switch (expectedType) {
+      case 'color':
+        // Special handling for colors, must be a string and a valid RGBColor:
+        properType = (typeof varValue === 'string');
+        if (properType) {
+          var color = new RGBColor(varValue);
+          properType = color.ok;
+        }
+        break;
+      case 'uistring':
+        properType = (typeof varValue === 'string') ||
+          (typeof varValue === 'number') || (typeof varValue === 'boolean');
+        break;
+      case 'number':
+        properType = (typeof varValue === 'number' ||
+          (typeof varValue === 'string' && !isNaN(varValue)));
+        break;
+      case 'primitive':
+        properType = isPrimitiveType(varValue);
+        if (!properType) {
+          // Ensure a descriptive error message is displayed.
+          expectedType = 'string, number, boolean, undefined or null';
+        }
+        break;
+      case 'array':
+        properType = Array.isArray(varValue);
+        break;
+      default:
+        properType = (typeof varValue === expectedType);
+        break;
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
@@ -92,6 +103,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     opts[validatedTypeKey] = properType;
   }
+  return !!opts[validatedTypeKey];
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
@@ -1151,6 +1163,35 @@ function setSize_(elementId, width, height) {
     element.style.height = height + 'px';
   }
 }
+
+applabCommands.setProperty = function(opts) {
+  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
+
+  var elementId = opts.elementId;
+  var property = opts.property;
+  var value = opts.value;
+
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  if (!info) {
+    var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
+    outputError('Cannot set property "' + property + '" on element "' + elementId + '".',
+      ErrorLevel.ERROR, currentLineNumber);
+    return;
+  }
+
+  var valid = apiValidateType(opts, 'setProperty', 'value', opts.value, info.type);
+  if (!valid) {
+    return;
+  }
+
+  Applab.updateProperty(element, info.internalName, value);
+};
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
