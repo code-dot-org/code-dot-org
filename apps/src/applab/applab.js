@@ -1181,7 +1181,7 @@ Applab.execute = function() {
       }
 
       Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
-      Applab.JSInterpreter.initialize({
+      Applab.JSInterpreter.parse({
         code: codeWhenRun,
         blocks: dropletConfig.blocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
