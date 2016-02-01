@@ -16,6 +16,7 @@
 #  index_hint_view_requests_on_script_id_and_level_id  (script_id,level_id)
 #  index_hint_view_requests_on_user_id                 (user_id)
 #
+
 require 'dynamic_config/gatekeeper'
 
 class HintViewRequest < ActiveRecord::Base
