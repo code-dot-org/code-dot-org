@@ -32,10 +32,33 @@ def commit_changes(name)
   puts `git push`
 end
 
-Dir.chdir(deploy_dir) do
-  name = ask_for_name
+options = {}
 
-  if check_changes
+OptionParser.new do |opts|
+  opts.on('-n', '--name NAME', 'Your name, or name of the process doing this commit') do |name|
+    options['name'] = name
+  end
+
+  opts.on('-s', '--subdirectory SUBDIRECTORY', 'Only push changes in this subdirectory') do |subdir|
+    options['subdirectory'] = subdir
+  end
+
+  opts.on('-f', '--force', 'Damn the torpedos, just do the commit and push, requires name') do
+    options['force'] = true
+  end
+
+  opts.on('-h', '--help', 'Print this') do
+    puts opts
+    exit
+  end
+end.parse!
+
+raise OptionParser::MissingArgument, 'Name is required if forcing push' if options['force'] && options['name'].nil?
+
+Dir.chdir(deploy_dir) do
+  name = options['name'] || ask_for_name
+
+  if options['force'] || check_changes
     commit_changes(name)
   end
 end

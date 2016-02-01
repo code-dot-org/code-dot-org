@@ -1,6 +1,11 @@
 # Contributing
 
-We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to contributing@code.org, and we’ll be happy to match you with a project. You can start setting up with these next steps.
+We'd love to have you join our group of contributors! Please e-mail your areas of interest and your availability to contributing@code.org, and we’ll be happy to match you with a project.
+
+This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
+[code-of-conduct]: http://todogroup.org/opencodeofconduct/#Code.org/abuse@code.org
+
+You can start setting up with these next steps:
 
 1. Anyone who would like to contribute to **[Code.org](https://github.com/code-dot-org/)** projects **must read and sign the [Contributor License Agreement](https://na2.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=8eb90665-c9f7-4b06-81a5-11d12020f251)**. We can't accept pull requests from contributors who haven't yet signed the CLA.
 
@@ -15,7 +20,7 @@ Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We hav
 * To ensure our precommit linting hook is installed, run `rake install:hooks`. You should only have to do this once.
 * To lint the entire project, run `rake lint` from the repository root.  This will check all Ruby, JavaScript and HAML.
 * To lint only part of the project, run one of these commands from the repository root:
-  * dashboard: See the [dashboard README](./dashboard#code-style)
+  * dashboard: `cd dashboard && rubocop && haml-lint`
   * pegasus Ruby: `cd pegasus && rubocop`
   * pegasus HAML: `haml-lint pegasus`
   * apps: See the [apps README](./apps#style-guide)

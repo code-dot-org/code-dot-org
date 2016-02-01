@@ -248,6 +248,13 @@
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
   "workspaceHeaderShort": "Area di lavoro: ",
+  "debugConsoleHeader": "Debug Console",
+  "debugCommandsHeaderWhenOpen": "Debug Commands",
+  "debugCommandsHeaderWhenClosed": "Show Debug Commands",
   "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle."
+  "pause": "Break",
+  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "stepIn": "Step in",
+  "stepOver": "Step over",
+  "stepOut": "Step out"
 }
