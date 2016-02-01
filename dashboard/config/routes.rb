@@ -6,7 +6,7 @@ module OPS
 end
 
 Dashboard::Application.routes.draw do
-  resources :survey_results, only: [:create]
+  resources :survey_results, only: [:create], defaults: { format: 'json' }
 
   def redirect_to_teacher_dashboard
     redirect CDO.code_org_url('/teacher-dashboard')
