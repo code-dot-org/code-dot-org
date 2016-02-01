@@ -112,7 +112,7 @@
   $("#mazeTable").handsontable({
     data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
     validator: function(value, callback) {
-      var matches = value.match && value.match(/^(\+|-)?(\d+)(R|P)?(FC|C|Cany)?$/);
+      var matches = value.match(/^(\+|-)?(\d+)((,\d+)?|(R|P)?(FC|C|Cany)?)?$/);
       callback(!!matches);
     }, afterChange: function(changes, source) {
       $('#level_maze_data').val(JSON.stringify(data));
