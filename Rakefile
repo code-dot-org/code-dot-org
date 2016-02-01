@@ -160,7 +160,7 @@ namespace :build do
 
           # If building in staging, commit the updated schema schema.
           HipChat.log 'Committing updated schema_cache.dump file...', color: 'purple'
-          RakeUtils.system 'git', 'commit', '-m', '"Updated schema cache"'
+          RakeUtils.system 'git', 'commit', '-m', '"Update schema cache after schema changes."'
           RakeUtils.git_push
         end
 
