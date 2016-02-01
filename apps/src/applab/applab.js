@@ -1905,7 +1905,7 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
   }
 
   return elements.sort(byId).map(function (_, element) {
-    var id = quote(element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), ''));
+    var id = quote(elementUtils.getId(element));
     return {text: id, display: id};
   }).get();
 };
@@ -1934,7 +1934,7 @@ Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
   var elements = screen.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]').add(screen);
 
   return elements.map(function (_, element) {
-    return element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
+    return elementUtils.getId(element);
   }).get();
 };
 
