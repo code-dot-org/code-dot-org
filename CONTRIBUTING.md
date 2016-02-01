@@ -20,7 +20,7 @@ Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We hav
 * To ensure our precommit linting hook is installed, run `rake install:hooks`. You should only have to do this once.
 * To lint the entire project, run `rake lint` from the repository root.  This will check all Ruby, JavaScript and HAML.
 * To lint only part of the project, run one of these commands from the repository root:
-  * dashboard: See the [dashboard README](./dashboard#code-style)
+  * dashboard: `cd dashboard && rubocop && haml-lint`
   * pegasus Ruby: `cd pegasus && rubocop`
   * pegasus HAML: `haml-lint pegasus`
   * apps: See the [apps README](./apps#style-guide)
