@@ -17,6 +17,7 @@ var constants = require('./constants');
 var DebugArea = require('./DebugArea');
 var dom = require('./dom');
 var JSInterpreter = require('./JSInterpreter');
+var Observer = require('./Observer');
 var Slider = require('./slider');
 var utils = require('./utils');
 
@@ -47,6 +48,9 @@ var JsDebuggerUi = module.exports = function (getJsInterpreter, runApp) {
    * @private {function}
    */
   this.getJsInterpreter_ = getJsInterpreter;
+
+  /** @private {Observer} */
+  this.observer_ = new Observer();
 
   /**
    * Callback for "launching" the app, used by the "Step In" button when the app
@@ -89,12 +93,10 @@ JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
  * @param {JSInterpreter} jsInterpreter
  */
 JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
-  this.nextStepChangedKey_ = jsInterpreter.onNextStepChanged.register(
+  this.observer_.observe(jsInterpreter.onNextStepChanged,
       this.updatePauseUiState.bind(this));
-  this.nextStepChangedEvent_ = jsInterpreter.onNextStepChanged;
-
-  this.pauseKey_ = jsInterpreter.onPause.register(this.onPauseContinueButton.bind(this));
-  this.pauseEvent_ = jsInterpreter.onPause;
+  this.observer_.observe(jsInterpreter.onPause,
+      this.onPauseContinueButton.bind(this));
 };
 
 /**
@@ -104,17 +106,7 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
  * Safe to call when the debugger is already detached.
  */
 JsDebuggerUi.prototype.detach = function () {
-  if (this.pauseKey_) {
-    this.pauseEvent_.unregister(this.pauseKey_);
-    this.pauseKey_ = null;
-    this.pauseEvent_ = null;
-  }
-
-  if (this.nextStepChangedKey_) {
-    this.nextStepChangedEvent_.unregister(this.nextStepChangedKey_);
-    this.nextStepChangedKey_ = null;
-    this.nextStepChangedEvent_ = null;
-  }
+  this.observer_.unobserveAll();
 };
 
 /**
