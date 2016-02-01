@@ -302,6 +302,157 @@ module.exports = {
     },
 
     {
+      description: "setProperty on design mode created canvas",
+      editCode: true,
+      levelHtml:
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><canvas width="100px" height="100px" id="canvas1" style="position: absolute; left: 65px; top: 40px; margin: 0px;"></canvas></div></div>',
+      xml:
+        'setProperty("canvas1", "width", 12);' +
+        'setProperty("canvas1", "height", 13);',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var canvas = $("#canvas1")[0];
+
+          // we set the width/height attributes instead of style.width/height
+          assert.equal(canvas.style.width, '');
+          assert.equal(canvas.style.height, '');
+          assert.equal(canvas.getAttribute('width'), '12px');
+          assert.equal(canvas.getAttribute('height'), '13px');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on design mode created screen",
+      editCode: true,
+      levelHtml:
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="display: none; width: 320px; height: 450px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"></div></div>',
+      xml:
+        'setProperty("screen1", "image", "' + flappyImage + '");',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var screen = $("#screen1")[0];
+
+          // we set the width/height attributes instead of style.width/height
+          console.log(screen.style.backgroundImage);
+          assert(/url\(.*flappy_promo.png\)$/.test(screen.style.backgroundImage));
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on design mode created image",
+      editCode: true,
+      levelHtml:
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" id="image1" style="height: 100px; width: 100px; position: absolute; left: 125px; top: 235px; margin: 0px;" /></div></div>',
+      xml:
+        'setProperty("image1", "picture", "' + flappyImage + '");',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var image = $("#image1")[0];
+
+          // we set the width/height attributes instead of style.width/height
+          assert(/flappy_promo.png$/.test(image.getAttribute('data-canonical-image-url')));
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on design mode created radio button",
+      editCode: true,
+      levelHtml:
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="radio" id="radio_button1" style="width: 12px; height: 12px; margin: 0px; position: absolute; left: 85px; top: 75px;" /></div></div>',
+      xml:
+        'setProperty("radio_button1", "group-id", "gid1");' +
+        'setProperty("radio_button1", "checked", true);',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var radio = $("#radio_button1")[0];
+
+          assert.equal(radio.getAttribute('name'), "gid1");
+          assert.equal(radio.getAttribute('checked'), "checked");
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "setProperty on design mode created text area",
+      editCode: true,
+      levelHtml:
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><div contenteditable="true" class="textArea" id="text_area1" style="width: 200px; height: 100px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 55px; top: 90px; margin: 0px; background-color: rgb(255, 255, 255);"></div></div></div>',
+      xml:
+        'setProperty("text_area1", "readonly", true);',
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        testUtils.runOnAppTick(Applab, 2, function () {
+          var text = $("#text_area1")[0];
+
+          assert.equal(text.getAttribute('contenteditable'), "false");
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, "");
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
       description: "setProperty invalid prop",
       editCode: true,
       xml:

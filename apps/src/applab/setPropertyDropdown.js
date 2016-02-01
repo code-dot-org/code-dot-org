@@ -120,8 +120,8 @@ PROP_NAMES[ElementType.IMAGE] = [
   'hidden'
 ];
 PROP_NAMES[ElementType.CANVAS] = [
-  'width',
-  'height',
+  'canvasWidth',
+  'canvasHeight',
   'x',
   'y',
 ];
