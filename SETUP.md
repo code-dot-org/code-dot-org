@@ -98,11 +98,11 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
 
 # More Information
 Please also see our other documentation, including our:
-* [Main README](https://github.com/code-dot-org/code-dot-org/blob/staging/README.md)
-* [Contributing Documentation](https://github.com/code-dot-org/code-dot-org/blob/staging/CONTRIBUTING.md)
-* [Testing Documentation](https://github.com/code-dot-org/code-dot-org/blob/staging/TESTING.md)
-* [Styleguide Documentation](https://github.com/code-dot-org/code-dot-org/blob/staging/STYLEGUIDE.md)
-* [License](https://github.com/code-dot-org/code-dot-org/blob/staging/LICENSE)
+* [Main README](./README.md)
+* [Contributing Documentation](./CONTRIBUTING.md)
+* [Testing Documentation](./TESTING.md)
+* [Styleguide Documentation](./STYLEGUIDE.md)
+* [License](./LICENSE)
 
 Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md)
 for more information on helping us out.

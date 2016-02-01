@@ -6,7 +6,7 @@
 
 
 # Build setup
-This [Setup](https://github.com/code-dot-org/code-dot-org/blob/staging/SETUP.md) document describes how to set up your workstation to develop for Code.org.
+This [Setup](./SETUP.md) document describes how to set up your workstation to develop for Code.org.
 
 # Codebase
 
