@@ -21,6 +21,20 @@ var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
 var constants = require('@cdo/apps/applab/constants');
 
+function setupVizDom() {
+  // Create a sample DOM to test against
+  var sampleDom =
+    '<div>' +
+      '<div id="designModeViz">' +
+        '<div class="screen" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'screen1">' +
+          '<div class="chart" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'chart9"></div>' +
+          '<img src="" class="chart-friend" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'image1">' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  return $(sampleDom);
+}
+
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
     var html =
@@ -61,17 +75,7 @@ describe('applab: getIdDropdown filtering modes', function () {
   var documentRoot;
 
   beforeEach(function () {
-    // Create a sample DOM to test against
-    var sampleDom =
-        '<div>' +
-          '<div id="designModeViz">' +
-            '<div class="screen" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'screen1">' +
-              '<div class="chart" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'chart9"></div>' +
-              '<img src="" class="chart-friend" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'image1">' +
-            '</div>' +
-          '</div>' +
-        '</div>';
-    documentRoot = $(sampleDom);
+    documentRoot = setupVizDom();
   });
 
   it('produces all IDs when no filter is given', function () {
@@ -109,6 +113,20 @@ describe('applab: getIdDropdown filtering modes', function () {
     ]);
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
       { "display": '"image1"', "text": '"image1"' }
+    ]);
+  });
+});
+
+describe('applab: getIdDropdownForCurrentScreen ordering', function () {
+  var documentRoot;
+
+  beforeEach(function () {
+    documentRoot = setupVizDom();
+  });
+
+  it('returns the correct ordering', function () {
+    assert.deepEqual(Applab.getIdDropdownForCurrentScreenFromDom_(documentRoot), [
+      'screen1', 'chart9', 'image1'
     ]);
   });
 });

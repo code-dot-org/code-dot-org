@@ -1910,12 +1910,24 @@ Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
   }).get();
 };
 
+function byId(a, b) {
+  return a.id > b.id ? 1 : -1;
+}
+
 /**
  * Returns a list of IDs currently present in the DOM of the current screen,
  * including the screen, sorted by z-index.
  */
 Applab.getIdDropdownForCurrentScreen = function () {
-  var screen = $('#designModeViz .screen').filter(function () {
+  return Applab.getIdDropdownForCurrentScreenFromDom_($('#designModeViz'));
+};
+
+/**
+ * Internal helper for getIdDropdownForCurrentScreen.
+ * @private
+ */
+Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
+  var screen = documentRoot.find('.screen').filter(function () {
     return this.style.display !== 'none';
   }).first();
 
@@ -1925,10 +1937,6 @@ Applab.getIdDropdownForCurrentScreen = function () {
     return element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
   }).get();
 };
-
-function byId(a, b) {
-  return a.id > b.id ? 1 : -1;
-}
 
 /**
  * @returns {HTMLElement} The first "screen" that isn't hidden.
