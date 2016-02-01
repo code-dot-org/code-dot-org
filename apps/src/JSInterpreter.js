@@ -44,7 +44,7 @@ var JSInterpreter = module.exports = function (options) {
  * @param {boolean} [options.enableEvents] - allow the interpreter to define
  *        event handlers that can be invoked by native code. (default false)
  */
-JSInterpreter.prototype.initialize = function (options) {
+JSInterpreter.prototype.parse = function (options) {
   if (!this.studioApp.hideSource) {
     this.codeInfo = {};
     this.codeInfo.userCodeStartOffset = 0;

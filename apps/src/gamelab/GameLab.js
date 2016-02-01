@@ -352,7 +352,7 @@ GameLab.prototype.execute = function() {
         pRotationZ: this.p5
       }
     });
-    this.JSInterpreter.initialize({
+    this.JSInterpreter.parse({
       code: this.studioApp_.getCode(),
       blocks: dropletConfig.blocks,
       blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,

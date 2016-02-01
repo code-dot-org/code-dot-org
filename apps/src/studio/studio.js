@@ -2889,7 +2889,7 @@ Studio.execute = function() {
       studioApp: studioApp,
       onExecutionError: handleExecutionError,
     });
-    Studio.JSInterpreter.initialize({
+    Studio.JSInterpreter.parse({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
