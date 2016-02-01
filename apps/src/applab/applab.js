@@ -1921,14 +1921,10 @@ Applab.getIdDropdownForCurrentScreen = function () {
 
   var elements = screen.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]').add(screen);
 
-  return elements.sort(byZIndex).map(function (_, element) {
+  return elements.map(function (_, element) {
     return element.id.replace(new RegExp('^' + applabConstants.DESIGN_ELEMENT_ID_PREFIX), '');
   }).get();
 };
-
-function byZIndex(a, b) {
-  return a.zIndex - b.zIndex;
-}
 
 function byId(a, b) {
   return a.id > b.id ? 1 : -1;
