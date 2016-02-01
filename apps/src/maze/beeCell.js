@@ -13,7 +13,8 @@
 var CLOUD = {
   STATIC: 'FC',
   VARIABLE: 'C',
-  ANY: 'Cany'
+  ANY: 'Cany',
+  NONE: undefined
 };
 var FLOWER = {
   RED: 'R',
@@ -24,7 +25,7 @@ var PREFIX = {
   HIVE: '-'
 };
 
-var BeeCell = function (value, clouded, prefix, color) {
+var BeeCell = function (value, clouded, prefix, color, range) {
   /**
    * @type {String}
    */
@@ -43,6 +44,11 @@ var BeeCell = function (value, clouded, prefix, color) {
   /**
    * @type {Number}
    */
+  this.range_ = range || value;
+
+  /**
+   * @type {Number}
+   */
   this.originalValue_ = value;
 
   /**
@@ -50,6 +56,12 @@ var BeeCell = function (value, clouded, prefix, color) {
    */
   this.currentValue_ = undefined;
   this.resetCurrentValue();
+
+  if (this.isVariableRange() && this.isVariableCloud()) {
+    // We don't support both of these. Throw an error or something.
+    console.warn("Cells cannot have both variable ranges and variable clouds");
+    this.range_ = this.originalValue_;
+  }
 };
 
 module.exports = BeeCell;
@@ -124,6 +136,10 @@ BeeCell.prototype.isVariableCloud = function () {
   return (this.clouded_ === CLOUD.VARIABLE || this.clouded_ === CLOUD.ANY);
 };
 
+BeeCell.prototype.isVariableRange = function () {
+  return this.range_ && this.range_ > this.originalValue_;
+};
+
 /**
  * Variable cells can represent multiple possible kinds of grid assets,
  * whereas non-variable cells can represent only a single kind. This
@@ -138,9 +154,8 @@ BeeCell.prototype.getPossibleGridAssets = function () {
   //   Flower or Honeycomb: nC
   //   Flower, Honeycomb, or Nothing: nCany
 
+  var possibilities = [];
   if (this.isVariableCloud()) {
-    var possibilities = [];
-
     if (this.isFlower() || !this.prefix_) {
       possibilities.push(new BeeCell(this.originalValue_, CLOUD.STATIC, PREFIX.FLOWER, this.color_));
     }
@@ -152,11 +167,15 @@ BeeCell.prototype.getPossibleGridAssets = function () {
     if (this.clouded_ === CLOUD.ANY || this.prefix_) {
       possibilities.push(new BeeCell(0, CLOUD.STATIC));
     }
-
-    return possibilities;
+  } else if (this.isVariableRange()) {
+    for (var i = this.originalValue_; i <= this.range_; i++) {
+      possibilities.push(new BeeCell(i, CLOUD.NONE, PREFIX.FLOWER, FLOWER.PURPLE));
+    }
+  } else {
+    possibilities.push(this);
   }
 
-  return [this];
+  return possibilities;
 };
 
 
@@ -166,28 +185,17 @@ BeeCell.prototype.getPossibleGridAssets = function () {
  * @return {BeeCell}
  */
 BeeCell.parse = function (string) {
-  var matches = string.match && string.match(/^(\+|-)?(\d+)(R|P)?(FC|C|Cany)?$/);
-  var value, clouded, prefix, color;
+  var matches = string.match && string.match(/^(\+|-)?(\d+)((,\d+)?|(R|P)?(FC|C|Cany)?)?$/);
+  var value, clouded, prefix, color, range;
   if (matches) {
     prefix = matches[1];
     value = parseInt(matches[2]);
-    color = matches[3];
-    clouded = matches[4];
-  } else {
+    range = matches[4] && parseInt(matches[4].replace(',' ,''));
+    color = matches[5];
+    clouded = matches[6];
+  } else if (!isNaN(parseInt(string))) {
     value = string;
   }
 
-  // TODO: when we add numeric ranges, this becomes:
-  /*
-  var matches = cell.match && cell.match(/^(\+|-)?(\d+)(,\d+)?(R|P)?(FC|C|Cany)?$/);
-  return {
-    prefix: matches[1],
-    value: matches[2],
-    range: matches[3],
-    color: matches[4],
-    clouded: matches[5],
-  };
-  */
-
-  return new BeeCell(value, clouded, prefix, color);
+  return new BeeCell(value, clouded, prefix, color, range);
 };

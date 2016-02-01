@@ -46,11 +46,14 @@ class Karel < Maze
       row.each_with_index do |cell, y|
         # optional +/-
         # followed by the number
-        # optionally followed by R or P to override default flower color
-        # optionally followed by:
-        #   FC to indicate an old-style "fixed" cloud or
-        #   C or Cany to indicate a new "dynamic" cloud
-        match = /^(\+|-)?(\d+)(R|P)?(FC|Cany|C)?$/.match(cell.to_s)
+        # optionally followed by EITHER:
+        #   optional R or P to override default flower color
+        #   optionally followed by:
+        #     FC to indicate an old-style "fixed" cloud or
+        #     C or Cany to indicate a new "dynamic" cloud
+        # OR:
+        #   a comma then a number to indicate a range
+        match = /^(\+|-)?\d+((,\d+)?|(R|P)?(FC|Cany|C)?)?$/.match(cell.to_s)
         unless match
           raise ArgumentError.new("Cell (#{x},#{y}) with content \"#{cell}\" is invalid")
         end

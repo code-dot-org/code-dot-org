@@ -75,7 +75,7 @@ Bee.getAllStaticGrids = function (variableGrid) {
   var grids = [ variableGrid ];
   variableGrid.forEach(function (row, x) {
     row.forEach(function (cell, y) {
-      if (cell.isVariableCloud()) {
+      if (cell.isVariableCloud() || cell.isVariableRange()) {
         var possibleAssets = cell.getPossibleGridAssets();
         var newGrids = [];
         possibleAssets.forEach(function(asset) {
