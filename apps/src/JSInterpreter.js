@@ -8,17 +8,33 @@ var _ = utils.getLodash();
  * adds stepping, batching of steps, code highlighting, error handling,
  * breakpoints, general debug capabilities (step in, step out, step over), and
  * an optional event queue.
+ * @constructor
+ * @param {!Object} options
+ * @param {!StudioApp} options.studioApp
+ * @param {function} [options.shouldRunAtMaxSpeed]
+ * @param {number} [options.maxInterpreterStepsPerTick]
+ * @param {Object} [options.customMarshalGlobalProperties]
  */
 var JSInterpreter = module.exports = function (options) {
-
   this.studioApp = options.studioApp;
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
-  this.onNextStepChanged = new ObservableEvent();
-  this.onPause = new ObservableEvent();
-  this.onExecutionError = new ObservableEvent();
-  this.onExecutionWarning = new ObservableEvent();
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
+
+  // Publicly-exposed events that anyone with access to the JSInterpreter can
+  // observe and respond to.
+
+  /** @type {ObservableEvent} */
+  this.onNextStepChanged = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.onPause = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.onExecutionError = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.onExecutionWarning = new ObservableEvent();
 
   this.paused = false;
   this.yieldExecution = false;
