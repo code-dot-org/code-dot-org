@@ -19,9 +19,6 @@ require 'cdo/hash'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-# We need to explicitly require the abstract_mysql_adapter to load the schema cache dump.
-require 'active_record/connection_adapters/abstract_mysql_adapter'
-
 module Dashboard
   class Application < Rails::Application
 
