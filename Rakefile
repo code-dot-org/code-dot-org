@@ -151,6 +151,19 @@ namespace :build do
         HipChat.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:migrate'
 
+        # Update the schema cache file.
+        schema_cache_file = dashboard_dir('db/schema_cache.dump')
+        RakeUtils.rake  'db:schema:cache:dump'
+
+        if RakeUtils.file_changed_from_git?(schema_cache_file)
+          RakeUtils.system 'git', 'add', schema_cache_file
+
+          # If building in staging, commit the updated schema schema.
+          HipChat.log 'Committing updated schema_cache.dump file...', color: 'purple'
+          RakeUtils.system 'git', 'commit', '-m', '"Updated schema cache"'
+          RakeUtils.git_push
+        end
+
         HipChat.log 'Seeding <b>dashboard</b>...'
         RakeUtils.rake 'seed:all'
       end
