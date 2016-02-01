@@ -17,6 +17,8 @@ var constants = require('../constants');
 var CrosshairOverlay = require('./CrosshairOverlay');
 var SVG_NS = constants.SVG_NS;
 
+var scaledDropPoint = require('./scaledDropPoint');
+
 /**
  * Creates and controls an SVG overlay on the app visualization.
  * @constructor
@@ -121,7 +123,16 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
 
   this.mousePos_.x = event.clientX;
   this.mousePos_.y = event.clientY;
-  this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
+  // TODO - better way to accomplish this without introducing use of these selectors
+  if ($(".ui-draggable-dragging").length) {
+    var GRID_SIZE = 5;
+    var div = document.getElementById('designModeViz');
+    var point = scaledDropPoint(div, $(".ui-draggable-dragging"), GRID_SIZE);
+    this.mousePos_.x = point.left;
+    this.mousePos_.y = point.top;
+  } else {
+    this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
+  }
 
   if (this.ownElement_.parentNode) {
     this.render(this.ownElement_.parentNode, this.props_);

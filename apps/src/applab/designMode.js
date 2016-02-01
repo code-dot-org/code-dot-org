@@ -14,6 +14,8 @@ var applabCommands = require('./commands');
 var designMode = module.exports;
 var utils = require('../utils');
 
+var scaledDropPoint = require('./scaledDropPoint');
+
 var currentlyEditedElement = null;
 var currentScreenId = null;
 
@@ -747,17 +749,10 @@ designMode.configureDragAndDrop = function () {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
       var div = document.getElementById('designModeViz');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 
-      var left = (ui.helper.offset().left - $('#designModeViz').offset().left) / xScale;
-      var top = (ui.helper.offset().top - $('#designModeViz').offset().top) / yScale;
-
-      // snap top-left corner to nearest location in the grid
-      left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-      var element = designMode.createElement(elementType, left, top);
+      var point = scaledDropPoint(div, ui.helper, GRID_SIZE);
+      
+      var element = designMode.createElement(elementType, point.left, point.top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
