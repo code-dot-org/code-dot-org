@@ -3,7 +3,7 @@ class NotesController < ApplicationController
     slides_localized = try_t('slides.' + params[:key])
 
     unless slides_localized
-      render('notes/coming_soon', layout: false, formats: [:html]) and return
+      head :not_found and return
     end
 
     @slides = fix_slide_images(slides_localized)
