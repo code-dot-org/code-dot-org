@@ -16,7 +16,7 @@ var JSInterpreter = module.exports = function (options) {
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.onNextStepChanged = new ObservableEvent();
   this.onPause = new ObservableEvent();
-  this.onExecutionError = options.onExecutionError || function() {};
+  this.onExecutionError = new ObservableEvent();
   this.onExecutionWarning = options.onExecutionWarning || function() {};
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
 
@@ -130,7 +130,7 @@ JSInterpreter.prototype.parse = function (options) {
     new window.Interpreter(options.code, initFunc);
   }
   catch(err) {
-    this.onExecutionError(err);
+    this.onExecutionError.notifyObservers(err);
   }
 
 };
@@ -438,7 +438,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.onExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      this.onExecutionError.notifyObservers(err,
+          inUserCode ? (userCodeRow + 1) : undefined);
       this.executeLoopDepth--;
       return;
     }

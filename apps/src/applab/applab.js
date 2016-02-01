@@ -1168,8 +1168,7 @@ Applab.execute = function() {
       var jsInterpreterOptions = {
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-        onExecutionError: handleExecutionError
+        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
       };
 
       if (jsDebuggerUi) {
@@ -1179,9 +1178,14 @@ Applab.execute = function() {
       }
 
       Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
+
+      // Register to handle interpreter events
+      Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
       if (jsDebuggerUi) {
         jsDebuggerUi.attachTo(Applab.JSInterpreter);
       }
+
+      // Initialize the interpreter and parse the student code
       Applab.JSInterpreter.parse({
         code: codeWhenRun,
         blocks: dropletConfig.blocks,
