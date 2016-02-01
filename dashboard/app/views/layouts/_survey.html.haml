@@ -1,4 +1,10 @@
-- ethnicities = [ "American Indian or Alaska Native", "Asian", "Black or African American", "Hispanic or Latino", "Native Hawaiian or Other Pacific Islander ", "White"]
+- ethnicities = {}
+- ethnicities["indian"] =  "American Indian or Alaska Native"
+- ethnicities["asian"] = "Asian"
+- ethnicities["black"] = "Black or African American"
+- ethnicities["hispanic"] = "Hispanic or Latino"
+- ethnicities["native"] = "Native Hawaiian or Other Pacific Islander "
+- ethnicities["white"] = "White"
 
 -# English only for now
 - if language == "en"
@@ -20,18 +26,17 @@
               %p{style: "padding-top: 10px; font-size:16px"}
                 Of your students using Code.org's courses, how many are
               .dots{style: "padding-top: 10px; padding-bottom: 20px"}
-                - ethnicities.each_with_index do |ethnicity, i|
-                  %input{type: "text",  style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicitycount_#{ethnicity}]", onclick: "enableSurveySubmit()"}
-                  =ethnicity
+                - ethnicities.each do |key, value|
+                  %input{type: "text",  style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()"}
+                  =value
                   %br/
-
 
               %p{style: "padding-top: 10px; font-size:16px"}
                 Free and Reduced Meals
                 %div{style: "font-size: 14px"}
                   (only answer this if you're using Code Studio during school hours)
               .dots{style: "padding-top: 0px; padding-bottom: 0px; font-size: 14px"}
-                %input{type: "text", style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_comment]"}
+                %input{type: "text", style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_foodstamps]"}
                 \% of students with free and reduced meals (FARMs) at your school
                 %br/
                 %br/
