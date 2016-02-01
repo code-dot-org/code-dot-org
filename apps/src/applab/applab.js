@@ -1185,6 +1185,7 @@ Applab.execute = function() {
       }
 
       Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
+      Applab.JSInterpreter.initialize(jsInterpreterOptions);
       if (!Applab.JSInterpreter.initialized()) {
         return;
       }

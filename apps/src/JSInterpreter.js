@@ -26,7 +26,16 @@ var JSInterpreter = module.exports = function (options) {
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
+};
 
+/**
+ * Initialize the JSInterpreter, parsing the provided code and preparing to
+ * execute it one step at a time.
+ *
+ * @param {Object} options - for now, same options passed to the constructor
+ * TODO: Break out options for initialization
+ */
+JSInterpreter.prototype.initialize = function (options) {
   if (!this.studioApp.hideSource) {
     this.codeInfo = {};
     this.codeInfo.userCodeStartOffset = 0;
