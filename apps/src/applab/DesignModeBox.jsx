@@ -7,7 +7,7 @@ module.exports = React.createClass({
   propTypes: {
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string),
+    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     handleChange: React.PropTypes.func.isRequired,
     onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,

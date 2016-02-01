@@ -11,7 +11,7 @@ var nextKey = 0;
 var DesignProperties = module.exports = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string),
+    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     handleChange: React.PropTypes.func.isRequired,
     onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
