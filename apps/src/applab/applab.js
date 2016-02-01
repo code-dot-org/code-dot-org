@@ -1174,13 +1174,15 @@ Applab.execute = function() {
 
       if (jsDebuggerUi) {
         _.extend(jsInterpreterOptions, {
-          onNextStepChanged: jsDebuggerUi.updatePauseUiState.bind(jsDebuggerUi),
           onPause: jsDebuggerUi.onPauseContinueButton.bind(jsDebuggerUi),
           onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
         });
       }
 
       Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
+      if (jsDebuggerUi) {
+        jsDebuggerUi.attachTo(Applab.JSInterpreter);
+      }
       Applab.JSInterpreter.parse({
         code: codeWhenRun,
         blocks: dropletConfig.blocks,
