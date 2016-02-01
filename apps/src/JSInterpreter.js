@@ -1,4 +1,5 @@
 var codegen = require('./codegen');
+var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
 var _ = utils.getLodash();
 
@@ -13,7 +14,7 @@ var JSInterpreter = module.exports = function (options) {
   this.studioApp = options.studioApp;
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
-  this.onNextStepChanged = options.onNextStepChanged || function() {};
+  this.onNextStepChanged = new ObservableEvent();
   this.onPause = options.onPause || function() {};
   this.onExecutionError = options.onExecutionError || function() {};
   this.onExecutionWarning = options.onExecutionWarning || function() {};
@@ -325,7 +326,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         this.nextStep = StepType.RUN;
-        this.onNextStepChanged();
+        this.onNextStepChanged.notifyObservers();
       } else {
         this.onPause();
       }
@@ -424,7 +425,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             this.nextStep = StepType.RUN;
-            this.onNextStepChanged();
+            this.onNextStepChanged.notifyObservers();
             if (inUserCode) {
               // Store some properties about where we stopped:
               this.stoppedAtBreakpointRow = userCodeRow;

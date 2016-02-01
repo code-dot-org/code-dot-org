@@ -84,6 +84,31 @@ JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
 };
 
 /**
+ * Attach the debugger to a particular JSInterpreter instance.  Reinitializes
+ * the UI state and begins listening for interpreter events.
+ * @param {JSInterpreter} jsInterpreter
+ */
+JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
+  this.nextStepChangedKey_ = jsInterpreter.onNextStepChanged.register(
+      this.updatePauseUiState.bind(this));
+  this.nextStepChangedEvent_ = jsInterpreter.onNextStepChanged;
+};
+
+/**
+ * Detach the debugger from whatever interpreter instance it is currently
+ * attached to, unregistering handlers and resetting the controls to a
+ * 'detached' state.
+ * Safe to call when the debugger is already detached.
+ */
+JsDebuggerUi.prototype.detach = function () {
+  if (this.nextStepChangedKey_) {
+    this.nextStepChangedEvent_.unregister(this.nextStepChangedKey_);
+    this.nextStepChangedKey_ = null;
+    this.nextStepChangedEvent_ = null;
+  }
+};
+
+/**
  * Element getter for elements within the debugger UI.
  * @type {Function}
  * @private
