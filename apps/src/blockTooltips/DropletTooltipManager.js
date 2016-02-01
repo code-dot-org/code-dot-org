@@ -94,12 +94,6 @@ DropletTooltipManager.prototype.registerBlocks = function () {
     this.codeFunctions,
     this.autocompletePaletteApisOnly);
   blocks.forEach(function (dropletBlockDefinition) {
-    if (this.autocompletePaletteApisOnly &&
-        this.codeFunctions &&
-        typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
-      // autocompletePaletteApisOnly mode enabled and block is not in palette:
-      return;
-    }
     if (dropletBlockDefinition.docFunc) {
       // If a docFunc was specified, update our mapping
       this.docFuncMapping_[dropletBlockDefinition.func] = dropletBlockDefinition.docFunc;
