@@ -1166,10 +1166,6 @@ Applab.execute = function() {
     if (level.editCode) {
       // Use JS interpreter on editCode levels
       var jsInterpreterOptions = {
-        code: codeWhenRun,
-        blocks: dropletConfig.blocks,
-        blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-        enableEvents: true,
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
@@ -1185,7 +1181,12 @@ Applab.execute = function() {
       }
 
       Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
-      Applab.JSInterpreter.initialize(jsInterpreterOptions);
+      Applab.JSInterpreter.initialize({
+        code: codeWhenRun,
+        blocks: dropletConfig.blocks,
+        blockFilter: level.executePaletteApisOnly && level.codeFunctions,
+        enableEvents: true
+      });
       if (!Applab.JSInterpreter.initialized()) {
         return;
       }
