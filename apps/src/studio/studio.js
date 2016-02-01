@@ -2886,9 +2886,9 @@ Studio.execute = function() {
       annotationList.clearRuntimeAnnotations();
     }
     Studio.JSInterpreter = new JSInterpreter({
-      studioApp: studioApp,
-      onExecutionError: handleExecutionError,
+      studioApp: studioApp
     });
+    Studio.JSInterpreter.onExecutionError.register(handleExecutionError);
     Studio.JSInterpreter.parse({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,

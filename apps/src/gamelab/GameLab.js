@@ -307,7 +307,6 @@ GameLab.prototype.execute = function() {
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
       studioApp: this.studioApp_,
-      onExecutionError: _.bind(this.handleExecutionError, this),
       customMarshalGlobalProperties: {
         width: this.p5,
         height: this.p5,
@@ -352,6 +351,7 @@ GameLab.prototype.execute = function() {
         pRotationZ: this.p5
       }
     });
+    this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
     this.JSInterpreter.parse({
       code: this.studioApp_.getCode(),
       blocks: dropletConfig.blocks,
