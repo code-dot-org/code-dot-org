@@ -92,6 +92,9 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.nextStepChangedKey_ = jsInterpreter.onNextStepChanged.register(
       this.updatePauseUiState.bind(this));
   this.nextStepChangedEvent_ = jsInterpreter.onNextStepChanged;
+
+  this.pauseKey_ = jsInterpreter.onPause.register(this.onPauseContinueButton.bind(this));
+  this.pauseEvent_ = jsInterpreter.onPause;
 };
 
 /**
@@ -101,6 +104,12 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
  * Safe to call when the debugger is already detached.
  */
 JsDebuggerUi.prototype.detach = function () {
+  if (this.pauseKey_) {
+    this.pauseEvent_.unregister(this.pauseKey_);
+    this.pauseKey_ = null;
+    this.pauseEvent_ = null;
+  }
+
   if (this.nextStepChangedKey_) {
     this.nextStepChangedEvent_.unregister(this.nextStepChangedKey_);
     this.nextStepChangedKey_ = null;

@@ -15,7 +15,7 @@ var JSInterpreter = module.exports = function (options) {
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
   this.onNextStepChanged = new ObservableEvent();
-  this.onPause = options.onPause || function() {};
+  this.onPause = new ObservableEvent();
   this.onExecutionError = options.onExecutionError || function() {};
   this.onExecutionWarning = options.onExecutionWarning || function() {};
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
@@ -328,7 +328,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         this.nextStep = StepType.RUN;
         this.onNextStepChanged.notifyObservers();
       } else {
-        this.onPause();
+        this.onPause.notifyObservers();
       }
       // Store some properties about where we stopped:
       this.stoppedAtBreakpointRow = userCodeRow;
