@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -141,7 +142,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if changed? && write_to_file?
+    if changed? && write_to_file? && self.published
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -183,6 +184,20 @@ class Level < ActiveRecord::Base
       file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
+  end
+
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
+    ['Unplugged', # no solutions
+     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', # dsl defined, covered in dsl
+     'Applab', # all applab are freeplay
+     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation'] # widgets
+  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "Gamelab", "StudioEC", "Artist"]
+
+  def self.where_we_want_to_calculate_ideal_level_source
+    self.
+      where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+      where('ideal_level_source_id is null').
+      to_a.reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id

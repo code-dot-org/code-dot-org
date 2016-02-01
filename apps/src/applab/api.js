@@ -76,6 +76,15 @@ exports.setSize = function (elementId, width, height) {
                            'height': height });
 };
 
+exports.setProperty = function (elementId, property, value) {
+  return Applab.executeCmd(null,
+                          'setProperty',
+                          {'elementId': elementId,
+                           'property': property,
+                           'value': value });
+};
+
+
 exports.getXPosition = function (elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',

@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
     -current_url = request.path_info
-    -{'Educator Overview'=>'/educate','Hour of Code'=>'/educate/hoc','Curriculum'=>'/educate/curriculum','Professional Development'=>'/educate/professional-development','District Partnerships'=>'/educate/districts','Community and Support'=>'/educate/community','Inspire Students'=>'/educate/inspire','Video Library'=>'/educate/videos','3rd Party Resources'=>'/educate/3rdparty'}.each_pair do |label,url|
+    -{'Educator Overview'=>'/educate','Elementary school'=>'/educate/curriculum/elementary-school','Middle school'=>'/educate/curriculum/middle-school','High school'=>'/educate/curriculum/high-school','Hour of Code'=>'https://hourofcode.com','Partner with us'=>'/educate/districts','Beyond Code.org'=>'/educate/3rdparty','Inspire a student'=>'/educate/inspire','Join the online community'=>'/educate/community','Educational videos'=>'/educate/videos'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

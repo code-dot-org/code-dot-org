@@ -137,6 +137,8 @@ namespace :build do
   task :dashboard do
     make_blockly_symlink
     make_code_studio_symlink
+    # Make sure we have an up to date package for code studio
+    ensure_code_studio_package
 
     Dir.chdir(dashboard_dir) do
       HipChat.log 'Stopping <b>dashboard</b>...'
@@ -165,9 +167,6 @@ namespace :build do
         RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
       end
     end
-
-    # Make sure we have an up to date package for code studio
-    ensure_code_studio_package
   end
 
   task :pegasus do
@@ -194,11 +193,6 @@ namespace :build do
           HipChat.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
           raise e
         end
-      end
-
-      if CDO.daemon && !rack_env?(:development)
-        HipChat.log 'Analyzing <b>pegasus</b> hour-of-code activity...'
-        RakeUtils.system deploy_dir('bin', 'analyze_hoc_activity')
       end
 
       HipChat.log 'Starting <b>pegasus</b>.'

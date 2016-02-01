@@ -157,7 +157,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create a user with too large age" do
     assert_no_difference('User.count') do
-      user = User.create(@good_data.merge({age: 15000000, email: 'new@email.com'}))
+      user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
