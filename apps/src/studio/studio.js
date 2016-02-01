@@ -2885,16 +2885,16 @@ Studio.execute = function() {
       annotationList.attachToSession(session, studioApp.editor);
       annotationList.clearRuntimeAnnotations();
     }
-    var jsInterpreterOptions = {
+    Studio.JSInterpreter = new JSInterpreter({
+      studioApp: studioApp,
+      onExecutionError: handleExecutionError,
+    });
+    Studio.JSInterpreter.initialize({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-      enableEvents: true,
-      studioApp: studioApp,
-      onExecutionError: handleExecutionError,
-    };
-    Studio.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
-    Studio.JSInterpreter.initialize(jsInterpreterOptions);
+      enableEvents: true
+    });
     if (!Studio.JSInterpreter.initialized()) {
         return;
     }

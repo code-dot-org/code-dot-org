@@ -32,8 +32,17 @@ var JSInterpreter = module.exports = function (options) {
  * Initialize the JSInterpreter, parsing the provided code and preparing to
  * execute it one step at a time.
  *
- * @param {Object} options - for now, same options passed to the constructor
- * TODO: Break out options for initialization
+ * @param {!Object} options - for now, same options passed to the constructor
+ * @param {!string} options.code - Code to be executed by the interpreter.
+ * @param {Array} [options.blocks] - in dropletConfig.blocks format.  If a block
+ *        has a parent property, we will populate that function into the
+ *        interpreter global scope.
+ * @param {Object} [options.blockFilter] - an object with block-name keys that
+ *        should be used to filter which blocks are populated.
+ * @param {Array} [options.globalFunctions] - objects containing functions to
+ *        place in the interpreter global scope.
+ * @param {boolean} [options.enableEvents] - allow the interpreter to define
+ *        event handlers that can be invoked by native code. (default false)
  */
 JSInterpreter.prototype.initialize = function (options) {
   if (!this.studioApp.hideSource) {

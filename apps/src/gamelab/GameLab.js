@@ -305,11 +305,7 @@ GameLab.prototype.execute = function() {
     }, this), 'divGameLab');
 
   if (this.level.editCode) {
-    var jsInterpreterOptions = {
-      code: this.studioApp_.getCode(),
-      blocks: dropletConfig.blocks,
-      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-      enableEvents: true,
+    this.JSInterpreter = new JSInterpreter({
       studioApp: this.studioApp_,
       onExecutionError: _.bind(this.handleExecutionError, this),
       customMarshalGlobalProperties: {
@@ -355,9 +351,13 @@ GameLab.prototype.execute = function() {
         pRotationY: this.p5,
         pRotationZ: this.p5
       }
-    };
-    this.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
-    this.JSInterpreter.initialize(jsInterpreterOptions);
+    });
+    this.JSInterpreter.initialize({
+      code: this.studioApp_.getCode(),
+      blocks: dropletConfig.blocks,
+      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
+      enableEvents: true
+    });
     if (!this.JSInterpreter.initialized()) {
       return;
     }
