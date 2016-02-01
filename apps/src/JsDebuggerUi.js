@@ -97,6 +97,8 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
       this.updatePauseUiState.bind(this));
   this.observer_.observe(jsInterpreter.onPause,
       this.onPauseContinueButton.bind(this));
+  this.observer_.observe(jsInterpreter.onExecutionWarning,
+      this.log.bind(this));
 };
 
 /**

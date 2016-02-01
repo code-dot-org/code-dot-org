@@ -17,7 +17,7 @@ var JSInterpreter = module.exports = function (options) {
   this.onNextStepChanged = new ObservableEvent();
   this.onPause = new ObservableEvent();
   this.onExecutionError = new ObservableEvent();
-  this.onExecutionWarning = options.onExecutionWarning || function() {};
+  this.onExecutionWarning = new ObservableEvent();
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
 
   this.paused = false;
@@ -189,10 +189,11 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
   // warning since these won't work as expected unless running atMaxSpeed
   if (!this.runUntilCallbackReturn &&
       typeof this.lastCallbackRetVal !== 'undefined') {
-    this.onExecutionWarning("Function passed to onEvent() has taken too long " +
-                            "- the return value was ignored.");
+    this.onExecutionWarning.notifyObservers("Function passed to onEvent() " +
+        "has taken too long - the return value was ignored.");
     if (!this.shouldRunAtMaxSpeed()) {
-      this.onExecutionWarning("  (try moving the speed slider to its maximum value)");
+      this.onExecutionWarning.notifyObservers("  (try moving the speed " +
+          "slider to its maximum value)");
     }
   }
 };

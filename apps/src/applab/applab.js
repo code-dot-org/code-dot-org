@@ -1164,20 +1164,12 @@ Applab.execute = function() {
   }
   if (codeWhenRun) {
     if (level.editCode) {
-      // Use JS interpreter on editCode levels
-      var jsInterpreterOptions = {
+      // Create a new interpreter for this run
+      Applab.JSInterpreter = new JSInterpreter({
         studioApp: studioApp,
         shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
         maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
-      };
-
-      if (jsDebuggerUi) {
-        _.extend(jsInterpreterOptions, {
-          onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
-        });
-      }
-
-      Applab.JSInterpreter = new JSInterpreter(jsInterpreterOptions);
+      });
 
       // Register to handle interpreter events
       Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
