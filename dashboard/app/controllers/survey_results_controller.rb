@@ -3,6 +3,7 @@ class SurveyResultsController < ApplicationController
   def create
     # puts params[:survey].to_json
     @survey_result = SurveyResult.new(survey_result_params)
+    @survey_result.user_id = current_user.id
 
     respond_to do |format|
       if @survey_result.save
