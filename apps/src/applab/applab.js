@@ -1174,7 +1174,6 @@ Applab.execute = function() {
 
       if (jsDebuggerUi) {
         _.extend(jsInterpreterOptions, {
-          onPause: jsDebuggerUi.onPauseContinueButton.bind(jsDebuggerUi),
           onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
         });
       }
