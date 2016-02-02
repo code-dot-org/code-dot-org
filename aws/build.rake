@@ -339,6 +339,13 @@ task :dashboard_unit_tests do
   end
 end
 
+task :ui_test_flakiness do
+  Dir.chdir(deploy_dir) do
+    flakiness_output = `./bin/test_flakiness 5`
+    HipChat.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
+  end
+end
+
 UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
 file UI_TEST_SYMLINK do
   Dir.chdir(dashboard_dir('public')) do
@@ -346,7 +353,7 @@ file UI_TEST_SYMLINK do
   end
 end
 
-task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
+task :regular_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
@@ -364,7 +371,7 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
+task :eyes_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
@@ -384,8 +391,8 @@ task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
 end
 
 # do the eyes and browserstack ui tests in parallel
-multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
+multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
 
 task 'test-websites' => [$websites_test]
