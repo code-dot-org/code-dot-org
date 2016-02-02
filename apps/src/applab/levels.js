@@ -187,6 +187,7 @@ levels.custom = {
     "callMyFunction": null,
     "callMyFunction_n": null,
     "return": null,
+    "comment": null
   },
 
   // "randomNumber_max": null, // DEPRECATED
