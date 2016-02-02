@@ -15,7 +15,7 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 
 AP® is a registered trademark of the College Board.
 
-[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-principles)
+[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 
 ## Exploring Computer Science
@@ -27,7 +27,7 @@ Leveraging years of research by the [National Science Foundation](http://www.nsf
 Download this [one-pager](/files/ECSonepager.pdf) describing version 5 of Exploring Computer Science.
 Find the curriculum and other resources at [exploringcs.org/curriculum](http://www.exploringcs.org/curriculum)  
 
-[<button>Learn more about curriculum</button>](http://exploringcs.org)
+[<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
 
 ## 3rd Party resources for high school CS
 
@@ -52,4 +52,4 @@ Find the curriculum and other resources at [exploringcs.org/curriculum](http://w
 ## Additional Resources and Videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-[<button>Video library</button>](/educate/videos) [<button>Inspire a student</button>](/educate/inspire)
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
