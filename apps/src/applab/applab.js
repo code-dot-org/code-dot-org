@@ -668,7 +668,8 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: true,
+      // disable designMode if we're readonly
+      hasDesignMode: !config.readonlyWorkspace,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
