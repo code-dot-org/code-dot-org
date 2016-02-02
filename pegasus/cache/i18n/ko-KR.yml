@@ -608,9 +608,8 @@
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: "공시사항"
   dashboard_announce_view_all: "모두 보기"
-  dashboard_announce_message: "<b>2015년 12월 16일</b> - 2015 Hour of Code에 참여해 주셔서 감사합니다.
-    모든 Code Studio의 튜토리얼과 과정들에서 이제 다시 시작됩니다. 참고: Code.org 사무실이 12월 19일부터 3월 3일까지 문을
-    닫습니다. 3월 4일이 될 때까지 여러분이 제출하는 질문에 대해 답변이 지연되더라도 기다려 주세요."
+  dashboard_announce_message: "<b>2015년 1월 16일</b> - Hour of Code 이후의 활동들을 교실 수업에서
+    해보세요. 새로운 과정을 시작해보고, 학생들의 진도를 확인해보세요."
   dashboard_announce_button_text: "더 알아보기"
   dashboard_announce_hoc: "<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을
     소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요.
