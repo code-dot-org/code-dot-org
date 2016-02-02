@@ -6,6 +6,22 @@ class UsersHelperTest < ActionView::TestCase
   def test_summarize_user_progress_and_percent_complete
     script = Script.twenty_hour_script
     user = create :user, total_lines: 42
+
+    # Verify results for no completed levels.
+    assert_equal({
+         linesOfCode: 42,
+         linesOfCodeText: 'Total lines of code: 42',
+         levels: {},
+         trophies: {current: 0, of: 'of', max: 27},
+    }, summarize_user_progress(script, user))
+
+    assert_equal({
+         linesOfCode: 42,
+         linesOfCodeText: 'Total lines of code: 42',
+         scripts: {},
+     }, summarize_user_progress_for_all_scripts(user))
+
+    # Verify results for two completed levels for one script.
     ul1 = create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
     ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
 
