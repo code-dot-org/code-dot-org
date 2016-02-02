@@ -12,17 +12,17 @@
 # This script also caches values for the "about_stats" key in the Properties table. Unlike the HOC
 # data, it is computed from scratch every time.
 #
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/hip_chat'
 require 'cdo/properties'
 
 # Provides helper methods (add_count_to_hash, analyze_day_fast, and add_hashes) as well as the
 # *_DB_READONLY constants.
-require_relative '../lib/analyze_hoc_activity_helper'
+require_relative '../../lib/analyze_hoc_activity_helper'
 
 # This default number of lines of code is from 2016-01-04.
-DEFAULT_LINES_OF_CODE = 11151730618
+DEFAULT_LINES_OF_CODE = 11_151_730_618
 
 def main()
   return unless only_one_running?(__FILE__)
@@ -38,7 +38,7 @@ def main()
   # The code.org HOC count for tutorials on or before 11 January 2016, noting
   # that our counting (via the JSON files) began on 12 January 2016.
   # Computation: https://docs.google.com/spreadsheets/d/1xglCme-BRvtQhVg7G7OV7OZOmrIkpM06g2v7g8Zh8z8
-  total_codedotorg = 104896901
+  total_codedotorg = 104_896_901
   # Increase the 'started' metric by 409K to reflect participant count from surveys, circa
   # February 2014.
   total_started += 409216
@@ -48,7 +48,7 @@ def main()
   # Discussion of the problem, links to the computation of the 14.8M number, and
   # discussion of ways to resolve the problem can be found in this document:
   # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
-  total_started += 14861327
+  total_started += 14_861_327
 
   today = DateTime.now.to_date
   day = Date.strptime('2014/12/06', '%Y/%m/%d')
@@ -142,7 +142,7 @@ def main()
     csedweek_organizers:      38236,
     csedweek_teachers:        24025,
     csedweek_entire_schools:  12754,
-    csedweek_students:        4875091,
+    csedweek_students:        4_875_091,
     csedweek_countries:       356,
     petition_signatures:      PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').count,
     lines_of_code:            lines_of_code,

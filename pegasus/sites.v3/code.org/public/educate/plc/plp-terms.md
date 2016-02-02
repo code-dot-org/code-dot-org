@@ -35,7 +35,7 @@ organize informal local meetups for educators, ideally together with a local uni
 - For each cohort of teachers, Code.org will provide funding for a flat amount of overall PD costs + a rate per teacher in the cohort. We expect these costs will cover staffing, facilitator compensation, food, and venue, for four 1-day workshops (<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=0" target=_blank>see example budget here</a>). You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
   - For a cohort of 10 or fewer teachers, the funding would amount to $6,000 for overall costs + $160 per teacher in the cohort.
   - For a cohort of more than 10 teachers, the funding would amount to $8,000 for overall costs + $160 per teacher in the cohort.
-  - For urban districts, there would be a 25% multiplier added to the costs.
+  - For urban areas, there would be a 25% multiplier added to the costs.
   - For <5 teachers, the PD would be done online.
 - Provide promotional materials to assist in community-building.
 - Introduce the Professional Learning Partner to local school districts interested in bringing computer science professional development to their teachers.

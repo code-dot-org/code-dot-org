@@ -65,6 +65,7 @@ levels.custom = {
     "deleteElement": null,
     "setPosition": null,
     "setSize": null,
+    "setProperty": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
@@ -186,6 +187,7 @@ levels.custom = {
     "callMyFunction": null,
     "callMyFunction_n": null,
     "return": null,
+    "comment": null
   },
 
   // "randomNumber_max": null, // DEPRECATED
