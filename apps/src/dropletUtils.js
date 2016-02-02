@@ -277,14 +277,18 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var block = funcInfo.block;
     var expansion = funcInfo.expansion;
     if (!block) {
-      var prefix = funcInfo.blockPrefix || funcInfo.func;
-      var paletteParams = funcInfo.paletteParams || funcInfo.params;
-      block = buildFunctionPrototype(prefix, paletteParams);
-      if (funcInfo.paletteParams) {
-        // If paletteParams were specified and used for the 'block', then use
-        // the regular params for the 'expansion' which appears when the block
-        // is dragged out of the palette:
-        expansion = buildFunctionPrototype(prefix, funcInfo.params);
+      if (funcInfo.type === 'property') {
+        block = funcInfo.func;
+      } else {
+        var prefix = funcInfo.blockPrefix || funcInfo.func;
+        var paletteParams = funcInfo.paletteParams || funcInfo.params;
+        block = buildFunctionPrototype(prefix, paletteParams);
+        if (funcInfo.paletteParams) {
+          // If paletteParams were specified and used for the 'block', then use
+          // the regular params for the 'expansion' which appears when the block
+          // is dragged out of the palette:
+          expansion = buildFunctionPrototype(prefix, funcInfo.params);
+        }
       }
     }
 
@@ -404,6 +408,9 @@ function getModeOptionFunctionsFromConfig(config) {
     } else if (config.blocks[i].type === 'either') {
       newFunc.value = true;
       newFunc.command = true;
+    } else if (config.blocks[i].type === 'property') {
+      newFunc.property = true;
+      newFunc.value = true;
     }
 
     var category = mergedCategories[config.blocks[i].category];
