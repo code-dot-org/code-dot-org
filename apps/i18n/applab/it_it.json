@@ -14,7 +14,7 @@
   "copyright": "Copyright",
   "designToolboxDescription": "Drag the elements into your app!",
   "designToolboxHeader": "Design Toolbox",
-  "designWorkspaceDescription": "Click on an element to edit its properties. Create code in Events.",
+  "designWorkspaceDescription": "Click on an element or choose it from the dropdown below to edit its properties. Create code in Events.",
   "designWorkspaceHeader": "Workspace",
   "dropletBlock_appendItem_description": "Append the item to the end of the array",
   "dropletBlock_appendItem_param0": "list",

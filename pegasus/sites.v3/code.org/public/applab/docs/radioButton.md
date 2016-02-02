@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## radioButton(id, checked, group)
+## radioButton(id, checked, *group*)
 
 [/name]
-
 
 [category]
 
@@ -20,11 +19,11 @@ Category: UI controls
 
 [short_description]
 
-Creates a radio button and assigns it to a group for choosing from a predefined set of options. Only one radio button in a group can be selected at a time.
-
-Each radioButton can be referenced by the specified id.
+Creates a radio button on the screen with the initial *checked* boolean value and referenced by the given *id* at default location (0,0). Only one radio button in a group can be selected at a time.
 
 [/short_description]
+
+Some apps require the user to choose one item from a predefined group of options. Usually radio buttons are used for this. Any radio buttons without a group specified will be in the same default, unnamed group.
 
 [/description]
 
@@ -33,20 +32,16 @@ ____________________________________________________
 
 [example]
 
-**List of Favorite Colors**
-Creates a list of colors to choose from.
-
-
 ```
-// Creates a list of color options
-textLabel("RedLabel","Red","Red");
-radioButton("Red", true, "Color");
-textLabel("BlueLabel","Blue","Blue");
-radioButton("Blue", false, "Color");
-textLabel("GreenLabel","Green","Green");
-radioButton("Green", false, "Color");
-textLabel("OrangeLabel","Orange","Orange");
-radioButton("Orange", false, "Color");
+// Creates a list of color options in an unnamed group.
+radioButton("RedButton", false);
+textLabel("RedLabel","Red","RedButton");
+radioButton("BlueButton", false);
+textLabel("BlueLabel","Blue","BlueButton");
+radioButton("GreenButton", false);
+textLabel("GreenLabel","Green","GreenButton");
+radioButton("OrangeButton", false);
+textLabel("OrangeLabel","Orange","OrangeButton");
 ```
 
 [/example]
@@ -54,36 +49,34 @@ radioButton("Orange", false, "Color");
 ____________________________________________________
 [example]
 
-**Radio button click events**
-Retrieve and display your favorite color each time the radio button is clicked.
-
+**Example: Radio Button Click Events** Retrieve and display your favorite color, in a named group, each time a radio button is clicked.
 
 ```
-// Creates a list of color options
-textLabel("RedLabel","Red","Red");
-radioButton("Red", true, "Color");
-textLabel("BlueLabel","Blue","Blue");
-radioButton("Blue", false, "Color");
-textLabel("GreenLabel","Green","Green");
-radioButton("Green", false, "Color");
-textLabel("OrangeLabel","Orange","Orange");
-radioButton("Orange", false, "Color");
-write("Your Favorite Color is: ");
-textLabel("favorite","Red");
-// Attach click event for each of the buttons
-// When clicked, update the label to display the favorite color
-onEvent("Red", "click", function(event) {
-  setText("favorite","Red");
+// Retrieve and display your favorite color, in a named group, each time a radio button is clicked.
+radioButton("RedButton", false,"ColorGroup");
+textLabel("RedLabel","Red","RedButton");
+radioButton("BlueButton", false,"ColorGroup");
+textLabel("BlueLabel","Blue","BlueButton");
+radioButton("GreenButton", false,"ColorGroup");
+textLabel("GreenLabel","Green","GreenButton");
+radioButton("OrangeButton", false,"ColorGroup");
+textLabel("OrangeLabel","Orange","OrangeButton");
+
+textLabel("favorite1","Your Favorite Color is: ");
+textLabel("favorite2","");
+onEvent("RedButton", "click", function() {
+  setText("favorite2","Red");
 });
-onEvent("Blue", "click", function(event) {
-  setText("favorite","Blue");
+onEvent("BlueButton", "click", function() {
+  setText("favorite2","Blue");
 });
-onEvent("Green", "click", function(event) {
-  setText("favorite","Green");
+onEvent("GreenButton", "click", function() {
+  setText("favorite2","Green");
 });
-onEvent("Orange", "click", function(event) {
-  setText("favorite","Orange");
+onEvent("OrangeButton", "click", function() {
+  setText("favorite2","Orange");
 });
+
 ```
 
 [/example]
@@ -92,34 +85,28 @@ ____________________________________________________
 
 [example]
 
-**Finding the Checked Item**
-In this example, we iterate over the radio buttons in a group to determine which one is selected each time the favorite button is clicked.
-
+**Example: Finding the Checked Item** Iterate over the radio buttons in a group to determine which one is selected each time the favorite button is clicked.
 
 ```
-// Creates a list of color options
+// Iterate over the radio buttons in a group to determine which one is selected each time the favorite button is clicked.
+radioButton("Red", false,"ColorGroup");
 textLabel("RedLabel","Red","Red");
-radioButton("Red", true, "Color");
+radioButton("Blue", false,"ColorGroup");
 textLabel("BlueLabel","Blue","Blue");
-radioButton("Blue", false, "Color");
+radioButton("Green", false,"ColorGroup");
 textLabel("GreenLabel","Green","Green");
-radioButton("Green", false, "Color");
+radioButton("Orange", false,"ColorGroup");
 textLabel("OrangeLabel","Orange","Orange");
-radioButton("Orange", false, "Color");
-// Create a button for logging the favorite color
+
 button("favorite","What's my favorite color?");
-// Click handler for the favorite button
-onEvent("favorite","click", function(event) {
-    // Array of radio button IDs
+onEvent("favorite","click", function() {
     var radioIDs = ["Red","Blue","Green","Orange"];
     var index = 0;
-    // Loop through radio buttons until one is checked
     while (index < radioIDs.length && !getChecked(radioIDs[index])) {
       index++;
     }
-    // Log the checked button
-    console.log("Your favorite color is: " + radioIDs[index])
-})
+    console.log("Your favorite color is: " + radioIDs[index]);
+});
 ```
 
 [/example]
@@ -131,7 +118,7 @@ ____________________________________________________
 ### Syntax
 
 ```
-radioButton(id,false,group)
+radioButton(id, checked, group)
 ```
 
 [/syntax]
@@ -143,25 +130,29 @@ radioButton(id,false,group)
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | yes | A unique identifier for the radio button. The id is used for referencing the radioButton control. For example, to assign event handlers. |
+| id | string | Yes | The unique identifier for the screen element. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 | checked | boolean | yes | Whether the radio button is initially checked. |
-| group | string | yes | The group that the radio button is associated with. Only one button in a group can be checked at a time. |
+| group | string | no | The group that the radio button is associated with. Only one button in a group can be checked at a time. Any radio buttons without a group specified will be in the same default, unnamed group. |
+
 [/parameters]
 
 [returns]
 
 ### Returns
 
-No Return Value
+No return value. Modifies screen only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-All radio buttons should always have an associated textLabel. If you are asked a Yes/No question, consider using a checkbox element instead..
-
-The radioButton can also be used in design mode.
+- If there is another UI element at location (0,0) the radio button is placed at the next available position to the right or below.
+- There are various UI element modification functions available: [setChecked()](/applab/docs/setChecked), [showElement()](/applab/docs/showElement), [hideElement()](/applab/docs/hideElement), [deleteElement()](/applab/docs/deleteElement), [setPosition()](/applab/docs/setPosition), [setSize()](/applab/docs/setSize). 
+- There are various UI element query functions available: [getChecked()](/applab/docs/getChecked), [getXPosition()](/applab/docs/getXPosition), [getYPosition()](/applab/docs/getYPosition).
+- Radio buttons usually have an associated textLabel.
+- If you are asking the user something with a single response, consider using a single checkbox screen element instead.
+- The radio button can also be created in design mode.
 
 [/tips]
 

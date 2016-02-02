@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "nâng lên hay hạ bút xuống, để bắt đầu và ngừng vẽ."},
 "penUp":function(d){return "nâng bút lên"},
 "reinfFeedbackMsg":function(d){return "Đây là bản vẽ của bạn! Tiếp tục làm việc trên nó hoặc tiếp tục câu đố tiếp theo."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "thiết lập alpha"},
 "setColour":function(d){return "chỉnh màu"},
 "setPattern":function(d){return "thiết lập thiết kế mẫu"},
 "setWidth":function(d){return "chỉnh độ rộng"},

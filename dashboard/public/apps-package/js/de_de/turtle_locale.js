@@ -154,7 +154,7 @@ v:function(d,k){turtle_locale.c(d,k);return d[k]},
 p:function(d,k,o,l,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:(k=turtle_locale.lc[l](d[k]-o),k in p?p[k]:p.other)},
 s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).turtle_locale = {
-"blocksUsed":function(d){return "Verwendete Bausteine: 1%"},
+"blocksUsed":function(d){return "Verwendete Blöcke: %1"},
 "branches":function(d){return "Zweige"},
 "catColour":function(d){return "Farbe"},
 "catControl":function(d){return "Schleifen"},
@@ -215,7 +215,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "moveWestTooltip":function(d){return "Bewegt den Künstler nach Westen."},
 "moveTooltip":function(d){return "Bewegt den Künstler um den angegebenen Betrag vor- oder rückwärts."},
 "notBlackColour":function(d){return "Du musst eine andere Farbe als schwarz für diese Aufgabe angeben."},
-"numBlocksNeeded":function(d){return "Diese Aufgabe kann mit %1 Bausteinen gelöst werden. Du hast %2 benutzt."},
+"numBlocksNeeded":function(d){return "Diese Aufgabe kann mit %1 Blöcken gelöst werden. Du hast %2 benutzt."},
 "penDown":function(d){return "Stift aufsetzen"},
 "penTooltip":function(d){return "Hebt oder senkt den Stift um das Zeichnen zu starten oder zu beenden."},
 "penUp":function(d){return "Stift anheben"},

@@ -599,21 +599,23 @@
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
-        text: A loop is a repetition of activity. So going into a hive to inspect,
-          I look at a frame and then I put it back, so I repeat that same activity
-          multiple times. It's looping around, doing the same activity multiple times.
+        text: A ciklus egy tevékenység ismételgetése. Tehát ha egy kaptárt vizsgálok
+          meg, kiveszek egy keretet, megnézem, visszateszem, aztán ugyanezt megcsinálom
+          a többi kerettel. Elölről kezdek mindent, ugyanazokat a lépéseket csinálom
+          újra és újra.
       2:
         image: notes/C1_bee_loops_2.png
-        text: In this level, we want the bee to collect three nectars from the flower.
-          Instead of using three "get nectar" blocks, you're going to use the repeat
-          block to get nectar three times. Hit "Run" and see if you got it right.
-          Nice!
+        text: Ezen a pályán azt szeretnénk, ha a méhecske három nektárt gyűjtene össze
+          a virágokról. Ahelyett, hogy három "Gyűjts nektárt" blokkot használnánk,
+          egy ciklus segítségével ismételjük ugyanazt a blokkot háromszor. Kattintsz
+          a "Futtatás" gombra, és nézd meg, hogy sikerült-e! Ügyes voltál!
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
-        text: This lesson is called the big event. It's all about how we can control
-          our programs and actually change the way a program runs on the fly using
-          events, like the push of a button or the click of a mouse.
+        text: Ennek a leckének a Nagy Esemény nevet adtuk. Arról szól, hogy hogyan
+          irányítjuk a programjainkat és hogyan hogyan változik a programunk futása
+          futtatás közben események segítségével - például amikor lenyomunk egy billentyűt,
+          vagy amikor az egérrel kattintunk.
       2:
         image: notes/C1_bigevent_unplugged_2.png
         text: For this lesson, you'll be controlled with a paper remote control. It's
@@ -634,9 +636,9 @@
           do something.
       5:
         image: notes/C1_bigevent_unplugged_5.png
-        text: In video games, there's an event called "Update" and it happens 30 or
-          60 times a second. For videogame programmers that's almost more important
-          as an event than the buttons or the joystick.
+        text: A számítógépes játékokban van egy "Update", vagyis "Frissítés" esemény,
+          ami 30-60-szer történik meg másodpercenként. Játékfejlesztőknek ez az esemény
+          szinte fontosabb, mint a billentyűk vagy az egér eseményei.
       6:
         image: notes/C1_bigevent_unplugged_6.png
         text: The main event we're watching for is that "Update" tick happening. And
@@ -794,29 +796,26 @@
           Let's get this program started.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: A program egy olyan algoritmus, amit olyan formában kódoltak, hogy azt
+          egy gép futtatni tudja. A legtöbbünk a program alatt a számítógépes programot
+          értjük, de máshol is hasznosak tudnak lenni. Meg tudod írni a saját játékodat
+          vagy akár egy robotot is programozhatsz, hogy helyetted csináljon meg dolgokat.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: A nevem Jeremiah. Szia! Hét éves vagyok. Szeretek játszani anyukám számítógépn
+          de mindig megkérdezem szabad-e. "Anyu, játszhatok a számítógéppel? Persze!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: Szeretem anyukám számítógépét, mert meg tudom nézni az internetet. Az
+          internet olyan mint a lakókörnyék. Király helyekre mehetsz, tudsz beszélgetni
+          a családoddal és a barátaiddal és egy csomó új dolgot tanulhatsz.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Tegnap meglátogattam egy állatkertet, amely házam közelében van. Láttam
+          egy zebracsikót. Lefényképeztem és megváltoztattam a csíkjai színét, adtam
+          neki egy kalapot és hozzáadtam a fura állatok gyűjteményemhez. Menő! Egy
+          messzi tájra utaztam, Kenyába. Ez egy ország Afrikában. Ott sok zebra él.
       4:
         image: notes/C1_going_places_safely_4.png
         text: Sometimes on the internet I talk to peeople I know, like my grandma
@@ -878,10 +877,10 @@
           done.
       2:
         image: notes/C1_planting_seed_2.png
-        text: Computers can be really smart but they can only understand you if you
-          tell them exactly what you want step by step. The great thing about algorithms
-          is that if you follow the instructions in order, you can do something that
-          you didn't know how to do ahead of time. It's like following a recipe.
+        text: A számítógépek nagyon okosak, de csak akkor, ha lépésről-lépésre megmondod
+          nekik mit csináljanak. Az algoritmusokban az a jó, hogy ha pontosan követed
+          az utasításokat, akkor olyan dolgot is meg tudsz csinálni, amit addig nem.
+          Egy algoritmus olyan, mint egy recept.
       3:
         image: notes/C1_planting_seed_3.png
         text: Today we're going to plant our own seeds using an algorithm. Create
@@ -918,8 +917,7 @@
           your character say whatever you type.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: This is the "when actors collide" block which you can link up to the
-          other blocks.
+        text: Ez az "amikor összeütköznek" blokk, amihez újabb blokkokat csatlakoztathatsz.
       4:
         image: notes/C1_playlab_storytelling_4.png
         text: I was making the dog come over and say "Hi" but then the cat got scared
@@ -976,8 +974,8 @@
           out how you continue to figure out how to build performance.
       2:
         image: notes/C2_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: Ezekben a fejtőrökben egy művész leszek, aki a ceruzájával különböző
+          alakzatokat fog rajzolni. Bármerre megy a művészed, egy vonalat fog rajzolni.
       3:
         image: notes/C2_artist_intro_3.png
         text: To move around the canvas, you'll use the move forward block. Here the
@@ -1002,8 +1000,8 @@
           is less than, equal to or greater than a number, THEN do something.
       2:
         image: notes/C2_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Ez akkor hasznos, ha nem tudjuk mennyi nektárt vagy mézet kell összegyűjtenünk,
+          mint ahogy itt látjuk, az a kérdőjellel.
       3:
         image: notes/C2_bee_conditionals_3.png
         text: In this example, we're going to say IF the purple flower has nectar
@@ -1016,16 +1014,14 @@
           on a bracelet we can wear and show all our friends!
       2:
         image: notes/C2_binary_bracelets_2.png
-        text: Binary is a way of representing information using only two options.
-          Sometimes people think of this as only 1s and 0s. But you can represent
-          binary with combinations of on or off, up and down, in and out or really
-          any set of opposites.
+        text: A bináris számrendszer arra alkalmas, hogy csak két értéket jelentsünk
+          meg. Sokszor az emberek csak 1-esekre és 0-kra gondolnak, de a bináris számrendszer
+          alkalmas "be" vagy "ki", "fel" vagy "le", vagy bármilyen ellentét leírására.
       3:
         image: notes/C2_binary_bracelets_3.png
-        text: Hi, I'm Orion and I program robots here at Play-im. All computer and
-          robot brains at their most fundamental level are little electronic gates.
-          When the gate is open, electricity can flow through and when it's closed,
-          electricity can't.
+        text: Szia, a nevem Orion és robotokat programozok a Play-im-nél. Minden számítógép
+          és robot legelemibb építőeleme elektromos kapukból áll. Ha a kapu nyitva
+          van, az áram át tud rajta folyni, ha zárva van, nem tud.
       4:
         image: notes/C2_binary_bracelets_4.png
         text: An example of binary on the robot is the robot's eyes. The robot's eyes
@@ -1069,31 +1065,30 @@
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is
-          something wrong.
+        text: Már elhelyeztünk pár blokkot, de valami nem működik.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: Let's debug this code by slowing down the speed and watching it as it
-          goes through each block step by step.
+        text: 'Keressük meg a hibát a kódban: lassítsuk le a játékot, és figyeljük
+          meg mi történik lépésről-lépésre.'
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
+        text: Ott a hiba! A cica bajsza 75 pixel hosszú, nem 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Hallottál már a programok hibakereséséről? Így lehet megtalálni, ha
+          egy program nem működik helyesen. Amikor hibakeresel, megtalálod és kijavítod
+          a hibákat.
       2:
         image: notes/C2_bee_debugging_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Már elhelyeztünk pár blokkot. A "Lépés" gombot fogjuk használni hogy
+          minden blokkot lépésről-lépésre vizsgálhassunk. Így meg tudjuk nézni, hogy
+          helyes-e a megoldás, és ha nem, hol kell kijavítani a kódot.
       3:
         image: notes/C2_bee_debugging_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Úgy tűnik ott a hiba. Szükség van még egy "lépj előre" blokkra. A "Lépés"
+          gomb segít a programunk hibakeresésében, hogy megtaláljuk és kijavítsuk
+          a hibákat.
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
@@ -1184,9 +1179,10 @@
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: A loop is a repetition of activity. Going into a hive to inspect, I
-          look at a frame, and then I put it back. I repeat that same activity multiple
-          times. It's looping around, doing the same activity multiple times.
+        text: A ciklus egy tevékenység ismételgetése. Tehát ha egy kaptárt vizsgálok
+          meg, kiveszek egy keretet, megnézem, visszateszem, aztán ugyanezt megcsinálom
+          a többi kerettel. Elölről kezdek mindent, ugyanazokat a lépéseket csinálom
+          újra és újra.
       2:
         image: notes/C2_bee_loops_2.png
         text: This is the repeat block. Whatever you put inside the repeat block will
@@ -1348,8 +1344,8 @@
           out how you continue to figure out how to build performance.
       2:
         image: notes/C3_artist_intro_2.png
-        text: In these puzzles, you'll be an artist that uses a pencil to draw different
-          shapes. Wherever your artist goes, it will draw a line behind you.
+        text: Ezekben a fejtőrökben egy művész leszek, aki a ceruzájával különböző
+          alakzatokat fog rajzolni. Bármerre megy a művészed, egy vonalat fog rajzolni.
       3:
         image: notes/C3_artist_intro_3.png
         text: To move around the canvas, you'll use the move forward block. Here the
@@ -1386,8 +1382,8 @@
           is less than, equal to or greater than a number, THEN do something.
       2:
         image: notes/C3_bee_conditionals_2.png
-        text: This is useful when we don't know how much nectar or honey to get, as
-          we see here with this question mark.
+        text: Ez akkor hasznos, ha nem tudjuk mennyi nektárt vagy mézet kell összegyűjtenünk,
+          mint ahogy itt látjuk, az a kérdőjellel.
       3:
         image: notes/C3_bee_conditionals_3.png
         text: In this example, we're going to say IF the purple flower has nectar
@@ -1396,18 +1392,19 @@
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Hallottál már a programok hibakereséséről? Így lehet megtalálni, ha
+          egy program nem működik helyesen. Amikor hibakeresel, megtalálod és kijavítod
+          a hibákat.
       2:
         image: notes/C3_debugging_bee_2.png
-        text: Here we're given a few blocks already in our workplace. We're going
-          to use the step button to walk through the blocks, step by step, to see
-          if this is the right solution and where we may need to fix it.
+        text: Már elhelyeztünk pár blokkot. A "Lépés" gombot fogjuk használni hogy
+          minden blokkot lépésről-lépésre vizsgálhassunk. Így meg tudjuk nézni, hogy
+          helyes-e a megoldás, és ha nem, hol kell kijavítani a kódot.
       3:
         image: notes/C3_debugging_bee_3.png
-        text: Looks like there's our problem! We need one more move forward block.
-          The step button helps us debug our problem by identifying where the error
-          is so we can fix it.
+        text: Úgy tűnik ott a hiba. Szükség van még egy "lépj előre" blokkra. A "Lépés"
+          gomb segít a programunk hibakeresésében, hogy megtaláljuk és kijavítsuk
+          a hibákat.
     C3_bee_functions:
       1:
         image: notes/C3_bee_functions_1.png
