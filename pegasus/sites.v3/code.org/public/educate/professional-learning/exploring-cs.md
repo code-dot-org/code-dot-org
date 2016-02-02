@@ -1,8 +1,9 @@
 ---
 title: Find Exploring CS near you
+nav: educate_nav
 ---
 # Find the Exploring Computer Science program near you
-We welcome teachers to sign up for the Exploring Computer Science (Exploring CS) professional learning program. The Exploring CS program supports teachers with diverse teaching backgrounds. Whether you are new to teaching CS or you have CS teaching experience outside this
+We welcome teachers to sign up for the [Exploring Computer Science](http://exploringcs.org) (Exploring CS) professional learning program. The Exploring CS program supports teachers with diverse teaching backgrounds. Whether you are new to teaching CS or you have CS teaching experience outside this
 course, the program is designed to promote growth in your teaching practice, providing space for teachers to become comfortable with the curricular materials and associated teaching strategies. 
 
 

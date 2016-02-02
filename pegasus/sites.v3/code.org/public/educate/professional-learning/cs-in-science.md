@@ -1,5 +1,6 @@
 ---
 title: Find CS in Science near you
+nav: educate_nav
 ---
 # Find the Computer Science in Science program near you
 We welcome teachers to sign up for the Computer Science in Science (CS in Science) professional learning program. CS in Science is a multi-phase program developed by Project GUTS, designed to make it easy to integrate computer modeling and simulation into middle school science classrooms. The professional learning program provides curriculum, tools, and teaching practices that will help teachers engage their students in the powerful scientific practice of computational thinking! 
