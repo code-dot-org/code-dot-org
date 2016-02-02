@@ -27,7 +27,7 @@ Code.org partners with school districts across the country to suppport and expan
 [<button>Sign up to learn more</button>](/educate/interesteddistrict) 
 
 ## The Application Process
-We are currently at capacity for partnerships in the 2016-17 school year, and will release a new applicaiton for the 2017-18 school year in the spring.  Please [fill out our interest form](/educate/interesteddistrict) to be notified when the new application is released.
+We are currently at capacity for partnerships in the 2016-17 school year, and will release a new application for the 2017-18 school year in the spring.  Please [fill out our interest form](/educate/interesteddistrict) to be notified when the new application is released.
 
 <!--
 2016-17 APPLICATION INFO
