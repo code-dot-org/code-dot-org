@@ -15,7 +15,7 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 
 AP® is a registered trademark of the College Board.
 
-[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for our professional learning program</button>](/educate/plc/csp)
+[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-principles)
 
 
 ## Exploring Computer Science
