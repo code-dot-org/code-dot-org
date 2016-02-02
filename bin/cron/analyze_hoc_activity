@@ -12,7 +12,7 @@
 # This script also caches values for the "about_stats" key in the Properties table. Unlike the HOC
 # data, it is computed from scratch every time.
 #
-require File.expand_path('../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/hip_chat'
 require 'cdo/properties'
