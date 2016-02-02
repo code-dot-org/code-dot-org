@@ -15,6 +15,21 @@
 
 class SurveyResult < ActiveRecord::Base
   include SerializedProperties
-  serialized_attrs %w(survey2016_ethnicity_indian survey2016_ethnicity_asian survey2016_ethnicity_black survey2016_ethnicity_hispanic survey2016_ethnicity_hawaiian survey2016_ethnicity_white survey2016_foodstamps)
+
+  ETHNICITIES = {}
+  ETHNICITIES["american_indian"] =  "American Indian or Alaska Native"
+  ETHNICITIES["asian"] = "Asian"
+  ETHNICITIES["black"] = "Black or African American"
+  ETHNICITIES["hispanic"] = "Hispanic or Latino"
+  ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander "
+  ETHNICITIES["white"] = "White"
+
+  ETHNICITY_ATTRS = []
+  ETHNICITIES.each do |key, value|
+    ETHNICITY_ATTRS << "survey2016_ethnicity_#{key}"
+  end
+  ETHNICITY_ATTRS << "survey2016_foodstamps"
+
+  serialized_attrs ETHNICITY_ATTRS
   belongs_to :user
 end
