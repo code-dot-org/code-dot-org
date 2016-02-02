@@ -143,8 +143,8 @@
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
-  twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos
-    dar um jeito nisso. http://youtu.be/2DxWIxec6yo. Acesse http://code.org/ para
+  twitter_teach_cs: Por que muitas escolas não ensinam ciência da computação? Podemos
+    dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para
     saber mais.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
@@ -399,9 +399,9 @@
   volunteer_engineer_submission_field_location_placeholder: CEP, cidade e Estado/país,
     ou nome da rua
   volunteer_engineer_submission_field_location_flexibility: Eu posso ajudar durante
-    a Hora do Código... (selecione todas as opções aplicáveis)
-  volunteer_engineer_submission_checkbox_after_hoc: Quero ser voluntário após a Hora
-    do Código
+    a hora do código por... (selecione todas as opções aplicáveis)
+  volunteer_engineer_submission_checkbox_after_hoc: Estou interessado em ser voluntário
+    após a Hora do Código
   volunteer_engineer_submission_field_time_commitment: Tempo de comprometimento após
     a Hora do Código
   volunteer_engineer_submission_field_linkedin: Perfil no LinkedIn

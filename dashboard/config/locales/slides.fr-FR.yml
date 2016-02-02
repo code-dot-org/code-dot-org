@@ -2373,13 +2373,14 @@
           construire notre programme.
       6:
         image: notes/infinity_playlab_intro_6.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow outline, and then they'll snap together. In this first
-          puzzle, Hiro is Actor 1 and Baymax is Actor 2. We need to move Hiro to get
-          to Baymax by dragging the "move right" block out and linking it to the "when
-          run" block. Once you have your blocks in place, hit the "Run" button to
-          see what you've programmed.
+        text: Pour commencer, vous allez avoir besoin de mettre vos blocs au bloc
+          orange "lors du lancement". Vous pouvez mettre plusieurs blocs ensemble
+          en les emportant dehors jusqu’à que vous voyez la ligne jaune, et puis ils
+          se fusionneront. Dans ce premier puzzle, Hiro est le personnage 1 et Baymax
+          le personnage 2. Nous allons avoir besoin de déplacer Hiro pour qu'il rejoigne
+          Baymax en déplaçant le bloc "avancer à droite" dehors et en le mettant avec
+          le bloc "lors du lancement". Une fois que vous avez mis les blocs en place
+          appuyez sur le bouton "Exécuter" pour voir ce que vous avez programmé.
       7:
         image: notes/infinity_playlab_intro_7.png
         text: Commence et d'ici la fin, tu seras en mesure de créer ton propre jeu
@@ -2396,33 +2397,37 @@
           toujours.
       2:
         image: notes/infinity_playlab_repeat_forever_2.png
-        text: So if we wanted an actor to do something repeatedly without the player
-          having to do anything, we'll put those blocks inside the repeat forever
-          block. In this next puzzle, our goal is to help Anna walk up and down continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: Donc si nous voulons qu'un acteur fasse quelque chose à plusieurs reprises
+          sans que le joueur ai besoin de faire quoi que ce soit, nous allons mettre
+          les blocs à l'intérieur du bloc "répéter a l'infini". Dans ce puzzle prochain,
+          notre objectif est d'aider Anna à monter et descendre en permanence. Apprendre
+          comment fonctionnent les commandes répéter vous permettra d'économiser énormément
+          de temps plus tard, lorsque vous construisez votre propre jeu.
     tutorial_puzzle_challenge:
       1:
         image: notes/tutorial_puzzle_challenge_1.png
-        text: What do you want to be when you grow up Olivia? An astronaut. Do you
-          happen to know what a computer programmer is? Yeah um no. Ummm wait what?
-          I'm not really sure how to explain it computer programming is pretty simple.
-          It's a set of instructions like a recipe, you have to follow them step-by-step
-          to get the end result you want.
+        text: Que veux-tu devenir quand tu seras grande, Olivia ? Une astronaute.
+          Est-ce que tu sais ce qu'est un programmateur informatique ? Euh, non. Attends,
+          quoi ? Je ne suis pas vraiment comment te l'expliquer, la programmation
+          informatique est assez simple. C'est une suite d'instructions comme une
+          recette de cuisine, tu dois les suivre à la lettre pour obtenir le résultat
+          final que tu recherches.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: I can change the number of pixels, the length of the line, using this
-          dropdown. How long was it again? You can see the instructions again by looking
-          under the run button. Here I used the move forward block and I'm going to
-          select 100 pixels. I can delete a block by dragging it into the toolbox
-          or the trash can. Let's put it back.
+        text: Je peux changer le nombre de pixels, la longueur de la ligne, à l'aide
+          de cette liste déroulante. Quelle longueur était-ce déja ? Vous pouvez voir
+          les instructions à nouveau en regardant sous le bouton "executer". Ici j'ai
+          utilisé le bloc avant déménagement et je vais sélectionner 100 pixels. Je
+          peux supprimer un bloc en le faisant glisser dans la boîte à outils ou la
+          poubelle. Allons le remettre en place.
       3:
         image: notes/tutorial_puzzle_challenge_3.png
-        text: Run the code by pressing run. Well that didn't work! I'll press reset
-          and figure out what's wrong. You can try a puzzle as many times as you'd
-          like and skip puzzles and come back to them. Just make sure to try your
-          best and don't give up. Let's add another move forward. That still didn't
-          work. I can place a block between other blocks.
+        text: Exécutez le code en appuyant sur Exécuter. Eh bien, cela ne fonctionne
+          pas ! Je vais appuyer sur "reset" et comprendre ce qui est mauvais. Vous
+          pouvez essayer un puzzle autant de fois que vous souhaitez et les sauter
+          et y revenir. Il suffit d'essayer de votre mieux et n'abandonnez pas. Nous
+          allons ajouter un autre bloc "avancer". Cela ne fonctionne toujours pas.
+          Je peux placer un bloc entre autres blocs.
       4:
         image: notes/tutorial_puzzle_challenge_4.png
         text: Let's take a turn block and place it in between the move forwards. Turn

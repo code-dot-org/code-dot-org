@@ -416,8 +416,9 @@
       4-5 Artist 2_instruction: Can you loop this code to complete the square?
       4-5 Artist 3.5_instruction: |
         Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+        this code (or press "Run" to try it). Then, repeat the code enough times
+        to complete the drawing. The colors will (most likely) be different every
+        time.
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.

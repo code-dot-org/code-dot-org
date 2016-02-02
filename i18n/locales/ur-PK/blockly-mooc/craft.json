@@ -84,5 +84,5 @@
   "reinfFeedbackMsg":"You can press \"Keep Playing\" to go back to playing your game.",
   "replayButton":"دوبارہ کھیلیں",
   "selectChooseButton":"منتخب کریں",
-  "tooManyBlocksFail":"پہیلی {puzzleNumber} مکمل کر لیا ہے ۔ مبارک باد! یہ بھی اس کے ساتھ مکمل کرنے کے لئے ممکن ہے {نمبلاککس, جمع, ایک {1 block} دیگر {# blocks}}."
+  "tooManyBlocksFail":"پہیلی {puzzleNumber} مکمل کر لیا ہے ۔ مبارک باد! یہ بھی اس کے ساتھ مکمل کرنے کے لئے ممکن ہے {numBlocks, plural, one {1 block} other {# blocks}}."
 }
