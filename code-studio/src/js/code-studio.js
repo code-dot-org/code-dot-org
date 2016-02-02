@@ -32,6 +32,10 @@ require('./components/progress/course_progress.jsx');
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 
+var jquery = require('jquery-shim');
+window.dashboard = window.dashboard || {};
+window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
+
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.
 var windowOnError = window.onerror;

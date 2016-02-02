@@ -23,7 +23,7 @@ The program has two components:
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
 
 
-[<button>Apply now</button>](/educate/plc/csp-application)
+[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply)
 
 ## <a name="commitments"></a>What are the program commitments?
 
@@ -47,11 +47,6 @@ The CSP Educator Development Program is open to teachers in partner districts wh
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! [Check out the list of partner districts](https://docs.google.com/spreadsheets/d/1BDzs4k6nbZ87KdRZE62gqO_VpBC1yRSRbolWejGtDnU/edit#gid=0) to see if the program is available in your region.
-<br><br> 
+We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS Principles. If your school district hasn't partnered with Code.org, encourage your administrators to [apply to be a partner district](/educate/districts).
 
-**Don't see your region on the list?** Encourage your administrators [to apply to be a partner district!](https://code.org/educate/districts)
-<br><br>
-**Is your location on the list?** Join the other teachers in your district on the journey to teach CS Principles! 
-<br><br>
-[<button>Apply now</button>](/educate/plc/csp-application)
+[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply) &nbsp;&nbsp;[<button>Join the wait list</button>](https://form.jotform.com/53365196731157)

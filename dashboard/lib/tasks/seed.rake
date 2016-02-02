@@ -141,6 +141,7 @@ namespace :seed do
   end
 
   MAX_LEVEL_SOURCES = 10_000
+  desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
   task ideal_solutions: :environment do
     require 'benchmark'
     Level.where_we_want_to_calculate_ideal_level_source.each do |level|
@@ -156,6 +157,7 @@ namespace :seed do
     end
   end
 
+  desc "calculate most common unsuccessful solutions for the crowdsourced hints UI"
   task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |t, args|
     freq_cutoff = 1
     FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
@@ -262,8 +264,11 @@ namespace :seed do
     SecretPicture.setup
   end
 
+  desc "seed all dashboard data"
   task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
+  desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
 end
