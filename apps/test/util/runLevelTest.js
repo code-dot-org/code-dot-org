@@ -111,7 +111,7 @@ function runLevel (app, skinId, level, onAttempt, testData) {
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
   if (level.editCode) {
-    assert(window.droplet);
+    assert(window.droplet, 'droplet is in global');
   }
   setAppSpecificGlobals(app);
 

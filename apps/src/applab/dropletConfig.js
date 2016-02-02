@@ -4,6 +4,7 @@ var consoleApi = require('./consoleApi');
 var showAssetManager = require('../applab/assetManagement/show.js');
 var ChartApi = require('./ChartApi');
 var elementUtils = require('./designElements/elementUtils');
+var setPropertyDropdown = require('./setPropertyDropdown').setPropertyDropdown;
 
 var applabConstants = require('./constants');
 
@@ -74,6 +75,7 @@ module.exports.blocks = [
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setPosition', parent: api, category: 'UI controls', paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
+  {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
@@ -146,11 +148,11 @@ module.exports.blocks = [
   {func: 'substring', blockPrefix: 'str.substring', category: 'Variables', paletteParams: ['start','end'], params: ["6", "11"], modeOptionName: '*.substring', type: 'value' },
   {func: 'indexOf', blockPrefix: 'str.indexOf', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.indexOf', type: 'value' },
   {func: 'includes', blockPrefix: 'str.includes', category: 'Variables', paletteParams: ['searchValue'], params: ['"World"'], modeOptionName: '*.includes', type: 'value' },
-  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length' },
+  {func: 'length', block: 'str.length', category: 'Variables', modeOptionName: '*.length', type: 'property' },
   {func: 'toUpperCase', blockPrefix: 'str.toUpperCase', category: 'Variables', modeOptionName: '*.toUpperCase', type: 'value' },
   {func: 'toLowerCase', blockPrefix: 'str.toLowerCase', category: 'Variables', modeOptionName: '*.toLowerCase', type: 'value' },
   {func: 'declareAssign_list_abd', block: 'var list = ["a", "b", "d"];', category: 'Variables', noAutocomplete: true },
-  {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true },
+  {func: 'listLength', block: 'list.length', category: 'Variables', noAutocomplete: true, type: 'property' },
   {func: 'insertItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index','item'], params: ["list", "2", '"c"'], dontMarshal: true },
   {func: 'appendItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','item'], params: ["list", '"f"'], dontMarshal: true },
   {func: 'removeItem', parent: dontMarshalApi, category: 'Variables', paletteParams: ['list','index'], params: ["list", "0"], dontMarshal: true },

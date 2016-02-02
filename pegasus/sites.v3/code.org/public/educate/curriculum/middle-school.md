@@ -1,6 +1,6 @@
 ---
 title: CS Curriculum for grades 6-8
-nav: educate2_nav
+nav: educate_nav
 ---
 
 # Middle School
@@ -12,7 +12,7 @@ Our current middle school curriculum focuses on using computer science and progr
 
 Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
 
-[<button>Learn more about curriculum</button>](/curriculum/science) [<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-in-science)
+[<button>Learn more about curriculum</button>](/curriculum/science) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
 
 ## Computer Science in Algebra
 
@@ -20,7 +20,7 @@ Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking 
 
 Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
-[<button>Learn more about curriculum</button>](/curriculum/algebra) [<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-in-algebra)
+[<button>Learn more about curriculum</button>](/curriculum/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
 
 ## Computer Science Fundamentals - Accelerated
 
@@ -28,12 +28,14 @@ Code.org has partnered with Bootstrap to develop a curriculum which teaches alge
 
 Code.org offers a four course [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students. If your students have not already taken all of these courses, the 20-hour accelerated course covers the core concepts from the first four courses at an accelerated pace designed for students ages 10-18. This can be worked into a middle school after-school program or as a unit in a technology or programming class.
 
+[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+
 ## Computer Science Discoveries
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course is currently in development and will be ready for the 2017-2018 school year.
 
 [<button>Learn more about curriculum</button>](/educate/csd)
 
-## 3rd Party Educator Resources
+## 3rd Party resources for middle school CS
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
@@ -51,5 +53,5 @@ Computer Science Discoveries is a full-year introductory computer science survey
 ## Additional Resources and Videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-[<button>Video library</button>](/educate/videos) [<button>Inspire a student</button>](/educate/inspire)
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
