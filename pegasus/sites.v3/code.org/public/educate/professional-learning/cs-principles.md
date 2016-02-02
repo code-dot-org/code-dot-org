@@ -49,4 +49,4 @@ The CSP Educator Development Program is open to teachers in partner districts wh
 
 We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS Principles. If your school district hasn't partnered with Code.org, encourage your administrators to [apply to be a partner district](/educate/districts).
 
-[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply) [<button>Join the wait list</button>](https://form.jotform.com/53365196731157)
+[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply) &nbsp;&nbsp;[<button>Join the wait list</button>](https://form.jotform.com/53365196731157)
