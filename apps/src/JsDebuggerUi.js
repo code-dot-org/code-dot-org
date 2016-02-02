@@ -234,12 +234,6 @@ JsDebuggerUi.stepDelayFromStepSpeed = function (stepSpeed) {
  * @param {*} output
  */
 JsDebuggerUi.prototype.log = function (output) {
-  // first pass through to the real browser console log if available:
-  if (console && console.log) {
-    console.log(output);
-  }
-
-  // then put it in the debug console visible to the user:
   var debugOutputDiv = this.getElement_('#debug-output');
   if (debugOutputDiv) {
     if (debugOutputDiv.textContent.length > 0) {
