@@ -64,6 +64,17 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  # Return a JSON summary of the user's progress across all scripts.
+  def user_progress_for_all_scripts
+    user = current_user
+    if user
+      render json: summarize_user_progress_for_all_scripts(user)
+    else
+      render json: {}
+    end
+  end
+
+  # Return a JSON summary of the user's progress for params[:script_name].
   def user_progress
     if current_user
       script = Script.get_from_cache(params[:script_name])
