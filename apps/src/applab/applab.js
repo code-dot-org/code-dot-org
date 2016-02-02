@@ -1567,25 +1567,45 @@ Applab.getIdDropdown = function (filterSelector) {
  * @private
  */
 Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var divApplabChildren = documentRoot.find('#divApplab').children();
-  var elements = divApplabChildren.toArray().concat(
-      divApplabChildren.children().toArray());
+  var elements = documentRoot.find('#designModeViz [id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]');
 
   // Return all elements when no filter is given
   if (filterSelector) {
-    elements = $(elements).filter(filterSelector).get();
+    elements = elements.filter(filterSelector);
   }
 
-  return elements
-      .sort(function (elementA, elementB) {
-        return elementA.id < elementB.id ? -1 : 1;
-      })
-      .map(function (element) {
-        return {
-          text: quote(element.id),
-          display: quote(element.id)
-        };
-      });
+  return elements.sort(byId).map(function (_, element) {
+    var id = quote(elementUtils.getId(element));
+    return {text: id, display: id};
+  }).get();
+};
+
+function byId(a, b) {
+  return a.id > b.id ? 1 : -1;
+}
+
+/**
+ * Returns a list of IDs currently present in the DOM of the current screen,
+ * including the screen, sorted by z-index.
+ */
+Applab.getIdDropdownForCurrentScreen = function () {
+  return Applab.getIdDropdownForCurrentScreenFromDom_($('#designModeViz'));
+};
+
+/**
+ * Internal helper for getIdDropdownForCurrentScreen.
+ * @private
+ */
+Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
+  var screen = documentRoot.find('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first();
+
+  var elements = screen.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]').add(screen);
+
+  return elements.map(function (_, element) {
+    return elementUtils.getId(element);
+  }).get();
 };
 
 /**
