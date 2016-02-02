@@ -130,6 +130,7 @@ standardConfig.blocks = [
   {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
   {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
   {func: 'return', block: 'return __;', category: 'Functions' },
+  {func: 'comment', block: '// Comment', category: 'Functions' }
 ];
 
 standardConfig.categories = {
