@@ -21,7 +21,7 @@ function validatePropertyRow(index, label, value, assert) {
 }
 
 function validateElementSelect(expected, assert) {
-  var actual = $('#emptyTab select option').map(function (_, element) { return element.value; }).get();
+  var actual = $('#emptyTab').find('select option').map(function (_, element) { return element.value; }).get();
   assert.deepEqual(actual, expected);
 }
 
