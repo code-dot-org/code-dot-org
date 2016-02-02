@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# This script caches database queries whose results are displayed at studio.code.org/admin/stats.
+# This script caches database queries whose results are displayed at studio.code.org/admin/funometer.
 #
 require_relative('../../dashboard/config/environment')
 require File.expand_path('../../../pegasus/src/env', __FILE__)
@@ -17,8 +17,7 @@ def main()
   # Compute the funometer percentages, by day.
   ratings_by_day = PuzzleRating.
     group('DATE(created_at)').
-    
-order('DATE(created_at)').
+    order('DATE(created_at)').
     pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
 
   # Compute funometer percentages by script.
@@ -38,11 +37,11 @@ order('DATE(created_at)').
   ratings_by_level_favorited = ratings_by_level.
     order('100.0 * SUM(rating) / COUNT(rating) desc').
     limit(25).
-    pluck('script_id', 'level_id', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating) AS cnt')
+    pluck('script_id', 'level_id', 'scripts.name', 'levels.name', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating) AS cnt')
   ratings_by_level_hated = ratings_by_level.
     order('100.0 * SUM(rating) / COUNT(rating) asc').
     limit(25).
-    pluck('script_id', 'level_id', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating) AS cnt')
+    pluck('script_id', 'level_id', 'scripts.name', 'levels.name', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating) AS cnt')
 
   Properties.set(:funometer, {
     overall: overall_percentage,
