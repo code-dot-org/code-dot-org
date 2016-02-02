@@ -461,7 +461,8 @@ exports.generateDropletModeOptions = function (config) {
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
  * @param {codeFunctions|null} codeFunctions with block overrides, may be null
- * @param paletteOnly boolean: ignore blocks not in codeFunctions palette
+ * @param paletteOnly boolean: filter to only those blocks that are in codeFunctions
+ *   palette, or who share documentation (via docFunc) with other blocks that are
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */

@@ -86,7 +86,8 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
+ * Registers block tooltips for blocks based on the dropletBlocks and
+ * codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
   var blocks = dropletUtils.getAllAvailableDropletBlocks(
