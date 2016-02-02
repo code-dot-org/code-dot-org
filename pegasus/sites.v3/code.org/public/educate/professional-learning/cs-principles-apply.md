@@ -8,7 +8,8 @@ We welcome teachers to sign up for the Computer Science Principles (CS Principle
 
 ## Where is CS Principles offered?
 
-The CS Principles professional learning program is open to teachers in partner districts who are interested in teaching the course. Check to see if your district has partnered to make CS Principles available in your region for the 2016-2017 school year.
+The CS Principles professional learning program is open to teachers in partner districts who are interested in teaching the course. Search for your district below and click on the pin to find out how to apply! If you live in Alabama, Georgia, Idaho, Indiana, Utah, or Virginia, your district is covered by a statewide partnership. Click on the icon in your state to apply.
+
 
 <br/> 
 <br/>
@@ -19,5 +20,5 @@ The CS Principles professional learning program is open to teachers in partner d
 
 The CSP Educator Development Program is open to teachers in partner districts who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. 
 
-[<button>Join the wait list</button>](https://form.jotform.com/53365196731157) [<button>Apply to be a district partner</button>](/educate/districts)
+[<button>Join the wait list</button>](https://form.jotform.com/53365196731157) &nbsp;&nbsp;[<button>Apply to be a district partner</button>](/educate/districts)
 
