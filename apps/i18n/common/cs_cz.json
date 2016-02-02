@@ -253,5 +253,7 @@
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: "
+  "workspaceHeaderShort": "Pracovní prostor: ",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment"
 }

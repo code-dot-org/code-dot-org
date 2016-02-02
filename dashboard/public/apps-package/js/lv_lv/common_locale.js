@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Noskaties video"},
 "when":function(d){return "kad"},
 "whenRun":function(d){return "kad izpilda"},
-"workspaceHeaderShort":function(d){return "Darba virsma: "}};
+"workspaceHeaderShort":function(d){return "Darba virsma: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

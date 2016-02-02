@@ -253,5 +253,7 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: "
+  "workspaceHeaderShort": "Arbejdsområde: ",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment"
 }

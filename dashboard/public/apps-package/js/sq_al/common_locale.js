@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Shiko Videon"},
 "when":function(d){return "kur"},
 "whenRun":function(d){return "kur vrapon"},
-"workspaceHeaderShort":function(d){return "Vendi i punës: "}};
+"workspaceHeaderShort":function(d){return "Vendi i punës: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

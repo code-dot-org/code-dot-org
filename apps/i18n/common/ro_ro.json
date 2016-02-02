@@ -253,5 +253,7 @@
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: "
+  "workspaceHeaderShort": "Spaţiu de lucru: ",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment"
 }

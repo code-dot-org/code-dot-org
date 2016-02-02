@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ये वीडियो देखें"},
 "when":function(d){return "कब"},
 "whenRun":function(d){return "जब चलाएँ"},
-"workspaceHeaderShort":function(d){return "Workspace: "}};
+"workspaceHeaderShort":function(d){return "Workspace: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

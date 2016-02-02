@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pogledaj Video"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "pri pokretanju"},
-"workspaceHeaderShort":function(d){return "Radni prostor: "}};
+"workspaceHeaderShort":function(d){return "Radni prostor: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

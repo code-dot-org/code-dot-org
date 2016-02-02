@@ -253,5 +253,7 @@
   "watchVideo": "Video anschauen",
   "when": "wenn",
   "whenRun": "beim Ausführen",
-  "workspaceHeaderShort": "Arbeitsbereich: "
+  "workspaceHeaderShort": "Arbeitsbereich: ",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment"
 }

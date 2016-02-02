@@ -253,5 +253,7 @@
   "watchVideo": "Vê o vídeo",
   "when": "quando",
   "whenRun": "quando executar",
-  "workspaceHeaderShort": "Espaço de trabalho: "
+  "workspaceHeaderShort": "Espaço de trabalho: ",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment"
 }
