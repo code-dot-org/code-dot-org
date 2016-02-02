@@ -1,4 +1,5 @@
 class SurveyResultsController < ApplicationController
+  before_filter :authenticate_user!
 
   def create
     # puts params[:survey].to_json
@@ -17,7 +18,11 @@ class SurveyResultsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def survey_result_params
-    params.require(:survey).permit(:survey2016_ethnicity_indian, :survey2016_ethnicity_indian, :survey2016_ethnicity_asian, :survey2016_ethnicity_black, :survey2016_ethnicity_hispanic, :survey2016_ethnicity_hawaiian, :survey2016_ethnicity_white, :survey2016_foodstamps)
+    valid_params = []
+    SurveyResult::ETHNICITY_ATTRS.each do |value|
+      valid_params << value.to_sym
+    end
+    params.require(:survey).permit(valid_params)
   end
 
 end

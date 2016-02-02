@@ -1,11 +1,3 @@
-- ethnicities = {}
-- ethnicities["indian"] =  "American Indian or Alaska Native"
-- ethnicities["asian"] = "Asian"
-- ethnicities["black"] = "Black or African American"
-- ethnicities["hispanic"] = "Hispanic or Latino"
-- ethnicities["native"] = "Native Hawaiian or Other Pacific Islander "
-- ethnicities["white"] = "White"
-
 -# English only for now
 - if language == "en"
 
@@ -30,8 +22,8 @@
               %p{style: "padding-top: 10px; font-size:16px"}
                 Of your students using Code.org's courses, how many are
               .dots{style: "padding-top: 10px; padding-bottom: 20px"}
-                - ethnicities.each do |key, value|
-                  %input{type: "text",  style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()"}
+                - SurveyResult::ETHNICITIES.each do |key, value|
+                  %input{type: "number",  style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()"}
                   =value
                   %br/
 
@@ -40,13 +32,14 @@
                 %div{style: "font-size: 14px"}
                   (only answer this if you're using Code Studio during school hours)
               .dots{style: "padding-top: 0px; padding-bottom: 0px; font-size: 14px"}
-                %input{type: "text", style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_foodstamps]"}
+                %input{type: "number", min: "0", max: "100", style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_foodstamps]"}
                 \% of students with free and reduced meals (FARMs) at your school
                 %br/
                 %br/
 
               #submit
-                %button#submitSurvey{type: "submit", disabled: true} Submit
+                -# Let's not start with a disabled button for now.
+                %button#submitSurvey{type: "submit", disabled: false} Submit
                 %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
         %br/
 
@@ -83,6 +76,11 @@
       data: $("#survey").serialize(),
       dataType: 'json'
     });
+
+    // scroll to top of page so that user sees "thank you" even if they had scrolled down
+    // to fill out survey.
+
+    $('html,body').animate({scrollTop:0}, 100);
 
     return false;
   }
