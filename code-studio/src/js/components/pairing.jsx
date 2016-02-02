@@ -5,7 +5,7 @@ var Pairing = function (React) {
 
   var SectionSelector = React.createClass({
     render: function() {
-      if (this.props.sections.length == 1) {
+      if (this.props.sections.length === 1) {
         return null;
       }
 
@@ -24,7 +24,7 @@ var Pairing = function (React) {
 
   var StudentSelector = React.createClass({
     render: function() {
-      if (!this.props.students || this.props.students.length == 0) {
+      if (!this.props.students || this.props.students.length === 0) {
         return null;
       }
 
@@ -97,7 +97,7 @@ var Pairing = function (React) {
     },
 
     selectedSectionId: function() {
-      if (this.props.sections.length == 1) {
+      if (this.props.sections.length === 1) {
         return this.props.sections[0].id;
       } else {
         return this.state.selectedSectionId;
