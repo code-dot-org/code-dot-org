@@ -138,7 +138,7 @@ exports.runOnAppTick = function (app, tick, fn) {
  * wait for certain asynchronous test setup to complete before checking
  * assertions.
  *
- * @param {Studio|Applab|GameLab} app
+ * @param {Studio|Applab|GameLab} app - actually, any object with an onTick method.
  * @param {function} predicate
  * @returns {Promise} to resolve when predicate is true
  *
@@ -150,8 +150,8 @@ exports.runOnAppTick = function (app, tick, fn) {
  *   });
  */
 exports.tickAppUntil = function (app, predicate) {
-  if (!app) {
-    throw new Error('not supported outside of studio/applab');
+  if (!app || !app.onTick) {
+    throw new Error('Supplied app (' + app + ') does not have an onTick method');
   }
 
   var resolved = false;

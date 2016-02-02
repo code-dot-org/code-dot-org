@@ -186,11 +186,11 @@ module.exports = {
   ]
 };
 
-var canvasAndResultsPopulated = function () {
+function canvasAndResultsPopulated() {
   var canvas = document.getElementById('canvas');
   var result1 = document.getElementById('result1');
   var result2 = document.getElementById('result2');
   var result1Populated = result1 && result1.textContent.length > 0;
   var result2Populated = result2 && result2.textContent.length > 0;
   return canvas && result1Populated && result2Populated;
-};
+}
