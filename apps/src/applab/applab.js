@@ -34,6 +34,7 @@ var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
@@ -55,6 +56,11 @@ var TestResults = studioApp.TestResults;
 var Applab = module.exports;
 
 /**
+ * @type {JsInterpreterLogger} observes the interpreter and logs to console
+ */
+var jsInterpreterLogger = null;
+
+/**
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
 var jsDebuggerUi = null;
@@ -67,6 +73,10 @@ var jsDebuggerUi = null;
  * @param {*} object
  */
 Applab.log = function (object) {
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.log(object);
+  }
+
   if (jsDebuggerUi) {
     jsDebuggerUi.log(object);
   }
@@ -585,6 +595,7 @@ Applab.startSharedAppAfterWarnings = function () {
 Applab.init = function(config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
+  jsInterpreterLogger = null;
   jsDebuggerUi = null;
 
   // replace studioApp methods with our own
@@ -648,6 +659,9 @@ Applab.init = function(config) {
     unsubmitButton: level.submittable && level.submitted
   });
   var extraControlsRow = '';
+
+  // Construct a logging observer for interpreter events
+  jsInterpreterLogger = new JsInterpreterLogger(window.console);
 
   if (showDebugButtons || showDebugConsole) {
     jsDebuggerUi = new JsDebuggerUi(function () {
@@ -973,6 +987,11 @@ Applab.reset = function(first) {
 
   if (jsDebuggerUi) {
     jsDebuggerUi.resetDebugControls();
+    jsDebuggerUi.detach();
+  }
+
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.detach();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1173,6 +1192,9 @@ Applab.execute = function() {
 
       // Register to handle interpreter events
       Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
+      if (jsInterpreterLogger) {
+        jsInterpreterLogger.attachTo(Applab.JSInterpreter);
+      }
       if (jsDebuggerUi) {
         jsDebuggerUi.attachTo(Applab.JSInterpreter);
       }
