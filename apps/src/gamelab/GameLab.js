@@ -12,6 +12,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
 
 /**
  * An instantiable GameLab class
@@ -21,8 +22,16 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+
+  /** @type {StudioApp} */
   this.studioApp_ = null;
+
+  /** @type {JSInterpreter} */
   this.JSInterpreter = null;
+
+  /** @private {JsInterpreterLogger} */
+  this.consoleLogger_ = null;
+
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -64,6 +73,7 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
@@ -213,6 +223,8 @@ GameLab.prototype.reset = function (ignore) {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
+  this.consoleLogger_.detach();
+
   // Discard the interpreter.
   if (this.JSInterpreter) {
     this.JSInterpreter.deinitialize();
@@ -352,6 +364,7 @@ GameLab.prototype.execute = function() {
       }
     });
     this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
+    this.consoleLogger_.attachTo(this.JSInterpreter);
     this.JSInterpreter.parse({
       code: this.studioApp_.getCode(),
       blocks: dropletConfig.blocks,
@@ -465,6 +478,7 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
     Studio.onPuzzleComplete();
   }
 */
+  this.consoleLogger_.log(err);
   throw err;
 };
 
