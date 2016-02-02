@@ -329,7 +329,7 @@ uz-UZ:
     Bu o‘qituvchilar darslariga yordami tegadigan, <span style="font-family: 'Gotham 7r', sans-serif;">informatikani o‘qitishga qiziqqan</span> yoki o‘quvchilarini Informatika ilmi imkoniyatlari haqida so‘zlab (buni videochat orqali ham amalga oshirish mumkin) <span style="font-family: 'Gotham 7r', sans-serif;">ilhomlantira oladigan</span> insonlarni qo‘shilishidan bag‘oyatda minnatdor. Agar siz ko‘ngilli qidirmayotgan bo‘lsangiz, Dasturlash soatini tashkillashtirish haqida <a href="%{url}">batafsil o‘rganing</a>.
   volunteer_engineer_submission_intro_signup: |-
     Informatika talabasi yoki dasturchi bo‘lsangiz, iltimos, quyidagi ma'lumotlarni kiriting. <span class="form-required-field">*</span> belgili sohalarni to‘ldirish majburiy.
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Are you a teacher looking for volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: "Ko‘ngillilar xaritasida o‘qituvchilar tomonidan keltirilgan ma'lumot"
   volunteer_engineer_submission_field_name: Ismi

@@ -60,7 +60,7 @@ s:function(d,k,p){applab_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "copyright":function(d){return "Copyright"},
 "designToolboxDescription":function(d){return "Drag the elements into your app!"},
 "designToolboxHeader":function(d){return "Design Toolbox"},
-"designWorkspaceDescription":function(d){return "Click on an element to edit its properties. Create code in Events."},
+"designWorkspaceDescription":function(d){return "Click on an element or choose it from the dropdown below to edit its properties. Create code in Events."},
 "designWorkspaceHeader":function(d){return "Workspace"},
 "dropletBlock_appendItem_description":function(d){return "Append the item to the end of the array"},
 "dropletBlock_appendItem_param0":function(d){return "list"},

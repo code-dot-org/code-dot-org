@@ -7,7 +7,11 @@ We welcome teachers to sign up for the Computer Science in Science (CS in Scienc
 
 ## Where is CS in Science offered?
 
-The CS in Science professional learning program is open to teachers in partner districts who are interested in teaching the course. Check to see if your district has partnered to make CS in Science available in your region for the 2016-2017 school year.
+The CS in Science professional learning program is open to teachers in partner districts who are interested in teaching the course. Check to see if your district has partnered to make CS in Science available in your region for the 2016-2017 school year. If you live in Georgia, Idaho, Indiana, Utah, or Virginia, your district is covered by a statewide partnership. Click on the icon in your state to apply.
+
+
+
+**The 2016-2017 CS in Science application launches February 5, 2016.** 
 
 <br/> 
 <br/>
@@ -16,15 +20,14 @@ The CS in Science professional learning program is open to teachers in partner d
 Don't see your district? Consider sending your administrators [information about how to become a partner](/educate/districts).
 
 ## What are the program commitments?
-The CS in Science professional learning program is 48 hours of online and in-person professional development, spanning over ~12 months.
+The CS in Science professional learning program is 48 hours of online and in-person support, spanning over ~12 months:
 
-### Program timeline
-<br/>
 ![Image 1](/images//fit-700/timeline-ms-plc.png)
 
-## Apply for our CS  in Science Professional Learning Program  
+## Don't see your district or region? 
 
-<img src="/images/fit-x300/partners-2014-15.jpg" />
+The CS in Science professional learning program is open to teachers in partner districts who are interested in teaching the CS in Science course.
 
-**The 2016-2017 CS in Science application launches February 5, 2016.** 
+[<button>Apply to be a district partner</button>](/educate/districts)
+
 

@@ -1,5 +1,5 @@
 {
-  "blocksUsed":"Verwendete Bausteine: 1%",
+  "blocksUsed":"Verwendete Blöcke: %1",
   "branches":"Zweige",
   "catColour":"Farbe",
   "catControl":"Schleifen",
@@ -60,7 +60,7 @@
   "moveWestTooltip":"Bewegt den Künstler nach Westen.",
   "moveTooltip":"Bewegt den Künstler um den angegebenen Betrag vor- oder rückwärts.",
   "notBlackColour":"Du musst eine andere Farbe als schwarz für diese Aufgabe angeben.",
-  "numBlocksNeeded":"Diese Aufgabe kann mit %1 Bausteinen gelöst werden. Du hast %2 benutzt.",
+  "numBlocksNeeded":"Diese Aufgabe kann mit %1 Blöcken gelöst werden. Du hast %2 benutzt.",
   "penDown":"Stift aufsetzen",
   "penTooltip":"Hebt oder senkt den Stift um das Zeichnen zu starten oder zu beenden.",
   "penUp":"Stift anheben",

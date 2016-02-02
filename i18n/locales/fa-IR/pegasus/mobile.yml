@@ -315,7 +315,7 @@ fa-IR:
   volunteer_engineer_submission_intro_recruit: |-
     Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Are you a teacher looking for volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_update_information: به روز رسانی اطلاعات شما
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: نام
@@ -326,15 +326,15 @@ fa-IR:
   volunteer_engineer_submission_field_location: مکان
   volunteer_engineer_submission_field_location_desc: به مکان شما اجازه می دهد تا برای جستجو برای نزدیک ترین داوطلب ، معلمان مورد استفاده قرار گیرد و به عنوان یک سنجاق و یا پین در نقشه نشان داده می شود. اگر شما نگران هستید در مورد حفظ حریم خصوصی، لطفا آدرس کار/مدرسه یا شهر خود را تنها فقط وارد کنید.
   volunteer_engineer_submission_field_location_placeholder: کد پستی شهر و ایالت در کشور یا آدرس خیابان
-  volunteer_engineer_submission_field_location_flexibility: I can help during the Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering after the Hour of Code
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_location_flexibility: I can volunteer by... (select all that apply)
+  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering year-round
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: پروفایل لینکداین
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/نام_شما
   volunteer_engineer_submission_field_facebook: پروفایل فیس بوک
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: توضیحات
-  volunteer_engineer_submission_field_description_desc: Describe your computer science experience and how you would like to participate as a volunteer for local teachers.
+  volunteer_engineer_submission_field_description_desc: Describe your computer science experience or technical background and how you would like to participate as a volunteer for local teachers.
   volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
   volunteer_engineer_submission_header_private: Information kept private and never shared
   volunteer_engineer_submission_field_email: نشانی رایانامه

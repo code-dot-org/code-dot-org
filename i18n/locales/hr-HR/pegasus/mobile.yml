@@ -315,7 +315,7 @@ hr-HR:
   volunteer_engineer_submission_intro_recruit: |-
     Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Ako si student računarstva ili iskusni programer, molimo te da uneseš sljedeće informacije. Polja označena s <span class="form-required-field">*</span> su obavezna.'
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_intro_links: 'Are you a teacher looking for volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Ime
@@ -328,7 +328,7 @@ hr-HR:
   volunteer_engineer_submission_field_location_placeholder: Poštanski broj, grad i država ili ulica
   volunteer_engineer_submission_field_location_flexibility: Mogu pomoći tijekom Sata Kodiranja... (odaberi sve što se odnosi)
   volunteer_engineer_submission_checkbox_after_hoc: Zanima me volontiranje i nakon Sata Kodiranja
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: LinkedIn profil
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/tvoje_ime
   volunteer_engineer_submission_field_facebook: Facebook profil

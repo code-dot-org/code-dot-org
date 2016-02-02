@@ -72,7 +72,7 @@
           WordSearch: 1 Etapas
     game:
       name:
-        Unplug1: Programavimo įvadas
+        Unplug1: "Įvadas į kompiuterių mokslą"
         Maze: Labirintas
         Multi: Pasirinkti iš kelių variantų
         Unplug2: Skaičiuojamasis mąstymas
@@ -745,6 +745,12 @@
         infinity_playlab_intro: "Žaidimų laboratorija – įvadas"
         infinity_playlab_events: "Žaidimų laboratorija – įvykiai"
         infinity_playlab_repeat_forever: "Žaidimų laboratorija – amžinas kartojimas"
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -786,13 +792,13 @@
         hoc2015_preview_blocks: Make your own game blocks
         hoc2015_preview_typing: Make your own game typing
         hoc2015_preview_conclusion: Make your own game conclusion
-        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
-        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
-        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
-        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
-        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_intro: "Žvaigždžių Karai: programuojame galaktiką - įžanga"
+        starwars_typing: "Žvaigždžių Karai: programuojame galaktiką - JavaScript kalba"
+        starwars_events: "Žvaigždžių Karai: programuojame galaktiką - Įvykiai"
+        starwars_congrats: "Žvaigždžių Karai: programuojame galaktiką - sveikinimai"
+        starwars_blocks_intro: "Žvaigždžių Karai: programuojame galaktiką - įžanga"
+        starwars_blocks_events: "Žvaigždžių Karai: programuojame galaktiką - Įvykiai"
+        starwars_blocks_congrats: "Žvaigždžių Karai: programuojame galaktiką - sveikinimai"
         mc_intro: Minecraft - Pristatymas
         mc_repeat: Minecraft - Kartoti
         mc_if_statements: Minecraft - "Jei" sakiniai
@@ -905,10 +911,10 @@
         Infinity_move_directions_callout_arrow: Naudokis rodyklėmis, kad vairuotum
         Infinity_move_collide_callout: Groti garsą, kai įvyks šis įvykis.
         Infinity_repeat_callout: Padėkite judėjimo blokelius viduje
-        craft_run_button_callout: Nuspausk „Paleisti“, kad išmėgintum savo programą
+        craft_run_button_callout: Paspausk „Paleisti" ir išmėgink savo programą
         craft_drag_block_callout: Nutempk "eikPirmyn();" blokelį ir prikabink jį po
           kitais blokeliais
-        craft_callout_preplaced: Męs čia padėjome kelis blokus, kad tau būtų nuo ko
+        craft_callout_preplaced: Mes padėjome kelis blokelius, kad tau būtų nuo ko
           pradėti
         craft_inside_repeat: Kartok veiksmus įdėdamas čia blokielius
         craft_callout_preplaced_house: "Šis kodas pradės statyti tavo namą. Ar tu

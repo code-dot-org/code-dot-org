@@ -326,29 +326,28 @@ id:
           dan bantu Spacebot bergerak cepat menuju Alien dengan mengganti kecepatannya.
           Lalu gerakkan ia dengan tombol arah menuju Spacebot, lalu serukan pada yang lain
         studio_playlab_10: Buat permainan Anda sendiri. Setelah selesai, klik Selesai untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
-        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
-        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
-        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
-        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: |-
-          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
-        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
-        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
-        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
-        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
-        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
-        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
-        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
-        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
-        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
-        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
-        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
-        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_iceage_hello1: 'Sid mau mengumpulkan semua orang untuk sebuah petualangan baru. Bisakah kamu membantunya untuk mengatakan "halo" dengan menyeret blok "katakan" ke dalam area kerja dan mengetik kata "halo" di dalamnya?'
+        studio_iceage_hello2: 'Sid (aktor 1) menemukan Manny (aktor 2) dan ingin mengajaknya untuk mengikuti petualangannya. Bantulah mereka menyapa satu sama lain dengan menggunakan blok "aktor mengatakan" sebanyak dua kali.'
+        studio_iceage_move_to_flag: 'Scrat sedang mencari biji pohon eknya! Bantulah dia menjalani 200 pixel terakhir dengan menggunakan blok "bergerak".'
+        studio_iceage_move_to_actor: 'Diego (aktor 1) sedang mencari Manny (aktor 2). Bantulah Diego bergerak 200 pixel ke bawah menuju Manny dengan menggunakan blok "gerakkan aktor". Kemudian, sambungkan sebuah blok dengan kejadian "ketika aktor menyentuh" untuk memainkan suara ketika mereka bertemu satu sama lain.'
+        studio_iceage_repeat: 'Blok "ulang selamanya" memperbolehkan kamu untuk menjalankan kode secara terus menerus. Bisakah kamu menyematkan blok-blok dengan blok tersebut untuk membantu Nenek mendapatkan beberapa latihan dengan bergerak ke kiri dan ke kanan berulang kali?'
+        studio_iceage_click_hello: Bisakah kamu membantu Sid melakukan panggilan terakhir untuk teman-temannya ketika diklik? Jangan lupa untuk mengklik dia setelah kamu menekan Laksanakan.
+        studio_iceage_move_events: 'Scrat masih mencari biji pohon ek! Bantu dia pontang-panting mencari biji-biji tersebut dengan menyematkan blok "bergerak" pada kejadian tersebut dan gantilah arahnya untuk bekerja di setiap tombol arah panah. Ketika kamu sudah selesai, klik Laksanakan dan cobalah untuk mengumpulkan semua biji pohon ek.'
+        studio_iceage_sound_and_points: 'Kami telah menyediakan hampir semua kode yang membuat Nenek terus bergerak ke kiri dan kanan, termasuk kode untuk menggerakkan Sid memutari layar. Bisakah kamu menyelesaikan kode tersebut dan menambahkan blok-blok ke kejadian "ketika aktor menyentuh" untuk membuatnya demikian sehingga kamu berdua memainkan sebuah suara dan mencetak sebuah poin ketika Sid dan Nenek bertabrakan? Tekan Laksanakan untuk memainkan permainan tersebut.'
+        studio_iceage_warn_ice_age: Semua orang harus bergerak cepat karena jaman es akan datang! Ubahlah latar belakang menjadi latar belakang membeku dan tetapkan kecepatan Sid ke cepat, kemudian tekan Laksanakan dan gerakkan dia ke Diego untuk memperingatkannya.
+        studio_iceage_throw_hearts: 'Sid ingin membuat Neneknya, Nenek, tahu kalay dia menyayanginya. Gunakan perintah "aktor melempar" untuk membuat Sid (aktor 1) melempar hati-hati pada Nenek (aktor 2)! Tetapkanlah suasana hati Nenek menjadi senang ketika dia terkena hati-hati tersebut.'
+        studio_iceage_free_play: Waktunya untuk membuat permainan atau ceritamu sendiri! Ketika kamu sudah selesai, klik Selesai untuk membiarkan teman-temanmu mencoba permainanmu di telepon-telepon, tablet-tablet, atau komputer-komputer mereka!
+        studio_gumball_hello1: 'Anais ingin memiliki beberapa teman baru. Bisakah kamu membantunya untuk mengatakan "halo" dengan menyeret blok "katakan" ke dalam area kerja dan ketiklah kata "halo" di dalamnya?'
+        studio_gumball_hello2: 'Darwin (aktor 1) dan saudara laki-lakinya Gumball (aktor 2) sedang menuju sekolah. Bantulah mereka menyapa satu sama lain dengan menggunakan blok "aktor mengatakan" dua kali.'
+        studio_gumball_move_to_flag: 'Joe si Pisang akan memenangkan lomba hari lapangan! Bantulah dia bergerak di 200 pixel terakhir dengan menggunakan blok "bergerak".'
+        studio_gumball_move_to_actor: 'Gumball (aktor 1) dan Darwin (aktor 2) terlambat untuk hari lapangan! Bantulah Gumball bergerak 200 pixel ke bawah menuju Darwin dengan menggunakan blok "gerakkan aktor". Kemudian, sambungkan sebuah blok ke kejadian "ketika aktor menyentuh" untuk memainkan sebuah suara ketika mereka bertemu satu sama lain.'
+        studio_gumball_repeat: 'Blok "ulangi selamanya" memperkenankan kamu untuk menjalankan kode secara terus menerus. Bisakah kamu menyematkan blok-blok pada blok tersebut untuk membantu pemanasan Gumball untuk lombanya dengan bergerak ke kiri dan kanan berkali-kali?'
+        studio_gumball_click_hello: 'Bisakah kamu membantu Anton mengumumkan mulainya lomba dengan mengatakan "Bersiap, ancang-ancang, lari!"? Untuk menguji programmu, jangan lupa untuk mengklik Anton setelah kamu mengklik Laksanakan!'
+        studio_gumball_move_events: 'Darwin sedang berada di kontes mengumpulkan bendera! Bantulah dia berlari berkeliling dengan menyematkan blok "bergerak" pada setiap kejadian. Ketika kamu sudah selesai, klik Laksanakan dan cobalah untuk mengumpulkan semua bendera.'
+        studio_gumball_sound_and_points: 'Kami sudah menyediakan hampir semua kode yang membuat Anton (aktor 2) bergerak ke kiri dan ke kanan, sekaligus dengan kode untuk menggerakkan Joe si Pisang (aktor 1) mengelilingi layar. Bisakah kamu menyelesaikan kode tersebut dan tambahkan blok-blok ke kejadian "ketika aktor menyentuh" untuk membuatnya sedemikian rupa sehingga kamu berdua dapat memainkan sebuah bunyi dan mencetak poin ketika Joe si Pisang dan Anton bertabrakan? Tekan Laksanakan untuk memainkan permainan tersebut.'
+        studio_gumball_warn_food_fight: 'Darwin baru saja kabur dari perang makanan! Ubahlah latar belakangnya menjadi "para karakter" dan tetapkan kecepatan Darwin menjadi cepat, kemudian tekan Laksanakan dan gerakkan dia menuju Penny untuk memperingatinya.'
+        studio_gumball_join_food_fight: 'Bergabunglah dengan perang makanan! Gunakan perintah "aktor melempar benda kanan" untuk membuat Joe si Pisang (aktor 1) melempar makanan pada Anton (aktor 2)! Tetapkan suasana hati Anton menjadi marah ketika dia terkena lemparan.'
+        studio_gumball_free_play: Buatlah permainan atau ceritamu sendiri. Ketika kamu selesai, klik Selesai untuk membiarkan teman-temanmu mencoba permainanmu pada telepon-telepon, tablet-tablet, dan komputer-komputer mereka2!
         studio_full_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_k1_1: 'Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?'
         studio_k1_2: Bisakah Anda membuat anjing itu mengatakan sesuatu, kemudian membuat kucing itu mengatakan sesuatu?
@@ -477,6 +476,12 @@ id:
         infinity_playlab_intro: 'Play Lab - Pendahuluan'
         infinity_playlab_events: 'Play Lab - Kegiatan'
         infinity_playlab_repeat_forever: 'Play Lab - ulangi selamanya'
+        csp_applab_databases_1: 'Introduction to Databases - Part 1'
+        csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_lists_1: 'Introduction to Lists - Part 1'
+        csp_applab_lists_2: 'Introduction to Lists - Part 2'
+        csp_applab_lists_3: 'Introduction to Lists - Part 3'
+        csp_applab_lists_4: 'Introduction to Lists - Part 4'
         csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
         csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
         csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
@@ -530,12 +535,12 @@ id:
         mc_if_statements: 'Minecraft - Pernyataan jika'
         mc_congrats_share: 'Minecraft - Selamat'
         mc_congrats_no_share: 'Minecraft - Selamat'
-        gumball_intro: 'Gumball Hour of Code - Introduction'
-        gumball_events: 'Gumball Hour of Code - Events'
-        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
-        iceage_intro: 'Ice Age Hour of Code - Introduction'
-        iceage_events: 'Ice Age Hour of Code - Events'
-        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
+        gumball_intro: 'Jam Mengkode Gumball - Introduksi'
+        gumball_events: 'Jam Menkode Gumball - Kejadian'
+        gumball_repeat: 'Jam Mengkode Gumball - Pernyataan yang diulang'
+        iceage_intro: 'Jam Mengkode Ice Age - Introduksi'
+        iceage_events: 'Jam Mengkode Ice Age - Kejadian'
+        iceage_repeat: 'Jam Mengkode Ice Age - Pernyataan yang diulang'
     callout:
       text:
         drag_blocks: 'Tarik blok "gerak" dan letakkan di bawah blok lain'
