@@ -12,6 +12,12 @@
     "node": ">=0.12.0",
     "npm": "^2.9.1"
   },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jquery-shim": "global:$"
+  },
   "scripts": {
     "postinstall": "linklocal",
     "lint": "npm run lint-js && npm run lint-css",
@@ -35,6 +41,7 @@
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^12.0.1",
+    "browserify-shim": "^3.8.12",
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
@@ -58,7 +65,8 @@
   "dependencies": {
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
-    "jquery": "^1.11.3",
+    "jquery": "^2.2.0",
+    "jquery.cookie": "^1.4.1",
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",
