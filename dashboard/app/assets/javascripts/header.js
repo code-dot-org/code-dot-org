@@ -1,5 +1,3 @@
-//= require client_state
-
 /* globals dashboard, trackEvent, Dialog, React, appOptions */
 
 /**

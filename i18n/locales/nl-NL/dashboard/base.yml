@@ -28,8 +28,7 @@ nl:
     code:
       label: 'Voeg een leraar toe:'
       placeholder: Sectiecode (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Voer hier de code in die je van je leraar hebt gekregen. De code bestaat uit 6 letters zoals "ABCDEF".'
     submit: voeg leraar toe
   add_hint_form:
     placeholder: Voer hier uw hint

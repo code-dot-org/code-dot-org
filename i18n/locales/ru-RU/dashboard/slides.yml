@@ -683,16 +683,16 @@ ru:
     C2_digital_footprint:
       1:
         image: notes/C2_digital_footprint_1.png
-        text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: 'У тебя на голове шляпа и твой ум подскажет тебе, где ты находишься, и подумай о зоопарке и приветственно кивни - тебе и тебе! Используй свою голову, когда ты онлайн, чтобы сохранить то, что внутри твоего ума, и знай, как обезопасить себя, как дать своей жизни личное пространство! От головы до пальцев ног, сделай паузу, подумай об этом. От твоих ног до носа, остановись и подумай онлайн!'
       2:
         image: notes/C2_digital_footprint_2.png
-        text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: 'Используйте ваше сердце, чтобы расти и вырастать, и дать себе здоровое сияние, и сделайте валентинку, чтобы сказать кому-то: будь со мной! Используйте ваше сердце, когда вы онлайн, чтобы почувствовать, что правильно и где доброта, и покажите вашим друзьям уважение к ним, чтобы быть справедливым и хорошим в интернете. От головы до пальцев ваших ног, остановитесь, подумайте об этом. От ваших ног до вашего носа, сделайте паузу и подумать онлайн!'
       3:
         image: notes/C2_digital_footprint_3.png
         text: Используйте свои руки, чтобы обнимать своего питомца, чтобы защитить свою одежду от промокания и чтобы носить свои любимые рукава и для того, чтобы летать и заставить тебя поверить. Используйте свои руки, когда вы онлайн, чтобы сделать перерыв и сохранить баланс времени и оставить свою технику позади и найти дерево, чтобы на него вскарабкаться. От макушки до кончиков пальцев, сделайте паузу, подумайте об этом. От ваших ног до кончика носа, сделайте паузу и думайте в режиме онлайн!
       4:
         image: notes/C2_digital_footprint_4.png
-        text: "Use your gut to store your food, and to listen to its growling mood, to make a belly flop, and to feel the gas in soda pop. Use your gut when you're online, to know to watch for certain signs, and to let it guide the way and tell you when it's not ok. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: Используйте ваш живот для хранения пищи и слушайте его урчание, чтобы погрузиться в него и почувствовать, как лопаются пузырьки газа. Используйте ваш живот, когда вы в сети, чтобы увидеть определенные знаки и пусть они покажут вам путь и скажут, когда что-то не так. От головы до пальцев ног, остановитесь, подумайте об этом. От ваших ног до вашего носа сделайте паузу и подумайте онлайн!
       5:
         image: notes/C2_digital_footprint_5.png
         text: "So think with your head, and feel with your heart, balance with your arms, listen to your gut, online. Use your legs to run and kick, and to jump and bounce on a pogo stick, and to dance around the block, and to skip along in your smelly socks. Use your legs when you're online, to stand up to bullies who cross the line, and remember to stand tall, be nice to creatures great and small."
@@ -702,7 +702,7 @@ ru:
     C2_digital_footprint_v2:
       1:
         image: notes/C2_digital_footprint_v2_1.png
-        text: Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?
+        text: Каждый раз, когда вы заходите в сеть, вы оставляете след, который можно отследить, скопировать, поделиться, опубликовать и является постоянным. Какой цифровой след вы оставляете? Какой цифровой след вы хотите оставить?
     C2_graph_paper:
       1:
         image: notes/C2_graph_paper_1.png
@@ -734,10 +734,10 @@ ru:
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: Обычно, при программировании требуется писать программу текстом, но мы будем использовать язык Блокли. В нём для написания программы требуется просто перетаскивать блоки, а программа будет создаваться автоматически. Для начала, создадим программу, которая поможет Angry Bird пройти через Лабиринт и наказать злых свиней, укравших птичьи яйца.
       2:
         image: notes/C2_maze_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: 'Блокли делится на три основные части. Слева Птичий лабиринт, в котором ваша программа будет выполняться. Инструкции для каждого уровня расположены под Лабиринтом. Средняя часть - это панель инструментов, в которой каждый блок является командой исполняемой птицей. Пространство справа называется рабочей областью. В ней мы будем создавать программу.'
       3:
         image: notes/C2_maze_intro_3.png
         text: 'If I drag the move block to our work space and press "Run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'
@@ -751,13 +751,13 @@ ru:
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
-        text: This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms.
+        text: 'Этот урок называется Алгоритмы повседневной жизни. Алгоритмы описывают вещи, которые люди делают каждый день. Рецепты печенья и описания для постройки скворечника - это примеры повседневных алгоритмов.'
       2:
         image: notes/C2_paper_airplanes_2.png
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: Сегодня мы будем придумывать, реализовывать и тестировать алгоритм бумажного самолетика. Но, во-первых, нам нужно разбить этот большой проект на легкие маленькие шаги. Для изготовления бумажного самолетика, нам нужно решить, какие шаги предпринять и в каком порядке.
       3:
         image: notes/C2_paper_airplanes_3.png
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: Вы создадите свой алгоритм, для начала, нарезкой фотографии. Далее, вы выберете 6 фотографии, которые показывают необходимые шаги для создания бумажного самолетика, расположите эти фотографии в правильном порядке. После того, как у вас все разложено по порядку, обменяйтесь алгоритмами с другой ученической командой, чтобы проверить работоспособность алгоритма. Очень важно, чтобы хорошо спроектированный алгоритм создавал самый лучший бумажный самолетик.
       4:
         image: notes/C2_paper_airplanes_4.png
         text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
@@ -777,7 +777,7 @@ ru:
         text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
       3:
         image: notes/C2_relay_programming_3.png
-        text: 'Для поиска и исправления ошибок в коде программисты используют отладку кода. Есть много способов исправить проблемы. Один из самых простых - двигаться шаг за шагом пока вы не найдёте место, где что-то не так, затем исправить это.'
+        text: 'Для поиска и исправления ошибок в алгоритме и коде программисты используют отладку кода. Есть много способов исправить проблемы. Один из самых простых - двигаться шаг за шагом, пока вы не найдёте место, где что-то не так, затем исправить это.'
       4:
         image: notes/C2_relay_programming_4.png
         text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
@@ -1080,10 +1080,10 @@ ru:
     C4_intro:
       1:
         image: notes/C4_intro_1.png
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: Обычно, при программировании требуется писать программу текстом, но мы будем использовать язык Блокли. В нём для написания программы требуется просто перетаскивать блоки, а программа будет создаваться автоматически. Для начала, создадим программу, которая поможет Angry Bird пройти через Лабиринт и наказать злых свиней, укравших птичьи яйца.
       2:
         image: notes/C4_intro_2.png
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: 'Блокли делится на три основные части. Слева Птичий лабиринт, в котором ваша программа будет выполняться. Инструкции для каждого уровня расположены под Лабиринтом. Средняя часть - это панель инструментов, в которой каждый блок является командой исполняемой птицей. Пространство справа называется рабочей областью. В ней мы будем создавать программу.'
       3:
         image: notes/C4_intro_3.png
         text: 'If I drag the move block to our work space and press "run", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program.'

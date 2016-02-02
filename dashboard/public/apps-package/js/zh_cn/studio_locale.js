@@ -454,7 +454,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "playSoundR2D2Sound4":function(d){return "播放 R2-D2 4声"},
 "playSoundR2D2Sound5":function(d){return "播放 R2-D2 5声"},
 "playSoundR2D2Sound6":function(d){return "播放 R2-D2 6声"},
-"playSoundR2D2Sound7":function(d){return "播放 R2-D2 7声"},
+"playSoundR2D2Sound7":function(d){return "播放 R2-D2 音效7"},
 "playSoundR2D2Sound8":function(d){return "播放 R2-D2 8声"},
 "playSoundR2D2Sound9":function(d){return "播放 R2-D2 9声"},
 "playSoundC3PORandom":function(d){return "播放C-3PO 随机声"},
