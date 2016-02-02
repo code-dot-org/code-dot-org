@@ -20,8 +20,8 @@ fi-FI:
   submit: Jatka
   twentyhours_heading: Kokeile kurssiamme Johdanto tietojenkäsittelytieteeseen
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Jokainen lapsi ansaitsee mahdollisuuden
+  og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella tietotekniikkaa.
   hoc2014_heading: 'Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14. joulukuuta 2014<br/>'
   hoc2014_students: Oppilaat
   hoc2014_try: Kokeile
@@ -217,7 +217,7 @@ fi-FI:
   homepage_banner_text_link: Lue lisää
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Lue lisää
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20,000 opettajaa koulutettu, ja nyt opettamassa tietotekniikkaa luokkahuoneissa.
   homepage_banner_20k_teachers_link: Lue lisää
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
@@ -227,7 +227,7 @@ fi-FI:
   homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
   homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Tutustu kursseihimme
   homepage_slot_text_link_codestudio: Kokeile Koodistudiota
   homepage_slot_text_link_local: Etsi kerho läheltäsi
   homepage_slot_text_link_othercourses: Muut verkkokurssit
@@ -315,8 +315,8 @@ fi-FI:
   volunteer_engineer_submission_intro_recruit: |-
     Teachers would love to have somebody <span style="font-family: 'Gotham 7r', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: 'Gotham 7r', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).
   volunteer_engineer_submission_intro_signup: 'Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class="form-required-field">*</span> are required.'
-  volunteer_engineer_submission_intro_links: 'Do you need to find volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: 'Are you a teacher looking for volunteers? Find a local volunteer on our <a href="%{volunteer_local}">volunteer map</a>.'
+  volunteer_engineer_submission_update_information: Päivitä tietosi
   volunteer_engineer_submission_header_shared: Information shared with teachers on volunteer map
   volunteer_engineer_submission_field_name: Nimi
   volunteer_engineer_submission_field_name_placeholder: Koko nimi
@@ -328,7 +328,7 @@ fi-FI:
   volunteer_engineer_submission_field_location_placeholder: Postinumero, kaupunki ja osavaltio/maa tai katuosoite
   volunteer_engineer_submission_field_location_flexibility: Voin auttaa Koodaustuntia... (Valitse kaikki sopivat vaihtoehdot)
   volunteer_engineer_submission_checkbox_after_hoc: Olen kiinnostunut vapaaehtoistyöstä Koodaustunnin jälkeen
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: LinkedIn-profiili
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook-profiili
@@ -336,7 +336,7 @@ fi-FI:
   volunteer_engineer_submission_field_description: Kuvaus
   volunteer_engineer_submission_field_description_desc: Kuvaa tietojenkäsittelytieteen osaamisesi ja mitä apua voisit tarjota vapaaehtoisena paikallisille opettajille.
   volunteer_engineer_submission_field_description_placeholder: Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here.
-  volunteer_engineer_submission_header_private: Information kept private and never shared
+  volunteer_engineer_submission_header_private: Tiedot ovat luottamuksellisia ja niitä ei koskaan jaeta
   volunteer_engineer_submission_field_email: Sähköpostiosoite
   volunteer_engineer_submission_field_email_desc: Sähköpostiosoitettasi ei koskaan jaeta, mutta lähetämme sinulle pyyntöjä opettajilta.
   volunteer_engineer_submission_field_email_placeholder: Sähköpostiosoite
@@ -435,7 +435,7 @@ fi-FI:
   dashboard_navigation_section_speakers: 'Tietojenkäsittelyopin <br/> puhujavieraat'
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
@@ -561,7 +561,7 @@ fi-FI:
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS Education Week
   learn_sign_up_button: Luo käyttäjätunnus
   learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
+  learn_videos_show: Näytä tämä inspiroiva video luokallesi
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources

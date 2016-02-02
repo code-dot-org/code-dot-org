@@ -28,8 +28,7 @@ ja:
     code:
       label: 先生を追加：
       placeholder: セクション ・ コード (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: '先生によって与えられたコードを入力してください。"ABCDEF"のような 6 文字のコードです。'
     submit: 先生を追加
   add_hint_form:
     placeholder: ここにあなたのヒントを入力してください
@@ -347,7 +346,7 @@ ja:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour of Code&reg; は Code.org の商標です'
-    copyright: Copyright
+    copyright: 著作権
     more: それ以上
     feedback: フィードバックする
     translate: あなたの言語の翻訳にご協力ください

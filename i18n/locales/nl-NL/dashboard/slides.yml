@@ -493,132 +493,128 @@ nl:
         text: Om te leren debuggen beginnen we al met een paar blokken op het veld. Je kan misschien wel zien dat de blokken je niet naar het doel zullen krijgen. We zullen de oplossing moeten debuggen en het repareren. Wat is er mis gegaan? Je zal zien dat je één blok meer naar het westen had moeten gaan.
       4:
         image: notes/C1_maze_debugging_4.png
-        text: "Let's fix this by adding another west block and hitting run to see if you got it right. Yay, you got it!"
+        text: We laten nog een west blok lopen en zien wat we juist hebben. Correct!
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
         text: Voor deze puzzel moet de vogel naar het varken. Kijk naar de puzzel en zoeken voor de weg die de vogel moet nemen.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: |-
-          You need to drag the blocks over from the toolbox to the workspace. Make sure it's under the "when run" block and when you think you've got the right solution, then you can click "Run" and watch the bird go to the pig.
+        text: 'Sleep de blokken vanuit de toolbox naar de werkplaats. Wees er zeker van dat alles onder "wanneer uitvoeren" blok staat. Als je de goede oplossing gevonden hebt, kan je op "Uitvoeren" klikken en de het varken naar de vogel zien lopen.'
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: "Iets waar computers heel goed in zijn is het herhalen van commando's. Mensen worden het constant herhalen van dezelfde opdracht snel beu. Computers kunnen dezelfde opdracht miljoenen of zelfs miljarden keren nauwkeurig uitvoeren zonder verveeld te raken."
       2:
         image: notes/C1_maze_loops_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Bijvoorbeeld, als je iedereen een gelukkige verjaardag wil wensen op Facebook door ze een email te sturen dan zou dit een eeuwigheid duren om ze allemaal uit te schrijven. Een paar lijntjes code kan iedereen in een mum van tijd een gelukkige verjaardag wensen.
       3:
         image: notes/C1_maze_loops_3.png
-        text: 'To get the bird to the pig in this level... rather than drag three North blocks on to the workspace, you will use the "repeat" block. Drag the "repeat" block on to the workspace and enter the number 3. Then drag the "move North" block into the "repeat" block and hit "Run" to see if you got it right. Congratulations, you got it!'
+        text: 'Om in dit level het varken naar de vogel te krijgen, moet je, in plaats van 3 Noord blokken naar de werkplaats te verschuiven, het "Herhaal" blok gebruiken. Sleep het "Herhaal" blok naar de werkplaats en voer 3 nummers in. Daarna sleep je de "Verschuif Noord" blok in de "Herhaal" blok en klik je op "Uitvoeren". Goed zo, dat is de correcte oplossing!'
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: Deze les heet move it, move it. Samen zullen we een programma schrijven om onze vrienden van bij het begin met de kompas roos naar het smiley gezichtje te krijgen.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: "But the smiley is face down and only one person knows how to get there. Let's get this program started."
+        text: Maar de smiley ligt met het gezicht naar beneden en er is maar 1 persoon die daar kan geraken. Laten we het programma opstarten.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: "Een programma is een algoritme dat gecodeerd is zodat een machine deze kan uitvoeren. De meeste mensen denken dat we een programma schrijven voor de computer. Programma's zijn heel goed hierin, maar ze zijn ook heel nuttig op andere plekken. Je kan je eigen spelletje schrijven of zelfs een robot programmeren."
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Mijn naam is Jeremiah. Hallo! Ik ben zeven jaar oud! Ik hou van spelletjes spelen op de computer van mijn moeder. Eerst heb ik wel toestemming nodig. "Moeder, kan ik op de computer spelen? Natuurlijk Liefje!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: Ik speel graag op de computer want ik kan er op het internet. Het internet is een beetje zoals je woonbuurt. Je kan er leuke plekken bezoeken, met familie praten en vrienden maken zodat je vele nieuwe dingen leert.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: "Gisteren ben ik een zoo gaan bezoeken dat dicht gelegen is aan ons huis. Ik zag een baby zebra. Ik nam een foto en veranderde de kleuren van haar strepen, zette een hoed op haar kop en voegde haar toe aan de collectie van gekke dieren. Tof! Later ben ik een hele verre plek gaan bezoeken namelijk Kenia. Dat is een land waar vele zebra's leven."
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |-
-          Sometimes on the Internet I talk to people I know, like my grandma who lives in another state. Hi grandma! She's making me cookies that she'll send me for my birthday. "Yummy, I wish the Internet had smellorama!" I can talk to different people on the Internet, like my cousin but I only talk to people I know.
+        text: 'Soms praat ik op het internet met mensen die ik ken zoals mijn grootmoeder die in een ander land leeft. Hallo grootmoeder! Ze bakt koekjes dat ze zal opzenden voor mijn verjaardag. "Lekker, Ik wou dat het internet een ruik-o-rama had!" Ik kan met vele verschillende mensen praten zoals mijn neefje, maar ik praat meestal enkel met mensen dat ik ken.'
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!
+        text: Het leukste dat ik kan vinden op het internet is het spelen van spelletjes. Gescoord! Ik hou ook van tekenen of het uitvinden van dingen zodat ik ze kan delen met mijn vrienden. Cool! Soms bezoek ik sites waar ik nieuwe dingen leer, maar het liefst zit ik op websites die me het meest aanspreken. Wauw, dinosaurussen!
       6:
         image: notes/C1_going_places_safely_6.png
-        text: 'The Internet is a super fun place. But just like when you cross a street in your neighborhood, you also have to be careful when you go online. Here are three rules to remember. Rule number 1: Always ask your parents first. Rule number 2: Only talk to people you know. Rule number 3: Stick to places that are just right for you.'
+        text: 'Het internet is een super leuke plek. Net zoals een straat in een knusse woonwijk. Je moet wel goed oppassen waar je belandt op het internet. Er zijn 2 gouden regels om te onthouden. Regel nummer 1: Vraag altijd toestemming aan je ouders. Regel nummer 2: Praat enkel met mensen dat je kent en Regel nummer 3: Blijf op websites dat je goed kent en waar je graag bent.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: "Wow, that was fun! Dinnertime. I'm logging off now. I can't wait to log on again to see where I can visit next."
+        text: Wauw, dat was leuk! Etenstijd. Ik ga offline en kan bij niet wachten tot de volgende keer dat ik je weer terug zie.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: 'Vandaag gaan we leren over "Pair" programmeren. In Pair programmeren werk je samen in een team. Waarom zouden twee mensen dezelfde computer moeten gebruiken? Omdat twee mensen altijd beter zijn dan één. In Pair programmeren werken jij en je partner aan hetzelfde project op dezelfde computer.'
       2:
         image: notes/C1_pair_programming_2.png
-        text: "In pair programming, one person is the driver and the other person is the navigator, just like driving a car. The driver sits at the computer and is the one using the keyboard and mouse or touchscreen and controlling the main actions of the computer. The other person is the navigator. The navigator helps the driver by answering the driver's questions and pointing out potential problems or mistakes."
+        text: 'In Pair programming is de ene persoon de bestuurder en de andere de navigator net zoals je met een auto zou rijden. De bestuurder mag de computer "besturen" en de andere is de navigator. De navigator help de bestuurder bij het vinden van oplossingen voor een programmeer probleem en stuurt bij waar nodig.'
       3:
         image: notes/C1_pair_programming_3.png
-        text: "Communication is key to successful pair programming. No insults, be respectful, don't be a bossy navigator, because nobody likes a backseat driver. You and your partner should always be talking. The driver can explain what she or he is doing. And the navigator can help suggest what to do next."
+        text: Communicatie is de sleutel tot het succesvol uitvoeren van Pair programmeren. Behandel elkaar met respect, scheld elkaar niet uit en niemand speelt de baas over de ander. Jullie moeten altijd met jullie gedachten bij het programma zijn. De bestuurder kan uitleggen wat hij/zij aan het doen is en de navigator probeert de voorspellen wat hij/zij verderop het programma moet doen.
       4:
         image: notes/C1_pair_programming_4.png
-        text: The navigator should be thinking about the big picture and the driver focuses on the details. Both roles are important. Pair programming is all about working together as a team.
+        text: De navigator moet zich kunnen focussen op het totaalbeeld van het programma terwijl de bestuurder zich bezighoudt met de details. Beide rollen zijn belangrijk! Als team behalen jullie de beste resultaten.
     C1_planting_seed:
       1:
         image: notes/C1_planting_seed_1.png
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: 'Deze les heet "een zaadje planten" en het zal ons helpen om algoritmen te verstaan. Algoritmen zijn een soort specifieke set van instructies dat de volgorde bepaalt van iets. Zelfs alledaagse dingen zoals ontbijt eten of je tanden poetsen zijn algoritmen dat kleine stappen vereisen om de taak volbracht te krijgen.'
       2:
         image: notes/C1_planting_seed_2.png
-        text: "Computers can be really smart but they can only understand you if you tell them exactly what you want step by step. The great thing about algorithms is that if you follow the instructions in order, you can do something that you didn't know how to do ahead of time. It's like following a recipe."
+        text: Computers zijn heel slim, maar ze kunnen enkel verstaan wat jij hen opdraagt en liefst stap voor stap. Het grote voordeel van algoritmen is dat je de instructies kan opvolgen. Je kan iets doen dat in de toekomst dat je eerder niet kon. Het heeft iets weg van een receptje opvolgen.
       3:
         image: notes/C1_planting_seed_3.png
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: Vandaag gaan we leren over het planten van ons eigen zaadje. Creëer je eigen algoritme door de plaatjes in stukken te snijden. Selecteer de plaatjes die het planten van een zaadjes in volgorde voorstellen.
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: Nu is het moment van de waarheid. Werkt deze algoritme wel? Volg de stappen in het algoritme nauwkeurig op. Zijn in de correcte volgorde? Is het zaadje op het einde van het algoritme geplant? Programmeren met plaatjes is leuk!
       5:
         image: notes/C1_planting_seed_5.png
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: Wanneer we chocolade willen maken, zijn er vele grote stappen van dat proces dat bestaan uit vele kleinere stappen. Er bestaan vele recepten/algoritmen en manieren afhankelijk van de chocolade dat we willen maken. Elke stap is belangrijk, zelfs de kleinste! Zonder die ene kleine stap kan de rest van het proces niet uitgevoerd worden. Algoritmen maken zodat anderen ze kunnen verstaan is heel belangrijk. Daarom zorgen we ervoor dat elke kleine stap uitgeschreven is zodat de oplossing van het algoritme, voor iedereen die ze uitvoert, hetzelfde is.
     C1_playlab_storytelling:
       1:
         image: notes/C1_playlab_storytelling_1.png
-        text: Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell.
+        text: Tijd voor creativiteit! Laten we die programmeer vaardigheden gebruiken om een verhaal te schrijven. Jouw verhaal heeft personages die kunnen praten en met anderen kunnen converseren. Probeer eens te denken over het verhaal dat je wil vertellen.
       2:
         image: notes/C1_playlab_storytelling_2.png
-        text: |-
-          The cat's always been afraid of the dog and what if the cat figures out that the dog is trying to be nice? The "when run" block starts everything. The "move" block will move your character and the "say" block will make your character say whatever you type.
+        text: 'De kat is altijd al bang geweest voor de hond. Wat als de kat begrijpt dat de hond eigenlijk heel lief is? De "Wanneer uitgevoerd" blok start alles. De "Verplaats" blok zal je personage verplaatsen en de "Praat" blok zal je personage alles zeggen wat jij typt.'
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: 'This is the "when actors collide" block which you can link up to the other blocks.'
+        text: 'Dit is de "Wanneer personages samenkomen" blok die je kan verbinden met andere blokken.'
       4:
         image: notes/C1_playlab_storytelling_4.png
-        text: 'I was making the dog come over and say "Hi" but then the cat got scared so it ran away. "Ahh" If there was more time, it would have been a happy ending. The end!'
+        text: 'Ik zorgde ervoor dat de hond zou komen en "Hallo" zou zeggen, maar de kat werd bang en liep weg. "Ah ja". Als er meer tijd was, dan zou ik een goed einde verzonnen hebben. Einde van het verhaal!'
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: This is the spelling bee level. Use the puzzle pieces to move the bee. As it moves, it will collect letters to spell words.
+        text: 'Dit is het "Spel het woord" niveau. Gebruik de puzzel stukken om de bij te verplaatsen. Terwijl de bij beweegt zal het proberen letters te verzamelen om woorden te spellen.'
       2:
         image: notes/C1_spelling_bee_intro_2.png
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: Kan jij het woord spellen dat gegeven wordt in het vakje onder het podium? Wees voorzichtig! Een verkeerde richting uitgaan zal verkeerde letters opleveren.
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: "One that computers are really good at is repeating commands. As a person, you'd get really bored if you had to do the same thing lots and lots of times in a row. But a computer can do the same thing millions or even billions of times and not get bored and be able to carry that out really well."
+        text: "Iets waar computers heel goed in zijn is het herhalen van commando's. Mensen worden het constant herhalen van dezelfde opdracht snel beu. Computers kunnen dezelfde opdracht miljoenen of zelfs miljarden keren nauwkeurig uitvoeren zonder verveeld te raken."
       2:
         image: notes/C1_zuck_repeat_loop_2.png
-        text: For example, if I wanted to wish everyone on Facebook a happy birthday by sending them an email, it might take me more than century to actually write out all those emails to everyone. But with just a few lines of code, I can have a system send an email to everyone on Facebook wishing them a happy birthday.
+        text: Bijvoorbeeld, als je iedereen een gelukkige verjaardag wil wensen op Facebook door ze een email te sturen dan zou dit een eeuwigheid duren om ze allemaal uit te schrijven. Een paar lijntjes code kan iedereen in een mum van tijd een gelukkige verjaardag wensen.
       3:
         image: notes/C1_zuck_repeat_loop_3.png
-        text: "In this example, your goal is going to be to move the bird to get the pig. Now, we're going to be able to use the repeat block in order to be able to do this very easily. You can either do this by giving the computer a move forward command five times in order to advance the bird one step each time to the pig or you can just tell the computer to move forward once, and then tell it to repeat that five times and it'll do the same thing."
+        text: 'In dit voorbeeld is je doel om de vogel naar het varken te krijgen. Nu zullen we de herhaal blok gebruiken om dit makkelijk uit te voeren. Gebruik de verplaats commando 5 keer om de vogel een plaats vooruit te schuiven naar het varken of gebruik het verplaats commando 1 keer en zet herhaal command op "5". Beide zullen hetzelfde doen.'
       4:
         image: notes/C1_zuck_repeat_loop_4.png
-        text: 'In order to do this, you drag your move forward command and then you put it inside the repeat block. And you can click on it and tell it how many times you  to repeat the block to tell it how many steps you want it to take forward.'
+        text: Om dit te doen, sleep je de verplaats blok commando en zet je dit binnen het herhaal blokje. Daarna kan je hierop klikken en instellen hoeveel keer je dit wil herhalen.
       5:
         image: notes/C1_zuck_repeat_loop_5.png
-        text: "One more thing is you can put as many commands as you want inside the repeat block. So in this example, you're telling it to move forward and turn left, which it'll do five times. Have fun!"
+        text: "Nog een laatste opmerking is je onbeperkt commando's kan plaatsen in de herhaal blok. Bijvoorbeeld, je stelt in dat je eerst vooruit moet, daarna naar links waardoor alles 5 keer uitgevoerd wordt. Veel plezier!"
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
         text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
       2:
         image: notes/C2_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: In deze puzzels ben je een kunstenaar die een potlood gebruikt om verschillende vormen te tekenen. Overal waar je tekenaar heen gaat zal hij een lijn achter je tekenen.
       3:
         image: notes/C2_artist_intro_3.png
         text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."
@@ -821,7 +817,7 @@ nl:
         text: "You wouldn't even qualify for the race if you don't have people who are proficient in computer science because of how much data the cars collect and the necessity to be able to have people that can write programs to figure out how you continue to figure out how to build performance."
       2:
         image: notes/C3_artist_intro_2.png
-        text: "In these puzzles, you'll be an artist that uses a pencil to draw different shapes. Wherever your artist goes, it will draw a line behind you."
+        text: In deze puzzels ben je een kunstenaar die een potlood gebruikt om verschillende vormen te tekenen. Overal waar je tekenaar heen gaat zal hij een lijn achter je tekenen.
       3:
         image: notes/C3_artist_intro_3.png
         text: "To move around the canvas, you'll use the move forward block. Here the move forward block says move forward by 100 pixels. When we hit run, what happens? The artist moves forward a certain amount and that amount is 100 pixels. Pixels are basically very tiny squares on your computer screen."

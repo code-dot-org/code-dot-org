@@ -28,8 +28,7 @@ ka:
     code:
       label: 'მასწავლებლის დამატება:'
       placeholder: სექციის კოდი (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'გთხოვთ შეიყვანეთ კოდი რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6 ნიშნა და გამოიყურება ასე "ABCDEF".'
     submit: მასწავლებლის დამატება
   add_hint_form:
     placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
@@ -258,8 +257,8 @@ ka:
       remove: დარწმუნებული ხართ, რომ ამ მასწავლებლის წაშლა გინდათ?
     students:
       dashboard: მასწავლებლის მართვის პანელზე გადასვლა
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: მასწავლებელი ვერ მოიძებნა.
+    student_teacher_disassociated: 'თქვენ წაშალეთ %{teacher_name} მასწავლებელი.'
     panel:
       answer_viewer: პასუხების ნახვა
       student: მოსწავლე
@@ -329,7 +328,7 @@ ka:
   share:
     title: ისწავლეთ კოდის სტუდიაში
     description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: ცადეთ კოდირების საათი!
   gender:
     male: მამრობითი
     female: მდედრობითი
@@ -359,7 +358,7 @@ ka:
     built_on_code_studio: დაწერეთ კოდი კოდის სტუდიაში
     make_my_own_app: ჩემი საკუთარი აპლიკაციის შექმნა
     how_it_works: როგორ მუშაობს ეს სივრცე
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: ცადეთ კოდირების საათი!
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
