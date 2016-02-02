@@ -60,7 +60,7 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
 var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://');
+var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i')
 
 GameLab.baseP5loadImage = null;
 
@@ -112,7 +112,7 @@ GameLab.prototype.init = function (config) {
         // for us, but as soon as it's decoded, we again have an invalid URL. For
         // this reason we first replace space with %20 ourselves, such that we now
         // have a valid URL, and then call encodeURIComponent on the result.
-        path = MEDIA_PROXY + encodeURIComponent(path.replace(' ', '%20'));
+        path = MEDIA_PROXY + encodeURIComponent(path.replace(/ /g, '%20'));
       }
       return GameLab.baseP5loadImage(path, successCallback, failureCallback);
     };
