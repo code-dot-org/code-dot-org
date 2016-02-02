@@ -195,11 +195,6 @@ namespace :build do
         end
       end
 
-      if CDO.daemon && !rack_env?(:development)
-        HipChat.log 'Analyzing <b>pegasus</b> hour-of-code activity...'
-        RakeUtils.system deploy_dir('bin', 'analyze_hoc_activity')
-      end
-
       HipChat.log 'Starting <b>pegasus</b>.'
       RakeUtils.start_service CDO.pegasus_unicorn_name unless rack_env?(:development)
     end

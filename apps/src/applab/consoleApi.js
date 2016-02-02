@@ -1,7 +1,5 @@
 var codegen = require('../codegen');
 var vsprintf = require('./sprintf').vsprintf;
-var errorHandler = require('./errorHandler');
-var outputApplabConsole = errorHandler.outputApplabConsole;
 
 var consoleApi = module.exports;
 
@@ -21,5 +19,5 @@ consoleApi.log = function() {
       }
     }
   }
-  outputApplabConsole(output);
+  Applab.log(output);
 };
