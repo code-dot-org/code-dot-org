@@ -812,6 +812,44 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
+    },
+
+    {
+      description: "can use element select to switch elements",
+      editCode: true,
+      xml: '',
+      levelHtml: '' +
+      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
+      '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+      '<button id="button1" style="padding: 0px; margin: 0px; height: 130px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 130px;">Button 1</button>' +
+      '<button id="button2" style="padding: 0px; margin: 0px; height: 130px; width: 120px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 120px; top: 180px;">Button 2</button>' +
+      '</div>' +
+      '</div>',
+      runBeforeClick: function (assert) {
+        var elementSelect = $('#emptyTab').find('select')[0];
+
+        // Switch to design mode
+        var designModeButton = $('#designModeButton');
+        designModeButton.click();
+
+        assertPropertyRowValue(0, 'id', 'screen1', assert);
+
+        function selectElementAndValidate(id) {
+          ReactTestUtils.Simulate.change(elementSelect, {
+            target: {value: id}
+          });
+          assertPropertyRowValue(0, 'id', id, assert);
+        }
+
+        selectElementAndValidate('button1');
+        selectElementAndValidate('screen1');
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
   ]
 };
