@@ -35,7 +35,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)
 
-## 3rd Party Educator Resources
+## 3rd Party resources for middle school CS
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|

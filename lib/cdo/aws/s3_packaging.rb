@@ -34,7 +34,7 @@ class S3Packaging
     begin
       ensure_updated_package
     rescue Aws::S3::Errors::NoSuchKey
-      @logger.info 'Package does not exist on S3'
+      @logger.info 'Package does not exist on S3. If you have made local changes to code-studio, you need to set build_code_studio and use_my_code_studio to true in locals.yml'
       return false
     rescue Exception => e
       @logger.info "update_from_s3 failed: #{e.message}"

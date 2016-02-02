@@ -113,9 +113,10 @@ module.exports = {
 
   /**
    * @param {HTMLElement} element
+   * @param {boolean?} allowUnknown If true, we won't throw on unknown element types
    * @returns {string} String representing elementType
    */
-  getElementType: function (element) {
+  getElementType: function (element, allowUnknown) {
     var tagname = element.tagName.toLowerCase();
 
     switch (tagname) {
@@ -148,6 +149,10 @@ module.exports = {
             return ElementType.TEXT_INPUT;
         }
         break;
+    }
+    // Unknown elements are expected. Return null because we don't know type.
+    if (allowUnknown) {
+      return null;
     }
     throw new Error('unknown element type');
   },

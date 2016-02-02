@@ -207,6 +207,11 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {},
           "title": "setSize"
         },
+        "setProperty": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "setProperty"
+        },
         "write": {
           "color": "#FFF176",
           "title": "write"
