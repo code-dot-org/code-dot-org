@@ -146,7 +146,7 @@ JSInterpreter.prototype.parse = function (options) {
     new window.Interpreter(options.code, initFunc);
   }
   catch(err) {
-    this.onExecutionError.notifyObservers(err);
+    this.notifyOfExecutionError(err);
   }
 
 };
@@ -455,8 +455,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.onExecutionError.notifyObservers(err,
-          inUserCode ? (userCodeRow + 1) : undefined);
+      this.notifyOfExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
       this.executeLoopDepth--;
       return;
     }
@@ -467,6 +466,33 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     this.selectCurrentCode();
   }
   this.executeLoopDepth--;
+};
+
+/**
+ * Helper that wraps some error preprocessing before we notify observers that
+ * an execution error has occurred.
+ * @param {!Error} err
+ * @param {number} [lineNumber]
+ */
+JSInterpreter.prototype.notifyOfExecutionError = function (err, lineNumber) {
+  if (!lineNumber && err instanceof SyntaxError) {
+    // syntax errors came before execution (during parsing), so we need
+    // to determine the proper line number by looking at the exception
+    lineNumber = err.loc.line;
+    // Now select this location in the editor, since we know we didn't hit
+    // this while executing (in which case, it would already have been selected)
+    codegen.selectEditorRowColError(this.studioApp.editor, lineNumber - 1,
+        err.loc.column);
+  }
+
+  // Select code that just executed:
+  this.selectCurrentCode("ace_error");
+  // Grab line number if we don't have one already:
+  if (!lineNumber) {
+    lineNumber = 1 + this.getNearestUserCodeLine();
+  }
+
+  this.onExecutionError.notifyObservers(err, lineNumber);
 };
 
 /**

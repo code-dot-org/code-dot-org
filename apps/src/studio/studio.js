@@ -2780,23 +2780,6 @@ function outputError(warning, level, lineNum) {
 }
 
 function handleExecutionError(err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
-    // syntax errors came before execution (during parsing), so we need
-    // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
-    // Now select this location in the editor, since we know we didn't hit
-    // this while executing (in which case, it would already have been selected)
-
-    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
-  }
-  if (Studio.JSInterpreter) {
-    // Select code that just executed:
-    Studio.JSInterpreter.selectCurrentCode("ace_error");
-    // Grab line number if we don't have one already:
-    if (!lineNumber) {
-      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
-    }
-  }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
