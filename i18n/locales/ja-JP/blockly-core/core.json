@@ -99,7 +99,7 @@
   "FUNCTIONAL_VARIABLE_TYPE":"タイプ",
   "HELP":"ヘルプ",
   "INLINE_INPUTS":"インライン入力",
-  "KEEP":"のこしてください",
+  "KEEP":"残す",
   "LISTS_CREATE_EMPTY_HELPURL":"http:\/\/en.wikipedia.org\/wiki\/Linked_list#Empty_lists",
   "LISTS_CREATE_EMPTY_TITLE":"空のリストを作成します。",
   "LISTS_CREATE_EMPTY_TOOLTIP":"長さゼロの空のリストを返します",

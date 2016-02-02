@@ -77,12 +77,12 @@
   "level8FailureMessage": "Se tocares num creeper, este explode. Esgueira-te deles e entra na tua casa.",
   "level9FailureMessage": "Não te esqueças de colocar pelo menos 2 tochas para iluminares o teu caminho e escava pelo menos 2 carvões.",
   "minecraftBlock": "bloco",
-  "nextLevelMsg": "Quebra-cabeças {puzzleNumber} concluído. Parabéns!",
+  "nextLevelMsg": "Concluíste o desafio {puzzleNumber}. Parabéns!",
   "playerSelectChooseCharacter": "Escolhe a tua personagem.",
-  "playerSelectChooseSelectButton": "Selecione",
+  "playerSelectChooseSelectButton": "Selecionar",
   "playerSelectLetsGetStarted": "Vamos começar.",
   "reinfFeedbackMsg": "Podes premir \"continuar a jogar\" para voltares a jogar o teu jogo.",
   "replayButton": "Repetir",
-  "selectChooseButton": "Selecione",
+  "selectChooseButton": "Selecionar",
   "tooManyBlocksFail": "Quebra-cabeças {puzzleNumber} concluído. Parabéns! Também é possível concluí-lo com {numBlocks, plural, one {1 bloco} other {# blocos}}."
 }

@@ -115,7 +115,7 @@ pt-BR:
   learn_classes: Encontre aulas locais
   hoc_is_here: 'A #HourOfCode é aqui - Confira! @codeorg'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
-  twitter_teach_cs: Por que mais escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/2DxWIxec6yo. Acesse http://code.org/ para saber mais.
+  twitter_teach_cs: Por que muitas escolas não ensinam ciência da computação? Podemos dar um jeito nisso. http://youtu.be/nKIu9yen5nc. Acesse http://code.org/ para saber mais.
   learn_hoc: Aprenda programação com a Hora do Código
   beyond_hoc: Além da Hora do Código
   what_gender: Você é menino ou menina?
@@ -338,8 +338,8 @@ pt-BR:
   volunteer_engineer_submission_field_location: Localização
   volunteer_engineer_submission_field_location_desc: Sua localização será usada para permitir que professores procurem voluntários nas proximidades e será mostrada como um marcador no mapa. Se você está preocupado com sua privacidade, use seu endereço de trabalho/escola ou apenas sua cidade.
   volunteer_engineer_submission_field_location_placeholder: CEP, cidade e Estado/país, ou nome da rua
-  volunteer_engineer_submission_field_location_flexibility: Eu posso ajudar durante a Hora do Código... (selecione todas as opções aplicáveis)
-  volunteer_engineer_submission_checkbox_after_hoc: Quero ser voluntário após a Hora do Código
+  volunteer_engineer_submission_field_location_flexibility: Eu posso ajudar durante a hora do código por... (selecione todas as opções aplicáveis)
+  volunteer_engineer_submission_checkbox_after_hoc: Estou interessado em ser voluntário após a Hora do Código
   volunteer_engineer_submission_field_time_commitment: Tempo de comprometimento após a Hora do Código
   volunteer_engineer_submission_field_linkedin: Perfil no LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
@@ -563,7 +563,7 @@ pt-BR:
   dashboard_faq_k5: Perguntas frequentes do Ensino Fundamental
   dashboard_announcements: Anúncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: '<b>16 de dezembro de 2015</b> - Obrigado por participar da Hora do Código 2015! Começamos o monitoramento e registro de todos os tutoriais e cursos do Code Studio. Observação: os escritórios da Code.org estarão fechados de 19 de dezembro até 3 de janeiro. Portanto, as perguntas enviadas nesse período só devem ser respondidas após 4 de janeiro.'
+  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
   dashboard_announce_button_text: Saiba mais
   dashboard_announce_hoc: '<b>9 de novembro 2015</b> - Um novo tutorial da Hora do Código está disponível, trazendo o novo filme de Star Wars: O Despertar da Força. Trabalhe junto com Rey para guiar o novo androide, BB-8, em uma missão. Então, junte-se a Leia para criar e compartilhar seu próprio jogo em uma galáxia muito, muito distante.'
   dashboard_announce_playlab: '<b>4 de dezembro de 2015</b> - A Hora do Código chegou! Experimente 50 tutoriais para todas as idades e dispositivos. Novidades desta semana: programe suas próprias histórias e jogos em novos laboratórios, com A Era do Gelo e Gumball.'

@@ -207,6 +207,11 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {},
           "title": "setSize"
         },
+        "setProperty": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "setProperty"
+        },
         "write": {
           "color": "#FFF176",
           "title": "write"
@@ -544,7 +549,9 @@ describe('generateDropletModeOptions', function () {
         },
         "*.length": {
           "color": "#BB77C7",
-          "title": "*.length"
+          "title": "*.length",
+          "value": true,
+          "property": true
         },
         "*.toUpperCase": {
           "value": true,
@@ -562,7 +569,9 @@ describe('generateDropletModeOptions', function () {
         },
         "listLength": {
           "color": "#BB77C7",
-          "title": "listLength"
+          "title": "listLength",
+          "value": true,
+          "property": true
         },
         "insertItem": {
           "color": "#BB77C7",

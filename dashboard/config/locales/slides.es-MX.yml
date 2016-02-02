@@ -196,8 +196,8 @@
       3:
         image: notes/hoc4_3.jpg
         text: Podemos decirle al zombie que verifique IF (si) existe un camino hacia
-          la izquierda, y si encuentra un camino a la izauiqerda, podemos pedirle
-          que de vuelta en esa dirección.
+          la izquierda, y si encuentra un camino a la izquierda, podemos pedirle que
+          de vuelta en esa dirección.
       4:
         image: notes/hoc4_4.jpg
         text: Para escribir este código para esto arrastremos nuestro bloque "if"
@@ -308,9 +308,10 @@
           otra ves y puedes hacer que las acciones cambien un poco cada vez.
       3:
         image: notes/stage11_3.jpg
-        text: En este ejemplo, nuestra iteración "contador" dice "cuenta con un contador
-          de 50 a 90 de 10 en 10" y dentro de ella tenemos un bloque "dibuja un cuadrado".
-          Arrastra el bloque "contador" desde la sección "Variables" al sitio "longitud".
+        text: En este ejemplo, nuestro bloque "contador" dice "contar desde 50 hasta
+          90 de 10 en 10" y dentro de él, tenemos un bloque "dibuja un cuadrado".
+          Arrastra el bloque "contador" desde la sección de "variables" dentro de
+          el área de trabajo.
       4:
         image: notes/stage11_4.jpg
         text: Esto significa que nuestro artista dibujará un cuadrado que tiene 50
@@ -420,11 +421,10 @@
           superficie de hielo necesitarás usar el bloque de "Mover hacia adelante".
       8:
         image: notes/frozen1_8.jpg
-        text: 'Aquí, el bloque de "Moverse hacia adelante" dice: "Moverse hacia adelante
-          100 pixeles". Cuando oprimimos el botón "Ejecutar/Run". ¿Qué ocurre? Elsa
-          se mueve hacia adelante una cierta distancia en la pantalla. ¡De hecho se
-          mueve 100 pixeles! Los pixeles son básicamente cuadros muy pequeños que
-          se encuentran en la pantalla de la computadora.'
+        text: 'Aquí, el bloque "Mover adelante" dice: "moverse adelante 100 pixeles".
+          Cuando presionamos el botón "Ejecutar (Run)", ¿qué ocurre? Sucede que Elsa
+          se mueve adelante cierta distancia: 100 pixeles! Los pixeles son cuadros
+          pequeñisimos de la pantalla.'
       9:
         image: notes/frozen1_9.jpg
         text: El otro bloque que tenemos en este rompecabezas dice "girar a la derecha
@@ -434,8 +434,8 @@
           esto es un giro de 90 grados. Y esto es un giro de 120 grados.
       10:
         image: notes/frozen1_10.jpg
-        text: Recuerda, puedes cambiar el número de píxeles y grados haciendo clic
-          en las flechas junto a ellos.
+        text: Recuerda que puedes cambiar el numero de pixeles y grados dando click
+          en las flechas al lado de ellos.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -446,13 +446,13 @@
           pueden repetir acciones cientos o incluso miles de millones de veces."
       2:
         image: notes/frozen2_2.jpg
-        text: En programación, esto se llama bucle. Un bucle es la forma en la que
-          repites una y otra vez tu código. Para el siguiente desafío, tu objetivo
-          es ayudar a Anna a crear un cuadrado con el bloque "repetir".
+        text: En programación, llamamos esto un "loop". Un loop (Bucle) es como repites
+          algo una y otra vez. Para el siguiente desafío, tu objetivo es ayudar a
+          Anna a crear un cuadrado usando el bloque "Repetir".
       3:
         image: notes/frozen2_3.jpg
-        text: Cualquier bloque de código que pones dentro del bloque "repetir" se
-          repetirá en secuencia, tantas veces como quieras.
+        text: Cualquier bloque de código que pongas dentro del bloque "Repetir" será
+          hecho en secuencia, tantas veces como tu lo decidas.
       4:
         image: notes/frozen2_4.jpg
         text: Para dibujar un cuadrado, puedes utilizar el bloque de "mover hacia
@@ -473,17 +473,16 @@
           estoy en colegio.
       2:
         image: notes/frozen3_2.jpg
-        text: Uno de los conceptos más importantes en Ciencias de la computación trata
-          sobre cómo definir nuevos comandos. La mayoría de lenguajes de programación
-          tienen solamente cerca de 100 palabras o comandos. Y en realidad, el arte
-          y la magia está en definir tus propias nuevas palabras utilizando estos
-          bloques de construcción.
+        text: Uno de los conceptos más importantes en Ciencias de la computación es
+          cómo definir nuevos comandos. La mayoría de los lenguajes de programación
+          tienen cerca de 100 palabras o comandos. Y realmente, el arte y la magia
+          esta en tus propias palabras comandos en estos bloques de construcción.
       3:
         image: notes/frozen3_3.jpg
-        text: Una vez que has enseñado una computadora cómo realizar una acción una
-          vez, con esta secuencia de comandos, puedes ponerle un nombre para que la
-          acción sea fácil de repetir más adelante. Definir tu propio comando y darle
-          un nombre, se conoce como definir una función.
+        text: Una vez que has enseñado a la computadora cómo realizar una acción una
+          vez, usando esta secuencia de comandos, puedes ponerle un nombre para que
+          la acción sea fácil de repetir más adelante. Definir tu propio comando y
+          darle un nombre, se conoce como definir una función.
       4:
         image: notes/frozen3_4.jpg
         text: Hola, soy Jess. Cuando programars con bloques, utilizarías funciones
@@ -498,18 +497,18 @@
           múltiples cuadrados.
       7:
         image: notes/frozen3_7.jpg
-        text: Un montón de figuras sencillas pueden utilizarse para crear patrones
-          más complejos. En el siguiente desafío, el código que has escrito recientemente
-          para hacer un círculo está disponible como una nueva función que puede hacer
-          círculos de diferentes tamaños. ¿Lo puedes usar para ayudar a Elsa crear
-          patrones intrincados y hermosos en la nieve?
+        text: Varias figuras sencillas pueden utilizarse para crear patrones más complejos.
+          En el siguiente desafío, el código que has escrito recientemente para hacer
+          un círculo está como una nueva función para hacer círculos de diferentes
+          tamaños. ¿Lo puedes usar para ayudar a Elsa a crear patrones intrincados
+          y hermosos en la nieve?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
         text: Vamos a crear juegos usando Play Lab. Los buenos juegos tienen una historia
           y cada historia tiene actores. Aprenderemos cómo hacer que nuestros actores
           sean como brujas, alienígenas, y animales que hablan, se mueven e interactúan
-          con los demás. Al final de este tutorial, puedes crear un juego desde cero
+          con los demás. Al final de este tutorial, podrás crear un juego desde cero
           y compartirlo con tus amigos.
       2:
         image: notes/playlab_intro_2.png
@@ -537,39 +536,39 @@
       6:
         image: notes/playlab_intro_6.png
         text: Comienza, y al final podrás crear tu propio juego con toda clase de
-          jugadores, que pueden interactuar, volverse felices o tristes, aumentar
-          la puntuación, o lanzar bolas de fuego, o incluso desaparecer unos a otros.
-          Es cuestión de ti y del juego que quieres hacer.
+          jugadores, que pueden interactuar, volverse felices o tristes, anotar puntos,
+          lanzar bolas de fuego, o incluso desaparecerse unos a otros. Depende de
+          ti y del juego que quieres crear.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
         text: Ahora vamos a aprender acerca de algo que todos los programadores de
           juegos usan todos los días. Se llaman eventos. Un evento indica a tu programa
-          que atienda cuando algo ocurra. Cuando eso sucede, se realiza una acción.
+          que este atento cuando algo ocurra. Cuando eso sucede, se realiza una acción.
       2:
         image: notes/playlab_events_2.png
-        text: Algunos ejemplos de eventos son esperar a un clic en el ratón, un botón
-          de flecha o pulsar en la pantalla.
+        text: Algunos ejemplos de eventos son esperar un clic del ratón, un botón
+          de flecha o tocar la pantalla.
       3:
         image: notes/playlab_events_3.png
         text: Aquí vamos a hacer que el robot espacial salude a los terrícolas cuando
           un jugador haga clic en él. Utilizaremos el bloque "cuando hace clic en"
-          y únele el bloque "decir". Cuando el jugador hace clic en el robot espacial,
-          todo lo que esté unido al bloque de evento "cuando hace clic en" se ejecutará.
-          ¿Qué dice tu alienígena?
+          y le uniremos el bloque "decir". Cuando el jugador haga clic en el robot
+          espacial, todo lo que esté unido al bloque de evento "cuando hace clic en"
+          se ejecutará. ¿Qué dice tu alienígena?
       4:
         image: notes/playlab_events_4.png
-        text: También hay bloques "cuando tecla de flecha". Si se unen con los bloques
+        text: También hay bloques "cuando tecla de flecha". Si los unes con los bloques
           "mover", puedes empezar a mover tus actores para arriba, abajo, izquierda
           o derecha. Paso a paso, tu juego se está volviendo más interactivo.
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: Este es el bloque "repetir para siempre". Todo lo que haya dentro de
+        text: Este es el bloque "repetir por siempre". Todo lo que haya dentro de
           este bloque se repetirá para siempre en el juego.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: Si queremos que un actor haga algo en varias ocasiones, sin que el jugador
+        text: Si queremos que un actor haga algo en repetidamente, sin que el jugador
           tenga que hacer nada, pondremos esos bloques dentro del bloque "repetir
           para siempre".
       3:
@@ -582,42 +581,43 @@
       1:
         image: notes/C1_artist_intro_1.png
         text: Estos son tus bloques de dibujo. Usa el correcto para mover al artistas
-          donde necesita ir para completar las lineas grises.
+          donde necesites para completar las lineas grises.
       2:
         image: notes/C1_artist_intro_2.png
-        text: Estos son bloques tu de salto. Cuando los usas, tu artista se mueve
-          pero no dibuja, asi que usalos para saltar a la siguiente línea gris.
+        text: Estos son bloques de salto. Cuando lo usas, tu artista se mueve pero
+          no dibuja, usa éstos bloques para saltar a la siguiente línea gris.
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: ¿No son las abejas genial? En el siguiente grupo de puzzles. Tu objetivo
-          es ayudar a la abeja para llegar a las flores, tomar el nectar de las flores
-          y volar a la colmena para hacer miel. Vas a tener que usar los bloques "obtener
-          nectar" y "hacer miel" para estos ejercicios.
+        text: ¿No son geniales las abejas? En el siguiente grupo de rompecabezas.
+          Tu objetivo es ayudar a la abeja a llegar a las flores, tomar el nectar
+          de las flores y volar a la colmena para hacer miel. Vas a tener que usar
+          los bloques "obtener nectar" y "hacer miel" para estos ejercicios.
       2:
         image: notes/C1_bee_level_intro_2.png
         text: 'Cada flor tiene un número diferente de néctares: 1, 2, 3 o más. Sabemos
           cuánto néctar está en las flores rojas, por el número pequeño en la esquina.
-          Así que asegúrese de obtener todo el néctar de la flor antes de seguir adelante.
-          Además, cada panal sólo puede contener cierta miel: 1, 2, 3 o más. Así que
-          asegúrate de hacer tanta miel como la abeja pueda sostener.'
+          Así que asegúrate de obtener todo el néctar de la flor antes de seguir adelante.
+          Además, cada panal sólo puede contener cierta miel: 1, 2, 3 o más. Asegúrate
+          de hacer tanta miel como la abeja pueda sostener.'
       3:
         image: notes/C1_bee_level_intro_3.png
-        text: Si eres capaz de obtener todo el néctar y toda la miel, tuviste éxito
-          y pasa al siguiente nivel. De lo contrario, tienes que probar este acertijo
-          otra vez. Juga un rato mientras y ve lo que se siente ser "abeja" un programador!
+        text: Si eres capaz de obtener todo el néctar y hacer toda la miel, tendrás
+          éxito y pasaras al siguiente nivel. De lo contrario, tendrás que probar
+          este acertijo otra vez. Juega un rato y ve lo que se siente ser una "abeja"
+          programadora!
     C1_bee_loops:
       1:
         image: notes/C1_bee_loops_1.png
         text: Un bucle es una repetición de una actividad. Para entrar en una colmena
-          a inspeccionar, miro un cuadro y luego lo pongo, luego repito esta actividad
+          a inspeccionar, miro un cuadro y después lo regreso, luego repito esta actividad
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
         image: notes/C1_bee_loops_2.png
         text: En este nivel, queremos que la abeja colecte tres néctares de la flor.
-          En lugar de utilizar tres "obtener néctar", vas a utilizar el bloque de
-          repetición para obtener néctar tres veces. Pulse "Run" y ve si lo tienes
-          correcto. ¡ Agradable!
+          En lugar de utilizar tres veces el bloque "obtener néctar", vas a utilizar
+          el bloque de repetición para obtener néctar tres veces. Pulsa "Run" y ve
+          si lo tienes correcto. ¡ Buen trabajo!
     C1_bigevent_unplugged:
       1:
         image: notes/C1_bigevent_unplugged_1.png
@@ -655,9 +655,9 @@
     C1_building_foundation:
       1:
         image: notes/C1_building_foundation_1.jpg
-        text: En la escultura en arena tienes que saber que el fracaso es parte del
-          programa. Pero si usted persiste, no conseguirá nada mejor y más emocionante
-          para usted. La persistencia es el nombre del juego. Quédate, te va a encantar.
+        text: En la escultura de arena tienes que saber que el fracaso es parte del
+          programa. Pero si persistes, no habra nada mejor y más emocionante para
+          ti. La persistencia es el nombre del juego. Quédate, te va a encantar.
       2:
         image: notes/C1_building_foundation_2.jpg
         text: Esta lección se llama construir una base. En esta lección, vamos a trabajar
@@ -666,21 +666,21 @@
           suficientemente fuerte como para soportar el peso de un libro.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: Podría haber momentos en los que nuestra creación no funcione. Podría
-          haber momentos en los que nos frustremos y querramos dejarlo. Podría haber
+        text: Podrá haber momentos en los que nuestra creación no funcione. Podrá
+          haber momentos en los que nos frustremos y querramos dejarlo. Podrá haber
           muchos de esos momentos. Pero si seguimos intentándolo, y lo hacemos lo
-          mejor que podemos una y otra vez, entonces seguro que lo conseguiremos enseguida.
+          mejor que podamos una y otra vez, entonces seguro que lo conseguiremos.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistencia es mantenerse firme cuando se quiere realmente renunciar.
+        text: Persistencia es mantenerse firme cuando realmente quieres renunciar.
           Si quieres crear algo nuevo y diferente, van a existir un montón de fracasos
           en el camino.
       5:
         image: notes/C1_building_foundation_5.jpg
         text: El truco para persistir es elegir seguir adelante y aprender de los
-          fracasos en lugar de dejar de renunciar porque estás frustrado. La frustración
-          sólo significa que hay algo maravilloso al doblar la esquina. Por lo que
-          no renuncies antes de llegar a él. Wooo!
+          fracasos en lugar de renunciar porque te sientes frustrado. La frustración
+          sólo significa que hay algo maravilloso al doblar la esquina. Así que no
+          renuncies antes de llegar a él. Wooo!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
@@ -694,25 +694,25 @@
           Esto es un bucle. Y esto es un bucle.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Hoy vamos a dar una fiesta de baile. Haremos bucles con un nuevo baile.
+        text: Hoy vamos a tener una fiesta de baile. Haremos bucles con un nuevo baile.
           La iteración. Vamos a aprender acerca de los bucles utilizando un baile.
           Aprenderás un par de pasos fáciles y los repetirás una y otra vez para completar
           el baile.
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Estos son los pasos que necesitas aprender. Da las palmas. Pon tus manos
-          detrás de tu cabeza. Pon tus manos en tu cintura. Sube la mano izquierda.
-          Sube la mano derecha. Bastante fácil, ¿verdad? Descubrirás que puedes hacer
-          más cortas las instrucciones poniendo algunos pasos de baile dentro de bucles.
+        text: Estos son los pasos que necesitas aprender. Aplaude. Pon tus manos detrás
+          de tu cabeza. Pon tus manos en tu cintura. Sube la mano izquierda. Sube
+          la mano derecha. Bastante fácil, ¿verdad? Descubrirás que puedes hacer más
+          cortas las instrucciones poniendo algunos pasos de baile dentro de bucles.
       5:
         image: notes/C1_getting_loopy_5.png
         text: De hecho utilizamos bucles en nuestros bailes. Los bailarines llevan
-          ordenadores, todos en la misma red. Podría hacer un bucle poniendo las luces
-          sobre los bailarines una y otra vez. En el bucle podría tener una iteración
-          donde digamos que quieres hacer un bucle sobre esos seis bailarines una
-          y otra vez, y entonces dentro del bucle incrementar la velocidad de la luz,
-          Y todo eso está hecho mediante bucles. Los bucles son importantes en informática
-          porque abrevian y simplifican nuestro trabajo.
+          computadoras, todas en la misma red. Podría hacer un bucle poniendo las
+          luces sobre los bailarines una y otra vez. En el bucle podría tener una
+          iteración donde digamos que quieres hacer un bucle sobre esos seis bailarines
+          una y otra vez, y entonces dentro del bucle incrementar la velocidad de
+          la luz, Y todo eso está hecho mediante bucles. Los bucles son importantes
+          en informática porque abrevian y simplifican nuestro trabajo.
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
@@ -726,34 +726,34 @@
           Flurb? Línea para hacer que vaya arriba.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: Para llegar ahí, haces un círculo en la dirección que tiene que ir.
+        text: Para llegar ahí, has un círculo en la dirección que tiene que ir.
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: Construye tu algoritmo pegando las flechas junto al mapa que estás intentando
           resolver. El segundo es igual, pero hacia abajo.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: Es como programar con papel. Y eso es todo!
+        text: Es como programar con lapiz y papel. !Eso es todo!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
         text: Depurar es encontrar y arreglar problemas. Hay muchas formas de depurar
           problemas. Una de las más fáciles es ir paso a paso hasta que encuentras
-          que algo sale mal. Aquí estoy intentando hacer una voltereta hacia atrás
+          algo que sale mal. Aquí estoy intentando hacer una voltereta hacia atrás
           sobre la barra de equilibrios, pero me caigo una y otra vez.
       2:
         image: notes/C1_maze_debugging_2.png
         text: Revisé cada parte paso a paso y me di cuenta de donde estaba mi error.
-          No estaba poniendo mis manos correctamente en la barra. de equilibrios.
-          Así que intenté otra voltereta hacia atrás sobre la barra con una nueva
-          posición de manos y lo conseguí. Estaba realmente contenta de haber depurado
-          mi voltereta hacia atrás.
+          No estaba poniendo mis manos correctamente en la barra de equilibrios. Así
+          que intenté otra voltereta hacia atrás sobre la barra con una nueva posición
+          de manos y lo conseguí. Estaba realmente contenta de haber depurado mi voltereta
+          hacia atrás.
       3:
         image: notes/C1_maze_debugging_3.png
-        text: Para aprender a depurar, empezamos con un conjunto de bloques ya puestos
-          en la fase. Como verás esos bloques no te conducirán al objetivo. Necesitamos
-          depurar la solución y arreglarla. ¿Qué falló? Te darás cuenta de que necesitabas
-          seguir yendo al oeste una casilla más.
+        text: Para aprender a depurar, empezamos con un conjunto de bloques que ya
+          estén en la fase. Como verás esos bloques no te conducirán al objetivo.
+          Necesitamos depurar la solución y arreglarla. ¿Qué falló? Te darás cuenta
+          de que necesitabas seguir yendo al oeste una casilla más.
       4:
         image: notes/C1_maze_debugging_4.png
         text: Vamos a arreglarlo añadiendo otro bloque de ir al oeste y dando a ejecutar
@@ -761,32 +761,33 @@
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: Para este rompecabezas necesitarás llevar el pájaro al cerdo. Mira el
-          rompecabezas y averigua que instrucciones necesita.
+        text: Para este rompecabezas necesitarás conducir el pájaro al cerdo. Mira
+          el rompecabezas y averigua que direcciones necesita tomar.
       2:
         image: notes/C1_maze_intro_sequencing_2.png
         text: Necesitas arrastrar los bloques desde la caja de herramientas al espacio
-          de trabajo. Asegúrate de dejarlos debajo del bloque "cuando se ejecuta",
+          de trabajo. Asegúrate de ponerlos debajo del bloque "cuando se ejecuta",
           y cuando creas que tienes la solución correcta pulsa en "ejecutar" y observa
           como el pájaro va hacia el cerdo.
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: Una cosa en la que los ordenadores son muy buenas es la de repetir instrucciones.
-          Como persona, te aburrirías mucho si tuvieras que hacer lo mismo un montón
-          de veces seguidas. Pero un ordenador puede hacer lo mismo millones o incluso
-          miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente.
+        text: Una cosa que a las computadoras se les da muy bien es la de repetir
+          instrucciones. Como persona, te aburrirías mucho si tuvieras que hacer lo
+          mismo un montón de veces seguidas. Pero una computadora puede hacer lo mismo
+          millones o incluso miles de millones de veces sin aburrirse, y llevarlo
+          a cabo perfectamente.
       2:
         image: notes/C1_maze_loops_2.png
         text: Por ejemplo, si yo quisiera felicitar a todo el mundo en Facebook por
           su cumpleaños enviándoles un mensaje de correo electrónico, me podría llevar
           más de un siglo para poder escribir todos esos mensajes a todo el mundo.
-          Pero con unas pocas líneas de código puedo hacer que una máquina envíe un
+          Pero con unas pocas líneas de código puedo hacer un sistema que envíe un
           mensaje de correo electrónico a todo el mundo en Facebook felicitándoles
           por su cumpleaños.
       3:
         image: notes/C1_maze_loops_3.png
-        text: Para llevar el pájaro al cerdo en este nivel, en lugar de arrastrar
+        text: Para conducir el pájaro al cerdo en este nivel, en lugar de arrastrar
           tres bloques norte al espacio de trabajo, utilizarás el bloque "repetir".
           Arrastra el bloque "repetir" al espacio de trabajo e introduce el número
           3. Entonces arrastra el bloque "mover al norte" dentro de bloque "repetir"
@@ -807,25 +808,25 @@
           ejecutar en una máquina. La mayoría de nosotros piensa en un programa como
           algo que escribimos para una computadora. Los programas son muy buenos para
           eso pero también son útiles en otros lugares. Usted puede hacer su propio
-          programa de juego o incluso un robot para hacer las cosas para usted.
+          programa de juego o incluso programar un robot que haga las cosas por ti.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: Me llamo Jeremiah. Hola, tengo siete años. Me encanta jugar con el ordenador
-          de mamá, pero siempre le pido permiso primero. "Mami, ¿puedo ponerme con
-          el ordenador? ¡Claro que sí, cielo!"
+        text: Me llamo Jeremiah. Hola, tengo siete años. Me encanta jugar con la computadora
+          de mamá, pero siempre le pido permiso primero. "Mami, ¿puedo usar la computadora?
+          ¡Claro que sí, cielo!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: Me encanta el ordenador de mamá porque me puedo meter en Internet. Internet
-          es un poco como tu barrio. Puedes visitar sitios chulos, puedes hablar con
+        text: Me encanta la computadora de mamá porque puedo usar el Internet. Internet
+          es un poco como tu barrio. Puedes visitar sitios padres, puedes hablar con
           tu familia y amigos, y puedes aprender un montón de cosas nuevas.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Ayer, visité un parque zoológico que es cerca de mi casa. Vi una cebra
-          bebé. Le tomé una fotografía y cambié el color de sus rayas, luego le puse
-          un sombrero y la agregué a mi colección de animales locos. ¡Impresionante!
+        text: Ayer, visité un zoológico que esta cerca de mi casa. Vi una cebra bebé.
+          Le tomé una fotografía y cambié el color de sus rayas, luego le puse un
+          sombrero y la agregué a mi colección de animales locos. ¡Impresionante!
           Más tarde, fui a un lugar lejano. Visité Kenia. Es un país en África. Allí
-          vive un montón de cebras.
+          viven un montón de cebras.
       4:
         image: notes/C1_going_places_safely_4.png
         text: A veces en Internet conozco y hablo con las personas, como mi abuela
@@ -836,7 +837,7 @@
       5:
         image: notes/C1_going_places_safely_5.png
         text: Lo que más me gusta de Internet es que puedo encontrar juegos divertidos.
-          ¡Puntos! También me gusta dibujar y crear cosas nuevas y compartirlas con
+          ¡Anotar! También me gusta dibujar y crear cosas nuevas y compartirlas con
           mis amigos. ¡Estupendo! Algunas veces visito sitios web donde aprendo cosas
           nuevas pero siempre me quedo en sitios ideales para mí. ¡Guau, dinosaurios!
       6:
@@ -848,9 +849,8 @@
           3: Visita lugares que son adecuados para ti.'
       7:
         image: notes/C1_going_places_safely_7.png
-        text: Wow, ¡eso fue divertido! Hora de la cena. Ahora estoy cerrando sesión.
-          No puedo esperar para iniciar sesión otra vez para ver que puedo visitar
-          a continuación.
+        text: Wow, ¡fue divertido! Hora de cenar. Estoy cerrando sesión. No puedo
+          esperar para iniciar sesión de nuevo y ver que puedo visitar.
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
@@ -877,7 +877,7 @@
       4:
         image: notes/C1_pair_programming_4.png
         text: El navegador debe estar pensando en el panorama y el conductor se centra
-          en los detalles. Ambos roles son importantes. Programación en par es trabajar
+          en los detalles. Ambos roles son importantes. "Programación en par" es trabajar
           juntos como un equipo.
     C1_planting_seed:
       1:
@@ -930,8 +930,8 @@
           diga todo lo que escribes.
       3:
         image: notes/C1_playlab_storytelling_3.png
-        text: Esto es un bloque "cuando los actores colisionan" que puedes enlazar
-          con otros bloques
+        text: Esto es un bloque "cuando los actores chocan" que puedes enlazar con
+          otros bloques.
       4:
         image: notes/C1_playlab_storytelling_4.png
         text: Estaba haciendo que el perro viniera y dijera "Hola", pero cuando el
@@ -940,7 +940,7 @@
     C1_spelling_bee_intro:
       1:
         image: notes/C1_spelling_bee_intro_1.png
-        text: Este es el nivel de ortografía. Utilice las piezas del puzzle para mover
+        text: Este es el nivel de deletreo. Utilice las piezas del puzzle para mover
           la abeja. Al moverse, recogerá las letras para deletrear la palabra.
       2:
         image: notes/C1_spelling_bee_intro_2.png
@@ -950,16 +950,17 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: Una cosa en la que los ordenadores son muy buenas es la de repetir instrucciones.
-          Como persona, te aburrirías mucho si tuvieras que hacer lo mismo un montón
-          de veces seguidas. Pero un ordenador puede hacer lo mismo millones o incluso
-          miles de millones de veces sin aburrirse, y llevarlo a cabo perfectamente.
+        text: Una cosa que a las computadoras se les da muy bien es la de repetir
+          instrucciones. Como persona, te aburrirías mucho si tuvieras que hacer lo
+          mismo un montón de veces seguidas. Pero una computadora puede hacer lo mismo
+          millones o incluso miles de millones de veces sin aburrirse, y llevarlo
+          a cabo perfectamente.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
         text: Por ejemplo, si yo quisiera felicitar a todo el mundo en Facebook por
           su cumpleaños enviándoles un mensaje de correo electrónico, me podría llevar
           más de un siglo para poder escribir todos esos mensajes a todo el mundo.
-          Pero con unas pocas líneas de código puedo hacer que una máquina envíe un
+          Pero con unas pocas líneas de código puedo hacer un sistema que envíe un
           mensaje de correo electrónico a todo el mundo en Facebook felicitándoles
           por su cumpleaños.
       3:
@@ -1182,9 +1183,9 @@
           como hacer algo.
       3:
         image: notes/C2_graph_paper_3.png
-        text: Si estás escribiendo un algoritmo para un computador, tienes que dividir
+        text: Si estás escribiendo un algoritmo para una computadora, tienes que dividir
           el problema en pequeños pasos. Por lo tanto, termina esta fila y luego pasa
-          a la siguiente, luego a la siguiente, y estarás listo.
+          a la siguiente, luego a la siguiente, y habrás terminado.
       4:
         image: notes/C2_graph_paper_4.png
         text: Yo Utilizó algoritmos en mi trabajo. Si yo escribo todos los pasos puedo
@@ -1200,23 +1201,23 @@
           fuera en nuestro escenario pero están ahi sólo para que comencemos.
       2:
         image: notes/C2_artist_loops_2.png
-        text: Para ciclar los bloques cuatro veces y dibujar to un cuadro, sólo arrastra
-          el bloque de repetir y pon el bloques de avanzar y gira a la derecha dentro
-          del bloque de repetición. Cuando damos clic en ejecutar, el artista repetirá
-          los pasos cuatro veces para completar el cuadrado.
+        text: Para ciclar los bloques cuatro veces y dibujar todo un cuadro, sólo
+          arrastra el bloque de repetir y pon el bloque de avanzar y gira a la derecha
+          dentro del bloque de repetición. Cuando damos clic en ejecutar, el artista
+          repetirá los pasos cuatro veces para completar el cuadrado.
     C2_bee_loops:
       1:
         image: notes/C2_bee_loops_1.png
-        text: Un bucle es una repetición de una actividad. Para entrar en una colmena
-          a inspeccionar, miro un cuadro y luego lo pongo, luego repito esta actividad
+        text: Un bucle es la repetición de una actividad. Para entrar en una colmena
+          a inspeccionar, miro un cuadro y después lo regreso, luego repito esta actividad
           varias veces. Hacer un bucle, es hacer la misma actividad varias veces.
       2:
         image: notes/C2_bee_loops_2.png
-        text: Este es el bloque de repetición. Lo que pongas dentro el bloque de repetición
-          repetirá las acciones el numero de veces que le digas. Por ejemplo, en éste
-          nivel, algo que arrastre hacia fuera mueva hacia adelante y obtengas el
-          néctar tres veces, vamos a hacer simplemente que los arrastre hacia fuera
-          cada uno y repetir la acción tres veces. Ha sido fácil!
+        text: Este es el bloque de repetición. Lo que pongas dentro del bloque de
+          repetición repetirá las acciones el numero de veces que le digas. Por ejemplo,
+          en éste nivel, mejor que arrastrar mover hacia adelante y obtener el nectar
+          tres veces, vamos solo a arrastrarlo una vez cada uno y repetir la acción
+          tres veces. Eso lo hará fácil!
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png

@@ -323,8 +323,8 @@
           dešinėje
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Pradėk nuo kvadrato<br/>Padėk trikampį šalia kvadrato<br/>Padėk lygiagretainį
+          po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje
       2-3 Algorithms Multi 2:
         "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
