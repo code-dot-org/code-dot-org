@@ -1,5 +1,6 @@
 ---
 title: Find CS in Algebra near you
+nav: educate_nav
 ---
 # Find the Computer Science in Algebra program near you
 We welcome teachers to sign up for the Computer Science in Algebra (CS in Algebra) professional learning program. CS in Algebra is designed to provide educators with the opportunity to increase content knowledge, skills, and pedagogy related to inquiry, equity, and specific Code.org course instruction. The model is structured to empower teachers by focusing on proper preparation, in-depth learning, feedback, reflection, and continuing education.
