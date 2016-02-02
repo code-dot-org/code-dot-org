@@ -131,6 +131,11 @@ var DesignProperties = module.exports = React.createClass({
         height: 28,
         overflow: 'hidden'
       },
+      workspaceDescriptionText: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap'
+      },
       workspaceTabs: {
         borderColor: borderColor,
         borderStyle: 'solid',
@@ -171,7 +176,9 @@ var DesignProperties = module.exports = React.createClass({
     return (
       <div style={{height: '100%'}}>
         <div id="designDescription" style={styles.workspaceDescription}>
-          <p>{applabMsg.designWorkspaceDescription()}</p>
+          <p style={styles.workspaceDescriptionText} title={applabMsg.designWorkspaceDescription()}>
+            {applabMsg.designWorkspaceDescription()}
+          </p>
         </div>
         <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
           <div id="propertiesTab"
