@@ -11,6 +11,8 @@ course, the program is designed to promote growth in your teaching practice, pro
 
 The Exploring CS professional learning program is open to teachers in partner districts who are interested in teaching the course. Check to see if your district has partnered to make Exploring CS available in your region for the 2016-2017 school year.
 
+**The 2016-2017 Exploring CS application launches February 5, 2016.**
+
 <br/> 
 <br/>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.khZ1NwyRM_3Y" width="640" height="480"></iframe>
@@ -22,12 +24,8 @@ The Exploring CS professional learning program is 94 hours of online and in-pers
 
 ![Image 1](/images//fit-700/timeline-ecs-plc.png)
 
-## Apply for our Exploring CS Professional Learning Program  
+## Don't see your district or region?
 
-<img src="/images/fit-x300/partners-2014-15.jpg" style="float:left; padding-right:12px" />
+The Exploring CS professional learning program is open to teachers in partner districts who are interested in teaching the Exploring CS course.
 
-Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, consider sending your administrators [information about how to become a partner.](/educate/districts)
-
-Applications will be accepted on a rolling basis until the end of March. You should expect to hear back from us 10 - 14 business days from submission. If you are accepted, you will receive additional information about the location, logistics, and registration for your designated summer in-person workshop dates.
-
-<button disabled style="background-color: #949ca2; border: #949ca2">Apply now</button> **The 2016-2017 Exploring CS application launches February 5, 2016.**
+[<button>Apply to be a district partner</button>](/educate/districts)

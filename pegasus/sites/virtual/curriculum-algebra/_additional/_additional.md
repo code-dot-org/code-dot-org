@@ -9,7 +9,7 @@ CS in Algebra is aligned to Common Core Standards for Mathematics, making it pos
 <a name="start"><a/>
 ## How do I start teaching CS in Algebra?
 
-To offer CS in Algebra in your school, teachers are required to attend a multi-phased professional development program. The professional development program is only available in the context of a full school district partnership with Code.org. [Inquire about a District Partnership](/educate/districts) to bring CS in Algebra to your entire district. Or learn more about [middle school professional development](/educate/professional-development).
+To offer CS in Algebra in your school, teachers are required to attend a multi-phased professional learning program. Find a local workshop [here](/educate/professional-learning/cs-in-algebra).
 
 <%= partial('course_block', 
 	:url => "https://studio.code.org/s/algebra", 
