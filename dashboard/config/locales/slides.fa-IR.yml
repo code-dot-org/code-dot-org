@@ -411,10 +411,10 @@
           کن" استفاده کنید.
       8:
         image: notes/frozen1_8.jpg
-        text: Here, the "Move Forward" block says, "move forward by 100 pixels." When
-          we press "Run", what happens? Elsa moves forward a certain amount on the
-          screen, 100 pixels in fact! Pixels are basically very tiny squares on your
-          computer screen.
+        text: در اینجا، "حرکت به جلو" یعنی 100 پیکسل به جلو حرکت کن. وقتی دکمه "اجرا"
+          فشار داده میشود، چه اتفاقی رخ خواهد داد؟ السا مقدار مشخصی رو به جلو خواهد
+          رفت که در واقع 100 پیکسل است. پیکسل ها اساسا مربعهای بسیار کوچک در صفحه
+          نمایش کامپیوتر شما هستند.
       9:
         image: notes/frozen1_9.jpg
         text: The other block we have in this puzzle says "turn right by 90 degrees."
