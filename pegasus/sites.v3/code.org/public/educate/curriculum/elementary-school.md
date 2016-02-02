@@ -1,6 +1,6 @@
 ---
 title: Curriculum
-nav: educate2_nav
+nav: educate_nav
 ---
 
 # Computer Science Fundamentals for elementary school
@@ -23,7 +23,7 @@ In person instruction from an experienced computer science facilitator, includin
 
 <img src="/images/k5teacherquotes.png" width="800"/> 
 
-## Computer Science Fundamentals: Curriculum Overview
+## Computer Science Fundamentals: Curriculum overview
 The CS Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), Code.org's online coding platform. This completely free curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. 
 
 [col-25]
@@ -125,7 +125,7 @@ By the end of each course, students can create interactive games or stories that
 The courses are flexible so educators can tailor them to their class based on their students’ developmental
 level and prior experience. The lessons align to <a href="http://csta.acm.org/Curriculum/sub/K12Standards.html" target="_blank">CSTA Computer Science Standards </a>, <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards </a>, and reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math </a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts </a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science </a> standards. 
 
-## Teacher Dashboard
+## Teacher dashboard
 The Code Studio teacher dashboard makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log-in with a picture instead of a text password.
 
 [col-50]
@@ -156,7 +156,7 @@ check out Code.org’s [live events for teachers](http://www.eventbrite.com/o/co
 ## Spread the word! 
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators. 
 
-## 3rd Party Educator Resources
+## 3rd Party resources for elementary school CS
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
@@ -168,7 +168,7 @@ Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
 
-## Additional Resources and Videos
+## Additional resources and videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-[<button>Video library</button>](/educate/videos) [<button>Inspire a student</button>](/educate/inspire)
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)

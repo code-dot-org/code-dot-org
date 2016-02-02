@@ -140,12 +140,19 @@ namespace :seed do
     end
   end
 
+  MAX_LEVEL_SOURCES = 10_000
   task ideal_solutions: :environment do
     require 'benchmark'
-    Level.order(:ideal_level_source_id). # trick to do the ones that don't have solutions yet first
-      each do |level|
-      times = Benchmark.measure { level.calculate_ideal_level_source_id }
-      puts "Level #{level.id}\t#{times.real}s"
+    Level.where_we_want_to_calculate_ideal_level_source.each do |level|
+      next if level.try(:free_play?)
+      puts "Level #{level.id}"
+      level_sources_count = level.level_sources.count
+      if level_sources_count > MAX_LEVEL_SOURCES
+        puts "...skipped, too many possible solutions"
+      else
+        times = Benchmark.measure { level.calculate_ideal_level_source_id }
+        puts "... analyzed #{level_sources_count} in #{times.real.round(2)}s"
+      end
     end
   end
 

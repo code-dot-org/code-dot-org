@@ -1,20 +1,9 @@
 ---
 title: CS Curriculum for grades 9-12
-nav: educate2_nav
+nav: educate_nav
 ---
 
 # High School 
-
-## Exploring Computer Science
-
-<img src="<%= CDO.shared_image_url("courses/logo_ecs.png") %>">
-
-Leveraging years of research by the [National Science Foundation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503582&org=CISE), Exploring Computer Science is a nationally recognized introductory college preparatory computer science course and includes curriculum, professional development, and assessments. ECS is composed of six foundational units with lessons that are designed to promote an inquiry-based approach to teaching and learning foundational concepts in computer science and highlighting the computational practices and problem solving associated with doing computer science. The PD experience for ECS is based on three major pillars: computer science content/concepts, inquiry, and equity.
-
-Download this [one-pager](/files/ECSonepager.pdf) describing Exploring Computer Science.
-Find the curriculum and other resources at [exploringcs.org/curriculum](http://www.exploringcs.org/curriculum)  
-
-[<button>Learn more about curriculum</button>](http://exploringcs.org) [<button>Apply for our professional learning program</button>](/educate/professional-learning/exploring-cs)
 
 ## Computer Science Principles
 
@@ -26,9 +15,21 @@ Code.org is creating a complete curriculum consisting of daily lesson plans, vid
 
 AP® is a registered trademark of the College Board.
 
-[<button>Learn more about curriculum</button>](/educate/csp) [<button>Apply for our professional learning program</button>](/educate/professional-learning/cs-principles)
+[<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
-## 3rd Party Educator Resources
+
+## Exploring Computer Science
+
+<img src="<%= CDO.shared_image_url("courses/logo_ecs.png") %>">
+
+Leveraging years of research by the [National Science Foundation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503582&org=CISE), a team from UCLA has developed Exploring Computer Science, a nationally recognized introductory computer science course that includes curriculum, professional development, and [assessments built by SRI International](http://pact.sri.com/resources.html). Code.org offers a program to support version 5 of the ECS curriculum, which is composed of six instructional units with lessons that are designed to promote an inquiry-based approach to teaching and learning foundational concepts in computer science, while building students' computational practices and problem solving skills. The PD experience for version 5 of ECS is based on three major pillars: computer science content/concepts, inquiry, and equity.
+
+Download this [one-pager](/files/ECSonepager.pdf) describing version 5 of Exploring Computer Science.
+Find the curriculum and other resources at [exploringcs.org/curriculum](http://www.exploringcs.org/curriculum)  
+
+[<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
+
+## 3rd Party resources for high school CS
 
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
@@ -51,4 +52,4 @@ AP® is a registered trademark of the College Board.
 ## Additional Resources and Videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-[<button>Video library</button>](/educate/videos) [<button>Inspire a student</button>](/educate/inspire)
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)

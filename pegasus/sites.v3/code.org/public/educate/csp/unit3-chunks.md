@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
 
-# Unit 3 Lesson Overview
+# Unit 3 Chunk Overview
 
 
 ## Chunk 3 Overview: Introduction to Variables and Strings 
