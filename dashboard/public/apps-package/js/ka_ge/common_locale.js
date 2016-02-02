@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "უყურეთ ვიდეოს"},
 "when":function(d){return "როდის"},
 "whenRun":function(d){return "გაშვებისას"},
-"workspaceHeaderShort":function(d){return "სამუშაო სივრცე: "}};
+"workspaceHeaderShort":function(d){return "სამუშაო სივრცე: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pozrieť video"},
 "when":function(d){return "keď"},
 "whenRun":function(d){return "pri spustení"},
-"workspaceHeaderShort":function(d){return "Pracovná plocha: "}};
+"workspaceHeaderShort":function(d){return "Pracovná plocha: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

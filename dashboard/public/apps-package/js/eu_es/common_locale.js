@@ -408,4 +408,6 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Ikusi Bideoa"},
 "when":function(d){return "-enean"},
 "whenRun":function(d){return "martxan dagoenean"},
-"workspaceHeaderShort":function(d){return "Lan eremua: "}};
+"workspaceHeaderShort":function(d){return "Lan eremua: "},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"}};

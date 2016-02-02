@@ -253,5 +253,7 @@
   "watchVideo": "වීඩියෝව නරඹන්න",
   "when": "විට",
   "whenRun": "දුවන විට",
-  "workspaceHeaderShort": "වැඩ අවකාශය: "
+  "workspaceHeaderShort": "වැඩ අවකාශය: ",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment"
 }

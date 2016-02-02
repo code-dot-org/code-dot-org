@@ -8,7 +8,8 @@ We welcome teachers to sign up for the Computer Science Principles (CS Principle
 
 ## Where is CS Principles offered?
 
-The CS Principles professional learning program is open to teachers in partner districts who are interested in teaching the course. Search for your district below and click on the pin to find out how to apply!
+The CS Principles professional learning program is open to teachers in partner districts who are interested in teaching the course. Search for your district below and click on the pin to find out how to apply! If you live in Alabama, Georgia, Idaho, Indiana, Utah, or Virginia, your district is covered by a statewide partnership. Click on the icon in your state to apply.
+
 
 <br/> 
 <br/>
