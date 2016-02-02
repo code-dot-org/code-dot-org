@@ -28,8 +28,9 @@ describe('Pairing component', function(){
                  {id: 15, name: "Anotther section"}],
       pairings: [{id: 123, name: 'a student'}]
     };
+
     render(props);
-    assert(div);
+
     TestUtils.findRenderedDOMComponentWithTag(component, 'select');
   });
 
@@ -39,9 +40,25 @@ describe('Pairing component', function(){
       sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
       pairings: []
     };
+
     render(props);
-    assert(div);
+
     assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
+  });
+
+
+  it('should render a list of students to pick from if the student is in one section with students', function() {
+    var props = {
+      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
+      pairings: []
+    };
+
+    render(props);
+
+    // 2 students
+    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
+    // no selected students
+    assert.equal(0, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
   });
 
 });
