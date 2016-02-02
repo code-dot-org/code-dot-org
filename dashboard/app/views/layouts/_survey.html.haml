@@ -9,8 +9,8 @@
 -# English only for now
 - if language == "en"
 
-  -# Show the survey.
-  - if true
+  -# US only
+  - if request.location.try(:country_code) == 'US' || (!Rails.env.production? && request.location.try(:country_code) == 'RD')
 
     -# If signed in, and user hasn't already filled out this survey
     - if current_user && true # !current_user.survey2016_value
