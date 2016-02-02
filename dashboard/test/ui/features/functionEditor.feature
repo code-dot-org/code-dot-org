@@ -1,4 +1,4 @@
-Feature: Opening the function editor
+Feature: Opening / closing the function editor
 
 Background:
   Given I am on "http://learn.code.org/s/course4/stage/14/puzzle/12?noautoplay=true"
@@ -18,6 +18,14 @@ Scenario: Opening the function editor and moving an inner block doesn't bump fun
   And block "modal function block" is at a blockly location "function definition location"
   And I begin to drag block "inner repeat block" to offset "50, 50"
   Then block "modal function block" is at blockly location "function definition location"
+
+@chrome
+Scenario: Opening the function editor and hitting the ESC key should close the editor
+  When I press SVG selector ".blocklyIconGroup:contains(edit)"
+  And I wait to see "#modalEditorClose"
+  And the modal function editor is open
+  Then I press keys ":escape" for element "body"
+  And the modal function editor is closed
 
 @chrome
 Scenario: Opening / closing the function editor, shouldn't be able to connect to invisible child blocks
