@@ -18,7 +18,7 @@ end
 
 def load_languages(path)
   [].tap do |results|
-    CSV.foreach(path, headers: true) do |row|
+    CSV.foreach(path, headers: true, encoding: 'utf-8') do |row|
       results << row['code_s!']
     end
   end
