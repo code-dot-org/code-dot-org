@@ -73,10 +73,7 @@ module.exports = {
         '  setText("result2", success);\n' +
         '});\n',
       runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        // provide time for image to load
-        testUtils.runOnAppTick(Applab, 1000, function () {
-          assert(document.getElementById('canvas'), 'canvas took too long to initialize');
+        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
           Applab.onPuzzleComplete();
@@ -108,10 +105,7 @@ module.exports = {
         '  setText("result2", success);\n' +
         '});\n',
       runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        // provide time for image to load
-        testUtils.runOnAppTick(Applab, 1000, function () {
-          assert(document.getElementById('canvas'), 'canvas took too long to initialize');
+        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
           Applab.onPuzzleComplete();
@@ -190,4 +184,13 @@ module.exports = {
       }
     }
   ]
+};
+
+var canvasAndResultsPopulated = function () {
+  var canvas = document.getElementById('canvas');
+  var result1 = document.getElementById('result1');
+  var result2 = document.getElementById('result2');
+  var result1Populated = result1 && result1.textContent.length > 0;
+  var result2Populated = result2 && result2.textContent.length > 0;
+  return canvas && result1Populated && result2Populated;
 };
