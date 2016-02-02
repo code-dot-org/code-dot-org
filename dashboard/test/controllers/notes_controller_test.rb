@@ -26,8 +26,8 @@ class NotesControllerTest< ActionController::TestCase
     end
   end
 
-  test 'should show coming soon for missing slides' do
+  test 'should return 404 for missing slides' do
     get :index, key: 'nonexistent_slide_key'
-    assert_template 'notes/coming_soon'
+    assert_response :not_found
   end
 end

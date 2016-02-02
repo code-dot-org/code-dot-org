@@ -6,22 +6,31 @@ css 'unplugged'
 markdown <<MARKDOWN
 # Making A Bar Chart
 
-In this exercise, you will use some different columns in the spreadsheet to create a bar chart. Bar charts are useful for viewing data grouped by different categories.
+In this exercise, you will use some different columns in the spreadsheet to create a **bar chart**. Bar charts are useful for viewing data grouped by different categories.
 
 <hr>
 
 # Select Data
 
-**Do This:** Select the cells you want to use to create your chart. For this chart, you’ll want to use the values for “age,” “number of women,” and “number of men.”
+**Do This:** Select the **“age”**, **“number of women”**, and **“number of men”** columns
 
-* **Hint:** To select cells in non-adjacent columns, you need to use some fancy hotkeys:
-	1. First select the cells from the first column (i.e. A1 through A62) using the SHIFT+click combination. 
-	2. Then, hold down COMMAND (if using a Mac) or CONTROL (if using Windows) and click to select the first cell of the next column (i.e. E1).
-	3. Finally, hold COMMAND/CONTROL **and** SHIFT simultaneously, then click to select the last cell in the new column (i.e. E62).
-	4. Repeat steps 2-3 for any additional columns you want to select (i.e. G1 through G62).
+* Select the first column of data using the mouse
+* Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data
 
-[INSERT GIF OF SELECTING CELLS]
-*Select the cells the chart.*
+
+<details>
+<summary>Using Hotkeys</summary>
+<span>To select cells in non-adjacent columns you can also use hotkeys:</span>
+<ol>
+<li>Select the cells from the first column (i.e. A1 through A62) using the <strong>SHIFT+click</strong> combination.</li>
+<li>Hold down <strong>COMMAND</strong> (if using a Mac) or <strong>CONTROL</strong> (if using Windows) and click to select the first cell of the next column (i.e. E1).</li>
+<li>Hold <strong>COMMAND/CONTROL</strong> **and** <strong>SHIFT</strong> simultaneously, then click to select the last cell in the new column (i.e. E62).</li>
+<li>Repeat steps 2-3 for any additional columns you want to select (i.e. G1 through G62).</li>
+</ol>
+</details><br>
+
+![](https://images.code.org/4208af40200c99a749ddeddbba3a1ebe-image-1454103069438.gif)
+*Selecting the "age", "number of women", and "number of men" columns
 
 <hr>
 
@@ -29,12 +38,11 @@ In this exercise, you will use some different columns in the spreadsheet to crea
 
 **Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
 
-* In the Chart Editor, ignore the Google suggestions and play around with the different chart types and pay attention to how the chart preview changes.
-* After you’ve explored some different chart types, change the chart type to “Column chart.”
-	* Make sure you’ve checked the boxes for “Use row 1 as headers” and “Use column A as labels.”
-* Click "Insert" to add your chart to the spreadsheet.
+* Set the chart type to **“Line chart”**
+* Checked the boxes for **“Use row 1 as headers”** and **“Use column A as labels”**
+* Click **“Insert”** to add your chart to the spreadsheet.
 
-[INSERT GIF “HOWTO Select Column Chart Type v2.gif”]
+![](https://images.code.org/700f3ade7e049c608d06c9d56952079c-image-1454103075843.gif)
 *Change chart type and insert your bar chart into the spreadsheet.*
 
 <hr>
@@ -43,7 +51,7 @@ In this exercise, you will use some different columns in the spreadsheet to crea
 
 At this point, your chart should look something like this:
 
-[INSERT IMAGE OF FINAL BAR CHART]
+![](https://images.code.org/aa384da254515306546d51ada51943d1-image-1454103099651.PNG)
 
 Once your chart looks close to the one above, switch to View mode and take a moment to look at your visualization.
 
@@ -55,5 +63,6 @@ Once your chart looks close to the one above, switch to View mode and take a mom
 After you’ve thought about these questions, move on to the next section to learn how to further customize your chart.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 MARKDOWN
