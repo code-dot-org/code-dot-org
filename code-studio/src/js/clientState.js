@@ -1,26 +1,19 @@
-//= require jquery
-//= require jquery.cookie
-
-/* global dashboard */
-
 /**
- * Helper functions for accessing client state. This state is stored in a
- * combination of cookies and HTML5 web storage.
+ * @file Helper functions for accessing client state. This state is stored in a
+ *       combination of cookies and HTML5 web storage.
  */
-(function (window, $) {
+'use strict';
 
-if (!window.dashboard) {
-  window.dashboard = {};
-}
+module.exports = function (sessionStorage, $) {
 
-dashboard.clientState = {};
+var clientState = {};
 
 /**
  * Number of days before client state cookie expires.
  * @type {number}
  * @private
  */
-dashboard.clientState.EXPIRY_DAYS = 365;
+clientState.EXPIRY_DAYS = 365;
 
 /**
  * Maximum number of lines of code that can be stored in the cookie
@@ -29,9 +22,9 @@ dashboard.clientState.EXPIRY_DAYS = 365;
  */
 var MAX_LINES_TO_SAVE = 1000;
 
-var COOKIE_OPTIONS = {expires: dashboard.clientState.EXPIRY_DAYS, path: '/'};
+var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
 
-dashboard.clientState.reset = function() {
+clientState.reset = function() {
   try {
     $.removeCookie('lines', {path: '/'});
     sessionStorage.clear();
@@ -43,7 +36,7 @@ dashboard.clientState.reset = function() {
  * @param name {string=} Optionally pull a specific param.
  * @return {object|string} Hash of params, or param string if `name` is specified.
  */
-dashboard.clientState.queryParams = function (name) {
+clientState.queryParams = function (name) {
   var pairs = location.search.substr(1).split('&');
   var params = {};
   pairs.forEach(function (pair) {
@@ -68,7 +61,7 @@ dashboard.clientState.queryParams = function (name) {
  * @returns {string|undefined} Cached copy of the level source, or undefined if
  *   the cached copy is missing/stale.
  */
-dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
+clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
   var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
   if (data) {
     var parsed;
@@ -92,7 +85,7 @@ dashboard.clientState.sourceForLevel = function (scriptName, levelId, timestamp)
  * @param {number} timestamp
  * @param {string} source
  */
-dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
+clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
   safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
     source: source,
     timestamp: timestamp
@@ -105,8 +98,8 @@ dashboard.clientState.writeSourceForLevel = function (scriptName, levelId, times
  * @param {number} levelId The level
  * @returns {number}
  */
-dashboard.clientState.levelProgress = function(scriptName, levelId) {
-  var progressMap = dashboard.clientState.allLevelsProgress();
+clientState.levelProgress = function(scriptName, levelId) {
+  var progressMap = clientState.allLevelsProgress();
   return (progressMap[scriptName] || {})[levelId] || 0;
 };
 
@@ -118,7 +111,7 @@ dashboard.clientState.levelProgress = function(scriptName, levelId) {
  * @param {Number} b
  * @return {Number} The better result.
  */
-dashboard.clientState.mergeActivityResult = function(a, b) {
+clientState.mergeActivityResult = function(a, b) {
   a = a || 0;
   b = b || 0;
   if (a === 0) {
@@ -138,13 +131,13 @@ dashboard.clientState.mergeActivityResult = function(a, b) {
  * @param {string} scriptName - Which script this is for
  * @param {number} levelId - Which level this is for
  */
-dashboard.clientState.trackProgress = function(result, lines, testResult, scriptName, levelId) {
+clientState.trackProgress = function(result, lines, testResult, scriptName, levelId) {
   if (result && isFinite(lines)) {
     addLines(lines);
   }
 
-  var savedResult = dashboard.clientState.levelProgress(scriptName, levelId);
-  if (savedResult !== dashboard.clientState.mergeActivityResult(savedResult, testResult)) {
+  var savedResult = clientState.levelProgress(scriptName, levelId);
+  if (savedResult !== clientState.mergeActivityResult(savedResult, testResult)) {
     setLevelProgress(scriptName, levelId, testResult);
   }
 };
@@ -157,7 +150,7 @@ dashboard.clientState.trackProgress = function(result, lines, testResult, script
  * @returns {number}
  */
 function setLevelProgress(scriptName, levelId, progress) {
-  var progressMap = dashboard.clientState.allLevelsProgress();
+  var progressMap = clientState.allLevelsProgress();
   if (!progressMap[scriptName]) {
     progressMap[scriptName] = {};
   }
@@ -169,7 +162,7 @@ function setLevelProgress(scriptName, levelId, progress) {
  * Returns a map from (string) level id to progress value.
  * @return {Object<String, number>}
  */
-dashboard.clientState.allLevelsProgress = function() {
+clientState.allLevelsProgress = function() {
   var progressJson = sessionStorage.getItem('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
@@ -183,7 +176,7 @@ dashboard.clientState.allLevelsProgress = function() {
  * Returns the number of lines completed from the cookie.
  * @returns {number}
  */
-dashboard.clientState.lines = function() {
+clientState.lines = function() {
   var linesStr = $.cookie('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
@@ -193,7 +186,7 @@ dashboard.clientState.lines = function() {
  * @param {number} addedLines
  */
 function addLines(addedLines) {
-  var newLines = Math.min(dashboard.clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
+  var newLines = Math.min(clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
 
   $.cookie('lines', String(newLines), COOKIE_OPTIONS);
 }
@@ -203,7 +196,7 @@ function addLines(addedLines) {
  * @param videoId
  * @returns {*}
  */
-dashboard.clientState.hasSeenVideo = function(videoId) {
+clientState.hasSeenVideo = function(videoId) {
   return hasSeenVisualElement('video', videoId);
 };
 
@@ -211,7 +204,7 @@ dashboard.clientState.hasSeenVideo = function(videoId) {
  * Records that a user has seen a given video in local storage
  * @param videoId
  */
-dashboard.clientState.recordVideoSeen = function (videoId) {
+clientState.recordVideoSeen = function (videoId) {
   recordVisualElementSeen('video', videoId);
 };
 
@@ -220,7 +213,7 @@ dashboard.clientState.recordVideoSeen = function (videoId) {
  * @param calloutId
  * @returns {boolean}
  */
-dashboard.clientState.hasSeenCallout = function(calloutId) {
+clientState.hasSeenCallout = function(calloutId) {
   return hasSeenVisualElement('callout', calloutId);
 };
 
@@ -228,7 +221,7 @@ dashboard.clientState.hasSeenCallout = function(calloutId) {
  * Records that a user has seen a given callout in local storage
  * @param calloutId
  */
-dashboard.clientState.recordCalloutSeen = function (calloutId) {
+clientState.recordCalloutSeen = function (calloutId) {
   recordVisualElementSeen('callout', calloutId);
 };
 
@@ -239,14 +232,14 @@ dashboard.clientState.recordCalloutSeen = function (calloutId) {
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
   var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
-
+  var elementSeen;
   try {
-    var elementSeen = JSON.parse(elementSeenJson);
+    elementSeen = JSON.parse(elementSeenJson);
     elementSeen[visualElementId] = true;
     safelySetItem(visualElementType, JSON.stringify(elementSeen));
   } catch (e) {
     //Something went wrong parsing the json. Blow it up and just put in the new callout
-    var elementSeen = {};
+    elementSeen = {};
     elementSeen[visualElementId] = true;
     safelySetItem(visualElementType, JSON.stringify(elementSeen));
   }
@@ -291,4 +284,6 @@ function safelySetItem(key, value) {
   }
 }
 
-})(window, $);
+return clientState;
+
+};

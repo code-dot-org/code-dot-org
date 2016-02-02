@@ -17,7 +17,7 @@ nav: about_nav
 - **Product and Marketing Team**
 	- [Engineering Manager / Chief Architect](#eng)
 	- [Software Engineer](#engineer)
-	- [UX/ Visual Designer](#design)
+	- [UX / Visual Designer](#design)
 	- [Marketing & Communications Manager](#market)
 - **Professional Learning & Community Team**
 	- [VP of Professional Learning & Community](#vp)
