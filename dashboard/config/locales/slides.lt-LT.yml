@@ -235,7 +235,7 @@
           checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Nagi, pajudink tuos zombius!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -390,10 +390,11 @@
           pasidalinti su draugais."
       3:
         image: notes/frozen1_3.jpg
-        text: In the next hour, you're going to learn the basics of how to code. Traditional
-          programming is usually in text, but we'll use Blockly, which uses visual
-          blocks that you can drag and drop to write programs. This is how even university
-          students learn the basics. Under the hood, you're still creating code.
+        text: Toliau Tu mokysiesi programavimo pagrindų. Tradiciškai programavime
+          naudojamas tekstas, bet mes naudosime Blockly, kuris naudoja blokelius,
+          kuriuos gali tempti ir paleisti rašydamas programą. Tai naudoja net universiteto
+          studentai mokydamiesi pagrindų. Po blokeliais Tu vistiek kuri programinį
+          kodą.
       4:
         image: notes/frozen1_4.jpg
         text: A program is a set of instructions that tells a computer what to do.
@@ -428,8 +429,8 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Prisimink, Tu gali pakeisti pikselių ir laipsnių skaičių spausdamas
+          ant rodyklių šalia jų.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -461,8 +462,8 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Labas, aš esu Krisas Bošas. Esu profesionalus krepšininkas ir programuodavau
+          mokykloje.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define

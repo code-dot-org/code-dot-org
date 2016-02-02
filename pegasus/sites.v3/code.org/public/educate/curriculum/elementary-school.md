@@ -171,4 +171,4 @@ Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5
 ## Additional resources and videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-[<button>Video library</button>](/educate/videos) [<button>Inspire a student</button>](/educate/inspire)
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)

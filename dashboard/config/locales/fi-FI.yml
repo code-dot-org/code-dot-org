@@ -29,8 +29,8 @@
     code:
       label: 'Lisää opettaja:'
       placeholder: Osion koodi (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Kirjoita opettajasi sinulle jakama koodi. Se on 6 kirjaiminen
+        koodi, kuten "ABCDEF".
     submit: Lisää opettaja
   add_hint_form:
     placeholder: Syötä vihjeesi tähän
@@ -289,7 +289,7 @@
       remove: Oletko varma, että haluat poistaa tämän opettajan?
     students:
       dashboard: Siirry opettajan päänäytölle
-    user_not_found: Opettajaa tai oppilasta ei löytynyt
+    user_not_found: Opettajaa ei löytynyt.
     student_teacher_disassociated: Opettaja %{teacher_name} on poistettu oppilaalta
       %{student_name}
     panel:

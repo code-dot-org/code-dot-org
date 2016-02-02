@@ -302,7 +302,7 @@
       student: "студент"
       viewing_solution: "Види решење"
       try_it_yourself: "Испробај"
-      section: Section
+      section: "Секција"
       example: "Пример решења"
       example_with_number: "Пример решења %{solution_number}"
       submitted_on: "Предато:"
