@@ -21,9 +21,9 @@ def build_demographic_breakdowns(baseline, comparison)
   male_students = comparison.where(gender: 'm').count.to_f /
     [1, baseline.where(gender: 'm').count].max.to_f
   us_students = comparison.where(locale: 'en-us').count.to_f /
-    [1, baseline.where(locale: 'en-us').count].max.to_f 
+    [1, baseline.where(locale: 'en-us').count].max.to_f
   non_us_students = comparison.exclude(locale: 'en-us').count.to_f /
-    [1, baseline.exclude(locale: 'en-us').count].max.to_f 
+    [1, baseline.exclude(locale: 'en-us').count].max.to_f
   return {
     students: students,
     female_students: female_students,
@@ -41,7 +41,7 @@ def main()
   all_students = all_users.where(user_type: 'student')
   all_teachers = all_users.where(user_type: 'teacher')
   # Born users.
-  users = all_users.exclude(current_sign_in_at: nil) 
+  users = all_users.exclude(current_sign_in_at: nil)
   students = users.where(user_type: 'student')
   teachers = users.where(user_type: 'teacher')
   # Active students.
@@ -69,7 +69,7 @@ def main()
     where("current_sign_in_at - created_at < ?", %q{interval '30 days'})
 
   # Students and teachers.
-  followers = DASHBOARD_REPORTING_DB_READONLY[:followers] 
+  followers = DASHBOARD_REPORTING_DB_READONLY[:followers]
 
   Properties.set(:admin_stats, {
     accounts: {
