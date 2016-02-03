@@ -30,15 +30,17 @@ class UserCourseEnrollment < ActiveRecord::Base
   end
 
   def self.enroll_user_in_course_with_learning_modules(user, course, learning_modules)
-    enrollment = UserCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course)
+    enrollment = UserCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course, status: :in_progress)
 
     learning_modules.each do |learning_module|
       module_assignment = UserEnrollmentModuleAssignment.find_or_create_by(user_course_enrollment: enrollment, learning_module: learning_module)
 
       learning_module.artifacts.each do |artifact|
-        UserModuleArtifactAssignment.find_or_create_by(user_enrollment_module_assignment: module_assignment, artifact: artifact)
+        UserModuleArtifactAssignment.find_or_create_by(user_enrollment_module_assignment: module_assignment, artifact: artifact, status: :not_started)
       end
     end
+
+    enrollment
   end
 
   def complete_course

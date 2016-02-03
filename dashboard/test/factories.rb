@@ -34,22 +34,6 @@ FactoryGirl.define do
     type ""
   end
 
-  factory :user_artifact_assignment do
-    user nil
-    artifact nil
-    assigned_date "2016-01-29 13:29:52"
-    completed_date "2016-01-29 13:29:52"
-    status "MyString"
-  end
-
-  factory :user_module_assignment do
-    user nil
-    learning_module nil
-    assigned_date "2016-01-29 13:29:32"
-    completed_date "2016-01-29 13:29:32"
-    status "MyString"
-  end
-
   factory :artifact do
     name "MyString"
     description "MyText"
@@ -58,7 +42,7 @@ FactoryGirl.define do
 
   factory :learning_module do
     name "MyString"
-    type ""
+    learning_module_type ""
   end
 
   factory :user do
