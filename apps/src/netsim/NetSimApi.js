@@ -6,7 +6,7 @@
 /* jshint
  eqeqeq: true,
 
- maxlen: 90,
+ maxlen: 120,
  maxparams: 3,
  maxstatements: 200
  */

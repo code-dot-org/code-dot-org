@@ -10,7 +10,7 @@
  unused: true,
  eqeqeq: true,
 
- maxlen: 90,
+ maxlen: 120,
  maxstatements: 200
  */
 'use strict';
