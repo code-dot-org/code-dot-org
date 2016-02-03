@@ -10,8 +10,10 @@ DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_read
 SEVEN_DAYS = 7 * 24 * 60 * 60
 THIRTY_DAYS = 30 * 24 * 60 * 60
 
-# 
-# Returns
+# baseline: The set of user objects whose count is used in the denominator of the fraction.
+# comparison: The set of user objects whose count is used in the numerator of the fractions.
+# Returns a hash, mapping demographics (all, gender, locale) to the ratio of users in the
+# comparison and the baseline.
 def build_demographic_breakdowns(baseline, comparison)
   students = comparison.count.to_f / [1, baseline.count].max.to_f
   female_students = comparison.where(gender: 'f').count.to_f /
