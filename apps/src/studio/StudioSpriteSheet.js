@@ -2,7 +2,6 @@
  * given certain metadata about that spritesheet */
 // Strict linting: Absorb into global config when possible
 /* jshint
- newcap: true,
  nonew: true,
  unused: true,
  eqeqeq: true,

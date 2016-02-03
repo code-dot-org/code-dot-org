@@ -1,7 +1,6 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
 // Strict linting: Absorb into global config when possible
 /* jshint
- newcap: true,
  nonew: true,
  unused: true,
  eqeqeq: true,

@@ -1,7 +1,6 @@
 /** @file Filter that adds a white glowing outline to an image. */
 // Strict linting: Absorb into global config when possible
 /* jshint
- newcap: true,
  nonew: true,
  unused: true,
  eqeqeq: true,
