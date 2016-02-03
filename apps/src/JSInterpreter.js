@@ -146,7 +146,7 @@ JSInterpreter.prototype.parse = function (options) {
     new window.Interpreter(options.code, initFunc);
   }
   catch(err) {
-    this.notifyOfExecutionError(err);
+    this.handleError(err);
   }
 
 };
@@ -455,7 +455,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.notifyOfExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
       this.executeLoopDepth--;
       return;
     }
@@ -474,7 +474,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
  * @param {!Error} err
  * @param {number} [lineNumber]
  */
-JSInterpreter.prototype.notifyOfExecutionError = function (err, lineNumber) {
+JSInterpreter.prototype.handleError = function (err, lineNumber) {
   if (!lineNumber && err instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
