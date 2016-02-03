@@ -36,7 +36,8 @@ var CrosshairOverlay = function () {
     x: 0,
     y: 0,
     appWidth: 0,
-    appHeight: 0
+    appHeight: 0,
+    isDragging: false
   };
 };
 module.exports = CrosshairOverlay;
@@ -76,7 +77,7 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
   }
 
-  if ($(".ui-draggable-dragging").length) {
+  if (this.props_.isDragging) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
     rectY = Math.max(0, rectY);
   }
