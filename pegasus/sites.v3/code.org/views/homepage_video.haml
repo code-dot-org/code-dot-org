@@ -11,11 +11,7 @@
   - video_code = entry[:param2_s]
   - download_path = entry[:param3_s]
   - facebook = {:u=>"http://#{request.site}/"}
-  - if request.site == 'csedweek.org'
-    - twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
-    - twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
-  - else
-    - twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:twitter_teach_cs)}
+  - twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:twitter_teach_cs)}
 
   #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
     = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, download_path: download_path, facebook:facebook, twitter:twitter
