@@ -134,6 +134,19 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
     this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
   }
 
+  // var draggingElement = $(".ui-draggable-dragging")
+  // if (draggingElement.length) {
+  //   var pos = draggingElement.offset ();
+  //   console.log('----');
+  //   console.log(this.mousePos_.x, this.mousePos_.y);
+  //   this.mousePos_.x = pos.left;
+  //   this.mousePos_.y = pos.top;
+  //   console.log(this.mousePos_.x, this.mousePos_.y);
+  // }
+  //
+  // this.mousePos_ = this.mousePos_.matrixTransform(
+  //   this.screenSpaceToAppSpaceTransform_);
+
   if (this.ownElement_.parentNode) {
     this.render(this.ownElement_.parentNode, this.props_);
   }

@@ -76,6 +76,11 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
   }
 
+  if ($(".ui-draggable-dragging").length) {
+    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+    rectY = Math.max(0, rectY);
+  }
+
   var textX = rectX + TEXT_RECT_WIDTH / 2;
   var textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
 
