@@ -5,8 +5,7 @@
  unused: true,
  eqeqeq: true,
 
- maxlen: 120,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 
@@ -141,7 +140,7 @@ function buildTrackData(trackDefinitions, assetUrl) {
 }
 
 /**
- * Preload all music assets,
+ * Preload all music assets
  */
 MusicController.prototype.preload = function () {
   if (!this.audioPlayer_) {

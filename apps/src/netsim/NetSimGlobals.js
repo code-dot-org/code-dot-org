@@ -12,8 +12,7 @@
  eqeqeq: true,
 
  maxlen: 120,
- maxparams: 3,
- maxstatements: 200
+ maxparams: 3
  */
 'use strict';
 
