@@ -1,42 +1,52 @@
 /**
  * A couple of utility functions for dealing with our design mode grid.
  */
-module.exports = {
-  GRID_SIZE: 5,
-  /**
-   * Given an element being dragged, determine the scaled x/y position of the
-   * top left corned, scaled to our visualization.
-   * @param {jQueryObject} draggingElement
-   * @return {object}
-   */
-  scaledDropPoint: function (draggingElement) {
-    var div = document.getElementById('designModeViz');
 
-    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+var GRID_SIZE = 5;
 
-    var left = (draggingElement.offset().left - $(div).offset().left) / xScale;
-    var top = (draggingElement.offset().top - $(div).offset().top) / yScale;
+/**
+ * @typedef TopLeft
+ * @type Object
+ * @property {number} top
+ * @property {number} left
+ */
 
-    // snap top-left corner to nearest location in the grid
-    left = this.snapToGridSize(left);
-    top = this.snapToGridSize(top);
+/**
+ * Given an element being dragged, determine the scaled x/y position of the
+ * top left corned, scaled to our visualization.
+ * @param {jQueryObject} draggedElement
+ * @return {TopLeft}
+ */
+module.exports.scaledDropPoint = function (draggedElement) {
+  var div = document.getElementById('designModeViz');
 
-    return {
-      left: left,
-      top: top
-    };
-  },
+  var boundingRect = div.getBoundingClientRect();
+  var draggedOffset = draggedElement.offset();
 
-  /**
-   * Given a coordinate on either axis and a grid size, returns a coordinate
-   * near the given coordinate that snaps to the given grid size.
-   * @param {number} coordinate
-   * @param {number} GRID_SIZE
-   * @returns {number}
-   */
-  snapToGridSize: function (coordinate) {
-    var halfGrid = this.GRID_SIZE / 2;
-    return coordinate - ((coordinate + halfGrid) % this.GRID_SIZE - halfGrid);
-  }
+
+  var xScale = boundingRect.width / div.offsetWidth;
+  var yScale = boundingRect.height / div.offsetHeight;
+
+  var left = (draggedOffset.left - boundingRect.left) / xScale;
+  var top = (draggedOffset.top - boundingRect.top) / yScale;
+
+  // snap top-left corner to nearest location in the grid
+  left = this.snapToGridSize(left);
+  top = this.snapToGridSize(top);
+
+  return {
+    left: left,
+    top: top
+  };
+};
+
+/**
+ * Given a coordinate on either axis and a grid size, returns a coordinate
+ * near the given coordinate that snaps to the given grid size.
+ * @param {number} coordinate
+ * @returns {number}
+ */
+module.exports.snapToGridSize = function (coordinate) {
+  var halfGrid = GRID_SIZE / 2;
+  return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
 };
