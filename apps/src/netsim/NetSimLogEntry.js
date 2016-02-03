@@ -7,8 +7,7 @@
  eqeqeq: true,
 
  maxlen: 120,
- maxparams: 5,
- maxstatements: 200
+ maxparams: 5
  */
 'use strict';
 

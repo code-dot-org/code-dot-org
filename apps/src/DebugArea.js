@@ -3,8 +3,7 @@
  unused: true,
 
  maxlen: 120,
- maxparams: 3,
- maxstatements: 200
+ maxparams: 3
  */
 
 var i18n = require('./locale');

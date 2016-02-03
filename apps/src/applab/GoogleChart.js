@@ -9,8 +9,7 @@
  eqeqeq: true,
 
  maxlen: 120,
- maxparams: 6,
- maxstatements: 200
+ maxparams: 6
  */
 'use strict';
 /* global google */

@@ -438,6 +438,7 @@ config.jshint = {
     esnext: true,
     funcscope: true,
     maxparams: 8,
+    maxstatements: 200,
     mocha: true,
     node: true,
     nonew: true,
