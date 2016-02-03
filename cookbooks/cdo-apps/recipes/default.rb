@@ -2,6 +2,8 @@
 # Cookbook Name:: cdo-apps
 # Recipe:: default
 #
+include_recipe 'apt'
+include_recipe 'sudo-user'
 
 # These packages are used by Gems we install via Bundler later.
 apt_package 'libxslt1-dev'
