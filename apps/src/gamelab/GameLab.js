@@ -60,7 +60,7 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
 var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i')
+var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
 GameLab.baseP5loadImage = null;
 
