@@ -645,7 +645,9 @@ Applab.init = function(config) {
   var extraControlsRow = '';
 
   // Construct a logging observer for interpreter events
-  jsInterpreterLogger = new JsInterpreterLogger(window.console);
+  if (!config.hideSource) {
+    jsInterpreterLogger = new JsInterpreterLogger(window.console);
+  }
 
   if (showDebugButtons || showDebugConsole) {
     jsDebuggerUi = new JsDebuggerUi(Applab.runButtonClick);
