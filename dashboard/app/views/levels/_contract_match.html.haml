@@ -2,8 +2,7 @@
 :javascript
   window.levelData = #{data.to_json};
 
-= javascript_include_tag 'react'
-= javascript_include_tag 'levels/contract_match'
+= javascript_include_tag 'js/levels/contract_match'
 = stylesheet_link_tag 'levels/contract_match'
 = render partial: 'levels/common_audio'
 
@@ -24,7 +23,7 @@
   %div{style: 'display: none;'}
     - ['badname', 'badname_case', 'badrange', 'baddomainsize', 'baddomainname', 'baddomaintype'].each do |error_type|
       %div{id: "#{error_type}-dialogcontent"}
-        .modal-content
+        .modal-content.no-modal-icon
           %p.dialog-title
             =t('contract_match.wrong_title')
           %p

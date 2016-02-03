@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Turtle
@@ -33,10 +32,26 @@ ____________________________________________________
 
 [example]
 
-<pre>
-var xLocation = getX(); //Get x coordinate of the turtle and store it in variable 'xLocation'
-console.log(xLocation); //Print value of the variable to the debugging console
-</pre>
+```
+var xLocation = getX();
+console.log(xLocation);
+moveTo(100, 100);
+console.log(getX());
+
+```
+
+[/example]
+____________________________________________________
+
+[example]
+
+**To the Right** Move the turtle 50 pixels to the right.
+
+```
+// Move the turtle 50 pixels to the right.
+var newX = getX() + 50;
+moveTo(newX, 100);
+```
 
 [/example]
 
@@ -44,32 +59,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
-console.log(getX()); //Get x coordinate of the turtle and print it to the debugging console
-moveTo(100, 100); //Move  turtle to x:100, y:100
-console.log(getX()); //Print x coordinate of the turtle to the console again. Will see 100 in the console.
-</pre>
+**Am I off the screen?** Check whether the turtle has moved off the right side of the screen.
 
-[/example]
-
-____________________________________________________
-
-[example]
-
-<pre>
-var newX = getX() + 50; //Add 50 to the current x coordinate of turtle and store it as 'newX'
-moveTo(newX, 100); //Move the turtle to the new x location, and y:100
-</pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-**Am I off the screen?** In this more detailed example, we check whether the turtle has moved off the right side of the screen, assuming the app is 320 pixels wide. To check this, the function `isOffRight()` is defined and returns `true` if the turtle's x coordinate is greater than 320. Otherwise, it returns `false`. The function is then called in a loop as the turtle moves towards the right side.
-<pre>
-//Define the function
+```
+// Check whether the turtle has moved off the right side of the screen.
 function isOffRight(){
   if (getX() > 320) {
     return true
@@ -77,12 +70,12 @@ function isOffRight(){
     return false
   }
 }
-turnRight(90); //Turn the turtle to the East
+turnRight(90); 
 for(var i=0; i<10; i++){
-  moveForward(50); //Move forward 50 pixels
-  console.log("Am I off the screen? "+ isOffRight()); //Print if turtle is off right side of screen
+  moveForward(50);
+  console.log("Am I off the screen? "+ isOffRight());
 }
-</pre>
+```
 
 [/example]
 
@@ -91,9 +84,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 getX();
-</pre>
+```
 
 [/syntax]
 
@@ -101,7 +95,7 @@ getX();
 
 ### Parameters
 
-`getX()` does not take any parameters.
+getX() does not take any parameters.
 
 [/parameters]
 
@@ -115,6 +109,10 @@ Returns a number representing the current x coordinate in pixels of the turtle w
 [tips]
 
 ### Tips
+- The screen default size is 320 pixels wide and 450 pixels high, but you can move the turtle off the screen by exceeding those dimensions.
+- The turtle can be moved off the screen so *getX()* can return a negative number if the turtle is off the screen to the left and *getX()* can return a number greater than 320 if the turtle is off the screen to the right.
+
+<img src='https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg'>
 
 [/tips]
 

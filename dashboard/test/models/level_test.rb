@@ -1,7 +1,8 @@
 require 'test_helper'
-include ActionDispatch::TestProcess
 
 class LevelTest < ActiveSupport::TestCase
+  include ActionDispatch::TestProcess
+
   setup do
     @turtle_data = {:game_id=>23, :name=>"__bob4", :level_num=>"custom", :skin=>"artist", :instructions=>"sdfdfs", :type=>'Artist'}
     @custom_turtle_data = {:solution_level_source_id=>4, :user_id=>1}
@@ -9,6 +10,8 @@ class LevelTest < ActiveSupport::TestCase
     @custom_maze_data = @maze_data.merge(:user_id=>1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test 'create level' do
@@ -41,7 +44,7 @@ class LevelTest < ActiveSupport::TestCase
       parsed = Karel.parse_maze(json)
       assert_equal(maze, JSON.parse(parsed['maze'])[0][0])
       assert_equal(initial_dirt, JSON.parse(parsed['initial_dirt'])[0][0])
-      assert_equal(0, JSON.parse(parsed['final_dirt'])[0][0])
+      assert_equal(input, JSON.parse(parsed['raw_dirt'])[0][0])
 
       # some of our values won't roundtrip, because they get converted to ints
       # but not back to strings
@@ -207,15 +210,14 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 'maze', level.maze
   end
 
-# requires rails 4.2 or suitable workaround
-#  test 'level save without changes does not update timestamp' do
-#    level = Level.create!(name: 'test_level_save', type: 'Maze')
-#    time = level.updated_at.to_i
-#    Timecop.travel(5) do
-#      level.save!
-#    end
-#    assert_equal time, level.updated_at.to_i
-#  end
+  test 'level save without changes does not update timestamp' do
+    level = Level.create!(name: 'test_level_save', type: 'Maze')
+    time = level.updated_at.to_i
+    Timecop.travel(5) do
+      level.save!
+    end
+    assert_equal time, level.updated_at.to_i
+  end
 
   test 'update_ideal_level_source does nothing for maze levels' do
     level = Maze.first
@@ -231,9 +233,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.solution_blocks, level.ideal_level_source.data
   end
 
-  test 'updating ContractMatch level updates it' do
-    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
-
+  def update_contract_match
     name = 'contract match test'
     dsl_text = <<EOS
 name 'Eval Contracts 1 B'
@@ -246,12 +246,66 @@ EOS
 
     # update the same level with different dsl text
     dsl_text = dsl_text.gsub('star', 'bar')
-    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text)
+    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text, published: true)
 
     cm = ContractMatch.find(cm.id)
     # star -> bar
     assert_equal 'bar|image|color:string|radius:Number|style:string', cm.properties['answers'].first
     assert_equal 'Write a contract for the bar function', cm.properties['content1']
+  end
+
+  test 'updating ContractMatch level updates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).times(4) # mock file so we don't actually write a file... twice each for the .contract_match file and the i18n strings file (once for create and once for save)
+
+    update_contract_match
+  end
+
+  test 'updating ContractMatch level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    update_contract_match
+  end
+
+  def update_maze
+    maze = Maze.last
+    maze.start_blocks = '<xml/>'
+    maze.published = true
+    maze.save!
+
+    maze.reload
+    assert_equal '<xml/>', maze.start_blocks
+  end
+
+  test 'updating maze level updates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    update_maze
+  end
+
+  test 'updating maze level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    update_maze
+  end
+
+  def create_maze
+    maze = create(:maze, :published => true)
+    assert maze
+  end
+
+  test 'creating maze level creates it in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once
+
+    create_maze
+  end
+
+  test 'creating maze level does not write file in non levelbuilder mode' do
+    File.expects(:write).never
+
+    create_maze
   end
 
   test 'delete removed level properties on import' do
@@ -307,6 +361,8 @@ EOS
   end
 
   test 'applab examples' do
+    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+
     level = Applab.create(name: 'applab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
 
@@ -328,5 +384,71 @@ EOS
     level = level.reload
 
     assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # does not crash if decryption is busted
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    assert_equal nil, level.examples
   end
+
+  test 'cached_find' do
+    level1 = Script.twenty_hour_script.script_levels[0].level
+    cache_level1 = Level.cache_find(level1.id)
+    assert_equal(level1, cache_level1)
+
+    level2 = Script.course1_script.script_levels.last.level
+    cache_level2 = Level.cache_find(level2.id)
+    assert_equal(level2, cache_level2)
+
+    # Make sure that we can also locate a newly created level.
+    level3 = create(:level)
+    assert_equal(level3, Level.cache_find(level3.id))
+  end
+
+
+  test 'where we want to calculate ideal level source' do
+    match_level = Match.create(name: 'a match level')
+    level_with_ideal_level_source_already = Artist.create(name: 'an artist level with a solution', solution_blocks: '<xml></xml>')
+    freeplay_artist = Artist.create(name: 'freeplay artist', free_play: true)
+    regular_artist = Artist.create(name: 'regular artist')
+
+    levels = Level.where_we_want_to_calculate_ideal_level_source
+
+    assert !levels.include?(match_level)
+    assert !levels.include?(level_with_ideal_level_source_already)
+    assert !levels.include?(freeplay_artist)
+    assert levels.include?(regular_artist)
+  end
+
+  test 'calculate_ideal_level_source_id does nothing if no level sources' do
+    level = Maze.create(name: 'maze level with no level sources')
+    assert_equal nil, level.ideal_level_source_id
+
+    level.calculate_ideal_level_source_id
+    assert_equal nil, level.ideal_level_source_id
+  end
+
+  test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
+    level = Maze.create(name: 'maze level with level sources')
+    assert_equal nil, level.ideal_level_source_id
+
+
+    right = create(:level_source, level: level, data: "<xml><right/></xml>")
+    6.times do
+      create(:activity, level: level, level_source: right, test_result: 100)
+    end
+
+    wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
+    10.times do
+      create(:activity, level: level, level_source: wrong, test_result: 0)
+    end
+
+    right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
+    2.times do
+      create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
+    end
+
+    level.calculate_ideal_level_source_id
+    assert_equal right, level.ideal_level_source
+  end
+
 end

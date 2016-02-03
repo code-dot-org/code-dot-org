@@ -2,7 +2,7 @@ ru:
   errors:
     messages:
       not_saved: 'Пожалуйста, исправьте следующие ошибки:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Этот урок имеет возрастные ограничения и не доступен для школьников младшего возраста
   activerecord:
     errors:
       messages:
@@ -28,6 +28,7 @@ ru:
     code:
       label: 'Добавить учителя:'
       placeholder: Код раздела (ABCDEF)
+      instructions: 'Пожалуйста, введите код и поделились со своим учителем. Это 6 буквенный код типа "АБВГДЕ".'
     submit: Добавить учителя
   add_hint_form:
     placeholder: Пожалуйста, введите Вашу подсказку здесь
@@ -38,6 +39,7 @@ ru:
   puzzle: Головоломка
   trophies: трофеи
   courses: курсы
+  unplugged_activity: Урок без компьютера
   of: из
   more: ЕЩЁ
   less: СВЕРНУТЬ
@@ -216,11 +218,12 @@ ru:
         playlab: Создать приложение
         artist: Нарисовать что-нибудь
         calculate: Calculate Something
+        applab: Создать приложение
     user:
       classroom: Домашняя страница Преподавателя
       district_dashboard: Панель управления области
       label: 'Привет, %{username}'
-      stats: Мои результаты
+      stats: '"Студия Кода"'
       settings: Моя регистрация
       prizes: Призы
       logout: Выйти
@@ -239,69 +242,28 @@ ru:
       prize_us_only: (Только для учеников в США)
       prizes_link: Дополнительная информация
   teacher:
+    answer: Ответ
+    for_teachers_only: Только для учителей
     title:
       one: 'Ваш учитель:'
       other: 'Ваши учителя:'
     remove: (удалить учителя)
     confirm:
       remove: Вы уверены, что хотите удалить этого учителя?
-    tools: Инструментарий учителя
-    followers:
-      section: 'Раздел:'
-      stages: 'Этап(ы) для отображения:'
-      show_past: 'Показать деятельность ученика (%{bullet_html}) в прошлом:'
-      levels_key: Ключевые уровни
-      perfect: Завершено, отлично
-      completed: Завершено, но использовано слишком много блоков
-      tried: Пытался, но не завершено
-      not_tried: Ещё не пытался
-      activity: 'Показывает активность студента за последние %{plural} %{hours}'
-      no_section: Нет назначенного раздела
-      trophies: трофеи
     students:
-      name: Имя
-      username: имя пользователя
-      password: пароль
-      manage: Управление учениками
       dashboard: Перейти к панели учитель
-      add: Пригласить учеников
-      remove: удалить ученика
-      confirm_remove: Вы уверены, что хотите удалить этого ученика?
-      help_reassign: Чтобы разделить класс на несколько групп выберите студентов и привяжите их к новой группе.
-      help_register: Вместо того, чтобы терять время на добавление данных о своих студентах, Вы можете быстро получить информацию о своих учениках попросив их зарегистрироваться на сайте. Вашим студентам потребуется выбрать имя пользователя и пароль, но им НЕ НУЖНО предоставлять адрес электронной почты. Если студент забудет свой пароль, Вы будете иметь возможность сбросить пароль за него.
-      register: Попросите ваших учеников зарегистрироваться самостоятельно
-      vist: Предложите Вашим ученикам посетить
-      section_code: 'И ввести их в section-code:'
-      first_please: 'Во-первых, пожалуйста %{add_section}'
-      for: Для
-      enter: 'введите:'
-    sections:
-      add: Добавить раздел
-      manage: Управление классами
-      section: Раздел
-      students: Ученики
-      section_code: Код раздела
-      add_section_code: Добавить раздел Студенты в раздел кода
-      secret: Секретный тип
-      grade: Оценка
-      course: Курс
-      rename: переименовать
-      edit: редактировать
-      delete: удалить
-      confirm_delete: Вы уверены, что хотите удалить этот раздел?
-      email: Отправить письмо
-    rollup: Панель контроля хода выполнения
-    activity: Последние данные по работе класса
-    user_not_found: Преподаватель или ученик не может быть найден
-    cant_remove_student_no_email: '%{student_name} не может быть удален из списка Ваших  учеников,, поскольку %{student_name} не зарегистрировал адрес электронной почты'
-    cant_remove_teacher_no_email: 'Учитель %{teacher_name} не может быть удален, поскольку  Вы не зарегистрировали адрес электронной почты'
-    student_teacher_disassociated: 'Учитель %{teacher_name} удалён у ученика %{student_name}'
+    user_not_found: Не удалось найти учителя.
+    student_teacher_disassociated: 'Вы удалили %{teacher_name} как вашего учителя.'
     panel:
       answer_viewer: Просмотр ответов
       student: Ученик
       viewing_solution: Просмотр решения
       try_it_yourself: Попробуйте сами
       section: Раздел
+      example: Пример решения
+      example_with_number: 'Пример решения %{solution_number}'
+      submitted_on: 'Отправлено %{date}'
+      unsubmit: Снять подтверждение
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был подтверждён:'
@@ -316,15 +278,11 @@ ru:
   user_level:
     completed: Завершено
     tried: Пытался
-  user_stats:
-    recent_activity: Последние данные по работе
-    show_more: Показать ещё
-    classroom_activity: Урок без компьютера
   home:
     title: Студия кода
     description: Code Studio является домом для онлайн курсов, созданных Code.org
     lines_of_code: '%{lines_count} СТРОК КОДА НАПИСАНО УЧЕНИКАМИ'
-    lines_of_code_linebreak: '%{lines_count} строк кода <br/> НАПИСАНЫ %{students_count} миллионами студентов'
+    lines_of_code_linebreak: '%{lines_count} СТРОК КОДА <br/> НАПИСАНЫ %{students_count} МИЛЛИОНАМИ УЧЕНИКОВ'
     all_courses: Обзор курсов 1, 2 и 3
     lesson_plans: Планы уроков
     signin_message: 'Уже зарегистрированы? %{link}'
@@ -355,16 +313,17 @@ ru:
     try_beta_courses: Новинка! Попробуйте наши бета-курсы для дошкольников и начальной школы
     use_as_teacher: Используйте этот сайт как учитель
     heading_hoc2014: '<h2>Час Кода для</h2><h1>Для всех возрастов</h1>'
-    heading_elementary: '<h2>20-часовые курсы для</h2><h1>Начинающих (всех возрастов)</h1>'
+    heading_elementary: '<h2>20-часовые курсы по</h2><h1>Основам Информатики (для всех возрастов)</h1>ы'
     heading_apps: '<h2>Развлечения для</h2><h1>всех</h1>'
-    heading_legacy: '<h2>Наш общий курс для</h2><h1>Для всех возрастов</h1>'
+    heading_legacy: '<h2>Наш ускоренный курс для</h2><h1>Для всех возрастов</h1>'
     your_gallery: Галерея
-    no_primary_course: Попробуйте курс Студии Кода
-    choose_next_course: Попробуйте курс Студии кода, выбрав один из вариантов ниже
+    no_primary_course: 'Попробуйте курс "Студии Кода"'
+    choose_next_course: 'Попробуйте курс "Студии Кода", выбрав один из вариантов ниже'
     print_certificate: Распечатать сертификат
   share:
-    title: Учиться в Студии кода
-    description: Любой человек может обучиться информатике. Создавайте игры, приложения и искусство с помощью кода.
+    title: 'Учиться в "Студии Кода"'
+    description: Любой человек может обучиться информатике. Создавайте игры, приложения и произведения искусства с помощью программного кода.
+    try_hour_of_code: Попробуй Час Кода!
   gender:
     male: Мужской
     female: Женский
@@ -373,23 +332,28 @@ ru:
     student: Ученик
     teacher: Учитель
   footer:
-    thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
-    help_from_html: Инженеры от Google, Microsoft, Facebook и Twitter помогли создать этот учебник.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd. Все права защищены.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic Arts Inc. Все права защищены.'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    thank_you: 'Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников наших видеозаписей, а также наших <a href="https://code.org/about/advisors"> консультантов по вопросам образования</a> за поддержку в создании "Студии Кода".'
+    help_from_html: Мы хотим особенно отметить инженеров компаний Google, Microsoft, Facebook, Twitter и многих других, которые помогали нам в создании этих материалов.
+    help_from_html_old: При создании данных материалов нам помогали инженеры из компаний Google, Microsoft, Facebook, и Twitter.
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола является торговой маркой и &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Звёздные Войны&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ледниковый период&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола является торговой маркой и &copy; 2015 Cartoon Network.'
     powered_by_aws: Создано с помощью Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE и Hour of Code&reg; являются товарными знаками Code.org.'
     copyright: Авторское право
     more: Ещё
     feedback: Оставить отзыв
     translate: Помогите нам выполнить перевод на Ваш язык
     support: Поддержка
     support_url: http://support.сode.org
-    tos_short: Terms
+    tos_short: Условия использования
     tos: Условия использования
     privacy: Правила конфиденциальности
     secure: Защищенная версия
+    report_abuse: Сообщить о нарушении
+    built_on_code_studio: 'Создать в "Студии Кода"'
+    make_my_own_app: Создать собственное приложение
+    how_it_works: Как это работает
+    try_hour_of_code: Попробуй Час Кода!
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -421,6 +385,7 @@ ru:
   pdf_download: Скачать PDF
   download_coming_soon: 'Возможность загрузки появится в  ближайшее время.'
   video_coming_soon: Данное видео скоро появится!
+  not_started: Студент не пытался пройти этот уровень.
   share_code:
     title: Нажмите кнопку «Run», чтобы увидеть мою программу в действии
     bounce_og_title: Оцените мою Bounce игру
@@ -445,7 +410,7 @@ ru:
       unused: Неиспользованные уровни
   upsell:
     hoc:
-      title: Hour of Code
+      title: Классический лабиринт
       body: Ознакомьтесь с основами информатики. Миллионы воспользовались этим шансом.
     flappy:
       title: Порхающий код
@@ -462,9 +427,14 @@ ru:
       body: Показать галерею приложений и картинок, созданных нашими пользователями
     frozen:
       title: '"Холодное сердце"'
+    starwars:
+      title: Звёздные войны
     infinity:
       title: Лаборатория игр Infinity
       body: Используйте лабораторию игр, чтобы создать историю или игру с персонажами Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Изучайте мир Minecraft через программный код.
   gallery:
     students_drew_these_with_code: Ученики нарисовали это с помощью кода!
     students_made_these_with_code: Сделано учениками с помощью кода!
@@ -596,3 +566,24 @@ ru:
     view_all: Посмотреть Мои проекты
     remix: Ремикс
     click_to_remix: Нажмите «Ремикс», чтобы воспроизвести вашу собственную версию!
+    edit_project: Редактировать проект
+    abuse:
+      tos: "Этот проект нарушает <a href='http://code.org/tos'>правила использования</a> Code.org, о чем было уведомлено, связи с этим проектом нельзя поделиться."
+      contact_us: "Если вы считаете, что произошла ошибка, пожалуйста, <a href='https://code.org/contact'>свяжитесь с нами.</a>"
+      go_to_code_studio: 'Перейти в "Студию Кода"'
+      report_abuse_form:
+        intro: Если вы столкнулись с оскорбительным содержанием, угрозой, киберзапугиванием, домогательством или нарушением вашего авторского права, во время работы в Code Studio, пожалуйста, заполните форму ниже. Ваша жалоба будет рассмотрена, так же будет проведено необходимое расследование и приняты соответствующие меры, так как мы относимся к этому делу очень серьезно.
+        validation:
+          email: Пожалуйста предоставьте адрес электронной почты
+          age: Пожалуйста, укажите возраст
+          abuse_type: Пожалуйста, ответьте, как это содержание нарушает условия предоставления услуг
+          abuse_detail: Пожалуйста предоставьте подробную информацию относительно содержания, по поводу которого вы отправляете жалобу
+        abusive_url: URL-адрес содержимого был передан на рассмотрение
+        abuse_type:
+          question: 'Как это содержание нарушает %{link_start}Правила использования%{link_end}?'
+          harassment: Угрозы, запугивания, домогательство
+          offensive: Оскорбительное содержание
+          infringement: Нарушение авторских прав
+          other: Другое
+        detail: Пожалуйста укажите как можно больше подробностей относительно содержания, которое вы сообщаете.
+        acknowledge: 'Отправляя эту информацию, вы признаёте, что она будет обрабатываться в соответствии с %{link_start_privacy}Правилами конфиденциальности%{link_end} и %{link_start_tos}Условиями использования%{link_end}'

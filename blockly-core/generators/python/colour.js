@@ -46,9 +46,9 @@ Blockly.Python.colour_rgb = function() {
   var functionName = Blockly.Python.provideFunction_(
       'colour_rgb',
       [ 'def ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(r, g, b):',
-        '  r = round(min(100, max(0, r)) * 2.55)',
-        '  g = round(min(100, max(0, g)) * 2.55)',
-        '  b = round(min(100, max(0, b)) * 2.55)',
+        '  r = round(min(255, max(0, r)))',
+        '  g = round(min(255, max(0, g)))',
+        '  b = round(min(255, max(0, b)))',
         '  return \'#%02x%02x%02x\' % (r, g, b)']);
   var r = Blockly.Python.valueToCode(this, 'RED',
                                      Blockly.Python.ORDER_NONE) || 0;

@@ -1,0 +1,53 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-15T13:39:11.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveTo": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "penUp": null,
+      "penDown": null,
+      "functionParams_none": null,
+      "callMyFunction": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "n8EmCm42Cyjgk1EC9Tk6OcdE9gVfEEjLJ4WU2FXFavgOe7RbVehiWYPlfUuq\nJkfA\n",
+    "embed": "false",
+    "instructions": "Write drawSmallSquare() to draw a 25px square. (Click to see full instructions)",
+    "markdown_instructions": "# Duplicating functions\r\n\r\nThis program is supposed to draw two squares, a big one and a small one. The function definition for `drawBigSquare()` is written but `drawSmallSquare()` is empty.\r\n\r\n**Write** `drawSmallSquare()` to draw a square with sides 25 pixels long.\r\n\r\n**Run the code** to match the image below\r\n\r\n**Hint:** Copy-Paste might be a useful approach here!\r\n\r\n![](https://images.code.org/b1cf1767df98f6b7eacdc8a10c5674a7-image-1442417274907.26.34 AM.png)",
+    "start_blocks": "penUp();\r\nmoveTo(150,200);\r\ndrawBigSquare();\r\nmoveTo(100,350);\r\ndrawSmallSquare();\r\n\r\nfunction drawSmallSquare(){\r\n\r\n}\r\n\r\nfunction drawBigSquare(){\r\n  penDown();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  moveForward(100);\r\n  turnRight();\r\n  penUp();\r\n}",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": ".9",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "app_width": "320",
+    "app_height": "480",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

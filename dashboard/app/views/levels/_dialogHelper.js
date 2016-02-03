@@ -1,4 +1,4 @@
-/* global $ appOptions lastServerResponse Dialog getResult CDOSounds sendReport showVideoDialog */
+/* globals appOptions, lastServerResponse, Dialog, getResult, CDOSounds, sendReport, showVideoDialog */
 
 /*
  * This file contains general logic for displaying modal dialogs and handling
@@ -26,33 +26,54 @@ window.dashboard.dialog = (function () {
     if (dialogType === "error") {
       adjustScroll();
     }
+
+    if (dialogType === "instructions") {
+      // Momentarily flash the instruction block white then back to regular.
+      $('#bubble').css({backgroundColor: "rgba(255,255,255,1)"})
+          .delay(500)
+          .animate({backgroundColor: "rgba(0,0,0,0)"}, 1000);
+    }
   }
 
   function showDialog(type, callback) {
     dialogType = type;
 
-    var dialog = new Dialog({ body: "", onHidden: dialogHidden });
-
     // Use our prefabricated dialog content.
-    $(".modal-body").append($("#" + type + "-dialogcontent").clone(true));
+    var content = document.querySelector("#" + type + "-dialogcontent").cloneNode(true);
+    var dialog = new Dialog({
+      body: content,
+      onHidden: dialogHidden,
+      autoResizeScrollableElement: appOptions.dialog.autoResizeScrollableElement
+    });
 
     // Clicking the okay button in the dialog box dismisses it, and calls the callback.
-    $(".modal-body #ok-button").click(function () {
+    $(content).find("#ok-button").click(function () {
       dialog.hide();
-      callback && callback();
+      if (callback) {
+        callback();
+      }
     });
 
     // Clicking the cancel button in the dialog box dismisses it.
-    $(".modal-body #cancel-button").click(function () {
+    $(content).find("#cancel-button").click(function () {
       dialog.hide();
     });
 
-    dialog.show();
+    if (dialogType === "instructions") {
+      dialog.show({hideOptions: {endTarget: "#bubble"}});
+    } else {
+      dialog.show();
+    }
   }
 
-  var showStartOverDialog = function(callback) {
+  var showStartOverDialog = function (callback) {
     showDialog('startover', callback);
-  }
+  };
+
+  var showInstructionsDialog = function () {
+    showDialog('instructions', null);
+    $('details').details();
+  };
 
   function adjustScroll() {
     if (adjustedScroll) {
@@ -75,7 +96,7 @@ window.dashboard.dialog = (function () {
 
   // TODO(dave): Dashboard shouldn't be reaching into the internal implementation of
   // individual levels. Instead levels should call appOptions.onAttempt.
-  $('.submitButton').click(function () {
+  $(document).on('click', '.submitButton', function () {
     var submitButton = $('.submitButton');
     if (submitButton.attr('disabled')) {
       return;
@@ -104,9 +125,9 @@ window.dashboard.dialog = (function () {
   // which render 'levels/dialog'.
   var processResults = function (onComplete) {
     var results = getResult();
-    var response = results['response'];
-    var result = results['result'];
-    var errorType = results['errorType'];
+    var response = results.response;
+    var result = results.result;
+    var errorType = results.errorType;
 
     if (!result) {
       showDialog(errorType || "error");
@@ -126,10 +147,13 @@ window.dashboard.dialog = (function () {
       app: appOptions.dialog.app,
       level: appOptions.dialog.level,
       result: result,
+      pass: result,
       testResult: result ? 100 : 0,
       onComplete: function () {
         var willRedirect = !!lastServerResponse.nextRedirect;
-        onComplete && onComplete(willRedirect);
+        if (onComplete) {
+          onComplete(willRedirect);
+        }
 
         if (lastServerResponse.videoInfo)
         {
@@ -147,7 +171,7 @@ window.dashboard.dialog = (function () {
 
   return {
     showStartOverDialog: showStartOverDialog,
+    showInstructionsDialog: showInstructionsDialog,
     processResults: processResults
   };
 })();
-

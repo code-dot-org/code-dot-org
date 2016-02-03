@@ -15,13 +15,20 @@ social:
   var promoteIncluded = false;
 
 -state = File.basename(request.path_info)
--facebook = {:u=>'http://code.org/promote' + (state != "thanks" ? "/" + state : "")}
--twitter = {:url=>"http://#{request.site}/promote" + (state != "thanks" ? "/" + state : ""), :related=>'codeorg', :hashtags=>'CODE', :text=>'What’s wrong with this picture? To fix this, sign the petition.'}
+-facebook = {:u=>'https://code.org/promote' + (state != "thanks" ? "/" + state : "")}
+-twitter = {:url=>"https://code.org", :related=>'codeorg', :hashtags=>'CSforAll', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 
 #promote-page
   %h1 Promote Computer Science
+
+  - if state.downcase == "ca"
+    %div{style: "background-color:#f3f3f3; border-radius:4px; padding:20px; clear:both"}
+      %h2{style: "margin-top: 0px"} Action of the month: California
+      Currently, students who take computer science in California only get elective credit. Help make computer science count toward high school graduation in California.
+      %a{href: 'https://www.change.org/p/make-computer-science-count-in-california-csinca-makecscount', target: '_blank'} Sign Claire's petition on Change.org.
+    %br/
 
   %div{:id=>'thank-you-box'}
     %p{:id=>'thank-you-message', :style=>'display: inline-block'}
@@ -94,14 +101,10 @@ social:
 
 :javascript
   var petition;
-  var promote;
   $(document).ready()
   {
     if (petitionIncluded) {
       petition = new Petition();
-    }
-    if (promoteIncluded) {
-      promote = new Promote();
     }
     if (document.referrer.indexOf(location.host) !== -1) {
       $("#thank-you-box").show();

@@ -1,7 +1,7 @@
 require_relative '../../lib/cdo/pegasus'
 require 'minitest/autorun'
 
-class OnlyOneRunningTest < Minitest::Unit::TestCase
+class OnlyOneRunningTest < Minitest::Test
   def setup
     @name ||= "#{__FILE__}_#{rand(100000)}_#{Time.now.to_i}"
   end

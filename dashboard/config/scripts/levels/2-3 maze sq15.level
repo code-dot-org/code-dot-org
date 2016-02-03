@@ -9,7 +9,7 @@
     "skin": "pvz",
     "instructions": "Can you get to the sunflower using only five blocks?",
     "start_direction": "1",
-    "step_mode": 0
+    "step_mode": 1
   }
 }]]></config>
   <blocks>

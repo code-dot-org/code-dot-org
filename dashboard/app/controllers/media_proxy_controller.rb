@@ -39,7 +39,9 @@ class MediaProxyController < ApplicationController
     # Give up if the host doesn't respond within 3 seconds to avoid
     # tying up Rails thread.
     url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = url.scheme == 'https'
     path = (url.path.empty?) ? '/' : url.path
 
     # Limit how long we're willing to wait.
@@ -48,6 +50,11 @@ class MediaProxyController < ApplicationController
 
     # Get the media.
     media = http.request_get(path)
+
+    # generate content-type from file name if we weren't given one
+    if media.content_type.nil?
+      media.content_type = Rack::Mime.mime_type(File.extname(path))
+    end
 
     if media.kind_of? Net::HTTPRedirection
       # Follow up to five redirects.

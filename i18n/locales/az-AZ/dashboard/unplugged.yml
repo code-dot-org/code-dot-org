@@ -15,7 +15,7 @@ az:
         video: Unplug2
       Unplug3:
         title: Millimetrlik kağızda proqramlaşdırma
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
         pdfs:
           - unplug3
         video: Unplug3
@@ -69,7 +69,7 @@ az:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Şən xəritələr
         desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
         video: C1_happy_maps_unplugged
       MoveIt:

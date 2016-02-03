@@ -1,10 +1,10 @@
 * * *
 
-title: Bedankt dat je je hebt opgegeven een Uur Code te organiseren! layout: wide
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/srH1OEKB2LE"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/srH1OEKB2LE?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 
 * * *
 
@@ -12,32 +12,38 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# Bedankt dat je je hebt opgegeven om een Uur Code te organiseren!
+# Bedankt dat je je hebt opgegeven om een CodeUur te organiseren!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
+Je maakt het mogelijk voor studenten over de hele wereld om te leren van één uur van CodeUur die *de rest van hun leven zal veranderen*, tijdens < % = campaign_date('full') % >. We zullen contact opnemen over prijzen, nieuwe tutorials en andere spannende updates. Wat kunt u nu doen?
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+## 1. Spreid het woord
 
-## 1. Zegt het voort
-
-Vertel je vrienden over het Uur Code, #HourOfCode.
+U heeft zojuist deelgenomen aan de CodeUur beweging. Vertel het uw vrienden met **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Vraag je hele school een Uur Code aan te bieden
+## 2. Find a local volunteer to help you with your event.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Vraag je werkgever betrokken te raken
+## 2. Vraag je hele school om een CodeUur aan te bieden
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
+[Stuur deze e-mail](%= resolve_url('/promote/resources#sample-emails') %) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden.
 
-## 5. Promoot het Uur Code in je gemeenschap
+## 4. Vraag uw werkgever om betrokken te raken
 
-Werk samen met een vereniging — scouting, kerk, universiteit of vakbond. Of organiseer een Uur Code "buurtfeest" voor je wijk.
+[Stuur deze e-mail](%= resolve_url('/promote/resources#sample-emails') %) naar uw manager of bedrijf CEO.
 
-## Vraag een politicus het Uur Code te ondersteunen
+## 5. Promoot het CodeUur in uw gemeenschap
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Werf een lokale groep](%= resolve_url('/promote/resources#sample-emails') %) — jongen/meisje scout clubs, kerk, universiteit, veteranen groep, vakbond of zelfs sommige vrienden. U hoeft niet op school te zitten om nieuwe skills te leren. Gebruik deze [posters, banners, stickers, video's en meer](%= resolve_url('/promote/resources') %) voor uw eigen evenement.
+
+## 6. Vraag een politicus het Uur Code te ondersteunen
+
+[Stuur deze e-mail](%= resolve_url('/promote/resources#sample-emails') %) naar uw lokale vertegenwoordigers, gemeenteraad of schoolbestuur, om hen uit te nodigen voor het CodeUur op uw school. Het kan steun bieden aan programmering binnen uw gemeente in maar één uur.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

@@ -35,7 +35,6 @@
       "andOperator": null,
       "orOperator": null,
       "notOperator": null,
-      "randomNumber_max": null,
       "randomNumber_min_max": null,
       "mathRound": null,
       "mathAbs": null,
@@ -80,7 +79,13 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "instructions": "Write a password length checker that writes “yes” to the console if a string has a length greater than 10, or “no” if it is less than or equal to 10.  Test your function using two strings, one that will satisfy each conditional option.",
-    "markdown_instructions": "## Challenge 2.2\r\n\r\nWrite a password length checker that writes “yes” to the console if a string has a length greater than 10, or “no” if its length is less than or equal to 10.\r\n\r\nTest your function using two strings, one that will satisfy each conditional option."
+    "markdown_instructions": "## Challenge 2.2\r\n\r\nWrite a password length checker that writes “yes” to the console if a string has a length greater than 10, or “no” if its length is less than or equal to 10.\r\n\r\nTest your function using two strings, one that will satisfy each conditional option.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

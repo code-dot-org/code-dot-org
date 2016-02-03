@@ -11,14 +11,53 @@ nav: pd2_nav
 - [I'm attending Computer Science in Algebra PD](#algebra)
 - [I'm attending Computer Science in Science PD](#science)
 
+
 <a id="csp"></a>
 ## Computer Science Principles
 
-LAUSD teachers enrolled in the Computer Science Principles program have been assigned to attend PD in one of the following locations. Click on your location for workshop information.
+Teachers from Los Angeles and San Francisco enrolled in the Computer Science Principles program will attend PD in Los Angeles and connect to the Spokane CSP group virtually. 
 
-- [Broward, Florida](/educate/pd/15-16/broward) 
-- [Spokane, Washington](/educate/pd/15-16/spokane)
-- [Chicago, Illinois](/educate/pd/15-16/chicago)
+### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
+
+**Save the Dates**
+
+Quarter 1: Saturday, October 3, 2015 
+
+Quarter 2: Saturday, November 21, 2015 
+
+Quarter 3: Saturday, January 30, 2016 
+
+Quarter 4: Saturday, March 5, 2016
+
+8:30am - 3:30pm
+<br/>
+Breakfast and lunch will be served.
+
+**January 30th Location**
+
+[9 Dots<br/>
+931 N Highland Avenue<br/>
+Los Angeles, CA, 90038<br/>](https://www.google.com/maps/place/9+Dots/@34.0880332,-118.3389293,15z/data=!4m2!3m1!1s0x0:0x2efadb41115b9452?sa=X&ved=0CHAQ_BIwCmoVChMImdnXi9WYyQIVUKOICh2aQglh)
+
+(323) 524-8328 <br/>
+
+Free parking lot available in the back of the building surrounded by a wooden fence. The parking entrance is in the alleyway between Highland Ave and Citrus Ave. See parking map here: [https://code.org/images/9-dots-parking-map.png](/images/9-dots-parking-map.png)
+
+If the lot is full, there is plenty of street parking around the block. 
+
+**What to bring to Phase 3 quarterly sessions:**
+
+Laptop and charger
+<br/>
+Green journal <br/>
+Snacks
+<br/>
+Water
+
+### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
+
+More Details Coming Soon!
+
 
 [**Back to the top**](#top)
 
@@ -32,13 +71,10 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i> 
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -59,9 +95,14 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**Location**
+**February 20th Location**
 
-TBD
+[Alliance Leichtman-Levine Family Foundation Environmental Science High School<br/>
+Room TBD<br/>
+2930 Fletcher Drive<br/>
+Los Angeles, CA 90065](https://www.google.com/maps/place/2930+Fletcher+Dr,+Los+Angeles,+CA+90065/@34.1139623,-118.2487635,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c12eb4153f6b:0x1203f5b40ab9eab0)
+
+Plenty of free parking is available.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -76,7 +117,37 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
-More info coming soon!
+The fourth phase of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. The fourth phase addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.
+
+**Save the Dates**
+
+Monday, June 20th - Wednesday, June 22nd
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger
+
+<br />
 
 [**Back to the top**](#top)
 
@@ -91,13 +162,11 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study  (3 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
@@ -105,18 +174,20 @@ Phase 3 is composed of bi-yearly in-person meetings and monthly online activitie
 
 **Save the dates:**
 
-Semester 1: Saturday, October 10, 2015 <br/>(This workshop will take place in Orange County)
+Semester 1: Saturday, October 10, 2015 
 
-Semester 2: Saturday, April 16, 2016 <br/>(This workshop will take place in Los Angeles)
+Semester 2: Saturday, April 16, 2016 
 
-<b>You are expected to attend both of these workshops.</b>
+
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
 **Location**
 
-TBD
+[Columbia Memorial Space Center<br/> 
+12400 Columbia Way <br/>
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -142,33 +213,33 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study   (3 days in-person & ~8 hours online) 
 
-#### In-person Workshop####
+
 
 Milestone Complete!
 
-#### Online Study####
 
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online)
 
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
+Due to lower than expected attendance, we are combining the Los Angeles and Orange County Phase 3 Saturday PDs. Please update your calendars with the following dates.
 
 **Save the dates:**
 
-Semester 1: Saturday, October 17, 2015 (This workshop will take place in Orange County)
+Semester 1: Saturday, October 17, 2015 
 
-Semester 2: Saturday, February 20, 2016 (This workshop will take place in Los Angeles)
+Semester 2: Saturday, February 20, 2016 
 
-<b>You are expected to attend both of these workshops.</b>
 
 
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**February 20th Location**
 
-TBD
+[Columbia Memorial Space Center<br/> 
+12400 Columbia Way <br/>
+Downey, CA 90242](https://www.google.com/maps/place/Columbia+Memorial+Space+Center/@33.9198421,-118.1335994,15z/data=!4m2!3m1!1s0x0:0xd6cb5baba4c4a1d2)
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -182,6 +253,7 @@ Water
 
 
 [**Back to the top**](#top)
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

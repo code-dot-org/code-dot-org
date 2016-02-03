@@ -27,7 +27,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "coordinate_grid_background": "false",
-    "examples_required": "false"
+    "examples_required": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -57,6 +58,7 @@
           <block type="functional_ellipse"/>
           <block type="functional_star"/>
           <block type="functional_radial_star"/>
+          <block type="functional_polygon"/>
           <block type="place_image"/>
           <block type="offset"/>
           <block type="overlay"/>

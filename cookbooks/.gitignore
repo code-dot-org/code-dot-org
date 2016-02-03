@@ -1,3 +1,4 @@
 /apt
 /build-essential
 /cdo-aws
+.kitchen

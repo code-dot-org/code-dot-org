@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,6,9,12,15,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n",
+    "instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\nHint: What do you need to add to each number to get the number after it?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "9",
@@ -21,7 +21,7 @@
     "step_mode": "1",
     "nectar_goal": "45",
     "flower_type": "redWithNectar",
-    "markdown_instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n\r\nRemember: If your loop is counting up, the increment is added to your counter variable each time through.\r\n",
+    "markdown_instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?\r\n\r\nRemember: If your loop is counting up, the increment is added to your counter variable each time through. What do you need to add to each number to get the number after it?\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -31,7 +31,9 @@
     "disable_examples": "false",
     "examples_required": "false",
     "step_speed": "1",
-    "maze_data": null
+    "never_autoplay_video": "false",
+    "maze_data": null,
+    "fast_get_nectar_animation": "true"
   }
 }]]></config>
   <blocks>

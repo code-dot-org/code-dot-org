@@ -2,8 +2,8 @@
   errors:
     messages:
       not_saved: 'Bitte korrigiere die folgenden Fehler:'
-      too_young: This content has age restrictions in place and is not available for
-        younger students
+      too_young: Dieser Inhalt ist altersbeschränkt und für jüngere Schüler nicht
+        verfügbar
   activerecord:
     errors:
       messages:
@@ -28,7 +28,9 @@
   add_teacher_form:
     code:
       label: 'Lehrer hinzufügen:'
-      placeholder: Code für diese Sektion (ABCDEF)
+      placeholder: Code für diesen Abschnitt (ABCDEF)
+      instructions: 'Bitte gib den Schlüssel ein, den dein Lehrer dir mitgeteilt hat.
+        Der schlüssel ist 6-Stellig, wie z. B.: "ABCDEF".'
     submit: Lehrer hinzufügen
   add_hint_form:
     placeholder: Gebe hier deinen Hinweis ein
@@ -39,6 +41,7 @@
   puzzle: Aufgabe
   trophies: Trophäen
   courses: Kurse
+  unplugged_activity: Aktivität ohne Computer
   of: von
   more: MEHR
   less: WENIGER
@@ -67,8 +70,8 @@
     need_confirmation: Keine Anmeldebestätigung erhalten?
     need_unlock: Keine Anweisungen zum Entsperren erhalten?
   signup_form:
-    student_count: '%{count} Schüler haben sich bereits angemeldet.'
-    teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
+    student_count: "%{count} Schüler haben sich bereits angemeldet."
+    teacher_count: "%{count} Lehrer haben sich bereits angemeldet."
     overview_student: Registriere dich, um deine Erfolge festzuhalten. Deine E-Mail
       Adresse wird nur zum Einloggen und Passwort-Wiederherstellung benutzt. Für mehr
       Informationen kannst Du unsere <a href="http://code.org/privacy">Datenschutzerklärung</a>
@@ -98,9 +101,9 @@
     valid_password: Gültiges Passwort!
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
-    student_terms: 'Ich aktzeptiere die <a href=''http://code.org/tos''>AGB</a> von
-      Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass die die Erlaubnis
-      meiner Eltern/Erziehungsbrechtigten habe, Code.org zu benutzen.<br/>Für unter
+    student_terms: 'Ich aktzeptiere die <a href=''http://code.org/tos''>Agb</a> von
+      Code.org. Wenn ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis
+      meiner Eltern/Erziehungsberechtigten habe, Code.org zu benutzen.<br/>Für unter
       13 jährige Nutzer: E-Mail Adressen werden nicht so gespeichert, dass wir Kontakt
       herstellen könnten.'
     teacher_terms: Ich erkläre mich mit den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
@@ -129,7 +132,7 @@
       email: E-Mail-Adresse
       submit: Sende mir Anweisungen um das Passwort zurückzusetzen
     change_form:
-      title: Ändern Sie Ihr Passwort
+      title: "Ändern Sie Ihr Passwort"
       new_password: Neues Passwort
       confirm_password: Neues Passwort bestätigen
       submit: Mein Passwort ändern
@@ -140,17 +143,17 @@
 
       %{link}
 
-      Die Anleitungen machen Spass, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
+      Die Anleitungen machen Spaß, sind grafisch ansprechend und lehren das Grundkonzept der Informatik, indem einfache, geführte, Spiele ähnliche Erfahrungen verwendet werden. Lernen Sie von Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies zu programmieren! :-)
 
       %{name}
   follower:
     invite_sent: Einladung gesendet
-    added_teacher: '%{name} wurde als dein Lehrer hinzugefügt'
+    added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
     registered: Sie haben Sich für %{section_name} registriert.
     error:
       signed_in: Bitte melde dich ab bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
-      username_in_use: '%{username} ist bereits vergeben, bitte wähle einen anderen'
+      username_in_use: "%{username} ist bereits vergeben, bitte wähle einen anderen"
       no_teacher: Es konnte niemand angemeldet mit '%{teacher_email_or_code}' gefunden
         werden. Bitten Sie bitte denjenigen sich hier registrieren und versuchen Sie
         es dann erneut.
@@ -199,7 +202,7 @@
         US-Schule bist.
       msg_visit_website: Website besuchen
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB Dropbox-Speicherplatz
@@ -208,7 +211,7 @@
       ea_fifa: FIFA Soccer 13 (PC game download)
       ea_simcity: SimCity 4 Deluxe Edition (PC game download)
       ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Wähle einen Preis:'
       choose_teacher: 'Click on the logo below to claim your prize:'
@@ -257,9 +260,9 @@
     destroy: Zerstören
     back: Zurück
     confirm: Bist du sicher?
-    created: '%{model} wurde erfolgreich erstellt.'
-    updated: '%{model} wurde erfolgreich aktualisiert.'
-    destroyed: '%{model} wurde erfolgreich gelöscht.'
+    created: "%{model} wurde erfolgreich erstellt."
+    updated: "%{model} wurde erfolgreich aktualisiert."
+    destroyed: "%{model} wurde erfolgreich gelöscht."
     access_denied: Sie haben keinen Zugriff auf dieses %{model}.
   nav:
     header:
@@ -269,6 +272,7 @@
         playlab: Eine App erstellen
         artist: Zeichne etwas
         calculate: Calculate Something
+        applab: Eine App erstellen
     user:
       classroom: Lehrer-Homepage
       district_dashboard: Dashboard
@@ -281,7 +285,7 @@
       signup: Registrieren
       already_registered: Bereits registriert?
     popup:
-      progress_for_user: '%{name}''s Fortschritt'
+      progress_for_user: "%{name}'s Fortschritt"
       progress: Ihre Fortschritte
       lines: 'Gesamte Codezeilen: %{lines}'
       close: schließen
@@ -289,107 +293,54 @@
       puzzle_map: Level
       prizes: Sammle alle %{total_trophies} Trophäen und gewinne Preise!
       prize_earned: Alle %{total_trophies} Trophäen gesammelt. Preis gewonnen!
-      prize_us_only: (nur für Schüler der USA)
+      prize_us_only: "(nur für Schüler der USA)"
       prizes_link: Mehr Informationen
   teacher:
+    answer: Antwort
+    for_teachers_only: Nur für Lehrer
     title:
       one: 'Dein Lehrer:'
       other: 'Ihre Lehrer:'
-    remove: (entferne Lehrer)
+    remove: "(entferne Lehrer)"
     confirm:
       remove: Bist du sicher, dass Du diesen Lehrer entfernen möchtest?
-    tools: Werkzeuge für Lehrer
-    followers:
-      section: 'Abschnitt:'
-      stages: 'Teil(e) zum anzeigen:'
-      show_past: 'Zeige die Schüleraktivität (%{bullet_html}) in der Vergangenheit:'
-      levels_key: Ebenen-Schlüssel
-      perfect: Abgeschlossen, perfekt
-      completed: Abgeschlossen, aber du hast zu viele Blöcke verwendet
-      tried: Versucht, aber nicht abgeschlossen
-      not_tried: Bisher wurde es nicht versucht.
-      activity: Zeigt Aktivitäten in den letzten %{hours} %{plural}
-      no_section: Kein Abschnitt zugewiesen
-      trophies: Trophäen
     students:
-      name: Name
-      username: Benutzername
-      password: Passwort
-      manage: Schüler verwalten
       dashboard: Gehen Sie zum Lehrer-Dashboard!
-      add: Schüler hinzufügen
-      remove: Schüler entfernen
-      confirm_remove: Sind Sie sicher, dass Sie diesen Schüler entfernen möchten?
-      help_reassign: Um die Klasse in mehrere Abschnitte zu unterteilen, wählen Sie
-        die Schüler aus, die einem neuen Abschnitt zugewiesen werden sollen.
-      help_register: Anstatt viel Zeit damit zu verbringen die Schülerdaten zu importieren,
-        können Sie ihre Klasse registrieren indem sich jeder Schüler selbst anmeldet.
-        Ihre Schüler müssen dazu einen Username und ein Passwort angeben, jedoch keine
-        Email-Adresse. Falls ein Schüler sein Passwort vergessen sollte, so können
-        Sie dieses für ihn zurücksetzen.
-      register: Fordern Sie ihre Schüler auf, sich selbst anzumelden
-      vist: Fordern Sie Ihre Schüler auf, die Seite zu besuchen
-      section_code: 'und geben Sie ihren Abschnitt-Code ein:'
-      first_please: Zuerst, bitte %{add_section}
-      for: Für
-      enter: 'Eingabe:'
-    sections:
-      add: Abschnitt hinzufügen
-      manage: Sektionen verwalten
-      section: Abschnitt
-      students: Schüler
-      section_code: Abschnitt-Code
-      add_section_code: Schüler Abschnitt-Code hinzufügen
-      secret: Geheimer Typ
-      grade: Note
-      course: Kurs
-      rename: umbenennen
-      edit: Bearbeiten
-      delete: löschen
-      confirm_delete: Diesen Abschnitt wirklich löschen?
-      email: Als e-Mail senden
-    rollup: Fortschrittsanzeige
-    activity: Letzte Aktivitäten der Klasse
-    user_not_found: Der Lehrer oder Schüler konnte nicht gefunden werden
-    cant_remove_student_no_email: '%{student_name} kann nicht von ihren Schülern entfernt
-      werden, da %{student_name} nicht mit einer E-Mail-Adresse registriert ist'
-    cant_remove_teacher_no_email: '%{teacher_name} kann nicht als dein Lehrer entfernt
-      werden, da du keine E-Mail-Adresse registriert hast'
-    student_teacher_disassociated: '%{teacher_name} wurde als Lehrerin für %{student_name}
-      entfernt'
+    user_not_found: Lehrerin oder Lehrer konnte nicht gefunden werden.
+    student_teacher_disassociated: Du hast %{teacher_name} als Lehrerin/Lehrer entfernt.
     panel:
       answer_viewer: Antwortenansicht
       student: Schüler
       viewing_solution: Lösung anzeigen
-      try_it_yourself: Versuche es selbst
+      try_it_yourself: Probieren Sie es selbst
       section: Abschnitt
+      example: Lösungsbeispiel
+      example_with_number: Lösungsbeispiel %{solution_number}
+      submitted_on: Am %{date} abgegeben
+      unsubmit: Zurücknehmen
   user:
     email_confirm_needed: 'E-Mail-Adresse ist nicht bestätigt worden:'
     email_confirm_needed_required: 'Deine e-Mail-Adresse %{email} ist noch nicht bestätigt:'
-    email_confirm_wrong_email: (Falsche E-Mail-Adresse?)
+    email_confirm_wrong_email: "(Falsche E-Mail-Adresse?)"
     email_resend_confirm: Anmeldebestätigung erneut senden
-    new_password_hint: (freilassen, wenn Sie es nicht verändern möchten)
-    current_password_hint: (wir benötigen dein aktuelles Passwort, um deine Änderungen
-      zu bestätigen)
+    new_password_hint: "(freilassen, wenn Sie es nicht verändern möchten)"
+    current_password_hint: "(wir benötigen dein aktuelles Passwort, um deine Änderungen
+      zu bestätigen)"
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
-    delete_text_teacher_note: 'Bitte bemerke: Das Löschen deines Accounts wird nicht
-      die Accounts deiner Schüler löschen.'
-    delete_confirm: Bist du dir sicher, dass du deinen Account löschen möchtest?
+    delete_text_teacher_note: 'Bitte beachten Sie: Das Löschen Ihres Accounts löscht
+      nicht automatisch auch die Accounts Ihrer Schüler.'
+    delete_confirm: Sind Sie sicher, dass Sie Ihren Account löschen möchten?
   user_level:
     completed: Abgeschlossen
     tried: Versucht
-  user_stats:
-    recent_activity: Letzte Aktivität
-    show_more: Erweiterte Ansicht
-    classroom_activity: Aktivität ohne Computer
   home:
     title: Code Studio
     description: Code-Studio ist Heimat von online Kurse erstellt von Code.org
-    lines_of_code: '%{lines_count} Codezeilen von den Studenten erstellt'
-    lines_of_code_linebreak: '%{lines_count} Zeilen CODE <br/> von %{students_count}
-      Millionen Studenten geschrieben'
-    all_courses: Übersicht der Level 1, 2 und 3
+    lines_of_code: "%{lines_count} Codezeilen von den Studenten erstellt"
+    lines_of_code_linebreak: "%{lines_count} Zeilen CODE <br/> von %{students_count}
+      Millionen Studenten geschrieben"
+    all_courses: "Übersicht der Level 1, 2 und 3"
     lesson_plans: Arbeitsplan
     signin_message: Schon registriert? %{link}
     student_reg_link: Registrierung (Schüler)
@@ -411,7 +362,7 @@
     student_left_off: 'Wo du aufgehört hast:'
     student_finished: Du hast alle Tutorials abgeschlossen. Wähle eine andere Klasse
       %{online_link} oder in deiner %{local_school_link}
-    local_school: örtliche Schule
+    local_school: "örtliche Schule"
     online: online
     see_details: Zeige Details
     view_course: Zeige Kurs
@@ -427,10 +378,10 @@
     try_beta_courses: Neu! Probieren Sie unsere Beta-Kurse für Schüler der Schulstufen
       1-6
     use_as_teacher: Verwende diese Seite als Lehrer
-    heading_hoc2014: <h2>Die Hour of Code für</h2><h1>jedes Alter</h1>
-    heading_elementary: <h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>
-    heading_apps: <h2>Spass für</h2><h1>Alle</h1>
-    heading_legacy: <h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>
+    heading_hoc2014: "<h2>Die Hour of Code für</h2><h1>jedes Alter</h1>"
+    heading_elementary: "<h2>20 Stunden Kurse für</h2><h1>Beginner (allen Alters)</h1>"
+    heading_apps: "<h2>Spass für</h2><h1>Alle</h1>"
+    heading_legacy: "<h2>Unser allgemeiner Kurs für</h2><h1>Alle Altersstufen</h1>"
     your_gallery: Galerie
     no_primary_course: Probiere einen Kurs bei Code Studio
     choose_next_course: Wähle einen der Code Studio Kurse unten aus um ihn auszuprobieren
@@ -439,6 +390,7 @@
     title: Lernen Sie von Code Studio
     description: Jeder kann Informatik lernen. Erstelle Spiele, Apps und Kunst durch
       Code.
+    try_hour_of_code: Probiere die "Hour of Code" aus!
   gender:
     male: Männlich
     female: Weiblich
@@ -453,27 +405,42 @@
       für ihre Unterstützung bei der Erstellung von Code-Studio.
     help_from_html: Ingenieure von Google, Microsoft, Facebook und Twitter haben dazu
       beigetragen, dieses Tutorial zu erstellen.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped
-      create these materials.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Alle Rechte vorbehalten.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Alle Rechte vorbehalten.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp;
-      &copy; %{current_year} Electronic Arts Inc. All Rights Reserved
+    help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben
+      geholfen diese Materialien zu erstellen.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm.
+      Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle
+      Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
+      Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die
+      fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm.
+      Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle
+      Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
+      Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
+      %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
+      Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
     powered_by_aws: Betrieben von Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
-      Hour of Code&reg; sind eingetragene Marken der Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, das CODE Logo und
+      Hour of Code&reg; sind eingetragene Marken der Code.org."
     copyright: Copyright
     more: Mehr
     feedback: Feedback geben
     translate: Hilf uns in deine Sprache zu übersetzen
     support: Unterstützung
     support_url: http://support.code.org
-    tos_short: Terms
+    tos_short: Bedingungen
     tos: Bedingungen
     privacy: Datenschutzerklärung
     secure: Sichere Version
+    report_abuse: Missbrauch melden
+    built_on_code_studio: Erstellt auf Code Studio
+    make_my_own_app: Meine eigene App entwickeln
+    how_it_works: So funktioniert es
+    try_hour_of_code: Probiere die "Hour of Code" aus!
   reference_area:
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
@@ -509,10 +476,11 @@
   next_stage: Geschafft! Fahre mit dem nächsten Level fort.
   download_pdf: Unterrichtsplan öffnen
   lesson_plan: Stundenplan
-  view_lesson_plan: Überblick des Unterrichtsplans
+  view_lesson_plan: "Überblick des Unterrichtsplans"
   pdf_download: PDF herunterladen
   download_coming_soon: 'Demnächst: Aktivitäten zum Herunterladen.'
   video_coming_soon: 'Demnächst: Video!'
+  not_started: Der Schüler hat diese Stufe nicht versucht.
   share_code:
     title: Klicke auf "Ausführen", um das Programm in Aktion zu sehen
     bounce_og_title: Schau dir mein Sprung-Spiel an
@@ -541,7 +509,7 @@
       unused: Unbenutzte Levels
   upsell:
     hoc:
-      title: Programmierstunde
+      title: Klassisches Labyrinth
       body: Versuche die Grundlagen der Informatik zu lernen. Millionen andere haben
         es schon probiert.
     flappy:
@@ -564,10 +532,15 @@
         von unseren Nutzern erstellt wurden
     frozen:
       title: Die Eiskönigin
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Spiele Lab
-      body: Benutze den Spiele Lab, um eine Geschichte oder ein Spiel mit dem Disney
-        Infinity Charakteren z u erstellen.
+      body: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney
+        Infinity Charakteren zu erstellen.
+    minecraft:
+      title: Minecraft
+      body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
   gallery:
     students_drew_these_with_code: Schüler haben folgendes mit Code gezeichnet!
     students_made_these_with_code: Schüler haben diesen Code gemacht!
@@ -581,7 +554,7 @@
     want_to_make_your_own: Möchtest du dein eigenes machen?
     more: Mehr &rarr;
     caption_by_name_age: Von %{name}, Alter %{age}
-    caption_time_ago: '%{time_ago} früher'
+    caption_time_ago: "%{time_ago} früher"
     header: Galerie
     header_playlab: Play Lab
     header_artist: Künstler
@@ -594,7 +567,7 @@
     feedback: Feedback geben
     report_bug: Fehler melden
     support: Hilfe erhalten
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Falsche Antwort
     wrong_body: Die Antwort, die du eingegeben hast, ist nicht korrekt. Bitte versuche
@@ -724,3 +697,37 @@
     view_all: Meine Projekte ansehen
     remix: Remix
     click_to_remix: Klicke auf "Remix" um Deine eigene Version zu erstellen!
+    edit_project: Projekt bearbeiten
+    abuse:
+      tos: Dieses Projekt wurde wegen Verstoßes gegen die <a href='http://code.org/tos'>
+        "Terms of Service" </a> von Code.org gemeldet und kann nicht mit anderen geteilt
+        werden.
+      contact_us: Wenn Sie glauben, dies ist ein Fehler, dann <a href='https://code.org/contact'>
+        kontaktieren Sie uns bitte.</a>
+      go_to_code_studio: Gehe zu Code Studie
+      report_abuse_form:
+        intro: Wenn Sie anstößige Inhalte, Bedrohungen, Cyber-Mobbing, Belästigung
+          oder eine Instanz von Verstößen gegen das Urheberrecht für Inhalte, die
+          Sie besitzen, gefunden haben, während Sie Apps die auf Code-Studio aufgebaut
+          wurden benutzten, füllen Sie bitte das untenstehende Formular aus. Wir werden
+          Ihren Bericht sehr ernst nehmen, untersuchen und entsprechende Maßnahmen
+          ergreifen.
+        validation:
+          email: Bitte geben eine e-Mail-Adresse an
+          age: Bitte geben ein Alter an
+          abuse_type: Bitte beantworten Sie wie dieser Inhalt die allgemeinen Geschäftsbedingungen
+            verletzt
+          abuse_detail: Bitte gebe Details über den Inhalt, den du melden möchtest
+        abusive_url: URL des gemeldeten Inhalts
+        abuse_type:
+          question: Wie verletzt dieser Inhalt die %{link_start}allgemeinen Geschäftsbedingungen%{link_end}?
+          harassment: Bedrohungen, Cybermobbing, Belästigung
+          offensive: Anstößige Inhalte
+          infringement: Copyright-Verletzungen
+          other: Andere
+        detail: Bitte geben Sie so viele Details wie möglich über den Inhalt, den
+          Sie melden möchten.
+        acknowledge: Durch die Übermittlung dieser Daten, akzeptieren Sie, dass diese
+          gemäß den Bedingungen der %{link_start_privacy}Datenschutzerklärung%{link_end}
+          und die %{link_start_tos}allgemeinen Geschäftsbedingungen%{link_end} behandelt
+          werden

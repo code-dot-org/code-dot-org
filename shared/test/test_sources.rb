@@ -1,18 +1,30 @@
-require 'minitest/autorun'
-require 'rack/test'
-require File.expand_path '../../../deployment', __FILE__
-require File.expand_path '../../middleware/files_api', __FILE__
-require File.expand_path '../../middleware/channels_api', __FILE__
+require_relative 'test_helper'
+require 'files_api'
+require 'channels_api'
 
-ENV['RACK_ENV'] = 'test'
-
-class SourcesTest < Minitest::Unit::TestCase
+class SourcesTest < Minitest::Test
+  include SetupTest
 
   def setup
-    # The Sources API does not *currently* need to share a cookie jar with the Channels API,
-    # but it may once we restrict put, delete and list operations to the channel owner.
-    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
-    @files = Rack::Test::Session.new(Rack::MockSession.new(FilesApi, 'studio.code.org'))
+    init_apis
+  end
+
+  # Delete all versions of the specified file from S3.
+  def delete_all_versions(bucket, key)
+    s3 = Aws::S3::Client.new
+    objects = s3.list_object_versions(bucket: bucket, prefix: key).versions.map do |version|
+      {
+        key: key,
+        version_id: version.version_id
+      }
+    end
+    s3.delete_objects(
+      bucket: bucket,
+      delete: {
+        objects: objects,
+        quiet: true
+      }
+    ) if objects.any?
   end
 
   def test_source_versions
@@ -21,6 +33,7 @@ class SourcesTest < Minitest::Unit::TestCase
 
     # Upload a source file.
     filename = 'test.js'
+    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'abc 123'
     @files.put "/v3/sources/#{channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
     assert @files.last_response.successful?
@@ -56,6 +69,7 @@ class SourcesTest < Minitest::Unit::TestCase
 
     # Upload a source file.
     filename = 'replace_me.js'
+    delete_all_versions('cdo-v3-sources', "sources_test/1/1/#{filename}")
     file_data = 'version 1'
     @files.put "/v3/sources/#{channel}/#{filename}", file_data, 'CONTENT_TYPE' => 'text/javascript'
     assert @files.last_response.successful?
@@ -71,5 +85,19 @@ class SourcesTest < Minitest::Unit::TestCase
     assert @files.last_response.successful?
     versions = JSON.parse(@files.last_response.body)
     assert_equal 1, versions.count
+  end
+
+  # Methods below this line are test utilities, not actual tests
+  private
+
+  def init_apis
+    @channels = Rack::Test::Session.new(Rack::MockSession.new(ChannelsApi, 'studio.code.org'))
+
+    # Make sure the sources api has the same storage id cookie used by the channels api.
+    @channels.get '/v3/channels'
+    cookies = @channels.last_response.headers['Set-Cookie']
+    sources_mock_session = Rack::MockSession.new(FilesApi, "studio.code.org")
+    sources_mock_session.cookie_jar.merge(cookies)
+    @files = Rack::Test::Session.new(sources_mock_session)
   end
 end

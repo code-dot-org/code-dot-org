@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: cohorts
+#
+#  id           :integer          not null, primary key
+#  created_at   :datetime
+#  updated_at   :datetime
+#  name         :string(255)
+#  program_type :string(255)
+#  cutoff_date  :datetime
+#  script_id    :integer
+#
+# Indexes
+#
+#  index_cohorts_on_name          (name)
+#  index_cohorts_on_program_type  (program_type)
+#
+
 # A Cohort is a group of teachers
 class Cohort < ActiveRecord::Base
   # A Workshop is associated with one or more Cohorts
@@ -26,7 +44,7 @@ class Cohort < ActiveRecord::Base
     return if script.nil?
     UserScript.find_or_create_by(user_id: teacher.id, script_id: script.id) do |user_script|
       user_script.assigned_at = Time.now
-      OpsMailer.script_assigned(user: teacher, script: script).deliver
+      OpsMailer.script_assigned(user: teacher, script: script).deliver_now
     end
   end
 

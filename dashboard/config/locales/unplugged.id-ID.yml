@@ -77,12 +77,12 @@
         video: Unplug6
       Unplug7:
         title: Menulis lagu
-        desc: Membaca lirik adalah usaha yang sangat intuitif untuk sebagian besar
-          siswa.  Kita akan mengambil suatu kegiatan yang sudah menjadi pengetahuan
-          umum dan bergeser ke pendidikan yang solid pada mendefinisikan dan memanggil
-          fungsi. Setelah siswa terbiasa dengan proses mendefinisikan panggilan, kita
-          akan menambahkan kemampuan tambahan yang datang bersama dengan melewati
-          parameter dalam pemanggilan fungsi tersebut.
+        desc: Membaca lirik adalah pengalaman yang cukup intuitif untuk sebagian besar
+          siswa.  Kita akan mengambil suatu kegiatan yang sudah umum dan mengubahnya
+          menjadi bahan edukasi dalam menjelaskan dan memanggil fungsi.  Setelah siswa
+          terbiasa dengan proses mendefinisikan panggilan, kita akan menambahkan kemampuan
+          tambahan yang datang bersama dengan melewati parameter dalam pemanggilan
+          fungsi tersebut.
         pdfs:
         - unplug7
         video: Unplug7

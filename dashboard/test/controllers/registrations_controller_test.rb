@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class RegistrationsControllerTest < ActionController::TestCase
@@ -14,10 +15,11 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create retries on Duplicate exception" do
     # some Mocha shenanigans to simulate throwing a duplicate entry
-    # error and then succeeding by returning the existing userlevel
+    # error and then succeeding by returning the existing user
 
     exception = ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry 'coder1234574782' for key 'index_users_on_username'"))
     User.any_instance.stubs(:save).raises(exception).then.returns(true)
+    User.any_instance.stubs(:persisted?).returns(true)
 
     student_params = {name: "A name",
                       password: "apassword",
@@ -99,6 +101,51 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
+  test "create does not allow pandas in name" do
+    student_params = {name: panda_panda,
+                      password: "apassword",
+                      email: 'an@email.address',
+                      gender: 'F',
+                      age: '15',
+                      user_type: 'student'}
+
+    assert_does_not_create(User) do
+      post :create, user: student_params
+    end
+
+    assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
+  end
+
+  test "create does not allow pandas in email" do
+    student_params = {name: "A name",
+                      password: "apassword",
+                      email: "#{panda_panda}@panda.com",
+                      gender: 'F',
+                      age: '15',
+                      user_type: 'student'}
+
+    # don't ask the db for existing panda emails
+    User.expects(:find_by_email_or_hashed_email).never
+
+    assert_does_not_create(User) do
+      post :create, user: student_params
+    end
+
+    assert_equal ["Email is invalid"], assigns(:user).errors.full_messages
+  end
+
+  test "create allows chinese in name" do
+    student_params = {name: '樊瑞',
+                      password: "apassword",
+                      email: 'an@email.address',
+                      gender: 'F',
+                      age: '15',
+                      user_type: 'student'}
+
+    assert_creates(User) do
+      post :create, user: student_params
+    end
+  end
 
   test "create as teacher requires age" do
     teacher_params = {name: "A name",
@@ -145,13 +192,44 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
   end
 
+  test "update student with utf8mb4 in name fails" do
+    student = create :student
+
+    sign_in student
+
+    assert_does_not_create(User) do
+      post :update, user: {name: panda_panda}
+    end
+    assert_response :success # which actually means an error...
+    assert_equal ['Display Name is invalid'], assigns(:user).errors.full_messages
+    assert_select 'div#error_explanation', /Display Name is invalid/ # ... is rendered on the page
+  end
+
+  test "update student with utf8mb4 in email fails" do
+    student = create :student
+
+    sign_in student
+
+    # don't ask the db for existing panda emails
+    User.expects(:find_by_email_or_hashed_email).never
+
+    assert_does_not_create(User) do
+      post :update, user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
+    end
+
+    assert_response :success # which actually means an error...
+    assert_equal ['Email is invalid'], assigns(:user).errors.full_messages
+    assert_select 'div#error_explanation', /Email is invalid/ # ... is rendered on the page
+  end
+
   test "update student with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       student = create :student, birthday: '1981/03/24'
 
       sign_in student
 
-      post :update, user: {age: 9}
+      post :update, format: :js, user: {age: 9}
+      assert_response :no_content
 
       assert_equal Date.today - 9.years, assigns(:user).birthday
     end
@@ -166,7 +244,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, user: {age: {"Pr" => nil}}
+      post :update, format: :js, user: {age: {"Pr" => nil}}
+      assert_response :no_content
 
       # did not change
       assert_equal '1981-03-24', assigns(:user).birthday.to_s
@@ -229,7 +308,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     # no age dropdown, yes age hidden field
     assert_select 'select[name*="age"]', 0
-    assert_select 'input[type="hidden"][name*="age"][value=21]'
+    assert_select 'input[type="hidden"][name*="age"][value="21"]'
   end
 
   test 'sign up as student' do
@@ -250,20 +329,20 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test 'edit shows alert for unconfirmed email for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :edit
 
     assert_response :success
     assert_select '.alert span', /Your email address my_email@test.xx has not been confirmed:/
-    assert_select '.alert input[value=my_email@test.xx]'
+    assert_select '.alert input[value="my_email@test.xx"]'
     assert_select '.alert .btn[value="Resend confirmation instructions"]'
   end
 
 
   test 'edit does not show alert for unconfirmed email for students' do
-    user = create :student, email: 'my_email@test.xx'
+    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
 
     sign_in user
     get :edit

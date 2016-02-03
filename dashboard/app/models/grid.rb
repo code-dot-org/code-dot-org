@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 require "csv"
 
 class Grid < Blockly
@@ -59,7 +82,7 @@ class Grid < Blockly
   end
 
   def filter_level_attributes(level_hash)
-    %w(maze initial_dirt final_dirt).map do |maze_type|
+    %w(maze initial_dirt raw_dirt).map do |maze_type|
       prop = level_hash['properties']
       prop[maze_type] = prop[maze_type].to_json if prop[maze_type].is_a?(Array)
     end

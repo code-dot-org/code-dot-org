@@ -41,14 +41,11 @@ var TestResults = studioApp.TestResults;
 
 // Loading these modules extends SVGElement and puts canvg in the global
 // namespace
-require('../canvg/canvg.js');
+var canvg = require('canvg');
 // tests don't have svgelement
 if (typeof SVGElement !== 'undefined') {
-  require('../canvg/rgbcolor.js');
-  require('../canvg/StackBlur.js');
   require('../canvg/svg_todataurl');
 }
-var canvg = window.canvg || global.canvg;
 
 var level;
 var skin;
@@ -190,13 +187,13 @@ function getEvalExampleFailure(exampleBlock, evaluateInPlayspace) {
     var actualDrawer = getDrawableFromBlock(actualBlock);
     var expectedDrawer = getDrawableFromBlock(expectedBlock);
 
-    if (!actualBlock || !actualDrawer ||
-        actualDrawer instanceof CustomEvalError) {
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+
+    if (!actualDrawer || actualDrawer instanceof CustomEvalError) {
       throw new Error('Invalid Call Block');
     }
 
-    if (!expectedBlock || !expectedDrawer ||
-        expectedDrawer instanceof CustomEvalError) {
+    if (!expectedDrawer || expectedDrawer instanceof CustomEvalError) {
       throw new Error('Invalid Result Block');
     }
 

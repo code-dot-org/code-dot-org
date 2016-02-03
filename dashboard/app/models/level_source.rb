@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: level_sources
+#
+#  id         :integer          not null, primary key
+#  level_id   :integer
+#  md5        :string(32)       not null
+#  data       :string(20000)    not null
+#  created_at :datetime
+#  updated_at :datetime
+#  hidden     :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_level_sources_on_level_id_and_md5  (level_id,md5)
+#
+
 require 'digest/md5'
 
 # A specific solution attempt for a specific level
@@ -9,6 +26,7 @@ class LevelSource < ActiveRecord::Base
   has_many :activities
 
   validates_length_of :data, :maximum => 20000
+  validates :data, no_utf8mb4: true
 
   # This string used to sometimes appear in program XML.
   # We now strip it out, but it remains in some old LevelSource.data.
@@ -104,7 +122,7 @@ class LevelSource < ActiveRecord::Base
   end
 
   def get_crowdsourced_hint
-    return nil if I18n.locale != :'en-us'
+    return nil unless I18n.en?
     get_hint_from_source_internal(including: LevelSourceHint::CROWDSOURCED)
   end
 
@@ -114,7 +132,7 @@ class LevelSource < ActiveRecord::Base
 
   # Get a hint that is NOT crowdsourced.
   def get_external_hint
-    return nil if I18n.locale != :'en-us'
+    return nil unless I18n.en?
     get_hint_from_source_internal(excluding: LevelSourceHint::CROWDSOURCED)
   end
 

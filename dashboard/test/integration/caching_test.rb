@@ -7,6 +7,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Dashboard::Application.config.action_controller.perform_caching = true
     Dashboard::Application.config.cache_store = :memory_store, { size: 64.megabytes }
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
 
     Rails.cache.clear
   end
@@ -17,6 +18,16 @@ class CachingTest < ActionDispatch::IntegrationTest
     Rails.logger.info '--------------'
 
     ActiveRecord::Base.connection.disconnect!
+  end
+
+  test "should get /hoc/1" do
+    get '/hoc/1'
+    assert_response :success
+
+    no_database
+
+    get '/hoc/1'
+    assert_response :success
   end
 
   test "should get /s/frozen" do
@@ -74,12 +85,12 @@ class CachingTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('frozen').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
 
     no_database
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
 
@@ -125,12 +136,12 @@ class CachingTest < ActionDispatch::IntegrationTest
     sl = Script.find_by_name('course1').script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
 
     no_database
 
-    post "milestone/0/#{sl.id}", params
+    post "/milestone/0/#{sl.id}", params
     assert_response 200
   end
 

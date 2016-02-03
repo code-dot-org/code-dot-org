@@ -1,7 +1,7 @@
 var path = require('path');
-var crypto = require('crypto');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
+var glob = require('glob');
 
 var config = {};
 
@@ -15,7 +15,9 @@ var APPS = [
   'calc',
   'applab',
   'eval',
-  'netsim'
+  'netsim',
+  'craft',
+  'gamelab'
 ];
 
 if (process.env.MOOC_APP) {
@@ -30,9 +32,7 @@ if (process.env.MOOC_APP) {
 var envOptions = {
   minify: (process.env.MOOC_MINIFY === '1'),
   localize: (process.env.MOOC_LOCALIZE === '1'),
-  dev: (process.env.MOOC_DEV === '1'),
-  digest: (process.env.MOOC_DIGEST === '1')
-
+  dev: (process.env.MOOC_DEV === '1')
 };
 
 var LOCALES = (envOptions.localize ? [
@@ -97,8 +97,7 @@ if (process.env.MOOC_LOCALE) {
 }
 
 config.clean = {
-  all: ['build'],
-  digest: ['build/package/js/**/*-????????????????????????????????.js']
+  all: ['build']
 };
 
 var ace_suffix = envOptions.dev ? '' : '-min';
@@ -159,6 +158,12 @@ config.copy = {
       },
       {
         expand: true,
+        cwd: 'lib/p5play',
+        src: ['*.js'],
+        dest: 'build/package/js/p5play/'
+      },
+      {
+        expand: true,
         cwd: 'lib/droplet',
         src: ['droplet-full' + dotMinIfNotDev + '.js'],
         dest: 'build/package/js/droplet/',
@@ -195,9 +200,32 @@ config.copy = {
       },
       {
         expand: true,
+        cwd: 'lib/phaser',
+        src: ['phaser' + dotMinIfNotDev + '.js'],
+        dest: 'build/package/js/phaser/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
+      },
+      {
+        expand: true,
         cwd: 'lib/tooltipster',
         src: ['tooltipster.min.css'],
         dest: 'build/package/css/tooltipster/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/fileupload',
+        src: [
+          'jquery.fileupload' + dotMinIfNotDev + '.js',
+          'jquery.iframe-transport' + dotMinIfNotDev + '.js'
+        ],
+        dest: 'build/package/js/fileupload/',
+        rename: function (src, dest) {
+          // dest name should be the same, whether or not minified
+          return src + dest.replace(/\.min.js$/, '.js');
+        }
       },
       {
         expand: true,
@@ -209,15 +237,6 @@ config.copy = {
   }
 };
 
-config.digest = {
-  options: {
-    out: 'build/package/js/manifest.js'
-  },
-  files: {
-    src: ['build/package/js/**/*.js', '!build/package/js/ace/**/*.js']
-  }
-};
-
 config.lodash = {
   'build': {
     'dest': 'src/lodash.js',
@@ -225,7 +244,9 @@ config.lodash = {
       'include': [
         'debounce', 'reject', 'map', 'value', 'range', 'without', 'sample',
         'create', 'flatten', 'isEmpty', 'wrap', 'size', 'bind', 'contains',
-        'last', 'clone', 'isEqual', 'find', 'sortBy', 'throttle']
+        'last', 'clone', 'cloneDeep', 'isEqual', 'find', 'sortBy', 'throttle',
+        'uniq'
+      ]
     }
   }
 };
@@ -291,8 +312,9 @@ APPS.forEach(function (app) {
 });
 
 // Use command-line tools to run browserify (faster/more stable this way)
-var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserify ' +
-  '-t reactify --extension=.jsx ' + allFilesSrc.join(' ') +
+var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
+  '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
+  ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ] -d ' + allFilesSrc.join(' ') +
   (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
   ' -o ' + allFilesDest[0]);
 
@@ -300,7 +322,7 @@ var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
 config.exec = {
   browserify: browserifyExec,
-  watchify: browserifyExec.replace('browserify', 'watchify') + ' -v',
+  watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
   mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
 };
 
@@ -344,42 +366,67 @@ config.uglify = {
   config.uglify[app] = {files: appUglifiedFiles };
 });
 
+config.uglify.interpreter = { files: {} };
+config.uglify.interpreter.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
+      outputDir + 'jsinterpreter/interpreter.js';
+config.uglify.interpreter.files[outputDir + 'jsinterpreter/acorn.min.js'] =
+      outputDir + 'jsinterpreter/acorn.js';
+
 // Run uglify task across all apps in parallel
 config.concurrent = {
-  uglify: APPS.concat('common').map( function (x) {
+  uglify: APPS.concat('common', 'interpreter').map( function (x) {
     return 'uglify:' + x;
   })
 };
 
 config.watch = {
   js: {
-    files: ['src/**/*.js'],
-    tasks: ['newer:copy:src']
+    files: ['src/**/*.{js,jsx}'],
+    tasks: ['newer:copy:src'],
+    options: {
+      interval: 5007
+    }
   },
   style: {
     files: ['style/**/*.scss', 'style/**/*.sass'],
-    tasks: ['newer:sass']
+    tasks: ['newer:sass'],
+    options: {
+      interval: 5007
+    }
   },
   content: {
     files: ['static/**/*'],
-    tasks: ['newer:copy']
+    tasks: ['newer:copy'],
+    options: {
+      interval: 5007
+    }
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['newer:concat', 'newer:copy:lib']
+    tasks: ['newer:concat', 'newer:copy:lib'],
+    options: {
+      interval: 5007
+    }
   },
   ejs: {
     files: ['src/**/*.ejs'],
-    tasks: ['ejs']
+    tasks: ['ejs'],
+    options: {
+      interval: 5007
+    }
   },
   messages: {
     files: ['i18n/**/*.json'],
-    tasks: ['pseudoloc', 'messages']
+    tasks: ['pseudoloc', 'messages'],
+    options: {
+      interval: 5007
+    }
   },
   dist: {
     files: ['build/package/**/*'],
     options: {
-      livereload: true
+      livereload: true,
+      interval: 5007
     }
   }
 };
@@ -391,8 +438,13 @@ config.jshint = {
     mocha: true,
     browser: true,
     undef: true,
+    esnext: true,
     globals: {
+      $: true,
+      jQuery: true,
+      React: true,
       Blockly: true,
+      Phaser: true,
       //TODO: Eliminate the globals below here. Could at least warn about them
       // in their respective files
       Studio: true,
@@ -411,14 +463,15 @@ config.jshint = {
     'tasks/**/*.js',
     'src/**/*.js*',
     'test/**/*.js',
+    '!src/**/*.min.js*',
     '!src/hammer.js',
     '!src/lodash.js',
-    '!src/lodash.min.js',
     '!src/canvg/*.js',
     '!src/calc/js-numbers/js-numbers.js',
     '!src/ResizeSensor.js',
     '!src/applab/colpick.js'
-  ]
+  ],
+  some: [], // This gets dynamically populated in the register task
 };
 
 config.strip_code = {
@@ -440,33 +493,6 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
 
-  // Add md5 digest to filenames
-  grunt.registerMultiTask('digest', function () {
-    var manifest = {};
-    var manifestFile = this.options().out;
-
-    this.filesSrc.forEach(function (file) {
-
-      // Don't add a digest to the manifest
-      if (file === manifestFile) {
-        return;
-      }
-
-      var oldName = path.relative('build/package', file);
-      var newName;
-      if (envOptions.digest) {
-        var data = grunt.file.read(file);
-        var digest = crypto.createHash('md5').update(data).digest('hex');
-        newName = oldName.replace(/\.js$/, '-' + digest + '.js');
-        fs.rename(file, file.replace(/\.js$/, '-' + digest + '.js'));
-      } else {
-        newName = oldName;
-      }
-      manifest[oldName] = newName;
-    });
-    grunt.file.write(manifestFile, 'window.digestManifest = ' + JSON.stringify(manifest));
-  });
-
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function() {
     var current = path.resolve('build/locale/current');
@@ -477,10 +503,20 @@ module.exports = function(grunt) {
     });
   });
 
+  // Checks the size of Droplet to ensure it's built with LANGUAGE=javascript
+  grunt.registerTask('checkDropletSize', function () {
+    var bytes = fs.statSync('lib/droplet/droplet-full.min.js').size;
+    if (bytes > 500 * 1000) {
+      grunt.warn('"droplet-full.min.js" is larger than 500kb. Did you build with LANGUAGE=javascript?');
+    }
+  });
+
   grunt.registerTask('prebuild', [
+    'checkDropletSize',
     'pseudoloc',
     'newer:messages',
     'newer:copy:src',
+    'newer:copy:lib',
     'locales',
     'newer:strip_code',
     'ejs'
@@ -488,7 +524,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
-    'newer:copy:lib',
     'newer:concat',
     'newer:sass'
   ]);
@@ -498,9 +533,7 @@ module.exports = function(grunt) {
     'exec:browserify',
     // Skip minification in development environment.
     envOptions.dev ? 'noop' : ('concurrent:uglify'),
-    'postbuild',
-    'clean:digest',
-    'digest'
+    'postbuild'
   ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
@@ -519,9 +552,22 @@ module.exports = function(grunt) {
     'concurrent:watch'
   ]);
 
+  grunt.registerTask('jshint:files', function () {
+    var files;
+    if (grunt.option('files')) {
+      files = grunt.option('files').split(",");
+      grunt.config('jshint.some', files);
+    } else  if (grunt.option('glob')) {
+      files = glob.sync(grunt.option('glob'));
+      console.log('files: ' + files.join('\n'));
+      grunt.config('jshint.some', files);
+    }
+    grunt.task.run('jshint:some');
+  });
+
   grunt.registerTask('mochaTest', ['exec:mochaTest']);
 
-  grunt.registerTask('test', ['jshint', 'mochaTest']);
+  grunt.registerTask('test', ['jshint:all', 'mochaTest']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 

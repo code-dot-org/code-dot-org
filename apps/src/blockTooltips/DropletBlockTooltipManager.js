@@ -1,5 +1,3 @@
-/* global $ */
-
 var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
 var dom = require('../dom');
@@ -15,6 +13,8 @@ var dom = require('../dom');
  */
 var DropletBlockTooltipManager = function (dropletTooltipManager) {
   this.dropletTooltipManager = dropletTooltipManager;
+  this.showExamplesLink = dropletTooltipManager.dropletConfig.showExamplesLink;
+  this.tooltipsEnabled = true;
 };
 
 var DEFAULT_TOOLTIP_CONFIG = {
@@ -29,23 +29,47 @@ var DEFAULT_TOOLTIP_CONFIG = {
 };
 
 /**
+ * Simple helper function that will swallow exceptions, and log them as
+ * console.error. This is done because the way that some of our callbacks are
+ * called by droplet, exceptions would bubble down to the droplet code, and
+ * prevent desired behavior (i.e. we fail to transition back to block mode).
+ */
+function swallowErrors(fn) {
+  return function () {
+    try {
+      fn();
+    } catch (err) {
+      if (typeof(console) !== "undefined" && console.error) {
+        console.error(err);
+      }
+    }
+  };
+}
+
+/**
  * @param {Editor} dropletEditor
  */
 DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
+  this.installTooltipsForCurrentCategoryBlocks_();
   this.hideTooltipsOnBlockPick_(dropletEditor);
 
-  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
-  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
+  dropletEditor.on('changepalette',
+    swallowErrors(this.installTooltipsForCurrentCategoryBlocks_.bind(this)));
+  dropletEditor.on('toggledone',
+    swallowErrors(this.installTooltipsIfNotInstalled_.bind(this)));
 };
 
-DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
+DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled_ = function () {
   if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-    this.installTooltipsForCurrentCategoryBlocks();
+    this.installTooltipsForCurrentCategoryBlocks_();
   }
 };
 
-DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = function () {
+  if (!this.tooltipsEnabled) {
+    return;
+  }
+
   $('.droplet-hover-div').each(function (_, blockHoverDiv) {
     if ($(blockHoverDiv).hasClass('tooltipstered')) {
       return;
@@ -63,6 +87,9 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       content: this.getTooltipHTML(funcName),
       offsetX: tooltipOffsetX,
       functionReady: function (_, contents) {
+        if (!this.showExamplesLink) {
+          return;
+        }
         var seeExamplesLink = contents.find('.tooltip-example-link > a')[0];
         // Important this binds to mouseDown/touchDown rather than click, needs to
         // happen before `blur` which triggers the ace editor completer popup
@@ -74,6 +101,8 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = f
       }.bind(this)
     });
 
+    // Store the title/funcName as a block id so we can attach callouts later:
+    $(blockHoverDiv).attr('id', 'droplet_palette_block_' + funcName);
     $(blockHoverDiv).tooltipster(configuration);
   }.bind(this));
 };
@@ -98,8 +127,16 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    fullDocumentationURL: tooltipInfo.getFullDocumentationURL()
+    showExamplesLink: this.showExamplesLink
   });
+};
+
+/**
+ * @param {boolean} enabled if tooltips should be enabled
+ */
+
+DropletBlockTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
+  this.tooltipsEnabled = !!enabled;
 };
 
 module.exports = DropletBlockTooltipManager;

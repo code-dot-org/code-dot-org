@@ -1,10 +1,10 @@
 * * *
 
-títol: Gràcies per registrar-se per acollir una Hora de Codi! maquetació: àmplia
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 
 * * *
 
@@ -14,30 +14,36 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Gràcies per registrar-se per acollir una Hora de Codi!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
-
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Estàs fent possible que estudiants d'arreu del món puguin aprendre una Hora de Codi que pot canviar *la resta de les seves vides* durant la setmana del <%= campaign_date('full') %>. Seguirem en contacte sobre premis, nous tutorials i altres emocionants actualitzacions. Què és el que pots fer?
 
 ## 1. Corre la veu
 
-Informa als teus amics sobre #HoraDeCodi.
+Acabas d'afegir-te al moviment de l'Hora de Codi. Explica-ho als teus amics amb **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Demana a tothom de la teva escola que ofereixin una Hora de Codi
+## 2. Find a local volunteer to help you with your event.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Demana a la teva empresa que s'impliqui
+## 3. Ask your whole school to offer an Hour of Code
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
-## 4. Promou l'Hora del Codi a la teva comunitat
+## 4. Demana a la teva empresa que s'impliqui
 
-Recruit a local group — boy/girl scouts club, church, university, veterans group or labor union. Or host an Hour of Code "block party" for your neighborhood.
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 
-## 5. Demana a un carrec electe local que doni suport a l'Hora del Codi
+## 5. Promote Hour of Code in your community
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
+
+## 6. Demana a un funcionari electe local que doni suport a l'Hora de Codi
+
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

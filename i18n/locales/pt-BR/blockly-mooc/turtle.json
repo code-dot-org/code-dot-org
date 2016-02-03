@@ -65,6 +65,7 @@
   "penTooltip":"Levanta ou abaixa o lápis, para começar ou parar de desenhar.",
   "penUp":"levante o lápis",
   "reinfFeedbackMsg":"Aqui está o seu desenho! Continue trabalhando nele, ou siga para o próximo desafio.",
+  "setAlpha":"definir alfa",
   "setColour":"definir cor",
   "setPattern":"definir padrão",
   "setWidth":"definir largura",

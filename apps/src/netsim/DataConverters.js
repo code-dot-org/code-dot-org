@@ -10,6 +10,7 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
@@ -20,7 +21,7 @@
 /* global require */
 /* global exports */
 
-require('../utils'); // For String.prototype.repeat polyfill
+var utils = require('../utils'); // For String.prototype.repeat polyfill
 var NetSimUtils = require('./NetSimUtils');
 
 // window.{btoa, atob} polyfills
@@ -58,10 +59,11 @@ exports.minifyAB = function (abString) {
  * of a set size separated by a space.
  * @param {string} abString
  * @param {number} chunkSize
+ * @param {number} [offset] bit-offset for formatting effect; default 0.
  * @returns {string} formatted version
  */
-exports.formatAB = function (abString, chunkSize) {
-  return exports.formatBinary(exports.abToBinary(abString), chunkSize)
+exports.formatAB = function (abString, chunkSize, offset) {
+  return exports.formatBinary(exports.abToBinary(abString), chunkSize, offset)
       .replace(/0/g, 'A')
       .replace(/1/g, 'B');
 };
@@ -80,9 +82,11 @@ exports.minifyBinary = function (binaryString) {
  * a set size separated by a space.
  * @param {string} binaryString - may be unformatted already
  * @param {number} chunkSize - how many bits per format chunk
+ * @param {number} [offset] bit-offset for formatting effect; default 0.
  * @returns {string} pretty formatted binary string
  */
-exports.formatBinary = function (binaryString, chunkSize) {
+exports.formatBinary = function (binaryString, chunkSize, offset) {
+  offset = utils.valueOr(offset, 0);
   if (chunkSize <= 0) {
     throw new RangeError("Parameter chunkSize must be greater than zero");
   }
@@ -90,7 +94,12 @@ exports.formatBinary = function (binaryString, chunkSize) {
   var binary = exports.minifyBinary(binaryString);
 
   var chunks = [];
-  for (var i = 0; i < binary.length; i += chunkSize) {
+  var firstChunkLength = utils.mod(offset, chunkSize);
+  if (firstChunkLength > 0) {
+    chunks.push(binary.substr(0, firstChunkLength));
+  }
+
+  for (var i = firstChunkLength; i < binary.length; i += chunkSize) {
     chunks.push(binary.substr(i, chunkSize));
   }
 
@@ -120,9 +129,11 @@ exports.minifyDecimal = function (decimalString) {
  * a set size separated by a space.
  * @param {string} hexString
  * @param {number} chunkSize - in bits!
+ * @param {number} [offset] hex-digit-offset for formatting effect; default 0.
  * @returns {string} formatted hex
  */
-exports.formatHex = function (hexString, chunkSize) {
+exports.formatHex = function (hexString, chunkSize, offset) {
+  offset = utils.valueOr(offset, 0);
   if (chunkSize <= 0) {
     throw new RangeError("Parameter chunkSize must be greater than zero");
   }
@@ -136,7 +147,12 @@ exports.formatHex = function (hexString, chunkSize) {
   var hex = exports.minifyHex(hexString);
 
   var chunks = [];
-  for (var i = 0; i < hex.length; i += hexChunkSize) {
+  var firstChunkLength = utils.mod(offset, hexChunkSize);
+  if (firstChunkLength > 0) {
+    chunks.push(hex.substr(0, firstChunkLength));
+  }
+
+  for (var i = firstChunkLength; i < hex.length; i += hexChunkSize) {
     chunks.push(hex.substr(i, hexChunkSize));
   }
 

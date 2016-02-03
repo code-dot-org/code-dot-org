@@ -21,7 +21,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control the Dog and collect all of the flags.",
+    "instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.",
     "first_sprite_index": "0",
     "embed": "false",
     "soft_buttons": [
@@ -32,7 +32,7 @@
     ],
     "disable_sharing": "false",
     "protaganist_sprite_index": "0",
-    "markdown_instructions": "Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control the Dog and collect all of the flags.",
+    "markdown_instructions": "Let's have some fun! Look at the code provided to see if you can figure out what each block does.  \r\n\r\nWhen you're done, use the arrow keys to control Dog and collect all of the flags.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -41,7 +41,11 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "timeout_after_when_run": "false",
-    "scrollbars": "false"
+    "scrollbars": "false",
+    "never_autoplay_video": "false",
+    "min_workspace_height": "1200",
+    "examples_required": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks>

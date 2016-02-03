@@ -4,15 +4,17 @@
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # 服務條款
 
 Last Revised: December 5, 2014
 
-Code.org 是一個 501(c)(3) 非營利組織("Code.org")。 我們的使命就是要給每個學生有機會學習電腦科學。 作為這一使命的一部分，Code.org 經營網站位於 [HTTP://code.org](http://code.org)、 [HTTP://csedweek.org](http://csedweek.org)、 [HTTP://computinginthecore.org](http://computinginthecore.org)、 [HTTP://hourofcode.com](http://hourofcode.com)、 其他網站、 資訊、 文本、 課程、 視頻、 圖形、 照片、 Api、 電子郵件通訊、其他材料及相關的產品和服務 ("**服務**")，包括教程平臺上 [HTTP://studio.code.org](http://studio.code.org) ("**代碼工作室**")。
+Code.org 是一個 501(c)(3) 非營利組織("Code.org")。 我們的使命就是要給每個學生有機會學習資訊科學。 作為這一使命的一部分，Code.org 經營了以下數個網站： [HTTP://code.org](http://code.org)、 [HTTP://csedweek.org](http://csedweek.org)、 [HTTP://computinginthecore.org](http://computinginthecore.org)、 [HTTP://hourofcode.com](http://hourofcode.com)，還有其他網站、 資訊、 文字、 課程、 影片、 圖片、 照片、 API、 電子郵件通知、其他素材及相關的產品和服務 ("**服務**")，包括教學平台 [HTTP://studio.code.org](http://studio.code.org) ("**Code Studio**")。
 
-請在訪問或使用服務之前，仔細閱讀這些服務條款（"**條款**"）。 訪問或使用服務的任何部分，或點擊"我同意"或"註冊"按鈕，可表示你意味著您同意受這些條款而無需修改。
+請在使用這些服務之前，仔細閱讀這些服務條款（"**條款**"）。 訪問或使用服務的任何部分，或點擊"我同意"或"註冊"按鈕，可表示你意味著您同意受這些條款而無需修改。
 
-這些條款是在你和 Code.org 之間，關於您使用服務的法律合同。 只有當你能與Code.org簽有約束力的合同，並且沒有接收根據美國或其他適用的司法管轄區的法律禁止接受服務的人，您就可以使用本服務。 如果您接受這些條款並在服務公司代表、 組織、 政府或其他法律實體使用，您表示並保證您有權這樣做。 您可以使用服務只有遵守這些條款和所有適用的當地、 國家、 國家和國際法律、 規則和條例。
+這些條款是在您和 Code.org 之間，關於您使用服務的法律合同。 只有當你能與Code.org簽有約束力的合同，並且沒有接收根據美國或其他適用的司法管轄區的法律禁止接受服務的人，您就可以使用本服務。 如果您接受這些條款並在服務公司代表、 組織、 政府或其他法律實體使用，您表示並保證您有權這樣做。 您可以使用服務只有遵守這些條款和所有適用的當地、 國家、 國家和國際法律、 規則和條例。
 
 這些條款如有任何更改。表示您同意受此類更改，如果您繼續使用到服務後這些條件的變化，所以請檢查定期更改這些條款。
 

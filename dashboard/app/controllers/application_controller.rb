@@ -1,3 +1,8 @@
+require 'cdo/date'
+require 'dynamic_config/dcdo'
+require 'dynamic_config/gatekeeper'
+require 'dynamic_config/page_mode'
+
 class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
@@ -12,7 +17,6 @@ class ApplicationController < ActionController::Base
 
   # this is needed to avoid devise breaking on email param
   before_filter :configure_permitted_parameters, if: :devise_controller?
-  before_filter :verify_params_before_cancan_loads_model
 
   around_filter :with_locale
 
@@ -27,17 +31,33 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def reset_session_endpoint
-    reset_session
-    render text: "OK"
+  # Configure development only filters.
+  if Rails.env.development?
+    # Enable or disable the rack mini-profiler if the 'pp' query string parameter is set.
+    # pp='disabled' will disable it; any other value will enable it.
+    before_filter :maybe_enable_profiler
+    def maybe_enable_profiler
+      pp = params['pp']
+      if pp
+        ENV['RACK_MINI_PROFILER'] = (pp == 'disabled') ? 'off' : 'on'
+      end
+    end
+
+    before_filter :configure_web_console
+    # Enable the Rails web console if params['dbg'] is set, or disable it
+    # if params['dbg'] is 'off'.
+    def configure_web_console
+      if params[:dbg]
+        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+      end
+      @use_web_console = cookies[:dbg]
+    end
   end
 
-# we need the following to fix a problem with the interaction between CanCan and strong_parameters
-# https://github.com/ryanb/cancan/issues/835
-  def verify_params_before_cancan_loads_model
-    resource = controller_name.singularize.to_sym
-    method = "#{resource}_params"
-    params[resource] &&= send(method) if respond_to?(method, true)
+  def reset_session_endpoint
+    client_state.reset
+    reset_session
+    render text: 'OK <script>sessionStorage.clear()</script>'
   end
 
   rescue_from CanCan::AccessDenied do
@@ -96,10 +116,15 @@ class ApplicationController < ActionController::Base
   end
 
   def milestone_response(options)
-    response = {}
+    response = {
+      timestamp: DateTime.now.to_milliseconds
+    }
     script_level = options[:script_level]
 
     if script_level
+      response[:script_id] = script_level.script.id
+      response[:level_id] = script_level.level.id
+
       previous_level = script_level.previous_level
       if previous_level
         response[:previous_level] = build_script_level_path(previous_level)
@@ -129,15 +154,28 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = options[:share_failure]
     end
 
-    # logged in users can save solved levels to a gallery (subject to
-    # additional logic in the blockly code because blockly owns
-    # which levels are worth saving)
-    if current_user &&
-        options[:level_source].try(:id) &&
-        options[:solved?] &&
-        options[:activity] &&
-        options[:level_source_image]
-      response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
+    if HintViewRequest.enabled?
+      if script_level && current_user
+        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, script_level.level, current_user)
+        response[:hint_view_request_url] = hint_view_requests_path
+      end
+    end
+
+    if PuzzleRating.enabled?
+      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, script_level.level, current_user)
+    end
+
+    # logged in users can:
+    if current_user
+      # save solved levels to a gallery (subject to
+      # additional logic in the blockly code because blockly owns
+      # which levels are worth saving)
+      if options[:level_source].try(:id) &&
+          options[:solved?] &&
+          options[:activity] &&
+          options[:level_source_image]
+        response[:save_to_gallery_url] = gallery_activities_path(gallery_activity: {activity_id: options[:activity].id})
+      end
     end
 
     unless options[:solved?]
@@ -159,6 +197,8 @@ class ApplicationController < ActionController::Base
     # Set up the background design
     response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE
 
+    response[:activity_id] = options[:activity] && options[:activity].id
+
     response
   end
 
@@ -168,5 +208,15 @@ class ApplicationController < ActionController::Base
 
   def set_locale_cookie(locale)
     cookies[:language_] = { value: locale, domain: :all, expires: 10.years.from_now}
+  end
+
+  def require_levelbuilder_mode
+    unless Rails.application.config.levelbuilder_mode
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
+
+  def require_admin
+    authorize! :read, :reports
   end
 end

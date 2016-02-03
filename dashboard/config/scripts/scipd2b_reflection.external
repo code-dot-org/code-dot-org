@@ -1,6 +1,5 @@
 name 'sciPD2b reflection'
 title 'Reflection on Phase 2'
-description 'description here'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN

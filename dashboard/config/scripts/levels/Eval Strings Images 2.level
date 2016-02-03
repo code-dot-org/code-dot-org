@@ -15,14 +15,18 @@
     "use_contract_editor": "false",
     "free_play": "true",
     "embed": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"string_block_color\",\r\n  \"callout_text\": \"type in a String for color here\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"position\": {\r\n    \"adjust\": {\r\n     \"x\": null,\r\n     \"y\": null\r\n    },\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"string_block_color\",\r\n  \"callout_text\": \"Try typing in a color as a String here\",\r\n  \"element_id\": \"#callout_here\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "coordinate_grid_background": "false"
+    "coordinate_grid_background": "false",
+    "markdown_instructions": "Free Play: Every Evaluation Block is color-coded to let you know which data type it returns and which types it needs for its parameters. The last parameter of the triangle function takes a String that controls its color - try some different colors to see what works.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

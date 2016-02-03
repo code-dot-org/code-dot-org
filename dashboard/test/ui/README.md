@@ -13,81 +13,73 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 3. `cd` to the directory of this README.
 4. `bundle install`
 5. `rbenv rehash`
-6. `./runner.rb -l -m -d localhost.studio.code.org:3000 -p localhost.code.org:3000`
-  - `-l` makes it use the chromedriver
-  - `-m` maximizes the window on startup
-  - `-d` sets the test domain for dashboard
-  - `-p` sets the test domain for pegasus
+6. `./runner.rb -l`
+  - `-l` makes it use the chromedriver, and specifies local dashboard and pegasus domains
   - a window will pop up in the background in which you can watch the tests happen
 7. In a separate window, run `tail -f *.log` to watch the results of your tests
   - `-f` streams the log in your shell, so it will be updated as new lines are written
 
-### With remote browsers: Browserstack
+### With remote browsers: Saucelabs
 
-Running tests remotely on [Browserstack automate](http://browserstack.com/automate) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
+Running tests remotely on [Saucelabs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
 
-We are currently **limited to 2 concurrent test runs**, so you and one other person can be running your test suites at the same time. Browserstack shows how many tests are running at the top left. If it says 2/2, wait or ask for one to free up.
+We currently have 120 available browsers, and the automated ui tests attempt to run 110.
 
 #### Credentials
 
-BrowserStack requires credentials to be set in the environment first.
+Saucelabs requires credentials to be set in locals.yml first.
 
-Ideally, use your own credentials from https://www.browserstack.com/accounts/automate.
+````
+# code-dot-org/locals.yml
+saucelabs_username: 'yourusername'
+saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 
-```
-export BROWSERSTACK_USERNAME='your username'
-export BROWSERSTACK_AUTHKEY='your authkey'
-```
+````
 
-Code.org shared credentials can be used by placing the dashboard directory directly within the `website-ci` repository.
+You can find the values for these settings in your saucelabs account.  It says "welcome, [username]" up top, and the access key is at the bottom of the grey box on the left.
 
-#### Testing your local site copy: Browserstack tunnel
+#### Saucelabs tunnel
 
-1. Download the [command line Browserstack client](http://www.browserstack.com/local-testing#command-line)
-2. `/path/to/your/downloaded/BrowserStackLocal $BROWSERSTACK_AUTHKEY localhost,3000,0`
-3. `./runner.rb -d localhost:3000 -t`
+If you want to run tests on saucelabs against localhost you need to set up your tunnel:
 
-You can now watch your tests run at the [Browserstack automate page](https://www.browserstack.com/automate).  The tests will run on each of the browser/OS configurations specified in [browsers.json](https://github.com/code-dot-org/dashboard/blob/finished/test/ui/browsers.json).
+1. Download and run the [saucelabs tunnel](https://docs.saucelabs.com/reference/sauce-connect/)
+2. `~/bin/sc/ -u $SAUCELABS_USERNAME -k SAUCELABS_ACCESS_KEY` (the above documentation link has a example command line with your credentials that you can copy)
+3. `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
-#### Troubleshooting
-
-We don't know why some scenarios are failing on iPad3 and iPhone5S.  The error that appears is "Unable to communicate to node (Selenium::WebDriver::Error::UnknownError)".  A workaround is to tag those scenarios `@no_mobile`.
+You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
 ## Options
 
 Here are some example command line options.  Run `./runner.rb --help` for a full list.
 
-Run with a specific OS version, browser, browser version, and feature:
+Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-```
-./runner.rb -o 7 -b chrome -v 31 -f features/simpledrag.feature
+`./runner.rb -d localhost.studio.code.org:3000`
+Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -p <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
-OR
+Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
 
-./runner.rb -c Chrome31Win7 -f features/simpledrag.feature
-```
+`./runner.rb -l`
 
-Run with a specific domain substituted in place of the default, tunneling from BrowserStack into local machine:
+Run all UI tests for a given browser/os combination - full list of combinations is in browsers.json
 
-```
-./runner.rb -d localhost:3000 -t
-```
+`./runner.rb --config ChromeLatestWin7`
 
-Note that tunneling to local machine from BrowserStack requires the tool at http://www.browserstack.com/local-testing#command-line.
+Run all UI tests for a given browser
 
-Run against local Chrome webdriver instead of BrowserStack:
+`./runner.rb --browser Chrome`
 
-```
-./runner.rb -l
-```
+Run all tests in a given feature file for all browser/os combinations
 
-Note that this requires a local webdriver running on port 9515, such as Chromedriver at http://chromedriver.storage.googleapis.com/index.html.
+`./runner.rb --feature features/awesomeStuff.feature`
 
-Run using real mobile browsers, not emulators, using BrowserStack's beta feature:
+Run exactly one UI test in a given feature file for all browser/os combinations
 
-```
-./runner.rb -r
-```
+`./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
+
+Run the eyes tests
+
+`./runner.rb --eyes`
 
 ## Tips
 

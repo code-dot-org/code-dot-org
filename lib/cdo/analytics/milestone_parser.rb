@@ -33,7 +33,7 @@ class MilestoneParser
     cache_file = MILESTONE_CACHE_V2
     FileUtils.cp(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
     cache = File.file?(cache_file) ? JSON.parse(IO.read(cache_file)) : {}
-    parser = self.new(cache, AWS::S3::connect_v2!)
+    parser = self.new(cache, AWS::S3::create_client)
     parser.count.tap{|_|IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
   end
 
@@ -41,6 +41,7 @@ class MilestoneParser
     @cache = cache
     @s3_client = s3_client
     @s3_resource = Aws::S3::Resource.new(client: s3_client)
+    self.log_debug = true
   end
 
   # Parses all milestone logs in s3://cdo-logs/hosts/**/dashboard/milestone.log*
@@ -55,8 +56,8 @@ class MilestoneParser
       match && !(IGNORE_HOSTS.include? match[:host])
     end
     logs = Parallel.map(hosts, in_threads: 16) do |host|
-      s3_resource.bucket('cdo-logs').objects(prefix: "#{host}dashboard/milestone.log").to_a
-    end.flatten
+      s3_resource.bucket('cdo-logs').objects(prefix: "#{host}dashboard/milestone.log")
+    end.map(&:to_a).flatten
     debug "Found #{logs.length} logs.."
     counts = logs.map do |log|
       (cache[log.key] = count_lines_of_code(log))['count']

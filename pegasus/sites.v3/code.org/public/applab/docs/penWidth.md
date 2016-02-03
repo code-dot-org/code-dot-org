@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Turtle
@@ -20,11 +19,11 @@ Category: Turtle
 
 [short_description]
 
-Changes the diameter of the circles drawn behind the turtle as it moves.
+Sets the width of the line in pixels that the turtle draws behind it as it moves.
 
 [/short_description]
 
-**Note**: Even though it may look like a line, circles are actually being drawn behind the turtle as it moves. The width passed to penWidth sets the diameter of these circles.
+When artists draw pictures they use many different pens that can draw different line thicknesses. You can also change the thickness of the lines that the turtle draws. The default pen width is one pixel and the pen is by default in the down (drawing) position.
 
 [/description]
 
@@ -33,12 +32,11 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-<pre>
-penWidth(10);             // sets the diameter of the circles drawn behind the turtle to 10 pixels
-moveForward(100);         // moves the turtle forward 100 pixels
-</pre>
+```
+// Draw a line 10 pixels wide and 100 pixels long
+penWidth(10);
+moveForward(100);
+```
 
 [/example]
 
@@ -46,27 +44,55 @@ ____________________________________________________
 
 [example]
 
-**Example 2**
+**Example: Skyscraper** Draws a skyscraper.
 
-This example illustrates different pixel thicknesses from 10 - 90.
+```
+// Draw a skyscraper.
+penWidth(20);
+moveForward();
+penWidth(15);
+moveForward();
+penWidth(10);
+moveForward();
+penWidth(5);
+moveForward();
+penWidth(1);
+moveForward();
+```
 
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Sample Line Thicknesses** Draws horizontal lines with thickness 10 pixels to 90 pixels, counting by 10.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-penUp();                        // stops leaving a trail behind the turtle as it moves
-moveTo(0, 0);                   // moves the turtle to the coordinate (0,0)
-turnRight(90);                  // turns the turtle 90 degrees to the right
-for (var i = 1; i < 10; i++) {  // repeats the code inside of this block 9 times
-  penDown();                    // starts leaving a trail behind the turtle as it moves
-  penWidth(i * 10);             // sets the diameter of the circles drawn behind the turtle
-                                //    to a multiple of 10
-  moveForward(250);             // moves the turtle forward 250 pixels
-  moveBackward(250);            // moves the turtle backward 250 pixels
-  penUp();                      // stops leaving a trail behind the turtle as it moves
-  turnRight(90);                // turns the turtle 90 degrees to the left
-  moveForward(i * 10 + 10);     // moves the turtle forward a multiple of 10 plus 10 pixels for padding
-  turnLeft(90);                 // turns the turtle 90 degrees to the left
+// Draws horizontal lines with thickness 10 pixels to 90 pixels, counting by 10.
+penUp();
+moveTo(0, 0);
+turnRight(90);
+for (var i = 1; i &lt; 10; i++) {
+  penDown();
+  penWidth(i * 10);
+  moveForward(250);
+  moveBackward(250);
+  penUp();
+  turnRight(90);
+  moveForward(i * 10 + 10);
+  turnLeft(90);
 }
 </pre>
-
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/03cfbdabcc8ad16e00d8fac04b6965f6-image-1445170155057.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -75,9 +101,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 penWidth(width);
-</pre>
+```
 
 [/syntax]
 
@@ -87,21 +114,23 @@ penWidth(width);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| width | number | Yes | The diameter of the circles drawn behind the turtle as it moves  |
+| width | number | Yes | The width of the line in pixels that the turtle draws behind it as it moves.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Modifies turtle drawing only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-
+- [penUp()](/applab/docs/penUp) causes no line to be drawn.
+- Turtle drawing commands are not effected by the [show()](/applab/docs/show) and [hide()](/applab/docs/hide) commands, which control if the turtle icon is displayed or not.
+- Even though it may look like a line, circles are actually being drawn behind the turtle as it moves. The width passed to penWidth sets the diameter of these circles.
 
 [/tips]
 

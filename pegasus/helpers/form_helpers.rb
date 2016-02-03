@@ -135,7 +135,16 @@ def insert_form(kind, data, options={})
     updated_ip: request.ip,
   }
   row[:user_id] = dashboard_user[:id] if dashboard_user
-  row[:id] = DB[:forms].insert(row)
+
+  if kind == "HocSignup2015"
+    update_row = DB[:forms].where(email: row[:email], kind: kind, name: row[:name]).update(row)
+
+    if update_row == 0
+      row[:id] = DB[:forms].insert(row)
+    end
+  else
+    row[:id] = DB[:forms].insert(row)
+  end
 
   row
 end
@@ -148,7 +157,9 @@ def update_form(kind, secret, data)
     data[:name_s] ||= dashboard_user[:name]
   end
 
-  data = validate_form(kind, data)
+  prev_data = JSON.parse(form[:data], symbolize_names: true)
+  symbolized_data = Hash[data.map{|k, v| [k.to_sym, v]}]
+  data = validate_form(kind, prev_data.merge(symbolized_data))
 
   form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
   form[:email] = data[:email_s].to_s.strip.downcase if data.has_key?(:email_s)

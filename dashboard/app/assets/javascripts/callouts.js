@@ -29,6 +29,21 @@
       return;
     }
 
+    if (document.URL.indexOf('show_callouts=1') === -1) {
+      callouts = callouts.filter(function (element, index, array) {
+        if (dashboard.clientState.hasSeenCallout(element.id)) {
+          return false;
+        } else {
+          dashboard.clientState.recordCalloutSeen(element.id);
+          return true;
+        }
+      });
+    }
+
+    if (!callouts || callouts.length === 0) {
+      return;
+    }
+
     // Hide callouts when the function editor is closed (otherwise they jump to
     // the top left corner)
     $(window).on('function_editor_closed', function () {
@@ -72,9 +87,14 @@
         show: false // don't show on mouseover
       };
 
-      var customConfig = $.parseJSON(callout.qtip_config);
+      var customConfig = typeof callout.qtip_config === 'string' ?
+          $.parseJSON(callout.qtip_config) : callout.qtip_config;
       var config = $.extend(true, {}, defaultConfig, customConfig);
       config.style.classes = config.style.classes.concat(" cdo-qtips");
+
+      if (callout.hide_target_selector) {
+        config.hide.target = $(callout.hide_target_selector);
+      }
 
       // Reverse callouts in RTL mode
       if ($('html[dir=rtl]').length) {

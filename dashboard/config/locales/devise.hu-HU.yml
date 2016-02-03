@@ -9,10 +9,10 @@
     failure:
       already_authenticated: Már bejelentkeztél.
       inactive: Fiókja még nincs aktiválva.
-      invalid: Érvénytelen e-mail cím vagy jelszó.
-      invalid_token: Érvénytelen azonosító.
+      invalid: "Érvénytelen e-mail cím vagy jelszó."
+      invalid_token: "Érvénytelen azonosító."
       locked: A fiókja zárolva van.
-      not_found_in_database: Érvénytelen e-mail cím vagy jelszó.
+      not_found_in_database: "Érvénytelen e-mail cím vagy jelszó."
       timeout: Hozzáférése a géphez lejárt, kérem jelentkezzen be újra a folytatáshoz.
       unauthenticated: Be kell lépnie, vagy regisztrálnia, mielőtt folytathatná.
       unconfirmed: A folytatás előtt vissza kell igazolnia a felhasználói adatait.
@@ -39,7 +39,7 @@
     registrations:
       destroyed: Szia! A felhasználói fiókot sikeresen törölte. Reméljük, hogy hamarosan
         újra találkozunk.
-      signed_up: Üdvözlet! Sikeresen feliratkoztál.
+      signed_up: "Üdvözlet! Sikeresen feliratkoztál."
       signed_up_but_inactive: Sikeresen feliratkoztál. Azonban nem sikerült a bejelentkezés
         mert a felhasználói fiókod még nincs aktiválva.
       signed_up_but_locked: Sikeresen feliratkoztál. Azonban nem sikerült a bejelentkezés
@@ -69,10 +69,10 @@
       not_locked: nem volt zárolva
       not_saved:
         one: '1 hiba tilos a  %{resource}  mentése:'
-        other: '%{count} hiba tiltja a %{resource} mentését :'
+        other: "%{count} hiba tiltja a %{resource} mentését :"
     invitations:
       send_instructions: 'A meghívót elküldtük az alábbi email címre: %{email}.'
-      invitation_token_invalid: The invitation token provided is not valid!
+      invitation_token_invalid: A megadott token nem érvényes!
       updated: A jelszavadat sikeresen beállítottad. Most már be vagy jelentkezve.
       no_invitations_remaining: Nincs fel nem használt meghívód
       invitation_removed: A meghívód törölve lett.
@@ -80,14 +80,14 @@
         header: Meghívó küldése
         submit_button: Meghívó küldése
       edit:
-        header: Állítsd be a jelszavad
+        header: "Állítsd be a jelszavad"
         submit_button: Jelszavam beállítása
     mailer:
       invitation_instructions:
         subject: Meghívási instrukciók
-        hello: Üdv %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
+        hello: "Üdv %{email}"
+        someone_invited_you: "%{url} meghívásod érkezett, elfogadhatod az alábbi linkre
+          kattintva."
         accept: Meghívó elfogadása
         ignore: Ha nem akarod elfogadni a meghívást, kérlek hagyd figyelmen kívül
           ezt az emailt. <br /> A fiókod addig nem készül el, amíg nem kattintasz

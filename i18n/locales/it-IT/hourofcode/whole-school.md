@@ -1,9 +1,13 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_whole_school) %> layout: wide
 
 * * *
 
-# Coinvolgi tutta la scuola a partecipare
+<%= view :signup_button %>
 
-Le informazioni su come coinvolgere intere scuole a partecipare all'Ora del Codice andranno qui.
+# Fai partecipare tutta la scuola
+
+Le informazioni su come far partecipare tutta la scuola all'Ora del condice appariranno qui.
+
+<%= view :signup_button %>

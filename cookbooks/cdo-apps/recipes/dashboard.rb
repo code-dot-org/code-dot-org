@@ -52,32 +52,27 @@ link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/sha
   group node[:current_user]
 end
 
+link "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/code-studio" do
+  to "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard/public/code-studio-package"
+  action :create
+  user node[:current_user]
+  group node[:current_user]
+end
+
 execute "bundle-install-dashboard" do
   command "sudo bundle install"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   user node[:current_user]
   group node[:current_user]
   action :nothing
-  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'create-dashboard-db' : 'build-dashboard'}]", :immediately
+  notifies :run, "execute[#{node['cdo-apps']['local_mysql'] ? 'setup-dashboard-db' : 'build-dashboard'}]", :immediately
 end
 
-execute "create-dashboard-db" do
-  command "rake db:create"
+execute "setup-dashboard-db" do
+  command "bundle exec rake dashboard:setup_db"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
   environment ({
-    'LC_ALL'=>nil,
-  })
-  user node[:current_user]
-  group node[:current_user]
-  action :nothing
-  notifies :run, 'execute[load-dashboard-schema]', :immediately
-end
-
-execute "load-dashboard-schema" do
-  command "rake db:setup_or_migrate"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}/dashboard"
-  environment ({
-    'LC_ALL'=>nil,
+    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
   })
   user node[:current_user]
   group node[:current_user]
@@ -86,10 +81,10 @@ execute "load-dashboard-schema" do
 end
 
 execute "build-dashboard" do
-  command "rake build:dashboard"
+  command "bundle exec rake build:dashboard"
   cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
   environment ({
-    'LC_ALL'=>nil,
+    'LC_ALL' => 'en_US.UTF-8', 'RAILS_ENV' => "#{node.chef_environment}"
   })
   user node[:current_user]
   group node[:current_user]
@@ -97,5 +92,10 @@ execute "build-dashboard" do
 end
 
 service 'dashboard' do
+  supports reload: true
+  reload_command '/etc/init.d/dashboard upgrade'
   action [:enable, :start]
+
+  # Restart Unicorn when Ruby is upgraded
+  subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed
 end

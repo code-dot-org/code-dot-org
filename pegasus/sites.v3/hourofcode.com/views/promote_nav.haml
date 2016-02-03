@@ -1,0 +1,82 @@
+%div.resources-navigation
+  %a.nav-link{href: resolve_url('/promote')}
+    %div.nav-header= hoc_s(:resources_promote)
+  - if @country != 'us'
+    %div.nav-item
+      %a.nav-link{href: resolve_url('/promote/country-resources')}
+        = hoc_s(:resources_country_resources)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote')}
+      = hoc_s(:resources_nav_spread_word)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('onepager')"}
+        = hoc_s(:resources_one_pager)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#onepager')}
+        = hoc_s(:resources_one_pager)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('brochure')"}
+        = hoc_s(:resources_brochure)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#brochure')}
+        = hoc_s(:resources_brochure)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('videos')"}
+        = hoc_s(:resources_videos)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#videos')}
+        = hoc_s(:resources_videos)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('posters')"}
+        = hoc_s(:resources_posters)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#posters')}
+        = hoc_s(:resources_posters)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('social')"}
+        = hoc_s(:resources_social)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#social')}
+        = hoc_s(:resources_social)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('logo')"}
+        = hoc_s(:resources_logo)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#logo')}
+        = hoc_s(:resources_logo)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('stickers')"}
+        = hoc_s(:resources_stickers)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#stickers')}
+        = hoc_s(:resources_stickers)
+  %div.nav-item
+    - if request.path == "/promote/resources"
+      %a.nav-link{href:"#", onclick:"return adjustScroll('sample-emails')"}
+        = hoc_s(:resources_emails)
+    - else
+      %a.nav-link{href: resolve_url('/promote/resources#sample-emails')}
+        = hoc_s(:resources_emails)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote/stats')}
+      = hoc_s(:resources_stats)
+  %div.nav-item
+    %a.nav-link{href: resolve_url('/promote/press-kit')}
+      = hoc_s(:resources_press_kit)
+= view :resources_nav
+
+:javascript
+
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }

@@ -45,8 +45,9 @@ exports.cloneWithoutFunctions = function(object) {
 };
 
 /**
- * Returns a new object with the properties from defaults overriden by any
+ * Returns a new object with the properties from defaults overridden by any
  * properties in options. Leaves defaults and options unchanged.
+ * NOTE: For new code, use $.extend({}, defaults, options) instead
  */
 exports.extend = function(defaults, options) {
   var finalOptions = exports.shallowCopy(defaults);
@@ -138,6 +139,17 @@ exports.wrapNumberValidatorsForLevelBuilder = function () {
     }
     return numVal(text);
   };
+};
+
+/**
+ * Return a random key name from an object.
+ *
+ * Slightly modified from: http://stackoverflow.com/a/15106541
+ */
+
+exports.randomKey = function (obj) {
+  var keys = Object.keys(obj);
+  return keys[keys.length * Math.random() << 0];
 };
 
 /**
@@ -285,4 +297,81 @@ exports.getPegasusHost = function() {
           return null;
       }
   }
+};
+
+/**
+ * IE9 throws an exception when trying to access the media field of a stylesheet
+ */
+exports.browserSupportsCssMedia = function () {
+  var styleSheets = document.styleSheets;
+  for (var i = 0; i < styleSheets.length; i++) {
+    var rules = styleSheets[i].cssRules || styleSheets[i].rules;
+    try {
+      if (rules.length > 0) {
+        // see if we can access media
+        var media = rules[0].media;
+      }
+    } catch (e) {
+      return false;
+    }
+  }
+  return true;
+};
+
+/**
+ * Remove escaped characters and HTML to convert some rendered text to what should appear in user-edited controls
+ * @param text
+ * @returns String that has no more escape characters and multiple divs converted to newlines
+ */
+exports.unescapeText = function(text) {
+  var cleanedText = text;
+  cleanedText = cleanedText.replace(/<div>/gi, '\n'); // Divs generate newlines
+  cleanedText = cleanedText.replace(/<[^>]+>/gi, ''); // Strip all other tags
+
+  // This next step requires some explanation
+  // In multiline text it's possible for the first line to render wrapped or unwrapped.
+  //     Line 1
+  //     Line 2
+  //   Can render as either of:
+  //     Line 1<div>Line 2</div>
+  //     <div>Line 1</div><div>Line 2</div>
+  //
+  // But leading blank lines will always render wrapped and should be preserved
+  //
+  //     Line 2
+  //     Line 3
+  //   Renders as
+  //    <div><br></div><div>Line 2</div><div>Line 3</div>
+  //
+  // To handle this behavior we strip leading newlines UNLESS they are followed
+  // by another newline, using a negative lookahead (?!)
+  cleanedText = cleanedText.replace(/^\n(?!\n)/, ''); // Strip leading nondoubled newline
+
+  cleanedText = cleanedText.replace(/&nbsp;/gi, ' '); // Unescape nonbreaking spaces
+  cleanedText = cleanedText.replace(/&gt;/gi, '>');   // Unescape >
+  cleanedText = cleanedText.replace(/&lt;/gi, '<');   // Unescape <
+  cleanedText = cleanedText.replace(/&amp;/gi, '&');  // Unescape & (must happen last!)
+  return cleanedText;
+};
+
+/**
+ * Escape special characters in a piece of text, and convert newlines to seperate divs
+ * @param text
+ * @returns String with special characters escaped and newlines converted divs
+ */
+exports.escapeText = function (text) {
+  var escapedText = text.toString();
+  escapedText = escapedText.replace(/&/g, '&amp;');   // Escape & (must happen first!)
+  escapedText = escapedText.replace(/</g, '&lt;');    // Escape <
+  escapedText = escapedText.replace(/>/g, '&gt;');    // Escape >
+  escapedText = escapedText.replace(/  /g,' &nbsp;'); // Escape doubled spaces
+
+  // Now wrap each line except the first line in a <div>,
+  // replacing blank lines with <div><br><div>
+  var lines = escapedText.split('\n');
+  var returnValue = lines[0] + lines.slice(1).map(function (line) {
+      return '<div>' + (line.length ? line : '<br>') + '</div>';
+    }).join('');
+
+  return returnValue;
 };

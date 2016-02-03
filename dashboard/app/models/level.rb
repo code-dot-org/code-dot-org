@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
@@ -6,6 +29,7 @@ class Level < ActiveRecord::Base
   belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_many :level_sources
+  has_many :hint_view_requests
 
   before_validation :strip_name
 
@@ -22,6 +46,9 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
+    instructions
+    markdown_instructions
+    authored_hints
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -115,7 +142,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if write_to_file?
+    if changed? && write_to_file? && self.published
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -159,6 +186,20 @@ class Level < ActiveRecord::Base
     end
   end
 
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
+    ['Unplugged', # no solutions
+     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', # dsl defined, covered in dsl
+     'Applab', # all applab are freeplay
+     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation'] # widgets
+  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "Gamelab", "StudioEC", "Artist"]
+
+  def self.where_we_want_to_calculate_ideal_level_source
+    self.
+      where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+      where('ideal_level_source_id is null').
+      to_a.reject {|level| level.try(:free_play)}
+  end
+
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.
@@ -186,18 +227,12 @@ class Level < ActiveRecord::Base
     end
   end
 
-  # Returns true if this is a pixelation level.
-  def pixelation?
-    # TODO(dave|joshlory): Define Pixelation < DSLDefined as a new level type,
-    # eliminating this fragile test of 'href'.
-    self.is_a?(DSLDefined) && self.properties['href'] == "pixelation/pixelation.html"
-  end
-
   # Returns whether this level is backed by a channel, whose id may
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
-    self.project_template_level || self.game == Game.applab || self.pixelation?
+    return false if self.try(:is_project_level)
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation
   end
 
   def key
@@ -220,9 +255,13 @@ class Level < ActiveRecord::Base
     self.name = name.to_s.strip unless name.nil?
   end
 
+  def self.cache_find(id)
+    Script.cache_find_level(id)
+  end
+
   private
 
   def write_to_file?
-    custom? && !is_a?(DSLDefined) && Rails.env.levelbuilder? && !ENV['FORCE_CUSTOM_LEVELS']
+    custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end

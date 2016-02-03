@@ -1,0 +1,79 @@
+<link type="text/css" rel="stylesheet" href="/vigenere/vigenere.css">
+<script type="text/javascript" src="/vigenere/vigenere.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row-fluid">
+    <div class="span4" id="left-column">
+
+      <div id="controls">
+        <form>
+          <fieldset>
+            <h4 class="legend">Cipher</h4>
+
+            <label for="plaintext-input">Enter your text message (140 chars)</label>
+            <textarea class="input-block-level" id="plaintext-input" rows=5 onblur="cleanInput(this)" onkeyup="setup();">IF_ONLY_THIS_MESSAGE_COULD_BE_A_SECRET</textarea>
+
+            <label for="keyword">Enter your secret key</label>
+            <input class="input-block-level" type=text id="keyword-input" value="MY_SECRET_KEY" onblur="cleanInput(this)" onkeyup="setup();" placeholder="Type something…">
+
+          </fieldset>
+
+          <fieldset class="btn-group" id="mode-toggle" data-toggle="buttons-radio">
+            <button type="button" class="btn" value="encrypt">Encrypt</button>
+            <button type="button" class="btn" value="decrypt">Decrypt</button>
+          </fieldset>
+
+          <fieldset class="btn-group" id="action-toggle" data-toggle="buttons-radio">
+            <button title="restart" type="button" onClick="restart()" class="btn"><i class="icon-repeat"></i></button>
+            <button title="play" type="button" onClick="play()" class="btn"><i class="icon-play"></i></button>
+            <button title="pause" type="button" onClick="pause()" class="btn"><i class="icon-pause"></i></button>
+            <button title="step" type="button" onClick="pause(); encodeNextCharacter()" class="btn"><i class="icon-step-forward"></i></button>
+            <button title="fast forward" type="button" onClick="encodeFullText()" class="btn"><i class="icon-fast-forward"></i></button>
+          </fieldset>
+
+          <fieldset>
+            <label for="speedSlider" style="margin-bottom: 10px">Encryption speed</label>
+
+            <div class="span2"><label>Slow</label></div>
+
+            <div class="span7">
+              <div id="speedSlider" style="width: 100%"></div>
+            </div>
+
+            <div class="span2 pull-right"><label>Fast</label></div>
+          </fieldset>
+
+        </form>
+      </div>
+
+      <div id="inputs">
+        <form>
+          <fieldset>
+            <h4 class="legend">Result</h4>
+
+              <label for="keyword-display">Key</label>
+              <p id="keyword-display" class="textarea">&nbsp;</p>
+
+              <label for="input-display"></label>
+              <p id="input-display" class="textarea">&nbsp;</p>
+
+              <label for="output-display"></label>
+              <p id="output-display" class="textarea">&nbsp;</p>
+
+          </fieldset>
+
+          <fieldset>
+            <button id="finished" type="button" class="btn btn-primary">Finished!</button>
+            <i id="bubble" class="fa fa-question-circle fa-lg"></i>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="span8" id="vigenere-table">
+    </div>
+  </div>
+
+</div>

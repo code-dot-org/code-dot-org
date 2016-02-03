@@ -23,7 +23,17 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "video_key": "frozen_functions"
+    "video_key": "frozen_functions",
+    "markdown_instructions": "Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -79,17 +89,17 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
-        <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">10</title>
-        </block>
         <block type="jump_by_constant_dropdown">
           <title name="DIR">jumpForward</title>
           <title name="VALUE" config="25,50,100,150,200,300">25</title>
         </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
+        </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

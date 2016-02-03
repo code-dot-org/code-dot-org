@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Control
@@ -20,11 +19,11 @@ Category: Control
 
 [short_description]
 
-Clear an existing timer by passing in the value returned by `setTimeout`.
+Clears an existing timer by passing in the numeric value returned by setTimeout().
 
 [/short_description]
 
-**Note:** This function uses the value returned by the [setTimeout(function, milliseconds)](/applab/docs/setTimeout) function.
+Sometimes you need to clear a timeout timer before it executes. clearTimeout() uses the value returned by the [setTimeout(function, milliseconds)](/applab/docs/setTimeout) function.
 
 [/description]
 
@@ -33,14 +32,14 @@ ____________________________________________________
 
 [example]
 
-In this example, note how the timer is cancelled before the code has run: the text indicating that the timeout has completed does not get printed to the debugging console.
-<pre>
-var t = setTimeout(function() { //Save the timeout value in variable t
-  console.log("The timeout has completed"); //When the code runs, print a message to the debugging console
-}, 10000); //Set the delay to 10000 milliseconds
-console.log("Timer ID: " + t); //Print the timer ID to the console
-clearTimeout(t); //Use variable t to cancel the timeout
-</pre>
+```
+// Timeout is cleared immediately.
+var t = setTimeout(function() {
+  console.log("The timeout has completed");
+}, 10000);
+console.log("Timer ID: " + t);
+clearTimeout(t);
+```
 
 [/example]
 
@@ -48,54 +47,31 @@ ____________________________________________________
 
 [example]
 
-We can also use `clearTimeout` with this turtle example from the [setTimeout](http://staging.code.org/applab/docs/setTimeout) page. Note how the turtle only moves once, instead of twice when the timeout is not cancelled.
-<pre>
-show(); //Display the turtle
-moveForward(50); //Move the turtle 50 pixels
-var t = setTimeout(function() { //Save the timeout value in variable t
-  moveForward(100); //Move the turtle another 100 pixels after the timeout
-}, 2000); //Set the delay to 2000 milliseconds
-clearTimeout(t); //Use variable t to cancel the timeout
-</pre>
+**Example: Stop the Countdown** The user controls whether to clear the 3 second timeout timer.
 
-[/example]
-
-____________________________________________________
-
-[example]
-
-In this advanced example, we create UI controls to start and stop a timer. We use `onEvent` to react to clicks on the buttons.
-<pre>
-//Create a text label with instructions
-textLabel("instructions", "Click Start to being the timer, then Stop to prevent it from completing");
-//Create a text label to report status
+```
+// The user controls whether to clear the 3 second timeout timer.
+textLabel("instructions", "Click Start to begin a 3 second timeout timer, then Stop to prevent it from completing");
 textLabel("status", "");
-//Create a button to start the timeout
 button("startButton", "Start");
-//Create a button to cancel the timeout
 button("cancelButton", "Stop");
-//Declare a variable to store the timeout return value
-var t; //Note that t is declared outside of the two onEvent functions so that both can use it
-//Start the timeout when the Start button is clicked
+var t;
 onEvent("startButton", "click", function(){
-  t = setTimeout(function() { //Save the timeout value in variable t
-    //If the timeout completes without being cancelled, update the status text
+  t = setTimeout(function() {
     setText("status", "The timer completed!");
-   }, 10000); //Set the delay to 10000 milliseconds
-   //Update the status text to indicate that the timeout has started
+   }, 3000);
    setText("status", "Timer started!");
-   console.log("Timer ID: " + t); //Print the timer ID to the console
+   console.log("Timer ID: " + t);
 });
-//Cancel the timeout when the Cancel button is clicked
 onEvent("cancelButton", "click", function(){
-  if(t) { //Make sure that the variable t contains a timeout return value
-    clearTimeout(t); //Use variable t to cancel the timeout
+  if(t) {
+    clearTimeout(t);
     setText("status", "The timer has been cancelled.");
   } else {
     setText("status", "You need to start the timer before you can stop it :)");
   }
 });
-</pre>
+```
 
 [/example]
 
@@ -104,9 +80,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 clearTimeout(timeout);
-</pre>
+```
 
 [/syntax]
 
@@ -130,6 +107,7 @@ No return value.
 [tips]
 
 ### Tips
+- If you want to clear a timeout interval you need to save the value returned by setTimeout, var i = setTimeout(callback, ms);
 
 [/tips]
 

@@ -9,13 +9,13 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxparams: 3,
  maxstatements: 200
 */
 /* global -Blockly */
-/* global $ */
 /* global sendReport */
 /* global confirm */
 'use strict';
@@ -219,6 +219,13 @@ NetSim.prototype.init = function(config) {
   this.pusherApplicationKey = config.pusherApplicationKey;
 
   /**
+   * The strict maximum number of routers per shard.  Note the real maximum
+   * may be lower if bounded by addressable space.
+   * @type {number}
+   */
+  this.globalMaxRouters = config.netsimMaxRouters;
+
+  /**
    * Configuration for reporting level completion
    * @type {Object}
    */
@@ -247,7 +254,7 @@ NetSim.prototype.init = function(config) {
 
   // Create netsim lobby widget in page
   this.currentUser_.whenReady(function () {
-    this.initWithUserName_(this.currentUser_);
+    this.initWithUser_(this.currentUser_);
   }.bind(this));
 
   // Begin the main simulation loop
@@ -302,22 +309,13 @@ NetSim.prototype.shouldShowAnyTabs = function () {
 };
 
 /**
- * @returns {boolean} TRUE if the "resetShard" flag is found in the URL
- * TODO: This needs to be replaced with real UI and a route that
- *       only allows section owners and admins to perform a reset.
- */
-NetSim.prototype.shouldResetShard = function () {
-  return /\bresetShard\b/i.test(location.search);
-};
-
-/**
  * Initialization that can happen once we have a user name.
  * Could collapse this back into init if at some point we can guarantee that
  * user name is available on load.
  * @param {DashboardUser} user
  * @private
  */
-NetSim.prototype.initWithUserName_ = function (user) {
+NetSim.prototype.initWithUser_ = function (user) {
   this.mainContainer_ = $('#netsim');
 
   // Create log panels according to level configuration
@@ -556,6 +554,8 @@ NetSim.prototype.disconnectFromShard = function (onComplete) {
     }
 
     this.myNode = null;
+    this.shard_.disconnect();
+    this.shard_ = null;
     this.shardChange.notifyObservers(null, null);
     onComplete(err, result);
   }.bind(this));
@@ -620,12 +620,13 @@ NetSim.prototype.getConnectedRouter = function () {
  * Establish a connection between the local client and the given
  * simulated router.
  * @param {number} routerID
+ * @param {NodeStyleCallback} onComplete
  */
-NetSim.prototype.connectToRouter = function (routerID) {
+NetSim.prototype.connectToRouter = function (routerID, onComplete) {
   if (this.isConnectedToRemote()) {
     // Disconnect and try to connect again when we're done.
     logger.warn("Auto-disconnecting from previous router.");
-    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID));
+    this.disconnectFromRemote(this.connectToRouter.bind(this, routerID, onComplete));
     return;
   }
 
@@ -634,6 +635,7 @@ NetSim.prototype.connectToRouter = function (routerID) {
     if (err) {
       logger.warn('Failed to find router with ID ' + routerID + '; ' +
           err.message);
+      onComplete(err);
       return;
     }
 
@@ -642,6 +644,7 @@ NetSim.prototype.connectToRouter = function (routerID) {
         logger.warn('Failed to connect to ' + router.getDisplayName() + '; ' +
             err.message);
       }
+      onComplete(err, router);
     });
   });
 };
@@ -973,11 +976,16 @@ function resizeFooterToFitToLeftOfContent() {
     return;
   }
 
+  var padding = parseInt(window.getComputedStyle(smallFooter)["padding-left"]);
+
+  var boundingWidth;
   if (leftColumn && $(leftColumn).is(':visible')) {
-    smallFooter.style.maxWidth = leftColumn.getBoundingClientRect().right + 'px';
+    boundingWidth = leftColumn.getBoundingClientRect().right;
   } else if (instructions && $(instructions).is(':visible')) {
-    smallFooter.style.maxWidth = instructions.getBoundingClientRect().right + 'px';
+    boundingWidth = instructions.getBoundingClientRect().right;
   }
+
+  smallFooter.style.maxWidth = (boundingWidth) ? (boundingWidth - padding) + 'px' : null;
 }
 
 var netsimDebouncedResizeFooter = _.debounce(function () {
@@ -1012,28 +1020,9 @@ NetSim.prototype.debouncedResizeFooter = function () {
  * Re-render parts of the page that can be re-rendered in place.
  */
 NetSim.prototype.render = function () {
-  var isConnected, clientStatus, myHostname, myAddress, remoteNodeName,
-      shareLink;
-
-  isConnected = false;
-  clientStatus = i18n.disconnected();
-  if (this.myNode) {
-    clientStatus = 'In Lobby';
-    myHostname = this.myNode.getHostname();
-    if (this.myNode.myWire) {
-      myAddress = this.myNode.myWire.localAddress;
-    }
-  }
-
   if (this.isConnectedToRemote()) {
-    isConnected = true;
-    clientStatus = i18n.connected();
-    remoteNodeName = this.getConnectedRemoteNode().getDisplayName();
-  }
+    var myAddress = this.myNode.getAddress();
 
-  shareLink = this.lobby_.getShareLink();
-
-  if (this.isConnectedToRemote()) {
     // Swap in 'connected' div
     this.mainContainer_.find('#netsim-disconnected').hide();
     this.mainContainer_.find('#netsim-connected').show();
@@ -1044,12 +1033,10 @@ NetSim.prototype.render = function () {
     // Render left column
     if (this.statusPanel_) {
       this.statusPanel_.render({
-        isConnected: isConnected,
-        statusString: clientStatus,
-        myHostname: myHostname,
+        myHostname: this.myNode.getHostname(),
         myAddress: myAddress,
-        remoteNodeName: remoteNodeName,
-        shareLink: shareLink
+        remoteNodeName: this.getConnectedRemoteNode().getDisplayName(),
+        shareLink: this.lobby_.getShareLink()
       });
     }
   } else {
@@ -1099,20 +1086,6 @@ NetSim.prototype.onShardChange_= function (shard, localNode) {
   this.visualization_.setShard(shard);
   this.visualization_.setLocalNode(localNode);
   this.render();
-
-  // TODO (bbuchanan): Tear this out when replacing reset option with real UI.
-  if (shard && this.shouldResetShard() && confirm("Are you sure?" +
-          "  This will kick everyone out and reset all data for the class.")) {
-    shard.resetEverything(function (err) {
-      if (err) {
-        logger.error(err);
-        NetSimAlert.error(i18n.shardResetError());
-        return;
-      }
-      // Reload page without the shard-reset query parameter
-      location.search = location.search.replace(/&?resetShard([^&]$|[^&]*)/i, "");
-    }.bind(this));
-  }
 };
 
 /**
@@ -1315,6 +1288,10 @@ NetSim.prototype.updateLayout = function () {
  * button.  Should mark the level as complete and navigate to the next level.
  */
 NetSim.prototype.completeLevelAndContinue = function () {
+  if (this.isConnectedToRemote() && !confirm(i18n.onBeforeUnloadWarning())) {
+    return;
+  }
+
   // Avoid multiple simultaneous submissions.
   $('.submitButton').attr('disabled', true);
 
@@ -1342,4 +1319,20 @@ NetSim.prototype.completeLevelAndContinue = function () {
       }
     }.bind(this)
   });
+};
+
+/**
+ * Attempt to reset the simulation shard, kicking all users out and resetting
+ * all data.
+ */
+NetSim.prototype.resetShard = function () {
+  if (this.shard_ && confirm(i18n.shardResetConfirmation())) {
+    this.shard_.resetEverything(function (err) {
+      if (err) {
+        logger.error(err);
+        NetSimAlert.error(i18n.shardResetError());
+        return;
+      }
+    }.bind(this));
+  }
 };

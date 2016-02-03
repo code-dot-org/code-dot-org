@@ -13,6 +13,11 @@ social:
   "og:video:type": ""
 ---
 
-# Organisers
+# Organizatori
+
+## Coordonatorul evenimentului pentru Romania este <a href="http://www.adfaber.org">ADFABER - Technlology for Social Change.</a> 
+
+Pentru orice intrebari legate de organizarea evenimentelor Hour of Code in Romania va rugam sa accesati link-ul de mai jos sau sa trimiteti un email la HOC@adfaber.org 
+
 
 Please visit [HourofCode.com/ro](http://hourofcode.com/ro/ro) for more information.

@@ -3,6 +3,7 @@ var assert = testUtils.assert;
 testUtils.setupLocales();
 
 var testCollectionUtils = require('./util/testCollectionUtils');
+var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
 
 /**
  * Loads blocks into the workspace, then calls
@@ -102,22 +103,196 @@ describe("checkForEmptyContainerBlockFailure_", function () {
 });
 
 /**
+ * Loads blocks into the workspace, then calls
+ * checkForEmptyContainerBlockFailure_ and validates
+ * that the result matches the expected result.
+ */
+describe("throwOnInvalidExampleBlocks", function () {
+  var studioApp;
+
+  // create our environment
+  beforeEach(function () {
+    testUtils.setupTestBlockly();
+    studioApp = testUtils.getStudioAppSingleton();
+    sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
+  });
+
+  it("throws on unfilled result", function () {
+    studioApp.loadBlocks('<xml>' +
+        '  <block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="aqua-star">' +
+        '        <arg name="radius" type="Number"></arg>' +
+        '      </mutation>' +
+        '      <functional_input name="ARG0">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '  <functional_input name="EXPECTED">' +
+        '    <block type="functional_plus" inline="false"></block>' +
+        '  </functional_input>' +
+        ' </block>' +
+        '</xml>');
+    assert.throws(function () {
+      var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+        return block.type === "functional_example";
+      })[0];
+      var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+      var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+      studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    }, Error, "Result has unfilled inputs");
+  });
+
+  it("throws on unfilled call", function () {
+    studioApp.loadBlocks('<xml>' +
+        '<block type="functional_example" inline="false">' +
+        '  <functional_input name="ACTUAL">' +
+        '    <block type="functional_call" inline="false">' +
+        '      <mutation name="aqua-star">' +
+        '        <arg name="radius" type="Number"></arg>' +
+        '      </mutation>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '  <functional_input name="EXPECTED">' +
+        '    <block type="functional_plus" inline="false">' +
+        '      <functional_input name="ARG1">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '      <functional_input name="ARG2">' +
+        '        <block type="functional_math_number">' +
+        '          <title name="NUM">1</title>' +
+        '        </block>' +
+        '      </functional_input>' +
+        '    </block>' +
+        '  </functional_input>' +
+        '</block>' +
+        '</xml>');
+    assert.throws(function () {
+      var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+        return block.type === "functional_example";
+      })[0];
+      var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+      var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+      studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    }, Error, "Call has unfilled inputs");
+  });
+
+  it("doesn't throw on filled call and result blocks", function () {
+    studioApp.loadBlocks('<xml>' +
+        '  <block type="functional_example" inline="false">' +
+        '    <functional_input name="ACTUAL">' +
+        '      <block type="functional_call" inline="false">' +
+        '        <mutation name="aqua-star">' +
+        '          <arg name="radius" type="Number"></arg>' +
+        '        </mutation>' +
+        '        <functional_input name="ARG0">' +
+        '          <block type="functional_math_number">' +
+        '            <title name="NUM">1</title>' +
+        '          </block>' +
+        '        </functional_input>' +
+        '      </block>' +
+        '    </functional_input>' +
+        '    <functional_input name="EXPECTED">' +
+        '      <block type="functional_plus" inline="false">' +
+        '        <functional_input name="ARG1">' +
+        '          <block type="functional_math_number">' +
+        '            <title name="NUM">1</title>' +
+        '          </block>' +
+        '        </functional_input>' +
+        '        <functional_input name="ARG2">' +
+        '          <block type="functional_math_number">' +
+        '            <title name="NUM">1</title>' +
+        '          </block>' +
+        '        </functional_input>' +
+        '      </block>' +
+        '    </functional_input>' +
+        '  </block>' +
+        '</xml>');
+    assert.doesNotThrow(function () {
+      var exampleBlock = Blockly.mainBlockSpace.getTopBlocks().filter(function (block) {
+        return block.type === "functional_example";
+      })[0];
+      var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
+      var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
+      studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
+    }, Error);
+  });
+});
+
+describe("getUserBlocks_", function () {
+  var studioApp;
+
+  // create our environment
+  beforeEach(function () {
+    testUtils.setupTestBlockly();
+    studioApp = testUtils.getStudioAppSingleton();
+  });
+
+  function validateNumUserBlocks(blockXml, expectedNum) {
+    studioApp.loadBlocks(blockXml);
+
+    // make sure we loaded correctly. text wont match exactly, but make sure if
+    // we had xml, we loaded something
+    var loaded = Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+    assert(loaded, "we didn't correctly load our test blocks");
+
+    var userBlocks = studioApp.feedback_.getUserBlocks_();
+    assert.equal(userBlocks.length, expectedNum);
+  }
+
+  it("usually ignores noneditable blocks", function () {
+    var testBlockXml = [
+      '<xml>',
+      '<block editable="false" type="text_print"></block>',
+      '<block editable="false" type="text"><title name="TEXT">TextContent</title></block>',
+      '<block editable="false" type="math_number"><title name="NUM">10</title></block>',
+      '</xml>'
+    ];
+
+    validateNumUserBlocks(testBlockXml.join(''), 0);
+  });
+
+  it("considers noneditable blocks when Blockly.readOnly === true", function () {
+    var testBlockXml = [
+      '<xml>',
+      '<block editable="false" type="text_print"></block>',
+      '<block editable="false" type="text"><title name="TEXT">TextContent</title></block>',
+      '<block editable="false" type="math_number"><title name="NUM">10</title></block>',
+      '</xml>'
+    ];
+
+    var readOnly = Blockly.readOnly;
+    Blockly.readOnly = true;
+    validateNumUserBlocks(testBlockXml.join(''), 3);
+    Blockly.readOnly = readOnly;
+  });
+});
+
+
+/**
  * Loads options.startBlocks into the workspace, then calls
- * getMissingRequiredBlocks and validates that the result matches the
+ * getMissingBlocks and validates that the result matches the
  * options.expectedResult
  */
-describe("getMissingRequiredBlocks_ tests", function () {
+describe("getMissingBlocks_ tests", function () {
   var studioApp;
 
   /**
-   * getMissingRequiredBlocks_ will return us an array of requiredBlocks.  We
-   * can't validate these using a simple assert.deepEqual because some blocks
-   * contain a members generated functions.  These functions are the same in
-   * terms of contents, but do not share the same space in memory, and thus
-   * will report as not equal when we want them to report as equal.  This method
-   * exists to validate equality in a way that treats those functions as equal.
+   * getMissingBlocks_ will return us an array of blocks.  We can't
+   * validate these using a simple assert.deepEqual because some blocks
+   * contain a members generated functions.  These functions are the
+   * same in terms of contents, but do not share the same space in
+   * memory, and thus will report as not equal when we want them to
+   * report as equal.  This method exists to validate equality in a way
+   * that treats those functions as equal.
    */
-  function validateMissingRequiredBlocks(result, expectedResult) {
+  function validateMissingBlocks(result, expectedResult) {
     var block, expectedBlock;
 
     if (result.length !== expectedResult.length) {
@@ -167,9 +342,9 @@ describe("getMissingRequiredBlocks_ tests", function () {
     assert(!options.userBlockXml || loaded, "either we didnt have  input xml" +
       "or we did, and we loaded something");
 
-    var missing = studioApp.feedback_.getMissingRequiredBlocks_(
+    var missing = studioApp.feedback_.getMissingBlocks_(
         options.requiredBlocks, options.numToFlag);
-    validateMissingRequiredBlocks(missing.blocksToDisplay, options.expectedResult);
+    validateMissingBlocks(missing.blocksToDisplay, options.expectedResult);
   }
 
   // create our environment

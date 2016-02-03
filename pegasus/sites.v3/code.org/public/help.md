@@ -3,10 +3,6 @@ title: How to help
 ---
 
 # How to Help
-## Host an Hour of Code - at work, in your community, or local school
-Millions of people of all ages have learned an [Hour of Code](http://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics.
-
-[<button>Join us</button>](http://code.org/learn)
 
 ## Make a generous donation
 We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
@@ -23,8 +19,8 @@ Petition your state to allow computer science to count towards math or science h
 
 [<button>Add your support</button>](/promote)
 
-## Translate our Tutorials
-Volunteers have translated our tutorials in over 34 languages. Help us continue to expand our tutorials for students around the world!
+## Translate our tutorials
+Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
 
 [<button>Translate tutorials</button>](/translate)
 
@@ -32,11 +28,16 @@ Volunteers have translated our tutorials in over 34 languages. Help us continue 
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
 
 <br/>
-![Code.org Cap](/images//fit-160/swag7.jpg)
-![Code.org T-shirt](/images//fit-160/swag10.jpg)
-![Code.org Stickers](/images//fit-160/swag8.jpg)
+![Code.org cap](/images//fit-160/swag7.jpg)
+![Code.org t-shirt](/images//fit-160/swag10.jpg)
+![Code.org stickers](/images//fit-160/swag8.jpg)
 
 [<button>Shop</button>](/shop)
+
+## Host an Hour of Code - at work, in your community, or local school
+Millions of people of all ages have learned an [Hour of Code](http://code.org/learn), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
+
+[<button>Start today</button>](https://code.org/learn)
 
 ---
 <a name="engineer"></a>
@@ -45,7 +46,7 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 ## Offer help to local teachers
 If you're already a software engineer, there are many opportunities to get involved locally. Volunteer to teach our [other courses](http://studio.code.org) to local student with [this guide](/educate/volunteer). And sign up to hear about volunteer opportunities near you.
 
-[<button>Learn more</button>](/volunteer/engineer)
+[<button>Learn more</button>](/volunteer)
 
 ### Or become a volunteer teacher yourself with one of these organizations:
 
@@ -59,8 +60,13 @@ Code.org's online platform [Code Studio](http://studio.code.org) enables student
 
 [<button>Learn more</button>](http://studio.code.org)
 
+<!--
 ## Spend 10 minutes adding "hints" to our tutorials
+
 With millions of students trying the Hour of Code, and hundreds of thousands doing the Code.org introductory online courses, we could use your help adding helpful hints for students who make mistakes. In just 10 minutes you can help improve our courses.
 
-[<button>Learn more</button>](/hints)
+[<button>Learn more</button>](http://code.org/hints)
+
+-->
+
 

@@ -1,4 +1,7 @@
 .field
+  = f.label :instructions
+  = f.text_area :instructions, placeholder: 'Instructions', rows: 4
+.field
   = f.label :markdown_instructions
   %p When specified, these instructions will render in the instructions popup.
   %p The regular instruction field above will still display as the instructions below the game area.
@@ -8,8 +11,19 @@
   #markdown-instructions-preview
 
 :javascript
-  var mdEditor = codeMirror('markdown_instructions', 'markdown', function (editor, change) {
+  var mdEditor = levelbuilder.initializeCodeMirror('markdown_instructions', 'markdown', function (editor, change) {
+    localStorage.setItem('markdown_' + #{@level.id}, editor.getValue());
+
     $('#markdown-instructions-preview')
       .html(marked(editor.getValue()))
       .children('details').details();
   }, true);
+
+  var locallyStoredMarkdown = localStorage.getItem('markdown_' + #{@level.id});
+  if (locallyStoredMarkdown) {
+    mdEditor.setValue(locallyStoredMarkdown);
+  }
+
+  $('#markdown-instructions-preview')
+      .html(marked(mdEditor.getValue()))
+      .children('details').details();

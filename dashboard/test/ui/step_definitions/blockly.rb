@@ -40,7 +40,7 @@ When /^I drag block "([^"]*)" above block "([^"]*)"$/ do |from, to|
   to_id = get_block_id(to)
   height = @browser.execute_script("return $(\"[block-id='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
   destination_has_parent = @browser.execute_script("return $(\"[block-id='#{to_id}']\").parent().attr('block-id') !== undefined;")
-  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height);
+  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height)
   @browser.execute_script code
 end
 
@@ -130,6 +130,13 @@ And /^I've initialized the workspace with an auto\-positioned flappy puzzle with
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
+And /^I've initialized the workspace with a manually\-positioned playlab puzzle$/ do
+  @browser.execute_script("Blockly.mainBlockSpace.clear();")
+  blocks_xml = '<xml><block type="studio_whenArrow" x="20"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
+  arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
+  @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
+end
+
 And /^I've initialized the workspace with the solution blocks$/ do
   @browser.execute_script("Blockly.mainBlockSpace.clear();")
   @browser.execute_script("__TestInterface.loadBlocks(appOptions.level.solutionBlocks);")
@@ -177,6 +184,14 @@ Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, className|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   classes.include?(className).should eq false
+end
+
+Then /^the modal function editor is closed$/ do
+  modal_dialog_visible.should eq false
+end
+
+Then /^the modal function editor is open$/ do
+  modal_dialog_visible.should eq true
 end
 
 When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|

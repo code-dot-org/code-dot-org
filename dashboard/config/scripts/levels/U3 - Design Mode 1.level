@@ -1,0 +1,94 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T15:03:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "button": null,
+      "textLabel": {
+        "params": [
+          "\"id\"",
+          "\"text\""
+        ]
+      },
+      "image": null,
+      "playSound": null,
+      "setPosition": null,
+      "setScreen": null,
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnRight": null,
+      "turnLeft": null,
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "forLoop_i_0_4": null,
+      "randomNumber_min_max": null,
+      "console.log": null,
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "return": null
+    },
+    "edit_code": true,
+    "encrypted_examples": "FwAFQH+MEbYxq4/EjyaM5XE9qRNxcBYqiMKgxiIAuKLVE2zWEo/Nc7wKvHQx\n2fVF\n",
+    "embed": "false",
+    "instructions": "Add a large red button to your screen using Design Mode. (Click for full instructions.)",
+    "markdown_instructions": "# Design Mode\r\n\r\n<img src=\"https://images.code.org/ec23eb303d31fcd8274fac6c2c0f7b9a-image-1444330773327.32.34 AM.png\" style=\"width: 150px; float: right\">\r\n\r\nYou now have Design Mode!  Check out the new button at the top of your App window. Design Mode will allow you to easily add UI elements to your projects and style them the way you want!\r\n\r\n**Goal:** Add a large red button to your app using Design Mode.\r\n\r\n# Do This:\r\n\r\n* **Switch to Design Mode:** the switch appears above your app window on the left.\r\n\r\n* **Find <img src=\"https://images.code.org/278f146396c80c97d0b5d73f24d48aec-image-1444335461720.png\"> in the Design Toolbox** and drag out a button and resize it. \r\n\r\n* **Change the button text** to say \"Click Me\".\r\n\r\n* **Set the color for the button** to be red.\r\n\r\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\" style=\"width: 500px; float: middle\">\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "video_key": "csp_applab_design",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -1,0 +1,24 @@
+%div{style: "margin-top: 50px;"}
+  %div{style: "position:relative; float: left; width: 49%; height:190px; padding-right:15px"}
+    %div{style: "position:absolute;  border-radius:5px; background-image: url(/shared/images/courses/logo_tall_teacher2.jpg); background-size: 100% 100%;"}
+    %div{:style => "position:absolute; background-color: #59b9dc; color:white;  padding:20px; border-radius:5px"}
+      %a{:href => resolve_url('/promote/resources')}
+        %button{:style => "font-size:18px; height:40px; margin-bottom: 10px;"}= hoc_s(:resources_banner_promote_text)
+      %p{style: "height:50px"}
+        = hoc_s(:resources_banner_promote_button)
+
+
+  %div{style: "position:relative; float: left; width: 49%; height:190px; padding-left:15px"}
+    %div{style: "position:absolute;  border-radius:5px; background-image: url(/shared/images/courses/logo_tall_teacher2.jpg); background-size: 100% 100%;"}
+    %div{:style => "position:absolute; background-color:#a69bc1; color:white;  padding:20px; border-radius:5px"}
+      %a{:href => resolve_url('/how-to')}
+        %button{:style => "font-size:18px; height:40px; margin-bottom: 10px;"}= hoc_s(:resources_banner_howto_text)
+      %p{style: "height:50px"}
+        = hoc_s(:resources_banner_howto_button)
+
+%div{style: "clear:both"}
+
+- if @country != 'us'
+  %a{:href => resolve_url('/promote/country-resources')}
+    %button= hoc_s(:resources_country_resources).gsub("Country", HOC_COUNTRIES[@country]['full_name'])
+

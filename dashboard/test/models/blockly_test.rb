@@ -90,6 +90,10 @@ XML
 XML
   end
 
+  test 'count xml blocks' do
+    assert_equal 4, Blockly.count_xml_blocks(@xml)
+  end
+
   test 'convert toolbox to category' do
     assert_equal_xml @category_xml, Blockly.convert_toolbox_to_category(@toolbox_xml)
   end
@@ -116,6 +120,17 @@ XML
     level = Level.create(instructions: 'test', type: 'Artist', start_blocks: @xml)
     assert_equal Nokogiri::XML.parse(level.start_blocks).serialize(save_with: Blockly::XML_OPTIONS),
       Nokogiri::XML.parse(level.start_blocks, &:noblanks).serialize(save_with: Blockly::XML_OPTIONS)
+  end
+
+  test 'Block base url is correct with blank and specified asset_host' do
+    ActionController::Base.stubs(:asset_host).returns(nil)
+    assert_equal '/blockly/', Blockly.base_url
+
+    ActionController::Base.stubs(:asset_host).returns('')
+    assert_equal '/blockly/', Blockly.base_url
+
+    ActionController::Base.stubs(:asset_host).returns('test-studio.code.org')
+    assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
   end
 
   test 'converts from and to XML level format' do

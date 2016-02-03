@@ -1,4 +1,18 @@
-/* global Blockly, ace:true, $, droplet, marked, digestManifest */
+/* global Blockly, ace:true, droplet, marked, dashboard, addToHome */
+
+/**
+ * For the most part, we depend on dashboard providing us with React as a global.
+ * However, there is at least one context in which this won't be true - when we
+ * show feedback blocks in their own iframe. In that case, load React from
+ * our module.
+ * This approach has a couple of drawbacks
+ * (1) ability for dashboard React and apps React versions to get out of sync
+ * (2) if we end up in other cases where React isn't provided to us as a global
+ *     we probably won't notice, which may not be intended behavior
+ */
+if (!window.React) {
+  window.React = require('react');
+}
 
 var aceMode = require('./acemode/mode-javascript_codeorg');
 var parseXmlElement = require('./xml').parseElement;
@@ -12,8 +26,14 @@ var blockUtils = require('./block_utils');
 var DropletTooltipManager = require('./blockTooltips/DropletTooltipManager');
 var url = require('url');
 var FeedbackUtils = require('./feedback');
-var React = require('react');
 var VersionHistory = require('./templates/VersionHistory.jsx');
+var Alert = require('./templates/alert.jsx');
+var codegen = require('./codegen');
+var puzzleRatingUtils = require('./puzzleRatingUtils');
+var logToCloud = require('./logToCloud');
+var AuthoredHints = require('./authoredHints');
+var Instructions = require('./templates/Instructions.jsx');
+var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -24,9 +44,6 @@ var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
-var BLOCK_X_COORDINATE = 70;
-var BLOCK_Y_COORDINATE = 30;
-
 var ENGLISH_LOCALE = 'en_us';
 
 /**
@@ -34,35 +51,14 @@ var ENGLISH_LOCALE = 'en_us';
  */
 var MAX_PHONE_WIDTH = 500;
 
-/**
- * HACK Alert. We're currently using two different copies of React - one in
- * dashboard, and another in apps. This can get us into trouble in that the
- * first element each of them serialize will have a reactid of .0. We get around
- * this for now by pre-creating/serializing100 elements (i.e. reserving those
- * ids for dashboard to use)
- * A better long term approach would be to either get dashboard and apps to
- * share a copy of React, or to have dashboard prerender its components (calling
- * renderToString using a server-copy of react results in random reactids)
- */
-(function reserveDashboardReactIds() {
-  var element = React.createElement("div");
-  for (var i = 0; i < 100; i++) {
-    React.renderToString(element);
-  }
-})();
-
 var StudioApp = function () {
   this.feedback_ = new FeedbackUtils(this);
+  this.authoredHintsController_ = new AuthoredHints(this);
 
   /**
   * The parent directory of the apps. Contains common.js.
   */
   this.BASE_URL = undefined;
-
-  /**
-  * If truthy, a version number to be appended to asset urls.
-  */
-  this.CACHE_BUST = undefined;
 
   /**
   * The current locale code.
@@ -87,8 +83,6 @@ var StudioApp = function () {
    */
   this.dropletTooltipManager = null;
 
-  this.blockYCoordinateInterval = 200;
-
   // @type {string} for all of these
   this.icon = undefined;
   this.smallIcon = undefined;
@@ -106,35 +100,55 @@ var StudioApp = function () {
   /**
   * The ideal number of blocks to solve this level.  Users only get 2
   * stars if they use more than this number.
-  * @type {!number=}
+  * @type {number}
   */
   this.IDEAL_BLOCK_NUM = undefined;
 
   /**
-  * An array of dictionaries representing required blocks.  Keys are:
-  * - test (required): A test whether the block is present, either:
-  *   - A string, in which case the string is searched for in the generated code.
-  *   - A single-argument function is called on each user-added block
-  *     individually.  If any call returns true, the block is deemed present.
-  *     "User-added" blocks are ones that are neither disabled or undeletable.
-  * - type (required): The type of block to be produced for display to the user
-  *   if the test failed.
-  * - titles (optional): A dictionary, where, for each KEY-VALUE pair, this is
-  *   added to the block definition: <title name="KEY">VALUE</title>.
-  * - value (optional): A dictionary, where, for each KEY-VALUE pair, this is
-  *   added to the block definition: <value name="KEY">VALUE</value>
-  * - extra (optional): A string that should be blacked between the "block"
-  *   start and end tags.
-  * @type {!Array=}
+   * @typedef {Object} TestableBlock
+   * @property {string|function} test - A test whether the block is
+   *           present, either:
+   *           - A string, in which case the string is searched for in
+   *             the generated code.
+   *           - A single-argument function is called on each user-added
+   *             block individually.  If any call returns true, the block
+   *             is deemed present.  "User-added" blocks are ones that are
+   *             neither disabled or undeletable.
+   * @property {string} type - The type of block to be produced for
+   *           display to the user if the test failed.
+   * @property {Object} [titles] - A dictionary, where, for each
+   *           KEY-VALUE pair, this is added to the block definition:
+   *           <title name="KEY">VALUE</title>.
+   * @property {Object} [value] - A dictionary, where, for each
+   *           KEY-VALUE pair, this is added to the block definition:
+   *           <value name="KEY">VALUE</value>
+   * @property {string} [extra] - A string that should be blacked
+   *           between the "block" start and end tags.
+   */
+
+  /**
+  * @type {!TestableBlock[]}
   */
   this.requiredBlocks_ = [];
 
   /**
   * The number of required blocks to give hints about at any one time.
   * Set this to Infinity to show all.
-  * @type {!number=}
+  * @type {number}
   */
   this.maxRequiredBlocksToFlag_ = 1;
+
+  /**
+  * @type {!TestableBlock[]}
+  */
+  this.recommendedBlocks_ = [];
+
+  /**
+  * The number of recommended blocks to give hints about at any one time.
+  * Set this to Infinity to show all.
+  * @type {number}
+  */
+  this.maxRecommendedBlocksToFlag_ = 1;
 
   /**
   * The number of attempts (how many times the run button has been pressed)
@@ -169,6 +183,16 @@ var StudioApp = function () {
    */
   this.share = false;
 
+  /**
+   * By default, we center our embedded levels. Can be overriden by apps.
+   */
+  this.centerEmbedded = true;
+
+  /**
+   * If set to true, we use our wireframe share (or chromeless share on mobile)
+   */
+  this.wireframeShare = false;
+
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -189,7 +213,6 @@ StudioApp.singleton = new StudioApp();
  */
 StudioApp.prototype.configure = function (options) {
   this.BASE_URL = options.baseUrl;
-  this.CACHE_BUST = options.cacheBust;
   this.LOCALE = options.locale || this.LOCALE;
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
@@ -209,6 +232,13 @@ StudioApp.prototype.configure = function (options) {
   // Bind assetUrl to the instance so that we don't need to depend on callers
   // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
+
+  this.maxVisualizationWidth = options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
+  this.minVisualizationWidth = options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
+};
+
+StudioApp.prototype.hasInstructionsToShow = function (config) {
+  return !!(config.level.instructions || config.level.aniGifURL);
 };
 
 /**
@@ -217,6 +247,18 @@ StudioApp.prototype.configure = function (options) {
 StudioApp.prototype.init = function(config) {
   if (!config) {
     config = {};
+  }
+
+  config.getCode = this.getCode.bind(this);
+
+  if (config.isLegacyShare && config.hideSource) {
+    $("body").addClass("legacy-share-view");
+    if (dom.isMobile()) {
+      $('#tryHoc').hide();
+    }
+    if (dom.isIOS() && !window.navigator.standalone) {
+      addToHome.show(true);
+    }
   }
 
   this.setConfigValues_(config);
@@ -231,18 +273,28 @@ StudioApp.prototype.init = function(config) {
       level_source_id: config.level_source_id,
       phone_share_url: config.send_to_phone_url,
       sendToPhone: config.sendToPhone,
-      twitter: config.twitter
+      twitter: config.twitter,
+      app: config.app,
+      isLegacyShare: config.isLegacyShare
     });
   }
 
   if (config.share) {
     this.handleSharing_({
-      noButtonsBelowOnMobileShare: config.noButtonsBelowOnMobileShare,
       makeUrl: config.makeUrl,
       makeString: config.makeString,
       makeImage: config.makeImage,
       makeYourOwn: config.makeYourOwn
     });
+  }
+
+  this.authoredHintsController_.init(config.level.authoredHints, config.scriptId, config.serverLevelId);
+  if (config.authoredHintViewRequestsUrl) {
+    this.authoredHintsController_.submitHints(config.authoredHintViewRequestsUrl);
+  }
+
+  if (config.puzzleRatingsUrl) {
+    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
   }
 
   // Record time at initialization.
@@ -259,19 +311,25 @@ StudioApp.prototype.init = function(config) {
     dom.addClickTouchEvent(showCode, _.bind(function() {
       if (this.editCode) {
         var result;
+        var nonDropletError = false;
+        // are we trying to toggle from blocks to text (or the opposite)
+        var fromBlocks = this.editor.currentlyUsingBlocks;
         try {
           result = this.editor.toggleBlocks();
         } catch (err) {
+          nonDropletError = true;
           result = {error: err};
         }
         if (result && result.error) {
-          // TODO (cpirich) We could extract error.loc to determine where the
-          // error occurred and highlight that error
+          logToCloud.addPageAction(logToCloud.PageAction.DropletTransitionError, {
+            dropletError: !nonDropletError,
+            fromBlocks: fromBlocks
+          });
           this.feedback_.showToggleBlocksError(this.Dialog);
         }
         this.onDropletToggle_();
       } else {
-        this.feedback_.showGeneratedCode(this.Dialog);
+        this.feedback_.showGeneratedCode(this.Dialog, config.appStrings);
       }
     }, this));
   }
@@ -281,10 +339,7 @@ StudioApp.prototype.init = function(config) {
     blockCount.style.display = 'none';
   }
 
-  this.icon = config.skin.staticAvatar;
-  this.smallIcon = config.skin.smallStaticAvatar;
-  this.winIcon = config.skin.winAvatar;
-  this.failureIcon = config.skin.failureAvatar;
+  this.setIconsFromSkin(config.skin);
 
   if (config.level.instructionsIcon) {
     this.icon = config.skin[config.level.instructionsIcon];
@@ -294,7 +349,7 @@ StudioApp.prototype.init = function(config) {
   if (config.showInstructionsWrapper) {
     config.showInstructionsWrapper(_.bind(function () {
       var shouldAutoClose = !!config.level.aniGifURL;
-      this.showInstructions_(config.level, shouldAutoClose);
+      this.showInstructions_(config.level, shouldAutoClose, false);
     }, this));
   }
 
@@ -306,8 +361,9 @@ StudioApp.prototype.init = function(config) {
     }
   }
 
-  // In embed mode, the display scales down when the width of the visualizationColumn goes below the min width
-  if(config.embed) {
+  // In embed mode, the display scales down when the width of the
+  // visualizationColumn goes below the min width
+  if(config.embed && config.centerEmbedded) {
     var resized = false;
     var resize = function() {
       var vizCol = document.getElementById('visualizationColumn');
@@ -344,22 +400,29 @@ StudioApp.prototype.init = function(config) {
   }
 
   var promptDiv = document.getElementById('prompt');
+  var prompt2Div = document.getElementById('prompt2');
   if (config.level.instructions) {
-    dom.setText(promptDiv, config.level.instructions);
+    var instructionsHtml = this.substituteInstructionImages(config.level.instructions);
+    $(promptDiv).html(instructionsHtml);
+  }
+  if (config.level.instructions2) {
+    var instructions2Html = this.substituteInstructionImages(config.level.instructions2);
+    $(prompt2Div).html(instructions2Html);
+    $(prompt2Div).show();
   }
 
-  if (config.level.instructions || config.level.aniGifURL) {
+  if (this.hasInstructionsToShow(config)) {
     var promptIcon = document.getElementById('prompt-icon');
     if (this.smallIcon) {
       promptIcon.src = this.smallIcon;
-    } else {
-      $('#prompt-icon-cell').hide();
+      $('#prompt-icon-cell').show();
     }
 
     var bubble = document.getElementById('bubble');
-    dom.addClickTouchEvent(bubble, _.bind(function() {
-      this.showInstructions_(config.level, false);
-    }, this));
+
+    this.authoredHintsController_.display(promptIcon, bubble, function () {
+      this.showInstructions_(config.level, false, true);
+    }.bind(this));
   }
 
   var aniGifPreview = document.getElementById('ani-gif-preview');
@@ -373,19 +436,7 @@ StudioApp.prototype.init = function(config) {
   }
 
   if (this.editCode) {
-    this.handleEditCode_({
-      codeFunctions: config.level.codeFunctions,
-      dropletConfig: config.dropletConfig,
-      unusedConfig: config.unusedConfig,
-      categoryInfo: config.level.categoryInfo,
-      startBlocks: config.level.lastAttempt || config.level.startBlocks,
-      afterEditorReady: config.afterEditorReady,
-      afterInject: config.afterInject,
-      readOnly: config.readonlyWorkspace,
-      textModeAtStart: config.level.textModeAtStart,
-      beginnerMode: config.level.beginnerMode,
-      autocompletePaletteApisOnly: config.level.autocompletePaletteApisOnly
-    });
+    this.handleEditCode_(config);
   }
 
   if (this.isUsingBlockly()) {
@@ -431,10 +482,11 @@ StudioApp.prototype.init = function(config) {
   }
 
   // Bind listener to 'Clear Puzzle' button
+  var hideIcon = utils.valueOr(config.skin.hideIconInClearPuzzle, false);
   var clearPuzzleHeader = document.getElementById('clear-puzzle-header');
   if (clearPuzzleHeader) {
     dom.addClickTouchEvent(clearPuzzleHeader, (function() {
-      this.feedback_.showClearPuzzleConfirmation(this.Dialog, (function() {
+      this.feedback_.showClearPuzzleConfirmation(this.Dialog, hideIcon, (function() {
         this.handleClearPuzzle(config);
       }).bind(this));
     }).bind(this));
@@ -451,7 +503,9 @@ StudioApp.prototype.init = function(config) {
         defaultBtnSelector: 'again-button',
         id: 'showVersionsModal'
       });
-      React.render(React.createElement(VersionHistory, {}), codeDiv);
+      React.render(React.createElement(VersionHistory, {
+        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
+      }), codeDiv);
 
       dialog.show();
     }).bind(this));
@@ -477,6 +531,42 @@ StudioApp.prototype.init = function(config) {
   }
 };
 
+StudioApp.prototype.substituteInstructionImages = function(htmlText) {
+  if (htmlText) {
+    for (var prop in this.skin.instructions2ImageSubstitutions) {
+      var value = this.skin.instructions2ImageSubstitutions[prop];
+      var substitutionHtml = '<span class="instructionsImageContainer"><img src="' + value + '" class="instructionsImage"/></span>';
+      var re = new RegExp('\\[' + prop + '\\]', 'g');
+      htmlText = htmlText.replace(re, substitutionHtml);
+    }
+  }
+
+  return htmlText;
+};
+
+StudioApp.prototype.getCode = function () {
+  if (!this.editCode) {
+    throw "getCode() requires editCode";
+  }
+  if (this.hideSource) {
+    return this.startBlocks_;
+  } else {
+    return this.editor.getValue();
+  }
+};
+
+StudioApp.prototype.setIconsFromSkin = function (skin) {
+  this.icon = skin.staticAvatar;
+  this.smallIcon = skin.smallStaticAvatar;
+  this.winIcon = skin.winAvatar;
+  this.failureIcon = skin.failureAvatar;
+};
+
+/**
+ * Reset the puzzle back to its initial state.
+ * Search aliases: "Start Over", startOver
+ * @param {Object} config - same config object passed to studioApp.init().
+ */
 StudioApp.prototype.handleClearPuzzle = function (config) {
   if (this.isUsingBlockly()) {
     if (Blockly.functionEditor) {
@@ -493,7 +583,16 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
       resetValue = config.level.startBlocks.replace(/\r\n/g, '\n');
     }
+    // TODO (bbuchanan): This getValue() call is a workaround for a Droplet bug,
+    // See https://github.com/droplet-editor/droplet/issues/137
+    // Calling getValue() updates the cached ace editor value, which can be
+    // out-of-date in droplet and cause an incorrect early-out.
+    // Remove this line once that bug is fixed and our Droplet lib is updated.
+    this.editor.getValue();
     this.editor.setValue(resetValue);
+  }
+  if (config.afterClearPuzzle) {
+    config.afterClearPuzzle();
   }
 };
 
@@ -518,27 +617,9 @@ StudioApp.prototype.handleSharing_ = function (options) {
       sliderCell.style.display = 'none';
     }
     if (belowVisualization) {
-      if (options.noButtonsBelowOnMobileShare) {
-        var visualization = document.getElementById('visualization');
-        belowVisualization.style.display = 'none';
-        visualization.style.marginBottom = '0px';
-      } else {
-        belowVisualization.style.display = 'block';
-        belowVisualization.style.marginLeft = '0px';
-        if (this.noPadding) {
-          var shareCell = document.getElementById('share-cell') ||
-              document.getElementById('right-button-cell');
-          if (shareCell) {
-            shareCell.style.marginLeft = '10px';
-            shareCell.style.marginRight = '10px';
-          }
-          var softButtons = document.getElementById('soft-buttons');
-          if (softButtons) {
-            softButtons.style.marginLeft = '10px';
-            softButtons.style.marginRight = '10px';
-          }
-        }
-      }
+      var visualization = document.getElementById('visualization');
+      belowVisualization.style.display = 'none';
+      visualization.style.marginBottom = '0px';
     }
   }
 
@@ -572,7 +653,7 @@ StudioApp.prototype.assetUrl_ = function (path) {
     throw new Error('StudioApp BASE_URL has not been set. ' +
       'Call configure() first');
   }
-  return this.BASE_URL + ((window.digestManifest || {})[path] || path);
+  return this.BASE_URL + path;
 };
 
 /**
@@ -608,6 +689,23 @@ StudioApp.prototype.toggleRunReset = function(button) {
   run.disabled = !showRun;
   reset.style.display = !showRun ? 'inline-block' : 'none';
   reset.disabled = showRun;
+
+  // Toggle soft-buttons (all have the 'arrow' class set):
+  $('.arrow').prop("disabled", showRun);
+};
+
+/**
+ * Attempts to associate a set of audio files to a given name
+ * Handles the case where cdoSounds does not exist, e.g. in tests
+ * and grunt dev preview mode
+ * @param {Object} audioConfig sound configuration
+ */
+StudioApp.prototype.registerAudio = function(audioConfig) {
+  if (!this.cdoSounds) {
+    return;
+  }
+
+  this.cdoSounds.register(audioConfig);
 };
 
 /**
@@ -630,6 +728,7 @@ StudioApp.prototype.loadAudio = function(filenames, name) {
  * @param {string} name sound ID
  * @param {Object} options for sound playback
  * @param {number} options.volume value between 0.0 and 1.0 specifying volume
+ * @param {function} [options.onEnded]
  */
 StudioApp.prototype.playAudio = function(name, options) {
   if (!this.cdoSounds) {
@@ -723,66 +822,45 @@ StudioApp.prototype.loadBlocks = function(blocksXml) {
 };
 
 /**
-* Spreading out the top blocks in workspace if it is not already set.
+* Applies the specified arrangement to top startBlocks. If any
+* individual blocks have x or y properties set in the XML, those values
+* take priority. If no arrangement for a particular block type is
+* specified, blocks are automatically positioned by Blockly.
+*
+* Note that, currently, only bounce and flappy use arrangements.
+*
 * @param {string} startBlocks String representation of start blocks xml.
 * @param {Object.<Object>} arrangement A map from block type to position.
 * @return {string} String representation of start blocks xml, including
 *    block position.
 */
 StudioApp.prototype.arrangeBlockPosition = function(startBlocks, arrangement) {
-  var type, arrangeX, arrangeY;
+
+  var type, xmlChild;
+
   var xml = parseXmlElement(startBlocks);
-  var xmlChildNodes = this.sortBlocksByVisibility(xml.childNodes);
-  var numberOfPlacedBlocks = 0;
-  for (var x = 0, xmlChild; xmlChildNodes && x < xmlChildNodes.length; x++) {
-    xmlChild = xmlChildNodes[x];
+
+  var xmlChildNodes = xml.childNodes || [];
+  arrangement = arrangement || {};
+
+  for (var i = 0; i < xmlChildNodes.length; i++) {
+    xmlChild = xmlChildNodes[i];
 
     // Only look at element nodes
     if (xmlChild.nodeType === 1) {
       // look to see if we have a predefined arrangement for this type
       type = xmlChild.getAttribute('type');
-      arrangeX = arrangement && arrangement[type] ? arrangement[type].x : null;
-      arrangeY = arrangement && arrangement[type] ? arrangement[type].y : null;
-
-      xmlChild.setAttribute('x', xmlChild.getAttribute('x') || arrangeX ||
-        BLOCK_X_COORDINATE);
-      xmlChild.setAttribute('y', xmlChild.getAttribute('y') || arrangeY ||
-        BLOCK_Y_COORDINATE +
-      this.blockYCoordinateInterval * numberOfPlacedBlocks);
-      numberOfPlacedBlocks += 1;
+      if (arrangement[type]) {
+        if (arrangement[type].x && !xmlChild.hasAttribute('x')) {
+          xmlChild.setAttribute('x', arrangement[type].x);
+        }
+        if (arrangement[type].y && !xmlChild.hasAttribute('y')) {
+          xmlChild.setAttribute('y', arrangement[type].y);
+        }
+      }
     }
   }
   return Blockly.Xml.domToText(xml);
-};
-
-/**
-* Sorts the array of xml blocks, moving visible blocks to the front.
-* @param {Array.<Element>} xmlBlocks An array of xml blocks.
-* @return {Array.<Element>} A sorted array of xml blocks, with all
-*     visible blocks preceding all hidden blocks.
-*/
-StudioApp.prototype.sortBlocksByVisibility = function(xmlBlocks) {
-  var userVisible;
-  var currentlyHidden = false;
-  var visibleXmlBlocks = [];
-  var hiddenXmlBlocks = [];
-  for (var x = 0, xmlBlock; xmlBlocks && x < xmlBlocks.length; x++) {
-    xmlBlock = xmlBlocks[x];
-    if (xmlBlock.getAttribute) {
-      userVisible = xmlBlock.getAttribute('uservisible');
-      var type = xmlBlock.getAttribute('type');
-      currentlyHidden = type &&
-        Blockly.Blocks[type].shouldHideIfInMainBlockSpace &&
-        Blockly.Blocks[type].shouldHideIfInMainBlockSpace();
-    }
-
-    if (currentlyHidden || userVisible === 'false') {
-      hiddenXmlBlocks.push(xmlBlock);
-    } else {
-      visibleXmlBlocks.push(xmlBlock);
-    }
-  }
-  return visibleXmlBlocks.concat(hiddenXmlBlocks);
 };
 
 StudioApp.prototype.createModalDialog = function(options) {
@@ -790,7 +868,21 @@ StudioApp.prototype.createModalDialog = function(options) {
   return this.feedback_.createModalDialog(options);
 };
 
-StudioApp.prototype.showInstructions_ = function(level, autoClose) {
+/**
+ * Simple passthrough to AuthoredHints.displayMissingBlockHints
+ * @param {String[]} blocks An array of XML strings representing the
+ *        missing recommended Blockly Blocks for which we want to
+ *        display hints.
+ */
+StudioApp.prototype.displayMissingBlockHints = function (blocks) {
+  this.authoredHintsController_.displayMissingBlockHints(blocks);
+};
+
+StudioApp.prototype.onReportComplete = function (response) {
+  this.authoredHintsController_.finishHints(response);
+};
+
+StudioApp.prototype.showInstructions_ = function(level, autoClose, showHints) {
   var instructionsDiv = document.createElement('div');
   var renderedMarkdown;
   var headerElement;
@@ -800,23 +892,42 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
     puzzle_number: level.puzzle_number
   });
 
-  if (window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE) {
-    renderedMarkdown = marked(level.markdownInstructions);
+  var markdownMode = window.marked && level.markdownInstructions && this.LOCALE === ENGLISH_LOCALE;
+
+  if (markdownMode) {
+    var markdownWithImages = this.substituteInstructionImages(level.markdownInstructions);
+    renderedMarkdown = marked(markdownWithImages);
     instructionsDiv.className += ' markdown-instructions-container';
     headerElement = document.createElement('h1');
-    headerElement.className = 'markdown-level-header-text';
+    headerElement.className = 'markdown-level-header-text dialog-title';
     headerElement.innerHTML = puzzleTitle;
     if (!this.icon) {
       headerElement.className += ' no-modal-icon';
     }
   }
 
-  instructionsDiv.innerHTML = require('./templates/instructions.html.ejs')({
+  var authoredHints;
+  if (showHints) {
+    authoredHints = this.authoredHintsController_.getHintsDisplay();
+  }
+
+  var instructionsContent = React.createElement(Instructions, {
     puzzleTitle: puzzleTitle,
-    instructions: level.instructions,
+    instructions: this.substituteInstructionImages(level.instructions),
+    instructions2: this.substituteInstructionImages(level.instructions2),
     renderedMarkdown: renderedMarkdown,
-    aniGifURL: level.aniGifURL
+    markdownClassicMargins: level.markdownInstructionsWithClassicMargins,
+    aniGifURL: level.aniGifURL,
+    authoredHints: authoredHints
   });
+
+  // Create a div to eventually hold this content, and add it to the
+  // overall container. We don't want to render directly into the
+  // container just yet, because our React component could contain some
+  // elements that don't want to be rendered until they are in the DOM
+  var instructionsReactContainer = document.createElement('div');
+  instructionsReactContainer.className='instructions-container';
+  instructionsDiv.appendChild(instructionsReactContainer);
 
   var buttons = document.createElement('div');
   buttons.innerHTML = require('./templates/buttons.html.ejs')({
@@ -830,52 +941,77 @@ StudioApp.prototype.showInstructions_ = function(level, autoClose) {
   // If there is an instructions block on the screen, we want the instructions dialog to
   // shrink down to that instructions block when it's dismissed.
   // We then want to flash the instructions block.
-  var hideFn = null;
   var hideOptions = null;
   var endTargetSelector = "#bubble";
 
   if ($(endTargetSelector).length) {
     hideOptions = {};
     hideOptions.endTarget = endTargetSelector;
+  }
 
+  var hideFn = _.bind(function() {
     // Momentarily flash the instruction block white then back to regular.
-    hideFn = function() {
+    if ($(endTargetSelector).length) {
       $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
         .delay(500)
         .animate({"background-color":"rgba(0,0,0,0)"},1000);
-    };
-  }
+    }
+    // Set focus to ace editor when instructions close:
+    if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
+      this.editor.aceEditor.focus();
+    }
 
-  var dialog = this.createModalDialog({
+    // Fire a custom event on the document so that other code can respond
+    // to instructions being closed.
+    var event = document.createEvent('Event');
+    event.initEvent('instructionsHidden', true, true);
+    document.dispatchEvent(event);
+  }, this);
+
+  this.instructionsDialog = this.createModalDialog({
+    markdownMode: markdownMode,
     contentDiv: instructionsDiv,
     icon: this.icon,
     defaultBtnSelector: '#ok-button',
     onHidden: hideFn,
-    scrollContent: !!renderedMarkdown,
+    scrollContent: true,
+    scrollableSelector: ".instructions-container",
     header: headerElement
   });
 
+  // Now that our elements are guaranteed to be in the DOM, we can
+  // render in our react components
+  $(this.instructionsDialog.div).on('show.bs.modal', function () {
+    React.render(instructionsContent, instructionsReactContainer);
+  });
+
   if (autoClose) {
-    setTimeout(function() {
-      dialog.hide();
-    }, 32000);
+    setTimeout(_.bind(function() {
+      this.instructionsDialog.hide();
+    }, this), 32000);
   }
 
   var okayButton = buttons.querySelector('#ok-button');
   if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function() {
-      if (dialog) {
-        dialog.hide();
+    dom.addClickTouchEvent(okayButton, _.bind(function() {
+      if (this.instructionsDialog) {
+        this.instructionsDialog.hide();
       }
-    });
+    }, this));
   }
 
-  dialog.show({hideOptions: hideOptions});
+  this.instructionsDialog.show({hideOptions: hideOptions});
 
   if (renderedMarkdown) {
     // process <details> tags with polyfill jQuery plugin
     $('details').details();
   }
+
+  // Fire a custom event on the document so that other code can respond
+  // to instructions being shown.
+  var event = document.createEvent('Event');
+  event.initEvent('instructionsShown', true, true);
+  document.dispatchEvent(event);
 };
 
 /**
@@ -913,11 +1049,16 @@ function resizePinnedBelowVisualizationArea() {
     return;
   }
 
+  var designToggleRow = document.getElementById('designToggleRow');
   var visualization = document.getElementById('visualization');
   var gameButtons = document.getElementById('gameButtons');
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
 
   var top = 0;
+  if (designToggleRow) {
+    top += $(designToggleRow).outerHeight(true);
+  }
+
   if (visualization) {
     top += $(visualization).outerHeight(true);
   }
@@ -978,27 +1119,37 @@ function applyTransformScaleToChildren(element, scale) {
 *  classes that would typically adjust width and scale.
 */
 StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
-  var codeWorkspace = document.getElementById('codeWorkspace');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
-  var visualization = document.getElementById('visualization');
-  var visualizationColumn = document.getElementById('visualizationColumn');
-  var visualizationEditor = document.getElementById('visualizationEditor');
 
   var rect = visualizationResizeBar.getBoundingClientRect();
   var offset;
   var newVizWidth;
   if (this.isRtl()) {
     offset = window.innerWidth -
-             (window.pageXOffset + rect.left + (rect.width / 2)) -
-             parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
+      (window.pageXOffset + rect.left + (rect.width / 2)) -
+      parseInt(window.getComputedStyle(visualizationResizeBar).right, 10);
     newVizWidth = (window.innerWidth - event.pageX) - offset;
   } else {
     offset = window.pageXOffset + rect.left + (rect.width / 2) -
-             parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
+      parseInt(window.getComputedStyle(visualizationResizeBar).left, 10);
     newVizWidth = event.pageX - offset;
   }
-  newVizWidth = Math.max(MIN_VISUALIZATION_WIDTH,
-                         Math.min(MAX_VISUALIZATION_WIDTH, newVizWidth));
+  this.resizeVisualization(newVizWidth);
+};
+
+/**
+ * Resize the visualization to the given width
+ */
+StudioApp.prototype.resizeVisualization = function (width) {
+  var codeWorkspace = document.getElementById('codeWorkspace');
+  var visualization = document.getElementById('visualization');
+  var visualizationResizeBar = document.getElementById('visualizationResizeBar');
+  var visualizationColumn = document.getElementById('visualizationColumn');
+  var visualizationEditor = document.getElementById('visualizationEditor');
+
+  var oldVizWidth = $(visualizationColumn).width();
+  var newVizWidth = Math.max(this.minVisualizationWidth,
+                         Math.min(this.maxVisualizationWidth, width));
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = (newVizWidth / this.vizAspectRatio) + 'px';
   var vizSideBorderWidth = visualization.offsetWidth - visualization.clientWidth;
@@ -1015,10 +1166,24 @@ StudioApp.prototype.onMouseMoveVizResizeBar = function (event) {
   visualizationColumn.style.maxWidth = (newVizWidth + vizSideBorderWidth) + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  applyTransformScaleToChildren(visualization,
-      'scale(' + (newVizWidth / this.nativeVizWidth) + ')');
+
+  // We don't get the benefits of our responsive styling, so set height
+  // explicitly
+  if (!utils.browserSupportsCssMedia()) {
+    visualization.style.height = newVizHeightString;
+    visualization.style.width = newVizWidthString;
+  }
+  var scale = (newVizWidth / this.nativeVizWidth);
+
+  applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
   if (visualizationEditor) {
     visualizationEditor.style.marginLeft = newVizWidthString;
+  }
+
+  if (oldVizWidth < 230 && newVizWidth >= 230) {
+    $('#soft-buttons').removeClass('soft-buttons-compact');
+  } else if (oldVizWidth > 230 && newVizWidth <= 230) {
+    $('#soft-buttons').addClass('soft-buttons-compact');
   }
 
   var smallFooter = document.querySelector('#page-small-footer .small-footer-base');
@@ -1091,7 +1256,12 @@ StudioApp.prototype.highlight = function(id, spotlight) {
 * Remove highlighting from all blocks
 */
 StudioApp.prototype.clearHighlighting = function () {
-  this.highlight(null);
+  if (this.isUsingBlockly()) {
+    this.highlight(null);
+  } else if (this.editCode && this.editor) {
+    // Clear everything (step highlighting, errors, etc.)
+    codegen.clearDropletAceHighlighting(this.editor, true);
+  }
 };
 
 /**
@@ -1112,7 +1282,8 @@ StudioApp.prototype.displayFeedback = function(options) {
   }
 
   this.feedback_.displayFeedback(options, this.requiredBlocks_,
-      this.maxRequiredBlocksToFlag_);
+      this.maxRequiredBlocksToFlag_, this.recommendedBlocks_,
+      this.maxRecommendedBlocksToFlag_);
 };
 
 /**
@@ -1123,7 +1294,7 @@ StudioApp.prototype.displayFeedback = function(options) {
  */
 StudioApp.prototype.getTestResults = function(levelComplete, options) {
   return this.feedback_.getTestResults(levelComplete,
-      this.requiredBlocks_, this.checkForEmptyBlocks_, options);
+      this.requiredBlocks_, this.recommendedBlocks_, this.checkForEmptyBlocks_, options);
 };
 
 // Builds the dom to get more info from the user. After user enters info
@@ -1163,11 +1334,15 @@ StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
 */
 StudioApp.prototype.report = function(options) {
   // copy from options: app, level, result, testResult, program, onComplete
-  var report = options;
-  report.pass = this.feedback_.canContinueToNextLevel(options.testResult);
-  report.time = ((new Date().getTime()) - this.initTime);
-  report.attempt = this.attempts;
-  report.lines = this.feedback_.getNumBlocksUsed();
+  var report = $.extend({}, options, {
+    pass: this.feedback_.canContinueToNextLevel(options.testResult),
+    time: ((new Date().getTime()) - this.initTime),
+    attempt: this.attempts,
+    lines: this.feedback_.getNumBlocksUsed(),
+  });
+
+  this.lastTestResult = options.testResult;
+
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -1286,6 +1461,8 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
  */
 StudioApp.prototype.setConfigValues_ = function (config) {
   this.share = config.share;
+  this.centerEmbedded = utils.valueOr(config.centerEmbedded, this.centerEmbedded);
+  this.wireframeShare = utils.valueOr(config.wireframeShare, this.wireframeShare);
 
   // if true, dont provide links to share on fb/twitter
   this.disableSocialShare = config.disableSocialShare;
@@ -1302,11 +1479,14 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
+  this.recommendedBlocks_ = config.level.recommendedBlocks || [];
+  this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
-  this.nativeVizWidth = config.nativeVizWidth || MAX_VISUALIZATION_WIDTH;
+  this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -1323,6 +1503,9 @@ StudioApp.prototype.setConfigValues_ = function (config) {
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
   this.backToPreviousLevel = config.backToPreviousLevel || function () {};
+  this.skin = config.skin;
+  this.showInstructions = this.showInstructions_.bind(this, config.level, false);
+  this.polishCodeHook = config.polishCodeHook;
 };
 
 // Overwritten by applab.
@@ -1401,9 +1584,11 @@ StudioApp.prototype.configureDom = function (config) {
     $(codeWorkspace).addClass('readonly');
   }
 
-  if (config.embed && config.hideSource) {
-    container.className = container.className + " embed_hidesource";
-    visualizationColumn.className = visualizationColumn.className + " embed_hidesource";
+  // NOTE: Can end up with embed true and hideSource false in level builder
+  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
+  if (config.embed && config.hideSource && this.centerEmbedded) {
+    container.className = container.className + " centered_embed";
+    visualizationColumn.className = visualizationColumn.className + " centered_embed";
   }
 
   if (!config.embed && !config.hideSource) {
@@ -1424,51 +1609,66 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   var container = document.getElementById(options.containerId);
   this.hideSource = true;
   var workspaceDiv = document.getElementById('codeWorkspace');
-  if(!options.embed || options.level.skipInstructionsPopup) {
+  if (!options.embed || options.level.skipInstructionsPopup) {
     container.className = 'hide-source';
   }
   workspaceDiv.style.display = 'none';
   document.getElementById('visualizationResizeBar').style.display = 'none';
 
-  // For share page on mobile, do not show this part.
-  if ((!options.embed) && (!this.share || !dom.isMobile())) {
-    var runButton = document.getElementById('runButton');
-    var buttonRow = runButton.parentElement;
-    var openWorkspace = document.createElement('button');
-    openWorkspace.setAttribute('id', 'open-workspace');
-    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
-
-    var belowViz = document.getElementById('belowVisualization');
-    belowViz.appendChild(this.feedback_.createSharingDiv({
-      response: {
-        level_source: window.location,
-        level_source_id: options.level_source_id,
-        phone_share_url: options.phone_share_url
-      },
-      sendToPhone: options.sendToPhone,
-      level: options.level,
-      twitter: options.twitter,
-      onMainPage: true
-    }));
-
-    dom.addClickTouchEvent(openWorkspace, function() {
-      // TODO: don't make assumptions about hideSource during init so this works.
-      // workspaceDiv.style.display = '';
-
-      // /c/ URLs go to /edit when we click open workspace.
-      // /project/ URLs we want to go to /view (which doesnt require login)
-      if (/^\/c\//.test(location.pathname)) {
-        location.href += '/edit';
+  // Chrome-less share page.
+  if (this.share) {
+    if (options.isLegacyShare || this.wireframeShare) {
+      document.body.style.backgroundColor = '#202B34';
+    }
+    if (this.wireframeShare) {
+      if (dom.isMobile()) {
+        document.getElementById('visualizationColumn').className = 'chromelessShare';
       } else {
-        location.href += '/view';
-      }
-    });
+        document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
+        document.getElementById('visualizationColumn').className = 'wireframeShare';
 
-    buttonRow.appendChild(openWorkspace);
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        React.render(React.createElement(WireframeSendToPhone, {
+          channelId: dashboard.project.getCurrentId(),
+          appType: dashboard.project.getStandaloneApp()
+        }), div);
+      }
+    } else if (!options.embed && !dom.isMobile()) {
+      var runButton = document.getElementById('runButton');
+      var buttonRow = runButton.parentElement;
+      var openWorkspace = document.createElement('button');
+      openWorkspace.setAttribute('id', 'open-workspace');
+      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+      dom.addClickTouchEvent(openWorkspace, function() {
+        // TODO: don't make assumptions about hideSource during init so this works.
+        // workspaceDiv.style.display = '';
+
+        // /c/ URLs go to /edit when we click open workspace.
+        // /project/ URLs we want to go to /view (which doesnt require login)
+        if (/^\/c\//.test(location.pathname)) {
+          location.href += '/edit';
+        } else {
+          location.href += '/view';
+        }
+      });
+
+      buttonRow.appendChild(openWorkspace);
+    }
   }
 };
 
-StudioApp.prototype.handleEditCode_ = function (options) {
+StudioApp.prototype.handleEditCode_ = function (config) {
+
+  if (this.hideSource) {
+    // In hide source mode, just call afterInject and exit immediately
+    if (config.afterInject) {
+      config.afterInject();
+    }
+    return;
+  }
+
   var displayMessage, examplePrograms, messageElement, onChange, startingText;
 
   // Ensure global ace variable is the same as window.ace
@@ -1479,32 +1679,35 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   /* jshint ignore:end */
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
-    options.codeFunctions, options.dropletConfig);
+    config.level.codeFunctions, config.dropletConfig);
   this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
     mode: 'javascript',
-    modeOptions: dropletUtils.generateDropletModeOptions(options.dropletConfig, options),
+    modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
     showPaletteInTextMode: true,
-    enablePaletteAtStart: !options.readOnly,
-    textModeAtStart: options.textModeAtStart
+    showDropdownInPalette: config.showDropdownInPalette,
+    allowFloatingBlocks: false,
+    dropIntoAceAtLineStart: config.dropIntoAceAtLineStart,
+    enablePaletteAtStart: !config.readonlyWorkspace,
+    textModeAtStart: config.level.textModeAtStart
   });
 
   this.editor.aceEditor.setShowPrintMargin(false);
 
   // Init and define our custom ace mode:
-  aceMode.defineForAce(options.dropletConfig, options.unusedConfig, this.editor);
+  aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
 
   // Add an ace completer for the API functions exposed for this level
-  if (options.dropletConfig) {
+  if (config.dropletConfig) {
     var functionsFilter = null;
-    if (options.autocompletePaletteApisOnly) {
-       functionsFilter = options.codeFunctions;
+    if (config.level.autocompletePaletteApisOnly) {
+       functionsFilter = config.level.codeFunctions;
     }
     var langTools = window.ace.require("ace/ext/language_tools");
     langTools.addCompleter(
-      dropletUtils.generateAceApiCompleter(functionsFilter, options.dropletConfig));
+      dropletUtils.generateAceApiCompleter(functionsFilter, config.dropletConfig));
   }
 
   this.editor.aceEditor.setOptions({
@@ -1512,9 +1715,15 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     enableLiveAutocompletion: true
   });
 
-  this.dropletTooltipManager = new DropletTooltipManager(this.appMsg);
-  this.dropletTooltipManager.registerBlocksFromList(
-    dropletUtils.getAllAvailableDropletBlocks(options.dropletConfig));
+  this.dropletTooltipManager = new DropletTooltipManager(
+    this.appMsg,
+    config.dropletConfig,
+    config.level.codeFunctions,
+    config.level.autocompletePaletteApisOnly);
+  if (config.level.dropletTooltipsDisabled) {
+    this.dropletTooltipManager.setTooltipsEnabled(false);
+  }
+  this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
   var hideToolboxHeader = document.getElementById('toolbox-header');
@@ -1539,11 +1748,12 @@ StudioApp.prototype.handleEditCode_ = function (options) {
 
   this.resizeToolboxHeader();
 
-  if (options.startBlocks) {
+  var startBlocks = config.level.lastAttempt || config.level.startBlocks;
+  if (startBlocks) {
 
     try {
       // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(options.startBlocks.replace(/\r\n/g, '\n'));
+      this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
     } catch (err) {
       // catch errors without blowing up entirely. we may still not be in a
       // great state
@@ -1556,7 +1766,7 @@ StudioApp.prototype.handleEditCode_ = function (options) {
     this.editor.aceEditor.getSession().setUndoManager(new UndoManager());
   }
 
-  if (options.readOnly) {
+  if (config.readonlyWorkspace) {
     // When in readOnly mode, show source, but do not allow editing,
     // disable the palette, and hide the UI to show the palette:
     this.editor.setReadOnly(true);
@@ -1564,17 +1774,29 @@ StudioApp.prototype.handleEditCode_ = function (options) {
   }
 
   // droplet may now be in code mode if it couldn't parse the code into
-  // blocks, so update the UI based on the current state:
-  this.onDropletToggle_();
+  // blocks, so update the UI based on the current state (don't autofocus
+  // if we have already created an instructionsDialog at this stage of init)
+  this.onDropletToggle_(!this.instructionsDialog);
 
   this.dropletTooltipManager.registerDropletBlockModeHandlers(this.editor);
 
-  if (options.afterEditorReady) {
-    options.afterEditorReady();
+  this.editor.on('palettetoggledone', function(e) {
+    // Reposition callouts after block/text toggle (in case they need to move)
+    $('.cdo-qtips').qtip('reposition', null, false);
+  });
+
+  if (this.instructionsDialog) {
+    // Initializing the droplet editor in text mode (ace) can steal the focus
+    // from our visible instructions dialog. Restore focus where it belongs:
+    this.instructionsDialog.focus();
   }
 
-  if (options.afterInject) {
-    options.afterInject();
+  if (config.afterEditorReady) {
+    config.afterEditorReady();
+  }
+
+  if (config.afterInject) {
+    config.afterInject();
   }
 };
 
@@ -1587,7 +1809,8 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
 };
 
 /**
- * Add the starting block(s).
+ * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
+ * level will advance as soon as it's loaded.
  * @param loadLastAttempt If true, try to load config.lastAttempt.
  */
 StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
@@ -1595,7 +1818,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
-  if (loadLastAttempt) {
+  if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
   if (config.forceInsertTopBlock) {
@@ -1643,8 +1866,9 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.level.edit_blocks) {
     this.checkForEmptyBlocks_ = false;
     if (config.level.edit_blocks === 'required_blocks' ||
-      config.level.edit_blocks === 'toolbox_blocks') {
-      // Don't show when run block for toolbox/required block editing
+        config.level.edit_blocks === 'toolbox_blocks' ||
+        config.level.edit_blocks === 'recommended_blocks') {
+      // Don't show when run block for toolbox/required/recommended block editing
       config.forceInsertTopBlock = null;
     }
   }
@@ -1731,10 +1955,13 @@ StudioApp.prototype.updateHeadersAfterDropletToggle_ = function (usingBlocks) {
 /**
  * Handle updates after a droplet toggle between blocks/code has taken place
  */
-StudioApp.prototype.onDropletToggle_ = function () {
+StudioApp.prototype.onDropletToggle_ = function (autoFocus) {
+  autoFocus = utils.valueOr(autoFocus, true);
   this.updateHeadersAfterDropletToggle_(this.editor.currentlyUsingBlocks);
   if (!this.editor.currentlyUsingBlocks) {
-    this.editor.aceEditor.focus();
+    if (autoFocus) {
+      this.editor.aceEditor.focus();
+    }
     this.dropletTooltipManager.registerDropletTextModeHandlers(this.editor);
   }
 };
@@ -1964,3 +2191,102 @@ function rectFromElementBoundingBox(element) {
   rect.setAttribute('height', bbox.height);
   return rect;
 }
+
+/**
+ * Displays a small alert box inside DOM element at parentSelector.
+ * @param {string} parentSelector
+ * @param {object} props A set of React properties passed to the AbuseError
+ *   component
+ */
+StudioApp.prototype.displayAlert = function (parentSelector, props) {
+  // Each parent is assumed to have at most a single alert. This assumption
+  // could be changed, but we would then want to clean up our DOM element on
+  // close
+  var parent = $(parentSelector);
+  var container = parent.children('.react-alert');
+  if (container.length === 0) {
+    container = $("<div class='react-alert'/>");
+    parent.append(container);
+  }
+
+  var reactProps = $.extend({}, {
+    className: 'alert-error',
+    onClose: function () {
+      React.unmountComponentAtNode(container[0]);
+    }
+  }, props);
+
+  var element = React.createElement(Alert, reactProps);
+  React.render(element, container[0]);
+};
+
+/**
+ * If the current project is considered abusive, display a small alert box
+ * @param {string} parentSelector The selector for the DOM element parent we
+ *   should display the error in.
+ */
+StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
+  if (window.dashboard && dashboard.project.exceedsAbuseThreshold()) {
+    this.displayAlert(parentSelector, {
+      body: React.createElement(dashboard.AbuseError, {
+        i18n: {
+          tos: window.dashboard.i18n.t('project.abuse.tos'),
+          contact_us: window.dashboard.i18n.t('project.abuse.contact_us')
+        }
+      }),
+      style: {
+        top: 45,
+        left: 350,
+        right: 50
+      }
+    });
+  }
+};
+
+/**
+ * Searches for cases where we have two (or more) nested for loops in which
+ * both loops use the same variable. This can cause infinite loops.
+ * @returns {boolean} True if we detect an instance of this.
+ */
+StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
+  return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
+};
+
+/**
+ * Looks to see if a particular block is (a) a for loop and (b) has a descendant
+ * for loop using the same variable.
+ * @returns {boolean} True if that is true of this block
+ */
+StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
+  if (!block || block.type !== 'controls_for' &&
+      block.type !== 'controls_for_counter') {
+    return;
+  }
+
+  var innerBlock = block.getInput('DO').connection.targetBlock();
+
+  // Not the most efficient of algo's, but we shouldn't have enough blocks for
+  // it to matter.
+  return block.getVars().some(function (varName) {
+    return innerBlock.getDescendants().some(function (descendant) {
+      if (descendant.type !== 'controls_for' &&
+          descendant.type !== 'controls_for_counter') {
+        return false;
+      }
+      return descendant.getVars().indexOf(varName) !== -1;
+    });
+  });
+};
+
+/**
+ * Polishes the generated code string before displaying it to the user. If the
+ * app provided a polishCodeHook function, it will be called.
+ * @returns {string} code string that may/may not have been modified
+ */
+StudioApp.prototype.polishGeneratedCodeString = function (code) {
+  if (this.polishCodeHook) {
+    return this.polishCodeHook(code);
+  } else {
+    return code;
+  }
+};

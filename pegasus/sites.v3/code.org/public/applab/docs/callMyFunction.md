@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## Call a function: myFunction()
+## Call a function
 
 [/name]
-
 
 [category]
 
@@ -20,9 +19,13 @@ Category: Functions
 
 [short_description]
 
-Calls a named function that takes no parameters.
+Calls a user defined function that takes no parameters, and optionally generates a return value.
 
 [/short_description]
+
+When you **define** a function you give a name to a set of actions you want the computer to perform. When you **call** a function you are telling the computer to run (or execute) that set of actions.
+
+A function definition can be provided anywhere in your code - in some ways the function definition lives independently of the code around it. It actually doesn't matter where you put a function definition. And you can call it from anywhere, either before or after the function definition. We will follow the convention of always putting function definitions at the bottom of our program, and the code for calling functions at the top of our program.
 
 [/description]
 
@@ -31,70 +34,120 @@ ____________________________________________________
 
 [example]
 
-The following block of code declares and invokes a function named `sayHello`. The function prints the message `Hello, coder!` to the console.
+```
+// Call function to draw a long line.
+longLine();
 
-<pre>
-function sayHello() {
-  console.log('Hello, coder!');
+function longLine(){ // Define a function to draw a long line.
+  penDown();
+  moveForward();
+  moveForward();
+  moveForward(); 
 }
-
-sayHello();
-</pre>
+```
 
 [/example]
 ____________________________________________________
-
 [example]
 
-The following block of code declares and invokes a function named `getFortune`. The function returns a random string from an Array of three strings.
+**Example: Big Box** Call functions to draw a big box.
 
-<pre>
-function getFortune() {
-  // Declare an Array of strings
-  var predictions = [
-    "The future is uncertain.",
-    "The future looks bright.",
-    "The future includes cookies."
-  ];
+```
+// Call functions to draw a big box.
+longLine();
+turnLeft();
+longLine();
+turnLeft();
+longLine();
+turnLeft();
+longLine();
+turnLeft();
 
-  /*
-   * Compute a random number between 0 and 2 inclusive.
-   * If you add or remove an element from the above Array,
-   *   the following formula does not need to be modified.
-   */
-  var index = randomNumber(0, predictions.length-1);
-
-  // return the string in the Array at the computed index
-  return predictions[index];
+function longLine(){ // Define a function to draw a long line.
+  penDown();
+  moveForward();
+  moveForward();
+  moveForward(); 
 }
-
-// invoke the getFortune function 6 times,
-//   after each invokation print the value returned by the function to the console.
-for (var i = 0; i < 6; i++) {
-  var fortune = getFortune();
-  console.log(fortune);
-}
-</pre>
+```
 
 [/example]
 
+____________________________________________________
+[example]
+
+**Example: Big Box (Improved)** Call functions to draw a big box. This is improved because it abstracts the box as two "left angles" and creates a new function that reduces repeated statements.
+
+```
+// Call functions to draw a big box.
+leftAngle();
+leftAngle();
+
+function leftAngle(){ // Define a function to draw a left angle with long lines.
+  longLine();
+  turnLeft();
+  longLine();
+  turnLeft();
+}
+
+function longLine(){ // Define a function to draw a long line.
+  penDown();
+  moveForward();
+  moveForward();
+  moveForward(); 
+}
+```
+
+[/example]
+____________________________________________________
+[example]
+
+**Example: Roll Two Die** Call functions that use randomNumber(1,6) to simulate rolling two die and summing the results.
+
+```
+// Call functions to generate two die rolls and sum the result. Display the value on the console.
+console.log(rollDie() + rollDie());
+
+function rollDie() { 
+// Define a function that uses randomNumber(1,6) to randomly generate a die roll, 1 to 6, and return the value.
+  var roll = randomNumber(1,6);
+  return roll;
+}
+```
+
+[/example]
 ____________________________________________________
 
 [syntax]
 
 ### Syntax
-<pre>
-var retval = callMyFunction();
-</pre>
+
+```
+myFunction();  // No value returned.  
+// OR
+var returnValue = myFunction();  // Value returned and saved.
+```
 
 [/syntax]
+
+[parameters]
+
+### Parameters
+Some functions do not any parameters.
+
+[/parameters]
 
 [returns]
 
 ### Returns
-A function returns the value that follows the first executed return keyword within the function.
+If the function returns a value, you must assign the returned value to a variable or use the value as a parameter in another function call.
 
 [/returns]
+
+### Tips
+- The purpose of a function is to help you organize your code and to avoid writing the same code twice.
+- You can call a function within another function.
+- A function that does not explicitly return a value returns the JavaScript value undefined.
 
 [bug]
 

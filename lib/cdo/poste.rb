@@ -48,7 +48,7 @@ module Poste
       unless messages.where(name: name).first
         id = messages.insert(name: name)
         raise StandardError, "Couldn't create poste_message row for '#{name}'" unless id > 0
-        logger.info "Registered new message template '#{name}' as #{id}"
+        logger.info "Registered new message template '#{name}' as #{id}" if logger
       end
 
       return path
@@ -121,7 +121,7 @@ module Poste2
 
   def self.create_recipient(address, params={})
     address = address.to_s.strip.downcase
-    raise ArgumentError, 'Invalid email address' unless email_address?(address)
+    raise ArgumentError, "Invalid email address (#{address})" unless email_address?(address)
 
     name = params[:name].strip if params[:name]
     ip_address = params[:ip_address]
@@ -218,7 +218,7 @@ module Poste2
       body = mail.body.to_s
 
       recipient = Poste2::ensure_recipient(mail.to.first, ip_address: '127.0.0.1')
-      Poste2::send_message('dashboard', recipient, body: body, subject: subject)
+      Poste2::send_message('dashboard', recipient, body: body, subject: subject, from: sender)
     end
 
   end

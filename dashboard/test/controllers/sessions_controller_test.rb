@@ -120,19 +120,19 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "oauth sign out page for facebook" do
     get :oauth_sign_out, provider: 'facebook'
-    assert_select 'a[href=https://www.facebook.com/logout.php]'
+    assert_select 'a[href="https://www.facebook.com/logout.php"]'
     assert_select 'h4', 'You used Facebook to sign in. Click here to sign out of Facebook.'
   end
 
   test "oauth sign out page for google account" do
     get :oauth_sign_out, provider: 'google_oauth2'
-    assert_select 'a[href=https://accounts.google.com/logout]'
+    assert_select 'a[href="https://accounts.google.com/logout"]'
     assert_select 'h4', 'You used Google Account to sign in. Click here to sign out of Google Account.'
   end
 
   test "oauth sign out page for microsoft account" do
     get :oauth_sign_out, provider: 'windowslive'
-    assert_select 'a[href=http://login.live.com/logout.srf]'
+    assert_select 'a[href="http://login.live.com/logout.srf"]'
     assert_select 'h4', 'You used Microsoft Account to sign in. Click here to sign out of Microsoft Account.'
   end
 

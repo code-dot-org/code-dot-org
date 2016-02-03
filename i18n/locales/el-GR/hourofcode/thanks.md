@@ -1,10 +1,10 @@
 * * *
 
-title: Σας ευχαριστούμε για την εγγραφή σας! διάταξη: ευρεία
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
-"og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>"
 
-"twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hour-of-code-2014-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 
 * * *
 
@@ -14,30 +14,36 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Ευχαριστούμε που γράφτηκες για να πραγματοποιήσεις μια Ώρα του Κώδικα!
 
-Δίνεις τη δυνατότητα σε μαθητές από όλο τον κόσμο να μάθουν μία Ώρα Κώδικα η οποία μπορεί * να αλλάξει την υπόλοιπη ζωή τους * κατά τη διάρκεια της εβδομάδας 7-13 Δεκεμβρίου.
+Δίνετε τη δυνατότητα σε όλους τους μαθητές σε όλο τον κόσμο να μάθουν μία Ώρα του Κώδικα που μπορεί να *αλλάξει τη ζωή τους*, μεταξύ <%= campaign_date('full') %>. Θα είμαστε σε επαφή σχετικά με τα βραβεία, νέους οδηγούς και άλλες συναρπαστικές ανανεώσεις. Τι μπορείτε να κάνετε τώρα;
 
-Θα είμαστε σε επαφή για βραβεία, νέα σεμινάρια και άλλες συναρπαστικές ενημερώσεις το φθινόπωρο. Έτσι, τι μπορείς να κάνεις τώρα;
+## 1. Διαδώστε το
 
-## 1. Διάδωσέ το
-
-Πες στους φίλους σου για την Ώρα του Κώδικα (#HourOfCode).
+Γίνατε μέλος του κινήματος της Ώρας του Κώδικα. Πείτε το στους φίλους σας με το **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## Ζήτησε από όλο το σχολείο σου να προσφέρει την Ώρα του Κώδικα
+## 2. Find a local volunteer to help you with your event.
 
-[ Στείλτε αυτό το email](<%= hoc_uri('/resources#email') %>) στον διευθυντή σας για να ενθαρρύνει κάθε τάξη στο σχολείο σας να εγγραφεί.
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## Ζήτησε από τον εργοδότη σου να συμμετάσχει
+## Ζητήστε από όλο το σχολείο να προσφέρει μία Ώρα του Κώδικα
 
-[ Στείλετε αυτό το email](<%= hoc_uri('/resources#email') %>) στον Προϊστάμενο ή τον Διευθύνοντα Σύμβουλο.
+[Στείλετε αυτό το μήνυμα](%= resolve_url('/promote/resources#sample-emails') %) στον Διευθυντή και προκαλέστε κάθε τάξη να εγγραφεί.
 
-## 4. Προώθησε την Ώρα Κώδικα στην κοινότητά σου
+## Ζήτα από τον εργοδότη σου να εμπλακεί 
 
-Επιστράτευσε έναν τοπικό σύλλογο — ένα σώμα προσκόπων, μια ενορία, ένα πανεπιστήμιο, μια ένωση εργαζομένων. Ή διοργάνωσε μια Ώρα του Κώδικα για το τη γειτονιάς σου.
+[Στείλετε αυτό το μήνυμα](%= resolve_url('/promote/resources#sample-emails') %) στον διαχειριστή ή Διευθύνοντα Σύμβουλο της εταιρείας.
 
-## 5. Ζήτα από έναν τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
+## 4. Προωθήστε την Ώρα του Κώδικα στην κοινότητά σας
 
-[ Στείλτε αυτό το email](<%= hoc_uri('/resources#politicians') %>) στον Δήμαρχο, το Δημοτικό Συμβούλιο, ή τη Σχολική Επιτροπή και καλέστε τους να επισκεφτούν το σχολείο σας, για την Ώρα του Κώδικα.
+[Προσκαλέστε μια τοπική ομάδα](%= resolve_url('/promote/resources#sample-emails') %) — αγόρια/κορίτσια Προσκόπους, εκκλησία, Πανεπιστήμιο, ομάδα παλαιμάχων, εργατικό συνδικάτο ή ακόμη και μερικούς φίλους. Δε χρειάζεται να πηγαίνετε σχολείο για να μάθετε νέες δεξιότητες. Χρησιμοποιήστε αυτές τις [αφίσες, πανό, αυτοκόλλητα, βίντεο, και άλλα](%= resolve_url('/promote/resources') %) για τη δική σας εκδήλωση.
+
+## 5. Ζήτα από ένα τοπικό άρχοντα να υποστηρίξει την Ώρα του Κώδικα
+
+[Στείλετε αυτό το μήνυμα](%= resolve_url('/promote/resources#sample-emails') %) σε τοπικούς αντιπροσώπους, Δημοτικό Συμβούλιο, ή Σχολική Εφορεία για να τους καλέσει να επισκεφτούν το σχολείο σας, για την ώρα του κώδικα. Βοηθά η δημιουργία υποστήριξης στην επιστήμη των υπολογιστών στην περιοχή σας πέρα της μίας ώρας.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

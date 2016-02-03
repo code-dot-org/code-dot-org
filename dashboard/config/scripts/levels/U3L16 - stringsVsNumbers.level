@@ -1,0 +1,53 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-27T17:49:44.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_x": null,
+      "declareAssign_str_hello_world": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "app_width": "320",
+    "app_height": "480",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "markdown_instructions": "# Strings vs. Numbers\r\n\r\nSome strings only contain numeric digits (e.g. `\"512\"`) in which case they look a lot like numbers. In some languages strings cannot be treated as numbers, but there are instances in JavaScript where **a number will be treated like a string or a string will be treated like a number**. This can cause unexpected behavior, so it's good to see these instance beforehand.\r\n\r\nThe most frequent instances you will see number or strings treated like the other type is when using **arithmetic operators** (addition, substraction, multiplication, division).\r\n\r\n* **Addition:** If either of the values is a string then this will be treated as **string concatenation**. Only when both values are numbers will it be treated as normal addition.\r\n    * \"2\" + 3 --> \"23\"\r\n    * 2 + 3 --> 5\r\n    * 2 + \"a\" --> \"2a\"\r\n* **Multiplication/Division/Subtraction:** Since this operation does not exist for strings then **all values with these operations will be converted to numbers** if possible.\r\n\t* \"8\" * \"2\" --> 16\r\n    * \"8\" / 2 --> 4\r\n    * 8 - \"a\" --> NaN (an error)\r\n  \r\n**Note: In almost all instances you will not want to use the functionality we are exploring here. It is important to be aware of it for debugging purposes**\r\n\r\n# Do This\r\n\r\n* **This exercise includes some examples of strings and numbers being combined with arithmetic operators**\r\n* Use this level to **practice with this behavior ** and then move on to complete the matching assessment in the next level.",
+    "instructions": "Run the program to see how strings and numbers behave with different arithmetic operators. (Click to see full instructions)",
+    "start_blocks": "console.log(\"Combining Strings and Numbers with the Addition Operator\");\r\nconsole.log(\"10\" + 11);\r\nconsole.log(10 + \"11\");\r\n\r\nconsole.log(\"Combining Strings and Numbers with the Subtraction Operator\");\r\nconsole.log(\"11\" - 10);\r\nconsole.log(\"11\" - \"10\");\r\nconsole.log(11 - \"10\");",
+    "encrypted_examples": [
+
+    ]
+  }
+}]]></config>
+  <blocks/>
+</Applab>

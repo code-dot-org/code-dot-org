@@ -2,7 +2,7 @@ pt-BR:
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Este conteúdo tem restrições de idade e não está disponível para os alunos mais jovens
   activerecord:
     errors:
       messages:
@@ -28,6 +28,7 @@ pt-BR:
     code:
       label: 'Adicionar professor:'
       placeholder: Código da seção (ABCDEF)
+      instructions: 'Por favor insira o código compartilhado com você por seu professor. É um código de 6 letras como "ABCDEF".'
     submit: Adicionar professor
   add_hint_form:
     placeholder: Digite sua dica aqui
@@ -38,6 +39,7 @@ pt-BR:
   puzzle: Quebra-cabeça
   trophies: troféus
   courses: percursos
+  unplugged_activity: Atividade off-line
   of: de
   more: MAIS
   less: MENOS
@@ -221,6 +223,7 @@ pt-BR:
         playlab: Crie um aplicativo
         artist: Desenhe alguma coisa
         calculate: Calculate Something
+        applab: Crie um aplicativo
     user:
       classroom: Página inicial do professor
       district_dashboard: Painel do distrito
@@ -244,69 +247,28 @@ pt-BR:
       prize_us_only: (Somente para alunos dos EUA)
       prizes_link: Mais informação
   teacher:
+    answer: Resposta
+    for_teachers_only: Somente para professores
     title:
       one: 'Seu professor:'
       other: 'Seus professores:'
     remove: (remover professor)
     confirm:
       remove: Você tem certeza que deseja remover esse professor?
-    tools: Ferramentas do professor
-    followers:
-      section: 'Seção:'
-      stages: 'Estágio(s) para exibir:'
-      show_past: 'Exibir as atividades feitas pelo aluno (%{bullet_html}) em:'
-      levels_key: Níveis
-      perfect: Concluído, perfeito
-      completed: Concluído, mas usou blocos demais
-      tried: Tentou, mas ainda não concluiu
-      not_tried: Ainda não tentou
-      activity: 'Indica as atividades do alunos nas últimas %{hours} %{plural}'
-      no_section: Nenhuma seção atribuída
-      trophies: troféus
     students:
-      name: Nome
-      username: Nome de usuário
-      password: senha
-      manage: Gerenciar alunos
       dashboard: Vá para o painel de controle do professor
-      add: Adicionar alunos
-      remove: remover aluno
-      confirm_remove: Você tem certeza de que deseja excluir este aluno?
-      help_reassign: Para dividir sua turma em várias seções, selecione alguns alunos para atribuir a uma nova seção.
-      help_register: Em vez de passar muito tempo importando dados dos alunos individualmente, você pode configurar sua turma rapidamente, pedindo para que eles se cadastrem. Seus alunos terão de escolher nomes de usuário e senhas, mas NÃO serão obrigados a fornecer um endereço de e-mail. Se um aluno esquecer sua senha, você poderá redefini-la para ele.
-      register: Peça para que seus alunos se cadastrem
-      vist: Peça para que seus alunos visitem
-      section_code: 'e digite seu código de seção:'
-      first_please: 'Em primeiro lugar, %{add_section}'
-      for: Para
-      enter: 'digite:'
-    sections:
-      add: Adicionar seção
-      manage: Gerenciar seções
-      section: Turma
-      students: Alunos
-      section_code: Código da turma
-      add_section_code: Adicionar código da seção dos alunos
-      secret: Tipo secreto
-      grade: Grau
-      course: Curso
-      rename: renomear
-      edit: editar
-      delete: excluir
-      confirm_delete: Tem certeza de que deseja excluir esta seção?
-      email: Enviar por e-mail
-    rollup: Painel de controle do progresso
-    activity: Atividade recente de classe
-    user_not_found: O professor ou aluno não pôde ser encontrado
-    cant_remove_student_no_email: '%{student_name} não pode ser removido como seu aluno porque %{student_name} não tem um endereço de email registrado'
-    cant_remove_teacher_no_email: '%{teacher_name} não pode ser removido como seu professor porque você não registrou um endereço de email'
-    student_teacher_disassociated: '%{teacher_name} foi removido como professor de %{student_name}'
+    user_not_found: Esse professor não pôde ser encontrado.
+    student_teacher_disassociated: 'Você removeu %{teacher_name} como seu professor.'
     panel:
       answer_viewer: Visualizador de resposta
       student: Estudante
       viewing_solution: Visualizando solução
       try_it_yourself: Tente você mesmo
-      section: Turma
+      section: Seção
+      example: Solução do Exemplo
+      example_with_number: 'Solução do Exemplo %{solution_number}'
+      submitted_on: 'Enviado em:'
+      unsubmit: Cancelar envio
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -321,10 +283,6 @@ pt-BR:
   user_level:
     completed: Concluído
     tried: Provado
-  user_stats:
-    recent_activity: Atividade recente
-    show_more: Mostrar mais
-    classroom_activity: Atividade off-line
   home:
     title: Code Studio
     description: No Code Studio você pode encontrar os cursos on-line criados pela Code.org
@@ -370,6 +328,7 @@ pt-BR:
   share:
     title: Aprenda no Code Studio
     description: Qualquer pessoa pode aprender ciência da computação. Crie jogos, aplicativos e arte com a programação.
+    try_hour_of_code: Faça uma Hora do Código!
   gender:
     male: Masculino
     female: Feminino
@@ -380,9 +339,9 @@ pt-BR:
   footer:
     thank_you: 'Agradecemos nossos <a href="https://code.org/about/donors">doadores</a>, <a href="https://code.org/about/partners">parceiros</a>, nossa <a href="https://code.org/about/team">equipe</a>, nosso pessoal de vídeo e nossos <a href="https://code.org/about/advisors">professores</a> por sua ajuda na criação do Code Studio.'
     help_from_html: Queremos agradecer principalmente os engenheiros da Google, Microsoft, Facebook, Twitter e muitos outros que ajudaram a criar esses materiais.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'A Era do Gelo&#8482; &amp; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
-    art_from_html_old: 'AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados'
+    help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram a criar esses materiais.
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br />O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: Direitos Autorais
@@ -395,6 +354,11 @@ pt-BR:
     tos: Termos de Serviço
     privacy: Política de Privacidade
     secure: Versão Segura
+    report_abuse: Reportar abuso
+    built_on_code_studio: Criado no Code Studio
+    make_my_own_app: Criar meu próprio aplicativo
+    how_it_works: Como funciona
+    try_hour_of_code: Faça uma Hora do Código!
   reference_area:
     title: Precisa de ajuda?
     subtitle: Veja os vídeos e as dicas
@@ -404,7 +368,7 @@ pt-BR:
     direction: Direção de início (em graus)
   video:
     tab: Vídeo.
-    notes: Nenhum vídeo? Mostrar notas.
+    notes: Não é possível ver o vídeo? Mostrar notas.
     notes_coming_soon: As notas deste vídeo estarão disponíveis em breve.
     autoplay_option: Vídeos com reprodução automática
     download: Baixar Vídeo
@@ -426,6 +390,7 @@ pt-BR:
   pdf_download: Baixar PDF
   download_coming_soon: Atividade disponível para download em breve.
   video_coming_soon: Vídeo em breve!
+  not_started: O aluno ainda não praticou este nível.
   share_code:
     title: "Clique em 'Executar' para ver meu programa em ação"
     bounce_og_title: Veja meu jogo de Pingue-pongue
@@ -450,7 +415,7 @@ pt-BR:
       unused: Níveis não Utilizados
   upsell:
     hoc:
-      title: Hora do Código
+      title: Labirinto clássico
       body: Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.
     flappy:
       title: Código do Flappy bird
@@ -467,9 +432,14 @@ pt-BR:
       body: Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários
     frozen:
       title: Frozen
+    starwars:
+      title: Star Wars
     infinity:
       title: Laboratório infinito
       body: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
+    minecraft:
+      title: Minecraft
+      body: Explore o mundo de Minecraft usando códigos.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -601,3 +571,24 @@ pt-BR:
     view_all: Visualizar meus projetos
     remix: Remix
     click_to_remix: 'Clique em "Remix" para fazer sua própria versão!'
+    edit_project: Editar projeto
+    abuse:
+      tos: "Esse projeto foi denunciado por violar os <a href='http://code.org/tos'>Termos de Serviço</a> da Code.org e não pode ser compartilhado com outras pessoas."
+      contact_us: "Se você acha que isso é um erro, <a href='https://code.org/contact'>contate-nos.</a>"
+      go_to_code_studio: Ir para o Code Studio
+      report_abuse_form:
+        intro: Se você encontrou conteúdo ofensivo, ameaças, bullying cibernético, assédio ou algum exemplo de violação dos direitos autorais de conteúdos que você possui enquanto usava os aplicativos feitos no Code Studio, preencha o formulário abaixo. Vamos levar seu relatório muito a sério, investigar e tomar a ação adequada.
+        validation:
+          email: Forneça um endereço de e-mail
+          age: Especifique uma idade
+          abuse_type: Diga como esse conteúdo viola os Termos de Serviço
+          abuse_detail: Forneça detalhes sobre o conteúdo que você está reportando
+        abusive_url: URL do conteúdo reportado
+        abuse_type:
+          question: 'Como esse conteúdo viola os%{link_start}Termos de Serviço%{link_end}?'
+          harassment: Ameaças, bullying cibernético, assédio
+          offensive: Conteúdo ofensivo
+          infringement: Violação de direitos autorais
+          other: Outros
+        detail: Forneça o maior número de detalhes possível sobre o conteúdo que você está reportando.
+        acknowledge: 'Ao enviar essas informações você reconhece que elas serão tratadas de acordo com a %{link_start_privacy}Política de Privacidade%{link_end} e os %{link_start_tos}Termos de Serviço%{link_end}'

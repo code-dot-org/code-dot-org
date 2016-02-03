@@ -1,0 +1,125 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/ac0a7f8c2faac49775a616b7c0cc21d8-public_key
+    body:
+      encoding: UTF-8
+      string: hello
+    headers:
+      X-Amz-Acl:
+      - public-read
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - XUFAKrxLKna5cZ2REBfFkg==
+      Content-Length:
+      - '5'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:24 GMT
+      Etag:
+      - '"5d41402abc4b2a76b9719d911017c592"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:23 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/ac0a7f8c2faac49775a616b7c0cc21d8-public_key?acl
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:25 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <AccessControlPolicy xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><AccessControlList><Grant><Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CanonicalUser"><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Grantee><Permission>FULL_CONTROL</Permission></Grant><Grant><Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Group"><URI>http://acs.amazonaws.com/groups/global/AllUsers</URI></Grantee><Permission>READ</Permission></Grant></AccessControlList></AccessControlPolicy>
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:24 GMT
+- request:
+    method: put
+    uri: https://cdo-temp.s3.amazonaws.com/43b34e9afb52a2dbc3767d8b677de5d8-private_key
+    body:
+      encoding: UTF-8
+      string: hello
+    headers:
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - XUFAKrxLKna5cZ2REBfFkg==
+      Content-Length:
+      - '5'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:25 GMT
+      Etag:
+      - '"5d41402abc4b2a76b9719d911017c592"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:24 GMT
+- request:
+    method: get
+    uri: https://cdo-temp.s3.amazonaws.com/43b34e9afb52a2dbc3767d8b677de5d8-private_key?acl
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Nov 2015 23:11:26 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <AccessControlPolicy xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><AccessControlList><Grant><Grantee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CanonicalUser"><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Grantee><Permission>FULL_CONTROL</Permission></Grant></AccessControlList></AccessControlPolicy>
+    http_version: 
+  recorded_at: Mon, 16 Nov 2015 23:11:25 GMT
+recorded_with: VCR 3.0.0

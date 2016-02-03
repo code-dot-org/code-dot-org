@@ -5,21 +5,16 @@ Dashboard::Application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+  config.cache_store = :null_store
 
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # Always reload static js and css.
+  config.static_cache_control = 'must-revalidate, max-age=0'
+
   # Show full error reports
   config.consider_all_requests_local       = true
-
-  config.action_controller.perform_caching = true
-  if CDO.memcached_hosts.present?
-    config.cache_store = :mem_cache_store, CDO.memcached_hosts, {
-      value_max_bytes: 1024 * 1024 * 64
-    }
-  else
-    config.cache_store = :memory_store, { size: 64.megabytes }
-  end
 
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
@@ -45,7 +40,7 @@ Dashboard::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+#  config.assets.debug = true
 
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
@@ -62,4 +57,8 @@ Dashboard::Application.configure do
 
   # see stack traces around sql queries in the log
   # ActiveRecordQueryTrace.enabled = true
+
+  # don't act like a levelbuilder by default
+  # set "levelbuilder_mode: true" in locals.yml if you want to be able to create levels or test levelbuilder functionality
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 end

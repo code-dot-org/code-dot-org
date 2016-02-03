@@ -1,5 +1,12 @@
+---
+
+title: <%= hoc_s(:title_whole_school) %>
+layout: wide
+
+---
 
 
 # Haz que toda tu escuela participe
 
-La información sobre conseguir que escuelas completas participen en la Hora de Programación irá aquí.
+La información referente a que escuelas enteras participen de la Hora del Código irá aquí.
+

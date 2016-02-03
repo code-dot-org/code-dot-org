@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## updateRecord(tableName, record, callbackFunction)
+## updateRecord(table, record, callback)
 
 [/name]
-
 
 [category]
 
@@ -20,12 +19,17 @@ Category: Data
 
 [short_description]
 
-Using App Lab's table data storage, updates the provided `record` in `tableName`. `record` must be uniquely identified with its id field. When the call is completed, the `callbackFunction` is called, and is passed the updated record as a parameter. Data is accessible to your app and users of your app.
+Using App Lab's table data storage, updates the record from the provided table with the matching record id, and calls the callback function when the action is finished. The updated record and a boolean variable success is returned as a parameter to the callback function.
 
 [/short_description]
 
+Adding permanent data storage to your apps is the last step to making them real-world. The apps you use everyday are driven by data "in the cloud".
+
 **First time using App Lab table data storage?** Read a short overview of what it is and how to use it [here](/applab/docs/tabledatastorage).
-**Note:** View your app's table data by clicking 'View data' in App Lab and clicking the table name you want to view.
+
+The *record* parameter must be a javascript object variable or a javascript object defined using curly brace and colon notation AND must contain the *id* property (see examples below). Data is only accessible to the app that created the table. 
+
+To View your app's table data, click 'View data' in App Lab and click the table name you want to view.
 
 [/description]
 
@@ -34,26 +38,38 @@ ____________________________________________________
 
 [example]
 
-**Create and then update a record** In this example, a record is created in a table named 'update_example1' when the 'Create Record' button is clicked. We assume that since it's the only record in the table, that the id is 1, and use that to update the record to have a different favorite food when the 'Update record' button is clicked. First try clicking 'Create Record', and then viewing the data in the data browser. Then, click 'Update Record' and refresh the data in the data browser.
+```
+textInput("nameInput", "What is your name?");
+textInput("ageInput", "What is your age?");
+textInput("foodInput", "What is your favorite food?");
+button("submitButton", "Submit");
+button("updateButton", "Update Most Recent Record to Pizza");
+var mostRecentID=1;
 
-<pre>
-//When 'Create' is clicked, add a new record to the table and write a confirmation to the display
-button("createButton", "1. Create record");
-onEvent("createButton", "click", function(event) {
-  createRecord("update_example1", {name:'Alice', age:19, food:"salad"}, function(record) {
-    write("Record created! Favorite food is " + record.food + ". View data to see the record");
+onEvent("submitButton", "click", function() {
+  var favFoodData={};
+  favFoodData.name = getText("nameInput");
+  favFoodData.age = getNumber("ageInput");
+  favFoodData.food = getText("foodInput");
+  createRecord("fav_foods", favFoodData, function(record) {
+    mostRecentID=record.id;
+    console.log("Record created with id:" + record.id);
+    console.log("Name:" + record.name + " Age:" + record.age + " Food:" + record.food);
   });
 });
 
-//When 'Update' is clicked, update the record with id:1 from the table and write to the display
-button("updateButton", "2. Update record");
-onEvent("updateButton", "click", function(event) {
-  updateRecord("update_example1", {id:1, name: 'Alice', age:19, food:'bananas'}, function(record) {
-    write("Record updated! Food is now " + record.food + ". Refresh the data to see the update!");
+onEvent("updateButton", "click", function() {
+  updateRecord("fav_foods", {id:mostRecentID,name:"Bobby",age:16,food:"pizza"}, function(record, success) {
+    if (success) {
+      console.log("Record updated with id:" + mostRecentID);
+    }
+    else {
+      console.log("No record to update with id:" + mostRecentID);
+    }      
   });
 });
 
-</pre>
+```
 
 [/example]
 
@@ -61,52 +77,43 @@ ____________________________________________________
 
 [example]
 
-**One of these fruits is not like the others** In this more detailed example, we immediately loop
-through an array of fruits and add them as records to the `update_example2` table. Only one of the
-fruits is not like the others! We have a 'Find & Replace' button that when clicked, uses `readRecords`
-to find all rows where the food is "sushi" and replaces the food name with "pineapples." After all
-4 records have been created, view the records in the data browser. Then, click 'Find & Replace' and
-refresh the data browser to see the updates.
+**One of these fruits is not like the others** Find and replace sushi with pineapples.
 
-<pre>
-/*
-When the app loads, create 4 records in the table
-*/
-var fruit = ["sushi", "apples", "oranges", "bananas"]
-
-for(var i = 0; i < fruit.length; i++){
-  createRecord("update_example2", {food: fruit[i]}, function(record) {
-    write("Created: Id:" + record.id + " food:" + record.food + " View data to see the record");
-  });
-}
-
-/*
-Create a button that when clicked, calls the helper function updateSushi (defined below)
-*/
-button("findReplace", "Find & Replace Sushi");
-onEvent("findReplace", "click", function(event) {
-  updateSushi();
+```
+// Find and replace sushi with pineapples.
+var fruit = ["sushi", "apples", "oranges", "bananas"];
+createRecord("fruitTable", {food:fruit[randomNumber(0,fruit.length-1)]}, function(record) {
+  console.log("Created: Id:" + record.id + " food:" + record.food);
+});
+createRecord("fruitTable", {food:fruit[randomNumber(0,fruit.length-1)]}, function(record) {
+  console.log("Created: Id:" + record.id + " food:" + record.food);
+});
+createRecord("fruitTable", {food:fruit[randomNumber(0,fruit.length-1)]}, function(record) {
+  console.log("Created: Id:" + record.id + " food:" + record.food);
+});
+createRecord("fruitTable", {food:fruit[randomNumber(0,fruit.length-1)]}, function(record) {
+  console.log("Created: Id:" + record.id + " food:" + record.food);
+});
+createRecord("fruitTable", {food:fruit[randomNumber(0,fruit.length-1)]}, function(record) {
+  console.log("Created: Id:" + record.id + " food:" + record.food);
 });
 
-/*
-updateSushi uses read records to find all records where the food column matches the
-string "sushi". For each of the records returned in the records array, an updated
-record object is created using the current record's id, and updating the food column
-value to be "pineapples"
-*/
-function updateSushi() {
-  readRecords("update_example2", {food:"sushi"}, function(records) {
-    for (var i =0; i < records.length; i++) {
-      var updatedRecord = records[i];
+button("findReplace", "Find & Replace Sushi");
+onEvent("findReplace", "click", function() {
+  readRecords("fruitTable", {food:"sushi"}, function(records) {
+    if (records.length>0) {    
+      var updatedRecord = records[0];
       updatedRecord.food = "pineapples";
-      updateRecord("update_example2", updatedRecord, function(record) {
-        write("Record updated! Refresh the data to see that sushi is replaced with pineapples");
+      updateRecord("fruitTable", updatedRecord, function(record, success) {
+        if (success) write("Record updated with id:" +record.id);
+        else write("Record NOT updated");
       });
     }
+    else write("No sushi record found");
   });
-}
+});
 
-</pre>
+```
 
 [/example]
 
@@ -115,11 +122,12 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
-updateRecord(tableName, record, function(record){
+
+```
+updateRecord(table, record, function(record, success){
     //callback function code goes here
   });
-</pre>
+```
 
 [/syntax]
 
@@ -129,25 +137,27 @@ updateRecord(tableName, record, function(record){
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| tableName | string | Yes | The name of the table from which the records should be searched and read. |
-| record | object | Yes | To identify the record to be updated, a record object with the unique id column needs to be provided. Object syntax: An object begins with { (left brace) and ends with } (right brace). Each column name is followed by : (colon) and the name/value pairs are separated by , (comma). Values can be strings, numbers, arrays, or objects. e.g. {id: 1, column1:"a string", column2:10, column3:[1,2,3,4]} |
-| callbackFunction | function | Yes | A function that is asynchronously called when the call to updateRecord() is finished. The updated record is passed as a single parameter to this function. |
+| table | string | Yes | The name of the table to update a record. |
+| record | object | Yes | The new data to update the record with matching id. Either a javascript object variable or a javascript object defined using curly brace and colon notation (see examples above). |
+| callback | function | Yes | The callback function that is asynchronously called when the call to updateRecord() is finished. The updated record and a boolean variable success is returned as a parameter to the callback function. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. When `updateRecord()` is finished executing, `callbackFunction` is automatically called with the updated record passed as a parameter.
+When *updateRecord()* is finished executing, the callback function is automatically called and passed the updated record and as boolean success as parameters.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- This function has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
+- The javascript object properties must match the App Lab table column names. Both are case sensitive.
+- *updateRecord()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately.
+- The callback function can be inline, or separately defined in your app and called from *updateRecord()*.
+- Do not put functions inside a loop that contain asynchronous code, like updateRecord(). The loop will not wait for the callback function to complete.
 - Use with [createRecord()](/applab/docs/createRecord), [readRecords()](/applab/docs/readRecords), and [deleteRecord()](/applab/docs/updateRecord) records to create, read, and delete records in a table.
-- [Learn more](/applab/docs/tabledatastorage) about App Lab table data storage
 
 [/tips]
 

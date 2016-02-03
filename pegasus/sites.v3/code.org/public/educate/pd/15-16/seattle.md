@@ -28,13 +28,10 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-**In-person**
+
 
 Milestone Complete!
 
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 
 
 
@@ -57,18 +54,14 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 26th Location**
+**February 20th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Cedar Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
+[Rainier Tower<br/>
+30th Floor Conference Room<br/>
+1301 Fifth Ave.<br/>
+Seattle, WA 98101](https://www.google.com/maps/place/1301+5th+Ave,+Seattle,+WA+98101/@47.6088445,-122.3365763,523m/data=!3m2!1e3!4b1!4m2!3m1!1s0x54906ab475734df5:0x9da092b2067513ae!6m1!1e1)
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000 and let them know you are attending the Code.org's Exploring Computer Science event.
+[Please click here for parking rates.](/files/rainier-tower-parking.pdf)
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -98,13 +91,11 @@ More info coming soon!
 Milestone Complete! 
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
-**In-person**
+
 
 Milestone Complete!
 
-**Online Study**
 
-<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
 Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Algebra. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
@@ -119,7 +110,7 @@ Semester 2: Saturday, April 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**April 30th Location**
 
 TBD
 
@@ -146,13 +137,9 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-**In-person**
 
 Milestone Complete!
 
-**Online Study**
-
-<b><i>Deadline:</b> Phase 2 online is due on September 7th.</i>
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
@@ -168,18 +155,13 @@ Semester 2: Saturday, February 20, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**September 26th Location**
+**February 20th Location**
 
-[Talaris Conference Center](http://www.talarisconferencecenter.com/)
-<br />
-Maple Room
-<br />
-4000 NE 41st Street
-<br />
-Seattle, WA 98105
-<br />
+[Courtyard Marriott Southcenter<br/>
+400 Andover Park West<br/>
+Tukwila, WA 98188](https://www.google.com/maps/place/Courtyard+Seattle+Southcenter/@47.45377,-122.253993,15z/data=!4m2!3m1!1s0x0:0x63b7ebb79d35ed90)
 
-Free parking is available. If you need hotel accommodations, Talaris is offering a discounted rate of $149 a night plus tax. Call 206.268.7000and let them know you are attending the Code.org CS in Science event.
+Free parking is available.
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -193,6 +175,7 @@ Water
 
 
 [**Back to the top**](#top)
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

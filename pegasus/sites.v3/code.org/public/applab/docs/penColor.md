@@ -20,13 +20,18 @@ Category: Turtle
 
 [short_description]
 
-Sets the color of the trail drawn behind the turtle as it moves.
+Sets the color of the pen used by the turtle for drawing lines and dots.
 
 [/short_description]
 
-**Note**: If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.
-**Note**: The color can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords) for a complete list of all available colors.
-**Note**: You can also use any of the valid CSS color naming conventions, especially, rgba(...) which allows you set a color with some amount of transparency. Reference [CSS colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+Let the artist in you come out by utilizing the wide range of colors that the turtle can draw with. The *color* parameter must be a string enclosed in quotes, and can take one of four forms.  It can be:
+
+ * the name of the color
+ * the hex value of the color (preceded by a #)
+ * the rgb value of the color
+ * the rgba value of the color (last value specifies the alpha channel for transparency) 
+ 
+The default pen color is black and the pen is by default in the down (drawing) position.
 
 [/description]
 
@@ -35,37 +40,11 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-<pre>
-penColor("cyan");   // sets the color of the trail drawn behind the turtle to cyan
-moveForward(100);   // moves the turtle forward by 100 pixels
-</pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-**Example 2**
-
-This demonstrates all 4 ways to give a color to the penColor() function.
-
-<pre>
-penColor("chartreuse");     		 // sets the color using a string
-moveForward(50);            	 	 // moves the turtle forward 50 pixels
-
-penColor("7fff00");          		 // sets the color using a hex value
-moveForward(50);              		 // moves the turtle forward 50 pixels
-
-penColor("rgb(127, 255, 0)"); 		 // sets the color using a rgb value
-moveForward(50);              		 // moves the turtle forward 50 pixels
-
-penColor("rgba(127, 255, 0, 0.5)"); // sets the color using a rgba value, the last value is amount
-									 //   of transparency, a percentage between 0.0 and 1.0
-moveForward(50);              		 // moves the turtle forward 50 pixels
-</pre>
+```
+// Sets the color of the line the turtle draws behind it to cyan.
+penColor("cyan");   
+moveForward();
+```
 
 [/example]
 
@@ -73,15 +52,31 @@ ____________________________________________________
 
 [example]
 
-**Example 3**
+**Example: 4 Ways** Demonstrate all 4 ways to specify the *color* parameter.
 
-<pre>
-var c = (prompt("Enter a color"));  // prompts the user for a color
-penColor(c);                        // sets the color of trail drawn behind the turtle to the color
-                                    // the user entered
-moveForward(100);                   // moves the turtle forward by 100 pixels
-</pre>
+```
+// Demonstrate all four ways to specify the color parameter.
+// Sets the color using the name of a color in a string.
+penColor("chartreuse");
+moveForward(50);
+turnRight();
 
+// Sets the color using the hex value of a color in a string.
+penColor("#7fff00");
+moveForward(50);
+turnRight();
+
+// Sets the color using the rgb value of a color in a string.
+penColor("rgb(127, 255, 0)");
+moveForward(50);
+turnRight();
+
+// Sets the color using a rgba value of a color in a string.
+// The last value is the amount of transparency, a percentage between 0.0 and 1.0 
+penColor("rgba(127, 255, 0, 0.5)");
+moveForward(50);
+turnRight();
+```
 
 [/example]
 
@@ -89,33 +84,54 @@ ____________________________________________________
 
 [example]
 
-**Example 4**
+**Example: User Choice Color** Prompts the user for a color. A console warning is generated if the user enters an invalid color name and the default color black is chosen instead.
 
-This program draws a circle figure out of lines. It cycles through the colors every time it turns. Here we use **4** colors, so we say penColor(colors[i%**4**]).
+```
+// Prompts the user for a color.
+var c = (prompt("Enter a color"));  
+penColor(c);
+penWidth(10);
+moveForward(100);
+```
 
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Example: Four Color Square Spiral** Draw a square spiral using four colors from an array.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-var colors = ["red", "magenta", "pink", "purple"];  // creates an array of 4 strings representing colors
-for (var i = 0; i < 360; i++) {                     // loops 360 times
-  penColor(colors[i%4]);                            // sets the color of the turtles trail
-                                                    // to a color from the array
-  moveForward(100);                                 // moves the turtle forward by 100 pixels
-  moveBackward(100);                                // moves the turtle backward by 100 pixels
-  turnRight(1);                                     // turns the turtle 1 pixel to the right
+// Draw a square spiral using four colors from an array.
+var colors = ["red", "magenta", "pink", "purple"];
+for (var i = 0; i &lt; 40; i++) {
+  penColor(colors[i%4]); // Choose a color from the array.
+  moveForward(100-2*i);
+  turnRight();
 }
 </pre>
-
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/c1993f299a01da9ecfaf2c5a51f2ea2e-image-1445690200902.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
 ____________________________________________________
-
 
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 penColor(color);
-</pre>
+```
 
 [/syntax]
 
@@ -125,24 +141,24 @@ penColor(color);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| color | String | Yes | The color of the line left behind the turtle as it moves  |
-<br />
-`penColor()` can be passed the name of the color, the hex value of the color, or the rgb value of the color. Reference Example 2 above for more specifics.
+| color | String | Yes | The color of the pen used by the turtle for drawing lines and dots.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Modifies turtle drawing only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- If no lines are appearing on screen use [penDown()](/applab/docs/penDown) first.
-- The color value being passed can be the name of the color, the hex value of the color, or the rgb value of the color. Reference [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) for a complete list of all available colors.
+- [penUp()](/applab/docs/penUp) causes no line to be drawn.
+- Turtle drawing commands are not effected by the [show()](/applab/docs/show) and [hide()](/applab/docs/hide) commands, which control if the turtle icon is displayed or not.
+- Recall Unit 1 lessons about hex and rgb color values and see [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords) for a complete list of all available colors.
+- To randomize color selection, use [penRGB(r,g,b)] (/applab/docs/penRGB) which takes numeric parameters instead of a string parameter.
 
 [/tips]
 

@@ -8,16 +8,18 @@
  nonew: true,
  shadow: false,
  unused: true,
+ eqeqeq: true,
 
  maxlen: 90,
  maxstatements: 200
  */
-/* global $ */
 'use strict';
 
 require('../utils'); // For Function.prototype.inherits()
+var i18n = require('./locale');
 var markup = require('./NetSimStatusPanel.html.ejs');
 var NetSimPanel = require('./NetSimPanel.js');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for connection status panel
@@ -48,9 +50,6 @@ NetSimStatusPanel.inherits(NetSimPanel);
 
 /**
  * @param {Object} [data]
- * @param {boolean} [data.isConnected] - Whether the local client is connected
- *        to a remote node
- * @param {string} [data.statusString] - Used as the panel title.
  * @param {string} [data.remoteNodeName] - Display name of remote node.
  * @param {string} [data.myHostname] - Hostname of local node
  * @param {number} [data.myAddress] - Local node address assigned by router
@@ -60,14 +59,13 @@ NetSimStatusPanel.prototype.render = function (data) {
   data = data || {};
 
   // Capture title before we render the wrapper panel.
-  this.setPanelTitle(data.statusString);
+  this.setPanelTitle(data.remoteNodeName);
 
   // Render boilerplate panel stuff
   NetSimStatusPanel.superPrototype.render.call(this);
 
   // Put our own content into the panel body
   var newMarkup = $(markup({
-    remoteNodeName: data.remoteNodeName,
     myHostname: data.myHostname,
     myAddress: data.myAddress,
     shareLink: data.shareLink
@@ -75,7 +73,10 @@ NetSimStatusPanel.prototype.render = function (data) {
   this.getBody().html(newMarkup);
 
   // Add a button to the panel header
-  if (data.isConnected) {
-    this.addButton('Disconnect', this.disconnectCallback_);
-  }
+  this.addButton(
+      i18n.disconnectButton({ caret: '<i class="fa fa-caret-left"></i>' }),
+      this.disconnectCallback_);
+
+  // Button that takes you to the next level.
+  NetSimUtils.makeContinueButton(this);
 };

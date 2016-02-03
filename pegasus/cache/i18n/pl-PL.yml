@@ -1,4 +1,5 @@
 "pl-PL":
+  hour_of_code: Godzina kodowania (Hour of Code)
   hello: Witaj świecie
   select_language: Wybierz język
   en: Informatyka
@@ -12,7 +13,7 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Jesteś nauczycielem informatyki? Zobacz inne propozycje
     CSEdWeek</a>'
-  n_have_learned_an_hoc: <h1>Spróbuj</h1><h2>Godziny kodowania</h2><h3>#</h3>
+  n_have_learned_an_hoc: "<h1>Wypróbuj</h1><h2>Godzinę Kodowania</h2><h3>#</h3>"
   anybody_can_learn: Każdy może się uczyć.
   learn_now: Rozpocznij naukę teraz
   petition_message: Każdy uczeń w każdej szkole powinien mieć możliwość nauki informatyki
@@ -28,6 +29,9 @@
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
+  og_title: Każde dziecko zasługuje na szansę
+  og_description: Każdy uczeń w każdej szkole zasługuje, by mieć szansę uczyć się
+    informatyki.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -37,6 +41,16 @@
   hoc2014_everyone: Wszyscy
   hoc2014_support: Udziel wsparcia &#x25BE;
   hoc2014_whatishoc: Czym jest Godzina Kodowania?
+  csedweek_map_header: 'Wydarzenia #CSEdWeek / Godziny Kodowania na całym świecie'
+  csedweek_map_signup: Zarejestruj swoje wydarzenie
+  csedweek_map_search_placeholder: Szukaj wydarzeń Godziny Kodowania
+  csedweek_map_search_search: Szukaj
+  csedweek_map_search_reset: Zresetuj
+  csedweek_map_legend_title: Opis
+  csedweek_map_legend_event: Wydarzenie Godziny Kodowania
+  csedweek_map_legend_cs_tech_jam: Wydarzenie specjalne
+  cded_sign_up: Zarejestruj się
+  cded_try_it: Wypróbuj
   twentyhours_trynow: Spróbuj teraz
   california_heading: Poproś swoją szkołę, by uczono informatyki
   california_text: Każdy nauczyciel może wykorzystać nasze <a href='http://learn.code.org/'>
@@ -57,17 +71,29 @@
     powtarzania, instrukcje warunkowe i podstawowe algorytmy.
   all_ages: Wszystkie grupy wiekowe
   beginner: Początkujący
-  n_participants: '# uczestników'
+  n_participants: "# uczestników"
   go: Idź
   thank_you_: Dziękujemy!
   congratulations: Gratulacje!
   congratulations_on_completing_hoc: Gratulacje z okazji ukończenia godziny programowania
     (One Hour of Code)
+  congratulations_volunteer: |
+    Gratulacje: Spróbowałeś Godzinę Kodowania,
+    <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
+  course_name_accelerated: Przyspieszony Kurs
+  course_name_course1: Kurs 1
+  course_name_course2: Kurs 2
+  course_name_course3: Kurs 3
+  course_name_course4: Kurs 4
+  congratulations_on_completing_course: Gratulacje na zakończenie %{course}
+  congrats_next_tutorials_title: Następnie wykorzystaj te samouczki
+  congrats_next_tutorials_desc: Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj
+    <a href="%{current_path}/next">samouczki partnerów</a>.
   get_a_certificate_of_achievement: Uzyskaj certyfikat osiągnięcia
   enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
-  get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>Kontynuować
-    naukę po tej godzinie (One Hour)</a>
+  get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>kontynuować
+    naukę poza Godziną Kodowania</a>
   get_a_certificate_message_after: Kliknij na świadectwie, aby je pobrać lub wydrukować.
     Dalej, kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>,
     lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną
@@ -97,12 +123,12 @@
   beyond_an_hour: Poza Godziną Kodowania
   get_started: Start
   i_agree: Zgadzam się
-  participant_select: -Wybierz-
+  participant_select: "-Wybierz-"
   participant_student: Uczeń
   participant_parent: Rodzic
   participant_educator: Nauczyciel
   participant_engineer: Programista
-  participant_other: Żaden z powyższych
+  participant_other: "Żaden z powyższych"
   print_all: Drukuj wszystko
   print_ice_art: Drukuj swoje lodowe kompozycje
   create_art_with_zombie: lub utwórz zaawansowane kompozycje z zombie
@@ -112,29 +138,29 @@
   used_infrequent_updates: Stosowane tylko dla rzadkich aktualizacji
   privacy_practices_children: Zobacz nasze zasady ochrony prywatności dla dzieci
   petition_thankyou: Dziękujemy za podpisanie petycji
-  continue_learning_header: Kontynuuj naukę poza One Hour
+  continue_learning_header: Kontynuuj naukę poza Godziną Kodowania
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole
     albo na obozie letnim.
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
+  hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
-  twitter_teach_cs: Dlaczego więcej szkół nie uczy informatyki? Możemy to zmienić.
-    http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
+  twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić.
+    http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/ aby dowiedzieć się więcej.
   learn_hoc: Ucz się Hour of Code
-  beyond_hoc: Poza One Hour
+  beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?
   girl: Dziewczyna
   boy: Chłopiec
   help_recruit_coders: Pomóż nam przyjąć więcej programistów do Twojego zespołu!
   help_recruit: Pomóż nam przyjąć więcej programistów!
   lines_of_code: PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY.
-  lines_of_code_alt: <b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW
+  lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
   hoc_leaderboards: Panel godziny programowania (Hour of Code)
-  students_and_lines: '%{students} uczniów ukończyło godzinę programowania (Hour of
-    Code)  i napisało %{lines} linii kodu.'
+  students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of
+    Code)  i napisało %{lines} linii kodu."
   start_hoc: Rozpocznij teraz godzinę programowania (Hour of Code)
   contact_form_topic_press: Prasa/media (wywiad lub wypowiedź)
   stats_nina: '"Każdy dzień przynosił takie same wyniki &mdash; 100% zaangażowania."
@@ -153,12 +179,12 @@
   studiobar_flappy_body: Utwórz i udostępnij swoją grę Flappy'ego
   studiobar_teacher_title: Dla nauczycieli
   studiobar_teacher_body: Wprowadź Code Studio (Studio Kodowania) w swojej klasie
-  studiobar_frozen_title: Godzina kodowania (Hour of Code)
+  studiobar_frozen_title: Godzina Kodowania
   studiobar_frozen_body: Twórz z Anną i Elsą zimową krainę czarów
   studiobar_donate_title: Podaruj
   studiobar_donate_body: Jedno dziecko się uczy za każdego dolara, który podarujesz
   studiobar_shop_title: Sklep
-  studiobar_shop_body: Łam stereotypy. Noś nasze logo z dumą.
+  studiobar_shop_body: "Łam stereotypy. Noś nasze logo z dumą."
   homepage_hero_text_malala: "&ldquo;Wzywam dziewczęta z wszystkich krajów do nauki
     podczas Godziny Kodowania.&rdquo; \nMalala, laureat Pokojowej Nagrody Nobla\n"
   homepage_hero_text_susan: |
@@ -172,10 +198,10 @@
     &ldquo;Nasze dzieci &mdash; w tym również dziewczęta &mdash;
     potrzebują możliwości, by uczyć się informatyki.&rdquo;
     Sheryl, COO Facebook
-  homepage_hero_text_satya: '&ldquo;Informatyka może odblokować najlepsze możliwości
-    na świecie.&rdquo; Satya, CEO firmy Microsoft'
-  homepage_hero_text_bosh: '&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
-    swojego życia&rdquo; Chris Bosh'
+  homepage_hero_text_satya: "&ldquo;Informatyka może odblokować najlepsze możliwości
+    na świecie.&rdquo; Satya, CEO firmy Microsoft"
+  homepage_hero_text_bosh: "&ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę
+    swojego życia&rdquo; Chris Bosh"
   homepage_hero_text_student1: '"Te umiejętności zmieniły moją przyszłość. Nie wspominając,
     że jest to po prostu świetna zabawa." Luna, 7 klasa'
   homepage_hero_text_student2: '"Nigdy nie widziałem moich dzieci tak podekscytowanych
@@ -192,7 +218,7 @@
   homepage_hero_text_teacher2: "&ldquo;Ten program zainteresował i zaangażował do
     \nuczestnictwa 100% moich uczniów.&rdquo;\nAdam, nauczyciel\n"
   homepage_hero_text_stat_loc: 2,5 mln dziewcząt uczy się w Code Studio
-  homepage_hero_text_stat_students: '#student_count kont uczniów w Studio Kodowania'
+  homepage_hero_text_stat_students: "#student_count kont uczniów w Studio Kodowania"
   homepage_hero_text_stat_served: 'Godzina Kodowania: #served uczestników'
   homepage_slot_text_hoc: Godzina Kodowania
   homepage_slot_text_frozen: Kraina Lodu z Anną i Elsą
@@ -201,25 +227,39 @@
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Sklep
   homepage_slot_text_flappy: Kod Flappiego
+  homepage_action_text_hoc: Godzina Kodowania dla każdego ucznia.
+  homepage_action_text_num_served: "# spróbowało"
+  homepage_action_text_join_us: Dołącz do nas
+  homepage_action_text_sign_up: Zarejestruj się
+  homepage_action_text_try_it: Wypróbuj
+  homepage_action_text_volunteers: Potrzebni są wolontariusze techniczni
   homepage_action_text_codevideo: Obejrzyj wideo
   homepage_action_text_teachervideo: Obejrzyj wideo
+  homepage_action_text_girlvideo: Zainspiruj dziewczynę
   homepage_action_text_learn: Rozpocznij naukę
   homepage_action_text_signpetition: Podpisz petycję
   homepage_signpetition_dropdown: Zgadzam się &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
+  homepage_diversity_pledge: Weź zastaw różnorodności
+  homepage_banner_text_prizes: 'Godzina Kodowania nadchodzi ponownie, 7-13 grudnia. '
+  homepage_banner_link_prizes: 'Dołącz do największego wydarzenia edukacyjnego w historii. '
   homepage_banner_text_main: Code.org i College Board tworzą sojusz dla zwiększenia
     różnorodności w dziedzinie informatyki.
   homepage_banner_text_link: Ucz się więcej
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
-  homepage_banner_privacy_link: Ucz się więcej
-  homepage_slot_text_title_hoc: Godzina kodowania (Hour of Code)
+  homepage_banner_privacy_link: Naucz się więcej
+  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
+    science in classrooms.
+  homepage_banner_20k_teachers_link: Ucz się więcej
+  homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
   homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
-  homepage_slot_text_link_hocserved: '# spróbowało'
+  homepage_slot_text_link_hocserved: "# spróbowało"
+  homepage_solot_text_link_volunteer: Zostań wolontariuszem w Godzinie Kodowania
   homepage_slot_text_title_students: Uczniowie
   homepage_slot_text_blurb_students: Poznaj wszystkie nasze samouczki
+  homepage_slot_text_blurb_students_courses: Explore our courses
   homepage_slot_text_link_codestudio: Wypróbuj Studio Kodowania
   homepage_slot_text_link_local: Znajdź klasę w okolicy
   homepage_slot_text_link_othercourses: Pozostałe kursy online
@@ -276,22 +316,140 @@
   class_submission_level_college: Kolegium (College)
   class_submission_level_vocational: Zawodowy
   class_submission_languages_other: Inne języki
+  inspirational_videos_more: Więcej <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
+    inspirujących filmów </a> z udziałem osobistości i gwiazd
+  playlab_choose_theme: Wybierz własny motyw Play Lab
+  playlab_classic_title: Klasyczny
+  playlab_gumball_title: Niesamowity świat Gumball
+  playlab_iceage_title: Epoka lodowcowa - już wkrótce
+  playlab_iceage_title_live: Epoka lodowcowa
+  starwars_subtitle: Tworzenie Galaktyki za pomocą kodu
+  starwars_javascript_title: Javascript
+  starwars_javascript_description: Użyj bloków do przeciągania i upuszczania oraz
+    JavaScript.
+  starwars_javascript_specs: Tylko w języku angielskim | Nowoczesne przeglądarki |
+    Wiek 11 +
+  starwars_javascript_start_button: Spróbuj teraz
+  starwars_blocks_title: Bloki
+  starwars_blocks_description: Użyj bloków do przeciągania i upuszczania.
+  starwars_blocks_specs: Wiele języków | Nowoczesne przeglądarki, smartfony, tablety
+    | W wieku 6-106
+  starwars_blocks_start_button: Spróbuj teraz
+  starwars_watch_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących filmów
+  starwars_speak_languages: Czy mówisz w innym języku?
+  starwars_help_translate: Pomóż nam tłumaczyć
+  starwars_platform_text: Nowoczesne przeglądarki, smartfony, tablety
+  mc_name: Godzina Kodowania z Minecraft
+  mc_longdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie
+    gry Minecraft.
+  mc_shortdescription: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie
+    gry Minecraft.
+  mc_gradelevel: Wiek 6 +
+  mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
+  mc_specs: Wiele języków | Nowoczesne przeglądarki i tablety | W wieku 6 - 106
+  minecraft_subtitle: Godzina Kodowania z Minecraft
+  volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy
+  volunteer_engineer_submission_subtitle_generic: '100 000 nauczycieli będzie gościć
+    Godzinę Kodowanie w swoich klasach w tym roku między 7 a 13 grudnia. Potrzebują
+    Twojej pomocy! '
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} nauczycieli potrzebuje
+    wolontariuszy. <br>%{num_volunteers} zarejestrowanych wolontariuszy. Dołącz do
+    nich."
+  volunteer_engineer_submission_intro_background: Godzina Kodowania jest globalną
+    inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
+    milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
+    Edukacji Informatycznej w dniach 7-13 grudnia.
+  volunteer_engineer_submission_intro_recruit: 'Nauczyciele byliby szczęśliwi mając
+    kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji
+    informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span
+    style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając
+    o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
+  volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
+    jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span
+    class="form-required-field"> *</span> są wymagane.
+  volunteer_engineer_submission_intro_links: Czy chcesz znaleźć wolontariusza? Odszukaj
+    wolontariusza w okolicy na naszej <a href="%{volunteer_local}"> mapie wolontariuszy</a>.
+  volunteer_engineer_submission_update_information: Uaktualnij informacje o sobie
+  volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
+    na mapie wolontariuszy
+  volunteer_engineer_submission_field_name: Nazwa
+  volunteer_engineer_submission_field_name_placeholder: Pełne Nazwisko
+  volunteer_engineer_submission_field_company: Firma (lub Uniwersytet)
+  volunteer_engineer_submission_field_company_placeholder: Firma (lub Uniwersytet)
+  volunteer_engineer_submission_field_experience_level: Poziom zaawansowania
+  volunteer_engineer_submission_field_location: Miejsce
+  volunteer_engineer_submission_field_location_desc: Jeśli podasz swój dokładny adres,
+    nie udostępnimy go, posłuży do pokazania na mapie Twojego miejsca.
+  volunteer_engineer_submission_field_location_placeholder: Kod pocztowy, miasto i
+    województwo/kraj lub ulica
+  volunteer_engineer_submission_field_location_flexibility: Służę pomocą w czasie
+    Godziny Kodowania... (wybierze wszystko, co Ci odpowiada)
+  volunteer_engineer_submission_checkbox_after_hoc: Jestem zainteresowany wolontariatem
+    po Godzinie Kodowania
+  volunteer_engineer_submission_field_time_commitment: Czas zaangażowania po Godzinie
+    Kodowania
+  volunteer_engineer_submission_field_linkedin: Profil na LinkedIn
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook: Profil na Facebooku
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_description: Opis
+  volunteer_engineer_submission_field_description_desc: Opisz swoje informatyczne
+    doświadczenia i jak chciałbyś uczestniczyć jako wolontariusz dla nauczycieli w
+    okolicy.
+  volunteer_engineer_submission_field_description_placeholder: Opis doświadczenia
+    i/lub udziału
+  volunteer_engineer_submission_header_private: Informacje przechowywane jako prywatne
+    i nigdy nie udostępniane
+  volunteer_engineer_submission_field_email: Adres e-mail
+  volunteer_engineer_submission_field_email_desc: Twój adres e-mail nigdy nie będzie
+    udostępniany, ale prześlemy Ci prośby od nauczycieli.
+  volunteer_engineer_submission_field_email_placeholder: Adres e-mail
+  volunteer_engineer_submission_final_paragraph: Będziesz wymieniona/y na mapie, by
+    nauczyciele z okolicy mogli skontaktować się z Tobą w sprawie Godziny Kodowania
+    lub w celu innych możliwości wsparcia. NIGDY nie udostępnimy Twojego maila i dokładnego
+    adresu. Ale pozostałe informacje (w tym przybliżona lokalizacja) będą widoczne
+    dla nauczycieli z okolicy.
+  volunteer_engineer_submission_checkbox_contact: 'Zgadzam się, by nauczyciele kontaktowali
+    się ze mną z prośbą o wsparcie (Uwaga: Twój adres e-mail nie będzie udostępniony)'
+  volunteer_engineer_submission_submit: Wyślij
+  volunteer_engineer_submission_thankyou: Dziękujemy za zarejestrowanie się jako wolontariusz.
+    Nauczyciele, używając <a href="%{url}"> tej mapy,</a> będą wyszukiwać i kontaktować
+    się z wolontariuszami, jak Ty.
   volunteer_engineer_submission_commitment_uncertain: Niepewny
-  volunteer_engineer_submission_commitment_now_and_then: Od czasu do czasu
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 godzina tygodniowo
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 godziny tygodniowo
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 godzin tygodniowo
+  volunteer_engineer_submission_commitment_now_and_then: Od czasu do czasu
+  volunteer_engineer_submission_commitment_annually: 2 - 3 razy w roku
+  volunteer_engineer_submission_commitment_monthly: Kilka godzin miesięcznie
+  volunteer_engineer_submission_commitment_weekly: Kilka godzin w tygodniu
   volunteer_engineer_submission_commitment_more: Więcej
-  volunteer_engineer_submission_location_flexibility_onsite: Na miejscu w szkole
-  volunteer_engineer_submission_location_flexibility_remote: Zdalne wsparcie (nauczyciele
-    i uczniowie)
-  volunteer_engineer_submission_location_flexibility_curriculum: Chętny, by wspomóc
-    rozwój projektów dotyczących programów nauczania bazujących na otwartych zasobach
-    (open-source)
+  volunteer_engineer_submission_location_flexibility_onsite: wizytując szkołę na miejscu
+    (1-2 godzin w klasie lub przy szkole)
+  volunteer_engineer_submission_location_flexibility_remote: uczestnicząc w zdalnie
+    sesji Q&A (pytań i odpowiedzi) ze uczniami (za pomocą krótkich konferencyjnych
+    wideo)
+  volunteer_engineer_submission_location_flexibility_curriculum: wspierają projekty
+    dotyczące programów nauczania bazujących na otwartych zasobach
   volunteer_engineer_submission_experience_unspecified: Nieokreślony
-  volunteer_engineer_submission_experience_university_student_or_researcher: Obecnie
-    student (lub naukowiec)
+  volunteer_engineer_submission_experience_tech_company: Nie inżynier w firmie techologicznej
+  volunteer_engineer_submission_experience_university_student_or_researcher: Student
+    informatki uniwersyteckiej
   volunteer_engineer_submission_experience_software_professional: Profesjonalne oprogramowanie
+  volunteer_engineer_submission_distance_8: 5 mil
+  volunteer_engineer_submission_distance_16: 10 mil
+  volunteer_engineer_submission_distance_24: 15 mil
+  volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_num_volunteers_5: 5 ochotników
+  volunteer_engineer_submission_num_volunteers_10: 10 ochotników
+  volunteer_engineer_submission_num_volunteers_25: 25 ochotników
+  volunteer_engineer_submission_num_volunteers_50: 50 ochotników
+  volunteer_engineer_submission_type_task_onsite: Chciałbym, abyś odwiedził moją klasę
+    dla pomocy technicznej i inspiracji
+  volunteer_engineer_submission_type_task_remote: Chciałbym Cię zaprosić do rozmowy
+    na Skypie z moją klasą, abyś w kilku słowach zainspirował dzieci
+  volunteer_engineer_submission_type_task_mentor: Poszukuję mentora, który pomógłby
+    mi przygotować się do kodowania z moimi uczniami
   petition_age: Wiek
   dashboard_landing_title: Domowa strona nauczyciela
   dashboard_landing_welcome: Witamy w nowym i ulepszonym panelu nauczyciela.
@@ -315,6 +473,7 @@
   dashboard_landing_progress_title: Zasadnicze postępy klasy
   dashboard_landing_progress_biggest: To jest postęp dla Twojego największego działu.
   dashboard_landing_view_progress: Przejrzyj postęp w %{biggest_section}
+  dashboard_landing_print_progress: Wydrukuj postępy
   dashboard_landing_available_title: Dostępne kursy
   dashboard_landing_available_courses: Tutaj są kursy dostępne obecnie dla Ciebie
     i dla  Twoich uczniów.
@@ -326,6 +485,9 @@
   dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych
     samouczków!
+  dashboard_hoc_courses_desc_and_cta: Wypróbuj te krótkie, jednogodzinne samouczki
+    ze swoimi uczniami. <a href="https://hourofcode.com">Przyłącz się do inicjatywy
+    Godzina Kodowania</a> w czasie Tygodnia Nauczania Informatyki.
   dashboard_k5_courses: 20-godzinne kursy dla K-5
   dashboard_k5_courses_desc: To są mieszane kursy online, poradniki do samodzielnej
     pracy we własnym tempie, z aktywnościami "unplugged", czyli takimi, które nie
@@ -381,6 +543,7 @@
   dashboard_navigation_section_speakers: Informatyka <br/> Gościnni mówcy
   dashboard_navigation_all_sections: Konta i postępy ucznia
   dashboard_navigation_view_progress: Przejrzy postępy
+  dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
   dashboard_navigation_add_students: Dodaj uczniów
   dashboard_navigation_manage_students: Zarządzaj uczniami
   dashboard_navigation_lesson_plans_resources: Plany lekcji i zasoby
@@ -400,11 +563,11 @@
   dashboard_sections_name: Nazwa Sekcji
   dashboard_sections_choose_secret: Jeśli chciałbyś utworzyć konta dla swoich uczniów,
     wybierz typ tajny <b>słowo</b> lub <b>obrazek</b> dla tej sekcji.
-  dashboard_sections_secret_word: <b>słowo</b> umożliwia ustawienie każdemu uczniowi
-    tajnego słowa.
-  dashboard_sections_secret_picture: <b>obrazek</b> umożliwia ustawienie każdemu uczniowi
-    tajnego obrazka, idealne dla młodszych uczniów, którzy nie potrafią jeszcze pisać
-    na komputerze.
+  dashboard_sections_secret_word: "<b>słowo</b> umożliwia ustawienie każdemu uczniowi
+    tajnego słowa."
+  dashboard_sections_secret_picture: "<b>obrazek</b> umożliwia ustawienie każdemu
+    uczniowi tajnego obrazka, idealne dla młodszych uczniów, którzy nie potrafią jeszcze
+    pisać na komputerze."
   dashboard_sections_secret_none: Jeśli chciałbyś, aby Twoi uczniowie mieli własne
     konta, włącznie z wyborem własnego hasła, to wybierz typ utajniony <b>brak</b>.
   dashboard_sections_print_secrets: Możesz następnie wydrukować arkusz z kartami zawierającymi
@@ -503,6 +666,10 @@
   dashboard_progress_completed_too_many_blocks: zakończona, zbyt wiele bloków
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
+  dashboard_stage: Etap
+  dashboard_puzzle: "Łamigłówka"
+  dashboard_question: Pytanie
+  dashboard_response: Odpowiedź
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania.
     W ciągu zaledwie jednego tygodnia:'
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
@@ -525,46 +692,100 @@
     sekcji.
   dashboard_faq: Najczęściej zadawane pytania (FAQ)
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
+  dashboard_announcements: Ogłoszenia
+  dashboard_announce_view_all: Zobacz wszystko
+  dashboard_announce_message: "<b>16 grudnia 2015</b> - Dziękuję za udział w Godzinie
+    Kodowania 2015! Wznowiliśmy śledzenie i zapisywanie postępów we wszystkich samouczkach
+    i kursach Code Studio. Uwaga: Biura Code.org będą zamknięte w dniach od 19 grudnia
+    do 3 stycznia. Proszę spodziewać się opóźnienia odpowiedzi na wszelkie pytania
+    wysłane przed 4 stycznia."
+  dashboard_announce_button_text: Ucz się więcej
+  dashboard_announce_hoc: "<b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata
+    edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000
+    wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę
+    lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami
+    w Twojej okolicy."
+  dashboard_announce_playlab: "<b>4 grudnia 2015 r.</b> - Godzina Kodowania jest tutaj!
+    Wypróbuj 50 samouczków dla każdego wieku i każdego urządzenia. Nowości w tym tygodniu:
+    Zaprogramuj własną historyjkę i grę w nowej Play Labs, Ice Age i Gumball."
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
-  learn_more: Naucz się więcej
+  learn_more: Spróbuj teraz
+  learn_sign_up_description: Zarejestruj się, by uczestniczyć w Godzinie Kodowania
+    w czasie Tygodnia Nauczania Informatyki
+  learn_sign_up_button: Zarejestruj się
+  learn_videos_watch: Obejrzyj ten inspirujący film ze swoją klasą
+  learn_videos_show: Pokaż ten inspirujący film swojej klasie
+  learn_videos_before_hoc: Obejrzyj ten inspirujący film przed Twoją Godziną Kodowania
+  learn_educator_resources_description: Dowiedz się, jak wykorzystać Godzinę kodowania
+    (the Hour of Code)
+  learn_educator_resources_button: Zasoby nauczyciela
+  learn_are_you_educator: Czy jesteś nauczycielem? Dowiedz się, <a href="http://hourofcode.com/resources/how-to">
+    jak poprowadzić Godzinę Kodowania</a>
+  learn_find_volunteer: <a href="https://code.org/volunteer/local"> Znajdź wolontariusza
+    w okolicy</a>, by pomógł Ci podczas Godziny Kodowania
+  learn_teacher_led_lesson_plans: Bądź zainspirowany przez <a href="https://code.org/teacher-led">
+    nauczyciela prowadzącego lekcję Godziny Kodowania</a>
+  learn_how_to_hoc: Śledź <a href="https://hourofcode.com/how-to"> nasze porady</a>
+    dla jednej Godziny Kodowania
+  learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Dowiedz się więcej</a>
+    o nagrodach dla każdego nauczyciela.
+  learn_inspirational_videos: Zainspiruj uczniów pokazując im <a href="https://code.org/educate/inspire">
+    te filmy</a>
   hoc2014_try_new_tutorials: Wypróbuj nasze nowe samouczki Godziny Kodowania
   hoc2014_try_new_tutorial: Wypróbuj nasz nowy samouczek Godziny Kodowania w wersji
     beta
   hoc2014_try_scrat: Angry Birds, PvZ i wiewióra
   hoc2014_try_frozen: Artysta z Anną i Elsą, z Frozen
-  carousel_heading_international: Poradniki w Twoim języku
-  carousel_heading_domestic: Poradniki (samouczki) dostępne w języku angielskim
-  carousel_heading_beginners: Samouczki dla początkujących
-  carousel_heading_javascript: Samouczki do nauki Javascript
+  carousel_heading_codeorg: Poradnik utworzone przez Code.org
+  carousel_heading_codeorg_any_device: Samouczki wykonane przez Code.org (dla wszystkich
+    urządzeń)
+  carousel_heading_3rd_party: Poradniki utworzone przez strony trzecie
+  carousel_heading_third_party: Poradniki utworzone przez strony trzecie
+  carousel_heading_international: Samouczki partnerów w Twoim języku
+  carousel_heading_domestic: Samouczki partnerów dostępne w języku angielskim
+  carousel_heading_beginners: Samouczki partnerów dla uczniów z K-8
+  carousel_heading_beyond_beginners: Samouczki dla początkujących
+  carousel_heading_javascript: Samouczki partnerów do nauki JavaScript
+  carousel_heading_beyond_javascript: Samouczki uczące JavaScript
   carousel_heading_unplugged: Nie masz komputera lub dostępu do Internet? Poznaj informatykę
     "unplugged", czyli informatykę bez komputera
-  carousel_heading_devices: Aplikacje z poradnikami dla telefonów komórkowych i tabletów
-  carousel_heading_languages: Poradniki dla innych języków programowania
+  carousel_heading_devices: Aplikacje z samouczkami partnerów dla telefonów komórkowych
+    i tabletów
+  carousel_heading_beyond_devices: Aplikacje z samouczkami dla telefonów komórkowych
+    i tabletów
+  carousel_heading_languages: Samouczki partnerów dla innych języków programowania
+  carousel_heading_beyond_languages: Samouczki dla innych języków programowania
   carousel_heading_apps_games: Utwórz własną aplikację lub grę
   carousel_heading_university: Uniwersyteckie kursy online
   carousel_heading_webpages: Naucz się tworzyć strony internetowe
   carousel_heading_robots: Naucz się programować roboty
   carousel_heading_ide: Platformy popularne wśród nauczycieli
   educator_notes: Notatki nauczyciela
+  teach_led_lesson_plans: Plany lekcji do poprowadzenia przez nauczyciela
+  learn_footer_all_tutorials: Zobacz <a href="https://code.org/educate/allhourofcode">
+    pełną listę samouczków Godziny Kodowania</a>. Aby zobaczyć nasze kryteria i wytyczne
+    dotyczące zgłoszeń samouczków dla Godziny Kodowania, <a href="https://hourofcode.com/tutorial-guidelines">
+    kliknij tutaj.</a>
   how_to_teach_hoc: Jak uczyć z Godziną Kodowania
   more_resources_educators: Więcej zasobów dla nauczycieli i wychowawców
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
+  beyond_submission: Czy chcesz przesłać poradnik dla zajęć poza Godziną Kodowania?
+    Zobacz kryteria i formularz zgłoszenia.
   participants: uczestnicy
   teachers_notes: Notatki nauczyciela
   teachers_notes_hoc: 'Nauczyciele: Przeczytaj tutaj ważne notatki pedagoga'
   previous: Poprzedni
   next: Następny
-  older_systems: Samouczki, które działają w starszych systemach
+  older_systems: Samouczki partnerów, które działają na starszych systemach
   older_systems_subheading: Te powinny działać na starszych przeglądarkach stron.
     Aby uzyskać dostęp do wszystkich poradników, uaktualnij <a href="http://browsehappy.com/"
     target="_blank"> do najnowszej wersji przeglądarki. </a>
-  mobile_devices: Poradniki dla urządzeń mobilnych
+  mobile_devices: Samouczki partnerów dla urządzeń mobilnych
   frozen_name: Koduj z Anną i Elsą
-  codeorg_name: Napisz swój pierwszy program komputerowy
-  codeintl_name: Napisz swój pierwszy program komputerowy
+  starwars_name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu'
+  codeorg_name: Klasyczny labirynt
+  codeintl_name: Klasyczny labirynt
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: Wprowadzenie do JavaScript
   khanes_name: Wprowadzenie do JavaScript
@@ -577,7 +798,7 @@
   lightbot_name: Lightbot
   thinkersmith_name: Moi przyjaciele wśród robotów
   condcards_name: Warunkowe z kartami
-  lightbotintl_name: Lightbot
+  lightbotintl_name: LightBot
   codehs_name: Naucz się kodować z Psem Karelem
   codecademy_name: Codecademy
   codecombat_name: CodeCombat
@@ -593,15 +814,24 @@
   robomindnl_name: Programuj wirtualnego robota
   flappy_name: Utwórz grę dla Flappy'ego
   bitsbox_name: Bitsbox - utwórz grę
-  makegameswithus_name: Utwórz w swojej przeglądarce grę dla iPhona!
+  makeschool_name: Utwórz w przeglądarce grę na swój iPhone!
   touchdevelop_name: TouchDevelop
   appinventor_name: Godzina Kodowania z  AppInventor
   blockly_name: Blockly
   thinkersmith2_name: Binarne Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Kamień, Papier, Nożyczki (Rock, Paper, Scissors)
-  hourofcode_name: Symbol zastępczy dla nowego code.org/hoc
+  hourofcode_name: Klasyczny labirynt
   playlab_name: Play Lab
+  infinity_name: Infinity Play Lab
+  artist_name: Artysta
+  monstercoding_name: Tajemnicza wyspa Wyzwań Kodowania
+  allcancode_name: Biegnij Marco!
+  csfirst_name: Najpierw informatyka
+  boxisland_name: Kartonowa Wyspa (Box Island)
+  codesters_name: Codesters
+  texasinstruments_name: 10 minut kodowania
+  teacherled_name: Plany lekcji do poprowadzenia przez nauczyciela
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -630,9 +860,9 @@
   kodable_gradelevel: Podstawowa
   tynkerapp_gradelevel: W wieku 5-13
   robomindnl_gradelevel: W wieku 8-13
-  flappy_gradelevel: W wieku 4-104
+  flappy_gradelevel: W wieku 6-106
   bitsbox_gradelevel: Podstawowa
-  makegameswithus_gradelevel: Szkoła ponadgimnazjalna
+  makeschool_gradelevel: Szkoła ponadgimnazjalna
   touchdevelop_gradelevel: Szkoła ponadgimnazjalna
   appinventor_gradelevel: Gimnazjum +
   blockly_gradelevel: Wszystkie grupy wiekowe
@@ -640,8 +870,18 @@
   kodableunplugged_gradelevel: W wieku 8-13
   projguts_gradelevel: W wieku 10-13
   hourofcode_gradelevel: W wieku 4-104
-  frozen_gradelevel: W wieku 8+
-  playlab_gradelevel: W wieku 4-104
+  frozen_gradelevel: W wieku 8-108
+  starwars_gradelevel: Wiek 6 +
+  playlab_gradelevel: W wieku 6-14
+  infinity_gradelevel: W wieku 4-104
+  artist_gradelevel: W wieku 4-104
+  monstercoding_gradelevel: W wieku 5-13
+  allcancode_gradelevel: W wieku 5-10
+  csfirst_gradelevel: W wieku 9-14
+  boxisland_gradelevel: Podstawowa
+  codesters_gradelevel: W wieku 12-14
+  texasinstruments_gradelevel: W wieku 13-16
+  teacherled_gradelevel: W wieku 5+
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   thinkersmithspanish_platformtext: Odłączony (unplugged)/Bez komputera
@@ -655,7 +895,7 @@
   scratch_platformtext: Przeglądarki tylko na komputery stacjonarne (nie na tablety)
   lightbot_platformtext: WSZYSTKIE przeglądarki i iOS, Android lub konsola do gier
   thinkersmith_platformtext: Odłączony (unplugged)/Bez komputera
-  condcards_platformtext: Odłączony (unplugged)/Bez komputera
+  condcards_platformtext: Odłączony (Unplugged)/Bez komputera
   lightbotintl_platformtext: iOS, Android (lub przeglądarki sieci web)
   codehs_platformtext: Nowoczesne przeglądarki. (Kurs, który następuje, wymaga $$)
   codecademy_platformtext: Nowoczesne przeglądarki. Aplikacje w systemach iOS i Android
@@ -673,7 +913,7 @@
   robomindnl_platformtext: Nowoczesne przeglądarki, Mobilne sieci
   flappy_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   bitsbox_platformtext: Nowoczesne przeglądarki sieci web
-  makegameswithus_platformtext: Nowoczesne przeglądarki sieci web
+  makeschool_platformtext: Nowoczesne przeglądarki sieci web
   touchdevelop_platformtext: Nowoczesne przeglądarki, smartfony, wszystkie urządzenia
   appinventor_platformtext: Nowoczesne przeglądarki + Android
   blockly_platformtext: Nowoczesne przeglądarki tylko
@@ -682,7 +922,15 @@
   projguts_platformtext: Odłączony (unplugged)/Bez komputera
   hourofcode_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   frozen_platformtext: Nowoczesne przeglądarki + tablety
+  starwars_platformtext: Nowoczesne przeglądarki + tablety
   playlab_platformtext: Nowoczesne przeglądarki, smartfony, tablety
+  monstercoding_platformtext: Nowoczesne przeglądarki, iOS, Android
+  allcancode_platformtext: Nowoczesne przeglądarki, iOS
+  csfirst_platformtext: Nowoczesne przeglądarki sieci
+  boxisland_platformtext: Android, iOS
+  codesters_platformtext: Nowoczesne przeglądarki sieci
+  texasinstruments_platformtext: Kalkulatory TI
+  teacherled_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeorg_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
     i Angry Birds!
   codeintl_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
@@ -728,8 +976,8 @@
     lub okręt podwodny
   bitsbox_shortdescription: Koduj aplikacje posługując się rzeczywistym JavaScript,
     by grać i udostępniać je innym.
-  makegameswithus_shortdescription: Utwórz grę na iPhona! Poznaj kodując, jak nauczyć
-    Twojego potwora nowych ruchów!
+  makeschool_shortdescription: Utwórz grę na iPhone! Poznaj kodując, jak nauczyć Twojego
+    potwora nowych ruchów!
   touchdevelop_shortdescription: 'Rozwiązuj zagadki, twórz gry i ucz się kodować,
     a wszystko na swoim telefonie. '
   appinventor_shortdescription: Utwórz swoją własna aplikację! (tylko dla systemu
@@ -740,10 +988,30 @@
   kodableunplugged_shortdescription: Zabawne ćwiczenie bez komputera
   projguts_shortdescription: Wypróbuj modelowanie i symulację wykorzystując kamień,
     papier, nożyce
-  hourofcode_shortdescription: Symbol zastępczy dla nowego code.org/hoc
+  hourofcode_shortdescription: Naucz się kodować (programować) z Markiem Zuckerbergiem
+    i Angry Birds!
   frozen_shortdescription: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających
     się magią i pięknem lodu.
+  starwars_shortdescription: Dowiedz się, jak programować droidy i utwórz własną grę
+    Star Wars w galaktyce daleko, daleko.
   playlab_shortdescription: Utwórz historyjkę lub grę z Play Lab!
+  infinity_shortdescription: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
+    z Disney Infinity w rolach głównych.
+  artist_shortdescription: Rysuj fajne obrazki i wzory z Artystą!
+  monsterocding_shortdescription: Kolorowa przygoda dla samodzielnego programowania
+    przez dzieci.
+  allcancode_shortdescription: Wciągająca gra do kierowania Marco, wykorzystująca
+    wizualny język programowania.
+  csfirst_shortdescription: Animuj historię o dwóch postaciach na oceanie. Zastosuj
+    swój własny styl!
+  boxisland_shortdescription: Weź udział w wycieczce kodowania na Kartonowej Wyspie
+    (Box Island) z dzielnym Hiro.
+  codesters_shortdescription: Twórz własne gry, animacje i grafiki używając języka
+    Python.
+  texasinstruments_shortdescription: Poznaj podstawy kodowania posługując się kalkulatorem
+    TI-84 &#8482; Plus.
+  teacherled_shortdescription: Poczuj się zainspirowany do zaprojektowania własnego
+    wydarzenia w ramach Godziny Kodowania z pomocą tych planów lekcji.
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies
@@ -764,13 +1032,13 @@
   khanes_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
     rysunki. Możesz to robić na własną rękę lub z klasą!
   khanpt_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
-    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+    rysunki. Możesz to robić na własną rękę lub z klasą!
   khanhe_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
-    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+    rysunki. Możesz to robić na własną rękę lub z klasą!
   khanfr_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
-    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+    rysunki. Możesz to robić na własną rękę lub z klasą!
   khanpl_longdescription: Poznaj podstawy programowania w JavaScript tworząc zabawne
-    rysunki. Możesz to zrobić na własną rękę lub z klasy!
+    rysunki. Możesz to robić na własną rękę lub z klasą!
   tynker_longdescription: Buduj swoje własne gry i dziel się nimi z przyjaciółmi!
     Rozwiązuj zabawne łamigłówki kodowania i poznawaj pojęcia programowania na każdym
     poziomie. Personalizuj gry z animowanymi postaciami, na wielu poziomach i bogatych
@@ -857,11 +1125,11 @@
   bitsbox_longdescription: Dostosuj swój własny wirtualny tablet, a następnie twórz
     aplikacje do gry i udostępniaj je innym. Jest to możliwe, nawet małe dzieci programują
     w Javascript, a im bardziej jesteś zaawansowany w programowaniu, tym dalej zajdziesz.
-  makegameswithus_longdescription: Naucz się programować tworząc grę dla iPhona za
-    pomocą nowego i przyjaznego dla początkujących języka programowania o nazwie Swift!
-    Utwórz grę akcji inspirowaną przez grę Pokemon i napisz kod, by nauczyć Twojego
-    potwora nowych ruchów. Dowiesz się, jak używać zmiennych, metod i obiektów, aby
-    pomóc Twojemu potworowi wygrać!
+  makeschool_longdescription: Naucz się programować tworząc grę dla iPhona, wykorzystując
+    do tego nowy i przyjazny dla początkujących języka programowania Swift! Utwórz
+    grę akcji inspirowaną przez grę Pokemona i napisz kod, by nauczył Twojego potwora
+    nowych ruchów. Dowiesz się, jak używać zmiennych, metod i obiektów, aby pomóc
+    Twojemu potworowi wygrać!
   touchdevelop_longdescription: 'Przyjazny edytor dotykowy poprowadzi Cię przy tworzeniu
     dzieł złożonych z pikseli, w rozwiązywaniu łamigłówek niedźwiedzia lub przy tworzeniu
     własnej gry z podskakującym ptakiem. '
@@ -889,9 +1157,40 @@
   frozen_longdescription: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które
     poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas
     jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
+  starwars_longdescription: Dowiedz się, jak programować droidy i utwórz własną grę
+    Star Wars w galaktyce daleko, daleko.
   playlab_longdescription: Utwórz historyjkę lub grę posługując się Play Lab! Twórz
     zwierzęta, piratów, zombie, ninja i wiele innych postaci przejść, twórz dźwięki,
     zbieraj punkty, a nawet ciskaj ognistymi kulami!
+  monstercoding_longdescription: Coding Quest Tajemniczej Wyspy z Potworem Kodowania
+    oferuje zabawną przygodę bez przewodnika, która uczy dzieci kilku kluczowych pojęć
+    programowania. Każdy blok aktywności bazuje na poprzednim i wprowadza dzieci do
+    funkcji, wartości logicznych, pętli, instrukcji warunkowych i tablice przy użyciu
+    kolorowej grafiki animowanej i dźwiękowych instrukcji.
+  allcancode_longdescription: Uczniowie grają w przygodową grę opartą na oryginalnej
+    historii. Prowadzą oni Marco - głównego bohatera - przez kolejne poziomy instruując
+    go krok po kroku z wykorzystaniem wizualnego języka programowania używanego w
+    Godzinie Kodowania. Zostają przy tym wprowadzeni do korzystania z ciągu poleceń,
+    iteracji i warunków nawet o tym nie wiedząc.
+  csfirst_longdescription: Utwórz opowieść o dwóch postaciach na morzu. Animuj wodę
+    i dostosuj krajobraz do własnego stylu. Użyj kodu, aby opowiedzieć swoją historię!
+  boxisland_longdescription: Wybierz się na wycieczkę po Kartonowej Wyspie (Box island)
+    oraz pomóż Hiro zebrać wszystkie zegary porozrzucane na pustkowiu! W tym samouczku
+    poznasz podstawy algorytmów, sekwencje, pętle i warunki!
+  codesters_longdescription: 'Utwórz własne gry, animacje i grafiki używając języka
+    Python.  Gdy skończysz, podziel się nimi z przyjaciółmi! Programuj w języku Python,
+    używanym na co dzień w firmach - nasz przybornik ułatwia naukę metodą przeciągnij
+    i upuść. Spróbuj utworzyć mecz koszykówki, choreograficzny taniec, lub zaprojektuj
+    animowaną kartkę! '
+  texasinstruments_longdescription: '10 minut kodowania może zostać wykorzystane w
+    klasie, aby wzbudzić zainteresowanie uczniów kodowaniem z użyciem technologii
+    TI, którą noszą w plecakach  Naucz się podstaw kodowania przy użyciu TI-84 &#8482;
+    Plus i zacznij programować w zaledwie 10 minut – nie jest wymagane żadne doświadczenie!  '
+  teacherled_longdescription: Dziesiątki tysięcy nauczycieli skorzystało z Godziny
+    Kodowania, wiele klas jest przygotowanych na bardziej kreatywne, nie takie same
+    dla wszystkich działania, które uczą podstaw informatyki. Aby zainspirować nauczycieli,
+    zebraliśmy i opracowaliśmy dla nauczycieli godzinne lekcje i plany aktywności
+    z różnych dziedzin przeznaczone dla weteranów Godziny Kodowania.
   codeorg_beyond_name: Wprowadzenie do informatyki (dla klas K-8)
   khan_beyond_name: Naucz się programować komputer
   tynker_beyond_name: Ucz się programowania w domu
@@ -905,7 +1204,7 @@
   groklearning_beyond_name: Ucz się programować w języku Python
   hacketyhack_beyond_name: Ucz się programować w języku Ruby
   robomind_beyond_name: Programuj wirtualnego robota
-  makegameswithus_beyond_name: Utwórz w swojej przeglądarce grę dla iPhona!
+  makeschool_beyond_name: Utwórz w przeglądarce grę na swój iPhone!
   appinventor_beyond_name: Godzina Kodowania z  AppInventor
   touchdevelop_beyond_name: TouchDevelop
   codehs_beyond_name: Naucz się kodować z Psem Karele
@@ -942,7 +1241,7 @@
   groklearning_beyond_gradelevel: Gimnazjum +
   hacketyhack_beyond_gradelevel: Szkoła ponadgimnazjalna
   robomind_beyond_gradelevel: W wieku 8-13
-  makegameswithus_beyond_gradelevel: Szkoła ponadgimnazjalna
+  makeschool_beyond_gradelevel: Szkoła ponadgimnazjalna
   appinventor_beyond_gradelevel: Gimnazjum +
   touchdevelop_beyond_gradelevel: Szkoła ponadgimnazjalna
   codehs_beyond_gradelevel: Szkoła ponadgimnazjalna
@@ -980,7 +1279,7 @@
   groklearning_beyond_platformtext: Nowoczesne przeglądarki sieci
   hacketyhack_beyond_platformtext: Pulpit instalacji
   robomind_beyond_platformtext: Nowoczesne przeglądarki, mobilne sieci
-  makegameswithus_beyond_platformtext: Nowoczesne przeglądarki sieci
+  makeschool_beyond_platformtext: Nowoczesne przeglądarki sieci web
   appinventor_beyond_platformtext: Nowoczesne przeglądarki + Android
   touchdevelop_beyond_platformtext: Nowoczesne przeglądarki, smartfony, wszystkie
     urządzenia
@@ -994,9 +1293,9 @@
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Zainstaluj na pulpicie
-  w3schools_beyond_platformtext: Nowoczesne przeglądarki sieci
-  codeavengers_beyond_platformtext: Nowoczesne przeglądarki sieci
-  mozilla_beyond_platformtext: Nowoczesne przeglądarki sieci
+  w3schools_beyond_platformtext: Nowoczesne przeglądarki sieci web
+  codeavengers_beyond_platformtext: Nowoczesne przeglądarki sieci web
+  mozilla_beyond_platformtext: Nowoczesne przeglądarki sieci web
   codecombat_beyond_platformtext: Internetowe (Firefox, Chrome, Safari, IE9+)
   codea_beyond_platformtext: iPad
   lego_beyond_platformtext: Zakup robota
@@ -1025,7 +1324,7 @@
     języku Python
   hacketyhack_beyond_shortdescription: Poznaj język Ruby od podstaw
   robomind_beyond_shortdescription: Napisz kod dla wirtualnego robota
-  makegameswithus_beyond_shortdescription: Naucz się tworzyć grę na iPhone w godzinę
+  makeschool_beyond_shortdescription: Naucz się tworzyć w godzinę grę na iPhone
   appinventor_beyond_shortdescription: Utwórz swoją własną aplikację! (tylko dla systemu
     Android)
   touchdevelop_beyond_shortdescription: Twórz mobilne aplikacje bezpośrednio na swoim
@@ -1107,11 +1406,11 @@
     własnymi wirtualnymi robotami. Kurs jest online i całkowicie samowystarczalny,
     zawiera krótkie prezentacje, filmy, quizy i automatyczne wskazówki, które pomagają
     przy wykonywaniu ćwiczeń z programowania. '
-  makegameswithus_beyond_longdescription: Czy znasz ObjectiveC? Poznaj, jak utworzyć
-    grę na iPhona w ciągu godziny! Poprowadzimy Cię przez kodowanie, testowanie i
-    granie w swoją grę w przeglądarce, a następnie udostępniamy ją na Facebooku dla
-    przyjaciół, aby spróbowali! Nie jest wymagana znajomość programowania iPhona.
-    Musisz zrozumieć, czym są zmienne, metody i obiekty.
+  makeschool_beyond_longdescription: Czy znasz ObjectiveC? Naucz się tworzyć grę na
+    iPhona w ciągu godziny! Poprowadzimy Cię przez kodowanie, testowanie i granie
+    w swoją grę w przeglądarce, a następnie udostępniamy ją na Facebooku dla przyjaciół,
+    aby spróbowali! Nie jest wymagana wcześniejsza znajomość programowania iPhona.
+    Musisz rozumieć, czym są zmienne, metody i obiekty.
   appinventor_beyond_longdescription: Zabawne samouczki wideo prowadzą Cię przez trzy
     proste aplikacje dla Twojego telefonu z Androidem lub dla tabletu. Przeznaczona
     dla początkujących jak i dla ekspertów, ta Godzina Kodowania przygotuje Cię do
@@ -1236,3 +1535,11 @@
     <a href='%{it_requirements_url}'> Kliknij tutaj</a>, aby dowiedzieć się, jak włączyć
     HTTPS dla Code.org.
   compatibility_https_hide_this_warning: Ukryj to ostrzeżenie
+  starwars_shortcode: sw
+  mc_shortcode: mc
+  frozen_shortcode: frzn
+  hourofcode_shortcode: code
+  flappy_shortcode: pofruń
+  infinity_shortcode: inf
+  playlab_shortcode: zagraj
+  artist_shortcode: art

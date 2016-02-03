@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: experiment_activities
+#
+#  id              :integer          not null, primary key
+#  activity_id     :integer          not null
+#  feedback_design :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 class ExperimentActivity < ActiveRecord::Base
 
   belongs_to :activity
@@ -24,7 +35,7 @@ class ExperimentActivity < ActiveRecord::Base
   end
 
   def self.set_experimenting_feedback_design(is_active)
-    @@is_experimenting_feedback_design = is_active;
+    @@is_experimenting_feedback_design = is_active
   end
 
   def self.get_feedback_design(activity_id)
@@ -34,7 +45,7 @@ class ExperimentActivity < ActiveRecord::Base
       if activity.user_id
         target_design = self.pick_mod_length(TYPES_FEEDBACK_DESIGN, activity.user_id)
         # Record
-        ExperimentActivity.create(activity_id: activity_id, feedback_design: target_design);
+        ExperimentActivity.create(activity_id: activity_id, feedback_design: target_design)
         target_design
       end
     end

@@ -1,0 +1,8 @@
+name 'CSP U4L04 Assessment 2 '
+title 'Enter title here'
+content1 'Enter prompt here'
+answer 'Enter answer here'
+
+markdown <<MARKDOWN
+# Assessment 2
+MARKDOWN

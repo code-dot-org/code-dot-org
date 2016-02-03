@@ -1211,6 +1211,7 @@ module.exports = {
       <block type="bee_ifNectarAmount"></block>\
       <block type="bee_ifTotalNectar"></block>\
       <block type="bee_ifFlower"></block>\
+      <block type="bee_ifOnlyFlower"></block>\
       <block type="bee_whileNectarAmount"></block>'
     ),
     'startBlocks': startBlocks(1, 1),

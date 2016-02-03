@@ -4,6 +4,8 @@ Títol: Condicions d'ús
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Condicions d'ús
 
 Last Revised: December 5, 2014

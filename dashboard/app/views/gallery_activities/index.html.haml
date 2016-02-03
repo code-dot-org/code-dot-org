@@ -9,11 +9,12 @@
     = link_to t('gallery.students_made_these_with_code'), gallery_activities_path
 
 - if params[:app] # pagination page: just one type of activity
-  .span{style: 'float:right;'}
-    = link_to_next_page @gallery_activities,  t('gallery.more').html_safe, {params: {app: params[:app] || app}}
   = render partial: 'gallery_activities', locals: {gallery_activities: @gallery_activities}
   .span{style: 'float:right;'}
-    = link_to_next_page @gallery_activities,  t('gallery.more').html_safe, {params: {app: params[:app] || app}}
+    - page = params[:page] || 1
+    - page = page.to_i
+    = link_to t('gallery.more').html_safe, page: page + 1
+
 - else
   .row
     .span2

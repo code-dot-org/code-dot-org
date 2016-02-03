@@ -10,7 +10,6 @@
  *
  * Gem assets
  *= require jquery-ui
- *= require video-js
  *
  * Vendor assets
  *= require add2home
@@ -30,6 +29,8 @@
  *= require details-polyfill
  */
 
+// TODO: Move into code-studio.scss when it exists.
+@import "/code-studio/assets/video-js/video-js.css";
 @import "color";
 @import "font";
 @import "mixins";
@@ -172,6 +173,17 @@ img.video_thumbnail {
 .header-wrapper {
   padding-top: 15px;
   min-height: 70px;
+
+  #progresswarning {
+    position: absolute;
+    font-size: 10px;
+    top: -1px;
+    left: 97px;
+
+    .learnmore {
+      font-family: 'Gotham 7r', sans-serif; font-weight: normal;
+    }
+  }
 }
 
 .header {
@@ -182,6 +194,12 @@ img.video_thumbnail {
   color: $header_text;
   a:link {color:$header_text;}
   a:visited {color:$header_text;}
+
+  .small_font_on_tablet {
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+    }
+  }
 }
 
 .header.hide_on_mobile,
@@ -226,7 +244,7 @@ a.header_status_bar:hover {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 110px;
+$footer_height: 165px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -236,9 +254,15 @@ html, body {
 .wrapper {
   min-height: 100%;
   margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
+  .legacy-share-view & {
+    position: relative;
+  }
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
+}
+.legacy-share-view .push {
+  display: none;
 }
 
 .footer {
@@ -347,17 +371,6 @@ $small-footer-standard-width: 400px;
   }
 }
 
-#copyright-flyout {
-  display: none; /* Invisible until summoned. */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 625px;
-  max-width: 50%;
-  min-width: 300px;
-  padding: 1em;
-}
-
 #more-menu {
   display: none;
   position: absolute;
@@ -458,6 +471,12 @@ $default-modal-width: 640px;
     right: 0;
     margin: 0 auto;
   }
+
+  .markdown {
+    .modal-image {
+      margin-top: -100px;
+    }
+  }
 }
 
 .auto-resize-scrollable {
@@ -473,9 +492,6 @@ $default-modal-width: 640px;
     margin-bottom: 25px;
 
     z-index: 1050;
-  }
-  .modal-image {
-    margin-top: -100px;
   }
 }
 
@@ -884,7 +900,7 @@ input.header_input {
     top: 10px;
   }
 
-  &.embed_hidesource {
+  &.centered_embed {
     position: relative;
     top: 0px;
     left: auto;
@@ -1147,9 +1163,8 @@ a.download-video {
   .welcomeleft {
     float: left;
     text-align: center;
-    width: 190px;
     img {
-    padding-left: 50px;
+      padding-left: 65px;
     }
   }
 
@@ -1198,6 +1213,54 @@ a.download-video {
 
   #welcome h2 {
     font-size: 18px;
+  }
+
+  .teacher-announce {
+    position: relative;
+    font-size: 14px;
+  }
+  .teacher-announce .announce-heading {
+    background-color: #7665a0;
+    border-radius: 4px;
+    color: #fff;
+    height: 20px;
+    overflow: hidden;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  .teacher-announce .announce-heading .heading-view-all {
+    float: right;
+  }
+  .teacher-announce .announce-content {
+    background-color: #ebe8f1;
+    border-radius: 4px;
+    margin-top: 3px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .teacher-announce .announce-content .content-img-container {
+    float: left;
+  }
+  .teacher-announce .announce-content .content-img {
+    border-radius: 4px;
+    height: 108px;
+  }
+  .teacher-announce .announce-content .content-text {
+    color: #4d575f;
+    float: left;
+    max-height: 90px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 18px;
+    width: 610px;
+  }
+  .teacher-announce .announce-content .content-text b {
+    font-family: 'Gotham 5r', sans-serif;
+  }
+  .teacher-announce .announce-learn-more {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
   }
 
   .gallery {
@@ -1498,7 +1561,7 @@ a.download-video {
     background-color: white;
     border-color: $lighter_cyan;
   }
-  .answer:hover {
+  .answer.ui-draggable:hover {
     border-color: $light_green;
     cursor: move;
   }
@@ -1552,12 +1615,15 @@ a.download-video {
 }
 
 .external,
-.text-match {
+.text-match,
+.multi,
+.match {
   #markdown.teacher {
     max-width: 800px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
+    margin: 10px auto;
     .content {
       padding: 10px;
     }
@@ -1572,12 +1638,15 @@ a.download-video {
   }
 }
 
-.text-match #markdown.teacher {
-  margin: 10px 0;
+.multi #markdown.teacher {
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 100%;
 }
 
-.external #markdown.teacher {
-  margin: 10px auto;
+.text-match #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #current-script-levels, #all-levels {
@@ -1796,6 +1865,11 @@ $modal-no-icon-gap: 22px;
     margin-bottom: 15px;
   }
 
+  .instructions2 {
+    font-size: 18px;
+    color: $charcoal;
+  }
+
   .aniGif {
     display: block;
     margin: 0px auto 6px;
@@ -1804,9 +1878,9 @@ $modal-no-icon-gap: 22px;
   }
 
   .feedback-image {
-    width: 40%;
+    width: 180px;
     height: auto;
-    margin: 15px;
+    margin: 0 15px 0 0;
     float: left;
     border: lightgrey;
     border-style: solid
@@ -1849,6 +1923,17 @@ $modal-no-icon-gap: 22px;
     color: $charcoal;
     margin: 0 0 8px;
   }
+
+  .instructions-container {
+    .authored-hints {
+      p, pre {
+        font-size: 18px;
+        line-height: normal;
+        color: $charcoal;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .dialog-title {
@@ -1861,6 +1946,16 @@ $modal-no-icon-gap: 22px;
   border: 1px solid $orange;
   color: white;
   min-width: 100px;
+}
+
+.lightbulb-button {
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  color: black;
+
+  svg {
+    margin: -12px -6px;
+  }
 }
 
 #again-button {
@@ -1914,8 +2009,12 @@ $modal-no-icon-gap: 22px;
   padding-top: 19px;
   p {
     line-height: 25px;
-    font-size: initial;
-    color: initial;
+    font-size: 16px;
+    color: $black;
+  }
+
+  strong {
+    font-family: $gotham-bold;
   }
 }
 
@@ -1947,6 +2046,13 @@ $modal-no-icon-gap: 22px;
   text-align: right;
   html[dir=rtl] & {
     text-align: left;
+  }
+}
+
+.exclamation-abuse {
+  a, a:hover {
+    color: white;
+    text-decoration: underline;
   }
 }
 
@@ -2019,4 +2125,91 @@ button.notext {
 .example-image {
   @include bottom-shadow;
   @include rounded-border;
+}
+
+/*
+ * The following responsive styles are designed to match behavior
+ * with the vizualizationColumn and visualizationEditor styles
+ * defined in apps/style/common.scss, so that the columns in the
+ * header line up with the columns below them.
+ */
+
+$width: 400px;
+#visualizationColumnHeader {
+  max-width: $width;
+  float: left;
+}
+#visualizationEditorHeader {
+  margin-left: $width;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1150px) {
+  $width: 350px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1100px) {
+  $width: 300px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1050px) {
+  $width: 250px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  $width: 200px;
+  #visualizationColumnHeader.responsive {
+    max-width: $width;
+  }
+  #visualizationEditorHeader.responsive {
+    margin-left: $width;
+  }
+}
+
+div#tryHoc {
+  font-size: 20px;
+  padding: 10px 15px;
+  text-align: right;
+  margin:0;
+  right: 0;
+  a {
+    color: #999;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  img#hocLogo {
+    width:40px;
+  }
+}
+
+#environment_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: $light_purple;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }

@@ -1,36 +1,44 @@
+# == Schema Information
+#
+# Table name: scripts
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)      not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  wrapup_video_id :integer
+#  trophies        :boolean          default(FALSE), not null
+#  hidden          :boolean          default(FALSE), not null
+#  user_id         :integer
+#  login_required  :boolean          default(FALSE), not null
+#  properties      :text(65535)
+#
+# Indexes
+#
+#  index_scripts_on_name             (name) UNIQUE
+#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#
+
+require 'cdo/script_constants'
+
 # A sequence of Levels
 class Script < ActiveRecord::Base
+  include ScriptConstants
+
   include Seeded
   has_many :levels, through: :script_levels
   has_many :script_levels, -> { order('chapter ASC') }, dependent: :destroy, inverse_of: :script # all script levels, even those w/ stages, are ordered by chapter, see Script#add_script
   has_many :stages, -> { order('position ASC') }, dependent: :destroy, inverse_of: :script
   has_many :users, through: :user_scripts
   has_many :user_scripts
+  has_many :hint_view_requests
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
   validates :name, presence: true, uniqueness: { case_sensitive: false}
 
   include SerializedProperties
 
-  serialized_attrs %w(pd)
-
-  # Names used throughout the code
-  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
-  EDIT_CODE_NAME = 'edit-code'
-  TWENTY_FOURTEEN_NAME = 'events'
-  JIGSAW_NAME = 'jigsaw'
-  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  FROZEN_NAME = 'frozen'
-  PLAYLAB_NAME = 'playlab'
-  INFINITY_NAME = 'infinity'
-  ARTIST_NAME = 'artist'
-  ALGEBRA_NAME = 'algebra'
-  FLAPPY_NAME = 'flappy'
-  TWENTY_HOUR_NAME = '20-hour'
-  COURSE1_NAME = 'course1'
-  COURSE2_NAME = 'course2'
-  COURSE3_NAME = 'course3'
-  COURSE4_NAME = 'course4'
+  serialized_attrs %w(pd admin_required)
 
   def Script.twenty_hour_script
     Script.get_from_cache(Script::TWENTY_HOUR_NAME)
@@ -38,6 +46,18 @@ class Script < ActiveRecord::Base
 
   def Script.hoc_2014_script
     Script.get_from_cache(Script::HOC_NAME)
+  end
+
+  def Script.starwars_script
+    Script.get_from_cache(Script::STARWARS_NAME)
+  end
+
+  def Script.minecraft_script
+    Script.get_from_cache(Script::MINECRAFT_NAME)
+  end
+
+  def Script.starwars_blocks_script
+    Script.get_from_cache(Script::STARWARS_BLOCKS_NAME)
   end
 
   def Script.frozen_script
@@ -90,6 +110,11 @@ class Script < ActiveRecord::Base
   @@script_cache = nil
   SCRIPT_CACHE_KEY = 'script-cache'
 
+  # Caching is disabled when editing scripts and levels.
+  def self.should_cache?
+    !Rails.application.config.levelbuilder_mode
+  end
+
   def self.script_cache_to_cache
     Rails.cache.write(SCRIPT_CACHE_KEY, script_cache_from_db)
   end
@@ -113,25 +138,84 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache
+    return nil unless self.should_cache?
     @@script_cache ||=
       script_cache_from_cache || script_cache_from_db
+  end
+
+  # Returns a cached map from script level id to id, or nil if in level_builder mode
+  # which disables caching.
+  def self.script_level_cache
+    return nil unless self.should_cache?
+    @@script_level_cache ||= {}.tap do |cache|
+      script_cache.values.each do |script|
+        cache.merge!(script.script_levels.index_by(&:id))
+      end
+    end
+  end
+
+  # Returns a cached map from level id to id, or nil if in level_builder mode
+  # which disables caching.
+  def self.level_cache
+    return nil unless self.should_cache?
+    @@level_cache ||= {}.tap do |cache|
+      script_level_cache.values.each do |script_level|
+        level = script_level.level
+        next unless level
+        cache[level.id] = level unless cache.has_key? level.id
+      end
+    end
+  end
+
+  # Find the script level with the given id from the cache, unless the level build mode
+  # is enabled in which case  it is always fetched from the database. If we need to fetch
+  # the script and we're not in level mode (for example because the script was created after
+  # the cache), then an entry for the script is added to the cache.
+  def self.cache_find_script_level(script_level_id)
+    script_level = script_level_cache[script_level_id] if self.should_cache?
+
+    # If the cache missed or we're in levelbuilder mode, fetch the script level from the db.
+    if script_level.nil?
+      script_level = ScriptLevel.find(script_level_id)
+      # Cache the script level, unless it wasn't found.
+      @@script_level_cache[script_level_id] = script_level if script_level && self.should_cache?
+    end
+    script_level
+  end
+
+  # Find the level with the given id from the cache, unless the level build mode
+  # is enabled in which case it is always fetched from the database. If we need to fetch
+  # the level and we're not in level mode (for example because the level was created after
+  # the cache), then an entry for the level is added to the cache.
+  def self.cache_find_level(level_id)
+    level = level_cache[level_id] if self.should_cache?
+
+    # If the cache missed or we're in levelbuilder mode, fetch the level from the db.
+    if level.nil?
+      level = Level.find(level_id)
+      # Cache the level, unless it wasn't found.
+      @@level_cache[level_id] = level if level && self.should_cache?
+    end
+    level
   end
 
   def cached
     self.class.get_from_cache(id)
   end
 
-  def self.get_from_cache(id)
-    if !Rails.env.levelbuilder? && self.script_cache[id.to_s]
-      self.script_cache[id.to_s]
-    else
-      # a bit of trickery so we support both ids which are numbers and
-      # names which are strings that may contain numbers (eg. 2-3)
-      find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-      Script.find_by(find_by => id).tap do |s|
-        raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
-      end
+  def self.get_without_cache(id)
+    # a bit of trickery so we support both ids which are numbers and
+    # names which are strings that may contain numbers (eg. 2-3)
+    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    Script.find_by(find_by => id).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
     end
+  end
+
+  def self.get_from_cache(id)
+    return get_without_cache(id) unless self.should_cache?
+
+    self.script_cache[id.to_s] || get_without_cache(id)
   end
 
   def to_param
@@ -144,16 +228,19 @@ class Script < ActiveRecord::Base
   end
 
   def twenty_hour?
-    self.name == TWENTY_HOUR_NAME
+    ScriptConstants.twenty_hour?(self.name)
   end
 
   def hoc?
-    # Note that now multiple scripts can be an 'hour of code' script.
-    [HOC_2013_NAME, HOC_NAME, FROZEN_NAME, FLAPPY_NAME, PLAYLAB_NAME].include? self.name
+    ScriptConstants.hoc?(self.name)
   end
 
   def flappy?
-    self.name == FLAPPY_NAME
+    ScriptConstants.flappy?(self.name)
+  end
+
+  def minecraft?
+    ScriptConstants.minecraft?(self.name)
   end
 
   def find_script_level(level_id)
@@ -173,7 +260,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    return nil if chapter < 1 || chapter > self.script_levels.count
+    return nil if chapter < 1 || chapter > self.script_levels.to_a.count
     self.script_levels[chapter - 1] # order is by chapter
   end
 
@@ -192,7 +279,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3'
+    name == 'course4' || name == 'edit-code' || name == 'cspunit1' || name == 'cspunit2' || name == 'cspunit3' || name == 'cspunit4' || name == 'cspunit5'
   end
 
   def is_k1?
@@ -204,9 +291,7 @@ class Script < ActiveRecord::Base
   end
 
   def banner_image
-    if k5_course?
-      "banner_#{name}_cropped.jpg"
-    elsif self.name == 'cspunit1'
+    if has_banner?
       "banner_#{name}_cropped.png"
     end
   end
@@ -224,12 +309,18 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra cspunit1 cspunit2).include?(self.name)
+    k5_course? || %w(msm algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5).include?(self.name)
+  end
+
+  def has_banner?
+    k5_course? || %w(cspunit1 cspunit2 cspunit3).include?(self.name)
   end
 
   def freeplay_links
     if name.include?('algebra')
       ['calc', 'eval']
+    elsif name.start_with?('csp')
+      ['applab']
     else
       ['playlab', 'artist']
     end
@@ -252,15 +343,16 @@ class Script < ActiveRecord::Base
         custom_i18n.deep_merge!(i18n)
         # TODO: below is duplicated in update_text. and maybe can be refactored to pass script_data?
         scripts_to_add << [{
+          id: script_data[:id],
           name: name,
           trophies: script_data[:trophies],
           hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
-          properties: {
-            pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
-          },
           wrapup_video: script_data[:wrapup_video],
-          id: script_data[:id],
+          properties: {
+                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
+                      },
         }, stages.map{|stage| stage[:levels]}.flatten]
       end
 
@@ -381,11 +473,12 @@ class Script < ActiveRecord::Base
         Script.add_script({
           name: script_params[:name],
           trophies: script_data[:trophies],
-          hidden: script_data[:hidden].nil? ? true : script_data[:hidden],
+          hidden: script_data[:hidden].nil? ? true : script_data[:hidden], # default true
           login_required: script_data[:login_required].nil? ? false : script_data[:login_required], # default false
           wrapup_video: script_data[:wrapup_video],
           properties: {
-            pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+                       pd: script_data[:pd].nil? ? false : script_data[:pd], # default false
+                       admin_required: script_data[:admin_required].nil? ? false : script_data[:admin_required], # default false
           }
         }, script_data[:stages].map { |stage| stage[:levels] }.flatten)
         Script.update_i18n(i18n)

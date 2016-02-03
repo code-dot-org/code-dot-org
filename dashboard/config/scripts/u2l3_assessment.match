@@ -1,23 +1,21 @@
 name 'U2L3 Assessment'
-title 'Invent an Addressing Protocol: Question 1'
-question 'protocol'
-answer 'A well-known set of rules and standards used to communicate'
-question 'packet'
-answer 'A chunk of information that gets sent on the internet'
-question 'Internet Protocol'
-answer 'The required structure of a packet to be sent on the internet'
-question 'IPv4 packet'
-answer 'A packet of data that uses 32-bit addresses'
-
-markdown <<MARKDOWN
-
-MARKDOWN
-teacher_markdown <<MARKDOWN
-Answers:
-
-- protocol: A well-known set of rules and standards used to communicate
-- packet: A chunk of information that gets sent on the internet
-- Internet Protocol: The required structure of a packet to be sent on the internet
-- IPv4 packet: A packet of data that uses 32-bit addresses
-
-MARKDOWN
+encrypted '79jkYt0ZUnoP4kVZSLeup2gDO3O8D3Cmyt8CyA330wFmD2UYbnIxT+iWyoJa
++ogCeqetoJQbxoOP73S6VP5JyWUBMPlo4hPF/vsRFaZ2YBGkGx9LLh6zSrHy
+6fZ8flt+w5Zl+zfuTs1kECRYmPDTmmcdV4Fe+0+z24yDaeRvBSFlv0TjnIEU
+2MQGK6x4UtfyXxNd1S+KnAfrq4GUOMmhwnblSxksaFb1q71clVHQI8AeeMV2
+KF9/yBCVMfdF9yJFz4EsiK3YyKB21cSeWc6gzruV1QoYk1Z8BnlWLuTDd1FN
+Uyb4ZdldndJoi8WKzG8W2eEz63FzhV5T8267ZzivVs81xptEGCnIDDD2vRRW
+jucBOW0uC07ekPjnvcAnqxDFwXrgh1eYb0SuJeKeQaws1g046gZ/pyfu2+Xn
+AOmKRDuvAc99wxgGB3dJYEFsLoE4T6qwpsQ2asdeAAQsuh416+jqEpSpWJA5
+Ff+IawT2LIanp7a8fmkwnG5X+/RUtDEG6nrPZAE3aGe5Mukt/pT25GRien+7
+omLh8HQKEhHxAhGeI1DpCCTKgfQkJ7EXuXtYxOFrRMGR2E/qVaW54eD7yH+h
+5Oy1zeGcWDlle8fOaCPQFqnTwnq4DH1oxWbqyCblIK9pPHWCyHE/M20J7Ej+
+N35/hOxu7k+Z092mo5Llv11jDc2ORUyyJXJfGTc4y61gScz3iCyaoiZQwkB/
+n/5eScR0ZFOs+SEcJQJkCMC188e63MFD3hHmDdkmofImHNGOQ+b0E7EP26ej
+EKuQiQ7TM3oVX+TI1tpP0ZIZpwNDVkuYN2+plS0S8NBle8DoYF4fRuePUi99
+CG1gjmHm6rYECcbj+9Kice/WIlIghiekPsELEHAz53pReIE8HXurlPD2b7X5
+f/MbTEXmFOhiOY2JkBt6HLjEq99aCZFf7kk2Pk5ymwiyf7ZakMQBlEtP17s7
+ae0HbTSVoIHD+YLNBGTFUABTBuKFnNXfiE7annHLZYtHYHV3swdh6TvYUK5J
+ok521Mk3HHPr2GCwz13aUrBYKMjkyXKjeH1/hRfu80/KyGxOJr+WFnx9JzKr
+dod+Mdr5
+'

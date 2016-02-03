@@ -1,0 +1,25 @@
+:css
+  body {
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  }
+%h1 Debug page
+
+%table{border: '1'}
+  %tr
+    %td Params
+    %td= params.inspect
+  %tr
+    %th Cookies
+  - cookies.each do |c|
+    %tr
+      %td= c[0]
+      %td= c[1]
+  %tr
+    %th Request Env
+  - EnvUtils.redact_sensitive_values(request.env).each_pair do |k,v|
+    %tr
+      %td= k
+      %td= v

@@ -1,5 +1,12 @@
+---
+
+title: <%= hoc_s(:title_whole_school) %>
+layout: wide
+
+---
 
 
 # Zorg dat je hele school meedoet
 
-Hier komt informatie waarmee je je hele school kunt laten meedoen met het Uur Code.
+Information about getting whole schools to participate in the Hour of Code will go here.
+

@@ -1,4 +1,5 @@
 var utils = require('./utils');
+var _ = utils.getLodash();
 
 /**
  * @name DropletBlock
@@ -7,6 +8,12 @@ var utils = require('./utils');
  * @property {Object} parent object within which this function is defined as a property, keyed by the func name
  * @property {String} category category within which to place the block
  * @property {String} type type of the block (e.g. value)
+ * @property {string[]} paletteParams
+ * @property {string[]} params
+ * @property {Object.<number, funciton>} dropdown
+ * @property {bool} dontMarshal
+ * @property {bool} noAutocomplete
+ * @property {string} docFunc Use the provided func as the key for our documentation.
  */
 
 /**
@@ -39,22 +46,37 @@ exports.getTime = function() {
 };
 
 /**
+ * Use native window.prompt to ask for a value, but continue prompting until we
+ * get a numerical value.
+ * @returns {number} User value, converted to a number
+ */
+exports.promptNum = function (text) {
+  var val;
+  do {
+    val = parseInt(window.prompt(text), 10);
+  } while (isNaN(val));
+  return val;
+};
+
+/**
  * @type {DropletBlock[]}
  */
 exports.dropletGlobalConfigBlocks = [
-  {'func': 'getTime', 'parent': exports, 'category': 'Control', 'type': 'value' },
-  {'func': 'randomNumber', 'parent': exports, 'category': 'Math', 'type': 'value' },
-  {'func': 'prompt', 'parent': window, 'category': 'Variables', 'type': 'value' },
+  {func: 'getTime', parent: exports, category: 'Control', type: 'value' },
+  {func: 'randomNumber', parent: exports, category: 'Math', type: 'value' },
+  {func: 'prompt', parent: window, category: 'Variables', type: 'value' },
+  {func: 'promptNum', parent: exports, category: 'Variables', type: 'value' }
 ];
 
 /**
  * @type {DropletBlock[]}
  */
 exports.dropletBuiltinConfigBlocks = [
-  {'func': 'Math.round', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.abs', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.max', 'category': 'Math', 'type': 'value' },
-  {'func': 'Math.min', 'category': 'Math', 'type': 'value' },
+  {func: 'Math.round', category: 'Math', type: 'value', docFunc: 'mathRound' },
+  {func: 'Math.abs', category: 'Math', type: 'value', docFunc: 'mathAbs' },
+  {func: 'Math.max', category: 'Math', type: 'value', docFunc: 'mathMax' },
+  {func: 'Math.min', category: 'Math', type: 'value', docFunc: 'mathMin' },
+  {func: 'Math.random', category: 'Math', type: 'value', docFunc: 'mathRandom' }
 ];
 
 /**
@@ -64,65 +86,73 @@ var standardConfig = {};
 
 standardConfig.blocks = [
   // Control
-  {'func': 'forLoop_i_0_4', 'block': 'for (var i = 0; i < 4; i++) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'whileBlock', 'block': 'while (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifBlock', 'block': 'if (__) {\n  __;\n}', 'category': 'Control' },
-  {'func': 'ifElseBlock', 'block': 'if (__) {\n  __;\n} else {\n  __;\n}', 'category': 'Control' },
-  {'func': 'getTime', 'block': 'getTime()', 'category': 'Control', type: 'value' },
+  {func: 'forLoop_i_0_4', block: 'for (var i = 0; i < 4; i++) {\n  __;\n}', category: 'Control' },
+  {func: 'whileBlock', block: 'while (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifBlock', block: 'if (__) {\n  __;\n}', category: 'Control' },
+  {func: 'ifElseBlock', block: 'if (__) {\n  __;\n} else {\n  __;\n}', category: 'Control' },
+  {func: 'getTime', block: 'getTime()', category: 'Control', type: 'value' },
 
   // Math
-  {'func': 'addOperator', 'block': '__ + __', 'category': 'Math' },
-  {'func': 'subtractOperator', 'block': '__ - __', 'category': 'Math' },
-  {'func': 'multiplyOperator', 'block': '__ * __', 'category': 'Math' },
-  {'func': 'divideOperator', 'block': '__ / __', 'category': 'Math' },
-  {'func': 'equalityOperator', 'block': '__ == __', 'category': 'Math' },
-  {'func': 'inequalityOperator', 'block': '__ != __', 'category': 'Math' },
-  {'func': 'greaterThanOperator', 'block': '__ > __', 'category': 'Math' },
-  {'func': 'lessThanOperator', 'block': '__ < __', 'category': 'Math' },
-  {'func': 'andOperator', 'block': '__ && __', 'category': 'Math' },
-  {'func': 'orOperator', 'block': '__ || __', 'category': 'Math' },
-  {'func': 'notOperator', 'block': '!__', 'category': 'Math' },
-  {'func': 'randomNumber_max', 'block': 'randomNumber(__)', 'category': 'Math' },
-  {'func': 'randomNumber_min_max', 'block': 'randomNumber(__, __)', 'category': 'Math' },
-  {'func': 'mathRound', 'block': 'Math.round(__)', 'category': 'Math' },
-  {'func': 'mathAbs', 'block': 'Math.abs(__)', 'category': 'Math' },
-  {'func': 'mathMax', 'block': 'Math.max(__)', 'category': 'Math' },
-  {'func': 'mathMin', 'block': 'Math.min(__)', 'category': 'Math' },
+  {func: 'addOperator', block: '__ + __', category: 'Math' },
+  {func: 'subtractOperator', block: '__ - __', category: 'Math' },
+  {func: 'multiplyOperator', block: '__ * __', category: 'Math' },
+  {func: 'divideOperator', block: '__ / __', category: 'Math' },
+  {func: 'equalityOperator', block: '__ == __', category: 'Math' },
+  {func: 'inequalityOperator', block: '__ != __', category: 'Math' },
+  {func: 'greaterThanOperator', block: '__ > __', category: 'Math' },
+  {func: 'greaterThanOrEqualOperator', block: '__ >= __', category: 'Math' },
+  {func: 'lessThanOperator', block: '__ < __', category: 'Math' },
+  {func: 'lessThanOrEqualOperator', block: '__ <= __', category: 'Math' },
+  {func: 'andOperator', block: '__ && __', category: 'Math' },
+  {func: 'orOperator', block: '__ || __', category: 'Math' },
+  {func: 'notOperator', block: '!__', category: 'Math' },
+  // randomNumber_max has been deprecated
+  // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
+  // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
+  {func: 'randomNumber_min_max', block: 'randomNumber(__, __)', category: 'Math', docFunc: 'randomNumber'},
+  {func: 'mathRound', block: 'Math.round(__)', category: 'Math' },
+  {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math' },
+  {func: 'mathMax', block: 'Math.max(__)', category: 'Math' },
+  {func: 'mathMin', block: 'Math.min(__)', category: 'Math' },
+  {func: 'mathRandom', block: 'Math.random()', category: 'Math' },
 
   // Variables
-  {'func': 'declareAssign_x', 'block': 'var x = __;', 'category': 'Variables' },
-  {'func': 'assign_x', 'block': 'x = __;', 'category': 'Variables' },
-  {'func': 'declareAssign_x_array_1_4', 'block': 'var x = [1, 2, 3, 4];', 'category': 'Variables' },
-  {'func': 'declareAssign_x_prompt', 'block': 'var x = prompt("Enter a value");', 'category': 'Variables' },
+  {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables' },
+  {func: 'declareNoAssign_x', block: 'var x;', category: 'Variables' },
+  {func: 'assign_x', block: 'x = __;', category: 'Variables' },
+  {func: 'declareAssign_x_array_1_4', block: 'var x = [1, 2, 3, 4];', category: 'Variables' },
+  {func: 'declareAssign_x_prompt', block: 'var x = prompt("Enter a value");', category: 'Variables' },
+  {func: 'declareAssign_x_promptNum', block: 'var x = promptNum("Enter a value");', category: 'Variables' },
 
   // Functions
-  {'func': 'functionParams_none', 'block': 'function myFunction() {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'functionParams_n', 'block': 'function myFunction(n) {\n  __;\n}', 'category': 'Functions' },
-  {'func': 'callMyFunction', 'block': 'myFunction()', 'category': 'Functions' },
-  {'func': 'callMyFunction_n', 'block': 'myFunction(n)', 'category': 'Functions' },
-  {'func': 'return', 'block': 'return __;', 'category': 'Functions' },
+  {func: 'functionParams_none', block: 'function myFunction() {\n  __;\n}', category: 'Functions' },
+  {func: 'functionParams_n', block: 'function myFunction(n) {\n  __;\n}', category: 'Functions' },
+  {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
+  {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
+  {func: 'return', block: 'return __;', category: 'Functions' },
+  {func: 'comment', block: '// Comment', category: 'Functions' }
 ];
 
 standardConfig.categories = {
-  'Control': {
-    'color': 'blue',
-    'rgb': COLOR_BLUE,
-    'blocks': []
+  Control: {
+    color: 'blue',
+    rgb: COLOR_BLUE,
+    blocks: []
   },
-  'Math': {
-    'color': 'orange',
-    'rgb': COLOR_ORANGE,
-    'blocks': []
+  Math: {
+    color: 'orange',
+    rgb: COLOR_ORANGE,
+    blocks: []
   },
-  'Variables': {
-    'color': 'purple',
-    'rgb': COLOR_PURPLE,
-    'blocks': []
+  Variables: {
+    color: 'purple',
+    rgb: COLOR_PURPLE,
+    blocks: []
   },
-  'Functions': {
-    'color': 'green',
-    'rgb': COLOR_GREEN,
-    'blocks': []
+  Functions: {
+    color: 'green',
+    rgb: COLOR_GREEN,
+    blocks: []
   },
   // create blank category in case level builders want to move all blocks here
   // (which will cause the palette header to disappear)
@@ -130,60 +160,64 @@ standardConfig.categories = {
 };
 
 /**
- * @param codeFunctions
+ * Given a collection of code functions and a set of dropletteConfig, returns a
+ * a list of blocks.
+ * @param codeFunctions {object} A collection of named key/value pairs
+ *   key is a block name from dropletBlocks or standardBlocks
+ *   value is an object that can be used to override block defaults
  * @param {DropletConfig} dropletConfig
  * @param {DropletConfig} otherConfig optionally used to supply a standardConfig
  *  object which is not app specific. It will be used first, then overriden
  *  by the primary dropletConfig if there is overlap between the two.
- * @returns {Array}
+ * @param paletteOnly boolean: ignore blocks not in codeFunctions palette
+ * @returns {Array<DropletBlock>}
  */
-function mergeFunctionsWithConfig(codeFunctions, dropletConfig, otherConfig) {
-  var merged = [];
-
-  if (codeFunctions && dropletConfig && dropletConfig.blocks) {
-    var blockSets = [ dropletConfig.blocks ];
-    if (otherConfig) {
-      blockSets.splice(0, 0, otherConfig.blocks);
-    }
-    // codeFunctions is an object with named key/value pairs
-    //  key is a block name from dropletBlocks or standardBlocks
-    //  value is an object that can be used to override block defaults
-    for (var s = 0; s < blockSets.length; s++) {
-      var blocks = blockSets[s];
-      for (var i = 0; i < blocks.length; i++) {
-        var block = blocks[i];
-        if (blocks[i].func in codeFunctions) {
-          // We found this particular block, now override the defaults with extend
-          merged.push(utils.extend(blocks[i], codeFunctions[blocks[i].func]));
-        }
-      }
-    }
+function filteredBlocksFromConfig(codeFunctions, dropletConfig, otherConfig, paletteOnly) {
+  if (!codeFunctions || !dropletConfig || !dropletConfig.blocks) {
+    return [];
   }
-  return merged;
+
+  var blocks = [];
+  if (otherConfig) {
+    blocks = blocks.concat(otherConfig.blocks);
+  }
+  blocks = blocks.concat(dropletConfig.blocks);
+
+  var docFunctions = {};
+  blocks.forEach(function (block) {
+    if (!(block.func in codeFunctions)) {
+      return;
+    }
+
+    // For cases where we use a different block for our tooltips, make sure that
+    // the target block ends up in the list of blocks we want
+    var docFunc = block.docFunc;
+    if (docFunc && !(docFunc in codeFunctions)) {
+      docFunctions[docFunc] = null;
+    }
+  });
+
+  return blocks.filter(function (block) {
+    return !paletteOnly || block.func in codeFunctions || block.func in docFunctions;
+  }).map(function (block) {
+    // We found this particular block, now override the defaults with extend
+    return $.extend({}, block, codeFunctions[block.func]);
+  });
 }
 
-//
-// Return a new categories object with the categories from dropletConfig
-// merged with the ones in standardConfig
-//
-
+/**
+ * Return a new categories object with the categories from dropletConfig (app
+ * specific configuration) merged with the ones in standardConfig (global
+ * configuration). App configuration takes precendence
+ */
 function mergeCategoriesWithConfig(dropletConfig) {
-  var merged = {};
-
-  if (dropletConfig && dropletConfig.categories) {
-    var categorySets = [ dropletConfig.categories, standardConfig.categories ];
-    for (var s = 0; s < categorySets.length; s++) {
-      var categories = categorySets[s];
-      for (var catName in categories) {
-        if (!(catName in merged)) {
-          merged[catName] = utils.shallowCopy(categories[catName]);
-        }
-      }
-    }
-  } else {
-    merged = standardConfig.categories;
-  }
-  return merged;
+  // Clone our merged categories so that as we mutate it, we're not mutating
+  // our original config
+  var dropletCategories = dropletConfig && dropletConfig.categories;
+  // We include dropletCategories twice so that (a) it's ordering of categories
+  // gets preference and (b) it's value override anything in standardConfig
+  return _.cloneDeep($.extend({}, dropletCategories, standardConfig.categories,
+    dropletCategories));
 }
 
 /**
@@ -229,25 +263,33 @@ function buildFunctionPrototype(prefix, params) {
 
 /**
  * Generate a palette for the droplet editor based on some level data.
+ * @param {object} codeFunctions The set of functions we want to use for this level
+ * @param {object} dropletConfig
+ * @param {function} dropletConfig.getBlocks
+ * @param {object} dropletConfig.categories
  */
 exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   var mergedCategories = mergeCategoriesWithConfig(dropletConfig);
-  var mergedFunctions = mergeFunctionsWithConfig(codeFunctions,
-                                                 dropletConfig,
-                                                 standardConfig);
+  var mergedFunctions = filteredBlocksFromConfig(codeFunctions, dropletConfig,
+    standardConfig, true);
+
   for (var i = 0; i < mergedFunctions.length; i++) {
-    var cf = mergedFunctions[i];
-    var block = cf.block;
-    var expansion = null;
+    var funcInfo = mergedFunctions[i];
+    var block = funcInfo.block;
+    var expansion = funcInfo.expansion;
     if (!block) {
-      var prefix = cf.blockPrefix || cf.func;
-      var paletteParams = cf.paletteParams || cf.params;
-      block = buildFunctionPrototype(prefix, paletteParams);
-      if (paletteParams) {
-        // If paletteParams were specified and used for the 'block', then use
-        // the regular params for the 'expansion' which appears when the block
-        // is dragged out of the palette:
-        expansion = buildFunctionPrototype(prefix, cf.params);
+      if (funcInfo.type === 'property') {
+        block = funcInfo.func;
+      } else {
+        var prefix = funcInfo.blockPrefix || funcInfo.func;
+        var paletteParams = funcInfo.paletteParams || funcInfo.params;
+        block = buildFunctionPrototype(prefix, paletteParams);
+        if (funcInfo.paletteParams) {
+          // If paletteParams were specified and used for the 'block', then use
+          // the regular params for the 'expansion' which appears when the block
+          // is dragged out of the palette:
+          expansion = buildFunctionPrototype(prefix, funcInfo.params);
+        }
       }
     }
 
@@ -258,9 +300,9 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var blockPair = {
       block: block,
       expansion: expansion,
-      title: cf.func
+      title: funcInfo.func
     };
-    mergedCategories[cf.category].blocks.push(blockPair);
+    mergedCategories[funcInfo.category].blocks.push(blockPair);
   }
 
   // Convert to droplet's expected palette format:
@@ -275,15 +317,43 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
   return addedPalette;
 };
 
-function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
+function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
   for (var i = 0; i < configBlocks.length; i++) {
     var block = configBlocks[i];
     if (!block.noAutocomplete) {
-      apis.push({
+      // Use score value of 100 to ensure that our APIs are not replaced by
+      // other completers that are suggesting the same name
+      var newApi = {
         name: 'api',
         value: block.func,
+        score: 100,
         meta: block.category
-      });
+      };
+      if (opts.autocompleteFunctionsWithParens) {
+        newApi.completer = {
+          insertMatch: _.bind(function (editor) {
+            // Remove the filterText that was already typed (ace's built-in
+            // insertMatch would normally do this automatically)
+            if (editor.completer.completions.filterText) {
+              var ranges = editor.selection.getAllRanges();
+              for (var i = 0, range; !!(range = ranges[i]); i++) {
+                range.start.column -= editor.completer.completions.filterText.length;
+                editor.session.remove(range);
+              }
+            }
+            // Insert the function name plus parentheses and semicolon:
+            editor.execCommand("insertstring", this.func + '();');
+            if (this.params) {
+              // Move the selection back so parameters can be entered:
+              var curRange = editor.selection.getRange();
+              curRange.start.column -= 2;
+              curRange.end.column -= 2;
+              editor.selection.setSelectionRange(curRange);
+            }
+          }, block)
+        };
+      }
+      apis.push(newApi);
     }
   }
 }
@@ -291,19 +361,22 @@ function populateCompleterApisFromConfigBlocks(apis, configBlocks) {
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
- * If functionFilter is non-null, use it to filter the dropletConfig APIs to
- * be set in autocomplete and create no other autocomplete entries
+ * If functionFilter is non-null, use it to filter the dropletConfig
+ * APIs to be set in autocomplete and create no other autocomplete entries
  */
 exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   var apis = [];
+  var opts = {};
+  // If autocompleteFunctionsWithParens is set, we will append "();" after functions
+  opts.autocompleteFunctionsWithParens = dropletConfig.autocompleteFunctionsWithParens;
 
   if (functionFilter) {
-    var mergedBlocks = mergeFunctionsWithConfig(functionFilter, dropletConfig);
-    populateCompleterApisFromConfigBlocks(apis, mergedBlocks);
+    var mergedBlocks = filteredBlocksFromConfig(functionFilter, dropletConfig, null, true);
+    populateCompleterApisFromConfigBlocks(opts, apis, mergedBlocks);
   } else {
-    populateCompleterApisFromConfigBlocks(apis, exports.dropletGlobalConfigBlocks);
-    populateCompleterApisFromConfigBlocks(apis, exports.dropletBuiltinConfigBlocks);
-    populateCompleterApisFromConfigBlocks(apis, dropletConfig.blocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
+    populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
   }
 
   return {
@@ -317,8 +390,16 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
   };
 };
 
-function populateModeOptionsFromConfigBlocks(modeOptions, config) {
+/**
+ * Given a droplet config, create a mode option functions object
+ * @param {object} config
+ * @param {object[]} config.blocks
+ * @param {object[]} config.categories
+ */
+function getModeOptionFunctionsFromConfig(config) {
   var mergedCategories = mergeCategoriesWithConfig(config);
+
+  var modeOptionFunctions = {};
 
   for (var i = 0; i < config.blocks.length; i++) {
     var newFunc = {};
@@ -328,6 +409,9 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
     } else if (config.blocks[i].type === 'either') {
       newFunc.value = true;
       newFunc.command = true;
+    } else if (config.blocks[i].type === 'property') {
+      newFunc.property = true;
+      newFunc.value = true;
     }
 
     var category = mergedCategories[config.blocks[i].category];
@@ -338,21 +422,17 @@ function populateModeOptionsFromConfigBlocks(modeOptions, config) {
     newFunc.dropdown = config.blocks[i].dropdown;
 
     var modeOptionName = config.blocks[i].modeOptionName || config.blocks[i].func;
+    newFunc.title = modeOptionName;
 
-    modeOptions.functions[modeOptionName] = newFunc;
+    modeOptionFunctions[modeOptionName] = newFunc;
   }
-}
-
-function setTitlesToFuncNamesForDocumentedBlocks(modeOptions) {
-  Object.keys(modeOptions.functions).forEach(function (funcName) {
-    modeOptions.functions[funcName].title = funcName;
-  });
+  return modeOptionFunctions;
 }
 
 /**
  * Generate modeOptions for the droplet editor based on some level data.
  */
-exports.generateDropletModeOptions = function (dropletConfig, options) {
+exports.generateDropletModeOptions = function (config) {
   var modeOptions = {
     functions: {
     },
@@ -362,7 +442,7 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
       conditionals: { color: COLOR_BLUE },
       loops: {
         color: COLOR_BLUE,
-        beginner: options.beginnerMode || false
+        beginner: config.level.beginnerMode || false
       },
       functions: { color: COLOR_GREEN },
       returns: { color: COLOR_BLUE },
@@ -370,16 +450,17 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
       command: { color: COLOR_GREEN },
-      assignments: { color: COLOR_PURPLE },
+      assignments: { color: COLOR_PURPLE }
       // errors: { },
-    }
+    },
+    lockZeroParamFunctions: config.level.lockZeroParamFunctions
   };
 
-  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletGlobalConfigBlocks });
-  populateModeOptionsFromConfigBlocks(modeOptions, { blocks: exports.dropletBuiltinConfigBlocks });
-  populateModeOptionsFromConfigBlocks(modeOptions, dropletConfig);
-
-  setTitlesToFuncNamesForDocumentedBlocks(modeOptions);
+  $.extend(modeOptions.functions,
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletGlobalConfigBlocks }),
+    getModeOptionFunctionsFromConfig({ blocks: exports.dropletBuiltinConfigBlocks }),
+    getModeOptionFunctionsFromConfig(config.dropletConfig)
+  );
 
   return modeOptions;
 };
@@ -387,14 +468,25 @@ exports.generateDropletModeOptions = function (dropletConfig, options) {
 /**
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
+ * @param {codeFunctions|null} codeFunctions with block overrides, may be null
+ * @param paletteOnly boolean: filter to only those blocks that are in codeFunctions
+ *   palette, or who share documentation (via docFunc) with other blocks that are
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */
-exports.getAllAvailableDropletBlocks = function (dropletConfig) {
+exports.getAllAvailableDropletBlocks = function (dropletConfig, codeFunctions, paletteOnly) {
   var hasConfiguredBlocks = dropletConfig && dropletConfig.blocks;
   var configuredBlocks = hasConfiguredBlocks ? dropletConfig.blocks : [];
+  if (codeFunctions && hasConfiguredBlocks) {
+    configuredBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, paletteOnly);
+  }
   return exports.dropletGlobalConfigBlocks
     .concat(exports.dropletBuiltinConfigBlocks)
     .concat(standardConfig.blocks)
     .concat(configuredBlocks);
+};
+
+exports.__TestInterface = {
+  mergeCategoriesWithConfig: mergeCategoriesWithConfig,
+  filteredBlocksFromConfig: filteredBlocksFromConfig
 };

@@ -37,12 +37,12 @@ class Ability
     if user.id
       can :manage, user
 
-      # TODO a bunch of these should probably be limited by user_id
-      can :create, Activity
+      can :create, Activity, user_id: user.id
       can :save_to_gallery, Activity, user_id: user.id
       can :create, GalleryActivity, user_id: user.id
       can :destroy, GalleryActivity, user_id: user.id
-      can :create, UserLevel
+      can :create, UserLevel, user_id: user.id
+      can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower, student_user_id: user.id
 
@@ -56,6 +56,9 @@ class Ability
         can :manage, user.students
         can :manage, Follower
         can :read, Workshop
+        can :manage, UserLevel do |user_level|
+          !user.students.where(id: user_level.user_id).empty?
+        end
       end
 
       if user.facilitator?
@@ -82,16 +85,22 @@ class Ability
       end
     end
 
-    if user.id
+    if user.id && user.admin?
       can :read, Script
       can :read, ScriptLevel
-    else
-      # not logged in
+    elsif user.id # logged in, not admin
       can :read, Script do |script|
-        !script.login_required?
+        !script.admin_required?
       end
       can :read, ScriptLevel do |script_level|
-        !script_level.script.login_required?
+        !script_level.script.admin_required?
+      end
+    else # not logged in
+      can :read, Script do |script|
+        !script.admin_required? && !script.login_required?
+      end
+      can :read, ScriptLevel do |script_level|
+        !script_level.script.login_required? && !script_level.script.admin_required?
       end
     end
 

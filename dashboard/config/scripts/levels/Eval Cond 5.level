@@ -614,6 +614,9 @@
           <block type="functional_string">
             <title name="VAL"/>
           </block>
+          <block type="functional_style">
+            <title name="VAL">solid</title>
+          </block>
         </category>
         <category name="Image">
           <block type="functional_circle" inline="false"/>

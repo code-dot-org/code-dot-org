@@ -2,7 +2,7 @@ pl:
   errors:
     messages:
       not_saved: 'Proszę poprawić następujące błędy:'
-      too_young: This content has age restrictions in place and is not available for younger students
+      too_young: Te materiały nie są dostępne dla młodszych uczniów
   activerecord:
     errors:
       messages:
@@ -28,6 +28,8 @@ pl:
     code:
       label: 'Dodaj nauczyciela:'
       placeholder: Kod sekcja (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Dodaj nauczyciela
   add_hint_form:
     placeholder: Wprowadź tutaj swoją wskazówkę
@@ -38,6 +40,7 @@ pl:
   puzzle: Łamigłówka
   trophies: Trofea
   courses: Kursy
+  unplugged_activity: Aktywność unplugged (bez komputera)
   of: z
   more: WIĘCEJ
   less: MNIEJ
@@ -221,6 +224,7 @@ pl:
         playlab: Utwórz aplikację
         artist: Narysuj cokolwiek
         calculate: Calculate Something
+        applab: Utwórz aplikację
     user:
       classroom: Domowa strona nauczyciela
       district_dashboard: Panel dzielnicy/okręgu
@@ -244,69 +248,28 @@ pl:
       prize_us_only: (Tylko dla uczniów w USA)
       prizes_link: Więcej informacji
   teacher:
+    answer: Odpowiedź
+    for_teachers_only: Tylko dla nauczycieli
     title:
       one: 'Twój nauczyciel:'
       other: 'Twoi nauczyciele:'
     remove: (usuń nauczyciela)
     confirm:
       remove: Czy na pewno chcesz usunąć tego nauczyciela?
-    tools: Narzędzia Nauczyciela
-    followers:
-      section: 'Sekcja:'
-      stages: 'Etap(y) do wyświetlenia:'
-      show_past: 'Pokaż aktywność ucznia (%{bullet_html}) w przeszłości:'
-      levels_key: Klucz poziomów
-      perfect: Wykonane, doskonale
-      completed: Wykonane, ale przy użyciu zbyt wielu bloków
-      tried: Próbowano, ale nie zakończono
-      not_tried: Jeszcze nie próbowano
-      activity: 'Wskazuje aktywność ucznia w ostatnich %{hours} %{plural}'
-      no_section: Brak przypisanej sekcji
-      trophies: trofea
     students:
-      name: Imię/Nazwisko
-      username: nazwa użytkownika
-      password: hasło
-      manage: Zarządzaj uczniami
       dashboard: Przejdź do Panelu Nauczyciela
-      add: Dodaj uczniów
-      remove: usuń ucznia
-      confirm_remove: Czy na pewno chcesz usunąć tego ucznia?
-      help_reassign: Aby podzielić klasę na wiele sekcji, wybierz uczniów, aby zapisać ich do nowej sekcji.
-      help_register: Zamiast spędzać dużo czasu indywidualnie importując dane uczniów, możesz szybko utworzyć swoją klasę prosząc uczniów, by się zarejestrowali. Będą oni musieli wybrać nazwy użytkowników i hasła, ale nie będą musieli podać adresu e-mail. Jeśli uczeń zapomni swojego hasło, to będziesz mógł je zresetować.
-      register: Zachęć swoich uczniów, aby się sami zarejestrowali
-      vist: Zachęć swoich uczniów do odwiedzenia
-      section_code: 'i podaj ich kod sekcji:'
-      first_please: 'Po pierwsze, proszę o %{add_section}'
-      for: Dla
-      enter: 'wprowadź:'
-    sections:
-      add: Dodaj sekcję
-      manage: Zarządzaj sekcjami
-      section: Sekcja
-      students: Uczniowie
-      section_code: Kod Sekcji
-      add_section_code: Dodaj kod sekcji uczniów
-      secret: Tajny typ
-      grade: Poziom/Ocena
-      course: Kurs
-      rename: zmień nazwę
-      edit: edytuj
-      delete: usuń
-      confirm_delete: Czy na pewno chcesz usunąć tę sekcję?
-      email: Wyślij e-mail
-    rollup: Tablica Postępów
-    activity: Ostatnia aktywność klasy
-    user_not_found: Nie można odnaleźć nauczyciela lub ucznia
-    cant_remove_student_no_email: '%{student_name} nie może być usunięty jako Twój uczeń, ponieważ %{student_name} nie zarejestrował adresu e-mail'
-    cant_remove_teacher_no_email: '%{teacher_name} nie może być usunięty jako Twój nauczyciel, ponieważ nie zarejestrowałeś adresu e-mail'
-    student_teacher_disassociated: '%{teacher_name} został usunięty jako nauczyciel %{student_name}'
+    user_not_found: Nie można odnaleźć nauczyciela.
+    student_teacher_disassociated: 'Usunąłeś %{teacher_name} jako swojego nauczyciela.'
     panel:
       answer_viewer: Podgląd odpowiedzi
       student: Uczeń
       viewing_solution: Podgląd rozwiązania
       try_it_yourself: Wypróbuj
       section: Sekcja
+      example: Przykładowe rozwiązanie
+      example_with_number: 'Przykładowe rozwiązanie %{solution_number}'
+      submitted_on: 'Przesłane dnia %{date}'
+      unsubmit: Nieprzesłane
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -321,10 +284,6 @@ pl:
   user_level:
     completed: Ukończono
     tried: Próbowano
-  user_stats:
-    recent_activity: Ostatnia aktywność
-    show_more: Pokaż więcej
-    classroom_activity: Aktywność unplugged (bez komputera)
   home:
     title: Studio Kodowania (Code Studio)
     description: Studio Kodowania jest miejscem dla kursów online utworzonych przez Code.org
@@ -370,6 +329,7 @@ pl:
   share:
     title: Ucz się z Code Studio
     description: Każdy może nauczyć się informatyki. Zakoduj gry, aplikacje i sztukę.
+    try_hour_of_code: Wypróbuj Godzinę Kodowania!
   gender:
     male: Mężczyzna
     female: Kobieta
@@ -380,9 +340,9 @@ pl:
   footer:
     thank_you: 'Dziękujemy naszym <a href="https://code.org/about/donors">darczyńcom</a>, <a href="https://code.org/about/partners"> partnerom</a>, naszemu <a href="https://code.org/about/team"> zespołowi</a>, obsadzie wideo i naszym <a href="https://code.org/about/advisors"> doradcom edukacyjnym </a> za wsparcie przy tworzeniu Code Studio.'
     help_from_html: Szczególnie chcielibyśmy podziękować inżynierom z firm Google, Microsoft, Facebook i Twitter, jak i wielu innym, którzy pomogli nam utworzyć te materiały.
-    help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. <br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    help_from_html_old: Inżynierowie z Google, Microsoft, Facebook i Twitter pomogli utworzyć te materiały.
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; © %{current_year} Microsoft. Wszystkie prawa zastrzeżone. < br / > Star Wars &#8482; © %{current_year} Disney and Lucasfilm. Wszystkie prawa zastrzeżone. < br / > Frozen&#8482; © %{current_year} Disney. Wszystkie prawa zastrzeżone. < br / > Ice Age&#8482; © %{current_year} 20th Century Fox. Wszystkie prawa zastrzeżone. < br / > Angry Birds&#8482; © 2009-%{current_year} Rovio Entertainment Ltd. Wszystkie prawa zastrzeżone. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc. Wszystkie prawa zastrzeżone. < br / > The Amazing World of Gumball jest znakiem towarowym i © 2015 Cartoon Network.'
     powered_by_aws: Zasilany przez Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, logo CODE i Hour of Code&reg; są znakami handlowymi Code.org.'
     copyright: Prawa autorskie
@@ -391,10 +351,15 @@ pl:
     translate: Pomóż nam tłumaczyć na Twój język
     support: Wsparcie
     support_url: http://support.Code.org/
-    tos_short: Terms
+    tos_short: Warunki
     tos: Regulamin
     privacy: Polityka prywatności
     secure: Bezpieczna wersja
+    report_abuse: Zgłoś nadużycie
+    built_on_code_studio: Zbudowane na Code Studio
+    make_my_own_app: Utwórz własną aplikację
+    how_it_works: Jak to działa
+    try_hour_of_code: Wypróbuj Godzinę Kodowania!
   reference_area:
     title: Czy potrzebujesz pomocy?
     subtitle: Zobacz te filmiki i wskazówki
@@ -426,6 +391,7 @@ pl:
   pdf_download: Pobierz PDF
   download_coming_soon: 'Już wkrótce aktywności  do pobrania.'
   video_coming_soon: Wkrótce wideo!
+  not_started: Uczeń nie próbował na tym poziomie.
   share_code:
     title: 'Kliknij "Uruchom", aby zobaczyć mój program w akcji'
     bounce_og_title: Sprawdź moją grę w odbijanie
@@ -450,7 +416,7 @@ pl:
       unused: Niewykorzystane poziomy
   upsell:
     hoc:
-      title: Godzina kodowania
+      title: Klasyczny labirynt
       body: Wypróbuj podstawy informatyki. Miliony dały im już szansę.
     flappy:
       title: Flappy Code
@@ -467,9 +433,14 @@ pl:
       body: Zobacz galerię aplikacji i artystycznych obrazów utworzonych przez naszych użytkowników
     frozen:
       title: Frozen
+    starwars:
+      title: Gwiezdne Wojny
     infinity:
       title: Infinity Play Lab
       body: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
+    minecraft:
+      title: Minecraft
+      body: Odkrywaj świat Minecraft poprzez kodowanie.
   gallery:
     students_drew_these_with_code: Uczniowie narysowali to z pomocą kodu!
     students_made_these_with_code: Uczniowie wykonali to z pomocą kodu!
@@ -480,8 +451,8 @@ pl:
     caption_by_name_age: 'przez %{name}, w wieku %{age}'
     caption_time_ago: '%{time_ago} temu'
     header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artysta/Wykonawca
+    header_playlab: Opowiadania i gry
+    header_artist: Sztuka kodu
   landing:
     prerelease: "Ten kurs jest w <span class='betatext'> wersji beta</span>.  Oznacza to, że to nie jest ostateczna jego wersja, podlega on rewizji na podstawie otrzymanych opinii, jak i jest ulepszany."
     prerelease_hoc2014: "Ten poradnik jest w <span class='betatext'> wersji beta</span>. Podlega on rewizji na podstawie otrzymanych opinii, jak i jest ulepszany."
@@ -600,4 +571,25 @@ pl:
     delete_confirm_text: Usunięcie projektu spowoduje trwałe usunięcie go z twojej listy Moje Projekty. Nikt, komu udostępniłeś link do tego projektu, nie będzie już mógł zobaczyć tego projektu.
     view_all: Zobacz Moje Projekty
     remix: Remix
-    click_to_remix: "Kliknij 'Remix', żeby utworzyć swoją wersję!"
+    click_to_remix: "Kliknij 'Remix', aby utworzyć swoją własną wersję!"
+    edit_project: Edytuj projekt
+    abuse:
+      tos: "Zgłoszono, że ten projekt narusza <a href='http://code.org/tos'> Warunki korzystania</a> z Code.org i nie może być udostępniony innym."
+      contact_us: "Jeśli uważasz to za błąd, to prosimy <a href='https://code.org/contact'> skontaktować się z nami.</a>"
+      go_to_code_studio: Przejdź do Code Studio
+      report_abuse_form:
+        intro: W razie napotkania obraźliwych treści, zagrożeń, cyberprzemocy, molestowania lub naruszenia praw autorskich do treści, które posiadasz, utworzonych przy użyciu aplikacji zbudowanej w Studio Kodowania, prosimy o wypełnienie poniższego formularza. Potraktujemy Twój raport bardzo poważnie, zbadamy tę sytuację i podejmiemy odpowiednie działania.
+        validation:
+          email: Proszę podać adres e-mail
+          age: Proszę określić wiek
+          abuse_type: Proszę odpowiedzieć, jak ta treść narusza regulamin
+          abuse_detail: Proszę podać szczegóły dotyczące treści, które zgłaszasz
+        abusive_url: Adres URL zgłaszanych treści
+        abuse_type:
+          question: 'Jak te treści naruszają %{link_start}Terms of Service%{link_end}?'
+          harassment: Zagrożenia, cyberprzemoc, molestowanie
+          offensive: Obraźliwe treści
+          infringement: Naruszenie praw autorskich
+          other: Inni/inne
+        detail: Proszę podać jak najwięcej szczegółów dotyczących treści, które zgłaszasz.
+        acknowledge: 'Przesyłając te informacje, potwierdzasz, że będą one wykorzystane zgodnie z warunkami %{link_start_privacy}Privacy Policy%{link_end} i %{link_start_tos}Terms of Service%{link_end}'

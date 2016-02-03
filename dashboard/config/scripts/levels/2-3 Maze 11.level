@@ -9,7 +9,7 @@
     "skin": "pvz",
     "instructions": "Get me to the flower I'm hungry! How many times do you have to repeat a block?",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false"
   }

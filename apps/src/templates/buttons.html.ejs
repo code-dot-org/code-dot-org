@@ -33,25 +33,15 @@
       <div class="arrow-text"><%= data.tryAgain %></div>
     </div>
   <% } else { -%>
-    <% if (data.hintRequestExperiment === "left") { -%>
-      <button id="hint-request-button" class="launch">
+    <% if (data.shouldPromptForHint) { -%>
+      <button id="hint-request-button" class="lightbulb-button">
+        <span><%- include lightbulb.svg.ejs %></span>
         <%= msg.hintRequest() %>
       </button>
-      <button id="again-button" class="launch">
-        <%= data.tryAgain %>
-      </button>
-    <% } else if (data.hintRequestExperiment == "right") { -%>
-      <button id="again-button" class="launch">
-        <%= data.tryAgain %>
-      </button>
-      <button id="hint-request-button" class="launch">
-        <%= msg.hintRequest() %>
-      </button>
-    <% } else { -%>
-      <button id="again-button" class="launch">
-        <%= data.tryAgain %>
-      </button>
-    <% } -%>
+    <% } %>
+    <button id="again-button" class="launch">
+      <%= data.tryAgain %>
+    </button>
   <% } -%>
 <% } -%>
 
@@ -67,3 +57,4 @@
     </button>
   <% } -%>
 <% } -%>
+<div class="after-feedback-buttons"/>

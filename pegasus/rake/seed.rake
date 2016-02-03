@@ -233,8 +233,7 @@ namespace :seed do
 
   imports = {
     beyond_tutorials: 'Data/HocBeyondTutorials.gsheet',
-    tutorials: 'Data/HocTutorials.gsheet',
-    uk_tutorials: 'Data/UkHocTutorials.gsheet',
+    tutorials: 'Data/HocTutorials.gsheet'
   }
 
   imports.each_pair do |table,path|

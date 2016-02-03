@@ -3,19 +3,14 @@ description "Create images with bits and bytes."
 description_short "Create images with bits and bytes."
 
 stage 'Black & White Pixelation Tutorial'
-video_key_for_next_level 'csp_pixelation_bw'
 level 'Pixelation 4x4 Empty'
 
 stage 'Black & White Pixelation Freeplay'
-video_key_for_next_level 'csp_pixelation_bw'
 level 'Pixelation 1'
 
 stage 'Color Pixelation Tutorial'
-video_key_for_next_level 'csp_pixelation_color_1'
 level 'Pixelation - Lesson 15 - Complete 3-bit color'
-video_key_for_next_level 'csp_pixelation_color_2'
 level 'Pixelation - Lesson 15 - Color Shades'
-video_key_for_next_level 'csp_pixelation_color_3'
 level 'Pixelation - Lesson 15 - Color Shades 4x4'
 
 stage 'Color Pixelation Examples'

@@ -13,16 +13,15 @@ Dashboard::Application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
-  config.static_cache_control = "public, max-age=3600"
+  config.serve_static_files  = true
+  config.static_cache_control = "public, max-age=3600, s-maxage=1800"
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
-  config.cache_store = :memory_store
 
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.raise_delivery_errors = true
+#  config.action_mailer.delivery_method = :smtp
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = true
@@ -51,5 +50,13 @@ Dashboard::Application.configure do
   # off by default because it slows things down
   ActiveRecordQueryTrace.enabled = false
 
-  config.react.variant = :production
+  # Explicitly set legacy test-order behavior in Rails 4.2
+  # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
+  config.active_support.test_order = :sorted
+
+  # don't act like a levelbuilder by default
+  config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # Set to :debug to see everything in the log.
+  config.log_level = :info
 end

@@ -1,5 +1,21 @@
+require 'rack/request'
+require 'ipaddr'
+require 'json'
+
 module Rack
   class Request
+    module CdoExtension
+      TRUSTED_PROXIES = JSON.parse(IO.read(deploy_dir('lib/cdo/trusted_proxies.json')))['ranges'].map do |proxy|
+        IPAddr.new(proxy)
+      end
+
+      def trusted_proxy?(ip)
+        super(ip) || TRUSTED_PROXIES.any?{|proxy| proxy === ip rescue false}
+      end
+    end
+
+    prepend CdoExtension
+
     def json_body()
       return nil unless content_type.split(';').first == 'application/json'
       return nil unless content_charset.downcase == 'utf-8'
@@ -35,7 +51,7 @@ module Rack
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = %w(studio learn i18n al ar br italia ro sg eu uk za).map{|x|x + '.code.org'} + %w(translate.hourofcode.com)
+        domains = (%w(studio learn i18n) + CDO.partners).map{|x|x + '.code.org'} + %w(translate.hourofcode.com)
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end

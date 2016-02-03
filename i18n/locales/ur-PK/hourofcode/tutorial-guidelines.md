@@ -1,41 +1,72 @@
 * * *
 
-layout: wide
+title: <%= hoc_s(:title_tutorial_guidelines) %> layout: wide
 
 * * *
 
-# Tutorial guidelines for the Hour of Code™ and Computer Science Education Week
+<%= view :signup_button %>
 
-Code.org will host a variety of Hour of Code™ activities on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at <https://code.org/learn>.
+# آور-آف-کوڈ اور کمپیوٹر سائنس ایجوکیشن ویک کی ٹیٹوریئل گائیڈ لائنز۔
 
-We’d like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science. Please use this document to guide the creation of your activity, targeted to the user who has no background in coding, computer programming, and computer science.
+Code.org آور-آف-کوڈ کی ہمہ گیر اقسام کی سرگرمیوں، آور-آف-کوڈ اور کمپیوٹر سائنس ایجوکیشن ویک کی ویب سائٹ کی میزبانی کرے گا۔ موجودہ لسٹ یہ ہے۔ [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %).
+
+ہم ہمہ گیر اقسام کے پرکشش آپشنز کو ھوسٹ کرنا چاہیں گے لیکن بنیادی مقصد اسٹوڈینٹس اور ٹیچرز کو جو کہ کمپیوٹر سائنس میں نئے ہیں کے تجربہ کو معقول طور سے انسپائر (متاثر) کرنا ہے۔ براہ کرم اس دستاویز (ڈاکومنٹ) کو اپنی ایکٹیویٹی بنانے کے لیے بطور گائیڈ استعمال کریں، اور اُن استعمال کنندہ کو اپنا حدف بنائیں جن کا کمپیوٹر پروگرامنگ اور کمپیوٹر سائنس میں کوئی پس منظر نہیں ہے۔
 
   
 
 
-**After reading the guidelines, you can submit your tutorial through our [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa).**
+**گائیڈ لائن پڑھنے کے بعد، آپ اپنا ٹیٹوریئل، ہمارے [آور-آف-کوڈ ایکٹیویٹی پیج کے ذریعہ جمع کراسکتے ہیں](https://goo.gl/kNrV3l).**
 
-**NEW:** Unlike past years, we plan to introduce a new format for "teacher-led" Hour of Code activities. These will be listed below the self-guided activities in student-facing pages and emails. Details below.
+**نیا-**: گزشتہ سالوں کے برعکس، ہم نے آور-آف-کوڈ ایکٹیویٹی میں "تیچرز-لیڈ" پروگرام متعارف کرانے کا پلان کیا ہے۔ یہ تمام ذیل میں اسٹوڈینٹ – فیسنگ پیجز اور ای-میلز کے تحت سیلف-گائیڈڈ ایکٹیویٹیز کی فہرست دیں گے۔ تفصیلات درج ذیل ہیں۔
 
 <a id="top"></a>
 
-## Index:
+## انڈیکس:
 
-  * [How tutorials will be evaluated for inclusion](#inclusion)  
-    
-  * [General guidelines for creating an Hour of Code™ activity](#guidelines)  
-    
-  * [How to submit (Due 10/31/2015)](#submit)  
-    
-  * [Suggestions for designing your activity](#design)  
-    
-  * [Trademark Guidelines](#tm)  
-    
-  * [Tracking Pixel](#pixel)  
-    
-  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)  
-    
-  * [A note for students with disabilities](#disabilities)
+  * [ایک آور-آف-کوڈ ایکٹیویٹی بنانے کے لیے عمومی گائیڈ لائینز](#guidelines)
+  * [How tutorials will be evaluated for inclusion](#inclusion)
+  * [How to submit (Due 10/15/2015)](#submit)
+  * [Suggestions for designing your activity](#design)
+  * [Trademark Guidelines](#tm)
+  * [Tracking Pixel](#pixel)
+  * [Promoting your tutorials, CSEdWeek, and Hour of Code](#promote)
+  * [معذور اسٹوڈینٹس کے لیے ایک نوٹ](#disabilities)
+
+<a id="guidelines"></a>
+
+## 2015 کے لیے نئے: ایکٹیویٹیز کے دو فارمیٹس: سیلف گائیڈڈ یا *لیسن پلان*
+
+اب تک ہزاروں ایجوکیٹرز آور-آف-کوڈ ٹرائی کر چکے ہیں، کئی کلاس-رومز مزید سرگرمیوں کیلئے تیار ہیں، کہ لیس-وَن-سائز-فٹس-آل ایک جامع-پروگرام بنائیں جو کہ بیسک کمپیوٹر سائنس کی تمام تر سرگرمیوں کا مناسب طور سے احاطہ کرسکے۔ ٹیچرز کو انسپائریشن حاصل کرنے کے لیے، ہم وَن-آور "تیچرز-لیڈ" پر مشتمل تجربہ خیز لیسن اور ایکٹیویٹی پلان پر مبنی آور-آف-کوڈ کو منظم کرنا چاہتے ہیں۔ ہم اس کے ساتھ "سیلف-گائیڈڈ" فارمیٹ کو فروغ دینا جاری رکھیں گے۔
+
+**جمع کرانے کے لیے ایک ٹیچر-لیڈ لیسن پلان، جو کہ مثالی طور سے مختلف موضوعات پر مبنی ہو ا آور-آف-کوڈ کے لیے آپ کے پاس کوئی نہایت دلچسپ یا انوکھا/اچھوتا آئیڈیا ہے؟* NEW *** بعض ایجوکیٹرز آور-آف-کوڈ کی ایکٹیویٹیز کو روایتی لیسن فارمیٹ بنا کر ھوسٹ کرنے کو ترجیح دیں، بجائے اس کے کہ وہ اسے گائیڈڈ-پزل/گیم کے تجربہ انگیز بنا کر پیش کریں۔ اگر مناسب طور سے سہولت یافتہ ہو تو زیادہ اوپن-اینڈڈ ایکٹیویٹیز کمپیوٹر سائنس کی تخلیقی نوعیت کو بہتر طور پر اجاگر کرسکتی ہے۔ ہم بخوشی جمع کرنا چاہیں گے **وَن-آور-لیسن-پلان جو کہ مختلف سبجیتس ایریاز کیلئے ڈیزائن کردہ ہو**۔ مثال کے طور پر، وَن-آور-لیسن پلان جو کہ جیومیٹری کلاس میں کوڈ سیکھانے پر مبنی ہو۔ یا کوئی میڈ-لِب ایکسرسائز برائے انگلش کلاس۔ یا ھسٹری کلاس کے لیے کوئی تخلیقی کوئز-کری-ایشن ایکٹیویٹی۔ یہ ٹیچرز کو ان دیگر مضامین میں ایک آور-آف-کوڈ کی رہنمائی کے لیے ریکروٹ (بھرتی) کر سکتا ہے جو کہ اُن کی فیلڈ کے لیے منفرد ہو، جبکہ یہ مظاہرہ کرتے ہوئے کہ کیسے کئی مختلف مضامین حصوں پر اثرانداز اور ترقی دے سکتا ہے۔CS
+
+آپ اپنے لیسن پلان کے لیے [خالی ٹیمپلیٹ](https://docs.google.com/document/d/1zyD4H6qs7K67lUN2lVX0ewd8CgMyknD2N893EKsLWTg/pub) سے شروعات کرسکتے ہیں۔
+
+مثلاً: 
+
+  * [(مرر-امیج (ایک آرٹ ٹیچر کے لیے ایکٹیویٹی](https://csedweek.org/csteacher/mirrorimages.pdf)
+  * [ایک فزکس کے ٹیچر کے لیے آرڈینو ایکٹیویٹی](https://csedweek.org/csteacher/arduino.pdf)
+  * [ایک ہسٹری ٹیچر کے لیے ٹیکنالوجی پر مبنی ھسٹری کی ایکٹیویٹی](https://csedweek.org/csteacher/besttechnology.pdf)
+
+[<button>میں کس طرح اپنا لیسن پلان جمع کرا سکتا ہوں؟</button>](#submit)
+
+  
+  
+**اسٹوڈینٹ – لیڈ (سیلف-گائیڈڈ) فارمیٹ**: اصل آور-آف-کوڈ زیادہ تر کامیاب ہونے والے سیلف-گائیڈڈ ٹیٹوریئلز یا لیسنز جو کہ اختیاری طور پر ٹیچرز کی جانب سے بنائے جاتے ہوں۔ There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+
+Note: On student-facing pages we'll list teacher-led activities *below* the self-guided ones, but we'll specifically call them out on pages or emails meant for educators.
+
+## General guidelines for creating an Hour of Code activity
+
+The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming (not HTML). The tone should be that:
+
+  * Computer science is not just for geniuses, regardless of age, gender, race. Anybody *can* learn!
+  * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
+  * Encourage students to create something that can be shared with friends/online.
+
+**Technical requirements**: Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal.
+
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
@@ -46,7 +77,6 @@ A committee of computer science educators will rank submissions based on qualita
 **Tutorials will be listed higher if they are:**
 
   * high quality
-  * self-directed, don’t require any instruction
   * designed for beginners - among students AND teachers
   * designed as a ~ 1 hour activity
   * require no sign up
@@ -61,7 +91,6 @@ A committee of computer science educators will rank submissions based on qualita
 
   * lower quality
   * more advanced level of teaching (not for beginners)
-  * require a high degree of involvement by a teacher with lots of prep (i.e. not self-guided for students)(see below)
   * have a limited number of supported OS/device platforms - for Web-based platforms you should aim to support all of the following: IE9+, and the latest Chrome, Firefox, and Safari
   * work only in English
   * reinforce stereotypes that hinder participation by under-represented student groups
@@ -76,33 +105,17 @@ A committee of computer science educators will rank submissions based on qualita
   * focus only on HTML + CSS web design
   * are submitted after the submission deadline, or with incomplete information (see below)
 
+**If your tutorial is student-led** Student-led tutorials need to be designed to be self-directed, not to require significant CS instruction or prep from teachers
+
 Ultimately, the goal of the Hour of Code campaign is to broaden participation in computer science by students and teachers, and to help show that computer science is accessible to all, and “easier than you think.” In many ways, this goal is better achieved by giving students and teachers fewer and simpler choices, with a focus on the highest quality options for a first-time user. Note also that the 2013 and 2014 Hour of Code campaigns were a fantastic success with over 120M served, with nearly unanimous positive survey responses from participating teachers and students. As a result, the existing listings are certainly good and the driving reason to add tutorials to the Hour of Code listings isn't to broaden the choices, but to continue to raise the quality (or freshness) for students, or to expand the options for non-English speakers given the global nature of the 2015 campaign.
-
-[**Back to the top**](#top)
-
-<a id="guidelines"></a>
-
-## General guidelines for creating an Hour of Code activity
-
-  * **Subject:** Introductory computer science or programming (not HTML).
-  * **Goal:** Give beginners an accessible first taste of programming.
-  * **Tone:** 
-      * Computer science is not just for geniuses. It doesn’t matter your age, gender, race. Anybody *can* learn!
-      * Computer science is connected to a wide variety of fields and interests. Everybody *should* learn!
-      * Encourage students to create something that can be shared with friends/online.
-  * **Technical requirements**: 
-      * Best: Web-based, smartphone-friendly, or unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>).
-      * Okay, but not preferred: app-install, desktop app, or game-console experiences
-  * **Self-Guided Format**: Self-guided tutorials or lessons, optionally facilitated by the teacher. There should be directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
-  * **Teacher-Led Format *(NEW)***: This year, we will be adding a new format for tutorials that are follow a traditional lesson plan form rather than a guided-puzzle game experience. We’re doing this mainly because with tens of thousands of educators who have tried the Hour of Code more than once, we believe a good number will invest the time to prepare a more creative, less one-dimensional activity with their students. While these types of activities are difficult without a teacher facilitating them, more open-ended activities if facilitated properly can better showcase the creative nature of computer science. On student-facing pages we will still list teacher-led activities below the self-guided ones, but we will specifically call them out on pages or emails meant for educators. 
 
 [**Back to the top**](#top)
 
 <a id="submit"></a>
 
-## How to submit (Due 10/31/2015)
+## How to submit (Due 10/15/2015)
 
-Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO9Oa) and follow the steps to submit your tutorial.
+Visit the [Hour of Code™ Activity Submission page](https://goo.gl/kNrV3l) and follow the steps to submit your tutorial.
 
 **What you’ll need:**
 
@@ -137,11 +150,11 @@ Visit the [Hour of Code™ Activity Submission page](http://goo.gl/forms/6GSklaO
   * Please also include recommended computer science knowledge within grade level: Beginner, Intermediate, or Advanced. The Hour of Code website will highlight activities for Beginners most prominently. If you’d like to prepare Intermediate and Advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
   * Technical requirements: 
       * In order to more accurately track participation we want every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details. 
-      * Upon finishing your activity, users should be directed to <http://code.org/api/hour/finish> where they will be able to: 
+      * Upon finishing your activity, users should be directed to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) where they will be able to: 
           * Share on social media that they completed the Hour of Code
           * Receive a certificate that they completed the Hour of Code
           * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to <http://code.org/api/hour/finish> as well. 
+          * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [<%= resolve_url('code.org/api/hour/finish') %>](%= resolve_url('https://code.org/api/hour/finish') %) as well. 
   * *(Optional)* We will follow-up with an online survey/form link asking for a report of the following activity metrics for the week of Dec. 7, 12:01 am through Dec. 13, 11:59 pm) 
       * For online activities (especially smartphone/tablet apps): 
           * Number of users
@@ -201,13 +214,13 @@ After the success of the 2013 campaign, we took steps to make sure we set up the
 
 One piece of this is to protect the trademark "Hour of Code" to prevent confusion. Many of our tutorial partners have used "Hour of Code" on your web sites. We don't want to prevent this usage, but we want to make sure it fits within a few limits:
 
-  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp"
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
   3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-  4. No use of "Hour of Code" in app names
+  4. No use of "Hour of Code" in app names.
 
 [**Back to the top**](#top)
 
@@ -250,3 +263,5 @@ We are asking everyone to promote their own 1-hour tutorial to your users. Pleas
 If you create a tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. We have not yet received such a tutorial, and would be eager to include one as an option for these students.
 
 [**Back to the top**](#top)
+
+<%= view :signup_button %>

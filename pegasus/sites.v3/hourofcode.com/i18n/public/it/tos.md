@@ -1,8 +1,14 @@
+---
 
+title: Termini di Servizio
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # Termini di Servizio
 
-Last Revised: December 5, 2014
+Ultima revisione: 5 dicembre 2014
 
 Code.org è un'organizzazione no-profit 501(c)(3) ("Code.org"). La nostra missione è dare a ogni studente l'opportunità di imparare l'informatica. Come parte di questa missione, Code.org gestisce i siti web <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, altri siti Web, informazioni, testi, curriculum, video, grafica, foto, API, notifiche e-mail e altri materiali e prodotti correlati e servizi (i "**Servizi**"), tra cui la piattaforma di tutorial <http://studio.code.org> ("**Code Studio**").
 
@@ -30,7 +36,7 @@ Code.org ti permette di registrare un account per i Servizi tramite l'utilizzo d
 
 ### Privacy
 
-La tua privacy per noi è importante. La [Privacy Policy](http://code.org/privacy) di Code.org spiega come trattiamo i tuoi dati personali, ed è inclusa in questi Termini per mezzo di questo riferimento ad essa. Ti preghiamo di leggere attentamente la nostra Privacy Policy, per essere informato su quanto fa capo alla raccolta, all'uso, ed alla trasmissione dei tuoi dati personali da parte di Code.org.
+La tua privacy per noi è importante. L' [Informativa sulla Privacy](http://code.org/privacy) di Code.org spiega come trattiamo i tuoi dati personali, ed è integrata in questi Termini di riferimento. Ti preghiamo di leggere attentamente la nostra Privacy Policy, per essere informato su quanto fa capo alla raccolta, all'uso, ed alla trasmissione dei tuoi dati personali da parte di Code.org.
 
 Se sei uno studente che utilizza un account registrato per te da un Educatore, o collegato in altro modo ad un Educatore, acconsenti che Code.org possa trasmettere i tuoi dati agli Educatori associati al tuo account. Se sei un Educatore, acconsenti a non condividere i dati dello studente che ricevi da Code.org con nessuno che non sia autorizzato dalla scuola, o dal distretto scolastico, o da qualche altra istituzione educativa che tu rappresenti.
 
@@ -74,7 +80,7 @@ The [Code.org JSON API and database of schools](http://code.org/learn/find-schoo
 
 Any data provided by The Conference Board is provided “as is” with no warranty whatsoever, and is protected by United States and International Copyright laws. The data displayed are provided for informational purposes only and may only be accessed, reviewed, published, and/or used in accordance with, and the permission of, The Conference Board consistent with the Terms of Use displayed at [www.conference-board.org](http://www.conference-board.org). Such data may not be extracted for use in a database, used to create a derivative work, or otherwise misused by any means without express written permission from The Conference Board, except that you may make limited non-commercial use as consistent with Fair Use under Section 107 of the Copyright Act of 1976. The Conference Board® and The Conference Board Help Wanted OnLine® are registered trademarks of The Conference Board. The Conference Board reserves all rights in and to its trademarks. Further information regarding The Conference Board Help Wanted OnLine® can be found [here](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### Copyright Policy
+### Normativa sul copyright
 
 Code.org respects the intellectual property rights of others and expects users of the Services to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 

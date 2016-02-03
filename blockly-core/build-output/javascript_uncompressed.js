@@ -104,9 +104,9 @@ Blockly.JavaScript.colour_rgb = function() {
     Blockly.JavaScript.colour_rgb.functionName = d;
     var e = [];
     e.push("function " + d + "(r, g, b) {");
-    e.push("  r = Math.round(Math.max(Math.min(Number(r), 100), 0) * 2.55);");
-    e.push("  g = Math.round(Math.max(Math.min(Number(g), 100), 0) * 2.55);");
-    e.push("  b = Math.round(Math.max(Math.min(Number(b), 100), 0) * 2.55);");
+    e.push("  r = Math.round(Math.max(Math.min(Number(r), 255), 0));");
+    e.push("  g = Math.round(Math.max(Math.min(Number(g), 255), 0));");
+    e.push("  b = Math.round(Math.max(Math.min(Number(b), 255), 0));");
     e.push("  r = ('0' + (r || 0).toString(16)).slice(-2);");
     e.push("  g = ('0' + (g || 0).toString(16)).slice(-2);");
     e.push("  b = ('0' + (b || 0).toString(16)).slice(-2);");

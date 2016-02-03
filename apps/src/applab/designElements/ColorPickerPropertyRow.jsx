@@ -1,6 +1,6 @@
 /* global $ */
-var React = require('react');
 var rowStyle = require('./rowStyle');
+var colors = require('../../sharedJsxStyles').colors;
 
 var colorPicker = require('../colpick');
 
@@ -55,6 +55,7 @@ var ColorPickerPropertyRow = React.createClass({
       backgroundColor: this.state.value,
       verticalAlign: 'top'
     };
+
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
@@ -63,7 +64,11 @@ var ColorPickerPropertyRow = React.createClass({
             value={this.state.value}
             onChange={this.handleChangeInternal}
             style={rowStyle.input} />
-          <button style={buttonStyle} ref='colorPicker'></button>
+          <button
+            className={this.state.value === '' ? 'rainbow-gradient' : undefined}
+            style={buttonStyle}
+            ref='colorPicker'>
+          </button>
         </div>
       </div>
     );

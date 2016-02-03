@@ -76,6 +76,7 @@ Blockly.Block = function(blockSpace, prototypeName, htmlId) {
   this.movable_ = true;
   this.editable_ = true;
   this.userVisible_ = true;
+  this.nextConnectionDisabled_ = false;
   this.collapsed_ = false;
   this.dragging_ = false;
   // Used to hide function blocks when not in modal workspace. This property
@@ -224,7 +225,7 @@ Blockly.Block.prototype.getIcons = function() {
 Blockly.Block.prototype.initSvg = function() {
   this.svg_ = new this.blockSvgClass_(this, this.customOptions_);
   this.svg_.init();
-  if (!Blockly.readOnly) {
+  if (!this.blockSpace.isReadOnly()) {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
@@ -318,9 +319,6 @@ Blockly.Block.terminateDrag_ = function() {
   if (selected) {
     selected.blockSpace.fireChangeEvent();
     selected.blockSpace.blockSpaceEditor.setCursor(Blockly.Css.Cursor.OPEN);
-  } else {
-    // If not, at least trigger a cursor change on blocks.
-    Blockly.Css.setCursor(Blockly.Css.Cursor.OPEN, null);
   }
 
   Blockly.Block.dragMode_ = Blockly.Block.DRAG_MODE_NOT_DRAGGING;
@@ -554,6 +552,14 @@ Blockly.Block.prototype.getBox = function() {
     xy.x + heightWidth.width,
     xy.y + heightWidth.height,
     xy.x);
+};
+
+/**
+ * Returns the padding of the SVG or null if none exists
+ * @return {Object} object with padding values for top, bottom, left, and right
+ */
+Blockly.Block.prototype.getSvgPadding = function() {
+  return this.svg_ && this.svg_.getPadding();
 };
 
 /**
@@ -797,7 +803,7 @@ Blockly.Block.prototype.duplicate_ = function() {
  * @private
  */
 Blockly.Block.prototype.showContextMenu_ = function(e) {
-  if (Blockly.readOnly || !this.contextMenu) {
+  if (this.blockSpace.isReadOnly() || !this.contextMenu) {
     return;
   }
   // Save the current block in a variable for use in closures.
@@ -1315,7 +1321,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
   if (this.parentBlock_) {
     // Remove this block from the old parent's child list.
     var children = this.parentBlock_.childBlocks_;
-    for (var child, x = 0; child = children[x]; x++) {
+    for (var child, x = 0; (child = children[x]); x++) {
       if (child == this) {
         children.splice(x, 1);
         break;
@@ -1395,7 +1401,7 @@ Blockly.Block.prototype.areBlockAndDescendantsDeletable = function() {
  * @return {boolean} True if deletable.
  */
 Blockly.Block.prototype.isDeletable = function() {
-  return this.deletable_ && !Blockly.readOnly;
+  return this.deletable_ && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1415,7 +1421,7 @@ Blockly.Block.prototype.setDeletable = function(deletable) {
 Blockly.Block.prototype.shouldBeGrayedOut = function() {
   return Blockly.grayOutUndeletableBlocks
     && !this.isDeletable()
-    && !Blockly.readOnly;
+    && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1423,7 +1429,7 @@ Blockly.Block.prototype.shouldBeGrayedOut = function() {
  * @return {boolean} True if movable.
  */
 Blockly.Block.prototype.isMovable = function() {
-  return this.movable_ && !Blockly.readOnly;
+  return this.movable_ && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1440,7 +1446,7 @@ Blockly.Block.prototype.setMovable = function(movable) {
  * @return {boolean} True if editable.
  */
 Blockly.Block.prototype.isEditable = function() {
-  return this.editable_ && !Blockly.readOnly;
+  return this.editable_ && !this.blockSpace.isReadOnly();
 };
 
 /**
@@ -1495,6 +1501,18 @@ Blockly.Block.prototype.setUserVisible = function(userVisible, opt_renderAfterVi
 };
 
 /**
+ * Set whether this block should allow for succeeding connections.
+ * Called by Xml.domToBlock, primarily used as a passthrough to
+ * setNextStatement to disable any existing connections.
+ */
+Blockly.Block.prototype.setNextConnectionDisabled = function(disabled) {
+  this.nextConnectionDisabled_ = disabled;
+  if (this.nextConnectionDisabled_ === true) {
+    this.setNextStatement(false);
+  }
+};
+
+/**
  * @returns {boolean} whether this block is selected and mid-drag
  */
 Blockly.Block.prototype.isCurrentlyBeingDragged = function () {
@@ -1529,12 +1547,21 @@ Blockly.Block.prototype.setCurrentlyHidden = function (hidden) {
  * CurrentlyHidden is a non-persistent property used to hide certain blocks
  * (like function definitions/examples) that should only be visible when using
  * the modal function editor.
- * This method calculates whether this block is currently visible
+ * This method calculates whether this block is currently visible based
+ * on our current block-editing state (Blockly.editBlocks)
  * @returns true if both visibility conditions are met.
  */
 Blockly.Block.prototype.isVisible = function () {
   var visibleThroughParent = !this.parentBlock_ || this.parentBlock_.isVisible();
-  return visibleThroughParent && this.isUserVisible() && !this.isCurrentlyHidden_();
+  var visible = visibleThroughParent && !this.isCurrentlyHidden_();
+
+  if (Blockly.editBlocks) {
+    // If we're in edit mode, we're not a "user", so we don't care if
+    // the block isUserVisible or not.
+    return visible;
+  }
+
+  return visible && this.isUserVisible();
 };
 
 /**

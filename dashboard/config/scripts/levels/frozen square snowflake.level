@@ -24,7 +24,17 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"replace_questions\",\"callout_text\":\"Use the drop-down to replace \\\"???\\\" with a number\",\"element_id\":\"#repeat_block_qtip > .blocklyEditableText\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "shapeways_url": "https://www.shapeways.com/model/2925794/",
-    "permitted_errors": "0"
+    "permitted_errors": "0",
+    "markdown_instructions": "Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>
@@ -32,38 +42,45 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown" movable="false" id="repeat_block_qtip">
-              <title name="TIMES" config="3-10">???</title>
+            <block type="controls_repeat_dropdown">
+              <title name="TIMES" config="3-10">4</title>
               <statement name="DO">
-                <block type="controls_repeat_dropdown" deletable="false" editable="false" movable="false">
-                  <title name="TIMES" config="3-10">4</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant_dropdown" deletable="false" editable="false" movable="false">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE" config="50,100,150,200,300">100</title>
-                      <next>
-                        <block type="draw_turn_by_constant_dropdown" deletable="false" editable="false" movable="false">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE" config="45,60,90,120,180">90</title>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
+                <block type="draw_move_by_constant_dropdown">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE" config="50,100,150,200,300">100</title>
                   <next>
-                    <block type="draw_turn_by_constant_dropdown" movable="false">
+                    <block type="draw_turn_by_constant_dropdown">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE" config="36,45,60,90,120,180">???</title>
+                      <title name="VALUE" config="45,60,90,120,180">90</title>
                     </block>
                   </next>
                 </block>
               </statement>
+              <next>
+                <block type="draw_turn_by_constant_dropdown">
+                  <title name="DIR">turnRight</title>
+                  <title name="VALUE" config="36,45,60,90,120,180">???</title>
+                </block>
+              </next>
             </block>
           </next>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">???</title>
+        </block>
+        <block type="draw_move_by_constant_dropdown">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE" config="50,100,150,200,300">100</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="36,45,60,90,120,180">???</title>
+        </block>
+      </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>
@@ -86,6 +103,13 @@
         </block>
       </xml>
     </required_blocks>
+    <recommended_blocks>
+      <xml>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">10</title>
+        </block>
+      </xml>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

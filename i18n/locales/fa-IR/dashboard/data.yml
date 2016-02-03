@@ -105,6 +105,8 @@ fa:
         StudioEC: آزمایشگاه بازی
         Applab: آزمایشگاه نرم افزار
         NetSim: شبیه ساز اینترنت
+        Custom: هنرمند
+        CustomStudio: آزمایشگاه بازی
     trophy:
       name:
         Bronze: برنز
@@ -311,6 +313,29 @@ fa:
         studio_playlab_8: می توانید بلوکی برای امتیاز گرفتن و بلوکی برای پخش صدا وقتی تک شاخ به جادوگر می خورد اضافه کنید، و سپس با فلش ها حرکتش دهید تا امتیاز بگیرید?
         studio_playlab_9: پس زمینه را برای حمله ی بیگانه تنظیم کنید و به ربات فضایی کمک کنید با تغییر سرعتش سریعتر به بیگانه برسد. سپس با فلش ها حرکتش دهید تا به ربات فضایی برسد و بقیه را خبر کند
         studio_playlab_10: بازی خودتان را بسازید. وقتی کارتان تمام شد، روی پایان کلیک کنید تا به دوستانتان اجازه دهید داستان شما را روی موبایلشان امتحان کنند.
+        studio_iceage_hello1: 'Sid wants to gather everyone for a new adventure. Can you help him say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_iceage_hello2: 'Sid (actor 1) found Manny (actor 2) and wants to invite him on the adventure.  Help them greet each other by using the the "actor say" block twice.'
+        studio_iceage_move_to_flag: 'Scrat is looking for his acorn!  Help him go the last 200 pixels using the "move" block.'
+        studio_iceage_move_to_actor: 'Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the "move actor" block. Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_iceage_repeat: 'The "repeat forever" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?'
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: 'Scrat is still looking for acorns! Help him scamper around by attaching the "move" block to each of the events and changing the direction to work for each arrow key. When you’re done, click Run and try to collect all of the acorns.'
+        studio_iceage_sound_and_points: 'We’ve provided most of the code that keeps Granny moving left and right, as well as the code to move Sid around the screen. Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Sid and Granny collide? Press Run to play the game.'
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age is coming! Change the background to an icy background and set Sid’s speed to fast, then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: |-
+          Sid wants to let his grandmother, Granny, know that he loves her. Use the "actor throw" command to have Sid (actor 1) throw hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit with the hearts.
+        studio_iceage_free_play: "Time to create your own game or story! When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
+        studio_gumball_hello1: 'Anais wants to make some new friends. Can you help her say "hello" by dragging the "say" block out into the work area and typing the word "hello" inside?'
+        studio_gumball_hello2: 'Darwin (actor 1) and his brother Gumball (actor 2) are heading to school.  Help them greet each other by using the "actor say" block twice.'
+        studio_gumball_move_to_flag: 'Banana Joe is about to win a field day race!  Help him go the last 200 pixels using the "move" block.'
+        studio_gumball_move_to_actor: 'Gumball (actor 1) and Darwin (actor 2) are late for the field day! Help Gumball move 200 pixels down to Darwin using the "move actor" block.  Next, connect a block to the "when actor touches" event to play a sound when they find each other.'
+        studio_gumball_repeat: 'The "repeat forever" block allows you to run code continuously.  Can you attach blocks to it to help Gumball warm up for his race by moving left and right repeatedly?'
+        studio_gumball_click_hello: 'Can you help Anton announce the start of a race by saying "Ready, set, go!"? To test your program, don’t forget to click Anton after you click Run!'
+        studio_gumball_move_events: 'Darwin is in the flag gathering contest! Help him run around by attaching the "move" block to each of the events. When you’re done, click Run and try to collect all of the flags.'
+        studio_gumball_sound_and_points: 'We’ve provided most of the code that keeps Anton (actor 2) moving left and right, as well as the code to move Banana Joe (actor 1) around the screen.  Can you finish the code and add blocks to the "when actor touches" event to make it so that you both play a sound and score a point when Banana Joe and Anton collide?  Press Run to play the game.'
+        studio_gumball_warn_food_fight: 'Darwin just escaped a food fight! Change the background to "characters" and set Darwin’s speed to fast, then press Run and move him to Penny to warn her.'
+        studio_gumball_join_food_fight: 'Join the food fight! Use the "actor throw item right" command to have Banana Joe (actor 1) throw food at Anton (actor 2)! Set Anton’s mood to angry when he gets hit.'
+        studio_gumball_free_play: "Create your own game or story. When you're done, click Finish to let friends try your game on their phones, tablets, or computers!"
         studio_full_sandbox: بازی خودتان را بسازید. وقتی کارتان تمام شد، روی پایان کلیک کنید تا به دوستانتان اجازه دهید داستان شما را روی موبایلشان امتحان کنند.
         studio_k1_1: 'می‌تونی کاری کنی که این سگ بگه "سلام بر جهان"؟'
         studio_k1_2: می توانید کاری کنید که سگ چیزی بگوید و بعد از آن گربه چیزی بگوید?
@@ -416,6 +441,8 @@ fa:
         C4_variables_artist: 'متغیرها - هنرمند'
         C4_variables_playlab: 'متغیرها - آزمایشگاه بازی'
         C4_for_loops: 'حلقه های "برای"'
+        C4_for_loops_bee: 'حلقه های "برای"'
+        C4_for_loops_no_bee: 'حلقه های "برای"'
         C4_math_artist: برنامه نویسی هنرمند با ریاضی
         C4_function_edit: ویرایش تابع ها
         C4_function_create: ساختن تابع ها
@@ -437,6 +464,22 @@ fa:
         infinity_playlab_intro: 'آزمایشگاه بازی - معرفی'
         infinity_playlab_events: 'آزمایشگته بازی - رویداد ها'
         infinity_playlab_repeat_forever: 'آزمایشگاه بازی - حلقه ی تکرار برای همیشه'
+        csp_applab_databases_1: 'Introduction to Databases - Part 1'
+        csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_lists_1: 'Introduction to Lists - Part 1'
+        csp_applab_lists_2: 'Introduction to Lists - Part 2'
+        csp_applab_lists_3: 'Introduction to Lists - Part 3'
+        csp_applab_lists_4: 'Introduction to Lists - Part 4'
+        csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
+        csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
+        csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: 'Introduction to Variables - Part 1'
+        csp_applab_variables_2: 'Introduction to Variables - Part 2'
+        csp_applab_functions: معرفی تابع ها
+        csp_applab_functions_parameters: معادله با پارامترها
+        csp_applab_loops: حلقه ها
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: کمی راجع به پیکسل ها
         csp_pixelation_color_1: 'نرم افزار پیکسل کردن رنگ - قسمت 1'
         csp_pixelation_color_2: 'نرم افزار پیکسل کردن رنگ - قسمت 2'
@@ -444,6 +487,7 @@ fa:
         csp_pixelation_bw: نرم افزار پیکسل کردن سیاه و سفید
         csp_U1L14_tipstricks: توصیه ها و ترفند های معلم واحد 1 درس 14
         csp_textcompression: نرم افزار فشرده سازی متن
+        csp_textcompression_new: نرم افزار فشرده سازی متن
         csp_internetsimulator_1: 'Internet Simulator - Part 1'
         csp_internetsimulator_2: 'Internet Simulator - Part 2'
         csp_internetsimulator_3: 'Internet Simulator - Part 3'
@@ -464,6 +508,27 @@ fa:
         alg_15_biggame_update_player: 'CS در جبر - به روز رسانی بازیکن بازی بزرگ'
         alg_16_biggame_collision_detection: 'CS در جبر - تشخیص برخورد بازی بزرگ'
         alg_17_sambat_compound_booleans: 'CS در جبر - دودویی های ترکیبی'
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_typing: 'Star Wars: Building a Galaxy with Code - JavaScript'
+        starwars_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        starwars_blocks_intro: 'Star Wars: Building a Galaxy with Code - Introduction'
+        starwars_blocks_events: 'Star Wars: Building a Galaxy with Code - Events'
+        starwars_blocks_congrats: 'Star Wars: Building a Galaxy with Code - Congratulations'
+        mc_intro: 'Minecraft - Introduction'
+        mc_repeat: 'Minecraft - Repeat'
+        mc_if_statements: 'Minecraft - If statements'
+        mc_congrats_share: 'Minecraft - Congratulations'
+        mc_congrats_no_share: 'Minecraft - Congratulations'
+        gumball_intro: 'Gumball Hour of Code - Introduction'
+        gumball_events: 'Gumball Hour of Code - Events'
+        gumball_repeat: 'Gumball Hour of Code - Repeat statements'
+        iceage_intro: 'Ice Age Hour of Code - Introduction'
+        iceage_events: 'Ice Age Hour of Code - Events'
+        iceage_repeat: 'Ice Age Hour of Code - Repeat statements'
     callout:
       text:
         drag_blocks: 'یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان'
@@ -484,55 +549,61 @@ fa:
         repeat_blocks_1: (1) از این بلوک استفاده کنید و آن را دور بلوک های خاکستری در فضای کار بگذارید
         repeat_blocks_2: '(2) بلوک "Repeat" را به اینجا حرکت دهید، و بلوک های خاکستری را داخلش قرار دهید'
         snowflake_dropdown: از این منوی کشویی برای ساختن دانه های برف متفاوت استفاده کنید!
-        degrees_per_side: Divide 360 by the number of sides to get the size of each angle in degrees.
-        set_sides: 'Use this block to set "sides" to the number needed to complete the puzzle.'
-        set_length: 'Use this block to set "length" to the correct value.'
-        which_equation: Which equation makes each side shorter for shapes with more sides?
-        get_nectar: 'Use the new "get nectar" block.'
-        actions_category: 'The tool box got a new look! The "Actions" blocks are in here now.'
-        draw_square_hint: 'Hint: Use the square loop you just made in the last puzzle.'
-        edit_function: Click here to edit your function.
-        create_function: 'Click here to open the "Functions" flyout, then click the "Create a Function" button.'
-        house_hint: "It's ok if the picture doesn't look like a house yet. We will fix it in the next puzzle."
-        edit_draw_square: Use this button to edit the function and add the loop.
-        edit_get_nectar: Use this button to edit the function and change the direction the Bee will turn to get the nectar.
-        logic_category: 'Open the "Logic" flyout to find the "if/else" block.'
-        length_parameter: 'Can you update this function so it uses the "length" parameter?'
-        frozen_diamond_repeat: Use the repeat block to create this shape.
-        frozen_circle_function_in_circle_turn: "Don't forget to turn after creating each circle."
-        frozen_circle_function_with_parameter_circle: 'Use the "create a circle" block and change the size.'
-        frozen_snowflake_branch: 'Use the "create a snowflake branch" block'
-        frozen_create_square: Attach more blocks here to create a square
-        playlab_drag_say: 'Drag the "say" block here and type "hello"'
-        playlab_use_twice: Use this block twice and remember to change the actor number
-        playlab_move_girl: 'Use the "move right" block to move Tennis Girl'
-        playlab_play_sound: 'Add "play sound" block here'
-        playlab_arrow_keys: Remember to use these to move the witch after clicking on Run
-        playlab_add_move: 'Add "move" blocks inside this repeat block'
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
-        place_variable: Drag your variable inside this block
-        bee_for_loop: Drag the largest number of nectar you want the bee to collect here
-        place_counter_variable: Drag your counter variable inside this block
-        function_editor_draw_square: 'This is your function definition. These blocks run everytime you use the "draw a square" block'
+        degrees_per_side: 360 را بر تعداد اضلاع تقسیم کنید تا اندازه ی هر زاویه را به درجه بدست آورید.
+        set_sides: از این بلوک برای تنظیم اضلاع به تعداد مورد نیاز برای حل معما استفاده کنید.
+        set_length: 'از این بلوک برای تنظیم "طول" به میزان درست استفاده کنید.'
+        which_equation: کدام معادله هر ضلع را برای شکل هایی با اضلاع بیشتر کوتاهتر می کند?
+        get_nectar: 'از بلوک جدید "شهد را بگیر" استفاده کن.'
+        actions_category: 'جعبه ابزار قیافه ی جدیدی پیدا کرده! بلوک های "کارها" حالا اینجا هستند.'
+        draw_square_hint: 'راهنمایی: از حلقه ی مربع که به تازگی در معمای قبلی درست کردید استفاده کنید.'
+        edit_function: اینجا را کلیک کنید تا تابع خود را ویرایش کنید.
+        create_function: 'برای باز کردن منوی " تابع ها" اینجا را کلیک کنید، سپس دکمه ی "یک تابع بساز" را کلیک کنید.'
+        house_hint: اشکالی ندارد اگر تصویر هنوز مثل یک خانه به نظر نمی رسد. در معمای بعدی درستش می کنیم.
+        edit_draw_square: از این دکمه برای ویرایش تابع و اضافه کردن حلقه استفاده کنید.
+        edit_get_nectar: از این دکمه برای ویرایش تابع استفاده کنید و جهتی که زنبور برای گرفتن شهد می چرخد را تغییر دهید.
+        logic_category: 'منوی "logic" را برای پیدا کردن بلوک "if/else" باز کنید.'
+        length_parameter: 'می توانید این تابع را به روز کنید به طوری که از ورودی "طول" استفاده کند?'
+        frozen_diamond_repeat: از بلوک تکرار برای ایجاد این شکل استفاده کنید.
+        frozen_circle_function_in_circle_turn: فراموش نکنید بعد از ایجاد هر دایره برگردید.
+        frozen_circle_function_with_parameter_circle: 'استفاده از بلوک "ایجاد یک دایره" و تغییر سایز.'
+        frozen_snowflake_branch: 'استفاده از بلوک "ایجاد شعبه برف ریزه"'
+        frozen_create_square: برای ایجاد میدان بلوک های بیشتری اینجا پیوست کنید
+        playlab_drag_say: 'بلوک "گفتن" رو به این جا بکشید و "سلام" رو تایپ کنید'
+        playlab_use_twice: از این بلوک دو بار استفاده کنید و به یاد داشته باشید تغییر تعداد بازیگر ها را
+        playlab_move_girl: 'برای حرکت تنیس دختر از بلوک "حرکت به راست" استفاده کنید'
+        playlab_play_sound: 'بلوک "پخش صدا" را اینجا اضاف کنید'
+        playlab_arrow_keys: استفاده از این را برای حرکت جادوگر بعد از کلیک روی اجرا به یاد داشته باشید
+        playlab_add_move: 'بلوک "حرکت" را داخل این بوک تکرار اضاف کنید'
+        playlab_add_score: اضافه کردن بلوک امتیاز در اینجا
+        playlab_add_blocks: بلوک های خود را اینجا اضافه کنید
+        set_variable: برای تنظیم متغیر خود، یک بلوک شماره را به اینجا بکشید
+        place_variable: متغیر خود را به داخل این بلوک بکشید
+        bee_for_loop: بزرگترین عدد شهدی که میخواهید زنبور جمع کند را به اینجا بکشید
+        place_counter_variable: شمارنده ی متغیر خود را به داخل این بلوک بکشید
+        function_editor_draw_square: 'این تعریف تابع شماست. این بلوک ها هر زمان که از بلوک "کشیدن یک میدان" استفاده کنید، اجرا میشوند'
         change_here: تغییرات خود را اینجا انجام دهید
-        write_draw_square_function: Drag blocks from the toolbox into here that draw a square
-        write_draw_triangle_function: Drag blocks from the toolbox into here that draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
-        add_and_drag_parameter: Write in the name of your parameter here, click add, and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: 'Use the "if" block to decide if the bee should get nectar'
-        if_else_bee: |-
-          Use the "if/else" block so that the Bee gets nectar from a flower, and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to make a full circle
-        place_length_variable: Drag the length variable here to replace the question marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        write_draw_square_function: برای کشیدن یک میدان بلوک ها را از جعبه ابزار به اینجا بکشید
+        write_draw_triangle_function: برای کشیدن مثلث بلوک ها را از جعبه ابزار به اینجا بکشید
+        edit_add_parameter: برای افزودن یک پارامتر به عملکرد تان ویرایش را کلیک کنید
+        add_and_drag_parameter: نام پارامتر خود را اینجا بنویسید، روی افزودن کلیک کرده، و سپس آنرا به تعریف عملکرد تان بکشید
+        fill_in_actor: پر کردن با؟؟؟ با اعداد که هر کدام مربوط به یک بازیگر است(۱، ۲ و ۳)
+        repeat: برای تکرار دستورات بلوک ها را داخل حلقه قرار دهید
+        if_bee_nectar: 'استفاده از بلوک "اگر" برای تصمیم گرفتن، اگر زنبور شهد جمع کرد'
+        if_else_bee: 'استفاده از بلوک "اگر/وگرنه" بنابراین که اگر گلی نبود، زنبور از یک گل شهد جمع میکنه و عسل میسازه'
+        repeat_full_circle: تعداد دفعاتی که زامبی باید حرکت کند تا یک دایره کامل بسازد را وارد کنید
+        place_length_variable: برای جابجایی علامت سوال طول متغیر را به اینجا بکشید
+        arrows_move_actor: استفاده از فلش برای حرکت بازیگر
+        right_arrow_fireball: استفاده از فلش راست برای شلیک توپ های آتشین
+        name_function: نام عملکرد تان را اینجا بنویسید
+        Infinity_move_right_runbutton: افزودن بلوک حرکت در اینجا
+        Infinity_move_directions_callout: وقتی فلش بالا فشرده میشود کدام بلوک بایمکس را به بالا حرکت میدهد؟
+        Infinity_move_directions_callout_arrow: برای هدایت کردن از این فلش ها استفاده کنید
+        Infinity_move_collide_callout: پخش صدا هنگامی که این رویداد رخ می دهد.
+        Infinity_repeat_callout: بلوک های حرکت را داخل اینجا قرار دهید
+        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
+        craft_callout_preplaced: "We've put some blocks here to get you started"
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?

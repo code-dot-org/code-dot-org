@@ -286,7 +286,7 @@ id:
     multi:
       2-3 Algorithms Multi 1:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
-        Choose an algorithm for the image provided.: Pilihlah seuah algoritma untuk gambar berikut.
+        Choose an algorithm for the image provided.: Pilihlah sebuah algoritma untuk gambar berikut.
         Multiple Choice: Pilihan Berganda
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Mulailah dengan sebuah persegi <br/> Letakkan suatu jajar genjang di atas persegi <br/> Letakkan sebuah segitiga sebelah kanan jajaran genjang'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Mulailah dengan sebuah persegi<br/>Letakkan sebuah segitiga di atas persegi<br/>Letakkan sebuah segitiga di bawah persegi'
@@ -591,17 +591,18 @@ id:
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Multiple Choice: Pilihan Berganda
         Which blocks solve this puzzle?: Blok manakah yang dapat menyelesaikan teka-teki tersebut?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Multiple Choice: Pilihan Berganda
         Which blocks draw the square?: Blok mana yang menarik alun-alun?

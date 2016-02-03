@@ -1,8 +1,14 @@
+---
 
+タイトル: サービス利用規約
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # サービス利用規約
 
-Last Revised: December 5, 2014
+最終改訂日: 2014 年 12 月 5 日
 
 Code.orgは501(c)(3)に基づく非営利団体です(“Code.org”)。 我々の使命はコンピューターサイエンスを学ぶ機会を全ての生徒に提供することです。 その一環として、Code.orgは<http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>などのウェブサイトで、各種情報、テキスト、カリキュラム、ビデオ、グラフィック、写真、API、電子メールによるお知らせ、そのた関連する資料、製品、サービス(“**サービス**”)などを運営します。その中には、<http://studio.code.org> でのチュートリアルプラットフォーム (“**Code Studio**”)も含まれます。
 

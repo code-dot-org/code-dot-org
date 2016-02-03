@@ -4,26 +4,26 @@
       name:
         20-hour:
           desc: Inngangur að tölvunarfræði 13-14 ára
-          Unplug1: Áfangi 1
-          Maze: Áfangi 2
-          Unplug2: Áfangi 3
-          Unplug3: Áfangi 4
-          Artist: Áfangi 5
-          Unplug4: Áfangi 6
-          Artist2: Áfangi 7
-          Unplug5: Áfangi 8
-          Farmer: Áfangi 9
-          Unplug6: Áfangi 10
-          Artist3: Áfangi 11
-          Unplug7: Áfangi 12
-          Farmer2: Áfangi 13
-          Unplug8: Áfangi 14
-          Artist4: Áfangi 15
-          Unplug9: Áfangi 16
-          Farmer3: Áfangi 17
-          Unplug10: Áfangi 18
-          Artist5: Áfangi 19
-          Unplug11: Áfangi 20
+          Unplug1: "Áfangi 1"
+          Maze: "Áfangi 2"
+          Unplug2: "Áfangi 3"
+          Unplug3: "Áfangi 4"
+          Artist: "Áfangi 5"
+          Unplug4: "Áfangi 6"
+          Artist2: "Áfangi 7"
+          Unplug5: "Áfangi 8"
+          Farmer: "Áfangi 9"
+          Unplug6: "Áfangi 10"
+          Artist3: "Áfangi 11"
+          Unplug7: "Áfangi 12"
+          Farmer2: "Áfangi 13"
+          Unplug8: "Áfangi 14"
+          Artist4: "Áfangi 15"
+          Unplug9: "Áfangi 16"
+          Farmer3: "Áfangi 17"
+          Unplug10: "Áfangi 18"
+          Artist5: "Áfangi 19"
+          Unplug11: "Áfangi 20"
         Hour of Code:
           desc: Klukkustund kóðunar
           Maze: Stig 1
@@ -34,7 +34,7 @@
           desc: Skopp (beta)
           Bounce: Stig 1
         Builder Levels:
-          desc: Þrautir gerðar af notendum (beta)
+          desc: "Þrautir gerðar af notendum (beta)"
           Custom: Stig 1
         Flappy Levels:
           desc: Fuglinn Flappy
@@ -44,19 +44,19 @@
           Jigsaw: Stig 1
         Step Levels:
           desc: Völundarhús (beta)
-          MazeStep: Þrep í áfanga
+          MazeStep: "Þrep í áfanga"
         edit-code:
           desc: Breyta kóða (beta)
           MazeEC: Stig 1
-          Applab: Áfangi 2
-          ArtistEC: Áfangi 3
-          StudioEC: Áfangi 4
+          Applab: "Áfangi 2"
+          ArtistEC: "Áfangi 3"
+          StudioEC: "Áfangi 4"
         events:
           desc: Skopp (beta)
           Bounce: Stig 1
           Studio: Stig 2
         builder:
-          desc: Þrautir gerðar af notendum (beta)
+          desc: "Þrautir gerðar af notendum (beta)"
           Custom: Stig 1
         flappy:
           desc: Fuglinn Flappy
@@ -66,7 +66,7 @@
           Jigsaw: Stig 1
         step:
           desc: Völundarhús (beta)
-          MazeStep: Þrep í áfanga
+          MazeStep: "Þrep í áfanga"
         wordsearch:
           desc: Stafsetning (beta)
           WordSearch: Stig 1
@@ -105,6 +105,8 @@
         StudioEC: Leikjasmiðja
         Applab: Appsmiðja
         NetSim: Internet hermir
+        Custom: Listamaður
+        CustomStudio: Leikjasmiðja
     trophy:
       name:
         Bronze: Brons
@@ -126,14 +128,14 @@
         maze_2_2: 'Getur þú hjálpað mér að ná óþæga svíninu? Raðaðu nokkrum "fara
           áfram" kubbum saman og ýttu svo á "Keyra forrit" til að hjálpa mér að komast
           þangað. '
-        maze_2_1: Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!
+        maze_2_1: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að finna það!"
         maze_2_2_5: Fylgdu slóðinni og leiddu mig að svínka. Forðastu TNT sprengjuna
           annars verður fjaðrafok!
         maze_2_3: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT sprengjunum)
         maze_2_4: Slappaðu af og hjálpaðu mér að finna vonda svínið. Annars gæti ég
           reiðst!
-        maze_2_5: Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu fundið
-          út úr því?
+        maze_2_5: "Ég get komist að svíninu með því að nota bara 2 kubba. Geturðu
+          fundið út úr því?"
         maze_2_6: Reyndu að koma mér til grænu boðflennunnar með aðeins 3 kubbum.
         maze_2_7: Hjálpaðu mér að hrekja vonda grísinn í burtu með sem fæstum kubbum.
           Prófaðu að nota fleiri en einn "endurtaka" kubb.
@@ -175,8 +177,8 @@
         turtle_1_4: 'Teiknaðu þríhyrning með hliðar í mismunandi litum með því að
           nota kubbinn "einhver litur" sem velur lit af handahófi í hvert sinn. Vísbending:
           Þú þarft að finna út hve mikið á að snúa með því að smella á töluna í snúningskubbnum.'
-        turtle_1_5: Æfðu þetta nú með því að teikna þríhyrning og ferning til að búa
-          til mynd af umslagi.
+        turtle_1_5: "Æfðu þetta nú með því að teikna þríhyrning og ferning til að
+          búa til mynd af umslagi."
         turtle_1_6: 'Getur þú fundið út hvernig á að teikna þennan þríhyrning og ferning?
           Vísbending: Teiknaðu þríhyrninginn fyrst og finndu svo út hve mikið á að
           snúa áður en ferningurinn er teiknaður.'
@@ -231,9 +233,9 @@
           mold. Vísbending: Þú getur sett "endurtaka" blokk innan í "meðan" blokk.'
         maze_karel_1_6: Fjarlægðu alla moldarhaugana með sem fæstum kubbum. Nýju valkostirnir
           í fellilistanum á "meðan" kubbnum segja mér hvort ég standi á haug eða holu.
-        maze_karel_1_7: Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur þarf
-          til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til yfirborðið
-          er slétt?
+        maze_karel_1_7: "Ég fann mjög djúpa holu! Ég veit ekki hve margar skóflur
+          þarf til að fylla hana. Getur þú skrifað forrit sem fyllir holuna þar til
+          yfirborðið er slétt?"
         maze_karel_1_8: Hjálpaðu mér að fylla holuna við endann á túninu og með sem
           fæstum kubbum.
         maze_karel_1_9: 'Láttu mig fjarlægja alla þessa moldarhauga. Reyndu að nota
@@ -258,9 +260,9 @@
           Þú vilt kannske nota sleðann til að láta mig fara hraðar.'
         turtle_2_5: Teiknaðu ferninga með 50, 60, 70, 80 og 90 pixla hliðar. Þú þarft
           að nota "teikna ferning" fallið fimm sinnum.
-        turtle_2_6: 'Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
+        turtle_2_6: "Þetta forrit notar teljara til að teikna sömu ferninga og síðast.
           Hver ferningur á að hafa hlið sem er jafnstór og teljarinn svo þú verður
-          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur.'
+          að nota teljarakubbinn. Vísbending: Hann er undir flokknum Breytur."
         turtle_2_7: Hér er forrit sem teiknar spíral, en kubbarnir eru óvirkir svo
           þeir keyra ekki. Búðu til nýtt forrit með því að nota kubbana "telja með"
           (undir flokknum Lykkjur) og "teljari" (undir Breytur) til að teikna sama
@@ -288,8 +290,9 @@
           notaðu það til að hjálpa mér að slétta alla haugana.
         maze_karel_2_6: Notaðu tvö ný föll, "fylla 8" og "fjarlægja 8", til að hjálpa
           mér að slétta hauginn og fylla upp í holuna.
-        maze_karel_2_7: Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar mér
-          að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja fallið.
+        maze_karel_2_7: "Það er kýr á túninu mínu! Skrifaðu nýtt fall sem hjálpar
+          mér að forðast kúna en fjarlægja hauginn. Settu alla kubbana inn í nýja
+          fallið."
         maze_karel_2_8: Notaðu þetta nýja fall "forðast kúna og fjarlægja 1" til að
           hjálpa mér að fjarlægja alla haugana.
         maze_karel_2_9: Jæja, hér er fall sem fjarlægir 4 mismunandi moldarhauga lóðrétt.
@@ -319,8 +322,8 @@
           að ég teikna nýtt hús. Notaðu þetta breytta fall til að teikna þrjú hús.
         turtle_3_9: Getur þú búið til "teikna hús" fallið aftur án hjálpar? Reyndu
           það og teiknaðu svo röð af húsum.
-        turtle_3_10: Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
-          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn.
+        turtle_3_10: "Þú hefur lært heilmikið! Notaðu kunnáttuna til að teikna hvað
+          sem þú vilt. Reyndu að teikna stjörnu, spíral eða flott snjókorn."
         maze_karel_debug_seq_1: Velkomin í villuleit! Kóðinn minn virkar ekki. Getur
           þú komið auga á ástæðuna og lagað kóðann svo ég geti sléttað akurinn og
           undirbúið hann fyrir sáningu?
@@ -356,8 +359,8 @@
         turtle_5_6: Prófaðu að keyra þetta forrit. Gerðu breytingar til að sjá hvaða
           áhrif þær hafa. Getur þú fundið út hvernig það virkar? (Eða eytt því og
           sett eitthvað allt annað í staðinn)
-        maze_3_1: Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
-          svo ég geti fengið eggin mín til baka.
+        maze_3_1: "Ég verð að ná þessu svíni! Skrifaðu kóða sem kallar tvisvar á move();
+          svo ég geti fengið eggin mín til baka."
         maze_3_2: Skrifaðu forrit fyrir mig svo ég nái alla leið til svínsins.
         maze_3_3: Hvernig kemst ég til svínsins? Gættu þess að ég rekist ekki á TNT
           sprengiefnið!
@@ -369,8 +372,8 @@
           Færðu spaðann til að ná báðum endamörkum.
         bounce_3: Reyndu nú eitthvað svipað með kubbnum "þegar upp ör". Færðu spaðann
           upp að endamarkinu.
-        bounce_4: Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann að
-          öllum fjórum endamörkum til að ljúka þessari þraut.
+        bounce_4: "Í þetta sinn þarft þú að bæta við fjórum kubbum. Færðu spaðann
+          að öllum fjórum endamörkum til að ljúka þessari þraut."
         bounce_5: Við ætlum að senda bolta svífandi niður í átt að spaðanum. Tengdu
           kubb við kubbinn "þegar bolti hittir spaða" til að tryggja að boltinn nái
           að endamarkinu.
@@ -407,9 +410,9 @@
           blaka vængjunum meira eða minna.
         flappy_7: Prófaðu svo að breyta leiknum með því að tengja annan kubb við "þegar
           keyrt" kubbinn.
-        flappy_8: Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
+        flappy_8: "Þú getur stillt umhverfið hvenær sem er, ekki bara í byrjun. Prófaðu
           að still umhverfið á HANDAHÓF þegar aðrir atburðir gerast, t.d. þegar farið
-          er framhjá hindrun.
+          er framhjá hindrun."
         flappy_9: Prófaðu að útfæra þetta þannig að í stað þess að enda leikinn við
           árekstur þá sé skorið núllstillt.
         flappy_11: Búðu til þinn eiginn Flappy leik. Þú getur breytt öllu umhverfi
@@ -522,6 +525,79 @@
           til geimverunnar svo hann geti varað alla við innrásinni
         studio_playlab_10: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er
           tilbúinn svo vinir þínir geti prófað hann á sínum símum.
+        studio_iceage_hello1: Sid vill fá alla með í nýtt ævintýri. Getur þú hjálpað
+          honum að segja "hello" með því að draga "segja" kubbinn út á vinnusvæðið
+          og skrifa orðið "hello" í hann?
+        studio_iceage_hello2: Sid (leikari 1) fann Manny (leikara 2) og vill bjóða
+          honum með í ævintýrið. Hjálpaðu þeim að heilsast með því að nota "leikari
+          segir" kubbinn tvisvar.
+        studio_iceage_move_to_flag: Scrat leitar að akarninu sínu! Komdu honum síðustu
+          200 dílana með "færa" kubbnum.
+        studio_iceage_move_to_actor: Diego (leikari 1) er að leita að Manny (leikara
+          2). Hjálpaðu Diego að komast 200 díla niður til Manny með "færa leikara"
+          kubbnum. Tengdu svo kubb við "þegar leikari snertir" atvikið svo að hljóð
+          sé spilað þegar þeir hittast.
+        studio_iceage_repeat: Kubburinn "endurtaka endalaust" getur keyrt kóða stanslaust.
+          Getur þú tengt kubba við hann til að hjálpa Granny að hreyfa sig endurtekið
+          til vinstri og hægri?
+        studio_iceage_click_hello: Getur þú hjálpað Sid að kalla á vini þegar smellt
+          er á hann? Ekki gleyma að smella á hann eftir að þú ýtir á "Keyra".
+        studio_iceage_move_events: Scrat er enn að leita að akörnum! Hjálpaðu honum
+          að skondrast um með því að tengja "færa" kubbinn við hvert atvik svo að
+          hægt sé að stjórna stefnunni með örvarlyklunum. Smelltu svo á "Keyra" og
+          reyndu að safna öllum akörnunum.
+        studio_iceage_sound_and_points: Við höfum lagt til mestallan kóðann sem lætur
+          Granny færast til vinstri og hægri, og líka kóðann sem færir Sid um skjáinn.
+          Getur þú lokið við kóðann og bætt kubbum við "þegar leikari snertir" atvikið
+          svo að þú bæði spilir hljóð og skorir stig þegar Sid og Granny rekast saman?
+          Smelltu á "Keyra" til að spila leikinn.
+        studio_iceage_warn_ice_age: Allir þurfa að hreyfa sig hraðar því ísöld er
+          að skella á! Breyttu bakgrunninum í "ísjaka" og stilltu Sid á mesta hraða.
+          Ýttu svo á "Keyra" og færðu hann til Diego til að vara hann við.
+        studio_iceage_throw_hearts: Sid vill láta ömmu sína, Granny, vita að honum
+          þyki vænt um hana. Notaðu "leikari varpar" skipunina til láta Sid (leikara
+          1) varpa hjörtum að Granny (leikara 2)! Stilltu skap Granny á gleði þegar
+          hún fær hjörtu í sig.
+        studio_iceage_free_play: Búðu nú til þinn eigin leik eða sögu! Smelltu svo
+          á "Ljúka" og leyfðu vinum þínum að prófa leikinn í síma, spjaldtölvu eða
+          venjulegri tölvu!
+        studio_gumball_hello1: Anais vill kynnast nýjum vinum. Getur þú hjálpað henni
+          að segja "hello" með því að draga "segja" kubbinn inn á vinnusvæðið og skrifa
+          orðið "hello" í hann?
+        studio_gumball_hello2: Darwin (leikari 1) og bróðir hans Gumball (leikari
+          2) eru á leið í skólann. Hjálpaðu þeim að heilsast með því að nota "leikari
+          segir" kubbinn tvisvar.
+        studio_gumball_move_to_flag: Banana Joe er alveg að sigra í hlaupakeppni!
+          Hjálpaðu honum að komast síðustu 200 dílana með "færa" kubbnum.
+        studio_gumball_move_to_actor: Gumball (leikari 1) og Darwin (leikari 2) eru
+          seinir á íþróttamótið! Hjálpaðu Gumball að komast 200 díla niður til Darwin
+          með "færa leikara" kubbnum. Tengdu svo kubb við "þegar leikari snertir"
+          atvikið svo það spili hljóð þegar þeir hittast.
+        studio_gumball_repeat: Kubburinn "endurtaka endalaust" getur keyrt kóða stanslaust.
+          Getur þú tengt kubba við hann og hjálpað Gumball að hita upp fyrir hlaup
+          með því að hreyfa sig í sífellu til vinstri og hægri?
+        studio_gumball_click_hello: Getur þú hjálpað Anton að ræsa keppendur með því
+          að segja "Ready, set, go!"? Gleymdu svo ekki að smella á Anton eftir að
+          þú smellir á "Keyra"!
+        studio_gumball_move_events: Darwin er í keppni um að safna flöggum! Hjálpaðu
+          honum að hlaupa um með því að tengja "færa" kubb við hvert atvik. Smelltu
+          svo á "Keyra" og reyndu að safna öllum flöggunum.
+        studio_gumball_sound_and_points: Við höfum lagt til mestallan kóðann sem lætur
+          Anton (leikara 2) færast til vinstri og hægri, og líka kóðann sem færir
+          Banana Joe (leikara 1) um skjáinn. Getur þú lokið við kóðann og bætt kubbum
+          við "þegar leikari snertir" atvikið svo að þú bæði spilir hljóð og skorir
+          stig þegar Banana Joe og Anton rekast saman? Smelltu á "Keyra" til að spila
+          leikinn.
+        studio_gumball_warn_food_fight: Darwin er nýsloppin úr matarslag! Breyttu
+          bakgrunninum í "leikverur" og stilltu hraða Darwins á "hratt". Smelltu svo
+          á "Keyra" og færðu hann til Penny til að vara hana við.
+        studio_gumball_join_food_fight: Taktu þátt í matarslagnum! Notaðu "leikari
+          kastar hlut til hægri" skipunina til að láta Banana Joe (leikara 1) kasta
+          mat í Anton (leikara 2)! Láttu Anton verða reiðan þegar hann verður fyrir
+          kasti.
+        studio_gumball_free_play: Búðu til þinn eigin leik eða sögu. Smelltu svo á
+          "Ljúka" og leyfðu vinum þínum að prófa leikinn í síma, spjaldtölvu eða venjulegri
+          tölvu!
         studio_full_sandbox: Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann
           er tilbúinn svo vinir þínir geti prófað hann á sínum símum.
         studio_k1_1: Getur þú látið hundinn segja "Halló heimur"?
@@ -542,8 +618,8 @@
         maze_wordsearch_k_13: Færðu mig í eina átt svo aðra til að stafa orðið DEBUG
         maze_wordsearch_k_15: Færðu mig í eina átt svo aðra til að stafa orðið ABOVE
         maze_wordsearch_k_16: Færðu mig í eina átt svo aðra til að stafa orðið BELOW
-        maze_wordsearch_k_20: Þetta er próf! Færðu mig í eina átt svo aðra til að
-          stafa orðið STORY
+        maze_wordsearch_k_20: "Þetta er próf! Færðu mig í eina átt svo aðra til að
+          stafa orðið STORY"
         applab_ec_simple: Búðu til appið þitt með því að nota kubbana í verkfærakassanum.
         turtle_ec_1_2: 'Teiknaðu nú ferning. ATH.: notaðu uppáhaldslitinn þinn með
           því að velja hann í nýja "pennalitur" kubbnum.'
@@ -619,7 +695,7 @@
         C3_bee_conditionals: Býfluga - skilyrði
         C3_maze_conditionals: Völundarhús - skilyrði
         C3_artist_nested_loops: Innri lykkjur
-        C3_farmer_while: Á meðan lykkjur
+        C3_farmer_while: "Á meðan lykkjur"
         C3_bee_nested_loops: Innri lykkjur
         C3_bee_debugging: Býfluga - villuleit
         C3_bounce: Skopp
@@ -636,6 +712,8 @@
         C4_variables_artist: Breytur - Listamaður
         C4_variables_playlab: Breytur - Leikjasmiðja
         C4_for_loops: Frá lykkjur
+        C4_for_loops_bee: Frá lykkjur
+        C4_for_loops_no_bee: Frá lykkjur
         C4_math_artist: Forritun listamanns með stærðfræði
         C4_function_edit: Breyting falla
         C4_function_create: Gerð falla
@@ -653,10 +731,26 @@
         playlab_intro: Kynning á Leikjasmiðju
         playlab_events: Leikjasmiðja, atvik
         playlab_repeat_forever: Leikjasmiðja, endurtaka endalaust
-        tutorial_puzzle_challenge: Þrautaáskorun
+        tutorial_puzzle_challenge: "Þrautaáskorun"
         infinity_playlab_intro: Leikjasmiðja - kynning
         infinity_playlab_events: Leikjasmiðja - Atvik
         infinity_playlab_repeat_forever: Leikjasmiðja - Endurtaka endalaust
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
+        csp_applab_functions: Kynning á föllum
+        csp_applab_functions_parameters: Föll með stikum
+        csp_applab_loops: Lykkjur
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Svolítið bitastætt um díla
         csp_pixelation_color_1: Litadílamynstursgræja - 1. hluti
         csp_pixelation_color_2: Litadílamynstursgræja - 2. hluti
@@ -665,6 +759,7 @@
         csp_U1L14_tipstricks: Ráð & refabrögð kennara fyrir 1. kafla, kennslustund
           14
         csp_textcompression: Textaþjöppunargræja
+        csp_textcompression_new: Textaþjöppunargræja
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -684,7 +779,28 @@
         alg_14_biggame_booleans: TF í Algebru - Stórleikur, Boole gildi
         alg_15_biggame_update_player: TF í Algebru - Stórleikur, uppfæra leikmann
         alg_16_biggame_collision_detection: TF í Algebru - Stórleikur, skynjun árekstra
-        alg_17_sambat_compound_booleans: TF í Algebru - Stórleikur, samsett Bool gildi
+        alg_17_sambat_compound_booleans: TF í Algebru - Samsett Boole gildi
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
+        starwars_typing: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
+        starwars_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
+        starwars_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
+        starwars_blocks_intro: 'Star Wars: Gerð Vetrarbrautar með Kóða - Kynning'
+        starwars_blocks_events: 'Star Wars: Gerð Vetrarbrautar með Kóða - Atvik'
+        starwars_blocks_congrats: 'Star Wars: Gerð Vetrarbrautar með Kóða - Hamingjuóskir'
+        mc_intro: Minecraft - Kynning
+        mc_repeat: Minecraft - Endurtekning
+        mc_if_statements: Minecraft - Ef setningar
+        mc_congrats_share: Minecraft - Hamingjuóskir
+        mc_congrats_no_share: Minecraft - Hamingjuóskir
+        gumball_intro: Klukkustund kóðunar með Gumball - Kynning
+        gumball_events: Klukkustund kóðunar með Gumball - Atvik
+        gumball_repeat: Klukkustund kóðunar með Gumball - Endurtekningar
+        iceage_intro: Klukkustund kóðunar með Ísöld - Kynning
+        iceage_events: Klukkustund kóðunar með Ísöld - Atvik
+        iceage_repeat: Klukkustund kóðunar með Ísöld - Endurtekningar
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn
@@ -696,8 +812,8 @@
           búa til
         instructions_repeat_explanation: Leiðbeiningar fyrir hverja þraut eru endurteknar
           hér
-        category_explanation: Þú hefur alla sömu kubbana en nú er búið að raða þeim
-          í flokka
+        category_explanation: "Þú hefur alla sömu kubbana en nú er búið að raða þeim
+          í flokka"
         set_sprite_image: Tengdu "hafa leikmann" kubb við "þegar sagan byrjar" kubb
           til að virkja leikmann fyrir þessa sögu
         studio_say_text: Skrifaðu það sem leikmaðurinn á að segja innan þessara gæsalappa
@@ -711,8 +827,8 @@
           þá gráðu sem á að snúa
         repeat_blocks: Notaðu "endurtaka" kubbinn og settu hann utan um kubbana á
           vinnusvæðinu
-        repeat_blocks_1: (1) Notaðu þennan kubb og settu hann utan um gráu kubbana
-          á vinnusvæðinu
+        repeat_blocks_1: "(1) Notaðu þennan kubb og settu hann utan um gráu kubbana
+          á vinnusvæðinu"
         repeat_blocks_2: (2) Færðu "endurtaka" kubbinn hingað og settu gráu kubbana
           innan í
         snowflake_dropdown: Notaðu þennan fellilista til að búa til mismunandi snjókorn!
@@ -731,8 +847,8 @@
         edit_function: Smelltu hér til að breyta fallinu þínu.
         create_function: Smelltu hér til að opna hliðargluggann "Föll" og smelltu
           svo á "Búa til fall" hnappinn.
-        house_hint: Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga
-          það í næstu þraut.
+        house_hint: "Það er í lagi þó myndin sé enn ekkert lík húsi. Við munum laga
+          það í næstu þraut."
         edit_draw_square: Notaðu þennan hnapp til að breyta fallinu og bæta lykkjunni
           við.
         edit_get_nectar: Notaðu þennan hnapp til að breyta fallinu og breyta í hvaða
@@ -788,3 +904,13 @@
         Infinity_move_directions_callout_arrow: Notaðu þessar örvar til að stýra
         Infinity_move_collide_callout: Spila hljóð þegar þetta atvik á sér stað.
         Infinity_repeat_callout: Setja "færa" kubba hér innan í
+        craft_run_button_callout: Smelltu á "Keyra" til að prófa forritið þitt
+        craft_drag_block_callout: Dragðu "moveForward();" kubb og festu hann neðan
+          undir hinn kubbinn
+        craft_callout_preplaced: Við höfum sett kubba hér til að koma þér af stað
+        craft_inside_repeat: Endurtaktu aðgerðir með því að setja kubba hér
+        craft_callout_preplaced_house: "Þessi kóði mun byrja að byggja húsið þitt.
+          Getur þú klárað það?"
+        craft_what_is_iron: Grafðu út þetta járn!
+        craft_callout_moveforward: "Þessi kóði mun athuga með hraun. Getur þú bætt
+          við skipun um að fara áfram?"

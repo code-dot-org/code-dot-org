@@ -1,0 +1,137 @@
+.ctabutton {
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 5px 0px;
+}
+
+.ctabuttonatag {
+  text-decoration: none;
+}
+
+.ctabuttongroup {
+  text-align: center;
+}
+
+.ctatext {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0px 4px;
+}
+
+.category-header {
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.category-button {
+  background-color: #5b6770;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Gotham 4r', sans-serif;
+  margin: 5px 0px;
+  padding: 8px;
+}
+
+.purple-background {
+  background-color: #7665a0;
+}
+
+.cyan-background {
+  background-color: #0094ca;
+}
+
+.green-background {
+  background-color: #b9bf15;
+}
+
+.teal-background {
+  background-color: #00adbc;
+}
+
+.category-link:hover {
+  text-decoration: none;
+}
+
+#textbacking {
+  margin-top: 80px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1.0);
+}
+
+.watch-video {
+  color:white;
+  text-shadow: 0px 0px 4px rgba(31, 31, 31, 1);
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 20px
+}
+
+#leftbutton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#leftbox {
+  position: relative;
+  margin-top: 60px;
+  padding-bottom: 20px;
+  height: 300px;
+}
+
+#leftvideo {
+  width: 100%;
+}
+
+#volunteer-signup {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+#volunteer-signup a {
+  color: white;
+  font-family: 'Gotham 4r', sans-serif;
+  text-decoration: none;
+}
+
+.watch-video-small {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.students-served {
+  font-size: 16px;
+  line-height: 16px;
+  padding-bottom: 15px;
+}
+
+.prizes-header {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.giftcard {
+  width: 140px;
+}
+
+.microsoft {
+  width: 160px;
+}
+
+.multiple-event-warning {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.required-asterisk {
+  color: #008b9a;
+}

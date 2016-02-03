@@ -25,8 +25,10 @@ Default: https://github.com/bbatsov/ruby-style-guide
 
 Fallback: https://github.com/styleguide/ruby
 
+* Use [YARD](http://www.rubydoc.info/gems/yard/file/docs/GettingStarted.md) (jsdoc style @tag annotations) when documenting parameter types and return values.   http://www.rubydoc.info/gems/yard/file/docs/GettingStarted.md
+
 * <a name="ruby-hashes"></a>
-  Perfer Ruby 1.9 hash syntax.
+  Prefer Ruby 1.9 hash syntax.
   <sup>[[link](#ruby-hashes)]</sup>
   ```ruby
   # bad
@@ -46,7 +48,7 @@ Fallback: https://github.com/styleguide/ruby
   # good
   'Single quotes for normal strings'
   ```
-  
+
 * <a name="ruby-trailing-dot"></a>
   When breaking lines while method chaining, prefer trailing dot on first line
   to leading dot on second line.
@@ -151,7 +153,6 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   ```
 
 * <a name="js-avoid-inlinejs"></a>
-
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is
   hard to lint, test, and reuse, and tends to build in lots of global
   interdependencies between code and views.

@@ -1,0 +1,50 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-09-23T19:19:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "console.log": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Trigger both the keyboard and mouse event and examine the event objects displayed in the console. Why might an object be the best way to store this information? (Click to see full instructions)",
+    "start_blocks": "onEvent(\"screen1\", \"click\", function(event){\r\n  console.log(event);\r\n});\r\nonEvent(\"screen1\", \"keydown\", function(event){\r\n  console.log(event);\r\n});",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "markdown_instructions": "# We've Seen Objects Before\r\n\r\nWe're going to see how we can use objects to organize data in our own apps, but this actually isn't the first time we've used objects in our programs. **The object that we've used most frequently is the event parameter of our event handlers**. This single object contains many pieces of information about the event which can be accessed to determine how to respond to the event. For example `event.key` contains the key that was pressed for key events, and `event.offsetX` and `event.offsetY` contain the location of the mouse for mouse events.\r\n\r\nBefore we move on to creating objects of our own, let's take another look at this event parameter (or as we'll call it now event object) and recall how they were used.\r\n\r\n# Do This\r\n\r\n**Starter code** is provided which creates event handlers for both a \"click\" and \"keydown\" event and displays the contents of the event object they create.\r\n\r\n* **Run the program** and trigger both a keyboard event and a mouse event.\r\n* **Examine the objects displayed in the Debug Console** to recall the different pieces of information they contain.\r\n* **Reflect: ** Why wouldn't we want this information stored in many variables? Why wouldn't we want this information stored in an array?",
+    "slider_speed": "1.0",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "debugger_disabled": "false"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

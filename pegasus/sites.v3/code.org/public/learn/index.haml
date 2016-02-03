@@ -12,6 +12,12 @@ social:
   "og:video:type": ""
 ---
 
-%link{href: "/css/learn_tabs.css", rel: "stylesheet"}
+%link{type: "text/css", href: "/css/learn_tabs.css", rel: "stylesheet"}
+%link{type: "text/css", href: "/shared/css/course-blocks.css", rel: "stylesheet"}
+%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
+%script{type: "text/javascript", src: "/js/bootstrap.min.js"}
 
+= view 'mobilecheck.js'
+
+= view :learn_code_studio
 = view :learn_carousels, variation:'learn'

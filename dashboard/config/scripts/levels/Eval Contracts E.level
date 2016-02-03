@@ -23,7 +23,9 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Try using the _text_ function to write this \"Hello, world!\" in teal at size 40."
+    "markdown_instructions": "Try using the `text` function to write this \"Hello, world!\" in teal at size 40.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

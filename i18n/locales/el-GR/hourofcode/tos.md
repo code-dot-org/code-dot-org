@@ -4,6 +4,8 @@
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Όροι Παροχής Υπηρεσιών
 
 Τελευταία αναθεώρηση: 5 Δεκεμβρίου 2014

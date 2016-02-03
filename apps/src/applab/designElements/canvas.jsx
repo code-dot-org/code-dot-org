@@ -1,9 +1,10 @@
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var ZOrderRow = require('./ZOrderRow.jsx');
 var EventHeaderRow = require('./EventHeaderRow.jsx');
 var EventRow = require('./EventRow.jsx');
+
+var elementUtils = require('./elementUtils');
 
 var CanvasProperties = React.createClass({
   propTypes: {
@@ -19,7 +20,7 @@ var CanvasProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
         <PropertyRow
@@ -57,7 +58,7 @@ var CanvasEvents = React.createClass({
   },
 
   getClickEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked at x:" + event.offsetX + " y:" + event.offsetY);\n' +
@@ -80,7 +81,7 @@ var CanvasEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>

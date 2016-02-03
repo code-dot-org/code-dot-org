@@ -1,0 +1,16 @@
+# This yaml file describes the configuration for DCDO
+# Here's how a typical DCDO setting would be defined:
+#
+# <name>: <value>
+#
+# where name is a string and value can be anything
+# that is jsonable
+
+milestone_task_rate: 1000
+some_numbers: [1, 8, 222332]
+a_hash:
+  name: trevor
+  email: trevor@code.org
+
+
+

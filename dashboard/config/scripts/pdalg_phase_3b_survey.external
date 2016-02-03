@@ -1,0 +1,10 @@
+name 'PDAlg phase 3b survey'
+title "We want your feedback"
+css 'unplugged'
+markdown <<MARKDOWN
+## Congratulations
+
+Survey placeholder
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

@@ -3,14 +3,25 @@
 
 require_relative '../../config/environment'
 
-LevelSourceImage.find_in_batches do |batch|
+LevelSourceImage.where('image != "S3"').find_in_batches do |batch|
   already = 0
+  no_level_source = 0
   moved = 0
   errors = 0
+  invalid_image = 0
+  blank = 0
   start_time = Time.now
   batch.each do |level_source_image|
+    if level_source_image.image.blank?
+      blank += 1
+      next
+    end
     if level_source_image.image == 'S3'
       already += 1
+      next
+    end
+    if level_source_image.level_source.nil?
+      no_level_source += 1
       next
     end
     begin
@@ -19,10 +30,20 @@ LevelSourceImage.find_in_batches do |batch|
       else
         errors += 1
       end
-    rescue Exception
+    rescue Magick::ImageMagickError
+      invalid_image += 1
+    rescue Exception => e
+      p e.message
+      p e.backtrace
       errors += 1
     end
   end
 
-  puts "moved #{moved} errors #{errors} already #{already}\t#{Time.now - start_time}s"  
+  puts "moved #{moved}\n"
+  puts "no level source #{no_level_source}\n"
+  puts "invalid image #{invalid_image}\n"
+  puts "blank image #{blank}\n"
+  puts "other errors #{errors}\n"
+  puts "already in S3 #{already}\n"
+  puts "#{Time.now - start_time}s"  
 end

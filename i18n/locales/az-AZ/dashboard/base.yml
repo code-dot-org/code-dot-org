@@ -1,18 +1,18 @@
 az:
   errors:
     messages:
-      not_saved: 'Please correct the following errors:'
+      not_saved: 'Aşağıdaki sehfleri düzeldin:'
       too_young: This content has age restrictions in place and is not available for younger students
   activerecord:
     errors:
       messages:
-        blank: is required
+        blank: zəruridir
     attributes:
       user:
         name: Göstərilən adınız
         email: E-poçt
         username: istifadəçi adı
-        password: parol
+        password: Parol
         password_confirmation: Parolun təsdiqi
         current_password: Cari parol
         locale: Dil
@@ -28,6 +28,8 @@ az:
     code:
       label: 'Müəllim əlavə edin:'
       placeholder: Section Code (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: Müəllim əlavə edin
   add_hint_form:
     placeholder: Please enter your hint here
@@ -38,6 +40,7 @@ az:
   puzzle: Tapmaca
   trophies: kuboklar
   courses: marşrutlar
+  unplugged_activity: Sərbəst fəaliyyət
   of: /
   more: DAHA ÇOX
   less: DAHA AZ
@@ -66,12 +69,12 @@ az:
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
   signup_form:
     student_count: '%{count} students have already signed up.'
-    teacher_count: '%{count} teachers have already signed up.'
+    teacher_count: '%{count} müəllim artıq qeydiyyatdan keçib.'
     overview_student: 'Sign up for an account to track your progress. Your email is primarily used to allow you to log in and for password recovery. For more information, see our <a href="http://code.org/privacy">Privacy Policy</a>.'
     overview_teacher: "Teach computer science in your classroom by signing up for an account.<p/> You'll be able to add your students and track their progress."
     no_signup_message: 'Siz <a target="_blank" href="http://learn.code.org">müxtəlif mərhələ və tapmacalar</a>ı nəzərdən keçirə bilərsiniz, lakin nəticələrinizi yadda saxlamaq üçün qeydiyyatdan keçməyiniz lazım olacaq.'
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
-    teacher_pitch: Teacher sign up for Code.org
+    teacher_pitch: '"Code.org" üçün müəllim qeydiyyatı'
     teacher_title: Müəllim kimi qeydiyyatdan keçin
     student_pitch: Student sign up for Code.org
     student_title: Student sign up
@@ -90,17 +93,19 @@ az:
     valid_password: Düzgün parol!
     invalid_password: Parol ən azı 6 simvol olmalıdır
     mismatch_password: Daxil etdiyiniz iki parol üst-üstə düşmür
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
-    teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
+    student_terms: |-
+      Mən "Code.org" <a href='http://code.org/tos'>xidmət şərtləri</a>nə tabe olmağımı qəbul edirəm. Əgər 13 yaşdan kiçiyəmsə, bu formanı doldurmaqla təsdiq edirəm ki, valideyn və ya qanuni qəyyumumumdan "Code.org" xidmətlərini istifadə etmək üçün icazə almışam.<br/>13 yaşdan kiçik istifadəçilər üçün e-poçt ünvanları bizim onlarla əlaqə saxlaya biləcəyimiz formada saxlanmır.
+    teacher_terms: |-
+      Mən "Code.org" <a href='http://code.org/tos'>xidmət şərtləri</a>nə tabe olmağımı qəbul edirəm.
     additional_information: We need some additional information to continue signing you up.
   signin_form:
-    title: Have an account already? Sign in
+    title: Artıq hesabınız var? Daxil olun
     login: E-poçt və ya istifadəçi adı
     password: Parol
     remember: Məni yadda saxla
     submit: Daxil olun
   signin:
-    try_heading: Want to try coding without signing up?
+    try_heading: Qeydiyyatdan keçmədən özünüzü proqramlaşdırmada sınamaq istəyirsiniz?
     try_hoc: Try one Hour of Code first
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
@@ -147,7 +152,7 @@ az:
       student_disassociated:
         subject: 'Code.org notification: %{student_name} is no longer associated as your student.'
       teacher_disassociated:
-        subject: 'Code.org notification: %{teacher_name} is no longer associated as your teacher.'
+        subject: '"Code.org" bildirişi: %{teacher_name} daha müəlliminiz deyil.'
   reports:
     error:
       access_denied: Bu şəxsin statistikasına icazəniz yoxdur
@@ -221,6 +226,7 @@ az:
         playlab: Make an App
         artist: Draw Something
         calculate: Calculate Something
+        applab: Make an App
     user:
       classroom: Müəllimin ev səhifəsi
       district_dashboard: District Dashboard
@@ -244,69 +250,28 @@ az:
       prize_us_only: (Yalnız ABŞ-dan olan şagirdlər)
       prizes_link: daha ətraflı
   teacher:
+    answer: Answer
+    for_teachers_only: For Teachers Only
     title:
       one: 'Müəlliminiz:'
       other: 'Müəllimləriniz:'
-    remove: (remove teacher)
+    remove: (müəllimi sil)
     confirm:
       remove: Are you sure you want to remove this teacher?
-    tools: Müəllim üçün alətlər
-    followers:
-      section: 'Bölmə:'
-      stages: 'Göstəriləcək mərhələ(lər):'
-      show_past: 'Keçmiş şagird fəaliyyətini (%{bullet_html}) göstər:'
-      levels_key: Levels key
-      perfect: Tamamlandı, mükəmməldir
-      completed: Tamamlandı, lakin lazım olandan çox bloklar istifadə olunaraq
-      tried: Sınaqdan keçirilib, lakin tamamlanmayıb
-      not_tried: Not tried yet
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
-      trophies: kuboklar
     students:
-      name: Ad
-      username: istifadəçi adı
-      password: parol
-      manage: Şagirdlərə nəzarət edin
       dashboard: Go to Teacher Dashboard
-      add: Şagirdləri əlavə edin
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
-      for: For
-      enter: 'enter:'
-    sections:
-      add: Add section
-      manage: Manage sections
-      section: Section
-      students: Şagirdlər
-      section_code: Section Code
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: Grade
-      course: Course
-      rename: adını dəyiş
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Gedişat paneli
-    activity: Ən son sinif işləri
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Answer Viewer
       student: şagird
       viewing_solution: Viewing Solution
       try_it_yourself: Try it yourself
-      section: Section
+      section: Bölmə
+      example: Example Solution
+      example_with_number: 'Example Solution %{solution_number}'
+      submitted_on: 'Submitted on:'
+      unsubmit: Unsubmit
   user:
     email_confirm_needed: 'E-poçt ünvanı təsdiqlənməyib:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -321,15 +286,11 @@ az:
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
-  user_stats:
-    recent_activity: Son fəaliyyət
-    show_more: Daha çox göstər
-    classroom_activity: Unplugged Activity
   home:
     title: Mənim nəticələrim
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
-    lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
+    description: 'Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların məskənidir'
+    lines_of_code: 'ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB'
+    lines_of_code_linebreak: '%{students_count} MİLYON ŞAGİRD<br/>%{lines_count} SƏTİR KOD YAZIB'
     all_courses: Kurs 1, 2 və 3-ün icmalı
     lesson_plans: Dərs planları
     signin_message: 'Artıq qeydiyyatdan keçmisiniz? %{link}'
@@ -350,7 +311,7 @@ az:
     local_school: yerli məktəb
     online: onlayn
     see_details: Təfərrüatına baxın
-    view_course: View Course
+    view_course: Kursu göstər
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: Elə indi sınaqdan keçirin
@@ -366,23 +327,24 @@ az:
     your_gallery: Qalereya
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
-    print_certificate: Print Certificate
+    print_certificate: Sertifikatı çap edin
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: Kişi
     female: Qadın
     none: Cavab verməməyə üstünlük verirəm
   user_type:
     student: şagird
-    teacher: Teacher
+    teacher: Müəllim
   footer:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -391,10 +353,15 @@ az:
     translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
     support: Dəstək
     support_url: http://support.code.org
-    tos_short: Terms
-    tos: Şərtlər
+    tos_short: Şərtlər
+    tos: Xidmət şərtləri
     privacy: Məxfilik siyasəti
     secure: Təhlükəsiz versiya
+    report_abuse: Report Abuse
+    built_on_code_studio: Built on Code Studio
+    make_my_own_app: Make my own app
+    how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -422,10 +389,11 @@ az:
   next_stage: Qurtardı! Növbəti mərhələyə keçin
   download_pdf: Dərs planını aç
   lesson_plan: Lesson Plan
-  view_lesson_plan: View Lesson Plan
+  view_lesson_plan: Dərs palnına baxın
   pdf_download: PDF faylını endir
   download_coming_soon: Downloadable activity coming soon.
   video_coming_soon: Video Coming Soon!
+  not_started: The student has not attempted this level.
   share_code:
     title: "Click 'Run' to see my program in action"
     bounce_og_title: Check out my Bounce Game
@@ -450,15 +418,15 @@ az:
       unused: Unused Levels
   upsell:
     hoc:
-      title: Kod Saatı
+      title: Classic Maze
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.
     flappy:
       title: Qanadlı Kod
       body: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!
     20-hour:
-      title: Accelerated Course
+      title: Sürətləndirilmiş kurs
       body: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
-      body_short: Learn basic computer science in an accelerated version of courses 2-4.
+      body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası ilə öyrənin.
     hoc2014:
       try_new_tutorial: Try our new Hour of Code tutorial in beta
       try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
@@ -467,9 +435,14 @@ az:
       body: İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın
     frozen:
       title: Buzlu ürək
+    starwars:
+      title: Star Wars
     infinity:
       title: Infinity Play Lab
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
+    minecraft:
+      title: Minecraft
+      body: Explore a Minecraft world through code.
   gallery:
     students_drew_these_with_code: Students drew these with code!
     students_made_these_with_code: Şagirdlər bunları kod yazmaqla edib!
@@ -485,7 +458,7 @@ az:
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
-    feedback: Give Feedback
+    feedback: Rəy verin
     report_bug: Report Bug
     support: Kömək istə
     support_url: //support.code.org
@@ -571,15 +544,15 @@ az:
     completed_courses: Tamamlanmış kurslar
     all_courses: Bütün kurslar
   project:
-    projects: Projects
+    projects: Layihələr
     create: Create Project
-    create_a_project: 'Create a new project:'
-    new: Create New
+    create_a_project: 'Yeni bir layihə düzəlt:'
+    new: Yenisini düzəlt
     rename: Rename
     save: Save
     delete: Delete
     exit: Return to Course
-    my_projects: My Projects
+    my_projects: Mənim layihələrim
     share: Bölüşün
     share_title: Share your project
     share_copy_link: 'Copy the link:'
@@ -593,11 +566,32 @@ az:
     really_delete: Delete?
     delete_yes: Bəli
     delete_no: Xeyr
-    saved: Saved
+    saved: Qalereyada yadda saxlandı!
     not_saved: Not saved
     cancel: İmtina et
     delete_confirm_title: Are you sure you want to delete this project?
     delete_confirm_text: Deleting your project will permanently remove it from your My Projects list. Anyone you have shared the link to will no longer be able to view your project.
-    view_all: View My Projects
+    view_all: Layihələrimi göstər
     remix: Remix
-    click_to_remix: "Click 'Remix' to spin-off your own version!"
+    click_to_remix: 'Click "Remix" to spin-off your own version!'
+    edit_project: Edit Project
+    abuse:
+      tos: "This project has been reported for violating Code.org's <a href='http://code.org/tos'>Terms of Service</a> and cannot be shared with others."
+      contact_us: "If you believe this to be an error, please <a href='https://code.org/contact'>contact us.</a>"
+      go_to_code_studio: Kod Studiyasına keçin
+      report_abuse_form:
+        intro: If you have encountered offensive content, threats, cyberbullying, harassment, or an instance of copyright infringement for content you own while using apps built on Code Studio, please fill out the form below. We will take your report very seriously, investigate accordingly, and take appropriate action.
+        validation:
+          email: Please provide an email address
+          age: Please specify an age
+          abuse_type: Please answer how this content violates the Terms of Service
+          abuse_detail: Please provide details regarding the content you are reporting
+        abusive_url: URL of the content being reported
+        abuse_type:
+          question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
+          harassment: Threats, cyberbullying, harassement
+          offensive: Offensive content
+          infringement: Copyright Infringement
+          other: Digər
+        detail: Please provide as much detail as possible regarding the content you are reporting.
+        acknowledge: 'By submitting this information, you acknowledge it will be handled in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end} and the %{link_start_tos}Terms of Service%{link_end}'

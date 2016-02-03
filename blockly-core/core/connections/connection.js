@@ -541,8 +541,8 @@ Blockly.Connection.prototype.closest = function(maxLimit, dx, dy) {
     var connection = db[yIndex];
     var targetSourceBlock = connection.sourceBlock_;
 
-    // Don't offer to connect to hidden blocks, unless we're in edit mode
-    if (!Blockly.editBlocks && !targetSourceBlock.isVisible()) {
+    // Don't offer to connect to hidden blocks
+    if (!targetSourceBlock.isVisible()) {
       return true;
     }
 

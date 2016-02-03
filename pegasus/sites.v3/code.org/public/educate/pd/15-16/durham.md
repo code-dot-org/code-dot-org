@@ -7,6 +7,7 @@ nav: pd2_nav
 # Durham Professional Development
 
 
+
 <a id="ecs"></a>
 
 ## Exploring Computer Science
@@ -17,13 +18,9 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
 
 
 
@@ -46,11 +43,14 @@ Quarter 4: Saturday, April 30, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 12th Location**
+**January 30th Location**
 
-American Underground @ American Tobacco Campus<br/>Basement Level Classroom<br/>
-318 Blackwell Street<br/>
-Durham, NC 27701
+[Durham Public Schools <br/>
+Room M8<br/>
+2107 Hillandale Rd<br/>
+Durham, NC 27705](https://www.google.com/maps/place/2107+Hillandale+Rd,+Durham,+NC+27705/@36.035837,-78.9389917,17z/data=!3m1!4b1!4m2!3m1!1s0x89ace166f32f541d:0x7baa842d1be06049)
+
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -65,7 +65,39 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.
+
+**Save the Dates**
+
+Monday, June 27th - Wednesday, June 29th
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to Phase 4 PD?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
+
 
 
 [**Back to the top**](#top)

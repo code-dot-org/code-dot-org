@@ -145,16 +145,15 @@ Blockly.bindEvent_ = function(element, name, thisObject, func, useCapture) {
 /**
  * The TOUCH_MAP lookup dictionary specifies additional touch events to fire,
  * in conjunction with mouse events.
+ *
+ * Note that this order is important; if pointer events are available,
+ * we always want to prefer them. In some cases such as Windows 8.1
+ * phones, both pointer and touch events are available.
+ *
  * @type {Object}
  */
 Blockly.bindEvent_.TOUCH_MAP = {};
-if ('ontouchstart' in document.documentElement) {
-  Blockly.bindEvent_.TOUCH_MAP = {
-    mousedown: 'touchstart',
-    mousemove: 'touchmove',
-    mouseup: 'touchend'
-  };
-} else if (window.navigator.pointerEnabled) {  // IE 11+ support
+if (window.navigator.pointerEnabled) {  // IE 11+ support
   Blockly.bindEvent_.TOUCH_MAP = {
     mousedown: 'pointerdown',
     mousemove: 'pointermove',
@@ -165,6 +164,12 @@ if ('ontouchstart' in document.documentElement) {
     mousedown: 'MSPointerDown',
     mousemove: 'MSPointerMove',
     mouseup: 'MSPointerUp'
+  };
+} else if ('ontouchstart' in document.documentElement) {
+  Blockly.bindEvent_.TOUCH_MAP = {
+    mousedown: 'touchstart',
+    mousemove: 'touchmove',
+    mouseup: 'touchend'
   };
 }
 
@@ -833,3 +838,29 @@ Blockly.makeTestMouseEvent = function (eventName) {
   return event;
 };
 
+/**
+ * Attempts to find a container block with an empty input.
+ * @param {Blockly.Block[]} blocks
+ * @returns {Blockly.Block|null} block with empty input, or null if none found
+ */
+Blockly.findEmptyContainerBlock = function (blocks) {
+  for (var i = 0; i < blocks.length; i++) {
+    var block = blocks[i];
+    if (Blockly.findEmptyInput(block, Blockly.NEXT_STATEMENT)) {
+      return block;
+    }
+  }
+  return null;
+};
+
+/**
+ * Finds an empty input of the given input type.
+ * @param {Blockly.Block} block
+ * @param {number} inputType
+ * @returns {Blockly.Input|null} empty input or null if none found
+ */
+Blockly.findEmptyInput = function (block, inputType) {
+  return goog.array.find(block.inputList, function(input) {
+    return input.type === inputType && !input.connection.targetConnection;
+  });
+};

@@ -5,10 +5,9 @@ embedded_layout: simple_embedded
 
 [name]
 
-## setInterval(function, milliseconds)
+## setInterval(callback, ms)
 
 [/name]
-
 
 [category]
 
@@ -20,11 +19,11 @@ Category: Control
 
 [short_description]
 
-Execute code every time a certain number of milliseconds has elapsed, until canceled.
+Executes the callback function code every time a certain number of milliseconds has elapsed, until cleared.
 
 [/short_description]
 
-**Note:** This function returns a value that can be used with the [clearInterval(interval)](/applab/docs/clearInterval) function.
+Some apps need to execute code at a set interval, like the mole appearing every 5 seconds or so in "Whack a Mole". Other code in your app can be executed while waiting for the next interval to end. You can either let the callback function keep running on its interval until the app is stopped, or use the interval ID value returned by *setInterval()* to stop the interval timer with a call to [clearInterval(interval)](/applab/docs/clearInterval).
 
 [/description]
 
@@ -33,15 +32,13 @@ ____________________________________________________
 
 [example]
 
-Create a counter that increments by one every second.
-<pre>
-var seconds = 0; //Initialize the seconds count to 0
+```
+var seconds = 0;
 setInterval(function() {
-  seconds = seconds + 1; //Increment the seconds count
-  //When the code runs, print the current seconds count to the debugging console
+  seconds = seconds + 1;
   console.log(seconds + " seconds have elapsed");
-}, 1000); //Set the interval to 1000 milliseconds
-</pre>
+}, 1000);
+```
 
 [/example]
 
@@ -49,19 +46,20 @@ ____________________________________________________
 
 [example]
 
-In this example, we use an interval functions to make the turtle move randomly.
-<pre>
-show(); //Show the turtle
-setInterval(function(){ //Start the interval timer
-  //When the code runs, randomly select a point in a circle of radius 50
+**Example: Ten Timed Moves** Make 10 random turtle moves in half second intervals.
+
+```
+// Make 10 random turtle moves in half second intervals. 
+var count=0;
+var intervalID = setInterval(function(){
   var x = randomNumber(-50, 50);
   var y = randomNumber(-50, 50);
-  //Print the results of the random calculation to the console
   console.log("Move " + x + " horizontally and " + y + " vertically.");
-  move(x, y); //Move the turtle
-}, 1000); //Set the interval to 1000 milliseconds
-</pre>
-
+  move(x, y);
+  count=count+1;
+  if (count==10) clearInterval(intervalID);
+}, 500);
+```
 
 [/example]
 
@@ -69,18 +67,18 @@ ____________________________________________________
 
 [example]
 
-Here we use the interval and timeout functions to make a text label blink.
-<pre>
+**Example: Blinker** Use the interval and timeout functions to make a text label blink, one second on and one second off.
+
+```
+// Use the interval and timeout functions to make a text label blink, one second on and one second off.
 textLabel("blinker", "This text blinks");
-setInterval(function() { //Create an interval timer to show the blinker
-  showElement("blinker"); //Show the blinker textLabel
-  //Create a one-off timer to hide the blinker
-  //A new timer will be created every time the interval timer runs
+setInterval(function() {
+  showElement("blinker");
   setTimeout(function() {
-    hideElement("blinker"); //Show the blinker textLabel
-  }, 1000); //Set the timeout to 1000 milliseconds
-}, 2000); //Set the interval to 2000 milliseconds
-</pre>
+    hideElement("blinker");
+  }, 1000);
+}, 2000);
+```
 
 [/example]
 
@@ -89,9 +87,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
-setInterval(function, milliseconds);
-</pre>
+
+```
+setInterval(callback, ms);
+```
 
 [/syntax]
 
@@ -101,22 +100,23 @@ setInterval(function, milliseconds);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| function | function | Yes | A function to execute.  |
-| milliseconds | number | Yes | The number of milliseconds between each execution of the function.  |
+| callback | function | Yes | A function to execute at the interval designated. |
+| ms | number | Yes | The number of milliseconds between each execution of the function. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-A number identifying the interval timer, which can be used to cancel it when it is no longer needed.
+A numeric interval timer ID, which can be used to cancel it when it is no longer needed.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- Use the [clearInterval(interval)](/applab/docs/clearInterval) function to no longer execute code scheduled using setInterval().
+- Use the [clearInterval(interval)](/applab/docs/clearInterval) function to stop the interval timer.
+- Do not put functions inside a loop that contain timers, like *setInterval()*. The loop will not wait for the timer to complete.
 
 [/tips]
 

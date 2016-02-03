@@ -100,12 +100,14 @@
         Jigsaw: Teka-teki
         MazeStep: Mode tahapan labirin
         Wordsearch: Carikata
-        Webapp: Aplikasi Lab
+        Webapp: Laboratorium Aplikasi
         ArtistEC: Artis
         TextMatch: Cocok Teks
         StudioEC: Lab Permainan
-        Applab: Aplikasi Lab
+        Applab: Laboratorium Aplikasi
         NetSim: Simulator Internet
+        Custom: Artis
+        CustomStudio: Play Lab/Lab Permainan
     trophy:
       name:
         Bronze: Perunggu
@@ -333,9 +335,9 @@
           ukuran. (Tips: Klik bintang untuk menambahkan masukan ke fungsi)'
         turtle_3_7: Tambahkan input bernama "tinggi" untuk "gambar rumah" dan membangun
           sebuah rumah yang besar untuk gajah (panjang 150 pixel)
-        turtle_3_8: Memodifikasi "menggambar rumah" jadi saya berakhir di sudut kanan
-          bawah setelah menggambar sebuah rumah baru. Gunakan fungsi memodifikasi
-          ini untuk menggambar tiga rumah.
+        turtle_3_8: Modifikasi "menggambar rumah" jadi sehingga saya berakhir di sudut
+          kanan bawah setelah menggambar sebuah rumah baru. Gunakan fungsi yang telah
+          dimodifikasi ini untuk menggambar tiga rumah.
         turtle_3_9: Dapatkah Anda kembali membuat fungsi "gambar sebuah rumah" tanpa
           bantuan? Cobalah, dan kemudian gambarlah sederetan rumah.
         turtle_3_10: Anda telah banyak belajar! Sekarang cobalah untuk menggambar
@@ -436,8 +438,8 @@
         flappy_8: Kamu dapat mengatur visual kapan saja, tidak perlu hanya ketika
           permainan dimulai. Cobalah membuat latar belakang berubah secara acak ketika
           event berganti, misalnya ketika melewati penghalang.
-        flappy_9: Untuk mencampurkan hal-hal, ketika memukul sebuah benda, daripada
-          mengakhiri permainan cobalah mengatur nilai kembali ke 0.
+        flappy_9: Untuk mencampurkan berbagai hal, ketika mengenai sebuah rintangan,
+          daripada mengakhiri permainan cobalah atur nilai kembali ke 0.
         flappy_11: Butalah game Flappy anda. Anda dapat merubah semua visualisasi
           dan aturan. Setelah usai klik Selesai untuk memberikannya pada teman anda
           agar ia mencoba pada ponselnya.
@@ -456,7 +458,8 @@
         flappy_k1_6: Mari kita tambahkan scoreboard, dan menghitung poin saat Flappy
           melewati hambatan. Tambahkan ke blok "ketika melewati hambatan", dan kemudian
           raihlah Skor lebih dengan membuat Flappy terbang melalui set pipa pertama.
-        flappy_k1_7: Lihat jika Anda dapat Skor beberapa poin untuk melewati hambatan
+        flappy_k1_7: Lihat jika Anda dapat mencetak nilai beberapa poin karena melewati
+          hambatan
         flappy_k1_8: Selanjutnya, cobalah mengubah adegan dengan melampirkan blok
           yang lain ke blok "ketika menjalankan".
         flappy_k1_9: Cobalah mengubah pemain dengan menempatkan "mengatur pemain"
@@ -556,6 +559,90 @@
           gerakkan ia dengan tombol arah menuju Spacebot, lalu serukan pada yang lain\n"
         studio_playlab_10: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
+        studio_iceage_hello1: Sid mau mengumpulkan semua orang untuk sebuah petualangan
+          baru. Bisakah kamu membantunya untuk mengatakan "halo" dengan menyeret blok
+          "katakan" ke dalam area kerja dan mengetik kata "halo" di dalamnya?
+        studio_iceage_hello2: Sid (aktor 1) menemukan Manny (aktor 2) dan ingin mengajaknya
+          untuk mengikuti petualangannya. Bantulah mereka menyapa satu sama lain dengan
+          menggunakan blok "aktor mengatakan" sebanyak dua kali.
+        studio_iceage_move_to_flag: Scrat sedang mencari biji pohon eknya! Bantulah
+          dia menjalani 200 pixel terakhir dengan menggunakan blok "bergerak".
+        studio_iceage_move_to_actor: Diego (aktor 1) sedang mencari Manny (aktor 2).
+          Bantulah Diego bergerak 200 pixel ke bawah menuju Manny dengan menggunakan
+          blok "gerakkan aktor". Kemudian, sambungkan sebuah blok dengan kejadian
+          "ketika aktor menyentuh" untuk memainkan suara ketika mereka bertemu satu
+          sama lain.
+        studio_iceage_repeat: Blok "ulang selamanya" memperbolehkan kamu untuk menjalankan
+          kode secara terus menerus. Bisakah kamu menyematkan blok-blok dengan blok
+          tersebut untuk membantu Nenek mendapatkan beberapa latihan dengan bergerak
+          ke kiri dan ke kanan berulang kali?
+        studio_iceage_click_hello: Bisakah kamu membantu Sid melakukan panggilan terakhir
+          untuk teman-temannya ketika diklik? Jangan lupa untuk mengklik dia setelah
+          kamu menekan Laksanakan.
+        studio_iceage_move_events: Scrat masih mencari biji pohon ek! Bantu dia pontang-panting
+          mencari biji-biji tersebut dengan menyematkan blok "bergerak" pada kejadian
+          tersebut dan gantilah arahnya untuk bekerja di setiap tombol arah panah.
+          Ketika kamu sudah selesai, klik Laksanakan dan cobalah untuk mengumpulkan
+          semua biji pohon ek.
+        studio_iceage_sound_and_points: Kami telah menyediakan hampir semua kode yang
+          membuat Nenek terus bergerak ke kiri dan kanan, termasuk kode untuk menggerakkan
+          Sid memutari layar. Bisakah kamu menyelesaikan kode tersebut dan menambahkan
+          blok-blok ke kejadian "ketika aktor menyentuh" untuk membuatnya demikian
+          sehingga kamu berdua memainkan sebuah suara dan mencetak sebuah poin ketika
+          Sid dan Nenek bertabrakan? Tekan Laksanakan untuk memainkan permainan tersebut.
+        studio_iceage_warn_ice_age: Semua orang harus bergerak cepat karena jaman
+          es akan datang! Ubahlah latar belakang menjadi latar belakang membeku dan
+          tetapkan kecepatan Sid ke cepat, kemudian tekan Laksanakan dan gerakkan
+          dia ke Diego untuk memperingatkannya.
+        studio_iceage_throw_hearts: Sid ingin membuat Neneknya, Nenek, tahu kalay
+          dia menyayanginya. Gunakan perintah "aktor melempar" untuk membuat Sid (aktor
+          1) melempar hati-hati pada Nenek (aktor 2)! Tetapkanlah suasana hati Nenek
+          menjadi senang ketika dia terkena hati-hati tersebut.
+        studio_iceage_free_play: Waktunya untuk membuat permainan atau ceritamu sendiri!
+          Ketika kamu sudah selesai, klik Selesai untuk membiarkan teman-temanmu mencoba
+          permainanmu di telepon-telepon, tablet-tablet, atau komputer-komputer mereka!
+        studio_gumball_hello1: Anais ingin memiliki beberapa teman baru. Bisakah kamu
+          membantunya untuk mengatakan "halo" dengan menyeret blok "katakan" ke dalam
+          area kerja dan ketiklah kata "halo" di dalamnya?
+        studio_gumball_hello2: Darwin (aktor 1) dan saudara laki-lakinya Gumball (aktor
+          2) sedang menuju sekolah. Bantulah mereka menyapa satu sama lain dengan
+          menggunakan blok "aktor mengatakan" dua kali.
+        studio_gumball_move_to_flag: Joe si Pisang akan memenangkan lomba hari lapangan!
+          Bantulah dia bergerak di 200 pixel terakhir dengan menggunakan blok "bergerak".
+        studio_gumball_move_to_actor: Gumball (aktor 1) dan Darwin (aktor 2) terlambat
+          untuk hari lapangan! Bantulah Gumball bergerak 200 pixel ke bawah menuju
+          Darwin dengan menggunakan blok "gerakkan aktor". Kemudian, sambungkan sebuah
+          blok ke kejadian "ketika aktor menyentuh" untuk memainkan sebuah suara ketika
+          mereka bertemu satu sama lain.
+        studio_gumball_repeat: Blok "ulangi selamanya" memperkenankan kamu untuk menjalankan
+          kode secara terus menerus. Bisakah kamu menyematkan blok-blok pada blok
+          tersebut untuk membantu pemanasan Gumball untuk lombanya dengan bergerak
+          ke kiri dan kanan berkali-kali?
+        studio_gumball_click_hello: Bisakah kamu membantu Anton mengumumkan mulainya
+          lomba dengan mengatakan "Bersiap, ancang-ancang, lari!"? Untuk menguji programmu,
+          jangan lupa untuk mengklik Anton setelah kamu mengklik Laksanakan!
+        studio_gumball_move_events: Darwin sedang berada di kontes mengumpulkan bendera!
+          Bantulah dia berlari berkeliling dengan menyematkan blok "bergerak" pada
+          setiap kejadian. Ketika kamu sudah selesai, klik Laksanakan dan cobalah
+          untuk mengumpulkan semua bendera.
+        studio_gumball_sound_and_points: Kami sudah menyediakan hampir semua kode
+          yang membuat Anton (aktor 2) bergerak ke kiri dan ke kanan, sekaligus dengan
+          kode untuk menggerakkan Joe si Pisang (aktor 1) mengelilingi layar. Bisakah
+          kamu menyelesaikan kode tersebut dan tambahkan blok-blok ke kejadian "ketika
+          aktor menyentuh" untuk membuatnya sedemikian rupa sehingga kamu berdua dapat
+          memainkan sebuah bunyi dan mencetak poin ketika Joe si Pisang dan Anton
+          bertabrakan? Tekan Laksanakan untuk memainkan permainan tersebut.
+        studio_gumball_warn_food_fight: Darwin baru saja kabur dari perang makanan!
+          Ubahlah latar belakangnya menjadi "para karakter" dan tetapkan kecepatan
+          Darwin menjadi cepat, kemudian tekan Laksanakan dan gerakkan dia menuju
+          Penny untuk memperingatinya.
+        studio_gumball_join_food_fight: Bergabunglah dengan perang makanan! Gunakan
+          perintah "aktor melempar benda kanan" untuk membuat Joe si Pisang (aktor
+          1) melempar makanan pada Anton (aktor 2)! Tetapkan suasana hati Anton menjadi
+          marah ketika dia terkena lemparan.
+        studio_gumball_free_play: Buatlah permainan atau ceritamu sendiri. Ketika
+          kamu selesai, klik Selesai untuk membiarkan teman-temanmu mencoba permainanmu
+          pada telepon-telepon, tablet-tablet, dan komputer-komputer mereka2!
         studio_full_sandbox: Buat permainan Anda sendiri. Setelah selesai, klik Selesai
           untuk membiarkan teman-teman mencoba permainan Anda pada ponsel mereka.
         studio_k1_1: Dapatkah anda membuat anjing ini mengatakan "Halo dunia"?
@@ -569,7 +656,7 @@
           senang?
         studio_k1_6: Buat cerita Anda sendiri! Gerakan kucing dan anjing, dan buat
           mereka mengatakan berbagai hal-hal.
-        maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata Timur
+        maze_wordsearch_k_1: Pindahkan saya untuk mengeja kata EAST (Timur)
         maze_wordsearch_k_2: Pindahkan saya untuk mengeja kata Selatan
         maze_wordsearch_k_3: Pindahkan saya untuk mengeja kata Barat
         maze_wordsearch_k_4: Pindahkan saya untuk mengeja kata Utara
@@ -609,13 +696,13 @@
         loop_for: Blok konter (Counter)
         parameters: Fungsi dengan parameter
         hoc_wrapup: Penutupan Jam kode
-        Unplug1: Apa itu CS?
+        Unplug1: Apa itu Ilmu Komputer?
         Unplug2: Berpikir secara komputasi
         Unplug3: Pemrograman grafis diatas kertas
         Unplug4: Algoritma
         Unplug5: Fungsi
         Unplug6: Kondisi
-        Unplug7: Penulis lagu
+        Unplug7: Menulis lagu
         Unplug8: Abstraksi
         Unplug9: Pemrograman relay
         Unplug10: Internet
@@ -626,14 +713,14 @@
         C1_getting_loopy: Dapat berulang-ulang
         C1_pair_programming: Pemrograman berpasangan
         C1_maze_intro_sequencing: Introduksi Sekuensi Labirin
-        C1_maze_debugging: Labirin Debugging
-        C1_bee_level_intro: Tingkat Lebah - Introduksi
+        C1_maze_debugging: Pengawakutuan labirin
+        C1_bee_level_intro: Tingkat Lebah - Pengenalan
         C1_artist_intro: Apa itu Artis?
-        C1_spelling_bee_intro: Intro Spelling Bee
+        C1_spelling_bee_intro: Introduksi Mengeja
         C1_zuck_repeat_loop: Pengulangan labirin
         C1_bee_loops: Pengulangan lebah
         C1_maze_loops: Pengulangan labirin
-        C1_playlab_storytelling: Mainkan Lab - Buat sebuah Cerita
+        C1_playlab_storytelling: Play Lab - Buat sebuah Cerita
         C1_planting_seed: Penanaman benih
         C1_building_foundation: Membangun dasar
         C1_going_places_safely: Pergi ke tempat dengan aman
@@ -659,8 +746,8 @@
         C3_bee_functions: Fungsi lebah
         C3_bee_conditionals: kondisi lebah
         C3_maze_conditionals: Kondisional labirin
-        C3_artist_nested_loops: Perulangan bercabang
-        C3_farmer_while: Perulangan While
+        C3_artist_nested_loops: Perulangan bertingkat
+        C3_farmer_while: Perulangan Selagi
         C3_bee_nested_loops: Perulangan bercabang
         C3_bee_debugging: Lebah Debugging
         C3_bounce: Terpental
@@ -677,27 +764,45 @@
         C4_variables_artist: Variabel - artis
         C4_variables_playlab: Variabel - permainan Lab
         C4_for_loops: Untuk Pengulangan
+        C4_for_loops_bee: Untuk Pengulangan
+        C4_for_loops_no_bee: Untuk Pengulangan
         C4_math_artist: Pemrograman artis dengan matematika
         C4_function_edit: Fungsi menyunting
         C4_function_create: Fungsi membuat
         C4_function_parameters: Fungsi dengan parameter
         C4_conditionals: Kondisi
-        C4_unplugged_algorithms: Algoritma dengan Tangrams
+        C4_unplugged_algorithms: Algoritma dengan Tangram
         C4_unplugged_madlibs: Mad libs
         C4_unplugged_variables: Variabel dalam amplop
         C4_unplugged_forloops: Untuk Pengulangan
         C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
         frozen_intro: Perkenalan Hour of Code
-        frozen_loops: Pengantar loop
+        frozen_loops: Pengenalan pengulangan
         frozen_functions: Pengenalan Fungsi
-        playlab_intro: Pengantar Lab Permainan
-        playlab_events: 'Lab Permainan Event '
-        playlab_repeat_forever: Lab Permainan Ulangi Selamanya
+        playlab_intro: Pengantar Play Lab
+        playlab_events: Acara Play Lab
+        playlab_repeat_forever: Pllay Lab Ulangi Selamanya
         tutorial_puzzle_challenge: Tutorial tantangan teka-teki
         infinity_playlab_intro: Play Lab - Pendahuluan
         infinity_playlab_events: Play Lab - Kegiatan
         infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
+        csp_applab_functions: Pengenalan Fungsi
+        csp_applab_functions_parameters: Fungsi dengan parameter
+        csp_applab_loops: Loop
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: Sedikit tentang piksel
         csp_pixelation_color_1: widget pixelation Warna - Bagian 1
         csp_pixelation_color_2: widget pixelation Warna - Bagian 2
@@ -705,6 +810,7 @@
         csp_pixelation_bw: widget pixelation Hitam dan Putih - Bagian 1
         csp_U1L14_tipstricks: Unit 1 pelajaran 14 Tips & Trik guru
         csp_textcompression: widget Teks kompresi
+        csp_textcompression_new: widget Teks kompresi
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -729,6 +835,28 @@
         alg_16_biggame_collision_detection: CS didalam Aljabar - Deteksi Benturan
           Big Game/Permainan Besar
         alg_17_sambat_compound_booleans: CS didalam Aljabar - GabunganBoolean
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Pendahuluan'
+        starwars_typing: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - JavaScript'
+        starwars_events: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Acara'
+        starwars_congrats: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Selamat'
+        starwars_blocks_intro: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Pendahuluan'
+        starwars_blocks_events: 'Star Wars: Dirikan sebuah Galaksi dengan Kode - Acara'
+        starwars_blocks_congrats: 'Star Wars: Dirikan sebuah Galaksi dengan Kode -
+          Selamat'
+        mc_intro: Minecraft - Pengenalan
+        mc_repeat: Minecraft - Pengulangan
+        mc_if_statements: Minecraft - Pernyataan jika
+        mc_congrats_share: Minecraft - Selamat
+        mc_congrats_no_share: Minecraft - Selamat
+        gumball_intro: Jam Mengkode Gumball - Introduksi
+        gumball_events: Jam Menkode Gumball - Kejadian
+        gumball_repeat: Jam Mengkode Gumball - Pernyataan yang diulang
+        iceage_intro: Jam Mengkode Ice Age - Introduksi
+        iceage_events: Jam Mengkode Ice Age - Kejadian
+        iceage_repeat: Jam Mengkode Ice Age - Pernyataan yang diulang
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain
@@ -757,8 +885,8 @@
           derajat yang tepat untuk memutar
         repeat_blocks: Gunakan blok "Ulangi" dan membungkusnya di sekitar blok ruang
           kerja
-        repeat_blocks_1: (1) Gunakan blok ini dan Letakkan di sekitar blok abu-abu
-          didalam ruang kerja
+        repeat_blocks_1: "(1) Gunakan blok ini dan Letakkan di sekitar blok abu-abu
+          didalam ruang kerja"
         repeat_blocks_2: (2)Gerakkan blok "Ulangi" di sini, dan tempatkan blok abu-abu
           di dalamnya
         snowflake_dropdown: Gunakan drop-down untuk membuat kepingan salju yang berbeda!
@@ -839,3 +967,14 @@
         Infinity_move_directions_callout_arrow: Gunakan panah untuk mengarahkan
         Infinity_move_collide_callout: Mainkan suara ketika peristiwa ini terjadi.
         Infinity_repeat_callout: Tempat blok gerak di sini
+        craft_run_button_callout: Klik "Run" untuk mencoba program kamu
+        craft_drag_block_callout: Seret balok "bergerakMaju();" dan pasang di bawah
+          balok lain
+        craft_callout_preplaced: Kami meletakkan beberapa balok di sini agar kamu
+          dapat memulainya dengan mudah
+        craft_inside_repeat: Ulangi tindakan dengan menempatkan balok di dalam sini
+        craft_callout_preplaced_house: Kode ini akan mulai membangun rumah kamu. Dapatkah
+          kamu menyelesaikannya?
+        craft_what_is_iron: Tambang besi ini!
+        craft_callout_moveforward: Kode ini akan memeriksa lava, dapatkah kamu menambahkan
+          perintah untuk maju?

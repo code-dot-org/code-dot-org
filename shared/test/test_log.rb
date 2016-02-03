@@ -1,10 +1,6 @@
-require 'minitest/autorun'
-require 'rack/test'
-require_relative '../../deployment'
+require_relative 'test_helper'
 
-ENV['RACK_ENV'] = 'test'
-
-class LogTest < Minitest::Unit::TestCase
+class LogTest < Minitest::Test
   def setup
     @old_log = CDO.log
   end

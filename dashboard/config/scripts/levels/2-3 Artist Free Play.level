@@ -54,9 +54,6 @@
         <block type="draw_width_inline">
           <title name="WIDTH">1</title>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
         <block type="draw_colour" inline="true">
           <value name="COLOUR">
             <block type="colour_picker">

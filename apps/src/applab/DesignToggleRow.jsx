@@ -1,10 +1,8 @@
 /* global $ */
 
-var React = require('react');
 var msg = require('../locale');
 var applabMsg = require('./locale');
-
-var NEW_SCREEN = 'New screen...';
+var constants = require('./constants');
 
 var Mode = {
   CODE: 'CODE',
@@ -14,6 +12,7 @@ var Mode = {
 module.exports = React.createClass({
   propTypes: {
     hideToggle: React.PropTypes.bool.isRequired,
+    hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
     screens: React.PropTypes.array.isRequired,
@@ -48,7 +47,7 @@ module.exports = React.createClass({
 
   handleScreenChange: function (evt) {
     var screenId = evt.target.value;
-    if (screenId === NEW_SCREEN) {
+    if (screenId === constants.NEW_SCREEN) {
       screenId = this.props.onScreenCreate();
     }
     this.props.onScreenChange(screenId);
@@ -64,7 +63,7 @@ module.exports = React.createClass({
     var dropdownStyle = {
       display: 'inline-block',
       verticalAlign: 'top',
-      width: 130,
+      width: '100%',
       height: 28,
       marginBottom: 6,
       borderColor: '#949ca2'
@@ -98,11 +97,22 @@ module.exports = React.createClass({
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
     var hidden = {
-      visibility: 'hidden'
+      display: 'none'
     };
 
-    var showDataButtonStyle = $.extend({}, buttonStyle, inactive);
-
+    var showDataButtonStyle = $.extend(
+      {
+        float: 'right',
+        textAlign: 'left',
+        maxWidth: '100%',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+      },
+      buttonStyle,
+      inactive,
+      this.props.hideViewDataButton ? hidden : null
+    );
     var iconStyle = {
       margin: '0 0.3em'
     };
@@ -123,6 +133,18 @@ module.exports = React.createClass({
         return <option key={item}>{item}</option>;
       });
 
+      var defaultScreenId = $('#divApplab .screen').first().attr('id') || '';
+
+      options.sort(function (a, b) {
+        if (a.key === defaultScreenId) {
+          return -1;
+        } else if (b.key === defaultScreenId) {
+          return 1;
+        } else {
+          return a.key.localeCompare(b.key);
+        }
+      });
+
       selectDropdown = (
         <select
           id="screenSelector"
@@ -131,35 +153,42 @@ module.exports = React.createClass({
           onChange={this.handleScreenChange}
           disabled={Applab.isRunning()}>
           {options}
-          <option>{NEW_SCREEN}</option>
+          <option>{constants.NEW_SCREEN}</option>
         </select>
       );
     }
 
     return (
-      <div className={this.props.hideToggle ? 'rightalign-contents' : 'justify-contents'}>
-        <button
-            id='codeModeButton'
-            style={$.extend({}, codeButtonStyle,
-                this.state.mode === Mode.CODE ? active : inactive,
-                this.props.hideToggle ? hidden : null)}
-            className='no-outline'
-            onClick={this.handleSetMode.bind(this, Mode.CODE)}>
-          {msg.codeMode()}
-        </button>
-        <button
-            id='designModeButton'
-            style={$.extend({}, designButtonStyle,
-                this.state.mode === Mode.DESIGN ? active : inactive,
-                this.props.hideToggle ? hidden : null)}
-            className='no-outline'
-            onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
-          {msg.designMode()}
-        </button>
-        {' ' /* Needed for "text-align: justify;" to work. */ }
-        {selectDropdown}
-        {showDataButton}
-      </div>
+      <table style={{width: '100%'}}>
+        <tbody>
+          <tr>
+            <td style={{width: '120px'}}>
+              <button
+                  id='codeModeButton'
+                  style={$.extend({}, codeButtonStyle,
+                      this.state.mode === Mode.CODE ? active : inactive,
+                      this.props.hideToggle ? hidden : null)}
+                  className='no-outline'
+                  onClick={this.handleSetMode.bind(this, Mode.CODE)}>
+                {msg.codeMode()}
+              </button>
+              <button
+                  id='designModeButton'
+                  style={$.extend({}, designButtonStyle,
+                      this.state.mode === Mode.DESIGN ? active : inactive,
+                      this.props.hideToggle ? hidden : null)}
+                  className='no-outline'
+                  onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
+                {msg.designMode()}
+              </button>
+            </td>
+            <td style={{maxWidth: 0}}>
+              {selectDropdown}
+              {showDataButton}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 });

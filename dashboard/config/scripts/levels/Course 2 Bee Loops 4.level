@@ -7,7 +7,7 @@
   "properties": {
     "skin": "bee",
     "instructions": "What happens if you loop this sequence 3 times? Don't forget to make the honey at the end!",
-    "step_mode": "0",
+    "step_mode": 1,
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "3",

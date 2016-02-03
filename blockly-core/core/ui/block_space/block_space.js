@@ -17,6 +17,8 @@
  * limitations under the License.
  */
 
+/* global Blockly, goog */
+
 /**
  * @fileoverview Object representing a block blockSpace.
  * @author fraser@google.com (Neil Fraser)
@@ -133,6 +135,20 @@ Blockly.BlockSpace.EVENTS.BLOCK_SPACE_CHANGE = 'blockSpaceChange';
 Blockly.BlockSpace.SCAN_ANGLE = 3;
 
 /**
+ * Offset (in pixels) from top to use when automatically positioning new
+ * blocks. Currently is only used by Blockly.Xml.domToBlockSpace
+ * @type {number}
+ */
+Blockly.BlockSpace.AUTO_LAYOUT_PADDING_TOP = 16;
+
+/**
+ * Offset (in pixels) from left to use when automatically positioning
+ * new blocks. Currently is only used by Blockly.Xml.domToBlockSpace
+ * @type {number}
+ */
+Blockly.BlockSpace.AUTO_LAYOUT_PADDING_LEFT = 16;
+
+/**
  * Margin (in pixels) to over-scroll when auto-panning viewport after a block
  * is dragged out of view.
  * @type {number}
@@ -145,6 +161,31 @@ Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN = 25;
  * @const
  */
 Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM = 100;
+
+/**
+ * Creates a read-only BlockSpace inside the given container, containing
+ * the given XML. Used to display single blocks in feedback dialogs.
+ * @param {!Element} container HTML Element into which to render
+ * @param {!Element} xml XML block
+ * @returns {Blockly.BlockSpace}
+ */
+Blockly.BlockSpace.createReadOnlyBlockSpace = function (container, xml) {
+  var blockSpaceEditor = new Blockly.BlockSpaceEditor(container, function () {
+    var metrics = Blockly.BlockSpaceEditor.prototype.getBlockSpaceMetrics_.call(this);
+    if (!metrics) {
+      return null;
+    }
+    // Expand the view so we don't see scrollbars
+    metrics.viewHeight += Blockly.BlockSpace.SCROLLABLE_MARGIN_BELOW_BOTTOM;
+    return metrics;
+  }, function (xyRatio) {
+    Blockly.BlockSpaceEditor.prototype.setBlockSpaceMetrics_.call(this, xyRatio);
+  }, true, true);
+
+  var blockSpace = blockSpaceEditor.blockSpace;
+  Blockly.Xml.domToBlockSpace(blockSpace, xml);
+  return blockSpace;
+};
 
 /**
  * Current horizontal scrolling offset.
@@ -187,6 +228,13 @@ var fireGlobalChangeEventPid_ = null;
 Blockly.BlockSpace.prototype.scrollbarPair = null;
 
 /**
+ * @returns {boolean}
+ */
+Blockly.BlockSpace.prototype.isReadOnly = function() {
+  return (Blockly.readOnly || this.blockSpaceEditor.isReadOnly());
+};
+
+/**
  * Sets up debug console logging for events
  */
 Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
@@ -202,7 +250,7 @@ Blockly.BlockSpace.prototype.debugLogOnEvents = function() {
 Blockly.BlockSpace.prototype.findFunction = function(functionName) {
   return goog.array.find(this.getTopBlocks(), function(block) {
     return goog.array.contains(Blockly.Procedures.DEFINITION_BLOCK_TYPES, block.type) &&
-      Blockly.Names.equals(functionName, block.getTitleValue('NAME'))
+      Blockly.Names.equals(functionName, block.getTitleValue('NAME'));
   });
 };
 
@@ -290,7 +338,7 @@ Blockly.BlockSpace.prototype.dispose = function() {
  * Add a trashcan.
  */
 Blockly.BlockSpace.prototype.addTrashcan = function() {
-  if (Blockly.hasTrashcan && !Blockly.readOnly) {
+  if (Blockly.hasTrashcan && !this.isReadOnly()) {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
     this.svgBlockCanvas_.appendChild(svgTrashcan);
@@ -350,7 +398,8 @@ Blockly.BlockSpace.prototype.addTopBlock = function(block) {
  */
 Blockly.BlockSpace.prototype.removeTopBlock = function(block) {
   var found = false;
-  for (var child, x = 0; child = this.topBlocks_[x]; x++) {
+  for (var child, x = 0; x < this.topBlocks_.length; x++) {
+    child = this.topBlocks_[x];
     if (child == block) {
       this.topBlocks_.splice(x, 1);
       found = true;
@@ -451,7 +500,8 @@ Blockly.BlockSpace.prototype.clear = function() {
  */
 Blockly.BlockSpace.prototype.render = function() {
   var renderList = this.getAllBlocks();
-  for (var x = 0, block; block = renderList[x]; x++) {
+  for (var x = 0, block; x < renderList.length; x++) {
+    block = renderList[x];
     if (!block.getChildren().length) {
       block.render();
     }
@@ -466,7 +516,8 @@ Blockly.BlockSpace.prototype.render = function() {
 Blockly.BlockSpace.prototype.getBlockById = function(id) {
   // If this O(n) function fails to scale well, maintain a hash table of IDs.
   var blocks = this.getAllBlocks();
-  for (var x = 0, block; block = blocks[x]; x++) {
+  for (var x = 0, block; x < blocks.length; x++) {
+    block = blocks[x];
     if (block.id == id) {
       return block;
     }
@@ -486,7 +537,9 @@ Blockly.BlockSpace.prototype.traceOn = function(armed) {
   }
   if (armed) {
     this.traceWrapper_ = Blockly.bindEvent_(this.svgBlockCanvas_,
-        'blocklySelectChange', this, function() {this.traceOn_ = false});
+        'blocklySelectChange', this, function () {
+          this.traceOn_ = false;
+        });
   }
 };
 
@@ -577,10 +630,12 @@ Blockly.BlockSpace.prototype.paste = function(clipboard) {
       blockX = -blockX;
     }
     // Offset block until not clobbering another block.
+    var collide;
     do {
-      var collide = false;
+      collide = false;
       var allBlocks = this.getAllBlocks();
-      for (var x = 0, otherBlock; otherBlock = allBlocks[x]; x++) {
+      for (var x = 0, otherBlock; x < allBlocks.length; x++) {
+        otherBlock = allBlocks[x];
         var otherXY = otherBlock.getRelativeToSurfaceXY();
         if (Math.abs(blockX - otherXY.x) <= 1 &&
             Math.abs(blockY - otherXY.y) <= 1) {
@@ -663,7 +718,7 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(mouseX, mouseY, startDragX)
   }
 
   var mouseXY = Blockly.mouseCoordinatesToSvg(
-    mouseX, mouseY, this.blockSpaceEditor.svg_)
+    mouseX, mouseY, this.blockSpaceEditor.svg_);
   var xy = new goog.math.Coordinate(mouseXY.x, mouseXY.y);
 
   var mouseDragStartXY = Blockly.mouseCoordinatesToSvg(
@@ -684,7 +739,8 @@ Blockly.BlockSpace.prototype.isDeleteArea = function(mouseX, mouseY, startDragX)
   this.drawTrashZone(xy.x, dragStartXY.x);
 
   // Check against all delete areas
-  for (var i = 0, area; area = this.deleteAreas_[i]; i++) {
+  for (var i = 0, area; i < this.deleteAreas_.length; i++) {
+    area = this.deleteAreas_[i];
     if (area.contains(xy)) {
       return true;
     }
@@ -741,6 +797,10 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
     blockGroup = flyout.blockSpace_.svgGroup_;
     trashcan = flyout.trashcan;
     trashcanElement = trashcan.svgGroup_;
+
+    if (this.blockSpaceEditor.hideTrashRect_) {
+      blockGroupForeground = this.blockSpaceEditor.flyout_.svgGroup_;
+    }
   }
 
   var toolbarWidth = background.getBoundingClientRect().width;
@@ -822,19 +882,19 @@ Blockly.BlockSpace.prototype.drawTrashZone = function(x, startDragX) {
   var rgbString = "rgb(" + r + ", " + g + ", " + b + ")";
 
   // Fade towards the new backround color.
-  background.style["fill"] = rgbString;
+  background.style.fill = rgbString;
 
   // Fade out the blocks in the flyout area.
-  blockGroup.style["opacity"] = normalIntensity;
+  blockGroup.style.opacity = normalIntensity;
 
   if (blockGroupForeground) {
-    blockGroupForeground.style["opacity"] = normalIntensity;
+    blockGroupForeground.style.opacity = normalIntensity;
   }
 
   // Fade in the trash can.
-  var trashcanDisplay = trashIntensity == 0 ? "none" : "block";
-  trashcanElement.style["opacity"] = trashIntensity;
-  trashcanElement.style["display"] = trashcanDisplay;
+  var trashcanDisplay = trashIntensity === 0 ? "none" : "block";
+  trashcanElement.style.opacity = trashIntensity;
+  trashcanElement.style.display = trashcanDisplay;
 };
 
 /**
@@ -923,8 +983,18 @@ Blockly.BlockSpace.prototype.scrollIntoView = function (block) {
   var boxOverflows = Blockly.getBoxOverflow(currentView, blockBox);
   Blockly.addToNonZeroSides(boxOverflows,
     Blockly.BlockSpace.DROPPED_BLOCK_PAN_MARGIN);
-  this.scrollToDelta(boxOverflows.right - boxOverflows.left,
-    boxOverflows.bottom - boxOverflows.top);
+
+  var isOversizedX = Blockly.isBoxWiderThan(blockBox, currentView);
+  var isOversizedY = Blockly.isBoxTallerThan(blockBox, currentView);
+  var isAlreadyInView = (isOversizedX || isOversizedY) ?
+      goog.math.Box.intersects(blockBox, currentView) : false;
+
+  // If block is bigger than viewport, only scroll if it's not in view at all.
+  var horizontalDelta = (isOversizedX && isAlreadyInView) ?
+      0 : boxOverflows.right - boxOverflows.left;
+  var verticalDelta = (isOversizedY && isAlreadyInView) ?
+      0 : boxOverflows.bottom - boxOverflows.top;
+  this.scrollToDelta(horizontalDelta, verticalDelta);
 };
 
 /**

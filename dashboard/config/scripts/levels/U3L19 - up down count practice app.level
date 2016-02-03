@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "This app is only SLIGHTLY different from the previous one, but much more dynamic.  See if you can figure out how and why the count is going up.  Once you've figured it out then you should be able to DO THIS: add a button to the app that when clicked makes the count go down, and updates the label.  When you're done the app should work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif",
+    "instructions": "Set up the down button to decrease the value of count by 1 each time it is clicked. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -51,9 +51,22 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
-    "start_blocks": "button(\"myButton\",\"go up\");\r\nvar count = 0;\r\ntextLabel(\"myLabel\", \"Count is: \"+count);\r\n\r\nonEvent(\"myButton\", \"click\", function(){\r\n   count = count+1;\r\n   setText(\"myLabel\", \"Count is: \"+count);\r\n});\r\n",
-    "app_width": "320",
-    "app_height": "204"
+    "start_blocks": "var count = 0;\r\nsetText(\"countValueDisplay\", count);\r\nonEvent(\"upButton\", \"click\", function(event) {\r\n  count = (count + 1);\r\n  setText(\"countValueDisplay\", count);\r\n});",
+    "encrypted_examples": [
+
+    ],
+    "markdown_instructions": "# What happened last level?\r\n\r\nIn JavaScript you should just think of the word var as shorthand for \"create a variable\". In fact in the case of the last level the program thinks you want another variable names foo. This is the result of **scope**. \r\n\r\nThere are two types of variables:\r\n\r\n1. **Gloabl Variables** - Created outside of all functions and can be seen and updated by any code.\r\n1. **Local Variables** - Create inside of a function and can't be seen by any other code. They get created when the function is run, and they get destroyed (seriously) when last line of code in the function has executed. If the function gets run again, then the variable is created again.\r\n\r\nSo if you say `var` in front of a variable with the same name as a global variable it actually thinks you want another variable named foo just for this function!\r\n\r\n\r\n# Incrementing with buttons\r\n\r\nCheck it out. We have started using increment with a button!  Can you figure out how to set up the Down button to decrement the value of count each time it is clicked?\r\n\r\n# Do This\r\n\r\n* **Try the starter code.** See how the UP button works.\r\n\r\n* ** Set up the DOWN button** to decrease the value of count by 1 each time it is clicked.\r\n\r\n* Your app should look like the example when done.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "droplet_tooltips_disabled": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" style=\"width: 320px; height: 450px; display: none;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <button id=\"upButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 40px; top: 320px; background-color: rgb(26, 188, 156);\">UP</button>\r\n    <button id=\"downButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 185px; top: 320px; background-color: rgb(240, 10, 29);\">DOWN</button>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 50px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); width: 41px; height: 55px; position: absolute; left: 130px; top: 155px;\" id=\"countValueDisplay\">0</label>\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 50px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); width: 169px; height: 55px; position: absolute; left: 70px; top: 50px;\" id=\"countLabel\">Count:</label>\r\n  </div>\r\n</div>",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true"
   }
 }]]></config>
   <blocks/>

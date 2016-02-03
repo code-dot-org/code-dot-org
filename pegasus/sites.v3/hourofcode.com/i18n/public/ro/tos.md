@@ -1,8 +1,14 @@
+---
 
+titlu: Termenii Serviciului
+
+---
+
+### Limbajul juridic cu caracter obligatoriu este în limba engleză, şi pot fi găsite [aici](https://code.org/tos). Mai jos este o traducere.
 
 # Termenii serviciului
 
-Last Revised: December 5, 2014
+Revizuit ultima oara: 5 decembrie 2014
 
 Code.org este o organizaţie nonprofit("Code.org"). Misiunea noastră este de oferi fiecărui elev oportunitatea de a învăța tehnologia computerelor și programare. Ca parte a acestei misiuni, Code.org opereaza site-uri web cum ar fi <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, dar si alte site-uri, informatii, texte, curriculum, videoclipuri, grafica, fotografii, API-uri, notificări de e-mail şi alte materiale, produse conexe şi servicii ("**serviciile**"), inclusiv platforma de tutoriale pe site-ul <http://studio.code.org> ("**Codul Studio**").
 
@@ -20,7 +26,7 @@ Unele servicii pot fi supuse unor postări suplimentare de reguli sau termeni ai
 
 Luăm măsuri pentru a minimiza colectarea de date cu caracter personal de la utilizatori sub vârsta de 13 cum este explicat în Code.org [politica de confidenţialitate](http://code.org/privacy). Dacă sunteţi sub vârsta de 13 ani, vă încurajam să obţineti aprobarea unui părinte sau al tutorelui legal înainte de a crea un cont pe Code.org. Code.org permite anumitor reprezentanţi ai judetelor şcolare şi şcolilor, ca profesori, administratorii, consilierii şi alte cadre didactice (o "**Educator**") sa se conecteze cu studenţii prin intermediul serviciilor pentru a oferi tutoriale, servicii de educatie şi altele. În cazul în care sunteţi un Educator, va puteţi înregistra conturile pe servicii pentru unul sau mai multi dintre studenţii dumneavoastră.
 
-If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
+Dacă sunteţi un Educator şi vă înregistraţi un cont pentru un elev care este sub vârsta de 13 (un "**copil**"), declaraţi şi garantaţi că dvs sau organizaţia educaţională la care lucraţi are permisiunea corespunzătoare pentru a înregistra copilul pentru servicii educationale, precum Code.org, care colectează informațiile personale ale copilului pentru utilizarea in beneficiul scolii şi pentru nici un scop comercial. În plus, sunteţi de acord să respectaţi aceşti termeni în numele organizării educaţionale pentru care lucraţi.
 
 ### Contul dumneavoastră
 
@@ -44,7 +50,7 @@ Code.org poate, dar nu este obligat să monitorizeze sau să revizuiască orice 
 
 Utilizatorii pot include link-uri către site-uri terţă în conţinutul de utilizator, atâta timp cât conţinutul acestor site-uri nu încalcă aceşti termeni. Făcând clic pe aceste link-uri este pe riscul dumneavoastra. Code.org nu este responsabil pentru disponibilitatea sau conţinutul de site-uri legate, inclusiv publicitate, produse sau alte materiale cu privire la aceasta.
 
-By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and re-distribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content, under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
+Prin trimiterea sau distribuirea de conţinut de utilizator prin intermediul serviciilor sau direct personalului Code.org, acordaţi Code.org la nivel mondial, non-exclusiv, transferabil, repartizat, dreptul deplin, redevenţe-free, perpetuu, irevocabil şi licenţă pentru gazduire, transferul, afişaj, efectuare, reproducere, modificare, distribuire şi re-distribuire, adaptare, pregătirea lucrărilor derivate din, utilizaţi, face, au făcut, vinde, oferta de vânzare, de import, şi să exploateze conţinutul de utilizator, sub toate drepturile de proprietate intelectuală, în tot sau în parte, în orice formate de mass-media şi prin orice canale de mass-media ( cunoscut sau dezvoltate în continuare).
 
 În plus, trimiterea sau distribuirea de conţinut de utilizator prin intermediul serviciilor, acordaţi pentru fiecare utilizator al serviciilor o licenţă non-exclusivă pentru a accesa şi utiliza conţinut de utilizator.
 
@@ -64,7 +70,7 @@ Nu puteti face următoarele în timp ce accesati sau utilizati serviciile noastr
 
 Celebrităţile şi cei care apar în videoclipurile tutorial de pe ro.code.org îşi rezervă toate drepturile pentru asemănarea şi numele lor. Permiţându-vă să redistribuiti aceste clipuri video sau tutoriale, Code.org nu acordă drepturi suplimentare de utilizare a numelor individuale.
 
-Ilustraţia folosită în tutorialele noastre este protejata de Copyright şi utilizarea acestor tutoriale nu vă acordă drepturi de utilizare a ilustraţiei în orice alt mod. Plante vs. Zombies are (c) 2014 [Electronic Arts Inc](http://www.ea.com/). Plante vs. Zombi şi PopCap sunt mărci comerciale înregistrate ale [Electronic Arts Inc](http://www.ea.com/). Angry Birds are (c) 2014 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds este o marcă comercială a [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat şi Ice Age sunt mărci înregistrate şi © secolului XX Fox de acordare a licenţelor şi de Merchandising.
+Ilustraţia folosită în tutorialele noastre este protejata de Copyright şi utilizarea acestor tutoriale nu vă acordă drepturi de utilizare a ilustraţiei în orice alt mod. Plante vs. Zombi sunt (c) 2012 [Electronic Arts Inc](http://www.ea.com/). Plante vs. Zombi şi PopCap sunt mărci comerciale înregistrate ale [Electronic Arts Inc](http://www.ea.com/). Angry Birds sunt (c) 2013 [Rovio Entertainment Ltd](http://www.rovio.com/). Angry Birds este o marcă comercială a [Rovio Entertainment Ltd](http://www.rovio.com/). Scrat şi Ice Age sunt mărci înregistrate şi © secolului XX Fox de acordare a licenţelor şi de Merchandising.
 
 Software-ul ce alimenteaza tutorialele ro.Code.org este guvernat de o sursa deschisa de licenţă, care este postata ca parte a [depozitului de cod sursă](https://github.com/code-dot-org/).
 
@@ -92,7 +98,7 @@ Funcţie de aceşti termeni, puteţi accesa şi utiliza serviciile numai pentru 
 
 La cerere, putem autoriza în mod expres redistribuirea un anumit conţinut pentru uz personal, non-comercial. Vom identifica în mod special conţinutul pentru care sunteti autorizati să redistribuiti şi modurile prin care o puteti face (cum ar fi prin e-mail, Bloguri, sau playerele încorporate). Putem revoca această autorizaţie în orice moment. Dacă vă redistribui conţinutul, trebuie să fiti capabil sa editati sau şterge astfel de conţinut public postat şi trebuie să editaţi sau ştergeţi cu promptitudine la cererea noastra. În plus, fara a uita cele mentionate mai sus, nu va fi permisă utilizarea conţinutului sau serviciilor în cazul în care o astfel de utilizare constituie o aprobare a unui brand terta parte, serviciul sau produsul sau dacă accesul la astfel de redistribuiri de conţinut sau servicii nu este furnizat gratuit.
 
-Design de logo codul ® este o marcă înregistrată a Code.org. Puteţi utiliza numai logo-ul ro.Code.org sau marca cu permisiunea ro.Code.org, şi numai cu referire la ro.Code.org. Mash-up-uri sau combinaţii de logo ro.Code.org sau numele cu alte logo-uri sau nume sunt specific interzise.
+Design-ul logoului CODE ® este o marcă înregistrată a Code.org. Puteţi utiliza numai logo-ul ro.Code.org sau marca cu permisiunea ro.Code.org, şi numai cu referire la ro.Code.org. Mash-up-uri sau combinaţii de logo ro.Code.org sau numele cu alte logo-uri sau nume sunt specific interzise.
 
 Code.org nu reprezintă si nu garantează că serviciile vor fi lipsite de erori, viruşi sau alte componente daunatoare, sau că defectele vor fi corectate. Noi nu reprezentam sau garantam că informaţii disponibile pe sau prin intermediul serviciilor vor fi corecte, exacte, în timp util sau altfel de încredere. Putem face modificări caracteristicilor, funcţionalitatii sau continutului serviciilor în orice moment. Ne rezervăm dreptul, la discreţia noastră de a edita sau şterge orice conţinut, informaţii sau alte materiale puse la dispoziţie ca parte a serviciilor.
 

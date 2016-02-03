@@ -1,33 +1,68 @@
+require 'cdo/script_config'
+require 'dynamic_config/dcdo'
+require 'dynamic_config/gatekeeper'
+
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
 
-  before_filter :prevent_caching
+  # Default s-maxage to use for script level pages which are configured as
+  # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
+  DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes
+
+  # Default max-age to use for script level pages which are configured as
+  # publicly cacheable. Used if the DCDO.public_max_age is not defined.
+  # This is set to twice the proxy max-age because of a bug in CloudFront.
+  DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
+
+  before_action :disable_session_for_cached_pages
+
+  def disable_session_for_cached_pages
+    if ScriptLevelsController.is_cachable_request?(request)
+      request.session_options[:skip] = true
+    end
+  end
+
+  # Return true if request is one that can be publicly cached.
+  def self.is_cachable_request?(request)
+    script_id = request.params[:script_id]
+    script = Script.get_from_cache(script_id) if script_id
+    script && ScriptConfig.allows_public_caching_for_script(script.name)
+  end
 
   def reset
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
+    prevent_caching
 
-    # delete the session if the user is not signed in
+    # delete the client state and other session state if the user is not signed in
     # and start them at the beginning of the script.
-    # If the user is signed in, continue normally
-    reset_session unless current_user
-    redirect_to(build_script_level_path(@script.starting_level)) and return
+    # If the user is signed in, continue normally.
+    redirect_path = build_script_level_path(@script.starting_level)
+
+    if current_user
+      redirect_to(redirect_path)
+    else
+      client_state.reset
+      reset_session
+
+      @redirect_path = redirect_path
+      render 'levels/reset_and_redirect', formats: [:html], layout: false
+    end
   end
 
   def next
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-
+    configure_caching(@script)
     redirect_to(build_script_level_path(next_script_level)) and return
   end
 
   def show
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-
+    configure_caching(@script)
     load_script_level
-
 
     if request.path != (canonical_path = build_script_level_path(@script_level))
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
@@ -36,6 +71,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     load_user
+    return if performed?
     load_section
 
     return if redirect_applab_under_13(@script_level.level)
@@ -51,6 +87,24 @@ class ScriptLevelsController < ApplicationController
 
   private
 
+  # Configure http caching for the given script. Caching is disabled unless the
+  # Gatekeeper configuration for 'script' specifies that it is publicly
+  # cachable, in which case the max-age and s-maxage headers are set based the
+  # 'public-max-age' DCDO configuration value.  Because of a bug in Amazon Cloudfront,
+  # we actually set max-age to twice the value of s-maxage, to avoid Cloudfront serving
+  # stale content which has to be revalidated by the client. The details of the bug are
+  # described here:
+  # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
+  def configure_caching(script)
+    if script && ScriptConfig.allows_public_caching_for_script(script.name)
+      max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
+      proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
+      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+    else
+      prevent_caching
+    end
+  end
+
   def next_script_level
     user_or_session_level || @script.starting_level
   end
@@ -63,17 +117,12 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  # Attempts to find the next level for this session and script
+  # Attempts to find the next unpassed level for this session and script
   def find_next_level_for_session(script)
-    session_progress = session[:progress] || {}
-
-    script.script_levels.each do |sl|
-      next unless sl.valid_progression_level?
-      passed_level = session_progress.fetch(sl.level_id, -1) < Activity::MINIMUM_PASS_RESULT
-      return sl if passed_level
+    script.script_levels.detect do |sl|
+      sl.valid_progression_level? &&
+          (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
-
-    nil
   end
 
   def load_script_level
@@ -89,22 +138,26 @@ class ScriptLevelsController < ApplicationController
   end
 
   def load_level_source
-    return if @level.game.name == 'Jigsaw'
-
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
+      # load the solution for teachers clicking "See the Solution"
       authorize! :manage, :teacher
       level_source = @ideal_level_source
-      level_view_options(share: true)
-      view_options(readonly_workspace: true,
-                   callouts: [],
-                   full_width: true)
+      readonly_view_options
     elsif @user && current_user && @user != current_user
+      # load other user's solution for teachers viewing their students' solution
       level_source = @user.last_attempt(@level).try(:level_source)
-      view_options(readonly_workspace: true,
-                   callouts: [])
+      readonly_view_options
     elsif current_user
-      # Set start blocks to the user's previous attempt at this puzzle.
-      level_source = current_user.last_attempt(@level).try(:level_source)
+      # load user's previous attempt at this puzzle.
+      @last_activity = current_user.last_attempt(@level)
+      level_source = @last_activity.try(:level_source)
+
+      user_level = current_user.user_level_for(@script_level)
+      if user_level && user_level.submitted?
+        level_view_options(submitted: true)
+        level_view_options(unsubmit_url: url_for(user_level))
+        readonly_view_options
+      end
     end
 
     level_source.try(:replace_old_when_run_blocks)
@@ -113,6 +166,11 @@ class ScriptLevelsController < ApplicationController
 
   def load_user
     return if params[:user_id].blank?
+
+    if current_user.nil?
+      render text: 'Teacher view is not available for this puzzle', layout: true
+      return
+    end
 
     user = User.find(params[:user_id])
 
@@ -145,6 +203,7 @@ class ScriptLevelsController < ApplicationController
     load_level_source
 
     @callback = milestone_url(user_id: current_user.try(:id) || 0, script_level_id: @script_level.id)
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || enable_scrolling?,
@@ -158,4 +217,10 @@ class ScriptLevelsController < ApplicationController
     }
     render 'levels/show', formats: [:html]
   end
+
+  # Don't try to generate the CSRF token for forms on this page because it's cached.
+  def protect_against_forgery?
+    return false
+  end
+
 end

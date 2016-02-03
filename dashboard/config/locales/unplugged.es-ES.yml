@@ -30,11 +30,11 @@
         video: Unplug2
       Unplug3:
         title: Programación en papel cuadriculado
-        desc: Programándose unos a otros para hacer dibujos, los estudiantes empezarán
-          a entender de qué trata la programación. La clase empezará haciendo que
-          los estudiantes intercambien instrucciones para colorear cuadrados en una
-          hoja cuadriculada, con el fin de reproducir una imagen. Si hay tiempo, la
-          clase puede terminar con dibujos que los estudiantes crean.
+        desc: Programando algunos dibujos, los estudiantes empezarán a entender de
+          qué trata la programación. La clase empezará haciendo que los estudiantes
+          intercambien instrucciones para colorear cuadrados en una hoja cuadriculada,
+          con el fin de reproducir una imagen en la hoja. La clase puede terminar
+          exhibiendo los dibujos que los estudiantes realizaron.
         pdfs:
         - unplug3-es-ES
         video: Unplug3

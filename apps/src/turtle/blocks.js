@@ -817,6 +817,30 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
+  blockly.Blocks.alpha = {
+    // TODO:
+    // - Add alpha to a group
+    // - Make sure it doesn't count against correct solutions
+    //
+    init: function() {
+      this.appendDummyInput()
+          .appendTitle(msg.setAlpha());
+      this.appendValueInput("VALUE")
+          .setCheck("Number");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setHSV(196, 1.0, 0.79);
+      this.setTooltip('');
+    }
+  };
+
+  generator.alpha = function () {
+    var alpha = generator.valueToCode(this, 'VALUE', Blockly.JavaScript.ORDER_NONE);
+    return 'Turtle.globalAlpha(' + alpha + ', \'block_id_' +
+        this.id + '\');\n';
+  };
+
   generator.draw_colour = function() {
     // Generate JavaScript for setting the colour.
     var colour = generator.valueToCode(this, 'COLOUR',

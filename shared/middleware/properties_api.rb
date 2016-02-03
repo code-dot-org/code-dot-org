@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
+require 'json'
 
 class PropertiesApi < Sinatra::Base
 
@@ -24,7 +25,9 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
     dont_cache
     content_type :json
-    PropertyType.new(channel_id, storage_id(endpoint)).to_hash.to_json
+    not_authorized unless owns_channel? channel_id
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).to_hash.to_json
   end
 
   #
@@ -35,7 +38,8 @@ class PropertiesApi < Sinatra::Base
   get %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
     content_type :json
-    PropertyType.new(channel_id, storage_id(endpoint)).get(name).to_json
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).get(name).to_json
   end
 
   #
@@ -45,7 +49,8 @@ class PropertiesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-properties/([^/]+)/([^/]+)$} do |endpoint, channel_id, name|
     dont_cache
-    PropertyType.new(channel_id, storage_id(endpoint)).delete(name)
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    PropertyType.new(decrypted_channel_id, storage_id(endpoint)).delete(name)
     no_content
   end
 
@@ -67,11 +72,44 @@ class PropertiesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = PropertyType.new(channel_id, storage_id(endpoint)).set(name, PropertyBag.parse_value(request.body.read), request.ip)
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    parsed_value = PropertyBag.parse_value(request.body.read)
+    value = PropertyType.new(decrypted_channel_id, storage_id(endpoint)).set(name, parsed_value, request.ip)
 
     dont_cache
     content_type :json
     value.to_json
+  end
+
+  #
+  # POST /v3/(shared|user)-properties/<channel-id>
+  #
+  # Multi-set  values from request body
+  #
+  post %r{/v3/(shared|user)-properties/([^/]+)$} do |endpoint, channel_id|
+    unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
+    unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
+
+    begin
+      json_data = JSON.parse(request.body.read)
+    rescue => e
+      msg = "The json could not be loaded: #{e.message}"
+      halt 400, {}, msg
+    end
+
+    overwrite = request.GET['overwrite'] == '1'
+
+    _, decrypted_channel_id = storage_decrypt_channel_id(channel_id)
+    bag = PropertyType.new(decrypted_channel_id, storage_id(endpoint))
+    bag_hash = nil
+    json_data.each do |k, v|
+      if !overwrite
+        bag_hash ||= bag.to_hash
+        next if bag_hash.has_key? k
+      end
+      bag.set(k, v, request.ip)
+    end
+    dont_cache
   end
 
   #

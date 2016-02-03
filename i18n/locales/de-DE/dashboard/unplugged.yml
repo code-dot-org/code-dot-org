@@ -21,7 +21,7 @@ de:
         video: Unplug3
       Unplug4:
         title: Algorithmen
-        desc: 'Diese Lektion behandelt Algorithmen.  Mit Tangram-Formen und Millimeterpapier wird die erste Übung zeigen wie wichtig es ist, jede Anweisung so klar und eindeutig wie möglich zu machen.  Danach wird die Klasse untersuchen wie viele Möglichkeiten es gibt um ein Papier in ein Rechteck zu falten, wobei sie feststellen das einige Methoden mehr oder weniger Faltungen erlauben.'
+        desc: 'Diese Lektion behandelt Algorithmen.  Mit Tangram-Formen und Millimeterpapier wird die erste Übung zeigen, wie wichtig es ist, jede Anweisung so klar und eindeutig wie möglich zu machen.  Danach wird die Klasse untersuchen, wie viele Möglichkeiten es gibt, ein Blatt Papier in ein Rechteck zu falten, und feststellen, dass manche Methoden mehr oder weniger Faltungen erlauben als andere.'
         pdfs:
           - unplug4
         video: Unplug4
@@ -33,7 +33,7 @@ de:
         video: Unplug5
       Unplug6:
         title: Bedingungen
-        desc: 'Dies ist ein Klassen-Spiel.  Nach der Einführung der Idee von Bedingungen, Wenn-Anweisungen und Schleifen, kann die Klasse,  zusammen mit einem zuvor erstellte Programm, einem Kartenspiel und ein bisschen Glück, üben.'
+        desc: 'Dies ist ein Klassen-Spiel.  Nach der Einführung der Konzepte von Bedingungen, Wenn-Anweisungen und Schleifen kann die Klasse gemeinsam üben, und zwar mit einem zuvor erstellten Programm, einem Kartenspiel und ein bisschen Glück.'
         pdfs:
           - unplug6
         video: Unplug6
@@ -191,6 +191,6 @@ de:
         desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Kollisionserkennung und der Satz des Pythagoras
+        desc: Bestimmen, wann Objekte auf dem Bildschirm einander berühren, ist ein wichtiger Aspekt vieler Spiele. In dieser Lektion betrachten, wie der Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden, ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
         video: alg_16_biggame_collision_detection

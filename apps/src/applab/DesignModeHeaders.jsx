@@ -1,4 +1,3 @@
-var React = require('react');
 var applabMsg = require('./locale');
 var msg = require('../locale');
 
@@ -45,6 +44,7 @@ module.exports = React.createClass({
     var manageAssetsIcon = (
       <span style={styles.iconContainer}>
         <i className="fa fa-cog workspace-header-clickable"
+          id="manage-assets-button"
           style={styles.assetsIcon}
           onClick={this.handleManageAssets}
           title={applabMsg.manageAssets()}></i>
@@ -54,9 +54,9 @@ module.exports = React.createClass({
     return (
       <div id="design-headers">
         <div id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
+          {manageAssetsIcon}
           <span>{applabMsg.designToolboxHeader()}</span>
           <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
-          {manageAssetsIcon}
         </div>
         <div className="workspace-header" onClick={this.onToggleToolbox}
             style={styles.showToolboxHeader}>

@@ -1,16 +1,39 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id                       :integer          not null, primary key
+#  game_id                  :integer
+#  name                     :string(255)      not null
+#  created_at               :datetime
+#  updated_at               :datetime
+#  level_num                :string(255)
+#  ideal_level_source_id    :integer
+#  solution_level_source_id :integer
+#  user_id                  :integer
+#  properties               :text(65535)
+#  type                     :string(255)
+#  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
+#
+# Indexes
+#
+#  index_levels_on_game_id  (game_id)
+#
+
 require 'nokogiri'
 class Blockly < Level
   serialized_attrs %w(
     level_url
     skin
-    instructions
-    markdown_instructions
     start_blocks
     toolbox_blocks
     required_blocks
+    recommended_blocks
     ani_gif_url
     is_k1
     skip_instructions_popup
+    never_autoplay_video
     scrollbars
     ideal
     min_workspace_height
@@ -35,6 +58,8 @@ class Blockly < Level
     edit_code
     code_functions
     failure_message_override
+    droplet_tooltips_disabled
+    lock_zero_param_functions
   )
 
   before_validation {
@@ -43,7 +68,7 @@ class Blockly < Level
 
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
-    %w(start_blocks toolbox_blocks required_blocks)
+    %w(start_blocks toolbox_blocks required_blocks recommended_blocks)
   end
 
   def to_xml(options={})
@@ -93,6 +118,19 @@ class Blockly < Level
   def pretty_block(block_name)
     xml_string = self.send("#{block_name}_blocks")
     self.class.pretty_print(xml_string)
+  end
+
+  def self.count_xml_blocks(xml_string)
+    unless xml_string.blank?
+      xml = Nokogiri::XML(xml_string, &:noblanks)
+      # The structure of the XML will be
+      # <document>
+      #   <xml>
+      #     ... blocks ...
+      # So the blocks will be the children of the first child of the document
+      return xml.try(:children).try(:first).try(:children).try(:length) || 0
+    end
+    0
   end
 
   def self.convert_toolbox_to_category(xml_string)
@@ -148,7 +186,7 @@ class Blockly < Level
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_options
-    options = Rails.cache.fetch("#{cache_key}/blockly_level_options") do
+    options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
       level = self
       level_prop = {}
 
@@ -157,6 +195,7 @@ class Blockly < Level
       # To override the default camelization add an entry to this hash.
       overrides = {
         required_blocks: 'levelBuilderRequiredBlocks',
+        recommended_blocks: 'levelBuilderRecommendedBlocks',
         toolbox_blocks: 'toolbox',
         x: 'initialX',
         y: 'initialY',
@@ -181,6 +220,10 @@ class Blockly < Level
         level_prop['codeFunctions'] = level.try(:project_template_level).try(:code_functions) || level.code_functions
       end
 
+      if level.is_a? Applab
+        level_prop['startHtml'] = level.try(:project_template_level).try(:start_html) || level.start_html
+      end
+
       if level.is_a?(Maze) && level.step_mode
         step_mode = JSONValue.value(level.step_mode)
         level_prop['step'] = step_mode == 1 || step_mode == 2
@@ -195,8 +238,22 @@ class Blockly < Level
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt finalDirt goal softButtons inputOutputTable).concat(NetSim.json_object_attrs).each do |x|
+      %w(map initialDirt rawDirt goal softButtons inputOutputTable).
+          concat(NetSim.json_object_attrs).
+          concat(Craft.json_object_attrs).
+          each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
+      end
+
+      # some older levels will not have 'rawDirt' in the saved params;
+      # in this case, we can infer its value from their map and
+      # initialDirt values
+      if level.is_a? Karel
+        unless level_prop['rawDirt']
+          map = level_prop['map']
+          initial_dirt = level_prop['initialDirt']
+          level_prop['rawDirt'] = Karel.generate_raw_dirt(map, initial_dirt)
+        end
       end
 
       # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
@@ -214,11 +271,10 @@ class Blockly < Level
       # Set some values that Blockly expects on the root of its options string
       non_nil_level_prop = level_prop.reject!{|_, value| value.nil?}
       app_options.merge!({
-                             baseUrl: "#{ActionController::Base.asset_host}/blockly/",
+                             baseUrl: Blockly.base_url,
                              app: level.game.try(:app),
                              levelId: level.level_num,
                              level: non_nil_level_prop,
-                             cacheBust: level.class.cache_bust,
                              droplet: level.game.try(:uses_droplet?),
                              pretty: Rails.configuration.pretty_apps ? '' : '.min',
                          })
@@ -227,15 +283,19 @@ class Blockly < Level
     options.freeze
   end
 
-  # XXX Since Blockly doesn't play nice with the asset pipeline, a query param
-  # must be specified to bust the CDN cache. CloudFront is enabled to forward
-  # query params. Don't cache bust during dev, so breakpoints work.
-  # See where ::CACHE_BUST is initialized for more details.
-  def self.cache_bust
-    if ::CACHE_BUST.blank?
-      false
-    else
-      ::CACHE_BUST
-    end
+  def self.base_url
+    "#{Blockly.asset_host_prefix}/blockly/"
+  end
+
+  def self.asset_host_prefix
+    host = ActionController::Base.asset_host
+    (host.blank?) ? "" : "//#{host}"
+  end
+
+  # If true, don't autoplay videos before this level (but do keep them in the
+  # related videos collection).
+  def autoplay_blocked_by_level?
+    # Wrapped since we store our serialized booleans as strings.
+    self.never_autoplay_video == 'true'
   end
 end

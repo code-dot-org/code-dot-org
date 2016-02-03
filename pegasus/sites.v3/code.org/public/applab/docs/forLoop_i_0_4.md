@@ -19,39 +19,11 @@ Category: Control
 
 [short_description]
 
-____________________________________________________
-[example]
-
-The **for loop** repeats statements like a **while loop** but adds an **initialization** and **final expression** step.
-<pre>
-for (initialization; condition; final expression) {
-    code to execute
-}
-</pre>
-**initialization** is executed once, before anything else.
-
-**condition** is checked each iteration, to see if the loop should execute.
-
-**final expression** is executed every iteration, after all the code inside the loop.
-
-[/example]
-____________________________________________________
-
-The most common usage of a for-loop in JavaScript is simply to use it as a "repeat loop" - a block of code that defines how many times you want some lines of code to repeat.  Unfortunately, JavaScript does not have a simple "repeat" construct, so you need to use a for-loop.  Here is a typical construct used to repeat in which the loop uses a variable to count up to 10 and then stops:
-
-<code>for(var i = 0; i < 10; i++)</code>
-
-Following the definition above here is a breakdown of the meaning the individual statements for this loop.
-
-**Statement 1** <code>var i = 0;</code> "Create a variable called i and set it to 0" -- executed before the loop starts
-
-**Statement 2** <code>i < 10;</code>"While i is less than 10" -- condition for continuing to run the loop
-
-**Statement 3** <code>i++</code> "Increase (increment) i by 1" -- executed each time after the last line of code in the loop is run, before the condition is checked again.
-
-The simple repeat behavior is shown in the first example.
+Executes a block of statements a certain number of times depending on the the initialization expression, conditional expression, and increment expression.
 
 [/short_description]
+
+Instead of typing a block of statements again and again, you can use a *for loop* around the block of statements. The most common usage of a for loop is simply to use it as a *counting* loop to execute a block of code a certain number of times.
 
 [/description]
 
@@ -60,55 +32,124 @@ ____________________________________________________
 
 [example]
 
-The most common usage of a for-loop in javascript is simply to use it as a "repeat loop".  The loop below repeats the group of turtle moves 10 times.  You can change the 10 to any number.
-<pre>
-penDown();
-for(var i=0; i<10; i++){
-	moveForward(25);
+```
+// Draw 4 dots along a line.
+for(var i=0; i<4; i++){
 	dot(5);
+	moveForward();
 }
-</pre>
+```
 
 [/example]
+____________________________________________________
+[example]
+
+**Example: Count Down** Count down to zero from ten using a negative increment.
+
+```
+// Count down to zero from 10.
+for(var i=10; i>0; i--){
+ write(i) ;
+}
+write('Blast Off!');
+```
+
+[/example]
+____________________________________________________
+[example]
+
+**Example: One Inch** Draw 8 tic marks along a line.
+
+```
+// Draw 8 tic marks along a line.
+penUp();
+turnLeft();
+moveForward(100);
+turnLeft(180);
+penDown();
+for(var i=0; i<8; i++){
+  ticMark();
+	moveForward();
+}
+ticMark();
+
+function ticMark() {
+  turnLeft();
+  moveForward(5);
+  turnLeft(180);
+  moveForward(5); 
+  turnLeft();  
+}
+```
+
+[/example]
+
+____________________________________________________
+[example]
+
+**Example: Rake** Draw a rake ranging the angles from -45 to 45 by 5s.
+
+```
+// 
+for(var angle=-45; angle<=45; angle=angle+5){
+	turnTo(angle);
+	moveForward(100);
+	turnLeft(180);
+	moveForward(100);
+}
+turnTo(180);
+moveForward(200);
+```
+
+[/example]
+____________________________________________________
+[example]
+
+**Example: Flower** Draw a flower with a parameter number of petals. Works best for petalCount between 5 and 10.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
+// Draw a flower with a parameter number of petals. Works best for petalCount between 5 and 10.
+drawFlower(5);
+
+function drawFlower(petalCount) {
+  penColor("pink");
+  penUp();
+  for(var i=0; i&lt;360; i=i+(360/petalCount)){
+    turnTo(i);
+    moveForward(360/petalCount);
+    dot((2/3)*360/petalCount);
+    moveForward(-360/petalCount);	
+  }
+  penColor("blue");
+  dot(360/petalCount/2);
+}
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/807a8c3df4c66aae1e5db637ffda7e59-image-1446383236765.gif'>
+</td>
+</tr>
+</table>
+
+[/example]
+
 ____________________________________________________
 
 [example]
 
-The following block of code declares a for loop that executes a block of code 5 times.
-Each iteration of the loop computes a random number and adds the value to the variable named `sum`.
-After the loop terminates, the average is computed and the result is printed to the console.
+**Example: Random Die Rolls** Simulate rolling a die using a random number from 1 to 6, and roll the die 10000 times to check if the expected roll is 3.5.
 
-<pre>
-var count = 5;
+```
+// Simulate rolling a die using a random number from 1 to 6, and roll the die 10000 times to check if the expected roll is 3.5.
 var sum = 0;
-for (var idx = 0; idx < count; idx++) {
-    var value = Math.random(); // computes a random number
-    sum += value; // adds the random number to the variable sum
+for (var i = 0; i < 10000; i++) {
+    sum = sum + randomNumber(1,6);
 }
-
-var average = sum / count; // computes the average of the five random numbers
-console.log(average); // prints the average to the console
-</pre>
-
-[/example]
-____________________________________________________
-
-[example]
-
-The following block of code declares an empty Array of length 10.
-The for loop iterates through each index of the Array and sets the value at that index
-to a random number between 0 and 100.
-After the loop terminates, the numbers are printed to the console.
-
-<pre>
-var numbers = new Array(10);
-for (var j = 0; j < numbers.length; j++) {
-    var value = randomNumber(0, 100); // compute a random number between 0 and 100
-    numbers[j] = value; // store the random number in the Array at the jth index
-}
-
-console.log(numbers); // print the Array of numbers to the console.
-</pre>
+console.log(sum/10000);
+```
 
 [/example]
 
@@ -117,18 +158,33 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
-for (initialization; condition; expression) {
-  statement
+
+```
+for (initialization; condition; increment) {
+  // block of statements
 }
-</pre>
+```
+
+Here is a typical construct for loop used to count from 0 to 3 to execute the block of code 4 times:
+
+<code>for(var i = 0; i < 4; i++)</code>
+
+**initialization**  <code>var i = 0;</code> is executed once, before anything else. Create an identifier named *i* and initialize it to 0.
+ 
+**condition** <code>i < 4;</code> is checked before each iteration, to see if the block of statements should execute or not. If *i* is less than 4.
+
+**increment** <code>i++</code> is executed after every iteration, after the block of statements is executed. Increase (increment) *i* by 1.
 
 [/syntax]
 
 [tips]
 
 ### Tips
-- This statement is identical to the native JavaScript [for Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for).
+- You do not need to use *i* in the for loop statement, you can use any declared and initialized identifier.
+- You can start (initialization) and end (condition) the loop at any values. 
+- You can use any increment, positive or negative.
+- Be careful not to code an infinite loop where the condition is never false.
+- Be careful not to code a loop that never executes because the condition is never true.
 
 [/tips]
 

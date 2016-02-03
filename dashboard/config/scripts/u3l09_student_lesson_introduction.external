@@ -1,30 +1,28 @@
 name 'U3L09 Student Lesson Introduction'
 title 'Scene Design Part 1: Plan '
+css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 3: Lesson 09 - Scene Design Part 1: Plan 
+## Unit 3: Lesson 08 - Practice PT - Design a Digital Scene
 
 # Background
 
-Amazing projects can be created with collaboration, however successful collaboration requires a detailed plan. Designing the project is the first step. Planning who will be responsible for the individual parts of the design and how to integrate those parts into the whole is the next task.
+Breaking down complex programming tasks is useful not only because it makes solutions easier to conceive of, but because it allows multiple programmers to work on the program at the same time. In this project you will use this principle to collaboratively develop your own digital scene.
 
 # Lesson
 
-* Collaborate with others to design a digital scene.
-* Create a plan for coding a multiple-day, team-built project. 
-* Plan individual responsibilities for the larger project. 
+* Collaborate with a group to choose a topic for a digital scene
+* Identify the major components of your digital scene and assign them to individual group members
+* Individually program your assigned components of the digital scene
+* Recombine your group's code and use it to create a digital scene
+* Complete reflection questions
   
 # Resources
-* Guide: <a href="https://docs.google.com/a/code.org/file/d/0Bz-UNkutLIhzaFBheE02ckNQLURXbmJsZmZ0dU9OUzJvancw/edit" target="_blank">
-Project Planning Process (P3)
+* Activity Guide and Group Planning Guide: <a href="https://docs.google.com/document/d/1FI-_esPMKY9I455G75w0-X932aGJktrLCc16v1iCtlQ/edit?usp=sharing" target="_blank">
+ Practice PT - Design a Digital Scene
 </a>
-* Rubric: <a href="https://docs.google.com/a/iit.edu/document/d/1NVuLJRPQFZWZ8_6JERQyDyUM6LXtqE775quJ7SQPnzU" target="_blank">
-Digital Scene Design
-</a>
-* Worksheet: <a href="https://docs.google.com/document/d/1EzHd3TNWBu5LaC2mLkW8dzce1ihxgNDID3ZsEvrqT74" target="_blank"> Individual Planning Document
-</a>
-* Worksheet: <a href="https://docs.google.com/a/iit.edu/document/d/1dl2b1iY3ibygfnVmecz_DwMqU78g16qpGATiqira3fQ" target="_blank"> 
-Group Planning Document
+* Worksheet: <a href="https://docs.google.com/document/d/19pgdzB9bs94iti-fC3iIMDUmEWSpY5v17wQt14AUzHg/edit?usp=sharing" target="_blank">
+Submission Guidelines: Reflection and Rubric
 </a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

@@ -32,7 +32,7 @@ pt:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Associe a grade ao programa.
+        Match the grid to the program.: Associe a grelha ao programa.
         Matching: Correspondência
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -65,7 +65,7 @@ pt:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
         Artist Loops Matching One: 'Ciclos do artista - Associação 1'
-        Match the loop to the shape: Associe o laço à forma
+        Match the loop to the shape: Associe o loop à forma
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
@@ -205,7 +205,7 @@ pt:
         /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
-        Match the blocks: Associe os blocos
+        Match the blocks: Associa os blocos
         Matching: Correspondência
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
@@ -247,7 +247,7 @@ pt:
         /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
         Drag the blocks to match.: Arrastar os blocos para correspondência.
         Instructions: Instruções
-        Match the puzzles and blocks: Associe os desafios aos blocos
+        Match the puzzles and blocks: Associar os desafios aos blocos
         Matching: Correspondência
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
@@ -591,17 +591,18 @@ pt:
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Multiple Choice: Escolha múltipla
         Which blocks solve this puzzle?: Quais blocos resolvem o desafio?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Multiple Choice: Escolha múltipla
         Which blocks draw the square?: Quais blocos formam o quadrado?

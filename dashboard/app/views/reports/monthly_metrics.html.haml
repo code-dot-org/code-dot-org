@@ -12,5 +12,11 @@
   $("#metrics").handsontable({
     data: data,
     rowHeaders: #{ headers.try(:to_json)},
-    type: 'numeric'
+    type: 'numeric',
+    cells: function(row, col, prop) {
+      if(row == 4) {
+        return cellProperties = {format: '0.0000'};
+      }
+      return {};
+    }
   });

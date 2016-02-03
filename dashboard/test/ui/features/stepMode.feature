@@ -2,6 +2,8 @@ Feature: Step Mode
 
 Scenario: Step Only - Failure
   Given I am on "http://learn.code.org/s/step/puzzle/1"
+  And I wait for 3 seconds
+  And I wait to see "#runButton"
   Then element "#runButton" is hidden
   And element "#resetButton" is hidden
   And element "#stepButton" is visible
@@ -42,6 +44,7 @@ Scenario: Step Only - Failure
 
 Scenario: Step Only - Success
   Given I am on "http://learn.code.org/s/step/puzzle/1"
+  And I wait to see "#runButton"
   Then element "#runButton" is hidden
   And element "#resetButton" is hidden
   And element "#stepButton" is visible
@@ -59,6 +62,7 @@ Scenario: Step Only - Success
 
 Scenario: Step Only - Reset while stepping
   Given I am on "http://learn.code.org/s/step/puzzle/1"
+  And I wait to see "#runButton"
   Then element "#runButton" is hidden
   And element "#resetButton" is hidden
   And element "#stepButton" is visible
@@ -80,6 +84,7 @@ Scenario: Step Only - Reset while stepping
 
 Scenario: Step and Run - Stepping
   Given I am on "http://learn.code.org/s/step/puzzle/2"
+  And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And element "#stepButton" is visible
@@ -103,6 +108,7 @@ Scenario: Step and Run - Stepping
 
 Scenario: Step and Run - Running
   Given I am on "http://learn.code.org/s/step/puzzle/2"
+  And I wait to see "#runButton"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   And element "#stepButton" is visible

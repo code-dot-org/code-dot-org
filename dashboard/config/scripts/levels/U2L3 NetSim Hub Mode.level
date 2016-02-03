@@ -48,7 +48,11 @@
     "default_dns_mode": "none",
     "broadcast_mode": "true",
     "show_log_browser_button": "false",
-    "connected_routers": "false"
+    "connected_routers": "false",
+    "video_key": "csp_internetsimulator_3",
+    "never_autoplay_video": "true",
+    "examples_required": "false",
+    "markdown_instructions": "# Test It Out! (Optional)\r\n\r\nAfter you've finished developing your protocol feel free to test it out using the Internet Simulator. Does your protocol work as well as you thought?"
   }
 }]]></config>
   <blocks/>

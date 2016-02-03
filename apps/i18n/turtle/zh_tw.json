@@ -1,6 +1,6 @@
 {
-  "blocksUsed": "已使用 %1 個程式積木。",
-  "branches": "分歧",
+  "blocksUsed": "已使用 %1 個程式積木",
+  "branches": "分支",
   "catColour": "顏色",
   "catControl": "迴圈類別",
   "catMath": "運算類別",
@@ -15,7 +15,7 @@
   "createSnowflakeLine": "建立直線型態的雪花",
   "createSnowflakeSpiral": "建立螺旋型態的雪花",
   "createSnowflakeFlower": "建立花朵型態的雪花",
-  "createSnowflakeFractal": "建立不規則砕片型態的雪花",
+  "createSnowflakeFractal": "建立不規則型態的雪花",
   "createSnowflakeRandom": "建立隨機型態的雪花",
   "createASnowflakeBranch": "建立雪花分支",
   "degrees": "度",
@@ -26,7 +26,7 @@
   "drawAHexagon": "畫個六邊形",
   "drawAHouse": "畫一間房子",
   "drawAPlanet": "畫一顆行星",
-  "drawARhombus": "繪製菱形",
+  "drawARhombus": "畫一個菱形",
   "drawARobot": "畫一個機器人",
   "drawARocket": "畫一個火箭",
   "drawASnowflake": "畫一片雪花",
@@ -65,6 +65,7 @@
   "penTooltip": "使用\"下筆\"或\"停筆\"來開始或停止繪畫動作。",
   "penUp": "停筆",
   "reinfFeedbackMsg": "這是您的繪圖 ！繼續努力或者開始下一個謎題。",
+  "setAlpha": "設定半透明值",
   "setColour": "設定顏色",
   "setPattern": "設定模式",
   "setWidth": "設定寬度",
@@ -80,5 +81,5 @@
   "turnTooltip": "將藝術家向左轉動指定的角度",
   "turtleVisibilityTooltip": "將藝術家隱藏或顯示。",
   "widthTooltip": "更改畫筆的粗細。",
-  "wrongColour": "你圖形顏色是錯誤的。在這個關卡中，它必須是 %1。"
+  "wrongColour": "你圖形的顏色是錯誤的。在這個關卡中，它必須是 %1。"
 }

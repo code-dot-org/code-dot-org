@@ -20,12 +20,12 @@ Category: Turtle
 
 [short_description]
 
-Moves the turtle forward and to the left in a smooth circular arc.
+Moves the turtle forward and to the left in a smooth, circular arc.
 
 [/short_description]
 
-Moves the turtle forward along a circle. The circle is positioned radius pixels to the left of the turtle. The turtle's position is updated to be on the circle angle degrees from where it started. The Turtle's angle is rotated angle degrees to the left.
-
+The turtle is not limited to only moving in a straight line. arcLeft(angle,radius) moves the turtle counterclockwise along an *angle* degree arc of a *radius* sized circle. The center of the circle is *radius* pixels to the left of the starting turtle position and direction.
+ 
 [/description]
 
 ### Examples
@@ -33,9 +33,10 @@ ____________________________________________________
 
 [example]
 
-<pre>
-arcLeft(90, 25);    // Move the turtle forward and to the left
-</pre>
+```
+// Draw a quarter circle counterclockwise.
+arcLeft(90, 25);
+```
 
 [/example]
 
@@ -43,9 +44,14 @@ ____________________________________________________
 
 [example]
 
-<pre>
-arcLeft(360, 50)    // Make a full circle to the left
-</pre>
+**Example: One Ring to Rule Them All** Draw a full circle counterclockwise.
+
+```
+// Draw a full circle counterclockwise.
+penColor("gold");
+penWidth(15);
+arcLeft(360, 50);
+```
 
 [/example]
 
@@ -53,10 +59,13 @@ ____________________________________________________
 
 [example]
 
-<pre>
-arcLeft(-45, 100)   // -45 degrees is also 315 degrees, so move forward by 315 degrees
-// TODO: is this a bug? we should be able to back up right?
-</pre>
+**Example: Negative Angle** arcLeft always moves the turtle counterclockwise. For a negative *angle* the turtle moves (360+*angle*) degrees.
+
+```
+// arcLeft always moves the turtle counterclockwise. 
+// For a negative angle the turtle moves (360+angle) degrees.
+arcLeft(-45, 100);
+```
 
 [/example]
 
@@ -64,12 +73,23 @@ ____________________________________________________
 
 [example]
 
+**Example: Spiral** Spiral into the center of a circle.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-// Spiral into the center of a circle
-for (var radius = 100; radius>0; radius -= 5) { // Keep reducing the radius until we are at the center
-  arcLeft(180, radius);                         // Move around half the circle before we do the next smaller arc
+// Spiral into the center of a circle.
+for (var radius=50; radius>0; radius=radius-5) {
+  arcLeft(180, radius);
 }
 </pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/ceada786c67b4adf4d07b827ba636830-image-1445794379473.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -78,9 +98,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 arcLeft(angle, radius);
-</pre>
+```
 
 [/syntax]
 
@@ -90,15 +111,15 @@ arcLeft(angle, radius);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| angle | number | Yes | The angle along the circle to move.  |
-| radius | number | Yes | The radius of the circle that is placed left of the turtle. Must be >= 0.  |
+| angle | number | Yes | The angle degree arc to move the turtle counterclockwise in a circle.  |
+| radius | number | Yes | The radius of the circle that is placed left of the turtle. radius must be >= 0.  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Moves turtle only.
 
 [/returns]
 
@@ -106,7 +127,9 @@ No return value. Outputs to the display only.
 
 ### Tips
 - Use [penUp()](/applab/docs/penUp) before calling arcLeft() to have the turtle not draw as it moves.
-- You can specify a radius of 0, which makes arcLeft() act the same as turnLeft().
+- You can specify a radius of 0, which makes arcLeft() act the same as [turnLeft()](/applab/docs/turnLeft).
+- Use alternating with [arcRight()](/applab/docs/arcRight) to make wavy lines.
+
 [/tips]
 
 [bug]

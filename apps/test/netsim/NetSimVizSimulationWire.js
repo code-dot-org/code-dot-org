@@ -1,25 +1,28 @@
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
 'use strict';
-/* global describe */
-/* global beforeEach */
-/* global it */
-/* global $ */
+/* global describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
-testUtils.setupLocale('netsim');
-var assert = testUtils.assert;
-var assertEqual = testUtils.assertEqual;
 var NetSimTestUtils = require('../util/netsimTestUtils');
-var fakeShard = NetSimTestUtils.fakeShard;
-var assertTableSize = NetSimTestUtils.assertTableSize;
-
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
-var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 var NetSimVizWire = require('@cdo/apps/netsim/NetSimVizWire');
 var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
 var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
+
+var assert = testUtils.assert;
+var fakeShard = NetSimTestUtils.fakeShard;
+
+testUtils.setupLocale('netsim');
 
 describe("NetSimVizSimulationWire", function () {
   var vizWire, vizLocalNode, vizRemoteNode,
@@ -35,7 +38,7 @@ describe("NetSimVizSimulationWire", function () {
     NetSimLocalClientNode.create(shard, displayName, function (e, n) {
       newClient = n;
     });
-    assert(newClient !== undefined, "Failed to create a remote client.");
+    assert.isDefined(newClient, "Failed to create a remote client.");
     return newClient;
   };
 
@@ -47,17 +50,20 @@ describe("NetSimVizSimulationWire", function () {
    */
   var makeRemoteWire = function (localNodeID, remoteNodeID) {
     var newWire;
-    NetSimWire.create(shard, localNodeID, remoteNodeID, function (e, w) {
+    NetSimWire.create(shard, {
+      localNodeID: localNodeID,
+      remoteNodeID: remoteNodeID
+    }, function (e, w) {
       newWire = w;
     });
-    assert(newWire !== undefined, "Failed to create a remote wire.");
+    assert.isDefined(newWire, "Failed to create a remote wire.");
     return newWire;
   };
 
   var getVizNodeByEntityID = function (_, id) {
-    if (vizLocalNode && vizLocalNode.getCorrespondingEntityID() === id) {
+    if (vizLocalNode && vizLocalNode.getCorrespondingEntityId() === id) {
       return vizLocalNode;
-    } else if (vizRemoteNode && vizRemoteNode.getCorrespondingEntityID() === id) {
+    } else if (vizRemoteNode && vizRemoteNode.getCorrespondingEntityId() === id) {
       return vizRemoteNode;
     }
     return undefined;
@@ -78,37 +84,37 @@ describe("NetSimVizSimulationWire", function () {
       vizWire = new NetSimVizSimulationWire(simWire, getVizNodeByEntityID);
     });
 
-    it ("is a VizElement", function () {
-      assert(vizWire instanceof NetSimVizElement);
+    it("is a VizElement", function () {
+      assert.instanceOf(vizWire, NetSimVizElement);
     });
 
-    it ("is a VizWire", function () {
-      assert(vizWire instanceof NetSimVizWire);
+    it("is a VizWire", function () {
+      assert.instanceOf(vizWire, NetSimVizWire);
     });
 
-    it ("has default properties", function () {
-      assertEqual(0, vizWire.textPosX_);
-      assertEqual(0, vizWire.textPosY_);
-      assertEqual([], vizWire.encodings_);
-      assertEqual(simWire.entityID, vizWire.getCorrespondingEntityID());
-      assert(vizLocalNode === vizWire.localVizNode);
-      assert(vizRemoteNode === vizWire.remoteVizNode);
+    it("has default properties", function () {
+      assert.strictEqual(0, vizWire.textPosX_);
+      assert.strictEqual(0, vizWire.textPosY_);
+      assert.deepEqual([], vizWire.encodings_);
+      assert.strictEqual(simWire.entityID, vizWire.getCorrespondingEntityId());
+      assert.strictEqual(vizLocalNode, vizWire.localVizNode);
+      assert.strictEqual(vizRemoteNode, vizWire.remoteVizNode);
     });
 
-    it ("sets addresses on its endpoints", function () {
-      assertEqual(undefined, vizLocalNode.address_);
-      assertEqual(undefined, vizRemoteNode.address_);
+    it("sets addresses on its endpoints", function () {
+      assert.isUndefined(vizLocalNode.address_);
+      assert.isUndefined(vizRemoteNode.address_);
       simWire.localAddress = 'boo';
       simWire.remoteAddress = 'hiss';
       vizWire.configureFrom(simWire);
-      assertEqual('boo', vizLocalNode.address_);
-      assertEqual('hiss', vizRemoteNode.address_);
+      assert.equal('boo', vizLocalNode.address_);
+      assert.equal('hiss', vizRemoteNode.address_);
     });
 
-    it ("is hidden in broadcast mode", function () {
+    it("is hidden in broadcast mode", function () {
       NetSimGlobals.getLevelConfig().broadcastMode = true;
       vizWire.configureFrom(simWire);
-      assertEqual('none', vizWire.getRoot().css('display'));
+      assert.equal('none', vizWire.getRoot().css('display'));
     });
   });
 

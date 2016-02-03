@@ -38,7 +38,7 @@
   "CONTROLS_FOREACH_INPUT_ITEM":"fyrir hvert stak",
   "CONTROLS_FOREACH_TOOLTIP":"Fyrir hvert atriði í lista er breyta '%1' stillt á atriðið og skipanir gerðar.",
   "CONTROLS_FOR_HELPURL":"https:\/\/code.google.com\/p\/blockly\/wiki\/Loops#count_with",
-  "CONTROLS_FOR_INPUT_FROM_TO_BY":"frá %1 til %2 um %3",
+  "CONTROLS_FOR_INPUT_FROM_TO_BY":"frá %1 til %2 talið um %3",
   "CONTROLS_FOR_INPUT_WITH":"telja með",
   "CONTROLS_FOR_TOOLTIP":"Láta breytuna %1 taka inn gildi frá fyrstu tölu til síðustu tölu hlaupandi á bilinu og endurtaka kubbana fyrir hverja tölu.",
   "CONTROLS_IF_ELSEIF_TOOLTIP":"Bæta skilyrði við EF kubbinn.",

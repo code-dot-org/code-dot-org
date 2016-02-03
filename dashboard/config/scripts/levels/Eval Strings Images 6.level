@@ -6,14 +6,26 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Use the overlay function to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
+    "instructions": "Use the overlay block to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "free_play": "false"
+    "free_play": "false",
+    "embed": "false",
+    "markdown_instructions": "Use the overlay block to place a 75 pixel radius yellow star on top of a 150 pixel long blue square.",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "coordinate_grid_background": "false"
   }
 }]]></config>
   <blocks>

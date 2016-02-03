@@ -8,6 +8,7 @@ nav: pd2_nav
 
 - [I'm attending Exploring Computer Science PD](#ecs)
 - [I'm attending Computer Science in Science PD](#science)
+- [I'm attending Counselor/Administrator PD](#counselor-admin)
 
 <a id="ecs"></a>
 
@@ -19,13 +20,7 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
-
-Milestone Complete!
-
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i>
+Milestone complete!
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -46,11 +41,13 @@ Quarter 4: Saturday, May 7, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**September 19th Location**
+**Location**
 
-Venture Hive<br/>
+[Venture Hive<br/>
 1010 NE 2nd Ave<br/>
-Miami, FL 33132
+Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
+
+Free parking is available in front of the building.
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -79,13 +76,9 @@ Milestone complete!
 
 ### Phase 2: Blended Summer Study (3 days in-person & ~8 hours online) ###
 
-#### In-person Workshop####
 
 Milestone Complete!
 
-#### Online Study####
-
-<b><i>Deadline:</b> Phase 2 Online is due September 7th.</i> 
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
@@ -101,11 +94,15 @@ Semester 2: Saturday, January 30, 2016
 8:00am - 4:00pm<br/>
 Breakfast and lunch will be served. 
 
-**Location**
+**January 30th Location**
 
-The LAB Miami<br/>
-400 NW 26th St.<br/>
-Miami, FL 33127
+[3280 South Miami Ave<br/>
+Miami Fl, 33129 ](https://www.google.com/maps/place/3280+S+Miami+Ave,+Miami,+FL+33129/@25.7475713,-80.2142076,17z/data=!3m1!4b1!4m2!3m1!1s0x88d9b65d35bae2af:0x557bf56002bafcf7)
+
+In the Teen Tech Center and the Executive Conference Room
+
+Across the street from Vizcaya. Parking is free and we will have signage indicating were to go in the building.
+
 
 **What to bring to Phase 3 bi-yearly sessions:**
 
@@ -118,6 +115,42 @@ Snacks
 Water
 
 [**Back to the top**](#top)
+<a id="counsleor-admin"></a>
+
+## Counselors and Administrators
+
+Code.org has designed these computer science professional development (PD) programs especially for Counselors and Administrators. The PDs provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching.
+
+####Administrators####
+
+**Save the date**
+
+Thursday, January 28th, 2015<br/> 
+Time TBD<br/>
+
+**Location**
+
+[Venture Hive<br/>
+1010 NE 2nd Ave<br/>
+Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
+
+This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
+
+####Counselors####
+
+**Save the date**
+
+Wednesday, January 27th, 2015<br/> 
+Time TBD
+
+**Location**
+
+[Venture Hive<br/>
+1010 NE 2nd Ave<br/>
+Miami, FL 33132](https://www.google.com/maps/place/Venture+Hive/@25.7841796,-80.1911146,15z/data=!4m2!3m1!1s0x0:0x1f3f68bb617468c0?sa=X&ved=0CGwQ_BIwC2oVChMIo925hqKYyQIVAzSICh2SiQ9f)
+
+This is a weekday, so parking will be $5 at the venue. Please carpool or use public transportation to get to the site. 
+
 
 ----------
 Please visit [FAQs](/educate/pd/15-16/faq) for more information.

@@ -1,0 +1,6 @@
+name 'Embedded Arduino Sketch Test'
+title 'Embedded Arduino Sketch Test'
+markdown <<MARKDOWN
+### Try uploading this sketch to the 5 led circuit you just built, can you figure out what it's doing?
+<iframe style="height: 510px; width: 100%; margin: 10px 0 10px;" allowTransparency="true" src="https://codebender.cc/embed/sketch:157450" frameborder="0"></iframe>
+MARKDOWN

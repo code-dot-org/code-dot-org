@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 var library = require('./designElements/library');
 
 module.exports = React.createClass({
@@ -67,7 +66,7 @@ module.exports = React.createClass({
         var element = library.createElement(elementType, 0, 0, true);
         element.style.position = 'static';
 
-        var div = document.getElementById('divApplab');
+        var div = document.getElementById('designModeViz');
         var xScale = div.getBoundingClientRect().width / div.offsetWidth;
         var yScale = div.getBoundingClientRect().height / div.offsetHeight;
 

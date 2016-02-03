@@ -1,21 +1,26 @@
 it:
-  site_name: "L'Ora del Codice"
-  language: Inglese
-  front_title: Join the largest learning event in history, Dec 7-13, 2015
+  site_name: ORA del CODICE
+  hour_of_code: "L'Ora del Codice"
+  language: Italiano
+  front_title: "Partecipa all'evento didattico più popolare del mondo, %{campaign_date}, 2015"
   coming_soon: Sta arrivando
-  campaign_date_start_short: Dec. 7
-  campaign_date_start_long: December 7
-  campaign_date_short: Dec. 7-13
-  campaign_date_full: December 7-13
-  front_header_banner: Join the largest learning event in history, Dec 7-13, 2015
-  front_intro_default: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in oltre 180 paesi. Chiunque può organizzare ovunque un evento dell'Ora del Codice. Tutorial, della durata di un'ora, sono disponibili in più di 30 lingue. Non è necessaria alcuna esperienza. <strong>Da 4 a 104 anni.</strong>"
+  campaign_date_start_short: 7 Dic.
+  campaign_date_start_long: 7 Dicembre
+  campaign_date_short: 7-13 Dic.
+  campaign_date_full: Dal 7 al 13 Dicembre
+  front_header_banner: "Partecipa all'evento didattico più popolare del mondo, dal 7 al 13 Dicembre 2015"
+  front_intro_default: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni. Chiunque, in ogni parte del mondo, può organizzare un'Ora del Codice. Esercitazioni di un'ora sono disponibili in oltre 40 lingue diverse. Non è necessaria alcuna esperienza. <strong> Da 4 a 104 anni. </strong>"
   front_watch_video: Guarda il nuovo video
-  front_watch_regular_video: Watch the video
+  front_watch_regular_video: Guarda il video
+  front_volunteers: Technical volunteers wanted
   header_menu_resources: Risorse
   header_menu_faq: FAQ
   header_menu_prizes: Premi
+  header_menu_how_to: Come
+  header_menu_promote: Promuovi
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
+  company_asos: ASOS
   company_bgca: Boys and Girls Club of America
   company_bsusa: Boy Scouts of America
   company_cgcs: Council of the Great City Schools
@@ -49,6 +54,7 @@ it:
   company_chelmsfordpublicschooldistrict: Chelmsford School District
   company_cheneysd: Cheney School District
   company_chesterfieldschools: Chesterfield County Public Schools
+  company_codebrooklyn: Code Brooklyn
   company_cps: Chicago Public Schools
   company_ccsd: Clark County School District
   company_cloverparkschooldistrict: Clover Park School District
@@ -72,6 +78,7 @@ it:
   company_vadoe: "Governor's School Programs"
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
+  company_godaddy: Go Daddy
   company_greenupcountyschooldistrict: Greenup County Schools
   company_gwinnettcountypublicschools: Gwinnett County Public Schools
   company_HamptonCitySchools: Hampton City Schools
@@ -105,6 +112,7 @@ it:
   company_oneclay: One Clay County School District
   company_ocps: Orange County Schools
   company_orangeusd: Orange Unified School District
+  company_pbsd: Palm Beach School District
   company_pvusd: Paradise Valley Unified School District
   company_PetersburgCityPublicSchools: Petersburg City Public Schools
   company_pylusd: Placentia-Yorba Linda Union School District
@@ -118,6 +126,8 @@ it:
   company_sfusd: San Francisco Unified School District
   company_ShenandoahCountyPublicSchools: Shenandoah County Public Schools
   company_shorelineschools: Shoreline School District
+  company_sjusd: San Juan Unified School District
+  company_sky: Sky
   company_spokaneschools: Spokane Public Schools
   company_StaffordCountyPublicSchools: Stafford County Public Schools
   company_strongnet: Strongsville School District
@@ -130,94 +140,133 @@ it:
   company_wvsd208: West Valley School District
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
+  company_yelp: Yelp
   prizes_all: Premi per ogni organizzatore
-  prizes_every_organizer: "Ogni organizzatore dell'Ora del Codice riceverà crediti Dropbox o Skype come ringraziamento"
-  prizes_technology: Una scuola pubblica in ogni stato degli Stati Uniti (e Washington DC) vincerà $10,000 in tecnologia
-  prizes_tech_chats: '# classi vinceranno video chat con ospiti molto speciali'
+  prizes_every_organizer: "Ogni organizzatore dell'Ora del Codice riceverà un regalo di ringraziamento da Dropbox o Skype"
+  prizes_technology: Una scuola pubblica in ogni stato degli Stati Uniti (e Washington DC) vincerà 10.000$ in tecnologia
+  prizes_tech_chats: '# classi vinceranno delle video chiamate con ospiti molto speciali'
   prizes_robots: 100 classi vinceranno un kit di robot programmabili
-  prizes_brilliant: Una scuola di ciascuna provincia e regione riceverà 2000$ destinati ad un progetto brillante
+  prizes_brilliant: Una scuola di ciascuna provincia e regione riceverà 2000$ destinati ad un Progetto Brillante
   prizes_actua: 15 scuole in tutto il Canada parteciperanno a 2 laboratori realizzati dai membri di Actua
   prizes_details: Dettagli
-  prizes_nav_dc: Mystery trip to Washington D.C.
-  prizes_nav_technology: $10,000 of technology for your school
-  prizes_nav_video_chat: Video chat with a tech titan
-  prizes_nav_skype_dropbox: Skype credit or Dropbox space for every organizer
-  prizes_nav_brilliant: $2,000 Brilliant Labs project
+  nav_back_to_resources: Torna a Risorse
+  how_to_nav_educators: Per insegnanti
+  how_to_nav_after_school: Per il dopo scuola
+  how_to_nav_parents: Per i genitori
+  how_to_nav_public_officials: Per organizzatori locali
+  how_to_nav_districts: Per le province
+  how_to_nav_assemblies: Per le scuole
+  how_to_nav_organizations: Per le organizzazioni
+  how_to_nav_companies: Per le aziende
+  how_to_nav_afterschool_educators: Per gli insegnanti del doposcuola
+  how_to_nav_volunteers: Per i volontari
+  prizes_nav_title: Premi
+  prizes_nav_home: Tutti i premi
+  prizes_nav_hardware: Iscrizione al premio hardware
+  prizes_nav_terms: Termini e Condizioni
+  prizes_nav_faq: Domande Frequenti (FAQ)
+  prizes_nav_dc: Viaggio a sorpresa a Washington D.C.
+  prizes_nav_technology: 10.000$ di tecnologia per la tua scuola
+  prizes_nav_video_chat: Fai una video chiamata con un gigante della tecnologia
+  prizes_nav_skype_dropbox: Credito Skype o spazio extra su Dropbox per ogni organizzatore
+  prizes_nav_brilliant: $2.000 per un progetto brillante
   prizes_nav_actua: Actua workshop
   prizes_nav_kids_code: Kids Code Jeunesse
-  prizes_nav_terms: Terms and Conditions
-  prizes_nav_faq: FAQ
-  whats_next_header: "What's next?"
-  whats_next_description: "We'll send you materials and helpful tips for your event. New 2015 tutorials are coming soon for any browser, smartphone – or even no computer! <a href='http://code.org/learn'>Try current tutorials </a>"
-  whats_next_how_to: "<a href='http://hourofcode.com/resources/how-to'>Come realizzare un'Ora del Codice</a>"
-  whats_next_promote: "<a href='http://hourofcode.com/resources'>Promuovi l'Ora del Codice</a>"
-  n_have_learned_an_hoc: '<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>'
+  prizes_header: Premi per ogni insegnante
+  prizes_10k: Una scuola pubblica in ogni stato degli Stati Uniti (e Washington D.C.) vincerà 10.000$ in tecnologia
+  prizes_gift_cards: "<i>Ogni</i> organizzatore riceverà <b>un buono acquisto da 10$ per Amazon.com, iTunes o Microsoft's Windows Store</b> come regalo di ringraziamento!"
+  whats_next_header: "Cosa c'è dopo?"
+  whats_next_description: "Ti manderemo del materiale e consigli utili per il tuo evento. Nel 2015 ci sono nuove esercitazioni che funzionano su qualsiasi browser, smartphone e addirittura senza computer! <a href='http://code.org/learn'>Prova le esercitazioni disponibili </a>"
+  whats_next_how_to: "<a href='/how-to'>Come eseguire un'Ora del Codice</a>"
+  whats_next_promote: "<a href='/promote'>Promuovi l'Ora del Codice</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Come promuovere l'Ora del Codice</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Come promuovere l'Ora del Codice</a>"
+  whats_next_try: "<a href='http://code.org/learn'>Prova i corsi</a>"
+  whats_next_try_button: Prova i corsi
+  n_have_learned_an_hoc: "<h1>Prova un'</h1> <h2>Ora del Codice</h2> <h3> ne hanno già fatte # </h3>"
   anybody_can_learn: Chiunque può imparare.
   get_started: Inizia
-  beyond_an_hour: Beyond an Hour of Code
+  beyond_an_hour: "Dopo l'Ora del Codice"
   register_now: Iscriviti Adesso
-  share_on_facebook: Share on Facebook
-  share_on_twitter: Share on Twitter
+  share_on_facebook: Condividi su Facebook
+  share_on_twitter: Condividi su Twitter
   front_join_us_heading: "Un'Ora del Codice per ogni studente."
   front_join_us_description: "L'Informatica è fondamentale per ogni studente. Aiutaci a farla conoscere a 100 milioni di studenti."
-  front_join_us_description_short: Computer science is a foundation for every student.
+  front_join_us_description_short: "L'informatica è fondamentale per ogni studente."
   front_join_us_button: Unisciti a noi
   front_what_is_hoc: "Cosa è l'Ora del Codice?"
-  front_join_us_header: Chiunque può imparare le basi, e divertirsi facendolo!
+  front_join_us_header: "Chiunque può imparare i concetti fondamentali dell'informatica, e divertirsi facendolo!"
+  front_join_us_volunteer_header: Volunteers for the Hour of Code
   front_join_us_teacher: Sei un insegnante?
-  front_join_us_inspire: Ispira gli studenti con
-  front_join_us_inspire_link: "un'Ora del Codice nella classe."
+  front_join_us_inspire: Stimola gli studenti con
+  front_join_us_inspire_link: "un'Ora del Codice in aula."
+  front_join_us_teacher_link: "Stimola gli studenti con un'Ora del Codice in aula"
+  front_join_us_teacher_volunteer: Search for local volunteers who can visit your classroom or inspire your students remotely
   front_join_us_parent: Sei un genitore?
-  front_join_us_ask_link: Invita la tua scuola
-  front_join_us_ask: "ad ospitare l'Ora del Codice."
-  front_join_us_computer_science: "Semplicemente ti piace l'informatica?"
+  front_join_us_ask_link: Chiedi alla tua scuola
+  front_join_us_ask: "di organizzare un'Ora del Codice."
+  front_join_us_parent_link: "Chiedi alla tua scuola di organizzare un'Ora del Codice"
+  front_join_us_computer_science: "Ti piace l'informatica?"
+  front_join_us_cs_volunteer: Passionate about computer science education?
   front_join_us_spread: Spargi la voce.
+  front_join_us_spread_word: Diffondi questa iniziativa fra i tuoi conoscenti
+  front_join_us_spread_word_work: Diffondi questa iniziativa fra i tuoi conoscenti o nel tuo luogo di lavoro
+  front_join_us_sign_up_volunteer: Sign up to volunteer at a local classroom or through a video chat
   front_join_us_organize: "Oppure organizza tu stesso un evento dell'Ora del Codice."
-  front_join_us_how_to_run: "Ecco come eseguire un'Ora di Codice"
-  front_join_us_help_promote: "Aiuta a promuovere l'Ora del Codice"
+  front_join_us_how_to_run: "Ecco come svolgere un evento dell'Ora del Codice"
+  front_join_us_help_promote: "Contribuisci a promuovere l'Ora del Codice"
   front_join_us_students: Studenti
   front_join_us_teachers: Insegnanti
   front_join_us_everyone: Tutti
   front_join_us_try: Prova
-  front_join_us_host: Ospita
+  front_join_us_sign_up: Iscriviti
+  front_join_us_host: Organizza
   front_join_us_support: Sostieni
-  signup_header: Organize an Hour of Code during campaign_date, and register it here.
+  front_join_us_more_info: "Sei in Italia? Per maggiori informazioni, visita per favore <a href='https://italia.code.org'>italia.code.org</a>."
+  front_join_us_code_info: Per maggiori informazioni, visita per favore Code.org
+  front_join_us_n_students_served: 'ne hanno già fatte #'
+  signup_header: "Organizza un'Ora del Codice %{campaign_date}, e registrati qui."
   signup_name_label: Il tuo nome
   signup_email_label: Il tuo indirizzo di posta elettronica
   signup_organization_name_label: "Nome della scuola o dell'organizzazione"
   signup_event_type_label: Tipo di evento
-  signup_event_entire_school_label: Tutta la mia scuola partecipa
+  signup_event_entire_school_label: Tutti gli studenti della la mia scuola partecipano
   signup_event_location_label: "Località dell'evento (facoltativo)"
-  signup_special_event_flag_label: Segna sulla mappa il mio evento speciale
+  signup_special_event_flag_label: Il mio è un evento speciale
   signup_special_event_details_label: "Dettagli dell'evento speciale"
-  signup_send_posters_flag_label: 'Invia il <a href= "/resources#posters"> poster</a> alla mia scuola o organizzazione'
+  signup_send_posters_flag_label: 'Invia i <a href= "/resources#posters"> poster</a> alla mia scuola o organizzazione (solo negli USA)'
   signup_send_posters_address_label: "Indirizzo della scuola o dell'organizzazione"
-  signup_whole_school_flag_label: Questo evento è per tutta la scuola
+  signup_whole_school_flag_label: A questo evento partecipano tutti gli studenti della scuola
   signup_your_event: Iscriviti
-  signup_match_volunteer: Help me find a local software engineer to inspire my students
+  signup_match_volunteer: Aiutami a trovare un Ingegnere Informatico per stimolare i miei studenti (solo per gli USA)
+  signup_multiple_event_warning: "If you're hosting multiple events, please submit a unique name or email for each one. We only count one event per name and email combination."
   signup_name_placeholder: Il tuo nome
-  signup_email_placeholder: per esempio, nome@istruzione.it
+  signup_email_placeholder: Per esempio, nome@istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
   signup_event_location_placeholder: "Codice postale e nome della nazione OPPURE indirizzo completo. \r (Lo usiamo per mettere una bandierina sulla mappa)"
   signup_special_event_details_placeholder: "Descrivi cos'è che rende speciale questo evento"
-  signup_send_posters_address_placeholder: Questo indirizzo non verrà condiviso sulla nostra mappa
-  signup_event_type_in_school: Per una scuola
-  signup_event_type_out_of_school: "Per un'organizzazione diversa da una scuola"
+  signup_send_posters_address_placeholder: Questo indirizzo non verrà mostrato sulla nostra mappa
+  signup_event_type_in_school: In una scuola
+  signup_event_type_out_of_school: "In un'organizzazione diversa da una scuola"
   signup_submit_label: Iscriviti
   signup_submit_error_message: Si è verificato un errore. Per favore controlla per assicurarti che tutti i campi obbligatori siano stati riempiti correttamente.
-  signup_thank_you_header: "Grazie per esserti iscritto per ospitare un evento dell'Ora del Codice."
+  signup_thank_you_header: "Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice."
   signup_thank_you_message: Ti abbiamo inviato un messaggio di conferma per posta elettronica con le informazioni per aiutarti a iniziare.
-  map_header: "eventi dell'Ora del Codice in tutto il mondo"
-  see_all_events: See all events
+  map_header: "# Eventi dell'Ora del Codice in tutto il mondo"
+  see_all_events: Vedi tutti gli eventi
   map_header_company: '# gli organizzatori'
-  map_search_placeholder: Search for Hour of Code events
-  map_search_search: Search
-  map_search_reset: Reset
-  meta_tag_og_title: The Hour of Code is here
-  meta_tag_og_description: "L'Ora del Codice è un movimento globale che sta coinvolgendo decine di milioni di studenti in più di 180 paesi e in più di 30 lingue. Con età dai 4 ai 104 anni."
-  meta_tag_twitter_title: The Hour of Code is here
-  meta_tag_twitter_description: "L'Ora del Codice è un movimento globale che sta coinvolgendo decine di milioni di studenti in più di 180 paesi e in più di 30 lingue. Con età dai 4 ai 104 anni."
-  twitter_default_text: "Io partecipo all'#OradelCodice di quest'anno, e tu? @codeorg"
+  map_header_country: '# in %{country}'
+  map_search_placeholder: "Cerca gli eventi relativi all'Ora del Codice"
+  map_search_search: Cerca
+  map_search_reset: Ripristina
+  map_legend_title: Legenda
+  map_legend_hoc_events: "Eventi de L'Ora del Codice"
+  map_legend_cs_tech_jam: Eventi speciali
+  meta_tag_og_title: "L'Ora del Codice è in arrivo"
+  meta_tag_og_description: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 30 lingue. Da 4 a 104 anni."
+  meta_tag_twitter_title: "L'Ora del Codice è in arrivo"
+  meta_tag_twitter_description: "L'Ora del Codice è un movimento globale che coinvolge decine di milioni di studenti in più di 180 nazioni e in più di 30 lingue. Da 4 a 104 anni."
+  twitter_default_text: "Io partecipo all' #OradelCodice #HourOfCode quest'anno, e tu? @codeorg @programmafuturo"
   hardware_prizes_form_name_label: Il tuo nome
   hardware_prizes_form_name_placeholder: Il tuo nome
   hardware_prizes_form_email_label: Il tuo indirizzo di posta elettronica
@@ -231,80 +280,140 @@ it:
   hardware_prizes_form_school_type_option_middle_school: Secondaria inferiore
   hardware_prizes_form_school_type_option_high_school: Secondaria superiore
   hardware_prizes_form_qualifying_school_label: Scuola pubblica degli Stati Uniti
-  hardware_prizes_form_number_students_label: Numero degli studenti che partecipano
+  hardware_prizes_form_title_I_school_label: Questa scuola si qualifica per i finanziamenti del Titolo I
+  hardware_prizes_form_title_I_school_help_text: 'Le scuole "Titolo I" sono scuole con numeri alti o alte percentuali di bambini provenienti da famiglie a basso reddito che ricevono fondi federali per contribuire a garantire che tutti i bambini raggiungano gli standard educativi dello stato.'
+  hardware_prizes_form_number_students_label: Numero di studenti che partecipano
   hardware_prizes_form_number_students_placeholder: Numero di studenti
+  hardware_prizes_form_technology_plan_label: "Come pensi di utilizzare le nuove tecnologie per aiutare ad espandere l'insegnamento dell'informatica nella tua scuola?"
+  hardware_prizes_form_technology_plan_placeholder: Piano di utilizzo delle nuove tecnologie
   hardware_prizes_form_plan_file_label: "Carica il tuo piano organizzativo per l'Ora del Codice"
   hardware_prizes_form_plan_file_description: "Invia una programmazione temporale di come hai pianificato la partecipazione di ogni studente all'Ora del Codice nella tua scuola. Vedi una pianificazione di esempio: #PDF# | #Word#"
   hardware_prizes_form_submit_label: Invia
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: "Cosa è l'Ora del Codice?"
-  hoc_faq_what_is_hoc_a: "L'Ora del Codice consiste in una introduzione all'informatica di un'ora, progettata per smitizzare la programmazione e dimostrare che chiunque può imparare le basi della scrittura di codice. <a href='http://code.org/learn'> Scopri il tutorial</a>."
-  hoc_faq_last_year: Prova i tutorial
+  hoc_faq_what_is_hoc_a: "L'Ora del Codice consiste in una lezione di introduzione all'informatica della durata di un'ora, progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi. <a href='%{codeorg_url}'> Guarda i corsi disponibili</a>."
+  hoc_faq_last_year: Prova i corsi
   hoc_faq_when_is_hoc_q: "Quando è l'Ora del Codice?"
-  hoc_faq_when_is_hoc_a: "Anybody can host an Hour of Code anytime, but the grassroots campaign goal is for tens of millions of students to try an Hour of Code during December 7-13, 2015, in celebration of <a href='http://csedweek.org'>Computer Science Education Week</a>. Is it one specific <i>hour</i>? No. You can do the Hour of Code anytime during this week. (And if you can't do it during that week, do it the week before or after)."
+  hoc_faq_when_is_hoc_a: "Chiunque può ospitare un evento dell'Ora del Codice in qualsiasi momento, ma l'obiettivo principale di questa campagna è quello di riuscire a far provare l'Ora del Codice a decine di milioni di studenti durante %{campaign_date}, in occasione della <a href='http://csedweek.org'>Settimana di Educazione all'Informatica</a>. Va svolta durante una <i>specifica ora</i>? No. Puoi svolgere l'Ora del Codice in qualsiasi momento durante questa settimana. (E se non puoi durante quella settimana, fallo durante quella prima o quella dopo)."
   hoc_faq_why_cs_q: "Perché l'informatica?"
-  hoc_faq_why_cs_a: "<i>Ogni</i> studente dovrebbe avere l'opportunità di imparare l'informatica. Aiuta a coltivare le abilità di problem solving, logica e creatività. Iniziando in giovane età gli studenti avranno un fondamento per il successo in qualsiasi percorso di carriera del XXI secolo. Vedi ulteriori statistiche <a href='http://code.org'> Code.org</a>."
+  hoc_faq_why_cs_a: "<i>Ogni</i> studente dovrebbe avere l'opportunità di imparare l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi, la logica e la creatività. Iniziando in giovane età gli studenti avranno le basi per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi ulteriori statistiche <a href='%{codeorg_url}'>%{partner_url}</a>."
   hoc_faq_how_participate_q: "Come partecipare all'Ora del Codice?"
-  hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community &mdash; like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 7 arrives."
+  hoc_faq_how_participate_a: "<a href='/how-to'>Inizia la progettazione qui</a> riesaminando la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola o nel tua comunità &mdash; come, ad esempio, in un circolo, o in un'associazione senza scopo di lucro oppure al lavoro. In alternativa, puoi provarlo tu stesso nel periodo %{campaign_date}."
   hoc_faq_behind_hoc_q: "Chi c'è dietro l'Ora del Codice?"
-  hoc_faq_behind_hoc_a: "L'Ora di Codice è organizzata da <a href='http://code.org'>Code.org</a>, un'associazione pubblica 501c3 senza scopi di lucro la cui missione è quella di espandere l'interesse per l'informatica rendendola disponibile in più scuole ed incrementando la partecipazione di donne e di studenti di colore al momento sottorappresentati. Una <a href='http://code.org/about/partners'>coalizione di partner che non ha precedenti</a> si è unita per supportare l'Ora del Codice &mdash; compresi Microsoft, Apple, Amazon, Boys and Girls Clubs of America e la College Board."
-  hoc_faq_host_q: Non so nulla sulla programmazione del codice informatico. Posso ospitare ugualmente un evento?
-  hoc_faq_host_a: "Naturalmente. Le attività dell'Ora del Codice sono autogestite.  Tutto ciò che devi fare è <a href='http://code.org/learn'>provare le nostre lezioni</a>, scegliere quelle che preferisci e scegliere un'orario &mdash; noi pensiamo a tutto il resto. Abbiamo materiali adatti ad ogni età e livello di esperienza, a partire dall'età prescolare. Inizia a pianificare il tuo evento leggendo la <a href='/resources/how-to'>guida che spiega come farlo</a>."
-  hoc_faq_need_computers_q: Ho bisogno di computer per ogni partecipante?
-  hoc_faq_need_computers_a: "No. Abbiamo lezioni per l'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia con qualsiasi strumento tu abbia a disposizione. <p><i>Ecco alcune opzioni:</i><br><ul><li><b>Lavorare in coppia.</b>Le ricerche dimostrano come gli studenti imparino meglio attraverso la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programmazione in coppia</a>, condividendo un computer e lavorando insieme. Incoraggiate i vostri studenti a lavorare insieme. <li><b>Utilizzare un proiettore.</b> Se avete un proiettore e un computer connesso ad internet, il vostro gruppo potrà partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande.<li><b>Senza Rete.</b>Offriamo anche lezioni che non richiedono un computer.</ul>"
-  hoc_faq_international_q: 'Io sono in <country>. Come posso partecipare a livello internazionale?'
-  hoc_faq_international_a: "Anyone can organize an Hour of Code event, anywhere in the world. Last year, students worldwide joined together for the Hour of Code. Find out more <a href='/resources'>here</a>."
-  hoc_faq_tutorial_q: "Come posso creare una lezione per l'Ora del Codice?"
-  hoc_faq_tutorial_a: "Se sei interessato a creare una lezione, <a href='target-tutorial-guidelines'>leggi le nostre linee guida e le istruzioni</a>. Ci piacerebbe offrire una grande varietà di opzioni coinvolgenti , ma l'obiettivo primario è ottimizzare l'esperienza per gli studenti e gli insegnanti che si affacciano per la prima volta all'informatica."
-  hoc_faq_more_questions_q: Hai ancora domande?
-  hoc_faq_more_questions_a: "Cerca una risposta nel nostro <a href='http://support.code.org'> forum di supporto</a>."
-  hoc_faq_scratch_q: "Sto usando Scratch per l'Ora del Codice, ma cosa succede se miei studenti hanno un  iPad invece di un computer portatile?"
-  hoc_faq_scratch_a: "Scratch non viene eseguito sui tablet. Se gli studenti sono giovani, possono utilizzare l'app ScratchJR (per i bambini-più piccoli) per iPad. Se date un'occhiata ai tutorial su <a href='http://code.org/learn'> Code.org/impara</a>, ne potete trovare altri che funzionano su iPad - su Code.org, Tynker, Lightbot o CodeSpark."
+  hoc_faq_behind_hoc_a: "L'Ora di Codice è organizzata da <a href='http://code.org'>Code.org</a>, un'associazione pubblica 501c3 senza scopi di lucro la cui missione è quella di espandere l'interesse per l'informatica rendendola disponibile in più scuole ed incrementando la partecipazione di donne e di studenti di colore al momento sotto-rappresentati. Una <a href='%{codeorg_url}/about/partners'>coalizione di partner che non ha precedenti</a> si è unita per supportare l'Ora del Codice &mdash; compresi Microsoft, Apple, Amazon, Boys and Girls Clubs of America e la College Board."
+  hoc_faq_host_q: Non so nulla di programmazione e di informatica. Posso organizzare ugualmente un evento?
+  hoc_faq_host_a: "Naturalmente. Le attività dell'Ora del Codice sono autogestite. Tutto ciò che devi fare è <a href='%{codeorg_url}/learn'>provare i nostri corsi </a>, scegliere quello che preferisci e un orario &mdash; noi pensiamo a tutto il resto. Abbiamo materiali adatti ad ogni età e livello di esperienza, a partire dall'età prescolare. Inizia a pianificare il tuo evento leggendo la <a href='/how-to'>guida che spiega come farlo</a>."
+  hoc_faq_devices_q: What devices should I use for my students?
+  hoc_faq_devices_a: "Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs at <a href='%{codeorg_url}/educate/it'>. Tech needs for non-Code.org tutorials can be found on <a href=''%{codeorg_url}/learn'> in the tutorial specific description. Don't forget we also offer unplugged activities if your school can't accommodate the tutorials!"
+  hoc_faq_need_computers_q: Ho bisogno di un computer per ogni partecipante?
+  hoc_faq_need_computers_a: "No. Abbiamo lezioni de l'Ora del Codice che funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano di alcun computer! Puoi prendere parte a questo evento dovunque tu sia e con qualsiasi strumento tu abbia a disposizione. <p><i>Ecco alcune opzioni:</i><br><ul><li><b> Lavorare in coppia.</b> Le ricerche dimostrano come gli studenti imparino meglio attraverso la <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programmazione in coppia</a>, condividendo un computer e lavorando insieme. Incoraggiate i vostri studenti a lavorare insieme. <li><b>Utilizzare un proiettore.</b> Se avete un proiettore e un computer connesso ad internet, il vostro gruppo potrà partecipare all'Ora del Codice tutti insieme. Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete alle domande.<li><b> Usa le lezioni tradizionali.</b> Offriamo anche lezioni che non richiedono alcun computer.</ul>"
+  hoc_faq_international_q: Io sono in Italia. Come posso partecipare a livello internazionale?
+  hoc_faq_international_a: "Tutti possono organizzare un evento dell'Ora del Codice, in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice studenti di ogni parte del mondo. Per saperne di più clicca <a href='/promote'>qui</a>."
+  hoc_faq_tutorial_q: "Come posso creare un corso per l'Ora del Codice?"
+  hoc_faq_tutorial_a: "Se sei interessato a creare un corso, <a href='target-tutorial-guidelines'>leggi le nostre linee guida e le istruzioni</a>. Ci piacerebbe offrire una grande varietà di opzioni coinvolgenti, ma l'obiettivo primario è ottimizzare l'esperienza per gli studenti e gli insegnanti che si affacciano per la prima volta all'informatica."
   hoc_faq_account_q: Gli studenti devono accedere utilizzando un account?
-  hoc_faq_account_a: "Assolutamente no.  Non è richiesta alcuna registrazione o login  agli studenti che vogliano provare l'Ora del Codice. La maggior parte dei <a href='http://code.org/learn/beyond'> corsi di approfondimento</a> invece richiedono un account per registrare i percorsi e i progressi degli studenti."
-  hoc_faq_frozen_q: Dove si trova il tutorial con Anna ed Elsa?
-  hoc_faq_frozen_a: "E' pubblicato su <a href='http://code.org/learn'> Code.org/impara</a>. Speriamo che ti piaccia!"
-  hoc_faq_high_school_q: Quale attività dovrei fare con studenti di scuole superiori?
-  hoc_faq_high_school_a: "Per tutte le età raccomandiamo di provare prima i tutorial per principianti su <a href='http://code.org/learn'>Code.org/impara</a> come, ad esempio, il tutorial Angry Birds o quello con Anna ed Elsa. Uno studente di scuola superiore è in grado di terminare ciascuno di essi in non più di 30 minuti; successivamente può provare un tutorial avanzato per il linguaggio Javascript tra quelli proposti su  Khan Academy o CodeHS."
-  hoc_faq_count_hoc_q: How do you count Hours of Code?
-  hoc_faq_count_hoc_a: "The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href='http://code.org/loc'>here</a>."
+  hoc_faq_account_a: "Assolutamente no. Non è richiesta alcuna registrazione o login agli studenti che vogliono provare l'Ora del Codice. La maggior parte dei <a href='%{codeorg_url}/learn/beyond'> corsi di approfondimento</a> invece richiede un account per registrare i percorsi e i progressi degli studenti."
+  hoc_faq_frozen_q: Dove si trova il corso con Anna ed Elsa?
+  hoc_faq_frozen_a: "E' pubblicato su <a href='%{codeorg_url}/learn'> la pagina delle lezioni</a>. Speriamo che ti piaccia!"
+  hoc_faq_high_school_q: Quale attività dovrei fare con gli studenti delle scuole superiori?
+  hoc_faq_high_school_a: "Indipendentemente dall'età, raccomandiamo di provare prima le lezioni per principianti su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> come, ad esempio, la lezione Angry Birds o quella con Anna ed Elsa. Uno studente di scuola superiore è in grado di terminare ciascuna di essa in non più di 30 minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript tra quelli proposti su Khan Academy o CodeHS."
+  hoc_faq_scratch_q: "Sto usando Scratch per l'Ora del Codice, ma cosa succede se i miei studenti hanno un iPad invece di un computer portatile?"
+  hoc_faq_scratch_a: "Scratch non viene eseguito sui tablet. Se gli studenti sono giovani, possono utilizzare l'app ScratchJR (per i bambini più piccoli) per iPad. Se dai un'occhiata alle lezioni su <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, ne puoi trovare altre che funzionano su iPad - da Code.org, Tynker, Lightbot o CodeSpark."
+  hoc_faq_count_hoc_q: In che modo contate le Ore del Codice fatte?
+  hoc_faq_map_q: "Why don't I see my dot on the map?"
+  hoc_faq_map_a: "We're so sorry you aren't seeing you event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the number above the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!"
+  hoc_faq_count_hoc_a: "Il contatore dell'Ora del Codice non misura le ore svolte in senso strettamente temporale. Non contiamo esattamente le ore di codice fatte da ogni studente anche perché ogni studente non ha bisogno di accedere o registrarsi. Di conseguenza, noi facciamo una stima del tempo che tutti i partecipanti hanno trascorso usando i nostri corsi. Leggi tutti i dettagli <a href='%{codeorg_url}/loc'>qui</a>."
+  hoc_faq_one_hour_q: How much can one learn in an hour?
+  hoc_faq_one_hour_a: 'The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br/><br/> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br/><br/> Above all, what all participants can learn in an hour is that we can do this.'
+  hoc_faq_more_questions_q: Hai ancora domande?
+  hoc_faq_more_questions_a: "Cerca una risposta nel nostro <a href='http://support.code.org'> forum di supporto</a>. Se sei in Italia visita <a href='http://programmailfuturo.it'> sito di supporto</a>."
+  hoc_faq_keep_learning_q: How do I keep learning after the Hour of Code?
+  hoc_faq_keep_learning_a: "Anyone can host an Hour of Code at any time. The tutorials stay up year round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success."
+  hoc_faq_certificates_q: Where can I print certificates for my students?
+  hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time."
   stats_hoc_2013_image_alt: "Statistiche dell'Ora del Codice per il 2013"
   stats_growth: "E' stato il più veloce a raggiungere i 15 milioni di utenti."
-  stats_i18n: Students are learning in 40 languages
+  stats_i18n: Gli studenti stanno imparando in 40 lingue diverse
   stats_tumblr: 'Tumblr: 3,5 anni'
   stats_facebook: 'Facebook: 3 anni'
   stats_twitter: 'Twitter: 2,5 anni'
   stats_pinterest: 'Pinterest: 2 anni'
   stats_instagram: 'Instagram: 14 mesi'
-  stats_hoc: '5 giorni di "Ora del Codice"'
-  stats_global: Over 100M students have tried an Hour of Code
-  stats_girls_more: More girls tried computer science than in the last 70 years
-  stats_nina: '"Ogni giorno sempre lo stesso risultato &mdash; il 100% di attenzione."-Nina Nichols Peery, Insegnante'
-  stats_student: '"Sapevo che questa era una occasione <b>irripetibile</b>."-Mariana Alzate, 5a Elementare'
+  stats_hoc: "L'Ora del Codice: 5 giorni"
+  stats_global: "Oltre 100 milioni di studenti hanno provato l'Ora del Codice"
+  stats_girls_more: "Si sono avvicinate all'informatica più ragazze che negli ultimi 70 anni"
+  stats_nina: '"Ogni giorno ottengo sempre lo stesso risultato&mdash; il 100% di attenzione."- Nina Nichols Peery, Insegnante'
+  stats_student: |-
+    "Sapevo che questa era un'occasione <b>irripetibile</b>."-Mariana Alzate, Quinta Elementare
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti di imparare." - Michael Clark, Insegnante'
   resources_how_to: Guida per gli insegnanti
-  resources_how_to_events: Guida a come fare un evento
-  resources_how_to_districts: Guida per i distretti
-  resources_how_to_officials: Guida per i dipendenti pubblici
-  resources_handouts: Volantini per diffondere la voce
-  resources_videos: Video
+  resources_how_to_events: Guida a come organizzare un evento
+  resources_how_to_districts: Guida per le province
+  resources_how_to_officials: Guida per organizzatori locali
+  resources_handouts: Volantini per diffondere questa iniziativa
+  resources_one_pager: Volantino da una pagina
+  resources_brochure: Opuscolo
   resources_posters: Poster
-  resources_social: Social
+  resources_videos: Video
   resources_banners: Banner
-  resources_emails: Mail di esempio
+  resources_emails: Esempi di messaggi di posta elettronica
+  resources_logo: Il logo Hour of Code
   resources_stats: Statistiche utili
   resources_press_kit: Kit per la stampa
-  resources_country_resources: Country Specific Resources
-  events_title: "Tutti gli eventi de L'Ora del Codice"
+  resources_social: Social
+  resources_country_resources: Risorse specifiche per una nazione
+  resources_stickers: Adesivi
+  resources_how_to_guides: Guide
+  resources_promote: Promuovi
+  resources_nav_tutorials: Prova i corsi
+  resources_nav_promote: Spargi la voce
+  resources_nav_spread_word: Come partecipare
+  resources_banner_promote_text: Promuovi
+  resources_banner_promote_button: Esorta le persone ad iscriversi mediante opuscoli, poster e social media.
+  resources_banner_howto_text: Come
+  resources_banner_howto_button: "Risorse per insegnanti, genitori e altri educatori per organizzare un'Ora del Codice."
+  handouts_section: Condividi questi volantini
+  handouts_onepager: Diffondi questa iniziativa con un volantino da una pagina
+  handouts_brochure: Dai questo opuscolo agli insegnanti e alle scuole
+  handouts_participationguide: Programma la tua Ora del Codice con questa guida di partecipazione
+  videos_title: Mostra questi video per stimolare gli studenti
+  videos_what_most_schools_dont_teach: Ciò che la Maggior Parte delle Scuole Non Insegna (5 min)
+  videos_hoc_2014: "L'Ora del Codice è Qui - Chiunque Può Imparare"
+  videos_obama_cs: "Il Presidente Obama a proposito dell'informatica"
+  videos_anybody_can_learn: Chiunque Può Imparare (1 min)
+  title_country_resources: Risorse specifiche per una nazione
+  title_how_to_districts: "L'Ora del Codice - Guida per le Province"
+  title_how_to_events: "Come organizzare un evento dell'Ora del Codice"
+  title_how_to_organizations: "Come organizzare un'Ora del Codice - Organizzazioni"
+  title_how_to_companies: "Come organizzare un'Ora del Codice - Aziende"
+  title_how_to_officials: Guida per organizzatori locali
+  title_how_to_volunteers: "Guida per i volontari dell'Ora del Codice"
+  title_how_to: Guida
+  title_press_release: "L'Ora del Codice Comunicato Stampa per i rappresentanti eletti"
+  title_op_ed: "Un esempio di articolo per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice"
+  title_press_kit: Kit per la stampa
+  title_proclamation: "Un esempio di delibera per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice"
+  title_stats: Statistiche utili
+  title_partners: Partner
+  title_prizes_faq: FAQ sui premi
+  title_prizes_terms: Condizioni per i Premi
+  title_prizes_thanks: Grazie
+  title_prizes: Premi
+  title_hardware_prize_form: Iscriviti per i Premi Hardware
+  title_resources: Risorse
+  title_signup_thanks: "Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!"
+  title_tutorial_guidelines: Linee Guida per i Corsi
+  title_whole_school: Partecipazione di Tutta la Scuola
+  events_nav_title: "Eventi dell'Ora del Codice"
   events_nav_all: Tutti gli eventi
-  events_nav_whole_schools: Istituti scolastici
+  events_nav_whole_schools: Tutta la Scuola
   events_nav_special: Eventi speciali
-  events_nav_orgs: Società
-  events_all_old_title: All @year Hour of Code events
+  events_nav_orgs: Organizzazioni
+  events_all_old_title: "Tutti gli eventi dell'Ora del Codice del @year"
   events_all_title: "Tutti gli eventi de L'Ora del Codice"
-  events_whole_school_title: "Eventi de L'Ora del Codice di intere scuole"
+  events_whole_school_title: "Eventi de L'Ora del Codice cui partecipa Tutta la Scuola"
   events_special_title: "Eventi speciali de L'Ora del Codice"
-  events_orgs_title: "Tutti gli eventi dell'Ora del Codice organizzati dalle società partner"
+  events_orgs_title: "Tutti gli eventi dell'Ora del Codice organizzati dai partner"
   event: evento
   events: eventi
   footer_copyright_message: Copyright Code.org 2015. Tutti i diritti riservati.

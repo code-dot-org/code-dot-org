@@ -1,0 +1,46 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T19:55:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Recreate the game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)",
+    "markdown_instructions": "# Improved Chaser Game\r\n\r\nNow lets improve the \"Chaser Game\".  This is where you get to use your creativity. Make it look nice!\r\n\r\nIn addition you will notice a new command in the toolbox: `playsound`! Read the documentation about how to add sounds.\r\n\r\n**Note:** Your code from before has been provided for you.\r\n\r\n# Do This:\r\n\r\n* **Create a Welcome Screen** that explains the rules of the game. Include a \"Start Game\" button.\r\n\r\n* Update the your code so that the **image jumps to a new location when it is clicked**. \r\n\r\n* **Play a sound** each time the image is clicked.\r\n\r\n* **Add a Game Over Screen** with a lose message and button to start over. The Start Over Button should direct back to the Welcome Screen.\r\n\r\n* **Make the user lose**, by sending them to the Game Over Screen, when the background is clicked.\r\n\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "project_template_level_name": "U3L12 Chaser Template",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "ACkRTDFTSHSoTlmhLpQqrIKH1PBApOFKPYyOWytXkOd2MhISlsygAFNcLX6g\n9bK+\n"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

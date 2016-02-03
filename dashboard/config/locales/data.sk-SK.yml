@@ -4,75 +4,75 @@
       name:
         20-hour:
           desc: K-8 Úvod do počítačových kurz informatiky
-          Unplug1: Úroveň 1
-          Maze: Úroveň 2
-          Unplug2: Úroveň 3
-          Unplug3: Úroveň 4
-          Artist: Úroveň 5
-          Unplug4: Úroveň 6
-          Artist2: Úroveň 7
-          Unplug5: Úroveň 8
-          Farmer: Úroveň 9
-          Unplug6: Úroveň 10
-          Artist3: Úroveň 11
-          Unplug7: Úroveň 12
-          Farmer2: Úroveň 13
-          Unplug8: Úroveň 14
-          Artist4: Úroveň 15
-          Unplug9: Úroveň 16
-          Farmer3: Úroveň 17
-          Unplug10: Úroveň 18
-          Artist5: Úroveň 19
-          Unplug11: Úroveň 20
+          Unplug1: "Úroveň 1"
+          Maze: "Úroveň 2"
+          Unplug2: "Úroveň 3"
+          Unplug3: "Úroveň 4"
+          Artist: "Úroveň 5"
+          Unplug4: "Úroveň 6"
+          Artist2: "Úroveň 7"
+          Unplug5: "Úroveň 8"
+          Farmer: "Úroveň 9"
+          Unplug6: "Úroveň 10"
+          Artist3: "Úroveň 11"
+          Unplug7: "Úroveň 12"
+          Farmer2: "Úroveň 13"
+          Unplug8: "Úroveň 14"
+          Artist4: "Úroveň 15"
+          Unplug9: "Úroveň 16"
+          Farmer3: "Úroveň 17"
+          Unplug10: "Úroveň 18"
+          Artist5: "Úroveň 19"
+          Unplug11: "Úroveň 20"
         Hour of Code:
           desc: Hodina kódovania
-          Maze: Úroveň 1
+          Maze: "Úroveň 1"
         Edit Code:
           desc: Upraviť kód (beta)
-          MazeEC: Úroveň 1
+          MazeEC: "Úroveň 1"
         2014 Levels:
           desc: odraziť
-          Bounce: Úroveň 1
+          Bounce: "Úroveň 1"
         Builder Levels:
           desc: Užívateľom vytvorené puzzle
-          Custom: Úroveň 1
+          Custom: "Úroveň 1"
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: Úroveň 1
+          Flappy: "Úroveň 1"
         Jigsaw Levels:
           desc: Skladačka
-          Jigsaw: Úroveň 1
+          Jigsaw: "Úroveň 1"
         Step Levels:
           desc: Bludisko
           MazeStep: Fáza kroku
         edit-code:
           desc: Upraviť kód (beta)
-          MazeEC: Úroveň 1
-          Applab: Úroveň 2
-          ArtistEC: Úroveň 3
-          StudioEC: Úroveň 4
+          MazeEC: "Úroveň 1"
+          Applab: "Úroveň 2"
+          ArtistEC: "Úroveň 3"
+          StudioEC: "Úroveň 4"
         events:
           desc: odraziť
-          Bounce: Úroveň 1
-          Studio: Úroveň 2
+          Bounce: "Úroveň 1"
+          Studio: "Úroveň 2"
         builder:
           desc: Užívateľom vytvorené puzzle
-          Custom: Úroveň 1
+          Custom: "Úroveň 1"
         flappy:
           desc: Flappy Bird
-          Flappy: Úroveň 1
+          Flappy: "Úroveň 1"
         jigsaw:
           desc: Skladačka
-          Jigsaw: Úroveň 1
+          Jigsaw: "Úroveň 1"
         step:
           desc: Bludisko
           MazeStep: Fáza kroku
         wordsearch:
           desc: Hláskovanie
-          WordSearch: Úroveň 1
+          WordSearch: "Úroveň 1"
     game:
       name:
-        Unplug1: Úvod do vedy o počítačoch (informatiky)
+        Unplug1: "Úvod do vedy o počítačoch (informatiky)"
         Maze: Bludisko
         Multi: Viacnásobný výber
         Unplug2: Aritmetické myslenie
@@ -88,7 +88,7 @@
         Farmer2: Farmár 2
         Unplug8: Abstrakcia
         Artist4: Umelec 4
-        Unplug9: Štafetové programovanie
+        Unplug9: "Štafetové programovanie"
         Farmer3: Farmár 3
         Unplug10: Internet
         Artist5: Umelec 5
@@ -104,7 +104,9 @@
         TextMatch: Priraďovačka textu
         StudioEC: Play Lab
         Applab: Laboratórium aplikácií
-        NetSim: Internet Simulator
+        NetSim: Simulátor Internetu
+        Custom: Artist
+        CustomStudio: Play Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -112,61 +114,58 @@
         Gold: Zlatá
     concept:
       description:
-        sequence: Sequence
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
+        sequence: Postupnosť
+        if: "Časť - If"
+        if_else: "Časť if-else"
+        loop_times: "Časť - repeat"
+        loop_until: "Časť - repeat until"
+        loop_while: "Časť - while"
+        loop_for: "Časť - counter"
         function: Funkcie
         parameters: Funkcie s parametrami
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
-          forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the
-          feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
-          angry!
-        maze_2_5: There's a way I can get to the silly pig using only 2 blocks. Can
-          you figure it out?
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: Help me banish this bad piggy using the fewest number of blocks.
-          Try using more than one "repeat times" block.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
-        maze_2_9: Ok, try the new "repeat until" block - it will repeat until I reach
-          the annoying pig.
-        maze_2_10: Ok, one last time for practice - can you solve this one using only
-          4 blocks?
-        maze_2_11: Dear person.  Me zombie. Me hungry. Must... get... to sunflower...
-          Can you get me there with only 5 blocks?
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only
-          5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you
-          only need one more block, but learn how we set it up so you can do it on
-          your own next time.'
-        maze_2_14: Ok, this is just like the last puzzle, but you need to remember
-          how you used the "if" block and the "repeat" block together.
-        maze_2_15: Me want sunflower! Use an "if" block to get me there with the fewest
-          number of blocks.
-        maze_2_16: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the chompers!
-        maze_2_17: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the sunflower try to use this new block.
-        maze_2_18: One more practice of the "if-else" block, can you get it right
-          on your first try?
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
+        maze_2_2: 'Pomôžete mi chytiť neposlušné prasa? Dajte dohromady niekoľko blokov
+          "posunúť vpred" a stlačte "Spustiť", aby som sa tam dostal. '
+        maze_2_1: To prasa mi pije krv. Pomôž mi ho nájsť!
+        maze_2_2_5: Nájdi cestu a veď ma k tomu hlúpemu prasaťu. Vyhni se TNT, lebo
+          bude lietať perie!
+        maze_2_3: Naviguj ma k zelenému zlu! (Pozor na TNT)
+        maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
+        maze_2_5: K zelenému prasiatku sa možno dostať použitím len 2 blokov. Prídeš
+          na to?
+        maze_2_6: Dostaň ma k zelenému votrelcovi použitím troch blokov.
+        maze_2_7: Pomôž sa mi zbaviť toho zlého prasiatka pomocou čo najmenšieho počtu
+          blokov. Skus použiť viac ako jeden blok "opakovať n-krát".
+        maze_2_8: 'Šedý blok nemôžeš zmazať. Vyrieš túto hádanku použitím bloku "opakuj",
+          ktorý sa zopakuje 3 krát. Vlož do neho 3 bloky: posunúť vpred, posunúť vpred
+          a otoč a nastav blok "opakuj", aby to zopakoval trikrát.'
+        maze_2_9: V poriadku, skús nový "opakuj dovtedy" blok - bude akciu opakovať
+          až kým neprídem k tomu otravnému prasaťu.
+        maze_2_10: Ok, posledný krát - vyriešiš toto použitím iba 4 blokov?
+        maze_2_11: Drahá osoba. Ja zombie. Ja hladný. Musieť... dostať... k slnečnica...
+          Dostaneš ma tam pomocou 5 blokov?
+        maze_2_12: Ok, toto je podobné, ale mierne rozdielne. Spravíš to použitím
+          len 5 blokov?
+        maze_2_13: 'Použi nový "pokiaľ!" blok aby si mňa nechal rozhodnúť kedy sa
+          otočiť. Tip: potrebuješ už len jeden blok, ale nauč sa ako sme ho nastavili
+          aby si to zvládol nabudúce sám.'
+        maze_2_14: V poriadku, toto je naozaj posledná hádanka, ale musíš si zapamätať
+          ako si použil bloky "pokiaľ" a "opakovať" spolu.
+        maze_2_15: Chcem slnečnicu! Použi blok "pokiaľ" aby som sa tam dostal čo s
+          najmenším počtom použitých blokov.
+        maze_2_16: Dobre, precvičme si to ešte raz - nie je to veľmi odlišné, ale
+          dávaj pozor na mäsožravky!
+        maze_2_17: Blok "ak-inak" overuje podmienku a potom vykoná jednu ALEBO druhú
+          vec. Skús využiť tento nový blok, aby si ma dostal k slnečnici.
+        maze_2_18: Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?
+        maze_2_19: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak
+          to urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku.
+        turtle_1_1: Ahoj, som umelec. Možeš napísať kód aby som nakreslil skoro čokoľvek.
+          Použi pár blokov aby som nakreslil nad šedé čiary v obrázku.
         turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
+        turtle_1_3: Urobte štvorec s použitím iba 3 častí.
         turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
           the "random color" option that picks a different color each time. Hint:
           you''ll have to figure out how far to turn by clicking on the number in
@@ -209,9 +208,8 @@
           obrátiť na dokončenie výkresu? (Pravdepodobne musíte háadať niekoľko krát)
         turtle_4_10: Here's the solution to the previous puzzle. How many times should
           you repeat to complete the drawing?
-        turtle_4_11: Try changing the numbers in the "turn" and "repeat" blocks to
-          make different patterns. Or, experiment changing the rest of the code to
-          draw anything you want.
+        turtle_4_11: Skús zmeniť čísla v "otoč" a "zopakuj" blokoch aby si spravil
+          iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.
         maze_karel_1_1: Ahoj, ja som farmár. Potrebujem vašu pomoc zploštit pole na
           mojej farme, tak aby bolo pripravené pre výsadbu. Presuňte ma na hromadu
           hliny a použite blok "odstrániť" na jeho odstránenie.
@@ -515,6 +513,77 @@
           the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
+        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
+          you help him say "hello" by dragging the `say` block out into the work area
+          and typing the word "hello" inside?
+        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
+          him on the adventure.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
+          last 200 pixels using the "move" block.
+        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
+          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
+          Next, connect a block to the "when actor touches" event to play a sound
+          when they find each other.
+        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
+          Can you attach blocks to it to help Granny get some exercise by moving left
+          and right repeatedly?
+        studio_iceage_click_hello: Can you help Sid do a final call for friends when
+          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
+          around by attaching the "move" block to each of the events and changing
+          the direction to work for each arrow key. When you’re done, click Run and
+          try to collect all of the acorns.
+        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
+          Granny moving left and right, as well as the code to move Sid around the
+          screen. Can you finish the code and add blocks to the "when actor touches"
+          event to make it so that you both play a sound and score a point when Sid
+          and Granny collide? Press Run to play the game.
+        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
+          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
+          then press Run and move him to Diego to warn him.
+        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
+          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
+          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
+          with the hearts.
+        studio_iceage_free_play: Time to create your own game or story! When you're
+          done, click Finish to let friends try your game on their phones, tablets,
+          or computers!
+        studio_gumball_hello1: Anais wants to make some new friends. Can you help
+          her say "hello" by dragging the "say" block out into the work area and typing
+          the word "hello" inside?
+        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
+          are heading to school.  Help them greet each other by using the the "actor
+          say" block twice.
+        studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
+          him go the last 200 pixels using the "move" block.
+        studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
+          for the field day! Help Gumball get 200 pixels down to Darwin using the
+          "move actor" block.  Next, connect a block to the "when actor touches" event
+          to play a sound when they find each other.
+        studio_gumball_repeat: The "repeat forever" block allows you to run code continuously.  Can
+          you attach blocks to it to help Gumball warm up for his race by moving left
+          and right repeatedly?
+        studio_gumball_click_hello: Can you help Anton announce the start of a race
+          by saying "Ready, set, go!"? To test your program, don’t forget to click
+          Anton after you click Run!
+        studio_gumball_move_events: Darwin is in the flag gathering contest! Help
+          him run around by attaching the "move" block to each of the events. When
+          you’re done, click Run and try to collect all of the flags.
+        studio_gumball_sound_and_points: We’ve provided most of the code that keeps
+          Anton (actor 2) moving left and right, as well as the code to move Banana
+          Joe (actor 1) around the screen.  Can you finish the code and add blocks
+          to the "when actor touches" event to make it so that you both play a sound
+          and score a point when Banana Joe and Anton collide?  Press Run to play
+          the game.
+        studio_gumball_warn_food_fight: Darwin just escaped a food fight! Change the
+          background to "characters" and set Darwin’s speed to fast, then press Run
+          and move him to Penny to warn her.
+        studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
+          item right" command to have Banana Joe (actor 1) throw food at Anton (actor
+          2)! Set Anton’s mood to angry when he gets hit.
+        studio_gumball_free_play: Create your own game or story. When you're done,
+          click Finish to let friends try your game on their phones, tablets, or computers!
         studio_full_sandbox: Create your own game. When you're done, click Finish
           to let friends try your game on their phones.
         studio_k1_1: Can you make this dog say "hello world"?
@@ -601,7 +670,7 @@
         C2_graph_paper: Programovanie na milimetrovom papieri
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Štafetové programovanie
+        C2_relay_programming: "Štafetové programovanie"
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
@@ -629,6 +698,8 @@
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
         C4_for_loops: For Loops
+        C4_for_loops_bee: For Loops
+        C4_for_loops_no_bee: For Loops
         C4_math_artist: Programming the Artist with Math
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
@@ -640,16 +711,32 @@
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Songwriting with Parameters
         C4_unplugged_binary: Binary
-        frozen_intro: Hour of Code Intro
-        frozen_loops: Introduction to Loops
-        frozen_functions: Introduction to Functions
-        playlab_intro: Introduction to Play Lab
-        playlab_events: Play Lab Events
-        playlab_repeat_forever: Play Lab Repeat Forever
-        tutorial_puzzle_challenge: Tutorial Puzzle Challenge
-        infinity_playlab_intro: Play Lab - Introduction
-        infinity_playlab_events: Play Lab - Events
-        infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        frozen_intro: "Úvod do Hodiny kódu"
+        frozen_loops: "Úvod do cyklov"
+        frozen_functions: "Úvod do funkcií"
+        playlab_intro: "Úvod do Play Lab"
+        playlab_events: Play Lab Udalosti
+        playlab_repeat_forever: Play Lab Doživotné opakovanie
+        tutorial_puzzle_challenge: Tutoriál - Puzzle výzva
+        infinity_playlab_intro: Play Lab - Úvod
+        infinity_playlab_events: Play Lab - Udalosti
+        infinity_playlab_repeat_forever: Play Lab - Doživotné opakovanie
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
+        csp_applab_conditionals_1: Introduction to Conditionals - Part 1
+        csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_3: Introduction to Conditionals - Part 3
+        csp_applab_design: Introduction to Design Mode
+        csp_applab_variables_1: Introduction to Variables - Part 1
+        csp_applab_variables_2: Introduction to Variables - Part 2
+        csp_applab_functions: "Úvod do funkcií"
+        csp_applab_functions_parameters: Functions with Parameters
+        csp_applab_loops: Cykly
+        csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
         csp_pixelation_color_2: Color pixelation widget - Part 2
@@ -657,6 +744,7 @@
         csp_pixelation_bw: Black and white pixelation widget
         csp_U1L14_tipstricks: Unit 1 Lesson 14 Teacher Tips & Tricks
         csp_textcompression: Text compression widget
+        csp_textcompression_new: Text compression widget
         csp_internetsimulator_1: Internet Simulator - Part 1
         csp_internetsimulator_2: Internet Simulator - Part 2
         csp_internetsimulator_3: Internet Simulator - Part 3
@@ -677,6 +765,27 @@
         alg_15_biggame_update_player: CS in Algebra - Big Game Update Player
         alg_16_biggame_collision_detection: CS in Algebra - Big Game Collision Detection
         alg_17_sambat_compound_booleans: CS in Algebra - Compound Booleans
+        hoc2015_preview_blocks: Make your own game blocks
+        hoc2015_preview_typing: Make your own game typing
+        hoc2015_preview_conclusion: Make your own game conclusion
+        starwars_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
+        starwars_typing: 'Star Wars: Budovanie Galaxie s kódom - JavaScript'
+        starwars_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
+        starwars_congrats: 'Star Wars: Budovanie Galaxie s kódom - Gratulujeme'
+        starwars_blocks_intro: 'Star Wars: Budovanie Galaxie s kódom - Úvod'
+        starwars_blocks_events: 'Star Wars: Budovanie Galaxie s kódom - Udalosti'
+        starwars_blocks_congrats: 'Star Wars: Budovanie Galaxie s kódom - Gratulujeme'
+        mc_intro: Minecraft - Úvod
+        mc_repeat: Minecraft - Opakovanie
+        mc_if_statements: Minecraft - Príkazy Ak
+        mc_congrats_share: Minecraft - Gratulujeme
+        mc_congrats_no_share: Minecraft - Gratulujeme
+        gumball_intro: Gumball Hour of Code - Introduction
+        gumball_events: Gumball Hour of Code - Events
+        gumball_repeat: Gumball Hour of Code - Repeat statements
+        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_events: Ice Age Hour of Code - Events
+        iceage_repeat: Ice Age Hour of Code - Repeat statements
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -702,8 +811,8 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!
@@ -778,3 +887,13 @@
         Infinity_move_directions_callout_arrow: Use these arrows to steer
         Infinity_move_collide_callout: Play a sound when this event occurs.
         Infinity_repeat_callout: Place Move blocks inside here
+        craft_run_button_callout: Hit "Run" to try your program
+        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
+          the other block
+        craft_callout_preplaced: We've put some blocks here to get you started
+        craft_inside_repeat: Repeat actions by placing blocks in here
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+        craft_what_is_iron: Mine this iron!
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?

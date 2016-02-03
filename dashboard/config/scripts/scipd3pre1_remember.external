@@ -1,0 +1,36 @@
+name 'sciPD3pre1 remember'
+title 'Looking Back to P2'
+description 'Refreshing yourself on the module that you will be teaching'
+css 'unplugged'
+skip_dialog true
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/equityOnline.css">
+
+### Prep with Peers
+
+<br/>
+Now that you've taken some time to prep your lessons, you probably have some questions.  Head over to to the Professional Learning Community to discuss your lesson plans with the rest of the group.  
+
+What's your plan for TLO? 
+
+ - What module will you be teaching?
+ - How would you present lesson 2?
+ - What is your plan for lesson 3?
+ - What activities are you most looking forward to?
+ - Is there any place that you're feeling stuck?
+ - What help can you offer to others?
+
+<a href="http://forum.code.org/t/prep-with-peers/1748" target="blank"><button class="plc">Discuss Your Lesson >></button></a>
+<br/><br/>
+
+When you're done, come back and continue with Phase 3 Online.
+
+<br/><br/>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
+
+
+
+
+MARKDOWN

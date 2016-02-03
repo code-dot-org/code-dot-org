@@ -26,7 +26,7 @@ def locale_chapter_partner?()
 end
 
 def partner_site?()
-  partner_sites = %w(al ar br eu italia ro sg uk za).map{|x|x + '.code.org'}
+  partner_sites = CDO.partners.map{|x|x + '.code.org'}
   return partner_sites.include?(request.site)
 end
 

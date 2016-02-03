@@ -1,6 +1,7 @@
 var errorMapper = require('./errorMapper');
 
-var annotations = [];
+var lintAnnotations = [];
+var runtimeAnnotations = [];
 var aceSession;
 var dropletEditor;
 
@@ -16,10 +17,10 @@ function updateGutter() {
   if (dropletEditor) {
     // Droplet will call aceSession.setAnnotations() under the hood
     // for us
-    dropletEditor.setAnnotations(annotations);
+    dropletEditor.setAnnotations(lintAnnotations.concat(runtimeAnnotations));
   }
   else {
-    aceSession.setAnnotations(annotations);
+    aceSession.setAnnotations(lintAnnotations.concat(runtimeAnnotations));
   }
 }
 
@@ -47,7 +48,7 @@ module.exports = {
   setJSLintAnnotations: function (jslintResults) {
     errorMapper.processResults(jslintResults);
     // clone annotations in case anyone else has a reference to data
-    annotations = jslintResults.data.slice();
+    lintAnnotations = jslintResults.data.slice();
     updateGutter();
   },
 
@@ -64,7 +65,12 @@ module.exports = {
       text: text,
       type: level.toLowerCase()
     };
-    annotations.push(annotation);
+    runtimeAnnotations.push(annotation);
+    updateGutter();
+  },
+
+  clearRuntimeAnnotations: function () {
+    runtimeAnnotations = [];
     updateGutter();
   },
 };

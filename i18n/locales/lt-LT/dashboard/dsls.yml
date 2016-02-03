@@ -32,7 +32,7 @@ lt:
         /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
-        Match the grid to the program.: Match the grid to the program.
+        Match the grid to the program.: Priderink tinklelį prie programos.
         Matching: Sujungimas
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
@@ -291,7 +291,7 @@ lt:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Pirmiausia padėk kvadratą<br/>Virš jo padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk trikampį'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Pradėk nuo kvadrato<br/>Padėk trikampį virš kvadrato<br/>Padėk trikampį po kvadratu'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Pradėk nuo kvadrato<br/>Padėk trikampį po kvadratu<br/>Padėk lygiagretainį trikampio dešinėje'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Pradėk nuo kvadrato<br/>Padėk trikampį šalia kvadrato<br/>Padėk lygiagretainį po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
@@ -420,7 +420,7 @@ lt:
         /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
         /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500
         Maze Multiple Choice One: 'Labirintas: parink teisingą atsakymą'
-        Which set of blocks is the correct answer?: Which set of blocks is the correct answer?
+        Which set of blocks is the correct answer?: Kuris blokų derinys yra teisingas?
       4-5 Algorithms Multi 1:
         Baking cookies: Sausainių kepimas
         Banana: Bananas
@@ -591,17 +591,18 @@ lt:
         Line 5: Line 5
         Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E|S.png: /script_assets/k_1_images/artist_images/E|S.png
-        /script_assets/k_1_images/artist_images/E|S|S.png: /script_assets/k_1_images/artist_images/E|S|S.png
-        /script_assets/k_1_images/artist_images/S|E|E.png: /script_assets/k_1_images/artist_images/S|E|E.png
-        /script_assets/k_1_images/artist_images/W|S|S.png: /script_assets/k_1_images/artist_images/W|S|S.png
+        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
+        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
+        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
+        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
         /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png, 500
         Multiple Choice: Parink teisingą atsakymą
         Which blocks solve this puzzle?: Kurie blokeliai išspręs šią užduotį?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E|S|W|N.png: /script_assets/k_1_images/artist_images/E|S|W|N.png
-        /script_assets/k_1_images/artist_images/N|E|S|W.png: /script_assets/k_1_images/artist_images/N|E|S|W.png
-        /script_assets/k_1_images/artist_images/N|W|S|E.png: /script_assets/k_1_images/artist_images/N|W|S|E.png
+        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
+        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
+        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
+        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
         /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png, 500
         Multiple Choice: Parink teisingą atsakymą
         Which blocks draw the square?: Kurie blokeliai nubrėš kvadratą?
@@ -742,16 +743,16 @@ lt:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
+        Driver and Helper: Vairuotojas ir Pagalbininkas
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Vienas iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.'
+        Which boy is the <large>helper</large>?: 'Kuris berniukas yra <large>pagalbininkas</large>?'
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
-        Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
+        Driver and Helper: Vairuotojas ir Pagalbininkas
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Vienas iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.'
+        This time, which boy is the <large>driver</large>?: 'Kuris berniukas, šį kartą, yra <large>vairuotojas</large>?'
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100

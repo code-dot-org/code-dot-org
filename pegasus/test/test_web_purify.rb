@@ -3,9 +3,9 @@ require 'minitest/autorun'
 require_relative '../src/env'
 require_relative '../../lib/cdo/web_purify'
 
-class WebPurifyTest < Minitest::Unit::TestCase
+class WebPurifyTest < Minitest::Test
   def test_profanity_checking
-    return unless CDO.webpurify_key
+    skip 'todo re-enable using webmock'
     assert_nil(WebPurify.find_potential_profanity('not a swear'))
     assert_equal('shit', WebPurify.find_potential_profanity('holy shit'))
     assert_equal('shitstain', WebPurify.find_potential_profanity('shitstain'))

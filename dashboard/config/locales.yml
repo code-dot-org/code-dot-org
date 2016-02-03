@@ -38,7 +38,7 @@
 "bs": "bs-BA"
 "bs-BA":
   english: "Bosnian"
-  native: "Босански"
+  native: "Bosanski"
   webfonts: false
 
 "ca": "ca-ES"
@@ -97,13 +97,11 @@
 "et-EE":
   english: "Estonian"
   native: "Eesti"
-  debug: true
 
 "eu": "eu-ES"
 "eu-ES":
   english: "Basque"
   native: "Euskara"
-  debug: true
 
 "fa": "fa-AF"
 "fa-AF":
@@ -144,8 +142,7 @@
 "gl": "gl-ES"
 "gl-ES":
   english: "Galician"
-  native: "Galiza"
-  debug: true
+  native: "Galego"
 
 "he": "he-IL"
 "he-IL":
@@ -213,6 +210,12 @@
   native: "한국어"
   webfonts: false  
 
+"kk": "kk-KZ"
+"kk-KZ":
+  english: "Kazakh"
+  native: "Қазақша"
+  webfonts: false
+
 "km": "km-KH"
 "km-KH":
   english: "Khmer"
@@ -237,6 +240,12 @@
   english: "Latvian"
   native: "Latviešu"
   webfonts: false
+
+"mi": "mi-NZ"
+"mi-NZ":
+  english: "Maori"
+  native: "Māori"
+  debug: true
 
 "mk": "mk-MK"
 "mk-MK":
@@ -280,12 +289,12 @@
 "nn": "nn-NO"
 "nn-NO":
   english: "Norwegian Nynorsk"
-  native: "Nynorsk"
+  native: "Norsk (nynorsk)"
 
 "no": "no-NO"
 "no-NO":
   english: "Norwegian"
-  native: "Norsk"
+  native: "Norsk (bokmål)"
 
 "pl": "pl-PL"
 "pl-PL":
@@ -318,6 +327,13 @@
   english: "Russian"
   native: "Русский"
   webfonts: false
+
+"si": "si-LK"
+"si-LK":
+  english: "Sinhalese"
+  native: "සිංහල"
+  webfonts: false
+  debug: true
 
 "sk": "sk-SK"
 "sk-SK":
@@ -380,6 +396,12 @@
   dir: 'rtl'
   webfonts: false
 
+"uz": "uz-UZ"
+"uz-UZ":
+  english: "Uzbekistan"
+  native: "Oʻzbekcha"
+  debug: true
+
 "vi": "vi-VN"
 "vi-VN":
   english: "Vietnamese"
@@ -395,3 +417,9 @@
   english: "Chinese (Traditional)"
   native: "繁體字"
   webfonts: false
+
+"zu": "zu-ZA"
+"zu-ZA":
+  english: "Zulu"
+  native: "isiZulu"
+  debug: true

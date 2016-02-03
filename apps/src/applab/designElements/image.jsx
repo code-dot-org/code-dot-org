@@ -1,6 +1,5 @@
 /* global $ */
 
-var React = require('react');
 
 var PropertyRow = require('./PropertyRow.jsx');
 var BooleanPropertyRow = require('./BooleanPropertyRow.jsx');
@@ -25,13 +24,9 @@ var ImageProperties = React.createClass({
       <div id='propertyRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true} />
-        <PropertyRow
-          desc={'text'}
-          initialValue={$(element).text()}
-          handleChange={this.props.handleChange.bind(this, 'text')} />
         <PropertyRow
           desc={'width (px)'}
           isNumber={true}
@@ -81,7 +76,7 @@ var ImageEvents = React.createClass({
   },
 
   getClickEventCode: function() {
-    var id = this.props.element.id;
+    var id = elementUtils.getId(this.props.element);
     var code =
       'onEvent("' + id + '", "click", function(event) {\n' +
       '  console.log("' + id + ' clicked!");\n' +
@@ -102,7 +97,7 @@ var ImageEvents = React.createClass({
       <div id='eventRowContainer'>
         <PropertyRow
           desc={'id'}
-          initialValue={element.id}
+          initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}/>
         <EventHeaderRow/>
@@ -124,14 +119,18 @@ module.exports = {
     var element = document.createElement('img');
     element.style.height = '100px';
     element.style.width = '100px';
-    element.setAttribute('src', '');
+    element.setAttribute('src', '/blockly/media/1x1.gif');
+    element.setAttribute('data-canonical-image-url', '');
 
     return element;
   },
-  onDeserialize: function (element, onPropertyChange) {
-    var url = element.getAttribute('data-canonical-image-url');
+  onDeserialize: function (element, updateProperty) {
+    var url = element.getAttribute('data-canonical-image-url') || '';
     if (url) {
-      onPropertyChange(element, 'picture', url);
+      updateProperty(element, 'picture', url);
+    } else {
+      element.setAttribute('src', '/blockly/media/1x1.gif');
+      element.setAttribute('data-canonical-image-url', '');
     }
   }
 };

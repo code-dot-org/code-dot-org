@@ -1,10 +1,10 @@
 * * *
 
-title: Grazie per esserti iscritto per ospitare un evento dell'Ora del Codice! layout: wide
+title: <%= hoc_s(:title_signup_thanks) %> layout: wide nav: how_to_nav
 
-social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "og:image:width": 1705 "og:image:height": 949 "og:url": "http://<%=request.host%>" "og:video": "https://youtube.googleapis.com/v/rH7AjDMz_dc"
+social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= hoc_s(:meta_tag_og_description) %>" "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png" "og:image:width": 1440 "og:image:height": 900 "og:url": "http://<%=request.host%>" Context | Edit Context 
 
-"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/code-video-thumbnail.jpg" "twitter:player": 'https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0' "twitter:player:width": 1920 "twitter:player:height": 1080
+"twitter:card": player "twitter:site": "@codeorg" "twitter:url": "http://<%=request.host%>" "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>" "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>" "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
 
 * * *
 
@@ -12,32 +12,38 @@ social: "og:title": "<%= hoc_s(:meta_tag_og_title) %>" "og:description": "<%= ho
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#OradelCodice' %>
 
-# Grazie per esserti iscritto per ospitare un evento dell'Ora del Codice!
+# Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during Dec. 7-13.
-
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. Saremo in contatto per i premi, le nuove esercitazioni e altri aggiornamenti interessanti. Cosa puoi fare ora?
 
 ## 1. Diffondi la notizia
 
-Dì ai tuoi amici de L'Ora del Codice con #HourOfCode.
+Ti sei appena unito al movimento dell'Ora del Codice. Dillo ai tuoi amici con **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## Proponi a tutta la tua scuola di offrire ai vostri studenti un'Ora del Codice
+## 2. Find a local volunteer to help you with your event.
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your principal to encourage every classroom at your school to sign up.
+[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Proponi al tuo datore di lavoro di essere coinvolti
+## 3. Chiedi alla tua scuola di organizzare un'Ora del Codice
 
-[Send this email](<%= hoc_uri('/resources#email') %>) to your manager or the CEO.
+[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) al Dirigente Scolastico della tua scuola e invita ogni classe ad iscriversi.
 
-## 4. Promuovi il progetto L'Ora del Codice nella tua comunità
+## 4. Chiedi al tuo datore di lavoro di partecipare
 
-Recluta un gruppo locale — un gruppo di boy scout, la tua chiesa, l'università o un sindacato. Oppure organizza una "festa di quartiere" per l'Ora del Codice.
+[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) al tuo responsabile, o all'Amministratore Delegato della tua azienda.
 
-## 5. Proponi ad un funzionario locale di sostenere L'Ora del Codice
+## 5. Promuovi l'Ora del Codice fra i tuoi conoscenti
 
-[Send this email](<%= hoc_uri('/resources#politicians') %>) to your mayor, city council, or school board and invite them to visit your school for the Hour of Code.
+[ Recluta un po' di persone](%= resolve_url('/promote/resources#sample-emails') %) — tra i boy-scout, in parrocchia, all'università, tra gli esperti, al sindacato o tra i tuoi amici. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Utilizza questi [poster, banner, adesivi, video e altro](%= resolve_url('/promote/resources') %) per il tuo evento.
+
+## 6. Proponi ad un rappresentante eletto di sostenere L'Ora del Codice
+
+[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) agli Amministratori Locali, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
+
+## 7. Plan your Hour of Code
+
+Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
 
 <%= view 'popup_window.js' %>

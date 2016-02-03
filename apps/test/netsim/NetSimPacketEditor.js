@@ -1,9 +1,17 @@
 /** @file Tests for NetSimPacketEditor */
-/* global $, describe, beforeEach, it */
-var testUtils = require('../util/testUtils');
-var NetSimTestUtils = require('../util/netsimTestUtils');
-var assert = testUtils.assert;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var assert = require('../util/testUtils').assert;
+var NetSimTestUtils = require('../util/netsimTestUtils');
 var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
@@ -13,7 +21,6 @@ describe("NetSimPacketEditor", function () {
   var editor, rootDiv;
 
   var alignDecimal = DataConverters.alignDecimal;
-  var asciiToBinary = DataConverters.asciiToBinary;
   var binaryToAB = DataConverters.binaryToAB;
   var binaryToDecimal = DataConverters.binaryToDecimal;
   var binaryToHex = DataConverters.binaryToHex;
@@ -30,7 +37,7 @@ describe("NetSimPacketEditor", function () {
     rootDiv = editor.getRoot();
   });
 
-  it ("only renders enabled encodings", function () {
+  it("only renders enabled encodings", function () {
     var message = "test message";
     var binaryMessage = DataConverters.asciiToBinary(message, 8);
     editor.message = binaryMessage;

@@ -15,6 +15,8 @@ social:
 
 You’ll need to apply *and be accepted* to our district partnership program. **(Application does not mean acceptance.) Before you do, consider these key requirements up front:**
 
+1. Code.org currently only partners with public schools in the United States.
+
 1. Identify, or explain in detail, how you will identify at least 30 teachers who will participate in the professional development workshops we hold in your area. This can happen in one of following ways:
   1. Your district has at least 30 committed teachers for each program you want
 	1. You join forces with neighboring districts either as a consortia of districts lead by one district submitting one application for the group or districts joining together to submit individual applications together
@@ -27,7 +29,6 @@ You’ll need to apply *and be accepted* to our district partnership program. **
 
 1. Each teacher accepted into our professional development must teach the course -- this means taking steps on your side (such as securing course codes in high school) in advance of the partnership.
 
-1. We will match up to 50% of the teacher stipends for high school and middle school professional development when scheduled. Budget your contribution in advance and identify the source of funding. Here is an [XLS calculator](/files/stipendcalculator.xlsx) to determine costs. (Note: Code.org doesn’t cover taxes and benefits on stipends and we don’t provide stipends for K-5 workshops.)
 
 [<button>Back to partnership page</button>](/educate/districts)
 

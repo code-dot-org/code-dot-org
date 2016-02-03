@@ -30,7 +30,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "never_autoplay_video": "false"
   }
 }]]></config>
   <blocks>
@@ -66,7 +67,7 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
+    <recommended_blocks>
       <xml>
         <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
@@ -77,7 +78,7 @@
           <title name="VALUE">50</title>
         </block>
       </xml>
-    </required_blocks>
+    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="draw_turn_by_constant">

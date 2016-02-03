@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## getImageData(startX, startY, endX, endY)
+## getImageData(x, y, width, height)
 
 [/name]
 
@@ -20,7 +20,7 @@ Category: Canvas
 
 [short_description]
 
-Returns an object representing the image data captured from the canvas in the coordinate range from startX, startY to endX, endY.
+Returns an object representing the image data captured from the canvas by the bounding rectangle that starts at *x*, *y*, with size *width*, and *height*.
 
 [/short_description]
 
@@ -35,7 +35,8 @@ ____________________________________________________
 
 **Print the red value of a single pixel**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480); //Make a canvas element with the name 'canvas1' and size 320x480 pixels
 setFillColor('red'); //Set the fill color of future drawn shapes
@@ -47,7 +48,7 @@ var redValue = getRed(imageData, 50, 50);
 
 //Print redValue to the debugging console. We will see 255 in the console.
 console.log(redValue);
-</pre>
+```
 
 [/example]
 
@@ -57,7 +58,8 @@ ____________________________________________________
 
 **Change the red value of a single pixel to zero**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -73,7 +75,7 @@ putImageData(imageData, 0, 0); //Update the canvas with modified image data star
 
 //Print red value at x:50 y:50 from imageData to the console again. We will see 0 in the console.
 console.log(getRed(imageData, 50, 50));
-</pre>
+```
 
 [/example]
 
@@ -83,7 +85,8 @@ ____________________________________________________
 
 **Change the red value of a single pixel to half of its current value**
 
-<pre>
+
+```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
 createCanvas('canvas1', 320, 480);
 setFillColor('red');
@@ -96,7 +99,7 @@ var newRed = (getRed(imageData, 50, 50) / 2);
 //First modify the red value at x:50 y:50 in the image data using 'newRed' then update the canvas
 setRed(imageData, 50, 50, newRed);
 putImageData(imageData, 0, 0);
-</pre>
+```
 
 [/example]
 
@@ -108,7 +111,8 @@ ____________________________________________________
 
 In this more detailed example, we move through each pixel of the canvas and change the red value to zero in each. To do this, the function `removeRed(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
 
-<pre>
+
+```
 //Define the removeRed function (which accepts image data to work on as variable 'thisImageData')
 function removeRed(thisImageData){
     for(var y=0; y < thisImageData.height; y++) { //Loop over each pixel in y axis
@@ -127,7 +131,7 @@ var imageData = getImageData(0, 0, 320, 480);
 
 //Then we will call our function to remove all red from the canvas one pixel at a time
 removeRed(imageData);
-</pre>
+```
 
 [/example]
 
@@ -136,9 +140,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 getImageData(startX, startY, endX, endY);
-</pre>
+```
 
 [/syntax]
 
@@ -148,10 +153,10 @@ getImageData(startX, startY, endX, endY);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| startX | number | Yes | The x position in pixels starting from the upper left corner of image to start the capture.  |
-| startY | number | Yes | The y position in pixels starting from the upper left corner of image to start the capture.  |
-| endX | number | Yes | The x position in pixels starting from the upper left corner of image to end the capture.  |
-| endY | number | Yes | The y position in pixels starting from the upper left corner of image to end the capture.  |
+| x | number | Yes | The x position in pixels to start the capture.  |
+| y | number | Yes | The y position in pixels to start the capture.  |
+| width | number | Yes | The width of the bounding rectangle to capture the image data.  |
+| height | number | Yes | The height of the bounding rectangle to capture the image data.  |
 
 [/parameters]
 

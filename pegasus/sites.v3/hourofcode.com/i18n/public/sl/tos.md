@@ -1,4 +1,10 @@
+---
 
+title: Pogoji uporabe
+
+---
+
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
 # Pogoji uporabe
 

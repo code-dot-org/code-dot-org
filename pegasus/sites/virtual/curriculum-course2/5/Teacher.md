@@ -142,7 +142,10 @@ Looking for some good music?
 Here are some great places to find some:
 
 - [Radio Disney](http://music.disney.com/radio-disney)
+- [Nick Radio](http://www.nick.com/nick-radio/)
 - [Kidz Bop Radio](http://www.jango.com/music/Kidz+Bop+Kids?l=0)
+
+Please be advised that some of these stations may display ads with third-party content. If you find that displayed ads are inappropriate, you may want to direct students to a different site, or research ad-blockers that can prevent this content.
 
 [/tip]
 

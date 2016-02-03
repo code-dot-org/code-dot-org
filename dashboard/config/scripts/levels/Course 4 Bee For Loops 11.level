@@ -14,7 +14,7 @@
     "disable_param_editing": "true",
     "disable_variable_editing": "true",
     "start_direction": "1",
-    "step_mode": "0",
+    "step_mode": 1,
     "flower_type": "redWithNectar",
     "nectar_goal": "22",
     "instructions": "What's wrong with this loop? See if you can fix it and make the bee collect all the nectar.",
@@ -28,8 +28,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false",
-    "maze_data": null
+    "disable_examples": "false"
   }
 }]]></config>
   <blocks>

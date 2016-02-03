@@ -109,5 +109,5 @@ Code.org will cover the following meals each day. Please note that we will not h
 
 <a id="form"></a>
 ## Registration Form
-<script type="text/javascript" src="http://form.jotformpro.com/jsform/41187461407959"></script>
+<script type="text/javascript" src="https://secure.jotformpro.com/jsform/41187461407959"></script>
 [**Back to the top**](#top)

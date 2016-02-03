@@ -2,13 +2,14 @@ require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     @maze_data = {game_id: 25, user_id: 1, name: '__bob4', level_num: 'custom', skin: 'birds', instructions: 'sdfdfs'}
     @level = Maze.create(@maze_data)
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
     @level.save!
     @script_level = create(:script_level, level_id: @level.id)
-    @level_path = "levels/#{@level.id}"
-    @script_level_path = "s/#{@script_level.script.name}/stage/1/puzzle/1"
+    @level_path = "/levels/#{@level.id}"
+    @script_level_path = "/s/#{@script_level.script.name}/stage/1/puzzle/1"
     Script.script_cache.delete @script_level.script.name
     Script.script_cache.delete @script_level.script.id.to_s
 

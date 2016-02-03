@@ -15,7 +15,7 @@ sk:
         video: Unplug2
       Unplug3:
         title: Programovanie na milimetrovom papieri
-        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares in on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
+        desc: "By programming one another to draw pictures, students will begin to understand what programming is really about. The class will begin by students instructing each other to color squares on graph paper in an effort to reproduce an existing picture.  If there's time, the lesson can conclude with images that the students create themselves."
         pdfs:
           - unplug3
         video: Unplug3
@@ -33,7 +33,7 @@ sk:
           - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
+        title: Podmienky
         desc: 'This is a class game.  After introducing the idea of conditionals, if-statements, and loops, the class can practice together using a pre-written program, a deck of cards, and luck of the draw.'
         pdfs:
           - unplug6
@@ -63,18 +63,18 @@ sk:
           - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
+        title: Zbaliť
         desc: The final wrap-up in the first 20-hour series will help the class relive all of their favorite moments, while giving them next steps that they can take on their own if they are interested in continuing their computer science journey.
         pdfs:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli postavu cez bludisko použitím jednoduchých príkazov.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+        desc: Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli postavu cez bludisko použitím jednoduchých príkazov.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Real-life Algorithms: Plant a Seed'

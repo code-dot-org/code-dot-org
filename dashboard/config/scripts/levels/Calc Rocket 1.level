@@ -8,21 +8,23 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "In the last puzzle you wrote a contract for the function rocket-height that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.\r\n\r\n\r\n\r\n\r\n  \r\n\r\n",
+    "instructions": "In the last puzzle you wrote a contract for the function rocket-height that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "markdown_instructions": "In the last puzzle you wrote a contract for the function _rocket-height_ that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.",
+    "markdown_instructions": "In the last puzzle you wrote a contract for the function `rocket-height` that states it has a range of Number, domain of Number, and should return the height of the rocket traveling at 15 m/s after a given number of seconds. Let's write an example case now for the height of the rocket at 3 seconds.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

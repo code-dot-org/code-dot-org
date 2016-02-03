@@ -5,7 +5,7 @@ embedded_layout: simple_embedded
 
 [name]
 
-## turnRight(angle)
+## turnRight(*angle*)
 
 [/name]
 
@@ -20,11 +20,11 @@ Category: Turtle
 
 [short_description]
 
-Changes the turtle's direction to the right by the specified angle in degrees.
+Rotates the turtle right by the specified angle. The turtle’s position remains the same.
 
 [/short_description]
 
-The turtle's position remains the same. The direction is turned right by angle degrees.
+turnRight() is one of the ways to change the turtle's orientation. When used with moveForward(), you can move, and draw with, the turtle anywhere on the screen.
 
 [/description]
 
@@ -33,9 +33,11 @@ ____________________________________________________
 
 [example]
 
-<pre>
-turnRight(90);    // Makes the turtle face left
-</pre>
+
+```
+// Rotate the turtle right 90 degrees (the default angle) from the current direction.
+turnRight();
+```
 
 [/example]
 
@@ -43,14 +45,34 @@ ____________________________________________________
 
 [example]
 
-<pre>
-// Draw a Triangle
-moveForward(100);   // Move along the left edge
-turnRight(120);     // Turn to face the top right edge. Interior angle is 60, so turn 180 - 60
-moveForward(100);   // Move along the top right edge
-turnRight(120);     // Turn to face the bottom right edge
-moveForward(100);   // Move along the bottom right edge
-</pre>
+**Example: Step** Draw a step with a right turn and a left turn. 
+
+```
+// Draw a step with a right turn and a left turn.
+moveForward();
+turnRight();
+moveForward();
+turnLeft();
+```
+
+[/example]
+____________________________________________________
+
+[example]
+
+**Example: Letter W** Draw the letter W with right turns only. 
+
+```
+// Draw the letter W with right turns only.
+turnRight(150);
+moveForward();
+turnRight(-120);
+moveForward();
+turnRight(120);
+moveForward();
+turnRight(-120);
+moveForward();
+```
 
 [/example]
 
@@ -58,15 +80,26 @@ ____________________________________________________
 
 [example]
 
+**Example: Star** Draw a 25 pointed star by first calculating the exterior angle turn necessary. 
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
 <pre>
-// Draw a 25 pointed star
-var points = 25;                        // Number of points to draw, must be odd
-var angle = 180.0 - (180.0 / points);   // We want to almost turn around every time, and do a complete 180 in our 25 steps
-for (var i = 0; i < points; i++) {      // Loop through all the points
-  moveForward(200);                     // Move forward
-  turnRight(angle);                     // Turn almost all the way around
+// Draw a 25 pointed star by first calculating the exterior angle turn necessary. 
+var points = 25;
+var exteriorAngle = 180.0 - (180.0 / points);
+for (var i = 0; i &lt; points; i++) {
+  moveForward(200);
+  turnRight(exteriorAngle);
 }
 </pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/3fae81b2ff35c4dcfe7c784b186b39c9-image-1445619726798.gif'>
+</td>
+</tr>
+</table>
 
 [/example]
 
@@ -75,9 +108,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 turnRight(angle);
-</pre>
+```
 
 [/syntax]
 
@@ -87,14 +121,14 @@ turnRight(angle);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| angle | number | Yes | The angle to turn right.  |
+| angle | number | No | The angle to rotate right (90 degrees is default).  |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Rotates turtle only.
 
 [/returns]
 
@@ -102,6 +136,11 @@ No return value. Outputs to the display only.
 
 ### Tips
 - You can specify a negative angle to turn right, which makes the turtle turn left instead.
+- There are three ways to rotate the turtle in place
+	- turnRight(*angle*) - Rotates the turtle right **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnLeft(*angle*) - Rotates the turtle left **by** the specified angle relative to the current turtle direction. The turtle’s position remains the same.
+	- turnTo(*angle*) - Rotates the turtle **to** a specific angle. 0 is up, 90 is right, 180 is down, and 270 is left. The turtle’s position remains the same.
+
 [/tips]
 
 [bug]

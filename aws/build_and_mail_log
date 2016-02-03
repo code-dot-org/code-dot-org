@@ -16,7 +16,15 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'mail'
 
+def format_duration(total_seconds)
+  total_seconds = total_seconds.to_i
+  minutes = (total_seconds / 60).to_i
+  seconds = total_seconds - (minutes * 60)
+  "%.1d:%.2d minutes" % [minutes, seconds]
+end
+
 def main()
+  start_time = Time.now.to_i
   # Run the build script and exit if it didn't do anything.
   script = File.expand_path('../build', __FILE__)
   log = `\"#{script}\" #{ARGV.join(' ')} 2>&1`.strip
@@ -27,16 +35,21 @@ def main()
     commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{RakeUtils.git_revision}"
     # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
+    time_message = " 🕐 #{format_duration(Time.now.to_i - start_time)}"
     if status == 0
-      HipChat.log "<b>#{projects}</b> built.", color: 'green'
+      message = "<b>#{projects}</b> built." + time_message
 
-      HipChat.developers "<b>#{projects}</b> built.", color: 'green'
+      HipChat.log message, color: 'green'
+
+      HipChat.developers message, color: 'green'
       HipChat.developers commit_url, color: 'gray', message_format: 'text'
     else
-      HipChat.log "<b>#{projects}</b>  failed to build!", color: 'red'
+      message = "<b>#{projects}</b> failed to build!" + time_message
+
+      HipChat.log message, color: 'red'
       HipChat.log "/quote #{log}", color: 'gray', message_format: 'text'
 
-      HipChat.developers "<b>#{projects}</b>  failed to build!", color: 'red', notify: 1
+      HipChat.developers message, color: 'red', notify: 1
       HipChat.developers commit_url, color: 'gray', message_format: 'text'
     end
   end

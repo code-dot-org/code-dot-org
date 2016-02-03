@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: videos
+#
+#  id           :integer          not null, primary key
+#  key          :string(255)
+#  youtube_code :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  download     :string(255)
+#
+
 # Links to a YouTube video
 class Video < ActiveRecord::Base
   include Seeded
@@ -41,7 +53,8 @@ class Video < ActiveRecord::Base
         showinfo: 1,
         autoplay: 1,
         wmode: 'transparent',
-        iv_load_policy: 3
+        iv_load_policy: 3,
+        enablejsapi: 1
     }
 
     language = I18n.locale.to_s.downcase.split('-').first

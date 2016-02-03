@@ -17,7 +17,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": 1,
     "nectar_goal": "42",
     "flower_type": "redWithNectar",
     "markdown_instructions": "Take a look at each piece of the `for loop` that you have just created.  Can you figure out which numbers you need to double to solve this puzzle? Why does it work?",
@@ -28,7 +28,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "step_speed": "1"
   }
 }]]></config>

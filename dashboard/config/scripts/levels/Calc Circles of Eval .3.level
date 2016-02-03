@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "use_contract_editor": "true",
-    "instructions": "Here's a function for Addition which takes two numbers and returns their sum. Use this Addition block to add 3 + 6.",
+    "instructions": "Here's a function for addition which takes two numbers and returns their sum. Use this Addition Block to add 3 + 6.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -21,7 +21,10 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Here's a function for addition which takes two numbers and returns their sum. Use this Addition Block to add 3 + 6.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

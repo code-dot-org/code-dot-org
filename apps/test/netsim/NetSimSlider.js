@@ -1,7 +1,15 @@
-var testUtils = require('../util/testUtils');
-var assertEqual = testUtils.assertEqual;
-var assertThrows = testUtils.assertThrows;
+/* jshint
+ funcscope: true,
+ newcap: true,
+ nonew: true,
+ shadow: false,
+ unused: true,
+ eqeqeq: true
+ */
+'use strict';
+/* global describe, beforeEach, it */
 
+var assert = require('../util/testUtils').assert;
 var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
 
 describe("NetSimSlider", function () {
@@ -16,24 +24,24 @@ describe("NetSimSlider", function () {
       slider = new NetSimSlider(null, {});
     });
 
-    it ("value round-trip is identity within slider range", function () {
+    it("value round-trip is identity within slider range", function () {
       // Default range is 0-100
-      assertEqual(0, roundTrip(0));
-      assertEqual(1, roundTrip(1));
-      assertEqual(42, roundTrip(42));
-      assertEqual(99, roundTrip(99));
-      assertEqual(100, roundTrip(100));
+      assert.equal(0, roundTrip(0));
+      assert.equal(1, roundTrip(1));
+      assert.equal(42, roundTrip(42));
+      assert.equal(99, roundTrip(99));
+      assert.equal(100, roundTrip(100));
     });
 
-    it ("clamps values to default range", function () {
+    it("clamps values to default range", function () {
       // Default range is 0-100
-      assertEqual(0, roundTrip(-1));
-      assertEqual(0, roundTrip(-100));
-      assertEqual(0, roundTrip(-Infinity));
+      assert.equal(0, roundTrip(-1));
+      assert.equal(0, roundTrip(-100));
+      assert.equal(0, roundTrip(-Infinity));
 
-      assertEqual(100, roundTrip(101));
-      assertEqual(100, roundTrip(500));
-      assertEqual(100, roundTrip(Infinity));
+      assert.equal(100, roundTrip(101));
+      assert.equal(100, roundTrip(500));
+      assert.equal(100, roundTrip(Infinity));
     });
   });
 
@@ -46,24 +54,24 @@ describe("NetSimSlider", function () {
       });
     });
 
-    it ("value round-trip is identity within slider range", function () {
+    it("value round-trip is identity within slider range", function () {
       // Range is 100-0
-      assertEqual(100, roundTrip(100));
-      assertEqual(99, roundTrip(99));
-      assertEqual(42, roundTrip(42));
-      assertEqual(1, roundTrip(1));
-      assertEqual(0, roundTrip(0));
+      assert.equal(100, roundTrip(100));
+      assert.equal(99, roundTrip(99));
+      assert.equal(42, roundTrip(42));
+      assert.equal(1, roundTrip(1));
+      assert.equal(0, roundTrip(0));
     });
 
-    it ("clamps values to default range", function () {
+    it("clamps values to default range", function () {
       // Range is 100-0
-      assertEqual(100, roundTrip(101));
-      assertEqual(100, roundTrip(500));
-      assertEqual(100, roundTrip(Infinity));
+      assert.equal(100, roundTrip(101));
+      assert.equal(100, roundTrip(500));
+      assert.equal(100, roundTrip(Infinity));
 
-      assertEqual(0, roundTrip(-1));
-      assertEqual(0, roundTrip(-100));
-      assertEqual(0, roundTrip(-Infinity));
+      assert.equal(0, roundTrip(-1));
+      assert.equal(0, roundTrip(-100));
+      assert.equal(0, roundTrip(-Infinity));
     });
   });
 
@@ -77,40 +85,40 @@ describe("NetSimSlider", function () {
       });
     });
 
-    it ("value round-trip is identity within slider range", function () {
-      assertEqual(0, roundTrip(0));
-      assertEqual(1, roundTrip(1));
-      assertEqual(42, roundTrip(42));
-      assertEqual(99, roundTrip(99));
-      assertEqual(100, roundTrip(100));
+    it("value round-trip is identity within slider range", function () {
+      assert.equal(0, roundTrip(0));
+      assert.equal(1, roundTrip(1));
+      assert.equal(42, roundTrip(42));
+      assert.equal(99, roundTrip(99));
+      assert.equal(100, roundTrip(100));
     });
 
-    it ("clamps values to infinities outside of range", function () {
-      assertEqual(-Infinity, roundTrip(-1));
-      assertEqual(-Infinity, roundTrip(-100));
-      assertEqual(-Infinity, roundTrip(-Infinity));
+    it("clamps values to infinities outside of range", function () {
+      assert.equal(-Infinity, roundTrip(-1));
+      assert.equal(-Infinity, roundTrip(-100));
+      assert.equal(-Infinity, roundTrip(-Infinity));
 
-      assertEqual(Infinity, roundTrip(101));
-      assertEqual(Infinity, roundTrip(500));
-      assertEqual(Infinity, roundTrip(Infinity));
+      assert.equal(Infinity, roundTrip(101));
+      assert.equal(Infinity, roundTrip(500));
+      assert.equal(Infinity, roundTrip(Infinity));
     });
   });
 
   describe("bad configurations", function () {
-    it ("throws when initialized with noninteger step values", function () {
-      assertThrows(Error, function () {
+    it("throws when initialized with noninteger step values", function () {
+      assert.throws(function () {
         slider = new NetSimSlider(null, { step: 0.1 });
-      });
+      }, Error);
 
-      assertThrows(Error, function () {
+      assert.throws(function () {
         slider = new NetSimSlider(null, { step: 5.1 });
-      });
+      }, Error);
     });
 
-    it ("throws when initialized with a zero step value", function () {
-      assertThrows(Error, function () {
+    it("throws when initialized with a zero step value", function () {
+      assert.throws(function () {
         slider = new NetSimSlider(null, { step: 0 });
-      });
+      }, Error);
     });
   });
 });
@@ -122,41 +130,41 @@ describe("NetSimSlider.DecimalPrecisionSlider", function () {
     return slider.sliderPositionToValue(slider.valueToSliderPosition(val));
   };
 
-  it ("has default precision of 2 decimal places", function () {
+  it("has default precision of 2 decimal places", function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.1 });
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.01 });
-    assertThrows(Error, function () {
+    assert.throws(function () {
       slider = new NetSimSlider.DecimalPrecisionSlider(null, { step: 0.001 });
-    });
+    }, Error);
   });
 
-  it ("can be constructed with greater precision", function () {
+  it("can be constructed with greater precision", function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.001 });
-    assertThrows(Error, function () {
+    assert.throws(function () {
       slider = new NetSimSlider.DecimalPrecisionSlider(null, { precision: 3, step: 0.0001 });
-    });
+    }, Error);
   });
 
   it("value round-trip is identity within slider range", function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { min: 0.1, max: 1.0, step: 0.1 });
 
-    assertEqual(0.1, roundTrip(0.1));
-    assertEqual(0.2, roundTrip(0.2));
-    assertEqual(0.4, roundTrip(0.4));
-    assertEqual(0.9, roundTrip(0.9));
-    assertEqual(1.0, roundTrip(1.0));
+    assert.equal(0.1, roundTrip(0.1));
+    assert.equal(0.2, roundTrip(0.2));
+    assert.equal(0.4, roundTrip(0.4));
+    assert.equal(0.9, roundTrip(0.9));
+    assert.equal(1.0, roundTrip(1.0));
   });
 
   it("clamps values to default range", function () {
     slider = new NetSimSlider.DecimalPrecisionSlider(null, { min: 0.1, max: 1.0, step: 0.1 });
 
-    assertEqual(0.1, roundTrip(0.09));
-    assertEqual(0.1, roundTrip(0));
-    assertEqual(0.1, roundTrip(-Infinity));
+    assert.equal(0.1, roundTrip(0.09));
+    assert.equal(0.1, roundTrip(0));
+    assert.equal(0.1, roundTrip(-Infinity));
 
-    assertEqual(1.0, roundTrip(1.01));
-    assertEqual(1.0, roundTrip(5));
-    assertEqual(1.0, roundTrip(Infinity));
+    assert.equal(1.0, roundTrip(1.01));
+    assert.equal(1.0, roundTrip(5));
+    assert.equal(1.0, roundTrip(Infinity));
   });
 });
 
@@ -173,56 +181,56 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       slider = new LogarithmicSlider(null, {});
     });
 
-    it ("value round-trip is identity for 2^x values within slider range", function () {
+    it("value round-trip is identity for 2^x values within slider range", function () {
       // Default range is 1-100
-      assertEqual(2, roundTrip(2));
-      assertEqual(4, roundTrip(4));
-      assertEqual(8, roundTrip(8));
-      assertEqual(16, roundTrip(16));
-      assertEqual(32, roundTrip(32));
-      assertEqual(64, roundTrip(64));
+      assert.equal(2, roundTrip(2));
+      assert.equal(4, roundTrip(4));
+      assert.equal(8, roundTrip(8));
+      assert.equal(16, roundTrip(16));
+      assert.equal(32, roundTrip(32));
+      assert.equal(64, roundTrip(64));
     });
 
-    it ("value round-trip rounds down to nearest 2^x value", function () {
+    it("value round-trip rounds down to nearest 2^x value", function () {
       // Default range is 1-100
-      assertEqual(2, roundTrip(3));
-      assertEqual(4, roundTrip(7));
-      assertEqual(8, roundTrip(15));
-      assertEqual(16, roundTrip(31));
-      assertEqual(32, roundTrip(63));
-      assertEqual(64, roundTrip(99));
+      assert.equal(2, roundTrip(3));
+      assert.equal(4, roundTrip(7));
+      assert.equal(8, roundTrip(15));
+      assert.equal(16, roundTrip(31));
+      assert.equal(32, roundTrip(63));
+      assert.equal(64, roundTrip(99));
     });
 
-    it ("value round-trip is identity for min and max values", function () {
+    it("value round-trip is identity for min and max values", function () {
       // Default range is 1-100
-      assertEqual(1, roundTrip(1));
-      assertEqual(100, roundTrip(100));
+      assert.equal(1, roundTrip(1));
+      assert.equal(100, roundTrip(100));
     });
 
-    it ("clamps values to default range", function () {
+    it("clamps values to default range", function () {
       // Default range is 1-100
-      assertEqual(1, roundTrip(-1));
-      assertEqual(1, roundTrip(-100));
-      assertEqual(1, roundTrip(-Infinity));
+      assert.equal(1, roundTrip(-1));
+      assert.equal(1, roundTrip(-100));
+      assert.equal(1, roundTrip(-Infinity));
 
-      assertEqual(100, roundTrip(101));
-      assertEqual(100, roundTrip(500));
-      assertEqual(100, roundTrip(Infinity));
+      assert.equal(100, roundTrip(101));
+      assert.equal(100, roundTrip(500));
+      assert.equal(100, roundTrip(Infinity));
     });
 
-    it ("values are powers of two of the slider positions", function () {
-      assertEqual(1, slider.sliderPositionToValue(0));
-      assertEqual(2, slider.sliderPositionToValue(1));
-      assertEqual(4, slider.sliderPositionToValue(2));
-      assertEqual(8, slider.sliderPositionToValue(3));
-      assertEqual(16, slider.sliderPositionToValue(4));
-      assertEqual(32, slider.sliderPositionToValue(5));
-      assertEqual(64, slider.sliderPositionToValue(6));
+    it("values are powers of two of the slider positions", function () {
+      assert.equal(1, slider.sliderPositionToValue(0));
+      assert.equal(2, slider.sliderPositionToValue(1));
+      assert.equal(4, slider.sliderPositionToValue(2));
+      assert.equal(8, slider.sliderPositionToValue(3));
+      assert.equal(16, slider.sliderPositionToValue(4));
+      assert.equal(32, slider.sliderPositionToValue(5));
+      assert.equal(64, slider.sliderPositionToValue(6));
     });
 
-    it ("values are clamped at extreme slider positions", function () {
-      assertEqual(1, slider.sliderPositionToValue(-1));
-      assertEqual(100, slider.sliderPositionToValue(7));
+    it("values are clamped at extreme slider positions", function () {
+      assert.equal(1, slider.sliderPositionToValue(-1));
+      assert.equal(100, slider.sliderPositionToValue(7));
     });
   });
 
@@ -238,29 +246,29 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       });
     });
 
-    it ("value round-trip is identity for 2^x values within slider range", function () {
-      assertEqual(32, roundTrip(32));
+    it("value round-trip is identity for 2^x values within slider range", function () {
+      assert.equal(32, roundTrip(32));
     });
 
-    it ("value round-trip rounds down to nearest 2^x value or miniumum", function () {
-      assertEqual(16, roundTrip(31));
-      assertEqual(32, roundTrip(63));
+    it("value round-trip rounds down to nearest 2^x value or miniumum", function () {
+      assert.equal(16, roundTrip(31));
+      assert.equal(32, roundTrip(63));
     });
 
-    it ("value round-trip is identity for exact min and max values", function () {
+    it("value round-trip is identity for exact min and max values", function () {
       // Default range is 1-100
-      assertEqual(16, roundTrip(16));
-      assertEqual(64, roundTrip(64));
+      assert.equal(16, roundTrip(16));
+      assert.equal(64, roundTrip(64));
     });
 
-    it ("clamps values to infinities outside of range", function () {
-      assertEqual(-Infinity, roundTrip(15));
-      assertEqual(-Infinity, roundTrip(-100));
-      assertEqual(-Infinity, roundTrip(-Infinity));
+    it("clamps values to infinities outside of range", function () {
+      assert.equal(-Infinity, roundTrip(15));
+      assert.equal(-Infinity, roundTrip(-100));
+      assert.equal(-Infinity, roundTrip(-Infinity));
 
-      assertEqual(Infinity, roundTrip(65));
-      assertEqual(Infinity, roundTrip(500));
-      assertEqual(Infinity, roundTrip(Infinity));
+      assert.equal(Infinity, roundTrip(65));
+      assert.equal(Infinity, roundTrip(500));
+      assert.equal(Infinity, roundTrip(Infinity));
     });
   });
 
@@ -276,31 +284,31 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       });
     });
 
-    it ("value round-trip is identity for 2^x values within slider range", function () {
-      assertEqual(32, roundTrip(32));
-      assertEqual(64, roundTrip(64));
+    it("value round-trip is identity for 2^x values within slider range", function () {
+      assert.equal(32, roundTrip(32));
+      assert.equal(64, roundTrip(64));
     });
 
-    it ("value round-trip rounds down to nearest 2^x value or miniumum", function () {
-      assertEqual(25, roundTrip(31));
-      assertEqual(32, roundTrip(63));
-      assertEqual(64, roundTrip(74));
+    it("value round-trip rounds down to nearest 2^x value or miniumum", function () {
+      assert.equal(25, roundTrip(31));
+      assert.equal(32, roundTrip(63));
+      assert.equal(64, roundTrip(74));
     });
 
-    it ("value round-trip is identity for exact min and max values", function () {
+    it("value round-trip is identity for exact min and max values", function () {
       // Default range is 1-100
-      assertEqual(25, roundTrip(25));
-      assertEqual(75, roundTrip(75));
+      assert.equal(25, roundTrip(25));
+      assert.equal(75, roundTrip(75));
     });
 
-    it ("clamps values to infinities outside of range", function () {
-      assertEqual(-Infinity, roundTrip(24));
-      assertEqual(-Infinity, roundTrip(-100));
-      assertEqual(-Infinity, roundTrip(-Infinity));
+    it("clamps values to infinities outside of range", function () {
+      assert.equal(-Infinity, roundTrip(24));
+      assert.equal(-Infinity, roundTrip(-100));
+      assert.equal(-Infinity, roundTrip(-Infinity));
 
-      assertEqual(Infinity, roundTrip(76));
-      assertEqual(Infinity, roundTrip(500));
-      assertEqual(Infinity, roundTrip(Infinity));
+      assert.equal(Infinity, roundTrip(76));
+      assert.equal(Infinity, roundTrip(500));
+      assert.equal(Infinity, roundTrip(Infinity));
     });
   });
 
@@ -315,42 +323,42 @@ describe("NetSimSlider.LogarithmicSlider", function () {
       });
     });
 
-    it ("value round-trip is identity for 10^x values within slider range", function () {
-      assertEqual(10, roundTrip(10));
-      assertEqual(100, roundTrip(100));
-      assertEqual(1000, roundTrip(1000));
+    it("value round-trip is identity for 10^x values within slider range", function () {
+      assert.equal(10, roundTrip(10));
+      assert.equal(100, roundTrip(100));
+      assert.equal(1000, roundTrip(1000));
     });
 
-    it ("value round-trip rounds down to nearest 10^x value or minimum", function () {
-      assertEqual(8, roundTrip(9));
-      assertEqual(10, roundTrip(99));
-      assertEqual(100, roundTrip(999));
+    it("value round-trip rounds down to nearest 10^x value or minimum", function () {
+      assert.equal(8, roundTrip(9));
+      assert.equal(10, roundTrip(99));
+      assert.equal(100, roundTrip(999));
     });
 
-    it ("value round-trip is identity for min and max values", function () {
-      assertEqual(8, roundTrip(8));
-      assertEqual(1024, roundTrip(1024));
+    it("value round-trip is identity for min and max values", function () {
+      assert.equal(8, roundTrip(8));
+      assert.equal(1024, roundTrip(1024));
     });
 
-    it ("clamps values to range", function () {
-      assertEqual(8, roundTrip(7));
-      assertEqual(8, roundTrip(-100));
-      assertEqual(8, roundTrip(-Infinity));
+    it("clamps values to range", function () {
+      assert.equal(8, roundTrip(7));
+      assert.equal(8, roundTrip(-100));
+      assert.equal(8, roundTrip(-Infinity));
 
-      assertEqual(1024, roundTrip(1025));
-      assertEqual(1024, roundTrip(5000));
-      assertEqual(1024, roundTrip(Infinity));
+      assert.equal(1024, roundTrip(1025));
+      assert.equal(1024, roundTrip(5000));
+      assert.equal(1024, roundTrip(Infinity));
     });
 
-    it ("values are powers of ten of the slider positions", function () {
-      assertEqual(10, slider.sliderPositionToValue(1));
-      assertEqual(100, slider.sliderPositionToValue(2));
-      assertEqual(1000, slider.sliderPositionToValue(3));
+    it("values are powers of ten of the slider positions", function () {
+      assert.equal(10, slider.sliderPositionToValue(1));
+      assert.equal(100, slider.sliderPositionToValue(2));
+      assert.equal(1000, slider.sliderPositionToValue(3));
     });
 
-    it ("values are clamped at extreme slider positions", function () {
-      assertEqual(8, slider.sliderPositionToValue(0));
-      assertEqual(1024, slider.sliderPositionToValue(4));
+    it("values are clamped at extreme slider positions", function () {
+      assert.equal(8, slider.sliderPositionToValue(0));
+      assert.equal(1024, slider.sliderPositionToValue(4));
     });
   });
 });

@@ -6,32 +6,41 @@ De: "Hadi Partovi (Code.org) Gracias por registrarse para patrocinar la Hora de 
 
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
 
-# ¡Gracias por inscribirte para ser anfitrión de una Hora de Programación!
+# ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-<% if @country == 'la' || @country == 'br' || @country == 'ar' %> Usted hace posible que estudiantes a lo largo de Latinoamérica aprendan una Hora de Código que puede cambiar el resto de sus vidas durante octubre. 5 al 11. <% else %> Usted hace posible que estudiantes alrededor del mundo aprendan una Hora de Código que puede *cambiar el resto de sus vidas*, durante diciembre. Xpath: /p[3]. 7 al 13. <% end %>
+Usted está haciendo posible para que los estudiantes de todo el mundo aprendan una Hora de Código que puede cambiar el resto de sus vidas, durante los días del 7 al 13 de Diciembre.
 
-We'll be in touch about prizes, new tutorials and other exciting updates in the fall. So, what can you do now?
+*Every* Hour of Code organizer worldwide will receive a gift card to Amazon, iTunes, or Windows Store as a thank-you gift while supplies last. [And there are more awesome prizes](https://<%= hostname %>/prizes).
+
+#### Estaremos en contacto sobre nuevos tutoriales y otras noticias interesantes. ¿Qué puede usted hacer ahora?
+
+## 1. Find a local volunteer to help you with your event.
+
+[Search our volunteer map](https://code.org/volunteer/local) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 1. Corre la voz
 
-Dile a tus amigos acerca de la #HourOfCode.
+We need your help to reach organizers worldwide. Tell your friends about the #HourOfCode. [Use these helpful resources](https://<%= hostname %>/promote/resources) to promote your event.
 
-## 2. Pídele a toda tu escuela que ofrezca una Hora de Programación
+## 3. Recruit your whole school for the Hour of Code
 
-[Envíe este email](http://<%= hostname %>/resources#email) a su director.
+[Send this email](https://<%= hostname %>/promote/resources#sample-emails) to your principal or [share these handouts](https://<%= hostname %>/promote/resources).
 
-## 3. Pregunta a tu empleador para estar involucrado
+## 4. Pídele a tu compañía que se involucre
 
-[Envíe éste email](http://<%= hostname %>/resources#email) a su gerente, o Director General.
+[Envia este correo electrónico](https://<%= hostname %>/promover/recursos #muestra-mensajes de correo electrónico) a tu gerente o director general.
 
-## 4. Promueva la Hora del Código en su comunidad
+## 5. Promote the Hour of Code in your community
 
-Incorpore un grupo local — club de niños/niñas scouts, iglesia, universidad, grupo de veteranos o sindicato de trabajo. O patrocine una Hora de Código "una fiesta de conocidos" para su vecindario. [Envíe este email](http://<%= hostname %>/resources#email).
+Recluta a un grupo local o incluso algunos amigos. [Enviar este correo electrónico](https://<%= hostname %>/recursos #muestra-mensajes de correo electrónico).
 
-## 5. Pídele a un funcionario electo local que apoye la Hora del Código.
+Gracias por dirigir el movimiento para dar a cada estudiante la oportunidad de aprender habilidades informáticas fundacionales.
 
-[Envíe este email](http://<%= hostname %>/resources#politicians) a su alcalde, consejo de ciudad, o asoción escolar e invítelos a visitar su escuela.
+Hadi Partovi   
+Fundador, Code.org
 
 * * *
 
-Code.org es una 501c3 no lucrativa. Nuestra dirección es 1301 5th Ave, Suite 1225, Seattle, WA, 98101. No quiere recibir estos correos? [Retirar de la lista de subscripción](%= unsubscribe_link %).
+<small> Estás recibiendo este correo electrónico porque usted se registro para la Hora de Código, apoyado por más de 200 socios y organizado por Code.org. Code.org es una 501c3 sin fines de lucro. Nuestra dirección es 1301 5th Ave, Suite 1225, Seattle, WA, 98101. ¿No quieres estos correos? <a href="%= unsubscribe_link %">Darse de baja</a>. </small>
+
+![](<%= tracking_pixel %>)

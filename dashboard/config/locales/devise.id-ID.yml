@@ -72,7 +72,7 @@
       not_locked: tidak terkunci
       not_saved:
         one: '1 error mengagalkan informasi %{resource} ini untuk disimpan:'
-        other: '%{count} error menggagalkan informasi %{resource} ini untuk disimpan:'
+        other: "%{count} error menggagalkan informasi %{resource} ini untuk disimpan:"
     invitations:
       send_instructions: Email undangan telah dikirim ke %{email}.
       invitation_token_invalid: Token undangan yang disediakan tidak valid!
@@ -92,6 +92,6 @@
         someone_invited_you: Seseorang telah mengundang Anda untuk %{url}, Anda dapat
           menerimanya melalui link di bawah ini.
         accept: Terima undangan
-        ignore: Jika Anda tidak ingin menerima undangan, harap Abaikan email ini.
-          < br / Akun Anda tidak dapat dibuat sampai Anda mengakses link di atas dan
+        ignore: Jika Anda tidak ingin menerima undangan, harap abaikan email ini.
+          <br /> Akun Anda tidak akan dibuat sampai Anda mengakses link di atas dan
           mengatur sandi Anda.

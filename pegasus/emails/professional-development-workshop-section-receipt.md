@@ -18,7 +18,7 @@ attachments:
 <%
 facebook = {:u=>"http://code.org/k5"}
 facebook_link = "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"
-twitter = {:related=>'codeorg', :hashtags=>'', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
+twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
 twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
 %>
 <% unless recipient.name.nil_or_empty? %>
@@ -51,20 +51,35 @@ style="background-color:#7e5ca2;border-radius:4px;color:#ffffff;display:inline-b
 </div>
 <br>
 
-**Classroom supplies, free of charge:**
+**Classroom supplies, at no cost:**
 
 Please take a moment to complete [this short survey](http://code.org/professional-development-workshop-surveys/<%= workshop_id %>) to rate your facilitator and workshop experience. Completing the survey will qualify you to receive supplies at no cost for the unplugged activities from Course 1, 2 or 3. It will also help us improve our K-5 Professional Development program.
 
 Attached to this email, you will also find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
+<br>
+
+**For a limited time**  
+
+Code.org is offering $50 off [**Dash robots**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid Dec 1-Jan 1, 2016 only. Limited to first 1,000 people.*
+
+**Redemption code for robots: CODE1729**   
+*Valid Jan 1-31st 2016 only.*
+*Limited to first 1,000*
+
+[Go here](https://help.makewonder.com/) for questions regarding redemption. 
 
 **Need more support?**
 
-Check out our [online workshop](https://code.org/educate/professional-development-online), [K-5 forum](http://support.code.org/hc/communities/public/topics) and [FAQ](http://support.code.org/). Or [contact us](http://code.org/contact).
+- Refresh your skills before you teach. Check out our [online workshop](https://code.org/educate/professional-development-online).
+- Meet us online. Attend one of our [online monthly meetings](http://www.eventbrite.com/o/codeorg-teacher-community-8317327577).
+- Connect with other educators teaching CS. Join our [Professional Learning Community](http://forum.code.org/). 
+- See our [FAQ](http://support.code.org/). 
+- Or [contact us](http://code.org/contact).
 
 Thanks again for your support,
 
 Hadi Partovi<br/>
-Founder, Code.org
+Founder, Code.org 
 
 Follow us [on Facebook](http://facebook.com/code.org) or [on Twitter](http://twitter.com/codeorg)
 

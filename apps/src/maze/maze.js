@@ -51,7 +51,7 @@ var TurnDirection = tiles.TurnDirection;
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-var SVG_NS = "http://www.w3.org/2000/svg";
+var SVG_NS = require('../constants').SVG_NS;
 
 /**
  * Create a namespace for the application.
@@ -94,6 +94,9 @@ var loadLevel = function() {
     Maze.scale[key] = level.scale[key];
   }
 
+  if (level.fastGetNectarAnimation) {
+    skin.actionSpeedScale.nectar = 0.5;
+  }
   // Measure maze dimensions and set sizes.
   // ROWS: Number of tiles down.
   Maze.ROWS = Maze.map.length;
@@ -519,7 +522,7 @@ Maze.init = function(config) {
   config.grayOutUndeletableBlocks = true;
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
-  
+
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.bee = new Bee(Maze, studioApp, config);
     // Override default stepSpeed
@@ -618,7 +621,7 @@ Maze.init = function(config) {
     resetDirt();
 
     if (mazeUtils.isBeeSkin(config.skinId)) {
-      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.initialDirtMap, Maze.bee);
+      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.bee);
     } else {
       Maze.gridItemDrawer = new DirtDrawer(Maze.dirt_, skin.dirt);
     }
@@ -702,8 +705,7 @@ var createPegmanAnimation = function(options) {
   clip.appendChild(rect);
   svg.appendChild(clip);
   // Create image.
-  // Add a random number to force it to reload everytime.
-  var imgSrc = options.pegmanImage + '?time=' + (new Date()).getTime();
+  var imgSrc = options.pegmanImage;
   var img = document.createElementNS(SVG_NS, 'image');
   img.setAttributeNS(
       'http://www.w3.org/1999/xlink', 'xlink:href', imgSrc);
@@ -958,7 +960,22 @@ var displayFeedback = function() {
 Maze.onReportComplete = function(response) {
   Maze.response = response;
   Maze.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
+};
+
+/**
+ * Perform some basic initialization/resetting operations before
+ * execution. This function should be idempotent, as it can be called
+ * during execution when running multiple trials.
+ */
+Maze.prepareForExecution = function () {
+  Maze.executionInfo = new ExecutionInfo({ticks: 100});
+  Maze.result = ResultType.UNSET;
+  Maze.testResults = TestResults.NO_TESTS_RUN;
+  Maze.waitingForReport = false;
+  Maze.animating_ = false;
+  Maze.response = null;
 };
 
 /**
@@ -966,13 +983,8 @@ Maze.onReportComplete = function(response) {
  */
 Maze.execute = function(stepMode) {
   beginAttempt();
+  Maze.prepareForExecution();
 
-  Maze.executionInfo = new ExecutionInfo({ticks: 100});
-  Maze.result = ResultType.UNSET;
-  Maze.testResults = TestResults.NO_TESTS_RUN;
-  Maze.waitingForReport = false;
-  Maze.animating_ = false;
-  Maze.response = null;
 
   var code;
   if (studioApp.isUsingBlockly()) {
@@ -1002,6 +1014,46 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
+      if (Maze.bee && Maze.bee.staticGrids.length > 1) {
+        // If this level is a Bee level with multiple possible grids, we
+        // need to run against all grids and sort them into successes
+        // and failures
+        var successes = [];
+        var failures = [];
+
+        Maze.bee.staticGrids.forEach(function(grid, i) {
+          Maze.bee.useGridWithId(i);
+
+          // Run trial
+          codegen.evalWith(code, {
+            StudioApp: studioApp,
+            Maze: api,
+            executionInfo: Maze.executionInfo
+          });
+
+          // Sort static grids based on trial result
+          Maze.onExecutionFinish();
+          if (Maze.executionInfo.terminationValue() === true) {
+            successes.push(i);
+          } else {
+            failures.push(i);
+          }
+
+          // Reset for next trial
+          Maze.gridItemDrawer.resetClouded();
+          Maze.prepareForExecution();
+          studioApp.reset(false);
+        });
+
+        // The user's code needs to succeed against all possible grids
+        // to be considered actually successful; if there are any
+        // failures, randomly select one of the failing grids to be the
+        // "real" state of the map. If all grids are successful,
+        // randomly select any one of them.
+        var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
+        Maze.bee.useGridWithId(i);
+      }
+
       codegen.evalWith(code, {
         StudioApp: studioApp,
         Maze: api,
@@ -1137,7 +1189,6 @@ Maze.execute = function(stepMode) {
   // Speeding up specific levels
   var scaledStepSpeed = stepSpeed * Maze.scale.stepSpeed *
   skin.movePegmanAnimationSpeedScale;
-
   timeoutList.setTimeout(function () {
     Maze.scheduleAnimations(stepMode);
   }, scaledStepSpeed);
@@ -1153,7 +1204,6 @@ Maze.scheduleAnimations = function (singleStep) {
 
   var timePerAction = stepSpeed * Maze.scale.stepSpeed *
     skin.movePegmanAnimationSpeedScale;
-
   // get a flat list of actions we want to schedule
   var actions = Maze.executionInfo.getActions(singleStep);
 
@@ -1170,9 +1220,14 @@ Maze.scheduleAnimations = function (singleStep) {
     }
 
     animateAction(actions[index], singleStep, timePerAction);
+
+    var command = actions[index] && actions[index].command;
+    var timeModifier = (skin.actionSpeedScale && skin.actionSpeedScale[command]) || 1;
+    var timeForThisAction = Math.round(timePerAction * timeModifier);
+
     timeoutList.setTimeout(function() {
       scheduleSingleAnimation(index + 1);
-    }, timePerAction);
+    }, timeForThisAction);
   }
 
   // Once animations are complete, we want to reenable the step button if we

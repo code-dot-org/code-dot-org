@@ -20,12 +20,11 @@ Category: Turtle
 
 [short_description]
 
-Draws a trail behind the turtle as it moves.
+Puts the pen down so the turtle draws a line behind it as it moves.
 
 [/short_description]
 
-**Note**: [penUp()](/applab/docs/penUp) is often used with penDown.
-**Note**: The color, and width of this trail can be changed, using [penColor(color)](/applab/docs/penColor) and [penWidth(width)](/applab/docs/penWidth).
+Just like you need to put the pen down on the paper to draw, the turtle pen needs to be put down to draw a line as it moves.
 
 [/description]
 
@@ -34,37 +33,11 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-<pre>
-penDown();            // draws a trail behind the turtle as it moves
-moveForward(100);     // moves the turtle forward 100 pixels
-</pre>
-
-[/example]
-
-____________________________________________________
-
-[example]
-
-**Example 2**
-
-This example uses penUp and penDown to draw a dotted line.
-
-<pre>
-speed(20);                    // sets the speed to 20, so its easier to see the turtle's movement
-penWidth(3);                  // sets the pen's thickness to 3 pixels
-penUp();                      // lifts the pen up so the turtle does not leave a trail behind it as it moves
-move(-125, 25);               // moves the turtle to its starting location
-turnRight(90);                // turns the turtle 90 degrees so that it is facing to the right
-for (var i = 0; i < 5; i++) { // repeats the code in this block 5 times
-  penDown();                  // puts the pen down so the turtle leaves a trail behind it as it moves
-  moveForward(25);            // moves the turtle froward 25 pixels
-  penUp();                    // lifts the pen up so the turtle does not leave a trail behind it as it moves
-  moveForward(25);            // moves the turtle forward 25 pixels
-}
-
-</pre>
+```
+// Draw a line up from the turtle starting postion at the center of the screen.
+penDown();
+moveForward();
+```
 
 [/example]
 
@@ -72,59 +45,83 @@ ____________________________________________________
 
 [example]
 
-**Example 3**
+**Example: Another Line** Move the turtle from the center of the screen without drawing a line, then draw a line up.
 
-This example uses penUp and penDown to draw a pair of eyes.
-
-<pre>
-speed(20);          // sets the speed to 20, so its easier to see the turtle's movement
-hide();             // hides the turtle so it is no longer visible
-penDown();          // puts the pen down so the turtle leaves a trail behind it as it moves
-arcRight(360, 25);  // draws a circle with a 25 pixel diameter (first eye)
-penUp();            // lifts the pen up so the turtle does not leave a trail behind it as it moves
-move(25, 10);       // moves the turtle inside the circle (first eye)
-dot(10);            // draws a 10 pixel dot (first pupil)
-move(-100, -10);    // moves the turtle into position for the second eye
-penDown();          // puts the pen back down so the turtle leaves a trail behind it as it moves
-arcRight(360, 25);  // draws the second eye, a circle with a 25 pixel diameter (second eye)
-penUp();            // lifts the pen up so the turtle does not leave a trail behind it as it moves
-move(25, 10);       // moves the turtle inside the circle (second eye)
-dot(10);            // draws a 10 pixel dot (second pupil)
-</pre>
-
+```
+// Move the turtle from the center of the screen without drawing a line, then draw a line up.
+penUp();
+moveForward();
+penDown();
+moveForward();
+```
 
 [/example]
 
 ____________________________________________________
 
+[example]
+
+**Example: X Marks the Spot** Use penUp and penDown to have the turtle draw an 'X', returning the turtle to the starting point.
+
+<table>
+<tr>
+<td style="border-style:none; width:90%; padding:0px">
+<pre>
+// Use penUp and penDown to have the turtle draw an 'X', returning the turtle to the starting point.
+penUp();
+move(-100,-100);
+penDown();
+move(200,200);
+penUp();
+move(-100,-100);
+move(-100,100);
+penDown();
+move(200,-200);
+penUp();
+move(-100,100);
+</pre>
+</td>
+<td style="border-style:none; width:10%; padding:0px">
+<img src='https://images.code.org/daa77ab1948749cd25db8d1022f1497d-image-1445602642474.gif'> 
+</td>
+</tr>
+</table>
+ 
+[/example]
+
+____________________________________________________
 
 [syntax]
 
 ### Syntax
-<pre>
+```
 penDown();
-</pre>
+```
 
 [/syntax]
 
 [parameters]
 
 ### Parameters
-`penDown()` does not take any parameters.
+penDown() does not take any parameters.
 
 [/parameters]
 
 [returns]
 
 ### Returns
-No return value. Outputs to the display only.
+No return value. Modifies turtle drawing only.
 
 [/returns]
 
 [tips]
 
 ### Tips
-- [penUp()](/applab/docs/penUp) is often used with penDown.
+- [penUp()](/applab/docs/penUp) is often used with penDown. 
+- The default starting configuration for the turtle is with the pen down.
+- The color and width of the turtle line can be changed using [penColor(color)](/applab/docs/penColor) and [penWidth(width)](/applab/docs/penWidth).
+- Turtle drawing commands are not effected by the [show()](/applab/docs/show) and [hide()](/applab/docs/hide) commands, which control if the turtle icon is displayed or not.
+- If you are not seeing the turtle's movement, slow the program execution down by adjusting the tortoise/hare slider bar in the Debug Console or by using the [speed()](/applab/docs/speed) command.
 
 [/tips]
 

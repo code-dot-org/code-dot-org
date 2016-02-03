@@ -38,7 +38,11 @@
     "custom_game_type": "Big Game",
     "min_workspace_height": "1500",
     "video_key": "alg_12_biggame_variables",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "markdown_instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
+    "never_autoplay_video": "false",
+    "examples_required": "false",
+    "maze_data": null
   }
 }]]></config>
   <blocks/>

@@ -1,0 +1,47 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2015-10-07T17:54:33.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Recreate the \"Chaser Game\" from the last lesson using Design Mode. (Click to see full instructions.)",
+    "markdown_instructions": "# Adding Images\r\n\r\nTo practice using images in Design Mode we are going to **recreate the \"Chaser Game\"** from the last lesson.\r\n\r\n# Do This:\r\n\r\n* **Add an Image element** ![](https://images.code.org/cda02ffe3acc869822a551f5cdbf8606-image-1444667846363.37.14 AM.png)\r\n* **Choose your image** ![](https://images.code.org/e5b9571ae54af60a3ae597b787e741ea-image-1444667688762.34.42 AM.png)\r\n\t* **URLs** can be added directly into the \"picture\" field.  \r\n\t* **Upload images** by clicking \"Choose\".\r\n\t* **Note:** You can always see all the files you've uploaded by clicking the gear at the top of the toolbox. ![](https://images.code.org/53b405b771bc11bf5d24c84c878c80dd-image-1444668067826.35.10 AM.png)\r\n* **Insert an event handler** for the image.\r\n* From here you can **work in Code Mode** to complete the remainder of your application. Recall that in the \"Chaser Game\" you just need an image that runs away from the mouse.\r\n* If you have time **use Design Mode** to quickly improve some of the visual components of your game.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "slider_speed": "1",
+    "droplet_tooltips_disabled": "false",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "encrypted_examples": "dHbUA3gk7VhtRBEgitVJ2G4KY6h18bhOvNAJ0+jx68nrIGq1KrFqaRrTcN45\ngr6b\n",
+    "project_template_level_name": "U3L12 Chaser Template"
+  }
+}]]></config>
+  <blocks/>
+</Applab>

@@ -43,29 +43,46 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "cannot create user with panda in name" do
+    user = User.create(@good_data.merge({name: panda_panda}))
+    assert !user.valid?
+    assert user.errors[:name].length == 1
+  end
+
+  test "cannot create user with panda in email" do
+    user = User.create(@good_data.merge({email: "#{panda_panda}@panda.com"}))
+    assert !user.valid?
+    assert user.errors[:email].length == 1
+  end
+
   test "cannot create user with invalid email" do
     user = User.create(@good_data.merge({email: 'foo@bar'}))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:email].length == 1
   end
 
   test "cannot create young user with invalid email" do
     user = User.create(@good_data_young.merge({email: 'foo@bar'}))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:email].length == 1
   end
 
   test "cannot create user with no type" do
     user = User.create(@good_data.merge(user_type: nil))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:user_type].length == 1
   end
 
   test "cannot create user with no name" do
     user = User.create(@good_data.merge(name: nil))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:name].length == 1
   end
 
   test "cannot create user with invalid type" do
     user = User.create(@good_data.merge(user_type: 'xxxxx'))
-    assert user.errors.messages.length == 1
+    assert !user.valid?
+    assert user.errors[:user_type].length == 1
   end
 
   test "cannot create user with duplicate email" do
@@ -140,7 +157,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create a user with too large age" do
     assert_no_difference('User.count') do
-      user = User.create(@good_data.merge({age: 15000000, email: 'new@email.com'}))
+      user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
       # should not be able to select -1 (they have a dropdown from
@@ -571,7 +588,7 @@ class UserTest < ActiveSupport::TestCase
 
     old_password = user.encrypted_password
 
-    user.reset_password!('goodpassword', 'goodpassword')
+    user.reset_password('goodpassword', 'goodpassword')
 
     # changed password
     assert user.reload.encrypted_password != old_password
@@ -686,6 +703,9 @@ class UserTest < ActiveSupport::TestCase
       section = create :section, script: Script.find_by_name('course1')
       create :follower, student_user: student, section: section, created_at: assigned_date
 
+      # pretend we created this script before we had the callback to create user_scripts
+      UserScript.last.destroy
+
       assert_creates(UserScript) do
         student.backfill_user_scripts
       end
@@ -777,7 +797,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student
     assert !user.needs_to_backfill_user_scripts?
 
-    script = Script.find(1)
+    script = Script.find_by_name("course2")
 
     create :user_level, user: user, level: script.script_levels.first.level, script: script
     # now has progress
@@ -830,6 +850,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal nil, User.normalize_gender(nil)
   end
 
+  test 'can create user with same name as deleted user' do
+    deleted_user = create(:user, name: 'Same Name')
+    deleted_user.destroy
+
+    create(:user, name: 'Same Name')
+  end
+
+
   test 'generate username' do
     def create_user_with_username(username)
       user = create(:user)
@@ -856,13 +884,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
 
     assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
-    assert_equal "coder", UserHelpers.generate_username(User, '樊瑞')
 
     create_user_with_username 'coder'
     create_user_with_username 'coder1'
     create_user_with_username 'coder99'
     create_user_with_username 'coder556'
-    assert_equal "coder557", UserHelpers.generate_username(User, '樊瑞')
+    assert_equal "coder5561", UserHelpers.generate_username(User, 'coder556')
 
     # short names
     assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
@@ -872,11 +899,15 @@ class UserTest < ActiveSupport::TestCase
 
     # parens
     assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
+
+    # non-ascii names
+    assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, '樊瑞')
+    assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, 'فاطمة بنت أسد')
   end
 
   test 'generates usernames' do
-    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', '樊瑞', 'فاطمة بنت أسد', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'coder', 'coder1', 'this_is_a_really']
+    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
+    expected_usernames = ['coder_a', 'coder_b', 'captain_picard', 'captain_picard1', 'captain_picard2', 'this_is_a_really']
 
     i = 0
     users = names.map do |name|
@@ -887,38 +918,16 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'email confirmation required for teachers' do
-    user = create :teacher, email: 'my_email@test.xx'
+    user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
     assert user.confirmation_required?
     assert !user.confirmed_at
   end
 
   test 'email confirmation not required for students' do
-    user = create :student, email: 'my_email@test.xx'
+    user = create :student, email: 'my_email@test.xx', confirmed_at: nil
     assert !user.confirmation_required?
     assert !user.confirmed_at
   end
-
-
-  test 'levels_from_script does not include userlevels from other scripts' do
-    user = create :user
-
-    script = Script.find(2) # original hoc script
-    shared_level = script.script_levels.first.level
-
-    assert shared_level.script_levels.count > 1
-
-    other_script = (shared_level.script_levels.collect(&:script) - [script]).first
-    assert other_script
-
-    other_script_user_level = UserLevel.create!(script_id: other_script.id, level_id: shared_level.id, user_id: user.id)
-    user_level = UserLevel.create!(script_id: script.id, level_id: shared_level.id, user_id: user.id)
-
-    lfs = user.levels_from_script(script)
-
-    assert_not_equal other_script_user_level, lfs.first.user_level
-    assert_equal user_level, lfs.first.user_level
-  end
-
 
   test 'student and teacher relationships' do
     student = create :student
@@ -979,5 +988,53 @@ class UserTest < ActiveSupport::TestCase
     assert admin.authorized_teacher?
   end
 
+  test "can_edit_account?" do
+    # a student who only logs in with picture accounts cannot edit their account
+
+    assert create(:student).can_edit_account?
+    assert create(:student, age: 4).can_edit_account?
+    assert create(:teacher).can_edit_account?
+
+    picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+    assert picture_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+    assert word_section.user.can_edit_account? # this is teacher -- make sure we didn't do it the wrong way
+
+    student_without_password = create(:student, encrypted_password: '')
+
+    # join picture section
+    create(:follower, student_user: student_without_password, section: picture_section)
+    student_without_password.reload
+    assert !student_without_password.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_without_password, section: word_section)
+    student_without_password.reload
+    assert student_without_password.can_edit_account? # only in a picture section
+
+    student_with_password = create(:student, encrypted_password: 'xxxxxx')
+
+    # join picture section
+    create(:follower, student_user: student_with_password, section: picture_section)
+    student_with_password.reload
+    assert student_with_password.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_with_password, section: word_section)
+    student_with_password.reload
+    assert student_with_password.can_edit_account? # only in a picture section
+
+    student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
+
+    # join picture section
+    create(:follower, student_user: student_with_oauth, section: picture_section)
+    student_with_oauth.reload
+    assert student_with_oauth.can_edit_account? # only in a picture section
+
+    # join word section
+    create(:follower, student_user: student_with_oauth, section: word_section)
+    student_with_oauth.reload
+    assert student_with_oauth.can_edit_account? # only in a picture section
+  end
 
 end

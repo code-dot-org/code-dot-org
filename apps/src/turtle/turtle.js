@@ -193,12 +193,13 @@ Artist.prototype.init = function(config) {
     this.avatarHeight = 51;
   }
 
+  var iconPath = 'media/turtle/' + (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
     data: {
       visualization: '',
       localeDirection: this.studioApp_.localeDirection(),
-      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl}),
+      controls: require('./controls.html.ejs')({assetUrl: this.studioApp_.assetUrl, iconPath: iconPath}),
       blockUsed : undefined,
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
@@ -482,7 +483,9 @@ Artist.prototype.drawTurtle = function() {
       sourceY + sourceHeight > this.avatarImage.height)
   {
     if (console && console.log) {
-      console.log("drawImage is out of source bounds!");
+      // TODO(bjordan): ask Brent, starting to flood grunt mochaTest messages,
+      // better fix here?
+      // console.log("drawImage is out of source bounds!");
     }
     return;
   }
@@ -703,7 +706,7 @@ Artist.prototype.generateTurtleCodeFromJS_ = function () {
   this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
 
   var initFunc = _.bind(function(interpreter, scope) {
-    codegen.initJSInterpreter(interpreter, null, scope, {
+    codegen.initJSInterpreter(interpreter, null, null, scope, {
       Turtle: this.api
     });
   }, this);
@@ -719,7 +722,8 @@ Artist.prototype.execute = function() {
   // Reset the graphic.
   this.studioApp_.reset();
 
-  if (this.studioApp_.hasExtraTopBlocks()) {
+  if (this.studioApp_.hasExtraTopBlocks() ||
+      this.studioApp_.hasDuplicateVariablesInForLoops()) {
     // immediately check answer, which will fail and report top level blocks
     this.checkAnswer();
     return;
@@ -851,7 +855,8 @@ Artist.prototype.animate = function() {
         stepped = this.interpreter.step();
       }
       catch(err) {
-        this.executionError = err;
+        // TODO (cpirich): populate lineNumber as we do for studio/applab:
+        this.executionError = { err: err, lineNumber: 1 };
         this.finishExecution_();
         return;
       }
@@ -970,6 +975,12 @@ Artist.prototype.step = function(command, values, options) {
       this.ctxScratch.rotate(2 * Math.PI * (this.heading - 90) / 360);
       this.ctxScratch.fillText(values[0], 0, 0);
       this.ctxScratch.restore();
+      break;
+    case 'GA':  // Global Alpha
+      var alpha = values[0];
+      alpha = Math.max(0, alpha);
+      alpha = Math.min(100, alpha);
+      this.ctxScratch.globalAlpha = alpha / 100;
       break;
     case 'DF':  // Draw Font
       this.ctxScratch.font = values[2] + ' ' + values[1] + 'pt ' + values[0];
@@ -1279,6 +1290,7 @@ Artist.prototype.onReportComplete = function(response) {
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
   runButton.disabled = false;
+  this.studioApp_.onReportComplete(response);
   this.displayFeedback_();
 };
 
@@ -1315,12 +1327,9 @@ Artist.prototype.checkAnswer = function() {
 
   var level = this.level;
 
-  // Allow some number of pixels to be off, but be stricter
-  // for certain levels.
-  var permittedErrors = level.permittedErrors;
-  if (permittedErrors === undefined) {
-    permittedErrors = 150;
-  }
+  // Optionally allow some number of pixels to be off, default to
+  // pixel-perfect strictness
+  var permittedErrors = level.permittedErrors || 0;
 
   // Test whether the current level is a free play level, or the level has
   // been completed

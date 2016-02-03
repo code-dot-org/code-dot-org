@@ -16,6 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/* global Blockly, goog, assertEquals, assert */
+
 'use strict';
 
 var SMALL_NUMBER_BLOCK  = '<xml>' +
@@ -84,9 +87,9 @@ function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
 
   // drop block just at bottom
   var distanceFromBottom = 10;
-  numberBlock.moveTo(0, viewportHeight
-      - numberBlock.getHeightWidth().height
-      - distanceFromBottom);
+  numberBlock.moveTo(0, viewportHeight -
+      numberBlock.getHeightWidth().height -
+      distanceFromBottom);
 
   Blockly.mainBlockSpace.scrollbarPair.resize();
 
@@ -100,4 +103,93 @@ function test_blockSpaceExpandsWithMarginAfterBlockDrop() {
       newScrollableHeight > originalPlusMargin);
 
   goog.dom.removeNode(container);
+}
+
+function test_blockSpaceAutoPositioning() {
+  var container = Blockly.Test.initializeBlockSpaceEditor();
+
+  var blocks = [
+    '<block type="math_number"><title name="NUM">0</title></block>',
+    '<block type="math_number" uservisible="false"><title name="NUM">0</title></block>',
+    '<block type="math_number"><title name="NUM">0</title></block>',
+    '<block type="math_number" x="99"><title name="NUM">0</title></block>',
+    '<block type="math_number" y="109"><title name="NUM">0</title></block>',
+    '<block type="math_number" x="119" y="129"><title name="NUM">0</title></block>',
+    '<block type="math_number" uservisible="false" x="139"><title name="NUM">0</title></block>',
+    '<block type="math_number" uservisible="false" y="149"><title name="NUM">0</title></block>',
+    '<block type="math_number" uservisible="false" x="159" y="169"><title name="NUM">0</title></block>',
+  ];
+
+  var expected_positions = [
+    [16, 16], // first block goes at the top
+    [16, 121], // second block is hidden, so it goes below the others
+    [16, 51], // third block goes after the first
+    [99, 86], // fourth is absolutely positioned with x=
+    [16, 109], // fifth is absolutely positioned with y=
+    [119, 129], // sixth is absolutely positioned with x= and y=
+    [139, 156], // seventh is hidden, so it goes after the second
+    [16, 149], // eighth is absolutely positioned with y=
+    [159, 169] // ninth is absolutely positioned with x= and y=
+  ];
+
+  var blockXML = '<xml>' + blocks.join('') + '</xml>';
+  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, Blockly.Xml.textToDom(blockXML));
+  var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
+  
+  for (var i = 0; i < topBlocks.length; i++) {
+    var position = topBlocks[i].getRelativeToSurfaceXY();
+    assertEquals(expected_positions[i][0], position.x);
+    assertEquals(expected_positions[i][1], position.y);
+  }
+}
+
+function test_blockSpace_isReadOnly() {
+  Blockly.Test.testWithReadOnlyBlockSpaceEditor(function(blockSpaceEditor) {
+    var blockSpace = blockSpaceEditor.blockSpace;
+    // default values; Blockly.readOnly = false, blockSpaceEditor.readOnly_ = true
+    assertEquals(blockSpaceEditor.readOnly_, true);
+    assertEquals(Blockly.readOnly, false);
+    assertEquals(blockSpaceEditor.isReadOnly(), true);
+    assertEquals(blockSpace.isReadOnly(), true);
+
+    // Blockly.readOnly = false, blockSpaceEditor.readOnly_ = false
+    blockSpaceEditor.readOnly_ = false;
+    Blockly.readOnly = false;
+    assertEquals(blockSpaceEditor.readOnly_, false);
+    assertEquals(Blockly.readOnly, false);
+    assertEquals(blockSpaceEditor.isReadOnly(), false);
+    assertEquals(blockSpace.isReadOnly(), false);
+
+    // Blockly.readOnly = true, blockSpaceEditor.readOnly_ = false
+    blockSpaceEditor.readOnly_ = false;
+    Blockly.readOnly = true;
+    assertEquals(blockSpaceEditor.readOnly_, false);
+    assertEquals(Blockly.readOnly, true);
+    assertEquals(blockSpaceEditor.isReadOnly(), true);
+    assertEquals(blockSpace.isReadOnly(), true);
+
+    // reset to defaults for next run
+    blockSpaceEditor.readOnly_ = false;
+    Blockly.readOnly = false;
+  });
+}
+
+function test_readOnlyBlockSpaceCanRender() {
+  Blockly.Test.testWithReadOnlyBlockSpaceEditor(function(blockSpaceEditor) {
+    var blockSpace = blockSpaceEditor.blockSpace;
+    var blockXML = '<xml><block type="math_number"><title name="NUM">0</title></block></xml>';
+    Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(blockXML));
+    var numberBlock = blockSpace.getTopBlocks()[0];
+    assertEquals(numberBlock.isEditable(), false);
+  });
+}
+
+function test_blockSpacesUseSameWidgetDiv() {
+  Blockly.Test.initializeBlockSpaceEditor();
+  var first = Blockly.WidgetDiv;
+  assertNotNull(first);
+  Blockly.Test.initializeBlockSpaceEditor();
+  var second = Blockly.WidgetDiv;
+  assertNotNull(second);
+  assertEquals(first, second);
 }

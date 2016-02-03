@@ -8,12 +8,15 @@ require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
+require 'dynamic_config/page_mode'
 require 'active_support'
 require 'base64'
 require 'cgi'
 require 'json'
 require 'uri'
 require 'cdo/rack/upgrade_insecure_requests'
+require_relative 'helper_modules/dashboard'
+require 'dynamic_config/dcdo'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -62,22 +65,34 @@ class Documents < Sinatra::Base
   use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
+  # Use dynamic config for max_age settings, with the provided default as fallback.
+  def self.set_max_age(type, default)
+    default = 60 if rack_env? :staging
+    default = 0 if rack_env? :development
+    set "#{type}_max_age", Proc.new { DCDO.get("pegasus_#{type}_max_age", default) }
+  end
+
+  ONE_HOUR = 3600
+
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
     set :views, dir
-    set :document_max_age, rack_env?(:staging) ? 0 : 3600
     set :image_extnames, ['.png','.jpeg','.jpg','.gif']
     set :exclude_extnames, ['.collate']
-    set :image_max_age, rack_env?(:staging) ? 0 : 36000
-    set :static_max_age, rack_env?(:staging) ? 0 : 36000
+    set_max_age :document, ONE_HOUR * 4
+    set_max_age :document_proxy, ONE_HOUR * 2
+    set_max_age :image, ONE_HOUR * 10
+    set_max_age :image_proxy, ONE_HOUR * 5
+    set_max_age :static, ONE_HOUR * 10
+    set_max_age :static_proxy, ONE_HOUR * 5
     set :read_only, CDO.read_only
     set :not_found_extnames, ['.not_found','.404']
     set :redirect_extnames, ['.redirect','.moved','.found','.301','.302']
     set :template_extnames, ['.erb','.fetch','.haml','.html','.md','.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
-    set :markdown, {autolink: true, tables: true, space_after_headers: true}
+    set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
 
     if rack_env?(:production)
       Honeybadger.configure do |config|
@@ -86,18 +101,6 @@ class Documents < Sinatra::Base
         config.ignore << 'Table::NotFound'
       end
     end
-
-    vary_uris = ['/', '/learn', '/learn/beyond', '/congrats',
-                 '/teacher-dashboard',
-                 '/teacher-dashboard/landing',
-                 '/teacher-dashboard/nav',
-                 '/teacher-dashboard/section_manage',
-                 '/teacher-dashboard/section_progress',
-                 '/teacher-dashboard/sections',
-                 '/teacher-dashboard/signin_cards',
-                 '/teacher-dashboard/student',
-                 '/language_test']
-    set :vary, { 'X-Varnish-Accept-Language'=>vary_uris, 'Cookie'=>vary_uris }
   end
 
   before do
@@ -106,11 +109,7 @@ class Documents < Sinatra::Base
     uri = request.path_info.chomp('/')
     redirect uri unless uri.empty? || request.path_info == uri
 
-    settings.vary.each_pair do |header,pages|
-      headers['Vary'] = http_vary_add_type(headers['Vary'], header) if pages.include?(request.path_info)
-    end
-
-    locale = settings.vary['X-Varnish-Accept-Language'].include?(request.path_info) ? request.locale : 'en-US'
+    locale = request.locale
     locale = 'it-IT' if request.site == 'italia.code.org'
     locale = 'es-ES' if request.site == 'ar.code.org'
     locale = 'ro-RO' if request.site == 'ro.code.org'
@@ -120,7 +119,13 @@ class Documents < Sinatra::Base
     @config = settings.configs[request.site]
     @header = {}
 
-    @dirs = [request.site]
+    @dirs = []
+
+    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+      @dirs << [File.join(request.site, 'i18n')]
+    end
+
+    @dirs << request.site
 
     if @config
       base = @config[:base]
@@ -130,10 +135,6 @@ class Documents < Sinatra::Base
       end
     end
 
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
-      @dirs << File.join(request.site, 'i18n')
-    end
-
     @locals = {header: {}}
   end
 
@@ -141,117 +142,33 @@ class Documents < Sinatra::Base
   get %r{^/lang/([^/]+)/?(.*)?$} do
     lang, path = params[:captures]
     pass unless DB[:cdo_languages].first(code_s: lang)
-    cache_control :private, :must_revalidate, max_age: 0
+    dont_cache
     response.set_cookie('language_', {value: lang, domain: ".#{request.site}", path: '/', expires: Time.now + (365*24*3600)})
     redirect "/#{path}"
+  end
+
+  # Page mode selection
+  get '/private/pm/*' do |page_mode|
+    dont_cache
+    response.set_cookie('pm', {value: page_mode, domain: ".#{request.site}", path: '/'})
+    redirect "/learn?r=#{rand(100000)}"
   end
 
   # /private (protected area)
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
-        not_authorized! unless dashboard_user
-        forbidden! unless dashboard_user[:admin]
+        not_authorized! unless dashboard_user_helper
+        forbidden! unless dashboard_user_helper.admin?
       end
       pass
     end
   end
 
-  # Manipulated images
-  get "/images/*" do |path|
-    path = File.join('/images', path)
-
-    extname = File.extname(path).downcase
-    pass unless settings.image_extnames.include?(extname)
-    image_format = extname[1..-1]
-
-    basename = File.basename(path, extname)
-    dirname = File.dirname(path)
-
-    # Manipulated?
-    if dirname =~ /\/(fit-|fill-)?(\d+)x?(\d*)$/ || dirname =~ /\/(fit-|fill-)?(\d*)x(\d+)$/
-      manipulation = File.basename(dirname)
-      dirname = File.dirname(dirname)
-    end
-
-    # Assume we are returning the same resolution as we're reading.
-    retina_in = retina_out = basename[-3..-1] == '_2x'
-
-    path = resolve_image File.join(dirname, basename)
-    unless path
-      # Didn't find a match at this resolution, look for a match at the other resolution.
-      if retina_out
-        basename = basename[0...-3]
-        retina_in = false
-      else
-        basename += '_2x'
-        retina_in = true
-      end
-      path = resolve_image File.join(dirname, basename)
-    end
-    pass unless path # No match at any resolution.
-    last_modified(File.mtime(path))
-
-    if ((retina_in == retina_out) || retina_out) && !manipulation && File.extname(path) == extname
-      # No [useful] modifications to make, return the original.
-      content_type image_format.to_sym
-      cache_control :public, :must_revalidate, max_age: settings.image_max_age
-      send_file(path)
-    else
-      image = Magick::Image.read(path).first
-
-      mode = :resize
-
-      if manipulation
-        matches = manipulation.match /(?<mode>fit-|fill-)?(?<width>\d*)x?(?<height>\d*)$/m
-        mode = matches[:mode][0...-1].to_sym unless matches[:mode].blank?
-        width = matches[:width].to_i unless matches[:width].blank?
-        height = matches[:height].to_i unless matches[:height].blank?
-
-        if retina_out
-          # Manipulated images always specify non-retina sizes in the manipulation string.
-          width *= 2 if width
-          height *= 2 if height
-        end
-      else
-        width = image.columns
-        height = image.rows
-
-        # Retina sources need to be downsampled for non-retina output
-        if retina_in && !retina_out
-          width /= 2
-          height /= 2
-        end
-      end
-    end
-
-    case mode
-    when :fill
-      # If only one dimension provided, assume a square
-      width ||= height
-      image = image.resize_to_fill(width, height)
-    when :fit
-      image = image.resize_to_fit(width, height)
-    when :resize
-      # If only one dimension provided, assume a square
-      height ||= width
-      width ||= height
-      image = image.resize(width, height)
-    else
-      raise StandardError, 'Unreachable code reached!'
-    end
-
-    image.format = image_format
-
-    content_type image_format.to_sym
-    cache_control :public, :must_revalidate, max_age: settings.image_max_age
-    image.to_blob
-  end
-
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     send_file(path)
   end
 
@@ -263,13 +180,25 @@ class Documents < Sinatra::Base
       IO.read(i)
     end.join("\n\n")
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache_control :public, :must_revalidate, max_age: settings.static_max_age
+    cache :static
     css
   end
 
   # rubocop:disable Lint/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each{|path| eval(IO.read(path))}
   # rubocop:enable Lint/Eval
+
+  # Manipulated images
+  get '/images/*' do |path|
+    path = File.join('/images', path)
+    image_data = process_image(path, settings.image_extnames, @language, request.site)
+    pass if image_data.nil?
+    last_modified image_data[:last_modified]
+    content_type image_data[:content_type]
+    cache :image
+    send_file(image_data[:file]) if image_data[:file]
+    image_data[:content]
+  end
 
   # Documents
   get_head_or_post '*' do |uri|
@@ -288,6 +217,9 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @locals[:header]['content-type']
+      response.headers['Content-Type'] = @locals[:header]['content-type']
+    end
     layout = @locals[:header]['layout']||'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
@@ -306,13 +238,36 @@ class Documents < Sinatra::Base
   not_found do
     status 404
     path = resolve_template('views', settings.template_extnames, '/404')
-    document path
+    document(path).tap{dont_cache}
   end
 
-  helpers do
+  helpers(Dashboard) do
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end
+
+    # Get the current dashboard user record
+    # @returns [Hash]
+    #
+    # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
+    def dashboard_user
+      @dashboard_user ||= Dashboard::db[:users][id: dashboard_user_id]
+    end
+
+    # Get the current dashboard user wrapped in a helper
+    # @returns [Dashboard::User] or nil if not signed in
+    #
+    # TODO: When we are using this everywhere, rename to just `dashboard_user`
+    def dashboard_user_helper
+      @dashboard_user_helper ||= Dashboard::User.get(dashboard_user_id)
+    end
+
+    # Get the current dashboard user ID
+    # @returns [Integer]
+    def dashboard_user_id
+      request.user_id
+    end
+
 
     def document(path)
       content = IO.read(path)
@@ -331,9 +286,9 @@ class Documents < Sinatra::Base
       end
 
       if @header['max_age']
-        cache_control :public, :must_revalidate, max_age: @header['max_age']
+        cache_for @header['max_age']
       else
-        cache_control :public, :must_revalidate, max_age: settings.document_max_age
+        cache :document
       end
 
       response.headers['X-Pegasus-Version'] = '3'
@@ -346,6 +301,10 @@ class Documents < Sinatra::Base
         end
         raise e
       end
+    end
+
+    def preprocess_markdown(markdown_content)
+      markdown_content.gsub(/```/, "```\n")
     end
 
     def post_process_html_from_markdown(full_document)
@@ -366,13 +325,26 @@ class Documents < Sinatra::Base
       full_document
     end
 
+    def log_drupal_link(dir, uri, path)
+      if dir == 'drupal.code.org'
+        Honeybadger.notify(
+          error_class: "Link to v3.sites/drupal.code.org",
+          error_message: "#{uri} fell through to the base config directory",
+          environment_name: "drupal_#{rack_env}",
+          context: {path: path}
+        )
+      end
+    end
 
     def resolve_static(subdir, uri)
       return nil if settings.non_static_extnames.include?(File.extname(uri))
 
       @dirs.each do |dir|
         path = content_dir(dir, subdir, uri)
-        return path if File.file?(path)
+        if File.file?(path)
+          log_drupal_link(dir, uri, path)
+          return path
+        end
       end
       nil
     end
@@ -381,7 +353,10 @@ class Documents < Sinatra::Base
       @dirs.each do |dir|
         extnames.each do |extname|
           path = content_dir(dir, subdir, "#{uri}#{extname}")
-          return path if File.file?(path)
+          if File.file?(path)
+            log_drupal_link(dir, "#{uri}#{extname}", path)
+            return path
+          end
         end
       end
       nil
@@ -446,10 +421,11 @@ class Documents < Sinatra::Base
         end
         pass unless File.file?(cache_file)
 
-        cache_control :public, :must_revalidate, max_age: settings.static_max_age
+        cache :static
         send_file(cache_file)
       when '.md', '.txt'
         preprocessed = erb body, locals: locals
+        preprocessed = preprocess_markdown preprocessed
         html = markdown preprocessed, locals: locals
         post_process_html_from_markdown html
       when '.redirect', '.moved', '.301'
@@ -485,6 +461,14 @@ class Documents < Sinatra::Base
           metadata.delete(key)
         else
           metadata[key] = value
+        end
+      end
+
+      if not metadata['og:image']
+        if request.site != 'csedweek.org'
+          metadata['og:image'] = CDO.code_org_url('/images/code-logo-1220x640.png', 'https:')
+          metadata['og:image:width'] = 1220
+          metadata['og:image:height'] = 640
         end
       end
 

@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: followers
+#
+#  id              :integer          not null, primary key
+#  user_id         :integer          not null
+#  student_user_id :integer          not null
+#  created_at      :datetime
+#  updated_at      :datetime
+#  section_id      :integer
+#
+# Indexes
+#
+#  index_followers_on_section_id                   (section_id)
+#  index_followers_on_student_user_id              (student_user_id)
+#  index_followers_on_user_id_and_student_user_id  (user_id,student_user_id) UNIQUE
+#
+
 # Join table defining student-teacher relationships for Users
 # (student_user is the student, user is the teacher)
 class Follower < ActiveRecord::Base
@@ -23,4 +41,9 @@ class Follower < ActiveRecord::Base
   validate :cannot_follow_yourself, :teacher_must_be_teacher, :section_must_belong_to_teacher
 
   validates_presence_of :user, :student_user, :section
+
+  after_create :assign_script
+  def assign_script
+    student_user.assign_script(section.script) if section.script
+  end
 end

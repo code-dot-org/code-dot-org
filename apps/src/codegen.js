@@ -1,6 +1,7 @@
-/* global Interpreter */
+/* global Interpreter, CanvasPixelArray */
 
 var dropletUtils = require('./dropletUtils');
+var utils = require('./utils');
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
@@ -9,7 +10,7 @@ exports.evalWith = function(code, options) {
   if (options.StudioApp && options.StudioApp.editCode) {
     // Use JS interpreter on editCode levels
     var initFunc = function(interpreter, scope) {
-      exports.initJSInterpreter(interpreter, null, scope, options);
+      exports.initJSInterpreter(interpreter, null, null, scope, options);
     };
     var myInterpreter = new Interpreter(code, initFunc);
     // interpret the JS program all at once:
@@ -129,10 +130,30 @@ function safeReadProperty(object, property) {
 // (Chrome V8 says ForInStatement is not fast case)
 //
 
-function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
-  var retVal = interpreter.createObject(interpreter.OBJECT);
+/**
+ * Marshal a native object to an interpreter object.
+ *
+ * @param {Interpreter} interpreter Interpreter instance
+ * @param {Object} nativeObject Object to marshal
+ * @param {Number} maxDepth Optional maximum depth to traverse in properties
+ * @param {Object} interpreterObject Optional existing interpreter object
+ * @return {!Object} The interpreter object, which was created if needed.
+ */
+function marshalNativeToInterpreterObject(
+    interpreter,
+    nativeObject,
+    maxDepth,
+    interpreterObject) {
+  var retVal = interpreterObject || interpreter.createObject(interpreter.OBJECT);
+  var isFunc = interpreter.isa(retVal, interpreter.FUNCTION);
   for (var prop in nativeObject) {
     var value = safeReadProperty(nativeObject, prop);
+    if (isFunc &&
+        (value === Function.prototype.trigger ||
+            value === Function.prototype.inherits)) {
+      // Don't marshal these that were added by jquery or else we will recurse
+      continue;
+    }
     interpreter.setProperty(retVal,
                             prop,
                             exports.marshalNativeToInterpreter(interpreter,
@@ -143,31 +164,81 @@ function marshalNativeToInterpreterObject(interpreter, nativeObject, maxDepth) {
   return retVal;
 }
 
+function isCanvasImageData(nativeVar) {
+  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
+  if (typeof(Uint8ClampedArray) !== "undefined") {
+    return nativeVar instanceof Uint8ClampedArray;
+  }
+  return nativeVar instanceof CanvasPixelArray;
+}
+
+
+/**
+ * Create a new "custom marshal" interpreter object that corresponds to a native
+ * object.
+ * @param {Interpreter} interpreter Interpreter instance
+ * @param {Object} nativeObj Object to wrap
+ * @param {Object} nativeParentObj Parent of object to wrap
+ * @return {!Object} New interpreter object.
+ */
+var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentObj) {
+  if (nativeObj === undefined && interpreter.UNDEFINED) {
+    return interpreter.UNDEFINED;  // Reuse the same object.
+  }
+  var type = typeof nativeObj;
+  var obj = {
+    data: nativeObj,
+    isPrimitive: false,
+    isCustomMarshal: true,
+    type: typeof nativeObj,
+    parent: nativeParentObj, // TODO (cpirich): replace with interpreter object?
+    toBoolean: function() {return Boolean(this.data);},
+    toNumber: function() {return Number(this.data);},
+    toString: function() {return String(this.data);},
+    valueOf: function() {return this.data;}
+  };
+  return obj;
+};
+
+exports.customMarshalObjectList = [];
+exports.customMarshalModifiedObjectList = [];
+
 //
 // Droplet/JavaScript/Interpreter codegen functions:
 //
-
 exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativeParentObj, maxDepth) {
-  if (typeof nativeVar === 'undefined') {
+  if (maxDepth === 0 || typeof nativeVar === 'undefined') {
     return interpreter.UNDEFINED;
   }
   var i, retVal;
   if (typeof maxDepth === "undefined") {
-    maxDepth = Infinity; // default to inifinite levels of depth
+    maxDepth = Infinity; // default to infinite levels of depth
   }
-  if (maxDepth === 0) {
-    return interpreter.createPrimitive(undefined);
+  for (i = 0; i < exports.customMarshalObjectList.length; i++) {
+    // If this is on our list of "custom marshal" objects - or if it a property
+    // on one of those objects (other than a function), create a special
+    // "custom marshal" interpreter object to represent it
+    if (nativeVar instanceof exports.customMarshalObjectList[i] ||
+        (typeof nativeVar !== 'function' &&
+            nativeParentObj instanceof exports.customMarshalObjectList[i])) {
+      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
+    }
+  }
+  for (i = 0; i < exports.customMarshalModifiedObjectList.length; i++) {
+    var modObj = exports.customMarshalModifiedObjectList[i];
+    if (nativeVar instanceof modObj.instance &&
+        nativeVar[modObj.methodName] !== undefined) {
+      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
+    }
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
       retVal.properties[i] = exports.marshalNativeToInterpreter(interpreter,
-                                                                nativeVar[i],
-                                                                null,
-                                                                maxDepth - 1);
+        nativeVar[i], null, maxDepth - 1);
     }
     retVal.length = nativeVar.length;
-  } else if (nativeVar instanceof Uint8ClampedArray) {
+  } else if (isCanvasImageData(nativeVar)) {
     // Special case for canvas image data - could expand to support TypedArray
     retVal = interpreter.createObject(interpreter.ARRAY);
     for (i = 0; i < nativeVar.length; i++) {
@@ -181,6 +252,8 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
         nativeParentObj: nativeParentObj,
     });
     retVal = interpreter.createNativeFunction(wrapper);
+    // Also marshal properties on the native function object:
+    marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1, retVal);
   } else if (nativeVar instanceof Object) {
     // note Object must be checked after Function and Array (since they are also Objects)
     if (interpreter.isa(nativeVar, interpreter.FUNCTION)) {
@@ -201,8 +274,10 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   return retVal;
 };
 
+exports.createNativeFunctionFromInterpreterFunction = null;
+
 exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
-  if (interpreterVar.isPrimitive) {
+  if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
     return interpreterVar.data;
   } else if (interpreter.isa(interpreterVar, interpreter.ARRAY)) {
     var nativeArray = [];
@@ -212,17 +287,25 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
                                                           interpreterVar.properties[i]);
     }
     return nativeArray;
-  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT)) {
+  } else if (interpreter.isa(interpreterVar, interpreter.OBJECT) ||
+      interpreterVar.type === 'object') {
     var nativeObject = {};
     for (var prop in interpreterVar.properties) {
       nativeObject[prop] = exports.marshalInterpreterToNative(interpreter,
                                                               interpreterVar.properties[prop]);
     }
     return nativeObject;
+  } else if (interpreter.isa(interpreterVar, interpreter.FUNCTION)) {
+    if (exports.createNativeFunctionFromInterpreterFunction) {
+      return exports.createNativeFunctionFromInterpreterFunction(interpreterVar);
+    } else {
+      // Just return the interpreter object if we can't convert it. This is needed
+      // for passing interpreter callback functions into native.
+
+      return interpreterVar;
+    }
   } else {
-    // Just return the interpreter object if we can't convert it. This is needed
-    // for passing interpreter callback functions into native.
-    return interpreterVar;
+    throw "Can't marshal type " + typeof interpreterVar;
   }
 };
 
@@ -234,10 +317,8 @@ exports.makeNativeMemberFunction = function (opts) {
     return function() {
       // Just call the native function and marshal the return value:
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, arguments);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   } else {
     return function() {
@@ -247,26 +328,24 @@ exports.makeNativeMemberFunction = function (opts) {
         nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
-      return exports.marshalNativeToInterpreter(opts.interpreter,
-                                                nativeRetVal,
-                                                null,
-                                                opts.maxDepth);
+      return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
+        null, opts.maxDepth);
     };
   }
 };
 
-function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
+function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj, options) {
   for (var prop in funcsObj) {
     var func = funcsObj[prop];
     if (func instanceof Function) {
       // Populate the scope with native functions
       // NOTE: other properties are not currently passed to the interpreter
       var parent = parentObj ? parentObj : funcsObj;
-      var wrapper = exports.makeNativeMemberFunction({
+      var wrapper = exports.makeNativeMemberFunction(utils.extend(options, {
           interpreter: interpreter,
           nativeFunc: func,
           nativeParentObj: parent,
-      });
+      }));
       interpreter.setProperty(scope,
                               prop,
                               interpreter.createNativeFunction(wrapper));
@@ -274,10 +353,11 @@ function populateFunctionsIntoScope(interpreter, scope, funcsObj, parentObj) {
   }
 }
 
-function populateGlobalFunctions(interpreter, blocks, scope) {
+function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
   for (var i = 0; i < blocks.length; i++) {
     var block = blocks[i];
-    if (block.parent) {
+    if (block.parent &&
+        (!blockFilter || typeof blockFilter[block.func] !== 'undefined')) {
       var funcScope = scope;
       var funcName = block.func;
       var funcComponents = funcName.split('.');
@@ -308,21 +388,28 @@ function populateGlobalFunctions(interpreter, blocks, scope) {
 
 function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
+  var wrapper;
 
   // Add static methods from String:
   var functions = ['fromCharCode'];
   for (var i = 0; i < functions.length; i++) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: String[functions[i]],
-        nativeParentObj: String,
+    wrapper = exports.makeNativeMemberFunction({
+      interpreter: interpreter,
+      nativeFunc: String[functions[i]],
+      nativeParentObj: String,
     });
-    interpreter.setProperty(interpreter.STRING,
-                            functions[i],
-                            interpreter.createNativeFunction(wrapper),
-                            false,
-                            true);
+    interpreter.setProperty(interpreter.STRING, functions[i],
+      interpreter.createNativeFunction(wrapper), false, true);
   }
+
+  // Add String.prototype.includes
+  wrapper = function(searchStr) {
+    // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+    return interpreter.createPrimitive(
+      String.prototype.indexOf.apply(this, arguments) !== -1);
+  };
+  interpreter.setProperty(interpreter.STRING.properties.prototype, 'includes',
+    interpreter.createNativeFunction(wrapper), false, true);
 }
 
 /**
@@ -331,25 +418,42 @@ function populateJSFunctions(interpreter) {
  * interpreter (required): JS interpreter instance.
  * blocks (optional): blocks in dropletConfig.blocks format. If a block has
  *  a parent property, we will populate that function into the specified scope.
+ * blockFilter (optional): an object with block-name keys that should be used
+ *  to filter which blocks are populated.
  * scope (required): interpreter's global scope.
- * options (optional): objects containing functions to placed in a new scope
+ * globalObjects (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (interpreter, blocks, scope, options) {
-  for (var optsObj in options) {
-    // The options object contains objects that will be referenced
+exports.initJSInterpreter = function (interpreter, blocks, blockFilter, scope, globalObjects) {
+  for (var globalObj in globalObjects) {
+    // The globalObjects object contains objects that will be referenced
     // by the code we plan to execute. Since these objects exist in the native
     // world, we need to create associated objects in the interpreter's world
     // so the interpreted code can call out to these native objects
 
     // Create global objects in the interpreter for everything in options
     var obj = interpreter.createObject(interpreter.OBJECT);
-    interpreter.setProperty(scope, optsObj.toString(), obj);
-    populateFunctionsIntoScope(interpreter, obj, options[optsObj]);
+    interpreter.setProperty(scope, globalObj.toString(), obj);
+    // Marshal return values with a maxDepth of 2 (just an object and its child
+    // methods and properties only)
+    populateFunctionsIntoScope(
+        interpreter,
+        obj,
+        globalObjects[globalObj],
+        null,
+        { maxDepth: 2 });
   }
-  populateGlobalFunctions(interpreter, dropletUtils.dropletGlobalConfigBlocks, scope);
+  populateGlobalFunctions(
+      interpreter,
+      dropletUtils.dropletGlobalConfigBlocks,
+      blockFilter,
+      scope);
   if (blocks) {
-    populateGlobalFunctions(interpreter, blocks, scope);
+    populateGlobalFunctions(
+        interpreter,
+        blocks,
+        blockFilter,
+        scope);
   }
   populateJSFunctions(interpreter);
 };
@@ -447,17 +551,55 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
 };
 
 exports.isAceBreakpointRow = function (session, userCodeRow) {
+  if (!session) {
+    return false;
+  }
   var bps = session.getBreakpoints();
   return Boolean(bps[userCodeRow]);
 };
 
+var lastHighlightMarkerIds = {};
+
 /**
- * Selects code in droplet/ace editor.
+ * Clears all highlights that we have added in the ace editor.
+ */
+function clearAllHighlightedAceLines (aceEditor) {
+  var session = aceEditor.getSession();
+  for (var hlClass in lastHighlightMarkerIds) {
+    session.removeMarker(lastHighlightMarkerIds[hlClass]);
+  }
+  lastHighlightMarkerIds = {};
+}
+
+/**
+ * Highlights lines in the ace editor. Always moves the previous highlight with
+ * the same class to the new location.
+ *
+ * If the row parameters are not supplied, just clear the last highlight.
+ */
+function highlightAceLines (aceEditor, className, startRow, endRow) {
+  var session = aceEditor.getSession();
+  className = className || 'ace_step';
+  if (lastHighlightMarkerIds[className]) {
+    session.removeMarker(lastHighlightMarkerIds[className]);
+    lastHighlightMarkerIds[className] = null;
+  }
+  if (typeof startRow !== 'undefined') {
+    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
+        startRow, endRow, className).id;
+  }
+}
+
+/**
+ * Selects and highlights code in droplet/ace editor to indicate an error.
  *
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowCol = function (editor, row, col) {
+exports.selectEditorRowColError = function (editor, row, col) {
+  if (!editor) {
+    return;
+  }
   if (editor.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
@@ -475,9 +617,33 @@ exports.selectEditorRowCol = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
+  highlightAceLines(editor.aceEditor, "ace_error", row, row);
 };
 
-function createSelection (selection, cumulativeLength, start, end) {
+/**
+ * Removes highlights (for the default ace_step class) and selection in
+ * droplet and ace editors.
+ *
+ * @param {boolean} allClasses When set to true, remove all classes of
+ * highlights (including ace_step, ace_error, and anything else)
+ */
+exports.clearDropletAceHighlighting = function (editor, allClasses) {
+  if (editor.currentlyUsingBlocks) {
+    editor.clearLineMarks();
+  } else {
+    editor.aceEditor.getSelection().clearSelection();
+  }
+  if (allClasses) {
+    clearAllHighlightedAceLines(editor.aceEditor);
+  } else {
+    // when calling without a class or rows, highlightAceLines() will clear
+    // everything highlighted with the default highlight class
+    highlightAceLines(editor.aceEditor);
+  }
+};
+
+function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highlightClass) {
+  var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
   range.start.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
@@ -488,6 +654,8 @@ function createSelection (selection, cumulativeLength, start, end) {
   // calling with the backwards parameter set to true - this prevents horizontal
   // scrolling to the right while stepping through in the debugger
   selection.setSelectionRange(range, true);
+  highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
+      range.end.row);
 }
 
 /**
@@ -495,12 +663,15 @@ function createSelection (selection, cumulativeLength, start, end) {
  *
  * Returns the row (line) of code highlighted. If nothing is highlighted
  * because it is outside of the userCode area, the return value is -1
+ *
+ * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
 exports.selectCurrentCode = function (interpreter,
                                       cumulativeLength,
                                       userCodeStartOffset,
                                       userCodeLength,
-                                      editor) {
+                                      editor,
+                                      highlightClass) {
   var userCodeRow = -1;
   if (interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
@@ -524,23 +695,14 @@ exports.selectCurrentCode = function (interpreter,
         //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
         editor.markLine(userCodeRow, style);
       } else {
-        var selection = editor.aceEditor.getSelection();
-        createSelection(selection, cumulativeLength, start, end);
+        selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
+            highlightClass);
       }
     } else {
-      if (editor.currentlyUsingBlocks) {
-        editor.clearLineMarks();
-      } else {
-        var tempSelection = editor.aceEditor.getSelection();
-        tempSelection.clearSelection();
-      }
+      exports.clearDropletAceHighlighting(editor);
     }
   } else {
-    if (editor.currentlyUsingBlocks) {
-      editor.clearLineMarks();
-    } else {
-      editor.aceEditor.getSelection().clearSelection();
-    }
+    exports.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };

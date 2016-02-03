@@ -1,34 +1,45 @@
 name 'U2L18 Student Lesson Introduction'
-title 'One Way Functions - Ice Cream Vans'
-
-css 'unplugged'
-skip_dialog 'true'
-
-markdown <<MARKDOWN
-## Unit 2: Lesson 17 - One Way Functions
-
-# Background
-
-A “one-way function” is the computational version of a secret recipe: a function for which it is straightforward to compute an output, but given the output is nearly impossible to determine the exact inputs that were used to compute it. If we can use one-way functions for encryption it means we can create cryptographic ciphers that are computationally hard to crack - which means that the only known way to crack the code is try every possible key which would take an unreasonable amount of time to do.
-
-# Vocabulary
-
-one-way function: a process that is easy to follow for any given input, but yields an output that is hard to turn back to the original input. Brute force is typically required to solve is the key is unknown.
-
-# Lesson
-
-* Solve the WiFi Hotspot Problem
-* Create your WiFi Hotspot problem.
-* Review properties of one-way functions
-
-
-# Resources
-
-* <a href="https://docs.google.com/document/d/1npOrwCrM80LCXMgRYGM6V-gNm-pbpIp9KBUca2P5AMs/edit?usp=sharing" target="_blank">Worksheet - Wireless Hotspot Problem</a>
-* <a href="https://docs.google.com/document/d/1luezxRb3SeHnehy32SB_keXboZktutVG4RB3JNvW2r4/edit?usp=sharing" target="_blank">Worksheet - Make your own Wireless Hotspot Problem</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-
-
-MARKDOWN
+encrypted 'nZnQLjTuAgdflo0Kso7kPpgfvOJ/TQLLqWlnzYpngghtGh0sVfFMYZf9MhLo
+8zKSRDKr2tkwLSEEV5TYqolMBjTz8jRQWiRomnm73dRlzv2kgJgSAz8JKlcp
+LvaLinvt+zti65jUk/swHr6n2+eSfVPbZ93mx+HjPa42SIZ4Ylgyo4M52H2L
+jHJ6DrInqESGR+Xm2AubzyBVoM1jmqw03RO6BF0gl7bSefsX74B5PnpLHivg
+NjitVBQfFHLzGAq7aOP7mniZc1nWC1wfmBR6BHQaaunjDFlNN5lFOuBG6Dnv
+0j67kI3waMAJXsyOM+h34xi3h/w8o45S7VW6lgwjKbywHyVhSqnOeoqIqZqr
+k2Zz79gfPgit1hvJ8JVAaNmW372J2+48fkc/9Y6HYYsJTAXCSGeKy25Isqvd
+VHvmbY+RoyzQ6R09fU+HFhgDlzeWDiIpHafCKpTjOisdzve7+essd0gbjuGB
+3qgMxDCTvqSiNQ5rICDAhB5ALb0Xk4yHP8VrVW8Xl2BTpaS3V5cQeI6AfLl6
+e3e9zw2HsfkP++iNVgoGq25Krx9dZ2I6oK7vQDlZUFdCfR82ibJHcnWEJtQo
+xwfARAJfVDgqrNSkNh5mdphkGhMQircRcc8TM9RpKxLTPGHwJz2Q0Xk23QKt
+TDfiQ7W8SlvLBn19FuhR/uXmxDrhD4KlsFDifjAg9BumWPYnIMNtwpadP5iN
+LdtIc2nZ+6MrLxSapvsHDv8lUbovhfipOq9ilXD8nHUPYu016rTMuwr7Zapx
+X2oo4jvgxPG6IoQnaDkyYSfnqTLMX7Uela0rqgU4Rw3C2I9+I4n2BbLVcR56
+7MMc46YKmPq3rQBBoZy0+0EPcSc8NOg83d/2BOIVQuV2wWdwtzueeSOxN41a
+KweDYNEzV7BArbYssk1rfqw0APN84V0sxZSFW6kyqY6D3MM9wxJmyh6blp6J
+g0E/lUbmmCJBY/K6x6zr7X5d7i5PxCt33Eq1Qp7WBUPZPQ14+g3lOnixiDg3
+UdqncIEXvZhoQFfNaTUlwjifXpCg9B5oQdEdFjGfTAT6+AWu8K0ZyM4MOw0g
+mt3PkEnLIcwydsMx6S0oCkLTGAsV3xRbfn2/sQn3s4CFykXSm1bbgegFAa80
+Lijgp2qyrum1xeeop4aO5+pe/S4kUn1JdQKWxLJfUC4oi2/o7Hea0zzhb0Mw
+AAM1Krm94w32XD0igRV3dSJA2FfeRckpLubCHHQFeZx62FRgKuf0Fl4kM50w
+H4IG8BpNlAgpTOmXRbw6BQzcStEsTRCZA3BOKZmyKkuc/e9LvZsT213QL/gf
+7MSj14a7WMEmI1x6u/F9MjENZjkUuG/qNDK2werHO2nwfaFN4WElLrswOMWw
+cMo3HY4LsjDDkRc68SFs+ED6dCYnti84On5vrQUQL9WaSpbQJbb3XK1bSYRy
+qGhC6Cj44k/Wy9ze2JoG03vPx3jUKrAfW77GKV5xZqaoFp8Sc+99uo1awtpn
+WW53IwkSd5VIE/35Y5USG7JzGB6aQQn+g3whHiGCmT3GQM7zsz+x5qX86EN8
+5s+6+41O9ggBwJiypETfsfqIzVwKVLpStvCmhoLV4MKZi84mjJAnH9U6Nptb
+HoWpUVD6o19MYK6NXJf4ooV9x/ZUnFT0YDHgTW1fAvSBXCJp+A27E6ByQZB2
+UymV1ahlh/Oc8v4zOV0TiSYSPELMqDCMIeVtYFAPxsjcFRnqlEfE7yd9lMfK
+xDeMoAn84yP+gBaaRmjZ88SDUQ3B0J8iVEZz33DG/hF6gaqYskP1CG8mLY6i
+iOU7z4cpi2f2ZR9uJZaFXUnSs8/aJKuwnDzUB6mGuSqY9I2uscIEPygHCOYe
+AxhxQ7NeTVLqfk12ALq24lO9hZ9yxz6Bjd08ggiuau2MrxGsJ4wBC4rvstiF
+2YxkwbkkhVUJ23G3Gvhr9Hu/kyIh3n4IIron95mOxNiaX7HRkMA8HHCkqEVO
+w7d3uCylyLMKdYYPZjZ/fl0D8fXHKiIH1XyBpTciFO9k3ftU1j3BsjdvEtWp
+YTGUS4DssM2NVdGofHUBfoaVlcS8jjWmgRFNa5cmA2QVyfnKlnhvmDbb4lvN
+9IMu8nX3/v8YeXRd3HbCqmnk1S7bZ6Jv7F2In7ewz7HgyNzFYlX9rOSH4WAR
+nHzhlsFJ7YUZMzliEnNu9QHFL5nwhLi3mbiwNj8UvMJzqGg0nCdGez+inijH
+gBXVJTs6OUV4ZX51uEG/slKqOf5CfZbtYmeqmOH5BzH8j+rrSlF666G31DZD
+Y2xZCBMUDmVRus4wxTwkFTspuZW1jrlYl8lkFHkv5JGTFVUE7HWW4pkWH6Xd
+yE7CNvZqO5+YZhfJoR0qJLVvAsABFOQI8NoEOZl3AcCW8y9LET9uJ34iYJ5B
+G1yAasPyuDi6PIVxev50M6CkQj12e7WA2y2/eKc8XC0OplTOQvx5exxSWaVl
+RUQjFseqL1DMFE+ZA//F8lafXevAG1qhybb4M6qxtGgbfdCgcJPY5ccZZXVu
+oZJXRcr/I3QcirQ3Y69LqUQa11lzJO+TaDynRZMu
+'

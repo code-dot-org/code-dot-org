@@ -1,4 +1,3 @@
-var React = require('react');
 var applabMsg = require('./locale');
 var DesignModeBox = require('./DesignModeBox.jsx');
 var DesignModeHeaders = require('./DesignModeHeaders.jsx');
@@ -8,10 +7,13 @@ module.exports = React.createClass({
     handleManageAssets: React.PropTypes.func.isRequired,
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
+    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
     handleChange: React.PropTypes.func.isRequired,
+    onChangeElement: React.PropTypes.func.isRequired,
     onDepthChange: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
+    onInsertEvent: React.PropTypes.func.isRequired,
+    isDimmed: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function() {
@@ -35,11 +37,14 @@ module.exports = React.createClass({
       <DesignModeBox
         handleDragStart={this.props.handleDragStart}
         element={this.props.element}
+        elementIdList={this.props.elementIdList}
         handleChange={this.props.handleChange}
+        onChangeElement={this.props.onChangeElement}
         onDepthChange={this.props.onDepthChange}
         onDelete={this.props.onDelete}
         onInsertEvent={this.props.onInsertEvent}
-        isToolboxVisible={this.state.isToolboxVisible} />
+        isToolboxVisible={this.state.isToolboxVisible}
+        isDimmed={this.props.isDimmed} />
     </div>;
   }
 });

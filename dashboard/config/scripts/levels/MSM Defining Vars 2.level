@@ -15,7 +15,7 @@
     "use_modal_function_editor": "false",
     "free_play": "false",
     "instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called my-shape and put the code for a 50 pixel solid green triangle inside.",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"MSM Defining Vars 2_callout1\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to open the function editor to update the function\",\r\n  \"element_id\": \"[block-id='8'] > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"MSM Defining Vars 2_callout1\",\r\n  \"callout_text\": \"Click \\\"edit\\\" to open the function editor to update the function\",\r\n  \"element_id\": \"[block-id='8'] > .blocklyIconGroup\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right top\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"MSM Defining Vars 2_callout2\",\r\n  \"callout_text\": \"Define the triangle here\",\r\n  \"element_id\": \"[block-id='9']\",\r\n  \"on\": \"function_editor_opened\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -24,7 +24,9 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called _my-shape_ and put the code for a 50 pixel solid green triangle inside."
+    "markdown_instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called `my-shape` and put the code for a 50 pixel solid green triangle inside.",
+    "never_autoplay_video": "false",
+    "examples_required": "false"
   }
 }]]></config>
   <blocks>

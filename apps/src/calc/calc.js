@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
- /* global $*/
-
-'use strict';
+ 'use strict';
 
 var Calc = module.exports;
 
@@ -233,13 +231,7 @@ function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
     var actualBlock = exampleBlock.getInputTargetBlock("ACTUAL");
     var expectedBlock = exampleBlock.getInputTargetBlock("EXPECTED");
 
-    if (!actualBlock) {
-      throw new Error('Invalid Call Block');
-    }
-
-    if (!expectedBlock) {
-      throw new Error('Invalid Result Block');
-    }
+    studioApp.feedback_.throwOnInvalidExampleBlocks(actualBlock, expectedBlock);
 
     var actualEquation = EquationSet.getEquationFromBlock(actualBlock);
     var actual = entireSet.evaluateWithExpression(actualEquation.expression);
@@ -247,7 +239,7 @@ function getCalcExampleFailure(exampleBlock, evaluateInPlayspace) {
     var expectedEquation = EquationSet.getEquationFromBlock(expectedBlock);
     var expected = entireSet.evaluateWithExpression(expectedEquation.expression);
 
-    var areEqual = expected.result.equals(actual.result);
+    var areEqual = jsnums.equals(expected.result, actual.result);
 
     if (evaluateInPlayspace) {
       var tokenList = constructTokenList(expectedEquation, null);
@@ -1197,6 +1189,7 @@ function onReportComplete(response) {
   runButton.disabled = false;
   appState.response = response;
   appState.waitingForReport = false;
+  studioApp.onReportComplete(response);
   displayFeedback();
 }
 

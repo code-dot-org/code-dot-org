@@ -10,6 +10,7 @@ class LevelSourcesController < ApplicationController
   before_action :set_level_source
 
   def show
+    view_options share_footer: true
     if params[:embed]
       # embed only the play area (eg. ninjacat)
       level_view_options hide_source: true
@@ -24,6 +25,7 @@ class LevelSourcesController < ApplicationController
     else
       # sharing
       level_view_options hide_source: true
+      view_options(no_header: true, try_hoc_banner: true)
       @is_legacy_share = true
     end
   end
@@ -31,6 +33,8 @@ class LevelSourcesController < ApplicationController
   def edit
     authorize! :read, @level_source
     level_view_options hide_source: false
+    view_options small_footer: true
+    @is_legacy_share = true
     # currently edit is the same as show...
     render "show"
   end
@@ -54,49 +58,20 @@ class LevelSourcesController < ApplicationController
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
+
     if @game.app == Game::ARTIST
-      framed_image(@level.skin)
+      redirect_to @level_source.level_source_image.s3_framed_url
     else
       original_image
     end
   end
-
-  def framed_image(skin)
-    if @level_source.level_source_image.image == 'S3' ||
-        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
-      redirect_to @level_source.level_source_image.s3_framed_url
-      return
-    end
-
-    # image is in the DB
-    # TODO: save this in s3, delete from db, redirect there
-    if skin == 'anna' || skin == 'elsa'
-      image_filename = "app/assets/images/blank_sharing_drawing_#{skin}.png"
-    else
-      image_filename = "app/assets/images/blank_sharing_drawing.png"
-    end
-
-    drawing_on_background = ImageLib::overlay_image(:background_url => Rails.root.join(image_filename),
-                                                    :foreground_blob => @level_source.level_source_image.image)
-    send_data drawing_on_background.to_blob, :stream => 'false', :type => 'image/png', :disposition => 'inline'
-  end
-  protected :framed_image
 
   def original_image
     authorize! :read, @level_source
 
     expires_in 10.hours, :public => true # cache
 
-    if @level_source.level_source_image.image == 'S3' ||
-        @level_source.level_source_image.save_to_s3(@level_source.level_source_image.image)
-      # image is in s3
-      redirect_to @level_source.level_source_image.s3_url
-      return
-    end
-
-    # image is in the DB
-    # TODO: save this in s3, delete from db, redirect there
-    send_data @level_source.level_source_image.image, :stream => 'false', :type => 'image/png', :disposition => 'inline'
+    redirect_to @level_source.level_source_image.s3_url
   end
 
   protected
@@ -108,14 +83,13 @@ class LevelSourcesController < ApplicationController
       @level_source = LevelSource.where(hidden: false).find(params[:id])
     end
     @level_source.replace_old_when_run_blocks
-    @level = @level_source.level
+    @level = Level.cache_find(@level_source.level_id)
     @game = @level.game
     view_options(
       callouts: [],
       full_width: true,
-      small_footer: @game.uses_small_footer? || enable_scrolling?,
       has_i18n: @game.has_i18n?,
-      no_padding: browser.mobile? && @game.share_mobile_fullscreen?
+      no_padding: browser.mobile?
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(

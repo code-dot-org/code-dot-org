@@ -23,10 +23,14 @@ Feature: Complete a simple maze level
     And I wait until element ".congrats" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".congrats" has text "Try one or more of the blocks below to solve this puzzle."
-    # Checking for iframe with feedback blocks.
-    And element ".modal-content div:nth-child(2) iframe:nth-child(1)" is visible
-    And element ".modal-content div:nth-child(2) iframe:nth-child(1)" has id "feedbackBlocks"
+    And element ".congrats" has text "Not quite. You have to use a block you aren’t using yet."
+    # Checking for "show hints" button
+    And I wait to see "#hint-request-button"
+    Then element "#hint-request-button" is visible
+    Then I press "hint-request-button"
+    And element ".congrats" has text "Try using one of the blocks below:"
+    And element ".modal-content #feedbackBlocks" is visible
+    And element ".modal-content #feedbackBlocks svg" is visible
     Then I press "again-button"
     And I press "resetButton"
     Then element "#runButton" is visible

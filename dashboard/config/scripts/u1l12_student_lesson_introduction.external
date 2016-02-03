@@ -1,114 +1,30 @@
 name 'U1L12 Student Lesson Introduction'
-title 'title'
-description 'description here'
-markdown <<MARKDOWN
-## Unit 1: Lesson 12 - Bytes and File Sizes
-# Background
-
-Early computers stored and ran 8-bit instructions and most relied on representing and exchanging messages encoded in ASCII text. The 8-bit chunk, or “byte” became a very common chunk-size or unit of data for representing information. It became the fundamental unit with which we measure the “size” of data on computers (kilobyte, megabyte, gigabyte, terabyte, etc). 
-
-# Lesson
-
-* Understand the relationships between bytes, kilobytes, megabytes, gigabytes
-* Find the size of computer files on your computer
-* Compare the sizes of various types of data files 
-
-# Resources
-
-* Activity Guide: <a href="https://docs.google.com/document/d/1E_-dJy-vqPYLCekzlI22YOXnF3iWI2smhTtbyYHE-NE/edit?usp=sharing" target="_blank">Storing Data</a>
-
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-
-
-
-
-teacher_markdown <<MARKDOWN
-* <a href = "https://docs.google.com/document/d/1IPfhuoNG5xy9cRhxMMciZ1ADoBtTkVfyJ8EnvAMwmJ4/edit" target="_blank">KEY: Activity Guide- Storing data</a>
-
-MARKDOWN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+encrypted 'm0ggQ80MPKOuRDKcPwvMw4rUDeVUaIXtJfRmmJH7q21cw3fu/rL8CRqr9H9t
+Rr6WOspklcO60bnaLxkiIaolF6y/7VblvzObC8m6mmHeVy1TyfKuOanDfJou
++oxNb8O5QqoY/c3DEzl1ZSvgy5W81NK/3Nk/d6VEbdo7nmyOU3XRtEOHaJyT
+ZbxO9OeigOI+xCYy/aUmo4ZvU1WDS2Zw1Ryq/++8o2+Qg/9FeJnXaus11uD3
+8NT96LfiOqya5dtSI3GaqD3PLTi9EvN0Prtc2wf/eWVLZ8ropsNAVOr0Zq38
+z4Y0OBqIsm/wKPzXN55hi90MwABtT+yRnZZM6cZenuj37j9mHsTZ7soBN2s7
+jKvCJ9XW4XtPRrxOTcozx9DZ8sPS9a7+bAlpq1mlqY9HLtF4zlWmwkcx83+c
+FbRcDIbyorurQeK5ymf6coKv1xcLXQL9U8EcHtkDTKUFObehqM1VWs5Dk1Hm
+lVdmNhZd60PaHT/xFXUNhxJQ0Sy04WqB1SLY2fqKhGr5m3pKWG78ULNlvSnG
+W9z2hLSzkBeeaPo7HhpRzPSJvsfXwywHlMTPVYnr8wlU7WVBp3VzusaJYdQ1
+YbVsuwen+Dwa/AhLyQ5IJVb5GBcZ1KdlYRI1e/I/6OOA9xEBZ1TOBnJ1KKlt
+iW4yhOBEdkBENaNhply1LNpNCoI8MxYrpL1rbGhMybvoo6kUq6tnUwDvOfHX
+3E07HH3nYlP5ga9DxJqkFQGJBwCSM+4scSdRvB/krlxjiU+6Fo+ihc25bAhF
+Cpd9PyVq2QgviV+M5OgyxXCcMi1LZ8z27o4RfF9VcaWZhqfhjl6woZ6YoDH8
+WXowYZhielJi/xeK68/HnoOIUaoOyZ5mz5GeUnrV6j5l8GwLFV7CWPLEEJVJ
+lZQgzLReh+74Vi/9XMsTo5RchDvH57ic9aT5YXbE2dsoL+hgjdUrb9UjDWu+
+kbJFbL98JGs0XB1SG+QQVYTOVXQ7Z11JyeLDy18/AlYn3ldHlpkvaLp8f0pR
+qL084EDadJnvTHXzJAYVXhN8hmT5KTWK1+tDT91BLutThtCZwLRK6q1/kBB0
+3bw5PRTJFlj6o7uJs+WSbH0j9vDZw7pIGfGlSqtXMBC46F7MCdENM1NBBNFH
+k3b/THBlQmQrTABPouigj5BkT4ccryjDiOFpwuCfZ88Zr6tMiCw2psCaugwt
+AFJEpqmUZpd+hdoo12ey2bWDvTFcEveQPL45jUrr+KQhfI4PkgttDrR48+b7
+OwjjrXEocR5W+66S91BQH7hY4S0M/ybQ7BMbE0NQReuW1VCThReKubbFt1h5
+uvA8srMyhQPXlcLlIQ5l2G1XMz+TzwPlfSX8ZyVOulVuyZppmor0U0o00jhH
+HTCBvEyAtLjzbZrJxxXoob7MTc201297Io9DXQ8uw+3LHFHqkGmxD8B9+a5y
+8zdHq7aVJb47HW9QlTPW9KEll0jYhP1deHL/fi65bEQBVKuNT3zihLnP1W8B
+/9RxYsiWuKoAr+ow/jZT4LVUToz2ebcu7bMEH2LfBGXguNL+dQMrGwMWBHnh
+GK9O8Uys0KR5bGDTYhM1C6CBYX1jONfkhpDkIVF0MSUCbFe8/fyKiRbqHda2
+LjpU0p5vtmGQMPdSsBYMg8M=
+'

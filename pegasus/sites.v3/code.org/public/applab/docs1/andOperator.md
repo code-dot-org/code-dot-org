@@ -33,7 +33,8 @@ ____________________________________________________
 
 The following block of code determines if it is currently working hours.
 
-<pre>
+
+```
 var now = new Date(); // get the current date and time
 var hours = now.getHours(); // get the current hour
 var workHours = false;
@@ -42,7 +43,7 @@ if (hours >= 9 && hours < 17) {
 }
 
 console.log(workHours);
-</pre>
+```
 
 [/example]
 
@@ -51,9 +52,10 @@ ____________________________________________________
 [syntax]
 
 ### Syntax
-<pre>
+
+```
 expression1 && expression2
-</pre>
+```
 
 [/syntax]
 

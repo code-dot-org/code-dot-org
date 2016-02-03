@@ -10,5 +10,5 @@ Feature: Using the teacher dashboard
   Scenario: Loading the teacher dashboard
     Given I am on "http://code.org/teacher-dashboard"
     Then I wait to see ".outerblock"
-    Then I click selector "div:contains('Student Accounts and Progress')"
+    Then I click selector "div.title:contains('Student Accounts and Progress')"
     Then check that I am on "http://code.org/teacher-dashboard#/sections"

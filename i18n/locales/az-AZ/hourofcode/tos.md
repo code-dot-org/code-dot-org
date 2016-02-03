@@ -4,9 +4,11 @@ title: Xidmətin şərtləri
 
 * * *
 
+### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
+
 # Xidmət şərtləri
 
-Last Revised: December 5, 2014
+Son düzəliş: 5 dekabr 2014
 
 Code.org is a 501(c)(3) non-profit organization (“Code.org”). Our mission is to give every student the opportunity to learn computer science. As a part of that mission, Code.org operates the web sites located at <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, other websites, information, text, curricula, videos, graphics, photos, APIs, email notifications and other materials and related products and services (the “**Services**”), including the tutorial platform at <http://studio.code.org> (“**Code Studio**”).
 
@@ -32,7 +34,7 @@ If you create an account for Services, you are responsible for the security of y
 
 Code.org may permit you to register an account for the Services through certain third party social networking services, such as Facebook Connect and Google (“**Authentication Service**”). By registering for the Services using an Authentication Service, you agree that Code.org may access your account information from the Authentication Service and you agree to any and all terms of use of the Authentication Service regarding your use of the Services via the Authentication Service. You are solely responsible for your interactions with the Authentication Service.
 
-### Privacy
+### Məxfilik
 
 Your privacy is important to us. Code.org’s [Privacy Policy](http://code.org/privacy) explains how we treat your personal data and is incorporated into these Terms by reference. Please read the Privacy Policy carefully for information relating to Code.org’s collection, use, and disclosure of your personal information.
 

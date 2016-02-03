@@ -1,4 +1,10 @@
+---
 
+title: Política de privacidade
+
+---
+
+### O documento legal vinculativo é em inglês, e pode ser encontrado [aqui](https://code.org/privacy). O texto abaixo é uma tradução.
 
 # Política de Privacidade
 
@@ -23,7 +29,7 @@ A nossa Política de Privacidade é fomentada por nosso compromisso com os segui
 
 ## Aviso de privacidade
 
-Nós temos o compromisso de criar um ambiente seguro e protegido para os estudantes de todas as idades nos nossos sites da Web localizados em <http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>, e também em outros sites, interface de programação de aplicativo (nossa “API”) e serviços on-line (coletivamente, nosso "Site"). Visitantes e usuários do site e participantes dos nossos programas educacionais são referidos individualmente como "usuário" e coletivamente como "usuários". Como somos uma organização sem fins lucrativos, só utilizamos os dados que recebemos para que eles nos ajudem em nossa missão de proporcionar uma excelente educação em ciência da computação para todos os alunos que tiverem interesse. Nós nos estabelecemos como uma organização sem fins lucrativos, de maneira que nenhuma causa relacionada a lucro interferirá na nossa missão de oferecer um recurso educacional confiável.
+Nós temos o compromisso de criar um ambiente seguro e protegido para os estudantes de todas as idades nos nossos sites da Web localizados em [http://code.org](https://code.org), <https://studio.code.org>, [http://csedweek.org](https://csedweek.org), <http://computinginthecore.org>, [http://hourofcode.com](https://hourofcode.com), e também em outros sites, interface de programação de aplicativo (nossa “API”) e serviços on-line (coletivamente, nosso "Site"). Visitantes e usuários do site e participantes dos nossos programas educacionais são referidos individualmente como "usuário" e coletivamente como "usuários". Como somos uma organização sem fins lucrativos, só utilizamos os dados que recebemos para que eles nos ajudem em nossa missão de proporcionar uma excelente educação em ciência da computação para todos os alunos que tiverem interesse. Nós nos estabelecemos como uma organização sem fins lucrativos, de maneira que nenhuma causa relacionada a lucro interferirá na nossa missão de oferecer um recurso educacional confiável.
 
 Nosso aviso de privacidade descreve quais informações coletamos dos nossos usuários, como usamos essas informações e o que fazemos para protegê-las. O seu uso do site e de qualquer informação que você fornecer no site estão sujeitos aos termos do presente Aviso de Privacidade, que está incorporado e sujeito a nossos Termos de Serviço. Todos os termos em letras maiúsculas usados, mas que não estão definidos neste Aviso de Privacidade, têm seus respectivos significados nos nossos [Termos de Serviço](http://code.org/tos). Ao visitar ou usar o nosso site, você concorda expressamente com as práticas de tratamento das informações descritas nesta Política de Privacidade.
 
@@ -142,7 +148,7 @@ Além das formas citadas acima, o site não apoia nenhum outro meio de troca de 
 
 ## Informações que NÃO coletamos
 
-A Code.org não coleta ou armazena formas de pagamento de maneira direta. As doações feitas para a Code.org e as compras de camisetas da loja da Code.org são processadas por terceiros e, embora a Code.org receba um recibo das doações (para fins de tributação), nós nunca recebemos a forma de pagamento (tais como cartão de crédito ou informações de pagamento).
+A Code.org não coleta ou armazena formas de pagamento de maneira direta. As doações feitas para a Code.org ou as compras da loja da Code.org são processadas por terceiros e, embora a Code.org receba um recibo das doações (para fins de tributação), nunca recebemos a forma de pagamento (tais como cartão de crédito ou informações de pagamento).
 
 ## Crianças menores de 13 anos
 
@@ -228,7 +234,7 @@ Nosso Site é operado e gerenciado em servidores localizados nos Estados Unidos.
 
 ### Condições de uso e avisos
 
-Se optar por visitar a Code.org, sua visita e qualquer conflito sobre privacidade estarão sujeitos a este Aviso de privacidade e aos nossos Termos do Contrato de Serviços, incluindo limitações sobre danos, mediação de conflitos, aplicação da lei do Estado de Washington e a jurisdição para todas as disputas em Seattle, Wahington.
+Se optar por visitar a Code.org, sua visita e qualquer conflito sobre privacidade estarão sujeitos a este Aviso de privacidade e aos nossos Termos do Contrato de Serviços, incluindo limitações sobre danos, mediação de conflitos, aplicação da lei do Estado de Washington e a jurisdição para todas as disputas em Seattle, Washington.
 
 ### Observação para os moradores do Estado da Califórnia:
 
@@ -239,4 +245,4 @@ Nós não divulgamos nenhuma informação pessoal para terceiros com finalidades
 Entre em contato com a Code.org se tiver quaisquer dúvidas ou comentários sobre este Aviso de privacidade, suas Informações pessoais, práticas de divulgação de terceiros ou sobre suas opções de consentimento, escrevendo para nós por meio do site <http://code.org/contact> ou para o endereço 1301 Fifth Avenue, Suite 1225, Seattle, WA 98101.   
   
   
-[![image](/images/fit-300/privacy-wide.jpg)](http://studentprivacypledge.org/)
+[![image](/images/fit-200/student_privacy_pledge.png)](http://studentprivacypledge.org/)

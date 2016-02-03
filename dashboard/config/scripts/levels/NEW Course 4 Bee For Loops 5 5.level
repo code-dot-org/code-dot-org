@@ -17,7 +17,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "start_direction": "2",
-    "step_mode": "0",
+    "step_mode": 1,
     "nectar_goal": "30",
     "flower_type": "redWithNectar",
     "markdown_instructions": "Are you getting the hang of using the `for loop`? Let's help the bee get the rest of the nectar.",
@@ -28,7 +28,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "step_speed": "1"
   }
 }]]></config>
