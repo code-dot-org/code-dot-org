@@ -1,0 +1,22 @@
+---
+driver:
+  name: ec2
+  region: us-west-2
+  aws_ssh_key_id: server_access_key
+  security_group_ids: ["sg-af6d98c8"]
+  subnet_id: subnet-404a7937
+  instance_type: m4.10xlarge
+  image_search:
+    name: "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"
+    virtualization-type: hvm
+    root-device-type: ebs
+    block-device-mapping.volume-type: gp2
+  block_device_mappings:
+    - ebs_device_name: /dev/sda1
+      ebs_volume_size: 64
+      ebs_delete_on_termination: true
+      ebs_volume_type: gp2
+#  duration: 60 # Use limited-duration spot instance
+#  price: 3 # Use spot instance
+  retryable_tries: 60
+  retryable_sleep: 10
