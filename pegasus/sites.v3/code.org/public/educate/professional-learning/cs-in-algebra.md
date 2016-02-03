@@ -16,7 +16,7 @@ The CS in Algebra professional learning program is open to teachers in partner d
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.kOpI42i2SQZo" width="640" height="480"></iframe>
 
 ## Don't see your district?
-Consider sending your administrators [information about how to become a Code.org partner](/educate/districts). Or, contact [Bootstrap](http://www.bootstrapworld.org), our preferred professional development provider for CS in Algebra. 
+Contact [Bootstrap](http://www.bootstrapworld.org), our preferred professional development provider for CS in Algebra. 
 
 ## What are the program commitments?
 The CS in Algebra professional learning program is 48 hours of online and in-person support, spanning over ~12 months: 

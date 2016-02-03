@@ -17,17 +17,10 @@ The CS in Science professional learning program is open to teachers in partner d
 <br/>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.kdVjzfolISDw" width="640" height="480"></iframe>
 
-Don't see your district? Consider sending your administrators [information about how to become a partner](/educate/districts).
+Don't see your district? Join our waitlist when the application launches on February 5, 2016. 
 
 ## What are the program commitments?
 The CS in Science professional learning program is 48 hours of online and in-person support, spanning over ~12 months:
 
 ![Image 1](/images//fit-700/timeline-ms-plc.png)
-
-## Don't see your district or region? 
-
-The CS in Science professional learning program is open to teachers in partner districts who are interested in teaching the CS in Science course.
-
-[<button>Apply to be a district partner</button>](/educate/districts)
-
 
