@@ -4,7 +4,6 @@
  */
 // Strict linting: Absorb into global config when possible
 /* jshint
- newcap: true,
  nonew: true,
  eqeqeq: true,
 

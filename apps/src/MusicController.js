@@ -2,7 +2,6 @@
  *        which one is playing now, and selects and plays them appropriately. */
 // Strict linting: Absorb into global config when possible
 /* jshint
- newcap: true,
  nonew: true,
  unused: true,
  eqeqeq: true,

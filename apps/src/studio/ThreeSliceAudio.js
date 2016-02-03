@@ -1,7 +1,6 @@
 /** @file A three-part loopable audio effect (start-loop-end). */
 // Strict linting: Absorb into global config when possible
 /* jshint
- newcap: true,
  nonew: true,
  unused: true,
  eqeqeq: true,
