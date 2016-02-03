@@ -386,7 +386,7 @@ StudioApp.prototype.init = function(config) {
     };
     // Depends on ResizeSensor.js
     var ResizeSensor = require('./ResizeSensor');
-    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+    ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
   var orientationHandler = function() {

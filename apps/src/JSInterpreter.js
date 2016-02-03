@@ -143,7 +143,9 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
+    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
+    /* jshint nonew:true */
   }
   catch(err) {
     this.handleError(err);
