@@ -21,5 +21,4 @@ class ProfessionalLearningCourse < ActiveRecord::Base
       LearningModule.create_random_learning_module_with_artifacts course
     end
   end
-
 end
