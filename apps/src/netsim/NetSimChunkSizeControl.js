@@ -2,8 +2,8 @@
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

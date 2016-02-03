@@ -1,6 +1,6 @@
 /** @file Increases the brightness of the image up to pure white and back. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

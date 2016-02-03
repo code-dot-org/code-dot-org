@@ -1,8 +1,8 @@
 /**
  * @overview Wraps remote storage interface and polling behavior.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

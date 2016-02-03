@@ -3,8 +3,8 @@
  *           encodings at once and lives inside the send panel.
  * @see NetSimSendPanel for how this is used.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

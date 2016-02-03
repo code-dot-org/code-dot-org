@@ -1,8 +1,8 @@
 /**
  * @overview UI Slider control used for changing simulated router bandwidth.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

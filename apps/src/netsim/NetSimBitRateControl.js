@@ -3,8 +3,8 @@
  *           Differs from the pulse rate slider in scale and units.
  * @see NetSimPulseRateControl
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

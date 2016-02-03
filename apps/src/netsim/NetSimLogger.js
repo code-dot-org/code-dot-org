@@ -3,8 +3,8 @@
  * available in all browsers.  Also makes it easy to turn logging on and off
  * in tests.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

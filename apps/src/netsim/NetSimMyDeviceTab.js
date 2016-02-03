@@ -1,8 +1,8 @@
 /**
  * @overview UI controller for the "My Device" tab in the left column.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,
