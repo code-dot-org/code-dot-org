@@ -291,7 +291,7 @@ lt:
         Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Pirmiausia padėk kvadratą<br/>Virš jo padėk lygiagretainį<br/>Lygiagretainio dešinėje padėk trikampį'
         Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Pradėk nuo kvadrato<br/>Padėk trikampį virš kvadrato<br/>Padėk trikampį po kvadratu'
         Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Pradėk nuo kvadrato<br/>Padėk trikampį po kvadratu<br/>Padėk lygiagretainį trikampio dešinėje'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Pradėk nuo kvadrato<br/>Padėk trikampį šalia kvadrato<br/>Padėk lygiagretainį po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje'
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png

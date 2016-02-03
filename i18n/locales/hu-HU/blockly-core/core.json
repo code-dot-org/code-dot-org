@@ -65,7 +65,7 @@
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"Amíg a feltétel igaz, végrehajtja az utasításokat.",
   "DEFINE_HEADER_DEFINITION":"Meghatározás",
   "DEFINE_FUNCTION_DEFINE":"Meghatározás",
-  "DEFINE_FUNCTION_FOR_EXAMPLE":"Határozd meg az alábbi funkciót és próbáld újra.",
+  "DEFINE_FUNCTION_FOR_EXAMPLE":"Definiáld az alábbi funkciót és próbáld újra.",
   "DELETE":"Törlés",
   "DELETE_BLOCK":"Blokk törlése",
   "DELETE_PARAMETER":"Paraméter eltávolítása...",

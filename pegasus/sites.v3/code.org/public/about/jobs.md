@@ -17,7 +17,7 @@ nav: about_nav
 - **Product and Marketing Team**
 	- [Engineering Manager / Chief Architect](#eng)
 	- [Software Engineer](#engineer)
-	- [UX/ Visual Designer](#design)
+	- [UX / Visual Designer](#design)
 	- [Marketing & Communications Manager](#market)
 - **Professional Learning & Community Team**
 	- [VP of Professional Learning & Community](#vp)
@@ -350,7 +350,39 @@ Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code
 
 **Job Summary:**
 
+Code.org is looking for a Training and Development Specialist for our Professional Learning & Community team. The specialist will be the coach and mentor for Code.org’s 200+ K-12 facilitators, who provide online and in-person training to over 10,000 K-12 teachers each year. This is a full time, exempt position based in our Seattle office. 
 
+
+Duties of this role include: 
+
+- Serve as the internal expert on facilitator development  and train-the-trainer
+- Draft agendas and deliver content for the annual Facilitator Development summit (2.5 days in May)
+- Work closely with the Facilitator Program Manager to ensure facilitator program cohesiveness
+- Host weekly office hours (or on an as needed basis) by curriculum program for facilitators to attend
+- Serve as a role model for excellent instructional facilitation and develop those capabilities in others.
+- Plan ongoing facilitator development activities, online and in person, throughout the school year
+- Monitor the Code.org facilitator online community and forums
+- Ensure a high level of quality for all Code.org PD sessions led by our facilitators
+- Identify, intervene and troubleshoot with facilitators who are struggling with performance
+- Develop tactics on improving facilitator practice for adult learning 
+- Track and recommend facilitator program content issues to the Teacher Experience Program Manager
+
+**Skills and Qualifications:**
+
+We are looking for a thought leader in the facilitation space who is highly respected by K-12 educators, and has expertise in coaching others to deliver high quality facilitation. 
+
+The ideal candidate has the following qualifications:
+
+- Strong instructional design and facilitation skills, and ability to support and mentor others in these domains.
+- Experience developing training materials/programs
+- Experience coaching participants in a train-the-trainer program
+- Strong attention to detail
+- Excellent written and verbal communication skills
+- Some knowledge of Computer Science
+- Bachelors degree or higher in Education or related field preferred 
+- 5-7 years related experience 
+
+Email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="info" href="#info">Working at Code.org</a>
 

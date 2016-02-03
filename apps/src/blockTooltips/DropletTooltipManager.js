@@ -86,7 +86,8 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (drop
 };
 
 /**
- * Registers blocks based on the dropletBlocks and codeFunctions passed to the constructor
+ * Registers block tooltips for blocks based on the dropletBlocks and
+ * codeFunctions passed to the constructor
  */
 DropletTooltipManager.prototype.registerBlocks = function () {
   var blocks = dropletUtils.getAllAvailableDropletBlocks(
@@ -94,12 +95,6 @@ DropletTooltipManager.prototype.registerBlocks = function () {
     this.codeFunctions,
     this.autocompletePaletteApisOnly);
   blocks.forEach(function (dropletBlockDefinition) {
-    if (this.autocompletePaletteApisOnly &&
-        this.codeFunctions &&
-        typeof this.codeFunctions[dropletBlockDefinition.func] === 'undefined') {
-      // autocompletePaletteApisOnly mode enabled and block is not in palette:
-      return;
-    }
     if (dropletBlockDefinition.docFunc) {
       // If a docFunc was specified, update our mapping
       this.docFuncMapping_[dropletBlockDefinition.func] = dropletBlockDefinition.docFunc;

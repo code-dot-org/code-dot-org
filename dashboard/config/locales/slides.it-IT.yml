@@ -2111,9 +2111,10 @@
     C4_unplugged_algorithms:
       1:
         image: notes/C4_unplugged_algorithms_1.png
-        text: This lesson is called Tangram Algorithms. A tangram is a puzzle with
-          seven pieces that can be put together to make other shapes. You'll be using
-          an algorithm to explain to your partner how to put the puzzle together.
+        text: Questa lezione è chiamata algoritmo Tangram. Un tangram è un puzzle
+          con sette pezzi che possono essere messi insieme per realizzare altre forme.
+          Si utilizzerà un algoritmo per spiegare al vostro compagno come mettere
+          insieme il puzzle.
       2:
         image: notes/C4_unplugged_algorithms_2.png
         text: An algorithm is just a of list steps that you can take to complete a
@@ -2124,11 +2125,12 @@
           then your algorithm will need to be detailed and very specific.
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: I'm using an algorithm today to complete a painting. I wanted to try
-          doing a painting of some wolves but I'm not the most amazing painter. Luckily
-          for people by me, there is paint by numbers. There are forty colors and
-          it has little letters and numbers that tell you which color to paint each
-          section. Paint by numbers tells me exactly what color to use and where.
+        text: Sto usando oggi un algoritmo per la realizzazione di un dipinto. Ho
+          voluto provare a fare un dipinto di alcuni lupi, ma io non sono un pittore
+          esperto. Fortunatamente per le persone come me, c'è da dipingere basandosi
+          su dei numeri. Ci sono quaranta colori e la tavola riporta lettere e numeri
+          che indicano quale colore usare per dipingere ogni sezione. Dipingere usando
+          i numeri mi consenete di usare i colori corretti e mi indica dove.
       4:
         image: notes/C4_unplugged_algorithms_4.png
         text: It's very specific so I'm able to follow directions and the painting
@@ -2154,11 +2156,11 @@
           a computer.
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: 'A computer only knows binary but an image, it''s not binary, it''s
-          not ones and zeros so how do you do that? Here''s an example: You have this
-          beautiful picture. Now a picture is basically a form of information. All
-          information can be encoded in binary one way or another, you just have to
-          figure out how to do it.'
+        text: Un computer conosce solo il codice binario ma un'immagine, non è binaria,
+          non si tratta di zeri e uno. Come fare allora a farlo? Ecco un esempio con
+          questa bella foto. Ora una foto è sostanzialmente un insieme di informazioni.
+          Tutte le informazioni possono essere codificate in binario in un modo o
+          in un altro, devi solo capire come farlo.
       4:
         image: notes/C4_unplugged_binary_4.png
         text: You imagine that we're going to put a grid over this panda bear and
@@ -2213,9 +2215,9 @@
     C4_unplugged_madlibs:
       1:
         image: notes/C4_unplugged_madlibs_1.png
-        text: In this lesson, we'll be playing with some fill in the blank stories.
-          You have a template that you can fill in to create similar stories that
-          have very amusing differences.
+        text: In questa lezione, giocheremo a completare delle parti di una storia.
+          Hai un modello che è possibile compilare per creare storie simili in modo
+          che presentino delle differenze molto divertenti.
       2:
         image: notes/C4_unplugged_madlibs_2.png
         text: In this lesson, we also learned how to make an abstracted template from
@@ -2234,10 +2236,11 @@
           The small change in each chorus can be shown using something we call parameters.
       2:
         image: notes/C4_unplugged_parameters_2.png
-        text: Sometimes a function needs a parameter. A parameter is an extra piece
-          of information you can pass to a function to customize it for a special
-          need. When you make ice cream sundaes with your friends, you are using a
-          process similar to parameters in a computer program.
+        text: A volte una funzione necessita di un parametro. Un parametro è un ulteriore
+          pezzo di informazione che è possibile passare a una funzione per personalizzarla
+          per una particolare necessità. Quando preparate delle coppe di gelato con
+          i tuoi amici, si utilizza un processo simile alla parametrizzazione in un
+          programma per computer.
       3:
         image: notes/C4_unplugged_parameters_3.png
         text: The disk of vanilla ice cream might be the same for every sundae but
@@ -2495,10 +2498,11 @@
     unplug2:
       1:
         image: notes/unplug2_1.png
-        text: The lesson on computational thinking is intended to teach you how to
-          take a big difficult problem and break it down into several simpler problems.
-          The goal of this lesson is to write a set of instructions that someone can
-          follow to draw one of the monsters included in the lesson plan.
+        text: La lezione sul pensiero computazionale ha come obiettivo quello di insegnarvi
+          ad affrontare un complesso e difficile problema e a scomporlo in diversi
+          problemi più semplici. L'obiettivo di questa lezione è quello di scrivere
+          un insieme di istruzioni che qualcuno possa seguire per disegnare uno dei
+          mostri inclusi nel piano della lezione.
       2:
         image: notes/unplug2_2.png
         text: 'Students will break into groups to write instructions and then they''ll
@@ -2635,10 +2639,10 @@
           next step.
       3:
         image: notes/unplug9_3.png
-        text: This is a great way to get across the idea of debugging, needing to
-          proofread your own work, and needing to check the work of the people done
-          before you. You'll quickly understand how important it is that you be careful
-          in your coding when a whole team is depending on you.
+        text: Questo è un ottimo modo per far passare l'idea di debug, della necessità
+          di revisionare il proprio lavoro e di controllare il lavoro fatto da altri
+          prima di voi. Capirete subito come sia importante essere attenti e precisi
+          nella realizzazione del codice quando un'intera squadra è dipende da te.
     unplug10:
       1:
         image: notes/unplug10_1.png

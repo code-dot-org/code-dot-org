@@ -31,7 +31,7 @@
   "ifTooltip":"Jei kelias yra nurodytoje kryptyje, atlik kokius nors veiksmus.",
   "ifelseTooltip":"Jei kelias yra nurodytoje kryptyje, atlik pirmą veiksmų bloką. Priešingu atveju, atlik antrą veiksmų bloką.",
   "ifFlowerTooltip":"Jei nurodytoje krypty yra gėlė\/korys, atliekami veiksmai.",
-  "ifOnlyFlowerTooltip":"Jei nurodyta kryptimi yra gėlė, tada vykdyti kokius nors veiksmus.",
+  "ifOnlyFlowerTooltip":"Jei nurodyta kryptimi yra gėlė, tada vykdyk kokius nors veiksmus.",
   "ifelseFlowerTooltip":"Jei nurodytoje krypty yra gėlė\/korys, atliekami pirmesni veiksmai, kitu atveju - kiti.",
   "insufficientHoney":"Tau reikia pagaminti teisingą medaus kiekį.",
   "insufficientNectar":"Tau reikia surinkti teisingą nektaro kiekį.",

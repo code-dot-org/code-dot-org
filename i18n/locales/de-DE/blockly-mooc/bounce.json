@@ -38,7 +38,7 @@
   "noPathAhead":"Pfad ist blockiert",
   "noPathLeft":"kein Pfad zur linken Seite",
   "noPathRight":"kein Pfad zur rechten Seite",
-  "numBlocksNeeded":"Dieses Puzzle kann mit  %1 Bausteinen gelöst werden.",
+  "numBlocksNeeded":"Dieses Puzzle kann mit %1 Blöcken gelöst werden.",
   "pathAhead":"Weg voraus",
   "pathLeft":"Wenn Weg auf der linken Seite",
   "pathRight":"Wenn Weg auf der rechten Seite",
