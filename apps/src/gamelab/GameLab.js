@@ -400,6 +400,7 @@ GameLab.prototype.execute = function() {
       window.p5,
       window.Sprite,
       window.Camera,
+      window.Animation,
       window.p5.Vector,
       window.p5.Color,
       window.p5.Image,
