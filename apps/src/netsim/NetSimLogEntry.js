@@ -6,7 +6,7 @@
  unused: true,
  eqeqeq: true,
 
- maxlen: 90,
+ maxlen: 120,
  maxparams: 5,
  maxstatements: 200
  */
