@@ -649,6 +649,52 @@ module.exports = {
     },
 
     {
+      description: "images reset when picture is cleared",
+      editCode: true,
+      xml: '',
+      // Use an asset path which we can access so that image loading will succeed
+      assetPathPrefix: '//localhost:8001/apps/test/assets/',
+      levelHtml: '' +
+      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
+        '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
+          '<img src="/v3/assets/Adks1c9Ko6WdR2PuwkA6cw/flappy_promo.png" id="image1" data-canonical-image-url="flappy_promo.png" style="height: 105px; width: 110px; position: absolute; left: 10px; top: 10px; margin: 0px;" />' +
+        '</div>' +
+      '</div>',
+      runBeforeClick: function (assert) {
+        var flappyUrl = '//localhost:8001/apps/test/assets/applab-channel-id/flappy_promo.png';
+        assert.equal($('#design_image1').attr('src'), flappyUrl, 'after init, design mode img src prefixed with new prefix');
+        assert.equal($('#image1').attr('src'), flappyUrl, 'after init, code mode img src prefixed with new prefix');
+
+        // Enter design mode, and select image
+        $('#designModeButton').click();
+        $('#design_image1').click();
+
+        assertPropertyRowExists(5, 'picture Choose...', assert);
+
+        var input = $('#propertyRowContainer input').eq(5)[0];
+        var designImage = $('#design_image1')[0];
+        assert.equal(designImage.style.width, '110px');
+        assert.equal(designImage.style.height, '105px');
+        assert(!/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
+        assert.equal(designImage.getAttribute('data-canonical-image-url'), 'flappy_promo.png');
+
+        ReactTestUtils.Simulate.change(input, { target: { value: '' } });
+        assert.equal(input.value, '');
+
+        assert(/1x1.gif$/.test(designImage.src), 'src became 1x1.gif');
+        assert.equal(designImage.getAttribute('data-canonical-image-url'), '');
+        assert.equal(designImage.style.width, '100px', 'width is reset');
+        assert.equal(designImage.style.height, '100px', 'height is reset');
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
       description: "remixed images are sized properly",
       editCode: true,
       xml: '',
