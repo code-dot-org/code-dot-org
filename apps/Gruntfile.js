@@ -439,6 +439,7 @@ config.jshint = {
     funcscope: true,
     mocha: true,
     node: true,
+    nonew: true,
     shadow: false,
     undef: true,
     globals: {

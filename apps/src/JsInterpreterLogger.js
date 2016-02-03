@@ -1,7 +1,6 @@
 /** @file Observes a JSInterpreter and logs to the designated browser console. */
 // Strict linting: Absorb into global config when possible
 /* jshint
- nonew: true,
  unused: true,
  eqeqeq: true,
 
