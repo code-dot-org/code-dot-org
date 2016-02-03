@@ -32,22 +32,16 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
  * App Lab, Game Lab, etc.
- * @param {!function} getJsInterpreter - Must be a function that returns the
- *        current active interpreter, or a falsy value if no interpreter is
- *        running.
  * @param {!function} runApp - callback for "launching" the app, which is used
  *        by the "Step In" button when the app isn't running.
  * @constructor
  */
-var JsDebuggerUi = module.exports = function (getJsInterpreter, runApp) {
-
+var JsDebuggerUi = module.exports = function (runApp) {
   /**
-   * Function for getting the active JSInterpreter (which may get replaced on a
-   * regular basis, i.e. for each run).  Should return undefined/null if no
-   * interpreter is currently running.
-   * @private {function}
+   * Reference to currently attached JSInterpreter, null if unattached.
+   * @private {JSInterpreter}
    */
-  this.getJsInterpreter_ = getJsInterpreter;
+  this.jsInterpreter_ = null;
 
   /** @private {Observer} */
   this.observer_ = new Observer();
@@ -93,6 +87,7 @@ JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
  * @param {JSInterpreter} jsInterpreter
  */
 JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
+  this.jsInterpreter_ = jsInterpreter;
   this.observer_.observe(jsInterpreter.onNextStepChanged,
       this.updatePauseUiState.bind(this));
   this.observer_.observe(jsInterpreter.onPause,
@@ -109,6 +104,7 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
  */
 JsDebuggerUi.prototype.detach = function () {
   this.observer_.unobserveAll();
+  this.jsInterpreter_ = null;
 };
 
 /**
@@ -268,7 +264,7 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     pushDebugConsoleHistory(input);
     e.target.textContent = '';
     this.log('> ' + input);
-    var jsInterpreter = this.getJsInterpreter_();
+    var jsInterpreter = this.jsInterpreter_;
     if (jsInterpreter) {
       try {
         var result = jsInterpreter.evalInCurrentScope(input);
@@ -416,7 +412,7 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
 };
 
 JsDebuggerUi.prototype.onPauseContinueButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     // We have code and are either running or paused
     if (jsInterpreter.paused &&
@@ -432,7 +428,7 @@ JsDebuggerUi.prototype.onPauseContinueButton = function() {
 };
 
 JsDebuggerUi.prototype.updatePauseUiState = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     return;
   }
@@ -495,7 +491,7 @@ JsDebuggerUi.prototype.resetDebugControls = function () {
 };
 
 JsDebuggerUi.prototype.onStepOverButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     jsInterpreter.paused = true;
     jsInterpreter.nextStep = StepType.OVER;
@@ -504,11 +500,11 @@ JsDebuggerUi.prototype.onStepOverButton = function() {
 };
 
 JsDebuggerUi.prototype.onStepInButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     this.runApp_();
     this.onPauseContinueButton();
-    jsInterpreter = this.getJsInterpreter_();
+    jsInterpreter = this.jsInterpreter_;
   }
   jsInterpreter.paused = true;
   jsInterpreter.nextStep = StepType.IN;
@@ -516,7 +512,7 @@ JsDebuggerUi.prototype.onStepInButton = function() {
 };
 
 JsDebuggerUi.prototype.onStepOutButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     jsInterpreter.paused = true;
     jsInterpreter.nextStep = StepType.OUT;

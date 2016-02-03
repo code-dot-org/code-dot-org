@@ -648,9 +648,7 @@ Applab.init = function(config) {
   jsInterpreterLogger = new JsInterpreterLogger(window.console);
 
   if (showDebugButtons || showDebugConsole) {
-    jsDebuggerUi = new JsDebuggerUi(function () {
-      return Applab.JSInterpreter;
-    }, Applab.runButtonClick);
+    jsDebuggerUi = new JsDebuggerUi(Applab.runButtonClick);
     extraControlsRow = jsDebuggerUi.getMarkup(
         studioApp.assetUrl, showDebugButtons, showDebugConsole);
   }
