@@ -119,6 +119,7 @@ GameLab.prototype.init = function (config) {
   }
 
   config.dropletConfig = dropletConfig;
+  config.appMsg = msg;
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
