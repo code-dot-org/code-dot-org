@@ -6,15 +6,16 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
 
-DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(
+  CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
 SEVEN_DAYS = 7 * 24 * 60 * 60
 THIRTY_DAYS = 30 * 24 * 60 * 60
 
 # baseline: The set of user objects whose count is used in the denominator of the fraction.
-# comparison: The set of user objects whose count is used in the numerator of the fractions.
-# Returns a hash, mapping demographics (all, gender, locale) to the ratio of users in the
-# comparison and the baseline.
-def build_demographic_breakdowns(baseline, comparison)
+# Returns a hash, mapping demographics (all, gender, locale) to the ratio of users in the baseline
+#   who signed-in thirty or more days after account creation to the users in the baseline.
+def build_demographic_breakdowns(baseline)
+  comparison = baseline.where("current_sign_in_at - created_at > ?", %q{interval '30 days'})
   students = comparison.count.to_f / [1, baseline.count].max.to_f
   female_students = comparison.where(gender: 'f').count.to_f /
     [1, baseline.where(gender: 'f').count].max.to_f
@@ -36,7 +37,7 @@ end
 def main()
   return unless only_one_running?(__FILE__)
 
-  # Users, born and unborn.
+  # Users, born (signed in at least once) and unborn (never signed in).
   all_users = DASHBOARD_REPORTING_DB_READONLY[:users]
   all_students = all_users.where(user_type: 'student')
   all_teachers = all_users.where(user_type: 'teacher')
@@ -53,20 +54,14 @@ def main()
   #    in at least once after thirty days.
   thirty_day_retention_historical_baseline = students.
     where(created_at: Time.new(1970, 1, 1)..(Time.now - (THIRTY_DAYS + SEVEN_DAYS)))
-  thirty_day_retention_historical = thirty_day_retention_historical_baseline.
-    where("current_sign_in_at - created_at < ?", %q{interval '30 days'})
   # ...for measuring the percentage of students that started thirty-seven to forty-four days ago
   #    and logged in at least once after thirty days.
   thirty_day_retention_current_weekly_baseline = students.
     where(created_at: (Time.now - (THIRTY_DAYS + 2 * SEVEN_DAYS))..(Time.now - (THIRTY_DAYS + SEVEN_DAYS)))
-  thirty_day_retention_current_weekly = thirty_day_retention_current_weekly_baseline.
-    where("current_sign_in_at - created_at < ?", %q{interval '30 days'})
   # ...for measuring the percentage of students that started sixty to ninety days ago and logged in
   #    at least once after thirty days
   thirty_day_retention_current_monthly_baseline = students.
     where(created_at: (Time.now - (3 * THIRTY_DAYS))..(Time.now - (2 * THIRTY_DAYS)))
-  thirty_day_retention_current_monthly = thirty_day_retention_current_monthly_baseline.
-    where("current_sign_in_at - created_at < ?", %q{interval '30 days'})
 
   # Students and teachers.
   followers = DASHBOARD_REPORTING_DB_READONLY[:followers]
@@ -83,8 +78,6 @@ def main()
       female_students: students.where(gender: 'f').count,
       male_students: students.where(gender: 'm').count,
       teachers: teachers.count,
-      female_teachers: teachers.where(gender: 'f').count,
-      male_teachers: teachers.where(gender: 'm').count,
     },
     actives: {
       seven_day_students: seven_day_active_students.count,
@@ -95,11 +88,12 @@ def main()
       thirty_day_male_students: thirty_day_active_students.where(gender: 'm').count,
     },
     thirty_day_retention_historical: build_demographic_breakdowns(
-      thirty_day_retention_historical_baseline, thirty_day_retention_historical),
+      thirty_day_retention_historical_baseline),
     thirty_day_retention_current_weekly: build_demographic_breakdowns(
-      thirty_day_retention_current_weekly_baseline, thirty_day_retention_current_weekly),
+      thirty_day_retention_current_weekly_baseline),
     thirty_day_retention_current_monthly: build_demographic_breakdowns(
-      thirty_day_retention_current_monthly_baseline, thirty_day_retention_current_monthly),
+      thirty_day_retention_current_monthly_baseline),
+    # TODO(asher): Add more student-teacher metrics and pipe them to the admin_stats dashboard.
     students_and_teachers: {
       students: followers.distinct.select(:student_user_id).count
     }
