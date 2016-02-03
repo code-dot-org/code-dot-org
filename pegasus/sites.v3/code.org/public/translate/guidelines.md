@@ -27,7 +27,7 @@ Consistency is important. In English, for example, we have gone back and forth o
 If any mathematical (or other) symbols are inappropriate in your language but are not offered for customization, please let us know by contacting translations@code.org.
 
 ### Translate Text, Not Code
-Code that shows up in peach or green like `var x = 2;`, `&quot;`, `%{keyword}` should not be translated. There is also the case when you might see text such as `{ outside text { inside text } outside text }`. Notice the two sets of curly braces. Translate the inside text, but do not translate the outside text. And for consistency, leep the same capitalization and punctuation of our strings.
+Code that shows up in peach or green like `var x = 2;`, `&quot;`, `%{keyword}` should not be translated. There is also the case when you might see text such as `{ outside text { inside text } outside text }`. Notice the two sets of curly braces. Translate the inside text, but do not translate the outside text. And for consistency, keep the same capitalization and punctuation of our strings.
 
 ### Do not translate the # sign
 Usually when we use the '#' sign in the string, it is meant as a placeholder for an actual number and should be kept in the translation. For example you might see the string "# blocks" in which case the translation should be something like "# bloques" as if later on the site it could be replaced with any number like "5 bloques". The placement of the # is variable, so if it makes more sense in a different language to do "bloques #" that works too.

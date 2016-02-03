@@ -15,6 +15,8 @@ The CS Principles professional learning program is open to teachers in partner d
 <br/>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.klJV05y9xdi4" width="640" height="480"></iframe>
 
+[<button>Apply now</button>](/educate/professional-learning/cs-principles-application)
+
 
 ## Don't see your district or region?
 
