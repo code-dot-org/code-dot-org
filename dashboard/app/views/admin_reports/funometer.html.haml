@@ -6,11 +6,11 @@
 
 %h2
   Overall Percentage:
-  %span= number_to_percentage(@overall_percentage, precision: 2)
+  %span= number_to_percentage(@stats['overall'], precision: 2)
 
 %br
 
-= render 'funometer_percentages_by_day', :percentages_by_day => percentages_by_day
+= render 'funometer_percentages_by_day', :percentages_by_day => @stats['ratings_by_day']
 
 %br
 
