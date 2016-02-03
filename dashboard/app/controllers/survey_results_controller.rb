@@ -18,11 +18,7 @@ class SurveyResultsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def survey_result_params
-    valid_params = []
-    SurveyResult::ETHNICITY_ATTRS.each do |value|
-      valid_params << value.to_sym
-    end
-    params.require(:survey).permit(valid_params)
+    params.require(:survey).permit(SurveyResult::RESULT_ATTRS.map(&:to_sym))
   end
 
 end

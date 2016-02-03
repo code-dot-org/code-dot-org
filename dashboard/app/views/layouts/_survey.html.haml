@@ -5,10 +5,10 @@
   - if request.location.try(:country_code) == 'US' || (!Rails.env.production? && request.location.try(:country_code) == 'RD')
 
     -# If signed in, and user hasn't already filled out this survey
-    - if current_user && true # !current_user.survey2016_value
+    - if current_user && SurveyResult.where(user_id: current_user.id).blank?
 
       -# If at least 13, and account is at least 14 days old
-      - if !current_user.under_13? && true # (DateTime.now - current_user.created_at.to_datetime) >= 14
+      - if !current_user.under_13? && (DateTime.now - current_user.created_at.to_datetime) >= 14
 
         .survey{style: "background-color: rgb(200,200,200); padding:40px"}
           #surveythanks{style: "display: none"}
