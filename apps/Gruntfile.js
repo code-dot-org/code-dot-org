@@ -437,6 +437,7 @@ config.jshint = {
     curly: true,
     esnext: true,
     funcscope: true,
+    maxparams: 8,
     mocha: true,
     node: true,
     nonew: true,
