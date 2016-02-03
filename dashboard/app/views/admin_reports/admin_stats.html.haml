@@ -5,70 +5,94 @@
       %ul
         %li 
           Users:
-          =@stats['accounts']['users']
+          = @stats['accounts']['users']
         %li 
           Students:
-          =@stats['accounts']['students']
+          = @stats['accounts']['students']
         %li
           Teachers:
-          =@stats['accounts']['teachers']
+          = @stats['accounts']['teachers']
     %li
       Born Accounts
       %ul
         %li 
           Users:
-          =@stats['born_accounts']['users']
+          = @stats['born_accounts']['users']
         %li 
           Students:
-          =@stats['born_accounts']['students']
+          = @stats['born_accounts']['students']
         %li 
           Female Students:
-          =@stats['born_accounts']['female_students']
+          = @stats['born_accounts']['female_students']
+          = surround '(', ')' do
+            = number_with_precision(100.0 * @stats['born_accounts']['female_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2)
         %li 
           Male Students:
-          =@stats['born_accounts']['male_students']
+          = @stats['born_accounts']['male_students']
+          = surround '(', ')' do
+            = number_with_precision(100.0 * @stats['born_accounts']['male_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2)
         %li 
           Teachers:
-          =@stats['born_accounts']['teachers']
+          = @stats['born_accounts']['teachers']
         %li 
           Female Teachers:
-          =@stats['born_accounts']['female_teachers']
+          = @stats['born_accounts']['female_teachers']
+          = surround '(', ')' do
+            = number_with_precision(100.0 * @stats['born_accounts']['female_teachers'].to_f / (@stats['born_accounts']['female_teachers'].to_f + @stats['born_accounts']['male_teachers'].to_f), precision: 2)
         %li 
           Male Teachers:
-          =@stats['born_accounts']['male_teachers']
+          = @stats['born_accounts']['male_teachers']
+          = surround '(', ')' do
+            = number_with_precision(100.0 * @stats['born_accounts']['male_teachers'].to_f / (@stats['born_accounts']['female_teachers'].to_f + @stats['born_accounts']['male_teachers'].to_f), precision: 2)
     %li
       Actives
       %ul
         %li 
           7-Day Students:
-          =@stats['actives']['seven_day_students']
+          = @stats['actives']['seven_day_students']
         %li 
           7-Day Female Students:
-          =@stats['actives']['seven_day_female_students']
+          = @stats['actives']['seven_day_female_students']
         %li 
           7-Day Male Students:
-          =@stats['actives']['seven_day_male_students']
+          = @stats['actives']['seven_day_male_students']
         %li 
           30-Day Students:
-          =@stats['actives']['thirty_day_students']
+          = @stats['actives']['thirty_day_students']
         %li 
           30-Day Female Students:
-          =@stats['actives']['thirty_day_female_students']
+          = @stats['actives']['thirty_day_female_students']
         %li 
           30-Day Male Students:
-          =@stats['actives']['thirty_day_male_students']
-  % li
-    Retention
-    %ul
+          = @stats['actives']['thirty_day_male_students']
+    - ["historical", "current_weekly", "current_monthly"].each do |type|
       %li
-        
+        Retention
+        = type
+        (Percentages)
+        %ul
+          %li
+            30-Day Student:
+            = @stats['thirty_day_retention_' + type]['students']
+          %li
+            30-Day Female Student:
+            = @stats['thirty_day_retention_' + type]['female_students']
+          %li
+            30-Day Male Student:
+            = @stats['thirty_day_retention_' + type]['male_students']
+          %li
+            30-Day US Student:
+            = @stats['thirty_day_retention_' + type]['us_students']
+          %li
+            30-Day Non-US Student:
+            = @stats['thirty_day_retention_' + type]['non_us_students']
 
-  =link_to 'View Level Progress (slow query) >>', admin_progress_path
+  = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
-  =link_to 'View Concept Completions (slow query) >>', admin_concepts_path
+  = link_to 'View Concept Completions (slow query) >>', admin_concepts_path
   %br
-  =link_to 'View Level Completion stats >>', level_completions_path
+  = link_to 'View Level Completion stats >>', level_completions_path
   %br
-  =link_to 'View Monthly Metrics >>', reports_path(action: 'monthly_metrics')
+  = link_to 'View Monthly Metrics >>', reports_path(action: 'monthly_metrics')
 - else
   %h2 Error: @stats is nil.
