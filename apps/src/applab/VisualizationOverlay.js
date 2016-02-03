@@ -15,9 +15,8 @@
 
 var constants = require('../constants');
 var CrosshairOverlay = require('./CrosshairOverlay');
-var SVG_NS = constants.SVG_NS;
-
 var gridUtils = require('./gridUtils');
+var SVG_NS = constants.SVG_NS;
 
 /**
  * Creates and controls an SVG overlay on the app visualization.

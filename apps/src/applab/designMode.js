@@ -13,7 +13,6 @@ var constants = require('./constants');
 var applabCommands = require('./commands');
 var designMode = module.exports;
 var utils = require('../utils');
-
 var gridUtils = require('./gridUtils');
 
 var currentlyEditedElement = null;
