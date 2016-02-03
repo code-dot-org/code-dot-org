@@ -14,12 +14,10 @@ var applabCommands = require('./commands');
 var designMode = module.exports;
 var utils = require('../utils');
 
-var scaledDropPoint = require('./scaledDropPoint');
+var gridUtils = require('./gridUtils');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
-
-var GRID_SIZE = 5;
 
 /**
  * If in design mode and program is not running, display Properties
@@ -568,8 +566,8 @@ function makeDraggable (jqueryElements) {
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
         // snap width/height to nearest grid increment
-        newWidth = snapToGridSize(newWidth, GRID_SIZE);
-        newHeight = snapToGridSize(newHeight, GRID_SIZE);
+        newWidth = gridUtils.snapToGridSize(newWidth);
+        newHeight = gridUtils.snapToGridSize(newHeight);
 
         // Bound at app edges
         var container = $('#designModeViz');
@@ -614,8 +612,8 @@ function makeDraggable (jqueryElements) {
         var newTop = ui.position.top / scale;
 
         // snap top-left corner to nearest location in the grid
-        newLeft = snapToGridSize(newLeft, GRID_SIZE);
-        newTop = snapToGridSize(newTop, GRID_SIZE);
+        newLeft = gridUtils.snapToGridSize(newLeft);
+        newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
         var container = $('#designModeViz');
@@ -676,17 +674,6 @@ function getVisualizationScale() {
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
-/**
- * Given a coordinate on either axis and a grid size, returns a coordinate
- * near the given coordinate that snaps to the given grid size.
- * @param {number} coordinate
- * @param {number} gridSize
- * @returns {number}
- */
-var snapToGridSize = function (coordinate, gridSize) {
-  var halfGrid = gridSize / 2;
-  return coordinate - ((coordinate + halfGrid) % gridSize - halfGrid);
-};
 
 /**
  * Inverse of `makeDraggable`.
@@ -748,10 +735,8 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var div = document.getElementById('designModeViz');
+      var point = gridUtils.scaledDropPoint(ui.helper);
 
-      var point = scaledDropPoint(div, ui.helper, GRID_SIZE);
-      
       var element = designMode.createElement(elementType, point.left, point.top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));

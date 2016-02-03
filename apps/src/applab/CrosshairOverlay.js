@@ -77,6 +77,8 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
   }
 
+  // If we're dragging an element, instead put the text above and right of the
+  // cross hair, while making sure it doesnt go past the top of the overlay
   if (this.props_.isDragging) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
     rectY = Math.max(0, rectY);
