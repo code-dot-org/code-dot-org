@@ -126,6 +126,8 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
   this.mousePos_.y = event.clientY;
   var draggingElement = $(".ui-draggable-dragging");
   if (draggingElement.length) {
+    // If we're dragging an element, use our util method to determine the right
+    // mouse pos (top left of the dragged element)
     var point = gridUtils.scaledDropPoint(draggingElement);
     this.mousePos_.x = point.left;
     this.mousePos_.y = point.top;

@@ -4,7 +4,8 @@
 module.exports = {
   GRID_SIZE: 5,
   /**
-   * Given a dragging
+   * Given an element being dragged, determine the scaled x/y position of the
+   * top left corned, scaled to our visualization.
    * @param {jQueryObject} draggingElement
    * @return {object}
    */
