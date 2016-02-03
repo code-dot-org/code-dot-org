@@ -1,53 +1,56 @@
 ---
-title: Exploring CS Professional Learning Program
+title: Exploring Computer Science Professional Learning Program
 
 ---
-# Exploring CS Professional Learning Program #
+# Exploring Computer Science Professional Learning Program #
 
-The Code.org Exploring Computer Science (Exploring CS) professional learning program supports teachers with diverse teaching backgrounds. Whether you are new to teaching CS or you have CS teaching experience outside this
-course, the program is designed to promote growth in your teaching practice, providing space for teachers to become comfortable with the curricular materials and associated teaching strategies. 
+The Code.org Exploring Computer Science (ECS) Professional Learning Program supports teachers with diverse teaching backgrounds. Whether you are new to teaching CS or you have CS teaching experience outside this course, the program is designed to promote growth in your teaching practice, providing space for teachers to become comfortable with the curricular materials and associated teaching strategies. 
 
-## What does a Code.org CSP Educator do?
-If accepted into the Exploring Computer Science professional learning program, you will:
+## What does a Code.org Exploring Computer Science educator do?
+If accepted into the Exploring Computer Science Professional Learning Program, you will:
 
 - Join a nationwide community of educators working to change the face of CS education 
 - Participate in in-person and online professional development
-- Plan and deliver the Exploring CS curriculum to your students, and reflect on your experiences 
+- Plan and deliver the ECS curriculum to your students, and reflect on your experiences 
  
  
 ## <a name="components"></a>How does it work?
 The program has four phases: 
 
-- **Code.org TeacherCon** - An intensive, hands-on, in-person workshop providing foundational experiences with CS and the Code.org suite of tools. The week-long workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are using this curriculum. Educators who plan to deliver the course as an AP will dive into the College Board requirements that come with an AP course.
-- **Continuing Professional Development** - A menu of online and local in-person professional development options from which educators can build a customized personal learning pathway. This phase of the program is blended, with ongoing in-person meetings as well as online activities.
-  - The in-person meetings are run by local facilitators and are focused on continuing to build pedagogical strategies while also exploring the essential elements of this course, such as: using the AP performance tasks in your course, teaching new content and units, and keeping the classroom environment equitable and engaging for all students.
-  - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further explorating the curriculum.
+- **Phase 1:** Online Introduction - The first phase of professional development is a two-hour online introduction that focuses on providing a foundational knowledge of the ECS course resources. It creates a space for participants to become familiar with the curriculum and the online professional learning platform
+- **Phase 2:** Summer Study - This 5-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore curriculum, tools, classroom management, and teaching strategies. Spending practical time working with the curriculum, you will develop an understanding of how to efectively use the materials and pedagogical strategies that are part of any strong computer science classroom.
+- **Phase 3:** Academic Year Development - These quarterly meetings along with ongoing online support will continue to build pedagogical strategies and explore the essential elements of this course. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students. Additionally, the cpourses introduce opportunities to build a collaborative professional online learning community — an important teacher tool during the first-year of teaching this course.
+- **Phase 4:** Summer Wrap-up - Need from Brook
 
 
-[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply)
+[<button>Apply now</button>](/educate/professional-learning/exploring-cs-apply)
 
 ## <a name="commitments"></a>What are the program commitments?
 
-Code.org TeacherCon: (June-August)
+The Exploring Computer Science professional learning program is 94 hours of online and in-person support, spanning over ~12 months:
 
-  - 5 days (30 hours) in person. Choose from three dates:
-	  - June 20-24 in Atlanta, GA
-	  - July 18-22 in Salt Lake City, UT
-	  - August 8-12 in Chicago, IL
+![Image 1](/images//fit-700/timeline-ecs-plc.png)
 
-Continuing Professional Development: (September - June)
-
-  - 4 days (24 hours) in-person, hosted locally around the nation
-  - 20 hours online, self-paced
-
-
+- **Phase 1:** Online Introduction
+	  - 2 hours online, self-paced
+- **Phase 2:** Summer Study
+	  - 5 days (30 hours) in person
+- **Phase 3:** Academic Year Development
+	  - 4 days (24 hours), in person, meeting one day per quarter 
+	  - 20 hours online, self-paced 
+- **Phase 4:** Summer Wrap-up
+	  - 3 days (18 hours) in person
+	  
+	  
 ## <a name="participate"></a>Who can Participate?
 
-The CSP Educator Development Program is open to teachers in partner districts who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. 
+The ECS Professional Learning Program is open to teachers in partner districts who are interested in teaching the Exploring Computer Science course. In order to participate in this program, educators need only demonstrate a commitment to delivering the ECS course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. 
+
+[<button>Apply now</button>](/educate/professional-learning/exploring-cs-apply)
 
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach Exploring CS. If your school district hasn't partnered with Code.org, encourage your administrators to [apply to be a partner district](/educate/districts).
+We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach Exploring Computer Science. If your school district hasn't partnered with Code.org, encourage your administrators to [apply to be a partner district](/educate/districts).
 
-[<button>Apply now</button>](/educate/professional-learning/cs-principles-apply) &nbsp;&nbsp;[<button>Join the wait list</button>](https://form.jotform.com/53365196731157)
+

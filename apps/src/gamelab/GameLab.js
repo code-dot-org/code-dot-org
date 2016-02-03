@@ -14,6 +14,8 @@ var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 
+var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
+
 /**
  * An instantiable GameLab class
  */
@@ -63,6 +65,14 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
+// For proxying non-https assets
+var MEDIA_PROXY = '//' + location.host + '/media?u=';
+
+// starts with http or https
+var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
+
+GameLab.baseP5loadImage = null;
+
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
  */
@@ -101,7 +111,25 @@ GameLab.prototype.init = function (config) {
     }
   };
 
+  // Override p5.loadImage so we can modify the URL path param
+  if (!GameLab.baseP5loadImage) {
+    GameLab.baseP5loadImage = window.p5.prototype.loadImage;
+    window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
+      if (ABSOLUTE_REGEXP.test(path)) {
+        // We want to be able to handle the case where our filename contains a
+        // space, i.e. "www.example.com/images/foo bar.png", even though this is a
+        // technically invalid URL. encodeURIComponent will replace space with %20
+        // for us, but as soon as it's decoded, we again have an invalid URL. For
+        // this reason we first replace space with %20 ourselves, such that we now
+        // have a valid URL, and then call encodeURIComponent on the result.
+        path = MEDIA_PROXY + encodeURIComponent(path.replace(/ /g, '%20'));
+      }
+      return GameLab.baseP5loadImage(path, successCallback, failureCallback);
+    };
+  }
+
   config.dropletConfig = dropletConfig;
+  config.appMsg = msg;
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
@@ -319,6 +347,7 @@ GameLab.prototype.execute = function() {
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
       studioApp: this.studioApp_,
+      maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
       customMarshalGlobalProperties: {
         width: this.p5,
         height: this.p5,
@@ -387,6 +416,7 @@ GameLab.prototype.execute = function() {
       window.p5,
       window.Sprite,
       window.Camera,
+      window.Animation,
       window.p5.Vector,
       window.p5.Color,
       window.p5.Image,
@@ -423,7 +453,7 @@ GameLab.prototype.execute = function() {
     this.evalCode(this.code);
   }
 
-  this.studioApp_.playAudio('start', {loop : true});
+  this.studioApp_.playAudio('start');
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running

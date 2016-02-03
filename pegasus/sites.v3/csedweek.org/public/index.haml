@@ -30,14 +30,7 @@ social:
     = view :index_loc
 
 -facebook = {:u=>"https://#{request.site}/"}
-
--if request.site == 'csedweek.org'
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
-  -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
--else
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:twitter_teach_cs)}
-
--twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
+-twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:hoc_is_here)}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
