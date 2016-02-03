@@ -8,7 +8,6 @@
  eqeqeq: true,
 
  maxlen: 120,
- maxparams: 3,
  maxstatements: 200
 */
 /* global -Blockly */

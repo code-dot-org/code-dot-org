@@ -2,8 +2,7 @@
 /* jshint
  unused: true,
 
- maxlen: 120,
- maxparams: 3
+ maxlen: 120
  */
 
 var i18n = require('./locale');
