@@ -261,19 +261,32 @@ designMode.updateProperty = function(element, name, value) {
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        element.onload = function () {
-          // naturalWidth/Height aren't populated until image has loaded.
-          element.style.width = element.naturalWidth + 'px';
-          element.style.height = element.naturalHeight + 'px';
+        var resizeElement = function (width, height) {
+          element.style.width = width + 'px';
+          element.style.height = height + 'px';
           if (isDraggableContainer(element.parentNode)) {
-            element.parentNode.style.width = element.naturalWidth + 'px';
-            element.parentNode.style.height = element.naturalHeight + 'px';
+            element.parentNode.style.width = width + 'px';
+            element.parentNode.style.height = height + 'px';
           }
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
           }
         };
+        if (value === '') {
+          element.src = '/blockly/media/1x1.gif';
+          resizeElement(100, 100);
+        } else {
+          element.onload = function () {
+            // naturalWidth/Height aren't populated until image has loaded.
+            var left = parseFloat(element.style.left);
+            var top = parseFloat(element.style.top);
+            var dimensions = boundedResize(left, top, element.naturalWidth, element.naturalHeight, true);
+            resizeElement(dimensions.width, dimensions.height);
+            // only perform onload once
+            element.onload = null;
+          };
+        }
       }
       break;
     case 'hidden':
@@ -542,6 +555,34 @@ function getInnerElement(outerElement) {
 }
 
 /**
+ * Returns a new width/height bounded to the visualization area.
+ * @param {number} left
+ * @param {number} top
+ * @param {number} width Requested width.
+ * @param {number} height Requested height.
+ * @param {boolean} preserveAspectRatio Constrain the width/height to the
+ *   initial aspect ratio.
+ * @return {{width: number, height: number}}
+ */
+function boundedResize(left, top, width, height, preserveAspectRatio) {
+  var container = $('#designModeViz');
+  var maxWidth = container.outerWidth() - left;
+  var maxHeight = container.outerHeight() - top;
+  var newWidth = Math.min(width, maxWidth);
+  newWidth = Math.max(newWidth, 20);
+  var newHeight = Math.min(height, maxHeight);
+  newHeight = Math.max(newHeight, 20);
+
+  if (preserveAspectRatio) {
+    var ratio = Math.min(newWidth / width, newHeight / height);
+    newWidth = width * ratio;
+    newHeight = height * ratio;
+  }
+
+  return {width: newWidth, height: newHeight};
+}
+
+/**
  *
  * @param {jQuery} jqueryElements jQuery object containing DOM elements to make
  *   draggable.
@@ -570,19 +611,13 @@ function makeDraggable (jqueryElements) {
         newHeight = snapToGridSize(newHeight, GRID_SIZE);
 
         // Bound at app edges
-        var container = $('#designModeViz');
-        var maxWidth = container.outerWidth() - ui.position.left;
-        var maxHeight = container.outerHeight() - ui.position.top;
-        newWidth = Math.min(newWidth, maxWidth);
-        newWidth = Math.max(newWidth, 20);
-        newHeight = Math.min(newHeight, maxHeight);
-        newHeight = Math.max(newHeight, 20);
+        var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         ui.size.width = newWidth;
         ui.size.height = newHeight;
         wrapper.css({
-          width: newWidth,
-          height: newHeight
+          width: dimensions.width,
+          height: dimensions.height
         });
 
         elm.outerWidth(wrapper.width());
