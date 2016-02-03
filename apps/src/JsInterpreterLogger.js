@@ -1,4 +1,5 @@
 /** @file Observes a JSInterpreter and logs to the designated browser console. */
+// This block enables extra-strict linting, since this is new code.
 /* jshint
  funcscope: true,
  newcap: true,

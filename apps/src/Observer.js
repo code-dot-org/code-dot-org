@@ -1,4 +1,5 @@
 /** @file Helper for consuming ObservableEvents. */
+// This block enables extra-strict linting, since this is new code.
 /* jshint
  funcscope: true,
  newcap: true,
