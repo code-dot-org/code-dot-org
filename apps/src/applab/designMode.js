@@ -560,8 +560,8 @@ function getInnerElement(outerElement) {
  * @param {number} top
  * @param {number} width Requested width.
  * @param {number} height Requested height.
- * @param {boolean} [preserveAspectRatio] Optionally constrain the width/height to
- *   the initial aspect ratio.
+ * @param {boolean} preserveAspectRatio Constrain the width/height to the
+ *   initial aspect ratio.
  * @return {{width: number, height: number}}
  */
 function boundedResize(left, top, width, height, preserveAspectRatio) {
@@ -574,7 +574,7 @@ function boundedResize(left, top, width, height, preserveAspectRatio) {
   newHeight = Math.max(newHeight, 20);
 
   if (preserveAspectRatio) {
-    var ratio = Math.min(newWidth/ width, newHeight / height);
+    var ratio = Math.min(newWidth / width, newHeight / height);
     newWidth = width * ratio;
     newHeight = height * ratio;
   }
@@ -611,7 +611,7 @@ function makeDraggable (jqueryElements) {
         newHeight = snapToGridSize(newHeight, GRID_SIZE);
 
         // Bound at app edges
-        var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight);
+        var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         ui.size.width = newWidth;
         ui.size.height = newHeight;
