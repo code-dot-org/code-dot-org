@@ -42,19 +42,6 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   add_index "activity_hints", ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
   add_index "activity_hints", ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
 
-  create_table "artifact_assignments", force: :cascade do |t|
-    t.integer  "artifact_submission_id", limit: 4
-    t.integer  "artifact_id",            limit: 4
-    t.integer  "user_id",                limit: 4
-    t.string   "status",                 limit: 255
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
-  end
-
-  add_index "artifact_assignments", ["artifact_id"], name: "index_artifact_assignments_on_artifact_id", using: :btree
-  add_index "artifact_assignments", ["artifact_submission_id"], name: "index_artifact_assignments_on_artifact_submission_id", using: :btree
-  add_index "artifact_assignments", ["user_id"], name: "index_artifact_assignments_on_user_id", using: :btree
-
   create_table "artifact_submissions", force: :cascade do |t|
     t.string   "type",       limit: 255
     t.datetime "created_at",             null: false
@@ -520,6 +507,18 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   add_index "user_course_enrollments", ["professional_learning_course_id"], name: "index_user_course_enrollments_on_professional_learning_course_id", using: :btree
   add_index "user_course_enrollments", ["user_id"], name: "index_user_course_enrollments_on_user_id", using: :btree
 
+  create_table "user_enrollment_module_assignments", force: :cascade do |t|
+    t.integer  "learning_module_id",        limit: 4
+    t.integer  "user_course_enrollment_id", limit: 4
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.integer  "user_id",                   limit: 4
+  end
+
+  add_index "user_enrollment_module_assignments", ["learning_module_id"], name: "index_user_enrollment_module_assignments_on_learning_module_id", using: :btree
+  add_index "user_enrollment_module_assignments", ["user_course_enrollment_id"], name: "fk_rails_e5e86f5fd9", using: :btree
+  add_index "user_enrollment_module_assignments", ["user_id"], name: "index_user_enrollment_module_assignments_on_user_id", using: :btree
+
   create_table "user_levels", force: :cascade do |t|
     t.integer  "user_id",         limit: 4,             null: false
     t.integer  "level_id",        limit: 4,             null: false
@@ -532,6 +531,17 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   end
 
   add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
+
+  create_table "user_module_artifact_assignments", force: :cascade do |t|
+    t.integer  "artifact_id",                          limit: 4
+    t.integer  "user_enrollment_module_assignment_id", limit: 4
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.string   "status",                               limit: 255
+  end
+
+  add_index "user_module_artifact_assignments", ["artifact_id"], name: "index_user_module_artifact_assignments_on_artifact_id", using: :btree
+  add_index "user_module_artifact_assignments", ["user_enrollment_module_assignment_id"], name: "fk_rails_3d81c8dc0f", using: :btree
 
   create_table "user_module_assignments", force: :cascade do |t|
     t.integer  "user_id",            limit: 4
@@ -687,9 +697,6 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
-  add_foreign_key "artifact_assignments", "artifact_submissions"
-  add_foreign_key "artifact_assignments", "artifacts"
-  add_foreign_key "artifact_assignments", "users"
   add_foreign_key "artifacts", "learning_modules"
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
@@ -702,6 +709,11 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   add_foreign_key "user_artifact_assignments", "users"
   add_foreign_key "user_course_enrollments", "professional_learning_courses"
   add_foreign_key "user_course_enrollments", "users"
+  add_foreign_key "user_enrollment_module_assignments", "learning_modules"
+  add_foreign_key "user_enrollment_module_assignments", "user_course_enrollments"
+  add_foreign_key "user_enrollment_module_assignments", "users"
+  add_foreign_key "user_module_artifact_assignments", "artifacts"
+  add_foreign_key "user_module_artifact_assignments", "user_enrollment_module_assignments"
   add_foreign_key "user_module_assignments", "learning_modules"
   add_foreign_key "user_module_assignments", "users"
 end

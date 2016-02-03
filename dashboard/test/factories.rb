@@ -1,47 +1,64 @@
-FactoryGirl.define do  factory :user_course_enrollment do
-    user nil
-professional_learning_course nil
+FactoryGirl.define do
+  factory :user_module_artifact_assignment do
+    artifact nil
+    user_enrollment_module_assignment nil
   end
+
+  factory :user_enrollment_module_assignment do
+    learning_module nil
+    user_course_enrollment nil
+  end
+
+  factory :user_course_enrollment do
+    user nil
+    professional_learning_course nil
+  end
+
   factory :professional_learning_course do
     name "MyString"
   end
+
   factory :learning_module_assignment do
     user nil
-learning_module nil
+    learning_module nil
   end
 
   factory :artifact_assignment do
     artifact_submission nil
-artifact nil
-user nil
-status "MyString"
+    artifact nil
+    user nil
+    status "MyString"
   end
+
   factory :artifact_submission do
     type ""
   end
+
   factory :user_artifact_assignment do
     user nil
-artifact nil
-assigned_date "2016-01-29 13:29:52"
-completed_date "2016-01-29 13:29:52"
-status "MyString"
+    artifact nil
+    assigned_date "2016-01-29 13:29:52"
+    completed_date "2016-01-29 13:29:52"
+    status "MyString"
   end
+
   factory :user_module_assignment do
     user nil
-learning_module nil
-assigned_date "2016-01-29 13:29:32"
-completed_date "2016-01-29 13:29:32"
-status "MyString"
+    learning_module nil
+    assigned_date "2016-01-29 13:29:32"
+    completed_date "2016-01-29 13:29:32"
+    status "MyString"
   end
 
   factory :artifact do
     name "MyString"
-description "MyText"
-learning_module nil
+    description "MyText"
+    learning_module nil
   end
+
   factory :learning_module do
     name "MyString"
-type ""
+    type ""
   end
 
   factory :user do
