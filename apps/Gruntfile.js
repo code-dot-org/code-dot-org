@@ -433,12 +433,12 @@ config.watch = {
 
 config.jshint = {
   options: {
-    curly: true,
-    node: true,
-    mocha: true,
     browser: true,
-    undef: true,
+    curly: true,
     esnext: true,
+    mocha: true,
+    node: true,
+    undef: true,
     globals: {
       $: true,
       jQuery: true,
