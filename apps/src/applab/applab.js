@@ -879,9 +879,6 @@ Applab.clearEventHandlersKillTickLoop = function() {
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
   Applab.tickCount = 0;
-  if (jsDebuggerUi) {
-    jsDebuggerUi.resetDebugControls();
-  }
 };
 
 /**
@@ -968,7 +965,6 @@ Applab.reset = function(first) {
   }
 
   if (jsDebuggerUi) {
-    jsDebuggerUi.resetDebugControls();
     jsDebuggerUi.detach();
   }
 
