@@ -1,6 +1,4 @@
 {
-  "foo": "foo",
-  "fooTooltip": "do foo",
   "dropletBlock_width_description": "The width of the drawing canvas",
   "dropletBlock_height_description": "The height of the drawing canvas",
   "dropletBlock_createSprite_description": "Creates a Sprite at the initial specified position with the given placeholder dimensions",
