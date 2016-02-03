@@ -61,7 +61,7 @@ describe('Pairing component', function(){
     assert.equal(0, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
   });
 
-  it('should selected a student when clicking on it', function() {
+  it('should select a student when clicking on it', function() {
     var props = {
       sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
       pairings: []
@@ -79,6 +79,7 @@ describe('Pairing component', function(){
 
     // 2 students
     assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
+
     // 1 selected student
     assert.equal(1, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
 
