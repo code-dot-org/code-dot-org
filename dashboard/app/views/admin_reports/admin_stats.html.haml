@@ -1,12 +1,12 @@
 -if @stats.present?
   %ul
-    %li 
+    %li
       Accounts
       %ul
-        %li 
+        %li
           Users:
           = @stats['accounts']['users']
-        %li 
+        %li
           Students:
           = @stats['accounts']['students']
         %li
@@ -15,31 +15,31 @@
     %li
       Born Accounts
       %ul
-        %li 
+        %li
           Users:
           = @stats['born_accounts']['users']
-        %li 
+        %li
           Students:
           = @stats['born_accounts']['students']
-        %li 
+        %li
           Female Students:
           = @stats['born_accounts']['female_students']
           = surround '(', ')' do
             = number_with_precision(100.0 * @stats['born_accounts']['female_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2)
-        %li 
+        %li
           Male Students:
           = @stats['born_accounts']['male_students']
           = surround '(', ')' do
             = number_with_precision(100.0 * @stats['born_accounts']['male_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2)
-        %li 
+        %li
           Teachers:
           = @stats['born_accounts']['teachers']
-        %li 
+        %li
           Female Teachers:
           = @stats['born_accounts']['female_teachers']
           = surround '(', ')' do
             = number_with_precision(100.0 * @stats['born_accounts']['female_teachers'].to_f / (@stats['born_accounts']['female_teachers'].to_f + @stats['born_accounts']['male_teachers'].to_f), precision: 2)
-        %li 
+        %li
           Male Teachers:
           = @stats['born_accounts']['male_teachers']
           = surround '(', ')' do
@@ -47,22 +47,22 @@
     %li
       Actives
       %ul
-        %li 
+        %li
           7-Day Students:
           = @stats['actives']['seven_day_students']
-        %li 
+        %li
           7-Day Female Students:
           = @stats['actives']['seven_day_female_students']
-        %li 
+        %li
           7-Day Male Students:
           = @stats['actives']['seven_day_male_students']
-        %li 
+        %li
           30-Day Students:
           = @stats['actives']['thirty_day_students']
-        %li 
+        %li
           30-Day Female Students:
           = @stats['actives']['thirty_day_female_students']
-        %li 
+        %li
           30-Day Male Students:
           = @stats['actives']['thirty_day_male_students']
     - ["historical", "current_weekly", "current_monthly"].each do |type|
