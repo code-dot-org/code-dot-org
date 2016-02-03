@@ -1,6 +1,6 @@
 /** @file Actions that can be given to a playlab sprite to execute over a set time. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

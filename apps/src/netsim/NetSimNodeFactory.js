@@ -2,8 +2,8 @@
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

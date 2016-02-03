@@ -1,8 +1,8 @@
 /**
  * @overview Router log table UI component on the "Router" tab.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

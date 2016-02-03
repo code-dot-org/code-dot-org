@@ -6,8 +6,8 @@
  *           Access to environment-specific asset URLs.
  *           Reproducible random number functions for easy testing.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

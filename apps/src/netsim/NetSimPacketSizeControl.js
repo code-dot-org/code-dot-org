@@ -1,8 +1,8 @@
 /**
  * @overview UI slider used to change maximum packet length.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

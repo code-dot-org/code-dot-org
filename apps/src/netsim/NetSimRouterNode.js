@@ -2,8 +2,8 @@
  * @overview Router node simulation entity.  Also contains logic for the
  *           auto-DNS system.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

@@ -2,8 +2,8 @@
  * @overview UI component: The small expandable box above the visualization,
  *           used to show debug and diagnostic information.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

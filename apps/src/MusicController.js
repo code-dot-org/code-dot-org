@@ -1,7 +1,7 @@
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

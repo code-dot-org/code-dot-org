@@ -1,6 +1,6 @@
 /** @file Creates and controls an SVG overlay on the app visualization. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

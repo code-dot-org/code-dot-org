@@ -2,8 +2,8 @@
  * @overview a modal dialog showing the union of all router logs for the
  *           current shard.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

@@ -1,7 +1,7 @@
 /** @file An animated image, which handles frame counts, rates and offsets
  * internally and exposes simple methods for rendering at the desired position. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

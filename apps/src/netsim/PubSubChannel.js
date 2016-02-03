@@ -1,8 +1,8 @@
 /**
  * @overview Wrapped pub/sub service channel APIs (like Pusher's Channel)
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

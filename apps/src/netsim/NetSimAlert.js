@@ -1,8 +1,8 @@
 /**
  * @overview Controller for creating growl-style Bootstrap alerts
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

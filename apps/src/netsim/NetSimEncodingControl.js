@@ -1,8 +1,8 @@
 /**
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

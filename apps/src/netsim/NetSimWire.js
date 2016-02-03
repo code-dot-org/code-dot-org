@@ -2,8 +2,8 @@
  * @overview Simulation Entity: A connection between two nodes and related
  *           metadata.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

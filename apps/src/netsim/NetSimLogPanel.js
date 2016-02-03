@@ -6,8 +6,8 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimBitLogPanel for the component used in bit-sending mode.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,

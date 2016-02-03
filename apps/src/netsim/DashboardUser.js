@@ -1,9 +1,8 @@
 /**
  * @overview Interface to dashboard user data API.
  */
-
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
  newcap: true,
  nonew: true,
  shadow: false,
