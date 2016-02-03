@@ -23,6 +23,23 @@ var Pairing = function (React) {
   });
 
   var StudentSelector = React.createClass({
+    getInitialState: function() {
+      return {
+        selectedStudentIds: {}
+      };
+    },
+
+    handleStudentClicked: function(event) {
+      var selectedStudentIds = this.state.selectedStudentIds;
+      var studentId = $(event.target).data('id');
+      if (selectedStudentIds[studentId]) {
+        delete selectedStudentIds[studentId];
+      } else {
+        selectedStudentIds[studentId] = true;
+      }
+      this.setState({selectedStudentIds: selectedStudentIds});
+    },
+
     render: function() {
       if (!this.props.students || this.props.students.length === 0) {
         return null;
@@ -80,17 +97,6 @@ var Pairing = function (React) {
                     });
     },
 
-    handleStudentClicked: function(event) {
-      var selectedStudentIds = this.state.selectedStudentIds;
-      var studentId = $(event.target).data('id');
-      if (selectedStudentIds[studentId]) {
-        delete selectedStudentIds[studentId];
-      } else {
-        selectedStudentIds[studentId] = true;
-      }
-      this.setState({selectedStudentIds: selectedStudentIds});
-    },
-
     handleSubmit: function (event) {
       console.log(this.state);
       event.preventDefault();
@@ -104,20 +110,23 @@ var Pairing = function (React) {
       }
     },
 
-    studentsInSection: function() {
+    selectedSection: function() {
       if (this.selectedSectionId()) {
-        var section = this.props.sections.find(function (s) {
-          return true;
-//          return (s.id == this.selectedSectionId());
-        });
-        if (section) {
-          return section.students;
-        } else {
-          return null;
+        // todo use jquery find
+        for (var i = 0; i < this.props.sections.length; i++) {
+          if (this.props.sections[i].id == this.selectedSectionId()) {
+            return this.props.sections[i];
+          }
         }
-      } else {
-        return null;
       }
+      return null;
+    },
+
+    studentsInSection: function() {
+      if (this.selectedSection()) {
+        return this.selectedSection().students;
+      }
+      return null;
     },
 
     render: function () {
