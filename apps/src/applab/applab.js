@@ -1132,10 +1132,6 @@ Applab.execute = function() {
 
   studioApp.reset(false);
   studioApp.attempts++;
-  if (jsDebuggerUi) {
-    jsDebuggerUi.clearDebugOutput();
-    jsDebuggerUi.clearDebugInput();
-  }
 
   // Set event handlers and start the onTick timer
 
