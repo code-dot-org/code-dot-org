@@ -47,9 +47,9 @@ var Pairing = function (React) {
 
       var studentDivs = this.props.students.map(function (student) {
         var className = "student";
-        //      if (this.state.selectedStudentIds[student.id]) {
-        //        className = "student selected";
-        //      }
+        if (this.state.selectedStudentIds[student.id]) {
+          className = "student selected";
+        }
         return <div key={student.id} data-id={student.id} className={className} onClick={this.handleStudentClicked}>{student.name}</div>;
       }.bind(this));
 
@@ -98,7 +98,6 @@ var Pairing = function (React) {
     },
 
     handleSubmit: function (event) {
-      console.log(this.state);
       event.preventDefault();
     },
 
