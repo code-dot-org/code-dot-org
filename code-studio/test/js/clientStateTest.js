@@ -1,10 +1,16 @@
-/* global dashboard, assert */
+/** @file Tests for clientState.js */
 
-//= require client_state
-//= require jquery.cookie
+'use strict';
+
+var assert = require('assert');
+window.$ = require('jquery');
+require('jquery.cookie');
+var state = require('../../src/js/clientState')(window.sessionStorage, window.$);
+var chai = require('chai');
+
+chai.should();
 
 describe("clientState#sourceForLevel", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function () {
     state.reset();
@@ -12,7 +18,8 @@ describe("clientState#sourceForLevel", function() {
 
   it("returns cached levelSource if timestamp is newer", function () {
     state.writeSourceForLevel('sample', 1, 200, 'abc');
-    state.sourceForLevel('sample', 1, 100).should.equal('abc');
+    var source = state.sourceForLevel('sample', 1, 100);
+    source.should.equal('abc');
   });
 
   it("returns cached levelSource if no timestamp given", function () {
@@ -33,7 +40,6 @@ describe("clientState#sourceForLevel", function() {
 });
 
 describe("clientState#trackProgress", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
@@ -117,8 +123,20 @@ describe("clientState#trackProgress", function() {
   });
 });
 
+describe("clientState#queryParams", function() {
+  it("parses query params", function () {
+    window.history.replaceState("", "", "?foo=1&bar=2");
+
+    var params = state.queryParams();
+    params.foo.should.equal('1');
+    params.bar.should.equal('2');
+
+    state.queryParams('foo').should.equal('1');
+    state.queryParams('bar').should.equal('2');
+  });
+});
+
 describe("clientState#hasSeenVideo/hasSeenCallout", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();
@@ -219,7 +237,6 @@ describe("clientState#hasSeenVideo/hasSeenCallout", function() {
 });
 
 describe("clientState#reset", function() {
-  var state = dashboard.clientState;
 
   beforeEach(function() {
     state.reset();

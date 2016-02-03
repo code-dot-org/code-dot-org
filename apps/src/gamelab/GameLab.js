@@ -291,7 +291,6 @@ GameLab.prototype.execute = function() {
         if (this.JSInterpreter && this.eventHandlers.draw) {
           var startTime = window.performance.now();
           this.eventHandlers.draw.apply(null);
-          this.JSInterpreter.executeInterpreter();
           var timeElapsed = window.performance.now() - startTime;
           $('#bubble').text(timeElapsed.toFixed(2) + ' ms');
         }

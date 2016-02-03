@@ -868,7 +868,9 @@ designMode.renderDesignWorkspace = function(element) {
       }
     },
     element: element || null,
+    elementIdList: Applab.getIdDropdownForCurrentScreen(),
     handleChange: designMode.onPropertyChange.bind(this, element),
+    onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
