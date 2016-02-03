@@ -80,7 +80,8 @@ VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
       x: this.mousePos_.x,
       y: this.mousePos_.y,
       appWidth: this.appSize_.x,
-      appHeight: this.appSize_.y
+      appHeight: this.appSize_.y,
+      isDragging: $(".ui-draggable-dragging").length > 0
     });
   } else {
     this.crosshairOverlay_.destroy();
