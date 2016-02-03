@@ -1192,10 +1192,6 @@ Applab.execute = function() {
     }
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.updatePauseUiState();
-  }
-
   // Set focus on the default screen so key events can be handled
   // right from the start without requiring the user to adjust focus.
   Applab.loadDefaultScreen();

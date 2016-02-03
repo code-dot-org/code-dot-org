@@ -95,6 +95,7 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
   this.observer_.observe(jsInterpreter.onExecutionWarning,
       this.log.bind(this));
 
+  this.updatePauseUiState();
   this.clearDebugOutput();
   this.clearDebugInput();
 };
