@@ -7,7 +7,6 @@
 /* jshint
  newcap: true,
  nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
 

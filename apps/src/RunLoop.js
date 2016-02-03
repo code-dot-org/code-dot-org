@@ -2,7 +2,6 @@
 /* jshint
  newcap: true,
  nonew: true,
- shadow: false,
  unused: true,
 
  maxlen: 90,
