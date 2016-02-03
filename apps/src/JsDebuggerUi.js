@@ -108,6 +108,8 @@ JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
 JsDebuggerUi.prototype.detach = function () {
   this.observer_.unobserveAll();
   this.jsInterpreter_ = null;
+
+  this.resetDebugControls_();
 };
 
 /**
@@ -466,7 +468,11 @@ JsDebuggerUi.prototype.updatePauseUiState = function() {
   }
 };
 
-JsDebuggerUi.prototype.resetDebugControls = function () {
+/**
+ * Put the debug controls back into a detached state.
+ * @private
+ */
+JsDebuggerUi.prototype.resetDebugControls_ = function () {
   var spinner = this.getElement_('#running-spinner');
   if (spinner) {
     spinner.style.display = 'none';
