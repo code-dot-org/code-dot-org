@@ -92,7 +92,10 @@ JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole)
  */
 JsDebuggerUi.prototype.getElement_ = function (selector) {
   var rootDiv = document.getElementById('debug-area');
-  return rootDiv.querySelector(selector);
+  if (rootDiv) {
+    return rootDiv.querySelector(selector);
+  }
+  return undefined;
 };
 
 /**

@@ -261,19 +261,29 @@ designMode.updateProperty = function(element, name, value) {
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        element.onload = function () {
-          // naturalWidth/Height aren't populated until image has loaded.
-          element.style.width = element.naturalWidth + 'px';
-          element.style.height = element.naturalHeight + 'px';
+        var resizeElement = function (width, height) {
+          element.style.width = width + 'px';
+          element.style.height = height + 'px';
           if (isDraggableContainer(element.parentNode)) {
-            element.parentNode.style.width = element.naturalWidth + 'px';
-            element.parentNode.style.height = element.naturalHeight + 'px';
+            element.parentNode.style.width = width + 'px';
+            element.parentNode.style.height = height + 'px';
           }
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
           }
         };
+        if (value === '') {
+          element.src = '/blockly/media/1x1.gif';
+          resizeElement(100, 100);
+        } else {
+          element.onload = function () {
+            // naturalWidth/Height aren't populated until image has loaded.
+            resizeElement(element.naturalWidth, element.naturalHeight);
+            // only perform onload once
+            element.onload = null;
+          };
+        }
       }
       break;
     case 'hidden':
