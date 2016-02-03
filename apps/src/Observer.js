@@ -4,8 +4,7 @@
  unused: true,
  eqeqeq: true,
 
- maxlen: 120,
- maxparams: 3
+ maxlen: 120
  */
 'use strict';
 
