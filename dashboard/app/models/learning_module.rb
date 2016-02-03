@@ -31,4 +31,10 @@ class LearningModule < ActiveRecord::Base
     learning_module = create_random_learning_module course
     2.times { |_| Artifact.create_random_artifact learning_module }
   end
+
+  def get_user_progress_for_module user
+    completed_assignment_count = ArtifactAssignment.where(user: user, artifact: artifacts).count
+    total_assignment_count = self.artifacts.count
+    return "#{completed_assignment_count}/#{total_assignment_count}"
+  end
 end
