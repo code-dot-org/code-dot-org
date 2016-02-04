@@ -9,6 +9,7 @@ var PageAction = {
  */
 module.exports = {
   PageAction: PageAction,
+  MAX_LENGTH: 4096,
 
   addPageAction: function (actionName, value) {
     if (!window.newrelic) {
