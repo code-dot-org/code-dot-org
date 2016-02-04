@@ -46,7 +46,7 @@ class UserCourseEnrollment < ActiveRecord::Base
 
   def self.enroll_user_in_course_with_learning_module_ids(user, course, learning_module_ids)
     learning_modules = LearningModule.where(id: learning_module_ids)
-    UserCourseEnrollment.enroll_user_in_course_with_learning_modules(user, course, learning_module_ids)
+    UserCourseEnrollment.enroll_user_in_course_with_learning_modules(user, course, learning_modules)
   end
 
   def complete_course
