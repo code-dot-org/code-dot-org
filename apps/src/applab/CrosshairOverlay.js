@@ -3,9 +3,7 @@
 /* jshint
  unused: true,
  eqeqeq: true,
-
- maxlen: 120,
- maxparams: 6
+ maxlen: 120
  */
 'use strict';
 

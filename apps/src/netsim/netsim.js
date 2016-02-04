@@ -6,9 +6,7 @@
 /* jshint
  unused: true,
  eqeqeq: true,
-
- maxlen: 120,
- maxstatements: 200
+ maxlen: 120
 */
 /* global -Blockly */
 /* global sendReport */

@@ -5,7 +5,6 @@
 // Strict linting: Absorb into global config when possible
 /* jshint
  eqeqeq: true,
-
  maxlen: 120
  */
 'use strict';

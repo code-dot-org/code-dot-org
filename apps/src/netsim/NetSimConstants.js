@@ -5,7 +5,6 @@
 /* jshint
  unused: true,
  eqeqeq: true,
-
  maxlen: 120
  */
 /* global exports */
