@@ -9,6 +9,7 @@
 
 var constants = require('../constants');
 var CrosshairOverlay = require('./CrosshairOverlay');
+var gridUtils = require('./gridUtils');
 var SVG_NS = constants.SVG_NS;
 
 /**
@@ -72,7 +73,8 @@ VisualizationOverlay.prototype.render = function (intoElement, nextProps) {
       x: this.mousePos_.x,
       y: this.mousePos_.y,
       appWidth: this.appSize_.x,
-      appHeight: this.appSize_.y
+      appHeight: this.appSize_.y,
+      isDragging: $(".ui-draggable-dragging").length > 0
     });
   } else {
     this.crosshairOverlay_.destroy();
@@ -115,7 +117,16 @@ VisualizationOverlay.prototype.onSvgMouseMove_ = function (event) {
 
   this.mousePos_.x = event.clientX;
   this.mousePos_.y = event.clientY;
-  this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
+  var draggingElement = $(".ui-draggable-dragging");
+  if (draggingElement.length) {
+    // If we're dragging an element, use our util method to determine the right
+    // mouse pos (top left of the dragged element)
+    var point = gridUtils.scaledDropPoint(draggingElement);
+    this.mousePos_.x = point.left;
+    this.mousePos_.y = point.top;
+  } else {
+    this.mousePos_ = this.mousePos_.matrixTransform(this.screenSpaceToAppSpaceTransform_);
+  }
 
   if (this.ownElement_.parentNode) {
     this.render(this.ownElement_.parentNode, this.props_);
