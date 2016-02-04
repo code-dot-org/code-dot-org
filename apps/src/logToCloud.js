@@ -3,13 +3,14 @@ var PageAction = {
   SanitizedLevelHtml: 'SanitizedLevelHtml'
 };
 
+var MAX_FIELD_LENGTH = 4096;
+
 /**
  * Shims window.newrelic, which is only included in production. This causes us
  * to no-op in other environments.
  */
 module.exports = {
   PageAction: PageAction,
-  MAX_LENGTH: 4096,
 
   addPageAction: function (actionName, value) {
     if (!window.newrelic) {
@@ -19,6 +20,12 @@ module.exports = {
     if (!PageAction[actionName]) {
       console.log('Unknown actionName: ' + actionName);
       return;
+    }
+
+    for (var prop in value) {
+      if (typeof value[prop] === 'string') {
+        value[prop] = value[prop].substring(0, MAX_FIELD_LENGTH);
+      }
     }
 
     window.newrelic.addPageAction(actionName, value);
