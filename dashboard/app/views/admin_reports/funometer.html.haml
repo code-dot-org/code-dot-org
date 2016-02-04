@@ -1,74 +1,77 @@
 - content_for :head do
   %script{src:'https://www.google.com/jsapi'}
 
-%h1
-  Fun-O-Meter Stats
+- if @stats.present?
+  %h1
+    Fun-O-Meter Stats
 
-%h2
-  Overall Percentage:
-  %span= number_to_percentage(@stats['overall'], precision: 2)
+  %h2
+    Overall Percentage:
+    %span= number_to_percentage(@stats['overall'], precision: 2)
 
-%br
+  %br
 
--# Renable the graphs after reconciling the different object types.
--# = render 'funometer_percentages_by_day', :percentages_by_day => @stats['ratings_by_day']
+  -# Renable the graphs after reconciling the different object types.
+  -# = render 'funometer_percentages_by_day', :percentages_by_day => @stats['ratings_by_day']
 
-%br
+  %br
 
-%h2
-  Fun-O-Meter by Script
+  %h2
+    Fun-O-Meter by Script
 
-%table
-  %tr
-    - ['Script ID', 'Script Name', 'Percentage', 'Count'].each do |header|
-      %th
-        %span= header
-  - @stats['ratings_by_script'].each do |script|
-    %tr
-      %td
-        %span
-          = link_to funometer_by_script_path(:script_id => script[0]) do
-            = script[0]
-      %td
-        %span
-          = link_to script_url(script[0]) do
-            = script[1]
-      %td
-        %span= number_to_percentage(script[2], precision: 2)
-      %td
-        %span= script[3]
-
-%br
-
-%h2
-  Fun-O-Meter by Level
-
-- ['favorited', 'hated'].each do |level_type|
   %table
     %tr
-      - ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count'].each do |header|
+      - ['Script ID', 'Script Name', 'Percentage', 'Count'].each do |header|
         %th
           %span= header
-    - @stats['ratings_by_level_' + level_type].each do |level|
+    - @stats['ratings_by_script'].each do |script|
       %tr
         %td
           %span
-            = link_to funometer_by_script_path(:script_id => level[0]) do
-              = level[0]
+            = link_to funometer_by_script_path(:script_id => script[0]) do
+              = script[0]
         %td
           %span
-            = link_to funometer_by_script_level_path(:script_id => level[0], :level_id => level[1]) do
-              = level[1]
+            = link_to script_url(script[0]) do
+              = script[1]
         %td
-          %span
-            = link_to script_url(level[0]) do
-              = level[2]
+          %span= number_to_percentage(script[2], precision: 2)
         %td
-          %span
-            = link_to level_url(level[1]) do
-              = level[3]
-        %td
-          %span= number_to_percentage(level[4], precision: 2)
-        %td
-          %span= level[5]
+          %span= script[3]
+
   %br
+
+  %h2
+    Fun-O-Meter by Level
+
+  - ['favorited', 'hated'].each do |level_type|
+    %table
+      %tr
+        - ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count'].each do |header|
+          %th
+            %span= header
+      - @stats['ratings_by_level_' + level_type].each do |level|
+        %tr
+          %td
+            %span
+              = link_to funometer_by_script_path(:script_id => level[0]) do
+                = level[0]
+          %td
+            %span
+              = link_to funometer_by_script_level_path(:script_id => level[0], :level_id => level[1]) do
+                = level[1]
+          %td
+            %span
+              = link_to script_url(level[0]) do
+                = level[2]
+          %td
+            %span
+              = link_to level_url(level[1]) do
+                = level[3]
+          %td
+            %span= number_to_percentage(level[4], precision: 2)
+          %td
+            %span= level[5]
+    %br
+- else
+  %h2 Error: @stats is nil or empty.
