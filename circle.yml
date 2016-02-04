@@ -75,16 +75,13 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
+        - alias shoulduitest="git log --format=oneline -n 1 $CIRCLE_SHA1 | grep '\[run-ui\]' -q":
         # The following should only be run when [run-ui-tests] included in commit hash
-        - ./bin/dashboard-server:
+        - "shoulduitest && ./bin/dashboard-server":
             background: true
-        - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
+        - "shoulduitest && cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
             background: true
-        - "until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html features/eyes.feature features/applab/sharedApps.feature features/contractEditor.feature features/hourOfCode_signedIn.feature features/hourOfCode.feature features/contractEditorSections.feature features/maze2.feature features/feedback.feature features/signingIn.feature features/maze.feature features/disableToolboxArtist.feature features/multi.feature features/functionEditor.feature features/bounce.feature features/flappy.feature features/applab/templateBacked.feature features/jigsaw.feature features/disallowedsharing.feature features/sharepage.feature features/copypaste.feature features/blocklayout.feature features/clearpuzzle.feature features/legacyShareRemix.feature features/bigGameRemix.feature features/simpledrag.feature features/flappydrag.feature features/groupdrag.feature features/markdownRendering.feature features/teacher-dashboard.feature features/jigsaw2.feature":
+        - "shoulduitest && until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
+        - "shoulduitest && ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html":
             pwd:
                 dashboard/test/ui
-#            parallel: true
-#            files:
-#              - features/**/*.feature
-#
