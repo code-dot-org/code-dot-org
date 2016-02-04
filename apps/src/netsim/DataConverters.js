@@ -8,13 +8,10 @@
 /* jshint
  unused: true,
  eqeqeq: true,
-
  maxlen: 120
  */
 'use strict';
-/* global window */
-/* global require */
-/* global exports */
+/* global window, require, exports */
 
 var utils = require('../utils'); // For String.prototype.repeat polyfill
 var NetSimUtils = require('./NetSimUtils');
