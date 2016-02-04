@@ -63,7 +63,7 @@ var jsInterpreterLogger = null;
 /**
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
-var jsDebuggerUi = null;
+var debuggerUi = null;
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -77,8 +77,8 @@ Applab.log = function (object) {
     jsInterpreterLogger.log(object);
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.log(object);
+  if (debuggerUi) {
+    debuggerUi.log(object);
   }
 };
 
@@ -416,17 +416,17 @@ Applab.hasDataStoreAPIs = function (code) {
  * @param {!number} speed - range 0..1
  */
 Applab.setStepSpeed = function (speed) {
-  if (jsDebuggerUi) {
-    jsDebuggerUi.setStepSpeed(speed);
+  if (debuggerUi) {
+    debuggerUi.setStepSpeed(speed);
   }
   Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
   var debugStepDelay;
-  if (jsDebuggerUi) {
+  if (debuggerUi) {
     // debugStepDelay will be undefined if no speed slider is present
-    debugStepDelay = jsDebuggerUi.getStepDelay();
+    debugStepDelay = debuggerUi.getStepDelay();
   }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
@@ -580,7 +580,7 @@ Applab.init = function(config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
-  jsDebuggerUi = null;
+  debuggerUi = null;
 
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
@@ -650,8 +650,8 @@ Applab.init = function(config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    jsDebuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    extraControlRows = jsDebuggerUi.getMarkup(studioApp.assetUrl, {
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    extraControlRows = debuggerUi.getMarkup(studioApp.assetUrl, {
       showButtons: showDebugButtons,
       showConsole: showDebugConsole
     });
@@ -801,8 +801,8 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.initializeAfterDomCreated({
+  if (debuggerUi) {
+    debuggerUi.initializeAfterDomCreated({
       defaultStepSpeed: config.level.sliderSpeed
     });
   }
@@ -968,8 +968,8 @@ Applab.reset = function(first) {
     level.goal.successState = {};
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.detach();
+  if (debuggerUi) {
+    debuggerUi.detach();
   }
 
   if (jsInterpreterLogger) {
@@ -1173,8 +1173,8 @@ Applab.execute = function() {
       if (jsInterpreterLogger) {
         jsInterpreterLogger.attachTo(Applab.JSInterpreter);
       }
-      if (jsDebuggerUi) {
-        jsDebuggerUi.attachTo(Applab.JSInterpreter);
+      if (debuggerUi) {
+        debuggerUi.attachTo(Applab.JSInterpreter);
       }
 
       // Initialize the interpreter and parse the student code
