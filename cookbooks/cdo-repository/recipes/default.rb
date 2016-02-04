@@ -3,44 +3,30 @@
 # Recipe:: default
 #
 
-include_recipe "cdo-github-access"
-
-template "/home/#{node[:current_user]}/.gemrc" do
-  source 'gemrc.erb'
-  user node[:current_user]
-  group node[:current_user]
+# Sync repo via SSH if key is provided.
+include_recipe 'cdo-github-access'
+has_ssh_key = node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
+if has_ssh_key
+  node.override['cdo-repository']['url'] = 'git@github.com:code-dot-org/code-dot-org.git'
 end
 
-git "/home/#{node[:current_user]}/#{node.chef_environment}" do
-  # Clone repo via SSH if key is provided, anonymous-HTTPS otherwise.
-  if node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
-    repository 'git@github.com:code-dot-org/code-dot-org.git'
-  else
-    repository 'https://github.com/code-dot-org/code-dot-org.git'
-  end
+home_path = node[:home]
+git_path = File.join home_path, node.chef_environment
 
-  # Sync to the production or staging branch as appropriate.
-  branch = (node.chef_environment == 'adhoc') ? 'staging' : node.chef_environment
+git git_path do
+  repository node['cdo-repository']['url']
+  depth node['cdo-repository']['depth'] if node['cdo-repository']['depth']
+
+  # Checkout at clone time using --branch [checkout_branch] to skip additional checkout step.
+  enable_checkout false
+
+  branch = node['cdo-repository']['branch']
+  checkout_branch branch
   revision branch
 
-  # It is not necessary to checkout the staging branch because we get it automatically
-  # when cloning the repository.
-  enable_checkout (branch != 'staging')
+  # Skip git-repo sync when using a shared volume.
+  action GitHelper.shared_volume?(git_path, home_path) ? :nothing : :sync
 
-  # Set the name of the deploy branch to match the environment.
-  checkout_branch branch
-
-  # Sync the deploy branch to the environment branch.
-  action :checkout
-  user node[:current_user]
-
-  # Set the upstream branch to the appropriate origin.
-  notifies :run, "execute[select-upstream-branch]", :immediately
-end
-
-execute "select-upstream-branch" do
-  branch = (node.chef_environment == 'adhoc') ? 'staging' : node.chef_environment
-  command "git branch --set-upstream-to=origin/#{branch} #{branch}"
-  cwd "/home/#{node[:current_user]}/#{node.chef_environment}"
-  action :nothing
+  user node[:user]
+  group node[:user]
 end
