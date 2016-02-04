@@ -896,57 +896,6 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    },
-    {
-      description: "levelHtml is sanitized",
-      editCode: true,
-      xml: '',
-      levelHtml: '' +
-      '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="width: 320px; height: 450px; display: block;">' +
-        '<div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
-          '<img id="image4" src="bogus" data-canonical-image-url="bogus" onerror="javascript:alert()" />' +
-          '<img id="image5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-canonical-image-url="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />' +
-          '<img id="image6" src="javascript:alert()" data-canonical-image-url="javascript:alert()" />' +
-          '<script>alert()</script>' +
-        '</div>\n' +
-      '</div>',
-      runBeforeClick: function (assert) {
-        var elementSelect = $('#emptyTab').find('select')[0];
-
-        // Switch to design mode
-        var designModeButton = $('#designModeButton');
-        designModeButton.click();
-
-        assertPropertyRowValue(0, 'id', 'screen1', assert);
-
-        assert.equal($('#design_image4')[0].onerror, null, 'design_image4 onerror is removed');
-        assert.equal($('#design_image5')[0].src,
-          'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
-          'design_image5 src data url is preserved: ' + $('#design_image5')[0].src);
-        // e.g. "http://localhost:57881/v3/assets/applab-channel-id/javascript:alert()"
-        assert(/\/applab-channel-id\/javascript:alert\(\)$/.test($('#design_image6')[0].src),
-          'design_image6 src is sanitized: ' + $('#design_image6')[0].src);
-
-        assert.equal($('#designModeViz script').length, 0, 'no script tags in #designModeViz');
-
-        testUtils.runOnAppTick(Applab, 2, function () {
-          assert.equal($('#image4')[0].onerror, null, 'image4 onerror is removed');
-          assert.equal($('#image5')[0].src,
-            'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
-            'image5 src data url is preserved: ' + $('#image5')[0].src);
-          // e.g. "http://localhost:57881/v3/assets/applab-channel-id/javascript:alert()"
-          assert(/\/applab-channel-id\/javascript:alert\(\)$/.test($('#image6')[0].src),
-            'image6 src is sanitized: ' + $('#image6')[0].src);
-
-          assert.equal($('#divApplab script').length, 0, 'no script tags in #divApplab');
-
-          Applab.onPuzzleComplete();
-        });
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
     }
   ]
 };
