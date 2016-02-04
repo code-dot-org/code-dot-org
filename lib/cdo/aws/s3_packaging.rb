@@ -103,7 +103,7 @@ class S3Packaging
   private def upload_package(package)
     @logger.info "Uploading: #{s3_key}"
     File.open(package, 'rb') do |file|
-      @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file)
+      @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file, acl: 'public-read')
     end
     @logger.info "Uploaded"
   end
@@ -149,8 +149,14 @@ class S3Packaging
 
     @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"
     File.open(package, 'wb') do |file|
-      @client.get_object(bucket: BUCKET_NAME, key: s3_key) do |chunk|
-        file.write(chunk)
+      begin
+        @client.get_object(bucket: BUCKET_NAME, key: s3_key) do |chunk|
+          file.write(chunk)
+        end
+      rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
+        # Fallback to public URL download if credentials are not provided or invalid.
+        url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
+        IO.copy_stream open(url), file
       end
     end
     @logger.info "Downloaded"
