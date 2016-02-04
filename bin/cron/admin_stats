@@ -15,7 +15,7 @@ THIRTY_DAYS = 30 * 24 * 60 * 60
 # Returns a hash, mapping demographics (all, gender, locale) to the ratio of users in the baseline
 #   who signed-in thirty or more days after account creation to the users in the baseline.
 def build_demographic_breakdowns(baseline)
-  comparison = baseline.where("current_sign_in_at - created_at > ?", %q{interval '30 days'})
+  comparison = baseline.where("current_sign_in_at - created_at > ?", "interval '30 days'")
   students = comparison.count.to_f / [1, baseline.count].max.to_f
   female_students = comparison.where(gender: 'f').count.to_f /
     [1, baseline.where(gender: 'f').count].max.to_f
