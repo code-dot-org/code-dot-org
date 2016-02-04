@@ -1,4 +1,8 @@
 ---
+# To run Test Kitchen tests using this EC2 configuration instead of Docker, run (from within the cdo-*/ folder):
+# KITCHEN_LOCAL_YAML=../.kitchen.ec2.yml bundle exec kitchen verify
+transport:
+  ssh_key: ~/.ssh/server_access_key # Set this to your server_access_key location
 driver:
   name: ec2
   region: us-west-2
