@@ -45,6 +45,11 @@ execute 'locales' do
   command 'locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8'
 end
 
+include_recipe 'cdo-repository'
+include_recipe 'cdo-secrets'
+include_recipe 'cdo-postfix'
+include_recipe 'cdo-varnish'
+
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe 'cdo-apps::chef_credentials'
