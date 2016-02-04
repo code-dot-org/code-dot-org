@@ -106,6 +106,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
+  designMode.renderToggleRow();
 };
 
 /**
@@ -833,6 +834,20 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
+  designMode.renderToggleRow(screenIds);
+
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+};
+
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
+};
+
+designMode.renderToggleRow = function (screenIds) {
+  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+    return elementUtils.getId(screen);
+  });
+
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
@@ -840,7 +855,7 @@ designMode.changeScreen = function (screenId) {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: screenId,
+        initialScreen: currentScreenId,
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
@@ -851,12 +866,6 @@ designMode.changeScreen = function (screenId) {
       designToggleRow
     );
   }
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
-
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
 };
 
 /**
