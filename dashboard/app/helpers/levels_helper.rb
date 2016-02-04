@@ -300,17 +300,15 @@ module LevelsHelper
       level_overrides.merge!(hide_source: true, show_finish: true)
     end
     if level_overrides[:embed]
-      view_options(no_padding: true, no_header: true, no_footer: true, white_background: true)
+      view_options(no_header: true, no_footer: true, white_background: true)
     end
-
-    level_overrides.merge!(no_padding: view_options[:no_padding])
 
     # Add all level view options to the level_options hash
     level_options.merge! level_overrides.camelize_keys
     app_options.merge! view_options.camelize_keys
 
     # Move these values up to the app_options hash
-    %w(hideSource share noPadding embed).each do |key|
+    %w(hideSource share embed).each do |key|
       if level_options[key]
         app_options[key.to_sym] = level_options.delete key
       end
