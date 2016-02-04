@@ -6,30 +6,30 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAPXWs1YAA+3TTQrCMBCG4RwlF1CSNj/HkSBKqy0Vk+D1jXRTNxaE+APv
-        s5nFJMzA8O2ncezTrguxE7WowjnzqNpbtawzrYVunDXetq2zQummfBBSVdto
-        IccUrlKKWz8Mr96t9f/UMZwPm6rXxy+bcrrktD3FijNW81/C/px/bXxD/j9h
-        vv+3twAAAAAAAAAAAAAAAMC77pjwm3AAKAAA
+        H4sIAO7Ws1YAA+3TTQrCMBCG4RwlF1AybZIeR4IorbZUbILXN9KFXVkQ4g+8
+        z2YWkzADw7cfh6GLuzZMrSrFZN7bR5XGmWWdiSipvLONq2vnlZEqf1DaFNto
+        IU0xXLVWt67vX71b6/+pYzgfNkWvj182pnhJcXuaCs5YzX8O+zP/LudfbCPk
+        /xPm+397CwAAAAAAAAAAAAAAALzrDsTnw0gAKAAA
     headers:
       X-Amz-Acl:
       - public-read
       Expect:
       - 100-continue
       Content-Md5:
-      - svfhVyg+lSGmL6sPRHl9+w==
+      - GyTT7K2dXQQRfuJ6oSW+rA==
       Date:
-      - Thu, 04 Feb 2016 22:55:49 GMT
+      - Thu, 04 Feb 2016 22:55:42 GMT
       Content-Length:
-      - '162'
+      - '165'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Thu, 04 Feb 2016 22:55:43 GMT
       Etag:
-      - '"b2f7e157283e9521a62fab0f44797dfb"'
+      - '"1b24d3ecad9d5d04117ee27aa125beac"'
       Content-Length:
       - '0'
       Server:
@@ -38,7 +38,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 04 Feb 2016 22:55:49 GMT
+  recorded_at: Thu, 04 Feb 2016 22:55:42 GMT
 - request:
     method: get
     uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
@@ -52,26 +52,26 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Thu, 04 Feb 2016 22:55:44 GMT
       Last-Modified:
-      - Thu, 04 Feb 2016 22:55:50 GMT
+      - Thu, 04 Feb 2016 22:55:43 GMT
       Etag:
-      - '"b2f7e157283e9521a62fab0f44797dfb"'
+      - '"1b24d3ecad9d5d04117ee27aa125beac"'
       Accept-Ranges:
       - bytes
       Content-Type:
       - ''
       Content-Length:
-      - '162'
+      - '165'
       Server:
       - AmazonS3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAPXWs1YAA+3TTQrCMBCG4RwlF1CSNj/HkSBKqy0Vk+D1jXRTNxaE+APv
-        s5nFJMzA8O2ncezTrguxE7WowjnzqNpbtawzrYVunDXetq2zQummfBBSVdto
-        IccUrlKKWz8Mr96t9f/UMZwPm6rXxy+bcrrktD3FijNW81/C/px/bXxD/j9h
-        vv+3twAAAAAAAAAAAAAAAMC77pjwm3AAKAAA
+        H4sIAO7Ws1YAA+3TTQrCMBCG4RwlF1AybZIeR4IorbZUbILXN9KFXVkQ4g+8
+        z2YWkzADw7cfh6GLuzZMrSrFZN7bR5XGmWWdiSipvLONq2vnlZEqf1DaFNto
+        IU0xXLVWt67vX71b6/+pYzgfNkWvj182pnhJcXuaCs5YzX8O+zP/LudfbCPk
+        /xPm+397CwAAAAAAAAAAAAAAALzrDsTnw0gAKAAA
     http_version: 
-  recorded_at: Thu, 04 Feb 2016 22:55:50 GMT
+  recorded_at: Thu, 04 Feb 2016 22:55:43 GMT
 recorded_with: VCR 3.0.0
