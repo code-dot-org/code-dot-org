@@ -18,7 +18,7 @@ describe('Pairing component for student in multiple sections', function(){
   }
 
   function numberOfStudents() {
-    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length;
   }
 
   function sectionSelect() {
@@ -78,11 +78,11 @@ describe('Pairing component for student in one section', function(){
   }
 
   function numberOfStudents() {
-    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length;
   }
 
   function numberOfSelectedStudents() {
-    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length;
   }
 
   function isSubmitButtonDisabled() {
