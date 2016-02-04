@@ -62,13 +62,13 @@ class LearningModulesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_learning_module
-      @learning_module = LearningModule.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_learning_module
+    @learning_module = LearningModule.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def learning_module_params
-      params.require(:learning_module).permit(:name, :learning_module_type)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def learning_module_params
+    params.require(:learning_module).permit(:name, :learning_module_type)
+  end
 end

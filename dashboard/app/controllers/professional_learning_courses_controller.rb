@@ -62,13 +62,13 @@ class ProfessionalLearningCoursesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_professional_learning_course
-      @professional_learning_course = ProfessionalLearningCourse.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_professional_learning_course
+    @professional_learning_course = ProfessionalLearningCourse.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def professional_learning_course_params
-      params.require(:professional_learning_course).permit(:name)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def professional_learning_course_params
+    params.require(:professional_learning_course).permit(:name)
+  end
 end

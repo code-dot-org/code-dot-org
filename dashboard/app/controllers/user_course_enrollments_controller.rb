@@ -63,13 +63,13 @@ class UserCourseEnrollmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_course_enrollment
-      @user_course_enrollment = UserCourseEnrollment.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_course_enrollment
+    @user_course_enrollment = UserCourseEnrollment.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_course_enrollment_params
-      params.required(:user_course_enrollment).permit(:user_id, :professional_learning_course_id, :learning_module_ids)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_course_enrollment_params
+    params.required(:user_course_enrollment).permit(:user_id, :professional_learning_course_id, :learning_module_ids)
+  end
 end
