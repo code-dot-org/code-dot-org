@@ -673,7 +673,7 @@ exports.selectCurrentCode = function (interpreter,
                                       editor,
                                       highlightClass) {
   var userCodeRow = -1;
-  if (interpreter.stateStack[0]) {
+  if (interpreter && interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:

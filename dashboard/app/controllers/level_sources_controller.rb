@@ -88,8 +88,7 @@ class LevelSourcesController < ApplicationController
     view_options(
       callouts: [],
       full_width: true,
-      has_i18n: @game.has_i18n?,
-      no_padding: browser.mobile?
+      has_i18n: @game.has_i18n?
     )
     @callback = milestone_level_url(user_id: current_user.try(:id) || 0, level_id: @level.id)
     level_view_options(
