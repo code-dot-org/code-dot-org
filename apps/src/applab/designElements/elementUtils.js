@@ -98,6 +98,7 @@ var ELEMENT_ID_BLACKLIST = [
   'turtleImage',
   'prompt-icon'
 ];
+module.exports.ELEMENT_ID_BLACKLIST = ELEMENT_ID_BLACKLIST;
 
 /**
  * Returns true if newId is available and won't collide with
