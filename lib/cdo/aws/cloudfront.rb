@@ -84,7 +84,7 @@ module AWS
     #  While CloudFront is propagating your changes to edge locations, we cannot determine whether a given edge
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
-      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(STDERR),
+      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
                                                log_level: :debug,
                                                http_wire_trace: true)
       ids = CONFIG.keys.map do |app|

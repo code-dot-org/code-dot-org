@@ -4,18 +4,8 @@ nav: plc_nav_science
 ---
 # CS in Science Professional Learning Program #
 
-## About the Curriculum
-<iframe style="width:448px; height:252px; float:left; margin: 10px;" src="https://www.youtube.com/embed/iDSluSl9I3o?list=PLzdnOPI1iJNfDV7WlmGbaWjaqUpAe2Zc-" frameborder="0" allowfullscreen></iframe>
+Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules. An introduciton, life, physical, and earth science modules are blended together to showcase the connection between computer science modeling and traditional middle school science curriculum. 
 
-Code.org has partnered with the award-winning Project GUTS (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules. An introduciton, life, physical, and earth science modules are blended together to showcase the connection between computer science modeling and traditional middle school science curriculum.
-<br/>
-<br/>
-CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
-<br/>
-<br/>
-Through a rigorous yet introductory professional development this program introduces computer science concepts into science classrooms within the context of modeling and simulation. 
-
-[<button>Learn more</button>](/curriculum/science#videos)
 
 ## <a name="about"></a>About the Professional Learning Program
  

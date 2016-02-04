@@ -438,6 +438,13 @@ module HttpCacheTest
         response = proxy_request url, {}, {}, 'FOO'
         assert_equal 403, code(response)
       end
+
+      it 'adds a default value for filtered headers' do
+        url = build_url 12
+        mock_response url, 'Hello World!', {'User-Agent' => 'Cached-Request'}
+        response = proxy_request url, {}, {}
+        assert_equal 'Hello World!', last_line(response)
+      end
     end
   end
 end
