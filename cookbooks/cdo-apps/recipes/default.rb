@@ -8,18 +8,30 @@ include_recipe 'sudo-user'
 # These packages are used by Gems we install via Bundler.
 
 # Used by image resizing and certificate generation.
-apt_package 'imagemagick'
-apt_package 'libmagickcore-dev'
-apt_package 'libmagickwand-dev'
+multipackage 'imagemagick'
+multipackage 'libmagickcore-dev'
+multipackage 'libmagickwand-dev'
 
 # Used by lesson plan generator.
-apt_package 'pdftk'
-apt_package 'enscript'
+multipackage 'pdftk'
+multipackage 'enscript'
 
 # Provides a Dashboard database fixture for Pegasus tests.
-apt_package 'libsqlite3-dev'
+multipackage 'libsqlite3-dev'
 
-include_recipe 'build-essential'
+# Debian-family packages for building Ruby C extensions
+multipackage %w(
+  autoconf
+  binutils-doc
+  bison
+  build-essential
+  flex
+  gettext
+  ncurses-dev
+)
+
+multipackage
+
 include_recipe 'cdo-mysql::client'
 # Install local mysql server unless an external db url is provided.
 unless node['cdo-secrets'] && node['cdo-secrets']['db_writer']
