@@ -30,7 +30,7 @@ var GameLab = function () {
   this.studioApp_ = null;
 
   /** @type {JsDebuggerUi} */
-  this.jsDebuggerUi_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
 
   /** @type {JSInterpreter} */
   this.JSInterpreter = null;
@@ -141,7 +141,7 @@ GameLab.prototype.init = function (config) {
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlRows = this.jsDebuggerUi_.getMarkup(this.studioApp_.assetUrl, {
+  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
     showButtons: true,
     showConsole: true
   });
@@ -171,7 +171,7 @@ GameLab.prototype.init = function (config) {
 
   this.studioApp_.init(config);
 
-  this.jsDebuggerUi_.initializeAfterDomCreated({
+  this.debugger_.initializeAfterDomCreated({
     defaultStepSpeed: 1
   });
 };
@@ -260,7 +260,7 @@ GameLab.prototype.reset = function (ignore) {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
-  this.jsDebuggerUi_.detach();
+  this.debugger_.detach();
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -404,7 +404,7 @@ GameLab.prototype.execute = function() {
     });
     this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
     this.consoleLogger_.attachTo(this.JSInterpreter);
-    this.jsDebuggerUi_.attachTo(this.JSInterpreter);
+    this.debugger_.attachTo(this.JSInterpreter);
     this.JSInterpreter.parse({
       code: this.studioApp_.getCode(),
       blocks: dropletConfig.blocks,
