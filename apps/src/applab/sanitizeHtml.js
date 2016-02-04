@@ -72,7 +72,7 @@ module.exports = function sanitizeHtml(unsafe, warn) {
       canvas: ['id', 'class', 'style', 'width', 'height'],
       div: ['id', 'class', 'style', 'data-canonical-image-url', 'contenteditable', 'tabindex', 'xmlns'],
       img: ['id', 'class', 'data-canonical-image-url', 'src', 'style'],
-      input: ['id', 'checked', 'class', 'placeholder', 'style', 'type', 'value'],
+      input: ['id', 'checked', 'class', 'max', 'min', 'placeholder', 'step', 'style', 'type', 'value'],
       label: ['id', 'class', 'style'],
       select: ['id', 'class', 'style']
     }),
