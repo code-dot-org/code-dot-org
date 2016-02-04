@@ -9,8 +9,6 @@
 #
 
 class ProfessionalLearningCourse < ActiveRecord::Base
-  has_many :learning_modules, class_name: 'LearningModule', dependent: :destroy
-  has_many :artifacts, through: :learning_modules, dependent: :destroy
   has_many :user_course_enrollments, dependent: :destroy
   #Can I do this through artifacts?
 

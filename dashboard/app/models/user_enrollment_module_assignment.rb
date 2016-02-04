@@ -20,5 +20,5 @@ class UserEnrollmentModuleAssignment < ActiveRecord::Base
   belongs_to :learning_module
   belongs_to :user_course_enrollment
 
-  has_many :user_module_artifact_assignment
+  has_many :user_module_artifact_assignment, dependent: :destroy
 end

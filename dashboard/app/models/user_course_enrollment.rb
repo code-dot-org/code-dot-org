@@ -18,8 +18,9 @@
 class UserCourseEnrollment < ActiveRecord::Base
   belongs_to :user
   belongs_to :professional_learning_course
-  has_many :user_enrollment_module_assignment
+  has_many :user_enrollment_module_assignment, dependent: :destroy
   has_many :user_module_artifact_assignment, through: :user_enrollment_module_assignment
+  has_many :learning_modules, through: :user_enrollment_module_assignment
 
   def self.enroll_user_in_course(user, course)
     enrollment = UserCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course)
@@ -41,6 +42,11 @@ class UserCourseEnrollment < ActiveRecord::Base
     end
 
     enrollment
+  end
+
+  def self.enroll_user_in_course_with_learning_module_ids(user, course, learning_module_ids)
+    learning_modules = LearningModule.where(id: learning_module_ids)
+    UserCourseEnrollment.enroll_user_in_course_with_learning_modules(user, course, learning_module_ids)
   end
 
   def complete_course

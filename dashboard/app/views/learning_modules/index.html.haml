@@ -1,0 +1,23 @@
+%h1 Listing learning_modules
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @learning_modules.each do |learning_module|
+      %tr
+        %td= learning_module.name
+        %td= learning_module.learning_module_type
+        %td= link_to 'Show', learning_module
+        %td= link_to 'Edit', edit_learning_module_path(learning_module)
+        %td= link_to 'Destroy', learning_module, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Learning module', new_learning_module_path
