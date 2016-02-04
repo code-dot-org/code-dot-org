@@ -1,7 +1,8 @@
-/* global Interpreter, CanvasPixelArray */
+/* global Interpreter, CanvasPixelArray, ace */
 
 var dropletUtils = require('./dropletUtils');
 var utils = require('./utils');
+var AceRange = ace.require('ace/range').Range;
 
 /**
  * Evaluates a string of code parameterized with a dictionary.
@@ -577,7 +578,7 @@ function clearAllHighlightedAceLines (aceEditor) {
  *
  * If the row parameters are not supplied, just clear the last highlight.
  */
-function highlightAceLines (aceEditor, className, startRow, endRow) {
+function highlightAceLines (aceEditor, className, startRow, startColumn, endRow, endColumn) {
   var session = aceEditor.getSession();
   className = className || 'ace_step';
   if (lastHighlightMarkerIds[className]) {
@@ -585,8 +586,11 @@ function highlightAceLines (aceEditor, className, startRow, endRow) {
     lastHighlightMarkerIds[className] = null;
   }
   if (typeof startRow !== 'undefined') {
-    lastHighlightMarkerIds[className] = aceEditor.getSession().highlightLines(
-        startRow, endRow, className).id;
+    lastHighlightMarkerIds[className] = session.addMarker(
+        new AceRange(startRow, startColumn, endRow, endColumn), className, 'text');
+    if (!aceEditor.isRowFullyVisible(startRow)) {
+      aceEditor.scrollToLine(startRow, true);
+    }
   }
 }
 
@@ -617,7 +621,8 @@ exports.selectEditorRowColError = function (editor, row, col) {
     // scrolling to the right
     selection.setSelectionRange(range, true);
   }
-  highlightAceLines(editor.aceEditor, "ace_error", row, row);
+  lastHighlightMarkerIds.ace_error = editor.aceEditor.getSession()
+      .highlightLines(row, row, 'ace_error').id;
 };
 
 /**
@@ -651,11 +656,8 @@ function selectAndHighlightCode (aceEditor, cumulativeLength, start, end, highli
   range.end.row = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, end);
   range.end.column = end - cumulativeLength[range.end.row];
 
-  // calling with the backwards parameter set to true - this prevents horizontal
-  // scrolling to the right while stepping through in the debugger
-  selection.setSelectionRange(range, true);
   highlightAceLines(aceEditor, highlightClass || "ace_step", range.start.row,
-      range.end.row);
+      range.start.column, range.end.row, range.end.column);
 }
 
 /**
