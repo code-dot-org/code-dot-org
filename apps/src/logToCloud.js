@@ -1,5 +1,6 @@
 var PageAction = {
-  DropletTransitionError: 'DropletTransitionError'
+  DropletTransitionError: 'DropletTransitionError',
+  SanitizedLevelHtml: 'SanitizedLevelHtml'
 };
 
 /**

@@ -15,6 +15,7 @@ var designMode = module.exports;
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
+var logToCloud = require('../logToCloud');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
@@ -506,6 +507,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
     var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
     console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe
+    });
   }
   sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
 
