@@ -11,3 +11,7 @@ Running a local production server requires a few different steps.
   * the corresponding `end`
 1. `RAILS_ENV=production bundle exec rake db:reset seed:all assets:precompile`
 1. `RAILS_ENV=production bundle exec rails s`
+
+## See Also
+
+* [General Testing Instructions](../TESTING.md)
