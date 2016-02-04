@@ -6,6 +6,7 @@ AllCops:
   Exclude:
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
+    - 'dashboard/db/**/*'
   RunRailsCops: true
   DisplayCopNames: true
 
@@ -34,3 +35,10 @@ Metrics/LineLength:
 
 Metrics/ModuleLength:
   Enabled: false
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+Style/NumericLiterals:
+  Enabled: true
+  MinDigits: 7

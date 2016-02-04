@@ -25,7 +25,7 @@ nav: resources_nav
 
 <% end %>
 
-<a id="handouts"></p> 
+<a id="handouts"></p>
 
 <h2>
   crwdns23877:0crwdne23877:0
@@ -44,51 +44,51 @@ nav: resources_nav
 </p>
 
 <p>
-  <a id="videos"></p> 
-  
+  <a id="videos"></p>
+
   <h2>
     crwdns23881:0crwdne23881:0
   </h2>
-  
+
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
+    <iframe width="350" height="195" src="https://www.youtube.com/embed/nKIu9yen5nc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
       crwdns22136:0crwdne22136:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
-  
+
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
+    <iframe width="350" height="195" src="https://www.youtube.com/embed/FC5FbmsH4fw?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
       crwdns22137:0crwdne22137:0 <a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
-  
+
   <div style='clear:both'>
   </div>
-  
+
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
+    <iframe width="350" height="195" src="https://www.youtube.com/embed/6XvmhE1J9PY?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
       <a href="https://www.youtube.com/watch?6XvmhE1J9PY"><strong>crwdns22138:0crwdne22138:0</strong></a>
     </p>
   </div>
-  
+
   <div style="float:left; padding:10px">
-    <iframe width="350" height="195" src="https://www.youtubeeducation.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>    
+    <iframe width="350" height="195" src="https://www.youtube.com/embed/qYZF6oIZtfc?iv_load_policy=3&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
     <p>
       crwdns22139:0crwdne22139:0 <a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1"><img src="/images/download.png" width="30px" /></a>
     </p>
   </div>
-  
+
   <div style="float:left; padding:10px">
   </div>
-  
+
   <div style='clear:both'>
   </div>
-  
+
 <p>
-<a id="posters"></p> 
+<a id="posters"></p>
 
 <h2>
   crwdns23882:0crwdne23882:0

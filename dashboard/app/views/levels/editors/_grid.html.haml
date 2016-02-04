@@ -10,6 +10,7 @@
     .end { background-color: lime !important }
     .obstacle { background-color: gold !important }
     .dirt { background-color: #d1d567 !important }
+    .conditional { background-color: green !important }
     tr {
       height: 40px;
     }
@@ -31,6 +32,22 @@
       background-size: 1100px 100%;
       text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
     }
+    td.conditional {
+      background-size: 100% 100%;
+      text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+    }
+    td.flower-or-nothing {
+      background-image: url('/assets/editor/flower-or-nothing.png');
+    }
+    td.hive-or-nothing {
+      background-image: url('/assets/editor/hive-or-nothing.png');
+    }
+    td.flower-or-hive {
+      background-image: url('/assets/editor/hive-or-flower.png');
+    }
+    td.flower-hive-or-nothing {
+      background-image: url('/assets/editor/flower-hive-or-nothing.png');
+    }
     .htInvalid { background-color: orangered !important}
     .htNumeric { text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF }
   #mazeTable
@@ -51,6 +68,10 @@
     %ul(style="list-style-type:none;margin:0;")
       %li.dirt +x = nectar. +99 = unlimited
       %li.dirt -x = honey. -99 = unlimited
+      %li.conditional +xC = nectar or nothing
+      %li.conditional -xC = honey or nothing
+      %li.conditional xC = nectar or honey
+      %li.conditional xCany = nectar, honey, or nothing
     PLAYLAB:
     %ul(style="list-style-type:none;margin:0;")
       %li.start 16 = character
@@ -59,15 +80,28 @@
   var data = eval(#{@level.maze_data.try(:to_json)})
   function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
     var dataValues = ['border','path','start','end','obstacle'];
-    if(value[0] == '+' || value[0] == '-') {
+    // format for Bee randomized conditionals
+    var matches = value.match && value.match(/^(\+|-)?(\d+)(R|P)?(C|Cany)$/);
+    if (matches) {
+      Handsontable.renderers.TextRenderer.apply(this, arguments);
+      td.className += ' conditional';
+      if (matches[4] === "Cany") {
+        td.className += ' flower-hive-or-nothing';
+      } else if (matches[1] === '+') {
+        td.className += ' flower-or-nothing';
+      } else if (matches[1] === '-') {
+        td.className += ' hive-or-nothing';
+      } else {
+        td.className += ' flower-or-hive';
+      }
+    } else if (value[0] == '+' || value[0] == '-') {
         Handsontable.renderers.TextRenderer.apply(this, arguments);
         td.className += ' dirt';
         // index into the dirt png spritesheet
         var dirtValue = parseInt(value);
         var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
         $(td).css('background-position',(-dirtIndex * 50));
-    }
-    else if (parseInt(value) < 5 && parseInt(value) >= 0) {
+    } else if (parseInt(value) < 5 && parseInt(value) >= 0) {
         Handsontable.renderers.NumericRenderer.apply(this, arguments);
         td.className += ' ' + dataValues[parseInt(value)];
     } else if (parseInt(value) === 16) {
@@ -78,8 +112,8 @@
   $("#mazeTable").handsontable({
     data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
     validator: function(value, callback) {
-      if(value[0] == '+' || value[0] == '-' && parseInt(value.substring(1)) % 1 == 0) callback(true);
-      callback(parseInt(value) % 1 == 0);
+      var matches = value.match && value.match(/^(\+|-)?(\d+)(R|P)?(FC|C|Cany)?$/);
+      callback(!!matches);
     }, afterChange: function(changes, source) {
       $('#level_maze_data').val(JSON.stringify(data));
     }, cells: function(row, col, prop) {

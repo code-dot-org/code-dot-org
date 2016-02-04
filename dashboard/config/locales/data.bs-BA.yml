@@ -88,7 +88,7 @@
         Farmer2: Farmer 2
         Unplug8: Apstrakcija
         Artist4: Umjetnik 4
-        Unplug9: Štafeta Programiranje
+        Unplug9: "Štafeta Programiranje"
         Farmer3: Farmer 3
         Unplug10: Internet
         Artist5: Umjetnik 5
@@ -328,8 +328,8 @@
         maze_karel_debug_seq_1: Dobrodošao u ispravljanje grešaka! Moj kôd ne radi
           ispravno. Možeš li uočiti problem i popraviti ga tako da mogu poravnati
           zemljište i pripremiti ga za sadnju?
-        maze_karel_debug_seq_2: Šta ne valja u ovom programu? Kako ga treba popraviti
-          tako da ja mogu ukloniti ovu hrpu?
+        maze_karel_debug_seq_2: "Šta ne valja u ovom programu? Kako ga treba popraviti
+          tako da ja mogu ukloniti ovu hrpu?"
         maze_karel_debug_repeat: Ukloni mi greške u ovom programu tako da moje polje
           bude poravnato.
         maze_karel_debug_while: Kako treba izmijeniti ovaj program da bih ja zatrpao
@@ -644,7 +644,7 @@
         loop_for: Blok "Brojač"
         parameters: Funkcije sa Parametrima
         hoc_wrapup: Sažetak Sata Kodiranja
-        Unplug1: Šta je to informatika?
+        Unplug1: "Šta je to informatika?"
         Unplug2: Računarsko razmišljanje
         Unplug3: Papirno Programiranje Grafikona
         Unplug4: Algoritmi
@@ -684,7 +684,7 @@
         C2_graph_paper: Papirno Programiranje Grafikona
         C2_conditionals_with_cards: Uvjeti
         C2_binary_bracelets: Binarne narukvice
-        C2_relay_programming: Štafeta Programiranje
+        C2_relay_programming: "Štafeta Programiranje"
         C2_paper_airplanes: Avioni od Papira
         C2_digital_footprint: Digitalni otisak stopala
         C2_digital_footprint_v2: Digitalni otisak stopala
@@ -735,6 +735,12 @@
         infinity_playlab_intro: Laboratorij igara - uvod
         infinity_playlab_events: Laboratorij igara - događaji
         infinity_playlab_repeat_forever: Laboratorij igara - ponavaljaj vječno
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -817,8 +823,8 @@
         replace_questions_degree: Koristi padajući meni za zamjenu "???" sa tačnim
           brojem stepeni za okret
         repeat_blocks: Uzmi blok "Ponovi" i omotaj ga oko blokova na radnoj površini
-        repeat_blocks_1: (1) Koristi ovaj blok i stavi ga oko sivih blokova na radnoj
-          površini
+        repeat_blocks_1: "(1) Koristi ovaj blok i stavi ga oko sivih blokova na radnoj
+          površini"
         repeat_blocks_2: (2) Pomakni blok "Ponovi" ovamo i stavi sive blokove unutar
           njega
         snowflake_dropdown: Koristi ovaj padajući meni za stvaranje različitih pahuljica!
@@ -895,12 +901,12 @@
         Infinity_move_collide_callout: Oglasite zvuk nakon što se ovaj događaj desi.
         Infinity_repeat_callout: Ovdje unutra postavite blokove za pomjeranje
         craft_run_button_callout: Klikni na "Pokreni" da isprobaš svoj program
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Pomjeri "pokreniNaprijed();" blok i zakači ga ispod
+          drugog bloka
+        craft_callout_preplaced: Ovdje smo stavili neke blokove za tvoj lakši početak
+        craft_inside_repeat: Ponavljaj radnje postavljanjem blokova ovdje
+        craft_callout_preplaced_house: Ovaj kod će početi graditi tvoju kuću. Možeš
+          li ga završiti?
+        craft_what_is_iron: Iskopaj ovo željezo!
+        craft_callout_moveforward: Ovaj kod će provjeriti postojanje lave. Možeš li
+          dodati komandu za pokretanje naprijed?

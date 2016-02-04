@@ -3,7 +3,7 @@ title: Professional Development
 nav: educate_nav
 ---
 # Professional Development #
-<img src="/images/k5pdcropped.png" width="100%"/>
+<img src="/images/k5pdcropped.jpg" width="100%"/>
 
 
 Code.org has worked with partners and experts in the field to develop and support a blended PD model that embraces the importance of in-person, cooperative workshops and uses online and asynchronous components to provide an ongoing community and support when teachers are in the classroom. This PD experience builds on the work of others and recognizes that one size does not fit all, therefore the PD is tailored for each course and curriculum developed or selected by Code.org. All of our PD experiences use engaging techniques to prompt teachers to reflect on the pedagogy of teaching computer science while also becoming more familiar with the subject. All PD includes hands-on experiences, collaboration with colleagues, and is accessible to teachers with any or no prior knowledge of computer science. 

@@ -169,7 +169,7 @@
           Tech na studij informatike. Isprobajmo naš novi blok "ponavljaj dok ne bude".
       2:
         image: notes/hoc3_2.jpg
-        text: Što ako nismo znali koliko ptica treba ići dok ne dođe do svinje?
+        text: "Što ako nismo znali koliko ptica treba ići dok ne dođe do svinje?"
       3:
         image: notes/hoc3_3.jpg
         text: Ako stavimo blok "idi naprijed" unutar bloka "ponavljaj dok ne bude",
@@ -310,8 +310,8 @@
         text: Cao ja sam Janete, i ja sam inzinjer na Zynga.
       2:
         image: notes/stage15_2.jpg
-        text: Što ako želimo nacrtati niz trokuta, a da njihove stranice budu različitih
-          duljina?
+        text: "Što ako želimo nacrtati niz trokuta, a da njihove stranice budu različitih
+          duljina?"
       3:
         image: notes/stage15_3.jpg
         text: Možemo napisati cijeli kôd ručno ili možemo koristiti funkciju s parametrima.
@@ -339,10 +339,10 @@
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: Čestitam! U posljednjem zadatku koji si riješio, upravo si napisao kôd
-          kojim možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez sprednih
-          puteva ili tunela bilo koje duljine, bez obzira radi li se o zombiju, ptici,
-          svemirskom vozilu ili čak automobilu s autopilotom.
+        text: "Čestitam! U posljednjem zadatku koji si riješio, upravo si napisao
+          kôd kojim možeš BILO KOJEM robotu reći kako da nađe izlaz iz labirinta bez
+          sprednih puteva ili tunela bilo koje duljine, bez obzira radi li se o zombiju,
+          ptici, svemirskom vozilu ili čak automobilu s autopilotom."
       2:
         image: notes/hoc6_2.jpg
         text: Osnovni pojmovi koje si koristio nalaze se u srcu svake aplikacije koju
@@ -2573,37 +2573,35 @@
     starwars_events:
       1:
         image: notes/starwars_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: |
+          Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje
+          i pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor.
       2:
         image: notes/starwars_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: |
+          Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove
+          programiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: Za izradu igre, trebamo naučiti nešto što programeri svakodnevno koriste.
+          Riječ je o događajima. Događaji govore programu da sluša ili čeka dok se
+          nešto ne dogodi, a kada se dogodi izvršavaju se akcije.
       4:
         image: notes/starwars_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom
+          gore ili dodir na ekranu.
       5:
         image: notes/starwars_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući
+          se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje
+          kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili
+          dolje, ili gumbe za gore ili dolje.
       6:
         image: notes/starwars_events_6.JPG
-        text: We use the whenUp() event block and attach the goUp() block to it. When
-          the player presses the up arrow key, the code attached to the whenUp() block
-          is run. And we'll do the same thing to make R2-D2 move down.
+        text: Koristit ćemo događaj 'kada je pritisnuta strelica prema gore' i ispod
+          nje postaviti naredbu 'idi gore'. Kada igrač pritisne tipku sa strelicom
+          prema gore, pokreće se dio koda ispod postavljenog događaja. Istu stvar
+          učinit ćemo kako bismo pokrenuli R2-D2-a prema dolje.
       7:
         image: notes/starwars_events_7.JPG
         text: To do this, we'll use a command called whenUp(). When you drag the command
@@ -2617,9 +2615,9 @@
           And we'll do the same thing to make R2-D2 go down.
       9:
         image: notes/starwars_events_9.JPG
-        text: Now instead of writing all the code to control our droid in advance,
-          we can let R2-D2 react to button press events that move him around the screen.
-          Step by step, your game is getting more interactive.
+        text: Tako umjesto pisanja cijelog koda za kontrolu droida unaprijed, puštamo
+          R2-D2-a da reagira na događaj pritiska tipke kako bismo ga pomaknuli po
+          sceni. Korak po korak vaša igra postaje sve interaktivnija.
     starwars_congrats:
       1:
         image: notes/starwars_congrats_1.JPG
@@ -2635,17 +2633,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2709,32 +2707,29 @@
     starwars_blocks_events:
       1:
         image: notes/starwars_blocks_events_1.JPG
-        text: Hello, my name is Charita Carter. I'm a senior creative producer here
-          at Walt Disney Imagineering. I'm responsible for leading teams that actually
-          produce the attractions that our guests get to experience. We are always
-          looking for ways that we can improve and make a better experience for our
-          guests and technology is at the heart of that.
+        text: |
+          Zdravo, moje ime je Charita Carter. Viša sam kreativna producentica u Walt Disney Imagineeringu. Odgovorna sam za vođenje timova koji izrađuju atrakcije koje naši posjetitelji imaju priliku iskusiti. Uvijek tražimo nove načine za poboljšanje
+          i pružanje boljeg iskustva našim posjetiteljima, a tehnologija je u tome ključni faktor.
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: Congratulations, you did it! You programmed BB-8. Now I think we're
-          ready for something harder. Let's go for it. Now that you've learned the
-          basics of programming, we're going to back in time to build your own game,
-          starring R2-D2 and C3PO.
+        text: |
+          Čestitam, uspjeli ste! Isprogramirali ste BB-8-a. Mislim da smo sada spremni za nešto teže. Krenimo. Sada kada ste naučili osnove
+          programiranja, vraćamo se nazad kroz vrijeme kako biste izradili vlastitu igru s R2-D2-om i C-3PO-m u glavnim ulogama.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: Za izradu igre, trebamo naučiti nešto što programeri svakodnevno koriste.
+          Riječ je o događajima. Događaji govore programu da sluša ili čeka dok se
+          nešto ne dogodi, a kada se dogodi izvršavaju se akcije.
       4:
         image: notes/starwars_blocks_events_4.JPG
-        text: Some examples of events are listening for a mouse click, an arrow button
-          or a tap on the screen.
+        text: Primjer događaja je čekanje na klik miša, pritisnutu tipku sa strelicom
+          gore ili dodir na ekranu.
       5:
         image: notes/starwars_blocks_events_5.JPG
-        text: Here we're going to make R2-D2 move up to deliver a message to a rebel
-          pilot and then move down to the other rebel pilot. We'll use events to make
-          him move. When the player uses the up/down arrow keys, or the up/down buttons.
+        text: Mi ćemo naučiti R2-D2-a da dostavi poruku pobunjeničkom pilotu krećući
+          se gore, a potom i dolje do drugog pobunjeničkog pilota. Koristit ćemo događaje
+          kako bismo ga pokrenuli kada igrač pritisne tipku sa strelicom gore ili
+          dolje, ili gumbe za gore ili dolje.
       6:
         image: notes/starwars_blocks_events_6.JPG
         text: We use the whenUp() event block and attach the goUp() block to it. When
@@ -2760,17 +2755,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2890,7 +2885,7 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti.
+        text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više
@@ -2898,9 +2893,9 @@
           odaberi.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Kad završiš svoj rad, odaberi "dijeli" (share) da dohvatiš poveznicu
@@ -2908,7 +2903,7 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti.
+        text: "Čestitamo! Naučili ste onovne razvojne blokove u računalnoj znanosti."
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Sada možeš koristiti ove blokove za izgradu vlastitog programa. Više
@@ -2916,9 +2911,9 @@
           odaberi.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[students talking] It''s about to get real. Shear. I made an L out
-          of torches. I made an A out of birch planks. It worked, it worked. We built
-          a house out of wool!'
+        text: "[students talking] It's about to get real. Shear. I made an L out of
+          torches. I made an A out of birch planks. It worked, it worked. We built
+          a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Sad možeš napraviti što god želiš. Zabavi se!
@@ -3036,8 +3031,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Bijeli prostor je radna površina i to je mjesto u kojem ćemo razvijati
+          naš program.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

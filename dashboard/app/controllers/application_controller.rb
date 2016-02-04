@@ -197,6 +197,8 @@ class ApplicationController < ActionController::Base
     # Set up the background design
     response[:design] = ExperimentActivity::TYPE_FEEDBACK_DESIGN_WHITE
 
+    response[:activity_id] = options[:activity] && options[:activity].id
+
     response
   end
 
@@ -212,5 +214,9 @@ class ApplicationController < ActionController::Base
     unless Rails.application.config.levelbuilder_mode
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
+  end
+
+  def require_admin
+    authorize! :read, :reports
   end
 end

@@ -163,7 +163,7 @@
           description_short: Faça desenhos e figuras legais com o Artista!
         hourofcode:
           Maze: Labirinto
-          title: Hora de Código
+          title: Labirinto clássico
           description: Conheça os conceitos básicos da ciência da computação com os
             personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da Era do
             Gelo!
@@ -760,6 +760,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1018,6 +1019,7 @@
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fase 2 Online: combinado de estudos de verão'
@@ -1385,6 +1387,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1512,6 +1515,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1565,6 +1590,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Laboratório de brincadeiras da Idade do gelo
           description_short: Criar uma história ou faz um jogo com o Laboratório de
@@ -1671,3 +1697,40 @@
           Welcome!: Olá!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Resumo
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

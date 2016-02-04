@@ -88,7 +88,7 @@
           'Artist: Sequence2': 'Konstnären: Sekvens2'
           'Maze: Sequence2': 'Labyrint: Sekvens2'
           'Artist: Nested Loops': 'Konstnären: Nästlade slingor'
-          description_audience: Åldrar 6 + (läsförmåga krävs)
+          description_audience: "Åldrar 6 + (läsförmåga krävs)"
           description_short: Kurs 2 är utformad för elever som kan läsa.
         course3:
           The Maze: Labyrinten
@@ -143,7 +143,7 @@
           'Bee: Debugging2': 'Biet: Felsökning2'
           'Artist: Patterns': 'Konstnären: mönster'
           Songwriting: Låtskrivande
-          description_audience: Åldrar 8 + (efter kurs 2)
+          description_audience: "Åldrar 8 + (efter kurs 2)"
           description_short: Kurs 3 är en uppföljning till kurs 2.
         playlab:
           title: Spel-labb
@@ -157,16 +157,16 @@
           description_short: Rita häftiga bilder och mönster med konstnären!
         hourofcode:
           Maze: Labyrint
-          title: Timmen med Kod
+          title: Klassisk labyrint
           description: Prova grunderna i datavetenskap med figurer från Angry Birds,
             Plants vs. Zombies och Scrat från Ice Age!
           description_short: Prova grunderna i datavetenskap med många roliga figurer!
         frozen:
           title: Koda med Anna och Elsa
-          description: Vi kan använda kod för att följa Anna och Elsa när de utforskar
-            isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom
-            skridskoåkning och skapa ett underbart vinterland som du kan dela med
-            dina vänner!
+          description: Låt oss använda kod för att följa med Anna och Elsa när de
+            utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster
+            medan du åker skridskor och skapa ett underbart vinterlandskap som du
+            kan dela med dina vänner!
           Artist: Konstnären
           description_short: Vi kan använda kod för att följa Anna och Elsa när de
             utforskar isens magi och skönhet.
@@ -202,7 +202,7 @@
           Farmer Binary: Bonde binär
           Maze and Bee: Labyrint och Bee
           Artist Binary: Artist binär
-          description_audience: Åldrar 10 + (efter kurs 3)
+          description_audience: "Åldrar 10 + (efter kurs 3)"
           Super Challenge - Variables: Super utmaning - variabler
           Super Challenge - For Loops: Super utmaning - för loopar
           Super Challenge - Functions and Parameters: Super utmaning - funktioner
@@ -232,7 +232,7 @@
           description_short: ''
           description: Ett urval av kurs 4 nivåer för användartester.
           Variables: Variabler
-          For Loops: '''För'' loopar'
+          For Loops: "'För' loopar"
           Binary: Binära
         potus:
           title: särskilda
@@ -357,7 +357,7 @@
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
           title: 20 timmars Intro kurs
-          description_audience: Åldrar 10 + (efter kurs 3)
+          description_audience: "Åldrar 10 + (efter kurs 3)"
           description: Denna 20-timmars kurs introducerar grundläggande datavetenskap
             och programmeringsbegrepp. Kursen är utformad för användning i klassrummet
             från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
@@ -742,7 +742,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: '''Medan'' loopar(slingor)'
+          While Loops: "'Medan' loopar(slingor)"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -750,6 +750,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1008,6 +1009,7 @@
           Pixelation: Pixelering
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Datavetenskap i Algebra PD
           description: Lär ut funktionell programmering genom algebra
@@ -1374,6 +1376,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1501,6 +1504,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1544,16 +1569,17 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Åldrar 10 + (efter kurs 3)
+          description_audience: "Åldrar 10 + (efter kurs 3)"
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: Åldrar 10 + (efter kurs 3)
+          description_audience: "Åldrar 10 + (efter kurs 3)"
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Skapa en berättelse eller gör ett spel med Ice Age Play
@@ -1594,7 +1620,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: '''Medan'' loopar(slingor)'
+          While Loops: "'Medan' loopar(slingor)"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1639,7 +1665,7 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft-kodtimmen
           description_short: Utforska en Minecraft-värld med kodning
           description: Använd kodblock för att ta Steve eller Alex på ett äventyr
             genom den här Minecraft-världen
@@ -1658,3 +1684,40 @@
           Welcome!: Välkommen!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Sammanfattning
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

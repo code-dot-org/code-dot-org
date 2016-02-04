@@ -75,7 +75,7 @@
       not_locked: ay hindi na lock
       not_saved:
         one: '1 error ipinagbabawal ang %{resource} sa pagse-save:'
-        other: '%{count} error na ipinagbabawal ang %{resource} na ma-save:'
+        other: "%{count} error na ipinagbabawal ang %{resource} na ma-save:"
     invitations:
       send_instructions: An invitation email has been sent to %{email}.
       invitation_token_invalid: The invitation token provided is not valid!

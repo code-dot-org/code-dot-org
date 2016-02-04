@@ -346,8 +346,8 @@
         maze_karel_debug_seq_1: MIrë se vini në debugging! Kodi im nuk punon si duhet.
           Mund ta shënoni si problem dhe ta rregulloni në mënyrë që të më shtrohet
           fusha dhe të jetë gati për mbjellje?
-        maze_karel_debug_seq_2: Çfarë problemi ka me këtë program? Si mund ta rregullosh
-          në mënyrë që të heq këtë grumbull?
+        maze_karel_debug_seq_2: "Çfarë problemi ka me këtë program? Si mund ta rregullosh
+          në mënyrë që të heq këtë grumbull?"
         maze_karel_debug_repeat: Rregulloje këtë program për mua, që fusha ime të
           jetë e sheshtë dhe e mirë.
         maze_karel_debug_while: Si mund të ndryshosh këtë program për të më ndihmuar
@@ -356,8 +356,8 @@
           e sheshtë.
         maze_karel_debug_if_else: Rregullo këtë program në mënyrë që të mbush gropat
           dhe të heq gjithë grumbujt.
-        maze_karel_debug_function_1: Çfarë duhet të ndryshosh në këtë program që të
-          më ndihmosh të heq gjithë grumbujt?
+        maze_karel_debug_function_1: "Çfarë duhet të ndryshosh në këtë program që
+          të më ndihmosh të heq gjithë grumbujt?"
         maze_karel_debug_function_2: A mund të rregullosh këtë program për mua që
           ta bëj fushën time të sheshtë?
         maze_karel_debug_function_3: 'Modifiko këtë program që të heq gjithë grumbujt
@@ -681,7 +681,7 @@
         loop_for: Blloku Counter
         parameters: Funksionet me parametra
         hoc_wrapup: Përmbledhja e Orës së Kodimit
-        Unplug1: Çfarë është CS?
+        Unplug1: "Çfarë është CS?"
         Unplug2: Te menduarit kompjuterikë
         Unplug3: Programimi grafik me leter
         Unplug4: Algoritmet
@@ -772,6 +772,12 @@
         infinity_playlab_intro: Hyrja- Laboratori i Lojrave
         infinity_playlab_events: Eventet- Laboratori i Lojrave
         infinity_playlab_repeat_forever: Përsërit përgjithmonë- Laboratorti i Lojrave
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -858,8 +864,8 @@
           me gradën e duhur për tu kthyer
         repeat_blocks: Përdor bllokun "Repeat" dhe përmblidhe rreth blloqeve në vendin
           e punës
-        repeat_blocks_1: (1) Përdor këtë bllok dhe vendose rreth blloqeve gri në vendin
-          tënd të punës
+        repeat_blocks_1: "(1) Përdor këtë bllok dhe vendose rreth blloqeve gri në
+          vendin tënd të punës"
         repeat_blocks_2: (2) Lëviz bllokun "Repeat" këtu dhe vendosi blloqet gri brenda
         snowflake_dropdown: Përdor këtë listë për të krijuar flokë të ndryshme dëbore!
         degrees_per_side: Ndaje 360 nga numri i anëve për të gjetur masën e çdo këndi
@@ -877,8 +883,8 @@
         edit_function: Kliko këtu për të redaktuar funksionin tënd.
         create_function: Kliko këtu për të hapur "Funksionet", më pas kliko butonin
           "Krijo një Funksion".
-        house_hint: Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
-          Ne do ta riparojmë atë në puzzle-in tjetër.
+        house_hint: "Është gjithçka në rregull nëse figura nuk duket si shtëpi akoma.
+          Ne do ta riparojmë atë në puzzle-in tjetër."
         edit_draw_square: Përdor këtë buton për të redaktuar funksionin dhe shtoje
           në cikël.
         edit_get_nectar: Përdor këtë buton për të redaktuar funksionin dhe ndrysho

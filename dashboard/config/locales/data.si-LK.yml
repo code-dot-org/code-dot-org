@@ -3,104 +3,104 @@
     script:
       name:
         20-hour:
-          desc: පරිඝණක විද්‍යා පඨමාලාව සදහා වු කේ-8 හැදින්වීම උත්සහකරන්
-          Unplug1: අදියර 1
-          Maze: අදියර 2
-          Unplug2: අදියර 3
-          Unplug3: අදියර 4
-          Artist: අදියර 5
-          Unplug4: අදියර 6
-          Artist2: අදියර 7
-          Unplug5: අදියර 8
-          Farmer: අදියර 9
-          Unplug6: අදියර 10
-          Artist3: අදියර 11
-          Unplug7: අදියර 12
-          Farmer2: අදියර 13
-          Unplug8: අදියර 14
-          Artist4: අදියර 15
-          Unplug9: අදියර 16
-          Farmer3: අදියර 17
-          Unplug10: අදියර 18
-          Artist5: අදියර 19
-          Unplug11: අදියර 20
+          desc: "පරිඝණක විද්‍යා පඨමාලාව සදහා වු කේ-8 හැදින්වීම උත්සහකරන්"
+          Unplug1: "අදියර 1"
+          Maze: "අදියර 2"
+          Unplug2: "අදියර 3"
+          Unplug3: "අදියර 4"
+          Artist: "අදියර 5"
+          Unplug4: "අදියර 6"
+          Artist2: "අදියර 7"
+          Unplug5: "අදියර 8"
+          Farmer: "අදියර 9"
+          Unplug6: "අදියර 10"
+          Artist3: "අදියර 11"
+          Unplug7: "අදියර 12"
+          Farmer2: "අදියර 13"
+          Unplug8: "අදියර 14"
+          Artist4: "අදියර 15"
+          Unplug9: "අදියර 16"
+          Farmer3: "අදියර 17"
+          Unplug10: "අදියර 18"
+          Artist5: "අදියර 19"
+          Unplug11: "අදියර 20"
         Hour of Code:
-          desc: පැයේ කේතය
-          Maze: අදියර 1
+          desc: "පැයේ කේතය"
+          Maze: "අදියර 1"
         Edit Code:
-          desc: Edit Code (beta)
-          MazeEC: අදියර 1
+          desc: "කේතය සංස්කරණය (බීටා)"
+          MazeEC: "අදියර 1"
         2014 Levels:
           desc: Bounce (beta)
-          Bounce: අදියර 1
+          Bounce: "අදියර 1"
         Builder Levels:
           desc: User-Created Puzzles (beta)
-          Custom: අදියර 1
+          Custom: "අදියර 1"
         Flappy Levels:
           desc: Flappy Bird
-          Flappy: අදියර 1
+          Flappy: "අදියර 1"
         Jigsaw Levels:
           desc: Jigsaw (beta)
-          Jigsaw: අදියර 1
+          Jigsaw: "අදියර 1"
         Step Levels:
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
-          MazeEC: අදියර 1
-          Applab: අදියර 2
-          ArtistEC: අදියර 3
-          StudioEC: අදියර 4
+          desc: "කේතය සංස්කරණය (බීටා)"
+          MazeEC: "අදියර 1"
+          Applab: "අදියර 2"
+          ArtistEC: "අදියර 3"
+          StudioEC: "අදියර 4"
         events:
           desc: Bounce (beta)
-          Bounce: අදියර 1
-          Studio: අදියර 2
+          Bounce: "අදියර 1"
+          Studio: "අදියර 2"
         builder:
           desc: User-Created Puzzles (beta)
-          Custom: අදියර 1
+          Custom: "අදියර 1"
         flappy:
           desc: Flappy Bird
-          Flappy: අදියර 1
+          Flappy: "අදියර 1"
         jigsaw:
           desc: Jigsaw (beta)
-          Jigsaw: අදියර 1
+          Jigsaw: "අදියර 1"
         step:
           desc: Maze (beta)
           MazeStep: Stage Step
         wordsearch:
           desc: Spelling Bee (beta)
-          WordSearch: අදියර 1
+          WordSearch: "අදියර 1"
     game:
       name:
-        Unplug1: පරිඝණක විද්‍යාව හැදින්වීම
-        Maze: වංකගිරිය
+        Unplug1: "පරිඝණක විද්‍යාව හැදින්වීම"
+        Maze: "වංකගිරිය"
         Multi: Multiple Choice Stuffs
-        Unplug2: සංඛ්‍යාත්මක සිතීම
+        Unplug2: "සංඛ්‍යාත්මක සිතීම"
         Unplug3: Graph Paper Programming
-        Artist: කලාකරුවා
-        Unplug4: ඇල්ගොරිතම්
-        Artist2: කලාකරුවා 2
-        Unplug5: ශ්‍රිතයන්
-        Farmer: ගොවියා
-        Unplug6: කන්ඩිෂනලස්
-        Artist3: කලාකරුවා 3
-        Unplug7: ගීත රචනය
-        Farmer2: ගොවියා 2
-        Unplug8: ඇබ්ස්ට්‍රැක්ෂන්
-        Artist4: කලාකරුවා 4
-        Unplug9: ක්‍රමලේඛණය ප්‍රතිචාරණය
-        Farmer3: ගොවියා 3
-        Unplug10: අන්තර්ජාලය
-        Artist5: කලාකරුවා 5
+        Artist: "කලාකරුවා"
+        Unplug4: "ඇල්ගොරිතම්"
+        Artist2: "කලාකරුවා 2"
+        Unplug5: "ශ්‍රිතයන්"
+        Farmer: "ගොවියා"
+        Unplug6: "කන්ඩිෂනලස්"
+        Artist3: "කලාකරුවා 3"
+        Unplug7: "ගීත රචනය"
+        Farmer2: "ගොවියා 2"
+        Unplug8: "ඇබ්ස්ට්‍රැක්ෂන්"
+        Artist4: "කලාකරුවා 4"
+        Unplug9: "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        Farmer3: "ගොවියා 3"
+        Unplug10: "අන්තර්ජාලය"
+        Artist5: "කලාකරුවා 5"
         Unplug11: Wrap-up
-        MazeEC: වංකගිරිය
+        MazeEC: "වංකගිරිය"
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        Wordsearch: "වචනය සෙවීම"
         Webapp: App Lab
-        ArtistEC: කලාකරුවා
+        ArtistEC: "කලාකරුවා"
         TextMatch: Text Match
         StudioEC: Play Lab
         Applab: App Lab
@@ -109,19 +109,19 @@
         CustomStudio: Play Lab
     trophy:
       name:
-        Bronze: ලෝකඩ
-        Silver: රිදී
-        Gold: රන්
+        Bronze: "ලෝකඩ"
+        Silver: "රිදී"
+        Gold: "රන්"
     concept:
       description:
-        sequence: පටිපාටිය
+        sequence: "පටිපාටිය"
         if: If block
         if_else: If-else block
         loop_times: Repeat times block
         loop_until: Repeat until block
         loop_while: While block
         loop_for: Counter block
-        function: ශ්‍රිතයන්
+        function: "ශ්‍රිතයන්"
         parameters: Functions with parameters
     level:
       instructions:
@@ -627,19 +627,19 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: ශ්‍රිතයන්
+        function: "ශ්‍රිතයන්"
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: සංඛ්‍යාත්මක සිතීම
+        Unplug2: "සංඛ්‍යාත්මක සිතීම"
         Unplug3: Graph Paper Programming
-        Unplug4: ඇල්ගොරිතම්
-        Unplug5: ශ්‍රිතයන්
-        Unplug6: කන්ඩිෂනලස්
+        Unplug4: "ඇල්ගොරිතම්"
+        Unplug5: "ශ්‍රිතයන්"
+        Unplug6: "කන්ඩිෂනලස්"
         Unplug7: Songwriting
-        Unplug8: ඇබ්ස්ට්‍රැක්ෂන්
+        Unplug8: "ඇබ්ස්ට්‍රැක්ෂන්"
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Wrap-up
@@ -670,9 +670,9 @@
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: කන්ඩිෂනලස්
+        C2_conditionals_with_cards: "කන්ඩිෂනලස්"
         C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: ක්‍රමලේඛණය ප්‍රතිචාරණය
+        C2_relay_programming: "ක්‍රමලේඛණය ප්‍රතිචාරණය"
         C2_paper_airplanes: Paper Airplanes
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
@@ -688,14 +688,14 @@
         C3_bee_debugging: Bee Debugging
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: සංඛ්‍යාත්මක සිතීම
+        C3_computational_thinking: "සංඛ්‍යාත්මක සිතීම"
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: ලූපයන්
+        C4_loops_zombie: "ලූපයන්"
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -706,7 +706,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: කන්ඩිෂනලස්
+        C4_conditionals: "කන්ඩිෂනලස්"
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -723,6 +723,12 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -731,7 +737,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: ලූපයන්
+        csp_applab_loops: "ලූපයන්"
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
@@ -807,8 +813,8 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!

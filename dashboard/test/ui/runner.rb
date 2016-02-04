@@ -3,6 +3,7 @@
 require_relative '../../../deployment'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
+require 'cdo/test_flakiness'
 
 require 'json'
 require 'yaml'
@@ -21,10 +22,12 @@ $options.browser_version = nil
 $options.feature = nil
 $options.pegasus_domain = 'test.code.org'
 $options.dashboard_domain = 'test-studio.code.org'
+$options.hourofcode_domain = 'test.hourofcode.com'
 $options.local = nil
 $options.html = nil
 $options.maximize = nil
 $options.auto_retry = false
+$options.magic_retry = false
 $options.parallel_limit = 1
 
 # start supporting some basic command line filtering of which browsers we run against
@@ -55,6 +58,7 @@ opt_parser = OptionParser.new do |opts|
     $options.local = 'true'
     $options.pegasus_domain = 'localhost.code.org:3000'
     $options.dashboard_domain = 'localhost.studio.code.org:3000'
+    $options.hourofcode_domain = 'localhost.hourofcode.com:3000'
   end
   opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
     print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
@@ -65,6 +69,9 @@ opt_parser = OptionParser.new do |opts|
     print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
           "Try '-d localhost.studio.code.org:3000' instead (this is the default when using '-l').\n" if d == 'localhost:3000'
     $options.dashboard_domain = d
+  end
+  opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
+    $options.hourofcode = d
   end
   opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
     $options.realmobile = 'true'
@@ -81,11 +88,21 @@ opt_parser = OptionParser.new do |opts|
   opts.on("-a", "--auto_retry", "Retry tests that fail once") do
     $options.auto_retry = true
   end
+  opts.on("--magic_retry", "Magically retry tests based on how flaky they are") do
+    $options.magic_retry = true
+  end
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
   end
   opts.on("-V", "--verbose", "Verbose") do
     $options.verbose = true
+  end
+  opts.on("--fail_fast", "Fail a feature as soon as a scenario fails") do
+    $options.fail_fast = true
+  end
+  opts.on('-s', '--script Scriptname', String, 'Run tests associated with this script, or have Scriptname somewhere in the URL') do |scriptname|
+    f = `egrep -r "Given I am on .*#{scriptname.delete(' ').downcase}" . | cut -f1 -d ':' | sort | uniq | tr '\n' ,`
+    $options.feature = f.split ','
   end
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
@@ -189,9 +206,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   test_run_string = "#{browser_name}_#{feature_name}" + ($options.run_eyes_tests ? '_eyes' : '')
 
   if $options.pegasus_domain =~ /test/ && !Rails.env.development? && RakeUtils.git_updates_available?
-    message = "Skipped <b>dashboard</b> UI tests for <b>#{test_run_string}</b> (changes detected)"
+    message = "Killing <b>dashboard</b> UI tests (changes detected)"
     HipChat.log message, color: 'yellow'
-    next
+    raise Parallel::Kill
   end
 
   if $options.browser and browser['browser'] and $options.browser.casecmp(browser['browser']) != 0
@@ -213,10 +230,16 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   ENV['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
   ENV['PEGASUS_TEST_DOMAIN'] = $options.pegasus_domain if $options.pegasus_domain
   ENV['DASHBOARD_TEST_DOMAIN'] = $options.dashboard_domain if $options.dashboard_domain
+  ENV['HOUROFCODE_TEST_DOMAIN'] = $options.hourofcode_domain if $options.hourofcode_domain
   ENV['TEST_LOCAL'] = $options.local ? "true" : "false"
   ENV['MAXIMIZE_LOCAL'] = $options.maximize ? "true" : "false"
   ENV['MOBILE'] = browser['mobile'] ? "true" : "false"
+  ENV['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
   ENV['TEST_RUN_NAME'] = test_run_string
+
+  # Force Applitools eyes to use a consistent host OS identifier for now
+  # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
+  ENV['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
 
   if $options.html
     html_output_filename = test_run_string + "_output.html"
@@ -225,7 +248,8 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments = ''
 #  arguments += "#{$options.feature}" if $options.feature
   arguments += feature
-  arguments += " -t #{$options.run_eyes_tests ? '' : '~'}@eyes"
+  arguments += " -t #{$options.run_eyes_tests && !browser['mobile'] ? '' : '~'}@eyes"
+  arguments += " -t #{$options.run_eyes_tests && browser['mobile'] ? '' : '~'}@eyes_mobile"
   arguments += " -t ~@local_only" unless $options.local
   arguments += " -t ~@no_mobile" if browser['mobile']
   arguments += " -t ~@no_ie" if browser['browserName'] == 'Internet Explorer'
@@ -234,7 +258,6 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   arguments += " -t ~@chrome" if browser['browserName'] != 'chrome' && !$options.local
   arguments += " -t ~@no_safari" if browser['browserName'] == 'Safari'
   arguments += " -t ~@no_firefox" if browser['browserName'] == 'firefox'
-  arguments += " -t ~@no_ios" if browser['browserName'] == 'iphone'
   arguments += " -t ~@skip"
   arguments += " -t ~@webpurify" unless CDO.webpurify_key
   arguments += " -t ~@pegasus_db_access" unless $options.pegasus_db_access
@@ -266,22 +289,60 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     end
   end
 
+  def how_many_reruns?(test_run_string)
+    if $options.auto_retry
+      return 1
+    elsif $options.magic_retry
+      # ask saucelabs how flaky the test is
+      flakiness = TestFlakiness.test_flakiness[test_run_string]
+      if !flakiness
+        $lock.synchronize { puts "No flakiness data for #{test_run_string}".green }
+        return 0
+      elsif flakiness == 0.0
+        $lock.synchronize { puts "#{test_run_string} is not flaky".green }
+        return 0
+      else
+        flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
+        max_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
+        flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
+
+        if max_reruns < 2
+          $lock.synchronize { puts flakiness_message.green }
+        elsif max_reruns < 3
+          $lock.synchronize { puts flakiness_message.yellow }
+        else
+          $lock.synchronize { puts flakiness_message.red }
+        end
+        return max_reruns
+      end
+    else # no retry options
+      return 0
+    end
+  end
+
+  max_reruns = how_many_reruns?(test_run_string)
+
   # if autorertrying, output a rerun file so on retry we only run failed tests
   rerun_filename = test_run_string + ".rerun"
-  first_time_arguments = $options.auto_retry ? " --format rerun --out #{rerun_filename}" : ""
+  if max_reruns > 0
+    arguments += " --format rerun --out #{rerun_filename}"
+  end
 
   FileUtils.rm rerun_filename, force: true
 
-  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + first_time_arguments)
+  succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments)
 
-  if !succeeded && $options.auto_retry
+  reruns = 0
+  while !succeeded && (reruns < max_reruns)
+    reruns += 1
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
-    second_time_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
+    rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 
-    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + second_time_arguments)
+    succeeded, output_stdout, output_stderr, test_duration = run_tests(arguments + rerun_arguments)
   end
 
   $lock.synchronize do
@@ -307,6 +368,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     scenario_info = ", #{scenario_info}" unless scenario_info.blank?
   end
 
+
+  rerun_info = " with #{reruns} reruns" if reruns > 0
+
   if !parsed_output.nil? && scenario_count == 0 && succeeded
     # Don't log individual skips because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests skipped with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
@@ -316,7 +380,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
   else
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     HipChat.log "<pre>#{output_stderr}</pre>"
-    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info})"
+    message = "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})"
 
     if $options.html
       link = "https://test-studio.code.org/ui_test/" + html_output_filename
@@ -336,7 +400,22 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     else
       'failed'.red
     end
-  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info})\n"
+  print "UI tests for #{test_run_string} #{result_string} (#{format_duration(test_duration)}#{scenario_info}#{rerun_info})\n"
+
+  if scenario_count == 0
+    skip_warning = "We didn't actually run any tests, did you mean to do this?\n".yellow
+    skip_warning += <<EOS
+Check the ~excluded @tags in the cucumber command line above and in the #{feature} file:
+  - Do the feature or scenario tags exclude #{browser_name}?
+EOS
+    unless $options.run_eyes_tests
+      skip_warning += "  - Are you trying to run --eyes tests?\n"
+    end
+    unless $options.dashboard_db_access
+      skip_warning += "  - Do you need to run this test on the test instance or against localhost (-l) for @dashboard_db_access?\n"
+    end
+    print skip_warning
+  end
 
   [succeeded, message]
 end.each do |succeeded, message|
@@ -353,12 +432,10 @@ $errfile.close
 $errbrowserfile.close
 
 $suite_duration = Time.now - $suite_start_time
-$average_test_duration = $suite_duration / ($suite_success_count + $suite_fail_count)
 
 HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " +
   "Test count: #{($suite_success_count + $suite_fail_count)}. " +
-  "Total duration: #{format_duration($suite_duration)}. " +
-  "Average test duration: #{format_duration($average_test_duration)}."
+  "Total duration: #{format_duration($suite_duration)}. "
 
 if $suite_fail_count > 0
   HipChat.log "Failed tests: \n #{$failures.join("\n")}"

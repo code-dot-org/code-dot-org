@@ -1,6 +1,7 @@
 ---
 title: Minecraft
 theme: responsive
+video_player: true
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
@@ -50,3 +51,8 @@ social:
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2= I18n.t(:starwars_watch_videos)
   =view :inspirational_videos
+
+%h2.mc-header2
+  = I18n.t(:starwars_speak_languages)
+  %a{href: "/translate/mc"}= I18n.t(:starwars_help_translate)
+

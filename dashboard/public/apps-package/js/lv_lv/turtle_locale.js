@@ -220,7 +220,7 @@ s:function(d,k,p){turtle_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "penTooltip":function(d){return "Paceļ vai noliek zīmuli, lai sāktu vai partrauktu zīmēt."},
 "penUp":function(d){return "zīmuli pacelts"},
 "reinfFeedbackMsg":function(d){return "Šeit ir tavs zīmējums! Turpini darbu pie tā, vai sāc darbu pie nākamās puzles."},
-"setAlpha":function(d){return "set alpha"},
+"setAlpha":function(d){return "uzstādīt alfa vērtību"},
 "setColour":function(d){return "uzstādīt krāsu"},
 "setPattern":function(d){return "uzstādīt rakstu"},
 "setWidth":function(d){return "uzstādīt platumu"},

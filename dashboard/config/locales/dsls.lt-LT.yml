@@ -2,294 +2,294 @@
   data:
     match:
       2-3 Big Event Match 1:
-        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a4.png: /script_assets/k_1_images/unplugged_images/big_event_1_a4.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         Match the button combination to the dance moves.: Susiek ženklų kombinaciją
           su šokio judesio kombinacijomis.
         Matching: Sujungimas
       2-3 Binary Match 1:
-        /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
-        /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
-        /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
-        /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
-        /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png,
-          250
-        <strong>N</strong>: <strong>N</strong>
-        <strong>O</strong>: <strong>O</strong>
-        <strong>P</strong>: <strong>P</strong>
-        <strong>Q</strong>: <strong>Q</strong>
+        "/script_assets/2-3_images/unplugged/binary_1_a1.png": "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a2.png": "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a3.png": "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        "/script_assets/2-3_images/unplugged/binary_1_a4.png": "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        "/script_assets/2-3_images/unplugged/binary_1_q.png, 250": "/script_assets/2-3_images/unplugged/binary_1_q.png,
+          250"
+        "<strong>N</strong>": "<strong>N</strong>"
+        "<strong>O</strong>": "<strong>O</strong>"
+        "<strong>P</strong>": "<strong>P</strong>"
+        "<strong>Q</strong>": "<strong>Q</strong>"
         Matching: Sujungimas
         Use the key to match each code to its letter: Kiekviena raidė turi savo kodavimo
           raktą. Susiek jį su kiekviena raide apačioje.
       2-3 Graph Paper Match 1:
-        /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a3.png: /script_assets/2-3_images/unplugged/graph_paper_2_a3.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         Match the grid to the program.: Priderink tinklelį prie programos.
         Matching: Sujungimas
       2-3 Maze Match 2:
-        /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a3.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_2_q3.png
-        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Nuvilkite blokelius, kad atitiktų.
         Instructions: Instrukcijos
         Match the puzzles to the blocks: Pritaikyk kiekvienam galvosūkiui teisingus
           sprendimus
         Maze Match: 'Labirintas: sujungimas'
       2-3 Relay Programming Match 1:
-        /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a2.png: /script_assets/2-3_images/unplugged/graph_paper_2_a2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_a3.png: /script_assets/2-3_images/unplugged/graph_paper_2_a3.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q1.png: /script_assets/2-3_images/unplugged/graph_paper_2_q1.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
-        /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png": "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         Match the grid to the program: Priderink tinklelį prie programos
         Matching: Sujungimas
       2-3 artist loops match 1:
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
-        /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         Artist Loops Matching One: 'Menininkas: kartojimas. Sujungimo užduotis 1'
         Match the loop to the shape: Priderink ciklą (kartojimą) prie figūros
       2-3 artist match 1:
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a2.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a3.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a4.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q1.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q2.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q3.png
-        /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artist_match_1_q4.png
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png": "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         Artist Matching: 'Menininkas: sujungimo užduotis'
         Match the shape with the blocks that complete it.: Parink tinkamus blokelius,
           kurie pabaigs piešinį.
       2-3 bounce match 1:
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png
-        /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
-        Bounce Matching: 'Žaidimas „Atmušk“: sujungimo užduotis'
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a1.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a2.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a3.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a4.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_a5.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q1.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q2.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q3.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q4.png"
+        "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png": "/script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png"
+        Bounce Matching: "Žaidimas „Atmušk“: sujungimo užduotis"
         Match the events with the actions: Suderink įvykius su veiksmais
         Matching: Sujungimas
       2-3 flappy match 1:
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png
-        /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_a3.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q1.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q2.png"
+        "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png": "/script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png"
         Flappy Matching One: Flappy sujungimo užduotis 1
         Match the events with the actions: Suderink įvykius su veiksmais
         Matching: Sujungimas
       2-3 maze match 1:
-        /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a3.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
-        /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png": "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         Match the puzzles to the blocks: Priderink galvosūkį prie blokų
         Maze Match One: Labirinto sujungimo užduotis 1
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: <h4>1)</h4>
-        <h4>2)</h4>: <h4>2)</h4>
-        <h4>3)</h4>: <h4>3)</h4>
-        <h4>4)</h4>: <h4>4)</h4>
-        <h4>Add Player 1 roll to total score</h4>: <h4>Pridėk pirmo žaidėjo išridentą
-          akučių skaičių prie visų jo išridentų taškų</h4>
-        <h4>Compare player scores to see who wins</h4>: <h4>Palygink žaidėjų taškus
-          ir pažiūrėk, kuris laimėjo</h4>
-        <h4>Player 1 rolls die</h4>: <h4>1 žaidėjas ridena kauliuką</h4>
-        <h4>Set Player 1 score to 0</h4>: <h4>Nustatyk pirmo žaidėjo taškus į 0</h4>
+        "<h4>1)</h4>": "<h4>1)</h4>"
+        "<h4>2)</h4>": "<h4>2)</h4>"
+        "<h4>3)</h4>": "<h4>3)</h4>"
+        "<h4>4)</h4>": "<h4>4)</h4>"
+        "<h4>Add Player 1 roll to total score</h4>": "<h4>Pridėk pirmo žaidėjo išridentą
+          akučių skaičių prie visų jo išridentų taškų</h4>"
+        "<h4>Compare player scores to see who wins</h4>": "<h4>Palygink žaidėjų taškus
+          ir pažiūrėk, kuris laimėjo</h4>"
+        "<h4>Player 1 rolls die</h4>": "<h4>1 žaidėjas ridena kauliuką</h4>"
+        "<h4>Set Player 1 score to 0</h4>": "<h4>Nustatyk pirmo žaidėjo taškus į 0</h4>"
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Sudėliok
           veiksmus, kurie seka vienas po kito, žaidžiant žaidimą „ridenk kauliuką“.
         Matching: Sujungimas
       4-5 Computational Thinking Match 1:
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
-        /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
-          0</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
-          1</h3>'
-        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
-          6</h3>'
-        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Ratai/iš_šono: 3<br/>Langai/iš_šono:
-          2</h3>'
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
+          0</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
+          1</h3>"
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Ratai/iš_šono: 2<br/>Langai/iš_šono:
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Ratai/iš_šono: 3<br/>Langai/iš_šono:
+          2</h3>"
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kiekviena
           pavaizduota transporto priemonė gali būti išskaidyta į smulkesnes dalis.
           Sudėliok transporto priemones taip, kad jos atitiktų tai, kas yra užrašyta
           kairėje pusėje.
         Matching: Sujungimas
       4-5 Suncatchers Match 1:
-        /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>RAMP</h4>: <h4>RAMP</h4>
-        <h4>STACK</h4>: <h4>STACK</h4>
-        <h4>STAMP</h4>: <h4>STAMP</h4>
-        <h4>STAR</h4>: <h4>STAR</h4>
+        "/script_assets/4-5_images/unplugged/suncatchers_1.png": "/script_assets/4-5_images/unplugged/suncatchers_1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png": "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
+        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
+        "<h4>STACK</h4>": "<h4>STACK</h4>"
+        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
+        "<h4>STAR</h4>": "<h4>STAR</h4>"
         Match each program to the word it makes, using the provided group of skills.: Sudėliok
           dešinėje esančius žodžius prie kairėje esančių programų taip, kad įvykdžius
           kairėje esančias programas, jos sudėliotų dešinėje esantį žodį.
         Matching: Sujungimas
       4-5 maze match 1:
-        /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a3.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q1.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q2.png
-        /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png: /script_assets/4-5_images/maze/4-5_maze_match_1_q3.png
-        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png": "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
         Drag the blocks to match.: Nuvilkite blokelius, kad atitiktų.
         Instructions: Instrukcijos
         Match the puzzles to the blocks: Priderink galvosūkį prie blokų
         Maze Match: 'Sujungimas: labirintas'
       K-1 Artist 2 Match 1:
-        /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
-        /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
-        /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: <br/><br/>virš
-        <br/><br/>below: <br/><br/>po
-        <br/><br/>next to: <br/><br/>šalia
+        "/script_assets/k_1_images/artist_images/square_above_ball.png": "/script_assets/k_1_images/artist_images/square_above_ball.png"
+        "/script_assets/k_1_images/artist_images/square_below_ball.png": "/script_assets/k_1_images/artist_images/square_below_ball.png"
+        "/script_assets/k_1_images/artist_images/square_next_ball.png": "/script_assets/k_1_images/artist_images/square_next_ball.png"
+        "<br/><br/>above": "<br/><br/>virš"
+        "<br/><br/>below": "<br/><br/>po"
+        "<br/><br/>next to": "<br/><br/>šalia"
         Is the square next to, above, or below the ball?: Ar kvadratas yra šalia,
           virš ar po kamuoliu?
         Matching: Sujungimas
       K-1 Artist 2 Match 2:
-        /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
-        /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
-        /script_assets/k_1_images/artist_images/large_triangle.png: /script_assets/k_1_images/artist_images/large_triangle.png
-        /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
-        /script_assets/k_1_images/artist_images/medium_rectangle.png: /script_assets/k_1_images/artist_images/medium_rectangle.png
-        /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
-        /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
-        /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        "/script_assets/k_1_images/artist_images/large_triangle.png": "/script_assets/k_1_images/artist_images/large_triangle.png"
+        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
+        "/script_assets/k_1_images/artist_images/medium_rectangle.png": "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
+        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
+        "/script_assets/k_1_images/artist_images/small_triangle.png": "/script_assets/k_1_images/artist_images/small_triangle.png"
         Match the shapes based on type.: Sujunk figūras pagal tipą.
         Matching: Sujungimas
       K-1 Artist 2 Match 3:
-        /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
-        /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
-        /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
-        /script_assets/k_1_images/artist_images/large_triangle2.png: /script_assets/k_1_images/artist_images/large_triangle2.png
-        /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
-        /script_assets/k_1_images/artist_images/small_circle.png: /script_assets/k_1_images/artist_images/small_circle.png
-        /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
-        /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
+        "/script_assets/k_1_images/artist_images/large_circle.png": "/script_assets/k_1_images/artist_images/large_circle.png"
+        "/script_assets/k_1_images/artist_images/large_rectangle.png": "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        "/script_assets/k_1_images/artist_images/large_square.png": "/script_assets/k_1_images/artist_images/large_square.png"
+        "/script_assets/k_1_images/artist_images/large_triangle2.png": "/script_assets/k_1_images/artist_images/large_triangle2.png"
+        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
+        "/script_assets/k_1_images/artist_images/small_circle.png": "/script_assets/k_1_images/artist_images/small_circle.png"
+        "/script_assets/k_1_images/artist_images/small_rectangle2.png": "/script_assets/k_1_images/artist_images/small_rectangle2.png"
+        "/script_assets/k_1_images/artist_images/small_square.png": "/script_assets/k_1_images/artist_images/small_square.png"
         Match the shapes based on type.: Sujunk figūras pagal tipą.
         Matching: Sujungimas
       K-1 Artist Loops Match 1:
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a3.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q1.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png"
         Match the code to the stairs it draws.: Sujunk kodą su laiptais, kuriuos jis
           nupiešia.
         Matching: Sujungimas
       K-1 Bee Loops Match 1:
-        /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
-        /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
-        /script_assets/k_1_images/bee_images/r4_gnectar.png: /script_assets/k_1_images/bee_images/r4_gnectar.png
-        /script_assets/k_1_images/bee_images/r5_ghoney.png: /script_assets/k_1_images/bee_images/r5_ghoney.png
-        /script_assets/k_1_images/move_blocks/EEEEE.png: /script_assets/k_1_images/move_blocks/EEEEE.png
-        /script_assets/k_1_images/move_blocks/NNN.png: /script_assets/k_1_images/move_blocks/NNN.png
-        /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
-        /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
+        "/script_assets/k_1_images/bee_images/4_gnectar.png": "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        "/script_assets/k_1_images/bee_images/5_ghoney.png": "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        "/script_assets/k_1_images/bee_images/r4_gnectar.png": "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        "/script_assets/k_1_images/bee_images/r5_ghoney.png": "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        "/script_assets/k_1_images/move_blocks/EEEEE.png": "/script_assets/k_1_images/move_blocks/EEEEE.png"
+        "/script_assets/k_1_images/move_blocks/NNN.png": "/script_assets/k_1_images/move_blocks/NNN.png"
+        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
+        "/script_assets/k_1_images/move_blocks/r5_E.png": "/script_assets/k_1_images/move_blocks/r5_E.png"
         Match the blocks: Susiek blokelius
         Matching: Sujungimas
       K-1 Big Event Match 1:
-        /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_a3.png: /script_assets/k_1_images/unplugged_images/big_event_1_a3.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_desc.png: /script_assets/k_1_images/unplugged_images/big_event_1_desc.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q1.png: /script_assets/k_1_images/unplugged_images/big_event_1_q1.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
-        /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png": "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png": "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         Match the button combination to the dance moves.: Susiek ženklų kombinaciją
           su šokio judesio kombinacijomis.
         Matching: Sujungimas
       K-1 Flappy Match 1:
-        /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
-        /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
-        /script_assets/k_1_images/flappy_images/flap.png: /script_assets/k_1_images/flappy_images/flap.png
-        /script_assets/k_1_images/flappy_images/hit_ground.png: /script_assets/k_1_images/flappy_images/hit_ground.png
-        /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
-        /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
+        "/script_assets/k_1_images/flappy_images/click.png": "/script_assets/k_1_images/flappy_images/click.png"
+        "/script_assets/k_1_images/flappy_images/end.png": "/script_assets/k_1_images/flappy_images/end.png"
+        "/script_assets/k_1_images/flappy_images/flap.png": "/script_assets/k_1_images/flappy_images/flap.png"
+        "/script_assets/k_1_images/flappy_images/hit_ground.png": "/script_assets/k_1_images/flappy_images/hit_ground.png"
+        "/script_assets/k_1_images/flappy_images/pass_obstacle.png": "/script_assets/k_1_images/flappy_images/pass_obstacle.png"
+        "/script_assets/k_1_images/flappy_images/score.png": "/script_assets/k_1_images/flappy_images/score.png"
         Match the blocks: Susiek blokelius
         Matching: Sujungimas
       K-1 Happy Maps Match 1:
-        /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
-        /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
-        /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png
-        /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
-        /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
-        /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
+        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png"
+        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png"
+        "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png": "/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png"
+        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
+        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
+        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Match the Map to the arrow that gets the Flurb to the treasure: Priderink
           žemėlapį prie rodyklės, kuri nukreipia Flurb'į link lobio.
         Matching: Sujungimas
       K-1 Maze Match 1:
-        /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
-        /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
-        /script_assets/k_1_images/maze_images/maze_ENE.png: /script_assets/k_1_images/maze_images/maze_ENE.png
-        /script_assets/k_1_images/maze_images/maze_WSS.png: /script_assets/k_1_images/maze_images/maze_WSS.png
-        /script_assets/k_1_images/maze_images/maze_WW.png: /script_assets/k_1_images/maze_images/maze_WW.png
-        /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
-        /script_assets/k_1_images/move_blocks/ENE.png: /script_assets/k_1_images/move_blocks/ENE.png
-        /script_assets/k_1_images/move_blocks/WSS.png: /script_assets/k_1_images/move_blocks/WSS.png
-        /script_assets/k_1_images/move_blocks/WW.png: /script_assets/k_1_images/move_blocks/WW.png
+        "/script_assets/images/matching_ani.gif": "/script_assets/images/matching_ani.gif"
+        "/script_assets/k_1_images/maze_images/maze_EN.png": "/script_assets/k_1_images/maze_images/maze_EN.png"
+        "/script_assets/k_1_images/maze_images/maze_ENE.png": "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        "/script_assets/k_1_images/maze_images/maze_WSS.png": "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        "/script_assets/k_1_images/maze_images/maze_WW.png": "/script_assets/k_1_images/maze_images/maze_WW.png"
+        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
+        "/script_assets/k_1_images/move_blocks/ENE.png": "/script_assets/k_1_images/move_blocks/ENE.png"
+        "/script_assets/k_1_images/move_blocks/WSS.png": "/script_assets/k_1_images/move_blocks/WSS.png"
+        "/script_assets/k_1_images/move_blocks/WW.png": "/script_assets/k_1_images/move_blocks/WW.png"
         Drag the blocks to match.: Nuvilkite blokelius, kad atitiktų.
         Instructions: Instrukcijos
         Match the puzzles and blocks: Sujunkite dėliones ir blokelius
         Matching: Sujungimas
       K-1 Move It Match 1:
-        /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
-        /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
-        /script_assets/k_1_images/unplugged_images/move_it_2_q2.png: /script_assets/k_1_images/unplugged_images/move_it_2_q2.png
-        /script_assets/k_1_images/unplugged_images/move_it_2_q3.png: /script_assets/k_1_images/unplugged_images/move_it_2_q3.png
-        /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
-        /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
+        "/script_assets/k_1_images/unplugged_images/leftup.png": "/script_assets/k_1_images/unplugged_images/leftup.png"
+        "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q1.png"
+        "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q2.png"
+        "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png": "/script_assets/k_1_images/unplugged_images/move_it_2_q3.png"
+        "/script_assets/k_1_images/unplugged_images/rightdown.png": "/script_assets/k_1_images/unplugged_images/rightdown.png"
+        "/script_assets/k_1_images/unplugged_images/rightrightup.png": "/script_assets/k_1_images/unplugged_images/rightrightup.png"
         Match the Map to the algorithm that gets the Flurb to the flowers.: Priderink
           žemėlapį prie algoritmo, kuris nuveda Flurb'į iki gėlių.
         Matching: Sujungimas
       test matching image:
-        /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
-        /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
-        /script_assets/matches/images/a3.jpg: /script_assets/matches/images/a3.jpg
-        /script_assets/matches/images/a4.jpg: /script_assets/matches/images/a4.jpg
-        /script_assets/matches/images/head.jpg,300: /script_assets/matches/images/head.jpg,300
-        /script_assets/matches/images/q1.jpg: /script_assets/matches/images/q1.jpg
-        /script_assets/matches/images/q2.jpg: /script_assets/matches/images/q2.jpg
-        /script_assets/matches/images/q3.jpg: /script_assets/matches/images/q3.jpg
-        /script_assets/matches/images/q4.jpg: /script_assets/matches/images/q4.jpg
+        "/script_assets/matches/images/a1.jpg": "/script_assets/matches/images/a1.jpg"
+        "/script_assets/matches/images/a2.jpg": "/script_assets/matches/images/a2.jpg"
+        "/script_assets/matches/images/a3.jpg": "/script_assets/matches/images/a3.jpg"
+        "/script_assets/matches/images/a4.jpg": "/script_assets/matches/images/a4.jpg"
+        "/script_assets/matches/images/head.jpg,300": "/script_assets/matches/images/head.jpg,300"
+        "/script_assets/matches/images/q1.jpg": "/script_assets/matches/images/q1.jpg"
+        "/script_assets/matches/images/q2.jpg": "/script_assets/matches/images/q2.jpg"
+        "/script_assets/matches/images/q3.jpg": "/script_assets/matches/images/q3.jpg"
+        "/script_assets/matches/images/q4.jpg": "/script_assets/matches/images/q4.jpg"
         Drag the images from right to center.: Nutempkite paveikslėlius iš dešinės
           į centą.
         Instructions: Instrukcijos
@@ -309,7 +309,7 @@
         salt: druska
     multi:
       2-3 Algorithms Multi 1:
-        /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
+        "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         Choose an algorithm for the image provided.: Pasirink tinkamą algoritmą, su
           kuriuo gausis duotasis vaizdas.
         Multiple Choice: Parink teisingą atsakymą
@@ -323,13 +323,13 @@
           dešinėje
         ? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
           below square<br/>Put triangle right of parallelogram
-        : Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram
-          below square<br/>Put triangle right of parallelogram
+        : Pradėk nuo kvadrato<br/>Padėk trikampį šalia kvadrato<br/>Padėk lygiagretainį
+          po kvadratu<br/>Padėk trikampį lygiagretainio dešinėje
       2-3 Algorithms Multi 2:
-        /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
-        /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
-        /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
-        /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
+        "/script_assets/2-3_images/unplugged/algorithms_2_a1.png": "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        "/script_assets/2-3_images/unplugged/algorithms_2_a2.png": "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+        "/script_assets/2-3_images/unplugged/algorithms_2_a3.png": "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        "/script_assets/2-3_images/unplugged/algorithms_2_a4.png": "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         Multiple Choice: Užduotis su keliais atsakymo variantais
         Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Pradėk
           nuo trikampio<br/>Padėk kvadratą po trikampiu<br/>Padėk kitą trikampį po
@@ -337,144 +337,144 @@
         Which image does <em>not</em> follow this algorithm?: Kuris paveikslėlis <em>nesigaus</em>
           naudojant šį algoritmą?
       2-3 Binary Multi 1:
-        /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
-        /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
-        /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
-        /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
+        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Užduotis su keliais atsakymo variantais
         Which program makes this image?: Kuri programa sukuria šį vaizdą?
       2-3 Conditionals Multi 1:
-        /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a3.png: /script_assets/2-3_images/unplugged/conditionals_1_a3.png
-        /script_assets/2-3_images/unplugged/conditionals_1_a4.png: /script_assets/2-3_images/unplugged/conditionals_1_a4.png
-        /script_assets/2-3_images/unplugged/conditionals_1_q.png: /script_assets/2-3_images/unplugged/conditionals_1_q.png
+        "/script_assets/2-3_images/unplugged/conditionals_1_a1.png": "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        "/script_assets/2-3_images/unplugged/conditionals_1_a2.png": "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        "/script_assets/2-3_images/unplugged/conditionals_1_a3.png": "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+        "/script_assets/2-3_images/unplugged/conditionals_1_a4.png": "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        "/script_assets/2-3_images/unplugged/conditionals_1_q.png": "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         According to the rules of the game, which set of cards is scored correctly?: Kuri
           kortų grupė turi teisingą taškų kiekį (pagal žaidimo taisykles kairėje)?
         Multiple Choice: Užduotis su keliais atsakymo variantais
       2-3 Getting Loopy Multi 1:
-        /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a1.png
-        /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a2.png
-        /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
-        /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
-        /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
+        "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+        "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png": "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Kaip supaprastinti šią kartojimo
           seką?
         Multiple Choice: Užduotis su keliais atsakymo variantais
       2-3 Graph Paper Multi 1:
-        /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
-        /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
-        /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
-        /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
+        "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png": "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        "/script_assets/2-3_images/unplugged/graph_paper_1_q.png": "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         Multiple Choice: Užduotis su keliais atsakymo variantais
         Which program makes this image?: Kuri programa sukuria šį vaizdą?
       2-3 Maze Multi 2:
-        /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
-          500
+        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
+          500"
         Maze Multiple Choice: 'Labirintas: parink teisingą atsakymą'
         Which blocks work?: Kurie blokeliai gerai veikia?
       2-3 Relay Programming Multi 1:
-        /script_assets/2-3_images/unplugged/relay_programming_1_a1.png: /script_assets/2-3_images/unplugged/relay_programming_1_a1.png
-        /script_assets/2-3_images/unplugged/relay_programming_1_a2.png: /script_assets/2-3_images/unplugged/relay_programming_1_a2.png
-        /script_assets/2-3_images/unplugged/relay_programming_1_a3.png: /script_assets/2-3_images/unplugged/relay_programming_1_a3.png
-        /script_assets/2-3_images/unplugged/relay_programming_1_q.png: /script_assets/2-3_images/unplugged/relay_programming_1_q.png
+        "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+        "/script_assets/2-3_images/unplugged/relay_programming_1_q.png": "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         Multiple Choice: Užduotis su keliais atsakymo variantais
         Which program does not create this image?: Kuri programa nesukuria šio vaizdo?
       2-3 Relay Programming Multi 2:
-        /script_assets/2-3_images/unplugged/relay_programming_2_a1.png: /script_assets/2-3_images/unplugged/relay_programming_2_a1.png
-        /script_assets/2-3_images/unplugged/relay_programming_2_a2.png: /script_assets/2-3_images/unplugged/relay_programming_2_a2.png
-        /script_assets/2-3_images/unplugged/relay_programming_2_a3.png: /script_assets/2-3_images/unplugged/relay_programming_2_a3.png
+        "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png": "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
         Multiple Choice: Užduotis su keliais atsakymo variantais
         Which image-program combo does not contain mistakes?: Kuriame paveikslėlyje
           nėra klaidų?
       2-3 artist debug multi 1:
-        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png
-        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png
-        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png
-        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
-        /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
-          700
+        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700": "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         Artist Debugging Multiple Choice One: 'Menininkas: klaidų ieškojimas. Parink
           teisingą atsakymą'
         Why won't this circle go all the way around?: Dėl kurio vieno blokelio menininkas
           nenupieš apskritimo?
       2-3 artist functions multi 1:
-        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
-        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
-        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png
-        /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
-          500
+        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+        "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png, 500": "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
         Artist Functions Multiple Choice One: 'Menininkas ir funkcijos: parink teisingą
           atsakymą'
         Pick the correct blocks to draw this image using the given functions: Pasirink
           teisingą blokelių seką, kad būtų gautas parodytas vaizdas. Ką daro sudėtinė
           komanda, yra pavaizduota kairėje pusėje
       2-3 artist loops multi 1:
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
-          500
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         Which shape is made by this loop?: Kuri figūra yra nupiešiama su šiomis kartojimo
           komandomis?
       2-3 artist loops multi 2:
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
-          500
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png
-        /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png, 500": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png": "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         Which shape is made by this program?: Kuri figūra bus nubrėžta, įvykdžius
           šią programą?
       2-3 bee conditionals multi 1:
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         Bee Conditionals Multiple Choice One: 'Bitė: parink teisingą atsakymą'
         Which comparison below is true?: Kuri lygybė teisinga?
       2-3 bee conditionals multi 2:
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
-          500
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a1.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a2.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a3.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_a4.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_2b_q.png,
+          500"
         Bee Conditionals Multiple Choice Two: 'Bitė: parink teisingą atsakymą'
         Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
       2-3 bee conditionals multi 3:
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png
-        /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500: /script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
-          500
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         Bee Conditionals Multiple Choice Two: 'Bitė: parink teisingą atsakymą'
         Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
       2-3 bee loops multi 1:
-        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png
-        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png
-        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png
-        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png
-        /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500: /script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
-          500
+        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500": "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png,
+          500"
         Bee Loops Multiple Choice One: 'Bitė: parink teisingą atsakymą'
         Which blocks collect all of the nectar?: Su kuriais blokeliais galima surinkti
           visą nektarą?
       2-3 maze multi 1:
-        /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png: /script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png
-        /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500: /script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
-          500
+        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png,
+          500"
         Maze Multiple Choice One: 'Labirintas: parink teisingą atsakymą'
         Which set of blocks is the correct answer?: Kuris blokų derinys yra teisingas?
       4-5 Algorithms Multi 1:
@@ -487,10 +487,10 @@
           yra sunkiausia išskaidyti į veiksmų seką?
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: Eugene is a _____ city.
-        0: '? Here are three sentences. Which of the templates below correctly abstracts
-          so that all three match the same pattern as the template?'
-        1: ': Yra duoti trys sakiniai. Kuris iš pateiktų atsakymų su praleistais žodžiais
-          tinka visiems duotiesiems sakiniams?'
+        0: "? Here are three sentences. Which of the templates below correctly abstracts
+          so that all three match the same pattern as the template?"
+        1: ": Yra duoti trys sakiniai. Kuris iš pateiktų atsakymų su praleistais žodžiais
+          tinka visiems duotiesiems sakiniams?"
         Multiple Choice: Parink teisingą atsakymą
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
         Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle
@@ -498,8 +498,8 @@
         _____ is _____ a _____.: _____ is _____ a _____.
         _____ is a _____ city.: _____ is a _____ city.
       4-5 Crowdsourcing Multi 1:
-        /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png
-        /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png: /script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png
+        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png": "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
         Multiple Choice: Parink teisingą atsakymą
         Which of these pictures best represents crowdsourcing?: Kuris iš šių paveiksliukų
           geriausiai atitinka minios bendradarbiavimą („crowdsourcing“)?
@@ -520,7 +520,7 @@
         Your favorite food: Tavo mėgstamiausią patiekalą
         Your parent's credit card number: Tavo tėvų kreditinės kortelės numerį
       4-5 Internet Multi 1:
-        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
+        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
@@ -530,7 +530,7 @@
           bandote prisijungti prie svetainės code.org, kuriuo IP adresu kreipsis DNS,
           kad patektumėte į šią svetainę?
       4-5 Internet Multi 2:
-        /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
+        "/script_assets/4-5_images/unplugged/internet_1_q.png": "/script_assets/4-5_images/unplugged/internet_1_q.png"
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jei
           DNS nukreipė Jus į svetainę pagal IP adresą 100.42.50.110, kurioje svetainėje
           Jūs atsidursite?
@@ -540,7 +540,7 @@
         khanacademy.org: khanacademy.org
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
-        /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
+        "/script_assets/4-5_images/unplugged/songwriting_1_q.png": "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         ? Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
           <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
           <br/>Skip to my Lou, my darlin.
@@ -563,115 +563,115 @@
         : What is the largest chunk of this song that you can define as the chorus
           so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
-        /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
-        /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png": "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        "/script_assets/4-5_images/unplugged/suncatchers_2_q.png": "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         Multiple Choice: Parink teisingą atsakymą
         Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kuri
           iš pateiktų programų žemiau <em>neatitinka</em> tos pačios sekos, kokia
           yra programoje Program 1?
       4-5 artist functions multi 1:
-        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
-        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
-        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png
-        /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png
-        /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
-          500
+        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png"
+        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png"
+        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a3.png"
+        "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a4.png"
+        "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_artistfunctions_multi_1_q.png,
+          500"
         Artist Functions Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         Which function creates a rectangle that can change its size?: Kuri sudėtinė
           komanda sukuria stačiakampį, kurio dydį galima keisti?
       4-5 artist loops multi 1:
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500: /script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
-          500
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png, 500": "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         Artist Loops Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         Which blocks will create the design?: Kurie blokeliai sukurs šį piešinį?
       4-5 artist loops multi 2:
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
-        /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png"
+        "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png"
         Artist Functions Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pasirink
           kartojimo komandas, kurios atitinka šią seką: 5, 10, 15, 20, 25, 30, 35,
           40, 45, 50'
       4-5 artist multi 1:
-        /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
-        /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
-        /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png
-        /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png
+        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         Artist Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         Which blocks draw a rectangle with a perimeter of 100?: Su kuriais blokeliais
           galima nupiešti stačiakampį, kurio perimetras lygus 100?
       4-5 artist multi 2:
-        /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png
-        /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png
-        /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png
-        /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png
+        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+        "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png": "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         Artist Multiple Choice: 'Menininkas: parink teisingą atsakymą'
         Which drawing is symmetric?: Kuris piešinys yra simetriškas?
       4-5 bee conditionals multi 1:
-        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png
-        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png
-        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
-        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
-        /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: '? Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma,
+        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+        "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        0: "? Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma,
           kiek tiksliai. Kurie blokeliai teisingai patikrina ir surenka visą nektarą
-          iš violetinės gėlės?'
-        1: ': Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma,
+          iš violetinės gėlės?"
+        1: ": Violetinė gėlė gali turėti 3, 2 arba 1 nektarą, tačiau nėra žinoma,
           kiek tiksliai. Kurie blokeliai teisingai patikrina ir surenka visą nektarą
-          iš violetinės gėlės?'
+          iš violetinės gėlės?"
         Bee Conditionals Multiple Choice: 'Bitė: parink teisingą atsakymą'
         Choose the best blocks.: Pasirink geriausią atsakymą, kuris išsprendžia galvosūkį.
       4-5 bee debug multi 1:
-        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png
-        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png
-        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png
-        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png
-        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png
-        /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png: /script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png
+        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png": "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         Bee Debug Multiple Choice: 'Bitė: klaidų ieškojimas. Parink teisingą atsakymą'
         Which version of the function will work?: Kurią sudėtinę komandą panaudojus
           bus išspręstas galvosūkis?
       4-5 bee loops multi 1:
-        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png
-        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png
-        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png
-        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png
-        /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png
+        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+        "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png": "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         Bee Loops Multiple Choice: 'Bitė: parink teisingą atsakymą'
         Which blocks will solve the puzzle?: Su kuriais blokeliais galima išspręsti
           šią užduotį?
       4-5 farmer loops multi 1:
-        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png
-        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png
-        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png
-        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png
-        /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500: /script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
-          500
-        Famer Loops Multiple Choice: 'Ūkininkas: parink teisingą atsakymą'
+        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a1.png"
+        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a2.png"
+        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a3.png"
+        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_a4.png"
+        "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png, 500": "/script_assets/4-5_images/farmer/4-5_farmerloops_multi_1_q.png,
+          500"
+        Famer Loops Multiple Choice: "Ūkininkas: parink teisingą atsakymą"
         Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
       4-5 maze conditionals multi 1:
-        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png
-        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png
-        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png
-        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png
-        /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
-          500
+        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+        "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         Maze Conditionals Multiple Choice: 'Labirintas: parink teisingą atsakymą'
         Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
       4-5 maze multi 1:
-        /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png
-        /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png
-        /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png
-        /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png: /script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png
-        /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500: /script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
-          500
+        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
+          500"
         Maze Multiple Choice: 'Labirintas:  parink teisingą atsakymą'
         Which blocks solve the puzzle?: Kurie blokeliai išspręs šią užduotį?
       Baker test of multi can delete:
@@ -694,186 +694,186 @@
           lines of code should be removed so the program will work as intended? Select
           <u>two</u> answers
       K-1 Artist 1 Multi 1:
-        /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
-        /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
-        /script_assets/k_1_images/artist_images/S-E-E.png: /script_assets/k_1_images/artist_images/S-E-E.png
-        /script_assets/k_1_images/artist_images/W-S-S.png: /script_assets/k_1_images/artist_images/W-S-S.png
-        /script_assets/k_1_images/artist_images/rshort_dlong.png, 500: /script_assets/k_1_images/artist_images/rshort_dlong.png,
-          500
+        "/script_assets/k_1_images/artist_images/E-S-S.png": "/script_assets/k_1_images/artist_images/E-S-S.png"
+        "/script_assets/k_1_images/artist_images/E-S.png": "/script_assets/k_1_images/artist_images/E-S.png"
+        "/script_assets/k_1_images/artist_images/S-E-E.png": "/script_assets/k_1_images/artist_images/S-E-E.png"
+        "/script_assets/k_1_images/artist_images/W-S-S.png": "/script_assets/k_1_images/artist_images/W-S-S.png"
+        "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500": "/script_assets/k_1_images/artist_images/rshort_dlong.png,
+          500"
         Multiple Choice: Parink teisingą atsakymą
         Which blocks solve this puzzle?: Kurie blokeliai išspręs šią užduotį?
       K-1 Artist 1 Multi 2:
-        /script_assets/k_1_images/artist_images/E-S-W-N.png: /script_assets/k_1_images/artist_images/E-S-W-N.png
-        /script_assets/k_1_images/artist_images/N-E-S-W.png: /script_assets/k_1_images/artist_images/N-E-S-W.png
-        /script_assets/k_1_images/artist_images/N-S-E-W.png: /script_assets/k_1_images/artist_images/N-S-E-W.png
-        /script_assets/k_1_images/artist_images/N-W-S-E.png: /script_assets/k_1_images/artist_images/N-W-S-E.png
-        /script_assets/k_1_images/artist_images/square.png, 500: /script_assets/k_1_images/artist_images/square.png,
-          500
+        "/script_assets/k_1_images/artist_images/E-S-W-N.png": "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        "/script_assets/k_1_images/artist_images/N-E-S-W.png": "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+        "/script_assets/k_1_images/artist_images/N-S-E-W.png": "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        "/script_assets/k_1_images/artist_images/N-W-S-E.png": "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        "/script_assets/k_1_images/artist_images/square.png, 500": "/script_assets/k_1_images/artist_images/square.png,
+          500"
         Multiple Choice: Parink teisingą atsakymą
         Which blocks draw the square?: Kurie blokeliai nubrėš kvadratą?
       K-1 Artist 2 Multi 1:
-        /script_assets/k_1_images/artist_images/medium_circle.png: /script_assets/k_1_images/artist_images/medium_circle.png
-        /script_assets/k_1_images/artist_images/medium_square.png: /script_assets/k_1_images/artist_images/medium_square.png
-        /script_assets/k_1_images/artist_images/medium_triangle.png: /script_assets/k_1_images/artist_images/medium_triangle.png
-        /script_assets/k_1_images/artist_images/small_rectangle.png: /script_assets/k_1_images/artist_images/small_rectangle.png
-        /script_assets/k_1_images/artist_images/sq+sq.png, 500: /script_assets/k_1_images/artist_images/sq+sq.png,
-          500
+        "/script_assets/k_1_images/artist_images/medium_circle.png": "/script_assets/k_1_images/artist_images/medium_circle.png"
+        "/script_assets/k_1_images/artist_images/medium_square.png": "/script_assets/k_1_images/artist_images/medium_square.png"
+        "/script_assets/k_1_images/artist_images/medium_triangle.png": "/script_assets/k_1_images/artist_images/medium_triangle.png"
+        "/script_assets/k_1_images/artist_images/small_rectangle.png": "/script_assets/k_1_images/artist_images/small_rectangle.png"
+        "/script_assets/k_1_images/artist_images/sq+sq.png, 500": "/script_assets/k_1_images/artist_images/sq+sq.png,
+          500"
         Multiple Choice: Parink teisingą atsakymą
         Which shape do these squares combine to make?: Kokia figūra gausis, kai šie
           kvadratai susijungs?
       K-1 Artist Loops Multi 1:
-        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png
-        /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300: /script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
-          300
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png"
+        "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png, 300": "/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_q.png,
+          300"
         Multiple Choice: Parink teisingą atsakymą
         Which blocks create this picture?: Kurie blokeliai sukurs šį piešinį?
       K-1 Bee 1 Multi 1:
-        /script_assets/k_1_images/bee_images/1nectar+2nectar.png: /script_assets/k_1_images/bee_images/1nectar+2nectar.png
-        /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
-        /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
-        /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
-        /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
+        "/script_assets/k_1_images/bee_images/1nectar+2nectar.png": "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
+        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
+        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
+        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
+        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Kiek sudėjus gausime nektaro?
         Multiple Choice: Parink teisingą atsakymą
       K-1 Bee 1 Multi 2:
-        /script_assets/k_1_images/bee_images/2nectar+2nectar.png: /script_assets/k_1_images/bee_images/2nectar+2nectar.png
-        /script_assets/k_1_images/bee_images/2nectar.png: /script_assets/k_1_images/bee_images/2nectar.png
-        /script_assets/k_1_images/bee_images/3nectar.png: /script_assets/k_1_images/bee_images/3nectar.png
-        /script_assets/k_1_images/bee_images/4nectar.png: /script_assets/k_1_images/bee_images/4nectar.png
-        /script_assets/k_1_images/bee_images/nectar.png: /script_assets/k_1_images/bee_images/nectar.png
+        "/script_assets/k_1_images/bee_images/2nectar+2nectar.png": "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+        "/script_assets/k_1_images/bee_images/2nectar.png": "/script_assets/k_1_images/bee_images/2nectar.png"
+        "/script_assets/k_1_images/bee_images/3nectar.png": "/script_assets/k_1_images/bee_images/3nectar.png"
+        "/script_assets/k_1_images/bee_images/4nectar.png": "/script_assets/k_1_images/bee_images/4nectar.png"
+        "/script_assets/k_1_images/bee_images/nectar.png": "/script_assets/k_1_images/bee_images/nectar.png"
         How many nectars is this?: Kiek sudėjus gausime nektaro?
         Multiple Choice: Parink teisingą atsakymą
       K-1 Digital Footprint Multi 1:
-        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png
-        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png
-        /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
-        /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
+        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png": "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         Multiple Choice: Parink teisingą atsakymą
         Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kuris
           gyvūnas palieka skaitmeninius pirštų antspaudus, kurie jam gali sukelti
           <strong>didžiausią grėsmę</strong>?
       K-1 Getting Loopy Multi 1:
-        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
-        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
-        /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
-        /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
+        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png": "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         How would you simplify this sequence with loops?: Kaip supaprastinti šią kartojimo
           seką?
         Multiple Choice: Parink teisingą atsakymą
       K-1 Happy Maps Multi 1:
-        /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
-        /script_assets/k_1_images/unplugged_images/happy_maps_1q.png: /script_assets/k_1_images/unplugged_images/happy_maps_1q.png
-        /script_assets/k_1_images/unplugged_images/left.png: /script_assets/k_1_images/unplugged_images/left.png
-        /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
-        /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
+        "/script_assets/k_1_images/unplugged_images/down.png": "/script_assets/k_1_images/unplugged_images/down.png"
+        "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png": "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        "/script_assets/k_1_images/unplugged_images/left.png": "/script_assets/k_1_images/unplugged_images/left.png"
+        "/script_assets/k_1_images/unplugged_images/right.png": "/script_assets/k_1_images/unplugged_images/right.png"
+        "/script_assets/k_1_images/unplugged_images/up.png": "/script_assets/k_1_images/unplugged_images/up.png"
         Multiple Choice: Parink teisingą atsakymą
         Which arrow gets the Flurb to the treasure?: Kuri rodyklė nuveda pabaisiuką
           prie lobio?
       K-1 Keep it Private Multi 1:
-        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png
-        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
-        /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
+        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png": "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         Multiple Choice: Parink teisingą atsakymą
         Which information should you <strong>not</strong> share online?: Kurios informacijos
           <strong>nederėtų</strong>skelbti internete?
       K-1 Maze Debugging Multi 1:
-        /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png,
-          700
-        /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
-        /script_assets/k_1_images/move_blocks/N.png: /script_assets/k_1_images/move_blocks/N.png
-        /script_assets/k_1_images/move_blocks/S.png: /script_assets/k_1_images/move_blocks/S.png
-        /script_assets/k_1_images/move_blocks/W.png: /script_assets/k_1_images/move_blocks/W.png
+        "/script_assets/k_1_images/maze_images/EESq.png, 700": "/script_assets/k_1_images/maze_images/EESq.png,
+          700"
+        "/script_assets/k_1_images/move_blocks/E.png": "/script_assets/k_1_images/move_blocks/E.png"
+        "/script_assets/k_1_images/move_blocks/N.png": "/script_assets/k_1_images/move_blocks/N.png"
+        "/script_assets/k_1_images/move_blocks/S.png": "/script_assets/k_1_images/move_blocks/S.png"
+        "/script_assets/k_1_images/move_blocks/W.png": "/script_assets/k_1_images/move_blocks/W.png"
         Multiple Choice: Parink teisingą atsakymą
         Which choice should be the final block?: Kuris blokelis turėtų būti paskutinis?
       K-1 Maze Loops Multi 1:
-        /script_assets/k_1_images/move_blocks/NNNequals.png, 300: /script_assets/k_1_images/move_blocks/NNNequals.png,
-          300
-        /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
-        /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
-        /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
+        "/script_assets/k_1_images/move_blocks/NNNequals.png, 300": "/script_assets/k_1_images/move_blocks/NNNequals.png,
+          300"
+        "/script_assets/k_1_images/move_blocks/r3_N.png": "/script_assets/k_1_images/move_blocks/r3_N.png"
+        "/script_assets/k_1_images/move_blocks/r3_NN.png": "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        "/script_assets/k_1_images/move_blocks/r4_N.png": "/script_assets/k_1_images/move_blocks/r4_N.png"
         Multiple Choice: Parink teisingą atsakymą
         Which repeat block is the same?: Kurie kartojimo blokeliai atlieka tą patį?
       K-1 Maze Loops Multi 2:
-        /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png,
-          240
-        /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
-        /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
-        /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
+        "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240": "/script_assets/k_1_images/move_blocks/SESESEequals.png,
+          240"
+        "/script_assets/k_1_images/move_blocks/r3_ES.png": "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        "/script_assets/k_1_images/move_blocks/r3_S.png": "/script_assets/k_1_images/move_blocks/r3_S.png"
+        "/script_assets/k_1_images/move_blocks/r3_SE.png": "/script_assets/k_1_images/move_blocks/r3_SE.png"
         Multiple Choice: Parink teisingą atsakymą
         Pick the correct repeat block.: Pasirink teisingą kartojimo blokelį.
       K-1 Maze Multiple Choice 2:
-        /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png,
-          500
-        /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
-        /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
-        /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
-        /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
+        "/script_assets/k_1_images/maze_images/maze_WS.png, 500": "/script_assets/k_1_images/maze_images/maze_WS.png,
+          500"
+        "/script_assets/k_1_images/move_blocks/EN.png": "/script_assets/k_1_images/move_blocks/EN.png"
+        "/script_assets/k_1_images/move_blocks/ES.png": "/script_assets/k_1_images/move_blocks/ES.png"
+        "/script_assets/k_1_images/move_blocks/WN.png": "/script_assets/k_1_images/move_blocks/WN.png"
+        "/script_assets/k_1_images/move_blocks/WS.png": "/script_assets/k_1_images/move_blocks/WS.png"
         Maze: Labirintas
         Which answer solves this level?: Kuris atsakymas išsprendžia šią užduotį?
       K-1 Move It Multi 1:
-        /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
-        /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
-        /script_assets/k_1_images/unplugged_images/move_it_1_q.png: /script_assets/k_1_images/unplugged_images/move_it_1_q.png
-        /script_assets/k_1_images/unplugged_images/rightright.png: /script_assets/k_1_images/unplugged_images/rightright.png
-        /script_assets/k_1_images/unplugged_images/upleft.png: /script_assets/k_1_images/unplugged_images/upleft.png
+        "/script_assets/k_1_images/unplugged_images/leftdown.png": "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        "/script_assets/k_1_images/unplugged_images/leftleft.png": "/script_assets/k_1_images/unplugged_images/leftleft.png"
+        "/script_assets/k_1_images/unplugged_images/move_it_1_q.png": "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
+        "/script_assets/k_1_images/unplugged_images/rightright.png": "/script_assets/k_1_images/unplugged_images/rightright.png"
+        "/script_assets/k_1_images/unplugged_images/upleft.png": "/script_assets/k_1_images/unplugged_images/upleft.png"
         Multiple Choice: Parink teisingą atsakymą
         Which algorithm gets the Flurb to the flowers?: Kuris algoritmas nuveda Flurbą
           prie gėlių?
       K-1 Plant a Seed Multi 1:
-        /script_assets/k_1_images/unplugged_images/dirty-teeth.png: /script_assets/k_1_images/unplugged_images/dirty-teeth.png
-        /script_assets/k_1_images/unplugged_images/foot-in-shoe.png: /script_assets/k_1_images/unplugged_images/foot-in-shoe.png
-        /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png
-        /script_assets/k_1_images/unplugged_images/poke-hole.png: /script_assets/k_1_images/unplugged_images/poke-hole.png
+        "/script_assets/k_1_images/unplugged_images/dirty-teeth.png": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+        "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
+        "/script_assets/k_1_images/unplugged_images/poke-hole.png": "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         Multiple Choice: Parink teisingą atsakymą
         Which step should go at the beginning of this algorithm?: Kuris žingsnis turėtų
           būti pačioje algoritmo pradžioje?
       K-1 Plant a Seed Multi 2:
-        /script_assets/k_1_images/unplugged_images/brush-teeth.png: /script_assets/k_1_images/unplugged_images/brush-teeth.png
-        /script_assets/k_1_images/unplugged_images/cover-seed.png: /script_assets/k_1_images/unplugged_images/cover-seed.png
-        /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png: /script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png
-        /script_assets/k_1_images/unplugged_images/water-pot.png: /script_assets/k_1_images/unplugged_images/water-pot.png
+        "/script_assets/k_1_images/unplugged_images/brush-teeth.png": "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        "/script_assets/k_1_images/unplugged_images/cover-seed.png": "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+        "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        "/script_assets/k_1_images/unplugged_images/water-pot.png": "/script_assets/k_1_images/unplugged_images/water-pot.png"
         Multiple Choice: Parink teisingą atsakymą
         Which step should fill in the blank for this algorithm?: Kuris žingsnis turėtų
           užpildyti tuščia algoritmo vietą?
       K-1 Word Search Multi 1:
-        /script_assets/k_1_images/move_blocks/EEES.png: /script_assets/k_1_images/move_blocks/EEES.png
-        /script_assets/k_1_images/move_blocks/EESS.png: /script_assets/k_1_images/move_blocks/EESS.png
-        /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
-        /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png,
-          450
+        "/script_assets/k_1_images/move_blocks/EEES.png": "/script_assets/k_1_images/move_blocks/EEES.png"
+        "/script_assets/k_1_images/move_blocks/EESS.png": "/script_assets/k_1_images/move_blocks/EESS.png"
+        "/script_assets/k_1_images/move_blocks/ESSS.png": "/script_assets/k_1_images/move_blocks/ESSS.png"
+        "/script_assets/k_1_images/search_images/move.png, 450": "/script_assets/k_1_images/search_images/move.png,
+          450"
         Multiple Choice: Parink teisingą atsakymą
         Which blocks spell "MOVE"?: Kurie blokeliai surenka žodį „MOVE“?
       K-1 Word Search Multi 2:
-        /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
-        /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
-        /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
-        /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png,
-          450
+        "/script_assets/k_1_images/move_blocks/EENN.png": "/script_assets/k_1_images/move_blocks/EENN.png"
+        "/script_assets/k_1_images/move_blocks/NENE.png": "/script_assets/k_1_images/move_blocks/NENE.png"
+        "/script_assets/k_1_images/move_blocks/NNEE.png": "/script_assets/k_1_images/move_blocks/NNEE.png"
+        "/script_assets/k_1_images/search_images/jump.png, 450": "/script_assets/k_1_images/search_images/jump.png,
+          450"
         Multiple Choice: Parink teisingą atsakymą
         Which blocks spell "JUMP"?: Kurie blokeliai surenka žodį „JUMP“?
       K-1 Word Search Multi 3:
-        /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png,
-          700
+        "/script_assets/k_1_images/search_images/square.png, 700": "/script_assets/k_1_images/search_images/square.png,
+          700"
         Multiple Choice: Parink teisingą atsakymą
         SET: SET
         SOUTH: SOUTH
         SQUARE: SQUARE
         Which word is spelled?: Kuris žodis yra surinktas?
       K-1 multi 4:
-        /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
-        /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
-        /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
+        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
+        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
+        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         Driver and Helper: Vairuotojas ir Pagalbininkas
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Vienas
           iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.
         Which boy is the <large>helper</large>?: Kuris berniukas yra <large>pagalbininkas</large>?
       K-1 multi 5:
-        /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
-        /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
-        /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
+        "/script_assets/multis/driver.jpg": "/script_assets/multis/driver.jpg"
+        "/script_assets/multis/driver_helper.jpg": "/script_assets/multis/driver_helper.jpg"
+        "/script_assets/multis/helper.jpg": "/script_assets/multis/helper.jpg"
         Driver and Helper: Vairuotojas ir Pagalbininkas
         One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Vienas
           iš berniukų yra <b>vairuotojas</b>. Ir kitas <b>pagalbininkas</b>.
@@ -907,6 +907,6 @@
         George Washington: Džordžas Vašingtonas
         Martha Washington: Marta Vašington
         Presidents: Prezidentai
-        This multiple choice is all about the presidents of the United States.: Šie
-          klausimai su keliais pasirinktinais variantais yra apie JAV prezidentus.
+        This multiple choice is all about the presidents of the United States.: "Šie
+          klausimai su keliais pasirinktinais variantais yra apie JAV prezidentus."
         Who was the first president of the USA?: Kas buvo pirmasis JAV prezidentas?

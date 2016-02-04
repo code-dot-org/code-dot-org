@@ -13,7 +13,7 @@
   "elseCode":"sinon",
   "fill":"remplir 1",
   "fillN":"remplir {shovelfuls}",
-  "fillStack":"remplir les trous avec {shovefuls} ",
+  "fillStack":"remplir les trous avec {shovelfuls} ",
   "fillSquare":"remplir le carré",
   "fillTooltip":"placer 1 unité de terre",
   "finalLevel":"Félicitations ! Tu as résolu l'énigme finale.",

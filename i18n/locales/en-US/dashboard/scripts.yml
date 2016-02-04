@@ -680,6 +680,7 @@ en:
           Functions with Return Values: crwdns54702:0crwdne54702:0
           Canvas and Arrays in Apps: crwdns54703:0crwdne54703:0
           "Practice PT: Create": crwdns54704:0crwdne54704:0
+          Introduction to Digital Assistants: crwdns55883:0crwdne55883:0
         algebraPD3:
           title: crwdns38396:0crwdne38396:0
           description: crwdns37980:0crwdne37980:0
@@ -920,6 +921,7 @@ en:
           Pixelation: crwdns39000:0crwdne39000:0
           Multi2: crwdns41853:0crwdne41853:0
           Markdown Details: crwdns43376:0crwdne43376:0
+          Studio: crwdns55916:0crwdne55916:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1217,6 +1219,7 @@ en:
           Unit 2 Challenge Preview: crwdns49763:0crwdne49763:0
           Unit 2 Challenge: crwdns49764:0crwdne49764:0
           Close & Next Steps: crwdns49765:0crwdne49765:0
+          Lesson Overviews: crwdns55884:0crwdne55884:0
         ECSPD3-Unit3:
           title: crwdns48442:0crwdne48442:0
           description_short: crwdns48443:0crwdne48443:0
@@ -1332,6 +1335,28 @@ en:
           Creating Javascript Objects: crwdns55173:0crwdne55173:0
           Permanent Data Storage: crwdns55174:0crwdne55174:0
           Reading Records: crwdns55175:0crwdne55175:0
+          Search Terms: crwdns55850:0crwdne55850:0
+          Unique IDs, Delete and Update Records: crwdns55851:0crwdne55851:0
+          Import, Export, and Visualize Data: crwdns55852:0crwdne55852:0
+          Interpreting Data Visualizations: crwdns55853:0crwdne55853:0
+          How is Data Collected?: crwdns55854:0crwdne55854:0
+          Using Data in the Real World: crwdns55855:0crwdne55855:0
+          Web Requests and APIs: crwdns55856:0crwdne55856:0
+          Data, Security, and Privacy: crwdns55857:0crwdne55857:0
+          Privacy vs Utility: crwdns55858:0crwdne55858:0
+          Privacy in a Digital World: crwdns55859:0crwdne55859:0
+          Compiling Data: crwdns55860:0crwdne55860:0
+          Cleaning Data: crwdns55861:0crwdne55861:0
+          Designing Data Collection: crwdns55862:0crwdne55862:0
+          Designing for Your User: crwdns55863:0crwdne55863:0
+          Good and Bad Data Visualizations: crwdns55896:0crwdne55896:0
+          Finding Trends with Visualizations: crwdns55897:0crwdne55897:0
+          Check Your Assumptions: crwdns55906:0crwdne55906:0
+          "Practice Create PT: Data App": crwdns55905:0crwdne55905:0
+          Making Data Visualizations: crwdns55917:0crwdne55917:0
+          Creating Summary Tables: crwdns55918:0crwdne55918:0
+          Discover a Data Story: crwdns55919:0crwdne55919:0
+          Rapid Research - Data Innovations: crwdns55920:0crwdne55920:0
         ScienceP3OLPT2:
           title: crwdns49768:0crwdne49768:0
           description_short: crwdns49769:0crwdne49769:0
@@ -1382,6 +1407,7 @@ en:
           description_audience: crwdns50716:0crwdne50716:0
           Halloween 2015: crwdns50717:0crwdne50717:0
           description: crwdns51271:0crwdne51271:0
+          Valentine 2016: crwdns55907:0crwdne55907:0
         iceage:
           title: crwdns51272:0crwdne51272:0
           description_short: crwdns51273:0crwdne51273:0
@@ -1475,3 +1501,31 @@ en:
           Welcome!: crwdns54750:0crwdne54750:0
           Thinking About Implementation: crwdns54751:0crwdne54751:0
           Wrap-Up: crwdns54752:0crwdne54752:0
+          Assessing Computer Models: crwdns55898:0crwdne55898:0
+          (optional) Refresh your connection to Complex Adaptive Systems: crwdns55899:0crwdne55899:0
+        cspunit5:
+          title: crwdns55921:0crwdne55921:0
+          description_short: crwdns55922:0crwdne55922:0
+          description: crwdns55923:0crwdne55923:0
+          Explore PT Prep: crwdns55924:0crwdne55924:0
+          Explore PT: crwdns55925:0crwdne55925:0
+          Create PT Prep: crwdns55926:0crwdne55926:0
+          Create PT: crwdns55927:0crwdne55927:0
+        cspunit4:
+          title: crwdns55928:0crwdne55928:0
+          description_short: crwdns55929:0crwdne55929:0
+          description: crwdns55930:0crwdne55930:0
+          Intro to Data: crwdns55931:0crwdne55931:0
+          Finding Trends with Visualizations: crwdns55932:0crwdne55932:0
+          Check Your Assumptions: crwdns55933:0crwdne55933:0
+          Good and Bad Data Visualizations: crwdns55934:0crwdne55934:0
+          Making Data Visualizations: crwdns55935:0crwdne55935:0
+          Discover a Data Story: crwdns55936:0crwdne55936:0
+          Cleaning Data: crwdns55937:0crwdne55937:0
+          Creating Summary Tables: crwdns55938:0crwdne55938:0
+          Practice PT - Tell a Data Story: crwdns55939:0crwdne55939:0
+          What is Big Data?: crwdns55940:0crwdne55940:0
+          Rapid Research - Data Innovations: crwdns55941:0crwdne55941:0
+          Identifying People with Data: crwdns55942:0crwdne55942:0
+          Privacy Abandoned: crwdns55943:0crwdne55943:0
+          Practice PT - Propose an Innovation: crwdns55944:0crwdne55944:0

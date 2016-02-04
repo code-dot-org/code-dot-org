@@ -7,6 +7,10 @@ require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
 # Manages application-specific configuration and deployment of AWS CloudFront distributions.
 module AWS
   class CloudFront
+
+    ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH)
+    CACHED_METHODS = %w(HEAD GET OPTIONS)
+
     # Use the same HTTP Cache configuration as cdo-varnish
     HTTP_CACHE = HttpCache.config(rack_env)
 
@@ -80,7 +84,9 @@ module AWS
     #  While CloudFront is propagating your changes to edge locations, we cannot determine whether a given edge
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
-      cloudfront = Aws::CloudFront::Client.new
+      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+                                               log_level: :debug,
+                                               http_wire_trace: true)
       ids = CONFIG.keys.map do |app|
         distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
           i.aliases.items.include?(CDO.method("#{app}_hostname").call)
@@ -243,15 +249,15 @@ module AWS
         min_ttl: 0, # required
         allowed_methods: {
           quantity: 7, # required
-          items: %w(HEAD DELETE POST GET OPTIONS PUT PATCH), # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
+          items: ALLOWED_METHODS, # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
           cached_methods: {
             quantity: 3, # required
-            items: %w(HEAD GET OPTIONS), # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
+            items: CACHED_METHODS, # required, accepts GET, HEAD, POST, PUT, PATCH, OPTIONS, DELETE
           },
         },
         smooth_streaming: false,
         default_ttl: 0,
-        max_ttl: 31536000, # =1 year
+        max_ttl: 31_536_000, # =1 year
       }
       behavior[:path_pattern] = path if path
       behavior

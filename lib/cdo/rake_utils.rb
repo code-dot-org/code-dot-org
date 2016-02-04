@@ -2,6 +2,7 @@ require 'os'
 require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
+require 'cdo/hip_chat'
 
 module RakeUtils
 
@@ -25,12 +26,18 @@ module RakeUtils
   end
 
   def self.system_(*args)
-    status, _ = system__ command_ *args
+    status, _ = system__(command_(*args))
     status
   end
 
+  def self.system_with_hipchat_logging(*args)
+    command = command_(*args)
+    HipChat.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
+    system_ command
+  end
+
   def self.system(*args)
-    command = command_ *args
+    command = command_(*args)
     status, output = system__ command
     unless status == 0
       error = RuntimeError.new("'#{command}' returned #{status}")
@@ -87,6 +94,15 @@ module RakeUtils
 
   def self.git_updates_available?()
     `git remote show origin 2>&1 | grep \"local out of date\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
+  end
+
+  def self.git_staged_changes?
+    `git status --porcelain 2>/dev/null | egrep \"^(M|A|D)\" | wc -l`.strip.to_i > 0
+  end
+
+  # Gets the commit hash for the given directory
+  def self.git_latest_commit_hash(dir)
+    `git log -n 1 --format="%H" -- #{dir}`.strip
   end
 
   def self.ln_s(source, target)

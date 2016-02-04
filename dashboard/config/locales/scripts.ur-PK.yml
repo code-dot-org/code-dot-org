@@ -162,13 +162,15 @@
             Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
+          title: "اینا اور ایلسا کے ساتھ کوڈ"
+          description: "آئیں اینا اور ایلسا کو جوائن کرنے کے لیے کوڈ کو استعمال کریں
+            اورسیکھیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔ آپ
+            سنوفلیکس اور پیٹرنز ایسے کری-ایٹ کریں گے جیسا کہ آپ آئس-اسکیٹنگ کر رہے
+            ہوں اور ایسی یادگار سردیاں منائیں جو بعد میں آپ اپنے دوستوں کے ساتھ شیئر
+            بھی کرسکیں!"
           Artist: Artist
-          description_short: Let's use code to join Anna and Elsa as they explore
-            the magic and beauty of ice.
+          description_short: "آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن
+            کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔"
         course4:
           description_short: Students taking Course 4 should have already taken Courses
             2 and 3.
@@ -181,7 +183,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: Variables
+          Variables: "متغیرات"
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -230,7 +232,7 @@
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: Variables
+          Variables: "متغیرات"
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -703,7 +705,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: Variables
+          Variables: "متغیرات"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -744,6 +746,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1002,6 +1005,7 @@
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1368,6 +1372,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1495,6 +1500,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1548,6 +1575,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1631,7 +1659,7 @@
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft کوڈ کی گھڑی
           description_short: Explore a Minecraft world through code
           description: Use blocks of code to take Steve or Alex on an adventure through
             this Minecraft world
@@ -1650,3 +1678,40 @@
           Welcome!: Welcome!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Wrap-Up
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

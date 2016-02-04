@@ -160,7 +160,7 @@ DropletAutocompleteParameterTooltipManager.prototype.showParamDropdownIfNeeded_ 
 };
 
 DropletAutocompleteParameterTooltipManager.prototype.updateParameterTooltip_ = function (aceEditor, functionName, currentParameterIndex) {
-  if (!this.tooltipConfig.tooltipsEnabled || !this.dropletTooltipManager.hasDocFor(functionName)) {
+  if (!this.tooltipConfig.tooltipsEnabled || !this.dropletTooltipManager.getDocFor(functionName)) {
     return;
   }
   var tooltipInfo = this.dropletTooltipManager.getDropletTooltip(functionName);
@@ -257,6 +257,10 @@ DropletAutocompleteParameterTooltipManager.gatherCompletions = function (editor,
   if (this.overrideCompleter) {
     var allCompleters = editor.completers;
     editor.completers = [ this.overrideCompleter ];
+
+    // Ensure that autoInsert is off so we don't insert immediately when there is only one option:
+    editor.completer.autoInsert = false;
+
     DropletAutocompleteParameterTooltipManager.originalGatherCompletions.call(this, editor, callback);
     editor.completers = allCompleters;
   } else {

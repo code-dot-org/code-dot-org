@@ -28,7 +28,9 @@
   add_teacher_form:
     code:
       label: 'Dodajte učitelja:'
-      placeholder: Šifra odjeljenja (ABCDEF)
+      placeholder: "Šifra odjeljenja (ABCDEF)"
+      instructions: Please enter the code shared with you by your teacher. It's a
+        6 letter code like "ABCDEF".
     submit: Dodaj učitelja
   add_hint_form:
     placeholder: Molimo unesite vaš prijedlog
@@ -39,6 +41,7 @@
   puzzle: Zadatak
   trophies: Trofeji
   courses: Tečajevi
+  unplugged_activity: Izvanmrežna aktivnost
   of: od
   more: VIŠE
   less: MANJE
@@ -67,8 +70,8 @@
     need_confirmation: Nisi primio upute za potvrdu?
     need_unlock: Nisi primio upute za otključavanje?
   signup_form:
-    student_count: '%{count} učenika se već prijavilo.'
-    teacher_count: '%{count} učitelja se već prijavilo.'
+    student_count: "%{count} učenika se već prijavilo."
+    teacher_count: "%{count} učitelja se već prijavilo."
     overview_student: Prijavite se za račun kako biste mogli pratiti svoj napredak.
       Vaša e-pošta koristi se prvenstveno kako bismo vam omogućili prijavu i ponovno
       dobijanje lozinke. Za više informacija pogledajte naša <a href="http://code.org/privacy">Pravila
@@ -112,7 +115,7 @@
     remember: Zapamti me
     submit: Prijava
   signin:
-    try_heading: Želite probati kodiranje bez prijave?
+    try_heading: "Želite probati kodiranje bez prijave?"
     try_hoc: Prvo isprobaj Sat programiranja
     try_20hours: Probajte naš 20-satni Uvod u informatiku
   signinsection:
@@ -140,12 +143,12 @@
       Mark Zuckerberg Angry Birds i Plants vs. Zombies! :-) \n%{name}\n"
   follower:
     invite_sent: Pozivnica poslana
-    added_teacher: '%{name} dodan kao vaš učitelj'
+    added_teacher: "%{name} dodan kao vaš učitelj"
     registered: Registrirali ste se za %{section_name}.
     error:
       signed_in: Molimo vas da se odjavite prije nastavka
       username_not_found: Korisničko ime %{username} nije pronađeno
-      username_in_use: '%{username} se već koristi, izaberite drugo korisničko ime'
+      username_in_use: "%{username} se već koristi, izaberite drugo korisničko ime"
       no_teacher: Nije moguće pronaći bilo koga prijavljenog sa '%{teacher_email_or_code}'.
         Molimo zatražite da se prijave ovdje i pokušajte ih ponovo dodati
       section_not_found: Nije moguće pronaći odjeljenje s kodom '%{section_code}'.
@@ -189,7 +192,7 @@
         školi.
       msg_visit_website: Posjetite mrežnu stranicu
     providers:
-      apple_itunes: $10 iTunes Gift Card
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB prostora na Dropbox-u
@@ -198,7 +201,7 @@
       ea_fifa: FIFA Soccer 13 (PC preuzimanje igre)
       ea_simcity: SimCity 4 Deluxe Edition (PC preuzimanje igre)
       ea_pvz: Plants vs. Zombies (PC preuzimanje igre)
-      skype: $10 Skype credit
+      skype: "$10 Skype credit"
     msg:
       choose: 'Odaberite nagradu:'
       choose_teacher: 'Kliknite na logo da biste zatražili svoju nagradu:'
@@ -244,9 +247,9 @@
     destroy: Uništi
     back: Nazad
     confirm: Jesi li siguran?
-    created: '%{model} je uspješno stvoren.'
-    updated: '%{model} je uspješno ažuriran.'
-    destroyed: '%{model} je uspješno izbrisan.'
+    created: "%{model} je uspješno stvoren."
+    updated: "%{model} je uspješno ažuriran."
+    destroyed: "%{model} je uspješno izbrisan."
     access_denied: Nemate pristup ovom %{model}.
   nav:
     header:
@@ -277,7 +280,7 @@
       puzzle_map: Faze
       prizes: Prikupi svih %{total_trophies} trofeja i osvoji nagrade!
       prize_earned: Svi %{total_trophies} trofeji su prikupljeni. Nagrada je osvojena!
-      prize_us_only: (samo za američke učenike)
+      prize_us_only: "(samo za američke učenike)"
       prizes_link: više informacija
   teacher:
     answer: Odgovor
@@ -285,67 +288,13 @@
     title:
       one: 'Vaš učitelj:'
       other: 'Vaši učitelji:'
-    remove: (ukloni učitelja)
+    remove: "(ukloni učitelja)"
     confirm:
       remove: Jeste li sigurni da želite ukloniti ovog učitelja?
-    tools: Alati za učitelja
-    followers:
-      section: 'Odjeljenje:'
-      stages: 'Faze za prikaz:'
-      show_past: 'Pokaži dosadašnje aktivnosti učenika (%{bullet_html}):'
-      levels_key: Ključ nivoa
-      perfect: Završeno, savršeno
-      completed: Završeno, ali uz uporabu previše blokova
-      tried: Pokušano, ali nezavršeno
-      not_tried: Još nije pokušano
-      activity: Označava učeničke aktivnosti u zadnjih %{hours} %{plural}
-      no_section: Nema dodijeljenog odjeljenja
-      trophies: Trofeji
     students:
-      name: Ime
-      username: Korisničko ime
-      password: Lozinka
-      manage: Upravljanje učenicima
       dashboard: Idi na upravljačku ploču učitelja
-      add: Dodavanje učenika
-      remove: uklanjanje učenika
-      confirm_remove: Jeste li sigurni da želite ukloniti ovog učenika?
-      help_reassign: Da biste podijelili razred u više odjeljenja, odaberite učenike
-        da im dodijelite novo odjeljenje.
-      help_register: Umjesto da potrošite puno vremena pojedinačno uvozeći podatke
-        o učenicima, možete brzo napraviti svoj razred tako da ih zamolite da se sami
-        prijave. Vaši učenici će trebati odabrati korisnička imena i lozinke, ali
-        od njih NEĆE biti zatraženo da daju adresu e-pošte. Ako učenik zaboravi svoju
-        lozinku, bit ćete u mogućnosti da je resetirate.
-      register: Zamolite učenike da se sami registriraju
-      vist: Zamolite učenike da posjete
-      section_code: 'i unesite svoju šifru za odjeljenje:'
-      first_please: Molim, prvo %{add_section}
-      for: Za
-      enter: 'unesite:'
-    sections:
-      add: Dodavanje odjeljenja
-      manage: Upravljanje odjeljenjima
-      section: Odjeljenje
-      students: Učenici
-      section_code: Šifra odjeljenja
-      add_section_code: Dodavanje učeničke šifre odjeljenja
-      secret: Tajni način
-      grade: Razred
-      course: Tečaj
-      rename: preimenuj
-      edit: uredi
-      delete: izbriši
-      confirm_delete: Jeste li sigurni da želite izbrisati ovo odjeljenje?
-      email: Poslati e-poštom
-    rollup: Upravljačka ploča napretka
-    activity: Nedavna aktivnost razreda
-    user_not_found: Učitelj ili učenik nije pronađen
-    cant_remove_student_no_email: '%{student_name} se ne može ukloniti kao vaš učenik
-      jer %{student_name} nema registriranu adresu e-pošte'
-    cant_remove_teacher_no_email: '%{teacher_name} ne može biti uklonjen kao vaš učitelj
-      jer niste registrirali adresu e-pošte'
-    student_teacher_disassociated: '%{teacher_name} je uklonjen kao učitelj za %{student_name}'
+    user_not_found: Učitelj nije pronađen.
+    student_teacher_disassociated: Uklonili ste %{teacher_name} kao svog učitelja.
     panel:
       answer_viewer: Pregled odgovora
       student: Učenik
@@ -359,10 +308,10 @@
   user:
     email_confirm_needed: 'E-mail adresa nije potvrđena:'
     email_confirm_needed_required: 'Vaša e-mail adresa %{email} nije još potvrđena:'
-    email_confirm_wrong_email: (Kriva e-mail adresa?)
+    email_confirm_wrong_email: "(Kriva e-mail adresa?)"
     email_resend_confirm: Ponovno slanje uputa za potvrđivanje
-    new_password_hint: (ostavite prazno ako ne želite promijeniti)
-    current_password_hint: (za potvrdu promjene treba nam vaša trenutna lozinka)
+    new_password_hint: "(ostavite prazno ako ne želite promijeniti)"
+    current_password_hint: "(za potvrdu promjene treba nam vaša trenutna lozinka)"
     delete: Izbrišite svoj račun
     delete_text: Klikom na donji gumb izbrisati ćete svoj račun.
     delete_text_teacher_note: 'Napomena: brisanjem računa neće se izbrisati i račune
@@ -371,17 +320,13 @@
   user_level:
     completed: Završen
     tried: Pokušan
-  user_stats:
-    recent_activity: Nedavna aktivnost
-    show_more: Pokaži više
-    classroom_activity: Izvanmrežna aktivnost
   home:
     title: Code Studio
     description: Code Studio je početna stranica online tečajeva koje su stvorili
       Code.org
-    lines_of_code: '%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI'
-    lines_of_code_linebreak: '%{lines_count} LINIJA KODA <br/> KOJE JE NAPISALO %{students_count}
-      MILIJUNA UČENIKA'
+    lines_of_code: "%{lines_count} LINIJA KODA KOJE SU NAPISALI UČENICI"
+    lines_of_code_linebreak: "%{lines_count} LINIJA KODA <br/> KOJE JE NAPISALO %{students_count}
+      MILIJUNA UČENIKA"
     all_courses: Pregled tečajeva 1, 2 i 3
     lesson_plans: Nastavni planovi
     signin_message: Jeste li već registrirani? %{link}
@@ -420,10 +365,10 @@
     test_videos_help: Isprobajte naš novi video player u školi
     try_beta_courses: Novo! Isprobaj naše beta tečajeve za učenike razredne nastave
     use_as_teacher: Koristite ovo sjedište kao učitelj
-    heading_hoc2014: <h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>
-    heading_elementary: <h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>
-    heading_apps: <h2>Zabava za</h2><h1>sve</h1>
-    heading_legacy: <h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>
+    heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
+    heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
+    heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
+    heading_legacy: "<h2>Naš općeniti tečaj za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: Probajte Code Studio tečaj
     choose_next_course: Probajte Code Studio tečaj odabirom sljedećih opcija niže
@@ -432,9 +377,10 @@
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije
       i kodirati.
+    try_hour_of_code: Pokušajte sat vremena programiranja!
   gender:
     male: Muško
-    female: Žensko
+    female: "Žensko"
     none: Radije ne bih odgovorio
   user_type:
     student: Učenik
@@ -448,15 +394,25 @@
       napraviti ovaj tutorijal.
     help_from_html_old: Inženjeri iz Googlea, Microsofta, Facebooka i Twittera su
       pomogli napraviti ove materijale za učenje.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Sva prava pridržana.<br/> Plants vs. Zombies&trade; & &copy; 2014 Electronic
-      Arts Inc. Sva prava pridržana.
-    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
-      Ltd. (sva prava pridržana). < br / > Plants vs Zombies &#8482; &amp; © %{current_year}
-      Electronic Arts Inc. (sva prava pridržana).
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Sva prava pridržana.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Sva prava pridržana.
+      < br / > Snježno kraljevstvo &#8482; © %{current_year} Disney. Sva prava pridržana.
+      < br / > Ledeno doba &#8482; © %{current_year} 20th Century Fox. Sva prava pridržana.
+      < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio zabava D. o. o. Sva
+      prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
+      Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
+      znak i © 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Sva prava pridržana.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Sva prava pridržana.
+      < br / > Snježno kraljevstvo &#8482; © %{current_year} Disney. Sva prava pridržana.
+      < br / > Ledeno doba &#8482; © %{current_year} 20th Century Fox. Sva prava pridržana.
+      < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio zabava D. o. o. Sva
+      prava pridržana. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic
+      Arts Inc Sva prava pridržana. < br / > The amazing world of Gumball je zaštitni
+      znak i © 2015 Cartoon Network.
     powered_by_aws: Potpomognuto s Amazon Web Services
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour
-      of Code&reg; su zaštitni znaci tvrtke Code.org.'
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotip i Hour
+      of Code&reg; su zaštitni znaci tvrtke Code.org."
     copyright: Autorska prava
     more: Više
     feedback: Pošaljite povratne informacije
@@ -471,6 +427,7 @@
     built_on_code_studio: 'Izradio: Code Studio'
     make_my_own_app: Izradi moju aplikaciju
     how_it_works: Kako radi
+    try_hour_of_code: Pokušajte sat vremena programiranja!
   reference_area:
     title: Trebate pomoć?
     subtitle: Pogledajte ove videozapise i savjete
@@ -537,12 +494,12 @@
       unused: Neiskorišteni nivoi
   upsell:
     hoc:
-      title: Hour of Code
+      title: Klasični labirint
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
       title: Flappy kôd
-      body: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
-        tutorijal izrade Flappy kôda!
+      body: "Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš
+        tutorijal izrade Flappy kôda!"
     20-hour:
       title: Ubrzani tečaj
       body: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike.
@@ -576,7 +533,7 @@
     activity_count: U proteklih <b>%{days}</b> dana, učenici su napravili <b>%{count}</b>
       aplikacija i slika pisanjem vlastitih računalnih programa. Kliknite na slike
       i snimke ekrana da biste vidjeli svaki program na djelu.
-    want_to_make_your_own: Želite li napraviti svoj vlastiti?
+    want_to_make_your_own: "Želite li napraviti svoj vlastiti?"
     more: Više &rarr;
     caption_by_name_age: od %{name}, dob %{age}
     caption_time_ago: prije %{time_ago}
@@ -592,7 +549,7 @@
     feedback: Slanje povratnih informacija
     report_bug: Prijavi grešku
     support: Dobivanje pomoći
-    support_url: //support.code.org
+    support_url: "//support.code.org"
   multi:
     wrong_title: Netočan odgovor
     wrong_body: Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!
@@ -652,8 +609,8 @@
           description: ''
         flappy:
           title: Flappy kôd
-          description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
-            naš tutorijal izrade Flappy kôda!
+          description: "Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
+            naš tutorijal izrade Flappy kôda!"
         jigsaw:
           title: Slagalica
           description: ''

@@ -4,6 +4,11 @@ class AdminReportsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
+    # Stub the DB[:forms] table (used by :hoc_signups).
+    DB.stubs(:[]).returns(stub(:where => stub(:group => stub(:group_and_count => stub(:order => stub(:all => []))))))
+    # Stub used by :admin_stats.
+    Properties.stubs(:get).returns(nil)
+
     @admin = create(:admin)
     sign_in(@admin)
 
@@ -28,9 +33,12 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :admin_concepts
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
+  generate_admin_only_tests_for :debug
   generate_admin_only_tests_for :funometer
-  # TODO(asher): Add :funometer_by_script and :funometer_by_script_level after fixing routing.
-  # TODO(asher): Add :hoc_signups after fixing the pegasus-test DB issue.
+  generate_admin_only_tests_for :level_answers
+  generate_admin_only_tests_for :funometer_by_script, script_id: 1
+  generate_admin_only_tests_for :funometer_by_script_level, script_id: 1, level_id: 1
+  generate_admin_only_tests_for :hoc_signups
 
   test 'should get admin progress page' do
     get :admin_progress

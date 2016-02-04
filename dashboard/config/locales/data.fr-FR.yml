@@ -13,17 +13,17 @@
           Artist2: Processus 7
           Unplug5: Processus 8
           Farmer: Processus 9
-          Unplug6: Étape 10 
-          Artist3: Étape 11 
-          Unplug7: Étape 12 
-          Farmer2: Étape 13 
-          Unplug8: Étape 14 
-          Artist4: Étape 15 
-          Unplug9: Étape 16 
-          Farmer3: Étape 17 
-          Unplug10: Étape 18 
-          Artist5: Étape 19 
-          Unplug11: Étape 20 
+          Unplug6: "Étape 10 "
+          Artist3: "Étape 11 "
+          Unplug7: "Étape 12 "
+          Farmer2: "Étape 13 "
+          Unplug8: "Étape 14 "
+          Artist4: "Étape 15 "
+          Unplug9: "Étape 16 "
+          Farmer3: "Étape 17 "
+          Unplug10: "Étape 18 "
+          Artist5: "Étape 19 "
+          Unplug11: "Étape 20 "
         Hour of Code:
           desc: Heure de Code
           Maze: Processus 1
@@ -34,7 +34,7 @@
           desc: Rebond (bêta)
           Bounce: Processus 1
         Builder Levels:
-          desc: Énigmes créées par l'utilisateur (bêta)
+          desc: "Énigmes créées par l'utilisateur (bêta)"
           Custom: Processus 1
         Flappy Levels:
           desc: Flappy Bird
@@ -56,7 +56,7 @@
           Bounce: Processus 1
           Studio: Processus 2
         builder:
-          desc: Énigmes créées par l'utilisateur (bêta)
+          desc: "Énigmes créées par l'utilisateur (bêta)"
           Custom: Processus 1
         flappy:
           desc: Flappy Bird
@@ -126,7 +126,7 @@
     level:
       instructions:
         maze_2_2: 'Peux-tu m''aider à attraper le vilain cochon ? Assemble deux blocs
-          « avancer plus » et clique sur « Démarrer » pour m''aider à y arriver. '
+          «Avancer» et clique sur «Démarrer» pour m''aider. '
         maze_2_1: Ce cochon me hérisse les plumes. Aide-moi à l'atteindre !
         maze_2_2_5: Trace le chemin et amène-moi à ce stupide cochon. Évite les TNT
           ou les plumes vont voler !
@@ -136,15 +136,15 @@
           pourrais me fâcher !
         maze_2_5: Il y a un moyen d'attraper ce stupide cochon en 2 blocs seulement.
           Peux-tu le trouver ?
-        maze_2_6: Essaie de me faire aller jusqu'à l'intrus vert à l'aide de seulement
-          trois blocs.
+        maze_2_6: Essaie de me faire aller jusqu'à l'intrus vert avec juste trois
+          blocs.
         maze_2_7: Aide-moi à en finir avec ce vilain cochon en utilisant le moins
           de blocs possible. Essaie d'utiliser plusieurs blocs « répéter ».
         maze_2_8: 'Si un bloc est gris, tu ne peux pas le supprimer. Résous cette
           énigme en utilisant le bloc « répéter 3 fois ». Essaie d''y mettre ces trois
           blocs : avancer, avancer, tourner.'
-        maze_2_9: 'OK, essaie le nouveau bloc « répéter jusqu''à » : il se répétera
-          jusqu''à ce que j''atteigne l''ennuyeux cochon.'
+        maze_2_9: 'Ok, essaie le nouveau bloc « répéter jusqu''à » : il se répétera
+          jusqu''à ce que j''atteigne ce cochon agaçant.'
         maze_2_10: OK, une dernière fois pour s'entraîner. Peux-tu résoudre ce puzzle
           à l'aide de seulement 4 blocs ?
         maze_2_11: Chère personne. Moi zombie. Moi faim. Doit… attraper… tournesol…
@@ -152,9 +152,8 @@
         maze_2_12: OK, c'est la même chose, en légèrement différent. Peux-tu le faire
           en seulement 5 blocs ?
         maze_2_13: 'Utilise le nouveau bloc « si » et laisse moi décider du moment
-          pour tourner. Conseil : tu n''as besoin que d''un bloc de plus, mais apprends
-          comment nous avons fait afin que tu puisses faire tout seul la prochaine
-          fois.'
+          où je tourne. Conseil : tu n''as besoin que d''un bloc de plus, mais apprend
+          comment il faut faire pour que tu puisses faire tout seul la prochaine fois.'
         maze_2_14: OK, c'est la même chose que le puzzle précédent, mais tu dois te
           rappeler de comment tu as utilisé le bloc « si » et le bloc « répéter »
           ensemble.
@@ -175,7 +174,7 @@
           sur les lignes grises de l'image.
         turtle_1_2: 'Maintenant, trace un carré. Note : utilise ta couleur préférée
           en la choisissant dans le nouveau bloc « choisir la couleur ».'
-        turtle_1_3: Faire un carré à l'aide de seulement 3 blocs.
+        turtle_1_3: Faire un carré avec juste 3 blocs.
         turtle_1_4: 'Trace un triangle dont les côtés sont tous de couleurs différentes,
           en utilisant l''option « couleur au hasard » qui choisit une couleur différente
           à chaque fois. Astuce : tu devras déterminer jusqu’où tourner en cliquant
@@ -188,9 +187,9 @@
         turtle_1_7: OK, compliquons un peu les choses. Essaye de dessiner ces lunettes
           vertes. Les carrés font 100 pixels de côté, et ils sont reliés par une barre
           de 50 pixels. N'oublie pas de dessiner en vert !
-        turtle_1_8: OK, essayez de comprendre ce qui se passe si vous exécutez ce
-          code (ou cliquez sur « Démarrer » pour l'essayer). Ensuite, répétez-le suffisamment
-          de fois pour finir le dessin. Les couleurs seront différentes à chaque fois.
+        turtle_1_8: Ok, essaie de comprendre ce qui se passe si tu exécutes ce code
+          (ou clique sur « Démarrer » pour l'essayer). Ensuite, répète le jusqu'à
+          terminer le dessin. Les couleurs seront différentes à chaque fois.
         turtle_1_9: Vois-tu par quel nombre tu dois remplacer les points d'interrogation
           pour dessiner un cercle ?
         turtle_1_10: 'Tu l''as fait ! Maintenant, dessine tout ce que tu veux. Par
@@ -243,8 +242,8 @@
         maze_karel_1_7: Ouah, j'ai trouvé un trou très profond ! Je ne sais pas de
           combien de pelletées de terre je dois le remplir. Peux-tu écrire un programme
           qui le remplit jusqu'à ce que le terrain soit régulier ?
-        maze_karel_1_8: aide moi à remplir le trou à l'extrémité du champ, à l'aide
-          du moins de blocs possible.
+        maze_karel_1_8: Aide moi à remplir le trou à l'extrémité du champ avec le
+          moins de blocs possible.
         maze_karel_1_9: 'Guide-moi pour enlever toutes ces tas de saleté. Essaye d''utiliser
           aussi peu de blocs que possible. Astuce : essaye d''utiliser un bloc « tant
           que ».'
@@ -354,20 +353,19 @@
           bien. Peux-tu repérer le problème et le corriger afin que je puisse aplanir
           mon champ et qu'il soit prêt pour la plantation ?
         maze_karel_debug_seq_2: Qu'est-ce qui ne va pas dans ce programme ? Quelle
-          correction pouvez-vous effectuer afin que je puisse enlever cette motte
-          de terre ?
-        maze_karel_debug_repeat: Déboguez ce programme pour moi afin que mon terrain
-          soit beau et plat.
+          correction dois-tu faire pour que je puisse enlever cette motte de terre ?
+        maze_karel_debug_repeat: Débogue ce programme pour que mon terrain soit beau
+          et plat.
         maze_karel_debug_while: Comment devrais-tu modifier ce programme pour m'aider
           à combler le trou ?
-        maze_karel_debug_if: À l'aide ! Corrigez ce programme afin que je puisse aplanir
-          complètement mon champ.
-        maze_karel_debug_if_else: Déboguez ce programme afin que je remplisse tous
-          les trous et rase toutes les mottes.
-        maze_karel_debug_function_1: Quelle modification pouvez-vous effectuer dans
-          ce programme pour m'aider à retirer toutes les mottes ?
-        maze_karel_debug_function_2: Peux-tu déboguer ce programme pour moi afin que
-          je puisse aplanir mon champ ?
+        maze_karel_debug_if: A l'aide! Répare ce programme afin que mon terrain soit
+          complètement plat.
+        maze_karel_debug_if_else: Débogue ce programme pour que je puisse remplir
+          les trous et supprimer tous les tas.
+        maze_karel_debug_function_1: Que dois-tu changer dans ce programme pour m'aider
+          à retirer toutes les mottes ?
+        maze_karel_debug_function_2: Peux-tu me déboguer ce programme pour que je
+          puisse aplanir mon champ ?
         maze_karel_debug_function_3: Modifiez ce programme pour que je rase toutes
           les mottes présentes sur mon terrain.
         turtle_5_1: Essayez d'exécuter ce programme, et apportez-y des modifications
@@ -396,7 +394,7 @@
           différent à la place.)
         maze_3_1: Je dois atteindre ce cochon ! Écrivez deux appels à move(); pour
           que je puisse retrouver mes œufs.
-        maze_3_2: Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon.
+        maze_3_2: "Écrivez-moi un programme pour que je puisse aller jusqu'à ce cochon."
         maze_3_3: Comment puis-je atteindre le cochon ? Assurez-vous que je ne trébuche
           pas sur la caisse pleine d'explosifs !
         maze_3_4: Argh ! Écrivez-moi un programme qui me permette d'éviter les explosifs
@@ -435,8 +433,8 @@
           sur « Démarrer » quand vous êtes prêt.
         flappy_1: Attache un bloc au bloc « lors d'un clic », puis clique sur « Démarrer ».
           Clique sur l'écran ou touche le pour déplacer Flappy vers la cible.
-        flappy_2: À présent, nous avons ajouté le sol. Attache un bloc au bloc « lorsque
-          le sol est touché ». Ton code doit « terminer le jeu » lorsque Flappy s'écrase.
+        flappy_2: "À présent, nous avons ajouté le sol. Attache un bloc au bloc « lorsque
+          le sol est touché ». Ton code doit « terminer le jeu » lorsque Flappy s'écrase."
         flappy_3: Le bloc « quand la partie démarre » te permet d'exécuter du code
           au démarrage de ton jeu.  Essaie de régler la vitesse du niveau et le battement
           d'ailes.
@@ -465,9 +463,9 @@
         flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
           « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
           la cible.
-        flappy_k1_3: À présent, nous avons ajouté du sol. Attachez un bloc au bloc
+        flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
-          Flappy s'écrase.
+          Flappy s'écrase."
         flappy_k1_4: Le bloc « lors du lancement » vous permet d'exécuter du code
           au démarrage de votre jeu.  Essayez de régler la vitesse du niveau et le
           battement d'ailes.
@@ -601,25 +599,27 @@
         studio_iceage_click_hello: Pouvez-vous aider Sid à faire un dernier appel
           à ses amis quand on clique sur lui? N'oubliez pas de cliquer sur lui, après
           avoir cliqué sur sur exécuter.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to "icebergs" and set Sid’s speed to fast,
-          then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_move_events: Scrat est toujours à la recherche de glands! Aide-le
+          à faire un tour en attachant le bloc Déplacer à chacun des évènements et
+          en inversant le sens de déplacement des flèches. Quand tu auras terminé,
+          clique sur Exécuter et essaie de récolter tous les glands.
+        studio_iceage_sound_and_points: Nous avons affiché la majeure partie du code
+          qui permet de déplacer Grand-mère à gauche et à droite ainsi que le code
+          pour déplacer Sid sur l'écran. Peux-tu terminer le code et ajouter des blocs
+          à l'évènement "quand le personnage touche" pour à la fois émettre un son
+          et marquer un point quand Sid et Grand-Mère entrent en contact? Appuie sur
+          Exécuter pour lancer le jeu.
+        studio_iceage_warn_ice_age: Tout le monde doit se déplacer plus vite car un
+          nouvel âge de glace arrive! Change le fond d'écran en un paysage glacé et
+          règle la vitesse de Sid sur rapide, ensuite appuie sur Executer et envoie
+          le avertir Diego.
+        studio_iceage_throw_hearts: Sid veut faire savoir à sa grand-mère qu'il l'aime.
+          Utilise la commande "Envoyer" afin que Sid (personnage 1) envoie des coeurs
+          à sa grand-mère (personnage 2)! Donne à la grand-mère une expression joyeuse
+          quand elle reçoit les coeurs.
+        studio_iceage_free_play: Il est temps pour toi de créer ton propre jeux ou
+          ton histoire! Quand tu auras fini, appuie sur Terminer pour que tes amis
+          puissent essayer ton jeux sur leur téléphone, tablette ou ordinateur!
         studio_gumball_hello1: Anaïs souhaite se faire de nouveaux amis. Pouvez-vous
           l'aider à dire "bonjour" en bougeant le bloc "say" jusqu'à la fenêtre d'utilisation
           et taper le mot "bonjour" à l'intérieur?
@@ -719,7 +719,7 @@
         Unplug4: Algorithmes
         Unplug5: Fonctions
         Unplug6: Instructions conditionnelles
-        Unplug7: Écriture de chansons
+        Unplug7: "Écriture de chansons"
         Unplug8: Abstraction
         Unplug9: Les relais
         Unplug10: Internet
@@ -798,12 +798,18 @@
         frozen_loops: Introduction aux boucles
         frozen_functions: Introduction aux fonctions
         playlab_intro: Introduction au Labo
-        playlab_events: Évènements du Play Lab
+        playlab_events: "Évènements du Play Lab"
         playlab_repeat_forever: Play Lab Répétition Infinie
         tutorial_puzzle_challenge: Tutoriel Puzzle Challenge
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - événements
         infinity_playlab_repeat_forever: Play Lab Répétition Infinie
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -861,9 +867,9 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Évènements
         gumball_repeat: Gumball Hour of Code - Instructions Répéter
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_intro: Hour of Code avec l'Âge de Glace - Introduction
+        iceage_events: Hour of Code avec l'Âge de Glace - Evènements
+        iceage_repeat: Hour of Code avec l'Âge de Glace - Commandes de répétition
     callout:
       text:
         drag_blocks: Attrape un bloc « avancer plus » et attache-le sous l'autre bloc
@@ -891,10 +897,10 @@
           le bon nombre de degrés à tourner
         repeat_blocks: Utiliser le bloc « Repeat » et enroulez-le autour des blocs
           dans l'espace de travail
-        repeat_blocks_1: (1) Utilise ce bloc et place-le autour des blocs gris dans
-          l'espace de travail
-        repeat_blocks_2: (2) Fais glisser le bloc «Répéter» ici et place les blocs
-          gris à l'intérieur
+        repeat_blocks_1: "(1) Utilise ce bloc et place-le autour des blocs gris dans
+          l'espace de travail"
+        repeat_blocks_2: "(2) Fais glisser le bloc «Répéter» ici et place les blocs
+          gris à l'intérieur"
         snowflake_dropdown: Utilise ce menu déroulant pour créer différents flocons
           de neige !
         degrees_per_side: Divisez 360 ar le nombre de côtés pour obtenir la taille
@@ -912,8 +918,8 @@
         edit_function: Cliquez ici pour modifier votre fonction.
         create_function: Clique ici pour ouvrir la fenêtre "Fonctions" et clique ensuite
           sur le bouton "Créer une fonction".
-        house_hint: Ça n'est pas grave si l'image ne ressemble pas encore à une maison.
-          Nous règlerons ça dans la prochaine épreuve.
+        house_hint: "Ça n'est pas grave si l'image ne ressemble pas encore à une maison.
+          Nous règlerons ça dans la prochaine épreuve."
         edit_draw_square: Utilise ce bouton pour éditer la fonction et ajouter la
           boucle.
         edit_get_nectar: Utilise ce bouton pour éditer la fonction et changer la direction
@@ -955,8 +961,8 @@
           pour dessiner un triangle
         edit_add_parameter: Clique sur "éditer" pour ajouter un paramètre dans ta
           fonction
-        add_and_drag_parameter: Écris le nom de ton paramètre ici, clique sur ajouter,
-          et glisse-le ensuite dans la définition de ta fonction
+        add_and_drag_parameter: "Écris le nom de ton paramètre ici, clique sur ajouter,
+          et glisse-le ensuite dans la définition de ta fonction"
         fill_in_actor: Remplace les ??? par les nombres qui correspondent à chacun
           des acteurs (1, 2, et 3)
         repeat: Mets des blocs à l'intérieur de la boucle pour répéter les commandes
@@ -970,14 +976,14 @@
           points d'interrogation
         arrows_move_actor: Utilise les flèches pour déplacer l'acteur
         right_arrow_fireball: Utilise la flèche droite pour tirer des boules de feu
-        name_function: Écris le now de ta fonction ici
+        name_function: "Écris le now de ta fonction ici"
         Infinity_move_right_runbutton: Ajouter déplacer bloc ici
         Infinity_move_directions_callout: Quel bloc fera déplacer Baymax vers le haut
           lorsque tu appuies sur la flèche vers le haut ?
         Infinity_move_directions_callout_arrow: Utilisez ces flèches pour vous diriger
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
         Infinity_repeat_callout: Place un bloc de déplacement à l'intérieur d'ici
-        craft_run_button_callout: Cliquez sur "Run" (Exécuter) pour tester votre programme.
+        craft_run_button_callout: Clique sur Démarrer pour tester ton programme.
         craft_drag_block_callout: Glissez un bloc "avancer" et ancrez-le sous l'autre
           bloc.
         craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.

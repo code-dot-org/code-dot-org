@@ -205,7 +205,7 @@ de:
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, Ich bin Makinde! Lernen wir was über den "solange" Baustein. '
+        text: 'Hi, Ich bin Makinde! Ich zeige euch etwas über den "solange"-Baustein '
       2:
         image: notes/stage9_6.jpg
         text: 'Der "solange"-Baustein wird alles, was du hereintust, ausführen, SOLANGE die Anweisung darüber WAHR ist.'
@@ -465,7 +465,7 @@ de:
         text: Damit sie dorthin gelangt, kreise die Richtung ein, in die sie gehen muss!
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: Erstelle deinen Algorithmus durch das Kleben von Pfeilen neben die Karte, die du zu lösen versuchst. Die zweite ist die selbe, aber es geht nach unten.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
         text: Das ist wie Programmierung mit Papier. Genau das ist es.
@@ -516,10 +516,10 @@ de:
         text: 'Ich heiße Jeremiah. Hi! Ich bin 7 Jahre alt. Ich liebe es mit dem Computer meiner Mama zu spielen, aber erst, wenn sie es mir erlaubt. "Mama, kann ich an den Computer?" - "Na, klar, Schatz!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 'Ich liebe den Computer meiner Mutter, weil ich damit ins Internet gehen kann. Das Internet ist ein bisschen wie Dein Stadtteil: Du kannst coole Orte besuchen, mit Familie und Freunden plaudern und jede Menge neue Sachen lernen.'
       3:
         image: notes/C1_going_places_safely_3.png
-        text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."
+        text: 'Gestern habe ich den Zoo in der Nähe meines Hauses besucht. Ich habe ein Baby-Zebra gesehen. Ich habe ein Foto gemacht und dann die Farben der Streifen geändert, einen Hut hinzugefügt. Das Foto kam in meine Sammlung verrückter Tiere. Prima! Später habe ich dann einen weit entfernten Ort besucht: Kenia. Das ist ein Land in Afrika. Mit jeder Menge Zebras.'
       4:
         image: notes/C1_going_places_safely_4.png
         text: |-
@@ -558,7 +558,7 @@ de:
         text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
       4:
         image: notes/C1_planting_seed_4.png
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: Nun ist es Zeit um zu schauen ob dein Algorithmus funktioniert. Gehe die Schritte im Algorithmus vorsichtig durch. Sind sie in der richtigen Reihenfolge? Ist es dir gelungen einen Samen zu pflanzen, indem du dem Algorithmus gefolgt bist? Es ist wie mit Bildern programmieren!
       5:
         image: notes/C1_planting_seed_5.png
         text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
@@ -651,24 +651,24 @@ de:
           Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says "awww." Let's try it! "Awww" "cheers"
       4:
         image: notes/C2_conditionals_with_cards_4.png
-        text: I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action.
+        text: 'Ich wette du kannst Spiele erstellen, die noch mehr Spaß machen, indem du "Bedingungen" benutzt. Versuch es! Bedingungen sorgen dafür, dass der Computer schlau wirkt. Ein Computerprogramm, dass Bedingungen beinhaltet, kann auf den Benutzer reagieren und seine Handlungen entsprechend anpassen.'
       5:
         image: notes/C2_conditionals_with_cards_5.png
         text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
     C2_artist_debugging:
       1:
         image: notes/C2_artist_debugging_1.png
-        text: Here we already have some blocks out in our work space. But there is something wrong.
+        text: Hier haben wir bereits ein paar Blöcke in unserem Arbeitsplatz. Aber hier ist noch etwas falsch.
       2:
         image: notes/C2_artist_debugging_2.png
-        text: "Let's debug this code by slowing down the speed and watching it as it goes through each block step by step."
+        text: Lass uns den Code debuggen, indem wir die Geschwindigkeit reduzieren. Dadurch können wir sehen wie jeder Block einzeln ausgeführt wird.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: "Oh, there's the problem! The cat's whiskers are 75 pixels long, not 25."
+        text: Oh, da ist das Problem! Der Schnurrbart der Katze ist 75 Pixel groß und nicht 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Hast du jemals vom Begriff debugging gehört? Das ist eine Art und Weise, herraus zu finden, was nicht funktioniert. Wenn du Code debugst, dann kannst du Fehler finden und diese beheben.
       2:
         image: notes/C2_bee_debugging_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -837,7 +837,7 @@ de:
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."
+        text: Hast du jemals vom Begriff debugging gehört? Das ist eine Art und Weise, herraus zu finden, was nicht funktioniert. Wenn du Code debugst, dann kannst du Fehler finden und diese beheben.
       2:
         image: notes/C3_debugging_bee_2.png
         text: "Here we're given a few blocks already in our workplace. We're going to use the step button to walk through the blocks, step by step, to see if this is the right solution and where we may need to fix it."
@@ -1683,7 +1683,7 @@ de:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Der weiße Bereich rechts ist der Arbeitsbereich, in dem wir unser Programm aufbauen.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

@@ -76,6 +76,15 @@ exports.setSize = function (elementId, width, height) {
                            'height': height });
 };
 
+exports.setProperty = function (elementId, property, value) {
+  return Applab.executeCmd(null,
+                          'setProperty',
+                          {'elementId': elementId,
+                           'property': property,
+                           'value': value });
+};
+
+
 exports.getXPosition = function (elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
@@ -275,6 +284,19 @@ exports.setText = function (elementId, text) {
                            'text': text });
 };
 
+exports.getNumber = function (elementId) {
+  return Applab.executeCmd(null,
+                          'getNumber',
+                          {'elementId': elementId });
+};
+
+exports.setNumber = function (elementId, number) {
+  return Applab.executeCmd(null,
+                          'setNumber',
+                          {'elementId': elementId,
+                           'number': number });
+};
+
 exports.getImageURL = function (elementId) {
   return Applab.executeCmd(null,
                           'getImageURL',
@@ -393,21 +415,21 @@ exports.readRecords = function (table, searchParams, onSuccess, onError) {
                            'onError': onError});
 };
 
-exports.updateRecord = function (table, record, onSuccess, onError) {
+exports.updateRecord = function (table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'updateRecord',
                           {'table': table,
                            'record': record,
-                           'onSuccess': onSuccess,
+                           'onComplete': onComplete,
                            'onError': onError});
 };
 
-exports.deleteRecord = function (table, record, onSuccess, onError) {
+exports.deleteRecord = function (table, record, onComplete, onError) {
   return Applab.executeCmd(null,
                           'deleteRecord',
                           {'table': table,
                            'record': record,
-                           'onSuccess': onSuccess,
+                           'onComplete': onComplete,
                            'onError': onError});
 };
 
@@ -556,6 +578,16 @@ exports.removeItem = function (array, index) {
                           'removeItem',
                           {'array': array,
                            'index': index });
+};
+
+exports.drawChart = function (chartId, chartType, chartData, options, callback) {
+  return Applab.executeCmd(null,
+                          'drawChart',
+                          {'chartId': chartId,
+                           'chartType': chartType,
+                           'chartData': chartData,
+                           'options': options,
+                           'callback': callback });
 };
 
 exports.drawChartFromRecords = function (chartId, chartType, tableName, columns, options, callback) {

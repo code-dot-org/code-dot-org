@@ -16,7 +16,8 @@ var APPS = [
   'applab',
   'eval',
   'netsim',
-  'craft'
+  'craft',
+  'gamelab'
 ];
 
 if (process.env.MOOC_APP) {
@@ -154,6 +155,12 @@ config.copy = {
         cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
         src: ['**/*.js'],
         dest: 'build/package/js/ace/'
+      },
+      {
+        expand: true,
+        cwd: 'lib/p5play',
+        src: ['*.js'],
+        dest: 'build/package/js/p5play/'
       },
       {
         expand: true,
@@ -359,9 +366,15 @@ config.uglify = {
   config.uglify[app] = {files: appUglifiedFiles };
 });
 
+config.uglify.interpreter = { files: {} };
+config.uglify.interpreter.files[outputDir + 'jsinterpreter/interpreter.min.js'] =
+      outputDir + 'jsinterpreter/interpreter.js';
+config.uglify.interpreter.files[outputDir + 'jsinterpreter/acorn.min.js'] =
+      outputDir + 'jsinterpreter/acorn.js';
+
 // Run uglify task across all apps in parallel
 config.concurrent = {
-  uglify: APPS.concat('common').map( function (x) {
+  uglify: APPS.concat('common', 'interpreter').map( function (x) {
     return 'uglify:' + x;
   })
 };
@@ -369,32 +382,51 @@ config.concurrent = {
 config.watch = {
   js: {
     files: ['src/**/*.{js,jsx}'],
-    tasks: ['newer:copy:src']
+    tasks: ['newer:copy:src'],
+    options: {
+      interval: 5007
+    }
   },
   style: {
     files: ['style/**/*.scss', 'style/**/*.sass'],
-    tasks: ['newer:sass']
+    tasks: ['newer:sass'],
+    options: {
+      interval: 5007
+    }
   },
   content: {
     files: ['static/**/*'],
-    tasks: ['newer:copy']
+    tasks: ['newer:copy'],
+    options: {
+      interval: 5007
+    }
   },
   vendor_js: {
     files: ['lib/**/*.js'],
-    tasks: ['newer:concat', 'newer:copy:lib']
+    tasks: ['newer:concat', 'newer:copy:lib'],
+    options: {
+      interval: 5007
+    }
   },
   ejs: {
     files: ['src/**/*.ejs'],
-    tasks: ['ejs']
+    tasks: ['ejs'],
+    options: {
+      interval: 5007
+    }
   },
   messages: {
     files: ['i18n/**/*.json'],
-    tasks: ['pseudoloc', 'messages']
+    tasks: ['pseudoloc', 'messages'],
+    options: {
+      interval: 5007
+    }
   },
   dist: {
     files: ['build/package/**/*'],
     options: {
-      livereload: true
+      livereload: true,
+      interval: 5007
     }
   }
 };
@@ -484,6 +516,7 @@ module.exports = function(grunt) {
     'pseudoloc',
     'newer:messages',
     'newer:copy:src',
+    'newer:copy:lib',
     'locales',
     'newer:strip_code',
     'ejs'
@@ -491,7 +524,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('postbuild', [
     'newer:copy:static',
-    'newer:copy:lib',
     'newer:concat',
     'newer:sass'
   ]);

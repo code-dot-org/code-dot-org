@@ -697,7 +697,7 @@
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: Лупови
+        C4_loops_zombie: "Лупови"
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -725,6 +725,12 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -733,7 +739,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: Лупови
+        csp_applab_loops: "Лупови"
         csp_applab_turtle: Turtle Programming
         csp_concept_rgb: A Little Bit About Pixels
         csp_pixelation_color_1: Color pixelation widget - Part 1
@@ -809,8 +815,8 @@
           degree to turn
         repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
           workspace
-        repeat_blocks_1: (1) Use this block and put it around the grey blocks in the
-          workspace
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
         repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
           inside
         snowflake_dropdown: Use this drop-down to create different snowflakes!

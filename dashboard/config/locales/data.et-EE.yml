@@ -68,7 +68,7 @@
           desc: Labürint (beeta)
           MazeStep: Etapi samm
         wordsearch:
-          desc: Õigekirjavõistlus (beta)
+          desc: "Õigekirjavõistlus (beta)"
           WordSearch: Etapp 1
     game:
       name:
@@ -701,7 +701,7 @@
         C3_bee_conditionals: Mesilane tingimuslaused
         C3_maze_conditionals: Labürint tingimuslaused
         C3_artist_nested_loops: Korduvad tsüklid
-        C3_farmer_while: „Kui“ tsüklid
+        C3_farmer_while: "„Kui“ tsüklid"
         C3_bee_nested_loops: Korduvad tsüklid
         C3_bee_debugging: Mesilane vigade silumine
         C3_bounce: Põrkama
@@ -709,7 +709,7 @@
         C3_computational_thinking: Arvutuslik mõtlemine
         C3_dice_race: Täringuralli
         C3_internet: Internet
-        C3_crowdsourcing: Ühistegevused
+        C3_crowdsourcing: "Ühistegevused"
         C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
         C3_songwriting_with_parameters: Laulukirjutamine parameetritega
         C4_intro: Sissejuhatus
@@ -741,6 +741,12 @@
         infinity_playlab_intro: Play Lab - Sissejuhatus
         infinity_playlab_events: Play Lab - Üritused
         infinity_playlab_repeat_forever: Play Lab – korda Igavesti
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -797,9 +803,9 @@
         gumball_intro: Gumballi KoodiTund - Sissejuhatus
         gumball_events: Gumballi KoodiTund - Sündmused
         gumball_repeat: Gumballi KoodiTund - "Korda" laused
-        iceage_intro: Ice Age Hour of Code - Introduction
-        iceage_events: Ice Age Hour of Code - Events
-        iceage_repeat: Ice Age Hour of Code - Repeat statements
+        iceage_intro: Jääaeg KoodiTund - Sissejuhatus
+        iceage_events: Jääaeg KoodiTund - Üritused
+        iceage_repeat: Jääaeg Kooditund - Korduvad laused
     callout:
       text:
         drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla
@@ -824,10 +830,10 @@
         replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ õige pööramisnurgaga
         repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide
           ümber
-        repeat_blocks_1: (1) Kasuta seda plokki ja pane see tööruumis hallide plokkide
-          ümber
-        repeat_blocks_2: (2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle
-          sisse
+        repeat_blocks_1: "(1) Kasuta seda plokki ja pane see tööruumis hallide plokkide
+          ümber"
+        repeat_blocks_2: "(2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle
+          sisse"
         snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
         degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide
           arvu.
@@ -852,8 +858,8 @@
         length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit
           „pikkus“?
         frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
-        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist
-          keerata.
+        frozen_circle_function_in_circle_turn: "Ära unusta peale igat ringi loomist
+          keerata."
         frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
           muuda suurus.
         frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki

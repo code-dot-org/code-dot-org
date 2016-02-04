@@ -44,9 +44,9 @@
           'Artist: Shapes': 'Menininkas: formos'
           'Maze: Loops': 'Labirintas: kartojimas'
           'Bee: Loops': 'Bitė: kartojimas'
-          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
           'Artist: Loops': 'Menininkas: kartojimas'
-          description_audience: Amžius 4+ (pradedantiesiems skaityti)
+          description_audience: Amžius 4-6 metai
           description_short: 1 kursas yra skirtas pradedantiesiems skaityti.
         course2:
           The Maze: Labirintas
@@ -54,7 +54,7 @@
           The Artist: Menininkas
           Artist Debugging: 'Menininkas: klaidų ieškojimas'
           Bounce: Tenisas
-          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
           Artist Loops: 'Menininkas: kartojimas'
           Bee Conditionals: 'Bitė: sąlyginiai sakiniai'
           Flappy: Flappy
@@ -88,11 +88,11 @@
           'Artist: Sequence2': 'Menininkas: seka2'
           'Maze: Sequence2': 'Labirintas: seka2'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          description_audience: Nuo 6 metų (reikia mokėti skaityti)
+          description_audience: Amžius 6-18 metų
           description_short: 2 kursas yra skirtas mokiniams, kurie jau moka skaityti.
         course3:
           The Maze: Labirintas
-          'Studio: Create a Story': 'Žaidimų laboratorija: sukurk istoriją'
+          'Studio: Create a Story': "Žaidimų laboratorija: sukurk istoriją"
           The Artist: Menininkas
           title: Kursas 3
           Artist Functions: 'Menininkas: funkcijos'
@@ -114,7 +114,7 @@
           Internet: Internetas
           Crowdsourcing: Komandinis programavimas
           Digital Citizenship: Virtuali pilietybė
-          Farmer - While Loops: 'Ūkininkas: kartojimas'
+          Farmer - While Loops: "Ūkininkas: kartojimas"
           description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
           'Studio: Create a Game': 'Laboratorija: sukurk žaidimą'
           Maze: Labirintas
@@ -124,7 +124,7 @@
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Maze: Conditionals': 'Labirintas: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Farmer: While Loops': "Ūkininkas: kartojimas"
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
           Maze2: Labirintas2
@@ -134,12 +134,12 @@
           'Bee: Conditionals2': 'Bitė: sąlyginiai sakiniai2'
           'Maze: Conditionals2': 'Labirintas: sąlyginiai sakiniai2'
           'Artist: Nested Loops2': 'Menininkas: Kartojimas kartojime'
-          'Farmer: While Loops2': 'Ūkininkas: kartojimas2'
+          'Farmer: While Loops2': "Ūkininkas: kartojimas2"
           'Bee: Nested Loops2': 'Bitė: kartojimas kartojime'
           'Bee: Debugging2': 'Bitė: klaidų ieškojimas2'
           'Artist: Patterns': 'Menininkas: raštai'
           Songwriting: Dainų rašymas
-          description_audience: Amžius 8+ (po 2 kurso)
+          description_audience: Amžius 8-18 metų
           description_short: 3 kursas yra antrojo kurso tęsinys.
         playlab:
           title: Laboratorija
@@ -153,7 +153,7 @@
           description_short: Nupiešk šaunius piešinius ir ornamentus su menininku!
         hourofcode:
           Maze: Labirintas
-          title: „Programavimo valanda“
+          title: Klasikinis labirintas
           description: Išmėginkite programavimo pradmenis kartu su personažais iš
             Angry Birds, Plants vs. Zombies ir vovere iš Ledynmečio!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
@@ -174,12 +174,12 @@
           title: Kursas 4
           'Algorithms: Tangrams': 'Algoritmai: tanagramos'
           Variables: Kintamieji
-          'Play Lab: Variables': 'Žaidimų laboratorija: kintamieji'
-          'Play Lab: Functions with Parameters': 'Žaidimų laboratorija: komandos su
-            parametrais'
+          'Play Lab: Variables': "Žaidimų laboratorija: kintamieji"
+          'Play Lab: Functions with Parameters': "Žaidimų laboratorija: komandos su
+            parametrais"
           'Bee: Functions with Parameters': 'Bitė: komandos su parametrais'
           'Artist: For Loops': 'Menininkas: kartojimai'
-          'Play Lab: For Loops': 'Žaidimų laboratorija: kartojimai'
+          'Play Lab: For Loops': "Žaidimų laboratorija: kartojimai"
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Unplugged: Tangrams': 'Be kompiuterio: tanagramos'
           Artist: Menininkas
@@ -196,27 +196,27 @@
           Maze and Bee: Labirintas ir bitė
           Artist Binary: Artist Binary
           description_audience: Amžius 10+ (pabaigus 3 kursą)
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          Super Challenge - Variables: Super iššūkis - Kintamieji
+          Super Challenge - For Loops: Super iššūkis - Ciklai
+          Super Challenge - Functions and Parameters: Super iššūkis - funkcijos ir
+            parametrai
+          Extreme Challenge - Comprehensive: Ekstremalus iššūkis - Visapusiškumas
         Course4pre:
-          title: Course 4 Prerequisite
+          title: 4 kursas - Prielaidos
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
           description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          Course 4 Prerequisite: 4 kursas - Prielaidos
           'Maze: Sequence': 'Labirintas: seka'
           'Artist: Sequence': 'Menininkas: seka'
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Farmer: While Loops': "Ūkininkas: kartojimas"
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
         usability:
-          Intro: Įvadas
+          Intro: "Įvadas"
           Variables and For Loops: Kintamieji ir kartojimas
           Functions and Functions with Parameters: Komandos ir komandos su parametrais
           title: Usability Testing
@@ -255,15 +255,15 @@
           'Play Lab: Animation (Big Game)': Didysis žaidimas – animacija
           'Unplugged: Booleans': 'Papildoma pamokėlė: Būlio kintamieji ir logika'
           'Eval: Boolean Operators': Būlio loginiai operatoriai
-          'Play Lab: Booleans': Šikšnosparnis Semas
+          'Play Lab: Booleans': "Šikšnosparnis Semas"
           'Play Lab: Boolean (Big Game)': Didysis žaidimas – Būlio kintamieji
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': Sąlyginiai sakiniai
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
-          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
-            nustatymas (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)"
         infinity:
           title: Laboratorija
           description_short: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
@@ -351,12 +351,12 @@
         20-hour:
           title: 20-ties valandų įvadiniai kursai
           description_audience: Amžius 10+ (pabaigus 3 kursą)
-          description: Šis 20-ties valandų informatikos kursas supažindina su programavimo
+          description: "Šis 20-ties valandų informatikos kursas supažindina su programavimo
             pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
-            esant bet kurioje amžiaus grupėje.
+            esant bet kurioje amžiaus grupėje."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: Programavimo įvadas
+          Introduction to Computer Science: "Įvadas į kompiuterių mokslą"
           The Maze: Labirintas
           Computational Thinking: Skaičiuojamasis mąstymas
           Graph Paper Programming: Programavimas ant languoto popieriaus
@@ -364,15 +364,15 @@
           Algorithms: Algoritmai
           The Artist 2: Menininkas 2
           Functions: Komandų kūrimas
-          The Farmer: Ūkininkas
+          The Farmer: "Ūkininkas"
           Conditionals: Sąlyginiai sakiniai
           The Artist 3: Menininkas 3
           Song Writing: Dainos ir funkcijos
-          The Farmer 2: Ūkininkas 2
+          The Farmer 2: "Ūkininkas 2"
           Abstraction: Komandos su parametrais
           The Artist 4: Menininkas 4
           Relay Programming: Programavimas komandoje
-          The Farmer 3: Ūkininkas 3
+          The Farmer 3: "Ūkininkas 3"
           The Internet: Internetas
           The Artist 5: Menininkas 5
           Wrap-up: Apibendrinimas
@@ -384,12 +384,12 @@
           Applab: Applab
           The Artist: Menininkas
           Play Lab: Laboratorija
-          Play Lab 2015: Play Lab 2015
+          Play Lab 2015: "Žaidimų laboratorija 2015"
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Įvykiai
-          description: Įvykiai
-          description_short: Įvykiai
+          title: "Įvykiai"
+          description: "Įvykiai"
+          description_short: "Įvykiai"
           Bounce: Tenisas
           Studio: Studio
           Calc: Calc
@@ -406,10 +406,10 @@
           description_short: Try our Jigsaw tutorial
           Jigsaw: Dėlionės
         step:
-          title: Žingsnis
+          title: "Žingsnis"
           description: ''
           description_short: Step tutorial
-          Step: Žingsnis
+          Step: "Žingsnis"
         Hour of Code:
           title: Programavimo valanda 2013
           description: ''
@@ -446,16 +446,16 @@
           description: Išbandyk šiuos smagius kodavimo galvosūkius. Sėkmės!
           Puzzles: Galvosūkiai
         course4pre:
-          title: Course 4 Prerequisite
+          title: 4 kursas - Prielaidos
           description_short: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
           description: Trumpas įvadas moksleiviams, kurie nebandė 2 ir 3 kursų.
-          Course 4 Prerequisite: Course 4 Prerequisite
+          Course 4 Prerequisite: 4 kursas - Prielaidos
           'Maze: Sequence': 'Labirintas: seka'
           'Artist: Sequence': 'Menininkas: seka'
           'Artist: Loops': 'Menininkas: kartojimas'
           'Bee: Conditionals': 'Bitė: sąlyginiai sakiniai'
           'Artist: Nested Loops': 'Menininkas: kartojimas kartojime'
-          'Farmer: While Loops': 'Ūkininkas: kartojimas'
+          'Farmer: While Loops': "Ūkininkas: kartojimas"
           'Bee: Nested Loops': 'Bitė: kartojimas kartojime'
           'Artist: Functions': 'Menininkas: komandų kūrimas'
           'Bee: Debugging': 'Bitė: klaidų ieškojimas'
@@ -511,25 +511,25 @@
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Defining Variables'
-          'Play Lab: Defining Variables (Big Game)': 'Žaidimų laboratorija: kintamųjų
-            apibrėžimas (Didysis žaidimas)'
+          'Play Lab: Defining Variables (Big Game)': "Žaidimų laboratorija: kintamųjų
+            apibrėžimas (Didysis žaidimas)"
           'Eval: Defining Functions': 'Eval: Defining Functions'
           'Unplugged: The Design Recipe': 'Unplugged: The Design Recipe'
-          'Play Lab: Defining Functions': 'Žaidimų laboratorija: komandų apibrėžimas'
+          'Play Lab: Defining Functions': "Žaidimų laboratorija: komandų apibrėžimas"
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'Žaidimų laboratorija: animacijos (Didysis
-            žaidimas)'
+          'Play Lab: Animation (Big Game)': "Žaidimų laboratorija: animacijos (Didysis
+            žaidimas)"
           'Unplugged: Booleans': 'Unplugged: Booleans'
           'Eval: Boolean Operators': 'Eval: Boolean Operators'
-          'Play Lab: Booleans': 'Žaidimų laboratorija: loginės reikšmės'
-          'Play Lab: Boolean (Big Game)': 'Žaidimų laboratorija: Logika (Big Game)'
+          'Play Lab: Booleans': "Žaidimų laboratorija: loginės reikšmės"
+          'Play Lab: Boolean (Big Game)': "Žaidimų laboratorija: Logika (Big Game)"
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
           'Eval: Conditionals': 'Eval: Conditionals'
           'Unplugged: Collision Detection and the Distance Formula': 'Papildoma pamokėlė:
             susidūrimo aptikimas ir atstumo formulė'
-          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
-            nustatymas (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)"
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Eilutės ir paveikslėliai
           Contracts: Contracts
@@ -538,7 +538,7 @@
           The Design Recipe: The Design Recipe
           Your Game - Animation: Tavo žaidimas – animacijos
           Booleans: Loginės reikšmės
-          Sam the Bat: Šikšnosparnis Semas
+          Sam the Bat: "Šikšnosparnis Semas"
           Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
           Conditionals and Piecewise Functions: Sąlygos ir funkcijos iš dalių
           Rocket-Height: Rocket-Height
@@ -560,11 +560,11 @@
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Tavo žaidimas – animacijos
           Booleans: Loginės reikšmės
-          Sam the Bat: Šikšnosparnis Semas
+          Sam the Bat: "Šikšnosparnis Semas"
           Your Game - Booleans: Tavo žaidimas – Loginės reikšmės
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'Žaidimų laboratorija: Susidūrimo
-            nustatymas (Big Game)'
+          'Play Lab: Collision Detection (Big Game)': "Žaidimų laboratorija: Susidūrimo
+            nustatymas (Big Game)"
           Your Game - Player Movement: Tavo žaidimas – veikėjų judėjimas
           Your Game - Collision Detection: Tavo žaidimas – susidūrimo aptikimas
         text-compression:
@@ -729,7 +729,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: „Kol“ kartojimas
+          While Loops: "„Kol“ kartojimas"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -737,6 +737,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -955,11 +956,11 @@
           Strings and Images: Eilutės ir paveikslėliai
           Defining Variables: Kintamųjų apibrėžimas
           Big Game - Variables: Big Game - Variables
-          'Play Lab: Defining Functions': 'Žaidimų laboratorija: komandų apibrėžimas'
+          'Play Lab: Defining Functions': "Žaidimų laboratorija: komandų apibrėžimas"
           The Design Recipe: The Design Recipe
           Big Game - Animation: Big Game - Animation
           Booleans: Loginės reikšmės
-          Sam the Bat: Šikšnosparnis Semas
+          Sam the Bat: "Šikšnosparnis Semas"
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
           Big Game - Player Movement: Big Game - Player Movement
@@ -995,6 +996,7 @@
           Pixelation: Pikseliavimas
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -1023,12 +1025,12 @@
           App Lab: Programėlių laboratorija
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Interneto simuliatorius
@@ -1057,7 +1059,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1111,11 +1113,11 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: Hour of Code 2015
+          title: Programavimo valanda 2015
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: „Programavimo valanda“
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code: "„Programavimo valanda“"
+          Hour of Code 2015: Programavimo valanda 2015
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -1136,14 +1138,14 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           The Design Recipe: The Design Recipe
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           description: Išmokite programuoti funkcijas panaudojant algebrą
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Wrap-Up: Apibendrinimas
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1160,7 +1162,7 @@
           title: Computer Science in Science PD Phase 2b
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           description: Išmokite programuoti funkcijas panaudojant algebrą
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1178,7 +1180,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Kiti žingsniai
         sciencePD2b-iZone:
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           title: Computer Science in Science PD Phase 2b
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           description: Išmokite programuoti funkcijas panaudojant algebrą
@@ -1192,7 +1194,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           description: Išmokite programuoti funkcijas panaudojant algebrą
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1216,7 +1218,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           description: Išmokite programuoti funkcijas panaudojant algebrą
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1334,7 +1336,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1362,11 +1364,12 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1401,7 +1404,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1436,7 +1439,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1445,7 +1448,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1489,11 +1492,33 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1515,7 +1540,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1542,6 +1567,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1581,7 +1607,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: „Kol“ kartojimas
+          While Loops: "„Kol“ kartojimas"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1606,19 +1632,19 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: "Žvaigždžių Karai: programuojame Galaktiką"
           description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
             žaidimą tolimoje galaktikoje.
           description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą
             tolimoje galaktikoje.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Programavimo valanda 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: "Žvaigždžių Karai: programuojame Galaktiką"
           description_short: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų
             žaidimą tolimoje galaktikoje.
           description: Išmok programuoti droidus, ir sukurk savo Žvaigždių Karų žaidimą
             tolimoje galaktikoje.
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Programavimo valanda 2015
         minecraft:
           title: Minecraft
           description_short: Use code to survive in a Minecraft world!
@@ -1629,7 +1655,7 @@
           description_short: Tyrinėkite Minecraft pasaulį per kodą
           description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
             šiame Minecraft pasaulyje
-          Hour of Code 2015: Hour of Code 2015
+          Hour of Code 2015: Programavimo valanda 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1641,6 +1667,43 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: Welcome!
+          Welcome!: Sveiki atvykę!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Apibendrinimas
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

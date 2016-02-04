@@ -35,6 +35,7 @@ level 'Course 4 Play Lab Params 2'
 
 stage 'Farmer'
 level '4-5 While Loops 4'
+level 'Farmer for Authored Hint testing'
 
 stage 'Flappy'
 level 'blockly:Flappy:1'
@@ -107,3 +108,6 @@ level 'PDK5 Foundations F'
 
 stage 'Markdown Details'
 level 'Test External Markdown'
+
+stage 'Studio'
+level 'Resizing Test'

@@ -812,7 +812,7 @@ bg:
         text: Когато поставите цикъл в друг цикъл, ние наричаме това вложен цикъл. За пример, тук ние сме дали кода на вече изготвения триъгълник със страни, дълги 100 пиксела, като използвате блок за повторение и го настроите на 3, по веднъж за всяка страна на триъгълника.
       2:
         image: notes/C3_artist_nested_loops_2.png
-        text: "But we want to draw six triangles. In order to do that, we're going to take that loop and place it inside of another repeat times block. Pretty cool!"
+        text: Но ние искаме да начертаем шест триъгълника. За да направим това, трябва да вземем този цикъл и да го поставим в друг. Много готино!
     C3_bee_conditionals:
       1:
         image: notes/C3_bee_conditionals_1.png
@@ -892,16 +892,16 @@ bg:
     C3_dice_race:
       1:
         image: notes/C3_dice_race_1.png
-        text: This lesson is called dice race. Almost everyone likes to play computer games. Have you ever thought about how computer programmers turn the steps of a game into a program? The first step in creating computer games and in solving any problem requires thinking and planning.
+        text: Този урок се нарича сазтезание с зарове. Почти всеки обича да играе компютърни игри. Замисляли ли сте се за това как компютърни програмисти превращат стъпките на игра в една програма? Първата стъпка в създаване на компютърни игри и при решаването на всеки проблем изисква мислене и планиране.
       2:
         image: notes/C3_dice_race_2.png
         text: "The thinking step of problem solving produces an algorithm, which is a step by step plan for solving a problem or finishing a task. In this lesson, you'll create an algorithm for a dice race game. Then you'll ask your friends to try out your plan to see if they can follow the steps to play the game. After the programmer is sure the steps are correct, it's time to translate the algorithm into a program with language that the computer can understand."
       3:
         image: notes/C3_dice_race_3.png
-        text: "Almost everything we do every day requires an algorithm, a list of steps you can follow to finish a task. Think about getting ready for school or planning a fun day with your friends or fixing a snack. To complete any of those tasks, you'll need to break it down into smaller steps and sometimes the steps must be in a specific order."
+        text: Почти всичко, което правим всеки ден изисква алгоритъм, списък от стъпки, който можете да следвате за да завършиет дадена задача. Помислете за оправянето за училище или планиране на забавен ден с вашите приятели или фиксиране на лека закуска. За да изпълните някоя от тези задачи, ще трябва да го раздобите на по-малки стъпки и понякога стъпките трябва да бъдат в определен ред.
       4:
         image: notes/C3_dice_race_4.png
-        text: "Think about making a sandwich. It doesn't matter which ingredient you get out of the cabinet first. But you can't spread the peanut butter until you open the jar. Computers need algorithms and programs to show them how to do even simple things that we can do without thinking about it."
+        text: Помислете за правенето на един сандвич. Няма значение коя съставка сйставка извадите от шкафа първа. Но не може да намажете фъстъченото масло, докато не сте отворили буркана. Компютрите използват алгоритми и програми, за да им покажете какво да направя дори прости неща, които ние можем да направим и без да мислим за тях.
       5:
         image: notes/C3_dice_race_5.png
         text: An algorithm is the thinking behind what needs to happen while the program is the actual instructions given to the computer to make it happen. An algorithm has to be translated into a program before a computer can run it. Breaking a task into steps called an algorithm is sometimes difficult. But like any new skill, it gets easier and easier with practice.
@@ -1670,7 +1670,7 @@ bg:
         text: This middle area is the tool box and each of these blocks is a piece of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: "The white space on the right is called the work space and this is where we'll build our program."
+        text: Бялото пространство вдясно, се нарича работно пространство и това е мястото, където ние ще изградим нашата програма.
       7:
         image: notes/iceage_intro_7.JPG
         text: "To start off, you'll need to link your blocks to the orange when run block. You can link multiple blocks together by dragging them out until you see the yellow line and then they'll snap together."

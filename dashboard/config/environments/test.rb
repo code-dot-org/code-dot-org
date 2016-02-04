@@ -50,12 +50,13 @@ Dashboard::Application.configure do
   # off by default because it slows things down
   ActiveRecordQueryTrace.enabled = false
 
-  config.react.variant = :production
-
   # Explicitly set legacy test-order behavior in Rails 4.2
   # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
   config.active_support.test_order = :sorted
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # Set to :debug to see everything in the log.
+  config.log_level = :info
 end

@@ -41,4 +41,9 @@ class Follower < ActiveRecord::Base
   validate :cannot_follow_yourself, :teacher_must_be_teacher, :section_must_belong_to_teacher
 
   validates_presence_of :user, :student_user, :section
+
+  after_create :assign_script
+  def assign_script
+    student_user.assign_script(section.script) if section.script
+  end
 end

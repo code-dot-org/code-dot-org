@@ -6,13 +6,6 @@ GIT
     active_model_serializers (0.10.0.pre)
       activemodel (>= 4.0)
 
-GIT
-  remote: https://github.com/code-dot-org/omniauth-clever.git
-  revision: 8c7adde39157d64dc8b05c5eec5b0a7329f8ef95
-  specs:
-    omniauth-clever (1.1.0)
-      omniauth-oauth2 (>= 1.1.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,7 +47,7 @@ GEM
       tzinfo (~> 1.1)
     acts_as_list (0.7.2)
       activerecord (>= 3.0)
-    addressable (2.3.8)
+    addressable (2.4.0)
     annotate (2.6.10)
       activerecord (>= 3.2, <= 4.3)
       rake (~> 10.4)
@@ -100,15 +93,24 @@ GEM
       nokogiri (~> 1.6)
     chronic (0.10.2)
     chunky_png (1.3.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
     cliver (0.3.2)
-    codeclimate-test-reporter (0.4.7)
-      simplecov (>= 0.7.1, < 1.0.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     codemirror-rails (5.5)
       railties (>= 3.0, < 5)
     coderay (1.1.0)
-    coffee-script-source (1.9.1.1)
     colorize (0.7.7)
-    connection_pool (2.2.0)
+    coveralls (0.8.9)
+      json (~> 1.8)
+      rest-client (>= 1.6.8, < 2)
+      simplecov (~> 0.10.0)
+      term-ansicolor (~> 1.3)
+      thor (~> 0.19.1)
+      tins (~> 1.6.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     cucumber (2.0.2)
       builder (>= 2.1.2)
       cucumber-core (~> 1.2.0)
@@ -133,6 +135,8 @@ GEM
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    domain_name (0.5.25)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
@@ -149,8 +153,7 @@ GEM
     fake_sqs (0.3.1)
       builder
       sinatra
-    fakeweb (1.3.0)
-    faraday (0.9.1)
+    faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
     font-awesome-rails (4.4.0.0)
@@ -187,7 +190,8 @@ GEM
       haml (~> 4.0)
       rubocop (>= 0.25.0)
       sysexits (~> 1.1)
-    hashie (3.4.2)
+    hashdiff (0.2.3)
+    hashie (3.4.3)
     heroku_rails_deflate (1.0.3)
       actionpack (>= 3.2.13)
       activesupport (>= 3.2.13)
@@ -202,6 +206,8 @@ GEM
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     httparty (0.13.5)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -211,8 +217,7 @@ GEM
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jmespath (1.0.2)
-      multi_json (~> 1.0)
+    jmespath (1.1.3)
     jquery-cookie-rails (1.3.1.1)
       railties (>= 3.2.0, < 5.0)
     jquery-rails (3.1.4)
@@ -236,7 +241,7 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     le (2.6.2)
-    libv8 (3.16.14.11)
+    libv8 (3.16.14.13)
     listen (2.10.1)
       celluloid (~> 0.16.0)
       rb-fsevent (>= 0.9.3)
@@ -255,6 +260,8 @@ GEM
     mini_magick (4.3.3)
     mini_portile (0.6.2)
     minitest (5.8.2)
+    minitest-around (0.3.2)
+      minitest (~> 5.0)
     minitest-reporters (1.0.19)
       ansi
       builder
@@ -271,11 +278,12 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
+    netrc (0.11.0)
     newrelic_rpm (3.10.0.279)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oauth (0.4.7)
-    oauth2 (1.0.0)
+    oauth2 (0.9.4)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
       multi_json (~> 1.3)
@@ -284,18 +292,20 @@ GEM
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (2.13.0)
-    omniauth (1.2.2)
+    omniauth (1.3.1)
       hashie (>= 1.2, < 4)
-      rack (~> 1.0)
+      rack (>= 1.0, < 3)
+    omniauth-clever (1.2.1)
+      omniauth-oauth2 (~> 1.1.1)
     omniauth-facebook (1.6.0)
       omniauth-oauth2 (~> 1.1)
     omniauth-google-oauth2 (0.2.5)
       omniauth (> 1.0)
       omniauth-oauth2 (~> 1.1)
-    omniauth-oauth2 (1.2.0)
+    omniauth-oauth2 (1.1.2)
       faraday (>= 0.8, < 0.10)
       multi_json (~> 1.3)
-      oauth2 (~> 1.0)
+      oauth2 (~> 0.9.3)
       omniauth (~> 1.2)
     omniauth-windowslive (0.0.9)
       multi_json (>= 1.0.3)
@@ -314,7 +324,6 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
-    progressbar (0.21.0)
     pusher (0.14.5)
       httpclient (~> 2.5)
       multi_json (~> 1.0)
@@ -322,6 +331,8 @@ GEM
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
+    rack-cache (1.5.1)
+      rack (>= 0.4)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
     rack-mini-profiler (0.9.7)
@@ -363,20 +374,17 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.1.1)
       json (~> 1.4)
-    react-rails (1.0.0)
-      coffee-script-source (~> 1.8)
-      connection_pool
-      execjs
-      rails (>= 3.1)
-      react-source (~> 0.13)
-    react-source (0.13.1)
-    redcarpet (3.2.3)
+    redcarpet (3.3.4)
     redis (3.1.0)
-    ref (1.0.5)
+    ref (2.0.0)
     rerun (0.10.0)
       listen (~> 2.7, >= 2.7.3)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     retriable (1.4.1)
     retryable (1.3.5)
     rmagick (2.15.4)
@@ -404,6 +412,7 @@ GEM
     ruby_parser (3.7.0)
       sexp_processor (~> 4.1)
     rubyzip (1.1.7)
+    safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -455,8 +464,10 @@ GEM
     sqlite3 (1.3.10)
     stringex (2.5.2)
     sysexits (1.2.0)
-    therubyracer (0.12.1)
-      libv8 (~> 3.16.14.11)
+    term-ansicolor (1.3.2)
+      tins (~> 1.0)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
       ref
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
@@ -468,6 +479,7 @@ GEM
     timecop (0.7.1)
     timers (4.0.1)
       hitimes
+    tins (1.6.0)
     twilio-ruby (3.12.2)
       builder (>= 2.1.2)
       jwt (~> 1.0.0)
@@ -477,17 +489,15 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     unicorn (4.8.2)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
     user_agent_parser (2.1.5)
-    viddl-rb (1.0.1)
-      mime-types
-      multi_json
-      nokogiri
-      progressbar
-    videojs_rails (4.5.2)
+    vcr (3.0.0)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.2.1)
@@ -495,12 +505,18 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    webmock (1.22.6)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket (1.0.7)
     websocket-driver (0.6.2)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    youtube-dl.rb (0.2.5.2016.01.01)
+      cocaine (>= 0.5.4)
 
 PLATFORMS
   ruby
@@ -517,9 +533,9 @@ DEPENDENCIES
   cancancan (~> 1.10)
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
-  codeclimate-test-reporter
   codemirror-rails
   colorize
+  coveralls
   cucumber
   daemons
   dalli
@@ -529,7 +545,6 @@ DEPENDENCIES
   eyes_selenium (~> 2.5.0)
   factory_girl_rails
   fake_sqs
-  fakeweb
   font-awesome-rails
   geocoder
   google-api-client
@@ -553,6 +568,7 @@ DEPENDENCIES
   marked-rails
   mini_magick
   minitest (~> 5.5)
+  minitest-around
   minitest-reporters
   mocha
   mysql2 (~> 0.3.13)
@@ -562,7 +578,7 @@ DEPENDENCIES
   newrelic_rpm (~> 3.10.0.279)
   nokogiri (~> 1.6.1)
   oj
-  omniauth-clever!
+  omniauth-clever (~> 1.2.1)
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-windowslive (~> 0.0.9)
@@ -573,15 +589,16 @@ DEPENDENCIES
   poltergeist
   pusher (~> 0.14.5)
   quiet_assets
+  rack-cache
   rack-contrib (~> 1.1)
   rack-mini-profiler
   rack-ssl-enforcer
   rails (~> 4.2.4)
-  react-rails (~> 1.0)
-  redcarpet (~> 3.2.3)
+  redcarpet (~> 3.3.4)
   redis (~> 3.1.0)
   rerun (~> 0.10.0)
   responders (~> 2.0)
+  rest-client (~> 1.8)
   retryable
   rmagick
   rspec
@@ -599,16 +616,17 @@ DEPENDENCIES
   spring-commands-testunit
   sqlite3
   stringex (~> 2.5.2)
-  therubyracer
+  therubyracer (~> 0.12.2)
   thin (~> 1.6.2)
   timecop
   twilio-ruby
   uglifier (>= 1.3.0)
   unicorn (~> 4.8.2)
   user_agent_parser
-  viddl-rb
-  videojs_rails
+  vcr
   web-console (~> 2.0)
+  webmock
+  youtube-dl.rb
 
 BUNDLED WITH
    1.10.6

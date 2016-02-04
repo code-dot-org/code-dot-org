@@ -33,11 +33,12 @@ Quarter 3: Saturday, January 30, 2016
 
 Quarter 4: Saturday, March 5, 2016
 
-8:30am - 3:30pm
+**Please note the time change for future PD's*<br/>
+8:00am - 2:30pm
 <br/>
 Breakfast and lunch will be served.
 
-**November 21st Location**
+**Location**
 
 [Gonzaga University<br/>
 PACCAR 107<br/>

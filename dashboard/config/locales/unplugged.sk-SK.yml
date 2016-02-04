@@ -2,7 +2,7 @@
   data:
     unplugged:
       Unplug1:
-        title: Úvod do vedy o počítačoch (informatiky)
+        title: "Úvod do vedy o počítačoch (informatiky)"
         desc: This lesson will introduce the concept of Computer Science and explain
           what a Computer Scientist does.  It will also give students an opportunity
           to assume the role of a computer scientist.  By the end of the activity,
@@ -91,7 +91,7 @@
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Štafetové programovanie
+        title: "Štafetové programovanie"
         desc: This lesson will take an idea from a previous activity (4. Graph Paper
           Programming) and use those skills to emphasize the importance of completing
           programs that operate in sequence and frequently checking programs for "bugs".
@@ -116,13 +116,13 @@
         video: Unplug11
       UnplugHappyMaps:
         title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov."
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
+          postavu cez bludisko použitím jednoduchých príkazov."
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Real-life Algorithms: Plant a Seed'

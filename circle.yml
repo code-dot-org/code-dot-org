@@ -6,6 +6,8 @@ general:
 machine:
   ruby:
     version: 2.2.3
+  environment:
+    RAILS_ENV: test
   services:
     - docker
 dependencies:
@@ -15,6 +17,7 @@ dependencies:
   override:
     - sudo apt-get install libicu-dev
     - bundle install
+    - 'echo "bundler_use_sudo: false" >> locals.yml'
     - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
     - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
@@ -31,6 +34,12 @@ dependencies:
     - bundle exec rake install
     # Try running rake build twice (in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
+    - npm install: # TODO(bjordan): necessary now?
+        pwd:
+            code-studio
+    - bundle exec rake assets:precompile:
+        pwd:
+            dashboard
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
@@ -51,12 +60,22 @@ test:
         - bundle exec rake test:
             pwd:
                 shared
+        - ./test.sh:
+            pwd:
+                apps
+        - npm run lint:
+            pwd:
+                code-studio
+        - npm test:
+            pwd:
+                code-studio
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
         - ./test.sh:
             pwd:
                 cookbooks
+        # The following should only be run when [run-ui-tests] included in commit hash
         - ./bin/dashboard-server:
             background: true
         - "cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":

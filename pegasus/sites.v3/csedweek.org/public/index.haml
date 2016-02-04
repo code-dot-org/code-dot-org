@@ -2,23 +2,23 @@
 theme: responsive
 banner: null
 social:
-  "og:title": "The Hour of Code is here"
-  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104."
+  "og:title": "<%= I18n.t(:og_title) %>"
+  "og:description": "<%= I18n.t(:og_description)%>"
   "og:image": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
   "og:image:width": "1200"
   "og:image:height": "627"
-  "og:video:url": "http://youtubeeducation.com/v/2DxWIxec6yo"
-  "og:video:secure_url": "https://youtubeeducation.com/v/2DxWIxec6yo"
+  "og:video:url": "http://youtube.com/v/Ofze6CWUCx8"
+  "og:video:secure_url": "https://youtube.com/v/Ofze6CWUCx8"
   "og:video:type": "application/x-shockwave-flash"
   "og:video:width": "640"
   "og:video:height": "360"
   "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/"
-  "twitter:title": "The Hour of Code is here"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 40 languages. Ages 4 to 104."
+  "twitter:title": "<%= I18n.t(:og_title) %>"
+  "twitter:description": "<%= I18n.t(:og_description)%>"
   "twitter:image:src": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
-  "twitter:player": "https://youtubeeducation.com/v/2DxWIxec6yo"
+  "twitter:player": "https://youtube.com/v/Ofze6CWUCx8"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 ---
@@ -30,14 +30,7 @@ social:
     = view :index_loc
 
 -facebook = {:u=>"https://#{request.site}/"}
-
--if request.site == 'csedweek.org'
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:hoc_is_here)}
-  -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:hoc_is_here).include? '#HourOfCode'
--else
-  -twitter = {:related=>'codeorg', :hashtags=>'', :text=>I18n.t(:twitter_teach_cs)}
-
--twitter[:url] = "http://#{request.site}/" unless twitter[:text].include? "http://#{request.site}/" || "#{twitter[:text]} http://#{request.site}/".length > 140
+-twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:hoc_is_here)}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
@@ -70,11 +63,11 @@ social:
         %div{:style=>'margin-bottom: 8px'}
           %a#trybutton{:href=>'/learn'}
             %button.optionbutton{:style=>'min-width: 100px;'}
-              =I18n.t :get_started
+              =I18n.t :homepage_action_text_learn
         %a{:href=>'/learn/beyond', :style=>'font-size: 16px; color: white'}
           =I18n.t :homepage_action_text_volunteers
 
-    -download_filename = 'hourofcode-2015-50MB.mp4'
+    -download_filename = 'hourofcode-2015-thankyou.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
       = view :share_buttons, facebook:facebook, twitter:twitter, download_url:"http://videos.code.org/social/#{download_filename}"
 

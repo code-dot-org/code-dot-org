@@ -201,7 +201,7 @@ s:function(d,k,p){craft_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "blockTypeSand":function(d){return "ทราย"},
 "blockTypeSandstone":function(d){return "หินทราย"},
 "blockTypeStone":function(d){return "หิน"},
-"blockTypeTnt":function(d){return "ระเบิด"},
+"blockTypeTnt":function(d){return "ทีเอ็นที"},
 "blockTypeTree":function(d){return "ต้นไม้"},
 "blockTypeWater":function(d){return "น้ำ"},
 "blockTypeWool":function(d){return "ขนแกะ"},

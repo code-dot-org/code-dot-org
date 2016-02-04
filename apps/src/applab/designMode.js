@@ -10,13 +10,15 @@ var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
 var KeyCodes = require('../constants').KeyCodes;
 var constants = require('./constants');
-
+var applabCommands = require('./commands');
 var designMode = module.exports;
+var sanitizeHtml = require('./sanitizeHtml');
+var utils = require('../utils');
+var gridUtils = require('./gridUtils');
+var logToCloud = require('../logToCloud');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
-
-var GRID_SIZE = 5;
 
 /**
  * If in design mode and program is not running, display Properties
@@ -39,6 +41,10 @@ designMode.onDesignModeVizClick = function (event) {
     element = getInnerElement(element);
   } else if ($(element).is('.ui-resizable-handle')) {
     element = getInnerElement(element.parentNode);
+  } else if ($(element).attr('class') === undefined && $(element.parentNode).is('.textArea')) {
+    // User may have clicked one of the divs of a multiline text area - in this case, the element is just a plain
+    // div with no class, and we want to use the full text area element.
+    element = getInnerElement(element.parentNode.parentNode);
   }
   // give the div focus so that we can listen for keyboard events
   $("#designModeViz").focus();
@@ -101,6 +107,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
+  designMode.renderToggleRow();
 };
 
 /**
@@ -126,6 +133,14 @@ function appendPx (input) {
 }
 
 /**
+ * While in design mode, elements get wrapped in a ui-draggable container.
+ * @returns {true} If element is currently wrapped
+ */
+function isDraggableContainer(element) {
+  return $(element).hasClass('ui-draggable');
+}
+
+/**
  * Handle a change from our properties table.
  * @param element {Element}
  * @param name {string}
@@ -147,6 +162,7 @@ designMode.updateProperty = function(element, name, value) {
   var handled = true;
   switch (name) {
     case 'id':
+      value = value.trim();
       elementUtils.setId(element, value);
       if (elementLibrary.getElementType(element) ===
           elementLibrary.ElementType.SCREEN) {
@@ -157,12 +173,16 @@ designMode.updateProperty = function(element, name, value) {
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      element.parentNode.style.left = newLeft;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.left = newLeft;
+      }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      element.parentNode.style.top = newTop;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.top = newTop;
+      }
       break;
     case 'width':
       element.setAttribute('width', appendPx(value));
@@ -173,7 +193,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      element.parentNode.style.width = newWidth;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.width = newWidth;
+      }
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -183,7 +205,9 @@ designMode.updateProperty = function(element, name, value) {
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      element.parentNode.style.height = newHeight;
+      if (isDraggableContainer(element.parentNode)) {
+        element.parentNode.style.height = newHeight;
+      }
 
       if (element.style.backgroundSize) {
         element.style.backgroundSize = element.style.width + ' ' +
@@ -191,7 +215,7 @@ designMode.updateProperty = function(element, name, value) {
       }
       break;
     case 'text':
-      element.textContent = value;
+      element.innerHTML = utils.escapeText(value);
       break;
     case 'textColor':
       element.style.color = value;
@@ -239,19 +263,32 @@ designMode.updateProperty = function(element, name, value) {
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
-        element.onload = function () {
-          // naturalWidth/Height aren't populated until image has loaded.
-          element.style.width = element.naturalWidth + 'px';
-          element.style.height = element.naturalHeight + 'px';
-          if ($(element.parentNode).is('.ui-resizable')) {
-            element.parentNode.style.width = element.naturalWidth + 'px';
-            element.parentNode.style.height = element.naturalHeight + 'px';
+        var resizeElement = function (width, height) {
+          element.style.width = width + 'px';
+          element.style.height = height + 'px';
+          if (isDraggableContainer(element.parentNode)) {
+            element.parentNode.style.width = width + 'px';
+            element.parentNode.style.height = height + 'px';
           }
           // Re-render properties
           if (currentlyEditedElement === element) {
             designMode.editElementProperties(element);
           }
         };
+        if (value === '') {
+          element.src = '/blockly/media/1x1.gif';
+          resizeElement(100, 100);
+        } else {
+          element.onload = function () {
+            // naturalWidth/Height aren't populated until image has loaded.
+            var left = parseFloat(element.style.left);
+            var top = parseFloat(element.style.top);
+            var dimensions = boundedResize(left, top, element.naturalWidth, element.naturalHeight, true);
+            resizeElement(dimensions.width, dimensions.height);
+            // only perform onload once
+            element.onload = null;
+          };
+        }
       }
       break;
     case 'hidden':
@@ -291,7 +328,7 @@ designMode.updateProperty = function(element, name, value) {
         optionElement.textContent = value[i];
       }
       // remove any extra options
-      for (i = value.length; i < element.children.length; i++) {
+      while(element.children[i]) {
         element.removeChild(element.children[i]);
       }
       break;
@@ -467,6 +504,18 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
+  function reportUnsafeHtml(removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+    console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe
+    });
+  }
+  sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
+
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
 
@@ -504,9 +553,6 @@ designMode.toggleDesignMode = function(enable) {
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
-  var debugArea = document.getElementById('debug-area');
-  debugArea.style.display = enable ? 'none' : 'block';
-
   Applab.toggleDivApplab(!enable);
 };
 
@@ -517,6 +563,34 @@ designMode.toggleDesignMode = function(enable) {
 function getInnerElement(outerElement) {
   // currently assume inner element is first child.
   return outerElement.children[0];
+}
+
+/**
+ * Returns a new width/height bounded to the visualization area.
+ * @param {number} left
+ * @param {number} top
+ * @param {number} width Requested width.
+ * @param {number} height Requested height.
+ * @param {boolean} preserveAspectRatio Constrain the width/height to the
+ *   initial aspect ratio.
+ * @return {{width: number, height: number}}
+ */
+function boundedResize(left, top, width, height, preserveAspectRatio) {
+  var container = $('#designModeViz');
+  var maxWidth = container.outerWidth() - left;
+  var maxHeight = container.outerHeight() - top;
+  var newWidth = Math.min(width, maxWidth);
+  newWidth = Math.max(newWidth, 20);
+  var newHeight = Math.min(height, maxHeight);
+  newHeight = Math.max(newHeight, 20);
+
+  if (preserveAspectRatio) {
+    var ratio = Math.min(newWidth / width, newHeight / height);
+    newWidth = width * ratio;
+    newHeight = height * ratio;
+  }
+
+  return {width: newWidth, height: newHeight};
 }
 
 /**
@@ -544,23 +618,17 @@ function makeDraggable (jqueryElements) {
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
         // snap width/height to nearest grid increment
-        newWidth = snapToGridSize(newWidth, GRID_SIZE);
-        newHeight = snapToGridSize(newHeight, GRID_SIZE);
+        newWidth = gridUtils.snapToGridSize(newWidth);
+        newHeight = gridUtils.snapToGridSize(newHeight);
 
         // Bound at app edges
-        var container = $('#designModeViz');
-        var maxWidth = container.outerWidth() - ui.position.left;
-        var maxHeight = container.outerHeight() - ui.position.top;
-        newWidth = Math.min(newWidth, maxWidth);
-        newWidth = Math.max(newWidth, 20);
-        newHeight = Math.min(newHeight, maxHeight);
-        newHeight = Math.max(newHeight, 20);
+        var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
 
         ui.size.width = newWidth;
         ui.size.height = newHeight;
         wrapper.css({
-          width: newWidth,
-          height: newHeight
+          width: dimensions.width,
+          height: dimensions.height
         });
 
         elm.outerWidth(wrapper.width());
@@ -590,8 +658,8 @@ function makeDraggable (jqueryElements) {
         var newTop = ui.position.top / scale;
 
         // snap top-left corner to nearest location in the grid
-        newLeft = snapToGridSize(newLeft, GRID_SIZE);
-        newTop = snapToGridSize(newTop, GRID_SIZE);
+        newLeft = gridUtils.snapToGridSize(newLeft);
+        newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
         var container = $('#designModeViz');
@@ -652,17 +720,6 @@ function getVisualizationScale() {
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
-/**
- * Given a coordinate on either axis and a grid size, returns a coordinate
- * near the given coordinate that snaps to the given grid size.
- * @param {number} coordinate
- * @param {number} gridSize
- * @returns {number}
- */
-var snapToGridSize = function (coordinate, gridSize) {
-  var halfGrid = gridSize / 2;
-  return coordinate - ((coordinate + halfGrid) % gridSize - halfGrid);
-};
 
 /**
  * Inverse of `makeDraggable`.
@@ -724,18 +781,9 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var div = document.getElementById('designModeViz');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+      var point = gridUtils.scaledDropPoint(ui.helper);
 
-      var left = (ui.helper.offset().left - $('#designModeViz').offset().left) / xScale;
-      var top = (ui.helper.offset().top - $('#designModeViz').offset().top) / yScale;
-
-      // snap top-left corner to nearest location in the grid
-      left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-      var element = designMode.createElement(elementType, left, top);
+      var element = designMode.createElement(elementType, point.left, point.top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
@@ -792,6 +840,20 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
+  designMode.renderToggleRow(screenIds);
+
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+};
+
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
+};
+
+designMode.renderToggleRow = function (screenIds) {
+  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+    return elementUtils.getId(screen);
+  });
+
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
@@ -799,7 +861,7 @@ designMode.changeScreen = function (screenId) {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: screenId,
+        initialScreen: currentScreenId,
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
@@ -810,12 +872,6 @@ designMode.changeScreen = function (screenId) {
       designToggleRow
     );
   }
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
-
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
 };
 
 /**
@@ -846,7 +902,9 @@ designMode.renderDesignWorkspace = function(element) {
       }
     },
     element: element || null,
+    elementIdList: Applab.getIdDropdownForCurrentScreen(),
     handleChange: designMode.onPropertyChange.bind(this, element),
+    onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),

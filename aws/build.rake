@@ -15,6 +15,7 @@ require 'cdo/hip_chat'
 require 'cdo/only_one'
 require 'shellwords'
 require 'cdo/aws/cloudfront'
+require 'cdo/aws/s3_packaging'
 
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
@@ -120,19 +121,6 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   end
 
   #
-  # Define the SHARED BUILD task
-  #
-  SHARED_NODE_MODULES = Dir.glob(shared_js_dir('node_modules', '**/*'))
-  SHARED_BUILD_PRODUCTS = ['npm-debug.log'].map{|i| shared_js_dir(i)} + Dir.glob(shared_js_dir('build', '**/*'))
-  SHARED_SOURCE_FILES = Dir.glob(shared_js_dir('**/*')) - SHARED_NODE_MODULES - SHARED_BUILD_PRODUCTS
-  SHARED_TASK = build_task('shared', SHARED_SOURCE_FILES) do
-    RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-shared')
-    RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:shared'
-    RakeUtils.system 'rm', '-rf', dashboard_dir('public/shared-package')
-    RakeUtils.system 'cp', '-R', shared_js_dir('build/package'), dashboard_dir('public/shared-package')
-  end
-
-  #
   # Define the APPS COMMIT task. If APPS_TASK produces new output, that output needs to be
   #   committed because it's input for the DASHBOARD task.
   #
@@ -166,41 +154,33 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
       RakeUtils.system 'rm', '-f', deploy_dir('rebuild-apps')
     end
   end
-
-  #
-  # Define the SHARED COMMIT task. If SHARED_TASK produces new output, that output needs to be
-  #   committed because it's input for the DASHBOARD task.
-  #
-  SHARED_COMMIT_TASK = build_task('shared-commit', [deploy_dir('rebuild'), SHARED_TASK]) do
-    shared_changed = false
-    Dir.chdir(dashboard_dir('public/shared-package')) do
-      shared_changed = !`git status --porcelain .`.strip.empty?
-    end
-
-    if shared_changed
-      if RakeUtils.git_updates_available?
-        # NOTE: If we have local changes as a result of building SHARED_TASK, but there are new
-        # commits pending in the repository, it is better to pull the repository first and commit
-        # these changes after we're caught up with the repository because, if we committed the changes
-        # before pulling we would need to manually handle a "merge commit" even though it's impossible
-        # for there to be file conflicts (because nobody changes the files SHARED_TASK builds manually).
-        HipChat.log '<b>Shared</b> package updated but git changes are pending; commmiting after next build.', color: 'yellow'
-      else
-        HipChat.log 'Committing updated <b>shared</b> package...', color: 'purple'
-        RakeUtils.system 'git', 'add', '--all', dashboard_dir('public/shared-package')
-        message = "Automatically built.\n\n#{IO.read(deploy_dir('rebuild-shared'))}"
-        RakeUtils.system 'git', 'commit', '-m', Shellwords.escape(message)
-        RakeUtils.git_push
-        RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
-      end
-    else
-      HipChat.log '<b>shared</b> package unmodified, nothing to commit.'
-      RakeUtils.system 'rm', '-f', deploy_dir('rebuild-shared')
-    end
-  end
 else
   APPS_COMMIT_TASK = build_task('apps-commit') {}
-  SHARED_COMMIT_TASK = build_task('shared-commit') {}
+end
+
+#
+# Define the CODE STUDIO BUILD task.
+#
+CODE_STUDIO_TASK = build_task('code-studio', Dir.glob(code_studio_dir('**/*'))) do
+  packager = S3Packaging.new('code-studio', code_studio_dir, dashboard_dir('public/code-studio-package'))
+
+  updated_package = packager.update_from_s3
+  if updated_package
+    HipChat.log "Downloaded package from S3: #{packager.commit_hash}"
+    next # no need to do anything if we already got a package from s3
+  end
+
+  # Test and staging are the only environments that should be uploading new packages
+  raise 'No valid package found' unless rack_env?(:staging) || rack_env?(:test)
+
+  HipChat.log 'Building code-studio...'
+  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-code-studio')
+  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:code_studio'
+  HipChat.log 'code-studio built'
+
+  # upload to s3
+  package = packager.upload_package_to_s3('/build')
+  packager.decompress_package(package)
 end
 
 file deploy_dir('rebuild') do
@@ -326,7 +306,7 @@ task :deploy do
   end
 end
 
-$websites = build_task('websites', [deploy_dir('rebuild'), SHARED_COMMIT_TASK, APPS_COMMIT_TASK, :build_with_cloudfront, :deploy])
+$websites = build_task('websites', [deploy_dir('rebuild'), APPS_COMMIT_TASK, CODE_STUDIO_TASK, :build_with_cloudfront, :deploy])
 task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
@@ -345,35 +325,24 @@ task :shared_unit_tests do
   end
 end
 
-# currently this is only implemented for dashboard ruby unit tests but
-# maybe in the future it will work for other types of tests
-def log_coverage_results(name)
-  results_file = dashboard_dir('coverage/.last_run.json')
-  results = JSON.parse(File.read(results_file))
-  HipChat.log "<b>#{name}</b> coverage: #{results["result"]["covered_percent"]}%. Details: https:#{CDO.studio_url('coverage/index.html')}", color: 'green'
-rescue Exception => e
-  HipChat.log "Couldn't read test coverage results at #{results_file}: #{e.message}\n#{e.backtrace.join("\n")}"
-end
-
-COVERAGE_SYMLINK = dashboard_dir 'public/coverage'
-file COVERAGE_SYMLINK do
-  Dir.chdir(dashboard_dir('public')) do
-    RakeUtils.system_ 'ln', '-s', '../coverage', 'coverage'
-  end
-end
-
-task :dashboard_unit_tests => [COVERAGE_SYMLINK] do
+task :dashboard_unit_tests do
   Dir.chdir(dashboard_dir) do
     name = "dashboard ruby unit tests"
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:schema:load'
-      RakeUtils.rake 'test', 'COVERAGE=1'
-      log_coverage_results(name)
+      RakeUtils.rake 'test'
       RakeUtils.rake "seed:all"
       RakeUtils.start_service CDO.dashboard_unicorn_name
     end
+  end
+end
+
+task :ui_test_flakiness do
+  Dir.chdir(deploy_dir) do
+    flakiness_output = `./bin/test_flakiness 5`
+    HipChat.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
   end
 end
 
@@ -384,11 +353,11 @@ file UI_TEST_SYMLINK do
   end
 end
 
-task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
+task :regular_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--auto_retry', '--html'
+      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
@@ -402,12 +371,12 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
+task :eyes_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_ 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', eyes_features.count.to_s
+      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message
@@ -422,8 +391,8 @@ task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
 end
 
 # do the eyes and browserstack ui tests in parallel
-multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
+multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
 
 task 'test-websites' => [$websites_test]

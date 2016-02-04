@@ -6,6 +6,8 @@ class ScriptTest < ActiveSupport::TestCase
     @script_file = File.join(self.class.fixture_path, "test_fixture.script")
     # Level names match those in 'test.script'
     @levels = (1..5).map { |n| create(:level, :name => "Level #{n}", :game => @game) }
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test 'login required setting in script file' do
@@ -276,5 +278,13 @@ class ScriptTest < ActiveSupport::TestCase
   test 'twenty_hour?' do
     assert Script.find_by_name('20-hour').twenty_hour?
     assert_not Script.find_by_name('mc').twenty_hour?
+  end
+
+  test 'should summarize script' do
+    script = create(:script, name: 'Single Stage Script')
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+
+    assert_equal 1, script.summarize[:stages].count
   end
 end

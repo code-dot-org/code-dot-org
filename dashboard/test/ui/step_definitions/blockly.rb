@@ -40,7 +40,7 @@ When /^I drag block "([^"]*)" above block "([^"]*)"$/ do |from, to|
   to_id = get_block_id(to)
   height = @browser.execute_script("return $(\"[block-id='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
   destination_has_parent = @browser.execute_script("return $(\"[block-id='#{to_id}']\").parent().attr('block-id') !== undefined;")
-  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height);
+  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height)
   @browser.execute_script code
 end
 
@@ -184,6 +184,14 @@ Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, className|
   item = @browser.find_element(:css, "g[block-id='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   classes.include?(className).should eq false
+end
+
+Then /^the modal function editor is closed$/ do
+  modal_dialog_visible.should eq false
+end
+
+Then /^the modal function editor is open$/ do
+  modal_dialog_visible.should eq true
 end
 
 When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|

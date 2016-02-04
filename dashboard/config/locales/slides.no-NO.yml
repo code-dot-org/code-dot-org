@@ -129,7 +129,7 @@
       9:
         image: notes/flappy09.jpg
         text: Når du ser en nedtrekksboks som denne, så betyr det at du kan endre
-          instillingene - for eksempe lyden som spilles av når flappy treffer bakken.
+          instillingene - for eksempel lyden som spilles av når flappy treffer bakken.
       10:
         image: notes/flappy10.jpg
         text: I siste puslespillet vil du kunne lage et spill og dele den med dine
@@ -529,8 +529,8 @@
           utføres. Hva gjør ditt romvesen si?
       4:
         image: notes/playlab_events_4.png
-        text: Det finnes også "når pilen"-blokker. Hvis du kobler "flytt"-blokker
-          til disse, kan du begynne å flytte aktører opp, ned, til venstre eller høyre.
+        text: Det finnes også "når pil"-blokker. Hvis du kobler "flytt"-blokker til
+          disse, kan du begynne å flytte figurer opp, ned, til venstre eller høyre.
           Trinnvis blir spillet ditt mer interaktiv.
     playlab_repeat_forever:
       1:
@@ -705,10 +705,10 @@
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Å debugge er å finne feil og fikse dem. Det er mange måter å debugge
+        text: "Å debugge er å finne feil og fikse dem. Det er mange måter å debugge
           problemer på. Den enkleste måten er å flytte steg for steg inntil du kommer
           dit hvor det oppstår en feil. Her prøver jeg å sprette baklengs opp på bommen,
-          men faller av hele tiden.
+          men faller av hele tiden."
       2:
         image: notes/C1_maze_debugging_2.png
         text: Jeg gjennomgikk alle stegene, og skjønte hvor feilen var. Jeg hadde
@@ -1043,7 +1043,7 @@
           går trinnvis gjennom hver blokk.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25.
+        text: "Å, der er problemet! Kattens værhår er 75 piksler lange, ikke 25."
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -1180,7 +1180,7 @@
         image: notes/C2_maze_intro_4.png
         text: Jeg skal velge en "snu mot høyre"-blokk og jeg drar den under "gå fremover"-blokken,
           til det dukker opp en gul pil. Da slipper jeg den og de to blokkene vil
-          feste seg sammen. Når jeg trykker på "kjør" igjen, vil fuglen gjøre kommandoene
+          feste seg sammen. Når jeg trykker på "Kjør" igjen, vil fuglen gjøre kommandoene
           som er stablet i arbeidsområdet fra toppen og nedover.
       5:
         image: notes/C2_maze_intro_5.png
@@ -1224,7 +1224,7 @@
           du faktisk kan spille.
       2:
         image: notes/C2_playlab_createastory_2.png
-        text: Her er "når pilen"-blokk og "Flytt aktør"-blokk. Du kan sette disse
+        text: Her er en "når pil"-blokk og en "flytt figur"-blokk. Du kan sette disse
           blokkene sammen for å flytte figurene rundt med piltastene.
     C2_relay_programming:
       1:
@@ -1332,7 +1332,7 @@
     C3_artist_nested_loops:
       1:
         image: notes/C3_artist_nested_loops_1.png
-        text: Når du setter en løkke inni en annen løkke, kaller vi det en nøstet
+        text: Når du setter en løkke inni en annen løkke, kaller vi det en løkke i
           løkke. For eksempel, her er koden for å tegne en trekant med sider som er
           100 pixler lange. Vi bruker gjenta-ganger-blokken og setter den til tre
           - en for hver side av trekanten.
@@ -1403,9 +1403,9 @@
     C3_bee_nested_loops:
       1:
         image: notes/C3_bee_nested_loops_1.png
-        text: Nå skal vi bruke nøstede løkker med bien. Vi har fått litt kode å starte
+        text: Nå skal vi bruke løkker i løkker med bien. Vi har fått litt kode å starte
           med. Den ber bien om å flytte framover og hente nektar tre ganger, og deretter
-          snu seg mot høyre. La oss ta hele kodestykket og nøste det inni en annen
+          snu seg mot høyre. La oss ta hele kodestykket og legge det inni en annen
           gjenta-blokk, og få den til å gjenta det tre ganger. Ferdig!
     C3_bounce:
       1:
@@ -1418,9 +1418,9 @@
           på tastaturet.
       3:
         image: notes/C3_bounce_3.png
-        text: Dette gjør vi ved å koble "når venstre pil"-blokken til "flytt til venstre"-blokken,
-          og "når høyre pil"-blokken til "flytt til høyre"-blokken. Prøv det, så er
-          du i gang med å programmere ditt eget sprettespill så fort som bare det!
+        text: Dette gjør vi ved å koble "når pil venstre"-blokken til "flytt venstre"-blokken,
+          og "når pil høyre"-blokken til "flytt høyre"-blokken. Prøv det, så er du
+          i gang med å programmere ditt eget sprettespill så fort som bare det!
     C3_computational_thinking:
       1:
         image: notes/C3_computational_thinking_1.png
@@ -1564,20 +1564,20 @@
           seg veldig raskt gjennom internett.
       2:
         image: notes/C3_internet_2.png
-        text: Å spille ut hvordan internett fungerer vil hjelpe deg til å forstå hva
-          som skjer hvordan du bruker nettet. Du vil lære hvordan meldinger kommer
+        text: "Å spille ut hvordan internett fungerer vil hjelpe deg til å forstå
+          hva som skjer hvordan du bruker nettet. Du vil lære hvordan meldinger kommer
           seg fra datamaskinen din til et favorittnettsted, eller fra en venn til
           en e-postkasse. Akkurat som det er lettere å navigere i tett trafikk når
           du er kjent på veien og kan lese skiltene, er det ikke så vanskelig å reise
-          på internett når du vet hva som foregår i kulissene.
+          på internett når du vet hva som foregår i kulissene."
       3:
         image: notes/C3_internet_3.png
-        text: Å sende meldinger på internett er som å sende meldinger i posten, men
+        text: "Å sende meldinger på internett er som å sende meldinger i posten, men
           med noen forskjeller. Jeg er her på Google.com. IP-adressen til dette nettstedet
           er dette nummeret. Du kan tenke på en IP-adresse som avsenderadressen i
           posten. Forestill deg at jeg ønsker å sende en melding i posten til noen
           på kontoret der nede. Ser du URL-en og IP-adressen på døren? Jeg har skrevet
-          denne meldingen og trykket på send.
+          denne meldingen og trykket på send."
       4:
         image: notes/C3_internet_4.png
         text: I motsetning til posten, er det første som skjer at internett deler
@@ -1654,7 +1654,7 @@
           du faktisk kan spille.
       2:
         image: notes/playlab_2.png
-        text: Her er "når pilen"-blokk og "Flytt aktør"-blokk. Du kan sette disse
+        text: Her er en "når pil"-blokk og en "flytt figur"-blokk. Du kan sette disse
           blokkene sammen for å flytte figurene rundt med piltastene.
     C3_songwriting_with_parameters:
       1:
@@ -1883,10 +1883,10 @@
           bygge programmet vårt.
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Hva skjer hvis jeg drar "gå fremover"-blokken til arbeidsområdet og
+          trykker "kjør"? Fuglen beveger seg en boks fremover i koordinatsystemet.
+          Hva hvis jeg vil at fuglen skal gjøre noe annet etter at den har flyttet
+          seg frem en boks? Da legger jeg til en blokk til i programmet vårt.
       4:
         image: notes/C4_intro_4.png
         text: I'm going to choose the "turn right" block and I'll drag it under my
@@ -2538,9 +2538,9 @@
           men vi ville at du skulle få prøve det.
       3:
         image: notes/starwars_typing_3.JPG
-        text: Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på
-          hvilken som helst oppgave for å bytte fra blokker til å skrive koden som
-          tekst.
+        text: "Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst
+          på hvilken som helst oppgave for å bytte fra blokker til å skrive koden
+          som tekst."
       4:
         image: notes/starwars_typing_4.JPG
         text: In the next lesson, we'll start you out in typing mode. Here you can
@@ -2630,17 +2630,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2755,17 +2755,17 @@
           new commands to do even more.
       3:
         image: notes/starwars_blocks_congrats_3.JPG
-        text: '[students speaking] So we made a game basically where you get points
+        text: "[students speaking] So we made a game basically where you get points
           when you get puffer pigs. The twist is everytime you get a puffer pig a
           storm trooper appears. Actually the whole screen is full of puffer pigs
-          and then when you touch 10,000 of them, you win.'
+          and then when you touch 10,000 of them, you win."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: '[students speaking] We made a game where you can''t lose and everything
+        text: "[students speaking] We made a game where you can't lose and everything
           you kill gives you points. For my program, I reversed the keys so that whenever
           you click up, your character goes down and when you go right, your character
-          goes left. It''s really hard! Sometimes you just get an advantage, an unfair
-          advantage if you''re the developer of the game. Did I get it? Yay!'
+          goes left. It's really hard! Sometimes you just get an advantage, an unfair
+          advantage if you're the developer of the game. Did I get it? Yay!"
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
@@ -2906,9 +2906,9 @@
           Det er du som velger.
       3:
         image: notes/mc_congrats_share_3.JPG
-        text: '[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
+        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
           Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
-          hus av ull!'
+          hus av ull!"
       4:
         image: notes/mc_congrats_share_4.JPG
         text: Når du er ferdig å bygge, kan du velge "Del" for å få en lenke å dele
@@ -2924,9 +2924,9 @@
           Det er du som velger.
       3:
         image: notes/mc_congrats_no_share_3.JPG
-        text: '[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
+        text: "[elever snakker] Nå begynner alvoret. Klipp. Jeg lagde en L av fakler.
           Jeg lagde en A av bjørkeplanker. Det fungerte, det fungerte! Vi bygde et
-          hus av ull!'
+          hus av ull!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
         text: Nå kan du bygge alt du vil. Ha det gøy!
@@ -3044,8 +3044,8 @@
           of code.
       6:
         image: notes/iceage_intro_6.JPG
-        text: The white space on the right is called the work space and this is where
-          we'll build our program.
+        text: Det hvite området til høyre er arbeidsvinduet, og det er her vi bygger
+          opp programmet.
       7:
         image: notes/iceage_intro_7.JPG
         text: To start off, you'll need to link your blocks to the orange when run

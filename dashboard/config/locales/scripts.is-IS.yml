@@ -157,7 +157,7 @@
           description_short: Teiknaðu flottar myndir og mynstur með listamanninum!
         hourofcode:
           Maze: Völundarhús
-          title: Klukkustund kóðunar
+          title: Hefðbundið völundarhús
           description: Prófaðu undirstöðuatriði í tölvunarfræði með persónum úr Angry
             Birds, Plants vs. Zombies og Scrat úr Ísaldarmyndunum!
           description_short: Prófaðu grunnatriði í tölvufræði með mörgum skemmtilegum
@@ -208,7 +208,7 @@
           Super Challenge - Variables: Ofurþraut - Breytur
           Super Challenge - For Loops: Ofuráskorun - Frá lykkjur
           Super Challenge - Functions and Parameters: Ofuráskorun - Föll og stikar
-          Extreme Challenge - Comprehensive: Ýkt áskorun - Fjölþætt
+          Extreme Challenge - Comprehensive: "Ýkt áskorun - Fjölþætt"
         Course4pre:
           title: Forkröfur Námskeiðs 4
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
@@ -254,7 +254,7 @@
             og hnitakerfi'
           'Calc: Evaluation Blocks': Matskubbar og reikningsformúlur
           'Eval: Strings and Images': Strengir og myndir
-          'Unplugged: Contracts': 'Án tölvu: Samningar, gildamengi og svið'
+          'Unplugged: Contracts': "Án tölvu: Samningar, gildamengi og svið"
           'Eval: Writing Contracts': Ritun samninga
           'Calc: Defining Variables': Skilgreining breytna og innsetning
           'Play Lab: Defining Variables (Big Game)': Stórleikur - Breytur
@@ -263,15 +263,15 @@
           'Play Lab: Defining Functions': Hæð eldflaugar
           'Eval: Functions': Orðaþrautir leystar með hönnunaruppskriftinni
           'Play Lab: Animation (Big Game)': Stórleikur - Hreyfimyndir
-          'Unplugged: Booleans': 'Án tölvu: Boole gildi og rökvísi'
+          'Unplugged: Booleans': "Án tölvu: Boole gildi og rökvísi"
           'Eval: Boolean Operators': Boole virkjar
           'Play Lab: Booleans': Leðurblakan Sammi
           'Play Lab: Boolean (Big Game)': Stórleikur - Boole gildi
           'Unplugged: Conditionals and Piecewise Functions': 'Verkefni án tölvu: Skilyrði
             og Piecewise föll'
           'Eval: Conditionals': Skilyrði
-          'Unplugged: Collision Detection and the Distance Formula': 'Án tölvu: Skynjun
-            árekstra og regla Pýþagórasar'
+          'Unplugged: Collision Detection and the Distance Formula': "Án tölvu: Skynjun
+            árekstra og regla Pýþagórasar"
           'Play Lab: Collision Detection (Big Game)': Stórleikur - Skynjun árekstra
         infinity:
           title: Disney Infinity leikjasmiðja
@@ -280,7 +280,7 @@
           description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney
             Infinity persónum.
           Play Lab: Leikjasmiðja
-          Infinity: Óendanleiki
+          Infinity: "Óendanleiki"
         algebrademo:
           title: Dæmi með Algebru
           description_short: Nokkrar þrautir til að sýna umhverfið og forritunarmálið
@@ -359,11 +359,11 @@
         20-hour:
           title: Kynning á tölvunarfræði, hraðnámskeið
           description_audience: Fyrir 10-18 ára
-          description: Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
+          description: "Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði
             og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi
-            13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.
-          description_short: Þetta 20 tíma námskeið fer í þau kjarnahugtök tölvunarfræði
-            og forritunar sem kynnt eru á námskeiðum 2-4.
+            13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa."
+          description_short: "Þetta 20 tíma námskeið fer í þau kjarnahugtök tölvunarfræði
+            og forritunar sem kynnt eru á námskeiðum 2-4."
           Introduction to Computer Science: Kynning á tölvunarfræði
           The Maze: Völundarhúsið
           Computational Thinking: Tölvunarmiðuð hugsun
@@ -414,10 +414,10 @@
           description_short: Prófaðu Jigsaw kennsluefnið okkar
           Jigsaw: Púsl
         step:
-          title: Þrep
+          title: "Þrep"
           description: Kennsla í skrefum
           description_short: Kennsla í skrefum
-          Step: Þrep
+          Step: "Þrep"
         Hour of Code:
           title: Klukkustund kóðunar 2013
           description: Prófaðu undirstöðuatriði tölvunarfræði með leikverum úr Angry
@@ -426,35 +426,35 @@
             fígúrum!
           Hour of Code 2013: Klukkustund kóðunar 2013
         Code Studio Puzzle Challenge:
-          title: Áskorun - Þraut í kóðastúdíói
+          title: "Áskorun - Þraut í kóðastúdíói"
           description_short: Taktu áskorun!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         CodeStudioPuzzleChallenge:
-          title: Áskorun - Þraut í kóðastúdíói
+          title: "Áskorun - Þraut í kóðastúdíói"
           description_short: Taktu áskorun!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         Test - Code Studio Puzzle Challenge:
           title: Prófa - Þrautaáskorun í kóðastúdíói
           description_short: Taktu áskorun!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         How to do the Code Studio Puzzle Challenge:
           title: Prófa - Þrautaáskorun í kóðastúdíói
           description_short: Taktu áskorun!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         Tutorial - Code Studio Puzzle Challenge:
           title: Leiðsögn - Þrautaáskorun í kóðastúdíói
           description_short: Taktu áskorun!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Leiðsögn - Þrautaáskorun í kóðastúdíói
           description_short: Taktu áskorun!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         course4pre:
           title: Forkröfur Námskeiðs 4
           description_short: Stutt yfirferð á hugtökum fyrir nemendur sem hafa ekki
@@ -475,9 +475,9 @@
           title: CSP Kafli1 - Stafrænar upplýsingar
           description_short: Kanna hvernig stafrænar upplýsingar eru settar fram og
             fluttar
-          description: Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem
+          description: "Þessi kafli kannar þær tæknilegu áskoranir og spurningar sem
             koma upp út frá þörfinni fyrir að setja stafrænar upplýsingar fram í tölvum
-            og flytja þær milli manna og tölvutækja.
+            og flytja þær milli manna og tölvutækja."
           Lesson14: Kennslustund14
           Lesson 14: Kennslustund 14
           Lesson 14 v2: Kennslustund 14 útg. 2
@@ -502,7 +502,7 @@
           Encoding and Sending Text: Encoding and Sending Text
           Sending Formatted Text: Sending Formatted Text
           Data Storage: Data Storage
-          Text Compression: Þjöppun texta
+          Text Compression: "Þjöppun texta"
           'Assessment: Encoding Complex Information': 'Assessment: Encoding Complex
             Information'
           Encoding B&W Images: Encoding B&W Images
@@ -582,10 +582,10 @@
           Your Game - Player Movement: Leikur þinn - hreyfing leikmanna
           Your Game - Collision Detection: Leikur þinn - skynjun árekstra
         text-compression:
-          title: Þjöppun texta
-          description: Þjappa texta með því að greina endurtekin mynstur.
-          description_short: Þjappa texta með því að greina endurtekin mynstur.
-          Text Compression: Þjöppun texta
+          title: "Þjöppun texta"
+          description: "Þjappa texta með því að greina endurtekin mynstur."
+          description_short: "Þjappa texta með því að greina endurtekin mynstur."
+          Text Compression: "Þjöppun texta"
         CSPPD:
           new stage: nýr áfangi
           Introduction to PD: Kynning á PD
@@ -744,7 +744,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: Á meðan lykkjur
+          While Loops: "Á meðan lykkjur"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -752,6 +752,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -784,7 +785,7 @@
           title: Glenallan Career Day Demo
           description_short: Let's make some puzzles!
           description: Prófaðu þessar skemmtilegu forritunarþrautir. Gerðu þitt besta!
-          Puzzles: Þrautir
+          Puzzles: "Þrautir"
         ECSPD-NexTech:
           Introduction to PD: Kynning á PD
           What is ECS?: What is ECS?
@@ -1001,15 +1002,16 @@
           AppLab: App-smiðjan
           Online PD: Fagmenntun á netinu
           title: All þetta!
-          description: Öll stig fyrir prófun á notendaviðmóti (UI)
-          description_short: Öll stig fyrir prófun á notendaviðmóti (UI)
+          description: "Öll stig fyrir prófun á notendaviðmóti (UI)"
+          description_short: "Öll stig fyrir prófun á notendaviðmóti (UI)"
           Odometer: Vegmælir
           Vigenere: Vigenere
           Frequency: Frequency
-          Text Compression: Þjöppun texta
+          Text Compression: "Þjöppun texta"
           Pixelation: Dílamynstur
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Stúdíó
         algebraPD2b:
           title: Tölvunarfræði í algebru - fagmenntun
           description: '2. áfangi á neti: Blandað sumarnám'
@@ -1376,6 +1378,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1503,6 +1506,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1556,6 +1581,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Leikjasmiðja
           description_short: Búðu til sögu eða leik með Ice Age Leikjasmiðju!
@@ -1595,7 +1621,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: Á meðan lykkjur
+          While Loops: "Á meðan lykkjur"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1658,3 +1684,40 @@
           Welcome!: Velkomin!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Samantekt
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

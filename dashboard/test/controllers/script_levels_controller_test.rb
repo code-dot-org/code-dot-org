@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/script_config'
 
 class ScriptLevelsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
@@ -49,7 +50,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should allow public caching for script level pages with default lifetime' do
-    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true)
 
     # Verify the default max age is used if none is specifically configured.
     get_show_script_level_page(@script_level)
@@ -59,7 +60,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should allow public caching for script level pages with dynamic lifetime' do
-    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(true)
     DCDO.set('public_max_age', 3600)
     DCDO.set('public_proxy_max_age', 7200)
     get_show_script_level_page(@script_level)
@@ -67,9 +68,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should make script level pages uncachable if disabled' do
-    # Enable and disable public caching and make sure we're back to uncached.
-    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: true)
-    Gatekeeper.set('public_caching_for_script', where: { script_name: @script.name }, value: false)
+    # Configure the script not to use public caching and make the headers disable caching.
+    ScriptConfig.stubs(:allows_public_caching_for_script).with(@script.name).returns(false)
     get_show_script_level_page(@script_level)
     assert_caching_disabled response.headers['Cache-Control']
   end
@@ -537,13 +537,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should render title for puzzle in default script' do
     get :show, script_id: @script, stage_id: @script_level.stage.position, id: @script_level.position
-    assert_equal 'Code.org - Accelerated Intro to CS Course: The Maze #4',
+    assert_equal 'Code.org [test] - Accelerated Intro to CS Course: The Maze #4',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test 'should render title for puzzle in custom script' do
     get :show, script_id: @custom_script.name, stage_id: @custom_s2_l1.stage, id: @custom_s2_l1.position
-    assert_equal 'Code.org - custom-script-laurel: laurel-stage-2 #1',
+    assert_equal 'Code.org [test] - custom-script-laurel: laurel-stage-2 #1',
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 

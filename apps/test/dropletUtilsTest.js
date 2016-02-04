@@ -124,6 +124,17 @@ describe('generateDropletModeOptions', function () {
           "dropdown": {},
           "title": "setText"
         },
+        "getNumber": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "getNumber",
+          "value": true
+        },
+        "setNumber": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "setNumber"
+        },
         "checkbox": {
           "color": "#FFF176",
           "dropdown": {
@@ -195,6 +206,11 @@ describe('generateDropletModeOptions', function () {
           "color": "#FFF176",
           "dropdown": {},
           "title": "setSize"
+        },
+        "setProperty": {
+          "color": "#FFF176",
+          "dropdown": {},
+          "title": "setProperty"
         },
         "write": {
           "color": "#FFF176",
@@ -351,6 +367,11 @@ describe('generateDropletModeOptions', function () {
           "value": true,
           "color": "#D3E965",
           "title": "getUserId"
+        },
+        "drawChart": {
+          "color": "#D3E965",
+          "dropdown": {},
+          "title": "drawChart"
         },
         "drawChartFromRecords": {
           "color": "#D3E965",
@@ -528,7 +549,9 @@ describe('generateDropletModeOptions', function () {
         },
         "*.length": {
           "color": "#BB77C7",
-          "title": "*.length"
+          "title": "*.length",
+          "value": true,
+          "property": true
         },
         "*.toUpperCase": {
           "value": true,
@@ -546,7 +569,9 @@ describe('generateDropletModeOptions', function () {
         },
         "listLength": {
           "color": "#BB77C7",
-          "title": "listLength"
+          "title": "listLength",
+          "value": true,
+          "property": true
         },
         "insertItem": {
           "color": "#BB77C7",
@@ -840,5 +865,44 @@ describe('mergeCategoriesWithConfig', function () {
     // generateDropletPalette), we end up modifying the base config unintentionally
     assert(result.Turtle !== appConfig.categories.Turtle);
     assert(result.Turtle.blocks !== appConfig.categories.Turtle.blocks);
+  });
+});
+
+describe('filteredBlocksFromConfig', function () {
+  var filteredBlocksFromConfig = dropletUtils.__TestInterface.filteredBlocksFromConfig;
+
+  var codeFunctions = {
+    sourceBlock: null
+  };
+
+  var dropletConfig = {
+    blocks: [
+      {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+      {func: 'targetBlock', category: 'Math', type: 'value'},
+      {func: 'thirdBlock',  category: 'Math', type: 'value'}
+    ]
+  };
+
+  it('returns source and target when paletteOnly is true', function () {
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
+    assert.deepEqual(mergedBlocks, [
+      {func: 'sourceBlock', category: 'Math', type: 'value', docFunc: 'targetBlock'},
+      {func: 'targetBlock', category: 'Math', type: 'value'}
+    ]);
+  });
+
+  it('returns all blocks when paletteOnly is false', function () {
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, false);
+    assert.deepEqual(mergedBlocks, dropletConfig.blocks);
+  });
+
+  it('doesnt return target when source is not in codeFunctions', function () {
+    var codeFunctions = {
+      thirdBlock: null
+    };
+    var mergedBlocks = filteredBlocksFromConfig(codeFunctions, dropletConfig, null, true);
+    assert.deepEqual(mergedBlocks, [
+      {func: 'thirdBlock',  category: 'Math', type: 'value'}
+    ]);
   });
 });

@@ -50,6 +50,8 @@ levels.custom = {
     "dropdown": null,
     "getText": null,
     "setText": null,
+    "getNumber": null,
+    "setNumber": null,
     "checkbox": null,
     "radioButton": null,
     "getChecked": null,
@@ -63,6 +65,7 @@ levels.custom = {
     "deleteElement": null,
     "setPosition": null,
     "setSize": null,
+    "setProperty": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,
@@ -100,6 +103,7 @@ levels.custom = {
     "updateRecord": null,
     "deleteRecord": null,
     "getUserId": null,
+    "drawChart": null,
     "drawChartFromRecords": null,
 
     // Turtle
@@ -183,6 +187,7 @@ levels.custom = {
     "callMyFunction": null,
     "callMyFunction_n": null,
     "return": null,
+    "comment": null
   },
 
   // "randomNumber_max": null, // DEPRECATED

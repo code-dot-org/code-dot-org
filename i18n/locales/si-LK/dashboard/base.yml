@@ -28,6 +28,8 @@ si:
     code:
       label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: Code එකෙහි කණ්ඩය (ABCDEF)
+      instructions: |-
+        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
     submit: ගුරුවරයෙක් එකතු කරන්න
   add_hint_form:
     placeholder: කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න
@@ -38,6 +40,7 @@ si:
   puzzle: ප්‍රහේලිකාව
   trophies: ඵලකයන්
   courses: පාඨමාලාව
+  unplugged_activity: Unplugged Activity
   of: ගේ
   more: වැඩි
   less: අඩු
@@ -84,12 +87,12 @@ si:
     user_type: ඔබ සිසුවෙක් හෝ ගුරුවරයෙක් ද?
     submit: Sign up
     teacher: ඔබ ගුරුවරයෙක් ද?
-    valid_username: Available!
+    valid_username: ලබාගත හැක !
     invalid_username: Username must be at least 5 characters
     taken_username: Username is already taken
-    valid_password: Valid password!
+    valid_password: මුර පදය වලංගුයි!
     invalid_password: Password එක අකුරු 6ට වැඩිවිය යුතුයි
-    mismatch_password: The two passwords you entered do not match
+    mismatch_password: යෙදු මුර පද දෙක සමාන වී නැත
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/>For users under 13, email addresses are not stored in a form that allows us to contact them."
     teacher_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>."
     additional_information: We need some additional information to continue signing you up.
@@ -97,14 +100,14 @@ si:
     title: Have an account already? Sign in
     login: Email or username
     password: මුර පදය
-    remember: Remember me
+    remember: මා මතක තබා ගන්න
     submit: Sign in
   signin:
     try_heading: Want to try coding without signing up?
-    try_hoc: Try one Hour of Code first
+    try_hoc: කේතන පැය උත්සහ කර බලන්න
     try_20hours: Try our 20 hour Intro to Computer Science
   signinsection:
-    welcome: 'Welcome to %{section_name}'
+    welcome: 'පිළිගන්නවා  %{section_name} වෙත'
     name: ඔබේ නම තෝරන්න
     picture: දැන් ඔබේ රහස් රූපය සොයන්න
     words: දැන් ඔබේ රහස් වචනය සොයන්න
@@ -208,7 +211,7 @@ si:
     update: යාවත්කාලීන කරන්න
     destroy: විනාශ කරන්න
     back: ආපසු
-    confirm: ඔබට විශ්වාස ද?
+    confirm: ඔබට විශ්වාසද?
     created: '%{model} සාර්ථකව නිර්මාණය කරන ලදී.'
     updated: '%{model} සාර්ථකව යාවත්කාලීන කරන ලදී.'
     destroyed: '%{model} සාර්ථකව මකා දමන ලදී.'
@@ -226,7 +229,7 @@ si:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
       label: 'ආයුබෝවන් %{username}'
-      stats: Code Studio
+      stats: කේත මැදිරිය
       settings: මාගේ ගිණුම
       prizes: තෑගි
       logout: Sign out
@@ -235,75 +238,28 @@ si:
       already_registered: පෙර ලියාපදිංචි වී ඇත් ද?
     popup:
       progress_for_user: '%{name} ගේ ප්‍රගතිය'
-      progress: Your progress
+      progress: ඔබගේ ප්‍රගතිය
       lines: 'Total lines of code: %{lines}'
-      close: CLOSE
-      mastery: Concepts
-      puzzle_map: Stages
+      close: වහන්න
+      mastery: අදහස්
+      puzzle_map: අදියරයන්
       prizes: 'Collect all %{total_trophies} trophies and win prizes!'
       prize_earned: 'All %{total_trophies} trophies collected. Prize won!'
       prize_us_only: (U.S. students only)
       prizes_link: වැඩිදුර තොරතුරු
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: පිළිතුර
+    for_teachers_only: ගුරුවරුන්ට පමණි
     title:
-      one: 'Your teacher:'
-      other: 'Your teachers:'
+      one: 'ඔබගේ ගුරුවරයා:'
+      other: 'ඔබගේ ගුරුවරු:'
     remove: (ගුරුවරයා ඉවත්කරන්න)
     confirm:
-      remove: Are you sure you want to remove this teacher?
-    tools: Teacher Tools
-    followers:
-      section: 'අංශය:'
-      stages: 'Stage(s) to display:'
-      show_past: 'Show student activity (%{bullet_html}) in the past:'
-      levels_key: Levels key
-      perfect: Completed, perfect
-      completed: Completed, but using too many blocks
-      tried: Tried, but not completed
-      not_tried: දැනට උත්සහ කර නැත
-      activity: 'Indicates student activity in the last %{hours} %{plural}'
-      no_section: No assigned section
-      trophies: ඵලකයන්
+      remove: ඔබට මෙම ගුරුවරයා ඉවත් කිරීමට උවමනා බව විශ්වාසද?
     students:
-      name: නම
-      username: පරිශීලක නාමය
-      password: මුර පදය
-      manage: Manage students
       dashboard: Go to Teacher Dashboard
-      add: ශිෂ්‍යයින් ඇතුලත්කරන්න
-      remove: remove student
-      confirm_remove: Are you sure you want to remove this student?
-      help_reassign: To divide your class into multiple sections, select students to assign to a new section.
-      help_register: Instead of making you spend a lot of time individually importing student data, you can set up your class quickly by asking them to signup. Your students will need to choose usernames and passwords, but they WILL NOT be required to provide an email address. If a student forgets their password, you will be able to reset it for them.
-      register: Ask your students to register themselves
-      vist: Ask your students to visit
-      section_code: 'and enter their section-code:'
-      first_please: 'First, please %{add_section}'
-      for: සඳහා
-      enter: 'enter:'
-    sections:
-      add: අංශයක් අතුලත්කරන්න
-      manage: Manage sections
-      section: අංශය
-      students: සිසුන්
-      section_code: අංශ කේතය
-      add_section_code: Add Students Section-Code
-      secret: Secret type
-      grade: ශේණිය
-      course: පාඨමාලාව
-      rename: rename
-      edit: edit
-      delete: delete
-      confirm_delete: Are you sure you want to delete this section?
-      email: Send in email
-    rollup: Progress Dashboard
-    activity: Recent class activity
-    user_not_found: The teacher or student could not be found
-    cant_remove_student_no_email: '%{student_name} cannot be removed as your student because %{student_name} has not registered an e-mail address'
-    cant_remove_teacher_no_email: '%{teacher_name} cannot be removed as your teacher because you have not registered an e-mail address'
-    student_teacher_disassociated: '%{teacher_name} has been removed as a teacher for %{student_name}'
+    user_not_found: The teacher could not be found.
+    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
     panel:
       answer_viewer: Answer Viewer
       student: ශිෂ්‍යයා
@@ -315,30 +271,26 @@ si:
       submitted_on: 'Submitted on:'
       unsubmit: Unsubmit
   user:
-    email_confirm_needed: 'Email address has not been confirmed:'
+    email_confirm_needed: 'විද්යුත් තැපැල් ලිපිනය තහවුරු කර නොමැත:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
     email_confirm_wrong_email: (Wrong email address?)
     email_resend_confirm: Resend confirmation instructions
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: (we need your current password to confirm your changes)
-    delete: Delete your account
+    delete: ඔබගේ ගිණුම මකා දමන්න
     delete_text: Clicking the button below will delete your account.
     delete_text_teacher_note: "Please note: deleting your account will not delete your students' accounts."
     delete_confirm: Are you sure you want to delete your account?
   user_level:
     completed: සම්පූර්ණයි
-    tried: Tried
-  user_stats:
-    recent_activity: Recent activity
-    show_more: Show more
-    classroom_activity: Unplugged Activity
+    tried: උත්සාහ කරනලදී
   home:
-    title: Code Studio
+    title: කේත මැදිරිය
     description: Code Studio is home to online courses created by Code.org
     lines_of_code: '%{lines_count} LINES OF CODE WRITTEN BY STUDENTS'
     lines_of_code_linebreak: '%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count} MILLION STUDENTS'
     all_courses: Overview of Courses 1, 2, and 3
-    lesson_plans: Lesson plans
+    lesson_plans: පාඩම් සැලසුම්
     signin_message: 'Already registered? %{link}'
     student_reg_link: Student Sign Up
     teacher_reg_link: Teacher Sign Up
@@ -357,8 +309,8 @@ si:
     student_finished: "You've completed all Code.org tutorials. Pick another class %{online_link} or at a %{local_school_link}."
     local_school: local school
     online: online
-    see_details: See details
-    view_course: View Course
+    see_details: විස්තර බලන්න
+    view_course: පාඨමාලාව බලන්න
     prize_info: 'Prizes for participation (U.S. public school teachers only): Up to $1,000 in classroom rewards.'
     tryfirst: 'Or, you can try it first, and sign up later:'
     trynow: දැන් අත්හදා බලන්න
@@ -366,22 +318,23 @@ si:
     20hour_overview: This 20-hour course introduces core computer science and programming concepts. The course is designed for use in classrooms for grades K-8, but it is fun to learn at all ages.
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
-    use_as_teacher: Use this site as a teacher
+    use_as_teacher: මෙම අඩවිය ගුරුවරයෙක් වශයෙන් භාවිතා කරන්න
     heading_hoc2014: '<h2>The Hour of Code for</h2><h1>All Ages</h1>'
     heading_elementary: '<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>'
     heading_apps: '<h2>Fun for</h2><h1>Everybody</h1>'
     heading_legacy: '<h2>Our accelerated course for</h2><h1>All Ages</h1>'
     your_gallery: Gallery
-    no_primary_course: Try a Code Studio course
+    no_primary_course: Code Studio පාඨමාලාවක් හදාරන්න
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: සහතිකය මුද්‍රණයකරන්න
   share:
     title: Learn on Code Studio
     description: Anyone can learn computer science. Make games, apps and art with code.
+    try_hour_of_code: Try an Hour of Code!
   gender:
     male: පිරිමි
     female: ගැහැණු
-    none: Prefer not to answer
+    none: පිළිතුරු නොදීමට කැමතියි
   user_type:
     student: ශිෂ්‍යයා
     teacher: Teacher
@@ -389,8 +342,8 @@ si:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: We especially want to recognize the engineers from Google, Microsoft, Facebook, Twitter, and many others who helped create these materials.
     help_from_html_old: Engineers from Google, Microsoft, Facebook, and Twitter helped create these materials.
-    art_from_html: 'Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     powered_by_aws: Powered by Amazon Web Services
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: Copyright
@@ -407,6 +360,7 @@ si:
     built_on_code_studio: Built on Code Studio
     make_my_own_app: Make my own app
     how_it_works: How it works
+    try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: උදව්වක් අවශ්‍යද?
     subtitle: See these videos and hints
@@ -498,32 +452,32 @@ si:
     caption_by_name_age: 'by %{name}, age %{age}'
     caption_time_ago: '%{time_ago} ago'
     header: Gallery
-    header_playlab: Play Lab
-    header_artist: Artist
+    header_playlab: Stories and games
+    header_artist: Code art
   landing:
     prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
     prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
     feedback: Give Feedback
     report_bug: Report Bug
-    support: Get Help
+    support: උපකාර ලබාගන්න
     support_url: //support.code.org
   multi:
-    wrong_title: Incorrect answer
+    wrong_title: පිළිතුර වැරදියි
     wrong_body: "The answer you've entered is not correct.  Please try again!"
     correct_title: නිවැරදියි
     correct_body: That is the correct answer.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   match:
-    wrong_title: Incorrect solution
-    wrong_body: "The solution you've entered is not correct.  Please try again!"
+    wrong_title: විසඳුම වැරදියි
+    wrong_body: ඔබ විසින් ඇතුල් කරන ලද විසඳුම නිවැරදි නැත. කරුණාකර නැවත උත්සාහ කරන්න!
     correct_title: නිවැරදියි
     correct_body: That is the correct answer.
   contract_match:
-    wrong_title: Incorrect answer
-    badname: Your contract has the wrong name.
+    wrong_title: පිළිතුර වැරදියි
+    badname: ඔබගේ ගිවිසුමෙහි ඇත්තේ වැරදි නමයි.
     badname_case: "Function names are case-sensitive. Try changing the case of your contract's name."
-    badrange: Your contract has the wrong range.
+    badrange: ඔබගේ ගිවිසුමෙහි ඇත්තේ වැරදි පරාසයයි.
     baddomainsize: "Your contract doesn't have the right number of items in the domain."
     baddomainname: One or more of your domain items has the wrong name.
     baddomaintype: One or more of your domain items has the wrong type, or they are in the wrong order.
@@ -538,7 +492,7 @@ si:
     startover_ok: මුල සිට නැවත අරඹන්න
     startover_cancel: අවලංගු කරන්න
   time:
-    hour: 1 hour
+    hour: පැයක්
     day: දිනය
     week: සතිය
   data:
@@ -554,7 +508,7 @@ si:
           title: කේතය සකසන්න
           description: ""
         events:
-          title: Events
+          title: සිද්ධීන්
           description: ""
         builder:
           title: Builder
@@ -572,7 +526,7 @@ si:
           title: Sample Level Builder
           description: ""
   age_interstitial:
-    age: Your age
+    age: ඔබගේ වයස
     header: Account Information Update
     message: "We're in the process of updating our experience to provide you with even stronger privacy protections. To do this, we need existing users to enter their age here.<br/>As always, code.org will never rent, sell or share this information with any third parties."
     sign_out: 'If you do not wish to provide your age you may <a href="%{url}">sign out</a>.'

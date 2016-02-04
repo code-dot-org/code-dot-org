@@ -171,7 +171,7 @@ lt:
           Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Nagi, pajudink tuos zombius!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -277,7 +277,7 @@ lt:
         text: Čiuoždami galėsite sukurti snaigių raštus ir šiomis žiemos grožybėmis pasidalinti su draugais.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Toliau Tu mokysiesi programavimo pagrindų. Tradiciškai programavime naudojamas tekstas, bet mes naudosime Blockly, kuris naudoja blokelius, kuriuos gali tempti ir paleisti rašydamas programą. Tai naudoja net universiteto studentai mokydamiesi pagrindų. Po blokeliais Tu vistiek kuri programinį kodą.
       4:
         image: notes/frozen1_4.jpg
         text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
@@ -299,7 +299,7 @@ lt:
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Prisimink, Tu gali pakeisti pikselių ir laipsnių skaičių spausdamas ant rodyklių šalia jų.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
@@ -320,7 +320,7 @@ lt:
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Labas, aš esu Krisas Bošas. Esu profesionalus krepšininkas ir programuodavau mokykloje.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
@@ -1364,7 +1364,7 @@ lt:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1420,7 +1420,7 @@ lt:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1495,7 +1495,7 @@ lt:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."

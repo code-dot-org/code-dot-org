@@ -498,6 +498,12 @@ ca:
         infinity_playlab_intro: 'Play Lab - introducció'
         infinity_playlab_events: 'Play Lab - esdeveniments'
         infinity_playlab_repeat_forever: 'Play Lab - repeteix per sempre'
+        csp_applab_databases_1: 'Introduction to Databases - Part 1'
+        csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_lists_1: 'Introduction to Lists - Part 1'
+        csp_applab_lists_2: 'Introduction to Lists - Part 2'
+        csp_applab_lists_3: 'Introduction to Lists - Part 3'
+        csp_applab_lists_4: 'Introduction to Lists - Part 4'
         csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
         csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
         csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'
@@ -638,9 +644,10 @@ ca:
         Infinity_move_collide_callout: Reprodueix un so quan tingui lloc aquest fet.
         Infinity_repeat_callout: Col·loca els blocs de moviment aquí dins
         craft_run_button_callout: 'Fes clic a "Executa" per provar el teu programa'
-        craft_drag_block_callout: 'Drag a "moveForward();" block and snap it below the other block'
-        craft_callout_preplaced: "We've put some blocks here to get you started"
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command to move forward?
+        craft_drag_block_callout: |-
+          Arrossega un "moveForward()"; bloc i porta'l sota l'altre bloc
+        craft_callout_preplaced: Hem posat alguns blocs aquí per a que puguis començar
+        craft_inside_repeat: "Repeteix accions posant blocs d'aquí"
+        craft_callout_preplaced_house: Aquest codi començarà a construir la teva casa. Pots acabar-lo?
+        craft_what_is_iron: Aquest ferro és meu!
+        craft_callout_moveforward: Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?

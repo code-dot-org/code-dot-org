@@ -152,22 +152,22 @@
           description_short: El Curso 3 es una continuación del Curso 2.
         playlab:
           title: Laboratorio de Juegos
-          description: ¡Crea una historia o haz un juego con el Laboratorio de Juegos!
+          description: "¡Crea una historia o haz un juego con el Laboratorio de Juegos!"
           Play Lab: Laboratorio de Juegos
-          description_short: ¡Crea una historia o haz un juego con el Laboratorio
-            de Juegos!
+          description_short: "¡Crea una historia o haz un juego con el Laboratorio
+            de Juegos!"
         artist:
           title: Artista
-          description: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
           Artist: Artista
-          description_short: ¡Dibuja imagenes estupendas y diseños con el Artista!
+          description_short: "¡Dibuja imagenes estupendas y diseños con el Artista!"
         hourofcode:
           Maze: Laberinto
-          title: Hora del código
-          description: ¡Prueba los fundamentos de la informática con los personajes
-            de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!
-          description_short: ¡Prueba los fundamentos de la informática con muchos
-            personajes divertidos!
+          title: Laberinto clásico
+          description: "¡Prueba los fundamentos de la informática con los personajes
+            de Angry Birds, Plantas vs Zombies y Scrat de La Era del Hielo!"
+          description_short: "¡Prueba los fundamentos de la informática con muchos
+            personajes divertidos!"
         frozen:
           title: Programa con Ana y Elsa
           description: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
@@ -215,7 +215,7 @@
           description_audience: Edades de 10 a 18 años
           Super Challenge - Variables: Super desafio - Variables
           Super Challenge - For Loops: Super reto - para los bucles
-          Super Challenge - Functions and Parameters: Super reto - funciones y parámetros
+          Super Challenge - Functions and Parameters: Super reto- Funciones y Parametros
           Extreme Challenge - Comprehensive: Desafío extremo - integral
         Course4pre:
           title: Prerequisito del Curso 4
@@ -415,9 +415,9 @@
           Eval: Eval
         flappy:
           title: Código Flappy
-          description: ¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
-            nuestro tutorial de Código Flappy!
-          description_short: ¡Escribe tu propio juego Flappy en menos de 10 minutos!
+          description: "¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba
+            nuestro tutorial de Código Flappy!"
+          description_short: "¡Escribe tu propio juego Flappy en menos de 10 minutos!"
           Flappy Code: Código Flappy
         jigsaw:
           title: Rompecabezas
@@ -431,10 +431,10 @@
           Step: Paso
         Hour of Code:
           title: Hora del código 2013
-          description: ¡Prueba los fundamentos de las ciencias de la computación con
-            personajes de Angry Birds y Plantas vs. Zombis!
-          description_short: ¡Prueba los fundamentos de la informática con muchos
-            personajes divertidos!
+          description: "¡Prueba los fundamentos de las ciencias de la computación
+            con personajes de Angry Birds y Plantas vs. Zombis!"
+          description_short: "¡Prueba los fundamentos de la informática con muchos
+            personajes divertidos!"
           Hour of Code 2013: Hora del código 2013
         Code Studio Puzzle Challenge:
           title: Código Studio Desafio de Rompecabezas
@@ -605,7 +605,7 @@
           title: Principios de la Ciencia de la Computación PD
           description: Introducción en linea de CSP
           description_short: Introducción en linea de CSP
-          What is CSP?: ¿Qué es CSP?
+          What is CSP?: "¿Qué es CSP?"
           Exploring CSP Instructional Materials: Explorando Materiales Instructivos
             de CSP
           Impact of Computer Science: Impact of Computer Science
@@ -769,6 +769,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1017,7 +1018,7 @@
           online pd?: online pd?
           AppLab: AppLab
           Online PD: PD en línea
-          title: ¡Todas las cosas!
+          title: "¡Todas las cosas!"
           description: Todos los tipos de niveles para las pruebas de la Interfaz
             de Usuario
           description_short: Todos los tipos de niveles para las pruebas de la Interfaz
@@ -1029,6 +1030,7 @@
           Pixelation: Pixelación
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: 'Fase 2 en línea: Estudio mezclado de verano'
@@ -1057,12 +1059,12 @@
           App Lab: Laboratorio de App
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
           Internet Simulator: Simulador de internet
@@ -1091,7 +1093,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1172,14 +1174,14 @@
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           The Design Recipe: La receta de diseño
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Wrap-Up: Cierre
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
@@ -1196,7 +1198,7 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1214,7 +1216,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Próximos pasos
         sciencePD2b-iZone:
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
@@ -1228,7 +1230,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1252,7 +1254,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Fase 2 en línea: Estudio mezclado de verano'
           description: 'Fase 2 en línea: Estudio mezclado de verano'
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1370,7 +1372,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1398,11 +1400,12 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1437,7 +1440,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1472,7 +1475,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1481,7 +1484,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1525,11 +1528,33 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
@@ -1551,7 +1576,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1578,12 +1603,13 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Edad de hielo juego de laboratorio
-          description_short: ¡Crea una historia o crea un juego con el laboratorio
-            de juego Edad de Hielo!
-          description: ¡Crea una historia o crea un juego con el laboratorio de juego
-            Edad de Hielo!
+          description_short: Crear una historia o hacer un juego con el laboratorio
+            de juego edad de hielo!
+          description: Crear una historia o hacer un juego con el laboratorio de juego
+            edad de hielo!
           Ice Age Play Lab: Edad de hielo juego de laboratorio
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1639,12 +1665,12 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Laboratorio de juego de Gumball
-          description_short: ¡Crear una historia o haz un juego con el laboratorio
-            de juego de Gumball!
-          description: ¡Crear una historia o haz un juego con el laboratorio de juego
-            de Gumball!
-          Gumball Play Lab: Laboratorio de juego de Gumball
+          title: Laboratorio de Gumball juego
+          description_short: Crear una historia o haz un juego con el laboratorio
+            de Gumball juego!
+          description: Crear una historia o haz un juego con el laboratorio de Gumball
+            juego!
+          Gumball Play Lab: Laboratorio de Gumball juego
         starwars:
           title: 'Star Wars: Contruyendo una Galaxia con Código'
           description_short: Aprende a programar robots y crea tu propio juego de
@@ -1681,6 +1707,43 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: ¡ Bienvenido!
+          Welcome!: "¡ Bienvenido!"
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Cierre
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

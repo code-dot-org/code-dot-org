@@ -27,7 +27,7 @@
           Flappy non blockly: Flappy verze bez blockly
           title: Kurz 1
           Artist 2: Umělec 2
-          Happy Maps: Šťastné mapy
+          Happy Maps: "Šťastné mapy"
           Move it, Move it: Pohyb, pohyb
           'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
           Building a Foundation: Budování nadace
@@ -157,7 +157,7 @@
           description_short: Bakresli v pohodě obrázky a vzory s umělcem!
         hourofcode:
           Maze: Bludiště
-          title: Hodina kódu
+          title: Klasické bludiště
           description: Zkuste se základy informatiky s postavičkami z Angy Birds,
             Plants vs. Zombies a Scrat z doby ledové!
           description_short: Zkuste základy informatiky s mnoha zábavnými postavami!
@@ -223,7 +223,7 @@
           'Artist: Functions': 'Malíř: Funkce'
           'Bee: Debugging': 'Včela: ladění'
         usability:
-          Intro: Úvod
+          Intro: "Úvod"
           Variables and For Loops: Proměnné a cykly
           Functions and Functions with Parameters: Funkce a funkce s parametry
           title: Usability Testing
@@ -250,7 +250,7 @@
           'Unplugged: Video Games and Coordinate Planes': 'Nezapojené: Video hry a
             souřadnicových roviny'
           'Calc: Evaluation Blocks': 'Calc: Evaluation Blocks'
-          'Eval: Strings and Images': Řetězce a obrázky
+          'Eval: Strings and Images': "Řetězce a obrázky"
           'Unplugged: Contracts': 'Unplugged: Contracts'
           'Eval: Writing Contracts': 'Eval: Writing Contracts'
           'Calc: Defining Variables': 'Calc: Definice proměnných'
@@ -363,7 +363,7 @@
             K-8), ale jistě bude bavit studenty jakéhokoliv věku.
           description_short: Tento 20ceti hodinový kurz zahrnuje základní pojmy informatiky
             a programování v kurzech 2-4.
-          Introduction to Computer Science: Úvod do počítačové vědy
+          Introduction to Computer Science: "Úvod do počítačové vědy"
           The Maze: Bludiště
           Computational Thinking: Aritmetické Myšlení
           Graph Paper Programming: Programování Na Milimetrovém Papíru
@@ -378,7 +378,7 @@
           The Farmer 2: Farmářka 2
           Abstraction: Abstrakce
           The Artist 4: Malíř 4
-          Relay Programming: Štafetové programování
+          Relay Programming: "Štafetové programování"
           The Farmer 3: Farmář 3
           The Internet: Internet
           The Artist 5: Umělec 5
@@ -540,7 +540,7 @@
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Detekce kolizí (Velká
             hra)'
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Contracts: Smlouvy
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
@@ -564,7 +564,7 @@
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
@@ -746,6 +746,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -757,7 +758,7 @@
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Bloky vyhodnocení
           The Big Game: The Big Game
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           The Design Recipe: Návrhový předpis
           Next Steps: Next Steps
         sciPD complex adaptive 2:
@@ -961,7 +962,7 @@
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Defining Variables: Definující proměnné
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
@@ -1004,6 +1005,7 @@
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Fáze 2 Online: Promíchané letní studium'
@@ -1012,7 +1014,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Writing Contracts: Writing Contracts
           Defining Variables: Definující proměnné
           Defining Functions: Definice funkcí
@@ -1133,7 +1135,7 @@
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
           Evaluation Blocks: Bloky vyhodnocení
-          Strings and Images: Řetězce a obrázky
+          Strings and Images: "Řetězce a obrázky"
           Writing Contracts: Writing Contracts
           Defining Variables: Definující proměnné
           Defining Functions: Definice funkcí
@@ -1285,7 +1287,7 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Šťastné mapy
+          Happy Maps: "Šťastné mapy"
           Move it, Move it: Pohyb, pohyb
           'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
           Graph Paper Programming: Programování Na Milimetrovém Papíru
@@ -1370,6 +1372,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1497,6 +1500,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1550,6 +1575,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Doba ledová Play Lab
           description_short: Vytvoř příběh nebo udělej hru s ledovou Play Labem!
@@ -1609,10 +1635,10 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Žvýkačka Play Lab
+          title: "Žvýkačka Play Lab"
           description_short: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
           description: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
-          Gumball Play Lab: Žvýkačka Play Lab
+          Gumball Play Lab: "Žvýkačka Play Lab"
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
           description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star
@@ -1652,3 +1678,40 @@
           Welcome!: Vítejte!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Rekapitulace
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

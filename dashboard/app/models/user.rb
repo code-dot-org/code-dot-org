@@ -324,6 +324,8 @@ class User < ActiveRecord::Base
     end
   end
 
+
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
     def self.name_from_omniauth(raw_name)
       return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
@@ -338,8 +340,13 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
 
+      # treat clever admin types as teachers
+      if CLEVER_ADMIN_USER_TYPES.include? user.user_type
+        user.user_type = User::TYPE_TEACHER
+      end
+
       # clever provides us these fields
-      if auth.info.user_type == TYPE_TEACHER
+      if user.user_type == TYPE_TEACHER
         # if clever told us that the user is a teacher, we just trust
         # that they are adults; we don't actually care about age
         user.age = 21
@@ -889,6 +896,18 @@ SQL
 
   def User.progress_queue
     AsyncProgressHandler.progress_queue
+  end
+
+  # can this user edit their own account?
+  def can_edit_account?
+    return true if teacher? || encrypted_password.present? || oauth?
+
+    # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
+    sections_as_student = followeds.collect(&:section)
+    return true if sections_as_student.empty?
+
+    # if you log in only through picture passwords you can't edit your account
+    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
 end

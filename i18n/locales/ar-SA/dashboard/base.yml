@@ -28,6 +28,7 @@ ar:
     code:
       label: 'إضافة معلِّماً:'
       placeholder: مقطع التعليمات البرمجية (ABCDEF)
+      instructions: 'الرجاء ادخال الكود الذي اعطاه اليك معلمك , انه مكون من 6 حروف مثل "ABCDEF".'
     submit: إضافة معلِّم
   add_hint_form:
     placeholder: الرجاء إدخال التلميح الخاص بك هنا
@@ -38,6 +39,7 @@ ar:
   puzzle: لغز
   trophies: الجوائز
   courses: الدروس
+  unplugged_activity: نشاط غير موصول
   of: من
   more: أكثر
   less: أقل
@@ -254,57 +256,10 @@ ar:
     remove: (إزالة معلم)
     confirm:
       remove: هل أنت متأكد من أنك تريد إزالة هذا المعلم؟
-    tools: أدوات المعلم
-    followers:
-      section: 'القسم:'
-      stages: 'مرحلة (مراحل) للعرض:'
-      show_past: 'إظهار نشاط الطالب (%{bullet_html}) في الماضي:'
-      levels_key: مفتاح المستويات
-      perfect: تم! عمل رائع !
-      completed: تم ! ولكن استخدمت عدد كبير من المربعات البرمجية
-      tried: محاولة جيدة، ولكن لم يكتمل
-      not_tried: لم تحاول بعد
-      activity: 'يشير إلى نشاط الطالب في %{hours} %{plural} الأخيرة'
-      no_section: لم يتم تعيين قسم
-      trophies: الجوائز
     students:
-      name: الاسم
-      username: اسم المستخدم
-      password: كلمة المرور
-      manage: إدارة الطلاب
       dashboard: انتقل إلى لوحة المعلم
-      add: إضف الطلاب
-      remove: إزالة طالب
-      confirm_remove: هل أنت متأكد من أنك تريد إزالة هذا الطالب؟
-      help_reassign: لتقسيم طلاب فصلك إلى أقسام متعددة، حدد الطلاب لوضعهم في القسم الجديد.
-      help_register: بدلا من جعلك تقضي الكثير من الوقت في إدخال بيانات كل طالب على حدة، يمكنك ترتيب طلاب فصلك بسرعة بطلبك منهم التسجيل في الموقع. سوف يحتاج كل طالب إلى اختيار اسم المستخدم وكلمة المرور الخاصة به ولكن لن يطلب منهم تقديم بريد إلكتروني أثناء التسجيل. وإذا ما نسي الطالب كلمة السر الخاصة به سوف تكون قادر على إعادة تعيينها له.
-      register: أطلب من طلابك أن يقوموا بتسجيل أنفسهم
-      vist: أطلب من طلابك زيارة
-      section_code: 'وإدخال رمز أقسامهم:'
-      first_please: 'أولاً، من فضلك %{add_section}'
-      for: من أجل
-      enter: 'قم بإدخال:'
-    sections:
-      add: إضافة قسم
-      manage: إدارة الأقسام
-      section: القسم
-      students: الطلاب
-      section_code: قسم البرمجة
-      add_section_code: إضافة رمز قسم الطلاب
-      secret: النوع السري
-      grade: الصف الدراسي
-      course: الدورة
-      rename: إعادة تسمية
-      edit: تعديل
-      delete: حذف
-      confirm_delete: هل أنت متأكد من أنك تريد حذف هذا القسم؟
-      email: إرسال بالبريد الإلكتروني
-    rollup: لوحة معلومات التقدم
-    activity: آخر نشاطات الصف
-    user_not_found: تعذر العثور على المعلم أو الطالب
-    cant_remove_student_no_email: 'لا يمكن إزالة %{student_name} كالطالب الخاص بك لأن %{student_name} لم يقم بتسجيل عنوان بريد إلكتروني'
-    cant_remove_teacher_no_email: 'لا يمكن إزالة %{teacher_name} كالمعلم الخاص بك لأك لم تقم بتسجيل عنوان بريد إلكتروني'
-    student_teacher_disassociated: 'تم إزالة %{teacher_name} كمدرس لـ %{student_name}'
+    user_not_found: لا يمكن العثور على المعلم.
+    student_teacher_disassociated: 'لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك.'
     panel:
       answer_viewer: عارض الأجوبة
       student: طالب
@@ -329,10 +284,6 @@ ar:
   user_level:
     completed: أكمل
     tried: حاول
-  user_stats:
-    recent_activity: آخر النشاطات
-    show_more: إظهار المزيد
-    classroom_activity: نشاط غير موصول
   home:
     title: ستوديو كود
     description: Code Studio هو موقع الدروس المتوفرة على الإنترنت من Code.org
@@ -378,6 +329,7 @@ ar:
   share:
     title: تعلّم على كود استوديو
     description: أي شخص يمكن تعلّم علوم الكمبيوتر. اصنع الألعاب والتطبيقات والفن مع التعليمات البرمجية.
+    try_hour_of_code: جرب ساعة من البرمجة!
   gender:
     male: ذكر
     female: أنثى
@@ -389,8 +341,8 @@ ar:
     thank_you: 'نشكر <a href="https://code.org/about/donors"> الجهات المانحة</a> و <a href="https://code.org/about/partners"> الشركاء</a>، و <a href="https://code.org/about/team"> الفريق الموسع</a>، وفريق تصوير الفيديو و <a href="https://code.org/about/advisors"> مستشاري التعليم</a> لدعمهم في إنشاء "استوديو التعليمات البرمجية".'
     help_from_html: نود بالأخص تكريم المهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر الذين ساعدوا في إنشاء هذه البرامج التعليمية.
     help_from_html_old: ساعد مهندسين من جوجل ومايكروسوفت والفيس بوك وتويتر في إنشاء هذه البرنامج التعليمية.
-    art_from_html: 'Ice Age&#8482; &amp; &copy; %{current_year} 20th Century Fox. كافة الحقوق محفوظة.<br />AngryBirds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة'
-    art_from_html_old: 'Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio Entertainment Ltd. كافة الحقوق محفوظة.<br />Plants vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. كافة الحقوق محفوظة'
+    art_from_html: 'ماينكرافت &#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة.<br /> حروب النج&#8482;&copy; م%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة.<br /> متجمد &#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة.<br /> العصر الجليدي&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة.<br /> الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه.<br /> جميع الحقوق محفوظة. <br />النباتات ضد المتبلدين &#8482; &copy; %{current_year} الكترونكس ارتس. <br />جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
+    art_from_html_old: 'ماينكرافت&#8482;&copy;%{current_year} مايكروسوفت. جميع الحقوق محفوظة. حروب النجم&#8482;&copy;%{current_year} ديزني و لوكاس فيلم. جميع الحقوق محفوظة. متجمد&#8482;&copy;%{current_year} ديزني. جميع الحقوق محفوظة. العصر الجليدي.&#8482;&copy;%{current_year} القرن العشرين فوكس. جميع الحقوق محفوظة. الطيور الغاضبة&#8482;&copy; 2009-%{current_year} ريفيو المتحدة للترفيه. جميع الحقوق محفوظة. النباتات ضد المتبلدين&#8482;&copy;%{current_year} الكترونكس ارتس. جميع الحقوق محفوظة. عالم غامبل المدهش علامة مسجلة و&copy; 2015 شبكة الكرتون.'
     powered_by_aws: تعمل على خدمات أمازون للويب
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour of Code&reg; هما علامات تجارية لـ Code.org.'
     copyright: حقوق النسخ
@@ -407,6 +359,7 @@ ar:
     built_on_code_studio: 'بني في "Code Studio"'
     make_my_own_app: بناء التطبيق الخاص بي
     how_it_works: كيفية العمل
+    try_hour_of_code: جرب ساعة من البرمجة!
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات
@@ -463,7 +416,7 @@ ar:
       unused: المستويات غير المستخدمة
   upsell:
     hoc:
-      title: Classic Maze
+      title: المتاهة الكلاسيكية
       body: جرب تعلّم أساسيات علوم الحاسب الآلي. الملايين قاموا بذلك.
     flappy:
       title: رمز لعبة flappy
@@ -625,7 +578,7 @@ ar:
       contact_us: "إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'> مراسلتنا.</a>"
       go_to_code_studio: الذهاب الي Code Studio
       report_abuse_form:
-        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات الموجودة على Code Studio, الرجء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
+        intro: اذا واجهت محتوى مسئ, اخطار, التهديد عبر الانترنت, التحرش او اي شكل من اشكال انتهاك حقوق النشر للمحتوى الذي تمتلكه اثناء استخدامك للتطبيقات الموجودة على Code Studio, الرجاء ملء النموذج الموجود بالاسفل, سوف نتخذ شكواك على محمل الجد, و نقوم بالتحقيقات اللازمة و اتخاذ التصرّف المناسب.
         validation:
           email: الرجاء تقديم بريد إلكتروني
           age: الرجاء تحديد سن

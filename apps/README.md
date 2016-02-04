@@ -155,7 +155,7 @@ To add a new package using npm, e.g., `lodash`, run: `npm i --save-dev lodash`
 
 We'd love to have you join our group of contributors!
 
-For notes on our pull process, where to find tasks to work on, etc.—see the Dashboard [contribution guide](https://github.com/code-dot-org/dashboard#contributing).
+For notes on our pull process, where to find tasks to work on, etc., see the [Contributing Guide](https://github.com/code-dot-org/code-dot-org/blob/staging/CONTRIBUTING.md).
 
 ### Style Guide
 
@@ -164,3 +164,4 @@ For notes on our pull process, where to find tasks to work on, etc.—see the Da
 - 2 space indent.
 - 4 space indent on long line breaks.
 - `grunt jshint` should report 0 warnings or errors.
+- See our [project style guide](../STYLEGUIDE.md) for details.

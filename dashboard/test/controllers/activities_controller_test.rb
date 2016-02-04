@@ -274,7 +274,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_creates(LevelSource, Activity, UserLevel, UserScript) do
       assert_does_not_create(GalleryActivity) do
         assert_difference('@user.reload.total_lines', 1000) do # update total lines
-          post :milestone, @milestone_params.merge(lines: 9999999)
+          post :milestone, @milestone_params.merge(lines: 9_999_999)
         end
       end
     end
@@ -746,6 +746,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
   end
 
+  test "Milestone with milestone posts disabled returns 503 status" do
+    Gatekeeper.set('postMilestone', where: {script_name: @script.name}, value: false)
+    post :milestone, @milestone_params
+    assert_response 503
+  end
+
   test "anonymous milestone starting with empty session saves progress in section" do
     sign_out @user
 
@@ -874,10 +880,10 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word returns error' do
-    unless CDO.webpurify_key
-      # stub webpurify
-      WebPurify.stubs(:find_potential_profanity).returns true
-    end
+    # unless CDO.webpurify_key
+    # stub webpurify
+    WebPurify.stubs(:find_potential_profanity).returns true
+    # end
 
     assert_does_not_create(LevelSource, GalleryActivity) do
       post :milestone, user_id: @user.id, script_level_id: @script_level.id, :program => studio_program_with_text('shit')
@@ -894,10 +900,10 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in German rejects word' do
-    unless CDO.webpurify_key
-      # stub webpurify
-      WebPurify.stubs(:find_potential_profanity).returns true
-    end
+    # unless CDO.webpurify_key
+    # stub webpurify
+    WebPurify.stubs(:find_potential_profanity).returns true
+    # end
 
     with_default_locale(:de) do
       assert_does_not_create(LevelSource, GalleryActivity) do
@@ -943,10 +949,10 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing program with swear word in Spanish rejects word' do
-    unless CDO.webpurify_key
-      # stub webpurify
-      WebPurify.stubs(:find_potential_profanity).returns true
-    end
+    # unless CDO.webpurify_key
+    # stub webpurify
+    WebPurify.stubs(:find_potential_profanity).returns true
+    # end
 
     with_default_locale(:es) do
       assert_does_not_create(LevelSource, GalleryActivity) do
@@ -976,12 +982,28 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    Gatekeeper.set('sharingEnabled', where: {script_name: @script.name}, value: false)
+    Gatekeeper.set('shareEnabled', where: {script_name: @script.name}, value: false)
 
-    response = post :milestone, @milestone_params
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body)
 
     assert_nil response['share_failure']
     assert_nil response['level_source']
+  end
+
+  test 'sharing when gatekeeper has disabled sharing for some other script still works' do
+    WebPurify.stubs(:find_potential_profanity).returns false
+    Gatekeeper.set('shareEnabled', where: {script_name: 'Best script ever'}, value: false)
+
+    post :milestone, @milestone_params.merge(program: studio_program_with_text('hey some text'))
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_nil response['share_failure']
+    assert response['level_source'].match(/^http:\/\/test.host\/c\//)
   end
 
   test 'milestone changes to next stage in default script' do

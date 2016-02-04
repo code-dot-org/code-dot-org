@@ -69,7 +69,7 @@
           'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
           Getting Loopy: Getting Loopy
           Relay programming: Relay programming
-          Conditionals: शर्तें
+          Conditionals: "शर्तें"
           Binary Bracelets: Binary Bracelets
           The Big Event: The Big Event
           Your Digital Footprint: Your Digital Footprint
@@ -181,7 +181,7 @@
           'Bee: For Loops': 'Bee: For Loops'
           title: Course 4
           'Algorithms: Tangrams': 'Algorithms: Tangrams'
-          Variables: चर
+          Variables: "चर"
           'Play Lab: Variables': 'Play Lab: Variables'
           'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
           'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
@@ -230,7 +230,7 @@
           title: Usability Testing
           description_short: ''
           description: A selection of Course 4 levels for usability testing.
-          Variables: चर
+          Variables: "चर"
           For Loops: For Loops
           Binary: Binary
         potus:
@@ -268,7 +268,7 @@
           'Play Lab: Boolean (Big Game)': 'Play Lab: Boolean (Big Game)'
           'Unplugged: Conditionals and Piecewise Functions': 'Unplugged: Conditionals
             and Piecewise Functions'
-          'Eval: Conditionals': शर्तें
+          'Eval: Conditionals': "शर्तें"
           'Unplugged: Collision Detection and the Distance Formula': 'Unplugged: Collision
             Detection and the Distance Formula'
           'Play Lab: Collision Detection (Big Game)': 'Play Lab: Collision Detection
@@ -278,7 +278,7 @@
           description_short: Create a story or make a game with Play Lab!
           description: Create a story or make a game with Play Lab!
           Play Lab: Play Lab
-          Infinity: अनंत
+          Infinity: "अनंत"
         algebrademo:
           title: Algebra Demo
           description_short: A handful of puzzles to demonstrate the environment and
@@ -369,9 +369,9 @@
           The Artist: The Artist
           Algorithms: Algorithms
           The Artist 2: The Artist 2
-          Functions: कार्य
+          Functions: "कार्य"
           The Farmer: The Farmer
-          Conditionals: शर्तें
+          Conditionals: "शर्तें"
           The Artist 3: The Artist 3
           Song Writing: Song Writing
           The Farmer 2: The Farmer 2
@@ -393,9 +393,9 @@
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: Events
-          description: ''
-          description_short: Events
+          title: "घटनाएँ"
+          description: "घटनाएँ"
+          description_short: "घटनाएँ"
           Bounce: Bounce
           Studio: Studio
           Calc: Calc
@@ -643,7 +643,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: कार्य
+          Functions: "कार्य"
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -703,7 +703,7 @@
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: चर
+          Variables: "चर"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -744,6 +744,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -1002,6 +1003,7 @@
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1368,6 +1370,7 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1495,6 +1498,28 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1548,6 +1573,7 @@
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -1612,14 +1638,14 @@
           description: Create a story or make a game with Gumball Play Lab!
           Gumball Play Lab: Gumball Play Lab
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: "स्टार वार्स: कोड के झरीये आकाशगंगा बनाए"
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
           Hour of Code 2015: Hour of Code 2015
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
+          title: "स्टार वार्स: कोड के झरीये आकाशगंगा बनाए"
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
@@ -1632,9 +1658,9 @@
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
-          description: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
-            को ले जाने के लिए कोड ब्लॉक का उपयोग करें
+          description_short: "कोड के जरिए Minecraft की दुनिया का पता लगाएँ"
+          description: "इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
+            को ले जाने के लिए कोड ब्लॉक का उपयोग करें"
           Hour of Code 2015: Hour of Code 2015
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -1650,3 +1676,40 @@
           Welcome!: Welcome!
           Thinking About Implementation: Thinking About Implementation
           Wrap-Up: Wrap-Up
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

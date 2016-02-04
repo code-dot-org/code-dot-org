@@ -1,308 +1,310 @@
-"fa-AF":
+"fa":
   data:
     script:
       name:
         test:
-          'Jigsaw: Learn to drag and drop': 'پازل: یاد بگیر که بکشی و رها کنی'
-          The Maze: پیچ و خم
-          Multi: چند
-          Match: مسابقه
-          Math Image: تصویر ریاضی
-          title: دورۀ آزمون
-          description: فقط یک دوره آزمون داخلی.
-          description_short: فقط یک دوره آزمون داخلی.
+          'Jigsaw: Learn to drag and drop': "پازل: یاد بگیر که بکشی و رها کنی"
+          The Maze: "پیچ و خم"
+          Multi: "چند"
+          Match: "مسابقه"
+          Math Image: "تصویر ریاضی"
+          title: "دورۀ آزمون"
+          description: "فقط یک دوره آزمون داخلی."
+          description_short: "فقط یک دوره آزمون داخلی."
         course1:
-          'Jigsaw: Learn to drag and drop': 'پازل: یاد بگیر که بکشی و رها کنی'
-          'Maze: Sequence': 'هزارتو: دنباله'
-          'Maze: Debugging': 'هزارتو: اشکال زدایی'
-          'Artist 1: Intro': 'هنرمند 1: مقدمه'
-          Artists 2: هنرمندان ۲
-          Spelling Bee: زنبور عسل هجی کن
-          Spelling Bee not blockly: زنبور عسل هجی کن نه بلوکلی
-          'Bee 1: Intro': 'زنبور عسل 1: مقدمه'
-          'Maze 2: Loops': 'هزارتو 2: حلقه ها'
-          'Bee 2: Loops': 'زنبور عسل 2: حلقه ها'
-          Multi & Match: چند گزینه ای و تطبیقی
-          K-1 Flappy: فلاپی ک-1
-          Flappy non blockly: فلاپی غیر بلوکلی
-          title: دوره 1
-          Artist 2: هنرمند 2
-          Happy Maps: نقشه های شاد
-          Move it, Move it: بدو، بدو
-          'Real-life Algorithms: Plant a Seed': 'الگوریتم های زندگی واقعی: یک بذر
-            بکار'
-          Building a Foundation: ساختن یک بنیان
-          Getting Loopy: سر گیجه گرفتن
-          The Big Event: رویداد بزرگ
-          Going Places Safely: با امنیت رفتن
-          description: دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه
+          'Jigsaw: Learn to drag and drop': "پازل: یاد بگیر که بکشی و رها کنی"
+          'Maze: Sequence': "هزارتو: دنباله"
+          'Maze: Debugging': "هزارتو: اشکال زدایی"
+          'Artist 1: Intro': "هنرمند 1: مقدمه"
+          Artists 2: "هنرمندان ۲"
+          Spelling Bee: "زنبور عسل هجی کن"
+          Spelling Bee not blockly: "زنبور عسل هجی کن نه بلوکلی"
+          'Bee 1: Intro': "زنبور عسل 1: مقدمه"
+          'Maze 2: Loops': "هزارتو 2: حلقه ها"
+          'Bee 2: Loops': "زنبور عسل 2: حلقه ها"
+          Multi & Match: "چند گزینه ای و تطبیقی"
+          K-1 Flappy: "فلاپی ک-1"
+          Flappy non blockly: "فلاپی غیر بلوکلی"
+          title: "دوره 1"
+          Artist 2: "هنرمند 2"
+          Happy Maps: "نقشه های شاد"
+          Move it, Move it: "بدو، بدو"
+          'Real-life Algorithms: Plant a Seed': "الگوریتم های زندگی واقعی: یک بذر
+            بکار"
+          Building a Foundation: "ساختن یک بنیان"
+          Getting Loopy: "سر گیجه گرفتن"
+          The Big Event: "رویداد بزرگ"
+          Going Places Safely: "با امنیت رفتن"
+          description: "دورۀ 1 طوری طراحی شده که به کسانی که خواندن نمیدانند اجازه
             دهد برنامه های کامپیوتری بسازند؛ برنامههایی که به آنها کمک خواهد کرد یاد
             بگیرند با دیگران همکاری کنند، مهارت های حل مسئله کسب کنند، و برای تکمیل
             امور دشوار پافشاری کنند. با پایان این دوره دانش آموزان بازیهای سفارشی
             مخصوص خودشان یا داستانهایشان را میسازند که میتوانند آنها را به اشتراک
-            بگذارند. توصیه شده برای اول دبستانیها (ک1).
-          'Bee: Sequence': 'زنبور عسل: دنباله'
-          'Artist: Sequence': 'هنرمند: دنباله'
-          'Artist: Shapes': 'هنرمند: شکل ها'
-          'Maze: Loops': 'هزارتو: حلقه ها'
-          'Bee: Loops': 'زنبور عسل: حلقه ها'
-          'Studio: Create a Story': 'آزمایشگاه بازی: یک داستان بنویس'
-          'Artist: Loops': 'هنرمند: حلقه ها'
-          description_audience: سنین 4 به بالا (کسانیکه سواد خواندن ندارند)
-          description_short: دورۀ 1 برای کسانیکه تازه خواندن آموخته اند طراحی شده
-            است.
+            بگذارند. توصیه شده برای اول دبستانیها (ک1)."
+          'Bee: Sequence': "زنبور عسل: دنباله"
+          'Artist: Sequence': "هنرمند: دنباله"
+          'Artist: Shapes': "هنرمند: شکل ها"
+          'Maze: Loops': "هزارتو: حلقه ها"
+          'Bee: Loops': "زنبور عسل: حلقه ها"
+          'Studio: Create a Story': "آزمایشگاه بازی: یک داستان بنویس"
+          'Artist: Loops': "هنرمند: حلقه ها"
+          description_audience: "سنین 4 به بالا (کسانیکه سواد خواندن ندارند)"
+          description_short: "دورۀ 1 برای کسانیکه تازه خواندن آموخته اند طراحی شده
+            است."
         course2:
-          The Maze: پیچ و خم
-          Suzi: سوزی
-          The Artist: هنرمند
-          Artist Debugging: اشکال زدایی هنرمند
-          Bounce: پریدن
-          'Studio: Create a Story': 'آزمایشگاه بازی: یک داستان بنویس'
-          Artist Loops: حلقه های هنرمند
-          Bee Conditionals: شرطی های زنبور عسل
-          Flappy: فلاپی
-          title: دوره 2
-          Bee Loops: حلقه های زنبور عسل
-          Artist Functions: توابع هنرمند
-          The Artist Debugging: اشکال زدایی هنرمند
-          Bee Debugging: اشکال زدایی زنبور عسل
-          Bee Functions: توابع زنبور عسل
-          Maze Loops: حلقه های هزارتو
-          Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
-          'Real-life Algorithms: Paper Planes': 'الگوریتم های زندگی واقعی: موشک های
-            کاغذی'
-          Getting Loopy: سر گیجه گرفتن
-          Relay programming: برنامه نویسی رله
-          Conditionals: مشروط
-          Binary Bracelets: دستبند دودویی
-          The Big Event: رویداد بزرگ
-          Your Digital Footprint: ردپای دیجیتالی شما
-          description: دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه برنامه
-            نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی برای
-            حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند
-            آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5).
-          'Maze: Sequence': 'هزارتو: دنباله'
-          'Artist: Sequence': 'هنرمند: دنباله'
-          'Maze: Loops': 'هزارتو: حلقه ها'
-          'Artist: Loops': 'هنرمند: حلقه ها'
-          'Bee: Loops': 'زنبور عسل: حلقه ها'
-          'Bee: Debugging': 'زنبور عسل: اشکال زدایی'
-          'Artist: Debugging': 'هنرمند: اشکال زدایی'
-          'Bee: Conditionals': 'زنبور عسل: شرطی ها'
-          'Artist: Sequence2': 'هنرمند: دنباله2'
-          'Maze: Sequence2': 'هزارتو: دنباله2'
-          'Artist: Nested Loops': 'هنرمند: حلقه های تو در تو'
-          description_audience: سنین 6 به بالا (خواندن لازم است)
-          description_short: دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی شده
-            است.
+          The Maze: "پیچ و خم"
+          Suzi: "سوزی"
+          The Artist: "هنرمند"
+          Artist Debugging: "اشکال زدایی هنرمند"
+          Bounce: "پریدن"
+          'Studio: Create a Story': "آزمایشگاه بازی: یک داستان بنویس"
+          Artist Loops: "حلقه های هنرمند"
+          Bee Conditionals: "شرطی های زنبور عسل"
+          Flappy: "فلاپی"
+          title: "دوره 2"
+          Bee Loops: "حلقه های زنبور عسل"
+          Artist Functions: "توابع هنرمند"
+          The Artist Debugging: "اشکال زدایی هنرمند"
+          Bee Debugging: "اشکال زدایی زنبور عسل"
+          Bee Functions: "توابع زنبور عسل"
+          Maze Loops: "حلقه های هزارتو"
+          Graph Paper Programming: "برنامه نویسی روی کاغذ شطرنجی "
+          'Real-life Algorithms: Paper Planes': "الگوریتم های زندگی واقعی: موشک های
+            کاغذی"
+          Getting Loopy: "سر گیجه گرفتن"
+          Relay programming: "برنامه نویسی رله"
+          Conditionals: "مشروط"
+          Binary Bracelets: "دستبند دودویی"
+          The Big Event: "رویداد بزرگ"
+          Your Digital Footprint: "ردپای دیجیتالی شما"
+          description: "دورۀ 2 برای دانش آموزانی که می توانند بخوانند و هیچ تجربه
+            برنامه نویسی قبلی ندارند طراحی شده. در این دوره دانش آموزان برنامه هایی
+            برای حل مسائل و بازی های تعاملی میسازند یا داستانهایی مینویسند که می توانند
+            آنها را به اشتراک بگذارند. توصیه شده برای کلاسهای 2-5 دبستان (ک 2 تا 5)."
+          'Maze: Sequence': "هزارتو: دنباله"
+          'Artist: Sequence': "هنرمند: دنباله"
+          'Maze: Loops': "هزارتو: حلقه ها"
+          'Artist: Loops': "هنرمند: حلقه ها"
+          'Bee: Loops': "زنبور عسل: حلقه ها"
+          'Bee: Debugging': "زنبور عسل: اشکال زدایی"
+          'Artist: Debugging': "هنرمند: اشکال زدایی"
+          'Bee: Conditionals': "زنبور عسل: شرطی ها"
+          'Artist: Sequence2': "هنرمند: دنباله2"
+          'Maze: Sequence2': "هزارتو: دنباله2"
+          'Artist: Nested Loops': "هنرمند: حلقه های تو در تو"
+          description_audience: "سنین 6 به بالا (خواندن لازم است)"
+          description_short: "دوره 2 برای دانش آموزانی که می توانند بخوانند طراحی
+            شده است."
         course3:
-          The Maze: پیچ و خم
-          'Studio: Create a Story': 'آزمایشگاه بازی: یک داستان بنویس'
-          The Artist: هنرمند
-          title: دورۀ 3
-          Artist Functions: توابع هنرمند
+          The Maze: "پیچ و خم"
+          'Studio: Create a Story': "آزمایشگاه بازی: یک داستان بنویس"
+          The Artist: "هنرمند"
+          title: "دورۀ 3"
+          Artist Functions: "توابع هنرمند"
           Artist For Loops: حلقه های "برای" هنرمند
-          Artist Nested Loops: حلقه های تو در توی هنرمند
-          Bee Conditionals: شرطی های زنبور عسل
-          Bee Nested Loops: حلقه های تو در توی زنبور عسل
-          Bee Debuggin: اشکال زدایی زنبور عسل
-          Bee Debugging: اشکال زدایی زنبور عسل
-          Bee Functions: توابع زنبور عسل
-          Artist Functions with Params: توابع هنرمند با پارامترها
-          Bounce: پریدن
-          Maze Conditionals: شرطی های هزارتو
-          Artist Functions with Parameters: توابع هنرمند با پارامترها
-          Computational Thinking: تفکر محاسباتی
-          Functional Suncatchers: نورگیرهای کاربردی
-          Songwriting Parameters: پارامترهای ترانه سرایی
-          Dice Race: مسابقۀ تاس انداختن
-          Internet: اینترنت
-          Crowdsourcing: کمک گیری جمعی
-          Digital Citizenship: شهروندی دیجیتالی
+          Artist Nested Loops: "حلقه های تو در توی هنرمند"
+          Bee Conditionals: "شرطی های زنبور عسل"
+          Bee Nested Loops: "حلقه های تو در توی زنبور عسل"
+          Bee Debuggin: "اشکال زدایی زنبور عسل"
+          Bee Debugging: "اشکال زدایی زنبور عسل"
+          Bee Functions: "توابع زنبور عسل"
+          Artist Functions with Params: "توابع هنرمند با پارامترها"
+          Bounce: "پریدن"
+          Maze Conditionals: "شرطی های هزارتو"
+          Artist Functions with Parameters: "توابع هنرمند با پارامترها"
+          Computational Thinking: "تفکر محاسباتی"
+          Functional Suncatchers: "نورگیرهای کاربردی"
+          Songwriting Parameters: "پارامترهای ترانه سرایی"
+          Dice Race: "مسابقۀ تاس انداختن"
+          Internet: "اینترنت"
+          Crowdsourcing: "کمک گیری جمعی"
+          Digital Citizenship: "شهروندی دیجیتالی"
           Farmer - While Loops: کشاورز -حلقه های "هنگامیکه"
-          description: دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده
+          description: "دوره 3 برای دانش آموزانی که دوره 2 را گذرانده اند طراحی شده
             است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی به راه
             حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد. در پایان
             این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که می توانند
-            با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5.
-          'Studio: Create a Game': 'آزمایشگاه بازی: یک بازی بساز'
-          Maze: هزارتو
-          Artist: هنرمند
-          'Artist: Functions': 'هنرمند: توابع'
-          'Bee: Functions': 'زنبور عسل: توابع'
-          'Bee: Conditionals': 'زنبور عسل: شرطی ها'
-          'Maze: Conditionals': 'هزارتو: شرطی ها'
-          'Artist: Nested Loops': 'هنرمند: حلقه های تو در تو'
+            با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-5."
+          'Studio: Create a Game': "آزمایشگاه بازی: یک بازی بساز"
+          Maze: "هزارتو"
+          Artist: "هنرمند"
+          'Artist: Functions': "هنرمند: توابع"
+          'Bee: Functions': "زنبور عسل: توابع"
+          'Bee: Conditionals': "زنبور عسل: شرطی ها"
+          'Maze: Conditionals': "هزارتو: شرطی ها"
+          'Artist: Nested Loops': "هنرمند: حلقه های تو در تو"
           'Farmer: While Loops': 'کشاورز: حلقه‌های "در حالیکه"'
-          'Bee: Nested Loops': 'زنبور عسل: حلقه های تو در تو'
-          'Bee: Debugging': 'زنبور عسل: اشکال زدایی'
-          Maze2: هزارتو 2
-          Artist2: هنرمند 2
-          'Artist: Functions2': 'هنرمند: توابع2'
-          'Bee: Functions2': 'زنبور عسل: توابع 2'
-          'Bee: Conditionals2': 'زنبور عسل: شرطی ها2'
-          'Maze: Conditionals2': 'هزارتو: شرطی های2'
-          'Artist: Nested Loops2': 'هنرمند: حلقه های تو در تو2'
+          'Bee: Nested Loops': "زنبور عسل: حلقه های تو در تو"
+          'Bee: Debugging': "زنبور عسل: اشکال زدایی"
+          Maze2: "هزارتو 2"
+          Artist2: "هنرمند 2"
+          'Artist: Functions2': "هنرمند: توابع2"
+          'Bee: Functions2': "زنبور عسل: توابع 2"
+          'Bee: Conditionals2': "زنبور عسل: شرطی ها2"
+          'Maze: Conditionals2': "هزارتو: شرطی های2"
+          'Artist: Nested Loops2': "هنرمند: حلقه های تو در تو2"
           'Farmer: While Loops2': 'کشاورز: حلقه‌های "در حالیکه"2'
-          'Bee: Nested Loops2': 'زنبور عسل: حلقه های تو در تو2'
-          'Bee: Debugging2': 'زنبور عسل: اشکال زدایی2'
-          'Artist: Patterns': 'هنرمند: الگوها'
-          Songwriting: ترانه سرایی
-          description_audience: سنین 8 به بالا (پس از دوره 2)
-          description_short: دوره 3 ادامه دوره 2 است.
+          'Bee: Nested Loops2': "زنبور عسل: حلقه های تو در تو2"
+          'Bee: Debugging2': "زنبور عسل: اشکال زدایی2"
+          'Artist: Patterns': "هنرمند: الگوها"
+          Songwriting: "ترانه سرایی"
+          description_audience: "سنین 8 به بالا (پس از دوره 2)"
+          description_short: "دوره 3 ادامه دوره 2 است."
         playlab:
-          title: آزمایشگاه بازی
-          description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
-          Play Lab: آزمایشگاه بازی
-          description_short: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
+          title: "آزمایشگاه بازی"
+          description: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
+          Play Lab: "آزمایشگاه بازی"
+          description_short: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
         artist:
-          title: هنرمند
-          description: با نقاش چند عکس و طرح باحال بکش!
-          Artist: هنرمند
-          description_short: با نقاش چند عکس و طرح باحال بکش!
+          title: "هنرمند"
+          description: "با نقاش چند عکس و طرح باحال بکش!"
+          Artist: "هنرمند"
+          description_short: "با نقاش چند عکس و طرح باحال بکش!"
         hourofcode:
-          Maze: هزارتو
-          title: ساعتی با کد
-          description: اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان
-            در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!
-          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!
+          Maze: "هزارتو"
+          title: "هزارتوی کلاسیک"
+          description: "اصول اولیه علوم کامپیوتر را با شخصیت های پرندگان عصبانی, گیاهان
+            در مقابل زامبی ها و اسکرات از عصر یخبندان آزمایش کن!"
+          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!"
         frozen:
-          title: کدنویسی با آنا و السا
-          description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
+          title: "کدنویسی با آنا و السا"
+          description: "بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه
             آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف
             و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می
-            توانی با دوستان خود به اشتراک بگذاری!
-          Artist: هنرمند
-          description_short: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
-            و زیبایی یخ را کشف می کنند استفاده کنیم.
+            توانی با دوستان خود به اشتراک بگذاری!"
+          Artist: "هنرمند"
+          description_short: "بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو
+            و زیبایی یخ را کشف می کنند استفاده کنیم."
         course4:
-          description_short: دانش آموزانی که دوره 4 را گرفته اند باید تا به حال دوره
-            های 2 و 3 را گرفته باشند.
-          description: دوره 4 برای دانش آموزانی که دوره های 2 و 3 را گذرانده اند طراحی
-            شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های قبلی
-            مربوط به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند کرد.
-            در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند که
-            می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس 4-8.
-          'Artist: Variables': 'هنرمند: متغیرها'
-          'Bee: For Loops': 'زنبور عسل: برای حلقه ها'
-          title: دوره 4
-          'Algorithms: Tangrams': 'الگوریتم: تنگرام'
-          Variables: متغیرها
-          'Play Lab: Variables': 'آزمایشگاه بازی: متغیرها'
-          'Play Lab: Functions with Parameters': 'آزمایشگاه بازی: توابع با پارامترها'
-          'Bee: Functions with Parameters': 'زنبور عسل: توابع با پارامترها'
-          'Artist: For Loops': 'هنرمند: برای حلقه ها'
-          'Play Lab: For Loops': 'آزمایشگاه بازی: برای حلقه ها'
-          'Artist: Functions': 'هنرمند: توابع'
-          'Unplugged: Tangrams': 'بدون دستگاه: تنگرام'
-          Artist: هنرمند
-          Bee: زنبور عسل
-          'Unplugged: Envelope Variables': 'بدون دستگاه: متغیرهای پاکت'
-          'Unplugged: Madlibs': 'بدون دستگاه: جای خالی را پُرکن'
+          description_short: "دانش آموزانی که دوره 4 را گرفته اند باید تا به حال دوره
+            های 2 و 3 را گرفته باشند."
+          description: "دوره 4 برای دانش آموزانی که دوره های 2 و 3 را گذرانده اند
+            طراحی شده است. دانش آموزان در مباحث برنامه نویسی معرفی شده در دوره های
+            قبلی مربوط به راه حل های انعطاف پذیر برای مشکلات پیچیده بیشتر کاوش خواهند
+            کرد. در پایان این دوره، دانش آموزان داستان های تعاملی و بازی هایی میسازند
+            که می توانند با هر کسی آنها را به اشتراک بگذارند. توصیه شده برای کلاس
+            4-8."
+          'Artist: Variables': "هنرمند: متغیرها"
+          'Bee: For Loops': "زنبور عسل: برای حلقه ها"
+          title: "دوره 4"
+          'Algorithms: Tangrams': "الگوریتم: تنگرام"
+          Variables: "متغیرها"
+          'Play Lab: Variables': "آزمایشگاه بازی: متغیرها"
+          'Play Lab: Functions with Parameters': "آزمایشگاه بازی: توابع با پارامترها"
+          'Bee: Functions with Parameters': "زنبور عسل: توابع با پارامترها"
+          'Artist: For Loops': "هنرمند: برای حلقه ها"
+          'Play Lab: For Loops': "آزمایشگاه بازی: برای حلقه ها"
+          'Artist: Functions': "هنرمند: توابع"
+          'Unplugged: Tangrams': "بدون دستگاه: تنگرام"
+          Artist: "هنرمند"
+          Bee: "زنبور عسل"
+          'Unplugged: Envelope Variables': "بدون دستگاه: متغیرهای پاکت"
+          'Unplugged: Madlibs': "بدون دستگاه: جای خالی را پُرکن"
           'Unplugged: For Loop Fun': 'بدون دستگاه: بازی حلقه های "برای"'
-          'Unplugged: Songwriting with Parameters': 'بدون دستگاه: ترانه سرایی با پارامترها'
-          'Artist: Functions with Parameters': 'هنرمند: توابع با پارامترها'
-          'Unplugged: Binary': 'بدون دستگاه: دودویی'
-          Bee Binary: دودویی زنبور عسل
-          Farmer Binary: دودویی کشاورز
-          Maze and Bee: هزارتو و زنبور عسل
-          Artist Binary: دودویی هنرمند
-          description_audience: سنین 10 به بالا (پس از دوره 3)
-          Super Challenge - Variables: Super Challenge - Variables
-          Super Challenge - For Loops: Super Challenge - For Loops
-          Super Challenge - Functions and Parameters: Super Challenge - Functions
-            and Parameters
-          Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+          'Unplugged: Songwriting with Parameters': "بدون دستگاه: ترانه سرایی با پارامترها"
+          'Artist: Functions with Parameters': "هنرمند: توابع با پارامترها"
+          'Unplugged: Binary': "بدون دستگاه: دودویی"
+          Bee Binary: "دودویی زنبور عسل"
+          Farmer Binary: "دودویی کشاورز"
+          Maze and Bee: "هزارتو و زنبور عسل"
+          Artist Binary: "دودویی هنرمند"
+          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          Super Challenge - Variables: "چالش های فوق العاده - متغیر"
+          Super Challenge - For Loops: "چالش های فوق العاده - به صورت حلقه"
+          Super Challenge - Functions and Parameters: "چالش فوق العاده - توابع و پارامترها"
+          Extreme Challenge - Comprehensive: "چالش شدید - جامع"
         Course4pre:
-          title: پیش نیاز دوره 4
-          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
-            های 2 و 3 را نگذرانده اند.
-          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2
-            و 3 را نگذرانده اند.
-          Course 4 Prerequisite: پیش نیاز دوره 4
-          'Maze: Sequence': 'هزارتو: دنباله'
-          'Artist: Sequence': 'هنرمند: دنباله'
-          'Artist: Loops': 'هنرمند: حلقه ها'
-          'Bee: Conditionals': 'زنبور عسل: شرطی ها'
-          'Artist: Nested Loops': 'هنرمند: حلقه های تو در تو'
+          title: "پیش نیاز دوره 4"
+          description_short: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
+            های 2 و 3 را نگذرانده اند."
+          description: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های
+            2 و 3 را نگذرانده اند."
+          Course 4 Prerequisite: "پیش نیاز دوره 4"
+          'Maze: Sequence': "هزارتو: دنباله"
+          'Artist: Sequence': "هنرمند: دنباله"
+          'Artist: Loops': "هنرمند: حلقه ها"
+          'Bee: Conditionals': "زنبور عسل: شرطی ها"
+          'Artist: Nested Loops': "هنرمند: حلقه های تو در تو"
           'Farmer: While Loops': 'کشاورز: حلقه‌های "در حالیکه"'
-          'Bee: Nested Loops': 'زنبور عسل: حلقه های تو در تو'
-          'Artist: Functions': 'هنرمند: توابع'
-          'Bee: Debugging': 'زنبور عسل: اشکال زدایی'
+          'Bee: Nested Loops': "زنبور عسل: حلقه های تو در تو"
+          'Artist: Functions': "هنرمند: توابع"
+          'Bee: Debugging': "زنبور عسل: اشکال زدایی"
         usability:
-          Intro: مقدمه
+          Intro: "مقدمه"
           Variables and For Loops: متغیرها و حلقه های "برای"
-          Functions and Functions with Parameters: توابع و توابع با پارامترها
-          title: امتحان قابل استفاده بودن
+          Functions and Functions with Parameters: "توابع و توابع با پارامترها"
+          title: "امتحان قابل استفاده بودن"
           description_short: ''
-          description: منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده.
-          Variables: متغیرها
+          description: "منتخبی از مراحل دوره 4 برای امتحان قابلیت استفاده."
+          Variables: "متغیرها"
           For Loops: حلقه های "برای"
-          Binary: دو دویی
+          Binary: "دو دویی"
         potus:
-          title: ویژه
-          description_short: ویژه
-          description: ویژه
-          Special: ویژه
+          title: "ویژه"
+          description_short: "ویژه"
+          description: "ویژه"
+          Special: "ویژه"
         special:
-          title: ویژه
-          description_short: ویژه
-          description: ویژه
-          Special: ویژه
-          Binary: دو دویی
+          title: "ویژه"
+          description_short: "ویژه"
+          description: "ویژه"
+          Special: "ویژه"
+          Binary: "دو دویی"
         algebra:
-          title: علوم کامپیوتر در جبر
-          description: یادگیری برنامه نویسی تابعی از طریق جبر
-          description_short: یادگیری برنامه نویسی تابعی از طریق جبر
-          'Unplugged: Video Games and Coordinate Planes': 'بدون دستگاه: بازی های ویدئویی
-            و هواپیمای مختصات'
-          'Calc: Evaluation Blocks': 'حساب: ارزیابی بلوکها'
-          'Eval: Strings and Images': رشته ها و تصاویر
-          'Unplugged: Contracts': 'بدون دستگاه: قراردادها'
-          'Eval: Writing Contracts': 'ارزبابی: نوشتن قراردادها'
-          'Calc: Defining Variables': 'حساب: تعریف متغیرها'
-          'Play Lab: Defining Variables (Big Game)': 'آزمایشگاه بازی: تعریف متغیرها
-            (بازی بزرگ)'
-          'Eval: Defining Functions': 'ارزیابی: تعریف توابع'
-          'Unplugged: The Design Recipe': 'بدون دستگاه: دستور العمل طرح'
-          'Play Lab: Defining Functions': 'آزمایشگاه بازی: تعریف توابع'
-          'Eval: Functions': 'ارزیابی: توابع'
-          'Play Lab: Animation (Big Game)': 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
-          'Unplugged: Booleans': 'بدون دستگاه: بولی ها'
-          'Eval: Boolean Operators': 'ارزیابی: عملگرهای بولی'
-          'Play Lab: Booleans': 'آزمایشگاه بازی: بولی'
-          'Play Lab: Boolean (Big Game)': 'آزمایشگاه بازی: بولی (بازی بزرگ)'
-          'Unplugged: Conditionals and Piecewise Functions': 'بدون دستگاه: شرطی ها
-            و توابع چند ضابطه ای'
-          'Eval: Conditionals': مشروط
-          'Unplugged: Collision Detection and the Distance Formula': 'بدون دستگاه:
-            تشخیص برخورد و فرمول فاصله'
-          'Play Lab: Collision Detection (Big Game)': 'آزمایشگاه بازی: تشخیص برخورد
-            (بازی بزرگ)'
+          title: "علوم کامپیوتر در جبر"
+          description: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          description_short: "یادگیری برنامه نویسی تابعی از طریق جبر"
+          'Unplugged: Video Games and Coordinate Planes': "بدون دستگاه: بازی های ویدئویی
+            و هواپیمای مختصات"
+          'Calc: Evaluation Blocks': "حساب: ارزیابی بلوکها"
+          'Eval: Strings and Images': "رشته ها و تصاویر"
+          'Unplugged: Contracts': "بدون دستگاه: قراردادها"
+          'Eval: Writing Contracts': "ارزبابی: نوشتن قراردادها"
+          'Calc: Defining Variables': "حساب: تعریف متغیرها"
+          'Play Lab: Defining Variables (Big Game)': "آزمایشگاه بازی: تعریف متغیرها
+            (بازی بزرگ)"
+          'Eval: Defining Functions': "ارزیابی: تعریف توابع"
+          'Unplugged: The Design Recipe': "بدون دستگاه: دستور العمل طرح"
+          'Play Lab: Defining Functions': "آزمایشگاه بازی: تعریف توابع"
+          'Eval: Functions': "ارزیابی: توابع"
+          'Play Lab: Animation (Big Game)': "آزمایشگاه بازی: انیمیشن (بازی بزرگ)"
+          'Unplugged: Booleans': "بدون دستگاه: بولی ها"
+          'Eval: Boolean Operators': "ارزیابی: عملگرهای بولی"
+          'Play Lab: Booleans': "آزمایشگاه بازی: بولی"
+          'Play Lab: Boolean (Big Game)': "آزمایشگاه بازی: بولی (بازی بزرگ)"
+          'Unplugged: Conditionals and Piecewise Functions': "بدون دستگاه: شرطی ها
+            و توابع چند ضابطه ای"
+          'Eval: Conditionals': "مشروط"
+          'Unplugged: Collision Detection and the Distance Formula': "بدون دستگاه:
+            تشخیص برخورد و فرمول فاصله"
+          'Play Lab: Collision Detection (Big Game)': "آزمایشگاه بازی: تشخیص برخورد
+            (بازی بزرگ)"
         infinity:
-          title: آزمایشگاه بازی
-          description_short: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
-          description: یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!
-          Play Lab: آزمایشگاه بازی
-          Infinity: بی نهایت
+          title: "آزمایشگاه بازی بی نهایت دیزنی"
+          description_short: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی
+            بازیگران شخصیت های دیزنی بی نهایت."
+          description: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران
+            شخصیت های دیزنی بی نهایت."
+          Play Lab: "آزمایشگاه بازی"
+          Infinity: "بی نهایت"
         algebrademo:
-          title: نسخه ی نمایشی جبر
-          description_short: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
-            شده در علوم کامپیوتر در جبرِ Code.org
-          description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده
-            در علوم کامپیوتر در جبرِ Code.org
-          Algebra Demo: نسخه ی نمایشی جبر
-          Evaluation Blocks: بلوک های ارزیابی
-          Making Pictures: ساخت تصاویر
-          Defining Variables: تعریف متغیرها
-          Defining Simple Functions: تعریف توابع ساده
-          The Design Recipe: دستور العمل طراحی
+          title: "نسخه ی نمایشی جبر"
+          description_short: "کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
+            شده در علوم کامپیوتر در جبرِ Code.org"
+          description: "کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده
+            شده در علوم کامپیوتر در جبرِ Code.org"
+          Algebra Demo: "نسخه ی نمایشی جبر"
+          Evaluation Blocks: "بلوک های ارزیابی"
+          Making Pictures: "ساخت تصاویر"
+          Defining Variables: "تعریف متغیرها"
+          Defining Simple Functions: "تعریف توابع ساده"
+          The Design Recipe: "دستور العمل طراحی"
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
           description_short: Professional Development for K5 Courses
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           Blockly Basics: Blockly Basics
           Writing computer programs: Writing computer programs
           Navigating the teacher dashboard: Navigating the teacher dashboard
@@ -323,12 +325,12 @@
           'Programming Concept: Functions': 'Programming Concept: Functions'
           'Programming Concept: Events': 'Programming Concept: Events'
         netsim:
-          title: شبیه ساز اینترنت
+          title: "شبیه ساز اینترنت"
           description_short: ''
           description: ''
-          Internet Simulator: شبیه ساز اینترنت
-          Unit 1: واحد 1
-          Unit 2: واحد 2
+          Internet Simulator: "شبیه ساز اینترنت"
+          Unit 1: "واحد 1"
+          Unit 2: "واحد 2"
           Sending Bits: Sending Bits
           Routing and DNS: Routing and DNS
           'Unit 1: Sending Bits': 'Unit 1: Sending Bits'
@@ -362,74 +364,75 @@
           Color Pixelation Examples: Color Pixelation Examples
           Color Pixelation Freeplay: Color Pixelation Freeplay
         20-hour:
-          title: دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)
-          description_audience: سنین 10 به بالا (پس از دوره 3)
-          description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
+          title: "دوره معرفی علوم کامپیوتر(15 تا 25 ساعت)"
+          description_audience: "سنین 10 به بالا (پس از دوره 3)"
+          description: "این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه
             نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی
             تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر
-            نیز جالب باشد.
+            نیز جالب باشد."
           description_short: This 20-hour course covers the core computer science
             and programming concepts in courses 2-4.
-          Introduction to Computer Science: آشنایی با علوم کامپیوتر
-          The Maze: پیچ و خم
-          Computational Thinking: تفکر محاسباتی
-          Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
-          The Artist: هنرمند
-          Algorithms: الگوریتم
-          The Artist 2: هنرمند 2
-          Functions: توابع
-          The Farmer: کشاورز
-          Conditionals: مشروط
-          The Artist 3: هنرمند 3
-          Song Writing: آهنگ سازی
-          The Farmer 2: کشاورز 2
-          Abstraction: انتزاع
-          The Artist 4: هنرمند 4
-          Relay Programming: برنامه نویسی رله
-          The Farmer 3: کشاورز 3
-          The Internet: اینترنت
-          The Artist 5: هنرمند 5
-          Wrap-up: خلاصه
+          Introduction to Computer Science: "آشنایی با علوم کامپیوتر"
+          The Maze: "پیچ و خم"
+          Computational Thinking: "تفکر محاسباتی"
+          Graph Paper Programming: "برنامه نویسی روی کاغذ شطرنجی "
+          The Artist: "هنرمند"
+          Algorithms: "الگوریتم"
+          The Artist 2: "هنرمند 2"
+          Functions: "توابع"
+          The Farmer: "کشاورز"
+          Conditionals: "مشروط"
+          The Artist 3: "هنرمند 3"
+          Song Writing: "آهنگ سازی"
+          The Farmer 2: "کشاورز 2"
+          Abstraction: "انتزاع"
+          The Artist 4: "هنرمند 4"
+          Relay Programming: "برنامه نویسی رله"
+          The Farmer 3: "کشاورز 3"
+          The Internet: "اینترنت"
+          The Artist 5: "هنرمند 5"
+          Wrap-up: "خلاصه"
         edit-code:
-          title: ویرایش کد
-          description: ویرایش کد
-          description_short: ویرایش کد
-          The Maze: پیچ و خم
+          title: "ویرایش کد"
+          description: "ویرایش کد"
+          description_short: "ویرایش کد"
+          The Maze: "پیچ و خم"
           Applab: Applab
-          The Artist: هنرمند
-          Play Lab: آزمایشگاه بازی
-          Play Lab 2015: Play Lab 2015
+          The Artist: "هنرمند"
+          Play Lab: "آزمایشگاه بازی"
+          Play Lab 2015: "بازی آزمایشی 2015"
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
-          title: رویدادها
-          description: رویدادها
-          description_short: رویدادها
-          Bounce: پریدن
+          title: "رویدادها"
+          description: "رویدادها"
+          description_short: "رویدادها"
+          Bounce: "پریدن"
           Studio: Studio
           Calc: Calc
           Eval: Eval
         flappy:
-          title: کدنویسی Flappy
-          description: می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
-            Flappy ما را امتحان کن!
-          description_short: Write your own Flappy game in less than 10 minutes!
-          Flappy Code: کدنویسی Flappy
+          title: "کدنویسی Flappy"
+          description: "می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی
+            Flappy ما را امتحان کن!"
+          description_short: "نوشتن بازی Flappy خود را در کمتر از 10 دقیقه!"
+          Flappy Code: "کدنویسی Flappy"
         jigsaw:
-          title: جورچین
+          title: "جورچین"
           description: ''
           description_short: Try our Jigsaw tutorial
-          Jigsaw: جورچین
+          Jigsaw: "جورچین"
         step:
-          title: مرحله
+          title: "مرحله"
           description: ''
           description_short: Step tutorial
-          Step: مرحله
+          Step: "مرحله"
         Hour of Code:
-          title: ساعت کد نویسی سال 2013
-          description: ''
-          description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
-            سرگرم کننده آزمایش کن!
-          Hour of Code 2013: ساعت کد نویسی سال 2013
+          title: "ساعت کد نویسی سال 2013"
+          description: "مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان
+            عصبانی را امتحان کنید!"
+          description_short: "اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های
+            سرگرم کننده آزمایش کن!"
+          Hour of Code 2013: "ساعت کد نویسی سال 2013"
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -461,21 +464,21 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         course4pre:
-          title: پیش نیاز دوره 4
-          description_short: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
-            های 2 و 3 را نگذرانده اند.
-          description: یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های 2
-            و 3 را نگذرانده اند.
-          Course 4 Prerequisite: پیش نیاز دوره 4
-          'Maze: Sequence': 'هزارتو: دنباله'
-          'Artist: Sequence': 'هنرمند: دنباله'
-          'Artist: Loops': 'هنرمند: حلقه ها'
-          'Bee: Conditionals': 'زنبور عسل: شرطی ها'
-          'Artist: Nested Loops': 'هنرمند: حلقه های تو در تو'
+          title: "پیش نیاز دوره 4"
+          description_short: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره
+            های 2 و 3 را نگذرانده اند."
+          description: "یک جمع بندی کوتاه از مفاهیم برای دانش آموزانی که دوره های
+            2 و 3 را نگذرانده اند."
+          Course 4 Prerequisite: "پیش نیاز دوره 4"
+          'Maze: Sequence': "هزارتو: دنباله"
+          'Artist: Sequence': "هنرمند: دنباله"
+          'Artist: Loops': "هنرمند: حلقه ها"
+          'Bee: Conditionals': "زنبور عسل: شرطی ها"
+          'Artist: Nested Loops': "هنرمند: حلقه های تو در تو"
           'Farmer: While Loops': 'کشاورز: حلقه‌های "در حالیکه"'
-          'Bee: Nested Loops': 'زنبور عسل: حلقه های تو در تو'
-          'Artist: Functions': 'هنرمند: توابع'
-          'Bee: Debugging': 'زنبور عسل: اشکال زدایی'
+          'Bee: Nested Loops': "زنبور عسل: حلقه های تو در تو"
+          'Artist: Functions': "هنرمند: توابع"
+          'Bee: Debugging': "زنبور عسل: اشکال زدایی"
         cspunit1:
           title: CSP Unit 1
           description_short: Make Black and White Images with the pixelation tool
@@ -521,45 +524,45 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          'Unplugged: Video Games and Coordinate Planes': 'بدون دستگاه: بازی های ویدئویی
-            و هواپیمای مختصات'
-          'Calc: Evaluation Blocks': 'حساب: ارزیابی بلوکها'
-          'Eval: Strings and Images': 'ارزیابی: رشته ها و تصاویر'
-          'Unplugged: Contracts': 'بدون دستگاه: قراردادها'
-          'Eval: Writing Contracts': 'ارزبابی: نوشتن قراردادها'
-          'Calc: Defining Variables': 'حساب: تعریف متغیرها'
-          'Play Lab: Defining Variables (Big Game)': 'آزمایشگاه بازی: تعریف متغیرها
-            (بازی بزرگ)'
+          'Unplugged: Video Games and Coordinate Planes': "بدون دستگاه: بازی های ویدئویی
+            و هواپیمای مختصات"
+          'Calc: Evaluation Blocks': "حساب: ارزیابی بلوکها"
+          'Eval: Strings and Images': "ارزیابی: رشته ها و تصاویر"
+          'Unplugged: Contracts': "بدون دستگاه: قراردادها"
+          'Eval: Writing Contracts': "ارزبابی: نوشتن قراردادها"
+          'Calc: Defining Variables': "حساب: تعریف متغیرها"
+          'Play Lab: Defining Variables (Big Game)': "آزمایشگاه بازی: تعریف متغیرها
+            (بازی بزرگ)"
           'Eval: Defining Functions': 'Eval: Defining Functions'
-          'Unplugged: The Design Recipe': 'بدون دستگاه: دستور العمل طرح'
+          'Unplugged: The Design Recipe': "بدون دستگاه: دستور العمل طرح"
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
           'Eval: Functions': 'Eval: Functions'
-          'Play Lab: Animation (Big Game)': 'آزمایشگاه بازی: انیمیشن (بازی بزرگ)'
-          'Unplugged: Booleans': 'بدون دستگاه: بولی ها'
-          'Eval: Boolean Operators': 'ارزیابی: عملگرهای بولی'
-          'Play Lab: Booleans': 'آزمایشگاه بازی: بولی'
-          'Play Lab: Boolean (Big Game)': 'آزمایشگاه بازی: بولی (بازی بزرگ)'
-          'Unplugged: Conditionals and Piecewise Functions': 'بدون دستگاه: شرطی ها
-            و توابع چند ضابطه ای'
-          'Eval: Conditionals': 'ارزیابی: شرطی ها'
-          'Unplugged: Collision Detection and the Distance Formula': 'بدون دستگاه:
-            تشخیص برخورد و فرمول فاصله'
-          'Play Lab: Collision Detection (Big Game)': 'آزمایشگاه بازی: تشخیص برخورد
-            (بازی بزرگ)'
-          Evaluation Blocks: بلوک های ارزیابی
-          Strings and Images: رشته ها و تصاویر
-          Contracts: قراردادها
+          'Play Lab: Animation (Big Game)': "آزمایشگاه بازی: انیمیشن (بازی بزرگ)"
+          'Unplugged: Booleans': "بدون دستگاه: بولی ها"
+          'Eval: Boolean Operators': "ارزیابی: عملگرهای بولی"
+          'Play Lab: Booleans': "آزمایشگاه بازی: بولی"
+          'Play Lab: Boolean (Big Game)': "آزمایشگاه بازی: بولی (بازی بزرگ)"
+          'Unplugged: Conditionals and Piecewise Functions': "بدون دستگاه: شرطی ها
+            و توابع چند ضابطه ای"
+          'Eval: Conditionals': "ارزیابی: شرطی ها"
+          'Unplugged: Collision Detection and the Distance Formula': "بدون دستگاه:
+            تشخیص برخورد و فرمول فاصله"
+          'Play Lab: Collision Detection (Big Game)': "آزمایشگاه بازی: تشخیص برخورد
+            (بازی بزرگ)"
+          Evaluation Blocks: "بلوک های ارزیابی"
+          Strings and Images: "رشته ها و تصاویر"
+          Contracts: "قراردادها"
           Your Game - Defining Variables: Your Game - Defining Variables
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: دستور العمل طراحی
+          The Design Recipe: "دستور العمل طراحی"
           Your Game - Animation: Your Game - Animation
-          Booleans: بولی ها
+          Booleans: "بولی ها"
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
-          Conditionals and Piecewise Functions: شرطی ها و توابع چند ضابطه ای
+          Conditionals and Piecewise Functions: "شرطی ها و توابع چند ضابطه ای"
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
@@ -570,17 +573,17 @@
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
           description_short: Teach Algebra through Functional Programming
-          Evaluation Blocks: بلوک های ارزیابی
-          Strings and Images: رشته ها و تصاویر
+          Evaluation Blocks: "بلوک های ارزیابی"
+          Strings and Images: "رشته ها و تصاویر"
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: Your Game - Animation
-          Booleans: بولی ها
+          Booleans: "بولی ها"
           Sam the Bat: Sam the Bat
           Your Game - Booleans: Your Game - Booleans
           Luigi's Pizza: Luigi's Pizza
-          'Play Lab: Collision Detection (Big Game)': 'آزمایشگاه بازی: تشخیص برخورد
-            (بازی بزرگ)'
+          'Play Lab: Collision Detection (Big Game)': "آزمایشگاه بازی: تشخیص برخورد
+            (بازی بزرگ)"
           Your Game - Player Movement: Your Game - Player Movement
           Your Game - Collision Detection: Your Game - Collision Detection
         text-compression:
@@ -590,7 +593,7 @@
           Text Compression: Text Compression
         CSPPD:
           new stage: new stage
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
           description_short: 'Phase 1: Online Introduction for CSP'
@@ -607,7 +610,7 @@
           Lesson 14: Lesson 14
           Lesson 15: Lesson 15
         ECSPD:
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           What is ECS?: What is ECS?
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -618,7 +621,7 @@
           description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         sciencePD:
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
@@ -652,7 +655,7 @@
           description_short: Programming
           description: Programming in Javascript and AppLap
           Getting to know AppLab: Getting to know AppLab
-          Functions: توابع
+          Functions: "توابع"
           Using Simple Commands: Using Simple Commands
           Creating Procedures - Part 1: Creating Procedures - Part 1
           Layers of Abstraction and Programming Efficiency: Layers of Abstraction
@@ -705,14 +708,14 @@
           Intelligent Personal Assistant Challenge: Intelligent Personal Assistant
             Challenge
           Digital Assistant Challenge: Digital Assistant Challenge
-          Creating Functions: ساختن تابع ها
+          Creating Functions: "ساختن تابع ها"
           Functions and Top-Down Design: Functions and Top-Down Design
           Design a Digital Scene: Design a Digital Scene
           Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
           Introducing Design Mode: Introducing Design Mode
           Clicker Game: Clicker Game
           Getting User Input: Getting User Input
-          Variables: متغیرها
+          Variables: "متغیرها"
           Looping and Random Numbers - Under the Sea: Looping and Random Numbers -
             Under the Sea
           Multi-screen App: Multi-screen App
@@ -745,7 +748,7 @@
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: حلقه ها ی While
+          While Loops: "حلقه ها ی While"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -753,6 +756,7 @@
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           'Practice PT: Create': 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -762,22 +766,22 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: بلوک های ارزیابی
+          Evaluation Blocks: "بلوک های ارزیابی"
           The Big Game: The Big Game
-          Strings and Images: رشته ها و تصاویر
-          The Design Recipe: دستور العمل طراحی
+          Strings and Images: "رشته ها و تصاویر"
+          The Design Recipe: "دستور العمل طراحی"
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           Pre-Workshop Online Component: Pre-Workshop Online Component
         sciPD complex adaptive forum:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           Introduction to Complex Adaptive Systems: Introduction to Complex Adaptive
             Systems
         Glenallan Career Day Demo:
@@ -787,7 +791,7 @@
           description: Try out these fun coding puzzles. Do your best!
           Puzzles: Puzzles
         ECSPD-NexTech:
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           What is ECS?: What is ECS?
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -798,7 +802,7 @@
           description_short: 'Phase 1: Online Introduction'
           Impact of Computer Science: Impact of Computer Science
         ECSPD-iZone:
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           What is ECS?: What is ECS?
           Growth Mindset: Growth Mindset
           Teaching Strategies: Teaching Strategies
@@ -812,8 +816,8 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
-          Evaluation Blocks: بلوک های ارزیابی
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
+          Evaluation Blocks: "بلوک های ارزیابی"
           logo_image: nextech_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -825,8 +829,8 @@
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
           description_short: 'Phase 1: Online Introduction'
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
-          Evaluation Blocks: بلوک های ارزیابی
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
+          Evaluation Blocks: "بلوک های ارزیابی"
           logo_image: izone_logo.png
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
@@ -835,7 +839,7 @@
             Algebra
           Preparing for in-person PD: Preparing for in-person PD
         sciencePD-NexTech:
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           logo_image: nextech_logo.png
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -855,7 +859,7 @@
           The Tutorial: The Tutorial
           Post-Survey: Post-Survey
         sciencePD-iZone:
-          Introduction to PD: آشنايي با پیشرفت حرفه ای
+          Introduction to PD: "آشنايي با پیشرفت حرفه ای"
           logo_image: izone_logo.png
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -880,7 +884,7 @@
           description_short: Script for test. Careful, don't change level ordering.
           All the Tests: All the Tests
           Free Response: Free Response
-          Multi: چند
+          Multi: "چند"
           Big Game: Big Game
           new stage: new stage
         sciencePD2:
@@ -914,7 +918,7 @@
           description_short: Testing
         cspunit2:
           title: CSP Unit 2 - The Internet
-          description_short: اینترنت
+          description_short: "اینترنت"
           description: |
             In this unit, students extend their understanding of the internet and how it functions by building off the concepts learned when sending bits in Unit 1. The unit largely explores the
             structure and design of the internet and the implications of those design decisions including
@@ -933,7 +937,7 @@
           DNS Simulation: DNS Simulation
           How HTTP Works: How HTTP Works
           IP and DNS in the Real World: IP and DNS in the Real World
-          The Internet: اینترنت
+          The Internet: "اینترنت"
           Routers and Addresses as Numbers: Routers and Addresses as Numbers
           Algorithms Detour - Minimum Spanning Tree: Algorithms Detour - Minimum Spanning
             Tree
@@ -967,14 +971,14 @@
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Evaluation Blocks: بلوک های ارزیابی
-          Strings and Images: رشته ها و تصاویر
-          Defining Variables: تعریف متغیرها
+          Evaluation Blocks: "بلوک های ارزیابی"
+          Strings and Images: "رشته ها و تصاویر"
+          Defining Variables: "تعریف متغیرها"
           Big Game - Variables: Big Game - Variables
           'Play Lab: Defining Functions': 'Play Lab: Defining Functions'
-          The Design Recipe: دستور العمل طراحی
+          The Design Recipe: "دستور العمل طراحی"
           Big Game - Animation: Big Game - Animation
-          Booleans: بولی ها
+          Booleans: "بولی ها"
           Sam the Bat: Sam the Bat
           Big Game - Booleans: Big Game - Booleans
           Luigi's Pizza: Luigi's Pizza
@@ -982,18 +986,18 @@
           Big GAme - Collision Detection: Big GAme - Collision Detection
           Rocket-Height: Rocket-Height
           Big Game - Collision Detection: Big Game - Collision Detection
-          Free Play: بازی رایگان
+          Free Play: "بازی رایگان"
         allthethings:
-          Jigsaw: جورچین
-          Maze: هزارتو
-          Artist: هنرمند
-          Bee: زنبور عسل
+          Jigsaw: "جورچین"
+          Maze: "هزارتو"
+          Artist: "هنرمند"
+          Bee: "زنبور عسل"
           PlayLab: PlayLab
           Farmer: Farmer
-          Flappy: فلاپی
-          Bounce: پریدن
-          Multi: چند
-          Match: مسابقه
+          Flappy: "فلاپی"
+          Bounce: "پریدن"
+          Multi: "چند"
+          Match: "مسابقه"
           TextMatch: TextMatch
           CSinA: CSinA
           Netsim: Netsim
@@ -1011,6 +1015,7 @@
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1018,14 +1023,14 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: بلوک های ارزیابی
-          Strings and Images: رشته ها و تصاویر
+          Evaluation Blocks: "بلوک های ارزیابی"
+          Strings and Images: "رشته ها و تصاویر"
           Writing Contracts: Writing Contracts
-          Defining Variables: تعریف متغیرها
-          Defining Functions: تعریف توابع
+          Defining Variables: "تعریف متغیرها"
+          Defining Functions: "تعریف توابع"
           Rocket-Height: Rocket-Height
-          Booleans: بولی ها
-          'Eval: Conditionals': 'ارزیابی: شرطی ها'
+          Booleans: "بولی ها"
+          'Eval: Conditionals': "ارزیابی: شرطی ها"
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
@@ -1035,20 +1040,20 @@
           description_short: Online levels for PD workshop
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: شبیه ساز اینترنت
-          App Lab: آزمایشگاه نرم افزار
+          Internet Simulator: "شبیه ساز اینترنت"
+          App Lab: "آزمایشگاه نرم افزار"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
         CSPfac intro:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
           description_short: Online levels for PD workshop
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Pixelation Widget: Pixelation Widget
           Text Compression Widget: Text Compression Widget
-          Internet Simulator: شبیه ساز اینترنت
-          App Lab: آزمایشگاه نرم افزار
+          Internet Simulator: "شبیه ساز اینترنت"
+          App Lab: "آزمایشگاه نرم افزار"
           Broadcast Lesson: Broadcast Lesson
           Text Compression Lesson: Text Compression Lesson
         K5-OnlinePD:
@@ -1073,7 +1078,7 @@
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Unit 1, Days 1-2: Unit 1, Days 1-2
           Unit 1, Days 3-4: Unit 1, Days 3-4
           Unit 1, Days 5-7: Unit 1, Days 5-7
@@ -1082,7 +1087,7 @@
           Unit 1, Day 11-14: Unit 1, Day 11-14
           Unit 1, Day 15-16: Unit 1, Day 15-16
           Unit 1, Day 17-19: Unit 1, Day 17-19
-          Wrap-up: خلاصه
+          Wrap-up: "خلاصه"
           Unit 1, Days 1-2. What Is a Computer?: Unit 1, Days 1-2. What Is a Computer?
           Unit 1, Days 3-4. Buying a Computer: Unit 1, Days 3-4. Buying a Computer
           Unit 1, Days 5-7. Searching and Web 2.0: Unit 1, Days 5-7. Searching and
@@ -1127,11 +1132,11 @@
           Necessary Background: Necessary Background
           Equity PD: Equity PD
         hoc2015:
-          title: ساعت کدنویسی 2015
+          title: "ساعت کدنویسی 2015"
           description_short: Use Play Lab to create a story or game.
           description: Use Play Lab to create a story or game.
-          Hour of Code: ساعتی با کد
-          Hour of Code 2015: ساعت کدنویسی 2015
+          Hour of Code: "ساعتی با کد"
+          Hour of Code 2015: "ساعت کدنویسی 2015"
         algebraPD2:
           title: Computer Science in Algebra PD Phase 2
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1139,28 +1144,28 @@
           Course Overview: Course Overview
           Computer Science Pedagogy: Computer Science Pedagogy
           Teacher Dashboard: Teacher Dashboard
-          Evaluation Blocks: بلوک های ارزیابی
-          Strings and Images: رشته ها و تصاویر
+          Evaluation Blocks: "بلوک های ارزیابی"
+          Strings and Images: "رشته ها و تصاویر"
           Writing Contracts: Writing Contracts
-          Defining Variables: تعریف متغیرها
-          Defining Functions: تعریف توابع
+          Defining Variables: "تعریف متغیرها"
+          Defining Functions: "تعریف توابع"
           Rocket-Height: Rocket-Height
-          Booleans: بولی ها
-          'Eval: Conditionals': 'ارزیابی: شرطی ها'
+          Booleans: "بولی ها"
+          'Eval: Conditionals': "ارزیابی: شرطی ها"
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching
             Computer Science
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
-          Welcome!: خوش آمدی!
-          The Design Recipe: دستور العمل طراحی
+          Welcome!: "خوش آمدی!"
+          The Design Recipe: "دستور العمل طراحی"
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: خوش آمدی!
-          Wrap-Up: جمع و جور کن
+          Welcome!: "خوش آمدی!"
+          Wrap-Up: "جمع و جور کن"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1176,13 +1181,13 @@
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: جمع و جور کن
+          Wrap-Up: "جمع و جور کن"
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free,
@@ -1194,7 +1199,7 @@
           Creating Equitable Learning Environments: Creating Equitable Learning Environments
           Next Steps: Next Steps
         sciencePD2b-iZone:
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1203,12 +1208,12 @@
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: جمع و جور کن
+          Wrap-Up: "جمع و جور کن"
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1227,12 +1232,12 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: خلاصه
+          Wrap-up: "خلاصه"
         ECSPD2-NexTech:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           0: |
             Unit 1, Days 1-2
             What Is a Computer?
@@ -1251,7 +1256,7 @@
           Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day
             15-16 Computer Programs and Following Directions
           Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-          Wrap-up: خلاصه
+          Wrap-up: "خلاصه"
         CSPPD2:
           title: 'Computer Science Principles PD: Blended Summer Study'
           description_short: 'Blended Summer Study: 8 hour online'
@@ -1292,16 +1297,16 @@
             or in combination with Afterschool 1 . This course focuses on learning
             through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: نقشه های شاد
-          Move it, Move it: بدو، بدو
-          'Real-life Algorithms: Plant a Seed': 'الگوریتم های زندگی واقعی: یک بذر
-            بکار'
-          Graph Paper Programming: 'برنامه نویسی روی کاغذ شطرنجی '
-          Building a Foundation: ساختن یک بنیان
-          Getting Loopy: سر گیجه گرفتن
-          The Big Event: رویداد بزرگ
-          Binary Bracelets: دستبند دودویی
-          Songwriting: ترانه سرایی
+          Happy Maps: "نقشه های شاد"
+          Move it, Move it: "بدو، بدو"
+          'Real-life Algorithms: Plant a Seed': "الگوریتم های زندگی واقعی: یک بذر
+            بکار"
+          Graph Paper Programming: "برنامه نویسی روی کاغذ شطرنجی "
+          Building a Foundation: "ساختن یک بنیان"
+          Getting Loopy: "سر گیجه گرفتن"
+          The Big Event: "رویداد بزرگ"
+          Binary Bracelets: "دستبند دودویی"
+          Songwriting: "ترانه سرایی"
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1350,7 +1355,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Teaching Strategies: Teaching Strategies
           Unit 2 Overview: Unit 2 Overview
           Problem Solving: Problem Solving
@@ -1378,11 +1383,12 @@
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: Close & Next Steps
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Teaching Strategies: Teaching Strategies
           Unit 3 Overview: Unit 3 Overview
           Introduction to the Unit 3 Challenge: Introduction to the Unit 3 Challenge
@@ -1417,7 +1423,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Teaching Strategies: Teaching Strategies
           Unit 4 Overview: Unit 4 Overview
           Introduction to the Unit 4 Challenge: Introduction to the Unit 4 Challenge
@@ -1452,7 +1458,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Teaching Strategies: Teaching Strategies
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
@@ -1461,7 +1467,7 @@
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
           description: Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Teaching Strategies: Teaching Strategies
           Unit 6 Overview: Unit 6 Overview
           Introduction to the Unit 6 Challenge: Introduction to the Unit 6 Challenge
@@ -1483,7 +1489,7 @@
           'Data App Part 3: Code': 'Data App Part 3: Code'
           Identifying People with Data: Identifying People with Data
           Collecting Personal Information: Collecting Personal Information
-          Privacy Policy: قوانین حفظ حریم خصوصی
+          Privacy Policy: "قوانین حفظ حریم خصوصی"
           'Debate: Privacy vs. Utility': 'Debate: Privacy vs. Utility'
           'Data App Part 4: App Permissions': 'Data App Part 4: App Permissions'
           'Data App Part 5: Clean Data': 'Data App Part 5: Clean Data'
@@ -1505,15 +1511,37 @@
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          'Practice Create PT: Data App': 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: جمع و جور کن
+          Wrap-Up: "جمع و جور کن"
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1531,7 +1559,7 @@
           title: 'Computer Science Principles: Unit 2 PD'
           description_short: Online Exploration of CSP Unit 2
           description: Online Exploration of CSP Unit 2
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Getting Started: Getting Started
           Unit 2 Overview: Unit 2 Overview
           Challenge Overview: Challenge Overview
@@ -1548,21 +1576,22 @@
           title: Special Fun
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: سنین 10 به بالا (پس از دوره 3)
+          description_audience: "سنین 10 به بالا (پس از دوره 3)"
           Halloween 2015: Halloween 2015
         SpecialSeries:
           title: Special Levels
           description_short: Something special for those who know it exists. These
             puzzles might not be around long, so enjoy them while you can!
-          description_audience: سنین 10 به بالا (پس از دوره 3)
+          description_audience: "سنین 10 به بالا (پس از دوره 3)"
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles
             might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
-          title: Ice Age Play Lab
+          title: "آزمایشگاه بازی عصر یخبندان"
           description_short: Create a story or make a game with Ice Age Play Lab!
           description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          Ice Age Play Lab: "آزمایشگاه بازی عصر یخبندان"
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1597,7 +1626,7 @@
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: حلقه ها ی While
+          While Loops: "حلقه ها ی While"
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1617,35 +1646,35 @@
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
+          title: "آزمایشگاه بازی Gumball"
           description_short: Create a story or make a game with Gumball Play Lab!
           description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          Gumball Play Lab: "آزمایشگاه بازی Gumball"
         starwars:
           title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
-          Hour of Code 2015: ساعت کدنویسی 2015
+          Hour of Code 2015: "ساعت کدنویسی 2015"
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code'
           description_short: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
-          Hour of Code 2015: ساعت کدنویسی 2015
+          Hour of Code 2015: "ساعت کدنویسی 2015"
         minecraft:
-          title: Minecraft
+          title: "ماینکرفت"
           description_short: Use code to survive in a Minecraft world!
           description: Use code to survive in a Minecraft world!
           Craft: Craft
         mc:
           title: Minecraft Hour of Code
-          description_short: Explore a Minecraft world through code
+          description_short: "یک جهان ماینکرفتی را از طریق کد کاوش کنید"
           description: Use blocks of code to take Steve or Alex on an adventure through
             this Minecraft world
-          Hour of Code 2015: ساعت کدنویسی 2015
+          Hour of Code 2015: "ساعت کدنویسی 2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description_short: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1657,6 +1686,43 @@
           title: Computer Science in Science PD Pre-Phase 3B
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
-          Welcome!: خوش آمدی!
+          Welcome!: "خوش آمدی!"
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: جمع و جور کن
+          Wrap-Up: "جمع و جور کن"
+          Assessing Computer Models: Assessing Computer Models
+          "(optional) Refresh your connection to Complex Adaptive Systems": "(optional)
+            Refresh your connection to Complex Adaptive Systems"
+        cspunit5:
+          title: CSP Unit 5 - Performance Tasks
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore
+            and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: CSP Unit 4 - Data
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify
+            patterns, trends and possible meanings are important practical skills
+            that computer scientists do every day. The data rich world we live in
+            also introduces many complex questions related to public policy, law,
+            ethics and societal impact. Understanding where data comes from, having
+            intuitions about what could be learned or extracted from it, and being
+            able to use computational tools to manipulate data and communicate about
+            it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: Practice PT - Tell a Data Story
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: Rapid Research - Data Innovations
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: Practice PT - Propose an Innovation

@@ -237,33 +237,30 @@ ar:
           notes/hoc5_2.jpg
           
         text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+          إذا وضعت قطعة "تقدم للامام" في موقع الحدث حيث تقول القطعة "شغل" و "اتجه لليسار" حيث تقول "والا" وهذا يعني أن الزومبي سيختار بين خيارين أثنين. 'اذا' كان الطريق سالكا، الزومبي سوف يتقدم للمام، وإلا  (لن تكون الطرق سالكة)، وسوف يتجه الزومبي يساراً.
       3:
         image: |
           notes/hoc5_3.jpg
           
-        text: |-
-          Just like the "if" block, we can put "if else" blocks inside a "repeat" blocks so that the zombie keeps moving and the "if else" block will keep checking if there's somewhere to turn.
+        text: 'تماما مثل قطعة "اذا"، يمكننا أن نضع قطع "اذا والا" داخل قطع "أكرر" بحيث تستمر الزومبي بمتابعة التقدم وسوف تستمر قطعة "اذا والا" من التحقق إذا كان هناك أي مكان أخر للإنعطاف.'
       4:
         image: |
           notes/hoc5_4.jpg
           
-        text: Now, get those zombies where they belong!
+        text: الآن، وصل هؤلاء الزومبي إلى حيث ينتمون!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
-        text: "An if-else statement is a decision between two things. Let's see how we can use an if-else statement with our buddy Scrat the squirrel."
+        text: 'بيان إذا-آخر هو قرار بين شيئين. دعونا نرى كيف يمكننا استخدام عبارة إذا-آخر مع شركائنا الأصدقاء "Scrat" السنجاب.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'هذه الكتلة تبدو نفس كتلة "لو"، ولكن هناك جزءا إضافية في أسفل التي تقول "آخر". إذا وضعت كتلة "المضي قدما" حيث تقول "لا" و كتلة "الاتجاه يسارا" حيث تقول "آخر"، وهذا يعني "Scrat" السنجاب سوف يتحرك إلى الأمام إذا كان هناك مسار أو طريق مفتوح. إذا لم يكن هناك مسار للتقدم، سوف يتحول "Scrat" إلى اليسار.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
-        text: |-
-          It's making a decision and doing one of the two actions based on that decision. And just like "if" blocks, you can put "if-else" blocks inside "repeat" blocks.
+        text: 'إتخاذ القرار والقيام بأحد الإجراءات الأثنين بناء على هذا القرار. وتماما مثل كتلة "لو"، يمكنك وضع كتل "إذا-آخر" داخل كتلة "تكرار".'
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: "Now let's help Scrat the squirrel get that acorn!"
+        text: الآن دعنا نساعد السنجاب سكارت للحصول على ثمرة البلوط!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -379,34 +376,33 @@ ar:
         text: 'المساحة البيضاء على اليمين تُسَمّى مساحة العمل، وهنا سنقوم ببناء برنامجنا. للتحرك على سطح الجليد، سنقوم باستخدام القطعة البرمجية "تقدم للأمام".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'الآن, القطعة البرمجية "القدم إلى الأمام" تقول, "التقدم إلى الأمام بمقدار 100 بكسل." عندما نضغط على "تشغيل", ماذا يحصل؟ إلسا تتحرك إلى الأمام بمقدار معين على الشاشة, في الحقيقة 100 بكسل! البكسل في الواقع هي مربعات صغيرة جداً على شاشة كمبيوترك.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'الكتلة البرمجية الأخرى التي لدينا في هذا اللغز تقول "استدر يميناً بمقدار 90 درجة."وعندما نستخدم هذه الكتلة "استدر يميناً", هذا يجعل إلسا تستدير بقدار معين. يمكنك أن تتحكم بالمقدار الذي تريد لإلسا أن تستديره. الزاوية يتم قياسها من المسار الذي كانت فيه إلسا. لذالك, هذا يعني استدارة بمقدار 90 درجة. وأيضاً يعني استدارة بقدار 120 درجة.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: تذكر, يمكنك ان تغير رقم البكسل والدرجات بالنقر على الأسهم الموجودة بجانبهم.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: مرحبا, أنا باولا! أجهزة الكمبيوتر جيدة حقاً بتكرار العمليات. يمكنك أن تعد إلى 10, 20, أو 100. ولكن الكمبيوتر يمكنه العد حتى إلى البليون أو الترليون. ذلك لن يكون ممل بالنسبة له و إنه سوف يستغرق فقط بضعة ثواني. سواء كان عد, أو رسم أو أي شيء آخر--أجهزة الكمبيوتر يمكنها تكرار الأشياء مئات أو حتى بلايين المرات.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'في البرمجة, نسمي هذه بحلقة. الحلقة هي كيف تكرر تعليماتك البرمجية مراراً وتكراراً, من أجل اللغز القدم, هدفك هو مساعدة أنا في إنشاء مربع بواسطة تعليمة "التكرار".'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: 'أية كتل من التعليمات البرمجية الموضوعة داخل كتلة "التكرار" سوف تتكرر بتسلسل, بعدد من المرات كما تريد.'
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'لكي ترسم مربع, يمكنك استخدام كتل "التقدم أماماً" و "الإستدارة يميناً" أربع مرات. ولكن الطريقة الأسهل أن تطلب من الكمبيوتر "التقدم أماماً" و "الإستدارة يميناً" بمقدار 90 درجة مرة واحدة, وبعدها تطلب منه أن يكرر هذين التعليمتين 4 مرات, تحتاج أن تضع كتلتي " التقدم أماماً" و "الإستدارة يميناً" بداخل كتلة "التكرار".'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'تذكر, يمكنك تغيير العدد في كتلة "التكرار" إلى أي شيء, و سوف يتم تكرار القطع البرمجية التي في داخلها ذلك العدد من المرات.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: مرحبا, أنا كريس بوش. أنا لاعب كرة سلة محترف و اكتب التعليمات البرمجية في الكلية.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.

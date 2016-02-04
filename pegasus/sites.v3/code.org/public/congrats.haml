@@ -8,7 +8,7 @@ social:
   "twitter:title": "The Hour of Code is here"
   "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 30 languages. Ages 4 to 104."
   "twitter:image:src": "http://csedweek.org/images/code-video-thumbnail.jpg"
-  "twitter:player": "https://www.youtubeeducation.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
+  "twitter:player": "https://www.youtube.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
   "twitter:player:width": 1920
   "twitter:player:height": 1080
 max_age: 60
@@ -22,7 +22,7 @@ max_age: 60
   -share_url = "http://#{request.host_with_port}/certificates/blank"
 
 -facebook = {:u=>share_url}
--twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
+-twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:just_did_hoc)}
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
 -company_param = params[:co]
@@ -60,7 +60,7 @@ max_age: 60
       -# Users who started at https://code.org/api/hour/begin/gumball?company=CN&lang=ar
       -# should see this block when they finish.
       %h2
-        أنهيت ساعة البرمجة !      
+        أنهيت ساعة البرمجة !
         %a{:href=>return_to_cn_path} العودة إلى كرتون نتورك
     -else
       %h2

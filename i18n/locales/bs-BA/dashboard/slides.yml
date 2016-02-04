@@ -256,128 +256,122 @@ bs:
         text: 'Osnovni pojmovi koje si koristio/la se nalaze u srcu svake aplikacije koju ćeš ikada isprobati. Učili smo o petljama "ponovi", "ponavljaj dok ne bude", naredbama "ako" i "ako-inače".'
       3:
         image: notes/hoc6_3.jpg
-        text: "If you liked your first hour of code, visit code.org to continue your education into computer science! Once you complete our 20 hour course, you'll have mastered the basics of programming, and can start learning how to write phone apps, robot instructions, games, you name it."
+        text: Ako ti se svidio tvoj prvi sat kodiranja, posjeti code.org da bi nastavio/la svoje učenje računarstva! Kroz naš 20-satni kurs ćeš savladati osnove programiranja i početi učiti kako napraviti aplikacije za mobitele, upute za robote, igrice, bilo što.
       4:
         image: notes/hoc6_4.jpg
-        text: "Technology is changing everything we do and it doesn't matter if you're young or old: programming is fun, it's creative, and anyone can learn!"
+        text: 'Tehnologija mijenja sve što radimo i nije važno koliko godina imaš: programiranje je zabavno, i kreativno, i svako ga može naučiti!'
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Show notes coming soon!
+        text: Bilješke će stići uskoro!
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: Zdravo, ja se zovem Lindsey. Radim kao model, glumim i pišem svoje programe. Upotrijebimo kodiranje da se pridružimo Anni i Elsi dok istražuju ljepotu i čaroliju leda.
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Napraviti ćeš pahuljice i uzorke dok kližeš po ledu i zimsku Zemlju Čuda koju možeš podijeliti sa svojim prijateljima.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: U slijedećih sat vremena naučit ćeš osnove izrade programa. Tradicionalno programiranje se obično svodi na tekst, no mi ćemo koristiti Blockly, koji koristi vizualne blokove koje možeš premještati i slagati da dobiješ programe. Tako čak i studenti na fakultetima uče osnove. U biti, to je isto stvaranje kôda.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: Program je niz instrukcija koje kompjuteru kažu šta da uradi. Hajdemo napraviti kôd, ili program, koji će Elsi pomoći da nacrta običnu liniju. To ćemo kasnije koristiti da napravimo složenije uzorke.
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Tvoj ekran je podijeljen u tri dijela. Na lijevoj strani je ledena površina gdje će se odvijati tvoj program. Upute su na svakom nivou napisane odmah ispod nje.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: U sredini je alatna traka, a svaki od ovih blokova je nešto što Anna i Elsa mogu uraditi.
       7:
         image: notes/frozen1_7.jpg
-        text: |-
-          The white space on the right is called the workspace, and this is where we'll build our program. To move around the ice surface, you'll use the "Move Forward" block.
+        text: 'Bijeli prostor s desne strane se zove adna površina. Tu ćemo graditi naš program. Za kretanje po ledu, koristi blok "idi naprijed".'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'Pogledaj, blok "idi naprijed" kaže "idi naprijed za 100 piksela". Kad kliknemo na "Pokreni", što se događa? Elsa se kreće naprijed po ekranu i to tačno za 100 piksela! Pikseli su zapravo sićušni kvadratići na ekranu tvog računala.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: 'Drugi blok koji imamo u ovom zadatku kaže "okreni desno za 90 stepeni." Kad upotrijebimo taj "okreni desno " blok, Elsa se okrene za određeni ugao. Možeš se poigrati s vrijednošću koliko želiš da se Elsa okrene. Ugao se mjeri od smjera staze ispred Else. Dakle, ovo je okret za 90 stepeni. A ovo je okret od 120 stepeni.'
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Zapamti, možeš promijeniti broj piksela i stepeni klikom na strelice do njih.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: 'Pozdrav, ja se zovem Paola! Računala su stvarno dobra u ponavljanju radnji. Vi možete brojati do 10, 20, ili 100. Ali računalo može brojati do bilion ili trilion. Neće mu dosaditi i bit će mu potrebno samo nekoliko sekundi. Bilo da se radi o brojanju, crtanju, ili bilo čemu - računala mogu ponavljati stvari sto ili čak bilione puta.'
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: 'U programiranju, ovo zovemo petljom. Petljom ponavljaš svoj kôd opet i opet. U slijedećem zadatku cilj je pomoći Anni da napravi kvadrat koristeći blok "ponovi".'
       3:
         image: notes/frozen2_3.jpg
-        text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
+        text: 'Bilo koje blokove koda koje staviš unutar bloka "ponovi" biti će ponavljani u nizu, koliko god put poželiš.'
       4:
         image: notes/frozen2_4.jpg
-        text: 'To draw a square, you can use the "Move Forward" and "Turn Right" block 4 times. But the easier way is to tell the computer to "Move Forward" and "Turn Right by 90 degrees" once, and then tell it to repeat this pair of actions 4 times. To do that, you need to put the "Move Forward" and "Turn Right" block inside a "Repeat" block.'
+        text: 'Za crtanje kvadrata možeš koristiti "idi naprijed" i "okreni desno" blokove 4 puta. Međutim jednostavnije je da kompjuteru kažeš "idi naprijed" i "okreni desno za 90 stepeni" jednom, a potom mu kažeš da ponovi te dvije radnje 4 puta. Za to trebaš staviti "idi naprijed" i "okreni desno" blok unutar bloka "ponovi".'
       5:
         image: notes/frozen2_5.jpg
-        text: |-
-          Remember, you can change the number in the "Repeat" block to anything, and it will repeat what's inside the block that many times.
+        text: 'Zapamti, možeš promijeniti broj u bloku "ponovi" na bilo koju vrijednost i ono što je unutar tog bloka će se ponoviti toliki broj puta.'
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded in college.
+        text: Zdravo, ja sam Chris Bosh. Ja sam profesionalni košarkaš, i programirao sam na fakultetu.
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define new commands. Most computer languages have only about 100 words or commands. And really, the art and magic is in defining your own new words out of these building blocks.
+        text: Jedan od najvažnijih koncepata u računarstvu je kako definirati nove naredbe. Većina programskih jezika ima tek oko 100 riječi ili naredbi. Zapravo, sva umjetnost i čarolija je u izradi vlastitih novih riječi sastavljenih od ovih osnovnih blokova.
       3:
         image: notes/frozen3_3.jpg
-        text: "Once you've taught a computer how to do an action once using this sequence of commands, you can make up your own name for that action so it's easy to repeat it later. When you define your own command and give it a name, that's called a function."
+        text: Jednom kad naučiš kompjuter kako da obavi neku radnju koristeći niž naredbi, možeš toj akciji dati vlastito ime tako da ti bude poslije lakše ponoviti je. Kada definiraš vlastitu naredbu i daš joj ime, to se zove funkcija.
       4:
         image: notes/frozen3_4.jpg
-        text: "Hi, I’m Jess. When programming with blocks, you would use functions if there are a set of actions you would like to use lots of times. For example, you've written code to create a square."
+        text: Zdravo, ja sam Jess. Kada programiraš s blokovima koristit ćeš funkcije za niz radnji koje želiš koristiti mnogo puta. Na primjer, napisao si kôd za crtanje kvadrata.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'Ovo možeš definirati kao funkciju zvanu "nacrtaj kvadrat" '
       6:
         image: notes/frozen3_6.jpg
-        text: Now you have a new block that you can use multiple times to create multiple squares.
+        text: Sada imaš novi blok koji možeš upotrijebiti više puta da nacrtaš više kvadrata.
       7:
         image: notes/frozen3_7.jpg
-        text: A lot of simple shapes can be used to create more complex patterns. In the next puzzle, the code you recently wrote to make a circle is available to you as a new function that can make circles of different sizes. Can you use it to help Elsa create intricate and beautiful patterns in the snow?
+        text: Za stvaranje složenih uzoraka možeš koristiti mnogo jednostavnih oblika. U idućem zadatku ti je kôd za crtanje kruga koji si prije napisao dostupan kao nova funkcija koja može nacrtati krugove raznih veličina. Možeš li pomoći Elsi nacrtati prekrasne zamršene uzorke u snijegu?
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
+        text: Sada ćemo praviti igrice pomoću Laboratorija Igara. Dobre igre imaju priču, a svaka priča ima likove. Naučit ćemo kako da naši likovi poput vještica, vanzemaljaca ili životinja govore, kreću se i uzajamno djeluju. Do kraja tutorijala, napravit ćeš igru počevši od nule i podijeliti je s prijateljima.
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega.
       3:
         image: notes/playlab_intro_3.png
-        text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
+        text: U sredini je alatna traka, a svaki od ovih blokova je dio kôda. Bijeli prostor s desne strane zove se radna površina. Tu ćemo graditi naš program.
       4:
         image: notes/playlab_intro_4.png
-        text: |-
-          To start off, you'll need to link your blocks to the orange "when run" block. You can link multiple blocks together by dragging them out until you see the yellow line, and then they'll snap together.
+        text: 'Za početak trebaš prikačiti svoje blokove za narandžast "pri pokretanju" blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti.'
       5:
         image: notes/playlab_intro_5.png
-        text: |-
-          In this first puzzle, our actor is a penguin and we'll be making it say "Hello!" by dragging the say block out, linking it to the when run block, and typing in "Hello." We can also make the penguin move by using the move right and move left blocks. Once you have your blocks in place, hit the run button to see what you've programmed.
+        text: 'U ovom prvom zadatku naš lik je pingvin i on će naučiti reći "Zdravo!" tako da ćemo izvući blok "reći", prikačiti ga na blok "pri pokretanju" i upisati "Zdravo!". Također možemo napraviti da se pingvin kreće tako da upotrijebimo blokove "pomakni lijevo" i "pomakni desno". Kad smjestiš blokove, klikni na gumb "Pokreni" da vidiš šta si isprogramirao.'
       6:
         image: notes/playlab_intro_6.png
-        text: "Get started and by the end, you'll be able to create your own game with all kinds of players that can interact, turn happy or sad, score points, or throw fireballs, or even vanish each other. It's all up to you and the game you want to make."
+        text: Započni sada, a kad završiš bit ćeš sposoban/na napraviti vlastitu igru sa svim vrstama likova koji mogu međudjelovati, postati tužni ili sretni, skupljati bodove, bacati vatrene kugle ili čak izbrisati jedan drugoga. Sve ovisi o tebi i tome kakvu igru želiš napraviti.
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: "Now, we're going to learn about something that all game programmers use everyday. They're called events. An event tells your program to listen for when something happens. When that thing happens, it performs an action."
+        text: Sad idemo naučiti nešto što svi programeri svakodnevno koriste. To se zovu događaji. Događaj kaže tvom programu da sluša kada će se nešto dogoditi. Kad se to dogodi, on izvodi akciju.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen.
+        text: Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana.
       3:
         image: notes/playlab_events_3.png
-        text: |-
-          Here, we're going to make the space bot greet the earthlings when a player clicks on him. We'll use the "when clicked" block and attach the "say" block to it. When the player clicks on the space bot, everything attached to this "when clicked" event block will be performed. What does your alien say?
+        text: 'Sada ćemo napraviti da svemirski robot pozdravi zemljane kada se klikne na njega. Koristit ćemo blok "kad se klikne" i prikačiti blok "reći" na njega. Kada igrač klikne na svemirskog robota on će izvest sve ono šta je prikačeno na blok događaja "kad se klikne". Šta će tvoj vanzemaljac reći?'
       4:
         image: notes/playlab_events_4.png
-        text: 'There are also "when arrow" blocks. If you link the "move" blocks to these, you can start to move your actors up, down, left, or right. Step by step, your game is getting more interactive.'
+        text: 'Tu su također i "kad strelica" blokovi. Ako na njih prikačiš blokove "pomakni", moći ćeš pomicati svoj lik gore, dolje, lijevo ili desno. Korak po korak i tvoja igra postaje sve interaktivnija.'
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: 'This is the "repeat forever" block. Anything inside this block will happen forever in the game.'
+        text: 'Ovo je blok "ponavljaj zauvijek". Sve što je unutar ovo bloka će se zauvijek ponavljati tijekom igre.'
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: |-
-          If we want an actor to do something repeatedly, without the player having to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: 'Ako želimo da lik nešto ponavlja, bez ikakvog utjecaja igrača, stavit ćemo to unutar bloka "ponavljaj zauvijek".'
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries of the kingdom, left and right continuously. Learning how the repeat commands works, will save you a ton of time later when you build your own game.
@@ -1360,7 +1354,7 @@ bs:
     starwars_intro:
       1:
         image: notes/starwars_intro_1.JPG
-        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars, The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
+        text: "Hi, I'm Kathleen Kennedy and I'm the producer of Star Wars: The Force Awakens. Today you'll be working with one of our stars, BB-8. BB-8 is a spherical droid. Everything he does and every movement that he makes is controlled by computer software. Computer science impacts every industry, from marketing to health care to film. In fact, hundreds of computer engineers worked together to make a film like The Force Awakens."
       2:
         image: notes/starwars_intro_2.JPG
         text: "Hi I'm Rachel Rose, I'm a senior R&D engineer at ILM and I lead the animation and creature development team. In The Force Awakens, I'm responsible for helping the artists develop rigs which are the parts of the character that move that allow the character to look very believable in a galaxy far far away."
@@ -1416,7 +1410,7 @@ bs:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."
@@ -1491,7 +1485,7 @@ bs:
         text: "Hello, my name is Charita Carter. I'm a senior creative producer here at Walt Disney Imagineering. I'm responsible for leading teams that actually produce the attractions that our guests get to experience. We are always looking for ways that we can improve and make a better experience for our guests and technology is at the heart of that."
       2:
         image: notes/starwars_blocks_events_2.JPG
-        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C3PO."
+        text: "Congratulations, you did it! You programmed BB-8. Now I think we're ready for something harder. Let's go for it. Now that you've learned the basics of programming, we're going to back in time to build your own game, starring R2-D2 and C-3PO."
       3:
         image: notes/starwars_blocks_events_3.JPG
         text: "To make a game, we need to learn about something that game programmers use every day: they're called events. Events tell your program to listen or wait for when something happens and then when it does, it performs an action."

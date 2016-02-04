@@ -27,7 +27,7 @@ he:
           Flappy non blockly: Flappy non blockly
           title: קורס 1
           Artist 2: אמן 2
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Building a Foundation: Building a Foundation
@@ -120,7 +120,7 @@ he:
           "Farmer: While Loops": 'Farmer: While Loops'
           "Bee: Nested Loops": 'Bee: Nested Loops'
           "Bee: Debugging": 'Bee: Debugging'
-          Maze2: Maze2
+          Maze2: מבוך2
           Artist2: אמן 2
           "Artist: Functions2": 'Artist: Functions2'
           "Bee: Functions2": 'Bee: Functions2'
@@ -131,13 +131,13 @@ he:
           "Bee: Nested Loops2": 'Bee: Nested Loops2'
           "Bee: Debugging2": 'Bee: Debugging2'
           "Artist: Patterns": 'Artist: Patterns'
-          Songwriting: Songwriting
+          Songwriting: כתיבת שירים
           description_audience: גילאי 8-18
           description_short: קורס 3 הינו המשך לקורס 2.
         playlab:
-          title: Play Lab
+          title: מעבדת משחקים
           description: ליצור סיפור או משחק עם Play Lab!
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           description_short: ליצור סיפור או משחק עם Play Lab!
         artist:
           title: אמן
@@ -146,7 +146,7 @@ he:
           description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
         hourofcode:
           Maze: מבוך
-          title: Classic Maze
+          title: מבוך קלאסי
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
         frozen:
@@ -209,7 +209,7 @@ he:
           description: A selection of Course 4 levels for usability testing.
           Variables: משתנים
           For Loops: בשביל לולאות
-          Binary: Binary
+          Binary: בינארי
         potus:
           title: special
           description_short: special
@@ -220,7 +220,7 @@ he:
           description_short: special
           description: special
           Special: Special
-          Binary: Binary
+          Binary: בינארי
         algebra:
           title: Computer Science in Algebra
           description: Learn Functional Programming through Algebra
@@ -249,7 +249,7 @@ he:
           title: Disney Infinity Play Lab
           description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
           description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           Infinity: אינסוף
         algebrademo:
           title: Algebra Demo
@@ -260,7 +260,7 @@ he:
           Making Pictures: Making Pictures
           Defining Variables: Defining Variables
           Defining Simple Functions: Defining Simple Functions
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -353,7 +353,7 @@ he:
           The Maze: המבוך
           Applab: Applab
           The Artist: האמן
-          Play Lab: Play Lab
+          Play Lab: מעבדת משחקים
           Play Lab 2015: Play Lab 2015
           Hoc2015 Blockly: Hoc2015 Blockly
         events:
@@ -380,10 +380,10 @@ he:
           description_short: Step tutorial
           Step: צעד
         Hour of Code:
-          title: Hour of Code 2013
+          title: שעה של קוד 2013
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
           description_short: נסו את יסודות מדעי המחשב עם המון דמויות כפיות!
-          Hour of Code 2013: Hour of Code 2013
+          Hour of Code 2013: שעה של קוד 2013
         Code Studio Puzzle Challenge:
           title: Code Studio Puzzle Challenge
           description_short: Challenge yourself!
@@ -496,7 +496,7 @@ he:
           Contracts: Contracts
           Your Game - Defining Variables: 'Your Game - Defining Variables'
           Simple Function Definition: Simple Function Definition
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Your Game - Animation: 'Your Game - Animation'
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -672,7 +672,7 @@ he:
           Introduction to Conditional Logic: Introduction to Conditional Logic
           Compound Conditional Logic: Compound Conditional Logic
           Digital Assistant Project: Digital Assistant Project
-          While Loops: While Loops
+          While Loops: בעוד לולאות
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -680,6 +680,7 @@ he:
           Functions with Return Values: Functions with Return Values
           Canvas and Arrays in Apps: Canvas and Arrays in Apps
           "Practice PT: Create": 'Practice PT: Create'
+          Introduction to Digital Assistants: Introduction to Digital Assistants
         algebraPD3:
           title: Phase 3 PD
           description: Teach Algebra through block-based Functional Programming
@@ -691,7 +692,7 @@ he:
           Evaluation Blocks: Evaluation Blocks
           The Big Game: The Big Game
           Strings and Images: Strings and Images
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Next Steps: Next Steps
         sciPD complex adaptive 2:
           title: Computer Science in Science PD
@@ -886,7 +887,7 @@ he:
           Defining Variables: Defining Variables
           Big Game - Variables: 'Big Game - Variables'
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Big Game - Animation: 'Big Game - Animation'
           Booleans: Booleans
           Sam the Bat: Sam the Bat
@@ -916,7 +917,7 @@ he:
           AppLab: AppLab
           Online PD: Online PD
           title: All the Things!
-          description: All the level types for UI testing
+          description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           description_short: All the level types for UI testing
           Odometer: Odometer
           Vigenere: Vigenere
@@ -925,6 +926,7 @@ he:
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1051,14 +1053,14 @@ he:
           Teaching with the Design Recipe: Teaching with the Design Recipe
           Practice with Puzzles: Practice with Puzzles
           Welcome!: ברוכים הבאים!
-          The Design Recipe: The Design Recipe
+          The Design Recipe: עיצוב המתכון
           Teaching with Puzzles: Teaching with Puzzles
         sciencePD2b:
           title: Computer Science in Science PD Phase 2b
           description_short: 'Phase 2 Online: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
           Welcome!: ברוכים הבאים!
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
           Review StarLogo Nova: Review StarLogo Nova
           Reviewing the Modules: Reviewing the Modules
           Advanced StarLogo Nova: Advanced StarLogo Nova
@@ -1080,7 +1082,7 @@ he:
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
           description_short: Develop equitable teaching strategies with this free, self-paced online course.
@@ -1099,7 +1101,7 @@ he:
           Advanced StarLogo Nova: Advanced StarLogo Nova
           Remixing Phases 1 and 2: Remixing Phases 1 and 2
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -1164,7 +1166,7 @@ he:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
+          Happy Maps: מפות שמחות
           Move it, Move it: Move it, Move it
           "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
           Graph Paper Programming: תכנות לנייר משבצות
@@ -1172,7 +1174,7 @@ he:
           Getting Loopy: Getting Loopy
           The Big Event: האירוע הגדול
           Binary Bracelets: Binary Bracelets
-          Songwriting: Songwriting
+          Songwriting: כתיבת שירים
         afterschool1:
           title: Afterschool 1
           description_short: Short course designed for informal learning
@@ -1234,6 +1236,7 @@ he:
           Unit 2 Challenge Preview: Unit 2 Challenge Preview
           Unit 2 Challenge: Unit 2 Challenge
           Close & Next Steps: 'Close & Next Steps'
+          Lesson Overviews: Lesson Overviews
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description_short: Unit 3 of the version 5 Exploring Computer Science curriculum.
@@ -1352,6 +1355,28 @@ he:
           Creating Javascript Objects: Creating Javascript Objects
           Permanent Data Storage: Permanent Data Storage
           Reading Records: Reading Records
+          Search Terms: Search Terms
+          Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
+          Import, Export, and Visualize Data: Import, Export, and Visualize Data
+          Interpreting Data Visualizations: Interpreting Data Visualizations
+          How is Data Collected?: How is Data Collected?
+          Using Data in the Real World: Using Data in the Real World
+          Web Requests and APIs: Web Requests and APIs
+          Data, Security, and Privacy: Data, Security, and Privacy
+          Privacy vs Utility: Privacy vs Utility
+          Privacy in a Digital World: Privacy in a Digital World
+          Compiling Data: Compiling Data
+          Cleaning Data: Cleaning Data
+          Designing Data Collection: Designing Data Collection
+          Designing for Your User: Designing for Your User
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1360,7 +1385,7 @@ he:
           Earth Science Challenges: Earth Science Challenges
           Life Science Challenges: Life Science Challenges
           Thinking Ahead to Implementation: Thinking Ahead to Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
           Thinking About Implementation: Thinking About Implementation
           Physical Science Challenges: Physical Science Challenges
         algebraPD3b:
@@ -1402,6 +1427,7 @@ he:
           description_audience: גילאי 10-18
           Halloween 2015: Halloween 2015
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
+          Valentine 2016: Valentine 2016
         iceage:
           title: עידן הקרח Play Lab
           description_short: צור סיפור או משחק עם עידן הקרח בPlay Lab!
@@ -1437,7 +1463,7 @@ he:
           Processing Arrays: Processing Arrays
           Functions with Return Values: Functions with Return Values
           Practice Create Performance Task: Practice Create Performance Task
-          While Loops: While Loops
+          While Loops: בעוד לולאות
           Loops and Simulations: Loops and Simulations
           Introduction to Arrays: Introduction to Arrays
           Image Scroller with Key Events: Image Scroller with Key Events
@@ -1494,4 +1520,32 @@ he:
           description: Phase 3 Academic Year Development
           Welcome!: ברוכים הבאים!
           Thinking About Implementation: Thinking About Implementation
-          Wrap-Up: Wrap-Up
+          Wrap-Up: אריזה
+          Assessing Computer Models: Assessing Computer Models
+          (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Intro to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'

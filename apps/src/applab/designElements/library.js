@@ -24,7 +24,8 @@ var ElementType = {
   IMAGE: 'IMAGE',
   CANVAS: 'CANVAS',
   SCREEN: 'SCREEN',
-  CHART: 'CHART'
+  CHART: 'CHART',
+  SLIDER: 'SLIDER'
 };
 
 var elements = {};
@@ -39,6 +40,7 @@ elements[ElementType.IMAGE] = require('./image.jsx');
 elements[ElementType.CANVAS] = require('./canvas.jsx');
 elements[ElementType.SCREEN] = require('./screen.jsx');
 elements[ElementType.CHART] = require('./chart.jsx');
+elements[ElementType.SLIDER] = require('./slider.jsx');
 
 module.exports = {
   ElementType: ElementType,
@@ -111,9 +113,10 @@ module.exports = {
 
   /**
    * @param {HTMLElement} element
+   * @param {boolean?} allowUnknown If true, we won't throw on unknown element types
    * @returns {string} String representing elementType
    */
-  getElementType: function (element) {
+  getElementType: function (element, allowUnknown) {
     var tagname = element.tagName.toLowerCase();
 
     switch (tagname) {
@@ -140,10 +143,16 @@ module.exports = {
             return ElementType.CHECKBOX;
           case 'radio':
             return ElementType.RADIO_BUTTON;
+          case 'range':
+            return ElementType.SLIDER;
           default:
             return ElementType.TEXT_INPUT;
         }
         break;
+    }
+    // Unknown elements are expected. Return null because we don't know type.
+    if (allowUnknown) {
+      return null;
     }
     throw new Error('unknown element type');
   },
