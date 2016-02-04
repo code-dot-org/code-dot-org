@@ -510,6 +510,18 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   return false;
 };
 
+/**
+ * Check to see if the current interpreter state suggests that we should ignore
+ * a breakpoint on the current line. Used to ensure that we don't stop twice on
+ * breakpoints that call a function (both before and after the callee executes)
+ */
+exports.shouldIgnoreForBreakpoints = function (interpreter) {
+  var state = interpreter.stateStack[0];
+  var type = state.node.type;
+  return (type === "CallExpression" || type === "NewExpression") &&
+      state.doneExec;
+};
+
 // session is an instance of Ace editSession
 // Usage
 // var lengthArray = aceCalculateCumulativeLength(editor.getSession());
