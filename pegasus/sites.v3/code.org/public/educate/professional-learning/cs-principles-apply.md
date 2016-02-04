@@ -23,7 +23,7 @@ You can apply to the Professional Learning Program for CS Principles if you are 
 
 ## Don't teach in a partner district?
 
-The CSP Educator Development Program is open to teachers in partner districts who are interested in teaching the Code.org CSP course. In order to participate in this program, educators need only demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2016-17 school year by having a slot on their school's master schedule. 
+We will open the CSP Professional Learning Program to teachers from non-partner districts if there is space available.  Teachers who are selected from the wait-list will need to demonstrate a commitment to delivering the Code.org CSP course in their classroom during the 2016-17 school year by having a slot on their school's master schedule.
 
 [<button>Join the wait list</button>](https://form.jotform.com/53365196731157) &nbsp;&nbsp;[<button>Apply to be a district partner</button>](/educate/districts)
 

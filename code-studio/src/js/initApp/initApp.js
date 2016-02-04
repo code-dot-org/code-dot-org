@@ -37,7 +37,10 @@ window.apps = {
         }
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
-          $('#versions-header').show();
+          // Only show Version History button if the user owns this project
+          if (dashboard.project.isOwner()) {
+            $('#versions-header').show();
+          }
         }
         $(document).trigger('appInitialized');
       },
