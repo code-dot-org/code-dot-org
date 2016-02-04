@@ -355,6 +355,7 @@ module.exports = {
           assert.equal($('#my_button').length, 0, 'API created element should be gone');
           assert.equal($('#design_my_button').length, 0, 'API created element should not appear in design mode');
           assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
+          assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled when designing');
 
           Applab.onPuzzleComplete();
         });
@@ -373,12 +374,15 @@ module.exports = {
 
         $("#designModeButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible when designing');
+        assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled when designing');
 
         $("#runButton").click();
         assert.equal($('#design-mode-dimmed').length, 1, 'transparency layer visible when running in design mode');
+        assert.equal($('#screenSelector:disabled').length, 1, 'screen select disabled when running');
 
         $("#resetButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
+        assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled after');
 
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
