@@ -358,6 +358,21 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
   }
 }
 
+function populateCompleterFromPredefValues(apis, predefValues) {
+  if (predefValues) {
+    predefValues.forEach(function (val) {
+      // Use score value of 100 to ensure that our APIs are not replaced by
+      // other completers that are suggesting the same name
+      apis.push({
+        name: 'api',
+        value: val,
+        score: 100,
+        meta: 'constants'
+      });
+    });
+  }
+}
+
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
@@ -377,6 +392,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
     populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
     populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
     populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
+    populateCompleterFromPredefValues(apis, dropletConfig.additionalPredefValues);
   }
 
   return {
