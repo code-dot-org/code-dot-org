@@ -1621,7 +1621,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       document.body.style.backgroundColor = '#202B34';
     }
     if (this.wireframeShare) {
-      if (dom.isMobile()) {
+      if (dom.isMobile() && !dom.isIPad()) {
         document.getElementById('visualizationColumn').className = 'chromelessShare';
       } else {
         document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
