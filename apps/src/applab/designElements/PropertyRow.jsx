@@ -39,7 +39,7 @@ var PropertyRow = React.createClass({
 
   handleChangeInternal: function(event) {
     var value = event.target.value;
-    var isValidValue = !this.props.isIdRow || elementUtils.isIdAvailable(value, this.props.initialValue);
+    var isValidValue = !this.props.isIdRow || elementUtils.isIdAvailableIgnoringDivApplab(value, this.props.initialValue);
     this.setValue(value, isValidValue);
   },
 
