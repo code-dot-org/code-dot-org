@@ -16,7 +16,7 @@
 
 class Artifact < ActiveRecord::Base
   belongs_to :learning_module
-  has_many :artifact_assignments, class_name: 'ArtifactAssignment', dependent: :destroy
+  has_many :user_module_artifact_assignment, dependent: :destroy
 
   def self.create_from_params(learning_module, name, description)
     artifact = Artifact.new

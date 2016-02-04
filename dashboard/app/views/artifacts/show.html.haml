@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @artifact.name
+
+%p
+  %strong Description:
+  = @artifact.description
+
+= link_to 'Edit', edit_artifact_path(@artifact)
+\|
+= link_to 'Back', artifacts_path
