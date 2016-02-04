@@ -141,9 +141,10 @@ GameLab.prototype.init = function (config) {
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  // TODO: Change to a config object so we don't pass bare booleans
-  var extraControlRows = this.jsDebuggerUi_.getMarkup(this.studioApp_.assetUrl,
-      true, true);
+  var extraControlRows = this.jsDebuggerUi_.getMarkup(this.studioApp_.assetUrl, {
+    showButtons: true,
+    showConsole: true
+  });
 
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,

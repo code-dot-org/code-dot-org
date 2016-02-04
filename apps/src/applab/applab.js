@@ -642,7 +642,7 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
-  var extraControlsRow = '';
+  var extraControlRows = '';
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -651,8 +651,10 @@ Applab.init = function(config) {
 
   if (showDebugButtons || showDebugConsole) {
     jsDebuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    extraControlsRow = jsDebuggerUi.getMarkup(
-        studioApp.assetUrl, showDebugButtons, showDebugConsole);
+    extraControlRows = jsDebuggerUi.getMarkup(studioApp.assetUrl, {
+      showButtons: showDebugButtons,
+      showConsole: showDebugConsole
+    });
   }
 
   config.html = page({
@@ -664,7 +666,7 @@ Applab.init = function(config) {
         appHeight: Applab.footerlessAppHeight
       }),
       controls: firstControlsRow,
-      extraControlRows: extraControlsRow,
+      extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
