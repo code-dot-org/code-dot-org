@@ -8,7 +8,7 @@ cookbook 'chef-client', '~> 4.2.0'
 cookbook 'ntp', '~> 1.8.6'
 
 # Run `knife cookbook list` against local cookbook path.
-`bundle exec /bin/bash -c 'knife cookbook list -z -c <(echo cookbook_path \\".\\")' 2>/dev/null`.each_line do |path|
+`bundle exec knife cookbook list -z 2>/dev/null`.each_line do |path|
   path = path.split(/\s/).first
   cookbook path, path: path
 end

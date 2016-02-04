@@ -5,11 +5,11 @@ transport:
   ssh_key: ~/.ssh/server_access_key # Set this to your server_access_key location
 driver:
   name: ec2
-  region: us-west-2
+  region: us-east-1
   aws_ssh_key_id: server_access_key
-  security_group_ids: ["sg-af6d98c8"]
-  subnet_id: subnet-404a7937
-  instance_type: m4.10xlarge
+#  security_group_ids: ["sg-af6d98c8"]
+#  subnet_id: subnet-404a7937
+  instance_type: c3.8xlarge
   image_search:
     name: "ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*"
     virtualization-type: hvm

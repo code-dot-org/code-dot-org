@@ -9,7 +9,7 @@ driver:
 provisioner:
   name: chef_zero
   data_path: test/shared
-  require_chef_omnibus: 11.18.12
+  require_chef_omnibus: 12.6.0
 
 platforms:
   - name: ubuntu-14.04
