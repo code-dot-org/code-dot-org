@@ -26,7 +26,8 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "maze_data": null
   },
   "published": true
 }]]></config>
@@ -53,9 +54,6 @@
       <xml>
         <block type="controls_repeat">
           <title name="TIMES">3</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">2</title>
         </block>
         <block type="maze_moveForward"/>
       </xml>
