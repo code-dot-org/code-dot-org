@@ -28,6 +28,7 @@ end
     mode '0600'
     user node[:current_user]
     group node[:current_user]
-    variables ({data: node['cdo-github-access'][file]})
+    variables data: node['cdo-github-access'][file]
+    not_if { node['cdo-github-access'][file] == '' }
   end
 end
