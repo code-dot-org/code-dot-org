@@ -37,7 +37,7 @@ levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
   codeFunctions: {
     // Game Lab
-    "loadImage": null,
+    "var_loadImage": null,
     "image": null,
     "fill": null,
     "noFill": null,
@@ -50,6 +50,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "rect": null,
     "triangle": null,
     "text": null,
+    "textAlign": null,
     "textSize": null,
     "drawSprites": null,
     "allSprites": null,
@@ -67,7 +68,7 @@ levels.custom = utils.extend(levels.sandbox, {
     "camera.zoom": null,
 
     // Sprites
-    "createSprite": null,
+    "var_createSprite": null,
     "sprite.setSpeed": null,
     "sprite.getAnimationLabel": null,
     "sprite.getDirection": null,
@@ -92,8 +93,10 @@ levels.custom = utils.extend(levels.sandbox, {
     "sprite.life": null,
     "sprite.mass": null,
     "sprite.maxSpeed": null,
-    "sprite.position": null,
-    "sprite.previousPosition": null,
+    "sprite.position.x": null,
+    "sprite.position.y": null,
+    "sprite.previousPosition.x": null,
+    "sprite.previousPosition.y": null,
     "sprite.removed": null,
     "sprite.restitution": null,
     "sprite.rotateToDirection": null,
@@ -102,11 +105,12 @@ levels.custom = utils.extend(levels.sandbox, {
     "sprite.scale": null,
     "sprite.shapeColor": null,
     "sprite.touching": null,
-    "sprite.velocity": null,
+    "sprite.velocity.x": null,
+    "sprite.velocity.y": null,
     "sprite.visible": null,
 
     // Animations
-    "loadAnimation": null,
+    "var_loadAnimation": null,
     "animation": null,
     "anim.changeFrame": null,
     "anim.nextFrame": null,
