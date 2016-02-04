@@ -243,14 +243,14 @@ end
 def install_npm
   # Temporary workaround to play nice with nvm-managed npm installation.
   # See discussion of a better approach at https://github.com/code-dot-org/code-dot-org/pull/4946
+  return if RakeUtils.system_('which npm') == 0
+
   if OS.linux?
-    return if RakeUtils.system_('sudo which npm') == 0
     RakeUtils.system 'sudo apt-get install -y nodejs npm'
-    RakeUtils.system 'sudo ln -s -f "$(which node)" /usr/bin/node'
+    RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
     RakeUtils.system 'sudo npm install -g npm@2.9.1'
     RakeUtils.npm_install_g 'grunt-cli'
   elsif OS.mac?
-    return if RakeUtils.system_('which npm') == 0
     RakeUtils.system 'brew install node'
     RakeUtils.system 'npm', 'update', '-g', 'npm'
     RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'

@@ -18,6 +18,7 @@ dependencies:
     - sudo apt-get install libicu-dev
     - bundle install
     - 'echo "bundler_use_sudo: false" >> locals.yml'
+    - 'echo "npm_use_sudo: false" >> locals.yml'
     - 'echo "assets_s3_directory: assets_circle/$RANDOM" >> locals.yml'
     - 'echo "sources_s3_directory: sources_circle/$RANDOM" >> locals.yml'
     - 'echo "properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY" >> locals.yml'
@@ -75,9 +76,7 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
-        - alias shoulduitest="git log --format=oneline -n 1 $CIRCLE_SHA1 | grep '\[run-ui\]' -q":
-            pwd:
-                dashboard
+        - alias shoulduitest="git log --format=oneline -n 1 $CIRCLE_SHA1 | grep '\[run-ui\]' -q"
         # The following should only be run when [run-ui-tests] included in commit hash
         - "shoulduitest && ./bin/dashboard-server":
             background: true
