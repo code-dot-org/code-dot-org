@@ -40,7 +40,6 @@ describe("NetSimRouterLogModal", function () {
 
     it("defaults to showing all router logs when not connected to a router", function () {
       assert.isTrue(modal.isAllRouterLogMode_);
-      assert(false, "Intentional failure");
     });
 
     it("defaults to showing one router log when connected to an isolated router", function () {
