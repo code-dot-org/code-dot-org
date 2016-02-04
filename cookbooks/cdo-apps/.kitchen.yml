@@ -2,8 +2,6 @@
 driver:
   name: docker
   use_sudo: false
-  volume:
-    - <%= File.absolute_path(File.join(__dir__, '..', '..')) %>:/home/kitchen/adhoc # Reuse host repo instead of new checkout
 transport:
   name: sftp
   connection_timeout: 10
@@ -17,11 +15,6 @@ provisioner:
     environment: adhoc
 platforms:
   - name: ubuntu-14.04
-    driver_config:
-      image: wjordan/ubuntu-chef:12.6.0
-    attributes:
-      cdo-repository:
-        branch: <%= `git rev-parse --abbrev-ref HEAD` %>
 suites:
   - name: default
     run_list:
