@@ -3,16 +3,11 @@ require 'securerandom'
 #
 # Table name: learning_modules
 #
-#  id                              :integer          not null, primary key
-#  name                            :string(255)
-#  learning_module_type            :string(255)
-#  created_at                      :datetime         not null
-#  updated_at                      :datetime         not null
-#  professional_learning_course_id :integer
-#
-# Indexes
-#
-#  index_learning_modules_on_professional_learning_course_id  (professional_learning_course_id)
+#  id                   :integer          not null, primary key
+#  name                 :string(255)
+#  learning_module_type :string(255)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
 #
 
 class LearningModule < ActiveRecord::Base
