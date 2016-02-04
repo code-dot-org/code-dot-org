@@ -3,12 +3,90 @@ var TestUtils = React.addons.TestUtils;
 var assert = require('assert');
 var Pairing = require('../../src/js/components/pairing.jsx')(require('react'));
 
-describe('Pairing component', function(){
+describe('Pairing component for student in multiple sections', function(){
   var div;
   var component;
 
+  var props = {
+    sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
+               {id: 15, name: "Anotther section"}],
+    pairings: []
+  };
+
   function render(props) {
     component = React.render(React.createElement(Pairing, props), div);
+  }
+
+  function numberOfStudents() {
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length
+  }
+
+  function sectionSelect() {
+    return TestUtils.findRenderedDOMComponentWithTag(component, 'select');
+  }
+
+  beforeEach(function () {
+    div = document.createElement("div");
+    render(props);
+  });
+
+  afterEach(function () {
+    if (div) {
+      React.unmountComponentAtNode(div);
+      component = null;
+    }
+  });
+
+  it('should render a section dropdown', function() {
+    render(props);
+
+    assert(sectionSelect());
+  });
+
+  it('should not render a list of students', function() {
+    render(props);
+
+    assert.equal(0, numberOfStudents());
+  });
+
+  it('should change the section and render a list of students when a section with students is selected', function() {
+    render(props);
+
+    // choose first section
+    TestUtils.Simulate.change(sectionSelect(), {target: {value: "1"}});
+    assert.equal("1", sectionSelect().props.value);
+    assert.equal(2, numberOfStudents());
+
+    // choose second section
+    TestUtils.Simulate.change(sectionSelect(), {target: {value: "15"}});
+    assert.equal("15", sectionSelect().props.value);
+    assert.equal(0, numberOfStudents());
+  });
+});
+
+describe('Pairing component for student in one section', function(){
+  var div;
+  var component;
+
+  var props = {
+    sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
+    pairings: []
+  };
+
+  function render(props) {
+    component = React.render(React.createElement(Pairing, props), div);
+  }
+
+  function numberOfStudents() {
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length
+  }
+
+  function numberOfSelectedStudents() {
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length
+  }
+
+  function isSubmitButtonDisabled() {
+    return TestUtils.scryRenderedDOMComponentsWithTag(component, 'button')[0].props.disabled;
   }
 
   beforeEach(function () {
@@ -22,82 +100,52 @@ describe('Pairing component', function(){
     }
   });
 
-  it('should render a dropdown if the student is in multiple sections', function() {
-    var props = {
-      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
-                 {id: 15, name: "Anotther section"}],
-      pairings: []
-    };
 
-    render(props);
-
-    TestUtils.findRenderedDOMComponentWithTag(component, 'select');
-  });
-
-
-  it('should not render a dropdown if the student is not in multiple sections', function() {
-    var props = {
-      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
-      pairings: []
-    };
-
+  it('should not render a section dropdown', function() {
     render(props);
 
     assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
   });
 
 
-  it('should render a list of students to pick from if the student is in one section with students', function() {
-    var props = {
-      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
-      pairings: []
-    };
-
+  it('should render a list of students', function() {
     render(props);
 
-    // 2 students
-    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
-    // no selected students
-    assert.equal(0, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
+    assert.equal(2, numberOfStudents());
+    assert.equal(0, numberOfSelectedStudents());
   });
 
   it('should select a student when clicking on it', function() {
-    var props = {
-      sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]}],
-      pairings: []
-    };
-
     render(props);
 
-    // 2 students
-    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
-    // no selected students
-    assert.equal(0, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
+    assert.equal(2, numberOfStudents());
+    assert.equal(0, numberOfSelectedStudents());
+    assert(isSubmitButtonDisabled());
 
     // click on first student to select
     TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
-
-    // 2 students
-    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
-
-    // 1 selected student
-    assert.equal(1, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
+    assert.equal(2, numberOfStudents());
+    assert.equal(1, numberOfSelectedStudents());
+    assert(! isSubmitButtonDisabled());
 
     // click on second student to select
     TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
+    assert.equal(2, numberOfStudents());
+    assert.equal(2, numberOfSelectedStudents());
+    assert(! isSubmitButtonDisabled());
 
-    // 2 students
-    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
-    // 2 selected students
-    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
+    // click on second student again to unselect
+    TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
+    assert.equal(2, numberOfStudents());
+    assert.equal(1, numberOfSelectedStudents());
+    assert(! isSubmitButtonDisabled());
 
     // click on first student again to unselect
-    TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
+    TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
+    assert.equal(2, numberOfStudents());
+    assert.equal(0, numberOfSelectedStudents());
+    assert(isSubmitButtonDisabled());
 
-    // 2 students
-    assert.equal(2, TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length);
-    // 1 selected student
-    assert.equal(1, TestUtils.scryRenderedDOMComponentsWithClass(component, 'selected').length);
   });
 
 });

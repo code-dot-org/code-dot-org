@@ -4,13 +4,17 @@
 var Pairing = function (React) {
 
   var SectionSelector = React.createClass({
+    handleChange: function(event) {
+      this.props.handleChange(event);
+    },
+
     render: function() {
       if (this.props.sections.length === 1) {
         return null;
       }
 
       return (
-          <select name="sectionId" value={this.props.selectedSectionId} onChange={this.handleSectionChange}>
+          <select name="sectionId" value={this.props.selectedSectionId} onChange={this.handleChange}>
           <option key="blank" value="">Choose your section</option>
           {
             this.props.sections.map(function (section) {
@@ -56,8 +60,8 @@ var Pairing = function (React) {
       return (
           <div>
            {studentDivs}
-            <div className="clear"/>
-            <button onClick={this.handleSubmit}>Submit</button>
+           <div className="clear"/>
+          <button onClick={this.handleSubmit} disabled={$.isEmptyObject(this.state.selectedStudentIds)}>Submit</button>
           </div>
       );
     },
@@ -80,7 +84,7 @@ var Pairing = function (React) {
     getInitialState: function() {
       return {
         pairings: {},
-        sectionId: '',
+        selectedSectionId: '',
         selectedStudentIds: {}
       };
     },
@@ -92,7 +96,7 @@ var Pairing = function (React) {
     },
 
     handleSectionChange: function(event) {
-      this.setState({sectionId: event.target.value,
+      this.setState({selectedSectionId: event.target.value,
                      selectedStudentIds: {}
                     });
     },
@@ -135,7 +139,10 @@ var Pairing = function (React) {
           <br/>
           <form>
           <input type="hidden" name="authenticity_token" value={this.props.csrfToken}/>
-          <SectionSelector sections={this.props.sections} selectedSectionId={this.selectedSectionId()}/>
+          <SectionSelector sections={this.props.sections}
+                           selectedSectionId={this.selectedSectionId()}
+                           handleChange={this.handleSectionChange}
+           />
           <div className="clear"/>
           <StudentSelector students={this.studentsInSection()}/>
           </form>
