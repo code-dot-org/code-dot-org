@@ -54,6 +54,12 @@ exports.defineForAce = function (dropletConfig, unusedConfig, dropletEditor) {
           newOptions.predef[block.func] = false;
         });
 
+        if (dropletConfig.additionalPredefValues) {
+          dropletConfig.additionalPredefValues.forEach(function (val) {
+            newOptions.predef[val] = false;
+          });
+        }
+
         // Do the same with unusedConfig if available
         if (unusedConfig) {
           unusedConfig.forEach(function (unusedVar) {
