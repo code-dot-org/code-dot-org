@@ -11,6 +11,7 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
+var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 
@@ -27,6 +28,9 @@ var GameLab = function () {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
+
+  /** @type {JsDebuggerUi} */
+  this.jsDebuggerUi_ = new JsDebuggerUi(this.runButtonClick.bind(this));
 
   /** @type {JSInterpreter} */
   this.JSInterpreter = null;
@@ -137,10 +141,9 @@ GameLab.prototype.init = function (config) {
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlRows = require('./extraControlRows.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: !finishButtonFirstLine && showFinishButton
-  });
+  // TODO: Change to a config object so we don't pass bare booleans
+  var extraControlRows = this.jsDebuggerUi_.getMarkup(this.studioApp_.assetUrl,
+      true, true);
 
   config.html = page({
     assetUrl: this.studioApp_.assetUrl,
@@ -153,6 +156,7 @@ GameLab.prototype.init = function (config) {
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
       blockCounterClass : 'block-counter-default',
+      pinWorkspaceToBottom: true,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
@@ -165,6 +169,10 @@ GameLab.prototype.init = function (config) {
   config.unusedConfig = this.p5specialFunctions;
 
   this.studioApp_.init(config);
+
+  this.jsDebuggerUi_.initializeAfterDomCreated({
+    defaultStepSpeed: 1
+  });
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -251,6 +259,7 @@ GameLab.prototype.reset = function (ignore) {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
+  this.jsDebuggerUi_.detach();
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -394,6 +403,7 @@ GameLab.prototype.execute = function() {
     });
     this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
     this.consoleLogger_.attachTo(this.JSInterpreter);
+    this.jsDebuggerUi_.attachTo(this.JSInterpreter);
     this.JSInterpreter.parse({
       code: this.studioApp_.getCode(),
       blocks: dropletConfig.blocks,
