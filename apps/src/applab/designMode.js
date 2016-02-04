@@ -539,9 +539,6 @@ designMode.toggleDesignMode = function(enable) {
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
 
-  var debugArea = document.getElementById('debug-area');
-  debugArea.style.display = enable ? 'none' : 'block';
-
   Applab.toggleDivApplab(!enable);
 };
 
