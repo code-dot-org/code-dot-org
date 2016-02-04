@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAEXRs1YAA+3TWwrCMBCF4VlKNqAkmibLkSBKqy0Vk+D2jfSl+GBBiBf4
+        vzwMuUAGhrMfh6FLuzbEVmrRhXP2UY1v9LxOjBGzcY0th2VJ2XvvRelqHc3k
+        mMJVKbl1ff/q3dL9nzqG82FVdfr4ZWNOl5zWp1jxj8X8a/ecf+u25P8Tpvl/
+        uwsAAAAAAAAAAAAAAAC86w4IFLEpACgAAA==
+    headers:
+      X-Amz-Acl:
+      - public-read
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 5RdFXhVdx3sjGl+kzf1z7g==
+      Date:
+      - Thu, 04 Feb 2016 22:31:33 GMT
+      Content-Length:
+      - '160'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 22:31:34 GMT
+      Etag:
+      - '"e517455e155dc77b231a5fa4cdfd73ee"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 22:31:33 GMT
+- request:
+    method: get
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 22:31:35 GMT
+      Last-Modified:
+      - Thu, 04 Feb 2016 22:31:34 GMT
+      Etag:
+      - '"e517455e155dc77b231a5fa4cdfd73ee"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '160'
+      Server:
+      - AmazonS3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAEXRs1YAA+3TWwrCMBCF4VlKNqAkmibLkSBKqy0Vk+D2jfSl+GBBiBf4
+        vzwMuUAGhrMfh6FLuzbEVmrRhXP2UY1v9LxOjBGzcY0th2VJ2XvvRelqHc3k
+        mMJVKbl1ff/q3dL9nzqG82FVdfr4ZWNOl5zWp1jxj8X8a/ecf+u25P8Tpvl/
+        uwsAAAAAAAAAAAAAAAC86w4IFLEpACgAAA==
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 22:31:34 GMT
+recorded_with: VCR 3.0.0
