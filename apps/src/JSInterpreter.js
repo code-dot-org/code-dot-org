@@ -370,7 +370,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // If we've moved past the place of the last breakpoint hit without being
     // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
     if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
-      this.replaceStoppedAtBreakpointRowForScope(currentScope, null);
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, -1);
     }
     // If we're unwinding, continue to update the stoppedAtBreakpoint properties
     // to ensure that we have the right properties stored when the unwind completes:
