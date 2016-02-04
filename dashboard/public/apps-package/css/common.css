@@ -816,17 +816,16 @@ input[type="radio"] {
   margin-bottom: 3px;
   margin-right: 3px;
   margin-left: 0;
-  border: 1px groove #949ca2;
-  height: 22px;
+  height: 24px;
   border-radius: 4px;
   font-family: "Gotham 5r", sans-serif; }
   .workspace-header-button:hover {
     background-color: #0094ca; }
   .workspace-header-button span {
     padding: 0 12px;
-    line-height: 22px; }
+    line-height: 24px; }
   .workspace-header-button .fa {
-    line-height: 22px;
+    line-height: 24px;
     padding-right: 8px;
     font-size: 15px; }
   .workspace-header-button .fa-code {

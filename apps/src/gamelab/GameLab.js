@@ -12,6 +12,7 @@ var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -23,8 +24,16 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+
+  /** @type {StudioApp} */
   this.studioApp_ = null;
+
+  /** @type {JSInterpreter} */
   this.JSInterpreter = null;
+
+  /** @private {JsInterpreterLogger} */
+  this.consoleLogger_ = null;
+
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -74,6 +83,7 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
@@ -241,6 +251,8 @@ GameLab.prototype.reset = function (ignore) {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
+  this.consoleLogger_.detach();
+
   // Discard the interpreter.
   if (this.JSInterpreter) {
     this.JSInterpreter.deinitialize();
@@ -334,13 +346,8 @@ GameLab.prototype.execute = function() {
 
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
-      code: this.studioApp_.getCode(),
-      blocks: dropletConfig.blocks,
-      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-      enableEvents: true,
       studioApp: this.studioApp_,
       maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-      onExecutionError: _.bind(this.handleExecutionError, this),
       customMarshalGlobalProperties: {
         width: this.p5,
         height: this.p5,
@@ -385,6 +392,14 @@ GameLab.prototype.execute = function() {
         pRotationZ: this.p5
       }
     });
+    this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
+    this.consoleLogger_.attachTo(this.JSInterpreter);
+    this.JSInterpreter.parse({
+      code: this.studioApp_.getCode(),
+      blocks: dropletConfig.blocks,
+      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
+      enableEvents: true
+    });
     if (!this.JSInterpreter.initialized()) {
       return;
     }
@@ -401,6 +416,7 @@ GameLab.prototype.execute = function() {
       window.p5,
       window.Sprite,
       window.Camera,
+      window.Animation,
       window.p5.Vector,
       window.p5.Color,
       window.p5.Image,
@@ -461,23 +477,6 @@ GameLab.prototype.onTick = function () {
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
 /*
-  if (!lineNumber && err instanceof SyntaxError) {
-    // syntax errors came before execution (during parsing), so we need
-    // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
-    // Now select this location in the editor, since we know we didn't hit
-    // this while executing (in which case, it would already have been selected)
-
-    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
-  }
-  if (Studio.JSInterpreter) {
-    // Select code that just executed:
-    Studio.JSInterpreter.selectCurrentCode("ace_error");
-    // Grab line number if we don't have one already:
-    if (!lineNumber) {
-      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
-    }
-  }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
@@ -492,6 +491,7 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
     Studio.onPuzzleComplete();
   }
 */
+  this.consoleLogger_.log(err);
   throw err;
 };
 
