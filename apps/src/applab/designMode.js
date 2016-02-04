@@ -505,7 +505,7 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   function reportUnsafeHtml(removed, unsafe, safe) {
     var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
-    console.error(msg);
+    console.log(msg);
   }
   sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
 
