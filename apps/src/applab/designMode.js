@@ -500,7 +500,14 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml));
+  function reportUnsafeHtml(removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+    console.error(msg);
+  }
+  sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
+
+  var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
 
   children.each(function () {
