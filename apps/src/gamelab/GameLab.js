@@ -29,14 +29,14 @@ var GameLab = function () {
   /** @type {StudioApp} */
   this.studioApp_ = null;
 
-  /** @type {JsDebuggerUi} */
-  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
-
   /** @type {JSInterpreter} */
   this.JSInterpreter = null;
 
   /** @private {JsInterpreterLogger} */
-  this.consoleLogger_ = null;
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
+
+  /** @type {JsDebuggerUi} */
+  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -87,7 +87,6 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
