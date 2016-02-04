@@ -924,7 +924,7 @@ module.exports = {
           'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
           'design_image5 src data url is preserved: ' + $('#design_image5')[0].src);
         // e.g. "http://localhost:57881/v3/assets/applab-channel-id/javascript:alert()"
-        assert(/http:\/\/localhost:[\d]+\/v3\/assets\/applab-channel-id\/javascript:alert\(\)/.test($('#design_image6')[0].src),
+        assert(/\/applab-channel-id\/javascript:alert\(\)$/.test($('#design_image6')[0].src),
           'design_image6 src is sanitized: ' + $('#design_image6')[0].src);
 
         assert.equal($('#designModeViz script').length, 0, 'no script tags in #designModeViz');
@@ -934,7 +934,8 @@ module.exports = {
           assert.equal($('#image5')[0].src,
             'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
             'image5 src data url is preserved: ' + $('#image5')[0].src);
-          assert(/http:\/\/localhost:[\d]+\/v3\/assets\/applab-channel-id\/javascript:alert\(\)/.test($('#image6')[0].src),
+          // e.g. "http://localhost:57881/v3/assets/applab-channel-id/javascript:alert()"
+          assert(/\/applab-channel-id\/javascript:alert\(\)$/.test($('#image6')[0].src),
             'image6 src is sanitized: ' + $('#image6')[0].src);
 
           assert.equal($('#divApplab script').length, 0, 'no script tags in #divApplab');
