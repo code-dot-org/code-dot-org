@@ -70,7 +70,7 @@ module.exports = function sanitizeHtml(unsafe, warn) {
     allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
       button: ['id', 'class', 'style', 'data-canonical-image-url'],
       canvas: ['id', 'class', 'style', 'width', 'height'],
-      div: ['id', 'class', 'style', 'contenteditable', 'tabindex'],
+      div: ['id', 'class', 'style', 'data-canonical-image-url', 'contenteditable', 'tabindex', 'xmlns'],
       img: ['id', 'class', 'data-canonical-image-url', 'src', 'style'],
       input: ['id', 'checked', 'class', 'placeholder', 'style', 'type', 'value'],
       label: ['id', 'class', 'style'],
