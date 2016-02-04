@@ -1,0 +1,30 @@
+---
+title: Congratulations
+theme: responsive
+social:
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://code.org/"
+  "twitter:title": "The Hour of Code is here"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104."
+  "twitter:image:src": "http://csedweek.org/images/code-video-thumbnail.jpg"
+  "twitter:player": "https://www.youtube.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
+  "twitter:player:width": 1920
+  "twitter:player:height": 1080
+max_age: 60
+---
+
+- path = request.splat_path_info
+
+- if path.eql? "/course1"
+  = view :congrats, course_name: "Course 1"
+- elsif path.eql? "/course2"
+  = view :congrats, course_name: "Course 2"
+- elsif path.eql? "/course3"
+  = view :congrats, course_name: "Course 3"
+- elsif path.eql? "/course4"
+  = view :congrats, course_name: "Course 4"
+- elsif path.eql? "/accelerated"
+  = view :congrats, course_name: "the Accelerated Course"
+- else
+  - redirect "/congrats"
