@@ -246,7 +246,7 @@ def install_npm
   if OS.linux?
     return if RakeUtils.system_('sudo which npm') == 0
     RakeUtils.system 'sudo apt-get install -y nodejs npm'
-    RakeUtils.system 'sudo ln -s -f "$(which nodejs)" /usr/bin/node'
+    RakeUtils.system 'sudo ln -s -f "$(which node)" /usr/bin/node'
     RakeUtils.system 'sudo npm install -g npm@2.9.1'
     RakeUtils.npm_install_g 'grunt-cli'
   elsif OS.mac?
