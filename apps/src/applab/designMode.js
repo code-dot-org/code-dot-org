@@ -508,9 +508,9 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
     console.log(msg);
     logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
-      removedHtml: removed,
-      unsafeHtml: unsafe,
-      safeHtml: safe
+      removedHtml: removed.substring(0, logToCloud.MAX_LENGTH),
+      unsafeHtml: unsafe.substring(0, logToCloud.MAX_LENGTH),
+      safeHtml: safe.substring(0, logToCloud.MAX_LENGTH)
     });
   }
   sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
