@@ -2,6 +2,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
 @import 'color';
+@import "../JsDebuggerUi.scss";
 
 #divGameLab {
   overflow: hidden;
