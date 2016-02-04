@@ -8,6 +8,7 @@ var keyEvent = require('./keyEvent');
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var setPropertyDropdown = require('./setPropertyDropdown');
 
 var errorHandler = require('./errorHandler');
@@ -152,7 +153,8 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var element = document.getElementById(id);
 
     var existsInApplab = Boolean(element && divApplab.contains(element));
-    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+    var isBlacklisted = (elementUtils.ELEMENT_ID_BLACKLIST.indexOf(id) !== -1);
+    var existsOutsideApplab = Boolean((element && !divApplab.contains(element)) || isBlacklisted);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
