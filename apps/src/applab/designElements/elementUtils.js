@@ -88,15 +88,27 @@ module.exports.removeIdPrefix = function (element) {
   element.setAttribute('id', getId(element));
 };
 
+// TODO(dave): remove blacklist once element ids inside divApplab
+// are namespaced: https://www.pivotaltracker.com/story/show/113011395
+var ELEMENT_ID_BLACKLIST = [
+  'finishButton',
+  'submitButton',
+  'unsubmitButton',
+  'turtleCanvas',
+  'turtleImage',
+  'prompt-icon'
+];
+
 /**
  * Returns true if newId is available and won't collide with
  * other elements in design mode or the rest of applab.
+ * Ignore elements inside divApplab.
  * @param {string} newId The id to evaluate.
- * @param {string} originalId The original id of this element.
- *     This will always be a valid value for newId.
+ * @param {string} originalId Optional original id of this element.
+ *     If present, this will always be a valid value for newId.
  * @returns {boolean}
  */
-module.exports.isIdAvailable = function(newId, originalId) {
+module.exports.isIdAvailableIgnoringDivApplab = function(newId, originalId) {
   if (!newId) {
     return false;
   }
@@ -104,7 +116,27 @@ module.exports.isIdAvailable = function(newId, originalId) {
     return true;
   }
 
+  // Don't allow blacklisted elements.
+  if (ELEMENT_ID_BLACKLIST.indexOf(newId) !== -1) {
+    return false;
+  }
+
+  // Don't allow elements with reserved prefixes. Otherwise you can have
+  // problems like this:
+  //   1. allow 'design_button1' here. '#designModeViz #design_design_button1' is created
+  //      but 'design_button1' is not created anywhere.
+  //   2. allow 'button1'. '#designModeViz #design_button1' is created.
+  //   3. Press Run. '#designModeViz #design_design_button1' is serialized to
+  //      '#divApplab #design_button1', which collides with '#designModeViz #design_button1'.
+  //
+  // TODO(dave): remove this condition when we start namespacing, since
+  // '#divApplab #code_design_button1' would be created in step 3 instead.
+  if (newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0) {
+    return false;
+  }
+
   // Don't allow if any other element in design mode has this prefixed id.
+  // e.g. don't allow 'button1' if 'design_button1' exists.
   if (getPrefixedElementById(newId)) {
     return false;
   }
