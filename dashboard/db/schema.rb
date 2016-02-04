@@ -263,14 +263,11 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   add_index "learning_module_assignments", ["user_id"], name: "index_learning_module_assignments_on_user_id", using: :btree
 
   create_table "learning_modules", force: :cascade do |t|
-    t.string   "name",                            limit: 255
-    t.string   "learning_module_type",            limit: 255
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.integer  "professional_learning_course_id", limit: 4
+    t.string   "name",                 limit: 255
+    t.string   "learning_module_type", limit: 255
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
-
-  add_index "learning_modules", ["professional_learning_course_id"], name: "index_learning_modules_on_professional_learning_course_id", using: :btree
 
   create_table "level_source_hints", force: :cascade do |t|
     t.integer  "level_source_id", limit: 4
@@ -704,7 +701,6 @@ ActiveRecord::Schema.define(version: 20160205205103) do
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "learning_module_assignments", "learning_modules"
   add_foreign_key "learning_module_assignments", "users"
-  add_foreign_key "learning_modules", "professional_learning_courses"
   add_foreign_key "user_artifact_assignments", "artifacts"
   add_foreign_key "user_artifact_assignments", "users"
   add_foreign_key "user_course_enrollments", "professional_learning_courses"
