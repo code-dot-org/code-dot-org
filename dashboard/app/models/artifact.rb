@@ -13,21 +13,11 @@
 #
 #  index_artifacts_on_learning_module_id  (learning_module_id)
 #
+#
+# This class represents artifacts that are associated with a given learning module.
+# For more details about PLC Class structure, visit http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
 class Artifact < ActiveRecord::Base
   belongs_to :learning_module
   has_many :artifact_assignments, class_name: 'ArtifactAssignment', dependent: :destroy
-
-  def self.create_from_params(learning_module, name, description)
-    artifact = Artifact.new
-    artifact.name = name
-    artifact.description = description
-    artifact.learning_module = learning_module
-
-    artifact.save!
-  end
-
-  def self.create_random_artifact(learning_module)
-    create_from_params(learning_module, SecureRandom.hex, 'random artifact requirement')
-  end
 end
