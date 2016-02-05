@@ -24,20 +24,20 @@ class AdminSearchController < ApplicationController
       end
       # TODO(asher): Improve PD filtering.
       if params[:pd] == "pd"
-        @teachers = @teachers.joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").distinct
+        @teachers = @teachers.
+          joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
+          distinct
       elsif params[:pd] == "nopd"
-        @teachers = @teachers.joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").where("workshop_attendance.teacher_id IS NULL").distinct
+        @teachers = @teachers.
+          joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
+          where("workshop_attendance.teacher_id IS NULL").
+          distinct
       end
-
-      # If requested, filter away users that have unsubscribed.
       if params[:unsubscribe].present?
-        unsubscribers = [].tap do |results|
-          DB[:contacts].where('unsubscribed_at IS NOT NULL').each do |contact|
-            results << contact[:email].downcase.strip
-          end
-        end
-
-        @teachers = @teachers.where.not(email: unsubscribers)
+        @teachers = @teachers.
+          joins("LEFT OUTER JOIN #{CDO.pegasus_db_name}.contacts ON users.email = #{CDO.pegasus_db_name}.contacts.email COLLATE utf8_unicode_ci").
+          where("#{CDO.pegasus_db_name}.contacts.email IS NULL OR #{CDO.pegasus_db_name}.contacts.unsubscribed_at IS NULL").
+          distinct
       end
 
       # TODO(asher): Determine whether we should be doing an inner join or a left
