@@ -19,3 +19,6 @@ suites:
   - name: default
     run_list:
       - recipe[cdo-apps]
+    attributes:
+      cdo-repository:
+        branch: <%= `git rev-parse --abbrev-ref HEAD` %>
