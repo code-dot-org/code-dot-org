@@ -1,6 +1,7 @@
-/* global dashboard, appOptions */
+/* global dashboard, appOptions, addToHome */
 
 var renderAbusive = require('./renderAbusive');
+var userAgentParser = require('./userAgentParser');
 
 // Max milliseconds to wait for last attempt data from the server
 var LAST_ATTEMPT_TIMEOUT = 5000;
@@ -31,6 +32,13 @@ module.exports = function (callback) {
 
   var isViewingSolution = (dashboard.clientState.queryParams('solution') === 'true');
   var isViewingStudentAnswer = !!dashboard.clientState.queryParams('user_id');
+
+  if (appOptions.share && !window.navigator.standalone && userAgentParser.isSafari()) {
+    window.addEventListener("load", function() {
+      addToHome.show(true);
+    }, false);
+  }
+
 
   if (!appOptions.channel && !isViewingSolution && !isViewingStudentAnswer) {
 
