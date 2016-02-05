@@ -103,16 +103,20 @@ module.exports = {
         'textLabel("result1", "");\n' +
         'textLabel("result2", "");\n' +
         'drawImageURL("' + imageUrl + '", 5, 10, 15, 20, function (success) {\n' +
+        '  console.log("callback1 extra");\n' +
         '  setText("result1", success);\n' +
         '});\n' +
         'drawImageURL("nonexistent.jpg", 5, 10, 15, 20, function (success) {\n' +
+        '  console.log("callback1 extra");\n' +
         '  setText("result2", success);\n' +
         '});\n',
       runBeforeClick: function (assert) {
         console.log('drawImageURL with extra args and callback');
         testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
+          console.log('extra tickAppUtil');
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
+          console.log('extra complete');
           Applab.onPuzzleComplete();
         });
       },
@@ -136,6 +140,7 @@ module.exports = {
         'textLabel("movementX", "");' +
         'textLabel("movementY", "");' +
         'onEvent("canvas1", "mousemove", function(event) {' +
+        '  console.log("onEvent in move x/y");\n' +
         '  setText("movementX", event.movementX);\n' +
         '  setText("movementY", event.movementY);\n' +
         '});',
@@ -144,6 +149,7 @@ module.exports = {
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
         testUtils.runOnAppTick(Applab, 10, function () {
+          console.log('move xy runonapptick');
           var point1 = {x: 1, y: 1};
           var point2 = {x: 100, y: 200};
           var point3 = {x: 110, y: 220};
@@ -175,6 +181,7 @@ module.exports = {
           assert.equal($('#movementX')[0].textContent, '1');
           assert.equal($('#movementY')[0].textContent, '2');
 
+          console.log('move xy complete');
           Applab.onPuzzleComplete();
         });
       },
