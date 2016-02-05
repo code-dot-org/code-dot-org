@@ -212,17 +212,7 @@ GameLab.prototype.afterInject_ = function (config) {
  */
 GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
   if (areBreakpointsEnabled) {
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var editor = this.studioApp_.editor;
-    editor.on('guttermousedown', function(e) {
-      var bps = editor.getBreakpoints();
-      if (bps[e.line]) {
-        editor.clearBreakpoint(e.line);
-      } else {
-        editor.setBreakpoint(e.line);
-      }
-    });
+    this.studioApp_.enableBreakpoints();
   }
 };
 
