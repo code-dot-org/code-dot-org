@@ -153,8 +153,13 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var element = document.getElementById(id);
 
     var existsInApplab = Boolean(element && divApplab.contains(element));
-    var isBlacklisted = (elementUtils.ELEMENT_ID_BLACKLIST.indexOf(id) !== -1);
-    var existsOutsideApplab = Boolean((element && !divApplab.contains(element)) || isBlacklisted);
+    var options = {
+      allowCodeElements: true,
+      allowDesignPrefix: true,
+      allowDesignElements: true,
+      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+    };
+    var existsOutsideApplab = !elementUtils.isIdAvailable(id, undefined, options);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
@@ -1060,7 +1065,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
     return true;
   }
   return false;
