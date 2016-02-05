@@ -25,19 +25,19 @@ class AdminSearchController < ApplicationController
       # TODO(asher): Improve PD filtering.
       if params[:pd] == "pd"
         @teachers = @teachers.
-          joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
-          distinct
+                    joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
+                    distinct
       elsif params[:pd] == "nopd"
         @teachers = @teachers.
-          joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
-          where("workshop_attendance.teacher_id IS NULL").
-          distinct
+                    joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
+                    where("workshop_attendance.teacher_id IS NULL").
+                    distinct
       end
       if params[:unsubscribe].present?
         @teachers = @teachers.
-          joins("LEFT OUTER JOIN #{CDO.pegasus_db_name}.contacts ON users.email = #{CDO.pegasus_db_name}.contacts.email COLLATE utf8_unicode_ci").
-          where("#{CDO.pegasus_db_name}.contacts.email IS NULL OR #{CDO.pegasus_db_name}.contacts.unsubscribed_at IS NULL").
-          distinct
+                    joins("LEFT OUTER JOIN #{CDO.pegasus_db_name}.contacts ON users.email = #{CDO.pegasus_db_name}.contacts.email COLLATE utf8_unicode_ci").
+                    where("#{CDO.pegasus_db_name}.contacts.email IS NULL OR #{CDO.pegasus_db_name}.contacts.unsubscribed_at IS NULL").
+                    distinct
       end
 
       # TODO(asher): Determine whether we should be doing an inner join or a left
