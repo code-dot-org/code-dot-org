@@ -8,6 +8,7 @@ var keyEvent = require('./keyEvent');
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var setPropertyDropdown = require('./setPropertyDropdown');
 
 var errorHandler = require('./errorHandler');
@@ -152,7 +153,13 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var element = document.getElementById(id);
 
     var existsInApplab = Boolean(element && divApplab.contains(element));
-    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+    var options = {
+      allowCodeElements: true,
+      allowDesignPrefix: true,
+      allowDesignElements: true,
+      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+    };
+    var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
@@ -187,10 +194,13 @@ applabCommands.setScreen = function (opts) {
   Applab.changeScreen(opts.screenId);
 };
 
-function reportUnsafeHtml(removed, unsafe, safe) {
+function reportUnsafeHtml(removed, unsafe, safe, warnings) {
   var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
   var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+  if (warnings.length > 0) {
+    msg += '\nwarnings:\n' + warnings.join('\n');
+  }
   outputError(msg, ErrorLevel.WARNING, currentLineNumber);
 }
 
@@ -202,7 +212,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -237,6 +247,7 @@ applabCommands.image = function (opts) {
 
   var newImage = document.createElement("img");
   newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
+  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -988,7 +999,7 @@ applabCommands.getImageURL = function (opts) {
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
     if (element.tagName === 'IMG') {
-      return element.src;
+      return element.getAttribute('data-canonical-image-url');
     } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -1006,6 +1017,7 @@ applabCommands.setImageURL = function (opts) {
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
@@ -1055,7 +1067,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
     return true;
   }
   return false;

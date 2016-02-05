@@ -2,16 +2,10 @@
  * @overview Wraps NetSim REST APIs for operations of "tables" and "shards."
  * @see net_sim_api.rb
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 

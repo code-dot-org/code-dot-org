@@ -1,13 +1,11 @@
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
- eqeqeq: true
+ eqeqeq: true,
+ maxlen: 120
  */
 'use strict';
-/* globaldescribe, beforeEach, it */
+/* global describe, beforeEach, it */
 
 var testUtils = require('../util/testUtils');
 var NetSimTestUtils = require('../util/netsimTestUtils');
