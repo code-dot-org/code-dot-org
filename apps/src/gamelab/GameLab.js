@@ -136,6 +136,7 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
@@ -161,8 +162,10 @@ GameLab.prototype.init = function (config) {
     }
   });
 
+  // TODO: Switch to function.prototype.bind
   config.loadAudio = _.bind(this.loadAudio_, this);
   config.afterInject = _.bind(this.afterInject_, this, config);
+  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
 
   // Store p5specialFunctions in the unusedConfig array so we don't give warnings
   // about these functions not being called:
@@ -202,6 +205,26 @@ GameLab.prototype.afterInject_ = function (config) {
 
 };
 
+/**
+ * Initialization to run after ace/droplet is initialized.
+ * @param {!boolean} areBreakpointsEnabled
+ * @private
+ */
+GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
+  if (areBreakpointsEnabled) {
+    // Set up an event handler to create breakpoints when clicking in the
+    // ace gutter:
+    var editor = this.studioApp_.editor;
+    editor.on('guttermousedown', function(e) {
+      var bps = editor.getBreakpoints();
+      if (bps[e.line]) {
+        editor.clearBreakpoint(e.line);
+      } else {
+        editor.setBreakpoint(e.line);
+      }
+    });
+  }
+};
 
 /**
  * Reset GameLab to its initial state.
