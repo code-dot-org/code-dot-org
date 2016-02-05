@@ -724,19 +724,8 @@ Applab.init = function(config) {
   };
 
   config.afterEditorReady = function() {
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var aceEditor = studioApp.editor.aceEditor;
-
     if (breakpointsEnabled) {
-      studioApp.editor.on('guttermousedown', function(e) {
-        var bps = studioApp.editor.getBreakpoints();
-        if (bps[e.line]) {
-          studioApp.editor.clearBreakpoint(e.line);
-        } else {
-          studioApp.editor.setBreakpoint(e.line);
-        }
-      });
+      studioApp.enableBreakpoints();
     }
   };
 
