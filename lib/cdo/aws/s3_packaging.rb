@@ -17,7 +17,7 @@ class S3Packaging
   def initialize(package_name, source_location, target_location)
     throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
     @client = Aws::S3::Client.new
-    @commit_hash = RakeUtils.git_latest_commit_hash source_location
+    @commit_hash = RakeUtils.git_folder_hash source_location
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location

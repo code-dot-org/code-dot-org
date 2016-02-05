@@ -3,6 +3,7 @@ require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
+require 'digest'
 
 module RakeUtils
 
@@ -86,6 +87,10 @@ module RakeUtils
     `git rev-parse HEAD`.strip
   end
 
+  def self.git_first_revision
+    `git rev-list --max-parents=0 HEAD`.strip
+  end
+
   def self.git_update_count()
     count = `git rev-list ..@{u} | wc -l`.strip.to_i
     return 0 if $?.exitstatus != 0
@@ -100,9 +105,42 @@ module RakeUtils
     `git status --porcelain 2>/dev/null | egrep \"^(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
-  # Gets the commit hash for the given directory
+  # Gets the commit hash for the given directory.
   def self.git_latest_commit_hash(dir)
-    `git log -n 1 --format="%H" -- #{dir}`.strip
+    rev = `git log -n 1 --format="%H" -- #{dir}`.strip
+    if rev == git_first_revision
+      # Fallback to github query if the first revision is returned,
+      # returning first revision if github query fails.
+      github_latest_commit_hash(dir) || rev
+    else
+      rev
+    end
+  end
+
+  # Gets the commit hash for the given directory using the GitHub API.
+  # Use when a shallow clone with a limited revision history does not contain the latest commit hash locally.
+  # Returns nil on any failure (e.g., GitHub isn't configured as the origin remote, or if the API query fails)
+  def self.github_latest_commit_hash(dir)
+    # Get the github slug of the current repo from the git config's remote-origin url.
+    github_slug = `git config --get remote.origin.url`.match(/github.com\/(.*).git$/)[1]
+    api_output = open("https://api.github.com/repos/#{github_slug}/commits?path=#{dir}&sha=#{git_revision}").read
+    JSON.parse(api_output).first['sha']
+  rescue
+    nil
+  end
+
+  # Gets a checksum for the given directory's git-managed files,
+  # by computing an md5 hash of the combined md5 hashes of all file contents.
+  def self.git_folder_hash(dir)
+    Dir.chdir(File.expand_path dir) do
+      Digest::MD5.hexdigest(
+        `git ls-files`.each_line.map(&:strip)
+        .select(&File.method(:file?)) # skip directory symlinks
+        .map(&Digest::MD5.method(:file))
+        .map(&:hexdigest)
+        .join
+      )
+    end
   end
 
   def self.ln_s(source, target)
