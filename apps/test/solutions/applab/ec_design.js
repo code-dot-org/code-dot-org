@@ -838,8 +838,18 @@ module.exports = {
 
         // Renaming to runButton fails.
         ReactTestUtils.Simulate.change(idInput, { target: { value: 'runButton' } });
-        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5'");
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not runButton'");
         assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'runButton' has light red background color");
+
+        // Renaming to something with the 'design_' prefix fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'design_button' } });
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not design_button'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'design_button' has light red background color");
+
+        // Renaming to a blacklisted element id fails.
+        ReactTestUtils.Simulate.change(idInput, { target: { value: 'submitButton' } });
+        assert.equal(targetButton.id, "design_button5", "target button still has id 'design_button5, not submitButton'");
+        assert.equal(idInput.style.backgroundColor, "rgb(255, 204, 204)", "invalid id input 'submitButton' has light red background color");
 
         // Make sure it works for screens too.
         testUtils.dragToVisualization('SCREEN', 100, 100);

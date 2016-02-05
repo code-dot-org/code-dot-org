@@ -1,15 +1,10 @@
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 
@@ -144,7 +139,7 @@ function buildTrackData(trackDefinitions, assetUrl) {
 }
 
 /**
- * Preload all music assets,
+ * Preload all music assets
  */
 MusicController.prototype.preload = function () {
   if (!this.audioPlayer_) {
