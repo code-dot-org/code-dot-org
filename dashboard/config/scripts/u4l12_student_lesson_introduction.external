@@ -24,3 +24,7 @@ While there are many potential benefits associated with the collection and analy
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Activity Guide KEY: <a href="https://docs.google.com/document/d/1s0NmVOJTjk0yyXLOOl7v0wEvN1DxAuDvdulHaUV3lVA/edit?usp=sharing" target="_blank">Research Yourself</a>
+MARKDOWN
