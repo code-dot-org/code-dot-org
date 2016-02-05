@@ -310,6 +310,7 @@ GameLab.prototype.execute = function() {
     return;
   }
 
+  /* jshint nonew:false */
   new window.p5(_.bind(function (p5obj) {
       this.p5 = p5obj;
 
@@ -343,6 +344,7 @@ GameLab.prototype.execute = function() {
         }, this);
       }, this);
     }, this), 'divGameLab');
+  /* jshint nonew:true */
 
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
