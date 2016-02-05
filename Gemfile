@@ -21,6 +21,7 @@ gem 'dalli' # memcached
 gem 'parallel'
 
 gem 'google-api-client'
+gem 'sprockets-derailleur' # Multi-cpu assets precompile
 
 group :development do
   gem 'annotate', '~> 2.6.6'
