@@ -171,4 +171,9 @@ module RakeUtils
     File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url) }
     new_fetchable_url
   end
+
+  # Returns true if file is different from the committed version in git.
+  def self.file_changed_from_git?(file)
+    !`git status --porcelain #{file}`.strip.empty?
+  end
 end
