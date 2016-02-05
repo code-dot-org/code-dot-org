@@ -24,7 +24,7 @@ Quarter 1: Saturday, September 26, 2015
 
 Quarter 2: Saturday, December 5, 2015
 
-Quarter 3: Saturday, February 6, 2016
+Quarter 3: Saturday, February 19th, 2016
 
 Quarter 4: Saturday, March 12, 2016
 
@@ -32,7 +32,7 @@ Quarter 4: Saturday, March 12, 2016
 Breakfast and lunch will be served.
 
 
-**February 6th Location**
+**February 19th Location**
 
 
 [North Point High School
@@ -54,7 +54,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Teachers from Charles County will be attending the East Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-east) for your workshop details.
 
 [**Back to the top**](#top)
 
