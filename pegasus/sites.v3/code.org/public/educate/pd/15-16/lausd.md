@@ -56,7 +56,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016)
 
-More Details Coming Soon!
+Teachers from Los Angeles will be attending the West Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-west) for your workshop details.
 
 
 [**Back to the top**](#top)
