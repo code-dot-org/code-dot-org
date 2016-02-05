@@ -25,7 +25,8 @@ Still have questions? See below for answers to commonly asked questions or email
 **Questions about the budget:**<br/>
 
 - [Where can I find a breakdown of what Code.org provides?](#pay)
-- [I don't see any funding in the budget to run Exploring CS, CS in Science or CS in Algebra. What does Code.org provide for these programs?](#add)	
+- [I don't see any funding in the budget to run Exploring CS, CS in Science or CS in Algebra. What does Code.org provide for these programs?](#add)
+- [How do I know if my organization is located in an urban area?](#urban)	
 
 <br/>
 ________________
@@ -44,7 +45,7 @@ ________________
 
 ### **Do you have an example job description for the Professional Learning Partner Program Manager?**
 
-See [this gdoc](https://docs.google.com/document/d/1T31f3oA0Adns7ts4T_FdUHT8wCZMKHohNzBRcCl8Bck/edit) for an example professional learning partner program manager job description. This position will require [0.15 of a FTE](https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=1420208407) in the first year. Please note this time requirement will increase if your organization opts to run more than one program in the first year.
+See <a href="https://docs.google.com/document/d/1T31f3oA0Adns7ts4T_FdUHT8wCZMKHohNzBRcCl8Bck/edit" target=_blank>this document</a> for an example professional learning partner program manager job description. This position will require <a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit#gid=1420208407" target=_blank>0.15 of a FTE</a> in the first year. Please note this time requirement will increase if your organization chooses to run more than one program in the first year.
 
 [**Back to the top**](#top)
 <br/>
@@ -78,7 +79,7 @@ ______________________________
 
 ### **Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?**
 
-Our general rule: A teacher must be from a district that Code.org has a district partnership with to apply for the CS Principles professional learning program. However, you are welcome to encourage local teachers who have a spot on their master schedule to teach AP Computer Science Principles in the Fall to join our program's wait list. 
+Our general rule: a teacher must be from a district that Code.org has a district partnership with to apply for the CS Principles professional learning program. However, you are welcome to encourage local teachers who have a spot on their master schedule to teach AP Computer Science Principles in the Fall to join our program's wait list. 
 
 [**Back to the top**](#top)
 <br/>
@@ -89,7 +90,7 @@ ______________________________
 
 ### **What is counselor/administrator professional development?**
 
-Code.org has computer science professional development (PD) programs designed for Counselors and Administrators to provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. [Click here](https://docs.google.com/document/d/1cRCVJSqDT3VLA5u17osE914WYTtIijxyKx5Z_uSYe3Y/edit?usp=sharing) for an overview of this professional development session.
+Code.org has computer science professional development (PD) programs designed for Counselors and Administrators to provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. <a href="https://docs.google.com/document/d/1cRCVJSqDT3VLA5u17osE914WYTtIijxyKx5Z_uSYe3Y/edit?usp=sharing" target=_blank>Click here</a> for an overview of this professional development session.
 
 [**Back to the top**](#top)
 <br/>
@@ -98,7 +99,7 @@ ___________________________________________
 <br/>
 <a id="pay"></a>
 ### **Where can I find a breakdown of what Code.org provides?**
-[Click here](https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit?usp=sharing) to see an example budget. 
+<a href="https://docs.google.com/spreadsheets/d/1GuyAGGwFrtGB6l2hHLFc-N6thuMs6BcQzTp_XjaU454/edit?usp=sharing" target=_blank>Click here</a> to see an example budget. 
 
 [**Back to the top**](#top)
 <br/>
@@ -110,6 +111,17 @@ ___________________
 ### **I don't see any funding in the budget to run Exploring CS, CS in Science or CS in Algebra. What does Code.org provide for these programs?**
 
 The professional learning partner program is designed around CS Principles and CS Discoveries. If your organization is selected to offer Exploring CS, CS in Science and CS in Algebra to teachers in their region, we will discuss additional funding options separately.
+
+[**Back to the top**](#top)
+<br/>
+________________________
+<br/>
+<br/>
+
+<a id="urban"></a>
+### **How do I know if my organization is located in an urban area?**
+
+Code.org uses the United States Census Bureau's metropolitan and micropolitan statistical areas to determine whether or not a partner is located in an urban area. The Census Bureau defines a metro area as "a core urban area of 50,000 or more in population". <a href="http://www2.census.gov/geo/maps/metroarea/us_wall/Feb2013/cbsa_us_0213_large.gif" target=_blank>View this map</a> to determine if your organization is in an urban area.
 
 [**Back to the top**](#top)
 <br/>
