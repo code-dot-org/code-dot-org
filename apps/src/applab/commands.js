@@ -247,6 +247,7 @@ applabCommands.image = function (opts) {
 
   var newImage = document.createElement("img");
   newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
+  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -998,7 +999,7 @@ applabCommands.getImageURL = function (opts) {
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
     if (element.tagName === 'IMG') {
-      return element.src;
+      return element.getAttribute('data-canonical-image-url');
     } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -1016,6 +1017,7 @@ applabCommands.setImageURL = function (opts) {
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
