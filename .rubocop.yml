@@ -7,6 +7,7 @@ AllCops:
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
     - 'dashboard/db/**/*'
+    - 'dashboard/db/*'
   RunRailsCops: true
   DisplayCopNames: true
 
@@ -42,5 +43,5 @@ Style/Semicolon:
 Style/NumericLiterals:
   # This can't be enabled because Rubocop is failing to ignore dashboard/db/schema.rb
   # (despite the exclude above).
-  Enabled: false
+  Enabled: true
   MinDigits: 7
