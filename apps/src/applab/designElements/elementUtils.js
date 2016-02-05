@@ -102,7 +102,7 @@ var TURTLE_CANVAS_ID = 'turtleCanvas';
 
 /**
  * Returns true if newId is available and won't collide with other elements.
- * Always reject element ids which are blacklisted or already exist in the document.
+ * Always reject element ids which are blacklisted or already exist outside divApplab.
  * Allow or reject other element types based on the options specified.
  * @param {string} newId The id to evaluate.
  * @param {string} originalId Optional original id of this element.
@@ -169,7 +169,7 @@ module.exports.isIdAvailable = function(newId, originalId, options) {
 
   // Don't allow if any element inside divApplab has this id,
   // unless options.allowCodeElements is specified.
-  var existsInApplab = !!(element && $('#divApplab').find(element)[0]);
+  var existsInApplab = Boolean(element && $('#divApplab').find(element)[0]);
   if (!options.allowCodeElements && existsInApplab) {
     return false;
   }

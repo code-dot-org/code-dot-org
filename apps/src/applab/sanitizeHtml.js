@@ -1,5 +1,4 @@
 var sanitize = require('sanitize-html');
-var applabConstants = require('./constants');
 var elementUtils = require('./designElements/elementUtils');
 
 /**
@@ -67,8 +66,8 @@ function isIdAvailable(elementId) {
   // We only care if an ID is blacklisted or already in use in this case.
   var options = {
     allowCodeElements: false,
-    allowDesignPrefix: true,
-    allowDesignElements: true
+    allowDesignElements: true,
+    allowDesignPrefix: true
   };
   if (!elementUtils.isIdAvailable(elementId, undefined, options)) {
     return false;
