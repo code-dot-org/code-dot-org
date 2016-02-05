@@ -40,5 +40,7 @@ Style/Semicolon:
   AllowAsExpressionSeparator: true
 
 Style/NumericLiterals:
-  Enabled: true
+  # This can't be enabled because Rubocop is failing to ignore dashboard/db/schema.rb
+  # (despite the exclude above).
+  Enabled: false
   MinDigits: 7
