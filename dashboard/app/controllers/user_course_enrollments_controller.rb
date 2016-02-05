@@ -24,8 +24,9 @@ class UserCourseEnrollmentsController < ApplicationController
   # POST /user_course_enrollments
   # POST /user_course_enrollments.json
   def create
-    puts user_course_enrollment_params
-    @user_course_enrollment = UserCourseEnrollment.new(user_course_enrollment_params)
+    #ugh, why is empty being passed in
+    learning_module_ids = user_course_enrollment_params[:learning_module_ids].drop 1
+    @user_course_enrollment = UserCourseEnrollment.enroll_user_in_course_with_ids(user_course_enrollment_params[:user_id], user_course_enrollment_params[:professional_learning_course_id], learning_module_ids)
 
     respond_to do |format|
       if @user_course_enrollment.save
@@ -70,6 +71,6 @@ class UserCourseEnrollmentsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
-    params.required(:user_course_enrollment).permit(:user_id, :professional_learning_course_id, :learning_module_ids)
+    params.required(:user_course_enrollment).permit(:user_id, :professional_learning_course_id, :learning_module_ids => [])
   end
 end

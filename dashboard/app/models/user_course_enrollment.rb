@@ -44,7 +44,9 @@ class UserCourseEnrollment < ActiveRecord::Base
     enrollment
   end
 
-  def self.enroll_user_in_course_with_learning_module_ids(user, course, learning_module_ids)
+  def self.enroll_user_in_course_with_ids(user_id, course_id, learning_module_ids)
+    user = User.find_by(id: user_id)
+    course = ProfessionalLearningCourse.find_by(id: course_id)
     learning_modules = LearningModule.where(id: learning_module_ids)
     UserCourseEnrollment.enroll_user_in_course_with_learning_modules(user, course, learning_modules)
   end
