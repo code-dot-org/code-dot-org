@@ -1,9 +1,15 @@
 ---
 title: ECS Educator Application
+nav: plc_ecs_nav
 ---
 
 # Exploring Computer Science Application 
 
-We're so excited that you are interested in applying for our Professional Learning Program for Exploring Computer Science. Check back soon for the application.
+We're so excited that you are interested in applying for our Professional Learning Program for Exploring Computer Science. Space for the 2016-17 school year is limited, so be sure to get your application in soon.
+## Who is eligible?
+Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, please add your information to our <a href="https://form.jotform.com/60337734068155" target=_blank>wait-list</a> and we'll let you know if space opens up. In the meantime, consider sending your administrators <a href="https://code.org/educate/districts" target=_blank>information about how to become a partner.</a>
 
-[<button>Learn more about Exploring Computer Science</button>](http://www.exploringcs.org/)
+**Note about Principal Approval.** This application requires your school’s principal to provide their electronic signature. We recommend reviewing the application with your principal and completing the application together in the same room. NOTE: You cannot save and return to the application later.
+
+
+<script type="text/javascript" src="http://form.jotform.us/jsform/60337964434157"></script>
