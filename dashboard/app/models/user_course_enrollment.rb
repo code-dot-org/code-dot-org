@@ -14,6 +14,8 @@
 #  index_user_course_enrollments_on_professional_learning_course_id  (professional_learning_course_id)
 #  index_user_course_enrollments_on_user_id                          (user_id)
 #
+# Maps users to courses that they are enrolled in. For more information on PLC object model, see the wiki
+# http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
 class UserCourseEnrollment < ActiveRecord::Base
   belongs_to :user

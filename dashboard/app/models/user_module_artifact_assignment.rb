@@ -14,6 +14,8 @@
 #  fk_rails_3d81c8dc0f                                    (user_enrollment_module_assignment_id)
 #  index_user_module_artifact_assignments_on_artifact_id  (artifact_id)
 #
+# Maps a given user's module assignment to the artifacts that they need to complete. More details are available on
+# http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
 class UserModuleArtifactAssignment < ActiveRecord::Base
   belongs_to :artifact
