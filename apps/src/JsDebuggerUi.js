@@ -293,12 +293,17 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
 //Debug console history
 var consoleHistory = {
   history: [],
-  currentIndex: 0
+  currentIndex: 0,
+  maxEntries: 64
 };
 
 function pushDebugConsoleHistory(commandText) {
+  if (consoleHistory.history.length >= consoleHistory.maxEntries) {
+    consoleHistory.history.shift();
+    consoleHistory.currentIndex -= 1;
+  }
   consoleHistory.currentIndex = consoleHistory.history.length + 1;
-  consoleHistory.history[consoleHistory.currentIndex - 1] = commandText;
+  consoleHistory.history.push(commandText);
 }
 
 function updateDebugConsoleHistory(commandText) {
