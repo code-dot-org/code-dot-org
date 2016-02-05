@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class UserModuleArtifactAssignmentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-
   setup do
     @user = create :teacher
     @plc = create :professional_learning_course
@@ -37,6 +33,5 @@ class UserModuleArtifactAssignmentTest < ActiveSupport::TestCase
     enrollment.reload
     assert_equal 'completed', enrollment.status
   end
-
 
 end
