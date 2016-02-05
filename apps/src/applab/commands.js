@@ -159,7 +159,7 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
       allowDesignElements: true,
       allowTurtleCanvas: Boolean(opts.turtleCanvas)
     };
-    var existsOutsideApplab = !elementUtils.isIdAvailable(id, undefined, options);
+    var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
