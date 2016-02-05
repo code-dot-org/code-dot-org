@@ -6,10 +6,14 @@
       %th
       %th
       %th
+      %th
+      %th
 
   %tbody
     - @user_course_enrollments.each do |user_course_enrollment|
       %tr
+        %td= user_course_enrollment.user.name
+        %td= user_course_enrollment.professional_learning_course.name
         %td= link_to 'Show', user_course_enrollment
         %td= link_to 'Edit', edit_user_course_enrollment_path(user_course_enrollment)
         %td= link_to 'Destroy', user_course_enrollment, :method => :delete, :data => { :confirm => 'Are you sure?' }
