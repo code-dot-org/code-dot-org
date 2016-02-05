@@ -1,7 +1,13 @@
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
+
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
-var _ = utils.getLodash();
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -143,7 +149,9 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
+    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
+    /* jshint nonew:true */
   }
   catch(err) {
     this.handleError(err);
@@ -596,7 +604,6 @@ JSInterpreter.prototype.getUserCodeLine = function () {
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
-    var end = node.end - this.codeInfo.userCodeStartOffset;
 
     // Only return a valid userCodeRow if the node being executed is inside the
     // user's code (not inside code we inserted before or after their code that
@@ -625,7 +632,6 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
-    var end = node.end - this.codeInfo.userCodeStartOffset;
 
     // Only return a valid userCodeRow if the node being executed is inside the
     // user's code (not inside code we inserted before or after their code that
