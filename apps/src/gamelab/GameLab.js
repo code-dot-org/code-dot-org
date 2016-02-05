@@ -162,9 +162,8 @@ GameLab.prototype.init = function (config) {
     }
   });
 
-  // TODO: Switch to function.prototype.bind
-  config.loadAudio = _.bind(this.loadAudio_, this);
-  config.afterInject = _.bind(this.afterInject_, this, config);
+  config.loadAudio = this.loadAudio_.bind(this);
+  config.afterInject = this.afterInject_.bind(this, config);
   config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
 
   // Store p5specialFunctions in the unusedConfig array so we don't give warnings
