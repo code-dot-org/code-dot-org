@@ -47,3 +47,8 @@ In `aws/build.rake`, as part of the test.code.org CI script, the eyes tests will
 be run (as of writing, currently only against the Chrome 33 browser and iPhone).
 
 Results are reported to HipChat.
+
+## See Also
+
+* [UI Testing Instructions](../dashboard/test/ui/README.md)
+* [General Testing Instructions](../TESTING.md)

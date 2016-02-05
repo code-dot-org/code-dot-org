@@ -1,0 +1,13 @@
+- requested_path = request.path_info
+
+- if requested_path.include? "/educate/plc"
+  // redirect /plc to /professional-learning or professional-learning-partner 
+  // with descriptive course names instead of abbreviations
+  - if requested_path.include? "plp"
+    - path = requested_path.gsub("plc", "professional-learning-partner")
+    - new_path = path.gsub(/plp-|plp/, "")
+    - redirect new_path
+  - else
+    - path = requested_path.gsub("plc", "professional-learning")
+    - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
+    - redirect new_path

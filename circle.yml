@@ -23,15 +23,16 @@ dependencies:
     - npm install:
         pwd:
             code-studio
-    - bundle exec rake assets:precompile:
-        pwd:
-            dashboard
 database:
     override:
       - bundle exec rake db:create:
           pwd:
               dashboard
       - bundle exec rake db:schema:load:
+          pwd:
+              dashboard
+    post:
+      - bundle exec rake assets:precompile:
           pwd:
               dashboard
 test:
