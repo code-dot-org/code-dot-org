@@ -31,26 +31,34 @@ dependencies:
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
-    # Run rake install
-    - bundle exec rake install
-    # Try running rake build twice (in case of intermittent test failures within rake build)
-    - for i in 1 2; do bundle exec rake build && break; done
-    - npm install: # TODO(bjordan): necessary now?
-        pwd:
-            code-studio
-    - bundle exec rake assets:precompile:
-        pwd:
-            dashboard
   post:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
 database:
     override:
-      - 'echo "skipping Circle CI database defaults, already set up."'
+      - bundle exec rake db:create:
+          pwd:
+              dashboard
+      - bundle exec rake db:schema:load:
+          pwd:
+              dashboard
+    post:
+      - bundle exec rake assets:precompile:
+          pwd:
+              dashboard
 test:
     override:
+        # Run rake install
+        - bundle exec rake install
+        # Try running rake build twice (in case of intermittent test failures within rake build)
+        - for i in 1 2; do bundle exec rake build && break; done
+        - npm install: # TODO(bjordan): necessary now?
+            pwd:
+                code-studio
+        - bundle exec rake assets:precompile:
+            pwd:
+                dashboard
         # (apps tests already ran during rake build, don't re-run)
-
         # temporarily set hoc flags to green, as is currently required for dev enlistments
         - ./set_hoc_flags.rb green:
             pwd:
