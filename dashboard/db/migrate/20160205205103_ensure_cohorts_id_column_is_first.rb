@@ -1,9 +1,9 @@
 # This migration was created to ensure consistent ordering of the id
-# column in the cohorts_districts in staging and production vs. test.
-# Although this column ordering difference is not very significant
-# semantically, we want the environments to be as consistent as possible
-# and the discrepency was causing our schema dump consistency logic to
-# throw an exception.
+# column in the cohorts_districts table in staging and production
+# vs. test.  Although this column ordering difference is not very
+# significant semantically, we want the environments to be as
+# consistent as possible and the discrepancy was causing our schema
+# dump consistency logic to throw an exception.
 class EnsureCohortsIdColumnIsFirst < ActiveRecord::Migration
   def change
     execute <<-SQL
