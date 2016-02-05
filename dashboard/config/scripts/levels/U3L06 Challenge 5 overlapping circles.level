@@ -31,7 +31,10 @@
           "b",
           "a"
         ]
-      }
+      },
+      "functionParams_none": null,
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -69,7 +72,8 @@
     "encrypted_examples": "b7beInscIUpPOSy/abrlSHYIZJeaBRfAbjrsHHHd9x6Qy8tHvYnVnEoJQKxz\n6z9N\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>
