@@ -26,7 +26,8 @@
       "hide": null,
       "speed": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
