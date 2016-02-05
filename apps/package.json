@@ -78,6 +78,7 @@
     "sanitize-html": "^1.11.3",
     "seedrandom": "2.4.2",
     "sinon": "^1.16.1",
+    "sprintf-js": "^1.0.3",
     "stackblur": "^1.0.0",
     "uglify-js": "2.4.24",
     "watchify": "3.2.3",
