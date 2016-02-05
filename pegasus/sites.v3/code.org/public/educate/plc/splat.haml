@@ -1,5 +1,0 @@
-// redirect plc to professional learning
-// with descriptive course names instead of abbreviations
-- requested_path = request.splat_path_info
-- new_path = requested_path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
-- redirect "/educate/professional-learning#{new_path}"
