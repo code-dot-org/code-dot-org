@@ -16,28 +16,8 @@ class AdminReportsController < ApplicationController
   end
 
   def funometer
-    SeamlessDatabasePool.use_persistent_read_connection do
-      # Compute the global funometer percentage.
-      ratings = PuzzleRating.all
-      @overall_percentage = get_percentage_positive(ratings)
-
-      # Generate the funometer percentages, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
-
-      # Compute funometer percentages by script.
-      @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
-      @script_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-
-      # Compute funometer percentages by level, saving the most-favored and
-      # least-favored with over one hundred ratings.
-      @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
-      level_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
-      @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
-      @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
-    end
+    require 'cdo/properties'
+    @stats = Properties.get(:funometer)
   end
 
   def funometer_by_script
