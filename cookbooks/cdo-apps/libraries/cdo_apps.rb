@@ -19,6 +19,13 @@ module CdoApps
       notifies :restart, "service[#{app_name}]", :delayed
     end
 
+    log_dir = File.join app_root, 'log'
+    directory log_dir do
+      recursive true
+      user user
+      group user
+    end
+
     template "/etc/logrotate.d/#{app_name}" do
       source 'logrotate.erb'
       user 'root'
