@@ -12,6 +12,11 @@ Dashboard::Application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
+  # Use the schema cache dump to avoid forcing every front end to fetch the schema from
+  # the database. (Fetching the schema adds undesirable load and can trigger expensive
+  # recomputations of schema statistics.)
+  config.use_schema_cache_dump = true
+
   # Configure static asset server for tests with Cache-Control for performance.
   config.serve_static_files  = true
   config.static_cache_control = "public, max-age=3600, s-maxage=1800"
