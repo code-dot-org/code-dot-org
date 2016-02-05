@@ -15,6 +15,8 @@
 #  index_user_enrollment_module_assignments_on_learning_module_id  (learning_module_id)
 #  index_user_enrollment_module_assignments_on_user_id             (user_id)
 #
+# Maps a user's course enrollment to the modules that they are assigned to. More details on PLC object are available on
+# http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
 class UserEnrollmentModuleAssignment < ActiveRecord::Base
   belongs_to :learning_module
