@@ -105,7 +105,7 @@ module RakeUtils
   # Uses a hash of the `git ls-tree` contents because a shallow-clone may not have the
   # full revision history needed to find the original commit SHA.
   def self.git_folder_hash(dir)
-    Dir.chdir(File.expand_path dir) do
+    Dir.chdir(File.expand_path(dir)) do
       Digest::SHA2.hexdigest(`git ls-tree -r HEAD .`)
     end
   end
