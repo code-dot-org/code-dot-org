@@ -3,6 +3,7 @@ require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
+require 'digest'
 
 module RakeUtils
 
@@ -126,6 +127,20 @@ module RakeUtils
     JSON.parse(api_output).first['sha']
   rescue
     nil
+  end
+
+  # Gets a checksum for the given directory's git-managed files,
+  # by computing an md5 hash of the combined md5 hashes of all file contents.
+  def self.git_folder_hash(dir)
+    Dir.chdir(File.expand_path dir) do
+      Digest::MD5.hexdigest(
+        `git ls-files`.each_line.map(&:strip)
+        .select(&File.method(:file?)) # skip directory symlinks
+        .map(&Digest::MD5.method(:file))
+        .map(&:hexdigest)
+        .join
+      )
+    end
   end
 
   def self.ln_s(source, target)
