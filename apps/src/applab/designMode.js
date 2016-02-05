@@ -15,6 +15,7 @@ var designMode = module.exports;
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
+var logToCloud = require('../logToCloud');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
@@ -106,6 +107,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
+  designMode.renderToggleRow();
 };
 
 /**
@@ -506,6 +508,11 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
     var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
     console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe
+    });
   }
   sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
 
@@ -833,6 +840,20 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
+  designMode.renderToggleRow(screenIds);
+
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+};
+
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
+};
+
+designMode.renderToggleRow = function (screenIds) {
+  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+    return elementUtils.getId(screen);
+  });
+
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
@@ -840,7 +861,7 @@ designMode.changeScreen = function (screenId) {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: screenId,
+        initialScreen: currentScreenId,
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
@@ -851,12 +872,6 @@ designMode.changeScreen = function (screenId) {
       designToggleRow
     );
   }
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
-
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
 };
 
 /**
