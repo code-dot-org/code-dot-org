@@ -124,8 +124,8 @@ module RakeUtils
     github_slug = `git config --get remote.origin.url`.match(/github.com\/(.*).git$/)[1]
     api_output = open("https://api.github.com/repos/#{github_slug}/commits?path=#{dir}&sha=#{git_revision}").read
     JSON.parse(api_output).first['sha']
-    rescue
-      nil
+  rescue
+    nil
   end
 
   def self.ln_s(source, target)
