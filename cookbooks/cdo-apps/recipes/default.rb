@@ -40,9 +40,16 @@ end
 
 include_recipe 'cdo-ruby'
 
-# Ensure that all locale environment variables are properly set to UTF-8.
-execute 'locales' do
-  command 'locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8'
+# Ensure the correct locale is generated and set as default (e.g. for Docker containers).
+locale = 'en_US.UTF-8'
+
+execute "locale-gen #{locale}" do
+  not_if { File.exist? '/var/lib/locales/supported.d/local' }
+end
+
+execute 'update-locale' do
+  environment LANG: locale
+  not_if { File.exist? '/etc/default/locale' }
 end
 
 include_recipe 'cdo-repository'
