@@ -53,6 +53,10 @@ execute 'update-locale' do
 end
 
 include_recipe 'cdo-repository'
+
+%w(dashboard pegasus).each do |app|
+  node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
+end
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
