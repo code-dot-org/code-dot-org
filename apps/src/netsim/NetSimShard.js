@@ -2,17 +2,11 @@
  * @overview Represents a collection of tables that map to a particular
  *           class section's simulation, isolated from other class sections.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 
