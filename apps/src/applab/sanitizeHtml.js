@@ -96,7 +96,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
       canvas: defaultAttributes,
       div: defaultAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
       img: defaultAttributes.concat(['data-canonical-image-url', 'src']),
-      input: defaultAttributes.concat(['checked', 'max', 'min', 'placeholder', 'step', 'type', 'value']),
+      input: defaultAttributes.concat(['checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
       label: defaultAttributes,
       select: defaultAttributes
     }),
