@@ -105,8 +105,6 @@ var TURTLE_CANVAS_ID = 'turtleCanvas';
  * Always reject element ids which are blacklisted or already exist outside divApplab.
  * Allow or reject other element types based on the options specified.
  * @param {string} newId The id to evaluate.
- * @param {string} originalId Optional original id of this element.
- *     If present, this will always be a valid value for newId.
  * @param {Object.<string, boolean>} options Optional map of options
  *     indicating whether certain elements are allowed.
  * @param {string} options.allowCodeElements allow element ids which are
@@ -119,13 +117,10 @@ var TURTLE_CANVAS_ID = 'turtleCanvas';
  *     to be created. Default: false
  * @returns {boolean}
  */
-module.exports.isIdAvailable = function(newId, originalId, options) {
+module.exports.isIdAvailable = function(newId, options) {
   options = options || {};
   if (!newId) {
     return false;
-  }
-  if (newId === originalId) {
-    return true;
   }
 
   // Don't allow blacklisted elements.

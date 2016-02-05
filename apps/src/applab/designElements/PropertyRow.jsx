@@ -38,6 +38,10 @@ var PropertyRow = React.createClass({
   },
 
   isIdAvailable: function(value) {
+    if (value === this.props.initialValue) {
+      return true;
+    }
+
     // Elements in divApplab must be allowed since divApplab may be stale
     // with respect to what's in design mode, and we will catch any collisions
     // with design mode elements by not setting allowDesignElements.
@@ -46,7 +50,7 @@ var PropertyRow = React.createClass({
       allowDesignElements: false,
       allowDesignPrefix: false
     };
-    return elementUtils.isIdAvailable(value, this.props.initialValue, options);
+    return elementUtils.isIdAvailable(value, options);
   },
 
   handleChangeInternal: function(event) {

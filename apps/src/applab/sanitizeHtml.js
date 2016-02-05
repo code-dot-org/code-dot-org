@@ -69,7 +69,7 @@ function isIdAvailable(elementId) {
     allowDesignElements: true,
     allowDesignPrefix: true
   };
-  if (!elementUtils.isIdAvailable(elementId, undefined, options)) {
+  if (!elementUtils.isIdAvailable(elementId, options)) {
     return false;
   }
   return true;
