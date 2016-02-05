@@ -94,22 +94,33 @@ var ELEMENT_ID_BLACKLIST = [
   'finishButton',
   'submitButton',
   'unsubmitButton',
-  'turtleCanvas',
   'turtleImage',
   'prompt-icon'
 ];
-module.exports.ELEMENT_ID_BLACKLIST = ELEMENT_ID_BLACKLIST;
+
+var TURTLE_CANVAS_ID = 'turtleCanvas';
 
 /**
- * Returns true if newId is available and won't collide with
- * other elements in design mode or the rest of applab.
- * Ignore elements inside divApplab.
+ * Returns true if newId is available and won't collide with other elements.
+ * Always reject element ids which are blacklisted or already exist in the document.
+ * Allow or reject other element types based on the options specified.
  * @param {string} newId The id to evaluate.
  * @param {string} originalId Optional original id of this element.
  *     If present, this will always be a valid value for newId.
+ * @param {Object.<string, boolean>} options Optional map of options
+ *     indicating whether certain elements are allowed.
+ * @param {string} options.allowCodeElements allow element ids which are
+ *     inside divApplab. Default: false
+ * @param {string} options.allowDesignElements: allow element ids which, when
+ *     prefixed with "design_", already exist in designModeViz. Default: false
+ * @param {string} options.allowDesignPrefix: allow element ids which
+ *     start with "design_". Default: false
+ * @param {string} options.allowTurtleCanvas: allow turtle canvas element
+ *     to be created. Default: false
  * @returns {boolean}
  */
-module.exports.isIdAvailableIgnoringDivApplab = function(newId, originalId) {
+module.exports.isIdAvailable = function(newId, originalId, options) {
+  options = options || {};
   if (!newId) {
     return false;
   }
@@ -119,6 +130,10 @@ module.exports.isIdAvailableIgnoringDivApplab = function(newId, originalId) {
 
   // Don't allow blacklisted elements.
   if (ELEMENT_ID_BLACKLIST.indexOf(newId) !== -1) {
+    return false;
+  }
+
+  if (!options.allowTurtleCanvas && TURTLE_CANVAS_ID === newId) {
     return false;
   }
 
@@ -132,23 +147,30 @@ module.exports.isIdAvailableIgnoringDivApplab = function(newId, originalId) {
   //
   // TODO(dave): remove this condition when we start namespacing, since
   // '#divApplab #code_design_button1' would be created in step 3 instead.
-  if (newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0) {
+
+  // Don't allow elements with the "design_" prefix, unless
+  // options.allowDesignPrefix is specified.
+  if (!options.allowDesignPrefix && newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0) {
     return false;
   }
 
-  // Don't allow if any other element in design mode has this prefixed id.
-  // e.g. don't allow 'button1' if 'design_button1' exists.
-  if (getPrefixedElementById(newId)) {
+  // Don't allow if any other element in design mode has this prefixed id
+  // (e.g. don't allow 'button1' if 'design_button1' exists),
+  // unless options.allowDesignElements is specified.
+  if (!options.allowDesignElements && getPrefixedElementById(newId)) {
     return false;
   }
 
   // Don't allow if any element outside of divApplab has this id.
-  //
-  // Elements in divApplab must be ignored since divApplab may be stale
-  // with respect to what's in design mode, and we already caught any
-  // collisions with design mode elements in the previous condition.
   var element = document.getElementById(newId);
   if (element && !$('#divApplab').find(element)[0]) {
+    return false;
+  }
+
+  // Don't allow if any element inside divApplab has this id,
+  // unless options.allowCodeElements is specified.
+  var existsInApplab = !!(element && $('#divApplab').find(element)[0]);
+  if (!options.allowCodeElements && existsInApplab) {
     return false;
   }
 

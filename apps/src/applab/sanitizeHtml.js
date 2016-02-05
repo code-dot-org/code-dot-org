@@ -59,6 +59,24 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
 }
 
 /**
+ * Reject element ids that might collide with other elements.
+ * @param {string} elementId
+ * @returns {boolean} Whether the element id is valid.
+ */
+function isIdAvailable(elementId) {
+  // We only care if an ID is blacklisted or already in use in this case.
+  var options = {
+    allowCodeElements: false,
+    allowDesignPrefix: true,
+    allowDesignElements: true
+  };
+  if (!elementUtils.isIdAvailable(elementId, undefined, options)) {
+    return false;
+  }
+  return true;
+}
+
+/**
  * Sanitize html using a whitelist of tags and attributes.
  * see default options at https://www.npmjs.com/package/sanitize-html
  * @param {string} unsafe Unsafe html to sanitize.
@@ -84,8 +102,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
       '*': function(tagName, attribs) {
-        var isBlacklisted = (elementUtils.ELEMENT_ID_BLACKLIST.indexOf(attribs.id) !== -1);
-        if (rejectExistingIds && (document.getElementById(attribs.id) || isBlacklisted)) {
+        if (rejectExistingIds && attribs.id && !isIdAvailable(attribs.id)) {
           warnings.push('element id is already in use: ' + attribs.id);
           delete attribs.id;
         }
