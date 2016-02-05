@@ -1,5 +1,5 @@
 module GitHelper
-  # Detects whether the current git path is hosted in a 'shared volume', e.g. as used by Docker.
+  # Detects whether the current git path is hosted in a 'shared volume', e.g. within a Docker container.
   def self.shared_volume?(git_path, home_path)
     if ::File.directory?(git_path)
       stat = ::File.stat(git_path)

@@ -17,15 +17,20 @@ git git_path do
   repository node['cdo-repository']['url']
   depth node['cdo-repository']['depth'] if node['cdo-repository']['depth']
 
-  # Checkout at clone time using --branch [checkout_branch] to skip additional checkout step.
+  # Checkout during clone using --branch [checkout_branch] to skip additional checkout step.
   enable_checkout false
 
   branch = node['cdo-repository']['branch']
   checkout_branch branch
   revision branch
 
-  # Skip git-repo sync when using a shared volume.
-  action GitHelper.shared_volume?(git_path, home_path) ? :nothing : :sync
+  # Default checkout-only for CI-managed instances. (CI script manages pull on updates)
+  action = :checkout
+  # Sync instead of checkout for adhoc instances that aren't CI-managed.
+  action = :sync if node.chef_environment == 'adhoc'
+  # Skip git-repo sync when using a shared volume to prevent data loss on the host.
+  action = :nothing if GitHelper.shared_volume?(git_path, home_path)
+  action action
 
   user node[:user]
   group node[:user]

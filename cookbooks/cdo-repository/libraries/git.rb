@@ -29,8 +29,8 @@ class Chef
         setup_remote_tracking_branches(@new_resource.remote, @new_resource.repository)
         converge_by("fetch updates for #{@new_resource.remote}") do
           # since we're in a local branch already, just reset to specified revision rather than merge
-          # PATCH: Remove `&& git fetch --tags [remote]` to support shallow-clones.
-          fetch_command = "git fetch #{@new_resource.remote} && git reset --hard #{target_revision}"
+          # PATCH: Remove `&& git fetch --tags [remote]` and add --depth [depth] to support shallow fetch.
+          fetch_command = "git fetch #{@new_resource.remote}#{" --depth #{@new_resource.depth}" if @new_resource.depth} && git reset --hard #{target_revision}"
           Chef::Log.debug "Fetching updates from #{new_resource.remote} and resetting to revision #{target_revision}"
           # PATCH: Add extra logging info.
           Chef::Log.info "Fetch command: #{fetch_command}"
@@ -49,12 +49,12 @@ class Chef
 git config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$' || \
 git config --get remote.#{remote}.fetch '^\\+refs/heads/\*:refs/remotes/#{remote}/\*$'
         BASH
-        ref_exists = shell_out!(ref_exists_cmd, run_options(cwd: cwd)).exitstatus == 0
+        ref_exists = shell_out!(ref_exists_cmd, run_options(cwd: cwd, returns: [0,1])).exitstatus == 0
 
         unless ref_exists
           update_fetch_refs_cmd = "git config --add remote.#{remote}.fetch +refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}"
           Chef::Log.info "Update fetch refs command: #{update_fetch_refs_cmd}"
-          shell_out!(update_fetch_refs_cmd)
+          shell_out!(update_fetch_refs_cmd, cwd: cwd)
         end
       end
     end
