@@ -56,7 +56,7 @@ module CdoApps
     execute "setup-#{app_name}" do
       command "bundle exec rake #{app_name}:setup_db"
       cwd app_root
-      environment env
+      environment env.merge(node['cdo-apps']['bundle_env'])
       user user
       group user
       action :nothing
@@ -66,7 +66,7 @@ module CdoApps
     execute "build-#{app_name}" do
       command "bundle exec rake build:#{app_name}"
       cwd root
-      environment env
+      environment env.merge(node['cdo-apps']['bundle_env'])
       user user
       group user
       action :nothing

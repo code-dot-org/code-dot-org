@@ -61,6 +61,7 @@ include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
 
+include_recipe 'cdo-apps::bundle_bootstrap'
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe 'cdo-apps::chef_credentials'

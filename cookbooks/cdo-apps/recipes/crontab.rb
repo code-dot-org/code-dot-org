@@ -10,7 +10,7 @@ def cronjob(m:nil, at:nil, cmd:, h:nil, notify:'')
     user node[:user]
     root = File.join node[:home], node.chef_environment
     bin = File.join root, 'bin'
-    environment BUNDLE_GEMFILE: "#{root}/Gemfile"
+    environment node['cdo-apps']['bundle_env']
     require 'shellwords'
     command "bundle exec #{bin}/cronjob #{cmd.shellescape} #{notify}"
     mailto 'dev+crontab@code.org'
