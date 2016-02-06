@@ -84,11 +84,11 @@ class AdminReportsController < ApplicationController
 
         # Regardless of the level type, query the DB for level answers.
         @responses[level_id] = LevelSource.
-          where(level_id: level_id).
-          joins(:activities).
-          joins("INNER JOIN users ON activities.user_id = users.id").
-          limit(@response_limit).
-          pluck(:level_id, :email, :data)
+                               where(level_id: level_id).
+                               joins(:activities).
+                               joins("INNER JOIN users ON activities.user_id = users.id").
+                               limit(@response_limit).
+                               pluck(:level_id, :email, :data)
 
         # Determine whether the level is a multi question, replacing the
         # numerical answer with its corresponding text if so.
@@ -260,9 +260,9 @@ class AdminReportsController < ApplicationController
   private
   def get_ratings_by_day(ratings_to_process)
     return ratings_to_process.
-      group('DATE(created_at)').
-      order('DATE(created_at)').
-      pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
+           group('DATE(created_at)').
+           order('DATE(created_at)').
+           pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
   end
 
   def get_percentage_positive(ratings_to_process)
