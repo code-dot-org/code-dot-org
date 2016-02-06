@@ -13,9 +13,9 @@ class UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
-    UserCourseEnrollment.enroll_user_in_course_with_learning_modules(@user, @plc, [@learning_module])
+    PLC::UserCourseEnrollment.enroll_user_in_course_with_learning_modules(@user, @plc, [@learning_module])
 
-    enrollment = UserCourseEnrollment.find_by(user: @user, professional_learning_course: @plc)
+    enrollment = PLC::UserCourseEnrollment.find_by(user: @user, professional_learning_course: @plc)
 
     module_assignments = enrollment.user_enrollment_module_assignment
     artifact_assignments = enrollment.user_module_artifact_assignment

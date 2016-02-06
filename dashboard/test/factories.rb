@@ -1,46 +1,30 @@
 FactoryGirl.define do
-  factory :user_module_artifact_assignment do
+  factory :user_module_artifact_assignment, :class => 'PLC::UserModuleArtifactAssignment' do
     artifact nil
     user_enrollment_module_assignment nil
   end
 
-  factory :user_enrollment_module_assignment do
+  factory :user_enrollment_module_assignment, :class => 'PLC::UserEnrollmentModuleAssignment' do
     learning_module nil
     user_course_enrollment nil
   end
 
-  factory :user_course_enrollment do
+  factory :user_course_enrollment, :class => 'PLC::UserCourseEnrollment' do
     user nil
     professional_learning_course nil
   end
 
-  factory :professional_learning_course do
+  factory :professional_learning_course, :class => 'PLC::ProfessionalLearningCourse' do
     name "MyString"
   end
 
-  factory :learning_module_assignment do
-    user nil
-    learning_module nil
-  end
-
-  factory :artifact_assignment do
-    artifact_submission nil
-    artifact nil
-    user nil
-    status "MyString"
-  end
-
-  factory :artifact_submission do
-    type ""
-  end
-
-  factory :artifact do
+  factory :artifact, :class => 'PLC::Artifact' do
     name "MyString"
     description "MyText"
     learning_module nil
   end
 
-  factory :learning_module do
+  factory :learning_module, :class => 'PLC::LearningModule' do
     name "MyString"
     learning_module_type ""
   end
