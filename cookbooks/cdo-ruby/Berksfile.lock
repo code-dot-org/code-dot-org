@@ -8,6 +8,6 @@ GRAPH
   brightbox-ruby (1.2.1)
     apt (>= 0.0.0)
   build-essential (2.2.3)
-  cdo-ruby (0.1.0)
+  cdo-ruby (0.1.1)
     brightbox-ruby (>= 0.0.0)
     build-essential (>= 0.0.0)
