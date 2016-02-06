@@ -9,8 +9,9 @@ gem 'test-kitchen', github: 'wjordan/test-kitchen', branch: 'cdo'
 gem 'kitchen-docker'
 
 # Kitchen-ec2 fork, items not yet merged:
-# 214 (support duration for spot instances)
-# jk/ec2-defaults (Use searches to find AMI and AMI username)
+# - 214 (support duration for spot instances)
+# - jk/ec2-defaults (Use searches to find AMI and AMI username)
+# - Tweak commit to support test-kitchen#564.
 gem 'kitchen-ec2', github: 'wjordan/kitchen-ec2', branch: 'cdo'
 
 # Provides `sftp` transport to test-kitchen for faster cookbook upload.
