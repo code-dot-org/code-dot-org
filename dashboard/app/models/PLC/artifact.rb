@@ -17,7 +17,7 @@
 # This class represents artifacts that are associated with a given learning module.
 # For more details about PLC Class structure, visit http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
-class Artifact < ActiveRecord::Base
+class PLC::Artifact < ActiveRecord::Base
   belongs_to :learning_module
   has_many :artifact_assignments, class_name: 'ArtifactAssignment', dependent: :destroy
 end
