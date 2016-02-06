@@ -159,6 +159,12 @@ JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
     debugInput.addEventListener('keydown', this.onDebugInputKeyDown.bind(this));
   }
 
+  // Attach click handler for focusing on console input when clicking output
+  var debugOutput = this.rootDiv_.querySelector('#debug-output');
+  if (debugOutput) {
+    debugOutput.addEventListener('mouseup', this.onDebugOutputMouseUp.bind(this));
+  }
+
   // Attach handlers for the debug area resize control
   var resizeBar = this.getElement_('#debugResizeBar');
   if (resizeBar) {
@@ -180,6 +186,7 @@ JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
   if (clearButton) {
     dom.addClickTouchEvent(clearButton, this.clearDebugOutput.bind(this));
   }
+
 
   // Attach handlers for debugger controls
   var pauseButton = this.getElement_('#pauseButton');
@@ -287,6 +294,19 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
   if (e.keyCode === KeyCodes.DOWN) {
     updateDebugConsoleHistory(input);
     e.target.textContent = moveDownDebugConsoleHistory(input);
+  }
+};
+
+/**
+ * On mouseup over the console output, if the user hasn't just selected some
+ * text, place the focus in the console input box.
+ * @param {MouseEvent} e
+ */
+JsDebuggerUi.prototype.onDebugOutputMouseUp = function (e) {
+  var debugInput = this.getElement_('#debug-input');
+  if (debugInput && e.target.tagName === "DIV" &&
+      window.getSelection().toString().length === 0) {
+    debugInput.focus();
   }
 };
 
