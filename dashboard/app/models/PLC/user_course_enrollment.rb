@@ -17,28 +17,20 @@
 # Maps users to courses that they are enrolled in. For more information on PLC object model, see the wiki
 # http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
-class UserCourseEnrollment < ActiveRecord::Base
+class PLC::UserCourseEnrollment < ActiveRecord::Base
   belongs_to :user
   belongs_to :professional_learning_course
   has_many :user_enrollment_module_assignment
   has_many :user_module_artifact_assignment, through: :user_enrollment_module_assignment
 
-  def self.enroll_user_in_course(user, course)
-    enrollment = UserCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course)
-
-    enrollment.professional_learning_course.artifacts.each do |artifact|
-      ArtifactAssignment.create_user_artifact_assignment(user, artifact)
-    end
-  end
-
   def self.enroll_user_in_course_with_learning_modules(user, course, learning_modules)
-    enrollment = UserCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course, status: :in_progress)
+    enrollment = PLC::UserCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course, status: :in_progress)
 
     learning_modules.each do |learning_module|
-      module_assignment = UserEnrollmentModuleAssignment.find_or_create_by(user_course_enrollment: enrollment, learning_module: learning_module)
+      module_assignment = PLC::UserEnrollmentModuleAssignment.find_or_create_by(user_course_enrollment: enrollment, learning_module: learning_module)
 
       learning_module.artifacts.each do |artifact|
-        UserModuleArtifactAssignment.find_or_create_by(user_enrollment_module_assignment: module_assignment, artifact: artifact, status: :not_started)
+        PLC::UserModuleArtifactAssignment.find_or_create_by(user_enrollment_module_assignment: module_assignment, artifact: artifact, status: :not_started)
       end
     end
 
