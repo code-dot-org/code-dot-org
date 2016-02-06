@@ -33,7 +33,7 @@ window.apps = {
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
         dashboard.createCallouts(this.level.callouts || this.callouts);
-        if (window.dashboard.isChrome34) {
+        if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
