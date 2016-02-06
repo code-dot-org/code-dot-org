@@ -12,7 +12,7 @@ class UserModuleArtifactAssignmentTest < ActiveSupport::TestCase
   end
 
   test 'Completing artifacts does not mark module / course complete until all are complete' do
-    enrollment = UserCourseEnrollment.enroll_user_in_course_with_learning_modules(@user, @plc, [@learning_module1, @learning_module2])
+    enrollment = PLC::UserCourseEnrollment.enroll_user_in_course_with_learning_modules(@user, @plc, [@learning_module1, @learning_module2])
     artifact_assignments = enrollment.user_module_artifact_assignment
 
     assert_not_equal :completed, enrollment.status

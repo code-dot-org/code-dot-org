@@ -1,4 +1,3 @@
-require 'securerandom'
 # == Schema Information
 #
 # Table name: learning_modules
@@ -13,7 +12,7 @@ require 'securerandom'
 # with one or more modules. For more details about PLC class structure, visit
 # http://wiki.code.org/display/Operations/Explanation+of+PLC+Model
 
-class LearningModule < ActiveRecord::Base
+class PLC::LearningModule < ActiveRecord::Base
   has_many :artifacts, class_name: 'Artifact', dependent: :destroy
   belongs_to :professional_learning_course
 end
