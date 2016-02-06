@@ -31,7 +31,7 @@ if node['cdo-apps']['daemon']
     cronjob m: '*/2', cmd: "#{root}/pegasus/sites/virtual/collate_pdfs", notify: 'dev+crontab@code.org'
     cronjob m: '*/2', cmd: "#{root}/dashboard/bin/build_scripts", notify: 'dev+crontab@code.org'
     cronjob m: '*/2', cmd: "#{bin}/run_server_generate_pdfs", notify: 'dev+crontab@code.org'
-    cronjob m: '*/5', cmd: "#{bin}/fetch-external-resources", notify:'dev+crontab@code.org'
+    cronjob m: '*/5', cmd: "#{bin}/fetch-external-resources", notify: 'dev+crontab@code.org'
     cronjob m: '*/5', cmd: "#{bin}/import_google_sheets"
   end
 
