@@ -65,8 +65,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
-
+Teachers from Seattle and Spokane will be attending the East Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-west) for your workshop details.
 
 [**Back to the top**](#top)
 

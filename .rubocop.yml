@@ -7,6 +7,7 @@ AllCops:
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
     - 'dashboard/db/**/*'
+    - 'dashboard/db/*'
   RunRailsCops: true
   DisplayCopNames: true
 

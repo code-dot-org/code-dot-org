@@ -22,5 +22,5 @@ You can apply to the Professional Learning Program for CS in Algebra if you are 
 [<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-application)
 
 ## Don't teach in a partner district?
-Contact [Bootstrap](http://www.bootstrapworld.org), our preferred professional development provider for CS in Algebra. 
+Contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra. 
 

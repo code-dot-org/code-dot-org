@@ -13,20 +13,37 @@ class AdminSearchController < ApplicationController
 
   def search_for_teachers
     SeamlessDatabasePool.use_persistent_read_connection do
-      email_filter = "%#{params[:emailFilter]}%"
-      address_filter = "%#{params[:addressFilter]}%"
+      @teachers = User.where(user_type: 'teacher')
+
+      # If requested, filter...
+      if params[:emailFilter].present?
+        @teachers = @teachers.where("email LIKE ?", "%#{params[:emailFilter]}%")
+      end
+      if params[:addressFilter].present?
+        @teachers = @teachers.where("full_address LIKE ?", "%#{params[:addressFilter]}%")
+      end
+      # TODO(asher): Improve PD filtering.
+      if params[:pd] == "pd"
+        @teachers = @teachers.
+                    joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
+                    distinct
+      elsif params[:pd] == "nopd"
+        @teachers = @teachers.
+                    joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
+                    where("workshop_attendance.teacher_id IS NULL").
+                    distinct
+      end
+      if params[:unsubscribe].present?
+        @teachers = @teachers.
+                    joins("LEFT OUTER JOIN #{CDO.pegasus_db_name}.contacts ON users.email = #{CDO.pegasus_db_name}.contacts.email COLLATE utf8_unicode_ci").
+                    where("#{CDO.pegasus_db_name}.contacts.email IS NULL OR #{CDO.pegasus_db_name}.contacts.unsubscribed_at IS NULL").
+                    distinct
+      end
 
       # TODO(asher): Determine whether we should be doing an inner join or a left
       # outer join.
-      @teachers = User.where(user_type: 'teacher').where("email LIKE ?", email_filter).where("full_address LIKE ?", address_filter).joins(:followers).group('followers.user_id')
+      @teachers = @teachers.joins(:followers).group('followers.user_id')
 
-      # If requested, join with the workshop_attendance table to filter out based
-      # on PD attendance.
-      if params[:pd] == "pd"
-        @teachers = @teachers.joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").distinct
-      elsif params[:pd] == "nopd"
-        @teachers = @teachers.joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").where("workshop_attendance.teacher_id IS NULL").distinct
-      end
 
       # Prune the set of fields to those that will be displayed.
       @teacher_limit = 500
