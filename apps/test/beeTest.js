@@ -30,7 +30,9 @@ describe("Bee", function () {
       })
     };
     assert.throws(function () {
+      /* jshint nonew:false */
       new Bee(maze, null, config);
+      /* jshint nonew:true */
     }, Error, /bad flowerType for Bee/);
   });
 
@@ -43,7 +45,9 @@ describe("Bee", function () {
       })
     };
     assert.throws(function () {
+      /* jshint nonew:false */
       new Bee(maze, null, config);
+      /* jshint nonew:true */
     }, Error, /bad flowerType for Bee/);
   });
 
