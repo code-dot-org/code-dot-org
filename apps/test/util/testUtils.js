@@ -149,7 +149,7 @@ exports.runOnAppTick = function (app, tick, fn) {
  *     assert(document.getElementById('slow-element').textContent === 'pass');
  *   });
  */
-exports.tickAppUntil = function (app, predicate) {
+exports.tickAppUntil = function (app, predicate, prefix) {
   if (!app || !app.onTick) {
     throw new Error('Supplied app (' + app + ') does not have an onTick method');
   }
@@ -158,6 +158,7 @@ exports.tickAppUntil = function (app, predicate) {
   return new Promise(function (resolve) {
     app.onTick = _.wrap(app.onTick, function (originalOnTick) {
       if (!resolved && predicate()) {
+        console.log(prefix + ' tickAppUntil resolution');
         resolve();
         resolved = true;
       }
