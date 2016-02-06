@@ -73,9 +73,12 @@ module.exports = {
        '  setText("result2", success);\n' +
        '});\n',
      runBeforeClick: function (assert) {
+       console.log('drawImageURL runBeforeClick');
        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated, 'drawImageURL').then(function () {
+         console.log('drawImageURL tickAppUntil inside');
          assert.equal(document.getElementById('result1').textContent, "true");
          assert.equal(document.getElementById('result2').textContent, "false");
+         console.log('drawImageURL complete');
          Applab.onPuzzleComplete();
        });
      },
@@ -105,9 +108,12 @@ module.exports = {
        '  setText("result2", success);\n' +
        '});\n',
      runBeforeClick: function (assert) {
+       console.log('drawImageURLExtra runBeforeClick');
        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated, 'drawImageURLExtra').then(function () {
+         console.log('drawImageURLExtra tickAppUntil inside');
          assert.equal(document.getElementById('result1').textContent, "true");
          assert.equal(document.getElementById('result2').textContent, "false");
+         console.log('drawImageURLExtra complete');
          Applab.onPuzzleComplete();
        });
      },
