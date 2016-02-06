@@ -7,6 +7,7 @@
  */
 'use strict';
 
+var CommandHistory = require('./CommandHistory');
 var constants = require('./constants');
 var DebugArea = require('./DebugArea');
 var dom = require('./dom');
@@ -46,6 +47,12 @@ var JsDebuggerUi = module.exports = function (runApp) {
    * @private {function}
    */
   this.runApp_ = runApp;
+
+  /**
+   * Browseable history of commands entered into the debug console.
+   * @private {CommandHistory}
+   */
+  this.history_ = new CommandHistory();
 
   /**
    * Helper that handles open/shut actions for debugger UI
@@ -272,7 +279,7 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
   var input = e.target.textContent;
   if (e.keyCode === KeyCodes.ENTER) {
     e.preventDefault();
-    pushDebugConsoleHistory(input);
+    this.history_.push(input);
     e.target.textContent = '';
     this.log('> ' + input);
     var jsInterpreter = this.jsInterpreter_;
@@ -286,14 +293,10 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     } else {
       this.log('< (not running)');
     }
-  }
-  if (e.keyCode === KeyCodes.UP) {
-    updateDebugConsoleHistory(input);
-    e.target.textContent = moveUpDebugConsoleHistory(input);
-  }
-  if (e.keyCode === KeyCodes.DOWN) {
-    updateDebugConsoleHistory(input);
-    e.target.textContent = moveDownDebugConsoleHistory(input);
+  } else if (e.keyCode === KeyCodes.UP) {
+    e.target.textContent = this.history_.goBack(input);
+  } else if (e.keyCode === KeyCodes.DOWN) {
+    e.target.textContent = this.history_.goForward(input);
   }
 };
 
@@ -309,52 +312,6 @@ JsDebuggerUi.prototype.onDebugOutputMouseUp = function (e) {
     debugInput.focus();
   }
 };
-
-//Debug console history
-var consoleHistory = {
-  history: [],
-  currentIndex: 0,
-  maxEntries: 64
-};
-
-function pushDebugConsoleHistory(commandText) {
-  if (consoleHistory.history.length >= consoleHistory.maxEntries) {
-    consoleHistory.history.shift();
-    consoleHistory.currentIndex -= 1;
-  }
-  consoleHistory.currentIndex = consoleHistory.history.length + 1;
-  consoleHistory.history.push(commandText);
-}
-
-function updateDebugConsoleHistory(commandText) {
-  if (typeof consoleHistory.history[consoleHistory.currentIndex]!== 'undefined') {
-    consoleHistory.history[consoleHistory.currentIndex] = commandText;
-  }
-}
-
-function moveUpDebugConsoleHistory(currentInput) {
-  if (consoleHistory.currentIndex > 0) {
-    consoleHistory.currentIndex -= 1;
-  }
-  if (typeof consoleHistory.history[consoleHistory.currentIndex] !== 'undefined') {
-    return consoleHistory.history[consoleHistory.currentIndex];
-  }
-  return currentInput;
-}
-
-function moveDownDebugConsoleHistory(currentInput) {
-  if (consoleHistory.currentIndex < consoleHistory.history.length) {
-    consoleHistory.currentIndex += 1;
-  }
-  if (consoleHistory.currentIndex === consoleHistory.history.length &&
-      currentInput === consoleHistory.history[consoleHistory.currentIndex - 1]) {
-    return '';
-  }
-  if (typeof consoleHistory.history[consoleHistory.currentIndex] !== 'undefined') {
-    return consoleHistory.history[consoleHistory.currentIndex];
-  }
-  return currentInput;
-}
 
 /** @type {boolean} */
 var draggingDebugResizeBar = false;
