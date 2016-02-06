@@ -58,4 +58,21 @@ describe("CommandHistory", function () {
     inputText = history.goForward(inputText);
     assert.equal('', inputText);
   });
+
+  it('stores a maximum of 64 commands', function () {
+    var i;
+    for (i = 0; i < 65; i++) {
+      history.push(i.toString());
+    }
+
+    // First 64 commands walking backward show up
+    for (i = 64; i >= 1; i--) {
+      inputText = history.goBack(inputText);
+      assert.equal(i.toString(), inputText);
+    }
+
+    // 65th command does not
+    inputText = history.goBack(inputText);
+    assert.equal('1', inputText);
+  });
 });
