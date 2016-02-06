@@ -63,23 +63,25 @@ module.exports = {
       description: 'drawImageURL with callback',
       editCode: true,
       xml:
+        'console.log("drawImageURl appcode");\n' +
         'createCanvas("canvas", 320, 450);\n' +
         'textLabel("result1", "");\n' +
         'textLabel("result2", "");\n' +
         'drawImageURL("' + imageUrl + '", function (success) {\n' +
-        '  console.log("callback1");\n' +
+        '  console.log("drawImageURl callback1");\n' +
         '  setText("result1", success);\n' +
         '});\n' +
         'drawImageURL("nonexistent.jpg", function (success) {\n' +
-        '  console.log("callback2");\n' +
+        '  console.log("drawImageURl callback2");\n' +
         '  setText("result2", success);\n' +
         '});\n',
       runBeforeClick: function (assert) {
-        console.log('runBeforeClick: ' + !!document.getElementById('divApplab'));
-        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
+        console.log('drawImageURl runBeforeClick: ' + !!document.getElementById('divApplab'));
+        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated, '-drawImageURl-').then(function () {
+          console.log("drawImageURl: tickAppUntil");
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
-          console.log('onPuzzleComplete');
+          console.log('drawImageURl: onPuzzleComplete');
           Applab.onPuzzleComplete();
         });
       },
@@ -99,31 +101,32 @@ module.exports = {
       description: 'drawImageURL with extra args and callback',
       editCode: true,
       xml:
+        'console.log("drawImageURlExtra appcode");\n' +
         'createCanvas("canvas", 320, 450);\n' +
         'textLabel("result1", "");\n' +
         'textLabel("result2", "");\n' +
         'drawImageURL("' + imageUrl + '", 5, 10, 15, 20, function (success) {\n' +
-        '  console.log("callback1 extra");\n' +
+        '  console.log("drawImageURlExtra callback1");\n' +
         '  setText("result1", success);\n' +
         '});\n' +
         'drawImageURL("nonexistent.jpg", 5, 10, 15, 20, function (success) {\n' +
-        '  console.log("callback1 extra");\n' +
+        '  console.log("drawImageURlExtra callback1");\n' +
         '  setText("result2", success);\n' +
         '});\n',
       runBeforeClick: function (assert) {
-        console.log('drawImageURL with extra args and callback');
-        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated).then(function () {
-          console.log('extra tickAppUtil');
+        console.log('drawImageURlExtra  runbeforeclick ' + !!document.getElementById('divApplab'));
+        testUtils.tickAppUntil(Applab, canvasAndResultsPopulated, '-drawImageURlExtra-').then(function () {
+          console.log('drawImageURlExtra  tickAppUtil');
           assert.equal(document.getElementById('result1').textContent, "true");
           assert.equal(document.getElementById('result2').textContent, "false");
-          console.log('extra complete');
+          console.log('drawImageURlExtra complete');
           Applab.onPuzzleComplete();
         });
       },
       customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        // assert.equal(debugOutput.textContent, "");
         return true;
       },
       expected: {
@@ -136,20 +139,21 @@ module.exports = {
       description: 'receives movementX and movementY in mousemove events',
       editCode: true,
       xml:
+        'console.log("drawImageURlExtra appcode");\n' +
         'createCanvas("canvas1", 320, 450);' +
         'textLabel("movementX", "");' +
         'textLabel("movementY", "");' +
         'onEvent("canvas1", "mousemove", function(event) {' +
-        '  console.log("onEvent in move x/y");\n' +
+        '  console.log("moveXY onEvent");\n' +
         '  setText("movementX", event.movementX);\n' +
         '  setText("movementY", event.movementY);\n' +
         '});',
       runBeforeClick: function (assert) {
-        console.log('receives movementX and movementY in mousemove events');
+        console.log('moveXY runbeforeclick');
         // add a completion on timeout since this is a freeplay level
         // provide time for image to load
         testUtils.runOnAppTick(Applab, 10, function () {
-          console.log('move xy runonapptick');
+          console.log('moveXY runonapptick');
           var point1 = {x: 1, y: 1};
           var point2 = {x: 100, y: 200};
           var point3 = {x: 110, y: 220};
@@ -181,14 +185,14 @@ module.exports = {
           assert.equal($('#movementX')[0].textContent, '1');
           assert.equal($('#movementY')[0].textContent, '2');
 
-          console.log('move xy complete');
+          console.log('moveXY complete');
           Applab.onPuzzleComplete();
         });
       },
       customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        // assert.equal(debugOutput.textContent, "");
         return true;
       },
       expected: {
