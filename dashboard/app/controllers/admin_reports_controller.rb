@@ -18,7 +18,7 @@ class AdminReportsController < ApplicationController
   def funometer
     require 'cdo/properties'
     @stats = Properties.get(:funometer)
-    @ratings_by_day = @stats['ratings_by_day']
+    @ratings_by_day = @stats['ratings_by_day'] if @stats.present?
   end
 
   def funometer_by_script
