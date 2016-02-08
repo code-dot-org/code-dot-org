@@ -29,19 +29,27 @@ var Pairing = function (React) {
   var StudentSelector = React.createClass({
     getInitialState: function() {
       return {
-        selectedStudentIds: {}
+        selectedStudentIds: []
       };
     },
 
     handleStudentClicked: function(event) {
       var selectedStudentIds = this.state.selectedStudentIds;
       var studentId = $(event.target).data('id');
-      if (selectedStudentIds[studentId]) {
-        delete selectedStudentIds[studentId];
+      var index = selectedStudentIds.indexOf(studentId);
+      if (index === -1) {
+        // not selected, select it
+        selectedStudentIds.push(studentId);
       } else {
-        selectedStudentIds[studentId] = true;
+        // selected, unselect it
+        selectedStudentIds.splice(index, 1);
       }
       this.setState({selectedStudentIds: selectedStudentIds});
+    },
+
+    handleSubmit: function(event) {
+      this.props.handleSubmit(this.state.selectedStudentIds);
+      event.preventDefault();
     },
 
     render: function() {
@@ -50,9 +58,9 @@ var Pairing = function (React) {
       }
 
       var studentDivs = this.props.students.map(function (student) {
-        var className = "student";
-        if (this.state.selectedStudentIds[student.id]) {
-          className = "student selected";
+        var className = "student selectable";
+        if (this.state.selectedStudentIds.indexOf(student.id) !== -1) {
+          className = "student selectable selected";
         }
         return <div key={student.id} data-id={student.id} className={className} onClick={this.handleStudentClicked}>{student.name}</div>;
       }.bind(this));
@@ -61,7 +69,7 @@ var Pairing = function (React) {
           <div>
            {studentDivs}
            <div className="clear"/>
-          <button onClick={this.handleSubmit} disabled={$.isEmptyObject(this.state.selectedStudentIds)}>Submit</button>
+          <button onClick={this.handleSubmit} disabled={this.state.selectedStudentIds.length === 0}>Add Partners</button>
           </div>
       );
     },
@@ -83,9 +91,8 @@ var Pairing = function (React) {
 
     getInitialState: function() {
       return {
-        pairings: {},
+        pairings: this.props.pairings,
         selectedSectionId: '',
-        selectedStudentIds: {}
       };
     },
 
@@ -96,12 +103,31 @@ var Pairing = function (React) {
     },
 
     handleSectionChange: function(event) {
-      this.setState({selectedSectionId: event.target.value,
-                     selectedStudentIds: {}
-                    });
+      this.setState({
+        pairings: [],
+        selectedSectionId: event.target.value,
+      });
     },
 
-    handleSubmit: function (event) {
+    handleAddPartners: function (studentIds) {
+      var pairings = [];
+      this.selectedSection().students.map(function (student) {
+        if (studentIds.indexOf(student.id) !== -1) {
+          pairings.push(student);
+        }
+      });
+
+      this.setState({
+        pairings: pairings,
+        selectedSectionId: this.selectedSectionId(),
+      });
+    },
+
+    handleStop: function (event) {
+      this.setState({
+        pairings: [],
+        selectedSectionId: '',
+      });
       event.preventDefault();
     },
 
@@ -132,10 +158,12 @@ var Pairing = function (React) {
       return null;
     },
 
-    render: function () {
+
+    renderPairingSelector: function () {
       return (
         <div style={{width: DROPDOWN_WIDTH}}>
-          <h2>Pair programming</h2>
+          <h1>Pair programming</h1>
+          <h2>Choose partners:</h2>
           <br/>
           <form>
           <input type="hidden" name="authenticity_token" value={this.props.csrfToken}/>
@@ -144,11 +172,37 @@ var Pairing = function (React) {
                            handleChange={this.handleSectionChange}
            />
           <div className="clear"/>
-          <StudentSelector students={this.studentsInSection()}/>
+          <StudentSelector students={this.studentsInSection()} handleSubmit={this.handleAddPartners}/>
           </form>
+          <a href="/">Cancel</a>
         </div>
       );
-    }
+    },
+
+    renderPairingState: function() {
+      return (
+        <div style={{width: DROPDOWN_WIDTH}}>
+          <h1>Pair Programming</h1>
+          <h2>You are Pair Programming with:</h2>
+          {
+            this.state.pairings.map(function (student) {
+              return <div key={student.id} data-id={student.id} className='student'>{student.name}</div>;
+            })
+          }
+          <div className="clear"/>
+          <button className="stop" onClick={this.handleStop}>Stop Pair Programming</button>
+          <a href="/">Cancel</a>
+        </div>
+      );
+    },
+
+    render: function () {
+      if (this.state.pairings.length === 0) {
+        return this.renderPairingSelector();
+      } else {
+        return this.renderPairingState();
+      }
+    },
   });
 };
 
