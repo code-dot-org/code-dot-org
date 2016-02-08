@@ -148,4 +148,81 @@ describe('Pairing component for student in one section', function(){
 
   });
 
+  it('should let you select a student and add them as a partner', function() {
+    render(props);
+
+    assert.equal(2, numberOfStudents());
+    assert.equal(0, numberOfSelectedStudents());
+    assert(isSubmitButtonDisabled());
+
+    // click on first student to select
+    TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
+    assert.equal(2, numberOfStudents());
+    assert.equal(1, numberOfSelectedStudents());
+    assert(! isSubmitButtonDisabled());
+
+    // click on Add Partner to confirm
+    TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(component, 'button'));
+
+    // show only selected student
+    assert.equal(1, numberOfStudents());
+  });
+
+
+});
+
+describe('Pairing component for student who is currently pairing', function(){
+  var div;
+  var component;
+
+  var props = {
+    sections: [{id: 1, name: "A section", students: [{id: 11, name: "First student"}, {id: 12, name: "Second Student"}]},
+               {id: 56, name: "Another section"}],
+    pairings: [{id: 546, name: "Josh"}, {id: 563, name: "Charing"}, {id: 96747, name: "Andrew O."}]
+  };
+
+  function render(props) {
+    component = React.render(React.createElement(Pairing, props), div);
+  }
+
+  beforeEach(function () {
+    div = document.createElement("div");
+  });
+
+  afterEach(function () {
+    if (div) {
+      React.unmountComponentAtNode(div);
+      component = null;
+    }
+  });
+
+  function numberOfStudents() {
+    return TestUtils.scryRenderedDOMComponentsWithClass(component, 'student').length;
+  }
+
+  it('should not render a section dropdown', function() {
+    render(props);
+
+    assert.equal(0, TestUtils.scryRenderedDOMComponentsWithTag(component, 'select').length);
+  });
+
+
+  it('should render a list of students', function() {
+    render(props);
+
+    assert.equal(3, numberOfStudents());
+  });
+
+  it('should remove all students and go back to selection mode when clicking Stop', function() {
+    render(props);
+
+    assert.equal(3, numberOfStudents());
+
+    // click on stop button
+    TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(component, 'stop'));
+
+    assert.equal(0, numberOfStudents());
+    assert(TestUtils.findRenderedDOMComponentWithTag(component, 'select'));
+  });
+
 });

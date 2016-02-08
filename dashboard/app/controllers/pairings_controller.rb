@@ -10,9 +10,7 @@ class PairingsController < ApplicationController
       }
     end
 
-    @pairings = User.limit(1).map do |user|
-      {id: user.id, name: user.name}
-    end
+    @pairings = [] # read/write this from session
 
     @react_props = {pairings: @pairings, sections: @sections}
   end
