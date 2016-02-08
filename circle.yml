@@ -3,7 +3,6 @@ machine:
     version: 2.2.3
   environment:
     RAILS_ENV: test
-    SPROCKETS_DERAILLEUR_WORKER_COUNT: 2 # CircleCI build VMs have a memory limit of 4G
   services:
     - docker
 dependencies:
