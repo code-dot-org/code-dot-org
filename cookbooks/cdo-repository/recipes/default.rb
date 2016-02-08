@@ -24,7 +24,7 @@ git git_path do
   checkout_branch branch
   revision branch
 
-  action
+  action(
     # Skip git-repo sync when using a shared volume to prevent data loss on the host.
     if GitHelper.shared_volume? git_path, home_path
       :nothing
@@ -37,6 +37,7 @@ git git_path do
     else
       :checkout
     end
+  )
 
   user node[:user]
   group node[:user]
