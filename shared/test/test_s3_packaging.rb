@@ -19,7 +19,7 @@ class S3PackagingTest < Minitest::Test
       FileUtils.mkdir('build')
       File.open('build/output.js', 'w') { |file| file.write("output") }
     end
-    packager = RakeUtils.stub(:git_latest_commit_hash, commit_hash) do
+    packager = RakeUtils.stub(:git_folder_hash, commit_hash) do
       S3Packaging.new('test-package', source_location, target_location)
     end
     [source_location, target_location, packager]

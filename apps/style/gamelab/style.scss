@@ -2,6 +2,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
 @import 'color';
+@import "../JsDebuggerUi.scss";
 
 #divGameLab {
   overflow: hidden;
@@ -25,6 +26,8 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   height: 21px;
   width: 21px;
   background-image: url("#{$root}icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px;
 }
 .code {
   background-position: -21px 0px;

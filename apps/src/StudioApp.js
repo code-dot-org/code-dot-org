@@ -1801,6 +1801,27 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 };
 
 /**
+ * Enable adding/removing breakpoints by clicking in the gutter of the editor.
+ * Prerequisites: Droplet editor must be in use and initialized (e.g. you have
+ * to call handleEditCode_ first).
+ */
+StudioApp.prototype.enableBreakpoints = function () {
+  if (!this.editor) {
+    throw new Error('Droplet editor must be in use to enable breakpoints.');
+  }
+
+  // Set up an event handler to create breakpoints when clicking in the gutter:
+  this.editor.on('guttermousedown', function(e) {
+    var bps = this.editor.getBreakpoints();
+    if (bps[e.line]) {
+      this.editor.clearBreakpoint(e.line);
+    } else {
+      this.editor.setBreakpoint(e.line);
+    }
+  }.bind(this));
+};
+
+/**
  * Set whether to alert user to empty blocks, short-circuiting all other tests.
  * @param {boolean} checkBlocks Whether to check for empty blocks.
  */
