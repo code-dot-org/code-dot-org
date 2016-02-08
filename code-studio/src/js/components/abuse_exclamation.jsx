@@ -1,15 +1,10 @@
-require('./abuse_error.jsx');
-
 /* global React */
-
-window.dashboard = window.dashboard || {};
+var AbuseError = require('./abuse_error.jsx');
 
 /**
  * A big blue box with an exclamation mark on the left and our abuse text on
  * the right.
  */
-var AbuseError = window.dashboard.AbuseError;
-
 var AbuseExclamation = module.exports = React.createClass({
   propTypes: {
     i18n: React.PropTypes.shape({
