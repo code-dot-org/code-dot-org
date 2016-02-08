@@ -42,7 +42,7 @@ module.exports = {
         'setRGB(imgData, 0, 0, 255, 255, 255);\n',
 
       runBeforeClick: function (assert) {
-        console.log('canvas runbeforeclick');
+        console.log('canvas runbeforeclick ');
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
           Applab.onPuzzleComplete();
