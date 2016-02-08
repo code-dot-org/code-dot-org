@@ -4,7 +4,6 @@ require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
 require 'digest'
-require 'sprockets-derailleur'
 
 module RakeUtils
 
@@ -47,10 +46,6 @@ module RakeUtils
     end
   end
 
-  def self.nproc
-    SprocketsDerailleur.worker_count
-  end
-
   def self.bundle_exec(*args)
     system "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', *args
   end
@@ -58,9 +53,9 @@ module RakeUtils
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     if CDO.bundler_use_sudo
-      sudo 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      sudo 'bundle', '--without', *without, '--quiet', *args
     else
-      system 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      system 'bundle', '--without', *without, '--quiet', *args
     end
   end
 
