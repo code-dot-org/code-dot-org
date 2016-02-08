@@ -10,7 +10,7 @@ describe("CommandHistory", function () {
     inputText = '';
   });
 
-  it('moving back through history recounts commands in reverse order', function () {
+  it('recounts commands in reverse order when moving back through history', function () {
     history.push('one');
     history.push('two');
     history.push('three');
@@ -22,7 +22,7 @@ describe("CommandHistory", function () {
     assert.equal('one', inputText);
   });
 
-  it('moving forward through history recounts commands in original order', function () {
+  it('recounts commands in original order when moving forward through history', function () {
     history.push('one');
     history.push('two');
     history.push('three');
@@ -38,7 +38,7 @@ describe("CommandHistory", function () {
     assert.equal('three', inputText);
   });
 
-  it('trying to move back past beginning of history returns beginning of history', function () {
+  it('returns beginning of history when trying to move back past beginning of history', function () {
     history.push('one');
     history.push('two');
     inputText = history.goBack(inputText);
@@ -49,7 +49,7 @@ describe("CommandHistory", function () {
     assert.equal('one', inputText);
   });
 
-  it('moving forward past beginning of history returns empty string', function () {
+  it('returns empty string when moving forward past beginning of history', function () {
     history.push('one');
     inputText = history.goBack(inputText);
     assert.equal('one', inputText);
