@@ -31,7 +31,7 @@ Quarter 2: Saturday, November 21, 2015
 
 Quarter 3: Saturday, January 30, 2016
 
-Quarter 4: Saturday, March 5, 2016
+Quarter 4: Saturday, April 16, 2016
 
 **Please note the time change for future PD's*<br/>
 8:00am - 2:30pm
