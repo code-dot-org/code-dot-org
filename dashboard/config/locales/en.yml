@@ -46,6 +46,7 @@ en:
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
   submit: Submit
+  unsubmit: Unsubmit
   add_teacher_form:
     code:
       label: 'Add a teacher:'
@@ -487,6 +488,13 @@ en:
     wrong_body: "The answer you've entered is not correct.  Please try again!"
     correct_title: "Correct"
     correct_body: "That is the correct answer."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
+  multi-assessment:
+    wrong_title: "Thank you"
+    wrong_body: "Thank you for submitting an answer."
+    correct_title: "Thank you"
+    correct_body: "Thank you for submitting an answer."
     toofew_title: "Too few answers."
     toofew_body: "Please select two answers before submitting."
   match:

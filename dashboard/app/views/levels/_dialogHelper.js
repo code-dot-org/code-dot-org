@@ -128,6 +128,7 @@ window.dashboard.dialog = (function () {
     var response = results.response;
     var result = results.result;
     var errorType = results.errorType;
+    var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
 
     if (!result) {
       showDialog(errorType || "error");
@@ -148,7 +149,7 @@ window.dashboard.dialog = (function () {
       level: appOptions.dialog.level,
       result: result,
       pass: result,
-      testResult: result ? 100 : 0,
+      testResult: testResult,
       onComplete: function () {
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {

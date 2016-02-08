@@ -1,0 +1,12 @@
+name 'Assessments multi'
+title 'Assessment: Multiple choice'
+description ''
+question 'What is your favorite color?'
+assessment 'true'
+
+wrong 'blue'
+wrong 'green'
+wrong 'blue'
+wrong 'yellow'
+right 'real orange of course'
+wrong 'red'

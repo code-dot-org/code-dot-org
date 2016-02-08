@@ -235,6 +235,8 @@ module LevelsHelper
 
     app_options.merge! view_options.camelize_keys
 
+    app_options[:submitted] = level_view_options[:submitted]
+
     app_options
   end
 
