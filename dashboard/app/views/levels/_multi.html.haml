@@ -23,6 +23,8 @@
       .buttons
         %a.btn.btn-large.btn-primary.next-stage.submitButton
           =t('submit')
+        %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none"}
+          =t('unsubmit')
 
     - if data['height'] == 'auto'
       - height = 'auto'
@@ -86,6 +88,28 @@
   // Tracking which answers have been crossed out.
   var crossedAnswers = [];
 
+  var submitAllowed = true;
+
+  // Are we read-only?  This can be because we're a teacher OR because an answer
+  // has been previously submitted.
+  if (window.appOptions.readonlyWorkspace)
+  {
+    // hide the Submit buttons.
+    $('.submitButton').hide();
+
+    // grey out the marks
+    $('.item-mark').css('opacity', 0.5);
+
+    submitAllowed = false;
+
+    // Are we a student viewing their own previously-submitted work?
+    if (window.appOptions.submitted)
+    {
+      // show the Unsubmit button.
+      $('.unsubmitButton').show();
+    }
+  }
+
   function enableButton(enable)
   {
     $('.submitButton').attr('disabled', !enable);
@@ -93,6 +117,11 @@
 
   function choiceClicked(button)
   {
+    if (!submitAllowed)
+    {
+      return;
+    }
+
     var index = $(button).attr('index');
     CDOSounds.play('click');
 
@@ -147,7 +176,7 @@
     return true;
   }
 
-  function unclickItem(index)
+  function unclickItem(ifndex)
   {
     var selectedItemIndex = selectedAnswers.indexOf(index);
     selectedAnswers.splice(selectedItemIndex, 1);
@@ -207,14 +236,32 @@
       answer = selectedAnswers
     }
 
+    var result;
+
+    if ("#{data['assessment']}" == "true")
+    {
+      result = true;
+    }
+    else
+    {
+      result = validateAnswers();
+    }
+
     return {
       "response": answer,
-      "result": validateAnswers(),
-      "errorType": errorType
+      "result": result,
+      "errorType": errorType,
+      "testResult": 1000 // TestResults.FREE_PLAY
     }
   }
 
   $('.submitButton').click(function() {
+    // Don't show right/wrong answers for assessments.
+    if ("#{data['assessment']}" == "true")
+    {
+      return;
+    }
+
     // If the solution only takes one answer, and it's wrong, and it's not
     // already crossed out, then mark it as answered wrong.
     if (numAnswers == 1 &&
@@ -225,6 +272,19 @@
       $("#cross_" + lastSelectionIndex).show();
       crossedAnswers.unshift(lastSelectionIndex);
     }
+  });
+
+  $('.unsubmitButton').click(function() {
+    // show the real Submit buttons.
+    $('.submitButton').show();
+
+    // hide the Unsubmit button.
+    $('.unsubmitButton').hide();
+
+    // make the marks full opacity
+    $('.item-mark').css('opacity', 1);
+
+    submitAllowed = true;
   });
 
   function validateAnswers()
