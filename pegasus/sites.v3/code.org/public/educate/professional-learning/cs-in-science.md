@@ -27,13 +27,13 @@ The goal of this professional learning program is to help teachers to introduce 
 
 - **Phase 1: Online Introduction**
 <br/>
-	- 2 hours online, self-paced
+	- 3 hours online, self-paced
 <br/>
 - **Phase 2: Summer Blended Study**
 <br/>
 	- 2 days (14 hours) in person
 <br/>
-	- 8 hours online, self-paced
+	- 7 hours online, self-paced
 <br/>
 - **Phase 3: Blended Academic Year Development**
 <br/>
