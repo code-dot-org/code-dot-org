@@ -11,6 +11,7 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
+var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 
@@ -32,7 +33,10 @@ var GameLab = function () {
   this.JSInterpreter = null;
 
   /** @private {JsInterpreterLogger} */
-  this.consoleLogger_ = null;
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
+
+  /** @type {JsDebuggerUi} */
+  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -83,7 +87,6 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
@@ -133,13 +136,14 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlRows = require('./extraControlRows.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: !finishButtonFirstLine && showFinishButton
+  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+    showButtons: true,
+    showConsole: true
   });
 
   config.html = page({
@@ -153,18 +157,24 @@ GameLab.prototype.init = function (config) {
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
       blockCounterClass : 'block-counter-default',
+      pinWorkspaceToBottom: true,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
-  config.loadAudio = _.bind(this.loadAudio_, this);
-  config.afterInject = _.bind(this.afterInject_, this, config);
+  config.loadAudio = this.loadAudio_.bind(this);
+  config.afterInject = this.afterInject_.bind(this, config);
+  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
 
   // Store p5specialFunctions in the unusedConfig array so we don't give warnings
   // about these functions not being called:
   config.unusedConfig = this.p5specialFunctions;
 
   this.studioApp_.init(config);
+
+  this.debugger_.initializeAfterDomCreated({
+    defaultStepSpeed: 1
+  });
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -194,6 +204,16 @@ GameLab.prototype.afterInject_ = function (config) {
 
 };
 
+/**
+ * Initialization to run after ace/droplet is initialized.
+ * @param {!boolean} areBreakpointsEnabled
+ * @private
+ */
+GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
+  if (areBreakpointsEnabled) {
+    this.studioApp_.enableBreakpoints();
+  }
+};
 
 /**
  * Reset GameLab to its initial state.
@@ -251,6 +271,7 @@ GameLab.prototype.reset = function (ignore) {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
+  this.debugger_.detach();
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -396,6 +417,7 @@ GameLab.prototype.execute = function() {
     });
     this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
     this.consoleLogger_.attachTo(this.JSInterpreter);
+    this.debugger_.attachTo(this.JSInterpreter);
     this.JSInterpreter.parse({
       code: this.studioApp_.getCode(),
       blocks: dropletConfig.blocks,
