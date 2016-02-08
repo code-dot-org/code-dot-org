@@ -2184,23 +2184,32 @@ $width: 400px;
   }
 }
 
-div#tryHoc {
-  font-size: 20px;
+div#main-logo {
   padding: 10px 15px;
-  text-align: right;
-  margin:0;
-  right: 0;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+  font-size: 1.275em;
+  position: fixed;
+  z-index: 1000;
+
   a {
-    color: #999;
+    color: #949ca2;
+    &:hover {
+      text-decoration: none;
+    }
   }
-  a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  img#hocLogo {
-    width:40px;
+
+  div#logo-container {
+    padding: 4px 4px;
+    background-color: #949ca2;
+    width: 60px;
+    border-radius: 5px;
+    margin-bottom: 4px;
   }
 }
+
 
 #environment_tag {
   position: fixed;
