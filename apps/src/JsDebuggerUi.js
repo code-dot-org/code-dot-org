@@ -63,15 +63,16 @@ var JsDebuggerUi = module.exports = function (runApp) {
 /**
  * Generate DOM element markup from an ejs file for the debug area.
  * @param {!function} assetUrl - Helper for getting asset URLs.
- * @param {!boolean} showButtons - Whether to show the debug buttons
- * @param {!boolean} showConsole - Whether to show the debug console
+ * @param {!Object} options
+ * @param {!boolean} options.showButtons - Whether to show the debug buttons
+ * @param {!boolean} options.showConsole - Whether to show the debug console
  * @returns {string} of HTML markup to be embedded in page.html.ejs
  */
-JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole) {
+JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
   return require('./JsDebuggerUi.html.ejs')({
     assetUrl: assetUrl,
-    debugButtons: showButtons,
-    debugConsole: showConsole
+    debugButtons: options.showButtons,
+    debugConsole: options.showConsole
   });
 };
 
