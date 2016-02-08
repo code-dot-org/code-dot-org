@@ -24,13 +24,19 @@ git git_path do
   checkout_branch branch
   revision branch
 
-  # Default checkout-only for CI-managed instances. (CI script manages pull on updates)
-  action = :checkout
-  # Sync instead of checkout for adhoc instances that aren't CI-managed.
-  action = :sync if node.chef_environment == 'adhoc'
-  # Skip git-repo sync when using a shared volume to prevent data loss on the host.
-  action = :nothing if GitHelper.shared_volume?(git_path, home_path)
-  action action
+  action
+    # Skip git-repo sync when using a shared volume to prevent data loss on the host.
+    if GitHelper.shared_volume? git_path, home_path
+      :nothing
+
+    # Sync instead of checkout for adhoc instances that aren't CI-managed.
+    elsif node.chef_environment == 'adhoc'
+      :sync
+
+    # Default checkout-only for CI-managed instances. (CI script manages pull on updates)
+    else
+      :checkout
+    end
 
   user node[:user]
   group node[:user]
