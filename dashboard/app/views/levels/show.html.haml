@@ -3,14 +3,6 @@
 = render partial: 'shared/check_admin'
 = render partial: 'shared/sharing_meta_tags'
 
-- if params[:share] && browser.safari?
-  :javascript
-    if (!window.navigator.standalone) {
-      window.addEventListener("load", function() {
-        addToHome.show(true);
-      }, false);
-    }
-
 #notes-content{style: 'display: none;'}
   %ul
     %li

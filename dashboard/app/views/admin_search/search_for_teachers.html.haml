@@ -29,6 +29,12 @@
         %input.radio{type: "radio", name: "pd", id: "pd-all", value: "all", checked: true} All
         %input.radio{type: "radio", name: "pd", id: "pd-pd", value: "pd"} PD
         %input.radio{type: "radio", name: "pd", id: "pd-nopd", value: "nopd"} No PD
+    %tr
+      %td
+        Filter on whether they have unsubscribed
+      %td
+        %input.radio{type: "radio", name: "unsubscribe", id: "unsubscribe-all", value: "", checked: true} All Users
+        %input.radio{type: "radio", name: "unsubscribe", id: "unsubscribe-subscribers", value: "filter"} Subscribers Only
 
   %br/
 
