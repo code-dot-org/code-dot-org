@@ -1,4 +1,4 @@
-/** @file Provide browseable command history to a textbox with limited depth. */
+/** @file Provide browsable command history to a textbox with limited depth. */
 // Strict linting: Absorb into global config when possible
 /* jshint
  unused: true,
@@ -29,7 +29,9 @@ var CommandHistory = module.exports = function () {
 };
 
 /**
- * Add the given command to the current command history.
+ * Add the given command to the current command history.  If the command
+ * history has already reached its maximum depth, the oldest command will
+ * drop off so that the newest command can be added.
  * @param {string} command
  */
 CommandHistory.prototype.push = function (command) {
