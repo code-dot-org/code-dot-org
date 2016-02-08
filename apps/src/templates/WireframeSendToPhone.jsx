@@ -52,7 +52,7 @@ module.exports = React.createClass({
     return (
       <div style={styles.main}>
         {this.renderSendToPhone()}
-        <a className="send-to-phone-link" href="#" onClick={this.handleClick}>
+        <a className="WireframeSendToPhone_send-to-phone-link" href="#" onClick={this.handleClick}>
           <i style={styles.icon} className="fa fa-mobile"/> See this app on your phone
         </a>
       </div>
