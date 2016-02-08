@@ -501,8 +501,8 @@ ActiveRecord::Schema.define(version: 20160205205103) do
     t.string   "status",                          limit: 255
   end
 
-  add_index "user_course_enrollments", ["professional_learning_course_id"], name: "index_user_course_enrollments_on_professional_learning_course_id", using: :btree
-  add_index "user_course_enrollments", ["user_id"], name: "index_user_course_enrollments_on_user_id", using: :btree
+  add_index "user_course_enrollments", ["professional_learning_course_id"], name: "user_course_enrollment_plc_id_index", using: :btree
+  add_index "user_course_enrollments", ["user_id"], name: "user_course_enrollment_user_index", using: :btree
 
   create_table "user_enrollment_module_assignments", force: :cascade do |t|
     t.integer  "learning_module_id",        limit: 4
