@@ -46,6 +46,6 @@ Any middle school math teacher who's district is partnered with Code.org.
 
 ## <a name="locations"></a>Where is the program offered?
 
-We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS Principles. If your school district is not partnered with Code.org (or even if it is), you can also contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra.
+We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS in Algebra. If your school district is not partnered with Code.org (or even if it is), you can also contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra.
 
 [<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-apply)

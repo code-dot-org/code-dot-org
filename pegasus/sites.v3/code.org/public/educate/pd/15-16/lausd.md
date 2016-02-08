@@ -27,23 +27,25 @@ Quarter 2: Saturday, November 21, 2015
 
 Quarter 3: Saturday, January 30, 2016 
 
-Quarter 4: Saturday, March 5, 2016
+Quarter 4: Saturday, April 9, 2016
 
 8:30am - 3:30pm
 <br/>
 Breakfast and lunch will be served.
 
-**January 30th Location**
+**April 9th Location**
 
-[9 Dots<br/>
-931 N Highland Avenue<br/>
-Los Angeles, CA, 90038<br/>](https://www.google.com/maps/place/9+Dots/@34.0880332,-118.3389293,15z/data=!4m2!3m1!1s0x0:0x2efadb41115b9452?sa=X&ved=0CHAQ_BIwCmoVChMImdnXi9WYyQIVUKOICh2aQglh)
+[Google<br/> 340 Main St<br/>
+Los Angeles, CA 90291](https://www.google.com/maps/place/Google+Venice,+340+Main+St,+Venice,+CA+90291/@33.9958697,-118.4788045,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2bacf16b3cbf5:0x31fc6f8820c621e)
 
-(323) 524-8328 <br/>
+The parking garage is located underground.  Please pull under the binoculars in front of the building on Main Street (yes we are the "binocular building"), push the button on the keypad to the left in front of the gate, and let Reception/Security know you are here to meet with Jen Barth for Code.org event.  They will buzz you in.<br/>
 
-Free parking lot available in the back of the building surrounded by a wooden fence. The parking entrance is in the alleyway between Highland Ave and Citrus Ave. See parking map here: [https://code.org/images/9-dots-parking-map.png](/images/9-dots-parking-map.png)
+Drive to the valet on level B (located 2nd floor down) and they will guide you to open parking spots in the structure or valet your car for you.  Take the elevator to the first floor and check-in with reception.  Jen Barth from Google will greet you there.  <Br/>
 
-If the lot is full, there is plenty of street parking around the block. 
+Please feel free to call Jen's cell if you have any trouble getting here.<Br/>
+(646) 489-7459<br/>
+
+
 
 **What to bring to Phase 3 quarterly sessions:**
 
@@ -98,9 +100,10 @@ Breakfast and lunch will be served.
 **February 20th Location**
 
 [Alliance Leichtman-Levine Family Foundation Environmental Science High School<br/>
-Room TBD<br/>
+Room A138<br/>
 2930 Fletcher Drive<br/>
 Los Angeles, CA 90065](https://www.google.com/maps/place/2930+Fletcher+Dr,+Los+Angeles,+CA+90065/@34.1139623,-118.2487635,17z/data=!3m1!4b1!4m2!3m1!1s0x80c2c12eb4153f6b:0x1203f5b40ab9eab0)
+
 
 Plenty of free parking is available.
 
