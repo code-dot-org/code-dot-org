@@ -50,9 +50,7 @@ CommandHistory.prototype.push = function (command) {
  * @returns {string}
  */
 CommandHistory.prototype.goBack = function (currentInput) {
-  if (typeof this.commands_[this.currentIndex_]!== 'undefined') {
-    this.commands_[this.currentIndex_] = currentInput;
-  }
+  this.alterHistory_(this.currentIndex_, currentInput);
 
   if (this.currentIndex_ > 0) {
     this.currentIndex_ -= 1;
@@ -70,9 +68,7 @@ CommandHistory.prototype.goBack = function (currentInput) {
  * @returns {string}
  */
 CommandHistory.prototype.goForward = function (currentInput) {
-  if (typeof this.commands_[this.currentIndex_]!== 'undefined') {
-    this.commands_[this.currentIndex_] = currentInput;
-  }
+  this.alterHistory_(this.currentIndex_, currentInput);
 
   if (this.currentIndex_ < this.commands_.length) {
     this.currentIndex_ += 1;
@@ -85,4 +81,17 @@ CommandHistory.prototype.goForward = function (currentInput) {
     return this.commands_[this.currentIndex_];
   }
   return currentInput;
+};
+
+/**
+ * Overwrites the currently viewed command entry in the history with a new
+ * value.  Will do nothing if attempting overwrite an empty entry.
+ * @param {!number} index - position in command history to rewrite
+ * @param {!string} newValue
+ * @private
+ */
+CommandHistory.prototype.alterHistory_ = function (index, newValue) {
+  if (this.commands_[index] !== undefined) {
+    this.commands_[index] = newValue;
+  }
 };
