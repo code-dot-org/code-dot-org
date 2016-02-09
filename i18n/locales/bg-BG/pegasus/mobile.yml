@@ -58,11 +58,6 @@ bg-BG:
   congratulations: Поздравления!
   congratulations_on_completing_hoc: Поздравления за завършване на предизвикателството Един Час Кодиране
   congratulations_volunteer: 'Поздравления: сега, когато сте опитали Hour of Code, <a href="https://code.org/volunteer"> регистрирайте се като доброволци в класната стая</a> и помогнете на учениците да учат с Hour of Code!'
-  course_name_accelerated: Ускорен курс
-  course_name_course1: Курс 1
-  course_name_course2: Курс 2
-  course_name_course3: Курс 3
-  course_name_course4: Курс 4
   congratulations_on_completing_course: 'Поздравления за завършване на %{course}'
   congrats_next_tutorials_title: Опитайте тези уроци
   congrats_next_tutorials_desc: 'Опитайте тези кратки, едночасови уроци или пробвайте <a href="%{current_path}/next"> партньорските предложения</a>.'
@@ -113,9 +108,9 @@ bg-BG:
   learn_next_level: Опитайте друг курс от Студиото по кодиране
   learn_online: Опитайте други курсове онлайн
   learn_classes: Намерете местни класове
-  hoc_is_here: '#HourOfCode е тук - вижте го! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Преди малко завърших #HourOfCode - вижте го! @codeorg'
-  twitter_teach_cs: Защо да не се преподава информатика в повече училища? Можем да поправим това. http://Youtu.be/nKIu9yen5nc. Посетете http://code.org/, за да научите повече.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: 'Научете се да програмирате с "Часът на кодирането"'
   beyond_hoc: След Часа по Кодиране
   what_gender: Какъв пол сте?
@@ -191,7 +186,7 @@ bg-BG:
   homepage_banner_text_link: Научете повече
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Научете повече
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20 000 учители са обучени, а сега ще преподават компютърни науки в класните стаи.
   homepage_banner_20k_teachers_link: Научете повече
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Всеки може да се научи. Започнете днес
@@ -201,7 +196,7 @@ bg-BG:
   homepage_solot_text_link_volunteer: Доброволец за Часа на кода
   homepage_slot_text_title_students: Ученици
   homepage_slot_text_blurb_students: Разгледайте всички наши уроци
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Разгледайте нашите курсове
   homepage_slot_text_link_codestudio: Опитайте Студиото по кодиране
   homepage_slot_text_link_local: 'Намерете  клас в близост до Вас'
   homepage_slot_text_link_othercourses: Други онлайн курсове
@@ -525,7 +520,7 @@ bg-BG:
   dashboard_faq_k5: K-5 често задавани въпроси
   dashboard_announcements: Съобщения
   dashboard_announce_view_all: Преглед на всички
-  dashboard_announce_message: '<b>16 декември 2015</b> - Благодарим ви за участието в Hour of Code 2015! Проследяването и записването на прогреса сега е възможно във всички код студио уроци и курсове. Забележка: Code.org уроците няма да са достъпни в периода 19 декември - 3 януари. Моля очаквайте забавени отговори на всички въпроси, които сте задали до 4 януари.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Научете повече
   dashboard_announce_hoc: '<b>Ноември 23, 2015</b> - часът на кода 2015 идва! Присъединете се към класните стаи по целия свят за най-голямото обучително събитие в историята.'
   dashboard_announce_playlab: '<b>4 декември 2015 г.</b> -Hour of Code е тук! Опитайте тези 50 урока за всяка възраст и всяко устройство. Новото тази седмица: Програмирай свои собствени истории и игри в новата Игрална лаборатория, Ледена епоха и Гъмбол.'

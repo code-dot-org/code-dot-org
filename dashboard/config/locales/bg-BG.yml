@@ -29,8 +29,8 @@
     code:
       label: "Добавете учител:"
       placeholder: "Код по раздел(ABCDEF)"
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Моля въведете кода, споделен от вашия учител. Това е код от 6
+        букви като "ABCDEF".
     submit: "Добавяне на учител"
   add_hint_form:
     placeholder: "Моля, въведете вашата препоръка"

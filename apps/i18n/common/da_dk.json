@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "Kalder en navngiven funktion, der tager en eller flere parametre",
   "dropletBlock_callMyFunction_n_signatureOverride": "Kald en funktion med parametre",
   "dropletBlock_callMyFunction_signatureOverride": "Kald en funktion",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Opret en variabel og initialisér den som en matrix",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +255,5 @@
   "watchVideo": "Se videoen",
   "when": "når",
   "whenRun": "når programmet kører",
-  "workspaceHeaderShort": "Arbejdsområde: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Arbejdsområde: "
 }

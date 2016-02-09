@@ -72,11 +72,6 @@
   congratulations_on_completing_hoc: "تهانينا على اكمالك ساعة واحدة من البرمجة"
   congratulations_volunteer: 'تهاني: الآن بعد أن جربت "ساعة من البرمجة"، <a href="https://code.org/volunteer">
     قم بالتسجيل للتطوع في الفصول دراسية</a> ومساعدة الطلاب تعلم "ساعة البرمجة"!'
-  course_name_accelerated: "دورة تدريبية مسرّعة"
-  course_name_course1: "الدرس الأول"
-  course_name_course2: "الدورة الثانية"
-  course_name_course3: "الدورة الثالثة"
-  course_name_course4: "الدورة 4"
   congratulations_on_completing_course: "تهانينا على إكمال %{course}"
   congrats_next_tutorials_title: "جرب هذه الدروس بعد ذلك"
   congrats_next_tutorials_desc: جرب هذه الدروس الأقصر و التي تدوم ساعة واحدة ، أو

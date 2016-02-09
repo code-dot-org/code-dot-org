@@ -61,11 +61,6 @@ kk-KZ:
   congratulations: Құттықтаймыз!
   congratulations_on_completing_hoc: Код Жазу Сағатының бір бөлімінің бітуімен құттықтаймыз
   congratulations_volunteer: 'Құттықтаймыз, енді сіз <a href="https://code.org/volunteer"> "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге көмектесіңіз!'
-  course_name_accelerated: Жеделдетілген курс
-  course_name_course1: Курс 1
-  course_name_course2: Курс 2
-  course_name_course3: Курс 3
-  course_name_course4: Курс 4
   congratulations_on_completing_course: '%{course} бітіруіңізбен құттықтаймыз'
   congrats_next_tutorials_title: Келесі
   congrats_next_tutorials_desc: '1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің сабақтарын</a> өтіп көріңіз.'
@@ -116,9 +111,9 @@ kk-KZ:
   learn_next_level: Келесі деңгейге өту
   learn_online: Біздің басқа да онлайн курстарымызды көріңіз
   learn_classes: Бағдарламалауды үйрететін ұйымдарды іздеу
-  hoc_is_here: '#HourOfCode осы жерде - көріңіз! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Мен #HourOfCode бітірдім- көріңіз! @codeorg'
-  twitter_teach_cs: Не себепті кейбір мектептерде информатика оқытылмайды? Біз бұл олқылықты түзете аламыз ttp://youtu.be/nKIu9yen5nc. Көбірек ақпарат алу үшін http://code.org/ біздің сайтқа кіріңіз.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Код жазу Сағатымен бағдарламалауды үйреніңіз
   beyond_hoc: Бірінші сағаттан кейін
   what_gender: Сіздің жынысыңыз қандай?
@@ -528,7 +523,7 @@ kk-KZ:
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: Хабарландыру
   dashboard_announce_view_all: Барлығын көру
-  dashboard_announce_message: '<b>16желтоқасан 2015 жыл</b> - Бағдарламалау сағаты 2015 іс-шарасына қатысқаны үшін сізге алғыс білдіреміз! Үдерісті сақтау және бақылау енді барлық код студияларында, сабақтарда және курстарда қайта жүргізідуде. Ескерту: Code.org кеңселері 19 желтоқсан - 3 қараша аралығында жабық болады. Өтінеміз, өзіңіз жазған кез елген сұрақтың жауабын 4 желтоқсанға дейін күтіңіз.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: толығырақ білу
   dashboard_announce_hoc: '<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында басталады! Бүкіләлемдік тарихи оқу шарасына қатыс.'
   dashboard_announce_playlab: '<b>4 желтоқсан 2015 жыл</b> - Бағдарламалау сағаты осы жерде! Кез келген жасқа және құрылғыға арналған 50 нұсқаулықтарды қарап көріңіз. Апта жаңалығы: жаңғыртылған Ойындар Лабороториясы, Мұз дәуірі, және Гамболдың таңғажайып әлемінде өзіңнің жеке ойындарың мен әңгімелеріңді бағдарламала.'

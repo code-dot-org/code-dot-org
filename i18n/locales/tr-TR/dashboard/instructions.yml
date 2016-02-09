@@ -310,9 +310,7 @@ tr:
       4-5 Artist Patterns 4_instruction: |
         This diamond has 50 pixel sides and angles
         of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
+      4-5 Artist Patterns 5.5_instruction: Bu elması tam çizmek için kaç kere tekrar etmen gerekiyor?
       4-5 Artist Patterns 5_instruction: |
         Let's repeat that to make a row of 6 diamonds.
         Notice that we changed our diamond code to repeat 3 times instead of 2 - why
@@ -385,10 +383,7 @@ tr:
         Remember that purple flowers can have
         3, 2, or 1 nectars. Complete the "check purple flower" function and use
         it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write inside the function "check flower
-        make honey". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey.
+      4-5 Bee Conditionals 8_instruction: 'Fonksiyonun içine "çiçekler bal yapar" yaz. Fonksiyonunu kontrol etmelisin eğer çiçek morsa has 3, 2, or 1 nectar and collect all of the nectar. Then, move forward and make honey.'
       4-5 Bee Conditionals Assessment 1_instruction: |
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
@@ -3384,9 +3379,9 @@ tr:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

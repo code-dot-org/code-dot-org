@@ -20,8 +20,8 @@ es-ES:
   submit: Enviar
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: ¿Terminaste tu primera Hora de Código? Conoce más sobre informática y conceptos de programación en este curso de seguimiento.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Todos los niños merecen oportunidades
+  og_description: Cada estudiante en cada escuela merece la oportunidad de estudiar computación.
   hoc2014_heading: 'Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre 8 - 14, 2014<br/>'
   hoc2014_students: Alumnos
   hoc2014_try: Pruébalo
@@ -58,11 +58,6 @@ es-ES:
   congratulations: Felicidades!
   congratulations_on_completing_hoc: Felicitaciones por completar una Hora del Código
   congratulations_volunteer: 'Felicidades: ahora que has probado la Hora del Código, <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a> y ayuda a estudiantes a aprender una Hora de Código!'
-  course_name_accelerated: Curso acelerado
-  course_name_course1: Curso 1
-  course_name_course2: Curso 2
-  course_name_course3: Curso 3
-  course_name_course4: Curso 4
   congratulations_on_completing_course: 'Felicitaciones por completar %{course}'
   congrats_next_tutorials_title: Prueba estos tutoriales a continuaciòn
   congrats_next_tutorials_desc: 'Prueba estos tutoriales más cortos de una hora o prueba un <a href="%{current_path}/next">tutorial para colaboradores</a>.'
@@ -113,9 +108,9 @@ es-ES:
   learn_next_level: Continuar al siguiente nivel
   learn_online: Pruebe otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
-  hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Yo he terminado the HourofCode - Dale un vistazo! @codeorg'
-  twitter_teach_cs: '¿Por qué no hay más escuelas que enseñen ciencias de la  computación? Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para obtener más información.'
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de Una Hora
   what_gender: ¿Cual es tu sexo?
@@ -205,7 +200,7 @@ es-ES:
   homepage_banner_text_link: Aprende más
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Aprende más
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20.000 profesores capacitados, y actualmente enseñando computación en las aulas.
   homepage_banner_20k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
@@ -215,7 +210,7 @@ es-ES:
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
   homepage_slot_text_title_students: Alumnos
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explora nuestros cursos
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
@@ -304,7 +299,7 @@ es-ES:
     Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
   volunteer_engineer_submission_intro_links: '¿No está buscando ser voluntario? <a href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Actualice su información
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
@@ -539,7 +534,7 @@ es-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todo
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Aprende más
   dashboard_announce_hoc: '<b>15 de Octubre, 2015</b> - Se viene la Hora de Código &mdash; cada organizador que participe recibirá una tarjeta de regalo de Amazon.com o de Microsoft Windows Store como agradecimiento. Únete a aulas en todo el mundo del 7 al 13 de Diciembre.'
   dashboard_announce_playlab: '<b> 04 de diciembre 2015 </b> - ¡La Hora del Código ya está aquí! Prueba 50 tutoriales para todas las edades y todos los dispositivos. Novedades de esta semana: Códigos de tus propias historias y juegos en los nuevos laboratorios de reproducción, edad de hielo y Gumball.'
