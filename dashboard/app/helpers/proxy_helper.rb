@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 
 module ProxyHelper
-  def render_proxied_url(location, allowed_content_types, expiry_time, infer_content_type = false, redirect_limit = 5)
+  def render_proxied_url(location, allowed_content_types:, expiry_time:, infer_content_type:, redirect_limit: 5)
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
       return
@@ -30,7 +30,12 @@ module ProxyHelper
 
     if media.kind_of? Net::HTTPRedirection
       # Follow up to five redirects.
-      render_proxied_url(media['location'], allowed_content_types, expiry_time, infer_content_type, redirect_limit - 1)
+      render_proxied_url(
+          media['location'],
+          allowed_content_types: allowed_content_types,
+          expiry_time: expiry_time,
+          infer_content_type: infer_content_type,
+          redirect_limit: redirect_limit - 1)
 
     elsif !media.kind_of? Net::HTTPSuccess
       # Pass through failure codes.

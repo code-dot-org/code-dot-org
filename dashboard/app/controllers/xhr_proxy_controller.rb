@@ -21,6 +21,10 @@ class XhrProxyController < ApplicationController
 
   # Return the proxied api at the given URL.
   def get
-    render_proxied_url(params[:u], ALLOWED_CONTENT_TYPES, EXPIRY_TIME, false)
+    render_proxied_url(
+        params[:u],
+        allowed_content_types: ALLOWED_CONTENT_TYPES,
+        expiry_time: EXPIRY_TIME,
+        infer_content_type: false)
   end
 end
