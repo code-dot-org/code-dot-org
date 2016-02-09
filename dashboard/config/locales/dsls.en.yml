@@ -214,6 +214,12 @@ en:
       CSPPD3-u4 breakdown of u4 chunks: {}
       CSPPD3-u4 challenge overview: {}
       CSPPD3-u4 chapter 1 concepts: {}
+      CSPPD3-u4 chapter 1 resources: {}
+      CSPPD3-u4 chapter 1 resources pt2: {}
+      CSPPD3-u4 chapter 1 resources pt3: {}
+      CSPPD3-u4 chapter 1 resources pt4: {}
+      CSPPD3-u4 chapter 2 chunk 1: {}
+      CSPPD3-u4 chapter 2 chunk 2: {}
       CSPPD3-u4 chapter 2 concepts: {}
       CSPPD3-u4 complete the challenge overview: {}
       CSPPD3-u4 completing the challenge: {}
@@ -229,6 +235,8 @@ en:
       CSPPD3-u4 submit forum link: {}
       CSPPD3-u4 tips for prep: {}
       CSPPD3-u4 unit 4 overview: {}
+      CSPPD3-u5 intro to u5: {}
+      CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -459,7 +467,27 @@ en:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
       ECSPD3-u5 about: {}
+      ECSPD3-u5 connections: {}
+      ECSPD3-u5 day 1-3: {}
+      ECSPD3-u5 day 13: {}
+      ECSPD3-u5 day 14-16: {}
+      ECSPD3-u5 day 17: {}
+      ECSPD3-u5 day 18-20: {}
+      ECSPD3-u5 day 21: {}
+      ECSPD3-u5 day 22-24: {}
+      ECSPD3-u5 day 25: {}
+      ECSPD3-u5 day 26-27: {}
+      ECSPD3-u5 day 28-29: {}
+      ECSPD3-u5 day 30: {}
+      ECSPD3-u5 day 4-5: {}
+      ECSPD3-u5 day 6-7: {}
+      ECSPD3-u5 day 8: {}
+      ECSPD3-u5 day 9-12: {}
+      ECSPD3-u5 intro to u5: {}
+      ECSPD3-u5 lesson overview: {}
+      ECSPD3-u5 overview: {}
       ECSPD3-u5 plan: {}
+      ECSPD3-u5 tools: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
