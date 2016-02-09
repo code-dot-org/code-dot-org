@@ -78,6 +78,7 @@ untranslated_apps = [
   'applab',
   'calc',
   'eval',
+  'gamelab',
   'netsim'
 ]
 

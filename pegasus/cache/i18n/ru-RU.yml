@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Поздравляем: теперь, после того, как вы попробовали
     "Час программирования", <a href="https://code.org/volunteer"> зарегистрируйте
     на сайте желающих из класса</a> и помогайте ученикам в изучении "Часа программирования"!'
-  course_name_accelerated: "Ускоренный курс"
-  course_name_course1: "Курс 1"
-  course_name_course2: "Курс 2"
-  course_name_course3: "Курс 3"
-  course_name_course4: "Курс 4"
   congratulations_on_completing_course: "Поздравляем, вы завершили %{course}"
   congrats_next_tutorials_title: "Теперь попробуйте эти руководства"
   congrats_next_tutorials_desc: Попробуйте эти короткие, одночасовые уроки, или попробуйте<a

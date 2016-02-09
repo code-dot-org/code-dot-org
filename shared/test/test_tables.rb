@@ -96,9 +96,21 @@ class TablesTest < Minitest::Test
     import(csv_filename)
 
     records = read_records
-    assert_equal 2, records.length
+    assert_equal 34, records.length
     assert_equal 'alice', records[0]['name']
     assert_equal 'bob', records[1]['name']
+
+    delete_record(records[0]["id"])
+
+    records = read_records
+    assert_equal 33, records.length
+    assert_equal 'bob', records[0]['name']
+
+    # now reimport our file
+    import(csv_filename)
+    records = read_records
+    assert_equal 34, records.length
+    assert_equal 'alice', records[0]['name']
 
     delete_channel
   end

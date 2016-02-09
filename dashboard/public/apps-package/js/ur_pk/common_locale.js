@@ -202,6 +202,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Calls a named function that takes one or more parameters"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Call a function with parameters"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Call a function"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -376,8 +378,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "showBlocksHeader":function(d){return "شو بلاکس"},
 "showCodeHeader":function(d){return "شو کوڈ"},
 "showGeneratedCode":function(d){return "شو کوڈ"},
-"showTextHeader":function(d){return "شو ٹیکسٹ"},
-"showToolbox":function(d){return "شو ٹول باکس"},
+"showTextHeader":function(d){return "ٹیکسٹ دیکھیں"},
+"showToolbox":function(d){return "ٹول باکس دیکھیں"},
 "showVersionsHeader":function(d){return "ورژن ہسٹری"},
 "signup":function(d){return "تعارفی کورس کے لیے سائن اَپ کریں"},
 "stepIn":function(d){return "Step in"},
@@ -408,6 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویڈیو دیکھیں"},
 "when":function(d){return "کب"},
 "whenRun":function(d){return "رَن کب ہوگا"},
-"workspaceHeaderShort":function(d){return "ورک اسپیس "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "ورک اسپیس "}};

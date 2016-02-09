@@ -60,11 +60,6 @@ eu-ES:
   congratulations: Zorionak!
   congratulations_on_completing_hoc: Zorionak Kode Ordua burutzeagatik
   congratulations_volunteer: 'Zorionak: Kode Ordua probatu duzunez, orain <a href="https://code.org/volunteer">laguntzaile izan zaitezke eskola batean</a> eta lagundu ikasle gazteei programazioa ikasten Kode Orduan!'
-  course_name_accelerated: Ikastaro Azeleratua
-  course_name_course1: 1. Kurtsoa
-  course_name_course2: 2. Kurtsoa
-  course_name_course3: 3. Kurtsoa
-  course_name_course4: 4. Kurtsoa
   congratulations_on_completing_course: 'Zorionak %{course} betetzeagatik'
   congrats_next_tutorials_title: Jarraian saiatu gida-liburu hauekin
   congrats_next_tutorials_desc: 'Saiatu ordu bateko tutorial laburrago hauekin edo saiatu <a href="%{current_path}/next">honako honekin</a>.'
@@ -115,9 +110,9 @@ eu-ES:
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: '#KodeOrdua hemen dago - probatu! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
-  twitter_teach_cs: Zergatik ez dute ikastetxe gehiago informatika erakusten? Hau konpondu dezakegu. http://youtu.be/nKIu9yen5nc. Gehiago ikasteko ikusi http://code.org/.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Ikasi kode ordu bat
   beyond_hoc: Ordubetetik haratago
   what_gender: Neska ala mutila zara?
@@ -543,7 +538,7 @@ eu-ES:
   dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: '<b>2015eko Abenduak 16</b> - Eskerrikasko 2015eko kode orduan parte hartzeagatik! Jarraipena eta gordetzea hasi dira Code Studioko kurtso eta tutorial guztietan. Oharra: Code.org en bulegoak itxita egongo dira abenduaren 19tik, urtarrilaren 3ra. Mesedez itxaron atzeratutako erantzunak urtarrilaren 4ra arte bidalitako edozein galderetan.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Ikasi gehiago
   dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash; antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean Abenduan 7-13 tartean."
   dashboard_announce_playlab: '<b>2015eko abenduaren 4a</b> - Kode ordua hemen da! Saiatu edozein adinetarako eta edozein gailurako 50 tutorial. Aste honetan berria: sortu istorio eta jokoak, Ice Age eta Gumball joko laborategi berrietan.'

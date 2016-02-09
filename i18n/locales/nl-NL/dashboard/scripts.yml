@@ -1309,6 +1309,7 @@ nl:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1534,8 +1535,8 @@ nl:
         cspunit4:
           title: 'CSP Unit 4 - Data'
           description_short: Data
-          description: Being able to digitally manipulate data, visualize it, identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
-          Intro to Data: Intro to Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
           Finding Trends with Visualizations: Finding Trends with Visualizations
           Check Your Assumptions: Check Your Assumptions
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
@@ -1549,3 +1550,15 @@ nl:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
