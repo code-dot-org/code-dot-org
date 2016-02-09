@@ -30,9 +30,9 @@ module Rack
           unless headers.include? name
             http_header = "HTTP_#{name.upcase.tr('-', '_')}"
             if value.nil?
-              env[http_header] = value
-            else
               env.delete http_header
+            else
+              env[http_header] = value
             end
           end
         end
