@@ -75,11 +75,6 @@
   congratulations_volunteer: 'Gratulera: no har du prøvd ut Kodetimen,<a href="https://code.org/volunteer">
     meld deg på for å hjelpa til i eit klasserom</a> og hjelp fleire elevar med å
     gjennomføra Kodetimen!'
-  course_name_accelerated: Framskunda kurs
-  course_name_course1: Kurs 1
-  course_name_course2: Kurs 2
-  course_name_course3: Kurs 3
-  course_name_course4: Kurs 4
   congratulations_on_completing_course: Gratulerer med å ha fullført %{course}
   congrats_next_tutorials_title: Prøv desse kursa
   congrats_next_tutorials_desc: Prøv desse korte, 1-timars-kursa eller prøv eit kurs

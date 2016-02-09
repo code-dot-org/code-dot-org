@@ -80,11 +80,6 @@
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  course_name_accelerated: "دوره های سریع"
-  course_name_course1: "دوره 1"
-  course_name_course2: "دوره 2"
-  course_name_course3: "دورۀ 3"
-  course_name_course4: "دوره 4"
   congratulations_on_completing_course: "تبریک به خاطر تکمیل %{course}"
   congrats_next_tutorials_title: "این آموزش های بعدی را سعی کنید"
   congrats_next_tutorials_desc: این کوتاه تر را انجام دهید، ۱ ساعت آموزش یا <a href="%{current_path}/next">شریک
