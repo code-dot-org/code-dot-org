@@ -30,7 +30,7 @@
   twentyhours_text: "Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για
     τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο
     μάθημα."
-  og_title: Every child deserves opportunity
+  og_title: "Κάθε παιδί δικαιούται μία ευκαιρία"
   og_description: Every student in every school deserves the opportunity to study
     computer science.
   hoc2014_heading: Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14
@@ -81,11 +81,6 @@
   congratulations_volunteer: 'Συγχαρητήρια: Τώρα που έχετε δοκιμάσει την Ώρα του Κώδικα,
     <a href="https://code.org/volunteer">εγγραφείτε για να εργαστείτε εθελοντικά σε
     μια τάξη</a> και να βοηθήσετε μαθητές να διδαχθούν μια Ώρα Κώδικα!'
-  course_name_accelerated: "Επιταχυνόμενη πορεία μάθησης"
-  course_name_course1: "Μάθημα 1"
-  course_name_course2: "Μάθημα 2"
-  course_name_course3: "Μάθημα 3"
-  course_name_course4: "Μάθημα 4"
   congratulations_on_completing_course: "Συγχαρητήρια για την ολοκλήρωση του %{course}"
   congrats_next_tutorials_title: "Δοκιμάστε στη συνέχεια αυτά τα σεμινάρια"
   congrats_next_tutorials_desc: Δοκιμάστε αυτά τα μικρότερα, σεμινάρια 1 ώρας ή δοκιμάστε

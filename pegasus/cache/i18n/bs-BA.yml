@@ -77,11 +77,6 @@
   congratulations_volunteer: 'Čestitamo: Sada kada si probao/la Sat Kodiranja, <a
     href="https://code.org/volunteer"> prijavi se kao volonter u učionici </a> i pomozi
     učenicima da nauče Sat Kodiranja!'
-  course_name_accelerated: Ubrzani Kurs
-  course_name_course1: Kurs 1
-  course_name_course2: Kurs 2
-  course_name_course3: Kurs 3
-  course_name_course4: Kurs 4
   congratulations_on_completing_course: "Čestitamo na kompletiranju %{course}"
   congrats_next_tutorials_title: Probaj sada ove tutorijale
   congrats_next_tutorials_desc: Probaj ove kraće, tutorijale od 1 sat ili probaj <a
