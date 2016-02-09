@@ -80,11 +80,6 @@
   congratulations_volunteer: 'Поздравления: сега, когато сте опитали Hour of Code,
     <a href="https://code.org/volunteer"> регистрирайте се като доброволци в класната
     стая</a> и помогнете на учениците да учат с Hour of Code!'
-  course_name_accelerated: "Ускорен курс"
-  course_name_course1: "Курс 1"
-  course_name_course2: "Курс 2"
-  course_name_course3: "Курс 3"
-  course_name_course4: "Курс 4"
   congratulations_on_completing_course: "Поздравления за завършване на %{course}"
   congrats_next_tutorials_title: "Опитайте тези уроци"
   congrats_next_tutorials_desc: Опитайте тези кратки, едночасови уроци или пробвайте
@@ -250,8 +245,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Научете повече"
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20 000 учители са обучени, а сега ще преподават компютърни
+    науки в класните стаи.
   homepage_banner_20k_teachers_link: "Научете повече"
   homepage_slot_text_title_hoc: "Час на Кодирането"
   homepage_slot_text_blurb_hoc: "Всеки може да се научи. Започнете днес"
@@ -261,7 +256,7 @@
   homepage_solot_text_link_volunteer: "Доброволец за Часа на кода"
   homepage_slot_text_title_students: "Ученици"
   homepage_slot_text_blurb_students: "Разгледайте всички наши уроци"
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: "Разгледайте нашите курсове"
   homepage_slot_text_link_codestudio: "Опитайте Студиото по кодиране"
   homepage_slot_text_link_local: "Намерете  клас в близост до Вас"
   homepage_slot_text_link_othercourses: "Други онлайн курсове"

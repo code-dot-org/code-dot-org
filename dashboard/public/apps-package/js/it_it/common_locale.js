@@ -202,6 +202,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Chiama una funzione denominata che accetta uno o più parametri"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Chiamare una funzione con parametri"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Chiama una funzione"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Guarda il video"},
 "when":function(d){return "quando"},
 "whenRun":function(d){return "quando si clicca su \"Esegui\""},
-"workspaceHeaderShort":function(d){return "Area di lavoro: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Area di lavoro: "}};

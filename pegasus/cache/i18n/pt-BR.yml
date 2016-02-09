@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Parabéns: agora que você já fez a Hora de Código, <a
     href="https://code.org/volunteer"> cadastre-se para ser voluntário em uma sala
     de aula</a> e ajudar estudantes a aprender uma Hora de Código!'
-  course_name_accelerated: Curso acelerado
-  course_name_course1: Curso 1
-  course_name_course2: Curso 2
-  course_name_course3: Curso 3
-  course_name_course4: Curso 4
   congratulations_on_completing_course: Parabéns por ter concluído %{course}
   congrats_next_tutorials_title: A seguir, experimente esses tutoriais
   congrats_next_tutorials_desc: Experimente esses tutoriais menores, de 1 hora, ou
@@ -401,7 +396,7 @@
   volunteer_engineer_submission_field_location_flexibility: Eu posso ajudar durante
     a hora do código por... (selecione todas as opções aplicáveis)
   volunteer_engineer_submission_checkbox_after_hoc: Estou interessado em ser voluntário
-    após a Hora do Código
+    durante todo o ano
   volunteer_engineer_submission_field_time_commitment: Tempo de comprometimento após
     a Hora do Código
   volunteer_engineer_submission_field_linkedin: Perfil no LinkedIn

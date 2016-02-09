@@ -250,7 +250,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "turnRight":function(d){return "เลี้ยวขวา"},
 "turnTooltip":function(d){return "หันตัวเราไปทางซ้ายหรือขวา 90 องศา"},
 "whenBallInGoal":function(d){return "เมื่อลูกบอลอยู่ในเป้าหมาย"},
-"whenBallInGoalTooltip":function(d){return "ให้ทำคำสั่งด้านล่างนี้เมื่อลูกบอลเข้าเป้าหมาย."},
+"whenBallInGoalTooltip":function(d){return "ให้ทำคำสั่งด้านล่างเมื่อลูกบอลเข้าเป้าหมาย."},
 "whenBallMissesPaddle":function(d){return "เมื่อลูกบอลพลาดจากใบพัด"},
 "whenBallMissesPaddleTooltip":function(d){return "ทำคำสั่งด้านล่างเมื่อลูกบอลหลุดจากใบพัด."},
 "whenDown":function(d){return "เมื่อกดลูกศรลง"},

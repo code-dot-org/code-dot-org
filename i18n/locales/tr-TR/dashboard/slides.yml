@@ -277,38 +277,40 @@ tr:
         text: "Merhaba, Benim adım Lyndsey. Kendi uygulamalarımı modelliyorum, hareket ettiriyorum ve yazıyorum. Onların buzun büyüsünü ve güzelliğini keşfettiği gibi kod kullanarak Anna ve Elsa'ya katılalım."
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Buzda kaydıkça kar taneleri ve değişik desenler oluşturarak bir kış diyarı yaratabilir ve sonra arkadaşlarınla paylaşabilirsin.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Bir saat içerisinde, nasıl kod yazılacağının temellerini öğreneceksiniz. Geleneksel programlama yönteminde genellikle metin kullanılır, ama biz Blocky kullanacağız. Blocky ile görsel blokları sürükleyip bırakarak programlar yazabilirsiniz. Üniversite öğrencileri de bu yöntemle programlamanın temellerini öğrenir.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: "Program, bilgisayara ne yapacağını söyleyen komutlar dizisidir. Elsa'ya basit bir çizgi oluşturmakta yardımcı olacak bir program yazalım. Bu yazdığımız programı sonra daha karmaşık modeller oluşturmak için kullanacağız."
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Ekranın üç ana parçaya bölünmüş haldedir. Soldaki buzlu yüzeyde programını çalıştırırsın. Her seviye için gerekli açıklamalar bu yüzeyin hemen altında yer alır.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: "Orta bölümde alet kutusu yer alır ve her bir küp Elsa ve Anna'nın yapabileceği şeylerdir."
       7:
         image: notes/frozen1_7.jpg
         text: 'Ekranın sağında yer alan beyaz alana çalışma alanı deniyor ve programlarımızı bu alanda oluşturacağız. Buzdan oluşan nesneyi hareket ettirebilmek için "İleriye taşı" bloğunu göreceksiniz.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: '"İlerle" küpü diyor ki: "100 piksel ilerle". Eğer "Çalıştır"a basarsak ne olur? Elsa ekranda belli bir miktar ileriye gider; evet tam 100 piksel! Piksel, bilgisayarınızdaki ya da televizyonunuzdaki görüntüyü oluşturan en minik karedir.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: |-
+          Bulmacadaki diğer küp diyor ki: "sağa doğru 90 derece dön". Bu küpü kullandığımız zaman Elsa belli bir miktar sağa döner. Elsa'nın ne kadar döneceğini değiştirmek için değerlerle biraz oynayabilirsiniz. Açı değeri, Elsa'nın önündeki hareket çizgisine göre ölçülür. Yani, bu bir 90 derecedir ve bu da bir 120 derece.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Hatırla, yanındaki oklara tıklayarak piksellerin sayısını ve dereceyi değiştirebilirsin.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: Merhaba, Ben Paola! Bilgisayarlar tekrarlayan eylemler konusunda gerçekten çok iyiler. 10, 20 yada 100 kadar sayabilirsin. Ama bir bilgisayar milyara yada trilyona kadar sayabilir. Sıkılmazlar ve sayma işlemi birkaç saniye sürer. Sayar, çizer yada tekrarlayan bir şeyi yüzlerce hatta milyarca kez yapabilir.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: |-
+          Biz buna programlamada döngü diyoruz. Döngü bir kodunuzun nasıl tekrardan tekrar ettiğidir. Bir sonraki puzzle için hedefiniz Anna' nın "Tekrar" bloğu ile bir kare oluşturmasına yardımcı olmaktır.
       3:
         image: notes/frozen2_3.jpg
         text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
@@ -347,7 +349,7 @@ tr:
         text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır.
       3:
         image: notes/playlab_intro_3.png
         text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
@@ -482,7 +484,7 @@ tr:
         text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: Bu kağıt ile programlama gibi. Ve bu kadar!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -527,11 +529,10 @@ tr:
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Benim adım Jeremiah. Merhaba! Ben yedi yaşındayım. Annemin bilgisayarında oyun oynamayı seviyorum ama her zaman önce izin alırım. "Anne, Bilgisayarına geçebilir miyim? Tabii ki tatlım!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 'Annemin bilgisayarını seviyorum çünkü internete girebiliyorum. İnternet senin çevren gibidir. Hoş yerleri ziyaret edebilir, ailen ve arkadaşların ile konuşabilir ve bir çok şey öğrenebilirsin. '
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."

@@ -129,6 +129,7 @@ require 'aws-sdk'
 # DynamoTable
 #
 class DynamoTable
+  MAX_BATCH_SIZE ||= 25
 
   class NotFound < Sinatra::NotFound
   end
@@ -160,14 +161,17 @@ class DynamoTable
 
   def delete_all()
     ids = ids_to_a
-    unless ids.empty?
-      db.batch_write_item(
-        request_items: {
-          CDO.dynamo_tables_table => ids.map do |id|
-            { delete_request: { key: {'hash'=>@hash, 'row_id'=>id}, } }
-          end
-        }
-      )
+    return true if ids.empty?
+
+    items = ids.map do |id|
+      { delete_request: { key: {'hash'=>@hash, 'row_id'=>id} } }
+    end
+
+    # batch_write_items can only handle 25 items at a time, so split into groups of 25
+    (0..ids.length).step(MAX_BATCH_SIZE).each do |start_index|
+      db.batch_write_item(request_items: {
+        CDO.dynamo_tables_table => items.slice(start_index, MAX_BATCH_SIZE)
+      })
     end
     true
   end

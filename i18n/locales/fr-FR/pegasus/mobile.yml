@@ -62,11 +62,6 @@ fr-FR:
   congratulations: Félicitations!
   congratulations_on_completing_hoc: Félicitations, tu as terminé une Heure de Code !
   congratulations_volunteer: 'Félicitations : maintenant que vous avez essayé Une Heure de Code, <a href="https://code.org/volunteer"> inscrivez-vous pour faire du bénévolat dans une salle de classe</a> et aider les élèves à apprendre avec une Heure de Code !'
-  course_name_accelerated: Cours accéléré
-  course_name_course1: Cours 1
-  course_name_course2: Cours 2
-  course_name_course3: Cours 3
-  course_name_course4: Cours 4
   congratulations_on_completing_course: 'Félicitations pour avoir complété %{course}'
   congrats_next_tutorials_title: Essayez ensuite ces tutoriels
   congrats_next_tutorials_desc: |-
@@ -118,9 +113,9 @@ fr-FR:
   learn_next_level: Essayez un autre cours de Code Studio
   learn_online: "Essaie d'autres cours en ligne"
   learn_classes: Trouver des cours près de chez vous
-  hoc_is_here: "#HourOfCode L'Heure de Code est là — jettes-y un œil ! @codeorg"
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: "Je viens de faire l'Heure de Code #HourOfCode — jettes-y un œil ! @codeorg"
-  twitter_teach_cs: "Pourquoi n'y a-t-il pas plus d'écoles qui enseignent l'informatique ? Nous pouvons résoudre cela. http://youtu.be/nKIu9yen5nc. Visitez http://code.org/ pour en savoir plus."
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: "Au delà d'Une heure"
   what_gender: De quel sexe êtes vous ?
@@ -555,7 +550,7 @@ fr-FR:
   dashboard_faq_k5: 'GS - CM2 Questions Fréquemment Posées'
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Voir tous
-  dashboard_announce_message: "<b>16 décembre 2015</b> - Merci de votre participation à l'Heure du Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant repris pour l'ensemble des cours et tutoriels de Code Studio. N.B. : Les bureaux de Code.org seront fermés du 19 décembre au 3 janvier. Vous pouvez vous attendre à des délais pour recevoir réponse aux questions que vous poserez d'ici au 4 janvier."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Pour en savoir plus
   dashboard_announce_hoc: '<b>15 octobre 2015</b> - Une Heure de Code arrive &mdash; chaque organisateur participant recevra une carte-cadeau Amazon.com ou Microsoft Windows Store comme cadeau de remerciement. Rejoignez les salles de classe dans le monde entier du 7 au 13 décembre.'
   dashboard_announce_playlab: "<b>4 décembre 2015</b> - l'heure du Code est ici ! Essayez 50 tutoriels pour tous les âges et tous les appareils. Nouveauté de la semaine : coder vos propres histoires et des jeux à nouveau jouer Labs, période glaciaire et Gumball."

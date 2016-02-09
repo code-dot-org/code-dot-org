@@ -28,7 +28,7 @@ ka:
     code:
       label: 'მასწავლებლის დამატება:'
       placeholder: სექციის კოდი (ABCDEF)
-      instructions: 'გთხოვთ შეიყვანეთ კოდი რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6 ნიშნა და გამოიყურება ასე "ABCDEF".'
+      instructions: 'გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6–ნიშნა და გამოიყურება ასე "ABCDEF".'
     submit: მასწავლებლის დამატება
   add_hint_form:
     placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
@@ -328,7 +328,7 @@ ka:
   share:
     title: ისწავლეთ კოდის სტუდიაში
     description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
-    try_hour_of_code: ცადეთ კოდირების საათი!
+    try_hour_of_code: სცადეთ კოდის ერთი საათი!
   gender:
     male: მამრობითი
     female: მდედრობითი
@@ -340,8 +340,8 @@ ka:
     thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">მრჩევლებს განათლების დარგში</a> კოდის სტუდიის შექმნაში დახმარებისთვის.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია.<br />The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
     powered_by_aws: შექმნილია Amazon Web Services დახმარებით
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: საავტორო უფლება
@@ -358,7 +358,7 @@ ka:
     built_on_code_studio: დაწერეთ კოდი კოდის სტუდიაში
     make_my_own_app: ჩემი საკუთარი აპლიკაციის შექმნა
     how_it_works: როგორ მუშაობს ეს სივრცე
-    try_hour_of_code: ცადეთ კოდირების საათი!
+    try_hour_of_code: სცადეთ კოდის ერთი საათი!
   reference_area:
     title: გჭირდებათ დახმარება?
     subtitle: ნახეთ ეს ვიდეოები და მინიშნებები

@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "Poziva imenovanu funkciju koja uzima jedan ili više parametara",
   "dropletBlock_callMyFunction_n_signatureOverride": "Poziva funkciju sa parametrima",
   "dropletBlock_callMyFunction_signatureOverride": "Zovi funkciju",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +255,5 @@
   "watchVideo": "Pogledaj Video",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radni prostor: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Radni prostor: "
 }

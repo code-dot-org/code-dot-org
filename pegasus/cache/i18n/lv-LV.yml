@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  course_name_accelerated: Accelerated Course
-  course_name_course1: Kurss 1
-  course_name_course2: Kurss 2
-  course_name_course3: Kurss 3
-  course_name_course4: Kurss 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
