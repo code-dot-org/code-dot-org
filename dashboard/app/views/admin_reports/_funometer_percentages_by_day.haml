@@ -1,20 +1,24 @@
+-# Displays a graph and a table of Fun-O-Meter ratings, by day.
+-# Expects an array of three column arrays [date, percentage, count] in the variable
+-# @ratings_by_day.
+
 .by_day
   %h3
     Percentages by Day
   #chart_by_day
   %table
     %tr
-      - @ratings_by_day_headers.each do |header|
+      - ['Date', 'Percentage', 'Count'].each do |header|
         %th
           %span= header
     - @ratings_by_day.each do |day|
       %tr
         %td
-          %span= day.day
+          %span= day[0]
         %td
-          %span= number_to_percentage(day.percentage, precision: 2)
+          %span= number_to_percentage(day[1], precision: 2)
         %td
-          %span= day.cnt
+          %span= day[2]
 
 - content_for :body_scripts do
   :javascript
@@ -22,7 +26,7 @@
     // to run when the API is loaded.
     google.load('visualization', '1.0', {'packages':['corechart']});
     google.setOnLoadCallback(drawChart);
-    var percentages_by_day = #{percentages_by_day.try(:to_json)}
+    var percentages_by_day = #{@ratings_by_day.map{|row| [row[0], row[1].to_f]}.try(:to_json)}
 
     // The callback that creates and populates the data table, instantiates the
     // chart, and draws it.
