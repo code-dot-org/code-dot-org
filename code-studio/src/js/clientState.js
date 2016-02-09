@@ -1,34 +1,47 @@
 /**
- * @file Helper functions for accessing client state. This state is stored in a
- *       combination of cookies and HTML5 web storage.
+ * @file Helper functions for accessing client state. This state is stored on a per-user basis
+ * HTML5 web storage.
  */
 'use strict';
 
-module.exports = function (sessionStorage, $) {
+var lscache = require('lscache');
+
+module.exports = function () {
 
 var clientState = {};
 
 /**
- * Number of days before client state cookie expires.
+ * Max number of minutes before client state expires.
  * @type {number}
  * @private
  */
-clientState.EXPIRY_DAYS = 365;
+clientState.EXPIRY_MINUTES = 365 * 24 * 60;
 
 /**
- * Maximum number of lines of code that can be stored in the cookie
+ * Maximum number of lines of code that can be added at once.
  * @type {number}
  * @private
  */
 var MAX_LINES_TO_SAVE = 1000;
 
-var COOKIE_OPTIONS = {expires: clientState.EXPIRY_DAYS, path: '/'};
+var userKey = null;
 
+clientState.setCurrentUserKey = function(key) {
+  lscache.setBucket(key);
+};
+
+/***
+ * Resets the state of the current user
+ */
 clientState.reset = function() {
-  try {
-    $.removeCookie('lines', {path: '/'});
-    sessionStorage.clear();
-  } catch (e) {}
+  lscache.flush();
+};
+
+/***
+ * Resets the state of all users, for testing only.
+ */
+clientState.resetAllForTest = function() {
+  localStorage.clear();
 };
 
 /**
@@ -62,34 +75,30 @@ clientState.queryParams = function (name) {
  *   the cached copy is missing/stale.
  */
 clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
-  var data = sessionStorage.getItem(createKey(scriptName, levelId, 'source'));
-  if (data) {
-    var parsed;
-    try {
-      parsed = JSON.parse(data);
-    } catch (e) {
-      return;
-    }
-    if (!timestamp || parsed.timestamp > timestamp) {
+  try {
+    var parsed = lscache.get(createKey(scriptName, levelId, 'source'));
+    if (parsed && (!timestamp || parsed.timestamp > timestamp)) {
       return parsed.source;
     }
+  } catch (e) {
   }
+  return;  // Return undefined for invalid or missing source.
 };
+
 
 /**
  * Cache a copy of the level source along with a timestamp. Posts to /milestone
- * may be queued, so save the data in sessionStorage to present a consistent
- * client view.
+ * may be queued, so save the data in storage to present a consistent client view.
  * @param {string} scriptName
  * @param {number} levelId
  * @param {number} timestamp
  * @param {string} source
  */
 clientState.writeSourceForLevel = function (scriptName, levelId, timestamp, source) {
-  safelySetItem(createKey(scriptName, levelId, 'source'), JSON.stringify({
+  safelySetItem(createKey(scriptName, levelId, 'source'), {
     source: source,
     timestamp: timestamp
-  }));
+  });
 };
 
 /**
@@ -155,7 +164,7 @@ function setLevelProgress(scriptName, levelId, progress) {
     progressMap[scriptName] = {};
   }
   progressMap[scriptName][levelId] = progress;
-  safelySetItem('progress', JSON.stringify(progressMap));
+  safelySetItem('progress', progressMap);
 }
 
 /**
@@ -163,9 +172,9 @@ function setLevelProgress(scriptName, levelId, progress) {
  * @return {Object<String, number>}
  */
 clientState.allLevelsProgress = function() {
-  var progressJson = sessionStorage.getItem('progress');
+  var progressJson = lscache.get('progress');
   try {
-    return progressJson ? JSON.parse(progressJson) : {};
+    return progressJson ? progressJson : {};
   } catch(e) {
     // Recover from malformed data.
     return {};
@@ -173,11 +182,11 @@ clientState.allLevelsProgress = function() {
 };
 
 /**
- * Returns the number of lines completed from the cookie.
+ * Returns the number of lines completed.
  * @returns {number}
  */
 clientState.lines = function() {
-  var linesStr = $.cookie('lines');
+  var linesStr = lscache.get('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
@@ -187,8 +196,7 @@ clientState.lines = function() {
  */
 function addLines(addedLines) {
   var newLines = Math.min(clientState.lines() + Math.max(addedLines, 0), MAX_LINES_TO_SAVE);
-
-  $.cookie('lines', String(newLines), COOKIE_OPTIONS);
+  safelySetItem('lines', String(newLines));
 }
 
 /**
@@ -225,23 +233,28 @@ clientState.recordCalloutSeen = function (calloutId) {
   recordVisualElementSeen('callout', calloutId);
 };
 
+/** Sets an arbitrary key and value in the user's storage, for testing only.*/
+clientState.setItemForTest = function(key, value) {
+  safelySetItem(key, value);
+};
+
 /**
  * Private helper for videos and callouts - persists info in the local storage that a given element has been seen
  * @param visualElementType
  * @param visualElementId
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
-  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
+  var elementSeenJson = lscache.get(visualElementType) || {};
   var elementSeen;
   try {
-    elementSeen = JSON.parse(elementSeenJson);
+    elementSeen = elementSeenJson;
     elementSeen[visualElementId] = true;
-    safelySetItem(visualElementType, JSON.stringify(elementSeen));
+    safelySetItem(visualElementType, elementSeen);
   } catch (e) {
     //Something went wrong parsing the json. Blow it up and just put in the new callout
     elementSeen = {};
     elementSeen[visualElementId] = true;
-    safelySetItem(visualElementType, JSON.stringify(elementSeen));
+    safelySetItem(visualElementType, elementSeen);
   }
 }
 
@@ -251,9 +264,9 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param visualElementId
  */
 function hasSeenVisualElement(visualElementType, visualElementId) {
-  var elementSeenJson = sessionStorage.getItem(visualElementType) || '{}';
+  var elementSeenJson = lscache.get(visualElementType) || {};
   try {
-    var elementSeen = JSON.parse(elementSeenJson);
+    var elementSeen = elementSeenJson;
     return elementSeen[visualElementId] === true;
   } catch (e) {
     return false;
@@ -276,7 +289,7 @@ function createKey(scriptName, levelId, prefix) {
  */
 function safelySetItem(key, value) {
   try {
-    sessionStorage.setItem(key, value);
+    lscache.set(key, value, clientState.EXPIRY_MINUTES);
   } catch (e) {
     if (e.name !== "QuotaExceededError") {
       throw e;

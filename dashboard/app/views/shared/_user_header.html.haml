@@ -1,4 +1,6 @@
 - if current_user
+  :javascript
+    dashboard.clientState.setUserKey(#{current_user.id})
   .header_button.header_user.user_menu
     %span= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
@@ -37,6 +39,6 @@
   $('.user_options a:last').click(function (e) {
     // this partial can be returned in an API call so it's possible for it to be on non-dashboard pages
     if (typeof dashboard !== 'undefined') {
-      dashboard.clientState.reset();
+      dashboard.clientState.setUserKey(null);
     }
   });
