@@ -1,11 +1,9 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
- eqeqeq: true
+ eqeqeq: true,
+ maxlen: 120
  */
 'use strict';
 /* global describe, beforeEach, it */

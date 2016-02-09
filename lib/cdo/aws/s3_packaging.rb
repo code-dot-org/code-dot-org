@@ -17,7 +17,7 @@ class S3Packaging
   def initialize(package_name, source_location, target_location)
     throw "Missing argument" if package_name.nil? || source_location.nil? || target_location.nil?
     @client = Aws::S3::Client.new
-    @commit_hash = RakeUtils.git_latest_commit_hash source_location
+    @commit_hash = RakeUtils.git_folder_hash source_location
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location
@@ -103,7 +103,7 @@ class S3Packaging
   private def upload_package(package)
     @logger.info "Uploading: #{s3_key}"
     File.open(package, 'rb') do |file|
-      @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file)
+      @client.put_object(bucket: BUCKET_NAME, key: s3_key, body: file, acl: 'public-read')
     end
     @logger.info "Uploaded"
   end
@@ -142,15 +142,19 @@ class S3Packaging
     diff.empty?
   end
 
-  # Downloads package from S3, throws error if given package doesn't exist on s3
+  # Downloads package from S3 using public URL.
+  # Throws a NoSuchKey error if given package doesn't exist on s3, or if the object is private.
   # @return tempfile for the downloaded package
   private def download_package
     package = Tempfile.new(@commit_hash)
 
     @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"
+    url = Aws::S3::Bucket.new(BUCKET_NAME).object(s3_key).public_url
     File.open(package, 'wb') do |file|
-      @client.get_object(bucket: BUCKET_NAME, key: s3_key) do |chunk|
-        file.write(chunk)
+      begin
+        IO.copy_stream open(url), file
+      rescue OpenURI::HTTPError
+        raise Aws::S3::Errors::NoSuchKey.new(nil, file)
       end
     end
     @logger.info "Downloaded"
