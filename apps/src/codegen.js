@@ -699,11 +699,7 @@ exports.selectCurrentCode = function (interpreter,
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
         editor.clearLineMarks();
-        // NOTE: replace markLine with this new mark() call once we have a new
-        // version of droplet
-
-        //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
-        editor.markLine(userCodeRow, style);
+        editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow]}, style);
       } else {
         selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
             highlightClass);
