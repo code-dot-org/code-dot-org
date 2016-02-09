@@ -77,11 +77,6 @@
   congratulations_volunteer: Sveikiname! Dabar jūs išbandėte „Programavimo valandą”,
     <a href="https://code.org/volunteer">savanoriškai užsiregistruokite klasėje</a>
     ir padėkite mokiniams išmokti programuoti naudojant „Programavimo valandą”!
-  course_name_accelerated: Pagreitintas kursas
-  course_name_course1: Kursas 1
-  course_name_course2: Kursas 2
-  course_name_course3: Kursas 3
-  course_name_course4: Kursas 4
   congratulations_on_completing_course: Sveikiname pabaigus %{course}
   congrats_next_tutorials_title: Pabandyk šias instrukcijas toliau
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -429,14 +424,14 @@
     studentas (ar tyrinėtojas)
   volunteer_engineer_submission_experience_software_professional: Programinės įrangos
     profesionalas
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_distance_8: 5 mylios
+  volunteer_engineer_submission_distance_16: 10 mylių
+  volunteer_engineer_submission_distance_24: 15 mylių
+  volunteer_engineer_submission_distance_32: 20 mylių
   volunteer_engineer_submission_num_volunteers_5: 5 savanoriai
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_num_volunteers_10: 10 savanorių
+  volunteer_engineer_submission_num_volunteers_25: 25 savanorių
+  volunteer_engineer_submission_num_volunteers_50: 50 savanorių
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom

@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Til hamingju: Nú þegar þú hefur prófað Klukkustund kóðunar,
     getur þú <a href="https://code.org/volunteer">boðið fram liðveislu í skólastofu</a>
     og hjálpað nemendum að læra Klukkustund kóðunar!'
-  course_name_accelerated: Hraðnámskeið
-  course_name_course1: Námskeið 1
-  course_name_course2: Námskeið 2
-  course_name_course3: Námskeið 3
-  course_name_course4: Námskeið 4
   congratulations_on_completing_course: Til hamingju með að ljúka námskeiðinu %{course}
   congrats_next_tutorials_title: Prófaðu þetta kennsluefni næst
   congrats_next_tutorials_desc: Prófaðu þessar styttri 1 klst. kennslustundir eða
@@ -388,19 +383,19 @@
     vinnu/skóla eða aðeins bæjarheitið.
   volunteer_engineer_submission_field_location_placeholder: Póstnúmer, bær og fylki/land,
     eða götunúmer
-  volunteer_engineer_submission_field_location_flexibility: "Ég get hjálpað við Klukkustund
-    kóðunar með... (veldu allt sem við á)"
+  volunteer_engineer_submission_field_location_flexibility: "Ég get hjálpað til með
+    því að... (veldu allt sem við á)"
   volunteer_engineer_submission_checkbox_after_hoc: "Ég hef áhuga á að vera sjálfboðaliði
-    eftir Klukkustund kóðunar"
-  volunteer_engineer_submission_field_time_commitment: Tímaskuldbinding eftir Klukkustund
-    kóðunar
+    allt árið"
+  volunteer_engineer_submission_field_time_commitment: Tímaskuldbinding
   volunteer_engineer_submission_field_linkedin: Linkedin upplýsingar
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook upplýsingar
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Lýsing
   volunteer_engineer_submission_field_description_desc: Lýstu reynslu þinni af tölvunarfræði
-    og hvernig þú mundir vilja taka þátt sem sjálfboðaliði fyrir kennara á svæðinu.
+    eða tæknilegum bkagrunni og hvernig þú mundir vilja taka þátt sem sjálfboðaliði
+    fyrir kennara á svæðinu.
   volunteer_engineer_submission_field_description_placeholder: Lýsing á reynslu og/eða
     þátttöku. Ef þú talar önnur tungumál en íslensku, láttu þá vita af því hér.
   volunteer_engineer_submission_header_private: Upplýsingar varðveittar sem einkamál
