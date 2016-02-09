@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
+require_relative './table_coerce'
 
 class TablesApi < Sinatra::Base
 
@@ -206,6 +207,8 @@ class TablesApi < Sinatra::Base
     rescue Exception
       halt 500
     end
+
+    records = TableCoerce.coerce(records, columns)
 
     # TODO: This should probably be a bulk insert
     records.each do |record|
