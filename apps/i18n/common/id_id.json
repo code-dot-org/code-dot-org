@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "panggil sebuah nama fungsi yang mengambil satu parameter atau lebih",
   "dropletBlock_callMyFunction_n_signatureOverride": "Panggil sebuah fungsi dengan parameter",
   "dropletBlock_callMyFunction_signatureOverride": "Panggil sebuah fungsi",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Mendeklarasikan variabel dan menetapkannya ke sebuah array dengan nilai awal yang diberikan",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +255,5 @@
   "watchVideo": "Tonton Videonya",
   "when": "ketika",
   "whenRun": "ketika dijalankan",
-  "workspaceHeaderShort": "Area kerja: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Area kerja: "
 }

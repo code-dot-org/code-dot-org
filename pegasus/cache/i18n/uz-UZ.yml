@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Tabriklaymiz: siz Dasturlash soatini sinab ko‘rdingiz,
     <a href="https://code.org/volunteer">ko‘ngilli bo‘lib ro‘yxatdan o‘ting</a> va
     o‘quvchilarga dasturlash soatini o‘rganishiga yordam bering!'
-  course_name_accelerated: Accelerated Course
-  course_name_course1: Course 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
   congratulations_on_completing_course: "%{course}’ni tugatganingiz bilan tabriklaymiz"
   congrats_next_tutorials_title: Endi ushbu mashg‘ulotlarni sinab ko‘ring
   congrats_next_tutorials_desc: Yo 1 soatlik mashg‘ulotlarimizni, yo <a href="%{current_path}/next">hamkorlik
@@ -337,7 +332,7 @@
   playlab_classic_title: Classic
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: Muzlik davri
   starwars_subtitle: Dasturlash bilan galaktika quring
   starwars_javascript_title: Javascript
   starwars_javascript_description: Ko‘chuvchi blok va JavaScriptdan foydalaning.
