@@ -1,8 +1,8 @@
 -# English only for now
 - if language == "en"
 
-  -# Never show the survey.
-  - if false
+  -# Temporarily show survey for admin users only.
+  - if current_user && current_user.admin?
 
     -# If signed in, and user hasn't already filled out this survey
     - if current_user && !current_user.survey2015_value
