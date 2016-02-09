@@ -18,7 +18,6 @@ window.React = require('react');
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
 require('./components/abuse_error.jsx');
-require('./components/abuse_exclamation.jsx');
 require('./components/dialog.jsx');
 require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');

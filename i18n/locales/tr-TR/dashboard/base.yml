@@ -43,7 +43,7 @@ tr:
   of: /
   more: DAHA FAZLA
   less: DAHA AZ
-  beta: beta
+  beta: deneme
   try_hoc: "Kod Saati'ni denemek için buraya tıklayın >> "
   try_k8intro: İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)
   k8intro: K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)
@@ -341,7 +341,9 @@ tr:
     help_from_html: "Bu eğitici Google, Microsoft, Facebook, ve Twitter 'dan mühendislerin yardımıyla oluşturuldu."
     help_from_html_old: "Google, Microsoft, Facebook ve Twitter'daki mühendisler bu eğitim içeriğini oluşturmaya yardımcı oldu."
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Bütün hakları saklıdır.<br />Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Bütün hakları saklıdır..<br />Frozen&#8482; &copy; %{current_year} Disney. Bütün hakları saklıdır.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Bütün hakları saklıdır.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Bütün hakları saklıdır.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Bütün hakları saklıdır.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html_old: |
+      Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.
+      
     powered_by_aws: Amazon Web Services tarafından desteklenmektedir
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kod Saati&reg; Code.org'un ticari markalarıdır."
     copyright: Telif Hakkı

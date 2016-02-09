@@ -29,8 +29,8 @@
     code:
       label: "მასწავლებლის დამატება:"
       placeholder: "სექციის კოდი (ABCDEF)"
-      instructions: გთხოვთ შეიყვანეთ კოდი რომელიც მოგაწოდათ თქვენმა მასწავლებელმა.
-        ის არის 6 ნიშნა და გამოიყურება ასე "ABCDEF".
+      instructions: გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა.
+        ის არის 6–ნიშნა და გამოიყურება ასე "ABCDEF".
     submit: "მასწავლებლის დამატება"
   add_hint_form:
     placeholder: "თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ"
@@ -380,7 +380,7 @@
     title: "ისწავლეთ კოდის სტუდიაში"
     description: "ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები,
       აპლიკაციები და ხელოვნების ნიმუშები კოდით."
-    try_hour_of_code: "ცადეთ კოდირების საათი!"
+    try_hour_of_code: "სცადეთ კოდის ერთი საათი!"
   gender:
     male: "მამრობითი"
     female: "მდედრობითი"
@@ -397,17 +397,22 @@
       დაTwitter-ის პროგრამისტები."
     help_from_html_old: "ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft,
       Facebook, დაTwitter-ის პროგრამისტები."
-    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. ყველა
-      უფლება დაცულია.<br /> Star Warss&#8482; &amp; &copy; %{current_year} Disney
-      and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &amp; &copy; %{current_year}
-      Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &amp; &copy; %{current_year}
-      20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &amp; &copy;
-      2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants
-      vs. Zombies&#8482; &amp; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება
-      დაცულია
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      entertainment Ltd. ყველა უფლება რეზერვირებულია.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts inc. ყველა უფლება დაცულია
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება
+      დაცულია.<br /> Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      ყველა უფლება დაცულია. <br/>Frozen&#8482; &copy; %{current_year} Disney. ყველა
+      უფლება დაცულია.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      ყველა უფლება დაცულია.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია.<br />The Amazing
+      World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება
+      დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა
+      უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა
+      უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი
+      &copy; 2015 Cartoon Network.
     powered_by_aws: "შექმნილია Amazon Web Services დახმარებით"
     trademark: "&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო
       და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია."
@@ -425,7 +430,7 @@
     built_on_code_studio: "დაწერეთ კოდი კოდის სტუდიაში"
     make_my_own_app: "ჩემი საკუთარი აპლიკაციის შექმნა"
     how_it_works: "როგორ მუშაობს ეს სივრცე"
-    try_hour_of_code: "ცადეთ კოდირების საათი!"
+    try_hour_of_code: "სცადეთ კოდის ერთი საათი!"
   reference_area:
     title: "გჭირდებათ დახმარება?"
     subtitle: "ნახეთ ეს ვიდეოები და მინიშნებები"

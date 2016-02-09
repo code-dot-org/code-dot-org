@@ -62,11 +62,6 @@ it-IT:
   congratulations_on_completing_hoc: "Complimenti per aver completato un'Ora del Codice"
   congratulations_volunteer: |-
     Complimenti: ora che hai provato l'Ora del Codice, <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a> e aiuta gli studenti a imparare un'Ora del Codice!
-  course_name_accelerated: Corso rapido
-  course_name_course1: Corso 1
-  course_name_course2: Corso 2
-  course_name_course3: Corso 3
-  course_name_course4: Corso 4
   congratulations_on_completing_course: 'Congratulazioni per aver completato il %{course}'
   congrats_next_tutorials_title: Adesso prova questi corsi
   congrats_next_tutorials_desc: 'Prova questi corsi più brevi, da 1 ora, oppure prova un <a href="%{current_path}/next">corso di un partner</a>.'
@@ -117,9 +112,9 @@ it-IT:
   learn_next_level: Prova un altro corso di Code Studio
   learn_online: Prova altri corsi on-line
   learn_classes: Trova le scuole locali
-  hoc_is_here: "L'Ora del Codice #HourOfCode è qua - provala! @codeorg @programmafuturo"
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala! @codeorg @programmafuturo'
-  twitter_teach_cs: 'Perchè molte scuole non insegnano informatica? Possiamo migliorare questa situazione.  http://youtu.be/nKIu9yen5nc. Visita http://code.org/  per saperne di più.'
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: "Fai l'Ora del Codice"
   beyond_hoc: "Dopo l'Ora del Codice"
   what_gender: Di che sesso sei?
@@ -569,7 +564,7 @@ it-IT:
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_message: "<b>16 Dicembre 2015</b> - Grazie per aver partecipato all'Ora di Codice 2015! I risultati e i progressi delle esercitazioni e delle lezioni di coding saranno registrati e salvati. Nota: gli uffici di Code.org rimarranno chiusi dal 19 dicembre al 4 gennaio. Aspettatevi un leggero ritardo per eventuali domande inviate fino al 4 gennaio."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Ulteriori informazioni
   dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando! Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto di Amazon.com o di Microsoft's Windows Store come regalo di ringraziamento. Unisciti agli studenti di tutto il mondo nella settimana 7-13 dicembre 2015."
   dashboard_announce_playlab: "<b>4 Dicembre, 2015</b> - L'Ora del Codice è qua! Prova uno dei 50 corsi per tutte le età e tutti i dispositivi. Novità della settimana: programma le tue storie e i tuoi giochi con i nuovi corsi del Laboratorio: L'Era Glaciale e Gumball."
