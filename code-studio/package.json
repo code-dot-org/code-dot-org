@@ -13,7 +13,9 @@
     "npm": "^2.9.1"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "jquery-shim": "global:$"
@@ -24,6 +26,7 @@
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
     "test": "mochify test/**/*.js --transform babelify",
+    "debug": "mochify --debug test/**/*.js --transform babelify",
     "coverage": "mochify test/**/*.js --transform babelify --plugin [ mochify-istanbul --report json --report lcov --dir ./coverage ] && istanbul check-coverage ./coverage/coverage-final.json",
     "clean": "rm -rf build",
     "clean-assets": "rm -rf build/assets",
@@ -69,6 +72,7 @@
     "jquery.cookie": "^1.4.1",
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
+    "lscache": "^1.0.5",
     "marked": "0.3.2",
     "react": "^0.13.1",
     "video.js": "4.5.2"
