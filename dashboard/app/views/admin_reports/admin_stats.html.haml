@@ -20,15 +20,14 @@
           Female Students:
           = @stats['born_accounts']['female_students']
           = surround '(', ')' do
-            = number_with_precision(100.0 * @stats['born_accounts']['female_students'].to_f / |
-                (@stats['born_accounts']['female_students'].to_f + |
-                 @stats['born_accounts']['male_students'].to_f), |
-              precision: 2) + '%'
+            = get_gender_percentage(@stats['born_accounts']['female_students'],
+                                    @stats['born_accounts']['male_students'])
         %li
           Male Students:
           = @stats['born_accounts']['male_students']
           = surround '(', ')' do
-            = number_with_precision(100.0 * @stats['born_accounts']['male_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2) + '%'
+            = get_gender_percentage(@stats['born_accounts']['male_students'],
+                                    @stats['born_accounts']['female_students'])
         %li
           Teachers:
           = @stats['born_accounts']['teachers']
