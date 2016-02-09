@@ -14,7 +14,7 @@ module ProxyHelper
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    uri = (url.request_uri.empty?) ? '/' : url.request_uri
+    uri = url.request_uri.empty? ? '/' : url.request_uri
 
     # Limit how long we're willing to wait.
     http.open_timeout = 3
