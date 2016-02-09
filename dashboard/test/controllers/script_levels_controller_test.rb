@@ -897,4 +897,30 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
+
+  test "should not see examples if an unauthorized teacher is signed in" do
+    sign_in create(:teacher)
+    level = create(:applab, examples: ['fakeexample'])
+
+    get_show_script_level_page(create(:script_level, level: level))
+
+    assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
+  end
+
+
+  test "should see examples if an unauthorized teacher is signed in" do
+    authorized_teacher = create(:teacher)
+    cohort = create(:cohort)
+    cohort.teachers << authorized_teacher
+    cohort.save!
+
+    assert authorized_teacher.authorized_teacher?
+    sign_in authorized_teacher
+    level = create(:applab, examples: ['fakeexample'])
+
+    get_show_script_level_page(create(:script_level, level: level))
+
+    assert_select 'button', I18n.t('teacher.panel.example')
+  end
+
 end
