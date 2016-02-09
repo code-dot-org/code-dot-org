@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160203004941) do
+ActiveRecord::Schema.define(version: 20160208215727) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -41,22 +41,6 @@ ActiveRecord::Schema.define(version: 20160203004941) do
 
   add_index "activity_hints", ["activity_id"], name: "index_activity_hints_on_activity_id", using: :btree
   add_index "activity_hints", ["level_source_hint_id"], name: "index_activity_hints_on_level_source_hint_id", using: :btree
-
-  create_table "artifact_submissions", force: :cascade do |t|
-    t.string   "type",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "artifacts", force: :cascade do |t|
-    t.string   "name",               limit: 255
-    t.text     "description",        limit: 65535
-    t.integer  "learning_module_id", limit: 4
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-  end
-
-  add_index "artifacts", ["learning_module_id"], name: "index_artifacts_on_learning_module_id", using: :btree
 
   create_table "authored_hint_view_requests", force: :cascade do |t|
     t.integer  "user_id",               limit: 4
@@ -252,23 +236,6 @@ ActiveRecord::Schema.define(version: 20160203004941) do
   add_index "hint_view_requests", ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id", using: :btree
   add_index "hint_view_requests", ["user_id"], name: "index_hint_view_requests_on_user_id", using: :btree
 
-  create_table "learning_module_assignments", force: :cascade do |t|
-    t.integer  "user_id",            limit: 4
-    t.integer  "learning_module_id", limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  add_index "learning_module_assignments", ["learning_module_id"], name: "index_learning_module_assignments_on_learning_module_id", using: :btree
-  add_index "learning_module_assignments", ["user_id"], name: "index_learning_module_assignments_on_user_id", using: :btree
-
-  create_table "learning_modules", force: :cascade do |t|
-    t.string   "name",                 limit: 255
-    t.string   "learning_module_type", limit: 255
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-  end
-
   create_table "level_source_hints", force: :cascade do |t|
     t.integer  "level_source_id", limit: 4
     t.text     "hint",            limit: 65535
@@ -341,10 +308,21 @@ ActiveRecord::Schema.define(version: 20160203004941) do
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
 
   create_table "professional_learning_courses", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string "name", limit: 255
   end
+
+  create_table "professional_learning_modules", force: :cascade do |t|
+    t.string "name",                 limit: 255
+    t.string "learning_module_type", limit: 255
+  end
+
+  create_table "professional_learning_tasks", force: :cascade do |t|
+    t.string  "name",                            limit: 255
+    t.string  "description",                     limit: 255
+    t.integer "professional_learning_module_id", limit: 4
+  end
+
+  add_index "professional_learning_tasks", ["professional_learning_module_id"], name: "task_learning_module_index", using: :btree
 
   create_table "puzzle_ratings", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -480,41 +458,13 @@ ActiveRecord::Schema.define(version: 20160203004941) do
   add_index "unexpected_teachers_workshops", ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
   add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
 
-  create_table "user_artifact_assignments", force: :cascade do |t|
-    t.integer  "user_id",        limit: 4
-    t.integer  "artifact_id",    limit: 4
-    t.time     "assigned_date"
-    t.time     "completed_date"
-    t.string   "status",         limit: 255
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
-  add_index "user_artifact_assignments", ["artifact_id"], name: "index_user_artifact_assignments_on_artifact_id", using: :btree
-  add_index "user_artifact_assignments", ["user_id"], name: "index_user_artifact_assignments_on_user_id", using: :btree
-
-  create_table "user_course_enrollments", force: :cascade do |t|
-    t.integer  "user_id",                         limit: 4
-    t.integer  "professional_learning_course_id", limit: 4
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.string   "status",                          limit: 255
-  end
-
-  add_index "user_course_enrollments", ["professional_learning_course_id"], name: "index_user_course_enrollments_on_professional_learning_course_id", using: :btree
-  add_index "user_course_enrollments", ["user_id"], name: "index_user_course_enrollments_on_user_id", using: :btree
-
   create_table "user_enrollment_module_assignments", force: :cascade do |t|
-    t.integer  "learning_module_id",        limit: 4
-    t.integer  "user_course_enrollment_id", limit: 4
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.integer  "user_id",                   limit: 4
+    t.integer "professional_learning_module_id",                 limit: 4
+    t.integer "user_professional_learning_course_enrollment_id", limit: 4
   end
 
-  add_index "user_enrollment_module_assignments", ["learning_module_id"], name: "index_user_enrollment_module_assignments_on_learning_module_id", using: :btree
-  add_index "user_enrollment_module_assignments", ["user_course_enrollment_id"], name: "fk_rails_e5e86f5fd9", using: :btree
-  add_index "user_enrollment_module_assignments", ["user_id"], name: "index_user_enrollment_module_assignments_on_user_id", using: :btree
+  add_index "user_enrollment_module_assignments", ["professional_learning_module_id"], name: "module_assignment_module_index", using: :btree
+  add_index "user_enrollment_module_assignments", ["user_professional_learning_course_enrollment_id"], name: "module_assignment_enrollment_index", using: :btree
 
   create_table "user_levels", force: :cascade do |t|
     t.integer  "user_id",         limit: 4,             null: false
@@ -529,29 +479,14 @@ ActiveRecord::Schema.define(version: 20160203004941) do
 
   add_index "user_levels", ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true, using: :btree
 
-  create_table "user_module_artifact_assignments", force: :cascade do |t|
-    t.integer  "artifact_id",                          limit: 4
-    t.integer  "user_enrollment_module_assignment_id", limit: 4
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.string   "status",                               limit: 255
+  create_table "user_module_task_assignments", force: :cascade do |t|
+    t.integer "user_enrollment_module_assignment_id", limit: 4
+    t.integer "professional_learning_task_id",        limit: 4
+    t.string  "status",                               limit: 255
   end
 
-  add_index "user_module_artifact_assignments", ["artifact_id"], name: "index_user_module_artifact_assignments_on_artifact_id", using: :btree
-  add_index "user_module_artifact_assignments", ["user_enrollment_module_assignment_id"], name: "fk_rails_3d81c8dc0f", using: :btree
-
-  create_table "user_module_assignments", force: :cascade do |t|
-    t.integer  "user_id",            limit: 4
-    t.integer  "learning_module_id", limit: 4
-    t.time     "assigned_date"
-    t.time     "completed_date"
-    t.string   "status",             limit: 255
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-  end
-
-  add_index "user_module_assignments", ["learning_module_id"], name: "index_user_module_assignments_on_learning_module_id", using: :btree
-  add_index "user_module_assignments", ["user_id"], name: "index_user_module_assignments_on_user_id", using: :btree
+  add_index "user_module_task_assignments", ["professional_learning_task_id"], name: "task_assignment_to_task_index", using: :btree
+  add_index "user_module_task_assignments", ["user_enrollment_module_assignment_id"], name: "task_assignment_to_module_assignment_index", using: :btree
 
   create_table "user_permissions", force: :cascade do |t|
     t.integer  "user_id",    limit: 4,   null: false
@@ -561,6 +496,15 @@ ActiveRecord::Schema.define(version: 20160203004941) do
   end
 
   add_index "user_permissions", ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
+
+  create_table "user_professional_learning_course_enrollments", force: :cascade do |t|
+    t.integer "user_id",                         limit: 4
+    t.integer "professional_learning_course_id", limit: 4
+    t.string  "status",                          limit: 255
+  end
+
+  add_index "user_professional_learning_course_enrollments", ["professional_learning_course_id"], name: "enrollment_plc_index", using: :btree
+  add_index "user_professional_learning_course_enrollments", ["user_id"], name: "index_user_professional_learning_course_enrollments_on_user_id", using: :btree
 
   create_table "user_scripts", force: :cascade do |t|
     t.integer  "user_id",          limit: 4, null: false
@@ -694,22 +638,15 @@ ActiveRecord::Schema.define(version: 20160203004941) do
   add_index "workshops", ["name"], name: "index_workshops_on_name", using: :btree
   add_index "workshops", ["program_type"], name: "index_workshops_on_program_type", using: :btree
 
-  add_foreign_key "artifacts", "learning_modules"
   add_foreign_key "authored_hint_view_requests", "levels"
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "learning_module_assignments", "learning_modules"
-  add_foreign_key "learning_module_assignments", "users"
-  add_foreign_key "user_artifact_assignments", "artifacts"
-  add_foreign_key "user_artifact_assignments", "users"
-  add_foreign_key "user_course_enrollments", "professional_learning_courses"
-  add_foreign_key "user_course_enrollments", "users"
-  add_foreign_key "user_enrollment_module_assignments", "learning_modules"
-  add_foreign_key "user_enrollment_module_assignments", "user_course_enrollments"
-  add_foreign_key "user_enrollment_module_assignments", "users"
-  add_foreign_key "user_module_artifact_assignments", "artifacts"
-  add_foreign_key "user_module_artifact_assignments", "user_enrollment_module_assignments"
-  add_foreign_key "user_module_assignments", "learning_modules"
-  add_foreign_key "user_module_assignments", "users"
+  add_foreign_key "professional_learning_tasks", "professional_learning_modules"
+  add_foreign_key "user_enrollment_module_assignments", "professional_learning_modules"
+  add_foreign_key "user_enrollment_module_assignments", "user_professional_learning_course_enrollments"
+  add_foreign_key "user_module_task_assignments", "professional_learning_tasks"
+  add_foreign_key "user_module_task_assignments", "user_enrollment_module_assignments"
+  add_foreign_key "user_professional_learning_course_enrollments", "professional_learning_courses"
+  add_foreign_key "user_professional_learning_course_enrollments", "users"
 end
