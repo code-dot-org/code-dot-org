@@ -95,7 +95,7 @@
   "turnRight": "เลี้ยวขวา",
   "turnTooltip": "หันตัวเราไปทางซ้ายหรือขวา 90 องศา",
   "whenBallInGoal": "เมื่อลูกบอลอยู่ในเป้าหมาย",
-  "whenBallInGoalTooltip": "ให้ทำคำสั่งด้านล่างนี้เมื่อลูกบอลเข้าเป้าหมาย.",
+  "whenBallInGoalTooltip": "ให้ทำคำสั่งด้านล่างเมื่อลูกบอลเข้าเป้าหมาย.",
   "whenBallMissesPaddle": "เมื่อลูกบอลพลาดจากใบพัด",
   "whenBallMissesPaddleTooltip": "ทำคำสั่งด้านล่างเมื่อลูกบอลหลุดจากใบพัด.",
   "whenDown": "เมื่อกดลูกศรลง",

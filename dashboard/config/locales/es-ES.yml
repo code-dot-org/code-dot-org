@@ -29,8 +29,8 @@
     code:
       label: 'Agregar un maestro:'
       placeholder: Código de sección (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Por favor introduce el código que ha compartido contigo tu profesor.
+        Es un código de 6 letras como "ABCDEF".
     submit: Añadir maestro
   add_hint_form:
     placeholder: Por favor introduce aquí tu pista
@@ -307,9 +307,8 @@
       remove: "¿Estás seguro que quieres eliminar este profesor?"
     students:
       dashboard: Ir a el panel del maestro
-    user_not_found: El profesor o el estudiante no se encontró
-    student_teacher_disassociated: "%{teacher_name} ha sido eliminado como profesor
-      de %{student_name}"
+    user_not_found: No se pudo encontrar al profesor.
+    student_teacher_disassociated: Has eliminado a %{teacher_name} como tu profesor.
     panel:
       answer_viewer: Ver respuesta
       student: estudiante
@@ -422,9 +421,15 @@
       />Plants contra Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos
       los derechos reservados.<br />The Amazing World of Gumball es trademark y &copy;
       2015 Cartoon Network.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Todos los derechos reservados.<br />Plantas vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los
+      derechos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm.
+      Todos los derechos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney.
+      Todos los derechos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th
+      Century Fox. Todos los derechos reservados..<br />Angry Birds&#8482; &copy;
+      2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados.<br
+      />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos
+      los derechos reservados.<br />The Amazing World of Gumball es marca registrada
+      y &copy; 2015 Cartoon Network.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo de CODE
       y el de Hora de Código &reg; son marcas registradas de Code.org."
