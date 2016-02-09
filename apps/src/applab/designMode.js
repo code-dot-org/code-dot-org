@@ -506,17 +506,17 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   }
   function reportUnsafeHtml(removed, unsafe, safe) {
     var msg = "The following lines of HTML were modified or removed:\n" + removed +
-      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + rootEl.id;
     console.log(msg);
     logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
       removedHtml: removed,
       unsafeHtml: unsafe,
-      safeHtml: safe
+      safeHtml: safe,
+      sanitizationTarget: rootEl.id
     });
   }
-  sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
 
-  var levelDom = $.parseHTML(Applab.levelHtml);
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
 
   children.each(function () {
