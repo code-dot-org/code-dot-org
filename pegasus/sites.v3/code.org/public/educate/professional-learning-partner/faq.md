@@ -31,6 +31,8 @@ Still have questions? See below for answers to commonly asked questions or email
 <br/>
 ________________
 <a id="map"></a>
+<br/>
+<br/>
 
 ### **My city isn't on the map, can I stil apply to be a Professional Learning Partner?**
 

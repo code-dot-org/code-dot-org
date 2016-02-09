@@ -80,11 +80,6 @@
   congratulations_volunteer: 'Gefeliciteerd: nu je het Uur van Coderen hebt geprobeerd,
     <a href="https://code.org/volunteer">geef je op om te helpen in een klas</a> en
     help studenten met het leren van het Uur van Coderen!'
-  course_name_accelerated: versnelde cursus
-  course_name_course1: Cursus 1
-  course_name_course2: Cursus 2
-  course_name_course3: Cursus 3
-  course_name_course4: Cursus 4
   congratulations_on_completing_course: Gefeliciteerd met het afronden van %{course}
   congrats_next_tutorials_title: Probeer nu deze opdrachten
   congrats_next_tutorials_desc: Probeer deze kortere opdrachten van een uur of probeer
