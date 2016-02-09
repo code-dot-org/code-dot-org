@@ -56,6 +56,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "@cdo/apps": "file:../apps",
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
     "jquery": "^1.11.3",

@@ -32,9 +32,6 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
-    if @level.is_a? Grid
-      @level.maze_data = @level.class.unparse_maze(@level.properties)
-    end
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
