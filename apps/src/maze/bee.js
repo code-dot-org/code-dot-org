@@ -1,6 +1,6 @@
 var utils = require('../utils');
 var mazeMsg = require('./locale');
-var Cell = require('./beeCell');
+var BeeCell = require('./beeCell');
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 
@@ -28,21 +28,33 @@ var Bee = function (maze, studioApp, config) {
   // honeycomb using an if block
   this.userChecks_ = [];
 
-  // The "raw dirt" represents the raw values as entered into the
-  // levelbuilder UI. They are a grid of either integers or strings,
-  // and can represent "variable" values, which means any given cell can
-  // theoretically contain one of a variety of objects.
+  // Initialize the map grid
   //
-  // We parse the strings into objects, then turn the "variable" grid
-  // into a list of "static" grids, representing all the possible
-  // combinations of objects.
+  // "serializedMaze" is the new way of storing maps; it's a JSON array
+  // containing complex map data.
   //
-  // We also initialize a "values" grid, which for objects that have
-  // values (hives and flowers) keeps track of their current state.
-  var rawDirt_ = config.level.rawDirt;
-  var variableGrid = rawDirt_.map(function (row) {
-    return row.map(Cell.parse);
-  });
+  // "map" plus optionally "levelDirt" is the old way of storing maps;
+  // they are each arrays of a combination of strings and ints with
+  // their own complex syntax. This way is deprecated for new levels,
+  // and only exists for backwards compatibility for not-yet-updated
+  // levels.
+  //
+  // Either way, we turn what we have into a grid of BeeCells, any one
+  // of which may represent a number of possible "static" cells. We then
+  // turn that variable grid of BeeCells into a set of static grids.
+  var variableGrid;
+  if (config.level.serializedMaze) {
+    variableGrid = config.level.serializedMaze.map(function (row) {
+      return row.map(BeeCell.deserialize);
+    });
+  } else {
+    variableGrid = config.level.map.map(function (row, x) {
+      return row.map(function (mapCell, y) {
+        var initialDirtCell = config.level.initialDirt[x][y];
+        return BeeCell.parseFromOldValues(mapCell, initialDirtCell);
+      });
+    });
+  }
   this.staticGrids = Bee.getAllStaticGrids(variableGrid);
 
   this.currentStaticGridId = 0;
@@ -159,8 +171,7 @@ Bee.prototype.setValue = function (row, col, val) {
 };
 
 /**
- * Did we reach our total nectar/honey goals, and accomplish any specific
- * hiveGoals?
+ * Did we reach our total nectar/honey goals?
  */
 Bee.prototype.finished = function () {
   // nectar/honey goals
@@ -352,19 +363,6 @@ Bee.prototype.isPurpleFlower = function (row, col) {
 };
 
 /**
- * See isHive comment.
- */
-Bee.prototype.hiveGoal = function (row, col) {
-  var val = this.getValue(row, col);
-  if (val >= -1) {
-    return 0;
-  }
-
-  return Math.abs(val) - 1;
-};
-
-
-/**
  * How much more honey can the hive at (row, col) produce before it hits the goal
  */
 Bee.prototype.hiveRemainingCapacity = function (row, col) {
@@ -379,19 +377,18 @@ Bee.prototype.hiveRemainingCapacity = function (row, col) {
   if (val === EMPTY_HONEY) {
     return 0;
   }
-  return -val;
+  return val;
 };
 
 /**
  * How much more nectar can be collected from the flower at (row, col)
  */
 Bee.prototype.flowerRemainingCapacity = function (row, col) {
-  var val = this.getValue(row, col);
-  if (val < 0) {
-    // not a flower
+  if (!this.isFlower(row, col)) {
     return 0;
   }
 
+  var val = this.getValue(row, col);
   if (val === UNLIMITED_NECTAR) {
     return Infinity;
   }
@@ -406,7 +403,7 @@ Bee.prototype.flowerRemainingCapacity = function (row, col) {
  */
 Bee.prototype.madeHoneyAt = function (row, col) {
   if (this.getValue(row, col) !== UNLIMITED_HONEY) {
-    this.setValue(row, col, this.getValue(row, col) + 1);
+    this.setValue(row, col, this.getValue(row, col) - 1);
   }
 
   this.honey_ += 1;
