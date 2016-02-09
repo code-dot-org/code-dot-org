@@ -1,0 +1,38 @@
+name 'CSPPD3-u4 chapter 1 resources pt2'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 4 Overview > Chapter 1: Data Explorations > Resources
+
+#### Interpreting Visual Data
+Students begin exploring the ways computational tools can be used to provide insights from data. They will use a data visualization tool to quickly explore large datasets and try to find meaningful trends or patterns. They will then learn the importance of checking their assumptions when drawing conclusions from data. The common assumption that Internet users are representative of the population as a whole is challenged through an examination of the "digital divide". Students then learn some recommended ways to design visualizations that clearly communicate their meaning. Finally students learn to make several simple types of charts in a spreadsheet tool.
+
+<br>
+
+>##### CS Concepts:
+
+>- **Data visualization** is a powerful tool for exploring datasets and developing insights.
+- Drawing conclusions from data or data visualization requires some **assumptions** to be made about the data or the process used to collect it.
+- A good data visualization will allow a reader to **easily develop accurate insights** about the data.
+- We must be careful when interpreting data and data visualizations. Conclusions based on **false assumptions** or **misleading visualizations** may lead to incorrect conclusions.
+- **Computational tools** allow data to quickly and easily be visualized in a variety of ways
+
+>##### Vocabulary:
+
+>- **Hypothesis:** a proposed explanation for some phenomenon used as the basis for further investigation.
+
+##### Lessons in Code Studio
+
+- <a href="https://studio.code.org/s/cspunit4/stage/2/puzzle/1" target=_blank>Stage 02- Finding Trends with Visualizations</a>
+- <a href="https://studio.code.org/s/cspunit4/stage/3/puzzle/1" target=_blank>Stage 03- Check Your Assumptions</a>
+- <a href="https://studio.code.org/s/cspunit4/stage/4/puzzle/1" target=_blank>Stage 04- Good and Bad Visualizations</a>
+- <a href="https://studio.code.org/s/cspunit4/stage/5/puzzle/1" target=_blank>Stage 05- Making Data Visualizations</a>
+
+##### External Resources
+
+- <a href="http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf" target="_blank">Data Visualization 101: How To Design Charts and Graphs</a>
+<br>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
