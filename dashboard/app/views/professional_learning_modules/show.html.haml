@@ -1,0 +1,19 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @professional_learning_module.name
+
+%p
+  %strong Learning Module Type
+  = @professional_learning_module.learning_module_type
+
+%p
+  %strong Artifact requirements
+  %ul
+    - @professional_learning_module.professional_learning_tasks.each do |task|
+      %li #{task.name}: #{task.description}
+
+= link_to 'Edit', edit_professional_learning_module_path(@professional_learning_module)
+\|
+= link_to 'Back', professional_learning_modules_path

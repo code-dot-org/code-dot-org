@@ -1,0 +1,18 @@
+= form_for @professional_learning_task do |f|
+  - if @professional_learning_task.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@professional_learning_task.errors.count, "error")} prohibited this professional_learning_task from being saved:"
+      %ul
+        - @professional_learning_task.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+    = f.label :description
+    = f.text_area :description
+    = f.label :learning_module_id
+    = f.select :professional_learning_module_id, options_for_select(options_for_professional_learning_task_learning_module)
+
+  .actions
+    = f.submit 'Save'

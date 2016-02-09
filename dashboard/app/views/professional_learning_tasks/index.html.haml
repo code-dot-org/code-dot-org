@@ -1,0 +1,23 @@
+%h1 Listing professional_learning_tasks
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @professional_learning_tasks.each do |task|
+      %tr
+        %td= task.name
+        %td= task.description
+        %td= link_to 'Show', task
+        %td= link_to 'Edit', edit_professional_learning_task_path(task)
+        %td= link_to 'Destroy', task, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Task', new_professional_learning_task_path

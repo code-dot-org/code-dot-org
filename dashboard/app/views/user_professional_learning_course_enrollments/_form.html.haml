@@ -1,0 +1,19 @@
+= form_for @user_professional_learning_course_enrollment do |f|
+  - if @user_professional_learning_course_enrollment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user_professional_learning_course_enrollment.errors.count, "error")} prohibited this user_course_enrollment from being saved:"
+      %ul
+        - @user_professional_learning_course_enrollment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user
+    = f.select :user_id, options_for_select(options_for_user_enrollment_users)
+    = f.label :course
+    = f.select :professional_learning_course_id, options_for_select(options_for_user_enrollment_courses)
+
+    = f.label :module_selection
+    = f.select :professional_learning_module_ids, options_for_select(options_for_professional_learning_task_learning_module), {},  {multiple: true, size: options_for_professional_learning_task_learning_module.count}
+
+  .actions
+    = f.submit 'Save'
