@@ -18,6 +18,7 @@ class UserProfessionalLearningCourseEnrollment < ActiveRecord::Base
   belongs_to :professional_learning_course
   has_many :user_enrollment_module_assignment
   has_many :user_module_task_assignment, through: :user_enrollment_module_assignment
+  has_many :professional_learning_modules, through: :user_enrollment_module_assignment
 
   def self.enroll_user_in_course_with_learning_modules(user, course, learning_modules)
     enrollment = UserProfessionalLearningCourseEnrollment.find_or_create_by(user: user, professional_learning_course: course, status: :in_progress)

@@ -11,9 +11,9 @@ Dashboard::Application.routes.draw do
   end
 
   resources :professional_learning_courses
-  resources :learning_modules
-  resources :artifacts
-  resources :user_course_enrollments
+  resources :professional_learning_modules
+  resources :professional_learning_tasks
+  resources :user_professional_learning_course_enrollments
 
   resources :user_levels, only: [:update]
 

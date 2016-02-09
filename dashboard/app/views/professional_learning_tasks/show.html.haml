@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @professional_learning_task.name
+
+%p
+  %strong Description:
+  = @professional_learning_task.description
+
+%p
+  %strong Associated module
+  = @professional_learning_task.professional_learning_module.name
+
+= link_to 'Edit', edit_professional_learning_task_path(@professional_learning_task)
+\|
+= link_to 'Back', professional_learning_tasks_path
