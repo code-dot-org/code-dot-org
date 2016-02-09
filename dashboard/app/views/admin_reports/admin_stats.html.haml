@@ -3,17 +3,12 @@
     %li
       Accounts
       %ul
-        %li
-          Users:
-          = @stats['accounts']['users']
-        %li
-          Students:
-          = @stats['accounts']['students']
-        %li
-          Teachers:
-          = @stats['accounts']['teachers']
+        - {'users': 'Users', 'students': 'Students', 'teachers': 'Teachers'}.each do |type, description|
+          %li
+            = "#{description}: "
+            = @stats["accounts"][type.to_s]
     %li
-      Born Accounts
+      Born Accounts (accounts that have at least one sign-in)
       %ul
         %li
           Users:
@@ -25,67 +20,44 @@
           Female Students:
           = @stats['born_accounts']['female_students']
           = surround '(', ')' do
-            = number_with_precision(100.0 * @stats['born_accounts']['female_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2)
+            = get_gender_percentage(@stats['born_accounts']['female_students'],
+                                    @stats['born_accounts']['male_students'])
         %li
           Male Students:
           = @stats['born_accounts']['male_students']
           = surround '(', ')' do
-            = number_with_precision(100.0 * @stats['born_accounts']['male_students'].to_f / (@stats['born_accounts']['female_students'].to_f + @stats['born_accounts']['male_students'].to_f), precision: 2)
+            = get_gender_percentage(@stats['born_accounts']['male_students'],
+                                    @stats['born_accounts']['female_students'])
         %li
           Teachers:
           = @stats['born_accounts']['teachers']
-        %li
-          Female Teachers:
-          = @stats['born_accounts']['female_teachers']
-          = surround '(', ')' do
-            = number_with_precision(100.0 * @stats['born_accounts']['female_teachers'].to_f / (@stats['born_accounts']['female_teachers'].to_f + @stats['born_accounts']['male_teachers'].to_f), precision: 2)
-        %li
-          Male Teachers:
-          = @stats['born_accounts']['male_teachers']
-          = surround '(', ')' do
-            = number_with_precision(100.0 * @stats['born_accounts']['male_teachers'].to_f / (@stats['born_accounts']['female_teachers'].to_f + @stats['born_accounts']['male_teachers'].to_f), precision: 2)
     %li
-      Actives
+      Actives (accounts that have at least one sign-in in the last x days)
       %ul
-        %li
-          7-Day Students:
-          = @stats['actives']['seven_day_students']
-        %li
-          7-Day Female Students:
-          = @stats['actives']['seven_day_female_students']
-        %li
-          7-Day Male Students:
-          = @stats['actives']['seven_day_male_students']
-        %li
-          30-Day Students:
-          = @stats['actives']['thirty_day_students']
-        %li
-          30-Day Female Students:
-          = @stats['actives']['thirty_day_female_students']
-        %li
-          30-Day Male Students:
-          = @stats['actives']['thirty_day_male_students']
-    - ["historical", "current_weekly", "current_monthly"].each do |type|
+        -{'seven_day_students': '7-Day Students',
+          'seven_day_female_students': '7-Day Female Students',
+          'seven_day_male_students': '7-Day Male Students',
+          'thirty_day_students': '30-Day Students',
+          'thirty_day_female_students': '30-Day Female Students',
+          'thirty_day_male_students': '30-Day Male Students'}.each do |type, description|
+          %li
+            = "#{description}: "
+            = @stats['actives']["#{type}"]
+    - {'historical': 'accounts at least 37 days old and logged in at least once after 30 days',
+       'current_weekly': 'accounts 37 to 44 days old and logged in at least once after 30 days',
+       'current_monthly': 'accounts 60 to 90 days old and logged in at least once after 30 days'}.each do |type, description|
       %li
         Retention
-        = type
-        (Percentages)
+        = "#{type} (#{description})"
         %ul
-          %li
-            30-Day Student:
-            = @stats['thirty_day_retention_' + type]['students']
-          %li
-            30-Day Female Student:
-            = @stats['thirty_day_retention_' + type]['female_students']
-          %li
-            30-Day Male Student:
-            = @stats['thirty_day_retention_' + type]['male_students']
-          %li
-            30-Day US Student:
-            = @stats['thirty_day_retention_' + type]['us_students']
-          %li
-            30-Day Non-US Student:
-            = @stats['thirty_day_retention_' + type]['non_us_students']
+          -{'students': 'Student',
+            'female_students': 'Female Student',
+            'male_students': 'Male Student',
+            'us_students': 'US Student',
+            'non_us_students': 'Non-US Student'}.each do |filter, filter_description|
+            %li
+              = "30-Day #{filter_description}: "
+              = (100.0 * @stats["thirty_day_retention_#{type}"]["#{filter}"]).to_s + '%'
 
   = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
