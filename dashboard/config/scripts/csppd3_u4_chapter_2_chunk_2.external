@@ -1,0 +1,27 @@
+name 'CSPPD3-u4 chapter 2 chunk 2'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Unit 4 Overview > Chapter 2: Data in the Real World > Resources
+
+#### Practice PT - Propose an Innovation
+Students will propose a computing innovation that they believe could solve a well-identified problem or provide a benefit to some subset of society. Students must determine what specific types of data this innovation would rely on and indicate how they would weigh the potential benefits of the innovation against the potential risks collecting this data might impose.
+
+<br>
+
+>##### CS Concepts
+
+>* Computing **enables innovation in nearly every field**
+* Computing has effects, **both beneficial and harmful**, on people and society
+
+##### Lessons in Code Studio
+
+* <a href="https://studio.code.org/s/cspunit4/stage/1/puzzle/1" target=_blank>Stage 14- Practice PT - Propose an Innovation</a>
+
+##### External Resources
+
+* **CURRENTLY EMPTY**
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
