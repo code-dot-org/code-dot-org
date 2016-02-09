@@ -4,7 +4,7 @@
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
-var showAssetManager = require('./assetManagement/show.js');
+var showAssetManager = require('../assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;

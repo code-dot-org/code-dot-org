@@ -2,7 +2,7 @@
 // TODO (josh) - don't pass `Dialog` into `createModalDialog`.
 
 var AssetManager = require('./AssetManager.jsx');
-var studioApp = require('../../StudioApp').singleton;
+var studioApp = require('../StudioApp').singleton;
 
 /**
  * Display the "Manage Assets" modal.
@@ -21,7 +21,7 @@ module.exports = function(assetChosen, typeFilter) {
   });
   React.render(React.createElement(AssetManager, {
     typeFilter: typeFilter,
-    channelId: Applab.channelId,
+    channelId: dashboard.project.getCurrentId(),
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
