@@ -201,7 +201,11 @@ class TablesApi < Sinatra::Base
     halt 400, {}, msg if records.length > max_records
 
     # deleting the old records only after all validity checks have passed.
-    table.delete_all()
+    begin
+      table.delete_all()
+    rescue Exception
+      halt 500
+    end
 
     # TODO: This should probably be a bulk insert
     records.each do |record|

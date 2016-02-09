@@ -308,7 +308,7 @@
   "PROCEDURES_IFRETURN_WARNING": "चेतावनी: इस ब्लॉक एक फ़ंक्शन परिभाषा के भीतर ही इस्तेमाल किया जा सकता।",
   "PROCEDURES_MUTATORARG_TITLE": "इनपुट नाम:",
   "PROCEDURES_MUTATORCONTAINER_TITLE": "inputs",
-  "REMOVE_COMMENT": "Remove Comment",
+  "REMOVE_COMMENT": "टिप्पणी हटाएँ",
   "RENAME_PARAMETER": "Rename parameter...",
   "RENAME_PARAMETER_TITLE": "Rename all '%1' parameters to:",
   "RENAME_VARIABLE": "Rename variable...",

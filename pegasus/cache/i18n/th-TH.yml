@@ -73,11 +73,6 @@
     Hour of Code 1 หลักสูตร"
   congratulations_volunteer: 'ยินดีด้วย: หลังจากที่คุณได้ลองชั่วโมงแห่งการโค้ด <a
     href="https://code.org/volunteer">ลงทะเบียนเป็นอาสาสมัครในห้องเรียน</a>และช่วยนักเรียนเรียนรู้เป็นชั่วโมงแห่งการโค้ด'
-  course_name_accelerated: Accelerated Course
-  course_name_course1: "คอร์ส 1"
-  course_name_course2: "คอร์ส 2"
-  course_name_course3: "คอร์ส 3"
-  course_name_course4: "คอร์ส 4"
   congratulations_on_completing_course: "ยินดีด้วยกับการจบบทเรียน %{course}"
   congrats_next_tutorials_title: "ลองการแนะนำการสอยอื่นต่อ"
   congrats_next_tutorials_desc: ลองแบบสั้นกว่านี้ 1 ชั่วโมงสำหรับการทบทวน หรือลอง<a
