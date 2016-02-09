@@ -1,4 +1,4 @@
-var showAssetManager = require('../assetManagement/show.js');
+var showAssetManager = require('../../assetManagement/show.js');
 var rowStyle = require('./rowStyle');
 
 // We'd prefer not to make GET requests every time someone types a character.

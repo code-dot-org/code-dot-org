@@ -1,4 +1,5 @@
 'use strict';
+/* global dashboard */
 
 var commonMsg = require('../locale');
 var msg = require('./locale');
@@ -14,6 +15,9 @@ var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
+var assetsApi = require('../clientApi').assets;
+var assetListStore = require('../assetManagement/assetListStore');
+var showAssetManager = require('../assetManagement/show.js');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -54,6 +58,8 @@ var GameLab = function () {
   this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
+
+  dropletConfig.injectGameLab(this);
 };
 
 module.exports = GameLab;
@@ -75,6 +81,40 @@ var MEDIA_PROXY = '//' + location.host + '/media?u=';
 // starts with http or https
 var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
+var ASSET_PATH_PREFIX = "/v3/assets/";
+
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ *
+ * If the filename URL is absolute, route it through the MEDIA_PROXY.
+ * @param {string} filename
+ * @returns {string}
+ */
+GameLab.maybeAddAssetPathPrefix = function (filename) {
+
+  if (ABSOLUTE_REGEXP.test(filename)) {
+    // We want to be able to handle the case where our filename contains a
+    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
+    // technically invalid URL. encodeURIComponent will replace space with %20
+    // for us, but as soon as it's decoded, we again have an invalid URL. For
+    // this reason we first replace space with %20 ourselves, such that we now
+    // have a valid URL, and then call encodeURIComponent on the result.
+    return MEDIA_PROXY + encodeURIComponent(filename.replace(/ /g, '%20'));
+  }
+
+  filename = filename || '';
+  if (filename.length === 0) {
+    return '/blockly/media/1x1.gif';
+  }
+
+  if (filename.indexOf('/') !== -1 || !dashboard) {
+    return filename;
+  }
+
+  return ASSET_PATH_PREFIX + dashboard.project.getCurrentId() + '/' + filename;
+};
+
 GameLab.baseP5loadImage = null;
 
 /**
@@ -87,6 +127,13 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+
+  // Pre-populate asset list
+  assetsApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  }, function () {
+    // Unable to load asset list
+  });
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
@@ -118,15 +165,7 @@ GameLab.prototype.init = function (config) {
   if (!GameLab.baseP5loadImage) {
     GameLab.baseP5loadImage = window.p5.prototype.loadImage;
     window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      if (ABSOLUTE_REGEXP.test(path)) {
-        // We want to be able to handle the case where our filename contains a
-        // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-        // technically invalid URL. encodeURIComponent will replace space with %20
-        // for us, but as soon as it's decoded, we again have an invalid URL. For
-        // this reason we first replace space with %20 ourselves, such that we now
-        // have a valid URL, and then call encodeURIComponent on the result.
-        path = MEDIA_PROXY + encodeURIComponent(path.replace(/ /g, '%20'));
-      }
+      path = GameLab.maybeAddAssetPathPrefix(path);
       return GameLab.baseP5loadImage(path, successCallback, failureCallback);
     };
   }
@@ -175,6 +214,34 @@ GameLab.prototype.init = function (config) {
   this.debugger_.initializeAfterDomCreated({
     defaultStepSpeed: 1
   });
+};
+
+function quote(str) {
+  return '"' + str + '"';
+}
+
+/**
+ * Returns a list of options (optionally filtered by type) for code-mode
+ * asset dropdowns.
+ */
+GameLab.prototype.getAssetDropdown = function (typeFilter) {
+  var options = assetListStore.list(typeFilter).map(function (asset) {
+    return {
+      text: quote(asset.filename),
+      display: quote(asset.filename)
+    };
+  });
+  var handleChooseClick = function (callback) {
+    showAssetManager(function (filename) {
+      callback(quote(filename));
+    }, typeFilter);
+  };
+  options.push({
+    text: 'Choose...',
+    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
+    click: handleChooseClick
+  });
+  return options;
 };
 
 GameLab.prototype.loadAudio_ = function () {
