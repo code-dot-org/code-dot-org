@@ -30,7 +30,6 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_response :success
 
     app_options = assigns(:view_options)
-    assert_equal true, app_options[:no_padding]
     assert_equal true, app_options[:no_header]
     assert_equal true, app_options[:no_footer]
     assert_equal true, app_options[:white_background]

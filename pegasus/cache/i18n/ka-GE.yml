@@ -27,9 +27,9 @@
   twentyhours_heading: "სცადეთ ჩვენი პროგრამირების კურსი"
   twentyhours_text: "დაასრულეთ თქვენი პირველი კოდის ერთი საათი? გაიგეთ მეტი ინფორმატიკისა
     და პროგრამირების შესახებ მომდევნო კურსში."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: "ყოველი ბავშვი იმსახურებს შესაძლებლობას"
+  og_description: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს
+    პროგრამირება."
   hoc2014_heading: შეუერთდით<a href="http://hourofcode.com">კოდის ერთ საათს</a><br/>
     2014 წლის დეკემბერში<br/>
   hoc2014_students: "მოსწავლეები"
@@ -46,7 +46,7 @@
   csedweek_map_search_reset: "თავიდან"
   csedweek_map_legend_title: "ლეგენდა"
   csedweek_map_legend_event: "კოდის ერთი საათის ღონისძიება"
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: "სპეცილური ღონისძიება"
   cded_sign_up: "რეგისტრაცია"
   cded_try_it: "სცადეთ"
   twentyhours_trynow: "სცადეთ ახლა"
@@ -77,11 +77,6 @@
   congratulations_volunteer: გილოცავთ:ახლა, როცა თქვენ უკვე სცადეთ კოდის ერთი საათი,
     <a href="https://code.org/volunteer">დარეგისტრირდით მოხლისედ თქვენს კლასში</a>
     და დაეხმარეთ მოსწავლეებს კოდის ერთი საათის სწავლაში!
-  course_name_accelerated: "დაჩქარებული კურსი"
-  course_name_course1: "კურსი 1"
-  course_name_course2: "კურსი 2"
-  course_name_course3: "კურსი 3"
-  course_name_course4: "კურსი 4"
   congratulations_on_completing_course: "გილოცავთ %{course} კურსის დასრულებას"
   congrats_next_tutorials_title: "შემდეგ სცადეთ ეს ტუტორიალები"
   congrats_next_tutorials_desc: სცადეთ ეს უფრო მოკლე, ერთსაათიანი ტუტორიალები ან <a
@@ -243,8 +238,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "გაიგეთ მეტი"
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20,000 მასწავლებელი გადამზადებულია და ასწავლის პროგრამირებას
+    თავიანთ კლასებში.
   homepage_banner_20k_teachers_link: "გაიგეთ მეტი"
   homepage_slot_text_title_hoc: "კოდის ერთი საათი"
   homepage_slot_text_blurb_hoc: "სწავლა შეუძლია ყველას. დაიწყეთ დღეს"
@@ -254,7 +249,7 @@
   homepage_solot_text_link_volunteer: "გახდით კოდის ერთი საათის მოხალისე"
   homepage_slot_text_title_students: "მოსწავლეები"
   homepage_slot_text_blurb_students: "ყველა ჩვენი ტუტორიალის ნახვა"
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: "შეისწავლეთ ჩვენი კურსები"
   homepage_slot_text_link_codestudio: "ნახეთ კოდის სტუდია"
   homepage_slot_text_link_local: "ადგილობრივი კლასის ნახვა"
   homepage_slot_text_link_othercourses: "სხვა ონლაინ კურსები"
@@ -318,7 +313,7 @@
     შთამაგონებელი ვიდეო</a> როლ-მოდელებისა და ცნობილი ადამიანების მონაწილეობით
   playlab_choose_theme: "აირჩიეთ თამაშების ლაბორატორიის თემა"
   playlab_classic_title: "კლასიკური"
-  playlab_gumball_title: "გამბოლი"
+  playlab_gumball_title: "გამბოლის საოცარი სამყარო"
   playlab_iceage_title: "გამყინვარების პერიოდი - მალე"
   playlab_iceage_title_live: "გამყინვარების პერიოდი"
   starwars_subtitle: "გალაქტიკის შექმნა კოდით"
@@ -329,7 +324,7 @@
   starwars_blocks_title: "ბლოკები"
   starwars_blocks_description: "გამოიყენეთ ბლოკლი."
   starwars_blocks_specs: "ბევრი სხვადასხვა ენა | თანამედროვე ბრაუზერები, სმარტფონები,
-    ტაბლეტები | ასაკი 6-10"
+    ტაბლეტები | ასაკი 6-106"
   starwars_blocks_start_button: "სცადეთ ახლავე"
   starwars_watch_videos: "სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს"
   starwars_speak_languages: "სხვა ენაზე ლაპარაკობთ?"
@@ -342,15 +337,14 @@
     სამყაროს თავგადასავლებში."
   mc_gradelevel: "ასაკი 6-106"
   mc_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
-  mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+"
+  mc_specs: "სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6–106"
   minecraft_subtitle: "მაინკრაფტის კოდის ერთი საათი"
   volunteer_engineer_submission_title: "შთააგონეთ მოსწავლეებს და გახდით კოდის ერთი
     საათის მოხალისე."
   volunteer_engineer_submission_subtitle_generic: "წელს, 7-13 დეკემბერს, 100,000 მასწავლებელი
     ჩაატარებს კოდის ერთ საათს თავის კლასში. მათ თქვენი დახმარება სჭირდებათ! "
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} მასწავლებელს სჭირდება
-    პროგრამირების მოყვარული მოხალისე კოდის ერთი საათის ღონისძიების ჩატარებაში დასახმარებლად.
-    <br>%{num_volunteers} მოხალისე უკვე დარეგისტრირდა. შემოგვიერთდით თქვენც."
+    მოხალისე. <br>%{num_volunteers} მოხალისე უკვე დარეგისტრირდა."
   volunteer_engineer_submission_intro_background: "კოდის ერთი საათი არის გლობალური
     მოძრაობა, რომლის მიზანია ინფორმატიკისა და პროგრამირების გავრცელება 180+ ქვეყენაში
     ათობით მილიონი მოსწავლისთვის. თქვენც ჩაერთეთ ინფორმატიკის საგანმანათლებლო კვირეულში,
@@ -363,10 +357,9 @@
   volunteer_engineer_submission_intro_signup: შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული
     მეცნიერების სტუდენტი ან დეველოპერი. ველები, რომლებიც მონიშნულია ასე <span class="form-required-field">*</span>
     სავალდებულოა.
-  volunteer_engineer_submission_intro_links: არ გინდათ მოხალისეობა? <a href="%{learn_more}">გაიგეთ
-    მეტი</a> თქვენი საკუთარი კოდის ერთი საათის ორგანიზების შესახებ და იპოვეთ მოხალისე
-    <a href="%{volunteer_local}">მოხალისეთა რუკაზე</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_intro_links: მასწავლებელი ხართ და მოხალისეებს ეძებთ?
+    იპოვეთ ადგილობრივი მოხალისე <a href="%{volunteer_local}">მოხალისეთა რუკაზე</a>.
+  volunteer_engineer_submission_update_information: "თქვენი ინფორმაციის განახლება"
   volunteer_engineer_submission_header_shared: "მოხალისეთა რუკაზე მასწავლებლებთან
     გაზიარებული ინფორმაცია"
   volunteer_engineer_submission_field_name: "სახელი"
@@ -381,10 +374,9 @@
     მხოლოდ ქალაქი."
   volunteer_engineer_submission_field_location_placeholder: "საფოსტო კოდი, ქალაქი
     და შტატი/ქვეყანა ან მისამართი"
-  volunteer_engineer_submission_field_location_flexibility: "კოდის ერთი საათის ღონისძიებისთვის
-    შემიძლია... (აირჩიეთ ყველა შესაბამისი ვარიანტი)"
-  volunteer_engineer_submission_checkbox_after_hoc: "მინდა კოდის ერთი საათის დასრულების
-    შემდეგაც გავაგრძელო მოხალისეობა"
+  volunteer_engineer_submission_field_location_flexibility: "მოხალისეობრივად შემიძლია...
+    (აირჩიეთ ყველა შესაბამისი ვარიანტი)"
+  volunteer_engineer_submission_checkbox_after_hoc: "მინდა, მთელი წელი ვიყო მოხალისე"
   volunteer_engineer_submission_field_time_commitment: "კოდის ერთი საათის მერე საათობრივი
     ვალდებულება"
   volunteer_engineer_submission_field_linkedin: LinkedIn ანგარიში

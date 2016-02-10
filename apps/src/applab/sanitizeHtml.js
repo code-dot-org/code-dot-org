@@ -1,4 +1,5 @@
 var sanitize = require('sanitize-html');
+var elementUtils = require('./designElements/elementUtils');
 
 /**
  * Return any html which is present in 'before' and absent in 'after'.
@@ -25,10 +26,11 @@ function removedHtml(before, after) {
  * Warn if any non-cosmetic changes were made to the html.
  * @param  {function(removed, unsafe, safe)} warn Function to call if
  *     any unsafe html was removed from the output.
- * @param {string} unsafe
- * @param {string} safe
+ * @param {string} unsafe Unsafe html.
+ * @param {string} safe Safe html.
+ * @param {Array<string>} warnings Warnings to display.
  */
-function warnAboutUnsafeHtml(warn, unsafe, safe) {
+function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // Sanitizing the html can cause some cosmetic changes, such as converting
   // <img src=''> or <img src> to <img src/>. Process the unsafe html
   // making as few changes as possible, to remove any cosmetic differences
@@ -51,36 +53,70 @@ function warnAboutUnsafeHtml(warn, unsafe, safe) {
     allowedSchemes: allSchemes
   });
   if (processed != safe) {
-    warn(removedHtml(processed, safe), unsafe, safe);
+    warn(removedHtml(processed, safe), unsafe, safe, warnings);
   }
 }
 
-// Sanitize html using a whitelist of tags and attributes.
-// see default options at https://www.npmjs.com/package/sanitize-html
 /**
- *
- * @param {string} unsafe Unsafe html to sanitize.
- * @param {function(removed, unsafe, safe)} warn Optional function to call if
- *     any unsafe html was removed from the output.
+ * Reject element ids that might collide with other elements.
+ * @param {string} elementId
+ * @returns {boolean} Whether the element id is valid.
  */
-module.exports = function sanitizeHtml(unsafe, warn) {
+function isIdAvailable(elementId) {
+  // We only care if an ID is blacklisted or already in use in this case.
+  var options = {
+    allowCodeElements: false,
+    allowDesignElements: true,
+    allowDesignPrefix: true
+  };
+  if (!elementUtils.isIdAvailable(elementId, options)) {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Sanitize html using a whitelist of tags and attributes.
+ * see default options at https://www.npmjs.com/package/sanitize-html
+ * @param {string} unsafe Unsafe html to sanitize.
+ * @param {function(removed, unsafe, safe, warnings)} warn Optional function
+ *     to call if any unsafe html was removed from the output.
+ * @param {boolean} rejectExistingIds Optional if true, remove ids
+ *     which already exist in the DOM and give a warning.
+ */
+module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
+  var warnings = [];
+  var defaultAttributes = ['id', 'class', 'data-*', 'height', 'width', 'style'];
+
   var safe = sanitize(unsafe, {
     allowedTags: sanitize.defaults.allowedTags.concat([
       'button', 'canvas', 'img', 'input', 'option', 'label', 'select']),
     allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
-      button: ['id', 'class', 'style', 'data-canonical-image-url'],
-      canvas: ['id', 'class', 'style', 'width', 'height'],
-      div: ['id', 'class', 'style', 'contenteditable', 'tabindex'],
-      img: ['id', 'class', 'data-canonical-image-url', 'src', 'style'],
-      input: ['id', 'checked', 'class', 'placeholder', 'style', 'type', 'value'],
-      label: ['id', 'class', 'style'],
-      select: ['id', 'class', 'style']
+      button: defaultAttributes.concat(['data-canonical-image-url']),
+      canvas: defaultAttributes,
+      div: defaultAttributes.concat(['contenteditable', 'data-canonical-image-url', 'tabindex', 'xmlns']),
+      img: defaultAttributes.concat(['data-canonical-image-url', 'src']),
+      input: defaultAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
+      label: defaultAttributes,
+      select: defaultAttributes
     }),
-    allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data'])
+    allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
+    transformTags: {
+      '*': function(tagName, attribs) {
+        if (rejectExistingIds && attribs.id && !isIdAvailable(attribs.id)) {
+          warnings.push('element id is already in use: ' + attribs.id);
+          delete attribs.id;
+        }
+        return {
+          tagName: tagName,
+          attribs: attribs
+        };
+      }
+    }
   });
 
   if (typeof warn === 'function' && safe != unsafe) {
-    warnAboutUnsafeHtml(warn, unsafe, safe);
+    warnAboutUnsafeHtml(warn, unsafe, safe, warnings);
   }
 
   return safe;

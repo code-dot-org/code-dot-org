@@ -42,7 +42,7 @@ To run a specific unit test, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb --name your_amazing_test_name`
 
 ### UI Tests and Eyes Tests
-We have a set of integration tests, divided into "UI tests" (Selenim+Cucumber) and "Eyes tests" (Selenim+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui).
+We have a set of integration tests, divided into "UI tests" (Selenim+Cucumber) and "Eyes tests" (Selenim+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.
@@ -51,3 +51,8 @@ Take a look at the Saucelabs replay. You can view a list of recently run tests o
 
 ###Dealing with test failures (eyes)
 If you've made a change that caused an eyes failiure, log into Applitools and check out the replay. You can see highlighted areas indicating what parts are different. If you've done something that changes the layout, images, or text, that may cause an eyes failure. Confirm with another team member that this is okay, and you can accept the new appearance as the baseline for future tests.
+
+## See Also
+
+* [Testing Production Locally](docs/testing-production-locally.md)
+* [Testing IE9](docs/testing-ie9.md)

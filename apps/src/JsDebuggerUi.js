@@ -1,15 +1,9 @@
 /** @file Debugger controls and debug console used in our rich JavaScript IDEs */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 
@@ -17,6 +11,7 @@ var constants = require('./constants');
 var DebugArea = require('./DebugArea');
 var dom = require('./dom');
 var JSInterpreter = require('./JSInterpreter');
+var Observer = require('./Observer');
 var Slider = require('./slider');
 var utils = require('./utils');
 
@@ -31,22 +26,19 @@ var MAX_DEBUG_AREA_HEIGHT = 400;
 /**
  * Debugger controls and debug console used in our rich JavaScript IDEs, like
  * App Lab, Game Lab, etc.
- * @param {!function} getJsInterpreter - Must be a function that returns the
- *        current active interpreter, or a falsy value if no interpreter is
- *        running.
  * @param {!function} runApp - callback for "launching" the app, which is used
  *        by the "Step In" button when the app isn't running.
  * @constructor
  */
-var JsDebuggerUi = module.exports = function (getJsInterpreter, runApp) {
-
+var JsDebuggerUi = module.exports = function (runApp) {
   /**
-   * Function for getting the active JSInterpreter (which may get replaced on a
-   * regular basis, i.e. for each run).  Should return undefined/null if no
-   * interpreter is currently running.
-   * @private {function}
+   * Reference to currently attached JSInterpreter, null if unattached.
+   * @private {JSInterpreter}
    */
-  this.getJsInterpreter_ = getJsInterpreter;
+  this.jsInterpreter_ = null;
+
+  /** @private {Observer} */
+  this.observer_ = new Observer();
 
   /**
    * Callback for "launching" the app, used by the "Step In" button when the app
@@ -71,16 +63,49 @@ var JsDebuggerUi = module.exports = function (getJsInterpreter, runApp) {
 /**
  * Generate DOM element markup from an ejs file for the debug area.
  * @param {!function} assetUrl - Helper for getting asset URLs.
- * @param {!boolean} showButtons - Whether to show the debug buttons
- * @param {!boolean} showConsole - Whether to show the debug console
+ * @param {!Object} options
+ * @param {!boolean} options.showButtons - Whether to show the debug buttons
+ * @param {!boolean} options.showConsole - Whether to show the debug console
  * @returns {string} of HTML markup to be embedded in page.html.ejs
  */
-JsDebuggerUi.prototype.getMarkup = function (assetUrl, showButtons, showConsole) {
+JsDebuggerUi.prototype.getMarkup = function (assetUrl, options) {
   return require('./JsDebuggerUi.html.ejs')({
     assetUrl: assetUrl,
-    debugButtons: showButtons,
-    debugConsole: showConsole
+    debugButtons: options.showButtons,
+    debugConsole: options.showConsole
   });
+};
+
+/**
+ * Attach the debugger to a particular JSInterpreter instance.  Reinitializes
+ * the UI state and begins listening for interpreter events.
+ * @param {JSInterpreter} jsInterpreter
+ */
+JsDebuggerUi.prototype.attachTo = function (jsInterpreter) {
+  this.jsInterpreter_ = jsInterpreter;
+  this.observer_.observe(jsInterpreter.onNextStepChanged,
+      this.updatePauseUiState.bind(this));
+  this.observer_.observe(jsInterpreter.onPause,
+      this.onPauseContinueButton.bind(this));
+  this.observer_.observe(jsInterpreter.onExecutionWarning,
+      this.log.bind(this));
+
+  this.updatePauseUiState();
+  this.clearDebugOutput();
+  this.clearDebugInput();
+};
+
+/**
+ * Detach the debugger from whatever interpreter instance it is currently
+ * attached to, unregistering handlers and resetting the controls to a
+ * 'detached' state.
+ * Safe to call when the debugger is already detached.
+ */
+JsDebuggerUi.prototype.detach = function () {
+  this.observer_.unobserveAll();
+  this.jsInterpreter_ = null;
+
+  this.resetDebugControls_();
 };
 
 /**
@@ -209,12 +234,6 @@ JsDebuggerUi.stepDelayFromStepSpeed = function (stepSpeed) {
  * @param {*} output
  */
 JsDebuggerUi.prototype.log = function (output) {
-  // first pass through to the real browser console log if available:
-  if (console && console.log) {
-    console.log(output);
-  }
-
-  // then put it in the debug console visible to the user:
   var debugOutputDiv = this.getElement_('#debug-output');
   if (debugOutputDiv) {
     if (debugOutputDiv.textContent.length > 0) {
@@ -249,7 +268,7 @@ JsDebuggerUi.prototype.onDebugInputKeyDown = function (e) {
     pushDebugConsoleHistory(input);
     e.target.textContent = '';
     this.log('> ' + input);
-    var jsInterpreter = this.getJsInterpreter_();
+    var jsInterpreter = this.jsInterpreter_;
     if (jsInterpreter) {
       try {
         var result = jsInterpreter.evalInCurrentScope(input);
@@ -397,7 +416,7 @@ JsDebuggerUi.prototype.clearDebugInput = function () {
 };
 
 JsDebuggerUi.prototype.onPauseContinueButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     // We have code and are either running or paused
     if (jsInterpreter.paused &&
@@ -413,7 +432,7 @@ JsDebuggerUi.prototype.onPauseContinueButton = function() {
 };
 
 JsDebuggerUi.prototype.updatePauseUiState = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     return;
   }
@@ -448,7 +467,11 @@ JsDebuggerUi.prototype.updatePauseUiState = function() {
   }
 };
 
-JsDebuggerUi.prototype.resetDebugControls = function () {
+/**
+ * Put the debug controls back into a detached state.
+ * @private
+ */
+JsDebuggerUi.prototype.resetDebugControls_ = function () {
   var spinner = this.getElement_('#running-spinner');
   if (spinner) {
     spinner.style.display = 'none';
@@ -476,7 +499,7 @@ JsDebuggerUi.prototype.resetDebugControls = function () {
 };
 
 JsDebuggerUi.prototype.onStepOverButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     jsInterpreter.paused = true;
     jsInterpreter.nextStep = StepType.OVER;
@@ -485,11 +508,11 @@ JsDebuggerUi.prototype.onStepOverButton = function() {
 };
 
 JsDebuggerUi.prototype.onStepInButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (!jsInterpreter) {
     this.runApp_();
     this.onPauseContinueButton();
-    jsInterpreter = this.getJsInterpreter_();
+    jsInterpreter = this.jsInterpreter_;
   }
   jsInterpreter.paused = true;
   jsInterpreter.nextStep = StepType.IN;
@@ -497,7 +520,7 @@ JsDebuggerUi.prototype.onStepInButton = function() {
 };
 
 JsDebuggerUi.prototype.onStepOutButton = function() {
-  var jsInterpreter = this.getJsInterpreter_();
+  var jsInterpreter = this.jsInterpreter_;
   if (jsInterpreter) {
     jsInterpreter.paused = true;
     jsInterpreter.nextStep = StepType.OUT;

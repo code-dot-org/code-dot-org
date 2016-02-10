@@ -3,6 +3,7 @@ require 'open-uri'
 require 'pathname'
 require 'cdo/aws/s3'
 require 'cdo/hip_chat'
+require 'digest'
 
 module RakeUtils
 
@@ -100,9 +101,13 @@ module RakeUtils
     `git status --porcelain 2>/dev/null | egrep \"^(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
-  # Gets the commit hash for the given directory
-  def self.git_latest_commit_hash(dir)
-    `git log -n 1 --format="%H" -- #{dir}`.strip
+  # Gets a stable hash of the given directory's git-committed files.
+  # Uses a hash of the `git ls-tree` contents because a shallow-clone may not have the
+  # full revision history needed to find the original commit SHA.
+  def self.git_folder_hash(dir)
+    Dir.chdir(File.expand_path(dir)) do
+      Digest::SHA2.hexdigest(`git ls-tree -r HEAD`)
+    end
   end
 
   def self.ln_s(source, target)
@@ -170,5 +175,10 @@ module RakeUtils
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
     File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url) }
     new_fetchable_url
+  end
+
+  # Returns true if file is different from the committed version in git.
+  def self.file_changed_from_git?(file)
+    !`git status --porcelain #{file}`.strip.empty?
   end
 end

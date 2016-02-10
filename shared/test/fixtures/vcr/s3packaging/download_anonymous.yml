@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAO7Ws1YAA+3TTQrCMBCG4RwlF1AybZIeR4IorbZUbILXN9KFXVkQ4g+8
+        z2YWkzADw7cfh6GLuzZMrSrFZN7bR5XGmWWdiSipvLONq2vnlZEqf1DaFNto
+        IU0xXLVWt67vX71b6/+pYzgfNkWvj182pnhJcXuaCs5YzX8O+zP/LudfbCPk
+        /xPm+397CwAAAAAAAAAAAAAAALzrDsTnw0gAKAAA
+    headers:
+      X-Amz-Acl:
+      - public-read
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - GyTT7K2dXQQRfuJ6oSW+rA==
+      Date:
+      - Thu, 04 Feb 2016 22:55:42 GMT
+      Content-Length:
+      - '165'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 22:55:43 GMT
+      Etag:
+      - '"1b24d3ecad9d5d04117ee27aa125beac"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 22:55:42 GMT
+- request:
+    method: get
+    uri: https://cdo-build-package.s3.amazonaws.com/test-package/fake-hash.tar.gz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Feb 2016 22:55:44 GMT
+      Last-Modified:
+      - Thu, 04 Feb 2016 22:55:43 GMT
+      Etag:
+      - '"1b24d3ecad9d5d04117ee27aa125beac"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '165'
+      Server:
+      - AmazonS3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAO7Ws1YAA+3TTQrCMBCG4RwlF1AybZIeR4IorbZUbILXN9KFXVkQ4g+8
+        z2YWkzADw7cfh6GLuzZMrSrFZN7bR5XGmWWdiSipvLONq2vnlZEqf1DaFNto
+        IU0xXLVWt67vX71b6/+pYzgfNkWvj182pnhJcXuaCs5YzX8O+zP/LudfbCPk
+        /xPm+397CwAAAAAAAAAAAAAAALzrDsTnw0gAKAAA
+    http_version: 
+  recorded_at: Thu, 04 Feb 2016 22:55:43 GMT
+recorded_with: VCR 3.0.0

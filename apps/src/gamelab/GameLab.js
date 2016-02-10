@@ -1,4 +1,5 @@
 'use strict';
+/* global dashboard */
 
 var commonMsg = require('../locale');
 var msg = require('./locale');
@@ -11,7 +12,12 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
+var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
+var assetsApi = require('../clientApi').assets;
+var assetListStore = require('../assetManagement/assetListStore');
+var showAssetManager = require('../assetManagement/show.js');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -23,8 +29,19 @@ var GameLab = function () {
   this.level = null;
   this.tickIntervalId = 0;
   this.tickCount = 0;
+
+  /** @type {StudioApp} */
   this.studioApp_ = null;
+
+  /** @type {JSInterpreter} */
   this.JSInterpreter = null;
+
+  /** @private {JsInterpreterLogger} */
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
+
+  /** @type {JsDebuggerUi} */
+  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
+
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -41,6 +58,8 @@ var GameLab = function () {
   this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
+
+  dropletConfig.injectGameLab(this);
 };
 
 module.exports = GameLab;
@@ -62,6 +81,40 @@ var MEDIA_PROXY = '//' + location.host + '/media?u=';
 // starts with http or https
 var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
+var ASSET_PATH_PREFIX = "/v3/assets/";
+
+/**
+ * If the filename is relative (contains no slashes), then prepend
+ * the path to the assets directory for this project to the filename.
+ *
+ * If the filename URL is absolute, route it through the MEDIA_PROXY.
+ * @param {string} filename
+ * @returns {string}
+ */
+GameLab.maybeAddAssetPathPrefix = function (filename) {
+
+  if (ABSOLUTE_REGEXP.test(filename)) {
+    // We want to be able to handle the case where our filename contains a
+    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
+    // technically invalid URL. encodeURIComponent will replace space with %20
+    // for us, but as soon as it's decoded, we again have an invalid URL. For
+    // this reason we first replace space with %20 ourselves, such that we now
+    // have a valid URL, and then call encodeURIComponent on the result.
+    return MEDIA_PROXY + encodeURIComponent(filename.replace(/ /g, '%20'));
+  }
+
+  filename = filename || '';
+  if (filename.length === 0) {
+    return '/blockly/media/1x1.gif';
+  }
+
+  if (filename.indexOf('/') !== -1 || !dashboard) {
+    return filename;
+  }
+
+  return ASSET_PATH_PREFIX + dashboard.project.getCurrentId() + '/' + filename;
+};
+
 GameLab.baseP5loadImage = null;
 
 /**
@@ -74,6 +127,13 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
+
+  // Pre-populate asset list
+  assetsApi.ajax('GET', '', function (xhr) {
+    assetListStore.reset(JSON.parse(xhr.responseText));
+  }, function () {
+    // Unable to load asset list
+  });
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
@@ -105,15 +165,7 @@ GameLab.prototype.init = function (config) {
   if (!GameLab.baseP5loadImage) {
     GameLab.baseP5loadImage = window.p5.prototype.loadImage;
     window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      if (ABSOLUTE_REGEXP.test(path)) {
-        // We want to be able to handle the case where our filename contains a
-        // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-        // technically invalid URL. encodeURIComponent will replace space with %20
-        // for us, but as soon as it's decoded, we again have an invalid URL. For
-        // this reason we first replace space with %20 ourselves, such that we now
-        // have a valid URL, and then call encodeURIComponent on the result.
-        path = MEDIA_PROXY + encodeURIComponent(path.replace(/ /g, '%20'));
-      }
+      path = GameLab.maybeAddAssetPathPrefix(path);
       return GameLab.baseP5loadImage(path, successCallback, failureCallback);
     };
   }
@@ -123,13 +175,14 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlRows = require('./extraControlRows.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: !finishButtonFirstLine && showFinishButton
+  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+    showButtons: true,
+    showConsole: true
   });
 
   config.html = page({
@@ -143,18 +196,52 @@ GameLab.prototype.init = function (config) {
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
       blockCounterClass : 'block-counter-default',
+      pinWorkspaceToBottom: true,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
-  config.loadAudio = _.bind(this.loadAudio_, this);
-  config.afterInject = _.bind(this.afterInject_, this, config);
+  config.loadAudio = this.loadAudio_.bind(this);
+  config.afterInject = this.afterInject_.bind(this, config);
+  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
 
   // Store p5specialFunctions in the unusedConfig array so we don't give warnings
   // about these functions not being called:
   config.unusedConfig = this.p5specialFunctions;
 
   this.studioApp_.init(config);
+
+  this.debugger_.initializeAfterDomCreated({
+    defaultStepSpeed: 1
+  });
+};
+
+function quote(str) {
+  return '"' + str + '"';
+}
+
+/**
+ * Returns a list of options (optionally filtered by type) for code-mode
+ * asset dropdowns.
+ */
+GameLab.prototype.getAssetDropdown = function (typeFilter) {
+  var options = assetListStore.list(typeFilter).map(function (asset) {
+    return {
+      text: quote(asset.filename),
+      display: quote(asset.filename)
+    };
+  });
+  var handleChooseClick = function (callback) {
+    showAssetManager(function (filename) {
+      callback(quote(filename));
+    }, typeFilter);
+  };
+  options.push({
+    text: 'Choose...',
+    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
+    click: handleChooseClick
+  });
+  return options;
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -184,6 +271,16 @@ GameLab.prototype.afterInject_ = function (config) {
 
 };
 
+/**
+ * Initialization to run after ace/droplet is initialized.
+ * @param {!boolean} areBreakpointsEnabled
+ * @private
+ */
+GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
+  if (areBreakpointsEnabled) {
+    this.studioApp_.enableBreakpoints();
+  }
+};
 
 /**
  * Reset GameLab to its initial state.
@@ -240,6 +337,9 @@ GameLab.prototype.reset = function (ignore) {
   window.p5.prototype.gamelabPreload = _.bind(function () {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
+
+  this.debugger_.detach();
+  this.consoleLogger_.detach();
 
   // Discard the interpreter.
   if (this.JSInterpreter) {
@@ -298,6 +398,7 @@ GameLab.prototype.execute = function() {
     return;
   }
 
+  /* jshint nonew:false */
   new window.p5(_.bind(function (p5obj) {
       this.p5 = p5obj;
 
@@ -331,16 +432,12 @@ GameLab.prototype.execute = function() {
         }, this);
       }, this);
     }, this), 'divGameLab');
+  /* jshint nonew:true */
 
   if (this.level.editCode) {
     this.JSInterpreter = new JSInterpreter({
-      code: this.studioApp_.getCode(),
-      blocks: dropletConfig.blocks,
-      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-      enableEvents: true,
       studioApp: this.studioApp_,
       maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-      onExecutionError: _.bind(this.handleExecutionError, this),
       customMarshalGlobalProperties: {
         width: this.p5,
         height: this.p5,
@@ -384,6 +481,15 @@ GameLab.prototype.execute = function() {
         pRotationY: this.p5,
         pRotationZ: this.p5
       }
+    });
+    this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
+    this.consoleLogger_.attachTo(this.JSInterpreter);
+    this.debugger_.attachTo(this.JSInterpreter);
+    this.JSInterpreter.parse({
+      code: this.studioApp_.getCode(),
+      blocks: dropletConfig.blocks,
+      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
+      enableEvents: true
     });
     if (!this.JSInterpreter.initialized()) {
       return;
@@ -462,23 +568,6 @@ GameLab.prototype.onTick = function () {
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
 /*
-  if (!lineNumber && err instanceof SyntaxError) {
-    // syntax errors came before execution (during parsing), so we need
-    // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
-    // Now select this location in the editor, since we know we didn't hit
-    // this while executing (in which case, it would already have been selected)
-
-    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
-  }
-  if (Studio.JSInterpreter) {
-    // Select code that just executed:
-    Studio.JSInterpreter.selectCurrentCode("ace_error");
-    // Grab line number if we don't have one already:
-    if (!lineNumber) {
-      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
-    }
-  }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
@@ -493,6 +582,7 @@ GameLab.prototype.handleExecutionError = function (err, lineNumber) {
     Studio.onPuzzleComplete();
   }
 */
+  this.consoleLogger_.log(err);
   throw err;
 };
 
