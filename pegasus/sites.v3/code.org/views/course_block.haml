@@ -1,0 +1,29 @@
+%link{type: "text/css", rel: "stylesheet", href: "/shared/css/course-blocks.css"}
+
+- csf_course = true if %w(course1 course2 course3 course4 accelerated).include? id
+
+- if id.eql? "playlab"
+  - url = CDO.code_org_url("/playlab")
+- else
+  - url = "https://studio.code.org/s/#{id}/reset"  
+- title = I18n.t("#{id}_name")
+- body = I18n.t("#{id}_shortdescription")
+
+- if csf_course
+  .courseblock-span6.courseblock-wide-large{style: "height: 250px;"}
+    %a{:href=>url}
+      %img.courseblock-span2.imgspan{src: CDO.code_org_url("/shared/images/courses/fit-200/logo_#{id}.jpg"), style: "margin-right: 10px;"}
+      .courseblock-span4.heading
+        %h3= title
+        %h4= I18n.t("#{id}_gradelevel")
+        .smalltext= body
+- else
+  .courseblock-span3.courseblock-tall{style: "margin-right: 20px; height: 250px;"}
+    %a{:href=>url}
+      %img.imgspan{src: CDO.code_org_url("/shared/images/courses/logo_tall_#{id}.jpg")}
+      .clear
+      .heading
+        %h3= title
+      .clear
+      .smalltext= body
+      .clear
