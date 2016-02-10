@@ -23,9 +23,11 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["hispanic"] = "Hispanic or Latino"
   ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander "
   ETHNICITIES["white"] = "White"
+  ETHNICITIES.freeze
 
   RESULT_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
   RESULT_ATTRS << "survey2016_foodstamps"
+  RESULT_ATTRS.freeze
 
   serialized_attrs RESULT_ATTRS
   belongs_to :user
