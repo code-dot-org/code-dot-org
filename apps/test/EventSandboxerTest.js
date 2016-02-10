@@ -140,5 +140,30 @@ describe('EventSandboxer', function () {
       // see https://developer.mozilla.org/en-US/docs/Web/API/UserProximityEvent
       assertDoesNotPreservePropertyValue('near', true);
     });
+
+    it('adds "key" property when charCode is available', function () {
+      var originalEvent = {
+        charCode: 65
+      };
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(newEvent, 'key');
+      assert.equal(newEvent.key, 'A');
+    });
+
+    it('adds "key" property when keyCode is available', function () {
+      var originalEvent = {
+        keyCode: 65
+      };
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(newEvent, 'key');
+      assert.equal(newEvent.key, 'a');
+    });
+
+    it('does not add "key" property when neither charCode nor keyCode are available', function () {
+      var originalEvent = {};
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.notProperty(newEvent, 'key');
+      assert.equal(newEvent.key, undefined);
+    });
   });
 });
