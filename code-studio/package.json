@@ -38,6 +38,8 @@
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
+    "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
+    "ejsify": "1.0.0",
     "envify": "^3.4.0",
     "factor-bundle": "^2.5.0",
     "istanbul": "^0.4.2",
@@ -56,7 +58,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "@cdo/apps": "file:../apps",
+    "@cdo/apps": "file:../apps/src",
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
     "jquery": "^1.11.3",
