@@ -98,6 +98,9 @@ en:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
       CSP U4 - Basic Terms: {}
+      CSP Unit 3 - Learning JavaScript Resources:
+        Learning JavaScript Resources: Learning JavaScript Resources
+        description here: description here
       CSPPD PD Phases:
         CSPPD PD Phases: CSPPD PD Phases
       CSPPD PD overview:
@@ -216,6 +219,7 @@ en:
       CSPPD3-u4 chapter 1 concepts: {}
       CSPPD3-u4 chapter 1 resources: {}
       CSPPD3-u4 chapter 1 resources pt2: {}
+      CSPPD3-u4 chapter 1 resources pt2 v2: {}
       CSPPD3-u4 chapter 1 resources pt3: {}
       CSPPD3-u4 chapter 1 resources pt4: {}
       CSPPD3-u4 chapter 2 chunk 1: {}
@@ -234,6 +238,7 @@ en:
       CSPPD3-u4 share out overview: {}
       CSPPD3-u4 tips for prep: {}
       CSPPD3-u4 unit 4 overview: {}
+      CSPPD3-u4 what is a challenge: {}
       CSPPD3-u5 intro to u5: {}
       CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
@@ -250,6 +255,7 @@ en:
       ECS Phase 3 Unit3 Welcome: {}
       ECS Phase 3 Unit4 Welcome: {}
       ECS Phase 3 Welcome: {}
+      ECSD3-u5 do the challenge: {}
       ECSPD 1 page template: {}
       ECSPD Challenge Intro: {}
       ECSPD Challenge Reflection: {}
@@ -466,6 +472,9 @@ en:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
       ECSPD3-u5 about: {}
+      ECSPD3-u5 challenge details: {}
+      ECSPD3-u5 challenge inside: {}
+      ECSPD3-u5 complete the challenge overview: {}
       ECSPD3-u5 connections: {}
       ECSPD3-u5 day 1-3: {}
       ECSPD3-u5 day 13: {}
@@ -484,9 +493,14 @@ en:
       ECSPD3-u5 day 9-12: {}
       ECSPD3-u5 intro to u5: {}
       ECSPD3-u5 lesson overview: {}
+      'ECSPD3-u5 list of challenges ': {}
       ECSPD3-u5 overview: {}
       ECSPD3-u5 plan: {}
+      ECSPD3-u5 post survey: {}
+      ECSPD3-u5 post to forum: {}
+      ECSPD3-u5 share out overview: {}
       ECSPD3-u5 tools: {}
+      ECSPD3-u5 what is a challenge: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
@@ -4457,6 +4471,7 @@ en:
       CSPPD3-u2 submit forum link: {}
       CSPPD3-u3 pick a challenge: {}
       CSPPD3-u3 submit forum link: {}
+      CSPPD3-u4 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4511,6 +4526,9 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
+      ECSPD3-u5 pick a challenge: {}
+      ECSPD3-u5 submit: {}
+      ECSPD3-u5 submit forum link: {}
       ECSU2 Challenge Submission: {}
       ECSU3 Challenge Submission: {}
       ECSU4 Challenge Submission fin: {}
