@@ -145,18 +145,6 @@ describe('EventSandboxer', function () {
       assertPreservesPropertyValue('y', 150);
     });
 
-    it('preserves "movementX" and "movementY" if they are both provided', function () {
-      var originalEvent = {
-        movementX: 10,
-        movementY: 15
-      };
-      var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, 'movementX');
-      assert.property(newEvent, 'movementY');
-      assert.equal(newEvent.movementX, 10);
-      assert.equal(newEvent.movementY, 15);
-    });
-
     function assertDoesNotPreservePropertyValue(name, value) {
       var originalEvent = {};
       originalEvent[name] = value;
@@ -208,6 +196,94 @@ describe('EventSandboxer', function () {
       var newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.notProperty(newEvent, 'key');
       assert.equal(newEvent.key, undefined);
+    });
+  });
+
+  describe('movementX/Y synthesis', function () {
+    it('preserves "movementX" and "movementY" if they are both provided', function () {
+      var originalEvent = {
+        movementX: 10,
+        movementY: 15
+      };
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(newEvent, 'movementX');
+      assert.property(newEvent, 'movementY');
+      assert.equal(newEvent.movementX, 10);
+      assert.equal(newEvent.movementY, 15);
+    });
+
+    it('synthesizes "movementX/Y" properties when type is "mousemove"', function () {
+      var originalEvent = {
+        type: 'mousemove'
+      };
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(newEvent, 'movementX');
+      assert.property(newEvent, 'movementY');
+      assert.equal(newEvent.movementX, 0);
+      assert.equal(newEvent.movementY, 0);
+    });
+
+    function makeMousemoveEvent(target, x, y) {
+      return {
+        type: 'mousemove',
+        currentTarget: target,
+        clientX: x,
+        clientY: y
+      };
+    }
+
+    function makeMouseoutEvent(target) {
+      return {
+        type: 'mouseout',
+        currentTarget: target
+      };
+    }
+
+    it('updates synthesized "movementX/Y" properties based on currentTarget.id and last clientX/Y', function () {
+      var fakeTarget = {
+        id: 'fakeTargetId'
+      };
+
+      var mousemoveA = makeMousemoveEvent(fakeTarget, 50, 50);
+      var mousemoveB = makeMousemoveEvent(fakeTarget, 60, 50);
+      var mousemoveC = makeMousemoveEvent(fakeTarget, 75, 30);
+
+      var newMousemoveA = sandboxer.sandboxEvent(mousemoveA);
+      assert.equal(newMousemoveA.movementX, 0);
+      assert.equal(newMousemoveA.movementY, 0);
+
+      var newMousemoveB = sandboxer.sandboxEvent(mousemoveB);
+      assert.equal(newMousemoveB.movementX, 10);
+      assert.equal(newMousemoveB.movementY, 0);
+
+      var newMousemoveC = sandboxer.sandboxEvent(mousemoveC);
+      assert.equal(newMousemoveC.movementX, 15);
+      assert.equal(newMousemoveC.movementY, -20);
+    });
+
+    it('can clear history for synthesized movements for an element', function () {
+      var fakeTarget = {
+        id: 'fakeTargetId'
+      };
+
+      var mousemoveA = makeMousemoveEvent(fakeTarget, 50, 50);
+      var mousemoveB = makeMousemoveEvent(fakeTarget, 60, 50);
+      var mouseoutA = makeMouseoutEvent(fakeTarget);
+      var mousemoveC = makeMousemoveEvent(fakeTarget, 75, 30);
+
+      var newMousemoveA = sandboxer.sandboxEvent(mousemoveA);
+      assert.equal(newMousemoveA.movementX, 0);
+      assert.equal(newMousemoveA.movementY, 0);
+
+      var newMousemoveB = sandboxer.sandboxEvent(mousemoveB);
+      assert.equal(newMousemoveB.movementX, 10);
+      assert.equal(newMousemoveB.movementY, 0);
+
+      sandboxer.clearLastMouseMoveEvent(mouseoutA);
+
+      var newMousemoveC = sandboxer.sandboxEvent(mousemoveC);
+      assert.equal(newMousemoveC.movementX, 0);
+      assert.equal(newMousemoveC.movementY, 0);
     });
   });
 });
