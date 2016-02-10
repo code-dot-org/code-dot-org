@@ -14,11 +14,10 @@ home_path = node[:home]
 git_path = File.join home_path, node.chef_environment
 
 git git_path do
+  provider CDO::Provider::Git
+
   repository node['cdo-repository']['url']
   depth node['cdo-repository']['depth'] if node['cdo-repository']['depth']
-
-  # Checkout during clone using --branch [checkout_branch] to skip additional checkout step.
-  enable_checkout false
 
   branch = node['cdo-repository']['branch']
   checkout_branch branch
