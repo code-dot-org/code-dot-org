@@ -3,7 +3,7 @@ class CreateProfessionalLearningTasks < ActiveRecord::Migration
     create_table :professional_learning_tasks do |t|
       t.string :name
       t.string :description
-      t.references :professional_learning_module, index: {name: 'task_learning_module_index'}, foreign_key: true
+      t.references :professional_learning_module, index: {name: 'task_learning_module_index'}
     end
   end
 end
