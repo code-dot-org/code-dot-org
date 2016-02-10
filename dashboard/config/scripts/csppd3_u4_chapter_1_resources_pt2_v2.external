@@ -1,4 +1,4 @@
-name 'CSPPD3-u4 chapter 1 resources pt2'
+name 'CSPPD3-u4 chapter 1 resources pt2 v2'
 css 'unplugged'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
@@ -30,7 +30,6 @@ markdown <<MARKDOWN
 - <a href="http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf" target="_blank">Data Visualization 101: How To Design Charts and Graphs</a>
 - <a href="https://www.google.com/trends/explore" target="_blank">Google Trends</a>
 - <a href="http://www.pewinternet.org/2015/09/22/digital-divides-2015/" target="_blank">Pew Research: Digital Divides 2015</a>
-
 <br>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
