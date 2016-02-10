@@ -40,7 +40,7 @@ var copyrightStrings;
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 320;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
@@ -709,7 +709,7 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
     baseStyle: {
       paddingLeft: 0,
-      width: $("#visualization").width(),
+      width: $("#visualization").width()
     },
     className: 'dark',
     menuItems: [
@@ -1540,7 +1540,7 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
     // for mobile sharing, favor portrait mode, so width is the shorter of the two
     deviceWidth = desiredWidth = Math.min(screen.width, screen.height);
-    if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
+    if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
     minWidth = mobileNoPaddingShareWidth;
