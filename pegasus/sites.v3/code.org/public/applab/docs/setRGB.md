@@ -59,8 +59,12 @@ ____________________________________________________
 // Change an image to greyscale by averaging the non-white RGB values.
 createCanvas('canvas1');
 drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
-var imageData = getImageData(0, 0, 175, 200);
-putImageData(makeBlackAndWhite(imageData), 0, 225);
+button("id", "Greyscale");
+setPosition('id', 200, 0);
+onEvent("id", "click", function() {
+  var imageData = getImageData(0, 0, 175, 200);
+  putImageData(makeBlackAndWhite(imageData), 0, 225);
+});
 
 function makeBlackAndWhite(thisImageData){
     for(var y=0; y < thisImageData.height; y++) {
