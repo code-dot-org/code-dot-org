@@ -26,14 +26,65 @@ var MAX_LINES_TO_SAVE = 1000;
 
 var userKey = null;
 
+/**
+ * Sets the current user key to `key`, or if key is null, to a UUID which will be used for the
+ * lifetime of the current tab.
+ * @param key {string}
+ */
 clientState.setCurrentUserKey = function(key) {
-  lscache.setBucket(key);
+  if (key === null) {
+    if (sessionStorage.getItem('is_temp_key') != 'true') {
+      sessionStorage.setItem('is_temp_key', 'true');
+      sessionStorage.setItem('user_key', 'temp_' + Math.random());
+    }
+  } else {
+    // Delete anonymous user state when transitioning to a signed-in user.
+    if (sessionStorage.getItem('is_temp_key') == 'true') {
+      lscache.flush();
+    }
+    sessionStorage.setItem('is_temp_key', 'false');
+    sessionStorage.setItem('user_key', key);
+  }
 };
+
+
+function getUserKey() {
+  var key = sessionStorage.getItem('user_key');
+  if (key === null) {
+    throw 'User key not set, setCurrentUserKey must be called first.';
+  }
+  return key;
+}
+
+function applyUserBucket() {
+  lscache.setBucket(getUserKey());
+}
+
+function getItem(key) {
+  applyUserBucket();
+  return lscache.get(key);
+}
+
+/**
+ * Don't throw storage errors in Safari private browsing mode.
+ */
+function safelySetItem(key, value) {
+  applyUserBucket();
+  try {
+    lscache.set(key, value, clientState.EXPIRY_MINUTES);
+  } catch (e) {
+    if (e.name !== "QuotaExceededError") {
+      throw e;
+    }
+  }
+}
+
 
 /***
  * Resets the state of the current user
  */
 clientState.reset = function() {
+  applyUserBucket();
   lscache.flush();
 };
 
@@ -42,6 +93,7 @@ clientState.reset = function() {
  */
 clientState.resetAllForTest = function() {
   localStorage.clear();
+  clientState.setCurrentUserKey(null);
 };
 
 /**
@@ -76,7 +128,7 @@ clientState.queryParams = function (name) {
  */
 clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
   try {
-    var parsed = lscache.get(createKey(scriptName, levelId, 'source'));
+    var parsed = getItem(createKey(scriptName, levelId, 'source'));
     if (parsed && (!timestamp || parsed.timestamp > timestamp)) {
       return parsed.source;
     }
@@ -172,7 +224,7 @@ function setLevelProgress(scriptName, levelId, progress) {
  * @return {Object<String, number>}
  */
 clientState.allLevelsProgress = function() {
-  var progressJson = lscache.get('progress');
+  var progressJson = getItem('progress');
   try {
     return progressJson ? progressJson : {};
   } catch(e) {
@@ -186,7 +238,7 @@ clientState.allLevelsProgress = function() {
  * @returns {number}
  */
 clientState.lines = function() {
-  var linesStr = lscache.get('lines');
+  var linesStr = getItem('lines');
   return isFinite(linesStr) ? Number(linesStr) : 0;
 };
 
@@ -244,7 +296,7 @@ clientState.setItemForTest = function(key, value) {
  * @param visualElementId
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
-  var elementSeenJson = lscache.get(visualElementType) || {};
+  var elementSeenJson = getItem(visualElementType) || {};
   var elementSeen;
   try {
     elementSeen = elementSeenJson;
@@ -264,7 +316,7 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param visualElementId
  */
 function hasSeenVisualElement(visualElementType, visualElementId) {
-  var elementSeenJson = lscache.get(visualElementType) || {};
+  var elementSeenJson = getItem(visualElementType) || {};
   try {
     var elementSeen = elementSeenJson;
     return elementSeen[visualElementId] === true;
@@ -282,19 +334,6 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
-}
-
-/**
- * Don't throw storage errors in Safari private browsing mode.
- */
-function safelySetItem(key, value) {
-  try {
-    lscache.set(key, value, clientState.EXPIRY_MINUTES);
-  } catch (e) {
-    if (e.name !== "QuotaExceededError") {
-      throw e;
-    }
-  }
 }
 
 return clientState;
