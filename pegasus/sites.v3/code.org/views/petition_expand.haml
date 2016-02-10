@@ -1,73 +1,62 @@
+%link{:href=>"/css/petition.css", :rel=>"stylesheet"}
 
+#petitionblock.greybox
+  #petition_message= I18n.t :petition_message
 
-#petitionblock.greybox{style: "/* background-color:rgb(231, 232, 234); */  background-color:white; padding: 10px 20px 10px 20px; color: rgb(91,103,112)"}
-
-  #petition_message{:style=>"font-size: 22px; line-height:28px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t:petition_message
-
-  #form.container_responsive{style: "display:none"}
-    #petition_sign_message.desktop-feature{:style=>"font-size: 18px; line-height:20px; font-weight:400; margin-top:10px"}=I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
+  #form.container_responsive
+    #petition_sign_message.desktop-feature= I18n.t(:petition_sign_message).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
     %form#petition_form{:onsubmit=>"return petition.signPetition()"}
 
-      #email_error{style: "color:rgb(255, 128, 0); font-family: 'Gotham 7r', sans-serif; display: none"}
-        =I18n.t :enter_valid_email
-      #age_error{style: "color:rgb(255, 128, 0); font-family: 'Gotham 7r', sans-serif; display: none"}
-        =I18n.t :enter_valid_age
-      #no_error{style: "color:rgb(255, 128, 0); font-family: 'Gotham 7r', sans-serif;"}
-        &nbsp;
+      #email_error= I18n.t :enter_valid_email
+      #age_error= I18n.t :enter_valid_age
+      #no_error &nbsp;
 
       #fields
         .col-18
-          %input#name.grey_input{:name=>"name_s", :placeholder=>I18n.t(:name), :type=>'text', :style=>'width: 160px; height: 34px; margin-bottom:10px;'}
+          %input#name.grey_input{:name=>"name_s", :placeholder=>I18n.t(:name), :type=>'text'}
         .col-18
-          %input#email.grey_input{:name=>"email_s", :placeholder=>I18n.t(:email), :type=>'email', :style=>'width: 160px; height: 34px; margin-bottom:10px;'}
-          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(91,103,112); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :used_infrequent_updates
+          %input#email.grey_input{:name=>"email_s", :placeholder=>I18n.t(:email), :type=>'email'}
+          %div.desktop-feature= I18n.t :used_infrequent_updates
         .col-18
-          %input#zip_code_or_country.grey_input{:name=>"zip_code_or_country_s", :placeholder=>I18n.t(:zipcode), :type=>'text', :style=>'width: 160px; height: 34px; margin-bottom:10px;'}
-          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; color: rgb(91,103,112); text-align: left; margin-left: 10px; margin-top:-5px'}=I18n.t :enter_country
+          %input#zip_code_or_country.grey_input{:name=>"zip_code_or_country_s", :placeholder=>I18n.t(:zipcode), :type=>'text'}
+          %div.desktop-feature= I18n.t :enter_country
         .col-18
           %span
             =I18n.t :petition_age
-            %select#age.dropdown{:name=>"age_i", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px; -webkit-appearance:none; padding-left:5px'}
+            %select#age.dropdown{:name=>"age_i"}
               %option{value:0}= '-'
               -(1..100).each do |age|
                 %option{value:age}= age
-          %div.desktop-feature{:style=>'font-size: 12px; line-height: 18px; text-align: left; margin-left: 15px; margin-top:-5px'}
-            %a{href: '/privacy', style: "color: rgb(91,103,112)"}= I18n.t :privacy_practices_children
+          %div.desktop-feature
+            %a{href: '/privacy', style: 'color: #5b6770;'}= I18n.t :privacy_practices_children
         .col-18
           %span
             =I18n.t :i_am_a
-            %select.dropdown{:name=>"role_s", :style=>'width:100px; height: 34px; background-color: rgb(226,228,227); color: rgb(89,89,89); margin-bottom: 10px; -webkit-appearance:none; padding-left:5px'}
-              %option{:value=>"other"}=I18n.t :participant_select
-              %option{:value=>"student"}=I18n.t :participant_student
-              %option{:value=>"parent"}=I18n.t :participant_parent
-              %option{:value=>"educator"}=I18n.t :participant_educator
-              %option{:value=>"engineer"}=I18n.t :participant_engineer
-              %option{:value=>"other"}=I18n.t :participant_other
+            %select.dropdown{:name=>"role_s"}
+              %option{:value=>"other"}= I18n.t :participant_select
+              %option{:value=>"student"}= I18n.t :participant_student
+              %option{:value=>"parent"}= I18n.t :participant_parent
+              %option{:value=>"educator"}= I18n.t :participant_educator
+              %option{:value=>"engineer"}= I18n.t :participant_engineer
+              %option{:value=>"other"}= I18n.t :participant_other
         .col-18.i-agree-button
-          %button#gobutton.button_enabled{:style=>"min-width:100px; margin-bottom:10px; font-family: 'Gotham 5r', sans-serif;"}=I18n.t :i_agree
+          %button#gobutton.button_enabled= I18n.t :i_agree
 
-  #thanks.container_responsive{:style=>"display:none"}
+  #thanks.container_responsive
     %br
-    %span{:style=>"font-size: 18px"}=I18n.t :petition_thankyou
+    %span= I18n.t :petition_thankyou
     %br
     %br
 
-  %div{style: "clear:both"}
-  .container_responsive{style: "margin-top:10px"}
-    #threedivs{style: "text-align:center"}
-      %div#signpetitionclick{style: "display:inline-block; vertical-align:top; cursor: pointer; font-weight:bold; vertical-align: 5px;"}
+  %div.clear
+  .container_responsive
+    #threedivs
+      %div#signpetitionclick
         -if request.language  == 'en'
-          %span{style: "color:#ffa400; font-size:16px; margin-right:20px", onclick: "expandPetition();"}
-            = I18n.t :homepage_diversity_pledge
-        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}
-          -if request.language  == 'en'
-            = I18n.t :homepage_signpetition_dropdown
-          -else
-            = I18n.t :hoc2014_support
-        - # Temp: English only until we have translations.
-        - if request.language == "en"
-          %span{:style=>"font-size: 14px; line-height:20px; font-weight:400; margin-left: 20px; margin-top:10px"}=I18n.t(:petition_join_others).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
+          %span.diversitypledge{onclick: "expandPetition();"}= I18n.t :homepage_diversity_pledge
+        %button{onclick: "expandPetition();", style: "margin-bottom:5px"}= I18n.t :homepage_signpetition_dropdown
+        %span.joinothers= I18n.t(:petition_join_others).gsub("#", format_integer_with_commas(fetch_metrics['petition_signatures']).to_s)
 
 :javascript
 

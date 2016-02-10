@@ -1,0 +1,42 @@
+%script{type: "text/javascript", src: "/js/congrats.js"}
+%link{type: "text/css", rel: "stylesheet", href: "/shared/css/course-blocks.css"}
+
+-cert_id = params[:i]
+
+-if cert_id
+  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
+-else
+  -share_url = "http://#{request.host_with_port}/certificates/blank"
+
+-facebook = {:u=>share_url}
+-twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
+-twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
+
+#congrats.mobile-pad{:style=>'margin: 0 auto;'}
+
+  %h1= I18n.t(:congratulations_on_completing_course, course: course_name)
+
+  #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
+    %a{:href=>"/printcertificate", :target=>'_blank'}
+      %img{:src=>"/images/fit-540/hour_of_code_certificate.jpg", :width=>"100%"}
+
+  #certificate.col-50
+    = view :congrats_certificate
+    = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
+
+  %div{:style=>'clear: both; height:30px'}
+  %h2{:style=>'margin-bottom: 10px;'}= I18n.t(:congrats_next_tutorials_title)
+  %p{:style=>'padding-bottom: 10px;'}= I18n.t(:congrats_next_tutorials_desc, current_path: request.path_info)
+  = view :wide_course_block, id: Script::PLAYLAB_NAME
+  = view :wide_course_block, id: Script::ARTIST_NAME
+
+  %div{:style=>'clear: both; height:30px'} 
+  %br
+  %br
+  -unless under_13?
+    = view :petition_expand
+
+  %div{:style=>'clear: both; height:30px'}
+  = view :donor_slider
+
+= view 'popup_window.js'
