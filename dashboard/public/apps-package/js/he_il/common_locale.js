@@ -410,4 +410,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "צפה בסרטון"},
 "when":function(d){return "מתי"},
 "whenRun":function(d){return "התחל ריצה"},
-"workspaceHeaderShort":function(d){return "סביבת העבודה: "}};
+"workspaceHeaderShort":function(d){return "סביבת העבודה: "},
+"choosePrefix":function(d){return "Choose..."}};
