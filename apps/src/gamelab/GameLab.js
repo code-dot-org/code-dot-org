@@ -371,7 +371,7 @@ GameLab.prototype.execute = function() {
         p5obj.createCanvas(400, 400);
         if (this.JSInterpreter) {
           // Replace restored preload methods for the interpreter:
-          for (var method in this.p5._preloadMethods) {
+          for (method in this.p5._preloadMethods) {
             this.JSInterpreter.createGlobalProperty(method, this.p5[method], this.p5);
           }
 
