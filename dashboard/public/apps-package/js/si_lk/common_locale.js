@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "වීඩියෝව නරඹන්න"},
 "when":function(d){return "විට"},
 "whenRun":function(d){return "දුවන විට"},
-"workspaceHeaderShort":function(d){return "වැඩ අවකාශය: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "වැඩ අවකාශය: "}};

@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Nézd meg a videót"},
 "when":function(d){return "amikor"},
 "whenRun":function(d){return "futtatáskor"},
-"workspaceHeaderShort":function(d){return "Munkaterület: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Munkaterület: "}};

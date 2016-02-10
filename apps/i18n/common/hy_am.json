@@ -255,6 +255,5 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Workspace: "
 }

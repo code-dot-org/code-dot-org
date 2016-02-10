@@ -255,6 +255,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Työtila: "
 }
