@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 ## Unit 4: Lesson 04 - Good and Bad Data Visualizations
 
 # Background
-Visualizations of data allow is a powerful way to present information and insights learned from data. However, people use data visuals with varying success. In fact, very smart people struggle to make good data visualizations which correctly convey the findings from data. Some are strong data visualizations that create a deeper understanding of the underlying data. Others create misconceptions about the findings of data. Others are just hilariously bad. Your job is to rate the quality of the visualizations and keep a few notes about why the are good or bad.
+Visualizations of data are a powerful way to present information and insights learned from data. However, people use data visuals with varying success. In fact, very smart people struggle to make good data visualizations which correctly convey the findings from data. Some are strong data visualizations that create a deeper understanding of the underlying data. Others create misconceptions about the findings of data. Others are just hilariously bad. Your job is to rate the quality of the visualizations and keep a few notes about why they are good or bad.
 
 # Lesson
 
@@ -16,7 +16,7 @@ Visualizations of data allow is a powerful way to present information and insigh
 
 # Resources
 
-* Guide: [Data Visualization 101: How To Design Charts and Graphs](http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf)
+* Guide: <a href="http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf" target="_blank">Data Visualization 101: How To Design Charts and Graphs</a>
 * Worksheet: <a href="https://docs.google.com/document/d/1QL-y4zOFrZu6pc2Q6ZMd5Vb-MMGYfGuVCpiZuACDgfk/edit#" target="_blank">Data Visualization Scorecard</a>
 * Good and Bad Data Visualizations (in Code Studio click through to next levels)
 	* **Collection A**
@@ -27,5 +27,5 @@ Visualizations of data allow is a powerful way to present information and insigh
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-[KEY: Data Visualization Scorecard](http://)
+
 MARKDOWN

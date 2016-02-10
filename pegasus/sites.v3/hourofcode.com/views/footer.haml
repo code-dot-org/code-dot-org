@@ -1,19 +1,21 @@
 %footer#pagefooter
-  .content
-    %div{:style=>"clear:both; float: left;"}
-      %small.dim
-        = hoc_s(:footer_copyright_message)
-        %br
-        = hoc_s(:footer_trademark_message)
-    %div{:style=>"float:right"}
-      %small{:style=>"opacity:0.5"}
-        %a.whitefooterlink{:href=>"http://support.code.org/hc/en-us/requests/new", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_contact)
-        &nbsp; &nbsp; | &nbsp; &nbsp;  
-        %a.whitefooterlink{:href=>"http://support.code.org", :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_support)
-        &nbsp; &nbsp; | &nbsp; &nbsp;
-        %a.whitefooterlink{href:resolve_url('/partners'), :style=>"font-size: 12px;", :target=>"_blank"}=hoc_s(:footer_menu_partners)
-        &nbsp; &nbsp; | &nbsp; &nbsp;
-        %a.whitefooterlink{:href=>resolve_url('https://code.org/tos'), :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_terms)
-        &nbsp; &nbsp; | &nbsp; &nbsp;
-        %a.whitefooterlink{:href=>resolve_url('https://code.org/privacy'), :style=>"font-size: 12px;", :target=>"_blank"}= hoc_s(:footer_menu_privacy)
-        
+  #footer-links
+    %ul.hide-responsive-footer-menu
+      %li
+        %a{:href=>"http://support.code.org/hc/en-us/requests/new", :target=>"_blank"}= hoc_s(:footer_menu_contact)
+      %li
+        %a{:href=>"http://support.code.org", :target=>"_blank"}= hoc_s(:footer_menu_support)
+      %li
+        %a{href:resolve_url('/partners'), :target=>"_blank"}=hoc_s(:footer_menu_partners)
+      %li
+        %a{:href=>resolve_url('https://code.org/tos'), :target=>"_blank"}= hoc_s(:footer_menu_terms)
+      %li
+        %a{:href=>resolve_url('https://code.org/privacy'), :target=>"_blank"}= hoc_s(:footer_menu_privacy)
+    #footer-toggle
+      %a{href: "#"}
+        Code.org
+        %i{:class=>"fa fa-chevron-up"}
+  #copyright
+    = hoc_s(:footer_copyright_message)
+    %br
+    = hoc_s(:footer_trademark_message)

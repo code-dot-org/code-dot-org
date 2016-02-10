@@ -75,11 +75,6 @@
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  course_name_accelerated: Accelerated Course
-  course_name_course1: Course 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -140,7 +135,7 @@
   hoc_is_here: 'The #HourOfCode is here - check it out! @codeorg'
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
-    http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+    http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more.
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond One Hour
   what_gender: What gender are you?

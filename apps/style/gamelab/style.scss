@@ -2,6 +2,8 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
 @import 'color';
+@import 'mixins';
+@import "../JsDebuggerUi.scss";
 
 #divGameLab {
   overflow: hidden;
@@ -12,12 +14,7 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   z-index: 1;
   background-color: white;
 
-  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
+  @include user-selects(none);
 }
 
 /* Sprited icons. */
@@ -25,6 +22,8 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   height: 21px;
   width: 21px;
   background-image: url("#{$root}icons.png");
+  background-size: 42px 147px;
+  margin-bottom: -3px;
 }
 .code {
   background-position: -21px 0px;

@@ -8,6 +8,8 @@ nav: educate_nav
 ## <a name="what"></a>What is CS Discoveries?
 CS Discoveries is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
 
+<img src="/educate/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
+
 ### <a name="equity"></a>A CS course for everyone, designed with equity in mind
 CS Discoveries is designed from the ground up to be an accessible and engaging course for all students, regardless of background or prior experience. By providing students opportunities to engage with culturally and personally relevant topics in a wide variety of CS related fields we hope to show all students that CS can be for them.
 
@@ -23,16 +25,111 @@ CS Discoveries aims to introduce students to tools and programming languages tha
 ### <a name="flexible"></a>Designed for flexible implementation options
 CS Discoveries will be designed primarily for students in grades 6-9, so it can be used in middle school or high school. The two semesters spiral upon each other, allowing the course to be taught as a single semester, two sequential semesters, a full-year course, or even integrated into existing technology classes.
 
-### <a name="content"></a>A wide lens on Computer Science
-Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, including:
+## <a name="content"></a>Course Overview
+Computer Science encompases far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
-- **Human Computer Interaction:** The myriad ways in which people interface with the computing objects in their lives.
-- **Computational Thinking and Problem Solving:** Learning to think like a Computer Scientist and use computers to solve problems.
-- **The Social Web:** Understanding the internet, its impact on society, and how to use the web as a publishing platform.
-- **Animations and Interactions:** Programming computers to create art, animations, stories, and interactive games.
-- **Physical Computing:** Building computing devices that interact with and sense the physical world in novel and exciting ways.
-- **Making Sense of Data:** Harnessing, processing, and building understanding from the mountains of data all around us.
-- **Mobile App Development:** Designing, creating, and iterating on  mobile apps that solve a real problem.
+### Semester 1: CS Discoveries: Exploration and Expression
+
+The first semester of CS Discoveries introduces students to computer science as a vehicle for problem solving, communication, and personal expression. As a whole this semester focuses on the visible aspects of computing and computer science, encouraging students to see where computer science exists around them and how they can engage with it as a tool for exploration and expression.
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 1 - Problem Solving: Computers and Logic </h4>
+
+Computers are all around us, and for students much of their everyday action is impacted by computing. In the unit students will explore what it means for something to be a computer - what core functionality brings together all these items we think of as computers. Students should know how to use computers effectively - this means being able to navigate a computer and accomplish tasks. Students look at the many things computers allow people to do.
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 2 - The Internet: Web Development </h4>
+
+Students will find empowerment through the realization that they too can take part in this creation and dissemination of information online by developing their own web pages from scratch using just HTML and CSS. By critically examining the web pages they visit every day, students will start to explore what makes a strong website and then use their new design process to implement parts of those designs. 
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 3 - Programming: Interactive Games and Animations </h4>
+
+Starting off with simple primitive shapes and building up to more sophisticated sprite-based games, students will become familiar with the basic concepts that form the foundation of computer programming. The development of a personalized final project will engage students in design, testing, and iteration as they come to see that failure and debugging are an expected (and valuable) part of the programming process that make your end product better. 
+
+</div>
+
+<div style="clear:both"></div>
+
+### Semester 2: CS Discoveries: Innovation and Impact
+
+Where the first semester centers on the immediately observable and personally applicable elements of computer science, the second semester asks students to look outward and explore the impact of computer science on society. Students will see how a thorough user-centered design process produces a better application, how their personal data is collected and used on the web, and they will work with bare circuit boards to see how computers collect input and return output in a variety of ways. Through the entirety of this semester student groups will continue to iterate on and refine a mobile app that integrates everything they’ve learned throughout the course into one capstone project.
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 4 - Problem Solving: The Design Process </h4>
+
+By following the design process and working with structured group roles, student groups will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, students will then develop and interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 5 - The Internet: Data and Society </h4>
+
+Students will learn what information they leave behind online, and ways to control who has access to their information. In addition students will learn simple ways to collect data and use it to create apps the display the data to the user in visual ways so that they can gain insight into how data that is uninteresting at the individual level can reveal useful information when compiled. Finally, students will return to the app they began in unit 4 to integrate simple data collection.
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Unit 6 - Programming: The Internet of Things </h4>
+
+By exploring innovative computing devices from a variety of fields, students will explore the essential elements of computer hardware. Using a bare microcontroller board with several integrated sensors and output devices students will learn how software interacts with hardware and they will develop prototypes of physical computing devices. In the final stage of the course student groups will once again return to their capstone apps, this time connecting them with their physical computing boards as a means of input, output, or both.
+
+</div>
+
+<div style="clear:both"></div>
+
+## <a name="involved"></a>Get Involved
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Help us write the CS Discoveries curriculum </h4>
+
+We're looking to assemble a summer writing cohort from June 27 - Aug 19, 2016 to help develop the CS Discoveries curriculum. If you're a K-12 CS or STEM educator with curriculum writing experience, please consider applying!
+<br><br>
+
+<a href="/about/jobs#summercohort"> <button>Learn more</button> </a>
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Pilot the curriculum in your classroom </h4>
+
+If you're in one of Code.org's partner districts and are teaching a CS or technology class in Spring 2017, consider applying to be a pilot teacher! We're looking for a small but dedicated group of teachers to give our team ongoing feedback on the curriculum and tools. Applications will be accepted on a rolling basis through the beginning of the summer.
+
+<br><br>
+
+<a href="/educate/csd/pilot"> <button>Apply now</button> </a>
+
+</div>
+
+<div style="float:left; padding:10px; width:33%">
+
+<h4> Stay up to date on our progress </h4>
+
+Want to know when we've posted lesson drafts and have tools that are ready to experiment with? Sign up for our monthly status emails, which will contain the latest news and links to beta lesson plans, tools, and videos for CS Discoveries. Even if you're not an official pilot teacher, we'd love to hear your feedback as an early adopter.
+
+<br><br>
+
+<a href="/educate/csd/status_signup"> <button>Sign up</button> </a>
+
+</div>
+
+
+
+
+
+<div style='clear:both'></div>
 
 ## <a name="faq"></a>Frequently Asked Questions
 
@@ -71,8 +168,6 @@ This course is independently authored, yet deeply inspired by the underlying phi
 
 Due to feedback that "CS Explorations" would create confusion among educators, we are using the name "CS Discoveries", which suggests the exploratory nature of a survey course, and fits  between our [CS Fundamentals](/k5) and [CS Principles](/csp) courses as part of a full K-12 pathway, while avoiding any confusion with ECS.  We will still clarify upfront in the curriculum that this work is inspired by ECS, without reflecting that inspiration in the title.
 
-
-
 <!--
 #### Can I pilot the new course?
 
@@ -84,7 +179,4 @@ As lessons are completed we will also be publishing them on the website we invit
 
 In-person professional development for the Code.org CSE course will be available for partner districts starting in Summer 2017.
 
-#### How can I learn more about the progress of the curriculum?
-
-We will be sending out regular status emails for members of the computer science education community who are interested in peeking under the hood as we actively work to develop the curriculum and tools for the course. [Sign up for future emails](http://code.org/educate/cse/CSEStatus_Signup).
 -->

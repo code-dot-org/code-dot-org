@@ -28,9 +28,9 @@
   twentyhours_heading: Išbandykite įvadą į programavimo kursą
   twentyhours_text: Baigėte savo „Programavimo valandą“?  Išmokite daugiau apie informatiką
     ir programavimą kituose kursuose.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Kiekvienas vaikas nusipelno galimybės
+  og_description: Kiekvienas moksleivis kiekvienoje mokykloje nusipelno galimybės
+    mokytis kompiuterių mokslo.
   hoc2014_heading: Prisijunkite prie <a href="http://hourofcode.com">Programavimo
     valandos</a><br/>2014 gruodžio 8–14 dienomis<br/>
   hoc2014_students: Mokiniai
@@ -42,7 +42,7 @@
   hoc2014_whatishoc: Kas yra „Programavimo valanda“?
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Užregistruokite savo renginį
-  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_placeholder: Surask "Programavimo valandos" renginius
   csedweek_map_search_search: Ieškoti
   csedweek_map_search_reset: Iš naujo
   csedweek_map_legend_title: Legenda
@@ -77,13 +77,8 @@
   congratulations_volunteer: Sveikiname! Dabar jūs išbandėte „Programavimo valandą”,
     <a href="https://code.org/volunteer">savanoriškai užsiregistruokite klasėje</a>
     ir padėkite mokiniams išmokti programuoti naudojant „Programavimo valandą”!
-  course_name_accelerated: Pagreitintas kursas
-  course_name_course1: Kursas 1
-  course_name_course2: Kursas 2
-  course_name_course3: Kursas 3
-  course_name_course4: Kursas 4
   congratulations_on_completing_course: Sveikiname pabaigus %{course}
-  congrats_next_tutorials_title: Try these tutorials next
+  congrats_next_tutorials_title: Pabandyk šias instrukcijas toliau
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: Gauti pasiekimo sertifikatą
@@ -227,10 +222,10 @@
   homepage_action_text_join_us: Prisijunkite
   homepage_action_text_sign_up: Užsiregistruoti
   homepage_action_text_try_it: Išmėginkite
-  homepage_action_text_volunteers: Technical volunteers wanted
+  homepage_action_text_volunteers: Ieškomi techniniai savanoriai
   homepage_action_text_codevideo: Peržiūrėk vaizdo įrašą
   homepage_action_text_teachervideo: Peržiūrėk vaizdo įrašą
-  homepage_action_text_girlvideo: Inspire a girl
+  homepage_action_text_girlvideo: Suteik įkvėpimo mergaitei
   homepage_action_text_learn: Pradėti mokytis
   homepage_action_text_signpetition: Pasirašyti peticiją
   homepage_signpetition_dropdown: Aš sutinku &#x25BE;
@@ -251,10 +246,10 @@
   homepage_slot_text_link_hoc: Išmėgink „Programavimo valandą“
   homepage_slot_text_link_host: Pravesk „Programavimo valandą“
   homepage_slot_text_link_hocserved: "# išbandė"
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Savanoriauk "Programavimo valandose"
   homepage_slot_text_title_students: Mokiniai
   homepage_slot_text_blurb_students: Peržiūrėkite visas mūsų pamokėles
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Atrask mūsų kursus
   homepage_slot_text_link_codestudio: Išmėginkite Kodavimo studiją
   homepage_slot_text_link_local: Suraskite kursus savo gyvenvietėje
   homepage_slot_text_link_othercourses: Kiti internetiniai kursai
@@ -317,7 +312,7 @@
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Klasikinis
   playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
+  playlab_iceage_title: Ledynmetis - jau greitai
   playlab_iceage_title_live: Ledynmetis
   starwars_subtitle: Building a Galaxy With Code
   starwars_javascript_title: Javascript
@@ -331,8 +326,8 @@
   starwars_blocks_start_button: Išmėginkite dabar
   starwars_watch_videos: Before you get started, watch one of these inspirational
     videos
-  starwars_speak_languages: Speak another language?
-  starwars_help_translate: Help us translate
+  starwars_speak_languages: Kalbi kita kalba?
+  starwars_help_translate: Padėk mums išversti
   starwars_platform_text: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
   mc_name: Minecraft programavimo valanda
   mc_longdescription: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
@@ -343,8 +338,7 @@
   mc_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
   minecraft_subtitle: Minecraft programavimo valanda
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
+  volunteer_engineer_submission_title: "Įkvėpk moksleivius ir savanoriauk"
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
@@ -370,11 +364,11 @@
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Vardas
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_name_placeholder: Pilnas vardas
+  volunteer_engineer_submission_field_company: "Įmonė (ar Universitetas)"
+  volunteer_engineer_submission_field_company_placeholder: "Įmonė (ar Universitetas)"
+  volunteer_engineer_submission_field_experience_level: Patirties lygis
+  volunteer_engineer_submission_field_location: Vieta
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -385,10 +379,10 @@
     after the Hour of Code
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
-  volunteer_engineer_submission_field_linkedin: LinkedIn profile
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_linkedin: LinkedIn paskyra
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/tavo_vardas
+  volunteer_engineer_submission_field_facebook: Facebook paskyra
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/tavo_vardas
   volunteer_engineer_submission_field_description: Aprašymas
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
@@ -415,9 +409,9 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 valandos per savaitę
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 valandos per savaitę
   volunteer_engineer_submission_commitment_now_and_then: Laikas nuo laiko
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3 kartus per metus
+  volunteer_engineer_submission_commitment_monthly: Keletą valandų per mėnesį
+  volunteer_engineer_submission_commitment_weekly: Keletą valandų per savaitę
   volunteer_engineer_submission_commitment_more: Daugiau
   volunteer_engineer_submission_location_flexibility_onsite: Mokykloje
   volunteer_engineer_submission_location_flexibility_remote: Mokymas nuotoliniu būdu
@@ -430,14 +424,14 @@
     studentas (ar tyrinėtojas)
   volunteer_engineer_submission_experience_software_professional: Programinės įrangos
     profesionalas
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: 5 mylios
+  volunteer_engineer_submission_distance_16: 10 mylių
+  volunteer_engineer_submission_distance_24: 15 mylių
+  volunteer_engineer_submission_distance_32: 20 mylių
+  volunteer_engineer_submission_num_volunteers_5: 5 savanoriai
+  volunteer_engineer_submission_num_volunteers_10: 10 savanorių
+  volunteer_engineer_submission_num_volunteers_25: 25 savanorių
+  volunteer_engineer_submission_num_volunteers_50: 50 savanorių
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
@@ -589,12 +583,12 @@
   dashboard_students_reset_password: Nustatyti naują slaptažodį
   dashboard_students_share_section: 'Nurodykite šios grupės prisijungimo puslapį mokiniams:'
   dashboard_students_print_info: Atspausdinkite korteles su mokinių prisijungimo informacija.
-  dashboard_students_secret_picture_title: Secret Picture
+  dashboard_students_secret_picture_title: Slaptas paveikslėlis
   dashboard_students_secret_picture: Prisijungimo paveikslėlis
   dashboard_students_reset_picture: Bet kada galima pakeisti  mokinio prisijungimo
     paveikslėlį, parinkus <b>Rodyti raktą</b> ir tada  <b>Sukurti naują raktą</b>.
     Mokiniui bus sukurtas naujas  paveikslėlis-raktas.
-  dashboard_students_secret_word_title: Secret Word
+  dashboard_students_secret_word_title: Slaptas pasaulis
   dashboard_students_secret_word: Prisijungimo žodžiai
   dashboard_students_reset_word: 'Bet kada galima pakeisti  mokinio slaptažodį, parinkus
     <b>Rodyti raktą</b> ir tada  <b>Sukurti naują raktą</b>. Mokiniui bus sukurta
@@ -612,15 +606,15 @@
   dashboard_curriculum_k5_title: K-5 Educator Resources
   dashboard_curriculum_middle_title: Middle School Educator Resources
   dashboard_curriculum_high_title: High School Educator Resources
-  dashboard_lesson_plans: Lesson Plans
+  dashboard_lesson_plans: Pamokos planai
   dashboard_view_all_lesson_plans: Peržiūrėti visus pamokų planus
   dashboard_course1: 'Kursas 1:'
   dashboard_course2: 'Kursas 2:'
   dashboard_course3: 'Kursas 3:'
-  dashboard_course4: 'Course 4 (beta): '
+  dashboard_course4: '4 kursas (bandomasis):'
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Pradinukų temų apžvalga
-  dashboard_overview: Overview
+  dashboard_overview: Peržiūra
   dashboard_sequence: Seka
   dashboard_framework: Sistema
   dashboard_standards: Standartai
@@ -649,8 +643,8 @@
   dashboard_progress_furthest_level_attempted: išmėgintas aukščiausias lygis
   dashboard_stage: Etapas
   dashboard_puzzle: Galvosūkis
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Klausimas
+  dashboard_response: Atsakymas
   stats_hoc_2013_heading: 'Neįtikėtini praėjusių metų „Programavimo valandos“ rezultatai.
     Per vieną savaitę:'
   stats_hoc_2013_image_alt: "„Programavimo valandos“ statistika nuo 2013 metų"
@@ -670,7 +664,7 @@
   dashboard_faq: Dažnai užduodami klausimai
   dashboard_faq_k5: K-5 Frequently Asked Questions
   dashboard_announcements: Announcements
-  dashboard_announce_view_all: View all
+  dashboard_announce_view_all: Peržiūrėti visus
   dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
     in the Hour of Code 2015! Tracking and saving progress have now resumed in all
     Code Studio tutorials and courses. Note: Code.org offices will be closed December
@@ -795,7 +789,7 @@
   infinity_name: "Žaidimų laboratorija Infinity"
   artist_name: Menininkas
   monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  allcancode_name: Paleisti Marko!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters

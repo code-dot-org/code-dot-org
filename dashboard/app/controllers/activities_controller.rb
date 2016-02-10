@@ -11,7 +11,7 @@ class ActivitiesController < ApplicationController
   # for some script level pages.
   protect_from_forgery except: :milestone
 
-  MAX_INT_MILESTONE = 2147483647
+  MAX_INT_MILESTONE = 2_147_483_647
   USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
 
   MIN_LINES_OF_CODE = 0

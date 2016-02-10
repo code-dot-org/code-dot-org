@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #

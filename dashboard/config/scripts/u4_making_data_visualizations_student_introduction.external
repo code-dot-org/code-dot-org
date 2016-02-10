@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 
 # Background
 
-Good visualizations can help people make sense of data sets that are too large to interpret just by looking at the raw data. Now that you’ve had the chance to see and evaluate some data visualizations, you will learn to use a spreadsheet tool to make visualizations of your own.
+Good visualizations can help people make sense of data sets that are too large to interpret by looking at the raw data. Now that you’ve had the chance to see and evaluate some data visualizations, you will learn to use a spreadsheet tool to make visualizations of your own.
 
 # Lesson
 
@@ -23,4 +23,8 @@ Good visualizations can help people make sense of data sets that are too large t
 * Data Set: [MovieRating_ratingByAgeByGender.csv](https://drive.google.com/file/d/0B78N8p4zhHFgaHR2TG1QQ2NZQTg/view?usp=sharing)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Target Charts: <a href="https://docs.google.com/document/d/1ckcDtJYg8LNjNvtwBey6kbyGOoH5jn1sNP3Em2KR8DQ/" target="_blank">Making Data Visualizations</a>
 MARKDOWN

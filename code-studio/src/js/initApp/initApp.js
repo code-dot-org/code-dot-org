@@ -5,6 +5,7 @@ var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
 var project = require('./project');
+var userAgentParser = require('./userAgentParser');
 
 window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
@@ -32,12 +33,15 @@ window.apps = {
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
         dashboard.createCallouts(this.level.callouts || this.callouts);
-        if (window.dashboard.isChrome34) {
+        if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
-        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab') {
+        if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
           $('#clear-puzzle-header').hide();
-          $('#versions-header').show();
+          // Only show Version History button if the user owns this project
+          if (dashboard.project.isOwner()) {
+            $('#versions-header').show();
+          }
         }
         $(document).trigger('appInitialized');
       },
@@ -138,6 +142,11 @@ window.apps = {
         }
       }
     })(appOptions.level);
+
+    // Previously, this was set by dashboard based on route and user agent. We
+    // stopped being able to use the user agent on the server, and thus try
+    // to have the same logic on the client.
+    appOptions.noPadding = !appOptions.isLegacyShare && userAgentParser.isMobile();
   },
 
   // Set up projects, skipping blockly-specific steps. Designed for use
@@ -169,8 +178,8 @@ window.apps = {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
           Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
-      } else {
-        source = window.Applab && Applab.getCode();
+      } else if (appOptions.getCode) {
+        source = appOptions.getCode();
       }
       return source;
     },

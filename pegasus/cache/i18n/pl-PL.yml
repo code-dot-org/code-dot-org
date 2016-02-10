@@ -80,11 +80,6 @@
   congratulations_volunteer: |
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
-  course_name_accelerated: Przyspieszony Kurs
-  course_name_course1: Kurs 1
-  course_name_course2: Kurs 2
-  course_name_course3: Kurs 3
-  course_name_course4: Kurs 4
   congratulations_on_completing_course: Gratulacje na zakończenie %{course}
   congrats_next_tutorials_title: Następnie wykorzystaj te samouczki
   congrats_next_tutorials_desc: Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj
@@ -147,7 +142,7 @@
   hoc_is_here: "#HourOfCode jest tutaj - Sprawdź to! @codeorg"
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić.
-    http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
+    http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/ aby dowiedzieć się więcej.
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?

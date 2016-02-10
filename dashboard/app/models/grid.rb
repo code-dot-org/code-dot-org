@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -81,7 +82,7 @@ class Grid < Blockly
   end
 
   def filter_level_attributes(level_hash)
-    %w(maze initial_dirt final_dirt).map do |maze_type|
+    %w(maze initial_dirt raw_dirt).map do |maze_type|
       prop = level_hash['properties']
       prop[maze_type] = prop[maze_type].to_json if prop[maze_type].is_a?(Array)
     end

@@ -18,3 +18,18 @@ Scenario: Using a studio dropdown
   And element "#resetButton" is visible
   And I wait to see ".congrats"
   And element ".congrats" is visible
+
+Scenario: Resizing Sprites
+  Given I am on "http://learn.code.org/s/allthethings/stage/21/puzzle/1?noautoplay=true"
+  And I rotate to landscape
+  #And I close the dialog
+
+  Then the 0th sprite image has height "100"
+  And the 15th sprite image has height "100"
+
+  When I press "runButton"
+  And I wait to see "#again-button"
+  And I press "again-button"
+
+  Then the 0th sprite image has height "50"
+  And the 15th sprite image has height "150"

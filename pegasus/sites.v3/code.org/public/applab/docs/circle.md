@@ -178,7 +178,7 @@ No return value. Outputs to the display only.
 
 - A canvas element must be created before a circle can be drawn. Create a canvas element in Design mode first, or call [createCanvas()](/applab/docs/createCanvas) before calling circle.
 - If you're having trouble getting a circle to show up, make sure that you're trying to draw the circle within the bounds of the active canvas.
-- Change the width of the line, color of the line, and fill color used to draw all subsequent circles using [setStrokeWidth](/applab/docs/setStrokeWidth), [setStrokeColor](/applab/docs/setStrokeColor). and [setFillColor](/applab/docs/setFillColor).
+- Change the width of the line, color of the line, and fill color used to draw all subsequent circles using on this canvas [setStrokeWidth](/applab/docs/setStrokeWidth), [setStrokeColor](/applab/docs/setStrokeColor). and [setFillColor](/applab/docs/setFillColor).
 - When drawing thick lines, the radius of the circle defines the center of the perimeter line. The outside radius of the circle will be the specified radius plus half the stroke width.
 
 [/tips]

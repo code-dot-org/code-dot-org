@@ -9,7 +9,6 @@ embedded_layout: simple_embedded
 
 [/name]
 
-
 [category]
 
 Category: Canvas
@@ -20,11 +19,17 @@ Category: Canvas
 
 [short_description]
 
-Puts the input image data onto the active canvas element starting at position x, y.
+Puts the input image data onto the active canvas starting at position x, y.
 
 [/short_description]
 
-**Note**: Canvas and image data must exist before image data can be placed back on the canvas. Create a canvas element in Design mode first or call [createCanvas()](/applab/docs/createCanvas), and then you can capture image data using [getImageData()](/applab/docs/getImageData) before using putImageData(). The size of the captured image data will be determined by the parameters of the getImageData() call and the putImageData() call will only take the starting x and y position to place that size of data back on the canvas.
+One advantage of using a canvas for apps containing images or drawing is that you can access the image data at the pixel level. This allows your app to process an image just like many image editing programs.
+
+The object returned contains the following fields:
+
+- data - An array of pixel color values, four values for each pixel (red, green, blue, alpha/opacity).
+- width - The width of the image in pixels.
+- height - The height of the image in pixels.
 
 [/description]
 
@@ -33,8 +38,25 @@ ____________________________________________________
 
 [example]
 
-**Change the red value of a single pixel to zero**
+```
+// Copy part of the image on the canvas to new locations on the canvas. 
+createCanvas('canvas1', 200, 200);
+setFillColor("blue");
+rect(0, 0, 50, 50);
+var canvasData=getImageData(0, 0, 50, 50);
+putImageData(canvasData, 100, 0);
+putImageData(canvasData, 50, 50);
+putImageData(canvasData, 0, 100);
+putImageData(canvasData, 100, 100);
+```
 
+[/example]
+
+____________________________________________________
+
+[example]
+
+**Change the red value of a single pixel to zero**
 
 ```
 //Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
@@ -60,22 +82,19 @@ ____________________________________________________
 
 [example]
 
-**Change the red value of a single pixel to half of its current value**
-
+**Example: Center Black** Change the red value of a single pixel to zero.
 
 ```
-//Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
-createCanvas('canvas1', 320, 480);
-setFillColor('red');
-rect(0, 0, 100, 200);
-var imageData = getImageData(0, 0, 320, 480);
-
-//Divide the red value of pixel at x:50 y:50 in imageData by 2 and store as 'newRed'
-var newRed = (getRed(imageData, 50, 50) / 2);
-
-//First modify the red value at x:50 y:50 in the image data using 'newRed' then update the canvas
-setRed(imageData, 50, 50, newRed);
-putImageData(imageData, 0, 0);
+// Change the red value of a single pixel to zero.
+createCanvas('canvas1', 200, 200);
+setFillColor("red");
+circle(100, 100, 50);
+var canvasData=getImageData(0, 0, 200, 200);
+var redValue = getRed(canvasData, 100, 100);
+console.log(redValue);
+setRed(canvasData, 100, 100, 0);
+putImageData(canvasData, 0, 0);
+console.log(getRed(canvasData, 50, 50));
 ```
 
 [/example]
@@ -84,30 +103,25 @@ ____________________________________________________
 
 [example]
 
-**Remove all red from the canvas**
-
-In this more detailed example, we move through each pixel of the canvas and change the red value to zero in each. To do this, the function `removeRed(imageData)` is defined and called after a canvas element has been created with a rectangle drawn and image data captured.
-
+**Example: Red Out** Remove all red from the canvas.
 
 ```
-//Define the removeRed function (which accepts image data to work on as variable 'thisImageData')
+// Remove all red from the canvas.
+createCanvas('canvas1', 200, 200);
+setFillColor("red");
+circle(100, 100, 50);
+var canvasData=getImageData(0, 0, 200, 200);
+removeRed(canvasData);
+
+// Removes red in every pixel from 'thisImageData' argument. Updates the image row by row.
 function removeRed(thisImageData){
-    for(var y=0; y < thisImageData.height; y++) { //Loop over each pixel in y axis
-        for(var x=0; x < thisImageData.width; x++) { //An inner loop over each pixel in x axis
-            setRed(thisImageData, x, y, 0); //Use x and y in our loops to set each pixel's red value to 0
+    for(var y=0; y < thisImageData.height; y++) {
+        for(var x=0; x < thisImageData.width; x++) {
+            setRed(thisImageData, x, y, 0);
         }
-        putImageData(thisImageData, 0, 0); //We update the whole canvas for every row of pixels in our loop
+        putImageData(thisImageData, 0, 0);
     }
 }
-
-//Setup the canvas, draw a red rectangle, and capture the image data of the whole canvas
-createCanvas('canvas1', 320, 480);
-setFillColor('red');
-rect(0, 0, 100, 200);
-var imageData = getImageData(0, 0, 320, 480);
-
-//Then we will call our function to remove all red from the canvas one pixel at a time
-removeRed(imageData);
 ```
 
 [/example]
@@ -139,13 +153,14 @@ putImageData(imgData, x, y);
 [returns]
 
 ### Returns
-No return value. Only modifies the currently active canvas element on screen.
+No return value. Only modifies the currently active canvas on screen.
 
 [/returns]
 
 [tips]
 
 ### Tips
+- Canvas and image data must exist before image data can be placed back on the canvas. Create a canvas element in Design mode first or call [createCanvas()](/applab/docs/createCanvas), and then you can capture image data using [getImageData()](/applab/docs/getImageData) before using putImageData(). The size of the captured image data will be determined by the parameters of the getImageData() call and the putImageData() call will only take the starting x and y position to place that size of data back on the canvas.
 - Use this function with the get color functions: [getRed()](/applab/docs/getRed), [getGreen()](/applab/docs/getGreen), [getBlue()](/applab/docs/getBlue), and [getAlpha()](/applab/docs/getAlpha)
 - Use this function with the set color functions: [setRed()](/applab/docs/setRed), [setGreen()](/applab/docs/setGreen), [setBlue()](/applab/docs/setBlue), and [setAlpha()](/applab/docs/setAlpha)
 - You will have to use [getImageData()](/applab/docs/getImageData) to first capture image data

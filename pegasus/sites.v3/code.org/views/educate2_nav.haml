@@ -1,9 +1,0 @@
-#about_nav
-  %span.about_list
-    -current_url = request.path_info
-    -{'Educator Overview'=>'/educate2','Elementary school'=>'/educate2/elementary-school','Middle school'=>'/educate2/middle-school','High school'=>'/educate2/high-school','Hour of Code'=>'https://hourofcode.com','Partner with us'=>'/educate2/partner','Beyond Code.org'=>'/educate2/beyond','Inspire a student'=>'/educate2/inspire','Join the online community'=>'/educate2/community','Educational videos'=>'/educate2/videos'}.each_pair do |label,url|
-      - if current_url == url
-        %span.about_list_item_selected= label
-      -else
-        %a.about_list_item{:href=>url}= label
-      %hr.narrow_hr

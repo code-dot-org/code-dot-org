@@ -1,6 +1,7 @@
 {
   "name": "@cdo/code-studio",
   "version": "0.0.1",
+  "private": "true",
   "description": "Pipeline for static assets used by our Code Studio rails app (i.e. dashboard)",
   "author": "Code.org",
   "license": "Apache-2.0",
@@ -11,12 +12,20 @@
     "node": ">=0.12.0",
     "npm": "^2.9.1"
   },
+  "browserify": {
+    "transform": [ "browserify-shim" ]
+  },
+  "browserify-shim": {
+    "jquery-shim": "global:$"
+  },
   "scripts": {
     "postinstall": "linklocal",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
-    "test": "istanbul cover _mocha test/**/*.js && istanbul check-coverage",
+    "test": "mochify test/**/*.js --transform babelify",
+    "debug": "mochify --debug test/**/*.js --transform babelify",
+    "coverage": "mochify test/**/*.js --transform babelify --plugin [ mochify-istanbul --report json --report lcov --dir ./coverage ] && istanbul check-coverage ./coverage/coverage-final.json",
     "clean": "rm -rf build",
     "clean-assets": "rm -rf build/assets",
     "clean-css": "rm -rf build/css",
@@ -33,6 +42,8 @@
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^12.0.1",
+    "browserify-shim": "^3.8.12",
+    "chai": "^3.5.0",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
     "envify": "^3.4.0",
@@ -41,7 +52,10 @@
     "jshint": "^2.8.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
+    "mochify": "^2.15.0",
+    "mochify-istanbul": "^2.4.1",
     "node-sass": "^3.4.2",
+    "phantomjs-prebuilt": "^2.1.3",
     "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
@@ -52,7 +66,8 @@
   "dependencies": {
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
-    "jquery": "^1.11.3",
+    "jquery": "^2.2.0",
+    "jquery.cookie": "^1.4.1",
     "linklocal": "^2.5.2",
     "lodash": "^3.10.1",
     "marked": "0.3.2",

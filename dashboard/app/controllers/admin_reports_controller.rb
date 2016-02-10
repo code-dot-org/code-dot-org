@@ -16,28 +16,9 @@ class AdminReportsController < ApplicationController
   end
 
   def funometer
-    SeamlessDatabasePool.use_persistent_read_connection do
-      # Compute the global funometer percentage.
-      ratings = PuzzleRating.all
-      @overall_percentage = get_percentage_positive(ratings)
-
-      # Generate the funometer percentages, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
-
-      # Compute funometer percentages by script.
-      @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
-      @script_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-
-      # Compute funometer percentages by level, saving the most-favored and
-      # least-favored with over one hundred ratings.
-      @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
-      level_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
-      @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
-      @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
-    end
+    require 'cdo/properties'
+    @stats = Properties.get(:funometer)
+    @ratings_by_day = @stats['ratings_by_day'] if @stats.present?
   end
 
   def funometer_by_script
@@ -49,21 +30,24 @@ class AdminReportsController < ApplicationController
       ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
       @overall_percentage = get_percentage_positive(ratings)
 
-      # Generate the funometer percentages for the script, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+      # Generate the funometer percentages for the script, by day.
+      @ratings_by_day = get_ratings_by_day(ratings)
 
       # Generate the funometer percentages for the script, by stage.
-      ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
+      ratings_by_stage = ratings.
+                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").
+                         joins("INNER JOIN stages ON stages.id = script_levels.stage_id").
+                         group('script_levels.stage_id').
+                         order('script_levels.stage_id')
       @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
-      @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+      @ratings_by_stage = ratings_by_stage.
+                          select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
       # Generate the funometer percentages for the script, by level.
       ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
       @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
-      @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      @ratings_by_level = ratings_by_level.
+                          select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
     end
   end
 
@@ -74,14 +58,13 @@ class AdminReportsController < ApplicationController
       @level_id = params[:level_id]
       @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
 
-      ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id).where('level_id = ?', @level_id)
+      ratings = PuzzleRating.
+                where('puzzle_ratings.script_id = ?', @script_id).
+                where('level_id = ?', @level_id)
       @overall_percentage = get_percentage_positive(ratings)
 
-      # Generate the funometer percentages for the level, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      # Generate the funometer percentages for the level, by day.
+      @ratings_by_day = get_ratings_by_day(ratings)
     end
   end
 
@@ -101,11 +84,11 @@ class AdminReportsController < ApplicationController
 
         # Regardless of the level type, query the DB for level answers.
         @responses[level_id] = LevelSource.
-          where(level_id: level_id).
-          joins(:activities).
-          joins("INNER JOIN users ON activities.user_id = users.id").
-          limit(@response_limit).
-          pluck(:level_id, :email, :data)
+                               where(level_id: level_id).
+                               joins(:activities).
+                               joins("INNER JOIN users ON activities.user_id = users.id").
+                               limit(@response_limit).
+                               pluck(:level_id, :email, :data)
 
         # Determine whether the level is a multi question, replacing the
         # numerical answer with its corresponding text if so.
@@ -130,60 +113,58 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-      @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
+    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
 
-      @is_sampled = false
+    @is_sampled = false
 
-      output_data = {}
-      %w(Attempt Success).each do |key|
-        dimension = 'ga:eventLabel'
-        metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
-        filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-        if params[:filter]
-          filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
-        end
-        ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-
-        @is_sampled ||= ga_data.data.contains_sampled_data
-
-        ga_data.data.rows.each do |r|
-          label = r[0]
-          output_data[label] ||= {}
-          output_data[label]["Total#{key}"] = r[1].to_f
-          output_data[label]["Unique#{key}"] = r[2].to_f
-          output_data[label]["Avg#{key}"] = r[3].to_f
-        end
+    output_data = {}
+    %w(Attempt Success).each do |key|
+      dimension = 'ga:eventLabel'
+      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+      if params[:filter]
+        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
-      output_data.each_key do |key|
-        output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
-        output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
-        output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
-        output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
-      end
+      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
 
-      page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+      @is_sampled ||= ga_data.data.contains_sampled_data
 
-      data_array = output_data.map do |key, value|
-        {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      ga_data.data.rows.each do |r|
+        label = r[0]
+        output_data[label] ||= {}
+        output_data[label]["Total#{key}"] = r[1].to_f
+        output_data[label]["Unique#{key}"] = r[2].to_f
+        output_data[label]["Avg#{key}"] = r[3].to_f
       end
-      require 'naturally'
-      data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
-      headers = [
-        "Puzzle",
-        "Total\nAttempts",
-        "Total Successful\nAttempts",
-        "Avg. Success\nRate",
-        "Avg. #attempts\nper Completion",
-        "Unique\nAttempts",
-        "Unique Successful\nAttempts",
-        "Perceived Dropout",
-        "Avg. Unique\nSuccess Rate",
-        "Avg. Time\non Page"
-      ]
-      render locals: {headers: headers, data: data_array}
     end
+    output_data.each_key do |key|
+      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
+      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
+      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
+    end
+
+    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+
+    data_array = output_data.map do |key, value|
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+    end
+    require 'naturally'
+    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    headers = [
+      "Puzzle",
+      "Total\nAttempts",
+      "Total Successful\nAttempts",
+      "Avg. Success\nRate",
+      "Avg. #attempts\nper Completion",
+      "Unique\nAttempts",
+      "Unique Successful\nAttempts",
+      "Perceived Dropout",
+      "Avg. Unique\nSuccess Rate",
+      "Avg. Time\non Page"
+    ]
+    render locals: {headers: headers, data: data_array}
   end
 
   def pd_progress
@@ -212,31 +193,8 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_stats
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @user_count = User.count
-      @teacher_count = User.where(:user_type => 'teacher').count
-      @student_count = @user_count - @teacher_count
-      @users_with_teachers = Follower.distinct.count(:student_user_id)
-      @users_with_email = User.where('email <> ""').count
-      @users_with_confirmed_email = User.where('confirmed_at IS NOT NULL').count
-      @girls = User.where(:gender => 'f').count
-      @boys = User.where(:gender => 'm').count
-
-      @prizes_redeemed = Prize.where('user_id IS NOT NULL').group(:prize_provider).count
-      @prizes_available = Prize.where('user_id IS NULL').group(:prize_provider).count
-
-      @student_prizes_earned = User.where(:prize_earned => true).count
-      @student_prizes_redeemed = Prize.where('user_id IS NOT NULL').count
-      @student_prizes_available = Prize.where('user_id IS NULL').count
-
-      @teacher_prizes_earned = User.where(:teacher_prize_earned => true).count
-      @teacher_prizes_redeemed = TeacherPrize.where('user_id IS NOT NULL').count
-      @teacher_prizes_available = TeacherPrize.where('user_id IS NULL').count
-
-      @teacher_bonus_prizes_earned = User.where(:teacher_bonus_prize_earned => true).count
-      @teacher_bonus_prizes_redeemed = TeacherBonusPrize.where('user_id IS NOT NULL').count
-      @teacher_bonus_prizes_available = TeacherBonusPrize.where('user_id IS NULL').count
-    end
+    require 'cdo/properties'
+    @stats = Properties.get('admin_stats')
   end
 
   def all_usage
@@ -299,8 +257,10 @@ class AdminReportsController < ApplicationController
 
   private
   def get_ratings_by_day(ratings_to_process)
-    ratings_by_day = ratings_to_process.where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)')
-    return ratings_by_day.select('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt'), ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
+    return ratings_to_process.
+           group('DATE(created_at)').
+           order('DATE(created_at)').
+           pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
   end
 
   def get_percentage_positive(ratings_to_process)

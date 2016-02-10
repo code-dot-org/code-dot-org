@@ -1,88 +1,70 @@
-%h1 Admin stats
+-if @stats.present?
+  %ul
+    %li
+      Accounts
+      %ul
+        - {'users': 'Users', 'students': 'Students', 'teachers': 'Teachers'}.each do |type, description|
+          %li
+            = "#{description}: "
+            = @stats["accounts"][type.to_s]
+    %li
+      Born Accounts (accounts that have at least one sign-in)
+      %ul
+        %li
+          Users:
+          = @stats['born_accounts']['users']
+        %li
+          Students:
+          = @stats['born_accounts']['students']
+        %li
+          Female Students:
+          = @stats['born_accounts']['female_students']
+          = surround '(', ')' do
+            = get_gender_percentage(@stats['born_accounts']['female_students'],
+                                    @stats['born_accounts']['male_students'])
+        %li
+          Male Students:
+          = @stats['born_accounts']['male_students']
+          = surround '(', ')' do
+            = get_gender_percentage(@stats['born_accounts']['male_students'],
+                                    @stats['born_accounts']['female_students'])
+        %li
+          Teachers:
+          = @stats['born_accounts']['teachers']
+    %li
+      Actives (accounts that have at least one sign-in in the last x days)
+      %ul
+        -{'seven_day_students': '7-Day Students',
+          'seven_day_female_students': '7-Day Female Students',
+          'seven_day_male_students': '7-Day Male Students',
+          'thirty_day_students': '30-Day Students',
+          'thirty_day_female_students': '30-Day Female Students',
+          'thirty_day_male_students': '30-Day Male Students'}.each do |type, description|
+          %li
+            = "#{description}: "
+            = @stats['actives']["#{type}"]
+    - {'historical': 'accounts at least 37 days old and logged in at least once after 30 days',
+       'current_weekly': 'accounts 37 to 44 days old and logged in at least once after 30 days',
+       'current_monthly': 'accounts 60 to 90 days old and logged in at least once after 30 days'}.each do |type, description|
+      %li
+        Retention
+        = "#{type} (#{description})"
+        %ul
+          -{'students': 'Student',
+            'female_students': 'Female Student',
+            'male_students': 'Male Student',
+            'us_students': 'US Student',
+            'non_us_students': 'Non-US Student'}.each do |filter, filter_description|
+            %li
+              = "30-Day #{filter_description}: "
+              = (100.0 * @stats["thirty_day_retention_#{type}"]["#{filter}"]).to_s + '%'
 
-%h3 Users with accounts
-
-%strong Total users
-#{@user_count}
-%br/
-%strong Students
-#{@student_count}
-%br/
-%strong Teachers
-#{@teacher_count}
-%br/
-%strong Gender (when specified):
-- if @girls + @boys > 0
-  Girls #{@girls * 100 / (@girls + @boys)}% /
-  Boys #{@boys * 100 / (@girls + @boys)}%
+  = link_to 'View Level Progress (slow query) >>', admin_progress_path
+  %br
+  = link_to 'View Concept Completions (slow query) >>', admin_concepts_path
+  %br
+  = link_to 'View Level Completion stats >>', level_completions_path
+  %br
+  = link_to 'View Monthly Metrics >>', reports_path(action: 'monthly_metrics')
 - else
-  0 users with specified gender
-%br/
-%strong Users linked to a teacher
-- if @user_count > 0
-  #{@users_with_teachers} (#{@users_with_teachers * 100 / @user_count}%)
-- else
-  0
-%br/
-%strong Users with an email address
-- if @user_count > 0
-  #{@users_with_email} (#{@users_with_email * 100 / @user_count}%)
-- else
-  0
-%br/
-%strong Teachers with a confirmed email address
-- if @teacher_count > 0
-  #{@users_with_confirmed_email} (#{@users_with_confirmed_email * 100 / @teacher_count}%)
-- else
-  0
-%br/
-%br/
-
-%h3= link_to 'View Level Progress (slow query) >>', admin_progress_path
-
-%h3= link_to 'View Concept Completions (slow query) >>', admin_concepts_path
-
-%h3= link_to 'View Level Completion stats >>', level_completions_path
-
-%h3= link_to 'View Monthly Metrics >>', reports_path(action: 'monthly_metrics')
-
-%h3 Prizes
-
-%strong Total student prizes earned
-#{@student_prizes_earned}
-%br/
-%strong Total student prizes redeemed
-#{@student_prizes_redeemed}
-%br/
-- @prizes_redeemed.each do |key, value|
-  #{key.name} #{value}
-  %br/
-%strong Student prizes available to be redeemed
-#{@student_prizes_available}
-%br/
-- @prizes_available.each do |key, value|
-  #{key.name} #{value}
-  %br/
-%br/
-
-%strong Total teacher prizes earned
-#{@teacher_prizes_earned}
-%br/
-%strong Total teacher prizes redeemed
-#{@teacher_prizes_redeemed}
-%br/
-%strong Teacher prizes available to be redeemed
-#{@teacher_prizes_available}
-%br/
-%br/
-
-%strong Total bonus teacher prizes earned
-#{@teacher_bonus_prizes_earned}
-%br/
-%strong Total teacher bonus prizes redeemed
-#{@teacher_bonus_prizes_redeemed}
-%br/
-%strong Teacher bonus prizes available to be redeemed
-#{@teacher_bonus_prizes_available}
-%br/
-%br/
+  %h2 Error: @stats is nil.

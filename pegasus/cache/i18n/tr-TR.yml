@@ -77,11 +77,6 @@
   congratulations_volunteer: 'Tebrikler: Kodlama Saati''ni denediniz, <a href="https://code.org/volunteer">bir
     sınıfta gönüllü olmak</a> ve öğrencilerin Kodlama Saatini öğrenmesine yardımcı
     olmak için kaydolun!'
-  course_name_accelerated: Hızlandırılmış Kurs
-  course_name_course1: Ders 1
-  course_name_course2: Ders 2
-  course_name_course3: Kurs 3
-  course_name_course4: Ders 4
   congratulations_on_completing_course: "%{course} kursunu tamamladığınız için tebrikler"
   congrats_next_tutorials_title: Sonrasında bu eğitim setlerini dene
   congrats_next_tutorials_desc: 1 saatlik kısa eğitim setlerini veya bir <a href="%{current_path}/next">ortaklık
@@ -248,8 +243,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Daha fazlasını öğren
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20.000 öğretmen eğitildi ve (onlar) şu anda sınıflarda
+    bilgisayar bilimleri öğretiyorlar.
   homepage_banner_20k_teachers_link: Daha fazlasını öğren
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
@@ -259,7 +254,7 @@
   homepage_solot_text_link_volunteer: "`Hour of Code` için gönüllü"
   homepage_slot_text_title_students: "Öğrenciler"
   homepage_slot_text_blurb_students: Tüm dersleri keşfedin
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Kurslarımızı keşfet
   homepage_slot_text_link_codestudio: Code Studio deneyin
   homepage_slot_text_link_local: En yakın sınıfı bulun
   homepage_slot_text_link_othercourses: Diğer online kurslar
@@ -408,10 +403,11 @@
   volunteer_engineer_submission_field_email_desc: E-posta adresiniz asla paylaşılmaz,
     ancak öğretmenlerden size istekler göndereceğiz.
   volunteer_engineer_submission_field_email_placeholder: E-posta adresi
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_final_paragraph: Kod Saati ve diğer gönüllü fırsatlarında
+    sizinle temasa geçilebilmesi için, yerel öğretmenler için olan bir haritada kayıt
+    edileceksiniz. Tam adresiniz ve e-postanız bizim tarafımızdan ASLA paylaşılmayacaktır.
+    Fakat diğer bilgileriniz (yaklaşık konumunuz dahil) yerel öğretmenlerce açıkça
+    görülebilir şekilde yayınlanacaktır.
   volunteer_engineer_submission_checkbox_contact: "Öğretmenlerin gönüllülük fırsatları
     için benimle iletişime geçmesini kabul ediyorum (Not: Mail adresiniz paylaşılmaz)"
   volunteer_engineer_submission_submit: Gönder
@@ -703,8 +699,8 @@
   learn_sign_up_description: Bilgisayar Bilimi Eğitim Haftası süresinde Kod Saati'ne
     dahil olmak için kayıt olun
   learn_sign_up_button: Kaydol
-  learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
+  learn_videos_watch: Bu ilham verici videoyu sınıfınızla birlikte izleyin
+  learn_videos_show: Bu ilham verici videoyu sınıfınıza gösteriniz
   learn_videos_before_hoc: Kodlama Saati'nden önce ilham verici video izleyin
   learn_educator_resources_description: Kodlama Saati'ni nasıl öğreteceğinizi öğrenin
   learn_educator_resources_button: "Öğretim kaynakları"
@@ -970,19 +966,19 @@
   infinity_shortdescription: Bir hikaye ya da Disney Infinity karakteriyle bir oyun
     yaratmak için Play Lab'i kullanın.
   artist_shortdescription: Sanatçı ile harika resimler ve tasarımlar yap!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
+  monsterocding_shortdescription: "Çocuklar için renkli ve kendi kendine rehberlik
+    eden bir programlama macerası."
   allcancode_shortdescription: Marco, görsel programlama dilini öğrenmek için sürükleyici
     bir oyun.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
+  csfirst_shortdescription: Okyanustaki iki karakter hakkında bir hikaye canlandırın-oluşturun.
+    Kendi tarzınızı ekleyin!
   boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
+  codesters_shortdescription: Python kullanarak, kendi oyununuzu, animasyonunuzu ve
+    sanat eserinizi oluşturun.
   texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
     calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  teacherled_shortdescription: Kendi Kod Saati olayınızı tasarlamak için bu ders planlarından
+    ilham alın.
   codeorg_longdescription: Sürükle ve bırak sistemi ile Bilgisayar Biliminin basit
     kavramlarını öğrenin. Bu, video derslerinde Bill Gates, Mark Zuckerberg gibi ünlüler
     Angry Birds ve Plants vs. Zombies gibi oyunların da bulunduğu kendi kendini yöneten
@@ -1286,7 +1282,7 @@
   groklearning_beyond_shortdescription: Python programla diline basit bir giriş
   hacketyhack_beyond_shortdescription: Ruby dilini sıfırdan öğrenin
   robomind_beyond_shortdescription: Sanal robotumuz için kod yazın
-  makeschool_beyond_shortdescription: Learn to make an iPhone game in an hour
+  makeschool_beyond_shortdescription: Bir saat içerisinde iPhone oyunu yapmayı öğrenin
   appinventor_beyond_shortdescription: Kendi uygulamanızı yapın! (Sadece android)
   touchdevelop_beyond_shortdescription: Laptop telefon ya da tablet için mobil uygulamalar
     kodlayın
@@ -1387,11 +1383,12 @@
   udemy_beyond_longdescription: 'Whether you''ve never seen a line of code or you
     code for a living, Udemy has a course for you, taught by professional instructors.
     [Note: payment is required]'
-  lynda_beyond_longdescription: 'Learn how to code, create, and build web applications,
-    from the foundations of object-oriented programming in C and C++, to how to write
-    Java. Our developer tutorials can help you learn to develop and create mobile
-    apps, work with PHP and MySQL databases, get started with the statistical processing
-    language R, and much more. [Note: payment is required]'
+  lynda_beyond_longdescription: 'C ve C++ daki nesne-yönelimli programlamanın başından,
+    nasıl Java yazıldığına kadar olan kod yazma, oluşturma ve web uygulamaları yapılandırmanın
+    nasıl yapıldığını öğrenin. Mobil uygulamaları öğrenme, geliştirme ve oluşturmada,
+    PHP ve MySQL veri tabanlarıyla çalışmada, istatistiksel işleme dili R''a başlamada
+    ve daha birçok konuda geliştirici derslerimiz size yardımcı olabilir. [Not: ödeme
+    gereklidir]'
   edx_beyond_longdescription: CS50x is Harvard College's introduction to the intellectual
     enterprises of computer science and the art of programming for majors and non-majors
     alike, with or without prior programming experience. Topics include abstraction,
@@ -1433,11 +1430,12 @@
   w3schools_beyond_longdescription: Kendi bilgisayarında internet sitesi yaratmayı
     öğren.Bir günden az bir sürede server temellerini öğren.İnternet sitene veritabanı
     eklemeyi öğren
-  codeavengers_beyond_longdescription: Learn how to program games, apps and websites.
-    Designed by experts with perfect level of difficulty for beginners, easy to understand
-    instructions and great help when you need it. Our HTML, CSS and JavaScript courses
-    include code challenges and revision games that make learning fun and effective
-    for all ages.
+  codeavengers_beyond_longdescription: Oyunlar, uygulamalar ve web sitelerinin nasıl
+    programlandığını öğrenin. Yeni başlayanlar için uygun zorluk düzeyinde, anlaşılması
+    kolay yönlendirmeler içeren ve ihtiyacınız olduğunda size mükemmel bir yardımcı
+    olacak şekilde, konunun uzmanları tarafından tasarlanmıştır. HTML, CSS ve JavaScript
+    kurslarımız, her yaş için etkin ve eğlenceli bir şekilde öğrenmeyi sağlayacak
+    gözden geçirme oyunları ve kod testleri içermektedir.
   mozilla_beyond_longdescription: Thimble makes it ridiculously simple to create and
     share your own web pages. Write and edit HTML and CSS right in your browser, then
     instantly preview your work. Host and share your finished projects with a single

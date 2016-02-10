@@ -287,7 +287,7 @@ def generate_instance(environment, instance_provisioning_info, role, instance_ty
     puts "Writing new configuration file\n"
   }
 
-  file_suffix = rand(100000000)
+  file_suffix = rand(100_000_000)
 
   Net::SSH.start('gateway.code.org', @username) do |ssh|
     ssh.exec!("knife environment show #{environment} -F json > /tmp/old_knife_config#{file_suffix}")

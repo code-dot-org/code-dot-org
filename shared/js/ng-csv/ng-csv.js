@@ -148,11 +148,11 @@ angular.module('ngCsv.services').
 
           infoArray = [];
 
-          console.log('columnOrder');
-          console.log(options.columnOrder);
+//          console.log('columnOrder');
+//          console.log(options.columnOrder);
           var iterator = !!options.columnOrder ? options.columnOrder : row;
           angular.forEach(iterator, function (field, key) {
-            console.log("row." + field)
+//            console.log("row." + field)
             var val = !!options.columnOrder ? eval("row." + field) : field;
             this.push(that.stringifyField(val, options));
           }, infoArray);

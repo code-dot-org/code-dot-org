@@ -23,7 +23,7 @@ Shows the element with the provided id.
 
 [/short_description]
 
-**Note**: [hideElement(id)](/applab/docs/hideElement) is often used with showElement.
+The user interface elements you place on the screen on not static. Your app sometimes needs to move, resize, hide or show them. All UI elements (button(), textInput(), textLabel(), dropDown(), checkBox(), radioButton(), image()), can be shown.
 
 [/description]
 
@@ -32,25 +32,16 @@ ____________________________________________________
 
 [example]
 
-**Example 1**
-
-This example creates an image of the Code.org logo and two buttons. Clicking on the appropriate button will either hide or show the logo.
-
-
 ```
-image("logo", "http://code.org/images/logo.png"); // creates the Code.org logo
-
-button("hideButton", "Hide logo"); // creates the hide logo button
-button("showButton", "Show logo"); // creates the show logo button
-
-onEvent("hideButton", "click", function(event) { // when the hide button is clicked, hide the logo
+image("logo", "http://code.org/images/logo.png");
+button("hideButton", "Hide logo");
+button("showButton", "Show logo");
+onEvent("hideButton", "click", function(event) {
   hideElement("logo");
 });
-
-onEvent("showButton", "click", function(event) { // when the show button is clicked, show the logo
+onEvent("showButton", "click", function(event) {
   showElement("logo");
 });
-
 ```
 
 [/example]
@@ -59,24 +50,17 @@ ____________________________________________________
 
 [example]
 
-**Example 2**
-
-This example creates an image of the Code.org logo that blinks.
-
+**Blinking** Make the Code.org logo blink.
 
 ```
-image("logo", "http://code.org/images/logo.png"); // create an image of the Code.org logo
-
-setInterval(function() { // create an interval timer that will hide the Code.org logo
-  hideElement("logo"); // hide the Code.org logo
-
-  // create a timer to show the hidden logo
-  // a new timer will be created every time the interval timer runs
+// Make the Code.org logo blink.
+image("logo", "http://code.org/images/logo.png");
+setInterval(function() {
+  hideElement("logo");
   setTimeout(function() {
-    showElement("logo"); // show the Code.org logo
-  }, 500); // Set the delay to 500 milliseconds (0.5 seconds)
-
-}, 1000); // Set the interval to 1000 milliseconds (1 second)
+    showElement("logo");
+  }, 500);
+}, 1000);
 ```
 
 [/example]
@@ -99,21 +83,22 @@ showElement(id);
 
 | Name  | Type | Required? | Description |
 |-----------------|------|-----------|-------------|
-| id | string | Yes | The id of the element to hide.  |
+| id | string | Yes | The ID of the UI element to which this event handler applies. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. |
 
 [/parameters]
 
 [returns]
 
 ### Returns
-Returns true if the id parameter refers to the id of an element that exists.
-Returns false if the id parameter refers to the id of an element that does not exist.
+No return value. Modifies display only.
 
 [/returns]
 
 [tips]
 
 ### Tips
+- [hideElement](/applab/docs/hideElement) is often used with showElement.
+
 
 [/tips]
 

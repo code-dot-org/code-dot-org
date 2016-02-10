@@ -140,15 +140,24 @@ namespace :seed do
     end
   end
 
+  MAX_LEVEL_SOURCES = 10_000
+  desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
   task ideal_solutions: :environment do
     require 'benchmark'
-    Level.order(:ideal_level_source_id). # trick to do the ones that don't have solutions yet first
-      each do |level|
-      times = Benchmark.measure { level.calculate_ideal_level_source_id }
-      puts "Level #{level.id}\t#{times.real}s"
+    Level.where_we_want_to_calculate_ideal_level_source.each do |level|
+      next if level.try(:free_play?)
+      puts "Level #{level.id}"
+      level_sources_count = level.level_sources.count
+      if level_sources_count > MAX_LEVEL_SOURCES
+        puts "...skipped, too many possible solutions"
+      else
+        times = Benchmark.measure { level.calculate_ideal_level_source_id }
+        puts "... analyzed #{level_sources_count} in #{times.real.round(2)}s"
+      end
     end
   end
 
+  desc "calculate most common unsuccessful solutions for the crowdsourced hints UI"
   task :frequent_level_sources, [:freq_cutoff, :game_name] => :environment do |t, args|
     freq_cutoff = 1
     FrequentUnsuccessfulLevelSource.populate(freq_cutoff, args[:game_name])
@@ -255,8 +264,11 @@ namespace :seed do
     SecretPicture.setup
   end
 
+  desc "seed all dashboard data"
   task all: [:videos, :concepts, :scripts, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :trophies, :prize_providers, :callouts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
 
+  desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :trophies, :prize_providers, :secret_words, :secret_pictures]
 end

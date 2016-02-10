@@ -1,100 +1,82 @@
 - content_for :head do
   %script{src:'https://www.google.com/jsapi'}
 
-%h1
-  Fun-O-Meter Stats
+- if @stats.present?
+  %h1
+    Fun-O-Meter Stats
 
-%h2
-  Overall Percentage:
-  %span= number_to_percentage(@overall_percentage, precision: 2)
+  %br
 
-%br
+  WARNING: This data may be up to a day old.
 
-= render 'funometer_percentages_by_day', :percentages_by_day => percentages_by_day
+  %br
 
-%br
+  %h2
+    Overall Percentage:
+    %span= number_to_percentage(@stats['overall'], precision: 2)
 
-%h2
-  Fun-O-Meter by Script
+  %br
 
-%table
-  %tr
-    - @script_headers.each do |header|
-      %th
-        %span= header
-  - @script_ratings.each do |script|
+  = render 'funometer_percentages_by_day'
+
+  %br
+
+  %h2
+    Fun-O-Meter by Script
+
+  %table
     %tr
-      %td
-        %span
-          = link_to funometer_by_script_path(:script_id => script.script_id) do
-            = script.script_id
-      %td
-        %span
-          = link_to script_url(script.script_id) do
-            = script.name
-      %td
-        %span= number_to_percentage(script.percentage, precision: 2)
-      %td
-        %span= script.cnt
+      - ['Script ID', 'Script Name', 'Percentage', 'Count'].each do |header|
+        %th
+          %span= header
+    - @stats['ratings_by_script'].each do |script|
+      %tr
+        %td
+          %span
+            = link_to funometer_by_script_path(:script_id => script[0]) do
+              = script[0]
+        %td
+          %span
+            = link_to script_url(script[0]) do
+              = script[1]
+        %td
+          %span= number_to_percentage(script[2], precision: 2)
+        %td
+          %span= script[3]
 
-%h2
-  Favorite Levels
+  %br
 
-%table
-  %tr
-    - @level_headers.each do |header|
-      %th
-        %span= header
-  - @favorite_level_ratings.each do |level|
-    %tr
-      %td
-        %span
-          = link_to funometer_by_script_path(:script_id => level.script_id) do
-            = level.script_id
-      %td
-        %span
-          = link_to funometer_by_script_level_path(:script_id => level.script_id, :level_id => level.level_id) do
-            = level.level_id
-      %td
-        %span
-          = link_to script_url(level.script_id) do
-            = level.script_name
-      %td
-        %span
-          = link_to level_url(level.level_id) do
-            = level.level_name
-      %td
-        %span= number_to_percentage(level.percentage, precision: 2)
-      %td
-        %span= level.cnt
+  %h2
+    Fun-O-Meter by Level
 
-%h2
-  Hated Levels
-
-%table
-  %tr
-    - @level_headers.each do |header|
-      %th
-        %span= header
-  - @hated_level_ratings.each do |level|
-    %tr
-      %td
-        %span
-          = link_to funometer_by_script_path(:script_id => level.script_id) do
-            = level.script_id
-      %td
-        %span
-          = link_to funometer_by_script_level_path(:script_id => level.script_id, :level_id => level.level_id) do
-            = level.level_id
-      %td
-        %span
-          = link_to script_url(level.script_id) do
-            = level.script_name
-      %td
-        %span
-          = link_to level_url(level.level_id) do
-            = level.level_name
-      %td
-        %span= number_to_percentage(level.percentage, precision: 2)
-      %td
-        %span= level.cnt
+  - ['favorited', 'hated'].each do |level_type|
+    %table
+      %tr
+        - ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count'].each do |header|
+          %th
+            %span= header
+      - @stats['ratings_by_level_' + level_type].each do |level|
+        %tr
+          %td
+            %span
+              = link_to funometer_by_script_path(:script_id => level[0]) do
+                = level[0]
+          %td
+            %span
+              = link_to funometer_by_script_level_path(:script_id => level[0], :level_id => level[1]) do
+                = level[1]
+          %td
+            %span
+              = link_to script_url(level[0]) do
+                = level[2]
+          %td
+            %span
+              = link_to level_url(level[1]) do
+                = level[3]
+          %td
+            %span= number_to_percentage(level[4], precision: 2)
+          %td
+            %span= level[5]
+    %br
+- else
+  %h2 Error: @stats is nil or empty.

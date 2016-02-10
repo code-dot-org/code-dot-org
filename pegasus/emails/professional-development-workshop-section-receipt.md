@@ -18,7 +18,7 @@ attachments:
 <%
 facebook = {:u=>"http://code.org/k5"}
 facebook_link = "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"
-twitter = {:related=>'codeorg', :hashtags=>'', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
+twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>"I'm bringing computer science to my classroom with @codeorg! Find a local workshop to join me.", :url=>'http://code.org/k5'}
 twitter_link = "https://twitter.com/intent/tweet?#{twitter.to_query}"
 %>
 <% unless recipient.name.nil_or_empty? %>
@@ -57,16 +57,6 @@ Please take a moment to complete [this short survey](http://code.org/professiona
 
 Attached to this email, you will also find a personalized certificate acknowledging your successful completion of Code.org's K-5 Professional Development.
 <br>
-
-**For a limited time**  
-
-Code.org is offering $50 off [**Dash robots**](https://store.makewonder.com/). These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum, like events and loops. [Learn more](https://store.makewonder.com/). *Valid Dec 1-Jan 1, 2016 only. Limited to first 1,000 people.*
-
-**Redemption code for robots: CODE1729**   
-*Valid Jan 1-31st 2016 only.*
-*Limited to first 1,000*
-
-[Go here](https://help.makewonder.com/) for questions regarding redemption. 
 
 **Need more support?**
 

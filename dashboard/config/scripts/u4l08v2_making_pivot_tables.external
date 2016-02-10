@@ -54,7 +54,7 @@ The menu on the right side of the pivot table lets you choose what you want the 
     
 * **Values** - Display: rating summarized by: AVERAGE
 	* **Values** lets you specify the **computation that should happen for each row.**
-    * **The Computation:** We're interested in the average rating for each movie, so for **Values we choose *rating*, summarized by: *AVERAGE* **. 
+    * **The Computation:** We're interested in the average rating for each movie, so for *Values* we choose *rating*, summarized by: *AVERAGE*. 
 
 <hr>
   
