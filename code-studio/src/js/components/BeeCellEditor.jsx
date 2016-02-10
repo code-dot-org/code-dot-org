@@ -5,9 +5,9 @@
  */
 /* global React */
 
-var BeeCell = require('@cdo/apps/src/maze/beeCell');
+var BeeCell = require('@cdo/apps/maze/beeCell');
 
-module.exports = React.createClass({
+var BeeCellEditor = module.exports = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
     row: React.PropTypes.number.isRequired,

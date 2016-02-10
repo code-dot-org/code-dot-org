@@ -5,9 +5,9 @@
  */
 /* global React */
 
-var Cell = require('@cdo/apps/src/maze/cell');
+var Cell = require('@cdo/apps/maze/cell');
 
-module.exports = React.createClass({
+var CellEditor = module.exports = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
     row: React.PropTypes.number.isRequired,
