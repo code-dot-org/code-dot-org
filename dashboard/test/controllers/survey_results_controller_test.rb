@@ -1,7 +1,18 @@
 require 'test_helper'
 
 class SurveyResultsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  setup do
+    @teacher = create(:teacher)
+  end
+
+  test "post survey results" do
+    sign_in @teacher
+    post :create, {survey: {survey2016_ethnicity_asian: 22}, format: :json}
+
+    survey_result = SurveyResult.where(user: @teacher).first
+    assert survey_result
+    assert survey_result["properties"]["survey2016_ethnicity_asian"] == 22
+  end
+
 end
