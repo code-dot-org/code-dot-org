@@ -20,7 +20,7 @@ el-GR:
   submit: Υποβολή
   twentyhours_heading: Δοκιμάστε την εισαγωγή μας στη Σειρά Μαθημάτων Επιστήμης των Υπολογιστών
   twentyhours_text: Τελειώσατε την πρώτη σας Ώρα του Κώδικα; Μάθετε περισσότερα για τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο μάθημα.
-  og_title: Every child deserves opportunity
+  og_title: Κάθε παιδί δικαιούται μία ευκαιρία
   og_description: Every student in every school deserves the opportunity to study computer science.
   hoc2014_heading: 'Συμμετάσχετε στην <a href="http://hourofcode.com"> Ώρα του Κώδικα</a><br/>8-14 Δεκεμβρίου 2014<br/>'
   hoc2014_students: Μαθητές
@@ -58,11 +58,6 @@ el-GR:
   congratulations: Συγχαρητήρια!
   congratulations_on_completing_hoc: Συγχαρητήρια για τη συμπλήρωση μιας Ώρας Κώδικα
   congratulations_volunteer: 'Συγχαρητήρια: Τώρα που έχετε δοκιμάσει την Ώρα του Κώδικα, <a href="https://code.org/volunteer">εγγραφείτε για να εργαστείτε εθελοντικά σε μια τάξη</a> και να βοηθήσετε μαθητές να διδαχθούν μια Ώρα Κώδικα!'
-  course_name_accelerated: Επιταχυνόμενη πορεία μάθησης
-  course_name_course1: Μάθημα 1
-  course_name_course2: Μάθημα 2
-  course_name_course3: Μάθημα 3
-  course_name_course4: Μάθημα 4
   congratulations_on_completing_course: 'Συγχαρητήρια για την ολοκλήρωση του %{course}'
   congrats_next_tutorials_title: Δοκιμάστε στη συνέχεια αυτά τα σεμινάρια
   congrats_next_tutorials_desc: 'Δοκιμάστε αυτά τα μικρότερα, σεμινάρια 1 ώρας ή δοκιμάστε ένα <a href="%{current_path}/next">σεμινάριο συνεργάτη</a>.'
@@ -113,9 +108,9 @@ el-GR:
   learn_next_level: Δοκιμάστε ένα άλλο μάθημα στο Code Studio
   learn_online: Δοκιμάστε τα άλλα μαθήματα online
   learn_classes: Βρείτε τάξεις κοντά σας
-  hoc_is_here: 'H Ώρα του Κώδικα (#HourOfCode) είναι εδώ - ελέγξτε το! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Μόλις ολοκλήρωσα την Ώρα του Κώδικα (#HourOfCode) - ελέγξτε το! @codeorg'
-  twitter_teach_cs: 'Γιατί δεν διδάσκουν περισσότερα σχολεία Επιστήμη των Υπολογιστών; Αυτό μπορούμε να το διορθώσουμε.  http://youtu.be/nKIu9yen5nc. Επισκεφτείτε την σελίδα http://code.org/ για να μάθετε περισσότερα.'
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Μάθε μία Ώρα του Κώδικα
   beyond_hoc: Πέρα από Μία Ώρα
   what_gender: Ποιο είναι το φύλο σου;
@@ -528,7 +523,7 @@ el-GR:
   dashboard_faq_k5: Συχνές ερωτήσεις για το επίπεδο πρωτοβάθμιας εκπαίδευσης (K-5)
   dashboard_announcements: Ανακοινώσεις
   dashboard_announce_view_all: Προβολή όλων
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Μάθετε περισσότερα
   dashboard_announce_hoc: "<b>15 Οκτωβρίου 2015</b> - Η Ώρα του Κώδικα πλησιάζει &mdash; κάθε συμμετέχον διοργανωτής θα λάβει μια κάρτα δώρου για το Amazon.com ή το Microsoft's Windows Store ως ευχαριστήριο δώρο. Εγγραφείτε σε τάξεις σε όλο τον κόσμο κατά την περίοδο 7-13 Δεκεμβρίου."
   dashboard_announce_playlab: '<b> 4 Δεκέμβρη, 2015 </b> - Η Ωρα του Κώδικα έφτασε! Δοκιμάστε τα 50 σεμινάρια για κάθε ηλικία και κάθε συσκευή. Νέα τελευταίας εβδομάδας: Προγραμμάτισε της δικές σου ιστορίες και παιχνίδια στο Play Lab! Δες πως μπορείς να προγραμματίσεις τα παιχίδια Ιce Age και Gumball.'

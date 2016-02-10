@@ -80,11 +80,6 @@
     "Бағдарламалау сағатын" қооданып көргенен кейін, үйренгісі келетін сыныптастарыңызды
     сайтта тіркеңіз </a> және де оқушыларға "Бағдарламалау сағатын" оқып үйренуге
     көмектесіңіз!
-  course_name_accelerated: "Жеделдетілген курс"
-  course_name_course1: "Курс 1"
-  course_name_course2: "Курс 2"
-  course_name_course3: "Курс 3"
-  course_name_course4: "Курс 4"
   congratulations_on_completing_course: "%{course} бітіруіңізбен құттықтаймыз"
   congrats_next_tutorials_title: "Келесі"
   congrats_next_tutorials_desc: 1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің

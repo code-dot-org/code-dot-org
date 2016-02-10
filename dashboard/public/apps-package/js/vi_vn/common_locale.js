@@ -202,6 +202,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Calls a named function that takes one or more parameters"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Call a function with parameters"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Gọi một hàm"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Xem Video"},
 "when":function(d){return "Khi nào"},
 "whenRun":function(d){return "Khi chạy"},
-"workspaceHeaderShort":function(d){return "Không gian làm việc:"},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Không gian làm việc:"}};

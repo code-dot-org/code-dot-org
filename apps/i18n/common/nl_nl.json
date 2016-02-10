@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "Roept een functie aan die een of meer parameters verwacht",
   "dropletBlock_callMyFunction_n_signatureOverride": "Een functie aanroepen met parameters",
   "dropletBlock_callMyFunction_signatureOverride": "Een functie aanroepen",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Maak een variabele en initialiseer hem als array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -203,7 +205,7 @@
   "print": "Afdrukken",
   "puzzleTitle": "Puzzel {puzzle_number} van {stage_total}",
   "readonlyWorkspaceHeader": "alleen bekijken: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "Probeer een blok zoals dit om de puzzel op te lossen.",
   "repeat": "herhaal",
   "resetProgram": "Herstellen",
   "rotateText": "Draai je apparaat.",
@@ -253,7 +255,5 @@
   "watchVideo": "Bekijk de video",
   "when": "wanneer",
   "whenRun": "als gestart",
-  "workspaceHeaderShort": "Werkplaats: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Werkplaats: "
 }

@@ -58,11 +58,6 @@ da-DK:
   congratulations: Tillykke!
   congratulations_on_completing_hoc: Tillykke med gennemførelsen af Hour of Code
   congratulations_volunteer: 'Tillykke, nu hvor du har prøvet Hour of Code <a href="https://code.org/volunteer"> kan du tilmelde dig som frivillig i et klasselokale</a> og hjælpe andre studerende med at lære Hour of Code!'
-  course_name_accelerated: Accelereret kursus
-  course_name_course1: Kursus 1
-  course_name_course2: Kursus 2
-  course_name_course3: Kursus 3
-  course_name_course4: Kursus 4
   congratulations_on_completing_course: 'Tillykke. Du har nu klaret %{course}'
   congrats_next_tutorials_title: Prøv dissse øvelser nu
   congrats_next_tutorials_desc: 'Prøv disse kortere, 1 times øvelser eller prøv en <a href="%{current_path}/next">partner-øvelse</a>.'
@@ -113,9 +108,9 @@ da-DK:
   learn_next_level: Fortsæt til det næste niveau
   learn_online: Prøv andre online kurser
   learn_classes: Find lokale klasser
-  hoc_is_here: '#HourOfCode er her - tjek det ud! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Jeg har lige taget en #HourOfCode - tjek det ud! @codeorg'
-  twitter_teach_cs: Hvorfor underviser så få skoler i programmering? Lad os hjælpe dem i gang. http://youtu.be/nKIu9yen5nc. Besøg http://code.org/ for at lære mere.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Lær Hour of Code
   beyond_hoc: Efter Hour of Code
   what_gender: Hvilket køn er du?
@@ -551,7 +546,7 @@ da-DK:
   dashboard_faq_k5: K-5 Ofte stillede spørgsmål
   dashboard_announcements: Meddelelser
   dashboard_announce_view_all: Vis alle
-  dashboard_announce_message: "<b>16. December 2015</b> - Tak for deltagelse i Hour of Code 2015! Følg og gem fremskridt er nu genoptaget i alle Kode-Studio tutorials og kurser. Bemærk: Code.org's kontorer vil være lukket 19. december - 3. januar. Forbehold for forsinkede svar på eventuelle spørgsmål, som du indsender i perioden indtil 4. januar."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Lær mere
   dashboard_announce_hoc: '<b>23 November 2015</b> - Ønsker du en frivillig, som er dedikeret i datalogi uddannelse, til at hjælpe dig under din Hour of Code? Over 7.000 frivillige ønsker at inspirere dine elever ved at besøge dit klasseværelse eller videochatte. Tjek kortet over frivillige for at kontakte frivillige i dit område.'
   dashboard_announce_playlab: '<b>4. December 2015</b> - The Hour of Code er her! Prøv 50 tutorials for alle aldre, og enhver enhed. Nyt i denne uge: Kod dine egne historier og spil i nye Spil-Labs, Ice Age og Gumball.'

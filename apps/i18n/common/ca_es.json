@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "Crida una funció nombrada que té un o més paràmetres",
   "dropletBlock_callMyFunction_n_signatureOverride": "Crida una funció amb paràmetres",
   "dropletBlock_callMyFunction_signatureOverride": "Crida una funció",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Crear una variable i inicialitza-la com una matriu",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +255,5 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Zona de treball: "
 }
