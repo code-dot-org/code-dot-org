@@ -81,48 +81,48 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
     throw new TypeError('Failed to sandbox event: Expected an event object, but got ' + event);
   }
 
-  var applabEvent = {};
+  var newEvent = {};
   // Pass these properties through to applabEvent:
   ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
     'keyLocation', 'location', 'metaKey', 'offsetX',
     'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
       function (prop) {
         if (typeof event[prop] !== 'undefined') {
-          applabEvent[prop] = event[prop];
+          newEvent[prop] = event[prop];
         }
       });
   // Convert x coordinates and then pass through to applabEvent:
   ['clientX', 'pageX', 'x'].forEach(
       function (prop) {
         if (typeof event[prop] !== 'undefined') {
-          applabEvent[prop] = (event[prop] - this.xOffset_) / this.xScale_;
+          newEvent[prop] = (event[prop] - this.xOffset_) / this.xScale_;
         }
       }, this);
   // Convert y coordinates and then pass through to applabEvent:
   ['clientY', 'pageY', 'y'].forEach(
       function (prop) {
         if (typeof event[prop] !== 'undefined') {
-          applabEvent[prop] = (event[prop] - this.yOffset_) / this.yScale_;
+          newEvent[prop] = (event[prop] - this.yOffset_) / this.yScale_;
         }
       }, this);
   // Set movementX and movementY, computing it from clientX and clientY if necessary.
   // The element must have an element id for this to work.
   if (typeof event.movementX !== 'undefined' && typeof event.movementY !== 'undefined') {
     // The browser supports movementX and movementY natively.
-    applabEvent.movementX = event.movementX;
-    applabEvent.movementY = event.movementY;
+    newEvent.movementX = event.movementX;
+    newEvent.movementY = event.movementY;
   } else if (event.type === 'mousemove') {
     var currentTargetId = event.currentTarget && event.currentTarget.id;
     var lastEvent = this.lastMouseMoveEventMap_[currentTargetId];
     if (currentTargetId && lastEvent) {
       // Compute movementX and movementY from clientX and clientY.
-      applabEvent.movementX = event.clientX - lastEvent.clientX;
-      applabEvent.movementY = event.clientY - lastEvent.clientY;
+      newEvent.movementX = event.clientX - lastEvent.clientX;
+      newEvent.movementY = event.clientY - lastEvent.clientY;
     } else {
       // There has been no mousemove event on this element since the most recent
       // mouseout event, or this element does not have an element id.
-      applabEvent.movementX = 0;
-      applabEvent.movementY = 0;
+      newEvent.movementX = 0;
+      newEvent.movementY = 0;
     }
     if (currentTargetId) {
       this.lastMouseMoveEventMap_[currentTargetId] = event;
@@ -133,7 +133,7 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
     'toElement'].forEach(
       function (prop) {
         if (event[prop]) {
-          applabEvent[prop + "Id"] = event[prop].id;
+          newEvent[prop + "Id"] = event[prop].id;
         }
       });
   // Attempt to populate key property (not yet supported in Chrome/Safari):
@@ -143,10 +143,10 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
   //
   var keyProp = event.charCode ? String.fromCharCode(event.charCode) : keyEvent[event.keyCode];
   if (typeof keyProp !== 'undefined') {
-    applabEvent.key = keyProp;
+    newEvent.key = keyProp;
   }
 
-  return applabEvent;
+  return newEvent;
 };
 
 /**
