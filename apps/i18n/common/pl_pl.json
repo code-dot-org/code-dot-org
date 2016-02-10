@@ -255,5 +255,6 @@
   "watchVideo": "Obejrzyj wideo",
   "when": "kiedy",
   "whenRun": "po uruchomieniu",
-  "workspaceHeaderShort": "Obszar roboczy: "
+  "workspaceHeaderShort": "Obszar roboczy: ",
+  "choosePrefix": "Choose..."
 }

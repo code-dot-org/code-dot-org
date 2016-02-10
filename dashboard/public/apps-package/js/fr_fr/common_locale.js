@@ -410,4 +410,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Voir la vidéo"},
 "when":function(d){return "quand"},
 "whenRun":function(d){return "quand l'exécution commence"},
-"workspaceHeaderShort":function(d){return "Espace de travail :"}};
+"workspaceHeaderShort":function(d){return "Espace de travail :"},
+"choosePrefix":function(d){return "Choose..."}};

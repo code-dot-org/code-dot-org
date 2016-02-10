@@ -255,5 +255,6 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: "
+  "workspaceHeaderShort": "مساحة العمل: ",
+  "choosePrefix": "Choose..."
 }
