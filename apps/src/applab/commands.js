@@ -1552,7 +1552,7 @@ applabCommands.handleGetKeyValueSyncError = function(opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
   Applab.log(message);
-}
+};
 
 applabCommands.setKeyValue = function(opts) {
   // PARAMNAME: setKeyValue: callback vs. callbackFunction
@@ -1588,7 +1588,7 @@ applabCommands.handleSetKeyValueSyncError = function(opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
   Applab.log(message);
-}
+};
 
 applabCommands.readRecords = function (opts) {
   // PARAMNAME: readRecords: table vs. tableName
