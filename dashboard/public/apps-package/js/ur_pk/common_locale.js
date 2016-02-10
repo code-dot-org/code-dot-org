@@ -410,4 +410,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویڈیو دیکھیں"},
 "when":function(d){return "کب"},
 "whenRun":function(d){return "رَن کب ہوگا"},
-"workspaceHeaderShort":function(d){return "ورک اسپیس "}};
+"workspaceHeaderShort":function(d){return "ورک اسپیس "},
+"choosePrefix":function(d){return "Choose..."}};
