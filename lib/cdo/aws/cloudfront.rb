@@ -75,6 +75,15 @@ module AWS
       config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
     end
 
+    # File path for caching mappings from CloudFront Distribution id to alias CNAMEs.
+    # Reduces number of required API calls to ListDistributions.
+    CLOUDFRONT_ALIAS_CACHE = pegasus_dir 'cache', 'cloudfront_aliases.json'
+
+    # Test-stubbable class method.
+    def self.alias_cache
+      CLOUDFRONT_ALIAS_CACHE
+    end
+
     # Creates or updates the CloudFront distribution based on the current configuration.
     # Calls to this method should be idempotent, however CloudFront distribution updates can take ~15 minutes to finish.
     #
@@ -88,12 +97,9 @@ module AWS
                                                log_level: :debug,
                                                http_wire_trace: true)
       ids = CONFIG.keys.map do |app|
-        distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
-          i.aliases.items.include?(CDO.method("#{app}_hostname").call)
-        end
-        if distribution
-          id = distribution.id
-          distribution_config = cloudfront.get_distribution_config(id: id)
+        hostname = CDO.method("#{app}_hostname").call
+        id, distribution_config = get_distribution_config(cloudfront, hostname)
+        if distribution_config
           old_config = distribution_config.distribution_config.to_hash
           new_config = config(app, distribution_config.distribution_config.caller_reference)
           sort_config! old_config
@@ -123,6 +129,45 @@ module AWS
           waiter.before_wait { |_| puts "Waiting for #{app} distribution to deploy.." }
         end
         puts "#{app} distribution deployed!"
+      end
+    end
+
+    # Returns the distribution ID and fetched DistributionConfig object for a given hostname.
+    # Tries the cached id-to-hostname mappings first if available.
+    # Forces reload if cached-id config is not found.
+    # Ignore cache if force=true.
+    def self.get_distribution_config(cloudfront, hostname, force=false)
+      begin
+        id = get_distribution_id(cloudfront, hostname, force)
+        [id, id && cloudfront.get_distribution_config(id: id)]
+      rescue Aws::CloudFront::Errors::NoSuchDistribution => e
+        # Force-update distribution list if cached id is not found
+        raise e if force
+        get_distribution_config(cloudfront, hostname, true)
+      end
+    end
+
+    # Returns the distribution ID for a given hostname.
+    # Uses the cached id-to-hostname mappings first if available.
+    # Forces reload if id is not found in cache.
+    # Ignore cache if force=true.
+    def self.get_distribution_id(cloudfront, hostname, force=false)
+      distributions = File.file?(alias_cache) && JSON.parse(IO.read(alias_cache)) rescue nil
+
+      if force || !distributions
+        distributions = cloudfront.list_distributions.distribution_list.items.map do |distribution|
+          [distribution.id, distribution.aliases.items]
+        end.to_h
+        IO.write(alias_cache, JSON.pretty_generate(distributions))
+      end
+
+      distribution = distributions && distributions.select { |_, v| v.include? hostname }.keys.first
+
+      if !force && !distribution
+        # Force-update distribution list if provided hostname not found
+        get_distribution_id(cloudfront, hostname, true)
+      else
+        distribution
       end
     end
 
