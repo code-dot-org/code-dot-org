@@ -34,6 +34,7 @@ module UsersHelper
   # Merge the user summary into the specified result hash.
   private def merge_user_summary(user_data, user)
     if user
+      user_data[:user_id] = user.id
       user_data[:disableSocialShare] = true if user.under_13?
       user_data[:isTeacher] = true if user.teacher?
       user_data[:linesOfCode] = user.total_lines
