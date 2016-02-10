@@ -13,6 +13,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
 1. Set up rbenv
+  1. Run `rbenv init`
   1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here]((https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
   1. Pick up those changes: `source ~/.bash_profile`
 1. Install Ruby 2.2.3
