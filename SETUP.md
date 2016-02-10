@@ -23,11 +23,9 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Set up nvm and install Node 0.12.4
   1. These steps are now necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
   1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
-  1. Add the following to `~/.bash_profile` or your desired shell configuration file:
-```
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
-```
+  1. Add the following to `~/.bash_profile` or your desired shell configuration file:  
+      `export NVM_DIR=~/.nvm`  
+      `. $(brew --prefix nvm)/nvm.sh`
   1. Pick up those changes: `source ~/.bash_profile`
   1. Install the right version of node: `nvm install v0.12.4`
   1. Make that your default version: `nvm alias default v0.12.4`
