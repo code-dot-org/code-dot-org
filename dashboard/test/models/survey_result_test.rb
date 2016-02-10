@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class SurveyResultTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "proper SurveyResult members" do
+    assert SurveyResult::ETHNICITIES["asian"] == "Asian"
+    assert SurveyResult::RESULT_ATTRS.include? "survey2016_ethnicity_asian"
+  end
+
 end

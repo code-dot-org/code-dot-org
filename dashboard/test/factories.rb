@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :survey_result do
-    user nil
-    properties "MyText"
+    user { create :teacher }
+    properties {{survey2016_ethnicity_asian: "1"}}
   end
 
   factory :professional_learning_course do
