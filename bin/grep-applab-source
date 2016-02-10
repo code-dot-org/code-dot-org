@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require_relative '../lib/cdo/aws/s3'
+require_relative '../shared/middleware/helpers/storage_id'
+
+regex = ARGV[0].to_s.strip
+raise "usage: #{$0} regex" unless regex.length > 0
+
+s3 = Aws::S3::Client.new
+marker = nil
+bucket = CDO.sources_s3_bucket
+base_dir = CDO.sources_s3_directory
+count = 0
+
+loop do
+  contents = s3.list_objects(bucket: bucket, prefix: base_dir, :max_keys=>1000, :marker=>marker).contents
+  break if contents.length == 0
+  marker = contents.last.key
+
+  contents.each do |fileinfo|
+    _, app_id, channel_id, filename = %r{#{base_dir}/([^/]+)/([^/]+)/([^/]+)$}.match(fileinfo.key).to_a
+    if filename == 'main.json'
+      count += 1
+      body = s3.get_object(bucket: bucket, key: fileinfo.key)[:body].read
+      if body.include? regex
+#      source = JSON.parse(body)['source']
+#      if source =~ /#{regex}/i
+        channel = storage_encrypt_channel_id(app_id, channel_id)
+        puts "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
+      end
+    end
+  end
+  puts "#{count} files scanned..."
+end
+puts "#{count} files scanned total"
