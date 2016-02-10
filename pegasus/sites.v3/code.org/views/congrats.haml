@@ -1,1 +1,102 @@
-%h1= I18n.t(:congratulations_on_completing_course, course: course_name)
+%link{:href=>"/css/thirdparty.css", :rel=>"stylesheet"}
+
+-cert_id = params[:i]
+-cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
+
+-if cert_id
+  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
+-else
+  -share_url = "http://#{request.host_with_port}/certificates/blank"
+
+-facebook = {:u=>share_url}
+-twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:"just_did_#{course}")}
+
+#congrats.mobile-pad{:style=>'margin: 0 auto;'}
+
+  %h1= I18n.t(:"congratulations_on_completing_#{course}")
+
+  #toprow
+    #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
+      %a{:href=>"/printcertificate?s=#{cert_script}", :target=>'_blank'}
+        %img{:src=>"/images/fit-540/#{certificate_template_for(cert_script)}", :width=>"100%"}
+
+    #certificate.col-50
+      = view :congrats_certificate
+      = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
+
+  %div{:style=>'clear: both; height:30px'}
+  %h1= I18n.t(:congrats_next_tutorials_title)
+  = view :course_block, id: "artist"
+  = view :course_block, id: "playlab"
+  - if course.eql? "course1"
+    = view :course_block, id: "course2"
+  - if course.eql? "course2"
+    = view :course_block, id: "course3"
+  - if course.eql? "course3"
+    = view :course_block, id: "course4"
+
+  %div{:style=>'clear: both; height:30px'}
+  %h1 Third party recommendations
+  = view :"#{course}_next"
+
+  %div{:style=>'clear: both; height:30px'}
+  %h1 Find a guest speaker for your classroom
+  Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+  %br
+  %br
+  %a{:href=>'/volunteer/local'}
+    %button Find a guest speaker
+
+= view 'popup_window.js'
+
+:javascript
+
+  var cookieValue;
+
+  function getURLParameter(name) {
+    return decodeURI(
+      (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+  }
+
+  function processResponse(data)
+  {
+    certificate_processResponse(data);
+  }
+
+  $(document).ready(function()
+  {
+    $('#share-fb a').bind('click', function() {
+      $("#share-fb").hide(); $("#like-fb").css('display', 'inline-block');
+    });
+    $('#share-twitter a').bind('click', function() {
+      $("#share-twitter").hide(); $("#follow-twitter").css('display', 'inline-block');
+    });
+
+    // placeholder text for non-HTML5 browsers
+    $('input[type=text], textarea').placeholder();
+    $('input[type=email], textarea').placeholder();
+
+    cookieValue = getURLParameter("i");
+    courseNameValue = getURLParameter("s");
+
+    if (cookieValue != "null")
+    {
+      $.ajax({
+        url: "/api/hour/status/" + cookieValue,
+        dataType: "json"
+      }).done(processResponse);
+    }
+    else if (courseNameValue != "null")
+    {
+      certificate_processAnonymous();
+    } else {
+      certificate_disable();
+    }
+  });
+
+  var petition;
+  $(document).ready(function()
+  {
+    petition = new Petition();
+  });

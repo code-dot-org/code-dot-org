@@ -1,0 +1,14 @@
+.thirdparty-box {
+  float: none;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  height: 360px;
+  padding: 15px;
+}
+
+.thirdparty-image {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	border-radius: 10px;
+}
