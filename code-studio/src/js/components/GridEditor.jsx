@@ -88,29 +88,41 @@ window.dashboard.GridEditor = (function (React) {
         height: '40px'
       };
 
-      var tdStyle = {
-        width: '40px',
-        border: '1px solid #CCC',
-        padding: '0 4px 0 4px',
-        verticalAlign: 'top',
-        overflow: 'hidden',
-        backgroundSize: '100% 100%',
-        backgroundRepeat: 'no-repeat',
-        textShadow: '-1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF',
-      };
 
       var rows = cells.map(function (row, x) {
         var cells = row.map(function (cell, y) {
           var classNames = [];
+          var tdStyle = {
+            width: '40px',
+            border: '1px solid #CCC',
+            padding: '0 4px 0 4px',
+            verticalAlign: 'top',
+            overflow: 'hidden',
+            backgroundSize: '100% 100%',
+            backgroundRepeat: 'no-repeat',
+            textShadow: '-1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF',
+          };
 
           var tiles = ['border', 'path', 'start', 'end', 'obstacle'];
           classNames.push(tiles[cell.tileType_]);
 
           if (mazeUtils.isBeeSkin(this.props.skin)) {
             var conditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
+            var features = ['hive', 'flower'];
             if (cell.isVariableCloud()) {
               classNames.push('conditional');
               classNames.push(conditions[cell.cloudType_]);
+            } else if (cell.featureType_ !== undefined) {
+              classNames.push(features[cell.featureType_]);
+            }
+          } else {
+            // farmer
+            if (cell.isDirt()) {
+              classNames.push('dirt');
+              var dirtValue = cell.getCurrentValue();
+              var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
+              tdStyle.backgroundPosition = -dirtIndex * 50;
+              tdStyle.backgroundSize = "1100px 100%";
             }
           }
 
@@ -137,8 +149,8 @@ window.dashboard.GridEditor = (function (React) {
       if (cells[row] && cells[row][col]) {
         var cell = cells[row][col];
         cellEditor = mazeUtils.isBeeSkin(this.props.skin) ?
-            <dashboard.BeeCellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} /> :
-            <dashboard.CellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} />;
+            <BeeCellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} /> :
+            <CellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} />;
       }
 
       return (<div className="row">
