@@ -28,10 +28,10 @@ exports.load = function (assetUrl, id) {
 
     artist: {
       lineStylePatternOptions: [
-        [skin.rainbowMenu, 'rainbowLine'],
-        [skin.ropeMenu, 'ropeLine'],
-        [skin.squigglyMenu, 'squigglyLine'],
-        [skin.swirlyMenu, 'swirlyLine']
+          [skin.rainbowMenu, 'rainbowLine'],
+          [skin.ropeMenu, 'ropeLine'],
+          [skin.squigglyMenu, 'squigglyLine'],
+          [skin.swirlyMenu, 'swirlyLine']
       ]
     }
   };
@@ -55,8 +55,16 @@ exports.load = function (assetUrl, id) {
 
   // Declare available line style patterns. This array of arrays is eventually used
   // to populate the image dropdown in the Set Pattern block.
-  var defaultLineStyleOption = [[skin.patternDefault, 'DEFAULT']];
-  skin.lineStylePatternOptions = defaultLineStyleOption.concat(config.lineStylePatternOptions);
+
+  // All skins have the default line style (solid coloured line)
+  var lineStylePatternOptions =  [[skin.patternDefault, 'DEFAULT']];
+
+  // If the skin provided line patterns, add them to the pattern set
+  if (config && config.lineStylePatternOptions) {
+    lineStylePatternOptions = lineStylePatternOptions.concat(config.lineStylePatternOptions);
+  }
+
+  skin.lineStylePatternOptions = lineStylePatternOptions;
 
   return skin;
 };
