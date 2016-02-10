@@ -473,9 +473,12 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     // switchValue has been set):
     return typeof state.switchValue !== 'undefined';
   }
+  if (type === "VariableDeclaration") {
+    return state.n > 0;
+  }
   switch (type) {
     // Declarations:
-    case "VariableDeclaration":
+    case "VariableDeclarator":
     // Statements:
     case "BlockStatement":
     case "BreakStatement":
