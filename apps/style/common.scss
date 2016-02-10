@@ -1565,6 +1565,10 @@ a.WireframeSendToPhone_send-to-phone-link {
   }
 }
 
+#visualizationColumn.wireframeShare {
+  background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+}
+
 .legacy-share-view {
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
@@ -1585,7 +1589,6 @@ a.WireframeSendToPhone_send-to-phone-link {
   }
 
   #visualizationColumn.wireframeShare {
-    background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
     width: 352px !important;
     height: 612px !important;
     margin: 0 auto;
