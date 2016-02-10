@@ -474,6 +474,9 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
     return typeof state.switchValue !== 'undefined';
   }
   if (type === "VariableDeclaration") {
+    // Only stop the first time this VariableDeclaration is processed (the
+    // interpreter will stop on this node multiple times, but with different
+    // `state.n` representing which VariableDeclarator is being executed).
     return state.n > 0;
   }
   switch (type) {
