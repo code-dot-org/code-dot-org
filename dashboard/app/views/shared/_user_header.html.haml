@@ -8,7 +8,9 @@
         - if current_user.teacher?
           = link_to t('nav.user.classroom'), teacher_dashboard_url
         - if current_user.can_pair?
-          = link_to t('nav.user.pair_programming'), pairing_url
+          = link_to pairing_url do
+            %i.fa.fa-users
+            = t('nav.user.pair_programming')
         = link_to t('nav.user.stats'), root_url
         - if current_user.can_edit_account?
           = link_to t('nav.user.settings'), edit_user_registration_url

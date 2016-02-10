@@ -68,8 +68,12 @@ var Pairing = function (React) {
       return (
           <div>
            {studentDivs}
-           <div className="clear"/>
-          <button onClick={this.handleSubmit} disabled={this.state.selectedStudentIds.length === 0}>Add Partners</button>
+          <div className="clear"/>
+          {
+            (this.state.selectedStudentIds.length === 0) ?
+              "" :
+              <button onClick={this.handleSubmit} disabled={this.state.selectedStudentIds.length === 0} className="addPartners" >Add Partners</button>
+          }
           </div>
       );
     },
@@ -84,27 +88,35 @@ var Pairing = function (React) {
 
   return React.createClass({
     propTypes: {
-      pairings: React.PropTypes.array,
-      sections: React.PropTypes.array,
-      style: React.PropTypes.object
+      source: React.PropTypes.string,
     },
 
     getInitialState: function() {
       return {
-        pairings: this.props.pairings,
+        pairings: [],
+        sections: [],
         selectedSectionId: '',
       };
     },
 
     componentDidMount: function() {
-//      $.get(this.props.source, function(result) {
-//        var x;
-//      }.bind(this));
+      $.get(this.props.source).
+        done(function(result) {
+          this.setState({
+            pairings: result.pairings,
+            sections: result.sections,
+            selectedSectionId: ''
+          });
+        }.bind(this)).
+        fail(function(result) {
+          console.log('fail :(');
+        }.bind(this));
     },
 
     handleSectionChange: function(event) {
       this.setState({
         pairings: [],
+        sections: this.state.sections,
         selectedSectionId: event.target.value,
       });
     },
@@ -132,8 +144,8 @@ var Pairing = function (React) {
     },
 
     selectedSectionId: function() {
-      if (this.props.sections.length === 1) {
-        return this.props.sections[0].id;
+      if (this.state.sections.length === 1) {
+        return this.state.sections[0].id;
       } else {
         return this.state.selectedSectionId;
       }
@@ -142,9 +154,9 @@ var Pairing = function (React) {
     selectedSection: function() {
       if (this.selectedSectionId()) {
         // todo use jquery find
-        for (var i = 0; i < this.props.sections.length; i++) {
-          if (this.props.sections[i].id == this.selectedSectionId()) {
-            return this.props.sections[i];
+        for (var i = 0; i < this.state.sections.length; i++) {
+          if (this.state.sections[i].id == this.selectedSectionId()) {
+            return this.state.sections[i];
           }
         }
       }
@@ -167,14 +179,13 @@ var Pairing = function (React) {
           <br/>
           <form>
           <input type="hidden" name="authenticity_token" value={this.props.csrfToken}/>
-          <SectionSelector sections={this.props.sections}
+          <SectionSelector sections={this.state.sections}
                            selectedSectionId={this.selectedSectionId()}
                            handleChange={this.handleSectionChange}
            />
           <div className="clear"/>
           <StudentSelector students={this.studentsInSection()} handleSubmit={this.handleAddPartners}/>
           </form>
-          <a href="/">Cancel</a>
         </div>
       );
     },
@@ -191,7 +202,7 @@ var Pairing = function (React) {
           }
           <div className="clear"/>
           <button className="stop" onClick={this.handleStop}>Stop Pair Programming</button>
-          <a href="/">Cancel</a>
+          <button className="ok" onClick={this.props.handleClose}>OK</button>
         </div>
       );
     },
