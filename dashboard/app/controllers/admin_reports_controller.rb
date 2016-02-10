@@ -16,28 +16,8 @@ class AdminReportsController < ApplicationController
   end
 
   def funometer
-    SeamlessDatabasePool.use_persistent_read_connection do
-      # Compute the global funometer percentage.
-      ratings = PuzzleRating.all
-      @overall_percentage = get_percentage_positive(ratings)
-
-      # Generate the funometer percentages, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
-
-      # Compute funometer percentages by script.
-      @script_headers = ['Script ID', 'Script Name', 'Percentage', 'Count']
-      @script_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").group(:script_id).order('SUM(100.0 * rating) / COUNT(rating)').select('script_id', 'name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-
-      # Compute funometer percentages by level, saving the most-favored and
-      # least-favored with over one hundred ratings.
-      @level_headers = ['Script ID', 'Level ID', 'Script Name', 'Level Name', 'Percentage', 'Count']
-      level_ratings = ratings.joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").group(:script_id, :level_id).select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', 'SUM(100.0 * rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').having('cnt > ?', 100)
-      @favorite_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) desc').limit(25)
-      @hated_level_ratings = level_ratings.order('SUM(100.0 * rating) / COUNT(rating) asc').limit(25)
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
-    end
+    require 'cdo/properties'
+    @stats = Properties.get(:funometer)
   end
 
   def funometer_by_script
@@ -130,60 +110,58 @@ class AdminReportsController < ApplicationController
 # noinspection RubyResolve
     require Rails.root.join('scripts/archive/ga_client/ga_client')
 
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
-      @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
+    @start_date = (params[:start_date] ? DateTime.parse(params[:start_date]) : (DateTime.now - 7)).strftime('%Y-%m-%d')
+    @end_date = (params[:end_date] ? DateTime.parse(params[:end_date]) : DateTime.now.prev_day).strftime('%Y-%m-%d')
 
-      @is_sampled = false
+    @is_sampled = false
 
-      output_data = {}
-      %w(Attempt Success).each do |key|
-        dimension = 'ga:eventLabel'
-        metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
-        filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-        if params[:filter]
-          filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
-        end
-        ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-
-        @is_sampled ||= ga_data.data.contains_sampled_data
-
-        ga_data.data.rows.each do |r|
-          label = r[0]
-          output_data[label] ||= {}
-          output_data[label]["Total#{key}"] = r[1].to_f
-          output_data[label]["Unique#{key}"] = r[2].to_f
-          output_data[label]["Avg#{key}"] = r[3].to_f
-        end
+    output_data = {}
+    %w(Attempt Success).each do |key|
+      dimension = 'ga:eventLabel'
+      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
+      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
+      if params[:filter]
+        filter += ";ga:eventLabel=@#{params[:filter].to_s.gsub('_','/')}"
       end
-      output_data.each_key do |key|
-        output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
-        output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
-        output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
-        output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
-      end
+      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
 
-      page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+      @is_sampled ||= ga_data.data.contains_sampled_data
 
-      data_array = output_data.map do |key, value|
-        {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+      ga_data.data.rows.each do |r|
+        label = r[0]
+        output_data[label] ||= {}
+        output_data[label]["Total#{key}"] = r[1].to_f
+        output_data[label]["Unique#{key}"] = r[2].to_f
+        output_data[label]["Avg#{key}"] = r[3].to_f
       end
-      require 'naturally'
-      data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
-      headers = [
-        "Puzzle",
-        "Total\nAttempts",
-        "Total Successful\nAttempts",
-        "Avg. Success\nRate",
-        "Avg. #attempts\nper Completion",
-        "Unique\nAttempts",
-        "Unique Successful\nAttempts",
-        "Perceived Dropout",
-        "Avg. Unique\nSuccess Rate",
-        "Avg. Time\non Page"
-      ]
-      render locals: {headers: headers, data: data_array}
     end
+    output_data.each_key do |key|
+      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
+      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
+      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt'].to_f
+      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
+    end
+
+    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').data.rows]
+
+    data_array = output_data.map do |key, value|
+      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key] && page_data[key].to_i)
+    end
+    require 'naturally'
+    data_array = data_array.select{|x| x['TotalAttempt'].to_i > 10}.sort_by{|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
+    headers = [
+      "Puzzle",
+      "Total\nAttempts",
+      "Total Successful\nAttempts",
+      "Avg. Success\nRate",
+      "Avg. #attempts\nper Completion",
+      "Unique\nAttempts",
+      "Unique Successful\nAttempts",
+      "Perceived Dropout",
+      "Avg. Unique\nSuccess Rate",
+      "Avg. Time\non Page"
+    ]
+    render locals: {headers: headers, data: data_array}
   end
 
   def pd_progress

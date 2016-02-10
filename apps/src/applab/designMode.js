@@ -4,7 +4,7 @@
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
-var showAssetManager = require('./assetManagement/show.js');
+var showAssetManager = require('../assetManagement/show.js');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
@@ -12,12 +12,13 @@ var KeyCodes = require('../constants').KeyCodes;
 var constants = require('./constants');
 var applabCommands = require('./commands');
 var designMode = module.exports;
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
+var gridUtils = require('./gridUtils');
+var logToCloud = require('../logToCloud');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
-
-var GRID_SIZE = 5;
 
 /**
  * If in design mode and program is not running, display Properties
@@ -106,6 +107,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
+  designMode.renderToggleRow();
 };
 
 /**
@@ -502,6 +504,18 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
+  function reportUnsafeHtml(removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+    console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe
+    });
+  }
+  sanitizeHtml(Applab.levelHtml, reportUnsafeHtml);
+
   var levelDom = $.parseHTML(Applab.levelHtml);
   var children = $(levelDom).children();
 
@@ -538,9 +552,6 @@ designMode.toggleDesignMode = function(enable) {
 
   var codeWorkspaceWrapper = document.getElementById('codeWorkspaceWrapper');
   codeWorkspaceWrapper.style.display = enable ? 'none' : 'block';
-
-  var debugArea = document.getElementById('debug-area');
-  debugArea.style.display = enable ? 'none' : 'block';
 
   Applab.toggleDivApplab(!enable);
 };
@@ -607,8 +618,8 @@ function makeDraggable (jqueryElements) {
         var newHeight = ui.originalSize.height + (deltaHeight / scale);
 
         // snap width/height to nearest grid increment
-        newWidth = snapToGridSize(newWidth, GRID_SIZE);
-        newHeight = snapToGridSize(newHeight, GRID_SIZE);
+        newWidth = gridUtils.snapToGridSize(newWidth);
+        newHeight = gridUtils.snapToGridSize(newHeight);
 
         // Bound at app edges
         var dimensions = boundedResize(ui.position.left, ui.position.top, newWidth, newHeight, false);
@@ -647,8 +658,8 @@ function makeDraggable (jqueryElements) {
         var newTop = ui.position.top / scale;
 
         // snap top-left corner to nearest location in the grid
-        newLeft = snapToGridSize(newLeft, GRID_SIZE);
-        newTop = snapToGridSize(newTop, GRID_SIZE);
+        newLeft = gridUtils.snapToGridSize(newLeft);
+        newTop = gridUtils.snapToGridSize(newTop);
 
         // containment
         var container = $('#designModeViz');
@@ -709,17 +720,6 @@ function getVisualizationScale() {
   return div.getBoundingClientRect().width / div.offsetWidth;
 }
 
-/**
- * Given a coordinate on either axis and a grid size, returns a coordinate
- * near the given coordinate that snaps to the given grid size.
- * @param {number} coordinate
- * @param {number} gridSize
- * @returns {number}
- */
-var snapToGridSize = function (coordinate, gridSize) {
-  var halfGrid = gridSize / 2;
-  return coordinate - ((coordinate + halfGrid) % gridSize - halfGrid);
-};
 
 /**
  * Inverse of `makeDraggable`.
@@ -781,18 +781,9 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var div = document.getElementById('designModeViz');
-      var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-      var yScale = div.getBoundingClientRect().height / div.offsetHeight;
+      var point = gridUtils.scaledDropPoint(ui.helper);
 
-      var left = (ui.helper.offset().left - $('#designModeViz').offset().left) / xScale;
-      var top = (ui.helper.offset().top - $('#designModeViz').offset().top) / yScale;
-
-      // snap top-left corner to nearest location in the grid
-      left -= (left + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-      top -= (top + GRID_SIZE / 2) % GRID_SIZE - GRID_SIZE / 2;
-
-      var element = designMode.createElement(elementType, left, top);
+      var element = designMode.createElement(elementType, point.left, point.top);
       if (elementType === elementLibrary.ElementType.SCREEN) {
         designMode.changeScreen(elementUtils.getId(element));
       }
@@ -849,6 +840,20 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
+  designMode.renderToggleRow(screenIds);
+
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+};
+
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
+};
+
+designMode.renderToggleRow = function (screenIds) {
+  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+    return elementUtils.getId(screen);
+  });
+
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
@@ -856,7 +861,7 @@ designMode.changeScreen = function (screenId) {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: screenId,
+        initialScreen: currentScreenId,
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
@@ -867,12 +872,6 @@ designMode.changeScreen = function (screenId) {
       designToggleRow
     );
   }
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
-
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
 };
 
 /**

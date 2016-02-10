@@ -32,6 +32,7 @@ var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 var Hammer = utils.getHammer();
 var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
 var annotationList = require('../acemode/annotationList');
 var spriteActions = require('./spriteActions');
 var ImageFilterFactory = require('./ImageFilterFactory');
@@ -178,6 +179,9 @@ var twitterOptions = {
   text: studioMsg.shareStudioTwitter(),
   hashtag: "StudioCode"
 };
+
+/** @type {JsInterpreterLogger} */
+var consoleLogger = null;
 
 function loadLevel() {
   // Load maps.
@@ -1763,6 +1767,8 @@ Studio.init = function(config) {
   skin = config.skin;
   level = config.level;
 
+  consoleLogger = new JsInterpreterLogger(window.console);
+
   // Allow any studioMsg string to be re-mapped on a per-level basis:
   for (var prop in level.msgStringOverrides) {
     studioMsg[prop] = studioMsg[level.msgStringOverrides[prop]];
@@ -2213,6 +2219,10 @@ Studio.reset = function(first) {
 
   // Reset the Globals object used to contain program variables:
   Studio.Globals = {};
+
+  if (consoleLogger) {
+    consoleLogger.detach();
+  }
 
   // Reset execution state:
   Studio.yieldExecutionTicks = 0;
@@ -2761,8 +2771,8 @@ function outputError(warning, level, lineNum) {
   }
   text += warning;
   // TODO: consider how to notify the user without a debug console output area
-  if (console.log) {
-    console.log(text);
+  if (consoleLogger) {
+    consoleLogger.log(text);
   }
   if (lineNum !== undefined) {
     annotationList.addRuntimeAnnotation(level, lineNum, warning);
@@ -2770,23 +2780,6 @@ function outputError(warning, level, lineNum) {
 }
 
 function handleExecutionError(err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
-    // syntax errors came before execution (during parsing), so we need
-    // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
-    // Now select this location in the editor, since we know we didn't hit
-    // this while executing (in which case, it would already have been selected)
-
-    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
-  }
-  if (Studio.JSInterpreter) {
-    // Select code that just executed:
-    Studio.JSInterpreter.selectCurrentCode("ace_error");
-    // Grab line number if we don't have one already:
-    if (!lineNumber) {
-      lineNumber = 1 + Studio.JSInterpreter.getNearestUserCodeLine();
-    }
-  }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
@@ -2886,12 +2879,17 @@ Studio.execute = function() {
       annotationList.clearRuntimeAnnotations();
     }
     Studio.JSInterpreter = new JSInterpreter({
+      studioApp: studioApp
+    });
+    Studio.JSInterpreter.onExecutionError.register(handleExecutionError);
+    if (consoleLogger) {
+      consoleLogger.attachTo(Studio.JSInterpreter);
+    }
+    Studio.JSInterpreter.parse({
       code: codeWhenRun,
       blocks: dropletConfig.blocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-      enableEvents: true,
-      studioApp: studioApp,
-      onExecutionError: handleExecutionError,
+      enableEvents: true
     });
     if (!Studio.JSInterpreter.initialized()) {
         return;

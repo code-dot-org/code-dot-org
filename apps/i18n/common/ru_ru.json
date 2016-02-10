@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "Вызывает указанную функцию, которая принимает один или несколько параметров",
   "dropletBlock_callMyFunction_n_signatureOverride": "Назвать функцию с параметрами",
   "dropletBlock_callMyFunction_signatureOverride": "Назвать функцию",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Задает переменную и присваивает ей множество значений с заданными изначальными параметрами",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "Имя которое вы будете использовать в программе для ссылки на переменную",
@@ -134,7 +136,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "Логический оператор ИЛИ",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "dropletBlock_randomNumber_description": "Возвращает случайное число от min до max.",
   "dropletBlock_randomNumber_param0": "мин",
   "dropletBlock_randomNumber_param0_description": "Было возвращено минимальное число",
   "dropletBlock_randomNumber_param1": "макс",
@@ -203,7 +205,7 @@
   "print": "Печать",
   "puzzleTitle": "Головоломка {puzzle_number} из {stage_total}",
   "readonlyWorkspaceHeader": "Только просмотр: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "Попробуй использовать похожий блок для решения задачи.",
   "repeat": "повторить",
   "resetProgram": "Сбросить",
   "rotateText": "Поверните ваше устройство.",
@@ -253,7 +255,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

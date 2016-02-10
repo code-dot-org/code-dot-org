@@ -60,11 +60,6 @@ ja-JP:
   congratulations: おめでとうございます ！
   congratulations_on_completing_hoc: おめでとうございます。Hour of Codeのセッションをひとつ修了しました。
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code, <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and help students learn an Hour of Code!'
-  course_name_accelerated: 上級コース
-  course_name_course1: コース1
-  course_name_course2: コース2
-  course_name_course3: コース3
-  course_name_course4: コース4
   congratulations_on_completing_course: 'Congratulations on completing %{course}'
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: 'Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner tutorial</a>.'
@@ -115,9 +110,9 @@ ja-JP:
   learn_next_level: 次のレベルへ進む
   learn_online: 他のオンラインのコースを試してください
   learn_classes: 近くのクラスを見つける
-  hoc_is_here: '#HourOfCode はここです - 見つける @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: '私は #HourOfCode に挑戦しました。あなたもやってみて！ @codeorg'
-  twitter_teach_cs: なぜもっと多くの学校がコンピューターサイエンスを教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については http://code.org/を参照してください。
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Hour of Codeを学ぶ
   beyond_hoc: 時間を超えて
   what_gender: 性別は？
@@ -541,7 +536,7 @@ ja-JP:
   dashboard_faq_k5: よくある質問（幼稚園/小学生対象コース）
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: もっと詳しく知る
   dashboard_announce_hoc: '<B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。'
   dashboard_announce_playlab: '<b>December 4, 2015</b> - The Hour of Code is here! Try 50 tutorials for every age and every device. New this week: Code your own stories and games in new Play Labs, Ice Age and Gumball.'

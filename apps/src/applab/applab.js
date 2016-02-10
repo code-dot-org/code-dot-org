@@ -34,12 +34,13 @@ var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
+var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var assetsApi = require('../clientApi').assets;
-var assetListStore = require('./assetManagement/assetListStore');
-var showAssetManager = require('./assetManagement/show.js');
+var assetListStore = require('../assetManagement/assetListStore');
+var showAssetManager = require('../assetManagement/show.js');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
@@ -55,9 +56,14 @@ var TestResults = studioApp.TestResults;
 var Applab = module.exports;
 
 /**
+ * @type {JsInterpreterLogger} observes the interpreter and logs to console
+ */
+var jsInterpreterLogger = null;
+
+/**
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
-var jsDebuggerUi = null;
+var debuggerUi = null;
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -67,8 +73,12 @@ var jsDebuggerUi = null;
  * @param {*} object
  */
 Applab.log = function (object) {
-  if (jsDebuggerUi) {
-    jsDebuggerUi.log(object);
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.log(object);
+  }
+
+  if (debuggerUi) {
+    debuggerUi.log(object);
   }
 };
 
@@ -406,13 +416,18 @@ Applab.hasDataStoreAPIs = function (code) {
  * @param {!number} speed - range 0..1
  */
 Applab.setStepSpeed = function (speed) {
-  jsDebuggerUi.setStepSpeed(speed);
+  if (debuggerUi) {
+    debuggerUi.setStepSpeed(speed);
+  }
   Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
-  // debugStepDelay will be undefined if no speed slider is present
-  var debugStepDelay = jsDebuggerUi.getStepDelay();
+  var debugStepDelay;
+  if (debuggerUi) {
+    // debugStepDelay will be undefined if no speed slider is present
+    debugStepDelay = debuggerUi.getStepDelay();
+  }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
@@ -421,22 +436,6 @@ function queueOnTick() {
 }
 
 function handleExecutionError(err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
-    // syntax errors came before execution (during parsing), so we need
-    // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
-    // Now select this location in the editor, since we know we didn't hit
-    // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
-  }
-  if (Applab.JSInterpreter) {
-    // Select code that just executed:
-    Applab.JSInterpreter.selectCurrentCode("ace_error");
-    // Grab line number if we don't have one already:
-    if (!lineNumber) {
-      lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-    }
-  }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
@@ -580,7 +579,8 @@ Applab.startSharedAppAfterWarnings = function () {
 Applab.init = function(config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
-  jsDebuggerUi = null;
+  jsInterpreterLogger = null;
+  debuggerUi = null;
 
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
@@ -642,14 +642,20 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
+  var extraControlRows = '';
 
-  // Create the debugger
-  // TODO (bbuchanan): Don't make one of these at all if !level.editCode?
-  jsDebuggerUi = new JsDebuggerUi(function () {
-    return Applab.JSInterpreter;
-  }, Applab.runButtonClick);
-  var extraControlsRow = jsDebuggerUi.getMarkup(studioApp.assetUrl,
-      showDebugButtons, showDebugConsole);
+  // Construct a logging observer for interpreter events
+  if (!config.hideSource) {
+    jsInterpreterLogger = new JsInterpreterLogger(window.console);
+  }
+
+  if (showDebugButtons || showDebugConsole) {
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    extraControlRows = debuggerUi.getMarkup(studioApp.assetUrl, {
+      showButtons: showDebugButtons,
+      showConsole: showDebugConsole
+    });
+  }
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -660,7 +666,7 @@ Applab.init = function(config) {
         appHeight: Applab.footerlessAppHeight
       }),
       controls: firstControlsRow,
-      extraControlRows: extraControlsRow,
+      extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -718,19 +724,8 @@ Applab.init = function(config) {
   };
 
   config.afterEditorReady = function() {
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var aceEditor = studioApp.editor.aceEditor;
-
     if (breakpointsEnabled) {
-      studioApp.editor.on('guttermousedown', function(e) {
-        var bps = studioApp.editor.getBreakpoints();
-        if (bps[e.line]) {
-          studioApp.editor.clearBreakpoint(e.line);
-        } else {
-          studioApp.editor.setBreakpoint(e.line);
-        }
-      });
+      studioApp.enableBreakpoints();
     }
   };
 
@@ -795,8 +790,8 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  if (level.editCode) {
-    jsDebuggerUi.initializeAfterDomCreated({
+  if (debuggerUi) {
+    debuggerUi.initializeAfterDomCreated({
       defaultStepSpeed: config.level.sliderSpeed
     });
   }
@@ -877,9 +872,6 @@ Applab.clearEventHandlersKillTickLoop = function() {
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
   Applab.tickCount = 0;
-  if (jsDebuggerUi) {
-    jsDebuggerUi.resetDebugControls();
-  }
 };
 
 /**
@@ -965,8 +957,12 @@ Applab.reset = function(first) {
     level.goal.successState = {};
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.resetDebugControls();
+  if (debuggerUi) {
+    debuggerUi.detach();
+  }
+
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.detach();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1125,8 +1121,6 @@ Applab.execute = function() {
 
   studioApp.reset(false);
   studioApp.attempts++;
-  jsDebuggerUi.clearDebugOutput();
-  jsDebuggerUi.clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
@@ -1156,19 +1150,28 @@ Applab.execute = function() {
   }
   if (codeWhenRun) {
     if (level.editCode) {
-      // Use JS interpreter on editCode levels
+      // Create a new interpreter for this run
       Applab.JSInterpreter = new JSInterpreter({
+        studioApp: studioApp,
+        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
+      });
+
+      // Register to handle interpreter events
+      Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
+      if (jsInterpreterLogger) {
+        jsInterpreterLogger.attachTo(Applab.JSInterpreter);
+      }
+      if (debuggerUi) {
+        debuggerUi.attachTo(Applab.JSInterpreter);
+      }
+
+      // Initialize the interpreter and parse the student code
+      Applab.JSInterpreter.parse({
         code: codeWhenRun,
         blocks: dropletConfig.blocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-        enableEvents: true,
-        studioApp: studioApp,
-        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-        onNextStepChanged: jsDebuggerUi.updatePauseUiState.bind(jsDebuggerUi),
-        onPause: jsDebuggerUi.onPauseContinueButton.bind(jsDebuggerUi),
-        onExecutionError: handleExecutionError,
-        onExecutionWarning: jsDebuggerUi.log.bind(jsDebuggerUi)
+        enableEvents: true
       });
       if (!Applab.JSInterpreter.initialized()) {
         return;
@@ -1180,10 +1183,6 @@ Applab.execute = function() {
         Globals: Applab.Globals
       });
     }
-  }
-
-  if (jsDebuggerUi) {
-    jsDebuggerUi.updatePauseUiState();
   }
 
   // Set focus on the default screen so key events can be handled
@@ -1406,10 +1405,11 @@ Applab.onPuzzleComplete = function(submit) {
     });
   };
 
-  if (typeof document.getElementById('divApplab').toDataURL === 'undefined') { // don't try it if function is not defined
+  var divApplab = document.getElementById('divApplab');
+  if (!divApplab || typeof divApplab.toDataURL === 'undefined') { // don't try it if function is not defined
     sendReport();
   } else {
-    document.getElementById('divApplab').toDataURL("image/png", {
+    divApplab.toDataURL("image/png", {
       callback: function(pngDataUrl) {
         Applab.feedbackImage = pngDataUrl;
         Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);

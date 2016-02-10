@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description":"تابعی را صدا میزند که یک یا چند پارامتر دریافت می کند",
   "dropletBlock_callMyFunction_n_signatureOverride":"تابعی را صدا بزن که پارامتر دریافت می کند",
   "dropletBlock_callMyFunction_signatureOverride":"صدا زدن یک تابع",
+  "dropletBlock_comment_description":"Write a description of some code",
+  "dropletBlock_comment_signatureOverride":"comment",
   "dropletBlock_declareAssign_x_array_1_4_description":"Declares a variable and assigns it to an array with the given initial values",
   "dropletBlock_declareAssign_x_array_1_4_param0":"طول (x)",
   "dropletBlock_declareAssign_x_array_1_4_param0_description":"The name you will use in the program to reference the variable",
