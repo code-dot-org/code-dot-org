@@ -411,3 +411,23 @@ describe('startSharedAppAfterWarnings', function () {
       JSON.stringify(['other_channel', 'current_channel']));
   });
 });
+
+describe('DOM Event cleaning', function () {
+  var onEventFired = applabCommands.onEventFired;
+  var cleanedEvent, allArguments;
+
+  beforeEach(function () {
+    cleanedEvent = undefined;
+    allArguments = undefined;
+  });
+
+  var handler = function (evt) {
+    cleanedEvent = evt;
+    allArguments = arguments;
+  };
+
+  it('does not generate an event when no original event is passed', function () {
+    onEventFired({ func: handler }, undefined);
+    assert.isUndefined(cleanedEvent);
+  });
+});
