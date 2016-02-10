@@ -7,10 +7,14 @@ var MEDIA_PROXY = '//' + location.host + '/media?u=';
 var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
 var assetPathPrefix = "/v3/assets/";
+var channelId;
 
 module.exports.init = function (config) {
   if (config.assetPathPrefix) {
     assetPathPrefix = config.assetPathPrefix;
+  }
+  if (config.channel) {
+    channelId = config.channel;
   }
 };
 
@@ -39,9 +43,9 @@ module.exports.fixPath = function (filename) {
     return '/blockly/media/1x1.gif';
   }
 
-  if (filename.indexOf('/') !== -1 || !dashboard) {
+  if (filename.indexOf('/') !== -1 || !dashboard || !channelId) {
     return filename;
   }
 
-  return assetPathPrefix + dashboard.project.getCurrentId() + '/' + filename;
+  return assetPathPrefix + channelId + '/' + filename;
 };
