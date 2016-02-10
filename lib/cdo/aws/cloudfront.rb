@@ -137,14 +137,12 @@ module AWS
     # Forces reload if cached-id config is not found.
     # Ignore cache if force=true.
     def self.get_distribution_config(cloudfront, hostname, force=false)
-      begin
-        id = get_distribution_id(cloudfront, hostname, force)
-        [id, id && cloudfront.get_distribution_config(id: id)]
-      rescue Aws::CloudFront::Errors::NoSuchDistribution => e
-        # Force-update distribution list if cached id is not found
-        raise e if force
-        get_distribution_config(cloudfront, hostname, true)
-      end
+      id = get_distribution_id(cloudfront, hostname, force)
+      [id, id && cloudfront.get_distribution_config(id: id)]
+    rescue Aws::CloudFront::Errors::NoSuchDistribution => e
+      # Force-update distribution list if cached id is not found
+      raise e if force
+      get_distribution_config(cloudfront, hostname, true)
     end
 
     # Returns the distribution ID for a given hostname.
