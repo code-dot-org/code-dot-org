@@ -1,5 +1,3 @@
-/* global dashboard */
-
 // For proxying non-https assets
 var MEDIA_PROXY = '//' + location.host + '/media?u=';
 
@@ -43,7 +41,7 @@ module.exports.fixPath = function (filename) {
     return '/blockly/media/1x1.gif';
   }
 
-  if (filename.indexOf('/') !== -1 || !dashboard || !channelId) {
+  if (filename.indexOf('/') !== -1 || !channelId) {
     return filename;
   }
 
