@@ -202,6 +202,7 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
 
 exports.customMarshalObjectList = [];
 exports.customMarshalModifiedObjectList = [];
+exports.asyncFunctionList = [];
 
 //
 // Droplet/JavaScript/Interpreter codegen functions:
@@ -246,12 +247,26 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
     }
     retVal.length = nativeVar.length;
   } else if (nativeVar instanceof Function) {
-    var wrapper = exports.makeNativeMemberFunction({
-        interpreter: interpreter,
-        nativeFunc: nativeVar,
-        nativeParentObj: nativeParentObj,
-    });
-    retVal = interpreter.createNativeFunction(wrapper);
+    var makeNativeOpts = {
+      interpreter: interpreter,
+      nativeFunc: nativeVar,
+      nativeParentObj: nativeParentObj,
+    };
+    for (i = 0; i < exports.asyncFunctionList.length; i++) {
+      // If this is on our list of "custom marshal" objects - or if it a property
+      // on one of those objects (other than a function), create a special
+      // "custom marshal" interpreter object to represent it
+      if (nativeVar === exports.asyncFunctionList[i]) {
+        makeNativeOpts.nativeIsAsync = true;
+        break;
+      }
+    }
+    var wrapper = exports.makeNativeMemberFunction(makeNativeOpts);
+    if (makeNativeOpts.nativeIsAsync) {
+      retVal = interpreter.createAsyncFunction(wrapper);
+    } else {
+      retVal = interpreter.createNativeFunction(wrapper);
+    }
     // Also marshal properties on the native function object:
     marshalNativeToInterpreterObject(interpreter, nativeVar, maxDepth - 1, retVal);
   } else if (nativeVar instanceof Object) {
@@ -325,7 +340,13 @@ exports.makeNativeMemberFunction = function (opts) {
       // Call the native function after marshalling parameters:
       var nativeArgs = [];
       for (var i = 0; i < arguments.length; i++) {
-        nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+        if (opts.nativeIsAsync && (i === arguments.length - 1)) {
+          // Async functions receive a native callback method as their last
+          // parameter, so we should never marshal that parameter:
+          nativeArgs[i] = arguments[i];
+        } else {
+          nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
+        }
       }
       var nativeRetVal = opts.nativeFunc.apply(opts.nativeParentObj, nativeArgs);
       return exports.marshalNativeToInterpreter(opts.interpreter, nativeRetVal,
@@ -377,11 +398,16 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
           interpreter: interpreter,
           nativeFunc: func,
           nativeParentObj: block.parent,
-          dontMarshal: block.dontMarshal
+          dontMarshal: block.dontMarshal,
+          nativeIsAsync: block.nativeIsAsync
       });
-      interpreter.setProperty(funcScope,
-                              funcName,
-                              interpreter.createNativeFunction(wrapper));
+      var intFunc;
+      if (block.nativeIsAsync) {
+        intFunc = interpreter.createAsyncFunction(wrapper);
+      } else {
+        intFunc = interpreter.createNativeFunction(wrapper);
+      }
+      interpreter.setProperty(funcScope, funcName, intFunc);
     }
   }
 }
