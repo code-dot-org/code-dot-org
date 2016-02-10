@@ -1,4 +1,4 @@
-var assetsApi = require('../clientApi').assets;
+var assetsApi = require('../../clientApi').assets;
 var AssetThumbnail = require('./AssetThumbnail.jsx');
 
 /**

@@ -34,9 +34,6 @@ var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
-var assetsApi = require('./clientApi').assets;
-var assetPrefix = require('./assetManagement/assetPrefix');
-var assetListStore = require('./assetManagement/assetListStore');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -267,17 +264,6 @@ StudioApp.prototype.init = function(config) {
   this.setConfigValues_(config);
 
   this.configureDom(config);
-
-  if (config.usesAssets) {
-    assetPrefix.init(config);
-
-    // Pre-populate asset list
-    assetsApi.ajax('GET', '', function (xhr) {
-      assetListStore.reset(JSON.parse(xhr.responseText));
-    }, function () {
-      // Unable to load asset list
-    });
-  }
 
   if (config.hideSource) {
     this.handleHideSource_({
