@@ -1,8 +1,14 @@
+/**
+ * @overview React component to allow for easy editing of Karel Grids.
+ * Used in LevelBuilder, and relies on some apps code for validation.
+ * Supports both Bee and Farmer skins.
+ */
 /* global React, dashboard */
 
-var BeeCell = require('blockly-mooc/src/maze/beeCell');
-var Cell = require('blockly-mooc/src/maze/cell');
-var mazeUtils = require('blockly-mooc/src/maze/mazeUtils');
+var BeeCell = require('@cdo/apps/src/maze/beeCell');
+var Cell = require('@cdo/apps/src/maze/cell');
+var mazeUtils = require('@cdo/apps/src/maze/mazeUtils');
+
 var BeeCellEditor = require('./BeeCellEditor.jsx');
 var CellEditor = require('./CellEditor.jsx');
 
@@ -23,12 +29,28 @@ window.dashboard.GridEditor = (function (React) {
     },
 
     clickCell: function (event) {
+      var selected = this.getDOMNode().querySelector('.selected');
+      if (selected) {
+        selected.classList.remove('selected');
+      }
+      event.target.classList.add('selected');
       var row = parseInt(event.target.dataset.row);
       var col = parseInt(event.target.dataset.col);
       this.setState({
         selectedRow: row,
         selectedCol: col,
       });
+    },
+
+    handleManualUpdate: function (event) {
+      var newCell = BeeCell.deserialize(JSON.parse(event.target.value));
+      this.onCellChange(newCell);
+    },
+
+    componentDidUpdate: function () {
+      var node = this.refs.serializedInput.getDOMNode();
+      node.focus();
+      node.select();
     },
 
     onCellChange: function (newCell) {
@@ -78,30 +100,10 @@ window.dashboard.GridEditor = (function (React) {
 
       var cells = this.getDeserializedCells();
 
-      var tableStyle = {
-        borderCollapse: 'separate',
-        tableLayout: 'fixed',
-        width: 0,
-      };
-
-      var rowStyle = {
-        height: '40px'
-      };
-
-
       var rows = cells.map(function (row, x) {
         var cells = row.map(function (cell, y) {
           var classNames = [];
-          var tdStyle = {
-            width: '40px',
-            border: '1px solid #CCC',
-            padding: '0 4px 0 4px',
-            verticalAlign: 'top',
-            overflow: 'hidden',
-            backgroundSize: '100% 100%',
-            backgroundRepeat: 'no-repeat',
-            textShadow: '-1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF',
-          };
+          var tdStyle = {};
 
           var tiles = ['border', 'path', 'start', 'end', 'obstacle'];
           classNames.push(tiles[cell.tileType_]);
@@ -122,7 +124,6 @@ window.dashboard.GridEditor = (function (React) {
               var dirtValue = cell.getCurrentValue();
               var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
               tdStyle.backgroundPosition = -dirtIndex * 50;
-              tdStyle.backgroundSize = "1100px 100%";
             }
           }
 
@@ -138,12 +139,13 @@ window.dashboard.GridEditor = (function (React) {
             {text}
           </td>);
         }, this);
-        return (<tr style={rowStyle}>
+        return (<tr>
           {cells}
         </tr>);
       }, this);
 
       var cellEditor;
+      var selectedCellJson;
       var row = this.state.selectedRow;
       var col = this.state.selectedCol;
       if (cells[row] && cells[row][col]) {
@@ -151,14 +153,22 @@ window.dashboard.GridEditor = (function (React) {
         cellEditor = mazeUtils.isBeeSkin(this.props.skin) ?
             <BeeCellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} /> :
             <CellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} />;
+
+        selectedCellJson = (<label>
+          Cell JSON (for copy/pasting):
+          <input type="text" value={JSON.stringify(cell.serialize())} ref="serializedInput" onChange={this.handleManualUpdate}/>
+        </label>);
       }
 
       return (<div className="row">
-        <table id="mazeTable" className="span5" style={tableStyle}>
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
+        <div className="span5">
+          <table>
+            <tbody>
+              {rows}
+            </tbody>
+          </table>
+          {selectedCellJson}
+        </div>
         {cellEditor}
       </div>);
     },

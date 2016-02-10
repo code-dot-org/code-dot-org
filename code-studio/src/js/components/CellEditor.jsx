@@ -1,6 +1,11 @@
+/**
+ * @overview React component to allow for easy editing and creation of
+ * Cells
+ * @see @cdo/apps/maze/cell
+ */
 /* global React */
 
-var Cell = require('blockly-mooc/src/maze/cell');
+var Cell = require('@cdo/apps/src/maze/cell');
 
 module.exports = React.createClass({
   propTypes: {
@@ -15,7 +20,6 @@ module.exports = React.createClass({
     values[event.target.name] = (event.target.value === 'undefined' || event.target.value === '') ? undefined : parseInt(event.target.value);
     var newCell = Cell.deserialize(values);
     this.props.onUpdate(newCell);
-    this.props.cell = newCell;
   },
 
   render: function () {
