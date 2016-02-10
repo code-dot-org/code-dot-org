@@ -5,10 +5,6 @@ var utils = require('../utils');
 var _ = utils.getLodash();
 var skin, level;
 
-function quote(str) {
-  return '"' + str + '"';
-}
-
 exports.initWithSkinAndLevel = function (skinData, levelData) {
   skin = skinData;
   level = levelData;
@@ -57,11 +53,11 @@ exports.playSoundDropdown = function () {
       }));
 
       studioApp.playAudio(lowercaseSound, playbackOptions);
-      callback(quote(sound));
+      callback(utils.quote(sound));
     };
     return {
-      text: quote(sound),
-      display: quote(sound),
+      text: utils.quote(sound),
+      display: utils.quote(sound),
       click: handleChooseClick
     };
   });
