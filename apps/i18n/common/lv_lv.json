@@ -255,6 +255,5 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Darba virsma: "
 }

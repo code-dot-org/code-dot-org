@@ -255,6 +255,5 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Zona de treball: "
 }

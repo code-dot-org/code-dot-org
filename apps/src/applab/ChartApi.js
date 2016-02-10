@@ -12,7 +12,6 @@
  */
 'use strict';
 
-var utils = require('../utils');
 var AppStorage = require('./appStorage');
 var GoogleChart = require('./GoogleChart');
 require("babelify/polyfill"); // required for Promises in IE / Phantom
@@ -94,8 +93,12 @@ ChartApi.supportsType = function (chartType) {
  *         Droplet parameter dropdown.
  */
 ChartApi.getChartTypeDropdown = function () {
-  return ChartApi.getChartTypeNames().map(utils.quote).sort();
+  return ChartApi.getChartTypeNames().map(quote).sort();
 };
+
+function quote(str) {
+  return '"' + str + '"';
+}
 
 /**
  * Render a chart into an Applab chart element.
@@ -164,8 +167,8 @@ ChartApi.prototype.warnIfColumnsNotFound = function (requestedColumns,
   // Check that specified columns exist in raw data
   requestedColumns.forEach(function (columnName) {
     if (columnsInTable.indexOf(columnName) === -1) {
-      this.warn('Column ' + utils.quote(columnName) + ' not found in table ' +
-          utils.quote(tableName) + '.');
+      this.warn('Column ' + quote(columnName) + ' not found in table ' +
+          quote(tableName) + '.');
     }
   }, this);
 };
@@ -187,21 +190,21 @@ ChartApi.prototype.guessColumnsIfNecessary = function (requestedColumns,
     this.warn('Not enough columns specified; expected at least 2.');
 
     if (columnsInTable.length === 0) {
-      throw new Error('No columns found in table ' + utils.quote(tableName) +
+      throw new Error('No columns found in table ' + quote(tableName) +
           '. Charts require at least 2 columns.');
 
     } else if (columnsInTable.length < 2) {
       throw new Error('Only found ' + columnsInTable.length +
-          ' columns in table ' + utils.quote(tableName) + ': ' +
-          columnsInTable.map(utils.quote).join(', ') +
+          ' columns in table ' + quote(tableName) + ': ' +
+          columnsInTable.map(quote).join(', ') +
           '. Charts require at least 2 columns.');
 
     } else {
       // Take our best guess and continue
       requestedColumns = columnsInTable.slice(0, 2);
-      this.warn('Using columns ' + requestedColumns.map(utils.quote).join(' and ') +
-          '.  Possible columns for table ' + utils.quote(tableName) +
-          ' are ' + columnsInTable.map(utils.quote).join(', ') + '.');
+      this.warn('Using columns ' + requestedColumns.map(quote).join(' and ') +
+          '.  Possible columns for table ' + quote(tableName) +
+          ' are ' + columnsInTable.map(quote).join(', ') + '.');
     }
   }
   return requestedColumns;

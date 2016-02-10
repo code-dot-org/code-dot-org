@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Horfa á videóið"},
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
-"workspaceHeaderShort":function(d){return "Vinnusvæði: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Vinnusvæði: "}};

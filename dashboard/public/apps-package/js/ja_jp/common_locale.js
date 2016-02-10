@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行した時"},
-"workspaceHeaderShort":function(d){return "ワークスペース："},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "ワークスペース："}};

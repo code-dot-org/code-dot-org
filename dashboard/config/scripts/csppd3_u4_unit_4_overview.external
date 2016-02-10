@@ -4,25 +4,20 @@ css 'unplugged'
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-### Unit 4 Overview > What’s Inside
+### Getting Started > Welcome
 
-<br/>
-#### What’s in the Unit 4 Overview? 
+#### Welcome to the Third Installment of your Ongoing Academic Year Support! 
 
-##### We are currently on stage 2 of this module. Here in stage 2 you will explore: 
+Congratulations on completing the Unit 3 online PD experience for Computer Science Principles! We hope the <a href="https://studio.code.org/s/CSPPD3-Unit2" target=_blank>online PD for Unit 3</a> helped you better understand the lessons in the unit, and that you're ready to go with Unit 4!
+<br><br>
+Throughout the 2015-16 school year you will have access to in-person and online PD, designed to work together and to help you get more comfortable with the CSP curriculum. This module will introduce Unit 4.
 
-- Visual breakdown of Unit 4 organized in logical chunks
-- Philosophy of Unit 4
+<br>
+> #### Blended PD model: 
+>- Four in-person sessions throughout the school year, which are designed to provide support with teaching practice, content, and community building. For details on when your in-person sessions are scheduled, check out the [PD website](www.code.org/pd).
+>- Four self-paced online PD modules, broken down by unit, which are designed to get you into the curriculum and help you plan. 
 
-##### Stages 3 - 5 explore the 2 chapters of this unit, along with the two Practice PTs that are in the unit. In those stages you will see:
-
-- Explanation of the CS concepts covered in each chunk
-- Links to resources to explore if you’re unfamiliar with the CS concepts 
-- Discussion of the role of Practice Performance Tasks in Unit 4
-- Opportunities to report on how you’re feeling about concepts, so we can understand how to better serve your needs
-
-Click “Continue” below to get started learning more about Unit 4! 
-
-<br/><br/>
+This is the third of the four online PD modules focused on each of the remaining units of the curriculum (continuing here with Unit 4). Click “Continue” below to get started! 
+<br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

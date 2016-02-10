@@ -2,7 +2,6 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
 
 @import 'font';
 @import 'color';
-@import 'mixins';
 @import "../JsDebuggerUi.scss";
 
 #divGameLab {
@@ -14,7 +13,12 @@ $root: '/blockly/media/gamelab/'; //TODO: Parameterize for asset pipeline
   z-index: 1;
   background-color: white;
 
-  @include user-selects(none);
+  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 /* Sprited icons. */

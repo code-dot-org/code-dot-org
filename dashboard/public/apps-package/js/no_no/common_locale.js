@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Se videoen"},
 "when":function(d){return "når"},
 "whenRun":function(d){return "når den kjører"},
-"workspaceHeaderShort":function(d){return "Arbeidsområde: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Arbeidsområde: "}};
