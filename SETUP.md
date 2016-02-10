@@ -14,20 +14,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
 1. Set up rbenv
   1. Run `rbenv init`
-  1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here]((https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
+  1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
   1. Pick up those changes: `source ~/.bash_profile`
 1. Install Ruby 2.2.3
   1. `rbenv install 2.2.3`
   1. Set the global version of Ruby: `rbenv global 2.2.3`
   1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
-1. Set up nvm and install Node 0.12.4
-  1. These steps are now necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
+1. Set up nvm
   1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
   1. Add the following to `~/.bash_profile` or your desired shell configuration file:  
       `export NVM_DIR=~/.nvm`  
       `. $(brew --prefix nvm)/nvm.sh`
   1. Pick up those changes: `source ~/.bash_profile`
-  1. Install the right version of node: `nvm install v0.12.4`
+1. Install Node 0.12.4
+  1. These steps are necessary because of problems with the newest versions of node. We want to be on node 0.12.4 and npm 2.10.1.
+  1. `nvm install v0.12.4`
   1. Make that your default version: `nvm alias default v0.12.4`
   1. (Can be skipped if your version of node did not just change) Reinstall node_modules `cd apps; rm -rf node_modules && npm install; cd ..` 
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
