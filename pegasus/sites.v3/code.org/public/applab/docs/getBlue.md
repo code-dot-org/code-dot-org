@@ -91,8 +91,12 @@ ____________________________________________________
 // Halve all blue values in the canvas.
 createCanvas('canvas1');
 drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
-var imageData = getImageData(0, 0, 320, 480);
-halveBlue(imageData);
+button("id", "Halve Blue");
+setPosition('id', 200, 0);
+onEvent("id", "click", function() {
+  var imageData = getImageData(0, 0, 320, 480);
+  halveBlue(imageData);
+});
 
 // Halves the blue in every pixel from 'thisImageData' argument. Updates the image row by row.
 function halveBlue(thisImageData){
