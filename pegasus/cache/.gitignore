@@ -9,3 +9,4 @@ milestone-cache.json
 milestone-cache_v2.json
 /css
 /.sass-cache
+/cloudfront_aliases*.json
