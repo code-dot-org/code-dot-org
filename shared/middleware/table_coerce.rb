@@ -1,8 +1,5 @@
 module TableCoerce
   def TableCoerce.coerce(records, columns)
-
-    # TODO - do columns, then records and use map?
-
     # first do a pass to determine types. we can't do coercion right away since
     # we dont want to change anything if we cant coerce the entire column
     # begin with no type definitions
@@ -26,31 +23,18 @@ module TableCoerce
   end
 
   def TableCoerce.column_types(records, columns)
-    column_types = columns.map{ |x| nil }
-
-    records.each do |row|
-      columns.each_index do |index|
-        type = column_types[index]
-        col = columns[index]
-        val = row[col.to_sym]
-
-        if type.nil?
-          if TableCoerce.is_boolean?(val)
-            column_types[index] = :boolean
-          elsif TableCoerce.is_number?(val)
-            column_types[index] = :number
-          else
-            column_types[index] = :string
-          end
-        elsif (type == :boolean && !TableCoerce.is_boolean?(val)) ||
-            (type == :number && !TableCoerce.is_number?(val))
-          # column wasn't consistently a single type, fall back to string
-          column_types[index] = :string
-        end
+    # do an initial pass to determine column types
+    return columns.map do |col|
+      if records.length == 0
+        :string
+      elsif !records.any? { |record| !TableCoerce.is_boolean?(record[col.to_sym]) }
+        :boolean
+      elsif !records.any? { |record| !TableCoerce.is_number?(record[col.to_sym]) }
+        :number
+      else
+        :string
       end
     end
-
-    column_types
   end
 
   # @param val [String|Boolean|Number]
