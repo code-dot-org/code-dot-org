@@ -121,6 +121,42 @@ describe('EventSandboxer', function () {
       assertPreservesPropertyValue('which', 65);
     });
 
+    it('preserves "clientX"', function () {
+      assertPreservesPropertyValue('clientX', 150);
+    });
+
+    it('preserves "pageX"', function () {
+      assertPreservesPropertyValue('pageX', 150);
+    });
+
+    it('preserves "x"', function () {
+      assertPreservesPropertyValue('x', 150);
+    });
+
+    it('preserves "clientY"', function () {
+      assertPreservesPropertyValue('clientY', 150);
+    });
+
+    it('preserves "pageY"', function () {
+      assertPreservesPropertyValue('pageY', 150);
+    });
+
+    it('preserves "y"', function () {
+      assertPreservesPropertyValue('y', 150);
+    });
+
+    it('preserves "movementX" and "movementY" if they are both provided', function () {
+      var originalEvent = {
+        movementX: 10,
+        movementY: 15
+      };
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(newEvent, 'movementX');
+      assert.property(newEvent, 'movementY');
+      assert.equal(newEvent.movementX, 10);
+      assert.equal(newEvent.movementY, 15);
+    });
+
     function assertDoesNotPreservePropertyValue(name, value) {
       var originalEvent = {};
       originalEvent[name] = value;
@@ -133,7 +169,15 @@ describe('EventSandboxer', function () {
       assertDoesNotPreservePropertyValue('keyCode', undefined);
     });
 
-    it('does not preserve "near"', function () {
+    it('does not preserve "movementX" if missing "movementY', function () {
+      assertDoesNotPreservePropertyValue('movementX', 10);
+    });
+
+    it('does not preserve "movementY" if missing "movementX"', function () {
+      assertDoesNotPreservePropertyValue('movementY', 15);
+    });
+
+    it('does not preserve unsupported properties like "near"', function () {
       // Who knows, we might support this in the future -
       // it's an experimental technology.  For now it's a good
       // example of a nonstandard property we don't support.
