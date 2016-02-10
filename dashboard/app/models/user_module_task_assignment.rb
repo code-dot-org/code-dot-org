@@ -25,10 +25,10 @@ class UserModuleTaskAssignment < ActiveRecord::Base
     self.save!
 
     #Upon saving an assignment, there's a possibility that a course has been completed
-    user_course_enrollment = self.user_enrollment_module_assignment.user_professional_learning_course_enrollment
+    enrollment = self.user_enrollment_module_assignment.user_professional_learning_course_enrollment
 
-    if (user_course_enrollment.user_module_task_assignment.where.not(status: :completed).count == 0)
-      user_course_enrollment.complete_course
+    if !enrollment.user_module_task_assignment.exists?(['status != ?', 'completed'])
+      enrollment.complete_course
     end
   end
 end
