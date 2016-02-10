@@ -10,11 +10,11 @@ module TableCoerce
       columns.each_index do |index|
         type = column_types[index]
         col = columns[index]
-        val = row[col.to_sym]
+        val = row[col]
         if type == :boolean
-          row[col.to_sym] = TableCoerce.to_boolean(val)
+          row[col] = TableCoerce.to_boolean(val)
         elsif type == :number
-          row[col.to_sym] = TableCoerce.to_number(val)
+          row[col] = TableCoerce.to_number(val)
         end
       end
     end
@@ -27,9 +27,9 @@ module TableCoerce
     return columns.map do |col|
       if records.length == 0
         :string
-      elsif !records.any? { |record| !TableCoerce.is_boolean?(record[col.to_sym]) }
+      elsif !records.any? { |record| !TableCoerce.is_boolean?(record[col]) }
         :boolean
-      elsif !records.any? { |record| !TableCoerce.is_number?(record[col.to_sym]) }
+      elsif !records.any? { |record| !TableCoerce.is_number?(record[col]) }
         :number
       else
         :string
