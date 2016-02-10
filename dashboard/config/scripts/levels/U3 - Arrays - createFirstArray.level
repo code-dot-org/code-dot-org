@@ -45,10 +45,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "encrypted_examples": "s8a6Lbmo539AsutaOsWJA/3cP+EuOFBiSnZq7gJs6N/5xfCHPIbAatWaRMWI\nEIdW\n",
-    "video_key": "csp_applab_lists_1"
-  },
-  "published": true
+    "encrypted_examples": "s8a6Lbmo539AsutaOsWJA/3cP+EuOFBiSnZq7gJs6N/5xfCHPIbAatWaRMWI\nEIdW\n"
+  }
 }]]></config>
   <blocks/>
 </Applab>
