@@ -252,12 +252,13 @@ describe("clientState#setCurrentUserKey", function() {
   });
 
   it("tracks state on a per-user basis", function () {
-    // Track some progress for the default user.
-    var user1_key = '';
-    var user2_key = 'user2';
+    // Track some progress for an anonymous user and make sure it is preserved.
+    var user1_key = 'user1';
     var user1_lines = 10;
     var user1_level = 1;
+    var user2_key = 'user2';
     var user2_level = 2;
+    state.setCurrentUserKey(user1_key);
     state.trackProgress(true, user1_lines, 100, 'sample', user1_level);
     state.recordVideoSeen('user1_video');
 
@@ -292,11 +293,22 @@ describe("clientState#setCurrentUserKey", function() {
     state.hasSeenVideo('user1_video').should.equal(true);
     state.hasSeenVideo('user2_video').should.equal(false);
 
+    // Switch to an anonymous user and verify that state is tracked.
+    state.setCurrentUserKey(null);
+    state.recordVideoSeen('anon_video');
+    state.hasSeenVideo('anon_video').should.equal(true);
+    state.hasSeenVideo('user1_video').should.equal(false);
+    state.hasSeenVideo('user2_video').should.equal(false);
+    state.setCurrentUserKey(null);
+    // Redundantly setting to an anonymous user should have no effect.
+    state.hasSeenVideo('anon_video').should.equal(true);
+
     // Switch back to user2 and verify that user2 state is still present.
     state.setCurrentUserKey(user2_key);
     state.levelProgress('sample', user1_level).should.equal(0);
     state.levelProgress('sample', user2_level).should.equal(100);
     state.lines().should.equal(user2_lines);
+    state.hasSeenVideo('anon_video').should.equal(false);
     state.hasSeenVideo('user1_video').should.equal(false);
     state.hasSeenVideo('user2_video').should.equal(true);
 
@@ -311,5 +323,11 @@ describe("clientState#setCurrentUserKey", function() {
     state.levelProgress('sample', user1_level).should.equal(100);
     state.lines().should.equal(user1_lines);
     state.hasSeenVideo('user1_video').should.equal(true);
+
+    // Switch to an anonymous user and verify that past anonymous or user state is not present.
+    state.setCurrentUserKey(null);
+    state.hasSeenVideo('anon_video').should.equal(false);
+    state.hasSeenVideo('user1_video').should.equal(false);
+    state.levelProgress('sample', user1_level).should.equal(0);
   });
 });
