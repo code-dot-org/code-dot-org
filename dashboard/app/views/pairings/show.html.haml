@@ -31,7 +31,7 @@
 
 :javascript
   $(document).ready(function () {
-    var props = #{@react_props.to_json};
+    var props = #{@props}
     window.props = props;
     props.i18n = window.dashboard.i18n;
     React.render(

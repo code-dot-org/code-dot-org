@@ -27,7 +27,7 @@ window.dashboard.PairingDialog = (function (React) {
       // TODO - Can we now make SendToPhone completely Reactified?
       return (
         <Dialog isOpen={this.state.isOpen} handleClose={this.close}>
-          <Pairing sections={this.props.sections} pairings={this.props.pairings}/>
+          <Pairing source={this.props.source} handleClose={this.close}/>
         </Dialog>
       );
     }

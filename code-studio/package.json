@@ -13,7 +13,9 @@
     "npm": "^2.9.1"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": {
     "jquery-shim": "global:$"
@@ -59,6 +61,7 @@
     "recursive-readdir-sync": "^1.0.6",
     "sass-lint": "^1.4.0",
     "semver": "^5.1.0",
+    "sinon": "^1.17.3",
     "uglify-js": "^2.6.1",
     "uglifyify": "^3.0.1",
     "watchify": "^3.7.0"
