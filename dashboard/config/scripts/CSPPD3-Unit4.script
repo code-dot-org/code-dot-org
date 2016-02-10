@@ -18,10 +18,16 @@ level 'CSPPD3-u4 unit overview checkin'
 
 stage ‘Chapter 1 Overview’
 level 'CSPPD3-u4 chapter 1 concepts'
+level 'CSPPD3-u4 chapter 1 resources'
+level 'CSPPD3-u4 chapter 1 resources pt2'
+level 'CSPPD3-u4 chapter 1 resources pt3'
+level 'CSPPD3-u4 chapter 1 resources pt4'
 level 'CSPPD3-u4 chapter 1 checkin'
 
 stage ‘Chapter 2 Overview’ 
 level 'CSPPD3-u4 chapter 2 concepts'
+level 'CSPPD3-u4 chapter 2 chunk 1'
+level 'CSPPD3-u4 chapter 2 chunk 2'
 level 'CSPPD3-u4 chapter 2 checkin'
 
 stage 'Practice Performance Tasks’

@@ -18,6 +18,7 @@ class AdminReportsController < ApplicationController
   def funometer
     require 'cdo/properties'
     @stats = Properties.get(:funometer)
+    @ratings_by_day = @stats['ratings_by_day'] if @stats.present?
   end
 
   def funometer_by_script
@@ -29,21 +30,24 @@ class AdminReportsController < ApplicationController
       ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id)
       @overall_percentage = get_percentage_positive(ratings)
 
-      # Generate the funometer percentages for the script, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
+      # Generate the funometer percentages for the script, by day.
+      @ratings_by_day = get_ratings_by_day(ratings)
 
       # Generate the funometer percentages for the script, by stage.
-      ratings_by_stage = ratings.joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").joins("INNER JOIN stages ON stages.id = script_levels.stage_id").group('script_levels.stage_id').order('script_levels.stage_id')
+      ratings_by_stage = ratings.
+                         joins("INNER JOIN script_levels ON puzzle_ratings.script_id = script_levels.script_id AND puzzle_ratings.level_id = script_levels.level_id").
+                         joins("INNER JOIN stages ON stages.id = script_levels.stage_id").
+                         group('script_levels.stage_id').
+                         order('script_levels.stage_id')
       @ratings_by_stage_headers = ['Stage ID', 'Stage Name', 'Percentage', 'Count']
-      @ratings_by_stage = ratings_by_stage.select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
+      @ratings_by_stage = ratings_by_stage.
+                          select('stage_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
 
       # Generate the funometer percentages for the script, by level.
       ratings_by_level = ratings.joins(:level).group(:level_id).order(:level_id)
       @ratings_by_level_headers = ['Level ID', 'Level Name', 'Percentage', 'Count']
-      @ratings_by_level = ratings_by_level.select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      @ratings_by_level = ratings_by_level.
+                          select('level_id', 'name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt')
     end
   end
 
@@ -54,14 +58,13 @@ class AdminReportsController < ApplicationController
       @level_id = params[:level_id]
       @level_name = Level.where('id = ?', @level_id).pluck(:name)[0]
 
-      ratings = PuzzleRating.where('puzzle_ratings.script_id = ?', @script_id).where('level_id = ?', @level_id)
+      ratings = PuzzleRating.
+                where('puzzle_ratings.script_id = ?', @script_id).
+                where('level_id = ?', @level_id)
       @overall_percentage = get_percentage_positive(ratings)
 
-      # Generate the funometer percentages for the level, by day, for the last month.
-      @ratings_by_day_headers = ['Date', 'Percentage', 'Count']
-      @ratings_by_day, percentages_by_day = get_ratings_by_day(ratings)
-
-      render locals: {percentages_by_day: percentages_by_day.to_a.map{|k,v|[k.to_s,v.to_f]}}
+      # Generate the funometer percentages for the level, by day.
+      @ratings_by_day = get_ratings_by_day(ratings)
     end
   end
 
@@ -81,11 +84,11 @@ class AdminReportsController < ApplicationController
 
         # Regardless of the level type, query the DB for level answers.
         @responses[level_id] = LevelSource.
-          where(level_id: level_id).
-          joins(:activities).
-          joins("INNER JOIN users ON activities.user_id = users.id").
-          limit(@response_limit).
-          pluck(:level_id, :email, :data)
+                               where(level_id: level_id).
+                               joins(:activities).
+                               joins("INNER JOIN users ON activities.user_id = users.id").
+                               limit(@response_limit).
+                               pluck(:level_id, :email, :data)
 
         # Determine whether the level is a multi question, replacing the
         # numerical answer with its corresponding text if so.
@@ -254,8 +257,10 @@ class AdminReportsController < ApplicationController
 
   private
   def get_ratings_by_day(ratings_to_process)
-    ratings_by_day = ratings_to_process.where('created_at > ?', Time.now.prev_month).group('DATE(created_at)').order('DATE(created_at)')
-    return ratings_by_day.select('DATE(created_at) AS day', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt'), ratings_by_day.pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)')
+    return ratings_to_process.
+           group('DATE(created_at)').
+           order('DATE(created_at)').
+           pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
   end
 
   def get_percentage_positive(ratings_to_process)
