@@ -396,8 +396,8 @@ class LevelsControllerTest < ActionController::TestCase
     my_level = Level.find_by(name: 'NewCustomLevel')
 
     patch :update, :level => {:maze_data => maze_array.to_json}, id: my_level, game_id: game.id
-    new_maze = JSON.parse(Level.find_by(name: 'NewCustomLevel').maze_data)
-    assert_equal maze_array, new_maze
+    new_maze = Level.find_by(name: 'NewCustomLevel').serialized_maze
+    assert_equal maze_array.to_json, new_maze
   end
 
   test 'should show match level' do
