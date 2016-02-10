@@ -1,30 +1,26 @@
-name 'CSPPD3-u4 completing the challenge'
+name 'ECSPD3-u5 challenge details'
 css 'unplugged'
-
 markdown <<MARKDOWN
 <link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
 
-### Challenge Overview > Understanding the Challenge 
-
-<br/>
+### Challenge Overview > Understanding the Challenge Details
 
 #### 1. Challenge Prep: 
 
 ##### Pick a Lesson 
 
 - First, you'll need to **select a lesson.** The challenge lessons are listed on the next level.
-- Next, you will head to the forum and **share which lesson you plan to complete** for your challenge. <a href="http://forum.code.org/t/unit-4-challenge-selection/3301" target=_blank>forums >> </a>
+- Next, you will head to the forum and **share which lesson you plan to complete** for your challenge. <a href="http://forum.code.org/c/ecs/ecs-unit5" target=_blank>forums >>  </a>
 
 ##### Get into the Lesson 
 
-- **Read through** the entire lesson plan.
-- **Do the levels in Code Studio for the lesson**. 
-
+- **Read through** the entire lesson plan, activities, and associated documents.
+ 
 <hr>
 #### 2. Create: 
 ##### While you're doing the lesson... 
 
-- **Save the lesson artifact** you create while doing the activities. For three of the challenges it will be a **spreadsheet** and for the fourth it will be a **document**
+- **Save any artifacts** you create while doing the lesson activities. These might be things like visualizations or notes and reflections.
 - **Jot down your thoughts** about: 
     - ahha! moments during the activities
     - what was difficult about these activities?
@@ -35,7 +31,7 @@ markdown <<MARKDOWN
 
 - **Create your own** Extension Activity or Assessment Question that could be used with this lesson.
  - Remember, an **Extension Activity** is an exercise or project that could be added to the lesson plan and completed by students to build on what they learned. An **Assessment Question** could be a formative or summative assessment item that is used to check student understanding of the concept(s) covered in the lesson. 
-- Develop a **write-up** explaining to another teacher how to use your Extension or Assessment item. 
+- Develop a brief **write-up** explaining to another teacher how to use your Extension or Assessment item. 
 
 <hr>
 #### 3. Share: 
@@ -43,10 +39,10 @@ markdown <<MARKDOWN
 
 **Head to the forum** and share: 
 
-- The **artifact** you created in doing the activity from the lesson. 
+- Any **artifacts** you created in doing the activity from the lesson. 
 - The **assessment question or extending learning activity** that you produce for this lesson.
-- Condense **your notes** from the activity into some pointers for others teaching the lesson, including: 
-    - Advice for someone who is going to teach this lesson (consider what was challenging about doing the activity, what you think students will struggle with, etc).
+- Condense d **notes** from the activity, including: 
+    - Advice for someone who is going to teach this lesson (consider what could be challenging about doing the activity, what you think students will struggle with, etc).
     - What ideas do you have about how to structure and teach this lesson? What modifications do you plan to make to the lesson?
     - What additional resources (if any) might be helpful in teaching this lesson?
  
@@ -59,4 +55,5 @@ markdown <<MARKDOWN
 
 <br/><br/>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
