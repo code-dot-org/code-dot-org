@@ -4,26 +4,27 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson XX - Title of lesson here
+## Unit 4: Lesson 13 - Privacy Abandoned
 
 # Background
+<div style="width: 200px; text-align: center; float: right; margin-left: 50px">
 
-Background goes here
-
-# Vocabulary
-* **Word 1:** Definition 1
-* **Word 2:** Definition 2 
+<a href="https://images.code.org/125edbb0a9dadff13afb4bb032c695ec-image-1454087982407.19.15 AM.png" target="_blank"><img src="https://images.code.org/125edbb0a9dadff13afb4bb032c695ec-image-1454087982407.19.15 AM.png" style="width: 250px; float: right"></a><br><em>Click to enlarge.</em></div>
+Our personal information can be stolen from the organizations we entrust it to, posing threats to our security and privacy. Even more frequently, however, we willingly give up our personal information in exchange for the conveniences that we receive in exchange. As increasingly complex systems to collect, analyze, and monetize our personal information are put into place, we must re-evaluate just what privacy means and how it can be protected in the 21st century.
 
 # Lesson
 
-* Activity description 1
-* Activity description 2
+* Examine a privacy policy of a sample app
+* Video - Hot on Your Trail
+* Research the privacy policy of a popular website or app
 
 # Resources
 
-* Worksheet: <a href="https://google.com” target="_blank">TBD</a>
-* Worksheet: <a href="https://google.com” target="_blank">TBD</a>
+* Activity Guide: <a href='https://docs.google.com/document/d/1K_v_0Qup_864h4c2p3WKwbhlvFCdobbekmff05caPI0/edit?usp=sharing' target="_blank">Privacy Policies</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
 
+teacher_markdown <<MARKDOWN
+Activity Guide EXEMPLAR: <a href="https://docs.google.com/document/d/11O1IjxLs2uPBhozsPwf05g0sQLa8Ss5C2luyw56U4CE/edit?usp=sharing" target="_blank">Privacy Policies</a>
 MARKDOWN

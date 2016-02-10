@@ -301,7 +301,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         return 0
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-        max_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
+                      1].max # rerun at least once even if not flaky
+
         confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
         flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
 
@@ -336,7 +338,7 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     reruns += 1
     HipChat.log "<pre>#{output_synopsis(output_stdout)}</pre>"
     # Since output_stderr is empty, we do not log it to HipChat.
-    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying..."
+    HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{format_duration(test_duration)}), retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || "?"})..."
 
     rerun_arguments = File.exist?(rerun_filename) ? " @#{rerun_filename}" : ''
 

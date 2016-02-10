@@ -15,7 +15,7 @@ it:
       2-3 Artist 4_instruction: Aiutami a completare la casa per questo gatto.
       2-3 Artist 5_instruction: 'Sostituisci questo codice con un blocco "ripeti ... volte" per disegnare la stessa casa utilizzando solo 3 blocchi.'
       2-3 Artist 6_instruction: 'Questa casa ha bisogno di un tetto! Disegna un triangolo. Suggerimento: tutti e tre i lati hanno la stessa lunghezza.'
-      2-3 Artist 7_instruction: "Finisci di disegnare la metà destra dell'ultima finestra. Ciascun riquadro della finestra è un quadrato largo 25 pixel. "
+      2-3 Artist 7_instruction: "Finisci di disegnare la metà a destra dell'ultima finestra. Ciascun riquadro della finestra è grande 25 pixel. "
       2-3 Artist 8_instruction: Completa le camere per ciascun animale suddividendo il rettangolo in 2 quadrati di uguale dimensione. Il rettangolo è largo 200 pixel e alto 100 pixel.
       2-3 Artist 9_instruction: Finisci di disegnare questo aquilone
       2-3 Artist Assessment 1_instruction: "Questo è un esercizio di riepilogo -- Finisci di disegnare l'ultimo dente, è largo 25 pixel e alto 25 pixel."
@@ -25,7 +25,7 @@ it:
         Aiutami a completare il mio bellissimo fiocco di neve.
         Quante volte devo eseguire il blocco "ripeti" per completarlo?
       2-3 Artist Debugging 12_instruction: "Dovrei aggiungere un'onda dell'oceano a questa scena.  Puoi aiutarmi?"
-      2-3 Artist Debugging 2_instruction: 'Il codice che disegna i tre baffi a destra è sbagliato, correggilo. Suggerimento: tutti i baffi hanno la stessa lunghezza.'
+      2-3 Artist Debugging 2_instruction: 'Il codice per i tre baffi che vedi è sbagliato. Suggerimento: ciascun baffo è lungo 75 pixel. Correggi il codice per disegnare i baffi.'
       2-3 Artist Debugging 3_instruction: "La mia barca ha un buco! Riesci a ripararla modificando l'angolazione di una linea? Suggerimento: nell'ultimo angolo c'è un errore di 15 gradi."
       2-3 Artist Debugging 4_instruction: "Qual è l'immagine che stiamo cercando di disegnare? Finisci di unire i punti utilizzando le giuste linee ed angoli."
       2-3 Artist Debugging 5_instruction: 'Il codice che disegna la gamba e il piede è sbagliato. Suggerimento: Il piede è troppo lungo, potrebbe essere necessario eliminare un blocco'
@@ -2675,9 +2675,9 @@ it:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

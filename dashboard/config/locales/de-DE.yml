@@ -312,7 +312,7 @@
       answer_viewer: Antwortenansicht
       student: Schüler
       viewing_solution: Lösung anzeigen
-      try_it_yourself: Versuche es selbst
+      try_it_yourself: Probieren Sie es selbst
       section: Abschnitt
       example: Lösungsbeispiel
       example_with_number: Lösungsbeispiel %{solution_number}
@@ -328,9 +328,9 @@
       zu bestätigen)"
     delete: Lösche deinen Account
     delete_text: Klicke auf den unteren Button um deinen Account zu löschen.
-    delete_text_teacher_note: 'Bitte bemerke: Das Löschen deines Accounts wird nicht
-      die Accounts deiner Schüler löschen.'
-    delete_confirm: Bist du dir sicher, dass du deinen Account löschen möchtest?
+    delete_text_teacher_note: 'Bitte beachten Sie: Das Löschen Ihres Accounts löscht
+      nicht automatisch auch die Accounts Ihrer Schüler.'
+    delete_confirm: Sind Sie sicher, dass Sie Ihren Account löschen möchten?
   user_level:
     completed: Abgeschlossen
     tried: Versucht

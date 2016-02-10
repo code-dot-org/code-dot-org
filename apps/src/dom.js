@@ -124,3 +124,8 @@ exports.isIOS = function() {
   var reg = /iP(hone|od|ad)/;
   return reg.test(window.navigator.userAgent);
 };
+
+exports.isIPad = function() {
+  var reg = /iPad/i;
+  return reg.test(window.navigator.userAgent);
+};

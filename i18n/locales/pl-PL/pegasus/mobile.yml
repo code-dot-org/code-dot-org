@@ -61,11 +61,6 @@ pl-PL:
   congratulations_volunteer: |
     Gratulacje: Spróbowałeś Godzinę Kodowania,
     <a href="https://code.org/volunteer">zarejestruj się jako wolontariusz w klasie</a> i pomóż uczniom nauczyć się Godziny Kodowania!
-  course_name_accelerated: Przyspieszony Kurs
-  course_name_course1: Kurs 1
-  course_name_course2: Kurs 2
-  course_name_course3: Kurs 3
-  course_name_course4: Kurs 4
   congratulations_on_completing_course: 'Gratulacje na zakończenie %{course}'
   congrats_next_tutorials_title: Następnie wykorzystaj te samouczki
   congrats_next_tutorials_desc: 'Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj <a href="%{current_path}/next">samouczki partnerów</a>.'
@@ -116,9 +111,9 @@ pl-PL:
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
-  hoc_is_here: '#HourOfCode jest tutaj - Sprawdź to! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
-  twitter_teach_cs: Dlaczego tak niewiele szkół uczy informatyki? Możemy to zmienić. http://youtu.be/nKIu9yen5nc. Odwiedź http://code.org/, aby dowiedzieć się więcej.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?
@@ -553,7 +548,7 @@ pl-PL:
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
   dashboard_announce_view_all: Zobacz wszystko
-  dashboard_announce_message: '<b>16 grudnia 2015</b> - Dziękuję za udział w Godzinie Kodowania 2015! Wznowiliśmy śledzenie i zapisywanie postępów we wszystkich samouczkach i kursach Code Studio. Uwaga: Biura Code.org będą zamknięte w dniach od 19 grudnia do 3 stycznia. Proszę spodziewać się opóźnienia odpowiedzi na wszelkie pytania wysłane przed 4 stycznia.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Ucz się więcej
   dashboard_announce_hoc: '<b>23 listopada 2015</b> - Czy chcesz ochotnika-pasjonata edukacji informatycznej do pomocy podczas Twojej Godziny kodowania? Ponad 7000 wolontariusze wypatruje, by zainspirować Twoich uczniów odwiedzając Twoją klasę lub prowadząc zdalny czat. Sprawdź mapę wolontariuszy, by skontaktować się z wolontariuszami w Twojej okolicy.'
   dashboard_announce_playlab: '<b>4 grudnia 2015 r.</b> - Godzina Kodowania jest tutaj! Wypróbuj 50 samouczków dla każdego wieku i każdego urządzenia. Nowości w tym tygodniu: Zaprogramuj własną historyjkę i grę w nowej Play Labs, Ice Age i Gumball.'

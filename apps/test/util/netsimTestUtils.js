@@ -1,3 +1,11 @@
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
+'use strict';
+
 var testUtils = require('../util/testUtils');
 var assert = testUtils.assert;
 

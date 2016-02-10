@@ -186,7 +186,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "ifTooltip":function(d){return "Jei kelias yra nurodytoje kryptyje, atlik kokius nors veiksmus."},
 "ifelseTooltip":function(d){return "Jei kelias yra nurodytoje kryptyje, atlik pirmą veiksmų bloką. Priešingu atveju, atlik antrą veiksmų bloką."},
 "ifFlowerTooltip":function(d){return "Jei nurodytoje krypty yra gėlė/korys, atliekami veiksmai."},
-"ifOnlyFlowerTooltip":function(d){return "Jei nurodyta kryptimi yra gėlė, tada vykdyti kokius nors veiksmus."},
+"ifOnlyFlowerTooltip":function(d){return "Jei nurodyta kryptimi yra gėlė, tada vykdyk kokius nors veiksmus."},
 "ifelseFlowerTooltip":function(d){return "Jei nurodytoje krypty yra gėlė/korys, atliekami pirmesni veiksmai, kitu atveju - kiti."},
 "insufficientHoney":function(d){return "Tau reikia pagaminti teisingą medaus kiekį."},
 "insufficientNectar":function(d){return "Tau reikia surinkti teisingą nektaro kiekį."},

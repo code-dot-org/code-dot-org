@@ -184,7 +184,10 @@ theme: pdf
               offering professional development for elementary teachers in
               = succeed ',' do
                 = state_info[:state_name_s]
-              have already trained
+              - if state_info[:num_affiliates_i] == 1
+                has already trained
+              - else
+                have already trained
               %b
                 = format_integer_with_commas(state_info[:num_elementary_trained_i])
                 elementary
@@ -339,7 +342,7 @@ theme: pdf
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            allows computer science to count for a core graduation requirement. Find out how 
+            allows computer science to count for a core graduation requirement. Find out how
             = state_info[:state_name_s]
             allows computer science to count towards graduation at
             = succeed "." do

@@ -7,6 +7,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     # turn on the cache (off by default in test env so tests don't confuse each other)
     Dashboard::Application.config.action_controller.perform_caching = true
     Dashboard::Application.config.cache_store = :memory_store, { size: 64.megabytes }
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
 
     Rails.cache.clear
   end

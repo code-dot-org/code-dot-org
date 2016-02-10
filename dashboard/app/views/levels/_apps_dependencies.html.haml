@@ -4,6 +4,7 @@
 - use_droplet ||= false
 - use_netsim ||= false
 - use_applab ||= false
+- use_gamelab ||= false
 - hide_source ||= false
 - use_phaser ||= false
 
@@ -21,6 +22,11 @@
   -# Might be possible to not load this on share pages, but right now we get some
   -# weird display issues when we do that. Good news is this is < 10kb
   %link{href: asset_path('css/colpick.css'), rel: 'stylesheet', type: 'text/css'}
+
+-# Gamelab script dependencies
+- if use_gamelab
+  %script{src: asset_path('js/p5play/p5.js')}
+  %script{src: asset_path('js/p5play/p5.play.js')}
 
 -# Droplet script dependencies (all editCode - regardless of editor)
 - if use_droplet

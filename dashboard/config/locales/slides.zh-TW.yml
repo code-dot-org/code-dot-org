@@ -443,113 +443,70 @@
         text: "堅持也就是即使你很想要放棄，你都還是繼續留在那裏。如果你想要創造出與眾不同的新東西，沿途一定會有很多的失敗。"
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: The trick to persistence is choosing to keep on going and learn from
-          your failures instead of quitting because you're frustrated. Frustration
-          actually just means there's something wonderful around the corner. So don't
-          quit before you get to it. Wooo!
+        text: "堅持的技巧就在於與其因為挫折而放棄，要選擇繼續的努力下去。挫折其實代表著精彩的東西就在轉角了。所以在得到之前絕對不要放棄。wooo!"
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: "嗨，我叫做Miral Kotb，我是Iluminate的創造人。在我的工作中，有些東西是我會用在舞蹈和程式燈光中的。那就是迴圈！迴圈就是不停重複的動作。"
       2:
         image: notes/C1_getting_loopy_2.png
         text: "當你重複某件事情很多次時，比方說我保持呼啦圈搖動這個動作，我就是在做一個動作的迴圈。這是個迴圈。這是個迴圈。然後這是個迴圈。"
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Today we're going to have a dance party. We'll act out loops with a
-          new dance. The Iteration. We're going to learn about loops using a dance.
-          You will learn a couple of easy steps and repeat them over and over to complete
-          the dance.
+        text: "今天我們要開一場舞蹈派對。我們會用一個新的舞蹈來展示迴圈，也就是遞迴。我們要用舞蹈來學習迴圈。你將會學到一些簡單的步驟，然後不停地重複他們以完成舞蹈。"
       4:
         image: notes/C1_getting_loopy_4.png
-        text: Here are the steps you need to learn. Clap your hands. Put your hands
-          behind your head. Put your hands on your waist. Lift your left hand up.
-          Lift your right hand up. Pretty simple, right? You will discover that you
-          can shorten the directions by putting some dance steps in loops.
+        text: "這些是你需要學習的步驟。拍手。把你的手放到頭後面。把你的手放到腰上。舉起你的左手。舉起你的右手。很簡單，對吧？你將會發現你能能夠藉由把舞步放到迴圈中來減少指令。"
       5:
         image: notes/C1_getting_loopy_5.png
-        text: We actually do use loops in our dancing. The dancers are wearing computers,
-          all in the same network. I might loop the lights through to the same dancers
-          over and over again. In the loop I might have an iteration where I'll say
-          you want to go loop through these six dancers over and over again and then
-          within the loop you want to increase the speed of the light. And that's
-          all created through loops. Loops are important in computer science because
-          they make our work shorter and easier.
+        text: "我們在跳舞時真的會用到迴圈。舞者都是穿戴式的電腦，全部都在相同的網域中。我可以用迴圈把燈光打到舞者身上。在一個迴圈中，我可能會有一個遞迴告訴你我想要不停地在這六個舞者身上輪流打光，而在迴圈中，我要讓光的速度變快。而這些全部都是透過迴圈創造的。在電腦科學中，迴圈是很重要的，因為他可以讓我們的工作很簡潔容易。"
     C1_happy_maps_unplugged:
       1:
         image: notes/C1_happy_maps_unplugged_1.png
-        text: This lesson is called Happy Maps. Today we're gonna help our furry little
-          friend Flurb get to her fruit.
+        text: "這個課程叫做快樂的地圖。今天我們要幫助我們的毛朋友Flurb找到她的水果。"
       2:
         image: notes/C1_happy_maps_unplugged_2.png
-        text: Make your Flurb go to your fruit. To do this you'll need to figure out
-          which way the Flurb needs to go and direct her with arrows. In order for
-          the Flurb to get to the apple, what direction does the Flurb have to go?
-          Line to make it go up.
+        text: "讓Flurb走到你的水果。為了做到這個，你要找出Flurb需要往哪邊走，並以箭頭引導她。為了讓Flurb拿到蘋果，她須要往哪裡走呢？讓她往上走。"
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: "為了要到那裏，圈出她需要走的方向。"
       4:
         image: notes/C1_happy_maps_unplugged_4.png
-        text: Create your algorithm by gluing arrows next to the map that you're trying
-          to solve. The second one it's the same but it's going down.
+        text: "把箭頭黏在你要解開的地圖旁邊來創造你的演算法。第二個是一樣的，只是她是往下。"
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: "這就像是用紙寫程式。就這樣！"
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
-        text: Debugging is finding and fixing problems. There are lots of ways to
-          debug problems. One of the easiest is to move step by step until where you
-          find where something goes wrong. Here I'm trying to do a back handspring
-          on the beam but I keep falling off.
+        text: "除錯就是找到並且處理問題。有很多種方法可以除錯。其中最簡單的一種方法就是一步步的往下找，直到你找到錯誤為止。我現在要在平衡木上做一個後手翻，但我不停的掉下來。"
       2:
         image: notes/C1_maze_debugging_2.png
-        text: I walked through each part step by step and realized where my mistake
-          was. I wasn't putting my hands on the beam correctly. So I tried another
-          back handspring on the beam with my new hand position and I got it. I was
-          really glad I debugged my back handspring.
+        text: "我一步步的檢視每一個步驟，然後發現我哪裡有問題。我沒有把手正確的放到平衡木上面。所以我用新的手的姿勢在平衡木上再試一次後手翻，然後我就做對了。我很開心我能夠對我的後手翻除錯。"
       3:
         image: notes/C1_maze_debugging_3.png
-        text: To learn about debugging, we start with a set of blocks already on the
-          stage. You'll notice that these blocks won't get you to the goal. We need
-          to debug the solution and fix it. What went wrong? You'll notice that you
-          needed to keep going west one more block.
+        text: "為了要學習除錯，我們開始時就已經有一組的程式積木。你會注意到這些積木無法幫你達到你的目標。我們需要找到這個問題的錯誤並修正它。哪裡出錯了？你會發現你需要再往西走一個方塊。"
       4:
         image: notes/C1_maze_debugging_4.png
-        text: Let's fix this by adding another west block and hitting run to see if
-          you got it right. Yay, you got it!
+        text: "我們把它多加一個往西的程式方塊來修正它，然後按下執行的按鈕來看看是不是對的。耶，你做對了！"
     C1_maze_intro_sequencing:
       1:
         image: notes/C1_maze_intro_sequencing_1.png
-        text: For this puzzle, you need to get the bird to the pig. Look at the puzzle
-          and see what directions it needs to take.
+        text: "在這個拼圖中，你要讓鳥走到豬那裏。看看這個拼圖，然後看它需要往哪個方向走。"
       2:
         image: notes/C1_maze_intro_sequencing_2.png
-        text: You need to drag the blocks over from the toolbox to the workspace.
-          Make sure it's under the "when run" block and when you think you've got
-          the right solution, then you can click "Run" and watch the bird go to the
-          pig.
+        text: "你需要把程式積木從工具箱中拖到工作區塊中。確定它是在「當按下執行時」的程式積木下面，而當你覺得你有對的答案的時候，按下「執行」，然後看那隻鳥往豬的方向移動。"
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: "電腦很擅長的其中一件事就是重複指令。身為一個人，如果你要不停地重複某個東西，你一定會感到很無趣。但是一個電腦可以把同樣的事情做幾百萬或是幾十億次也做得很好，更不會感到無聊。"
       2:
         image: notes/C1_maze_loops_2.png
         text: "例如，如果我想發電子郵件給 Facebook 上每個人獻上生日快樂的祝福，我可能需要花一個世紀的時間對來寫完所有的郵件。但是只需要幾行程式碼，就可以有一個系統發送電子郵件給
           Facebook 上的每個人，祝他們生日快樂。"
       3:
         image: notes/C1_maze_loops_3.png
-        text: To get the bird to the pig in this level... rather than drag three North
-          blocks on to the workspace, you will use the "repeat" block. Drag the "repeat"
-          block on to the workspace and enter the number 3. Then drag the "move North"
-          block into the "repeat" block and hit "Run" to see if you got it right.
-          Congratulations, you got it!
+        text: "在這關要幫助鳥抵達豬那邊，與其把三個往北的程式積木放到工作區域中，你要用「重複」的程式積木。把「重複」的程式積木拖到工作區域，然後輸入數字3。然後再把「往北移動」的程式積木放到「重複」積木中，在按下「執行」來看看你有沒有答對。恭喜你，你成功了！"
     C1_moveitmoveit_unplugged:
       1:
         image: notes/C1_moveitmoveit_unplugged_1.png

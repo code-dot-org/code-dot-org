@@ -312,10 +312,7 @@
       4-5 Artist Patterns 9_instruction: "コードを 3 回繰り返して、列全体を描きましょう。ヒント: 六角形の左端の頂点から右端の頂点までの幅は
         80 ピクセルです。"
       4-5 Artist Patterns Free Play_instruction: "自由時間です。オリジナルのパターンを作ってみましょう！"
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Bee Conditionals - FC Test_instruction: "ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。"
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -2755,10 +2752,7 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Ryan - 4-5 Bee Conditionals 2_instruction: "ミツバチは今すぐ蜜が欲しいのです。すべての物が花ではありません。花が隠れているかもしれないので、すべての雲の下をチェックましょう。そうすればあなたは蜜を集められます。"
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
@@ -3223,9 +3217,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

@@ -360,7 +360,7 @@ pt-BR:
         image: notes/playlab_events_2.png
         text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar uma tecla de direção ou tocar a tela.'
       3:
-        image: notes/playlab_events_2.png
+        image: notes/playlab_events_3.png
         text: 'Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando um jogador clicar nele. Nós usaremos o bloco "quando clicado" e conectaremos o bloco "diga" a ele. Quando o jogador clicar no robô espacial, tudo que estiver conectado ao bloco de evento "quando clicado" será realizado. O que seu alienígena diz?'
       4:
         image: notes/playlab_events_4.png
@@ -966,10 +966,10 @@ pt-BR:
         text: Isso economiza tempo e torna as coisas mais fáceis. Para usá-lo, coloque o bloco avance dentro do bloco repita. Clique em Executar e o zumbi vai avançar cinco vezes para chegar ao saboroso girassol.
     C3_playlab_create_game:
       1:
-        image: notes/playlab_1.png
+        image: notes/C3_playlab_create_game_1.png
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade.
       2:
-        image: notes/playlab_2.png
+        image: notes/C3_playlab_create_game_2.png
         text: 'Existem alguns novos blocos para experimentar. Há os blocos "quando a seta estiver pressionada" e "mova o personagem". Você pode juntar esses blocos para mover os personagens com as setas do teclado. E há alguns blocos que fazem coisas quando os personagens trombam ou são clicados. Dê uma olhada e divirta-se!'
     C3_songwriting_with_parameters:
       1:

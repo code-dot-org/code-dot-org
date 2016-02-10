@@ -116,6 +116,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
     RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
+    Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
     RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
   end
@@ -339,6 +340,13 @@ task :dashboard_unit_tests do
   end
 end
 
+task :ui_test_flakiness do
+  Dir.chdir(deploy_dir) do
+    flakiness_output = `./bin/test_flakiness 5`
+    HipChat.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
+  end
+end
+
 UI_TEST_SYMLINK = dashboard_dir 'public/ui_test'
 file UI_TEST_SYMLINK do
   Dir.chdir(dashboard_dir('public')) do
@@ -346,11 +354,11 @@ file UI_TEST_SYMLINK do
   end
 end
 
-task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
+task :regular_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--auto_retry', '--html', '--fail_fast'
+      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '70', '--magic_retry', '--html', '--fail_fast'
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         HipChat.log message
@@ -364,12 +372,12 @@ task :dashboard_browserstack_ui_tests => [UI_TEST_SYMLINK] do
   end
 end
 
-task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
+task :eyes_ui_tests => [UI_TEST_SYMLINK] do
   Dir.chdir(dashboard_dir) do
     Dir.chdir('test/ui') do
       HipChat.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `grep -lr '@eyes' features`.split("\n")
-      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', eyes_features.count.to_s
+      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--html', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         HipChat.log message
@@ -384,8 +392,8 @@ task :dashboard_eyes_ui_tests => [UI_TEST_SYMLINK] do
 end
 
 # do the eyes and browserstack ui tests in parallel
-multitask dashboard_ui_tests: [:dashboard_eyes_ui_tests, :dashboard_browserstack_ui_tests]
+multitask ui_tests: [:eyes_ui_tests, :regular_ui_tests]
 
-$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :dashboard_ui_tests])
+$websites_test = build_task('websites-test', [deploy_dir('rebuild'), CODE_STUDIO_TASK, :build_with_cloudfront, :deploy, :pegasus_unit_tests, :shared_unit_tests, :dashboard_unit_tests, :ui_test_flakiness, :ui_tests])
 
 task 'test-websites' => [$websites_test]

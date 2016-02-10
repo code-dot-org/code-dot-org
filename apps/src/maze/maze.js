@@ -621,7 +621,7 @@ Maze.init = function(config) {
     resetDirt();
 
     if (mazeUtils.isBeeSkin(config.skinId)) {
-      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.initialDirtMap, Maze.bee);
+      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.bee);
     } else {
       Maze.gridItemDrawer = new DirtDrawer(Maze.dirt_, skin.dirt);
     }
@@ -965,17 +965,26 @@ Maze.onReportComplete = function(response) {
 };
 
 /**
- * Execute the user's code.  Heaven help us...
+ * Perform some basic initialization/resetting operations before
+ * execution. This function should be idempotent, as it can be called
+ * during execution when running multiple trials.
  */
-Maze.execute = function(stepMode) {
-  beginAttempt();
-
+Maze.prepareForExecution = function () {
   Maze.executionInfo = new ExecutionInfo({ticks: 100});
   Maze.result = ResultType.UNSET;
   Maze.testResults = TestResults.NO_TESTS_RUN;
   Maze.waitingForReport = false;
   Maze.animating_ = false;
   Maze.response = null;
+};
+
+/**
+ * Execute the user's code.  Heaven help us...
+ */
+Maze.execute = function(stepMode) {
+  beginAttempt();
+  Maze.prepareForExecution();
+
 
   var code;
   if (studioApp.isUsingBlockly()) {
@@ -1005,6 +1014,46 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
+      if (Maze.bee && Maze.bee.staticGrids.length > 1) {
+        // If this level is a Bee level with multiple possible grids, we
+        // need to run against all grids and sort them into successes
+        // and failures
+        var successes = [];
+        var failures = [];
+
+        Maze.bee.staticGrids.forEach(function(grid, i) {
+          Maze.bee.useGridWithId(i);
+
+          // Run trial
+          codegen.evalWith(code, {
+            StudioApp: studioApp,
+            Maze: api,
+            executionInfo: Maze.executionInfo
+          });
+
+          // Sort static grids based on trial result
+          Maze.onExecutionFinish();
+          if (Maze.executionInfo.terminationValue() === true) {
+            successes.push(i);
+          } else {
+            failures.push(i);
+          }
+
+          // Reset for next trial
+          Maze.gridItemDrawer.resetClouded();
+          Maze.prepareForExecution();
+          studioApp.reset(false);
+        });
+
+        // The user's code needs to succeed against all possible grids
+        // to be considered actually successful; if there are any
+        // failures, randomly select one of the failing grids to be the
+        // "real" state of the map. If all grids are successful,
+        // randomly select any one of them.
+        var i = (failures.length > 0) ? _.sample(failures) : _.sample(successes);
+        Maze.bee.useGridWithId(i);
+      }
+
       codegen.evalWith(code, {
         StudioApp: studioApp,
         Maze: api,

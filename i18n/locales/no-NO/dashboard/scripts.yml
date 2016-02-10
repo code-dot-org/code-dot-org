@@ -926,6 +926,7 @@
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: Lär ut funktionell programmering genom algebra
@@ -1308,6 +1309,7 @@
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1368,10 +1370,14 @@
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          "Practice Create PT: Data App": 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
           Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1518,3 +1524,41 @@
           Wrap-Up: Oppsummering
           Assessing Computer Models: Assessing Computer Models
           (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

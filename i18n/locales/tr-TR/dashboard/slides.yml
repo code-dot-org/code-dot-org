@@ -167,8 +167,7 @@ tr:
         text: 'Selam, benim adım Saloni. Bilgisayar bilimlerini sağlıksal ve tıbbi sorunları çözmeye yardımcı olmak için kullanıyorum. Hadi "if else" bloğu hakkında bir şeyler öğrenelim. "if" bloğu gibi görünüyor ama sonunda "else" diyen fazladan bir parçası var.'
       2:
         image: notes/hoc5_2.jpg
-        text: |-
-          If I put a "move forward" block in the spot where it says "do" and a "turn left" block where it says "else" that means that the zombie will choose between 2 options. IF there is a path ahead, the zombie will move forward, and OTHERWISE (there isn't a path ahead), the zombie will turn left.
+        text: 'Eğer "yap" diyen noktaya "ilerle" blogu ve "ya da" diyen noktaya da "sola dön" blogu yerleştirirsem bu demektir ki zombi iki seçenekten birini seçecektir. EĞER önünde yol varsa, zombi ileri hareket edecek, aksi takdirde (önünde yol yoksa), zombi sola dönecektir.'
       3:
         image: notes/hoc5_3.jpg
         text: '"eğer" bloğunda olduğu gibi, tekrar bloğuna "eğer değilse" bloğu da ekleyebiliriz, bu durumda zombi hareket etmeye devam edecek ve "eğer değilse" bloğu farklı bir yöne dönüp dönemeceğini kontrol edecek.'
@@ -181,8 +180,7 @@ tr:
         text: '"eğer değilse" ifadesi iki şeyin arasında bir karardır. Dostumuz sincap Scrat ile "eğer başka" ifadesiniz nasıl kullanabileceğimizi görelim.'
       2:
         image: notes/saloni_ifelse_scrat2.jpg
-        text: |-
-          This block looks the same as the "if" block, but there's an extra part at the bottom that says "else". If I put a "move forward" block where it says "do" and a "turn left" block where it says "else", that means Scrat the squirrel will move forward if there's a path ahead. If there's not a path ahead, Scrat will turn left.
+        text: 'Bu blok "if" bloğunun aynısı gibi gözükmektedir fakat "else" diye fazladan bir bölüm bulunmaktadır. Eğer "yap" diyen noktaya "ilerle" blogu ve "ya da" diyen noktaya da "sola dön" blogu yerleştirirsem bu demektir ki sincap Scrat önünde yol varsa ilerleyecek, önünde yol yoksa Scrat sola dönecektir.'
       3:
         image: notes/saloni_ifelse_scrat3.jpg
         text: 'Bu bir karar alma eylemidir ve bu karara göre iki eylemden biri uygulanır. Ve "Eğer" blokları gibi "eğer değilse" blokları "tekrar" blokları içine koyabilirsin.'
@@ -202,7 +200,7 @@ tr:
       4:
         image: notes/stage13_4.jpg
         text: |-
-          The definition sits on the workspace, but our farmer won't run the function until we drag out our "fill 5" function block from functions category.
+          Tanımlama çalışma alanının üzerindedir, ama çiftçimiz, biz ''5 doldur" fonksiyonu bloğunu işlev kategorisinden sürükleyene kadar fonksiyonu çalıştıramayacaktır.
       5:
         image: notes/stage13_5.jpg
         text: |-
@@ -226,20 +224,21 @@ tr:
         text: 'Bu bizim yeni "sayaç" döngümüz. Her eylemi tekrar ve tekrar gerçekleştirir, sen de bu eylemin her seferinde hafifçe değişmesini sağlayabilirsin.'
       3:
         image: notes/stage11_3.jpg
-        text: 'In this example, our "counter" loop says "count with counter from 50 to 90 by 10" and inside it, we have our "draw a square" block. Drag the "counter" block from the "Variables" section into the "length" spot.'
+        text: |-
+          Bu örnekte,"sayaç" döngümüz bize döngü içerisinde "sayacın 50'de 90' a kadar 10'ar 10'ar sayacak" oluğunu anlatıyor. "Kare çiz" bloğumuza sahibiz. "Değişkenler" bölümünden "sayaç" bloğunu "uzunluk" noktasına sürükleyin.
       4:
         image: notes/stage11_4.jpg
-        text: "This means our artist is going to draw a square that has 50 pixel length sides, then it will add 10 to that and draw a square with 60 pixel length sides. Then it will keep adding 10 and drawing squares until it reaches 90. So we'll have squares of 50, 60, 70, 80, and 90."
+        text: "Bu, sanatçımızın 50 pixel kenar uzunluğuna sahip bir kare çizeceği, daha sonra buna 10 ekleyerek 60 pixel kenar uzunluğuna sahip bir kare çizeceği anlamına geliyor. Daha sonra 90'a ulaşıncaya kadar 10 eklemeye devam edip kare çizmeye devam eder. Böylece uzunluğu 50, 60, 70, 80 ve 90 olan karelere sahip oluruz."
     parameters:
       1:
         image: notes/stage15_1.jpg
         text: "Selam, ben Janete. Zynga'da mühendisim."
       2:
         image: notes/stage15_2.jpg
-        text: What if we want to draw a bunch of triangles and have their lengths be different sizes?
+        text: Eğer kenar uzunlukları farklı bir grup üçgen çizmek istesek ne olur?
       3:
         image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with parameters.
+        text: Tüm bu kodu elimizle yazabiliriz ya da parametre ile birlikte fonksiyon kullanabiliriz.
       4:
         image: notes/stage15_4.jpg
         text: 'Bunu yapmak için; fonksiyon tanımındaki "draw a triangle" butonuna tıklayın. Daha sonra "isim giriniz" bloğunu "girdi" bloğuna sürükleyin.'
@@ -248,10 +247,10 @@ tr:
         text: 'Sonrasında eğer "x" yazan yere "uzunluk" yazar ve "Enter" tuşuna basar iseniz uzunluk işlevi için girdi oluşturmuş olursunuz.'
       6:
         image: notes/stage15_6.jpg
-        text: 'Then click on the star. Now, you want to click on the variables category and drag the "length" block into the "move forward" block of your function definition. And drag away the old number block.'
+        text: 'Daha sonra yıldızın üzerine tıklayın. Şimdi, istediğiniz değişkenler kategorisine tıklayın ve "uzunluk" blokunu fonksiyon tanımınızdaki "ilerle" blokunun içine sürükleyin. Ve eski numara blokunu sürükleyerek kaldırın.'
       7:
         image: notes/stage15_7.jpg
-        text: 'To use your function with parameters, click on the functions category and drag out your "draw a triangle with length" function.'
+        text: 'Fonksiyonunuzu parametre ile kullanmak için, fonksiyonlar kategorisine tıkla ve "uzunlıkla üçgen çiz" fonksiyonunu sürükle.'
       8:
         image: notes/stage15_8.jpg
         text: Şimdi farklı boyutlarda üçgenler çizmek için matematik bloğunu kullanarak farklı numaralar girebilirsin.
@@ -275,41 +274,43 @@ tr:
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
-        text: "Hi, my name is Lyndsey. I model, act, and write my own apps. Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
+        text: "Merhaba, Benim adım Lyndsey. Kendi uygulamalarımı modelliyorum, hareket ettiriyorum ve yazıyorum. Onların buzun büyüsünü ve güzelliğini keşfettiği gibi kod kullanarak Anna ve Elsa'ya katılalım."
       2:
         image: notes/frozen1_2.jpg
-        text: "You'll create snowflakes and patterns as you ice skate and make a winter wonderland that you can then share with your friends."
+        text: Buzda kaydıkça kar taneleri ve değişik desenler oluşturarak bir kış diyarı yaratabilir ve sonra arkadaşlarınla paylaşabilirsin.
       3:
         image: notes/frozen1_3.jpg
-        text: "In the next hour, you're going to learn the basics of how to code. Traditional programming is usually in text, but we'll use Blockly, which uses visual blocks that you can drag and drop to write programs. This is how even university students learn the basics. Under the hood, you're still creating code."
+        text: Bir saat içerisinde, nasıl kod yazılacağının temellerini öğreneceksiniz. Geleneksel programlama yönteminde genellikle metin kullanılır, ama biz Blocky kullanacağız. Blocky ile görsel blokları sürükleyip bırakarak programlar yazabilirsiniz. Üniversite öğrencileri de bu yöntemle programlamanın temellerini öğrenir.
       4:
         image: notes/frozen1_4.jpg
-        text: "A program is a set of instructions that tells a computer what to do. Let's build a code, or a program, that will help Elsa create a simple line. We will use this later to create more complex patterns."
+        text: "Program, bilgisayara ne yapacağını söyleyen komutlar dizisidir. Elsa'ya basit bir çizgi oluşturmakta yardımcı olacak bir program yazalım. Bu yazdığımız programı sonra daha karmaşık modeller oluşturmak için kullanacağız."
       5:
         image: notes/frozen1_5.jpg
-        text: "Your screen is split into three main parts. On the left, is the ice surface where you'll run your program. The instructions for each level are written right below the surface."
+        text: Ekranın üç ana parçaya bölünmüş haldedir. Soldaki buzlu yüzeyde programını çalıştırırsın. Her seviye için gerekli açıklamalar bu yüzeyin hemen altında yer alır.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action that Elsa and Anna can do.
+        text: "Orta bölümde alet kutusu yer alır ve her bir küp Elsa ve Anna'nın yapabileceği şeylerdir."
       7:
         image: notes/frozen1_7.jpg
         text: 'Ekranın sağında yer alan beyaz alana çalışma alanı deniyor ve programlarımızı bu alanda oluşturacağız. Buzdan oluşan nesneyi hareket ettirebilmek için "İleriye taşı" bloğunu göreceksiniz.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: '"İlerle" küpü diyor ki: "100 piksel ilerle". Eğer "Çalıştır"a basarsak ne olur? Elsa ekranda belli bir miktar ileriye gider; evet tam 100 piksel! Piksel, bilgisayarınızdaki ya da televizyonunuzdaki görüntüyü oluşturan en minik karedir.'
       9:
         image: notes/frozen1_9.jpg
-        text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'
+        text: |-
+          Bulmacadaki diğer küp diyor ki: "sağa doğru 90 derece dön". Bu küpü kullandığımız zaman Elsa belli bir miktar sağa döner. Elsa'nın ne kadar döneceğini değiştirmek için değerlerle biraz oynayabilirsiniz. Açı değeri, Elsa'nın önündeki hareket çizgisine göre ölçülür. Yani, bu bir 90 derecedir ve bu da bir 120 derece.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking the arrows next to them.
+        text: Hatırla, yanındaki oklara tıklayarak piksellerin sayısını ve dereceyi değiştirebilirsin.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: "Hi, I’m Paola! Computers are really good at repeating actions. You can count to 10, 20, or 100. But a computer can count to a billion or a trillion. It won't get bored and it will only take a few seconds. Whether it's counting, or drawing, or anything--computers can repeat things hundreds or even billions of times."
+        text: Merhaba, Ben Paola! Bilgisayarlar tekrarlayan eylemler konusunda gerçekten çok iyiler. 10, 20 yada 100 kadar sayabilirsin. Ama bir bilgisayar milyara yada trilyona kadar sayabilir. Sıkılmazlar ve sayma işlemi birkaç saniye sürer. Sayar, çizer yada tekrarlayan bir şeyi yüzlerce hatta milyarca kez yapabilir.
       2:
         image: notes/frozen2_2.jpg
-        text: 'In programming, we call this a loop. A loop is how you repeat your code over and over again. For the next puzzle, your goal is to help Anna create a square with the "Repeat" block.'
+        text: |-
+          Biz buna programlamada döngü diyoruz. Döngü bir kodunuzun nasıl tekrardan tekrar ettiğidir. Bir sonraki puzzle için hedefiniz Anna' nın "Tekrar" bloğu ile bir kare oluşturmasına yardımcı olmaktır.
       3:
         image: notes/frozen2_3.jpg
         text: 'Any blocks of code you put inside the "Repeat" block will be repeated in sequence, as many times as you want.'
@@ -348,7 +349,7 @@ tr:
         text: "We're going to create games using Play Lab. Good games have a story, and every story has actors. We'll learn how to make our actors like witches, alinens, and animals speak, move, and interact with each other. By the end of this tutorial, you can build a game from scratch and share it with your friends."
       2:
         image: notes/playlab_intro_2.png
-        text: Your screen is split into 3 main parts. On the left is the game space where your program will run. The instructions for each level are written below.
+        text: Ekran 3 ana bölüme ayrılmıştır. Sol taraf programınızın çalıştırılacağı oyun alanıdır. Her düzey için talimatlar aşağıda yazılmıştır.
       3:
         image: notes/playlab_intro_3.png
         text: "The middle area is the toolbox, and each of these blocks is a piece of code. The white space on the right is called the workspace and this is where we'll build our program."
@@ -483,7 +484,7 @@ tr:
         text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: "It's like programming with paper. And that's it!"
+        text: Bu kağıt ile programlama gibi. Ve bu kadar!
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -528,11 +529,10 @@ tr:
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |-
-          My name is Jeremiah. Hi! I am seven years old. I love playing on my mom's computer but I always get permission first. "Mom, can I go on the computer? Sure honey!"
+        text: 'Benim adım Jeremiah. Merhaba! Ben yedi yaşındayım. Annemin bilgisayarında oyun oynamayı seviyorum ama her zaman önce izin alırım. "Anne, Bilgisayarına geçebilir miyim? Tabii ki tatlım!"'
       2:
         image: notes/C1_going_places_safely_2.png
-        text: "I love my mom's computer because I can go on the Internet. The Internet is kind of like your neighborhood. You can visit cool places, you can talk to family and friends and you can learn lots of new things."
+        text: 'Annemin bilgisayarını seviyorum çünkü internete girebiliyorum. İnternet senin çevren gibidir. Hoş yerleri ziyaret edebilir, ailen ve arkadaşların ile konuşabilir ve bir çok şey öğrenebilirsin. '
       3:
         image: notes/C1_going_places_safely_3.png
         text: "Yesterday, I visited a zoo that's near my house. I saw a baby zebra. I took her picture and changed the color of her stripes, then added a hat and added it to my collection of wacky animals. Awesome! Later, I went to a place far far away. I visited Kenya. That's a country in Africa. Lots of zebras live there."

@@ -1,5 +1,3 @@
-//= require client_state
-
 /* globals dashboard, trackEvent, Dialog, React, appOptions */
 
 /**
@@ -247,7 +245,7 @@ dashboard.header = (function () {
         .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
     // TODO: Remove this (and the related style) when Applab is no longer in beta.
-    if ('applab' === appOptions.app) {
+    if ('applab' === appOptions.app || 'gamelab' === appOptions.app) {
       $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
     }
 

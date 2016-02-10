@@ -58,11 +58,6 @@ zh-TW:
   congratulations: 恭喜你！
   congratulations_on_completing_hoc: 恭喜你，你已完成一小時的程式設計課程。
   congratulations_volunteer: '恭喜：你已經試過一小時的程式設計課程了，你可以<a href="https://code.org/volunteer">開一間教室並註冊為志工</a>來幫助學生學習一小時的程式設計課程'
-  course_name_accelerated: 速成課程
-  course_name_course1: 課程 1
-  course_name_course2: 課程 2
-  course_name_course3: 課程 3
-  course_name_course4: 課程 4
   congratulations_on_completing_course: '恭喜你完成了 %{course}'
   congrats_next_tutorials_title: 接下來請嘗試下面這些課程
   congrats_next_tutorials_desc: '嘗試這些較短，約一小時的課程或嘗試<a href="%{current_path}/next"> 合作夥伴教程</a>。'
@@ -113,9 +108,9 @@ zh-TW:
   learn_next_level: 繼續到下一級別
   learn_online: 嘗試其他線上課程
   learn_classes: 尋找當地的教室
-  hoc_is_here: '#HourOfCode 已經開始了，讓我們一起試試吧！ @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: '我已經完成了 #HourOfCode - 快來看看吧！ @codeorg'
-  twitter_teach_cs: 為什麼沒有更多的學校教計算機科學？我們可以解決這個問題。HTTP://youtu.be/nKIu9yen5nc。請瀏覽 http://code.org/ 了解更多。
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: 學習一小時的程式設計
   beyond_hoc: 一小時後的學習課程
   what_gender: 您的性別是？
@@ -302,7 +297,7 @@ zh-TW:
   volunteer_engineer_submission_field_location_placeholder: 郵遞區號，城市和州/國家，或街道住址
   volunteer_engineer_submission_field_location_flexibility: 我可以幫忙Hour of Code......(請選擇選項)
   volunteer_engineer_submission_checkbox_after_hoc: 我對Hour of Code的志願工作有興趣
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour of Code
+  volunteer_engineer_submission_field_time_commitment: Time commitment
   volunteer_engineer_submission_field_linkedin: LinkedIn 個人檔案
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook的個人資料
@@ -525,7 +520,7 @@ zh-TW:
   dashboard_faq_k5: 五年級課程的常見問題
   dashboard_announcements: 公告
   dashboard_announce_view_all: 全部查看
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: 瞭解更多資訊
   dashboard_announce_hoc: '<b>2015 年 11 月 9 日</b>-全新的一小時程式設計教學課程，以即將上映的電影星際大戰：原力覺醒。與雷伊一同指導新的BB-8機器人完成所有的任務。然後，在遙不可及的銀河系中，加入萊婭來建立並共享你的遊戲。'
   dashboard_announce_playlab: |

@@ -34,3 +34,5 @@
 /apps/npm-debug.log
 *_temp.json
 /.ruby-version
+/levelbuilder_ci_last_run
+/levelbuilder_ci_lock

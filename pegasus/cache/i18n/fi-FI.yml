@@ -26,9 +26,9 @@
   twentyhours_heading: Kokeile kurssiamme Johdanto tietojenkäsittelytieteeseen
   twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietojenkäsittelytieteestä
     ja ohjelmoinnin käsitteistä tällä jatkokurssilla.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Jokainen lapsi ansaitsee mahdollisuuden
+  og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
+    tietotekniikkaa.
   hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
     joulukuuta 2014<br/>
   hoc2014_students: Oppilaat
@@ -75,11 +75,6 @@
   congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
     <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
     johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
-  course_name_accelerated: Nopeutettu kurssi
-  course_name_course1: Kurssi 1
-  course_name_course2: Kurssi 2
-  course_name_course3: Kurssi 3
-  course_name_course4: Kurssi 4
   congratulations_on_completing_course: Onnittelut! Läpäisit kurssin %{course}
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
@@ -248,8 +243,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Lue lisää
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20,000 opettajaa koulutettu, ja nyt opettamassa tietotekniikkaa
+    luokkahuoneissa.
   homepage_banner_20k_teachers_link: Lue lisää
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
@@ -259,7 +254,7 @@
   homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
   homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Tutustu kursseihimme
   homepage_slot_text_link_codestudio: Kokeile Koodistudiota
   homepage_slot_text_link_local: Etsi kerho läheltäsi
   homepage_slot_text_link_othercourses: Muut verkkokurssit
@@ -370,7 +365,7 @@
   volunteer_engineer_submission_intro_links: Not looking to volunteer? <a href="%{learn_more}">Learn
     more</a> about organizing your own Hour of Code event and finding a local volunteer
     on our <a href="%{volunteer_local}">volunteer map</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Päivitä tietosi
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Nimi
@@ -400,8 +395,8 @@
     osaamisesi ja mitä apua voisit tarjota vapaaehtoisena paikallisille opettajille.
   volunteer_engineer_submission_field_description_placeholder: Description of experience
     and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_header_private: Tiedot ovat luottamuksellisia ja niitä
+    ei koskaan jaeta
   volunteer_engineer_submission_field_email: Sähköpostiosoite
   volunteer_engineer_submission_field_email_desc: Sähköpostiosoitettasi ei koskaan
     jaeta, mutta lähetämme sinulle pyyntöjä opettajilta.
@@ -539,7 +534,7 @@
   dashboard_navigation_section_speakers: Tietojenkäsittelyopin <br/> puhujavieraat
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Tarkastele etenemistä
-  dashboard_navigation_view_text_responses: View Text Responses
+  dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
@@ -697,7 +692,7 @@
     Education Week
   learn_sign_up_button: Luo käyttäjätunnus
   learn_videos_watch: Watch this inspirational video with your classroom
-  learn_videos_show: Show this inspirational video to your class
+  learn_videos_show: Näytä tämä inspiroiva video luokallesi
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
   learn_educator_resources_description: Learn how to teach an Hour of Code
   learn_educator_resources_button: Educator resources

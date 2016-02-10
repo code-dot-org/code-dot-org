@@ -29,8 +29,8 @@
     code:
       label: 'Tambahkan seorang guru:'
       placeholder: Kode Bagian (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Tolong masukkan kode yang dibagikan oleh gurumu. Kode tersebut
+        adalah sebuah kode 6 huruf seperti "ABCDEF".
     submit: Cantumkan nama guru
   add_hint_form:
     placeholder: Masukkan pentunjuk anda disini
@@ -305,9 +305,9 @@
       remove: Apakah anda yakin ingin menghapus guru ini?
     students:
       dashboard: Pergi ke Dashboard Guru
-    user_not_found: Guru atau murid tidak dapat ditemukan
-    student_teacher_disassociated: "%{teacher_name} telah dihapus sebagai guru dari
-      %{student_name}"
+    user_not_found: Guru tidak bisa ditemukan.
+    student_teacher_disassociated: Kamu telah mengganti %{teacher_name} dari jabatan
+      gurumu.
     panel:
       answer_viewer: Menjawab Pembaca
       student: siswa
@@ -393,7 +393,7 @@
     title: Belajar di Code Studio
     description: Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi
       dan seni dengan kode.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Cobalah Kode Sejam!
   gender:
     male: Laki-laki
     female: Wanita
@@ -410,12 +410,22 @@
       membantu membuat tutorial ini.
     help_from_html_old: Para insinyur dari Google, Microsoft, Facebook, dan Twitter
       turut membantu dalam pembuatan materi-materi ini.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2013 Rovio Entertainment Ltd.
-      Hak Cipta Dilindungi.<br/> Plants vs. Zombies&trade; & &copy; 2013 Electronic
-      Arts Inc. Hak Cipta Dilindungi.
-    art_from_html_old: Angry Birds&#8482;&amp;&copy; 2009-%{current_year} Rovio Entertainment
-      Ltd. Hak Cipta dilindungi undang-undang<br />Plants vs. Zombies &#8482;&amp;&copy;%{current_year}
-      Electronic Arts Inc. Hak Cipta dilindungi undang
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi.<br
+      />Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak
+      Cipta Dilindungi.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. Hak Cipta Dilindungi.<br />The Amazing World of Gumball adalah merek
+      dagang dan &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta
+      Dilindungi. Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak
+      Cipta Dilindungi. Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak
+      Cipta Dilindungi. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. Hak Cipta Dilindungi. The Amazing World of Gumball adalah merek dagang
+      dan &copy; 2015 Cartoon Network.
     powered_by_aws: Didukung oleh Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; adalah merk dagang dari Code.org."
@@ -430,10 +440,10 @@
     privacy: Kebijakan privasi
     secure: Versi yang aman
     report_abuse: Laporkan penyalahgunaan
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
-    try_hour_of_code: Try an Hour of Code!
+    built_on_code_studio: Dibuat di Studio Kode
+    make_my_own_app: Membuat aplikasiku sendiri
+    how_it_works: Bagaimana hal tersebut bekerja
+    try_hour_of_code: Cobalah Kode Sejam!
   reference_area:
     title: Perlu bantuan?
     subtitle: Lihat video ini dan tips lainnya
@@ -499,7 +509,7 @@
       unused: Tingkat yang tidak terpakai
   upsell:
     hoc:
-      title: Jam kode
+      title: Labirin klasik
       body: Coba dasar-dasar ilmu komputer. Jutaan orang telah mencobanya.
     flappy:
       title: Flappy Code

@@ -189,7 +189,7 @@ Examples:
   | http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true      | auto open variable editor |
 
 @dashboard_db_access
-Scenario Outline: Simple page view without instructions dialog
+Scenario Outline: Logged in simple page view without instructions dialog
   Given I am on "http://learn.code.org/"
   And I am a student
   When I open my eyes to test "<test_name>"
@@ -204,4 +204,20 @@ Examples:
   | http://hourofcode.com/us                                          | hourofcode.com us          |
   | http://hourofcode.com/br                                          | hourofcode.com br          |
   | http://code.org/                                                  | code.org homepage          |
-  | http://studio.code.org/                                           | logged out studio homepage |
+  | http://studio.code.org/                                           | logged in studio homepage  |
+  | http://studio.code.org/s/allthethings                             | logged in script progress  |
+
+Scenario Outline: Logged out simple page view without instructions dialog
+  Given I am on "http://learn.code.org/"
+  When I open my eyes to test "<test_name>"
+  And I am on "<url>"
+  When I rotate to landscape
+  Then I see no difference for "initial load"
+  And I close my eyes
+Examples:
+  | url                                                               | test_name                    |
+  | http://hourofcode.com/us                                          | logged out hourofcode.com us |
+  | http://hourofcode.com/br                                          | logged out hourofcode.com br |
+  | http://code.org/                                                  | logged out code.org homepage |
+  | http://studio.code.org/                                           | logged out studio homepage   |
+  | http://studio.code.org/s/allthethings                             | logged out script progress   |

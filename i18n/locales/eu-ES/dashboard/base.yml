@@ -28,8 +28,7 @@ eu:
     code:
       label: 'Irakaslea gehitu:'
       placeholder: Atal Kodea (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Mesedez, sartu zure irakasleak zurekin partekatutako kodea. 6 letrako kodea da, "ABCDEF" bezalakoa.'
     submit: Gehitu irakaslea
   add_hint_form:
     placeholder: Mesedez sartu hemen zure pista

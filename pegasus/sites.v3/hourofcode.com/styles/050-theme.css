@@ -80,45 +80,70 @@ body {
 
 #pagefooter {
   width: 100%; 
-  height: 80px;
-  padding: 20px; 
-  padding-top: 12px;
-  overflow: hidden; 
+  padding: 12px 20px; 
   background-color: #5c3f7f;
   box-sizing: border-box;
+  overflow: auto;
 }
 
-#pagefooter .content {
+#footer-links {
+  float: right;
   color: white;
-  font-size: 14px;
-  font-weight: normal;
-  /*width: 970px; */
-  margin: 0 auto;
+  font-size: 12px;
 }
 
-#pagefooter .dim {
-  display: inline-block;
+#footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer-links ul li {
+  display: inline;
+  text-indent: 0;
+  padding: 0;
+}
+
+#footer-links ul li:before {
+  content: none;    /* Needed to remove the bullet disc. This was set from other CSS. */
+}
+
+#footer-links ul li:after {
+  content: "|";     /* Vertical separator between the links */
+  margin: 0 12px;
   opacity: 0.5;
 }
 
-.whitefooterlink:link {
-  color: white;
-  font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+#footer-links ul li:last-child:after {
+  content: none;    /* No separator needed for the last item */
 }
 
-.whitefooterlink:hover {
+#footer-links a {
   color: white;
-  font-size: 14px;
+  font-weight: normal;
   font-family: 'Gotham 4r', sans-serif;
+  opacity: 0.5;
+  text-decoration: none;
 }
 
-.whitefooterlink:visited {
-  color: white;
-  font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+#footer-links a:hover {
+  opacity: 1.0;
 }
 
+#footer-toggle {
+  display: none;
+  text-align: center;
+  border-bottom: 1px solid #aaa2bd;
+  padding: 8px 16px;
+  margin: 0 24px;
+}
+
+#copyright {
+  float: left;
+  color: white;
+  font-size: 12px;
+  opacity: 0.5;
+}
 
 /* styling for the embedded dashboard components... */
 
@@ -230,4 +255,65 @@ body {
 .mobile-headers #pageheader img#logo-uk {
   width: 155px;
   height: 37px;
+}
+
+@media (max-width: 992px) {
+  #footer-links {
+    float: none;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  #copyright {
+    float: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #pagefooter {
+    overflow: visible;
+    padding: 0;
+  }
+
+  #footer-links {
+    position: relative;
+    margin: 0;
+  }
+
+  #footer-links ul.hide-responsive-footer-menu {
+    display: none;
+  }
+
+  #footer-links ul {
+    position: absolute;
+    bottom: 38px;
+    width: 100%;
+    background-color: #5c3f7f;
+  }
+
+  #footer-links ul li {
+    display: block;
+    text-align: center;
+    margin: 0 24px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #aaa2bd;
+  }
+
+  #footer-links ul li:after {
+    content: none;    /* Remove the vertical separators */
+  }
+
+  #footer-links ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  #footer-toggle {
+    display: block;
+  }
+
+  #copyright {
+    padding: 12px 12px 36px 12px;
+  }
 }

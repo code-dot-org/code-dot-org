@@ -52,29 +52,41 @@ You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.
 
 Here are some example command line options.  Run `./runner.rb --help` for a full list.
 
-Run with a specific OS version, browser, browser version, and feature:
+Run all UI tests on all browsers against your local host (by default, tests point to staging.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-```
-./runner.rb -c IE9Win7 -f features/simpledrag.feature
-```
+`./runner.rb -d localhost.studio.code.org:3000`
+Alternatively, `./runner.rb -d localhost.studio.code.org:3000 -p <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
-Run with a specific domain substituted in place of the default
+Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
 
-```
-./runner.rb -d localhost-studio.code.org:3000
-```
+`./runner.rb -l`
 
-see "Saucelabs tunnel" section above for how to set up the tunnel
+Run all UI tests for a given browser/os combination - full list of combinations is in browsers.json
 
-Run against local Chrome webdriver instead of saucelabs:
+`./runner.rb --config ChromeLatestWin7`
 
-```
-./runner.rb -l
-```
+Run all UI tests for a given browser
 
-Note that this requires a local webdriver running on port 9515, such as Chromedriver at http://chromedriver.storage.googleapis.com/index.html.
+`./runner.rb --browser Chrome`
+
+Run all tests in a given feature file for all browser/os combinations
+
+`./runner.rb --feature features/awesomeStuff.feature`
+
+Run exactly one UI test in a given feature file for all browser/os combinations
+
+`./runner.rb --feature features/awesomeStuff.feature:40` will run the feature on line 40
+
+Run the eyes tests
+
+`./runner.rb --eyes`
 
 ## Tips
 
 - If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
+
+## See Also
+
+* [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
+* [General Testing Instructions](../../../TESTING.md)

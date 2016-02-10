@@ -74,6 +74,12 @@
           %input{name:'remove_logo_b', type:'checkbox', value:'1'}
       %tr
         %th
+          Hide counter?
+        %td
+          -hide_counter_b = data['hide_counter_b'] || nil
+          %input{name:'hide_counter_b', type:'checkbox', value: '1', checked: hide_counter_b}
+      %tr
+        %th
           Final participation count
         %td
           %input{name:'final_hoc_count_i', type:"number", value:data['final_hoc_count_i']}

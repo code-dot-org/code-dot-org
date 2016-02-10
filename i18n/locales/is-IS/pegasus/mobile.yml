@@ -60,11 +60,6 @@ is-IS:
   congratulations: Til hamingju!
   congratulations_on_completing_hoc: Til hamingju með að ljúka Klukkustund kóðunar
   congratulations_volunteer: 'Til hamingju: Nú þegar þú hefur prófað Klukkustund kóðunar, getur þú <a href="https://code.org/volunteer">boðið fram liðveislu í skólastofu</a> og hjálpað nemendum að læra Klukkustund kóðunar!'
-  course_name_accelerated: Hraðnámskeið
-  course_name_course1: Námskeið 1
-  course_name_course2: Námskeið 2
-  course_name_course3: Námskeið 3
-  course_name_course4: Námskeið 4
   congratulations_on_completing_course: 'Til hamingju með að ljúka námskeiðinu %{course}'
   congrats_next_tutorials_title: Prófaðu þetta kennsluefni næst
   congrats_next_tutorials_desc: 'Prófaðu þessar styttri 1 klst. kennslustundir eða <a href="%{current_path}/next">kennsluefni hjá samstarfsaðila</a>.'
@@ -115,9 +110,9 @@ is-IS:
   learn_next_level: Prófa annað námskeið í Kóðastúdíóinu
   learn_online: Prófa önnur námskeið á netinu
   learn_classes: Finna námskeið nálægt þér
-  hoc_is_here: '#HourOfCode er hér - kíktu á það! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Ég var að klára #HourOfCode - kíktu á það! @codeorg'
-  twitter_teach_cs: Af hverju kenna ekki fleiri skólar tölvunarfræði? Við getum bætt úr því. http://youtu.be/2DxWIxec6yo. Heimsæktu http://code.org/ til að fræðast nánar.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -222,7 +217,7 @@ is-IS:
   homepage_banner_text_link: Læra meira
   homepage_banner_privacy_main: 'Ágúst 3: Verkfærunum á námskeiðinu Meginhugtök tölvunarfræði fyrir framhaldsskóla hefur verið bætt við persónuverndarstefnu okkar.'
   homepage_banner_privacy_link: Læra meira
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20.000 kennarar hafa fengið þjálfun og eru nú að kenna tölvunarfræði í skólum.
   homepage_banner_20k_teachers_link: Læra meira
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
@@ -232,7 +227,7 @@ is-IS:
   homepage_solot_text_link_volunteer: Hjálpaðu við Klukkustund kóðunar
   homepage_slot_text_title_students: Nemendur
   homepage_slot_text_blurb_students: Skoða allt kennsluefni okkar
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Kíktu á námskeiðin okkar
   homepage_slot_text_link_codestudio: Prófa Kóðastúdíóið
   homepage_slot_text_link_local: Finna nám í nágrenninu
   homepage_slot_text_link_othercourses: Önnur námskeið á netinu
@@ -331,15 +326,15 @@ is-IS:
   volunteer_engineer_submission_field_location: Staður
   volunteer_engineer_submission_field_location_desc: Staðsetning þín verður notuð svo kennarar geti leitað að nálægum sjálfboðaliðum og hún verður sýnd sem pinni á korti. Hafir þú áhyggjur af persónuvernd, vinsamlegast notaðu þá heimilsfang vinnu/skóla eða aðeins bæjarheitið.
   volunteer_engineer_submission_field_location_placeholder: Póstnúmer, bær og fylki/land, eða götunúmer
-  volunteer_engineer_submission_field_location_flexibility: Ég get hjálpað við Klukkustund kóðunar með... (veldu allt sem við á)
-  volunteer_engineer_submission_checkbox_after_hoc: Ég hef áhuga á að vera sjálfboðaliði eftir Klukkustund kóðunar
-  volunteer_engineer_submission_field_time_commitment: Tímaskuldbinding eftir Klukkustund kóðunar
+  volunteer_engineer_submission_field_location_flexibility: Ég get hjálpað til með því að... (veldu allt sem við á)
+  volunteer_engineer_submission_checkbox_after_hoc: Ég hef áhuga á að vera sjálfboðaliði allt árið
+  volunteer_engineer_submission_field_time_commitment: Tímaskuldbinding
   volunteer_engineer_submission_field_linkedin: Linkedin upplýsingar
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook upplýsingar
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Lýsing
-  volunteer_engineer_submission_field_description_desc: Lýstu reynslu þinni af tölvunarfræði og hvernig þú mundir vilja taka þátt sem sjálfboðaliði fyrir kennara á svæðinu.
+  volunteer_engineer_submission_field_description_desc: Lýstu reynslu þinni af tölvunarfræði eða tæknilegum bkagrunni og hvernig þú mundir vilja taka þátt sem sjálfboðaliði fyrir kennara á svæðinu.
   volunteer_engineer_submission_field_description_placeholder: Lýsing á reynslu og/eða þátttöku. Ef þú talar önnur tungumál en íslensku, láttu þá vita af því hér.
   volunteer_engineer_submission_header_private: Upplýsingar varðveittar sem einkamál og aldrei deildar
   volunteer_engineer_submission_field_email: Netfang
@@ -558,7 +553,7 @@ is-IS:
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_message: '<b>16. desember 2015.</b> - Takk fyrir að taka þátt í Klukkustund kóðunar 2015! Vistun framvindu er nú aftur virk í öllu kennsluefni Kóðastúdíósins. Ath.: Skrifstofur Code.org verða lokaðar 19. desember - 3. janúar. Vinsamlegast gerið ráð fyrir að fyrirspurnum verði ekki svarað fyrr en 4. janúar.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Læra meira
   dashboard_announce_hoc: '<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund kóðunar? Meira en 7.000 sjálfboðaliðar eru tilbúnir að veita nemendum hvatningu með því að heimsækja bekkinn þinn eða spjalla á netinu. Skoðaðu liðveislukortið til að ná sambandi við sjálfboðaliða á þínu svæði.'
   dashboard_announce_playlab: '<b>4. desember 2015</b> - Klukkustund kóðunar er hér! Prófaðu 50 kennslustundir fyrir alla aldurshópa og öll tæki. Nýtt þessa viku: Kóðaðu þínar eigin sögur og leiki í nýjum Leikjasmiðjum, Ísöld og Gumball.'

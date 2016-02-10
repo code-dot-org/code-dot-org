@@ -667,9 +667,7 @@
       4-5 Bee Nested Loops Rows_instruction: |
         Gather nectar from the rows of flowers!
         Use a nested loop.
-      4-5 Maze 1 (copy 1)_instruction: |
-        Dear person. Me zombie. Must... get... to
-        sunflower.
+      4-5 Maze 1 (copy 1)_instruction: Hyvä ihminen. Minä zombi. Täytyy… päästä…auringonkukalle.
       4-5 Maze 1_instruction: Hyvä hminen. Minä zombi. Täytyy.. päästä.. auringonkukalle.
       4-5 Maze 10_instruction: Pääsetkö auringonkukan luo käyttämällä vain neljää
         lohkoa?
@@ -3806,9 +3804,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

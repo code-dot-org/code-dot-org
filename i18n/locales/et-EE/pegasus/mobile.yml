@@ -58,11 +58,6 @@ et-EE:
   congratulations: Palju õnne!
   congratulations_on_completing_hoc: Palju õnne, oled lõpetanud KoodiTunni
   congratulations_volunteer: 'Palju õnne! Nüüd, kus oled proovinud KoodiTundi, <a href="https://code.org/volunteer">liitu, et osaleda vabatahtlikuna klassiruumis</a> ja aidata õpilasi KoodiTunni õppimisel!'
-  course_name_accelerated: Kiirendatud kursus
-  course_name_course1: Kursus 1
-  course_name_course2: Kursus 2
-  course_name_course3: Kursus 3
-  course_name_course4: Kursus 4
   congratulations_on_completing_course: 'Õnnitleme %{course} läbimise puhul'
   congrats_next_tutorials_title: Proovi järgnevaid õpetusi
   congrats_next_tutorials_desc: 'Proovi neid lühemaid 1 tunni õpetusi, või proovi <a href="%{current_path}/next">partneri õppetükki</a>.'
@@ -113,9 +108,9 @@ et-EE:
   learn_next_level: Proovi mõnda muud Code Studio kursust
   learn_online: Proovi ka teisi veebikursusi
   learn_classes: Leia kohalikud kursused
-  hoc_is_here: '#HourOfCode on siin - tšekka seda! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Ma läbisin just #HourOfCode - tšekka seda! @codeorg'
-  twitter_teach_cs: Miks rohkemates koolides ei õpetata arvutiteadust? Me saame seda muuta. http://youtu.be/2DxWIxec6yo. Et saada rohkem infot, külasta http://code.org/.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Õpi KoodiTunnis
   beyond_hoc: Lisaks KoodiTunnile
   what_gender: Mis soost sa oled?
@@ -269,7 +264,7 @@ et-EE:
   starwars_javascript_start_button: Proovi nüüd
   starwars_blocks_title: Plokid
   starwars_blocks_description: 'Kasuta "sikuta ja lase lahti" plokke.'
-  starwars_blocks_specs: Palju keeli | Kaasaegsed brauserid, nutitelefonid, tahvlid | Vanuses 6-10
+  starwars_blocks_specs: Palju keeli | Kaasaegsed brauserid, nutitelefonid, tahvlid | Vanuses 6-106
   starwars_blocks_start_button: Proovi nüüd
   starwars_watch_videos: Enne alustamist vaata ühte nendest inspireerivatest videotest.
   starwars_speak_languages: Kas räägid mõnda muud keelt?
@@ -525,7 +520,7 @@ et-EE:
   dashboard_faq_k5: K-5 korduma kippuvad küsimused
   dashboard_announcements: Teated
   dashboard_announce_view_all: Vaata kõiki
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Lisateave
   dashboard_announce_hoc: '<b>23. november 2015</b> - Kas otsid arvutiteaduse õpetamist armastavat vabatahtlikku, kes aitaks sind KoodiTunni sündmusega? Üle 7000 vabatahtliku soovib inspireerida sinu õpilasi, külastades sinu klassiruumi või kaugvideovestluse teel. Vaata vabatahtlike kaardilt sinu läheduses paiknevate vabatahtlike kontaktandmeid.'
   dashboard_announce_playlab: '<b>4. detsembril 2015</b> - KoodiTund on siin! Proovige 50 õpetust, mis on sobilikud igale vanusele ja igas seadmes. Uus sel nädalal: programmeeri enda lood ja mängud uues keskkonnas Play Lab, Jääaeg ja Gumball.'

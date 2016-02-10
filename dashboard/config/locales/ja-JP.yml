@@ -28,8 +28,7 @@
     code:
       label: "先生を追加："
       placeholder: "セクション ・ コード (ABCDEF)"
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: 先生によって与えられたコードを入力してください。"ABCDEF"のような 6 文字のコードです。
     submit: "先生を追加"
   add_hint_form:
     placeholder: "ここにあなたのヒントを入力してください"
@@ -373,7 +372,7 @@
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour
       of Code&reg; は Code.org の商標です"
-    copyright: Copyright
+    copyright: "著作権"
     more: "それ以上"
     feedback: "フィードバックする"
     translate: "あなたの言語の翻訳にご協力ください"

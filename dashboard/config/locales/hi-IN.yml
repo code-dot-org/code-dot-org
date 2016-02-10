@@ -29,8 +29,7 @@
     code:
       label: "शिक्षक जोड़ें:"
       placeholder: "अनुभाग कोड (ABCDEF)"
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: hii
     submit: "शिक्षक जोड़ें"
   add_hint_form:
     placeholder: "कृपया अपने सुझाव यहाँ दर्ज करें"

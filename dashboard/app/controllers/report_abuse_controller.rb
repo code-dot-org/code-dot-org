@@ -2,7 +2,7 @@ require 'json'
 require 'httparty'
 
 class ReportAbuseController < ApplicationController
-  AGE_CUSTOM_FIELD_ID = 24024923
+  AGE_CUSTOM_FIELD_ID = 24_024_923
 
   def report_abuse
     unless Rails.env.development?

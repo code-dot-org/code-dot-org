@@ -193,7 +193,7 @@ s:function(d,k,p){bounce_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "noPathAhead":function(d){return "Pfad ist blockiert"},
 "noPathLeft":function(d){return "kein Pfad zur linken Seite"},
 "noPathRight":function(d){return "kein Pfad zur rechten Seite"},
-"numBlocksNeeded":function(d){return "Dieses Puzzle kann mit  %1 Bausteinen gelöst werden."},
+"numBlocksNeeded":function(d){return "Dieses Puzzle kann mit %1 Blöcken gelöst werden."},
 "pathAhead":function(d){return "Weg voraus"},
 "pathLeft":function(d){return "Wenn Weg auf der linken Seite"},
 "pathRight":function(d){return "Wenn Weg auf der rechten Seite"},

@@ -10,6 +10,8 @@ class LevelTest < ActiveSupport::TestCase
     @custom_maze_data = @maze_data.merge(:user_id=>1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
   test 'create level' do
@@ -42,7 +44,7 @@ class LevelTest < ActiveSupport::TestCase
       parsed = Karel.parse_maze(json)
       assert_equal(maze, JSON.parse(parsed['maze'])[0][0])
       assert_equal(initial_dirt, JSON.parse(parsed['initial_dirt'])[0][0])
-      assert_equal(0, JSON.parse(parsed['final_dirt'])[0][0])
+      assert_equal(input, JSON.parse(parsed['raw_dirt'])[0][0])
 
       # some of our values won't roundtrip, because they get converted to ints
       # but not back to strings
@@ -244,7 +246,7 @@ EOS
 
     # update the same level with different dsl text
     dsl_text = dsl_text.gsub('star', 'bar')
-    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text)
+    cm.update(name: name, type: 'ContractMatch', dsl_text: dsl_text, published: true)
 
     cm = ContractMatch.find(cm.id)
     # star -> bar
@@ -268,6 +270,7 @@ EOS
   def update_maze
     maze = Maze.last
     maze.start_blocks = '<xml/>'
+    maze.published = true
     maze.save!
 
     maze.reload
@@ -288,7 +291,7 @@ EOS
   end
 
   def create_maze
-    maze = create(:maze)
+    maze = create(:maze, :published => true)
     assert maze
   end
 
@@ -400,4 +403,52 @@ EOS
     level3 = create(:level)
     assert_equal(level3, Level.cache_find(level3.id))
   end
+
+
+  test 'where we want to calculate ideal level source' do
+    match_level = Match.create(name: 'a match level')
+    level_with_ideal_level_source_already = Artist.create(name: 'an artist level with a solution', solution_blocks: '<xml></xml>')
+    freeplay_artist = Artist.create(name: 'freeplay artist', free_play: true)
+    regular_artist = Artist.create(name: 'regular artist')
+
+    levels = Level.where_we_want_to_calculate_ideal_level_source
+
+    assert !levels.include?(match_level)
+    assert !levels.include?(level_with_ideal_level_source_already)
+    assert !levels.include?(freeplay_artist)
+    assert levels.include?(regular_artist)
+  end
+
+  test 'calculate_ideal_level_source_id does nothing if no level sources' do
+    level = Maze.create(name: 'maze level with no level sources')
+    assert_equal nil, level.ideal_level_source_id
+
+    level.calculate_ideal_level_source_id
+    assert_equal nil, level.ideal_level_source_id
+  end
+
+  test 'calculate_ideal_level_source_id sets ideal_level_source_id to best solution' do
+    level = Maze.create(name: 'maze level with level sources')
+    assert_equal nil, level.ideal_level_source_id
+
+
+    right = create(:level_source, level: level, data: "<xml><right/></xml>")
+    6.times do
+      create(:activity, level: level, level_source: right, test_result: 100)
+    end
+
+    wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
+    10.times do
+      create(:activity, level: level, level_source: wrong, test_result: 0)
+    end
+
+    right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
+    2.times do
+      create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
+    end
+
+    level.calculate_ideal_level_source_id
+    assert_equal right, level.ideal_level_source
+  end
+
 end

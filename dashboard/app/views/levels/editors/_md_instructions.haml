@@ -12,7 +12,18 @@
 
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('markdown_instructions', 'markdown', function (editor, change) {
+    localStorage.setItem('markdown_' + #{@level.id}, editor.getValue());
+
     $('#markdown-instructions-preview')
       .html(marked(editor.getValue()))
       .children('details').details();
   }, true);
+
+  var locallyStoredMarkdown = localStorage.getItem('markdown_' + #{@level.id});
+  if (locallyStoredMarkdown) {
+    mdEditor.setValue(locallyStoredMarkdown);
+  }
+
+  $('#markdown-instructions-preview')
+      .html(marked(mdEditor.getValue()))
+      .children('details').details();

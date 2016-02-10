@@ -22,7 +22,7 @@ ru:
           "Bee 1: Intro": 'Пчела 1: Введение'
           "Maze 2: Loops": 'Лабиринт 2: Циклы'
           "Bee 2: Loops": 'Пчела 2: Циклы'
-          Multi & Match: Много и совпадение
+          Multi & Match: Множество и соответствие
           K-1 Flappy: Птичка для детского сада
           Flappy non blockly: Flappy без использования блоков
           title: Курс 1
@@ -42,11 +42,11 @@ ru:
           "Bee: Loops": 'Пчела: Циклы'
           "Studio: Create a Story": 'Лаборатория игр: Создать историю'
           "Artist: Loops": 'Художник: Циклы'
-          description_audience: Возраст 4+ (для начинающих и ещё не умеющих читать)
-          description_short: Начните с Курса 1, который создан для тех, кто начинает читать.
+          description_audience: От 4 до 6 лет
+          description_short: Начните с Курса 1 для тех, кто начинает читать.
         course2:
           The Maze: Лабиринт
-          Suzi: Сюзи
+          Suzi: Сьюзи
           The Artist: Художник
           Artist Debugging: 'Художник: Отладка'
           Bounce: Прыжок
@@ -81,7 +81,7 @@ ru:
           "Artist: Sequence2": 'Художник: Последовательность2'
           "Maze: Sequence2": 'Лабиринт: Последовательность2'
           "Artist: Nested Loops": 'Художник: Вложенные циклы'
-          description_audience: Возраст 6+ (необходимо уметь читать)
+          description_audience: От 6 до 18 лет
           description_short: Начните с Курса 2, который создан для учеников, умеющих читать.
         course3:
           The Maze: Лабиринт
@@ -96,7 +96,7 @@ ru:
           Bee Debuggin: 'Пчела: Отладка'
           Bee Debugging: 'Пчела: Отладка'
           Bee Functions: 'Пчела: Процедуры'
-          Artist Functions with Params: 'Художник: процедуры с параметрами'
+          Artist Functions with Params: 'Художник: Метод Параметры'
           Bounce: Прыжок
           Maze Conditionals: 'Лабиринт: Условные команды'
           Artist Functions with Parameters: 'Художник: процедуры с параметрами'
@@ -132,7 +132,7 @@ ru:
           "Bee: Debugging2": 'Пчела: Отладка2'
           "Artist: Patterns": 'Художник: Узоры'
           Songwriting: Написание песен
-          description_audience: Возраст 8+ (для закончивших Курс 2)
+          description_audience: От 8 до 18 лет
           description_short: Курс 3 является продолжением Курса 2.
         playlab:
           title: Лаборатория игр
@@ -155,7 +155,7 @@ ru:
           Artist: Художник
           description_short: Давайте использовать код, чтобы присоединиться к Анне и Эльзе, открывающим магию и красоту льда.
         course4:
-          description_short: Для изучения Курса 4, ученики должны предварительно пройти Курсы 2 и 3.
+          description_short: Для изучения Курса 4 ученики должны предварительно пройти Курсы 2 и 3.
           description: Курс 4 разработан для учеников, которые уже освоили Курсы 2 и 3. Учащиеся рассмотрят более подробно разделы программирования, с которыми ознакомились ранее, и будут разрабатывать гибкие решения для сложных задач. Во время обучения, учащиеся будут создавать интерактивные игры или истории, которыми смогут поделиться с другими. Рекомендуется для 4-8 классов.
           "Artist: Variables": 'Художник: Переменные'
           "Bee: For Loops": 'Пчела: циклы с параметром'
@@ -926,6 +926,7 @@ ru:
           Pixelation: Пикселизация
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Фаза 2 онлайн: Смешанная летняя учёба'
@@ -1308,6 +1309,7 @@ ru:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1368,10 +1370,14 @@ ru:
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          "Practice Create PT: Data App": 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
           Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1483,12 +1489,12 @@ ru:
           description: Создай сказку или игру с лабораторией игр Gumball!
           Gumball Play Lab: Лаборатория игр Gumball
         starwars:
-          title: 'Звездные войны: Создай галактику, вместе с Code.org'
+          title: 'Звездные войны: Создание галактики через код'
           description_short: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           Hour of Code 2015: Час кода 2015
         starwarsblocks:
-          title: 'Звездные войны: Создай галактику, вместе с Code.org'
+          title: 'Звездные войны: Создание галактики через код'
           description_short: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           description: Научись программировать дроидов и создай свою собственную игру по мотивам Звездных войн в далекой-далекой галактике.
           Hour of Code 2015: Час кода 2015
@@ -1518,3 +1524,41 @@ ru:
           Wrap-Up: Итоги
           Assessing Computer Models: Assessing Computer Models
           (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -141,7 +142,7 @@ class Level < ActiveRecord::Base
   end
 
   def write_custom_level_file
-    if changed? && write_to_file?
+    if changed? && write_to_file? && self.published
       file_path = LevelLoader.level_file_path(name)
       File.write(file_path, self.to_xml)
       file_path
@@ -185,6 +186,20 @@ class Level < ActiveRecord::Base
     end
   end
 
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
+    ['Unplugged', # no solutions
+     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', # dsl defined, covered in dsl
+     'Applab', 'Gamelab', # all applab and gamelab are freeplay
+     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation'] # widgets
+  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
+
+  def self.where_we_want_to_calculate_ideal_level_source
+    self.
+      where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+      where('ideal_level_source_id is null').
+      to_a.reject {|level| level.try(:free_play)}
+  end
+
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.
@@ -217,7 +232,7 @@ class Level < ActiveRecord::Base
   # on that level.
   def channel_backed?
     return false if self.try(:is_project_level)
-    self.project_template_level || self.game == Game.applab || self.game == Game.pixelation
+    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.pixelation
   end
 
   def key

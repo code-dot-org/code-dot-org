@@ -28,7 +28,7 @@
           desc: "පැයේ කේතය"
           Maze: "අදියර 1"
         Edit Code:
-          desc: Edit Code (beta)
+          desc: "කේතය සංස්කරණය (බීටා)"
           MazeEC: "අදියර 1"
         2014 Levels:
           desc: Bounce (beta)
@@ -46,7 +46,7 @@
           desc: Maze (beta)
           MazeStep: Stage Step
         edit-code:
-          desc: Edit Code (beta)
+          desc: "කේතය සංස්කරණය (බීටා)"
           MazeEC: "අදියර 1"
           Applab: "අදියර 2"
           ArtistEC: "අදියර 3"
@@ -98,7 +98,7 @@
         Flappy: Flappy Bird
         Jigsaw: Jigsaw
         MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
+        Wordsearch: "වචනය සෙවීම"
         Webapp: App Lab
         ArtistEC: "කලාකරුවා"
         TextMatch: Text Match
@@ -723,6 +723,12 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3

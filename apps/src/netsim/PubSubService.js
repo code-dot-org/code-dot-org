@@ -1,17 +1,12 @@
 /**
  * @overview Wrapped pub/sub service client APIs (like Pusher)
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
 
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
+ maxlen: 120
  */
 /* global Pusher */
 'use strict';

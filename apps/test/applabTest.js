@@ -19,6 +19,21 @@ window.dashboard = window.dashboard || {};
 var Applab = require('@cdo/apps/applab/applab');
 var designMode = require('@cdo/apps/applab/designMode');
 var applabCommands = require('@cdo/apps/applab/commands');
+var constants = require('@cdo/apps/applab/constants');
+
+function setupVizDom() {
+  // Create a sample DOM to test against
+  var sampleDom =
+    '<div>' +
+      '<div id="designModeViz">' +
+        '<div class="screen" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'screen1">' +
+          '<div class="chart" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'chart9"></div>' +
+          '<img src="" class="chart-friend" id="' + constants.DESIGN_ELEMENT_ID_PREFIX + 'image1">' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  return $(sampleDom);
+}
 
 describe('applab: designMode.addScreenIfNecessary', function () {
   it ('adds a screen if we dont have one', function () {
@@ -60,17 +75,7 @@ describe('applab: getIdDropdown filtering modes', function () {
   var documentRoot;
 
   beforeEach(function () {
-    // Create a sample DOM to test against
-    var sampleDom =
-        '<div>' +
-          '<div id="divApplab">' +
-            '<div class="screen" id="screen1">' +
-              '<div class="chart" id="chart9"></div>' +
-              '<img src="" class="chart-friend" id="image1">' +
-            '</div>' +
-          '</div>' +
-        '</div>';
-    documentRoot = $(sampleDom);
+    documentRoot = setupVizDom();
   });
 
   it('produces all IDs when no filter is given', function () {
@@ -100,18 +105,6 @@ describe('applab: getIdDropdown filtering modes', function () {
     ]);
   });
 
-  it('can filter on ID', function () {
-    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#screen1'), [
-      { "display": '"screen1"', "text": '"screen1"' }
-    ]);
-    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#chart9'), [
-      { "display": '"chart9"', "text": '"chart9"' }
-    ]);
-    assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '#image1'), [
-      { "display": '"image1"', "text": '"image1"' }
-    ]);
-  });
-
   it('does not accidentally pick up superset classes', function () {
     // Make sure searching for elements with class ".chart" does not also pick
     // up elements with class ".chart-friend"
@@ -120,6 +113,20 @@ describe('applab: getIdDropdown filtering modes', function () {
     ]);
     assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'), [
       { "display": '"image1"', "text": '"image1"' }
+    ]);
+  });
+});
+
+describe('applab: getIdDropdownForCurrentScreen ordering', function () {
+  var documentRoot;
+
+  beforeEach(function () {
+    documentRoot = setupVizDom();
+  });
+
+  it('returns the correct ordering', function () {
+    assert.deepEqual(Applab.getIdDropdownForCurrentScreenFromDom_(documentRoot), [
+      'screen1', 'chart9', 'image1'
     ]);
   });
 });

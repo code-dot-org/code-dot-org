@@ -20,8 +20,8 @@ ro-RO:
   submit: Trimite
   twentyhours_heading: Încearcă Cursul nostru de Introducere în Informatică
   twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Fiecare copil merită o portunitate
+  og_description: Fiecare student în fiecare școală merită o șansă de a studia informatica.
   hoc2014_heading: 'Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>'
   hoc2014_students: Elevi
   hoc2014_try: Încearcă
@@ -58,11 +58,6 @@ ro-RO:
   congratulations: Felicitări!
   congratulations_on_completing_hoc: Felicitări pentru finalizarea unei Ore de Cod
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare, <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  course_name_accelerated: Curs intensiv
-  course_name_course1: Curs 1
-  course_name_course2: Cursul 2
-  course_name_course3: Cursul 3
-  course_name_course4: Curs 4
   congratulations_on_completing_course: 'Felicitări pentru finalizarea %{course}'
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
   congrats_next_tutorials_desc: 'Încercați aceste tutoriale mai scurte, de 1 oră sau încercaţi un <a href="%{current_path}/next"> partener tutorial</a>.'
@@ -113,9 +108,9 @@ ro-RO:
   learn_next_level: Incearca un alt curs in Studio-ul Code
   learn_online: Încearcă alte cursuri online
   learn_classes: Găsește clase local
-  hoc_is_here: '#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
-  twitter_teach_cs: 'De ce nu se preda informatica in mai multe scoli? Putem repara acest lucru. http://youtu.be/nKIu9yen5nc. Vizitati  http://code.org/ pentru a invata mai mult.'
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Învață o Oră de Cod
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -215,7 +210,7 @@ ro-RO:
   homepage_banner_text_link: Află mai mult
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Află mai mult
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20000 de profesori instruiţi, şi acum predau informatică în sălile de clasă.
   homepage_banner_20k_teachers_link: Află mai mult
   homepage_slot_text_title_hoc: Oră de Programare
   homepage_slot_text_blurb_hoc: Oricine poate învăța. Începe astăzi
@@ -225,7 +220,7 @@ ro-RO:
   homepage_solot_text_link_volunteer: Voluntariaza pentru Ora de Cod
   homepage_slot_text_title_students: Elevi
   homepage_slot_text_blurb_students: Explorează toate tutorialele noastre
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explorează cursurile noastre
   homepage_slot_text_link_codestudio: Încearcă Studio-ul Code
   homepage_slot_text_link_local: Găsește o clasă locală
   homepage_slot_text_link_othercourses: Alte cursuri online
@@ -314,7 +309,7 @@ ro-RO:
     Acesti profesori ar fi incantati sa aiba pe cineva <span style="font-family: 'Gotham 7r', sans-serif;"> pasionati de informatica </span> care pot ajuta in sala de clasa sau cineva care poate <span style="font-family: 'Gotham7r', sans-serif;">inspira</span> studentii vorbindu-le despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul unui video chat). Daca nu esti interesat de voluntariat, <a href="%{url}">afla mai multe</a> despre organizarea proprie a Orei de programare.
   volunteer_engineer_submission_intro_signup: 'Te rugăm sa introduci următoarele informaţii, dacă ești un student la automatică și calculatoare sau matematică-informatică sau un profesionist în software. Câmpurile marcate cu un <span class="form-required-field"> *</span> sunt obligatorii.'
   volunteer_engineer_submission_intro_links: 'Nu cauti sa fii voluntar?<a href="%{learn_more}">Afla mai multe</a>despre cum poti organiza propriul eveniment Hour of Code si cum poti gasi o scoala locala la care sa fii voluntar<a href="%{volunteer_local}">pe harta noastra</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Vă rugăm să actualizați informațiile dumneavoastră
   volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor pe harta voluntarilor
   volunteer_engineer_submission_field_name: Nume
   volunteer_engineer_submission_field_name_placeholder: Nume complet
@@ -549,7 +544,7 @@ ro-RO:
   dashboard_faq_k5: 'Întrebări frecvente - clasele primare'
   dashboard_announcements: Anunțuri
   dashboard_announce_view_all: Vizualizare toate
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Află mai mult
   dashboard_announce_hoc: '<b>30 Septembrie 2015</b> - Ora de Cod 2015 se apropie! Alatura-te claselor din toata lumea din cadrul celui mai mare eveniment didactic din istorie.'
   dashboard_announce_playlab: '<b>4 Decembrie 2015</b>-Ora de cod este aici! Incearca 50 de tutoriale pentru orice varsta sau device. Nou saptamana aceasta: Programeaza-ti propiile povesti sau jocuri in noul Play Lab, Epoca de Gheata si Gumball.'

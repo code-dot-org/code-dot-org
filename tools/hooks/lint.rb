@@ -49,7 +49,7 @@ def lint_failure(output)
 end
 
 def do_linting()
-  modified_files = HooksUtils.get_modified_files
+  modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_jshint) => filter_grunt_jshint(modified_files),

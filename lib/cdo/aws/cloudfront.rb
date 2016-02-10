@@ -84,7 +84,9 @@ module AWS
     #  While CloudFront is propagating your changes to edge locations, we cannot determine whether a given edge
     #  location is serving your content based on the previous configuration or the new configuration."
     def self.create_or_update
-      cloudfront = Aws::CloudFront::Client.new
+      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+                                               log_level: :debug,
+                                               http_wire_trace: true)
       ids = CONFIG.keys.map do |app|
         distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
           i.aliases.items.include?(CDO.method("#{app}_hostname").call)
@@ -255,7 +257,7 @@ module AWS
         },
         smooth_streaming: false,
         default_ttl: 0,
-        max_ttl: 31536000, # =1 year
+        max_ttl: 31_536_000, # =1 year
       }
       behavior[:path_pattern] = path if path
       behavior

@@ -8,7 +8,7 @@ hero_malala,widehero,homepage_hero_text_malala,50% 30%,celeb,bottom,,,/images/ho
 hero_susan,widehero,homepage_hero_text_susan,52% 6%,celeb,top,,,/images/homepage/susan.jpg,both,show,all
 hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,bottom,,,/images/homepage/satya.jpg,both,show,all
 hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeba,bottom,,,/images/homepage/sheryl.jpg,both,show,all
-hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeba,bottom,,,/images/homepage/fistbump.jpg,both,show,all
+hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeba,bottom,,,/images/homepage/fistbump.jpg,both,nah,all
 hero_student_girl,widehero,homepage_hero_text_student1,50% 30%,student,bottom,,,/images/homepage/girl.jpg,both,show,all
 hero_student_boyblue,widehero,homepage_hero_text_student2,55% 7%,student,top,,,/images/homepage/boy5.jpg,both,show,all
 hero_student_boybosh,widehero,homepage_hero_text_bosh,62% 33%,celeb,bottom,,,/images/homepage/boy7.jpg,both,show,all
@@ -20,8 +20,9 @@ action_hoc_title,action,homepage_action_text_hoc,hoc_title,,,,,,code.org,show,al
 action_num_served,action,homepage_action_text_num_served,num_served,,,,,,code.org,show,all
 action_hoc_buttons,action,homepage_action_text_join_us,hoc_buttons,homepage_action_text_try_it,https://hourofcode.com,/learn,,,code.org,show,all
 action_signup_button,action,get_started,signup_button,/learn,,,,,code.org,show,all
-action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,,,,,csedweek.org,show,all
-action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,,,,,code.org,show,all
+action_codevideo,action,homepage_action_text_codevideo,video,nKIu9yen5nc,//videos.code.org/social/what-most-schools-dont-teach.mp4,,,,code.org,show,all
+action_teachervideo,action,homepage_action_text_teachervideo,video,2DxWIxec6yo,//videos.code.org/social/hourofcode-2015-50MB.mp4,,,,csedweek.org,show,all
+action_girlvideo,action,homepage_action_text_girlvideo,video,mFPg96gdPkc,//videos.code.org/social/ChangeTheWorld_v5.mp4,,,,code.org,nah,all
 action_volunteers,action,homepage_action_text_volunteers,volunteers,,,,,,code.org,show,all
 action_learn,action,homepage_action_text_learn,learn,/learn,,,,,both,show,all
 action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,show,all

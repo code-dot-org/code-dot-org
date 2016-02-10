@@ -365,31 +365,22 @@
     playlab_intro:
       1:
         image: notes/playlab_intro_1.png
-        text: We're going to create games using Play Lab. Good games have a story,
-          and every story has actors. We'll learn how to make our actors like witches,
-          alinens, and animals speak, move, and interact with each other. By the end
-          of this tutorial, you can build a game from scratch and share it with your
-          friends.
+        text: "私たちはPlay Labを使ってゲームを作成します。よいゲームは物語があり、全ての物語にはキャラがいます。私たちはどうやってキャラたちが魔女、エイリアンのようなものを作り、そして動物たちが話し動きお互いに交流するか教わるでしょう。このチュートリアルの最後ではscratch
+          でゲームを作成し、それをあなたの友達と共有します。"
       2:
         image: notes/playlab_intro_2.png
         text: "画面が3つに分割されます。左は、あなたが書いたプログラムが実行されるゲームの画面です。その下に、各レベルの説明が書いてあります。"
       3:
         image: notes/playlab_intro_3.png
-        text: The middle area is the toolbox, and each of these blocks is a piece
-          of code. The white space on the right is called the workspace and this is
-          where we'll build our program.
+        text: "真ん中はツールボックスで、それぞれのブロックにコードが書かれています。右側の空白はワークスペースと呼ばれ、そこで私たちのプログラムを構築します。"
       4:
         image: notes/playlab_intro_4.png
-        text: To start off, you'll need to link your blocks to the orange "when run"
-          block. You can link multiple blocks together by dragging them out until
-          you see the yellow line, and then they'll snap together.
+        text: |
+          まず最初に、オレンジ色の「実行時」ブロックに他のブロックをつなげる必要があります。
+          黄色い線が見えるまでブロックをドラッグすることによって、たくさんの種類のブロックを一緒につなげることが出来ます。
       5:
         image: notes/playlab_intro_5.png
-        text: In this first puzzle, our actor is a penguin and we'll be making it
-          say "Hello!" by dragging the say block out, linking it to the when run block,
-          and typing in "Hello." We can also make the penguin move by using the move
-          right and move left blocks. Once you have your blocks in place, hit the
-          run button to see what you've programmed.
+        text: "「言う」ブロックをドラッグして「実行した時」ブロックにくっつけて、「こんにちは」と入力することによって「こんにちは」と’話すペンギンになります。私たちはまた「右へ動く」と「左へ動く」ブロックを使うことによってペンギンを動かすこともできます。ブロックを配置したら’実行’ボタンを押すとあなたがプログラミングした結果が見られます。"
       6:
         image: notes/playlab_intro_6.png
         text: Get started and by the end, you'll be able to create your own game with
@@ -399,13 +390,12 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: Now, we're going to learn about something that all game programmers
-          use everyday. They're called events. An event tells your program to listen
-          for when something happens. When that thing happens, it performs an action.
+        text: |
+          今、私たちはすべてのゲームプログラマーが毎日使う何かについてを教わる予定です。
+          それらは「イベント」と呼ばれます。イベントは何かが起こった時、それをあなたのプログラムに教えてくれます。何かが起こった時、アクションが実行されます。
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: "イベントの例としては、マウスをクリックしたり、矢印ボタンやスクリーンを軽くタッチする事を聞くことです。"
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a
@@ -424,20 +414,17 @@
         text: "これは「ずっと繰り返す」ブロックです。このブロックの中にあるものは、プログラムが終わるまでずっと繰り返されます。"
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: "もし私たちがキャラに何かを繰り返しさせたかったりプレイヤーがなにもしないとき、私たちは「永遠に繰り返す」ブロックの中にそれらのブロックを置きます。"
       3:
         image: notes/playlab_repeat_forever_3.png
         text: "この次のパズルでは、魔法使いが王国中を常に右へ左へパトロールできるように助けることが目標です。繰り返しのコマンドを学ぶことで、後で自分のゲームを作る時に役に立つでしょう。"
     C1_artist_intro:
       1:
         image: notes/C1_artist_intro_1.png
-        text: These are your draw blocks. Use the correct one to move the artist where
-          he needs to go to fill in the grey lines.
+        text: "これらは描画ブロックです。それらをアーティストが灰色の線をつくるのに必要な場所に適切なものを動かして使ってください。"
       2:
         image: notes/C1_artist_intro_2.png
-        text: These are jump blocks. When you use these, your artist moves but doesn't
-          draw, so use these to jump to the next grey line.
+        text: "それらはジャンプブロックです。アーティストは動くけれど線が描かれないとき、これらを使用して次の灰色の線にジャンプさせます。"
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
@@ -642,46 +629,37 @@
           the smiley face goal.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: |
+          スマイリーは顔を下げたが、たった一人の人はどうやってそこへ行けるか知っている。
+          さあこのプログラムをスタートしよう。
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: |
+          プログラムは機械で実行することができるコードを符号化しているアルゴリズムです。
+          ほとんどの人はプログラムはコンピュータのために私たちが書く何かだと考えています。
+          プログラムは他の場面でも役に立つ素晴らしいものです。あなたは自分でゲームを作ることが出来るし、そのプログラムはあなたのためにロボットがする何かにもなります。
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: |
+          エレミヤといいます。こんにちは！私は 7 歳です。
+          私はお母さんのコンピューターで遊ぶことが大好きです。もちろんいつも最初に許可をとりますよ。
+          「お母さん、コンピューターを使っていいでしょ？ねっ！」って。
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: "私はインターネットが使えるので私のお母さんのコンピューターが大好きです。インターネットは、あなたの近所のようなものです。あなたはカッコいい場所を訪れることができますし、あなたは家族や友達と（コンピュータで）話せるし、たくさんの新しいことを教わることができます。"
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: "昨日、私は家の近くの動物園を訪れたの。私は赤ちゃんのシマウマをみたよ。私は写真を撮って縞模様の色を変えて、帽子を追加して、それを私の風変わりな動物コレクションに追加したの。すごいでしょ。そして、私はとっても遠くの場所へ行ったの。私はケニアを訪れたわ。その国はアフリカにあるの。そこにはたくさんのシマウマがいるのよ。"
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
-          talk to people I know.
+        text: |
+          時々インターネットでおばあちゃんのような他の地域に住んでいる知っている人と話します。
+          こんにちは。おばあちゃん！彼女は私にクッキーを焼いていて、私の誕生日に送ってくれるの。
+          「おいしいよ。インターネットは smellorama！のようね。」私はインターネットで他の人（知らない人）とはなすこともできるけど、いとこのように私の知っている人とだけ話すわ。
       5:
         image: notes/C1_going_places_safely_5.png
-        text: What I like most on the interent is that I get to play fun games. Score!
-          I also like to draw and create new things and share it with my friends.
-          Cool! Sometimes I visit websites where I learn new things but I always stick
-          to websites that are just right for me. Wow, dinosaurs!
+        text: "私が一番好きなインターネットはゲームで遊ぶこと。スコア！私は描いたり新しい何かを作ることや、それを友達と共有することも好きだ。かっこいい！時々私はウェブサイトを訪れて新しい何かを教わるけど、いつもお気に入りのウェブサイトに夢中になってしまいます。うわー恐竜！"
       6:
         image: notes/C1_going_places_safely_6.png
         text: 'The internet is a super fun place. But just like when you cross a street

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130084049) do
+ActiveRecord::Schema.define(version: 20160205205103) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -272,7 +272,7 @@ ActiveRecord::Schema.define(version: 20160130084049) do
 
   create_table "levels", force: :cascade do |t|
     t.integer  "game_id",                  limit: 4
-    t.string   "name",                     limit: 255,   null: false
+    t.string   "name",                     limit: 255,                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num",                limit: 255
@@ -282,6 +282,7 @@ ActiveRecord::Schema.define(version: 20160130084049) do
     t.text     "properties",               limit: 65535
     t.string   "type",                     limit: 255
     t.string   "md5",                      limit: 255
+    t.boolean  "published",                              default: false, null: false
   end
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree

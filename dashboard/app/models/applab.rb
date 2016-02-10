@@ -14,6 +14,7 @@
 #  properties               :text(65535)
 #  type                     :string(255)
 #  md5                      :string(255)
+#  published                :boolean          default(FALSE), not null
 #
 # Indexes
 #
@@ -98,6 +99,7 @@ class Applab < Blockly
         "deleteElement": null,
         "setPosition": null,
         "setSize": null,
+        "setProperty": null,
         "write": null,
         "getXPosition": null,
         "getYPosition": null,
@@ -217,7 +219,8 @@ class Applab < Blockly
         "functionParams_n": null,
         "callMyFunction": null,
         "callMyFunction_n": null,
-        "return": null
+        "return": null,
+        "comment": null
       }
     JSON
   end

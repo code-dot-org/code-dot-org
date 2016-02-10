@@ -1,5 +1,6 @@
 var utils = require('../utils');
 var mazeMsg = require('./locale');
+var Cell = require('./beeCell');
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 
@@ -8,9 +9,6 @@ var UNLIMITED_NECTAR = 99;
 
 var EMPTY_HONEY = -98; // Hive with 0 honey
 var EMPTY_NECTAR = 98; // flower with 0 honey
-
-// FC is short for FlowerComb, which we were originally using instead of cloud
-var CLOUD_MARKER = 'FC';
 
 var Bee = function (maze, studioApp, config) {
   this.maze_ = maze;
@@ -26,31 +24,138 @@ var Bee = function (maze, studioApp, config) {
   this.nectarGoal_ = config.level.nectarGoal || 0;
   this.honeyGoal_ = config.level.honeyGoal || 0;
 
-  // Create our own copy to ensure that it's not changing underneath us
-  this.initialDirt_ = utils.cloneWithoutFunctions(config.level.initialDirt);
-
   // at each location, tracks whether user checked to see if it was a flower or
   // honeycomb using an if block
   this.userChecks_ = [];
+
+  // The "raw dirt" represents the raw values as entered into the
+  // levelbuilder UI. They are a grid of either integers or strings,
+  // and can represent "variable" values, which means any given cell can
+  // theoretically contain one of a variety of objects.
+  //
+  // We parse the strings into objects, then turn the "variable" grid
+  // into a list of "static" grids, representing all the possible
+  // combinations of objects.
+  //
+  // We also initialize a "values" grid, which for objects that have
+  // values (hives and flowers) keeps track of their current state.
+  var rawDirt_ = config.level.rawDirt;
+  var variableGrid = rawDirt_.map(function (row) {
+    return row.map(Cell.parse);
+  });
+  this.staticGrids = Bee.getAllStaticGrids(variableGrid);
+
+  this.currentStaticGridId = 0;
+  this.currentStaticGrid = this.staticGrids[0];
 };
 
 module.exports = Bee;
 
+/**
+ * Clones the given grid of BeeCells by calling BeeCell.clone
+ * @param {BeeCell[][]} grid
+ * @return {BeeCell[][]} grid
+ */
+Bee.cloneGrid = function (grid) {
+  return grid.map(function (row) {
+    return row.map(function (cell) {
+      return cell.clone();
+    });
+  });
+};
+
+/**
+ * Given a single grid of BeeCells, some of which may be "variable"
+ * cells, return a list of grids of non-variable BeeCells representing
+ * all possible variable combinations.
+ * @param {BeeCell[][]} variableGrid
+ * @return {BeeCell[][][]} grids
+ */
+Bee.getAllStaticGrids = function (variableGrid) {
+  var grids = [ variableGrid ];
+  variableGrid.forEach(function (row, x) {
+    row.forEach(function (cell, y) {
+      if (cell.isVariableCloud()) {
+        var possibleAssets = cell.getPossibleGridAssets();
+        var newGrids = [];
+        possibleAssets.forEach(function(asset) {
+          grids.forEach(function(grid) {
+            var newMap = Bee.cloneGrid(grid);
+            newMap[x][y] = asset;
+            newGrids.push(newMap);
+          });
+        });
+        grids = newGrids;
+      }
+    });
+  });
+  return grids;
+};
+
+/**
+ * Simple passthrough that calls resetCurrntValue for every BeeCell in
+ * this.currentStaticGrid
+ */
+Bee.prototype.resetCurrentValues = function () {
+  this.currentStaticGrid.forEach(function (row) {
+    row.forEach(function (cell) {
+      cell.resetCurrentValue();
+    });
+  });
+};
+
+/**
+ * Resets current state, for easy reexecution of tests
+ */
 Bee.prototype.reset = function () {
   this.honey_ = 0;
   // list of the locations we've grabbed nectar from
   this.nectars_ = [];
-  for (var i = 0; i < this.initialDirt_.length; i++) {
+  for (var i = 0; i < this.currentStaticGrid.length; i++) {
     this.userChecks_[i] = [];
-    for (var j = 0; j < this.initialDirt_[i].length; j++) {
+    for (var j = 0; j < this.currentStaticGrid[i].length; j++) {
       this.userChecks_[i][j] = {
         checkedForFlower: false,
+        checkedForHive: false,
         checkedForNectar: false
       };
     }
   }
-  this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
-  this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  if (this.maze_.gridItemDrawer) {
+    this.maze_.gridItemDrawer.updateNectarCounter(this.nectars_);
+    this.maze_.gridItemDrawer.updateHoneyCounter(this.honey_);
+  }
+  this.resetCurrentValues();
+};
+
+/**
+ * Assigns this.currentStaticGrid to the appropriate grid and resets all
+ * current values
+ * @param {Number} id
+ */
+Bee.prototype.useGridWithId = function (id) {
+  this.currentStaticGridId = id;
+  this.currentStaticGrid = this.staticGrids[id];
+  this.resetCurrentValues();
+  this.reset();
+};
+
+/**
+ * @param {Number} row
+ * @param {Number} col
+ * @returns {Number} val
+ */
+Bee.prototype.getValue = function (row, col) {
+  return this.currentStaticGrid[row][col].getCurrentValue();
+};
+
+/**
+ * @param {Number} row
+ * @param {Number} col
+ * @param {Number} val
+ */
+Bee.prototype.setValue = function (row, col, val) {
+  this.currentStaticGrid[row][col].setCurrentValue(val);
 };
 
 /**
@@ -99,9 +204,9 @@ Bee.prototype.onExecutionFinish = function () {
  * Did we check every flower/honey that was covered by a cloud?
  */
 Bee.prototype.checkedAllClouded = function () {
-  for (var row = 0; row < this.initialDirt_.length; row++) {
-    for (var col = 0; col < this.initialDirt_[row].length; col++) {
-      if (this.isCloudable(row, col) &&  !this.userChecks_[row][col].checkedForFlower) {
+  for (var row = 0; row < this.currentStaticGrid.length; row++) {
+    for (var col = 0; col < this.currentStaticGrid[row].length; col++) {
+      if (this.isCloudable(row, col) && !this.checkedCloud(row, col)) {
         return false;
       }
     }
@@ -113,8 +218,8 @@ Bee.prototype.checkedAllClouded = function () {
  * Did we check every purple flower
  */
 Bee.prototype.checkedAllPurple = function () {
-  for (var row = 0; row < this.initialDirt_.length; row++) {
-    for (var col = 0; col < this.initialDirt_[row].length; col++) {
+  for (var row = 0; row < this.currentStaticGrid.length; row++) {
+    for (var col = 0; col < this.currentStaticGrid[row].length; col++) {
       if (this.isPurpleFlower(row, col) && !this.userChecks_[row][col].checkedForNectar) {
         return false;
       }
@@ -181,16 +286,15 @@ Bee.prototype.getMessage = function (terminationValue) {
 };
 
 /**
- * Each cell of initialDirt is below zero if it's a hive. The number represents
- * how much honey can be made at the hive.
  * @param {boolean} userCheck Is this being called from user code
  */
 Bee.prototype.isHive = function (row, col, userCheck) {
   userCheck = userCheck || false;
   if (userCheck) {
-    this.userChecks_[row][col].checkedForFlower = true;
+    this.userChecks_[row][col].checkedForHive = true;
   }
-  return this.initialDirt_[row][col] < 0;
+  var cell = this.currentStaticGrid[row][col];
+  return cell.isHive();
 };
 
 /**
@@ -201,36 +305,43 @@ Bee.prototype.isFlower = function (row, col, userCheck) {
   if (userCheck) {
     this.userChecks_[row][col].checkedForFlower = true;
   }
-  return this.initialDirt_[row][col] > 0;
+  var cell = this.currentStaticGrid[row][col];
+  return cell.isFlower();
 };
 
 /**
  * Returns true if cell should be clovered by a cloud while running
  */
 Bee.prototype.isCloudable = function (row, col) {
-  return this.maze_.map[row][col] === CLOUD_MARKER;
+  return this.currentStaticGrid[row][col].isStaticCloud();
+};
+
+/**
+ * Returns true if cell has been checked for either a flower or a hive
+ */
+Bee.prototype.checkedCloud = function (row, col) {
+  return this.userChecks_[row][col].checkedForFlower || this.userChecks_[row][col].checkedForHive;
 };
 
 /**
  * Flowers are either red or purple. This function returns true if a flower is red.
  */
 Bee.prototype.isRedFlower = function (row, col) {
-  if (!this.isFlower(row, col)) {
+  if (!this.isFlower(row, col, false)) {
     return false;
   }
 
-  // The default flower type is overriden by setting Maze.map[row][col] to
-  // the type you want ('R' for red, 'P' for purple, 'FC' for cloud).  Clouds
-  // are ignored here.
-  var override = /^R|P$/.exec(this.maze_.map[row][col]);
-  if (override && override[0] === 'R') {
+  // If the flower has been overridden to be red, return true.
+  // Otherwise, if the flower has been overridden to be purple, return
+  // false. If neither of those are true, then the flower is whatever
+  // the default flower color is.
+  if (this.currentStaticGrid[row][col].isRedFlower()) {
     return true;
+  } else if (this.currentStaticGrid[row][col].isPurpleFlower()) {
+    return false;
+  } else {
+    return this.defaultFlowerColor_ === 'red';
   }
-  if (!override && this.defaultFlowerColor_ === 'red') {
-    return true;
-  }
-
-  return false;
 };
 
 /**
@@ -244,7 +355,7 @@ Bee.prototype.isPurpleFlower = function (row, col) {
  * See isHive comment.
  */
 Bee.prototype.hiveGoal = function (row, col) {
-  var val = this.initialDirt_[row][col];
+  var val = this.getValue(row, col);
   if (val >= -1) {
     return 0;
   }
@@ -261,7 +372,7 @@ Bee.prototype.hiveRemainingCapacity = function (row, col) {
     return 0;
   }
 
-  var val = this.maze_.dirt_[row][col];
+  var val = this.getValue(row, col);
   if (val === UNLIMITED_HONEY) {
     return Infinity;
   }
@@ -275,7 +386,7 @@ Bee.prototype.hiveRemainingCapacity = function (row, col) {
  * How much more nectar can be collected from the flower at (row, col)
  */
 Bee.prototype.flowerRemainingCapacity = function (row, col) {
-  var val = this.maze_.dirt_[row][col];
+  var val = this.getValue(row, col);
   if (val < 0) {
     // not a flower
     return 0;
@@ -294,8 +405,8 @@ Bee.prototype.flowerRemainingCapacity = function (row, col) {
  * Update model to represent made honey.  Does no validation
  */
 Bee.prototype.madeHoneyAt = function (row, col) {
-  if (this.maze_.dirt_[row][col] !== UNLIMITED_HONEY) {
-    this.maze_.dirt_[row][col] += 1; // update progress towards goal
+  if (this.getValue(row, col) !== UNLIMITED_HONEY) {
+    this.setValue(row, col, this.getValue(row, col) + 1);
   }
 
   this.honey_ += 1;
@@ -305,8 +416,8 @@ Bee.prototype.madeHoneyAt = function (row, col) {
  * Update model to represent gathered nectar. Does no validation
  */
 Bee.prototype.gotNectarAt = function (row, col) {
-  if (this.maze_.dirt_[row][col] !== UNLIMITED_NECTAR) {
-    this.maze_.dirt_[row][col] -= 1; // update progress towards goal
+  if (this.getValue(row, col) !== UNLIMITED_NECTAR) {
+    this.setValue(row, col, this.getValue(row, col) - 1);
   }
 
   this.nectars_.push({row: row, col: col});
@@ -383,7 +494,7 @@ Bee.prototype.animateGetNectar = function () {
   var col = this.maze_.pegmanX;
   var row = this.maze_.pegmanY;
 
-  if (this.maze_.dirt_[row][col] <= 0) {
+  if (this.getValue(row, col) <= 0) {
     throw new Error("Shouldn't be able to end up with a nectar animation if " +
       "there was no nectar to be had");
   }

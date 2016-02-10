@@ -209,7 +209,7 @@ s:function(d,k,p){studio_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "tapOrClickToReset":function(d){return "Trykk eller klikk for å tilbakestille"},
 "tapToReset":function(d){return "Trykk for å tilbakestille"},
 "tapToPlay":function(d){return "Trykk for å spille"},
-"swipeToMove":function(d){return "Swipe to move"},
+"swipeToMove":function(d){return "Dra for å flytte"},
 "continue":function(d){return "Fortsett"},
 "decrementPlayerScore":function(d){return "fjern poeng"},
 "defaultSayText":function(d){return "Skriv her"},

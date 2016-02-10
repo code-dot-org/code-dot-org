@@ -921,6 +921,7 @@ en:
           Pixelation: crwdns39000:0crwdne39000:0
           Multi2: crwdns41853:0crwdne41853:0
           Markdown Details: crwdns43376:0crwdne43376:0
+          Studio: crwdns55916:0crwdne55916:0
         algebraPD2b:
           title: crwdns38830:0crwdne38830:0
           description: crwdns38831:0crwdne38831:0
@@ -1291,6 +1292,7 @@ en:
           Unit 5 Overview: crwdns48490:0crwdne48490:0
           Introduction to the Unit 5 Challenge: crwdns48491:0crwdne48491:0
           Unit 5 Challenge Planning & Creation: crwdns48492:0crwdne48492:0
+          Getting Started: crwdns55954:0crwdne55954:0
         ECSPD3-Unit6:
           title: crwdns48493:0crwdne48493:0
           description_short: crwdns48494:0crwdne48494:0
@@ -1348,10 +1350,14 @@ en:
           Cleaning Data: crwdns55861:0crwdne55861:0
           Designing Data Collection: crwdns55862:0crwdne55862:0
           Designing for Your User: crwdns55863:0crwdne55863:0
-          "Practice Create PT: Data App": crwdns55905:0crwdne55905:0
           Good and Bad Data Visualizations: crwdns55896:0crwdne55896:0
           Finding Trends with Visualizations: crwdns55897:0crwdne55897:0
           Check Your Assumptions: crwdns55906:0crwdne55906:0
+          "Practice Create PT: Data App": crwdns55905:0crwdne55905:0
+          Making Data Visualizations: crwdns55917:0crwdne55917:0
+          Creating Summary Tables: crwdns55918:0crwdne55918:0
+          Discover a Data Story: crwdns55919:0crwdne55919:0
+          Rapid Research - Data Innovations: crwdns55920:0crwdne55920:0
         ScienceP3OLPT2:
           title: crwdns49768:0crwdne49768:0
           description_short: crwdns49769:0crwdne49769:0
@@ -1498,3 +1504,41 @@ en:
           Wrap-Up: crwdns54752:0crwdne54752:0
           Assessing Computer Models: crwdns55898:0crwdne55898:0
           (optional) Refresh your connection to Complex Adaptive Systems: crwdns55899:0crwdne55899:0
+        cspunit5:
+          title: crwdns55921:0crwdne55921:0
+          description_short: crwdns55922:0crwdne55922:0
+          description: crwdns55923:0crwdne55923:0
+          Explore PT Prep: crwdns55924:0crwdne55924:0
+          Explore PT: crwdns55925:0crwdne55925:0
+          Create PT Prep: crwdns55926:0crwdne55926:0
+          Create PT: crwdns55927:0crwdne55927:0
+        cspunit4:
+          title: crwdns55928:0crwdne55928:0
+          description_short: crwdns55929:0crwdne55929:0
+          description: crwdns55930:0crwdne55930:0
+          Intro to Data: crwdns55931:0crwdne55931:0
+          Finding Trends with Visualizations: crwdns55932:0crwdne55932:0
+          Check Your Assumptions: crwdns55933:0crwdne55933:0
+          Good and Bad Data Visualizations: crwdns55934:0crwdne55934:0
+          Making Data Visualizations: crwdns55935:0crwdne55935:0
+          Discover a Data Story: crwdns55936:0crwdne55936:0
+          Cleaning Data: crwdns55937:0crwdne55937:0
+          Creating Summary Tables: crwdns55938:0crwdne55938:0
+          Practice PT - Tell a Data Story: crwdns55939:0crwdne55939:0
+          What is Big Data?: crwdns55940:0crwdne55940:0
+          Rapid Research - Data Innovations: crwdns55941:0crwdne55941:0
+          Identifying People with Data: crwdns55942:0crwdne55942:0
+          Privacy Abandoned: crwdns55943:0crwdne55943:0
+          Practice PT - Propose an Innovation: crwdns55944:0crwdne55944:0
+        CSPPD3-Unit4:
+          title: crwdns55955:0crwdne55955:0
+          description_short: crwdns55956:0crwdne55956:0
+          description: crwdns55957:0crwdne55957:0
+          Getting Started: crwdns55958:0crwdne55958:0
+          Unit 4 Overview: crwdns55959:0crwdne55959:0
+          Chapter 1 Overview: crwdns55960:0crwdne55960:0
+          Chapter 2 Overview: crwdns55961:0crwdne55961:0
+          Practice Performance Tasks: crwdns55962:0crwdne55962:0
+          Challenge Overview: crwdns55963:0crwdne55963:0
+          Complete the Challenge: crwdns55964:0crwdne55964:0
+          Share out and Submit: crwdns55965:0crwdne55965:0
