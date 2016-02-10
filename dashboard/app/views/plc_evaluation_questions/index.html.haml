@@ -1,0 +1,19 @@
+%h1 Listing plc_evaluation_questions
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @plc_evaluation_questions.each do |plc_evaluation_question|
+      %tr
+        %td= link_to 'Show', plc_evaluation_question
+        %td= link_to 'Edit', edit_plc_evaluation_question_path(plc_evaluation_question)
+        %td= link_to 'Destroy', plc_evaluation_question, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Plc evaluation question', new_plc_evaluation_question_path

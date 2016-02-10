@@ -1,4 +1,16 @@
 FactoryGirl.define do
+  factory :plc_evaluation_answer do
+    plc_evaluation_question nil
+    answer "MyString"
+    professional_learning_task nil
+  end
+
+  factory :plc_evaluation_question do
+    professional_learning_course nil
+    question "MyString"
+  end
+
+
   factory :professional_learning_course do
     name "Some course"
   end

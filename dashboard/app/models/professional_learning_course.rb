@@ -8,4 +8,5 @@
 
 class ProfessionalLearningCourse < ActiveRecord::Base
   has_many :user_course_enrollments, dependent: :destroy
+  has_many :plc_evaluation_answer, dependent: :destroy
 end

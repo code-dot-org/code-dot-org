@@ -15,4 +15,5 @@
 class ProfessionalLearningTask < ActiveRecord::Base
   belongs_to :professional_learning_module
   has_many :user_module_task_assignments, class_name: 'UserModuleTaskAssignment', dependent: :destroy
+  has_many :plc_evaluation_answer, dependent: :destroy
 end
