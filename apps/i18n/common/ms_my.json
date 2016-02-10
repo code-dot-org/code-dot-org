@@ -255,6 +255,5 @@
   "watchVideo": "Tonton Video",
   "when": "apabila",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Workspace: "
 }

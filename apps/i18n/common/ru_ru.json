@@ -255,6 +255,5 @@
   "watchVideo": "Посмотреть видео",
   "when": "когда",
   "whenRun": "При запуске",
-  "workspaceHeaderShort": "Место сбора блоков: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Место сбора блоков: "
 }

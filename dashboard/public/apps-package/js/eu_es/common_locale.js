@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Ikusi Bideoa"},
 "when":function(d){return "-enean"},
 "whenRun":function(d){return "martxan dagoenean"},
-"workspaceHeaderShort":function(d){return "Lan eremua: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Lan eremua: "}};

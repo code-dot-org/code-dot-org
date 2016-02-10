@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "觀看影片"},
 "when":function(d){return "當"},
 "whenRun":function(d){return "當按下\"執行\"時"},
-"workspaceHeaderShort":function(d){return "工作區:"},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "工作區:"}};

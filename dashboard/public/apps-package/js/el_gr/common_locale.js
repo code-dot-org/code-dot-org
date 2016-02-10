@@ -410,5 +410,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Δείτε το βίντεο"},
 "when":function(d){return "όταν"},
 "whenRun":function(d){return "όταν εκτελείται"},
-"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Χώρος εργασίας: "}};
