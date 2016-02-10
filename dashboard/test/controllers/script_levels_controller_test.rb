@@ -897,4 +897,36 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal true, assigns(:view_options)[:post_milestone]
   end
 
+
+  test "should not see examples if an unauthorized teacher is signed in" do
+    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+
+    sign_in create(:teacher)
+
+    level = create(:applab, examples: ['fakeexample'])
+    Level.any_instance.stubs(:examples).returns(['fakeexample'])
+
+    get_show_script_level_page(create(:script_level, level: level))
+
+    assert_select 'button', text: I18n.t('teacher.panel.example'), count: 0
+  end
+
+
+  test "should see examples if an authorized teacher is signed in" do
+    CDO.stubs(:properties_encryption_key).returns('here is a fake properties encryption key')
+
+    authorized_teacher = create(:teacher)
+    cohort = create(:cohort)
+    cohort.teachers << authorized_teacher
+    cohort.save!
+    assert authorized_teacher.authorized_teacher?
+    sign_in authorized_teacher
+
+    level = create(:applab, examples: ['fakeexample'])
+
+    get_show_script_level_page(create(:script_level, level: level))
+
+    assert_select 'button', I18n.t('teacher.panel.example')
+  end
+
 end
