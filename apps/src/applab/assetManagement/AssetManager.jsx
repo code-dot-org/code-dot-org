@@ -1,4 +1,4 @@
-var assetsApi = require('../clientApi').assets;
+var assetsApi = require('../../clientApi').assets;
 var AssetRow = require('./AssetRow.jsx');
 var AssetUploader = require('./AssetUploader.jsx');
 var assetListStore = require('./assetListStore');

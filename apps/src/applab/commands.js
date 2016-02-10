@@ -10,7 +10,6 @@ var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var setPropertyDropdown = require('./setPropertyDropdown');
-var assetPrefix = require('../assetManagement/assetPrefix');
 
 var errorHandler = require('./errorHandler');
 var outputError = errorHandler.outputError;
@@ -247,7 +246,7 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = assetPrefix.fixPath(opts.src);
+  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
@@ -716,7 +715,7 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   var image = new Image();
-  image.src = assetPrefix.fixPath(opts.url);
+  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
     if (!ctx) {
@@ -1017,7 +1016,7 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = assetPrefix.fixPath(opts.src);
+    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
     element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
@@ -1035,7 +1034,7 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    var url = assetPrefix.fixPath(opts.url);
+    var url = Applab.maybeAddAssetPathPrefix(opts.url);
     if (studioApp.cdoSounds.isPlayingURL(url)) {
       return;
     }

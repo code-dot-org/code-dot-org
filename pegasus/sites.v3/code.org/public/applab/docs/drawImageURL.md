@@ -66,16 +66,12 @@ ____________________________________________________
 // Copy and canvas image, alter the image width, and output to a second canvas.
 createCanvas('canvas1');
 drawImageURL("http://studio.code.org/blockly/media/skins/studio/octopus_thumb.png");
-button("id", "Squish");
-setPosition('id', 100, 0);
-onEvent("id", "click", function() {
-  var canvasData=getImageData(0, 0, 100, 100);
-  canvasData.width=400;
-  createCanvas('canvas2', 100, 100);
-  setPosition('canvas2', 0, 150);
-  setActiveCanvas('canvas2');
-  putImageData(canvasData, 0, 0);
-});
+var canvasData=getImageData(0, 0, 100, 100);
+canvasData.width=400;
+createCanvas('canvas2', 100, 100);
+setPosition('canvas2', 0, 150);
+setActiveCanvas('canvas2');
+putImageData(canvasData, 0, 0);
 ```
 
 [/example]
@@ -90,12 +86,8 @@ ____________________________________________________
 // Change an image to greyscale by averaging the non-white RGB values.
 createCanvas('canvas1');
 drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
-button("id", "Greyscale");
-setPosition('id', 200, 0);
-onEvent("id", "click", function() {
-  var imageData = getImageData(0, 0, 175, 200);
-  putImageData(makeBlackAndWhite(imageData), 0, 225);
-});
+var imageData = getImageData(0, 0, 175, 200);
+putImageData(makeBlackAndWhite(imageData), 0, 225);
 
 function makeBlackAndWhite(thisImageData){
     for(var y=0; y < thisImageData.height; y++) {
