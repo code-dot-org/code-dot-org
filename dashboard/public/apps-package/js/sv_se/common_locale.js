@@ -410,4 +410,5 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Titta på videon"},
 "when":function(d){return "när"},
 "whenRun":function(d){return "vid start"},
-"workspaceHeaderShort":function(d){return "Arbetsyta: "}};
+"workspaceHeaderShort":function(d){return "Arbetsyta: "},
+"choosePrefix":function(d){return "Choose..."}};
