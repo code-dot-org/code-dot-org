@@ -25,7 +25,7 @@
 #ZERO_DIRT_ITEM = 98
 
 class Karel < Maze
-  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation
+  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation, :serialized_maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
@@ -35,6 +35,11 @@ class Karel < Maze
   # List of possible flower types
   def self.flower_types
     ['redWithNectar', 'purpleNectarHidden']
+  end
+
+  def self.load_maze(maze_file, size)
+    raw_maze = maze_file.read[0...size]
+    raw_maze.map {|row| row.map {|cell| JSON.parse(cell)}}
   end
 
   # If type is "Karel" return a 3 entry hash with keys 'maze', 'initial_dirt',
