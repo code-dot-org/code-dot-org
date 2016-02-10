@@ -1,4 +1,4 @@
-name 'ECSU4 Challenge Submission fin'
+name 'ECSPD3-u5 submit forum link'
 skip_sound true
 
 markdown <<MARKDOWN
@@ -15,4 +15,5 @@ You've just shared your Challenge work on the forum. If you would like to receiv
 In order to get a direct link to your post, click the link icon directly under your post (shown in the picture below):
 <br><br>
 ![](https://images.code.org/40fd4bb1aa4f50cfb0d66bbf7881cd0d-image-1443847364702.png)
+
 MARKDOWN
