@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208215727) do
+ActiveRecord::Schema.define(version: 20160210025746) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -286,6 +286,26 @@ ActiveRecord::Schema.define(version: 20160208215727) do
   end
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
+
+  create_table "plc_evaluation_answers", force: :cascade do |t|
+    t.integer  "plc_evaluation_question_id",    limit: 4
+    t.string   "answer",                        limit: 255
+    t.integer  "professional_learning_task_id", limit: 4
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+  end
+
+  add_index "plc_evaluation_answers", ["plc_evaluation_question_id"], name: "plc_answer_question_index", using: :btree
+  add_index "plc_evaluation_answers", ["professional_learning_task_id"], name: "plc_answer_plc_index", using: :btree
+
+  create_table "plc_evaluation_questions", force: :cascade do |t|
+    t.integer  "professional_learning_course_id", limit: 4
+    t.string   "question",                        limit: 255
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+  end
+
+  add_index "plc_evaluation_questions", ["professional_learning_course_id"], name: "plc_evaluation_plc_index", using: :btree
 
   create_table "prize_providers", force: :cascade do |t|
     t.string   "name",              limit: 255
@@ -642,6 +662,9 @@ ActiveRecord::Schema.define(version: 20160208215727) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "plc_evaluation_answers", "plc_evaluation_questions"
+  add_foreign_key "plc_evaluation_answers", "professional_learning_tasks"
+  add_foreign_key "plc_evaluation_questions", "professional_learning_courses"
   add_foreign_key "professional_learning_tasks", "professional_learning_modules"
   add_foreign_key "user_enrollment_module_assignments", "professional_learning_modules"
   add_foreign_key "user_enrollment_module_assignments", "user_professional_learning_course_enrollments"

@@ -331,6 +331,7 @@ task :dashboard_unit_tests do
     with_hipchat_logging(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
+      RakeUtils rake 'db:drop'
       RakeUtils.rake 'db:schema:load'
       RakeUtils.rake 'test'
       RakeUtils.rake "seed:all"
