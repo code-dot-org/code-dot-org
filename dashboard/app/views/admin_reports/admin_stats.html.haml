@@ -58,6 +58,15 @@
             %li
               = "30-Day #{filter_description}: "
               = (100.0 * @stats["thirty_day_retention_#{type}"]["#{filter}"]).to_s + '%'
+    %li
+      Teachers
+        %ul
+          %li
+            With Born Students:
+            = @stats['teachers']['with_students']
+          %li
+            With 30-Day Active Students
+            = @stats['teachers']['with_active_students']
 
   = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
