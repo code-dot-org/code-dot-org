@@ -396,7 +396,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // Check to see if we've arrived at a new breakpoint:
     //  (1) should be in user code
     //  (2) should never happen while unwinding
-    //  (3) requires either
+    //  (3) should never happen when revisiting an interstitial node
+    //  (4) requires either
     //   (a) atInitialBreakpoint OR
     //   (b) isAceBreakpointRow() AND not still at the same line number where
     //       we have already stopped from the last step/breakpoint
