@@ -202,6 +202,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Roept een functie aan die een of meer parameters verwacht"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Een functie aanroepen met parameters"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Een functie aanroepen"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Maak een variabele en initialiseer hem als array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -358,7 +360,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "print":function(d){return "Afdrukken"},
 "puzzleTitle":function(d){return "Puzzel "+common_locale.v(d,"puzzle_number")+" van "+common_locale.v(d,"stage_total")},
 "readonlyWorkspaceHeader":function(d){return "alleen bekijken: "},
-"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."},
+"recommendedBlockContextualHintTitle":function(d){return "Probeer een blok zoals dit om de puzzel op te lossen."},
 "repeat":function(d){return "herhaal"},
 "resetProgram":function(d){return "Herstellen"},
 "rotateText":function(d){return "Draai je apparaat."},
@@ -409,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "wanneer"},
 "whenRun":function(d){return "als gestart"},
 "workspaceHeaderShort":function(d){return "Werkplaats: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"choosePrefix":function(d){return "Choose..."}};

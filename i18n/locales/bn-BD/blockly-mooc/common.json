@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description":"এক function চালনা করো যার এক বা একাধিক parameter আছে",
   "dropletBlock_callMyFunction_n_signatureOverride":"Parameters দিয়ে এক function চালনা কর",
   "dropletBlock_callMyFunction_signatureOverride":"এক function চালনা কর",
+  "dropletBlock_comment_description":"Write a description of some code",
+  "dropletBlock_comment_signatureOverride":"comment",
   "dropletBlock_declareAssign_x_array_1_4_description":"একটি variable বানাও এবং প্রদত্ত প্রাথমিক মানগুলোর দ্বারা এটিকে একটি array এর সাথে জুড়ে দাও",
   "dropletBlock_declareAssign_x_array_1_4_param0":"x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description":"The name you will use in the program to reference the variable",

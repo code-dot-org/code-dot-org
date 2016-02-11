@@ -1,15 +1,9 @@
 /** @file Creates and controls a coordinates crosshair on the app visualization. */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
-
- maxlen: 90,
- maxparams: 6,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 
@@ -36,7 +30,8 @@ var CrosshairOverlay = function () {
     x: 0,
     y: 0,
     appWidth: 0,
-    appHeight: 0
+    appHeight: 0,
+    isDragging: false
   };
 };
 module.exports = CrosshairOverlay;
@@ -74,6 +69,13 @@ CrosshairOverlay.prototype.render = function (intoElement, nextProps) {
   var rectY = this.props_.y + CROSSHAIR_MARGIN;
   if (rectY + TEXT_RECT_HEIGHT + EDGE_MARGIN > this.props_.appHeight) {
     rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+  }
+
+  // If we're dragging an element, instead put the text above and right of the
+  // cross hair, while making sure it doesnt go past the top of the overlay
+  if (this.props_.isDragging) {
+    rectY = this.props_.y - CROSSHAIR_MARGIN - TEXT_RECT_HEIGHT;
+    rectY = Math.max(0, rectY);
   }
 
   var textX = rectX + TEXT_RECT_WIDTH / 2;

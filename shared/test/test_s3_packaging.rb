@@ -1,12 +1,9 @@
-require 'minitest/autorun'
-require 'rack/test'
+require_relative './test_helper'
 require 'securerandom'
 require 'aws-sdk'
 require 'cdo/rake_utils'
 
-require_relative './test_helper'
 require_relative '../../lib/cdo/aws/s3_packaging'
-
 ORIGINAL_HASH = 'fake-hash'
 
 class S3PackagingTest < Minitest::Test
@@ -22,7 +19,7 @@ class S3PackagingTest < Minitest::Test
       FileUtils.mkdir('build')
       File.open('build/output.js', 'w') { |file| file.write("output") }
     end
-    packager = RakeUtils.stub(:git_latest_commit_hash, commit_hash) do
+    packager = RakeUtils.stub(:git_folder_hash, commit_hash) do
       S3Packaging.new('test-package', source_location, target_location)
     end
     [source_location, target_location, packager]
@@ -164,5 +161,14 @@ class S3PackagingTest < Minitest::Test
       threw = true
     end
     assert threw
+  end
+
+  def test_download_anonymous
+    package = @packager.send(:create_package, 'build')
+    @packager.send(:upload_package, package)
+    # Stub blank AWS credentials in packager's S3 client
+    @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil,nil)))
+    downloaded = @packager.send(:download_package)
+    assert @packager.send(:packages_equivalent, package, downloaded)
   end
 end

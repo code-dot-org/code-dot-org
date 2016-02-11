@@ -22,10 +22,10 @@ AP® is a registered trademark of the College Board.
 
 <img src="<%= CDO.shared_image_url("courses/logo_ecs.png") %>">
 
-Leveraging years of research by the [National Science Foundation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503582&org=CISE), a team from UCLA has developed Exploring Computer Science, a nationally recognized introductory computer science course that includes curriculum, professional development, and [assessments built by SRI International](http://pact.sri.com/resources.html). Code.org offers a program to support version 5 of the ECS curriculum, which is composed of six instructional units with lessons that are designed to promote an inquiry-based approach to teaching and learning foundational concepts in computer science, while building students' computational practices and problem solving skills. The PD experience for version 5 of ECS is based on three major pillars: computer science content/concepts, inquiry, and equity.
+Leveraging years of research by the [National Science Foundation](http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503582&org=CISE), a team from UCLA has developed Exploring Computer Science, a nationally recognized introductory computer science course that includes curriculum, professional development, and [assessments built by SRI International](http://pact.sri.com/resources.html). Code.org offers a program to support version 5 of the ECS curriculum, which is composed of six instructional units with lessons that are designed to promote an inquiry-based approach to teaching and learning foundational concepts in computer science, while building students' computational practices and problem solving skills. The professional learning experience for version 5 of ECS is based on three major pillars: computer science content/concepts, inquiry, and equity.
 
 Download this [one-pager](/files/ECSonepager.pdf) describing version 5 of Exploring Computer Science.
-Find the curriculum and other resources at [exploringcs.org/curriculum](http://www.exploringcs.org/curriculum)  
+Find other resources at [exploringcs.org](http://www.exploringcs.org/)  
 
 [<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
 

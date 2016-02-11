@@ -38,7 +38,7 @@ nav: educate_nav
 ### Resources
 
 <ul>
-	
+	<li>You can view all of the lessons in Unit 4 through this <a href="http://bit.ly/csp-unit4">Google Drive folder</a></li>
 	<li> If you're a teacher, you can apply for Code Studio access to protected, teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>. Note that you only need to request access once, and you will have access to answers across all units.
 	</li>
 </ul>

@@ -1,7 +1,7 @@
 #about_nav
   %span.about_list
-    -current_url = '/educate/plc/plp'
-    -{'Apply to be a Partner'=>'plp-application', 'Terms of Partnership'=>'plp-terms', 'Where we need partners'=> current_url+'#partners', 'FAQ'=>'plp-faq'}.each_pair do |label,url|
+    -current_url = '/educate/professional-learning-partner'
+    -{'Apply to be a Partner'=>current_url+'/application', 'Terms of Partnership'=>current_url+'/terms', 'Where we need partners'=> current_url+'#partners', 'FAQ'=>current_url+'/faq'}.each_pair do |label,url|
       - if current_url == url
         %span.about_list_item_selected= label
       -else

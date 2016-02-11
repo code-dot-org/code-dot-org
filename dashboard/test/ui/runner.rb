@@ -301,7 +301,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         return 0
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-        max_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
+                      1].max # rerun at least once even if not flaky
+
         confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
         flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
 

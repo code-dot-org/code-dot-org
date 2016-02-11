@@ -58,11 +58,6 @@ gl-ES:
   congratulations: Noraboa!
   congratulations_on_completing_hoc: Noraboa por completar unha Hora do Código
   congratulations_volunteer: 'Noraboa: agora que xa probaches a Hora do Código, <a href="https://code.org/volunteer"> anótate como voluntario nunha clase</a> e axuda aos estudantes a aprender unha Hora do Código!'
-  course_name_accelerated: Curso acelerado
-  course_name_course1: Curso 1
-  course_name_course2: Curso 2
-  course_name_course3: Curso 3
-  course_name_course4: Curso 4
   congratulations_on_completing_course: 'Noraboa por completar %{course}'
   congrats_next_tutorials_title: Proba agora estes titoriais
   congrats_next_tutorials_desc: 'Proba estes titoriais, máis curtos dunha hora, ou proba un <a href="%{current_path}/next">titorial para colaboradores</a>.'
@@ -113,9 +108,9 @@ gl-ES:
   learn_next_level: Probar outro curso do Code Studio
   learn_online: Proba outros cursos online
   learn_classes: Atopa clases preto de ti
-  hoc_is_here: 'A #HourOfCode é aquí - Revisa! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Eu xa rematei unha #HourofCode - Dalle un vistazo! @codeorg'
-  twitter_teach_cs: Por que non hai máis escolas que ensinen informática? Podemos arranxalo. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ para obter máis información.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Aprende programación coa Hora do Código
   beyond_hoc: Mais aló dunha Hora
   what_gender: Cal é o teu sexo?
@@ -562,9 +557,7 @@ gl-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre Primaria
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todos
-  dashboard_announce_message: |
-    <b>16 decembro, 2015</b> - Graciñas por participar na Hora do Código 2015! 
-    Recomeza agora o proceso de revisión e salvado de todos os titoriais e cursos de Code Studio. Nota: as oficinas da Code.org estarán pechadas do 19 de decembro - ao 3 de xaneiro. As respostas a calquera pregunta enviada será respondida a partir do 4 de xaneiro.
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Aprende máis
   dashboard_announce_hoc: '<b>23 de novembro 2015</b> -Gostarías de ter un informártico para te axudar durante a hora do Código? Máis de 7.000 voluntarios procuran motivar os teus estudantes visitando a túa clase ou mediante vídeo-conferencia. Bota un ollo ao mapa de voluntarios para contactar voluntarios na túa zona.'
   dashboard_announce_playlab: '<b>4 de decembro de 2015</b> - A Hora do Código chegou! Proba 50 titoriais para todas as idades e dispositivos. Novidades desta semana: programa as túas propias historias e xogos en novos laboratorios, coa Era do Xeo e Gumball.'

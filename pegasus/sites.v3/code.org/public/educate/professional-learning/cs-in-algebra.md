@@ -1,24 +1,51 @@
 ---
-title: Find CS in Algebra near you
-nav: educate_nav
+title: CS in Algebra Professional Learning Program
+nav: plc_algebra_nav
 ---
-# Find the Computer Science in Algebra program near you
-We welcome teachers to sign up for the Code.org Computer Science in Algebra (CS in Algebra) professional learning program. CS in Algebra is designed to provide educators with the opportunity to increase content knowledge, skills, and pedagogy related to inquiry, equity, and specific Code.org course instruction. The model is structured to empower teachers by focusing on proper preparation, in-depth learning, feedback, reflection, and continuing education.
+# CS in Algebra Professional Learning Program
 
-## Where is CS in Algebra offered?
+The Code.org Computer Science in Algebra (CS in Algebra) Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS in Algebra course. This program is designed to prepare educators to provide high quality instruction, based on the CS in Algebra curriculum, tools and approach to students in their classrooms. 
 
-The CS in Algebra professional learning program is open to teachers in partner districts who are interested in teaching the course. Check to see if your district has partnered to make CS in Algebra available in your region for the 2016-2017 school year. If you live in Idaho, Indiana or Virginia, your district is covered by a statewide partnership. Click on the icon in your state to apply.
+## What does a Code.org CS in Algebra Educator do?
+If accepted into the Code.org CS in Algebra Professional Learning Program, you will:
 
-**The 2016-2017 CS in Algebra application launches February 5, 2016.**
+- Join a nationwide community of educators working to change the face of CS education 
+- Participate in in-person and online professional development
+- Plan and deliver the CS in Algebra curriculum to your students, and reflect on your experiences 
+ 
+ 
+## <a name="components"></a>How does it work?
 
-<br/> 
+The Code.org CS in Algebra professional development program is designed to help teachers identify the intersection between Computer Science and Algebra in a way that supports student learning of Algebraic functions, with a focus on providing space for teachers to become comfortable with the curricular materials (lesson plans and computer-based tools) and associated teaching strategies.
+
+
+[<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-apply)
+
+## <a name="commitments"></a>What are the program commitments?
+
+- **Phase 1: Online Introduction**
 <br/>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.kOpI42i2SQZo" width="640" height="480"></iframe>
+	- 2 hours online, self-paced
+<br/>
+- **Phase 2: Summer Blended Study**
+<br/>
+	- 2 days (14 hours) in person
+<br/>
+	- 8 hours online, self-paced
+<br/>
+- **Phase 3: Blended Academic Year Development**
+<br/>
+	- 2 days (14 hours) in person
+<br/>
+	- 10 hours online, self-paced
 
-## Don't see your district?
-Consider sending your administrators [information about how to become a Code.org partner](/educate/districts). Or, contact [Bootstrap](http://www.bootstrapworld.org), our preferred professional development provider for CS in Algebra. 
 
-## What are the program commitments?
-The CS in Algebra professional learning program is 48 hours of online and in-person support, spanning over ~12 months: 
+## <a name="participate"></a>Who can Participate?
+ 
+Any middle school math teacher who's district is partnered with Code.org.
 
-![Image 1](/images//fit-700/timeline-ms-plc.png)
+## <a name="locations"></a>Where is the program offered?
+
+We're so excited that you're interested in applying for our Professional Learning Program! If your school district has partnered with Code.org, you are eligible to join the other teachers in your district on the journey to teach CS in Algebra. If your school district is not partnered with Code.org (or even if it is), you can also contact [Bootstrap](http://www.bootstrapworld.org/workshops/), our preferred professional development provider for CS in Algebra.
+
+[<button>Apply now</button>](/educate/professional-learning/cs-in-algebra-apply)
