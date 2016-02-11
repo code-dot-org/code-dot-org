@@ -23,6 +23,7 @@ You *don’t* need any prior exposure to computer science to participate. If you
 - Open to high school teachers of all backgrounds in participating districts
 
 Sign up by March 1:
+
 - [Exploring Computer Science — an introduction](https://code.org/educate/professional-learning/exploring-cs)
 - [AP Computer Science Principles — a deeper dive](https://code.org/educate/professional-learning/cs-principles)
 
@@ -33,9 +34,8 @@ This is a chance to lead your school and give your students a head start.
 
 
 <br/>
-Hadi Partovi
-
-<br />
+Hadi Partovi<br />
+Founder, Code.org
 <br />
 
 <hr>
