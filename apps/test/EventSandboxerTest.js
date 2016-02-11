@@ -199,6 +199,114 @@ describe('EventSandboxer', function () {
     });
   });
 
+  describe('coordinate transformations', function () {
+    function assertPropertyChange(propertyName, originalValue, newValue) {
+      var originalEvent = {};
+      originalEvent[propertyName] = originalValue;
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.equal(newEvent[propertyName], newValue);
+    }
+
+    function assertNoPropertyChange(propertyName, originalValue) {
+      var originalEvent = {};
+      originalEvent[propertyName] = originalValue;
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.equal(newEvent[propertyName], originalValue);
+    }
+
+    it('applies inverse xOffset_ to "clientX" property', function () {
+      sandboxer.xOffset_ = 10;
+      assertPropertyChange('clientX', 50, 40);
+    });
+
+    it('applies inverse xOffset_ to "pageX" property', function () {
+      sandboxer.xOffset_ = 20;
+      assertPropertyChange('pageX', 50, 30);
+    });
+
+    it('applies inverse xOffset_ to "x" property', function () {
+      sandboxer.xOffset_ = -10;
+      assertPropertyChange('x', 50, 60);
+    });
+
+    it('does not apply xOffset_ to "offsetX" property', function () {
+      sandboxer.xOffset_ = -10;
+      assertNoPropertyChange('offsetX', 50);
+    });
+
+    it('applies inverse yOffset_ to "clientY" property', function () {
+      sandboxer.yOffset_ = 10;
+      assertPropertyChange('clientY', 50, 40);
+    });
+
+    it('applies inverse yOffset_ to "pageY" property', function () {
+      sandboxer.yOffset_ = 20;
+      assertPropertyChange('pageY', 50, 30);
+    });
+
+    it('applies inverse yOffset_ to "x" property', function () {
+      sandboxer.yOffset_ = -10;
+      assertPropertyChange('y', 50, 60);
+    });
+
+    it('does not apply yOffset_ to "offsetY" property', function () {
+      sandboxer.yOffset_ = -10;
+      assertNoPropertyChange('offsetY', 50);
+    });
+
+    it('applies inverse xScale_ to "clientX" property', function () {
+      sandboxer.xScale_ = 1.25;
+      assertPropertyChange('clientX', 50, 40);
+    });
+
+    it('applies inverse xScale_ to "pageX" property', function () {
+      sandboxer.xScale_ = 2;
+      assertPropertyChange('pageX', 50, 25);
+    });
+
+    it('applies inverse xScale_ to "x" property', function () {
+      sandboxer.xScale_ = 0.5;
+      assertPropertyChange('x', 50, 100);
+    });
+
+    it('does not apply xScale_ to "offsetX" property', function () {
+      sandboxer.xScale_ = 3;
+      assertNoPropertyChange('offsetX', 50);
+    });
+
+    it('applies inverse yScale_ to "clientY" property', function () {
+      sandboxer.yScale_ = 1.25;
+      assertPropertyChange('clientY', 50, 40);
+    });
+
+    it('applies inverse yScale_ to "pageY" property', function () {
+      sandboxer.yScale_ = 2;
+      assertPropertyChange('pageY', 50, 25);
+    });
+
+    it('applies inverse yScale_ to "y" property', function () {
+      sandboxer.yScale_ = 0.5;
+      assertPropertyChange('y', 50, 100);
+    });
+
+    it('does not apply yScale_ to "offsetY" property', function () {
+      sandboxer.yScale_ = 3;
+      assertNoPropertyChange('offsetY', 50);
+    });
+
+    it('applies xOffset_ before xScale_', function () {
+      sandboxer.xOffset_ = 10;
+      sandboxer.xScale_ = 0.5;
+      assertPropertyChange('clientX', 50, 80);
+    });
+
+    it('applies yOffset_ before yScale_', function () {
+      sandboxer.yOffset_ = 5;
+      sandboxer.yScale_ = 0.1;
+      assertPropertyChange('clientY', 50, 450);
+    });
+  });
+
   describe('movementX/Y synthesis', function () {
     it('preserves "movementX" and "movementY" if they are both provided', function () {
       var originalEvent = {
