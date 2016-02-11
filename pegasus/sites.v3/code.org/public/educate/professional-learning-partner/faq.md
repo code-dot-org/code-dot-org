@@ -16,7 +16,7 @@ Still have questions? See below for answers to commonly asked questions or email
 - [If we are selected as the Code.org professional learning partner in our region, can we publish a press release?](#press)
 
 
-**Questions about in-person professional development workshops:**<br/>
+**Questions about in-person workshops:**<br/>
 
 - [Does my organization need to provide facilitators for CS Principles?](#facilitators)
 - [Can I recruit teachers from local districts to become a part of the 2016-17 CS Principles professional learning program?](#recruit)
@@ -31,6 +31,8 @@ Still have questions? See below for answers to commonly asked questions or email
 <br/>
 ________________
 <a id="map"></a>
+<br/>
+<br/>
 
 ### **My city isn't on the map, can I stil apply to be a Professional Learning Partner?**
 
@@ -64,7 +66,7 @@ ________________
 <a id="facilitators"></a>
 <br/>
 <br/>
-### **Does my organization need to provide facilitators for professional development?**
+### **Does my organization need to provide facilitators for CS Principles?**
 
 Your organization does not need to have its own facilitators. Code.org Professional Learning Partners can  opt to contract with local Code.org approved facilitators instead.
 <br/>
@@ -90,7 +92,7 @@ ______________________________
 
 ### **What is counselor/administrator professional development?**
 
-Code.org has computer science professional development (PD) programs designed for Counselors and Administrators to provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. <a href="https://docs.google.com/document/d/1cRCVJSqDT3VLA5u17osE914WYTtIijxyKx5Z_uSYe3Y/edit?usp=sharing" target=_blank>Click here</a> for an overview of this professional development session.
+Code.org has computer science workshops designed for Counselors and Administrators to provide school leaders with the tools necessary to successfully support their teachers as they take on a new subject and style of teaching. <a href="https://docs.google.com/document/d/1cRCVJSqDT3VLA5u17osE914WYTtIijxyKx5Z_uSYe3Y/edit?usp=sharing" target=_blank>Click here</a> for an overview of this professional development session.
 
 [**Back to the top**](#top)
 <br/>

@@ -1,64 +1,27 @@
 name 'CSPPD3-u4 chapter 1 concepts'
 css 'unplugged'
 markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
 ### Unit 4 Overview > Chapter 1: Data Explorations > Concepts
 
 <br/>
 <img src="https://images.code.org/81f3498b01b714386b7055bddaff112a-image-1454694327476.45.09 AM.png" width="550" style="float:right; margin-left:30px">
 
-##### Content Overview
-Unit 4 begins by asking students to reflect on the scale of data currently available for analysis and the ways this data could be used to test hypotheses and develop new insights about the world. Students will also begin collecting data about themselves by making daily entries into a survey that will be used as part of the Class Data Tracker project that runs through the entirety of the first chapter.
-
-Students will be introduced to the power of data visualization by using Google Trends to explore how the popularity of different search terms have changed over times. Students will look for interesting patterns or relationships within the visualizations they create and will attempt to interpret the meaning of their visualization. 
-
-In the subsequent lessons students are presented some of the challenges that arise when working with data visualizations. First they are asked to consider how incorrect assumptions can lead interpretations of data astray. They then examine a number of visualizations that highlight the **digital divide**, challenging the assumption that data collected online is truly representative of the population at large. In the subsequent lesson students are shown how visualizations themselves can be misleading or confusing. They review a "Data Visualization 101" guide with guidelines on how to make clear and accurate visualizations and critique a series of visualizations based on those recommendations.
-
-Having developed intuitions on how to use visualizations to explore data students will begin creating visualizations of their own. They will learn how to create and manipulate different kinds of charts of data using a spreadsheet tool. They will then use data visualization to develop insights about a collection of data sets which have already been summarized for them. Students will learn to use README files to better understand the content of a dataset and will be introduced to the way summary tables provide new perspectives on a data set.
-
-At this point in the chapter students should have collected several days worth of data for their Class Data Tracker project. Due to the way the survey was designed, however, the data will need to first be cleaned and standardized before it can be used for analysis. Students will learn to sort and filter data to find incorrect values and in pairs will create their own "clean" version of the data.
-
-Next students will be shown how they can use their clean data to create summary tables of their own. Students will learn how summary tables can be used to reveal patterns in the data that could not be observed from looking at the raw data itself.
-
-To conclude the chapter students will complete a Practice PT in which they visualize and present an interesting trend, pattern, or relationship they found within their tracker data. Students will gain practice explaining the process they used to create their visualization and will identify a group or individual who they could make a recommendation to based on the results of their analysis of the data.
- 
-<br>
-
+#### Content Overview
+Unit 4 begins by asking students to consider what data can be collected and to propose ways it could be used to **test hypotheses and develop new insights** about the world. Students will also begin collecting data about themselves by making daily entries into a survey that will be used as part of the Class Data Tracker project that runs through the entirety of the first chapter.
 <br><br>
->**CS Concepts:** 
-
->- 
-
-##### 
-
-
+Students will be introduced to the power of **data visualization** as a tool for finding, understanding, and presenting trends in data. They will use interactive data visualization tools to identify trends and patterns, learn to identify assumptions made when interpreting visualizations, and critique data visualizations based on their clarity and usefulness.
+<br><br>
+Having developed intuitions on how to use visualizations to help interpret data, students will begin creating visualizations of their own. They will learn how to use a spreadsheet tool to create a variety of charts of digital data. They will also be introduced to the way **summary tables** provide new perspectives on a data set by grouping and aggregating information.
+<br><br>
+For the remainder of the chapter students will be working with the data collected with the Class Data Tracker they began using at the beginning of the unit. In preparing the data for analysis they will learn why **cleaning data** is an important step in analysis. They will learn to make summary tables of their own using the **pivot table** tools included in most spreadsheet software, and will use this skill to search for trends and patterns within the data they have collected.
+<br><br>
+To conclude the chapter students will complete a Practice PT in which they visualize and present an interesting trend, pattern, or relationship they found within their tracker data.
 <br><br>
 
-<br>
->**CS Concepts:** 
-
->- 
-
-##### 
-
-<br><br>
->**CS Concepts:** 
-
->- 
-
-##### 
-
-<br><br>
->**CS Concepts:** 
-
->- 
-
-#####
-
-<br><br>
->**CS Concepts:** 
-
->- 
-
+#### What it looks like
+Students will use computer for most lessons in this chapter. At the beginning of the unit students will be looking at external tools or resources to familiarize themselves with the ways data and data visualization are used. In the second half of the chapter they will be working primarily in a **spreadsheet tool (e.g. Google Sheets, Microsoft Excel, etc.)**. While the Practice PT itself should be completed individually, the lessons leading up to that project including cleaning and summarizing the data lends itself much more readily to group work and class discussions.
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

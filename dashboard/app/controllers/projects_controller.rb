@@ -19,7 +19,8 @@ class ProjectsController < ApplicationController
       login_required: true
     },
     gamelab: {
-      name: 'New Game Lab Project'
+      name: 'New Game Lab Project',
+      login_required: true
     },
     algebra_game: {
       name: 'New Algebra Project'

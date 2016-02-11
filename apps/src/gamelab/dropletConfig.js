@@ -1,5 +1,7 @@
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var showAssetManager = require('../assetManagement/show');
+var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_BLUE = '#19C3E1';
@@ -13,11 +15,22 @@ var COLOR_WHITE = '#FFFFFF';
 var COLOR_BLUE = '#64B5F6';
 var COLOR_ORANGE = '#FFB74D';
 
+var GameLab;
+
+exports.injectGameLab = function (gamelab) {
+  GameLab = gamelab;
+};
+
+// Flip the argument order so we can bind `typeFilter`.
+function chooseAsset(typeFilter, callback) {
+  showAssetManager(callback, typeFilter);
+}
+
 module.exports.blocks = [
   // Game Lab
-  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either' },
+  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') } },
   {func: 'var_loadImage', category: 'Game Lab', blockPrefix: 'var img = loadImage', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true },
-  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y'], params: ["img", "0", "0", "img.width", "img.height", "0", "0"] },
+  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"] },
   {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"] },
   {func: 'noFill', category: 'Game Lab' },
   {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"] },

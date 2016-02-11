@@ -31,7 +31,7 @@ Quarter 2: Saturday, November 21, 2015
 
 Quarter 3: Saturday, January 30, 2016
 
-Quarter 4: Saturday, March 5, 2016
+Quarter 4: Saturday, April 16, 2016
 
 **Please note the time change for future PD's*<br/>
 8:00am - 2:30pm
@@ -65,7 +65,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-Teachers from Seattle and Spokane will be attending the East Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-west) for your workshop details.
+Teachers from Seattle and Spokane will be attending the West Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-west) for your workshop details.
 
 [**Back to the top**](#top)
 
