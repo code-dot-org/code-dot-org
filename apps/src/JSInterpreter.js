@@ -304,6 +304,16 @@ JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope,
 };
 
 /**
+ * Nodes that are visited between expressions, signifying the previous
+ * expression is done.
+ */
+var INTERSTITIAL_NODES = {
+  Program: true,
+  BlockStatement: true,
+  SwitchStatement: true
+};
+
+/**
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
@@ -423,12 +433,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     var err = safeStepInterpreter(this);
     if (!err) {
-      doneUserLine = doneUserLine ||
-        (inUserCode && this.interpreter.stateStack[0] && this.interpreter.stateStack[0].done);
-
-      // Some nodes (like WhileStatement) shift the stateStack after completing instead
-      // of setting "done"
-      doneUserLine = doneUserLine || (inUserCode && this.interpreter.stateStack[0].node.type === "Program");
+      var nodeType = this.interpreter.stateStack[0].node.type;
+      if (inUserCode) {
+        doneUserLine = doneUserLine || INTERSTITIAL_NODES.hasOwnProperty(nodeType);
+      }
 
       var stackDepth = this.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -441,24 +449,18 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       }
       this.maxValidCallExpressionDepth = stackDepth;
 
-      if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+      if (inUserCode && nodeType === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
         this.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (this.paused) {
         // Store the first call expression stack depth seen while in this step operation:
-        if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
+        if (inUserCode && nodeType === "CallExpression") {
           if (typeof this.firstCallStackDepthThisStep === 'undefined') {
             this.firstCallStackDepthThisStep = stackDepth;
           }
         }
-        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
-        // though the the stateStack doesn't have "done" set, so that stepping in the
-        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
-        var nodeType = this.interpreter.stateStack[0].node.type;
-        doneUserLine = doneUserLine ||
-          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
 
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
