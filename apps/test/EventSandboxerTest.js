@@ -244,7 +244,7 @@ describe('EventSandboxer', function () {
       assertPropertyChange('pageY', 50, 30);
     });
 
-    it('applies inverse yOffset_ to "x" property', function () {
+    it('applies inverse yOffset_ to "y" property', function () {
       sandboxer.yOffset_ = -10;
       assertPropertyChange('y', 50, 60);
     });
