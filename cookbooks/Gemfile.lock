@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/wjordan/kitchen-ec2.git
-  revision: c973d6f63d8cad50bf1316b68851c2f5aee370ae
+  revision: 683ba7c35b7b0ef5c7b164151864eae89ef5c299
   branch: cdo
   specs:
     kitchen-ec2 (1.0.0.dev.1)

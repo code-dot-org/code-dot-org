@@ -4,7 +4,7 @@ maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Installs/Configures cdo-apps'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.0'
+version          '0.2.1'
 
 depends 'apt'
 depends 'build-essential'
@@ -16,3 +16,4 @@ depends 'cdo-varnish'
 depends 'cdo-mysql'
 depends 'cdo-ruby'
 depends 'sudo-user'
+depends 'multipackage'
