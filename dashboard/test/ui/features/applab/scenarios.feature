@@ -50,10 +50,10 @@ Feature: App Lab Scenarios
     And I switch to code mode
     And I switch to text mode
     And I append text to droplet "onEvent('text_input1', 'change', function(event) {\n"
-    And I append text to droplet "  console.log(event.srcElementId + ': ' + getText('text_input1'));\n"
+    And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_input1'));\n"
     And I append text to droplet "});\n\n"
     And I append text to droplet "onEvent('text_area1', 'change', function(event) {\n"
-    And I append text to droplet "  console.log(event.srcElementId + ': ' + getText('text_area1'));\n"
+    And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_area1'));\n"
     And I append text to droplet "});"
 
     # in text input, blur produces a change event
