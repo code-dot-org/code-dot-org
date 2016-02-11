@@ -66,7 +66,7 @@
             'non_us_students': 'Non-US Student'}.each do |filter, filter_description|
             %li
               = "30-Day #{filter_description}: "
-              = get_and_round_percentage(@stats["thirty_day_retention_#{type}"]["#{filter}"])
+              = get_percentage_from_ratio(@stats["thirty_day_retention_#{type}"]["#{filter}"])
 
   = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
