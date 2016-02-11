@@ -96,7 +96,7 @@ class AdminReportsController < ApplicationController
           # Determine whether the level is a multi question, replacing the
           # numerical answer with its corresponding text if so.
           level_info = Level.where(id: level_id).pluck(:type, :properties).first
-          if level_info && level_info[0] == 'Multi' && level_info[1].length > 0
+          if level_info && level_info[0] == 'Multi' && !level_info[1].empty?
             level_answers = level_info[1]["answers"]
             @responses[level_id].each do |response|
               response[2] = level_answers[response[2].to_i]["text"]
@@ -218,21 +218,21 @@ class AdminReportsController < ApplicationController
       # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
       # We restrict by dates to avoid long trails of (inappropriate?) signups.
       data_2014 = DB[:forms].
-          where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
-          group(:name, :email).
-          # TODO(asher): Is this clumsy notation really necessary? Is Sequel
-          # really this stupid? Also below.
-          group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-          order(:created_at_day).
-          all.
-          map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+                  where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
+                  group(:name, :email).
+                  # TODO(asher): Is this clumsy notation really necessary? Is Sequel
+                  # really this stupid? Also below.
+                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+                  order(:created_at_day).
+                  all.
+                  map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
       data_2015 = DB[:forms].
-          where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
-          group(:name, :email).
-          group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-          order(:created_at_day).
-          all.
-          map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+                  where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
+                  group(:name, :email).
+                  group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+                  order(:created_at_day).
+                  all.
+                  map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
 
       # Construct the hash {MM-DD => [count2014, count2015]}.
       # Start by constructing the key space as the union of the MM-DD dates for
