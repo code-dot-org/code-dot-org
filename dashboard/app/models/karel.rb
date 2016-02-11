@@ -21,9 +21,6 @@
 #  index_levels_on_game_id  (game_id)
 #
 
-# Used by Bee to indicate a flower/honeycomb of capacity 0
-#ZERO_DIRT_ITEM = 98
-
 class Karel < Maze
   serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation, :serialized_maze
 

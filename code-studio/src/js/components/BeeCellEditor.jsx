@@ -20,6 +20,9 @@ var BeeCellEditor = module.exports = React.createClass({
   handleChange: function (event) {
     var values = {};
     var nodes = this.getDOMNode().querySelectorAll('[name]');
+    // see "Iterating over Node Lists" here for an explanation of this
+    // strange-looking for loop
+    // https://google.github.io/styleguide/javascriptguide.xml?showone=Tips_and_Tricks#Tips_and_Tricks
     for (var i = 0, node; (node = nodes[i]); i++) {
       values[node.name] = isNaN(node.value) ? undefined : parseInt(node.value);
     }

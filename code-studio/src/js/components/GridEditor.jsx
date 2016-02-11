@@ -27,19 +27,19 @@ var CellJSON = React.createClass({
     node.select();
   },
 
-  onChange: function (event) {
+  handleChange: function (event) {
     this.props.onChange(JSON.parse(event.target.value));
   },
 
   render: function () {
     return (<label>
       Cell JSON (for copy/pasting):
-      <input type="text" value={JSON.stringify(this.props.serialization)} ref="serializedInput" onChange={this.onChange}/>
+      <input type="text" value={JSON.stringify(this.props.serialization)} ref="serializedInput" onChange={this.handleChange}/>
     </label>);
   }
 });
 
-window.dashboard.GridEditor = React.createClass({
+window.dashboard.GridEditor = module.exports = React.createClass({
   propTypes: {
     serializedMaze: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)),
     maze: React.PropTypes.arrayOf(React.PropTypes.array), // maze items can be integers or strings
@@ -74,6 +74,10 @@ window.dashboard.GridEditor = React.createClass({
     return mazeUtils.isBeeSkin(this.props.skin) ? BeeCell : Cell;
   },
 
+  getEditorClass: function () {
+    return mazeUtils.isBeeSkin(this.props.skin) ? BeeCellEditor : CellEditor;
+  },
+
   changeSelection: function (row, col) {
     this.setState({
       selectedRow: row,
@@ -81,13 +85,23 @@ window.dashboard.GridEditor = React.createClass({
     });
   },
 
-  onCellChange: function (newSerializedCell) {
+  handleCellChange: function (newSerializedCell) {
     var row = this.state.selectedRow;
     var col = this.state.selectedCol;
 
     // this is technically a violation of React's "thou shalt not modify
-    // state" commandment.
-    // TODO figure out a clean way to do this purely with setState
+    // state" commandment. The problem here is that we're modifying an
+    // element of an element of this.state.cells. We do then immediately
+    // update with setState, but it's still at the very least unclean.
+    //
+    // Some other potential approaches would be to clone our entire
+    // array before modifying it or to store the cells in some way that
+    // allows us to immutably update them. Storing tham as an object
+    // whose keys are their x,y coordinates, for example, and then
+    // providing some helper method to retrieve individual cells.
+    //
+    // Both of those seem a bit unnecessary, so for now this hack will
+    // remain.
     var cells = this.state.cells;
     var newCell = this.getCellClass().deserialize(newSerializedCell);
     if (row !== undefined && col !== undefined) {
@@ -113,9 +127,9 @@ window.dashboard.GridEditor = React.createClass({
     var col = this.state.selectedCol;
     if (cells[row] && cells[row][col]) {
       var cell = cells[row][col];
-      var EditorClass = mazeUtils.isBeeSkin(this.props.skin) ? BeeCellEditor : CellEditor;
-      cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.onCellChange} />;
-      selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.onCellChange} />;
+      var EditorClass = this.getEditorClass();
+      cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.handleCellChange} />;
+      selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.handleCellChange} />;
     }
 
     return (<div className="row">
