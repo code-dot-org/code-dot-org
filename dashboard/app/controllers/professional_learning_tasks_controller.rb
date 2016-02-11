@@ -40,8 +40,6 @@ class ProfessionalLearningTasksController < ApplicationController
   # PATCH/PUT /professional_learning_tasks/1
   # PATCH/PUT /professional_learning_tasks/1.json
   def update
-    puts professional_learning_task_params.inspect
-
     respond_to do |format|
       if @professional_learning_task.update(professional_learning_task_params)
         format.html { redirect_to @professional_learning_task, notice: 'ProfessionalLearningTask was successfully updated.' }

@@ -1,0 +1,23 @@
+%h1 Listing plc_enrollment_evaluations
+
+%table
+  %thead
+    %tr
+      %th User professional learning course enrollment
+      %th Plc evaluation answers
+      %th
+      %th
+      %th
+
+  %tbody
+    - @plc_enrollment_evaluations.each do |plc_enrollment_evaluation|
+      %tr
+        %td= plc_enrollment_evaluation.user_professional_learning_course_enrollment
+        %td= plc_enrollment_evaluation.plc_evaluation_answers
+        %td= link_to 'Show', plc_enrollment_evaluation
+        %td= link_to 'Edit', edit_plc_enrollment_evaluation_path(plc_enrollment_evaluation)
+        %td= link_to 'Destroy', plc_enrollment_evaluation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Plc enrollment evaluation', new_plc_enrollment_evaluation_path
