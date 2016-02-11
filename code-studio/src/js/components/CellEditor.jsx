@@ -4,6 +4,8 @@
  * @see @cdo/apps/maze/cell
  */
 /* global React */
+var tiles = require('@cdo/apps/maze/tiles');
+var SquareType = tiles.SquareType;
 
 var CellEditor = module.exports = React.createClass({
   propTypes: {
@@ -37,12 +39,12 @@ var CellEditor = module.exports = React.createClass({
 
         <label htmlFor="tileType">Tile Type (required):</label>
         <select name="tileType" value={values.tileType} onChange={this.handleChange}>
-          <option value="0">wall</option>
-          <option value="1">open</option>
-          <option value="2">start</option>
-          <option value="3">finish</option>
-          <option value="4">obstacle</option>
-          <option value="5">startandfinish</option>
+          <option value={SquareType.WALL}>wall</option>
+          <option value={SquareType.OPEN}>open</option>
+          <option value={SquareType.START}>start</option>
+          <option value={SquareType.FINISH}>finish</option>
+          <option value={SquareType.OBSTACLE}>obstacle</option>
+          <option value={SquareType.STARTANDFINISH}>startandfinish</option>
         </select>
 
         <label htmlFor="value">Value:</label>
