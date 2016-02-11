@@ -10,7 +10,7 @@ The ideal CSP Facilitator is an enthusiastic supporter of computer science educa
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
 <br/>
 <br/>
 
@@ -29,7 +29,7 @@ Before applying please carefully review the the [criteria, requirements and comm
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1b0Fub3kdtuKMPFzKad_eGxOTjQbBWJT6dmHT24Ajd2E/pub)
 <br/>
 <br/>
 
