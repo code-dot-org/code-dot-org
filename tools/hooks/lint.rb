@@ -32,7 +32,7 @@ def run(cmd, working_dir)
 end
 
 def run_rubocop(files)
-  run("bundle exec rubocop #{files.join(" ")}", REPO_DIR)
+  run("bundle exec rubocop --force-exclusion #{files.join(" ")}", REPO_DIR)
 end
 
 def run_jshint(files)
