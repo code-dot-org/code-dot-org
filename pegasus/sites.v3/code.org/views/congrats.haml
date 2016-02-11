@@ -37,8 +37,8 @@
 
   %div{:style=>'clear: both; height:30px;'}
   %h1= I18n.t(:congrats_guest_speaker_title)
-  #guest-spaker-img.col-50
-    %img{:src=>'/images/fit-400/guest-speaker-alice.jpg', :style=>'border-radius: 5px;'}
+  #guest-spaker-img.col-50{:style=>'width: 430px;'}
+    %img{:src=>'/images/fill-400x205/guest-speaker-alice.jpg', :style=>'border-radius: 5px; margin-top: 5px;'}
   #guest-speaker-desc.col-50
     = I18n.t(:congrats_guest_speaker_desc)
     %br
@@ -47,6 +47,7 @@
       %button= I18n.t(:congrats_guest_speaker_cta)
 
   %div{:style=>'clear: both; height:30px;'}
+  %hr
   = view :petition_expand 
 
 = view 'popup_window.js'
