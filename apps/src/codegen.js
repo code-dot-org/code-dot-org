@@ -468,20 +468,20 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   if (state.done) {
     return true;
   }
-  if (type === "ForStatement") {
-    var mode = state.mode || 0;
-    // Safe to skip over ForStatement's in mode 0 (init) and 3 (update),
-    // but not mode 1 (test) or mode 2 (body) while unwinding...
-    return mode === 0 || mode === 3;
-  }
   if (type === "SwitchStatement") {
     // Safe to skip over SwitchStatement's except the very start (before a
     // switchValue has been set):
     return typeof state.switchValue !== 'undefined';
   }
+  if (type === "VariableDeclaration") {
+    // Only stop the first time this VariableDeclaration is processed (the
+    // interpreter will stop on this node multiple times, but with different
+    // `state.n` representing which VariableDeclarator is being executed).
+    return state.n > 0;
+  }
   switch (type) {
     // Declarations:
-    case "VariableDeclaration":
+    case "VariableDeclarator":
     // Statements:
     case "BlockStatement":
     case "BreakStatement":
@@ -677,6 +677,20 @@ exports.selectCurrentCode = function (interpreter,
   var userCodeRow = -1;
   if (interpreter && interpreter.stateStack[0]) {
     var node = interpreter.stateStack[0].node;
+
+    if (node.type === 'ForStatement') {
+      var mode = interpreter.stateStack[0].mode || 0;
+      if (mode === 0) {
+        node = node.init;
+      } else if (mode === 1) {
+        node = node.test;
+      } else if (mode === 2) {
+        node = node.body;
+      } else if (mode === 3) {
+        node = node.update;
+      }
+    }
+
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - userCodeStartOffset;
@@ -691,11 +705,7 @@ exports.selectCurrentCode = function (interpreter,
       if (editor.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
         editor.clearLineMarks();
-        // NOTE: replace markLine with this new mark() call once we have a new
-        // version of droplet
-
-        //editor.mark(userCodeRow, start - cumulativeLength[userCodeRow], style);
-        editor.markLine(userCodeRow, style);
+        editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow]}, style);
       } else {
         selectAndHighlightCode(editor.aceEditor, cumulativeLength, start, end,
             highlightClass);
