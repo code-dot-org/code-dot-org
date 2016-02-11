@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210194205) do
+ActiveRecord::Schema.define(version: 20160211190954) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -286,6 +286,15 @@ ActiveRecord::Schema.define(version: 20160210194205) do
   end
 
   add_index "levels", ["game_id"], name: "index_levels_on_game_id", using: :btree
+
+  create_table "plc_enrollment_evaluations", force: :cascade do |t|
+    t.integer  "user_professional_learning_course_enrollment_id", limit: 4
+    t.text     "plc_evaluation_answers",                          limit: 65535
+    t.datetime "created_at",                                                    null: false
+    t.datetime "updated_at",                                                    null: false
+  end
+
+  add_index "plc_enrollment_evaluations", ["user_professional_learning_course_enrollment_id"], name: "enrollment_evaluation_index", using: :btree
 
   create_table "plc_evaluation_answers", force: :cascade do |t|
     t.integer  "plc_evaluation_question_id",    limit: 4

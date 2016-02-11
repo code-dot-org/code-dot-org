@@ -31,7 +31,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "maze_data": null,
     "fast_get_nectar_animation": "false",
     "raw_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,2,1,0,0],[0,0,1,1,\"+1\",1,0,0],[0,0,1,\"+1\",1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
   },

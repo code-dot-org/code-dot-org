@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :plc_enrollment_evaluation do
+    user_professional_learning_course_enrollment nil
+    plc_evaluation_answers "MyText"
+  end
+
   factory :plc_evaluation_answer do
     plc_evaluation_question nil
     answer "MyString"

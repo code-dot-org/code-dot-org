@@ -12,8 +12,5 @@
     = f.label :course
     = f.select :professional_learning_course_id, options_for_select(options_for_user_enrollment_courses)
 
-    = f.label :module_selection
-    = f.select :professional_learning_module_ids, options_for_select(options_for_professional_learning_task_learning_module), {},  {multiple: true, size: options_for_professional_learning_task_learning_module.count}
-
   .actions
     = f.submit 'Save'

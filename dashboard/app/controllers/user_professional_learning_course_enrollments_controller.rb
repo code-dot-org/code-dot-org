@@ -1,5 +1,5 @@
 class UserProfessionalLearningCourseEnrollmentsController < ApplicationController
-  before_action :set_user_professional_learning_course_enrollment, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_professional_learning_course_enrollment, only: [:show, :edit, :update, :destroy, :evaluation]
 
   # GET /user_professional_learning_course_enrollments
   # GET /user_professional_learning_course_enrollments.json
@@ -10,6 +10,7 @@ class UserProfessionalLearningCourseEnrollmentsController < ApplicationControlle
   # GET /user_professional_learning_course_enrollments/1
   # GET /user_professional_learning_course_enrollments/1.json
   def show
+    puts params
   end
 
   # GET /user_professional_learning_course_enrollments/new
@@ -24,14 +25,10 @@ class UserProfessionalLearningCourseEnrollmentsController < ApplicationControlle
   # POST /user_professional_learning_course_enrollments
   # POST /user_professional_learning_course_enrollments.json
   def create
-    #ugh, why is empty being passed in
-    learning_module_ids = user_professional_learning_course_enrollment_params[:professional_learning_module_ids].drop 1
-
     user = User.find_by(id: user_professional_learning_course_enrollment_params[:user_id])
     course = ProfessionalLearningCourse.find_by(id: user_professional_learning_course_enrollment_params[:professional_learning_course_id])
-    learning_modules = ProfessionalLearningModule.where(id: learning_module_ids)
 
-    @user_professional_learning_course_enrollment = UserProfessionalLearningCourseEnrollment.enroll_user_in_course_with_learning_modules(user, course, learning_modules)
+    @user_professional_learning_course_enrollment = UserProfessionalLearningCourseEnrollment.new(user: user, professional_learning_course: course)
 
     respond_to do |format|
       if @user_professional_learning_course_enrollment.save

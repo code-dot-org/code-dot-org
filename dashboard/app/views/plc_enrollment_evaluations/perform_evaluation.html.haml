@@ -1,0 +1,15 @@
+%h1 Self Evaluation for #{@course.name}
+
+%p
+  This will determine what parts of the course are best suited for your learning needs. There are no wrong answers, just answer as best as you can!
+
+= form_tag(action: 'submit_evaluation') do
+  - @questions.each do |question|
+    %p #{question.question}
+    - answers = question.plc_evaluation_answer
+    - answers.each do |answer|
+      %p
+        %input.radio{type: "radio", name: 'question_' + question.id.to_s, value: '' + answer.professional_learning_task_id.to_s, checked: answer == answers.first}
+          #{answer.answer} (corresponds with #{answer.professional_learning_task.try(:name)})
+
+  = submit_tag('Submit evaluation', id: 'submit')
