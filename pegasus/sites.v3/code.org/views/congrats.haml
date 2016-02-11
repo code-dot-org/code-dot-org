@@ -1,15 +1,17 @@
 %link{:href=>"/css/thirdparty.css", :rel=>"stylesheet"}
 
--cert_id = params[:i]
--cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
+- cert_id = params[:i]
+- cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
 
--if cert_id
-  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
--else
-  -share_url = "http://#{request.host_with_port}/certificates/blank"
+- if cert_id
+  - share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
+- else
+  - share_url = "http://#{request.host_with_port}/certificates/blank"
 
--facebook = {:u=>share_url}
--twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:"just_did_#{course}")}
+- facebook = {:u=>share_url}
+- twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:"just_did_#{course}")}
+
+- recommended_courses = {"course1" => "course2", "course2" => "course3", "course3" => "course4"}
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 
@@ -26,26 +28,26 @@
 
   %div{:style=>'clear: both; height:30px'}
   %h1= I18n.t(:congrats_next_tutorials_title)
-  = view :course_block, id: "artist"
-  = view :course_block, id: "playlab"
-  - if course.eql? "course1"
-    = view :course_block, id: "course2"
-  - if course.eql? "course2"
-    = view :course_block, id: "course3"
-  - if course.eql? "course3"
-    = view :course_block, id: "course4"
-
-  %div{:style=>'clear: both; height:30px'}
-  %h1 Third party recommendations
+  - recommended_courses.each do |current_course, next_course|
+    - if current_course.eql? course
+      = view :course_block, id: next_course
+  
+  %h2= I18n.t(:"congrats_third_party_#{course}")
   = view :"#{course}_next"
 
-  %div{:style=>'clear: both; height:30px'}
-  %h1 Find a guest speaker for your classroom
-  Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-  %br
-  %br
-  %a{:href=>'/volunteer/local'}
-    %button Find a guest speaker
+  %div{:style=>'clear: both; height:30px;'}
+  %h1= I18n.t(:congrats_guest_speaker_title)
+  #guest-spaker-img.col-50
+    %img{:src=>'/images/fit-400/guest-speaker-alice.jpg', :style=>'border-radius: 5px;'}
+  #guest-speaker-desc.col-50
+    = I18n.t(:congrats_guest_speaker_desc)
+    %br
+    %br
+    %a{:href=>'/volunteer/local'}
+      %button= I18n.t(:congrats_guest_speaker_cta)
+
+  %div{:style=>'clear: both; height:30px;'}
+  = view :petition_expand 
 
 = view 'popup_window.js'
 
