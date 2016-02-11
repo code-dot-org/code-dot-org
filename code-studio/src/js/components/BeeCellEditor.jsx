@@ -5,6 +5,10 @@
  */
 /* global React */
 
+var BeeCell = require('@cdo/apps/maze/beeCell');
+var tiles = require('@cdo/apps/maze/tiles');
+var SquareType = tiles.SquareType;
+
 var BeeCellEditor = module.exports = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
@@ -33,7 +37,7 @@ var BeeCellEditor = module.exports = React.createClass({
 
     // If the cell is a variable cloud, its feature MUST be variable
     if (this.props.cell.isVariableCloud()) {
-      values.featureType = 2;
+      values.featureType = BeeCell.FeatureType.VARIABLE;
     }
 
     // If the cell has no features, it should have neither value nor
@@ -63,20 +67,20 @@ var BeeCellEditor = module.exports = React.createClass({
 
         <label htmlFor="tileType">Tile Type (required):</label>
         <select name="tileType" value={values.tileType} onChange={this.handleChange}>
-          <option value="0">wall</option>
-          <option value="1">open</option>
-          <option value="2">start</option>
-          <option value="3">finish</option>
-          <option value="4">obstacle</option>
-          <option value="5">startandfinish</option>
+          <option value={SquareType.WALL}>wall</option>
+          <option value={SquareType.OPEN}>open</option>
+          <option value={SquareType.START}>start</option>
+          <option value={SquareType.FINISH}>finish</option>
+          <option value={SquareType.OBSTACLE}>obstacle</option>
+          <option value={SquareType.STARTANDFINISH}>startandfinish</option>
         </select>
 
         <label htmlFor="featureType">Feature Type:</label>
         <select name="featureType" value={values.featureType} disabled={this.props.cell.isVariableCloud()} onChange={this.handleChange}>
           <option value="undefined">none</option>
-          <option value="0">hive</option>
-          <option value="1">flower</option>
-          <option value="2">variable</option>
+          <option value={BeeCell.FeatureType.HIVE}>hive</option>
+          <option value={BeeCell.FeatureType.FLOWER}>flower</option>
+          <option value={BeeCell.FeatureType.VARIABLE}>variable</option>
         </select>
 
         <label htmlFor="value">Value:</label>
@@ -88,18 +92,18 @@ var BeeCellEditor = module.exports = React.createClass({
         <label htmlFor="cloudType">Cloud Type:</label>
         <select name="cloudType" value={values.cloudType} onChange={this.handleChange}>
           <option value="undefined">none</option>
-          <option value="0">classic</option>
-          <option value="1">hive or flower</option>
-          <option value="2">flower or nothing</option>
-          <option value="3">hive or nothing</option>
-          <option value="4">any</option>
+          <option value={BeeCell.CloudType.STATIC}>classic</option>
+          <option value={BeeCell.CloudType.HIVE_OR_FLOWER}>hive or flower</option>
+          <option value={BeeCell.CloudType.FLOWER_OR_NOTHING}>flower or nothing</option>
+          <option value={BeeCell.CloudType.HIVE_OR_NOTHING}>hive or nothing</option>
+          <option value={BeeCell.CloudType.ANY}>any</option>
         </select>
 
         <label htmlFor="flowerColor">Flower Color:</label>
         <select name="flowerColor" value={values.flowerColor} disabled={!this.props.cell.isFlower()} onChange={this.handleChange}>
           <option value="undefined">default</option> 
-          <option value="0">red</option>
-          <option value="1">purple</option>
+          <option value={BeeCell.FlowerColor.RED}>red</option>
+          <option value={BeeCell.FlowerColor.PURPLE}>purple</option>
         </select>
       </form>
     );
