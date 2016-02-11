@@ -7,6 +7,10 @@ require 'active_support/core_ext/hash/except'
 # Separate integration tests are required to guarantee that the live API
 # endpoints will accept the values provided.
 class TestCloudFront < Minitest::Test
+  def around(&block)
+    AWS::CloudFront.stub(:alias_cache, pegasus_dir('cache', 'cloudfront_aliases_stub.json'), &block)
+  end
+
   def setup
     @old_stub_responses = Aws.config[:stub_responses]
     Aws.config[:stub_responses] = true
@@ -36,6 +40,7 @@ class TestCloudFront < Minitest::Test
   end
 
   def test_cloudfront_create
+    Aws.config[:cloudfront][:stub_responses][:get_distribution_config] = ['NoSuchDistribution']
     Aws.config[:cloudfront][:stub_responses][:list_distributions] = distribution_list
     assert_output (<<STR) { AWS::CloudFront.create_or_update }
 pegasus distribution created!
@@ -78,7 +83,7 @@ STR
   end
 
   # Ensures that the cache configuration does not exceed CloudFront distribution limits.
-  # 25 Cache behaviors per distribution.
+  # 50 Cache behaviors per distribution (Updated from 25 through special request).
   # Ref: http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront
   def test_cloudfront_limits
     %i(pegasus dashboard).each do |app|

@@ -1,6 +1,9 @@
 var PageAction = {
-  DropletTransitionError: 'DropletTransitionError'
+  DropletTransitionError: 'DropletTransitionError',
+  SanitizedLevelHtml: 'SanitizedLevelHtml'
 };
+
+var MAX_FIELD_LENGTH = 4095;
 
 /**
  * Shims window.newrelic, which is only included in production. This causes us
@@ -17,6 +20,12 @@ module.exports = {
     if (!PageAction[actionName]) {
       console.log('Unknown actionName: ' + actionName);
       return;
+    }
+
+    for (var prop in value) {
+      if (typeof value[prop] === 'string') {
+        value[prop] = value[prop].substring(0, MAX_FIELD_LENGTH);
+      }
     }
 
     window.newrelic.addPageAction(actionName, value);

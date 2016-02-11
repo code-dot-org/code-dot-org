@@ -6,7 +6,7 @@ css 'unplugged'
 
 
 markdown <<MARKDOWN
-# Making A Scatter Chart
+# Making a Scatter Chart
 
 The first type of chart you’re going to build is a **scatter chart**. Scatter charts are useful for finding relationships between two types of data. In this exercise, you will build a scatter chart that shows the relationship between movie reviewer age and average movie rating.
 

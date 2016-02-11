@@ -85,3 +85,8 @@ Run the eyes tests
 
 - If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
+
+## See Also
+
+* [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
+* [General Testing Instructions](../../../TESTING.md)
