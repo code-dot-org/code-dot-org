@@ -8,6 +8,7 @@ class AdminReportsHelperTest < ActionView::TestCase
   end
 
   def test_get_gender_percentage_division_by_zero
+    # Note that '0.00%' is returned by default when both inputs are zero.
     assert_equal('0.00%', get_gender_percentage(0, 0))
   end
 

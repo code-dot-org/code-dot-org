@@ -1,6 +1,6 @@
 module AdminReportsHelper
   # Computes the ratio of this_gender to this_gender and other_gender, returning the percentage as
-  # a string with a trailing percentage sign.
+  # a string with a trailing percentage sign. Returns '0.00%' if both counts are zero.
   def get_gender_percentage(this_gender_count, other_gender_count)
     return get_percentage_from_ratio(
       this_gender_count.to_f / [this_gender_count + other_gender_count, 1].max.to_f)
