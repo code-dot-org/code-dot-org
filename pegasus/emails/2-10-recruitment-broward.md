@@ -17,13 +17,22 @@ You *don’t* need any prior exposure to computer science to participate. If you
 
 [Sign up](https://code.org/k5)
 
+### Middle school math and science teachers:
+
+- Integrate computational thinking into any algebra or science class with hands-on modules
+- Open to all middle school math or science teachers in participating districts
+
+Sign up by March 1:
+Computer Science in Science
+Computer Science in Algebra
+
+
 ### High school teachers:
 
 - Teach year-long computer science courses that are approachable, collaborative, and relate to everyday life
 - Open to high school teachers of all backgrounds in participating districts
 
 Sign up by March 1:
-
 - [Exploring Computer Science — an introduction](https://code.org/educate/professional-learning/exploring-cs)
 - [AP Computer Science Principles — a deeper dive](https://code.org/educate/professional-learning/cs-principles)
 

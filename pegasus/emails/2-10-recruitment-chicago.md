@@ -1,11 +1,11 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: "Bring computer science into your Arizona classroom"
+subject: "Bring computer science into your Chicago classroom"
 ---
 
-Arizona educator,
+Chicago educator,
 
-Code.org has partnered with districts in Arizona to bring computer science to your students, at all K-12 levels.
+Code.org has partnered with districts around Chicago to bring computer science to your students, at all K-12 levels.
 
 You *don’t* need any prior exposure to computer science to participate. If you’re curious about technology and want the skills to teach computer science to your students, you’ll get everything you need with high-quality professional learning — at no cost to you or your school. 
 
@@ -16,6 +16,16 @@ You *don’t* need any prior exposure to computer science to participate. If you
 - Open to K-5 educators **in any district** (including librarians, tech ed specialists, etc.)
 
 [Sign up](https://code.org/k5)
+
+### Middle school math and science teachers:
+
+- Integrate computational thinking into any algebra or science class with hands-on modules
+- Open to all middle school math or science teachers in participating districts
+
+Sign up by March 1:
+
+- [Computer Science in Science](https://code.org/educate/professional-learning/cs-in-science)
+- [Computer Science in Algebra](https://code.org/educate/professional-learning/cs-in-algebra)
 
 ### High school teachers:
 

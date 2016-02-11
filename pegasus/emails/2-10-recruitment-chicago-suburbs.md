@@ -1,11 +1,11 @@
 ---
 from: 'Hadi Partovi <hadi_partovi@code.org>'
-subject: "Bring computer science into your Arizona classroom"
+subject: "Bring computer science into your Chicago-area classroom"
 ---
 
-Arizona educator,
+Dear Chicago-area educator,
 
-Code.org has partnered with districts in Arizona to bring computer science to your students, at all K-12 levels.
+Code.org has partnered with districts in the greater Chicago area to bring computer science to your students, at all K-12 levels.
 
 You *don’t* need any prior exposure to computer science to participate. If you’re curious about technology and want the skills to teach computer science to your students, you’ll get everything you need with high-quality professional learning — at no cost to you or your school. 
 
@@ -17,15 +17,13 @@ You *don’t* need any prior exposure to computer science to participate. If you
 
 [Sign up](https://code.org/k5)
 
+
 ### High school teachers:
 
-- Teach year-long computer science courses that are approachable, collaborative, and relate to everyday life
-- Open to high school teachers of all backgrounds in participating districts
+- Teach AP Computer Science Principles, a project-based, year-long computer science course that focuses on how technology is transforming our world
+- Open to high school teachers of all backgrounds
 
-Sign up by March 1:
-
-- [Exploring Computer Science — an introduction](https://code.org/educate/professional-learning/exploring-cs)
-- [AP Computer Science Principles — a deeper dive](https://code.org/educate/professional-learning/cs-principles)
+[Sign up by March 1](https://code.org/educate/professional-learning/cs-principles)
 
 ### Computer science is a foundation for success in any future career
 
