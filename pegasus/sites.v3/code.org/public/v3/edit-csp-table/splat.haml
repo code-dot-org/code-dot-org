@@ -151,6 +151,9 @@ angular: recordsApp
       column.id = column.name;
       column.editing = false;
     }
+    $scope.coerceColumn = function (column, type) {
+      console.log('coerceColumn ', column, type);
+    }
     function castValue(val) {
       if (val == '') return undefined;
       if (val == 'true' || val === true) return true;
@@ -189,4 +192,3 @@ angular: recordsApp
     }
     return columns;
   }
-

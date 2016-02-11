@@ -22,6 +22,30 @@ module TableCoerce
     records
   end
 
+  # Attempts to coerce a single column to the given type.
+  # @return {boolean} True if the entire column was converted entirely, false
+  #   if any item could not be.
+  def TableCoerce.coerce_column(records, column_name, type)
+    all_converted = true
+    records.map do |record|
+      val = record[column_name]
+      if type == :boolean
+        convertable = TableCoerce.is_boolean?(val)
+        val = TableCoerce.to_boolean(val) if convertable
+        all_converted = false unless convertable
+      elsif type == :number
+        convertable = TableCoerce.is_number?(val)
+        val = TableCoerce.to_number(val) if convertable
+        all_converted = false unless convertable
+      elsif type == :string
+        val = val.to_s
+      end
+      record[column_name] = val
+      record
+    end
+    all_converted
+  end
+
   def TableCoerce.column_types(records, columns)
     # do an initial pass to determine column types
     return columns.map do |col|
