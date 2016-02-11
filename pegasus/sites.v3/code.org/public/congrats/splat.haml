@@ -1,7 +1,7 @@
 ---
 title: Congratulations
 theme: responsive
-footer: suppl_footer
+footer: donor_footer
 social:
   "twitter:card": player
   "twitter:site": "@codeorg"
@@ -15,17 +15,9 @@ social:
 max_age: 60
 ---
 
-- path = request.splat_path_info
+- course = request.splat_path_info[1..-1]
 
-- if path.eql? "/course1"
-  = view :congrats, course: "course1"
-- elsif path.eql? "/course2"
-  = view :congrats, course: "course2"
-- elsif path.eql? "/course3"
-  = view :congrats, course: "course3"
-- elsif path.eql? "/course4"
-  = view :congrats, course: "course4"
-- elsif path.eql? "/accelerated"
-  = view :congrats, course: "accelerated"
+- if %w(course1 course2 course3 course4 accelerated).include? course
+  = view :congrats, course: course
 - else
   - redirect "/congrats"
