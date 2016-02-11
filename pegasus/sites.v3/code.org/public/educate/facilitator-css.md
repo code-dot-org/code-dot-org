@@ -25,7 +25,7 @@ For each workshop you host, CS in Science Facilitators will receive betwee $450-
 
 
 ## How to become a CS in Science Facilitator?
-Become a CS in Science Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Science Professional Learning Program throughout the 2016-2017 school year. 
+Become a CS in Science Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (New Orleans, LA). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Science Professional Learning Program throughout the 2016-2017 school year. 
 
 Before applying please carefully review the the [requirements and commitments](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub) for the CS in Science Facilitator program.
 <br/>
