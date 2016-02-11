@@ -1,0 +1,15 @@
+%link{type: "text/css", rel: "stylesheet", href: "/shared/css/course-blocks.css"}
+
+- url = CDO.studio_url("/s/#{id}")
+- title = I18n.t("#{id}_name")
+- body = I18n.t("#{id}_shortdescription_congrats")
+- img_src =  CDO.code_org_url("/shared/images/courses/fit-200/logo_#{id}.jpg")
+
+.courseblock-span6.courseblock-wide-large{style: "height: 250px;"}
+  %a{:href=>url}
+    %img.courseblock-span2.imgspan{src: img_src, style: "margin-right: 10px;"}
+    .courseblock-span4.heading
+      %h3= title
+      %h4= I18n.t("#{id}_gradelevel")
+      .smalltext= body
+.clear

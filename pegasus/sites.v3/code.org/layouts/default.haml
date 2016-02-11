@@ -66,8 +66,12 @@
 
 -if header['theme'] == 'responsive'
   .desktop-feature
+    -if header['footer'] == 'donor_footer'
+      = view :donor_slider
     = view :footer
   .mobile-headers.mobile-feature
+    -if header['footer'] == 'donor_footer'
+      = view :donor_slider
     = view :mobile_footer_responsive
 -else
   = view :footer
