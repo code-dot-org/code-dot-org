@@ -23,6 +23,7 @@ class SurveyResult < ActiveRecord::Base
   ETHNICITIES["hispanic"] = "Hispanic or Latino"
   ETHNICITIES["native"] = "Native Hawaiian or Other Pacific Islander "
   ETHNICITIES["white"] = "White"
+  ETHNICITIES["other"] = "Other"
   ETHNICITIES.freeze
 
   RESULT_ATTRS = ETHNICITIES.keys.map{|key| "survey2016_ethnicity_#{key}"}
