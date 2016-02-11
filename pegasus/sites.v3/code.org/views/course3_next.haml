@@ -3,61 +3,61 @@
   .courseblock-span4.heading
     %h3 Khan Academy
     %h4 
-      Grades 5-12
+      = I18n.t(:third_party_gradelevel_5to12)
       %br
-      Platform: Web
+      = I18n.t(:third_party_platform_web)
       %br
-      Price: Free
-    .smalltext Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!
+      = I18n.t(:third_party_price_free)
+    .smalltext= I18n.t(:third_party_khan_desc)
     %br
     %a{:href=>"https://www.khanacademy.org/computing/computer-programming"}
-      %button{:style=>'margin-left:10px'} Learn CS with Khan Academy
+      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_khan_btn_learn)
     %a{:href=>"https://www.khanacademy.org/computing/computer-programming/d"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'} Khan Academy CS Forum
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_khan_btn_forum)
 
 .courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
   %img.courseblock-span2.imgspan{src: "/images/next/app-inventor.png", style: "margin-right: 10px;"}
   .courseblock-span4.heading
     %h3 MIT App Inventor 2
     %h4 
-      Grades 4-12
+      = I18n.t(:third_party_gradelevel_4to12)
       %br
-      Platform: Web
+      = I18n.t(:third_party_platform_web)
       %br
-      Price: Free
-    .smalltext MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
+      = I18n.t(:third_party_price_free)
+    .smalltext= I18n.t(:third_party_appinv_desc)
     %br
     %a{:href=>"http://www.appinventor.org/content/CourseInABox/Intro/courseinabox"}
-      %button{:style=>'margin-left:10px'} Download App Inventor 2 Curriculum
+      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_appinv_btn_curriculum)
     %a{:href=>"https://groups.google.com/forum/#!forum/mitappinventortest"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'} App Inventor 2 Forum
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_appinv_btn_forum)
     %a{:href=>"http://ai2.appinventor.mit.edu/"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'} Visit App Inventor 2
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_appinv_btn_site)
 
 .clear
 %br
 %table
   %thead
-    %th Organization
-    %th Curriculum
-    %th Pricing
+    %th= I18n.t(:third_party_organization)
+    %th= I18n.t(:third_party_curriculum)
+    %th= I18n.t(:third_party_pricing)
   %tr
     %td 
       %a{:href=>"https://gamestarmechanic.com/"} Gamestar Mechanic
-    %td Between 10 & 15 lessons, geared toward grades 3-12
-    %td Free to try, $2/student
+    %td= I18n.t(:third_party_desc_10to15_3to12)
+    %td= I18n.t(:third_party_cost_free_2)
   %tr
     %td 
       %a{:href=>"https://www.codecombat.com"} Code Combat
-    %td From 25 - 40 lessons, intended for grades 3-12
-    %td Free to try, $9.99/month
+    %td= I18n.t(:third_party_desc_25to40_3to12)
+    %td= I18n.t(:third_party_cost_free_10)
   %tr
     %td 
       %a{:href=>"https://scratch.mit.edu"} Scratch
-    %td About 20 lessons, geared toward grades 2-8
-    %td Free
+    %td= I18n.t(:third_party_desc_20_2to8)
+    %td= I18n.t(:third_party_cost_free)
   %tr
     %td 
       %a{:href=>"https://www.tynker.com"} Tynker
-    %td Dozens of lessons for all grades K-8
-    %td Free to try, $399/classroom
+    %td= I18n.t(:third_party_desc_dozens_kto8)
+    %td= I18n.t(:third_party_cost_free_399)
