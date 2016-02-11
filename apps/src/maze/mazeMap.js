@@ -54,12 +54,6 @@ MazeMap.deserialize = function (serializedValues, cellClass) {
   }));
 };
 
-//MazeMap.parse = function (initialValues, cellClass) {
-//  return new MazeMap(initialValues.map(function (row) {
-//    return row.map(cellClass.parse);
-//  }));
-//};
-
 MazeMap.parseFromOldValues = function (map, initialDirt, cellClass) {
   return new MazeMap(map.map(function (row, x) {
     return row.map(function (mapCell, y) {
