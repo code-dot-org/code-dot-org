@@ -419,6 +419,15 @@ ActiveRecord::Schema.define(version: 20160210194205) do
     t.datetime "updated_at"
   end
 
+  create_table "survey_results", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.text     "properties", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "survey_results", ["user_id"], name: "index_survey_results_on_user_id", using: :btree
+
   create_table "teacher_bonus_prizes", force: :cascade do |t|
     t.integer  "prize_provider_id", limit: 4,   null: false
     t.string   "code",              limit: 255, null: false
@@ -642,4 +651,12 @@ ActiveRecord::Schema.define(version: 20160210194205) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "professional_learning_tasks", "professional_learning_modules"
+  add_foreign_key "survey_results", "users"
+  add_foreign_key "user_enrollment_module_assignments", "professional_learning_modules"
+  add_foreign_key "user_enrollment_module_assignments", "user_professional_learning_course_enrollments"
+  add_foreign_key "user_module_task_assignments", "professional_learning_tasks"
+  add_foreign_key "user_module_task_assignments", "user_enrollment_module_assignments"
+  add_foreign_key "user_professional_learning_course_enrollments", "professional_learning_courses"
+  add_foreign_key "user_professional_learning_course_enrollments", "users"
 end

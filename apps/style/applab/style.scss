@@ -211,7 +211,6 @@ div#visualizationResizeBar {
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$root}phone_wireframe.png") center center no-repeat;
   max-width: none !important;
   width: 352px;
   height: 612px;
