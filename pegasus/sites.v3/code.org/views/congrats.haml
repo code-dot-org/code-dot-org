@@ -1,4 +1,5 @@
-%link{:href=>"/css/thirdparty.css", :rel=>"stylesheet"}
+%link{:href=>"/css/thirdparty.css", :type=>"text/css", :rel=>"stylesheet"}
+%link{:href=>"/shared/css/course-blocks.css", :type=>"text/css", :rel=>"stylesheet"}
 
 - cert_id = params[:i]
 - cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
