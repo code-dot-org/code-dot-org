@@ -1,0 +1,18 @@
+= form_for @plc_evaluation_question do |f|
+  - if @plc_evaluation_question.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@plc_evaluation_question.errors.count, "error")} prohibited this plc_evaluation_question from being saved:"
+      %ul
+        - @plc_evaluation_question.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :course
+    = f.select :professional_learning_course_id, options_for_select(options_for_user_enrollment_courses)
+    = f.label :question
+    = f.text_field :question
+    = f.label 'Answers'
+    = text_area_tag 'plc_evaluation_question[answers]', nil, rows: 4
+
+  .actions
+    = f.submit 'Save'

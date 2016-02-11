@@ -14,6 +14,7 @@ Dashboard::Application.routes.draw do
   resources :professional_learning_modules
   resources :professional_learning_tasks
   resources :user_professional_learning_course_enrollments
+  resources :plc_evaluation_questions
 
   resources :user_levels, only: [:update]
 
