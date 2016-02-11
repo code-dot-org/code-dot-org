@@ -13,40 +13,63 @@
         -# If at least 13, and account is at least 14 days old
         - if !current_user.under_13? && (DateTime.now - current_user.created_at.to_datetime) >= 14
 
-          .survey{style: "background-color: rgb(200,200,200); padding:40px"}
+          .survey{style: "border: 4px solid #a69bc1; border-radius: 15px; padding:40px"}
             #surveythanks{style: "display: none"}
-              Thank you for your response.
+              We are working hard to improve our programs - we can't do this without your input.
+              %br/
+              %br/
+              Please help us by
               %a{href: "https://docs.google.com/forms/d/13O2Yu1d48NfmsBw6QcdPKAeQcQCBW6mtgkLxnWiwuxQ/viewform?entry.1857644974=__other_option__&entry.1857644974.other_option_response=#{current_user.id}", target: "_blank"}
-                Answer more questions here.
+                filling out this X minute survey.
 
             #surveybody
-              %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Quick survey
+              %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Code.org Program Improvement Survey
+              %div{style: "margin-left: 0px"} One of our primary goals at Code.org is to improve overall diversity within computer science education. Please take a minute to answer 2 questions about your classroom so we can estimate how we're doing. None of this information will be identifiable to your students specifically, according to our terms of service.
+              %br/
               = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
-                %p{style: "padding-top: 10px; font-size:16px"}
-                  Of your students using Code.org's courses, how many are
-                .dots{style: "padding-top: 10px; padding-bottom: 20px"}
-                  - SurveyResult::ETHNICITIES.each do |key, value|
-                    %input{type: "number",  style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()"}
-                    =value
-                    %br/
+                .survey_left{style: "width: 50%; float: left"}
+                  %p{style: "padding-top: 10px; font-size:16px"}
+                    %ol
+                      %li{style: "font-size: 14px"}
+                        Of your students using Code.org's courses, how many are
+                  .dots{style: "padding-top: 10px; padding-left: 20px; padding-bottom: 20px"}
+                    - SurveyResult::ETHNICITIES.each do |key, value|
+                      %input{type: "number",  style: "width:40px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()", placeholder: "0"}
+                      =value
+                      %br/
+                .survey_right{style: "width: 45%; float: left; border-left: 1px solid #ccc; padding-left:20px"}
 
-                %p{style: "padding-top: 10px; font-size:16px"}
-                  Free and Reduced Meals
-                  %div{style: "font-size: 14px"}
-                    (only answer this if you're using Code Studio during school hours)
-                .dots{style: "padding-top: 0px; padding-bottom: 0px; font-size: 14px"}
-                  %input{type: "number", min: "0", max: "100", style: "width:70px; height:35px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_foodstamps]"}
-                  \% of students with free and reduced meals (FARMs) at your school
-                  %br/
-                  %br/
+                  %p{style: "padding-top: 7px; font-size:16px;;"}
+                    %ol{start: 2}
+                      %li{style: "font-size: 14px"}
+                        What is the percentage of students with free and reduced meals (FARMs) at your school?
+                        %div{style: "font-size: 12px; margin-top:7px"}
+                          Only answer this if you're using Code Studio during school hours.
+                  .dots{style: "padding-top: 0px; padding-bottom: 0px; margin-left: 30px; font-size: 14px"}
+                    - (0..9).each do |index|
+                      - if index.between?(0,7)
+                        - value = index * 10
+                        - max_value = value == 70 ? 100 : (value+9)
+                        - text = "#{value}-#{max_value}%"
+                      - elsif index == 8
+                        - text = "My school has a Title I designation, but I’m not sure what our rate of Free and Reduced lunch is."
+                      - else
+                        - text = "Other"
+                      .dot{style: "margin-top:10px"}
+                        %input{style: "margin-right:3px; vertical-align:top", id: "radio_#{index}", type: "radio", name: "survey[survey2016_foodstamps]", value: index, onclick: "enableSurveySubmit()" }
+                        %label{style: "display: inline; margin-top:2px; font-size: 13px; padding-right:20px", for: "radio_#{index}"}= text
 
-                #submit
-                  -# Let's not start with a disabled button for now.
-                  %button#submitSurvey{type: "submit", disabled: false} Submit
+                #submit{style: "text-align: right"}
+                  %button.btn-primary#submitSurvey{type: "submit", disabled: true} Submit
                   %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
           %br/
 
 :javascript
+
+  $.ready(function() {
+    // placeholder text for non-HTML5 browsers
+    $('input[type=text]').placeholder();
+  });
 
   function enableSurveySubmit()
   {

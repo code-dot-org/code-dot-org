@@ -8,11 +8,12 @@ class SurveyResultsControllerTest < ActionController::TestCase
 
   test "post survey results" do
     sign_in @teacher
-    post :create, {survey: {survey2016_ethnicity_asian: 22}, format: :json}
+    post :create, {survey: {survey2016_ethnicity_asian: 22, survey2016_foodstamps: 3}, format: :json}
 
     survey_result = SurveyResult.where(user: @teacher).first
     assert survey_result
     assert survey_result["properties"]["survey2016_ethnicity_asian"] == 22
+    assert survey_result["properties"]["survey2016_foodstamps"] == 3
   end
 
 end
