@@ -88,21 +88,24 @@ ____________________________________________________
 **Example: It's Getting Clearer** Halve all alpha values in the canvas.
 
 ```
-// Halve all alpha values in the canvas.
+// Halve all alpha values for an image and display it next to the original.
 createCanvas('canvas1');
-drawImageURL("https://code.org/images/logo.png");
-var imageData = getImageData(0, 0, 320, 480);
-halveAlpha(imageData);
+drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
+button("id", "Transparent");
+setPosition('id', 200, 0);
+onEvent("id", "click", function() {
+  var imageData = getImageData(0, 0, 175, 200);
+  putImageData(halveAlpha(imageData), 0, 225);
+});
 
-// Halves the alpha in every pixel from 'thisImageData' argument. Updates the image row by row.
 function halveAlpha(thisImageData){
     for(var y=0; y < thisImageData.height; y++) {
         for(var x=0; x < thisImageData.width; x++) {
             var newAlpha = (getAlpha(thisImageData, x, y) / 2);
             setAlpha(thisImageData, x, y, newAlpha);
         }
-        putImageData(thisImageData, 0, 0);
     }
+  return thisImageData;
 }
 ```
 
