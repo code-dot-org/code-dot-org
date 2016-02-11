@@ -12,7 +12,7 @@ var Cell = React.createClass({
     skin: React.PropTypes.string.isRequired,
   },
 
-  clickCell: function (event) {
+  handleClickCell: function (event) {
     this.props.onSelectionChange(this.props.row, this.props.col);
   },
 
@@ -56,7 +56,7 @@ var Cell = React.createClass({
       }
     }
 
-    return (<td className={classNames.join(' ')} onClick={this.clickCell} style={tdStyle}>
+    return (<td className={classNames.join(' ')} onClick={this.handleClickCell} style={tdStyle}>
       {text}
     </td>);
   }
@@ -72,8 +72,8 @@ var Grid = module.exports = React.createClass({
   },
 
   render: function () {
-    var rows = this.props.cells.map(function (row, x) {
-      var cells = row.map(function (cell, y) {
+    var tableRows = this.props.cells.map(function (row, x) {
+      var tableDatas = row.map(function (cell, y) {
         var selected = this.props.selectedRow === x && this.props.selectedCol === y;
 
         return (<Cell
@@ -87,13 +87,13 @@ var Grid = module.exports = React.createClass({
       }, this);
 
       return (<tr>
-        {cells}
+        {tableDatas}
       </tr>);
     }, this);
 
     return (<table>
       <tbody>
-        {rows}
+        {tableRows}
       </tbody>
     </table>);
   }
