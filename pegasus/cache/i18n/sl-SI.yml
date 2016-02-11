@@ -27,9 +27,8 @@
   twentyhours_heading: Poskusite naš tečaj Uvod v Računalništvo
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
     programiranja v tem spremljanjem tečaju.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Vsak otrok si zasluži priložnost
+  og_description: Vsak učenec v vsaki šoli si zasluži priložnost, da se uči računalništva.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a>
     <br/> 8. do 14. decembra, 2014 <br/>
   hoc2014_students: Učenci
@@ -76,11 +75,6 @@
   congratulations_volunteer: 'Čestitamo: Sedaj, ko si preizkusil Uro kode, <a href="https://code.org/volunteer">se
     lahko vpišeš med prostovoljce v razredu</a> in pomagaš drugim,dase učijo na svoji
     Uri kode!'
-  course_name_accelerated: Pospešena smer
-  course_name_course1: Tečaj 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
   congratulations_on_completing_course: "Čestitke za dokončan %{course}"
   congrats_next_tutorials_title: Poskusi naslednje tutoriale
   congrats_next_tutorials_desc: Preizkusi te krajše, 1 urne tutoriale ali pa poskusi
@@ -243,27 +237,27 @@
   homepage_action_text_learn: Začni z učenjem
   homepage_action_text_signpetition: Podpiši peticijo
   homepage_signpetition_dropdown: Strinjam se &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: Naredite zaprisego za nediskriminatorno vključevanje
+  homepage_banner_text_prizes: 'Zopet se bliža Ura za kodo, od 7. do 13. decembra. '
+  homepage_banner_link_prizes: 'Pridružite se največji izobraževalni prireditvi doslej. '
   homepage_banner_text_main: Code.org in the College Board sta zaveznika pri izboljšanju
     raznolikosti računalništva.
   homepage_banner_text_link: Več o tem
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Več o tem
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: Izobrazili smo 20 tisoč učiteljev in učiteljic, ki
+    sedaj predajajo naprej to znanje v učilnicah.
   homepage_banner_20k_teachers_link: Več o tem
   homepage_slot_text_title_hoc: Ura kode
   homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
   homepage_slot_text_link_host: Organiziraj Hour of Code
   homepage_slot_text_link_hocserved: "# uporabnikov"
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Prostovoljec/ka Ure za kodo
   homepage_slot_text_title_students: Učenci
   homepage_slot_text_blurb_students: Razišči vse naše vodiče
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Raziščite naše tečaje
   homepage_slot_text_link_codestudio: Poskusi Code Studio
   homepage_slot_text_link_local: Poišči razred v bližini
   homepage_slot_text_link_othercourses: Ostali spletni tečaji
@@ -320,39 +314,38 @@
   class_submission_level_college: Fakulteta
   class_submission_level_vocational: Poklicno izobraževanje
   class_submission_languages_other: Drugi jezik(-i)
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: Več <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">navdihujočih
+    video posnetkov</a>, ki so jih posneli vzorniki, vzornice ter slavne osebe
+  playlab_choose_theme: Izberi svojo temo za Play Lab
+  playlab_classic_title: Klasika
+  playlab_gumball_title: Gumballov fantastični svet
+  playlab_iceage_title: Ledena doma - kmalu na sporedu
+  playlab_iceage_title_live: Ledena doba
+  starwars_subtitle: S kodiranjem gradimo galaksijo
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Uporabi kocke, ki jih lahko premikaš, ter JavaScript.
+  starwars_javascript_specs: Samo v angleščini / Sodobni brskalniki / Starost 11+
   starwars_javascript_start_button: Poskusite zdaj
   starwars_blocks_title: Bloki
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Uporabi kocke, ki jih lahko premikaš.
+  starwars_blocks_specs: Več jezikov / Sodobni brskalniki, pametni telefoni, tablice
+    / Starost 6-106
   starwars_blocks_start_button: Poskusite zdaj
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
+  starwars_watch_videos: Preden začneš, si oglej enega izmed teh navdihujočih video
+    posnetkov
   starwars_speak_languages: Govoriš drug jezik?
   starwars_help_translate: Pomagaj pri prevodu
   starwars_platform_text: Sodobni brskalniki, pametni telefoni, tablice
   mc_name: Minecraft Ura za kodo
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_longdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+    v svet Minecraft-a.
+  mc_shortdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+    v svet Minecraft-a.
   mc_gradelevel: Starost 4-104
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Več jezikov / Sodobni brskalniki in tablice / Starost 6-106
   minecraft_subtitle: Minecraft Ura za kodo
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
+  volunteer_engineer_submission_title: Navdušite učence/ke in prostovoljce/ke
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want

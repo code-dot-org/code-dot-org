@@ -202,6 +202,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Calls a named function that takes one or more parameters"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Call a function with parameters"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Call a function"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "สร้างตัวแปรเป็นอาร์เรย์"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -289,7 +291,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "ตัวดำเนินการทางตรรกศาสตร์ \"และ\""},
 "dropletBlock_orOperator_description":function(d){return "Logical OR of two booleans"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "OR boolean operator"},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
+"dropletBlock_randomNumber_description":function(d){return "ส่งค่าสุ่มในช่วงปิดจากน้อยไปมาก"},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
 "dropletBlock_randomNumber_param0_description":function(d){return "ตัวเลขที่น้อยที่สุดที่ส่งคืนมา"},
 "dropletBlock_randomNumber_param1":function(d){return "max"},
@@ -358,7 +360,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "print":function(d){return "พิมพ์"},
 "puzzleTitle":function(d){return "ปริศนา "+common_locale.v(d,"puzzle_number")+" ของ "+common_locale.v(d,"stage_total")},
 "readonlyWorkspaceHeader":function(d){return "ดูเท่านั้น:"},
-"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."},
+"recommendedBlockContextualHintTitle":function(d){return "ลองใช้บล็อกประมาณนี้เพื่อแก้ปัญหา"},
 "repeat":function(d){return "ทำซ้ำ"},
 "resetProgram":function(d){return "ตั้งค่าใหม่"},
 "rotateText":function(d){return "หมุนอุปกรณ์ของคุณ."},
@@ -409,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "เมื่อ"},
 "whenRun":function(d){return "เมื่อเรียกให้ทำงาน"},
 "workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"choosePrefix":function(d){return "Choose..."}};

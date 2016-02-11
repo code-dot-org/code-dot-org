@@ -78,11 +78,6 @@
   congratulations_volunteer: 'مبارک باد: اب جب کہ آپ نے کوڈ کی گھڑی کی کوشش کی ہے،
     <a href="https://code.org/volunteer"> ایک کلاس روم میں رضاکارانہ کام کے لئے سائن
     اپ کریں</a> اور مدد کریں طالب علموں کو ایک کوڈ کی گھڑی سیکھنے میں!'
-  course_name_accelerated: Accelerated Course
-  course_name_course1: Course 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
   congratulations_on_completing_course: Congratulations on completing %{course}
   congrats_next_tutorials_title: Try these tutorials next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
@@ -525,8 +520,8 @@
   dashboard_action_save_all: Save all
   dashboard_action_cancel: "منسوخ کریں"
   dashboard_action_delete: Delete
-  dashboard_action_delete_yes: 'Yes'
-  dashboard_action_delete_no: 'No'
+  dashboard_action_delete_yes: "جی"
+  dashboard_action_delete_no: "نہيں"
   dashboard_action_confirm: Delete?
   dashboard_action_remove: Remove
   dashboard_action_remove_confirm: Remove?
@@ -1467,7 +1462,7 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: flap
+  flappy_shortcode: "پھڑپھڑایں"
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art

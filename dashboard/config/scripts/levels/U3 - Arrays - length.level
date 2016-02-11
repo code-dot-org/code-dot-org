@@ -54,8 +54,10 @@
     "start_blocks": "var short = [\"short\",\"array\",\"for\",\"practice\"];\r\nvar words = [\"this\",\"is\",\"a\",\"very\",\"long\",\"list\",\"of\",\"words\",\"but\",\"how\",\"many\",\"is\",\"it\",\"exactly\",\"?\"];\r\nvar bits = [1,0,0,0,0,0,1,1,0,0,1,1,0,1,0,0,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,1,0,1,1];\r\n    \r\n// Determine the length of each array using list.length",
     "slider_speed": "1",
     "instructions": "Use list.length to determine the length of each array. (Click to see full instructions)",
-    "encrypted_examples": "Zw/5lMGjlP93Luc0qdeRgpQ8tBvnw8d/fj0ZQ0QY8iFDIZltTfepvJhkwr/U\n1Pj4\n"
-  }
+    "encrypted_examples": "Zw/5lMGjlP93Luc0qdeRgpQ8tBvnw8d/fj0ZQ0QY8iFDIZltTfepvJhkwr/U\n1Pj4\n",
+    "video_key": "csp_applab_lists_4"
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

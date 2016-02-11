@@ -4,7 +4,8 @@
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
-var showAssetManager = require('./assetManagement/show.js');
+var showAssetManager = require('../assetManagement/show');
+var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
@@ -12,8 +13,10 @@ var KeyCodes = require('../constants').KeyCodes;
 var constants = require('./constants');
 var applabCommands = require('./commands');
 var designMode = module.exports;
+var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var gridUtils = require('./gridUtils');
+var logToCloud = require('../logToCloud');
 
 var currentlyEditedElement = null;
 var currentScreenId = null;
@@ -105,6 +108,7 @@ designMode.editElementProperties = function(element) {
 designMode.resetPropertyTab = function() {
   var element = currentlyEditedElement || designMode.activeScreen();
   designMode.editElementProperties(element);
+  designMode.renderToggleRow();
 };
 
 /**
@@ -227,7 +231,7 @@ designMode.updateProperty = function(element, name, value) {
     case 'image':
       var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
-      backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
+      backgroundImage.src = assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -249,14 +253,14 @@ designMode.updateProperty = function(element, name, value) {
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + Applab.maybeAddAssetPathPrefix(value) + ')';
+      element.style.backgroundImage = 'url(' + assetPrefix.fixPath(value) + ')';
       element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
-      element.src = Applab.maybeAddAssetPathPrefix(value);
+      element.src = assetPrefix.fixPath(value);
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
@@ -501,7 +505,19 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   if (!Applab.levelHtml) {
     return;
   }
-  var levelDom = $.parseHTML(Applab.levelHtml);
+  function reportUnsafeHtml(removed, unsafe, safe) {
+    var msg = "The following lines of HTML were modified or removed:\n" + removed +
+      "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe + "\ntarget: " + rootEl.id;
+    console.log(msg);
+    logToCloud.addPageAction(logToCloud.PageAction.SanitizedLevelHtml, {
+      removedHtml: removed,
+      unsafeHtml: unsafe,
+      safeHtml: safe,
+      sanitizationTarget: rootEl.id
+    });
+  }
+
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
   var children = $(levelDom).children();
 
   children.each(function () {
@@ -825,6 +841,20 @@ designMode.changeScreen = function (screenId) {
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
 
+  designMode.renderToggleRow(screenIds);
+
+  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
+};
+
+designMode.getCurrentScreenId = function() {
+  return currentScreenId;
+};
+
+designMode.renderToggleRow = function (screenIds) {
+  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+    return elementUtils.getId(screen);
+  });
+
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
@@ -832,7 +862,7 @@ designMode.changeScreen = function (screenId) {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
-        initialScreen: screenId,
+        initialScreen: currentScreenId,
         screens: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
@@ -843,12 +873,6 @@ designMode.changeScreen = function (screenId) {
       designToggleRow
     );
   }
-
-  designMode.editElementProperties(elementUtils.getPrefixedElementById(screenId));
-};
-
-designMode.getCurrentScreenId = function() {
-  return currentScreenId;
 };
 
 /**

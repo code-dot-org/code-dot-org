@@ -11,8 +11,10 @@ var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
+var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
+var assetPrefix = require('../assetManagement/assetPrefix');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -32,7 +34,10 @@ var GameLab = function () {
   this.JSInterpreter = null;
 
   /** @private {JsInterpreterLogger} */
-  this.consoleLogger_ = null;
+  this.consoleLogger_ = new JsInterpreterLogger(window.console);
+
+  /** @type {JsDebuggerUi} */
+  this.debugger_ = new JsDebuggerUi(this.runButtonClick.bind(this));
 
   this.eventHandlers = {};
   this.Globals = {};
@@ -44,12 +49,14 @@ var GameLab = function () {
     'mouseClicked', 'mouseWheel',
     'keyPressed', 'keyReleased', 'keyTyped'
   ];
-  this.p5specialFunctions = ['draw', 'setup'].concat(this.p5eventNames);
+  this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
 
   this.api = api;
   this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
+
+  dropletConfig.injectGameLab(this);
 };
 
 module.exports = GameLab;
@@ -65,12 +72,6 @@ GameLab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
-// For proxying non-https assets
-var MEDIA_PROXY = '//' + location.host + '/media?u=';
-
-// starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
-
 GameLab.baseP5loadImage = null;
 
 /**
@@ -83,7 +84,8 @@ GameLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.consoleLogger_ = new JsInterpreterLogger(window.console);
+
+  config.usesAssets = true;
 
   window.p5.prototype.setupGlobalMode = function () {
     /*
@@ -115,16 +117,8 @@ GameLab.prototype.init = function (config) {
   if (!GameLab.baseP5loadImage) {
     GameLab.baseP5loadImage = window.p5.prototype.loadImage;
     window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      if (ABSOLUTE_REGEXP.test(path)) {
-        // We want to be able to handle the case where our filename contains a
-        // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-        // technically invalid URL. encodeURIComponent will replace space with %20
-        // for us, but as soon as it's decoded, we again have an invalid URL. For
-        // this reason we first replace space with %20 ourselves, such that we now
-        // have a valid URL, and then call encodeURIComponent on the result.
-        path = MEDIA_PROXY + encodeURIComponent(path.replace(/ /g, '%20'));
-      }
-      return GameLab.baseP5loadImage(path, successCallback, failureCallback);
+      path = assetPrefix.fixPath(path);
+      return GameLab.baseP5loadImage.call(this, path, successCallback, failureCallback);
     };
   }
 
@@ -133,13 +127,14 @@ GameLab.prototype.init = function (config) {
 
   var showFinishButton = !this.level.isProjectLevel;
   var finishButtonFirstLine = _.isEmpty(this.level.softButtons);
+  var areBreakpointsEnabled = true;
   var firstControlsRow = require('./controls.html.ejs')({
     assetUrl: this.studioApp_.assetUrl,
     finishButton: finishButtonFirstLine && showFinishButton
   });
-  var extraControlRows = require('./extraControlRows.html.ejs')({
-    assetUrl: this.studioApp_.assetUrl,
-    finishButton: !finishButtonFirstLine && showFinishButton
+  var extraControlRows = this.debugger_.getMarkup(this.studioApp_.assetUrl, {
+    showButtons: true,
+    showConsole: true
   });
 
   config.html = page({
@@ -153,18 +148,24 @@ GameLab.prototype.init = function (config) {
       idealBlockNumber : undefined,
       editCode: this.level.editCode,
       blockCounterClass : 'block-counter-default',
+      pinWorkspaceToBottom: true,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
 
-  config.loadAudio = _.bind(this.loadAudio_, this);
-  config.afterInject = _.bind(this.afterInject_, this, config);
+  config.loadAudio = this.loadAudio_.bind(this);
+  config.afterInject = this.afterInject_.bind(this, config);
+  config.afterEditorReady = this.afterEditorReady_.bind(this, areBreakpointsEnabled);
 
   // Store p5specialFunctions in the unusedConfig array so we don't give warnings
   // about these functions not being called:
   config.unusedConfig = this.p5specialFunctions;
 
   this.studioApp_.init(config);
+
+  this.debugger_.initializeAfterDomCreated({
+    defaultStepSpeed: 1
+  });
 };
 
 GameLab.prototype.loadAudio_ = function () {
@@ -194,6 +195,16 @@ GameLab.prototype.afterInject_ = function (config) {
 
 };
 
+/**
+ * Initialization to run after ace/droplet is initialized.
+ * @param {!boolean} areBreakpointsEnabled
+ * @private
+ */
+GameLab.prototype.afterEditorReady_ = function (areBreakpointsEnabled) {
+  if (areBreakpointsEnabled) {
+    this.studioApp_.enableBreakpoints();
+  }
+};
 
 /**
  * Reset GameLab to its initial state.
@@ -251,6 +262,7 @@ GameLab.prototype.reset = function (ignore) {
     this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
   }, this);
 
+  this.debugger_.detach();
   this.consoleLogger_.detach();
 
   // Discard the interpreter.
@@ -310,6 +322,7 @@ GameLab.prototype.execute = function() {
     return;
   }
 
+  /* jshint nonew:false */
   new window.p5(_.bind(function (p5obj) {
       this.p5 = p5obj;
 
@@ -320,13 +333,53 @@ GameLab.prototype.execute = function() {
       window.preload = function () {
         // Call our gamelabPreload() to force _start/_setup to wait.
         window.gamelabPreload();
-      };
-      window.setup = _.bind(function () {
-        p5obj.createCanvas(400, 400);
-        if (this.JSInterpreter && this.eventHandlers.setup) {
-          this.eventHandlers.setup.apply(null);
+
+        /*
+         * p5 "preload methods" were modified before this preload function was
+         * called and substituted with wrapped version that increment a preload
+         * count and will later decrement a preload count upon async load
+         * completion. Since p5 is running in global mode, it only wrapped the
+         * methods on the window object. We need to place the wrapped methods on
+         * the p5 object as well before we marshal to the interpreter
+         */
+        for (var method in this.p5._preloadMethods) {
+          this.p5[method] = window[method];
         }
-      }, this);
+
+        this.initInterpreter();
+        // And execute the interpreter for the first time:
+        if (this.JSInterpreter && this.JSInterpreter.initialized()) {
+          this.JSInterpreter.executeInterpreter(true);
+
+          // In addition, execute the global function called preload()
+          if (this.eventHandlers.preload) {
+            this.eventHandlers.preload.apply(null);
+          }
+        }
+      }.bind(this);
+      window.setup = function () {
+        /*
+         * p5 "preload methods" have now been restored and the wrapped version
+         * are no longer in use. Since p5 is running in global mode, it only
+         * restored the methods on the window object. We need to restore the
+         * methods on the p5 object to match
+         */
+        for (var method in this.p5._preloadMethods) {
+          this.p5[method] = window[method];
+        }
+
+        p5obj.createCanvas(400, 400);
+        if (this.JSInterpreter) {
+          // Replace restored preload methods for the interpreter:
+          for (method in this.p5._preloadMethods) {
+            this.JSInterpreter.createGlobalProperty(method, this.p5[method], this.p5);
+          }
+
+          if (this.eventHandlers.setup) {
+            this.eventHandlers.setup.apply(null);
+          }
+        }
+      }.bind(this);
       window.draw = _.bind(function () {
         if (this.JSInterpreter && this.eventHandlers.draw) {
           var startTime = window.performance.now();
@@ -343,112 +396,9 @@ GameLab.prototype.execute = function() {
         }, this);
       }, this);
     }, this), 'divGameLab');
+  /* jshint nonew:true */
 
-  if (this.level.editCode) {
-    this.JSInterpreter = new JSInterpreter({
-      studioApp: this.studioApp_,
-      maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-      customMarshalGlobalProperties: {
-        width: this.p5,
-        height: this.p5,
-        displayWidth: this.p5,
-        displayHeight: this.p5,
-        windowWidth: this.p5,
-        windowHeight: this.p5,
-        focused: this.p5,
-        frameCount: this.p5,
-        keyIsPressed: this.p5,
-        key: this.p5,
-        keyCode: this.p5,
-        mouseX: this.p5,
-        mouseY: this.p5,
-        pmouseX: this.p5,
-        pmouseY: this.p5,
-        winMouseX: this.p5,
-        winMouseY: this.p5,
-        pwinMouseX: this.p5,
-        pwinMouseY: this.p5,
-        mouseButton: this.p5,
-        mouseIsPressed: this.p5,
-        touchX: this.p5,
-        touchY: this.p5,
-        ptouchX: this.p5,
-        ptouchY: this.p5,
-        touches: this.p5,
-        touchIsDown: this.p5,
-        pixels: this.p5,
-        deviceOrientation: this.p5,
-        accelerationX: this.p5,
-        accelerationY: this.p5,
-        accelerationZ: this.p5,
-        pAccelerationX: this.p5,
-        pAccelerationY: this.p5,
-        pAccelerationZ: this.p5,
-        rotationX: this.p5,
-        rotationY: this.p5,
-        rotationZ: this.p5,
-        pRotationX: this.p5,
-        pRotationY: this.p5,
-        pRotationZ: this.p5
-      }
-    });
-    this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
-    this.consoleLogger_.attachTo(this.JSInterpreter);
-    this.JSInterpreter.parse({
-      code: this.studioApp_.getCode(),
-      blocks: dropletConfig.blocks,
-      blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
-      enableEvents: true
-    });
-    if (!this.JSInterpreter.initialized()) {
-      return;
-    }
-
-    this.p5specialFunctions.forEach(function (eventName) {
-      var func = this.JSInterpreter.findGlobalFunction(eventName);
-      if (func) {
-        this.eventHandlers[eventName] =
-            codegen.createNativeFunctionFromInterpreterFunction(func);
-      }
-    }, this);
-
-    codegen.customMarshalObjectList = [
-      window.p5,
-      window.Sprite,
-      window.Camera,
-      window.Animation,
-      window.p5.Vector,
-      window.p5.Color,
-      window.p5.Image,
-      window.p5.Renderer,
-      window.p5.Graphics,
-      window.p5.Font,
-      window.p5.Table,
-      window.p5.TableRow,
-      window.p5.Element
-    ];
-    // The p5play Group object should be custom marshalled, but its constructor
-    // actually creates a standard Array instance with a few additional methods
-    // added. The customMarshalModifiedObjectList allows us to set up additional
-    // object types to be custom marshalled by matching both the instance type
-    // and the presence of additional method name on the object.
-    codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
-
-    // Insert everything on p5 and the Group constructor from p5play into the
-    // global namespace of the interpreter:
-    for (var prop in this.p5) {
-      this.JSInterpreter.createGlobalProperty(prop, this.p5[prop], this.p5);
-    }
-    this.JSInterpreter.createGlobalProperty('Group', window.Group);
-    // And also create a 'p5' object in the global namespace:
-    this.JSInterpreter.createGlobalProperty('p5', { Vector: window.p5.Vector });
-
-    /*
-    if (this.checkForEditCodePreExecutionFailure()) {
-      return this.onPuzzleComplete();
-    }
-    */
-  } else {
+  if (!this.level.editCode) {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
     this.evalCode(this.code);
   }
@@ -463,14 +413,127 @@ GameLab.prototype.execute = function() {
   this.tickIntervalId = window.setInterval(_.bind(this.onTick, this), 33);
 };
 
+GameLab.prototype.initInterpreter = function () {
+  if (!this.level.editCode) {
+    return;
+  }
+
+  this.JSInterpreter = new JSInterpreter({
+    studioApp: this.studioApp_,
+    maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
+    customMarshalGlobalProperties: {
+      width: this.p5,
+      height: this.p5,
+      displayWidth: this.p5,
+      displayHeight: this.p5,
+      windowWidth: this.p5,
+      windowHeight: this.p5,
+      focused: this.p5,
+      frameCount: this.p5,
+      keyIsPressed: this.p5,
+      key: this.p5,
+      keyCode: this.p5,
+      mouseX: this.p5,
+      mouseY: this.p5,
+      pmouseX: this.p5,
+      pmouseY: this.p5,
+      winMouseX: this.p5,
+      winMouseY: this.p5,
+      pwinMouseX: this.p5,
+      pwinMouseY: this.p5,
+      mouseButton: this.p5,
+      mouseIsPressed: this.p5,
+      touchX: this.p5,
+      touchY: this.p5,
+      ptouchX: this.p5,
+      ptouchY: this.p5,
+      touches: this.p5,
+      touchIsDown: this.p5,
+      pixels: this.p5,
+      deviceOrientation: this.p5,
+      accelerationX: this.p5,
+      accelerationY: this.p5,
+      accelerationZ: this.p5,
+      pAccelerationX: this.p5,
+      pAccelerationY: this.p5,
+      pAccelerationZ: this.p5,
+      rotationX: this.p5,
+      rotationY: this.p5,
+      rotationZ: this.p5,
+      pRotationX: this.p5,
+      pRotationY: this.p5,
+      pRotationZ: this.p5
+    }
+  });
+  this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
+  this.consoleLogger_.attachTo(this.JSInterpreter);
+  this.debugger_.attachTo(this.JSInterpreter);
+  this.JSInterpreter.parse({
+    code: this.studioApp_.getCode(),
+    blocks: dropletConfig.blocks,
+    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
+    enableEvents: true
+  });
+  if (!this.JSInterpreter.initialized()) {
+    return;
+  }
+
+  this.p5specialFunctions.forEach(function (eventName) {
+    var func = this.JSInterpreter.findGlobalFunction(eventName);
+    if (func) {
+      this.eventHandlers[eventName] =
+          codegen.createNativeFunctionFromInterpreterFunction(func);
+    }
+  }, this);
+
+  codegen.customMarshalObjectList = [
+    window.p5,
+    window.Sprite,
+    window.Camera,
+    window.Animation,
+    window.p5.Vector,
+    window.p5.Color,
+    window.p5.Image,
+    window.p5.Renderer,
+    window.p5.Graphics,
+    window.p5.Font,
+    window.p5.Table,
+    window.p5.TableRow,
+    window.p5.Element
+  ];
+  // The p5play Group object should be custom marshalled, but its constructor
+  // actually creates a standard Array instance with a few additional methods
+  // added. The customMarshalModifiedObjectList allows us to set up additional
+  // object types to be custom marshalled by matching both the instance type
+  // and the presence of additional method name on the object.
+  codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
+
+  // Insert everything on p5 and the Group constructor from p5play into the
+  // global namespace of the interpreter:
+  for (var prop in this.p5) {
+    this.JSInterpreter.createGlobalProperty(prop, this.p5[prop], this.p5);
+  }
+  this.JSInterpreter.createGlobalProperty('Group', window.Group);
+  // And also create a 'p5' object in the global namespace:
+  this.JSInterpreter.createGlobalProperty('p5', { Vector: window.p5.Vector });
+
+  /*
+  if (this.checkForEditCodePreExecutionFailure()) {
+   return this.onPuzzleComplete();
+  }
+  */
+};
+
 GameLab.prototype.onTick = function () {
   this.tickCount++;
 
   if (this.JSInterpreter) {
-    this.JSInterpreter.executeInterpreter(this.tickCount === 1);
+    this.JSInterpreter.executeInterpreter();
 
-    if (this.JSInterpreter.startedHandlingEvents && this.p5decrementPreload) {
+    if (this.p5decrementPreload && this.JSInterpreter.startedHandlingEvents) {
+      // Call this once after we've started handling events
       this.p5decrementPreload();
+      this.p5decrementPreload = null;
     }
   }
 };

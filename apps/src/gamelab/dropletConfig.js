@@ -1,5 +1,7 @@
 var msg = require('./locale');
 var api = require('./apiJavascript.js');
+var showAssetManager = require('../assetManagement/show');
+var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
 var COLOR_BLUE = '#19C3E1';
@@ -13,10 +15,22 @@ var COLOR_WHITE = '#FFFFFF';
 var COLOR_BLUE = '#64B5F6';
 var COLOR_ORANGE = '#FFB74D';
 
+var GameLab;
+
+exports.injectGameLab = function (gamelab) {
+  GameLab = gamelab;
+};
+
+// Flip the argument order so we can bind `typeFilter`.
+function chooseAsset(typeFilter, callback) {
+  showAssetManager(callback, typeFilter);
+}
+
 module.exports.blocks = [
   // Game Lab
-  {func: 'loadImage', category: 'Game Lab', blockPrefix: 'var img = loadImage', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'] },
-  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y'], params: ["img", "0", "0", "img.width", "img.height", "0", "0"] },
+  {func: 'loadImage', category: 'Game Lab', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], type: 'either', dropdown: { 0: function () { return getAssetDropdown('image'); } }, assetTooltip: { 0: chooseAsset.bind(null, 'image') } },
+  {func: 'var_loadImage', category: 'Game Lab', blockPrefix: 'var img = loadImage', paletteParams: ['url'], params: ['"https://code.org/images/logo.png"'], noAutocomplete: true },
+  {func: 'image', category: 'Game Lab', paletteParams: ['image','srcX','srcY','srcW','srcH','x','y','w','h'], params: ["img", "0", "0", "img.width", "img.height", "0", "0", "img.width", "img.height"] },
   {func: 'fill', category: 'Game Lab', paletteParams: ['color'], params: ["'yellow'"] },
   {func: 'noFill', category: 'Game Lab' },
   {func: 'stroke', category: 'Game Lab', paletteParams: ['color'], params: ["'blue'"] },
@@ -28,6 +42,7 @@ module.exports.blocks = [
   {func: 'rect', category: 'Game Lab', paletteParams: ['x','y','w','h'], params: ["100", "100", "200", "200"] },
   {func: 'triangle', category: 'Game Lab', paletteParams: ['x1','y1','x2','y2','x3','y3'], params: ["200", "0", "0", "400", "400", "400"] },
   {func: 'text', category: 'Game Lab', paletteParams: ['str','x','y','w','h'], params: ["'text'", "0", "0", "400", "100"] },
+  {func: 'textAlign', category: 'Game Lab', paletteParams: ['horiz','vert'], params: ["CENTER", "TOP"] },
   {func: 'textSize', category: 'Game Lab', paletteParams: ['pixels'], params: ["12"] },
   {func: 'drawSprites', category: 'Game Lab' },
   {func: 'allSprites', category: 'Game Lab', block: 'allSprites', type: 'property' },
@@ -45,7 +60,8 @@ module.exports.blocks = [
   {func: 'camera.zoom', category: 'Game Lab', type: 'property' },
 
   // Sprites
-  {func: 'createSprite', category: 'Sprites', blockPrefix: 'var sprite = createSprite', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'both' },
+  {func: 'createSprite', category: 'Sprites', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], type: 'either' },
+  {func: 'var_createSprite', category: 'Sprites', blockPrefix: 'var sprite = createSprite', paletteParams: ['x','y','width','height'], params: ["200", "200", "30", "30"], noAutocomplete: true },
   {func: 'sprite.setSpeed', category: 'Sprites', paletteParams: ['speed','angle'], params: ["1", "90"], modeOptionName: '*.setSpeed' },
   {func: 'sprite.getAnimationLabel', category: 'Sprites', modeOptionName: '*.getAnimationLabel', type: 'value' },
   {func: 'sprite.getDirection', category: 'Sprites', modeOptionName: '*.getDirection', type: 'value' },
@@ -71,7 +87,11 @@ module.exports.blocks = [
   {func: 'sprite.mass', category: 'Sprites', modeOptionName: '*.mass', type: 'property' },
   {func: 'sprite.maxSpeed', category: 'Sprites', modeOptionName: '*.maxSpeed', type: 'property' },
   {func: 'sprite.position', category: 'Sprites', modeOptionName: '*.position', type: 'property' },
+  {func: 'sprite.position.x', category: 'Sprites', modeOptionName: '*.x', type: 'property' },
+  {func: 'sprite.position.y', category: 'Sprites', modeOptionName: '*.y', type: 'property' },
   {func: 'sprite.previousPosition', category: 'Sprites', modeOptionName: '*.previousPosition', type: 'property' },
+  {func: 'sprite.previousPosition.x', category: 'Sprites', modeOptionName: '*.x', type: 'property' },
+  {func: 'sprite.previousPosition.y', category: 'Sprites', modeOptionName: '*.y', type: 'property' },
   {func: 'sprite.removed', category: 'Sprites', modeOptionName: '*.removed', type: 'property' },
   {func: 'sprite.restitution', category: 'Sprites', modeOptionName: '*.restitution', type: 'property' },
   {func: 'sprite.rotateToDirection', category: 'Sprites', modeOptionName: '*.rotateToDirection', type: 'property' },
@@ -81,6 +101,8 @@ module.exports.blocks = [
   {func: 'sprite.shapeColor', category: 'Sprites', modeOptionName: '*.shapeColor', type: 'property' },
   {func: 'sprite.touching', category: 'Sprites', modeOptionName: '*.touching', type: 'property' },
   {func: 'sprite.velocity', category: 'Sprites', modeOptionName: '*.velocity', type: 'property' },
+  {func: 'sprite.velocity.x', category: 'Sprites', modeOptionName: '*.x', type: 'property' },
+  {func: 'sprite.velocity.y', category: 'Sprites', modeOptionName: '*.y', type: 'property' },
   {func: 'sprite.visible', category: 'Sprites', modeOptionName: '*.visible', type: 'property' },
 /* TODO: decide whether to expose these Sprite properties:
 camera
@@ -109,7 +131,8 @@ update() - USEFUL?
 */
 
   // Animations
-  {func: 'loadAnimation', category: 'Animations', blockPrefix: 'var anim = loadAnimation', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'] },
+  {func: 'loadAnimation', category: 'Animations', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], type: 'either' },
+  {func: 'var_loadAnimation', category: 'Animations', blockPrefix: 'var anim = loadAnimation', paletteParams: ['url1','url2'], params: ['"http://p5play.molleindustria.org/examples/assets/ghost_standing0001.png"', '"http://p5play.molleindustria.org/examples/assets/ghost_standing0002.png"'], noAutocomplete: true },
   {func: 'animation', category: 'Animations', paletteParams: ['animation','x','y'], params: ["anim", "50", "50"] },
   {func: 'anim.changeFrame', category: 'Animations', paletteParams: ['frame'], params: ["0"], modeOptionName: '*.changeFrame' },
   {func: 'anim.nextFrame', category: 'Animations', modeOptionName: '*.nextFrame' },
@@ -136,7 +159,7 @@ getWidth()
 */
 
   // Groups
-  {func: 'Group', blockPrefix: 'var group = new Group', category: 'Groups', type: 'both' },
+  {func: 'Group', blockPrefix: 'var group = new Group', category: 'Groups', type: 'either' },
   {func: 'group.add', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: '*.add' },
   {func: 'group.remove', category: 'Groups', paletteParams: ['sprite'], params: ["sprite"], modeOptionName: '*.remove' },
   {func: 'group.clear', category: 'Groups', modeOptionName: '*.clear' },
@@ -175,8 +198,39 @@ overlap(targetcallback) - CALLBACK
   {func: 'mouseClicked', block: 'function mouseClicked() {}', expansion: 'function mouseClicked() {\n  __;\n}', category: 'Events' },
   {func: 'mouseWheel', block: 'function mouseWheel() {}', expansion: 'function mouseWheel() {\n  __;\n}', category: 'Events' },
 
+  // Math
+  {func: 'sin', category: 'Math', paletteParams: ['angle'], params: ["0"], type: 'value' },
+  {func: 'cos', category: 'Math', paletteParams: ['angle'], params: ["0"], type: 'value' },
+  {func: 'tan', category: 'Math', paletteParams: ['angle'], params: ["0"], type: 'value' },
+  {func: 'asin', category: 'Math', paletteParams: ['value'], params: ["0"], type: 'value' },
+  {func: 'acos', category: 'Math', paletteParams: ['value'], params: ["0"], type: 'value' },
+  {func: 'atan', category: 'Math', paletteParams: ['value'], params: ["0"], type: 'value' },
+  {func: 'atan2', category: 'Math', paletteParams: ['y','x'], params: ["10", "10"], type: 'value' },
+  {func: 'degrees', category: 'Math', paletteParams: ['radians'], params: ["0"], type: 'value' },
+  {func: 'radians', category: 'Math', paletteParams: ['degrees'], params: ["0"], type: 'value' },
+  {func: 'angleMode', category: 'Math', paletteParams: ['mode'], params: ["DEGREES"] },
+  {func: 'random', category: 'Math', paletteParams: ['min','max'], params: ["1", "5"], type: 'value' },
+  {func: 'randomGaussian', category: 'Math', paletteParams: ['mean','sd'], params: ["0", "15"], type: 'value' },
+  {func: 'randomSeed', category: 'Math', paletteParams: ['seed'], params: ["99"] },
+  {func: 'abs', category: 'Math', paletteParams: ['num'], params: ["-1"], type: 'value' },
+  {func: 'ceil', category: 'Math', paletteParams: ['num'], params: ["0.1"], type: 'value' },
+  {func: 'constrain', category: 'Math', paletteParams: ['num','low','high'], params: ["1.1", "0", "1"], type: 'value' },
+  {func: 'dist', category: 'Math', paletteParams: ['x1','y1','x2','y2'], params: ["0", "0", "100", "100"], type: 'value' },
+  {func: 'exp', category: 'Math', paletteParams: ['num'], params: ["1"], type: 'value' },
+  {func: 'floor', category: 'Math', paletteParams: ['num'], params: ["0.9"], type: 'value' },
+  {func: 'lerp', category: 'Math', paletteParams: ['start','stop','amt'], params: ["0", "100", "0.1"], type: 'value' },
+  {func: 'log', category: 'Math', paletteParams: ['num'], params: ["1"], type: 'value' },
+  {func: 'mag', category: 'Math', paletteParams: ['a','b'], params: ["100", "100"], type: 'value' },
+  {func: 'map', category: 'Math', paletteParams: ['value','start1','stop1','start2','stop'], params: ["0.9", "0", "1", "0", "100"], type: 'value' },
+  {func: 'max', category: 'Math', paletteParams: ['n1','n2'], params: ["1","3"], type: 'value' },
+  {func: 'min', category: 'Math', paletteParams: ['n1','n2'], params: ["1", "3"], type: 'value' },
+  {func: 'norm', category: 'Math', paletteParams: ['value','start','stop'], params: ["90", "0", "100"], type: 'value' },
+  {func: 'pow', category: 'Math', paletteParams: ['n','e'], params: ["10", "2"], type: 'value' },
+  {func: 'round', category: 'Math', paletteParams: ['num'], params: ["0.9"], type: 'value' },
+  {func: 'sq', category: 'Math', paletteParams: ['num'], params: ["2"], type: 'value' },
+  {func: 'sqrt', category: 'Math', paletteParams: ['num'], params: ["9"], type: 'value' },
+
   // Advanced
-  {func: 'foo', parent: api, category: 'Advanced' },
 ];
 
 module.exports.categories = {
@@ -222,4 +276,20 @@ module.exports.categories = {
   },
 };
 
+module.exports.additionalPredefValues = [
+  'P2D', 'WEBGL', 'ARROW', 'CROSS', 'HAND', 'MOVE',
+  'TEXT', 'WAIT', 'HALF_PI', 'PI', 'QUARTER_PI', 'TAU', 'TWO_PI', 'DEGREES',
+  'RADIANS', 'CORNER', 'CORNERS', 'RADIUS', 'RIGHT', 'LEFT', 'CENTER', 'TOP',
+  'BOTTOM', 'BASELINE', 'POINTS', 'LINES', 'TRIANGLES', 'TRIANGLE_FAN',
+  'TRIANGLE_STRIP', 'QUADS', 'QUAD_STRIP', 'CLOSE', 'OPEN', 'CHORD', 'PIE',
+  'PROJECT', 'SQUARE', 'ROUND', 'BEVEL', 'MITER', 'RGB', 'HSB', 'HSL', 'AUTO',
+  'ALT', 'BACKSPACE', 'CONTROL', 'DELETE', 'DOWN_ARROW', 'ENTER', 'ESCAPE',
+  'LEFT_ARROW', 'OPTION', 'RETURN', 'RIGHT_ARROW', 'SHIFT', 'TAB', 'UP_ARROW',
+  'BLEND', 'ADD', 'DARKEST', 'LIGHTEST', 'DIFFERENCE', 'EXCLUSION',
+  'MULTIPLY', 'SCREEN', 'REPLACE', 'OVERLAY', 'HARD_LIGHT', 'SOFT_LIGHT',
+  'DODGE', 'BURN', 'THRESHOLD', 'GRAY', 'OPAQUE', 'INVERT', 'POSTERIZE',
+  'DILATE', 'ERODE', 'BLUR', 'NORMAL', 'ITALIC', 'BOLD', '_DEFAULT_TEXT_FILL',
+  '_DEFAULT_LEADMULT', '_CTX_MIDDLE', 'LINEAR', 'QUADRATIC', 'BEZIER',
+  'CURVE', '_DEFAULT_STROKE', '_DEFAULT_FILL'
+];
 module.exports.showParamDropdowns = true;

@@ -79,11 +79,6 @@
   congratulations_volunteer: Gratulálunk, most, hogy kipróbáltad a Kódolás óráját,
     <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts
     a tanulóknak egy órán át a kódolásról tanulni!
-  course_name_accelerated: Gyorsított tanfolyam
-  course_name_course1: 1. tanfolyam
-  course_name_course2: 2. tanfolyam
-  course_name_course3: 3. tanfolyam
-  course_name_course4: 4. tanfolyam
   congratulations_on_completing_course: Gratulálok a %{course} befejezéséhez!
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat,
@@ -383,16 +378,17 @@
   volunteer_engineer_submission_field_company_placeholder: Cég (vagy Egyetem)
   volunteer_engineer_submission_field_experience_level: Tapasztalat szint
   volunteer_engineer_submission_field_location: Helyszín
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_location_desc: A lakcímedet arra használjuk,
+    hogy a térképen megjelöljük tartózkodási helyed a környékbeli tanárok számára.
+    Amennyiben nem szívesen adnád meg lakcímedet, nyugodtan használd helyette az iskolád
+    vagy munkahelyed városát.
   volunteer_engineer_submission_field_location_placeholder: Irányítószám, város és
     állam/ország vagy utca
   volunteer_engineer_submission_field_location_flexibility: Tudok segíteni a kódolás
     órája alatt a... (jelölje ki az összes vállalni kívánt tevékenységet)
   volunteer_engineer_submission_checkbox_after_hoc: "Éngem érdekel az önkéntesség
     a Kódolás Órája után"
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+  volunteer_engineer_submission_field_time_commitment: Időráfordítás
   volunteer_engineer_submission_field_linkedin: LinkedIn adatlap
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/saját_neved
   volunteer_engineer_submission_field_facebook: Facebook adatlap
@@ -400,18 +396,18 @@
   volunteer_engineer_submission_field_description: Leírás
   volunteer_engineer_submission_field_description_desc: "Írd le a szoftverfejlesztési
     tapasztalataidat és hogy hogyan vennél részt önkéntesként."
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+  volunteer_engineer_submission_field_description_placeholder: Tapasztalat vagy munkaelőzmény
+    leírása. Ha beszélsz az angolon kívül más nyelvet mindenképp említsd meg.
   volunteer_engineer_submission_header_private: Az információt bizalmasan kezeljük
     és nem adjuk tovább harmadik személyeknek
   volunteer_engineer_submission_field_email: E-mail cím
   volunteer_engineer_submission_field_email_desc: Email-címedet soha nem osztjuk meg
     senkivel, de értesítést küldünk tanári felkérésekről.
   volunteer_engineer_submission_field_email_placeholder: E-mail cím
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_final_paragraph: A környékbeli oktatókat ábrázoló
+    térképen meg leszel jelenítve, így azok a tanárok, amelyek egy Kódolás Óráját
+    szerveznek fel tudják venni veled a kapcsolatot. Az email- és lakcímed SOHA, SENKINEK
+    nem adjuk ki. Egyéb információ (beleértve a várost) publikusan meg lesz jelenítve.
   volunteer_engineer_submission_checkbox_contact: 'Egyetértek azzal, hogy a tanárok
     felvehetik a kapcsolatot velem az önkéntes feladatok elvégzése céljából (Megjegyzés:
     az e-mail címed nem kerül harmadik félhez)'
@@ -449,10 +445,10 @@
   volunteer_engineer_submission_num_volunteers_50: 50 önkéntes
   volunteer_engineer_submission_type_task_onsite: Szeretném, ha Skype-on keresztül
     pár mondatban inspirálnád a diákjaim
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_type_task_remote: Szeretném, ha Skype-on mondanál
+    pár inspiráló mondatot a diákjaimnak a tanórán
+  volunteer_engineer_submission_type_task_mentor: Mentort keresek, aki segítene felkészülni,
+    hogy a diákjaimat kódolásra taníthassam
   petition_age: Kor
   dashboard_landing_title: Tanári kezdőlap
   dashboard_landing_welcome: "Üdvözlünk az új és továbbfejlesztett tanári felületen."
@@ -522,8 +518,8 @@
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: Az AP® számítástechnika alapelvei
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_csp_desc: A Code.org egy izgalmas, könnyen érthető és teljes tantervet
+    dolgozott ki amely bemutatja a programozás alapjait.
   dashboard_landing_loading: Betöltés...
   dashboard_action_edit: Szerkeszt
   dashboard_action_save: Mentés
@@ -712,19 +708,19 @@
   learn_videos_show: Mutasd meg ezt az inspiráló videót az osztályodnak
   learn_videos_before_hoc: Nézd meg ezt az inspiráló videót a Kódolás Órája előtt
   learn_educator_resources_description: Tanulj meg Kódolás Óráján tanítani
-  learn_educator_resources_button: Educator resources
+  learn_educator_resources_button: Oktatói anyagok
   learn_are_you_educator: Tanító vagy? <a href="http://hourofcode.com/resources/how-to">Tanulj
     meg Kódolás Óráján tanítani</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Keress egy környékbeli
     önkéntest</a> a Kódolás Órájádban segíteni
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
     led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_how_to_hoc: Kövesd a <a href="https://hourofcode.com/how-to">leírásunk</a>
+    egy Kódolás Órájának tartásához
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Tudj meg többet</a> a
     tanároknak szánt jutalmakról.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspiráld diákjaidat <a href="https://code.org/educate/inspire">ezekkel
+    a videókkal</a>
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
   hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
   hoc2014_try_scrat: Angry Birds, PvZ és Motkány
@@ -751,7 +747,7 @@
   carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Tanár által vezetett óratervek
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
@@ -820,7 +816,7 @@
   boxisland_name: Box Island
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
+  teacherled_name: Tanár által vezetett óratervek
   codeorg_gradelevel: 4-től 104 éves korig
   codeintl_gradelevel: 4-től 104 éves korig
   thinkersmithspanish_gradelevel: Por todos
@@ -984,13 +980,13 @@
     language.
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add
     your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  boxisland_shortdescription: Menj kódolás-kirándulásra Box Island-re a bátor Hiro-val!
+  codesters_shortdescription: Készítsd el a saját játékaidat, animációidat és mesterműveidet
+    a Python segítségével.
+  texasinstruments_shortdescription: Tanuld meg a programozás alapjait a TI-84&#8482;
+    Plus számológép segítségével.
+  teacherled_shortdescription: Tervezd meg a saját Kódolás Órádat a lecke-terveink
+    segítségével.
   codeorg_longdescription: Tanuld meg a számítástechnika alapgondolatait drag&drop
     elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben
     szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld
@@ -1154,9 +1150,9 @@
     step-by-step instructions in the form of the visual programming language used
     by the Hour of Code. They get introduced to sequencing commands, iteration and
     conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
+  csfirst_longdescription: Kreálj történetet két tengeri szereplőről. Animáld a vizet
+    és tedd egyedivé a környezetet a saját szájízed szerint. Használj programkódot,
+    hogy elmesélhesd a Te történeted!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!

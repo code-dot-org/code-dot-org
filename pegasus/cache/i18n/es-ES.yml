@@ -28,9 +28,9 @@
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: "¿Terminaste tu primera Hora de Código? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Todos los niños merecen oportunidades
+  og_description: Cada estudiante en cada escuela merece la oportunidad de estudiar
+    computación.
   hoc2014_heading: Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre
     8 - 14, 2014<br/>
   hoc2014_students: Alumnos
@@ -78,11 +78,6 @@
   congratulations_volunteer: 'Felicidades: ahora que has probado la Hora del Código,
     <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a>
     y ayuda a estudiantes a aprender una Hora de Código!'
-  course_name_accelerated: Curso acelerado
-  course_name_course1: Curso 1
-  course_name_course2: Curso 2
-  course_name_course3: Curso 3
-  course_name_course4: Curso 4
   congratulations_on_completing_course: Felicitaciones por completar %{course}
   congrats_next_tutorials_title: Prueba estos tutoriales a continuaciòn
   congrats_next_tutorials_desc: Prueba estos tutoriales más cortos de una hora o prueba
@@ -251,8 +246,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Aprende más
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20.000 profesores capacitados, y actualmente enseñando
+    computación en las aulas.
   homepage_banner_20k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
@@ -262,7 +257,7 @@
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
   homepage_slot_text_title_students: Alumnos
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explora nuestros cursos
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
@@ -381,7 +376,7 @@
     href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de
     Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}">
     mapa de voluntariado</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Actualice su información
   volunteer_engineer_submission_header_shared: Información compartida con docentes
     en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre

@@ -34,6 +34,9 @@ var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var Instructions = require('./templates/Instructions.jsx');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
+var assetsApi = require('./clientApi').assets;
+var assetPrefix = require('./assetManagement/assetPrefix');
+var assetListStore = require('./assetManagement/assetListStore');
 
 /**
 * The minimum width of a playable whole blockly game.
@@ -265,6 +268,17 @@ StudioApp.prototype.init = function(config) {
 
   this.configureDom(config);
 
+  if (config.usesAssets) {
+    assetPrefix.init(config);
+
+    // Pre-populate asset list
+    assetsApi.ajax('GET', '', function (xhr) {
+      assetListStore.reset(JSON.parse(xhr.responseText));
+    }, function () {
+      // Unable to load asset list
+    });
+  }
+
   if (config.hideSource) {
     this.handleHideSource_({
       containerId: config.containerId,
@@ -386,7 +400,7 @@ StudioApp.prototype.init = function(config) {
     };
     // Depends on ResizeSensor.js
     var ResizeSensor = require('./ResizeSensor');
-    new ResizeSensor(document.getElementById('visualizationColumn'), resize);
+    ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
   var orientationHandler = function() {
@@ -1621,7 +1635,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       document.body.style.backgroundColor = '#202B34';
     }
     if (this.wireframeShare) {
-      if (dom.isMobile()) {
+      if (dom.isMobile() && !dom.isIPad()) {
         document.getElementById('visualizationColumn').className = 'chromelessShare';
       } else {
         document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
@@ -1798,6 +1812,27 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
+};
+
+/**
+ * Enable adding/removing breakpoints by clicking in the gutter of the editor.
+ * Prerequisites: Droplet editor must be in use and initialized (e.g. you have
+ * to call handleEditCode_ first).
+ */
+StudioApp.prototype.enableBreakpoints = function () {
+  if (!this.editor) {
+    throw new Error('Droplet editor must be in use to enable breakpoints.');
+  }
+
+  // Set up an event handler to create breakpoints when clicking in the gutter:
+  this.editor.on('guttermousedown', function(e) {
+    var bps = this.editor.getBreakpoints();
+    if (bps[e.line]) {
+      this.editor.clearBreakpoint(e.line);
+    } else {
+      this.editor.setBreakpoint(e.line);
+    }
+  }.bind(this));
 };
 
 /**

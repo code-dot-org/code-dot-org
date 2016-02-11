@@ -1,15 +1,10 @@
 /** @file A utility that can help find particular frames within a spritesheet,
  * given certain metadata about that spritesheet */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
-
- maxlen: 90,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
 

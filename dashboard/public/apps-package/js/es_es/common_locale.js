@@ -202,6 +202,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Llama a una función nombrada que tiene uno o más parámetros"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Llamar a una función con parámetros"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Llamar una función"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Defina una variable y asignela a una secuencia, con su valor inicial  "},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "El nombre que utilizarás en el programa para hacer referencia a la variable"},
@@ -289,7 +291,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_notOperator_signatureOverride":function(d){return "Operador booleano NOT"},
 "dropletBlock_orOperator_description":function(d){return "Devuelve verdadero cuando cualquier expresión es verdadero y falso si no"},
 "dropletBlock_orOperator_signatureOverride":function(d){return "Operador boleano \"OR\""},
-"dropletBlock_randomNumber_description":function(d){return "Returns a random number in the closed range from min to max."},
+"dropletBlock_randomNumber_description":function(d){return "Devuelve un número aleatorio en un rango cerrado desde min a max."},
 "dropletBlock_randomNumber_param0":function(d){return "min"},
 "dropletBlock_randomNumber_param0_description":function(d){return "El mínimo número devuelto"},
 "dropletBlock_randomNumber_param1":function(d){return "max"},
@@ -358,7 +360,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "print":function(d){return "Imprimir"},
 "puzzleTitle":function(d){return "Puzzle "+common_locale.v(d,"puzzle_number")+" de "+common_locale.v(d,"stage_total")},
 "readonlyWorkspaceHeader":function(d){return "Sólo ver: "},
-"recommendedBlockContextualHintTitle":function(d){return "Try using a block like this to solve the puzzle."},
+"recommendedBlockContextualHintTitle":function(d){return "Trate de usar un bloque como este para resolver el rompecabezas."},
 "repeat":function(d){return "repetir"},
 "resetProgram":function(d){return "Reiniciar"},
 "rotateText":function(d){return "Gira tu dispositivo."},
@@ -409,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "when":function(d){return "cuando"},
 "whenRun":function(d){return "cuando se ejecuta"},
 "workspaceHeaderShort":function(d){return "Espacio de trabajo: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"choosePrefix":function(d){return "Choose..."}};
