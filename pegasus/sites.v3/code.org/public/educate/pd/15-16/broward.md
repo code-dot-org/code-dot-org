@@ -84,7 +84,10 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 days in-person & ~10 hours online) ###
 
-Milestone Complete!
+Milestone Complete!<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
+<br/>
+If you need support while finishing your work or teaching the course, try asking your questions to your peers in the forums [here](http://forum.code.org/c/cs-in-algebra).
 
 
 [**Back to the top**](#top)
@@ -105,7 +108,10 @@ Milestone Complete!
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
 
-Milestone Complete!
+Milestone Complete!<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
+<br/>
+If you need support while finishing your work or teaching the course, try asking your questions to your peers in the forums [here](http://forum.code.org/c/cs-in-science).
 
 [**Back to the top**](#top)
 

@@ -9,7 +9,7 @@ The ideal ECS Facilitator is an enthusiastic supporter of computer science educa
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1y9Pi8WR28nkQcvRNyf3bF1NAI-8uVrvTdNIOwjLmazE/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1y9Pi8WR28nkQcvRNyf3bF1NAI-8uVrvTdNIOwjLmazE/pub)
 <br/>
 <br/>
 
@@ -31,7 +31,7 @@ Before applying please carefully review the the [requirements and commitments](h
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1y9Pi8WR28nkQcvRNyf3bF1NAI-8uVrvTdNIOwjLmazE/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1y9Pi8WR28nkQcvRNyf3bF1NAI-8uVrvTdNIOwjLmazE/pub)
 <br/>
 <br/>
 
