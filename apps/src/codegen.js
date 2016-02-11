@@ -325,6 +325,27 @@ exports.marshalInterpreterToNative = function (interpreter, interpreterVar) {
 };
 
 /**
+ * Generate a function wrapper for an interpreter async function callback.
+ * The interpreter async function callback takes a single parameter, which
+ * becomes the return value of the synchronous function in the interpreter
+ * world. Here, we wrap the supplied callback to marshal the single parameter
+ * from native to interpreter before calling the supplied callback.
+ *
+ * @param {Object} opts Options block with interpreter and maxDepth provided
+ * @param {function} callback The interpreter supplied callback function
+ */
+var createNativeCallbackForAsyncFunction = function (opts, callback) {
+  return function (nativeValue) {
+    callback(
+        exports.marshalNativeToInterpreter(
+            opts.interpreter,
+            nativeValue,
+            null,
+            opts.maxDepth));
+  };
+};
+
+/**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (opts) {
@@ -342,8 +363,8 @@ exports.makeNativeMemberFunction = function (opts) {
       for (var i = 0; i < arguments.length; i++) {
         if (opts.nativeIsAsync && (i === arguments.length - 1)) {
           // Async functions receive a native callback method as their last
-          // parameter, so we should never marshal that parameter:
-          nativeArgs[i] = arguments[i];
+          // parameter, and we want to wrap that callback to ease marshalling:
+          nativeArgs[i] = createNativeCallbackForAsyncFunction(opts, arguments[i]);
         } else {
           nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
         }
