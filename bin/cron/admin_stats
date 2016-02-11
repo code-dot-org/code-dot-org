@@ -63,9 +63,6 @@ def main()
   thirty_day_retention_current_monthly_baseline = students.
     where(created_at: (Time.now - (3 * THIRTY_DAYS))..(Time.now - (2 * THIRTY_DAYS)))
 
-  # Students and teachers.
-  followers = DASHBOARD_REPORTING_DB_READONLY[:followers]
-
   Properties.set(:admin_stats, {
     accounts: {
       users: all_users.count,
