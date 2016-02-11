@@ -3,54 +3,54 @@
   .courseblock-span4.heading
     %h3 Tynker
     %h4 
-      Grades K-8
+      = I18n.t(:third_party_gradelevel_kto8)
       %br
-      Platform: Web, iPad & Android
+      = I18n.t(:third_party_platform_all)
       %br
-      Price: Plans vary
-    .smalltext Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create.
+      = I18n.t(:third_party_price_varies)
+    .smalltext= I18n.t(:third_party_tynker_desc)
     %br
     %a{:href=>"https://www.tynker.com/school/lesson-plan/show?id=36-programming-1a"}
-      %button{:style=>'margin-left:10px'} Try Tynker's Curriculum for Early Readers
+      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_tynker_btn_curriculum)
     %a{:href=>"https://www.tynker.com/"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'} Visit Tynker
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_tynker_btn_site)
 
 .courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
   %img.courseblock-span2.imgspan{src: "/images/next/scratchjr.png", style: "margin-right: 10px;"}
   .courseblock-span4.heading
     %h3 Scratch Jr.
     %h4 
-      Grades K-2
+      = I18n.t(:third_party_gradelevel_kto2)
       %br
-      Platform: iPad & Android
+      = I18n.t(:third_party_platform_mobile)
       %br
-      Price: Free
-    .smalltext Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.
+      = I18n.t(:third_party_price_free)
+    .smalltext= I18n.t(:third_party_scratchjr_desc)
     %br
     %a{:href=>"http://www.scratchjr.org/teach.html#curricula"}
-      %button{:style=>'margin-left:10px'} Download Scratch Jr. Curriculum
+      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_scratchjr_btn_curriculum)
     %a{:href=>"http://www.scratchjr.org/"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'} Visit Scratch Jr.
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_scratchjr_btn_site)
 
 .clear
 %br
 %table
   %thead
-    %th Organization
-    %th Curriculum
-    %th Pricing
+    %th= I18n.t(:third_party_organization)
+    %th= I18n.t(:third_party_curriculum)
+    %th= I18n.t(:third_party_pricing)
   %tr
     %td 
       %a{:href=>"http://www.thefoos.com/"} The Foos
-    %td Approximately 10-12 lessons, geared toward grades K-3
-    %td Free
+    %td= I18n.t(:third_party_desc_10to12_kto3)
+    %td= I18n.t(:third_party_cost_free)
   %tr
     %td 
       %a{:href=>"https://www.kodable.com/"} Kodable
-    %td Approximately 11 lessons, geared toward grades K-5
-    %td $5/month per class
+    %td= I18n.t(:third_party_desc_11_kto5)
+    %td= I18n.t(:third_party_cost_5permonth)
   %tr
     %td 
       %a{:href=>"http://lightbot.com/"} Lightbot Jr.
-    %td Approximately 10-12 lessons, geared toward grades K-5
-    %td $2.99/download
+    %td= I18n.t(:third_party_desc_10to12_kto5)
+    %td= I18n.t(:third_party_cost_299)
