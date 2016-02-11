@@ -5,8 +5,6 @@
  */
 /* global React */
 
-var Cell = require('@cdo/apps/maze/cell');
-
 var CellEditor = module.exports = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
@@ -16,10 +14,12 @@ var CellEditor = module.exports = React.createClass({
   },
 
   handleChange: function (event) {
-    var values = this.props.cell.serialize();
-    values[event.target.name] = (event.target.value === 'undefined' || event.target.value === '') ? undefined : parseInt(event.target.value);
-    var newCell = Cell.deserialize(values);
-    this.props.onUpdate(newCell);
+    var values = {};
+    var nodes = this.getDOMNode().querySelectorAll('[name]');
+    for (var i = 0, node; (node = nodes[i]); i++) {
+      values[node.name] = isNaN(node.value) ? undefined : parseInt(node.value);
+    }
+    this.props.onUpdate(values);
   },
 
   render: function () {
