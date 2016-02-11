@@ -17,8 +17,10 @@ class AdminReportsController < ApplicationController
 
   def funometer
     require 'cdo/properties'
-    @stats = Properties.get(:funometer)
-    @ratings_by_day = @stats['ratings_by_day'] if @stats.present?
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @stats = Properties.get(:funometer)
+      @ratings_by_day = @stats['ratings_by_day'] if @stats.present?
+    end
   end
 
   def funometer_by_script
@@ -69,42 +71,44 @@ class AdminReportsController < ApplicationController
   end
 
   def level_answers
-    @headers = ['Level ID', 'User Email', 'Data']
-    @responses = {}
-    @response_limit = 100
-    if params[:levels]
-      # Parse the parameters, namely the set of levels to grab answers for.
-      @levels = params[:levels] ? params[:levels].split(',') : []
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @headers = ['Level ID', 'User Email', 'Data']
+      @responses = {}
+      @response_limit = 100
+      if params[:levels]
+        # Parse the parameters, namely the set of levels to grab answers for.
+        @levels = params[:levels] ? params[:levels].split(',') : []
 
-      @levels.each do |level_id|
-        # Don't query for data if we've already retrieved it.
-        if @responses[level_id]
-          next
-        end
+        @levels.each do |level_id|
+          # Don't query for data if we've already retrieved it.
+          if @responses[level_id]
+            next
+          end
 
-        # Regardless of the level type, query the DB for level answers.
-        @responses[level_id] = LevelSource.
-                               where(level_id: level_id).
-                               joins(:activities).
-                               joins("INNER JOIN users ON activities.user_id = users.id").
-                               limit(@response_limit).
-                               pluck(:level_id, :email, :data)
+          # Regardless of the level type, query the DB for level answers.
+          @responses[level_id] = LevelSource.
+                                 where(level_id: level_id).
+                                 joins(:activities).
+                                 joins("INNER JOIN users ON activities.user_id = users.id").
+                                 limit(@response_limit).
+                                 pluck(:level_id, :email, :data)
 
-        # Determine whether the level is a multi question, replacing the
-        # numerical answer with its corresponding text if so.
-        level_info = Level.where(id: level_id).pluck(:type, :properties).first
-        if level_info && level_info[0] == 'Multi' && level_info[1].length > 0
-          level_answers = level_info[1]["answers"]
-          @responses[level_id].each do |response|
-            response[2] = level_answers[response[2].to_i]["text"]
+          # Determine whether the level is a multi question, replacing the
+          # numerical answer with its corresponding text if so.
+          level_info = Level.where(id: level_id).pluck(:type, :properties).first
+          if level_info && level_info[0] == 'Multi' && level_info[1].length > 0
+            level_answers = level_info[1]["answers"]
+            @responses[level_id].each do |response|
+              response[2] = level_answers[response[2].to_i]["text"]
+            end
           end
         end
       end
-    end
 
-    respond_to do |format|
-      format.html
-      format.csv { return level_answers_csv }
+      respond_to do |format|
+        format.html
+        format.csv { return level_answers_csv }
+      end
     end
   end
 
@@ -168,13 +172,15 @@ class AdminReportsController < ApplicationController
   end
 
   def pd_progress
-    script = Script.find_by!(name: params[:script] || 'K5PD').cached
-    require 'cdo/properties'
-    locals_options = Properties.get("pd_progress_#{script.id}")
-    if locals_options
-      render locals: locals_options.symbolize_keys
-    else
-      render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
+    SeamlessDatabasePool.use_persistent_read_connection do
+      script = Script.find_by!(name: params[:script] || 'K5PD').cached
+      require 'cdo/properties'
+      locals_options = Properties.get("pd_progress_#{script.id}")
+      if locals_options
+        render locals: locals_options.symbolize_keys
+      else
+        render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
+      end
     end
   end
 
@@ -194,60 +200,66 @@ class AdminReportsController < ApplicationController
 
   def admin_stats
     require 'cdo/properties'
-    @stats = Properties.get('admin_stats')
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @stats = Properties.get('admin_stats')
+    end
   end
 
   def all_usage
-    @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
-    render 'usage', formats: [:html]
+    SeamlessDatabasePool.use_persistent_read_connection do
+      @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
+      render 'usage', formats: [:html]
+    end
   end
 
   def hoc_signups
-    # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
-    # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
-    # We restrict by dates to avoid long trails of (inappropriate?) signups.
-    data_2014 = DB[:forms].
-        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
-        group(:name, :email).
-        # TODO(asher): Is this clumsy notation really necessary? Is Sequel
-        # really this stupid? Also below.
-        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-        order(:created_at_day).
-        all.
-        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
-    data_2015 = DB[:forms].
-        where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
-        group(:name, :email).
-        group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
-        order(:created_at_day).
-        all.
-        map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+    SeamlessDatabasePool.use_persistent_read_connection do
+      # Requested by Roxanne on 16 November 2015 to track HOC 2015 signups by day.
+      # Get the HOC 2014 and HOC 2015 signup counts by day, deduped by email and name.
+      # We restrict by dates to avoid long trails of (inappropriate?) signups.
+      data_2014 = DB[:forms].
+          where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2014', '2014-08-01', '2015-01-01').
+          group(:name, :email).
+          # TODO(asher): Is this clumsy notation really necessary? Is Sequel
+          # really this stupid? Also below.
+          group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+          order(:created_at_day).
+          all.
+          map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
+      data_2015 = DB[:forms].
+          where('kind = ? AND created_at > ? AND created_at < ?', 'HocSignup2015', '2015-08-01', '2016-01-01').
+          group(:name, :email).
+          group_and_count(Sequel.as(Sequel.qualify(:forms, :created_at).cast(:date),:created_at_day)).
+          order(:created_at_day).
+          all.
+          map{|row| [row[:created_at_day].strftime("%m-%d"), row[:count].to_i]}
 
-    # Construct the hash {MM-DD => [count2014, count2015]}.
-    # Start by constructing the key space as the union of the MM-DD dates for
-    # data_2014 and data_2015.
-    require 'set'
-    dates = Set.new []
-    data_2014.each do |day|
-      dates.add(day[0])
-    end
-    data_2015.each do |day|
-      dates.add(day[0])
-    end
-    # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
-    data_by_day = {}
-    dates.each do |date|
-      data_by_day[date] = [0, 0]
-    end
-    # Finally populate the values of our hash.
-    data_2014.each do |day|
-      data_by_day[day[0]][0] = day[1]
-    end
-    data_2015.each do |day|
-      data_by_day[day[0]][1] = day[1]
-    end
+      # Construct the hash {MM-DD => [count2014, count2015]}.
+      # Start by constructing the key space as the union of the MM-DD dates for
+      # data_2014 and data_2015.
+      require 'set'
+      dates = Set.new []
+      data_2014.each do |day|
+        dates.add(day[0])
+      end
+      data_2015.each do |day|
+        dates.add(day[0])
+      end
+      # Then populate the keys of our hash {date=>[count2014,count2015], ..., date=>[...]} with dates.
+      data_by_day = {}
+      dates.each do |date|
+        data_by_day[date] = [0, 0]
+      end
+      # Finally populate the values of our hash.
+      data_2014.each do |day|
+        data_by_day[day[0]][0] = day[1]
+      end
+      data_2015.each do |day|
+        data_by_day[day[0]][1] = day[1]
+      end
 
-    render locals: {data_by_day: data_by_day.sort}
+      render locals: {data_by_day: data_by_day.sort}
+    end
   end
 
   # Use callbacks to share common setup or constraints between actions.
