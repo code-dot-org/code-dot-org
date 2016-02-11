@@ -286,4 +286,41 @@ describe('EventSandboxer', function () {
       assert.equal(newMousemoveC.movementY, 0);
     });
   });
+
+  describe('DOM element substitution', function () {
+    function assertPropertyElementToElementId(originalName) {
+      var randomId = Math.random();
+      var originalEvent = {};
+      originalEvent[originalName] = {
+        id: randomId
+      };
+      var newEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(newEvent, originalName + 'Id');
+      assert.equal(newEvent[originalName + 'Id'], randomId);
+    }
+
+    it('replaces the "fromElement" element property with the "fromElementId" property', function () {
+      assertPropertyElementToElementId('fromElement');
+    });
+
+    it('replaces the "srcElement" element property with the "srcElementId" property', function () {
+      assertPropertyElementToElementId('srcElement');
+    });
+
+    it('replaces the "currentTarget" element property with the "currentTargetId" property', function () {
+      assertPropertyElementToElementId('currentTarget');
+    });
+
+    it('replaces the "relatedTarget" element property with the "relatedTargetId" property', function () {
+      assertPropertyElementToElementId('relatedTarget');
+    });
+
+    it('replaces the "target" element property with the "targetId" property', function () {
+      assertPropertyElementToElementId('target');
+    });
+
+    it('replaces the "toElement" element property with the "toElementId" property', function () {
+      assertPropertyElementToElementId('toElement');
+    });
+  });
 });
