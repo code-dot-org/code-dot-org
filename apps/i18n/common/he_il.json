@@ -47,6 +47,8 @@
   "dropletBlock_callMyFunction_n_description": "קרא לפונקציה שמקבלת פרמטר אחד או יותר",
   "dropletBlock_callMyFunction_n_signatureOverride": "קרא לפונקציה עם פרמטרים",
   "dropletBlock_callMyFunction_signatureOverride": "קרא לפונקציה",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "צור משתנה והקצה אותו למערך עם ערכים התחלתיים נתונים",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -254,6 +256,5 @@
   "when": "מתי",
   "whenRun": "התחל ריצה",
   "workspaceHeaderShort": "סביבת העבודה: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "choosePrefix": "Choose..."
 }

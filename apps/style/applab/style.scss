@@ -1,5 +1,5 @@
 @import "color";
-//@import "mixins"; TODO(bjordan/bbuchanan): fix sprockets?
+@import "mixins";
 @import "style-constants";
 @import "../JsDebuggerUi.scss";
 @import "skins/base.scss";
@@ -239,12 +239,7 @@ div#visualizationResizeBar {
   outline: none;
   -webkit-touch-callout: none;
 
-  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
+  @include user-selects(none);
 }
 
 #divApplab {

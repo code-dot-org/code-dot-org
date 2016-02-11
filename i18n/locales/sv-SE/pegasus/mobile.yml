@@ -59,11 +59,6 @@ sv-SE:
   congratulations: Grattis!
   congratulations_on_completing_hoc: Grattis, du har klarat kodtimmen
   congratulations_volunteer: 'Grattis: nu när du har provat Hour of Code, <a href="https://code.org/volunteer"> Registrera dig som volontär i ett klassrum</a> och hjälp eleverna lära sig Hour of Code!'
-  course_name_accelerated: Snabbkurs
-  course_name_course1: Kurs 1
-  course_name_course2: Kurs 2
-  course_name_course3: Kurs 3
-  course_name_course4: Kurs 4
   congratulations_on_completing_course: 'Grattis till att klara av %{course}'
   congrats_next_tutorials_title: Testa dessa nästa lektionerna
   congrats_next_tutorials_desc: 'Testa denna kortare, 1 timmes lektion eller testa <a href="%{current_path}/next">Partner lektioner</a>.'
@@ -114,9 +109,9 @@ sv-SE:
   learn_next_level: Fortsätt till nästa nivå
   learn_online: Prova andra kurser online
   learn_classes: Hitta lokala klasser
-  hoc_is_here: '#HourOfCode/Timmen med Kod är här - kolla! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
-  twitter_teach_cs: 'Varför undervisar  inte fler skolor i datavetenskap? Vi kan ordna detta. http://youtu.be/nKIu9yen5nc. Besök http://code.org/ för mer information.'
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Lär dig med en Timme av Kod
   beyond_hoc: Efter en Timme
   what_gender: Vilket kön har du?
@@ -552,7 +547,7 @@ sv-SE:
   dashboard_faq_k5: K-5 vanliga frågor
   dashboard_announcements: Anslagstavla
   dashboard_announce_view_all: Visa alla
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Lär dig mer
   dashboard_announce_hoc: '<b>23 November 2015</b> - Skulle du vilja få hjälp av en frivillig som brinner för datavetenskaplig utbildning under ditt Kodtimmen evenemang? Över 7 000 frivilliga vill inspirera dina elever genom att besöka ditt klassrum eller videochatta på distans. Kolla in frivillig-kartan för att kontakta frivilliga i ditt område.'
   dashboard_announce_playlab: '<b>4 december, 2015</b> - Kodtimmen är här! Prova 50 övningar för alla åldrar och alla mobila enheter. Nytt den här veckan: Koda dina egna historier och spel i nya spel-labb, Ice Age och Gumball.'
