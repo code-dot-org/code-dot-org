@@ -1252,7 +1252,7 @@ applabCommands.getYPosition = function (opts) {
 applabCommands.onEventFired = function (opts, e) {
   var funcArgs = opts.extraArgs;
   if (typeof e != 'undefined') {
-    eventSandboxer.setTransformFromDiv(document.getElementById('divApplab'));
+    eventSandboxer.setTransformFromElement(document.getElementById('divApplab'));
     var applabEvent = eventSandboxer.sandboxEvent(e);
 
     // Push a function call on the queue with an array of arguments consisting

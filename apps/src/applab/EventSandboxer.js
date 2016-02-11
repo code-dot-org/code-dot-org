@@ -50,20 +50,20 @@ var EventSandboxer = module.exports = function () {
  * Updates the sandboxer's internal transform according to the position and
  * scale of the provided div (which should be the app/play space) so that it
  * can accurately transform mouse coordinates into app space.
- * @param {HTMLDivElement} div
+ * @param {HTMLElement} element
  */
-EventSandboxer.prototype.setTransformFromDiv = function (div) {
+EventSandboxer.prototype.setTransformFromElement = function (element) {
   // Capture div scale
-  this.xScale_ = div.getBoundingClientRect().width / div.offsetWidth;
-  this.yScale_ = div.getBoundingClientRect().height / div.offsetHeight;
+  this.xScale_ = element.getBoundingClientRect().width / element.offsetWidth;
+  this.yScale_ = element.getBoundingClientRect().height / element.offsetHeight;
 
   // Capture div offset, and all of its parent offsets, together
   var xOffset = 0;
   var yOffset = 0;
-  while (div) {
-    xOffset += div.offsetLeft;
-    yOffset += div.offsetTop;
-    div = div.offsetParent;
+  while (element) {
+    xOffset += element.offsetLeft;
+    yOffset += element.offsetTop;
+    element = element.offsetParent;
   }
   this.xOffset_ = xOffset;
   this.yOffset_ = yOffset;
