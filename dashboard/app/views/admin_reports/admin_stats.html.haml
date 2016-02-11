@@ -16,33 +16,42 @@
         %li
           Students:
           = @stats['born_accounts']['students']
-        %li
-          Female Students:
-          = @stats['born_accounts']['female_students']
-          = surround '(', ')' do
-            = get_gender_percentage(@stats['born_accounts']['female_students'],
-                                    @stats['born_accounts']['male_students'])
-        %li
-          Male Students:
-          = @stats['born_accounts']['male_students']
-          = surround '(', ')' do
-            = get_gender_percentage(@stats['born_accounts']['male_students'],
-                                    @stats['born_accounts']['female_students'])
+        %ul
+          %li
+            Female Students:
+            = @stats['born_accounts']['female_students']
+            = surround '(', ')' do
+              = get_gender_percentage(@stats['born_accounts']['female_students'],
+                                      @stats['born_accounts']['male_students'])
+          %li
+            Male Students:
+            = @stats['born_accounts']['male_students']
+            = surround '(', ')' do
+              = get_gender_percentage(@stats['born_accounts']['male_students'],
+                                      @stats['born_accounts']['female_students'])
         %li
           Teachers:
           = @stats['born_accounts']['teachers']
     %li
       Actives (accounts that have at least one sign-in in the last x days)
       %ul
-        -{'seven_day_students': '7-Day Students',
-          'seven_day_female_students': '7-Day Female Students',
-          'seven_day_male_students': '7-Day Male Students',
-          'thirty_day_students': '30-Day Students',
-          'thirty_day_female_students': '30-Day Female Students',
-          'thirty_day_male_students': '30-Day Male Students'}.each do |type, description|
+        -{'seven': '7', 'thirty': '30'}.each do |days, number|
           %li
-            = "#{description}: "
-            = @stats['actives']["#{type}"]
+            = "#{number}-Day Students: "
+            = @stats['actives']["#{days}_day_students"]
+          %ul
+            %li
+              = "#{number}-Day Female Students: "
+              = @stats['actives']["#{days}_day_female_students"]
+              = surround '(', ')' do
+                = get_gender_percentage(@stats['actives']["#{days}_day_female_students"],
+                                        @stats['actives']["#{days}_day_male_students"])
+            %li
+              = "#{number}-Day Male Students: "
+              = @stats['actives']["#{days}_day_male_students"]
+              = surround '(', ')' do
+                = get_gender_percentage(@stats['actives']["#{days}_day_male_students"],
+                                        @stats['actives']["#{days}_day_female_students"])
     - {'historical': 'accounts at least 37 days old and logged in at least once after 30 days',
        'current_weekly': 'accounts 37 to 44 days old and logged in at least once after 30 days',
        'current_monthly': 'accounts 60 to 90 days old and logged in at least once after 30 days'}.each do |type, description|
@@ -57,7 +66,7 @@
             'non_us_students': 'Non-US Student'}.each do |filter, filter_description|
             %li
               = "30-Day #{filter_description}: "
-              = (100.0 * @stats["thirty_day_retention_#{type}"]["#{filter}"]).to_s + '%'
+              = get_percentage_from_ratio(@stats["thirty_day_retention_#{type}"]["#{filter}"])
 
   = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
