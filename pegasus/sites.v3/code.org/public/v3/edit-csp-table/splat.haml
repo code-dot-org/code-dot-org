@@ -55,7 +55,6 @@ angular: recordsApp
           method:'POST',
           url: "#{api_base_url}/column/:column_name"
         }
-
       }, {});
       return Table;
     }]);
@@ -64,8 +63,8 @@ angular: recordsApp
   var controllers = angular.module('recordsApp.controllers', []).
       value('version', '0.1');
 
-  controllers.controller('RecordsController', ['$scope', '$route', '$routeParams', '$location', '$window', 'recordsService', 'tablesService',
-      function($scope, $route, $routeParams, $location, $window, recordsService, tablesService) {
+  controllers.controller('RecordsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'recordsService', 'tablesService',
+      function($scope, $http, $route, $routeParams, $location, $window, recordsService, tablesService) {
     $scope.records = recordsService.query();
     $scope.newColumnName = '';
     $scope.newRecord = new recordsService();
@@ -73,6 +72,7 @@ angular: recordsApp
     $scope.channelId = "#{channel_id}";
     $scope.importing = false;
     $scope.reverse = true;
+    $scope.conversionError = "#{params[:conversionError]}"
     $scope.records.$promise.then(function(records) {
       $scope.columns = getColumns(records);
     }).catch($scope.genericError);
@@ -152,7 +152,19 @@ angular: recordsApp
       column.editing = false;
     }
     $scope.coerceColumn = function (column, type) {
-      console.log('coerceColumn ', column, type);
+      $http({
+        method:'POST',
+        url: '/v3/coerce-shared-tables/#{channel_id}/#{table_name}',
+        params: {column_name: column.id, type: type}
+      }).then(function (response) {
+        var conversionError = '';
+        if (response.data !== 'true') {
+          // reload the page with conversionError set, allowing us to show an error string
+          conversionError = '?conversionError=Not all values in column ' + column.id +
+            ' could be converted to type ' + type + '.';
+        }
+        location.assign(location.pathname + conversionError);
+      });
     }
     function castValue(val) {
       if (val == '') return undefined;

@@ -161,7 +161,7 @@ class TablesApi < Sinatra::Base
   end
 
   #
-  # POST /v3/import-(shared|user)-tables/<channel-id>/<table-name>
+  # POST /v3/coerce-(shared|user)-tables/<channel-id>/<table-name>
   #
   # Imports a csv form post into a table, erasing previous contents.
   #
@@ -216,6 +216,33 @@ class TablesApi < Sinatra::Base
     end
 
     redirect "#{table_url}"
+  end
+
+  #
+  # POST /v3/import-(shared|user)-tables/<channel-id>/<table-name>
+  #
+  # Imports a csv form post into a table, erasing previous contents.
+  #
+  post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
+    content_type :json
+
+    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+
+    column = request.GET['column_name']
+    type = request.GET['type']
+
+    return 400 unless ['string', 'boolean', 'number'].include?(type)
+
+    current_records = table.to_a
+    new_records, all_converted = TableCoerce.coerce_column(current_records, column, type.to_sym)
+
+    # TODO: This should probably be a bulk operation
+    new_records.each do |record|
+      table.delete(record['id'])
+      table.insert(record, request.ip)
+    end
+
+    all_converted.to_json
   end
 
   #

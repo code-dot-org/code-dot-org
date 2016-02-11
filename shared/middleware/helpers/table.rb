@@ -349,8 +349,7 @@ class DynamoTable
   end
 
   def to_a()
-    foo = items
-    return foo.map { |i| value_from_row(i) }
+    return items.map { |i| value_from_row(i) }
   end
 
   def to_csv()

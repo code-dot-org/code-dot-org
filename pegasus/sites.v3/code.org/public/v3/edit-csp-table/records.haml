@@ -64,9 +64,15 @@ content-type: text/ng-template
   form {
     display: inline;
   }
-%div
+  .conversion-error {
+    color: red;
+    }
+
+%div.error
   %h2
     Viewing table: {{tableName}}
+  %div.conversion-error
+    {{conversionError}}
   %div.clearfix.level-buttons
     %div#import-actions
       %span
