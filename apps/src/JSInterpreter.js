@@ -426,6 +426,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       doneUserLine = doneUserLine ||
         (inUserCode && this.interpreter.stateStack[0] && this.interpreter.stateStack[0].done);
 
+      // Some nodes (like WhileStatement) shift the stateStack after completing instead
+      // of setting "done"
+      doneUserLine = doneUserLine || (inUserCode && this.interpreter.stateStack[0].node.type === "Program");
+
       var stackDepth = this.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
 
