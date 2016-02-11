@@ -679,16 +679,17 @@ exports.selectCurrentCode = function (interpreter,
     var node = interpreter.stateStack[0].node;
 
     if (node.type === 'ForStatement') {
-      var mode = interpreter.stateStack[0].mode || 0;
+      var mode = interpreter.stateStack[0].mode || 0, subNode;
       if (mode === 0) {
-        node = node.init;
+        subNode = node.init;
       } else if (mode === 1) {
-        node = node.test;
+        subNode = node.test;
       } else if (mode === 2) {
-        node = node.body;
+        subNode = node.body;
       } else if (mode === 3) {
-        node = node.update;
+        subNode = node.update;
       }
+      node = subNode || node;
     }
 
     // Adjust start/end by userCodeStartOffset since the code running
