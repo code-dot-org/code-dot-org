@@ -343,7 +343,17 @@ describe('generateDropletModeOptions', function () {
           "color": "#D3E965",
           "title": "setKeyValue"
         },
+        "setKeyValueSync": {
+          "value": true,
+          "color": "#D3E965",
+          "title": "setKeyValue"
+        },
         "getKeyValue": {
+          "color": "#D3E965",
+          "title": "getKeyValue"
+        },
+        "getKeyValueSync": {
+          "value": true,
           "color": "#D3E965",
           "title": "getKeyValue"
         },
