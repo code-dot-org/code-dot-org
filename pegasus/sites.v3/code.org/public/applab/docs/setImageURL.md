@@ -56,7 +56,7 @@ ____________________________________________________
 
 [example]
 
-**Image Swap** Click the button to change the character image from the dog to the bee and back again.
+**Example: Image Swap** Click the button to change the character image from the dog to the bee and back again.
 
 ```
 // Click the button to change the character image from the dog to the bee and back again.

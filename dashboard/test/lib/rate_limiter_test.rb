@@ -34,7 +34,7 @@ class RateLimiterTest < ActiveSupport::TestCase
 
   def test_rate_limiter_with_disabled_rate_limit
     limiter = SQS::RateLimiter.new(create_config(max_rate: 0))  # 0 indicates no limit.
-    assert_in_delta 0.0, limiter.inter_batch_delay(batch_size: 100000000, elapsed_time_sec: 0.0)
+    assert_in_delta 0.0, limiter.inter_batch_delay(batch_size: 100_000_000, elapsed_time_sec: 0.0)
   end
 
   def test_rate_limiter_with_dcdo_updates

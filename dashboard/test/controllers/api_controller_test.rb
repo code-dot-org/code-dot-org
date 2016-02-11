@@ -116,6 +116,30 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal script, assigns(:script)
   end
 
+  test "should get user progress" do
+    script = Script.twenty_hour_script
+
+    user = create :user, total_lines: 2
+    create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
+    sign_in user
+
+    get :user_progress, script_name: script.name
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    assert_equal 2, body['linesOfCode']
+    level_id = script.script_levels[1].level.id
+    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
+    assert_equal 100, body['levels'][level_id.to_s]['result']
+
+    get :user_progress_for_all_scripts
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 2, body['linesOfCode']
+    assert_equal 1, body['scripts'].size
+    assert_equal 'perfect', body['scripts'][script.name]['levels'][level_id.to_s]['status']
+  end
+
   test "should get progress for section with default script" do
     get :section_progress, section_id: @section.id
     assert_response :success

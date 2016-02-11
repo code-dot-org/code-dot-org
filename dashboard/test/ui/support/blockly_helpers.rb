@@ -66,6 +66,10 @@ module BlocklyHelpers
   def get_block_workspace_top(block_id)
     @browser.execute_script("return Blockly.mainBlockSpace.getBlockById(#{block_id}).getRelativeToSurfaceXY().y;")
   end
+
+  def modal_dialog_visible
+    @browser.execute_script("return $('#modalEditorClose :visible').length != 0;")
+  end
 end
 
 World(BlocklyHelpers)

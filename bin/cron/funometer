@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+#
+# This script caches database queries whose results are displayed at studio.code.org/admin/funometer.
+#
+require_relative('../../dashboard/config/environment')
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/properties'
+
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect(CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
+
+def main()
+  return unless only_one_running?(__FILE__)
+
+  # Compute the overall percentage.
+  overall_percentage = 100.0 * PuzzleRating.where(rating: 1).count / PuzzleRating.count
+
+  # Compute the funometer percentages, by day.
+  ratings_by_day = PuzzleRating.
+    group('DATE(created_at)').
+    order('DATE(created_at)').
+    pluck('DATE(created_at)', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
+
+  # Compute funometer percentages by script.
+  ratings_by_script = PuzzleRating.
+    joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").
+    group(:script_id).
+    order('100.0 * SUM(rating) / COUNT(rating)').
+    pluck('script_id', 'name', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating)')
+
+  # Compute funometer percentages by level, saving the most favorited and most hated.
+  ratings_by_level = PuzzleRating.
+    joins("INNER JOIN scripts ON scripts.id = puzzle_ratings.script_id").
+    joins("INNER JOIN levels ON levels.id = puzzle_ratings.level_id").
+    group(:script_id, :level_id).
+    select(:script_id, :level_id, 'scripts.name AS script_name', 'levels.name AS level_name', '100.0 * SUM(rating) / COUNT(rating) AS percentage', 'COUNT(rating) AS cnt').
+    having('cnt > ?', 100)
+  ratings_by_level_favorited = ratings_by_level.
+    order('100.0 * SUM(rating) / COUNT(rating) desc').
+    limit(25).
+    pluck('script_id', 'level_id', 'scripts.name', 'levels.name', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating) AS cnt')
+  ratings_by_level_hated = ratings_by_level.
+    order('100.0 * SUM(rating) / COUNT(rating) asc').
+    limit(25).
+    pluck('script_id', 'level_id', 'scripts.name', 'levels.name', '100.0 * SUM(rating) / COUNT(rating)', 'COUNT(rating) AS cnt')
+
+  # TODO(asher): These are being saved as an array of arrays. Consider whether it makes sense to
+  # save these as an array of hashes to aid readability in the HAML template.
+  Properties.set(:funometer, {
+    overall: overall_percentage,
+    ratings_by_day: ratings_by_day,
+    ratings_by_script: ratings_by_script,
+    ratings_by_level_favorited: ratings_by_level_favorited,
+    ratings_by_level_hated: ratings_by_level_hated
+  })
+end
+
+main()

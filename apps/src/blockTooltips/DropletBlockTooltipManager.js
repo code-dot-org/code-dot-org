@@ -29,23 +29,43 @@ var DEFAULT_TOOLTIP_CONFIG = {
 };
 
 /**
+ * Simple helper function that will swallow exceptions, and log them as
+ * console.error. This is done because the way that some of our callbacks are
+ * called by droplet, exceptions would bubble down to the droplet code, and
+ * prevent desired behavior (i.e. we fail to transition back to block mode).
+ */
+function swallowErrors(fn) {
+  return function () {
+    try {
+      fn();
+    } catch (err) {
+      if (typeof(console) !== "undefined" && console.error) {
+        console.error(err);
+      }
+    }
+  };
+}
+
+/**
  * @param {Editor} dropletEditor
  */
 DropletBlockTooltipManager.prototype.installTooltipsForEditor_ = function (dropletEditor) {
-  this.installTooltipsForCurrentCategoryBlocks(dropletEditor);
+  this.installTooltipsForCurrentCategoryBlocks_();
   this.hideTooltipsOnBlockPick_(dropletEditor);
 
-  dropletEditor.on('changepalette', this.installTooltipsForCurrentCategoryBlocks.bind(this));
-  dropletEditor.on('toggledone', this.installTooltipsIfNotInstalled.bind(this));
+  dropletEditor.on('changepalette',
+    swallowErrors(this.installTooltipsForCurrentCategoryBlocks_.bind(this)));
+  dropletEditor.on('toggledone',
+    swallowErrors(this.installTooltipsIfNotInstalled_.bind(this)));
 };
 
-DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled = function () {
+DropletBlockTooltipManager.prototype.installTooltipsIfNotInstalled_ = function () {
   if (!$('.droplet-hover-div').hasClass('tooltipstered')) {
-    this.installTooltipsForCurrentCategoryBlocks();
+    this.installTooltipsForCurrentCategoryBlocks_();
   }
 };
 
-DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks = function () {
+DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = function () {
   if (!this.tooltipsEnabled) {
     return;
   }

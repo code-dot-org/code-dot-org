@@ -7,7 +7,6 @@ module ViewOptionsHelper
     share_footer
     try_hoc_banner
     has_i18n
-    no_padding
     white_background
     callouts
     autoplay_video

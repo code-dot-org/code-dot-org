@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Felicitacions: ara que has provat l''Hora del Codi,
     <a href="https://code.org/volunteer"> registra''t com a voluntari en una aula</a>
     i ajuda els alumnes a aprendre una Hora del Codi!'
-  course_name_accelerated: Curs Accelerat
-  course_name_course1: Curs 1
-  course_name_course2: Curs 2
-  course_name_course3: Curs 3
-  course_name_course4: Curs 4
   congratulations_on_completing_course: Enhorabona per completar %{course}
   congrats_next_tutorials_title: Prova els següents tutorials
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner

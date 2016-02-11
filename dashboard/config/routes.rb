@@ -281,5 +281,6 @@ Dashboard::Application.routes.draw do
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'
   get '/api/user_progress/:script_name', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script_name/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress', to: 'api#user_progress_for_all_scripts', as: 'user_progress_for_all_scripts'
   get '/api/:action', controller: 'api'
 end

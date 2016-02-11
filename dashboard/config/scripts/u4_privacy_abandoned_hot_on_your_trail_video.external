@@ -1,0 +1,12 @@
+name 'U4 - Privacy Abandoned - Hot On Your Trail Video'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Hot On Your Trail
+
+<iframe width="560" height = "315" src="https://www.youtube.com/embed/bqWuioPHhz0" frameborder="0" allowfullscreen></iframe>
+
+[Source](https://www.youtube.com/embed/bqWuioPHhz0)
+MARKDOWN

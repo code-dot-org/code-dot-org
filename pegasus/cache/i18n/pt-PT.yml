@@ -80,11 +80,6 @@
   congratulations_volunteer: 'Parabéns: agora que já tentaste a Hora do Código, <a
     href="https://code.org/volunteer"> regista-te para seres voluntário numa sala
     de aula</a> e ajuda estudantes a aprender numa Hora de Código!'
-  course_name_accelerated: Curso acelerado
-  course_name_course1: Curso 1
-  course_name_course2: Curso 2
-  course_name_course3: Curso 3
-  course_name_course4: Curso 4
   congratulations_on_completing_course: Parabéns por ter completado %{course}
   congrats_next_tutorials_title: A seguir, experimenta estes tutoriais
   congrats_next_tutorials_desc: Experimenta este tutoriais mais curtos de 1 hora ou
@@ -95,8 +90,9 @@
   get_a_certificate_message: Vamos enviar-lhe um certificado e informações sobre como
     <a href='/learn/beyond'>aprender além de Uma Hora</a>
   get_a_certificate_message_after: Clica no certificado para o descarregares ou imprimires.
-    Agora, continua com <a href='http://studio.code.org'>outros cursos</a> ou vê outras
-    opções para <a href='/learn/beyond'>aprenderes, além da Hora de Código</a>.
+    Podes continuar com <a href='http://studio.code.org'>outros cursos</a> ou podes
+    explorar outras opções para <a href='/learn/beyond'>aprenderes, além da Hora de
+    Código</a>.
   thanks_for_submitting: Obrigado por personalizares o teu certificado!
   if_you_enjoyed: Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos
     que o mundo todo aprenda.
@@ -136,7 +132,7 @@
   used_infrequent_updates: Será utilizado apenas para atualizações não regulares
   privacy_practices_children: Lê a política de segurança para saberes mais
   petition_thankyou: Obrigado por assinares a petição
-  continue_learning_header: Continue aprendendo além da Hora do Código
+  continue_learning_header: Vê o que podes fazer além da Hora de Código
   continue_learning_body: Existem muitas opções. Podes aprender online, numa escola
     local ou num acampamento de verão.
   learn_next_level: Experimentar outro curso do Code Studio
@@ -264,8 +260,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Saber mais
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20 000 professores formados para dar aulas de ciência
+    da computação na sala de aula.
   homepage_banner_20k_teachers_link: Saber mais
   homepage_slot_text_title_hoc: Hora de Código
   homepage_slot_text_blurb_hoc: |
@@ -277,7 +273,7 @@
   homepage_solot_text_link_volunteer: Seja voluntário na Hora do Código
   homepage_slot_text_title_students: Alunos
   homepage_slot_text_blurb_students: Explora todos os nossos tutoriais.
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explora os nossos cursos
   homepage_slot_text_link_codestudio: Experimenta o Code Studio
   homepage_slot_text_link_local: Encontra uma turma à tua volta
   homepage_slot_text_link_othercourses: Outros cursos online
@@ -287,7 +283,7 @@
   homepage_slot_text_link_fullcurriculum: Vê o nosso currículo completo
   homepage_slot_text_link_pd: Desenvolvimento profissional
   homepage_slot_text_title_advocates: Advogados
-  homepage_slot_text_blurb_advocates: Apoie nosso trabalho
+  homepage_slot_text_blurb_advocates: Apoia o nosso trabalho
   homepage_slot_text_link_stats: Vê as estatísticas
   homepage_slot_text_link_buy: Colaborar
   homepage_slot_text_link_donate: Faz uma doação
@@ -762,9 +758,9 @@
   hoc2014_try_frozen: O Artista com Anna e Elsa, do filme Frozen
   carousel_heading_codeorg: Tutorial por Code.org
   carousel_heading_codeorg_any_device: Tutorial por Code.org (para todos os dispositivos)
-  carousel_heading_3rd_party: Tutorials by 3rd parties
+  carousel_heading_3rd_party: Tutoriais de terceiros
   carousel_heading_third_party: Tutorials by third parties
-  carousel_heading_international: Tutoriais no seu idioma
+  carousel_heading_international: Tutoriais em português
   carousel_heading_domestic: Tutoriais disponíveis em inglês
   carousel_heading_beginners: Tutoriais para iniciantes
   carousel_heading_beyond_beginners: Tutoriais para iniciantes

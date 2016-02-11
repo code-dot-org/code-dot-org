@@ -1,11 +1,17 @@
 /* global define */
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
+'use strict';
 
-var xml = require('./xml');
 var savedAmd;
 
 // Do some hackery to make it so that lodash doesn't think it's being loaded
 // via require js
-if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
   savedAmd = define.amd;
   define.amd = false;
 }
@@ -15,7 +21,7 @@ var _ = require('./lodash');
 var Hammer = require('./hammer');
 
 // undo hackery
-if (typeof define == 'function' && savedAmd) {
+if (typeof define === 'function' && savedAmd) {
   define.amd = savedAmd;
   savedAmd = null;
 }
@@ -42,6 +48,13 @@ exports.shallowCopy = function(source) {
  */
 exports.cloneWithoutFunctions = function(object) {
   return JSON.parse(JSON.stringify(object));
+};
+
+/**
+ * Returns a string with a double quote before and after.
+ */
+exports.quote = function(str) {
+  return '"' + str + '"';
 };
 
 /**
@@ -188,19 +201,18 @@ if (!String.prototype.repeat) {
    * @returns {string}
    */
   String.prototype.repeat = function(count) {
-    'use strict';
     if (this === null) {
       throw new TypeError('can\'t convert ' + this + ' to object');
     }
     var str = '' + this;
     count = +count;
-    if (count != count) {
+    if (count !== count) {
       count = 0;
     }
     if (count < 0) {
       throw new RangeError('repeat count must be non-negative');
     }
-    if (count == Infinity) {
+    if (count === Infinity) {
       throw new RangeError('repeat count must be less than infinity');
     }
     count = Math.floor(count);
@@ -309,7 +321,7 @@ exports.browserSupportsCssMedia = function () {
     try {
       if (rules.length > 0) {
         // see if we can access media
-        var media = rules[0].media;
+        var media = rules[0].media; // jshint ignore:line
       }
     } catch (e) {
       return false;

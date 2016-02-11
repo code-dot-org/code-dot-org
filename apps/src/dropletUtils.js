@@ -130,6 +130,7 @@ standardConfig.blocks = [
   {func: 'callMyFunction', block: 'myFunction()', category: 'Functions' },
   {func: 'callMyFunction_n', block: 'myFunction(n)', category: 'Functions' },
   {func: 'return', block: 'return __;', category: 'Functions' },
+  {func: 'comment', block: '// Comment', category: 'Functions' }
 ];
 
 standardConfig.categories = {
@@ -277,14 +278,18 @@ exports.generateDropletPalette = function (codeFunctions, dropletConfig) {
     var block = funcInfo.block;
     var expansion = funcInfo.expansion;
     if (!block) {
-      var prefix = funcInfo.blockPrefix || funcInfo.func;
-      var paletteParams = funcInfo.paletteParams || funcInfo.params;
-      block = buildFunctionPrototype(prefix, paletteParams);
-      if (funcInfo.paletteParams) {
-        // If paletteParams were specified and used for the 'block', then use
-        // the regular params for the 'expansion' which appears when the block
-        // is dragged out of the palette:
-        expansion = buildFunctionPrototype(prefix, funcInfo.params);
+      if (funcInfo.type === 'property') {
+        block = funcInfo.func;
+      } else {
+        var prefix = funcInfo.blockPrefix || funcInfo.func;
+        var paletteParams = funcInfo.paletteParams || funcInfo.params;
+        block = buildFunctionPrototype(prefix, paletteParams);
+        if (funcInfo.paletteParams) {
+          // If paletteParams were specified and used for the 'block', then use
+          // the regular params for the 'expansion' which appears when the block
+          // is dragged out of the palette:
+          expansion = buildFunctionPrototype(prefix, funcInfo.params);
+        }
       }
     }
 
@@ -353,6 +358,21 @@ function populateCompleterApisFromConfigBlocks(opts, apis, configBlocks) {
   }
 }
 
+function populateCompleterFromPredefValues(apis, predefValues) {
+  if (predefValues) {
+    predefValues.forEach(function (val) {
+      // Use score value of 100 to ensure that our APIs are not replaced by
+      // other completers that are suggesting the same name
+      apis.push({
+        name: 'api',
+        value: val,
+        score: 100,
+        meta: 'constants'
+      });
+    });
+  }
+}
+
 /**
  * Generate an Ace editor completer for a set of APIs based on some level data.
  *
@@ -372,6 +392,7 @@ exports.generateAceApiCompleter = function (functionFilter, dropletConfig) {
     populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletGlobalConfigBlocks);
     populateCompleterApisFromConfigBlocks(opts, apis, exports.dropletBuiltinConfigBlocks);
     populateCompleterApisFromConfigBlocks(opts, apis, dropletConfig.blocks);
+    populateCompleterFromPredefValues(apis, dropletConfig.additionalPredefValues);
   }
 
   return {
@@ -404,6 +425,9 @@ function getModeOptionFunctionsFromConfig(config) {
     } else if (config.blocks[i].type === 'either') {
       newFunc.value = true;
       newFunc.command = true;
+    } else if (config.blocks[i].type === 'property') {
+      newFunc.property = true;
+      newFunc.value = true;
     }
 
     var category = mergedCategories[config.blocks[i].category];
@@ -461,7 +485,8 @@ exports.generateDropletModeOptions = function (config) {
  * Returns a set of all blocks
  * @param {DropletConfig|null} dropletConfig custom configuration, may be null
  * @param {codeFunctions|null} codeFunctions with block overrides, may be null
- * @param paletteOnly boolean: ignore blocks not in codeFunctions palette
+ * @param paletteOnly boolean: filter to only those blocks that are in codeFunctions
+ *   palette, or who share documentation (via docFunc) with other blocks that are
  * @returns {DropletBlock[]} a list of all available Droplet blocks,
  *      including the given config's blocks
  */

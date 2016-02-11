@@ -20459,6 +20459,11 @@ Blockly.FunctionEditor.prototype.create_ = function() {
       }
     }
   });
+  Blockly.bindEvent_(goog.dom.getDocument().body, "keyup", this, function(e) {
+    if(e.keyCode === goog.events.KeyCodes.ESC) {
+      this.onClose()
+    }
+  });
   Blockly.bindEvent_(goog.dom.getElement("modalEditorClose"), "mousedown", this, this.onClose);
   Blockly.bindEvent_(goog.dom.getElement("functionNameText"), "input", this, functionNameChange);
   Blockly.bindEvent_(goog.dom.getElement("functionNameText"), "keydown", this, functionNameChange);

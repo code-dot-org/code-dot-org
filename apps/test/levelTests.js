@@ -78,32 +78,6 @@ function loadSource(src) {
   return deferred;
 }
 
-/**
- * This is a hack that probably doesnt belong here long term.
- * With it, we mark every time we start a level test, and instrument our done
- * function so that we'll also note when we finish a level test. If we ever
- * start a test before finishing the last one properly, or finish a test other
- * than the one we last started, we'll throw
- * @returns {function} Newly instrumented done function
- */
-var lastTestStarted, lastTestFinished;
-function instrumentedDoneAtStart(doneFunc, description) {
-  if (lastTestStarted !== lastTestFinished) {
-    throw new Error('Starting new test before last one finished: ' + description);
-  }
-  lastTestStarted = description;
-
-  var done_orig = doneFunc;
-  return function () {
-    if (lastTestStarted !== description) {
-      throw new Error('Ending test that isnt the last one started: ' + description);
-    }
-    lastTestFinished = description;
-    done_orig();
-  };
-}
-
-
 describe('Level tests', function() {
   var studioApp;
   var originalRender;
@@ -229,8 +203,6 @@ function runTestCollection (item) {
       // in the future)
       if (testData.expected) {
         it(testData.description, function (done) {
-          done = instrumentedDoneAtStart(done, testData.description);
-
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);

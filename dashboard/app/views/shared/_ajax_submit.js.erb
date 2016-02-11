@@ -7,6 +7,7 @@ $(document).ready(function () {
   });
   $(form_selector).on('ajax:complete', function (e, data) {
     if (data.status == "200") {
+      localStorage.removeItem('markdown_' + window.location.pathname.split('/').reverse()[1]);
       window.location.href = JSON.parse(data.responseText).redirect
     }
   });

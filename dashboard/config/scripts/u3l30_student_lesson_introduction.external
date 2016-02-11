@@ -21,5 +21,11 @@ It is very common to want to store lists of information in our programs. This co
 * Access information in an array by its index.
 * Develop a simple application that uses an array.
 
+# Resources
+
+* Tutorial Video: Introduction to Lists
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/KFy7u3Rhozs?rel=0" frameborder="0" allowfullscreen></iframe>
+
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

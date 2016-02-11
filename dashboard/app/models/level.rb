@@ -186,6 +186,20 @@ class Level < ActiveRecord::Base
     end
   end
 
+  TYPES_WITHOUT_IDEAL_LEVEL_SOURCE =
+    ['Unplugged', # no solutions
+     'TextMatch', 'Multi', 'External', 'Match', 'ContractMatch', # dsl defined, covered in dsl
+     'Applab', 'Gamelab', # all applab and gamelab are freeplay
+     'NetSim', 'Odometer', 'Vigenere', 'FrequencyAnalysis', 'TextCompression', 'Pixelation'] # widgets
+  # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
+
+  def self.where_we_want_to_calculate_ideal_level_source
+    self.
+      where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+      where('ideal_level_source_id is null').
+      to_a.reject {|level| level.try(:free_play)}
+  end
+
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.

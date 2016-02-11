@@ -77,7 +77,14 @@ window.showVideoDialog = function(options, forceShowVideo) {
 
   var notesDiv = $('<div id="notes-outer"><div id="notes"/></div>');
   body.append(notesDiv);
-  getShowNotes(options.key, notesDiv.children('#notes'));
+
+  getShowNotes(options.key, function (data) {
+    notesDiv.children('#notes').html(data);
+  }, function () {
+    openVideoTab();
+    body.find('a[href="#notes-outer"]').parent().remove();
+    body.tabs("refresh");
+  });
 
   var dialog = new Dialog({ body: body, redirect : options.redirect });
   var $div = $(dialog.div);
@@ -273,14 +280,16 @@ function openNotesTab() {
   $('.ui-tabs').tabs('option', 'active', notesTabIndex);
 }
 
-function getShowNotes(key, container) {
-  var callback = function(data) {
-    container.html(data);
-  };
+function openVideoTab() {
+  var notesTabIndex = $('.dash_modal_body a[href="#video"]').parent().index();
+  $('.ui-tabs').tabs('option', 'active', notesTabIndex);
+}
 
+function getShowNotes(key, success, error) {
   $.ajax({
     url: '/notes/' + key,
-    success: callback
+    success: success,
+    error: error
   });
 }
 

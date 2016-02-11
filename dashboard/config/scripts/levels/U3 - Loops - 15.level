@@ -8,6 +8,7 @@
     "skin": "applab",
     "code_functions": {
       "write": null,
+      "ifBlock": null,
       "whileBlock": null,
       "equalityOperator": null,
       "inequalityOperator": null,
@@ -56,7 +57,8 @@
     "instructions": "Count the number of times the sum of the dice is 12. (Click to see full instructions)",
     "slider_speed": "1.0",
     "encrypted_examples": "cMRggYshTuMQmTYJpVVzci7Yio+y+OEhJbCvvgemsLYUams6ulBJKykyL8Om\nndP8\n"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

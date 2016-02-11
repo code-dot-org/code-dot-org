@@ -28,9 +28,8 @@
   twentyhours_heading: "Încearcă Cursul nostru de Introducere în Informatică"
   twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica
     de bază și conceptele programării în cadrul cursului următor.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Fiecare copil merită o portunitate
+  og_description: Fiecare student în fiecare școală merită o șansă de a studia informatica.
   hoc2014_heading: Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/>
     8-14 decembrie, 2014 <br/>
   hoc2014_students: Elevi
@@ -79,11 +78,6 @@
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare,
     <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o
     clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  course_name_accelerated: Curs intensiv
-  course_name_course1: Curs 1
-  course_name_course2: Cursul 2
-  course_name_course3: Cursul 3
-  course_name_course4: Curs 4
   congratulations_on_completing_course: Felicitări pentru finalizarea %{course}
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
   congrats_next_tutorials_desc: Încercați aceste tutoriale mai scurte, de 1 oră sau
@@ -255,8 +249,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Află mai mult
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20000 de profesori instruiţi, şi acum predau informatică
+    în sălile de clasă.
   homepage_banner_20k_teachers_link: Află mai mult
   homepage_slot_text_title_hoc: Oră de Programare
   homepage_slot_text_blurb_hoc: Oricine poate învăța. Începe astăzi
@@ -266,7 +260,7 @@
   homepage_solot_text_link_volunteer: Voluntariaza pentru Ora de Cod
   homepage_slot_text_title_students: Elevi
   homepage_slot_text_blurb_students: Explorează toate tutorialele noastre
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explorează cursurile noastre
   homepage_slot_text_link_codestudio: "Încearcă Studio-ul Code"
   homepage_slot_text_link_local: Găsește o clasă locală
   homepage_slot_text_link_othercourses: Alte cursuri online
@@ -382,7 +376,8 @@
     mai multe</a>despre cum poti organiza propriul eveniment Hour of Code si cum poti
     gasi o scoala locala la care sa fii voluntar<a href="%{volunteer_local}">pe harta
     noastra</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Vă rugăm să actualizați informațiile
+    dumneavoastră
   volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor
     pe harta voluntarilor
   volunteer_engineer_submission_field_name: Nume

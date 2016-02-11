@@ -1,10 +1,11 @@
 instrumentation:
   root: src/js
-  include-all-sources: true
+  # include-all-sources can't be true because mochify-istanbul defaults to false and doesn't respect this file.
+  include-all-sources: false
 check:
   global:
     # Required coverage, as a percentage.
-    statements: 0.9
-    branches: 0.9
-    functions: 1.1
-    lines: 0.9
+    statements: 90
+    branches: 80
+    functions: 60
+    lines: 80

@@ -1,16 +1,13 @@
 The following license applies to all source codes and assets, with the
 exception of Code.org's proprietary or licensed artwork, graphics, sounds,
 lectures, videos, logos, characters, and screenshots, or likenesses thereof
-("Proprietary Materials"), which are located in the following locations in
-this repository:
+("Proprietary Materials"). 
 
-  ./dashboard/app/assets/images
-  ./apps/static
-
-The Proprietary Materials may not be used or distributed or accessed in any
-manner other than directly via Code.org's own web site, mobile applications,
-or social media channels, as-is without modification or embedding in another
-format.
+The Proprietary Materials, a list of which [can be found here](NOTICE), may
+not be used or distributed or accessed in any manner other than directly via
+Code.org's own web site, mobile applications, or social media channels, or via
+local development environments as-is, without modification or embedding in 
+another format.
 
 
   ==========================================================================

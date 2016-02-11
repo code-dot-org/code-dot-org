@@ -22,7 +22,7 @@ max_age: 60
   -share_url = "http://#{request.host_with_port}/certificates/blank"
 
 -facebook = {:u=>share_url}
--twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'', :text=>I18n.t(:just_did_hoc)}
+-twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:just_did_hoc)}
 -twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
 -company_param = params[:co]

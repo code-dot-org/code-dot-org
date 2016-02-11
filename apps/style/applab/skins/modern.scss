@@ -32,6 +32,11 @@
     color: #fff;
     background: url("/blockly/media/applab/dropdown.png") no-repeat center right;
 
+    // IE9 cant get rid of the native dropdown, so dont show our custom image and
+    // get rid of our right padding so that the arrow is properly aligned
+    padding-right: 0\9;
+    background: transparent\9;
+
     &::-ms-expand {
       display: none;
     }
