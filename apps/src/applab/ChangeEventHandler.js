@@ -86,7 +86,7 @@ ChangeEventHandler.addChangeEventHandler = function(element, callback) {
   if (elementType === elementLibrary.ElementType.TEXT_INPUT) {
     element.addEventListener("keydown", function(event) {
       if (event.keyCode === KeyCodes.ENTER) {
-        this.onEnter();
+        this.onEnter(event);
       }
     }.bind(handler));
   }
