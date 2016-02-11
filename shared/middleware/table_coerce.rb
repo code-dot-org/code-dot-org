@@ -1,4 +1,12 @@
+# A set of methods for coercing data in our table to specific types. In general,
+# the goal when converting is to change values where we can, but leave alone
+# those where we don't know how to convert (i.e. I can't convert "123" to a
+# boolean.
+
 module TableCoerce
+  # Given a set of records, and a list of columns, attempt to convert each
+  # column to a particular type. If we can convert the entire column to
+  # number or boolean, we'll do that, otherwise we'll convert all values to strings.
   def TableCoerce.coerce(records, columns)
     # first do a pass to determine types. we can't do coercion right away since
     # we dont want to change anything if we cant coerce the entire column
@@ -22,9 +30,24 @@ module TableCoerce
     records
   end
 
+  def TableCoerce.column_types(records, columns)
+    # do an initial pass to determine column types
+    return columns.map do |col|
+      if records.empty?
+        :string
+      elsif !records.any? { |record| !TableCoerce.is_boolean?(record[col]) }
+        :boolean
+      elsif !records.any? { |record| !TableCoerce.is_number?(record[col]) }
+        :number
+      else
+        :string
+      end
+    end
+  end
+
   # Attempts to coerce a single column to the given type.
-  # @return {boolean} True if the entire column was converted entirely, false
-  #   if any item could not be.
+  # @return {[Array, boolean]} The new set of records, and a boolean indicating
+  #  whether we were able to convert every single row.
   def TableCoerce.coerce_column(records, column_name, type)
     all_converted = true
     records.map do |record|
@@ -43,22 +66,7 @@ module TableCoerce
       record[column_name] = val
       record
     end
-    all_converted
-  end
-
-  def TableCoerce.column_types(records, columns)
-    # do an initial pass to determine column types
-    return columns.map do |col|
-      if records.length == 0
-        :string
-      elsif !records.any? { |record| !TableCoerce.is_boolean?(record[col]) }
-        :boolean
-      elsif !records.any? { |record| !TableCoerce.is_number?(record[col]) }
-        :number
-      else
-        :string
-      end
-    end
+    [records, all_converted]
   end
 
   # @param val [String|Boolean|Number]
@@ -68,6 +76,7 @@ module TableCoerce
     return !/true/i.match(val).nil? || !/false/i.match(val).nil?
   end
 
+  # converts a value to a boolean, throwing if unable to do so
   def TableCoerce.to_boolean(val)
     return val if val == true || val == false
     raise 'Cannot coerce to boolean' unless val.is_a?(String)
@@ -84,6 +93,7 @@ module TableCoerce
     return !/\A[-+]?[0-9]*\.?[0-9]+\Z/.match(val).nil?
   end
 
+  # converts a value to a number, throwing if unable to do so
   def TableCoerce.to_number(val)
     return val if val.is_a?(Numeric)
     raise 'Cannot coerce to number' unless val.is_a?(String) && /\A[-+]?[0-9]*\.?[0-9]+\Z/.match(val)
