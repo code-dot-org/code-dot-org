@@ -11,8 +11,33 @@ var mazeUtils = require('@cdo/apps/maze/mazeUtils');
 
 var BeeCellEditor = require('./BeeCellEditor.jsx');
 var CellEditor = require('./CellEditor.jsx');
+var Grid = require('./Grid.jsx');
 
 window.dashboard = window.dashboard || {};
+
+var CellJSON = React.createClass({
+  propTypes: {
+    serialization: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)),
+    onChange: React.PropTypes.func.isRequired
+  },
+
+  componentDidUpdate: function () {
+    var node = this.refs.serializedInput.getDOMNode();
+    node.focus();
+    node.select();
+  },
+
+  onChange: function (event) {
+    this.props.onChange(JSON.parse(event.target.value));
+  },
+
+  render: function () {
+    return (<label>
+      Cell JSON (for copy/pasting):
+      <input type="text" value={JSON.stringify(this.props.serialization)} ref="serializedInput" onChange={this.onChange}/>
+    </label>);
+  }
+});
 
 window.dashboard.GridEditor = React.createClass({
   propTypes: {
@@ -24,62 +49,10 @@ window.dashboard.GridEditor = React.createClass({
   },
 
   getInitialState: function () {
-    return {};
-  },
-
-  clickCell: function (event) {
-    var selected = this.getDOMNode().querySelector('.selected');
-    if (selected) {
-      selected.classList.remove('selected');
-    }
-    event.target.classList.add('selected');
-    var row = parseInt(event.target.dataset.row);
-    var col = parseInt(event.target.dataset.col);
-    this.setState({
-      selectedRow: row,
-      selectedCol: col,
-    });
-  },
-
-  handleManualUpdate: function (event) {
-    var newCell = BeeCell.deserialize(JSON.parse(event.target.value));
-    this.onCellChange(newCell);
-  },
-
-  componentDidUpdate: function () {
-    var node = this.refs.serializedInput.getDOMNode();
-    node.focus();
-    node.select();
-  },
-
-  onCellChange: function (newCell) {
-    var row = this.state.selectedRow;
-    var col = this.state.selectedCol;
-    var cells = this.getDeserializedCells();
-    if (row !== undefined && col !== undefined) {
-      cells[row][col] = newCell;
-    }
-    var serializedData = cells.map(function (row) {
-      return row.map(function (cell) {
-        return cell.serialize();
-      });
-    });
-    this.props.onUpdate(serializedData);
-    this.setState({
-      serializedData: serializedData
-    });
-  },
-
-  getDeserializedCells: function () {
     var cells;
+    var cellClass = this.getCellClass();
 
-    var cellClass = mazeUtils.isBeeSkin(this.props.skin) ? BeeCell : Cell;
-
-    if (this.state.serializedData) {
-      cells = this.state.serializedData.map(function (row) {
-        return row.map(cellClass.deserialize);
-      });
-    } else if (this.props.serializedMaze) {
+    if (this.props.serializedMaze) {
       cells = this.props.serializedMaze.map(function (row) {
         return row.map(cellClass.deserialize);
       });
@@ -92,56 +65,47 @@ window.dashboard.GridEditor = React.createClass({
       }, this);
     }
 
-    return cells;
+    return {
+      cells: cells
+    };
+  },
+
+  getCellClass: function () {
+    return mazeUtils.isBeeSkin(this.props.skin) ? BeeCell : Cell;
+  },
+
+  changeSelection: function (row, col) {
+    this.setState({
+      selectedRow: row,
+      selectedCol: col
+    });
+  },
+
+  onCellChange: function (newSerializedCell) {
+    var row = this.state.selectedRow;
+    var col = this.state.selectedCol;
+
+    // this is technically a violation of React's "thou shalt not modify
+    // state" commandment.
+    // TODO figure out a clean way to do this purely with setState
+    var cells = this.state.cells;
+    var newCell = this.getCellClass().deserialize(newSerializedCell);
+    if (row !== undefined && col !== undefined) {
+      cells[row][col] = newCell;
+    }
+    var serializedData = cells.map(function (row) {
+      return row.map(function (cell) {
+        return cell.serialize();
+      });
+    });
+    this.props.onUpdate(serializedData);
+    this.setState({
+      cells: cells
+    });
   },
 
   render: function () {
-
-    var cells = this.getDeserializedCells();
-
-    var rows = cells.map(function (row, x) {
-      var cells = row.map(function (cell, y) {
-        var classNames = [];
-        var tdStyle = {};
-
-        var tiles = ['border', 'path', 'start', 'end', 'obstacle'];
-        classNames.push(tiles[cell.tileType_]);
-
-        if (mazeUtils.isBeeSkin(this.props.skin)) {
-          var conditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
-          var features = ['hive', 'flower'];
-          if (cell.isVariableCloud()) {
-            classNames.push('conditional');
-            classNames.push(conditions[cell.cloudType_]);
-          } else if (cell.featureType_ !== undefined) {
-            classNames.push(features[cell.featureType_]);
-          }
-        } else {
-          // farmer
-          if (cell.isDirt()) {
-            classNames.push('dirt');
-            var dirtValue = cell.getCurrentValue();
-            var dirtIndex = 10 + dirtValue + (dirtValue < 0 ? 1 : 0);
-            tdStyle.backgroundPosition = -dirtIndex * 50;
-          }
-        }
-
-        var text = '';
-        if (cell.originalValue_ !== undefined && cell.originalValue_ !== null) {
-          text = cell.originalValue_.toString();
-          if (cell.range_ && cell.range_ > cell.originalValue_) {
-            text += " - " + cell.range_.toString();
-          }
-        }
-
-        return (<td data-row={x} data-col={y} className={classNames.join(' ')} onClick={this.clickCell} style={tdStyle}>
-          {text}
-        </td>);
-      }, this);
-      return (<tr>
-        {cells}
-      </tr>);
-    }, this);
+    var cells = this.state.cells;
 
     var cellEditor;
     var selectedCellJson;
@@ -149,23 +113,14 @@ window.dashboard.GridEditor = React.createClass({
     var col = this.state.selectedCol;
     if (cells[row] && cells[row][col]) {
       var cell = cells[row][col];
-      cellEditor = mazeUtils.isBeeSkin(this.props.skin) ?
-          <BeeCellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} /> :
-          <CellEditor cell={cell} row={row} col={col} onUpdate={this.onCellChange} />;
-
-      selectedCellJson = (<label>
-        Cell JSON (for copy/pasting):
-        <input type="text" value={JSON.stringify(cell.serialize())} ref="serializedInput" onChange={this.handleManualUpdate}/>
-      </label>);
+      var EditorClass = mazeUtils.isBeeSkin(this.props.skin) ? BeeCellEditor : CellEditor;
+      cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.onCellChange} />;
+      selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.onCellChange} />;
     }
 
     return (<div className="row">
       <div className="span5">
-        <table>
-          <tbody>
-            {rows}
-          </tbody>
-        </table>
+        <Grid cells={cells} selectedRow={this.state.selectedRow} selectedCol={this.state.selectedCol} skin={this.props.skin} onSelectionChange={this.changeSelection}/>
         {selectedCellJson}
       </div>
       {cellEditor}
