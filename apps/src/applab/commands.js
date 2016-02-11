@@ -1539,16 +1539,16 @@ applabCommands.handleReadValue = function(opts, value) {
 
 applabCommands.getKeyValueSync = function(opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
-  var onSuccess = applabCommands.handleGetKeyValueSync.bind(this, opts);
-  var onError = applabCommands.handleGetKeyValueSyncError.bind(this, opts);
+  var onSuccess = handleGetKeyValueSync.bind(this, opts);
+  var onError = handleGetKeyValueSyncError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-applabCommands.handleGetKeyValueSync = function(opts, value) {
+var handleGetKeyValueSync = function(opts, value) {
   opts.callback(value);
 };
 
-applabCommands.handleGetKeyValueSyncError = function(opts, message) {
+var handleGetKeyValueSyncError = function(opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
   Applab.log(message);
@@ -1574,17 +1574,17 @@ applabCommands.handleSetKeyValue = function(opts) {
 applabCommands.setKeyValueSync = function(opts) {
   apiValidateType(opts, 'setKeyValueSync', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
-  var onSuccess = applabCommands.handleSetKeyValueSync.bind(this, opts);
-  var onError = applabCommands.handleSetKeyValueSyncError.bind(this, opts);
+  var onSuccess = handleSetKeyValueSync.bind(this, opts);
+  var onError = handleSetKeyValueSyncError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-applabCommands.handleSetKeyValueSync = function(opts) {
+var handleSetKeyValueSync = function(opts) {
   // Return 'true' to indicate the setKeyValueSync succeeded
   opts.callback(true);
 };
 
-applabCommands.handleSetKeyValueSyncError = function(opts, message) {
+var handleSetKeyValueSyncError = function(opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
   Applab.log(message);
