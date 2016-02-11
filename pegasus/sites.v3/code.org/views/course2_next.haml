@@ -1,54 +1,53 @@
-.thirdparty-block
-  %img.thirdparty-image{:src=>"/images/next/scratch.png"}
-  %div
-    With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community.  
-    %p
-    Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
-    %p
+.courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
+  %img.courseblock-span2.imgspan{src: "/images/next/scratch.jpg", style: "margin-right: 10px;"}
+  .courseblock-span4.heading
+    %h3 Scratch
+    %h4 
+      = I18n.t(:third_party_gradelevel_2to8)
+      %br
+      = I18n.t(:third_party_platform_web)
+      %br
+      = I18n.t(:third_party_price_free)
+    .smalltext= I18n.t(:third_party_scratch_desc)
     %br
-    Scratch is available on the web.
-    
-    %p{:style=>"padding-top:15px;"}
-      %a{:href=>"http://scratched.gse.harvard.edu/guide/files/CreativeComputing20141015.pdf"}
-        %button Download Scratch Curriculum
-    %p
-      %a{:href=>"http://scratched.gse.harvard.edu/discussions"}
-        %button Scratch Educator Forum
-    %p
-      %a{:href=>"https://scratch.mit.edu/"}
-        %button Visit Scratch
+    %a{:href=>"http://scratched.gse.harvard.edu/guide/files/CreativeComputing20141015.pdf"}
+      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_scratch_btn_curriculum)
+    %a{:href=>"http://scratched.gse.harvard.edu/discussions"}
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_scratch_btn_forum)
+    %a{:href=>"https://scratch.mit.edu/"}
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_scratch_btn_site)
 
-%br
-.thirdparty-block
-  %img.thirdparty-image{:src=>"/images/next/lightbot.png"}
-  %div
-    In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices.  
-    %p
-    Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written. 
-    %p
+.courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
+  %img.courseblock-span2.imgspan{src: "/images/lightbot.jpg", style: "margin-right: 10px;"}
+  .courseblock-span4.heading
+    %h3 Lightbot
+    %h4 
+      = I18n.t(:third_party_gradelevel_2to8)
+      %br
+      = I18n.t(:third_party_platform_all)
+      %br
+      = I18n.t(:third_party_price_299)
+    .smalltext= I18n.t(:third_party_lightbot_desc)
     %br
-    Lightbot is available on the web, iPad, and Android-based tablets. 
-    
-    %p{:style=>"padding-top:15px;"}
-      %a{:href=>"http://lightbot.com/Lightbot_BasicProgramming.pdf"}
-        %button Download Lightbot Curriculum
-    %p
-      %a{:href=>"http://lightbot.com/index.html"}
-        %button Visit Lightbot
+    %a{:href=>"http://lightbot.com/Lightbot_BasicProgramming.pdf"}
+      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_lightbot_btn_curriculum)
+    %a{:href=>"http://lightbot.com/index.html"}
+      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_lightbot_btn_site)
 
+.clear
 %br
 %table
   %thead
-    %th Organization
-    %th Curriculum
-    %th Pricing
+    %th= I18n.t(:third_party_organization)
+    %th= I18n.t(:third_party_curriculum)
+    %th= I18n.t(:third_party_pricing)
   %tr
     %td 
       %a{:href=>"http://www.cs-first.com/materials"} CS First
-    %td More than 40 lessons, geared toward grades 4-8
-    %td Free
+    %td= I18n.t(:third_party_desc_40_4to8)
+    %td= I18n.t(:third_party_cost_free)
   %tr
     %td 
       %a{:href=>"https://www.tynker.com"} Tynker
-    %td Dozens of lessons for all grades K-8
-    %td Free to try, $399/classroom
+    %td= I18n.t(:third_party_desc_dozens_kto8)
+    %td= I18n.t(:third_party_cost_free_399)
