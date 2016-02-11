@@ -133,40 +133,35 @@ module AWS
     end
 
     # Returns the distribution ID and fetched DistributionConfig object for a given hostname.
-    # Tries the cached id-to-hostname mappings first if available.
-    # Forces reload if cached-id config is not found.
-    # Ignore cache if force=true.
-    def self.get_distribution_config(cloudfront, hostname, force=false)
-      id = get_distribution_id(cloudfront, hostname, force)
+    # Uses cached mappings first if available.
+    def self.get_distribution_config(cloudfront, hostname)
+      id = get_distribution_id_with_retry(cloudfront, hostname)
       [id, id && cloudfront.get_distribution_config(id: id)]
-    rescue Aws::CloudFront::Errors::NoSuchDistribution => e
-      # Force-update distribution list if cached id is not found
-      raise e if force
-      get_distribution_config(cloudfront, hostname, true)
+    rescue Aws::CloudFront::Errors::NoSuchDistribution
+      # Cached id may be stale, try again with an uncached id.
+      id = get_distribution_id(false, cloudfront, hostname)
+      [id, id && cloudfront.get_distribution_config(id: id)]
+    end
+
+    # Calls get_distribution_id, retrying without cache if the result is nil.
+    def self.get_distribution_id_with_retry(*args)
+      get_distribution_id(true, *args) || get_distribution_id(false, *args)
     end
 
     # Returns the distribution ID for a given hostname.
-    # Uses the cached id-to-hostname mappings first if available.
-    # Forces reload if id is not found in cache.
-    # Ignore cache if force=true.
-    def self.get_distribution_id(cloudfront, hostname, force=false)
-      distributions = File.file?(alias_cache) && JSON.parse(IO.read(alias_cache)) rescue nil
-
-      if force || !distributions
-        distributions = cloudfront.list_distributions.distribution_list.items.map do |distribution|
-          [distribution.id, distribution.aliases.items]
-        end.to_h
-        IO.write(alias_cache, JSON.pretty_generate(distributions))
-      end
-
-      distribution = distributions && distributions.select { |_, v| v.include? hostname }.keys.first
-
-      if !force && !distribution
-        # Force-update distribution list if provided hostname not found
-        get_distribution_id(cloudfront, hostname, true)
-      else
-        distribution
-      end
+    # Uses cached id-to-hostname mappings if cached=true.
+    def self.get_distribution_id(cached, cloudfront, hostname)
+      mapping =
+        # Use cached value first if available.
+        cached && File.file?(alias_cache) && JSON.parse(IO.read(alias_cache)) ||
+        # Fallback to API call.
+        cloudfront.list_distributions.distribution_list.items.map do |dist|
+          [dist.id, dist.aliases.items]
+        end.to_h.tap do |out|
+          # Write result to cache.
+          IO.write(alias_cache, JSON.pretty_generate(out))
+        end
+      mapping.select{ |_, v| v.include? hostname }.keys.first
     end
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.
