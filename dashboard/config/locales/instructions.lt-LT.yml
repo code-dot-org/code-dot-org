@@ -158,7 +158,7 @@
       2-3 Artist Loops New 14_instruction: |
         Now let's draw the diamond 10 times
         but rotate 90 degrees between each diamond.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+      2-3 Artist Loops New 15_instruction: Nupiešk ką nors smagaus.
       2-3 Artist Loops New 2_instruction: |
         Here's some of the code you used to draw
         that square. What happens if you use the repeat block to run this code 4 times?
@@ -213,7 +213,7 @@
         a flower. Loop the diamond 12 times to draw your flower.
       2-3 Artist Nested Loops Free Play_instruction: Nupiešk ką nors įdomaus, naudodamas
         kartojimą kartojime.
-      2-3 Bee Conditionals 1_instruction: Labas! Aš esu bitė. Padėk man paimti nektarą
+      2-3 Bee Conditionals 1_instruction: Labas! Aš esu bitė. Padėk man surinkti nektarą
         iš gėlės.
       2-3 Bee Conditionals 10_instruction: "Purple flowers may have either 1 or 0\nnectar.
         Be careful not to collect nectar from a purple flower if it doesn't\nhave
@@ -229,7 +229,7 @@
       2-3 Bee Conditionals 14_instruction: |
         Collect nectar and make honey. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3 Bee Conditionals 15_instruction: Collect nectar from all four flowers.
+      2-3 Bee Conditionals 15_instruction: Surink nektarą iš visų keturių gėlių.
       2-3 Bee Conditionals 2_instruction: |
         Hi, I'm a bee! Help me collect all of
         the nectar from the flowers. Use a loop.
@@ -254,7 +254,7 @@
         This field has red and purple flowers.
         Red flowers have a known nectar amount, but purple flower nectar is unknown.
         Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
+      2-3 Bee Conditionals 9_instruction: Surink visą nektarą iš kiekvienos gėlės.
       2-3 Bee Conditionals Assessment 1_instruction: 'Iššūkis: surink visą nektarą.
         Atsargiai, neimk nektaro iš violetinių gėlių, jei nektaro jos neturi.'
       2-3 Bee Debugging 1_instruction: |
@@ -292,10 +292,8 @@
         Assessment:  These blocks are
         really bugging me. Fix the error(s) to collect all of the nectar and make
         all of the honey.
-      2-3 Bee Functions 1_instruction: |
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
+      2-3 Bee Functions 1_instruction: Funkcijos yra kodo blokeliai kurie vykdo užduotį.
+        Panaudok "paimk 2 nektarus" funkciją ir surink nektarą iš kiekvienos gėlės.
       2-3 Bee Functions 10_instruction: |
         Purple flowers may have either 1 or 0 nectar.  Create
         a function that collects nectar only from purple flowers that have nectar.
@@ -303,7 +301,7 @@
         Functions are blocks of code that perform
         a task. Use the "get 5" function to get 5 nectars at a time. Make sure to
         use a loop to get an ideal block count, too.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: Surink visą nektarą iš kiekvienos gėlės.
       2-3 Bee Functions 4_instruction: |
         The "move and get nectar" function turns
         the bee, collects nectar, and then returns the bee to where it started. Use
@@ -345,8 +343,8 @@
         from the flowers in this field.
       2-3 Bee Loops 13_instruction: 'Iššūkis: panaudok kartojimo blokelį ir surink
         visą nektarą.'
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? \n"
+      2-3 Bee Loops 1A_instruction: Labas, aš esu bitė. Ar padėsi man surinkti nektarą
+        iš šių gėlių?
       2-3 Bee Loops 2_instruction: |
         Use a loop to collect the nectar and make the
         honey.
@@ -433,31 +431,32 @@
       2-3 Maze 8_instruction: Nuvesk mane pas kiaulę!
       2-3 Maze 9_instruction: Nuvesk mane pas tą žalią daiktą! (Saugokis TNT)
       2-3 Maze Loops 1_instruction: Ar gali nuvesti mane pas kiaulę naudodamas 5 blokelius?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
+      2-3 Maze Loops 17_instruction: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops 18_instruction: "Get me to the sunflower!\r\n(Hint: You'll\nneed
         to use one \"repeat\" loop inside of another to pass this level.)"
-      2-3 Maze Loops 19_instruction: Get me to the sunflower!
-      2-3 Maze Loops 20_instruction: Get me to the sunflower!
-      2-3 Maze Loops 21_instruction: Get me to the sunflower!
+      2-3 Maze Loops 19_instruction: Nuvesk mane prie saulėgrąžų!
+      2-3 Maze Loops 20_instruction: Nuvesk mane prie saulėgrąžų!
+      2-3 Maze Loops 21_instruction: Nuvesk mane prie saulėgrąžų!
       2-3 Maze Loops Assessment 1_instruction: 'Iššūkis: nuvesk mane pas saulėgrąžą
         naudodamas tik 5 blokelius! '
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: Get me to the pig! What blocks got repeated?
-      2-3 Maze sq10v2_instruction: Get me to the pig! What blocks got repeated?
-      2-3 maze sq11_instruction: Get me to the pig! What blocks got repeated?
+      2-3 Maze sq10_instruction: Nuvesk mane pas kiaulę! Kokie blokeliai yra pasikartojantys?
+      2-3 Maze sq10v2_instruction: Nuvesk mane pas kiaulę! Kokie blokeliai yra pasikartojantys?
+      2-3 maze sq11_instruction: Nuvesk mane pas kiaulę! Kokie blokeliai yra pasikartojantys?
       2-3 maze sq12_instruction: |
         Can you replace the previous answer with a loop
         by using a "repeat times" block?
       2-3 maze sq13_instruction: |
         Dear person. Me zombie. Must... get... to sunflower.
         Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
+      2-3 maze sq14_instruction: Ar gali nuvesti prie saulėgrąžos naudpdamas tik 4
+        blokelius?
+      2-3 maze sq15_instruction: Ar gali nuvesti iki saulėgrąžos naudodamas tik 5
+        blokelius?
+      2-3 maze sq16_instruction: Puiku, šis bus panašus, tačiau šiek tiek kitoks.
+        Ar gali įveikti naudodamas tik 5 blokelius?
       2-3 Maze sq2_instruction: |
         Trace the path and lead me to the silly pig.  Avoid
         the TNT or the feathers will fly!
@@ -465,9 +464,8 @@
       2-3 Maze sq4_instruction: |
         Keep calm and help me find the bad pig. Otherwise
         I might get angry!
-      2-3 Maze sq5_instruction: |
-        Get me to the pig! How many times do you have to
-        repeat a block?
+      2-3 Maze sq5_instruction: Nuvesk mane pas kiaulę! Kiek kartų tau reikės pakartoti
+        veiksmą (bloką)?
       2-3 Maze sq6_instruction: |
         Can you replace the previous answer with only two
         blocks? (Hint: Create a loop using a "repeat times" block.)
@@ -781,7 +779,7 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: Ar gali nuvesti prie saulėgrąžos naudpdamas tik 4 blokelius?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |
         Ok, this is slightly different. Can you do it in
@@ -1982,7 +1980,7 @@
         Extreme Challenge: No rules. No clues. Just the
         challenge!
       Course 4 Maze 1_instruction: Get the angry bird to the pig!
-      Course 4 Maze 2_instruction: Avoid the TNT!
+      Course 4 Maze 2_instruction: Saugokis TNT!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: |
         Try the "repeat" block to use fewer blocks
@@ -2641,7 +2639,7 @@
         stalčių!
       K-1 Bee 1_instruction: Pajudink mane prie gėlės, paimk iš jos nektarą, o tada
         pajudink mane iki korio ir pagamink medų
-      K-1 Bee 10_instruction: Gauk keturis nektarus ir pagamink du korius medaus!
+      K-1 Bee 10_instruction: Surink keturis nektarus ir pagamink du korius medaus!
       K-1 Bee 11.5_instruction: Get four nectar to make four honey!
       K-1 Bee 11_instruction: Gauk tris nektarus ir pagamink vieną korį medaus
       K-1 Bee 12_instruction: Gauk tris nektarus ir pagamink du korius medaus!
@@ -2661,10 +2659,9 @@
       K-1 Bee 9_instruction: Gauk du nektarus ir pagamink du korius medaus!
       K-1 Bee Assessment 1_instruction: Gauk nektarą, kad pagaminčiau medų!
       K-1 Bee Assessment 2_instruction: Gauk nektarą, kad pagaminčiau medų!
-      K-1 Bee Loops 1_instruction: Gauk nektarą, kad pagaminčiau medų!
+      K-1 Bee Loops 1_instruction: Surink nektarą medaus gamybai!
       K-1 Bee Loops 10_instruction: Use loops to get the nectar, honey, and to move!
-      K-1 Bee Loops 11_instruction: 'Iššūkis: naudodamas kartojimo blokelį paimk nektarą
-        ir pagamink medų!'
+      K-1 Bee Loops 11_instruction: Surink visą nektarą ir medų!
       K-1 Bee Loops 12_instruction: 'Iššūkis: naudok kartojimo blokelius paimti nektarui,
         pagaminti medui ir judėjimui!'
       K-1 Bee Loops 2_instruction: Judėjimui panaudok kartojimo blokelį, o po to paimk
@@ -2681,10 +2678,10 @@
       K-1 Bee Loops 8_instruction: Use loops to get the nectar and honey!
       K-1 Bee Loops 9_instruction: Naudok kartojimą nektaro gavimui, medaus gamybai
         ir judėjimui!
-      K-1 Bee Loops Assessment 1_instruction: Gauk nektarą medaus gamybai ir naudok
-        kartojimą judėjimui!
-      K-1 Bee Loops Assessment 2_instruction: Gauk nektarą medui naudodamas kartojimo
-        blokelius!
+      K-1 Bee Loops Assessment 1_instruction: Surink nektarą medaus gamybai ir naudok
+        ciklus (kartojimus) judėjimui!
+      K-1 Bee Loops Assessment 2_instruction: Surink nektarą medui naudodamas ciklus
+        (kartojimo blokelius)!
       K-1 Bee Puzzle 12_instruction: Gauk tris nektarus ir pagamink du korius medaus
       K-1 Building a Foundation Assessment_instruction: |
         Build a three level pyramid,
@@ -3898,9 +3895,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

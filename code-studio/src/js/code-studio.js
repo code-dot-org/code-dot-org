@@ -18,7 +18,6 @@ window.React = require('react');
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
 require('./components/abuse_error.jsx');
-require('./components/abuse_exclamation.jsx');
 require('./components/dialog.jsx');
 require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
@@ -31,6 +30,10 @@ require('./components/progress/course_progress.jsx');
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 $.fn.modal.Constructor.prototype.enforceFocus = function () {};
+
+var jquery = require('jquery-shim');
+window.dashboard = window.dashboard || {};
+window.dashboard.clientState = require('./clientState.js')(window.sessionStorage, jquery);
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in new relic.

@@ -58,11 +58,6 @@ en-US:
   congratulations: crwdns3785:0crwdne3785:0
   congratulations_on_completing_hoc: crwdns25704:0crwdne25704:0
   congratulations_volunteer: crwdns51608:0crwdne51608:0
-  course_name_accelerated: crwdns50049:0crwdne50049:0
-  course_name_course1: crwdns50050:0crwdne50050:0
-  course_name_course2: crwdns50051:0crwdne50051:0
-  course_name_course3: crwdns50052:0crwdne50052:0
-  course_name_course4: crwdns50053:0crwdne50053:0
   congratulations_on_completing_course: 'crwdns48529:0%{course}crwdne48529:0'
   congrats_next_tutorials_title: crwdns48530:0crwdne48530:0
   congrats_next_tutorials_desc: 'crwdns48531:0%{current_path}crwdne48531:0'
@@ -113,9 +108,9 @@ en-US:
   learn_next_level: crwdns4684:0crwdne4684:0
   learn_online: crwdns4685:0crwdne4685:0
   learn_classes: crwdns3857:0crwdne3857:0
-  hoc_is_here: crwdns3941:0crwdne3941:0
+  hoc_is_here: crwdns55997:0crwdne55997:0
   just_did_hoc: crwdns3942:0crwdne3942:0
-  twitter_teach_cs: crwdns35452:0crwdne35452:0
+  twitter_teach_cs: crwdns55998:0crwdne55998:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -524,7 +519,7 @@ en-US:
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
-  dashboard_announce_message: crwdns55868:0crwdne55868:0
+  dashboard_announce_message: crwdns55999:0crwdne55999:0
   dashboard_announce_button_text: crwdns55869:0crwdne55869:0
   dashboard_announce_hoc: crwdns50094:0crwdne50094:0
   dashboard_announce_playlab: crwdns55290:0crwdne55290:0

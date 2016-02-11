@@ -398,15 +398,15 @@
       Kõik õigused kaitstud.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
       Entertainment Ltd. Kõik õigused kaitstud.<br />Plants vs. Zombies&#8482; &copy;
       %{current_year} Electronic Arts Inc. Kõik õigused kaitstud.<br />The Amazing
-      World of Gumball is trademark and &copy; 2015 Cartoon Network.
+      World of Gumball on kaubamärk ja &copy; 2015 Cartoon Network.
     art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Kõik õigused
-      kaitstud. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Kõik
+      kaitstud. Star Wars&#8482; &copy; %{current_year} Disney ja Lucasfilm. Kõik
       õigused kaitstud. Frozen&#8482; &copy; %{current_year} Disney. Kõik õigused
       kaitstud. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Kõik õigused
       kaitstud. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
       Ltd. Kõik õigused kaitstud. Plants vs. Zombies&#8482; &copy; %{current_year}
-      Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball is
-      trademark and &copy; 2015 Cartoon Network.
+      Electronic Arts Inc. Kõik õigused kaitstud. The Amazing World of Gumball on
+      kaubamärk ja &copy; 2015 Cartoon Network.
     powered_by_aws: Amazoni poolt toetatud
     trademark: "&copy;Code.org,%{current_year}. Code.org&reg;, CODE-i logo ja KoodiTund&reg;
       on Code.org kaubamärgid."

@@ -18,13 +18,13 @@ de:
           "Artist 1: Intro": 'Künstler 1: Einleitung'
           Artists 2: Künstler 2
           Spelling Bee: Buchstabierwettbewerb
-          Spelling Bee not blockly: Buchstabierwettbewerb nicht blockly
+          Spelling Bee not blockly: 'Buchstabierwettbewerb nicht "blockly"'
           "Bee 1: Intro": 'Biene 1: Einleitung'
           "Maze 2: Loops": 'Labyrinth 2: Schleifen'
           "Bee 2: Loops": 'Biene 2: Schleifen'
           Multi & Match: 'Multi & Zuordnen'
           K-1 Flappy: K-1 Flappy
-          Flappy non blockly: Flappy nicht blockly
+          Flappy non blockly: 'Flappy nicht "blockly"'
           title: Kurs 1
           Artist 2: Künstler 2
           Happy Maps: Glücklich Karten
@@ -57,7 +57,7 @@ de:
           title: Kurs 2
           Bee Loops: Biene Schleifen
           Artist Functions: Künstler Funktionen
-          The Artist Debugging: Der Künstler Debuggen
+          The Artist Debugging: Das Künstler-Debuggen
           Bee Debugging: Biene Debuggen
           Bee Functions: Biene Funktionen
           Maze Loops: Labyrinth Schleifen
@@ -79,27 +79,27 @@ de:
           "Artist: Debugging": 'Künstler: Debuggen'
           "Bee: Conditionals": 'Biene: Bedingungen'
           "Artist: Sequence2": 'Künstler: Sequenz 2'
-          "Maze: Sequence2": 'Labyrinth: Sequenz'
+          "Maze: Sequence2": 'Labyrinth: Sequenz 2'
           "Artist: Nested Loops": 'Künstler: Verschachtelte Schleifen'
           description_audience: Ab 6 Jahre (Lesen erforderlich)
           description_short: Kurs 2 richtet sich an Schüler, die lesen können.
         course3:
           The Maze: Das Labyrinth
-          "Studio: Create a Story": 'Play Lab: Erstelle eine Story'
+          "Studio: Create a Story": 'Spielelabor: Erstelle eine Geschichte'
           The Artist: Der Künstler
           title: Kurs 3
           Artist Functions: Künstler Funktionen
           Artist For Loops: Künstler Für-Schleifen
-          Artist Nested Loops: Künstler Verschachtelte Schleifen
+          Artist Nested Loops: Künstler verschachtelte Schleifen
           Bee Conditionals: Biene Bedingungen
-          Bee Nested Loops: Biene Verschachtelte Schleifen
+          Bee Nested Loops: Biene verschachtelte Schleifen
           Bee Debuggin: Biene Debuggen
           Bee Debugging: Biene Debuggen
           Bee Functions: Biene Funktionen
-          Artist Functions with Params: Künstler-Funktionen mit Parametern
+          Artist Functions with Params: Künstler Funktionen mit Parametern
           Bounce: Bounce
-          Maze Conditionals: 'Labyrinth: Bedingungen'
-          Artist Functions with Parameters: 'Künstler: Funktionen mit Parametern'
+          Maze Conditionals: Labyrinth Bedingungen
+          Artist Functions with Parameters: Künstler Funktionen mit Parametern
           Computational Thinking: Computerorientiertes Denken
           Functional Suncatchers: Funktionale Sonnenfänger
           Songwriting Parameters: Songschreibeparameter
@@ -107,7 +107,7 @@ de:
           Internet: Internet
           Crowdsourcing: Crowdsourcing
           Digital Citizenship: Digitalen Staatsbürgerschaft
-          Farmer - While Loops: 'Bauer - Solange Wiederholungen'
+          Farmer - While Loops: 'Bauer - Solange Schleifen'
           description: Kurs 3 wendet sich an Schüler, die Kurs 2 absolviert haben. Der Stoff des vorangegangenen Kurses wird mit Blick auf flexible Lösungen und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen können. Empfohlen für Klasse 4-5.
           "Studio: Create a Game": 'Spielelabor: Erstelle ein Spiel'
           Maze: Labyrinth
@@ -222,7 +222,7 @@ de:
           Special: Besonderes
           Binary: Binärdatei
         algebra:
-          title: Computertechnologie in Algebra
+          title: Informatik in Algebra
           description: Lerne funktionales Programmieren mithilfe von Algebra
           description_short: Lerne funktionales Programmieren mithilfe von Algebra
           "Unplugged: Video Games and Coordinate Planes": 'Ohne Stecker: Video-Spiele und Koordinatensysteme'
@@ -371,8 +371,8 @@ de:
           Flappy Code: Flappy Code
         jigsaw:
           title: Puzzle
-          description: Versuche unsere Puzzle Anleitung
-          description_short: Versuche unsere Puzzle Anleitung
+          description: Versuche unsere Puzzle-Anleitung
+          description_short: Versuche unsere Puzzle-Anleitung
           Jigsaw: Puzzle
         step:
           title: Schritt
@@ -483,13 +483,13 @@ de:
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           "Eval: Functions": 'Eval: Functions'
           "Play Lab: Animation (Big Game)": 'Spielelabor: Animation (Großes Spiel)'
-          "Unplugged: Booleans": 'Ohne Stecker: Boolesche Logik'
+          "Unplugged: Booleans": 'Offline: Boolesche Logik'
           "Eval: Boolean Operators": 'Eval: Boolean Operators'
-          "Play Lab: Booleans": 'Spielelabor: Booleans'
+          "Play Lab: Booleans": 'Spielelabor: Boolesche Werte'
           "Play Lab: Boolean (Big Game)": 'Spielelabor: Boolean (Großes Spiel)'
           "Unplugged: Conditionals and Piecewise Functions": 'Unplugged: Conditionals and Piecewise Functions'
           "Eval: Conditionals": 'Eval: Conditionals'
-          "Unplugged: Collision Detection and the Distance Formula": 'Ohne Stecker: Kollisionserkennung und Abstandsformeln'
+          "Unplugged: Collision Detection and the Distance Formula": 'Offline: Kollisionserkennung und Abstandsformeln'
           "Play Lab: Collision Detection (Big Game)": 'Play Lab: Collision Detection (Big Game)'
           Evaluation Blocks: Evaluation Blocks
           Strings and Images: Text und Bilder
@@ -498,7 +498,7 @@ de:
           Simple Function Definition: Simple Function Definition
           The Design Recipe: Das Design-Rezept
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Boolesche Variable
+          Booleans: Boolesche Werte
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Conditionals and Piecewise Functions: Conditionals and Piecewise Functions
@@ -519,7 +519,7 @@ de:
           Rocket-Height: Rocket-Height
           Design Recipe Practice: Design Recipe Practice
           Your Game - Animation: 'Your Game - Animation'
-          Booleans: Boolesche Variable
+          Booleans: Boolesche Werte
           Sam the Bat: Sam the Bat
           Your Game - Booleans: 'Your Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
@@ -889,7 +889,7 @@ de:
           "Play Lab: Defining Functions": 'Play Lab: Defining Functions'
           The Design Recipe: Das Design-Rezept
           Big Game - Animation: 'Big Game - Animation'
-          Booleans: Boolesche Variable
+          Booleans: Boolesche Werte
           Sam the Bat: Sam the Bat
           Big Game - Booleans: 'Big Game - Booleans'
           Luigi's Pizza: "Luigi's Pizza"
@@ -926,6 +926,7 @@ de:
           Pixelation: Pixelation
           Multi2: Multi2
           Markdown Details: Markdown Details
+          Studio: Studio
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -939,7 +940,7 @@ de:
           Defining Variables: Variablen definieren
           Defining Functions: Funktionen definieren
           Rocket-Height: Rocket-Height
-          Booleans: Boolesche Variable
+          Booleans: Boolesche Werte
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
@@ -1045,7 +1046,7 @@ de:
           Defining Variables: Variablen definieren
           Defining Functions: Funktionen definieren
           Rocket-Height: Rocket-Height
-          Booleans: Boolesche Variable
+          Booleans: Boolesche Werte
           "Eval: Conditionals": 'Eval: Conditionals'
           Next Steps: Next Steps
           Best Practices for Teaching Computer Science: Best Practices for Teaching Computer Science
@@ -1308,6 +1309,7 @@ de:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1368,10 +1370,14 @@ de:
           Cleaning Data: Cleaning Data
           Designing Data Collection: Designing Data Collection
           Designing for Your User: Designing for Your User
-          "Practice Create PT: Data App": 'Practice Create PT: Data App'
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
           Finding Trends with Visualizations: Finding Trends with Visualizations
           Check Your Assumptions: Check Your Assumptions
+          "Practice Create PT: Data App": 'Practice Create PT: Data App'
+          Making Data Visualizations: Making Data Visualizations
+          Creating Summary Tables: Creating Summary Tables
+          Discover a Data Story: Discover a Data Story
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
           title: Computer Science in Science PD Phase 3b
           description_short: Phase 3 Academic Year Development
@@ -1518,3 +1524,41 @@ de:
           Wrap-Up: Abschluss
           Assessing Computer Models: Assessing Computer Models
           (optional) Refresh your connection to Complex Adaptive Systems: (optional) Refresh your connection to Complex Adaptive Systems
+        cspunit5:
+          title: 'CSP Unit 5 - Performance Tasks'
+          description_short: Performance Tasks
+          description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
+          Explore PT Prep: Explore PT Prep
+          Explore PT: Explore PT
+          Create PT Prep: Create PT Prep
+          Create PT: Create PT
+        cspunit4:
+          title: 'CSP Unit 4 - Data'
+          description_short: Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
+          Finding Trends with Visualizations: Finding Trends with Visualizations
+          Check Your Assumptions: Check Your Assumptions
+          Good and Bad Data Visualizations: Good and Bad Data Visualizations
+          Making Data Visualizations: Making Data Visualizations
+          Discover a Data Story: Discover a Data Story
+          Cleaning Data: Cleaning Data
+          Creating Summary Tables: Creating Summary Tables
+          Practice PT - Tell a Data Story: 'Practice PT - Tell a Data Story'
+          What is Big Data?: What is Big Data?
+          Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
+          Identifying People with Data: Identifying People with Data
+          Privacy Abandoned: Privacy Abandoned
+          Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit

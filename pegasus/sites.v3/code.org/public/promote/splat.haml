@@ -15,8 +15,8 @@ social:
   var promoteIncluded = false;
 
 -state = File.basename(request.path_info)
--facebook = {:u=>'http://code.org/promote' + (state != "thanks" ? "/" + state : "")}
--twitter = {:url=>"http://#{request.site}/promote" + (state != "thanks" ? "/" + state : ""), :related=>'codeorg', :hashtags=>'CODE', :text=>'What’s wrong with this picture? To fix this, sign the petition.'}
+-facebook = {:u=>'https://code.org/promote' + (state != "thanks" ? "/" + state : "")}
+-twitter = {:url=>"https://code.org", :related=>'codeorg', :hashtags=>'CSforAll', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 

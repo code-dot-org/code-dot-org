@@ -78,11 +78,6 @@
   congratulations_volunteer: 'Zorionak: Kode Ordua probatu duzunez, orain <a href="https://code.org/volunteer">laguntzaile
     izan zaitezke eskola batean</a> eta lagundu ikasle gazteei programazioa ikasten
     Kode Orduan!'
-  course_name_accelerated: Ikastaro Azeleratua
-  course_name_course1: 1. Kurtsoa
-  course_name_course2: 2. Kurtsoa
-  course_name_course3: 3. Kurtsoa
-  course_name_course4: 4. Kurtsoa
   congratulations_on_completing_course: Zorionak %{course} betetzeagatik
   congrats_next_tutorials_title: Jarraian saiatu gida-liburu hauekin
   congrats_next_tutorials_desc: Saiatu ordu bateko tutorial laburrago hauekin edo
@@ -247,8 +242,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Ikasi gehiago
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20.000 irakasle trebatu eskoletan informatika irakasten
+    ari dira.
   homepage_banner_20k_teachers_link: Ikasi gehiago
   homepage_slot_text_title_hoc: Kode Ordua
   homepage_slot_text_blurb_hoc: Edonork ikasi dezake. Gaurtik hasi
@@ -258,7 +253,7 @@
   homepage_solot_text_link_volunteer: Kode Ordurako boluntarioa
   homepage_slot_text_title_students: Ikasle
   homepage_slot_text_blurb_students: Aztertu gure gida-liburu guztiak
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Arakatu gure ikastaroak
   homepage_slot_text_link_codestudio: Saiatu Code Studio-rekin
   homepage_slot_text_link_local: Gertuko ikasgela bat topatu
   homepage_slot_text_link_othercourses: Beste ikastaroak online

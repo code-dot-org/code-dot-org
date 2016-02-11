@@ -31,7 +31,7 @@
       2-3 Artist 6_instruction: |
         This house needs a roof! Draw the triangle.  Hint:
         all three sides are the same length.
-      2-3 Artist 7_instruction: "Finish drawing the right half of the last window.\nEach
+      2-3 Artist 7_instruction: "Finish drawing the right side of the last window.\nEach
         square window pane is 25 pixels wide. \n"
       2-3 Artist 8_instruction: |
         Complete the rooms for each of the animals by splitting
@@ -55,8 +55,8 @@
         this scene.  Can you help me?
       2-3 Artist Debugging 2_instruction: |
         The code for the three whiskers that you
-        see is wrong. Hint: each whisker is 75 pixels long. Fix this code to draw
-        the whiskers.
+        see is wrong. Hint: each whisker should be 75 pixels long. Fix this code to
+        draw the whiskers.
       2-3 Artist Debugging 3_instruction: |
         My boat has a hole! Can you fix it by
         changing the angle of the line? Hint: the last angle is off by 15 degrees.
@@ -504,8 +504,9 @@
       4-5 Artist 2_instruction: Can you loop this code to complete the square?
       4-5 Artist 3.5_instruction: |
         Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+        this code (or press "Run" to try it). Then, repeat the code enough times
+        to complete the drawing. The colors will (most likely) be different every
+        time.
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
@@ -2535,7 +2536,7 @@
         time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: "آئیں اب 20 اوورلیپنگ سرکلز بنائیں،
-        ہر ایک سرکل کے درمیان 18 ڈگریز پر ٹرننگ دیں۔"
+        ہر ایک سرکل کے درمیان 18 ڈگریز پر موڑیں۔"
       frozen circle function with parameter_instruction: یہاں ایک "کری-ایٹ سرکل" بلاک
         ہے جس سے مختلف سائزوں کے سرکلز بنائے جاسکتے ہیں۔ کیا آپ اسے استعمال کرتے ہوئے
         سائز 5 کا ایک چھوٹا اور سائز 10 کا ایک بڑا سرکل بنا سکتے ہیں؟
@@ -3984,9 +3985,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

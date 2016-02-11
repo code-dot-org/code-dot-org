@@ -657,12 +657,12 @@
       4-5 Maze 2 (copy 1)_instruction: Lleva al zombie hasta el girasol, pero evade
         al ¡chomper!
       4-5 Maze 2_instruction: Lleva al zombie hasta el girasol, pero evade al ¡chomper!
-      4-5 Maze 3 (copy 1)_instruction: Debe...llegar... al girasol.
-      4-5 Maze 3_instruction: Debe...llegar... al girasol.
-      4-5 Maze 4 (copy 1)_instruction: Intenta usar el bloque "repeat" para utilizar
-        menos bloques.
-      4-5 Maze 4_instruction: Intenta usar el bloque "repeat" para utilizar menos
-        bloques.
+      4-5 Maze 3 (copy 1)_instruction: Debe... llegar... al girasol.
+      4-5 Maze 3_instruction: Debe... llegar... al girasol.
+      4-5 Maze 4 (copy 1)_instruction: Intenta usar el bloque "repetir" para utilizar
+        menos bloques...
+      4-5 Maze 4_instruction: Intenta usar el bloque "repetir" para utilizar menos
+        bloques...
       4-5 Maze 5 (copy 1)_instruction: "¿Puedes resolver este rompecabezas utilizando
         el menor número de bloque posibles?"
       4-5 Maze 5_instruction: "¿Puedes resolver este rompecabezas utilizando el menor
@@ -672,11 +672,10 @@
       4-5 Maze 6_instruction: "¿Puedes resolver este rompecabezas utilizando el menor
         número de bloque posibles?"
       4-5 Maze 7_instruction: Estimada persona. Yo zombie. Debe...llegar...al girasol.
-      4-5 Maze 8_instruction: Utiliza el bloque "repeat" para llevar al zombie hasta
-        el girasol. (¡Evadiendo a los chompers!)
+      4-5 Maze 8_instruction: Utilice el bloque "repetir" para obtener al zombie para
+        el girasol. (Evite a los chompers!)
       4-5 Maze 9_instruction: Crear un lazo en el bloque "repetir hasta".
-      4-5 Maze Assessment 1_instruction: |
-        Evaluzción: LLega hasta el girasol.
+      4-5 Maze Assessment 1_instruction: 'Evaluzción: Llega hasta el girasol.'
       4-5 Maze Conditionals 1_instruction: Utiliza el bloque repetir para llevar al
         zombie hasta el girasol.
       4-5 Maze Conditionals 10_instruction: "¿Puedes agregar sólo tres bloques para
@@ -3577,9 +3576,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

@@ -288,7 +288,7 @@ fa:
         text: 'بخش سفید در قسمت راست فضای کار نامیده میشه، که جایی هست که ما برنامه مون رو می سازیم. برای حرکت دادن سطح یخ، شما باید از بلوک "به سمت جلو حرکت کن" استفاده کنید.'
       8:
         image: notes/frozen1_8.jpg
-        text: 'Here, the "Move Forward" block says, "move forward by 100 pixels." When we press "Run", what happens? Elsa moves forward a certain amount on the screen, 100 pixels in fact! Pixels are basically very tiny squares on your computer screen.'
+        text: 'در اینجا، "حرکت به جلو" یعنی 100 پیکسل به جلو حرکت کن. وقتی دکمه "اجرا" فشار داده میشود، چه اتفاقی رخ خواهد داد؟ السا مقدار مشخصی رو به جلو خواهد رفت که در واقع 100 پیکسل است. پیکسل ها اساسا مربعهای بسیار کوچک در صفحه نمایش کامپیوتر شما هستند.'
       9:
         image: notes/frozen1_9.jpg
         text: 'The other block we have in this puzzle says "turn right by 90 degrees." And when we use this "Turn Right" block, that makes Elsa turn a certain amount. You can play around with how far you want Elsa to turn. The angle is measured from the path ahead of Elsa. So, this is a 90 degree turn. And this is a 120 degree turn.'

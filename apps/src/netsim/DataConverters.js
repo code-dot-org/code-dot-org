@@ -4,22 +4,14 @@
  *           hex, decimal, ASCII.  "A and B" is a special encoding that is
  *           just binary with "A" sub'd for 0 and "B" sub'd for 1.
  */
+// Strict linting: Absorb into global config when possible
 /* jshint
- funcscope: true,
- newcap: true,
- nonew: true,
- shadow: false,
  unused: true,
  eqeqeq: true,
-
- maxlen: 90,
- maxparams: 3,
- maxstatements: 200
+ maxlen: 120
  */
 'use strict';
-/* global window */
-/* global require */
-/* global exports */
+/* global window, require, exports */
 
 var utils = require('../utils'); // For String.prototype.repeat polyfill
 var NetSimUtils = require('./NetSimUtils');

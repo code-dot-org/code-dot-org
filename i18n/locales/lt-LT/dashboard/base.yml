@@ -259,7 +259,7 @@ lt:
       remove: Ar tikrai nori pašalinti šį mokytoją?
     students:
       dashboard: Eiti į mokytojo puslapį
-    user_not_found: Mokytojas gali būti nerastas.
+    user_not_found: Mokytojas nerastas.
     student_teacher_disassociated: 'Jūs pašalinote %{teacher_name} kaip savo mokytoją.'
     panel:
       answer_viewer: Atsakymų apžvalga
@@ -320,7 +320,7 @@ lt:
     try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
     use_as_teacher: Naudokite šią svetainę kaip mokytojas
     heading_hoc2014: '<h2>Programavimo valanda</h2><h1>Visoms amžiaus grupėms</h1>'
-    heading_elementary: '<h2>20 valandų kursas</h2><h1>Pradedantiesiems (visoms amžiaus grupėms)</h1>'
+    heading_elementary: '<h2>20 valandų kursas</h2><h1>Kompiuterių mokslo pradmenys (visoms amžiaus grupėms)</h1>'
     heading_apps: '<h2>Smagumynai</h2><h1>visiems</h1>'
     heading_legacy: '<h2>Mūsų bendri kursai</h2><h1>visoms amžių grupėms</h1>'
     your_gallery: Galerija

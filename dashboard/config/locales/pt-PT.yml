@@ -29,8 +29,8 @@
     code:
       label: 'Adiciona um professor:'
       placeholder: Código (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Por favor, digita o código partilhado entre ti e o teu professor.
+        O código tem 6 letras como, por exemplo, "ABCDEF".
     submit: Adicionar professor
   add_hint_form:
     placeholder: Por favor, digite a sua pista aqui
@@ -260,7 +260,7 @@
     confirm: Tens a certeza?
     created: "% {modelo} foi criado com êxito."
     updated: "% {modelo} foi actualizado com sucesso."
-    destroyed: "%{model} foi eliminado com êxito."
+    destroyed: "%{model} foi apagado com sucesso."
     access_denied: Você não tem acesso a este %{model}.
   nav:
     header:
@@ -304,7 +304,7 @@
       remove: Tens a certeza de que pretendes remover este professor?
     students:
       dashboard: Vá para o painel de controle do professor
-    user_not_found: Não é possível localizar o professor ou aluno
+    user_not_found: O professor não foi encontrado.
     student_teacher_disassociated: "%{teacher_name} foi removido como professor de
       %{student_name}"
     panel:
@@ -404,8 +404,8 @@
       <a href="https://code.org/about/partners">parceiros</a>, à <a href="https://code.org/about/team">nossa
       equipa</a>, aos produtores dos vídeos e aos <a href="https://code.org/about/advisors">professores</a>
       pelo apoio na criação do Code Studio.
-    help_from_html: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
-      a criar este tutorial.
+    help_from_html: Agradecemos aos engenheiros da Google, da Microsoft, do Facebook
+      e do Twitter que nos ajudaram a criar estes materiais.
     help_from_html_old: Engenheiros da Google, Microsoft, Facebook e Twitter ajudaram
       a criar estes materiais.
     art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
@@ -424,7 +424,7 @@
     support: Suporte
     support_url: http://support.code.org
     tos_short: Termos
-    tos: Termos
+    tos: Termos de utilização
     privacy: Política de privacidade
     secure: Versão segura
     report_abuse: Denunciar abuso
@@ -688,7 +688,7 @@
       projeto deixarão de poder vê-lo.
     view_all: Ver os meus projetos
     remix: Criar variação
-    click_to_remix: Clica em “Criar variação” para criares a tua própria versão!
+    click_to_remix: Clica em "Criar variação" para criares a tua própria versão!
     edit_project: Editar Projeto
     abuse:
       tos: Este projeto foi reportado por violar os <a href='http://code.org/tos'>Termos
@@ -715,7 +715,8 @@
           offensive: Conteúdo ofensivo
           infringement: Violação de direitos de autor
           other: Outros
-        detail: Por favor forneça todos os detalhes sobre o conteúdo que está a reportar.
+        detail: Por favor, dá-nos o máximo possível de detalhes relacionados com o
+          conteúdo que estás a denunciar.
         acknowledge: Ao submeter esta informação, aceita que esta será tratada de
           acordo com os termos da nossa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilização%{link_end}

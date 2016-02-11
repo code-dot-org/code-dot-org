@@ -74,11 +74,6 @@
   congratulations_on_completing_hoc: Palju õnne, oled lõpetanud KoodiTunni
   congratulations_volunteer: Palju õnne! Nüüd, kus oled proovinud KoodiTundi, <a href="https://code.org/volunteer">liitu,
     et osaleda vabatahtlikuna klassiruumis</a> ja aidata õpilasi KoodiTunni õppimisel!
-  course_name_accelerated: Kiirendatud kursus
-  course_name_course1: Kursus 1
-  course_name_course2: Kursus 2
-  course_name_course3: Kursus 3
-  course_name_course4: Kursus 4
   congratulations_on_completing_course: "Õnnitleme %{course} läbimise puhul"
   congrats_next_tutorials_title: Proovi järgnevaid õpetusi
   congrats_next_tutorials_desc: Proovi neid lühemaid 1 tunni õpetusi, või proovi <a
@@ -322,7 +317,7 @@
   starwars_blocks_title: Plokid
   starwars_blocks_description: Kasuta "sikuta ja lase lahti" plokke.
   starwars_blocks_specs: Palju keeli | Kaasaegsed brauserid, nutitelefonid, tahvlid
-    | Vanuses 6-10
+    | Vanuses 6-106
   starwars_blocks_start_button: Proovi nüüd
   starwars_watch_videos: Enne alustamist vaata ühte nendest inspireerivatest videotest.
   starwars_speak_languages: Kas räägid mõnda muud keelt?

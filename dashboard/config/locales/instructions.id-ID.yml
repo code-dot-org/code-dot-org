@@ -469,28 +469,24 @@
       4-5 Artist For Loops 12_instruction: 'Apa yang terjadi jika Kamu membalik angka
         "from" dan "to"? Selesaikan blok "for" sehingga beruntun 200, 180, 160, 140,
         120... 0. '
-      4-5 Artist For Loops 13_instruction: |
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 3_instruction: |
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+      4-5 Artist For Loops 13_instruction: 'Desain ini dimulai tanpa "untuk" putaran
+        dan menggunakan terlalu banyak blok!  Gunakan "untuk" blok menyelesaikan spiral.  Petunjuk:
+        panjang baris terakhir adalah 250 piksel.'
+      4-5 Artist For Loops 14_instruction: 'Seseorang memulai kode, namun kemudian
+        mesti ingat bahwa harus ada cara yang lebih cepat! Gunakan "untuk" blok agar
+        mengganti blok-blok lainnya dan menyelesaikan spiral segitiga. (Petunjuk:
+        panjang baris terakhir adalah 300-an pixels.)'
+      4-5 Artist For Loops 15_instruction: 'Seseorang memulai kode, namun kemudian
+        mesti ingat bahwa harus ada cara yang lebih cepat! Gunakan "untuk" blok agar
+        mengganti blok-blok lainnya dan menyelesaikan spiral bersegi enam. (Petunjuk:
+        panjang baris terakhir adalah 200-an pixels.)'
+      4-5 Artist For Loops 3_instruction: Bagaimanakah kita dapat menghitung dari
+        1 sampai 50? Suntinglah blok "untuk".
+      4-5 Artist For Loops 4_instruction: Lengkapilah blok "untuk" hingga dapat menghitung
+        dari 1 sampai 10 oleh 1.
+      4-5 Artist For Loops 6_instruction: Gambarlah kotak dengan sisi 50, 60, 70,
+        80, dan 90 pixel.  Anda akan perlu menggunakan fungsi "gambar persegi" sebanyak
+        lima kali.
       4-5 Artist For Loops 7_instruction: |
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
@@ -3897,9 +3893,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

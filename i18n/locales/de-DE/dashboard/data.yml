@@ -421,7 +421,7 @@ de:
         C3_artist_functions: Künstler Funktionen
         C3_bee_functions: Biene Funktionen
         C3_bee_conditionals: Biene Bedingungen
-        C3_maze_conditionals: 'Labyrinth: Bedingungen'
+        C3_maze_conditionals: Labyrinth Bedingungen
         C3_artist_nested_loops: Verschachtelte Schleifen
         C3_farmer_while: While-Schleifen
         C3_bee_nested_loops: Verschachtelte Schleifen
@@ -463,6 +463,12 @@ de:
         infinity_playlab_intro: 'Play Lab - Einführung'
         infinity_playlab_events: 'Play Lab - Ereignisse'
         infinity_playlab_repeat_forever: 'Play Lab - Wiederhole ohne Ende'
+        csp_applab_databases_1: 'Introduction to Databases - Part 1'
+        csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_lists_1: 'Introduction to Lists - Part 1'
+        csp_applab_lists_2: 'Introduction to Lists - Part 2'
+        csp_applab_lists_3: 'Introduction to Lists - Part 3'
+        csp_applab_lists_4: 'Introduction to Lists - Part 4'
         csp_applab_conditionals_1: 'Introduction to Conditionals - Part 1'
         csp_applab_conditionals_2: 'Introduction to Conditionals - Part 2'
         csp_applab_conditionals_3: 'Introduction to Conditionals - Part 3'

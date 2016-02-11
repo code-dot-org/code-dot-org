@@ -169,7 +169,7 @@ de:
       2-3 Maze 9_instruction: Führe mich zu dem grünen Bösewicht! (Achte auf das TNT)
       2-3 Maze Loops 1_instruction: Kannst du mich zu dem Schwein bringen indem du 5 Baustein benutzt?
       2-3 Maze Loops 17_instruction: Bring mich zu der Sonnenblume!
-      2-3 Maze Loops 18_instruction: Bring mich zu der Sonnenblume!
+      2-3 Maze Loops 18_instruction: "Bring mich zu der Sonnenblume!\r\n(Tipp: Du musst eine \"wiederholen\"-Schleife innerhalb einer anderen verwenden, um diese Aufgabe zu lösen.)"
       2-3 Maze Loops 19_instruction: Bring mich zu der Sonnenblume!
       2-3 Maze Loops 20_instruction: Bring mich zu der Sonnenblume!
       2-3 Maze Loops 21_instruction: Bring mich zu der Sonnenblume!
@@ -1080,10 +1080,7 @@ de:
       Course 4 Play Labs For Loops 3_instruction: Wenn wir größere Schritte verwenden, können wir in der selben Zeit noch höher Zählen. Probiere aus, den Hund in 10er-Schritten von 10 bis 1000 zählen zu lassen.
       Course 4 Play Labs For Loops 4_instruction: 'Es ist schon einmal hilfreich, die Schrittweite zu ändern, aber wir zählen immer noch linear (jeder Schritt hat den gleichen Abstand). Wie sieht es aus, wenn wir exponentiell zählen wollen? Kann man ohne die Einstellungen in der "for"-Schleife zu ändern: 1, 4, 9, 16, 25... (also quadratisch) zählen?'
       Course 4 Play Labs For Loops 4a_instruction: "Now, let's blend the variables\nfrom Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn\nthis puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\"\nvariable to 10 at the beginning of your code to see what happens."
-      Course 4 Play Labs For Loops 5_instruction: |
-        In the last stage we counted the
-        square of each number. Try changing "counter ^ 2" to "counter ^ 3" to
-        count the cube of each number (1, 8, 27, 64, 125, 216, 343…)
+      Course 4 Play Labs For Loops 5_instruction: 'In der letzten Phase haben wir das Quadrat jeder Zahl gezählt. Versuche, "Zähler ^ 2" in "Zähler ^ 3" zu ändern, um die Kubikzahl jeder Zahl zu zählen (1, 8, 27, 64, 125, 216, 343...)'
       Course 4 Play Labs For Loops 5a_instruction: "In this puzzle, Dog will be your\ntime keeper.\r\n\r\nDog will count from 0 to 30 by \"increment\".  The \"increment\"\nvariable will begin with a value of 1.\r\n\r\nCan you make it so that each\ntime you click Dog, the increment increases by 2?  Click the forward arrow\nto run the for loop.\r\n\r\nRun the loop a couple of times, clicking Dog before\neach one."
       Course 4 Play Labs For Loops 6_instruction: |
         You may recall that a prime number
@@ -1399,7 +1396,7 @@ de:
       frozen diamond_instruction: 'Du kannst ein Parallelogramm zeichnen, indem Du um diesen Code einen "wiederholen"-Baustein einfügst. Das Parallelogramm zeichnet Anna wie ein Rechteck, allerdings verwendet sie Winkel von 60 Grad und 120 Grad anstelle der 90-Grad-Winkel des Rechtecks.'
       frozen freeplay_instruction: Du bist ein richtiger Künstler geworden. Zeichne dir deine eigenes Winter-Wunderland.
       frozen line_instruction: Hallo! Ich bin Elsa von Arendelle. Hilf mir, eine einzige Linie zu zeichnen.
-      frozen perpendicular_instruction: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Block als auch den „Bewegen“-Block benutzen.
+      frozen perpendicular_instruction: Jetzt schauen wir mal, ob wir zwei Linien zeichnen können, die in einem 90° Winkel zueinander stehen. Du musst sowohl den „Drehen“-Baustein als auch den „Bewegen“-Baustein benutzen.
       frozen snowflake branch_instruction: 'Versuche den "Erzeuge eine Schneeflocke in Form eines Zweiges"-Baustein um drei Zweige zu zeichnen. Damit beginnt es wie eine Schneeflocke auszusehen.'
       frozen snowflake full_instruction: Jetzt wiederhole das 8 Mal, um eine schöne Schneeflocke zu machen!
       frozen snowflower_instruction: Komplizierte Schneemuster können mit sehr einfachen Formen erstellt werden. Kannst du ein Muster zeichnen, das 5 Kreise der Größe 5 und 5 Kreise der Größe 10 wiederholt?
@@ -1479,9 +1476,7 @@ de:
       K-1 Bee Loops 10_instruction: Hole den ganzen Nektar und stelle Honig daraus her.
       K-1 Bee Loops 11_instruction: Hole den ganzen Nektar und den ganzen Honig.
       K-1 Bee Loops 12_instruction: Hole den ganzen Nektar und den ganzen Honig.
-      K-1 Bee Loops 2_instruction: |
-        Use a `repeat` loop to move and then get the
-        nectar and make honey!
+      K-1 Bee Loops 2_instruction: 'Verwende eine "Wiederholungs-Schleife" und verschiebe sie, und dann hole dir den Nektar und mache Honig!'
       K-1 Bee Loops 3_instruction: 'Verwende drei "wiederhole"-Schleifen um Nektar zu holen und Honig herzustellen.'
       K-1 Bee Loops 4_instruction: 'Verwende "wiederhole"-Schleifen um den Nektar einzusammeln, Honig herzustellen und zum Bewegen.'
       K-1 Bee Loops 5_instruction: 'Verwende "wiederhole"-Schleifen um den Nektar und den Honig zu sammeln.'
@@ -1515,9 +1510,7 @@ de:
         Figure out what is missing and then add blocks
         to get me to the pig!
       K-1 maze debug 3_instruction: Irgendetwas stimmt hier nicht. ENTFERNE Bausteine, damit ich das Schwein erreiche.
-      K-1 maze debug 4_instruction: |
-        Run through these blocks and fix them! I think
-        I might be going in the wrong direction.
+      K-1 maze debug 4_instruction: Laufe durch diese Blöcke und löse sie! Ich denke, dass ich in die falsche Richtung gehe.
       K-1 maze debug 5_instruction: Bereinige diesen Level von Fehlern, indem du die Bausteine so anordnest, dass ich das Schwein erreiche.
       K-1 maze debug 6_instruction: Bereinige diesen Level von Fehlern, indem du die Bausteine so anordnest, dass ich das Schwein erreiche.
       K-1 maze debug 7_instruction: Bereinige diesen Level von Fehlern, indem du die Bausteine so anordnest, dass ich das Schwein erreiche.
@@ -1540,9 +1533,7 @@ de:
       K-1 Maze Loops 7_instruction: 'Bring mich zum Schwein! Benutze dazu die "wiederhole"-Schleife.'
       K-1 Maze Loops 8_instruction: 'Benutze die "wiederhole"-Schleifen, um mich zum Schwein zu bringen.'
       K-1 Maze Loops 9_instruction: Bring mich zum Schwein!
-      K-1 Maze Loops Assessment 1_instruction: |
-        Look at all we've learned! Use a
-        `repeat` loop to get me to the pig!
+      K-1 Maze Loops Assessment 1_instruction: 'Schau was wir alles gelernt haben! Benutze die "Wiederholungs-Schleife" um mich zu dem Schwein zu bringen!'
       K-1 Maze Loops Assessment 2_instruction: 'Benutze die "wiederhole"-Schleifen, um mich zum Schwein zu bringen.'
       K-1 Maze Multi 14_instruction: Bewertungsstufe
       K-1 Maze Multi 15_instruction: Bewertungsstufe
@@ -1723,45 +1714,26 @@ de:
       New Artist Project_instruction: Zeichne etwas großartiges! Dein Code wird als Projekt gespeichert, zu dem du jederzeit zurück kehren kannst.
       NEW Course 4 Artist Functions 1_instruction: Kannst du ein Rechteck zeichnen, mit einer Kantenlänge von 100 Pixeln, indem du Schleifen benutzt?
       NEW Course 4 Artist Functions 10.1_instruction: Benutze die Funktionen aus der vorherigen Aufgabe, um dieses Muster zu zeichnen.
-      NEW Course 4 Artist Functions 10_instruction: |
-        Click "edit" to fill out the
-        blocks in the function definition to make a 40 pixel square.
+      NEW Course 4 Artist Functions 10_instruction: 'Klicke auf "Bearbeiten", um die Blöcke der Funktionsdefinition zu einem Quadrat von 40 Pixel auszufüllen.'
       NEW Course 4 Artist Functions 11_instruction: "Wir werden eine neue Funktion erstellen, \"draw a line of squares\", um sechs Quadrate in eine Zeile zu zeichnen. Kann man die Funktion \"draw a square 20\" dazu verwenden? Beachte, dass der Stift jetzt eine viel schmalerer Linie zeichnet. Wenn du bei der Funktion auf \"bearbeiten\" klickst kannst du dir anschauen, wie das funktioniert.\r\n"
-      NEW Course 4 Artist Functions 12_instruction: |
-        Use the "draw a line of squares"
-        function from the last puzzle to draw this pattern."
-      NEW Course 4 Artist Functions 13_instruction: |
-        Can you draw a star shape using
-        the "draw a line of squares" function? Hint: Edit the "draw a line of squares"
-        function so that you don't have to call it twice.  Notice, you'll have to
-        move forward a certain number of pixels and turn 144 degrees.
+      NEW Course 4 Artist Functions 12_instruction: 'Verwende die "zeichne eine Linie mit Quadraten" Funktion, vom Letzten Puzzle um dieses Muster zu zeichnen'
+      NEW Course 4 Artist Functions 13_instruction: 'Kannst du eine Sternform mit der Funktion "zeichne eine Linie der Quadrate" zeichnen? Tipp: Bearbeite die "zeichne eine Linie der Quadrate" Funktion so dass du sie nicht zwei mal nutzt. Merke, du musst eine bestimmte Anzahl von Pixeln nach vorne bewegen und sie um 144 Grad drehen.'
       NEW Course 4 Artist Functions 14_instruction: 'Freies Spiel! '
       NEW Course 4 Artist Functions 2_instruction: 'Kannst du 3 Quadrate im Abstand von 20 Pixeln zeichnen? Hinweis: Jedes Quadrat ist 100 Pixel groß'
-      NEW Course 4 Artist Functions 3_instruction: |
-        Here is a new type of Block.
-        It is called a "Function" block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. When you're done editing the function,
-        click "Close" to go back to your program.
-      NEW Course 4 Artist Functions 4_instruction: |
-        Use the "draw a square" function
-        to draw this pattern. Hint: You will have to use a "turn right by 120 degrees"
-        block after each square.
+      NEW Course 4 Artist Functions 3_instruction: 'Hier ist ein neuer Typ des Blocks. Man nennt diesen einen "Funktions" Block. Klicke auf "Bearbeiten" dann fülle sie mit dem Code um ein Quadrat mit 100 Pixel-Seiten zu zeichnen. Wenn du fertig bist mit der Bearbeitungs Funktion, klicke auf "Schließen" um zu deinem Programm zurück zu kehren.'
+      NEW Course 4 Artist Functions 4_instruction: 'Verwende die "Zeichne ein Quadrat" Funktion um dieses Muster zu zeichnen. Tipp: Du solltest einen "Biege nach rechts um 120 Grad"- Block verwenden nach jedem Quadrat.'
       NEW Course 4 Artist Functions 5_instruction: |
-        How did the "draw a square"
-        block know what commands to run? Click on "edit" in the "draw a square"
-        function block. The blocks in the function editor are the definition that
-        make up "draw a square." When you're done looking around, click "Save
-        and Close" and then "Run."
-      NEW Course 4 Artist Functions 6_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 20 pixels apart.\r\n"
+        Woher soll der "Zeichne ein Quadrat" Block wissen welchen Befehl er ausführen soll?
+        Klicke auf "Bearbeiten" im "Zeichne ein Quadrat" Funktions-Block. Die Blöcke im Funktionseditor sind die Definition, aus denen sich Quadrate zeichnen lassen. Wenn du fertig bist, klicke auf "Speichern und Schließen" dann auf "Ausführen"
+      NEW Course 4 Artist Functions 6_instruction: |
+        Kannst du Mittels dem "Zeichne ein Quadrat" Funktions-Block ein Bild zeichnen? Hinweis: Jedes Quadrat liegt 120 Pixel auseinander
+        
       NEW Course 4 Artist Functions 7_instruction: |
         Are you getting the hang of how
         to use function blocks? Let's modify this square so that it is 200 pixels
         in size. Hint: click on "edit" to enter the "draw a square" function editor.
         Remember to click on "Close" to get out of the function editor. 
-      NEW Course 4 Artist Functions 8_instruction: |
-        We have created a new function
-        for you called "draw a triangle".  Can you edit the function definition
-        to draw a triangle with 100 pixel sides?
+      NEW Course 4 Artist Functions 8_instruction: 'Wir haben eine neue Funktion namens "Zeichne ein Dreieck" erstellt. Kannst du die Funktionsdefinition bearbeiten um ein Dreieck mit Seiten von 100 Pixel zu zeichnen?'
       NEW Course 4 Artist Functions 9_instruction: Löse das Problem, indem du nur einen Baustein hinzufügst.
       NEW Course 4 Artist Functions inspire_instruction: Klicke hier, und lasse dich noch einmal von dem Bild insprieren.
       New Course 4 Artist Functions Level 4_instruction: 'Benutze die "draw a square"-Funktion, um das Muster zu zeichnen.'
@@ -1776,8 +1748,8 @@ de:
         Can you figure out how to draw
         this shape? Edit the function to use the "sides" parameter.
       NEW Course 4 Artist Params 12_instruction: |
-        Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long.
+        Kannst du diese Zeichnung abschließen?
+        Die Seiten aller Formen sind 100 Pixel lang.
       NEW Course 4 Artist Params 12a_instruction: |
         This image is similar to the last.
         Can you use a "for loop" with your function to make this design?
@@ -2187,7 +2159,7 @@ de:
         can you get it right on your first try?
       scrat 19_instruction: 'Eine weitere Übung mit dem "Wenn-Sonst"-Baustein. Kriegst du das beim ersten Versuch hin?'
       scrat 20_instruction: Kannst du mir behilflich sein ein komplexes Labyrinth zu lösen, indem du nur 3 Bausteine hinzufügst? Wenn du es richtig machst, kann ich jeden kurvigen Pfad gehen, egal wie lange er ist. Beeile dich, das Eis schmilzt!
-      SpecialFrozenLevel_instruction: Du bist ein richtiger Künstler geworden. Zeichne dir deine eigenes Winter-Wunderland.
+      SpecialFrozenLevel_instruction: Du bist ein richtiger Künstler geworden! Zeichne dir deine eigenes Winter-Wunderland.
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
@@ -2570,9 +2542,9 @@ de:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

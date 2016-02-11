@@ -311,33 +311,15 @@ zh:
       4-5 Artist For Loops 3_instruction: '我們該如何從1數到50？編輯"for"程式積木。'
       4-5 Artist For Loops 4_instruction: '完成一個能從1數到10的"for"方塊'
       4-5 Artist For Loops 6_instruction: 畫出邊長為50、60、70、80、90像素的正方形。你會需要用到「畫正方形」的函式五次。
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 7_instruction: 用一個「以⋯方式計數」模塊改變尺寸畫同樣的正方形。把「計數器」模塊放到「畫一個正方形」函數中。提示：它在變量欄中。
+      4-5 Artist For Loops 8_instruction: 你能通過把這些模塊放在以十為間隔從十數到二百的「循環」模塊中來完成程式碼？你可以在循環類別中找到「循環」模塊。
       4-5 Artist For Loops 9_instruction: '這些圓形的大小分別是5、10、15、20、25、30、35。用"for"程式積木來畫圓形。'
       4-5 Artist Free Draw 1_instruction: 隨便畫吧！把你的靈感變成創作！
       4-5 Artist Functions 1_instruction: 用一個重複的迴圈來畫這個三角形。
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
+      4-5 Artist Functions 10a_instruction: 把這個代碼放在「繪製一片雪花」函數中，並用參數「大小」來代替50。已經調用的函數是用來畫一個一百像素的雪花的。
+      4-5 Artist Functions 10b_instruction: '用「畫一片雪花」函數創建不同大小的雪花。 提示: 第一片雪花長度為 25 像素而且每片雪花的長度是前一個的兩倍。'
+      4-5 Artist Functions 11_instruction: '"畫一個六邊形"函數使用"畫一個三角形"函數。完成這個六角形函數。(提示: 一個六邊形有 6 邊，每邊長 100 像素)'
+      4-5 Artist Functions 12_instruction: '完成畫波浪線函數。 每個波浪是一個上突波和一個下凹波組成。  提示: 繪製 5 個藍色的波浪。'
       4-5 Artist Functions 13 Free play_instruction: |
         Here are some functions to
         draw planets, stars, rockets, and robots. Use them any way you like to make
@@ -3148,9 +3130,9 @@ zh:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

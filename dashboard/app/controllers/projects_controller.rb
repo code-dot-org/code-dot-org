@@ -19,7 +19,8 @@ class ProjectsController < ApplicationController
       login_required: true
     },
     gamelab: {
-      name: 'New Game Lab Project'
+      name: 'New Game Lab Project',
+      login_required: true
     },
     algebra_game: {
       name: 'New Algebra Project'
@@ -83,7 +84,6 @@ class ProjectsController < ApplicationController
         full_width: true,
         callouts: [],
         channel: params[:channel_id],
-        no_padding: browser.mobile?,
         # for sharing pages, the app will display the footer inside the playspace instead
         no_footer: sharing && @game.owns_footer_for_share?,
         small_footer: (@game.uses_small_footer? || enable_scrolling?),

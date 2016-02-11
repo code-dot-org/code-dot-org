@@ -79,11 +79,6 @@
   congratulations_volunteer: 'Поздравляем: теперь, после того, как вы попробовали
     "Час программирования", <a href="https://code.org/volunteer"> зарегистрируйте
     на сайте желающих из класса</a> и помогайте ученикам в изучении "Часа программирования"!'
-  course_name_accelerated: "Ускоренный курс"
-  course_name_course1: "Курс 1"
-  course_name_course2: "Курс 2"
-  course_name_course3: "Курс 3"
-  course_name_course4: "Курс 4"
   congratulations_on_completing_course: "Поздравляем, вы завершили %{course}"
   congrats_next_tutorials_title: "Теперь попробуйте эти руководства"
   congrats_next_tutorials_desc: Попробуйте эти короткие, одночасовые уроки, или попробуйте<a
@@ -432,10 +427,10 @@
   volunteer_engineer_submission_experience_unspecified: "Не указано"
   volunteer_engineer_submission_experience_tech_company: "Не инженер в технической
     компании"
-  volunteer_engineer_submission_experience_university_student_or_researcher: "Текущий
-    студент университета (или научного)"
-  volunteer_engineer_submission_experience_software_professional: "Профессиональное
-    программное обеспечение"
+  volunteer_engineer_submission_experience_university_student_or_researcher: "Студент
+    факультета информатики"
+  volunteer_engineer_submission_experience_software_professional: "Специалист по программному
+    обеспечению"
   volunteer_engineer_submission_distance_8: 5 миль
   volunteer_engineer_submission_distance_16: 10 миль
   volunteer_engineer_submission_distance_24: 15 миль
@@ -652,7 +647,7 @@
   dashboard_curriculum_csins: "Компьютерная наука, познается в самой науке:"
   dashboard_curriculum_csp: 'AP® Принципы информатики:'
   dashboard_curriculum_ecs: "Изучение информатики:"
-  dashboard_grade_k: "Детский сад"
+  dashboard_grade_k: "Подготовительный класс (0-ой класс)"
   dashboard_grade_other: "Другое"
   dashboard_login_word: "Слово"
   dashboard_login_picture: "Изображение"

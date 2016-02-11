@@ -1,22 +1,22 @@
 "si":
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
+      confirmed: "ඔබේ විද්යුත් තැපැල් ලිපිනය සාර්ථකව තහවුරු කර ඇත."
       send_instructions: You will receive an email with instructions about how to
         confirm your account in a few minutes.
       send_paranoid_instructions: If your email address exists in our database, you
         will receive an email with instructions about how to confirm your account
         in a few minutes.
     failure:
-      already_authenticated: You are already signed in.
-      inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
-      invalid_token: Invalid authentication token.
+      already_authenticated: "ඔබ දැනටමත් ඇතුළුවී ඇත."
+      inactive: "ඔබගේ ගිණුම තවම යාවත්කාලීන කර නැත."
+      invalid: "වලංගු නොවන ඊ-තැපෑලක් හෝ මුරපදයක්."
+      invalid_token: "වලංගු නොවන අනන්යතාවය තහවුරු කරගැනීමේ කේතයක්."
       locked: "ඔබටගේ ගිණුම ලොක් වී ඇත."
-      not_found_in_database: Invalid email or password.
-      timeout: Your session expired, please sign in again to continue.
+      not_found_in_database: "වලංගු නොවන ඊ-තැපෑලක් හෝ මුරපදයක්."
+      timeout: "ඔබගේ සැසිය කල් ඉකුත්, සම්බන්ධවීමට කරුණාකර නැවත ඇතුල් වන්න."
       unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      unconfirmed: "සම්බන්ධවීමට පෙර ඔබ ඔබගේ ගිණුම තහවුරු කළ යුතුයි."
     mailer:
       confirmation_instructions:
         subject: Code.org confirmation instructions
@@ -50,10 +50,10 @@
       update_needs_confirmation: You updated your account successfully, but we need
         to verify your new email address. Please check your email and click on the
         confirm link to finalize confirming your new email address.
-      updated: You updated your account successfully.
+      updated: "ඔබ ඔබගේ ගිණුම සාර්ථකව යාවත්කාලීන කළා."
     sessions:
       signed_in: ''
-      signed_out: Signed out successfully.
+      signed_out: "සාර්ථකව ඉවත් වුනා."
     unlocks:
       send_instructions: You will receive an email with instructions about how to
         unlock your account in a few minutes.
@@ -65,9 +65,9 @@
       already_confirmed: was already confirmed, please try signing in
       confirmation_period_expired: needs to be confirmed within %{period}, please
         request a new one
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
+      expired: "කල් ඉකුත්වී ඇත, කරුණාකර අලුත් එකක් ඉල්ලන්න"
+      not_found: "සොයා ගත නොහැක"
+      not_locked: "අගුලුදා නැත"
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
@@ -75,21 +75,21 @@
       send_instructions: An invitation email has been sent to %{email}.
       invitation_token_invalid: The invitation token provided is not valid!
       updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      no_invitations_remaining: "ආරාධනා ඉතිරිව නැත"
+      invitation_removed: "ඔබගේ ආරාධනය ඉවත් කර ඇත."
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: "ආරාධනය යවන්න"
+        submit_button: "ආරාධනය යවන්න"
       edit:
         header: "ඔබේ මුරපදය සකසන්න"
         submit_button: "මගේ මුරපදය සකසන්න"
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
+        subject: "ආරාධන උපදෙස්"
+        hello: "හෙලෝ %{email}"
         someone_invited_you: Someone has invited you to %{url}, you can accept it
           through the link below.
-        accept: Accept invitation
+        accept: "ආරාධනය පිලිගන්න"
         ignore: If you don't want to accept the invitation, please ignore this email.<br
           />Your account won't be created until you access the link above and set
           your password.

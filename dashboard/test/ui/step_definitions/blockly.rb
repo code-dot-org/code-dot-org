@@ -186,6 +186,14 @@ Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, className|
   classes.include?(className).should eq false
 end
 
+Then /^the modal function editor is closed$/ do
+  modal_dialog_visible.should eq false
+end
+
+Then /^the modal function editor is open$/ do
+  modal_dialog_visible.should eq true
+end
+
 When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|
   script = "
     Blockly.mainBlockSpace.getAllBlocks().forEach(function (b) {

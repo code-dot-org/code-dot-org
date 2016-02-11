@@ -174,25 +174,25 @@ hu:
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Videó játékok és koordináta síkok
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        desc: Fedezd fel hogy a videójátékot amivel szeretsz játszani hogyan működteti az algebra! Az algebrai kifejezések és koordináta-rendszer segítenek megérteni hogyan működnek a videójátékok és elkezdheted tervezni a játékot, amit majd Te fogsz létrehozni.
         video: alg_11_coordinate_plane
       Contracts:
         title: Szerződések, Domainok és tartományok
-        desc: "Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function."
+        desc: Szerződések segíthetnek megérteni és megvitatni a funkciók működését. Ebben a leckében megnézzük a szerződések hogyan segítenek megérteni egy új programozási nyelvet vagy funkciót.
         video: alg_5_contracts
       DesignRecipe:
         title: A dizájn receptje
-        desc: 'In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.'
+        desc: 'Az utolsó szakaszban a diákok írnak néhány egyszerűbb függvényt - bár a kifinomultabb függvények átgondolt megközelítést igényelnek. A Tervezési Recept egy olyan strukturált megközelítés, amely magába foglalja a tesztek írását is a függvény megfelelő működésének biztosítása érdekében.'
         video: alg_8_design_recipe
       Booleans:
         title: Logikai változók és a logika
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        desc: A negyedik és egyben utolsó amit ebben a kurzusban tanulunk a Logikai adattípus. Ebben feladatban megtanulod mi a Logikai típus és hogyan segítenek nekünk logikusan gondolkodó függvényeket létrehozni
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Feltételes utasítások és összetett függvények
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        desc: A függvényeknek átadott paraméterek szigorú minta szerint befolyásolják az eredményt. Tegyük fel azt szeretnéd hogy a paraméter néhány értéke az egyik minta alapján és más értékek más minta alapján befolyásolják az eredményt. Ekkor van szükség feltételes módra...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: "Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching."
+        title: Összeütközés felderítése és a Pitagorasz-tétel
+        desc: Meghatározni mikor érintik a képernyő szélét az objektumok egy fontos szempont a legtöbb játékban. Ebben a leckében megnézzük hogyan használható a Pitagorasz-tétel és Távolság-tétel két pont távolságának meghatározására a síkban és hogy a két pont (vagy játék szereplő) érinti-e egymást.
         video: alg_16_biggame_collision_detection

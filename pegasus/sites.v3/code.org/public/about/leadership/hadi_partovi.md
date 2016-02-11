@@ -7,7 +7,7 @@ nav: about_nav
 <img src='<%= avatar_image('Hadi Partovi') %>'/ width='320px'>
 <br/>
 <br/>
-Hadi is a tech entrepreneur and investor, and founder of education non-profit Code.org. As an entrepreneur, he was on the founding teams of Tellme and iLike. As a tech investor and startup advisor, Hadi’s portfolio includes [Facebook](http://www.facebook.com), [Dropbox](http://www.dropbox.com), [airbnb](http://airbnb.com),  and other companies.
+Hadi is a tech entrepreneur and investor, and the founder of education non-profit Code.org as well as the international [Hour of Code](http://hourofcode.com) campaign. As an entrepreneur, he was on the founding teams of Tellme and iLike. As a tech investor and startup advisor, Hadi’s portfolio includes [Facebook](http://www.facebook.com), [Dropbox](http://www.dropbox.com), [airbnb](http://airbnb.com), and other companies.
 
 A graduate of Harvard University, Hadi began his career during the browser wars in the 1990s, when he was Microsoft’s Group Program Manager for Internet Explorer. After the release of IE 5.0, Hadi co-founded [Tellme Networks](http://en.wikipedia.org/wiki/Tellme_Networks), which was acquired by Microsoft. Hadi ran the MSN.com portal, where he delivered 30% annual growth.
 

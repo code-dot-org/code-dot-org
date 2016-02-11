@@ -283,8 +283,9 @@ fa:
       4-5 Artist 2_instruction: Can you loop this code to complete the square?
       4-5 Artist 3.5_instruction: |
         Ok, try to figure out what happens if you run
-        this code (or press "Run" to try it). Then, repeat it enough times to complete
-        the drawing. The colors will (most likely) be different every time.
+        this code (or press "Run" to try it). Then, repeat the code enough times
+        to complete the drawing. The colors will (most likely) be different every
+        time.
       4-5 Artist 3_instruction: |
         This rectangular flower bed has a perimeter of 600.
         The long side has a length of 200. Draw the rectangle.
@@ -3508,9 +3509,9 @@ fa:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

@@ -58,11 +58,6 @@ nl-NL:
   congratulations: Gefeliciteerd!
   congratulations_on_completing_hoc: "Gefeliciteerd met het voltooien van een 'Hour of Code'"
   congratulations_volunteer: 'Gefeliciteerd: nu je het Uur van Coderen hebt geprobeerd, <a href="https://code.org/volunteer">geef je op om te helpen in een klas</a> en help studenten met het leren van het Uur van Coderen!'
-  course_name_accelerated: versnelde cursus
-  course_name_course1: Cursus 1
-  course_name_course2: Cursus 2
-  course_name_course3: Cursus 3
-  course_name_course4: Cursus 4
   congratulations_on_completing_course: 'Gefeliciteerd met het afronden van %{course}'
   congrats_next_tutorials_title: Probeer nu deze opdrachten
   congrats_next_tutorials_desc: 'Probeer deze kortere opdrachten van een uur of probeer een <a href="%{current_path}/next">opdracht van een partner</a>.'
@@ -113,9 +108,9 @@ nl-NL:
   learn_next_level: Ga door naar het volgende niveau
   learn_online: Probeer andere cursussen online
   learn_classes: Zoek naar klassen in de buurt
-  hoc_is_here: 'Het #HourOfCode is zover - check it out! @codeorg'
+  hoc_is_here: 'This past Computer Science Education Week, the #HourOfCode has reached 50 million students.  https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Ik heb net het #UurCode gedaan - check it out! @codeorg'
-  twitter_teach_cs: Waarom wordt informatica niet op meer scholen onderwezen? Wij kunnen dit veranderen. http://youtu.be/nKIu9yen5nc. Bezoek http://code.org voor meer informatie.
+  twitter_teach_cs: 9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: "Leer een 'Hour of Code'"
   beyond_hoc: Verder dan een Uur Code
   what_gender: Ben je een jongen of een meisje?
@@ -215,7 +210,7 @@ nl-NL:
   homepage_banner_text_link: Leer meer
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Leer meer
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20.000 leraren zijn getraind en doceren nu informatica in de klas.
   homepage_banner_20k_teachers_link: Leer meer
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
@@ -225,7 +220,7 @@ nl-NL:
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
   homepage_slot_text_title_students: Leerlingen
   homepage_slot_text_blurb_students: Verken onze handleidingen
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Bekijk onze cursussen
   homepage_slot_text_link_codestudio: Probeer Code Studio
   homepage_slot_text_link_local: Vind een groep in de buurt
   homepage_slot_text_link_othercourses: Andere online cursussen
@@ -553,7 +548,7 @@ nl-NL:
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: '<b>16 December 2015</b> - Bedankt voor uw deelname aan het Hour of Code 2015! Het volgen en opslaan van de voortgang is nu hervat in alle Code Studio lessen en cursussen. Opmerking: Het kantoor van Code.org is gesloten van 19 December - 3 januari. Vragen die u voor 4 januari stelt zullen vertraagd worden beantwoord.'
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: '<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel als een bedankje. Doe mee met klassen over de hele wereld tijdens 7-13 December.'
   dashboard_announce_playlab: '<b>4 December 2015</b> - de Hour of Code is hier! 50 lessen voor elke leeftijd en elk device proberen. Nieuw deze week: uw eigen verhalen en spelletjes maken met de speel labs Ice Age en Gumball.'
@@ -569,16 +564,17 @@ nl-NL:
   learn_educator_resources_button: Middelen voor leerkrachten
   learn_are_you_educator: 'Ben je een leerkracht? Leer dan <a href="http://hourofcode.com/resources/how-to">hoe je een Uur Code kunt geven</a>'
   learn_find_volunteer: '<a href="https://code.org/volunteer/local">Vind een vrijwilliger</a> om te helpen met uw Hour of Code'
-  learn_teacher_led_lesson_plans: 'Be inspired by <a href="https://code.org/teacher-led">teacher led Hour of Code lesson plans</a>'
-  learn_how_to_hoc: 'Follow <a href="https://hourofcode.com/how-to">our how-to guide</a> for teaching one Hour of Code'
+  learn_teacher_led_lesson_plans: 'Laat je inspireren door <a href="https://code.org/teacher-led">leraar gestuurde Uur Code lesplannen</a>'
+  learn_how_to_hoc: 'Volg <a href="https://hourofcode.com/how-to">one handleiding</a> voor het lesgeven in Uur Code'
   learn_hoc_prizes: '<a href="https://hourofcode.com/prizes">Meer informatie</a> over prijzen voor iedere leerkracht.'
-  learn_inspirational_videos: 'Inspire students by showing them <a href="https://code.org/educate/inspire">these videos</a>'
+  learn_inspirational_videos: |-
+    Inspireer leerlingen door ze <a href="https://code.org/educate/inspire">deze video's</a> te laten zien
   hoc2014_try_new_tutorials: "Probeer onze nieuwe 'Hour of Code'-tutorials"
   hoc2014_try_new_tutorial: Probeer onze nieuwe Uur Code in beta
   hoc2014_try_scrat: Angry Birds, PvZ en Scrat
   hoc2014_try_frozen: Maak kunst met Anna en Elsa van Frozen
   carousel_heading_codeorg: Opdrachten van Code.org
-  carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
+  carousel_heading_codeorg_any_device: Opdrachten door Code.org (voor alle apparaten)
   carousel_heading_3rd_party: Opdrachten van andere partijen
   carousel_heading_third_party: Opdrachten van andere partijen
   carousel_heading_international: Opdrachten in jouw taal
@@ -586,7 +582,7 @@ nl-NL:
   carousel_heading_beginners: Handleidingen voor Beginners
   carousel_heading_beyond_beginners: Handleidingen voor Beginners
   carousel_heading_javascript: Handleidingen die je Javascript aanleren
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: Opdrachten die je JavaScript leren
   carousel_heading_unplugged: "Geen apparaat of internet? Probeer 'unplugged' informatica"
   carousel_heading_devices: Handleiding-apps voor telefoons en tabletten
   carousel_heading_beyond_devices: Handleiding-apps voor telefoons en tabletten
@@ -599,7 +595,7 @@ nl-NL:
   carousel_heading_ide: Platformen populair onder docenten
   educator_notes: Opvoeder notities
   teach_led_lesson_plans: Uur Code-lesplannen voor leerkrachten
-  learn_footer_all_tutorials: 'See the <a href="https://code.org/educate/allhourofcode">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click here.</a>'
+  learn_footer_all_tutorials: 'Bekijk de <a href="https://code.org/educate/allhourofcode">uitvoerige lijst van Uur Code handleidingen</a>. Om onze criteria en de richtlijnen voor het insturen van Uur van Code handleidingen te zien, <a href="https://hourofcode.com/tutorial-guidelines">klik hier</a>'
   how_to_teach_hoc: Hoe les te geven met een Hour of Code
   more_resources_educators: Meer middelen voor leraren en opvoeders
   beyond_submission: "Wil je lessen indienen voor 'Meer dan een uur'? Bekijk de criteria en het antwoordformulier."
@@ -654,12 +650,12 @@ nl-NL:
   playlab_name: Speel Lab
   infinity_name: Infinity Play Lab
   artist_name: Kunstenaar
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Mysterie Eiland Programmeer Zoektocht
+  allcancode_name: Ren Marco!
   csfirst_name: CS First
-  boxisland_name: Box Island
+  boxisland_name: Dozen Eiland
   codesters_name: Codesters
-  texasinstruments_name: 10 Minutes of Code
+  texasinstruments_name: 10 minuten code
   teacherled_name: Uur Code-lesplannen voor leerkrachten
   codeorg_gradelevel: Leeftijden 4-104
   codeintl_gradelevel: Leeftijden 4-104
@@ -705,12 +701,12 @@ nl-NL:
   infinity_gradelevel: Leeftijden 4-104
   artist_gradelevel: Leeftijden 4-104
   monstercoding_gradelevel: Leeftijden 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Van 5 tot 10 jaar
+  csfirst_gradelevel: Van 9 tot 14 jaar
   boxisland_gradelevel: Basis
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  codesters_gradelevel: Van 12 tot 14 jaar
+  texasinstruments_gradelevel: Van 13 tot 16 jaar
+  teacherled_gradelevel: Vanaf 5 jaar
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
   thinkersmithspanish_platformtext: Unplugged
@@ -752,12 +748,12 @@ nl-NL:
   frozen_platformtext: Moderne browsers en tablets
   starwars_platformtext: Moderne browsers en tablets
   playlab_platformtext: Moderne browsers, smartphones, tablets
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Moderne web browsers, iOS, Android
+  allcancode_platformtext: Moderne webbrowsers, iOS
   csfirst_platformtext: Moderne webbrowsers
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Moderne webbrowsers
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI Rekenmachines
   teacherled_platformtext: Moderne browsers, smartphones, tablets
   codeorg_shortdescription: Leer hoe je moet programmeren met Mark Zuckerberg en Angry Birds!
   codeintl_shortdescription: Leer hoe je moet programmeren met Mark Zuckerberg en Angry Birds!
@@ -802,13 +798,13 @@ nl-NL:
   playlab_shortdescription: Maak een verhaal of een spel met Speel Lab!
   infinity_shortdescription: Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol.
   artist_shortdescription: Teken coole plaatjes en ontwerpen met de Kunstenaar!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for children.
+  monsterocding_shortdescription: Een kleurrijk zelfstandig programmeer avontuur voor kinderen.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming language.
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add your own style!
   boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using Python.
+  codesters_shortdescription: Maak je eigen spellen, animaties en ontwerpen met Python.
   texasinstruments_shortdescription: 'Learn basic coding using the TI-84&#8482; Plus calculator.'
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with these lesson plans.
+  teacherled_shortdescription: Laat je inspireren om je eigen Uur Code les te maken met deze lesplannen.
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds, Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg. Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
   codeintl_longdescription: Leer de basis concepten van de informatica met drag en drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds, Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg. Leer repeat-loops, condities en basis algoritmes. Beschikbaar in 34 talen.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'
@@ -856,7 +852,7 @@ nl-NL:
   playlab_longdescription: Maak een verhaal of speel een spel met Play Lab! Laat dieren, piraten, zombies, ninjas en nog veel meer bewegen, geluiden maken, punten scoren en zelfs vuurballen gooien!
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding offers a fun filled self guided adventure that teaches several key programming concepts to children. Each block based activity builds on the previous, introducing kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using colorful animated graphics, audio instructions.
   allcancode_longdescription: 'Students play an adventure game based on an original story. They guide Marco - the main character - through each level by giving him step-by-step instructions in the form of the visual programming language used by the Hour of Code. They get introduced to sequencing commands, iteration and conditions without even noticing it.'
-  csfirst_longdescription: Create a story about two characters at sea. Animate the water, and customize the scenery to add your own flair. Use code to tell the story you want to tell!
+  csfirst_longdescription: Maak een verhaal over twee karakters in de zee. Animeer het water, pas de omgeving aan en voeg je eigen stijl toe. Gebruik code om het verhaal te vertellen zoals jij dat wil vertellen!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!
   codesters_longdescription: 'Create your own games, animations, and artwork using Python.  Once you’re done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! '
   texasinstruments_longdescription: "The 10 Minutes of Code activities can be used in class as a way to spark students' interest in coding with the TI technology they carry in their backpacks everyday.  Learn the basics of coding using the TI-84&#8482; Plus and get started programming in just 10 minutes – no experience needed!  "

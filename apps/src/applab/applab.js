@@ -23,7 +23,6 @@ var parseXmlElement = require('../xml').parseElement;
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var dropletConfig = require('./dropletConfig');
-var Slider = require('../slider');
 var AppStorage = require('./appStorage');
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
@@ -35,13 +34,10 @@ var designMode = require('./designMode');
 var applabTurtle = require('./applabTurtle');
 var applabCommands = require('./commands');
 var JSInterpreter = require('../JSInterpreter');
-var StepType = JSInterpreter.StepType;
+var JsInterpreterLogger = require('../JsInterpreterLogger');
+var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
-var assetsApi = require('../clientApi').assets;
-var assetListStore = require('./assetManagement/assetListStore');
-var showAssetManager = require('./assetManagement/show.js');
-var DebugArea = require('./DebugArea');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
@@ -57,21 +53,33 @@ var TestResults = studioApp.TestResults;
 var Applab = module.exports;
 
 /**
- * Controller for debug console and controls on page
- * TODO: Rename to debugArea once other debugArea references are moved out of
- *       this file.
- * @type {DebugArea}
+ * @type {JsInterpreterLogger} observes the interpreter and logs to console
  */
-var debugAreaController = null;
+var jsInterpreterLogger = null;
 
-//Debug console history
-Applab.debugConsoleHistory = {
-  'history': [],
-  'currentHistoryIndex': 0
+/**
+ * @type {JsDebuggerUi} Controller for JS debug buttons and console area
+ */
+var debuggerUi = null;
+
+/**
+ * Temporary: Some code depends on global access to logging, but only Applab
+ * knows about the debugger UI where logging should occur.
+ * Eventually, I'd like to replace this with window events that the debugger
+ * UI listens to, so that the Applab global is not involved.
+ * @param {*} object
+ */
+Applab.log = function (object) {
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.log(object);
+  }
+
+  if (debuggerUi) {
+    debuggerUi.log(object);
+  }
 };
 
 var errorHandler = require('./errorHandler');
-var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 
@@ -97,9 +105,6 @@ var twitterOptions = {
   text: applabMsg.shareApplabTwitter(),
   hashtag: "ApplabCode"
 };
-
-var MIN_DEBUG_AREA_HEIGHT = 120;
-var MAX_DEBUG_AREA_HEIGHT = 400;
 
 var FOOTER_HEIGHT = applabConstants.FOOTER_HEIGHT;
 
@@ -402,123 +407,32 @@ Applab.hasDataStoreAPIs = function (code) {
     /setKeyValue/.test(code);
 };
 
-Applab.stepSpeedFromSliderSpeed = function (sliderSpeed) {
-  return 300 * Math.pow(1 - sliderSpeed, 2);
+/**
+ * Set the current interpreter step speed as a value from 0 (stopped)
+ * to 1 (full speed).
+ * @param {!number} speed - range 0..1
+ */
+Applab.setStepSpeed = function (speed) {
+  if (debuggerUi) {
+    debuggerUi.setStepSpeed(speed);
+  }
+  Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
-  var stepSpeed = Applab.scale.stepSpeed;
-  if (Applab.speedSlider) {
-    stepSpeed = Applab.stepSpeedFromSliderSpeed(Applab.speedSlider.getValue());
+  var debugStepDelay;
+  if (debuggerUi) {
+    // debugStepDelay will be undefined if no speed slider is present
+    debugStepDelay = debuggerUi.getStepDelay();
   }
-  return stepSpeed;
+  return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
 
 function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function pushDebugConsoleHistory(commandText) {
-  Applab.debugConsoleHistory.currentHistoryIndex = Applab.debugConsoleHistory.history.length + 1;
-  Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1] = commandText;
-}
-
-function updateDebugConsoleHistory(commandText) {
-  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
-    Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] = commandText;
-  }
-}
-
-function moveUpDebugConsoleHistory(currentInput) {
-  if (Applab.debugConsoleHistory.currentHistoryIndex > 0) {
-    Applab.debugConsoleHistory.currentHistoryIndex -= 1;
-  }
-  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
-    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
-  }
-  return currentInput;
-}
-
-function moveDownDebugConsoleHistory(currentInput) {
-  if (Applab.debugConsoleHistory.currentHistoryIndex < Applab.debugConsoleHistory.history.length) {
-    Applab.debugConsoleHistory.currentHistoryIndex += 1;
-  }
-  if (Applab.debugConsoleHistory.currentHistoryIndex == Applab.debugConsoleHistory.history.length &&
-      currentInput == Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex - 1]) {
-    return '';
-  }
-  if (typeof Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex] !== 'undefined') {
-    return Applab.debugConsoleHistory.history[Applab.debugConsoleHistory.currentHistoryIndex];
-  }
-  return currentInput;
-}
-
-function onDebugInputKeyDown(e) {
-  var input = e.target.textContent;
-  if (e.keyCode === KeyCodes.ENTER) {
-    e.preventDefault();
-    pushDebugConsoleHistory(input);
-    e.target.textContent = '';
-    outputApplabConsole('> ' + input);
-    if (Applab.JSInterpreter) {
-      var currentScope = Applab.JSInterpreter.interpreter.getScope();
-      var evalInterpreter = new window.Interpreter(input);
-      // Set console scope to the current scope of the running program
-
-      // NOTE: we are being a little tricky here (we are re-running
-      // part of the Interpreter constructor with a different interpreter's
-      // scope)
-      evalInterpreter.populateScope_(evalInterpreter.ast, currentScope);
-      evalInterpreter.stateStack = [{
-          node: evalInterpreter.ast,
-          scope: currentScope,
-          thisExpression: currentScope
-      }];
-      // Copy these properties directly into the evalInterpreter so the .isa()
-      // method behaves as expected
-      ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
-        'UNDEFINED'].forEach(
-        function (prop) {
-          evalInterpreter[prop] = Applab.JSInterpreter.interpreter[prop];
-        });
-      try {
-        evalInterpreter.run();
-        outputApplabConsole('< ' + String(evalInterpreter.value));
-      }
-      catch (err) {
-        outputApplabConsole('< ' + String(err));
-      }
-    } else {
-      outputApplabConsole('< (not running)');
-    }
-  }
-  if (e.keyCode === KeyCodes.UP) {
-    updateDebugConsoleHistory(input);
-    e.target.textContent = moveUpDebugConsoleHistory(input);
-  }
-  if (e.keyCode === KeyCodes.DOWN) {
-    updateDebugConsoleHistory(input);
-    e.target.textContent = moveDownDebugConsoleHistory(input);
-  }
-}
-
 function handleExecutionError(err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
-    // syntax errors came before execution (during parsing), so we need
-    // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
-    // Now select this location in the editor, since we know we didn't hit
-    // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowColError(studioApp.editor, lineNumber - 1, err.loc.column);
-  }
-  if (Applab.JSInterpreter) {
-    // Select code that just executed:
-    Applab.JSInterpreter.selectCurrentCode("ace_error");
-    // Grab line number if we don't have one already:
-    if (!lineNumber) {
-      lineNumber = 1 + Applab.JSInterpreter.getNearestUserCodeLine();
-    }
-  }
   outputError(String(err), ErrorLevel.ERROR, lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
@@ -660,6 +574,11 @@ Applab.startSharedAppAfterWarnings = function () {
  * Initialize Blockly and the Applab app.  Called on page load.
  */
 Applab.init = function(config) {
+  // Gross, but necessary for tests, until we can instantiate AppLab and make
+  // this a member variable: Reset this thing until we're ready to create it!
+  jsInterpreterLogger = null;
+  debuggerUi = null;
+
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
   studioApp.runButtonClick = this.runButtonClick.bind(this);
@@ -667,17 +586,9 @@ Applab.init = function(config) {
   Applab.channelId = config.channel;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
-  if (config.assetPathPrefix) {
-    Applab.assetPathPrefix = config.assetPathPrefix;
-  }
 
-  // Pre-populate asset list
-  assetsApi.ajax('GET', '', function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-  }, function () {
-    // Unable to load asset list
-  });
-
+  config.usesAssets = true;
+  
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   skin.smallStaticAvatar = null;
@@ -720,11 +631,20 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
-  var extraControlsRow = require('./extraControlRows.html.ejs')({
-    assetUrl: studioApp.assetUrl,
-    debugButtons: showDebugButtons,
-    debugConsole: showDebugConsole
-  });
+  var extraControlRows = '';
+
+  // Construct a logging observer for interpreter events
+  if (!config.hideSource) {
+    jsInterpreterLogger = new JsInterpreterLogger(window.console);
+  }
+
+  if (showDebugButtons || showDebugConsole) {
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    extraControlRows = debuggerUi.getMarkup(studioApp.assetUrl, {
+      showButtons: showDebugButtons,
+      showConsole: showDebugConsole
+    });
+  }
 
   config.html = page({
     assetUrl: studioApp.assetUrl,
@@ -735,7 +655,7 @@ Applab.init = function(config) {
         appHeight: Applab.footerlessAppHeight
       }),
       controls: firstControlsRow,
-      extraControlRows: extraControlsRow,
+      extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -743,7 +663,8 @@ Applab.init = function(config) {
       pinWorkspaceToBottom: true,
       // TODO (brent) - seems a little gross that we've made this part of a
       // template shared across all apps
-      hasDesignMode: true,
+      // disable designMode if we're readonly
+      hasDesignMode: !config.readonlyWorkspace,
       readonlyWorkspace: config.readonlyWorkspace
     }
   });
@@ -792,19 +713,8 @@ Applab.init = function(config) {
   };
 
   config.afterEditorReady = function() {
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var aceEditor = studioApp.editor.aceEditor;
-
     if (breakpointsEnabled) {
-      studioApp.editor.on('guttermousedown', function(e) {
-        var bps = studioApp.editor.getBreakpoints();
-        if (bps[e.line]) {
-          studioApp.editor.clearBreakpoint(e.line);
-        } else {
-          studioApp.editor.setBreakpoint(e.line);
-        }
-      });
+      studioApp.enableBreakpoints();
     }
   };
 
@@ -869,43 +779,10 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  debugAreaController = new DebugArea(
-      document.getElementById('debug-area'),
-      document.getElementById('codeTextbox'));
-
-  if (level.editCode) {
-    // Initialize the slider.
-    var slider = document.getElementById('applab-slider');
-    if (slider) {
-      var sliderXOffset = 10,
-          sliderYOffset = 22,
-          sliderWidth = 130;
-      Applab.speedSlider = new Slider(sliderXOffset, sliderYOffset, sliderWidth,
-          slider);
-
-      // Change default speed (eg Speed up levels that have lots of steps).
-      if (config.level.sliderSpeed) {
-        Applab.speedSlider.setValue(config.level.sliderSpeed);
-      }
-    }
-    var debugInput = document.getElementById('debug-input');
-    if (debugInput) {
-      debugInput.addEventListener('keydown', onDebugInputKeyDown);
-    }
-  }
-
-  var debugResizeBar = document.getElementById('debugResizeBar');
-  if (debugResizeBar) {
-    dom.addMouseDownTouchEvent(debugResizeBar,
-                               Applab.onMouseDownDebugResizeBar);
-    // Can't use dom.addMouseUpTouchEvent() because it will preventDefault on
-    // all touchend events on the page, breaking click events...
-    document.body.addEventListener('mouseup', Applab.onMouseUpDebugResizeBar);
-    var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
-    if (mouseUpTouchEventName) {
-      document.body.addEventListener(mouseUpTouchEventName,
-                                     Applab.onMouseUpDebugResizeBar);
-    }
+  if (debuggerUi) {
+    debuggerUi.initializeAfterDomCreated({
+      defaultStepSpeed: config.level.sliderSpeed
+    });
   }
 
   window.addEventListener('resize', Applab.renderVisualizationOverlay);
@@ -926,24 +803,6 @@ Applab.init = function(config) {
   }
 
   if (level.editCode) {
-
-    var clearButton = document.getElementById('clear-console-header');
-    if (clearButton) {
-      dom.addClickTouchEvent(clearButton, clearDebugOutput);
-    }
-    var pauseButton = document.getElementById('pauseButton');
-    var continueButton = document.getElementById('continueButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-      dom.addClickTouchEvent(pauseButton, Applab.onPauseContinueButton);
-      dom.addClickTouchEvent(continueButton, Applab.onPauseContinueButton);
-      dom.addClickTouchEvent(stepInButton, Applab.onStepInButton);
-      dom.addClickTouchEvent(stepOverButton, Applab.onStepOverButton);
-      dom.addClickTouchEvent(stepOutButton, Applab.onStepOutButton);
-    }
-
     // Prevent the backspace key from navigating back. Make sure it's still
     // allowed on other elements.
     // Based on http://stackoverflow.com/a/2768256/2506748
@@ -993,61 +852,6 @@ Applab.appendToEditor = function(newCode) {
   studioApp.editor.setValue(code);
 };
 
-Applab.onMouseDownDebugResizeBar = function (event) {
-  // When we see a mouse down in the resize bar, start tracking mouse moves:
-  var eventSourceElm = event.srcElement || event.target;
-  if (eventSourceElm.id === 'debugResizeBar') {
-    Applab.draggingDebugResizeBar = true;
-    document.body.addEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    Applab.mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.addEventListener(Applab.mouseMoveTouchEventName,
-                                     Applab.onMouseMoveDebugResizeBar);
-    }
-
-    event.preventDefault();
-  }
-};
-
-/**
-*  Handle mouse moves while dragging the debug resize bar.
-*/
-Applab.onMouseMoveDebugResizeBar = function (event) {
-  var debugResizeBar = document.getElementById('debugResizeBar');
-  var codeApp = document.getElementById('codeApp');
-  var codeTextbox = document.getElementById('codeTextbox');
-  var debugArea = document.getElementById('debug-area');
-
-  var rect = debugResizeBar.getBoundingClientRect();
-  var offset = (parseInt(window.getComputedStyle(codeApp).bottom, 10) || 0) -
-               rect.height / 2;
-  var newDbgHeight = Math.max(MIN_DEBUG_AREA_HEIGHT,
-                       Math.min(MAX_DEBUG_AREA_HEIGHT,
-                                (window.innerHeight - event.pageY) - offset));
-
-  if (debugAreaController.isShut()) {
-    debugAreaController.snapOpen();
-  }
-
-  codeTextbox.style.bottom = newDbgHeight + 'px';
-  debugArea.style.height = newDbgHeight + 'px';
-
-  // Fire resize so blockly and droplet handle this type of resize properly:
-  utils.fireResizeEvent();
-};
-
-Applab.onMouseUpDebugResizeBar = function (event) {
-  // If we have been tracking mouse moves, remove the handler now:
-  if (Applab.draggingDebugResizeBar) {
-    document.body.removeEventListener('mousemove', Applab.onMouseMoveDebugResizeBar);
-    if (Applab.mouseMoveTouchEventName) {
-      document.body.removeEventListener(Applab.mouseMoveTouchEventName,
-                                        Applab.onMouseMoveDebugResizeBar);
-    }
-    Applab.draggingDebugResizeBar = false;
-  }
-};
-
 /**
  * Clear the event handlers and stop the onTick timer.
  */
@@ -1057,30 +861,6 @@ Applab.clearEventHandlersKillTickLoop = function() {
   $('#headers').removeClass('dimmed');
   $('#codeWorkspace').removeClass('dimmed');
   Applab.tickCount = 0;
-
-  var spinner = document.getElementById('running-spinner');
-  if (spinner) {
-    spinner.style.display = 'none';
-  }
-
-  var pausedIcon = document.getElementById('paused-icon');
-  if (pausedIcon) {
-    pausedIcon.style.display = 'none';
-  }
-
-  var pauseButton = document.getElementById('pauseButton');
-  var continueButton = document.getElementById('continueButton');
-  var stepInButton = document.getElementById('stepInButton');
-  var stepOverButton = document.getElementById('stepOverButton');
-  var stepOutButton = document.getElementById('stepOutButton');
-  if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-    pauseButton.style.display = "inline-block";
-    pauseButton.disabled = true;
-    continueButton.style.display = "none";
-    stepInButton.disabled = true;
-    stepOverButton.disabled = true;
-    stepOutButton.disabled = true;
-  }
 };
 
 /**
@@ -1166,29 +946,12 @@ Applab.reset = function(first) {
     level.goal.successState = {};
   }
 
-  if (level.editCode) {
-    // Reset the pause button:
-    var pauseButton = document.getElementById('pauseButton');
-    var continueButton = document.getElementById('continueButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.style.display = "inline-block";
-      pauseButton.disabled = true;
-      continueButton.style.display = "none";
-      stepInButton.disabled = false;
-      stepOverButton.disabled = true;
-      stepOutButton.disabled = true;
-    }
-    var spinner = document.getElementById('running-spinner');
-    if (spinner) {
-      spinner.style.display = 'none';
-    }
-    var pausedIcon = document.getElementById('paused-icon');
-    if (pausedIcon) {
-      pausedIcon.style.display = 'none';
-    }
+  if (debuggerUi) {
+    debuggerUi.detach();
+  }
+
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.detach();
   }
 
   // Reset the Globals object used to contain program variables:
@@ -1229,26 +992,6 @@ Applab.renderVisualizationOverlay = function() {
     scale: scaledWidth / unscaledWidth
   });
 };
-
-/**
- * Empty the contents of the debug console scrollback area.
- */
-function clearDebugOutput() {
-  var debugOutput = document.getElementById('debug-output');
-  if (debugOutput) {
-    debugOutput.textContent = '';
-  }
-}
-
-/**
- * Empty the debug console input area.
- */
-function clearDebugInput() {
-  var debugInput = document.getElementById('debug-input');
-  if (debugInput) {
-    debugInput.textContent = '';
-  }
-}
 
 /**
  * Save the app state and trigger any callouts, then call the callback.
@@ -1367,8 +1110,6 @@ Applab.execute = function() {
 
   studioApp.reset(false);
   studioApp.attempts++;
-  clearDebugOutput();
-  clearDebugInput();
 
   // Set event handlers and start the onTick timer
 
@@ -1398,19 +1139,28 @@ Applab.execute = function() {
   }
   if (codeWhenRun) {
     if (level.editCode) {
-      // Use JS interpreter on editCode levels
+      // Create a new interpreter for this run
       Applab.JSInterpreter = new JSInterpreter({
+        studioApp: studioApp,
+        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
+        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK
+      });
+
+      // Register to handle interpreter events
+      Applab.JSInterpreter.onExecutionError.register(handleExecutionError);
+      if (jsInterpreterLogger) {
+        jsInterpreterLogger.attachTo(Applab.JSInterpreter);
+      }
+      if (debuggerUi) {
+        debuggerUi.attachTo(Applab.JSInterpreter);
+      }
+
+      // Initialize the interpreter and parse the student code
+      Applab.JSInterpreter.parse({
         code: codeWhenRun,
         blocks: dropletConfig.blocks,
         blockFilter: level.executePaletteApisOnly && level.codeFunctions,
-        enableEvents: true,
-        studioApp: studioApp,
-        shouldRunAtMaxSpeed: function() { return getCurrentTickLength() === 0; },
-        maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-        onNextStepChanged: Applab.updatePauseUIState,
-        onPause: Applab.onPauseContinueButton,
-        onExecutionError: handleExecutionError,
-        onExecutionWarning: outputApplabConsole
+        enableEvents: true
       });
       if (!Applab.JSInterpreter.initialized()) {
         return;
@@ -1424,30 +1174,6 @@ Applab.execute = function() {
     }
   }
 
-  if (level.editCode) {
-    var pauseButton = document.getElementById('pauseButton');
-    var continueButton = document.getElementById('continueButton');
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    if (pauseButton && continueButton && stepInButton && stepOverButton && stepOutButton) {
-      pauseButton.style.display = "inline-block";
-      pauseButton.disabled = false;
-      continueButton.style.display = "none";
-      stepInButton.disabled = true;
-      stepOverButton.disabled = true;
-      stepOutButton.disabled = true;
-    }
-    var spinner = document.getElementById('running-spinner');
-    if (spinner) {
-      spinner.style.display = 'inline-block';
-    }
-    var pausedIcon = document.getElementById('paused-icon');
-    if (pausedIcon) {
-      pausedIcon.style.display = 'none';
-    }
-  }
-
   // Set focus on the default screen so key events can be handled
   // right from the start without requiring the user to adjust focus.
   Applab.loadDefaultScreen();
@@ -1457,74 +1183,6 @@ Applab.execute = function() {
   $('#codeWorkspace').addClass('dimmed');
   designMode.renderDesignWorkspace();
   queueOnTick();
-};
-
-Applab.onPauseContinueButton = function() {
-  if (Applab.running) {
-    // We have code and are either running or paused
-    if (Applab.JSInterpreter.paused &&
-        Applab.JSInterpreter.nextStep === StepType.RUN) {
-      Applab.JSInterpreter.paused = false;
-    } else {
-      Applab.JSInterpreter.paused = true;
-      Applab.JSInterpreter.nextStep = StepType.RUN;
-    }
-    Applab.updatePauseUIState();
-    var stepInButton = document.getElementById('stepInButton');
-    var stepOverButton = document.getElementById('stepOverButton');
-    var stepOutButton = document.getElementById('stepOutButton');
-    stepInButton.disabled = !Applab.JSInterpreter.paused;
-    stepOverButton.disabled = !Applab.JSInterpreter.paused;
-    stepOutButton.disabled = !Applab.JSInterpreter.paused;
-  }
-};
-
-Applab.updatePauseUIState = function() {
-  var pauseButton = document.getElementById('pauseButton');
-  var continueButton = document.getElementById('continueButton');
-  var spinner = document.getElementById('running-spinner');
-  var pausedIcon = document.getElementById('paused-icon');
-
-  if (pauseButton && continueButton && spinner && pausedIcon) {
-    if (Applab.JSInterpreter.paused &&
-        Applab.JSInterpreter.nextStep === StepType.RUN) {
-      pauseButton.style.display = "none";
-      continueButton.style.display = "inline-block";
-      spinner.style.display = 'none';
-      pausedIcon.style.display = 'inline-block';
-    } else {
-      pauseButton.style.display = "inline-block";
-      continueButton.style.display = "none";
-      spinner.style.display = 'inline-block';
-      pausedIcon.style.display = 'none';
-    }
-  }
-};
-
-Applab.onStepOverButton = function() {
-  if (Applab.running) {
-    Applab.JSInterpreter.paused = true;
-    Applab.JSInterpreter.nextStep = StepType.OVER;
-    Applab.updatePauseUIState();
-  }
-};
-
-Applab.onStepInButton = function() {
-  if (!Applab.running) {
-    Applab.runButtonClick();
-    Applab.onPauseContinueButton();
-  }
-  Applab.JSInterpreter.paused = true;
-  Applab.JSInterpreter.nextStep = StepType.IN;
-  Applab.updatePauseUIState();
-};
-
-Applab.onStepOutButton = function() {
-  if (Applab.running) {
-    Applab.JSInterpreter.paused = true;
-    Applab.JSInterpreter.nextStep = StepType.OUT;
-    Applab.updatePauseUIState();
-  }
 };
 
 Applab.feedbackImage = '';
@@ -1552,44 +1210,6 @@ Applab.onCodeModeButton = function() {
   } else {
     Applab.activeScreen().focus();
   }
-};
-
-// starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://');
-
-// Exposed for testing
-Applab.assetPathPrefix = "/v3/assets/";
-
-/**
- * If the filename is relative (contains no slashes), then prepend
- * the path to the assets directory for this project to the filename.
- *
- * If the filename URL is absolute, route it through the MEDIA_PROXY.
- * @param {string} filename
- * @returns {string}
- */
-Applab.maybeAddAssetPathPrefix = function (filename) {
-
-  if (ABSOLUTE_REGEXP.test(filename)) {
-    // We want to be able to handle the case where our filename contains a
-    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-    // technically invalid URL. encodeURIComponent will replace space with %20
-    // for us, but as soon as it's decoded, we again have an invalid URL. For
-    // this reason we first replace space with %20 ourselves, such that we now
-    // have a valid URL, and then call encodeURIComponent on the result.
-    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
-  }
-
-  filename = filename || '';
-  if (filename.length === 0) {
-    return '/blockly/media/1x1.gif';
-  }
-
-  if (filename.indexOf('/') !== -1) {
-    return filename;
-  }
-
-  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
 };
 
 /**
@@ -1736,10 +1356,11 @@ Applab.onPuzzleComplete = function(submit) {
     });
   };
 
-  if (typeof document.getElementById('divApplab').toDataURL === 'undefined') { // don't try it if function is not defined
+  var divApplab = document.getElementById('divApplab');
+  if (!divApplab || typeof divApplab.toDataURL === 'undefined') { // don't try it if function is not defined
     sendReport();
   } else {
-    document.getElementById('divApplab').toDataURL("image/png", {
+    divApplab.toDataURL("image/png", {
       callback: function(pngDataUrl) {
         Applab.feedbackImage = pngDataUrl;
         Applab.encodedFeedbackImage = encodeURIComponent(Applab.feedbackImage.split(',')[1]);
@@ -1855,30 +1476,6 @@ function quote(str) {
 }
 
 /**
- * Returns a list of options (optionally filtered by type) for code-mode
- * asset dropdowns.
- */
-Applab.getAssetDropdown = function (typeFilter) {
-  var options = assetListStore.list(typeFilter).map(function (asset) {
-    return {
-      text: quote(asset.filename),
-      display: quote(asset.filename)
-    };
-  });
-  var handleChooseClick = function (callback) {
-    showAssetManager(function (filename) {
-      callback(quote(filename));
-    }, typeFilter);
-  };
-  options.push({
-    text: 'Choose...',
-    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
-    click: handleChooseClick
-  });
-  return options;
-};
-
-/**
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
  * @param {string} [filterSelector] Optional selector to filter for.
@@ -1897,25 +1494,45 @@ Applab.getIdDropdown = function (filterSelector) {
  * @private
  */
 Applab.getIdDropdownFromDom_ = function (documentRoot, filterSelector) {
-  var divApplabChildren = documentRoot.find('#divApplab').children();
-  var elements = divApplabChildren.toArray().concat(
-      divApplabChildren.children().toArray());
+  var elements = documentRoot.find('#designModeViz [id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]');
 
   // Return all elements when no filter is given
   if (filterSelector) {
-    elements = $(elements).filter(filterSelector).get();
+    elements = elements.filter(filterSelector);
   }
 
-  return elements
-      .sort(function (elementA, elementB) {
-        return elementA.id < elementB.id ? -1 : 1;
-      })
-      .map(function (element) {
-        return {
-          text: quote(element.id),
-          display: quote(element.id)
-        };
-      });
+  return elements.sort(byId).map(function (_, element) {
+    var id = quote(elementUtils.getId(element));
+    return {text: id, display: id};
+  }).get();
+};
+
+function byId(a, b) {
+  return a.id > b.id ? 1 : -1;
+}
+
+/**
+ * Returns a list of IDs currently present in the DOM of the current screen,
+ * including the screen, sorted by z-index.
+ */
+Applab.getIdDropdownForCurrentScreen = function () {
+  return Applab.getIdDropdownForCurrentScreenFromDom_($('#designModeViz'));
+};
+
+/**
+ * Internal helper for getIdDropdownForCurrentScreen.
+ * @private
+ */
+Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
+  var screen = documentRoot.find('.screen').filter(function () {
+    return this.style.display !== 'none';
+  }).first();
+
+  var elements = screen.find('[id^="' + applabConstants.DESIGN_ELEMENT_ID_PREFIX + '"]').add(screen);
+
+  return elements.map(function (_, element) {
+    return elementUtils.getId(element);
+  }).get();
 };
 
 /**
@@ -1945,4 +1562,9 @@ Applab.loadDefaultScreen = function() {
   var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
     $('#divApplab .screen').first().attr('id');
   Applab.changeScreen(defaultScreen);
+};
+
+// Wrap design mode function so that we can call from commands
+Applab.updateProperty = function (element, property, value) {
+  return designMode.updateProperty(element, property, value);
 };

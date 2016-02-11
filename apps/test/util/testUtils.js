@@ -1,4 +1,5 @@
 var chai = require('chai');
+require("babelify/polyfill"); // required for Promises in IE / Phantom
 chai.config.includeStack = true;
 var assert = chai.assert;
 exports.assert = assert;
@@ -128,6 +129,40 @@ exports.runOnAppTick = function (app, tick, fn) {
       fn();
     }
     originalOnTick();
+  });
+};
+
+/**
+ * Check a given predicate every tick, returning a promise that will resolve
+ * when the predicate first evaluates TRUE.  This provides an easy way to
+ * wait for certain asynchronous test setup to complete before checking
+ * assertions.
+ *
+ * @param {Studio|Applab|GameLab} app - actually, any object with an onTick method.
+ * @param {function} predicate
+ * @returns {Promise} to resolve when predicate is true
+ *
+ * @example
+ *   tickAppUntil(Applab, function () {
+ *     return document.getElementById('slow-element');
+ *   }).then(function () {
+ *     assert(document.getElementById('slow-element').textContent === 'pass');
+ *   });
+ */
+exports.tickAppUntil = function (app, predicate) {
+  if (!app || !app.onTick) {
+    throw new Error('Supplied app (' + app + ') does not have an onTick method');
+  }
+
+  var resolved = false;
+  return new Promise(function (resolve) {
+    app.onTick = _.wrap(app.onTick, function (originalOnTick) {
+      if (!resolved && predicate()) {
+        resolve();
+        resolved = true;
+      }
+      originalOnTick();
+    });
   });
 };
 

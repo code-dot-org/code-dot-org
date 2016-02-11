@@ -78,11 +78,6 @@
   congratulations_volunteer: 'Complimenti: ora che hai provato l''Ora del Codice,
     <a href="https://code.org/volunteer">iscriviti come volontario in una scuola</a>
     e aiuta gli studenti a imparare un''Ora del Codice!'
-  course_name_accelerated: Corso rapido
-  course_name_course1: Corso 1
-  course_name_course2: Corso 2
-  course_name_course3: Corso 3
-  course_name_course4: Corso 4
   congratulations_on_completing_course: Congratulazioni per aver completato il %{course}
   congrats_next_tutorials_title: Adesso prova questi corsi
   congrats_next_tutorials_desc: Prova questi corsi più brevi, da 1 ora, oppure prova
@@ -183,7 +178,7 @@
   studiobar_donate_title: Sostienici
   studiobar_donate_body: Per ogni dollaro che dai un bambino ha la possibilità di
     imparare
-  studiobar_shop_title: Acquista
+  studiobar_shop_title: Negozio
   studiobar_shop_body: Rompete gli stereotipi. Indossate con orgoglio il nostro logo.
   homepage_hero_text_malala: |
     &ldquo;Invito le ragazze di ogni singola nazione ad imparare una Ora di Codice
@@ -238,7 +233,7 @@
   homepage_slot_text_teacher: Teacher Dashboard
   homepage_slot_text_studio: Tutti i nostri corsi
   homepage_slot_text_course4: Corso 4
-  homepage_slot_text_shop: Acquista
+  homepage_slot_text_shop: Negozio
   homepage_slot_text_flappy: Flappy
   homepage_action_text_hoc: Un'Ora del Codice per ogni studente.
   homepage_action_text_num_served: "# fatte"
@@ -262,8 +257,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Ulteriori informazioni
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20.000 insegnanti addestrati che ora insegnamento
+    informatica nelle loro classi.
   homepage_banner_20k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
@@ -273,7 +268,7 @@
   homepage_solot_text_link_volunteer: Volontario per l'Ora del Codice
   homepage_slot_text_title_students: Studenti
   homepage_slot_text_blurb_students: Guarda tutti i nostri corsi
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Esplora i nostri corsi
   homepage_slot_text_link_codestudio: Prova Code Studio
   homepage_slot_text_link_local: Trova una classe nella tua zona
   homepage_slot_text_link_othercourses: Altri corsi online

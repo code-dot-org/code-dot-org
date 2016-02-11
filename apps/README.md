@@ -155,7 +155,7 @@ To add a new package using npm, e.g., `lodash`, run: `npm i --save-dev lodash`
 
 We'd love to have you join our group of contributors!
 
-For notes on our pull process, where to find tasks to work on, etc.—see the Dashboard [contribution guide](https://github.com/code-dot-org/dashboard#contributing).
+For notes on our pull process, where to find tasks to work on, etc., see the [Contributing Guide](https://github.com/code-dot-org/code-dot-org/blob/staging/CONTRIBUTING.md).
 
 ### Style Guide
 

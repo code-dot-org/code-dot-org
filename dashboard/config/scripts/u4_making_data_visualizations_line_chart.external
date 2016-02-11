@@ -4,89 +4,59 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 css 'unplugged'
 markdown <<MARKDOWN
-# Making A Line Chart
+# Making a Line Chart
 
-Now, you’ll learn how to take the scatter chart you made in the previous lesson and turn it into a line chart. Line charts are helpful for showing the progression of values over time. In this case, you will be showing how the average movie rating changes with the reviewer’s age.
-
-<hr>
-
-# Change Chart Type
-
-**Do This:** Open the Chart Editor and change the chart type from a scatter chart to a line chart. Don’t forget to make sure both the “Use row 1 as headers” and “Use column A as labels” boxes are checked!
-
-![](https://images.code.org/885cc6830ab21336a0ac45bbcd70a648-image-1453751117056.gif)
-*Change chart type to line chart.*
+You can use many different kinds of charts to look at the same data. You'll now investigate different columns of your data with a **line chart**. Line charts are helpful for showing the progression of values over time. In this case you will be showing how the average movie rating changes with the reviewer’s age.
 
 <hr>
 
-# Add Multiple Lines
+# Select Data
 
-Now it’s time to spice up your chart by adding some additional lines! Let’s add two lines that show the breakdown of average movie rating by gender.
+**Do This:** Select the **“age,”** **“avg rating women,”** and **“avg rating men"** columns.
 
-Open the Chart Editor, and click the “Select data range” icon ([INSERT ICON “Select Rows Icon.PNG”]) to edit the cell selection for your chart.
+* Select the first column of data using the mouse.
+* Hold down the **"Control"** key, (or **"Command"** on a Mac) and select the additional columns of data.
 
-Each column you select will get its own separate “range.” For this chart, you will notice that the “age” and “avg rating” columns are already included in the first range.
+<details><summary>Using Hotkeys</summary>
+To select cells in non-adjacent columns, you need to use some fancy hotkeys: <br><br>
+1. First select the cells from the first column (i.e., A1 through A62) using the SHIFT+click combination. <br>
+2. Then, hold down COMMAND (if using a Mac) or CONTROL (if using Windows) and click to select the first cell of the next column (i.e., D1).<br>
+3. Finally, hold COMMAND/CONTROL **and** SHIFT simultaneously, then click to select the last cell in the new column (i.e., D62).<br>
+4. Repeat steps 2-3 for any additional columns you want to select (i.e., F1 through F62).
+</details><br>
 
-**Do This:** Add two more ranges to your chart: one for “avg rating women” and one for “avg rating men.” Don’t forget to include the column header in your selection! Click “OK” to see the preview of your new chart.
-
-* **Note:** If your chart preview hasn’t refreshed with the new ranges yet, try switching the chart type to another type and then back to a line chart. This will force the chart preview to refresh.
-
-![](https://images.code.org/3931e03496e6a84da9a4ce6c4cba7b39-image-1453751129535.gif)
-*Add new lines for female and male average movie ratings.*
-
-<hr>
-
-# Remove a Line
-
-You may have noticed that, with three lines on one graph, your chart becomes a little cluttered and more difficult to read. Let’s make it easier to compare average rating by gender by removing the line for “avg rating.” 
-
-**Do This:** Open the “Select data range” menu again, and reassign the first range to be ONLY the values from the “age” column (effectively removing the values from the “avg rating” column). Click “OK” to see the new preview of your chart. Notice that it’s now much easier to see the compare the average ratings for men vs. women.
-
-![](https://images.code.org/0007c92e071f0f57535fc787f2271951-image-1453751142038.gif)
-*Remove the “avg rating” line from the chart.*
+![](https://images.code.org/19de3c9486f50fe1fc1aa7fa8a1da283-image-1454102836246.gif)
+*Select the cells to include in the chart.*
 
 <hr>
 
-# Add a Legend
+# Insert Chart
 
-Now that you have multiple lines in the same chart, you need to add the chart legend back in, so people can tell which line is which.
+**Do This:** Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
 
-You may notice that the labels in your legend are not very official-looking. To change the text that appears on the chart, you have to change the text in the column headers themselves.
+* Set the chart type to **“Line chart.”**
+* Check the boxes for **“Use row 1 as headers”** and **“Use column A as labels.”**
+* Click **“Insert”** to add your chart to the spreadsheet.
 
-**Do This:** Add a legend back to your chart, and change the legend labels to “Avg. Rating: Women” and “Avg. Rating: Men.”
-
-![](https://images.code.org/643d7cc496a4f539b33424077f1826c3-image-1453751152919.gif)
-*Add a legend to the chart and change the legend’s labels.*
-
-<hr>
-
-# Adjust Chart Boundaries
-
-Examine both the far right and far left sides of your chart. Notice that both the men’s and women’s lines do not run continuously across the entire graph. The men’s line has a gap on the left side of the chart, and the women’s line ends shortly after age 55 and only has a few dots after that. These discontinuities appear because there are gaps in the data set.
-
-**Do This:** Adjust the boundaries for your chart’s x-axis using the “Min” and “Max” text inputs.
-
-* Set “Min” equal to the smallest age value you want displayed on the x-axis, and set “Max” equal to the largest.
-* Try to minimize the discontinuities shown in your chart while still displaying as much of the two lines as possible.
-* **Note:** Similarly, if you want to adjust the boundaries for the y-axis, select “Left vertical” from the “Axis” dropdown menu and adjust “Min” and “Max” for that axis.
-
-![](https://images.code.org/a504023958e67da2ac5088739f0a2d9b-image-1453751165174.gif)
-*Adjust the minimum and maximum x-values for the chart.*
+![](https://images.code.org/210a6d48dd0266ee192d7cd374839ddf-image-1454102597958.gif)
+*Change chart type and insert your line chart into the spreadsheet.*
 
 <hr>
 
-# Final Result:
+# Do a Visual Check
 
-![](https://images.code.org/72ebfcc249d3493aa87d83504702eacb-image-1453751177869.PNG)
+At this point, your chart should look something like this:
 
-Once your chart looks close to the one above, switch to View mode and take a moment to look at your visualization.
+![](https://images.code.org/87f354db26d09449f68a4fa56cb57352-image-1454102624517.PNG)
+
+Once your chart looks close to the one above, switch to **View** mode and take a moment to look at your visualization.
 
 * What does this chart help you notice about the data?
 * For which ages were the average ratings similar between men and women?
 * For which ages were they different?
 * What other connections and trends can you see from this chart?
 
-After you’ve thought about these questions, move on to the next section to learn how to make a line chart.
+After you’ve thought about these questions, move your line chart off to the side of your spreadsheet. **Don’t delete it!** You will be coming back to it later in the lesson. Then move on to the next section to learn how to make a bar chart.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 

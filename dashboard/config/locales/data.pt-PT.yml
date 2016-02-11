@@ -128,9 +128,9 @@
         maze_2_2: 'Consegues ajudar-me a apanhar o porquinho? Empilha alguns blocos
           "segue em frente" e depois clica em "Executar" para me ajudares a chegar
           até ele. '
-        maze_2_1: Esse porco está me deixando nervoso. Me ajude a encontrá-lo!
-        maze_2_2_5: Desenhe o caminho e leve-me até aquele porco bobalhão. Não passe
-          pelas dinamites, senão penas vão voar!
+        maze_2_1: Este porco está a enervar-me. Ajuda-me a encontrá-lo!
+        maze_2_2_5: Traça o caminho e leva-me até ao porquinho tonto. Não choques
+          com as dinamites, se não ficas sem penas!
         maze_2_3: Leve-me até a maldade verde! (Cuidado com a dinamite)
         maze_2_4: Fique calmo e ajude-me a encontrar o porco mau. Senão eu vou ficar
           zangado!
@@ -776,6 +776,12 @@
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_events: Laboratório - Eventos
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
+        csp_applab_databases_1: Introduction to Databases - Part 1
+        csp_applab_databases_2: Introduction to Databases - Part 2
+        csp_applab_lists_1: Introduction to Lists - Part 1
+        csp_applab_lists_2: Introduction to Lists - Part 2
+        csp_applab_lists_3: Introduction to Lists - Part 3
+        csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
@@ -896,7 +902,7 @@
         frozen_circle_function_with_parameter_circle: Use o bloco "crie um círculo"
           e mude o tamanho.
         frozen_snowflake_branch: Use o bloco "crie uma parte do floco de neve"
-        frozen_create_square: Conecte mais blocos aqui para criar um quadrado
+        frozen_create_square: Arrasta mais blocos para aqui para criares um quadrado
         playlab_drag_say: Arraste o bloco "diga" aqui e digite "olá"
         playlab_use_twice: Use este bloco duas vezes e lembre-se de mudar o número
           do personagem

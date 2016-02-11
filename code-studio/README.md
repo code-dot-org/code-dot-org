@@ -41,6 +41,12 @@ There are other useful commands, like `npm run build-css` or `npm run copy-asset
 
 Tests are found in the [test](test) subdirectory.  Use **`npm test`** to run [Mocha](https://mochajs.org/) tests with [Chai assertions](http://chaijs.com/api/assert/) and [Istanbul](https://github.com/gotwarlost/istanbul) coverage.
 
+To debug tests in the browser, add a `debugger` statement in the test you want
+to debug and invoke **`npm run debug`** from the shell. This will launch the
+Chrome debugger at an initial breakpoint before any tests have any run. Go to
+the source tab, click the run button, and the debugger will stop at your
+breakpoint.
+
 ## Code style
 
 Please follow our [style guide](../STYLEGUIDE.md).  We've set up linting to help:

@@ -1940,10 +1940,7 @@ et:
         Here are regular instructions for a level. There
         is nothing fancy going on here.
       Ryan - 4-5 Bee Conditionals 2_instruction: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Mesilane tahab ainult nektarit praegu. Kõik asjad ei ole lilled, nii et vaata IGA PILVE alla, et näha kas see peidab lille. Kui peidab, siis saad sa nektarit koguda.
       Ryan Test Locked Blocks_instruction: Siin on funktsioon nimega „patrull“. Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor\nexample: \"player_score\" > 6\r\n\r\nPlay the game, and make it past level\n4 to move to the next puzzle. "
       Sam the Butterfly 1 (copy 1)_instruction: |
@@ -2367,9 +2364,9 @@ et:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.

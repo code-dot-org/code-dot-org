@@ -8,9 +8,11 @@ var keyEvent = require('./keyEvent');
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
+var setPropertyDropdown = require('./setPropertyDropdown');
+var assetPrefix = require('../assetManagement/assetPrefix');
 
 var errorHandler = require('./errorHandler');
-var outputApplabConsole = errorHandler.outputApplabConsole;
 var outputError = errorHandler.outputError;
 var ErrorLevel = errorHandler.ErrorLevel;
 var applabTurtle = require('./applabTurtle');
@@ -55,34 +57,44 @@ function isPrimitiveType(value) {
   }
 }
 
+/**
+ * Validates a user function paramer, and outputs error to the console if invalid
+ * @returns {boolean} True if param passed validation.
+ */
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
   var validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
-    if (expectedType === 'color') {
-      // Special handling for colors, must be a string and a valid RGBColor:
-      properType = (typeof varValue === 'string');
-      if (properType) {
-        var color = new RGBColor(varValue);
-        properType = color.ok;
-      }
-    } else if (expectedType === 'uistring') {
-      properType = (typeof varValue === 'string') ||
-                   (typeof varValue === 'number') ||
-                   (typeof varValue === 'boolean');
-    } else if (expectedType === 'number') {
-      properType = (typeof varValue === 'number' ||
-                    (typeof varValue === 'string' && !isNaN(varValue)));
-    } else if (expectedType === 'primitive') {
-      properType = isPrimitiveType(varValue);
-      if (!properType) {
-        // Ensure a descriptive error message is displayed.
-        expectedType = 'string, number, boolean, undefined or null';
-      }
-    } else if (expectedType === 'array') {
-      properType = Array.isArray(varValue);
-    } else {
-      properType = (typeof varValue === expectedType);
+    switch (expectedType) {
+      case 'color':
+        // Special handling for colors, must be a string and a valid RGBColor:
+        properType = (typeof varValue === 'string');
+        if (properType) {
+          var color = new RGBColor(varValue);
+          properType = color.ok;
+        }
+        break;
+      case 'uistring':
+        properType = (typeof varValue === 'string') ||
+          (typeof varValue === 'number') || (typeof varValue === 'boolean');
+        break;
+      case 'number':
+        properType = (typeof varValue === 'number' ||
+          (typeof varValue === 'string' && !isNaN(varValue)));
+        break;
+      case 'primitive':
+        properType = isPrimitiveType(varValue);
+        if (!properType) {
+          // Ensure a descriptive error message is displayed.
+          expectedType = 'string, number, boolean, undefined or null';
+        }
+        break;
+      case 'array':
+        properType = Array.isArray(varValue);
+        break;
+      default:
+        properType = (typeof varValue === expectedType);
+        break;
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
@@ -93,6 +105,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
     }
     opts[validatedTypeKey] = properType;
   }
+  return !!opts[validatedTypeKey];
 }
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
@@ -141,7 +154,13 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var element = document.getElementById(id);
 
     var existsInApplab = Boolean(element && divApplab.contains(element));
-    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+    var options = {
+      allowCodeElements: true,
+      allowDesignPrefix: true,
+      allowDesignElements: true,
+      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+    };
+    var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
@@ -176,10 +195,13 @@ applabCommands.setScreen = function (opts) {
   Applab.changeScreen(opts.screenId);
 };
 
-function reportUnsafeHtml(removed, unsafe, safe) {
+function reportUnsafeHtml(removed, unsafe, safe, warnings) {
   var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
   var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+  if (warnings.length > 0) {
+    msg += '\nwarnings:\n' + warnings.join('\n');
+  }
   outputError(msg, ErrorLevel.WARNING, currentLineNumber);
 }
 
@@ -191,7 +213,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -225,7 +247,8 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
+  newImage.src = assetPrefix.fixPath(opts.src);
+  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -483,11 +506,7 @@ applabCommands.speed = function (opts) {
   // DOCBUG: range is 0-100, not 1-100
   apiValidateTypeAndRange(opts, 'speed', 'value', opts.percent, 'number', 0, 100);
   if (opts.percent >= 0 && opts.percent <= 100) {
-    var sliderSpeed = opts.percent / 100;
-    if (Applab.speedSlider) {
-      Applab.speedSlider.setValue(sliderSpeed);
-    }
-    Applab.scale.stepSpeed = Applab.stepSpeedFromSliderSpeed(sliderSpeed);
+    Applab.setStepSpeed(opts.percent / 100);
   }
 };
 
@@ -697,7 +716,7 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   var image = new Image();
-  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.src = assetPrefix.fixPath(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
     if (!ctx) {
@@ -981,7 +1000,7 @@ applabCommands.getImageURL = function (opts) {
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
     if (element.tagName === 'IMG') {
-      return element.src;
+      return element.getAttribute('data-canonical-image-url');
     } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -998,7 +1017,8 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+    element.src = assetPrefix.fixPath(opts.src);
+    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
@@ -1015,7 +1035,7 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    var url = assetPrefix.fixPath(opts.url);
     if (studioApp.cdoSounds.isPlayingURL(url)) {
       return;
     }
@@ -1048,7 +1068,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
     return true;
   }
   return false;
@@ -1156,6 +1176,35 @@ function setSize_(elementId, width, height) {
     element.style.height = height + 'px';
   }
 }
+
+applabCommands.setProperty = function(opts) {
+  apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
+  apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
+
+  var elementId = opts.elementId;
+  var property = opts.property;
+  var value = opts.value;
+
+  var element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  if (!info) {
+    var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
+    outputError('Cannot set property "' + property + '" on element "' + elementId + '".',
+      ErrorLevel.ERROR, currentLineNumber);
+    return;
+  }
+
+  var valid = apiValidateType(opts, 'setProperty', 'value', opts.value, info.type);
+  if (!valid) {
+    return;
+  }
+
+  Applab.updateProperty(element, info.internalName, value);
+};
 
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');

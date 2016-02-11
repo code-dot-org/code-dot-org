@@ -6,72 +6,55 @@ css 'unplugged'
 
 
 markdown <<MARKDOWN
-# Making A Scatter Plot
+# Making a Scatter Chart
 
-The first type of chart you’re going to build is a **scatter plot**. Scatter plots are useful for finding correlations between two types of data. In this exercise, you will build a chart that shows the correlation between time of day and average movie rating.
-
-<hr>
-
-# Select Cells to Chart
-
-**Do This:** Select the cells you want to use to create your chart. For this chart, you’ll want to use the “age” and “avg rating” columns.
-
-* Make sure you select the columns in that order! The column you select first will be the one that appears along the x-axis.
-* Make sure to **include the column headers** in your selection, as these will be used to label the axes for your chart.
-* Make sure you **do NOT include the row of column totals** (row 63) in your selection.
-	* This row represents a summary of all the columns in the table, but we only want the data from each individual row to be included in our table.
-* **Hint:** To select multiple cells in adjacent columns, select the first cell from the first column you want (ex. A1), then hold down the SHIFT key and select the last cell from the last column you want (ex. B62).
-
-Select **Insert -> Chart** from the main toolbar to open the Chart Editor.
-
-![](https://images.code.org/102888085c2eaf7193663c7010a903e8-image-1453694841433.gif)
-*Select the cells to chart, then open the Chart Editor*
+The first type of chart you’re going to build is a **scatter chart**. Scatter charts are useful for finding relationships between two types of data. In this exercise, you will build a scatter chart that shows the relationship between movie reviewer age and average movie rating.
 
 <hr>
 
-# Set Chart Type
+# Select Data
+
+**Do This:** Select the “age” and “avg rating” columns, as show below.
+
+![](https://images.code.org/ffaca4dab49fa2e0a71d75f4c6f9c2a2-image-1454102458528.gif)<br>
+*Select the "age" and "avg rating" columns*
+
+* **Hint:** To select an entire column, click the top cell (ex. A1), then hold down the "SHIFT" key and select the last cell from the last column you want (ex. B62).
+
+<hr>
+
+# Insert Chart
 
 Google gives suggestions of what kind of chart you can make from your data, but for this exercise you’re going to ignore those suggestions and make the chart yourself.
 
-**Do This:** In the Chart Editor, change the chart type to “Scatter chart."
+**Do This:** Go to the Chart Editor by clicking **Insert -> Chart**.
 
-* Make sure you’ve checked the boxes for “Use row 1 as headers” and “Use column A as labels.”
-	* The first box says to use the text from row 1 to label the line for average movie rating. The second box says to use column A as the x-values for the chart. (Try toggling each box and see how it changes the preview of your graph.)
+* Try a few chart types. Notice the preview changing.
+* Eventually select **"Scatter Chart."**
+* Experiment with the check boxes on the right, and notice how the chart preview changes.
+* Check **"Use row 1 as headers."** This makes sure your chart uses the column names in the first row of your spreadsheet.
+* Check **"Use column A as labels."** This tells the chart that column A is your horizontal or "x" axis.
+* Click **“Insert”** to add your chart to the spreadsheet.
 
-Click “Insert” to add your chart to the spreadsheet. 
-
-![](https://images.code.org/9a7fd7fc33c087bb66da471c0404e43f-image-1453690230289.gif)
+![](https://images.code.org/097d30b261df0204fd6ec0f7a5af58bd-image-1454098624733.gif)
 *Change chart type and insert your scatter chart into the spreadsheet.*
 
 <hr>
 
-# Edit Chart Appearance
+# Do a Visual Check
+At this point, your chart should look something like this:
 
-You’ve now successfully created a chart! Now you’ll fine-tune the appearance of your chart by adjusting the title and axes.
+![](https://images.code.org/3012fe576b9d2a3bf985adf4dd6c4dcd-image-1454098640073.PNG)
 
-**Do This:** Make the following changes to your chart:
-
-* **Change the title label** to “Average Movie Rating by Age of Reviewer.”
-* Since the title of your chart now tells people what you’re graphing, you no longer need the legend to the right of the graph, so **hide the legend.**
-* **Change the horizontal axis title** to “Age” and the **left vertical axis title** to “Movie Rating.”
-	* **Hint:** You will need to right-click the chart to access the axis labels.
-
-![](https://images.code.org/3c275c119ec2e312f1d57767dd5c1dee-image-1453744469388.gif)
-*Change the chart title, hide the legend, and change the axes labels.*
-
-<hr>
-
-# Final Result:
-
-![](https://images.code.org/4e0322ddd7491c8b317990098ed617ec-image-1453689865892.PNG)
-
-Once your chart looks like the one above, take a moment to look at your visualization. You can switch your chart from Edit mode to View mode by toggling the buttons to the right of your chart, which look like this: 
+**Do This:** Take a moment to look at your visualization. You can switch between "View" and "Edit" mode with this button.
 
 ![](https://images.code.org/9aa88eb7c54c2f75dde180a22f3b61f4-image-1453690323325.PNG)
 
+Can you understand what the chart is showing? Even though the title and axis labels are wrong or don’t appear, you should be able to decode the basics of your chart.
+
 * What does this chart help you notice about the data?
-* Which age groups had the highest average ratings?
-* Which age groups had the lowest?
+* Which age groups had the highest average ratings? 
+* Which age groups had the lowest? 
 * What other connections and trends can you see?
 
 After you’ve thought about these questions, move on to the next section to learn how to make a line chart.
