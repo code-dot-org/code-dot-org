@@ -29,3 +29,12 @@ def partner_site?()
   partner_sites = CDO.partners.map{|x|x + '.code.org'}
   return partner_sites.include?(request.site)
 end
+
+def under_13?
+  under_13 = false
+  if dashboard_user
+    age = ((Date.today - dashboard_user[:birthday]) / 365).to_i
+    under_13 = true if age < 13
+  end
+  under_13
+end

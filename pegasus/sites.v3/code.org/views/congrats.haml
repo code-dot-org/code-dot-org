@@ -47,9 +47,10 @@
     %a{:href=>'/volunteer/local'}
       %button= I18n.t(:congrats_guest_speaker_cta)
 
-  %div{:style=>'clear: both; height:30px;'}
-  %hr
-  = view :petition_expand 
+  - unless under_13?
+    %div{:style=>'clear: both; height:30px;'}
+    %hr
+    = view :petition_expand 
 
 = view 'popup_window.js'
 
