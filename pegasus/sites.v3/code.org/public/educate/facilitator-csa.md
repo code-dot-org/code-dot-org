@@ -9,7 +9,7 @@ The ideal CS in Algebra Facilitator is an enthusiastic supporter of computer sci
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub)
 <br/>
 <br/>
 
@@ -26,13 +26,13 @@ For each workshop you host, CS in Algebra Facilitators will receive between $450
 
 
 ## How to become a CS in Algebra Facilitator?
-Become a CS in Algebra Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (Nashville, TN). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Algebra Professional Learning Program throughout the 2016-2017 school year. 
+Become a CS in Algebra Facilitator by attending Code.org's all expense paid Facilitator Summit May 20-22, 2016 (New Orleans, LA). At the Summit, Code.org will prepare facilitators to deliver 3 in-person workshops to local middle school teachers enrolled in Code.org’s CS in Algebra Professional Learning Program throughout the 2016-2017 school year. 
 
 Before applying please carefully review the the [requirements and commitments](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub) for the CS in Algebra Facilitator program.
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1EBZG37H0iYzwYrG32RGRfZHIQBXW9fmWzLABuWd-QAY/pub)
 <br/>
 <br/>
 
