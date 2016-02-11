@@ -97,7 +97,7 @@ def main()
     teachers: {
       with_students: students.join(:followers, student_user_id: :id).select(:followers__user_id).distinct.count,
       with_active_students: thirty_day_active_students.join(:followers, student_user_id: :id).select(:followers__user_id).distinct.count,
-    }
+    },
   })
 end
 
