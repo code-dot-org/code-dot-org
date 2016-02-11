@@ -116,6 +116,7 @@ if (rack_env?(:staging) && CDO.name == 'staging') || rack_env?(:development)
   APPS_TASK = build_task('apps', APPS_DEPENDENCIES + APPS_SOURCE_FILES) do
     RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
     RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
+    Dir.chdir(apps_dir) { RakeUtils.system 'grunt test' }
     RakeUtils.system 'rm', '-rf', dashboard_dir('public/apps-package')
     RakeUtils.system 'cp', '-R', apps_dir('build/package'), dashboard_dir('public/apps-package')
   end

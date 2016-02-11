@@ -4,10 +4,8 @@ module ViewOptionsHelper
     no_header
     no_footer
     small_footer
-    share_footer
-    try_hoc_banner
+    code_studio_logo
     has_i18n
-    no_padding
     white_background
     callouts
     autoplay_video

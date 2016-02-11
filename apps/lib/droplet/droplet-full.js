@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-02-01
+ * Date: 2016-02-10
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -9583,17 +9583,18 @@ Editor.prototype.mark = function(location, style) {
 
 Editor.prototype.unmark = function(key) {
   delete this.markedBlocks[key];
+  this.redrawHighlights();
   return true;
 };
 
 Editor.prototype.unmarkLine = function(line) {
   delete this.markedLines[line];
-  return this.redrawMain();
+  return this.redrawHighlights();
 };
 
 Editor.prototype.clearLineMarks = function() {
   this.markedLines = this.markedBlocks = {};
-  return this.redrawMain();
+  return this.redrawHighlights();
 };
 
 hook('populate', 0, function() {
@@ -13086,7 +13087,7 @@ exports.Container = Container = (function(superClass) {
 
   Container.prototype.getFromTextLocation = function(location) {
     var best, col, head, ref, ref1, ref2, row;
-    head = this.start;
+    head = this.start.next;
     best = head;
     row = 0;
     while (!((head == null) || row === location.row)) {

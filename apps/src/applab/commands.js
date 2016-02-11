@@ -2,13 +2,15 @@ var studioApp = require('../StudioApp').singleton;
 var AppStorage = require('./appStorage');
 var apiTimeoutList = require('../timeoutList');
 var ChartApi = require('./ChartApi');
+var EventSandboxer = require('./EventSandboxer');
 var RGBColor = require('./rgbcolor.js');
 var codegen = require('../codegen');
-var keyEvent = require('./keyEvent');
 var sanitizeHtml = require('./sanitizeHtml');
 var utils = require('../utils');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 var setPropertyDropdown = require('./setPropertyDropdown');
+var assetPrefix = require('../assetManagement/assetPrefix');
 
 var errorHandler = require('./errorHandler');
 var outputError = errorHandler.outputError;
@@ -30,11 +32,11 @@ var applabCommands = module.exports;
 var toBeCached = {};
 
 /**
- * {Object} map from element id to the last mousemove event which occurred on
- * that element. This is used to simulate movementX and movementY for browsers
- * which do not support it natively.
+ * Utility for converting browser events into standardized, sandboxed event
+ * objects for use in student code.
+ * @type {EventSandboxer}
  */
-var lastMouseMoveEventMap = {};
+var eventSandboxer = new EventSandboxer();
 
 /**
  * @param value
@@ -152,7 +154,13 @@ function apiValidateDomIdExistence(opts, funcName, varName, id, shouldExist) {
     var element = document.getElementById(id);
 
     var existsInApplab = Boolean(element && divApplab.contains(element));
-    var existsOutsideApplab = Boolean(element && !divApplab.contains(element));
+    var options = {
+      allowCodeElements: true,
+      allowDesignPrefix: true,
+      allowDesignElements: true,
+      allowTurtleCanvas: Boolean(opts.turtleCanvas)
+    };
+    var existsOutsideApplab = !elementUtils.isIdAvailable(id, options);
 
     var valid = !existsOutsideApplab && (shouldExist == existsInApplab);
 
@@ -187,10 +195,13 @@ applabCommands.setScreen = function (opts) {
   Applab.changeScreen(opts.screenId);
 };
 
-function reportUnsafeHtml(removed, unsafe, safe) {
+function reportUnsafeHtml(removed, unsafe, safe, warnings) {
   var currentLineNumber = getCurrentLineNumber(Applab.JSInterpreter);
   var msg = "The following lines of HTML were modified or removed:\n" + removed +
       "\noriginal html:\n" + unsafe + "\nmodified html:\n" + safe;
+  if (warnings.length > 0) {
+    msg += '\nwarnings:\n' + warnings.join('\n');
+  }
   outputError(msg, ErrorLevel.WARNING, currentLineNumber);
 }
 
@@ -202,7 +213,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -236,7 +247,8 @@ applabCommands.image = function (opts) {
   apiValidateType(opts, 'image', 'url', opts.src, 'string');
 
   var newImage = document.createElement("img");
-  newImage.src = Applab.maybeAddAssetPathPrefix(opts.src);
+  newImage.src = assetPrefix.fixPath(opts.src);
+  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
 
@@ -704,7 +716,7 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   var image = new Image();
-  image.src = Applab.maybeAddAssetPathPrefix(opts.url);
+  image.src = assetPrefix.fixPath(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext("2d");
     if (!ctx) {
@@ -988,7 +1000,7 @@ applabCommands.getImageURL = function (opts) {
   if (divApplab.contains(element)) {
     // We return a URL if it is an IMG element or our special img-upload label
     if (element.tagName === 'IMG') {
-      return element.src;
+      return element.getAttribute('data-canonical-image-url');
     } else if (element.tagName === 'LABEL' && element.className === 'img-upload') {
       var fileObj = element.children[0].files[0];
       if (fileObj) {
@@ -1005,7 +1017,8 @@ applabCommands.setImageURL = function (opts) {
 
   var element = document.getElementById(opts.elementId);
   if (divApplab.contains(element) && element.tagName === 'IMG') {
-    element.src = Applab.maybeAddAssetPathPrefix(opts.src);
+    element.src = assetPrefix.fixPath(opts.src);
+    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
@@ -1022,7 +1035,7 @@ applabCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
-    var url = Applab.maybeAddAssetPathPrefix(opts.url);
+    var url = assetPrefix.fixPath(opts.url);
     if (studioApp.cdoSounds.isPlayingURL(url)) {
       return;
     }
@@ -1055,7 +1068,7 @@ applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
     return true;
   }
   return false;
@@ -1236,95 +1249,14 @@ applabCommands.getYPosition = function (opts) {
   return 0;
 };
 
-function clearLastMouseMoveEvent(e) {
-  var elementId = e.currentTarget && e.currentTarget.id;
-  if (elementId && (typeof lastMouseMoveEventMap[elementId] !== 'undefined')) {
-    delete lastMouseMoveEventMap[elementId];
-  }
-}
-
 applabCommands.onEventFired = function (opts, e) {
   var funcArgs = opts.extraArgs;
   if (typeof e != 'undefined') {
-    var div = document.getElementById('divApplab');
-    var xScale = div.getBoundingClientRect().width / div.offsetWidth;
-    var yScale = div.getBoundingClientRect().height / div.offsetHeight;
-    var xOffset = 0;
-    var yOffset = 0;
-    while (div) {
-      xOffset += div.offsetLeft;
-      yOffset += div.offsetTop;
-      div = div.offsetParent;
-    }
-
-    var applabEvent = {};
-    // Pass these properties through to applabEvent:
-    ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-      'keyLocation', 'location', 'metaKey', 'offsetX',
-      'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = e[prop];
-        }
-      });
-    // Convert x coordinates and then pass through to applabEvent:
-    ['clientX', 'pageX', 'x'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = (e[prop] - xOffset) / xScale;
-        }
-      });
-    // Convert y coordinates and then pass through to applabEvent:
-    ['clientY', 'pageY', 'y'].forEach(
-      function (prop) {
-        if (typeof e[prop] !== 'undefined') {
-          applabEvent[prop] = (e[prop] - yOffset) / yScale;
-        }
-      });
-    // Set movementX and movementY, computing it from clientX and clientY if necessary.
-    // The element must have an element id for this to work.
-    if (typeof e.movementX !== 'undefined' && typeof e.movementY !== 'undefined') {
-      // The browser supports movementX and movementY natively.
-      applabEvent.movementX = e.movementX;
-      applabEvent.movementY = e.movementY;
-    } else if (e.type === 'mousemove') {
-      var currentTargetId = e.currentTarget && e.currentTarget.id;
-      var lastEvent = lastMouseMoveEventMap[currentTargetId];
-      if (currentTargetId && lastEvent) {
-        // Compute movementX and movementY from clientX and clientY.
-        applabEvent.movementX = e.clientX - lastEvent.clientX;
-        applabEvent.movementY = e.clientY - lastEvent.clientY;
-      } else {
-        // There has been no mousemove event on this element since the most recent
-        // mouseout event, or this element does not have an element id.
-        applabEvent.movementX = 0;
-        applabEvent.movementY = 0;
-      }
-      if (currentTargetId) {
-        lastMouseMoveEventMap[currentTargetId] = e;
-      }
-    }
-    // Replace DOM elements with IDs and then add them to applabEvent:
-    ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
-      'toElement'].forEach(
-      function (prop) {
-        if (e[prop]) {
-          applabEvent[prop + "Id"] = e[prop].id;
-        }
-      });
-    // Attempt to populate key property (not yet supported in Chrome/Safari):
-    //
-    // keyup/down has no charCode and can be translated with the keyEvent[] map
-    // keypress can use charCode
-    //
-    var keyProp = e.charCode ? String.fromCharCode(e.charCode) : keyEvent[e.keyCode];
-    if (typeof keyProp !== 'undefined') {
-      applabEvent.key = keyProp;
-    }
+    eventSandboxer.setTransformFromElement(document.getElementById('divApplab'));
+    var applabEvent = eventSandboxer.sandboxEvent(e);
 
     // Push a function call on the queue with an array of arguments consisting
     // of the applabEvent parameter (and any extraArgs originally supplied)
-
     funcArgs = [applabEvent].concat(opts.extraArgs);
   }
   // Call the callback function:
@@ -1422,7 +1354,7 @@ applabCommands.onEvent = function (opts) {
         // movementX and movementY.
         domElement.addEventListener(
           'mouseout',
-          clearLastMouseMoveEvent);
+          eventSandboxer.clearLastMouseMoveEvent.bind(eventSandboxer));
         break;
       default:
         return false;

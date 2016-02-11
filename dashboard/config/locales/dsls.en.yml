@@ -98,6 +98,9 @@ en:
         CSP Student Plan - U1L5 - Sending Bits in the real world: CSP Student Plan - U1L5 - Sending Bits in the real world
         description here: description here
       CSP U4 - Basic Terms: {}
+      CSP Unit 3 - Learning JavaScript Resources:
+        Learning JavaScript Resources: Learning JavaScript Resources
+        description here: description here
       CSPPD PD Phases:
         CSPPD PD Phases: CSPPD PD Phases
       CSPPD PD overview:
@@ -210,6 +213,34 @@ en:
       CSPPD3-u3 tips for prep: {}
       CSPPD3-u3 unit 3 overview: {}
       CSPPD3-u3 what is a challenge: {}
+      CSPPD3-u4 Welcome: {}
+      CSPPD3-u4 breakdown of u4 chunks: {}
+      CSPPD3-u4 challenge overview: {}
+      CSPPD3-u4 chapter 1 concepts: {}
+      CSPPD3-u4 chapter 1 resources: {}
+      CSPPD3-u4 chapter 1 resources pt2: {}
+      CSPPD3-u4 chapter 1 resources pt2 v2: {}
+      CSPPD3-u4 chapter 1 resources pt3: {}
+      CSPPD3-u4 chapter 1 resources pt4: {}
+      CSPPD3-u4 chapter 2 chunk 1: {}
+      CSPPD3-u4 chapter 2 chunk 2: {}
+      CSPPD3-u4 chapter 2 concepts: {}
+      CSPPD3-u4 complete the challenge overview: {}
+      CSPPD3-u4 completing the challenge: {}
+      CSPPD3-u4 do the challenge: {}
+      CSPPD3-u4 list of challenges: {}
+      CSPPD3-u4 overview: {}
+      CSPPD3-u4 pause and reflect: {}
+      CSPPD3-u4 pick a challenge: {}
+      CSPPD3-u4 post survey: {}
+      CSPPD3-u4 post to forum: {}
+      CSPPD3-u4 practice PT: {}
+      CSPPD3-u4 share out overview: {}
+      CSPPD3-u4 tips for prep: {}
+      CSPPD3-u4 unit 4 overview: {}
+      CSPPD3-u4 what is a challenge: {}
+      CSPPD3-u5 intro to u5: {}
+      CSPPD3-u5 what is data: {}
       CSPStudentLessonPlanTemplate:
         description here: description here
         title: title
@@ -224,6 +255,7 @@ en:
       ECS Phase 3 Unit3 Welcome: {}
       ECS Phase 3 Unit4 Welcome: {}
       ECS Phase 3 Welcome: {}
+      ECSD3-u5 do the challenge: {}
       ECSPD 1 page template: {}
       ECSPD Challenge Intro: {}
       ECSPD Challenge Reflection: {}
@@ -439,6 +471,36 @@ en:
       ECSPD what is growth mindset:
         An exploration of Growth Mindset: An exploration of Growth Mindset
         What is Growth Mindset?: What is Growth Mindset?
+      ECSPD3-u5 about: {}
+      ECSPD3-u5 challenge details: {}
+      ECSPD3-u5 challenge inside: {}
+      ECSPD3-u5 complete the challenge overview: {}
+      ECSPD3-u5 connections: {}
+      ECSPD3-u5 day 1-3: {}
+      ECSPD3-u5 day 13: {}
+      ECSPD3-u5 day 14-16: {}
+      ECSPD3-u5 day 17: {}
+      ECSPD3-u5 day 18-20: {}
+      ECSPD3-u5 day 21: {}
+      ECSPD3-u5 day 22-24: {}
+      ECSPD3-u5 day 25: {}
+      ECSPD3-u5 day 26-27: {}
+      ECSPD3-u5 day 28-29: {}
+      ECSPD3-u5 day 30: {}
+      ECSPD3-u5 day 4-5: {}
+      ECSPD3-u5 day 6-7: {}
+      ECSPD3-u5 day 8: {}
+      ECSPD3-u5 day 9-12: {}
+      ECSPD3-u5 intro to u5: {}
+      ECSPD3-u5 lesson overview: {}
+      'ECSPD3-u5 list of challenges ': {}
+      ECSPD3-u5 overview: {}
+      ECSPD3-u5 plan: {}
+      ECSPD3-u5 post survey: {}
+      ECSPD3-u5 post to forum: {}
+      ECSPD3-u5 share out overview: {}
+      ECSPD3-u5 tools: {}
+      ECSPD3-u5 what is a challenge: {}
       ECSU4 Challenge Submission: {}
       Embedded Arduino Sketch Test:
         Embedded Arduino Sketch Test: Embedded Arduino Sketch Test
@@ -2569,6 +2631,18 @@ en:
         I feel like I could teach this right now: I feel like I could teach this right now
         I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
         I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
+      CSPPD3-u4 chapter 1 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u4 chapter 2 checkin:
+        I better understand what these lessons are about: I better understand what these lessons are about
+        I understand what these lessons are about less than I did before I started: I understand what these lessons are about less than I did before I started
+        My understanding of these lessons has not changed: My understanding of these lessons has not changed
+      CSPPD3-u4 unit overview checkin:
+        I feel like I could teach this right now: I feel like I could teach this right now
+        I feel like I need to do A LOT of review of lessons, content, etc before I teach this: I feel like I need to do A LOT of review of lessons, content, etc before I teach this
+        I feel like I need to do SOME review of lessons, content, etc before I teach this: I feel like I need to do SOME review of lessons, content, etc before I teach this
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
@@ -4397,6 +4471,7 @@ en:
       CSPPD3-u2 submit forum link: {}
       CSPPD3-u3 pick a challenge: {}
       CSPPD3-u3 submit forum link: {}
+      CSPPD3-u4 submit forum link: {}
       ECSPD Fence post Q1: {}
       ECSPD Handshake Q1: {}
       ECSPD Online U1D1-2 Assessment 1:
@@ -4451,6 +4526,9 @@ en:
         Classroom Strategies Journal: Classroom Strategies Journal
       ECSPD your goals:
         Documenting Your Goals: Documenting Your Goals
+      ECSPD3-u5 pick a challenge: {}
+      ECSPD3-u5 submit: {}
+      ECSPD3-u5 submit forum link: {}
       ECSU2 Challenge Submission: {}
       ECSU3 Challenge Submission: {}
       ECSU4 Challenge Submission fin: {}

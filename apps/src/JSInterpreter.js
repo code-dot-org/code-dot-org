@@ -1,23 +1,46 @@
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
+
 var codegen = require('./codegen');
+var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
-var _ = utils.getLodash();
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
  * adds stepping, batching of steps, code highlighting, error handling,
  * breakpoints, general debug capabilities (step in, step out, step over), and
  * an optional event queue.
+ * @constructor
+ * @param {!Object} options
+ * @param {!StudioApp} options.studioApp
+ * @param {function} [options.shouldRunAtMaxSpeed]
+ * @param {number} [options.maxInterpreterStepsPerTick]
+ * @param {Object} [options.customMarshalGlobalProperties]
  */
 var JSInterpreter = module.exports = function (options) {
-
   this.studioApp = options.studioApp;
   this.shouldRunAtMaxSpeed = options.shouldRunAtMaxSpeed || function() { return true; };
   this.maxInterpreterStepsPerTick = options.maxInterpreterStepsPerTick || 10000;
-  this.onNextStepChanged = options.onNextStepChanged || function() {};
-  this.onPause = options.onPause || function() {};
-  this.onExecutionError = options.onExecutionError || function() {};
-  this.onExecutionWarning = options.onExecutionWarning || function() {};
   this.customMarshalGlobalProperties = options.customMarshalGlobalProperties || {};
+
+  // Publicly-exposed events that anyone with access to the JSInterpreter can
+  // observe and respond to.
+
+  /** @type {ObservableEvent} */
+  this.onNextStepChanged = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.onPause = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.onExecutionError = new ObservableEvent();
+
+  /** @type {ObservableEvent} */
+  this.onExecutionWarning = new ObservableEvent();
 
   this.paused = false;
   this.yieldExecution = false;
@@ -26,7 +49,26 @@ var JSInterpreter = module.exports = function (options) {
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
+  this.stoppedAtBreakpointRows = [];
+};
 
+/**
+ * Initialize the JSInterpreter, parsing the provided code and preparing to
+ * execute it one step at a time.
+ *
+ * @param {!Object} options - for now, same options passed to the constructor
+ * @param {!string} options.code - Code to be executed by the interpreter.
+ * @param {Array} [options.blocks] - in dropletConfig.blocks format.  If a block
+ *        has a parent property, we will populate that function into the
+ *        interpreter global scope.
+ * @param {Object} [options.blockFilter] - an object with block-name keys that
+ *        should be used to filter which blocks are populated.
+ * @param {Array} [options.globalFunctions] - objects containing functions to
+ *        place in the interpreter global scope.
+ * @param {boolean} [options.enableEvents] - allow the interpreter to define
+ *        event handlers that can be invoked by native code. (default false)
+ */
+JSInterpreter.prototype.parse = function (options) {
   if (!this.studioApp.hideSource) {
     this.codeInfo = {};
     this.codeInfo.userCodeStartOffset = 0;
@@ -108,10 +150,12 @@ var JSInterpreter = module.exports = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
+    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
+    /* jshint nonew:true */
   }
   catch(err) {
-    this.onExecutionError(err);
+    this.handleError(err);
   }
 
 };
@@ -170,10 +214,11 @@ JSInterpreter.prototype.nativeSetCallbackRetVal = function (retVal) {
   // warning since these won't work as expected unless running atMaxSpeed
   if (!this.runUntilCallbackReturn &&
       typeof this.lastCallbackRetVal !== 'undefined') {
-    this.onExecutionWarning("Function passed to onEvent() has taken too long " +
-                            "- the return value was ignored.");
+    this.onExecutionWarning.notifyObservers("Function passed to onEvent() " +
+        "has taken too long - the return value was ignored.");
     if (!this.shouldRunAtMaxSpeed()) {
-      this.onExecutionWarning("  (try moving the speed slider to its maximum value)");
+      this.onExecutionWarning.notifyObservers("  (try moving the speed " +
+          "slider to its maximum value)");
     }
   }
 };
@@ -211,6 +256,52 @@ function safeStepInterpreter(jsi) {
     return err;
   }
 }
+
+/**
+ * Find a bpRow from the "stopped at breakpoint" array by matching the scope
+ *
+ * @param scope scope to match from the list
+ * @param row (Optional) row to match from the list - in addition to scope
+ */
+JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+      if (typeof row === 'undefined' || row === bpRow.row) {
+        return bpRow;
+      }
+    }
+  }
+};
+
+/**
+ * Replace or remove a bpRow from the "stopped at breakpoint" array by matching
+ * the scope
+ *
+ * @param scope scope to match from the list
+ * @param row row to replace in the list. If -1, delete that bpRow
+ */
+JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope, row) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+      if (row === -1) {
+        // Remove from array
+        this.stoppedAtBreakpointRows.splice(i, 1);
+        return;
+      } else {
+        // Update row number
+        bpRow.row = row;
+        return;
+      }
+    }
+  }
+  // Scope not found, insert new object in array:
+  this.stoppedAtBreakpointRows.unshift({
+    row: row,
+    scope: scope
+  });
+};
 
 /**
  * Execute the interpreter
@@ -276,6 +367,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
             this.getUserCodeLine :
             this.selectCurrentCode;
+    var currentScope = this.interpreter.getScope();
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
@@ -300,20 +392,19 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     //       we have already stopped from the last step/breakpoint
     if (inUserCode && !unwindingAfterStep &&
         (atInitialBreakpoint ||
-         (userCodeRow !== this.stoppedAtBreakpointRow &&
-          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+         (codegen.isAceBreakpointRow(session, userCodeRow) &&
+          !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
       // Yes, arrived at a new breakpoint:
       if (this.paused) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
         // out or step over, this will cancel that step operation early)
         this.nextStep = StepType.RUN;
-        this.onNextStepChanged();
+        this.onNextStepChanged.notifyObservers();
       } else {
-        this.onPause();
+        this.onPause.notifyObservers();
       }
       // Store some properties about where we stopped:
-      this.stoppedAtBreakpointRow = userCodeRow;
-      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
 
       // Mark reachedBreak to stop stepping, and start unwinding if needed:
       reachedBreak = true;
@@ -322,17 +413,13 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     // If we've moved past the place of the last breakpoint hit without being
     // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-    if (inUserCode &&
-        userCodeRow !== this.stoppedAtBreakpointRow &&
-        this.interpreter.stateStack.length <= this.stoppedAtBreakpointStackDepth) {
-      delete this.stoppedAtBreakpointRow;
-      delete this.stoppedAtBreakpointStackDepth;
+    if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, -1);
     }
     // If we're unwinding, continue to update the stoppedAtBreakpoint properties
     // to ensure that we have the right properties stored when the unwind completes:
     if (inUserCode && unwindingAfterStep) {
-      this.stoppedAtBreakpointRow = userCodeRow;
-      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
     var err = safeStepInterpreter(this);
     if (!err) {
@@ -406,11 +493,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
             // Our step operation is complete, reset nextStep to StepType.RUN to
             // return to a normal 'break' state:
             this.nextStep = StepType.RUN;
-            this.onNextStepChanged();
+            this.onNextStepChanged.notifyObservers();
             if (inUserCode) {
               // Store some properties about where we stopped:
-              this.stoppedAtBreakpointRow = userCodeRow;
-              this.stoppedAtBreakpointStackDepth = stackDepth;
+              this.replaceStoppedAtBreakpointRowForScope(this.interpreter.getScope(), userCodeRow);
             }
             delete this.stepOutToStackDepth;
             delete this.firstCallStackDepthThisStep;
@@ -419,7 +505,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.onExecutionError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
       this.executeLoopDepth--;
       return;
     }
@@ -430,6 +516,33 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     this.selectCurrentCode();
   }
   this.executeLoopDepth--;
+};
+
+/**
+ * Helper that wraps some error preprocessing before we notify observers that
+ * an execution error has occurred.
+ * @param {!Error} err
+ * @param {number} [lineNumber]
+ */
+JSInterpreter.prototype.handleError = function (err, lineNumber) {
+  if (!lineNumber && err instanceof SyntaxError) {
+    // syntax errors came before execution (during parsing), so we need
+    // to determine the proper line number by looking at the exception
+    lineNumber = err.loc.line;
+    // Now select this location in the editor, since we know we didn't hit
+    // this while executing (in which case, it would already have been selected)
+    codegen.selectEditorRowColError(this.studioApp.editor, lineNumber - 1,
+        err.loc.column);
+  }
+
+  // Select code that just executed:
+  this.selectCurrentCode("ace_error");
+  // Grab line number if we don't have one already:
+  if (!lineNumber) {
+    lineNumber = 1 + this.getNearestUserCodeLine();
+  }
+
+  this.onExecutionError.notifyObservers(err, lineNumber);
 };
 
 /**
@@ -533,7 +646,6 @@ JSInterpreter.prototype.getUserCodeLine = function () {
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
-    var end = node.end - this.codeInfo.userCodeStartOffset;
 
     // Only return a valid userCodeRow if the node being executed is inside the
     // user's code (not inside code we inserted before or after their code that
@@ -562,7 +674,6 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
-    var end = node.end - this.codeInfo.userCodeStartOffset;
 
     // Only return a valid userCodeRow if the node being executed is inside the
     // user's code (not inside code we inserted before or after their code that

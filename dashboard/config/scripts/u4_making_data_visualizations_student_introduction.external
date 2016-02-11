@@ -24,3 +24,7 @@ Good visualizations can help people make sense of data sets that are too large t
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Target Charts: <a href="https://docs.google.com/document/d/1ckcDtJYg8LNjNvtwBey6kbyGOoH5jn1sNP3Em2KR8DQ/" target="_blank">Making Data Visualizations</a>
+MARKDOWN

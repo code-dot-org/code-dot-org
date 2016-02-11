@@ -65,7 +65,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Teachers from Maryland, Boston, and New York will be attending the East Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-east) for your workshop details.
 
 [**Back to the top**](#top)
 
@@ -95,7 +95,7 @@ Quarter 4: Saturday, April 16, 2016
 <br/>
 Breakfast and lunch will be served.
 
-**February 6th Location**
+**April 16th Location**
 
 [Microsoft<br/>
 Music Box 5411<br/>
@@ -138,37 +138,11 @@ Milestone Complete!
 
 
 ### Phase 3: Academic Year Development (2 Saturdays in-person & ~10 hours online) ###
-
-Phase 3 is composed of bi-yearly in-person meetings and monthly online activities. The meetings will continue to build pedagogical strategies and explore the essential elements of CS in Science. You will participate in activities such as teaching new content and keeping the classroom environment equitable and engaging for all students.
-
-
-**Save the dates:**
-
-Semester 1: Saturday, October 3, 2015
-
-Semester 2: Saturday, February 6, 2016
-
-8:00am - 4:00pm
+Milestone Complete!
+<br/><br/>
+**Deadline for Online Coursework is June 30th.**<br/>
 <br/>
-Breakfast and lunch will be served.
-
-**February 6th Location**
-
-[Microsoft<br/>
-Central Park East 6501A<br/>
-11 Times Square<br/>
-New York, NY 10036](https://www.google.com/maps/search/Microsoft,+11+Times+Square,+New+York,+NY+10036/@40.7567826,-73.9906628,18z)
-
-
-**What to bring to Phase 3 bi-yearly sessions:**
-
-Laptop and Charger
-<br/>
-Curriculum guide
-<br/>
-Snacks
-<br/>
-Water
+If you need support while finishing your work or teaching the course, try asking your questions to your peers in the forums [here](http://forum.code.org/c/cs-in-science).
 
 
 [**Back to the top**](#top)

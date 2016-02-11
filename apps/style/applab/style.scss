@@ -1,5 +1,5 @@
 @import "color";
-//@import "mixins"; TODO(bjordan/bbuchanan): fix sprockets?
+@import "mixins";
 @import "style-constants";
 @import "../JsDebuggerUi.scss";
 @import "skins/base.scss";
@@ -211,7 +211,6 @@ div#visualizationResizeBar {
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$root}phone_wireframe.png") center center no-repeat;
   max-width: none !important;
   width: 352px;
   height: 612px;
@@ -240,12 +239,7 @@ div#visualizationResizeBar {
   outline: none;
   -webkit-touch-callout: none;
 
-  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
+  @include user-selects(none);
 }
 
 #divApplab {
@@ -258,7 +252,10 @@ div#visualizationResizeBar {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  // layer 1 is design mode/div applab
+  // layer 2 is items being dragged out from toolbox
+  // layer 3 is overlay
+  z-index: 3;
   pointer-events: none;
   // This is a hack that enables pointer-events: none on this absolutely-
   // positioned SVG element in IE9.
