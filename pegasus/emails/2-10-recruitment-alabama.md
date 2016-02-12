@@ -31,9 +31,8 @@ This is a chance to lead your school and give your students a head start.
 
 
 <br/>
-Hadi Partovi
-
-<br />
+Hadi Partovi<br />
+Founder, Code.org
 <br />
 
 <hr>

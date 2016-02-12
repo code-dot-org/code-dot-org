@@ -441,7 +441,6 @@ div#visualizationResizeBar {
     transform: scale(0.5); } }
 
 #visualizationColumn.wireframeShare {
-  background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
   max-width: none !important;
   width: 352px;
   height: 612px;

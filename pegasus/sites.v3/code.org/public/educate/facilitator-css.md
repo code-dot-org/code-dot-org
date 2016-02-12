@@ -9,7 +9,7 @@ The ideal CS in Science Facilitator is an enthusiastic supporter of computer sci
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub)
 <br/>
 <br/>
 
@@ -31,7 +31,7 @@ Before applying please carefully review the the [requirements and commitments](h
 <br/>
 <br/>
 
-[<button>Appy now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub)
+[<button>Apply now</button>](http://goo.gl/forms/UyRgRu9rnM)&nbsp;&nbsp;[<button>Learn more</button>](https://docs.google.com/document/d/1W7MvJYUlSHwJWoAZa2d5dcS5znbLd1U67icIIfOKAlo/pub)
 <br/>
 <br/>
 

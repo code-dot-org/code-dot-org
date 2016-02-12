@@ -15,6 +15,11 @@ FactoryGirl.define do
     question "MyString"
   end
 
+  factory :survey_result do
+    user { create :teacher }
+    properties {{survey2016_ethnicity_asian: "1"}}
+    properties {{survey2016_foodstamps: "3"}}
+  end
 
   factory :professional_learning_course do
     name "Some course"
