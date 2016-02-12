@@ -651,12 +651,5 @@ ActiveRecord::Schema.define(version: 20160210194205) do
   add_foreign_key "authored_hint_view_requests", "scripts"
   add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
-  add_foreign_key "professional_learning_tasks", "professional_learning_modules"
   add_foreign_key "survey_results", "users"
-  add_foreign_key "user_enrollment_module_assignments", "professional_learning_modules"
-  add_foreign_key "user_enrollment_module_assignments", "user_professional_learning_course_enrollments"
-  add_foreign_key "user_module_task_assignments", "professional_learning_tasks"
-  add_foreign_key "user_module_task_assignments", "user_enrollment_module_assignments"
-  add_foreign_key "user_professional_learning_course_enrollments", "professional_learning_courses"
-  add_foreign_key "user_professional_learning_course_enrollments", "users"
 end
