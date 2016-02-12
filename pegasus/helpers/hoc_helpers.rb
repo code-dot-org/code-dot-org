@@ -181,8 +181,3 @@ def launch_tutorial_pixel(tutorial)
   dont_cache
   send_file pegasus_dir('sites.v3/code.org/public/images/1x1.png'), type: 'image/png'
 end
-
-def complete_csf_course(code)
-  code = "accelerated" if code == "20-hour"
-  redirect "/congrats/#{code}"
-end
