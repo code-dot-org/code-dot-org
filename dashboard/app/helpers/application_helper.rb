@@ -96,8 +96,7 @@ module ApplicationHelper
 
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
-    url_for controller: 'home', action: 'update_user_state',
-            redirect: final_signed_in_root_path(resource_or_scope)
+    update_login_url(redirect: final_signed_in_root_path(resource_or_scope))
   end
 
   private def final_signed_in_root_path(resource_or_scope)

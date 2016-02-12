@@ -1,6 +1,6 @@
 /**
  * @file Helper functions for accessing client state. Each signed-in user has
- * their own client state which persists even across logins.  For signed-out
+ * their own client state which persists even across signins. For signed-out
  * users, each tab has its own client state which goes away as soon as the tab
  * is closed.
  *
@@ -8,18 +8,18 @@
  * setCurrentUserKey with a unique key for the current user, or setAnonymousUser
  * to use temporary state for an anonymous user.
  *
- * Client state is "reasonably" durable but not quite hard state-- the client
- * state module garbage-collects the oldest client state if the total size of
- * the client state exceeds the 5MB browser limit.  In practice this limit will
- * rarely be reached, but in this case this does occur the database typically
- * has the same state and can be used to refill the client state cache.
+ * Client state for logged in users is "reasonably" durable but not quite hard
+ * state-- the client state module garbage-collects the oldest client state
+ * if the total size of the client state exceeds the 5MB browser limit. In
+ * practice this limit will rarely be reached, but in this case this does
+ * occur the database typically has the same state and can be used to refill
+ * the client state cache.
  *
  * Implementation notes:
- *
  * We use the 'lscache' npm module to divide local storage into per-user buckets
- * and to expire the least recently content.
+ * and to expire the least recently storage slots.
  *
- * The current user key for is kept in the 'user_key' slot in localStorage.  For
+ * The current user key for is kept in the 'user_key' slot in localStorage. For
  * unauthenticated users, where the user_key is the empty string, a second
  * 'anon_user_key' slot in *session* storage is used to store a randomly
  * generated temporary key. By using session storage, we ensure that each tab
@@ -55,16 +55,16 @@ var MAX_LINES_TO_SAVE = 1000;
 var ANON_USER_KEY = '';
 
 /**
- * Returns the key for the current user.
+ * Returns the storage key for the current user.
  * @return {string}
  */
-clientState.getUserKey = function() {
-  var key = localStorage.getItem('user_key');
-  if (key == ANON_USER_KEY) {
-    key = sessionStorage.getItem('anon_key');
+function getStorageBucketForCurrentUser() {
+  var userBucket = localStorage.getItem('user_key');
+  if (userBucket == ANON_USER_KEY) {
+    userBucket = sessionStorage.getItem('anon_key');
   }
-  return key;
-};
+  return userBucket;
+}
 
 /** Sets the current user to be anonymous. */
 clientState.setAnonymousUser = function() {
@@ -72,8 +72,8 @@ clientState.setAnonymousUser = function() {
 };
 
 /**
- * Sets the current user storage key, or if key is the empty string, assigns a temporary storage
- * key which will be used only for the current tab.
+ * Sets the current user storage key, or if key is the empty string, assigns a
+ * temporary storage key which will be used only for the current tab.
  * @param key {string} A unique key for the current user, or ANON_USER_KEY.
  */
 clientState.setCurrentUserKey = function(key) {
@@ -82,20 +82,22 @@ clientState.setCurrentUserKey = function(key) {
   }
 
   // Do nothing if the key is the same as the current key.
-  var oldKey = localStorage.getItem('user_key');
-  if (key == oldKey) {
+  if (key == localStorage.getItem('user_key')) {
     return;
-  }
-
-  // Delete anonymous user state when transitioning to a signed-in user.
-  if (oldKey == ANON_USER_KEY) {
-    clientState.reset();
   }
 
   // Remember the new key.
   localStorage.setItem('user_key', key);
 
-  // Generate a random session key if the user is anonymous.
+  // Delete anonymous user state when transitioning to a signed-in user.
+  var anonKey = sessionStorage.getItem('anon_key');
+  if (anonKey) {
+    lscache.setBucket(anonKey);
+    lscache.flush();
+    sessionStorage.removeItem('anon_key');
+  }
+
+  // Generate a random session key if the new current user is anonymous.
   if (key == ANON_USER_KEY) {
     sessionStorage.setItem('anon_key', 'temp_' + Math.random());
   }
@@ -106,7 +108,7 @@ clientState.setCurrentUserKey = function(key) {
  * @return {boolean}
  */
 clientState.isUserKeySet = function() {
-  return sessionStorage.getItem('user_key') !== undefined;
+  return localStorage.getItem('user_key') !== undefined;
 };
 
 /**
@@ -114,11 +116,11 @@ clientState.isUserKeySet = function() {
  * Throws an exception if the current user has not been set.
  */
 function applyUserBucket() {
-  var key = clientState.getUserKey();
-  if (key === undefined) {
+  var bucket = getStorageBucketForCurrentUser();
+  if (bucket === undefined) {
     throw new Error('User key must be set before accessing client state.');
   }
-  lscache.setBucket(key);
+  lscache.setBucket(bucket);
 }
 
 /**
@@ -147,14 +149,6 @@ function setItem(key, value) {
 clientState.reset = function() {
   applyUserBucket();
   lscache.flush();
-};
-
-/***
- * Resets the state of all users and sets an anonymous user, for testing only.
- */
-clientState.resetAllForTest = function() {
-  localStorage.clear();
-  clientState.setAnonymousUser();
 };
 
 /**
@@ -386,7 +380,7 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
 }
 
 /**
- * Creates standardized keys for storing values in sessionStorage.
+ * Creates standardized keys for storing values in localStorage.
  * @param {string} scriptName
  * @param {number} levelId
  * @param {string=} prefix
