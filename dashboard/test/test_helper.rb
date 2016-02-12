@@ -313,3 +313,7 @@ end
 def storage_id(_)
   SecureRandom.hex
 end
+
+def update_signin_url(url)
+  "http://test.host/home/update_user_state?redirect=#{CGI.escape(url)}"
+end

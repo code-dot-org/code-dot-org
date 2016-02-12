@@ -32,7 +32,7 @@ var userKey = null;
  * @param key {string}
  */
 clientState.setCurrentUserKey = function(key) {
-  if (key === null) {
+  if (!key) {
     if (sessionStorage.getItem('is_temp_key') != 'true') {
       sessionStorage.setItem('is_temp_key', 'true');
       sessionStorage.setItem('user_key', 'temp_' + Math.random());
@@ -45,19 +45,26 @@ clientState.setCurrentUserKey = function(key) {
     sessionStorage.setItem('is_temp_key', 'false');
     sessionStorage.setItem('user_key', key);
   }
+  console.log("Set key to " + clientState.getUserKey());
 };
 
+/**
+ * Return true if the user key has been set.
+ */
+clientState.isUserKeySet = function() {
+  return !!sessionStorage.getItem('user_key');
+};
 
-function getUserKey() {
+clientState.getUserKey = function() {
   var key = sessionStorage.getItem('user_key');
-  if (key === null) {
+  if (!key) {
     throw 'User key not set, setCurrentUserKey must be called first.';
   }
   return key;
-}
+};
 
 function applyUserBucket() {
-  lscache.setBucket(getUserKey());
+  lscache.setBucket(clientState.getUserKey());
 }
 
 function getItem(key) {
