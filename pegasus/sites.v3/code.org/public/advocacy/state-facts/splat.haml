@@ -141,6 +141,10 @@ theme: pdf
       %ol
         %li Call on your school to expand computer science offerings at every grade level.
         %li Ask your local school district to allow computer science courses to satisfy a core math or science requirement.
+        %li 
+          Visit
+          %a{href: "https://code.org/educate/3rdparty"} https://code.org/educate/3rdparty
+          to find out about courses and curriculum from a variety of third parties, including Code.org.
         %li
           Visit
           %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
@@ -167,27 +171,26 @@ theme: pdf
       - if state_info[:num_affiliates_i] + state_info[:num_elementary_trained_i] != 0
         %li
           - if state_info[:num_affiliates_i] == 0
-            There are no Code.org affiliates in the state to offer professional development for elementary teachers.
+            There are no Code.org K-12 facilitators in the state to offer professional learning for elementary teachers.
           - else
             - if state_info[:num_elementary_trained_i] == 0
               There are
               = state_info[:num_affiliates_i]
-              Code.org Affiliates that offer professional development for elementary teachers in
+              Code.org K-12 facilitators that offer professional learning for elementary teachers in
               = state_info[:state_name_s]
             - else
               = format_integer_with_commas(state_info[:num_affiliates_i])
               Code.org
               - if state_info[:num_affiliates_i] == 1
-                Affiliate,
+                K-12 facilitator
               - else
-                Affiliates,
-              offering professional development for elementary teachers in
-              = succeed ',' do
-                = state_info[:state_name_s]
+                K-12 facilitators
+              in
+              = state_info[:state_name_s]
               - if state_info[:num_affiliates_i] == 1
-                has already trained
+                has provided professional learning for
               - else
-                have already trained
+                have provided professional learning for
               %b
                 = format_integer_with_commas(state_info[:num_elementary_trained_i])
                 elementary
@@ -197,7 +200,7 @@ theme: pdf
                   teachers.
       - if state_info[:num_ms_trained_i] + state_info[:num_hs_trained_i] != 0
         %li
-          Code.org has trained
+          Code.org has provided professional learning for 
           %b
             = format_integer_with_commas(state_info[:num_ms_trained_i])
             middle school
@@ -395,5 +398,5 @@ theme: pdf
         %a{href: "https://twitter.com/codeorg"} Twitter
     %div
       %p Launched in 2013, Code.org® is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science.
-    %p.clear-both.sources Data is from the Conference Board, the Bureau of Labor Statistics, the College Board, the National Science Foundation, the National Center for Education Statistics, and the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education.
+    %p.clear-both.sources Data is from the Conference Board for job demand, the Bureau of Labor Statistics for state salary and national job projections data, the College Board for AP exam data, the National Center for Education Statistics for university graduate data, the Gallup research study Searching for Computer Science: Access and Barriers in K-12 Education for schools that offer computer science and parent demand, and Code.org for its own courses, professional learning programs, and participation data.
 

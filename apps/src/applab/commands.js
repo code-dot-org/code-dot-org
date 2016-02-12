@@ -1365,25 +1365,20 @@ applabCommands.onEvent = function (opts) {
 };
 
 applabCommands.onHttpRequestEvent = function (opts) {
-  // Ensure that this event was requested by the same instance of the interpreter
-  // that is currently active before proceeding...
-  if (opts.JSInterpreter === Applab.JSInterpreter) {
-    if (this.readyState === 4) {
-      // Call the callback function:
-      opts.func.call(
-          null,
-          Number(this.status),
-          String(this.getResponseHeader('content-type')),
-          String(this.responseText)
-      );
-    }
+  if (this.readyState === 4) {
+    // Call the callback function:
+    opts.func.call(
+        null,
+        Number(this.status),
+        String(this.getResponseHeader('content-type')),
+        String(this.responseText)
+    );
   }
 };
 
 applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'url', opts.url, 'string');
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
-  opts.JSInterpreter = Applab.JSInterpreter;
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
   req.open('GET', opts.url, true);
@@ -1434,7 +1429,6 @@ applabCommands.createRecord = function (opts) {
   apiValidateType(opts, 'createRecord', 'record.id', opts.record.id, 'undefined');
   apiValidateType(opts, 'createRecord', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'createRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.createRecord(opts.table, opts.record, onSuccess, onError);
@@ -1451,7 +1445,6 @@ applabCommands.getKeyValue = function(opts) {
   apiValidateType(opts, 'getKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.getKeyValue(opts.key, onSuccess, onError);
@@ -1463,13 +1456,29 @@ applabCommands.handleReadValue = function(opts, value) {
   }
 };
 
+applabCommands.getKeyValueSync = function(opts) {
+  apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
+  var onSuccess = handleGetKeyValueSync.bind(this, opts);
+  var onError = handleGetKeyValueSyncError.bind(this, opts);
+  AppStorage.getKeyValue(opts.key, onSuccess, onError);
+};
+
+var handleGetKeyValueSync = function(opts, value) {
+  opts.callback(value);
+};
+
+var handleGetKeyValueSyncError = function(opts, message) {
+  // Call callback with no value parameter (sync func will return undefined)
+  opts.callback();
+  Applab.log(message);
+};
+
 applabCommands.setKeyValue = function(opts) {
   // PARAMNAME: setKeyValue: callback vs. callbackFunction
   apiValidateType(opts, 'setKeyValue', 'key', opts.key, 'string');
   apiValidateType(opts, 'setKeyValue', 'value', opts.value, 'primitive');
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
@@ -1481,6 +1490,25 @@ applabCommands.handleSetKeyValue = function(opts) {
   }
 };
 
+applabCommands.setKeyValueSync = function(opts) {
+  apiValidateType(opts, 'setKeyValueSync', 'key', opts.key, 'string');
+  apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
+  var onSuccess = handleSetKeyValueSync.bind(this, opts);
+  var onError = handleSetKeyValueSyncError.bind(this, opts);
+  AppStorage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+};
+
+var handleSetKeyValueSync = function(opts) {
+  // Return 'true' to indicate the setKeyValueSync succeeded
+  opts.callback(true);
+};
+
+var handleSetKeyValueSyncError = function(opts, message) {
+  // Return 'false' to indicate the setKeyValueSync failed
+  opts.callback(false);
+  Applab.log(message);
+};
+
 applabCommands.readRecords = function (opts) {
   // PARAMNAME: readRecords: table vs. tableName
   // PARAMNAME: readRecords: callback vs. callbackFunction
@@ -1489,7 +1517,6 @@ applabCommands.readRecords = function (opts) {
   apiValidateType(opts, 'readRecords', 'searchTerms', opts.searchParams, 'object');
   apiValidateType(opts, 'readRecords', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'readRecords', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
@@ -1509,7 +1536,6 @@ applabCommands.updateRecord = function (opts) {
   apiValidateTypeAndRange(opts, 'updateRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'updateRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'updateRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.updateRecord(opts.table, opts.record, onComplete, onError);
@@ -1529,7 +1555,6 @@ applabCommands.deleteRecord = function (opts) {
   apiValidateTypeAndRange(opts, 'deleteRecord', 'record.id', opts.record.id, 'number', 1, Infinity);
   apiValidateType(opts, 'deleteRecord', 'callback', opts.onComplete, 'function', OPTIONAL);
   apiValidateType(opts, 'deleteRecord', 'onError', opts.onError, 'function', OPTIONAL);
-  opts.JSInterpreter = Applab.JSInterpreter;
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
   var onError = errorHandler.handleError.bind(this, opts);
   AppStorage.deleteRecord(opts.table, opts.record, onComplete, onError);

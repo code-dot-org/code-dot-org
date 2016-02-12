@@ -66,6 +66,7 @@
   congrats_next_tutorials_title: "Try these courses next"
   congrats_next_tutorials_desc: "Try these shorter, 1 hour tutorials or try a <a href=\"%{current_path}/next\">partner tutorial</a>."
   get_a_certificate_of_achievement: "Get a certificate of achievement"
+  view_course: "View course"
   congrats_guest_speaker_title: "Find a guest speaker for your classroom"
   congrats_guest_speaker_desc: "Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat."
   congrats_guest_speaker_cta: "Find a guest speaker"

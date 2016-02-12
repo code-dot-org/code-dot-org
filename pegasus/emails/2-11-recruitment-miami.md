@@ -5,7 +5,7 @@ subject: "Bring computer science into your Miami classroom"
 
 Miami educator,
 
-Code.org has partnered with districts in Miami to bring computer science to your students, at all K-12 levels.
+Code.org has partnered with districts around Miami to bring computer science to your students, at all K-12 levels.
 
 You *don’t* need any prior exposure to computer science to participate. If you’re curious about technology and want the skills to teach computer science to your students, you’ll get everything you need with high-quality professional learning — at no cost to you or your school. 
 

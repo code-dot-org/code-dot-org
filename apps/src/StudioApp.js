@@ -37,13 +37,13 @@ var WireframeSendToPhone = require('./templates/WireframeSendToPhone.jsx');
 var assetsApi = require('./clientApi').assets;
 var assetPrefix = require('./assetManagement/assetPrefix');
 var assetListStore = require('./assetManagement/assetListStore');
+var copyrightStrings;
 
 /**
 * The minimum width of a playable whole blockly game.
 */
 var MIN_WIDTH = 900;
-var MOBILE_SHARE_WIDTH_PADDING = 50;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 320;
 var MAX_VISUALIZATION_WIDTH = 400;
 var MIN_VISUALIZATION_WIDTH = 200;
 
@@ -253,11 +253,12 @@ StudioApp.prototype.init = function(config) {
   }
 
   config.getCode = this.getCode.bind(this);
+  copyrightStrings = config.copyrightStrings;
 
   if (config.isLegacyShare && config.hideSource) {
     $("body").addClass("legacy-share-view");
     if (dom.isMobile()) {
-      $('#tryHoc').hide();
+      $('#main-logo').hide();
     }
     if (dom.isIOS() && !window.navigator.standalone) {
       addToHome.show(true);
@@ -543,6 +544,57 @@ StudioApp.prototype.init = function(config) {
       return true;
     }.bind(this));
   }
+
+  if (config.isLegacyShare && config.hideSource) {
+    this.setupLegacyShareView();
+  }
+};
+
+/**
+ * Create a phone frame and container. Scale shared content (everything currently inside the visualization column)
+ * to container width, fit container to the phone frame and add share footer.
+ */
+StudioApp.prototype.setupLegacyShareView = function() {
+  var vizContainer = document.createElement('div');
+  vizContainer.id = 'visualizationContainer';
+  var vizColumn = document.getElementById('visualizationColumn');
+  if (dom.isMobile()) {
+    $(vizContainer).width($(vizColumn).width());
+  }
+  $(vizContainer).append(vizColumn.children);
+
+  var phoneFrameScreen = document.createElement('div');
+  phoneFrameScreen.id = 'phoneFrameScreen';
+  $(phoneFrameScreen).append(vizContainer);
+  $(vizColumn).append(phoneFrameScreen);
+
+  this.renderShareFooter_(phoneFrameScreen);
+  if (dom.isMobile) {
+    // re-scale on resize events to adjust to orientation and navbar changes
+    $(window).resize(this.scaleLegacyShare);
+  }
+  this.scaleLegacyShare();
+};
+
+StudioApp.prototype.scaleLegacyShare = function() {
+  var vizContainer = document.getElementById('visualizationContainer');
+  var vizColumn = document.getElementById('visualizationColumn');
+  var phoneFrameScreen = document.getElementById('phoneFrameScreen');
+  var vizWidth = $(vizContainer).width();
+
+  // On mobile, scale phone frame to full screen (portrait). Otherwise use given dimensions from css.
+  if (dom.isMobile()) {
+    var screenWidth = Math.min(window.innerWidth, window.innerHeight);
+    var screenHeight = Math.max(window.innerWidth, window.innerHeight);
+    $(phoneFrameScreen).width(screenWidth);
+    $(phoneFrameScreen).height(screenHeight);
+    $(vizColumn).width(screenWidth);
+  }
+
+  var frameWidth = $(phoneFrameScreen).width();
+  var scale = frameWidth / vizWidth;
+  applyTransformOrigin(vizContainer, 'left top');
+  applyTransformScale(vizContainer, 'scale(' + scale + ')');
 };
 
 StudioApp.prototype.substituteInstructionImages = function(htmlText) {
@@ -657,6 +709,53 @@ StudioApp.prototype.handleSharing_ = function (options) {
     });
     belowVisualization.appendChild(upSale);
   }
+};
+
+StudioApp.prototype.renderShareFooter_ = function(container) {
+  var footerDiv = document.createElement('div');
+  footerDiv.setAttribute('id', 'footerDiv');
+  container.appendChild(footerDiv);
+
+  var reactProps = {
+    i18nDropdown: '',
+    copyrightInBase: false,
+    copyrightStrings: copyrightStrings,
+    baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
+    baseStyle: {
+      paddingLeft: 0,
+      width: $("#visualization").width()
+    },
+    className: 'dark',
+    menuItems: [
+      {
+        text: window.dashboard.i18n.t('footer.try_hour_of_code'),
+        link: 'https://code.org/learn',
+        newWindow: true
+      },
+      {
+        text: window.dashboard.i18n.t('footer.how_it_works'),
+        link: location.href + "/edit",
+        newWindow: false
+      },
+      {
+        text: window.dashboard.i18n.t('footer.copyright'),
+        link: '#',
+        copyright: true
+      },
+      {
+        text: window.dashboard.i18n.t('footer.tos'),
+        link: "https://code.org/tos",
+        newWindow: true
+      },
+      {
+        text: window.dashboard.i18n.t('footer.privacy'),
+        link: "https://code.org/privacy",
+        newWindow: true
+      }
+    ]
+  };
+
+  window.dashboard.footer.render(React, reactProps, footerDiv);
 };
 
 /**
@@ -1121,10 +1220,18 @@ StudioApp.prototype.onMouseDownVizResizeBar = function (event) {
 
 function applyTransformScaleToChildren(element, scale) {
   for (var i = 0; i < element.children.length; i++) {
-    element.children[i].style.transform = scale;
-    element.children[i].style.msTransform = scale;
-    element.children[i].style.webkitTransform = scale;
+    applyTransformScale(element.children[i], scale);
   }
+}
+function applyTransformScale(element, scale) {
+  element.style.transform = scale;
+  element.style.msTransform = scale;
+  element.style.webkitTransform = scale;
+}
+function applyTransformOrigin(element, origin) {
+  element.style.transformOrigin = origin;
+  element.style.msTransformOrigin = origin;
+  element.style.webkitTransformOrigin = origin;
 }
 
 /**
@@ -1445,15 +1552,13 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function (viewport, config) {
   if (this.share && dom.isMobile()) {
     var mobileNoPaddingShareWidth =
       config.mobileNoPaddingShareWidth || DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH;
-    // for mobile sharing, don't assume landscape mode, use screen.width
-    deviceWidth = desiredWidth = screen.width;
-    if (this.noPadding && screen.width < MAX_PHONE_WIDTH) {
+    // for mobile sharing, favor portrait mode, so width is the shorter of the two
+    deviceWidth = desiredWidth = Math.min(screen.width, screen.height);
+    if (this.noPadding && deviceWidth < MAX_PHONE_WIDTH) {
       desiredWidth = Math.min(desiredWidth, mobileNoPaddingShareWidth);
     }
-    minWidth = mobileNoPaddingShareWidth +
-      (this.noPadding ? 0 : MOBILE_SHARE_WIDTH_PADDING);
-  }
-  else {
+    minWidth = mobileNoPaddingShareWidth;
+  } else {
     // assume we are in landscape mode, so width is the longer of the two
     deviceWidth = desiredWidth = Math.max(screen.width, screen.height);
     minWidth = MIN_WIDTH;
@@ -1633,13 +1738,13 @@ StudioApp.prototype.handleHideSource_ = function (options) {
   if (this.share) {
     if (options.isLegacyShare || this.wireframeShare) {
       document.body.style.backgroundColor = '#202B34';
-    }
-    if (this.wireframeShare) {
-      if (dom.isMobile() && !dom.isIPad()) {
-        document.getElementById('visualizationColumn').className = 'chromelessShare';
+
+      $('.header-wrapper').hide();
+      var vizColumn = document.getElementById('visualizationColumn');
+      if (dom.isMobile() && (options.isLegacyShare || !dom.isIPad())) {
+        $(vizColumn).addClass('chromelessShare');
       } else {
-        document.getElementsByClassName('header-wrapper')[0].style.display = 'none';
-        document.getElementById('visualizationColumn').className = 'wireframeShare';
+        $(vizColumn).addClass('wireframeShare');
 
         var div = document.createElement('div');
         document.body.appendChild(div);
@@ -1648,27 +1753,26 @@ StudioApp.prototype.handleHideSource_ = function (options) {
           appType: dashboard.project.getStandaloneApp()
         }), div);
       }
-    } else if (!options.embed && !dom.isMobile()) {
-      var runButton = document.getElementById('runButton');
-      var buttonRow = runButton.parentElement;
-      var openWorkspace = document.createElement('button');
-      openWorkspace.setAttribute('id', 'open-workspace');
-      openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
-      dom.addClickTouchEvent(openWorkspace, function() {
-        // TODO: don't make assumptions about hideSource during init so this works.
-        // workspaceDiv.style.display = '';
+      if (!options.embed) {
+        var runButton = document.getElementById('runButton');
+        var buttonRow = runButton.parentElement;
+        var openWorkspace = document.createElement('button');
+        openWorkspace.setAttribute('id', 'open-workspace');
+        openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
 
-        // /c/ URLs go to /edit when we click open workspace.
-        // /project/ URLs we want to go to /view (which doesnt require login)
-        if (/^\/c\//.test(location.pathname)) {
-          location.href += '/edit';
-        } else {
-          location.href += '/view';
-        }
-      });
+        dom.addClickTouchEvent(openWorkspace, function () {
+          // /c/ URLs go to /edit when we click open workspace.
+          // /project/ URLs we want to go to /view (which doesnt require login)
+          if (/^\/c\//.test(location.pathname)) {
+            location.href += '/edit';
+          } else {
+            location.href += '/view';
+          }
+        });
 
-      buttonRow.appendChild(openWorkspace);
+        buttonRow.appendChild(openWorkspace);
+      }
     }
   }
 };
