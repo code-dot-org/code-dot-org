@@ -383,27 +383,21 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update karel data properly" do
     game = Game.find_by_name("CustomMaze")
     maze_array = [
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, '+5', 1, '-5', 0, 0],
-      [0, 0, 0, '+5', 0, '-5', 0, 0],
-      [0, 0, 0, '+5', 0, '-5', 0, 0],
-      [0, 0, 2, 1, 0, '-5', 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]]
+      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 2}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 1, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 2, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 3, "range": 1}, {"tileType": 1, "featureType": 1, "value": 1, "cloudType": 4, "range": 1}, {"tileType": 1}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
+      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
+    ]
     post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Karel'}, :game_id => game.id, :size => 8
     my_level = Level.find_by(name: 'NewCustomLevel')
 
     patch :update, :level => {:maze_data => maze_array.to_json}, id: my_level, game_id: game.id
-    maze_json = JSON.parse(Level.find_by(name: 'NewCustomLevel').maze)
-    maze_array[0][0] = '+2'
-    maze_array[2][0] = 1
-
-    patch :update, :level => {:maze_data => maze_array.to_json}, id: my_level, game_id: game.id
-    new_maze = JSON.parse(Level.find_by(name: 'NewCustomLevel').maze)
-    maze_json[0][0] = 1
-    maze_json[2][0] = 1
-    assert_equal maze_json, new_maze
+    new_maze = Level.find_by(name: 'NewCustomLevel').serialized_maze
+    assert_equal maze_array.to_json, new_maze
   end
 
   test 'should show match level' do
