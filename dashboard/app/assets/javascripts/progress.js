@@ -49,16 +49,20 @@ window.dashboard.progress = (function () {
 
   progress.populateProgress = function (scriptName) {
 
-    var userKeySet = dashboard.clientState.isUserKeySet();
+    var userKeyAlreadySet = dashboard.clientState.isUserKeySet();
     var clientProgress;
-    if (userKeySet) {
+    if (userKeyAlreadySet) {
       clientProgress = progress.populateClientProgress(scriptName);
     }
 
     $.ajax('/api/user_progress/' + scriptName).done(function (data) {
       data = data || {};
-      dashboard.clientState.setCurrentUserKey(data.user_id);
-      if (!userKeySet) {
+      if (data.user_id) {
+        dashboard.clientState.setCurrentUserKey(data.user_id);
+      } else {
+        dashboard.clientState.setAnonymousUser();
+      }
+      if (!userKeyAlreadySet) {
         clientProgress = progress.populateClientProgress(scriptName);
       }
 

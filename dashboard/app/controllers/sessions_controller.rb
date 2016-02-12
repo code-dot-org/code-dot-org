@@ -30,8 +30,7 @@ class SessionsController < Devise::SessionsController
   # Sign out occurs in two steps: first we visit a dashboard page that clears the signed in user
   # state, then we go to the final destination.
   def after_sign_out_path_for(resource_or_scope)
-    url_for controller: 'home', action: 'update_user_state',
-            redirect: final_after_sign_out_path_for(resource_or_scope)
+    update_login_url(redirect: final_after_sign_out_path_for(resource_or_scope))
   end
 
   private def final_after_sign_out_path_for(resource_or_scope)

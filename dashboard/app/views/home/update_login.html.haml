@@ -3,6 +3,6 @@
     dashboard.clientState.setCurrentUserKey('#{current_user.id}');
 - else
   :javascript
-    dashboard.clientState.setCurrentUserKey(null);
+    dashboard.clientState.setAnonymousUser();
 :javascript
   document.location = '#{@redirect}'

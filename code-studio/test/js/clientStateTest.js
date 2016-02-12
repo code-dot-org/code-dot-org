@@ -10,7 +10,8 @@ var chai = require('chai');
 chai.should();
 
 function resetState() {
-  state.resetAllForTest();
+  state.setAnonymousUser();
+  state.reset();
 }
 
 describe("clientState#sourceForLevel", function() {

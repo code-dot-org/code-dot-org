@@ -88,6 +88,7 @@ Dashboard::Application.routes.draw do
   get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
+  get '/update_login', to: 'home#update_login'
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/home/:action', controller: 'home'
