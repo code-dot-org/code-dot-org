@@ -10,11 +10,9 @@ class LevelSourcesController < ApplicationController
   before_action :set_level_source
 
   def show
-    view_options share_footer: true
     if params[:embed]
       # embed only the play area (eg. ninjacat)
       level_view_options hide_source: true
-      @is_legacy_share = true
       level_view_options(
         embed: true,
         share: false,
@@ -25,7 +23,7 @@ class LevelSourcesController < ApplicationController
     else
       # sharing
       level_view_options hide_source: true
-      view_options(no_header: true, try_hoc_banner: true)
+      view_options(no_header: true, no_footer: true, code_studio_logo: true)
       @is_legacy_share = true
     end
   end
