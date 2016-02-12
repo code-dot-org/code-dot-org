@@ -3,7 +3,7 @@ from: 'Hadi Partovi <hadi_partovi@code.org>'
 subject: "Bring computer science into your Northern Maryland classroom"
 ---
 
-Northern Maryland educator,
+Maryland educator,
 
 Code.org has partnered with districts in Northern Maryland to bring computer science to your students, at all K-12 levels.
 
