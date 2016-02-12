@@ -1,7 +1,7 @@
 // Useful mixins, especially for stuff that's browser-prefix heavy.
 // Could always use something like Prefixr for this instead...
 
-@mixin user-select($val) {
+@mixin user-selects($val) {
   -webkit-user-select: $val;
   -khtml-user-select: $val;
   -moz-user-select: $val;

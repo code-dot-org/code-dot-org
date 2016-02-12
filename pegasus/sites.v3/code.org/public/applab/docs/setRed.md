@@ -60,9 +60,12 @@ ____________________________________________________
 // Swap green to red, blue to green, red to blue.
 createCanvas('canvas1');
 drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
-var imageData = getImageData(0, 0, 175, 200);
-putImageData(swapRedGreenBlue(imageData), 0, 225);
-
+button("id", "Swap Colors");
+setPosition('id', 200, 0);
+onEvent("id", "click", function() {
+  var imageData = getImageData(0, 0, 175, 200);
+  putImageData(swapRedGreenBlue(imageData), 0, 225);
+});
 function swapRedGreenBlue(thisImageData){
     for(var y=0; y < thisImageData.height; y++) {
         for(var x=0; x < thisImageData.width; x++) {

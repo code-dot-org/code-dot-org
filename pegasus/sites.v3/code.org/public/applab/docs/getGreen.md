@@ -91,8 +91,12 @@ ____________________________________________________
 // Halve all green values in the canvas.
 createCanvas('canvas1');
 drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
-var imageData = getImageData(0, 0, 320, 480);
-halveGreen(imageData);
+button("id", "Halve Green");
+setPosition('id', 200, 0);
+onEvent("id", "click", function() {
+  var imageData = getImageData(0, 0, 320, 480);
+  halveGreen(imageData);
+});
 
 // Halves the green in every pixel from 'thisImageData' argument. Updates the image row by row.
 function halveGreen(thisImageData){
