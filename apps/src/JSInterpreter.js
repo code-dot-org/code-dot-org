@@ -434,10 +434,10 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     var err = safeStepInterpreter(this);
     if (!err) {
-      var nodeType = this.interpreter.stateStack[0].node.type;
+      var state = this.interpreter.stateStack[0], nodeType = state.node.type;
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
       if (inUserCode) {
-        doneUserLine = doneUserLine || this.atInterstitialNode;
+        doneUserLine = doneUserLine || (state.done || this.atInterstitialNode);
       }
 
       var stackDepth = this.interpreter.stateStack.length;
@@ -451,14 +451,14 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       }
       this.maxValidCallExpressionDepth = stackDepth;
 
-      if (inUserCode && nodeType === "CallExpression") {
+      if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
         // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
         this.callExpressionSeenAtDepth[stackDepth] = true;
       }
 
       if (this.paused) {
         // Store the first call expression stack depth seen while in this step operation:
-        if (inUserCode && nodeType === "CallExpression") {
+        if (inUserCode && this.interpreter.stateStack[0].node.type === "CallExpression") {
           if (typeof this.firstCallStackDepthThisStep === 'undefined') {
             this.firstCallStackDepthThisStep = stackDepth;
           }
