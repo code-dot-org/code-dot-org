@@ -345,16 +345,16 @@ describe('generateDropletModeOptions', function () {
         },
         "setKeyValueSync": {
           "color": "#D3E965",
-          "title": "setKeyValue"
+          "title": "setKeyValueSync"
         },
         "getKeyValue": {
           "color": "#D3E965",
           "title": "getKeyValue"
         },
         "getKeyValueSync": {
-          "value": true,
           "color": "#D3E965",
-          "title": "getKeyValue"
+          "title": "getKeyValueSync",
+          "value": true
         },
         "createRecord": {
           "color": "#D3E965",
