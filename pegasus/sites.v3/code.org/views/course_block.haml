@@ -1,0 +1,14 @@
+- url = CDO.studio_url("/s/#{id}")
+- title = I18n.t("#{id}_name")
+- body = I18n.t("#{id}_shortdescription_congrats")
+- img_src =  CDO.code_org_url("/shared/images/courses/fit-200/logo_#{id}.jpg")
+
+.courseblock-span6.courseblock-wide-large{style: "height: 280px;"}
+  %a{:href=>url}
+    %img.courseblock-span2.imgspan{src: img_src, style: "margin-right: 10px;"}
+    .courseblock-span4.heading
+      %h3= title
+      %h4= I18n.t("#{id}_gradelevel")
+      .smalltext= body
+    %button{style: "margin-left: 10px; margin-top: 10px;"}= I18n.t(:view_course)
+.clear

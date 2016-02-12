@@ -173,16 +173,6 @@ Idaho Falls, ID  83402](https://www.google.com/maps/place/1776+Science+Center+Dr
 
 Parking is free on Saturdays. Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
 
-**Satellite Location - CDA**
-
-[University of Idaho - Coeur d’Alene<br/>
-Suite 242 , Room 128<br/>
-1031 N. Academic Way<br/>
-Coeur d’Alene, ID  83814<br/>](https://www.google.com/maps/place/1031+N+Academic+Way,+Coeur+d'Alene,+ID+83814/@47.6832333,-116.7990827,17z/data=!3m1!4b1!4m2!3m1!1s0x5361c6918f4dabb3:0x52d71c83655b319f)
-
-
-Parking is free on Saturdays. Please refer to parking directions [here](/files/UI-Harbor-Center.pdf).
-
 **What to bring to Phase 3 bi-yearly sessions:**
 
 Laptop and Charger

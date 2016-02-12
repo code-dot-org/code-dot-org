@@ -1255,18 +1255,66 @@ body.readonly.embed-block #codeWorkspace .userHidden {
 .droplet-hover-div {
   max-width: 100% !important; }
 
+a.WireframeSendToPhone_send-to-phone-link {
+  text-decoration: none;
+  color: #949ca2; }
+  a.WireframeSendToPhone_send-to-phone-link:hover {
+    color: #e7e8ea;
+    text-decoration: underline; }
+
+#visualizationColumn.wireframeShare {
+  background: url("/blockly/media/common_images/phone_wireframe.png") center center no-repeat; }
+
 .legacy-share-view #belowVisualization, .legacy-share-view .hide-source #belowVisualization {
   display: none; }
 
 .legacy-share-view #visualizationColumn {
+  margin: 0 auto; }
+  .legacy-share-view #visualizationColumn #phoneFrameScreen {
+    overflow: hidden; }
+    .legacy-share-view #visualizationColumn #phoneFrameScreen #visualizationContainer {
+      display: inline-block; }
+      .legacy-share-view #visualizationColumn #phoneFrameScreen #visualizationContainer #visualization {
+        height: auto;
+        overflow: hidden; }
+
+.legacy-share-view #visualizationColumn.wireframeShare {
+  width: 352px !important;
+  height: 612px !important;
   margin: 0 auto;
-  padding: 20px 0; }
+  padding: 20px 0;
+  overflow: hidden; }
+  .legacy-share-view #visualizationColumn.wireframeShare #phoneFrameScreen {
+    position: relative;
+    top: 68px;
+    left: 16px;
+    border: solid thin #202b34;
+    background-color: #202b34;
+    width: 320px;
+    height: 480px; }
+
+.legacy-share-view #gameButtons {
+  width: auto;
+  padding: 1% 5%; }
+  .legacy-share-view #gameButtons #right-button-cell {
+    display: none;
+    /* don't show Finish button in share view */ }
+  .legacy-share-view #gameButtons #soft-buttons button {
+    margin: 5px 1px; }
 
 .legacy-share-view .small-footer-base {
-  width: auto;
   left: 0;
-  right: 0; }
+  right: 0;
+  width: auto !important; }
 
 .legacy-share-view #more-menu, .legacy-share-view #copyright-flyout {
-  left: auto;
-  right: 0; }
+  border-top: solid thin #202b34;
+  left: 0;
+  right: 0;
+  width: auto !important; }
+
+.legacy-share-view .full_container {
+  padding: 0; }
+
+.legacy-share-view .admin {
+  display: none; }
