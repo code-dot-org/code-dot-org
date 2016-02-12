@@ -1,12 +1,7 @@
 %link{:href=>"/shared/css/course-blocks.css", :type=>"text/css", :rel=>"stylesheet"}
 
-- cert_id = params[:i]
-- cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
-
-- if cert_id
-  - share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
-- else
-  - share_url = "http://#{request.host_with_port}/certificates/blank"
+- cert_script = ScriptConstants::COURSE1_NAME
+- share_url = "https://studio.code.org"
 
 - facebook = {:u=>share_url}
 - twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:"just_did_#{course}")}
@@ -23,8 +18,8 @@
         %img{:src=>"/images/fit-540/#{certificate_template_for(cert_script)}", :width=>"100%"}
 
     #certificate.col-50
-      = view :congrats_certificate
-      = view :congrats_share, cert_id:cert_id, facebook:facebook, twitter:twitter
+      = view :csf_congrats_certificate, course: course
+      = view :congrats_share, facebook:facebook, twitter:twitter
 
   %div{:style=>'clear: both; height:30px'}
   %h1= I18n.t(:congrats_next_tutorials_title)
@@ -46,10 +41,9 @@
     %a{:href=>'/volunteer/local'}
       %button= I18n.t(:congrats_guest_speaker_cta)
 
-  - unless under_13?
-    %div{:style=>'clear: both; height:30px;'}
-    %hr
-    = view :petition_expand 
+  %div{:style=>'clear: both; height:30px;'}
+  %hr
+  = view :petition_expand 
 
 = view 'popup_window.js'
 
@@ -90,12 +84,6 @@
         url: "/api/hour/status/" + cookieValue,
         dataType: "json"
       }).done(processResponse);
-    }
-    else if (courseNameValue != "null")
-    {
-      certificate_processAnonymous();
-    } else {
-      certificate_disable();
     }
   });
 

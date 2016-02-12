@@ -1,0 +1,86 @@
+%script{:src=>"/js/jquery.placeholder.js"}
+%script{:src=>"/js/base64.min.js"}
+
+:javascript
+
+  function showEmailError(error)
+  {
+    $("input#email").toggleClass("input_error", error);
+    $("#email_error").toggle(error);
+    $("#email_okay").toggle(!error);
+  }
+
+  function certificate_processResponse(data)
+  {
+    var form = $("#certificate_form");
+    var thanks = $("#certificate_thanks");
+
+    form.toggle(!data.certificate_sent);
+    thanks.toggle(data.certificate_sent);
+
+    if (data.certificate_sent && data.session) {
+      personalizeCertificate(data.session);
+    }
+  }
+
+  function processError(data)
+  {
+    $("#gobutton").removeAttr('disabled');
+    $("#gobutton").addClass("button_enabled").removeClass("button_disabled");
+
+    var badEmail = (data.status == 400 && data.responseJSON.email_s !== undefined);
+
+    showEmailError(badEmail);
+  }
+
+  function requestCertificate()
+  {
+    $("#gobutton").attr('disabled','disabled');
+    $("#gobutton").removeClass("button_enabled").addClass("button_disabled");
+
+    showEmailError(false);
+
+    if (cookieValue != "null") {
+      $('#session').attr('value', cookieValue)
+
+      $.ajax({
+        url: "/api/hour/certificate",
+        type: "post",
+        dataType: "json",
+        data: $('#request-certificate-form').serialize()
+      }).done(certificate_processResponse).fail(processError);
+    } else {
+      personalizeAnonymousCertificate();
+    }
+    return false;
+  }
+
+  function personalizeCertificate(session)
+  {
+    $('#hoc-certificate-small a').attr('href', '/printcertificate/' + session);
+    $('#hoc-certificate-small img').attr('src', '/api/hour/certificate/' + session + '-890.jpg');
+  }
+
+  function personalizeAnonymousCertificate() {
+    var courseName = "#{I18n.t(:"#{course}_name")}";
+
+    var certificateData = btoa(JSON.stringify({name: $("#request-certificate-form #name").val(), course: courseName}))
+    $('#hoc-certificate-small a').attr('href', '/v2/hoc/certificate/' + certificateData + '.jpg');
+    $('#hoc-certificate-small img').attr('src', '/v2/hoc/certificate/' + certificateData + '.jpg');
+  }
+
+#certificate_body{:style=>"margin-top: 30px; margin-bottom: 30px;"}
+  #certificate_form
+
+    %h2{:style=>'margin-top: 0px; margin-bottom: 0px'}=I18n.t :personalize_certificate
+
+    %form#request-certificate-form{:onsubmit=>"return requestCertificate()"}
+
+      #email_error{style: "color:red; font-family: 'Gotham 7r', sans-serif; display: none"}
+        =I18n.t :enter_valid_email
+      #email_okay{style: "color:red; font-family: 'Gotham 7r', sans-serif;"}
+        &nbsp;
+      %input#session{name: 'session_s', type: 'hidden', value: ''}
+      %input#name.grey_input{:name=>"name_s", :placeholder=>'Name', :style=>'width: 167px'}
+      &nbsp;
+      %button#gobutton.button_enabled{:style=>'width:90px'}=I18n.t :submit
