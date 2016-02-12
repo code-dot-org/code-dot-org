@@ -528,7 +528,7 @@ class Script < ActiveRecord::Base
   def csf_finish_url
     if name == Script::TWENTY_HOUR_NAME
       CDO.code_org_url "/congrats/accelerated"
-    else  
+    else
       CDO.code_org_url "/congrats/#{name}"
     end
   end
