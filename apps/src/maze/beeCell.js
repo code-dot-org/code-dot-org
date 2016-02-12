@@ -35,7 +35,7 @@ var BeeCell = function (tileType, featureType, value, cloudType, flowerColor, ra
   /**
    * @type {Number}
    */
-  this.range_ = range || value;
+  this.range_ = (range && range > value) ? range : value;
 };
 
 BeeCell.inherits(Cell);
