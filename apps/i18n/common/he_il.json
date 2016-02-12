@@ -255,5 +255,6 @@
   "watchVideo": "צפה בסרטון",
   "when": "מתי",
   "whenRun": "התחל ריצה",
-  "workspaceHeaderShort": "סביבת העבודה: "
+  "workspaceHeaderShort": "סביבת העבודה: ",
+  "choosePrefix": "Choose..."
 }

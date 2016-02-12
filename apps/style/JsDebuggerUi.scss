@@ -1,5 +1,6 @@
 // Style rules associated with our visual debugger for the JSInterpreter.
 @import "color";
+@import "mixins";
 @import "style-constants";
 
 #debugResizeBar {
@@ -170,10 +171,7 @@ $debug-input-height: 16px;
   border-width: 0px;
   padding: 0px;
   outline: none;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+  @include user-selects(text);
 }
 
 .debug-output {

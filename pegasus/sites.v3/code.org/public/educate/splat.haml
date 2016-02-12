@@ -1,8 +1,10 @@
+// Redirect old paths with abbreviations to new paths with descriptive names
+// ex. plc to /professional-learning. And redirect old paths to new organized
+// paths like /district pages all grouped together.
+
 - requested_path = request.path_info
 
 - if requested_path.include? "/educate/plc"
-  // redirect /plc to /professional-learning or professional-learning-partner 
-  // with descriptive course names instead of abbreviations
   - if requested_path.include? "plp"
     - path = requested_path.gsub("plc", "professional-learning-partner")
     - new_path = path.gsub(/plp-|plp/, "")
@@ -11,3 +13,17 @@
     - path = requested_path.gsub("plc", "professional-learning")
     - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
     - redirect new_path
+- elsif requested_path.eql? "/educate/districts"
+  - redirect "/educate/district"
+- elsif %w(/educate/district-partners /educate/partner-districts).include? requested_path
+  - redirect "/educate/district/partners"
+- elsif requested_path.eql? "/educate/districtterms"
+  - redirect "/educate/district/terms"
+- elsif requested_path.eql? "/educate/template-district-agreement"
+  - redirect "/educate/district/agreement"
+- elsif requested_path.eql? "/educate/qualify"
+  - redirect "/educate/district/qualify"
+- elsif requested_path.eql? "/educate/k5-district-partnership"
+  - redirect "/educate/district/k5-partnership"
+- elsif requested_path.eql? "/educate/interesteddistrict"
+  - redirect "/educate/district/interest-form"
