@@ -47,6 +47,10 @@ class HomeController < ApplicationController
     render partial: 'home/gallery_content'
   end
 
+  def update_user_state
+    @redirect = params[:redirect]
+  end
+
   def audio_test
     render 'audio_test', layout: false, formats: [:html]
   end

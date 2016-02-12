@@ -1,0 +1,8 @@
+- if current_user
+  :javascript
+    dashboard.clientState.setCurrentUserKey('#{current_user.id}');
+- else
+  :javascript
+    dashboard.clientState.setCurrentUserKey(null);
+:javascript
+  document.location = '#{@redirect}'

@@ -1,8 +1,4 @@
 - if current_user
-  :javascript
-    if (typeof dashboard !== 'undefined') {
-      dashboard.clientState.setCurrentUserKey('#{current_user.id}');
-    }
   .header_button.header_user.user_menu
     %span= t('nav.user.label', username: h(current_user.short_name))
     %span.user_menu_glyph
@@ -18,10 +14,6 @@
           = link_to t('nav.user.prizes'), my_prizes_url
         = link_to t('nav.user.logout'), destroy_user_session_url
 - else
-  :javascript
-    if (typeof dashboard !== 'undefined') {
-      dashboard.clientState.setCurrentUserKey(null);
-    }
   .header_button.header_user
     = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')
 
@@ -47,5 +39,4 @@
     if (typeof dashboard !== 'undefined') {
       dashboard.clientState.setCurrentUserKey(null);
     }
-  }
-});
+  });
