@@ -32,6 +32,7 @@ class LevelSourcesController < ApplicationController
     authorize! :read, @level_source
     level_view_options hide_source: false
     view_options small_footer: true
+    @is_legacy_share = true
     # currently edit is the same as show...
     render "show"
   end
