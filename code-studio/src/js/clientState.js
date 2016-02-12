@@ -1,27 +1,33 @@
 /**
- * @file Helper functions for accessing client state. Each signed-in user has their own client state
- * which persists even across logins.  For signed-out users, each tab has its own client state which
- * goes away as soon as the tab is closed.
+ * @file Helper functions for accessing client state. Each signed-in user has
+ * their own client state which persists even across logins.  For signed-out
+ * users, each tab has its own client state which goes away as soon as the tab
+ * is closed.
  *
- * Before calling any other storage functions, the client must call setCurrentUserKey
- * with a unique key for the current user, or setAnonymousUser to use temporary state for an
- * anonymous user.
+ * Before calling any other storage functions, the client must call
+ * setCurrentUserKey with a unique key for the current user, or setAnonymousUser
+ * to use temporary state for an anonymous user.
  *
- * Client state is "reasonably" durable but not quite hard state-- the client state module
- * garbage-collects the oldest client state if the total size of the client state exceeds the 5MB
- * browser limit.  In practice this limit will rarely be reached, but in this case this does occur
- * the database typically has the same state and can be used to refill the client state cache.
+ * Client state is "reasonably" durable but not quite hard state-- the client
+ * state module garbage-collects the oldest client state if the total size of
+ * the client state exceeds the 5MB browser limit.  In practice this limit will
+ * rarely be reached, but in this case this does occur the database typically
+ * has the same state and can be used to refill the client state cache.
  *
  * Implementation notes:
- * We use the 'lscache' npm module to divide local storage into per-user buckets and to expire the
- * least recently content.
  *
- * The current user key for is kept in the 'user_key' slot in localStorage.  For unauthenticated
- * users, where the user_key is the empty string, a second 'anon_user_key' slot in *session*
- * storage is used to store a randomly generated temporary key. By using session storage, we ensure
- * that each tab uses its own key and has its own client state bucket. The temporary localStorage
- * for anonymous user keys is cleared when setCurrentUserKey is called for a signed in user.
+ * We use the 'lscache' npm module to divide local storage into per-user buckets
+ * and to expire the least recently content.
+ *
+ * The current user key for is kept in the 'user_key' slot in localStorage.  For
+ * unauthenticated users, where the user_key is the empty string, a second
+ * 'anon_user_key' slot in *session* storage is used to store a randomly
+ * generated temporary key. By using session storage, we ensure that each tab
+ * uses its own key and has its own client state bucket. The temporary
+ * localStorage for anonymous user keys is cleared when setCurrentUserKey is
+ * called for a signed in user.
  */
+
 'use strict';
 
 var lscache = require('lscache');
