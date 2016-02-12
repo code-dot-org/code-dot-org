@@ -15,7 +15,7 @@ social:
 max_age: 60
 ---
 
-- course = request.splat_path_info[1..-1]
+- course = File.basename(request.path_info)
 
 - if %w(course1 course2 course3 course4 accelerated).include? course
   = view :congrats, course: course
