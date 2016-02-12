@@ -90,7 +90,7 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
 
   var safe = sanitize(unsafe, {
     allowedTags: sanitize.defaults.allowedTags.concat([
-      'button', 'canvas', 'img', 'input', 'option', 'label', 'select']),
+      'button', 'canvas', 'img', 'input', 'option', 'label', 'select', 'span']),
     allowedAttributes: $.extend({}, sanitize.defaults.allowedAttributes, {
       button: defaultAttributes.concat(['data-canonical-image-url']),
       canvas: defaultAttributes,
@@ -98,7 +98,8 @@ module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
       img: defaultAttributes.concat(['data-canonical-image-url', 'src']),
       input: defaultAttributes.concat(['autocomplete', 'checked', 'max', 'min', 'name', 'placeholder', 'step', 'type', 'value']),
       label: defaultAttributes,
-      select: defaultAttributes
+      select: defaultAttributes,
+      span: defaultAttributes
     }),
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
