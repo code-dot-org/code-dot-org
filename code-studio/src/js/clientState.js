@@ -40,7 +40,7 @@ clientState.setCurrentUserKey = function(key) {
   } else {
     // Delete anonymous user state when transitioning to a signed-in user.
     if (sessionStorage.getItem('is_temp_key') == 'true') {
-      lscache.flush();
+      clientState.reset();
     }
     sessionStorage.setItem('is_temp_key', 'false');
     sessionStorage.setItem('user_key', key);
