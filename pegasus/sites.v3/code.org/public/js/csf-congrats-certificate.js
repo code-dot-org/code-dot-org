@@ -28,7 +28,7 @@ function processError(data)
   showEmailError(badEmail);
 }
 
-function requestCertificate()
+function requestCertificate(course_name)
 {
   $("#gobutton").attr('disabled','disabled');
   $("#gobutton").removeClass("button_enabled").addClass("button_disabled");
@@ -45,7 +45,7 @@ function requestCertificate()
       data: $('#request-certificate-form').serialize()
     }).done(certificate_processResponse).fail(processError);
   } else {
-    personalizeAnonymousCertificate();
+    personalizeAnonymousCertificate(course_name);
   }
   return false;
 }
@@ -56,10 +56,8 @@ function personalizeCertificate(session)
   $('#hoc-certificate-small img').attr('src', '/api/hour/certificate/' + session + '-890.jpg');
 }
 
-function personalizeAnonymousCertificate() {
-  var courseName = "#{I18n.t(:"#{course}_name")}";
-
-  var certificateData = btoa(JSON.stringify({name: $("#request-certificate-form #name").val(), course: courseName}))
+function personalizeAnonymousCertificate(course_name) {
+  var certificateData = btoa(JSON.stringify({name: $("#request-certificate-form #name").val(), course: course_name}))
   $('#hoc-certificate-small a').attr('href', '/v2/hoc/certificate/' + certificateData + '.jpg');
   $('#hoc-certificate-small img').attr('src', '/v2/hoc/certificate/' + certificateData + '.jpg');
 }

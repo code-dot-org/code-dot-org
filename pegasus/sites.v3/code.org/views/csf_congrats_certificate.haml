@@ -6,8 +6,9 @@
   #certificate_form
 
     %h2{:style=>'margin-top: 0px; margin-bottom: 0px'}=I18n.t :personalize_certificate
-
-    %form#request-certificate-form{:onsubmit=>"return requestCertificate()"}
+    
+    - localized_course_name = "#{I18n.t(:"#{course}_name")}"
+    %form#request-certificate-form{:onsubmit=>"return requestCertificate('#{localized_course_name}')"}
 
       #email_error{style: "color:red; font-family: 'Gotham 7r', sans-serif; display: none"}
         =I18n.t :enter_valid_email
