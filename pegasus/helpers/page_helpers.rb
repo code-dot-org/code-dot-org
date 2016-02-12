@@ -30,11 +30,8 @@ def partner_site?()
   return partner_sites.include?(request.site)
 end
 
-def under_13?
-  under_13 = false
-  if dashboard_user
-    age = ((Date.today - dashboard_user[:birthday]) / 365).to_i
-    under_13 = true if age < 13
-  end
-  under_13
+def over_13_or_unknown?
+  return true unless dashboard_user
+  age = ((Date.today - dashboard_user[:birthday]) / 365).to_i
+  age > 13
 end
