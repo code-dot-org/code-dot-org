@@ -162,3 +162,8 @@ post '/api/hour/certificate' do
   content_type :json
   session_status_for_row(row).to_json
 end
+
+get '/api/csf/finish/:code' do |code|
+  only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  complete_csf_course(code)
+end
