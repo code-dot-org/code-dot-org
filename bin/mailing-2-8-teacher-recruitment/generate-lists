@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative '../mailing-common/mailing-list-utils'
-require_relative 'state_abbr_to_name'
 require 'set'
 
 # Exported from https://docs.google.com/spreadsheets/d/1T_cd7CDlOuuLe_hObSzNX7BbN7PwU_EzEpjuIHuwoNM
@@ -67,7 +66,7 @@ CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
   end
 
   state_abbrev = row['State']
-  state = STATE_ABBR[state_abbrev]
+  state = get_state_name_from_abbr state_abbrev
   raise "Unrecognized state abbreviation #{state_abbrev}" unless state
   city = row['City']
   district = row['Partner/District']
@@ -85,7 +84,7 @@ REGIONS.each do |region_name, region|
   puts "#{region_name} (#{region[:template_name]})"
   region[:locations].each do |entry|
     puts "  #{entry[:city]}, #{entry[:state]}: #{entry[:districts]}"
-    # region_results.merge! query_teachers_with_location(entry[:city], entry[:state])
+    region_results.merge! query_teachers_with_location(entry[:city], entry[:state])
   end
   initial_count = region_results.length
   region_results.reject! {|email,_| EXCLUDED_EMAILS.include? email}
@@ -93,7 +92,7 @@ REGIONS.each do |region_name, region|
 
   region[:counts] = {final: final_count, excluded: initial_count - final_count}
   puts "\n#{region_name}: #{initial_count} total results, #{final_count} after exclusion.\n\n"
-  # export_contacts_to_csv region_results, "Teachers_#{region_name}.csv"
+  export_contacts_to_csv region_results, "Teachers_#{region_name}.csv"
 end
 
 # Report
