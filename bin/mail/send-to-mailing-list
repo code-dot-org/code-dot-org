@@ -1,4 +1,4 @@
-require_relative '../pegasus/src/env'
+require_relative '../../pegasus/src/env'
 require src_dir 'database'
 require 'cdo/poste'
 

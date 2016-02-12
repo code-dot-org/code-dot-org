@@ -1,4 +1,4 @@
-require_relative '../../pegasus/src/env'
+require_relative '../../../pegasus/src/env'
 require_relative 'state_abbr_to_name'
 require 'cdo/solr'
 require src_dir 'database'
