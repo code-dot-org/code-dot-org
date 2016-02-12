@@ -264,10 +264,17 @@ ___________________________
 
 ## Exploring Computer Science FAQs
 
-**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=755330c1ae) | [November](http://eepurl.com/bEh8Aj)
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=755330c1ae) | [November](http://eepurl.com/bEh8Aj) | [December](http://eepurl.com/bHucHX) | [January](http://eepurl.com/bL_jNj)
 
 ### **Where can I find assessments for each unit?**
-Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1 & 2 assessments. Code.org has created a [How-To Guide](https://docs.google.com/document/d/1vj6ZLt62EDEDWo-D_IzVTzZ79DEkemx3u2T0Blt1wwY/edit#heading=h.1ya6s8k1e8wg) if you're having trouble accessing these assessments. 
+Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1-4 assessments. Code.org has created a [How-To Guide](https://docs.google.com/document/d/1vj6ZLt62EDEDWo-D_IzVTzZ79DEkemx3u2T0Blt1wwY/edit#heading=h.1ya6s8k1e8wg) if you're having trouble accessing these assessments. 
+
+[**Back to the top**](#top)
+<br/>
+________________
+
+### **What do I need to complete before my Phase 3C workshop?**
+We've listed instructions on [your data collection assignment](http://eepurl.com/bL_jNj) in your January update. 
 
 [**Back to the top**](#top)
 <br/>

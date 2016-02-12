@@ -229,6 +229,10 @@ When /^I focus selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].focus();")
 end
 
+When /^I blur selector "([^"]*)"$/ do |jquery_selector|
+  @browser.execute_script("$(\"#{jquery_selector}\")[0].blur();")
+end
+
 When /^I send click events to selector "([^"]*)"$/ do |jquery_selector|
   # svg elements can only be clicked this way
   @browser.execute_script("$(\"#{jquery_selector}\").click();")
