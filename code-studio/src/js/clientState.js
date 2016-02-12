@@ -1,11 +1,11 @@
 /**
  * @file A module for for accessing persistent per-user client state.
  *
- * Each signed-in user has their own client state which persists even across
- * signins. For signed-out users, each tab has its own temporary client state
- * survives page refreshes but which goes aways as soon as the tab is closed.
+ * - Client state for signed-in users persists even across logins.
+ * - Client-state for signed-out users is per-tab and goes aways when the tab
+ * is closed.
  *
- * Before calling any other storage functions, the developer must call
+ * Before getting or setting client state, the developer must call
  * setCurrentUserKey with a unique key for the current user, or setAnonymousUser
  * to use temporary state for an anonymous user.
  *
@@ -131,6 +131,7 @@ function applyUserBucket() {
  */
 function getItem(key) {
   applyUserBucket();
+
   return lscache.get(key);
 }
 
