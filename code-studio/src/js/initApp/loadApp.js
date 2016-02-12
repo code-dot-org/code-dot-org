@@ -50,10 +50,12 @@ module.exports = function (callback) {
     }
 
     $.ajax('/api/user_progress/' + appOptions.scriptName + '/' + appOptions.stagePosition + '/' + appOptions.levelPosition).done(function (data) {
+      dashboard.clientState.setCurrentUserKey(data.user_id);
       appOptions.disableSocialShare = data.disableSocialShare;
 
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.progress || {};
+
       var clientProgress = dashboard.clientState.allLevelsProgress()[appOptions.scriptName] || {};
       Object.keys(serverProgress).forEach(function (levelId) {
         if (serverProgress[levelId] !== clientProgress[levelId]) {

@@ -38,15 +38,29 @@ window.dashboard.progress = (function () {
     return progress.activityCssClass(dashboard.clientState.mergeActivityResult(a, b));
   };
 
-  progress.populateProgress = function (scriptName) {
+  progress.populateClientProgress = function(scriptName) {
     // Render the progress the client knows about (from sessionStorage)
     var clientProgress = dashboard.clientState.allLevelsProgress()[scriptName] || {};
     Object.keys(clientProgress).forEach(function (levelId) {
       $('.level-' + levelId).addClass(progress.activityCssClass(clientProgress[levelId]));
     });
+    return clientProgress;
+  };
+
+  progress.populateProgress = function (scriptName) {
+
+    var userKeySet = dashboard.clientState.isUserKeySet();
+    var clientProgress;
+    if (userKeySet) {
+      clientProgress = progress.populateClientProgress(scriptName);
+    }
 
     $.ajax('/api/user_progress/' + scriptName).done(function (data) {
       data = data || {};
+      dashboard.clientState.setCurrentUserKey(data.user_id);
+      if (!userKeySet) {
+        clientProgress = progress.populateClientProgress(scriptName);
+      }
 
       // Show lesson plan links if teacher
       if (data.isTeacher) {
