@@ -372,13 +372,17 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         this.yieldExecution ||
+        this.interpreter.paused_ ||
         (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
       // (2) completed a line of user code and are are done unwinding
       //     (while not running atMaxSpeed) OR
-      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
-      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      // (3) we've been asked to yield our executeInterpeter() loop OR
+      // (4) the interpreter is paused (handling a native async func that is
+      //     going to block to return a value synchronously in the interpreter) OR
+      // (5) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (6) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
     }
     userCodeRow = selectCodeFunc.call(this);
