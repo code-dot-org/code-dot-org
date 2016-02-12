@@ -6,7 +6,7 @@ APPS_DIR = "#{REPO_DIR}/apps"
 
 def filter_grunt_jshint(modified_files)
   modified_files.select { |f| (f.end_with?(".js") || f.end_with?(".jsx")) &&
-    !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\//))}
+    !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\//) || f.match(/shared\//))}
 end
 
 RUBY_EXTENSIONS = ['.rake', '.rb', 'Rakefile']
@@ -32,7 +32,7 @@ def run(cmd, working_dir)
 end
 
 def run_rubocop(files)
-  run("bundle exec rubocop #{files.join(" ")}", REPO_DIR)
+  run("bundle exec rubocop --force-exclusion #{files.join(" ")}", REPO_DIR)
 end
 
 def run_jshint(files)

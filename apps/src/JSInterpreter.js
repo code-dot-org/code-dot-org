@@ -49,6 +49,7 @@ var JSInterpreter = module.exports = function (options) {
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
+  this.stoppedAtBreakpointRows = [];
 };
 
 /**
@@ -257,6 +258,52 @@ function safeStepInterpreter(jsi) {
 }
 
 /**
+ * Find a bpRow from the "stopped at breakpoint" array by matching the scope
+ *
+ * @param scope scope to match from the list
+ * @param row (Optional) row to match from the list - in addition to scope
+ */
+JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+      if (typeof row === 'undefined' || row === bpRow.row) {
+        return bpRow;
+      }
+    }
+  }
+};
+
+/**
+ * Replace or remove a bpRow from the "stopped at breakpoint" array by matching
+ * the scope
+ *
+ * @param scope scope to match from the list
+ * @param row row to replace in the list. If -1, delete that bpRow
+ */
+JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope, row) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+      if (row === -1) {
+        // Remove from array
+        this.stoppedAtBreakpointRows.splice(i, 1);
+        return;
+      } else {
+        // Update row number
+        bpRow.row = row;
+        return;
+      }
+    }
+  }
+  // Scope not found, insert new object in array:
+  this.stoppedAtBreakpointRows.unshift({
+    row: row,
+    scope: scope
+  });
+};
+
+/**
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
@@ -320,17 +367,22 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
             this.getUserCodeLine :
             this.selectCurrentCode;
+    var currentScope = this.interpreter.getScope();
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         this.yieldExecution ||
+        this.interpreter.paused_ ||
         (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
       // (2) completed a line of user code and are are done unwinding
       //     (while not running atMaxSpeed) OR
-      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
-      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      // (3) we've been asked to yield our executeInterpeter() loop OR
+      // (4) the interpreter is paused (handling a native async func that is
+      //     going to block to return a value synchronously in the interpreter) OR
+      // (5) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (6) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
     }
     userCodeRow = selectCodeFunc.call(this);
@@ -344,8 +396,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     //       we have already stopped from the last step/breakpoint
     if (inUserCode && !unwindingAfterStep &&
         (atInitialBreakpoint ||
-         (userCodeRow !== this.stoppedAtBreakpointRow &&
-          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+         (codegen.isAceBreakpointRow(session, userCodeRow) &&
+          !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
       // Yes, arrived at a new breakpoint:
       if (this.paused) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
@@ -356,8 +408,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         this.onPause.notifyObservers();
       }
       // Store some properties about where we stopped:
-      this.stoppedAtBreakpointRow = userCodeRow;
-      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
 
       // Mark reachedBreak to stop stepping, and start unwinding if needed:
       reachedBreak = true;
@@ -366,17 +417,13 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     // If we've moved past the place of the last breakpoint hit without being
     // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-    if (inUserCode &&
-        userCodeRow !== this.stoppedAtBreakpointRow &&
-        this.interpreter.stateStack.length <= this.stoppedAtBreakpointStackDepth) {
-      delete this.stoppedAtBreakpointRow;
-      delete this.stoppedAtBreakpointStackDepth;
+    if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, -1);
     }
     // If we're unwinding, continue to update the stoppedAtBreakpoint properties
     // to ensure that we have the right properties stored when the unwind completes:
     if (inUserCode && unwindingAfterStep) {
-      this.stoppedAtBreakpointRow = userCodeRow;
-      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
     var err = safeStepInterpreter(this);
     if (!err) {
@@ -453,8 +500,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
             this.onNextStepChanged.notifyObservers();
             if (inUserCode) {
               // Store some properties about where we stopped:
-              this.stoppedAtBreakpointRow = userCodeRow;
-              this.stoppedAtBreakpointStackDepth = stackDepth;
+              this.replaceStoppedAtBreakpointRowForScope(this.interpreter.getScope(), userCodeRow);
             }
             delete this.stepOutToStackDepth;
             delete this.firstCallStackDepthThisStep;
