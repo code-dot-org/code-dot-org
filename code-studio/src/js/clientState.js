@@ -1,10 +1,11 @@
 /**
- * @file Helper functions for accessing client state. Each signed-in user has
- * their own client state which persists even across signins. For signed-out
- * users, each tab has its own client state which goes away as soon as the tab
- * is closed.
+ * @file A module for for accessing persistent per-user client state.
  *
- * Before calling any other storage functions, the client must call
+ * Each signed-in user has their own client state which persists even across
+ * signins. For signed-out users, each tab has its own temporary client state
+ * survives page refreshes but which goes aways as soon as the tab is closed.
+ *
+ * Before calling any other storage functions, the developer must call
  * setCurrentUserKey with a unique key for the current user, or setAnonymousUser
  * to use temporary state for an anonymous user.
  *
