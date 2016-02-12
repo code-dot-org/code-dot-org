@@ -396,11 +396,12 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // Check to see if we've arrived at a new breakpoint:
     //  (1) should be in user code
     //  (2) should never happen while unwinding
-    //  (3) requires either
+    //  (3) should never happen when revisiting an interstitial node
+    //  (4) requires either
     //   (a) atInitialBreakpoint OR
     //   (b) isAceBreakpointRow() AND not still at the same line number where
     //       we have already stopped from the last step/breakpoint
-    if (inUserCode && !unwindingAfterStep &&
+    if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
         (atInitialBreakpoint ||
          (codegen.isAceBreakpointRow(session, userCodeRow) &&
           !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
@@ -434,8 +435,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     var err = safeStepInterpreter(this);
     if (!err) {
       var nodeType = this.interpreter.stateStack[0].node.type;
+      this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
       if (inUserCode) {
-        doneUserLine = doneUserLine || INTERSTITIAL_NODES.hasOwnProperty(nodeType);
+        doneUserLine = doneUserLine || this.atInterstitialNode;
       }
 
       var stackDepth = this.interpreter.stateStack.length;
