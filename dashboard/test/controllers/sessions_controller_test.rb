@@ -31,7 +31,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: '', hashed_email: student.hashed_email, password: student.password}
 
     assert_signed_in_as student
-    assert_redirected_to update_login_url
+    assert_redirected_to update_login_url(redirect: '/')
   end
 
   test "sign in page saves return to url in session" do
@@ -60,7 +60,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: user.username, hashed_email: '', password: user.password}
 
     assert_signed_in_as user
-    assert_redirected_to update_login_url
+    assert_redirected_to update_login_url(redirect: '/')
   end
 
   test 'signing in as younger user with hashed email' do
@@ -72,7 +72,7 @@ class SessionsControllerTest < ActionController::TestCase
     post :create, user: {login: '', hashed_email: user.hashed_email, password: user.password}
 
     assert_signed_in_as user
-    assert_redirected_to update_login_url
+    assert_redirected_to update_login_url(redirect: '/')
   end
 
   test "users go to code.org after logging out" do
