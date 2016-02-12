@@ -294,13 +294,14 @@ describe("clientState#setCurrentUserKey", function() {
     state.hasSeenVideo('user2_video').should.equal(false);
 
     // Switch to an anonymous user and verify that state is tracked.
-    state.setCurrentUserKey(null);
+    state.setAnonymousUser();
     state.recordVideoSeen('anon_video');
     state.hasSeenVideo('anon_video').should.equal(true);
     state.hasSeenVideo('user1_video').should.equal(false);
     state.hasSeenVideo('user2_video').should.equal(false);
-    state.setCurrentUserKey(null);
-    // Redundantly setting to an anonymous user should have no effect.
+
+    // Redundantly setting to an anonymous user should preserve the state.
+    state.setAnonymousUser();
     state.hasSeenVideo('anon_video').should.equal(true);
 
     // Switch back to user2 and verify that user2 state is still present.
@@ -325,7 +326,7 @@ describe("clientState#setCurrentUserKey", function() {
     state.hasSeenVideo('user1_video').should.equal(true);
 
     // Switch to an anonymous user and verify that past anonymous or user state is not present.
-    state.setCurrentUserKey(null);
+    state.setAnonymousUser();
     state.hasSeenVideo('anon_video').should.equal(false);
     state.hasSeenVideo('user1_video').should.equal(false);
     state.levelProgress('sample', user1_level).should.equal(0);
