@@ -157,7 +157,7 @@ Dashboard::Application.routes.draw do
 
   get '/beta', to: redirect('/')
 
-  get 'reset_session', to: 'application#reset_session_endpoint'
+  get 'reset_session', to: 'home#reset_session_endpoint'
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false

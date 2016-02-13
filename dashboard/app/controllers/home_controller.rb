@@ -11,7 +11,11 @@ class HomeController < ApplicationController
   # the root if unspecified.
   def update_login
     @redirect = params[:redirect] || '/'
-    # Please see the update_login.html.haml for the client logic.
+    # Please see update_login.html.haml for the client logic.
+  end
+
+  def reset_session_endpoint
+    # Please see reset_session_endpoint.html.haml for the client logic.
   end
 
   def set_locale
