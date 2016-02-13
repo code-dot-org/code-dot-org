@@ -11,8 +11,9 @@ def main()
   SeamlessDatabasePool.use_persistent_read_connection do
     user_count = User.count
 
-    levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
-    levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
+    levels_all = User.joins(:user_levels).group(:level_id)
+    levels_attempted = levels_all.where('best_result > 0').count
+    levels_passed = levels_all.where('best_result >= 20').count
 
     Properties.set(:admin_progress, {
       user_count: user_count,
