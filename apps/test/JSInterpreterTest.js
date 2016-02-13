@@ -9,17 +9,21 @@ describe("JSInterpreter", function () {
   window.acorn = require('../lib/jsinterpreter/acorn');
   require('../lib/jsinterpreter/interpreter');
 
-  function assertCurrentNode(expected) {
-    var node = jsInterpreter.interpreter.stateStack[0].node;
-    Object.keys(expected).forEach(function (key) {
-      assert.equal(node[key], expected[key], node.type + ' -> ' + key);
-    });
+  function assertCurrentState(expected) {
+    var state = jsInterpreter.interpreter.stateStack[0];
+    assert.containSubset(state, expected);
   }
 
   function stepAndVerify(expected) {
     jsInterpreter.nextStep = JSInterpreter.StepType.IN;
     jsInterpreter.executeInterpreter();
-    assertCurrentNode(expected);
+    assertCurrentState(expected);
+  }
+
+  function verifyStepSequence(expectedStates) {
+    expectedStates.forEach(function (expected) {
+      stepAndVerify(expected);
+    });
   }
 
   it("steps a `for` loop", function () {
@@ -43,16 +47,18 @@ describe("JSInterpreter", function () {
     jsInterpreter.nextStep = JSInterpreter.StepType.IN;
     jsInterpreter.executeInterpreter(true);
 
-    assertCurrentNode({type: 'ForStatement', mode: undefined});
+    assertCurrentState({node: {type: 'ForStatement'}, mode: undefined});
 
     // Continue stepping
-    stepAndVerify({type: 'ForStatement', mode: 1}); // (test) i < 2
-    stepAndVerify({type: 'ExpressionStatement'});   // (body) 1;
-    stepAndVerify({type: 'ForStatement', mode: 3}); // (update) i++
-    stepAndVerify({type: 'ForStatement', mode: 1}); // (test) i < 2
-    stepAndVerify({type: 'ExpressionStatement'});   // (body) 1;
-    stepAndVerify({type: 'ForStatement', mode: 3}); // (update) i++
-    stepAndVerify({type: 'ForStatement', mode: 1}); // (test) i < 2
+    verifyStepSequence([
+      {node: {type: 'ForStatement'}, mode: 1}, // (test) i < 2;
+      {node: {type: 'ExpressionStatement'}},   // (body) 1;
+      {node: {type: 'ForStatement'}, mode: 3}, // (update) i++
+      {node: {type: 'ForStatement'}, mode: 1}, // (test) i < 2;
+      {node: {type: 'ExpressionStatement'}},   // (body) 1;
+      {node: {type: 'ForStatement'}, mode: 3}, // (update) i++
+      {node: {type: 'ForStatement'}, mode: 1}  // (test) i < 2;
+    ]);
   });
 
 });
