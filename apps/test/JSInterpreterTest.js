@@ -9,8 +9,17 @@ describe("JSInterpreter", function () {
   window.acorn = require('../lib/jsinterpreter/acorn');
   require('../lib/jsinterpreter/interpreter');
 
-  function assertCurrentNode(nodeType) {
-    assert.equal(jsInterpreter.interpreter.stateStack[0].node.type, nodeType);
+  function assertCurrentNode(expected) {
+    var node = jsInterpreter.interpreter.stateStack[0].node;
+    Object.keys(expected).forEach(function (key) {
+      assert.equal(node[key], expected[key], node.type + ' -> ' + key);
+    });
+  }
+
+  function stepAndVerify(expected) {
+    jsInterpreter.nextStep = JSInterpreter.StepType.IN;
+    jsInterpreter.executeInterpreter();
+    assertCurrentNode(expected);
   }
 
   it("steps a `for` loop", function () {
@@ -34,7 +43,16 @@ describe("JSInterpreter", function () {
     jsInterpreter.nextStep = JSInterpreter.StepType.IN;
     jsInterpreter.executeInterpreter(true);
 
-    assertCurrentNode('ForStatement');
+    assertCurrentNode({type: 'ForStatement', mode: undefined});
+
+    // Continue stepping
+    stepAndVerify({type: 'ForStatement', mode: 1}); // (test) i < 2
+    stepAndVerify({type: 'ExpressionStatement'});   // (body) 1;
+    stepAndVerify({type: 'ForStatement', mode: 3}); // (update) i++
+    stepAndVerify({type: 'ForStatement', mode: 1}); // (test) i < 2
+    stepAndVerify({type: 'ExpressionStatement'});   // (body) 1;
+    stepAndVerify({type: 'ForStatement', mode: 3}); // (update) i++
+    stepAndVerify({type: 'ForStatement', mode: 1}); // (test) i < 2
   });
 
 });
