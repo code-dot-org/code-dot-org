@@ -50,6 +50,8 @@ module ScriptLevelsHelper
   def script_completion_redirect(script)
     if script.hoc?
       script.hoc_finish_url
+    elsif script.csf?
+      script.csf_finish_url
     else
       root_path
     end

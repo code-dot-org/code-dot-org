@@ -1,36 +1,37 @@
-.courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
-  %img.courseblock-span2.imgspan{src: "/images/next/codeHS.png", style: "margin-right: 10px;"}
-  .courseblock-span4.heading
-    %h3 CodeHS
-    %h4 
-      = I18n.t(:third_party_gradelevel_8plus)
+.col-50
+  .courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
+    %img.courseblock-span2.imgspan{src: "/images/next/codeHS.png", style: "margin-right: 10px;"}
+    .courseblock-span4.heading
+      %h3 CodeHS
+      %h4 
+        = I18n.t(:third_party_gradelevel_8plus)
+        %br
+        = I18n.t(:third_party_platform_web)
+        %br
+        = I18n.t(:third_party_price_2500)
+      .smalltext= I18n.t(:third_party_codehs_desc)
       %br
-      = I18n.t(:third_party_platform_web)
+      %a{:href=>"https://codehs.com/course/info/introcs"}
+        %button{:style=>'margin-left:10px'}= I18n.t(:third_party_codehs_btn_try)
+      %a{:href=>"https://codehs.com/demos"}
+        %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_codehs_btn_demos)
+.col-50
+  .courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
+    %img.courseblock-span2.imgspan{src: "/images/next/codecademy.jpg", style: "margin-right: 10px;"}
+    .courseblock-span4.heading
+      %h3 codecademy
+      %h4 
+        = I18n.t(:third_party_gradelevel_6plus)
+        %br
+        = I18n.t(:third_party_platform_web)
+        %br
+        = I18n.t(:third_party_price_free)
+      .smalltext= I18n.t(:third_party_codecademy_desc)
       %br
-      = I18n.t(:third_party_price_2500)
-    .smalltext= I18n.t(:third_party_codehs_desc)
-    %br
-    %a{:href=>"https://codehs.com/course/info/introcs"}
-      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_codehs_btn_try)
-    %a{:href=>"https://codehs.com/demos"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_codehs_btn_demos)
-
-.courseblock-span6.courseblock-wide-large{style: "height: 480px;"}
-  %img.courseblock-span2.imgspan{src: "/images/next/codecademy.jpg", style: "margin-right: 10px;"}
-  .courseblock-span4.heading
-    %h3 codecademy
-    %h4 
-      = I18n.t(:third_party_gradelevel_6plus)
-      %br
-      = I18n.t(:third_party_platform_web)
-      %br
-      = I18n.t(:third_party_price_free)
-    .smalltext= I18n.t(:third_party_codecademy_desc)
-    %br
-    %a{:href=>"https://www.codecademy.com/schools/curriculum/resources"}
-      %button{:style=>'margin-left:10px'}= I18n.t(:third_party_codecademy_btn_curriculum)
-    %a{:href=>"https://www.codecademy.com/"}
-      %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_codecademy_btn_site)
+      %a{:href=>"https://www.codecademy.com/schools/curriculum/resources"}
+        %button{:style=>'margin-left:10px'}= I18n.t(:third_party_codecademy_btn_curriculum)
+      %a{:href=>"https://www.codecademy.com/"}
+        %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_codecademy_btn_site)
 
 .clear
 %br
