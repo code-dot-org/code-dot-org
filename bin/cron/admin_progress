@@ -5,9 +5,6 @@
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
 
-DASHBOARD_REPORTING_DB_READONLY = sequel_connect(
-  CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader)
-
 def main()
   return unless only_one_running?(__FILE__)
 
