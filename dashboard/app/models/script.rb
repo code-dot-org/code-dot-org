@@ -304,6 +304,10 @@ class Script < ActiveRecord::Base
     %w(course1 course2 course3 course4).include? self.name
   end
 
+  def csf?
+    k5_course? || twenty_hour?
+  end
+
   def show_report_bug_link?
     beta? || k5_course?
   end
@@ -518,6 +522,15 @@ class Script < ActiveRecord::Base
       CDO.code_org_url '/api/hour/finish'
     else
       CDO.code_org_url "/api/hour/finish/#{name}"
+    end
+  end
+
+  def csf_finish_url
+    if (name == Script::TWENTY_HOUR_NAME)
+      # Rename from 20-hour to public facing Accelerated
+      CDO.code_org_url "/congrats/#{Script::ACCELERATED_NAME}"
+    else
+      CDO.code_org_url "/congrats/#{name}"
     end
   end
 

@@ -136,6 +136,32 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
           newEvent[prop + "Id"] = event[prop].id;
         }
       });
+
+  // Attempt to polyfill DOM element ID properties
+  // Of our six DOM properties, only three are standard.
+  var fillProperty = function (to, from) {
+    if (newEvent[from] !== undefined && newEvent[to] === undefined) {
+      newEvent[to] = newEvent[from];
+    }
+  };
+
+  // srcElement is an alias of target
+  // https://developer.mozilla.org/en-US/docs/Web/API/Event/srcElement
+  fillProperty('srcElementId', 'targetId');
+
+  // fromElement and toElement can be filled from target and relatedTarget,
+  // but the mapping depends on what type of event it is.
+  // fromElement: https://msdn.microsoft.com/en-us/library/ms533773(v=vs.85).aspx
+  // toElement: https://msdn.microsoft.com/en-us/library/ms534684(v=vs.85).aspx
+  // mapping: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget
+  if (['focusin', 'mouseenter', 'mouseover', 'dragenter'].indexOf(event.type) !== -1) {
+    fillProperty('toElementId', 'targetId');
+    fillProperty('fromElementId', 'relatedTargetId');
+  } else if (['focusout', 'mouseleave', 'mouseout', 'dragexit'].indexOf(event.type) !== -1) {
+    fillProperty('toElementId', 'relatedTargetId');
+    fillProperty('fromElementId', 'targetId');
+  }
+
   // Attempt to populate key property (not yet supported in Chrome/Safari):
   //
   // keyup/down has no charCode and can be translated with the keyEvent[] map

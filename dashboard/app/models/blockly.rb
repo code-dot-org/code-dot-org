@@ -238,22 +238,11 @@ class Blockly < Level
       level_prop['scale'] = {'stepSpeed' => level_prop['stepSpeed']} if level_prop['stepSpeed'].present?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt rawDirt goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
-      end
-
-      # some older levels will not have 'rawDirt' in the saved params;
-      # in this case, we can infer its value from their map and
-      # initialDirt values
-      if level.is_a? Karel
-        unless level_prop['rawDirt']
-          map = level_prop['map']
-          initial_dirt = level_prop['initialDirt']
-          level_prop['rawDirt'] = Karel.generate_raw_dirt(map, initial_dirt)
-        end
       end
 
       # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
