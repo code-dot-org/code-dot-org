@@ -276,7 +276,7 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
 end
 
 Then /^mark the current level as completed on the client/ do
-  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
