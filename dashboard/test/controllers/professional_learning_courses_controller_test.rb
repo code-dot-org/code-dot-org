@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProfessionalLearningCoursesControllerTest < ActionController::TestCase
   setup do
-    @professional_learning_course = professional_learning_courses(:one)
+    @professional_learning_course = create(:professional_learning_course)
   end
 
   test "should get index" do
@@ -18,7 +18,7 @@ class ProfessionalLearningCoursesControllerTest < ActionController::TestCase
 
   test "should create professional_learning_course" do
     assert_difference('ProfessionalLearningCourse.count') do
-      post :create, professional_learning_course: {  }
+      post :create, professional_learning_course: {professional_learning_course: @professional_learning_course}
     end
 
     assert_redirected_to professional_learning_course_path(assigns(:professional_learning_course))

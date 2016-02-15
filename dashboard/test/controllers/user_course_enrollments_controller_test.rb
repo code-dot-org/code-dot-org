@@ -2,7 +2,9 @@ require 'test_helper'
 
 class UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @user_course_enrollment = user_course_enrollments(:one)
+    @user = create :teacher
+    @professional_learning_course = create :professional_learning_course
+    @user_course_enrollment = create(:user_professional_learning_course_enrollment, user: @user, professional_learning_course: @professional_learning_course)
   end
 
   test "should get index" do
@@ -18,7 +20,7 @@ class UserCourseEnrollmentsControllerTest < ActionController::TestCase
 
   test "should create user_course_enrollment" do
     assert_difference('UserCourseEnrollment.count') do
-      post :create, user_course_enrollment: {  }
+      post :create, user_course_enrollment: { name: 'TestName'  }
     end
 
     assert_redirected_to user_course_enrollment_path(assigns(:user_course_enrollment))
@@ -35,7 +37,7 @@ class UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test "should update user_course_enrollment" do
-    patch :update, id: @user_course_enrollment, user_course_enrollment: {  }
+    patch :update, id: @user_course_enrollment, user_course_enrollment: { name: 'TestName'  }
     assert_redirected_to user_course_enrollment_path(assigns(:user_course_enrollment))
   end
 

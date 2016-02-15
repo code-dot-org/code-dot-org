@@ -12,7 +12,8 @@ class UserModuleTaskAssignmentTest < ActiveSupport::TestCase
   end
 
   test 'Completing tasks does not mark module / course complete until all are complete' do
-    enrollment = UserProfessionalLearningCourseEnrollment.enroll_user_in_course_with_learning_modules(@user, @plc, [@learning_module1, @learning_module2])
+    enrollment = UserProfessionalLearningCourseEnrollment.find_or_create_by(user: @user, professional_learning_course: @plc)
+    enrollment.enroll_user_in_course_with_learning_modules([@learning_module1, @learning_module2])
     task_assignments = enrollment.user_module_task_assignment
 
     assert_not_equal :completed, enrollment.status

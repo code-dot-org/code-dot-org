@@ -16,7 +16,6 @@ Dashboard::Application.routes.draw do
   resources :professional_learning_modules
   resources :professional_learning_tasks
   resources :user_professional_learning_course_enrollments
-  resources :plc_evaluation_questions
 
   get '/plc_enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc_enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
   post '/plc_enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc_enrollment_evaluations#submit_evaluation'
