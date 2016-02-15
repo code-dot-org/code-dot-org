@@ -380,7 +380,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  window.dashboard.footer.render(React, {
+  window.dashboard.footer.render({
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
@@ -588,7 +588,7 @@ Applab.init = function(config) {
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
   config.usesAssets = true;
-  
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   skin.smallStaticAvatar = null;
