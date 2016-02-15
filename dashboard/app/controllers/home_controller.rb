@@ -15,7 +15,8 @@ class HomeController < ApplicationController
   end
 
   def reset_session_endpoint
-    # Please see reset_session_endpoint.html.haml for the client logic.
+    reset_session
+    # Please see reset_session_endpoint.html.haml for additional client logic.
   end
 
   def set_locale
