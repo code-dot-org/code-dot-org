@@ -20,6 +20,8 @@ class UserProfessionalLearningCourseEnrollment < ActiveRecord::Base
   has_many :user_module_task_assignment, through: :user_enrollment_module_assignment
 
   def enroll_user_in_course_with_learning_modules(learning_modules)
+    self.user_enrollment_module_assignment.destroy_all
+
     learning_modules.each do |learning_module|
       module_assignment = UserEnrollmentModuleAssignment.find_or_create_by(user_professional_learning_course_enrollment: self, professional_learning_module: learning_module)
 
