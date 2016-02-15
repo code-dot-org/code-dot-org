@@ -2,7 +2,7 @@
 title: Exploring Computer Science Professional Learning Program
 nav: plc_ecs_nav
 ---
-# Exploring Computer Science Professional Learning Program #
+# Exploring Computer Science Professional Learning Program
 
 The Code.org Exploring Computer Science (ECS) Professional Learning Program supports teachers with diverse teaching backgrounds. Whether you are new to teaching CS or you have CS teaching experience outside this course, the program is designed to promote growth in your teaching practice, providing space for teachers to become comfortable with the curricular materials and associated teaching strategies. 
 

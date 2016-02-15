@@ -9,8 +9,7 @@ namespace :seed do
 
   STANFORD_HINTS_FILE = 'config/stanford-hints-bestPath1.tsv'
   STANFORD_HINTS_IMPORTED = 'config/scripts/.hints_imported'
-  file STANFORD_HINTS_IMPORTED => STANFORD_HINTS_FILE do
-    require_relative '../../config/environment'
+  file STANFORD_HINTS_IMPORTED => [STANFORD_HINTS_FILE, :environment] do
     LevelSourceHint.transaction do
       source_name = LevelSourceHint::STANFORD
       LevelSourceHint.delete_all(['source=?', source_name])
