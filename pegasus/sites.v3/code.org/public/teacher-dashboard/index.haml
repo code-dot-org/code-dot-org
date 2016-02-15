@@ -105,7 +105,7 @@ angular: teacherDashboard
          // TODO: This isn't very restful
          allStudents: {method:'GET', url:'v2/sections/:id/students', isArray: true},
          addStudents: {method:'POST', url:'/v2/sections/:id/students', isArray: true},
-         moveStudents: {method:'POST', url: '/sections/transfers'},
+         moveStudents: {method:'POST', url: '/api/sections/transfers'},
          removeStudent: {method:'DELETE', url:'/v2/sections/:id/students/:studentId'},
          progress: {method:'GET', url:'/dashboardapi/section_progress/:id'},
          studentProgress: {method:'GET', url:'/dashboardapi/student_progress/:id/:studentId'}
@@ -418,8 +418,8 @@ angular: teacherDashboard
         params['student_ids'] = $scope.getSelectedStudentIds();
         params['stay_enrolled_in_current_section'] = $scope.getStayEnrolledInCurrentSection();
         // TODO: Get this working
-        $http.post($scope.transferUrl, params, {}).then(
-        // sectionsService.moveStudents(params, {}).$promise.then(
+        // $http.post($scope.transferUrl, params, {}).then(
+        sectionsService.moveStudents(params, {}).$promise.then(
           function success(response) {
             $('#move-students').modal('hide');
           },
