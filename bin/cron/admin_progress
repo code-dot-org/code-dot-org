@@ -20,7 +20,7 @@ def main()
       levels_attempted: levels_attempted,
       levels_passed: levels_passed,
     })
-  end 
+  end
 end
 
 main()
