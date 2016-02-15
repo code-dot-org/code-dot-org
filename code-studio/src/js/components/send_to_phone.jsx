@@ -1,6 +1,5 @@
 /* global React, trackEvent */
 
-window.dashboard = window.dashboard || {};
 // TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
 
 var SendState = {
@@ -34,9 +33,8 @@ var baseStyles = {
 
 /**
  * Send-to-phone component used by share project dialog.
- * We put this on window.dashboard because it is used by apps.
  */
-window.dashboard.SendToPhone = module.exports = React.createClass({
+var SendToPhone = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
@@ -123,3 +121,8 @@ window.dashboard.SendToPhone = module.exports = React.createClass({
     );
   }
 });
+module.exports = SendToPhone;
+
+// We put this on the dashboard namespace so that it's accessible to apps
+window.dashboard = window.dashboard || {};
+window.dashboard.SendToPhone = SendToPhone;
