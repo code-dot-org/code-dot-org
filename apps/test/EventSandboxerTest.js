@@ -431,4 +431,114 @@ describe('EventSandboxer', function () {
       assertPropertyElementToElementId('toElement');
     });
   });
+
+  describe('DOM element reference polyfills', function () {
+    function assertPropertyPolyfillsProperty(srcProperty, destProperty, eventType) {
+      var randomIdA = Math.random();
+      var randomIdB = Math.random();
+
+      // If the source property is present and the destination property is not,
+      // assert that the destination property gets the value of the source property.
+      var originalEvent = {
+        type: eventType
+      };
+      originalEvent[srcProperty] = { id: randomIdA };
+      var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(polyfilledEvent, destProperty + 'Id');
+      assert.equal(polyfilledEvent[destProperty + 'Id'], randomIdA);
+
+      // If both properties are present, assert that the destination property
+      // keeps its own value.
+      originalEvent[destProperty] = { id: randomIdB };
+      var nonPolyfilledEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(nonPolyfilledEvent, destProperty + 'Id');
+      assert.equal(nonPolyfilledEvent[destProperty + 'Id'], randomIdB);
+    }
+
+    // It's valuable to check these paired properties together, to make sure
+    // the right property gets assigned to the right destination property
+    // depending on the event type.
+    function assertPropertiesPolyfillToElementFromElement(toProperty, fromProperty, eventType) {
+      var originalEvent = {
+        type: eventType
+      };
+
+      // If the source properties are present and the destination properties are
+      // not, assert that the destination properties get the values of the
+      // source properties.
+      var toId = 'id of ' + toProperty;
+      var fromId = 'id of ' + fromProperty;
+      originalEvent[toProperty] = { id: toId };
+      originalEvent[fromProperty] = { id: fromId };
+      var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(polyfilledEvent, 'toElementId');
+      assert.equal(polyfilledEvent.toElementId, toId, 'toElementId gets value from ' + toProperty);
+      assert.property(polyfilledEvent, 'fromElementId');
+      assert.equal(polyfilledEvent.fromElementId, fromId, 'fromElementId gets value from ' + fromProperty);
+
+      // If both properties are present, assert that the destination properties
+      // keeps their own values.
+      var providedToId = 'id of toElement';
+      var providedFromId = 'id of fromElement';
+      originalEvent.toElement = { id: providedToId };
+      originalEvent.fromElement = { id: providedFromId };
+      var nonPolyfilledEvent = sandboxer.sandboxEvent(originalEvent);
+      assert.property(nonPolyfilledEvent, 'toElementId');
+      assert.equal(nonPolyfilledEvent.toElementId, providedToId, 'toElementId keeps its value');
+      assert.property(nonPolyfilledEvent, 'fromElementId');
+      assert.equal(nonPolyfilledEvent.fromElementId, providedFromId, 'fromElementId keeps its value');
+    }
+
+    it('polyfills target->srcElement', function () {
+      assertPropertyPolyfillsProperty('target', 'srcElement');
+    });
+
+    it('polyfills target->toElement and relatedTarget->fromElement on focusin event', function () {
+      assertPropertyPolyfillsProperty('target', 'toElement', 'focusin');
+      assertPropertyPolyfillsProperty('relatedTarget', 'fromElement', 'focusin');
+      assertPropertiesPolyfillToElementFromElement('target', 'relatedTarget', 'focusin');
+    });
+
+    it('polyfills relatedTarget->toElement and target->fromElement on focusout event', function () {
+      assertPropertyPolyfillsProperty('relatedTarget', 'toElement', 'focusout');
+      assertPropertyPolyfillsProperty('target', 'fromElement', 'focusout');
+      assertPropertiesPolyfillToElementFromElement('relatedTarget', 'target', 'focusout');
+    });
+
+    it('polyfills target->toElement and relatedTarget->fromElement on mouseenter event', function () {
+      assertPropertyPolyfillsProperty('target', 'toElement', 'mouseenter');
+      assertPropertyPolyfillsProperty('relatedTarget', 'fromElement', 'mouseenter');
+      assertPropertiesPolyfillToElementFromElement('target', 'relatedTarget', 'mouseenter');
+    });
+
+    it('polyfills relatedTarget->toElement and target->fromElement on mouseleave event', function () {
+      assertPropertyPolyfillsProperty('relatedTarget', 'toElement', 'mouseleave');
+      assertPropertyPolyfillsProperty('target', 'fromElement', 'mouseleave');
+      assertPropertiesPolyfillToElementFromElement('relatedTarget', 'target', 'mouseleave');
+    });
+
+    it('polyfills target->toElement and relatedTarget->fromElement on mouseover event', function () {
+      assertPropertyPolyfillsProperty('target', 'toElement', 'mouseover');
+      assertPropertyPolyfillsProperty('relatedTarget', 'fromElement', 'mouseover');
+      assertPropertiesPolyfillToElementFromElement('target', 'relatedTarget', 'mouseover');
+    });
+
+    it('polyfills relatedTarget->toElement and target->fromElement on mouseout event', function () {
+      assertPropertyPolyfillsProperty('relatedTarget', 'toElement', 'mouseout');
+      assertPropertyPolyfillsProperty('target', 'fromElement', 'mouseout');
+      assertPropertiesPolyfillToElementFromElement('relatedTarget', 'target', 'mouseout');
+    });
+
+    it('polyfills target->toElement and relatedTarget->fromElement on dragenter event', function () {
+      assertPropertyPolyfillsProperty('target', 'toElement', 'dragenter');
+      assertPropertyPolyfillsProperty('relatedTarget', 'fromElement', 'dragenter');
+      assertPropertiesPolyfillToElementFromElement('target', 'relatedTarget', 'dragenter');
+    });
+
+    it('polyfills relatedTarget->toElement and target->fromElement on dragexit event', function () {
+      assertPropertyPolyfillsProperty('relatedTarget', 'toElement', 'dragexit');
+      assertPropertyPolyfillsProperty('target', 'fromElement', 'dragexit');
+      assertPropertiesPolyfillToElementFromElement('relatedTarget', 'target', 'dragexit');
+    });
+  });
 });
