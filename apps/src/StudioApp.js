@@ -255,7 +255,7 @@ StudioApp.prototype.init = function(config) {
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
-  if (config.isLegacyShare) {
+  if (config.isLegacyShare && config.hideSource) {
     $("body").addClass("legacy-share-view");
     if (dom.isMobile()) {
       $('#main-logo').hide();
@@ -545,7 +545,7 @@ StudioApp.prototype.init = function(config) {
     }.bind(this));
   }
 
-  if (config.isLegacyShare) {
+  if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
 };
