@@ -7,6 +7,8 @@ DEPENDENCIES
     path: cdo-authorized-keys
   cdo-awscli
     path: cdo-awscli
+  cdo-deploy
+    path: cdo-deploy
   cdo-github-access
     path: cdo-github-access
   cdo-home-ubuntu
@@ -48,7 +50,7 @@ GRAPH
   brightbox-ruby (1.2.1)
     apt (>= 0.0.0)
   build-essential (2.1.3)
-  cdo-apps (0.2.0)
+  cdo-apps (0.2.1)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
@@ -61,6 +63,7 @@ GRAPH
     sudo-user (>= 0.0.0)
   cdo-authorized-keys (0.1.0)
   cdo-awscli (0.1.0)
+  cdo-deploy (0.1.0)
   cdo-github-access (0.1.1)
   cdo-home-ubuntu (0.1.0)
   cdo-java-7 (0.1.0)

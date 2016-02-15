@@ -16,3 +16,6 @@ gem 'kitchen-ec2', github: 'wjordan/kitchen-ec2', branch: 'cdo'
 
 # Provides `sftp` transport to test-kitchen for faster cookbook upload.
 gem 'kitchen-sync'
+
+# Chef Provisioning AWS driver for cdo-deploy cookbook.
+gem 'chef-provisioning-aws'
