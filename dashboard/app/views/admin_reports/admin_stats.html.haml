@@ -6,49 +6,49 @@
         - {'users': 'Users', 'students': 'Students', 'teachers': 'Teachers'}.each do |type, description|
           %li
             = "#{description}: "
-            = @stats["accounts"][type.to_s]
+            = number_with_delimiter(@stats["accounts"][type.to_s])
     %li
       Born Accounts (accounts that have at least one sign-in)
       %ul
         %li
           Users:
-          = @stats['born_accounts']['users']
+          = number_with_delimiter(@stats['born_accounts']['users'])
         %li
           Students:
-          = @stats['born_accounts']['students']
+          = number_with_delimiter(@stats['born_accounts']['students'])
         %ul
           %li
             Female Students:
-            = @stats['born_accounts']['female_students']
+            = number_with_delimiter(@stats['born_accounts']['female_students'])
             = surround '(', ')' do
               = get_gender_percentage(@stats['born_accounts']['female_students'],
                                       @stats['born_accounts']['male_students'])
           %li
             Male Students:
-            = @stats['born_accounts']['male_students']
+            = number_with_delimiter(@stats['born_accounts']['male_students'])
             = surround '(', ')' do
               = get_gender_percentage(@stats['born_accounts']['male_students'],
                                       @stats['born_accounts']['female_students'])
         %li
           Teachers:
-          = @stats['born_accounts']['teachers']
+          = number_with_delimiter(@stats['born_accounts']['teachers'])
     %li
       Actives (accounts that have at least one sign-in in the last x days)
       %ul
         -{'seven': '7', 'thirty': '30'}.each do |days, number|
           %li
             = "#{number}-Day Students: "
-            = @stats['actives']["#{days}_day_students"]
+            = number_with_delimiter(@stats['actives']["#{days}_day_students"])
           %ul
             %li
               = "#{number}-Day Female Students: "
-              = @stats['actives']["#{days}_day_female_students"]
+              = number_with_delimiter(@stats['actives']["#{days}_day_female_students"])
               = surround '(', ')' do
                 = get_gender_percentage(@stats['actives']["#{days}_day_female_students"],
                                         @stats['actives']["#{days}_day_male_students"])
             %li
               = "#{number}-Day Male Students: "
-              = @stats['actives']["#{days}_day_male_students"]
+              = number_with_delimiter(@stats['actives']["#{days}_day_male_students"])
               = surround '(', ')' do
                 = get_gender_percentage(@stats['actives']["#{days}_day_male_students"],
                                         @stats['actives']["#{days}_day_female_students"])
@@ -72,10 +72,10 @@
       %ul
         %li
           With Born Students:
-          = @stats['teachers']['with_students']
+          = number_with_delimiter(@stats['teachers']['with_students'])
         %li
           With 30-Day Active Students:
-          = @stats['teachers']['with_active_students']
+          = number_with_delimiter(@stats['teachers']['with_active_students'])
 
   = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
