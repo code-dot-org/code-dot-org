@@ -7,13 +7,12 @@ nav: educate_nav
 
 ## Computer Science Principles
 
-<img src="<%= CDO.shared_image_url("courses/logo_csp.png") %>">
+<iframe width="600" height="337" src="https://www.youtube.com/embed/HoKRZRI9IDk" frameborder="0" allowfullscreen></iframe>
+<br />
 
-The College Board has proposed a new AP® course called AP® Computer Science: Principles.  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment. Find more information about the CS Principles project at: [http://apcsprinciples.org/](http://apcsprinciples.org/).
+The College Board has proposed a new AP® course called AP® Computer Science: Principles.*  The course is designed to be far more than a traditional introduction to programming - it is a rigorous, engaging, and approachable course that explores many of the big, foundational ideas of computing so that all students understand how these concepts are transforming the world we live in. The official AP® exam is set to go live in the 2016-17 school year with an exam and portfolio-based assessment.
 
-Code.org is creating a complete curriculum consisting of daily lesson plans, videos, tutorials, tools, and assessments that covers the learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). The Code.org course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
-
-AP® is a registered trademark of the College Board.
+Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](http://media.collegeboard.com/digitalServices/pdf/ap/comp-sci-principles-draft-cf-final.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
 
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
@@ -58,3 +57,5 @@ We have created videos, posters, and other resources you can use any course to e
 Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)
+
+*AP® is a registered trademark of the College Board.
