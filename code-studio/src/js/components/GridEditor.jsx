@@ -13,8 +13,6 @@ var BeeCellEditor = require('./BeeCellEditor.jsx');
 var CellEditor = require('./CellEditor.jsx');
 var Grid = require('./Grid.jsx');
 
-window.dashboard = window.dashboard || {};
-
 var CellJSON = React.createClass({
   propTypes: {
     serialization: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)),
@@ -39,7 +37,7 @@ var CellJSON = React.createClass({
   }
 });
 
-window.dashboard.GridEditor = module.exports = React.createClass({
+var GridEditor = React.createClass({
   propTypes: {
     serializedMaze: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)),
     maze: React.PropTypes.arrayOf(React.PropTypes.array), // maze items can be integers or strings
@@ -141,3 +139,9 @@ window.dashboard.GridEditor = module.exports = React.createClass({
     </div>);
   },
 });
+module.exports = GridEditor;
+
+// We put this on the dashboard namespace because GridEditor is used by _grid.html.haml
+// TODO _ exposed just a renderer?
+window.dashboard = window.dashboard || {};
+window.dashboard.GridEditor = GridEditor;
