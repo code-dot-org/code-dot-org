@@ -68,6 +68,7 @@
 
   .clear
 
+
 = render partial: 'levels/common_audio'
 
 
@@ -251,7 +252,7 @@
       "response": answer,
       "result": result,
       "errorType": errorType,
-      "testResult": 1000 // TestResults.FREE_PLAY
+      "submitted": true
     }
   }
 
@@ -275,16 +276,45 @@
   });
 
   $('.unsubmitButton').click(function() {
-    // show the real Submit buttons.
-    $('.submitButton').show();
 
-    // hide the Unsubmit button.
-    $('.unsubmitButton').hide();
+    var dialog = new Dialog({
+      body:
+        '<div class="modal-content no-modal-icon">' +
+          '<p class="dialog-title">Unsubmit answer</p>' +
+          '<p class="dialog-body">' +
+          'This will unsubmit your last answer.' +
+          '</p>' +
+          '<button id="continue-button">Okay</button>' +
+          '<button id="cancel-button">Cancel</button>' +
+        '</div>'
+    });
 
-    // make the marks full opacity
-    $('.item-mark').css('opacity', 1);
+    var dialog_div = $(dialog.div);
+    dialog.show();
 
-    submitAllowed = true;
+    dialog_div.find('#continue-button').click(function () {
+      $.post(window.appOptions.unsubmitUrl,
+        {"_method": 'PUT', user_level: {best_result: 1, submitted: false}},
+        function(data)
+        {
+          location.reload();
+        }
+      );
+    });
+
+    dialog_div.find('#cancel-button').click(function () {
+      dialog.hide();
+    });
+
+    return;
+
+    $.post(window.appOptions.unsubmitUrl,
+      {"_method": 'PUT', user_level: {best_result: 1, submitted: false}},
+      function(data)
+      {
+        // Just reload so that the progress in the header is shown correctly.
+        location.reload();
+      });
   });
 
   function validateAnswers()

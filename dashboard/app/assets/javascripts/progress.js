@@ -14,9 +14,6 @@ window.dashboard.progress = (function () {
     if (!result) {
       return 'not_tried';
     }
-    if (result >= 1000) {
-      return 'submitted';
-    }
     if (result >= 30) {
       return 'perfect';
     }
@@ -56,7 +53,12 @@ window.dashboard.progress = (function () {
       // Merge progress from server (loaded via AJAX)
       var serverProgress = data.levels || {};
       Object.keys(serverProgress).forEach(function (levelId) {
-        if (serverProgress[levelId].result !== clientProgress[levelId]) {
+        // Only the server can speak to whether a level is submitted.  If it is,
+        // we show the submitted styling.
+        if (serverProgress[levelId].submitted) {
+          // Clear the existing class and replace
+          $('.level-' + levelId).attr('class', 'level_link submitted');
+        } else if (serverProgress[levelId].result !== clientProgress[levelId]) {
           var status = progress.mergedActivityCssClass(clientProgress[levelId], serverProgress[levelId].result);
 
           // Clear the existing class and replace
@@ -84,7 +86,9 @@ window.dashboard.progress = (function () {
       }
 
       var status;
-      if (dashboard.clientState.queryParams('user_id')) {
+      if (serverProgress[level.id].submitted) {
+        status = "submitted";
+      } else if (dashboard.clientState.queryParams('user_id')) {
         // Show server progress only (the student's progress)
         status = dashboard.progress.activityCssClass((serverProgress[level.id] || {}).result);
       } else {
