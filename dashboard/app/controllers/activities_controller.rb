@@ -163,7 +163,7 @@ class ActivitiesController < ApplicationController
     end
 
     if @script_level
-      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result)
+      @new_level_completed = current_user.track_level_progress_async(@script_level, test_result, params[:submitted])
     end
 
     passed = Activity.passing?(test_result)

@@ -11,6 +11,7 @@
 #  best_result     :integer
 #  script_id       :integer
 #  level_source_id :integer
+#  submitted       :boolean
 #
 # Indexes
 #
@@ -18,14 +19,14 @@
 #
 
 # Summary information about a User's Activity on a Level in a Script.
-# Includes number of attempts (attempts), best score and whether it was submitted (best_result)
+# Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ActiveRecord::Base
   belongs_to :user
   belongs_to :level
   belongs_to :script
 
   def submitted?
-    Activity.submitted? best_result
+    submitted
   end
 
   def best?

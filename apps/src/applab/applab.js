@@ -588,7 +588,7 @@ Applab.init = function(config) {
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
   config.usesAssets = true;
-  
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   skin.smallStaticAvatar = null;
@@ -1275,7 +1275,7 @@ Applab.onPuzzleSubmit = function() {
 
 Applab.unsubmit = function() {
   $.post(level.unsubmitUrl,
-         {"_method": 'PUT', user_level: {best_result: 1}},
+         {"_method": 'PUT', user_level: {submitted: false}},
          function( data ) {
            location.reload();
          });
@@ -1310,12 +1310,8 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.testResults = studioApp.getTestResults(levelComplete, {
         executionError: Applab.executionError
     });
-  } else {
-    if (submit) {
-      Applab.testResults = TestResults.SUBMITTED;
-    } else {
-      Applab.testResults = TestResults.FREE_PLAY;
-    }
+  } else if (!submit) {
+    Applab.testResults = TestResults.FREE_PLAY;
   }
 
   // Stop everything on screen
@@ -1350,6 +1346,7 @@ Applab.onPuzzleComplete = function(submit) {
       level: level.id,
       result: levelComplete,
       testResult: Applab.testResults,
+      submitted: submit,
       program: encodeURIComponent(program),
       image: Applab.encodedFeedbackImage,
       onComplete: (submit ? Applab.onSubmitComplete : Applab.onReportComplete)

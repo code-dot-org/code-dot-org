@@ -789,7 +789,7 @@ SQL
 
   # returns whether a new level has been completed and asynchronously enqueues an operation
   # to update the level progress.
-  def track_level_progress_async(script_level, new_result)
+  def track_level_progress_async(script_level, new_result, submitted)
     level_id = script_level.level_id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(user_id: self.id,
@@ -801,7 +801,8 @@ SQL
                 'user_id' => self.id,
                 'level_id' => level_id,
                 'script_id' => script_id,
-                'new_result' => new_result}
+                'new_result' => new_result,
+                'submitted' => submitted}
     if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
       User.progress_queue.enqueue(async_op.to_json)
     else
@@ -813,7 +814,7 @@ SQL
   end
 
   # The synchronous handler for the track_level_progress helper.
-  def User.track_level_progress_sync(user_id, level_id, script_id, new_result)
+  def User.track_level_progress_sync(user_id, level_id, script_id, new_result, submitted)
     new_level_completed = false
     retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.where(user_id: user_id,
@@ -825,6 +826,7 @@ SQL
       # update the user_level with the new attempt
       user_level.attempts += 1 unless user_level.best?
       user_level.best_result = new_result if new_result > (user_level.best_result || -1)
+      user_level.submitted = submitted
 
       user_level.save!
     end
@@ -838,7 +840,7 @@ SQL
     raise 'Model must be User' if op['model'] != 'User'
     case op['action']
       when 'track_level_progress'
-        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'])
+        User.track_level_progress_sync(op['user_id'], op['level_id'], op['script_id'], op['new_result'], op['submitted'])
       else
         raise "Unknown action in #{op}"
     end

@@ -129,6 +129,7 @@ window.dashboard.dialog = (function () {
     var result = results.result;
     var errorType = results.errorType;
     var testResult = results.testResult ? results.testResult : (result ? 100 : 0);
+    var submitted = results.submitted || false;
 
     if (!result) {
       showDialog(errorType || "error");
@@ -150,6 +151,7 @@ window.dashboard.dialog = (function () {
       result: result,
       pass: result,
       testResult: testResult,
+      submitted: submitted,
       onComplete: function () {
         var willRedirect = !!lastServerResponse.nextRedirect;
         if (onComplete) {
