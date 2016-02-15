@@ -132,7 +132,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -165,10 +166,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "# Test the App\r\n\r\nIf you run your app now, you can add contacts and they will be saved to the database, but they will also show up \"locally\" in your app.  That is, until you restart it.\r\n\r\n**When you restart the app, it only reloads the hard-coded contacts -- This is okay for now.**  In the **next lesson** we'll learn how to pull data from the database back into the app.\r\n\r\nAs a final step for now...\r\n\r\n# Do This\r\n\r\n**Your code from the previous exericse** is provided.\r\n\r\n * **Add a few new contacts to your app and confirm you can scroll through them**.\r\n * In the Data Viewer **confirm those contacts were added to your database**.\r\n * Restart your app. Confirm that **the newly added contacts are no longer stored locally in your app, but they still exist in the database**.\r\n * In the Data Viewer confirm those **\"lost\" contacts are still stored in your database**.",
+    "markdown_instructions": "# Test the App\r\n\r\nIf you run your app now, you can add contacts and they will be saved to the database, but they will also show up \"locally\" in your app.  That is, until you restart it.\r\n\r\n**When you restart the app, it only reloads the hard-coded contacts -- This is okay for now.**  In the **next lesson** we'll learn how to pull data from the database back into the app.\r\n\r\nAs a final step for now...\r\n\r\n# Do This\r\n\r\n**Your code from the previous exercise** is provided.\r\n\r\n * **Add a few new contacts to your app and confirm you can scroll through them**.\r\n * In the Data Viewer **confirm those contacts were added to your database**.\r\n * Restart your app. Confirm that **the newly added contacts are no longer stored locally in your app, but they still exist in the database**.\r\n * In the Data Viewer confirm those **\"lost\" contacts are still stored in your database**.",
     "slider_speed": "1.0",
     "instructions": "Confirm that new contacts you add are saved to the database.  Verify that after restarting your app, the contacts you added no longer show in the app, but still exist in the database. (Click to see full instructions)"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

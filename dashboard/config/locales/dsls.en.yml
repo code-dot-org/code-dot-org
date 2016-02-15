@@ -1221,6 +1221,12 @@ en:
       U5 - Explore PT Prep - Student Introduction:
         description here: description here
         title: title
+      U6 - deleteRecord - Student Introduction:
+        description here: description here
+        title: title
+      U6 - updateRecord - Student Introduction:
+        description here: description here
+        title: title
       Unit 3 Survey 2: {}
       a bit about pixels:
         kevin systrom pixel video: kevin systrom pixel video

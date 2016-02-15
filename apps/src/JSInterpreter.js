@@ -304,6 +304,16 @@ JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope,
 };
 
 /**
+ * Nodes that are visited between expressions, signifying the previous
+ * expression is done.
+ */
+var INTERSTITIAL_NODES = {
+  Program: true,
+  BlockStatement: true,
+  SwitchStatement: true
+};
+
+/**
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
@@ -372,13 +382,17 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         this.yieldExecution ||
+        this.interpreter.paused_ ||
         (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
       // (2) completed a line of user code and are are done unwinding
       //     (while not running atMaxSpeed) OR
-      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
-      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      // (3) we've been asked to yield our executeInterpeter() loop OR
+      // (4) the interpreter is paused (handling a native async func that is
+      //     going to block to return a value synchronously in the interpreter) OR
+      // (5) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (6) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
     }
     userCodeRow = selectCodeFunc.call(this);
@@ -386,11 +400,12 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // Check to see if we've arrived at a new breakpoint:
     //  (1) should be in user code
     //  (2) should never happen while unwinding
-    //  (3) requires either
+    //  (3) should never happen when revisiting an interstitial node
+    //  (4) requires either
     //   (a) atInitialBreakpoint OR
     //   (b) isAceBreakpointRow() AND not still at the same line number where
     //       we have already stopped from the last step/breakpoint
-    if (inUserCode && !unwindingAfterStep &&
+    if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
         (atInitialBreakpoint ||
          (codegen.isAceBreakpointRow(session, userCodeRow) &&
           !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
@@ -423,8 +438,11 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     var err = safeStepInterpreter(this);
     if (!err) {
-      doneUserLine = doneUserLine ||
-        (inUserCode && this.interpreter.stateStack[0] && this.interpreter.stateStack[0].done);
+      var state = this.interpreter.stateStack[0], nodeType = state.node.type;
+      this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
+      if (inUserCode) {
+        doneUserLine = doneUserLine || (state.done || this.atInterstitialNode);
+      }
 
       var stackDepth = this.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -449,12 +467,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
             this.firstCallStackDepthThisStep = stackDepth;
           }
         }
-        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
-        // though the the stateStack doesn't have "done" set, so that stepping in the
-        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
-        var nodeType = this.interpreter.stateStack[0].node.type;
-        doneUserLine = doneUserLine ||
-          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
 
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&

@@ -15,10 +15,10 @@ var SQUARE_SIZE = 50;
  * @param skin The app's skin, used to get URLs for our images
  * @param bee The maze's Bee object.
  */
-function BeeItemDrawer(dirtMap, skin, bee) {
+function BeeItemDrawer(map, skin, bee) {
   this.__base = BeeItemDrawer.superPrototype;
 
-  DirtDrawer.call(this, dirtMap, '');
+  DirtDrawer.call(this, map, '');
 
   this.skin_ = skin;
   this.bee_ = bee;
