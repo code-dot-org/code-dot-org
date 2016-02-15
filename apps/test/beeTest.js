@@ -16,7 +16,7 @@ var baseLevel = {
   ],
   flowerType: 'redWithNectar',
   startDirection: 1,
-  rawDirt: [
+  initialDirt: [
     [ 0 ]
   ]
 };
@@ -25,10 +25,9 @@ describe("Bee", function () {
   it("fails if no flowerType", function () {
     var maze = {};
     var config = {
-      level:  utils.extend(baseLevel, {
-        flowerType: undefined
-      })
+      level: baseLevel
     };
+    delete config.level.flowerType;
     assert.throws(function () {
       /* jshint nonew:false */
       new Bee(maze, null, config);
@@ -56,12 +55,15 @@ describe("Bee", function () {
      * Shim a 1x1 maze with the given values and validate that we get the
      * expected result when calling isRedFlower
      */
-    function validate(flowerType, rawDirtValue, expected, msg) {
+    function validate(flowerType, mapValue, initialDirtValue, expected, msg) {
+      var map = [[mapValue]];
+
       var maze = {};
       var config = {
         level: utils.extend(baseLevel, {
           flowerType: flowerType,
-          rawDirt: [[rawDirtValue]]
+          map: map,
+          initialDirt: [[initialDirtValue]]
         })
       };
       var bee = new Bee(maze, null, config);
@@ -69,80 +71,19 @@ describe("Bee", function () {
     }
 
     it("red default", function () {
-      validate('redWithNectar', '+1', true, 'default flower');
-      validate('redWithNectar', '-1', false, 'default hive');
-      validate('redWithNectar', '+1P', false, 'overriden purple');
-      validate('redWithNectar', '+1R', true, 'overriden red');
-      validate('redWithNectar', '+1FC', true, 'overriden cloud');
+      validate('redWithNectar', 1, 1, true, 'default flower');
+      validate('redWithNectar', 1, -1, false, 'default hive');
+      validate('redWithNectar', 'P', 1, false, 'overriden purple');
+      validate('redWithNectar', 'R', 1, true, 'overriden red');
+      validate('redWithNectar', 'FC', 1, true, 'overriden cloud');
     });
 
     it("purple default", function () {
-      validate('purpleNectarHidden', '+1', false, 'default flower');
-      validate('purpleNectarHidden', '-1', false, 'default hive');
-      validate('purpleNectarHidden', '+1P', false, 'overriden purple');
-      validate('purpleNectarHidden', '+1R', true, 'overriden red');
-      validate('purpleNectarHidden', '+1FC', false, 'overriden cloud');
-    });
-  });
-
-  describe("variable grids", function () {
-    function validate(rawDirtValues, expected) {
-      var maze = {};
-      var config = {
-        level: utils.extend(baseLevel, {
-          rawDirt: [rawDirtValues]
-        })
-      };
-      var bee = new Bee(maze, null, config);
-      assert.equal(bee.staticGrids.length, expected);
-    }
-
-    it("generates a single static grid when no variable cells are specified", function () {
-      validate([0], 1);
-      validate([1], 1);
-      validate([2], 1);
-      validate(["+1"], 1);
-    });
-
-    it("generates the correct number of static grids when some variable cells are specified", function () {
-      validate(["+1C"], 2);
-      validate(["-1C"], 2);
-      validate(["1C"], 2);
-      validate(["1Cany"], 3);
-      validate(["+1C", "-1C"], 4);
-      validate(["+1C", "1Cany"], 6);
-    });
-  });
-
-  describe("staticGrids", function () {
-    var bee;
-
-    beforeEach(function () {
-      var maze = {};
-      var config = {
-        level: utils.extend(baseLevel, {
-          rawDirt: [["1Cany"]]
-        })
-      };
-      bee = new Bee(maze, null, config);
-    });
-
-    it("can switch between static grids", function () {
-      bee.useGridWithId(0);
-      assert.equal(bee.getValue(0, 0), 1);
-      bee.useGridWithId(1);
-      assert.equal(bee.getValue(0, 0), -1);
-      bee.useGridWithId(2);
-      assert.equal(bee.getValue(0, 0), 0);
-    });
-
-    it("switching grids resets current values", function () {
-      bee.useGridWithId(0);
-      assert.equal(bee.getValue(0, 0), 1);
-      bee.setValue(0, 0, 50);
-      assert.equal(bee.getValue(0, 0), 50);
-      bee.useGridWithId(0);
-      assert.equal(bee.getValue(0, 0), 1);
+      validate('purpleNectarHidden', 1, 1, false, 'default flower');
+      validate('purpleNectarHidden', 1, -1, false, 'default hive');
+      validate('purpleNectarHidden', 'P', 1, false, 'overriden purple');
+      validate('purpleNectarHidden', 'R', 1, true, 'overriden red');
+      validate('purpleNectarHidden', 'FC', 1, false, 'overriden cloud');
     });
   });
 });
