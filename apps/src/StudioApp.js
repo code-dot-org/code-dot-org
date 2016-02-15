@@ -755,7 +755,8 @@ StudioApp.prototype.renderShareFooter_ = function(container) {
     ]
   };
 
-  window.dashboard.footer.render(reactProps, footerDiv);
+  React.render(React.createElement(window.dashboard.SmallFooter, reactProps),
+    footerDiv);
 };
 
 /**
