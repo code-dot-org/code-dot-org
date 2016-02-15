@@ -238,7 +238,6 @@ var SmallFooter = React.createClass({
 });
 module.exports = SmallFooter;
 
-// Expose a render method so that this can be used from apps
 window.dashboard.footer = {
   /**
    * render our small footer, adding copyright strings if we have them
