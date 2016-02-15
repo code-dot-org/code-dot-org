@@ -21,6 +21,8 @@ var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
+var clipboardElement = null;
+
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
 /**
@@ -92,7 +94,11 @@ designMode.activeScreen = function () {
  */
 designMode.createElement = function (elementType, left, top) {
   var element = elementLibrary.createElement(elementType, left, top);
+  designMode.attachElement(element);
+  return element;
+};
 
+designMode.attachElement = function(element) {
   var parent;
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
@@ -106,8 +112,6 @@ designMode.createElement = function (elementType, left, top) {
     makeDraggable($(element));
   }
   designMode.editElementProperties(element);
-
-  return element;
 };
 
 designMode.editElementProperties = function (element) {
@@ -296,7 +300,6 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
-
     case 'screen-image':
       element.setAttribute('data-canonical-image-url', value);
 
@@ -309,7 +312,6 @@ designMode.updateProperty = function (element, name, value) {
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
-
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -449,7 +451,29 @@ designMode.updateProperty = function (element, name, value) {
   }
 };
 
-designMode.onDeletePropertiesButton = function (element, event) {
+designMode.onDuplicate = function(element, event) {
+  var isScreen = $(element).hasClass('screen');
+  if (isScreen) {
+    // Not duplicating screens for now
+    return;
+  }
+
+  var duplicateElement = element.cloneNode(true);
+
+  // Change the ID and location of the duplicate element
+  duplicateElement.style.left = appendPx(parseInt(element.style.left, 10) + 10);
+  duplicateElement.style.top = appendPx(parseInt(element.style.top, 10) + 10);
+
+  var elementType = elementLibrary.getElementType(element);
+  elementUtils.setId(duplicateElement, elementLibrary.getUnusedElementId(elementType.toLowerCase()));
+
+  // Attach the duplicate element and then focus on it
+  designMode.attachElement(duplicateElement);
+  duplicateElement.focus();
+  designMode.editElementProperties(duplicateElement);
+};
+
+designMode.onDeletePropertiesButton = function(element, event) {
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -967,6 +991,7 @@ designMode.renderDesignWorkspace = function (element) {
     handleChange: designMode.onPropertyChange.bind(this, element),
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
+    onDuplicate: designMode.onDuplicate.bind(this, element),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: showAssetManager,
@@ -1003,12 +1028,34 @@ designMode.addKeyboardHandlers = function () {
     if (!Applab.isInDesignMode() || Applab.isRunning()) {
       return;
     }
+
+    // Check for copy and paste events
+    if (event.altKey || event.ctrlKey || event.metaKey) {
+      switch(event.which) {
+        case KeyCodes.COPY:
+          if (currentlyEditedElement) {
+            // Remember the current element on the clipboard
+            clipboardElement = currentlyEditedElement.cloneNode(true);
+          }
+          break;
+        case KeyCodes.PASTE:
+          // Paste the clipboard element with updated position and ID
+          if (clipboardElement) {
+            designMode.onDuplicate(clipboardElement);
+          }
+          break;
+        default:
+          return;
+      }
+    }
+
     if (!currentlyEditedElement || $(currentlyEditedElement).hasClass('screen')) {
       return;
     }
 
     var current, property, newValue;
 
+    // Check for keys that change element properties
     switch (event.which) {
       case KeyCodes.LEFT:
         current = parseInt(currentlyEditedElement.style.left, 10);
@@ -1034,6 +1081,7 @@ designMode.addKeyboardHandlers = function () {
         return;
     }
     designMode.onPropertyChange(currentlyEditedElement, property, newValue);
+
   });
 };
 
