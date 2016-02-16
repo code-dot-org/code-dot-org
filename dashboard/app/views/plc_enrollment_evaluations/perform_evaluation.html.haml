@@ -9,7 +9,23 @@
     - answers = question.plc_evaluation_answer
     - answers.each do |answer|
       %p
-        %input.radio{type: "radio", name: 'question_' + question.id.to_s, value: '' + answer.professional_learning_task_id.to_s, checked: answer == answers.first}
+        %input.radio{type: "radio", value: '' + answer.professional_learning_task_id.to_s, checked: answer == answers.first}
           #{answer.answer} (corresponds with #{answer.professional_learning_task.try(:name)})
+  = hidden_field_tag('answerTaskList')
+  = text_field_tag('something')
+  = submit_tag('Submit evaluation', id: 'submitEvaluation')
+:javascript
+  $(document).ready(function () {
+    $('#submitEvaluation').click(function() {
+      var evaluationResponses = new Array();
 
-  = submit_tag('Submit evaluation', id: 'submit')
+      $('input:checked').each(function() {
+        if (this.value) {
+          evaluationResponses.push(this.value);
+        }
+      });
+
+      $('#answerTaskList').val(evaluationResponses);
+    })
+  });
+

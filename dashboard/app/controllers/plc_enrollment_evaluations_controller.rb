@@ -8,11 +8,11 @@ class PlcEnrollmentEvaluationsController < ApplicationController
   end
 
   def submit_evaluation
-    question_responses = params.select {|k, v| (k.start_with? 'question_') && v != 'nil'}
+    question_responses = params[:answerTaskList].split(',')
     user_professional_learning_course_enrollment = UserProfessionalLearningCourseEnrollment.find(params[:enrollment_id])
     modules_to_enroll_in = []
 
-    ProfessionalLearningTask.where(id: question_responses.values).each do |task|
+    ProfessionalLearningTask.where(id: question_responses).each do |task|
       modules_to_enroll_in << task.professional_learning_module
     end
 

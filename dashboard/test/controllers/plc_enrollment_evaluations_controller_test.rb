@@ -71,48 +71,32 @@ class PlcEnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     #Sir Lancelot says that his name is Lancelot, his quest is to seek the grail, and that his favorite color is blue.
     #He should be enrolled only in "Answering questions honestly"
-    a1 = @answer1_1.professional_learning_task_id
-    a2 = @answer2_1.professional_learning_task_id
-    a3 = @answer3_1.professional_learning_task_id
-    post :submit_evaluation, enrollment_id: @plc_enrollment.id, question_1: a1, question_2: a2, question_3: a3
-    assert_equal 1, @plc_enrollment.user_enrollment_module_assignment.count
-    assert_equal @module3.name, @plc_enrollment.user_enrollment_module_assignment.first.professional_learning_module.name
+    do_expected_answers_yield_expected_module_enrollments(
+        [@answer1_1.professional_learning_task_id, @answer2_1.professional_learning_task_id, @answer3_1.professional_learning_task_id].to_s, [@module3])
 
     #Sir Robin says that his name is Robin, his quest is to seek the grail, and that he doesn't know the capital of Assyria
     #He should be enrolled in "Answering questions honestly" and "Admitting Ignorance"
-    a1 = @answer1_2.professional_learning_task_id
-    a2 = @answer2_1.professional_learning_task_id
-    a3 = @answer4_1.professional_learning_task_id
-    post :submit_evaluation, enrollment_id: @plc_enrollment.id, question_1: a1, question_2: a2, question_3: a3
-    assert_equal 2, @plc_enrollment.user_enrollment_module_assignment.count
-    assert_equal @module3.name, @plc_enrollment.user_enrollment_module_assignment.first.professional_learning_module.name
-    assert_equal @module4.name, @plc_enrollment.user_enrollment_module_assignment.second.professional_learning_module.name
+    do_expected_answers_yield_expected_module_enrollments(
+        [@answer1_2.professional_learning_task_id, @answer2_1.professional_learning_task_id, @answer4_1.professional_learning_task_id].to_s, [@module3, @module4])
 
     #Sir Galahad says that his name is Galahad, his quest is to seek the grail, and that his favorite color is blue - no, yellow
     #He should be enrolled in "Answering questions honestly" and "Getting thrown off cliffs"
-    a1 = @answer1_3.professional_learning_task_id
-    a2 = @answer2_1.professional_learning_task_id
-    a3 = @answer3_2.professional_learning_task_id
-    post :submit_evaluation, enrollment_id: @plc_enrollment.id, question_1: a1, question_2: a2, question_3: a3
-    assert_equal 2, @plc_enrollment.user_enrollment_module_assignment.count
-    assert_equal @module3.name, @plc_enrollment.user_enrollment_module_assignment.first.professional_learning_module.name
-    assert_equal @module1.name, @plc_enrollment.user_enrollment_module_assignment.second.professional_learning_module.name
+    do_expected_answers_yield_expected_module_enrollments(
+        [@answer1_3.professional_learning_task_id, @answer2_1.professional_learning_task_id, @answer3_2.professional_learning_task_id].to_s, [@module3, @module1])
 
     #King Arthur says that his name is Arthur, his quest is to seek the grail, and needs clarification on swallow speed
     #He should be enrolled in "Answering questions honestly" and "Advanced Ornitholoy"
-    a1 = @answer1_4.professional_learning_task_id
-    a2 = @answer2_1.professional_learning_task_id
-    a3 = @answer5_1.professional_learning_task_id
-    post :submit_evaluation, enrollment_id: @plc_enrollment.id, question_1: a1, question_2: a2, question_3: a3
-    assert_equal 2, @plc_enrollment.user_enrollment_module_assignment.count
-    assert_equal @module3.name, @plc_enrollment.user_enrollment_module_assignment.first.professional_learning_module.name
-    assert_equal @module2.name, @plc_enrollment.user_enrollment_module_assignment.second.professional_learning_module.name
+    do_expected_answers_yield_expected_module_enrollments(
+        [@answer1_4.professional_learning_task_id, @answer2_1.professional_learning_task_id, @answer5_1.professional_learning_task_id].to_s, [@module3, @module2])
 
     #Sir Edgecase of Edgecaseville should be enrolled in no modules
-    a1 = @answer1_5.professional_learning_task_id
-    a2 = @answer3_3.professional_learning_task_id
-    a3 = @answer5_2.professional_learning_task_id
-    post :submit_evaluation, enrollment_id: @plc_enrollment.id, question_1: a1, question_2: a2, question_3: a3
-    assert_equal 0, @plc_enrollment.user_enrollment_module_assignment.count
+    do_expected_answers_yield_expected_module_enrollments(
+        [@answer1_5.professional_learning_task_id, @answer3_3.professional_learning_task_id, @answer5_2.professional_learning_task_id].to_s, [])
+  end
+
+  private
+  def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
+    post :submit_evaluation, enrollment_id: @plc_enrollment.id, answerTaskList: answers
+    assert_equal expected_module_enrollments.collect {|m| m.id}, @plc_enrollment.user_enrollment_module_assignment.all.collect {|m| m.professional_learning_module_id}
   end
 end
