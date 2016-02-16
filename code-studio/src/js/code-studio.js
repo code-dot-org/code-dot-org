@@ -18,11 +18,9 @@ window.React = require('react');
 // TODO (bbuchanan): Stop including these components in a global way, just
 //                   require them specifically where needed.
 require('./components/abuse_error.jsx');
-require('./components/dialog.jsx');
 require('./components/report_abuse_form.jsx');
 require('./components/send_to_phone.jsx');
 require('./components/share_dialog.jsx');
-require('./components/share_dialog_body.jsx');
 require('./components/small_footer.jsx');
 require('./components/progress/stage_progress.jsx');
 require('./components/progress/course_progress.jsx');
