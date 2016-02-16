@@ -806,10 +806,11 @@
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
   dashboard_announce_view_all: Skoða allt
-  dashboard_announce_message: "<b>16. desember 2015.</b> - Takk fyrir að taka þátt
-    í Klukkustund kóðunar 2015! Vistun framvindu er nú aftur virk í öllu kennsluefni
-    Kóðastúdíósins. Ath.: Skrifstofur Code.org verða lokaðar 19. desember - 3. janúar.
-    Vinsamlegast gerið ráð fyrir að fyrirspurnum verði ekki svarað fyrr en 4. janúar."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Læra meira
   dashboard_announce_hoc: "<b>23. nóvember 2015</b> - Viltu fá sjálfboðaliða sem hefur
     brennandi áhuga á menntun á sviði tölvunarfræði til að hjálpa til við þína Klukkustund
@@ -1628,3 +1629,4 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

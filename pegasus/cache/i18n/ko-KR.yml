@@ -719,8 +719,11 @@
   dashboard_faq_k5: K-5(초등학교 5학년) 자주묻는 질문들
   dashboard_announcements: "공시사항"
   dashboard_announce_view_all: "모두 보기"
-  dashboard_announce_message: "<b>2015년 1월 16일</b> - Hour of Code 이후의 활동들을 교실 수업에서
-    해보세요. 새로운 과정을 시작해보고, 학생들의 진도를 확인해보세요."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: "더 알아보기"
   dashboard_announce_hoc: "<b>2015년 11월 23일</b> - 곧 개봉할 영화 Star Wars: The Force Awakens을
     소재로 만든 새로운 Hour of Code 튜토리얼이 여기 있습니다. 레이와 함께 새로운 드로이드, Bb-8을 움직여 함께 임무를 수행하세요.
@@ -1403,3 +1406,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites
