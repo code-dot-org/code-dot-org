@@ -62,10 +62,7 @@ exports.TestResults = {
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
-  ALL_PASS: 100,
-
-  // submitted for grading
-  SUBMITTED: 1000
+  ALL_PASS: 100
 };
 
 exports.BeeTerminationValue = {
