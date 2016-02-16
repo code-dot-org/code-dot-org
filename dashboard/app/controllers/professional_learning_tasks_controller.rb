@@ -1,4 +1,5 @@
 class ProfessionalLearningTasksController < ApplicationController
+  load_and_authorize_resource
   before_action :set_professional_learning_task, only: [:show, :edit, :update, :destroy]
 
   # GET /professional_learning_tasks
