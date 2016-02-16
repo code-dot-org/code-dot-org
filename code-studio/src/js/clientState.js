@@ -1,8 +1,8 @@
 /**
- * @file A module for for accessing persistent per-user client state.
+ * @file A module for accessing persistent per-user client state.
  *
- * - Client state for signed-in users persists even across logins.
- * - Client-state for signed-out users is per-tab and goes aways when the tab
+ * Client state for signed-in users persists even across logins.
+ * Client-state for signed-out users is per-tab and goes aways when the tab
  * is closed.
  *
  * Before getting or setting client state, the developer must call
