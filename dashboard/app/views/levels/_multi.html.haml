@@ -238,27 +238,30 @@
     }
 
     var result;
+    var submitted;
 
-    if ("#{data['assessment']}" == "true")
+    if ("#{data['longassessment']}" == "true")
     {
       result = true;
+      submitted = true;
     }
     else
     {
       result = validateAnswers();
+      submitted = false;
     }
 
     return {
       "response": answer,
       "result": result,
       "errorType": errorType,
-      "submitted": true
+      "submitted": submitted
     }
   }
 
   $('.submitButton').click(function() {
-    // Don't show right/wrong answers for assessments.
-    if ("#{data['assessment']}" == "true")
+    // Don't show right/wrong answers for longassessments.
+    if ("#{data['longassessment']}" == "true")
     {
       return;
     }

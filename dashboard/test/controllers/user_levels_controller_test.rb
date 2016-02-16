@@ -15,7 +15,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     user_level.reload
 
-    assert_not user_level.submitted
+    assert_not user_level.submitted?
   end
 
   test "student can unsubmit own user level" do
@@ -31,7 +31,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     user_level.reload
 
-    assert_not user_level.submitted
+    assert_not user_level.submitted?
   end
 
 
@@ -48,7 +48,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
     user_level.reload
 
-    assert user_level.submitted
+    assert user_level.submitted?
   end
 
 end
