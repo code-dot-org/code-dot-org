@@ -43,7 +43,6 @@ class UserTest < ActiveSupport::TestCase
     assert !ul.passing?
   end
 
-
   test "best? finished? and passing? for not finishing result" do
     ul = UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MINIMUM_FINISHED_RESULT - 5)
 
@@ -52,12 +51,47 @@ class UserTest < ActiveSupport::TestCase
     assert !ul.passing?
   end
 
-
   test "best? finished? and passing? for free play result" do
     ul = UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::FREE_PLAY_RESULT)
 
     assert !ul.best?
     assert ul.finished?
     assert ul.passing?
+  end
+
+  test "attempted, passed, and perfected scopes for nil result" do
+    UserLevel.create(user: @user, level: @level, attempts: 0, best_result: nil)
+
+    assert UserLevel.count == 1
+    assert UserLevel.attempted.count == 0
+    assert UserLevel.passed.count == 0
+    assert UserLevel.perfected.count == 0
+  end
+
+  test "attempted, passed, and perfected scopes for attempted result" do
+    UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MINIMUM_FINISHED_RESULT)
+
+    assert UserLevel.count == 1
+    assert UserLevel.attempted.count == 1
+    assert UserLevel.passed.count == 0
+    assert UserLevel.perfected.count == 0
+  end
+
+  test "attempted, passed, and perfected scopes for passed result" do
+    UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MINIMUM_PASS_RESULT)
+
+    assert UserLevel.count == 1
+    assert UserLevel.attempted.count == 1
+    assert UserLevel.passed.count == 1
+    assert UserLevel.perfected.count == 0
+  end
+
+  test "attempted, passed, and perfected scopes for perfected result" do
+    UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MAXIMUM_NONOPTIMAL_RESULT + 1)
+
+    assert UserLevel.count == 1
+    assert UserLevel.attempted.count == 1
+    assert UserLevel.passed.count == 1
+    assert UserLevel.perfected.count == 1
   end
 end
