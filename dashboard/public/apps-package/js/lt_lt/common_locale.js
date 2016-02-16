@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Komandų kūrimas"},
 "catText":function(d){return "Tekstas"},
 "catVariables":function(d){return "Kintamieji"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Pradėti iš naujo"},
 "clearPuzzleConfirm":function(d){return "Visi tavo sudėlioti blokeliai bus panaikinti ir šį galvosūkį bus galima spręsti nuo pradžių."},
 "clearPuzzleConfirmHeader":function(d){return "Ar tikrai norite pradėti iš naujo?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Peržiūrėk šį vaizdo įrašą"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "paleidus"},
-"workspaceHeaderShort":function(d){return "Darbo laukas: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Darbo laukas: "}};

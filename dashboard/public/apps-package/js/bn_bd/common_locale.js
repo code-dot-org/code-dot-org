@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "ফাংশনগুলি"},
 "catText":function(d){return "পাঠ"},
 "catVariables":function(d){return "চলকগুলো"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "আবার শুরু কর"},
 "clearPuzzleConfirm":function(d){return "এটি puzzleটিকে পুনর্বিন্যাস করে শুরুর স্থানে নিয়ে যাবে এবং তোমার করা ব্লকে-যুক্ত-করন বা পরিবর্তন সব মুছে দেবে।"},
 "clearPuzzleConfirmHeader":function(d){return "তুমি কি সব আবার আগের থেকে শুরু করতে চাও?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ভিডিও দেখুন"},
 "when":function(d){return "যখন"},
 "whenRun":function(d){return "চালানোর সময়"},
-"workspaceHeaderShort":function(d){return "কর্মপরিসর:"},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "কর্মপরিসর:"}};

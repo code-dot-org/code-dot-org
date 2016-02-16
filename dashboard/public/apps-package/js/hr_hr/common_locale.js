@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkcije"},
 "catText":function(d){return "tekst"},
 "catVariables":function(d){return "Varijable"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Počni ispočetka"},
 "clearPuzzleConfirm":function(d){return "Ovo će vratiti zadatak na početno stanje i izbrisati sve blokove koje ste dodali ili promijenili."},
 "clearPuzzleConfirmHeader":function(d){return "Jeste li sigurni da želite početi iznova?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Pogledaj filmić"},
 "when":function(d){return "kada"},
 "whenRun":function(d){return "pri pokretanju"},
-"workspaceHeaderShort":function(d){return "Radna površina: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Radna površina: "}};
