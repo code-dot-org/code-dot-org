@@ -7,7 +7,7 @@
 var tiles = require('@cdo/apps/maze/tiles');
 var SquareType = tiles.SquareType;
 
-var CellEditor = module.exports = React.createClass({
+var CellEditor = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
     row: React.PropTypes.number.isRequired,
@@ -54,3 +54,4 @@ var CellEditor = module.exports = React.createClass({
     );
   },
 });
+module.exports = CellEditor;
