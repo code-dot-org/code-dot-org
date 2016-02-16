@@ -292,8 +292,8 @@ class User < ActiveRecord::Base
 
   def User.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    user_id = PEGASUS_DB[:user_storage_ids].where(id: owner_storage_id).first[:user_id]
-    User.find_by_id(user_id)
+    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    User.find(user_id)
   end
 
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
