@@ -793,9 +793,11 @@
   dashboard_faq_k5: K-5 বহুল জিজ্ঞাসিত প্রশ্নসমূহ
   dashboard_announcements: "ঘোষণা"
   dashboard_announce_view_all: "সব দেখুন"
-  dashboard_announce_message: "<b>জানুয়ারি ৬, ২০১৫</b> - আপনার শ্রেনীকক্ষে এক ঘন্টার
-    কোডরে বাইরে কিছু শিখুন। নতুন ভুমিকা কোর্স শুরু করুন এবং ছাত্রদের অগ্রগতি অনুসরণ
-    করুন।"
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: "আরও জানুন"
   dashboard_announce_hoc: "<b>নভেম্বর ২৩, ২০১৫</b> - এক ঘন্টার কোড অনুষ্ঠানের সময়
     আপনি কি কম্পিউটার বিজ্ঞান বিষয়ে উত্সাহী স্বেচ্ছাসেবকের সাহায্য চান? ৭০০০ এর ও
@@ -1625,3 +1627,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

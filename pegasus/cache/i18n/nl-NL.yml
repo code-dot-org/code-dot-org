@@ -806,11 +806,11 @@
   dashboard_faq_k5: K-5 Veelgestelde vragen
   dashboard_announcements: Aankondigingen
   dashboard_announce_view_all: Alles weergeven
-  dashboard_announce_message: "<b>16 December 2015</b> - Bedankt voor uw deelname
-    aan het Hour of Code 2015! Het volgen en opslaan van de voortgang is nu hervat
-    in alle Code Studio lessen en cursussen. Opmerking: Het kantoor van Code.org is
-    gesloten van 19 December - 3 januari. Vragen die u voor 4 januari stelt zullen
-    vertraagd worden beantwoord."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Leer meer
   dashboard_announce_hoc: "<b>15 oktober 2015</b> - het Uur Code komt &mdash; elke
     deelnemende organisator ontvangt een kadokaart van Amazon.com of Microsofts Windows-winkel
@@ -1653,3 +1653,4 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites
