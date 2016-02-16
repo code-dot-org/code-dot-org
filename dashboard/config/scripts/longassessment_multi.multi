@@ -1,5 +1,5 @@
-name 'Assessments multi'
-title 'Assessment: Multiple choice'
+name 'Longassessment multi'
+title 'Long Assessment: Multiple choice'
 description ''
 question 'What is your favorite color?'
 assessment 'true'

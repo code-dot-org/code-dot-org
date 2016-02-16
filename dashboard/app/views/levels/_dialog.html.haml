@@ -48,8 +48,8 @@
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_title')
         - else
-          - if data['assessment']
-            =t("#{app == 'match' ? 'match-assessment' : 'multi-assessment'}.correct_title")
+          - if data['longassessment']
+            =t("#{app == 'match' ? 'match-longassessment' : 'multi-longassessment'}.correct_title")
           - else
             =t("#{app == 'match' ? 'match' : 'multi'}.correct_title")
       %p
@@ -58,8 +58,8 @@
         - elsif app == 'text_match' && data['answers'].blank?
           =t('text_match.open_response_body')
         - else
-          - if data['assessment']
-            =t("#{app == 'match' ? 'match-assessment' : 'multi-assessment'}.correct_body")
+          - if data['longassessment']
+            =t("#{app == 'match' ? 'match-longassessment' : 'multi-longassessment'}.correct_body")
           - else
             =t("#{app == 'match' ? 'match' : 'multi'}.correct_body")
       .farSide
