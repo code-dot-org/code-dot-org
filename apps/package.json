@@ -34,6 +34,7 @@
     "browserify-shim": "3.8.10",
     "canvg": "gabelerner/canvg",
     "chai": "1.10.0",
+    "chai-subset": "1.2.0",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
     "ejsify": "1.0.0",

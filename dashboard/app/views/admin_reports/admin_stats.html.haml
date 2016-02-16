@@ -6,43 +6,52 @@
         - {'users': 'Users', 'students': 'Students', 'teachers': 'Teachers'}.each do |type, description|
           %li
             = "#{description}: "
-            = @stats["accounts"][type.to_s]
+            = number_with_delimiter(@stats["accounts"][type.to_s])
     %li
       Born Accounts (accounts that have at least one sign-in)
       %ul
         %li
           Users:
-          = @stats['born_accounts']['users']
+          = number_with_delimiter(@stats['born_accounts']['users'])
         %li
           Students:
-          = @stats['born_accounts']['students']
-        %li
-          Female Students:
-          = @stats['born_accounts']['female_students']
-          = surround '(', ')' do
-            = get_gender_percentage(@stats['born_accounts']['female_students'],
-                                    @stats['born_accounts']['male_students'])
-        %li
-          Male Students:
-          = @stats['born_accounts']['male_students']
-          = surround '(', ')' do
-            = get_gender_percentage(@stats['born_accounts']['male_students'],
-                                    @stats['born_accounts']['female_students'])
+          = number_with_delimiter(@stats['born_accounts']['students'])
+        %ul
+          %li
+            Female Students:
+            = number_with_delimiter(@stats['born_accounts']['female_students'])
+            = surround '(', ')' do
+              = get_gender_percentage(@stats['born_accounts']['female_students'],
+                                      @stats['born_accounts']['male_students'])
+          %li
+            Male Students:
+            = number_with_delimiter(@stats['born_accounts']['male_students'])
+            = surround '(', ')' do
+              = get_gender_percentage(@stats['born_accounts']['male_students'],
+                                      @stats['born_accounts']['female_students'])
         %li
           Teachers:
-          = @stats['born_accounts']['teachers']
+          = number_with_delimiter(@stats['born_accounts']['teachers'])
     %li
       Actives (accounts that have at least one sign-in in the last x days)
       %ul
-        -{'seven_day_students': '7-Day Students',
-          'seven_day_female_students': '7-Day Female Students',
-          'seven_day_male_students': '7-Day Male Students',
-          'thirty_day_students': '30-Day Students',
-          'thirty_day_female_students': '30-Day Female Students',
-          'thirty_day_male_students': '30-Day Male Students'}.each do |type, description|
+        -{'seven': '7', 'thirty': '30'}.each do |days, number|
           %li
-            = "#{description}: "
-            = @stats['actives']["#{type}"]
+            = "#{number}-Day Students: "
+            = number_with_delimiter(@stats['actives']["#{days}_day_students"])
+          %ul
+            %li
+              = "#{number}-Day Female Students: "
+              = number_with_delimiter(@stats['actives']["#{days}_day_female_students"])
+              = surround '(', ')' do
+                = get_gender_percentage(@stats['actives']["#{days}_day_female_students"],
+                                        @stats['actives']["#{days}_day_male_students"])
+            %li
+              = "#{number}-Day Male Students: "
+              = number_with_delimiter(@stats['actives']["#{days}_day_male_students"])
+              = surround '(', ')' do
+                = get_gender_percentage(@stats['actives']["#{days}_day_male_students"],
+                                        @stats['actives']["#{days}_day_female_students"])
     - {'historical': 'accounts at least 37 days old and logged in at least once after 30 days',
        'current_weekly': 'accounts 37 to 44 days old and logged in at least once after 30 days',
        'current_monthly': 'accounts 60 to 90 days old and logged in at least once after 30 days'}.each do |type, description|
@@ -57,14 +66,21 @@
             'non_us_students': 'Non-US Student'}.each do |filter, filter_description|
             %li
               = "30-Day #{filter_description}: "
-              = (100.0 * @stats["thirty_day_retention_#{type}"]["#{filter}"]).to_s + '%'
+              = get_percentage_from_ratio(@stats["thirty_day_retention_#{type}"]["#{filter}"])
+    %li
+      Teachers
+      %ul
+        %li
+          With Born Students:
+          = number_with_delimiter(@stats['teachers']['with_students'])
+        %li
+          With 30-Day Active Students:
+          = number_with_delimiter(@stats['teachers']['with_active_students'])
 
   = link_to 'View Level Progress (slow query) >>', admin_progress_path
   %br
   = link_to 'View Concept Completions (slow query) >>', admin_concepts_path
   %br
   = link_to 'View Level Completion stats >>', level_completions_path
-  %br
-  = link_to 'View Monthly Metrics >>', reports_path(action: 'monthly_metrics')
 - else
   %h2 Error: @stats is nil.
