@@ -188,14 +188,11 @@ clientState.queryParams = function (name) {
  *   the cached copy is missing/stale.
  */
 clientState.sourceForLevel = function (scriptName, levelId, timestamp) {
-  try {
-    var parsed = getItem(createKey(scriptName, levelId, 'source'));
-    if (parsed && (!timestamp || parsed.timestamp > timestamp)) {
-      return parsed.source;
-    }
-  } catch (e) {
+  var parsed = getItem(createKey(scriptName, levelId, 'source'));
+  if (parsed && (!timestamp || parsed.timestamp > timestamp)) {
+    return parsed.source;
   }
-  return;  // Return undefined for invalid or missing source.
+  return;  // Return undefined for missing source.
 };
 
 /**
@@ -285,10 +282,10 @@ function setLevelProgress(scriptName, levelId, progress) {
  */
 clientState.allLevelsProgress = function() {
   var progressJson = getItem('progress');
-  try {
-    return progressJson ? progressJson : {};
-  } catch(e) {
-    // Recover from malformed data.
+  if (progressJson && typeof progressJson == 'object') {
+    return progressJson;
+  } else {
+    // Return empty for missing or malformed progress json.
     return {};
   }
 };
@@ -356,18 +353,9 @@ clientState.setItemForTest = function(key, value) {
  * @param visualElementId
  */
 function recordVisualElementSeen(visualElementType, visualElementId) {
-  var elementSeenJson = getItem(visualElementType) || {};
-  var elementSeen;
-  try {
-    elementSeen = elementSeenJson;
-    elementSeen[visualElementId] = true;
-    setItem(visualElementType, elementSeen);
-  } catch (e) {
-    //Something went wrong parsing the json. Blow it up and just put in the new callout
-    elementSeen = {};
-    elementSeen[visualElementId] = true;
-    setItem(visualElementType, elementSeen);
-  }
+  var elementSeenMap = getElementSeenMap(visualElementType);
+  elementSeenMap[visualElementId] = true;
+  setItem(visualElementType, elementSeenMap);
 }
 
 /**
@@ -376,13 +364,22 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
  * @param visualElementId
  */
 function hasSeenVisualElement(visualElementType, visualElementId) {
-  var elementSeenJson = getItem(visualElementType) || {};
-  try {
-    var elementSeen = elementSeenJson;
-    return elementSeen[visualElementId] === true;
-  } catch (e) {
-    return false;
+  var elementSeenMap = getElementSeenMap(visualElementType);
+  return elementSeenMap[visualElementId] === true;
+}
+
+/**
+ * Private helper to return the elementSeen map for videos and callouts.
+ * @param visualElementType
+ * @return Object<string, boolean>
+ */
+function getElementSeenMap(visualElementType) {
+  var elementSeenMap = getItem(visualElementType) || {};
+  // Cope with invalid json which lscache returns as a string. (Shouldn't happen unless there is a bug.)
+  if (typeof elementSeenMap !== 'object') {
+    elementSeenMap = {};
   }
+  return elementSeenMap;
 }
 
 /**
