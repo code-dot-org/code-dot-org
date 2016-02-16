@@ -770,10 +770,11 @@
   dashboard_faq_k5: "الأسئلة المتاوترة الطرح في المستوى الخامس K-5"
   dashboard_announcements: "إعلانات"
   dashboard_announce_view_all: "عرض الكل"
-  dashboard_announce_message: "<b>16 ديسمبر 2015</b>-شكرا لك على المشاركة في مدار
-    2015 رمز! واستؤنفت الآن تتبع وحفظ التقدم المحرز في جميع دورات ودروس Studio التعليمات
-    البرمجية. ملاحظة: المكاتب Code.org سيتم إغلاق 19 كانون الأول/ديسمبر-3 كانون الثاني/يناير.
-    يرجى نتوقع تأخر إجابات لأي أسئلة يمكنك إرسال حتى 4 كانون الثاني/يناير."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: "اعرف المزيد"
   dashboard_announce_hoc: <b>23 نوفمبر 2015</b>--هل تريد متطوع متحمساً لتعليم علوم
     الكمبيوتر للمساعدة أثناء الحدث "مدار للتعليمات البرمجية" الخاصة بك؟ المتطوعين
@@ -1552,3 +1553,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

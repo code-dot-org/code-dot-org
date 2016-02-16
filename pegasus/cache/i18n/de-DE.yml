@@ -809,11 +809,11 @@
   dashboard_faq_k5: Häufig gestellte Fragen zur Grundschule
   dashboard_announcements: Ankündigungen
   dashboard_announce_view_all: Alle anzeigen
-  dashboard_announce_message: "<b>16. Dezember 2015</b> - Vielen Dank für Ihre Teilnahme
-    an der Hour of Code 2015! In allen Code Studio Tutorials und Kursen können die
-    Fortschritte wieder gespeichert werden. Hinweis: Code.org Büros sind vom 19. Dezember
-    bis 3. Januar geschlossen. Die Beantwortung von Fragen, die bis zum 4. Januar
-    eingereicht werden, kann sich verzögern."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Erfahre mehr
   dashboard_announce_hoc: "<b>9. November 2015</b> - Eine neue Hour of Code Anleitung
     ist erschienen, präsentiert durch den bevorstehenden Film: Star Wars: Das Erwachen
@@ -1661,3 +1661,4 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites
