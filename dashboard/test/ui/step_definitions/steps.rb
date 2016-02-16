@@ -1,9 +1,14 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
+SHORT_WAIT_TIMEOUT = 30.seconds
 
 def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
   Selenium::WebDriver::Wait.new(timeout: timeout)
+end
+
+def wait_with_short_timeout
+  wait_with_timeout(SHORT_WAIT_TIMEOUT)
 end
 
 def replace_hostname(url)
@@ -115,12 +120,16 @@ When /^I inject simulation$/ do
 end
 
 When /^I press "([^"]*)"$/ do |button|
-  wait_with_timeout.until { @button = @browser.find_element(:id => button) }
+  wait_with_short_timeout.until {
+    @button = @browser.find_element(:id => button)
+  }
   @button.click
 end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
-  @element = @browser.find_element(:css, selector)
+  wait_with_short_timeout.until {
+    @element = @browser.find_element(:css, selector)
+  }
   begin
     @element.click
   rescue
@@ -131,7 +140,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
 end
 
 When /^I press the "([^"]*)" button$/ do |buttonText|
-  @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+  wait_with_short_timeout.until {
+    @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+  }
   @button.click
 end
 
@@ -214,7 +225,9 @@ When /^I press dropdown item "([^"]*)"$/ do |index|
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
-  @button = @browser.find_element(:xpath, xpath)
+  wait_with_timeout.until {
+    @button = @browser.find_element(:xpath, xpath)
+  }
   @button.click
 end
 
@@ -664,19 +677,19 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
-  wait_with_timeout(30).until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_with_short_timeout.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^my query params match "(.*)"$/ do |matcher|
-  wait_with_timeout(30).until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
+  wait_with_short_timeout.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
-  wait_with_timeout(30).until { @browser.find_element(:id => element_id_to_seek) }
+  wait_with_short_timeout.until { @browser.find_element(:id => element_id_to_seek) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait_with_timeout(30).until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_with_short_timeout.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'
     state = { "modified" => true }
@@ -688,7 +701,7 @@ end
 
 last_shared_url = nil
 Then /^I navigate to the share URL$/ do
-  wait_with_timeout(30).until { @button = @browser.find_element(:id => 'sharing-input') }
+  wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
 end
