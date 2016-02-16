@@ -9,7 +9,7 @@ var BeeCell = require('@cdo/apps/maze/beeCell');
 var tiles = require('@cdo/apps/maze/tiles');
 var SquareType = tiles.SquareType;
 
-var BeeCellEditor = module.exports = React.createClass({
+var BeeCellEditor = React.createClass({
   propTypes: {
     cell: React.PropTypes.object.isRequired,
     row: React.PropTypes.number.isRequired,
@@ -104,7 +104,7 @@ var BeeCellEditor = module.exports = React.createClass({
 
         <label htmlFor="flowerColor">Flower Color:</label>
         <select name="flowerColor" value={values.flowerColor} disabled={!this.props.cell.isFlower()} onChange={this.handleChange}>
-          <option value="undefined">default</option> 
+          <option value="undefined">default</option>
           <option value={BeeCell.FlowerColor.RED}>red</option>
           <option value={BeeCell.FlowerColor.PURPLE}>purple</option>
         </select>
@@ -112,3 +112,5 @@ var BeeCellEditor = module.exports = React.createClass({
     );
   },
 });
+
+module.exports = BeeCellEditor;

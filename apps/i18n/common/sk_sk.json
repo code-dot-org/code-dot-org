@@ -14,6 +14,7 @@
   "catProcedures": "Funkcie",
   "catText": "Text",
   "catVariables": "Premenné",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Začať odznova",
   "clearPuzzleConfirm": "Toto vynuluje puzzle na štartovaciu pozíciu a vymaže všetky bloky, ktoré boli pridané alebo zmenené.",
   "clearPuzzleConfirmHeader": "Naozaj chceš začať odznova?",
@@ -255,6 +256,5 @@
   "watchVideo": "Pozrieť video",
   "when": "keď",
   "whenRun": "pri spustení",
-  "workspaceHeaderShort": "Pracovná plocha: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Pracovná plocha: "
 }

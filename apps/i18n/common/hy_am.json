@@ -14,6 +14,7 @@
   "catProcedures": "Functions",
   "catText": "Text",
   "catVariables": "Variables",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Clear Puzzle",
   "clearPuzzleConfirm": "This will delete all blocks and reset the puzzle to its start state.",
   "clearPuzzleConfirmHeader": "Are you sure you want to clear the puzzle?",
@@ -255,6 +256,5 @@
   "watchVideo": "Watch the Video",
   "when": "when",
   "whenRun": "when run",
-  "workspaceHeaderShort": "Workspace: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Workspace: "
 }

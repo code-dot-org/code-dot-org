@@ -3,7 +3,7 @@ hr:
     unplugged:
       Unplug1:
         title: Uvod u Informatiku
-        desc: 'This lesson will introduce the concept of Computer Science and explain what a Computer Scientist does.  It will also give students an opportunity to assume the role of a computer scientist.  By the end of the activity, each student will have a take-home reminder of what he or she learned.  You may be tempted to skip teaching young children the vocabulary words that are associated with the lessons that follow, but presenting them in a fun and playful light now is far more productive than waiting for more advanced opportunities.'
+        desc: Ova lekcija će predstaviti koncept računalne znanosti i objasniti što radi računalni znanstvenik. Studenti će također dobiti mogućnost da se osjećaju kao jedan. Na kraju lekcije, svaki student će dobiti podsjetnik svega što je naučio/la. Možda nećete htjeti naučiti djecu neke od kompliciranijih riječi koje dolaze uz lekcije, ali puno je produktivnije upoznati ih s takvim riječima na jednostavan i zabavan način, nego u nekim drugim, težim situacijama.
         pdfs:
           - unplug1
         video: Unplug1
