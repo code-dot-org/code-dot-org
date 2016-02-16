@@ -1,9 +1,4 @@
 saw_failure = false
-$waited = false
-
-Before do |scenario|
-  $waited = false
-end
 
 Before('@stop_after_failure') do |scenario|
   if saw_failure
