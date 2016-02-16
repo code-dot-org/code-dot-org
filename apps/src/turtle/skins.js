@@ -12,7 +12,8 @@ exports.load = function (assetUrl, id) {
       consolidateTurnAndMove: true,
       annaLine: skin.assetUrl('annaline.png'),
       annaLine_2x: skin.assetUrl('annaline_2x.png'),
-      lineStylePatternOptions: [[skin.annaLine, 'annaLine']]
+      // Used to populate the Set Pattern block
+      lineStylePatternOptions: [[skin.assetUrl('annaline-menuicon.png'), 'annaLine']]
     },
 
     elsa: {
@@ -23,10 +24,12 @@ exports.load = function (assetUrl, id) {
       consolidateTurnAndMove: true,
       elsaLine: skin.assetUrl('elsaline.png'),
       elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
-      lineStylePatternOptions: [[skin.elsaLine, 'elsaLine']]
+      // Used to populate the Set Pattern block
+      lineStylePatternOptions: [[skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']]
     },
 
     artist: {
+      // Used to populate the Set Pattern block
       lineStylePatternOptions: [
           [skin.rainbowMenu, 'rainbowLine'],
           [skin.ropeMenu, 'ropeLine'],
