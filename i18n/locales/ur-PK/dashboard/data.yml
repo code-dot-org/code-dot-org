@@ -25,7 +25,7 @@ ur:
           Artist5: Stage 19
           Unplug11: Stage 20
         Hour of Code:
-          desc: Hour of Code
+          desc: آور-آف-کوڈ
           Maze: Stage 1
         Edit Code:
           desc: Edit Code (beta)
@@ -483,6 +483,7 @@ ur:
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_processing_lists: Processing Lists with Loops
         csp_applab_lists_1: 'Introduction to Lists - Part 1'
         csp_applab_lists_2: 'Introduction to Lists - Part 2'
         csp_applab_lists_3: 'Introduction to Lists - Part 3'
@@ -583,7 +584,7 @@ ur:
         frozen_diamond_repeat: اس شیپ کو بنانے کے لیے ریپیٹ بلاک استعمال کریں۔
         frozen_circle_function_in_circle_turn: ہر سرکل کری-ایٹ کرنے کے بعد ٹرن کرنا نہ بھولیں۔
         frozen_circle_function_with_parameter_circle: '"کری-ایٹ اے سرکل" بلاک استعمال کریں اور سائز تبدیل کریں۔'
-        frozen_snowflake_branch: '"کری-ایٹ اے سنوفلیک برانچ" بلاک استعمال کریں'
+        frozen_snowflake_branch: '"ایک سنوفلیک برانچ بنائیں" بلاک استعمال کریں'
         frozen_create_square: ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ کریں
         playlab_drag_say: 'Drag the "say" block here and type "hello"'
         playlab_use_twice: Use this block twice and remember to change the actor number

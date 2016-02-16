@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funktioner"},
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Variabler"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Börja om"},
 "clearPuzzleConfirm":function(d){return "Detta kommer att återställa pusslet och ta bort alla block du har lagt till eller ändrat."},
 "clearPuzzleConfirmHeader":function(d){return "Är du säker på att du vill börja om?"},

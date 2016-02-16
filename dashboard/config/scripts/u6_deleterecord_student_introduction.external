@@ -1,0 +1,28 @@
+name 'U6 - deleteRecord - Student Introduction'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 4: Lesson 04 - Deleting Records
+
+# Background
+words.
+
+# Vocabulary
+ * **words** - words.
+
+# Lesson
+
+* Video: Tutorial - Databases: part 1 - Creating and Storing
+* Introduction to App Lab’s data tools: createRecord and the Data Viewer
+* Modify the contacts app to store new contacts in a database
+
+
+# Resources
+
+* Video: Tutorial - Databases: part 1 - Creating and Storing
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

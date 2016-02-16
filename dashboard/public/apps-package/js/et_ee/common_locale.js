@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funktsioonid"},
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Muutujad"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Alusta uuesti"},
 "clearPuzzleConfirm":function(d){return "See lähtestab puzzle algolekusse ja kustutab kõik sinu poolt lisatud või muudetud blokid."},
 "clearPuzzleConfirmHeader":function(d){return "Oled sa kindel et tahad uuesti alustada?"},

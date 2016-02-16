@@ -388,6 +388,13 @@ exports.getKeyValue = function(key, onSuccess, onError) {
                             'onError': onError});
 };
 
+exports.getKeyValueSync = function(key, callback) {
+  return Applab.executeCmd(null,
+                           'getKeyValueSync',
+                           {'key':key,
+                            'callback': callback});
+};
+
 exports.setKeyValue = function(key, value, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'setKeyValue',
@@ -395,6 +402,14 @@ exports.setKeyValue = function(key, value, onSuccess, onError) {
                             'value': value,
                             'onSuccess': onSuccess,
                             'onError': onError});
+};
+
+exports.setKeyValueSync = function(key, value, callback) {
+  return Applab.executeCmd(null,
+                           'setKeyValueSync',
+                           {'key':key,
+                            'value': value,
+                            'callback': callback});
 };
 
 exports.createRecord = function (table, record, onSuccess, onError) {

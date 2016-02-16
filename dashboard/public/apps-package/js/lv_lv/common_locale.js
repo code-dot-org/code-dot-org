@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkcijas"},
 "catText":function(d){return "Teksts"},
 "catVariables":function(d){return "Mainīgie"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Sākt no sākuma"},
 "clearPuzzleConfirm":function(d){return "Šis atiestatīs mīklu līdz tās sākuma pozīcijai un izdzēsīs visus blokus, kurus esi pievienojis, vai mainijis."},
 "clearPuzzleConfirmHeader":function(d){return "Vai esat pārliecināts, ka vēlaties sākt no jauna?"},

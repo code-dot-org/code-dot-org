@@ -4,8 +4,7 @@ module ViewOptionsHelper
     no_header
     no_footer
     small_footer
-    share_footer
-    try_hoc_banner
+    code_studio_logo
     has_i18n
     white_background
     callouts

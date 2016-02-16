@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "函數類別"},
 "catText":function(d){return "文字類"},
 "catVariables":function(d){return "變數類"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "重新開始"},
 "clearPuzzleConfirm":function(d){return "這會讓這一關重新開始。之前你所新增或改變的都將會回復原狀。"},
 "clearPuzzleConfirmHeader":function(d){return "你確定要重新開始嗎？"},

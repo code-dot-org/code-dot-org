@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Fungsi"},
 "catText":function(d){return "teks"},
 "catVariables":function(d){return "Pembolehubah"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Mula Sekali Lagi"},
 "clearPuzzleConfirm":function(d){return "Ini akan kembalikan permainan ini smula dan menghapuskan semua blok awak yang ditambah atau ditukar."},
 "clearPuzzleConfirmHeader":function(d){return "Adakah anda pasti anda ingin bermula?"},

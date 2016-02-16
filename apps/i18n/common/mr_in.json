@@ -14,6 +14,7 @@
   "catProcedures": "Functions",
   "catText": "Text",
   "catVariables": "Variables",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Start Over",
   "clearPuzzleConfirm": "This will reset the puzzle to its start state and delete all the blocks you've added or changed.",
   "clearPuzzleConfirmHeader": "Are you sure you want to start over?",

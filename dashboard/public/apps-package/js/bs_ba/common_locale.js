@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkcije"},
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Varijable"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Počni Ponovo"},
 "clearPuzzleConfirm":function(d){return "Ova akcija će resetovati ovaj zadatak na njegovo početno stanje i izbrisati će sve blokove koje si dodao/la ili promijenio/la."},
 "clearPuzzleConfirmHeader":function(d){return "Jesi li siguran/na da želiš početi iznova?"},

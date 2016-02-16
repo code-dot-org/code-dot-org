@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Functions"},
 "catText":function(d){return "دەق"},
 "catVariables":function(d){return "گۆڕاوەکان"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "دەست پێبکەوە"},
 "clearPuzzleConfirm":function(d){return "ئەمە دەبێتە هۆی سفرکردنەوە گشت ئەو پارچانەی مەتەلەکە رەشتکردۆتەوە و یا دەستکاریت کردووە."},
 "clearPuzzleConfirmHeader":function(d){return "ئایا تۆ دڵنیای دەتەوێت دووبارە دەست پێ بکەیتەوە؟"},

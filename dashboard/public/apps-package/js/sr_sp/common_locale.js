@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Функције"},
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Променљиве"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Počni ponovo"},
 "clearPuzzleConfirm":function(d){return "Ово ће ресетовати мозгалицу на њено почетно стање и обрисаће све блокове које си додао/ла или променио/ла."},
 "clearPuzzleConfirmHeader":function(d){return "Da li ste sigurni da želite da počnete ponovo?"},

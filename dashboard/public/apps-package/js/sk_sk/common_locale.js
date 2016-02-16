@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkcie"},
 "catText":function(d){return "Text"},
 "catVariables":function(d){return "Premenné"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Začať odznova"},
 "clearPuzzleConfirm":function(d){return "Toto vynuluje puzzle na štartovaciu pozíciu a vymaže všetky bloky, ktoré boli pridané alebo zmenené."},
 "clearPuzzleConfirmHeader":function(d){return "Naozaj chceš začať odznova?"},

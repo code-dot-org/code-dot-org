@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "funksionet"},
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "variabla"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Fillo nga fillimi"},
 "clearPuzzleConfirm":function(d){return "Kjo do ta rikthejë formuesen në gjëndjen fillestare dhe do të fshijë të gjithë blloqet që ke shtuar ose ndryshuar."},
 "clearPuzzleConfirmHeader":function(d){return "A jeni i sigurt që doni të filloni nga fillimi?"},

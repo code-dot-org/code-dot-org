@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funksiyalar"},
 "catText":function(d){return "mətn"},
 "catVariables":function(d){return "Dəyişənlər"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Yenidən başla"},
 "clearPuzzleConfirm":function(d){return "Bu, tapmacanı ilkin vəziyyətinə qaytaracaq və əlavə etdiyiniz, dəyişdiyiniz bütün blokları siləcək."},
 "clearPuzzleConfirmHeader":function(d){return "Yenidən başlamaq istədiyinizə əminsiniz?"},

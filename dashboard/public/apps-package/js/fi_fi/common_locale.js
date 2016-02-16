@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funktiot"},
 "catText":function(d){return "teksti"},
 "catVariables":function(d){return "Muuttujat"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Aloita alusta"},
 "clearPuzzleConfirm":function(d){return "Tehtävä palautetaan alkutilaan, ja lisäämäsi tai muuttamasi lohkot poistetaan."},
 "clearPuzzleConfirmHeader":function(d){return "Oletko varma, että haluat aloittaa alusta?"},
