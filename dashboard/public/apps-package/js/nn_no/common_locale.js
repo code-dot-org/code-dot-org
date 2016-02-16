@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funksjonar"},
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Variablar"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Start på nytt"},
 "clearPuzzleConfirm":function(d){return "Dette vil nullstille puslespelet og fjerne alle blokkene du har lagt til eller endra."},
 "clearPuzzleConfirmHeader":function(d){return "Er du sikker på at du vil starte på nytt?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Sjå videoen"},
 "when":function(d){return "når"},
 "whenRun":function(d){return "når den køyrer"},
-"workspaceHeaderShort":function(d){return "Arbeidsområde: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Arbeidsområde: "}};

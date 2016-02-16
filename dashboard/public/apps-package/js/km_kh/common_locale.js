@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "អនុគមន៍"},
 "catText":function(d){return "អត្ថ​​បទ"},
 "catVariables":function(d){return "អថេរ"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "ចាប់ផ្ដើម​ឡើង​វិញ"},
 "clearPuzzleConfirm":function(d){return "This will delete all blocks and reset the puzzle to its start state."},
 "clearPuzzleConfirmHeader":function(d){return "តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "មើល​វីដេអូ"},
 "when":function(d){return "នៅ​ពេល"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};
