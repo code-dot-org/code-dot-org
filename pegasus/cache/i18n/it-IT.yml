@@ -834,11 +834,11 @@
   dashboard_faq_k5: Domande frequenti FAQ K-5
   dashboard_announcements: Annunci
   dashboard_announce_view_all: Visualizza tutto
-  dashboard_announce_message: "<b>16 Dicembre 2015</b> - Grazie per aver partecipato
-    all'Ora di Codice 2015! I risultati e i progressi delle esercitazioni e delle
-    lezioni di coding saranno registrati e salvati. Nota: gli uffici di Code.org rimarranno
-    chiusi dal 19 dicembre al 4 gennaio. Aspettatevi un leggero ritardo per eventuali
-    domande inviate fino al 4 gennaio."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Ulteriori informazioni
   dashboard_announce_hoc: "<b>15 Ottobre 2015</b> - l'Ora del Codice 2015 sta arrivando!
     Ogni organizzatore di un evento dell'Ora del Codice riceverà un buono acquisto
@@ -1713,3 +1713,4 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

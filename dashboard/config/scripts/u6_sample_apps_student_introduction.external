@@ -1,0 +1,26 @@
+name 'U6 - Sample Apps - Student Introduction'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+## Unit 4: Lesson 08 - Sample Apps
+
+# Background
+
+words
+
+# Vocabulary
+* **words:**
+
+# Lesson
+
+* words.
+
+
+# Resources
+
+* Video: <a href="https://google.com" target="_blank"> Tutorial - JavaScript Objects</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+MARKDOWN

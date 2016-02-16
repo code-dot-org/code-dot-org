@@ -825,11 +825,11 @@
   dashboard_faq_k5: GS - CM2 Questions Fréquemment Posées
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Voir tous
-  dashboard_announce_message: "<b>16 décembre 2015</b> - Merci de votre participation
-    à l'Heure du Code 2015 ! Le suivi et l'enregistrement de la progression ont maintenant
-    repris pour l'ensemble des cours et tutoriels de Code Studio. N.B. : Les bureaux
-    de Code.org seront fermés du 19 décembre au 3 janvier. Vous pouvez vous attendre
-    à des délais pour recevoir réponse aux questions que vous poserez d'ici au 4 janvier."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Pour en savoir plus
   dashboard_announce_hoc: "<b>15 octobre 2015</b> - Une Heure de Code arrive &mdash;
     chaque organisateur participant recevra une carte-cadeau Amazon.com ou Microsoft
@@ -1716,3 +1716,4 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

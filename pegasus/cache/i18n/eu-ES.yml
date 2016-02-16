@@ -799,11 +799,11 @@
   dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: "<b>2015eko Abenduak 16</b> - Eskerrikasko 2015eko kode
-    orduan parte hartzeagatik! Jarraipena eta gordetzea hasi dira Code Studioko kurtso
-    eta tutorial guztietan. Oharra: Code.org en bulegoak itxita egongo dira abenduaren
-    19tik, urtarrilaren 3ra. Mesedez itxaron atzeratutako erantzunak urtarrilaren
-    4ra arte bidalitako edozein galderetan."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Ikasi gehiago
   dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash;
     antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's
@@ -1634,3 +1634,4 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites
