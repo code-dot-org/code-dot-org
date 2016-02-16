@@ -86,7 +86,7 @@ window.dashboard.progress = (function () {
       }
 
       var status;
-      if (serverProgress[level.id].submitted) {
+      if (serverProgress && serverProgress[level.id] && serverProgress[level.id].submitted) {
         status = "submitted";
       } else if (dashboard.clientState.queryParams('user_id')) {
         // Show server progress only (the student's progress)
