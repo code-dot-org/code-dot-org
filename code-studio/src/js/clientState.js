@@ -27,6 +27,10 @@
  * uses its own key and has its own client state bucket. The temporary
  * localStorage for anonymous user keys is cleared when setCurrentUserKey is
  * called for a signed in user.
+ *
+ * The code that uses this module typically merges the client state with the
+ * state from the server (if available) so it captures both progress on the
+ * current machine and progress by the same user on other machines.
  */
 
 'use strict';
