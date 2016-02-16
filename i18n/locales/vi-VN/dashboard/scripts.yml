@@ -162,7 +162,7 @@ vi:
           description_short: "Let's use code to join Anna and Elsa as they explore the magic and beauty of ice."
         course4:
           description_short: Sinh viên tham gia khóa học 4 cần phải hoàn thành các khóa học 2 và 3.
-          description: Khóa học 4 được thiết kế cho những người đã học qua khóa 2 và 3. Học viên sẽ nghiên cứu sâu hơn cách lập trình về chủ đề đã được giới thiệu trong các khóa học trước đó với các giải pháp linh hoạt cho các vấn đề phức tạp hơn. Cuối khóa học này, sinh viên tạo cách tương tác giữa cốt truyện và trò chơi mà họ muốn chia sẻ với bất cứ ai. Khuyến khích cho học sinh các lớp 4-5.
+          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'Nghệ sĩ: biến'
           "Bee: For Loops": 'Ong: Cho vòng'
           title: Khóa học 4
@@ -1320,6 +1320,9 @@ vi:
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
           Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1572,3 +1575,14 @@ vi:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records

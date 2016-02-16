@@ -14,6 +14,7 @@
   "catProcedures": "توابع",
   "catText": "متن",
   "catVariables": "متغیرها",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "دوباره شروع کنید",
   "clearPuzzleConfirm": "این کار معما را به حالت ابتدایی تنظیم خواهد کرد و تمام بلوک هایی که شما اضافه کردید یا تغییر داده اید را حذف خواهد کرد.",
   "clearPuzzleConfirmHeader": "آیا مطمئنی که می خواهی دوباره شروع کنی؟",
@@ -255,6 +256,5 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "محیط کار: "
 }

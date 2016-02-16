@@ -1096,6 +1096,7 @@ en:
       Play Lab Rocket 5_instruction: crwdns35190:0crwdne35190:0
       Play Lab Rocket Free Play_instruction: crwdns35191:0crwdne35191:0
       Poorva-test_instruction: crwdns55888:0crwdne55888:0
+      Quantum Bee_instruction: crwdns56001:0crwdne56001:0
       Ryan - 4-5 Bee Conditionals 2_instruction: crwdns50295:0crwdne50295:0
       Ryan - Bee Conditionals_instruction: crwdns55791:0crwdne55791:0
       Ryan Test Locked Blocks_instruction: crwdns50669:0crwdne50669:0
@@ -1641,6 +1642,11 @@ en:
       U4L15 Read Data 2_instruction: crwdns48406:0crwdne48406:0
       U4L15 Read Data 3_instruction: crwdns48407:0crwdne48407:0
       U4L15 Read Data 4_instruction: crwdns48408:0crwdne48408:0
+      U6 - updateRecord - Contacts - Edit event handler_instruction: crwdns56002:0crwdne56002:0
+      U6 - updateRecord - Contacts - Edit UI_instruction: crwdns56003:0crwdne56003:0
+      U6 - updateRecord - Contacts - Save edited contact_instruction: crwdns56004:0crwdne56004:0
+      U6 - updateRecord - Default Block_instruction: crwdns56005:0crwdne56005:0
+      U6 - updateRecord - Update Nonexistent Record_instruction: crwdns56006:0crwdne56006:0
       Underground Avoiding Lava_instruction: crwdns54304:0crwdne54304:0
       Underground If Statements_instruction: crwdns54305:0crwdne54305:0
       Underground Iron_instruction: crwdns54306:0crwdne54306:0

@@ -156,7 +156,7 @@ ar:
           description_short: هيا نستخدم التعليمات البرمجية للانضمام إلى آنا و إلسا في رحلتهم لاستكشاف سحر وجمال الجليد.
         course4:
           description_short: يجب على الطالب أخذ الدورة 2 و 3 ليتمكنوا من أخذ الدورة 4.
-          description: 'تم تصميم الدورة 4 للطلاب الذين أخذوا دورة 2 و 3. سيقوم الطلاب في هذه الدورة بالتعمق في موضوعات البرمجة التي أدخلت في الدورات السابقة وحل مشاكل أكثر تعقيدا. بنهاية هذه الدورة،سيتمكن الطلاب من خلق القصص والألعاب التفاعلية التي يمكن مشاركتها مع أي شخص.  للصفوف 4-8.'
+          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'الفنان: المتغيرات'
           "Bee: For Loops": 'النحل: للحلقات'
           title: الدورة 4
@@ -1310,6 +1310,9 @@ ar:
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
           Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1562,3 +1565,14 @@ ar:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records

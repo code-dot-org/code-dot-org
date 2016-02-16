@@ -14,6 +14,7 @@
   "catProcedures": "Funcións",
   "catText": "Texto",
   "catVariables": "Variables",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Empezar de novo",
   "clearPuzzleConfirm": "Isto reiniciará o puzzle ó seu estado inicial e borrará tódolos bloques que xa teñas engadido ou cambiado.",
   "clearPuzzleConfirmHeader": "Estás seguro de que queres empezar de novo?",
@@ -255,6 +256,5 @@
   "watchVideo": "Mira o vídeo",
   "when": "cando",
   "whenRun": "cando se executa",
-  "workspaceHeaderShort": "Espazo de traballo: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Espazo de traballo: "
 }

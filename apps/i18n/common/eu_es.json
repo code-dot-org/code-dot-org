@@ -14,6 +14,7 @@
   "catProcedures": "Funtzioak",
   "catText": "Testua",
   "catVariables": "Aldagaiak",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Hasi Berriro",
   "clearPuzzleConfirm": "Honek ariketa berrezarriko du hasierako egoerara eta sortu edo kargatutako bloke guztiak ezabatuko ditu.",
   "clearPuzzleConfirmHeader": "Ziur al zaude berriro hasi nahi duzula?",
@@ -255,6 +256,5 @@
   "watchVideo": "Ikusi Bideoa",
   "when": "-enean",
   "whenRun": "martxan dagoenean",
-  "workspaceHeaderShort": "Lan eremua: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Lan eremua: "
 }

@@ -14,6 +14,7 @@
   "catProcedures": "Funcţii",
   "catText": "text",
   "catVariables": "Variabile",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Reîncepe",
   "clearPuzzleConfirm": "Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge toate blocurile pe care le-ai adăugat sau modificat.",
   "clearPuzzleConfirmHeader": "Ești sigur că dorești să reîncepi?",
@@ -255,6 +256,5 @@
   "watchVideo": "Urmărește clipul video",
   "when": "când",
   "whenRun": "când rulezi",
-  "workspaceHeaderShort": "Spaţiu de lucru: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Spaţiu de lucru: "
 }
