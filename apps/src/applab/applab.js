@@ -380,7 +380,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  window.dashboard.footer.render(React, {
+  React.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
@@ -395,7 +395,7 @@ function renderFooterInSharedGame() {
     },
     className: 'dark',
     menuItems: menuItems
-  }, footerDiv);
+  }), footerDiv);
 }
 
 /**
@@ -588,7 +588,7 @@ Applab.init = function(config) {
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
   config.usesAssets = true;
-  
+
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
   skin.smallStaticAvatar = null;

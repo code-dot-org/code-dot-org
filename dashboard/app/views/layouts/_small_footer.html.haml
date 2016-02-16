@@ -37,5 +37,5 @@
   }
 
 :javascript
-  window.dashboard.footer.render(React, #{reactProps.to_json},
+  React.render(React.createElement(window.dashboard.SmallFooter, #{reactProps.to_json}),
     document.getElementById('page-small-footer'));
