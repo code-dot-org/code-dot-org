@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UserCourseEnrollmentsControllerTest < ActionController::TestCase
+class UserProfessionalLearningCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
     @user = create :teacher
     @professional_learning_course = create :professional_learning_course
@@ -10,7 +10,7 @@ class UserCourseEnrollmentsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:user_course_enrollments)
+    assert_not_nil assigns(:user_professional_learning_course_enrollments)
   end
 
   test "should get new" do
@@ -19,11 +19,11 @@ class UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test "should create user_course_enrollment" do
-    assert_difference('UserCourseEnrollment.count') do
-      post :create, user_course_enrollment: { name: 'TestName'  }
+    assert_difference('UserProfessionalLearningCourseEnrollment.count') do
+      post :create, user_professional_learning_course_enrollment: { name: 'TestName'  }
     end
 
-    assert_redirected_to user_course_enrollment_path(assigns(:user_course_enrollment))
+    assert_redirected_to user_professional_learning_course_enrollment_path(assigns(:user_professional_learning_course_enrollment))
   end
 
   test "should show user_course_enrollment" do
@@ -37,15 +37,15 @@ class UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test "should update user_course_enrollment" do
-    patch :update, id: @user_course_enrollment, user_course_enrollment: { name: 'TestName'  }
-    assert_redirected_to user_course_enrollment_path(assigns(:user_course_enrollment))
+    patch :update, id: @user_course_enrollment, user_professional_learning_course_enrollment: { name: 'TestName'  }
+    assert_redirected_to user_professional_learning_course_enrollment_path(assigns(:user_professional_learning_course_enrollment))
   end
 
   test "should destroy user_course_enrollment" do
-    assert_difference('UserCourseEnrollment.count', -1) do
+    assert_difference('UserProfessionalLearningCourseEnrollment.count', -1) do
       delete :destroy, id: @user_course_enrollment
     end
 
-    assert_redirected_to user_course_enrollments_path
+    assert_redirected_to user_professional_learning_course_enrollments_path
   end
 end

@@ -17,8 +17,6 @@ class UserProfessionalLearningCourseEnrollmentTest < ActiveSupport::TestCase
 
     assert_equal 1, module_assignments.count
     assert_equal 1, task_assignments.count
-    puts module_assignments.inspect
-    puts enrollment.inspect
     assert_equal @learning_module, module_assignments.first.professional_learning_module
     assert_equal @plc_task, task_assignments.first.professional_learning_task
   end
