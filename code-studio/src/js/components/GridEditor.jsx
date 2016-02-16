@@ -141,7 +141,5 @@ var GridEditor = React.createClass({
 });
 module.exports = GridEditor;
 
-// We put this on the dashboard namespace because GridEditor is used by _grid.html.haml
-// TODO _ exposed just a renderer?
 window.dashboard = window.dashboard || {};
 window.dashboard.GridEditor = GridEditor;
