@@ -2,7 +2,8 @@ require 'test_helper'
 
 class UserProfessionalLearningCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @user = create :teacher
+    @user = create :admin
+    sign_in(@user)
     @professional_learning_course = create :professional_learning_course
     @user_course_enrollment = create(:user_professional_learning_course_enrollment, user: @user, professional_learning_course: @professional_learning_course)
   end

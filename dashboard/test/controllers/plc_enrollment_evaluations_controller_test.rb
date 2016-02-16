@@ -10,8 +10,6 @@ class PlcEnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     #I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
     #the same for everyone. Not all users taking an examination will answer the exact same questions.
-
-    @user = create(:user)
     @course = create(:professional_learning_course)
     @module1 = create(:professional_learning_module, name: 'Getting thrown off cliffs')
     @module2 = create(:professional_learning_module, name: 'Advanced Ornithology')
