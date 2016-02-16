@@ -631,3 +631,22 @@
     min-height: 202px;
   }
 }
+
+/* Tables */
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .responsive-table {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 969px) {
+  .responsive-table {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .responsive-table {
+    width: 945px;
+  }
+}
