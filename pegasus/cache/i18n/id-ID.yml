@@ -819,9 +819,11 @@
   dashboard_faq_k5: K-5 Frequently Asked Questions/pertanyaan yang sering diajukan
   dashboard_announcements: Pengumuman
   dashboard_announce_view_all: Lihat semua
-  dashboard_announce_message: "<b>6 Januari 2015</b> - Pelajari lebih dari satu Jam
-    Berkode di dalam kelasmu. Mulailah sebuah latihan intro baru dan ikuti perkembangan
-    murid."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Pelajari lebih banyak
   dashboard_announce_hoc: "<b>9 November 2015</b> - tutorial Hour of Code baru ada
     di sini, menampilkan film terbaru dari Star Wars: The Force Awakens. Bekerja samalah
@@ -1693,3 +1695,4 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites
