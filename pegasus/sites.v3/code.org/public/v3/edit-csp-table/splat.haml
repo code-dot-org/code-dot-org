@@ -72,7 +72,6 @@ angular: recordsApp
     $scope.channelId = "#{channel_id}";
     $scope.importing = false;
     $scope.reverse = true;
-    $scope.conversionError = "#{params[:conversionError]}"
     $scope.records.$promise.then(function(records) {
       $scope.columns = getColumns(records);
     }).catch($scope.genericError);
@@ -159,11 +158,12 @@ angular: recordsApp
       }).then(function (response) {
         var conversionError = '';
         if (response.data !== 'true') {
-          // reload the page with conversionError set, allowing us to show an error string
-          conversionError = '?conversionError=Not all values in column ' + column.id +
+          $scope.conversionError = 'Not all values in column ' + column.id +
             ' could be converted to type ' + type + '.';
+        } else {
+          $scope.conversionError = '';
         }
-        location.assign(location.pathname + conversionError);
+       $scope.records = recordsService.query();
       });
     }
     function castValue(val) {
