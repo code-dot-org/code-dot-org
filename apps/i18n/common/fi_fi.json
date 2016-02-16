@@ -14,6 +14,7 @@
   "catProcedures": "Funktiot",
   "catText": "teksti",
   "catVariables": "Muuttujat",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Aloita alusta",
   "clearPuzzleConfirm": "Tehtävä palautetaan alkutilaan, ja lisäämäsi tai muuttamasi lohkot poistetaan.",
   "clearPuzzleConfirmHeader": "Oletko varma, että haluat aloittaa alusta?",
@@ -255,6 +256,5 @@
   "watchVideo": "Katso video",
   "when": "kun",
   "whenRun": "suoritettaessa",
-  "workspaceHeaderShort": "Työtila: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Työtila: "
 }

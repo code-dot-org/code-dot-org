@@ -260,8 +260,8 @@ function safeStepInterpreter(jsi) {
 /**
  * Find a bpRow from the "stopped at breakpoint" array by matching the scope
  *
- * @param scope scope to match from the list
- * @param row (Optional) row to match from the list - in addition to scope
+ * @param {!Object} scope to match from the list
+ * @param {number} [row] to match from the list - in addition to scope
  */
 JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
   for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
@@ -275,25 +275,26 @@ JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
 };
 
 /**
- * Replace or remove a bpRow from the "stopped at breakpoint" array by matching
- * the scope
+ * Replace a bpRow from the "stopped at breakpoint" array by matching
+ * the scope.
  *
- * @param scope scope to match from the list
- * @param row row to replace in the list. If -1, delete that bpRow
+ * If no rows are found matching the given scope, a new one is introduced.
+ *
+ * @param {!Object} scope to match from the list
+ * @param {!number} row to replace in the list.
+ * @throws {TypeError} when given an invalid row.
  */
 JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope, row) {
+  if (typeof row !== 'number' || row < 0) {
+    throw new TypeError('Row ' + row + ' is not a valid row in user code.');
+  }
+
   for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
     var bpRow = this.stoppedAtBreakpointRows[i];
     if (bpRow.scope === scope) {
-      if (row === -1) {
-        // Remove from array
-        this.stoppedAtBreakpointRows.splice(i, 1);
-        return;
-      } else {
-        // Update row number
-        bpRow.row = row;
-        return;
-      }
+      // Update row number
+      bpRow.row = row;
+      return;
     }
   }
   // Scope not found, insert new object in array:
@@ -301,6 +302,25 @@ JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope,
     row: row,
     scope: scope
   });
+};
+
+/**
+ * Remove a bpRow from the "stopped at breakpoint" array by matching
+ * the scope.
+ *
+ * Does nothing if no rows are found matching the given scope.
+ *
+ * @param {!Object} scope to match from the list
+ */
+JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+        // Remove from array
+        this.stoppedAtBreakpointRows.splice(i, 1);
+        return;
+    }
+  }
 };
 
 /**
@@ -429,7 +449,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // If we've moved past the place of the last breakpoint hit without being
     // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
     if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
-      this.replaceStoppedAtBreakpointRowForScope(currentScope, -1);
+      this.removeStoppedAtBreakpointRowForScope(currentScope);
     }
     // If we're unwinding, continue to update the stoppedAtBreakpoint properties
     // to ensure that we have the right properties stored when the unwind completes:

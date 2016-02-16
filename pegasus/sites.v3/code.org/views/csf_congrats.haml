@@ -24,13 +24,13 @@
       = view :congrats_share, facebook:facebook, twitter:twitter
 
   %div{:style=>'clear: both; height:30px'}
-  %h1= I18n.t(:congrats_next_tutorials_title)
+  %h1= I18n.t(:congrats_third_party_title)
+  = view :"#{rec_third_party[course]}"
+
   - rec_code_studio.each do |current_course, next_course|
     - if current_course.eql? course
+      %h1= I18n.t(:congrats_next_tutorials_title)
       = view :course_block, id: next_course
-  
-  %h2= I18n.t(:"congrats_third_party_#{course}")
-  = view :"#{rec_third_party[course]}"
 
   %div{:style=>'clear: both; height:30px;'}
   %h1= I18n.t(:congrats_guest_speaker_title)

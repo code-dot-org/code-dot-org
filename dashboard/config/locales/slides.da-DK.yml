@@ -659,32 +659,31 @@
           over again, then we're sure to get it before long.
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: Vedholdenhed er at hænge i, når du virkelig ønsker at give op. Hvis
+          du ønsker at skabe noget nyt og anderledes, vil der være en masse fejl undervejs.
       5:
         image: notes/C1_building_foundation_5.jpg
-        text: The trick to persistence is choosing to keep on going and learn from
-          your failures instead of quitting because you're frustrated. Frustration
-          actually just means there's something wonderful around the corner. So don't
-          quit before you get to it. Wooo!
+        text: Tricket ved vedholdenhed er at vælg at holde ved og lære af dine fejl
+          i stedet for at holde op, fordi du er frustreret. Frustration betyder faktisk
+          bare, at der er noget vidunderligt rundt om hjørnet. Så hold ikke op hvis
+          du tror på at det kan lykkedes. Okay!
     C1_getting_loopy:
       1:
         image: notes/C1_getting_loopy_1.png
-        text: Hi, my name is Miral Kotb and I'm the creator of Iluminate. In my work,
-          there is something we use in both dances and in programming lightsuits.
-          And that is loops! Loops are repeating an action over and over.
+        text: Hej, mit navn er Miral Kotb og jeg er skaberen af Iluminate. I mit arbejde
+          er der noget vi kan bruge i begge danse og programmering lysdragter. Og
+          det er sløjfer! Sløjfer er en gentagende handling igen og igen.
       2:
         image: notes/C1_getting_loopy_2.png
-        text: When you repeat something multiple times, like my actions to keep the
-          hula hoop spinning, I'm performing a loop of that action. This is a loop.
-          This is a loop. And this is a loop.
+        text: Når du gentager noget flere gange, ligesom mine handlinger at holde
+          hula hoop spinning, udfører jeg en løkke af denne handling. Dette er en
+          sløjfe. Dette er en sløjfe. Og dette er en sløjfe.
       3:
         image: notes/C1_getting_loopy_3.png
-        text: Today we're going to have a dance party. We'll act out loops with a
-          new dance. The Iteration. We're going to learn about loops using a dance.
-          You will learn a couple of easy steps and repeat them over and over to complete
-          the dance.
+        text: I dag skal vi have en dance-fest. Vi vil handle ud fra sløjfer med en
+          ny dans. Iteration. Vi kommer til at lære om løkker ved hjælp af en dans.
+          Du vil lære et par nemme trin og gentage dem igen og igen for at fuldføre
+          dansen.
       4:
         image: notes/C1_getting_loopy_4.png
         text: Here are the steps you need to learn. Clap your hands. Put your hands

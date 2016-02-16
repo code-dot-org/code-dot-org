@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "ฟังก์ชัน"},
 "catText":function(d){return "ข้อความ"},
 "catVariables":function(d){return "ตัวแปร"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "เริ่มใหม่"},
 "clearPuzzleConfirm":function(d){return "สิ่งนี้จะเริ่มต้นเกมใหม่ที่จุดเริ่มต้นและลบทุกบล็อกที่คุณเพิ่มหรือเปลี่ยนออกไป."},
 "clearPuzzleConfirmHeader":function(d){return "คุณจะเริ่มต้นใหม่จริงๆหรือ ?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ดูวีดีโอ"},
 "when":function(d){return "เมื่อ"},
 "whenRun":function(d){return "เมื่อเรียกให้ทำงาน"},
-"workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "พื้นที่ทำงาน: "}};
