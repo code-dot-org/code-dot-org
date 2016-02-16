@@ -1,4 +1,6 @@
 class PlcEnrollmentEvaluationsController < ApplicationController
+  load_and_authorize_resource
+
   # Get /plc_enrollment_evaluations/:enrollment_id/perform_evaluation/
   def perform_evaluation
     @user_professional_learning_course_enrollment = UserProfessionalLearningCourseEnrollment.find(params[:enrollment_id])

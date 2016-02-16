@@ -1,4 +1,5 @@
 class ProfessionalLearningCoursesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_professional_learning_course, only: [:show, :edit, :update, :destroy]
 
   # GET /professional_learning_courses

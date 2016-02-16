@@ -1,4 +1,5 @@
 class UserProfessionalLearningCourseEnrollmentsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_user_professional_learning_course_enrollment, only: [:show, :edit, :update, :destroy, :evaluation]
 
   # GET /user_professional_learning_course_enrollments

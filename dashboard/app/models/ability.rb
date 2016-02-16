@@ -30,7 +30,14 @@ class Ability
         District,
         Workshop,
         Cohort,
-        WorkshopAttendance
+        WorkshopAttendance,
+        # PLC Stuff
+        ProfessionalLearningCourse,
+        ProfessionalLearningModule,
+        ProfessionalLearningTask,
+        PlcEvaluationQuestion,
+        PlcEvaluationAnswer,
+        UserProfessionalLearningCourseEnrollment
       ]
     end
 
