@@ -151,6 +151,48 @@ Default: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
   myObject.doSomething()
       .doSomethingElse();
   ```
+  
+* <a name="js-module-exports"></a>
+  We have a few different patterns for how we export things in our JS files currently. There's not necessarily
+  an expectation that we'll go fix these all, but new code should try to follow these patterns.
+  <sup>[[link](#js-module-exports)]</sup>
+  ```javascript
+  // good
+  module.exports.foo = function foo() { }
+  // elsewhere
+  foo();
+  
+  // okay, unless you're calling this method locally
+  module.exports.foo = function () {
+  }
+  // elsewhere - bad
+  module.exports.foo();
+  
+  // good - other patterns dont give us the friendly name Foo in React dev tools
+  var Foo = React.createClass({
+  ...
+  });
+  module.exports = Foo;
+  
+  // good
+  var Foo = module.exports = function () {
+  };
+  Foo.prototype.bar = function () {
+  }
+  
+  // bad
+  module.exports = {
+    foo: function () {
+    }
+  }
+  
+  // bad
+  function foo() {
+  }
+  module.exports = {
+    foo: foo
+  }
+  ```
 
 * <a name="js-avoid-inlinejs"></a>
   Avoid inline Javacript in HAML and ERB views. Inline Javascript is
