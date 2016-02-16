@@ -68,6 +68,7 @@ level 'U4 - ReadRecords - Contacts App 5 make delete work'
 stage 'Updating Records'
 level 'U6 - updateRecord - Student Introduction'
 level 'U6 - updateRecord - Default Block'
+level 'U6 - updateRecord - Callback Success Parameter'
 level 'U6 - updateRecord - Update Nonexistent Record'
 level 'U6 - updateRecord - Contacts - Edit UI'
 level 'U6 - updateRecord - Contacts - Edit event handler'
@@ -75,7 +76,7 @@ level 'U6 - updateRecord - Contacts - Save edited contact'
 
 #7
 stage 'Importing and Exporting Data'
-level 'U4L07 Student Lesson Introduction'
+level 'U6 - ImportExport - Student Introduction'
 level 'U4 - Charts - Import Data 1'
 level 'U4 - Charts - Import Data 2'
 level 'U4 - Charts - Remixing Apps with Data'
@@ -83,9 +84,14 @@ level 'U4 - Charts - Export Data'
 
 #8
 stage 'Visualizing Data'
+level 'U6 - Charts - Student Introduction'
 level 'U4 - Charts - drawChartFromRecords 1'
 level 'U4 - Charts - Scatter Chart'
 level 'U4 - Charts - Line Chart 1'
 level 'U4 - Charts - Line Chart 2'
 level 'U4 - Charts - drawChartFromRecords Options 1'
 level 'U4 - Charts - drawChartFromRecords Options 2'
+
+#9
+stage 'Sample Apps'
+level 'U6 - Sample Apps - Student Introduction'

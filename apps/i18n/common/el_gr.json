@@ -14,6 +14,7 @@
   "catProcedures": "Συναρτήσεις",
   "catText": "κείμενο",
   "catVariables": "Μεταβλητές",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Ξεκινήστε από την αρχή",
   "clearPuzzleConfirm": "Αυτό θα επαναφέρει το παζλ στην αρχική του κατάσταση και θα διαγράψει όλα τα μποκ που προσθέσατε ή αλλάξατε.",
   "clearPuzzleConfirmHeader": "Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;",
@@ -255,6 +256,5 @@
   "watchVideo": "Δείτε το βίντεο",
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
-  "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Χώρος εργασίας: "
 }

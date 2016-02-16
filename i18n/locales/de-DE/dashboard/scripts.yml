@@ -156,7 +156,7 @@ de:
           description_short: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der Magie und Schönheit von Eis zu begleiten.
         course4:
           description_short: Schüler die Kurs 4 machen müssen schon Kurs 2 und 3 gemacht haben.
-          description: Kurs 4 wendet sich an Schüler, die Kurs 2 und 3 absolviert haben. Der Stoff der vorangegangenen Kurse wird mit Blick auf flexible Lösungen und komplexere Probleme vertieft. Am Ende des Kurses entwickeln die Schüler interaktive Geschichten und Spiele, an denen sie andere teilhaben lassen können. Empfohlen für Klasse 4-8.
+          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'Künstler: Variablen'
           "Bee: For Loops": 'Biene: Für Wiederholungen'
           title: Kurs 4
@@ -1310,6 +1310,9 @@ de:
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
           Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1430,10 +1433,10 @@ de:
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           Valentine 2016: Valentine 2016
         iceage:
-          title: Ice Age Play Lab
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          description: Create a story or make a game with Ice Age Play Lab!
-          Ice Age Play Lab: Ice Age Play Lab
+          title: Ice Age Spielelabor
+          description_short: Erstellen sie eine Geschichte oder ein Spiel mit dem Ice Age Spielelabor!
+          description: Erstellen sie eine Geschichte oder ein Spiel mit dem Ice Age Spielelabor!
+          Ice Age Play Lab: Ice Age Spielelabor
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description_short: Online Exploration of CSP Unit 3
@@ -1484,10 +1487,10 @@ de:
           Practice Performance Task: Practice Performance Task
           Challenge Overview: Challenge Overview
         gumball:
-          title: Gumball Play Lab
-          description_short: Create a story or make a game with Gumball Play Lab!
-          description: Create a story or make a game with Gumball Play Lab!
-          Gumball Play Lab: Gumball Play Lab
+          title: Gumball Spielelabor
+          description_short: Erstellen sie eine Geschichte oder ein Spiel mit dem Gumball Spielelabor!
+          description: Erstellen sie eine Geschichte oder ein Spiel mit dem Gumball Spielelabor!
+          Gumball Play Lab: Gumball Spielelabor
         starwars:
           title: 'Star Wars: Erbaue eine Galaxie mithilfe von Code'
           description_short: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
@@ -1562,3 +1565,14 @@ de:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records

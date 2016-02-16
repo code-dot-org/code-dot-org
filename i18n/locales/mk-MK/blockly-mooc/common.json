@@ -14,6 +14,7 @@
   "catProcedures":"Functions",
   "catText":"Текст",
   "catVariables":"Променливи",
+  "choosePrefix":"Choose...",
   "clearPuzzle":"Започни",
   "clearPuzzleConfirm":"This will reset the puzzle to its start state and delete all the blocks you've added or changed.",
   "clearPuzzleConfirmHeader":"Дали сте сигурни дека сакате да започнете?",

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "関数"},
 "catText":function(d){return "テキスト〔文字列（もじれつ）〕"},
 "catVariables":function(d){return "変数"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "最初（さいしょ）からやり直（なお）す。"},
 "clearPuzzleConfirm":function(d){return "パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。"},
 "clearPuzzleConfirmHeader":function(d){return "本当に最初からやり直してもよいですか？"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ビデオを見る"},
 "when":function(d){return "とき"},
 "whenRun":function(d){return "実行した時"},
-"workspaceHeaderShort":function(d){return "ワークスペース："},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "ワークスペース："}};

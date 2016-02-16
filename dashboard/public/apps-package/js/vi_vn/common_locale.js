@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Các hàm"},
 "catText":function(d){return "văn bản"},
 "catVariables":function(d){return "Các biến"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Bắt đầu lại"},
 "clearPuzzleConfirm":function(d){return "Điều này sẽ thiết lập lại các câu đố để tình trạng bắt đầu và xóa tất cả các khối bạn đã thêm vào hoặc thay đổi."},
 "clearPuzzleConfirmHeader":function(d){return "Bạn có chắc bạn muốn bắt đầu lại?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Xem Video"},
 "when":function(d){return "Khi nào"},
 "whenRun":function(d){return "Khi chạy"},
-"workspaceHeaderShort":function(d){return "Không gian làm việc:"},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Không gian làm việc:"}};

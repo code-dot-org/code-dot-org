@@ -62,7 +62,7 @@ var Cell = React.createClass({
   }
 });
 
-var Grid = module.exports = React.createClass({
+var Grid = React.createClass({
   propTypes: {
     cells: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)).isRequired,
     selectedRow: React.PropTypes.number.isRequired,
@@ -98,3 +98,4 @@ var Grid = module.exports = React.createClass({
     </table>);
   }
 });
+module.exports = Grid;

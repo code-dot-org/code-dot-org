@@ -7,9 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "Add event handler for editContactButton click.\r\n\r\nPre-populate UI elements with current contact info.",
     "is_k1": "false",

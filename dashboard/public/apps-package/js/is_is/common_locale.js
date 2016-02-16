@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Föll"},
 "catText":function(d){return "texti"},
 "catVariables":function(d){return "Breytur"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Byrja aftur"},
 "clearPuzzleConfirm":function(d){return "Þetta setur þrautina aftur í upphafsstöðu og eyðir öllum kubbum sem þú hefur bætt við eða breytt."},
 "clearPuzzleConfirmHeader":function(d){return "Ertu viss um að þú viljir byrja aftur?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Horfa á videóið"},
 "when":function(d){return "þegar"},
 "whenRun":function(d){return "þegar keyrt"},
-"workspaceHeaderShort":function(d){return "Vinnusvæði: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Vinnusvæði: "}};
