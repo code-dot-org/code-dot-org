@@ -49,9 +49,9 @@
           =t('text_match.open_response_title')
         - else
           - if data['longassessment']
-            =t("#{app == 'match' ? 'match-longassessment' : 'multi-longassessment'}.correct_title")
+            =t("#{app}-longassessment.correct_title")
           - else
-            =t("#{app == 'match' ? 'match' : 'multi'}.correct_title")
+            =t("#{app}.correct_title")
       %p
         - if data['options'].try(:[], 'success_body')
           = data['options']['success_body']
@@ -59,9 +59,9 @@
           =t('text_match.open_response_body')
         - else
           - if data['longassessment']
-            =t("#{app == 'match' ? 'match-longassessment' : 'multi-longassessment'}.correct_body")
+            =t("#{app}-longassessment.correct_body")
           - else
-            =t("#{app == 'match' ? 'match' : 'multi'}.correct_body")
+            =t("#{app}.correct_body")
       .farSide
         %button#ok-button.secondary
           =t('dialog.ok')

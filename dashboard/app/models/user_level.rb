@@ -25,10 +25,6 @@ class UserLevel < ActiveRecord::Base
   belongs_to :level
   belongs_to :script
 
-  def submitted?
-    submitted
-  end
-
   def best?
     Activity.best? best_result
   end
