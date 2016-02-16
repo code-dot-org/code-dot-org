@@ -7,11 +7,8 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
-    "markdown_instructions": "Intro to updateRecord.\r\n\r\nExplain success boolean in callback function.\r\n\r\nRun block with default code and see what happens (will need to create a table for this).",
+    "markdown_instructions": "# Updating Records\r\n\r\nSometimes in your program, you may want to make edits to a record that already exists in your database. You can do this using the `updateRecord` block.\r\n\r\n![](https://images.code.org/c62e74c0fff801bb59a024894f7e8caf-image-1455576434177.PNG)\r\n\r\n`updateRecord` has three parameters:\r\n\r\n* The **name of the table** which contains the record you want to update\r\n* The **object** you want to update.\r\n* A **callback function**\r\n\r\nThe object in the second parameter needs to have an ID property. As with `deleteRecord`, this object’s ID is used to determine which record in the database should be updated.\r\n\r\n\r\n# Do This:\r\n\r\n**Your database already includes a table called “mySongs”.**\r\n\r\n* Open the Data Viewer for mySongs and note that the record for **“Eye of the Tiger” is missing information** for the artist and seconds columns.\r\n* **Run the starter code provided and take note of what prints to the console.**\r\n* **Drag out the `updateRecord` block.**\r\n\t* Set the table name to **“mySongs”**.\r\n\t* Set the object  to `songToUpdate`.\r\n\t* In the callback function, add a `console.log` statement to **print out the updated record’s title and artist.**\r\n* **Run the program again.**\r\n\t* Look at the output to the console.\r\n    * Refresh the Data Viewer and **verify that the record for “Eye of the Tiger” has been updated.**\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,7 +37,11 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "(Click to see full instructions)"
+    "instructions": "Use updateRecord to change the record for \"Eye of the Tiger.\" (Click to see full instructions)",
+    "project_template_level_name": "U6 - updateRecord - Template",
+    "encrypted_examples": [
+
+    ]
   },
   "published": true
 }]]></config>
