@@ -7,9 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "Event handler for saveContactBtn.\r\n\r\nCall updateRecord",
     "is_k1": "false",
