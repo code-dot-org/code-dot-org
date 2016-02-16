@@ -287,7 +287,7 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
 end
 
 Then /^mark the current level as completed on the client/ do
-  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
@@ -500,8 +500,12 @@ Then(/^I reload the page$/) do
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
-  @child_item = @browser.find_element(:css, child)
-  @parent_item = @browser.find_element(:css, parent)
+  wait_with_short_timeout.until {
+    @child_item = @browser.find_element(:css, child)
+  }
+  wait_with_short_timeout.until {
+    @parent_item = @browser.find_element(:css, parent)
+  }
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   @parent_item.should eq @actual_parent_item
 end
