@@ -6,3 +6,5 @@
     dashboard.clientState.setAnonymousUser();
 :javascript
   document.location = '#{@redirect}'
+
+%meta{'http-equiv' => 'refresh', :content => "5; url=#{@redirect}"}
