@@ -10,7 +10,7 @@ Scenario:
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I drag block "1" to block "3"
   Then block "4" is child of block "3"
@@ -27,8 +27,7 @@ Scenario:
   And I am on "http://studio.code.org/s/course3/stage/21/puzzle/15?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I press "runButton"
   And I hold key "LEFT"
@@ -43,8 +42,7 @@ Scenario:
   And I am on "http://studio.code.org/s/playlab/stage/1/puzzle/10?noautoplay=true"
   When I rotate to landscape
   And I see no difference for "initial load"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I press "runButton"
   And I press "finishButton"
@@ -98,10 +96,7 @@ Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://learn.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
-  # Let close animation finish
-  And I wait for 2 seconds
+  And I close the dialog
   And I wait to see "#runButton"
   And I press "runButton"
   And I wait to see ".congrats"
@@ -117,8 +112,7 @@ Scenario:
   And I rotate to landscape
   Then element "#runButton" is visible
   And I see no difference for "level load"
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
 
   Then I press "runButton"
@@ -134,8 +128,7 @@ Scenario:
   And I open my eyes to test "calc expression evaluation"
   When I am on "http://learn.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press ".tooltip-x-close" using jQuery
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
@@ -152,8 +145,7 @@ Scenario:
   And I open my eyes to test "calc variable"
   When I am on "http://learn.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I press "modalEditorClose"
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
@@ -173,7 +165,7 @@ Scenario Outline: Simple blockly level page view
   When I rotate to landscape
   And I see no difference for "initial load"
   And I wait to see "#x-close"
-  And I press "x-close"
+  And I close the dialog
   And I see no difference for "closed dialog"
   And I close my eyes
   And I sign out
