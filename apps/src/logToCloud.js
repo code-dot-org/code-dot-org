@@ -1,6 +1,7 @@
 var PageAction = {
   DropletTransitionError: 'DropletTransitionError',
-  SanitizedLevelHtml: 'SanitizedLevelHtml'
+  SanitizedLevelHtml: 'SanitizedLevelHtml',
+  UserJavaScriptError: 'UserJavaScriptError'
 };
 
 var MAX_FIELD_LENGTH = 4095;
