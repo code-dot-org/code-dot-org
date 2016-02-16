@@ -297,9 +297,10 @@
 
     dialog_div.find('#continue-button').click(function () {
       $.post(window.appOptions.unsubmitUrl,
-        {"_method": 'PUT', user_level: {best_result: 1, submitted: false}},
+        {"_method": 'PUT', user_level: {submitted: false}},
         function(data)
         {
+          // Just reload so that the progress in the header is shown correctly.
           location.reload();
         }
       );
@@ -308,16 +309,6 @@
     dialog_div.find('#cancel-button').click(function () {
       dialog.hide();
     });
-
-    return;
-
-    $.post(window.appOptions.unsubmitUrl,
-      {"_method": 'PUT', user_level: {best_result: 1, submitted: false}},
-      function(data)
-      {
-        // Just reload so that the progress in the header is shown correctly.
-        location.reload();
-      });
   });
 
   function validateAnswers()
