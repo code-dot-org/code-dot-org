@@ -4,10 +4,13 @@
 # boolean.
 
 module TableCoerce
+  TRUE = /^true$/i
+  FALSE = /^false$/i
+
   # Given a set of records, and a list of columns, attempt to convert each
   # column to a particular type. If we can convert the entire column to
   # number or boolean, we'll do that, otherwise we'll convert all values to strings.
-  def TableCoerce.coerce(records, columns)
+  def TableCoerce.coerce_columns_from_data(records, columns)
     # first do a pass to determine types. we can't do coercion right away since
     # we dont want to change anything if we cant coerce the entire column
     # begin with no type definitions
@@ -73,15 +76,15 @@ module TableCoerce
   def TableCoerce.is_boolean?(val)
     return true if val == true || val == false
     return false unless val.is_a?(String)
-    return !/true/i.match(val).nil? || !/false/i.match(val).nil?
+    return !TRUE.match(val).nil? || !FALSE.match(val).nil?
   end
 
   # converts a value to a boolean, throwing if unable to do so
   def TableCoerce.to_boolean(val)
     return val if val == true || val == false
     raise 'Cannot coerce to boolean' unless val.is_a?(String)
-    return true if !/true/i.match(val).nil?
-    return false if !/false/i.match(val).nil?
+    return true if !TRUE.match(val).nil?
+    return false if !FALSE.match(val).nil?
     raise 'Cannot coerce to boolean'
   end
 

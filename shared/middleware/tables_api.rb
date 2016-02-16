@@ -161,7 +161,7 @@ class TablesApi < Sinatra::Base
   end
 
   #
-  # POST /v3/coerce-(shared|user)-tables/<channel-id>/<table-name>
+  # POST /v3/import-(shared|user)-tables/<channel-id>/<table-name>
   #
   # Imports a csv form post into a table, erasing previous contents.
   #
@@ -208,7 +208,7 @@ class TablesApi < Sinatra::Base
       halt 500
     end
 
-    records = TableCoerce.coerce(records, columns)
+    records = TableCoerce.coerce_columns_from_data(records, columns)
 
     # TODO: This should probably be a bulk insert
     records.each do |record|
@@ -219,7 +219,7 @@ class TablesApi < Sinatra::Base
   end
 
   #
-  # POST /v3/import-(shared|user)-tables/<channel-id>/<table-name>
+  # POST /v3/coerce-(shared|user)-tables/<channel-id>/<table-name>
   #
   # Imports a csv form post into a table, erasing previous contents.
   #

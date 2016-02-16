@@ -1,5 +1,5 @@
 require_relative 'test_helper'
-require 'table_coerce'
+require 'helpers/table_coerce'
 
 class TablesTest < Minitest::Test
   include SetupTest
@@ -12,6 +12,7 @@ class TablesTest < Minitest::Test
     assert_equal true, TableCoerce.is_boolean?("False")
     assert_equal true, TableCoerce.is_boolean?("True")
 
+    assert_equal false, TableCoerce.is_boolean?("NotTrue")
     assert_equal false, TableCoerce.is_boolean?("asdf")
     assert_equal false, TableCoerce.is_boolean?("1.23")
     assert_equal false, TableCoerce.is_boolean?("1,000")
@@ -28,7 +29,7 @@ class TablesTest < Minitest::Test
     assert_equal false, TableCoerce.to_boolean("False")
     assert_equal true, TableCoerce.to_boolean("True")
 
-    [3, 'asdf'].each do |val|
+    [3, 'asdf', 'NotTrue'].each do |val|
       assert_raises 'Cannot coerce to boolean' do
         TableCoerce.to_boolean(val)
       end
@@ -98,7 +99,7 @@ class TablesTest < Minitest::Test
       { "all_numbers" => 2, "all_bools" => false, "mixed" => "1" },
       { "all_numbers" => 3, "all_bools" => true, "mixed" => "asdf" },
     ]
-    assert_equal expected, TableCoerce.coerce(records, columns)
+    assert_equal expected, TableCoerce.coerce_columns_from_data(records, columns)
   end
 
   def test_column_coerce
