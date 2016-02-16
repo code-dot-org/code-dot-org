@@ -62,36 +62,36 @@ class UserTest < ActiveSupport::TestCase
   test "attempted, passed, and perfected scopes for nil result" do
     UserLevel.create(user: @user, level: @level, attempts: 0, best_result: nil)
 
-    assert UserLevel.count == 1
-    assert UserLevel.attempted.count == 0
-    assert UserLevel.passed.count == 0
-    assert UserLevel.perfected.count == 0
+    assert_equal 1, UserLevel.count
+    assert_equal 0, UserLevel.attempted.count
+    assert_equal 0, UserLevel.passed.count
+    assert_equal 0, UserLevel.perfected.count
   end
 
   test "attempted, passed, and perfected scopes for attempted result" do
     UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MINIMUM_FINISHED_RESULT)
 
-    assert UserLevel.count == 1
-    assert UserLevel.attempted.count == 1
-    assert UserLevel.passed.count == 0
-    assert UserLevel.perfected.count == 0
+    assert_equal 1, UserLevel.count
+    assert_equal 1, UserLevel.attempted.count
+    assert_equal 0, UserLevel.passed.count
+    assert_equal 0, UserLevel.perfected.count
   end
 
   test "attempted, passed, and perfected scopes for passed result" do
     UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MINIMUM_PASS_RESULT)
 
-    assert UserLevel.count == 1
-    assert UserLevel.attempted.count == 1
-    assert UserLevel.passed.count == 1
-    assert UserLevel.perfected.count == 0
+    assert_equal 1, UserLevel.count
+    assert_equal 1, UserLevel.attempted.count
+    assert_equal 1, UserLevel.passed.count
+    assert_equal 0, UserLevel.perfected.count
   end
 
   test "attempted, passed, and perfected scopes for perfected result" do
     UserLevel.create(user: @user, level: @level, attempts: 0, best_result: Activity::MAXIMUM_NONOPTIMAL_RESULT + 1)
 
-    assert UserLevel.count == 1
-    assert UserLevel.attempted.count == 1
-    assert UserLevel.passed.count == 1
-    assert UserLevel.perfected.count == 1
+    assert_equal 1, UserLevel.count
+    assert_equal 1, UserLevel.attempted.count
+    assert_equal 1, UserLevel.passed.count
+    assert_equal 1, UserLevel.perfected.count
   end
 end
