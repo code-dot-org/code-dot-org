@@ -18,7 +18,7 @@
  *
  * Implementation notes:
  * We use the 'lscache' npm module to divide local storage into per-user buckets
- * and to expire the least recently storage slots.
+ * and to expire the least recently created storage slots.
  *
  * The current user key for is kept in the 'user_key' slot in localStorage. For
  * unauthenticated users, where the user_key is the empty string, a second
