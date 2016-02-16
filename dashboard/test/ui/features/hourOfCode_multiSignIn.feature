@@ -30,9 +30,20 @@ Scenario: Async progress writes followed by stale reads, testing per-user state 
   Then mark the current level as completed on the client
   And I reload the page
   And I verify progress in the header of the current page is "perfect" for level 19
+  And I verify progress in the header of the current page is "not_tried" for level 20
+  And I verify progress in the header of the current page is "not_tried" for level 18
   Then I sign out
 
   Then I manually sign in as the existing user named "Alice"
   Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I verify progress in the header of the current page is "perfect" for level 20
-  And I verify progress in the header of the current page is "perfect" for level 20
+  And I verify progress in the header of the current page is "not_tried" for level 19
+  And I verify progress in the header of the current page is "not_tried" for level 18
+
+
+  Then I sign out
+  Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And I verify progress in the header of the current page is "not_tried" for level 18
+  And I verify progress in the header of the current page is "not_tried" for level 19
+  And I verify progress in the header of the current page is "not_tried" for level 20
+
