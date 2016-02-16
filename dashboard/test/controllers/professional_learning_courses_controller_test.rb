@@ -3,6 +3,8 @@ require 'test_helper'
 class ProfessionalLearningCoursesControllerTest < ActionController::TestCase
   setup do
     @professional_learning_course = create(:professional_learning_course)
+    @user = create :admin
+    sign_in(@user)
   end
 
   test "should get index" do
