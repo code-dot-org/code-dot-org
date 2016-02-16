@@ -795,11 +795,11 @@
   dashboard_faq_k5: 5-сынып оқушыларының жиі қоятын сұрақтары
   dashboard_announcements: "Хабарландыру"
   dashboard_announce_view_all: "Барлығын көру"
-  dashboard_announce_message: "<b>16желтоқасан 2015 жыл</b> - Бағдарламалау сағаты
-    2015 іс-шарасына қатысқаны үшін сізге алғыс білдіреміз! Үдерісті сақтау және бақылау
-    енді барлық код студияларында, сабақтарда және курстарда қайта жүргізідуде. Ескерту:
-    Code.org кеңселері 19 желтоқсан - 3 қараша аралығында жабық болады. Өтінеміз,
-    өзіңіз жазған кез елген сұрақтың жауабын 4 желтоқсанға дейін күтіңіз."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: "толығырақ білу"
   dashboard_announce_hoc: "<b>30 қыркүйек, 2015</b> - 2015 жылғы Код Жазу Сағаты жақында
     басталады! Бүкіләлемдік тарихи оқу шарасына қатыс."
@@ -1641,3 +1641,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites
