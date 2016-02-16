@@ -216,7 +216,7 @@ class ActivitiesController < ApplicationController
           Trophy::BRONZE
         else
           # "no trophy earned"
-      end
+        end
 
       if new_trophy
         if new_trophy.id == current.try(:trophy_id)
