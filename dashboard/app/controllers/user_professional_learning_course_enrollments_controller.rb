@@ -10,7 +10,6 @@ class UserProfessionalLearningCourseEnrollmentsController < ApplicationControlle
   # GET /user_professional_learning_course_enrollments/1
   # GET /user_professional_learning_course_enrollments/1.json
   def show
-    puts params
   end
 
   # GET /user_professional_learning_course_enrollments/new

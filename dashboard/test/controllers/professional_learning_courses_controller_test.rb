@@ -35,7 +35,7 @@ class ProfessionalLearningCoursesControllerTest < ActionController::TestCase
   end
 
   test "should update professional_learning_course" do
-    patch :update, id: @professional_learning_course, professional_learning_course: {  }
+    patch :update, id: @professional_learning_course, professional_learning_course: {professional_learning_course: @professional_learning_course}
     assert_redirected_to professional_learning_course_path(assigns(:professional_learning_course))
   end
 
