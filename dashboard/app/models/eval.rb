@@ -126,7 +126,7 @@ class Eval < Blockly
     embed_xml = block_xml
     # This regex extracts the blocks we care about
     match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(block_xml)
-    embed_xml = match[1] if match and match[1]
+    embed_xml = match[1] if match && match[1]
     return embed_xml
   end
 

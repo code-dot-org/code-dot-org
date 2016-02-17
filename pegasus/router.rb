@@ -53,7 +53,7 @@ class Documents < Sinatra::Base
 
     Dir.entries(dir).each do |site|
       site_dir = File.join(dir, site)
-      next if site == '.' or site == '..' or !File.directory?(site_dir)
+      next if site == '.' || site == '..' || !File.directory?(site_dir)
       configs[site] = load_config_in(site_dir)
     end
 
