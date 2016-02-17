@@ -559,19 +559,12 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 
 // session is an instance of Ace editSession
 // Usage
-// var lengthArray = aceCalculateCumulativeLength(editor.getSession());
+// var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
-exports.aceCalculateCumulativeLength = function (session) {
-  var cumulativeLength = [];
-  var cnt = session.getLength();
-  var cuml = 0, nlLength = session.getDocument().getNewLineCharacter().length;
-  cumulativeLength.push(cuml);
-  var text = session.getLines(0, cnt);
-  for (var i = 0; i < cnt; i++) {
-    cuml += text[i].length + nlLength;
-    cumulativeLength.push(cuml);
-  }
-  return cumulativeLength;
+exports.calculateCumulativeLength = function (code) {
+  return code.replace(/\r\n/g, '\n').split(/\n/).map(function (line) {
+    return line.length;
+  });
 };
 
 // Fast binary search implementation

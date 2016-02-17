@@ -73,8 +73,7 @@ JSInterpreter.prototype.parse = function (options) {
     this.codeInfo = {};
     this.codeInfo.userCodeStartOffset = 0;
     this.codeInfo.userCodeLength = options.code.length;
-    var session = this.studioApp.editor.aceEditor.getSession();
-    this.codeInfo.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+    this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(options.code);
   }
 
   var self = this;
