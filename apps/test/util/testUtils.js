@@ -118,17 +118,39 @@ exports.runOnStudioTick = function (tick, fn) {
 };
 
 /**
+ * In a bunch of our tests we wrap app.onTick. When we do so, we now also store
+ * a reset function that unwraps it. This method calls all of those functions
+ * at the end of a test to make sure that we're unwrapping everything before
+ * the next test.
+ */
+var wrappersToReset = [];
+exports.resetAppTicks = function () {
+  wrappersToReset.forEach(function (reset) {
+    reset();
+  });
+  wrappersToReset = [];
+};
+
+/**
  * Generic function allowing us to hook into onTick. Only tested for Studio/Applab
  */
-exports.runOnAppTick = function (app, tick, fn) {
+exports.runOnAppTick = function (app, tick, fn, desc) {
   if (!app) {
     throw new Error('not supported outside of studio/applab');
   }
   var ran = false;
+
+  var original = app.onTick;
+  var resetToOriginal = function () {
+    app.onTick = original;
+  };
+  wrappersToReset.push(resetToOriginal);
+
   app.onTick = _.wrap(app.onTick, function (originalOnTick) {
     if (app.tickCount === tick && !ran) {
       ran = true;
       fn();
+      resetToOriginal();
     }
     originalOnTick();
   });
