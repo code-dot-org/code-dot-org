@@ -294,19 +294,16 @@ Artist.prototype.afterInject_ = function (config) {
 
   // pre-load image for line pattern block. Creating the image object and setting source doesn't seem to be
   // enough in this case, so we're actually creating and reusing the object within the document body.
+  var imageContainer = document.createElement('div');
+  imageContainer.style.display='none';
+  document.body.appendChild(imageContainer);
 
-  if (this.skin.id == "anna" || this.skin.id == "elsa") {
-    var imageContainer = document.createElement('div');
-    imageContainer.style.display='none';
-    document.body.appendChild(imageContainer);
-
-    for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
-      var pattern = this.skin.lineStylePatternOptions[i][1];
-      if (this.skin[pattern]) {
-        var img = new Image();
-        img.src = this.skin[pattern];
-        this.loadedPathPatterns[pattern] = img;
-      }
+  for( var i = 0; i < this.skin.lineStylePatternOptions.length; i++) {
+    var pattern = this.skin.lineStylePatternOptions[i][1];
+    if (this.skin[pattern]) {
+      var img = new Image();
+      img.src = this.skin[pattern];
+      this.loadedPathPatterns[pattern] = img;
     }
   }
 

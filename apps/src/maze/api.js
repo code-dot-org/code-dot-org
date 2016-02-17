@@ -92,6 +92,9 @@ var move = function(direction, id) {
     Maze.wordSearch.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
     // wordsearch doesnt check for success until it has finished running completely
     return;
+  } else if (Maze.hasMultiplePossibleGrids()) {
+    // neither do quantum maps
+    return;
   }
   Maze.checkSuccess();
 };

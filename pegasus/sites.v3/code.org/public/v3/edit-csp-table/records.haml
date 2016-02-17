@@ -64,9 +64,15 @@ content-type: text/ng-template
   form {
     display: inline;
   }
-%div
+  .conversion-error {
+    color: red;
+    }
+
+%div.error
   %h2
     Viewing table: {{tableName}}
+  %div.conversion-error
+    {{conversionError}}
   %div.clearfix.level-buttons
     %div#import-actions
       %span
@@ -116,6 +122,12 @@ content-type: text/ng-template
               %a.btn.btn-link{"ng-click" => "column.editing = true"} Rename Column
             %li
               %a.btn.btn-link{"ng-click" => "deleteColumn(column)"} Delete Column
+            %li
+              %a.btn.btn-link{"ng-click" => "coerceColumn(column, 'string')"} Convert to string
+            %li
+              %a.btn.btn-link{"ng-click" => "coerceColumn(column, 'number')"} Convert to number
+            %li
+              %a.btn.btn-link{"ng-click" => "coerceColumn(column, 'boolean')"} Convert to boolean
       %th
     %tr
       %td
@@ -146,4 +158,3 @@ content-type: text/ng-template
   %h3 Debug view of table:
   %pre{"ng-model" => "records"}
     {{ records | json }}
-
