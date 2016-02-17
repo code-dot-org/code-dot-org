@@ -1,0 +1,21 @@
+%h1 Listing plc_learning_modules
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @plc_learning_modules.each do |plc_learning_module|
+      %tr
+        %td= plc_learning_module.name
+        %td= link_to 'Show', plc_learning_module
+        %td= link_to 'Edit', edit_plc_learning_module_path(plc_learning_module)
+        %td= link_to 'Destroy', plc_learning_module, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Learning module', new_plc_learning_module_path

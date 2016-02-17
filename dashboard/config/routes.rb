@@ -12,14 +12,6 @@ Dashboard::Application.routes.draw do
     redirect CDO.code_org_url('/teacher-dashboard')
   end
 
-  resources :professional_learning_courses
-  resources :professional_learning_modules
-  resources :professional_learning_tasks
-  resources :user_professional_learning_course_enrollments
-
-  get '/plc_enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc_enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
-  post '/plc_enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc_enrollment_evaluations#submit_evaluation'
-
   resources :user_levels, only: [:update]
 
   resources :gallery_activities, path: '/gallery' do
@@ -276,6 +268,16 @@ Dashboard::Application.routes.draw do
   namespace :ops, path: ::OPS::DASHBOARDAPI, shallow_path: ::OPS::DASHBOARDAPI do
     concerns :ops_routes
   end
+
+  namespace :plc do
+    resources :courses
+    resources :learning_modules
+    resources :tasks
+    resources :user_course_enrollments
+  end
+
+  get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
