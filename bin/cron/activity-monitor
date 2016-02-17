@@ -18,11 +18,11 @@ require 'cdo/hip_chat'
 require 'cdo/user_agent_parser'
 
 
-FiveMinutes = 5 * 60 * 1000
-OneHour = 60 * 60 * 1000
-OneDay = 24 * OneHour
+FIVE_MINUTES = 5 * 60 * 1000
+ONE_HOUR = 60 * 60 * 1000
+ONE_DAY = 24 * ONE_HOUR
 
-ExcludedBrowsers = [
+EXCLUDED_BROWSERS = [
   'bingbot',
   'Camino',
   'Chrome Frame',
@@ -42,9 +42,9 @@ ExcludedBrowsers = [
   /Edmodo/, # edmodo customer support said we can ignore this
 ]
 
-ExcludedLevels = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
+EXCLUDED_LEVELS = [1, 337, 612, 830, 1370, 1376, 1383, 1393, 1415]
 
-HardLevelAttemptsPerHour = {
+HARD_LEVEL_ATTEMPTS_PER_HOUR = {
   50 => 10,
   54 => 20,
   57 => 10,
@@ -60,9 +60,9 @@ HardLevelAttemptsPerHour = {
   3301 => 20
 }
 
-MinimumAttemptsPerHour = 10
+MINIMUM_ATTEMPTS_PER_HOUR = 10
 
-HoursToTest = 2
+HOURS_TO_TEST = 2
 
 $user_agent_cache = {}
 def browser_name(user_agent)
@@ -161,7 +161,7 @@ class Monitor
 
 end
 
-BrowserToBrowserStack = {
+BROWSER_TO_BROWSER_STACK = {
   'IE 11.0' => {os: 'Windows', os_version: '8.1', browser: 'IE', browser_version: '11.0'},
   'IE 10.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '10.0'},
   'IE 9.0' => {os: 'Windows', os_version: '7', browser: 'IE', browser_version: '9.0'},
@@ -174,7 +174,7 @@ BrowserToBrowserStack = {
 }
 
 def browserstack_url(browser, destination_url)
-  params = BrowserToBrowserStack[browser]
+  params = BROWSER_TO_BROWSER_STACK[browser]
   return nil unless params
 
   # eg: http://www.browserstack.com/start#os=Windows&os_version=7&browser=IE&browser_version=11.0&zoom_to_fit=true&full_screen=true&autofit=true&url=studio.code.org&resolution=2048x1536&speed=1
@@ -182,7 +182,7 @@ def browserstack_url(browser, destination_url)
 end
 
 def excluded_browser?(ua_string)
-  ExcludedBrowsers.any? do |r|
+  EXCLUDED_BROWSERS.any? do |r|
     if r.is_a? Regexp
       ua_string.match r
     else
@@ -194,18 +194,18 @@ end
 def main()
   now = DateTime.now.new_offset(0)
 
-  hours = HoursToTest
+  hours = HOURS_TO_TEST
   finish = DateTime.new(now.year, now.month, now.day, now.hour, now.minute).new_offset(0).strftime('%Q').to_i
-  start = finish - (hours * OneHour)
+  start = finish - (hours * ONE_HOUR)
 
   Monitor.collate(start: start, finish: finish).each_by_browser do |i|
     next if excluded_browser?(i[:browser])
-    next if ExcludedLevels.include?(i[:level])
+    next if EXCLUDED_LEVELS.include?(i[:level])
 
     starts = i[:starts]
     finishes = [starts, i[:finishes]].min
 
-    min_attempts_per_hour =  HardLevelAttemptsPerHour[i[:level]] || MinimumAttemptsPerHour
+    min_attempts_per_hour =  HARD_LEVEL_ATTEMPTS_PER_HOUR[i[:level]] || MINIMUM_ATTEMPTS_PER_HOUR
 
     status = :pass if finishes > 0 || starts == 0
     status ||= :fail if starts > (min_attempts_per_hour * hours)
