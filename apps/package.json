@@ -12,7 +12,7 @@
     "test": "grunt build && grunt test",
     "clean": "grunt clean",
     "build": "MOOC_DEV=1 grunt build",
-    "build:dist": "grunt build"
+    "build:dist": "MOOC_DEV=0 grunt clean build"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
