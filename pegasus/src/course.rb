@@ -92,7 +92,7 @@ class Course
   end
 
   def valid_lesson_directory?(lesson_id)
-    File.directory?(File.join(@dir, lesson_id)) and valid_lesson_directory_name(lesson_id)
+    File.directory?(File.join(@dir, lesson_id)) && valid_lesson_directory_name(lesson_id)
   end
 
   def valid_lesson_directory_name(lesson_dirname)

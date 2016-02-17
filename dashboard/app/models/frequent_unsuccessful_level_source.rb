@@ -50,7 +50,7 @@ class FrequentUnsuccessfulLevelSource < ActiveRecord::Base
     # standardized (do not contain an xmlns attribute).  The active column
     # is set to indicate whether more crowdsourced hints are needed.
     Activity.connection.execute(query).each do |level_source_id, level_id, count|
-      next unless level_source_id and level_id
+      next unless level_source_id && level_id
       level_source = LevelSource.find(level_source_id)
       # Note that this ignores counts from non-standardized level sources.
       # Should we move this check into the above queries, which would
