@@ -66,7 +66,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Node.js 0.12.4 and npm 2.10.1
   1. Option A - nvm
     1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
-    1. nvm install 0.12.4
+    1. `nvm install 0.12.4`
   1. Option B - nodesource repository
     1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
     1. `sudo apt-get install -y nodejs`
