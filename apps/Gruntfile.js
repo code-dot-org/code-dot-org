@@ -6,6 +6,7 @@ var glob = require('glob');
 module.exports = function (grunt) {
   var config = {};
 
+  /** @const {string[]} */
   var APPS = [
     'maze',
     'turtle',
@@ -29,7 +30,7 @@ module.exports = function (grunt) {
     APPS = [app];
   }
 
-// Parse options from environment.
+  // Parse options from environment.
   var envOptions = {
     minify: (process.env.MOOC_MINIFY === '1'),
     localize: (process.env.MOOC_LOCALIZE === '1'),
