@@ -957,6 +957,15 @@ Maze.onReportComplete = function(response) {
 };
 
 /**
+ * Helper class, passthrough to level-specific hasMultiplePossibleGrids
+ * call
+ * @return {boolean}
+ */
+Maze.hasMultiplePossibleGrids = function () {
+  return Maze.bee && Maze.bee.hasMultiplePossibleGrids();
+};
+
+/**
  * Perform some basic initialization/resetting operations before
  * execution. This function should be idempotent, as it can be called
  * during execution when running multiple trials.
@@ -1006,7 +1015,7 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
-      if (Maze.bee && Maze.bee.staticGrids.length > 1) {
+      if (Maze.hasMultiplePossibleGrids()) {
         // If this level is a Bee level with multiple possible grids, we
         // need to run against all grids and sort them into successes
         // and failures
