@@ -26,9 +26,11 @@ class UserLevel < ActiveRecord::Base
   belongs_to :level
   belongs_to :script
 
+  # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
+  # word choice.
   scope :attempted, -> { where.not(best_result: nil) }
-  scope :passed, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
-  scope :perfected, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
+  scope :passing, -> { where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT) }
+  scope :perfect, -> { where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT) }
 
   def submitted?
     Activity.submitted? best_result

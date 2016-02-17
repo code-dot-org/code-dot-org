@@ -64,8 +64,8 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal 1, UserLevel.count
     assert_equal 0, UserLevel.attempted.count
-    assert_equal 0, UserLevel.passed.count
-    assert_equal 0, UserLevel.perfected.count
+    assert_equal 0, UserLevel.passing.count
+    assert_equal 0, UserLevel.perfect.count
   end
 
   test "attempted, passed, and perfected scopes for attempted result" do
@@ -73,8 +73,8 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal 1, UserLevel.count
     assert_equal 1, UserLevel.attempted.count
-    assert_equal 0, UserLevel.passed.count
-    assert_equal 0, UserLevel.perfected.count
+    assert_equal 0, UserLevel.passing.count
+    assert_equal 0, UserLevel.perfect.count
   end
 
   test "attempted, passed, and perfected scopes for passed result" do
@@ -82,8 +82,8 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal 1, UserLevel.count
     assert_equal 1, UserLevel.attempted.count
-    assert_equal 1, UserLevel.passed.count
-    assert_equal 0, UserLevel.perfected.count
+    assert_equal 1, UserLevel.passing.count
+    assert_equal 0, UserLevel.perfect.count
   end
 
   test "attempted, passed, and perfected scopes for perfected result" do
@@ -91,7 +91,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal 1, UserLevel.count
     assert_equal 1, UserLevel.attempted.count
-    assert_equal 1, UserLevel.passed.count
-    assert_equal 1, UserLevel.perfected.count
+    assert_equal 1, UserLevel.passing.count
+    assert_equal 1, UserLevel.perfect.count
   end
 end
