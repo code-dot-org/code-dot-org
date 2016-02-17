@@ -111,6 +111,7 @@ namespace :build do
       env_vars = ''
       env_vars += 'MOOC_LOCALIZE=1 ' if CDO.localize_apps
       env_vars += 'MOOC_DIGEST=1 ' unless rack_env?(:development)
+      env_vars += 'MOOC_DEV=1' if rack_env?(:development)
       RakeUtils.system "#{env_vars} grunt build"
     end
   end
