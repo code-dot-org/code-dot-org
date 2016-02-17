@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "しゅうてんに　たどりつくまで、かこってある　うごきを　くりかえし　やってください。"},
 "word":function(d){return "ことばを　みつけましょう"},
 "yes":function(d){return "はい"},
-"youSpelled":function(d){return "あなたのスペル"}};
+"youSpelled":function(d){return "あなたのスペル"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

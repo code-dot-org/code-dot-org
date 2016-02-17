@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "重覆程式積木內的動作，直到完成為止。"},
 "word":function(d){return "尋找那個字詞"},
 "yes":function(d){return "是"},
-"youSpelled":function(d){return "你併寫的"}};
+"youSpelled":function(d){return "你併寫的"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

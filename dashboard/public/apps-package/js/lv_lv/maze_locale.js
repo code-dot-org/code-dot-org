@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Atārtot slegtās darbības kamēr finiša punkts ir sasniegts."},
 "word":function(d){return "Atrodi vārdu"},
 "yes":function(d){return "Jā"},
-"youSpelled":function(d){return "Jūs uzrakstījāt"}};
+"youSpelled":function(d){return "Jūs uzrakstījāt"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

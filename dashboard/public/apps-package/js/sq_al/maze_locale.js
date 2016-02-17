@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Përsërit veprimet e brendshme derisa të arrihet pika e mbarimit."},
 "word":function(d){return "Gjej fjalën"},
 "yes":function(d){return "Po"},
-"youSpelled":function(d){return "Ti gërmëzove"}};
+"youSpelled":function(d){return "Ti gërmëzove"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

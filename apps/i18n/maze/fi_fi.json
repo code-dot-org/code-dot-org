@@ -81,5 +81,6 @@
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
   "word": "Etsi sana",
   "yes": "Kyllä",
-  "youSpelled": "Kirjoitit"
+  "youSpelled": "Kirjoitit",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

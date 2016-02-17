@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "সমাপ্তি বিন্দুতে না পৌঁছানো পর্যন্ত ঘিরা কাজ পুনরাবৃত্তি করুন।"},
 "word":function(d){return "শব্দটি খুঁজুন"},
 "yes":function(d){return "\"হ্যাঁ\""},
-"youSpelled":function(d){return "আপনি বানান করেছেন"}};
+"youSpelled":function(d){return "আপনি বানান করেছেন"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

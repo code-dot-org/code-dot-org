@@ -11,7 +11,9 @@ exports.load = function (assetUrl, id) {
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       annaLine: skin.assetUrl('annaline.png'),
-      annaLine_2x: skin.assetUrl('annaline_2x.png')
+      annaLine_2x: skin.assetUrl('annaline_2x.png'),
+      // Used to populate the Set Pattern block
+      lineStylePatternOptions: [[skin.assetUrl('annaline-menuicon.png'), 'annaLine']]
     },
 
     elsa: {
@@ -21,7 +23,19 @@ exports.load = function (assetUrl, id) {
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       elsaLine: skin.assetUrl('elsaline.png'),
-      elsaLine_2x: skin.assetUrl('elsaline_2x.png')
+      elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
+      // Used to populate the Set Pattern block
+      lineStylePatternOptions: [[skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']]
+    },
+
+    artist: {
+      // Used to populate the Set Pattern block
+      lineStylePatternOptions: [
+          [skin.rainbowMenu, 'rainbowLine'],
+          [skin.ropeMenu, 'ropeLine'],
+          [skin.squigglyMenu, 'squigglyLine'],
+          [skin.swirlyMenu, 'swirlyLine']
+      ]
     }
   };
 
@@ -42,18 +56,18 @@ exports.load = function (assetUrl, id) {
     skin[prop] = config[prop];
   }
 
-  // TODO (br-pair) : Some of these keys are actually undefined. Clean this up
-  skin.lineStylePatternOptions = [
-    [skin.patternDefault, 'DEFAULT'], //  signals return to default path drawing
-    [skin.rainbowMenu, 'rainbowLine'],  // set to property name for image within skin
-    [skin.ropeMenu, 'ropeLine'],  // referenced as skin[pattern];
-    [skin.squigglyMenu, 'squigglyLine'],
-    [skin.swirlyMenu, 'swirlyLine'],
-    [skin.annaLine, 'annaLine'],
-    [skin.elsaLine, 'elsaLine'],
-    [skin.annaLine_2x, 'annaLine_2x'],
-    [skin.elsaLine_2x, 'elsaLine_2x'],
-  ];
+  // Declare available line style patterns. This array of arrays is eventually used
+  // to populate the image dropdown in the Set Pattern block.
+
+  // All skins have the default line style (solid coloured line)
+  var lineStylePatternOptions =  [[skin.patternDefault, 'DEFAULT']];
+
+  // If the skin provided line patterns, add them to the pattern set
+  if (config && config.lineStylePatternOptions) {
+    lineStylePatternOptions = lineStylePatternOptions.concat(config.lineStylePatternOptions);
+  }
+
+  skin.lineStylePatternOptions = lineStylePatternOptions;
 
   return skin;
 };

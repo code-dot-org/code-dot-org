@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Repita as ações até satisfazer a condição."},
 "word":function(d){return "Encontre a palavra"},
 "yes":function(d){return "Sim"},
-"youSpelled":function(d){return "Você escreveu"}};
+"youSpelled":function(d){return "Você escreveu"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funksiyalar"},
 "catText":function(d){return "Matn"},
 "catVariables":function(d){return "O‘zgaruvchilar"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Boshidan boshlamoq"},
 "clearPuzzleConfirm":function(d){return "Bu jumboqni boshdagi holatiga qaytarib, siz qo'shgan yoki o'zgartirgan bloklar barchasi o‘chirib yuboriladi."},
 "clearPuzzleConfirmHeader":function(d){return "Rostan boshidan boshlamoqchimisiz?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Watch the Video"},
 "when":function(d){return "when"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

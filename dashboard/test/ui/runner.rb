@@ -209,13 +209,13 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     raise Parallel::Kill
   end
 
-  if $options.browser and browser['browser'] and $options.browser.casecmp(browser['browser']) != 0
+  if $options.browser && browser['browser'] && $options.browser.casecmp(browser['browser']) != 0
     next
   end
-  if $options.os_version and browser['os_version'] and $options.os_version.casecmp(browser['os_version']) != 0
+  if $options.os_version && browser['os_version'] && $options.os_version.casecmp(browser['os_version']) != 0
     next
   end
-  if $options.browser_version and browser['browser_version'] and $options.browser_version.casecmp(browser['browser_version']) != 0
+  if $options.browser_version && browser['browser_version'] && $options.browser_version.casecmp(browser['browser_version']) != 0
     next
   end
 

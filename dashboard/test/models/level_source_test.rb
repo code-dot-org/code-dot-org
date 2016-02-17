@@ -102,7 +102,7 @@ class LevelSourceTest < ActiveSupport::TestCase
   def inactivate_selected_hint(source)
     hints = @level_source.level_source_hints.
       where(source: source, status: LevelSourceHint::STATUS_SELECTED)
-    assert_equal 1, hints.to_a.count,
+    assert_equal 1, hints.to_a.size,
                  "Wrong number of selected hints with source #{source}"
     hints.first.update(status: LevelSourceHint::STATUS_INACTIVE)
   end

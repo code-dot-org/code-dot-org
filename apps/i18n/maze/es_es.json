@@ -81,5 +81,6 @@
   "whileTooltip": "Repetir las acciones dentro del bloque hasta alcanzar el punto final.",
   "word": "Encuentra la palabra",
   "yes": "Sí",
-  "youSpelled": "Escribiste"
+  "youSpelled": "Escribiste",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

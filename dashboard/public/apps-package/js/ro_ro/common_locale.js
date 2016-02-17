@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funcţii"},
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Variabile"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Reîncepe"},
 "clearPuzzleConfirm":function(d){return "Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge toate blocurile pe care le-ai adăugat sau modificat."},
 "clearPuzzleConfirmHeader":function(d){return "Ești sigur că dorești să reîncepi?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Urmărește clipul video"},
 "when":function(d){return "când"},
 "whenRun":function(d){return "când rulezi"},
-"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "}};

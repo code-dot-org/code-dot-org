@@ -81,5 +81,6 @@
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
   "word": "Zoek het woord",
   "yes": "Ja",
-  "youSpelled": "Jij spelde"
+  "youSpelled": "Jij spelde",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

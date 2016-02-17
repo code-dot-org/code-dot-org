@@ -14,6 +14,7 @@
   "catProcedures": "Funksiyalar",
   "catText": "mətn",
   "catVariables": "Dəyişənlər",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Yenidən başla",
   "clearPuzzleConfirm": "Bu, tapmacanı ilkin vəziyyətinə qaytaracaq və əlavə etdiyiniz, dəyişdiyiniz bütün blokları siləcək.",
   "clearPuzzleConfirmHeader": "Yenidən başlamaq istədiyinizə əminsiniz?",
@@ -255,6 +256,5 @@
   "watchVideo": "Videoya baxın",
   "when": "nə zaman",
   "whenRun": "icra etdikdə",
-  "workspaceHeaderShort": "iş sahəsi: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "iş sahəsi: "
 }

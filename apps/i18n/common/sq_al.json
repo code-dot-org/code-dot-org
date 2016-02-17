@@ -14,6 +14,7 @@
   "catProcedures": "funksionet",
   "catText": "Tekst",
   "catVariables": "variabla",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Fillo nga fillimi",
   "clearPuzzleConfirm": "Kjo do ta rikthejë formuesen në gjëndjen fillestare dhe do të fshijë të gjithë blloqet që ke shtuar ose ndryshuar.",
   "clearPuzzleConfirmHeader": "A jeni i sigurt që doni të filloni nga fillimi?",
@@ -255,6 +256,5 @@
   "watchVideo": "Shiko Videon",
   "when": "kur",
   "whenRun": "kur vrapon",
-  "workspaceHeaderShort": "Vendi i punës: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Vendi i punës: "
 }

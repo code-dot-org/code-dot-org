@@ -14,6 +14,7 @@
   "catProcedures": "ฟังก์ชัน",
   "catText": "ข้อความ",
   "catVariables": "ตัวแปร",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "เริ่มใหม่",
   "clearPuzzleConfirm": "สิ่งนี้จะเริ่มต้นเกมใหม่ที่จุดเริ่มต้นและลบทุกบล็อกที่คุณเพิ่มหรือเปลี่ยนออกไป.",
   "clearPuzzleConfirmHeader": "คุณจะเริ่มต้นใหม่จริงๆหรือ ?",
@@ -255,6 +256,5 @@
   "watchVideo": "ดูวีดีโอ",
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
-  "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "พื้นที่ทำงาน: "
 }

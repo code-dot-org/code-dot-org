@@ -14,6 +14,7 @@
   "catProcedures": "Mga function",
   "catText": "Text",
   "catVariables": "Mga variable",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Magsimula sa Umpisa",
   "clearPuzzleConfirm": "Ire-reset nito ang puzzle sa umpisa at tatanggalin ang lahat ng mga bloke na iyong idinagdag o binago.",
   "clearPuzzleConfirmHeader": "Sigurado ka bang gusto mong magsimula muli?",
@@ -255,6 +256,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Workspace: "
 }
