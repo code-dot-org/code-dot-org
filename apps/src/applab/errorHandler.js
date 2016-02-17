@@ -1,9 +1,13 @@
 var annotationList = require('../acemode/annotationList');
+var logToCloud = require('../logToCloud');
 
 var ErrorLevel = {
   WARNING: 'WARNING',
   ERROR: 'ERROR'
 };
+
+// Rate at which we log errors to the cloud
+var ERROR_LOG_RATE = 1 / 100;
 
 /**
  * Output error to console and gutter as appropriate
@@ -20,6 +24,11 @@ function outputError(warning, level, lineNum) {
   Applab.log(text);
   if (lineNum !== undefined) {
     annotationList.addRuntimeAnnotation(level, lineNum, warning);
+  }
+
+  // Send up to New Relic if it meets our sampling rate
+  if (level === ErrorLevel.ERROR && Math.random() < ERROR_LOG_RATE) {
+    logToCloud.addPageAction(logToCloud.PageAction.UserJavaScriptError, warning);
   }
 }
 
