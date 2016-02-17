@@ -1,0 +1,30 @@
+%h1 Self Evaluation for #{@course.name}
+
+%p
+  This will determine what parts of the course are best suited for your learning needs. There are no wrong answers, just answer as best as you can!
+
+= form_tag(action: 'submit_evaluation') do
+  - @questions.each do |question|
+    %p #{question.question}
+    - answers = question.plc_evaluation_answers
+    - answers.each do |answer|
+      %p
+        %input.radio{type: "radio", value: '' + answer.plc_task_id.to_s, checked: answer == answers.first}
+          #{answer.answer} (corresponds with #{answer.plc_task.try(:name)})
+  = hidden_field_tag('answerTaskList')
+  = submit_tag('Submit evaluation', id: 'submitEvaluation')
+:javascript
+  $(document).ready(function () {
+    $('#submitEvaluation').click(function() {
+      var evaluationResponses = new Array();
+
+      $('input:checked').each(function() {
+        if (this.value) {
+          evaluationResponses.push(this.value);
+        }
+      });
+
+      $('#answerTaskList').val(evaluationResponses);
+    })
+  });
+

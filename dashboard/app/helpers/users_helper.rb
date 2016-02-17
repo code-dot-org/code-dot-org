@@ -117,14 +117,4 @@ module UsersHelper
     end
   end
 
-  def options_for_user_enrollment_users
-    options = []
-
-    User.all.each do |course|
-      options << [course.name, course.id]
-    end
-
-    options
-  end
-
 end

@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p Hello #{@plc_user_course_enrollment.user.name}, here is your progress for #{@plc_user_course_enrollment.plc_course.name}
+
+-@plc_user_course_enrollment.module_assignments.each do |module_enrollment|
+  %p
+    %strong #{module_enrollment.plc_learning_module.name}
+    - module_enrollment.task_assignments.each do |task_assignment|
+      %li #{task_assignment.plc_task.name} - #{task_assignment.status}
+
+-if @plc_user_course_enrollment.module_assignments.count == 0
+  %p
+    You have not taken the evaluation quiz. Once you have done so, we can enroll you in appropriate modules.
+    = link_to 'Take evaluation quiz', "/plc_enrollment_evaluations/#{@plc_user_course_enrollment.id}/perform_evaluation"
+
+
+= link_to 'Back', plc_user_course_enrollments_path

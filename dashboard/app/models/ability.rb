@@ -32,12 +32,10 @@ class Ability
         Cohort,
         WorkshopAttendance,
         # PLC Stuff
-        ProfessionalLearningCourse,
-        ProfessionalLearningModule,
-        ProfessionalLearningTask,
-        PlcEvaluationQuestion,
-        PlcEvaluationAnswer,
-        UserProfessionalLearningCourseEnrollment
+        Plc::Course,
+        Plc::LearningModule,
+        Plc::Task,
+        Plc::UserCourseEnrollment
       ]
     end
 
