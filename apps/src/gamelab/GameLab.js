@@ -143,6 +143,7 @@ GameLab.prototype.init = function (config) {
 
   // Create 2nd phase function afterUserDraw()
   window.p5.prototype.afterUserDraw = function () {
+    var self = this;
     this._registeredMethods.post.forEach(function (f) {
       f.call(self);
     });
