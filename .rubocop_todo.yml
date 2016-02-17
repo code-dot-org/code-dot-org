@@ -39,11 +39,6 @@ Lint/UnusedMethodArgument:
 Performance/Detect:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Performance/Size:
-  Enabled: false
-
 # Offense count: 11
 # Cop supports --auto-correct.
 Performance/StringReplacement:
