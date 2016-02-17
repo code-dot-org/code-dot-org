@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다."},
 "word":function(d){return "단어 찾기"},
 "yes":function(d){return "예"},
-"youSpelled":function(d){return "말"}};
+"youSpelled":function(d){return "말"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

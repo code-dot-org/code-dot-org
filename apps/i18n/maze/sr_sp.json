@@ -81,5 +81,6 @@
   "whileTooltip": "Понови акције у загради док се не постигне последњи поен.",
   "word": "Пронађите реч",
   "yes": "Да",
-  "youSpelled": "Написали сте"
+  "youSpelled": "Написали сте",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

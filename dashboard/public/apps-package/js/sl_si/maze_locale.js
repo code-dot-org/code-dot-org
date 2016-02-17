@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke."},
 "word":function(d){return "Poišči besedo"},
 "yes":function(d){return "Da"},
-"youSpelled":function(d){return "Ti si črkoval"}};
+"youSpelled":function(d){return "Ti si črkoval"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

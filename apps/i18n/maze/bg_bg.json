@@ -81,5 +81,6 @@
   "whileTooltip": "Повтори поставените в блока действия, докато целта не бъде достигната.",
   "word": "Намерете думата",
   "yes": "Да",
-  "youSpelled": "ти образува думи"
+  "youSpelled": "ти образува думи",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

@@ -81,5 +81,6 @@
   "whileTooltip": "Repetiu les accions tancades fins que s'arribi al punt final.",
   "word": "Troba la paraula",
   "yes": "Sí",
-  "youSpelled": "Has escrit"
+  "youSpelled": "Has escrit",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }
