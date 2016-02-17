@@ -34,7 +34,6 @@ module.exports = function (grunt) {
 
   // Parse options from environment.
   var envOptions = {
-    minify: (process.env.MOOC_MINIFY === '1'),
     localize: (process.env.MOOC_LOCALIZE === '1'),
     dev: (process.env.MOOC_DEV === '1')
   };
@@ -258,7 +257,7 @@ module.exports = function (grunt) {
   config.sass = {
     all: {
       options: {
-        outputStyle: (envOptions.minify ? 'compressed' : 'nested'),
+        outputStyle: (envOptions.dev ? 'nested' : 'compressed'),
         includePaths: ['../shared/css/']
       },
       files: {
