@@ -127,7 +127,7 @@ class TablesApi < Sinatra::Base
 
     new_value =  JSON.parse(request.body.read)
 
-    if new_value.has_key? 'id' and new_value['id'].to_i != id.to_i
+    if new_value.has_key?('id') && new_value['id'].to_i != id.to_i
       halt 400, {}, "Updating 'id' is not allowed" if new_value.has_key? 'id'
     end
     new_value.delete('id')
@@ -265,7 +265,7 @@ class TablesApi < Sinatra::Base
     overwrite = request.GET['overwrite'] == '1'
     json_data.keys.each do |table_name|
       table = TableType.new(channel_id, storage_id(endpoint), table_name)
-      if table.exists? and !overwrite
+      if table.exists? && !overwrite
         next
       end
 

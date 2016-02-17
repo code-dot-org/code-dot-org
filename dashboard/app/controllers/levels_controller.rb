@@ -115,9 +115,9 @@ class LevelsController < ApplicationController
     begin
       @level = type_class.create_from_level_builder(params, level_params)
     rescue ArgumentError => e
-      render status: :not_acceptable, text: e.message and return
+      render(status: :not_acceptable, text: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
-      render status: :not_acceptable, text: invalid and return
+      render(status: :not_acceptable, text: invalid) && return
     end
 
     render json: { redirect: edit_level_path(@level) }
@@ -171,9 +171,9 @@ class LevelsController < ApplicationController
       begin
         @level.update!(name: params[:name])
       rescue ArgumentError => e
-        render status: :not_acceptable, text: e.message and return
+        render(status: :not_acceptable, text: e.message) && return
       rescue ActiveRecord::RecordInvalid => invalid
-        render status: :not_acceptable, text: invalid and return
+        render(status: :not_acceptable, text: invalid) && return
       end
       render json: {redirect: edit_level_url(@level)}
     else
