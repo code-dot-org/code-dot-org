@@ -12,7 +12,6 @@
         %input.radio{type: "radio", value: '' + answer.professional_learning_task_id.to_s, checked: answer == answers.first}
           #{answer.answer} (corresponds with #{answer.professional_learning_task.try(:name)})
   = hidden_field_tag('answerTaskList')
-  = text_field_tag('something')
   = submit_tag('Submit evaluation', id: 'submitEvaluation')
 :javascript
   $(document).ready(function () {
