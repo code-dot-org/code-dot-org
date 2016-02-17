@@ -21,7 +21,7 @@ npm install -g grunt-cli
 
 # Perform first full build
 npm install
-MOOC_DEV=1 grunt build
+npm run build
 ```
 
 ### Seeing your development version of Blockly in Dashboard
@@ -47,14 +47,15 @@ If the symlink is in place, then when you run later builds of blockly, your resu
 
 #### Full build
 
-To run a full build (minus localization):
+To run a full development build (minus localization):
 
 ```
-MOOC_DEV=1 grunt build
+npm run build
 ```
 
-* `MOOC_DEV=1` builds a 'debug' version with more readable javascript
-* `grunt rebuild` does a `clean` before a `build`
+* `npm run build` builds a 'debug' version with more readable javascript
+* `npm run build:dist` builds a minified version suitable for production 
+* `npm run clean` will clean the build directory
 
 See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 
@@ -89,12 +90,11 @@ MOOC_LOCALE=ar_sa grunt build
 #### Running tests
 
 ```
-grunt build # run a non-debug build before testing
-grunt test
+npm test
 ```
 * If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
 * Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
-* `grunt test` will also be run via Travis CI when you create a pull request
+* These tests will also be run via Travis CI when you create a pull request
 
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 
@@ -163,5 +163,5 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
-- `grunt jshint` should report 0 warnings or errors.
+- `npm run lint` should report 0 warnings or errors.
 - See our [project style guide](../STYLEGUIDE.md) for details.
