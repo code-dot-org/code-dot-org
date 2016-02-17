@@ -52,7 +52,7 @@ class DynamicConfigController < ApplicationController
       where_key = params["where_key_#{where_count}"]
       where_value = params["where_value_#{where_count}"]
 
-      break if where_key.nil? or where_value.nil?
+      break if where_key.nil? || where_value.nil?
       where[where_key] = JSONValue.value(where_value)
       where_count += 1
     end
