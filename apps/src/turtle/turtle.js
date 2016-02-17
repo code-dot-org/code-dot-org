@@ -697,13 +697,12 @@ Artist.prototype.evalCode = function(code) {
  * Set up this.code, this.interpreter, etc. to run code for editCode levels
  */
 Artist.prototype.generateTurtleCodeFromJS_ = function () {
+  var userCode = this.studioApp_.editor.getValue();
   this.code = dropletUtils.generateCodeAliases(dropletConfig, 'Turtle');
   this.userCodeStartOffset = this.code.length;
-  this.code += this.studioApp_.editor.getValue();
+  this.code += userCode;
   this.userCodeLength = this.code.length - this.userCodeStartOffset;
-
-  var session = this.studioApp_.editor.aceEditor.getSession();
-  this.cumulativeLength = codegen.aceCalculateCumulativeLength(session);
+  this.cumulativeLength = codegen.calculateCumulativeLength(userCode);
 
   var initFunc = _.bind(function(interpreter, scope) {
     codegen.initJSInterpreter(interpreter, null, null, scope, {
