@@ -42,6 +42,8 @@ var GameLab = function () {
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
+  this.drawInProgress = false;
+  this.setupInProgress = false;
   this.p5 = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
@@ -121,6 +123,31 @@ GameLab.prototype.init = function (config) {
       return GameLab.baseP5loadImage.call(this, path, successCallback, failureCallback);
     };
   }
+
+  // Override p5.redraw to make it two-phase after userDraw()
+  window.p5.prototype.redraw = function () {
+    var userSetup = this.setup || window.setup;
+    var userDraw = this.draw || window.draw;
+    if (typeof userDraw === 'function') {
+      this.push();
+      if (typeof userSetup === 'undefined') {
+        this.scale(this.pixelDensity, this.pixelDensity);
+      }
+      var self = this;
+      this._registeredMethods.pre.forEach(function (f) {
+        f.call(self);
+      });
+      userDraw();
+    }
+  };
+
+  // Create 2nd phase function afterUserDraw()
+  window.p5.prototype.afterUserDraw = function () {
+    this._registeredMethods.post.forEach(function (f) {
+      f.call(self);
+    });
+    this.pop();
+  };
 
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
@@ -258,9 +285,9 @@ GameLab.prototype.reset = function (ignore) {
 
   }
 
-  window.p5.prototype.gamelabPreload = _.bind(function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
-  }, this);
+  // Import to reset this after this.p5 has been removed above
+  this.drawInProgress = false;
+  this.setupInProgress = false;
 
   this.debugger_.detach();
   this.consoleLogger_.detach();
@@ -271,6 +298,10 @@ GameLab.prototype.reset = function (ignore) {
     this.JSInterpreter = null;
   }
   this.executionError = null;
+
+  window.p5.prototype.gamelabPreload = _.bind(function () {
+    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
+  }, this);
 };
 
 /**
@@ -328,6 +359,93 @@ GameLab.prototype.execute = function() {
 
       p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
 
+      // Overload _draw function to make it two-phase
+      p5obj._draw = function () {
+        this._thisFrameTime = window.performance.now();
+        var time_since_last = this._thisFrameTime - this._lastFrameTime;
+        var target_time_between_frames = 1000 / this._targetFrameRate;
+
+        // only draw if we really need to; don't overextend the browser.
+        // draw if we're within 5ms of when our next frame should paint
+        // (this will prevent us from giving up opportunities to draw
+        // again when it's really about time for us to do so). fixes an
+        // issue where the frameRate is too low if our refresh loop isn't
+        // in sync with the browser. note that we have to draw once even
+        // if looping is off, so we bypass the time delay if that
+        // is the case.
+        var epsilon = 5;
+        if (!this.loop ||
+            time_since_last >= target_time_between_frames - epsilon) {
+          this._setProperty('frameCount', this.frameCount + 1);
+          this.redraw();
+        } else {
+          this._drawEpilogue();
+        }
+      }.bind(p5obj);
+
+      p5obj.afterRedraw = function () {
+        this._updatePAccelerations();
+        this._updatePRotations();
+        this._updatePMouseCoords();
+        this._updatePTouchCoords();
+        this._frameRate = 1000.0/(this._thisFrameTime - this._lastFrameTime);
+        this._lastFrameTime = this._thisFrameTime;
+
+        this._drawEpilogue();
+      }.bind(p5obj);
+
+      p5obj._drawEpilogue = function () {
+        //mandatory update values(matrixs and stack) for 3d
+        if(this._renderer.isP3D){
+          this._renderer._update();
+        }
+
+        // get notified the next time the browser gives us
+        // an opportunity to draw.
+        if (this._loop) {
+          this._requestAnimId = window.requestAnimationFrame(this._draw);
+        }
+      }.bind(p5obj);
+
+      // Overload _setup function to make it two-phase
+      p5obj._setup = function() {
+
+        // return preload functions to their normal vals if switched by preload
+        var context = this._isGlobal ? window : this;
+        if (typeof context.preload === 'function') {
+          for (var f in this._preloadMethods) {
+            context[f] = this._preloadMethods[f][f];
+          }
+        }
+
+        // Short-circuit on this, in case someone used the library in "global"
+        // mode earlier
+        if (typeof context.setup === 'function') {
+          context.setup();
+        } else {
+          this._setupEpilogue();
+        }
+
+      }.bind(p5obj);
+
+      p5obj._setupEpilogue = function () {
+        // // unhide hidden canvas that was created
+        // this.canvas.style.visibility = '';
+        // this.canvas.className = this.canvas.className.replace('p5_hidden', '');
+
+        // unhide any hidden canvases that were created
+        var reg = new RegExp(/(^|\s)p5_hidden(?!\S)/g);
+        var canvases = document.getElementsByClassName('p5_hidden');
+        for (var i = 0; i < canvases.length; i++) {
+          var k = canvases[i];
+          k.style.visibility = '';
+          k.className = k.className.replace(reg, '');
+        }
+        this._setupDone = true;
+
+      }.bind(p5obj);
+
+      // Do this after we're done monkeying with the p5obj instance methods:
       p5obj.setupGlobalMode();
 
       window.preload = function () {
@@ -376,17 +494,18 @@ GameLab.prototype.execute = function() {
           }
 
           if (this.eventHandlers.setup) {
+            this.setupInProgress = true;
             this.eventHandlers.setup.apply(null);
           }
+          this.completeSetupIfSetupComplete();
         }
       }.bind(this);
       window.draw = _.bind(function () {
         if (this.JSInterpreter && this.eventHandlers.draw) {
-          var startTime = window.performance.now();
+          this.drawInProgress = true;
           this.eventHandlers.draw.apply(null);
-          var timeElapsed = window.performance.now() - startTime;
-          $('#bubble').text(timeElapsed.toFixed(2) + ' ms');
         }
+        this.completeRedrawIfDrawComplete();
       }, this);
       this.p5eventNames.forEach(function (eventName) {
         window[eventName] = _.bind(function () {
@@ -410,7 +529,8 @@ GameLab.prototype.execute = function() {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  this.tickIntervalId = window.setInterval(_.bind(this.onTick, this), 33);
+  // Set to 1ms interval, but note that browser minimums are actually 5-16ms:
+  this.tickIntervalId = window.setInterval(_.bind(this.onTick, this), 1);
 };
 
 GameLab.prototype.initInterpreter = function () {
@@ -535,6 +655,25 @@ GameLab.prototype.onTick = function () {
       this.p5decrementPreload();
       this.p5decrementPreload = null;
     }
+
+    this.completeSetupIfSetupComplete();
+    this.completeRedrawIfDrawComplete();
+  }
+};
+
+GameLab.prototype.completeRedrawIfDrawComplete = function () {
+  if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.p5.afterUserDraw();
+    this.p5.afterRedraw();
+    this.drawInProgress = false;
+    $('#bubble').text('FPS: ' + this.p5.frameRate().toFixed(0));
+  }
+};
+
+GameLab.prototype.completeSetupIfSetupComplete = function () {
+  if (this.setupInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.p5._setupEpilogue();
+    this.setupInProgress = false;
   }
 };
 
