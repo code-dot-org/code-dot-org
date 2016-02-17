@@ -55,7 +55,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
     configure_caching(@script)
-    redirect_to(build_script_level_path(next_script_level)) and return
+    redirect_to(build_script_level_path(next_script_level)) && return
   end
 
   def show
