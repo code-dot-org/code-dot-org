@@ -30,8 +30,7 @@ class DynamicConfigController < ApplicationController
 
     params.require(:feature)
     feature = params[:feature]
-    where = JSON.load(params[:where]) or {}
-    where = {} if where.nil?
+    where = JSON.load(params[:where]) || {}
     log_msg = "<b>Gatekeeper - #{feature}</b> #{current_user.name} deleted rule where #{where}"
     HipChat.log log_msg
     Gatekeeper.delete(feature, where: where)
