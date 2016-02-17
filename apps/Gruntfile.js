@@ -4,6 +4,8 @@ var mkdirp = require('mkdirp');
 var glob = require('glob');
 
 module.exports = function (grunt) {
+  require('time-grunt')(grunt);
+
   var config = {};
 
   /** @const {string[]} */
