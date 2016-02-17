@@ -179,11 +179,17 @@ exports.tickAppUntil = function (app, predicate) {
   }
 
   var resolved = false;
+  var original = app.onTick;
+  var resetToOriginal = function () {
+    app.onTick = original;
+  };
+  wrappersToReset.push(resetToOriginal);
   return new Promise(function (resolve) {
     app.onTick = _.wrap(app.onTick, function (originalOnTick) {
       if (!resolved && predicate()) {
         resolve();
         resolved = true;
+        resetToOriginal();
       }
       originalOnTick();
     });
