@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+#
+# This script caches database queries whose results are displayed at studio.code.org/admin/retention
+# and associated subpages.
+#
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require_relative '../../dashboard/config/environment'
+require src_dir 'database'
+require 'cdo/properties'
+
+ONE_WEEK = 7 * 24 * 60 * 60
+
+def main()
+  return unless only_one_running?(__FILE__)
+
+  # Find the (user, script) pairs where drop off happened, e.g., those users with progress on a
+  # script -28 to -14 days ago but not -14 to 0 days ago.
+  # Note that we intentionally keep (user, script) pairs where the script was completed.
+  drop_off = UserScript.
+    where(last_progress_at: (Time.now - 4 * ONE_WEEK)..(Time.now - 2 * ONE_WEEK))
+  script_starts = drop_off.group(:script_id).count
+  script_finishes = drop_off.where.not(completed_at: nil).group(:script_id).count
+  # 
+  drop_off_with_levels = drop_off.
+    joins("INNER JOIN user_levels ON user_levels.user_id = user_scripts.user_id AND user_levels.script_id = user_scripts.script_id")
+  # Determine, for each (user, script), the number of levels the user attempted. Then construct a
+  # hash of hashes of the form {script_id: {level_count: number_of_users}}.
+  levels = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = 0}}
+  drop_off_with_levels.
+    group('user_levels.user_id', 'user_levels.script_id').
+    count.
+    each{|pair, count| levels[pair.second][count] += 1}
+  # Determine, for each (user, script, stage), the number of levels attempted. The construct a hash
+  # of hashes of hashes of the form {script_id: {stage_id: {level_count: number_of_users}}}.
+  stages = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = Hash.new {|hash, key| hash[key] = 0}}}
+  drop_off_with_levels.
+    joins("INNER JOIN script_levels ON script_levels.script_id = user_levels.script_id AND script_levels.level_id = user_levels.level_id").
+    group('user_levels.user_id', 'script_levels.script_id', 'script_levels.stage_id').
+    count.
+    each{|triple, count| stages[triple.second][triple.third][count] += 1}
+
+  # Write these results to the Properties table in the Pegasus DB.
+  Properties.set(:retention_stats, {
+    script_starts: script_starts,
+    script_finishes: script_finishes,
+    script_progress_levels: levels,
+    script_progress_stages: stages,
+  })
+
+end
+
+main()
