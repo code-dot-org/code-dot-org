@@ -15,6 +15,7 @@ var $ = require('jquery');
 var React = require('react');
 var sinon = require('sinon');
 require('jquery-ui');
+var testUtils = require('./util/testUtils');
 
 window.React = React;
 
@@ -82,6 +83,7 @@ describe('Level tests', function() {
   var studioApp;
   var originalRender;
   var clock, tickInterval;
+  var originalOnTick;
 
   before(function(done) {
     this.timeout(15000);
@@ -180,6 +182,8 @@ describe('Level tests', function() {
       window.Studio.customLogic = null;
       window.Studio.interpreter = null;
     }
+
+    testUtils.resetAppTicks();
   });
 });
 
