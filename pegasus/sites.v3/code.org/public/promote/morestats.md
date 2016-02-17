@@ -9,6 +9,8 @@ This page contains numerous resources to assist in advocacy. You can find links 
 ## Code.org blog posts
 ### Miscellaneous
 
+
+* Americans' perceptions of computer science are [changing](http://blog.code.org/post/139445414968)
 * Computer science jobs account for the majority of "skilled worker" [immigration](http://blog.code.org/post/116568172243/with-all-the-national-debate-on-immigration-i) (H1B Visas)
 * What [percent of STEM](http://blog.code.org/post/89267280803/stem) should be Computer Science?
 * Is learning computer science linked to [improved learning](http://blog.code.org/post/125429946375/cs-other-subjects)  in other subjects?
