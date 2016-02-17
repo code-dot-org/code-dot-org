@@ -1,5 +1,5 @@
 ---
-title: Curriculum
+title: CS Fundamentals for grades K-5
 nav: educate_nav
 ---
 
