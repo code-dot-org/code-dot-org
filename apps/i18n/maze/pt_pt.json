@@ -81,5 +81,6 @@
   "whileTooltip": "Repete as ações seguintes até a condição de terminação ser alcançada.",
   "word": "Encontra a palavra",
   "yes": "Sim",
-  "youSpelled": "Tu escreveste"
+  "youSpelled": "Tu escreveste",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด"},
 "word":function(d){return "ค้นหาคำ"},
 "yes":function(d){return "ใช่"},
-"youSpelled":function(d){return "คุณถูกสะกด"}};
+"youSpelled":function(d){return "คุณถูกสะกด"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

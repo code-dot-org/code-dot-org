@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Ismételd a közbülső műveleteket a végpont eléréséig."},
 "word":function(d){return "Ezt a szót keresd"},
 "yes":function(d){return "Igen"},
-"youSpelled":function(d){return "Amit találtál"}};
+"youSpelled":function(d){return "Amit találtál"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

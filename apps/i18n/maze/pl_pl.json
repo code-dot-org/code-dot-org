@@ -81,5 +81,6 @@
   "whileTooltip": "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego.",
   "word": "Znajdź słowa",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś"
+  "youSpelled": "Przeliterowałeś",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

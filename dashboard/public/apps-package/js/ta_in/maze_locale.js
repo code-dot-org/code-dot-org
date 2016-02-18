@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை."},
 "word":function(d){return "சொல்லை கண்டறி"},
 "yes":function(d){return "ஆம்"},
-"youSpelled":function(d){return "நீங்கள் உச்சரித்தது"}};
+"youSpelled":function(d){return "நீங்கள் உச்சரித்தது"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
