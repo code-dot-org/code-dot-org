@@ -28,6 +28,7 @@ dependencies:
     - 'echo "use_my_shared_js: true" >> locals.yml'
     - 'echo "build_blockly_core: true" >> locals.yml'
     - 'echo "build_apps: true" >> locals.yml'
+    - 'echo "build_code_studio: true" >> locals.yml'
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
@@ -52,13 +53,9 @@ test:
         - bundle exec rake install
         # Try running rake build twice (in case of intermittent test failures within rake build)
         - for i in 1 2; do bundle exec rake build && break; done
-        - npm install: # TODO(bjordan): necessary now?
-            pwd:
-                code-studio
         - bundle exec rake assets:precompile:
             pwd:
                 dashboard
-        # (apps tests already ran during rake build, don't re-run)
         # temporarily set hoc flags to green, as is currently required for dev enlistments
         - ./set_hoc_flags.rb green:
             pwd:
@@ -78,6 +75,9 @@ test:
         - npm test:
             pwd:
                 code-studio
+        - npm test:
+            pwd:
+                apps
         - bundle exec rake konacha:run:
             pwd:
                 dashboard
