@@ -1816,6 +1816,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
   this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  // Auto-normalize line endings
+  this.editor.aceEditor.session.setNewLineMode('unix');
 
   // Add an ace completer for the API functions exposed for this level
   if (config.dropletConfig) {
