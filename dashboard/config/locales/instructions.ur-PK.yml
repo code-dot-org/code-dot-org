@@ -283,7 +283,7 @@
         error(s) to collect all of the nectar and make all of the honey.
       2-3 Bee Debugging 3_instruction: |
         These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        error(s) to collect all of the nectar.
       2-3 Bee Debugging 4_instruction: |
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar and make all of the honey.
@@ -2282,7 +2282,9 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2536,58 +2538,59 @@
         time.
       Frequency Analysis_instruction: Test
       frozen circle function in circle_instruction: "آئیں اب 20 اوورلیپنگ سرکلز بنائیں،
-        ہر ایک سرکل کے درمیان 18 ڈگریز پر ٹرننگ دیں۔"
-      frozen circle function with parameter_instruction: یہاں ایک "کری-ایٹ سرکل" بلاک
-        ہے جس سے مختلف سائزوں کے سرکلز بنائے جاسکتے ہیں۔ کیا آپ اسے استعمال کرتے ہوئے
-        سائز 5 کا ایک چھوٹا اور سائز 10 کا ایک بڑا سرکل بنا سکتے ہیں؟
+        ہر ایک سرکل کے درمیان 18 ڈگریز پر موڑیں۔"
+      frozen circle function with parameter_instruction: یہاں ایک "ایک دائرہ بنائیں"
+        بلاک ہے جس سے مختلف سائزوں کے سرکلز بنائے جاسکتے ہیں۔ کیا آپ اسے استعمال کرتے
+        ہوئے سائز 5 کا ایک چھوٹا اور سائز 10 کا ایک بڑا سرکل بنا سکتے ہیں؟
       frozen circle function_instruction: 10 اوورلیپنگ سرکلز بنانے کے لیے، ایک نیا
-        "کری-ایٹ اے سرکل" بلاک استعمال کریں۔ سرکلز کے درمیان جمپ فارورڈ کرنا نہ بھولیں۔
+        "ایک دائرہ بنائیں" بلاک استعمال کریں۔ سرکلز کے درمیان جمپ فارورڈ کرنا نہ بھولیں۔
       frozen circle_instruction: "سرکل ایک مخصوص خاکہ (شیپ) ہوتا ہے۔ کیا آپ یہ معلوم
-        کرسکتے ہیں کہ کونسے نمبر سوالیہ نشانات کو ایک سرکل میں تبدیل کرسکتے ہیں؟"
+        کرسکتے ہیں کہ سوالیہ نشانات کی جگہ کونسے نمبر ڈال کر ایک سرکل بنایا جا سکتا
+        ہے؟"
       frozen cross rotate dense_instruction: "چلیں اس عمل کو 90 بار دہراتے ہیں! 360
-        میں جانے کے لیے 90 کو کتنی بار دہرانا ہوگا؟ ھنٹ: یہ واقعی بہت چھوٹا نمبر ہے۔"
+        حاصل کرنے کے لیے 90 کو کتنی بار دہرانا ہوگا؟ اشارہ: یہ واقعی بہت چھوٹا نمبر
+        ہے۔"
       frozen cross rotate_instruction: "اب اسے 10 بار دہرانے کی کوشش کریں۔ ہر لائن
         کے درمیان آپ کو کتنے ڈگری اسے گھمانے کی ضرورت ہوگی؟"
       frozen cross_instruction: ایک "ریپیٹ" بلاک کو ان کمانڈز کے گرد استعمال کرتے
-        ہوئے ایک پلس سائن بنائیں۔ کیا آپ نے یہ نوٹس کیا کہ ایلسا آگے اور پیچھے حرکت
+        ہوئے ایک پلس سائن بنائیں۔ کیا آپ نے یہ غور کیا کہ ایلسا آگے اور پیچھے حرکت
         کرسکتی ہے؟
-      frozen diamond mini snowflake_instruction: کیا آپ جانتے ہیں کہ سنوفلیک ایک مختلف
-        شیپ ہے؟ آئیں ایک اور "ریپیٹ" بلاک استعمال کرتے ہوئے ایک ایسا نیا سنوفلیک کری-ایٹ
-        کریں جس میں 4 مرتبہ پیرالل-اوگرام کو دہرائیں، ہر پیرالل-اوگرام کو درمیان سے
-        90 ڈگری رائٹ جانب گھمائیں۔
-      frozen diamond snowflake_instruction: "اب، ریپیٹ بلاک کو استعمال کرتے ہوئے اور
-        ہر ایک کے درمیان 36 ڈگری رائٹ ٹرننگ دیتے ہوئے، ایک پیرالل-اوگرام کو 10 بار
-        رپیٹ کرتے ہوئے ایک نیا اسنوفلیک بنائیں۔"
+      frozen diamond mini snowflake_instruction: کیا آپ جانتے ہیں کہ ہرسنوفلیک ایک
+        مختلف شکل کا ہوتا ہے؟ آئیں "ریپیٹ" بلاک استعمال کرتے ہوئے ایک ایسا نیا سنوفلیک
+        کری-ایٹ کریں جس میں 4 مرتبہ پیرالل-اوگرام کو دہرائیں، ہر پیرالل-اوگرام کے
+        بعد دائیں جانب 90 ڈگری موڑیں۔
+      frozen diamond snowflake_instruction: "اب، 'دہرائیں' بلاک کی مدد سے ایک پیرالل-اوگرام
+        کو 10 بار رپیٹ کرتے ہوئے ایک نیا اسنوفلیک بنائیں اور ہر ایک کے درمیان دائیں
+        طرف 36 ڈگری پر موڑیں۔"
       frozen diamond_instruction: "ان بلاکس کے گرد ایک رپیٹ کو استعمال کرتے ہوئے ایک
         پیرالل-اوگرام بنائیں۔ یہ بالکل ایک ریکٹ-اینگل کی طرح کا ہوتا ہے لیکن اس کے
-        مختلف اینگلز ہوتے ہیں۔ اس والے میں تمام اینگلز 90 ڈگری ہونے کے بجائے اس میں
-        60 ڈگری اور 120 ڈگری کے اینگلز ہوتے ہیں۔"
+        مختلف اینگلز ہوتے ہیں۔ اس والے میں تمام اینگلز 90 ڈگری ہونے کے بجائے 60 ڈگری
+        اور 120 ڈگری کے ہیں۔"
       frozen freeplay_instruction: "اب آپ باقاعدہ طور سے ایک ماہر آرٹسٹ بن چکے ہیں!
         ایک ونٹر ونڈرورلڈ کری-ایٹ کریں۔"
       frozen line_instruction: "ہائے! میں ارینڈل کی ایلسا ہوں۔ ایک سنگل لائن بنانے
         میں میری مدد کریں۔"
       frozen perpendicular_instruction: آئیں اب یہ دیکھتے ہیں کہ آیا ہم دو لائنز کری-ایٹ
-        کرسکتے ہیں یا نہیں جو ایک دوسرے سے 90 ڈگری اینگل پر واقع ہوں۔ آپ کو "ٹرن"
-        بلاک کے ساتھ ساتھ "موو" بلاک بھی استعمال کرنے کی ضرورت ہوگی۔
-      frozen snowflake branch_instruction: '"کری-ایٹ س سنوفلیک برانچ" بلاک کو استعمال
-        کرنے کی کوشش کریں کہ آپ تین برانچز بنالیں، جو کہ شروع میں ایک سنوفلیک جیسی
-        لگتی ہے۔'
+        کرسکتے ہیں یا نہیں جو ایک دوسرے سے 90 ڈگری اینگل پر واقع ہوں۔ آپ کو "مڑیں"
+        بلاک کے ساتھ ساتھ "چلیں" بلاک بھی استعمال کرنے کی ضرورت ہوگی۔
+      frozen snowflake branch_instruction: '"ایک سنوفلیک برانچ بنائیں" بلاک کی مدد
+        سے آپ تین برانچز بنالیں، جو کہ ایک سنوفلیک جیسی لگنے لگتی ہیں۔'
       frozen snowflake full_instruction: "اب ایک خوبصورت سنوفلیک بنانے کے لئے اسے
         8 بار دہرائیں!"
-      frozen snowflower_instruction: "سنو پیٹرن کے پیچیدہ تر خاکے بہت سمپل شیپس سے
+      frozen snowflower_instruction: "سنو پیٹرن کے پیچیدہ تر خاکے بہت سادہ شکلوں سے
         کری-ایٹ کئے جاسکتے ہیں۔ کیا آپ 5 بار دہراتے ہوئے سائز 5 کے 5 سرکلز اور سائز
         10 کے 5 سرکلز بنا سکتے ہیں؟"
       frozen square iterative_instruction: "ایسا لگتا ہے کہ ہم ایک اسکوائر بنانے میں
         آدھا کام کرچکے ہیں۔ آئیں 4 لائنیں باہم جوڑ کر ایک اسکوائر کری-ایٹ کرتے ہیں۔"
-      frozen square loop 3x_instruction: "آئیں، ہر ایک اسکوائر کو گھما کر، تین اسکوائرز
-        کری-ایٹ کرتے ہیں۔ پہلے ہر ایک نئے اسکوائر کو 120 ڈگری ٹرن کرنا یقینی بنائیں۔"
-      frozen square loop_instruction: ہائے، میں ارینڈیل کی اینا ہوں! آئیں "ریپیٹ"
-        بلاک کے ساتھ ایک اسکوائر بنائیں، جس میں کچھ مزید بلاک استعمال ہوتے ہیں۔ ایک
-        اسکوائر بنانے کے لیے کتنی بار (؟؟؟) "ریپیٹ" بلاک کے اندر لوپ بلاک کو رپیٹ
-        کرنا ہوگا؟
+      frozen square loop 3x_instruction: "آئیں تین اسکوائرز کری-ایٹ کرتے ہیں۔ ہر اسکوائر
+        بنانے کے بعد 120 ڈگری پرمڑنا نہ بھولیں۔"
+      frozen square loop_instruction: ہائے، میں ارینڈیل کی آنا ہوں! آئیں "دہرائیں"
+        بلاک کے ساتھ ایک اسکوائر بنائیں، جس سے کم بلاکس استمعال کرنے پڑتے ہیں۔ ایک
+        اسکوائر بنانے کے لیے کتنی بار (؟؟؟) "دہرائیں" بلاک کے اندر کے بلاکس کو لوپ
+        کرنا کرنا ہوگا؟
       frozen square snowflake_instruction: کیا آپ "رپیٹ" بلاک کو استعمال کرتے ہوئے
-        ایک سنوفلیک کری-ایٹ کرسکتے ہیں تاکہ ایک اسکوائر کو 10 بار بنا سکیں، اور ہر
-        ایک اسکوائر کے درمیان "ٹرن" بلاک کو 36 ڈگری ٹرن کر سکتے ہیں؟
+        ایک سنوفلیک کری-ایٹ کرسکتے ہیں؟ "دہرائیں" بلاک کی مدد سے ایک اسکوائر کو 10
+        باربنائیں، اور ہر ایک اسکوائر کے بعد 36 ڈگری تک موڑیں۔
       Infinity_catch_instruction: |
         Can you make Elsa ("actor 2") catch up with
         Anna by using the arrow keys?
@@ -3489,6 +3492,11 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
@@ -3581,7 +3589,7 @@
         maze? If you do it right, I can walk any curvy path no matter the length.
         Hurry! The ice is melting!
       SpecialFrozenLevel_instruction: "اب آپ باقاعدہ طور سے ایک ماہر آرٹسٹ بن چکے
-        ہیں! ایک ونٹر ونڈرورلڈ کری-ایٹ کریں۔"
+        ہیں! ایک ونٹر ونڈرلینڈ تخلیق کریں۔"
       Standalone_Artist_1_instruction: |
         Welcome to Artist! First off, let's try
         to make a simple square using the turn right block and move forward block.
@@ -3985,9 +3993,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -5348,6 +5356,17 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: |
         Lava is hiding beneath some of these
         blocks, which you'll need to cover up before moving forward. An "if" command

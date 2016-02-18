@@ -20,6 +20,7 @@ module ScriptConstants
   ALGEBRA_NAME = 'algebra'
   FLAPPY_NAME = 'flappy'
   TWENTY_HOUR_NAME = '20-hour'
+  ACCELERATED_NAME = 'accelerated'
   COURSE1_NAME = 'course1'
   COURSE2_NAME = 'course2'
   COURSE3_NAME = 'course3'

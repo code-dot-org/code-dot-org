@@ -81,5 +81,6 @@
   "whileTooltip": "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด",
   "word": "ค้นหาคำ",
   "yes": "ใช่",
-  "youSpelled": "คุณถูกสะกด"
+  "youSpelled": "คุณถูกสะกด",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

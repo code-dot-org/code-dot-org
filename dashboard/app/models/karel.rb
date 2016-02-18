@@ -21,11 +21,8 @@
 #  index_levels_on_game_id  (game_id)
 #
 
-# Used by Bee to indicate a flower/honeycomb of capacity 0
-ZERO_DIRT_ITEM = 98
-
 class Karel < Maze
-  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation
+  serialized_attrs :nectar_goal, :honey_goal, :flower_type, :fast_get_nectar_animation, :serialized_maze
 
   # List of possible skins, the first is used as a default.
   def self.skins
@@ -37,6 +34,11 @@ class Karel < Maze
     ['redWithNectar', 'purpleNectarHidden']
   end
 
+  def self.load_maze(maze_file, size)
+    raw_maze = maze_file.read[0...size]
+    raw_maze.map {|row| row.map {|cell| JSON.parse(cell)}}
+  end
+
   # If type is "Karel" return a 3 entry hash with keys 'maze', 'initial_dirt',
   # and 'raw', the keys map to 2d arrays blockly can render.
   def self.parse_maze(maze_json)
@@ -44,81 +46,13 @@ class Karel < Maze
     maze = JSON.parse(maze_json)
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
-        # optional +/-
-        # followed by the number
-        # optionally followed by R or P to override default flower color
-        # optionally followed by:
-        #   FC to indicate an old-style "fixed" cloud or
-        #   C or Cany to indicate a new "dynamic" cloud
-        match = /^(\+|-)?(\d+)(R|P)?(FC|Cany|C)?$/.match(cell.to_s)
-        unless match
-          raise ArgumentError.new("Cell (#{x},#{y}) with content \"#{cell}\" is invalid")
+        unless cell.is_a?(Hash) && cell.has_key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
         end
       end
     end
 
-    # "Karel" covers both Bee and Farmer levels. As of Jan 2016, Bee has
-    # been converted to look only at RawDirt, but Farmer levels and
-    # shared code still use a combination of "Map" and "InitialDirt".
-    # Once all clientside logic has been converted to use just
-    # "RawDirt", this can be vastly simplified.
-    map, initial_dirt = (0...2).map { Array.new(maze.length) { Array.new(maze[0].length, 0) }}
-    maze.each_with_index do |row, x|
-      row.each_with_index do |cell, y|
-        # optional +/-
-        # followed by the number
-        # followed by optional R/P/FC, used to override default flower color
-        # followed by optional C/Cany, used to indicate new clouds
-        match = /(\+|-)?(\d+)(R|P|FC)?(Cany|C)?/.match(cell.to_s)
-
-        if match[4] # we're a 'new' level using the clouds
-          map[x][y] = 1
-          digits = (match[2] == '0' ? ZERO_DIRT_ITEM.to_s : match[2])
-          initial_dirt[x][y] = (match[1] || '' + digits).to_i
-        elsif match[1] # we have +/-
-          map[x][y] = match[3] || 1 # R/P/FC can be used to override flowertype
-
-          digits = (match[2] == '0' ? ZERO_DIRT_ITEM.to_s : match[2])
-
-          initial_dirt[x][y] = (match[1] + digits).to_i
-        else
-          map[x][y] = cell.to_i
-        end
-      end
-    end
-
-    { 'maze' => map.to_json, 'initial_dirt' => initial_dirt.to_json, 'raw_dirt' => maze_json }
-  end
-
-  # Bee now uses "RawDirt" rather than a combination of "map" and
-  # "initialDirt". However, older bee levels do not have "RawDirt" in
-  # the level properties, and will need to be updated. Until then,
-  # here's a temporary function to recombine "map" and "initial_dirt"
-  # into "raw_dirt"
-  def self.generate_raw_dirt(map, initial_dirt)
-    map = JSON.parse(map) if map.is_a?(String)
-    initial_dirt = JSON.parse(initial_dirt) if initial_dirt.is_a?(String)
-    raw_dirt = Array.new(map.size) { Array.new(map[0].size, 0) }
-    map.each_with_index do |row, x|
-      row.each_with_index do |map, y|
-        dirt = initial_dirt[x][y]
-        if map.to_s =~ /[1|R|P|FC]/ and dirt != 0
-          prefix = dirt > 0 ? '+' : '-'
-          digits = dirt.abs == ZERO_DIRT_ITEM ? '0' : dirt.abs.to_s
-          suffix = map == 1 ? '' : map.to_s
-
-          raw_dirt[x][y] = prefix + digits + suffix
-        else
-          raw_dirt[x][y] = map
-        end
-      end
-    end
-    raw_dirt
-  end
-
-  def self.unparse_maze(contents)
-    maze = contents['raw_dirt'] || self.generate_raw_dirt(contents['maze'], contents['initial_dirt'])
-    maze.is_a?(String) ? JSON.parse(maze) : maze
+    { 'serialized_maze' => maze_json }
   end
 
   def toolbox(type)

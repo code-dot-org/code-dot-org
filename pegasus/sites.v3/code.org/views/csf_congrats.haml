@@ -1,0 +1,50 @@
+%script{type: "text/javascript", src: "/js/csf-congrats.js"}
+%link{:href=>"/shared/css/course-blocks.css", :type=>"text/css", :rel=>"stylesheet"}
+
+- cert_script = ScriptConstants::COURSE1_NAME
+- share_url = "https://studio.code.org"
+
+- facebook = {:u=>share_url}
+- twitter = {:url=>share_url, :related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:"just_did_#{course}")}
+
+- rec_code_studio = {"course1" => "course2", "course2" => "course3", "course3" => "course4", "accelerated" => "course4"}
+- rec_third_party = {"course1" => "course1_next", "course2" => "course2_next", "course3" => "course3_next", "course4" => "course4_next", "accelerated" => "accelerated_next"}
+
+#congrats.mobile-pad{:style=>'margin: 0 auto;'}
+
+  %h1= I18n.t(:"congratulations_on_completing_#{course}")
+
+  #toprow
+    #hoc-certificate-small.col-50{:style=>"padding:20px; padding-top: 0; box-sizing: border-box"}
+      %a{:href=>"/printcertificate?s=#{cert_script}", :target=>'_blank'}
+        %img{:src=>"/images/fit-540/#{certificate_template_for(cert_script)}", :width=>"100%"}
+
+    #certificate.col-50
+      = view :csf_congrats_certificate, course: course
+      = view :congrats_share, facebook:facebook, twitter:twitter
+
+  %div{:style=>'clear: both; height:30px'}
+  %h1= I18n.t(:congrats_third_party_title)
+  = view :"#{rec_third_party[course]}"
+
+  - rec_code_studio.each do |current_course, next_course|
+    - if current_course.eql? course
+      %h1= I18n.t(:congrats_next_tutorials_title)
+      = view :course_block, id: next_course
+
+  %div{:style=>'clear: both; height:30px;'}
+  %h1= I18n.t(:congrats_guest_speaker_title)
+  #guest-spaker-img.col-50{:style=>'width: 430px;'}
+    %img{:src=>'/images/fill-400x205/guest-speaker-alice.jpg', :style=>'border-radius: 5px; margin-top: 5px;'}
+  #guest-speaker-desc.col-50
+    = I18n.t(:congrats_guest_speaker_desc)
+    %br
+    %br
+    %a{:href=>'/volunteer/local'}
+      %button= I18n.t(:congrats_guest_speaker_cta)
+
+  %div{:style=>'clear: both; height:30px;'}
+  %hr
+  = view :petition_expand 
+
+= view 'popup_window.js'

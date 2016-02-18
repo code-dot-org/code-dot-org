@@ -33,7 +33,8 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -221,28 +222,6 @@
                           <title name="VAR">???</title>
                         </block>
                       </value>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="draw_move" inline="true">
-              <title name="DIR">moveForward</title>
-              <value name="VALUE">
-                <block type="variables_get">
-                  <title name="VAR">???</title>
-                </block>
-              </value>
-              <next>
-                <block type="draw_move" inline="true">
-                  <title name="DIR">moveBackward</title>
-                  <value name="VALUE">
-                    <block type="variables_get">
-                      <title name="VAR">???</title>
                     </block>
                   </value>
                 </block>

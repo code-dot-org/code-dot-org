@@ -14,6 +14,7 @@
   "catProcedures": "Funkcije",
   "catText": "tekst",
   "catVariables": "Varijable",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Počni ispočetka",
   "clearPuzzleConfirm": "Ovo će vratiti zadatak na početno stanje i izbrisati sve blokove koje ste dodali ili promijenili.",
   "clearPuzzleConfirmHeader": "Jeste li sigurni da želite početi iznova?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Calls a named function that takes one or more parameters",
   "dropletBlock_callMyFunction_n_signatureOverride": "Call a function with parameters",
   "dropletBlock_callMyFunction_signatureOverride": "Call a function",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Stvori varijablu i inicijaliziraj ju kao polje",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +256,5 @@
   "watchVideo": "Pogledaj filmić",
   "when": "kada",
   "whenRun": "pri pokretanju",
-  "workspaceHeaderShort": "Radna površina: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Radna površina: "
 }

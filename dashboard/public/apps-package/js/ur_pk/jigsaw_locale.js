@@ -156,9 +156,9 @@ s:function(d,k,p){jigsaw_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 (window.blockly = window.blockly || {}).jigsaw_locale = {
 "continue":function(d){return "جاری رکھیے"},
 "nextLevel":function(d){return "Congratulations! You have completed this puzzle."},
-"no":function(d){return "No"},
+"no":function(d){return "نہيں"},
 "numBlocksNeeded":function(d){return "This puzzle can be solved with %1 blocks."},
 "reinfFeedbackMsg":function(d){return "You can press the \"Try Again\" button to go back to playing your game."},
 "share":function(d){return "دوسروں کو بتائیں"},
 "shareGame":function(d){return "Share your game:"},
-"yes":function(d){return "Yes"}};
+"yes":function(d){return "جی"}};

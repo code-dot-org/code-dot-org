@@ -5,11 +5,7 @@ var timing = require('./timing');
 var chrome34Fix = require('./chrome34Fix');
 var loadApp = require('./loadApp');
 var project = require('./project');
-
-function isMobile() {
-  var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
-  return reg.test(window.navigator.userAgent);
-}
+var userAgentParser = require('./userAgentParser');
 
 window.apps = {
   // Loads the dependencies for the current app based on values in `appOptions`.
@@ -37,7 +33,7 @@ window.apps = {
       position: {blockYCoordinateInterval: 25},
       onInitialize: function() {
         dashboard.createCallouts(this.level.callouts || this.callouts);
-        if (window.dashboard.isChrome34) {
+        if (userAgentParser.isChrome34()) {
           chrome34Fix.fixup();
         }
         if (appOptions.level.projectTemplateLevelName || appOptions.app === 'applab' || appOptions.app === 'gamelab') {
@@ -150,7 +146,7 @@ window.apps = {
     // Previously, this was set by dashboard based on route and user agent. We
     // stopped being able to use the user agent on the server, and thus try
     // to have the same logic on the client.
-    appOptions.noPadding = !appOptions.isLegacyShare && isMobile();
+    appOptions.noPadding = userAgentParser.isMobile();
   },
 
   // Set up projects, skipping blockly-specific steps. Designed for use

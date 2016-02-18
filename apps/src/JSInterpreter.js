@@ -1,7 +1,13 @@
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
+
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
-var _ = utils.getLodash();
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -43,6 +49,7 @@ var JSInterpreter = module.exports = function (options) {
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
   this.callExpressionSeenAtDepth = [];
+  this.stoppedAtBreakpointRows = [];
 };
 
 /**
@@ -143,7 +150,9 @@ JSInterpreter.prototype.parse = function (options) {
     // Return value will be stored as this.interpreter inside the supplied
     // initFunc() (other code in initFunc() depends on this.interpreter, so
     // we can't wait until the constructor returns)
+    /* jshint nonew:false */
     new window.Interpreter(options.code, initFunc);
+    /* jshint nonew:true */
   }
   catch(err) {
     this.handleError(err);
@@ -249,6 +258,82 @@ function safeStepInterpreter(jsi) {
 }
 
 /**
+ * Find a bpRow from the "stopped at breakpoint" array by matching the scope
+ *
+ * @param {!Object} scope to match from the list
+ * @param {number} [row] to match from the list - in addition to scope
+ */
+JSInterpreter.prototype.findStoppedAtBreakpointRow = function (scope, row) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+      if (typeof row === 'undefined' || row === bpRow.row) {
+        return bpRow;
+      }
+    }
+  }
+};
+
+/**
+ * Replace a bpRow from the "stopped at breakpoint" array by matching
+ * the scope.
+ *
+ * If no rows are found matching the given scope, a new one is introduced.
+ *
+ * @param {!Object} scope to match from the list
+ * @param {!number} row to replace in the list.
+ * @throws {TypeError} when given an invalid row.
+ */
+JSInterpreter.prototype.replaceStoppedAtBreakpointRowForScope = function (scope, row) {
+  if (typeof row !== 'number' || row < 0) {
+    throw new TypeError('Row ' + row + ' is not a valid row in user code.');
+  }
+
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+      // Update row number
+      bpRow.row = row;
+      return;
+    }
+  }
+  // Scope not found, insert new object in array:
+  this.stoppedAtBreakpointRows.unshift({
+    row: row,
+    scope: scope
+  });
+};
+
+/**
+ * Remove a bpRow from the "stopped at breakpoint" array by matching
+ * the scope.
+ *
+ * Does nothing if no rows are found matching the given scope.
+ *
+ * @param {!Object} scope to match from the list
+ */
+JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) {
+  for (var i = 0; i < this.stoppedAtBreakpointRows.length; i++) {
+    var bpRow = this.stoppedAtBreakpointRows[i];
+    if (bpRow.scope === scope) {
+        // Remove from array
+        this.stoppedAtBreakpointRows.splice(i, 1);
+        return;
+    }
+  }
+};
+
+/**
+ * Nodes that are visited between expressions, signifying the previous
+ * expression is done.
+ */
+var INTERSTITIAL_NODES = {
+  Program: true,
+  BlockStatement: true,
+  SwitchStatement: true
+};
+
+/**
  * Execute the interpreter
  */
 JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallbackReturn) {
@@ -312,17 +397,22 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     var selectCodeFunc = (this.studioApp.hideSource || (atMaxSpeed && !this.paused)) ?
             this.getUserCodeLine :
             this.selectCurrentCode;
+    var currentScope = this.interpreter.getScope();
 
     if ((reachedBreak && !unwindingAfterStep) ||
         (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
         this.yieldExecution ||
+        this.interpreter.paused_ ||
         (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
       // stop stepping the interpreter and wait until the next tick once we:
       // (1) reached a breakpoint and are done unwinding OR
       // (2) completed a line of user code and are are done unwinding
       //     (while not running atMaxSpeed) OR
-      // (3) have seen an empty event queue in nativeGetCallback (no events) OR
-      // (4) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
+      // (3) we've been asked to yield our executeInterpeter() loop OR
+      // (4) the interpreter is paused (handling a native async func that is
+      //     going to block to return a value synchronously in the interpreter) OR
+      // (5) have seen an empty event queue in nativeGetCallback (no events) OR
+      // (6) have seen a nativeSetCallbackRetVal call in runUntilCallbackReturn mode
       break;
     }
     userCodeRow = selectCodeFunc.call(this);
@@ -330,14 +420,15 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     // Check to see if we've arrived at a new breakpoint:
     //  (1) should be in user code
     //  (2) should never happen while unwinding
-    //  (3) requires either
+    //  (3) should never happen when revisiting an interstitial node
+    //  (4) requires either
     //   (a) atInitialBreakpoint OR
     //   (b) isAceBreakpointRow() AND not still at the same line number where
     //       we have already stopped from the last step/breakpoint
-    if (inUserCode && !unwindingAfterStep &&
+    if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
         (atInitialBreakpoint ||
-         (userCodeRow !== this.stoppedAtBreakpointRow &&
-          codegen.isAceBreakpointRow(session, userCodeRow)))) {
+         (codegen.isAceBreakpointRow(session, userCodeRow) &&
+          !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
       // Yes, arrived at a new breakpoint:
       if (this.paused) {
         // Overwrite the nextStep value. (If we hit a breakpoint during a step
@@ -348,8 +439,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         this.onPause.notifyObservers();
       }
       // Store some properties about where we stopped:
-      this.stoppedAtBreakpointRow = userCodeRow;
-      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
 
       // Mark reachedBreak to stop stepping, and start unwinding if needed:
       reachedBreak = true;
@@ -358,22 +448,21 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     }
     // If we've moved past the place of the last breakpoint hit without being
     // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-    if (inUserCode &&
-        userCodeRow !== this.stoppedAtBreakpointRow &&
-        this.interpreter.stateStack.length <= this.stoppedAtBreakpointStackDepth) {
-      delete this.stoppedAtBreakpointRow;
-      delete this.stoppedAtBreakpointStackDepth;
+    if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
+      this.removeStoppedAtBreakpointRowForScope(currentScope);
     }
     // If we're unwinding, continue to update the stoppedAtBreakpoint properties
     // to ensure that we have the right properties stored when the unwind completes:
     if (inUserCode && unwindingAfterStep) {
-      this.stoppedAtBreakpointRow = userCodeRow;
-      this.stoppedAtBreakpointStackDepth = this.interpreter.stateStack.length;
+      this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
     var err = safeStepInterpreter(this);
     if (!err) {
-      doneUserLine = doneUserLine ||
-        (inUserCode && this.interpreter.stateStack[0] && this.interpreter.stateStack[0].done);
+      var state = this.interpreter.stateStack[0], nodeType = state.node.type;
+      this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
+      if (inUserCode) {
+        doneUserLine = doneUserLine || (state.done || this.atInterstitialNode);
+      }
 
       var stackDepth = this.interpreter.stateStack.length;
       // Remember the stack depths of call expressions (so we can implement 'step out')
@@ -398,12 +487,6 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
             this.firstCallStackDepthThisStep = stackDepth;
           }
         }
-        // If we've arrived at a BlockStatement or SwitchStatement, set doneUserLine even
-        // though the the stateStack doesn't have "done" set, so that stepping in the
-        // debugger makes sense (otherwise we'll skip over the beginning of these nodes):
-        var nodeType = this.interpreter.stateStack[0].node.type;
-        doneUserLine = doneUserLine ||
-          (inUserCode && (nodeType === "BlockStatement" || nodeType === "SwitchStatement"));
 
         // For the step in case, we want to stop the interpreter as soon as we enter the callee:
         if (!doneUserLine &&
@@ -445,8 +528,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
             this.onNextStepChanged.notifyObservers();
             if (inUserCode) {
               // Store some properties about where we stopped:
-              this.stoppedAtBreakpointRow = userCodeRow;
-              this.stoppedAtBreakpointStackDepth = stackDepth;
+              this.replaceStoppedAtBreakpointRowForScope(this.interpreter.getScope(), userCodeRow);
             }
             delete this.stepOutToStackDepth;
             delete this.firstCallStackDepthThisStep;
@@ -596,7 +678,6 @@ JSInterpreter.prototype.getUserCodeLine = function () {
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
-    var end = node.end - this.codeInfo.userCodeStartOffset;
 
     // Only return a valid userCodeRow if the node being executed is inside the
     // user's code (not inside code we inserted before or after their code that
@@ -625,7 +706,6 @@ JSInterpreter.prototype.getNearestUserCodeLine = function () {
     // Adjust start/end by userCodeStartOffset since the code running
     // has been expanded vs. what the user sees in the editor window:
     var start = node.start - this.codeInfo.userCodeStartOffset;
-    var end = node.end - this.codeInfo.userCodeStartOffset;
 
     // Only return a valid userCodeRow if the node being executed is inside the
     // user's code (not inside code we inserted before or after their code that

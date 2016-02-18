@@ -387,9 +387,9 @@ sl:
         Unplug9: Relay programming
         Unplug10: Internet
         Unplug11: Povzetek
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Veseli zemljevidi
         C1_moveitmoveit_unplugged: Premakni se, premakni
-        C1_bigevent_unplugged: The Big Event
+        C1_bigevent_unplugged: Veliki dogodek
         C1_getting_loopy: Getting Loopy
         C1_pair_programming: Programiranje parov
         C1_maze_intro_sequencing: Uvod v reševanje labirinta
@@ -402,8 +402,8 @@ sl:
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: 'Play Lab: ustvari zgodbo'
         C1_planting_seed: Posadi seme
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_building_foundation: Graditi temelje
+        C1_going_places_safely: Kako varno potovati
         C2_maze_intro: 'Labirint: uvod'
         C2_artist_intro: 'Umetnik: uvod'
         C2_zuck_repeat_loop: Maze Loops
@@ -469,6 +469,7 @@ sl:
         infinity_playlab_repeat_forever: 'Play Lab - Repeat Forever'
         csp_applab_databases_1: 'Introduction to Databases - Part 1'
         csp_applab_databases_2: 'Introduction to Databases - Part 2'
+        csp_applab_processing_lists: Processing Lists with Loops
         csp_applab_lists_1: 'Introduction to Lists - Part 1'
         csp_applab_lists_2: 'Introduction to Lists - Part 2'
         csp_applab_lists_3: 'Introduction to Lists - Part 3'

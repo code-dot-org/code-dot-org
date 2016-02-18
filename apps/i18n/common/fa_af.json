@@ -14,6 +14,7 @@
   "catProcedures": "توابع",
   "catText": "متن",
   "catVariables": "متغیرها",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "دوباره شروع کنید",
   "clearPuzzleConfirm": "این کار معما را به حالت ابتدایی تنظیم خواهد کرد و تمام بلوک هایی که شما اضافه کردید یا تغییر داده اید را حذف خواهد کرد.",
   "clearPuzzleConfirmHeader": "آیا مطمئنی که می خواهی دوباره شروع کنی؟",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "تابعی را صدا میزند که یک یا چند پارامتر دریافت می کند",
   "dropletBlock_callMyFunction_n_signatureOverride": "تابعی را صدا بزن که پارامتر دریافت می کند",
   "dropletBlock_callMyFunction_signatureOverride": "صدا زدن یک تابع",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "طول (x)",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +256,5 @@
   "watchVideo": "ویدیو را ببینید",
   "when": "وقتی",
   "whenRun": "زمان اجرا",
-  "workspaceHeaderShort": "محیط کار: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "محیط کار: "
 }

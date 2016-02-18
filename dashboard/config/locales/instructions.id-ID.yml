@@ -487,109 +487,96 @@
       4-5 Artist For Loops 6_instruction: Gambarlah kotak dengan sisi 50, 60, 70,
         80, dan 90 pixel.  Anda akan perlu menggunakan fungsi "gambar persegi" sebanyak
         lima kali.
-      4-5 Artist For Loops 7_instruction: |
-        Draw the same squares but use a "count
-        with" block to change the sizes. Place the "counter" block in the "draw
-        a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
-      4-5 Artist For Loops 9_instruction: |
-        These circles are size 5, 10, 15, 20,
-        25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
-      4-5 Artist Functions 10a_instruction: |
-        Put this code into the 'draw a snowflake'
-        function and replace the 50 with the parameter 'size'. The function is already
-        called on to make a snowflake that is 100 pixels.
-      4-5 Artist Functions 10b_instruction: |
-        Use the 'draw a snowflake' function
-        to create different size flakes.  Hint: the first snowflake is 25 in length
-        and each snowflake is twice the size of the one before.
-      4-5 Artist Functions 11_instruction: |
-        This "draw a hexagon" function uses
-        the "draw a triangle" function. Complete the hexagon function. (Hint: A
-        hexagon has 6 sides, each 100 pixels long)
-      4-5 Artist Functions 12_instruction: |
-        Complete the 'draw waves' function.  Each
-        wave is made up of one Upper wave and one Lower wave.   Hint: Draw 5 blue
-        waves.
-      4-5 Artist Functions 13 Free play_instruction: |
-        Here are some functions to
-        draw planets, stars, rockets, and robots. Use them any way you like to make
-        pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
-      4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
-        and \"draw a large triangle\". The \"draw a small triangle\" function\nis
-        done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
-        150 (large). \n"
-      4-5 Artist Functions 4_instruction: |
-        This new "draw a triangle" function
-        has a parameter and can do the work of all three functions before. Draw the
-        same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
-      4-5 Artist Functions 6_instruction: |
-        Use the "draw a square" and "draw a
-        triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
-      4-5 Artist Functions 6b_instruction: |
-        Use the draw a square and triangle functions
-        along with other blocks to create a house by adding them to the 'draw a house"
-        function and calling it.
-      4-5 Artist Functions 7_instruction: |
-        Use the "draw a house" function to draw
-        houses that are 100 pixels and 50 pixels. The two houses are separated by
-        50 pixels.
-      4-5 Artist Functions 8_instruction: |
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
-      4-5 Artist Functions 9_instruction: |
-        Draw these 3 flowers. The first one's
-        height is 100 and the next flower is always 50 pixels more than the height
-        of the previous one. The flowers are also 100 pixels apart.
-      4-5 Artist Patterns 1_instruction: |
-        Can you draw this square using a loop?
-        Each side is 20 pixels long.
-      4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. Hint: You'll need
-        to jump back 120 pixels in your outermost loop to make sure the artist doesn't
-        draw off the screen.
-      4-5 Artist Patterns 11_instruction: |
-        How many times do you need to loop this
-        to draw a half circle? Hint: if there's 360 degrees in a circle and each
-        loop moves 3 degrees, how many times would you need to loop draw a full circle?
-      4-5 Artist Patterns 12_instruction: |
-        If you copy that loop and turn left instead
-        of right, what happens? Can you repeat that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! If looping a 3 degree turn 60 times makes a half circle,
-        which of these blocks of code will make a quarter circle for the corners?
-      4-5 Artist Patterns 2_instruction: |
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add to your outer loop
-        to make sure all 15 squares line up next to each other?
+      4-5 Artist For Loops 7_instruction: 'Gambar kotak yang sama tetapi gunakan sebuah
+        blok "hitung dengan" untuk mengubah ukurannya. Letakkan blok "balas" di dalam
+        fungsi "gambar sebuah kotak". Petunjuk: Bloknya ada di dalam kategori Variabel.'
+      4-5 Artist For Loops 8_instruction: Dapatkah kamu menyelesaikan programnya dengan
+        meletakkan blok-blok tersebut di dalam sebuah blok "untuk" yang menghitung
+        dari 10 sampai 200 setiap 10? Kamu bisa menemukan blok "untuk"-nya di dalam
+        kategori Loops.
+      4-5 Artist For Loops 9_instruction: Lingkaran-lingkaran ini adalah ukuran 5,
+        10, 15, 20, 25, 30, dan 35. Gambar lingkaran-lingkaran tersebut dengan sebuah
+        blok "untuk".
+      4-5 Artist Free Draw 1_instruction: Bebas Menggambar! Gambar apapun yang menginspirasi
+        kamu untuk berkarya.
+      4-5 Artist Functions 1_instruction: Gunakan sebuah putaran berulang untuk menggambar
+        segitiga ini.
+      4-5 Artist Functions 10a_instruction: Letakkan kode ini ke dalam fungsi 'gambarlah
+        sebuah bunga salju' dan gantikan 50-nya dengan parameter 'ukuran'. Fungsi
+        ini sudah dipanggil untuk membuat sebuah bunga salju yang berukuran 100 pixel.
+      4-5 Artist Functions 10b_instruction: 'Gunakan fungsi '' gambar sebuah bunga
+        salju'' untuk membuat bunga salju dengan ukuran berbeda. Petunjuk: bunga salju
+        pertama memiliki panjang 25 dan setiap bunga salju berukuran dua kali lebih
+        besar dari ukuran bunga salju sebelumnya.'
+      4-5 Artist Functions 11_instruction: 'Fungsi "gambar sebuah heksagon" ini mengunakan
+        fungsi "gambar sebuah segitiga". Lengkapi fungsi heksagon tersebut. (Petunjuk:
+        Sebuah heksagon memiliki 6 sisi, dengan panjang masing-masing sisi 100 pixel)'
+      4-5 Artist Functions 12_instruction: 'Lengkapi fungsi ''gambar gelombang''-nya.
+        Setiap gelombang dibuat dari satu gelombang Lebih Atas dan satu gelombang
+        Lebih Bawah. Petunjuk: Gambar 5 gelombang biru.'
+      4-5 Artist Functions 13 Free play_instruction: Berikut ini adalah beberapa fungsi
+        untuk menggambar planet, bintang, roket, dan robot, Gunakan mereka sesuai
+        dengan yang kamu inginkan untuk membuat gambar-gambar yang kamu bisa bagikan
+        dengan teman-temanmu.
+      4-5 Artist Functions 14 Free play_instruction: Berikutnya, kami sudah menyediakan
+        kamu dengan beberapa fungsi. Gunakan mereka sesuai dengan yang kamu inginkan
+        di dalam satu atau lebih putaran untuk membuat gambar-gambar yang bisa kamu
+        bagikan dengan teman-temanmu. Klik 'Jalankan' untuk melihat sebuah contoh.
+      4-5 Artist Functions 15 Assessment_instruction: 'Tugas: Gambar fungsi "gambar
+        sebuah kotak" untuk membuat kotak-kotak. Kotak-kotaknya berukuran 50, 100,
+        dan 150 pixel.'
+      4-5 Artist Functions 2a_instruction: Sekarang letakkan blok-blok ini ke dalam
+        sebuah fungsi baru yang bernama "gambar sebuah segitiga kecil" dan panggillah
+        fungsi itu.
+      4-5 Artist Functions 2b_instruction: Sekarang buatlah sebuah fungsi bernama
+        "gambar sebuah segitiga kecil" menggunakan blok-blok yang sudah disediakan.
+      4-5 Artist Functions 3_instruction: 'Sekarang buatlah fungsi "gambar sebuah
+        segitiga sedang" dan "gambar sebuah segitiga besar". Fungsi "gambar sebuah
+        segitiga kecil" sudah selesai untuk kamu. Segitiga-segitiga tersebut memiliki
+        panjang sisi 50 (kecil), 100 (sedang), dan 150 (besar). '
+      4-5 Artist Functions 4_instruction: Fungsi baru "gambar sebuah segitiga" ini
+        memiliki sebuah parameter dan bisa melakukan pekerjaan tiga fungsi sebelumnya.
+        Gambarlah segitiga-segitiga yang sama dengan menggunakan fungsi baru ini.
+      4-5 Artist Functions 5_instruction: Dapatkah kamu memodifikasi fungsi "gambar
+        sebuah segitiga" menjadi fungsi "gambar sebuah kotak" untuk mengubah gambarnya?
+      4-5 Artist Functions 6_instruction: 'Gunakan fungsi "gambar sebuah kotak" dan
+        "gambar sebuah segitiga" untuk menggambar sebuah rumah. (Petunjuk: Sisi-sisi
+        kotak tersebut adalah 200 pixel)'
+      4-5 Artist Functions 6b_instruction: Gunakanlah fungsi-fungsi gambar sebuah
+        kotak dan segitiga bersama blok-blok lainnya untuk membuat sebuah rumah dengan
+        menambahkan mereka ke fungsi "gambar sebuah rumah" dan memanggilnya.
+      4-5 Artist Functions 7_instruction: Gunakanlah fungsi "gambar sebuah rumah"
+        untuk menggambar rumah-rumah yang memiliki ukuran 100 pixel dan 50 pixel.
+        Kedua rumah tersebut terpisah dengan jarak 50 pixel.
+      4-5 Artist Functions 8_instruction: Fungsi "gambar sebuah bunga" memiliki sebuah
+        parameter yang mengizinkan kamu untuk menetapkan tinggi stem. Tetapkan tingginya
+        di 200 dan lihat apa yang terjadi.
+      4-5 Artist Functions 9_instruction: Gambar 3 bunga ini. Tinggi bunga yang pertama
+        adalah 100 dan tinggi bunga-bunga berikutnya 50 pixel lebih tinggi dari bunga
+        sebelumnya. Bunga-bunga tersebut juga terpisah 100 pixel.
+      4-5 Artist Patterns 1_instruction: Dapatkah kamu menggambar kotak ini menggunakan
+        sebuah putaran? Setiap sisi memiliki panjang 20 pixel.
+      4-5 Artist Patterns 10_instruction: 'Kode ini menggambar dua baris heksagon
+        - putar semuanya sebanyak 4 kali untuk menggambar sebuah sarang madu utuh,
+        Petunjuk: Kamu harus kembali 120 pixel ke belakang ke putaranmu yang terluar
+        untuk memastikan senimannya tidak menggambar keluar layar.'
+      4-5 Artist Patterns 11_instruction: 'Berapa kali putaran yang kamu butuhkan
+        untuk memutar ini untuk menggambar sebuah setengah lingkaran? Petunjuk: jika
+        sebuah lingkaran memiliki 360 derajat dan setiap putaran bergerak sebanyak
+        3 derajat, berapa kali putaran yang kamu butuhkan agar putaran dapat menggambar
+        sebuah lingkaran penuh?'
+      4-5 Artist Patterns 12_instruction: Jika kamu menyalin putaran itu dan berbelok
+        ke kiri daripada ke kanan, apa yang terjadi? Dapatkah kamu mengulangnya untuk
+        menggambar gelombang ini?
+      4-5 Artist Patterns 13_instruction: Sekarang mari kita putar semuanya empat
+        kali untuk membuat bingkai gambar ini. Perhatikan ujung-ujungnya - kamu tidak
+        bisa hanya membelokkannya 90 derajat! Jika memutar sebuah 3 derajat sebanyak
+        60 kali membuat sebuah setengah lingkaran, kode blok manakah yang akan membuat
+        sebuah seperempat lingkaran untuk membuat ujung-ujung tersebut?
+      4-5 Artist Patterns 2_instruction: Jika kamu meletakkan putaran kotakmu di dalam
+        putaran lainnya, maka putaran tersebut dipanggil putaran bersarang. Apa yang
+        kamu butuhkan untuk menambah putaran terluarmu untuk memastikan semua 15 kotak
+        berbaris di samping setiap kotak?
       4-5 Artist Patterns 3_instruction: Sekarang mari kita pergi satu tingkat lebih
         dalam! Kita sudah memasangkan seluruh blok kode tersebut ke dalam perulangan
         lain, tetapi kami perlu membawa si seniman kembali ke tempat asal untuk menggambar
@@ -619,10 +606,10 @@
         80 piksel.
       4-5 Artist Patterns Free Play_instruction: Permainan bebas - Cobalah membuat
         pola milikmu sendiri!
-      4-5 Bee Conditionals - FC Test_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      4-5 Bee Conditionals - FC Test_instruction: Lebah tersebut hanya menginginkan
+        nektarnya sekarang. Tidak semua objek adalah bunga, jadi cek di bawah setiap
+        awan untuk melihat apakah awan tersebut menyembunyikan sebuah bunga. Jika
+        iya, maka kamu kumpulkan nektarnya.
       4-5 Bee Conditionals 1 (copy 1)_instruction: |
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
@@ -674,17 +661,17 @@
         kamu memperbaikinya?
       4-5 Bee Debugging 10_instruction: Temukan yang salah dan perbaiki.
       4-5 Bee Debugging 11_instruction: Apakah ini berhitung dengan benar?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
+      4-5 Bee Debugging 2_instruction: Bantulah lebah tersebut untuk mendapatkan nektarnya
+        dan membuat madu.
       4-5 Bee Debugging 3_instruction: Temukan yang salah dan perbaiki.
-      4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
+      4-5 Bee Debugging 4_instruction: Blok-blok ini tidak bekerja. Apakah polanya?
       4-5 Bee Debugging 5_instruction: Ada yang tidak beres disini...
-      4-5 Bee Debugging 6_instruction: |
-        The purple flower has an unknown amount of
-        nectar. Fix the blocks to get all of the nectar from the flower.
+      4-5 Bee Debugging 6_instruction: Bunga ungu tersebut memiliki jumlah nektar
+        yang tidak diketahui. Perbaiki blok tersebut untuk mendapatkan semua nektar
+        dari bunga tersebut.
       4-5 Bee Debugging 7_instruction: Fungsi ini kehilangan sesuatu...
-      4-5 Bee Debugging 8_instruction: |
-        This function is fine, but it isn't used
-        properly.
+      4-5 Bee Debugging 8_instruction: Fungsi ini benar, tetapi fungsi tersebut tidak
+        digunakan dengan sepantasnya.
       4-5 Bee Debugging 9_instruction: Mengapa lebah nya tidak menghasilkan madu yang
         cukup?
       4-5 Bee Debugging Assessment 1_instruction: 'Evaluasi: Perbaiki kode.'
@@ -692,21 +679,19 @@
         nektar.
       4-5 Bee Nested Loops 2_instruction: "Kumpulkan semua nektar nya dari setiap
         bunga.\nGunakan loop bersarang. \n"
-      4-5 Bee Nested Loops 3_instruction: |
-        Collect all of the nectar by putting the
-        starter code into a nested loop.
-      4-5 Bee Nested Loops 4_instruction: "Collect all of the nectar from each flower\nand
-        make honey at each honeycomb. Use a nested loop. \n"
-      4-5 Bee Nested Loops 5_instruction: |
-        Collect all of the nectar by creating
-        a nested loop.
+      4-5 Bee Nested Loops 3_instruction: Kumpulkan semua nektar dengan meletakkan
+        kode pemulai ke dalam sebuah putaran bersarang.
+      4-5 Bee Nested Loops 4_instruction: 'Kumpulkan semua nektar dari setiap bunga
+        dan buatlah madu pada setiap sarang madu. Gunakan putaran bersarang. '
+      4-5 Bee Nested Loops 5_instruction: Kumpulkan semua nektar dengan membuat sebuah
+        putaran bersarang.
       4-5 Bee Nested Loops 6_instruction: Kumpulkan semua nektarnya.
-      4-5 Bee Nested Loops 7_instruction: |
-        Put this loop inside another loop to create
-        a nested loop and collect all of the nectar from the flowers.
-      4-5 Bee Nested Loops 8_instruction: "Collect all of the nectar from these flowers\nby
-        nesting a while loop. Replace the inner repeat times block with a while\nblock.
-        \n"
+      4-5 Bee Nested Loops 7_instruction: Letakkan putaran ini di dalam putaran lainnya
+        untuk membuat sebuah putaran bersarang dan kumpulkan semua nektar dari bunga-bunga
+        tersebut.
+      4-5 Bee Nested Loops 8_instruction: 'Kumpulkan semua nektar dari bunga-bunga
+        ini dengan menyarangkan sebuah while loop. Gantikan pengulangan dalam blok
+        dengan sebuah block selagi. '
       4-5 Bee Nested Loops 9_instruction: |
         Collect all of the nectar from these flowers
         by nesting a while loop inside a repeat.
@@ -2196,7 +2181,9 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -3402,10 +3389,15 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
-      Ryan - 4-5 Bee Conditionals 2_instruction: |
-        The bee only wants nectar right
-        now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
-        it is hiding a flower. If it is, then you can gather nectar.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
+      Ryan - 4-5 Bee Conditionals 2_instruction: Lebah tersebut hanya menginginkan
+        nektarnya sekarang. Tidak semua objek adalah bunga, jadi cek di bawah setiap
+        awan untuk melihat apakah awan tersebut menyembunyikan sebuah bunga. Jika
+        iya, maka kamu kumpulkan nektarnya.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
         Not all objects are flowers, so check underneath EVERY CLOUD to see if it
@@ -3893,9 +3885,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -5256,6 +5248,17 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: Lava bersembunyi di bawah beberapa balok
         ini yang harus kamu tutup sebelum bergerak maju. Perintah "jika" akan berguna
         di sini. Tambahkan perintah "bergerak maju" di tempat yang tepat untuk menambang

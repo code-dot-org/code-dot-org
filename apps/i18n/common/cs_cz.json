@@ -14,6 +14,7 @@
   "catProcedures": "Funkce",
   "catText": "text",
   "catVariables": "Proměnné",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Začít znovu",
   "clearPuzzleConfirm": "Toto obnoví hádanku do jejího původního stavu a odstraní všechny bloky, které jste přidali nebo změnili.",
   "clearPuzzleConfirmHeader": "Jste si jisti, že chcete začít znovu?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Volá pojmenovanou funkci, která potřebuje jeden či více parametrů",
   "dropletBlock_callMyFunction_n_signatureOverride": "Volá funkci s parametry",
   "dropletBlock_callMyFunction_signatureOverride": "Volat funkci",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +256,5 @@
   "watchVideo": "Shlédnout Video",
   "when": "když",
   "whenRun": "po spuštění",
-  "workspaceHeaderShort": "Pracovní prostor: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Pracovní prostor: "
 }

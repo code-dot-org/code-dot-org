@@ -69,16 +69,121 @@
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
-  course_name_accelerated: "上級コース"
-  course_name_course1: "コース1"
-  course_name_course2: "コース2"
-  course_name_course3: "コース3"
-  course_name_course4: "コース4"
-  congratulations_on_completing_course: Congratulations on completing %{course}
-  congrats_next_tutorials_title: Try these tutorials next
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
+    Course
+  congrats_next_tutorials_title: Try these courses next
   congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
     tutorial</a>.
   get_a_certificate_of_achievement: "達成の証明書を取得する"
+  view_course: View course
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science
+    course, consider celebrating and connecting it to things they can build in the
+    real world by inviting a guest speaker to your classroom. You can use our map
+    of volunteers to contact local volunteers to visit your classroom, or search in
+    any city to find computer science students or technical professionals who are
+    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_course1: Third party tutorials for pre-readers
+  congrats_third_party_course2: Third party tutorials
+  congrats_third_party_course3: Third party tutorials
+  congrats_third_party_course4: Third party tutorials
+  congrats_third_party_accelerated: Third party tutorials
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_tynker_desc: Tynker's creative computing platform helps children develop
+    computational thinking and programming skills in a fun, intuitive and imaginative
+    way. Our innovative visual programming language, interactive self-paced courses,
+    and game-based programming activities provide an easy introduction to programming,
+    and empower children to innovate and create.
+  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
+    that enables young children (ages 5-7) to create their own interactive stories
+    and games. Children snap together graphical programming blocks to make characters
+    move, jump, dance, and sing. Children can modify characters in the paint editor,
+    add their own voices and sounds, even insert photos of themselves - then use the
+    programming blocks to make their characters come to life.
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
+    games, and animations and share your creations with others in the online community.
+    Scratch helps young people learn to think creatively, reason systematically, and
+    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
+    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
+    or on Android or iOS devices. Students play the initial set of “Basic” levels
+    in Lightbot. They will learn how to tell a computer what to do with a series of
+    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: Learn how to program drawings, animations, and games using
+    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
+    can share whatever you create, explore what others have created and learn from
+    each other!
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
+    allows everyone, even novices, to start programming and build fully functional
+    apps for Android devices. Newcomers to App Inventor can have their first app up
+    and running in an hour or less, and can program more complex apps in significantly
+    less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
+    short videos, example code, and lots of programming exercises that make coding
+    fun and accessible for beginners. With CodeHS, you can get the help that every
+    new programmer needs to work through problems and keep learning. Our tutors are
+    everywhere!
+  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codecademy_desc: We are rethinking education from the bottom up. The
+    web has rethought nearly everything - commerce, social networking, healthcare,
+    and more. We are building the education the world needs - the first truly net
+    native education.
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: "カリキュラム"
+  third_party_pricing: Pricing
+  third_party_cost_free: Free
+  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_299: "$2.99/download"
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
+    K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
+    K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: "正しい年齢を選択してください。"
   enter_valid_email: "有効なEメール アドレスを入力してください"
   get_a_certificate_message: "証明書および<a href='/learn/beyond'>1 時間を超えて学ぶ</a>についてのやり方についての情報を送ります"
@@ -128,6 +233,11 @@
   learn_classes: "近くのクラスを見つける"
   hoc_is_here: "#HourOfCode はここです - 見つける @codeorg"
   just_did_hoc: "私は #HourOfCode に挑戦しました。あなたもやってみて！ @codeorg"
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: "なぜもっと多くの学校がコンピューターサイエンスを教えないのでしょうか？この問題を解決することができます。http://youtu.be/nKIu9yen5nc。詳細については
     http://code.org/を参照してください。"
   learn_hoc: Hour of Codeを学ぶ
@@ -598,11 +708,11 @@
   dashboard_faq_k5: "よくある質問（幼稚園/小学生対象コース）"
   dashboard_announcements: Announcements
   dashboard_announce_view_all: View all
-  dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: "もっと詳しく知る"
   dashboard_announce_hoc: "<B> 2015年11月23日</ B> -あなたが情熱を持っボランティアたいコンピュータ科学教育が中を助けるためにあなたの
     コードの時間イベント7,000以上のボランティアが鼓舞しようとしているあなたの 学生を訪問し、あなたの 教室 や遠隔ビデオチャットを。でボランティアに連絡するボランティアのマップをチェックしてくださいあなたの地域。"
@@ -727,6 +837,11 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
+  course1_name: "コース1"
+  course2_name: "コース2"
+  course3_name: "コース3"
+  course4_name: "コース4"
+  accelerated_name: "上級コース"
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才
   thinkersmithspanish_gradelevel: Por todos
@@ -777,6 +892,11 @@
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
+  course1_gradelevel: 4-6 歳対象
+  course2_gradelevel: 6-18 才
+  course3_gradelevel: 8-18 才
+  course4_gradelevel: 10-18 才
+  accelerated_gradelevel: 10-18 才
   codeorg_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   codeintl_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   thinkersmithspanish_platformtext: "アンプラグド（コンピュータを使わず学ぶ方法）"
@@ -885,6 +1005,18 @@
     calculator.
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with
     these lesson plans.
+  course2_shortdescription_congrats: For students with basic reading skills, this
+    course builds on Course 1. Students will create programs to solve problems and
+    develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve
+    deeper into programming topics introduced in previous courses to find flexible
+    solutions to more complex problems. By the end of this course, students create
+    interactive stories and games they can share with anyone. Recommended for grades
+    4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
+    into programming topics introduced in previous courses to find flexible solutions
+    to more complex problems. By the end of this course, students create interactive
+    stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   codeintl_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   thinkersmithspanish_longdescription: '"ロボット語"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。'
@@ -1185,3 +1317,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

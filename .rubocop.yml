@@ -7,8 +7,9 @@ AllCops:
     - 'apps/**/*'
     - 'dashboard/scripts/**/*'
     - 'dashboard/db/**/*'
-  RunRailsCops: true
+    - 'dashboard/db/*'
   DisplayCopNames: true
+  TargetRubyVersion: 2.2
 
 # Listed are rules we don't plan to enable in the foreseeable future.
 # Add rules we plan to fix (but are currently failing) to .rubocop_todo.yml.

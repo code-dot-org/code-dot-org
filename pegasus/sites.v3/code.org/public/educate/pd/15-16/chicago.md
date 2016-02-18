@@ -21,12 +21,7 @@ Milestone Complete!
 
 ### Phase 2: Blended Summer Study (5 days in-person & ~8 hours online)  ###
 
-
-
 Milestone Complete!
-
-
-
 
 ### Phase 3: Academic Year Development (4 Saturdays in-person & ~12 hours online) ###
 
@@ -85,7 +80,7 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More details coming soon!
+Teachers from Chicago will be attending the East Coast CSP Phase 4 Workshop. Please visit [this page](/educate/pd/15-16/csp-east) for your workshop details.
 
 
 [**Back to the top**](#top)

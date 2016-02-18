@@ -14,6 +14,7 @@
   "catProcedures": "Fonksiyonlar",
   "catText": "yazı",
   "catVariables": "Değişkenler",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Baştan Başla",
   "clearPuzzleConfirm": "Bu, bulmacayı başlangıç durumuna sıfırlayacak ve eklediğiniz veya değiştirdiğiniz tüm blokları silecek.",
   "clearPuzzleConfirmHeader": "Baştan başlamak istediğinizden emin misiniz?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Bir yada daha fazla parametre alan isim verilmiş fonksiyonu çağırır",
   "dropletBlock_callMyFunction_n_signatureOverride": "Parametreler ile bir fonksiyon çağır",
   "dropletBlock_callMyFunction_signatureOverride": "Bir fonksiyon çağırır",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -134,7 +137,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "OR boolean operator",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "dropletBlock_randomNumber_description": "Belirli bir sayı aralığından rastgele bir sayı seçer ve bu sayıyı döner.",
   "dropletBlock_randomNumber_param0": "min",
   "dropletBlock_randomNumber_param0_description": "Minimum sayı döndü",
   "dropletBlock_randomNumber_param1": "maks",
@@ -203,7 +206,7 @@
   "print": "Yazdır",
   "puzzleTitle": "Bulmaca {puzzle_number} / {stage_total}",
   "readonlyWorkspaceHeader": "Yalnızca görüntüleme: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "Bulmacayı çözmek için bunun gibi bir blok kullanmayı deneyin.",
   "repeat": "bu işlemleri",
   "resetProgram": "Yeniden başla",
   "rotateText": "Cihazınızı döndürün.",
@@ -253,7 +256,5 @@
   "watchVideo": "Videoyu İzle",
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
-  "workspaceHeaderShort": "Çalışma alanı: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Çalışma alanı: "
 }

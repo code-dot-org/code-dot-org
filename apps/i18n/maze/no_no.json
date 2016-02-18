@@ -81,5 +81,6 @@
   "whileTooltip": "Gjenta disse handlingene inntil målet er nådd.",
   "word": "Finn ordet",
   "yes": "Ja",
-  "youSpelled": "Du stavet"
+  "youSpelled": "Du stavet",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

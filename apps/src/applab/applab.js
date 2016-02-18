@@ -38,9 +38,6 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
-var assetsApi = require('../clientApi').assets;
-var assetListStore = require('./assetManagement/assetListStore');
-var showAssetManager = require('./assetManagement/show.js');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
@@ -63,7 +60,7 @@ var jsInterpreterLogger = null;
 /**
  * @type {JsDebuggerUi} Controller for JS debug buttons and console area
  */
-var jsDebuggerUi = null;
+var debuggerUi = null;
 
 /**
  * Temporary: Some code depends on global access to logging, but only Applab
@@ -77,8 +74,8 @@ Applab.log = function (object) {
     jsInterpreterLogger.log(object);
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.log(object);
+  if (debuggerUi) {
+    debuggerUi.log(object);
   }
 };
 
@@ -383,7 +380,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  window.dashboard.footer.render(React, {
+  React.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
@@ -398,7 +395,7 @@ function renderFooterInSharedGame() {
     },
     className: 'dark',
     menuItems: menuItems
-  }, footerDiv);
+  }), footerDiv);
 }
 
 /**
@@ -416,17 +413,17 @@ Applab.hasDataStoreAPIs = function (code) {
  * @param {!number} speed - range 0..1
  */
 Applab.setStepSpeed = function (speed) {
-  if (jsDebuggerUi) {
-    jsDebuggerUi.setStepSpeed(speed);
+  if (debuggerUi) {
+    debuggerUi.setStepSpeed(speed);
   }
   Applab.scale.stepSpeed = JsDebuggerUi.stepDelayFromStepSpeed(speed);
 };
 
 function getCurrentTickLength() {
   var debugStepDelay;
-  if (jsDebuggerUi) {
+  if (debuggerUi) {
     // debugStepDelay will be undefined if no speed slider is present
-    debugStepDelay = jsDebuggerUi.getStepDelay();
+    debugStepDelay = debuggerUi.getStepDelay();
   }
   return debugStepDelay !== undefined ? debugStepDelay : Applab.scale.stepSpeed;
 }
@@ -580,7 +577,7 @@ Applab.init = function(config) {
   // Gross, but necessary for tests, until we can instantiate AppLab and make
   // this a member variable: Reset this thing until we're ready to create it!
   jsInterpreterLogger = null;
-  jsDebuggerUi = null;
+  debuggerUi = null;
 
   // replace studioApp methods with our own
   studioApp.reset = this.reset.bind(this);
@@ -589,16 +586,8 @@ Applab.init = function(config) {
   Applab.channelId = config.channel;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
-  if (config.assetPathPrefix) {
-    Applab.assetPathPrefix = config.assetPathPrefix;
-  }
 
-  // Pre-populate asset list
-  assetsApi.ajax('GET', '', function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-  }, function () {
-    // Unable to load asset list
-  });
+  config.usesAssets = true;
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -642,7 +631,7 @@ Applab.init = function(config) {
     submitButton: level.submittable && !level.submitted,
     unsubmitButton: level.submittable && level.submitted
   });
-  var extraControlsRow = '';
+  var extraControlRows = '';
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -650,9 +639,11 @@ Applab.init = function(config) {
   }
 
   if (showDebugButtons || showDebugConsole) {
-    jsDebuggerUi = new JsDebuggerUi(Applab.runButtonClick);
-    extraControlsRow = jsDebuggerUi.getMarkup(
-        studioApp.assetUrl, showDebugButtons, showDebugConsole);
+    debuggerUi = new JsDebuggerUi(Applab.runButtonClick);
+    extraControlRows = debuggerUi.getMarkup(studioApp.assetUrl, {
+      showButtons: showDebugButtons,
+      showConsole: showDebugConsole
+    });
   }
 
   config.html = page({
@@ -664,7 +655,7 @@ Applab.init = function(config) {
         appHeight: Applab.footerlessAppHeight
       }),
       controls: firstControlsRow,
-      extraControlRows: extraControlsRow,
+      extraControlRows: extraControlRows,
       blockUsed: undefined,
       idealBlockNumber: undefined,
       editCode: level.editCode,
@@ -722,19 +713,8 @@ Applab.init = function(config) {
   };
 
   config.afterEditorReady = function() {
-    // Set up an event handler to create breakpoints when clicking in the
-    // ace gutter:
-    var aceEditor = studioApp.editor.aceEditor;
-
     if (breakpointsEnabled) {
-      studioApp.editor.on('guttermousedown', function(e) {
-        var bps = studioApp.editor.getBreakpoints();
-        if (bps[e.line]) {
-          studioApp.editor.clearBreakpoint(e.line);
-        } else {
-          studioApp.editor.setBreakpoint(e.line);
-        }
-      });
+      studioApp.enableBreakpoints();
     }
   };
 
@@ -799,8 +779,8 @@ Applab.init = function(config) {
     vizCol.style.maxWidth = viz.offsetWidth + 'px';
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.initializeAfterDomCreated({
+  if (debuggerUi) {
+    debuggerUi.initializeAfterDomCreated({
       defaultStepSpeed: config.level.sliderSpeed
     });
   }
@@ -966,8 +946,8 @@ Applab.reset = function(first) {
     level.goal.successState = {};
   }
 
-  if (jsDebuggerUi) {
-    jsDebuggerUi.detach();
+  if (debuggerUi) {
+    debuggerUi.detach();
   }
 
   if (jsInterpreterLogger) {
@@ -1171,8 +1151,8 @@ Applab.execute = function() {
       if (jsInterpreterLogger) {
         jsInterpreterLogger.attachTo(Applab.JSInterpreter);
       }
-      if (jsDebuggerUi) {
-        jsDebuggerUi.attachTo(Applab.JSInterpreter);
+      if (debuggerUi) {
+        debuggerUi.attachTo(Applab.JSInterpreter);
       }
 
       // Initialize the interpreter and parse the student code
@@ -1230,44 +1210,6 @@ Applab.onCodeModeButton = function() {
   } else {
     Applab.activeScreen().focus();
   }
-};
-
-// starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://');
-
-// Exposed for testing
-Applab.assetPathPrefix = "/v3/assets/";
-
-/**
- * If the filename is relative (contains no slashes), then prepend
- * the path to the assets directory for this project to the filename.
- *
- * If the filename URL is absolute, route it through the MEDIA_PROXY.
- * @param {string} filename
- * @returns {string}
- */
-Applab.maybeAddAssetPathPrefix = function (filename) {
-
-  if (ABSOLUTE_REGEXP.test(filename)) {
-    // We want to be able to handle the case where our filename contains a
-    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-    // technically invalid URL. encodeURIComponent will replace space with %20
-    // for us, but as soon as it's decoded, we again have an invalid URL. For
-    // this reason we first replace space with %20 ourselves, such that we now
-    // have a valid URL, and then call encodeURIComponent on the result.
-    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
-  }
-
-  filename = filename || '';
-  if (filename.length === 0) {
-    return '/blockly/media/1x1.gif';
-  }
-
-  if (filename.indexOf('/') !== -1) {
-    return filename;
-  }
-
-  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
 };
 
 /**
@@ -1532,30 +1474,6 @@ Applab.isInDesignMode = function () {
 function quote(str) {
   return '"' + str + '"';
 }
-
-/**
- * Returns a list of options (optionally filtered by type) for code-mode
- * asset dropdowns.
- */
-Applab.getAssetDropdown = function (typeFilter) {
-  var options = assetListStore.list(typeFilter).map(function (asset) {
-    return {
-      text: quote(asset.filename),
-      display: quote(asset.filename)
-    };
-  });
-  var handleChooseClick = function (callback) {
-    showAssetManager(function (filename) {
-      callback(quote(filename));
-    }, typeFilter);
-  };
-  options.push({
-    text: 'Choose...',
-    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
-    click: handleChooseClick
-  });
-  return options;
-};
 
 /**
  * Return droplet dropdown options representing a list of ids currently present

@@ -347,86 +347,39 @@ el:
       4-5 Maze 6 (copy 1)_instruction: Μπορείς να λύσεις αυτό το παζλ χρησιμοποιώντας το λιγότερο δυνατό αριθμό μπλοκ εντολών;
       4-5 Maze 6_instruction: Μπορείς να λύσεις αυτό το παζλ χρησιμοποιώντας το λιγότερο δυνατό αριθμό μπλοκ εντολών;
       4-5 Maze 7_instruction: Άνθρωπε. Εγώ ζόμπι. Πρέπει... φτάσω... ηλιοτρόπιο.
-      4-5 Maze 8_instruction: |
-        Use the "repeat" block to get the zombie to the
-        sunflower. (Avoid the chompers!)
-      4-5 Maze 9_instruction: 'Create a loop with the "repeat until" block.'
+      4-5 Maze 8_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάληψη" για να μετακινηθεί το Ζομπι πρός τον Ηλίανθο. (αποφύγετε τους Φαγάνες)'
+      4-5 Maze 9_instruction: 'Δημιούργησε ενα βρόγχο με το μπλοκ "επανάλαβε μέχρι".'
       4-5 Maze Assessment 1_instruction: 'Αξιολόγηση: Πήγαινε στον ηλίανθο.'
-      4-5 Maze Conditionals 1_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
-      4-5 Maze Conditionals 2_instruction: |
-        Use the repeat until block to get the
-        zombie to the sunflower.
-      4-5 Maze Conditionals 3_instruction: |
-        Use the "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      4-5 Maze Conditionals 4_instruction: |
-        Ok, this is just like the last puzzle,
-        but you need to remember how you used the "if" block and the "repeat"
-        block together.
-      4-5 Maze Conditionals 5_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 6_instruction: |
-        Me want sunflower! Use an "if" block
-        to get me there with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |
-        Ok, let's do that again for practice
-        - this isn't very different, but watch out for the chompers!
-      4-5 Maze Conditionals 8_instruction: |
-        The "if/else" block checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
-      4-5 Maze Conditionals 9_instruction: |
-        One more practice of the "if-else"
-        block, can you get it right on your first try?
-      4-5 Maze Conditionals Assessment 1_instruction: |
-        Use a "repeat until" and
-        an "if-else" block to get me to the sunflower in as few blocks as possible.
-      4-5 Nested Loops 1_instruction: |
-        Complete the code to draw these triangles.  The
-        first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
-      4-5 Nested Loops 10_instruction: |
-        Draw the last row of stars on this flag by
-        looping the provided blocks. The stars are 50 pixels apart, but remember that
-        the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: |
-        Now nest this loop inside another loop to
-        draw 10 triangles.  This is called a nested loop.  Hint: All 10 triangles
-        complete a 360 degree rotation.  
-      4-5 Nested Loops 3_instruction: "Create a sun by nesting the starter code in\nanother loop. This is called a nested loop.\r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |
-        Can you draw a hexagon by looping the triangle
-        code?
-      4-5 Nested Loops 7_instruction: |
-        Loop this design 10 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 10?)
-      4-5 Nested Loops 8_instruction: |
-        Loop this design 6 times. How much do you
-        have to turn each time you loop? (Hint: What is 360 divided by 6?)
-      4-5 Nested Loops 9_instruction: "Draw the teeth in the alligator's mouth!"
-      4-5 Nested Loops Assessment 1_instruction: |
-        Use a nested loop to complete the
-        design.
+      4-5 Maze Conditionals 1_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι" για να οδηγηθεί το Ζόμπι στον Ηλίανθο.'
+      4-5 Maze Conditionals 10_instruction: Μπορείς να προσθέσεις ακριβώς 3 μπλοκς για να με βοηθήσεις να λύσω εναν ποιό πρίπλοκο λαβύρινθο? Αν το κάνεις σωστα, θα μπορώ να περπατήσω κάθε καμπύλο μονοπάτι, οποιουδήποτε μήκους.
+      4-5 Maze Conditionals 2_instruction: 'Χρησιμοποίησε το μπλοκ "Επανάλαβε μέχρι" για να οδηγηθεί το Ζόμπι στον Ηλίανθο.'
+      4-5 Maze Conditionals 3_instruction: 'Χρησιμοποίησε το μπλοκ "εαν" ωστε να μπορώ να αποφασίζω πότε να στρίψω. Υπόδειξη: χρειάζεσαι μόνο ενα μπλοκ, αλλά μάθε πως το υλοποιούμε ώστε την επόμενη φορά να το κάνεις μόνος σου.'
+      4-5 Maze Conditionals 4_instruction: 'Ωραία, αυτό είναι ακριβώς όπως το τελευταίο παζλ, αλλά πρέπει να θυμάσαι πως χρησιμοποίησες μαζί τα μπλοκ "εαν" και "επανάλαβε".'
+      4-5 Maze Conditionals 5_instruction: 'Εγώ θέλει Ηλιοτρόπιο! Χρησιμοποίησε ενα μπλοκ "εαν" για να το φτασεις με τον μικρότερο αριθμό μπλοκς.'
+      4-5 Maze Conditionals 6_instruction: 'Εγώ θέλει Ηλιοτρόπιο! Χρησιμοποίησε ενα μπλοκ "εαν" για να το φτασεις με τον μικρότερο αριθμό μπλοκς.'
+      4-5 Maze Conditionals 7_instruction: 'Ωραία, ας κάνουμε πάλι το ίδιο για εξάσκηση - αυτό δεν είναι πολύ διαφορετικό, αλλά το νού σου τις Φαγάνες!'
+      4-5 Maze Conditionals 8_instruction: |-
+        Το μπλο "Εαν/αλλοιώς" ελέγχει μια κατάσταση και μετα κάνει μια ενέργεια 'Η μια άλλη. Για να φτάσω τον Ηλίανθο, προσπάθησε να χρησιμοποιήσεις αυτό το νεο μπλοκ.
+      4-5 Maze Conditionals 9_instruction: 'Αλλη μια εξάσκηση του μπλοκ "εαν-αλλοιώς", μπορείς να το κάνεις σωστά με την πρώτη προσπάθεια;'
+      4-5 Maze Conditionals Assessment 1_instruction: 'Χρησιμοποίησε ένα μπλοκ "επανάλαβε μέχρι" και "εαν-αλλοιώς" για να φτάσω τον Ηλίανθο με όσο το δυνατόν λιγότερα μπλοκ.'
+      4-5 Nested Loops 1_instruction: 'Συμπλήρωσε τον κώδικα για να ζωγραφίσεις αυτα τα τρίγωνα. Το πρώτο εχει γίνει για σένα. Υπόδειξη: 3 τρίγωνα, σε περιστροφή 360 μοιρών.'
+      4-5 Nested Loops 10_instruction: Ζωγράφισε την τελευταία γραμμή των αστεριών στην σημαία κάνοντας βρόγχο με τα μπλοκς που υπάρχουν. Τα αστέρια είναι 50 εικονοστοιχεία μακριά, αλλά να θυμάστε ότι τα αστέρια έχουν φάρδος 30 εικονοστοιχεία.
+      4-5 Nested Loops 11_instruction: Μπορείς να ζωγραφίσεις αυτά τα 10 τετράγωνα του πεζοδρομίου χρησιμοποιώντας εναν βρόγχο που περιέχει έναν άλλο? Κάθε τετράγωνο εχει πλευρά 30 εικονοστοιχεία.
+      4-5 Nested Loops 12_instruction: Μπορείς να ζωγραφίσεις αυτά τα 36 τρίγωνα χρσιμοποιώντας εναν βρόγχο μέσα σε εναν άλλο;
+      4-5 Nested Loops 2_instruction: 'Τώρα βάλε αυτόν τον βρόγχο μέσα σε εναν άλλο για να ζωγραφίσεις 10 τρίγωνα. Αυτό ονομάζεται "ενθετος βρόγχος". Υπόδειξη: και τα 10 τρίγωνα μαζί ολοκληρώνουν μια περιστροφή 360 μοιρών.  '
+      4-5 Nested Loops 3_instruction: "Δημιούργησε εναν ήλιο βάζοντας τον αρχικό κώδικα σε εναν άλλο βρόγχο. Αυτό ονομάζεται \"ενθετος βρόγχος\".\r\n"
+      4-5 Nested Loops 5_instruction: Βάλε τον κώδικα που δίνεται σε εναν βρόγχο για να δημιουργήσεις εναν ανεμόμυλο.
+      4-5 Nested Loops 6_instruction: Μπορείς να ζωγραφίσεις ενα εξάγωνο βάζοντας σε βρόγχο τον κώδικα που δημιουργεί τρίγωνο;
+      4-5 Nested Loops 7_instruction: 'Εκτέλεσε αυτό το σχέδιο 10 φορές. Πόσο πρέπει να το περιστρέφεις κάθε φορά που εκτελείς τον βρόγχο; (Υπόδειξη: Ποιό είναι το αποτέλεσμα της διαίρεσης του 360 με το 10;)'
+      4-5 Nested Loops 8_instruction: 'Εκτέλεσε αυτό το σχέδιο 6 φορές. Πόσο πρέπει να το περιστρέφεις κάθε φορά που εκτελείς τον βρόγχο; (Υπόδειξη: Ποιό είναι το αποτέλεσμα της διαίρεσης του 360 με το 6;)'
+      4-5 Nested Loops 9_instruction: Ζωγράφισε το δόντι στο στόμα του Αλιγάτορα!
+      4-5 Nested Loops Assessment 1_instruction: Χρησιμοποίησε ενα ένθετο βρόγχο για να συμπληρώσεις το σχέδιο.
       4-5 While Loops 1_instruction: |
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the "fill" block.
+        Μαετακινήσου με στην τρύπα καιγέμισέ την με δύο φτυαριές 
+        βρωμιάς, χρησιμοποιώντας το μπλοκ "γέμισε".
       4-5 While Loops 2_instruction: |
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the 'remove' block.
+        Μετακίνησέ με στο σωρό της βρωμιάς και αφαίρεσέ τον με
+        5 φτυαριές, χρησιμοποιώντας το μπλοκ "αφαίρεση".
       4-5 While Loops 3_instruction: Μετακίνησέ με στη σωρό και μάζεψέ την όλη, μετά μετακίνησέ με στην τρύπα και γέμισέ την τελείως. Συμβουλή, χρησιμοποίησε όσο το δυνατό λιγότερα μπλοκ.
       4-5 While Loops 4_instruction: 'Πω πω, βρήκα μια πραγματικά βαθιά τρύπα! Δεν ξέρω πόσα φτιάρια χώμα χρειάζεται.  Μπορείτε να γράψετε ένα πρόγραμμα που να την συμπληρώνει μέχρι το έδαφοςνα  είναι ίσιο;  Συμβουλή: Προσπαθήστε να χρησιμοποιήσετε τον "ενώ" βρόχο.'
       4-5 While Loops 5_instruction: Πω πω, τώρα υπάρχουν δύο βαθιές τρύπες! Μπορείτε να γράψετε ένα πρόγραμμα που να τις γεμίζει τόσο μέχρι το έδαφος να είναι ισιο;
@@ -969,40 +922,21 @@ el:
       Course 4 Artist For Loops 4_instruction: 'Πώς θα τροποποιούσατε ότι μάθατε για να ζωγραφίσετε αυτά τα τετράγωνα? Αρχίζουν με πλευρά 15 πίξελ, το μεγαλύτερο είναι 300 πίξελ και κάθε ένα 15 πίξελ μεγαλύτερο από το προηγούμενο. '
       Course 4 Artist For Loops 5_instruction: 'Καλή δουλειά για το τελευταίο παζλ! Ας χρησιμοποιήσουμε το μπλοκ με τη μεταβλητή "αντι" και πάλι για να σχεδιάσουμε αυτή την εικόνα. '
       Course 4 Artist For Loops 6_instruction: |
-        Free Play! Try using a for loop to
-        draw a growing shape pattern of your own design.
-      Course 4 Artist For Loops 6a_instruction: |
-        Make three small changes to the
-        code from the last level to get this!
-      Course 4 Artist For Loops 7_instruction: |
-        What happens if you remove the "Repeat
-        3" from this algorithm, keeping the "move" and "turn" blocks in the for
-        loop? In this spiraling triangle, each side is 20 pixels longer than the last.
-      Course 4 Artist For Loops 8_instruction: "Just one little change to the code\nfrom the last image can create this drawing. Can you figure out what that\nchange is?\r\n\r\nHint:  You need to remove something!"
-      Course 4 Artist For Loops 8a_instruction: |
-        Just one little change to the code
-        from the last image can create this image. Can you figure out what that change
-        is?
-      Course 4 Artist For Loops 9_instruction: |
-        Can you make a spiral? Move forward
-        from 1 to 75 pixels, increasing by 1 pixel each time.
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to\nuse all of the things you've learned to create this image?\r\n\r\nNeed a\nhint? Click here."
-      Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've\nnow learned everything you need to know to make a pattern like this! If this\npicture inspires you, try to make something similar. Otherwise, create something\nall your own.\r\n\r\nNeed a hint? Click here."
-      Course 4 Artist Functions 1_instruction: |
-        Can you draw a square that is 100
-        pixels in length, using a loop?
-      Course 4 Artist Functions 10_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
-      Course 4 Artist Functions 11_instruction: |
-        Check out this code that draws a
-        cube - can you move it into a function called "Draw a Cube"
-      Course 4 Artist Functions 12.1_instruction: |
-        Let's create a function called
-        "draw an octagon 20" that draws an octagon where each side is 20 pixels
-        long.
-      Course 4 Artist Functions 12_instruction: Loop square function to draw a line
-      Course 4 Artist Functions 13.1_instruction: "Now, let's make a function called\n\"jump to upper right\" that moves the artist to the upper-right of the octagon\nthat you just drew so we can finish this pattern.\r\n\r\nHint:  To get yourself\nto the upper-right corner, try jumping in a pattern that makes just 3/8 of\nthe octagon."
+        Ελεύθερο παιχνίδι! Προσπάθησε να χρησιμοποιήσεις εναν βρόγχο "για" ώστε 
+        να ζωγραφίσεις ενα σχήμα που θα μεγαλώνει.
+      Course 4 Artist For Loops 6a_instruction: Κάνε τρεις μικρές αλλαγές στον κώδικα από το τελευταίο επίπεδο για να το πετύχεις!
+      Course 4 Artist For Loops 7_instruction: 'Τι συμβαίνει αν αφαιρέσεις το "επανάλαβε 3" από τον αλγόριθμο, ενω κρατήσεις τα μπλοκς "προχώρησε" και "στρίψε" στον βρόγχο "για"; Σε αυτό το σπειροειδές τρίγωνο, κάθε πλευρά εχει μήκος 20 εικονοστοιχεία περισσότερο από το τελευταίο.'
+      Course 4 Artist For Loops 8_instruction: "μόνο μια μικρή αλλαγή στον κώδικα από την τελευταία εικόνα μπορεί να δημιουργήσει αυτήν την εικόνα. Μπορείς να βρεις ποιά είναι αυτή η αλλαγή?\r\n\r\nΥπόδειξη: Πρέπει να αφαιρέσεις κάτι!"
+      Course 4 Artist For Loops 8a_instruction: μόνο μια μικρή αλλαγή στον κώδικα από την τελευταία εικόνα μπορεί να δημιουργήσει αυτήν την εικόνα. Μπορείς να βρεις ποιά είναι αυτή η αλλαγή;
+      Course 4 Artist For Loops 9_instruction: Μπορείς να κάνεις ενα σπιραλ? Κινήσου μπροστά από 1 εως 75 εικονοστοιχεία, αυξάνοντας κατά 1 εικονοστοιχείο καθε φορά.
+      Course 4 Artist For Loops Challenge_instruction: "Μπορείς να χρησιμοποιήσεις ολα όσα έμαθες μέχρι τώρα για να δημιουργήσεις αυτήν την εικόνα; \r\n\r\nΧρειάζεσαι μια υπόδειξη; κάνε κλικ εδώ."
+      Course 4 Artist For Loops inspire_instruction: "Εμπνευση ελεύθερου παιχνιδιού: Τώρα εχεις μάθει ό, τι χρειάζεται για να δημιουργείς ενα πρότυπο σαν αυτό! Αν αυτή η εικόνα σε εμπνέει, προσπάθησε να κάνεις κάτι παρόμοιο. Αλλοιώς, δημιούργησε κάτι τελείως δικό σου.\r\n\r\nΧρειάζεσαι υπόδειξη; Κάνε κλικ εδώ."
+      Course 4 Artist Functions 1_instruction: Μπορείς να ζωγραφίσεις ενα τετράγωνο που έχει πλευρά μήκους 100 εικονοστοιχείων, χρησιμοποιώντας εναν βρόγχο;
+      Course 4 Artist Functions 10_instruction: Ποιό μπλοκ χρειάζεσαι ώστε το τρίγωνο να τοποθετηθεί πάνω στο τετράγωνο;
+      Course 4 Artist Functions 11_instruction: 'Δες αυτόν τον κώδικα που ζωγραφίζει εναν κύβο - μπορείς να τον μεταφέρεις σε μια συνάρτηση με όνομα "Ζωγράφισε εναν κύβο"'
+      Course 4 Artist Functions 12.1_instruction: 'Ας δημιουργήσουμε μια συνάρτηση με όνομα "ζωγράφισε ενα οκτάγωνο 20" που ζωγραφίζει ενα οκτάγωνο με πλευρά μήκους 20 εικονοστοιχείων.'
+      Course 4 Artist Functions 12_instruction: Βάλε σε βρόγχο την συνάρτηση τετραγώνου για να ζωγραφίσεις μια γραμμή
+      Course 4 Artist Functions 13.1_instruction: "Τώρα ας κάνουμε μια συνάρτηση με όνομα \"πήδηξε πάνω δεξιά\" που μετακινεί τον καλλιτέχνη στην πάνω δεξιά γωνία του οκταγώνου που μόλις ζωγράφισες ώστε να τελειώσουμε αυτό το πρότυπο.\r\n\r\nΥπόδειξη: για να μεταφερθείς στην πάνω δεξια γωνία, προσπάθησε να πηδήξεις σε ενα πρότυπο που φτιάχνει τα 3/8 του οκτάγωνου."
       Course 4 Artist Functions 13_instruction: |
         Check it out we have a new function
         called "draw a line of squares". Feel free to take a look inside the function
@@ -1035,9 +969,7 @@ el:
         Let's try to use our two functions
         to draw a house - what needs to be fixed in this code to draw the house properly?
       Course 4 Artist Functions 5_instruction: "Using the \"draw a square\" function\nblock, can you draw this picture? Hint: each square is 120 pixels apart.\r\n"
-      Course 4 Artist Functions 6_instruction: |
-        Which block do you need to add to
-        get the triangle to sit on top of the square?
+      Course 4 Artist Functions 6_instruction: Ποιό μπλοκ χρειάζεσαι ώστε το τρίγωνο να τοποθετηθεί πάνω στο τετράγωνο;
       Course 4 Artist Functions 7_instruction: |
         Can you draw a line of squares using
         a Square function? Each square is 40 pixel's in length.
@@ -1565,7 +1497,9 @@ el:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2700,6 +2634,11 @@ el:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Η μέλισσα θέλει μόνο νέκταρ αυτή τη στιγμή. Δεν είναι όλα τα αντικείμενα λουλούδια, έτσι κάντε έλεγχο κάτω από κάθε ΣΎΝΝΕΦΟ, να δει αν κρύβεται ένα λουλούδι. Αν είναι, τότε μπορείτε να συγκεντρώσετε νέκταρ.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
@@ -3165,9 +3104,9 @@ el:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -4482,6 +4421,17 @@ el:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: |
         Η λάβα κρύβεται πίσω από κάποια από αυτά
         τα μπλοκ, τα οποία πρέπει να καλύψεις πριν προχωρήσεις μπροστά. Μία εντολή "αν"

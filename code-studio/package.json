@@ -24,6 +24,7 @@
     "lint-css": "sass-lint src/css/*css",
     "lint-js": "jshint src/js/*.js",
     "test": "mochify test/**/*.js --transform babelify",
+    "debug": "mochify --debug test/**/*.js --transform babelify",
     "coverage": "mochify test/**/*.js --transform babelify --plugin [ mochify-istanbul --report json --report lcov --dir ./coverage ] && istanbul check-coverage ./coverage/coverage-final.json",
     "clean": "rm -rf build",
     "clean-assets": "rm -rf build/assets",
@@ -38,6 +39,7 @@
     "build-js:dist": "npm run lint-js && npm test && npm run clean-js && scripts/build-js.js --dist && scripts/uglify-js.js",
     "start": "scripts/build-js.js --watch"
   },
+  "//": "ejsify is a dependency of apps/src; we declare it here rather than in apps/src/package.json so we can continue to avoid needing to npm install that module.",
   "devDependencies": {
     "babelify": "^6.3.0",
     "browserify": "^12.0.1",
@@ -45,6 +47,7 @@
     "chai": "^3.5.0",
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
+    "ejsify": "1.0.0",
     "envify": "^3.4.0",
     "factor-bundle": "^2.5.0",
     "istanbul": "^0.4.2",
@@ -63,6 +66,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "@cdo/apps": "file:../apps/src",
     "@cdo/code-studio-vendor": "file:./vendor",
     "codemirror": "5.5",
     "jquery": "^2.2.0",

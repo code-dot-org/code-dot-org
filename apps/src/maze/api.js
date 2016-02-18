@@ -29,21 +29,19 @@ var isPath = function(direction, id) {
   var command;
   switch (tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
-      square = Maze.map[Maze.pegmanY - 1] &&
-          Maze.map[Maze.pegmanY - 1][Maze.pegmanX];
+      square = Maze.map.getTile(Maze.pegmanY - 1, Maze.pegmanX);
       command = 'look_north';
       break;
     case Direction.EAST:
-      square = Maze.map[Maze.pegmanY][Maze.pegmanX + 1];
+      square = Maze.map.getTile(Maze.pegmanY, Maze.pegmanX + 1);
       command = 'look_east';
       break;
     case Direction.SOUTH:
-      square = Maze.map[Maze.pegmanY + 1] &&
-          Maze.map[Maze.pegmanY + 1][Maze.pegmanX];
+      square = Maze.map.getTile(Maze.pegmanY + 1, Maze.pegmanX);
       command = 'look_south';
       break;
     case Direction.WEST:
-      square = Maze.map[Maze.pegmanY][Maze.pegmanX - 1];
+      square = Maze.map.getTile(Maze.pegmanY, Maze.pegmanX - 1);
       command = 'look_west';
       break;
   }
@@ -93,6 +91,9 @@ var move = function(direction, id) {
   if (Maze.wordSearch) {
     Maze.wordSearch.markTileVisited(Maze.pegmanY, Maze.pegmanX, false);
     // wordsearch doesnt check for success until it has finished running completely
+    return;
+  } else if (Maze.hasMultiplePossibleGrids()) {
+    // neither do quantum maps
     return;
   }
   Maze.checkSuccess();
@@ -215,33 +216,33 @@ exports.isPathLeft = API_FUNCTION(function(id) {
 exports.pilePresent = API_FUNCTION(function(id) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
-  return Maze.dirt_[y][x] > 0;
+  return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) > 0;
 });
 
 exports.holePresent = API_FUNCTION(function(id) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
-  return Maze.dirt_[y][x] < 0;
+  return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) < 0;
 });
 
 exports.currentPositionNotClear = API_FUNCTION(function(id) {
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
-  return Maze.dirt_[y][x] !== 0;
+  return Maze.map.isDirt(y, x) && Maze.map.getValue(y, x) !== 0;
 });
 
 exports.fill = API_FUNCTION(function(id) {
   Maze.executionInfo.queueAction('putdown', id);
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
-  Maze.dirt_[y][x] = Maze.dirt_[y][x] + 1;
+  Maze.map.setValue(y, x, Maze.map.getValue(y, x) + 1);
 });
 
 exports.dig = API_FUNCTION(function(id) {
   Maze.executionInfo.queueAction('pickup', id);
   var x = Maze.pegmanX;
   var y = Maze.pegmanY;
-  Maze.dirt_[y][x] = Maze.dirt_[y][x] - 1;
+  Maze.map.setValue(y, x, Maze.map.getValue(y, x) - 1);
 });
 
 exports.notFinished = API_FUNCTION(function() {

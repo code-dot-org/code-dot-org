@@ -81,5 +81,6 @@
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
   "yes": "Yes",
-  "youSpelled": "You spelled"
+  "youSpelled": "You spelled",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

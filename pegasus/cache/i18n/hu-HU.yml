@@ -79,16 +79,121 @@
   congratulations_volunteer: Gratulálunk, most, hogy kipróbáltad a Kódolás óráját,
     <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts
     a tanulóknak egy órán át a kódolásról tanulni!
-  course_name_accelerated: Gyorsított tanfolyam
-  course_name_course1: 1. tanfolyam
-  course_name_course2: 2. tanfolyam
-  course_name_course3: 3. tanfolyam
-  course_name_course4: 4. tanfolyam
-  congratulations_on_completing_course: Gratulálok a %{course} befejezéséhez!
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
+    Course
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat,
     vagy próbáld ki <a href="%{current_path}/next">egy partnerünk gyakorlatát</a>.
   get_a_certificate_of_achievement: Kapjon egy bízonyítványt teljesítményéért
+  view_course: View course
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science
+    course, consider celebrating and connecting it to things they can build in the
+    real world by inviting a guest speaker to your classroom. You can use our map
+    of volunteers to contact local volunteers to visit your classroom, or search in
+    any city to find computer science students or technical professionals who are
+    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_course1: Third party tutorials for pre-readers
+  congrats_third_party_course2: Third party tutorials
+  congrats_third_party_course3: Third party tutorials
+  congrats_third_party_course4: Third party tutorials
+  congrats_third_party_accelerated: Third party tutorials
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_tynker_desc: Tynker's creative computing platform helps children develop
+    computational thinking and programming skills in a fun, intuitive and imaginative
+    way. Our innovative visual programming language, interactive self-paced courses,
+    and game-based programming activities provide an easy introduction to programming,
+    and empower children to innovate and create.
+  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
+    that enables young children (ages 5-7) to create their own interactive stories
+    and games. Children snap together graphical programming blocks to make characters
+    move, jump, dance, and sing. Children can modify characters in the paint editor,
+    add their own voices and sounds, even insert photos of themselves - then use the
+    programming blocks to make their characters come to life.
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
+    games, and animations and share your creations with others in the online community.
+    Scratch helps young people learn to think creatively, reason systematically, and
+    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
+    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
+    or on Android or iOS devices. Students play the initial set of “Basic” levels
+    in Lightbot. They will learn how to tell a computer what to do with a series of
+    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: Learn how to program drawings, animations, and games using
+    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
+    can share whatever you create, explore what others have created and learn from
+    each other!
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
+    allows everyone, even novices, to start programming and build fully functional
+    apps for Android devices. Newcomers to App Inventor can have their first app up
+    and running in an hour or less, and can program more complex apps in significantly
+    less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
+    short videos, example code, and lots of programming exercises that make coding
+    fun and accessible for beginners. With CodeHS, you can get the help that every
+    new programmer needs to work through problems and keep learning. Our tutors are
+    everywhere!
+  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codecademy_desc: We are rethinking education from the bottom up. The
+    web has rethought nearly everything - commerce, social networking, healthcare,
+    and more. We are building the education the world needs - the first truly net
+    native education.
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: Tanterv
+  third_party_pricing: Pricing
+  third_party_cost_free: Free
+  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_299: "$2.99/download"
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
+    K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
+    K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Kérlek válassz egy érvényes életkort
   enter_valid_email: Adj meg egy érvényes e-mail címet
   get_a_certificate_message: Küldeni fogunk neked egy tanúsítványt, illetve információt
@@ -143,6 +248,11 @@
   learn_classes: Találjon helyi osztályokat
   hoc_is_here: 'Elérkezett a #HourOfCode - nézd meg! @codeorg'
   just_did_hoc: "Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg"
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Miért nem tanítanak több iskolában programozást? Van megoldásunk.
     http://youtu.be/nKIu9yen5nc. Látogasd meg a http://code.org/ honlapot, hogy többet
     megtudj róla.
@@ -383,16 +493,17 @@
   volunteer_engineer_submission_field_company_placeholder: Cég (vagy Egyetem)
   volunteer_engineer_submission_field_experience_level: Tapasztalat szint
   volunteer_engineer_submission_field_location: Helyszín
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
+  volunteer_engineer_submission_field_location_desc: A lakcímedet arra használjuk,
+    hogy a térképen megjelöljük tartózkodási helyed a környékbeli tanárok számára.
+    Amennyiben nem szívesen adnád meg lakcímedet, nyugodtan használd helyette az iskolád
+    vagy munkahelyed városát.
   volunteer_engineer_submission_field_location_placeholder: Irányítószám, város és
     állam/ország vagy utca
   volunteer_engineer_submission_field_location_flexibility: Tudok segíteni a kódolás
     órája alatt a... (jelölje ki az összes vállalni kívánt tevékenységet)
   volunteer_engineer_submission_checkbox_after_hoc: "Éngem érdekel az önkéntesség
     a Kódolás Órája után"
-  volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
-    of Code
+  volunteer_engineer_submission_field_time_commitment: Időráfordítás
   volunteer_engineer_submission_field_linkedin: LinkedIn adatlap
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/saját_neved
   volunteer_engineer_submission_field_facebook: Facebook adatlap
@@ -400,18 +511,18 @@
   volunteer_engineer_submission_field_description: Leírás
   volunteer_engineer_submission_field_description_desc: "Írd le a szoftverfejlesztési
     tapasztalataidat és hogy hogyan vennél részt önkéntesként."
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+  volunteer_engineer_submission_field_description_placeholder: Tapasztalat vagy munkaelőzmény
+    leírása. Ha beszélsz az angolon kívül más nyelvet mindenképp említsd meg.
   volunteer_engineer_submission_header_private: Az információt bizalmasan kezeljük
     és nem adjuk tovább harmadik személyeknek
   volunteer_engineer_submission_field_email: E-mail cím
   volunteer_engineer_submission_field_email_desc: Email-címedet soha nem osztjuk meg
     senkivel, de értesítést küldünk tanári felkérésekről.
   volunteer_engineer_submission_field_email_placeholder: E-mail cím
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
+  volunteer_engineer_submission_final_paragraph: A környékbeli oktatókat ábrázoló
+    térképen meg leszel jelenítve, így azok a tanárok, amelyek egy Kódolás Óráját
+    szerveznek fel tudják venni veled a kapcsolatot. Az email- és lakcímed SOHA, SENKINEK
+    nem adjuk ki. Egyéb információ (beleértve a várost) publikusan meg lesz jelenítve.
   volunteer_engineer_submission_checkbox_contact: 'Egyetértek azzal, hogy a tanárok
     felvehetik a kapcsolatot velem az önkéntes feladatok elvégzése céljából (Megjegyzés:
     az e-mail címed nem kerül harmadik félhez)'
@@ -449,10 +560,10 @@
   volunteer_engineer_submission_num_volunteers_50: 50 önkéntes
   volunteer_engineer_submission_type_task_onsite: Szeretném, ha Skype-on keresztül
     pár mondatban inspirálnád a diákjaim
-  volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
-    to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_type_task_remote: Szeretném, ha Skype-on mondanál
+    pár inspiráló mondatot a diákjaimnak a tanórán
+  volunteer_engineer_submission_type_task_mentor: Mentort keresek, aki segítene felkészülni,
+    hogy a diákjaimat kódolásra taníthassam
   petition_age: Kor
   dashboard_landing_title: Tanári kezdőlap
   dashboard_landing_welcome: "Üdvözlünk az új és továbbfejlesztett tanári felületen."
@@ -522,8 +633,8 @@
     of 6 units: Human Computer Interaction, Problem Solving, Web Design, Programming,
     Computing and Data Analysis, and Robotics.'
   dashboard_course_csp: Az AP® számítástechnika alapelvei
-  dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
-    course that explores the foundational ideas of computing.
+  dashboard_course_csp_desc: A Code.org egy izgalmas, könnyen érthető és teljes tantervet
+    dolgozott ki amely bemutatja a programozás alapjait.
   dashboard_landing_loading: Betöltés...
   dashboard_action_edit: Szerkeszt
   dashboard_action_save: Mentés
@@ -690,11 +801,11 @@
   dashboard_faq_k5: K-5 Gyakran Ismételt Kérdések
   dashboard_announcements: Közlemények
   dashboard_announce_view_all: "Összes megtekintése"
-  dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Tudj meg többet
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
@@ -712,19 +823,19 @@
   learn_videos_show: Mutasd meg ezt az inspiráló videót az osztályodnak
   learn_videos_before_hoc: Nézd meg ezt az inspiráló videót a Kódolás Órája előtt
   learn_educator_resources_description: Tanulj meg Kódolás Óráján tanítani
-  learn_educator_resources_button: Educator resources
+  learn_educator_resources_button: Oktatói anyagok
   learn_are_you_educator: Tanító vagy? <a href="http://hourofcode.com/resources/how-to">Tanulj
     meg Kódolás Óráján tanítani</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local">Keress egy környékbeli
     önkéntest</a> a Kódolás Órájádban segíteni
   learn_teacher_led_lesson_plans: Be inspired by <a href="https://code.org/teacher-led">teacher
     led Hour of Code lesson plans</a>
-  learn_how_to_hoc: Follow <a href="https://hourofcode.com/how-to">our how-to guide</a>
-    for teaching one Hour of Code
+  learn_how_to_hoc: Kövesd a <a href="https://hourofcode.com/how-to">leírásunk</a>
+    egy Kódolás Órájának tartásához
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes"> Tudj meg többet</a> a
     tanároknak szánt jutalmakról.
-  learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
-    videos</a>
+  learn_inspirational_videos: Inspiráld diákjaidat <a href="https://code.org/educate/inspire">ezekkel
+    a videókkal</a>
   hoc2014_try_new_tutorials: Próbáld ki az új Kódolás Órája anyagainkat
   hoc2014_try_new_tutorial: Próbáld ki az új Hour of Code oktató anyagunk béta változatát
   hoc2014_try_scrat: Angry Birds, PvZ és Motkány
@@ -751,7 +862,7 @@
   carousel_heading_robots: Tanulj robotprogramozást
   carousel_heading_ide: A tanárok közt népszerű platformok
   educator_notes: Oktatói jegyzetek
-  teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
+  teach_led_lesson_plans: Tanár által vezetett óratervek
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
     list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
     for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
@@ -814,13 +925,18 @@
   playlab_name: Játéklabor
   infinity_name: Infinity játéklabor
   artist_name: Művész
-  monstercoding_name: Mystery Island Coding Quest
+  monstercoding_name: Rejtélyes Sziget Kódolási Küldetés
   allcancode_name: Fuss Marco!
   csfirst_name: CS First
   boxisland_name: Box Island
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
-  teacherled_name: Teacher Led Lesson Plans
+  teacherled_name: Tanár által vezetett óratervek
+  course1_name: 1. tanfolyam
+  course2_name: 2. tanfolyam
+  course3_name: 3. tanfolyam
+  course4_name: 4. tanfolyam
+  accelerated_name: Gyorsított tanfolyam
   codeorg_gradelevel: 4-től 104 éves korig
   codeintl_gradelevel: 4-től 104 éves korig
   thinkersmithspanish_gradelevel: Por todos
@@ -871,6 +987,11 @@
   codesters_gradelevel: 12-től 14 éves korig
   texasinstruments_gradelevel: 13-tól 16 éves korig
   teacherled_gradelevel: 5 éves kortól
+  course1_gradelevel: 4-től 6 éves korig
+  course2_gradelevel: 6-tól 18 éves korig
+  course3_gradelevel: 8-tól 18 éves korig
+  course4_gradelevel: 10-től 18 éves korig
+  accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
   thinkersmithspanish_platformtext: Offline
@@ -984,13 +1105,25 @@
     language.
   csfirst_shortdescription: Animate a story about two characters on the ocean. Add
     your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
+  boxisland_shortdescription: Menj kódolás-kirándulásra Box Island-re a bátor Hiro-val!
+  codesters_shortdescription: Készítsd el a saját játékaidat, animációidat és mesterműveidet
+    a Python segítségével.
+  texasinstruments_shortdescription: Tanuld meg a programozás alapjait a TI-84&#8482;
+    Plus számológép segítségével.
+  teacherled_shortdescription: Tervezd meg a saját Kódolás Órádat a lecke-terveink
+    segítségével.
+  course2_shortdescription_congrats: For students with basic reading skills, this
+    course builds on Course 1. Students will create programs to solve problems and
+    develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve
+    deeper into programming topics introduced in previous courses to find flexible
+    solutions to more complex problems. By the end of this course, students create
+    interactive stories and games they can share with anyone. Recommended for grades
+    4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
+    into programming topics introduced in previous courses to find flexible solutions
+    to more complex problems. By the end of this course, students create interactive
+    stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: Tanuld meg a számítástechnika alapgondolatait drag&drop
     elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben
     szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld
@@ -1154,9 +1287,9 @@
     step-by-step instructions in the form of the visual programming language used
     by the Hour of Code. They get introduced to sequencing commands, iteration and
     conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
+  csfirst_longdescription: Kreálj történetet két tengeri szereplőről. Animáld a vizet
+    és tedd egyedivé a környezetet a saját szájízed szerint. Használj programkódot,
+    hogy elmesélhesd a Te történeted!
   boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
     clocks scattered in the wilderness! In this tutorial you will learn the basics
     of algorithms, sequences, loops and conditionals!
@@ -1522,3 +1655,4 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

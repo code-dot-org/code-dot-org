@@ -1556,24 +1556,85 @@ $see-examples-thick-underline-color: $yellow;
   max-width: 100% !important;
 }
 
+a.WireframeSendToPhone_send-to-phone-link {
+  text-decoration: none;
+  color: $light-gray;
+  &:hover {
+    color: $lightest-gray;
+    text-decoration: underline;
+  }
+}
+
+#visualizationColumn.wireframeShare {
+  background: url("#{$common_root}phone_wireframe.png") center center no-repeat;
+}
+
 .legacy-share-view {
   #belowVisualization, .hide-source #belowVisualization {
     display: none;
   }
 
-  #visualizationColumn {
+  #visualizationColumn{
     margin: 0 auto;
-    padding: 20px 0;
+    #phoneFrameScreen {
+      overflow: hidden;
+      #visualizationContainer {
+        display: inline-block;
+        #visualization {
+          height: auto;
+          overflow: hidden;
+        }
+      }
+    }
   }
 
-  .small-footer-base {
+  #visualizationColumn.wireframeShare {
+    width: 352px !important;
+    height: 612px !important;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+
+    #phoneFrameScreen {
+      position: relative;
+      top: 68px;
+      left: 16px;
+      border: solid thin #202b34;
+      background-color: #202b34;
+      width: 320px;
+      height: 480px;
+    }
+  }
+
+  #gameButtons {
     width: auto;
+    padding: 1% 5%;
+    #right-button-cell {
+      display: none; /* don't show Finish button in share view */
+    }
+    #soft-buttons button {
+        margin: 5px 1px;
+      }
+    }
+
+  .small-footer-base {
     left: 0;
     right: 0;
+    width: auto !important;
   }
 
   #more-menu, #copyright-flyout {
-    left: auto;
+    border-top: solid thin #202b34;
+    left: 0;
     right: 0;
+    width: auto !important;
+  }
+
+  .full_container {
+    padding: 0;
+  }
+
+  .admin {
+    display: none;
   }
 }

@@ -1,0 +1,22 @@
+name 'CSPPD3-u4 pick a challenge'
+css 'unplugged'
+markdown <<MARKDOWN
+<link rel="stylesheet" type="text/css" href="https://staging.code.org/curriculum/docs/web/k5online.css">
+
+### Challenge Overview > What's your Challenge? 
+
+#### Select one of the challenges below to complete.
+
+- **5-6: Explopring Data with Visualizations**
+- **7: Cleaning Data**
+- **8: Creating Summary Tables** 
+- **11: Rapid Research - Data Innovations**
+
+>Now that you've selected a lesson, head to the forum and **share which lesson you plan to complete** for your challenge. 
+<br><br>
+<a href="http://forum.code.org/t/unit-4-challenge-selection/3301" target=_blank>forum >> </a>
+
+<br><br>
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a> 
+
+MARKDOWN

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "توابع"},
 "catText":function(d){return "متن"},
 "catVariables":function(d){return "متغیرها"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "دوباره شروع کنید"},
 "clearPuzzleConfirm":function(d){return "این کار معما را به حالت ابتدایی تنظیم خواهد کرد و تمام بلوک هایی که شما اضافه کردید یا تغییر داده اید را حذف خواهد کرد."},
 "clearPuzzleConfirmHeader":function(d){return "آیا مطمئنی که می خواهی دوباره شروع کنی؟"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "تابعی را صدا میزند که یک یا چند پارامتر دریافت می کند"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "تابعی را صدا بزن که پارامتر دریافت می کند"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "صدا زدن یک تابع"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "طول (x)"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ویدیو را ببینید"},
 "when":function(d){return "وقتی"},
 "whenRun":function(d){return "زمان اجرا"},
-"workspaceHeaderShort":function(d){return "محیط کار: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "محیط کار: "}};

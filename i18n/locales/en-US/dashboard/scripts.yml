@@ -156,7 +156,7 @@ en:
           description_short: crwdns24912:0crwdne24912:0
         course4:
           description_short: crwdns21792:0crwdne21792:0
-          description: crwdns21793:0crwdne21793:0
+          description: crwdns56099:0crwdne56099:0
           "Artist: Variables": crwdns21794:0crwdne21794:0
           "Bee: For Loops": crwdns21795:0crwdne21795:0
           title: crwdns21796:0crwdne21796:0
@@ -1292,6 +1292,10 @@ en:
           Unit 5 Overview: crwdns48490:0crwdne48490:0
           Introduction to the Unit 5 Challenge: crwdns48491:0crwdne48491:0
           Unit 5 Challenge Planning & Creation: crwdns48492:0crwdne48492:0
+          Getting Started: crwdns55954:0crwdne55954:0
+          Unit 5 lessons: crwdns56100:0crwdne56100:0
+          Complete the Challenge: crwdns56101:0crwdne56101:0
+          Share out and Submit: crwdns56102:0crwdne56102:0
         ECSPD3-Unit6:
           title: crwdns48493:0crwdne48493:0
           description_short: crwdns48494:0crwdne48494:0
@@ -1529,3 +1533,26 @@ en:
           Identifying People with Data: crwdns55942:0crwdne55942:0
           Privacy Abandoned: crwdns55943:0crwdne55943:0
           Practice PT - Propose an Innovation: crwdns55944:0crwdne55944:0
+        CSPPD3-Unit4:
+          title: crwdns55955:0crwdne55955:0
+          description_short: crwdns55956:0crwdne55956:0
+          description: crwdns55957:0crwdne55957:0
+          Getting Started: crwdns55958:0crwdne55958:0
+          Unit 4 Overview: crwdns55959:0crwdne55959:0
+          Chapter 1 Overview: crwdns55960:0crwdne55960:0
+          Chapter 2 Overview: crwdns55961:0crwdne55961:0
+          Practice Performance Tasks: crwdns55962:0crwdne55962:0
+          Challenge Overview: crwdns55963:0crwdne55963:0
+          Complete the Challenge: crwdns55964:0crwdne55964:0
+          Share out and Submit: crwdns55965:0crwdne55965:0
+        cspunit6draft:
+          title: crwdns56103:0crwdne56103:0
+          description_short: crwdns56104:0crwdne56104:0
+          description: crwdns56105:0crwdne56105:0
+          Creating Javascript Objects: crwdns56106:0crwdne56106:0
+          Permanent Data Storage: crwdns56107:0crwdne56107:0
+          Reading Records: crwdns56108:0crwdne56108:0
+          Importing and Exporting Data: crwdns56109:0crwdne56109:0
+          Visualizing Data: crwdns56110:0crwdne56110:0
+          Updating Records: crwdns56111:0crwdne56111:0
+          Deleting Records: crwdns56112:0crwdne56112:0

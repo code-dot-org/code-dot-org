@@ -1,9 +1,10 @@
 var PageAction = {
   DropletTransitionError: 'DropletTransitionError',
-  SanitizedLevelHtml: 'SanitizedLevelHtml'
+  SanitizedLevelHtml: 'SanitizedLevelHtml',
+  UserJavaScriptError: 'UserJavaScriptError'
 };
 
-var MAX_FIELD_LENGTH = 4096;
+var MAX_FIELD_LENGTH = 4095;
 
 /**
  * Shims window.newrelic, which is only included in production. This causes us
@@ -12,6 +13,11 @@ var MAX_FIELD_LENGTH = 4096;
 module.exports = {
   PageAction: PageAction,
 
+  /**
+   * @param {string} actionName - Must be one of the keys from PageAction
+   * @param {object} value - Object literal representing columns we want to
+   *   add for this action
+   */
   addPageAction: function (actionName, value) {
     if (!window.newrelic) {
       return;
@@ -19,6 +25,11 @@ module.exports = {
 
     if (!PageAction[actionName]) {
       console.log('Unknown actionName: ' + actionName);
+      return;
+    }
+
+    if (typeof(value) !== "object") {
+      console.log('Expected value to be an object');
       return;
     }
 

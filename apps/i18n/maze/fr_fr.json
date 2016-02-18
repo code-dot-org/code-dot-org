@@ -81,5 +81,6 @@
   "whileTooltip": "Répète les actions incluses jusqu'à ce que le point final soit atteint.",
   "word": "Trouver le mot",
   "yes": "Oui",
-  "youSpelled": "Tu as épelé"
+  "youSpelled": "Tu as épelé",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

@@ -1,0 +1,20 @@
+%script{:src=>"/js/jquery.placeholder.js"}
+%script{:src=>"/js/base64.min.js"}
+%script{:src=>"/js/csf-congrats-certificate.js"}
+
+#certificate_body{:style=>"margin-top: 30px; margin-bottom: 30px;"}
+  #certificate_form
+
+    %h2{:style=>'margin-top: 0px; margin-bottom: 0px'}=I18n.t :personalize_certificate
+    
+    - localized_course_name = "#{I18n.t(:"#{course}_name")}"
+    %form#request-certificate-form{:onsubmit=>"return requestCertificate('#{localized_course_name}')"}
+
+      #email_error{style: "color:red; font-family: 'Gotham 7r', sans-serif; display: none"}
+        =I18n.t :enter_valid_email
+      #email_okay{style: "color:red; font-family: 'Gotham 7r', sans-serif;"}
+        &nbsp;
+      %input#session{name: 'session_s', type: 'hidden', value: ''}
+      %input#name.grey_input{:name=>"name_s", :placeholder=>'Name', :style=>'width: 167px'}
+      &nbsp;
+      %button#gobutton.button_enabled{:style=>'width:90px'}=I18n.t :submit

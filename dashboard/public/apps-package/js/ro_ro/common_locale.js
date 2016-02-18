@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funcţii"},
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Variabile"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Reîncepe"},
 "clearPuzzleConfirm":function(d){return "Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge toate blocurile pe care le-ai adăugat sau modificat."},
 "clearPuzzleConfirmHeader":function(d){return "Ești sigur că dorești să reîncepi?"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Apelează o anumită funcție care are unul sau mai mulți parametri"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Apelează o funcție cu parametri"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Apelează o funcție"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Declară o variabilă şi o atribuie unei secvențe cu valori iniţiale date"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "Numele pe care îl vei folosi în program pentru a referi variabila"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Urmărește clipul video"},
 "when":function(d){return "când"},
 "whenRun":function(d){return "când rulezi"},
-"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Spaţiu de lucru: "}};
