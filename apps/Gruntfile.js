@@ -94,7 +94,7 @@ module.exports = function (grunt) {
     'en_ploc'
   ]);
 
-// if specified will, will build en_us, en_ploc, and specified locale
+  // if specified will, will build en_us, en_ploc, and specified locale
   if (process.env.MOOC_LOCALE) {
     LOCALES.push(process.env.MOOC_LOCALE);
   }
@@ -284,7 +284,7 @@ module.exports = function (grunt) {
     }
   };
 
-// Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
+  // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
       files: [
@@ -317,7 +317,7 @@ module.exports = function (grunt) {
     allFilesDest.push(outputDir + app + '.js');
   });
 
-// Use command-line tools to run browserify (faster/more stable this way)
+  // Use command-line tools to run browserify (faster/more stable this way)
   var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
       '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
       ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ] -d ' + allFilesSrc.join(' ') +
@@ -378,7 +378,7 @@ module.exports = function (grunt) {
   config.uglify.interpreter.files[outputDir + 'jsinterpreter/acorn.min.js'] =
       outputDir + 'jsinterpreter/acorn.js';
 
-// Run uglify task across all apps in parallel
+  // Run uglify task across all apps in parallel
   config.concurrent = {
     uglify: APPS.concat('common', 'interpreter').map(function (x) {
       return 'uglify:' + x;
