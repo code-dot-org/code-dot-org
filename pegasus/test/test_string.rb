@@ -39,5 +39,7 @@ class StringTest < Minitest::Test
     forced_string = iso_8859_string.force_8859_to_utf8
     assert_equal('ISO-8859 test à', forced_string)
     assert_equal('ISO-8859 replacement à', forced_string.gsub(/test/, 'replacement'))
+    assert_equal('normal string', 'normal string'.force_8859_to_utf8)
+    assert_equal('UTF-8sπ´å™£¢∞¡™£', 'UTF-8sπ´å™£¢∞¡™£'.force_8859_to_utf8)
   end
 end
