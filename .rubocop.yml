@@ -41,5 +41,4 @@ Style/Semicolon:
   AllowAsExpressionSeparator: true
 
 Style/NumericLiterals:
-  Enabled: true
   MinDigits: 7
