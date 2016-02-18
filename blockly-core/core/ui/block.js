@@ -1353,6 +1353,7 @@ Blockly.Block.prototype.setParent = function(newParent) {
   } else {
     // Remove this block from the blockSpace's list of top-most blocks.
     this.blockSpace.removeTopBlock(this);
+    this.setIsUnused();
   }
 
   this.parentBlock_ = newParent;
@@ -1370,8 +1371,6 @@ Blockly.Block.prototype.setParent = function(newParent) {
   } else {
     this.blockSpace.addTopBlock(this);
   }
-
-  this.setIsUnused();
 };
 
 /**
