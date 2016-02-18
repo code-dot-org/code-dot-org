@@ -99,7 +99,7 @@ npm test
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 
 ```
-grunt mochaTest --grep myTestName # e.g., 2_11, or requiredBlockUtils
+npm test -- --grep myTestName # e.g., 2_11, or requiredBlockUtils
 ```
 
 To debug tests using the webkit inspector, just add a `--debug` flag. This will launch a new browser window with a debugger attached.
@@ -108,16 +108,21 @@ thus far are to add debugger; statements in your code, or to have your debugger 
 it breaking in some jquery code before running tests (at which point you can go set your breakpoints).
 
 ```
-grunt mochaTest --grep='testname' --debug
+npm test -- --grep='testname' --debug
 ```
 
 We also have the ability to run a faster subset of tests without using grep. In particular, this will run without maze and turtle level tests.
 ```
-grunt mochaTest --fast
+npm test -- --fast
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
 
+If you are iterating on a particular test file that doesn't require phantomjs, install global mocha and run your individual test.  It will go way faster since it doesn't need to bundle everything before each run.
+```
+npm install -g mocha
+mocha test/ObserverTest.js
+```
 
 #### Full build with blockly-core changes
 
