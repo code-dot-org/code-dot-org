@@ -117,8 +117,7 @@ var RadioButtonEvents = React.createClass({
 /**
  * Gets the initial group id for a new radio button.
  * To figure out the initial group id, we:
- * 1) Try to find the most recently created radio button
- *    on the current screen.
+ * 1) Try to find the most recently created radio button on the current screen.
  * 2) If it exists, use that group id. If not, generate an unused group id.
  * @returns {string} The default group id for the new radio button
  */
@@ -126,7 +125,7 @@ function getInitialGroupId() {
   // Get the most recently added button on the current screen
   var lastRadioButton = getLastRadioButtonOnCurrentScreen();
 
-  if (lastRadioButton && lastRadioButton.getAttribute('name') && 
+  if (lastRadioButton && lastRadioButton.getAttribute('name') &&
       lastRadioButton.getAttribute('name').trim() !== '') {
 
     // We have an existing radio button, use that group id
@@ -145,15 +144,10 @@ function getLastRadioButtonOnCurrentScreen() {
   // Get the current visible screen element
   var currentScreen = $('#designModeViz .screen:visible').first();
 
-  // Find all the radio button elements on the current screen, if any
-  var radioButtons = currentScreen.find('input[type=radio]');
+  // Find the last radio button element on the current screen, if any
+  var radioButton = currentScreen.find('input[type=radio]').last();
 
-  if (radioButtons.length > 0) {
-    // Return the last radio button
-    return radioButtons[radioButtons.length - 1];
-  }
-
-  return null;
+  return radioButton.length > 0 ? radioButton[0] : null;
 }
 
 /**
