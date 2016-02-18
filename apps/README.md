@@ -21,7 +21,7 @@ npm install -g grunt-cli
 
 # Perform first full build
 npm install
-MOOC_DEV=1 grunt build
+npm run build
 ```
 
 ### Seeing your development version of Blockly in Dashboard
@@ -47,14 +47,15 @@ If the symlink is in place, then when you run later builds of blockly, your resu
 
 #### Full build
 
-To run a full build (minus localization):
+To run a full development build (minus localization):
 
 ```
-MOOC_DEV=1 grunt build
+npm run build
 ```
 
-* `MOOC_DEV=1` builds a 'debug' version with more readable javascript
-* `grunt rebuild` does a `clean` before a `build`
+* `npm run build` builds a 'debug' version with more readable javascript
+* `npm run build:dist` builds a minified version suitable for production 
+* `npm run clean` will clean the build directory
 
 See also: [Full build with blockly-core](#full-build-with-blockly-core-changes)
 
@@ -89,17 +90,16 @@ MOOC_LOCALE=ar_sa grunt build
 #### Running tests
 
 ```
-grunt build # run a non-debug build before testing
-grunt test
+npm test
 ```
 * If you see an error like `ReferenceError: Blockly is not defined` or notes about missing npm packages, double check that you've run `grunt build` before `grunt test`
 * Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.
-* `grunt test` will also be run via Travis CI when you create a pull request
+* These tests will also be run via Travis CI when you create a pull request
 
 To run an individual test, use the `--grep` option to target a file or Mocha `describe` identifier:
 
 ```
-grunt mochaTest --grep myTestName # e.g., 2_11, or requiredBlockUtils
+npm test -- --grep myTestName # e.g., 2_11, or requiredBlockUtils
 ```
 
 To debug tests using the webkit inspector, just add a `--debug` flag. This will launch a new browser window with a debugger attached.
@@ -108,16 +108,21 @@ thus far are to add debugger; statements in your code, or to have your debugger 
 it breaking in some jquery code before running tests (at which point you can go set your breakpoints).
 
 ```
-grunt mochaTest --grep='testname' --debug
+npm test -- --grep='testname' --debug
 ```
 
 We also have the ability to run a faster subset of tests without using grep. In particular, this will run without maze and turtle level tests.
 ```
-grunt mochaTest --fast
+npm test -- --fast
 ```
 
 - You can add new test files as /test/*Tests.js, see `/test/feedbackTests.js` as an example of adding a mock Blockly instance
 
+If you are iterating on a particular test file that doesn't require phantomjs, install global mocha and run your individual test.  It will go way faster since it doesn't need to bundle everything before each run.
+```
+npm install -g mocha
+mocha test/ObserverTest.js
+```
 
 #### Full build with blockly-core changes
 
@@ -163,5 +168,5 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
-- `grunt jshint` should report 0 warnings or errors.
+- `npm run lint` should report 0 warnings or errors.
 - See our [project style guide](../STYLEGUIDE.md) for details.
