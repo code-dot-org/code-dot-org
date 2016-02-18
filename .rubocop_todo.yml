@@ -93,10 +93,6 @@ Performance/Detect:
   Enabled: false
 
 # Offense count: 1
-Performance/DoubleStartEndWith:
-  Enabled: false
-
-# Offense count: 1
 # Cop supports --auto-correct.
 Performance/RedundantBlockCall:
   Enabled: false
