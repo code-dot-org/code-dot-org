@@ -37,6 +37,8 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 ## 3rd Party resources for middle school CS
 
+[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
 | [Bootstrap](http://www.bootstrapworld.org/) | Teach algebra through video-game programming, with a 20-hr module to go alongside or inside a math class | 3-day workshops for schools and districts. Fees range |
