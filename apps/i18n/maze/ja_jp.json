@@ -81,5 +81,6 @@
   "whileTooltip": "しゅうてんに　たどりつくまで、かこってある　うごきを　くりかえし　やってください。",
   "word": "ことばを　みつけましょう",
   "yes": "はい",
-  "youSpelled": "あなたのスペル"
+  "youSpelled": "あなたのスペル",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

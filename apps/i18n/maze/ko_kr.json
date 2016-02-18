@@ -81,5 +81,6 @@
   "whileTooltip": "어떤 조건이 될 때까지(~할 때까지), 반복적으로 실행합니다.",
   "word": "단어 찾기",
   "yes": "예",
-  "youSpelled": "말"
+  "youSpelled": "말",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

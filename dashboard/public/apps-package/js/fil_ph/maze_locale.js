@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Ulitin ang mga nakalakip na mga aksyon hanggang ang dulo ay maabot."},
 "word":function(d){return "Hanapin ang salita"},
 "yes":function(d){return "Oo"},
-"youSpelled":function(d){return "Ini-spell mo ang"}};
+"youSpelled":function(d){return "Ini-spell mo ang"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
