@@ -68,7 +68,7 @@ git push
 ```
 
 ### Blockly-core
-1. Make changes in `blockly-core/i18n/en-US/core.json`                                                                
+1. Make changes in `blockly-core/i18n/locales/en-US/core.json`
 2. Run: `cd blockly-core/i18n && ./codeorg-messages.sh && cp ../msg/js/en_us.js ../../apps/lib/blockly/ && cd ../../apps && grunt build && cd -`
 3. Check in the resulting changes in the files:
   * `blockly-core/i18n/locales/en-US/core.json`
