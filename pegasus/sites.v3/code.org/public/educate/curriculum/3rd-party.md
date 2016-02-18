@@ -3,6 +3,7 @@ title: 3rd Party Educator Resources
 nav: educate_nav
 ---
 
+[](If you update the resources here, don't forget to also update /educate/curriculum/xx-school for ES, MS, and HS)
 
 # 3rd Party Educator Resources
 
