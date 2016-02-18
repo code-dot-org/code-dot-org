@@ -158,6 +158,8 @@ Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5
 
 ## 3rd Party resources for elementary school CS
 
+[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|---------------|
 | [Code Studio](/educate/k5)  (Code.org)| 4 courses blend online tutorials with “unplugged” activities, FREE | 1-day weekend workshops across the US, FREE |
