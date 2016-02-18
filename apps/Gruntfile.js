@@ -576,7 +576,12 @@ module.exports = function (grunt) {
     grunt.task.run('jshint:some');
   });
 
-  grunt.registerTask('mochaTest', ['exec:mochaTest']);
+  grunt.registerTask('mochaTest', [
+    'newer:messages',
+    'newer:copy:static',
+    'newer:concat',
+    'exec:mochaTest'
+  ]);
 
   grunt.registerTask('test', ['jshint:all', 'mochaTest']);
 
