@@ -37,6 +37,9 @@ Metrics/LineLength:
 Metrics/ModuleLength:
   Enabled: false
 
+Metrics/BlockNesting:
+  Enabled: false
+
 Style/Semicolon:
   AllowAsExpressionSeparator: true
 
