@@ -562,9 +562,12 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 // var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
 exports.calculateCumulativeLength = function (code) {
-  return code.split(/\n/).map(function (line) {
-    return line.length + 1;
+  var total = 0, result = [0];
+  code.split(/\n/).forEach(function (line) {
+    total += line.length + 1;
+    result.push(total);
   });
+  return result;
 };
 
 // Fast binary search implementation
