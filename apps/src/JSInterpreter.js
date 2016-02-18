@@ -45,6 +45,7 @@ var JSInterpreter = module.exports = function (options) {
   this.paused = false;
   this.yieldExecution = false;
   this.startedHandlingEvents = false;
+  this.executionError = null;
   this.nextStep = StepType.RUN;
   this.maxValidCallExpressionDepth = 0;
   this.executeLoopDepth = 0;
@@ -155,7 +156,8 @@ JSInterpreter.prototype.parse = function (options) {
     /* jshint nonew:true */
   }
   catch(err) {
-    this.handleError(err);
+    this.executionError = err;
+    this.handleError();
   }
 
 };
@@ -326,10 +328,12 @@ JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) 
 /**
  * Determines if the program is done executing.
  *
- * @return {boolean} true if program is complete.
+ * @return {boolean} true if program is complete (or an error has occurred).
  */
 JSInterpreter.prototype.isProgramDone = function () {
-  return !this.interpreter || !this.interpreter.stateStack.length;
+  return this.executionError ||
+      !this.interpreter ||
+      !this.interpreter.stateStack.length;
 };
 
 /**
@@ -465,8 +469,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     if (inUserCode && unwindingAfterStep) {
       this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
-    var err = safeStepInterpreter(this);
-    if (this.interpreter.stateStack.length) {
+    this.executionError = safeStepInterpreter(this);
+    if (!this.executionError && this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
       if (inUserCode) {
@@ -546,8 +550,8 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      if (err) {
-        this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      if (this.executionError) {
+        this.handleError(inUserCode ? (userCodeRow + 1) : undefined);
       }
       this.executeLoopDepth--;
       return;
@@ -563,19 +567,22 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
 
 /**
  * Helper that wraps some error preprocessing before we notify observers that
- * an execution error has occurred.
- * @param {!Error} err
+ * an execution error has occurred. Operates on the current error that is
+ * already saved as this.executionError
+ *
  * @param {number} [lineNumber]
  */
-JSInterpreter.prototype.handleError = function (err, lineNumber) {
-  if (!lineNumber && err instanceof SyntaxError) {
+JSInterpreter.prototype.handleError = function (lineNumber) {
+  if (!lineNumber && this.executionError instanceof SyntaxError) {
     // syntax errors came before execution (during parsing), so we need
     // to determine the proper line number by looking at the exception
-    lineNumber = err.loc.line;
+    lineNumber = this.executionError.loc.line;
     // Now select this location in the editor, since we know we didn't hit
     // this while executing (in which case, it would already have been selected)
-    codegen.selectEditorRowColError(this.studioApp.editor, lineNumber - 1,
-        err.loc.column);
+    codegen.selectEditorRowColError(
+        this.studioApp.editor,
+        lineNumber - 1,
+        this.executionError.loc.column);
   }
 
   // Select code that just executed:
@@ -585,7 +592,7 @@ JSInterpreter.prototype.handleError = function (err, lineNumber) {
     lineNumber = 1 + this.getNearestUserCodeLine();
   }
 
-  this.onExecutionError.notifyObservers(err, lineNumber);
+  this.onExecutionError.notifyObservers(this.executionError, lineNumber);
 };
 
 /**
