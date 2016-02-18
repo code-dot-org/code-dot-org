@@ -7,7 +7,7 @@ class ApiController < ApplicationController
   end
 
   def user_hero
-    head :not_found if not current_user
+    head :not_found if !current_user
   end
 
   def section_progress

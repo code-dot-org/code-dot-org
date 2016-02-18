@@ -17,7 +17,7 @@ class Table
   end
 
   def exists?()
-    not @table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1).first.nil?
+    !@table.where(app_id: @channel_id, storage_id: @storage_id, table_name: @table_name).limit(1).first.nil?
   end
 
   def items()
