@@ -130,7 +130,9 @@ Blockly.BlockSvgUnused.prototype.render = function(svgGroup) {
 
   this.bindClickEvent();
 
-  var width = groupRect.width + 2 * FRAME_MARGIN_SIDE;
+  var minWidth = this.frameText_.getBoundingClientRect().width + this.frameHelp_.getBoundingClientRect().width;
+
+  var width = Math.max(groupRect.width, minWidth) + 2 * FRAME_MARGIN_SIDE;
   var height = groupRect.height + FRAME_MARGIN_TOP + FRAME_MARGIN_BOTTOM + FRAME_HEADER_HEIGHT;
 
   this.frameBase_.setAttribute('width', width);
