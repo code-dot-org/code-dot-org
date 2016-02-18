@@ -1677,7 +1677,10 @@ Blockly.Block.prototype.isUnused = function() {
 
 Blockly.Block.prototype.setIsUnused = function(isUnused) {
   if (isUnused === undefined) {
-    isUnused = this.previousConnection !== null && Blockly.mainBlockSpace && Blockly.mainBlockSpace.isTopBlock(this);
+    isUnused = this.previousConnection !== null &&
+        Blockly.mainBlockSpace &&
+        Blockly.mainBlockSpace.isReadOnly() === false &&
+        Blockly.mainBlockSpace.isTopBlock(this);
   }
   this.svg_.setIsUnused(isUnused);
   this.childBlocks_.forEach(function (block) {
