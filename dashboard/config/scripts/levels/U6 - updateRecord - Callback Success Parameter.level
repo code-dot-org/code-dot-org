@@ -7,9 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "markdown_instructions": "#*updateRecord* Callback Function\r\n\r\nYou may have noticed that the callback function for `updateRecord` has an additional parameter: `success`. When `updateRecord` finishes, it returns the updated record as well as a boolean called `success`, which is `true` if the record was successfully updated and `false` otherwise.\r\n\r\nThe `success` parameter is useful in altering how your program behaves based on whether an error occurred when your program tried to update a record.\r\n\r\n**Your code from the previous exercise has been provided.**\r\n\r\n# Do This: \r\n\r\n* Add a line to the beginning of `updateSong` that sets `songToUpdate.seconds`.\r\n\t* **Hint:** \"Eye of the Tiger\" is 244 seconds long.\r\n* Add an `if-else` block inside the callback function for `updateRecord`.\r\n\t* If `updateRecord` finishes successfully, print out the updated record’s title and artist.\r\n\t* Otherwise, if `updateRecord` does not finish successfully, print out an error message.\r\n* Run the program and verify that the updated song title and artist are still printed to the console.\r\n* Open the Data Viewer and check that the record for \"Eye of the Tiger\" is now fully filled in.\r\n\r\n**Your code should end up looking similar to the code depicted in the image.**\r\n\r\n![](https://images.code.org/b95ac5c5c45942b3eef85823dee48c42-image-1455666651198.PNG)",
     "is_k1": "false",
