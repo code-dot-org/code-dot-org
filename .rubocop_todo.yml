@@ -435,11 +435,6 @@ Style/NilComparison:
 Style/NonNilCheck:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/NumericLiterals:
-  MinDigits: 9
-
 # Offense count: 10
 # Cop supports --auto-correct.
 # Configuration parameters: AllowSafeAssignment.
