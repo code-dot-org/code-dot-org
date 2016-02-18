@@ -478,7 +478,7 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
-  var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
+  var serialization = designModeVizClone[0].outerHTML;
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
