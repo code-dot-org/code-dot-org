@@ -393,6 +393,15 @@ Blockly.BlockSpace.prototype.addTopBlock = function(block) {
 };
 
 /**
+ * Checks to see if the given block is in the list of top blocks
+ * @param {!Blockly.Block} block
+ * @return {boolean}
+ */
+Blockly.BlockSpace.prototype.isTopBlock = function (block) {
+  return this.topBlocks_.includes(block);
+};
+
+/**
  * Remove a block from the list of top blocks.
  * @param {!Blockly.Block} block Block to remove.
  */
@@ -459,6 +468,17 @@ Blockly.BlockSpace.prototype.getTopBlocks = function(ordered, shareMainModal) {
 Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
   return goog.array.filter(this.getAllBlocks(), function(block) {
     return block.isUserVisible();
+  });
+};
+
+/**
+ * Find all used blocks in this blockSpace.  No particular order.
+ * Filters out "unused" (unattached) blocks
+ * @return {!Array.<!Blockly.Block>} Array of blocks.
+ */
+Blockly.BlockSpace.prototype.getAllUsedBlocks = function() {
+  return goog.array.filter(this.getAllBlocks(), function(block) {
+    return !block.isUnused();
   });
 };
 
