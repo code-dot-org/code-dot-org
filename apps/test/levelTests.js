@@ -83,7 +83,6 @@ describe('Level tests', function() {
   var studioApp;
   var originalRender;
   var clock, tickInterval;
-  var originalOnTick;
 
   before(function(done) {
     this.timeout(15000);

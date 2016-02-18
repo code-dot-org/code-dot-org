@@ -1,6 +1,5 @@
 var chai = require('chai');
 var chaiSubset = require('chai-subset');
-require("babelify/polyfill"); // required for Promises in IE / Phantom
 chai.use(chaiSubset);
 chai.config.includeStack = true;
 var assert = chai.assert;
