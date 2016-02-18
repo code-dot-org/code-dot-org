@@ -6,12 +6,15 @@
       %br/
       %br/
       Please help us by
-      %a{href: "https://docs.google.com/forms/d/13O2Yu1d48NfmsBw6QcdPKAeQcQCBW6mtgkLxnWiwuxQ/viewform?entry.1857644974=__other_option__&entry.1857644974.other_option_response=#{current_user.id}", target: "_blank"}
-        filling out this X minute survey.
+      %a{href: "https://docs.google.com/forms/d/10Qebl7Gi9DTf-RDt-0v78jVFdzJN0mWTSHgAuk6V5gU/viewform?entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}&entry.1146050975&entry.796977513&entry.999252886", target: "_blank"}
+        filling out this 5 minute survey.
 
     #surveybody
       %h1{style: "margin-top:0px; color: rgb(80,80,80)"} Code.org Program Improvement Survey
-      %div{style: "margin-left: 0px"} One of our primary goals at Code.org is to improve overall diversity within computer science education. Please take a minute to answer 2 questions about your classroom so we can estimate how we're doing. None of this information will be identifiable to your students specifically, according to our terms of service.
+      %div{style: "margin-left: 0px"}
+        One of our primary goals at Code.org is to improve overall diversity within computer science education. Please answer 2 questions about your classroom so we can estimate how we're doing. To protect their privacy, we will not ask your students for this information so that it is not be linked to their specific accounts. (See our
+        = succeed '.)' do
+          %a{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
       %br/
       = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
         .survey_left{style: "width: 50%; float: left"}
@@ -21,7 +24,7 @@
                 Of your students using Code.org's courses, how many are
           .dots{style: "padding-top: 10px; padding-left: 20px; padding-bottom: 20px"}
             - SurveyResult::ETHNICITIES.each do |key, value|
-              %input{type: "number",  style: "width:40px; font-size: 16px; text-align: right; margin: 5px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()", placeholder: "0"}
+              %input{style: "width:40px; height: 24px; font-size: 14px; text-align: right; margin: 6px; margin-left: 10px", name: "survey[survey2016_ethnicity_#{key}]", onclick: "enableSurveySubmit()", placeholder: "0"}
               =value
               %br/
         .survey_right{style: "width: 45%; float: left; border-left: 1px solid #ccc; padding-left:20px"}
