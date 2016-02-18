@@ -6,7 +6,7 @@ task :pseudolocalize => :environment do
   end
 
   def pseudolocalize_hash(h)
-    h.reduce({}) do |acc, (k, v)|
+    h.inject({}) do |acc, (k, v)|
       acc[k] = pseudolocalize(v)
       acc
     end

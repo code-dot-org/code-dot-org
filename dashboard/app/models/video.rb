@@ -22,8 +22,8 @@ class Video < ActiveRecord::Base
   EMBED_URL_REGEX = /(?:http[s]?:)?\/\/(?:www\.)?(?:youtube(?:education)?)\.com\/embed\/(?<id>#{YOUTUBE_ID_REGEX})/
 
   def self.check_i18n_names
-    video_keys = Video.all.collect(&:key)
-    i18n_keys = I18n.t('data.video.name').keys.collect(&:to_s)
+    video_keys = Video.all.map(&:key)
+    i18n_keys = I18n.t('data.video.name').keys.map(&:to_s)
 
     missing_keys = video_keys - i18n_keys
     unless missing_keys.empty?

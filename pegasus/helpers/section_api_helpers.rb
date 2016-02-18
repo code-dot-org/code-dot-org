@@ -163,7 +163,7 @@ class DashboardSection
   end
 
   def self.valid_grades
-    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+    @@valid_grades ||= ['K'] + (1..12).map(&:to_s) + ['Other']
   end
 
   def self.valid_grade?(grade)

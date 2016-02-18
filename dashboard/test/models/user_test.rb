@@ -914,7 +914,7 @@ class UserTest < ActiveSupport::TestCase
       User.create!(@good_data.merge(name: name, email: "test_email#{i+=1}@test.xx")) # use real create method not the factory
     end
 
-    assert_equal expected_usernames, users.collect(&:username)
+    assert_equal expected_usernames, users.map(&:username)
   end
 
   test 'email confirmation required for teachers' do

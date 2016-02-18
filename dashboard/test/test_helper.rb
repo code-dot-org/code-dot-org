@@ -102,13 +102,13 @@ class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
 
   def assert_creates(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
+    assert_difference(args.map(&:to_s).map {|class_name| "#{class_name}.count"}) do
       yield
     end
   end
 
   def assert_does_not_create(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
+    assert_no_difference(args.map(&:to_s).map {|class_name| "#{class_name}.count"}) do
       yield
     end
   end
