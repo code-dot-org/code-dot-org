@@ -69,12 +69,10 @@ var JSInterpreter = module.exports = function (options) {
  *        event handlers that can be invoked by native code. (default false)
  */
 JSInterpreter.prototype.parse = function (options) {
-  if (!this.studioApp.hideSource) {
-    this.codeInfo = {};
-    this.codeInfo.userCodeStartOffset = 0;
-    this.codeInfo.userCodeLength = options.code.length;
-    this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(options.code);
-  }
+  this.codeInfo = {};
+  this.codeInfo.userCodeStartOffset = 0;
+  this.codeInfo.userCodeLength = options.code.length;
+  this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(options.code);
 
   var self = this;
   if (options.enableEvents) {
@@ -648,9 +646,6 @@ JSInterpreter.prototype.selectCurrentCode = function (highlightClass) {
  * of the userCode area, the return value is -1
  */
 JSInterpreter.prototype.getUserCodeLine = function () {
-  if (this.studioApp.hideSource) {
-    return -1;
-  }
   var userCodeRow = -1;
   if (this.interpreter.stateStack[0]) {
     var node = this.interpreter.stateStack[0].node;
