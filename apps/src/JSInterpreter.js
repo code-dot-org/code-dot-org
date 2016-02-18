@@ -324,6 +324,15 @@ JSInterpreter.prototype.removeStoppedAtBreakpointRowForScope = function (scope) 
 };
 
 /**
+ * Determines if the program is done executing.
+ *
+ * @return {boolean} true if program is complete.
+ */
+JSInterpreter.prototype.isProgramDone = function () {
+  return !this.interpreter || !this.interpreter.stateStack.length;
+};
+
+/**
  * Nodes that are visited between expressions, signifying the previous
  * expression is done.
  */
@@ -457,7 +466,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
       this.replaceStoppedAtBreakpointRowForScope(currentScope, userCodeRow);
     }
     var err = safeStepInterpreter(this);
-    if (!err) {
+    if (this.interpreter.stateStack.length) {
       var state = this.interpreter.stateStack[0], nodeType = state.node.type;
       this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
       if (inUserCode) {
@@ -537,7 +546,9 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
         }
       }
     } else {
-      this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      if (err) {
+        this.handleError(err, inUserCode ? (userCodeRow + 1) : undefined);
+      }
       this.executeLoopDepth--;
       return;
     }
