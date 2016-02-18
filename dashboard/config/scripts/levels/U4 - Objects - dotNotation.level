@@ -44,8 +44,10 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "debugger_disabled": "false"
-  }
+    "debugger_disabled": "false",
+    "encrypted_examples": "tm1VKlq578+NdosPetwpRMdPSS0IRDATJnGF5ppO5WYHNy1LCHeP6khp9WLT\ngUh5\n"
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>
