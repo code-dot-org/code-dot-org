@@ -30,7 +30,7 @@ exports.TestResults = {
   TOO_FEW_BLOCKS_FAIL: 2,             // Fewer than the ideal number of blocks used.
   LEVEL_INCOMPLETE_FAIL: 3,           // Default failure to complete a level.
   MISSING_BLOCK_UNFINISHED: 4,        // A required block was not used.
-  EXTRA_TOP_BLOCKS_FAIL: 5,           // There was more than one top-level block.
+  EXTRA_TOP_BLOCKS_FAIL: 5,           // There was more than one top-level block. DEPRECATED
   RUNTIME_ERROR_FAIL: 6,              // There was a runtime error in the program.
   SYNTAX_ERROR_FAIL: 7,               // There was a syntax error in the program.
   MISSING_BLOCK_FINISHED: 10,         // The level was solved without required block.
@@ -56,6 +56,7 @@ exports.TestResults = {
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
   APP_SPECIFIC_ACCEPTABLE_FAIL: 21,       // Application-specific acceptable failure.
   MISSING_RECOMMENDED_BLOCK_FINISHED: 22, // The level was solved without a recommended block
+  PASS_WITH_EXTRA_TOP_BLOCKS: 23,         // There was more than one top-level block.
 
   // Other.
   FREE_PLAY: 30,   // The user is in free-play mode.

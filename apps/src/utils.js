@@ -1,4 +1,4 @@
-/* global define */
+/* global define, $ */
 // Strict linting: Absorb into global config when possible
 /* jshint
  unused: true,
@@ -6,6 +6,8 @@
  maxlen: 120
  */
 'use strict';
+
+var msg = require('./locale');
 
 var savedAmd;
 
@@ -386,4 +388,30 @@ exports.escapeText = function (text) {
     }).join('');
 
   return returnValue;
+};
+
+exports.showUnusedBlockQtip = function (targetElement) {
+  $(targetElement).qtip({
+    content: {
+      text: '<h4>' + msg.unattachedBlockTipTitle() +'</h4><p>' + msg.unattachedBlockTipBody() + '</p>',
+      title: {
+        button: $('<div class="tooltip-x-close"/>')
+      }
+    },
+    position: {
+      my: "bottom left",
+      at: "top right"
+    },
+    style: {
+      classes: "cdo-qtips",
+      tip: {
+        width: 20,
+        height: 20
+      }
+    },
+    hide: {
+      event: 'unfocus'
+    },
+    show: false // don't show on mouseover
+  }).qtip('show');
 };
