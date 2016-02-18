@@ -11,11 +11,10 @@ describe("JSInterpreter", function () {
 
   function initWithCode(code) {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
-    // needed. Mock `getUserCodeLine` so the code is considered inUserCode.
+    // needed.
     jsInterpreter = new JSInterpreter({
       studioApp: {hideSource: true}
     });
-    jsInterpreter.getUserCodeLine = function () { return 0; };
 
     // Initialize a test program
     jsInterpreter.parse({code: code});
