@@ -14,6 +14,7 @@ var dropletConfig = require('./dropletConfig');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
+var GameLabP5 = require('./GameLabP5');
 var assetPrefix = require('../assetManagement/assetPrefix');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
@@ -44,15 +45,8 @@ var GameLab = function () {
   this.currentCmdQueue = null;
   this.drawInProgress = false;
   this.setupInProgress = false;
-  this.p5 = null;
-  this.p5decrementPreload = null;
-  this.p5eventNames = [
-    'mouseMoved', 'mouseDragged', 'mousePressed', 'mouseReleased',
-    'mouseClicked', 'mouseWheel',
-    'keyPressed', 'keyReleased', 'keyTyped'
-  ];
-  this.p5specialFunctions = ['preload', 'draw', 'setup'].concat(this.p5eventNames);
-
+  this.startedHandlingEvents = false;
+  this.gameLabP5 = new GameLabP5();
   this.api = api;
   this.api.injectGameLab(this);
   this.apiJS = apiJavascript;
@@ -89,66 +83,12 @@ GameLab.prototype.init = function (config) {
 
   config.usesAssets = true;
 
-  window.p5.prototype.setupGlobalMode = function () {
-    /*
-     * Copied code from p5 for no-sketch Global mode
-     */
-    var p5 = window.p5;
-
-    this._isGlobal = true;
-    // Loop through methods on the prototype and attach them to the window
-    for (var p in p5.prototype) {
-      if(typeof p5.prototype[p] === 'function') {
-        var ev = p.substring(2);
-        if (!this._events.hasOwnProperty(ev)) {
-          window[p] = p5.prototype[p].bind(this);
-        }
-      } else {
-        window[p] = p5.prototype[p];
-      }
-    }
-    // Attach its properties to the window
-    for (var p2 in this) {
-      if (this.hasOwnProperty(p2)) {
-        window[p2] = this[p2];
-      }
-    }
-  };
-
-  // Override p5.loadImage so we can modify the URL path param
-  if (!GameLab.baseP5loadImage) {
-    GameLab.baseP5loadImage = window.p5.prototype.loadImage;
-    window.p5.prototype.loadImage = function (path, successCallback, failureCallback) {
-      path = assetPrefix.fixPath(path);
-      return GameLab.baseP5loadImage.call(this, path, successCallback, failureCallback);
-    };
-  }
-
-  // Override p5.redraw to make it two-phase after userDraw()
-  window.p5.prototype.redraw = function () {
-    var userSetup = this.setup || window.setup;
-    var userDraw = this.draw || window.draw;
-    if (typeof userDraw === 'function') {
-      this.push();
-      if (typeof userSetup === 'undefined') {
-        this.scale(this.pixelDensity, this.pixelDensity);
-      }
-      var self = this;
-      this._registeredMethods.pre.forEach(function (f) {
-        f.call(self);
-      });
-      userDraw();
-    }
-  };
-
-  // Create 2nd phase function afterUserDraw()
-  window.p5.prototype.afterUserDraw = function () {
-    var self = this;
-    this._registeredMethods.post.forEach(function (f) {
-      f.call(self);
-    });
-    this.pop();
-  };
+  this.gameLabP5.init({
+    onExecutionStarting: this.onP5ExecutionStarting.bind(this),
+    onPreload: this.onP5Preload.bind(this),
+    onSetup: this.onP5Setup.bind(this),
+    onDraw: this.onP5Draw.bind(this)
+  });
 
   config.dropletConfig = dropletConfig;
   config.appMsg = msg;
@@ -253,42 +193,12 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
-  if (this.p5) {
-    this.p5.remove();
-    this.p5 = null;
-    this.p5decrementPreload = null;
-
-    // Clear registered methods on the prototype:
-    for (var member in window.p5.prototype._registeredMethods) {
-      delete window.p5.prototype._registeredMethods[member];
-    }
-    window.p5.prototype._registeredMethods = { pre: [], post: [], remove: [] };
-    delete window.p5.prototype._registeredPreloadMethods.gamelabPreload;
-
-    window.p5.prototype.allSprites = new window.Group();
-    window.p5.prototype.spriteUpdate = true;
-
-    window.p5.prototype.camera = new window.Camera(0, 0, 1);
-    window.p5.prototype.camera.init = false;
-
-    //keyboard input
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.readPresses);
-
-    //automatic sprite update
-    window.p5.prototype.registerMethod('pre', window.p5.prototype.updateSprites);
-
-    //quadtree update
-    window.p5.prototype.registerMethod('post', window.updateTree);
-
-    //camera push and pop
-    window.p5.prototype.registerMethod('pre', window.cameraPush);
-    window.p5.prototype.registerMethod('post', window.cameraPop);
-
-  }
-
-  // Import to reset this after this.p5 has been removed above
+  this.gameLabP5.resetExecution();
+  
+  // Import to reset these after this.gameLabP5 has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
+  this.startedHandlingEvents = false;
 
   this.debugger_.detach();
   this.consoleLogger_.detach();
@@ -299,10 +209,6 @@ GameLab.prototype.reset = function (ignore) {
     this.JSInterpreter = null;
   }
   this.executionError = null;
-
-  window.p5.prototype.gamelabPreload = _.bind(function () {
-    this.p5decrementPreload = window.p5._getDecrementPreload(arguments, this.p5);
-  }, this);
 };
 
 /**
@@ -354,169 +260,7 @@ GameLab.prototype.execute = function() {
     return;
   }
 
-  /* jshint nonew:false */
-  new window.p5(_.bind(function (p5obj) {
-      this.p5 = p5obj;
-
-      p5obj.registerPreloadMethod('gamelabPreload', window.p5.prototype);
-
-      // Overload _draw function to make it two-phase
-      p5obj._draw = function () {
-        this._thisFrameTime = window.performance.now();
-        var time_since_last = this._thisFrameTime - this._lastFrameTime;
-        var target_time_between_frames = 1000 / this._targetFrameRate;
-
-        // only draw if we really need to; don't overextend the browser.
-        // draw if we're within 5ms of when our next frame should paint
-        // (this will prevent us from giving up opportunities to draw
-        // again when it's really about time for us to do so). fixes an
-        // issue where the frameRate is too low if our refresh loop isn't
-        // in sync with the browser. note that we have to draw once even
-        // if looping is off, so we bypass the time delay if that
-        // is the case.
-        var epsilon = 5;
-        if (!this.loop ||
-            time_since_last >= target_time_between_frames - epsilon) {
-          this._setProperty('frameCount', this.frameCount + 1);
-          this.redraw();
-        } else {
-          this._drawEpilogue();
-        }
-      }.bind(p5obj);
-
-      p5obj.afterRedraw = function () {
-        this._updatePAccelerations();
-        this._updatePRotations();
-        this._updatePMouseCoords();
-        this._updatePTouchCoords();
-        this._frameRate = 1000.0/(this._thisFrameTime - this._lastFrameTime);
-        this._lastFrameTime = this._thisFrameTime;
-
-        this._drawEpilogue();
-      }.bind(p5obj);
-
-      p5obj._drawEpilogue = function () {
-        //mandatory update values(matrixs and stack) for 3d
-        if(this._renderer.isP3D){
-          this._renderer._update();
-        }
-
-        // get notified the next time the browser gives us
-        // an opportunity to draw.
-        if (this._loop) {
-          this._requestAnimId = window.requestAnimationFrame(this._draw);
-        }
-      }.bind(p5obj);
-
-      // Overload _setup function to make it two-phase
-      p5obj._setup = function() {
-
-        // return preload functions to their normal vals if switched by preload
-        var context = this._isGlobal ? window : this;
-        if (typeof context.preload === 'function') {
-          for (var f in this._preloadMethods) {
-            context[f] = this._preloadMethods[f][f];
-          }
-        }
-
-        // Short-circuit on this, in case someone used the library in "global"
-        // mode earlier
-        if (typeof context.setup === 'function') {
-          context.setup();
-        } else {
-          this._setupEpilogue();
-        }
-
-      }.bind(p5obj);
-
-      p5obj._setupEpilogue = function () {
-        // // unhide hidden canvas that was created
-        // this.canvas.style.visibility = '';
-        // this.canvas.className = this.canvas.className.replace('p5_hidden', '');
-
-        // unhide any hidden canvases that were created
-        var reg = new RegExp(/(^|\s)p5_hidden(?!\S)/g);
-        var canvases = document.getElementsByClassName('p5_hidden');
-        for (var i = 0; i < canvases.length; i++) {
-          var k = canvases[i];
-          k.style.visibility = '';
-          k.className = k.className.replace(reg, '');
-        }
-        this._setupDone = true;
-
-      }.bind(p5obj);
-
-      // Do this after we're done monkeying with the p5obj instance methods:
-      p5obj.setupGlobalMode();
-
-      window.preload = function () {
-        // Call our gamelabPreload() to force _start/_setup to wait.
-        window.gamelabPreload();
-
-        /*
-         * p5 "preload methods" were modified before this preload function was
-         * called and substituted with wrapped version that increment a preload
-         * count and will later decrement a preload count upon async load
-         * completion. Since p5 is running in global mode, it only wrapped the
-         * methods on the window object. We need to place the wrapped methods on
-         * the p5 object as well before we marshal to the interpreter
-         */
-        for (var method in this.p5._preloadMethods) {
-          this.p5[method] = window[method];
-        }
-
-        this.initInterpreter();
-        // And execute the interpreter for the first time:
-        if (this.JSInterpreter && this.JSInterpreter.initialized()) {
-          this.JSInterpreter.executeInterpreter(true);
-
-          // In addition, execute the global function called preload()
-          if (this.eventHandlers.preload) {
-            this.eventHandlers.preload.apply(null);
-          }
-        }
-      }.bind(this);
-      window.setup = function () {
-        /*
-         * p5 "preload methods" have now been restored and the wrapped version
-         * are no longer in use. Since p5 is running in global mode, it only
-         * restored the methods on the window object. We need to restore the
-         * methods on the p5 object to match
-         */
-        for (var method in this.p5._preloadMethods) {
-          this.p5[method] = window[method];
-        }
-
-        p5obj.createCanvas(400, 400);
-        if (this.JSInterpreter) {
-          // Replace restored preload methods for the interpreter:
-          for (method in this.p5._preloadMethods) {
-            this.JSInterpreter.createGlobalProperty(method, this.p5[method], this.p5);
-          }
-
-          if (this.eventHandlers.setup) {
-            this.setupInProgress = true;
-            this.eventHandlers.setup.apply(null);
-          }
-          this.completeSetupIfSetupComplete();
-        }
-      }.bind(this);
-      window.draw = _.bind(function () {
-        if (this.JSInterpreter && this.eventHandlers.draw) {
-          this.drawInProgress = true;
-          this.eventHandlers.draw.apply(null);
-        }
-        this.completeRedrawIfDrawComplete();
-      }, this);
-      this.p5eventNames.forEach(function (eventName) {
-        window[eventName] = _.bind(function () {
-          if (this.JSInterpreter && this.eventHandlers[eventName]) {
-            this.eventHandlers[eventName].apply(null);
-          }
-        }, this);
-      }, this);
-    }, this), 'divGameLab');
-  /* jshint nonew:true */
+  this.gameLabP5.startExecution();
 
   if (!this.level.editCode) {
     this.code = Blockly.Generator.blockSpaceToCode('JavaScript');
@@ -542,49 +286,7 @@ GameLab.prototype.initInterpreter = function () {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-    customMarshalGlobalProperties: {
-      width: this.p5,
-      height: this.p5,
-      displayWidth: this.p5,
-      displayHeight: this.p5,
-      windowWidth: this.p5,
-      windowHeight: this.p5,
-      focused: this.p5,
-      frameCount: this.p5,
-      keyIsPressed: this.p5,
-      key: this.p5,
-      keyCode: this.p5,
-      mouseX: this.p5,
-      mouseY: this.p5,
-      pmouseX: this.p5,
-      pmouseY: this.p5,
-      winMouseX: this.p5,
-      winMouseY: this.p5,
-      pwinMouseX: this.p5,
-      pwinMouseY: this.p5,
-      mouseButton: this.p5,
-      mouseIsPressed: this.p5,
-      touchX: this.p5,
-      touchY: this.p5,
-      ptouchX: this.p5,
-      ptouchY: this.p5,
-      touches: this.p5,
-      touchIsDown: this.p5,
-      pixels: this.p5,
-      deviceOrientation: this.p5,
-      accelerationX: this.p5,
-      accelerationY: this.p5,
-      accelerationZ: this.p5,
-      pAccelerationX: this.p5,
-      pAccelerationY: this.p5,
-      pAccelerationZ: this.p5,
-      rotationX: this.p5,
-      rotationY: this.p5,
-      rotationZ: this.p5,
-      pRotationX: this.p5,
-      pRotationY: this.p5,
-      pRotationZ: this.p5
-    }
+    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties()
   });
   this.JSInterpreter.onExecutionError.register(this.handleExecutionError.bind(this));
   this.consoleLogger_.attachTo(this.JSInterpreter);
@@ -599,7 +301,7 @@ GameLab.prototype.initInterpreter = function () {
     return;
   }
 
-  this.p5specialFunctions.forEach(function (eventName) {
+  this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
       this.eventHandlers[eventName] =
@@ -607,36 +309,20 @@ GameLab.prototype.initInterpreter = function () {
     }
   }, this);
 
-  codegen.customMarshalObjectList = [
-    window.p5,
-    window.Sprite,
-    window.Camera,
-    window.Animation,
-    window.p5.Vector,
-    window.p5.Color,
-    window.p5.Image,
-    window.p5.Renderer,
-    window.p5.Graphics,
-    window.p5.Font,
-    window.p5.Table,
-    window.p5.TableRow,
-    window.p5.Element
-  ];
-  // The p5play Group object should be custom marshalled, but its constructor
-  // actually creates a standard Array instance with a few additional methods
-  // added. The customMarshalModifiedObjectList allows us to set up additional
-  // object types to be custom marshalled by matching both the instance type
-  // and the presence of additional method name on the object.
-  codegen.customMarshalModifiedObjectList = [ { instance: Array, methodName: 'draw' } ];
+  codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
+  codegen.customMarshalModifiedObjectList =
+      this.gameLabP5.getCustomMarshalModifiedObjectList();
 
-  // Insert everything on p5 and the Group constructor from p5play into the
-  // global namespace of the interpreter:
-  for (var prop in this.p5) {
-    this.JSInterpreter.createGlobalProperty(prop, this.p5[prop], this.p5);
+  var propList = this.gameLabP5.getGlobalPropertyList();
+  for (var prop in propList) {
+    // Each entry in the propList is an array with 2 elements:
+    // propListItem[0] - a native property value
+    // propListItem[1] - the property's parent object
+    this.JSInterpreter.createGlobalProperty(
+        prop,
+        propList[prop][0],
+        propList[prop][1]);
   }
-  this.JSInterpreter.createGlobalProperty('Group', window.Group);
-  // And also create a 'p5' object in the global namespace:
-  this.JSInterpreter.createGlobalProperty('p5', { Vector: window.p5.Vector });
 
   /*
   if (this.checkForEditCodePreExecutionFailure()) {
@@ -651,10 +337,10 @@ GameLab.prototype.onTick = function () {
   if (this.JSInterpreter) {
     this.JSInterpreter.executeInterpreter();
 
-    if (this.p5decrementPreload && this.JSInterpreter.startedHandlingEvents) {
+    if (!this.startedHandlingEvents && this.JSInterpreter.startedHandlingEvents) {
       // Call this once after we've started handling events
-      this.p5decrementPreload();
-      this.p5decrementPreload = null;
+      this.startedHandlingEvents = true;
+      this.gameLabP5.notifyUserGlobalCodeComplete();
     }
 
     this.completeSetupIfSetupComplete();
@@ -662,19 +348,87 @@ GameLab.prototype.onTick = function () {
   }
 };
 
-GameLab.prototype.completeRedrawIfDrawComplete = function () {
-  if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.p5.afterUserDraw();
-    this.p5.afterRedraw();
-    this.drawInProgress = false;
-    $('#bubble').text('FPS: ' + this.p5.frameRate().toFixed(0));
+/**
+ * This is called while this.gameLabP5 is in startExecution(). We use the
+ * opportunity to create native event handlers that call down into interpreter
+ * code for each event name.
+ */
+GameLab.prototype.onP5ExecutionStarting = function () {
+  this.gameLabP5.p5eventNames.forEach(function (eventName) {
+    window[eventName] = function () {
+      if (this.JSInterpreter && this.eventHandlers[eventName]) {
+        this.eventHandlers[eventName].apply(null);
+      }
+    }.bind(this);
+  }, this);
+};
+
+/**
+ * This is called while this.gameLabP5 is in the preload phase. We initialize
+ * the interpreter, start its execution, and call the user's preload function.
+ */
+GameLab.prototype.onP5Preload = function () {
+  this.initInterpreter();
+  // And execute the interpreter for the first time:
+  if (this.JSInterpreter && this.JSInterpreter.initialized()) {
+    this.JSInterpreter.executeInterpreter(true);
+
+    // In addition, execute the global function called preload()
+    if (this.eventHandlers.preload) {
+      this.eventHandlers.preload.apply(null);
+    }
+  }
+};
+
+/**
+ * This is called while this.gameLabP5 is in the setup phase. We restore the
+ * interpreter methods that were modified during preload, then call the user's
+ * setup function.
+ */
+GameLab.prototype.onP5Setup = function () {
+  if (this.JSInterpreter) {
+    // TODO: (cpirich) Remove this code once p5play supports instance mode:
+
+    // Replace restored preload methods for the interpreter:
+    for (var method in this.gameLabP5.p5._preloadMethods) {
+      this.JSInterpreter.createGlobalProperty(
+          method,
+          this.gameLabP5.p5[method],
+          this.gameLabP5.p5);
+    }
+
+    if (this.eventHandlers.setup) {
+      this.setupInProgress = true;
+      this.eventHandlers.setup.apply(null);
+    }
+    this.completeSetupIfSetupComplete();
   }
 };
 
 GameLab.prototype.completeSetupIfSetupComplete = function () {
   if (this.setupInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
-    this.p5._setupEpilogue();
+    this.gameLabP5.afterSetupComplete();
     this.setupInProgress = false;
+  }
+};
+
+/**
+ * This is called while this.gameLabP5 is in a draw() call. We call the user's
+ * draw function.
+ */
+GameLab.prototype.onP5Draw = function () {
+  if (this.JSInterpreter && this.eventHandlers.draw) {
+    this.drawInProgress = true;
+    this.eventHandlers.draw.apply(null);
+  }
+  this.completeRedrawIfDrawComplete();
+};
+
+GameLab.prototype.completeRedrawIfDrawComplete = function () {
+  if (this.drawInProgress && this.JSInterpreter.seenReturnFromCallbackDuringExecution) {
+    this.gameLabP5.afterDrawComplete();
+    this.drawInProgress = false;
+    $('#bubble').text('FPS: ' + this.gameLabP5.getFrameRate().toFixed(0));
   }
 };
 
