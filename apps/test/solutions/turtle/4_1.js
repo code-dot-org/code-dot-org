@@ -14,7 +14,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="controls_repeat"><title name="TIMES">3</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">120</title></block></next></block></statement></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="controls_repeat"><title name="TIMES">3</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">120</title></block></next></block></statement></block></next></block></xml>'
     },
     {
       description: "Walk path backwards: 3x {Left 120, Backward 100}",
@@ -23,7 +23,7 @@ module.exports = {
         testResult: TestResults.ALL_PASS
       },
       missingBlocks: [],
-      xml: '<xml><block type="controls_repeat"><title name="TIMES">3</title><statement name="DO"><block type="draw_turn_by_constant"><title name="DIR">turnLeft</title><title name="VALUE">120</title><next><block type="draw_move_by_constant"><title name="DIR">moveBackward</title><title name="VALUE">100</title></block></next></block></statement></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="controls_repeat"><title name="TIMES">3</title><statement name="DO"><block type="draw_turn_by_constant"><title name="DIR">turnLeft</title><title name="VALUE">120</title><next><block type="draw_move_by_constant"><title name="DIR">moveBackward</title><title name="VALUE">100</title></block></next></block></statement></block></next></block></xml>'
     }
     // todo - add failure case(s)
   ]

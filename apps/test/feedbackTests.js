@@ -358,8 +358,8 @@ describe("getMissingBlocks_ tests", function () {
   describe("required blocks look for existence of string in code", function () {
     var testBlocks = [
       {
-        'test': 'window.alert',
-        'type': 'text_print'
+        'test': 'someAwesomeVariable',
+        'type': 'variables_get'
       },
       {
         'test': 'TextContent',
@@ -372,7 +372,7 @@ describe("getMissingBlocks_ tests", function () {
     ];
 
     var testBlockXml = [
-      '<block type="text_print"></block>',
+      '<block type="variables_get"><title name="VAR">someAwesomeVariable</title></block>',
       '<block type="text"><title name="TEXT">TextContent</title></block>',
       '<block type="math_number"><title name="NUM">10</title></block>'
     ];
@@ -383,9 +383,9 @@ describe("getMissingBlocks_ tests", function () {
     var testBlocks = [
       {
         'test': function (block) {
-          return block.type === 'text_print';
+          return block.type === 'variables_get';
         },
-        'type': 'text_print'
+        'type': 'variables_get'
       },
       {
         'test': function (block) {
@@ -402,7 +402,7 @@ describe("getMissingBlocks_ tests", function () {
     ];
 
     var testBlockXml = [
-      '<block type="text_print"></block>',
+      '<block type="variables_get"><title name="VAR">someAwesomeVariable</title></block>',
       '<block type="text"><title name="TEXT">TextContent</title></block>',
       '<block type="math_number"><title name="NUM">10</title></block>'
     ];

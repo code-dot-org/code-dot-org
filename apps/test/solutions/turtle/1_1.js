@@ -38,7 +38,7 @@ module.exports = {
         testResult: TestResults.MISSING_BLOCK_UNFINISHED
       },
       missingBlocks: [rblocks().turnRightRestricted(90)],
-      xml: '<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>'
+      xml: '<xml><block type="when_run"><next><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block></next></block></xml>'
     },
     {
       description: "Empty workspace.",
@@ -46,11 +46,11 @@ module.exports = {
       xml: ''
     },
     {
-      // Extra top block takes precendence over ???
+      // ??? takes precedence over extra top block
       description: "extra ??? block",
       expected: {
         result: false,
-        testResult: TestResults.EXTRA_TOP_BLOCKS_FAIL
+        testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD
       },
       xml:
         '<xml>' +
