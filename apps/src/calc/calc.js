@@ -715,7 +715,6 @@ Calc.execute = function() {
 function isPreAnimationFailure(testResult) {
   return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
     testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
-    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
     testResult === TestResults.EXAMPLE_FAILED ||
     testResult === TestResults.EMPTY_FUNCTION_NAME;
 }
@@ -726,13 +725,6 @@ function isPreAnimationFailure(testResult) {
  */
 Calc.generateResults_ = function () {
   appState.message = undefined;
-
-  // Check for pre-execution errors
-  if (studioApp.hasExtraTopBlocks()) {
-    appState.result = ResultType.FAILURE;
-    appState.testResults = TestResults.EXTRA_TOP_BLOCKS_FAIL;
-    return;
-  }
 
   if (studioApp.hasUnfilledFunctionalBlock()) {
     appState.result = ResultType.FAILURE;
