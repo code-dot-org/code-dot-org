@@ -130,10 +130,6 @@ Style/CollectionMethods:
 Style/CommentIndentation:
   Enabled: false
 
-# Offense count: 8
-Style/ConstantName:
-  Enabled: false
-
 # Offense count: 211
 # Cop supports --auto-correct.
 Style/DefWithParentheses:

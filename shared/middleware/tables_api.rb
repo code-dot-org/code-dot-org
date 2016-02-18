@@ -16,7 +16,7 @@ class TablesApi < Sinatra::Base
     end
   end
 
-  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  TABLE_TYPE = CDO.use_dynamo_tables ? DynamoTable : Table
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
@@ -26,7 +26,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     dont_cache
     content_type :json
-    TableType.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
   end
 
   #
@@ -37,7 +37,7 @@ class TablesApi < Sinatra::Base
   get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
     content_type :json
-    TableType.new(channel_id, storage_id(endpoint), table_name).fetch(id.to_i).to_json
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).fetch(id.to_i).to_json
   end
 
   #
@@ -47,7 +47,7 @@ class TablesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/(\d+)$} do |endpoint, channel_id, table_name, id|
     dont_cache
-    TableType.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete(id.to_i)
     no_content
   end
 
@@ -61,7 +61,7 @@ class TablesApi < Sinatra::Base
       halt 400, {}, "Column name cannot be empty"
     end
 
-    TableType.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete_column(column_name, request.ip)
     no_content
   end
 
@@ -75,7 +75,7 @@ class TablesApi < Sinatra::Base
     if new_name.empty?
       halt 400, {}, "New column name cannot be empty"
     end
-    TableType.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).rename_column(column_name, new_name, request.ip)
     no_content
   end
 
@@ -86,7 +86,7 @@ class TablesApi < Sinatra::Base
   #
   delete %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)} do |endpoint, channel_id, table_name|
     dont_cache
-    TableType.new(channel_id, storage_id(endpoint), table_name).delete_all
+    TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).delete_all
     no_content
   end
 
@@ -108,7 +108,7 @@ class TablesApi < Sinatra::Base
     unsupported_media_type unless request.content_type.to_s.split(';').first == 'application/json'
     unsupported_media_type unless request.content_charset.to_s.downcase == 'utf-8'
 
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
+    value = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).insert(JSON.parse(request.body.read), request.ip)
 
     dont_cache
     content_type :json
@@ -132,7 +132,7 @@ class TablesApi < Sinatra::Base
     end
     new_value.delete('id')
 
-    value = TableType.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
+    value = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).update(id.to_i, new_value, request.ip)
 
     dont_cache
     content_type :json
@@ -157,7 +157,7 @@ class TablesApi < Sinatra::Base
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    return TableType.new(channel_id, storage_id(endpoint), table_name).to_csv
+    return TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name).to_csv
   end
 
   #
@@ -172,7 +172,7 @@ class TablesApi < Sinatra::Base
     max_records = 5000
     table_url = "/v3/edit-csp-table/#{channel_id}/#{table_name}"
     back_link = "<a href='#{table_url}'>back</a>"
-    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+    table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
     tempfile = params[:import_file][:tempfile]
     records = []
 
@@ -226,7 +226,7 @@ class TablesApi < Sinatra::Base
   post %r{/v3/coerce-(shared|user)-tables/([^/]+)/([^/]+)$} do |endpoint, channel_id, table_name|
     content_type :json
 
-    table = TableType.new(channel_id, storage_id(endpoint), table_name)
+    table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
 
     column = request.GET['column_name']
     type = request.GET['type']
@@ -264,7 +264,7 @@ class TablesApi < Sinatra::Base
 
     overwrite = request.GET['overwrite'] == '1'
     json_data.keys.each do |table_name|
-      table = TableType.new(channel_id, storage_id(endpoint), table_name)
+      table = TABLE_TYPE.new(channel_id, storage_id(endpoint), table_name)
       if table.exists? && !overwrite
         next
       end
