@@ -70,7 +70,7 @@ CSV.foreach(REGION_LIST_FILE, headers: true) do |row|
   raise "Unrecognized state abbreviation #{state_abbrev}" unless state
   city = row['City']
   district = row['Partner/District']
-  location = region[:locations].find {|r| r[:state] == state && r[:city] == city}
+  location = region[:locations].detect {|r| r[:state] == state && r[:city] == city}
   unless location
     location = {state: state, city: city, districts: []}
     region[:locations] << location

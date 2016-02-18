@@ -11,7 +11,7 @@ class Hash
 
   unless method_defined?(:to_param)
     def to_param(namespace = nil)
-      collect do |key, value|
+      map do |key, value|
         value.to_query(namespace ? "#{namespace}[#{key}]" : key)
       end.sort * '&'
     end

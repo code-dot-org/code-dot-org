@@ -117,7 +117,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     script.stages
 
-    assert_equal [1, 2, 3], script.stages.collect(&:position)
+    assert_equal [1, 2, 3], script.stages.map(&:position)
   end
 
   test 'script_levels are in order' do
@@ -139,10 +139,10 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script_level, script: script, stage: s3, chapter: 6)
     last.move_to_bottom
 
-    assert_equal [1, 2, 3], script.stages.collect(&:position)
+    assert_equal [1, 2, 3], script.stages.map(&:position)
 
-    assert_equal [1, 1, 1, 2, 2, 3, 3], script.script_levels.collect(&:stage).collect(&:position)
-    assert_equal [1, 2, 3, 1, 2, 1, 2], script.script_levels.collect(&:position)
+    assert_equal [1, 1, 1, 2, 2, 3, 3], script.script_levels.map(&:stage).map(&:position)
+    assert_equal [1, 2, 3, 1, 2, 1, 2], script.script_levels.map(&:position)
   end
 
   test 'calling next_level on last script_level points to next stage' do

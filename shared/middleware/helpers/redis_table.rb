@@ -62,7 +62,7 @@ class RedisTable
   def to_a_from_min_id(min_id)
     @props.to_hash.
         select { |k, v| belongs_to_this_table_with_min_id(k, min_id)}.
-        collect { |k, v| make_row(v) }.
+        map { |k, v| make_row(v) }.
         sort_by { |row| row['id'] }
   end
 
