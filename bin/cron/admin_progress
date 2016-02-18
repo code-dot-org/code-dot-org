@@ -2,6 +2,7 @@
 #
 # This script caches database queries whose results are displayed at studio.code.org/admin/progress.
 #
+require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
 
