@@ -435,11 +435,6 @@ Style/NilComparison:
 Style/NonNilCheck:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/Not:
-  Enabled: false
-
 # Offense count: 2
 # Cop supports --auto-correct.
 Style/NumericLiterals:
