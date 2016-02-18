@@ -1,7 +1,7 @@
 require 'cdo/aws/s3'
 require_relative '../shared/middleware/helpers/storage_id'
 
-def avatar_image(name,width=320,square=true)
+def avatar_image(name,width=320,square=false)
   basename = name.downcase.gsub(/\W/, '_').gsub(/_+/, '_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path
