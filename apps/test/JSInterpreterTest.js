@@ -72,4 +72,19 @@ describe("JSInterpreter", function () {
     ]);
   });
 
+  it("hits a breakpoint", function () {
+    initWithCode('0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;');
+    jsInterpreter.isBreakpointRow = function (row) {
+      return row === 3 || row == 5;
+    };
+
+    jsInterpreter.paused = false;
+
+    jsInterpreter.executeInterpreter();
+    assertCurrentState({node: {type: 'ExpressionStatement', expression: {value: 3}}});
+
+    jsInterpreter.executeInterpreter();
+    assertCurrentState({node: {type: 'ExpressionStatement', expression: {value: 5}}});
+  });
+
 });

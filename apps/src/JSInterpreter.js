@@ -74,6 +74,13 @@ JSInterpreter.prototype.parse = function (options) {
   this.codeInfo.userCodeLength = options.code.length;
   this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(options.code);
 
+  if (!this.studioApp.hideSource) {
+    var session = this.studioApp.editor.aceEditor.getSession();
+    this.isBreakpointRow = codegen.isAceBreakpointRow.bind(null, session);
+  } else {
+    this.isBreakpointRow = function () { return false; };
+  }
+
   var self = this;
   if (options.enableEvents) {
     this.eventQueue = [];
@@ -404,7 +411,7 @@ JSInterpreter.prototype.executeInterpreter = function (firstStep, runUntilCallba
     //       we have already stopped from the last step/breakpoint
     if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
         (atInitialBreakpoint ||
-         (codegen.isAceBreakpointRow(session, userCodeRow) &&
+         (this.isBreakpointRow(userCodeRow) &&
           !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
       // Yes, arrived at a new breakpoint:
       if (this.paused) {
