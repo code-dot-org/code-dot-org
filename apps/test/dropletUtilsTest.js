@@ -642,7 +642,7 @@ describe('generateDropletModeOptions', function () {
           "color": "#68D995"
         },
         "returns": {
-          "color": "#64B5F6"
+          "color": "#68D995"
         },
         "comments": {
           "color": "#FFFFFF"
@@ -754,7 +754,7 @@ describe('generateDropletModeOptions', function () {
           "color": "#68D995"
         },
         "returns": {
-          "color": "#64B5F6"
+          "color": "#68D995"
         },
         "comments": {
           "color": "#FFFFFF"
