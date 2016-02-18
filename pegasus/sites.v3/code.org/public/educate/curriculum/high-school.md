@@ -30,6 +30,8 @@ Find other resources at [exploringcs.org](http://www.exploringcs.org/)
 
 ## 3rd Party resources for high school CS
 
+[](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
+
 | Organization | Curriculum | Professional Development |
 |--------------|------------|---------------|--------------------------|------|
 | [Beauty and Joy of Computing](http://bjc.berkeley.edu/) | Year-long CS Principles course, FREE | In-person in NYC, Berkeley, CA and North Carolina, FREE, stipends in NYC, stipends + travel elsewhere paid as available |
