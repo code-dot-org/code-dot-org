@@ -257,7 +257,8 @@ module.exports = function (grunt) {
   config.sass = {
     all: {
       options: {
-        outputStyle: (envOptions.dev ? 'nested' : 'compressed'),
+        // Compression currently occurs at the ../dashboard sprockets layer.
+        outputStyle: 'nested',
         includePaths: ['../shared/css/']
       },
       files: {
