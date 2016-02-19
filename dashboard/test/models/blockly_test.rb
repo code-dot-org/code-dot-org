@@ -112,8 +112,8 @@ XML
   end
 
   def assert_equal_xml(a, b)
-    assert_equal Nokogiri::XML.parse(a) {|config| config.noblanks}.to_xml,
-      Nokogiri::XML.parse(b) {|config| config.noblanks}.to_xml
+    assert_equal Nokogiri::XML.parse(a, &:noblanks).to_xml,
+      Nokogiri::XML.parse(b, &:noblanks).to_xml
   end
 
   test 'block XML contains no blank nodes' do
