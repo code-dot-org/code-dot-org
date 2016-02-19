@@ -562,11 +562,13 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 // var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
 exports.calculateCumulativeLength = function (code) {
-  var total = 0, result = [0];
-  code.split(/\n/).forEach(function (line) {
-    total += line.length + 1;
-    result.push(total);
-  });
+  var regex = /\n/g, result = [];
+  do {
+    result.push(regex.lastIndex);
+    regex.exec(code);
+  } while (regex.lastIndex !== 0);
+
+  result.push(code.length + 1);
   return result;
 };
 
