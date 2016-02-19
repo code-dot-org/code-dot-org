@@ -1384,7 +1384,7 @@ applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
-  var url = XHR_PROXY + encodeURIComponent(opts.url.replace(' ', '%20'));
+  var url = XHR_PROXY + encodeURIComponent(opts.url.replace(/ /g, '%20'));
   req.open('GET', url, true);
   req.send();
 };
