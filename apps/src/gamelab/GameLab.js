@@ -15,6 +15,7 @@ var JsDebuggerUi = require('../JsDebuggerUi');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
+var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
@@ -84,6 +85,7 @@ GameLab.prototype.init = function (config) {
   config.usesAssets = true;
 
   this.gameLabP5.init({
+    gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
@@ -301,6 +303,8 @@ GameLab.prototype.initInterpreter = function () {
     return;
   }
 
+  gameLabSprite.injectJSInterpreter(this.JSInterpreter);
+
   this.gameLabP5.p5specialFunctions.forEach(function (eventName) {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
@@ -310,8 +314,6 @@ GameLab.prototype.initInterpreter = function () {
   }, this);
 
   codegen.customMarshalObjectList = this.gameLabP5.getCustomMarshalObjectList();
-  codegen.customMarshalModifiedObjectList =
-      this.gameLabP5.getCustomMarshalModifiedObjectList();
 
   var propList = this.gameLabP5.getGlobalPropertyList();
   for (var prop in propList) {

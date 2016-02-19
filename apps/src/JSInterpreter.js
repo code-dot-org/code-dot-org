@@ -834,6 +834,13 @@ JSInterpreter.prototype.getLocalFunctionNames = function (scope) {
 };
 
 /**
+ * Returns the current interpreter state object.
+ */
+JSInterpreter.prototype.getCurrentState = function () {
+  return this.interpreter && this.interpreter.stateStack[0];
+};
+
+/**
  * Evaluate an expression in the interpreter's current scope, and return the
  * value of the evaluated expression.
  * @param {!string} expression
