@@ -21,7 +21,6 @@ class ExperimentActivity < ActiveRecord::Base
   TYPE_FEEDBACK_DESIGN_YELLOW = 'yellow_background'
   TYPES_FEEDBACK_DESIGN = [ TYPE_FEEDBACK_DESIGN_WHITE, TYPE_FEEDBACK_DESIGN_YELLOW ]
 
-  public
   def white_background?
     self.feedback_design == TYPE_FEEDBACK_DESIGN_WHITE
   end
