@@ -10,6 +10,7 @@
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
+require 'cdo/newrelic'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
@@ -21,8 +22,25 @@ class XhrProxyController < ApplicationController
 
   # Return the proxied api at the given URL.
   def get
+    channel_id = params[:c]
+    url = params[:u]
+
+    begin
+      owner_storage_id, _ = storage_decrypt_channel_id channel_id
+    rescue Exception => e
+      raise "XhrProxyController request with invalid channel_id: '#{channel_id}' for url: '#{url}' exception: #{e.message}"
+    end
+
+    event_details = {
+        channel_id: channel_id,
+        owner_storage_id: owner_storage_id,
+        url: url
+    }
+    NewRelic::Agent.record_custom_event("XhrProxyControllerRequest", event_details) if CDO.newrelic_logging
+    Rails.logger.info "XhrProxyControllerRequest #{event_details}"
+
     render_proxied_url(
-        params[:u],
+        url,
         allowed_content_types: ALLOWED_CONTENT_TYPES,
         expiry_time: EXPIRY_TIME,
         infer_content_type: false)
