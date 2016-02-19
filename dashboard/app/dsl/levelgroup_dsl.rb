@@ -1,4 +1,4 @@
-class LevelgroupDSL < BaseDSL
+class LevelGroupDSL < BaseDSL
   def initialize
     super
     @id = nil
@@ -14,7 +14,6 @@ class LevelgroupDSL < BaseDSL
   string :description
 
   def parse_output
-    stage(nil)
     {id: @id}
   end
 
@@ -30,6 +29,6 @@ class LevelgroupDSL < BaseDSL
   end
 
   def self.parse_file(filename)
-    super(filename, File.basename(filename, '.levelgroup'))
+    super(filename, File.basename(filename, '.level_group'))
   end
 end

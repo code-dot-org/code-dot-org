@@ -1,4 +1,20 @@
 FactoryGirl.define do
+
+  factory :level_group do
+    game_id 1
+    name "MyString"
+    created_at "2016-02-19 20:19:50"
+    updated_at "2016-02-19 20:19:50"
+    level_num "MyString"
+    ideal_level_source_id 1
+    solution_level_source_id 1
+    user_id 1
+    properties "MyText"
+    type ""
+    md5 "MyString"
+    published false
+  end
+
   factory :survey_result do
     user { create :teacher }
     properties {{survey2016_ethnicity_asian: "1"}}
