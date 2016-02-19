@@ -209,13 +209,13 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
     raise Parallel::Kill
   end
 
-  if $options.browser and browser['browser'] and $options.browser.casecmp(browser['browser']) != 0
+  if $options.browser && browser['browser'] && $options.browser.casecmp(browser['browser']) != 0
     next
   end
-  if $options.os_version and browser['os_version'] and $options.os_version.casecmp(browser['os_version']) != 0
+  if $options.os_version && browser['os_version'] && $options.os_version.casecmp(browser['os_version']) != 0
     next
   end
-  if $options.browser_version and browser['browser_version'] and $options.browser_version.casecmp(browser['browser_version']) != 0
+  if $options.browser_version && browser['browser_version'] && $options.browser_version.casecmp(browser['browser_version']) != 0
     next
   end
 
@@ -301,7 +301,9 @@ Parallel.map(lambda { browser_features.pop || Parallel::Stop }, :in_processes =>
         return 0
       else
         flakiness_message = "#{test_run_string} is #{flakiness} flaky. "
-        max_reruns = (1 / Math.log(flakiness, 0.05)).ceil - 1 # reruns = runs - 1
+        max_reruns = [(1 / Math.log(flakiness, 0.05)).ceil - 1, # reruns = runs - 1
+                      1].max # rerun at least once even if not flaky
+
         confidence = (1.0 - flakiness ** (max_reruns + 1)).round(3)
         flakiness_message +=  "we should rerun #{max_reruns} times for #{confidence} confidence"
 

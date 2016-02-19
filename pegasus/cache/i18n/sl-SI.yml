@@ -27,9 +27,8 @@
   twentyhours_heading: Poskusite naš tečaj Uvod v Računalništvo
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
     programiranja v tem spremljanjem tečaju.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: Vsak otrok si zasluži priložnost
+  og_description: Vsak učenec v vsaki šoli si zasluži priložnost, da se uči računalništva.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a>
     <br/> 8. do 14. decembra, 2014 <br/>
   hoc2014_students: Učenci
@@ -76,16 +75,121 @@
   congratulations_volunteer: 'Čestitamo: Sedaj, ko si preizkusil Uro kode, <a href="https://code.org/volunteer">se
     lahko vpišeš med prostovoljce v razredu</a> in pomagaš drugim,dase učijo na svoji
     Uri kode!'
-  course_name_accelerated: Pospešena smer
-  course_name_course1: Tečaj 1
-  course_name_course2: Course 2
-  course_name_course3: Course 3
-  course_name_course4: Course 4
-  congratulations_on_completing_course: "Čestitke za dokončan %{course}"
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
+    Course
   congrats_next_tutorials_title: Poskusi naslednje tutoriale
   congrats_next_tutorials_desc: Preizkusi te krajše, 1 urne tutoriale ali pa poskusi
     <a href="%{current_path}/next"> podoben tutorial</a>.
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
+  view_course: View course
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science
+    course, consider celebrating and connecting it to things they can build in the
+    real world by inviting a guest speaker to your classroom. You can use our map
+    of volunteers to contact local volunteers to visit your classroom, or search in
+    any city to find computer science students or technical professionals who are
+    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_course1: Third party tutorials for pre-readers
+  congrats_third_party_course2: Third party tutorials
+  congrats_third_party_course3: Third party tutorials
+  congrats_third_party_course4: Third party tutorials
+  congrats_third_party_accelerated: Third party tutorials
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_tynker_desc: Tynker's creative computing platform helps children develop
+    computational thinking and programming skills in a fun, intuitive and imaginative
+    way. Our innovative visual programming language, interactive self-paced courses,
+    and game-based programming activities provide an easy introduction to programming,
+    and empower children to innovate and create.
+  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
+    that enables young children (ages 5-7) to create their own interactive stories
+    and games. Children snap together graphical programming blocks to make characters
+    move, jump, dance, and sing. Children can modify characters in the paint editor,
+    add their own voices and sounds, even insert photos of themselves - then use the
+    programming blocks to make their characters come to life.
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
+    games, and animations and share your creations with others in the online community.
+    Scratch helps young people learn to think creatively, reason systematically, and
+    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
+    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
+    or on Android or iOS devices. Students play the initial set of “Basic” levels
+    in Lightbot. They will learn how to tell a computer what to do with a series of
+    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: Learn how to program drawings, animations, and games using
+    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
+    can share whatever you create, explore what others have created and learn from
+    each other!
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
+    allows everyone, even novices, to start programming and build fully functional
+    apps for Android devices. Newcomers to App Inventor can have their first app up
+    and running in an hour or less, and can program more complex apps in significantly
+    less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
+    short videos, example code, and lots of programming exercises that make coding
+    fun and accessible for beginners. With CodeHS, you can get the help that every
+    new programmer needs to work through problems and keep learning. Our tutors are
+    everywhere!
+  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codecademy_desc: We are rethinking education from the bottom up. The
+    web has rethought nearly everything - commerce, social networking, healthcare,
+    and more. We are building the education the world needs - the first truly net
+    native education.
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: kurikulum
+  third_party_pricing: Pricing
+  third_party_cost_free: Free
+  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_299: "$2.99/download"
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
+    K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
+    K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Prosimo, izberite veljavno starost
   enter_valid_email: Vnesite veljaven e-poštni naslov
   get_a_certificate_message: Poslali vam bomo potrdilo in informacije o tem, kako
@@ -141,6 +245,11 @@
   learn_classes: Poišči lokalne tečaje
   hoc_is_here: "#UraZaKodo je tu! @codeorg"
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: "Zakaj več šol ne poučuje računalništva? To lahko spremenimo.
     \ \nhttp://youtu.be/nKIu9yen5nc. Obiščite http://code.org/ in izvedeli boste več.\n"
   learn_hoc: Več o Uri za kodo
@@ -243,27 +352,27 @@
   homepage_action_text_learn: Začni z učenjem
   homepage_action_text_signpetition: Podpiši peticijo
   homepage_signpetition_dropdown: Strinjam se &#x25BE;
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
-  homepage_banner_link_prizes: 'Join the largest learning event in history. '
+  homepage_diversity_pledge: Naredite zaprisego za nediskriminatorno vključevanje
+  homepage_banner_text_prizes: 'Zopet se bliža Ura za kodo, od 7. do 13. decembra. '
+  homepage_banner_link_prizes: 'Pridružite se največji izobraževalni prireditvi doslej. '
   homepage_banner_text_main: Code.org in the College Board sta zaveznika pri izboljšanju
     raznolikosti računalništva.
   homepage_banner_text_link: Več o tem
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Več o tem
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: Izobrazili smo 20 tisoč učiteljev in učiteljic, ki
+    sedaj predajajo naprej to znanje v učilnicah.
   homepage_banner_20k_teachers_link: Več o tem
   homepage_slot_text_title_hoc: Ura kode
   homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
   homepage_slot_text_link_host: Organiziraj Hour of Code
   homepage_slot_text_link_hocserved: "# uporabnikov"
-  homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
+  homepage_solot_text_link_volunteer: Prostovoljec/ka Ure za kodo
   homepage_slot_text_title_students: Učenci
   homepage_slot_text_blurb_students: Razišči vse naše vodiče
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Raziščite naše tečaje
   homepage_slot_text_link_codestudio: Poskusi Code Studio
   homepage_slot_text_link_local: Poišči razred v bližini
   homepage_slot_text_link_othercourses: Ostali spletni tečaji
@@ -320,39 +429,38 @@
   class_submission_level_college: Fakulteta
   class_submission_level_vocational: Poklicno izobraževanje
   class_submission_languages_other: Drugi jezik(-i)
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
-  playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
-  starwars_subtitle: Building a Galaxy With Code
+  inspirational_videos_more: Več <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">navdihujočih
+    video posnetkov</a>, ki so jih posneli vzorniki, vzornice ter slavne osebe
+  playlab_choose_theme: Izberi svojo temo za Play Lab
+  playlab_classic_title: Klasika
+  playlab_gumball_title: Gumballov fantastični svet
+  playlab_iceage_title: Ledena doma - kmalu na sporedu
+  playlab_iceage_title_live: Ledena doba
+  starwars_subtitle: S kodiranjem gradimo galaksijo
   starwars_javascript_title: Javascript
-  starwars_javascript_description: Use drag-drop blocks and JavaScript.
-  starwars_javascript_specs: English only | Modern browsers | Ages 11+
+  starwars_javascript_description: Uporabi kocke, ki jih lahko premikaš, ter JavaScript.
+  starwars_javascript_specs: Samo v angleščini / Sodobni brskalniki / Starost 11+
   starwars_javascript_start_button: Poskusite zdaj
   starwars_blocks_title: Bloki
-  starwars_blocks_description: Use drag-drop blocks.
-  starwars_blocks_specs: Many languages | Modern browsers, smartphones, tablets |
-    Ages 6-10
+  starwars_blocks_description: Uporabi kocke, ki jih lahko premikaš.
+  starwars_blocks_specs: Več jezikov / Sodobni brskalniki, pametni telefoni, tablice
+    / Starost 6-106
   starwars_blocks_start_button: Poskusite zdaj
-  starwars_watch_videos: Before you get started, watch one of these inspirational
-    videos
+  starwars_watch_videos: Preden začneš, si oglej enega izmed teh navdihujočih video
+    posnetkov
   starwars_speak_languages: Govoriš drug jezik?
   starwars_help_translate: Pomagaj pri prevodu
   starwars_platform_text: Sodobni brskalniki, pametni telefoni, tablice
   mc_name: Minecraft Ura za kodo
-  mc_longdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
-  mc_shortdescription: Use blocks of code to take Steve or Alex on an adventure through
-    this Minecraft world.
+  mc_longdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+    v svet Minecraft-a.
+  mc_shortdescription: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+    v svet Minecraft-a.
   mc_gradelevel: Starost 4-104
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
-  mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  mc_specs: Več jezikov / Sodobni brskalniki in tablice / Starost 6-106
   minecraft_subtitle: Minecraft Ura za kodo
-  volunteer_engineer_submission_title: Inspire students and volunteer for the Hour
-    of Code.
+  volunteer_engineer_submission_title: Navdušite učence/ke in prostovoljce/ke
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
     an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers want
@@ -684,11 +792,11 @@
   dashboard_faq_k5: Pogosta vprašanja, prva petletka
   dashboard_announcements: Obvestila
   dashboard_announce_view_all: Poglej vse
-  dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: Več o tem
   dashboard_announce_hoc: "<b>October 15, 2015</b> - The Hour of Code is coming &mdash;
     every participating organizer will receive a gift card to Amazon.com or Microsoft's
@@ -813,6 +921,11 @@
   codesters_name: Codesters
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
+  course1_name: Tečaj 1
+  course2_name: Course 2
+  course3_name: 3. tečaj
+  course4_name: Course 4
+  accelerated_name: Pospešena smer
   codeorg_gradelevel: Starost 4-104
   codeintl_gradelevel: Starost 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -863,6 +976,11 @@
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
   teacherled_gradelevel: Ages 5+
+  course1_gradelevel: Ages 4-6
+  course2_gradelevel: Starost 6-18
+  course3_gradelevel: Ages 8-18
+  course4_gradelevel: Ages 10-18
+  accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   thinkersmithspanish_platformtext: Izštekano
@@ -983,6 +1101,18 @@
     calculator.
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with
     these lesson plans.
+  course2_shortdescription_congrats: For students with basic reading skills, this
+    course builds on Course 1. Students will create programs to solve problems and
+    develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve
+    deeper into programming topics introduced in previous courses to find flexible
+    solutions to more complex problems. By the end of this course, students create
+    interactive stories and games they can share with anyone. Recommended for grades
+    4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
+    into programming topics introduced in previous courses to find flexible solutions
+    to more complex problems. By the end of this course, students create interactive
+    stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem.
     To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
     Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
@@ -1476,3 +1606,4 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

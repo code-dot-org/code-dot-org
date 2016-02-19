@@ -8,65 +8,20 @@ markdown <<MARKDOWN
 <br/>
 <img src="https://images.code.org/81f3498b01b714386b7055bddaff112a-image-1454694327476.45.09 AM.png" width="550" style="float:right; margin-left:30px">
 
-##### Content Overview
-Unit 4 begins by asking students to consider the vast amount of data that can be collected thanks to computational tools and to propose ways it could be used to test hypotheses and develop new insights about the world. Students will also begin collecting data about themselves by making daily entries into a survey that will be used as part of the Class Data Tracker project that runs through the entirety of the first chapter.
+#### Content Overview
+Unit 4 begins by asking students to consider what data can be collected and to propose ways it could be used to **test hypotheses and develop new insights** about the world. Students will also begin collecting data about themselves by making daily entries into a survey that will be used as part of the Class Data Tracker project that runs through the entirety of the first chapter.
 <br><br>
-Students will be introduced to the power of **data visualization**, by using Google Trends to explore how the popularity of different search terms have changed over times. Students will look for interesting patterns or relationships within the visualizations they create and will propose reasons they observe the patterns they do.
+Students will be introduced to the power of **data visualization** as a tool for finding, understanding, and presenting trends in data. They will use interactive data visualization tools to identify trends and patterns, learn to identify assumptions made when interpreting visualizations, and critique data visualizations based on their clarity and usefulness.
 <br><br>
-In the subsequent lessons students are presented some of the challenges that arise when working with data visualizations. First they are asked to consider how incorrect assumptions can lead interpretations of data astray. They then examine a number of visualizations that highlight the **digital divide**, challenging the assumption that data collected online is truly representative of the population at large. In the subsequent lesson students are shown how visualizations themselves can be misleading or confusing. They review a "Data Visualization 101" guide with guidelines on how to make clear and accurate visualizations and critique a series of visualizations based on those recommendations.
+Having developed intuitions on how to use visualizations to help interpret data, students will begin creating visualizations of their own. They will learn how to use a spreadsheet tool to create a variety of charts of digital data. They will also be introduced to the way **summary tables** provide new perspectives on a data set by grouping and aggregating information.
 <br><br>
-Having developed intuitions on how to use visualizations help interpret data, students will begin creating visualizations of their own. They will learn how to create and manipulate different kinds of charts of data using a spreadsheet tool. They will then use data visualization to develop insights about a collection of data sets which have already been summarized for them. Students will learn to use **README files** to better understand the content of a dataset and will be introduced to the way **summary tables** provide new perspectives on a data set by grouping and aggregating information.
+For the remainder of the chapter students will be working with the data collected with the Class Data Tracker they began using at the beginning of the unit. In preparing the data for analysis they will learn why **cleaning data** is an important step in analysis. They will learn to make summary tables of their own using the **pivot table** tools included in most spreadsheet software, and will use this skill to search for trends and patterns within the data they have collected.
 <br><br>
-At this point in the chapter students should have collected several days worth of data for their Class Data Tracker project. Due to the way the survey was designed, however, the data will need to first be **cleaned and standardized** before it can be used for analysis. Students will be put in pairs that each will make their own copy of the data. Students will then learn to **sort and filter** data to find incorrect values and in pairs will create their own "clean" version of the data.
-<br><br>
-Next students will be shown how they can use their clean data to create summary tables of their own. Students will learn how to use the **"pivot table"** tools in many spreadsheet programs to create a summary table. They will then use this new skill to search for interesting patterns in the data that could not be observed from looking at it in its raw form.
-<br><br>
-To conclude the chapter students will complete a Practice PT in which they visualize and present an interesting trend, pattern, or relationship they found within their tracker data. Students will gain practice explaining the process they used to create their visualization and will identify a group or individual who they could make a recommendation to based on the results of their analysis of the data.
+To conclude the chapter students will complete a Practice PT in which they visualize and present an interesting trend, pattern, or relationship they found within their tracker data.
 <br><br>
 
 #### What it looks like
-While students will be on the computer for most of this chapter, they will not be working in App Lab. At the beginning of the unit students will be looking at external tools or resources to familiarize themselves with the ways data and data visualization are used. In the second half of the chapter they will be working primarily in a spreadsheet tool as they learn to clean, summarize, and visualize data. While the Practice PT itself should be completed individually, the lessons leading up to that project including cleaning and summarizing the data lends itself much more readily to group work and class discussions.
-<br><br>
-
-##### What is Data?
-To begin this lesson students take an online quiz and discuss what data could be collected from this quiz. Students brainstorm other places data could be collected in their lives, especially given how much of it happens online. The Class Data Tracker project is then introduced and students make their first of many daily entries. To conclude students develop hypotheses that they may be able to test once they have collected many days worth of data.
-
->**CS Concepts:** 
-
->- Data means many different things depending on context. While this unit will explore the scope of those meanings, for this first portion of the unit data will be explored as **a collection of information that can be used to develop insight and knoweldge**.
-- Data can **take many forms** and there is the potential to collect data about almost any activity, especially those that happen on a computer.
-
-##### Interpreting Visual Data
-Students begin exploring the ways computational tools can be used to provide insights from data. They will use a data visualization tool to quickly explore large datasets and try to find meaningful trends or patterns. They will then learn the importance of checking their assumptions when drawing conclusions from data. The common assumption that Internet users are representative of the population as a whole is challenged through an examination of the "digital divide". Students then learn some recommended ways to design visualizations that clearly communicate their meaning. Finally students learn to make several simple types of charts in a spreadsheet tool.
-
-<br><br>
->**CS Concepts:** 
-
->- **Data visualization** is a powerful tool for exploring datasets and developing insights.
-- Drawing conclusions from data or data visualization requires some **assumptions** to be made about the data or the process used to collect it.
-- A good data visualization will allow a reader to **easily develop accurate insights** about the data.
-- We must be careful when interpreting data and data visualizations. Conclusions based on **false assumptions** or **misleading visualizations** may lead to incorrect conclusions.
-- **Computational tools** allow data to quickly and easily be visualized in a variety of ways
-
-##### Communicating with Visualizations
-Students will be provided data that has already been summarized and will be asked to use visualizations to find and clearly present interesting trends or patterns. They will create their own copies of the data collected using the Class Data Tracker and will clean the data in order to prepare it for analysis. Students will learn to develop their own summaries of data using a spreadsheet tool, specifically by making using of "pivot table" functionality. The work students do in these lessons serves as preparation for the Practice PT that ends this chapter.
-
-<br><br>
->**CS Concepts:** 
-
->- Computational tools can be used to **transform and summarize data** in order to make it easier to identify trends and patterns
-- The **structure of a dataset** places limitations on the types of analysis that can be performed with it.
-- Data will often need to be **cleaned and standardized** in order to use it for analysis
-- Data can be **filtered and sorted** with computational tools which aids in cleaning and visualizaing data
-
-##### Practice PT
-To conclude the chapter students complete a Practice PT in which they use the Class Data Tracker data they have cleaned and summarized to tell a story. They will need to create their own visualization which reveals some interesting pattern or trend within the data. A significant portion of the PT comes in the reflection questions where they must explain the process used to create their visualization and develop an interpretation and recommendation based on their analysis.
-
-<br><br>
->**CS Concepts:** 
-
->- Communicating about a data visualization includes an accounting of **the process and assumptions** used to create that visualization
-- Data analysis can be used to develop new **insights and knowledge**
+Students will use computer for most lessons in this chapter. At the beginning of the unit students will be looking at external tools or resources to familiarize themselves with the ways data and data visualization are used. In the second half of the chapter they will be working primarily in a **spreadsheet tool (e.g. Google Sheets, Microsoft Excel, etc.)**. While the Practice PT itself should be completed individually, the lessons leading up to that project including cleaning and summarizing the data lends itself much more readily to group work and class discussions.
 
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

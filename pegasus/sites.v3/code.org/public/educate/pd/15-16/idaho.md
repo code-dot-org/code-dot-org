@@ -67,7 +67,38 @@ Water
 
 ### Phase 4: Summer Wrap-up (3 days in-person - Summer 2016) ###
 
-More info coming soon!
+Phase 4 of professional development is an in-person workshop focused on diving deeper into content and material that was difficult to teach the first time. Phase 4 addresses curricular materials with an eye for teaching and learning in context. Teachers
+will reflect on what success looks like in an ECS course and how to recruit diverse groups of students. The workshop will empower teachers to take ownership of the curriculum by making adjustments and changes in order to meet the needs of each classroom.
+
+Takeaways:<br/>
+• I look forward to teaching the course again based on my reflection of the past year.<br/>
+• I am more comfortable with the material that I struggled with the first time teaching this
+course.<br/>
+• I understand how to make changes to the ECS curriculum in order to meet my local needs
+and fit into my context.))
+
+**Save the Dates**
+
+Monday, June 21st - Wednesday, June 23rd
+<br />
+8:30am - 3:30pm
+<br />
+Breakfast and lunch will be served.
+
+**Location**
+
+More Details Coming Soon!
+
+**What do I bring to my Phase 4 Workshop?**
+
+Exploring Computer Science binder with curriculum 
+<br />
+Green Code.org journal 
+<br />
+Laptop and Charger<br/>
+Snacks<br/>
+Water Bottle
+<br />
 
 [**Back to the top**](#top)
 
@@ -172,16 +203,6 @@ TAB 320<br/>
 Idaho Falls, ID  83402](https://www.google.com/maps/place/1776+Science+Center+Dr,+Idaho+Falls,+ID+83402/@43.5163601,-112.0533244,17z/data=!3m1!4b1!4m2!3m1!1s0x53545bf44ae6aa27:0xcc5940bc2734506f)
 
 Parking is free on Saturdays. Please refer to parking directions [here](http://www.uidaho.edu/idahofalls/aboutus/hoursmapsparking).
-
-**Satellite Location - CDA**
-
-[University of Idaho - Coeur d’Alene<br/>
-Suite 242 , Room 128<br/>
-1031 N. Academic Way<br/>
-Coeur d’Alene, ID  83814<br/>](https://www.google.com/maps/place/1031+N+Academic+Way,+Coeur+d'Alene,+ID+83814/@47.6832333,-116.7990827,17z/data=!3m1!4b1!4m2!3m1!1s0x5361c6918f4dabb3:0x52d71c83655b319f)
-
-
-Parking is free on Saturdays. Please refer to parking directions [here](/files/UI-Harbor-Center.pdf).
 
 **What to bring to Phase 3 bi-yearly sessions:**
 

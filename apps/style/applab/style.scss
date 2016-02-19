@@ -1,5 +1,5 @@
 @import "color";
-//@import "mixins"; TODO(bjordan/bbuchanan): fix sprockets?
+@import "mixins";
 @import "style-constants";
 @import "../JsDebuggerUi.scss";
 @import "skins/base.scss";
@@ -211,7 +211,6 @@ div#visualizationResizeBar {
 // ** END OF RULES THAT ARE MODIFIED AT RUNTIME IN adjustAppSizeStyles() **
 
 #visualizationColumn.wireframeShare {
-  background: url("#{$root}phone_wireframe.png") center center no-repeat;
   max-width: none !important;
   width: 352px;
   height: 612px;
@@ -240,12 +239,7 @@ div#visualizationResizeBar {
   outline: none;
   -webkit-touch-callout: none;
 
-  // was: @include user-select(none); TODO(bjordan/bbuchanan): fix sprockets?
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
+  @include user-selects(none);
 }
 
 #divApplab {

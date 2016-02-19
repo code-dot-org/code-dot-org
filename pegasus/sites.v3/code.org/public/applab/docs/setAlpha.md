@@ -58,8 +58,12 @@ ____________________________________________________
 // Halve all alpha values for an image and display it next to the original.
 createCanvas('canvas1');
 drawImageURL("https://studio.code.org/blockly/media/skins/bee/static_avatar.png");
-var imageData = getImageData(0, 0, 175, 200);
-putImageData(halveAlpha(imageData), 0, 225);
+button("id", "Transparent");
+setPosition('id', 200, 0);
+onEvent("id", "click", function() {
+  var imageData = getImageData(0, 0, 175, 200);
+  putImageData(halveAlpha(imageData), 0, 225);
+});
 
 function halveAlpha(thisImageData){
     for(var y=0; y < thisImageData.height; y++) {

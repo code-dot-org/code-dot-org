@@ -1,0 +1,46 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-02-15T20:28:20.000Z",
+  "level_num": "custom",
+  "user_id": 208,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "markdown_instructions": "# What If *updateRecord* Fails?\r\n\r\nIn the previous exercise, you added functionality that should print an error message if `updateRecord` returns without successfully updating the record in the database. But when should `updateRecord` fail?\r\n\r\nRemember, the object parameter needs to have an ID property that matches the ID of a record in the specified table. If the object doesn’t have an ID property or if the ID property doesn’t exist in the table, `updateRecord` won’t be able to successfully update the record.\r\n\r\nTo see this behavior, you’re going to add some code that will force `updateRecord` to fail.\r\n\r\n**Your code from the previous exercise has been provided.**\r\n\r\n# Do This:\r\n\r\n* At the beginning of the `updateSong` function, set `songToUpdate.artist` to a different string.\r\n* Add another line to set `songToUpdate.id` to an ID that isn’t in the **mySongs** table (e.g., **8**).\r\n* Run the program. Take note of what gets printed to the console, then check the \"Eye of the Tiger\" record in the Data Viewer.\r\n\r\n![](https://images.code.org/db411452ec8b319452395c3383b3dd66-image-1455667133974.gif)\r\n\r\n<details>\r\n<summary><strong>What happened?</strong> (click to expand)</summary>\r\n\r\nWhen the record ID doesn’t match any in the specified table, `updateRecord` can’t find a record to update, so it sets the `success` parameter in the callback function to `false` and finishes without changing any records. Be careful to always make sure the object you pass `updateRecord` has an ID that matches a record in the table.\r\n</details>\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "instructions": "Force updateRecord to fail by changing the ID of songToUpdate. (Click to see full instructions)",
+    "project_template_level_name": "U6 - updateRecord - Template"
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Applab>

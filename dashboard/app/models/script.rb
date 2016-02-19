@@ -260,7 +260,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    return nil if chapter < 1 || chapter > self.script_levels.to_a.count
+    return nil if chapter < 1 || chapter > self.script_levels.to_a.size
     self.script_levels[chapter - 1] # order is by chapter
   end
 
@@ -302,6 +302,10 @@ class Script < ActiveRecord::Base
 
   def k5_course?
     %w(course1 course2 course3 course4).include? self.name
+  end
+
+  def csf?
+    k5_course? || twenty_hour?
   end
 
   def show_report_bug_link?
@@ -409,8 +413,8 @@ class Script < ActiveRecord::Base
         raise ActiveRecord::RecordNotFound, "Level: #{row_data.to_json}, Script: #{script.name}"
       end
 
-      if level.game && level.game == Game.applab && !script.hidden && !script.login_required
-        raise 'Applab levels can only be added to a script that requires login'
+      if level.game && (level.game == Game.applab || level.game == Game.gamelab) && !script.hidden && !script.login_required
+        raise 'Applab/Gamelab levels can only be added to a script that requires login'
       end
 
       script_level_attributes = {
@@ -518,6 +522,15 @@ class Script < ActiveRecord::Base
       CDO.code_org_url '/api/hour/finish'
     else
       CDO.code_org_url "/api/hour/finish/#{name}"
+    end
+  end
+
+  def csf_finish_url
+    if (name == Script::TWENTY_HOUR_NAME)
+      # Rename from 20-hour to public facing Accelerated
+      CDO.code_org_url "/congrats/#{Script::ACCELERATED_NAME}"
+    else
+      CDO.code_org_url "/congrats/#{name}"
     end
   end
 

@@ -75,12 +75,6 @@ class Grid < Blockly
     { 'maze' => JSON.parse(maze_json).map { |row| row.map { |cell| Integer(cell) } }.to_json}
   end
 
-  # Returns an 'unparsed' array object from the parsed properties
-  def self.unparse_maze(contents)
-    maze = contents['maze']
-    maze.is_a?(Array) ? maze.to_json : maze
-  end
-
   def filter_level_attributes(level_hash)
     %w(maze initial_dirt raw_dirt).map do |maze_type|
       prop = level_hash['properties']

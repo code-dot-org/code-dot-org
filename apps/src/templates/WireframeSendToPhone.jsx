@@ -44,25 +44,30 @@ module.exports = React.createClass({
   },
 
   handleClick: function () {
-    this.setState({clicked: true});
+    this.setState({clicked: !this.state.clicked});
+    return false; // so the # link doesn't go anywhere.
   },
 
   render: function () {
-    if (!this.state.clicked) {
-      return (
-        <div style={styles.main} onClick={this.handleClick}>
-          <i style={styles.icon} className="fa fa-mobile"></i> See this app on your phone
-        </div>
-      );
-    }
-
     return (
       <div style={styles.main}>
+        {this.renderSendToPhone()}
+        <a className="WireframeSendToPhone_send-to-phone-link" href="#" onClick={this.handleClick}>
+          <i style={styles.icon} className="fa fa-mobile"/> See this app on your phone
+        </a>
+      </div>
+    );
+  },
+
+  renderSendToPhone: function() {
+    if (this.state.clicked) {
+      return (
         <SendToPhone
           styles={styles.sendToPhone}
           channelId={this.props.channelId}
-          appType={this.props.appType}/>
-      </div>
-    );
+          appType={this.props.appType}
+        />
+      );
+    }
   }
 });

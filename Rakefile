@@ -40,7 +40,7 @@ namespace :lint do
       # lint all js/jsx files in dashboardd/app/assets/javascript
       RakeUtils.system 'grunt jshint:files --glob "../dashboard/app/**/*.js*(x)"'
       # also do our standard apps lint
-      RakeUtils.system 'grunt jshint'
+      RakeUtils.system 'npm run lint'
     end
     Dir.chdir(code_studio_dir) do
       HipChat.log 'Linting <b>code-studio</b> JavaScript...'
@@ -89,11 +89,8 @@ namespace :build do
   end
 
   task :core_and_apps_dev do
-    Dir.chdir(blockly_core_dir) do
-      RakeUtils.system './deploy.sh', 'debug'
-    end
     Dir.chdir(apps_dir) do
-      RakeUtils.system 'MOOC_DEV=1 grunt build'
+      RakeUtils.system './build_with_core.sh debug'
     end
   end
 
@@ -108,10 +105,9 @@ namespace :build do
       end
 
       HipChat.log 'Building <b>apps</b>...'
-      env_vars = ''
-      env_vars += 'MOOC_LOCALIZE=1 ' if CDO.localize_apps
-      env_vars += 'MOOC_DIGEST=1 ' unless rack_env?(:development)
-      RakeUtils.system "#{env_vars} grunt"
+      env_vars = CDO.localize_apps ? 'MOOC_LOCALIZE=1' : ''
+      npm_target = rack_env?(:development) ? 'build' : 'build:dist'
+      RakeUtils.system "#{env_vars} npm run #{npm_target}"
     end
   end
 

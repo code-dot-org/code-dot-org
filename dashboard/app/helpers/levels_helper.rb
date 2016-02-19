@@ -347,7 +347,7 @@ module LevelsHelper
         (!Rails.env.production? && request.location.try(:country_code) == 'RD') if request
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:sendToPhone]
 
-    if @game and @game.owns_footer_for_share?
+    if (@game && @game.owns_footer_for_share?) || @is_legacy_share
       app_options[:copyrightStrings] = build_copyright_strings
     end
 

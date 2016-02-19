@@ -146,7 +146,7 @@ window.apps = {
     // Previously, this was set by dashboard based on route and user agent. We
     // stopped being able to use the user agent on the server, and thus try
     // to have the same logic on the client.
-    appOptions.noPadding = !appOptions.isLegacyShare && userAgentParser.isMobile();
+    appOptions.noPadding = userAgentParser.isMobile();
   },
 
   // Set up projects, skipping blockly-specific steps. Designed for use

@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require src_dir 'database'
+require 'cdo/properties'
+
+BATCH_SIZE = 4000
+THREAD_COUNT = 2
+
+def main()
+  threads = [].tap do |threads|
+    THREAD_COUNT.times do |segment|
+      threads << Thread.new do
+        counter_key = "hoc_activity.last_id-#{segment}"
+        at = Properties.get(counter_key).to_i
+        DB.fetch(
+          "SELECT id,started_ip,pixel_started_ip,pixel_finished_ip,finished_ip FROM hoc_activity WHERE id > #{at} AND id < #{at + BATCH_SIZE} ORDER BY id ASC"
+        ).each do |row|
+          next if (row[:id] % THREAD_COUNT) != segment
+
+          ip_address = row[:started_ip] || row[:pixel_started_ip] || row[:pixel_finished_ip] || row[:finished_ip]
+          if location = Geocoder.search(ip_address).first
+            position = "#{location.latitude}, #{location.longitude}" if location.latitude && location.longitude
+            DB[:hoc_activity].where(id: row[:id]).update(
+              country: location.country,
+              country_code: location.country_code,
+              state: location.state,
+              state_code: location.state_code,
+              city: location.city,
+              location: position,
+            )
+          end
+
+          Properties.set counter_key, row[:id]
+        end
+      end
+    end
+  end
+
+  threads.each(&:join)
+end
+
+main() if only_one_running?(__FILE__)
