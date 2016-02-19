@@ -478,7 +478,7 @@ Blockly.BlockSpace.prototype.getAllVisibleBlocks = function() {
  */
 Blockly.BlockSpace.prototype.getAllUsedBlocks = function() {
   return goog.array.filter(this.getAllBlocks(), function(block) {
-    return !block.isUnused();
+    return !block.getRootBlock().isUnused();
   });
 };
 
