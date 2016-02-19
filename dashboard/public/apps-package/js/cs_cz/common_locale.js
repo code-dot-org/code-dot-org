@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkce"},
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Proměnné"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Začít znovu"},
 "clearPuzzleConfirm":function(d){return "Toto obnoví hádanku do jejího původního stavu a odstraní všechny bloky, které jste přidali nebo změnili."},
 "clearPuzzleConfirmHeader":function(d){return "Jste si jisti, že chcete začít znovu?"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Volá pojmenovanou funkci, která potřebuje jeden či více parametrů"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Volá funkci s parametry"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Volat funkci"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Shlédnout Video"},
 "when":function(d){return "když"},
 "whenRun":function(d){return "po spuštění"},
-"workspaceHeaderShort":function(d){return "Pracovní prostor: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Pracovní prostor: "}};

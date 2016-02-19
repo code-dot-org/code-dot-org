@@ -310,9 +310,7 @@ tr:
       4-5 Artist Patterns 4_instruction: |
         This diamond has 50 pixel sides and angles
         of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
+      4-5 Artist Patterns 5.5_instruction: Bu elması tam çizmek için kaç kere tekrar etmen gerekiyor?
       4-5 Artist Patterns 5_instruction: |
         Let's repeat that to make a row of 6 diamonds.
         Notice that we changed our diamond code to repeat 3 times instead of 2 - why
@@ -385,10 +383,7 @@ tr:
         Remember that purple flowers can have
         3, 2, or 1 nectars. Complete the "check purple flower" function and use
         it to collect all of the nectar at the flowers.
-      4-5 Bee Conditionals 8_instruction: |
-        Write inside the function "check flower
-        make honey". Your function should check if the purple flower has 3, 2, or
-        1 nectar and collect all of the nectar. Then, move forward and make honey.
+      4-5 Bee Conditionals 8_instruction: 'Fonksiyonun içine "çiçekler bal yapar" yaz. Fonksiyonunu kontrol etmelisin eğer çiçek morsa has 3, 2, or 1 nectar and collect all of the nectar. Then, move forward and make honey.'
       4-5 Bee Conditionals Assessment 1_instruction: |
         Assessment: This code is wrong.
         Complete the "get nectar or make honey" function, then call it to collect
@@ -481,10 +476,7 @@ tr:
       4-5 Maze Conditionals 1_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
-      4-5 Maze Conditionals 10_instruction: |
-        Can you add just 3 blocks to help me
-        solve a more complex maze? If you do it right, I can walk any curvy path no
-        matter the length.
+      4-5 Maze Conditionals 10_instruction: Daha karmaşık bir labireti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu ne olursa olsun yürüyebilirim.
       4-5 Maze Conditionals 2_instruction: |
         Use the repeat until block to get the
         zombie to the sunflower.
@@ -1814,7 +1806,9 @@ tr:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2916,6 +2910,11 @@ tr:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: |
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
@@ -3384,9 +3383,9 @@ tr:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -4701,6 +4700,17 @@ tr:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: 'Bu blokların bazılarının altında gizli lav bulunur ve ileri gitmeden önce bunların üstünü örtmeniz gerekir. Burada "eğer" komutu çok işimize yarayacak. Bu blokları çıkarmak için doğru yere bir "ileri git" komutu ekleyin.'
       Underground If Statements_instruction: 'Şimdi işler biraz daha zorlaşıyor. 3 kızıltaş çıkarın ama lavın içine düşmeyin. Ortaya çıkardığınız lavların üstüne kırıktaş yerleştirmek için bir "eğer" komutu kullanın.'
       Underground Iron_instruction: Erimiş lavın içine yürümek kötü bir fikir olabilir. Bir köprü yapmak için kırıktaş yerleştirin ve ardından en az iki demir blok çıkarın.

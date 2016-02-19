@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Fonctions"},
 "catText":function(d){return "texte"},
 "catVariables":function(d){return "Variables"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Recommencer"},
 "clearPuzzleConfirm":function(d){return "Cela va réinitialiser le puzzle à son état de départ et supprimer tous les blocs que tu as ajoutés ou changés."},
 "clearPuzzleConfirmHeader":function(d){return "Es-tu certain(e) de vouloir recommencer ?"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Appelle une fonction nommée qui prend un ou des paramètres"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Appeler une fonction avec des paramètres"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Appeler une fonction"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Voir la vidéo"},
 "when":function(d){return "quand"},
 "whenRun":function(d){return "quand l'exécution commence"},
-"workspaceHeaderShort":function(d){return "Espace de travail :"},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Espace de travail :"}};

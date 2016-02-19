@@ -1092,7 +1092,9 @@ et:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1939,6 +1941,11 @@ et:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: See mesilane tahab praegu ainult nektarit. Mitte kõik objektid ei ole lilled, seega testi IGAT PILVE, et näha, kas selle taga peidab end lill. Kui leiad lille, kogu sellelt nektar.
       Ryan - Bee Conditionals_instruction: Mesilane tahab ainult nektarit praegu. Kõik asjad ei ole lilled, nii et vaata IGA PILVE alla, et näha kas see peidab lille. Kui peidab, siis saad sa nektarit koguda.
       Ryan Test Locked Blocks_instruction: Siin on funktsioon nimega „patrull“. Muuda seda, et liigutada kassi 400 pikslit üles ja siis 400 pikslit alla.
@@ -2364,9 +2371,9 @@ et:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3681,6 +3688,17 @@ et:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: Mõne ploki all on peidus laava, mis sul tuleb enne edasiliikumist kinni katta. Siin on abi käsust „kui“. Lisa õigesse kohta käsk „liigu edasi“, et need plokid mineerida.
       Underground If Statements_instruction: Nüüd lähevad asjad keeruliseks. Mineeri 3 punast kivi, kuid ära kuku laavasse. Kasuta käsku „kui“, et panna sillutisekivid kõigi laavaaukude peale, mis sa avastad.
       Underground Iron_instruction: Sulalaavasse astumine on halb mõte. Paigalda silla rajamiseks sillutisekivi ja mineeri siis vähemalt kaks raudplokki.

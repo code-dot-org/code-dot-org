@@ -81,5 +81,6 @@
   "whileTooltip": "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke.",
   "word": "Poišči besedo",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval"
+  "youSpelled": "Ti si črkoval",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

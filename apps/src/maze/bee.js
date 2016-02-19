@@ -1,6 +1,6 @@
 var utils = require('../utils');
 var mazeMsg = require('./locale');
-var Cell = require('./beeCell');
+var BeeCell = require('./beeCell');
 var TestResults = require('../constants.js').TestResults;
 var TerminationValue = require('../constants.js').BeeTerminationValue;
 
@@ -28,22 +28,34 @@ var Bee = function (maze, studioApp, config) {
   // honeycomb using an if block
   this.userChecks_ = [];
 
-  // The "raw dirt" represents the raw values as entered into the
-  // levelbuilder UI. They are a grid of either integers or strings,
-  // and can represent "variable" values, which means any given cell can
-  // theoretically contain one of a variety of objects.
+  // Initialize the map grid
   //
-  // We parse the strings into objects, then turn the "variable" grid
-  // into a list of "static" grids, representing all the possible
-  // combinations of objects.
+  // "serializedMaze" is the new way of storing maps; it's a JSON array
+  // containing complex map data.
   //
-  // We also initialize a "values" grid, which for objects that have
-  // values (hives and flowers) keeps track of their current state.
-  var rawDirt_ = config.level.rawDirt;
-  var variableGrid = rawDirt_.map(function (row) {
-    return row.map(Cell.parse);
-  });
-  this.staticGrids = Bee.getAllStaticGrids(variableGrid);
+  // "map" plus optionally "levelDirt" is the old way of storing maps;
+  // they are each arrays of a combination of strings and ints with
+  // their own complex syntax. This way is deprecated for new levels,
+  // and only exists for backwards compatibility for not-yet-updated
+  // levels.
+  //
+  // Either way, we turn what we have into a grid of BeeCells, any one
+  // of which may represent a number of possible "static" cells. We then
+  // turn that variable grid of BeeCells into a set of static grids.
+  this.variableGrid = undefined;
+  if (config.level.serializedMaze) {
+    this.variableGrid = config.level.serializedMaze.map(function (row) {
+      return row.map(BeeCell.deserialize);
+    });
+  } else {
+    this.variableGrid = config.level.map.map(function (row, x) {
+      return row.map(function (mapCell, y) {
+        var initialDirtCell = config.level.initialDirt[x][y];
+        return BeeCell.parseFromOldValues(mapCell, initialDirtCell);
+      });
+    });
+  }
+  this.staticGrids = Bee.getAllStaticGrids(this.variableGrid);
 
   this.currentStaticGridId = 0;
   this.currentStaticGrid = this.staticGrids[0];
@@ -75,7 +87,7 @@ Bee.getAllStaticGrids = function (variableGrid) {
   var grids = [ variableGrid ];
   variableGrid.forEach(function (row, x) {
     row.forEach(function (cell, y) {
-      if (cell.isVariableCloud()) {
+      if (cell.isVariableCloud() || cell.isVariableRange()) {
         var possibleAssets = cell.getPossibleGridAssets();
         var newGrids = [];
         possibleAssets.forEach(function(asset) {
@@ -90,6 +102,13 @@ Bee.getAllStaticGrids = function (variableGrid) {
     });
   });
   return grids;
+};
+
+/**
+ * @return {boolean}
+ */
+Bee.prototype.hasMultiplePossibleGrids = function () {
+  return this.staticGrids.length > 1;
 };
 
 /**
@@ -159,8 +178,8 @@ Bee.prototype.setValue = function (row, col, val) {
 };
 
 /**
- * Did we reach our total nectar/honey goals, and accomplish any specific
- * hiveGoals?
+ * Did we reach our total nectar/honey goals?
+ * @return {boolean}
  */
 Bee.prototype.finished = function () {
   // nectar/honey goals
@@ -172,7 +191,30 @@ Bee.prototype.finished = function () {
     return false;
   }
 
+  if (!this.collectedEverything()) {
+    return false;
+  }
+
   return true;
+};
+
+/**
+ * @return {boolean}
+ */
+Bee.prototype.collectedEverything = function () {
+  // quantum maps implicity require "collect everything", non-quantum
+  // maps don't really care
+  if (!this.hasMultiplePossibleGrids()) {
+    return true;
+  }
+
+  var missedSomething = this.currentStaticGrid.some(function (row) {
+    return row.some(function (cell) {
+      return cell.isDirt() && cell.getCurrentValue() > 0;
+    });
+  });
+
+  return !missedSomething;
 };
 
 /**
@@ -193,10 +235,12 @@ Bee.prototype.onExecutionFinish = function () {
     executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_NECTAR);
   } else if (this.honey_ < this.honeyGoal_) {
     executionInfo.terminateWithValue(TerminationValue.INSUFFICIENT_HONEY);
-  } else  if (!this.checkedAllClouded()) {
+  } else if (!this.checkedAllClouded()) {
     executionInfo.terminateWithValue(TerminationValue.UNCHECKED_CLOUD);
   } else if (!this.checkedAllPurple()) {
     executionInfo.terminateWithValue(TerminationValue.UNCHECKED_PURPLE);
+  } else if (!this.collectedEverything()) {
+    executionInfo.terminateWithValue(TerminationValue.DID_NOT_COLLECT_EVERYTHING);
   }
 };
 
@@ -206,7 +250,7 @@ Bee.prototype.onExecutionFinish = function () {
 Bee.prototype.checkedAllClouded = function () {
   for (var row = 0; row < this.currentStaticGrid.length; row++) {
     for (var col = 0; col < this.currentStaticGrid[row].length; col++) {
-      if (this.isCloudable(row, col) && !this.checkedCloud(row, col)) {
+      if (this.shouldCheckCloud(row, col) && !this.checkedCloud(row, col)) {
         return false;
       }
     }
@@ -244,6 +288,7 @@ Bee.prototype.getTestResults = function (terminationValue) {
     case TerminationValue.UNCHECKED_PURPLE:
     case TerminationValue.INSUFFICIENT_NECTAR:
     case TerminationValue.INSUFFICIENT_HONEY:
+    case TerminationValue.DID_NOT_COLLECT_EVERYTHING:
       var testResults = this.studioApp_.getTestResults(true);
       // If we have a non-app specific failure, we want that to take precedence.
       // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
@@ -280,6 +325,8 @@ Bee.prototype.getMessage = function (terminationValue) {
       return mazeMsg.insufficientNectar();
     case TerminationValue.INSUFFICIENT_HONEY:
       return mazeMsg.insufficientHoney();
+    case TerminationValue.DID_NOT_COLLECT_EVERYTHING:
+      return mazeMsg.didNotCollectEverything();
     default:
       return null;
   }
@@ -314,6 +361,15 @@ Bee.prototype.isFlower = function (row, col, userCheck) {
  */
 Bee.prototype.isCloudable = function (row, col) {
   return this.currentStaticGrid[row][col].isStaticCloud();
+};
+
+/**
+ * The only clouds we care about checking are clouds that were defined
+ * as static clouds in the original grid; quantum clouds will handle
+ * 'requiring' checks through their quantum nature.
+ */
+Bee.prototype.shouldCheckCloud = function (row, col) {
+  return this.variableGrid[row][col].isStaticCloud();
 };
 
 /**
@@ -352,19 +408,6 @@ Bee.prototype.isPurpleFlower = function (row, col) {
 };
 
 /**
- * See isHive comment.
- */
-Bee.prototype.hiveGoal = function (row, col) {
-  var val = this.getValue(row, col);
-  if (val >= -1) {
-    return 0;
-  }
-
-  return Math.abs(val) - 1;
-};
-
-
-/**
  * How much more honey can the hive at (row, col) produce before it hits the goal
  */
 Bee.prototype.hiveRemainingCapacity = function (row, col) {
@@ -379,19 +422,18 @@ Bee.prototype.hiveRemainingCapacity = function (row, col) {
   if (val === EMPTY_HONEY) {
     return 0;
   }
-  return -val;
+  return val;
 };
 
 /**
  * How much more nectar can be collected from the flower at (row, col)
  */
 Bee.prototype.flowerRemainingCapacity = function (row, col) {
-  var val = this.getValue(row, col);
-  if (val < 0) {
-    // not a flower
+  if (!this.isFlower(row, col)) {
     return 0;
   }
 
+  var val = this.getValue(row, col);
   if (val === UNLIMITED_NECTAR) {
     return Infinity;
   }
@@ -406,7 +448,7 @@ Bee.prototype.flowerRemainingCapacity = function (row, col) {
  */
 Bee.prototype.madeHoneyAt = function (row, col) {
   if (this.getValue(row, col) !== UNLIMITED_HONEY) {
-    this.setValue(row, col, this.getValue(row, col) + 1);
+    this.setValue(row, col, this.getValue(row, col) - 1);
   }
 
   this.honey_ += 1;

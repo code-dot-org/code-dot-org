@@ -1343,7 +1343,9 @@ it:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2243,6 +2245,11 @@ it:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Adesso l'ape vuole solo del nettare. Ricordati che non tutti gli oggetti nascosti sono fiori, quindi controlla sotto ogni nuvoletta in modo da raccogliere il nettare solo quando ci sono fiori."
       Ryan - Bee Conditionals_instruction: |
         L'ape ora desidera solo il nettare.
@@ -2675,9 +2682,9 @@ it:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3992,6 +3999,17 @@ it:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: "Sotto alcuni di questi blocchi c'è la lava, che devi coprire per poter andare avanti. L'istruzione “se” ti è utile in questi casi. Aggiungi un istruzione “vai avanti” nel posto giusto per estrarre tutte le risorse disponibili."
       Underground If Statements_instruction: "Ora la situazione si fa un po' più difficile. Estrai tre blocchi di pietrarossa, ma non cadere nella lava. Usa un'istruzione “se” per posizionare delle lastre di pietra se scopri la lava."
       Underground Iron_instruction: Camminare sulla lava non è una buona idea. Posiziona delle lastre di pietra per creare un ponte, poi estrai almeno due blocchi di ferro.

@@ -45,7 +45,7 @@ ur:
   more: مزید دیکھیے
   less: کم دیکھیے
   beta: beta
-  try_hoc: 'آور اف کوڈ کھیلنے کے لئے یہاں کلک کریں>> '
+  try_hoc: 'آور آف کوڈ کھیلنے کے لئے یہاں کلک کریں>> '
   try_k8intro: '١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس  (١٥ سے ٢٥ گھنٹے) کا تعارف دیکھیے'
   k8intro: ١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)
   already_started: 'شروع کر چکے ہیں؟ جاری رکھیے>> '
@@ -172,8 +172,8 @@ ur:
     teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
       title: Please Confirm
-      "no": 'No'
-      "yes": 'Yes'
+      "no": نہيں
+      "yes": جی
       msg: 'Are you sure you want to claim the %{prize_name} prize?'
       msg_student: 'NOTE: You can only choose one type of prize.'
       msg_publicschool: Please confirm that you are a U.S. public school teacher.
@@ -563,8 +563,8 @@ ur:
     help_text: 'Click <strong>Make an App</strong> or <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/>You can come back and work on your projects at any time.'
     need_help: Need help getting started?
     really_delete: Delete?
-    delete_yes: 'Yes'
-    delete_no: 'No'
+    delete_yes: جی
+    delete_no: نہيں
     saved: Saved
     not_saved: Not saved
     cancel: منسوخ کریں

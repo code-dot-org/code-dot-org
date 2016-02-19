@@ -27,9 +27,9 @@
   twentyhours_heading: "Спробуйте наш курс вступу до інформатики"
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні
     поняття комп'ютерних наук та програмування на подальших курсах."
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: "Кожна дитина заслуговує на можливість"
+  og_description: "Кожен учень у кожній школі заслуговує на те, щоб мати можливість
+    вивчати інформатику."
   hoc2014_heading: Приєднуйтеся до <a href="http://hourofcode.com">Години коду</a>
     <br/> 8-14 грудня 2014 року <br/>
   hoc2014_students: "Учні"
@@ -76,16 +76,121 @@
   congratulations_on_completing_hoc: "Вітаємо із завершенням першої Години коду"
   congratulations_volunteer: 'Вітаємо: тепер, після завершення Години коду, <a href="https://code.org/volunteer">зголосіться
     волонтером для класу</a> і допоможіть учням пройти Годину коду!'
-  course_name_accelerated: "Прискорений курс"
-  course_name_course1: "Курс 1"
-  course_name_course2: "Курс 2"
-  course_name_course3: "Курс 3"
-  course_name_course4: "Курс 4"
-  congratulations_on_completing_course: "Вітаємо із завершенням %{course}"
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
+    Course
   congrats_next_tutorials_title: "Тепер можете спробувати ці підручники"
   congrats_next_tutorials_desc: Спробуйте цей короткий, 1-годинний підручник, або
     <a href="%{current_path}/next">підручники наших партнерів</a>.
   get_a_certificate_of_achievement: "Отримати сертифікат досягнень"
+  view_course: View course
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science
+    course, consider celebrating and connecting it to things they can build in the
+    real world by inviting a guest speaker to your classroom. You can use our map
+    of volunteers to contact local volunteers to visit your classroom, or search in
+    any city to find computer science students or technical professionals who are
+    ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_course1: Third party tutorials for pre-readers
+  congrats_third_party_course2: Third party tutorials
+  congrats_third_party_course3: Third party tutorials
+  congrats_third_party_course4: Third party tutorials
+  congrats_third_party_accelerated: Third party tutorials
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_tynker_desc: Tynker's creative computing platform helps children develop
+    computational thinking and programming skills in a fun, intuitive and imaginative
+    way. Our innovative visual programming language, interactive self-paced courses,
+    and game-based programming activities provide an easy introduction to programming,
+    and empower children to innovate and create.
+  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
+    that enables young children (ages 5-7) to create their own interactive stories
+    and games. Children snap together graphical programming blocks to make characters
+    move, jump, dance, and sing. Children can modify characters in the paint editor,
+    add their own voices and sounds, even insert photos of themselves - then use the
+    programming blocks to make their characters come to life.
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
+    games, and animations and share your creations with others in the online community.
+    Scratch helps young people learn to think creatively, reason systematically, and
+    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
+    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
+    or on Android or iOS devices. Students play the initial set of “Basic” levels
+    in Lightbot. They will learn how to tell a computer what to do with a series of
+    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: Learn how to program drawings, animations, and games using
+    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
+    can share whatever you create, explore what others have created and learn from
+    each other!
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
+    allows everyone, even novices, to start programming and build fully functional
+    apps for Android devices. Newcomers to App Inventor can have their first app up
+    and running in an hour or less, and can program more complex apps in significantly
+    less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
+    short videos, example code, and lots of programming exercises that make coding
+    fun and accessible for beginners. With CodeHS, you can get the help that every
+    new programmer needs to work through problems and keep learning. Our tutors are
+    everywhere!
+  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codecademy_desc: We are rethinking education from the bottom up. The
+    web has rethought nearly everything - commerce, social networking, healthcare,
+    and more. We are building the education the world needs - the first truly net
+    native education.
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: "Навчальний план"
+  third_party_pricing: Pricing
+  third_party_cost_free: Free
+  third_party_cost_5permonth: "$5/month per class"
+  third_party_cost_299: "$2.99/download"
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
+    K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
+    K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: "Будь ласка, виберіть припустимий вік"
   enter_valid_email: "Будь ласка, введіть електронну адресу"
   get_a_certificate_message: "Ми надішлемо вам сертифікат та інформацію про те, як
@@ -142,6 +247,11 @@
   learn_classes: "Знайти місцеві класи"
   hoc_is_here: "#HourOfCode вже тут - подивіться, що там! @codeorg"
   just_did_hoc: "Я щойно завершив #HourOfCode - подивіться, що це! @codeorg"
+  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! @codeorg
+  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: "Чому більше шкіл не викладають інформатику? Ми можемо це виправити.
     http://youtu.be/2DxWIxec6yo. Відвідайте http://code.org/ щоб дізнатися більше."
   learn_hoc: "Вивчати Годину Коду"
@@ -258,8 +368,8 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Дізнайтеся більше"
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: "Вже навчено 20 000 вчителів, які зараз викладають
+    інформатику в своїх класах."
   homepage_banner_20k_teachers_link: "Дізнайтеся більше"
   homepage_slot_text_title_hoc: "Година коду"
   homepage_slot_text_blurb_hoc: "Кожен може навчитися. Почніть сьогодні"
@@ -269,7 +379,7 @@
   homepage_solot_text_link_volunteer: "Волонтер для Години коду"
   homepage_slot_text_title_students: "Учні"
   homepage_slot_text_blurb_students: "Пройдіть всі наші навчальні курси"
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: "Перегляньте наші курси"
   homepage_slot_text_link_codestudio: "Спробуйте Студію Коду"
   homepage_slot_text_link_local: "Знайти місцевий клас"
   homepage_slot_text_link_othercourses: "Інші онлайн курси"
@@ -377,7 +487,7 @@
   volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
     більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
     на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: "Оновіть свої дані"
   volunteer_engineer_submission_header_shared: "Інформація доступна вчителям та волонтерам
     на карті"
   volunteer_engineer_submission_field_name: "Ім’я"
@@ -693,11 +803,11 @@
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: "Оголошення"
   dashboard_announce_view_all: "Переглянути всі"
-  dashboard_announce_message: "<b>December 16, 2015</b> - Thank you for participating
-    in the Hour of Code 2015! Tracking and saving progress have now resumed in all
-    Code Studio tutorials and courses. Note: Code.org offices will be closed December
-    19 - January 3. Please expect delayed answers to any questions you submit until
-    January 4."
+  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want
+    their children to learn computer science and still most schools don't teach it.
+    On January 30, the White House announced plans to bring computer science to every
+    student in the United States with the Computer Science for All initiative. We
+    couldn't be happier about the bipartisan support for computer science."
   dashboard_announce_button_text: "Дізнайтеся більше"
   dashboard_announce_hoc: "<b>23 листопада 2015</b> - Хочете допомогти інформатичній
     освіті протягом Години коду? Більше 7000 волонтерів вже збираються надихати учнів,
@@ -825,6 +935,11 @@
   codesters_name: Codesters
   texasinstruments_name: 10 хвилин коду
   teacherled_name: "Плани уроків для вчителів"
+  course1_name: "Курс 1"
+  course2_name: "Курс 2"
+  course3_name: "Курс 3"
+  course4_name: "Курс 4"
+  accelerated_name: "Прискорений курс"
   codeorg_gradelevel: "Вік 4-104"
   codeintl_gradelevel: "Вік 4-104"
   thinkersmithspanish_gradelevel: "Для всіх"
@@ -875,6 +990,11 @@
   codesters_gradelevel: "Вік 12-14"
   texasinstruments_gradelevel: "Вік 13-16"
   teacherled_gradelevel: "Вік 5+"
+  course1_gradelevel: "Вік 4-6"
+  course2_gradelevel: "Вік 6-18"
+  course3_gradelevel: "Вік 8-18"
+  course4_gradelevel: "Вік 10-18"
+  accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
   thinkersmithspanish_platformtext: "Безмашинні вправи"
@@ -993,6 +1113,18 @@
     TI-84&#8482; Plus."
   teacherled_shortdescription: "Надихайтесь для проведення власної події Години коду
     з цими планами уроків."
+  course2_shortdescription_congrats: For students with basic reading skills, this
+    course builds on Course 1. Students will create programs to solve problems and
+    develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve
+    deeper into programming topics introduced in previous courses to find flexible
+    solutions to more complex problems. By the end of this course, students create
+    interactive stories and games they can share with anyone. Recommended for grades
+    4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
+    into programming topics introduced in previous courses to find flexible solutions
+    to more complex problems. By the end of this course, students create interactive
+    stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: "Вивчайте основи програмування шляхом перетягування блоків.
     Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
     Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
@@ -1495,3 +1627,4 @@
   infinity_shortcode: inf
   playlab_shortcode: "грати"
   artist_shortcode: art
+  congrats_third_party_title: Use your new skills with these apps and websites

@@ -861,18 +861,12 @@ hu:
       Course 4 Artist Binary 5_instruction: |
         Which 6 digit binary string, repeated
         11 times, will draw this image?
-      Course 4 Artist Binary 6_instruction: |
-        What is the shortest binary string that
-        you can repeat to draw this image?
+      Course 4 Artist Binary 6_instruction: Mi az a legrövidebb bináris karakterlánc, ami ha megismételed, kirajzolja ezt a képet?
       Course 4 Artist Binary 7_instruction: Fejezd be a rajzot.
-      Course 4 Artist Binary Free Play 2_instruction: |
-        Free Play: Here's a blank
-        canvas for you to draw on.  Have fun!
-      Course 4 Artist Binary Free Play 2a_instruction: "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we\nstart to get creative with the bits?"
+      Course 4 Artist Binary Free Play 2_instruction: 'Szabad játék: itt egy üres vászon amire azt rajzolsz, amit csak akarsz. Jó játékot!'
+      Course 4 Artist Binary Free Play 2a_instruction: "Itt egy nagyobb felbontású vászon - 16 x 16 pixel!\r\n\r\nNézd mi történik, amikor elkezdünk játszani a bitekkel!"
       Course 4 Artist Binary Free Play 2b_instruction: Segítségért kattints ide.
-      Course 4 Artist Binary Free Play_instruction: |
-        Free Play: Draw whatever you
-        like with binary!
+      Course 4 Artist Binary Free Play_instruction: 'Szabad játék: rajzolj bitekkel amit csak akarsz!'
       Course 4 Artist Binary pre1_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       Course 4 Artist Binary ryan_instruction: "Binary is a way of representing information\nusing only two options.  Here, we're going to use the options \"off\" (represented\nby the number 0) and \"on\" (represented by the number 1).  \r\n\r\nWe've\nprovided you with a grid of \"pixels\" that you can walk through and make\ndesigns by turning on only certain squares.  Can you have the artist draw\n\"01010101\" in binary in the first row?"
       Course 4 Artist For  Functions 10_instruction: |
@@ -883,12 +877,8 @@ hu:
         Let's Step it up a little,
         can you draw a Star shape using the "Draw a Square Line" function? Good
         luck!
-      Course 4 Artist For Loops 1_instruction: |
-        Draw this triangle that is 50 pixels
-        wide. Hint: use a repeat block.
-      Course 4 Artist For Loops 10_instruction: |
-        Free Play Time! Have fun drawing
-        whatever you like with the blocks you have learned how to use
+      Course 4 Artist For Loops 1_instruction: 'Rajzold ki ezt a háromszöget, aminek az oldalai 50 pixel hosszúak. Tipp: használd az "ismételd" blokkot!'
+      Course 4 Artist For Loops 10_instruction: Szabad játék! Rajzolj amit csak akarsz a blokkokkal, amikkel megismerkedtél! Jó szórakozást!
       Course 4 Artist For Loops 11_instruction: |
         Remember back in a previous stage
         when we used a variable to control the number of sides in a shape? We are
@@ -1007,9 +997,7 @@ hu:
         make this function block complete?
       Course 4 Artist Functions challenge_instruction: Segítségért kattints ide.
       Course 4 Artist Functions Inspiration_instruction: Segítségért kattints ide.
-      Course 4 Artist Functions inspire_instruction: |
-        Click here to see the inspiration
-        picture again.
+      Course 4 Artist Functions inspire_instruction: Kattints ide az inspiráló kép megtekintéséhez.
       Course 4 Artist Inspire_instruction: "Want a second peek at the inspiration\ndesign or the hints?  Click here!\r\n\r\nOtherwise, make a design all your\nown!"
       Course 4 Artist Params 1_instruction: |
         Let's edit a function that draws a
@@ -1260,7 +1248,7 @@ hu:
       Course 4 EC 3a_instruction: |
         Extreme Challenge: No rules. No clues. Just the
         challenge!
-      Course 4 Maze 1_instruction: Get the angry bird to the pig!
+      Course 4 Maze 1_instruction: Juttasd el az angry bird-öt a malachoz!
       Course 4 Maze 2_instruction: Kerüld el a TNT-t!
       Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
       Course 4 Maze 4_instruction: |
@@ -1394,8 +1382,8 @@ hu:
         Use what you learned in the previous level to
         draw an image like this. Note: The code becomes more simple if you incorporate
         parameters. 
-      Course 4 SCF 3 Fail 1_instruction: Can you figure out how to...
-      Course 4 SCF 3 Fail 2_instruction: Can you figure out how to...
+      Course 4 SCF 3 Fail 1_instruction: Ki tudod találni hogyan...
+      Course 4 SCF 3 Fail 2_instruction: Ki tudod találni hogyan...
       Course 4 SCF 3_instruction: |
         Use what you learned in the previous level to
         draw an image like this. Note: The code becomes more simple if you incorporate
@@ -1453,7 +1441,9 @@ hu:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2077,12 +2067,8 @@ hu:
       NEW Course 4 Artist Functions 9_instruction: |
         Can you solve this by adding
         only one block?
-      NEW Course 4 Artist Functions inspire_instruction: |
-        Click here to see the inspiration
-        picture again.
-      New Course 4 Artist Functions Level 4_instruction: |
-        Use the "draw a square"
-        function to draw this pattern.
+      NEW Course 4 Artist Functions inspire_instruction: Kattints ide az inspiráló kép megtekintéséhez.
+      New Course 4 Artist Functions Level 4_instruction: 'Használd a a "rajzolj négyzetet" függvényt ennek a mintának a kirajzolásához!'
       NEW Course 4 Artist Params 1_instruction: |
         Let's define this function to draw
         a square with 50 pixel sides. Click "edit" to get started.
@@ -2143,9 +2129,7 @@ hu:
         Take a look at the code, can you
         see how the "set length" block and "length" block works together? Click
         on "Run" to see it in action. 
-      NEW Course 4 Artist Vars 2_instruction: |
-        Drag a number block to the "set length"
-        block to draw a set of 50 pixel triangles. 
+      NEW Course 4 Artist Vars 2_instruction: 'Húzz egy "szám"-blokkot az "állítsd be" blokkhoz, hogy 50 pixel oldalú háromszögeket rajzolj! '
       NEW Course 4 Artist Vars 4 5_instruction: |
         Awesome job on the last puzzle,
         let's try it again this time let's make this cool design with with 60 pixel
@@ -2186,15 +2170,11 @@ hu:
         Take a look at each piece of the
         "for loop" that you have just created.  Can you figure out which numbers
         you need to double to solve this puzzle? Why does it work?
-      NEW Course 4 Play Lab Params 11_instruction: |
-        It's free play time! Have fun
-        with all the blocks in your tool box. 
+      NEW Course 4 Play Lab Params 11_instruction: 'Szabad játék! Csinálj bármit a rendelkezésre álló blokkokkal! '
       NEW Course 4 Play Lab Params 5 5_instruction: |
         Let's try that again, but with
         less help. What do you need to edit this time to make the actors patrol?
-      NEW Course 4 Play Lab Vars 4 5_instruction: |
-        “What do you think this code will
-        do? Press “Run” to see what happens.”
+      NEW Course 4 Play Lab Vars 4 5_instruction: '"Mit gondol ez a kód fog tenni? Kattints a "Futtatás" gombra, hogy megtudd.'
       NEW Course 4 Play Labs For Loops 7a_instruction: |
         Using what you learned so
         far, can you have Dinosaur take a step forward every time Penguin counts?
@@ -2433,6 +2413,11 @@ hu:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: A méhecske csak nektárt szeretne most. Nem minden tárgy virág, tehát vizsgálj meg minden felhőt, hogy van-e alatta virág. Ha igen, tudsz belőle nektárt gyűjteni.
       Ryan - Bee Conditionals_instruction: |
         The bee only wants nectar right now.
@@ -2871,9 +2856,9 @@ hu:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -4188,6 +4173,17 @@ hu:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: 'Láva rejlik bizonyos blokkok alatt, amelyet le kell takarnod, mielőtt tovább mozogsz. A "ha" utasítás jól fog jönni. Használd az "előremenni" blokkot a megfelelő módon, hogy kibányászd ezeket a blokkokat.'
       Underground If Statements_instruction: 'A dolgok kezdenek trükkösek lenni. Három vöröskő ércet bányássz ki, de közben ne ess bele a lávába! Használd a "ha" parancsot, hogy macskakővel takard le a lávát, ha lávával találkozol.'
       Underground Iron_instruction: Nem jó ötlet belesétálni a folyékony lávába. Takard le macskakővel, és így készíts hidat. azután legalább két vasérc blokkot bányássz ki.

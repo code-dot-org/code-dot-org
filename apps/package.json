@@ -8,8 +8,12 @@
     "npm": "^2.9.1"
   },
   "scripts": {
-    "build": "grunt build",
-    "test": "grunt build && grunt test"
+    "lint": "grunt jshint",
+    "test": "grunt test",
+    "clean": "grunt clean",
+    "build": "MOOC_DEV=1 grunt build",
+    "build:dist": "MOOC_DEV=0 grunt clean build",
+    "start": "grunt dev"
   },
   "browser": {
     "blockly": "./build/package/js/blockly.js"
@@ -34,6 +38,7 @@
     "browserify-shim": "3.8.10",
     "canvg": "gabelerner/canvg",
     "chai": "1.10.0",
+    "chai-subset": "1.2.0",
     "connect-livereload": "0.5.3",
     "ejs": "0.8.4",
     "ejsify": "1.0.0",
@@ -80,6 +85,7 @@
     "sinon": "^1.16.1",
     "sprintf-js": "^1.0.3",
     "stackblur": "^1.0.0",
+    "time-grunt": "^1.3.0",
     "uglify-js": "2.4.24",
     "watchify": "3.2.3",
     "which": "1.1.1"

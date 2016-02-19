@@ -81,5 +81,6 @@
   "whileTooltip": "Повторять указанные действия до конечной точки.",
   "word": "Найти слово",
   "yes": "Да",
-  "youSpelled": "Вы ввели"
+  "youSpelled": "Вы ввели",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

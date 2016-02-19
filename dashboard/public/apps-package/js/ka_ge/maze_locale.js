@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე."},
 "word":function(d){return "იპოვეთ სიტყვა"},
 "yes":function(d){return "დიახ"},
-"youSpelled":function(d){return "თქვენ შეიყვანეთ"}};
+"youSpelled":function(d){return "თქვენ შეიყვანეთ"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

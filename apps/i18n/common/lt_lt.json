@@ -14,6 +14,7 @@
   "catProcedures": "Komandų kūrimas",
   "catText": "Tekstas",
   "catVariables": "Kintamieji",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Pradėti iš naujo",
   "clearPuzzleConfirm": "Visi tavo sudėlioti blokeliai bus panaikinti ir šį galvosūkį bus galima spręsti nuo pradžių.",
   "clearPuzzleConfirmHeader": "Ar tikrai norite pradėti iš naujo?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Iškviečia funkciją su vienu parametru",
   "dropletBlock_callMyFunction_n_signatureOverride": "Iškviečia funkciją su parametrais",
   "dropletBlock_callMyFunction_signatureOverride": "Iškviečia funkciją",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -134,7 +137,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "OR boolean operator",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "dropletBlock_randomNumber_description": "Grąžina atsitiktinį skaičių diapazone nuo min iki max.",
   "dropletBlock_randomNumber_param0": "mažiausias",
   "dropletBlock_randomNumber_param0_description": "Grąžina mažiausią skaičių",
   "dropletBlock_randomNumber_param1": "didžiausias",
@@ -203,7 +206,7 @@
   "print": "Spausdinti",
   "puzzleTitle": "Užduotis {puzzle_number} iš {stage_total}",
   "readonlyWorkspaceHeader": "Rodyti tik: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "Pabandykite panaudoti bloką kaip šis, kad išspręstumėte galvosūkį.",
   "repeat": "kartok",
   "resetProgram": "Iš naujo",
   "rotateText": "Pasuk savo įrenginį.",
@@ -253,7 +256,5 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Darbo laukas: "
 }

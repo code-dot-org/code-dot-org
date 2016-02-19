@@ -290,6 +290,12 @@ class User < ActiveRecord::Base
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
 
+  def User.find_channel_owner(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    User.find(user_id)
+  end
+
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates_format_of :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
   validates :email, no_utf8mb4: true

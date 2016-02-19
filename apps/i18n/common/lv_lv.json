@@ -14,6 +14,7 @@
   "catProcedures": "Funkcijas",
   "catText": "Teksts",
   "catVariables": "Mainīgie",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Sākt no sākuma",
   "clearPuzzleConfirm": "Šis atiestatīs mīklu līdz tās sākuma pozīcijai un izdzēsīs visus blokus, kurus esi pievienojis, vai mainijis.",
   "clearPuzzleConfirmHeader": "Vai esat pārliecināts, ka vēlaties sākt no jauna?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Calls a named function that takes one or more parameters",
   "dropletBlock_callMyFunction_n_signatureOverride": "Call a function with parameters",
   "dropletBlock_callMyFunction_signatureOverride": "Call a function",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +256,5 @@
   "watchVideo": "Noskaties video",
   "when": "kad",
   "whenRun": "kad izpilda",
-  "workspaceHeaderShort": "Darba virsma: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Darba virsma: "
 }

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "!!-Functions-!!"},
 "catText":function(d){return "!!-Text-!!"},
 "catVariables":function(d){return "!!-Variables-!!"},
+"choosePrefix":function(d){return "!!-Choose...-!!"},
 "clearPuzzle":function(d){return "!!-Start Over-!!"},
 "clearPuzzleConfirm":function(d){return "!!-This will reset the puzzle to its start state and delete all the blocks you've added or changed.-!!"},
 "clearPuzzleConfirmHeader":function(d){return "!!-Are you sure you want to start over?-!!"},

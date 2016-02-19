@@ -81,5 +81,6 @@
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
   "word": "Najdi slovo",
   "yes": "Ano",
-  "youSpelled": "Vyhláskoval(a) jsi"
+  "youSpelled": "Vyhláskoval(a) jsi",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

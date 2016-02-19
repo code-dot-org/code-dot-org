@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Endurtaka aðgerðirnar í kubbnum þar til endamarki er náð."},
 "word":function(d){return "Finna orðið"},
 "yes":function(d){return "Já"},
-"youSpelled":function(d){return "Þú stafaðir"}};
+"youSpelled":function(d){return "Þú stafaðir"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

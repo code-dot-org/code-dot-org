@@ -14,6 +14,7 @@
   "catProcedures": "الدوال",
   "catText": "النص",
   "catVariables": "المتغيرات",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "البدء من جديد",
   "clearPuzzleConfirm": "سيقوم هذا بإعادة اللغز إلى حالته الأصلية وحذف جميع المربعات البرمجية التي قمت بإضافتها أو تعديلها.",
   "clearPuzzleConfirmHeader": "هل أنت متأكد من أنك تريد البدء من جديد؟",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Calls a named function that takes one or more parameters",
   "dropletBlock_callMyFunction_n_signatureOverride": "Call a function with parameters",
   "dropletBlock_callMyFunction_signatureOverride": "Call a function",
+  "dropletBlock_comment_description": "اكتب وصفاً لكود برمجي",
+  "dropletBlock_comment_signatureOverride": "تعليق",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -134,7 +137,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "OR boolean operator",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "dropletBlock_randomNumber_description": "إرجاع رقم عشوائي في مجموعة مغلقة من الحد الأدنى إلى الحد الأقصى.",
   "dropletBlock_randomNumber_param0": "أصغر",
   "dropletBlock_randomNumber_param0_description": "أعاد أصغر عدد",
   "dropletBlock_randomNumber_param1": "الأكبر",
@@ -203,7 +206,7 @@
   "print": "طباعة",
   "puzzleTitle": "اللغز {puzzle_number} من {stage_total}",
   "readonlyWorkspaceHeader": "عرض فقط: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "حاول استخدام كتلة مثل هذا لحل اللغز.",
   "repeat": "كرر",
   "resetProgram": "إعادة تعيين",
   "rotateText": "تدوير الجهاز.",
@@ -253,7 +256,5 @@
   "watchVideo": "شاهد الفيديو",
   "when": "عندما",
   "whenRun": "عند التشغيل",
-  "workspaceHeaderShort": "مساحة العمل: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "مساحة العمل: "
 }

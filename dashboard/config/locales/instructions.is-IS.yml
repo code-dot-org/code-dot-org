@@ -42,8 +42,9 @@
         Hve oft þarf ég að endurtaka til að ljúka því?
       2-3 Artist Debugging 12_instruction: "Ég á að bæta haföldu við þessa mynd. Getur
         þú hjálpað?"
-      2-3 Artist Debugging 2_instruction: "Þessi kóði fyrir veiðihárin þrjú er rangur.
-        Vísbending: Hvert hár er 75 díla langt. Lagaðu kóðann svo hann teikni veiðihárin."
+      2-3 Artist Debugging 2_instruction: "Þessi kóði fyrir veiðihárin þrjú sem þú
+        sérð er rangur. Vísbending: Hvert hár ætti að vera 75 díla langt. Lagaðu kóðann
+        svo hann teikni veiðihárin."
       2-3 Artist Debugging 3_instruction: 'Báturinn minn lekur! Getur þú lagað hann
         með því að breyta horni línunnar? Vísbending: Síðasta hornið er skakkt um
         15 gráður.'
@@ -342,9 +343,8 @@
       2-3 Maze Loops 21_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops Assessment 1_instruction: 'Mat: Komdu mér til sólblómsins með
         aðeins 5 kubbum! '
-      2-3 Maze sq1_instruction: |
-        This pig is ruffling my feathers.  Help me find
-        him!
+      2-3 Maze sq1_instruction: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að
+        finna það!"
       2-3 Maze sq10_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 Maze sq10v2_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
       2-3 maze sq11_instruction: Komdu mér til svínsins! Hvaða kubbar eru endurteknir?
@@ -371,9 +371,8 @@
       2-3 Maze sq8_instruction: Komdu mér til svínsins! (Hvar er nú þessi "endurtaka"
         kubbur?)
       2-3 Maze sq9_instruction: Notaðu lykkjur til að ná svínka með færri kubbum.
-      2-3_instruction: |
-        Purple flowers may have either 1 or 0 nectar. Be careful
-        not to collect nectar from a purple flower if it doesn't have any.
+      2-3_instruction: Fjólublá blóm geta haft 1 eða 0 af blómasafa. Gættu þess að
+        safna ekki safa á fjólubláu blómi sem hefur engan.
       2-3level1_instruction: Láttu fuglinn ná óþæga svíninu með því að færa hann áfram
       4-5 Artist 1_instruction: 'Hjálpaðu mér að ljúka teikningunni. (Hver lína er
         300 díla löng) '
@@ -529,37 +528,32 @@
       4-5 Bee Conditionals - FC Test_instruction: "Þessa stundina vill býflugan bara
         blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
         SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
-      4-5 Bee Conditionals 1 (copy 1)_instruction: |
-        The bee can't tell if this is
-        a flower or a honeycomb. Gather nectar only from flowers, but first check
-        if it is a flower or a honeycomb.
+      4-5 Bee Conditionals 1 (copy 1)_instruction: Býflugan veit ekki hvort þetta
+        er blóm eða býflugnabú. Safnaðu blómasafa aðeins úr blómum, en kannaðu fyrst
+        hvort um blóm eða bú er að ræða.
       4-5 Bee Conditionals 1_instruction: "Þessi býfluga sér ekki hvort þetta er blóm
         eða býflugnabú. Athugaðu hvort hlutur er blóm eða bú og safnaðu blómasafa
         aðeins úr blómum."
-      4-5 Bee Conditionals 2 (copy 1)_instruction: |
-        The bee only wants nectar right
-        now. Remember, not all objects are flowers, so check to gather nectar only
-        at flowers.
+      4-5 Bee Conditionals 2 (copy 1)_instruction: Núna vill býflugan aðeins blómasafa.
+        Mundu að það er ekki allt blóm. Gættu þess að safa sé aðeins safnað á blómum.
       4-5 Bee Conditionals 2_instruction: "Þessa stundina vill býflugan bara blómasafa.
         Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til
         að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
       4-5 Bee Conditionals 3_instruction: Nú vill býflugan aðeins búa til hunang.
         Gættu þess að hún geri það aðeins í býflugnabúum.
-      4-5 Bee Conditionals 4 (copy 1)_instruction: |
-        The unknown object is either
-        a flower or a honeycomb. Use the if/else block to collect nectar if it is
-        a flower, else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4 (copy 1)_instruction: Óþekkti hluturinn er annað hvort
+        blóm eða býflugnabú. Notaðu "ef-annars" kubbinn til að safna safa ef hann
+        er blóm, en annars búa til hunang (því þá er hann bú).
       4-5 Bee Conditionals 4_instruction: Þetta óþekkta er annað hvort blóm eða býflugnabú.
         Notaðu "ef-annars" kubb til að safna safa ef það er blóm, annars búa til hunang
         (því þá er það bú).
       4-5 Bee Conditionals 5_instruction: Þessi ský fela annað hvort blóm eða býflugnabú.
         Notaðu "ef-annars" kubbinn til að safna blómasafa ef um blóm er að ræða, annars
         búa til hunang (því þá er það bú).
-      4-5 Bee Conditionals 6 (copy 1)_instruction: |
-        This purple flower may have either
-        3, 2, or 1 nectar. Here an if-else block is combined with another if-else
-        block to create an if, else-if, else block. Complete the solution to collect
-        the unknown amount of nectar.
+      4-5 Bee Conditionals 6 (copy 1)_instruction: Þetta fjólubláa blóm gæti innihaldið
+        3, 2 eða 1 af blómasafa. Hér er "ef-annars" kubbur settur í annan "ef-annars"
+        kubb til að búa til "ef, annars-ef, annars" stæðu. Ljúktu við lausnina til
+        að safna óþekktu magni af safa.
       4-5 Bee Conditionals 6_instruction: Þetta fjólubláa blóm gæti innihaldið 3,
         2 eða 1 af blómasafa. Hér er "ef-annars" kubbur settur í annan "ef-annars"
         kubb til að setja fleiri skilyrði (ef 3 - annars ef 2 - annars). Ljúktu við
@@ -709,10 +703,9 @@
         Notaðu "meðan" lykkju fyrir bæði.'
       4-5 While Loops Assessment 1_instruction: Nú eru margar holur og margir haugar.
         Hjálpaðu mér að fylla og fjarlægja svo yfirborðið verði slétt.
-      AlgPD DR Free Play_instruction: Create a function based on your own word problem.
-      AllTheThings Applab - Turtle move with button_instruction: |
-        Add a button that
-        moves the turtle when clicked.  (Click to see full instructions)
+      AlgPD DR Free Play_instruction: Búðu til fall út frá þínu eigin orðadæmi.
+      AllTheThings Applab - Turtle move with button_instruction: Bættu við hnappi
+        sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
       allthethings data blocks test_instruction: |
         Please sign in to test applab levels
         (By design, applab levels only work if signed in. Normally, we make people
@@ -1766,7 +1759,9 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2767,6 +2762,11 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: "Þessa stundina vill býflugan bara
         blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT
         SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa."
@@ -3234,9 +3234,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3609,9 +3609,8 @@
         með félaga". GIF: U3L3-ProceduresChooseOne.png'
       U3L03 Creating Procedures 1_instruction: 'Skrifaðu fallið turnAround() og notaðu
         það til að láta skjaldbökuna hreyfast eins og sýnt er. Sjá: U3L03-turnAndDown.gif'
-      U3L03 Define and use turnAround_instruction: Skrifaðu fallið turnAround og notaðu
-        það til að láta skjaldbökuna hreyfast eins og sýnt er. (Smelltu til að sjá
-        ítarlegar leiðbeiningar)
+      U3L03 Define and use turnAround_instruction: Skrifaðu fallið turnAround. Kallaðu
+        á fallið og færðu svo skjaldbökuna áfram. (Smelltu til að sjá ítarlegar leiðbeiningar)
       U3L03 define turnRight and draw a rectangle_instruction: |
         Define a function
         called right() that turns the turtle to the right. Then use this function
@@ -4574,6 +4573,17 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: Það leynist hraun undir sumum blokkunum
         og þú verður að þekja það áður þú ferð áfram. "Ef" skipun er gagnleg hér.
         Bættu "færa áfram" skipun við á réttum stað til að ná að grafa út þessar blokkir.

@@ -14,6 +14,7 @@
   "catProcedures": "関数",
   "catText": "テキスト〔文字列（もじれつ）〕",
   "catVariables": "変数",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "最初（さいしょ）からやり直（なお）す。",
   "clearPuzzleConfirm": "パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。",
   "clearPuzzleConfirmHeader": "本当に最初からやり直してもよいですか？",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "1 つまたは複数のパラメーターを名前付き関数を呼び出す",
   "dropletBlock_callMyFunction_n_signatureOverride": "パラメーターを持つ関数を呼び出す",
   "dropletBlock_callMyFunction_signatureOverride": "関数を呼び出す",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "変数を作成し、配列として初期化する",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -134,7 +137,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "OR boolean operator",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "dropletBlock_randomNumber_description": "最小値（一番小さい数）から最大値（一番大きな数）の中から一番近い数を返します",
   "dropletBlock_randomNumber_param0": "最小（さいしょう）",
   "dropletBlock_randomNumber_param0_description": "返（かえ）される範囲（はんい）で最小（さいしょう）の数（かず）",
   "dropletBlock_randomNumber_param1": "最大（さいだい）",
@@ -203,7 +206,7 @@
   "print": "印刷",
   "puzzleTitle": "パズル {puzzle_number} (全 {stage_total} ステージ)",
   "readonlyWorkspaceHeader": "表示のみ: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "パズルを解決するためにこのブロックを使用してください。",
   "repeat": "繰り返し",
   "resetProgram": "リセット",
   "rotateText": "お使いのデバイスを回転させてください。",
@@ -253,7 +256,5 @@
   "watchVideo": "ビデオを見る",
   "when": "とき",
   "whenRun": "実行した時",
-  "workspaceHeaderShort": "ワークスペース：",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "ワークスペース："
 }

@@ -14,6 +14,7 @@
   "catProcedures": "Mga function",
   "catText": "Text",
   "catVariables": "Mga variable",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Magsimula sa Umpisa",
   "clearPuzzleConfirm": "Ire-reset nito ang puzzle sa umpisa at tatanggalin ang lahat ng mga bloke na iyong idinagdag o binago.",
   "clearPuzzleConfirmHeader": "Sigurado ka bang gusto mong magsimula muli?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Calls a named function that takes one or more parameters",
   "dropletBlock_callMyFunction_n_signatureOverride": "Call a function with parameters",
   "dropletBlock_callMyFunction_signatureOverride": "Tumawag ng isang function",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +256,5 @@
   "watchVideo": "Panoorin ang Video",
   "when": "kelan",
   "whenRun": "kapag tumakbo",
-  "workspaceHeaderShort": "Workspace: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Workspace: "
 }

@@ -18,22 +18,22 @@ sl:
           "Artist 1: Intro": 'Umetnik 1: Uvod'
           Artists 2: Umetniki 2
           Spelling Bee: Čebelica črkuje besede
-          Spelling Bee not blockly: Spelling Bee not blockly
+          Spelling Bee not blockly: Črkuj čebela, ne blockly
           "Bee 1: Intro": 'Čebelica 1: Uvod'
           "Maze 2: Loops": 'Labirint 2: zanke'
           "Bee 2: Loops": 'Čebelica 2: zanke'
-          Multi & Match: 'Multi & Match'
+          Multi & Match: 'Multi&Najdi par'
           K-1 Flappy: Plahutaček za prvi razred
           Flappy non blockly: Plahutaček ne blokaček
           title: Tečaj 1
-          Artist 2: Artist 2
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
-          Building a Foundation: Building a Foundation
+          Artist 2: Umetnik 2
+          Happy Maps: Veseli zemljevidi
+          Move it, Move it: Dajmo, dajmo
+          "Real-life Algorithms: Plant a Seed": 'Življenjski algoritmi: Zasadi seme'
+          Building a Foundation: Graditi temelje
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
-          Going Places Safely: Going Places Safely
+          The Big Event: Veliki dogodek
+          Going Places Safely: Kako varno potovati
           description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
           "Bee: Sequence": 'Bee: Sequence'
           "Artist: Sequence": 'Artist: Sequence'
@@ -67,7 +67,7 @@ sl:
           Relay programming: Relay programming
           Conditionals: Pogoji
           Binary Bracelets: Binary Bracelets
-          The Big Event: The Big Event
+          The Big Event: Veliki dogodek
           Your Digital Footprint: Your Digital Footprint
           description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
           "Maze: Sequence": 'Labirint: zaporedje'
@@ -81,13 +81,13 @@ sl:
           "Artist: Sequence2": 'Artist: Sequence2'
           "Maze: Sequence2": 'Maze: Sequence2'
           "Artist: Nested Loops": 'Artist: Nested Loops'
-          description_audience: Ages 6-18
-          description_short: Start with Course 2 for students who can read.
+          description_audience: Starost 6-18
+          description_short: Z učenci, ki že znajo brati, začnite pri 2. tečaju.
         course3:
           The Maze: Labirint
           "Studio: Create a Story": 'Play Lab: Create a Story'
           The Artist: Umetnik
-          title: Course 3
+          title: 3. tečaj
           Artist Functions: Artist Functions
           Artist For Loops: Artist For Loops
           Artist Nested Loops: Artist Nested Loops
@@ -156,7 +156,7 @@ sl:
           description_short: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
         course4:
           description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description: Course 4 is designed for students who have taken Course 2 and 3. Students will delve deeper into programming topics introduced in previous courses to flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
+          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'Artist: Variables'
           "Bee: For Loops": 'Bee: For Loops'
           title: Course 4
@@ -1166,13 +1166,13 @@ sl:
           description_short: Short unplugged course designed for informal learning
           description: Afterschool Unplugged is designed to teach computational thinking and computer science ideas through offline games and crafts. Created with informal classrooms in mind, these lessons are fantastic on their own, or in combination with Afterschool 1 . This course focuses on learning through entertainment. Recommended for grades K-8.
           description_audience: Ages 6-13
-          Happy Maps: Happy Maps
-          Move it, Move it: Move it, Move it
-          "Real-life Algorithms: Plant a Seed": 'Real-life Algorithms: Plant a Seed'
+          Happy Maps: Veseli zemljevidi
+          Move it, Move it: Dajmo, dajmo
+          "Real-life Algorithms: Plant a Seed": 'Življenjski algoritmi: Zasadi seme'
           Graph Paper Programming: Obarvajmo kvadratke
-          Building a Foundation: Building a Foundation
+          Building a Foundation: Graditi temelje
           Getting Loopy: Getting Loopy
-          The Big Event: The Big Event
+          The Big Event: Veliki dogodek
           Binary Bracelets: Binary Bracelets
           Songwriting: Napiši pesem
         afterschool1:
@@ -1309,6 +1309,10 @@ sl:
           Unit 5 Overview: Unit 5 Overview
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
+          Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1534,8 +1538,8 @@ sl:
         cspunit4:
           title: 'CSP Unit 4 - Data'
           description_short: Data
-          description: Being able to digitally manipulate data, visualize it, identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
-          Intro to Data: Intro to Data
+          description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
+          Intro to Data: Introduction to Data
           Finding Trends with Visualizations: Finding Trends with Visualizations
           Check Your Assumptions: Check Your Assumptions
           Good and Bad Data Visualizations: Good and Bad Data Visualizations
@@ -1549,3 +1553,26 @@ sl:
           Identifying People with Data: Identifying People with Data
           Privacy Abandoned: Privacy Abandoned
           Practice PT - Propose an Innovation: 'Practice PT - Propose an Innovation'
+        CSPPD3-Unit4:
+          title: 'Computer Science Principles: Unit 4 PD'
+          description_short: Support for CSP Unit 4
+          description: Online Support for CSP Unit 4
+          Getting Started: Getting Started
+          Unit 4 Overview: Unit 4 Overview
+          Chapter 1 Overview: Chapter 1 Overview
+          Chapter 2 Overview: Chapter 2 Overview
+          Practice Performance Tasks: Practice Performance Tasks
+          Challenge Overview: Challenge Overview
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records

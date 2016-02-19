@@ -32,9 +32,6 @@ class LevelsController < ApplicationController
 
   # GET /levels/1/edit
   def edit
-    if @level.is_a? Grid
-      @level.maze_data = @level.class.unparse_maze(@level.properties)
-    end
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
@@ -100,8 +97,10 @@ class LevelsController < ApplicationController
     # Set some defaults.
     params[:level].reverse_merge!(skin: type_class.skins.first) if type_class <= Blockly
     if type_class <= Grid
-      params[:level][:maze_data] = Array.new(8){Array.new(8){0}}
-      params[:level][:maze_data][0][0] = 2
+      default_tile = type_class == Karel ? {"tileType": 0} : 0
+      start_tile = type_class == Karel ? {"tileType": 2} : 2
+      params[:level][:maze_data] = Array.new(8){Array.new(8){default_tile}}
+      params[:level][:maze_data][0][0] = start_tile
     end
     if type_class <= Studio
       params[:level][:maze_data][0][0] = 16 # studio must have at least 1 actor
@@ -116,9 +115,9 @@ class LevelsController < ApplicationController
     begin
       @level = type_class.create_from_level_builder(params, level_params)
     rescue ArgumentError => e
-      render status: :not_acceptable, text: e.message and return
+      render(status: :not_acceptable, text: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
-      render status: :not_acceptable, text: invalid and return
+      render(status: :not_acceptable, text: invalid) && return
     end
 
     render json: { redirect: edit_level_path(@level) }
@@ -172,9 +171,9 @@ class LevelsController < ApplicationController
       begin
         @level.update!(name: params[:name])
       rescue ArgumentError => e
-        render status: :not_acceptable, text: e.message and return
+        render(status: :not_acceptable, text: e.message) && return
       rescue ActiveRecord::RecordInvalid => invalid
-        render status: :not_acceptable, text: invalid and return
+        render(status: :not_acceptable, text: invalid) && return
       end
       render json: {redirect: edit_level_url(@level)}
     else

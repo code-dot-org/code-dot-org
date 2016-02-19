@@ -126,8 +126,9 @@ img#turtleImage {
   border-width: 0px;
   padding: 0px;
   outline: none;
-  -moz-user-select: text;
   -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
   -ms-user-select: text;
   user-select: text; }
 
@@ -440,7 +441,6 @@ div#visualizationResizeBar {
     transform: scale(0.5); } }
 
 #visualizationColumn.wireframeShare {
-  background: url("/blockly/media/applab/phone_wireframe.png") center center no-repeat;
   max-width: none !important;
   width: 352px;
   height: 612px;
@@ -460,10 +460,10 @@ div#visualizationResizeBar {
   overflow: hidden;
   outline: none;
   -webkit-touch-callout: none;
-  -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
 #divApplab {

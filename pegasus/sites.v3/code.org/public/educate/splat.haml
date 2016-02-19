@@ -1,8 +1,20 @@
+// Redirect old paths with abbreviations to new paths with descriptive names
+// ex. plc to /professional-learning. And redirect old paths to new organized
+// paths like /district pages all grouped together.
+
 - requested_path = request.path_info
 
-- if requested_path.include? "/educate/plc"
-  // redirect /plc to /professional-learning or professional-learning-partner 
-  // with descriptive course names instead of abbreviations
+- if requested_path.eql? "/educate/k5"
+  - redirect "/educate/curriculum/elementary-school"
+- elsif requested_path.eql? "/educate/20hr"
+  - redirect "/educate/curriculum/accelerated-course"
+- elsif requested_path.eql? "/educate/3rdparty"
+  - redirect "/educate/curriculum/3rd-party"
+- elsif requested_path.eql? "/educate/allhourofcode"
+  - redirect "/educate/curriculum/all-hour-of-code"
+- elsif requested_path.eql? "/educate/teacher-led"
+  - redirect "/educate/curriculum/teacher-led"  
+- elsif requested_path.include? "/educate/plc"
   - if requested_path.include? "plp"
     - path = requested_path.gsub("plc", "professional-learning-partner")
     - new_path = path.gsub(/plp-|plp/, "")
@@ -11,3 +23,47 @@
     - path = requested_path.gsub("plc", "professional-learning")
     - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
     - redirect new_path
+- elsif requested_path.eql? "/educate/facilitator"
+  - redirect "/educate/professional-learning/facilitator"
+- elsif requested_path.include? "/educate/facilitator"
+  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("csa", "cs-in-algebra").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
+  - new_path = path.gsub("/educate/facilitator-", "/educate/professional-learning/") + "-facilitator"
+  - redirect new_path
+- elsif requested_path.eql? "/educate/k5-affiliates"
+  - redirect "/educate/professional-learning/cs-fundamentals-facilitator"
+- elsif requested_path.eql? "/educate/k5-affiliates-directory"
+  - redirect "/educate/professional-learning/cs-fundamentals-directory"  
+- elsif requested_path.eql? "/educate/events"
+  - redirect "/educate/professional-learning/events"
+- elsif requested_path.eql? "/educate/k5/k5officehours"
+  - redirect "/educate/professional-learning/events"
+- elsif requested_path.eql? "/educate/k5/introPD"
+  - redirect "/educate/professional-learning/cs-fundamentals-intro"
+- elsif requested_path.eql? "/educate/k5/k5onepager.pdf"
+  - redirect "/educate/professional-learning/cs-fundamentals-onepager.pdf"
+- elsif requested_path.eql? "/educate/k5/resources"
+  - redirect "/educate/professional-learning/cs-fundamentals-resources"
+- elsif requested_path.eql? "/educate/districts"
+  - redirect "/educate/district"
+- elsif %w(/educate/district-partners /educate/partner-districts).include? requested_path
+  - redirect "/educate/district/partners"
+- elsif requested_path.eql? "/educate/districtterms"
+  - redirect "/educate/district/terms"
+- elsif requested_path.eql? "/educate/template-district-agreement"
+  - redirect "/educate/district/agreement"
+- elsif requested_path.eql? "/educate/qualify"
+  - redirect "/educate/district/qualify"
+- elsif requested_path.eql? "/educate/k5-district-partnership"
+  - redirect "/educate/district/k5-partnership"
+- elsif requested_path.eql? "/educate/interesteddistrict"
+  - redirect "/educate/district/interest-form"
+- elsif requested_path.eql? "/educate/inspire"
+  - redirect "/educate/resources/inspire"
+- elsif requested_path.eql? "/educate/it"
+  - redirect "/educate/resources/tech-requirements"
+- elsif requested_path.eql? "/educate/marketingkit"
+  - redirect "/educate/resources/marketing-kit"
+- elsif requested_path.eql? "/educate/videos"
+  - redirect "/educate/resources/videos"  
+- elsif requested_path.eql? "/educate/hoc"
+  - redirect "https://hourofcode.com/"

@@ -30,7 +30,7 @@
       2-3 Artist 6_instruction: "სახლს სახურავი სჭირდება! დახატეთ სამკუთხედი. მინიშნება:
         სამივე გვერდი თანაბარი სიგრძისაა."
       2-3 Artist 7_instruction: "დაასრულეთ უკანასკნელი ფანჯრის მარჯვენა ნახევრის ხატვა.
-        ყოველი კვადრატული ფანჯრის სიგანეა 25 პიქსელი. "
+        ყოველი კვადრატული ფანჯრის მინის სიგანეა 25 პიქსელი. "
       2-3 Artist 8_instruction: "დაასრულეთ ყოველი ცხოველის ოთახის ხატვა მართკუთხედის
         ორ თანაბარ კვადრატად გაყოფით. მართკუთხედის სიგანეა 200, ხოლო სიმაღლე - 100
         პიქსელი."
@@ -46,8 +46,8 @@
       2-3 Artist Debugging 12_instruction: "ამ სცენას ოკეანის ტალღა უნდა დავუმატო.
         შეგიძლიათ დამეხმაროთ?"
       2-3 Artist Debugging 2_instruction: "კოდი სამი ულვაშისთვის, რომელსაც თქვენ ხედავთ,
-        არასწორია. თითოეული ულვაშის სიგრძეა 75 პიქსელი. გაასწორეთ კოდი, რომ სწორად
-        დახატოთ ულვაშები."
+        არასწორია. მინიშნება: თითოეული ულვაშის სიგრძეა 75 პიქსელი. გაასწორეთ კოდი,
+        რომ სწორად დახატოთ ულვაშები."
       2-3 Artist Debugging 3_instruction: "ჩემს ნავს ორმო აქვს! შეგიძლიათ შეაკეთოთ
         ხაზის კუთხის შეცვლით? მინიშნება: უკანასკნელი კუთხე აცდენილია 15 გრადუსით."
       2-3 Artist Debugging 4_instruction: "რა სურათის დახატვას ვცდილობთ? დაასრულეთ
@@ -309,29 +309,30 @@
         (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
       2-3 Maze 12 (copy 2)_instruction: 'შეგიძლიათ წინა პასუხი მხოლოდ ორი ბლოკით შეცვალოთ?
         (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
-      2-3 Maze 12 (old)_instruction: "მიმიყვანეთ ღორთან, ახლა უკვე გამეორების ბლოკის
+      2-3 Maze 12 (old)_instruction: "მიმიყვანეთ გოჭთან, ახლა უკვე გამეორების ბლოკის
         გამოყენებით!"
-      2-3 Maze 12_instruction: 'შეგიძლიათ ჩაანაცვლოთ ხუთი ბლოკი მხოლოდ ორი ბლოკით?
-        (მინიშნება: შექმენით ციკლი "გამეორება" ბლოკის გამოყენებით.)'
-      2-3 Maze 13 (old)_instruction: მიმიყვანეთ ღორთან, ახლა "გაიმეორე სანამ" ბლოკით!
-      2-3 Maze 13_instruction: "მიმიყვანეთ ღორთან მხოლოდ ორი ბლოკით."
-      2-3 Maze 14 (old)_instruction: მიმიყვანეთ ღორთან "გაიმეორე სანამ" ბლოკით!
+      2-3 Maze 12_instruction: 'შეგიძლიათ ჩაანაცვლოთ ეს ხუთი ბლოკი მხოლოდ ორი ბლოკით?
+        (მინიშნება: ამ დონის გასავლელად შექმენით ციკლი "გამეორების" ბლოკის გამოყენებით.)'
+      2-3 Maze 13 (old)_instruction: მიმიყვანეთ გოჭთან, ახლა "გაიმეორე სანამ" ბლოკით!
+      2-3 Maze 13_instruction: "მიმიყვანეთ გოჭთან მხოლოდ ორი ბლოკით.\r (მინიშნება:
+        ამ დონის გასავლელად უნდა გამოიყენოთ ბლოკი \"გამეორება\")"
+      2-3 Maze 14 (old)_instruction: მიმიყვანეთ გოჭთან "გაიმეორე სანამ" ბლოკით!
       2-3 Maze 14_instruction: მიმიყვანეთ მზესუმზირასთან! (სადაა "გამეორების" ბლოკი,
         როცა გჭირდებათ?)
-      2-3 Maze 15 (old)_instruction: მიმიყვანეთ ღორთან "გაიმეორე სანამ" ბლოკით!
-      2-3 Maze 15_instruction: "გამოიყენეთ ორი ციკლი, რომ ღორთან ნაკლები ბლოკის გამოყენებით
-        მიხვიდეთ."
-      2-3 Maze 16 (old)_instruction: მიმიყვანეთ ღორთან "გაიმეორე სანამ" ბლოკით!
-      2-3 Maze 16 before_instruction: "მიმიყვანეთ ღორთან."
+      2-3 Maze 15 (old)_instruction: მიმიყვანეთ გოჭთან "გაიმეორე სანამ" ბლოკით!
+      2-3 Maze 15_instruction: გამოიყენეთ ორი "გამეროების" ციკლი, რომ გოჭთან ნაკლები
+        ბლოკის გამოყენებით მიხვიდეთ.
+      2-3 Maze 16 (old)_instruction: მიმიყვანეთ გოჭთან "გაიმეორე სანამ" ბლოკით!
+      2-3 Maze 16 before_instruction: "მიმიყვანეთ გოჭთან."
       2-3 Maze 16_instruction: "მიმიყვანეთ მზესუმზირასთან. მწკრივი ციკლში გაუშვით!"
-      2-3 Maze 2_instruction: "ეს ღორი ჩემს ბუმბულებს ურევს. მომეხმარეთ დავიჭირო!"
+      2-3 Maze 2_instruction: "ეს გოჭი ჩემს ბუმბულებს ურევს. მომეხმარეთ დავიჭირო!"
       2-3 Maze 3_instruction: "მონიშნეთ ტრაექტორია და მიმიყვანეთ გოჭამდე. უფრთხილით
         ასაფეთქებელს!"
       2-3 Maze 4_instruction: "მიმიყვანეთ მწვანე ურჩხულამდე! (უფრთხილდი ასაფეთქებელს)"
       2-3 Maze 5_instruction: "მიმიყვანეთ მწვანე ურჩხულამდე! (უფრთხილდი ასაფეთქებელს)"
       2-3 Maze 6_instruction: "დამშვიდდით და მაპოვნინეთ ეს ტუტუცი გოჭი. თორემ გავბრაზდები!"
       2-3 Maze 7_instruction: "მიმიყვანეთ მწვანე ურჩხულამდე! (უფრთხილდი ასაფეთქებელს)"
-      2-3 Maze 8_instruction: "მიმიყვანეთ ღორთან!"
+      2-3 Maze 8_instruction: "მიმიყვანეთ გოჭთან!"
       2-3 Maze 9_instruction: "მიმიყვანეთ მწვანე ურჩხულამდე! (უფრთხილდი ასაფეთქებელს)"
       2-3 Maze Loops 1_instruction: "შეგიძლიათ მიმიყვანოთ გოჭთან 5 ბლოკის გამოყენებით?"
       2-3 Maze Loops 17_instruction: "მიმიყვანეთ მზესუმზირასთან!"
@@ -344,9 +345,9 @@
       2-3 Maze sq1_instruction: |
         This pig is ruffling my feathers.  Help me find
         him!
-      2-3 Maze sq10_instruction: "მიმიყვანეთ ღორთან! რომელი ბლოკები გამეორდა?"
-      2-3 Maze sq10v2_instruction: "მიმიყვანეთ ღორთან! რომელი ბლოკები გამეორდა?"
-      2-3 maze sq11_instruction: "მიმიყვანეთ ღორთან! რომელი ბლოკები გამეორდა?"
+      2-3 Maze sq10_instruction: "მიმიყვანეთ გოჭთან! რომელი ბლოკები გამეორდა?"
+      2-3 Maze sq10v2_instruction: "მიმიყვანეთ გოჭთან! რომელი ბლოკები გამეორდა?"
+      2-3 maze sq11_instruction: "მიმიყვანეთ გოჭთან! რომელი ბლოკები გამეორდა?"
       2-3 maze sq12_instruction: შეგიძლიათ წინა პასუხი ციკლით ჩაანაცვლოთ, რომელიც
         "გამეორების" ბლოკს შეიცავს?
       2-3 maze sq13_instruction: ძვირფასო პიროვნება. მე ზომბი. უნდა... მივიდე... მზესუმზირასთან.
@@ -361,7 +362,7 @@
         ასაფეთქებელს!"
       2-3 Maze sq3_instruction: "მიმიყვანეთ მწვანე ურჩხულამდე! (უფრთხილდი ასაფეთქებელს)"
       2-3 Maze sq4_instruction: "დამშვიდდით და მაპოვნინეთ ეს ტუტუცი გოჭი. თორემ გავბრაზდები!"
-      2-3 Maze sq5_instruction: "მიმიყვანეთ ღორთან! რამდენჯერ მოგიწევთ ბლოკის გამეორება?"
+      2-3 Maze sq5_instruction: "მიმიყვანეთ გოჭთან! რამდენჯერ მოგიწევთ ბლოკის გამეორება?"
       2-3 Maze sq6_instruction: 'შეგიძლიათ წინა ამონახსნი მხოლოდ ორი ბლოკით ჩაანაცვლოთ?
         (მინიშნება: გმაოიყენეთ ბლოკი "გამეორება")'
       2-3 Maze sq7_instruction: "მიმიყვანეთ მწავანე ბოროტმოქმედამდე მხოლოდ სამი ბლოკის
@@ -373,7 +374,7 @@
       2-3_instruction: |
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: "დაეხმარეთ ჩიტს ჯიუტი ღორის დაჭერაში მისი წინ გადაადგილებით"
+      2-3level1_instruction: "დაეხმარეთ ჩიტს ჯიუტი გოჭის დაჭერაში მისი წინ გადაადგილებით"
       4-5 Artist 1_instruction: "დამასრულებინეთ ჩემი ყუთის ხატვა. (ყოველი გვერდის
         სიგრძე არის 300 პიქსელი) "
       4-5 Artist 10_instruction: კოდის შესამოწმებლად დააჭირეთ ღილაკს "გაშვება". ნახატის
@@ -383,7 +384,7 @@
       4-5 Artist 2_instruction: "შეგძლიათ შექმნა ამ კოდისგან ციკლი და დაასრულოთ კვადრატი?"
       4-5 Artist 3.5_instruction: სცადეთ მიხვდეთ, რა მოხდება, თუ ამ კოდს გაუშვებთ
         (ან დააჭირეთ ღილაკს "გაშვება" და ნახეთ). შემდეგ გაუშვით იმდენჯერ, რამდენიც
-        საჭიროა ნახატის დასასრულებლად. ფერები ყოველ ჯერზე (დიდი ალბათობით) დსხვადასხვა
+        საჭიროა ნახატის დასასრულებლად. ფერები ყოველ ჯერზე (დიდი ალბათობით) სხვადასხვა
         იქნება.
       4-5 Artist 3_instruction: "ყვავილების მართკუთხა კლუმბის პერიმეტრი არის 600,
         სიგრძე - 200. დახატეთ მართკუთხედი."
@@ -620,8 +621,8 @@
         გამოყენებით?"
       4-5 Maze 12_instruction: "ეს კი ოდნავ განსხვავებულია. შეგიძლიათ მხოლოდ ექვსი
         ბლოკით გააკეთოთ?"
-      4-5 Maze 13_instruction: "მიმიყვანეთ ღორთან!"
-      4-5 Maze 14_instruction: მიმიყვანეთ ღორთან! გამოიყენეთ "გაიმეორე სანამ" ბლოკი.
+      4-5 Maze 13_instruction: "მიმიყვანეთ გოჭთან!"
+      4-5 Maze 14_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გაიმეორე სანამ" ბლოკი.
       4-5 Maze 2 (copy 1)_instruction: "მიიყვანეთ ზომბი მზესუმზირასთან, მაგრამ მოერიდეთ
         მტაცებელს!"
       4-5 Maze 2_instruction: "მიიყვანეთ ზომბი მზესუმზირასთან, მაგრამ მოერიდეთ მტაცებელს!"
@@ -1890,7 +1891,9 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2223,7 +2226,7 @@
         ბლოკების გამოყენებით"
       K-1 artist 1 level 9_instruction: "დახატეთ ეს სამი ხაზის გამოყენებით"
       K-1 Artist Loops 1_instruction: "დახატეთ ეს ხაზი აღმოსავლეთით ოთხჯერ გადაადგილებით."
-      K-1 Artist Loops 2_instruction: "შეგიძლიათ იგივე ხაზი ციკლის გამოყენებით დახატოთ?"
+      K-1 Artist Loops 2_instruction: "ახლა, დახატეთ იგივე ხაზი ციკლის გამოყენებით."
       K-1 Artist Loops 3_instruction: "შეგიძლიათ ეს ბლოკები ციკლში გაუშვათ და 6 ხაზი
         დახატოთ?"
       K-1 Artist Loops 4_instruction: "დაგვეხმარება ციკლი ამ სასახლის ზედა ნაწილის
@@ -2232,9 +2235,9 @@
         დასახატად?"
       K-1 Artist Loops 6_instruction: "ამას ორი ციკლი სჭირდება: ერთი კიბეებზე ასასვლელად
         და ერთიც - ჩამოსასვლელად."
-      K-1 Artist Loops 7_instruction: "შეგიძლიათ ეს ნახატი ორი ციკლით დაასრულოთ?"
+      K-1 Artist Loops 7_instruction: "ციკლები დაგეხმარებათ ამ ნიმუშის დასრულებაში."
       K-1 Artist Loops 8_instruction: "ამ კიბეს უფრო გრძელი საფეხურები აქვს."
-      K-1 Artist Loops 9_instruction: "შეჯამება: დახატეთ კიბე ციკლის გამოყენებით"
+      K-1 Artist Loops 9_instruction: "რა არის ამ კიბის დახატვის უმარტივესი გზა?"
       K-1 Artist Loops Free Play_instruction: "თავისუფალი თამაში, დახატეთ რამე სახალისო!"
       K-1 Artist1 1_instruction: "დახატეთ კაცის ფეხი ერთი ხაზით"
       K-1 Artist1 10_instruction: "დახატეთ და ახტით, რომ გააკეთოთ წყვეტილი ბილიკი
@@ -2290,25 +2293,22 @@
       K-1 Bee Loops 1_instruction: "აიღეთ ნექტარი და გააკეთეთ თაფლი!"
       K-1 Bee Loops 10_instruction: "გამოიყენეთ ციკლები იმისთვის, რომ აიღოთ ნექტარი,
         თაფლი და გადაადგილდეთ!"
-      K-1 Bee Loops 11_instruction: "შეჯამება: გამოიყენეთ ციკლები, აიღეთ ნექტარი და
-        გააკეთეთ თაფლი!"
+      K-1 Bee Loops 11_instruction: "აიღეთ მთელი ნექტარი და გააკეთეთ თაფლი!"
       K-1 Bee Loops 12_instruction: "შეჯამება: გამოიყენეთ ციკლები, რომ მოიპოვოთ ნექტარი,
         თაფლი და გადაადგილდეთ!"
       K-1 Bee Loops 2_instruction: "გამოიყენეთ ციკლი, რომ გადაადგილდეთ, აიღოთ ნექტარი
         და გააკეთოთ თაფლი!"
-      K-1 Bee Loops 3_instruction: "გამოიყენეთ ციკლები, რომ აიღოთ ნექტარი და გააკეთოთ
-        თაფლი!"
-      K-1 Bee Loops 4_instruction: "გამოიყენეთ ციკლები, რომ აიღოთ ნექტარი, გააკეთოთ
-        თაფლი და გადაადგილდეთ!"
-      K-1 Bee Loops 5_instruction: "გამოიყენეთ ციკლები და აიღეთ ნექტარი და თაფლი!"
-      K-1 Bee Loops 6_instruction: "გამოიყენეთ ციკლები იმისთვის, რომ აიღოთ ნექტარი,
-        თაფლი და გადაადგილდეთ!"
-      K-1 Bee Loops 7_instruction: "გამოიყენეთ ციკლები, რომ აიღოთ ნექტარი და გააკეთოთ
-        თაფლი!"
-      K-1 Bee Loops 8_instruction: "გამოიყენეთ ციკლები, რომ აიღოთ ნექტარი და გააკეთოთ
-        თაფლი!"
-      K-1 Bee Loops 9_instruction: "გამოიყენეთ ციკლები იმისთვის, რომ აიღოთ ნექტარი,
-        თაფლი და გადაადგილდეთ!"
+      K-1 Bee Loops 3_instruction: გამოიყენეთ სამი "გამეორების" ციკლი, რომ აიღოთ ნექტარი
+        და გააკეთოთ თაფლი!
+      K-1 Bee Loops 4_instruction: გამოიყენეთ "გამრეობის" ციკლები, რომ აიღოთ ნექტარი,
+        გააკეთოთ თაფლი და გადაადგილდეთ!
+      K-1 Bee Loops 5_instruction: გამოიყენეთ "გამეორების" ციკლები და აიღეთ ნექტარი
+        და თაფლი!
+      K-1 Bee Loops 6_instruction: გამოიყენეთ "გამეორების" ციკლები იმისთვის, რომ აიღოთ
+        ნექტარი, თაფლი და გადაადგილდეთ!
+      K-1 Bee Loops 7_instruction: "აიღეთ ნექტარი და გააკეთეთ თაფლი!"
+      K-1 Bee Loops 8_instruction: "აიღეთ ნექტარი და გააკეთეთ თაფლი!"
+      K-1 Bee Loops 9_instruction: "აიღეთ მთელი ნექტარი და გააკეთეთ მთელი თაფლი."
       K-1 Bee Loops Assessment 1_instruction: "აიღეთ ნექტარი, გააკეთეთ თაფლი, სამოძრაოდ
         კი ციკლები გამოიყენეთ!"
       K-1 Bee Loops Assessment 2_instruction: "გამოიყენეთ ციკლები, რომ ნექტარი აიღოთ
@@ -2320,10 +2320,10 @@
       K-1 Maze 10_instruction: "შემოუარეთ დინამიტს და მიმიყვანეთ გოჭთან! "
       K-1 Maze 11_instruction: "გაჰყევით ბილიკს და მიმიყვანეთ სასაცილო გოჭთან. მოერიდეთ
         დინამიტს! მინიშნება: გოჭი ჩემგან სამხრეთითაა."
-      K-1 Maze 2_instruction: "გადაადგილდით აღმოსავლეთით და მიმიყვანეთ ღორთან!"
-      K-1 Maze 3_instruction: "გადამაადგილეთ სამხრეთით და მიმიყვანეთ ღორთან!"
-      K-1 Maze 4_instruction: "გადამაადგილეთ ჩრდილოეთით და მიმიყვანეთ ღორთან!"
-      K-1 Maze 5_instruction: "გადაადგილდით აღმოსავლეთით და მიმიყვანეთ ღორთან!"
+      K-1 Maze 2_instruction: "გადაადგილდით აღმოსავლეთით და მიმიყვანეთ გოჭთან!"
+      K-1 Maze 3_instruction: "გადამაადგილეთ სამხრეთით და მიმიყვანეთ გოჭთან!"
+      K-1 Maze 4_instruction: "გადამაადგილეთ ჩრდილოეთით და მიმიყვანეთ გოჭთან!"
+      K-1 Maze 5_instruction: "გადაადგილდით აღმოსავლეთით და მიმიყვანეთ გოჭთან!"
       K-1 Maze 6_instruction: "მიმიყვანეთ გოჭთან! ამისთვის ჯერ ერთი, შემდეგ კი სხვა
         მიმართულებით უნდა წახვიდეთ."
       K-1 Maze 7_instruction: "მიმიყვანეთ გოჭთან! ამისთვის ჯერ ერთი, შემდეგ კი სხვა
@@ -2332,55 +2332,57 @@
         მიმართულებით უნდა წახვიდეთ."
       K-1 Maze 9_instruction: "მიმიყვანეთ გოჭთან! ამისთვის ჯერ ერთი, შემდეგ კი სხვა
         მიმართულებით უნდა წახვიდეთ."
-      K-1 Maze Assessment 1_instruction: "შეფასება -- მიმიყვანეთ ღორთან!"
+      K-1 Maze Assessment 1_instruction: "შეფასება -- მიმიყვანეთ გოჭთან!"
       K-1 Maze Assessment 12_instruction: "შეფასების დონე"
       K-1 Maze Assessment 13_instruction: "შეფასების დონე"
-      K-1 Maze Assessment 2_instruction: "შეფასება -- მიმიყვანეთ ღორთან!"
+      K-1 Maze Assessment 2_instruction: "შეფასება -- მიმიყვანეთ გოჭთან!"
       K-1 maze debug 1_instruction: "შეცვალეთ კოდი ისე, რომ გოჭთან აღმოვჩნდე!"
       K-1 maze debug 10_instruction: "გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ
-        და დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
+        და შეცვალეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
       K-1 maze debug 11_instruction: "ეს გამოცდაა!\r\nგაასწორეთ ამ დონის ბაგები ბლოკების
-        გადალაგებითა და დამატებით. მიზნია: გოჭთან უნდა აღმოვჩნდე"
+        გადალაგებითა და შეცვლით. მიზანი: გოჭთან უნდა აღმოვჩნდე"
       K-1 maze debug 2_instruction: "გაარკვიეთ, რა აკლია კოდს და დაამატეთ ბლოკები,
         რომ მიმიყვანოთ გოჭთან!"
-      K-1 maze debug 3_instruction: "გაარკვიეთ, რა აკლია კოდს და მოაშორეთ ბლოკები
-        ისე, რომ გოჭამდე მივიდე!"
+      K-1 maze debug 3_instruction: "ჰმ, რაღაც არასწორადაა. მოაშორეთ ბლოკები ისე,
+        რომ გოჭამდე მივიდე!"
       K-1 maze debug 4_instruction: "შეამოწმეთ და შეასწორეთ ბლოეკბი! მგონი, არასწორი
         მიმართულებით მივდივარ."
       K-1 maze debug 5_instruction: "გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
-        და დამატებით და მიმიყვანეთ ღორთან!"
+        და შეცვლით და მიმიყვანეთ გოჭთან!"
       K-1 maze debug 6_instruction: "გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ და
-        დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
+        შეცვალეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
       K-1 maze debug 7_instruction: "გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ და
-        დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
+        შეცვალეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
       K-1 maze debug 8_instruction: "გაასუფთავეთ ეს დონე ბაგებისგან ბლოკების გადაადგილებითა
-        და დამატებით და მიმიყვანეთ ღორთან!"
+        და დამატებით და მიმიყვანეთ გოჭთან!"
       K-1 maze debug 9_instruction: "გაასუფთავეთ ეს დონე ბაგებისგან: გადაადგილეთ და
-        დაამატეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
+        შეცვალეთ ბლოკები ისე, რომ გოჭთან მიმიყვანოთ!"
       K-1 Maze debug Assessment 1_instruction: "შეფასება -- გაწმინდეთ ეს დონე ბაგებისგან
-        ბლოკების გადაადგილებითა და დამატებით და მიმიყვანეთ ღორთან!"
-      K-1 Maze Loops 1_instruction: "მიმიყვანეთ ღორთან!"
-      K-1 Maze Loops 10_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 11_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 12_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 2_instruction: "გამოიყენეთ გამეორების ბლოკი, რომ მიმიყვანოთ გოჭთან!"
-      K-1 Maze Loops 3_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 4_instruction: "მიმიყვანეთ ღორთან!"
-      K-1 Maze Loops 5_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 6_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 7_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 8_instruction: "მიმიყვანეთ გოჭთან! გამოიყენეთ გამეორების ციკლი."
-      K-1 Maze Loops 9_instruction: "მიმიყვანეთ ღორთან!"
-      K-1 Maze Loops Assessment 1_instruction: "შეფასება -- გამოიყენეთ ციკლები და
-        მიმიყვანეთ ღორთან!"
-      K-1 Maze Loops Assessment 2_instruction: "შეფასება -- გამოიყენეთ ციკლები და
-        მიმიყვანეთ ღორთან!"
+        ბლოკების გადაადგილებითა და დამატებით და მიმიყვანეთ გოჭთან!"
+      K-1 Maze Loops 1_instruction: "მიმიყვანეთ გოჭთან!"
+      K-1 Maze Loops 10_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გამეორების" ციკლი.
+      K-1 Maze Loops 11_instruction: "მიმიყვანეთ გოჭთან!\r გამოიყენეთ \"გამეორების\"
+        ციკლი."
+      K-1 Maze Loops 12_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გამეორების" ციკლი.
+      K-1 Maze Loops 2_instruction: გამოიყენეთ "გამეორების" ბლოკი, რომ მიმიყვანოთ
+        გოჭთან!
+      K-1 Maze Loops 3_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გამეორების" ციკლი.
+      K-1 Maze Loops 4_instruction: "მიმიყვანეთ გოჭთან!"
+      K-1 Maze Loops 5_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გამეორების" ციკლი.
+      K-1 Maze Loops 6_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გამეორების" ციკლი.
+      K-1 Maze Loops 7_instruction: მიმიყვანეთ გოჭთან! გამოიყენეთ "გამეორების" ციკლი.
+      K-1 Maze Loops 8_instruction: გამოიყენეთ "გამეორების" ციკლი და მიმიყვანეთ გოჭთან.
+      K-1 Maze Loops 9_instruction: "მიმიყვანეთ გოჭთან!"
+      K-1 Maze Loops Assessment 1_instruction: ნახეთ, რამდენი რამე ვისწავლეთ! გამოიყენეთ
+        "გამეორებითს" ციკლი და მიმიყვანეთ გოჭთან!
+      K-1 Maze Loops Assessment 2_instruction: გამოიყენეთ "გამეორების" ციკლები და
+        მიმიყვანეთ გოჭთან!
       K-1 Maze Multi 14_instruction: "შეფასების დონე"
       K-1 Maze Multi 15_instruction: "შეფასების დონე"
-      K-1 Maze Sequence Assessment 1_instruction: "ეს გამოცდაა!\r\nგადაადგილდით ერთი
-        მიმართულებით, შემდეგ კი მეორე მიმართულებით და მიმიყვანეთ გოჭთან"
-      K-1 Maze Sequence Assessment 2_instruction: "ეს გამოცდაა!\r\nგადაადგილდით ერთი
-        მიმართულებით, შემდეგ კი მეორე მიმართულებით და მიმიყვანეთ ღორთან."
+      K-1 Maze Sequence Assessment 1_instruction: "აბა, ვნახოთ, რა ისწავლეთ!\r\nგადაადგილდით
+        ერთი მიმართულებით, შემდეგ კი მეორე მიმართულებით და მიმიყვანეთ გოჭთან."
+      K-1 Maze Sequence Assessment 2_instruction: "გადაადგილდით ერთი მიმართულებით,
+        შემდეგ კი მეორე მიმართულებით და მიმიყვანეთ გოჭთან."
       kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
       Luigi's Pizza 1_instruction: |
         Welcome to Luigi's Pizza! To order a pizza,
@@ -2984,6 +2986,11 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: "ფუტკარს ახლა მხოლოდ ნექტარი სურს.
         ყველა ობიექტი არ არის ყვავილი, ამიტომ შეამოწმეთ ყოველი ღრუბელი, ყვავილს ხომ
         არ მალავს. თუ მალავს, მაშინ შეგიძლიათ ნექტარის შეგროვება."
@@ -3462,9 +3469,9 @@
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -4787,7 +4794,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: "მოდელი"
+      U4L02 - Objects - Template1_instruction: "შაბლონი"
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4823,6 +4830,17 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: ლავა სადღაც ამ ბლოკების ქვეშ არის და
         წინ გადასაადგილებლად ის უნდა გადახუროთ. "თუ" ბრძანება აქ ძალიან გამოგადგებათ.
         დაუმატეთ ბრძანება "გადაადგილება წინ" საჭირო ადგილებში და მოიპოვეთ ეს ბლოკები.

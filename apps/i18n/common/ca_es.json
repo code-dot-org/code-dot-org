@@ -14,6 +14,7 @@
   "catProcedures": "Funcions",
   "catText": "text",
   "catVariables": "Variables",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Torna a començar",
   "clearPuzzleConfirm": "Això reiniciarà el puzzle al seu estat inicial i esborrarà tots els blocs que hagis afegit o canviat.",
   "clearPuzzleConfirmHeader": "Estàs segur que vols tornar a començar?",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Crida una funció nombrada que té un o més paràmetres",
   "dropletBlock_callMyFunction_n_signatureOverride": "Crida una funció amb paràmetres",
   "dropletBlock_callMyFunction_signatureOverride": "Crida una funció",
+  "dropletBlock_comment_description": "Escriu una descripció d'algun codi",
+  "dropletBlock_comment_signatureOverride": "comentari",
   "dropletBlock_declareAssign_x_array_1_4_description": "Crear una variable i inicialitza-la com una matriu",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -177,7 +180,7 @@
   "hintRequest": "Veure pista",
   "hintReviewTitle": "Review Your Hints",
   "hintSelectInstructions": "Instructions and old hints",
-  "hintSelectNewHint": "Get a new hint",
+  "hintSelectNewHint": "Obtenir una nova pista",
   "hintTitle": "Consell:",
   "ignore": "Ignorar",
   "infinity": "Infinit",
@@ -203,7 +206,7 @@
   "print": "Imprimeix",
   "puzzleTitle": "Puzzle {puzzle_number} de {stage_total}",
   "readonlyWorkspaceHeader": "Veure només: ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "Intenta utilitzar un bloc com aquest per a resoldre el trencaclosques.",
   "repeat": "repeteix",
   "resetProgram": "Reiniciar",
   "rotateText": "Gira el teu dispositiu.",
@@ -253,7 +256,5 @@
   "watchVideo": "Mira el vídeo",
   "when": "quan",
   "whenRun": "quan s'executa",
-  "workspaceHeaderShort": "Zona de treball: ",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "Zona de treball: "
 }

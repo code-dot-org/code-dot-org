@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Функције"},
 "catText":function(d){return "текст"},
 "catVariables":function(d){return "Променљиве"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Počni ponovo"},
 "clearPuzzleConfirm":function(d){return "Ово ће ресетовати мозгалицу на њено почетно стање и обрисаће све блокове које си додао/ла или променио/ла."},
 "clearPuzzleConfirmHeader":function(d){return "Da li ste sigurni da želite da počnete ponovo?"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Calls a named function that takes one or more parameters"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Pozovi funciju sa parametrima"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Pozovite funkciju"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Погледај видео"},
 "when":function(d){return "када"},
 "whenRun":function(d){return "када се извршава"},
-"workspaceHeaderShort":function(d){return "Радни простор: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Радни простор: "}};

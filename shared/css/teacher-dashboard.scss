@@ -14,6 +14,10 @@ th.manage-th {
   padding-bottom: 5px;
 }
 
+.manage-th select {
+  color: $charcoal;
+}
+
 td {
   overflow: hidden;
   text-overflow: ellipsis;

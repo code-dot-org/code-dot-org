@@ -14,6 +14,7 @@
   "catProcedures": "函數類別",
   "catText": "文字類",
   "catVariables": "變數類",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "重新開始",
   "clearPuzzleConfirm": "這會讓這一關重新開始。之前你所新增或改變的都將會回復原狀。",
   "clearPuzzleConfirmHeader": "你確定要重新開始嗎？",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "Calls a named function that takes one or more parameters",
   "dropletBlock_callMyFunction_n_signatureOverride": "Call a function with parameters",
   "dropletBlock_callMyFunction_signatureOverride": "Call a function",
+  "dropletBlock_comment_description": "Write a description of some code",
+  "dropletBlock_comment_signatureOverride": "comment",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -253,7 +256,5 @@
   "watchVideo": "觀看影片",
   "when": "當",
   "whenRun": "當按下\"執行\"時",
-  "workspaceHeaderShort": "工作區:",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "工作區:"
 }

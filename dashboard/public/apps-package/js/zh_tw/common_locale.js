@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "函數類別"},
 "catText":function(d){return "文字類"},
 "catVariables":function(d){return "變數類"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "重新開始"},
 "clearPuzzleConfirm":function(d){return "這會讓這一關重新開始。之前你所新增或改變的都將會回復原狀。"},
 "clearPuzzleConfirmHeader":function(d){return "你確定要重新開始嗎？"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Calls a named function that takes one or more parameters"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Call a function with parameters"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Call a function"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "觀看影片"},
 "when":function(d){return "當"},
 "whenRun":function(d){return "當按下\"執行\"時"},
-"workspaceHeaderShort":function(d){return "工作區:"},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "工作區:"}};

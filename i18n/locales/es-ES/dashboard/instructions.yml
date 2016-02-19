@@ -1335,7 +1335,9 @@ es:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1957,7 +1959,7 @@ es:
       NEW Course 4 Artist Params 14_instruction: '¿Puedes recrear estas formas? Arrastra el parámetro "longitud" en la definición de función. '
       NEW Course 4 Artist Params 15_instruction: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       NEW Course 4 Artist Params 2_instruction: 'Crea desde cero una función "dibujar un triángulo" con lados de 50 píxeles'
-      NEW Course 4 Artist Params 3_instruction: "Ahora vamos a utilizar la función para dibujar 3 triángulos desde el último puzzle en una fila. Sugerencia: cada triángulo tiene 50 píxeles de separación. \r\n"
+      NEW Course 4 Artist Params 3_instruction: "Ahora vamos a utilizar la función para dibujar 5 triángulos desde el último puzzle en una fila. Sugerencia: cada triángulo tiene 30 píxeles de separación. \r\n"
       NEW Course 4 Artist Params 4_instruction: '¿Notas algo diferente en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.'
       NEW Course 4 Artist Params 5_instruction: 'Llena en el ??? en el bloque de entrada del parámetro de longitud. Sugerencia: El Pentágono es de 100 píxeles de tamaño. '
       NEW Course 4 Artist Params 6_instruction: 'Llena el parámetro "longitud" para dibujar estas formas substituyendo el "???" con los números correctos. El cuadrado y el triángulo son de 100 píxeles de tamaño mientras que el hexágono es de 75 píxeles de tamaño.'
@@ -2223,6 +2225,11 @@ es:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: La abeja sólo quiere néctar ahora. No todo los objetos son flores, así que compruebe debajo de cada nube para ver si está ocultando una flor. Si es así, puede recolectar néctar.
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si esta escondiendo una flor. Si es así, puedes coger néctar.
       Ryan Test Locked Blocks_instruction: 'Aquí hay una función denominada "patrulla". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.'
@@ -2643,9 +2650,9 @@ es:
         Change the condition for the while loop to check
         if the variable num is less than 90. (Click to see full instructions)
       U3 - Loops - 10_instruction: |
-        Write a program that, if the sum of the dice
-        is a 7 or 11, rolls again and keeps rolling until the sum is not 7 or 11.
-        (Click to see full instructions)
+        Write a program that simulates the rolling of
+        two dice. If the sum of the dice is a 7 or 11 then roll again until the sum
+        is something other than 7 or 11. (Click to see full instructions)
       U3 - Loops - 11_instruction: |
         Fix the condition so that it keeps rolling the
         die as long as the value is not a 2 or a 3 instead of rolling infinitely.
@@ -3960,6 +3967,17 @@ es:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: 'Hay lava bajo algunos de estos bloques. Tendrás que cubrirlos antes de seguir avanzando. Aquí te será útil un comando "si". Añade un comando "avanzar" en el lugar correcto para extraer los recursos de estos bloques.'
       Underground If Statements_instruction: 'Ahora las cosas se complican. Recoge tres bloques de piedra rojiza pero no te caigas en la lava. Usa un comando "si" para colocar roca sobre la lava que descubras.'
       Underground Iron_instruction: Caminar hacia la lava fundida es una mala idea. Coloca rocas para crear un puente y extrae el hierro de al menos dos bloques.

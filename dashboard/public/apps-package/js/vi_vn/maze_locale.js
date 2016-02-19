@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả."},
 "word":function(d){return "Tìm các từ"},
 "yes":function(d){return "Đồng ý"},
-"youSpelled":function(d){return "Bạn hãy đánh vần"}};
+"youSpelled":function(d){return "Bạn hãy đánh vần"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

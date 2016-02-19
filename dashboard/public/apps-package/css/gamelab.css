@@ -126,8 +126,9 @@ img#turtleImage {
   border-width: 0px;
   padding: 0px;
   outline: none;
-  -moz-user-select: text;
   -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
   -ms-user-select: text;
   user-select: text; }
 
@@ -199,10 +200,10 @@ img#turtleImage {
   position: relative;
   z-index: 1;
   background-color: white;
-  -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
 /* Sprited icons. */

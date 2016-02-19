@@ -53,7 +53,7 @@ class Documents < Sinatra::Base
 
     Dir.entries(dir).each do |site|
       site_dir = File.join(dir, site)
-      next if site == '.' or site == '..' or !File.directory?(site_dir)
+      next if site == '.' || site == '..' || !File.directory?(site_dir)
       configs[site] = load_config_in(site_dir)
     end
 
@@ -466,7 +466,7 @@ class Documents < Sinatra::Base
 
       if not metadata['og:image']
         if request.site != 'csedweek.org'
-          metadata['og:image'] = CDO.code_org_url('/images/code-logo-1220x640.png', 'https:')
+          metadata['og:image'] = CDO.code_org_url('/images/default-og-image.png', 'https:')
           metadata['og:image:width'] = 1220
           metadata['og:image:height'] = 640
         end

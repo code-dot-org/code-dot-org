@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "פונקציות"},
 "catText":function(d){return "טקסט"},
 "catVariables":function(d){return "משתנים"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "התחל מחדש"},
 "clearPuzzleConfirm":function(d){return "זה יאפס את הפאזל למצבו ההתחלתי, וימחק את כל הבלוקים שהוספת או שינית."},
 "clearPuzzleConfirmHeader":function(d){return "האם אתה בטוח שאתה רוצה להתחיל מחדש?"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "קרא לפונקציה שמקבלת פרמטר אחד או יותר"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "קרא לפונקציה עם פרמטרים"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "קרא לפונקציה"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "צור משתנה והקצה אותו למערך עם ערכים התחלתיים נתונים"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "צפה בסרטון"},
 "when":function(d){return "מתי"},
 "whenRun":function(d){return "התחל ריצה"},
-"workspaceHeaderShort":function(d){return "סביבת העבודה: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "סביבת העבודה: "}};

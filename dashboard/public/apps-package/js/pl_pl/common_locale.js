@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkcje"},
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Zmienne"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Zacznij od nowa"},
 "clearPuzzleConfirm":function(d){return "To spowoduje zresetowanie łamigłówki do stanu początkowego i usunięcie wszystkich bloków, które dodałeś lub zmieniłeś."},
 "clearPuzzleConfirmHeader":function(d){return "Czy na pewno chcesz zacząć od nowa?"},
@@ -202,6 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Wywołuje daną funkcję, która ma jeden lub więcej parametrów"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Wywołaj funkcję z parametrami"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Wywołaj funkcję"},
+"dropletBlock_comment_description":function(d){return "Write a description of some code"},
+"dropletBlock_comment_signatureOverride":function(d){return "comment"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Stwórz zmienną i zainicjuj ją jako tablicę"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -408,6 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Obejrzyj wideo"},
 "when":function(d){return "kiedy"},
 "whenRun":function(d){return "po uruchomieniu"},
-"workspaceHeaderShort":function(d){return "Obszar roboczy: "},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"}};
+"workspaceHeaderShort":function(d){return "Obszar roboczy: "}};

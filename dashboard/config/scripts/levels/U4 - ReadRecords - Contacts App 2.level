@@ -132,7 +132,8 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "embed": "false",
@@ -167,7 +168,8 @@
     "debugger_disabled": "false",
     "markdown_instructions": "# Refreshing Local Data\r\n\r\nYour app is still running off of an array called `contacts` that is stored in your app. You can think of this as a **local copy of your database**. In order to prevent it from getting out of sync with your actual database you should **refresh the contents of this array every time you make changes to the database**.\r\n\r\nSince you will need to refresh your app many times in your program **you will create a single function that refreshes the data in your app and displays the results**.\r\n\r\n# Do This\r\n**NOTE:** your code and database for the Contacts App is provided\r\n\r\n**Goal: Move the code that loads the data from the database into a function called `refreshLocalData`**\r\n\r\n * Create a function called `refreshLocalData`<img src=\"https://images.code.org/e0e29e916e63bc8c914ee1387729c86b-image-1450115424518.gif\" style=\"width: 350px; float: right\">\r\n\r\n * Move the call to `readRecords` from the top of you code into the function. (See animation).\r\n\r\n * Make a call to `refreshLocalData()` at the beginning of your program.\r\n\t* You need this now to trigger the initial loading of the data.\r\n    * <details><summary><strong>The top of your program should now look like this</strong></summary>![](https://images.code.org/ba49f7eb24f4ce5f411d6236b0497aa9-image-1449953212555.45.23 PM.png)</details>\r\n\r\n* Run the program and confirm that **it still copies the data from your database into the `contacts` array**\r\n\r\n\r\n",
     "instructions": "Create a function called \"refreshLocalData\" (Click to see full instructions)"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks/>
 </Applab>

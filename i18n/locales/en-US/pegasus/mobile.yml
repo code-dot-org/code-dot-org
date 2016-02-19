@@ -58,15 +58,82 @@ en-US:
   congratulations: crwdns3785:0crwdne3785:0
   congratulations_on_completing_hoc: crwdns25704:0crwdne25704:0
   congratulations_volunteer: crwdns51608:0crwdne51608:0
-  course_name_accelerated: crwdns50049:0crwdne50049:0
-  course_name_course1: crwdns50050:0crwdne50050:0
-  course_name_course2: crwdns50051:0crwdne50051:0
-  course_name_course3: crwdns50052:0crwdne50052:0
-  course_name_course4: crwdns50053:0crwdne50053:0
-  congratulations_on_completing_course: 'crwdns48529:0%{course}crwdne48529:0'
+  congratulations_on_completing_course1: crwdns56007:0crwdne56007:0
+  congratulations_on_completing_course2: crwdns56008:0crwdne56008:0
+  congratulations_on_completing_course3: crwdns56009:0crwdne56009:0
+  congratulations_on_completing_course4: crwdns56010:0crwdne56010:0
+  congratulations_on_completing_accelerated: crwdns56011:0crwdne56011:0
   congrats_next_tutorials_title: crwdns48530:0crwdne48530:0
   congrats_next_tutorials_desc: 'crwdns48531:0%{current_path}crwdne48531:0'
   get_a_certificate_of_achievement: crwdns3615:0crwdne3615:0
+  view_course: crwdns56012:0crwdne56012:0
+  congrats_guest_speaker_title: crwdns56013:0crwdne56013:0
+  congrats_guest_speaker_desc: crwdns56014:0crwdne56014:0
+  congrats_guest_speaker_cta: crwdns56015:0crwdne56015:0
+  congrats_third_party_course1: crwdns56016:0crwdne56016:0
+  congrats_third_party_course2: crwdns56017:0crwdne56017:0
+  congrats_third_party_course3: crwdns56018:0crwdne56018:0
+  congrats_third_party_course4: crwdns56019:0crwdne56019:0
+  congrats_third_party_accelerated: crwdns56020:0crwdne56020:0
+  third_party_gradelevel_kto8: crwdns56021:0crwdne56021:0
+  third_party_gradelevel_kto2: crwdns56022:0crwdne56022:0
+  third_party_gradelevel_2to8: crwdns56023:0crwdne56023:0
+  third_party_gradelevel_4to12: crwdns56024:0crwdne56024:0
+  third_party_gradelevel_5to12: crwdns56025:0crwdne56025:0
+  third_party_gradelevel_6plus: crwdns56026:0crwdne56026:0
+  third_party_gradelevel_8plus: crwdns56027:0crwdne56027:0
+  third_party_platform_all: crwdns56028:0crwdne56028:0
+  third_party_platform_mobile: crwdns56029:0crwdne56029:0
+  third_party_platform_web: crwdns56030:0crwdne56030:0
+  third_party_price_varies: crwdns56031:0crwdne56031:0
+  third_party_price_free: crwdns56032:0crwdne56032:0
+  third_party_price_299: crwdns56033:0crwdne56033:0
+  third_party_price_2500: crwdns56034:0crwdne56034:0
+  third_party_tynker_desc: crwdns56035:0crwdne56035:0
+  third_party_tynker_btn_curriculum: crwdns56036:0crwdne56036:0
+  third_party_tynker_btn_site: crwdns56037:0crwdne56037:0
+  third_party_scratchjr_desc: crwdns56038:0crwdne56038:0
+  third_party_scratchjr_btn_curriculum: crwdns56039:0crwdne56039:0
+  third_party_scratchjr_btn_site: crwdns56040:0crwdne56040:0
+  third_party_scratch_desc: crwdns56041:0crwdne56041:0
+  third_party_scratch_btn_curriculum: crwdns56042:0crwdne56042:0
+  third_party_scratch_btn_forum: crwdns56043:0crwdne56043:0
+  third_party_scratch_btn_site: crwdns56044:0crwdne56044:0
+  third_party_lightbot_desc: crwdns56045:0crwdne56045:0
+  third_party_lightbot_btn_curriculum: crwdns56046:0crwdne56046:0
+  third_party_lightbot_btn_site: crwdns56047:0crwdne56047:0
+  third_party_khan_desc: crwdns56048:0crwdne56048:0
+  third_party_khan_btn_learn: crwdns56049:0crwdne56049:0
+  third_party_khan_btn_forum: crwdns56050:0crwdne56050:0
+  third_party_appinv_desc: crwdns56051:0crwdne56051:0
+  third_party_appinv_btn_curriculum: crwdns56052:0crwdne56052:0
+  third_party_appinv_btn_forum: crwdns56053:0crwdne56053:0
+  third_party_appinv_btn_site: crwdns56054:0crwdne56054:0
+  third_party_codehs_desc: crwdns56055:0crwdne56055:0
+  third_party_codehs_btn_try: crwdns56056:0crwdne56056:0
+  third_party_codehs_btn_demos: crwdns56057:0crwdne56057:0
+  third_party_codecademy_desc: crwdns56058:0crwdne56058:0
+  third_party_codecademy_btn_curriculum: crwdns56059:0crwdne56059:0
+  third_party_codecademy_btn_site: crwdns56060:0crwdne56060:0
+  third_party_organization: crwdns56061:0crwdne56061:0
+  third_party_curriculum: crwdns56062:0crwdne56062:0
+  third_party_pricing: crwdns56063:0crwdne56063:0
+  third_party_cost_free: crwdns56064:0crwdne56064:0
+  third_party_cost_5permonth: crwdns56065:0crwdne56065:0
+  third_party_cost_299: crwdns56066:0crwdne56066:0
+  third_party_cost_free_399: crwdns56067:0crwdne56067:0
+  third_party_cost_free_2: crwdns56068:0crwdne56068:0
+  third_party_cost_free_10: crwdns56069:0crwdne56069:0
+  third_party_desc_10to12_kto3: crwdns56070:0crwdne56070:0
+  third_party_desc_11_kto5: crwdns56071:0crwdne56071:0
+  third_party_desc_10to12_kto5: crwdns56072:0crwdne56072:0
+  third_party_desc_40_4to8: crwdns56073:0crwdne56073:0
+  third_party_desc_dozens_kto8: crwdns56074:0crwdne56074:0
+  third_party_desc_10to15_3to12: crwdns56075:0crwdne56075:0
+  third_party_desc_25to40_3to12: crwdns56076:0crwdne56076:0
+  third_party_desc_20_2to8: crwdns56077:0crwdne56077:0
+  third_party_desc_7to22_5to12: crwdns56078:0crwdne56078:0
+  third_party_desc_20_4to12: crwdns56079:0crwdne56079:0
   enter_valid_age: crwdns43306:0crwdne43306:0
   enter_valid_email: crwdns3616:0crwdne3616:0
   get_a_certificate_message: crwdns4468:0crwdne4468:0
@@ -113,9 +180,14 @@ en-US:
   learn_next_level: crwdns4684:0crwdne4684:0
   learn_online: crwdns4685:0crwdne4685:0
   learn_classes: crwdns3857:0crwdne3857:0
-  hoc_is_here: crwdns3941:0crwdne3941:0
+  hoc_is_here: crwdns55997:0crwdne55997:0
   just_did_hoc: crwdns3942:0crwdne3942:0
-  twitter_teach_cs: crwdns35452:0crwdne35452:0
+  just_did_course1: crwdns56080:0crwdne56080:0
+  just_did_course2: crwdns56081:0crwdne56081:0
+  just_did_course3: crwdns56082:0crwdne56082:0
+  just_did_course4: crwdns56083:0crwdne56083:0
+  just_did_accelerated: crwdns56084:0crwdne56084:0
+  twitter_teach_cs: crwdns55998:0crwdne55998:0
   learn_hoc: crwdns3953:0crwdne3953:0
   beyond_hoc: crwdns3954:0crwdne3954:0
   what_gender: crwdns3955:0crwdne3955:0
@@ -524,7 +596,7 @@ en-US:
   dashboard_faq_k5: crwdns41887:0crwdne41887:0
   dashboard_announcements: crwdns50092:0crwdne50092:0
   dashboard_announce_view_all: crwdns50093:0crwdne50093:0
-  dashboard_announce_message: crwdns55868:0crwdne55868:0
+  dashboard_announce_message: crwdns55999:0crwdne55999:0
   dashboard_announce_button_text: crwdns55869:0crwdne55869:0
   dashboard_announce_hoc: crwdns50094:0crwdne50094:0
   dashboard_announce_playlab: crwdns55290:0crwdne55290:0
@@ -632,6 +704,11 @@ en-US:
   codesters_name: crwdns55238:0crwdne55238:0
   texasinstruments_name: crwdns55239:0crwdne55239:0
   teacherled_name: crwdns55240:0crwdne55240:0
+  course1_name: crwdns56085:0crwdne56085:0
+  course2_name: crwdns56086:0crwdne56086:0
+  course3_name: crwdns56087:0crwdne56087:0
+  course4_name: crwdns56088:0crwdne56088:0
+  accelerated_name: crwdns56089:0crwdne56089:0
   codeorg_gradelevel: crwdns21487:0crwdne21487:0
   codeintl_gradelevel: crwdns23748:0crwdne23748:0
   thinkersmithspanish_gradelevel: crwdns21488:0crwdne21488:0
@@ -682,6 +759,11 @@ en-US:
   codesters_gradelevel: crwdns55245:0crwdne55245:0
   texasinstruments_gradelevel: crwdns55246:0crwdne55246:0
   teacherled_gradelevel: crwdns55247:0crwdne55247:0
+  course1_gradelevel: crwdns56090:0crwdne56090:0
+  course2_gradelevel: crwdns56091:0crwdne56091:0
+  course3_gradelevel: crwdns56092:0crwdne56092:0
+  course4_gradelevel: crwdns56093:0crwdne56093:0
+  accelerated_gradelevel: crwdns56094:0crwdne56094:0
   codeorg_platformtext: crwdns21807:0crwdne21807:0
   codeintl_platformtext: crwdns23749:0crwdne23749:0
   thinkersmithspanish_platformtext: crwdns21808:0crwdne21808:0
@@ -780,6 +862,9 @@ en-US:
   codesters_shortdescription: crwdns55259:0crwdne55259:0
   texasinstruments_shortdescription: crwdns55260:0crwdne55260:0
   teacherled_shortdescription: crwdns55261:0crwdne55261:0
+  course2_shortdescription_congrats: crwdns56095:0crwdne56095:0
+  course3_shortdescription_congrats: crwdns56096:0crwdne56096:0
+  course4_shortdescription_congrats: crwdns56097:0crwdne56097:0
   codeorg_longdescription: crwdns21574:0crwdne21574:0
   codeintl_longdescription: crwdns23751:0crwdne23751:0
   thinkersmithspanish_longdescription: crwdns25939:0crwdne25939:0

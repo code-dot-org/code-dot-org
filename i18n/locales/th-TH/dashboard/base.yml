@@ -194,7 +194,7 @@ th:
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: คุณได้รับรางวัล! (เฉพาะนักเรียนอเมริกา)
       not_earned_title: จบบทฝึกซ้อม, รับรางวัล(เฉพาะนักเรียนอเมริกา)
-      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies} trophies, and earn real-world prizes. You can choose between 10GB of free Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer only valid to U.S. students, and only as long as supplies last.'
+      not_earned: 'เรียนรู้ทุกแนวคิดทางวิทยาศาสตร์คอมพิวเตอร์ พิชิตทุกถ้วยรางวัลที่ชื่อ %{num_trophies} และรับรางวัลในโลกจริง คุณสามารถเลือกระหว่าง 10GB ของเนื้อที่ว่าง Dropbox, $10 เครดิตในสไกป์ และดาวน์โหลดเกมฟรี หมายเหตุ: ข้อเสนอสำหรับนักเรียนสหรัฐเท่านั้น และจนกว่าของรางวัลจะหมด'
       teacher:
         earned: '15 or more students collected all %{num_trophies} trophies. You have won a teacher prize! (U.S. teachers only)'
         not_earned_title: 'Teach the class, earn up to $1,000 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers only)'

@@ -81,5 +81,6 @@
   "whileTooltip": "Upprepa de omslutna åtgärderna tills målet nåtts.",
   "word": "Hitta ordet",
   "yes": "Ja",
-  "youSpelled": "Du stavade"
+  "youSpelled": "Du stavade",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

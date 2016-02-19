@@ -20,8 +20,8 @@ es-ES:
   submit: Enviar
   twentyhours_heading: Prueba nuestro curso de Introducción a la Informática
   twentyhours_text: ¿Terminaste tu primera Hora de Código? Conoce más sobre informática y conceptos de programación en este curso de seguimiento.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study computer science.
+  og_title: Todos los niños merecen oportunidades
+  og_description: Cada estudiante en cada escuela merece la oportunidad de estudiar computación.
   hoc2014_heading: 'Unete a <a href="http://hourofcode.com">Hora del Código</a><br/>Diciembre 8 - 14, 2014<br/>'
   hoc2014_students: Alumnos
   hoc2014_try: Pruébalo
@@ -58,15 +58,82 @@ es-ES:
   congratulations: Felicidades!
   congratulations_on_completing_hoc: Felicitaciones por completar una Hora del Código
   congratulations_volunteer: 'Felicidades: ahora que has probado la Hora del Código, <a href="https://code.org/volunteer"> inscríbete como voluntario en el aula</a> y ayuda a estudiantes a aprender una Hora de Código!'
-  course_name_accelerated: Curso acelerado
-  course_name_course1: Curso 1
-  course_name_course2: Curso 2
-  course_name_course3: Curso 3
-  course_name_course4: Curso 4
-  congratulations_on_completing_course: 'Felicitaciones por completar %{course}'
+  congratulations_on_completing_course1: Congratulations on completing Course 1
+  congratulations_on_completing_course2: Congratulations on completing Course 2
+  congratulations_on_completing_course3: Congratulations on completing Course 3
+  congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated Course
   congrats_next_tutorials_title: Prueba estos tutoriales a continuaciòn
   congrats_next_tutorials_desc: 'Prueba estos tutoriales más cortos de una hora o prueba un <a href="%{current_path}/next">tutorial para colaboradores</a>.'
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
+  view_course: View course
+  congrats_guest_speaker_title: Find a guest speaker for your classroom
+  congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
+  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_third_party_course1: Third party tutorials for pre-readers
+  congrats_third_party_course2: Third party tutorials
+  congrats_third_party_course3: Third party tutorials
+  congrats_third_party_course4: Third party tutorials
+  congrats_third_party_accelerated: Third party tutorials
+  third_party_gradelevel_kto8: Grades K-8
+  third_party_gradelevel_kto2: Grades K-2
+  third_party_gradelevel_2to8: Grades 2-8
+  third_party_gradelevel_4to12: Grades 4-12
+  third_party_gradelevel_5to12: Grades 5-12
+  third_party_gradelevel_6plus: Grades 6+
+  third_party_gradelevel_8plus: Grade 8+
+  third_party_platform_all: 'Platform: Web, iPad & Android'
+  third_party_platform_mobile: 'Platform: iPad & Android'
+  third_party_platform_web: 'Platform: Web'
+  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_free: 'Price: Free'
+  third_party_price_299: 'Price: $2.99/download'
+  third_party_price_2500: 'Price: Free plans & $2,500+'
+  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
+  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_btn_site: Visit Tynker
+  third_party_scratchjr_desc: 'Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life.'
+  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Visit Scratch Jr.
+  third_party_scratch_desc: With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_btn_curriculum: Download Scratch Curriculum
+  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_site: Visit Scratch
+  third_party_lightbot_desc: In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
+  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_khan_desc: 'Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!'
+  third_party_khan_btn_learn: Learn CS with Khan Academy
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages.
+  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: App Inventor 2 Forum
+  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_codehs_desc: CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. With CodeHS, you can get the help that every new programmer needs to work through problems and keep learning. Our tutors are everywhere!
+  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_demos: Visit the CodeHS Demos
+  third_party_codecademy_desc: 'We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education.'
+  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_codecademy_btn_site: Visit Codecademy
+  third_party_organization: Organization
+  third_party_curriculum: Currículum
+  third_party_pricing: Pricing
+  third_party_cost_free: Free
+  third_party_cost_5permonth: $5/month per class
+  third_party_cost_299: $2.99/download
+  third_party_cost_free_399: Free to try, $399/classroom
+  third_party_cost_free_2: Free to try, $2/student
+  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
+  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
+  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
+  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
+  third_party_desc_10to15_3to12: 'Between 10 & 15 lessons, geared toward grades 3-12'
+  third_party_desc_25to40_3to12: 'From 25 - 40 lessons, intended for grades 3-12'
+  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_7to22_5to12: 'Between 7 & 22 lessons, geared toward grades 5-12'
+  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: Por favor, selecciona una edad válida
   enter_valid_email: Por favor ingresa un correo electrónico válido
   get_a_certificate_message: "Te enviaremos un certificado e información sobre cómo hacer para que <a href='/learn/beyond'> Aprenda más allá de una hora</a>"
@@ -113,9 +180,14 @@ es-ES:
   learn_next_level: Continuar al siguiente nivel
   learn_online: Pruebe otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
-  hoc_is_here: '#HourOfCode está aquí - compruébalo! @codeorg'
+  hoc_is_here: 'En esta última Semana de la Informática, la #HoraDelCódigo ha llegado a 50 millones de estudiantes. https://youtu.be/Ofze6CWUCx8.'
   just_did_hoc: 'Yo he terminado the HourofCode - Dale un vistazo! @codeorg'
-  twitter_teach_cs: '¿Por qué no hay más escuelas que enseñen ciencias de la  computación? Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visite http://code.org/ para obtener más información.'
+  just_did_course1: 'I just finished Course 1 - check it out! @codeorg'
+  just_did_course2: 'I just finished Course 2 - check it out! @codeorg'
+  just_did_course3: 'I just finished Course 3 - check it out! @codeorg'
+  just_did_course4: 'I just finished Course 4 - check it out! @codeorg'
+  just_did_accelerated: 'I just finished the Accelerated Course - check it out! @codeorg'
+  twitter_teach_cs: 9 de cada 10 personas están de acuerdo, las escuelas deben enseñar ciencias de la computación. http://youtu.be/nKIu9yen5nc. Visita https://code.org/.
   learn_hoc: Aprende una hora del código
   beyond_hoc: Más allá de Una Hora
   what_gender: ¿Cual es tu sexo?
@@ -205,7 +277,7 @@ es-ES:
   homepage_banner_text_link: Aprende más
   homepage_banner_privacy_main: "Aug 3: We've updated our privacy policy to include tools used in our new high school CS Principles course."
   homepage_banner_privacy_link: Aprende más
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer science in classrooms.
+  homepage_banner_20k_teachers: 20.000 profesores capacitados, y actualmente enseñando computación en las aulas.
   homepage_banner_20k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
@@ -215,7 +287,7 @@ es-ES:
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
   homepage_slot_text_title_students: Alumnos
   homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
-  homepage_slot_text_blurb_students_courses: Explore our courses
+  homepage_slot_text_blurb_students_courses: Explora nuestros cursos
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Encuentra una clase local
   homepage_slot_text_link_othercourses: Otros cursos en línea
@@ -304,7 +376,7 @@ es-ES:
     Estos maestros le encantaría tener a alguien <span style="font-family: 'Gotham 7r', sans-serif;"> apasionado por la enseñanza de ciencia de a computación</span> que pueden ayudar en el aula, o para alguien que pueda <span style="font-family: 'Gotham 7r', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse de voluntario, <a href="%{url}"> aprender más</a> acerca de organizar su propio evento de Hora de Código.
   volunteer_engineer_submission_intro_signup: 'Por favor introduzca la siguiente información si usted es un estudiante de informática o profesional del software. Los campos marcados con un <span class="form-required-field">*</span> son obligatorios.'
   volunteer_engineer_submission_intro_links: '¿No está buscando ser voluntario? <a href="%{learn_more}"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.'
-  volunteer_engineer_submission_update_information: Update your information
+  volunteer_engineer_submission_update_information: Actualice su información
   volunteer_engineer_submission_header_shared: Información compartida con docentes en el mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
@@ -539,7 +611,7 @@ es-ES:
   dashboard_faq_k5: Preguntas frecuentes sobre K-5
   dashboard_announcements: Anuncios
   dashboard_announce_view_all: Ver todo
-  dashboard_announce_message: '<b>January 6, 2015</b> - Learn beyond one Hour of Code in your classroom. Start a new intro course and track student progress.'
+  dashboard_announce_message: '<b>01 de febrero de 2016</b> - 9 de cada 10 padres quieren que sus hijos aprendan informática y la mayoría de las escuelas aún no la enseñan. El 30 de enero, la Casa Blanca anunció planes para llevar la informática a cada estudiante en los Estados Unidos con la iniciativa Informática Para Todos. No podríamos estar más felices por el apoyo bipartidista para la informática.'
   dashboard_announce_button_text: Aprende más
   dashboard_announce_hoc: '<b>15 de Octubre, 2015</b> - Se viene la Hora de Código &mdash; cada organizador que participe recibirá una tarjeta de regalo de Amazon.com o de Microsoft Windows Store como agradecimiento. Únete a aulas en todo el mundo del 7 al 13 de Diciembre.'
   dashboard_announce_playlab: '<b> 04 de diciembre 2015 </b> - ¡La Hora del Código ya está aquí! Prueba 50 tutoriales para todas las edades y todos los dispositivos. Novedades de esta semana: Códigos de tus propias historias y juegos en los nuevos laboratorios de reproducción, edad de hielo y Gumball.'
@@ -647,6 +719,11 @@ es-ES:
   codesters_name: Codesters
   texasinstruments_name: 10 minutos de código
   teacherled_name: Profesor Llevó a Cabro Lecciones de la Hora del Código
+  course1_name: Curso 1
+  course2_name: Curso 2
+  course3_name: Curso 3
+  course4_name: Curso 4
+  accelerated_name: Curso acelerado
   codeorg_gradelevel: Edad 4-104
   codeintl_gradelevel: Edad 4-104
   thinkersmithspanish_gradelevel: Todas las edades
@@ -697,6 +774,11 @@ es-ES:
   codesters_gradelevel: 12-14 años
   texasinstruments_gradelevel: 13-16 años
   teacherled_gradelevel: Mayores de 5 años
+  course1_gradelevel: Edades de 4 a 6 años
+  course2_gradelevel: Edades de 6 a 18 años
+  course3_gradelevel: Edades de 8 a 18 años
+  course4_gradelevel: Edades de 10 a 18 años
+  accelerated_gradelevel: Edades de 10 a 18 años
   codeorg_platformtext: Cualquier navegador moderno, smartphone, tableta
   codeintl_platformtext: Cualquier navegador moderno, smartphone, tableta
   thinkersmithspanish_platformtext: Desconectado
@@ -797,6 +879,9 @@ es-ES:
   teacherled_shortdescription: |
     Esta inspirado para diseñar tu propia Hora de Código con estos planes de lecciones.
      
+  course2_shortdescription_congrats: For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+  course3_shortdescription_congrats: Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+  course4_shortdescription_congrats: Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8.
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   codeintl_longdescription: Aprende los conceptos básicos de la programación mediante programación de arrastrar y soltar. Este tutorial autodirigido que se parece a un juego tiene videoconferencias protagonizadas por Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs Zombies. Aprenda los bucles, condicionales y algoritmos básicos. Disponible en 34 idiomas.
   thinkersmithspanish_longdescription: 'Mediante el uso de un "Vocabulario Robot" predefinido, los estudiantes descubrir&aacute;n c&oacute;mo guiarse para llevar a cabo tareas espec&iacute;ficas sin discutirlas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n.'

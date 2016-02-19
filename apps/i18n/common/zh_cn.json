@@ -14,6 +14,7 @@
   "catProcedures": "函数",
   "catText": "文本",
   "catVariables": "变量",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "重新开始",
   "clearPuzzleConfirm": "你将重设这个猜谜至初始状态，并且删除所有你已经增加或更改的模块。",
   "clearPuzzleConfirmHeader": "你确定要重新开始吗？",
@@ -47,6 +48,8 @@
   "dropletBlock_callMyFunction_n_description": "调用一个已经定义的的有一个或多个参数的函数。",
   "dropletBlock_callMyFunction_n_signatureOverride": "调用带参数的函数",
   "dropletBlock_callMyFunction_signatureOverride": "调用函数",
+  "dropletBlock_comment_description": "写一些代码的描述",
+  "dropletBlock_comment_signatureOverride": "注解",
   "dropletBlock_declareAssign_x_array_1_4_description": "Create a variable and initialize it as an array",
   "dropletBlock_declareAssign_x_array_1_4_param0": "x",
   "dropletBlock_declareAssign_x_array_1_4_param0_description": "The name you will use in the program to reference the variable",
@@ -134,7 +137,7 @@
   "dropletBlock_notOperator_signatureOverride": "AND boolean operator",
   "dropletBlock_orOperator_description": "Logical OR of two booleans",
   "dropletBlock_orOperator_signatureOverride": "或布尔运算符",
-  "dropletBlock_randomNumber_description": "Returns a random number in the closed range from min to max.",
+  "dropletBlock_randomNumber_description": "在闭值域内返回到一个随机数字",
   "dropletBlock_randomNumber_param0": "最小",
   "dropletBlock_randomNumber_param0_description": "返回的最小值",
   "dropletBlock_randomNumber_param1": "最大",
@@ -203,7 +206,7 @@
   "print": "打印",
   "puzzleTitle": "第{stage_total} 章的关卡 {puzzle_number}",
   "readonlyWorkspaceHeader": "仅查看： ",
-  "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",
+  "recommendedBlockContextualHintTitle": "试着用这样的模块来解谜",
   "repeat": "重复",
   "resetProgram": "重置",
   "rotateText": "旋转您的设备。",
@@ -253,7 +256,5 @@
   "watchVideo": "观看视频",
   "when": "当",
   "whenRun": "当运行时",
-  "workspaceHeaderShort": "工作区域",
-  "dropletBlock_comment_description": "Write a description of some code",
-  "dropletBlock_comment_signatureOverride": "comment"
+  "workspaceHeaderShort": "工作区域"
 }

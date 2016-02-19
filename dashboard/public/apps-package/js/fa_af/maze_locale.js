@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن."},
 "word":function(d){return "کلمه را پیدا کنید"},
 "yes":function(d){return "بله"},
-"youSpelled":function(d){return "اسپل کنید"}};
+"youSpelled":function(d){return "اسپل کنید"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
