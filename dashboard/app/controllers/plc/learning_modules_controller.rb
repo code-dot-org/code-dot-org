@@ -27,24 +27,20 @@ class Plc::LearningModulesController < ApplicationController
   def create
     @plc_learning_module = Plc::LearningModule.new(plc_learning_module_params)
 
-    respond_to do |format|
-      if @plc_learning_module.save
-        format.html { redirect_to @plc_learning_module, notice: 'Learning module was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
+    if @plc_learning_module.save
+      redirect_to @plc_learning_module, notice: 'Learning module was successfully created.'
+    else
+      redirect_to action: :new
     end
   end
 
   # PATCH/PUT /plc/learning_modules/1
   # PATCH/PUT /plc/learning_modules/1.json
   def update
-    respond_to do |format|
-      if @plc_learning_module.update(plc_learning_module_params)
-        format.html { redirect_to @plc_learning_module, notice: 'Learning module was successfully updated.' }
-      else
-        format.html { render action: 'edit' }
-      end
+    if @plc_learning_module.update(plc_learning_module_params)
+      redirect_to @plc_learning_module, notice: 'Learning module was successfully updated.'
+    else
+      redirect_to action: :edit
     end
   end
 

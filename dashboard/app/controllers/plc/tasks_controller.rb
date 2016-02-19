@@ -27,24 +27,20 @@ class Plc::TasksController < ApplicationController
   def create
     @plc_task = Plc::Task.new(plc_task_params)
 
-    respond_to do |format|
-      if @plc_task.save
-        format.html { redirect_to @plc_task, notice: 'Task was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
+    if @plc_task.save
+      redirect_to @plc_task, notice: 'Task was successfully created.'
+    else
+      redirect_to action: :new
     end
   end
 
   # PATCH/PUT /plc/tasks/1
   # PATCH/PUT /plc/tasks/1.json
   def update
-    respond_to do |format|
-      if @plc_task.update(plc_task_params)
-        format.html { redirect_to @plc_task, notice: 'Task was successfully updated.' }
-      else
-        format.html { render action: 'edit' }
-      end
+    if @plc_task.update(plc_task_params)
+      redirect_to @plc_task, notice: 'Task was susccessfully updated.'
+    else
+      redirect_to action: :edit
     end
   end
 
