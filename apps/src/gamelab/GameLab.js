@@ -129,7 +129,7 @@ GameLab.prototype.init = function (config) {
 
   // Store p5specialFunctions in the unusedConfig array so we don't give warnings
   // about these functions not being called:
-  config.unusedConfig = this.p5specialFunctions;
+  config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
   this.studioApp_.init(config);
 
