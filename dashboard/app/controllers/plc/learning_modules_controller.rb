@@ -52,9 +52,7 @@ class Plc::LearningModulesController < ApplicationController
   # DELETE /plc/learning_modules/1.json
   def destroy
     @plc_learning_module.destroy
-    respond_to do |format|
-      format.html { redirect_to plc_learning_modules_url }
-    end
+    redirect_to action: :index
   end
 
   private

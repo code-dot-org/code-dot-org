@@ -10,7 +10,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
     question_responses = params[:answerTaskList].split(',')
     user_professional_learning_course_enrollment = Plc::UserCourseEnrollment.find(params[:enrollment_id])
 
-    modules_to_enroll_in = Plc::Task.where(id: question_responses).map {|task| task.plc_learning_module}
+    modules_to_enroll_in = Plc::Task.where(id: question_responses).map(&:plc_learning_module)
 
     user_professional_learning_course_enrollment.enroll_user_in_course_with_learning_modules(modules_to_enroll_in)
     redirect_to controller: :user_course_enrollments, action: :show, id: params[:enrollment_id]
