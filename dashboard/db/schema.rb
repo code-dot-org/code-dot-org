@@ -380,23 +380,6 @@ ActiveRecord::Schema.define(version: 20160219013831) do
   add_index "prizes", ["prize_provider_id"], name: "index_prizes_on_prize_provider_id", using: :btree
   add_index "prizes", ["user_id"], name: "index_prizes_on_user_id", using: :btree
 
-  create_table "professional_learning_courses", force: :cascade do |t|
-    t.string "name", limit: 255
-  end
-
-  create_table "professional_learning_modules", force: :cascade do |t|
-    t.string "name",                 limit: 255
-    t.string "learning_module_type", limit: 255
-  end
-
-  create_table "professional_learning_tasks", force: :cascade do |t|
-    t.string  "name",                            limit: 255
-    t.string  "description",                     limit: 255
-    t.integer "professional_learning_module_id", limit: 4
-  end
-
-  add_index "professional_learning_tasks", ["professional_learning_module_id"], name: "task_learning_module_index", using: :btree
-
   create_table "puzzle_ratings", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "script_id",  limit: 4
