@@ -24,8 +24,8 @@ class LevelGroup < DSLDefined
 name 'unique level name here'
 title 'title'
 description 'description here'
-levels << 'level1'
-levels << 'level2'
+level 'level1'
+level 'level2'
 ruby
   end
 

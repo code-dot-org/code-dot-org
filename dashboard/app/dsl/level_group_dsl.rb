@@ -5,7 +5,7 @@ class LevelGroupDSL < BaseDSL
     @title = nil
     @description_short = nil
     @description = nil
-    @levels = []
+    @hash.merge! levels: []
   end
 
   integer :id
@@ -14,11 +14,11 @@ class LevelGroupDSL < BaseDSL
   string :description
 
   def parse_output
-    {id: @id}
+    {name: @name, properties: @hash}
   end
 
   def level(name)
-    @levels << name
+    @hash[:levels] << name
   end
 
   def i18n_strings
