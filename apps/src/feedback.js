@@ -824,6 +824,7 @@ FeedbackUtils.prototype.getShowCodeElement_ = function(options) {
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function(feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
+    feedbackType === TestResults.PASS_WITH_EXTRA_TOP_BLOCKS ||
     feedbackType === TestResults.TOO_MANY_BLOCKS_FAIL ||
     feedbackType ===  TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL ||
     feedbackType ===  TestResults.MISSING_RECOMMENDED_BLOCK_FINISHED ||

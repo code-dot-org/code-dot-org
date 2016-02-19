@@ -17,6 +17,10 @@ describe("checkForEmptyContainerBlockFailure_", function () {
   // create our environment
   beforeEach(function () {
     testUtils.setupTestBlockly();
+    var blockInstallOptions = { isK1: false };
+    var blocksCommon = require('@cdo/apps/blocksCommon');
+    blocksCommon.install(Blockly, blockInstallOptions);
+
     studioApp = testUtils.getStudioAppSingleton();
     TestResults = studioApp.TestResults;
   });
@@ -38,14 +42,14 @@ describe("checkForEmptyContainerBlockFailure_", function () {
   it("returns ALL_PASS when no blocks are present", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: ''
+      blockXml: '<xml><block type="when_run"><next></next></block></xml>'
     });
   });
 
   it ("returns ALL_PASS when no container blocks are present", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml><block type="text_print"></block></xml>'
+      blockXml: '<xml><block type="when_run"><next><block type="text_print"></block></next></block></xml>'
     });
   });
 
@@ -53,9 +57,11 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_BLOCK_FAIL,
       blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                  '</block>' +
+                  '<block type="when_run"><next>' + 
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                    '</block>' +
+                  '</next></block>' +
                 '</xml>'
     });
   });
@@ -64,12 +70,14 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
-                  '<block type="controls_repeat">' +
-                    '<title name="TIMES">4</title>' +
-                    '<statement name="DO">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
+                  '<block type="when_run"><next>' + 
+                    '<block type="controls_repeat">' +
+                      '<title name="TIMES">4</title>' +
+                      '<statement name="DO">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</next></block>' +
                 '</xml>'
     });
   });
@@ -78,10 +86,12 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.EMPTY_FUNCTION_BLOCK_FAIL,
       blockXml: '<xml>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                  '</block>' +
+                  '<block type="when_run"><next>' + 
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                    '</block>' +
+                  '</next></block>' +
                 '</xml>'
     });
   });
@@ -90,13 +100,15 @@ describe("checkForEmptyContainerBlockFailure_", function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml: '<xml>' +
-                  '<block type="procedures_defnoreturn">' +
-                    '<mutation/>' +
-                    '<title name="NAME">do something</title>' +
-                    '<statement name="STACK">' +
-                      '<block type="text_print"></block>' +
-                    '</statement>' +
-                  '</block>' +
+                  '<block type="when_run"><next>' + 
+                    '<block type="procedures_defnoreturn">' +
+                      '<mutation/>' +
+                      '<title name="NAME">do something</title>' +
+                      '<statement name="STACK">' +
+                        '<block type="text_print"></block>' +
+                      '</statement>' +
+                    '</block>' +
+                  '</next></block>' +
                 '</xml>'
     });
   });
