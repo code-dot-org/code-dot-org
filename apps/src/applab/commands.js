@@ -22,7 +22,7 @@ var colors = require('../sharedJsxStyles').colors;
 var OPTIONAL = true;
 
 // For proxying non-https xhr requests
-var XHR_PROXY = '//' + location.host + '/xhr?u=';
+var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
 var applabCommands = module.exports;
 
@@ -1384,7 +1384,8 @@ applabCommands.startWebRequest = function (opts) {
   apiValidateType(opts, 'startWebRequest', 'callback', opts.func, 'function');
   var req = new XMLHttpRequest();
   req.onreadystatechange = applabCommands.onHttpRequestEvent.bind(req, opts);
-  var url = XHR_PROXY + encodeURIComponent(opts.url.replace(/ /g, '%20'));
+  var url = XHR_PROXY_PATH + '?u=' + encodeURIComponent(opts.url.replace(/ /g, '%20')) +
+      '&c=' + Applab.channelId;
   req.open('GET', url, true);
   req.send();
 };
