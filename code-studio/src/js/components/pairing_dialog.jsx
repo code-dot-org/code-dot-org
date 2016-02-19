@@ -12,19 +12,18 @@ window.dashboard.PairingDialog = (function (React) {
 
   return React.createClass({
     getInitialState: function () {
-      return { isOpen: true };
-    },
-
-    componentWillReceiveProps: function (newProps) {
-      this.setState({isOpen: true});
+      return { isOpen: false };
     },
 
     close: function () {
       this.setState({isOpen: false});
     },
 
+    open: function () {
+      this.setState({isOpen: true});
+    },
+
     render: function () {
-      // TODO - Can we now make SendToPhone completely Reactified?
       return (
         <Dialog isOpen={this.state.isOpen} handleClose={this.close}>
           <Pairing source={this.props.source} handleClose={this.close}/>

@@ -8,7 +8,7 @@
         - if current_user.teacher?
           = link_to t('nav.user.classroom'), teacher_dashboard_url
         - if current_user.can_pair?
-          = link_to pairing_url do
+          = link_to '#', {id: 'pairing_link'} do
             %i.fa.fa-users
             = t('nav.user.pair_programming')
         = link_to t('nav.user.stats'), root_url
@@ -43,4 +43,20 @@
     if (typeof dashboard !== 'undefined') {
       dashboard.clientState.reset();
     }
+  });
+
+  // pair programming dialog
+  $(document).ready(function () {
+    var props = {source: #{pairing_url.inspect}};
+    props.i18n = window.dashboard.i18n;
+    $('body').append('<div id="pairing"></div>');
+    var pairingDialog = React.render(
+        React.createElement(window.dashboard.PairingDialog, props),
+        document.getElementById('pairing'));
+
+    $('#pairing_link').click(function () {
+      pairingDialog.open();
+      hideUserOptions();
+      return false;
+    });
   });

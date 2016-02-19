@@ -100,7 +100,9 @@ var Pairing = function (React) {
     },
 
     componentDidMount: function() {
-      $.get(this.props.source).
+      $.ajax({url: this.props.source,
+              method: 'GET',
+              dataType: 'json'}).
         done(function(result) {
           this.setState({
             pairings: result.pairings,
@@ -109,8 +111,17 @@ var Pairing = function (React) {
           });
         }.bind(this)).
         fail(function(result) {
-          console.log('fail :(');
+          // TODO what to do here?
         }.bind(this));
+
+      // $.get(this.props.source,
+      //       function(result) {
+      //         this.setState({
+      //           pairings: result.pairings,
+      //           sections: result.sections,
+      //           selectedSectionId: ''
+      //         });
+      //       }.bind(this), 'json');
     },
 
     handleSectionChange: function(event) {
@@ -133,6 +144,19 @@ var Pairing = function (React) {
         pairings: pairings,
         selectedSectionId: this.selectedSectionId(),
       });
+
+      $.ajax({url: this.props.source,
+              data: JSON.stringify({pairings: pairings}),
+              contentType: 'application/json; charset=utf-8',
+              method: 'PUT',
+              dataType: 'json'}).
+        done(function(result) {
+          // close dialog
+          // TODO what to do here?
+        }.bind(this)).
+        fail(function(result) {
+          // TODO what to do here?
+        }.bind(this));
     },
 
     handleStop: function (event) {

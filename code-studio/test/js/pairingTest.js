@@ -25,12 +25,15 @@ describe('Pairing component', function() {
     return TestUtils.findRenderedDOMComponentWithTag(component, 'select');
   }
 
-  function submitButtonRendered() {
+  function addPartnersButtonRendered() {
     return TestUtils.scryRenderedDOMComponentsWithClass(component, 'addPartners').length;
   }
 
+  function addPartnersButton() {
+    return TestUtils.findRenderedDOMComponentWithClass(component, 'addPartners');
+  }
+
   function setupFakeAjax(url, response) {
-    // setup fake ajax
     server = sinon.fakeServer.create();
 
     server.respondWith("GET",
@@ -129,46 +132,46 @@ describe('Pairing component', function() {
     it('should select a student when clicking on it', function() {
       assert.equal(2, numberOfStudents());
       assert.equal(0, numberOfSelectedStudents());
-      assert(!submitButtonRendered());
+      assert(!addPartnersButtonRendered());
 
       // click on first student to select
       TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
       assert.equal(2, numberOfStudents());
       assert.equal(1, numberOfSelectedStudents());
-      assert(submitButtonRendered());
+      assert(addPartnersButtonRendered());
 
       // click on second student to select
       TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
       assert.equal(2, numberOfStudents());
       assert.equal(2, numberOfSelectedStudents());
-      assert(submitButtonRendered());
+      assert(addPartnersButtonRendered());
 
       // click on second student again to unselect
       TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[1]);
       assert.equal(2, numberOfStudents());
       assert.equal(1, numberOfSelectedStudents());
-      assert(submitButtonRendered());
+      assert(addPartnersButtonRendered());
 
       // click on first student again to unselect
       TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
       assert.equal(2, numberOfStudents());
       assert.equal(0, numberOfSelectedStudents());
-      assert(!submitButtonRendered());
+      assert(!addPartnersButtonRendered());
     });
 
     it('should let you select a student and add them as a partner', function() {
       assert.equal(2, numberOfStudents());
       assert.equal(0, numberOfSelectedStudents());
-      assert(!submitButtonRendered());
+      assert(!addPartnersButtonRendered());
 
       // click on first student to select
       TestUtils.Simulate.click(TestUtils.scryRenderedDOMComponentsWithClass(component, 'student')[0]);
       assert.equal(2, numberOfStudents());
       assert.equal(1, numberOfSelectedStudents());
-      assert(submitButtonRendered());
+      assert(addPartnersButtonRendered());
 
       // click on Add Partner to confirm
-      TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithTag(component, 'button'));
+      TestUtils.Simulate.click(addPartnersButton());
 
       // show only selected student
       assert.equal(1, numberOfStudents());
