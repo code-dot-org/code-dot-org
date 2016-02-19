@@ -229,9 +229,9 @@ Blockly.Block.prototype.initSvg = function() {
     Blockly.bindEvent_(this.svg_.getRootElement(), 'mousedown', this,
                        this.onMouseDown_);
   }
-  this.setIsUnused();
   this.setCurrentlyHidden(this.currentlyHidden_);
   this.moveToFrontOfMainCanvas_();
+  this.setIsUnused();
 };
 
 /**
@@ -1678,6 +1678,8 @@ Blockly.Block.prototype.isUnused = function() {
 Blockly.Block.prototype.setIsUnused = function(isUnused) {
   if (isUnused === undefined) {
     isUnused = this.previousConnection !== null &&
+        this.isUserVisible() &&
+        this.type !== 'functional_definition' &&
         Blockly.mainBlockSpace &&
         Blockly.mainBlockSpace.isReadOnly() === false &&
         Blockly.mainBlockSpace.isTopBlock(this);
