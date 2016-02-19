@@ -41,9 +41,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   # DELETE /plc/user_course_enrollments/1.json
   def destroy
     @plc_user_course_enrollment.destroy
-    respond_to do |format|
-      format.html { redirect_to plc_user_course_enrollments_url }
-    end
+    redirect_to action: :index
   end
 
   private

@@ -52,9 +52,7 @@ class Plc::TasksController < ApplicationController
   # DELETE /plc/tasks/1.json
   def destroy
     @plc_task.destroy
-    respond_to do |format|
-      format.html { redirect_to plc_tasks_url }
-    end
+    redirect_to action: :index
   end
 
   private
