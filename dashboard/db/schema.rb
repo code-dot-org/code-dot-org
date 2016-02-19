@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218230254) do
+ActiveRecord::Schema.define(version: 20160219013831) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id",         limit: 4
@@ -540,14 +540,6 @@ ActiveRecord::Schema.define(version: 20160218230254) do
   add_index "unexpected_teachers_workshops", ["unexpected_teacher_id"], name: "index_unexpected_teachers_workshops_on_unexpected_teacher_id", using: :btree
   add_index "unexpected_teachers_workshops", ["workshop_id"], name: "index_unexpected_teachers_workshops_on_workshop_id", using: :btree
 
-  create_table "user_enrollment_module_assignments", force: :cascade do |t|
-    t.integer "professional_learning_module_id",                 limit: 4
-    t.integer "user_professional_learning_course_enrollment_id", limit: 4
-  end
-
-  add_index "user_enrollment_module_assignments", ["professional_learning_module_id"], name: "module_assignment_module_index", using: :btree
-  add_index "user_enrollment_module_assignments", ["user_professional_learning_course_enrollment_id"], name: "module_assignment_enrollment_index", using: :btree
-
   create_table "user_levels", force: :cascade do |t|
     t.integer  "user_id",         limit: 4,             null: false
     t.integer  "level_id",        limit: 4,             null: false
@@ -578,15 +570,6 @@ ActiveRecord::Schema.define(version: 20160218230254) do
   end
 
   add_index "user_permissions", ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true, using: :btree
-
-  create_table "user_professional_learning_course_enrollments", force: :cascade do |t|
-    t.integer "user_id",                         limit: 4
-    t.integer "professional_learning_course_id", limit: 4
-    t.string  "status",                          limit: 255
-  end
-
-  add_index "user_professional_learning_course_enrollments", ["professional_learning_course_id"], name: "enrollment_plc_index", using: :btree
-  add_index "user_professional_learning_course_enrollments", ["user_id"], name: "index_user_professional_learning_course_enrollments_on_user_id", using: :btree
 
   create_table "user_scripts", force: :cascade do |t|
     t.integer  "user_id",          limit: 4, null: false

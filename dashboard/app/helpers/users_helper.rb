@@ -116,5 +116,4 @@ module UsersHelper
       0
     end
   end
-
 end

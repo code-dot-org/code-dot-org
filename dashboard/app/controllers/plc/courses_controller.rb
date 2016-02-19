@@ -30,10 +30,8 @@ class Plc::CoursesController < ApplicationController
     respond_to do |format|
       if @plc_course.save
         format.html { redirect_to @plc_course, notice: 'Course was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @plc_course }
       else
         format.html { render action: 'new' }
-        format.json { render json: @plc_course.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,10 +42,8 @@ class Plc::CoursesController < ApplicationController
     respond_to do |format|
       if @plc_course.update(plc_course_params)
         format.html { redirect_to @plc_course, notice: 'Course was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @plc_course.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,7 +54,6 @@ class Plc::CoursesController < ApplicationController
     @plc_course.destroy
     respond_to do |format|
       format.html { redirect_to plc_courses_url }
-      format.json { head :no_content }
     end
   end
 

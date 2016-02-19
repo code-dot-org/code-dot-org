@@ -30,10 +30,8 @@ class Plc::LearningModulesController < ApplicationController
     respond_to do |format|
       if @plc_learning_module.save
         format.html { redirect_to @plc_learning_module, notice: 'Learning module was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @plc_learning_module }
       else
         format.html { render action: 'new' }
-        format.json { render json: @plc_learning_module.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,10 +42,8 @@ class Plc::LearningModulesController < ApplicationController
     respond_to do |format|
       if @plc_learning_module.update(plc_learning_module_params)
         format.html { redirect_to @plc_learning_module, notice: 'Learning module was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @plc_learning_module.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,7 +54,6 @@ class Plc::LearningModulesController < ApplicationController
     @plc_learning_module.destroy
     respond_to do |format|
       format.html { redirect_to plc_learning_modules_url }
-      format.json { head :no_content }
     end
   end
 
