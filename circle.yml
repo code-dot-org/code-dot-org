@@ -6,6 +6,8 @@ general:
 machine:
   ruby:
     version: 2.2.3
+  node:
+    version: 0.12.0
   environment:
     RAILS_ENV: test
   services:
@@ -84,7 +86,7 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
-        - alias shoulduitest="git log --format=oneline -n 1 $CIRCLE_SHA1 | grep '\[run-ui\]' -q"
+        - alias shoulduitest="git log --format=oneline -n 1 $CIRCLE_SHA1 | grep '\[run-ui-tests\]' -q"
         # The following should only be run when [run-ui-tests] included in commit hash
         - "shoulduitest && ./bin/dashboard-server":
             background: true
