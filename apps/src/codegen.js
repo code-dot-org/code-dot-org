@@ -201,8 +201,43 @@ var createCustomMarshalObject = function (interpreter, nativeObj, nativeParentOb
 };
 
 exports.customMarshalObjectList = [];
-exports.customMarshalModifiedObjectList = [];
 exports.asyncFunctionList = [];
+exports.nativeCallsInterpreterFunctionList = [];
+
+// If this is on our list of "custom marshal" objects - or if it a property
+// on one of those objects (other than a function), return true
+
+var shouldCustomMarshalObject = function (nativeVar, nativeParentObj) {
+  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
+    var marshalObj = exports.customMarshalObjectList[i];
+    if ((nativeVar instanceof marshalObj.instance &&
+          (typeof marshalObj.requiredMethod === 'undefined' ||
+            nativeVar[marshalObj.requiredMethod] !== undefined)) ||
+        (typeof nativeVar !== 'function' &&
+            nativeParentObj instanceof marshalObj.instance)) {
+      return true;
+    }
+  }
+  return false;
+};
+
+// When marshaling methods on "custom marshal" objects, we may need to augment
+// the marshaling options. This returns those options.
+
+var getCustomMarshalMethodOptions = function (nativeParentObj) {
+  for (var i = 0; i < exports.customMarshalObjectList.length; i++) {
+    var marshalObj = exports.customMarshalObjectList[i];
+    if (nativeParentObj instanceof marshalObj.instance) {
+      if (typeof marshalObj.requiredMethod === 'undefined' ||
+           nativeParentObj[marshalObj.requiredMethod] !== undefined) {
+        return marshalObj.methodOpts || {};
+      } else {
+        return {};
+      }
+    }
+  }
+  return {};
+};
 
 //
 // Droplet/JavaScript/Interpreter codegen functions:
@@ -215,22 +250,8 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
   if (typeof maxDepth === "undefined") {
     maxDepth = Infinity; // default to infinite levels of depth
   }
-  for (i = 0; i < exports.customMarshalObjectList.length; i++) {
-    // If this is on our list of "custom marshal" objects - or if it a property
-    // on one of those objects (other than a function), create a special
-    // "custom marshal" interpreter object to represent it
-    if (nativeVar instanceof exports.customMarshalObjectList[i] ||
-        (typeof nativeVar !== 'function' &&
-            nativeParentObj instanceof exports.customMarshalObjectList[i])) {
-      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
-    }
-  }
-  for (i = 0; i < exports.customMarshalModifiedObjectList.length; i++) {
-    var modObj = exports.customMarshalModifiedObjectList[i];
-    if (nativeVar instanceof modObj.instance &&
-        nativeVar[modObj.methodName] !== undefined) {
-      return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
-    }
+  if (shouldCustomMarshalObject(nativeVar, nativeParentObj)) {
+    return createCustomMarshalObject(interpreter, nativeVar, nativeParentObj);
   }
   if (nativeVar instanceof Array) {
     retVal = interpreter.createObject(interpreter.ARRAY);
@@ -253,13 +274,24 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
       nativeParentObj: nativeParentObj,
     };
     for (i = 0; i < exports.asyncFunctionList.length; i++) {
-      // If this is on our list of "custom marshal" objects - or if it a property
-      // on one of those objects (other than a function), create a special
-      // "custom marshal" interpreter object to represent it
+      // Mark if this should be nativeIsAsync:
       if (nativeVar === exports.asyncFunctionList[i]) {
         makeNativeOpts.nativeIsAsync = true;
         break;
       }
+    }
+    for (i = 0; i < exports.nativeCallsInterpreterFunctionList.length; i++) {
+      // Mark if this should be nativeCallsBackInterpreter:
+      if (nativeVar === exports.nativeCallsInterpreterFunctionList[i]) {
+        makeNativeOpts.nativeCallsBackInterpreter = true;
+        break;
+      }
+    }
+    var extraOpts = getCustomMarshalMethodOptions(nativeParentObj);
+    // Add extra options if the parent of this function is in our custom marshal
+    // modified object list:
+    for (var prop in extraOpts) {
+      makeNativeOpts[prop] = extraOpts[prop];
     }
     var wrapper = exports.makeNativeMemberFunction(makeNativeOpts);
     if (makeNativeOpts.nativeIsAsync) {
@@ -346,6 +378,41 @@ var createNativeCallbackForAsyncFunction = function (opts, callback) {
 };
 
 /**
+ * Generate a function wrapper for an interpreter callback that will be
+ * invoked by a special native function that can execute these callbacks inline
+ * on the interpreter stack.
+ *
+ * @param {Object} opts Options block with interpreter and maxDepth provided
+ * @param {function} callback The interpreter supplied callback function
+ */
+var createNativeInterpreterCallback = function (opts, intFunc) {
+  return function (nativeValue) {
+    var args = Array.prototype.slice.call(arguments);
+    var intArgs = [];
+    for (var i = 0; i < args.length; i++) {
+      intArgs[i] = exports.marshalNativeToInterpreter(
+          opts.interpreter,
+          args[i],
+          null,
+          opts.maxDepth);
+    }
+    // Shift a CallExpression node on the stack that already has its func_
+    // and arguments_ populated:
+    var state = {
+      node: {
+        type: 'CallExpression',
+        arguments: intArgs /* this just needs to be array of the same size */
+        },
+      doneCallee_: true,
+      func_: intFunc,
+      arguments: intArgs,
+      n_: intArgs.length
+    };
+    opts.interpreter.stateStack.unshift(state);
+  };
+};
+
+/**
  * Generate a native function wrapper for use with the JS interpreter.
  */
 exports.makeNativeMemberFunction = function (opts) {
@@ -365,6 +432,13 @@ exports.makeNativeMemberFunction = function (opts) {
           // Async functions receive a native callback method as their last
           // parameter, and we want to wrap that callback to ease marshalling:
           nativeArgs[i] = createNativeCallbackForAsyncFunction(opts, arguments[i]);
+        } else if (opts.nativeCallsBackInterpreter &&
+            typeof arguments[i] === 'object' &&
+            opts.interpreter.isa(arguments[i], opts.interpreter.FUNCTION)) {
+          // A select class of native functions is aware of the interpreter and
+          // capable of calling the interpreter on the stack immediately. We
+          // marshal these differently:
+          nativeArgs[i] = createNativeInterpreterCallback(opts, arguments[i]);
         } else {
           nativeArgs[i] = exports.marshalInterpreterToNative(opts.interpreter, arguments[i]);
         }
