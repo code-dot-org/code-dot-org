@@ -273,19 +273,13 @@ exports.marshalNativeToInterpreter = function (interpreter, nativeVar, nativePar
       nativeFunc: nativeVar,
       nativeParentObj: nativeParentObj,
     };
-    for (i = 0; i < exports.asyncFunctionList.length; i++) {
+    if (exports.asyncFunctionList.indexOf(nativeVar) !== -1) {
       // Mark if this should be nativeIsAsync:
-      if (nativeVar === exports.asyncFunctionList[i]) {
-        makeNativeOpts.nativeIsAsync = true;
-        break;
-      }
+      makeNativeOpts.nativeIsAsync = true;
     }
-    for (i = 0; i < exports.nativeCallsInterpreterFunctionList.length; i++) {
+    if (exports.nativeCallsInterpreterFunctionList.indexOf(nativeVar) !== -1) {
       // Mark if this should be nativeCallsBackInterpreter:
-      if (nativeVar === exports.nativeCallsInterpreterFunctionList[i]) {
-        makeNativeOpts.nativeCallsBackInterpreter = true;
-        break;
-      }
+      makeNativeOpts.nativeCallsBackInterpreter = true;
     }
     var extraOpts = getCustomMarshalMethodOptions(nativeParentObj);
     // Add extra options if the parent of this function is in our custom marshal
@@ -383,7 +377,7 @@ var createNativeCallbackForAsyncFunction = function (opts, callback) {
  * on the interpreter stack.
  *
  * @param {Object} opts Options block with interpreter and maxDepth provided
- * @param {function} callback The interpreter supplied callback function
+ * @param {function} intFunc The interpreter supplied callback function
  */
 var createNativeInterpreterCallback = function (opts, intFunc) {
   return function (nativeValue) {
@@ -396,8 +390,8 @@ var createNativeInterpreterCallback = function (opts, intFunc) {
           null,
           opts.maxDepth);
     }
-    // Shift a CallExpression node on the stack that already has its func_
-    // and arguments_ populated:
+    // Shift a CallExpression node on the stack that already has its func_,
+    // arguments, and other state populated:
     var state = {
       node: {
         type: 'CallExpression',
