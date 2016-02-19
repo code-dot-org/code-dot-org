@@ -1,0 +1,11 @@
+- data = @level.properties
+:javascript
+  window.levelData = #{data.to_json};
+
+= render partial: 'levels/common_audio'
+
+- data["levels"].each do |level_name|
+  - level_blob = Level.find_by_name(level_name)
+
+  - @level = level_blob
+  = render partial: 'levels/multi'
