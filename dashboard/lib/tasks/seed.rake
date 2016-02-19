@@ -63,7 +63,7 @@ namespace :seed do
   end
 
   # detect changes to dsldefined level files
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi)
+  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi LevelGroup)
   DSLS_GLOB = DSL_TYPES.map{|x|Dir.glob("config/scripts/**/*.#{x.underscore}*")}.sort.flatten
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
