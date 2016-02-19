@@ -63,6 +63,15 @@ Promise.all([
       'embedVideo.js'
     ],
     commonFile: 'embedVideo'
+  })),
+
+  // code-studio-globals.js is its own bundle so that we can include some globals
+  // without needing to load the rest of code-studio.
+  build_commands.bundle(_.extend({}, defaultOptions, {
+    filenames: [
+      'code-studio-globals.js'
+    ],
+    commonFile: 'code-studio-globals'
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
