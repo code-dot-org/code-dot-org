@@ -66,7 +66,7 @@ var DesignProperties = module.exports = React.createClass({
     var element = this.props.element;
     // First screen is not deletable
     var isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
-        $('#designModeViz .screen').length === 1;
+        $('#designModeViz > .screen').length === 1;
     if (!isOnlyScreen) {
       deleteButton = (<DeleteElementButton
         shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}

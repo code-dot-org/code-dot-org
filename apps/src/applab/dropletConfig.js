@@ -27,7 +27,7 @@ var COLOR_YELLOW = '#FFF176';
  * Generate a list of screen ids for our setScreen dropdown
  */
 function getScreenIds() {
-  var ret = $("#designModeViz .screen").map(function () {
+  var ret = $("#designModeViz > .screen").map(function () {
     return '"' + elementUtils.getId(this) + '"';
   });
 
