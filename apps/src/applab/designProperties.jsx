@@ -2,13 +2,14 @@
 
 var applabMsg = require('./locale');
 var elementLibrary = require('./designElements/library');
+var elementUtils = require('./designElements/elementUtils');
 
 var DeleteElementButton = require('./designElements/DeleteElementButton.jsx');
 var ElementSelect = require('./ElementSelect.jsx');
 
 var nextKey = 0;
 
-var DesignProperties = module.exports = React.createClass({
+var DesignProperties = React.createClass({
   propTypes: {
     element: React.PropTypes.instanceOf(HTMLElement),
     elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -66,7 +67,7 @@ var DesignProperties = module.exports = React.createClass({
     var element = this.props.element;
     // First screen is not deletable
     var isOnlyScreen = elementType === elementLibrary.ElementType.SCREEN &&
-        $('#designModeViz .screen').length === 1;
+        elementUtils.getScreens().length === 1;
     if (!isOnlyScreen) {
       deleteButton = (<DeleteElementButton
         shouldConfirm={elementType === elementLibrary.ElementType.SCREEN}
@@ -229,3 +230,4 @@ var TabType = {
   EVENTS: 'events'
 };
 DesignProperties.TabType = TabType;
+module.exports = DesignProperties;
