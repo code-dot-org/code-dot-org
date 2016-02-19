@@ -49,37 +49,17 @@ database:
       - bundle exec rake assets:precompile:
           pwd:
               dashboard
+      # temporarily set hoc flags to green, as is currently required for dev enlistments
+      - ./set_hoc_flags.rb green:
+          pwd:
+              bin/dynamic_config
 test:
     override:
         # Run rake install
         - bundle exec rake install
         # Try running rake build twice (in case of intermittent test failures within rake build)
         - for i in 1 2; do bundle exec rake build && break; done
-        - bundle exec rake assets:precompile:
-            pwd:
-                dashboard
-        # temporarily set hoc flags to green, as is currently required for dev enlistments
-        - ./set_hoc_flags.rb green:
-            pwd:
-                bin/dynamic_config
-        - bundle exec rake test:
-            pwd:
-                pegasus
-        - bundle exec rake test:
-            pwd:
-                shared
-        - ./test.sh:
-            pwd:
-                apps
-        - npm run lint:
-            pwd:
-                code-studio
-        - npm test:
-            pwd:
-                code-studio
-        - npm test:
-            pwd:
-                apps
+        - bundle exec rake test:changed
         - bundle exec rake konacha:run:
             pwd:
                 dashboard

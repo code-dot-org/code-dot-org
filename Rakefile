@@ -52,6 +52,79 @@ namespace :lint do
 end
 task lint: ['lint:all']
 
+def run_tests_if_changed(identifier, changed_globs)
+  branch_base = 'staging'
+  if RakeUtils.changed_in_branch_or_local?(branch_base, changed_globs)
+    HipChat.log "Files affecting tests *modified* from #{branch_base}. Starting tests for: #{identifier} "
+    yield
+  else
+    HipChat.log "Files affecting tests unmodified from #{branch_base}. Skipping tests for: #{identifier} "
+  end
+end
+
+namespace :test do
+  namespace :changed do
+    task :apps do
+      run_tests_if_changed('apps',
+                           ['apps/*',
+                            'blockly-core/*',
+                            'shared/*.js',
+                            'shared/*.css']) do
+        Dir.chdir(apps_dir) do
+          RakeUtils.system 'npm run test-low-memory'
+        end
+      end
+    end
+
+    task :code_studio do
+      run_tests_if_changed('code-studio', ['code-studio/*']) do
+        Dir.chdir(code_studio_dir) do
+          RakeUtils.system 'npm run test'
+        end
+      end
+    end
+
+    task :blockly_core do
+      run_tests_if_changed('blockly-core', ['blockly-core/*']) do
+        Dir.chdir(blockly_core_dir) do
+          RakeUtils.system './test.sh'
+        end
+      end
+    end
+
+    task :dashboard do
+      run_tests_if_changed('dashboard', ['dashboard/*', 'lib/*', 'shared/*']) do
+        Dir.chdir(dashboard_dir) do
+          RakeUtils.rake 'test'
+        end
+      end
+    end
+
+    task :pegasus do
+      run_tests_if_changed('pegasus', ['pegasus/*', 'lib/*', 'shared/*']) do
+        Dir.chdir(pegasus_dir) do
+          RakeUtils.rake 'test'
+        end
+      end
+    end
+
+    task :shared do
+      run_tests_if_changed('shared', ['shared/*']) do
+        Dir.chdir(shared_dir) do
+          RakeUtils.rake 'test'
+        end
+      end
+    end
+
+    task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
+  end
+
+  task changed: ['changed:all']
+end
+task test: ['test:changed']
+
+  # rake test:changed should test all changed code (minus UI tests? maybe)
+
 ##################################################################################################
 ##
 ##
