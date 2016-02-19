@@ -3,13 +3,14 @@
 var msg = require('../locale');
 var applabMsg = require('./locale');
 var constants = require('./constants');
+var elementUtils = require('./designElements/elementUtils');
 
 var Mode = {
   CODE: 'CODE',
   DESIGN: 'DESIGN'
 };
 
-module.exports = React.createClass({
+var DesignToggleRow = React.createClass({
   propTypes: {
     hideToggle: React.PropTypes.bool.isRequired,
     hideViewDataButton: React.PropTypes.bool.isRequired,
@@ -133,7 +134,7 @@ module.exports = React.createClass({
         return <option key={item}>{item}</option>;
       });
 
-      var defaultScreenId = $('#divApplab > .screen').first().attr('id') || '';
+      var defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
 
       options.sort(function (a, b) {
         if (a.key === defaultScreenId) {
@@ -192,3 +193,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = DesignToggleRow;
