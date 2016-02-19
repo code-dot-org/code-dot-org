@@ -571,6 +571,7 @@ FeedbackUtils.prototype.getFeedbackMessage_ = function(options) {
       // Success.
       case TestResults.ALL_PASS:
       case TestResults.FREE_PLAY:
+      case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel = (options.response &&
           (options.response.message === "no more levels"));
         var stageCompleted = null;
