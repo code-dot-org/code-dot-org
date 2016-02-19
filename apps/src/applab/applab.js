@@ -1539,7 +1539,7 @@ Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function () {
-  return $('#divApplab > .screen').filter(function () {
+  return Applab.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -1549,7 +1549,7 @@ Applab.activeScreen = function () {
  * unless they match the provided screenId. Also focuses the screen.
  */
 Applab.changeScreen = function(screenId) {
-  $('#divApplab > .screen').each(function () {
+  Applab.getScreens().each(function () {
     $(this).toggle(this.id === screenId);
     if ((this.id === screenId)) {
       // Allow the active screen to receive keyboard events.
@@ -1560,8 +1560,12 @@ Applab.changeScreen = function(screenId) {
 
 Applab.loadDefaultScreen = function() {
   var defaultScreen = $('#divApplab > .screen[is-default=true]').first().attr('id') ||
-    $('#divApplab > .screen').first().attr('id');
+    Applab.getScreens().first().attr('id');
   Applab.changeScreen(defaultScreen);
+};
+
+Applab.getScreens = function() {
+  return $('#divApplab > .screen');
 };
 
 // Wrap design mode function so that we can call from commands
