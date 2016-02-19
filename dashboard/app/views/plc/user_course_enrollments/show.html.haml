@@ -11,7 +11,7 @@
 -if @plc_user_course_enrollment.module_assignments.count == 0
   %p
     You have not taken the evaluation quiz. Once you have done so, we can enroll you in appropriate modules.
-    = link_to 'Take evaluation quiz', "/plc_enrollment_evaluations/#{@plc_user_course_enrollment.id}/perform_evaluation"
+    = link_to 'Take evaluation quiz', "/plc/enrollment_evaluations/#{@plc_user_course_enrollment.id}/perform_evaluation"
 
 
 = link_to 'Back', plc_user_course_enrollments_path
