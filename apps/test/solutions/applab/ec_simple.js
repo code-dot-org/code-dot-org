@@ -252,29 +252,6 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       }
-    },
-
-    {
-      description: "Normalize line endings",
-      editCode: true,
-      xml: '' +
-      '1;\r\n' +
-      '2;\r\n' +
-      '3;',
-      runBeforeClick: function (assert) {
-        // add a completion on timeout since this is a freeplay level
-        testUtils.runOnAppTick(Applab, 2, function () {
-          Applab.onPuzzleComplete();
-        });
-      },
-      customValidator: function (assert) {
-        assert.equal(Applab.getCode(), '1;\n2;\n3;\n');
-        return true;
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
     }
   ]
 };
