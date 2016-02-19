@@ -772,6 +772,10 @@ Calc.generateResults_ = function () {
     }
   }
 
+  if (appState.result === ResultType.SUCCESS && studioApp.hasExtraTopBlocks()) {
+    appState.testResults = TestResults.PASS_WITH_EXTRA_TOP_BLOCKS;
+  }
+
   // Override default message for LEVEL_INCOMPLETE_FAIL
   if (appState.testResults === TestResults.LEVEL_INCOMPLETE_FAIL &&
       !appState.message) {
