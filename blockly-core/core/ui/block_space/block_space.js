@@ -483,6 +483,17 @@ Blockly.BlockSpace.prototype.getAllUsedBlocks = function() {
 };
 
 /**
+ * Finds the top-level attached blocks
+ * @see BlockSpace.prototype.getTopBlocks
+ * @return {!Array.<!Blockly.Block>} The top-level attached block objects.
+ */
+Blockly.BlockSpace.prototype.getTopUsedBlocks = function() {
+  return goog.array.filter(this.getTopBlocks(), function(block) {
+    return !block.isUnused();
+  });
+};
+
+/**
  * Find all blocks in this blockSpace.  No particular order.
  * @param {object} options
  * @param {boolean?} [options.shareMainModal]

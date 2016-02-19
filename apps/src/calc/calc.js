@@ -746,7 +746,7 @@ Calc.generateResults_ = function () {
     return;
   }
 
-  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopBlocks());
+  appState.userSet = new EquationSet(Blockly.mainBlockSpace.getTopUsedBlocks());
   appState.failedInput = null;
 
   // Note: This will take precedence over free play, so you can "fail" a free
