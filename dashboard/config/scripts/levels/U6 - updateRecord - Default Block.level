@@ -38,10 +38,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Use updateRecord to change the record for \"Eye of the Tiger.\" (Click to see full instructions)",
-    "project_template_level_name": "U6 - updateRecord - Template",
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "U6 - updateRecord - Template"
   },
   "published": true
 }]]></config>

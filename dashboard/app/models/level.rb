@@ -163,7 +163,7 @@ class Level < ActiveRecord::Base
 
   PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
 
-  def self.pretty_print(xml_string)
+  def self.pretty_print_xml(xml_string)
     xml = Nokogiri::XML(xml_string, &:noblanks)
     xml.serialize(PRETTY_PRINT).strip
   end
