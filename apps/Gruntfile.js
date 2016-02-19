@@ -513,8 +513,8 @@ module.exports = function (grunt) {
 
   grunt.initConfig(config);
 
-  // Autoload grunt tasks
-  require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', '!grunt-lib-contrib']});
+  // Autoload grunt tasks. Use jit-grunt to speed up builds 1-2 seconds.
+  require('jit-grunt')(grunt, {pattern: ['grunt-*', '!grunt-lib-contrib']});
 
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {
