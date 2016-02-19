@@ -80,7 +80,7 @@ class Blockly < Level
         end
       end
     end
-    self.class.pretty_print(xml_node.to_xml)
+    self.class.pretty_print_xml(xml_node.to_xml)
   end
 
   def load_level_xml(xml_node)
@@ -117,7 +117,7 @@ class Blockly < Level
 
   def pretty_block(block_name)
     xml_string = self.send("#{block_name}_blocks")
-    self.class.pretty_print(xml_string)
+    self.class.pretty_print_xml(xml_string)
   end
 
   def self.count_xml_blocks(xml_string)

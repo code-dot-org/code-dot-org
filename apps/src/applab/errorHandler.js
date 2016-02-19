@@ -28,7 +28,9 @@ function outputError(warning, level, lineNum) {
 
   // Send up to New Relic if it meets our sampling rate
   if (level === ErrorLevel.ERROR && Math.random() < ERROR_LOG_RATE) {
-    logToCloud.addPageAction(logToCloud.PageAction.UserJavaScriptError, warning);
+    logToCloud.addPageAction(logToCloud.PageAction.UserJavaScriptError, {
+      error: warning
+    });
   }
 }
 
