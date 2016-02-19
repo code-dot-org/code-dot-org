@@ -578,13 +578,6 @@ Style/StructInheritance:
 Style/SymbolLiteral:
   Enabled: false
 
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: respond_to
-Style/SymbolProc:
-  Enabled: false
-
 # Offense count: 30
 # Cop supports --auto-correct.
 # Configuration parameters: AllowNamedUnderscoreVariables.

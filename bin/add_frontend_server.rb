@@ -440,7 +440,7 @@ instances_to_create.each do |instance_to_create|
   sleep(1)
 end
 
-instance_creation_threads.each {|thread| thread.join}
+instance_creation_threads.each(&:join)
 
 instances_to_create.each do |instance_to_create|
   puts "#{instance_to_create.name}: #{instance_to_create.result}"

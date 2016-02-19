@@ -112,9 +112,7 @@ module SQS
     def stop
       assert_state :running, "Can't stop in state #{@state}, must be :running"
       @state = :stopping
-      @worker_threads.each do |thread|
-        thread.join
-      end
+      @worker_threads.each(&:join)
       @state = :stopped
     end
 
