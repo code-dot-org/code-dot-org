@@ -1559,9 +1559,8 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab > .screen[is-default=true]').first().attr('id') ||
-    Applab.getScreens().first().attr('id');
-  Applab.changeScreen(defaultScreen);
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
 };
 
 Applab.getScreens = function() {
