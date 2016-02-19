@@ -28,12 +28,10 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
 
     @plc_user_course_enrollment = Plc::UserCourseEnrollment.new(user: user, plc_course: course)
 
-    respond_to do |format|
-      if !user.nil? && @plc_user_course_enrollment.save
-        format.html { redirect_to @plc_user_course_enrollment, notice: 'User course enrollment was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
+    if !user.nil? && @plc_user_course_enrollment.save
+      redirect_to @plc_user_course_enrollment, notice: 'User course enrollment was successfully created.'
+    else
+      redirect_to action: :new
     end
   end
 

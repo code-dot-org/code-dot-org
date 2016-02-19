@@ -27,24 +27,20 @@ class Plc::CoursesController < ApplicationController
   def create
     @plc_course = Plc::Course.new(plc_course_params)
 
-    respond_to do |format|
-      if @plc_course.save
-        format.html { redirect_to @plc_course, notice: 'Course was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
+    if @plc_course.save
+      redirect_to @plc_course, notice: 'Course was successfully created.'
+    else
+      redirect_to action: :new
     end
   end
 
   # PATCH/PUT /plc/courses/1
   # PATCH/PUT /plc/courses/1.json
   def update
-    respond_to do |format|
-      if @plc_course.update(plc_course_params)
-        format.html { redirect_to @plc_course, notice: 'Course was successfully updated.' }
-      else
-        format.html { render action: 'edit' }
-      end
+    if @plc_course.update(plc_course_params)
+      redirect_to @plc_course, notice: 'Course was successfully updated.'
+    else
+      render action: :edit
     end
   end
 
