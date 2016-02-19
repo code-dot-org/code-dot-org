@@ -65,13 +65,14 @@ Promise.all([
     commonFile: 'embedVideo'
   })),
 
-  // code-studio-globals.js is its own bundle so that we can include some globals
-  // without needing to load the rest of code-studio.
+  // only-react.js is just React in a bundle. In the future, this might be
+  // expanded to include a small set of libraries that we expect on the global
+  // namespace
   build_commands.bundle(_.extend({}, defaultOptions, {
     filenames: [
-      'code-studio-globals.js'
+      'react-only.js'
     ],
-    commonFile: 'code-studio-globals'
+    commonFile: 'react-only'
   }))
 ]).then(function (results) {
   var allStepsSucceeded = !results.some(function (result) {
