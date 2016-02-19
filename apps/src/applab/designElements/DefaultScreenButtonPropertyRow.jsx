@@ -7,8 +7,7 @@ var DefaultButtonPropertyRow = React.createClass({
   },
 
   render: function () {
-    if (elementUtils.getId(document.querySelector('#designModeViz > .screen')) ===
-        this.props.screenId) {
+    if (elementUtils.getId(elementUtils.getScreens()[0]) === this.props.screenId) {
       return false;
     }
 
