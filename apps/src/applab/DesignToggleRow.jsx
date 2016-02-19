@@ -3,19 +3,20 @@
 var msg = require('../locale');
 var applabMsg = require('./locale');
 var constants = require('./constants');
+var elementUtils = require('./designElements/elementUtils');
 
 var Mode = {
   CODE: 'CODE',
   DESIGN: 'DESIGN'
 };
 
-module.exports = React.createClass({
+var DesignToggleRow = React.createClass({
   propTypes: {
     hideToggle: React.PropTypes.bool.isRequired,
     hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
-    screens: React.PropTypes.array.isRequired,
+    screenIds: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
@@ -129,11 +130,11 @@ module.exports = React.createClass({
         </button>
       );
     } else if (this.state.mode === Mode.DESIGN) {
-      var options = this.props.screens.map(function (item) {
+      var options = this.props.screenIds.map(function (item) {
         return <option key={item}>{item}</option>;
       });
 
-      var defaultScreenId = $('#divApplab .screen').first().attr('id') || '';
+      var defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
 
       options.sort(function (a, b) {
         if (a.key === defaultScreenId) {
@@ -192,3 +193,4 @@ module.exports = React.createClass({
     );
   }
 });
+module.exports = DesignToggleRow;
