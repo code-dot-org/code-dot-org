@@ -863,7 +863,7 @@ designMode.renderToggleRow = function (screenIds) {
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: currentScreenId,
-        screens: screenIds,
+        screenIds: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
         onViewDataButton: Applab.onViewData,

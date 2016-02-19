@@ -15,7 +15,7 @@ module.exports = React.createClass({
     hideViewDataButton: React.PropTypes.bool.isRequired,
     startInDesignMode: React.PropTypes.bool.isRequired,
     initialScreen: React.PropTypes.string.isRequired,
-    screens: React.PropTypes.array.isRequired,
+    screenIds: React.PropTypes.array.isRequired,
     onDesignModeButton: React.PropTypes.func.isRequired,
     onCodeModeButton: React.PropTypes.func.isRequired,
     onViewDataButton: React.PropTypes.func.isRequired,
@@ -129,7 +129,7 @@ module.exports = React.createClass({
         </button>
       );
     } else if (this.state.mode === Mode.DESIGN) {
-      var options = this.props.screens.map(function (item) {
+      var options = this.props.screenIds.map(function (item) {
         return <option key={item}>{item}</option>;
       });
 
