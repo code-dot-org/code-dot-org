@@ -68,9 +68,8 @@ var DesignToggleRow = React.createClass({
   render: function () {
     var rightSide;
 
-    if (this.state.mode === Mode.CODE) {
-      rightSide = <ViewDataButton onClick={this.props.onViewDataButton}
-                                       hide={this.props.hideViewDataButton} />;
+    if (this.state.mode === Mode.CODE && !this.props.hideViewDataButton) {
+      rightSide = <ViewDataButton onClick={this.props.onViewDataButton} />;
     } else if (this.state.mode === Mode.DESIGN) {
       rightSide = <ScreenSelector screenIds={this.props.screenIds}
                                        activeScreen={this.state.activeScreen}
