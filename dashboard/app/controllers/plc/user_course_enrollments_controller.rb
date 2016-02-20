@@ -42,11 +42,6 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     @user_course_enrollment = Plc::UserCourseEnrollment.new(user: user, plc_course: plc_course)
   end
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_plc_user_course_enrollment
-    @user_course_enrollment = Plc::UserCourseEnrollment.find(params[:id])
-  end
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_course_enrollment_params
     params.permit(:user_email, :plc_course_id)

@@ -21,8 +21,6 @@ class Plc::LearningModulesController < ApplicationController
   # POST /plc/learning_modules
   # POST /plc/learning_modules.json
   def create
-    @learning_module = Plc::LearningModule.new(learning_module_params)
-
     if @learning_module.save
       redirect_to @learning_module, notice: 'Learning module was successfully created.'
     else
@@ -48,11 +46,6 @@ class Plc::LearningModulesController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_plc_learning_module
-    @learning_module = Plc::LearningModule.find(params[:id])
-  end
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def learning_module_params
     params.require(:plc_learning_module).permit(:name, :learning_module_type)
