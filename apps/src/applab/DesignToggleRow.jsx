@@ -87,17 +87,17 @@ var DesignToggleRow = React.createClass({
       borderBottomLeftRadius: 0,
       borderTopLeftRadius: 0
     });
-    var active = {
+    var activeStyle = {
       backgroundColor: '#ffa000',
       color: '#fff',
       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3) inset'
     };
-    var inactive = {
+    var inactiveStyle = {
       backgroundColor: '#fff',
       color: '#949ca2',
       boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
     };
-    var hidden = {
+    var hiddenStyle = {
       display: 'none'
     };
 
@@ -111,8 +111,8 @@ var DesignToggleRow = React.createClass({
         textOverflow: 'ellipsis'
       },
       buttonStyle,
-      inactive,
-      this.props.hideViewDataButton ? hidden : null
+      inactiveStyle,
+      this.props.hideViewDataButton ? hiddenStyle : null
     );
     var iconStyle = {
       margin: '0 0.3em'
@@ -167,8 +167,8 @@ var DesignToggleRow = React.createClass({
               <button
                   id='codeModeButton'
                   style={$.extend({}, codeButtonStyle,
-                      this.state.mode === Mode.CODE ? active : inactive,
-                      this.props.hideToggle ? hidden : null)}
+                      this.state.mode === Mode.CODE ? activeStyle : inactiveStyle,
+                      this.props.hideToggle ? hiddenStyle : null)}
                   className='no-outline'
                   onClick={this.handleSetMode.bind(this, Mode.CODE)}>
                 {msg.codeMode()}
@@ -176,8 +176,8 @@ var DesignToggleRow = React.createClass({
               <button
                   id='designModeButton'
                   style={$.extend({}, designButtonStyle,
-                      this.state.mode === Mode.DESIGN ? active : inactive,
-                      this.props.hideToggle ? hidden : null)}
+                      this.state.mode === Mode.DESIGN ? activeStyle : inactiveStyle,
+                      this.props.hideToggle ? hiddenStyle : null)}
                   className='no-outline'
                   onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
                 {msg.designMode()}
