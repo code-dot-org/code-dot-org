@@ -41,9 +41,9 @@ blocklink_hocserved,blocklink,block_hoc,homepage_slot_text_link_hocserved,/leade
 blocklink_codestudio,blocklink,block_students,homepage_slot_text_link_codestudio,http://studio.code.org/,,,,,code.org,show,en
 blocklink_local,blocklink,block_students,homepage_slot_text_link_local,/learn/local,,,,,code.org,show,en
 blocklink_othercourses,blocklink,block_students,homepage_slot_text_link_othercourses,/learn/beyond,,,,,code.org,show,en
-blocklink_k5,blocklink,block_educators,homepage_slot_text_link_k5,/educate/k5,,,,,code.org,show,en
-blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_fullcurriculum,/educate/curriculum,,,,,code.org,show,en
-blocklink_pd,blocklink,block_educators,homepage_slot_text_link_pd,/educate/professional-development,,,,,code.org,show,en
+blocklink_k5,blocklink,block_educators,homepage_slot_text_link_elementary,/educate/curriculum/elementary-school,,,,,code.org,show,en
+blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_middle,/educate/curriculum/middle-school,,,,,code.org,show,en
+blocklink_pd,blocklink,block_educators,homepage_slot_text_link_high,/educate/curriculum/high-school,,,,,code.org,show,en
 blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote,,,,,code.org,show,en
 blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/help,,,,,code.org,show,en
 blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,code.org,show,en
