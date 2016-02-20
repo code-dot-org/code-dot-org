@@ -10,7 +10,6 @@
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
-require 'cdo/newrelic'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
