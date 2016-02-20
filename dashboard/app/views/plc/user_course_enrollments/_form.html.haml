@@ -1,9 +1,9 @@
 = form_tag(action: 'create') do
-  - if @plc_user_course_enrollment.errors.any?
+  - if @user_course_enrollment.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@plc_user_course_enrollment.errors.count, "error")} prohibited this plc_user_course_enrollment from being saved:"
+      %h2= "#{pluralize(@user_course_enrollment.errors.count, "error")} prohibited this plc_user_course_enrollment from being saved:"
       %ul
-        - @plc_user_course_enrollment.errors.full_messages.each do |msg|
+        - @user_course_enrollment.errors.full_messages.each do |msg|
           %li= msg
 
   .field

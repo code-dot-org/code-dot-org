@@ -9,7 +9,7 @@
       %th
 
   %tbody
-    - @plc_tasks.each do |plc_task|
+    - @tasks.each do |plc_task|
       %tr
         %td= plc_task.name
         %td= link_to 'Show', plc_task

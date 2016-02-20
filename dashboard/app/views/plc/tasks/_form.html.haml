@@ -1,9 +1,9 @@
-= form_for @plc_task do |f|
-  - if @plc_task.errors.any?
+= form_for @task do |f|
+  - if @task.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@plc_task.errors.count, "error")} prohibited this plc_task from being saved:"
+      %h2= "#{pluralize(@task.errors.count, "error")} prohibited this plc_task from being saved:"
       %ul
-        - @plc_task.errors.full_messages.each do |msg|
+        - @task.errors.full_messages.each do |msg|
           %li= msg
 
   .field

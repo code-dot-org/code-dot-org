@@ -1,9 +1,9 @@
-= form_for @plc_learning_module do |f|
-  - if @plc_learning_module.errors.any?
+= form_for @learning_module do |f|
+  - if @learning_module.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@plc_learning_module.errors.count, "error")} prohibited this plc_learning_module from being saved:"
+      %h2= "#{pluralize(@learning_module.errors.count, "error")} prohibited this plc_learning_module from being saved:"
       %ul
-        - @plc_learning_module.errors.full_messages.each do |msg|
+        - @learning_module.errors.full_messages.each do |msg|
           %li= msg
 
   .field
