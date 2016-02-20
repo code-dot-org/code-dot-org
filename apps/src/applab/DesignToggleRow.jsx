@@ -1,9 +1,16 @@
+// Strict linting: Absorb into global config when possible
+/* jshint
+ unused: true,
+ eqeqeq: true,
+ maxlen: 120
+ */
 /* global $ */
 
 var msg = require('../locale');
 var applabMsg = require('./locale');
 var constants = require('./constants');
 var elementUtils = require('./designElements/elementUtils');
+var styles = require('./DesignToggleRowStyles');
 
 var Mode = {
   CODE: 'CODE',
@@ -70,37 +77,6 @@ var DesignToggleRow = React.createClass({
       borderColor: '#949ca2'
     };
 
-    var buttonStyle = {
-      display: 'inline-block',
-      verticalAlign: 'top',
-      border: '1px solid #949ca2',
-      margin: '0 0 8px 0',
-      padding: '2px 6px',
-      fontSize: 14
-    };
-    var codeButtonStyle = $.extend({}, buttonStyle, {
-      borderBottomRightRadius: 0,
-      borderTopRightRadius: 0,
-      borderRightWidth: 0
-    });
-    var designButtonStyle = $.extend({}, buttonStyle, {
-      borderBottomLeftRadius: 0,
-      borderTopLeftRadius: 0
-    });
-    var activeStyle = {
-      backgroundColor: '#ffa000',
-      color: '#fff',
-      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3) inset'
-    };
-    var inactiveStyle = {
-      backgroundColor: '#fff',
-      color: '#949ca2',
-      boxShadow: '0px 1px 5px rgba(0, 0, 0, 0.3)'
-    };
-    var hiddenStyle = {
-      display: 'none'
-    };
-
     var showDataButtonStyle = $.extend(
       {
         float: 'right',
@@ -110,9 +86,9 @@ var DesignToggleRow = React.createClass({
         overflow: 'hidden',
         textOverflow: 'ellipsis'
       },
-      buttonStyle,
-      inactiveStyle,
-      this.props.hideViewDataButton ? hiddenStyle : null
+      styles.buttonStyle,
+      styles.inactiveStyle,
+      this.props.hideViewDataButton ? styles.hiddenStyle : null
     );
     var iconStyle = {
       margin: '0 0.3em'
@@ -166,18 +142,18 @@ var DesignToggleRow = React.createClass({
             <td style={{width: '120px'}}>
               <button
                   id='codeModeButton'
-                  style={$.extend({}, codeButtonStyle,
-                      this.state.mode === Mode.CODE ? activeStyle : inactiveStyle,
-                      this.props.hideToggle ? hiddenStyle : null)}
+                  style={$.extend({}, styles.codeButtonStyle,
+                      this.state.mode === Mode.CODE ? styles.activeStyle : styles.inactiveStyle,
+                      this.props.hideToggle ? styles.hiddenStyle : null)}
                   className='no-outline'
                   onClick={this.handleSetMode.bind(this, Mode.CODE)}>
                 {msg.codeMode()}
               </button>
               <button
                   id='designModeButton'
-                  style={$.extend({}, designButtonStyle,
-                      this.state.mode === Mode.DESIGN ? activeStyle : inactiveStyle,
-                      this.props.hideToggle ? hiddenStyle : null)}
+                  style={$.extend({}, styles.designButtonStyle,
+                      this.state.mode === Mode.DESIGN ? styles.activeStyle : styles.inactiveStyle,
+                      this.props.hideToggle ? styles.hiddenStyle : null)}
                   className='no-outline'
                   onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
                 {msg.designMode()}
