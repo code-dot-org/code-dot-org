@@ -123,8 +123,6 @@ namespace :test do
 end
 task test: ['test:changed']
 
-  # rake test:changed should test all changed code (minus UI tests? maybe)
-
 ##################################################################################################
 ##
 ##

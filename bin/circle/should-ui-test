@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+def print_usage
+  puts 'Usage: ./circle-commit-contains [my test tag] && my_next_command'
+end
+
+def main
+  if ARGV.length < 1
+    print_usage
+    exit 1
+  end
+  string_to_match = ARGV[0]
+  message = `git log --format=%B -n 1 $CIRCLE_SHA1`.strip
+  does_match = message.include?(string_to_match)
+  puts "Commit message '#{message}'..."
+  puts "#{does_match ? '...contains' : "...doesn't contain"} '#{string_to_match}'"
+  exit does_match ? 0 : 1
+end
+
+main

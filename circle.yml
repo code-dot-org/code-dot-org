@@ -66,13 +66,12 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
-        - alias shoulduitest="git log --format=oneline -n 1 $CIRCLE_SHA1 | grep '\[run-ui-tests\]' -q"
         # The following should only be run when [run-ui-tests] included in commit hash
-        - "shoulduitest && ./bin/dashboard-server":
+        - "./bin/circle/should-ui-test [run-ui-tests] && ./bin/dashboard-server":
             background: true
-        - "shoulduitest && cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
+        - "./bin/circle/should-ui-test [run-ui-tests] && cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
             background: true
-        - "shoulduitest && until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "shoulduitest && ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html":
+        - "./bin/circle/should-ui-test [run-ui-tests] && until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
+        - "./bin/circle/should-ui-test [run-ui-tests] && ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html":
             pwd:
                 dashboard/test/ui
