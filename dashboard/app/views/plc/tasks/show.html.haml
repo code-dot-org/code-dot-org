@@ -2,12 +2,12 @@
 
 %p
   %strong Name:
-  = @plc_task.name
+  = @task.name
 
 %p
   %strong Associated module
-  = @plc_task.plc_learning_module.try(:name)
+  = @task.plc_learning_module.try(:name)
 
-= link_to 'Edit', edit_plc_task_path(@plc_task)
+= link_to 'Edit', edit_plc_task_path(@task)
 \|
 = link_to 'Back', plc_tasks_path

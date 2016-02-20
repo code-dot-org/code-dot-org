@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Plc::CoursesControllerTest < ActionController::TestCase
   setup do
-    @plc_course = create(:plc_course)
+    @course = create(:plc_course)
     @user = create :admin
     sign_in(@user)
   end
@@ -10,7 +10,7 @@ class Plc::CoursesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:plc_courses)
+    assert_not_nil assigns(:courses)
   end
 
   test "should get new" do
@@ -20,30 +20,30 @@ class Plc::CoursesControllerTest < ActionController::TestCase
 
   test "should create plc_course" do
     assert_difference('Plc::Course.count') do
-      post :create, plc_course: { plc_course: @plc_course }
+      post :create, plc_course: { plc_course: @course }
     end
 
-    assert_redirected_to plc_course_path(assigns(:plc_course))
+    assert_redirected_to plc_course_path(assigns(:course))
   end
 
   test "should show plc_course" do
-    get :show, id: @plc_course
+    get :show, id: @course
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @plc_course
+    get :edit, id: @course
     assert_response :success
   end
 
   test "should update plc_course" do
-    patch :update, id: @plc_course, plc_course: {  plc_course: @plc_course}
-    assert_redirected_to plc_course_path(assigns(:plc_course))
+    patch :update, id: @course, plc_course: {  plc_course: @course}
+    assert_redirected_to plc_course_path(assigns(:course))
   end
 
   test "should destroy plc_course" do
     assert_difference('Plc::Course.count', -1) do
-      delete :destroy, id: @plc_course
+      delete :destroy, id: @course
     end
 
     assert_redirected_to plc_courses_path

@@ -1,5 +1,6 @@
 class Plc::EnrollmentEvaluationsController < ApplicationController
   def perform_evaluation
+    authorize! :read, Plc::Course
     @plc_user_course_enrollment = Plc::UserCourseEnrollment.find(params[:enrollment_id])
     @questions = @plc_user_course_enrollment.plc_course.plc_evaluation_questions.all
     @user = @plc_user_course_enrollment.user
@@ -7,6 +8,7 @@ class Plc::EnrollmentEvaluationsController < ApplicationController
   end
 
   def submit_evaluation
+    authorize! :read, Plc::Course
     question_responses = params[:answerTaskList].split(',')
     user_professional_learning_course_enrollment = Plc::UserCourseEnrollment.find(params[:enrollment_id])
 

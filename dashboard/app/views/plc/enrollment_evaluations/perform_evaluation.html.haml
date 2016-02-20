@@ -13,18 +13,4 @@
           #{answer.answer} (corresponds with #{answer.plc_task.try(:name)})
   = hidden_field_tag('answerTaskList')
   = submit_tag('Submit evaluation', id: 'submitEvaluation')
-:javascript
-  $(document).ready(function () {
-    $('#submitEvaluation').click(function() {
-      var evaluationResponses = new Array();
-
-      $('input:checked').each(function() {
-        if (this.value) {
-          evaluationResponses.push(this.value);
-        }
-      });
-
-      $('#answerTaskList').val(evaluationResponses);
-    })
-  });
 

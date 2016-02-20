@@ -21,6 +21,9 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   has_many :module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
   has_many :task_assignments, through: :module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
 
+  validates :user, presence: true
+  validates :plc_course, presence: true
+
   def complete_course
     self.status = :completed
     self.save!

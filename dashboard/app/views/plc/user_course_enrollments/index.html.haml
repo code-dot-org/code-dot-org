@@ -9,12 +9,12 @@
       %th
 
   %tbody
-    - @plc_user_course_enrollments.each do |plc_user_course_enrollment|
+    - @user_course_enrollments.each do |user_course_enrollment|
       %tr
-        %td= plc_user_course_enrollment.user.try(:email)
-        %td= plc_user_course_enrollment.plc_course.try(:name)
-        %td= link_to 'Show', plc_user_course_enrollment
-        %td= link_to 'Destroy', plc_user_course_enrollment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= user_course_enrollment.user.try(:email)
+        %td= user_course_enrollment.plc_course.try(:name)
+        %td= link_to 'Show', user_course_enrollment
+        %td= link_to 'Destroy', user_course_enrollment, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
