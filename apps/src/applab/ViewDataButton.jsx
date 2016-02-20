@@ -16,8 +16,7 @@ var styles = require('./DesignToggleRowStyles');
  */
 var ViewDataButton = React.createClass({
   propTypes: {
-    onClick: React.PropTypes.func.isRequired,
-    hide: React.PropTypes.bool.isRequired
+    onClick: React.PropTypes.func.isRequired
   },
 
   render: function () {
@@ -32,8 +31,7 @@ var ViewDataButton = React.createClass({
           textOverflow: 'ellipsis'
         },
         styles.buttonStyle,
-        styles.inactiveStyle,
-        this.props.hide ? styles.hiddenStyle : null
+        styles.inactiveStyle
     );
 
     return (
