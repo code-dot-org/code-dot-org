@@ -8,9 +8,9 @@
 
 var msg = require('../locale');
 var constants = require('./constants');
-var elementUtils = require('./designElements/elementUtils');
 var styles = require('./DesignToggleRowStyles');
 var ViewDataButton = require('./ViewDataButton.jsx');
+var ScreenSelector = require('./ScreenSelector.jsx');
 
 var Mode = {
   CODE: 'CODE',
@@ -68,46 +68,14 @@ var DesignToggleRow = React.createClass({
   render: function () {
     var showDataButton;
     var selectDropdown;
-    var dropdownStyle = {
-      display: 'inline-block',
-      verticalAlign: 'top',
-      width: '100%',
-      height: 28,
-      marginBottom: 6,
-      borderColor: '#949ca2'
-    };
 
     if (this.state.mode === Mode.CODE) {
       showDataButton = <ViewDataButton onClick={this.props.onViewDataButton}
                                        hide={this.props.hideViewDataButton} />;
     } else if (this.state.mode === Mode.DESIGN) {
-      var options = this.props.screenIds.map(function (item) {
-        return <option key={item}>{item}</option>;
-      });
-
-      var defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
-
-      options.sort(function (a, b) {
-        if (a.key === defaultScreenId) {
-          return -1;
-        } else if (b.key === defaultScreenId) {
-          return 1;
-        } else {
-          return a.key.localeCompare(b.key);
-        }
-      });
-
-      selectDropdown = (
-        <select
-          id="screenSelector"
-          style={dropdownStyle}
-          value={this.state.activeScreen}
-          onChange={this.handleScreenChange}
-          disabled={Applab.isRunning()}>
-          {options}
-          <option>{constants.NEW_SCREEN}</option>
-        </select>
-      );
+      selectDropdown = <ScreenSelector screenIds={this.props.screenIds}
+                                       activeScreen={this.state.activeScreen}
+                                       onChange={this.handleScreenChange} />;
     }
 
     return (
