@@ -39,5 +39,8 @@ module.exports = {
   },
   hiddenStyle: {
     display: 'none'
+  },
+  iconStyle: {
+    margin: '0 0.3em'
   }
 };

@@ -7,10 +7,10 @@
 /* global $ */
 
 var msg = require('../locale');
-var applabMsg = require('./locale');
 var constants = require('./constants');
 var elementUtils = require('./designElements/elementUtils');
 var styles = require('./DesignToggleRowStyles');
+var ViewDataButton = require('./ViewDataButton.jsx');
 
 var Mode = {
   CODE: 'CODE',
@@ -77,34 +77,9 @@ var DesignToggleRow = React.createClass({
       borderColor: '#949ca2'
     };
 
-    var showDataButtonStyle = $.extend(
-      {
-        float: 'right',
-        textAlign: 'left',
-        maxWidth: '100%',
-        whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis'
-      },
-      styles.buttonStyle,
-      styles.inactiveStyle,
-      this.props.hideViewDataButton ? styles.hiddenStyle : null
-    );
-    var iconStyle = {
-      margin: '0 0.3em'
-    };
-
     if (this.state.mode === Mode.CODE) {
-      showDataButton = (
-        <button
-            id='viewDataButton'
-            style={showDataButtonStyle}
-            className='no-outline'
-            onClick={this.props.onViewDataButton}>
-          <i className='fa fa-database' style={iconStyle}></i>
-          {applabMsg.viewData()}
-        </button>
-      );
+      showDataButton = <ViewDataButton onClick={this.props.onViewDataButton}
+                                       hide={this.props.hideViewDataButton} />;
     } else if (this.state.mode === Mode.DESIGN) {
       var options = this.props.screenIds.map(function (item) {
         return <option key={item}>{item}</option>;
