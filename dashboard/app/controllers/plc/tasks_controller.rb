@@ -22,8 +22,6 @@ class Plc::TasksController < ApplicationController
   # POST /plc/tasks
   # POST /plc/tasks.json
   def create
-    @task = Plc::Task.new(task_params)
-
     if @task.save
       redirect_to @task, notice: 'Task was successfully created.'
     else
@@ -49,11 +47,6 @@ class Plc::TasksController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_plc_task
-    @task = Plc::Task.find(params[:id])
-  end
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def task_params
     params.require(:plc_task).permit(:name, :description, :plc_learning_module_id)

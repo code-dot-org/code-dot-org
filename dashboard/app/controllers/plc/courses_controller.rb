@@ -22,8 +22,6 @@ class Plc::CoursesController < ApplicationController
   # POST /plc/courses
   # POST /plc/courses.json
   def create
-    @course = Plc::Course.new(course_params)
-
     if @course.save
       redirect_to @course, notice: 'Course was successfully created.'
     else
@@ -49,11 +47,6 @@ class Plc::CoursesController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_plc_course
-    @course = Plc::Course.find(params[:id])
-  end
-
   # Never trust parameters from the scary internet, only allow the white list through.
   def course_params
     params.require(:plc_course).permit(:name)
