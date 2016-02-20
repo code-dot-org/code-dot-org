@@ -66,14 +66,13 @@ var DesignToggleRow = React.createClass({
   },
 
   render: function () {
-    var showDataButton;
-    var selectDropdown;
+    var rightSide;
 
     if (this.state.mode === Mode.CODE) {
-      showDataButton = <ViewDataButton onClick={this.props.onViewDataButton}
+      rightSide = <ViewDataButton onClick={this.props.onViewDataButton}
                                        hide={this.props.hideViewDataButton} />;
     } else if (this.state.mode === Mode.DESIGN) {
-      selectDropdown = <ScreenSelector screenIds={this.props.screenIds}
+      rightSide = <ScreenSelector screenIds={this.props.screenIds}
                                        activeScreen={this.state.activeScreen}
                                        onChange={this.handleScreenChange} />;
     }
@@ -103,8 +102,7 @@ var DesignToggleRow = React.createClass({
               </button>
             </td>
             <td style={{maxWidth: 0}}>
-              {selectDropdown}
-              {showDataButton}
+              {rightSide}
             </td>
           </tr>
         </tbody>
