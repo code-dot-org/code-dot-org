@@ -2,7 +2,8 @@
   errors:
     messages:
       not_saved: 'Hãy sửa các lỗi sau đây:'
-      too_young: Nội dung này không dành cho học sinh nhỏ tuổi
+      too_young: Nội dung này có giới hạn độ tuổi và không có sẵn cho học sinh nhỏ
+        tuổi
   activerecord:
     errors:
       messages:

@@ -79,12 +79,12 @@
   congratulations_volunteer: Gratulálunk, most, hogy kipróbáltad a Kódolás óráját,
     <a href="https://code.org/volunteer">regisztrálj be egy osztállyal</a> és segíts
     a tanulóknak egy órán át a kódolásról tanulni!
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: Gratulálok, teljesítetted az 1. Szintet!
+  congratulations_on_completing_course2: Gratulálok, teljesítetted a 2. Szintet
+  congratulations_on_completing_course3: Gratulálok, teljesítetted a 3. Szintet
+  congratulations_on_completing_course4: Gratulálok, teljesítetted a 4. Szintet
+  congratulations_on_completing_accelerated: Gratulálok, teljesítetted a Nehezített
+    szintet
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
   congrats_next_tutorials_desc: Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat,
     vagy próbáld ki <a href="%{current_path}/next">egy partnerünk gyakorlatát</a>.
@@ -98,11 +98,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -182,6 +178,7 @@
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
@@ -381,6 +378,9 @@
   homepage_slot_text_link_othercourses: További online tanfolyamok
   homepage_slot_text_title_educators: Oktatók
   homepage_slot_text_blurb_educators: Tanítsd a diákjaidat
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: "Általános iskola felső tagozat"
+  homepage_slot_text_link_high: Középiskola
   homepage_slot_text_link_k5: Tanfolyamok alsó tagozatosoknak
   homepage_slot_text_link_fullcurriculum: Teljes tananyag megtekintése
   homepage_slot_text_link_pd: Szakmai fejlődés
@@ -1655,8 +1655,3 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  homepage_slot_text_link_elementary: Elementary school
-  homepage_slot_text_link_middle: Middle school
-  homepage_slot_text_link_high: High school

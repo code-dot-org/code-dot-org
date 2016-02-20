@@ -2983,18 +2983,19 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
-      Quantum Bee_instruction: |
-        Purple flowers may have either 1 or 0 nectar, but
-        you don't know which one! Be careful not to collect nectar from a purple
-        flower if it doesn't have any. Check if the nectar is equal to 1 by using
-        the if block.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
+      Quantum Bee_instruction: Lilla blomster kan ha enten 1 eller 0 nektar, men du
+        vet ikke hvilken! Vær forsiktig med å samle nektar fra en lilla blomst hvis
+        den ikke har noe. Sjekk om nektar er lik 1 ved hjelp av hvis blokken.
       Ryan - 4-5 Bee Conditionals 2_instruction: Bien vil bare ha nektar akkura nå.
         Ikke alle objektene er blomster, så sjekk under HVER ENESTE SKY for å se om
         det gjemmer seg en blomst der. Hvis det gjør det kan du samle nektar.
-      Ryan - Bee Conditionals_instruction: |
-        The bee only wants nectar right now.
-        Not all objects are flowers, so check underneath EVERY CLOUD to see if it
-        is hiding a flower. If it is, then you can gather nectar.
+      Ryan - Bee Conditionals_instruction: Bien ønsker bare nektar akkurat nå. Ikke
+        alle objekter er blomster, så sjekk under HVER SKY til å se om det skjuler
+        seg en blomst. Hvis det er, så du kan samle nektar.
       Ryan Test Locked Blocks_instruction: Her er en funksjon kalt "patruljer". Endre
         den slik at Katt beveger seg opp 400 piksler og så ned 400 piksler.
       Ryan's clone of C4S15P10_instruction: "We've added one last function for you.\n\r\n\r\nUse
@@ -4572,7 +4573,7 @@
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -4722,7 +4723,7 @@
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -4730,7 +4731,7 @@
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -4769,11 +4770,11 @@
       U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
         records returned by a call to readRecords. (Click to see full instructions)\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -4792,9 +4793,7 @@
         Trigger both the keyboard and
         mouse event and examine the event objects displayed in the console. Why might
         an object be the best way to store this information? (Click to see full instructions)
-      U4L02 - Objects - Template1_instruction: |
-        Create an object with at least 3
-        properties and display it in the Debug Console. (Click to see full instructions)
+      U4L02 - Objects - Template1_instruction: Mal
       U4L06 Data Storage 1_instruction: "Fill in your name instead of \"Enter Your\nName\",
         run the app and click the button. Run it multiple times with different\nnames!
         Watch the console and use the ‘View Data” button to see how the table\nis
@@ -4830,6 +4829,9 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
       U6 - updateRecord - Contacts - Edit event handler_instruction: |
         (Click to see
         full instructions)
@@ -4837,10 +4839,12 @@
       U6 - updateRecord - Contacts - Save edited contact_instruction: |
         (Click to
         see full instructions)
-      U6 - updateRecord - Default Block_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
       U6 - updateRecord - Update Nonexistent Record_instruction: |
-        (Click to see full
-        instructions)
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: Under noen av blokkene skjuler det seg
         lava, som du må dekke til før du går videre. Her hjelper det med en "hvis"-kommando.
         Legg til en "flytt fremover"-kommando på riktig sted for å utvinne disse blokkene.

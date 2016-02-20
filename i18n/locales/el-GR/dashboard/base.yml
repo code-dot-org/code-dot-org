@@ -28,8 +28,7 @@ el:
     code:
       label: 'Προσθέστε ένα δάσκαλο:'
       placeholder: Τμήμα κώδικα (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Παρακαλώ να εισάγεις τον κωδικό που μοιράστηκε μαζί σου ο δάσκαλός σου. Πρόκειται για έναν κωδικό 6 γραμμάτων όπως "ΑΒΓΔΕΖ".'
     submit: Προσθήκη δασκαλου
   add_hint_form:
     placeholder: Παρακαλούμε εισάγετε την υπόδειξή σας εδώ
@@ -259,8 +258,8 @@ el:
       remove: Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτόν τον δάσκαλο;
     students:
       dashboard: 'Πηγαίνετε στον πίνακα δραστηριοτήτων  δάσκαλος'
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Ο δάσκαλος δεν βρέθηκε.
+    student_teacher_disassociated: 'Εχετε αφαιρέσει το όνομα %{teacher_name} σαν δάσκαλό σας.'
     panel:
       answer_viewer: Εμφάνιση Απαντήσεων
       student: φοιτητής/μαθητής
@@ -330,7 +329,7 @@ el:
   share:
     title: Μάθετε με κώδικα Studio
     description: Καθένας μπορεί να μάθει την επιστήμη των υπολογιστών. Κάντε παιχνίδια, εφαρμογές και τέχνη με τη χρήση κώδικα.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Δοκιμάστε μια Ωρα Κώδικα!
   gender:
     male: Αγόρι
     female: Κορίτσι
@@ -360,7 +359,7 @@ el:
     built_on_code_studio: Φτιαγμένο με το Code Studio
     make_my_own_app: Φτιάξε τη δική σου εφαρμογή
     how_it_works: Πως λειτουργεί
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Δοκιμάστε μια Ωρα Κώδικα!
   reference_area:
     title: Χρειάζεσε βοήθεια;
     subtitle: Δες αυτά τα βίντεο και τις υποδείξεις
@@ -417,7 +416,7 @@ el:
       unused: Αχρησιμοποίητα επίπεδα
   upsell:
     hoc:
-      title: Classic Maze
+      title: Κλασικός λαβύρινθος
       body: 'Δοκιμάστε τα βασικά της επιστήμης των υπολογιστών. Εκατομμύρια τα  έχουν ήδη δοκιμάσει.'
     flappy:
       title: Flappy κώδικα
