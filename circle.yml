@@ -15,6 +15,7 @@ machine:
 dependencies:
   cache_directories:
     - "apps/node_modules"
+    - "code-studio/node_modules"
     - "~/.rvm/gems/ruby-2.2.3"
   override:
     - sudo apt-get install libicu-dev
