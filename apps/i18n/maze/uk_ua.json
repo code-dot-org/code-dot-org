@@ -81,5 +81,6 @@
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
   "word": "Знайти слово",
   "yes": "Так",
-  "youSpelled": "Ви написали"
+  "youSpelled": "Ви написали",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
 }

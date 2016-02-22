@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "ශ්‍රිතයන්"},
 "catText":function(d){return "පෙළ"},
 "catVariables":function(d){return "විචල්‍යන්"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "මුල සිට නැවත අරඹන්න"},
 "clearPuzzleConfirm":function(d){return "මෙමගින් ප්‍රෙහෙලිකාව යලි පිහිටුවන අතර ඔබ දැනට ඇතුලත් හෝ වෙනස් කල ආකෘති සියල්ල මකා දැමේ."},
 "clearPuzzleConfirmHeader":function(d){return "මුල සිට පටන් ගැනීම ඔබ තහවුරු කරනවද?"},

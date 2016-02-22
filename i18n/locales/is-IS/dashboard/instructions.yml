@@ -775,7 +775,9 @@ is:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1336,6 +1338,11 @@ is:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: Þessa stundina vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan - Bee Conditionals_instruction: Nú vill býflugan bara blómasafa. Hlutur er ekki endilega blóm, svo það verður að skoða undir HVERT SKÝ til að sjá hvort þar sé falið blóm. Ef svo er, getur þú safnað blómasafa.
       Ryan Test Locked Blocks_instruction: 'Hér er fallið "rása". Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.'
@@ -2965,6 +2972,17 @@ is:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        (Click to see full
+        instructions)
       Underground Avoiding Lava_instruction: 'Það leynist hraun undir sumum blokkunum og þú verður að þekja það áður þú ferð áfram. "Ef" skipun er gagnleg hér. Bættu "færa áfram" skipun við á réttum stað til að ná að grafa út þessar blokkir.'
       Underground If Statements_instruction: 'Nú vandast málin. Grafðu út 3 af roðasteini, en ekki detta í hraunið. Notaðu "ef" skipun til að leggja hleðslustein yfir hraun sem kemur í ljós.'
       Underground Iron_instruction: Að ganga út í bráðið hraun er slæm hugmynd. Notaðu hleðslustein til að byggja brú, og grafðu svo út minnst 2 af járnblokkunum.

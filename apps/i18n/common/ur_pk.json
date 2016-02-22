@@ -14,6 +14,7 @@
   "catProcedures": "Functions",
   "catText": "متن",
   "catVariables": "متغیرات",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "آغاز(اسٹارٹ اوور)",
   "clearPuzzleConfirm": "یہ پزل کو اسٹارٹ اسٹیٹ پر دوبارہ ری-سیٹ کر دے گا اور اُن تمام بلاکس کو حذف کر دے گا جو کہ آپ نے اضافہ یا تبدیل کئے ہوں گے۔",
   "clearPuzzleConfirmHeader": "کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟",
@@ -221,8 +222,8 @@
   "shareWarningsMoreInfo": "مزید معلومات",
   "shareWarningsStoreData": "اس ایپ کو کوڈ اسٹوڈیو پر بنایا گیا ہے، یہ ڈیٹا اسٹور کرتی ہے جو کہ کوئی بھی اس شیئرنگ لنک کے ذریعے اسے دیکھ سکتا ہے ، لہذا اگر آپ سے پرسنل انفارمیشن فراہم کرنا طلب کیا جائے تو احتیاط سے کام لیں۔ ",
   "showBlocksHeader": "شو بلاکس",
-  "showCodeHeader": "شو کوڈ",
-  "showGeneratedCode": "شو کوڈ",
+  "showCodeHeader": "کوڈ دیکھیں",
+  "showGeneratedCode": "کوڈ دیکھیں",
   "showTextHeader": "ٹیکسٹ دیکھیں",
   "showToolbox": "ٹول باکس دیکھیں",
   "showVersionsHeader": "ورژن ہسٹری",
@@ -254,6 +255,6 @@
   "wantToLearn": "کوڈ کرنا سیکھنا چاہتے ہیں؟",
   "watchVideo": "ویڈیو دیکھیں",
   "when": "کب",
-  "whenRun": "رَن کب ہوگا",
+  "whenRun": "جب رن ہو تو",
   "workspaceHeaderShort": "ورک اسپیس "
 }

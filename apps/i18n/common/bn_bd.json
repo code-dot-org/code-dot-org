@@ -14,6 +14,7 @@
   "catProcedures": "ফাংশনগুলি",
   "catText": "পাঠ",
   "catVariables": "চলকগুলো",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "আবার শুরু কর",
   "clearPuzzleConfirm": "এটি puzzleটিকে পুনর্বিন্যাস করে শুরুর স্থানে নিয়ে যাবে এবং তোমার করা ব্লকে-যুক্ত-করন বা পরিবর্তন সব মুছে দেবে।",
   "clearPuzzleConfirmHeader": "তুমি কি সব আবার আগের থেকে শুরু করতে চাও?",

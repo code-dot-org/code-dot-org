@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkce"},
 "catText":function(d){return "text"},
 "catVariables":function(d){return "Proměnné"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Začít znovu"},
 "clearPuzzleConfirm":function(d){return "Toto obnoví hádanku do jejího původního stavu a odstraní všechny bloky, které jste přidali nebo změnili."},
 "clearPuzzleConfirmHeader":function(d){return "Jste si jisti, že chcete začít znovu?"},

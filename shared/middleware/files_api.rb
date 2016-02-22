@@ -36,13 +36,13 @@ class FilesApi < Sinatra::Base
   end
 
   def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if admin? or new_score.nil?
+    return true if admin? || new_score.nil?
 
     get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
   def can_view_abusive_assets?(encrypted_channel_id)
-    return true if owns_channel?(encrypted_channel_id) or admin?
+    return true if owns_channel?(encrypted_channel_id) || admin?
 
     # teachers can see abusive assets of their students
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
@@ -137,7 +137,7 @@ class FilesApi < Sinatra::Base
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score > 0 and !can_view_abusive_assets?(encrypted_channel_id)
+    not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
 
     result[:body]
   end

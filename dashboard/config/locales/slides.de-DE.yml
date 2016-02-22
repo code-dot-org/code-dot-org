@@ -798,10 +798,10 @@
     C1_maze_loops:
       1:
         image: notes/C1_maze_loops_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Beim Wiederholen von Befehlen eignen sich Computer wirklich gut. Einem
+          Menschen wird schnell langweilig, wenn er die gleichen Aufgaben immer wieder
+          hintereinander ausführt. Aber ein Computer kann millionenfach eine Sache
+          gut durchführen ohne dabei zu ermüden.
       2:
         image: notes/C1_maze_loops_2.png
         text: For example, if I wanted to wish everyone on Facebook a happy birthday
@@ -972,10 +972,10 @@
     C1_zuck_repeat_loop:
       1:
         image: notes/C1_zuck_repeat_loop_1.png
-        text: One that computers are really good at is repeating commands. As a person,
-          you'd get really bored if you had to do the same thing lots and lots of
-          times in a row. But a computer can do the same thing millions or even billions
-          of times and not get bored and be able to carry that out really well.
+        text: Beim Wiederholen von Befehlen eignen sich Computer wirklich gut. Einem
+          Menschen wird schnell langweilig, wenn er die gleichen Aufgaben immer wieder
+          hintereinander ausführt. Aber ein Computer kann millionenfach eine Sache
+          gut durchführen ohne dabei zu ermüden.
       2:
         image: notes/C1_zuck_repeat_loop_2.png
         text: For example, if I wanted to wish everyone on Facebook a happy birthday

@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "true",
-    "maze": "[[0,16,0,16,0,16,0,16],[0,0,16,0,16,0,16,0],[0,16,0,16,0,16,0,16],[0,0,16,0,16,0,16,0],[0,16,0,16,0,16,0,16],[0,0,16,0,16,0,16,0],[0,16,0,16,0,16,0,16],[0,0,16,0,16,0,16,0]]",
+    "maze": "[[0,16,0,16,0,16,0,16],[16,0,16,0,16,0,16,0],[0,16,0,16,0,16,0,16],[16,0,16,0,16,0,16,0],[0,16,0,16,0,16,0,16],[16,0,16,0,16,0,16,0],[0,16,0,16,0,16,0,16],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -40,7 +40,8 @@
       "upButton"
     ],
     "first_sprite_index": "0"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>

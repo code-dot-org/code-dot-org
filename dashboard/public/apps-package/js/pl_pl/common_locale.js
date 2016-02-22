@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkcje"},
 "catText":function(d){return "Tekst"},
 "catVariables":function(d){return "Zmienne"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Zacznij od nowa"},
 "clearPuzzleConfirm":function(d){return "To spowoduje zresetowanie łamigłówki do stanu początkowego i usunięcie wszystkich bloków, które dodałeś lub zmieniłeś."},
 "clearPuzzleConfirmHeader":function(d){return "Czy na pewno chcesz zacząć od nowa?"},

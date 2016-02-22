@@ -227,8 +227,8 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "step":function(d){return "Step"},
 "totalHoney":function(d){return "total honey"},
 "totalNectar":function(d){return "total nectar"},
-"turnLeft":function(d){return "turn left"},
-"turnRight":function(d){return "turn right"},
+"turnLeft":function(d){return "بائیں طرف مڑیں"},
+"turnRight":function(d){return "دائیں طرف مڑیں"},
 "turnTooltip":function(d){return "Turns me left or right by 90 degrees."},
 "uncheckedCloudError":function(d){return "Make sure to check all clouds to see if they're flowers or honeycombs."},
 "uncheckedPurpleError":function(d){return "Make sure to check all purple flowers to see if they have nectar"},
@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Repeat the enclosed actions until finish point is reached."},
 "word":function(d){return "لفظ ڈھونڈیں"},
 "yes":function(d){return "جی"},
-"youSpelled":function(d){return "You spelled"}};
+"youSpelled":function(d){return "You spelled"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

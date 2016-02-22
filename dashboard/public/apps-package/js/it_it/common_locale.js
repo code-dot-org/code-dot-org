@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funzioni"},
 "catText":function(d){return "Testo"},
 "catVariables":function(d){return "Variabili"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Ripristina"},
 "clearPuzzleConfirm":function(d){return "Cliccando su \"Ripristina\" l'esercizio verrà ripristinato alla situazione iniziale e verranno cancellati tutti i blocchi che hai aggiunto o cambiato."},
 "clearPuzzleConfirmHeader":function(d){return "Sei sicuro di voler ripristinare la situazione iniziale?"},

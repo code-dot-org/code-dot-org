@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "توابع"},
 "catText":function(d){return "متن"},
 "catVariables":function(d){return "متغیرها"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "دوباره شروع کنید"},
 "clearPuzzleConfirm":function(d){return "این کار معما را به حالت ابتدایی تنظیم خواهد کرد و تمام بلوک هایی که شما اضافه کردید یا تغییر داده اید را حذف خواهد کرد."},
 "clearPuzzleConfirmHeader":function(d){return "آیا مطمئنی که می خواهی دوباره شروع کنی؟"},

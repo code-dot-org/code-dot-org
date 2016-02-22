@@ -1,4 +1,24 @@
 FactoryGirl.define do
+  factory :survey_result do
+    user { create :teacher }
+    properties {{survey2016_ethnicity_asian: "1"}}
+    properties {{survey2016_foodstamps: "3"}}
+  end
+
+  factory :professional_learning_course do
+    name "Some course"
+  end
+
+  factory :professional_learning_module do
+    name "Some module"
+    learning_module_type "Some learning module type"
+  end
+
+  factory :professional_learning_task do
+    name "Some task"
+    professional_learning_module nil
+  end
+
   factory :user do
     birthday Date.new(1991, 03, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }

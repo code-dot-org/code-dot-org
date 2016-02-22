@@ -38,9 +38,6 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 var JsDebuggerUi = require('../JsDebuggerUi');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
-var assetsApi = require('../clientApi').assets;
-var assetListStore = require('./assetManagement/assetListStore');
-var showAssetManager = require('./assetManagement/show.js');
 var VisualizationOverlay = require('./VisualizationOverlay');
 var ShareWarningsDialog = require('../templates/ShareWarningsDialog.jsx');
 var logToCloud = require('../logToCloud');
@@ -383,7 +380,7 @@ function renderFooterInSharedGame() {
     });
   }
 
-  window.dashboard.footer.render(React, {
+  React.render(React.createElement(window.dashboard.SmallFooter,{
     i18nDropdown: '',
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
@@ -398,7 +395,7 @@ function renderFooterInSharedGame() {
     },
     className: 'dark',
     menuItems: menuItems
-  }, footerDiv);
+  }), footerDiv);
 }
 
 /**
@@ -589,16 +586,8 @@ Applab.init = function(config) {
   Applab.channelId = config.channel;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
-  if (config.assetPathPrefix) {
-    Applab.assetPathPrefix = config.assetPathPrefix;
-  }
 
-  // Pre-populate asset list
-  assetsApi.ajax('GET', '', function (xhr) {
-    assetListStore.reset(JSON.parse(xhr.responseText));
-  }, function () {
-    // Unable to load asset list
-  });
+  config.usesAssets = true;
 
   Applab.clearEventHandlersKillTickLoop();
   skin = config.skin;
@@ -1223,44 +1212,6 @@ Applab.onCodeModeButton = function() {
   }
 };
 
-// starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://');
-
-// Exposed for testing
-Applab.assetPathPrefix = "/v3/assets/";
-
-/**
- * If the filename is relative (contains no slashes), then prepend
- * the path to the assets directory for this project to the filename.
- *
- * If the filename URL is absolute, route it through the MEDIA_PROXY.
- * @param {string} filename
- * @returns {string}
- */
-Applab.maybeAddAssetPathPrefix = function (filename) {
-
-  if (ABSOLUTE_REGEXP.test(filename)) {
-    // We want to be able to handle the case where our filename contains a
-    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-    // technically invalid URL. encodeURIComponent will replace space with %20
-    // for us, but as soon as it's decoded, we again have an invalid URL. For
-    // this reason we first replace space with %20 ourselves, such that we now
-    // have a valid URL, and then call encodeURIComponent on the result.
-    return MEDIA_PROXY + encodeURIComponent(filename.replace(' ', '%20'));
-  }
-
-  filename = filename || '';
-  if (filename.length === 0) {
-    return '/blockly/media/1x1.gif';
-  }
-
-  if (filename.indexOf('/') !== -1) {
-    return filename;
-  }
-
-  return Applab.assetPathPrefix + Applab.channelId + '/'  + filename;
-};
-
 /**
  * Show a modal dialog with a title, text, and OK and Cancel buttons
  * @param {title}
@@ -1525,30 +1476,6 @@ function quote(str) {
 }
 
 /**
- * Returns a list of options (optionally filtered by type) for code-mode
- * asset dropdowns.
- */
-Applab.getAssetDropdown = function (typeFilter) {
-  var options = assetListStore.list(typeFilter).map(function (asset) {
-    return {
-      text: quote(asset.filename),
-      display: quote(asset.filename)
-    };
-  });
-  var handleChooseClick = function (callback) {
-    showAssetManager(function (filename) {
-      callback(quote(filename));
-    }, typeFilter);
-  };
-  options.push({
-    text: 'Choose...',
-    display: '<span class="chooseAssetDropdownOption">Choose...</a>',
-    click: handleChooseClick
-  });
-  return options;
-};
-
-/**
  * Return droplet dropdown options representing a list of ids currently present
  * in the DOM, optionally limiting the result to a certain HTML element tagName.
  * @param {string} [filterSelector] Optional selector to filter for.
@@ -1612,7 +1539,7 @@ Applab.getIdDropdownForCurrentScreenFromDom_ = function (documentRoot) {
  * @returns {HTMLElement} The first "screen" that isn't hidden.
  */
 Applab.activeScreen = function () {
-  return $('#divApplab .screen').filter(function () {
+  return Applab.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -1622,7 +1549,7 @@ Applab.activeScreen = function () {
  * unless they match the provided screenId. Also focuses the screen.
  */
 Applab.changeScreen = function(screenId) {
-  $('#divApplab .screen').each(function () {
+  Applab.getScreens().each(function () {
     $(this).toggle(this.id === screenId);
     if ((this.id === screenId)) {
       // Allow the active screen to receive keyboard events.
@@ -1632,9 +1559,12 @@ Applab.changeScreen = function(screenId) {
 };
 
 Applab.loadDefaultScreen = function() {
-  var defaultScreen = $('#divApplab .screen[is-default=true]').first().attr('id') ||
-    $('#divApplab .screen').first().attr('id');
-  Applab.changeScreen(defaultScreen);
+  var defaultScreenId = Applab.getScreens().first().attr('id');
+  Applab.changeScreen(defaultScreenId);
+};
+
+Applab.getScreens = function() {
+  return $('#divApplab > .screen');
 };
 
 // Wrap design mode function so that we can call from commands

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Mga function"},
 "catText":function(d){return "Text"},
 "catVariables":function(d){return "Mga variable"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Magsimula sa Umpisa"},
 "clearPuzzleConfirm":function(d){return "Ire-reset nito ang puzzle sa umpisa at tatanggalin ang lahat ng mga bloke na iyong idinagdag o binago."},
 "clearPuzzleConfirmHeader":function(d){return "Sigurado ka bang gusto mong magsimula muli?"},

@@ -4,7 +4,8 @@
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
 var DesignToggleRow = require('./DesignToggleRow.jsx');
-var showAssetManager = require('./assetManagement/show.js');
+var showAssetManager = require('../assetManagement/show');
+var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
 var elementUtils = require('./designElements/elementUtils');
 var studioApp = require('../StudioApp').singleton;
@@ -55,7 +56,7 @@ designMode.onDesignModeVizClick = function (event) {
  * @returns {HTMLElement} The currently visible screen element.
  */
 designMode.activeScreen = function () {
-  return $('#designModeViz .screen').filter(function () {
+  return elementUtils.getScreens().filter(function () {
     return this.style.display !== 'none';
   }).first()[0];
 };
@@ -230,7 +231,7 @@ designMode.updateProperty = function(element, name, value) {
     case 'image':
       var backgroundImage = new Image();
       var originalValue = element.getAttribute('data-canonical-image-url');
-      backgroundImage.src = Applab.maybeAddAssetPathPrefix(value);
+      backgroundImage.src = assetPrefix.fixPath(value);
       element.style.backgroundImage = 'url(' + backgroundImage.src + ')';
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
@@ -252,14 +253,14 @@ designMode.updateProperty = function(element, name, value) {
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
-      element.style.backgroundImage = 'url(' + Applab.maybeAddAssetPathPrefix(value) + ')';
+      element.style.backgroundImage = 'url(' + assetPrefix.fixPath(value) + ')';
       element.setAttribute('data-canonical-image-url', value);
       element.style.backgroundSize = width + 'px ' + height + 'px';
       break;
 
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
-      element.src = Applab.maybeAddAssetPathPrefix(value);
+      element.src = assetPrefix.fixPath(value);
       element.setAttribute('data-canonical-image-url', value);
       // do not resize if only the asset path has changed (e.g. on remix).
       if (value !== originalValue) {
@@ -477,7 +478,7 @@ designMode.serializeToLevelHtml = function () {
     elementUtils.removeIdPrefix(this);
   });
 
-  var serialization = new XMLSerializer().serializeToString(designModeVizClone[0]);
+  var serialization = designModeVizClone[0] ? designModeVizClone[0].outerHTML : '';
   if (madeUndraggable) {
     makeDraggable(designModeViz.children().children());
   }
@@ -835,7 +836,7 @@ designMode.createScreen = function () {
 designMode.changeScreen = function (screenId) {
   currentScreenId = screenId;
   var screenIds = [];
-  $('#designModeViz .screen').each(function () {
+  elementUtils.getScreens().each(function () {
     screenIds.push(elementUtils.getId(this));
     $(this).toggle(elementUtils.getId(this) === screenId);
   });
@@ -850,7 +851,7 @@ designMode.getCurrentScreenId = function() {
 };
 
 designMode.renderToggleRow = function (screenIds) {
-  screenIds = screenIds || $('#designModeViz .screen').get().map(function (screen) {
+  screenIds = screenIds || elementUtils.getScreens().get().map(function (screen) {
     return elementUtils.getId(screen);
   });
 
@@ -862,7 +863,7 @@ designMode.renderToggleRow = function (screenIds) {
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
         initialScreen: currentScreenId,
-        screens: screenIds,
+        screenIds: screenIds,
         onDesignModeButton: Applab.onDesignModeButton,
         onCodeModeButton: Applab.onCodeModeButton,
         onViewDataButton: Applab.onViewData,
@@ -881,10 +882,10 @@ designMode.renderToggleRow = function (screenIds) {
 designMode.loadDefaultScreen = function () {
   var defaultScreen;
 
-  if ($('#designModeViz .screen').length === 0) {
+  if (elementUtils.getScreens().length === 0) {
     defaultScreen = designMode.createScreen();
   } else {
-    defaultScreen = elementUtils.getId($('#designModeViz .screen')[0]);
+    defaultScreen = elementUtils.getId(elementUtils.getScreens()[0]);
   }
   designMode.changeScreen(defaultScreen);
 };

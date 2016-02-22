@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Функциялар"},
 "catText":function(d){return "Мәтін"},
 "catVariables":function(d){return "Айнымалылар"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Басынан бастау"},
 "clearPuzzleConfirm":function(d){return "Бұл сіз қосқан немесе өзгерткен барлық блоктарды жою арқылы бас қатырғышта бастапқы күйіне қайта ысырады"},
 "clearPuzzleConfirmHeader":function(d){return "Сіз басынан бастауға сенімдісіз бе?"},

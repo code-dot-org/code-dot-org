@@ -1868,8 +1868,7 @@ Interpreter.prototype['stepCallExpression'] = function() {
       } else if (state.func_.asyncFunc) {
         var thisInterpreter = this;
         var callback = function(value) {
-          state.value = value || this.UNDEFINED;
-          thisInterpreter.stateStack.unshift(state)
+          state.value = value || thisInterpreter.UNDEFINED;
           thisInterpreter.paused_ = false;
         };
         var argsWithCallback = state.arguments.concat(callback);

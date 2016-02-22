@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funtzioak"},
 "catText":function(d){return "Testua"},
 "catVariables":function(d){return "Aldagaiak"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Hasi Berriro"},
 "clearPuzzleConfirm":function(d){return "Honek ariketa berrezarriko du hasierako egoerara eta sortu edo kargatutako bloke guztiak ezabatuko ditu."},
 "clearPuzzleConfirmHeader":function(d){return "Ziur al zaude berriro hasi nahi duzula?"},

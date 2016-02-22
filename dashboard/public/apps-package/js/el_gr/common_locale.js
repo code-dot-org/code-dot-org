@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Συναρτήσεις"},
 "catText":function(d){return "κείμενο"},
 "catVariables":function(d){return "Μεταβλητές"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Ξεκινήστε από την αρχή"},
 "clearPuzzleConfirm":function(d){return "Αυτό θα επαναφέρει το παζλ στην αρχική του κατάσταση και θα διαγράψει όλα τα μποκ που προσθέσατε ή αλλάξατε."},
 "clearPuzzleConfirmHeader":function(d){return "Είστε βέβαιος ότι θέλετε να ξεκινήσετε από την αρχή;"},

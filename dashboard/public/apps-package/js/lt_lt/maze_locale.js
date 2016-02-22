@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Pakartok sujungtus veiksmus, kol bus pasiektas finišas."},
 "word":function(d){return "Surast žodį"},
 "yes":function(d){return "Taip"},
-"youSpelled":function(d){return "Tu įvedei"}};
+"youSpelled":function(d){return "Tu įvedei"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

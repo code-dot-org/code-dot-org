@@ -264,10 +264,17 @@ ___________________________
 
 ## Exploring Computer Science FAQs
 
-**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=755330c1ae) | [November](http://eepurl.com/bEh8Aj)
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=755330c1ae) | [November](http://eepurl.com/bEh8Aj) | [December](http://eepurl.com/bHucHX) | [January](http://eepurl.com/bL_jNj)
 
 ### **Where can I find assessments for each unit?**
-Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1 & 2 assessments. Code.org has created a [How-To Guide](https://docs.google.com/document/d/1vj6ZLt62EDEDWo-D_IzVTzZ79DEkemx3u2T0Blt1wwY/edit#heading=h.1ya6s8k1e8wg) if you're having trouble accessing these assessments. 
+Visit the [CS10k](https://cs10kcommunity.org/resource/ECSassessments) website for ECS Units 1-4 assessments. Code.org has created a [How-To Guide](https://docs.google.com/document/d/1vj6ZLt62EDEDWo-D_IzVTzZ79DEkemx3u2T0Blt1wwY/edit#heading=h.1ya6s8k1e8wg) if you're having trouble accessing these assessments. 
+
+[**Back to the top**](#top)
+<br/>
+________________
+
+### **What do I need to complete before my Phase 3C workshop?**
+We've listed instructions on [your data collection assignment](http://eepurl.com/bL_jNj) in your January update. 
 
 [**Back to the top**](#top)
 <br/>
@@ -285,7 +292,12 @@ ___________________________
 ## Computer Science Principles FAQs
 
 
-FAQs coming soon!
+### **What's the deal with Phase 4: Summer Wrap-up?**
+We're so glad you asked! In order to attend your CS Principles Phase 4 workshop, you must have attended 2 out of 4 Phase 3 workshops. 
+
+**When?** Your CS Principles workshop will take place from Wednesday, July 27th - Friday, July 29th. You should plan to use Tuesday, July 26th as a travel day. 
+
+**Where?** There are two Code.org CS Principles workshops - one in Seattle, WA and one in New York, NY. For all the details, check out the [email announcement](http://eepurl.com/bQgtR1) or visit your [West Coast](https://code.org/educate/pd/15-16/csp-west) / [East Coast](https://code.org/educate/pd/15-16/csp-east) logistics page. 
 
 [**Back to the top**](#top)
 <br/>
@@ -296,7 +308,7 @@ ___________________________
 
 ## Computer Science in Algebra FAQs
 
-**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=9fa9381980) | [November](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=28d75fcb44)
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=9fa9381980) | [November](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=28d75fcb44) | [December](http://eepurl.com/bIdsRn) | [January](http://eepurl.com/bNRFFv)
 
 ### **I don't know which online PD course to complete for Phase 3.**
 Here's a summary of the online PD courses that appear in your Code Studio: <br/>
@@ -306,7 +318,7 @@ Here's a summary of the online PD courses that appear in your Code Studio: <br/>
 |**Phase 1**|**Computer Science in Algebra** <br/>*Phase 1: Online Introduction*|
 |**Phase 2**|**Computer Science in Algebra PD Phase 2** <br/>*Phase 2 Online: Blended Summer Study*|
 |**Student Learning**|**Computer Science in Algebra**<br/>*Learn Functional Programming through Algebra* <br/>Note: this is not part of your PD. This course is what your students complete in your classroom. You will not be paid for your progress in this course. |
-|**Phase 3**|**Computer Science in Algebra PD** (complete before Phase 3 workshop)<br/>*Phase 3 (Part 1): CS in Algbera blended online school year study*<br/>**Computer Science in Algebra PD** (complete before implementation)<br/>*Phase 3 (Part 2): CS in Algebra mid year lesson support*<br/>**Computer Science in Algebra PD** (launches in May 2016) <br/>*Phase 3 (Part 3): CS in Algebra Reflection*
+|**Phase 3**|**Computer Science in Algebra PD** (complete before Phase 3A workshop)<br/>*Phase 3 (Part 1): CS in Algbera blended online school year study*<br/>**Computer Science in Algebra PD** (complete before implementation)<br/>*Phase 3 (Part 2): CS in Algebra mid year lesson support*<br/>**Computer Science in Algebra PD** (launches in May 2016) <br/>*Phase 3 (Part 3): CS in Algebra Reflection*
 
 
 
@@ -319,8 +331,16 @@ ___________________________
 
 ## Computer Science in Science FAQs
 
-**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=55391a06c1) | [November](http://us9.campaign-archive2.com/?u=dc783682a08c5eb6dfe447070&id=579295973d)
+**PD Updates Archive:** [October](http://us9.campaign-archive1.com/?u=dc783682a08c5eb6dfe447070&id=55391a06c1) | [November](http://us9.campaign-archive2.com/?u=dc783682a08c5eb6dfe447070&id=579295973d) | [December](http://eepurl.com/bIdV5T)  | [January](http://eepurl.com/bN6TzT)
 
+### **How can I find disappearing buttons**
+Are your students’ Setup and Forever buttons disappearing? Resize the window when widgets disappear. This should make the buttons reappear. 
+
+Why does this happen? The cause of widgets disappearing is a faulty draw by the Flash renderer when a widget is partially offscreen. Usually it is a graph that is partially offscreen that confuses Flash. Resizing the window should fix the problem. 
+
+[**Back to the top**](#top)
+<br/>
+___________________________
 ### **How do I set up student accounts on StarLogo Nova?**
 There are 4 options for setting up student accounts on StarLogo Nova. <br/>
 

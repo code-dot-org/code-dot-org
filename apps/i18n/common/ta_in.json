@@ -14,6 +14,7 @@
   "catProcedures": "செயல்பாடுகள்",
   "catText": "உரை",
   "catVariables": "மாறிலிகள்",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Clear Puzzle",
   "clearPuzzleConfirm": "This will delete all blocks and reset the puzzle to its start state.",
   "clearPuzzleConfirmHeader": "Are you sure you want to clear the puzzle?",

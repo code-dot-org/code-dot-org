@@ -36,7 +36,10 @@ var mazeUtils = require('./mazeUtils');
 var _ = utils.getLodash();
 var dropletConfig = require('./dropletConfig');
 
+var MazeMap = require('./mazeMap');
 var Bee = require('./bee');
+var Cell = require('./cell');
+var BeeCell = require('./beeCell');
 var WordSearch = require('./wordsearch');
 var scrat = require('./scrat');
 
@@ -69,22 +72,27 @@ var stepSpeed = 100;
 //TODO: Make configurable.
 studioApp.setCheckForEmptyBlocks(true);
 
-var getTile = function(map, x, y) {
-  if (map && map[y]) {
-    return map[y][x];
-  }
-};
-
 // Default Scalings
 Maze.scale = {
   'snapRadius': 1,
   'stepSpeed': 5
 };
 
-var loadLevel = function() {
+var loadLevel = function () {
   // Load maps.
-  Maze.map = level.map;
-  Maze.initialDirtMap = level.initialDirt;
+  // "serializedMaze" is the new way of storing maps; it's a JSON array
+  // containing complex map data.
+  // "map" plus optionally "levelDirt" is the old way of storing maps;
+  // they are each arrays of a combination of strings and ints with
+  // their own complex syntax. This way is deprecated for new levels,
+  // and only exists for backwards compatibility for not-yet-updated
+  // levels.
+  if (level.serializedMaze) {
+    Maze.map = MazeMap.deserialize(level.serializedMaze, Maze.cellClass);
+  } else {
+    Maze.map = MazeMap.parseFromOldValues(level.map, level.initialDirt, Maze.cellClass);
+  }
+
   Maze.startDirection = level.startDirection;
 
   Maze.animating_ = false;
@@ -98,10 +106,6 @@ var loadLevel = function() {
     skin.actionSpeedScale.nectar = 0.5;
   }
   // Measure maze dimensions and set sizes.
-  // ROWS: Number of tiles down.
-  Maze.ROWS = Maze.map.length;
-  // COLS: Number of tiles across.
-  Maze.COLS = Maze.map[0].length;
   // Initialize the wallMap.
   initWallMap();
   // Pixel height and width of each maze square (i.e. tile).
@@ -114,13 +118,9 @@ var loadLevel = function() {
   Maze.MARKER_HEIGHT = 43;
   Maze.MARKER_WIDTH = 50;
 
-  Maze.MAZE_WIDTH = Maze.SQUARE_SIZE * Maze.COLS;
-  Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.ROWS;
+  Maze.MAZE_WIDTH = Maze.SQUARE_SIZE * Maze.map.COLS;
+  Maze.MAZE_HEIGHT = Maze.SQUARE_SIZE * Maze.map.ROWS;
   Maze.PATH_WIDTH = Maze.SQUARE_SIZE / 3;
-
-  if (Maze.initialDirtMap) {
-    Maze.dirt_ = new Array(Maze.ROWS);
-  }
 };
 
 
@@ -130,9 +130,9 @@ var loadLevel = function() {
  * wall, Maze.wallMap[y][x] is undefined.
  */
 var initWallMap = function() {
-  Maze.wallMap = new Array(Maze.ROWS);
-  for (var y = 0; y < Maze.ROWS; y++) {
-    Maze.wallMap[y] = new Array(Maze.COLS);
+  Maze.wallMap = new Array(Maze.map.ROWS);
+  for (var y = 0; y < Maze.map.ROWS; y++) {
+    Maze.wallMap[y] = new Array(Maze.map.COLS);
   }
 };
 
@@ -255,9 +255,9 @@ function drawMap () {
 
   // Add obstacles.
   var obsId = 0;
-  for (y = 0; y < Maze.ROWS; y++) {
-    for (x = 0; x < Maze.COLS; x++) {
-      if (Maze.map[y][x] == SquareType.OBSTACLE) {
+  for (y = 0; y < Maze.map.ROWS; y++) {
+    for (x = 0; x < Maze.map.COLS; x++) {
+      if (Maze.map.getTile(y, x) == SquareType.OBSTACLE) {
         var obsIcon = document.createElementNS(SVG_NS, 'image');
         obsIcon.setAttribute('id', 'obstacle' + obsId);
         obsIcon.setAttribute('height', Maze.MARKER_HEIGHT * skin.obstacleScale);
@@ -355,9 +355,9 @@ function drawMap () {
 }
 
 // Returns true if the tile at x,y is either a wall or out of bounds
-function isWallOrOutOfBounds (x, y) {
-  return Maze.map[y] === undefined || Maze.map[y][x] === undefined ||
-    Maze.map[y][x] === SquareType.WALL;
+function isWallOrOutOfBounds (col, row) {
+  return Maze.map.getTile(row, col) === SquareType.WALL ||
+      Maze.map.getTile(row, col) === undefined;
 }
 
 // Return a value of '0' if the specified square is wall or out of bounds '1'
@@ -377,8 +377,8 @@ function drawMapTiles(svg) {
   // Compute and draw the tile for each square.
   var tileId = 0;
   var tile, origTile;
-  for (var y = 0; y < Maze.ROWS; y++) {
-    for (var x = 0; x < Maze.COLS; x++) {
+  for (var y = 0; y < Maze.map.ROWS; y++) {
+    for (var x = 0; x < Maze.map.COLS; x++) {
       // Compute the tile index.
       tile = isOnPathStr(x, y) +
         isOnPathStr(x, y - 1) +  // North.
@@ -481,29 +481,16 @@ Maze.drawTile = function (svg, tileSheetLocation, row, col, tileId) {
   tileElement.appendChild(tileAnimation);
 };
 
-function resetDirt() {
-  if (!Maze.initialDirtMap) {
-    return;
-  }
-  // Locate the dirt in dirt_map
-  for (var y = 0; y < Maze.ROWS; y++) {
-    Maze.dirt_[y] = Maze.initialDirtMap[y].slice(0);
-  }
-}
-
 /**
  * Redraw all dirt images
  * @param {boolean} running Whether or not user program is currently running
  */
 function resetDirtImages(running) {
-  var x = 1;
-  for (var row = 0; row < Maze.ROWS; row++) {
-    for (var col = 0; col < Maze.COLS; col++) {
-      if (getTile(Maze.dirt_, col, row) !== undefined) {
-        Maze.gridItemDrawer.updateItemImage(row, col, running);
-      }
+  Maze.map.forEachCell(function (cell, row, col) {
+    if (cell.isDirt()) {
+      Maze.gridItemDrawer.updateItemImage(row, col, running);
     }
-  }
+  });
 }
 
 /**
@@ -533,6 +520,11 @@ Maze.init = function(config) {
       assetUrl: studioApp.assetUrl,
       searchWord: level.searchWord
     });
+  }
+  if (mazeUtils.isBeeSkin(config.skinId)) {
+    Maze.cellClass = BeeCell;
+  } else {
+    Maze.cellClass = Cell;
   }
 
   loadLevel();
@@ -604,9 +596,9 @@ Maze.init = function(config) {
     Maze.finish_ = undefined;
 
     // Locate the start and finish squares.
-    for (var y = 0; y < Maze.ROWS; y++) {
-      for (var x = 0; x < Maze.COLS; x++) {
-        var cell = Maze.map[y][x];
+    for (var y = 0; y < Maze.map.ROWS; y++) {
+      for (var x = 0; x < Maze.map.COLS; x++) {
+        var cell = Maze.map.getTile(y, x);
         if (cell == SquareType.START) {
           Maze.start_ = {x: x, y: y};
         } else if (cell === SquareType.FINISH) {
@@ -618,12 +610,12 @@ Maze.init = function(config) {
       }
     }
 
-    resetDirt();
+    Maze.map.resetDirt();
 
     if (mazeUtils.isBeeSkin(config.skinId)) {
-      Maze.gridItemDrawer = new BeeItemDrawer(Maze.dirt_, skin, Maze.bee);
+      Maze.gridItemDrawer = new BeeItemDrawer(Maze.map, skin, Maze.bee);
     } else {
-      Maze.gridItemDrawer = new DirtDrawer(Maze.dirt_, skin.dirt);
+      Maze.gridItemDrawer = new DirtDrawer(Maze.map, skin.dirt);
     }
 
     drawMap();
@@ -834,14 +826,14 @@ Maze.reset = function(first) {
   }
 
   // Move the init dirt marker icons into position.
-  resetDirt();
+  Maze.map.resetDirt();
   resetDirtImages(false);
 
   // Reset the obstacle image.
   var obsId = 0;
   var x, y;
-  for (y = 0; y < Maze.ROWS; y++) {
-    for (x = 0; x < Maze.COLS; x++) {
+  for (y = 0; y < Maze.map.ROWS; y++) {
+    for (x = 0; x < Maze.map.COLS; x++) {
       var obsIcon = document.getElementById('obstacle' + obsId);
       if (obsIcon) {
         obsIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
@@ -861,8 +853,8 @@ Maze.reset = function(first) {
 function resetTiles() {
   // Reset the tiles
   var tileId = 0;
-  for (var y = 0; y < Maze.ROWS; y++) {
-    for (var x = 0; x < Maze.COLS; x++) {
+  for (var y = 0; y < Maze.map.ROWS; y++) {
+    for (var x = 0; x < Maze.map.COLS; x++) {
       // Tile's clipPath element.
       var tileClip = document.getElementById('tileClipPath' + tileId);
       tileClip.setAttribute('visibility', 'visible');
@@ -965,6 +957,15 @@ Maze.onReportComplete = function(response) {
 };
 
 /**
+ * Helper class, passthrough to level-specific hasMultiplePossibleGrids
+ * call
+ * @return {boolean}
+ */
+Maze.hasMultiplePossibleGrids = function () {
+  return Maze.bee && Maze.bee.hasMultiplePossibleGrids();
+};
+
+/**
  * Perform some basic initialization/resetting operations before
  * execution. This function should be idempotent, as it can be called
  * during execution when running multiple trials.
@@ -1014,7 +1015,7 @@ Maze.execute = function(stepMode) {
     var runCode = !level.edit_blocks;
 
     if (runCode) {
-      if (Maze.bee && Maze.bee.staticGrids.length > 1) {
+      if (Maze.hasMultiplePossibleGrids()) {
         // If this level is a Bee level with multiple possible grids, we
         // need to run against all grids and sort them into successes
         // and failures
@@ -1476,7 +1477,7 @@ Maze.updateSurroundingTiles = function(obstacleY, obstacleX, brokenTiles) {
     [obstacleY + 1, obstacleX + 1]
   ];
   for (var idx = 0; idx < tileCoords.length; ++idx) {
-    var tileIdx = tileCoords[idx][1] + Maze.COLS * tileCoords[idx][0];
+    var tileIdx = tileCoords[idx][1] + Maze.map.COLS * tileCoords[idx][0];
     var tileElement = document.getElementById('tileElement' + tileIdx);
     if (tileElement) {
       tileElement.setAttributeNS(
@@ -1506,7 +1507,7 @@ Maze.scheduleFail = function(forward) {
                      Maze.pegmanY + deltaY / 4,
                      frame);
   // Play sound and animation for hitting wall or obstacle
-  var squareType = Maze.map[targetY] && Maze.map[targetY][targetX];
+  var squareType = Maze.map.getTile(targetY, targetX);
   if (squareType === SquareType.WALL || squareType === undefined) {
     // Play the sound
     studioApp.playAudio('wall');
@@ -1582,7 +1583,7 @@ Maze.scheduleFail = function(forward) {
     studioApp.playAudio('obstacle');
 
     // Play the animation
-    var obsId = targetX + Maze.COLS * targetY;
+    var obsId = targetX + Maze.map.COLS * targetY;
     var obsIcon = document.getElementById('obstacle' + obsId);
     obsIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink', 'xlink:href',
@@ -1621,8 +1622,8 @@ Maze.scheduleFail = function(forward) {
  */
 function setTileTransparent () {
   var tileId = 0;
-  for (var y = 0; y < Maze.ROWS; y++) {
-    for (var x = 0; x < Maze.COLS; x++) {
+  for (var y = 0; y < Maze.map.ROWS; y++) {
+    for (var x = 0; x < Maze.map.COLS; x++) {
       // Tile sprite.
       var tileElement = document.getElementById('tileElement' + tileId);
       var tileAnimation = document.getElementById('tileAnimation' + tileId);
@@ -1730,7 +1731,7 @@ Maze.displayPegman = function(x, y, frame) {
 var scheduleDirtChange = function(options) {
   var col = Maze.pegmanX;
   var row = Maze.pegmanY;
-  Maze.dirt_[row][col] += options.amount;
+  Maze.map.setValue(row, col, Maze.map.getValue(row, col) + options.amount);
   Maze.gridItemDrawer.updateItemImage(row, col, true);
   studioApp.playAudio(options.sound);
 };
@@ -1815,13 +1816,9 @@ function atFinish () {
 }
 
 function isDirtCorrect () {
-  if(!Maze.dirt_) {
-    return true;
-  }
-
-  for (var y = 0; y < Maze.ROWS; y++) {
-    for (var x = 0; x < Maze.COLS; x++) {
-      if (getTile(Maze.dirt_, x, y) !== 0) {
+  for (var row = 0; row < Maze.map.ROWS; row++) {
+    for (var col = 0; col < Maze.map.COLS; col++) {
+      if (Maze.map.isDirt(row, col) && Maze.map.getValue(row, col) !== 0) {
         return false;
       }
     }

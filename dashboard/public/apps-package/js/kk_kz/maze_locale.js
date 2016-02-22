@@ -236,4 +236,5 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Біріккен іс-әрекеттер аяқталғанша қайталаңыз."},
 "word":function(d){return "Сөзді табу"},
 "yes":function(d){return "Иә"},
-"youSpelled":function(d){return "Сіздің жазғаныңыз"}};
+"youSpelled":function(d){return "Сіздің жазғаныңыз"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};

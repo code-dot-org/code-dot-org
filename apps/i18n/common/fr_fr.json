@@ -14,6 +14,7 @@
   "catProcedures": "Fonctions",
   "catText": "texte",
   "catVariables": "Variables",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Recommencer",
   "clearPuzzleConfirm": "Cela va réinitialiser le puzzle à son état de départ et supprimer tous les blocs que tu as ajoutés ou changés.",
   "clearPuzzleConfirmHeader": "Es-tu certain(e) de vouloir recommencer ?",
