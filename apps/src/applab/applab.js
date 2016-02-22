@@ -856,23 +856,7 @@ Applab.appendToEditor = function (newCode) {
 };
 
 Applab.scrollToEnd = function () {
-  if (studioApp.editor.currentlyUsingBlocks) {
-    // scroll to end of block view
-    var droplet = studioApp.editor;
-    var doc = droplet.getDocuments()[0];
-    var pos = doc.end;
-    while (pos && !droplet.validCursorPosition(pos)) {
-      pos = pos.prev;
-    }
-    droplet.setCursor(pos);
-    droplet.scrollCursorIntoPosition();
-  } else {
-    // move ace cursor to bottom
-    var aceEditor = studioApp.editor.aceEditor;
-    var row = aceEditor.session.getLength() - 1;
-    var column = aceEditor.session.getLine(row).length;
-    aceEditor.gotoLine(row + 1, column);
-  }
+  studioApp.editor.scrollCursorToEndOfDocument();
 };
 
 /**
