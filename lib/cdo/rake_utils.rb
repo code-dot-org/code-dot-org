@@ -44,6 +44,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message, CDO.filter_backtrace([output])
     end
+    status
   end
 
   def self.bundle_exec(*args)
