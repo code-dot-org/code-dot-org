@@ -10,6 +10,7 @@
 var constants = require('./constants');
 var msg = require('../locale');
 var styles = require('./PlaySpaceHeaderStyles');
+var ToggleButton = require('./ToggleButton.jsx');
 
 var Mode = constants.MODE;
 
@@ -23,24 +24,16 @@ var ToggleGroup = React.createClass({
   render: function () {
     return (
       <span>
-        <button
-            id='codeModeButton'
-            style={$.extend({}, styles.codeButtonStyle,
-                  this.props.mode === Mode.CODE ? styles.activeStyle : styles.inactiveStyle,
-                  this.props.hideToggle ? styles.hiddenStyle : null)}
-            className='no-outline'
-            onClick={function () { this.props.onChange(Mode.CODE); }.bind(this)}>
-          {msg.codeMode()}
-        </button>
-        <button
-            id='designModeButton'
-            style={$.extend({}, styles.designButtonStyle,
-                  this.props.mode === Mode.DESIGN ? styles.activeStyle : styles.inactiveStyle,
-                  this.props.hideToggle ? styles.hiddenStyle : null)}
-            className='no-outline'
-            onClick={function () { this.props.onChange(Mode.DESIGN); }.bind(this)}>
-          {msg.designMode()}
-        </button>
+        <ToggleButton id='codeModeButton'
+                      style={$.extend({}, styles.codeButtonStyle,
+                            this.props.mode === Mode.CODE ? styles.activeStyle : styles.inactiveStyle,
+                            this.props.hideToggle ? styles.hiddenStyle : null)}
+                      onClick={function () { this.props.onChange(Mode.CODE); }.bind(this)}>{msg.codeMode()}</ToggleButton>
+        <ToggleButton id='designModeButton'
+                      style={$.extend({}, styles.designButtonStyle,
+                            this.props.mode === Mode.DESIGN ? styles.activeStyle : styles.inactiveStyle,
+                            this.props.hideToggle ? styles.hiddenStyle : null)}
+                      onClick={function () { this.props.onChange(Mode.DESIGN); }.bind(this)}>{msg.designMode()}</ToggleButton>
       </span>
     );
   }
