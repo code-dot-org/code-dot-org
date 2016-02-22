@@ -65,7 +65,7 @@ end
 
 namespace :circle do
   task :run_tests, [:force_all_tests_tag] do |_, args|
-    run_all_tests_tag = args[:force_tests_commit_tag]
+    run_all_tests_tag = args[:force_all_tests_tag]
     if RakeUtils.circle_commit_contains(run_all_tests_tag)
       HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' contains #{run_all_tests_tag}, force-running all tests."
       RakeUtils.rake 'test:all'
