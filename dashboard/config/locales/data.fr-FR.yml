@@ -673,22 +673,22 @@
         studio_k1_5: Peux-tu ajouter un bloc pour rendre la pieuvre heureuse ?
         studio_k1_6: Crée ta propre histoire! Déplace le chat et le chien autour,
           et fais-les dire des choses.
-        maze_wordsearch_k_1: Déplace-moi pour épeler le mot EST
-        maze_wordsearch_k_2: Déplace-moi pour épeler le mot SUD
-        maze_wordsearch_k_3: Déplace-moi pour épeler le mot OUEST
-        maze_wordsearch_k_4: Déplace-moi pour épeler le mot NORD
+        maze_wordsearch_k_1: Déplace-moi pour épeler le mot anglais EAST
+        maze_wordsearch_k_2: Déplace-moi pour épeler le mot anglais SOUTH
+        maze_wordsearch_k_3: Déplace-moi pour épeler le mot anglais WEST
+        maze_wordsearch_k_4: Déplace-moi pour épeler le mot anglais NORTH
         maze_wordsearch_k_6: Déplace-moi vers l'Est puis vers le Sud pour épeler le
-          mot SAUTER
+          mot anglais JUMP
         maze_wordsearch_k_9: Déplace-moi dans une direction, puis une autre, pour
           épeler le mot CODE
         maze_wordsearch_k_13: Déplace-moi dans une direction, puis une autre, pour
-          épeler le mot DÉBOGAGE
+          épeler le mot anglais DEBUG
         maze_wordsearch_k_15: Déplace-moi dans une direction, puis une autre, pour
-          épeler le terme AU-DESSUS
+          épeler le mot anglais ABOVE
         maze_wordsearch_k_16: Déplace-moi dans une direction, puis une autre, pour
-          épeler le terme EN DESSOUS
+          épeler le mot anglais BELOW
         maze_wordsearch_k_20: C'est un test ! Déplace-moi dans une direction, puis
-          une autre, pour épeler le mot HISTOIRE
+          une autre, pour épeler le mot anglais STORY
         applab_ec_simple: Crées ton applu en utilisant les blocs de la boite à outils.
         turtle_ec_1_2: 'Maintenant, dessinez un carré. NOTE: utilisez votre couleur
           préferrée en la choisissant dans le nouveau block "penColor".'

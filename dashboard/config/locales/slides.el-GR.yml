@@ -2099,58 +2099,59 @@
           βάλει τα κομμάτια."
       2:
         image: notes/C4_unplugged_algorithms_2.png
-        text: An algorithm is just a of list steps that you can take to complete a
-          task. We use them every day with things like shopping lists and recipes.
-          If you keep an algorithm simple, there are lots of ways to interpret it
-          and whoever performs that algorithm might not get exactly what you wanted.
-          If you want to make sure that everyone ends up with the exact same thing,
-          then your algorithm will need to be detailed and very specific.
+        text: "Ένας αλγόριθμος είναι μια λίστα βημάτων που μπορείς να ακολουθήσεις
+          για να ολοκληρώσεις μια εργασία. τους χρησιμοποιούμε κάθε μέρα με πράγματα
+          όπως λίστες αγορών και συνταγές. Εάν διατηρείς έναν αλγόριθμο απλό, υπάρχουν
+          πολλοί τρόποι για να τον ερμηνεύσεις και όποιος εκτελεί τον λόγω αλγόριθμο
+          μπορεί να μην πάρει ακριβώς αυτό που θέλεις. Αν θέλεις να βεβαιωθείς ότι
+          ο καθένας καταλήγει με ακριβώς το ίδιο πράγμα, τότε ο αλγόριθμός σας θα
+          πρέπει να είναι λεπτομερής και πολύ συγκεκριμένος."
       3:
         image: notes/C4_unplugged_algorithms_3.png
-        text: I'm using an algorithm today to complete a painting. I wanted to try
-          doing a painting of some wolves but I'm not the most amazing painter. Luckily
-          for people by me, there is paint by numbers. There are forty colors and
-          it has little letters and numbers that tell you which color to paint each
-          section. Paint by numbers tells me exactly what color to use and where.
+        text: "Σήμερα χρησιμοποιώ εναν αλγόριθμο για να ολοκληρώσω μια ζωγραφική.
+          Ηθελα να προσπαθήσω να κάνω μια ζωγραφια με λύκους αλλά δεν είμαι εκπληκτικός
+          ζωγράφος. Ευτυχώς για ανθρώπους σαν εμένα, υπάρχει ζωγραφική με αριθμούς.
+          Υπάρχουν σαράντα χρώματα και μικρά γράμματα και αριθμοί που σου λένε τι
+          χρώμα να ζωγραφίσεις κάθε περιοχή. Η ζωγραφική με αριθμούς μου λέει ακριβώς
+          τι χρώμα να χρησιμοποιήσω και πού."
       4:
         image: notes/C4_unplugged_algorithms_4.png
-        text: It's very specific so I'm able to follow directions and the painting
-          will come out looking awesome. It's a great algorithm. If the instructions
-          weren't specific enough, my wolves wouldn't look as good. When you really
-          want something to turn out exactly the way that you planned it, it's best
-          to be extremely precise.
+        text: "Είναι πολύ ακριβές και έτσι μπορώ να ακολουθώ οδηγίες και η ζωγραφιά
+          θα είναι φοβερή. Είναι ένας υπέροχος αλγόριθμος. Αν οι εντολές δεν ήταν
+          αρκετά ακριβείς, οι λύκοι μου δεν θα φαίνονταν τόσο καλά. Οταν πραγματικά
+          θέλεις κάτι να γίνει ακριβώς όπως το προγραμμάτισες, είναι καλύτερα να είναι
+          εξαιρετικά ακριβής."
     C4_unplugged_binary:
       1:
         image: notes/C4_unplugged_binary_1.png
-        text: Each team, the person who's instructing that's the person who's holding
-          the paper, has to figure out what their off symbol is going to be and what
-          their on symbol is going to be. In binary, it's kind of like an alphabet
-          with two letters. Like having A and B be your entire alphabet but you've
-          got a 0 and a 1.
+        text: "Κάθε ομάδα, το πρόσωπο που καθοδηγεί δηλαδή το πρόσωπο που κρατά το
+          χαρτί, πρέπει να καταλάβει ποιό είναι το σύμβολο on και ποιό το off. Το
+          δυαδικό είναι σαν ενα αλφάβητο με δύο γράμματα. Σαν το Α και το Β να είναι
+          όλο το αλφάβητο αλλά έχεις 0 και 1."
       2:
         image: notes/C4_unplugged_binary_2.png
-        text: The most common way you use binary is in an if statement. It's a classic
-          thing from programming. The program runs along and it says if something
-          is true, then do this. Or it's not true and you do something else. What
-          if you want to do something maybe a little more complicated. Instead an
-          if statement, you want to work with something like an image or a sound in
-          a computer.
+        text: 'Ο πιο συνηθισμένος τρόπος να χρησιμοποιήσετε το δυαδικό είναι μια εντολή
+          "εαν". Είναι ένα κλασικό πράγμα για τον προγραμματιστή. Το πρόγραμμα που
+          τρέχει και λέει: αν κάτι είναι αλήθεια, τότε κάνε αυτό. Ή αν δεν είναι αλήθεια
+          τότε κάνε κάτι άλλο. Τι θα συμβεί αν θέλες να κάνεις κάτι ίσως λίγο πιο
+          περίπλοκο. Instead an if statement, you want to work with something like
+          an image or a sound in a computer.'
       3:
         image: notes/C4_unplugged_binary_3.png
-        text: 'A computer only knows binary but an image, it''s not binary, it''s
-          not ones and zeros so how do you do that? Here''s an example: You have this
-          beautiful picture. Now a picture is basically a form of information. All
-          information can be encoded in binary one way or another, you just have to
-          figure out how to do it.'
+        text: "Ένας υπολογιστής ξέρει μόνο δυαδικό σύστημα αλλά μια εικόνα, δεν είναι
+          δυαδική, δεν είναι άσσοι και μηδενικά, οπότε πως το κάνεις αυτό; Εδώ είναι
+          ένα παράδειγμα: έχετε αυτή την όμορφη εικόνα. Τώρα, μια εικόνα είναι βασικά
+          μια μορφή ενημέρωσης. Όλες οι πληροφορίες μπορεί να κωδικοποιηθούν σε δυαδική
+          μορφή με τον ένα ή τον άλλο τρόπο, απλά πρέπει να καταλάβεις πώς να το κάνεις."
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: You imagine that we're going to put a grid over this panda bear and
-          for each square, we're going to decide whether that square is more black
-          or more white. And then we're going to color it that way. Now each cell
-          on the grid is either black or white and then the black squares we say those
-          are zeros (binary digit) and the white squares are ones, the other binary
-          digit. At the end, you're left with just a bunch of ones and zeros. That's
-          how you represent this image in binary.
+        text: "Φαντάζεσαι ότι θα τοποθετήσουμε ένα πλέγμα πάνω από αυτό το αρκουδάκι
+          παντα και για κάθε τετράγωνο, θα αποφασίσουμε αν αυτό το τετράγωνο είναι
+          πιο μαύρο ή πιο άσπρο. Και, στη συνέχεια, θα το χρωματίσουμε με αυτόν τον
+          τρόπο. Τώρα κάθε κελί του πλέγματος είναι είτε μαύρο ή άσπρο και στη συνέχεια
+          λέμε ότι τα μαύρα τετράγωνα, είναι μηδενικά (δυαδικό ψηφίο) και τα λευκά
+          τετράγωνα είναι άσσοι, το άλλαο δυαδικό ψηφίο. Στο τέλος, σας μένει μια
+          δέσμη μηδεν και ένα. Ετσι απεικονίζουμε σε δυαδική μορφή αυτην την εκόνα."
     C4_unplugged_forloops:
       1:
         image: notes/C4_unplugged_forloops_1.png

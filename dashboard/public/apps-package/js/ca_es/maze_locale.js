@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "Lloc d'unitat 1 de brutícia"},
 "finalLevel":function(d){return "Felicitats! Has resolt el puzzle final."},
 "flowerEmptyError":function(d){return "La flor on estàs no té més nèctar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "aconseguir"},
 "heightParameter":function(d){return "alçcada"},
 "holePresent":function(d){return "hi ha un forat"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Repetiu les accions tancades fins que s'arribi al punt final."},
 "word":function(d){return "Troba la paraula"},
 "yes":function(d){return "Sí"},
-"youSpelled":function(d){return "Has escrit"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Has escrit"}};

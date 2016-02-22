@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "stavi 1 komad zemlje"},
 "finalLevel":function(d){return "Čestitamo ! Riješili ste posljednji zadatak."},
 "flowerEmptyError":function(d){return "Cvijet na kojem se nalaziš nema više nektara."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "uzmi"},
 "heightParameter":function(d){return "visina"},
 "holePresent":function(d){return "ovdje je rupa"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Ponavlja umetnute akcije dok se ne dosegne zadani cilj."},
 "word":function(d){return "Pronađi riječ"},
 "yes":function(d){return "Da"},
-"youSpelled":function(d){return "Napisao si"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Napisao si"}};
