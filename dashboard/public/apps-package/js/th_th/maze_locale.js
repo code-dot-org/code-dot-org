@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "ว่างก้อนดิน 1 หน่วย"},
 "finalLevel":function(d){return "ขอแสดงความยินดีคุณสามารถแก้ปัญหาสุดท้ายได้แล้ว."},
 "flowerEmptyError":function(d){return "ดอกไม้ที่มีอยู่นั้นไม่มีน้ำหวานอีกแล้ว"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "ได้รับ"},
 "heightParameter":function(d){return "ความสูง"},
 "holePresent":function(d){return "มีรูอยู่"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด"},
 "word":function(d){return "ค้นหาคำ"},
 "yes":function(d){return "ใช่"},
-"youSpelled":function(d){return "คุณถูกสะกด"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "คุณถูกสะกด"}};

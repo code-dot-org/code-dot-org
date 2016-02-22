@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "ერთი ერთეული მიწის განლაგება"},
 "finalLevel":function(d){return "გილოცავთ! თქვენ ამოხსენით უკანასკნელი თავსატეხი."},
 "flowerEmptyError":function(d){return "ყვავილს, რომელზეც ახლა ხართ, ნექტარი აღარ აქვს."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "ამოღება"},
 "heightParameter":function(d){return "სიმაღლე"},
 "holePresent":function(d){return "აქ ორმოა"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე."},
 "word":function(d){return "იპოვეთ სიტყვა"},
 "yes":function(d){return "დიახ"},
-"youSpelled":function(d){return "თქვენ შეიყვანეთ"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "თქვენ შეიყვანეთ"}};

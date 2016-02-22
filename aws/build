@@ -47,7 +47,7 @@ def main()
     status = 1
     Dir.chdir(aws_dir) do
       RakeUtils.bundle_install
-      status = RakeUtils.system_ 'rake', '--rakefile', 'build.rake', *ARGV
+      status = RakeUtils.rake '--rakefile', 'build.rake', *ARGV
     end
 
     FileUtils.rm 'build-started' if File.file?('build-started')
