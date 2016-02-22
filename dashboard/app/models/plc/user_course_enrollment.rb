@@ -18,29 +18,32 @@
 class Plc::UserCourseEnrollment < ActiveRecord::Base
   belongs_to :plc_course, class_name: '::Plc::Course'
   belongs_to :user, class_name: 'User'
-  has_many :module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
-  has_many :task_assignments, through: :module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
+  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
+  has_many :plc_task_assignments, through: :plc_module_assignments, class_name: '::Plc::EnrollmentTaskAssignment', dependent: :destroy
 
   validates :user, presence: true
   validates :plc_course, presence: true
 
-  def complete_course
-    self.status = :completed
-    self.save!
-  end
+  def enroll_user_in_course_with_learning_modules(learning_modules)
+    self.plc_module_assignments.destroy_all
 
-  def enroll_user_in_course_with_learning_modules learning_modules
-    self.module_assignments.destroy_all
+    transaction do
+      learning_modules.each do |learning_module|
+        module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_user_course_enrollment: self, plc_learning_module: learning_module)
 
-    learning_modules.each do |learning_module|
-      module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_user_course_enrollment: self, plc_learning_module: learning_module)
-
-      learning_module.plc_tasks.each do |task|
-        Plc::EnrollmentTaskAssignment.find_or_create_by(plc_enrollment_module_assignment: module_assignment, plc_task: task, status: :not_started)
+        learning_module.plc_tasks.each do |task|
+          Plc::EnrollmentTaskAssignment.find_or_create_by(plc_enrollment_module_assignment: module_assignment, plc_task: task, status: :not_started)
+        end
       end
     end
 
     self.status = :in_progress
     self.save!
+  end
+
+  def check_for_course_completion
+    if !plc_task_assignments.exists?(['status != ?', 'completed'])
+      update!(status: :completed)
+    end
   end
 end

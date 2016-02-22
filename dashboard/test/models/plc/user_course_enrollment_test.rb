@@ -12,12 +12,14 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @plc_course)
     enrollment.enroll_user_in_course_with_learning_modules([@learning_module])
     enrollment.reload
-    module_assignments = enrollment.module_assignments
-    task_assignments = enrollment.task_assignments
+    module_assignments = enrollment.plc_module_assignments
+    task_assignments = enrollment.plc_task_assignments
 
     assert_equal 1, module_assignments.count
     assert_equal 1, task_assignments.count
     assert_equal @learning_module, module_assignments.first.plc_learning_module
     assert_equal @plc_task, task_assignments.first.plc_task
   end
+
+
 end

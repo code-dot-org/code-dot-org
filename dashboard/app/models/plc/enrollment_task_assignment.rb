@@ -19,15 +19,13 @@ class Plc::EnrollmentTaskAssignment < ActiveRecord::Base
   belongs_to :plc_enrollment_module_assignment, class_name: '::Plc::EnrollmentModuleAssignment'
   belongs_to :plc_task, class_name: '::Plc::Task'
 
+  after_update :check_course_completion
+
   def complete_assignment
-    self.status = :completed
-    self.save!
+    update!(status: :completed)
+  end
 
-    #Upon saving an assignment, there's a possibility that a course has been completed
-    enrollment = self.plc_enrollment_module_assignment.plc_user_course_enrollment
-
-    if !enrollment.task_assignments.exists?(['status != ?', 'completed'])
-      enrollment.complete_course
-    end
+  def check_course_completion
+    plc_enrollment_module_assignment.plc_user_course_enrollment.check_for_course_completion
   end
 end
