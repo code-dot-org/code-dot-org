@@ -178,7 +178,7 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block, opt_showHidden) {
   if (!block) {
     return '';
   }
-  var showHidden = (typeof opt_showHidden == "undefined") ? true : opt_showHidden;
+  var showHidden = opt_showHidden == undefined ? true : opt_showHidden;
   if (block.disabled || (!showHidden && !block.isUserVisible())) {
     // Skip past this block if it is disabled or hidden.
     var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
