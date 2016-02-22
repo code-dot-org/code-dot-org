@@ -464,7 +464,7 @@ exports.generateDropletModeOptions = function (config) {
         beginner: config.level.beginnerMode || false
       },
       functions: { color: COLOR_GREEN },
-      returns: { color: COLOR_BLUE },
+      returns: { color: COLOR_GREEN },
       comments: { color: COLOR_WHITE },
       containers: { color: COLOR_PURPLE },
       value: { color: COLOR_PURPLE },
