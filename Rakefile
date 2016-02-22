@@ -62,6 +62,26 @@ def run_tests_if_changed(identifier, changed_globs)
   end
 end
 
+namespace :circle do
+  task :run_ui_tests, [:force_tests_commit_tag] do |_, args|
+    run_ui_tests_tag = args[:force_tests_commit_tag]
+    if RakeUtils.circle_commit_contains(run_ui_tests_tag)
+      HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' contains #{run_ui_tests_tag}, running UI tests."
+      RakeUtils.system 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
+      RakeUtils.system 'tar -xzf sc-latest-linux.tar.gz'
+      Dir.chdir(Dir.glob('sc-*-linux')[0]) do
+        RakeUtils.system './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY &'
+      end
+      RakeUtils.system 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+      Dir.chdir('dashboard/test/ui') do
+        RakeUtils.system 'bundle exec ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html'
+      end
+    else
+      HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' does not contain #{run_ui_tests_tag}, skipping UI tests."
+    end
+  end
+end
+
 namespace :test do
   namespace :changed do
     task :apps do

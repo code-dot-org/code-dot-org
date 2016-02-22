@@ -35,9 +35,6 @@ dependencies:
     - 'echo "build_shared_js: true" >> locals.yml'
     - 'echo "build_dashboard: true" >> locals.yml'
     - 'echo "build_pegasus: true" >> locals.yml'
-  post:
-    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
-    - tar -xzf sc-latest-linux.tar.gz
 database:
     override:
       - bundle exec rake db:create:
@@ -67,12 +64,5 @@ test:
         - ./test.sh:
             pwd:
                 cookbooks
-        # The following should only be run when [run-ui-tests] included in commit hash
-        - "./bin/circle/should-ui-test [run-ui-tests] && ./bin/dashboard-server":
-            background: true
-        - "./bin/circle/should-ui-test [run-ui-tests] && cd sc-*-linux && ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY":
-            background: true
-        - "./bin/circle/should-ui-test [run-ui-tests] && until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done"
-        - "../../../bin/circle/should-ui-test [run-ui-tests] && ./runner.rb -c ChromeLatestWin7 -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --parallel 7 --auto_retry --html":
-            pwd:
-                dashboard/test/ui
+        # Only run UI tests when [ui test] included in commit hash
+        - bundle exec rake circle:run_ui_tests['[ui test]']

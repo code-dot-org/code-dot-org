@@ -204,4 +204,13 @@ module RakeUtils
     `git diff --cached --name-only`.split("\n").
         concat(`git diff --name-only`.split("\n")).uniq
   end
+
+  def self.circle_commit_contains(string)
+    message = circle_commit_message
+    message.include?(string)
+  end
+
+  def self.circle_commit_message
+    `git log --format=%B -n 1 $CIRCLE_SHA1`.strip
+  end
 end
