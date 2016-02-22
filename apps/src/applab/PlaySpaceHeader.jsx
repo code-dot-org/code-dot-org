@@ -1,3 +1,4 @@
+/** @file Row of controls above the visualization. */
 // Strict linting: Absorb into global config when possible
 /* jshint
  unused: true,
@@ -8,7 +9,7 @@
 
 var msg = require('../locale');
 var constants = require('./constants');
-var styles = require('./DesignToggleRowStyles');
+var styles = require('./PlaySpaceHeaderStyles');
 var ViewDataButton = require('./ViewDataButton.jsx');
 var ScreenSelector = require('./ScreenSelector.jsx');
 
@@ -17,7 +18,7 @@ var Mode = {
   DESIGN: 'DESIGN'
 };
 
-var DesignToggleRow = React.createClass({
+var PlaySpaceHeader = React.createClass({
   propTypes: {
     hideToggle: React.PropTypes.bool.isRequired,
     hideViewDataButton: React.PropTypes.bool.isRequired,
@@ -109,4 +110,4 @@ var DesignToggleRow = React.createClass({
     );
   }
 });
-module.exports = DesignToggleRow;
+module.exports = PlaySpaceHeader;
