@@ -1,0 +1,10 @@
+- image_path = "/images/app-lab/#{item[:image]}.png"
+
+.highlight-item
+  %a.learnmore-link{href: item[:url]}
+    .highlight-img{style: "background-image:url(#{image_path})"}
+    .highlight-caption
+      %h4.caption-headline= item[:title]
+      .highlight-description= item[:desc]
+      %br
+    .learn-button= item[:cta]
