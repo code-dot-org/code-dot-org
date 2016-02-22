@@ -32,13 +32,14 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <description>draw a triangle that is 50 pixels in size</description>
           </mutation>
