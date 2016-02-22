@@ -25,9 +25,9 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   validates :plc_course, presence: true
 
   def enroll_user_in_course_with_learning_modules(learning_modules)
-    self.plc_module_assignments.destroy_all
-
     transaction do
+      plc_module_assignments.destroy_all
+
       learning_modules.each do |learning_module|
         module_assignment = Plc::EnrollmentModuleAssignment.find_or_create_by(plc_user_course_enrollment: self, plc_learning_module: learning_module)
 

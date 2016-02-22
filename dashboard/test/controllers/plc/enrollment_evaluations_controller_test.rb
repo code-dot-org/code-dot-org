@@ -70,8 +70,8 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   test "submit evaluation enrolls user in appropriate modules" do
     #Sir Lancelot says that his name is Lancelot, his quest is to seek the grail, and that his favorite color is blue.
     #He should be enrolled only in "Answering questions honestly"
-    # do_expected_answers_yield_expected_module_enrollments(
-    #     [@answer1_1.plc_task_id, @answer2_1.plc_task_id, @answer3_1.plc_task_id].to_s, [@module3])
+    do_expected_answers_yield_expected_module_enrollments(
+        [@answer1_1.plc_task_id, @answer2_1.plc_task_id, @answer3_1.plc_task_id].to_s, [@module3])
 
     #Sir Robin says that his name is Robin, his quest is to seek the grail, and that he doesn't know the capital of Assyria
     #He should be enrolled in "Answering questions honestly" and "Admitting Ignorance"
