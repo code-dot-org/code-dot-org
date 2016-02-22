@@ -10,7 +10,7 @@ Feature: App Lab HTML Sanitization
     When I drag a SCREEN into the app
     And I drag a SCREEN into the app
     And I drag a LABEL into the app
-    # Set label text via the property editor instead of editing the DOM directly,
+    # We should set label text via the property editor instead of editing the DOM directly,
     # if we ever figure out how to make React notice changes to input fields in IE.
     And I set selector "#design_label1" text to ""
     And I drag a TEXT_AREA into the app
