@@ -8,7 +8,6 @@
 
 var constants = require('./constants');
 var msg = require('../locale');
-var styles = require('./PlaySpaceHeaderStyles');
 var ToggleButton = require('./ToggleButton.jsx');
 
 var Mode = constants.MODE;
@@ -29,11 +28,11 @@ var ToggleGroup = React.createClass({
       <span>
         <ToggleButton id='codeModeButton'
                       active={this.props.mode === Mode.CODE}
-                      style={styles.codeButtonStyle}
+                      first={true}
                       onClick={function () { this.props.onChange(Mode.CODE); }.bind(this)}>{msg.codeMode()}</ToggleButton>
         <ToggleButton id='designModeButton'
                       active={this.props.mode === Mode.DESIGN}
-                      style={styles.designButtonStyle}
+                      last={true}
                       onClick={function () { this.props.onChange(Mode.DESIGN); }.bind(this)}>{msg.designMode()}</ToggleButton>
       </span>
     );

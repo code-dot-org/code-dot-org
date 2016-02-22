@@ -5,28 +5,25 @@
  eqeqeq: true,
  maxlen: 120
  */
-/* global $ */
-
-var buttonStyle = {
-  display: 'inline-block',
-  verticalAlign: 'top',
-  border: '1px solid #949ca2',
-  margin: '0 0 8px 0',
-  padding: '2px 6px',
-  fontSize: 14
-};
 
 module.exports = {
-  buttonStyle: buttonStyle,
-  codeButtonStyle: $.extend({}, buttonStyle, {
+  buttonStyle: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    border: '1px solid #949ca2',
+    margin: '0 0 8px 0',
+    padding: '2px 6px',
+    fontSize: 14
+  },
+  firstButtonStyle: {
     borderBottomRightRadius: 0,
     borderTopRightRadius: 0,
-    borderRightWidth: 0
-  }),
-  designButtonStyle: $.extend({}, buttonStyle, {
+    borderRightWidth: '0 !important'
+  },
+  lastButtonStyle: {
     borderBottomLeftRadius: 0,
     borderTopLeftRadius: 0
-  }),
+  },
   activeStyle: {
     backgroundColor: '#ffa000',
     color: '#fff',
