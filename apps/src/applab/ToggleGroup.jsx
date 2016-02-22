@@ -5,7 +5,6 @@
  eqeqeq: true,
  maxlen: 120
  */
-/* global $ */
 
 var constants = require('./constants');
 var msg = require('../locale');
@@ -22,17 +21,19 @@ var ToggleGroup = React.createClass({
   },
 
   render: function () {
+    if (this.props.hideToggle) {
+      return <span />;
+    }
+
     return (
       <span>
         <ToggleButton id='codeModeButton'
                       active={this.props.mode === Mode.CODE}
-                      style={$.extend({}, styles.codeButtonStyle,
-                            this.props.hideToggle ? styles.hiddenStyle : null)}
+                      style={styles.codeButtonStyle}
                       onClick={function () { this.props.onChange(Mode.CODE); }.bind(this)}>{msg.codeMode()}</ToggleButton>
         <ToggleButton id='designModeButton'
                       active={this.props.mode === Mode.DESIGN}
-                      style={$.extend({}, styles.designButtonStyle,
-                            this.props.hideToggle ? styles.hiddenStyle : null)}
+                      style={styles.designButtonStyle}
                       onClick={function () { this.props.onChange(Mode.DESIGN); }.bind(this)}>{msg.designMode()}</ToggleButton>
       </span>
     );
