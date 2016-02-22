@@ -188,7 +188,7 @@ applabCommands.setScreen = function (opts) {
   apiValidateDomIdExistence(opts, 'setScreen', 'screenId', opts.screenId, true);
   var element = document.getElementById(opts.screenId);
   var divApplab = document.getElementById('divApplab');
-  if (!divApplab.contains(element)) {
+  if (!element || (element.parentNode != divApplab)) {
     return;
   }
 
