@@ -245,6 +245,112 @@ var handleDeleteRecord = function(tableName, record, onComplete, onError) {
 };
 
 /**
+ * This is a partial implementation of onRecordEvent in the following ways:
+ * 1. it polls instead of properly listening for notifications when data changes;
+ * 2. it only issues callbacks when records are created (not updated or deleted);
+ * 3. it assumes that record ids are strictly increasing. This is not currently true but
+ *    would become so if we decide to implement
+ *    https://www.pivotaltracker.com/story/show/110169770
+ * @param tableName Table to listen to.
+ * @param onRecord Callback to call when a record is added to the table.
+ * @param onError Callback to call with an error to show to the user.
+ */
+AppStorage.onRecordEvent = function(tableName, onRecord, onError) {
+  if (!tableName) {
+    onError('Error listening for record events: missing required parameter "tableName"');
+    return;
+  }
+
+  if (!addRecordListener(tableName, onRecord)) {
+    onError('You are already listening for events on table "' + tableName + '". ' +
+      'only on event handler can be registered per table.');
+  }
+};
+
+var RECORD_INTERVAL = 1000; // 1 second
+
+/**
+ *  @type {Object} Map from tableName to callback
+ */
+var recordListeners = {};
+
+/**
+ * @type {Object} Map from tableName to last record id already sent to the user.
+ */
+var lastRecordSeen = {};
+
+var recordIntervalId = null;
+
+var RecordEventType = {
+  CREATE: 'create',
+  UPDATE: 'update',
+  DELETE: 'delete'
+};
+
+/**
+ * Returns true if adding the listener succeeded, or false if
+ * a listener already existed for the specified table.
+ */
+function addRecordListener(tableName, callback) {
+  if (typeof recordListeners[tableName] === 'function') {
+    return false;
+  }
+
+  recordListeners[tableName] = callback;
+  lastRecordSeen[tableName] = 0;
+
+  if (recordIntervalId === null) {
+    recordIntervalId = setInterval(function recordListener() {
+      for (var tableName in recordListeners) {
+        fetchNewRecords(tableName);
+      }
+    }, RECORD_INTERVAL);
+  }
+  return true;
+}
+
+function fetchNewRecords(tableName) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = reportNewRecords.bind(req, tableName);
+  var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
+  req.open('GET', url, true);
+  req.send();
+}
+
+function reportNewRecords(tableName) {
+  var done = XMLHttpRequest.DONE || 4;
+  if (this.readyState !== done) {
+    return;
+  }
+
+  if (this.status < 200 || this.status >= 300) {
+    // ignore errors
+    return;
+  }
+
+  var callback = recordListeners[tableName];
+  var records = JSON.parse(this.responseText);
+
+  // Records in this response are assumed to have strictly increasing ids.
+  for (var i = 0; i < records.length; i++) {
+    var record = records[i];
+    if (record.id > lastRecordSeen[tableName]) {
+      callback(record, RecordEventType.CREATE);
+      lastRecordSeen[tableName] = record.id;
+    }
+  }
+}
+
+AppStorage.clearRecordListeners = function () {
+  if (recordIntervalId) {
+    clearInterval(recordIntervalId);
+    recordIntervalId = null;
+  }
+  recordListeners = {};
+  lastRecordSeen = {};
+};
+
+/**
  * Populates a channel with table data for one or more tables
  * @param {string} jsonData The json data that represents the tables in the format of:
  *   {
