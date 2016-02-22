@@ -14,7 +14,7 @@ The College Board has proposed a new AP® course called AP® Computer Science: P
 
 <%= view :three_circles, circles: [
 {img: '/images/testimonials/fit-150/students-1.jpg', text: '90% of workshop attendees ranked it the best professional development ever.'},
-{img: '/images/testimonials/fit-150/student-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have every implemented."'},
+{img: '/images/testimonials/fit-150/student-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
 {img: '/images/testimonials/fit-150/students-2.jpg', text: '"This curriculum is way better than current high school curriculum for almost any subject."'}] %>
 
 <br />
