@@ -18,4 +18,6 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
   has_many :plc_task_assignments, class_name: '::Plc::EnrollmentTaskAssignment', foreign_key: 'plc_enrollment_module_assignment_id', dependent: :destroy
+
+  validates :plc_user_course_enrollment, presence: true
 end
