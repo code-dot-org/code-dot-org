@@ -30,14 +30,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "examples_required": "false"
-  }
+    "examples_required": "false",
+    "never_autoplay_video": "false"
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" uservisible="false" usercreated="true">
+        <block type="procedures_defnoreturn" usercreated="true">
           <mutation/>
           <title name="NAME">draw a square</title>
           <statement name="STACK">
