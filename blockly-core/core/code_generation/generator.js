@@ -63,7 +63,7 @@ Blockly.Generator.get = function(name) {
  * @param {string} name Language name (e.g. 'JavaScript').
  * @param {array} blocks Return code under blocks in this array.
  * @param {boolean} opt_showHidden Whether or not to show non-user visible
- *   blocks, defaults to true.
+ *   blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string} Generated code.
  */
 Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
@@ -101,7 +101,7 @@ Blockly.Generator.blocksToCode = function(name, blocks, opt_showHidden) {
  * @param {?string|Array.<string>} opt_typeFilter Only return code under top
  *   blocks of this type (or list of types).
  * @param {boolean} opt_showHidden Whether or not to show non-user visible
- *   blocks, defaults to true.
+ *   blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string} Generated code.
  */
 Blockly.Generator.blockSpaceToCode = function(name, opt_typeFilter, opt_showHidden) {
@@ -169,7 +169,7 @@ Blockly.CodeGenerator = function(name) {
  * Generate code for the specified block (and attached blocks).
  * @param {Blockly.Block} block The block to generate code for.
  * @param {boolean} opt_showHidden Whether or not to show non-user visible
- *     blocks, defaults to true.
+ *     blocks, defaults to true. Nested blocks always inherit visibility.
  * @return {string|!Array} For statement blocks, the generated code.
  *     For value blocks, an array containing the generated code and an
  *     operator order value.  Returns '' if block is null.
