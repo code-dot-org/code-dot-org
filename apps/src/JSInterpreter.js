@@ -8,6 +8,7 @@
 var codegen = require('./codegen');
 var ObservableEvent = require('./ObservableEvent');
 var utils = require('./utils');
+var jsArray = require('./jsArray');
 
 /**
  * Create a JSInterpreter object. This object wraps an Interpreter object and
@@ -113,6 +114,10 @@ JSInterpreter.prototype.parse = function (options) {
     self.interpreter = interpreter;
     // Store globalScope on JSInterpreter
     self.globalScope = scope;
+
+    // Override some of the built-in JS functions provided by the Interpreter:
+    self.overrideInterpreterJSFunctions();
+
     // Override Interpreter's get/set Property functions with JSInterpreter
     interpreter.getProperty = self.getProperty.bind(
         self,
@@ -165,6 +170,22 @@ JSInterpreter.prototype.parse = function (options) {
     this.handleError(err);
   }
 
+};
+
+/**
+ * Override the implementations of specific built-in JavaScript functions from
+ * the Interpreter object.
+ */
+JSInterpreter.prototype.overrideInterpreterJSFunctions = function () {
+
+  var arraySort = jsArray.generateSort(this);
+
+  this.interpreter.setProperty(
+      this.interpreter.ARRAY.properties.prototype,
+      'sort',
+      this.interpreter.createNativeFunction(arraySort),
+      false,
+      true);
 };
 
 /**
