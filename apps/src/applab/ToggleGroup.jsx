@@ -19,6 +19,10 @@ var ToggleGroup = React.createClass({
     onChange: React.PropTypes.func.isRequired
   },
 
+  setMode: function (mode) {
+    this.props.onChange(mode);
+  },
+
   render: function () {
     if (this.props.hideToggle) {
       return <span />;
@@ -29,11 +33,11 @@ var ToggleGroup = React.createClass({
         <ToggleButton id='codeModeButton'
                       active={this.props.mode === Mode.CODE}
                       first={true}
-                      onClick={function () { this.props.onChange(Mode.CODE); }.bind(this)}>{msg.codeMode()}</ToggleButton>
+                      onClick={this.setMode.bind(this, Mode.CODE)}>{msg.codeMode()}</ToggleButton>
         <ToggleButton id='designModeButton'
                       active={this.props.mode === Mode.DESIGN}
                       last={true}
-                      onClick={function () { this.props.onChange(Mode.DESIGN); }.bind(this)}>{msg.designMode()}</ToggleButton>
+                      onClick={this.setMode.bind(this, Mode.DESIGN)}>{msg.designMode()}</ToggleButton>
       </span>
     );
   }
