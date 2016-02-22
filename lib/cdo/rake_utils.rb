@@ -14,6 +14,13 @@ module RakeUtils
     [status, output]
   end
 
+  def self.system_background__(command)
+    puts command
+    output = `#{command} 2>&1 &`
+    status = $?.exitstatus
+    [status, output]
+  end
+
   def self.command_(*args)
     # BUGBUG: Should escape for shell here and verify no callers do that.
     args.map(&:to_s).join(' ')
@@ -40,6 +47,15 @@ module RakeUtils
   def self.system(*args)
     command = command_(*args)
     status, output = system__ command
+    unless status == 0
+      error = RuntimeError.new("'#{command}' returned #{status}")
+      raise error, error.message, CDO.filter_backtrace([output])
+    end
+  end
+
+  def self.system_background(*args)
+    command = command_(*args)
+    status, output = system_background__ command
     unless status == 0
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message, CDO.filter_backtrace([output])

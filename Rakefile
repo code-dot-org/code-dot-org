@@ -81,7 +81,7 @@ namespace :circle do
       RakeUtils.system 'wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz'
       RakeUtils.system 'tar -xzf sc-latest-linux.tar.gz'
       Dir.chdir(Dir.glob('sc-*-linux')[0]) do
-        RakeUtils.system './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY &'
+        RakeUtils.system_background './bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY'
       end
       RakeUtils.system 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
       Dir.chdir('dashboard/test/ui') do
