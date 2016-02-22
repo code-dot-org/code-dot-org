@@ -13,7 +13,8 @@ var ToggleButton = React.createClass({
   propTypes: {
     id: React.PropTypes.string,
     active: React.PropTypes.bool.isRequired,
-    style: React.PropTypes.object,
+    first: React.PropTypes.bool,
+    last: React.PropTypes.bool,
     onClick: React.PropTypes.func.isRequired
   },
 
@@ -30,8 +31,11 @@ var ToggleButton = React.createClass({
   },
 
   getStyle: function () {
-    return $.extend({}, this.props.style,
-        this.props.active ? styles.activeStyle : styles.inactiveStyle);
+    return $.extend({},
+        styles.buttonStyle,
+        this.props.active ? styles.activeStyle : styles.inactiveStyle,
+        this.props.first ? styles.firstButtonStyle: null,
+        this.props.last ? styles.lastButtonStyle : null);
   }
 });
 module.exports = ToggleButton;
