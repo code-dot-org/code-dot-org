@@ -58,7 +58,7 @@ var NESTED_HIDDEN_VAR_REASSIGNMENT =
             '<block type="variables_set" inline="false">' +
               '<title name="VAR">x</title>' +
               '<value name="VALUE">' +
-                '<block type="math_number" uservisible="false">' +
+                '<block type="math_number">' +
                   '<title name="NUM">2</title>' +
                 '</block>' +
               '</value>' +
@@ -78,6 +78,18 @@ var NESTED_HIDDEN_VAR_REASSIGNMENT =
       '</next>' +
     '</block>' +
   '</xml>';
+
+function test_showHiddenDefaultsToTrue() {
+  Blockly.Test.initializeBlockSpaceEditor();
+  var blockSpace = Blockly.mainBlockSpace;
+
+  Blockly.Xml.domToBlockSpace(blockSpace, Blockly.Xml.textToDom(
+      HIDDEN_VAR_REASSIGNMENT));
+
+  var generatedCode =
+      Blockly.Generator.blockSpaceToCode('JavaScript');
+  assertEquals(2, eval(generatedCode));
+}
 
 function test_showHiddenTrue() {
   Blockly.Test.initializeBlockSpaceEditor();
