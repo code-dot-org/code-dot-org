@@ -29,8 +29,8 @@
     code:
       label: 'Legg til ein lærar:'
       placeholder: Seksjonskode (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Angi koden delt med deg av din lærer. Det er en kode med 6 bokstaver
+        som "ABCDEF".
     submit: Legg til lærar
   add_hint_form:
     placeholder: Skriv inn eit hint her
@@ -297,8 +297,8 @@
       remove: Er du sikker på at du vil fjerne denne læraren?
     students:
       dashboard: Gå til læraren sitt oversyn
-    user_not_found: Læraren eller eleven fans ikkje
-    student_teacher_disassociated: "%{teacher_name} er fjerna som lærar for %{student_name}"
+    user_not_found: Læreren kunne ikke bli funnet.
+    student_teacher_disassociated: Du har fjernet %{teacher_name} som din lærer.
     panel:
       answer_viewer: Svarviser
       student: Elev
@@ -377,7 +377,7 @@
   share:
     title: Lær i Code Studio
     description: Alle kan lære programmering. Lag spel, appar og kunst med kode.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time av Kode!
   gender:
     male: Mann
     female: Kvinne
@@ -394,16 +394,23 @@
       til med å lage denne guiden.
     help_from_html_old: Utviklarar frå Google, Microsoft, Facebook og Twitter har
       hjelpt til med å lage dette materialet.
-    art_from_html: Minecraft&#8482; &amp; &copy; %{current_year} Microsoft. Alle rettar
-      reserverte.<br />Star Wars&#8482; &amp; &copy; %{current_year} Disney og Lucasfilm.
-      Alle rettar reserverte.<br />Frozen&#8482; &amp; &copy; %{current_year} Disney.
-      Alle rettar reserverte.<br />Ice Age&#8482; &amp; &copy; %{current_year} 20th
-      Century Fox. Alle rettar reserverte.<br />Angry Birds&#8482; &amp; &copy; 2009-%{current_year}
-      Rovio Entertainment Ltd. Alle rettar reserverte.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Alle rettar reserverte
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Alle rettigheter
-      tilhøyrer Rovio Entertainment Ltd. <br /> Plants vs. Zombies&#8482; &amp; &copy;
-      %{current_year} Alle rettigheter tilhøyrer Electronic Arts Inc.
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheter
+      reservert. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm.
+      Alle rettigheter reservert. < br / > Frost &#8482; © %{current_year} Disney.
+      Alle rettigheter reservert. < br / > Istid &#8482; © %{current_year} 20th Century
+      Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; © 2009-%{current_year}
+      Rovio Entertainment Ltd Alle rettigheter reservert. < br / > planter vs. Zombies
+      &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheter reservert. <
+      br / > Gumballs fantastiske verden er varemerke og © 2015 Cartoon Network.
+    art_from_html_old: Minecraft &#8482; &copy %{current_year} Microsoft. Alle rettigheter
+      reservert. < br / > Star Wars &#8482; &copy %{current_year} Disney og Lucasfilm.
+      Alle rettigheter reservert. < br / > Frost &#8482; &copy %{current_year} Disney.
+      Alle rettigheter reservert. < br / > Istid &#8482; &copy %{current_year} 20th
+      Century Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; &copy
+      2009-%{current_year} Rovio Entertainment Ltd Alle rettigheter reservert. < br
+      / > planter vs. Zombies &#8482; &copy %{current_year} Electronic Arts Inc. Alle
+      rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og
+      &copy 2015 Cartoon Network.
     powered_by_aws: Drive av Amazon Web Services
     trademark: "&copy;Code.org, %{current_year}. Code.org&reg;, CODE-logoen og Hour
       of Code (Kodetimen)&reg; er varmerker tilhøyrande Code.org."
@@ -421,7 +428,7 @@
     built_on_code_studio: Bygd i Code Studio
     make_my_own_app: Lag min eigen app
     how_it_works: Slik virker det
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time av Kode!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Sjå desse videoane og tipsa

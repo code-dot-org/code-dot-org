@@ -32,10 +32,10 @@ th:
           หากคุณจะลบบล็อก  ให้คุณลากบล็อกไปวางตรงถังขยะที่มุม.
       10:
         image: notes/hoc1_10.jpg
-        text: 'Each block is one instruction. If you drag a "move forward" block to your workspace and press "Run Program", the bird moves one space on the maze.'
+        text: 'แต่ละบล็อคเป็นหนึ่งคำสั่ง ถ้าคุณลาก ป้าย "move forward" ไปยังพื้นที่ว่างและกด "Run Program" นกจะเคลื่อนที่ไปหนึ่งช่องในเขาวงกต'
       11:
         image: notes/hoc1_11.jpg
-        text: To do more than one action, you can drag many blocks to your workspace and attach them together. The bird will do the commands from top to bottom.
+        text: ในการทำมากกว่าหนึ่งงาน คุณสามารถลากหลายๆ ป้าย ไปยังพื้นที่ว่างและเชื่อมต่อป้ายเข้าด้วยกัน นกจะทำตามคำสั่งเหล่านั้นจากด้านบนสู่ด้านล่างตามลำดับ
       12:
         image: notes/hoc1_12.jpg
         text: ถ้าคุณรันโปรแกรมแล้วต้องการแก้ไข กรุณากดปุ่ม Reset

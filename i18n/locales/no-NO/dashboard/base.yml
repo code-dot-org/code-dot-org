@@ -28,8 +28,7 @@
     code:
       label: 'Legg til en lærer:'
       placeholder: Seksjonskode (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
+      instructions: 'Angi koden delt med deg av din lærer. Det er en kode med 6 bokstaver som "ABCDEF".'
     submit: Legg til lærer
   add_hint_form:
     placeholder: Skriv inn et hint her
@@ -258,8 +257,8 @@
       remove: Er du sikker på at du vil fjerne denne læreren?
     students:
       dashboard: Gå til lærer-oversikten
-    user_not_found: The teacher could not be found.
-    student_teacher_disassociated: 'You have removed %{teacher_name} as your teacher.'
+    user_not_found: Læreren kunne ikke bli funnet.
+    student_teacher_disassociated: 'Du har fjernet %{teacher_name} som din lærer.'
     panel:
       answer_viewer: Visning av svaret
       student: elev
@@ -329,7 +328,7 @@
   share:
     title: Lære i Code Studio
     description: Alle kan lære programmering. Lag egne spill, programmer og tegninger ved å kode.
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time av Kode!
   gender:
     male: Mann
     female: Kvinne
@@ -341,8 +340,8 @@
     thank_you: 'Vi takker våre <a href="https://code.org/about/donors"> sponsorer</a>, <a href="https://code.org/about/partners"> samarbeidspartnere</a>, <a href="https://code.org/about/team"> medhjelpere</a>, våre skuespillere og våre <a href="https://code.org/about/advisors">rådgivere</a> for deres hjelp med å lage Code Studio.'
     help_from_html: Teknikere fra Google, Microsoft, Facebook og Twitter bidro til å lage denne guiden.
     help_from_html_old: Utviklere fra Google, Microsoft, Facebook og Twitter hjelpte til med å lage disse kursene.
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
+    art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Alle rettigheter reservert. < br / > Star Wars &#8482; © %{current_year} Disney og Lucasfilm. Alle rettigheter reservert. < br / > Frost &#8482; © %{current_year} Disney. Alle rettigheter reservert. < br / > Istid &#8482; © %{current_year} 20th Century Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment Ltd Alle rettigheter reservert. < br / > planter vs. Zombies &#8482; © %{current_year} Electronic Arts Inc. Alle rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og © 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482; &copy %{current_year} Microsoft. Alle rettigheter reservert. < br / > Star Wars &#8482; &copy %{current_year} Disney og Lucasfilm. Alle rettigheter reservert. < br / > Frost &#8482; &copy %{current_year} Disney. Alle rettigheter reservert. < br / > Istid &#8482; &copy %{current_year} 20th Century Fox. Alle rettigheter reservert. < br / > Angry Birds &#8482; &copy 2009-%{current_year} Rovio Entertainment Ltd Alle rettigheter reservert. < br / > planter vs. Zombies &#8482; &copy %{current_year} Electronic Arts Inc. Alle rettigheter reservert. < br / > Gumballs fantastiske verden er varemerke og &copy 2015 Cartoon Network.'
     powered_by_aws: Drevet av Amazon Web Services
     trademark: '© Code.org, %{current_year}. Code.org®, CODE-logoen og Hour of Code (Kodetimen) ® er varemerker tilhørende Code.org.'
     copyright: Opphavsrett
@@ -359,7 +358,7 @@
     built_on_code_studio: Bygget i Code Studio
     make_my_own_app: Lag min egen app
     how_it_works: Slik virker det
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Prøv en Time av Kode!
   reference_area:
     title: Trenger du hjelp?
     subtitle: Se disse videoene og tipsene

@@ -75,11 +75,7 @@ fr-FR:
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -123,12 +119,13 @@ fr-FR:
   third_party_organization: Organization
   third_party_curriculum: "Programme d'études"
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -301,6 +298,9 @@ fr-FR:
   homepage_slot_text_link_othercourses: Autres cours en ligne
   homepage_slot_text_title_educators: Éducateurs
   homepage_slot_text_blurb_educators: "Ressources d'enseignement"
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Collège
+  homepage_slot_text_link_high: Lycée
   homepage_slot_text_link_k5: 'Cours pour les classes Grande Section - CM2'
   homepage_slot_text_link_fullcurriculum: Voir notre programme complet
   homepage_slot_text_link_pd: Développement professionnel
@@ -627,7 +627,7 @@ fr-FR:
   dashboard_faq_k5: 'GS - CM2 Questions Fréquemment Posées'
   dashboard_announcements: Annonces
   dashboard_announce_view_all: Voir tous
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>Deadline coming up this Friday and we still have a few open spots for high school teachers in partner districts.</b> Sign up now to join our highly rated Professional Learning program and learn to teach AP Computer Science Principles. As part of the program you get free travel to TeacherCon this summer and ongoing support throughout the year.'
   dashboard_announce_button_text: Pour en savoir plus
   dashboard_announce_hoc: '<b>15 octobre 2015</b> - Une Heure de Code arrive &mdash; chaque organisateur participant recevra une carte-cadeau Amazon.com ou Microsoft Windows Store comme cadeau de remerciement. Rejoignez les salles de classe dans le monde entier du 7 au 13 décembre.'
   dashboard_announce_playlab: "<b>4 décembre 2015</b> - l'heure du Code est ici ! Essayez 50 tutoriels pour tous les âges et tous les appareils. Nouveauté de la semaine : coder vos propres histoires et des jeux à nouveau jouer Labs, période glaciaire et Gumball."
