@@ -5,18 +5,13 @@
  eqeqeq: true,
  maxlen: 120
  */
-/* global $ */
 
-var msg = require('../locale');
 var constants = require('./constants');
-var styles = require('./PlaySpaceHeaderStyles');
-var ViewDataButton = require('./ViewDataButton.jsx');
 var ScreenSelector = require('./ScreenSelector.jsx');
+var ToggleGroup = require('./ToggleGroup.jsx');
+var ViewDataButton = require('./ViewDataButton.jsx');
 
-var Mode = {
-  CODE: 'CODE',
-  DESIGN: 'DESIGN'
-};
+var Mode = constants.MODE;
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
@@ -82,24 +77,9 @@ var PlaySpaceHeader = React.createClass({
         <tbody>
           <tr>
             <td style={{width: '120px'}}>
-              <button
-                  id='codeModeButton'
-                  style={$.extend({}, styles.codeButtonStyle,
-                      this.state.mode === Mode.CODE ? styles.activeStyle : styles.inactiveStyle,
-                      this.props.hideToggle ? styles.hiddenStyle : null)}
-                  className='no-outline'
-                  onClick={this.handleSetMode.bind(this, Mode.CODE)}>
-                {msg.codeMode()}
-              </button>
-              <button
-                  id='designModeButton'
-                  style={$.extend({}, styles.designButtonStyle,
-                      this.state.mode === Mode.DESIGN ? styles.activeStyle : styles.inactiveStyle,
-                      this.props.hideToggle ? styles.hiddenStyle : null)}
-                  className='no-outline'
-                  onClick={this.handleSetMode.bind(this, Mode.DESIGN)}>
-                {msg.designMode()}
-              </button>
+              <ToggleGroup mode={this.state.mode}
+                           hideToggle={this.props.hideToggle}
+                           onChange={this.handleSetMode} />
             </td>
             <td style={{maxWidth: 0}}>
               {rightSide}
