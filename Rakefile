@@ -3,6 +3,7 @@
 require_relative './deployment'
 require 'os'
 require 'cdo/hip_chat'
+require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/aws/s3_packaging'
 
@@ -63,6 +64,16 @@ def run_tests_if_changed(identifier, changed_globs)
 end
 
 namespace :circle do
+  task :run_tests, [:force_all_tests_tag] do |_, args|
+    run_all_tests_tag = args[:force_tests_commit_tag]
+    if RakeUtils.circle_commit_contains(run_all_tests_tag)
+      HipChat.log "Commit message '#{RakeUtils.circle_commit_message}' contains #{run_all_tests_tag}, force-running all tests."
+      RakeUtils.rake 'test:all'
+    else
+      RakeUtils.rake 'test:changed'
+    end
+  end
+
   task :run_ui_tests, [:force_tests_commit_tag] do |_, args|
     run_ui_tests_tag = args[:force_tests_commit_tag]
     if RakeUtils.circle_commit_contains(run_ui_tests_tag)
@@ -83,6 +94,30 @@ namespace :circle do
 end
 
 namespace :test do
+  task :apps do
+    TestRunUtils.run_apps_tests
+  end
+
+  task :code_studio do
+    TestRunUtils.run_code_studio_tests
+  end
+
+  task :blockly_core do
+    TestRunUtils.run_blockly_core_tests
+  end
+
+  task :dashboard do
+    TestRunUtils.run_dashboard_tests
+  end
+
+  task :pegasus do
+    TestRunUtils.run_pegasus_tests
+  end
+
+  task :shared do
+    TestRunUtils.run_shared_tests
+  end
+
   namespace :changed do
     task :apps do
       run_tests_if_changed('apps',
@@ -90,49 +125,37 @@ namespace :test do
                             'blockly-core/*',
                             'shared/*.js',
                             'shared/*.css']) do
-        Dir.chdir(apps_dir) do
-          RakeUtils.system 'npm run test-low-memory'
-        end
+        TestRunUtils.run_apps_tests
       end
     end
 
     task :code_studio do
       run_tests_if_changed('code-studio', ['code-studio/*']) do
-        Dir.chdir(code_studio_dir) do
-          RakeUtils.system 'npm run test'
-        end
+        TestRunUtils.run_code_studio_tests
       end
     end
 
     task :blockly_core do
       run_tests_if_changed('blockly-core', ['blockly-core/*']) do
-        Dir.chdir(blockly_core_dir) do
-          RakeUtils.system './test.sh'
-        end
+        TestRunUtils.run_blockly_core_tests
       end
     end
 
     task :dashboard do
       run_tests_if_changed('dashboard', ['dashboard/*', 'lib/*', 'shared/*']) do
-        Dir.chdir(dashboard_dir) do
-          RakeUtils.rake 'test'
-        end
+        TestRunUtils.run_dashboard_tests
       end
     end
 
     task :pegasus do
       run_tests_if_changed('pegasus', ['pegasus/*', 'lib/*', 'shared/*']) do
-        Dir.chdir(pegasus_dir) do
-          RakeUtils.rake 'test'
-        end
+        TestRunUtils.run_pegasus_tests
       end
     end
 
     task :shared do
       run_tests_if_changed('shared', ['shared/*']) do
-        Dir.chdir(shared_dir) do
-          RakeUtils.rake 'test'
-        end
+        TestRunUtils.run_shared_tests
       end
     end
 
@@ -140,6 +163,7 @@ namespace :test do
   end
 
   task changed: ['changed:all']
+  task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
 end
 task test: ['test:changed']
 
