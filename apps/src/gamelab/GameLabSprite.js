@@ -285,8 +285,8 @@ module.exports.AABBops = function(type, target, callback) {
         }
       }//end collider exists
     }
-    // Not done, call again:
-    state.doneExec = false;
+    // Not done, unless we're on the last item in __others:
+    state.doneExec = state.__i >= (state.__others.length - 1);
   } else {
     state.doneExec = true;
   }

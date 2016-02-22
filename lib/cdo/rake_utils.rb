@@ -8,7 +8,7 @@ require 'digest'
 module RakeUtils
 
   def self.system__(command)
-    puts command
+    CDO.log.info command
     output = `#{command} 2>&1`
     status = $?.exitstatus
     [status, output]
@@ -44,6 +44,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message, CDO.filter_backtrace([output])
     end
+    status
   end
 
   def self.bundle_exec(*args)
