@@ -7,7 +7,7 @@ var ErrorLevel = {
 };
 
 // Rate at which we log errors to the cloud
-var ERROR_LOG_RATE = 1 / 100;
+var ERROR_LOG_RATE = 1 / 20;
 
 /**
  * Output error to console and gutter as appropriate
