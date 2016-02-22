@@ -18,6 +18,7 @@
   "fillTooltip": "постави 1 комад земље",
   "finalLevel": "Честитамо! Решили сте финалну слагалицу.",
   "flowerEmptyError": "Цвет на којем се налазиш нема више нектара.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "узми",
   "heightParameter": "висина",
   "holePresent": "ту је рупа",
@@ -81,6 +82,5 @@
   "whileTooltip": "Понови акције у загради док се не постигне последњи поен.",
   "word": "Пронађите реч",
   "yes": "Да",
-  "youSpelled": "Написали сте",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Написали сте"
 }

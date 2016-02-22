@@ -18,6 +18,7 @@
   "fillTooltip": "1 واحد خاک را قرار بده",
   "finalLevel": "تبریک! شما پازل نهایی را حل کردید.",
   "flowerEmptyError": "گلی که رویش هستی دیگر شهد ندارد.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "گرفتن",
   "heightParameter": "ارتفاع",
   "holePresent": "یک سوراخ وجود دارد",
@@ -81,6 +82,5 @@
   "whileTooltip": "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن.",
   "word": "کلمه را پیدا کنید",
   "yes": "بله",
-  "youSpelled": "اسپل کنید",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "اسپل کنید"
 }

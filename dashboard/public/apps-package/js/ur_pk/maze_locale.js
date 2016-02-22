@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "place 1 unit of dirt"},
 "finalLevel":function(d){return "مبارک ہو! آپ نے آخری مرحلہ مکمل کرلیا۔"},
 "flowerEmptyError":function(d){return "The flower you're on has no more nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return ".Hasil kerna"},
 "heightParameter":function(d){return "height"},
 "holePresent":function(d){return "there is a hole"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Repeat the enclosed actions until finish point is reached."},
 "word":function(d){return "لفظ ڈھونڈیں"},
 "yes":function(d){return "جی"},
-"youSpelled":function(d){return "You spelled"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "You spelled"}};

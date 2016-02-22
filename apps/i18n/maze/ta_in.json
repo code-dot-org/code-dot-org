@@ -18,6 +18,7 @@
   "fillTooltip": "ஓர் அலகு அழுக்கை வை",
   "finalLevel": "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்.",
   "flowerEmptyError": "நீங்கள் இருக்கும் மலரில் தேன் தீர்ந்துவிட்டது.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "பெறு",
   "heightParameter": "உயரம்",
   "holePresent": "அங்கே ஒரு துளை உள்ளது",
@@ -81,6 +82,5 @@
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
   "word": "சொல்லை கண்டறி",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்தது",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "நீங்கள் உச்சரித்தது"
 }
