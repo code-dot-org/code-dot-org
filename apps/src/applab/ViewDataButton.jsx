@@ -8,7 +8,7 @@
 /* global $ */
 
 var applabMsg = require('./locale');
-var styles = require('./DesignToggleRowStyles');
+var styles = require('./PlaySpaceHeaderStyles');
 
 /**
  * The button above the visualization that opens the data browser.
