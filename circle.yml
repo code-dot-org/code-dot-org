@@ -51,7 +51,7 @@ test:
   override:
     # Run rake install
     - bundle exec rake install
-    # Try running rake build twice (in case of intermittent test failures within rake build)
+    # Run rake build (twice in case of intermittent test failures within rake build)
     - for i in 1 2; do bundle exec rake build && break; done
     # Run tests only for changed sub-projects, unless [test all] in commit
     - bundle exec rake circle:run_tests['[test all]']:
