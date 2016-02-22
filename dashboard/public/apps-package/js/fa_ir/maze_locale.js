@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "1 واحد خاک را قرار بده"},
 "finalLevel":function(d){return "تبریک! شما پازل نهایی را حل کردید."},
 "flowerEmptyError":function(d){return "گلی که رویش هستی دیگر شهد ندارد."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "گرفتن"},
 "heightParameter":function(d){return "ارتفاع"},
 "holePresent":function(d){return "یک سوراخ وجود دارد"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن."},
 "word":function(d){return "کلمه را پیدا کنید"},
 "yes":function(d){return "بله"},
-"youSpelled":function(d){return "اسپل کنید"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "اسپل کنید"}};

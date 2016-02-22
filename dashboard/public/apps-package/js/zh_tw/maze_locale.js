@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "填充1鏟泥土 "},
 "finalLevel":function(d){return "恭喜！你已經完成最後的關卡。"},
 "flowerEmptyError":function(d){return "你所在的花朵已經沒有花蜜了"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "取值"},
 "heightParameter":function(d){return "高度"},
 "holePresent":function(d){return "那裡有個坑洞"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "重覆程式積木內的動作，直到完成為止。"},
 "word":function(d){return "尋找那個字詞"},
 "yes":function(d){return "是"},
-"youSpelled":function(d){return "你併寫的"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "你併寫的"}};
