@@ -47,7 +47,7 @@ database:
       - bundle exec rake assets:precompile:
           pwd:
               dashboard
-      # temporarily set hoc flags to green, as is currently required for dev enlistments
+      # temporarily set hoc flags to green, currently required for dev enlistments
       - ./set_hoc_flags.rb green:
           pwd:
               bin/dynamic_config
