@@ -75,6 +75,15 @@ module AWS
       config[:custom_error_responses][:items].sort_by!{|e| e[:error_code]}
     end
 
+    # File path for caching mappings from CloudFront Distribution id to alias CNAMEs.
+    # Reduces number of required API calls to ListDistributions.
+    CLOUDFRONT_ALIAS_CACHE = pegasus_dir 'cache', 'cloudfront_aliases.json'
+
+    # Test-stubbable class method.
+    def self.alias_cache
+      CLOUDFRONT_ALIAS_CACHE
+    end
+
     # Creates or updates the CloudFront distribution based on the current configuration.
     # Calls to this method should be idempotent, however CloudFront distribution updates can take ~15 minutes to finish.
     #
@@ -88,12 +97,9 @@ module AWS
                                                log_level: :debug,
                                                http_wire_trace: true)
       ids = CONFIG.keys.map do |app|
-        distribution = cloudfront.list_distributions.distribution_list.items.detect do |i|
-          i.aliases.items.include?(CDO.method("#{app}_hostname").call)
-        end
-        if distribution
-          id = distribution.id
-          distribution_config = cloudfront.get_distribution_config(id: id)
+        hostname = CDO.method("#{app}_hostname").call
+        id, distribution_config = get_distribution_config(cloudfront, hostname)
+        if distribution_config
           old_config = distribution_config.distribution_config.to_hash
           new_config = config(app, distribution_config.distribution_config.caller_reference)
           sort_config! old_config
@@ -124,6 +130,38 @@ module AWS
         end
         puts "#{app} distribution deployed!"
       end
+    end
+
+    # Returns the distribution ID and fetched DistributionConfig object for a given hostname.
+    # Uses cached mappings first if available.
+    def self.get_distribution_config(cloudfront, hostname)
+      id = get_distribution_id_with_retry(cloudfront, hostname)
+      [id, id && cloudfront.get_distribution_config(id: id)]
+    rescue Aws::CloudFront::Errors::NoSuchDistribution
+      # Cached id may be stale, try again with an uncached id.
+      id = get_distribution_id(false, cloudfront, hostname)
+      [id, id && cloudfront.get_distribution_config(id: id)]
+    end
+
+    # Calls get_distribution_id, retrying without cache if the result is nil.
+    def self.get_distribution_id_with_retry(*args)
+      get_distribution_id(true, *args) || get_distribution_id(false, *args)
+    end
+
+    # Returns the distribution ID for a given hostname.
+    # Uses cached id-to-hostname mappings if cached=true.
+    def self.get_distribution_id(cached, cloudfront, hostname)
+      mapping =
+        # Use cached value first if available.
+        cached && File.file?(alias_cache) && JSON.parse(IO.read(alias_cache)) ||
+        # Fallback to API call.
+        cloudfront.list_distributions.distribution_list.items.map do |dist|
+          [dist.id, dist.aliases.items]
+        end.to_h.tap do |out|
+          # Write result to cache.
+          IO.write(alias_cache, JSON.pretty_generate(out))
+        end
+      mapping.select{ |_, v| v.include? hostname }.keys.first
     end
 
     # Returns a CloudFront DistributionConfig Hash compatible with the AWS SDK for Ruby v2.

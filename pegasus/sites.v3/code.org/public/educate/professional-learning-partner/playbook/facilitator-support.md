@@ -4,7 +4,7 @@ title: Facilitator Support
 ---
 <a id="top"></a>
 
-## Facilitator Support
+# Facilitator Support
 
 
 Facilitators will be trained and/or provided by Code.org for each middle and high school workshop. The Professional Leraning Partner will contract and manage communication regarding workshop logistics with the facilitators.  
@@ -13,11 +13,12 @@ The Program Managers and Facilitators will be introduced upon recruitment and co
 
 The PLP will contract with Code.org provided facilitators at $50 an hour, which is the standard Code.org rate, and cover travel expenses for facilitators for each phase of Middle and High School professional learning program.
 
-### Resources
+# Resources
 
-Example Facilitator One Pager 
+### Example Facilitator One Pager 
 
-Facilitator Playbook --> Needs to be built out into the k-12 version
+
+### Facilitator Playbook --> Needs to be built out into the k-12 version
 
 
 
