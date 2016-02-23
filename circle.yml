@@ -38,19 +38,19 @@ dependencies:
 database:
   override:
     - bundle exec rake db:create:
-      pwd:
-        dashboard
+        pwd:
+            dashboard
     - bundle exec rake db:schema:load:
-      pwd:
-        dashboard
+        pwd:
+            dashboard
   post:
     - bundle exec rake assets:precompile:
-      pwd:
-        dashboard
+        pwd:
+            dashboard
     # temporarily set hoc flags to green, currently required for dev enlistments
     - ./set_hoc_flags.rb green:
-      pwd:
-        bin/dynamic_config
+        pwd:
+            bin/dynamic_config
 test:
   override:
     # Run rake install
@@ -59,12 +59,12 @@ test:
     - for i in 1 2; do bundle exec rake build && break; done
     # Run tests only for changed sub-projects, unless [test all] in commit
     - bundle exec rake circle:run_tests['[test all]']:
-      timeout:
-        7200
+        timeout:
+            7200
     - ./test.sh:
-      pwd:
-        cookbooks
+        pwd:
+            cookbooks
     # Only run UI tests when [ui test] included in commit message
     - bundle exec rake circle:run_ui_tests['[test ui]']:
-      timeout:
-        7200
+        timeout:
+            7200
