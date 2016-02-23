@@ -32,12 +32,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show script level for twenty hour' do
-    @controller.expects :slog
+    # Configure a fake slogger to verify that the correct data is logged.
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
 
     get_show_script_level_page(@script_level)
     assert_response :success
 
     assert_equal @script_level, assigns(:script_level)
+    assert_equal([{
+                      application: :dashboard,
+                      tag: 'activity_start',
+                      script_level_id: @script_level.id,
+                      level_id: @script_level.level.id,
+                      user_agent: 'Rails Testing',
+                      locale: :'en-us'
+                  }],
+                 slogger.records)
   end
 
   test 'should make script level pages uncachable by default' do
