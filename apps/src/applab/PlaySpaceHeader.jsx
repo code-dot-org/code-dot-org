@@ -7,7 +7,9 @@
  */
 
 var constants = require('./constants');
+var msg = require('../locale');
 var ScreenSelector = require('./ScreenSelector.jsx');
+var ToggleButton = require('./ToggleButton.jsx');
 var ToggleGroup = require('./ToggleGroup.jsx');
 var ViewDataButton = require('./ViewDataButton.jsx');
 
@@ -77,9 +79,14 @@ var PlaySpaceHeader = React.createClass({
         <tbody>
           <tr>
             <td style={{width: '120px'}}>
-              <ToggleGroup mode={this.state.mode}
+              <ToggleGroup selected={this.state.mode}
                            hideToggle={this.props.hideToggle}
-                           onChange={this.handleSetMode} />
+                           onChange={this.handleSetMode}>
+                <ToggleButton id='codeModeButton'
+                              value={Mode.CODE}>{msg.codeMode()}</ToggleButton>
+                <ToggleButton id='designModeButton'
+                              value={Mode.DESIGN}>{msg.designMode()}</ToggleButton>
+              </ToggleGroup>
             </td>
             <td style={{maxWidth: 0}}>
               {rightSide}
