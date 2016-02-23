@@ -31,7 +31,8 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -68,7 +69,6 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="maze_moveForward"/>
         <block type="procedures_callnoreturn">
           <mutation name="check purple flower"/>
         </block>

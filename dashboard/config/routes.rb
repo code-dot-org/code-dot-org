@@ -269,6 +269,16 @@ Dashboard::Application.routes.draw do
     concerns :ops_routes
   end
 
+  namespace :plc do
+    resources :courses
+    resources :learning_modules
+    resources :tasks
+    resources :user_course_enrollments
+  end
+
+  get '/plc/enrollment_evaluations/:enrollment_id/perform_evaluation', to: 'plc/enrollment_evaluations#perform_evaluation', as: 'perform_evaluation'
+  post '/plc/enrollment_evaluations/:enrollment_id/submit_evaluation', to: 'plc/enrollment_evaluations#submit_evaluation'
+
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
   get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'

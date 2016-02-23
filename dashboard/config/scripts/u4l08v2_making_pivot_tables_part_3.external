@@ -22,4 +22,8 @@ There are two approaches to thinking about what kind of summary table to make:
 1. Work backward from a question: Start with a question you want to answer, or a hypothesis about something in the data you think you could reveal. Often the question itself tells you what calculations you need to make.
 
 2. Work forward by experimenting, iterating, and finding something interesting. Start by simply picking a category to group in rows. Then pick a second one to display as values, and try COUNT, AVERAGE, MIN, MAX, etc.  By poking around ideas will come to you for interesting investigations.
+
+Click "Continue" below to head to the next level.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -38,10 +38,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "Force updateRecord to fail by changing the ID of songToUpdate. (Click to see full instructions)",
-    "project_template_level_name": "U6 - updateRecord - Template",
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "U6 - updateRecord - Template"
   },
   "published": true
 }]]></config>

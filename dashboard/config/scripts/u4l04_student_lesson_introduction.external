@@ -4,7 +4,7 @@ description 'description here'
 css 'unplugged'
 
 markdown <<MARKDOWN
-## Unit 4: Lesson 04 - Reading Records
+## Unit 4: Lesson 03 - Reading Records
 
 # Background
 
@@ -20,7 +20,6 @@ Keeping data in a remote database has the benefit of allowing data storage to be
 
 * Read data from a remote database into your app using `readRecords`.
 * Use callback functions to correctly sequence programs that involve data commands.
-* Delete records in a database by using and id and `deleteRecord`.
 * Improve the Contacts App.
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

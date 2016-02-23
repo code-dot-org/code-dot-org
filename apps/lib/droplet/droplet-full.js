@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Anthony Bau.
  * MIT License.
  *
- * Date: 2016-02-10
+ * Date: 2016-02-22
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 
@@ -5468,14 +5468,6 @@ function base64DetectIncompleteChar(buffer) {
     }
   }
 
-  function charAt (chunk, i) {
-    var result = ''
-    if (i < chunk.length) {
-      result = chunk.charAt(i)
-    }
-    return result
-  }
-
   function write (chunk) {
     var parser = this
     if (this.error) {
@@ -5491,7 +5483,7 @@ function base64DetectIncompleteChar(buffer) {
     var i = 0
     var c = ''
     while (true) {
-      c = charAt(chunk, i++)
+      c = chunk.charAt(i++)
       parser.c = c
       if (!c) {
         break
@@ -5522,7 +5514,7 @@ function base64DetectIncompleteChar(buffer) {
           if (parser.sawRoot && !parser.closedRoot) {
             var starti = i - 1
             while (c && c !== '<' && c !== '&') {
-              c = charAt(chunk, i++)
+              c = chunk.charAt(i++)
               if (c && parser.trackPosition) {
                 parser.position++
                 if (c === '\n') {
@@ -8792,6 +8784,20 @@ Editor.prototype.scrollCursorIntoPosition = function() {
     this.mainScroller.scrollTop = axis - this.mainCanvas.height;
   }
   return this.mainScroller.scrollLeft = 0;
+};
+
+Editor.prototype.scrollCursorToEndOfDocument = function() {
+  var pos;
+  if (this.currentlyUsingBlocks) {
+    pos = this.tree.end;
+    while (pos && !this.validCursorPosition(pos)) {
+      pos = pos.prev;
+    }
+    this.setCursor(pos);
+    return this.scrollCursorIntoPosition();
+  } else {
+    return this.aceEditor.scrollToLine(this.aceEditor.session.getLength());
+  }
 };
 
 hook('keydown', 0, function(event, state) {
