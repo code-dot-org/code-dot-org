@@ -11,18 +11,20 @@ module.exports = {
     display: 'inline-block',
     verticalAlign: 'top',
     border: '1px solid #949ca2',
+    borderRightWidth: '0 !important',
+    borderRadius: 0,
     margin: '0 0 8px 0',
     padding: '2px 6px',
     fontSize: 14
   },
   firstButtonStyle: {
-    borderBottomRightRadius: 0,
-    borderTopRightRadius: 0,
-    borderRightWidth: '0 !important'
+    borderBottomLeftRadius: 4,
+    borderTopLeftRadius: 4
   },
   lastButtonStyle: {
-    borderBottomLeftRadius: 0,
-    borderTopLeftRadius: 0
+    borderRightWidth: '1px !important',
+    borderBottomRightRadius: 4,
+    borderTopRightRadius: 4
   },
   activeStyle: {
     backgroundColor: '#ffa000',
