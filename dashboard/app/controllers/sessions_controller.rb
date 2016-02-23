@@ -26,8 +26,14 @@ class SessionsController < Devise::SessionsController
 
   private
 
-  # Override default Devise sign_out path method
+  # Override default Devise sign_out path method.
+  # Sign out occurs in two steps: first we visit a dashboard page that clears the signed in user
+  # state, then we go to the final destination.
   def after_sign_out_path_for(resource_or_scope)
+    update_login_url(redirect: final_after_sign_out_path_for(resource_or_scope))
+  end
+
+  private def final_after_sign_out_path_for(resource_or_scope)
     user = resource_or_scope && send(:"current_#{resource_or_scope}")
     if user && user.oauth?
       return oauth_sign_out_path(user.provider)

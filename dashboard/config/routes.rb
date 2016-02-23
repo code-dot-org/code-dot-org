@@ -88,6 +88,7 @@ Dashboard::Application.routes.draw do
   get 'discourse/sso' => 'discourse_sso#sso'
 
   root :to => "home#index"
+  get '/update_login', to: 'home#update_login'
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   get '/home/:action', controller: 'home'
@@ -156,7 +157,7 @@ Dashboard::Application.routes.draw do
 
   get '/beta', to: redirect('/')
 
-  get 'reset_session', to: 'application#reset_session_endpoint'
+  get 'reset_session', to: 'home#reset_session_endpoint'
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
   get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
