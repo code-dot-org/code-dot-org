@@ -107,7 +107,7 @@ class ActivitiesController < ApplicationController
   private
 
   def find_share_failure(program)
-    return nil unless program.match /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+    return nil unless program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
 
     xml_tag_regexp = /<[^>]*>/
     program_tags_removed = program.gsub(xml_tag_regexp, "\n")
