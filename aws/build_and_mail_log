@@ -36,6 +36,7 @@ def main()
     # Notify the HipChat channels about what happened.
     projects = ARGV.join(' ')
     time_message = " 🕐 #{format_duration(Time.now.to_i - start_time)}"
+    # rubocop:disable Style/IdenticalConditionalBranches
     if status == 0
       message = "<b>#{projects}</b> built." + time_message
 
@@ -52,6 +53,7 @@ def main()
       HipChat.developers message, color: 'red', notify: 1
       HipChat.developers commit_url, color: 'gray', message_format: 'text'
     end
+    # rubocop:enable Style/IdenticalConditionalBranches
   end
 
   # Return the same output and status code that BUILD returned.
