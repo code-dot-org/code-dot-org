@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 
-gem 'chef', '~> 11.18.12'
+gem 'chef', '12.7.2'
+gem 'berkshelf'
 
-# Test-kitchen fork includes several helpful PRs not merged in the official repo:
-# 845 (ssh_tgz transport)
-# 825 (fix zlib warning)
+# Test-kitchen fork, items not yet merged:
 # 564 (multiple step converge)
-# 824 (fix chunked output)
 gem 'test-kitchen', github: 'wjordan/test-kitchen', branch: 'cdo'
 gem 'kitchen-docker'
-# Use with solve 2.0 to remove gecode dependency (cf. berkshelf/solve#46)
-gem 'berkshelf', github: 'wjordan/berkshelf'
+
+# Kitchen-ec2 fork, items not yet merged:
+# - 214 (support duration for spot instances)
+# - jk/ec2-defaults (Use searches to find AMI and AMI username)
+# - Tweak commit to support test-kitchen#564.
+gem 'kitchen-ec2', github: 'wjordan/kitchen-ec2', branch: 'cdo'
+
+# Provides `sftp` transport to test-kitchen for faster cookbook upload.
+gem 'kitchen-sync'

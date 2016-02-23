@@ -41,9 +41,6 @@ module ImageLib
     magick_image.to_blob
   end
 
-
-  private
-
   # If path is provided, open it as a Minimagic Image and return [image, nil]
   # Otherwise create a temporary file containing the blob, open it as an image
   # and return [image, temp_file].
