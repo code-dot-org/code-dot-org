@@ -9,7 +9,6 @@
 var ToggleGroup = React.createClass({
   propTypes: {
     selected: React.PropTypes.string.isRequired,
-    hideToggle: React.PropTypes.bool.isRequired,
     onChange: React.PropTypes.func.isRequired
   },
 
@@ -18,15 +17,7 @@ var ToggleGroup = React.createClass({
   },
 
   render: function () {
-    if (this.props.hideToggle) {
-      return <span />;
-    }
-
-    return (
-      <span>
-        {this.renderChildren()}
-      </span>
-    );
+    return <span>{this.renderChildren()}</span>;
   },
 
   renderChildren: function () {
