@@ -21,7 +21,7 @@ module.exports = {
         // room to add tests here
         assert($('#screen1'));
         assert($('#turtleImage'));
-        assert.equal($('#divApplab .screen').length, 1);
+        assert.equal($('#divApplab > .screen').length, 1);
         assert.equal($('#turtleImage').parent().attr('id'), 'screen1');
         assert.equal(Applab.turtle.heading, 0);
         assert.equal(Applab.turtle.x, 160);
@@ -29,7 +29,7 @@ module.exports = {
 
         // add a completion on timeout since this is a freeplay level
         testUtils.runOnAppTick(Applab, 2, function () {
-          assert.equal($('#divApplab .screen').length, 1);
+          assert.equal($('#divApplab > .screen').length, 1);
           assert.equal($('#turtleImage').parent().attr('id'), 'screen1');
           assert.equal(Applab.turtle.heading, 90);
           assert.equal(Applab.turtle.x, 185);

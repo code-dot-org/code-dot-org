@@ -1,4 +1,5 @@
 'use strict';
+var gameLabSprite = require('./GameLabSprite');
 var assetPrefix = require('../assetManagement/assetPrefix');
 
 /**
@@ -24,6 +25,7 @@ GameLabP5.baseP5loadImage = null;
  * Initialize this GameLabP5 instance.
  *
  * @param {!Object} options
+ * @param {!Function} options.gameLab instance of parent GameLab object
  * @param {!Function} options.onExecutionStarting callback to run during p5 init
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
@@ -102,6 +104,84 @@ GameLabP5.prototype.init = function (options) {
     });
     this.pop();
   };
+
+  // Override p5.createSprite so we can replace the AABBops() function
+  window.p5.prototype.createSprite = function(x, y, width, height) {
+    /*
+     * Copied code from p5play from createSprite()
+     */
+    var s = new window.Sprite(x, y, width, height);
+    s.AABBops = gameLabSprite.AABBops;
+    s.depth = window.allSprites.maxDepth()+1;
+    window.allSprites.add(s);
+    return s;
+  };
+
+  // Override window.Group so we can override the methods that take callback
+  // parameters
+  var baseGroupConstructor = window.Group;
+  window.Group = function () {
+    var array = baseGroupConstructor();
+
+    /*
+     * Create new helper called callAABBopsForAll() which can be called as a
+     * stateful nativeFunc by the interpreter. This enables the native method to
+     * be called multiple times so that it can go asynchronous every time it
+     * (or any native function that it calls, such as AABBops) wants to execute
+     * a callback back into interpreter code. The interpreter state object is
+     * retrieved by calling JSInterpreter.getCurrentState().
+     *
+     * Additional properties can be set on the state object to track state
+     * across the multiple executions. If the function wants to be called again,
+     * it should set state.doneExec to false. When the function is complete and
+     * no longer wants to be called in a loop by the interpreter, it should set
+     * state.doneExec to true and return a value.
+     */
+    array.callAABBopsForAll = function(type, target, callback) {
+      var state = options.gameLab.JSInterpreter.getCurrentState();
+      if (!state.__i) {
+        state.__i = 0;
+      }
+      if (state.__i < this.size()) {
+        if (!state.__subState) {
+          // Before we call AABBops (another stateful function), hang a __subState
+          // off of state, so it can use that instead to track its state:
+          state.__subState = { doneExec: true };
+        }
+        this.get(state.__i).AABBops(type, target, callback);
+        if (state.__subState.doneExec) {
+          // Note: ignoring return value from each AABBops() call
+          delete state.__subState;
+          state.__i++;
+        }
+        state.doneExec = false;
+      } else {
+        state.doneExec = true;
+      }
+    };
+
+    // Replace these four methods that take callback parameters to use the new
+    // callAABBopsForAll() helper:
+
+    array.overlap = function(target, callback) {
+      this.callAABBopsForAll("overlap", target, callback);
+    };
+
+    array.collide = function(target, callback) {
+      this.callAABBopsForAll("collide", target, callback);
+    };
+
+    array.displace = function(target, callback) {
+      this.callAABBopsForAll("displace", target, callback);
+    };
+
+    array.bounce = function(target, callback) {
+      this.callAABBopsForAll("bounce", target, callback);
+    };
+
+    return array;
+  };
+
 };
 
 /**
@@ -376,30 +456,36 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function () {
 
 GameLabP5.prototype.getCustomMarshalObjectList = function () {
   return [
-    window.p5,
-    window.Sprite,
-    window.Camera,
-    window.Animation,
-    window.p5.Vector,
-    window.p5.Color,
-    window.p5.Image,
-    window.p5.Renderer,
-    window.p5.Graphics,
-    window.p5.Font,
-    window.p5.Table,
-    window.p5.TableRow,
-    window.p5.Element
+    {
+      instance: window.Sprite,
+      methodOpts: {
+        nativeCallsBackInterpreter: true
+      }
+    },
+    // The p5play Group object should be custom marshalled, but its constructor
+    // actually creates a standard Array instance with a few additional methods
+    // added. We solve this by putting "Array" in this list, but with "draw" as
+    // a requiredMethod:
+    {
+      instance: Array,
+      requiredMethod: 'draw',
+      methodOpts: {
+        nativeCallsBackInterpreter: true
+      }
+    },
+    { instance: window.p5 },
+    { instance: window.Camera },
+    { instance: window.Animation },
+    { instance: window.p5.Vector },
+    { instance: window.p5.Color },
+    { instance: window.p5.Image },
+    { instance: window.p5.Renderer },
+    { instance: window.p5.Graphics },
+    { instance: window.p5.Font },
+    { instance: window.p5.Table },
+    { instance: window.p5.TableRow },
+    { instance: window.p5.Element },
   ];
-};
-
-GameLabP5.prototype.getCustomMarshalModifiedObjectList = function () {
-
-  // The p5play Group object should be custom marshalled, but its constructor
-  // actually creates a standard Array instance with a few additional methods
-  // added. The customMarshalModifiedObjectList allows us to set up additional
-  // object types to be custom marshalled by matching both the instance type
-  // and the presence of additional method name on the object.
-  return [ { instance: Array, methodName: 'draw' } ];
 };
 
 GameLabP5.prototype.getGlobalPropertyList = function () {

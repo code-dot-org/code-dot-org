@@ -72,11 +72,7 @@ eu-ES:
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -120,12 +116,13 @@ eu-ES:
   third_party_organization: Organization
   third_party_curriculum: Kurrikuluma
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -297,6 +294,9 @@ eu-ES:
   homepage_slot_text_link_othercourses: Beste ikastaroak online
   homepage_slot_text_title_educators: Irakasleak
   homepage_slot_text_blurb_educators: Irakatsi zure ikasleei
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Bigarren hezkuntza
+  homepage_slot_text_link_high: Batxilergoa
   homepage_slot_text_link_k5: LH-5 mailarako ikastaroak
   homepage_slot_text_link_fullcurriculum: Ikusi gure curriculum osoa
   homepage_slot_text_link_pd: Garapen profesionala
@@ -615,7 +615,7 @@ eu-ES:
   dashboard_faq_k5: LH-5 sarri egindako galderak
   dashboard_announcements: Berriak
   dashboard_announce_view_all: Guztiak ikusi
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>Deadline coming up this Friday and we still have a few open spots for high school teachers in partner districts.</b> Sign up now to join our highly rated Professional Learning program and learn to teach AP Computer Science Principles. As part of the program you get free travel to TeacherCon this summer and ongoing support throughout the year.'
   dashboard_announce_button_text: Ikasi gehiago
   dashboard_announce_hoc: "<b>2015eko Urriak 15 </b>- Kode Ordua iristen hari da &mdash; antolaketa partaide guztiak opari txartel bat jasoko dute Amazon.com edo Microsoft's Windows Strore-en berain lanagit esker moduan. Parte hartu mundu osoko klasean Abenduan 7-13 tartean."
   dashboard_announce_playlab: '<b>2015eko abenduaren 4a</b> - Kode ordua hemen da! Saiatu edozein adinetarako eta edozein gailurako 50 tutorial. Aste honetan berria: sortu istorio eta jokoak, Ice Age eta Gumball joko laborategi berrietan.'

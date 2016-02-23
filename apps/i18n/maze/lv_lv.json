@@ -18,6 +18,7 @@
   "fillTooltip": "uzlikt 1 dubļa vienību",
   "finalLevel": "Apsveicu! Jūs esat atrisinājis pēdējo puzli.",
   "flowerEmptyError": "Zieds, uz kura tu atrodies, vairs nesatur nektāru.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "iegūt",
   "heightParameter": "augstums",
   "holePresent": "šeit ir bedre",
@@ -81,6 +82,5 @@
   "whileTooltip": "Atārtot slegtās darbības kamēr finiša punkts ir sasniegts.",
   "word": "Atrodi vārdu",
   "yes": "Jā",
-  "youSpelled": "Jūs uzrakstījāt",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "Jūs uzrakstījāt"
 }

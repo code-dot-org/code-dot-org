@@ -70,11 +70,7 @@ uk-UA:
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science course, consider celebrating and connecting it to things they can build in the real world by inviting a guest speaker to your classroom. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_course1: Third party tutorials for pre-readers
-  congrats_third_party_course2: Third party tutorials
-  congrats_third_party_course3: Third party tutorials
-  congrats_third_party_course4: Third party tutorials
-  congrats_third_party_accelerated: Third party tutorials
+  congrats_third_party_title: Use your new skills with these apps and websites
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -118,12 +114,13 @@ uk-UA:
   third_party_organization: Organization
   third_party_curriculum: Навчальний план
   third_party_pricing: Pricing
-  third_party_cost_free: Free
+  third_party_cost_free: Free for students and teachers
   third_party_cost_5permonth: $5/month per class
   third_party_cost_299: $2.99/download
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
+  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
   third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades K-5
@@ -318,6 +315,9 @@ uk-UA:
   homepage_slot_text_link_othercourses: Інші онлайн курси
   homepage_slot_text_title_educators: Викладачі
   homepage_slot_text_blurb_educators: Навчіть Ваших учнів
+  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_middle: Середня школа
+  homepage_slot_text_link_high: Старша школа
   homepage_slot_text_link_k5: Курси для дітей
   homepage_slot_text_link_fullcurriculum: Подивіться наш повний курс навчання
   homepage_slot_text_link_pd: Професійний розвиток
@@ -639,7 +639,7 @@ uk-UA:
   dashboard_faq_k5: K-5 запитання й відповіді
   dashboard_announcements: Оголошення
   dashboard_announce_view_all: Переглянути всі
-  dashboard_announce_message: "<b>February 1, 2016</b> - 9 out of 10 parents want their children to learn computer science and still most schools don't teach it. On January 30, the White House announced plans to bring computer science to every student in the United States with the Computer Science for All initiative. We couldn't be happier about the bipartisan support for computer science."
+  dashboard_announce_message: '<b>Deadline coming up this Friday and we still have a few open spots for high school teachers in partner districts.</b> Sign up now to join our highly rated Professional Learning program and learn to teach AP Computer Science Principles. As part of the program you get free travel to TeacherCon this summer and ongoing support throughout the year.'
   dashboard_announce_button_text: Дізнайтеся більше
   dashboard_announce_hoc: "<b>23 листопада 2015</b> - Хочете допомогти інформатичній освіті протягом Години коду? Більше 7000 волонтерів вже збираються надихати учнів, відвідавши клас чи взявши участь у відео-чаті. Перегляньте карту, щоб зв'язатися з місцевими волонтерами."
   dashboard_announce_playlab: '<b>4 грудня 2015</b> - Година коду вже тут! Спробуйте наші 50 підручників для будь-якого віку та пристрою. Новинка цього тижня: закодуйте власні історії та ігри у новій Ігровій лабораторії, Льодовиковому періоді та Гамболі.'

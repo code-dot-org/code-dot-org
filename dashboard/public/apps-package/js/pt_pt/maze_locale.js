@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "colocar 1 unidade de terra"},
 "finalLevel":function(d){return "Parabéns! Resolveste o desafio final."},
 "flowerEmptyError":function(d){return "A flor em que estás já não tem mais néctar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "obter"},
 "heightParameter":function(d){return "altura"},
 "holePresent":function(d){return "há um buraco"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Repete as ações seguintes até a condição de terminação ser alcançada."},
 "word":function(d){return "Encontra a palavra"},
 "yes":function(d){return "Sim"},
-"youSpelled":function(d){return "Tu escreveste"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Tu escreveste"}};
