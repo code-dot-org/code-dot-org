@@ -30,7 +30,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     post :create, user: student_params
 
-    assert_redirected_to '/'
+    assert_redirected_to update_login_url(redirect: '/')
 
     # we are still stubbing user.save (even though we returned true so
     # we can't actually check that the user was created)
@@ -49,7 +49,7 @@ class RegistrationsControllerTest < ActionController::TestCase
         post :create, user: student_params
       end
 
-      assert_redirected_to '/'
+      assert_redirected_to update_login_url(redirect: '/')
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
@@ -74,7 +74,7 @@ class RegistrationsControllerTest < ActionController::TestCase
         post :create, user: student_params
       end
 
-      assert_redirected_to '/'
+      assert_redirected_to update_login_url(redirect: '/')
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
@@ -261,7 +261,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                          hashed_email: Digest::MD5.hexdigest('hidden@email.com'),
                         }
 
-    assert_redirected_to '/'
+    assert_redirected_to update_login_url(redirect: '/')
 
     assert_equal '', assigns(:user).email
     assert_equal Digest::MD5.hexdigest('hidden@email.com'), assigns(:user).hashed_email
@@ -276,7 +276,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                          current_password: 'whatev' # need this to change email
                         }
 
-    assert_redirected_to '/'
+    assert_redirected_to update_login_url(redirect: '/')
 
     assert_equal 'hashed@email.com', assigns(:user).email
     assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email

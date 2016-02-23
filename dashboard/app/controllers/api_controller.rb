@@ -80,7 +80,7 @@ class ApiController < ApplicationController
       script = Script.get_from_cache(params[:script_name])
       render json: summarize_user_progress(script)
     else
-      render json: {}
+      render json: {user_id: null}
     end
   end
 
@@ -103,9 +103,12 @@ class ApiController < ApplicationController
         }
 
       end
+      response[:user_id] = current_user.id
       response[:disableSocialShare] = current_user.under_13?
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+    else
+      response[:user_id] = nil
     end
     render json: response
   end

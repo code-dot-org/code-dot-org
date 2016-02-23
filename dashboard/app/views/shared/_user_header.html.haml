@@ -13,9 +13,19 @@
         - if current_user.teacher? && (current_user.teacher_prize || current_user.teacher_bonus_prize)
           = link_to t('nav.user.prizes'), my_prizes_url
         = link_to t('nav.user.logout'), destroy_user_session_url
+    - #  This partial can be returned in an API call so it's possible for it to be on non-dashboard pages.
+    :javascript
+      if (typeof dashboard !== 'undefined') {
+        dashboard.clientState.setCurrentUserKey('#{current_user.id}');
+      }
 - else
   .header_button.header_user
     = link_to(t('nav.user.signin'), new_user_session_url, class: 'button-signin', id: 'signin_button')
+  - #  This partial can be returned in an API call so it's possible for it to be on non-dashboard pages.
+  :javascript
+    if (typeof dashboard !== 'undefined') {
+      dashboard.clientState.setAnonymousUser();
+    }
 
 :javascript
   function hideUserOptions() {
@@ -33,10 +43,4 @@
   });
   $('.user_options').click(function (e) {
     e.stopPropagation(); // Clicks inside the popup shouldn't close it
-  });
-  $('.user_options a:last').click(function (e) {
-    // this partial can be returned in an API call so it's possible for it to be on non-dashboard pages
-    if (typeof dashboard !== 'undefined') {
-      dashboard.clientState.reset();
-    }
   });

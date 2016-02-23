@@ -54,12 +54,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def reset_session_endpoint
-    client_state.reset
-    reset_session
-    render text: 'OK <script>sessionStorage.clear()</script>'
-  end
-
   rescue_from CanCan::AccessDenied do
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
