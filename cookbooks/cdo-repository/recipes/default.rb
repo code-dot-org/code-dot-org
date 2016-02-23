@@ -28,8 +28,8 @@ git git_path do
     if GitHelper.shared_volume? git_path, home_path
       :nothing
 
-    # Sync instead of checkout for adhoc instances that aren't CI-managed.
-    elsif node.chef_environment == 'adhoc'
+    # Sync instead of checkout only for special, non-CI-managed instances via 'sync' attribute.
+    elsif node['cdo-repository']['sync']
       :sync
 
     # Default checkout-only for CI-managed instances. (CI script manages pull on updates)
