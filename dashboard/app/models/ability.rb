@@ -30,7 +30,12 @@ class Ability
         District,
         Workshop,
         Cohort,
-        WorkshopAttendance
+        WorkshopAttendance,
+        # PLC Stuff
+        Plc::Course,
+        Plc::LearningModule,
+        Plc::Task,
+        Plc::UserCourseEnrollment
       ]
     end
 

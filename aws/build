@@ -42,7 +42,11 @@ def main()
 
     # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
     # (e.g. the cdo-servers attribute describing which servers to deploy).
-    RakeUtils.system 'sudo', 'chef-client'
+    Dir.chdir(aws_dir) do
+      # Ensure the chef cookbooks are up to date.
+      RakeUtils.rake '--rakefile', 'build.rake', 'chef_update'
+      RakeUtils.system 'sudo', 'chef-client'
+    end
 
     status = 1
     Dir.chdir(aws_dir) do

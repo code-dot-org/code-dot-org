@@ -37,9 +37,11 @@ Metrics/LineLength:
 Metrics/ModuleLength:
   Enabled: false
 
+Metrics/BlockNesting:
+  Enabled: false
+
 Style/Semicolon:
   AllowAsExpressionSeparator: true
 
 Style/NumericLiterals:
-  Enabled: true
   MinDigits: 7
