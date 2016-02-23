@@ -1,0 +1,21 @@
+%h1 Listing plc_courses
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - @courses.each do |plc_course|
+      %tr
+        %td= plc_course.name
+        %td= link_to 'Show', plc_course
+        %td= link_to 'Edit', edit_plc_course_path(plc_course)
+        %td= link_to 'Destroy', plc_course, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Course', new_plc_course_path

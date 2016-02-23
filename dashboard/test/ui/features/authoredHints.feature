@@ -18,6 +18,7 @@ Scenario: View Authored Hints
 
   When I press the first ".qtip a.show-instructions" element
   And I wait to see a dialog titled "Puzzle 2 of 2"
+  And I wait for 2 seconds
 
   # No hints in the instructions dialog yet
   Then element ".authored-hints ul" does not exist

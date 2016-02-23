@@ -847,15 +847,22 @@ Applab.init = function(config) {
   }
 };
 
-Applab.appendToEditor = function(newCode) {
+/**
+ * @param {string} newCode Code to append to the end of the editor
+ */
+Applab.appendToEditor = function (newCode) {
   var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
   studioApp.editor.setValue(code);
+};
+
+Applab.scrollToEnd = function () {
+  studioApp.editor.scrollCursorToEndOfDocument();
 };
 
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Applab.clearEventHandlersKillTickLoop = function() {
+Applab.clearEventHandlersKillTickLoop = function () {
   Applab.whenRunFunc = null;
   Applab.running = false;
   $('#headers').removeClass('dimmed');
@@ -1121,6 +1128,10 @@ Applab.execute = function() {
       var session = studioApp.editor.aceEditor.getSession();
       annotationList.attachToSession(session, studioApp.editor);
       annotationList.clearRuntimeAnnotations();
+      studioApp.editor.aceEditor.session.on("change", function () {
+        // clear any runtime annotations whenever a change is made
+        annotationList.clearRuntimeAnnotations();
+      });
     }
   } else {
     // Define any top-level procedures the user may have created
