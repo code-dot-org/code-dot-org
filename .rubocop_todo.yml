@@ -109,10 +109,6 @@ Performance/RedundantMerge:
 Performance/StringReplacement:
   Enabled: false
 
-# Offense count: 1
-Performance/TimesMap:
-  Enabled: false
-
 # Offense count: 35
 # Cop supports --auto-correct.
 Style/AlignArray:

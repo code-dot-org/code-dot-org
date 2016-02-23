@@ -207,7 +207,7 @@ class DashboardSection
   end
 
   def self.random_code
-    6.times.map{random_letter}.join('')
+    Array.new(6).map{random_letter}.join('')
   end
 
   def self.create(params)
