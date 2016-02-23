@@ -33,7 +33,8 @@
     "fast_get_nectar_animation": "true",
     "step_speed": "1",
     "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nTry using your new function to collect all of this nectar.\r\n\r\n<br/>\r\n<h5 class=\"hint\">\r\n<details>\r\n<summary><b>Hint</b></summary>\r\n\t<br/><br/>\r\n\r\n    \tTry using a `for loop` to collect all the nectar with fewer blocks.\r\n  \r\n</details>\r\n</h5>\r\n    \r\n"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -62,7 +63,7 @@
         </block>
         <block type="when_run" deletable="false" movable="false">
   </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="direction"/>
             <arg name="nectars"/>
