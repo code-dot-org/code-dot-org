@@ -47,6 +47,7 @@ class Game < ActiveRecord::Base
   CALC = 'calc'
   EVAL = 'eval'
   TEXT_COMPRESSION = 'text_compression'
+  LEVEL_GROUP = 'level_group'
 
   def self.custom_studio
     @@game_custom_studio ||= find_by_name("CustomStudio")
