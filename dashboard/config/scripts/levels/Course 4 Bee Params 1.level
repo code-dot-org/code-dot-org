@@ -33,13 +33,14 @@
     "step_speed": "2",
     "examples_required": "false",
     "fast_get_nectar_animation": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation/>
           <title name="NAME">get 3 nectar</title>
           <statement name="STACK">

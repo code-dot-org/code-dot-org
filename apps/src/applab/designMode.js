@@ -460,6 +460,7 @@ designMode.onDepthChange = function (element, depthDirection) {
 designMode.onInsertEvent = function(code) {
   Applab.appendToEditor(code);
   $('#codeModeButton').click(); // TODO(dave): reactify / extract toggle state
+  Applab.scrollToEnd();
 };
 
 /**/

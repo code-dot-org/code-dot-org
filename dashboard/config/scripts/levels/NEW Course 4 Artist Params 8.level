@@ -33,7 +33,8 @@
     "examples_required": "false",
     "video_key": "C4_function_parameters",
     "never_autoplay_video": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -57,7 +58,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="length"/>
           </mutation>

@@ -10,7 +10,15 @@ Our current middle school curriculum focuses on using computer science and progr
 
 <img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
 
-Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
+<div style="padding-right: 20px; padding-top: 10px; float: left; width: 50%;"> Code.org has partnered with the award-winning <a href="http://www.projectguts.org/">Project GUTS</a> (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards. </div>
+
+[col-50]
+
+<img src="<%= CDO.code_org_url("/images/testimonials/fit-400/cs-in-science-testimonial-2.png") %>">
+
+[/col-50]
+
+<div style="clear: both;"></div>
 
 [<button>Learn more about curriculum</button>](/curriculum/science) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-science)
 
@@ -19,6 +27,8 @@ Code.org has partnered with the award-winning [Project GUTS](http://www.projectg
 <img src="<%= CDO.shared_image_url("courses/logo_algebra.png") %>">
 
 Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The twenty lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+
+<img src="<%= CDO.code_org_url("/images/testimonials/fit-750/cs-in-algebra-testimonial.png") %>">
 
 [<button>Learn more about curriculum</button>](/curriculum/algebra) &nbsp;&nbsp;[<button>Learn more about professional learning</button>](/educate/professional-learning/cs-in-algebra)
 

@@ -1,6 +1,7 @@
 name 'U6 - deleteRecord - Student Introduction'
 title 'title'
 description 'description here'
+css 'unplugged'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Unit 4: Lesson 04 - Deleting Records
@@ -13,9 +14,8 @@ words.
 
 # Lesson
 
-* Video: Tutorial - Databases: part 1 - Creating and Storing
-* Introduction to App Lab’s data tools: createRecord and the Data Viewer
-* Modify the contacts app to store new contacts in a database
+* Delete records in a database by using and id and `deleteRecord`.
+* Improve the Contacts App.
 
 
 # Resources
