@@ -6,46 +6,6 @@ module CdoApps
     app_root = File.join root, app_name
     init_script = "/etc/init.d/#{app_name}"
 
-    template init_script do
-      source 'init.d.erb'
-      user 'root'
-      group 'root'
-      mode '0755'
-      variables src_file: "#{app_root}/config/unicorn.rb",
-        app_root: app_root,
-        pid_file: "#{app_root}/config/unicorn.rb.pid",
-        user: user,
-        env: node.chef_environment
-      notifies :restart, "service[#{app_name}]", :delayed
-    end
-
-    log_dir = File.join app_root, 'log'
-    directory log_dir do
-      recursive true
-      user user
-      group user
-    end
-
-    template "/etc/logrotate.d/#{app_name}" do
-      source 'logrotate.erb'
-      user 'root'
-      group 'root'
-      mode '0644'
-      variables app_name: app_name,
-        log_dir: log_dir
-    end
-
-    if node['cdo-newrelic']
-      template "#{app_root}/config/newrelic.yml" do
-        source 'newrelic.yml.erb'
-        user user
-        group user
-        variables app_name: app_name.capitalize,
-          log_dir: log_dir,
-          auto_instrument: false
-      end
-    end
-
     utf8 = 'en_US.UTF-8'
     env = {
       'LC_ALL' => utf8,
@@ -74,9 +34,50 @@ module CdoApps
 
     # Builds the app.
     setup_cmd = "execute[#{node['cdo-apps']['local_mysql'] ? "setup-#{app_name}" : "build-#{app_name}"}]"
-    ruby_block "build-#{app_name}" do
-      block {}
+
+    template init_script do
+      source 'init.d.erb'
+      user 'root'
+      group 'root'
+      mode '0755'
+      variables src_file: "#{app_root}/config/unicorn.rb",
+        app_root: app_root,
+        pid_file: "#{app_root}/config/unicorn.rb.pid",
+        user: user,
+        env: node.chef_environment
+      notifies :restart, "service[#{app_name}]", :delayed
+
+      # Bootstrap the first cdo-apps Rakefile build on a new system.
+      # Runs only on initial install because `rake build` is managed by the CI script after bootstrapping.
+      # TODO move this run-once notification somewhere more appropriate
       notifies :run, setup_cmd, :immediately
+    end
+
+    log_dir = File.join app_root, 'log'
+    directory log_dir do
+      recursive true
+      user user
+      group user
+    end
+
+    template "/etc/logrotate.d/#{app_name}" do
+      source 'logrotate.erb'
+      user 'root'
+      group 'root'
+      mode '0644'
+      variables app_name: app_name,
+        log_dir: log_dir
+    end
+
+    if node['cdo-newrelic']
+      template "#{app_root}/config/newrelic.yml" do
+        source 'newrelic.yml.erb'
+        user user
+        group user
+        variables app_name: app_name.capitalize,
+          log_dir: log_dir,
+          auto_instrument: false
+      end
     end
 
     service app_name do
