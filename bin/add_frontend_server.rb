@@ -440,14 +440,14 @@ instances_to_create.each do |instance_to_create|
   sleep(1)
 end
 
-instance_creation_threads.each {|thread| thread.join}
+instance_creation_threads.each(&:join)
 
 instances_to_create.each do |instance_to_create|
   puts "#{instance_to_create.name}: #{instance_to_create.result}"
 end
 
 #If we've created all instances successfully, and without exceptions, it's safe to update the production daemon.
-if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'} == nil
+if instances_to_create.index {|created_instance| created_instance.result != 'Succeeded'}.nil?
   puts 'All instances were created successfully'
   puts 'Updating production-daemon chef config with new node.'
   `ssh gateway.code.org -t "ssh production-daemon -t sudo chef-client"`
