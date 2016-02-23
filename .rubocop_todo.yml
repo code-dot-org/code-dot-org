@@ -601,7 +601,3 @@ Style/WhileUntilModifier:
 # SupportedStyles: percent, brackets
 Style/WordArray:
   Enabled: false
-
-# Offense count: 7
-Style/ZeroLengthPredicate:
-  Enabled: false
