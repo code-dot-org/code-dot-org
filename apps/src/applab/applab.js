@@ -847,15 +847,22 @@ Applab.init = function(config) {
   }
 };
 
-Applab.appendToEditor = function(newCode) {
+/**
+ * @param {string} newCode Code to append to the end of the editor
+ */
+Applab.appendToEditor = function (newCode) {
   var code = studioApp.editor.addEmptyLine(studioApp.editor.getValue()) + newCode;
   studioApp.editor.setValue(code);
+};
+
+Applab.scrollToEnd = function () {
+  studioApp.editor.scrollCursorToEndOfDocument();
 };
 
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Applab.clearEventHandlersKillTickLoop = function() {
+Applab.clearEventHandlersKillTickLoop = function () {
   Applab.whenRunFunc = null;
   Applab.running = false;
   $('#headers').removeClass('dimmed');

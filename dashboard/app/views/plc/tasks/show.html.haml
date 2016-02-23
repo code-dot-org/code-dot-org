@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %strong Name:
+  = @task.name
+
+%p
+  %strong Associated module
+  = @task.plc_learning_module.try(:name)
+
+= link_to 'Edit', edit_plc_task_path(@task)
+\|
+= link_to 'Back', plc_tasks_path
