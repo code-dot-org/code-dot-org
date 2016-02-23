@@ -70,10 +70,6 @@ Lint/UnusedMethodArgument:
 Lint/Void:
   Enabled: false
 
-# Offense count: 3
-Metrics/BlockNesting:
-  Max: 5
-
 # Offense count: 17
 # Cop supports --auto-correct.
 Performance/Casecmp:
@@ -82,10 +78,6 @@ Performance/Casecmp:
 # Offense count: 6
 # Cop supports --auto-correct.
 Performance/Detect:
-  Enabled: false
-
-# Offense count: 1
-Performance/DoubleStartEndWith:
   Enabled: false
 
 # Offense count: 1
@@ -420,26 +412,11 @@ Style/NestedParenthesizedCalls:
 Style/Next:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/NilComparison:
-  Enabled: false
-
 # Offense count: 4
 # Cop supports --auto-correct.
 # Configuration parameters: IncludeSemanticChanges.
 Style/NonNilCheck:
   Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-Style/Not:
-  Enabled: false
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/NumericLiterals:
-  MinDigits: 9
 
 # Offense count: 10
 # Cop supports --auto-correct.
@@ -586,13 +563,6 @@ Style/StructInheritance:
 # Offense count: 12
 # Cop supports --auto-correct.
 Style/SymbolLiteral:
-  Enabled: false
-
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: respond_to
-Style/SymbolProc:
   Enabled: false
 
 # Offense count: 30
