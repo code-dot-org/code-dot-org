@@ -12,7 +12,7 @@ class PairingsControllerTest < ActionController::TestCase
     xhr :get, :show
     assert_response :success
 
-    expected_response = {"pairings" => [], "sections" => []}
+    expected_response = {'pairings' => [], 'sections' => []}
     assert_equal expected_response, JSON.parse(response.body)
   end
 
@@ -25,8 +25,8 @@ class PairingsControllerTest < ActionController::TestCase
     xhr :get, :show
     assert_response :success
 
-    expected_response = {"pairings" => [], "sections" => [{"id" => section_1.id, "name" => section_1.name, "students" => []},
-                                                         {"id" => section_2.id, "name" => section_2.name, "students" => []}]}
+    expected_response = {'pairings' => [], 'sections' => [{'id' => section_1.id, 'name' => section_1.name, 'students' => []},
+                                                         {'id' => section_2.id, 'name' => section_2.name, 'students' => []}]}
     assert_equal expected_response, JSON.parse(response.body)
   end
 
@@ -39,8 +39,9 @@ class PairingsControllerTest < ActionController::TestCase
     xhr :get, :show
     assert_response :success
 
-    expected_response = {"pairings" => [{id: classmate.id, name: classmate.name}],
-                         "sections" => [{"id" => section.id, "name" => section.name, "students" => [{id: classmate.id, name: classmate.name}]}]}
+    expected_response = {'pairings' => [{'id' => classmate.id, 'name' => classmate.name}],
+                         'sections' => [{'id' => section.id, 'name' => section.name,
+                                         'students' => [{'id' => classmate.id, 'name' => classmate.name}]}]}
     assert_equal expected_response, JSON.parse(response.body)
   end
 
@@ -67,7 +68,7 @@ class PairingsControllerTest < ActionController::TestCase
 
     assert_response :success
     # the invalid user is silently rejected
-    assert_equal [classmate_1], session[:pairings]
+    assert_equal [classmate], session[:pairings]
   end
 
 

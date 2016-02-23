@@ -302,10 +302,12 @@ class ApiControllerTest < ActionController::TestCase
     student = create(:follower).student_user
     sign_in student
 
+    assert student.can_pair?
+
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', 'Pair Programming'
+    assert_select '#pairing_link'
   end
 
   test "don't show link to pair programming when not in a section" do

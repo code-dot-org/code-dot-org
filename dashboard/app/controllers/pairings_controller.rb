@@ -27,9 +27,16 @@ class PairingsController < ApplicationController
   private
 
   def pairings=(pairings_from_params)
+    return if pairings_from_params.blank?
+
     session[:pairings] = pairings_from_params.map do |pairing_param|
-      User.find(pairing_param[:id])
-    end
+      other_user = User.find(pairing_param[:id])
+      if current_user.can_pair_with? other_user
+        other_user
+      else
+        nil
+      end
+    end.compact
   end
 
   def pairings_summary
@@ -40,16 +47,17 @@ class PairingsController < ApplicationController
     end
   end
 
-  def summary
-    # [{id: 1, name: "A section"}, {id: 15, name: "Anotther section"}]
-    sections = current_user.sections_as_student.map do |section|
+  def sections_summary
+    current_user.sections_as_student.map do |section|
       {id: section.id, name: section.name, students:
        (section.students - [current_user]).map do |student|
          {id: student.id, name: student.name}
        end
       }
     end
+  end
 
-    {pairings: pairings, sections: sections}
+  def summary
+    {pairings: pairings_summary, sections: sections_summary}
   end
 end
