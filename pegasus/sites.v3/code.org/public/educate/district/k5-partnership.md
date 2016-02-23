@@ -45,9 +45,9 @@ Ideal partnerships are with school districts interested in bringing computer sci
 
 ## Apply to partner
 
-### If you are a district representative, complete <a href="https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform"target="_blank">this application</a>. We will review applications on a rolling basis until May 2016. After that we will review applications annually.
+If you are a district representative, complete <a href="https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform"target="_blank">this application</a>. We will review applications on a rolling basis until May 2016. After that we will review applications annually.
 
-This is a significant enough commitment from Code.org that we can only support a limited number of districts, and therefore would like to understand <a href="https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform" target="_blank">your intentions</a> as a school district to incorporate computer science into the district curriculum and teacher professional development. 
+This is a significant enough commitment from Code.org that we can only support a limited number of districts, and therefore would like to understand your intentions as a school district to incorporate computer science into the district curriculum and teacher professional development. 
 
 [<button>K-5 District Application</button>](https://docs.google.com/a/code.org/forms/d/1g8sS6VS2EcJ9I8PLw8-TSa7uaJqPhbHGUGyic_zmYDQ/viewform)
 
