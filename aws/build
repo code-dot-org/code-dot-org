@@ -42,7 +42,11 @@ def main()
 
     # Run `sudo chef-client` to ensure that the deploy respect updates to the Chef config
     # (e.g. the cdo-servers attribute describing which servers to deploy).
-    RakeUtils.system 'sudo', 'chef-client'
+    Dir.chdir(cookbooks_dir) do
+      # Ensure we've first installed the latest chef-client version specified by `cookbooks/Gemfile.lock`.
+      RakeUtils.bundle_install
+      RakeUtils.system 'sudo', 'chef-client'
+    end
 
     status = 1
     Dir.chdir(aws_dir) do
