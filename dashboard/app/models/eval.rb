@@ -27,8 +27,6 @@ class Eval < Blockly
     coordinate_grid_background
   )
 
-  before_save :update_ideal_level_source
-
   # List of possible skins, the first is used as a default.
   def self.skins
     ['eval']
