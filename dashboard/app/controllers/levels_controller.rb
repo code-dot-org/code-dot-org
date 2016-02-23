@@ -41,6 +41,11 @@ class LevelsController < ApplicationController
     authorize! :edit, @level
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
+
+    if type == 'solution_blocks' && blocks_xml == EMPTY_XML && @level.ideal_level_source
+      blocks_xml = @level.ideal_level_source.data
+    end
+
     blocks_xml = Blockly.convert_category_to_toolbox(blocks_xml) if type == 'toolbox_blocks'
     level_view_options(
       start_blocks: blocks_xml,
