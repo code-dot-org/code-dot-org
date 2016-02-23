@@ -317,10 +317,6 @@ Style/GlobalVars:
 Style/HashSyntax:
   Enabled: false
 
-# Offense count: 2
-Style/IdenticalConditionalBranches:
-  Enabled: false
-
 # Offense count: 4
 Style/IfInsideElse:
   Enabled: false
