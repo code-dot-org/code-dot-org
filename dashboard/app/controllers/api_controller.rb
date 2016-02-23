@@ -87,11 +87,12 @@ class ApiController < ApplicationController
   def user_progress_for_stage
     response = {}
 
-    if current_user
-      script = Script.get_from_cache(params[:script_name])
-      stage = script.stages[params[:stage_position].to_i - 1]
-      level = stage.script_levels[params[:level_position].to_i - 1].level
+    script = Script.get_from_cache(params[:script_name])
+    stage = script.stages[params[:stage_position].to_i - 1]
+    script_level = stage.script_levels[params[:level_position].to_i - 1]
+    level = script_level.level.level
 
+    if current_user
       last_activity = current_user.last_attempt(level)
       level_source = last_activity.try(:level_source).try(:data)
 
@@ -107,6 +108,13 @@ class ApiController < ApplicationController
       response[:disablePostMilestone] =
         !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
     end
+
+    slog(tag: 'activity_start',
+         script_level_id: script_level.id,
+         level_id: level.id,
+         user_agent: request.user_agent,
+         locale: locale) if level.finishable?
+
     render json: response
   end
 
