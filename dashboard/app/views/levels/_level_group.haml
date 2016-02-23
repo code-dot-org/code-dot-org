@@ -1,11 +1,15 @@
+- app = 'level_group'
 - data = @level.properties
 :javascript
   window.levelData = #{data.to_json};
 
 = render partial: 'levels/common_audio'
 
-- data["levels"].each do |level_name|
+- data["levels"].each_with_index do |level_name, index|
   - level_blob = Level.find_by_name(level_name)
 
   - @level = level_blob
-  = render partial: 'levels/multi'
+  = render partial: 'levels/multi', locals: {index: index, standalone: false}
+
+-# One dialog and one submisison for this level.
+= render partial: 'levels/dialog', locals: {app: app, data: data}

@@ -1,4 +1,7 @@
-.multi
+- index ||= 0
+- standalone ||= false
+
+.multi{id: "multi_#{index}"}
 
   - data = @level.properties
   - app = 'multi'
@@ -54,7 +57,12 @@
               %label{style: "height: #{height}"}!= multi_t(answer['text'])
 
       .clear
-      = render partial: 'levels/dialog', locals: {app: app, data: data}
+
+      -# Standalone still has the multi managing its Submit button and dialogs.
+      -# Non-standalone (i.e. LevelGroup) has the containing level dealing with all that UI,
+      -# and just submits silently.
+      - if standalone
+        = render partial: 'levels/dialog', locals: {app: app, data: data}
 
   .clear
   = render partial: 'levels/multi_answer', locals: {data: @level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class}
@@ -68,176 +76,18 @@
 
 = render partial: 'levels/common_audio'
 
+- if !@included_multi
+  Including Multi
+  :javascript
+    #{render template: 'levels/multi.js', formats: [:js]}
+  - @included_multi = true
+- else
+  Not including Multi
 
 :javascript
-
-  // The index of the last selection.
-  var lastSelectionIndex = -1;
-
-  // How many answers should there be?
-  var numAnswers = "#{data['type']}" == 'multi2' ? 2 : 1;
-
-  // A boolean array of the answers.  true is correct.
-  var answers = #{data['answers'].map {|answer| answer['correct']}};
-
-  // Tracking which answers are currently selected.
-  var selectedAnswers = [];
-
-  // Tracking which answers have been crossed out.
-  var crossedAnswers = [];
-
-  function enableButton(enable)
-  {
-    $('.submitButton').attr('disabled', !enable);
-  }
-
-  function choiceClicked(button)
-  {
-    var index = $(button).attr('index');
-    CDOSounds.play('click');
-
-    clickItem(index);
-  }
-
-  function clickItem(index)
-  {
-    // If this button is already crossed, do nothing more.
-    if (crossedAnswers.indexOf(index) !== -1)
-    {
-      return;
-    }
-
-    // If single answer, and this button is already selected, do nothing more.
-    if (numAnswers == 1 && $.inArray(index, selectedAnswers) !== -1)
-    {
-      return;
-    }
-
-    // If multiple answer, and this button is already selected, deselect it.
-    if (numAnswers > 1 && $.inArray(index, selectedAnswers) !== -1)
-    {
-      unclickItem(index);
-      return;
-    }
-
-    enableButton(true);
-
-    lastSelectionIndex = index;
-
-    // Unchecked->checked.
-    $("#unchecked_" + index).hide();
-    $("#checked_" + index).show();
-
-    // Add this answer to the list of selected answers.
-    selectedAnswers.unshift(index);
-
-    // Unselect previously selected answer if there are now too many selected.
-    if (selectedAnswers.length > numAnswers)
-    {
-      var unselectIndex = selectedAnswers.pop();
-
-      // Although don't uncheck it if it's already crossed out.
-      if (crossedAnswers.indexOf(unselectIndex) === -1 )
-      {
-        $("#unchecked_" + unselectIndex).show();
-        $("#checked_" + unselectIndex).hide();
-      }
-    }
-
-    return true;
-  }
-
-  function unclickItem(index)
-  {
-    var selectedItemIndex = selectedAnswers.indexOf(index);
-    selectedAnswers.splice(selectedItemIndex, 1);
-
-    // Checked->unchecked.
-    $("#unchecked_" + index).show();
-    $("#checked_" + index).hide();
-  }
-
-  $(function()
-  {
-    $('span.answerbutton').click(function() {
-      choiceClicked(this);
-    });
-
-    $('#voteform img').on('dragstart', function(e) {
-      // Prevent button images from being dragged, click the button instead.
-      var button = $(this).parent().parent().parent();
-      choiceClicked(button);
-      e.preventDefault();
-      e.stopPropagation();
-    });
-
-    enableButton(false);
-
-    // A string of the last result.  Looks like "1" or "2,3".
-    var lastAttemptString = #{@last_attempt.to_json};
-
-    // Pre-select previously submitted response if available.
-    if (lastAttemptString)
-    {
-      var previousResult = lastAttemptString.split(',');
-
-      for (var i = 0; i < previousResult.length; i++)
-      {
-        clickItem(previousResult[i]);
-      }
-    }
-  });
-
-  function getResult()
-  {
-    var answer;
-    var errorType = null;
-
-    if (numAnswers > 1 && selectedAnswers.length !== numAnswers)
-    {
-      errorType = "toofew";
-    }
-
-    if (numAnswers == 1)
-    {
-      answer = lastSelectionIndex;
-    }
-    else
-    {
-      answer = selectedAnswers
-    }
-
-    return {
-      "response": answer,
-      "result": validateAnswers(),
-      "errorType": errorType
-    }
-  }
-
-  $('.submitButton').click(function() {
-    // If the solution only takes one answer, and it's wrong, and it's not
-    // already crossed out, then mark it as answered wrong.
-    if (numAnswers == 1 &&
-        crossedAnswers.indexOf(lastSelectionIndex) == -1 &&
-        ! validateAnswers())
-    {
-      $("#checked_" + lastSelectionIndex).hide();
-      $("#cross_" + lastSelectionIndex).show();
-      crossedAnswers.unshift(lastSelectionIndex);
-    }
-  });
-
-  function validateAnswers()
-  {
-    if (selectedAnswers.length == numAnswers)
-    {
-      for (var i = 0; i < numAnswers; i++)
-      {
-        if (! answers[selectedAnswers[i]])
-        {
-          return false
-        }
-      }
-      return true;
-    }
-  }
+  var multi1 = new Multi(
+    "multi_#{index}",
+    #{standalone},
+    "#{data['type']}" == "multi2" ? 2 : 1,
+    #{data['answers'].map {|answer| answer['correct']}},
+    #{@last_attempt.to_json} );
