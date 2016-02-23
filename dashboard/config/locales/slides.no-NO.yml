@@ -2989,10 +2989,10 @@
           down arrow key or even a tap on the screen.
       3:
         image: notes/gumball_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: Her skal vi få skuespilleren til å si noe når spilleren klikker på den.
+          Vi vil bruke den når du klikker på blokken og fest "sier" blokk til det.
+          Når spilleren klikker, vil alle blokkene knyttet til denne blokken skal
+          utføres.
       4:
         image: notes/gumball_events_4.JPG
         text: There are also when arrow blocks. If you link move blocks to those,
@@ -3011,9 +3011,9 @@
           forever block.
       3:
         image: notes/gumball_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre
+          en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg
+          massevis av tid senere når du bygger ditt eget spill.
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
@@ -3073,10 +3073,10 @@
           down arrow key or even a tap on the screen.
       3:
         image: notes/iceage_events_3.JPG
-        text: Here, we're going to make the actor say something when the player clicks
-          on it. We will use the when clicked block and attach the "say" block to
-          it. When the player clicks, all the blocks attached to this block will be
-          performed.
+        text: Her skal vi få skuespilleren til å si noe når spilleren klikker på den.
+          Vi vil bruke den når du klikker på blokken og fest "sier" blokk til det.
+          Når spilleren klikker, vil alle blokkene knyttet til denne blokken skal
+          utføres.
       4:
         image: notes/iceage_events_4.JPG
         text: There are also when arrow blocks. If you link move blocks to those,
@@ -3095,6 +3095,6 @@
           forever block.
       3:
         image: notes/iceage_repeat_3.JPG
-        text: In this next puzzle, our goal is to help the actor do a job continuously.
-          Learning how the repeat commands work will save you a ton of time later
-          when you build your own game.
+        text: I detre puslespillet er vårt mål å hjelpe skuespilleren til å gjøre
+          en jobb kontinuerlig. Lær hvordan gjenta kommandoene virker, vil spare deg
+          massevis av tid senere når du bygger ditt eget spill.

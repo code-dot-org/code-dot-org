@@ -13,6 +13,6 @@ fi
 for i in ${TEST_COOKBOOKS}; do
   if [[ ${CIRCLE_BRANCH} =~ ${i} ]]; then
     bundle install -j`nproc`
-    (cd cdo-${i}; bundle exec kitchen verify)
+    (cd cdo-${i}; bundle exec kitchen verify -l debug)
   fi
 done

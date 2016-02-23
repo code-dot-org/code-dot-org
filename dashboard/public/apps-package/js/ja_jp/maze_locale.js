@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "つちを１かい おく"},
 "finalLevel":function(d){return "やったね！ さいごのパズルができたね！"},
 "flowerEmptyError":function(d){return "このはなには みつがないよ。"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "取得"},
 "heightParameter":function(d){return "たかさ"},
 "holePresent":function(d){return "あながある"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "しゅうてんに　たどりつくまで、かこってある　うごきを　くりかえし　やってください。"},
 "word":function(d){return "ことばを　みつけましょう"},
 "yes":function(d){return "はい"},
-"youSpelled":function(d){return "あなたのスペル"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "あなたのスペル"}};

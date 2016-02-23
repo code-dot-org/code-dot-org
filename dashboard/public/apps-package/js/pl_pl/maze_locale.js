@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "umieść 1 jednostkę śmieci"},
 "finalLevel":function(d){return "Gratulacje! Rozwiązałeś końcową łamigłówkę."},
 "flowerEmptyError":function(d){return "Kwiat, na którym jesteś nie ma już nektaru."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "weź"},
 "heightParameter":function(d){return "wysokość"},
 "holePresent":function(d){return "tam jest otwór"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Powtarzaj wymienione czynności, aż do osiągnięcia punktu końcowego."},
 "word":function(d){return "Znajdź słowa"},
 "yes":function(d){return "Tak"},
-"youSpelled":function(d){return "Przeliterowałeś"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Przeliterowałeś"}};

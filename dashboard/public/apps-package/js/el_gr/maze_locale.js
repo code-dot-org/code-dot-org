@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "βάλε 1 μονάδα χώματος"},
 "finalLevel":function(d){return "Συγχαρητήρια! Έλυσες το τελευταίο Παζλ."},
 "flowerEmptyError":function(d){return "Το λουλούδι στο οποίο βρίσκεσαι δεν έχει άλλο νέκταρ."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "πάρε"},
 "heightParameter":function(d){return "ύψος"},
 "holePresent":function(d){return "υπάρχει μια τρύπα"},
@@ -236,5 +237,4 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "whileTooltip":function(d){return "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο."},
 "word":function(d){return "Βρες τη λέξη"},
 "yes":function(d){return "Ναι"},
-"youSpelled":function(d){return "Έγραψες"},
-"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"}};
+"youSpelled":function(d){return "Έγραψες"}};

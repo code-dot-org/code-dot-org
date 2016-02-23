@@ -18,6 +18,7 @@
   "fillTooltip": "bir parça torpaq qoy",
   "finalLevel": "Təbriklər! Axırıncı tapmacanı da tapdınız.",
   "flowerEmptyError": "The flower you're on has no more nectar.",
+  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
   "get": "götür",
   "heightParameter": "hündürlük",
   "holePresent": "çuxur var",
@@ -81,6 +82,5 @@
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
   "word": "Find the word",
   "yes": "Bəli",
-  "youSpelled": "You spelled",
-  "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!"
+  "youSpelled": "You spelled"
 }

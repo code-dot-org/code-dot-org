@@ -32,7 +32,8 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "ideal": "18"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -95,7 +96,7 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="length"/>
             <description>draw a triangle with a length parameter
