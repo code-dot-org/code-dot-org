@@ -13,7 +13,7 @@ dependencies:
     - sudo apt-get install libicu-dev
     - bundle install
     - "printf \"bundler_use_sudo: false\n\" > locals.yml"
-    - rake install:pegasus
+    - bundle exec rake install:pegasus
     - npm install:
         pwd:
             apps
