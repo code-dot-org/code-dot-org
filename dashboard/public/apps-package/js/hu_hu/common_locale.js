@@ -169,7 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkciók"},
 "catText":function(d){return "szöveg"},
 "catVariables":function(d){return "Változók"},
-"choosePrefix":function(d){return "Choose..."},
+"choosePrefix":function(d){return "Válassz..."},
 "clearPuzzle":function(d){return "Újrakezdés"},
 "clearPuzzleConfirm":function(d){return "Visszaállítja a kiindulási állapotot és töröl minden blokkot, amit hozzáadtál a programhoz, vagy amit megváltoztattál."},
 "clearPuzzleConfirmHeader":function(d){return "Biztosan újra szeretnéd kezdeni?"},

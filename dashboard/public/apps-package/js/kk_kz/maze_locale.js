@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "1 жер қыртысын қою"},
 "finalLevel":function(d){return "Құттықтаймыз! Сіз соңғы басқатырғышты шештіңіз."},
 "flowerEmptyError":function(d){return "Cіздегі гүлде мүлде шырын қалған жоқ."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "алу"},
 "heightParameter":function(d){return "биіктік"},
 "holePresent":function(d){return "саңылау бар"},

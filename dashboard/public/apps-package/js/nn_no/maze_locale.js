@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "plasser 1 eining jord"},
 "finalLevel":function(d){return "Gratulerer! Du har løyst den siste oppgåva."},
 "flowerEmptyError":function(d){return "Blomen du er på er tom for nektar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "hent"},
 "heightParameter":function(d){return "høgd"},
 "holePresent":function(d){return "der er eit hol"},

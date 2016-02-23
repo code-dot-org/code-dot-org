@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "tempat 1 unit tanah"},
 "finalLevel":function(d){return "Selamat! Anda telah menyelesaikan teka-teki terakhir."},
 "flowerEmptyError":function(d){return "Bunga dimana anda berada sekarang tidak memiliki madu lebih."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "dapatkan"},
 "heightParameter":function(d){return "tinggi"},
 "holePresent":function(d){return "ada lubang"},

@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "coloque 1 unidade de terra"},
 "finalLevel":function(d){return "Parabéns! Você resolveu o último desafio."},
 "flowerEmptyError":function(d){return "A flor em que você está não tem mais néctar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "obter"},
 "heightParameter":function(d){return "altura"},
 "holePresent":function(d){return "houver um buraco"},

@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "Placera 1 lera"},
 "finalLevel":function(d){return "Grattis! Du har löst det sista pusslet."},
 "flowerEmptyError":function(d){return "Blomman du är på har ingen mer nektar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "hämta"},
 "heightParameter":function(d){return "höjd"},
 "holePresent":function(d){return "Det finns ett hål"},

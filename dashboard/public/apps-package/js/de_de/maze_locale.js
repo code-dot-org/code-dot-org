@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "Lege eine Einheit Schmutz auf den Boden"},
 "finalLevel":function(d){return "Glückwunsch! Du hast die letzte Aufgabe abgeschlossen."},
 "flowerEmptyError":function(d){return "Die Blume auf der du bist, hat keinen Nektar mehr."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "Nehme"},
 "heightParameter":function(d){return "Höhe"},
 "holePresent":function(d){return "dort ist ein Loch"},

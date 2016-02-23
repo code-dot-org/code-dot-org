@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "ដាក់​ដី 1 ដុំ"},
 "finalLevel":function(d){return "សូម​អបអរសាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​ចុង​ក្រោយ​ហើយ។"},
 "flowerEmptyError":function(d){return "ផ្កា​ដែល​អ្នក​កំពុង​យក លែង​មាន​លម្អងហើយ"},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "យក"},
 "heightParameter":function(d){return "កម្ពស់"},
 "holePresent":function(d){return "មាន​រន្ធ​មួយ"},

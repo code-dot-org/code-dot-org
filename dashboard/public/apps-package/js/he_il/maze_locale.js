@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "שים יחידה אחת של עפר"},
 "finalLevel":function(d){return "כל הכבוד! פתרת את החידה האחרונה."},
 "flowerEmptyError":function(d){return "אין יותר צוף על הפרח שאתה נמצא עליו."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "קבל"},
 "heightParameter":function(d){return "גובה"},
 "holePresent":function(d){return "יש חור"},

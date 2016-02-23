@@ -260,7 +260,7 @@ class Script < ActiveRecord::Base
 
   def get_script_level_by_chapter(chapter)
     chapter = chapter.to_i
-    return nil if chapter < 1 || chapter > self.script_levels.to_a.count
+    return nil if chapter < 1 || chapter > self.script_levels.to_a.size
     self.script_levels[chapter - 1] # order is by chapter
   end
 

@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "поставити 1 відро землі"},
 "finalLevel":function(d){return "Вітання! Ви розв'язали останнє завдання."},
 "flowerEmptyError":function(d){return "У квітки, на якій ви перебуваєте, більше немає нектару."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "отримати"},
 "heightParameter":function(d){return "висота"},
 "holePresent":function(d){return "є ямка"},

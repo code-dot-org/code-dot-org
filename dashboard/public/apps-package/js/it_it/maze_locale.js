@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "metti 1 palata di terra"},
 "finalLevel":function(d){return "Complimenti! Hai risolto l'esercizio finale."},
 "flowerEmptyError":function(d){return "Il fiore su cui ti trovi non ha più nettare."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "prendi"},
 "heightParameter":function(d){return "altezza"},
 "holePresent":function(d){return "c'è una buca"},

@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "aseta yksi yksikkö maata"},
 "finalLevel":function(d){return "Onneksi olkoon! Olet suorittanut viimeisen tehtävän."},
 "flowerEmptyError":function(d){return "Kukkassa jonka päällä olet ei ole enään mettä."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "kerää"},
 "heightParameter":function(d){return "korkeus"},
 "holePresent":function(d){return "tässä on kuoppa"},
