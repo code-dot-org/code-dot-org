@@ -20,9 +20,10 @@ env = {
   # http://bundler.io/man/bundle-config.1.html
   'BUNDLE_IGNORE_CONFIG' => '1',
   # Avoid writing 'remembered options' to the default local config (./bundle/config).
-  'BUNDLE_APP_CONFIG' => Chef::Config[:file_cache_path]
+  'BUNDLE_APP_CONFIG' => "#{Chef::Config[:file_cache_path]}/.bundle"
 }
 node.default['cdo-apps']['bundle_env'] = env
+directory(env['BUNDLE_APP_CONFIG']) { owner user; group user }
 
 # Export bundler environment to global config ($HOME/.bundle/config).
 # Used in case we run 'bundle' manually without the provided environment.
