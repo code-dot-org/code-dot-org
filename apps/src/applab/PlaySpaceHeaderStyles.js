@@ -11,11 +11,13 @@ module.exports = {
     display: 'inline-block',
     verticalAlign: 'top',
     border: '1px solid #949ca2',
-    borderRightWidth: '0 !important',
-    borderRadius: 0,
     margin: '0 0 8px 0',
     padding: '2px 6px',
     fontSize: 14
+  },
+  toggleButtonStyle: {
+    borderRightWidth: '0 !important',
+    borderRadius: 0
   },
   firstButtonStyle: {
     borderBottomLeftRadius: 4,

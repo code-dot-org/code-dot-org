@@ -64,7 +64,20 @@ var PlaySpaceHeader = React.createClass({
   },
 
   render: function () {
-    var rightSide;
+    var leftSide, rightSide;
+
+    if (!this.props.hideToggle) {
+      leftSide = (
+          <ToggleGroup selected={this.state.mode} onChange={this.handleSetMode}>
+            <ToggleButton
+                id='codeModeButton'
+                value={Mode.CODE}>{msg.codeMode()}</ToggleButton>
+            <ToggleButton
+                id='designModeButton'
+                value={Mode.DESIGN}>{msg.designMode()}</ToggleButton>
+          </ToggleGroup>
+      );
+    }
 
     if (this.state.mode === Mode.CODE && !this.props.hideViewDataButton) {
       rightSide = <ViewDataButton onClick={this.props.onViewDataButton} />;
@@ -79,14 +92,7 @@ var PlaySpaceHeader = React.createClass({
         <tbody>
           <tr>
             <td style={{width: '120px'}}>
-              <ToggleGroup selected={this.state.mode}
-                           hideToggle={this.props.hideToggle}
-                           onChange={this.handleSetMode}>
-                <ToggleButton id='codeModeButton'
-                              value={Mode.CODE}>{msg.codeMode()}</ToggleButton>
-                <ToggleButton id='designModeButton'
-                              value={Mode.DESIGN}>{msg.designMode()}</ToggleButton>
-              </ToggleGroup>
+              {leftSide}
             </td>
             <td style={{maxWidth: 0}}>
               {rightSide}

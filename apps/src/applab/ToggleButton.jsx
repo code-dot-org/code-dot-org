@@ -33,6 +33,7 @@ var ToggleButton = React.createClass({
   getStyle: function () {
     return $.extend({},
         styles.buttonStyle,
+        styles.toggleButtonStyle,
         this.props.active ? styles.activeStyle : styles.inactiveStyle,
         this.props.first ? styles.firstButtonStyle: null,
         this.props.last ? styles.lastButtonStyle : null);
