@@ -86,7 +86,7 @@ function isIdAvailable(elementId) {
  */
 module.exports = function sanitizeHtml(unsafe, warn, rejectExistingIds) {
   var warnings = [];
-  var defaultAttributes = ['id', 'class', 'data-*', 'height', 'kl_vkbd_parsed', 'pmbx_context', 'style',  'title', 'width'];
+  var defaultAttributes = ['id', 'class', 'data-*', 'height', 'style',  'title', 'width'];
 
   var safe = sanitize(unsafe, {
     allowedTags: sanitize.defaults.allowedTags.concat([
