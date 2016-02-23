@@ -97,6 +97,6 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
   def do_expected_answers_yield_expected_module_enrollments(answers, expected_module_enrollments)
     post :submit_evaluation, enrollment_id: @plc_enrollment.id, answerTaskList: answers
     @plc_enrollment.reload
-    assert_equal expected_module_enrollments.collect {|m| m.id}, @plc_enrollment.plc_module_assignments.collect {|m| m.plc_learning_module_id}
+    assert_equal expected_module_enrollments.map(&:id), @plc_enrollment.plc_module_assignments.map(&:plc_learning_module_id)
   end
 end
