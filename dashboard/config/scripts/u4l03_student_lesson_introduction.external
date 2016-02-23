@@ -20,7 +20,7 @@ In this lesson you'll use the `createRecord` command to programmatically add dat
 
 # Lesson
 
-* Introduction to App Lab’s data tools: createRecord and the Data Viewer.
+* Introduction to App Lab’s data tools: `createRecord` and the Data Viewer.
 * Modify the contacts app to store new contacts in a database.
 
 

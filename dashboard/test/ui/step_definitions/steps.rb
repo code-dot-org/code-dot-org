@@ -1,6 +1,15 @@
 require File.expand_path('../../../../config/environment.rb', __FILE__)
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
+SHORT_WAIT_TIMEOUT = 30.seconds
+
+def wait_with_timeout(timeout = DEFAULT_WAIT_TIMEOUT)
+  Selenium::WebDriver::Wait.new(timeout: timeout)
+end
+
+def wait_with_short_timeout
+  wait_with_timeout(SHORT_WAIT_TIMEOUT)
+end
 
 def replace_hostname(url)
   if ENV['DASHBOARD_TEST_DOMAIN']
@@ -28,22 +37,19 @@ end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.find_element(selection_criteria) }
+  wait_with_timeout.until { @browser.find_element(selection_criteria) }
 end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps %q{
-    When I wait to see ".x-close"
-    And I press "x-close"
+    When I press "x-close"
     And I wait for 0.75 seconds
   }
 end
 
 When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
+  wait_with_timeout.until { @browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';") }
 end
 
 When /^I reset the puzzle to the starting version$/ do
@@ -66,19 +72,16 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -117,12 +120,16 @@ When /^I inject simulation$/ do
 end
 
 When /^I press "([^"]*)"$/ do |button|
-  @button = @browser.find_element(:id, button)
+  wait_with_short_timeout.until {
+    @button = @browser.find_element(:id => button)
+  }
   @button.click
 end
 
 When /^I press the first "([^"]*)" element$/ do |selector|
-  @element = @browser.find_element(:css, selector)
+  wait_with_short_timeout.until {
+    @element = @browser.find_element(:css, selector)
+  }
   begin
     @element.click
   rescue
@@ -133,7 +140,9 @@ When /^I press the first "([^"]*)" element$/ do |selector|
 end
 
 When /^I press the "([^"]*)" button$/ do |buttonText|
-  @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+  wait_with_short_timeout.until {
+    @button = @browser.find_element(:css, "input[value='#{buttonText}']")
+  }
   @button.click
 end
 
@@ -216,7 +225,9 @@ When /^I press dropdown item "([^"]*)"$/ do |index|
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
-  @button = @browser.find_element(:xpath, xpath)
+  wait_with_timeout.until {
+    @button = @browser.find_element(:xpath, xpath)
+  }
   @button.click
 end
 
@@ -276,7 +287,7 @@ Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
 end
 
 Then /^mark the current level as completed on the client/ do
-  @browser.execute_script %q-sessionStorage.setItem('progress', '{"hourofcode":{"' + appOptions.serverLevelId + '":100}}')-
+  @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
 Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
@@ -431,8 +442,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
+  wait_with_timeout.until { @browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;") }
 end
 
 Then /^I click an image "([^"]*)"$/ do |path|
@@ -490,8 +500,12 @@ Then(/^I reload the page$/) do
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
-  @child_item = @browser.find_element(:css, child)
-  @parent_item = @browser.find_element(:css, parent)
+  wait_with_short_timeout.until {
+    @child_item = @browser.find_element(:css, child)
+  }
+  wait_with_short_timeout.until {
+    @parent_item = @browser.find_element(:css, parent)
+  }
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   @parent_item.should eq @actual_parent_item
 end
@@ -667,23 +681,19 @@ When /^I disable onBeforeUnload$/ do
 end
 
 Then /^I get redirected away from "([^"]*)"$/ do |old_path|
-  wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_with_short_timeout.until { !/#{old_path}/.match(@browser.execute_script("return location.pathname")) }
 end
 
 Then /^my query params match "(.*)"$/ do |matcher|
-  wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
+  wait_with_short_timeout.until { /#{matcher}/.match(@browser.execute_script("return location.search;")) }
 end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
-  wait.until { @browser.find_element(:id => element_id_to_seek) }
+  wait_with_short_timeout.until { @browser.find_element(:id => element_id_to_seek) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
-  wait = Selenium::WebDriver::Wait.new(timeout: 30)
-  wait.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
+  wait_with_short_timeout.until { /#{new_path}/.match(@browser.execute_script("return location.pathname")) }
 
   if redirect_source == 'pushState'
     state = { "modified" => true }
@@ -695,6 +705,7 @@ end
 
 last_shared_url = nil
 Then /^I navigate to the share URL$/ do
+  wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
 end
