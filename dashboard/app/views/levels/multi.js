@@ -37,7 +37,7 @@ var Multi = function (id, standalone, type, answers, lastAttemptString) {
 
 Multi.prototype.enableButton = function(enable)
 {
-  $('.submitButton').attr('disabled', !enable);
+  $("#" + this.id + ' .submitButton').attr('disabled', !enable);
 };
 
 Multi.prototype.choiceClicked = function(button)
@@ -118,8 +118,8 @@ Multi.prototype.clickItem = function(index)
   this.lastSelectionIndex = index;
 
   // Unchecked->checked.
-  $("#unchecked_" + index).hide();
-  $("#checked_" + index).show();
+  $("#" + this.id + " #unchecked_" + index).hide();
+  $("#" + this.id + " #checked_" + index).show();
 
   // Add this answer to the list of selected answers.
   this.selectedAnswers.unshift(index);
@@ -132,8 +132,8 @@ Multi.prototype.clickItem = function(index)
     // Although don't uncheck it if it's already crossed out.
     if (this.crossedAnswers.indexOf(unselectIndex) === -1 )
     {
-      $("#unchecked_" + unselectIndex).show();
-      $("#checked_" + unselectIndex).hide();
+      $("#" + this.id + " #unchecked_" + unselectIndex).show();
+      $("#" + this.id + " #checked_" + unselectIndex).hide();
     }
   }
 
@@ -146,8 +146,8 @@ Multi.prototype.unclickItem = function(index)
   this.selectedAnswers.splice(selectedItemIndex, 1);
 
   // Checked->unchecked.
-  $("#unchecked_" + index).show();
-  $("#checked_" + index).hide();
+  $("#" + this.id + " #unchecked_" + index).show();
+  $("#" + this.id + " #checked_" + index).hide();
 };
 
 // called on $.ready
@@ -162,7 +162,7 @@ Multi.prototype.ready = function()
     this.choiceClicked($(event.currentTarget));
   }, this));
 
-  $('#voteform img').on('dragstart', $.proxy(function(event) {
+  $("#" + this.id + ' #voteform img').on('dragstart', $.proxy(function(event) {
     // Prevent button images from being dragged, click the button instead.
     var button = $(event.currentTarget).parent().parent().parent();
     this.choiceClicked(button);
@@ -220,8 +220,8 @@ Multi.prototype.submitButtonClick = function()
       this.crossedAnswers.indexOf(this.lastSelectionIndex) == -1 &&
       ! this.validateAnswers())
   {
-    $("#checked_" + this.lastSelectionIndex).hide();
-    $("#cross_" + this.lastSelectionIndex).show();
+    $("#" + this.id + " #checked_" + this.lastSelectionIndex).hide();
+    $("#" + this.id + " #cross_" + this.lastSelectionIndex).show();
     this.crossedAnswers.unshift(this.lastSelectionIndex);
   }
 };
