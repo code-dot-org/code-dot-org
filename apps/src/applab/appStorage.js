@@ -275,9 +275,15 @@ var RECORD_INTERVAL = 1000; // 1 second
 var recordListeners = {};
 
 /**
- * @type {Object} Map from tableName to last record id already sent to the user.
+ * @typedef {Object.<number, string>} IdToJsonMap Map from record id
+ * to a JSON.stringified copy of the corresponding record.
  */
-var lastRecordSeen = {};
+
+/**
+ * @type {Object.<string, IdToJsonMap>} Map from tableName to a
+ * IdToJsonMap of its previous contents.
+ */
+var idToJsonMaps = {};
 
 var recordIntervalId = null;
 
@@ -297,7 +303,7 @@ function addRecordListener(tableName, callback) {
   }
 
   recordListeners[tableName] = callback;
-  lastRecordSeen[tableName] = 0;
+  idToJsonMaps[tableName] = {};
 
   if (recordIntervalId === null) {
     recordIntervalId = setInterval(function recordListener() {
@@ -311,13 +317,13 @@ function addRecordListener(tableName, callback) {
 
 function fetchNewRecords(tableName) {
   var req = new XMLHttpRequest();
-  req.onreadystatechange = reportNewRecords.bind(req, tableName);
+  req.onreadystatechange = reportRecords.bind(req, tableName);
   var url = '/v3/shared-tables/' + Applab.channelId + '/' + tableName;
   req.open('GET', url, true);
   req.send();
 }
 
-function reportNewRecords(tableName) {
+function reportRecords(tableName) {
   var done = XMLHttpRequest.DONE || 4;
   if (this.readyState !== done) {
     return;
@@ -331,12 +337,38 @@ function reportNewRecords(tableName) {
   var callback = recordListeners[tableName];
   var records = JSON.parse(this.responseText);
 
-  // Records in this response are assumed to have strictly increasing ids.
+  // Set up some maps to help with analysis
+  var oldIdToJsonMap = idToJsonMaps[tableName];
+  var newIdToJsonMap = {};
+  var newIdToRecordMap = {};
   for (var i = 0; i < records.length; i++) {
     var record = records[i];
-    if (record.id > lastRecordSeen[tableName]) {
+    newIdToRecordMap[record.id] = record;
+    newIdToJsonMap[record.id] = JSON.stringify(record);
+  }
+
+  // Iterate over all records (including old ones) so that deletes can be detected.
+  var allRecordIds = Object.keys($.extend({}, oldIdToJsonMap, newIdToJsonMap));
+  for (var j = 0; j < allRecordIds.length; j++) {
+    var id = allRecordIds[j];
+    reportRecord(callback, id, newIdToRecordMap[id], oldIdToJsonMap[id], newIdToJsonMap[id]);
+  }
+
+  // Update the map for this table to reflect the new records.
+  idToJsonMaps[tableName] = newIdToJsonMap;
+}
+
+function reportRecord(callback, id, record, oldJson, newJson) {
+  if (newJson) {
+    if (!oldJson) {
       callback(record, RecordEventType.CREATE);
-      lastRecordSeen[tableName] = record.id;
+    } else if (oldJson != newJson) {
+      callback(record, RecordEventType.UPDATE);
+    }
+  } else {
+    if (oldJson) {
+      // Provide only the id of the deleted record.
+      callback({id: id}, RecordEventType.DELETE);
     }
   }
 }
@@ -347,7 +379,7 @@ AppStorage.clearRecordListeners = function () {
     recordIntervalId = null;
   }
   recordListeners = {};
-  lastRecordSeen = {};
+  idToJsonMaps = {};
 };
 
 /**
