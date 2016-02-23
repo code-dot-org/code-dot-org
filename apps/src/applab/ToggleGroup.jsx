@@ -6,21 +6,15 @@
  maxlen: 120
  */
 
-var constants = require('./constants');
-var msg = require('../locale');
-var ToggleButton = require('./ToggleButton.jsx');
-
-var Mode = constants.MODE;
-
 var ToggleGroup = React.createClass({
   propTypes: {
-    mode: React.PropTypes.string.isRequired,
+    selected: React.PropTypes.string.isRequired,
     hideToggle: React.PropTypes.bool.isRequired,
     onChange: React.PropTypes.func.isRequired
   },
 
-  setMode: function (mode) {
-    this.props.onChange(mode);
+  setSelected: function (selected) {
+    this.props.onChange(selected);
   },
 
   render: function () {
@@ -30,16 +24,20 @@ var ToggleGroup = React.createClass({
 
     return (
       <span>
-        <ToggleButton id='codeModeButton'
-                      active={this.props.mode === Mode.CODE}
-                      first={true}
-                      onClick={this.setMode.bind(this, Mode.CODE)}>{msg.codeMode()}</ToggleButton>
-        <ToggleButton id='designModeButton'
-                      active={this.props.mode === Mode.DESIGN}
-                      last={true}
-                      onClick={this.setMode.bind(this, Mode.DESIGN)}>{msg.designMode()}</ToggleButton>
+        {this.renderChildren()}
       </span>
     );
+  },
+
+  renderChildren: function () {
+    return React.Children.map(this.props.children, function (child, index) {
+      return React.cloneElement(child, {
+        first: index === 0,
+        last: index === React.Children.count(this.props.children) - 1,
+        active: child.props.value === this.props.selected,
+        onClick: this.setSelected.bind(this, child.props.value)
+      });
+    }, this);
   }
 });
 module.exports = ToggleGroup;
