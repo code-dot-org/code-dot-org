@@ -7,8 +7,7 @@ Background:
 
 Scenario: Copy and paste a block
   When I rotate to landscape
-  And I press "x-close"
-  And I wait for 1 seconds
+  And I close the dialog
   And I drag block "1" to offset "300, 150"
   Then the workspace has "1" blocks of type "draw_move_by_constant"
   And I click block "9"
@@ -18,8 +17,7 @@ Scenario: Copy and paste a block
 
 Scenario: Cut and paste a block
   When I rotate to landscape
-  And I press "x-close"
-  And I wait for 1 seconds
+  And I close the dialog
   And I drag block "1" to offset "300, 150"
   Then the workspace has "1" blocks of type "draw_move_by_constant"
   And I click block "9"

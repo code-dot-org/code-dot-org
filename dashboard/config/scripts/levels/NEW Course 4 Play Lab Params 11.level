@@ -43,13 +43,14 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="height"/>
             <arg name="actor"/>
@@ -87,7 +88,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="actor"/>
             <arg name="speed"/>

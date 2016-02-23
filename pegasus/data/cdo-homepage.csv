@@ -29,7 +29,7 @@ action_signpetition,action,homepage_action_text_signpetition,petition,,,,,,both,
 banner_usatoday,banner,homepage_banner_text_main,homepage_banner_text_link,http://www.usatoday.com/story/tech/2015/05/14/codeorg-college-board-computer-science-high-school-diversity/27304593/,,,,,code.org,nah,all
 banner_privacy,banner,homepage_banner_privacy_main,homepage_banner_privacy_link,/privacy,,,,,code.org,nah,en
 banner_hoc,banner,homepage_banner_text_prizes,homepage_banner_link_prizes,https://hourofcode.com,,,,,code.org,nah,all
-banner_20k_teachers,banner,homepage_banner_20k_teachers,homepage_banner_20k_teachers_link,/educate/professional-development,,,,,code.org,show,en
+banner_20k_teachers,banner,homepage_banner_20k_teachers,homepage_banner_20k_teachers_link,/educate,,,,,code.org,show,en
 block_hoc_frozen,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_hoc.jpg,code.org,nah,en
 block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students_courses,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
@@ -41,9 +41,9 @@ blocklink_hocserved,blocklink,block_hoc,homepage_slot_text_link_hocserved,/leade
 blocklink_codestudio,blocklink,block_students,homepage_slot_text_link_codestudio,http://studio.code.org/,,,,,code.org,show,en
 blocklink_local,blocklink,block_students,homepage_slot_text_link_local,/learn/local,,,,,code.org,show,en
 blocklink_othercourses,blocklink,block_students,homepage_slot_text_link_othercourses,/learn/beyond,,,,,code.org,show,en
-blocklink_k5,blocklink,block_educators,homepage_slot_text_link_k5,/educate/k5,,,,,code.org,show,en
-blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_fullcurriculum,/educate/curriculum,,,,,code.org,show,en
-blocklink_pd,blocklink,block_educators,homepage_slot_text_link_pd,/educate/professional-development,,,,,code.org,show,en
+blocklink_k5,blocklink,block_educators,homepage_slot_text_link_elementary,/educate/curriculum/elementary-school,,,,,code.org,show,en
+blocklink_fullcurriculum,blocklink,block_educators,homepage_slot_text_link_middle,/educate/curriculum/middle-school,,,,,code.org,show,en
+blocklink_pd,blocklink,block_educators,homepage_slot_text_link_high,/educate/curriculum/high-school,,,,,code.org,show,en
 blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote,,,,,code.org,show,en
 blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/help,,,,,code.org,show,en
 blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_donate,/donate,,,,,code.org,show,en
