@@ -26,10 +26,6 @@ Lint/DeprecatedClassMethods:
 Lint/EndAlignment:
   Enabled: false
 
-# Offense count: 4
-Lint/ImplicitStringConcatenation:
-  Enabled: false
-
 # Offense count: 7
 Lint/IneffectiveAccessModifier:
   Enabled: false
