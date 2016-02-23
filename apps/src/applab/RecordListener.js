@@ -19,6 +19,7 @@ var RecordListener = module.exports = function () {
 
   /**
    * Map from tableName to an IdToJsonMap representing the contents of the table.
+   * We use this to efficiently test whether a record's contents has changed.
    * @type {Object.<string, IdToJsonMap>}
    * @private
    */
@@ -102,52 +103,36 @@ RecordListener.prototype.reportRecords_ = function (req, tableName) {
 
   var callback = this.recordListeners_[tableName];
   var records = JSON.parse(req.responseText);
-
-  // Set up some maps to help with analysis
   var oldIdToJsonMap = this.idToJsonMaps_[tableName];
+
+  // Look for 'create' and 'update' events, and build the new map of this table.
   var newIdToJsonMap = {};
-  var newIdToRecordMap = {};
   for (var i = 0; i < records.length; i++) {
     var record = records[i];
-    newIdToRecordMap[record.id] = record;
-    newIdToJsonMap[record.id] = JSON.stringify(record);
+    var oldJson = oldIdToJsonMap[record.id];
+    var newJson = JSON.stringify(record);
+    if (!oldJson) {
+      callback(record, EventType.CREATE);
+    } else if (oldJson !== newJson) {
+      callback(record, EventType.UPDATE);
+    }
+    newIdToJsonMap[record.id] = newJson;
   }
 
-  // Iterate over all records (including old ones) so that deletes can be detected.
-  var allRecordIds = Object.keys($.extend({}, oldIdToJsonMap, newIdToJsonMap));
-  for (var j = 0; j < allRecordIds.length; j++) {
-    var id = allRecordIds[j];
-    reportRecord(callback, id, newIdToRecordMap[id], oldIdToJsonMap[id], newIdToJsonMap[id]);
+  // Look for 'delete' events.
+  for (var oldId in oldIdToJsonMap) {
+    if (!newIdToJsonMap[oldId]) {
+      var deletedRecord = {id: oldId};
+      callback(deletedRecord, EventType.DELETE);
+    }
   }
 
-  // Update the map for this table to reflect the new records.
+  // Update our map of this table.
   this.idToJsonMaps_[tableName] = newIdToJsonMap;
 };
 
 /**
- * @param {function} callback
- * @param {number} id
- * @param {Object} record
- * @param {string} oldJson
- * @param {string} newJson
- */
-function reportRecord(callback, id, record, oldJson, newJson) {
-  if (newJson) {
-    if (!oldJson) {
-      callback(record, EventType.CREATE);
-    } else if (oldJson != newJson) {
-      callback(record, EventType.UPDATE);
-    }
-  } else {
-    if (oldJson) {
-      // Provide only the id of the deleted record.
-      callback({id: id}, EventType.DELETE);
-    }
-  }
-}
-
-/**
- * Clears the interval timer and resets state.
+ * Clears the interval timer and forgets about any listeners which were added.
  */
 RecordListener.prototype.reset = function () {
   if (this.recordIntervalId_) {
