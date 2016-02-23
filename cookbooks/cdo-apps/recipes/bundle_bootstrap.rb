@@ -38,8 +38,8 @@ node.default['cdo-apps']['bundle_env'] = env
 execute 'bundle-install' do
   command 'bundle install'
   cwd root
-  user node[:current_user]
-  group node[:current_user]
+  user user
+  group user
   environment node['cdo-apps']['bundle_env']
   not_if 'bundle check', cwd: root
 end
