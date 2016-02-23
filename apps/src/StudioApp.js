@@ -1802,7 +1802,20 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   // Init and define our custom ace mode:
   aceMode.defineForAce(config.dropletConfig, config.unusedConfig, this.editor);
   // Now set the editor to that mode:
-  this.editor.aceEditor.session.setMode('ace/mode/javascript_codeorg');
+  var aceEditor = this.editor.aceEditor;
+  aceEditor.session.setMode('ace/mode/javascript_codeorg');
+
+  var langTools = window.ace.require("ace/ext/language_tools");
+
+  // We don't want to include the textCompleter. langTools doesn't give us a way
+  // to remove base completers (note: it does in newer versions of ace), so
+  // we set aceEditor.completers manually
+  aceEditor.completers = [langTools.snippetCompleter, langTools.keyWordCompleter];
+  // make setCompleters fail so that attempts to use it result in clear failure
+  // instead of just silently not working
+  langTools.setCompleters = function () {
+    throw new Error('setCompleters disabled. set aceEditor.completers directly');
+  };
 
   // Add an ace completer for the API functions exposed for this level
   if (config.dropletConfig) {
@@ -1810,8 +1823,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     if (config.level.autocompletePaletteApisOnly) {
        functionsFilter = config.level.codeFunctions;
     }
-    var langTools = window.ace.require("ace/ext/language_tools");
-    langTools.addCompleter(
+
+    aceEditor.completers.push(
       dropletUtils.generateAceApiCompleter(functionsFilter, config.dropletConfig));
   }
 
