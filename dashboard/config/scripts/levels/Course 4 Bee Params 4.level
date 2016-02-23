@@ -32,7 +32,8 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "callout_json": "[]"
-  }
+  },
+  "published": true
 }]]></config>
   <blocks>
     <start_blocks>
@@ -60,7 +61,7 @@
           </next>
         </block>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" uservisible="false">
+        <block type="procedures_defnoreturn">
           <mutation>
             <arg name="direction"/>
           </mutation>

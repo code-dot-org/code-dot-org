@@ -52,7 +52,7 @@
     image urls by drag-dropping the image into the markdown section of a dummy level in levelbuilder.
     Copy the result and paste it here (it should start with something like
     #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
-  = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: Applab.pretty_print(@level.start_html)
+  = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: @level.start_html
   :javascript
     levelbuilder.initializeCodeMirror('start_html', 'html');
 .field.examples

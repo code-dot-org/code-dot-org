@@ -54,6 +54,7 @@ level 'U4 - Read Record - Local vs Remote Data External'
 level 'U4 - ReadRecords - Contacts App 2'
 level 'U4 - ReadRecords - Contacts App 3'
 
+
 #4
 stage 'Deleting Records'
 level 'U6 - deleteRecord - Student Introduction'
@@ -64,7 +65,7 @@ level 'U4 - deleteRecords 2 delete object'
 level 'U4 - ReadRecords - Contacts App 4'
 level 'U4 - ReadRecords - Contacts App 5 make delete work'
 
-#4
+#5
 stage 'Updating Records'
 level 'U6 - updateRecord - Student Introduction'
 level 'U6 - updateRecord - Default Block'
@@ -74,7 +75,7 @@ level 'U6 - updateRecord - Contacts - Edit UI'
 level 'U6 - updateRecord - Contacts - Edit event handler'
 level 'U6 - updateRecord - Contacts - Save edited contact'
 
-#7
+#6
 stage 'Importing and Exporting Data'
 level 'U6 - ImportExport - Student Introduction'
 level 'U4 - Charts - Import Data 1'
@@ -82,7 +83,7 @@ level 'U4 - Charts - Import Data 2'
 level 'U4 - Charts - Remixing Apps with Data'
 level 'U4 - Charts - Export Data'
 
-#8
+#7
 stage 'Visualizing Data'
 level 'U6 - Charts - Student Introduction'
 level 'U4 - Charts - drawChartFromRecords 1'
@@ -92,6 +93,8 @@ level 'U4 - Charts - Line Chart 2'
 level 'U4 - Charts - drawChartFromRecords Options 1'
 level 'U4 - Charts - drawChartFromRecords Options 2'
 
-#9
+#8
 stage 'Sample Apps'
 level 'U6 - Sample Apps - Student Introduction'
+level 'U6 - Sample Apps - User Login'
+level 'U6 - Sample Apps - Flashcards'

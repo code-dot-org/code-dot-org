@@ -15,6 +15,13 @@ var tiles = require('./tiles');
 var SquareType = tiles.SquareType;
 
 var BeeCell = function (tileType, featureType, value, cloudType, flowerColor, range) {
+
+  // BeeCells require features to have values
+  if (featureType === BeeCell.FeatureType.NONE) {
+    value = undefined;
+    range = undefined;
+  }
+
   Cell.call(this, tileType, value);
 
   /**

@@ -5,7 +5,7 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 APPS_DIR = "#{REPO_DIR}/apps"
 
 def filter_grunt_jshint(modified_files)
-  modified_files.select { |f| (f.end_with?(".js") || f.end_with?(".jsx")) &&
+  modified_files.select { |f| (f.end_with?(".js", ".jsx")) &&
     !(f.end_with?('.min.js') || f.match(/public\/.+package\//) || f.match(/blockly-core\//) || f.match(/apps\/lib\//) || f.match(/shared\//))}
 end
 
