@@ -419,17 +419,17 @@ es-MX:
       4-5 Maze Conditionals 9_instruction: 'Una práctica mas con el bloque "if-else", ¿Puedes hacerlo corectamente en el primer intento?'
       4-5 Maze Conditionals Assessment 1_instruction: 'Utiliza un bloque "repeat until" y un bloque "if-else" para llevarme al girasol usando la mínima cantidad de bloques posible.'
       4-5 Nested Loops 1_instruction: 'Completa el código para dibujar estos triángulos. El primero esta hecho por ti. Sugerencia: 3 triángulos en una rotación de 360 grados.'
-      4-5 Nested Loops 10_instruction: Dibuja la última fila de estrellas de esta bandera, por medio de un bucle de bloques proporcionados. Las estrellas son de 50 píxeles, pero recuerda que las estrellas por si mismas son 30 píxeles de ancho.
+      4-5 Nested Loops 10_instruction: Dibuja la última fila de estrellas de esta bandera por medio de un bucle de bloques proporcionados. Las estrellas son de 50 píxeles, pero recuerda que las estrellas por si mismas son 30 píxeles de ancho.
       4-5 Nested Loops 11_instruction: ¿Puedes dibujar estas 10 plazas de esta acera, usando un bucle anidado? Cada cuadrado tiene 30 píxeles.
       4-5 Nested Loops 12_instruction: ¿Puedes dibujar estos 36 triángulos utilizando un bucle anidado?
-      4-5 Nested Loops 2_instruction: 'Ahora anida este bucle dentro de otro bucle para dibujar 10 triángulos.  Esto se llama un bucle anidado.  Sugerencia: Todos 10 triángulos completan una rotación de 360 grados.  '
+      4-5 Nested Loops 2_instruction: 'Ahora anida este circuito dentro de otro circuito para dibujar 3 triángulos. Esto es llamado un circuito anidado. Sugerencia: Todos los 10 triángulos completan una rotación de 360 grados.  '
       4-5 Nested Loops 3_instruction: "Crea un sol anidando el código de arranque en otro bucle. Esto se llama un bucle anidado. \r\n"
-      4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
+      4-5 Nested Loops 5_instruction: Has un bucle con el código dado para crear un molino de viento.
       4-5 Nested Loops 6_instruction: ¿Puedes dibujar un hexágono con un bucle del código del triángulo?
-      4-5 Nested Loops 7_instruction: 'con el bucle repite este diseño 10 veces. ¿Cuánto tienes que girar el bucle cada vez? (Pista: ¿Cuanto es 360 dividido por 10?)'
+      4-5 Nested Loops 7_instruction: 'Repite el bucle 6 veces. ¿Cuánto tienes que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 10?)'
       4-5 Nested Loops 8_instruction: 'Repite el bucle 6 veces. ¿Cuánto tienes que girar cada vez el bucle? (Pista: ¿Cuánto es 360 dividido por 6?)'
       4-5 Nested Loops 9_instruction: Dibuja los dientes en la boca de el cocodrilo!
-      4-5 Nested Loops Assessment 1_instruction: Usar un bucle anidado para completar el diseño.
+      4-5 Nested Loops Assessment 1_instruction: Utiliza un bucle anidado para completar el diseño.
       4-5 While Loops 1_instruction: 'Mueveme al agujero y rellena con dos palas de tierra, usando el bloque de "relleno".'
       4-5 While Loops 2_instruction: "Mueveme a la pila de tierra y remueve con 5 paleos, usando el bloque 'remover'."
       4-5 While Loops 3_instruction: 'Mueveme a la pila y remueve todo, despues mueveme hacia el agujero y llenalo completamente.  Sugerencia: Utiliza tan pocos bloques como sea posible.'
@@ -1211,7 +1211,9 @@ es-MX:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -1834,7 +1836,7 @@ es-MX:
       NEW Course 4 Artist Params 14_instruction: '¿Puedes recrear estas formas? Arrastra el parámetro "longitud" en la definición de función. '
       NEW Course 4 Artist Params 15_instruction: 'Juego Libre: Aquí están las funciones que has escrito y algunas más para que juegues con ellas. ¡Dibuja algo impresionante!'
       NEW Course 4 Artist Params 2_instruction: 'Crea desde cero una función "dibujar un triángulo" con lados de 50 píxeles'
-      NEW Course 4 Artist Params 3_instruction: "Ahora vamos a utilizar la función para dibujar 3 triángulos desde el último puzzle en una fila. Sugerencia: cada triángulo tiene 50 píxeles de separación. \r\n"
+      NEW Course 4 Artist Params 3_instruction: "Ahora vamos a utilizar la función para dibujar 5 triángulos desde el último puzzle en una fila. Sugerencia: cada triángulo tiene 30 píxeles de separación. \r\n"
       NEW Course 4 Artist Params 4_instruction: '¿Notas algo diferente en estos bloques de función? Haz clic en "Ejecutar" para ver qué pasa.'
       NEW Course 4 Artist Params 5_instruction: 'Llena en el ??? en el bloque de entrada del parámetro de longitud. Sugerencia: El Pentágono es de 100 píxeles de tamaño. '
       NEW Course 4 Artist Params 6_instruction: 'Llena el parámetro "longitud" para dibujar estas formas substituyendo el "???" con los números correctos. El cuadrado y el triángulo son de 100 píxeles de tamaño mientras que el hexágono es de 75 píxeles de tamaño.'
@@ -2100,6 +2102,11 @@ es-MX:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
+      Quantum Bee_instruction: '¡ Las flores moradas pueden tener un tipo de néctar de 1 ó 0, pero tu no sabes cuál !. Ten cuidado de no recolectar el néctar de una flor morada sin  néctar. Revisa si el valor del néctar es igual a 1 usando el bloque “if”. '
       Ryan - 4-5 Bee Conditionals 2_instruction: La abeja sólo quiere ahora néctar. No todos los objetos son flores, así que compruebe debajo de cada nube a ver si se esconde una flor. Si es así, puede recolectar néctar.
       Ryan - Bee Conditionals_instruction: La abeja sólo quiere néctar ahora. No todos los objetos son flores, así que mira debajo de TODAS LAS NUBES para verlo si esta escondiendo una flor. Si es así, puedes coger néctar.
       Ryan Test Locked Blocks_instruction: 'Aquí hay una función denominada "patrulla". Edítela para mover el Gato hacia arriba 400 píxeles y luego hacia abajo 400 píxeles.'
@@ -3597,7 +3604,7 @@ es-MX:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -3748,7 +3755,7 @@ es-MX:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -3756,7 +3763,7 @@ es-MX:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -3786,11 +3793,11 @@ es-MX:
       U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
       U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -3837,6 +3844,22 @@ es-MX:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: 'Hay lava debajo de algunos de estos bloques, de modo que deberás cubrirte antes de avanzar. Es un buen momento para usar un comando "Si" . Agrega un comando "ir hacia adelante" en el lugar correcto para minar estos bloques.'
       Underground If Statements_instruction: 'Ahora la cosa se pone más difícil. Mina 3 piedras rojizas, pero no te caigas en la lava. Usa un comando "Si\ para ubicar guijarros sobre cualquier lava que te encuentres.'
       Underground Iron_instruction: Caminar sobre lava hirviente es mala idea. Ubica guijarros para crear un puente y luego mina al menos dos de los bloques de hierro.

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Functions"},
 "catText":function(d){return "Text"},
 "catVariables":function(d){return "Variables"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Clear Puzzle"},
 "clearPuzzleConfirm":function(d){return "This will delete all blocks and reset the puzzle to its start state."},
 "clearPuzzleConfirmHeader":function(d){return "Are you sure you want to clear the puzzle?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Watch the Video"},
 "when":function(d){return "when"},
 "whenRun":function(d){return "when run"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

@@ -198,6 +198,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :login
 
+  has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
+
   has_many :user_levels, -> {order 'id desc'}
   has_many :activities
 
@@ -288,6 +290,12 @@ class User < ActiveRecord::Base
   def User.find_by_email_or_hashed_email(email)
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
+  end
+
+  def User.find_channel_owner(encrypted_channel_id)
+    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    User.find(user_id)
   end
 
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create

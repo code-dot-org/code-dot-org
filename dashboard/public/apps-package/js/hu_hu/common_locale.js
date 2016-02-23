@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Funkciók"},
 "catText":function(d){return "szöveg"},
 "catVariables":function(d){return "Változók"},
+"choosePrefix":function(d){return "Válassz..."},
 "clearPuzzle":function(d){return "Újrakezdés"},
 "clearPuzzleConfirm":function(d){return "Visszaállítja a kiindulási állapotot és töröl minden blokkot, amit hozzáadtál a programhoz, vagy amit megváltoztattál."},
 "clearPuzzleConfirmHeader":function(d){return "Biztosan újra szeretnéd kezdeni?"},
@@ -202,8 +203,8 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "dropletBlock_callMyFunction_n_description":function(d){return "Calls a named function that takes one or more parameters"},
 "dropletBlock_callMyFunction_n_signatureOverride":function(d){return "Call a function with parameters"},
 "dropletBlock_callMyFunction_signatureOverride":function(d){return "Függvény meghívása"},
-"dropletBlock_comment_description":function(d){return "Write a description of some code"},
-"dropletBlock_comment_signatureOverride":function(d){return "comment"},
+"dropletBlock_comment_description":function(d){return "Írj leírást a kódsorokhoz"},
+"dropletBlock_comment_signatureOverride":function(d){return "megjegyzés"},
 "dropletBlock_declareAssign_x_array_1_4_description":function(d){return "Create a variable and initialize it as an array"},
 "dropletBlock_declareAssign_x_array_1_4_param0":function(d){return "x"},
 "dropletBlock_declareAssign_x_array_1_4_param0_description":function(d){return "The name you will use in the program to reference the variable"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Nézd meg a videót"},
 "when":function(d){return "amikor"},
 "whenRun":function(d){return "futtatáskor"},
-"workspaceHeaderShort":function(d){return "Munkaterület: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Munkaterület: "}};

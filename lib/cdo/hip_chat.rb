@@ -79,7 +79,7 @@ class HipChat
     @@current_retry_thread_for_test = Thread.new do
       backoff = @@initial_backoff
       retries = 1
-      while !succeeded and retries <= MAX_RETRIES
+      while !succeeded && retries <= MAX_RETRIES
         @@total_backoff_for_test += backoff
         @@retries_for_test += 1
         sleep(backoff)

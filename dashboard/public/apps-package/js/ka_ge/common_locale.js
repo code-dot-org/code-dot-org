@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "ფუნქციები"},
 "catText":function(d){return "ტექსტი"},
 "catVariables":function(d){return "ცვლადები"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "ხელახლა დაწყება"},
 "clearPuzzleConfirm":function(d){return "ეს თავსატეხს საწყის მდგომარეობაში დააბრუნებს და წაშლის ყველა ბლოკს, რომელიც დაამატეთ ან შეცვალეთ."},
 "clearPuzzleConfirmHeader":function(d){return "დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "უყურეთ ვიდეოს"},
 "when":function(d){return "როდის"},
 "whenRun":function(d){return "გაშვებისას"},
-"workspaceHeaderShort":function(d){return "სამუშაო სივრცე: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "სამუშაო სივრცე: "}};

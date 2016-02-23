@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "ஓர் அலகு அழுக்கை வை"},
 "finalLevel":function(d){return "வாழ்த்துக்கள்! நீங்கள் இறுதிப் புதிரை முடித்துவிட்டீர்கள்."},
 "flowerEmptyError":function(d){return "நீங்கள் இருக்கும் மலரில் தேன் தீர்ந்துவிட்டது."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "பெறு"},
 "heightParameter":function(d){return "உயரம்"},
 "holePresent":function(d){return "அங்கே ஒரு துளை உள்ளது"},

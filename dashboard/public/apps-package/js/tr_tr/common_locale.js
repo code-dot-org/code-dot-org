@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "Fonksiyonlar"},
 "catText":function(d){return "yazı"},
 "catVariables":function(d){return "Değişkenler"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "Baştan Başla"},
 "clearPuzzleConfirm":function(d){return "Bu, bulmacayı başlangıç durumuna sıfırlayacak ve eklediğiniz veya değiştirdiğiniz tüm blokları silecek."},
 "clearPuzzleConfirmHeader":function(d){return "Baştan başlamak istediğinizden emin misiniz?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "Videoyu İzle"},
 "when":function(d){return "Ne zaman"},
 "whenRun":function(d){return "Çalıştığı zaman"},
-"workspaceHeaderShort":function(d){return "Çalışma alanı: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Çalışma alanı: "}};

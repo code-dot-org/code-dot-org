@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "поставя 1 купчина пръст"},
 "finalLevel":function(d){return "Поздравления! Вие решихте последния пъзел."},
 "flowerEmptyError":function(d){return "Цветето, на което се намираш, няма повече нектар."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "взима"},
 "heightParameter":function(d){return "височина"},
 "holePresent":function(d){return "има дупка"},

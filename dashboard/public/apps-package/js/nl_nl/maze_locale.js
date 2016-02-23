@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "plaats 1 stukje aarde"},
 "finalLevel":function(d){return "Gefeliciteerd! je hebt de laatste puzzel opgelost."},
 "flowerEmptyError":function(d){return "De bloem waar je op staat heeft geen nectar meer."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "pak"},
 "heightParameter":function(d){return "hoogte"},
 "holePresent":function(d){return "daar is een gat"},

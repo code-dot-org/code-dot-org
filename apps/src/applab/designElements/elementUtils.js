@@ -171,3 +171,7 @@ module.exports.isIdAvailable = function(newId, options) {
 
   return true;
 };
+
+module.exports.getScreens = function getScreens() {
+  return $('#designModeViz > .screen');
+};

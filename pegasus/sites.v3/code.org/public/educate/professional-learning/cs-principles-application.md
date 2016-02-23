@@ -8,6 +8,8 @@ nav: plc_csp_nav
 We're so excited that you are interested in applying for our Professional Learning Program for CS Principles. Space for the 2016-17 school year is limited, so be sure to get your application in soon.
 ## Who is eligible?
 Please note that this application is for teachers from districts that have partnerships with Code.org. If your district does not have a partnership, please add your information to our <a href="https://form.jotform.com/53365196731157" target=_blank>wait-list</a> and we'll let you know if space opens up. In the meantime, consider sending your administrators <a href="https://code.org/educate/districts" target=_blank>information about how to become a partner.</a>
+
+**Some of our district partners have their own application process.**  If you do not see your district on the application [click on your district's pin on the map](/educate/professional-learning/cs-principles-apply) to find the appropriate form.
 ## What is the application period? 
 Applications will be accepted until the end of February. They will be reviewed between January 15 and February 28, 2016. You should expect to hear back from us 10 - 14 business days from submission, once the review period begins. If you are accepted, you will receive additional information about travel, logistics, and registration for your designated summer in-person summit dates.
 

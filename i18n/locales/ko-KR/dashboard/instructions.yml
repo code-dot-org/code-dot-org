@@ -1518,7 +1518,9 @@ ko:
         Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) 
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -2507,6 +2509,15 @@ ko:
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
+      Quantum Bee_instruction: |
+        Purple flowers may have either 1 or 0 nectar, but
+        you don't know which one! Be careful not to collect nectar from a purple
+        flower if it doesn't have any. Check if the nectar is equal to 1 by using
+        the if block.
       Ryan - 4-5 Bee Conditionals 2_instruction: 꿀벌이 꽃꿀을 원합니다. 모두 꽃은 아니기 때문에, 안개 구름 아래에 꽃이 숨어있는지 모두 살펴보아야 합니다. 꽃이면 꽃꿀을 모으면 됩니다.
       Ryan - Bee Conditionals_instruction: |
         꿀벌은 지금 꽃꿀이 필요합니다.
@@ -4024,7 +4035,7 @@ ko:
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -4175,7 +4186,7 @@ ko:
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -4183,7 +4194,7 @@ ko:
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -4213,11 +4224,11 @@ ko:
       U4 - Read Record - 5_instruction: "Using a for loop, display the title of each\nmovie in your database. (Click to see full instructions)\r\n"
       U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe records returned by a call to readRecords. (Click to see full instructions)\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -4264,6 +4275,22 @@ ko:
       U4L15 Read Data 2_instruction: "Student should create a sentence which puts\ntogether all the pieces from a record.\r\n\r\n<<Name>> is <<Age>> years old\nand like <<Food>>"
       U4L15 Read Data 3_instruction: "Print the sentence using the first JSON object\nin the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto display your sentence."
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: (Click to see full instructions)
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: '이 블록들 아래에 용암이 숨어있습니다. 앞으로 이동하기 전에 덮어야 해요. "if"(만약) 명령은 여기서 유용할 거에요. 올바른 곳에 "앞으로 이동" 명령을 더해서 이 블록을 채굴하세요.'
       Underground If Statements_instruction: '퍼즐이 점점 더 어려워지고 있어요. 레드스톤 3개를 채굴하세요. 하지만 용암으로 떨어지지는 마세요. "if"(만약) 명령을 사용해서 발견한 용암 위에 조약돌을 놓으세요.'
       Underground Iron_instruction: 녹은 용암 속으로 걸어 들어가는 건 좋은 생각이 아니에요. 조약돌을 놓아서 다리를 만든 후 철 블록을 2개 이상 채굴하세요.

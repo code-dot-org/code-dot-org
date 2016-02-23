@@ -156,7 +156,7 @@ ka:
           description_short: გამოიყენეთ კოდი და შეუერთდით ანასა და ელზას ყინულის მაგიის აღმოჩენაში.
         course4:
           description_short: კურსი 4-ის მოსწავლეებს გავლილი უნდა ჰქონდეთ კურსები 2 და 3.
-          description: კურსი 4 არის მოსწავლეებისთვის, რომელთაც გაიარეს კურსები 2 და 3. სტუდენტები უფრო ღრმად შეისწავლიან წინა კურსებში წამოჭრილ პროგრამირების საკითხებს და იპოვიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები შექმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარებაც ყველასთან შეეძლებათ. რეკომდენდებულია 4-8 კლასებისთვის.
+          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           "Artist: Variables": 'მხატვარი: ცვლადები'
           "Bee: For Loops": 'ფუტკარი: "მიზნისთვის" ციკლები'
           title: კურსი 4
@@ -1310,6 +1310,9 @@ ka:
           Introduction to the Unit 5 Challenge: Introduction to the Unit 5 Challenge
           Unit 5 Challenge Planning & Creation: 'Unit 5 Challenge Planning & Creation'
           Getting Started: Getting Started
+          Unit 5 lessons: Unit 5 lessons
+          Complete the Challenge: Complete the Challenge
+          Share out and Submit: Share out and Submit
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description_short: Academic Year Development
@@ -1379,7 +1382,7 @@ ka:
           Discover a Data Story: Discover a Data Story
           Rapid Research - Data Innovations: 'Rapid Research - Data Innovations'
         ScienceP3OLPT2:
-          title: Computer Science in Science PD Phase 3b
+          title: Computer Science in Science PD Phase 3A Post Work
           description_short: Phase 3 Academic Year Development
           description: Phase 3 Academic Year Development
           Welcome!: კეთილი იყოს თქვენი მობრძანება!
@@ -1562,3 +1565,15 @@ ka:
           Challenge Overview: Challenge Overview
           Complete the Challenge: Complete the Challenge
           Share out and Submit: Share out and Submit
+        cspunit6draft:
+          title: 'CSP Post-AP Material - Databases and Using Data in Your Apps'
+          description_short: Data Apps
+          description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, and it concludes with a sampling of example projects that can be built using these tools.
+          Creating Javascript Objects: Creating Javascript Objects
+          Permanent Data Storage: Permanent Data Storage
+          Reading Records: Reading Records
+          Importing and Exporting Data: Importing and Exporting Data
+          Visualizing Data: Visualizing Data
+          Updating Records: Updating Records
+          Deleting Records: Deleting Records
+          Sample Apps: Sample Apps

@@ -169,6 +169,7 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "catProcedures":function(d){return "कार्य"},
 "catText":function(d){return "पाठ"},
 "catVariables":function(d){return "चर"},
+"choosePrefix":function(d){return "Choose..."},
 "clearPuzzle":function(d){return "पुन: प्रारंभ करें"},
 "clearPuzzleConfirm":function(d){return "यह पहेली अपनी आरंभ स्थिति में रीसेट ho jayegi और आपke dwara जोड़ा या बदलa गया है सभी ब्लाक meet jayege।"},
 "clearPuzzleConfirmHeader":function(d){return "Aapko यकीन है कि आप prarambh se शुरू करना चाहते हैं?"},
@@ -410,5 +411,4 @@ s:function(d,k,p){common_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "watchVideo":function(d){return "ये वीडियो देखें"},
 "when":function(d){return "कब"},
 "whenRun":function(d){return "जब चलाएँ"},
-"workspaceHeaderShort":function(d){return "Workspace: "},
-"choosePrefix":function(d){return "Choose..."}};
+"workspaceHeaderShort":function(d){return "Workspace: "}};

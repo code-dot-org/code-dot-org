@@ -87,7 +87,7 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def stage_total
-    stage.script_levels.to_a.count
+    stage.script_levels.to_a.size
   end
 
   def summarize

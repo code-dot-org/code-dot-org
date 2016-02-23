@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "kokatu lur unitate bat"},
 "finalLevel":function(d){return "Zorionak! Amaierako puzlea ebatzi duzu."},
 "flowerEmptyError":function(d){return "Lore honek ez du nektar gehiago."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "jaso"},
 "heightParameter":function(d){return "Altuera"},
 "holePresent":function(d){return "Zulo bat dago"},

@@ -232,9 +232,8 @@
       2-3 Bee Debugging 2_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
         Correggi gli errori per raccogliere tutto il nettare. Clicca su "Fai un passo"
         per eseguire il programma un blocco alla volta.
-      2-3 Bee Debugging 3_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
-        Correggi gli errori per raccogliere tutto il nettare. Clicca su "Fai un passo"
-        per eseguire il programma un blocco alla volta.
+      2-3 Bee Debugging 3_instruction: Questi blocchi mi fanno perdere la pazienza.
+        Correggi l'errore(i) per raccogliere tutto il nettare.
       2-3 Bee Debugging 4_instruction: Questi blocchi sbagliati mi fanno perdere tempo.
         Correggi gli errori per raccogliere tutto il nettare. Clicca su "Fai un passo"
         per eseguire il programma un blocco alla volta.
@@ -2124,7 +2123,9 @@
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions)
         \n"
-      drawings!_instruction: Draw the equilateral triangle, or else.
+      drawings!_instruction: |
+        Draw the equilateral triangle - all the sides are the
+        same!
       ECSPD Binary Odometer_instruction: |
         This is another resource you could use
         with your students.
@@ -3309,6 +3310,14 @@
       Poorva-test_instruction: |
         Here are regular instructions for a level. There
         is nothing fancy going on here.
+      Quantum Bee - Ryan_instruction: |
+        These clouds are bugging me! Some of the clouds
+        have flowers inside, and some don't. I should check each cloud, and only
+        get nectar from the flowers.
+      Quantum Bee_instruction: I fiori viola possono avere una quantità di nettare
+        pari a 0 oppure 1, ma tu non lo sai! Fai attenzione a non raccogliere nettare
+        da un fiore viola se non ne ha. Usa il blocco "se" (if) per controllare se
+        la quantità è 0 oppure 1.
       Ryan - 4-5 Bee Conditionals 2_instruction: Adesso l'ape vuole solo del nettare.
         Ricordati che non tutti gli oggetti nascosti sono fiori, quindi controlla
         sotto ogni nuvoletta in modo da raccogliere il nettare solo quando ci sono
@@ -4901,7 +4910,7 @@
         right of the starting location. (Click to show full instructions)
       U4 - add createRecord to contacts App_instruction: |
         Add code to your contacts
-        app so that newly added contacts are saved in a table. (Click to see full
+        app so that newly-added contacts are saved in a table. (Click to see full
         instructions)
       U4 - Add Row By Hand_instruction: |
         Add a new record to your table in the Data
@@ -5051,7 +5060,7 @@
         objects and display the names of every student who is present in class. (Click
         to see full instructions)
       U4 - Objects - pullValues_instruction: |
-        Create an event handler for the "Add
+        Create an event handler for the "Save
         Contact" button that displays the contents of the 4 text input fields in
         the console. (Click to see full instructions)
       U4 - Objects - readStarterCode_instruction: |
@@ -5059,7 +5068,7 @@
         starter code and UI elements provided. (Click to see full instructions)
       U4 - Objects - resetIndexAndShow_instruction: |
         Add code to your event handler
-        fro the "Add Contact" button so that when a new contact is added the inputs
+        for the "Save Contact" button so that when a new contact is added, the inputs
         are cleared, the screen is switched, and the correct contact is shown. (Click
         to see full instructions)
       U4 - Objects - showContact1_instruction: |
@@ -5098,11 +5107,11 @@
       U4 - Read Record - part 1 - template_instruction: "Use console.log to display\nthe
         records returned by a call to readRecords. (Click to see full instructions)\r\n"
       U4 - ReadRecords - Contacts App 1_instruction: |
-        Write a function called "updateLocalData"
-        that copies the data in your database into your "contacts" global variable.
+        Use readRecords to copy the
+        data in your database into your "contacts" global variable and call showCurrentContact.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 2_instruction: |
-        Create a function called "refreshLocalData"
+        Create a function called refreshLocalData.
         (Click to see full instructions)
       U4 - ReadRecords - Contacts App 3_instruction: |
         Add a call to "refreshLocalData"
@@ -5159,6 +5168,22 @@
         the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records\nto
         display your sentence."
+      U6 - updateRecord - Callback Success Parameter_instruction: |
+        Add an if-else
+        block inside the callback function for updateRecord. (Click to see full instructions)
+      U6 - updateRecord - Contacts - Edit event handler_instruction: |
+        (Click to see
+        full instructions)
+      U6 - updateRecord - Contacts - Edit UI_instruction: "(Click to see full instructions)"
+      U6 - updateRecord - Contacts - Save edited contact_instruction: |
+        (Click to
+        see full instructions)
+      U6 - updateRecord - Default Block_instruction: |
+        Use updateRecord to change
+        the record for "Eye of the Tiger." (Click to see full instructions)
+      U6 - updateRecord - Update Nonexistent Record_instruction: |
+        Force updateRecord
+        to fail by changing the ID of songToUpdate. (Click to see full instructions)
       Underground Avoiding Lava_instruction: Sotto alcuni di questi blocchi c'è la
         lava, che devi coprire per poter andare avanti. L'istruzione “se” ti è utile
         in questi casi. Aggiungi un istruzione “vai avanti” nel posto giusto per estrarre

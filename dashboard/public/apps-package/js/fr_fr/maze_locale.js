@@ -173,6 +173,7 @@ s:function(d,k,p){maze_locale.c(d,k);return d[k] in p?p[d[k]]:p.other}};
 "fillTooltip":function(d){return "placer 1 unité de terre"},
 "finalLevel":function(d){return "Félicitations ! Tu as résolu l'énigme finale."},
 "flowerEmptyError":function(d){return "La fleur sur laquelle tu es n'a plus de nectar."},
+"didNotCollectEverything":function(d){return "Make sure you don't leave any nectar or honey behind!"},
 "get":function(d){return "obtenir"},
 "heightParameter":function(d){return "hauteur"},
 "holePresent":function(d){return "il y a un trou"},

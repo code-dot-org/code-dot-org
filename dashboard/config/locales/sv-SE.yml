@@ -29,8 +29,8 @@
     code:
       label: 'Lägg till lärare:'
       placeholder: Avsnitt kod (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
+      instructions: Var snäll och skriv in koden som du har fått av din lärare. Det
+        är en 6 bokstäver lång kod som "ABCDEF".
     submit: Lägg till lärare
   add_hint_form:
     placeholder: Skriv in ditt tips här
@@ -143,7 +143,7 @@
 
       %{link}
 
-      Kurserna är roliga, visuellt engagerande, och lär ut grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera från Bill Gates, Mark Zuckerberg, Angry Birds, och Plants vs Zombies! :)
+      Kurserna är roliga och visuellt engagerande, och lär ut de grundläggande koncepten inom datavetenskap med en enkel, guidad, spel-liknande upplevelse. Lär dig att programmera med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs Zombies! :)
 
       %{name}
   follower:
@@ -170,12 +170,12 @@
           din lärare.'
   reports:
     error:
-      access_denied: Du har inte tillgång till denna personens uppgifter
+      access_denied: Du har inte tillgång till denna persons uppgifter
   redeem_prizes:
     title: 'Lös in priser: %{name}'
     provider: 'Leverantör:'
     code: 'Kod:'
-    redeem_header: 'Att lösa in:'
+    redeem_header: 'För att lösa in:'
     donorschoose_register: Registrera dig som lärare på DonorsChoose.org
     donorschoose_project: Skicka ett projekt
     donorschoose_how_to: Hur du ska använda din kod
@@ -261,7 +261,7 @@
         applab: Skapa en App
     user:
       classroom: Lärare hemsida
-      district_dashboard: Distrikt Dashboard
+      district_dashboard: Distriktets kontrollpanel
       label: Hej %{username}
       stats: Mina framsteg
       settings: Mitt konto
@@ -271,7 +271,7 @@
       signup: Registrera dig
       already_registered: Redan registrerad?
     popup:
-      progress_for_user: "%{name}'s framsteg"
+      progress_for_user: "%{name}s framsteg"
       progress: Dina framsteg
       lines: 'Totalt antal rader kod: %{lines}'
       close: STÄNG
@@ -384,10 +384,10 @@
     student: Student
     teacher: Lärare
   footer:
-    thank_you: Vi tackar våra <a href="https://code.org/about/donors"> givare</a>,
-      <a href="https://code.org/about/partners"> partners</a>, vårt <a href="https://code.org/about/team">
-      utökade team</a>, vårt video team och våra <a href="https://code.org/about/advisors">
-      utbildningsrådgivare</a> för deras stöd i att skapa Code Studio.
+    thank_you: Vi tackar våra <a href="https://code.org/about/donors">givare</a>,
+      <a href="https://code.org/about/partners">partners</a>, vårt <a href="https://code.org/about/team">utökade
+      team</a>, vårt videoteam och våra <a href="https://code.org/about/advisors">utbildningsrådgivare</a>
+      för deras stöd med att skapa Code Studio.
     help_from_html: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
       till med att skapa denna övning.
     help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
@@ -461,7 +461,7 @@
   share_code:
     title: Klicka på 'Kör' för att testa mitt program
     bounce_og_title: Kolla in mitt Studsa Spel
-    flappy_og_title: Kolla in mitt Flappy Spel
+    flappy_og_title: Kolla in mitt Flappy-spel
     studio_og_title: Kolla in min Play Lab App
     check_out_what_i_made: Kolla vad jag gjorde
     og_description: Jag skrev koden själv med Code.org
@@ -489,7 +489,7 @@
       title: Klassisk labyrint
       body: Lär dig grunderna i programmering. Miljoner har provat denna.
     flappy:
-      title: Flappy kod
+      title: Flappy-kod
       body: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy
         Code övning!
     20-hour:
@@ -600,7 +600,7 @@
           title: Byggare
           description: ''
         flappy:
-          title: Flappy kod
+          title: Flappy-kod
           description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
             vår Flappy Code övning!
         jigsaw:

@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+#
+# This script caches database queries whose results are displayed at studio.code.org/admin/progress.
+#
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require_relative('../../dashboard/config/environment')
+require 'cdo/properties'
+
+def main()
+  return unless only_one_running?(__FILE__)
+
+  SeamlessDatabasePool.use_persistent_read_connection do
+    Properties.set(:admin_progress, {
+      user_count: User.count,
+      levels_attempted: UserLevel.where('best_result > 0').group(:level_id).count,
+      levels_passed: UserLevel.where('best_result >= 20').group(:level_id).count,
+    })
+  end
+end
+
+main()

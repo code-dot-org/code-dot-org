@@ -14,6 +14,7 @@
   "catProcedures": "Komandų kūrimas",
   "catText": "Tekstas",
   "catVariables": "Kintamieji",
+  "choosePrefix": "Choose...",
   "clearPuzzle": "Pradėti iš naujo",
   "clearPuzzleConfirm": "Visi tavo sudėlioti blokeliai bus panaikinti ir šį galvosūkį bus galima spręsti nuo pradžių.",
   "clearPuzzleConfirmHeader": "Ar tikrai norite pradėti iš naujo?",
@@ -255,6 +256,5 @@
   "watchVideo": "Peržiūrėk šį vaizdo įrašą",
   "when": "kada",
   "whenRun": "paleidus",
-  "workspaceHeaderShort": "Darbo laukas: ",
-  "choosePrefix": "Choose..."
+  "workspaceHeaderShort": "Darbo laukas: "
 }
