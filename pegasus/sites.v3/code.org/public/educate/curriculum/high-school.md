@@ -4,8 +4,9 @@ nav: educate_nav
 ---
 
 # High School 
+For high schools, we offer two years of Computer Science courses for beginners: Exploring Computer Science and AP Computer Science Principles. If you want to go even further with your students, the third party resources below provide additional courses in programming, AP Computer Science A,  algebra, and more.
 
-## Computer Science Principles
+# Computer Science Principles
 
 <iframe width="600" height="337" src="https://www.youtube.com/embed/HoKRZRI9IDk" frameborder="0" allowfullscreen></iframe>
 <br />
@@ -24,7 +25,7 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 
-## Exploring Computer Science
+# Exploring Computer Science
 
 <img src="<%= CDO.shared_image_url("courses/logo_ecs.png") %>">
 
@@ -37,7 +38,7 @@ Find other resources at [exploringcs.org](http://www.exploringcs.org/)
 
 [<button>Learn more about professional learning</button>](/educate/professional-learning/exploring-cs)
 
-## 3rd Party resources for high school CS
+# 3rd Party resources for high school CS
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -59,12 +60,12 @@ Find other resources at [exploringcs.org](http://www.exploringcs.org/)
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
 
-## Additional Resources and Videos
+# Additional Resources and Videos
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
 [<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
-## Find a guest speaker for your classroom
+# Find a guest speaker for your classroom
 Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)

@@ -55,7 +55,7 @@
         <block type="procedures_defnoreturn">
           <mutation>
             <arg name="length"/>
-            <description>draw a pentagon the is 100 pixels in size</description>
+            <description>draw a pentagon that is 100 pixels in size</description>
           </mutation>
           <title name="NAME">draw a pentagon</title>
           <statement name="STACK">
