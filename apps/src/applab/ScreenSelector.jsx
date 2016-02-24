@@ -49,15 +49,15 @@ var ScreenSelector = React.createClass({
     });
 
     return (
-        <select
-            id="screenSelector"
-            style={dropdownStyle}
-            value={this.props.activeScreen}
-            onChange={this.props.onChange}
-            disabled={Applab.isRunning()}>
-          {options}
-          <option>{constants.NEW_SCREEN}</option>
-        </select>
+      <select
+          id="screenSelector"
+          style={dropdownStyle}
+          value={this.props.activeScreen}
+          onChange={this.props.onChange}
+          disabled={Applab.isRunning()}>
+        {options}
+        <option>{constants.NEW_SCREEN}</option>
+      </select>
     );
   }
 });
