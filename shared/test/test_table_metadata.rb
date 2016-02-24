@@ -52,5 +52,4 @@ class TablesTest < Minitest::Test
       TableMetadata.add_column(column_list, "col2")
     end
   end
-
 end

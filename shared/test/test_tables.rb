@@ -186,6 +186,31 @@ class TablesTest < Minitest::Test
 
     delete_channel
   end
+
+  TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
+  def test_table_names
+    init_apis
+    create_channel
+
+    data1 = {
+      'table1' => [{'name'=> 'trevor'}, {'name'=>'alex'}],
+      'table2' => [{'word'=> 'cow'}, {'word'=>'pig'}],
+    }
+
+    populate_table(data1, true)
+
+    _, decrypted_channel_id = storage_decrypt_channel_id(@channel_id)
+
+    assert_equal ['table1', 'table2'], TableType.table_names(decrypted_channel_id)
+
+    # Now add metadata for a table (that has no records)
+    MetadataTableType.new(@channel_id, 'new_table', 'shared').set_column_info([])
+    assert_equal ['table1', 'table2', 'new_table'], TableType.table_names(decrypted_channel_id)
+
+    delete_channel
+  end
+
   # Methods below this line are test utilities, not actual tests
   private
 
