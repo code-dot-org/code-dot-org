@@ -3,7 +3,7 @@
 // TODO (brent) - make it so that we dont need to specify .jsx. This currently
 // works in our grunt build, but not in tests
 var DesignWorkspace = require('./DesignWorkspace.jsx');
-var DesignToggleRow = require('./DesignToggleRow.jsx');
+var PlaySpaceHeader = require('./PlaySpaceHeader.jsx');
 var showAssetManager = require('../assetManagement/show');
 var assetPrefix = require('../assetManagement/assetPrefix');
 var elementLibrary = require('./designElements/library');
@@ -809,7 +809,7 @@ designMode.configureDragAndDrop = function () {
   });
 };
 
-designMode.configureDesignToggleRow = function () {
+designMode.configurePlaySpaceHeader = function () {
   var designToggleRow = document.getElementById('designToggleRow');
   if (!designToggleRow) {
     return;
@@ -859,7 +859,7 @@ designMode.renderToggleRow = function (screenIds) {
   var designToggleRow = document.getElementById('designToggleRow');
   if (designToggleRow) {
     React.render(
-      React.createElement(DesignToggleRow, {
+      React.createElement(PlaySpaceHeader, {
         hideToggle: Applab.hideDesignModeToggle(),
         hideViewDataButton: Applab.hideViewDataButton(),
         startInDesignMode: Applab.startInDesignMode(),
