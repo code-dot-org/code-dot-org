@@ -2,6 +2,7 @@ var testUtils = require('./util/testUtils');
 var assert = testUtils.assert;
 
 describe("JSInterpreter", function () {
+  var Observer = require('@cdo/apps/Observer');
   var JSInterpreter = require('@cdo/apps/JSInterpreter');
   var jsInterpreter;
 
@@ -13,10 +14,12 @@ describe("JSInterpreter", function () {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
     // needed.
     jsInterpreter = new JSInterpreter({
+      shouldRunAtMaxSpeed: function() { return false; },
       studioApp: {hideSource: true}
     });
 
     // Initialize a test program
+    jsInterpreter.calculateCodeInfo(code);
     jsInterpreter.parse({code: code});
 
     assert(jsInterpreter.initialized());
@@ -78,12 +81,23 @@ describe("JSInterpreter", function () {
       return row === 3 || row == 5;
     };
 
+    var observer = new Observer(), hitBreakpoint = false, MAX_STEPS = 100, i;
+    observer.observe(jsInterpreter.onPause, function () {
+      hitBreakpoint = true;
+    });
+
     jsInterpreter.paused = false;
 
-    jsInterpreter.executeInterpreter();
+    for (i = 0; !hitBreakpoint && i < MAX_STEPS; i++) {
+      jsInterpreter.executeInterpreter();
+    }
+    hitBreakpoint = false;
     assertCurrentState({node: {type: 'ExpressionStatement', expression: {value: 3}}});
 
-    jsInterpreter.executeInterpreter();
+    for (i = 0; !hitBreakpoint && i < MAX_STEPS; i++) {
+      jsInterpreter.executeInterpreter();
+    }
+    hitBreakpoint = false;
     assertCurrentState({node: {type: 'ExpressionStatement', expression: {value: 5}}});
   });
 
