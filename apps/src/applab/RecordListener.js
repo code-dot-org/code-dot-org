@@ -101,6 +101,18 @@ RecordListener.prototype.reportRecords_ = function (req, tableName) {
     return;
   }
 
+  if (!this.idToJsonMaps_[tableName]) {
+    // The maps may have been reset while we were fetching the data.
+    return;
+  }
+
+  // Performance notes: on a table with 2000 records on localhost it takes ~1.5 seconds
+  // to fetch the data from dynamodb and 30ms to process it here. Processing time may be
+  // longer on slower machines. One quick and dirty performance improvement is to cache
+  // the responseText here and return if it has not changed (only 1ms). However, a better
+  // performance improvement is to only poll when Pusher tells us to, which would render
+  // the responseText check unnecessary.
+
   var callback = this.recordListeners_[tableName];
   var records = JSON.parse(req.responseText);
   var oldIdToJsonMap = this.idToJsonMaps_[tableName];
