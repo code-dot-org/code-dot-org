@@ -99,11 +99,14 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   def _test_logged_in_milestone(async_activity_writes:)
+    # Configure a fake slogger to verify that the correct data is logged.
+    slogger = FakeSlogger.new
+    CDO.set_slogger_for_test(slogger)
+
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
-      # do all the logging
+    # do all the logging
     @controller.expects :log_milestone
-    @controller.expects :slog
 
     @controller.expects(:trophy_check).with(@user)
 
@@ -131,6 +134,16 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # created activity and userlevel with the correct script
     assert_equal @script_level.script, UserLevel.last.script
+
+    assert_equal([{
+                      application: :dashboard,
+                      tag: 'activity_finish',
+                      script_level_id: @script_level.id,
+                      level_id: @script_level.level.id,
+                      user_agent: 'Rails Testing',
+                      locale: :'en-us'
+                  }],
+                 slogger.records)
   end
 
   test "successful milestone does not require script_level_id" do
