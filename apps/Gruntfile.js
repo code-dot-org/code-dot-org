@@ -8,15 +8,6 @@ module.exports = function (grunt) {
 
   var config = {};
 
-  /** @const {number} */
-  var DEV_WATCH_INTERVAL = parseInt(grunt.option('delay')) || 100;
-
-  /** @const {number} */
-  var PLAYGROUND_PORT = grunt.option('playground-port') || 8000;
-
-  /** @const {string} */
-  var APP_TO_BUILD = grunt.option('app') || process.env.MOOC_APP;
-
   /** @const {string[]} */
   var APPS = [
     'maze',
@@ -33,11 +24,12 @@ module.exports = function (grunt) {
     'gamelab'
   ];
 
-  if (APP_TO_BUILD) {
-    if (APPS.indexOf(APP_TO_BUILD) === -1) {
-      throw new Error('Unknown app: ' + APP_TO_BUILD);
+  if (process.env.MOOC_APP) {
+    var app = process.env.MOOC_APP;
+    if (APPS.indexOf(app) === -1) {
+      throw new Error('Unknown app: ' + app);
     }
-    APPS = [APP_TO_BUILD];
+    APPS = [app];
   }
 
   // Parse options from environment.
@@ -326,20 +318,17 @@ module.exports = function (grunt) {
   });
 
   // Use command-line tools to run browserify (faster/more stable this way)
-  var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc' +
-      ' --cachefile ' + outputDir + 'browserifyinc-cache.json' +
-      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ]' +
-      ' -d ' + allFilesSrc.join(' ') +
-      (
-          APPS.length > 1 ?
-          ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
-          ' -o ' + allFilesDest[0]
-      );
+  var browserifyExec = 'mkdir -p build/browserified && `npm bin`/browserifyinc ' +
+      '--cachefile ' + outputDir + 'browserifyinc-cache.json ' +
+      ' -t [ babelify --compact=false --sourceMap --sourceMapRelative="$PWD" ] -d ' + allFilesSrc.join(' ') +
+      (APPS.length > 1 ? ' -p [ factor-bundle -o ' + allFilesDest.join(' -o ') + ' ] -o ' + outputDir + 'common.js' :
+      ' -o ' + allFilesDest[0]);
 
   var fastMochaTest = process.argv.indexOf('--fast') !== -1;
 
   config.exec = {
-    browserify: 'echo "' + browserifyExec + '" && ' + browserifyExec,
+    browserify: browserifyExec,
+    watchify: browserifyExec.replace('browserifyinc', 'watchify') + ' -v',
     mochaTest: 'node test/util/runTests.js --color' + (fastMochaTest ? ' --fast' : '')
   };
 
@@ -357,9 +346,9 @@ module.exports = function (grunt) {
   };
 
   config.express = {
-    playground: {
+    server: {
       options: {
-        port: PLAYGROUND_PORT,
+        port: 8000,
         bases: path.resolve(__dirname, 'build/package'),
         server: path.resolve(__dirname, './src/dev/server.js'),
         livereload: true
@@ -399,57 +388,52 @@ module.exports = function (grunt) {
   config.watch = {
     js: {
       files: ['src/**/*.{js,jsx}'],
-      tasks: ['newer:copy:src', 'exec:browserify'],
+      tasks: ['newer:copy:src'],
       options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        interval: 5007
       }
     },
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
       tasks: ['newer:sass'],
       options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        interval: 5007
       }
     },
     content: {
       files: ['static/**/*'],
       tasks: ['newer:copy'],
       options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        interval: 5007
       }
     },
     vendor_js: {
       files: ['lib/**/*.js'],
       tasks: ['newer:concat', 'newer:copy:lib'],
       options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        interval: 5007
       }
     },
     ejs: {
       files: ['src/**/*.ejs'],
-      tasks: ['ejs', 'exec:browserify'],
+      tasks: ['ejs'],
       options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        interval: 5007
       }
     },
     messages: {
       files: ['i18n/**/*.json'],
       tasks: ['pseudoloc', 'messages'],
       options: {
-        interval: DEV_WATCH_INTERVAL,
-        livereload: true
+        interval: 5007
       }
     },
-  };
-
-  config.open = {
-    playground: {
-      path: 'http://localhost:' + PLAYGROUND_PORT
+    dist: {
+      files: ['build/package/**/*'],
+      options: {
+        livereload: true,
+        interval: 5007
+      }
     }
   };
 
@@ -565,11 +549,18 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
+  config.concurrent.watch = {
+    tasks: ['exec:watchify', 'watch'],
+    options: {
+      logConcurrentOutput: true
+    }
+  };
+
   grunt.registerTask('dev', [
-    'build',
-    'express:playground',
-    'open:playground',
-    'watch'
+    'prebuild',
+    'postbuild',
+    'express:server',
+    'concurrent:watch'
   ]);
 
   grunt.registerTask('jshint:files', function () {
