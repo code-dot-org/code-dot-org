@@ -8,7 +8,7 @@ class TutorialsTest < Minitest::Test
     hoc_tutorials = Tutorials.new(:tutorials)
     frozen_tutorial = hoc_tutorials.find_with_tag("frozen")
 
-    assert frozen_tutorial.length > 0
+    assert !frozen_tutorial.empty?
     assert frozen_tutorial["frozen"][:code] == "frozen"
   end
 
@@ -16,7 +16,7 @@ class TutorialsTest < Minitest::Test
     beyond_tutorials = Tutorials.new(:beyond_tutorials)
     beginner_tutorials = beyond_tutorials.find_with_tag("Beginner")
 
-    assert beginner_tutorials.length > 0
+    assert !beginner_tutorials.empty?
     assert beginner_tutorials["codeorg_beyond"][:code] == "codeorg_beyond"
   end
 
