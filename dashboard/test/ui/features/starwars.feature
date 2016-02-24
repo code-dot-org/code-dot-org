@@ -2,7 +2,6 @@ Feature: Hour of Code 2015 tutorial is completable
 
   Background:
     Given I am on "http://learn.code.org/s/starwars/reset"
-    And execute JavaScript expression "window.localStorage.clear()"
 
   @no_ie @no_mobile
   Scenario: Solving puzzle 1 in block mode
