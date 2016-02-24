@@ -3,6 +3,7 @@ require 'cdo/db'
 require 'cdo/rack/request'
 require 'csv'
 require_relative './helpers/table_coerce'
+require_relative './helpers/table_metadata'
 
 class TablesApi < Sinatra::Base
 
@@ -17,6 +18,7 @@ class TablesApi < Sinatra::Base
   end
 
   TableType = CDO.use_dynamo_tables ? DynamoTable : Table
+  MetadataTableType = CDO.use_dynamo_tables ? TableMetadata::DynamoTableMetadata : TableMetadata::SqlTableMetadata
 
   #
   # GET /v3/(shared|user)-tables/<channel-id>/<table-name>
@@ -27,6 +29,19 @@ class TablesApi < Sinatra::Base
     dont_cache
     content_type :json
     TableType.new(channel_id, storage_id(endpoint), table_name).to_a.to_json
+  end
+
+  #
+  # GET /v3/(shared|user)-tables/<channel-id>/<table-name>/metadata
+  #
+  # Returns the metdata for the given table
+  #
+  get %r{/v3/(shared|user)-tables/([^/]+)/([^/]+)/metadata$} do |endpoint, channel_id, table_name|
+    dont_cache
+    content_type :json
+    metadata = MetadataTableType.new(channel_id, table_name, endpoint).data
+    no_content if metadata.nil?
+    metadata.to_json
   end
 
   #
@@ -214,6 +229,10 @@ class TablesApi < Sinatra::Base
     records.each do |record|
       table.insert(record, request.ip)
     end
+
+    column_info = TableMetadata.generate_column_info(records)
+    # TODO - table type
+    MetadataTableType.new(channel_id, table_name, 'shared').set_column_info(column_info)
 
     redirect "#{table_url}"
   end
