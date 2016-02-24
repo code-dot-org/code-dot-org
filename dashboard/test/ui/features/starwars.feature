@@ -1,10 +1,12 @@
 Feature: Hour of Code 2015 tutorial is completable
 
-  @no_ie @no_mobile
-  Scenario: Solving puzzle 1 in block mode
+  Background:
     Given I am on "http://learn.code.org/s/starwars/reset"
     And execute JavaScript expression "window.localStorage.clear()"
-    And I am on "http://learn.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
+
+  @no_ie @no_mobile
+  Scenario: Solving puzzle 1 in block mode
+    Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 1 of 15"
     And I close the dialog
@@ -147,9 +149,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then the Droplet ACE text is "moveRight();\n"
 
   Scenario: Using the "Start Over" button in text mode
-    Given I am on "http://learn.code.org/s/starwars/reset"
-    And execute JavaScript expression "window.localStorage.clear()"
-    And I am on "http://learn.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
+    Given I am on "http://learn.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait to see a dialog titled "Puzzle 1 of 15"
     And I close the dialog
