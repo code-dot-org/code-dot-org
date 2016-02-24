@@ -1,12 +1,16 @@
 'use strict';
 
 /**
- * @typedef {Object.<number, string>} IdToJsonMap Map from record id
- * to a JSON-stringified copy of the corresponding record.
- */
-
-/**
- * Class which allows callers to listen to changes to data tables.
+ * Class which allows callers to listen to changes to data tables. This is currently
+ * done by polling. Some modest rate-limiting is achieved by waiting for one second
+ * after the previous response is processed for data from a given table, rather than
+ * polling on a fixed interval and allowing a backlog to accumulate.
+ *
+ * The most logical incremental performance improvement is to use pusher to only
+ * re-read from the table if any of its contents have changed. Down the road, we
+ * may be able to use DynamoDB Streams / Lambda / SQS to deliver fine-grained
+ * notifications to the client without ever needing to  re-read the entire table.
+ *
  * @constructor
  */
 var RecordListener = module.exports = function () {
@@ -67,7 +71,8 @@ RecordListener.prototype.reset = function () {
 //////////////////////////////////////////////////
 
 /**
- *
+ * This class encapsulates all the logic and state required for listening to
+ * changes to a single table.
  * @param {string} tableName
  * @param {function} callback
  * @constructor
@@ -84,6 +89,11 @@ var TableHandler = function (tableName, callback) {
    *  @private
    */
   this.callback_ = callback;
+
+  /**
+   * @typedef {Object.<number, string>} IdToJsonMap Map from record id
+   * to a JSON-stringified copy of the corresponding record.
+   */
 
   /**
    * IdToJsonMap representing the contents of the table.
