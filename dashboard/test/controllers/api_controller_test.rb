@@ -185,12 +185,14 @@ class ApiControllerTest < ActionController::TestCase
     script_level = script.script_levels[0]
     level = script_level.level
 
+    user = create :user
+    sign_out user
+
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
     body = JSON.parse(response.body)
-
-    assert_equal false, body['disableSocialShare']
-    assert_equal({}, body['progress'])
+    puts body
+    assert_equal({}, body)
     assert_equal([{
                       application: :dashboard,
                       tag: 'activity_start',
