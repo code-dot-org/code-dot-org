@@ -30,7 +30,6 @@ class AdminReportsControllerTest < ActionController::TestCase
   end
 
   generate_admin_only_tests_for :all_usage
-  generate_admin_only_tests_for :admin_concepts
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
   generate_admin_only_tests_for :debug
