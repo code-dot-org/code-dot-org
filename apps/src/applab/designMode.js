@@ -229,7 +229,7 @@ designMode.updateProperty = function(element, name, value) {
         backgroundImage.onload = function() {
           // Fit the image into the button
           element.style.backgroundSize = 'contain';
-          element.style.backgroundPosition = 'center center';
+          element.style.backgroundPosition = '50% 50%';
           element.style.backgroundRepeat = 'no-repeat';
 
           // Re-render properties
