@@ -164,6 +164,7 @@ namespace :test do
   end
 
   task changed: ['changed:all']
+
   task all: [:apps, :code_studio, :blockly_core, :dashboard, :pegasus, :shared]
 end
 task test: ['test:changed']
