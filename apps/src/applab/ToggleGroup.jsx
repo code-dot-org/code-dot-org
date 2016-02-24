@@ -10,7 +10,22 @@ var ToggleButton = require('./ToggleButton.jsx');
 var ToggleGroup = React.createClass({
   propTypes: {
     selected: React.PropTypes.string.isRequired,
-    onChange: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired,
+    children: function (props, propName, componentName) {
+      var prop = props[propName];
+      var error;
+      if (React.Children.count(prop) < 1) {
+        error = new Error(componentName + ' must have at least one child button.');
+      }
+
+      React.Children.forEach(prop, function (child) {
+        if (child.type !== 'button') {
+          error = new Error(componentName + ' should only have buttons as ' +
+              'child elements.');
+        }
+      });
+      return error;
+    }
   },
 
   setSelected: function (selected) {
