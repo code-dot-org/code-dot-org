@@ -20,23 +20,23 @@ var ToggleButton = React.createClass({
 
   render: function () {
     return (
-        <button
-            id={this.props.id}
-            style={this.getStyle()}
-            className='no-outline'
-            onClick={this.props.onClick}>
-          {this.props.children}
-        </button>
+      <button
+          id={this.props.id}
+          style={this.getStyle()}
+          className='no-outline'
+          onClick={this.props.onClick}>
+        {this.props.children}
+      </button>
     );
   },
 
   getStyle: function () {
     return $.extend({},
-        styles.buttonStyle,
-        styles.toggleButtonStyle,
-        this.props.active ? styles.activeStyle : styles.inactiveStyle,
-        this.props.first ? styles.firstButtonStyle: null,
-        this.props.last ? styles.lastButtonStyle : null);
+      styles.buttonStyle,
+      styles.toggleButtonStyle,
+      this.props.active ? styles.activeStyle : styles.inactiveStyle,
+      this.props.first ? styles.firstButtonStyle: null,
+      this.props.last ? styles.lastButtonStyle : null);
   }
 });
 module.exports = ToggleButton;

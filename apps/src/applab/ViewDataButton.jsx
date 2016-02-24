@@ -20,29 +20,28 @@ var ViewDataButton = React.createClass({
   },
 
   render: function () {
-
     var showDataButtonStyle = $.extend(
-        {
-          float: 'right',
-          textAlign: 'left',
-          maxWidth: '100%',
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis'
-        },
-        styles.buttonStyle,
-        styles.inactiveStyle
+      {
+        float: 'right',
+        textAlign: 'left',
+        maxWidth: '100%',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+      },
+      styles.buttonStyle,
+      styles.inactiveStyle
     );
 
     return (
-        <button
-            id='viewDataButton'
-            style={showDataButtonStyle}
-            className='no-outline'
-            onClick={this.props.onClick}>
-          <i className='fa fa-database' style={styles.iconStyle}></i>
-          {applabMsg.viewData()}
-        </button>
+      <button
+          id='viewDataButton'
+          style={showDataButtonStyle}
+          className='no-outline'
+          onClick={this.props.onClick}>
+        <i className='fa fa-database' style={styles.iconStyle} />
+        {applabMsg.viewData()}
+      </button>
     );
   }
 });
