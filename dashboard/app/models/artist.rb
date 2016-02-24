@@ -21,6 +21,15 @@
 #  index_levels_on_game_id  (game_id)
 #
 
+IGNORED_SOLUTION_BLOCK_ATTRS = {
+  "uservisible" => "false",
+  "deletable" => "false",
+  "editable" => "false",
+  "disabled" => "true",
+  "movable" => "false"
+}
+NEW_CATEGORY_XML = "<category name=\"NEW BLOCKS\"/>"
+
 class Artist < Blockly
   serialized_attrs %w(
     start_direction
@@ -264,4 +273,27 @@ class Artist < Blockly
       <block type="simple_jump_left"></block>
     XML
   end
+
+  # Add blocks to the toolbox that appear in the solution, but aren't already
+  # in the toolbox
+  def add_missing_toolbox_blocks
+    toolbox = Nokogiri::XML(properties["toolbox_blocks"])
+    toolbox_blocks = toolbox.xpath('//block[not(ancestor::block)]')
+    Nokogiri::XML(properties["solution_blocks"]).xpath("//block").each do |block|
+      next if IGNORED_SOLUTION_BLOCK_ATTRS.any? {|kvpair| block.attr(kvpair[0]) == kvpair[1]} ||
+        toolbox_blocks.any? do |toolbox_block|
+          # need to check more stuff here
+          toolbox_block.attr("type") == block.attr("type")
+        end
+      if toolbox_blocks.xpath("//category").empty?
+        toolbox.root.add_child block.dup
+      else
+        category = toolbox_blocks.xpath("//category[@name='NEW BLOCKS']").first ||
+          toolbox.xpath("//category").last.add_next_sibling(NEW_CATEGORY_XML)[0]
+        category.add_child block.dup
+      end
+    end
+    properties["toolbox_blocks"] = toolbox.to_xml
+  end
+
 end
