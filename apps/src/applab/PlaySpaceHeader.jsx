@@ -9,7 +9,6 @@
 var constants = require('./constants');
 var msg = require('../locale');
 var ScreenSelector = require('./ScreenSelector.jsx');
-var ToggleButton = require('./ToggleButton.jsx');
 var ToggleGroup = require('./ToggleGroup.jsx');
 var ViewDataButton = require('./ViewDataButton.jsx');
 
@@ -69,16 +68,8 @@ var PlaySpaceHeader = React.createClass({
     if (!this.props.hideToggle) {
       leftSide = (
         <ToggleGroup selected={this.state.mode} onChange={this.handleSetMode}>
-          <ToggleButton
-              id='codeModeButton'
-              value={Mode.CODE}>
-            {msg.codeMode()}
-          </ToggleButton>
-          <ToggleButton
-              id='designModeButton'
-              value={Mode.DESIGN}>
-            {msg.designMode()}
-          </ToggleButton>
+          <button id='codeModeButton' value={Mode.CODE}>{msg.codeMode()}</button>
+          <button id='designModeButton' value={Mode.DESIGN}>{msg.designMode()}</button>
         </ToggleGroup>
       );
     }
