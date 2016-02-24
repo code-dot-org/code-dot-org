@@ -133,15 +133,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 'perfect', body['levels'][level_id.to_s]['status']
     assert_equal 100, body['levels'][level_id.to_s]['result']
 
-    # Test user_progress_for_stage.
-    get :user_progress, script_name: script.name, stage_position: 1, level_position: 1
-    assert_response :success
-    body = JSON.parse(response.body)
-    assert_equal 2, body['linesOfCode']
-    assert_equal 0, body['trophies']['current']
-    assert_equal 27, body['trophies']['max']
-    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
-    assert_equal 100, body['levels'][level_id.to_s]['result']
 
     # Test user_progress_for_all_scripts.
     get :user_progress_for_all_scripts
@@ -152,11 +143,50 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 'perfect', body['scripts'][script.name]['levels'][level_id.to_s]['status']
   end
 
-  test "should get progress for section with default script" do
-    get :section_progress, section_id: @section.id
-    assert_response :success
+  test "should get user progress for stage" do
+    script = Script.twenty_hour_script
 
-    assert_equal Script.twenty_hour_script, assigns(:script)
+    user = create :user, total_lines: 2
+    sign_in user
+
+    level = script.script_levels[0].level
+    create :user_level, user: user, best_result: 100, script: script, level: level
+
+    create(:activity, user: user, level: level,
+           level_source: create(:level_source, level: level, data: 'level source'))
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal false, body['disableSocialShare']
+    assert_equal false, body['disablePostMilestone']
+    assert_equal 100, body['progress'][level.id.to_s]
+    assert_equal 'level source', body['lastAttempt']['source']
+  end
+
+  test "should get user progress for stage with young student" do
+    script = Script.twenty_hour_script
+    young_student = create :young_student
+    sign_in young_student
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal true, body['disableSocialShare']
+    assert_equal false, body['disablePostMilestone']
+    assert_equal({}, body['progress'])
+  end
+
+  test "should get user progress for disabled milestone posts" do
+    Gatekeeper.set('postMilestone', value: false)
+    script = Script.course1_script
+    user = create :user, total_lines: 2
+    sign_in user
+
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal true, body['disablePostMilestone']
   end
 
   test "should get progress for section with section script" do
