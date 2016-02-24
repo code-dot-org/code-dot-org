@@ -61,7 +61,7 @@ module TableMetadata
     end
 
     def set_column_info(column_info)
-      if @data.nil?
+      if data.nil?
         insert(column_info)
       else
         @data.update({column_info: column_info.to_json, updated_at: DateTime.now})

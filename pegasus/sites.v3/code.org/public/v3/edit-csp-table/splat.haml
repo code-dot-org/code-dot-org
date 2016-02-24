@@ -58,13 +58,19 @@ angular: recordsApp
       }, {});
       return Table;
     }]);
+  services.factory('tableMetadataService', ['$resource',
+    function ($resource) {
+      var TableMetadata = $resource("#{api_base_url}/metadata", {}, {});
+      return TableMetadata;
+    }]);
+
   // CONTROLLERS
 
   var controllers = angular.module('recordsApp.controllers', []).
       value('version', '0.1');
 
-  controllers.controller('RecordsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'recordsService', 'tablesService',
-      function($scope, $http, $route, $routeParams, $location, $window, recordsService, tablesService) {
+  controllers.controller('RecordsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'recordsService', 'tablesService', 'tableMetadataService',
+      function($scope, $http, $route, $routeParams, $location, $window, recordsService, tablesService, tableMetadataService) {
     $scope.records = recordsService.query();
     $scope.newColumnName = '';
     $scope.newRecord = new recordsService();
@@ -72,9 +78,16 @@ angular: recordsApp
     $scope.channelId = "#{channel_id}";
     $scope.importing = false;
     $scope.reverse = true;
-    $scope.records.$promise.then(function(records) {
-      $scope.columns = getColumns(records);
-    }).catch($scope.genericError);
+    $scope.tableMetadata = tableMetadataService.get();
+    $scope.tableMetadata.$promise.then(function (metadata) {
+      // Server should generate metadata for us from records if we don't already have some
+      if (metadata && metadata.column_info) {
+        var columnInfo = JSON.parse(metadata.column_info);
+        $scope.columns = columnInfo.map(makeColumn);
+      } else {
+        throw new Error('Server should have generated column_metadata for us');
+      }
+    }).catch($scope.genericError);;
 
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
@@ -203,18 +216,18 @@ angular: recordsApp
       editing: false,
     }
   }
-  function getColumns(records) {
-    var columns = [];
-    var column_names = [];
-    for (var i = 0; i < records.length; i++) {
-      var props = Object.keys(records[i]);
-      for (var j = 0; j < props.length; j++) {
-        var prop = props[j];
-        if (prop != 'id' && column_names.indexOf(prop) == -1) {
-          column_names.push(prop);
-          columns.push(makeColumn(prop));
-        }
-      }
-    }
-    return columns;
-  }
+  // function getColumns(records) {
+  //   var columns = [];
+  //   var column_names = [];
+  //   for (var i = 0; i < records.length; i++) {
+  //     var props = Object.keys(records[i]);
+  //     for (var j = 0; j < props.length; j++) {
+  //       var prop = props[j];
+  //       if (prop != 'id' && column_names.indexOf(prop) == -1) {
+  //         column_names.push(prop);
+  //         columns.push(makeColumn(prop));
+  //       }
+  //     }
+  //   }
+  //   return columns;
+  // }
