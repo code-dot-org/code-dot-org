@@ -26,15 +26,17 @@ var RecordListener = module.exports = function () {
   this.idToJsonMaps_ = {};
 
   /**
-   * Interval ID of the current setInterval call, if any listeners have been added.
-   * @type {number}
+   * Map from table name to the pending timeout id.
+   * @type {{Object.<string, number>}}
    * @private
    */
-  this.recordIntervalId_ = null;
+  this.recordTimeouts_ = {};
 };
 
 /**
- * @type {number} Number of ms to wait between polling for changes to tables.
+ * Number of ms to wait before polling each table for more data after finishing
+ * processing the last batch of data for that table.
+ * @type {number}
  */
 var RECORD_INTERVAL = 1000; // 1 second
 
@@ -63,14 +65,19 @@ RecordListener.prototype.addListener = function (tableName, callback) {
   this.recordListeners_[tableName] = callback;
   this.idToJsonMaps_[tableName] = {};
 
-  if (this.recordIntervalId_ === null) {
-    this.recordIntervalId_ = setInterval(function recordListener() {
-      for (var tableName in this.recordListeners_) {
-        this.fetchNewRecords_(tableName);
-      }
-    }.bind(this), RECORD_INTERVAL);
-  }
+  this.scheduleNextFetch_(tableName);
+
   return true;
+};
+
+/**
+ * @param {string} tableName
+ * @private
+ */
+RecordListener.prototype.scheduleNextFetch_ = function (tableName) {
+  this.recordTimeouts_[tableName] = setTimeout(function recordListener() {
+    this.fetchNewRecords_(tableName);
+  }.bind(this), RECORD_INTERVAL);
 };
 
 /**
@@ -141,16 +148,22 @@ RecordListener.prototype.reportRecords_ = function (req, tableName) {
 
   // Update our map of this table.
   this.idToJsonMaps_[tableName] = newIdToJsonMap;
+
+  this.scheduleNextFetch_(tableName);
 };
 
 /**
- * Clears the interval timer and forgets about any listeners which were added.
+ * Clears the timeouts and resets internal state.
  */
 RecordListener.prototype.reset = function () {
-  if (this.recordIntervalId_) {
-    clearInterval(this.recordIntervalId_);
-    this.recordIntervalId_ = null;
+  for (var tableName in this.recordTimeouts_) {
+    var timeoutId = this.recordTimeouts_[tableName];
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
   }
+
+  this.recordTimeouts_ = {};
   this.recordListeners_ = {};
   this.idToJsonMaps_ = {};
 };
