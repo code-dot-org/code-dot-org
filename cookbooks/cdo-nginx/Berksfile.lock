@@ -1,0 +1,34 @@
+DEPENDENCIES
+  cdo-nginx
+    path: .
+    metadata: true
+  cdo-ruby
+    path: ../cdo-ruby
+  cdo-varnish
+    path: ../cdo-varnish
+  nginx_test
+    path: test/cookbooks/nginx_test
+  ssl_certificate
+  sudo-user
+    path: ../sudo-user
+
+GRAPH
+  apt (2.9.2)
+  brightbox-ruby (1.2.1)
+    apt (>= 0.0.0)
+  build-essential (2.2.4)
+  cdo-nginx (0.0.2)
+    apt (>= 0.0.0)
+    ssl_certificate (>= 0.0.0)
+  cdo-ruby (0.1.1)
+    brightbox-ruby (>= 0.0.0)
+    build-essential (>= 0.0.0)
+  cdo-varnish (0.3.6)
+    apt (>= 0.0.0)
+  nginx_test (0.1.0)
+    cdo-nginx (>= 0.0.0)
+    cdo-ruby (>= 0.0.0)
+  ohai (2.1.0)
+  ssl_certificate (1.11.0)
+  sudo-user (0.1.0)
+    ohai (>= 0.0.0)
