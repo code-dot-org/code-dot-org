@@ -70,6 +70,9 @@ module.exports = {
   },
 
   clearRuntimeAnnotations: function () {
+    if (runtimeAnnotations.length === 0) {
+      return;
+    }
     runtimeAnnotations = [];
     updateGutter();
   },

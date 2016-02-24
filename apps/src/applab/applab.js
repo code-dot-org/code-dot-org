@@ -1128,6 +1128,10 @@ Applab.execute = function() {
       var session = studioApp.editor.aceEditor.getSession();
       annotationList.attachToSession(session, studioApp.editor);
       annotationList.clearRuntimeAnnotations();
+      studioApp.editor.aceEditor.session.on("change", function () {
+        // clear any runtime annotations whenever a change is made
+        annotationList.clearRuntimeAnnotations();
+      });
     }
   } else {
     // Define any top-level procedures the user may have created

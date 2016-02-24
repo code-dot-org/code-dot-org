@@ -9,7 +9,7 @@ STORAGE_APPS = PEGASUS_DB[:storage_apps]
 def main()
   STORAGE_APPS.where{updated_at > '2015-06-23'}.each{ |row|
     val = row[:value]
-    if /"projectUrl":/.match(val)
+    if /"projectUrl":/ =~ val
       STORAGE_APPS.where(:id => row[:id]).update(:value => val.sub('"projectUrl":', '"level":'))
     end
   }

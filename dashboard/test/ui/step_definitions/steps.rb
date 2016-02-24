@@ -584,6 +584,17 @@ And(/^I create a (student|teacher) named "([^"]*)"$/) do |user_type, name|
   end
 end
 
+And(/^I create a (student|teacher) with email "([^"]*)"$/) do |user_type, email|
+  @users ||= {}
+  @users[name] = User.find_or_create_by!(email: email) do |user|
+    user.name = email
+    user.password = email + "password" # hack
+    user.user_type = user_type
+    user.age = user_type == 'student' ? 16 : 21
+    user.confirmed_at = Time.now
+  end
+end
+
 And(/I fill in username and password for "([^"]*)"$/) do |name|
   steps %Q{
     And I type "#{@users[name].email}" into "#user_login"
@@ -599,20 +610,24 @@ Given(/^I sign in as a (student|teacher)$/) do |user_type|
   }
 end
 
-# Signs in as name by filling in username/password fields. If name does not
-# already exist, creates a new student account for name in the db first.
+# Signs in as name by filling in username/password fields. Always creates a new
+# user with a unique email address.
 Given(/^I manually sign in as "([^"]*)"$/) do |name|
   steps %Q{
     Given I am on "http://studio.code.org/reset_session"
     Then I am on "http://studio.code.org/"
     And I set the language cookie
     And I create a student named "#{name}"
-    Then I am on "http://studio.code.org/"
-    And I reload the page
-    Then I wait for 2 seconds
-    Then I wait to see ".header_user"
-    Then I click selector "#signin_button"
-    And I wait to see ".new_user"
+    Then I manually sign in as the existing user named "#{name}"
+  }
+end
+
+# Signs in as email by filling in email/password fields. If an account with
+# the given email does not already exist, creates a new student account for
+# that email in the db first.
+Given(/^I manually sign in as the existing user named "([^"]*)"$/) do |name|
+  steps %Q{
+    Given I am on "http://studio.code.org/users/sign_in"
     And I fill in username and password for "#{name}"
     And I click selector "input[type=submit][value='Sign in']"
     And I wait to see ".header_user"

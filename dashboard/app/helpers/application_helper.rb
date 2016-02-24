@@ -96,6 +96,10 @@ module ApplicationHelper
 
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
+    update_login_url(redirect: final_signed_in_root_path(resource_or_scope))
+  end
+
+  private def final_signed_in_root_path(resource_or_scope)
     if session[:return_to]
       return session.delete(:return_to)
     elsif resource_or_scope.is_a?(User) && resource_or_scope.teacher?
