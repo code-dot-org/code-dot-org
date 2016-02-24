@@ -1,5 +1,10 @@
 require 'test_helper'
 
+# Define this here to ensure that we don't incorrectly use the :pegasus version.
+def slog(h)
+  CDO.slog ({ application: :dashboard }).merge(h)
+end
+
 class ApiControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
