@@ -185,16 +185,18 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_progress
+    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
-      @user_count = User.count
-      @all_script_levels = Script.twenty_hour_script.script_levels.includes({ level: :game })
+      stats = Properties.get(:admin_progress)
 
-      @levels_attempted = User.joins(:user_levels).group(:level_id).where('best_result > 0').count
+      @user_count = stats['user_count']
+      @levels_attempted = stats['levels_attempted']
       @levels_attempted.default = 0
-      @levels_passed = User.joins(:user_levels).group(:level_id).where('best_result >= 20').count
+      @levels_passed = stats['levels_passed']
       @levels_passed.default = 0
 
-      @stage_map = @all_script_levels.group_by { |sl| sl.level.game }
+      @all_script_levels = Script.twenty_hour_script.script_levels.includes({level: :game})
+      @stage_map = @all_script_levels.group_by {|sl| sl.level.game}
     end
   end
 
