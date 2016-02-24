@@ -2388,6 +2388,9 @@ StudioApp.prototype.alertIfAbusiveProject = function (parentSelector) {
  * @returns {boolean} True if we detect an instance of this.
  */
 StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
+  if (this.editCode) {
+    return false;
+  }
   return Blockly.mainBlockSpace.getAllBlocks().some(this.forLoopHasDuplicatedNestedVariables_);
 };
 
