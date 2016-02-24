@@ -161,5 +161,97 @@
         <block type="maze_honey"/>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" deletable="false" editable="false">
+              <title name="TIMES">2</title>
+              <statement name="DO">
+                <block type="maze_moveForward" deletable="false" editable="false">
+                  <next>
+                    <block type="maze_turn" deletable="false" editable="false">
+                      <title name="DIR">turnRight</title>
+                      <next>
+                        <block type="maze_moveForward" deletable="false" editable="false">
+                          <next>
+                            <block type="maze_turn" deletable="false" editable="false">
+                              <title name="DIR">turnLeft</title>
+                              <next>
+                                <block type="procedures_callnoreturn" deletable="false" editable="false">
+                                  <mutation name="check flower make honey"/>
+                                  <next>
+                                    <block type="maze_turn" deletable="false" editable="false">
+                                      <title name="DIR">turnRight</title>
+                                      <next>
+                                        <block type="maze_moveForward" deletable="false" editable="false">
+                                          <next>
+                                            <block type="maze_turn" deletable="false" editable="false">
+                                              <title name="DIR">turnLeft</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">check flower make honey</title>
+          <statement name="STACK">
+            <block type="bee_ifelseNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">==</title>
+              <title name="ARG2">3</title>
+              <statement name="DO">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="bee_ifelseNectarAmount">
+                  <title name="ARG1">nectarRemaining</title>
+                  <title name="OP">==</title>
+                  <title name="ARG2">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="maze_nectar"/>
+                  </statement>
+                </block>
+              </statement>
+              <next>
+                <block type="maze_moveForward">
+                  <next>
+                    <block type="maze_honey"/>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Karel>
