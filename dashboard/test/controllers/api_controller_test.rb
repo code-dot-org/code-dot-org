@@ -139,9 +139,10 @@ class ApiControllerTest < ActionController::TestCase
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
 
-    get :user_progress, script_name: script.name, stage_position: 1, level_position: 1
+    get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
     body = JSON.parse(response.body)
+    puts body
     assert_equal 2, body['linesOfCode']
     assert_equal 0, body['trophies']['current']
     assert_equal 27, body['trophies']['max']
