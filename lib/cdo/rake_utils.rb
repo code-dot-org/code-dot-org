@@ -8,15 +8,12 @@ require 'digest'
 module RakeUtils
 
   def self.system__(command)
-    puts command
-    output = `#{command} 2>&1`
-    status = $?.exitstatus
-    [status, output]
+    system_with_stdout__ "#{command} 2>&1"
   end
 
-  def self.system_background__(command)
+  def self.system_with_stdout__(command)
     puts command
-    output = `#{command} 2>&1 &`
+    output = `#{command}`
     status = $?.exitstatus
     [status, output]
   end
@@ -53,12 +50,19 @@ module RakeUtils
     end
   end
 
-  def self.system_background(*args)
+  def self.system_stdout(*args)
     command = command_(*args)
-    status, output = system_background__ command
+    status, output = system_with_stdout__ command
     unless status == 0
       error = RuntimeError.new("'#{command}' returned #{status}")
       raise error, error.message, CDO.filter_backtrace([output])
+    end
+  end
+
+  def self.exec_in_background(command)
+    puts "Running `#{command}` in background"
+    fork do
+      exec "#{command}"
     end
   end
 
